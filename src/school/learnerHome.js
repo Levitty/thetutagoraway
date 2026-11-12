@@ -54,9 +54,10 @@ export const MASTERY_MIN = 4;
 const LATEST = 5;
 
 /** Skill name and topic in the curriculum's own words. */
-const skillOf = (code) => {
+const skillOf = (code, item) => {
   const s = SKILLS_G5[code];
-  return { code, name: s?.name || code, topic: SUBSTRANDS[s?.sub]?.name || '' };
+  // Science and English skills are not in the Maths map: their homework items carry the name and topic (homework.js toItem).
+  return { code, name: s?.name || item?.skill_name || code, topic: SUBSTRANDS[s?.sub]?.name || (s ? '' : item?.topic || '') };
 };
 
 /**
@@ -75,7 +76,7 @@ export function buildHome(school, rows, now) {
       if (a.at) days.add(dayOf(Date.parse(a.at)));
       const code = items[a.n - 1]?.cskill; if (!code) continue;
       if (!bySkill.has(code)) bySkill.set(code, []);
-      bySkill.get(code).push({ at: a.at || '', correct: !!a.correct });
+      bySkill.get(code).push({ at: a.at || '', correct: !!a.correct, item: items[a.n - 1] });
     }
     if (h.mode === 'paper') {
       // HOREB does not see paper answers (the teacher marks them in Tuta): shown only while it is due.
@@ -102,8 +103,8 @@ export function buildHome(school, rows, now) {
   for (const [code, list] of bySkill) {
     list.sort((a, b) => a.at.localeCompare(b.at));
     const latest = list.slice(-LATEST); const r = latest.filter(x => x.correct).length;
-    if (list.length >= MASTERY_MIN && r >= 4) mastered.push({ ...skillOf(code), last: list[list.length - 1].at });
-    else practise.push({ ...skillOf(code), right: list.filter(x => x.correct).length, of: list.length, last: list[list.length - 1].at });
+    if (list.length >= MASTERY_MIN && r >= 4) mastered.push({ ...skillOf(code, list[list.length - 1].item), last: list[list.length - 1].at });
+    else practise.push({ ...skillOf(code, list[list.length - 1].item), right: list.filter(x => x.correct).length, of: list.length, last: list[list.length - 1].at });
   }
   mastered.sort((a, b) => b.last.localeCompare(a.last));
   // Practise next: the weakest first (share right), then the most recent.

@@ -195,6 +195,7 @@ function drawFamily(def, tries = 200) {
 var family = (def) => def;
 var allOnFrom = (env2) => env2?.DEV === true && env2?.VITE_HOREB_ALL_FAMILIES === "1";
 var mode = allOnFrom(void 0) || globalThis.process?.env?.HOREB_ALL_FAMILIES === "1" && globalThis.process?.env?.NODE_ENV !== "production" ? "all" : "reviewed";
+var isSigned = (def) => def.core === true || def.reviewed === true;
 
 // src/ai-tutor/content/families/kenya.js
 var GIRLS = ["Wanjiru", "Achieng", "Amina", "Nyambura", "Halima", "Chebet", "Wambui", "Akinyi", "Njeri", "Asha", "Nyaboke", "Zawadi", "Muthoni", "Naliaka", "Cherono", "Makena", "Mwende", "Nekesa", "Fatuma"];
@@ -1754,7 +1755,7 @@ var shuffle = (a) => {
   }
   return b;
 };
-var opts = (items, rightText, why) => items.map((t) => ({ text: t, right: t === rightText, why: t === rightText ? void 0 : typeof why === "function" ? why(t) : why }));
+var opts = (items2, rightText, why) => items2.map((t) => ({ text: t, right: t === rightText, why: t === rightText ? void 0 : typeof why === "function" ? why(t) : why }));
 var FAMILIES2 = [
   // ================================================================ GRADE 1
   fam2({
@@ -2271,16 +2272,16 @@ var FAMILIES2 = [
     rung: 1,
     form: "word",
     draw: () => {
-      const items = shuffle(["pencil", "pen", "rubber", "ruler", "exercise book", "chapati", "mango"]).slice(0, 2);
-      const pa = price(items[0]), pb = price(items[1]);
+      const items2 = shuffle(["pencil", "pen", "rubber", "ruler", "exercise book", "chapati", "mango"]).slice(0, 2);
+      const pa = price(items2[0]), pb = price(items2[1]);
       const s = pa + pb;
-      return s <= 100 && distinct(s, Math.abs(pa - pb), s + 10, s - 10, pa, pb) ? { items, pa, pb } : null;
+      return s <= 100 && distinct(s, Math.abs(pa - pb), s + 10, s - 10, pa, pb) ? { items: items2, pa, pb } : null;
     },
-    make: ({ items, pa, pb }) => {
+    make: ({ items: items2, pa, pb }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? "an " : "a ") + n;
       const cap3 = (s) => s[0].toUpperCase() + s.slice(1);
       return {
-        question: `${cap3(art(items[0]))} costs ${sh(pa)}. ${cap3(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
+        question: `${cap3(art(items2[0]))} costs ${sh(pa)}. ${cap3(art(items2[1]))} costs ${sh(pb)}. How much do they cost together?`,
         answer: pa + pb,
         wrong: [[Math.abs(pa - pb), "Together means put the prices together. Add, do not take away."], [pa + pb + 10, "Check the tens when you add the ones. One ten too many was carried."], [pa + pb - 10, "Check the ones when you add them. A ten was left out."]],
         hints: ["Together means add the two prices.", "Add the tens, then add the ones."],
@@ -3640,20 +3641,20 @@ var FAMILIES3 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const L2 = Array.from({ length: 3 }, () => randInt(12, 48) * 10 + randInt(1, 9)).filter((x) => x % 100 !== 0);
-      if (L2.length < 3 || !uniq(...L2)) return null;
+      const L3 = Array.from({ length: 3 }, () => randInt(12, 48) * 10 + randInt(1, 9)).filter((x) => x % 100 !== 0);
+      if (L3.length < 3 || !uniq(...L3)) return null;
       const fmt = [0, 1, 1].sort(() => Math.random() - 0.5);
-      return { L: L2, fmt, k: randInt(0, 2) };
+      return { L: L3, fmt, k: randInt(0, 2) };
     },
-    make: ({ L: L2, fmt, k }) => {
-      const txt = (x, f) => f ? `${Math.floor(x / 100)} m ${x % 100} cm` : `${x} cm`, best = L2.indexOf(Math.max(...L2));
-      const opts2 = L2.map((x, i) => ({ text: `Piece ${"ABC"[i]}`, right: i === best, why: i === best ? void 0 : `Piece ${"ABC"[i]} is ${x} cm. Change every length to centimetres, then compare.` }));
+    make: ({ L: L3, fmt, k }) => {
+      const txt = (x, f) => f ? `${Math.floor(x / 100)} m ${x % 100} cm` : `${x} cm`, best = L3.indexOf(Math.max(...L3));
+      const opts2 = L3.map((x, i) => ({ text: `Piece ${"ABC"[i]}`, right: i === best, why: i === best ? void 0 : `Piece ${"ABC"[i]} is ${x} cm. Change every length to centimetres, then compare.` }));
       return {
         question: "The table shows the lengths of three pieces of cloth. Which piece is the longest?",
-        model: { type: "table", data: { head: ["Piece", "Length"], rows: L2.map((x, i) => ({ label: `Piece ${"ABC"[i]}`, value: txt(x, fmt[i]) })) } },
+        model: { type: "table", data: { head: ["Piece", "Length"], rows: L3.map((x, i) => ({ label: `Piece ${"ABC"[i]}`, value: txt(x, fmt[i]) })) } },
         options: rot(opts2, k),
         hints: ["Lengths in different units cannot be compared yet.", "1 m = 100 cm. Change the metres to centimetres."],
-        steps: L2.map((x, i) => `Piece ${"ABC"[i]} is ${x} cm.`).concat([`The longest is Piece ${"ABC"[best]}.`])
+        steps: L3.map((x, i) => `Piece ${"ABC"[i]} is ${x} cm.`).concat([`The longest is Piece ${"ABC"[best]}.`])
       };
     }
   }),
@@ -3765,17 +3766,17 @@ var FAMILIES3 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const L2 = [0, 1, 2].map(() => [randInt(2, 6), randInt(2, 6), randInt(2, 6)]), v = L2.map(([a, b, c]) => a * b * c), best = v.indexOf(Math.max(...v)), sums = L2.map((x) => x[0] + x[1] + x[2]);
-      return uniq(...v) && sums.some((x, i) => i !== best && x >= sums[best]) ? { L: L2, v, best, k: randInt(0, 2) } : null;
+      const L3 = [0, 1, 2].map(() => [randInt(2, 6), randInt(2, 6), randInt(2, 6)]), v = L3.map(([a, b, c]) => a * b * c), best = v.indexOf(Math.max(...v)), sums = L3.map((x) => x[0] + x[1] + x[2]);
+      return uniq(...v) && sums.some((x, i) => i !== best && x >= sums[best]) ? { L: L3, v, best, k: randInt(0, 2) } : null;
     },
-    make: ({ L: L2, v, best, k }) => {
-      const opts2 = L2.map((_, i) => ({ text: `Box ${"ABC"[i]}`, right: i === best, why: i === best ? void 0 : `Box ${"ABC"[i]} holds ${v[i]} cubes. Work out how many cubes each box holds, then compare.` }));
+    make: ({ L: L3, v, best, k }) => {
+      const opts2 = L3.map((_, i) => ({ text: `Box ${"ABC"[i]}`, right: i === best, why: i === best ? void 0 : `Box ${"ABC"[i]} holds ${v[i]} cubes. Work out how many cubes each box holds, then compare.` }));
       return {
         question: "Three boxes are filled with cubes. The table shows the cubes along each side. Which box has the greatest volume?",
-        model: { type: "table", data: { head: ["Box", "Cubes long", "Cubes wide", "Cubes high"], rows: L2.map((x, i) => ({ cells: [`Box ${"ABC"[i]}`, ...x.map(String)] })) } },
+        model: { type: "table", data: { head: ["Box", "Cubes long", "Cubes wide", "Cubes high"], rows: L3.map((x, i) => ({ cells: [`Box ${"ABC"[i]}`, ...x.map(String)] })) } },
         options: rot(opts2, k),
         hints: ["Volume is the number of cubes that fill the box.", "Multiply long, wide and high for each box."],
-        steps: L2.map((x, i) => `Box ${"ABC"[i]}: ${x[0]} \xD7 ${x[1]} \xD7 ${x[2]} = ${v[i]}.`).concat([`The greatest volume is Box ${"ABC"[best]}.`])
+        steps: L3.map((x, i) => `Box ${"ABC"[i]}: ${x[0]} \xD7 ${x[1]} \xD7 ${x[2]} = ${v[i]}.`).concat([`The greatest volume is Box ${"ABC"[best]}.`])
       };
     }
   }),
@@ -5329,12 +5330,12 @@ var FAMILIES4 = [
       return { n, k, p: person() };
     },
     make: ({ n, k, p }) => {
-      const H2 = Math.floor(n / 100) % 10, T3 = Math.floor(n / 10) % 10, O = n % 10;
+      const H3 = Math.floor(n / 100) % 10, T3 = Math.floor(n / 10) % 10, O = n % 10;
       const shownD = k === 0 ? O : T3, up = k === 1 ? false : shownD >= 5, res = up ? fl(n, 100) + 100 : fl(n, 100);
       return {
         question: `${p.name} rounds ${commas(n)} to the nearest hundred. Which step has the mistake?`,
         working: [
-          { text: `The hundreds digit is ${H2}.`, ok: true },
+          { text: `The hundreds digit is ${H3}.`, ok: true },
           { text: `The digit next to it, on the right, is ${shownD}.`, ok: shownD === T3 },
           { text: `${shownD} is ${up ? "5 or more, so round up" : "less than 5, so round down"}.`, ok: up === shownD >= 5 },
           { text: `${commas(n)} rounds to ${commas(res)}.`, ok: true }
@@ -5516,8 +5517,8 @@ var FAMILIES4 = [
     rung: 2,
     form: "why",
     draw: () => {
-      const items = [["a bucket of drinking water", "10 litres", "10 ml", "10,000 litres", "A bucket holds about 10 litres, and 10 ml is only two teaspoons."], ["a small cup of tea", "200 millilitres", "200 litres", "2 millilitres", "A cup holds about 200 ml. 200 litres would fill a big drum."], ["a jerrican of cooking oil", "20 litres", "20 ml", "2,000 litres", "A jerrican holds about 20 litres, as much as two buckets."]];
-      return { it: pick(items), k: randInt(0, 3), p: person() };
+      const items2 = [["a bucket of drinking water", "10 litres", "10 ml", "10,000 litres", "A bucket holds about 10 litres, and 10 ml is only two teaspoons."], ["a small cup of tea", "200 millilitres", "200 litres", "2 millilitres", "A cup holds about 200 ml. 200 litres would fill a big drum."], ["a jerrican of cooking oil", "20 litres", "20 ml", "2,000 litres", "A jerrican holds about 20 litres, as much as two buckets."]];
+      return { it: pick(items2), k: randInt(0, 3), p: person() };
     },
     make: ({ it, k, p }) => {
       const opts2 = [
@@ -9376,15 +9377,15 @@ var FAMILIES5 = [
       const towns = shuffle2(["Mombasa", "Kisumu", "Eldoret", "Garissa", "Lodwar"]).slice(0, 3);
       const rank = [...d].sort((x, y) => x - y);
       const k = randInt(0, 2);
-      const asked = ["nearest", "furthest", "middle one"][k];
+      const asked2 = ["nearest", "furthest", "middle one"][k];
       const mid = rank[1], far = rank[2], near3 = rank[0];
       const ans = [near3, far, mid][k], idx = d.indexOf(ans);
       return {
-        question: `The distances in metres from a school to three markets are: ${towns[0]} ${commas(d[0])}, ${towns[1]} ${commas(d[1])} and ${towns[2]} ${commas(d[2])}. Put them in order from smallest to largest. Which market is the ${asked}? Give the number of metres.`,
+        question: `The distances in metres from a school to three markets are: ${towns[0]} ${commas(d[0])}, ${towns[1]} ${commas(d[1])} and ${towns[2]} ${commas(d[2])}. Put them in order from smallest to largest. Which market is the ${asked2}? Give the number of metres.`,
         answer: ans,
         wrong: [...[near3, far, mid].filter((v) => v !== ans).map((v) => [v, "That is another distance in the list. Put all three in order from smallest to largest, then pick the one asked.", "M_ORDER_DIRECTION_CONFUSED"]), [d.reduce((a, b) => a + b, 0), "Adding is not needed. Put the distances in order.", "M_ORDER_DIRECTION_CONFUSED"], [d.slice().sort((x, y) => x % 10 - y % 10)[0], "You compared the ones digits. Compare from the left, starting with the biggest place.", "M_ORDER_LAST_DIGIT"]],
         hints: ["Write the three distances in a list and order them.", "Smallest to largest: the first is the nearest, the last is the furthest."],
-        steps: [`In order: ${rank.map(commas).join(", ")}.`, `The ${asked} is ${commas(ans)} metres.`],
+        steps: [`In order: ${rank.map(commas).join(", ")}.`, `The ${asked2} is ${commas(ans)} metres.`],
         chk: (x) => rank.includes(x)
       };
     }
@@ -9624,7 +9625,7 @@ var FAMILIES5 = [
     rung: 2,
     gen: () => {
       const n = [randInt(100, 999) * 10, randInt(100, 999) * 10 + 5, randInt(100, 999) * 10 + 2, randInt(100, 999) * 10 + 3];
-      const asked = pick(n.slice(0, 1));
+      const asked2 = pick(n.slice(0, 1));
       const rows = n.map((x) => [commas(x), x % 2 === 0 ? "divisible" : "not", x % 5 === 0 ? "divisible" : "not", x % 10 === 0 ? "divisible" : "not"]);
       const target = n[0];
       const options = mc("2, 5 and 10", [["10 only", "A number that divides by 10 also divides by 2 and by 5. The tests are not separate boxes.", "M_DIV_TESTS_EXCLUSIVE"], ["2 and 10 only", "Numbers ending in 0 are divisible by 5 as well.", "M_DIV5_ONLY_ENDS_5"], ["5 and 10 only", "Numbers ending in 0 are divisible by 2 as well.", "M_DIV_TESTS_EXCLUSIVE"]]);
@@ -12322,7 +12323,7 @@ var FAMILIES8 = [
     gen: () => {
       const [x, y] = pick([[[2, 3], [3, 4]], [[3, 4], [4, 5]], [[5, 12], [2, 3]], [[1, 2], [4, 8]], [[3, 6], [2, 4]], [[3, 5], [7, 10]], [[5, 6], [3, 4]]]);
       const l = x[1] * y[1] / gcd(x[1], y[1]), vx = x[0] * (l / x[1]), vy = y[0] * (l / y[1]), right = vx > vy ? ">" : vx < vy ? "<" : "=";
-      const gap = x[0] / x[1] < y[0] / y[1] ? ">" : "<";
+      const gap2 = x[0] / x[1] < y[0] / y[1] ? ">" : "<";
       const others = ["<", ">", "="].filter((z) => z !== right);
       const options = mc(right, [[others[0], right === "=" ? "The fractions are equal. Rename both to a common denominator to see it." : "Rename both fractions to a common denominator before you decide.", right === "=" ? "M_COMPARE_BIGGER_TERMS" : others[0] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"], [others[1], "The bigger numbers do not make the bigger fraction. Rename and compare.", others[1] === "=" ? "M_COMPARE_GAP_THINKING" : "M_COMPARE_BIGGER_TERMS"]]);
       return {
@@ -14306,16 +14307,16 @@ var FAMILIES11 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const gap = pick([100, 200]), n = pick([3, 4]), step2 = gap / (n + 1), base = pick([100, 200, 300, 400]), k = randInt(1, n), ans = base + k * step2;
+      const gap2 = pick([100, 200]), n = pick([3, 4]), step2 = gap2 / (n + 1), base = pick([100, 200, 300, 400]), k = randInt(1, n), ans = base + k * step2;
       if (!Number.isInteger(step2)) return null;
       const p = person();
       return {
-        question: `A jug is labelled ${base} ml and ${base + gap} ml, with ${n} small marks between the labels. The water is at the ${["", "first", "second", "third", "fourth"][k]} small mark above ${base} ml. How many millilitres of water are in the jug?`,
+        question: `A jug is labelled ${base} ml and ${base + gap2} ml, with ${n} small marks between the labels. The water is at the ${["", "first", "second", "third", "fourth"][k]} small mark above ${base} ml. How many millilitres of water are in the jug?`,
         answer: ans,
-        wrong: [[base + k, "You counted each small mark as 1 ml. First work out what each small mark is worth.", "M_EACH_MARK_IS_ONE"], [base, "The water is above the lower label. Count the small marks.", "M_EACH_MARK_IS_ONE"], [base + gap, "The water has not reached the next label yet.", "M_EACH_MARK_IS_ONE"], [ans + step2, "Count the marks again.", "M_READS_FROM_ABOVE"]],
+        wrong: [[base + k, "You counted each small mark as 1 ml. First work out what each small mark is worth.", "M_EACH_MARK_IS_ONE"], [base, "The water is above the lower label. Count the small marks.", "M_EACH_MARK_IS_ONE"], [base + gap2, "The water has not reached the next label yet.", "M_EACH_MARK_IS_ONE"], [ans + step2, "Count the marks again.", "M_READS_FROM_ABOVE"]],
         hints: ["Count how many equal spaces there are between the two labels.", "Find the value of one small mark, then count up."],
-        steps: [`One small mark is ${gap} \xF7 ${n + 1} = ${step2} ml.`, `${base} + ${k} \xD7 ${step2} = ${ans} ml.`],
-        chk: (v) => (v - base) * (n + 1) === k * gap
+        steps: [`One small mark is ${gap2} \xF7 ${n + 1} = ${step2} ml.`, `${base} + ${k} \xD7 ${step2} = ${ans} ml.`],
+        chk: (v) => (v - base) * (n + 1) === k * gap2
       };
     }
   }),
@@ -14325,15 +14326,15 @@ var FAMILIES11 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const gap = pick([100, 200, 500]), n = pick([1, 3, 4, 9]), step2 = gap / (n + 1);
+      const gap2 = pick([100, 200, 500]), n = pick([1, 3, 4, 9]), step2 = gap2 / (n + 1);
       if (!Number.isInteger(step2) || step2 === 1) return null;
-      const options = mc(`${step2} ml`, [["1 ml", "The small marks are not 1 ml each. Share the gap by the number of equal spaces.", "M_EACH_MARK_IS_ONE"], [`${gap / n} ml`, `There are ${n + 1} spaces, not ${n}. Count the spaces between the labels.`, "M_EACH_MARK_IS_ONE"], [`${gap} ml`, "That is the gap between the labelled marks, not one small step.", "M_EACH_MARK_IS_ONE"]]);
+      const options = mc(`${step2} ml`, [["1 ml", "The small marks are not 1 ml each. Share the gap by the number of equal spaces.", "M_EACH_MARK_IS_ONE"], [`${gap2 / n} ml`, `There are ${n + 1} spaces, not ${n}. Count the spaces between the labels.`, "M_EACH_MARK_IS_ONE"], [`${gap2} ml`, "That is the gap between the labelled marks, not one small step.", "M_EACH_MARK_IS_ONE"]]);
       return {
-        question: `On a measuring jug, the labels are ${gap} ml apart and there are ${n} small marks between them. How much is each small step worth?`,
+        question: `On a measuring jug, the labels are ${gap2} ml apart and there are ${n} small marks between them. How much is each small step worth?`,
         options,
         instruction: "Choose the value of one small step.",
         hints: [`${n} marks make ${n + 1} equal spaces.`, "Divide the gap by the number of spaces."],
-        steps: [`${gap} \xF7 ${n + 1} = ${step2}.`, `Each step is ${step2} ml.`]
+        steps: [`${gap2} \xF7 ${n + 1} = ${step2}.`, `Each step is ${step2} ml.`]
       };
     }
   }),
@@ -15606,8 +15607,8 @@ var ask = (right, wrongs, q, hints, steps, instruction = "Choose the best answer
   const options = mc(right, wrongs);
   return options ? { question: q, options, instruction, hints, steps } : null;
 };
-var pool = (items, lead) => () => {
-  const x = pick(items);
+var pool = (items2, lead) => () => {
+  const x = pick(items2);
   return ask(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against what you know."], [x.s, `So: ${x.r}.`]);
 };
 var spot = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
@@ -15629,10 +15630,10 @@ var FAMILIES12 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const n = pick([300, 500, 700, 1e3]), items = shuffle2(["sugar", "bread", "milk", "rice"]).slice(0, 3), p = person();
+      const n = pick([300, 500, 700, 1e3]), items2 = shuffle2(["sugar", "bread", "milk", "rice"]).slice(0, 3), p = person();
       const options = mc("No, it needs costs, a total and the money", [["Yes, because it lists what is wanted to buy", "A budget needs costs and a total compared with the money available.", "M_BUDGET_NO_MONEY_LIMIT"], [`Yes, because ${p.she} has ${sh(n)} to spend`, "Having money is not a plan. The costs must be written down too.", "M_BUDGET_NO_MONEY_LIMIT"]]);
       return {
-        question: `${p.name} has ${sh(n)}. ${p.She} writes only: ${items.join(", ")}. Is this a complete budget?`,
+        question: `${p.name} has ${sh(n)}. ${p.She} writes only: ${items2.join(", ")}. Is this a complete budget?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["What does a budget show for each item?", "It also compares the total with the money available."],
@@ -15733,10 +15734,10 @@ var FAMILIES12 = [
     form: "table",
     rung: 2,
     gen: () => {
-      const items = shuffle2([["Bread", "loaf of bread"], ["Milk", "litre of milk"], ["Eggs", "egg"], ["Sugar", "kg of sugar"]]).slice(0, 3), q = items.map(() => randInt(2, 6)), pr = items.map((i) => price(i[1])), k = randInt(0, 2);
+      const items2 = shuffle2([["Bread", "loaf of bread"], ["Milk", "litre of milk"], ["Eggs", "egg"], ["Sugar", "kg of sugar"]]).slice(0, 3), q = items2.map(() => randInt(2, 6)), pr = items2.map((i) => price(i[1])), k = randInt(0, 2);
       return {
-        question: `The budget table shows items with their quantity and price of one. What is the cost of ${items[k][0].toLowerCase()}?`,
-        model: tbl(["Item", "Quantity", "Price of one"], items.map((it, i) => [it[0], String(q[i]), sh(pr[i])])),
+        question: `The budget table shows items with their quantity and price of one. What is the cost of ${items2[k][0].toLowerCase()}?`,
+        model: tbl(["Item", "Quantity", "Price of one"], items2.map((it, i) => [it[0], String(q[i]), sh(pr[i])])),
         answer: q[k] * pr[k],
         wrong: [[pr[k], "That is the price of one. Multiply by the quantity.", "M_UNIT_PRICE_AS_COST"], [q[k] + pr[k], "Multiply, do not add.", "M_ADD_QTY_AND_PRICE"], [q[(k + 1) % 3] * pr[k], "Use the quantity from the same row.", "M_UNIT_PRICE_AS_COST"], [q[k] * pr[k] + 10, "Check the carry.", "M_FORGET_CARRY"]],
         hints: ["Find the row for the item.", "Quantity \xD7 price of one."],
@@ -15780,12 +15781,12 @@ var FAMILIES12 = [
     form: "table",
     rung: 3,
     gen: () => {
-      const items = shuffle2([["Rice", "kg of rice", 2], ["Cooking oil", "litre of cooking oil", 1], ["Sugar", "kg of sugar", 3], ["Bread", "loaf of bread", 2]]).slice(0, 3).map((x) => ({ n: x[0], pr: price(x[1]), q: x[2] })), lines = items.map((i) => i.q * i.pr), tot = lines.reduce((a, b) => a + b, 0);
+      const items2 = shuffle2([["Rice", "kg of rice", 2], ["Cooking oil", "litre of cooking oil", 1], ["Sugar", "kg of sugar", 3], ["Bread", "loaf of bread", 2]]).slice(0, 3).map((x) => ({ n: x[0], pr: price(x[1]), q: x[2] })), lines = items2.map((i) => i.q * i.pr), tot = lines.reduce((a, b) => a + b, 0);
       return {
         question: "The budget table shows each item, the quantity, the price of one and the cost of the line. What is the budget total?",
-        model: tbl(["Item", "Quantity", "Price of one", "Cost"], items.map((i, k) => [i.n, String(i.q), sh(i.pr), sh(lines[k])])),
+        model: tbl(["Item", "Quantity", "Price of one", "Cost"], items2.map((i, k) => [i.n, String(i.q), sh(i.pr), sh(lines[k])])),
         answer: tot,
-        wrong: [[items.reduce((a, i) => a + i.pr, 0), "You added the prices of one. Add the cost of each line.", "M_TOTAL_OF_UNIT_PRICES"], [tot - lines[2], "One line is missing from the total.", "M_TOTAL_OF_UNIT_PRICES"], [tot + 100, "Check the addition.", "M_SMALLER_FROM_LARGER"], [lines[0], "That is one line only.", "M_TOTAL_OF_UNIT_PRICES"]],
+        wrong: [[items2.reduce((a, i) => a + i.pr, 0), "You added the prices of one. Add the cost of each line.", "M_TOTAL_OF_UNIT_PRICES"], [tot - lines[2], "One line is missing from the total.", "M_TOTAL_OF_UNIT_PRICES"], [tot + 100, "Check the addition.", "M_SMALLER_FROM_LARGER"], [lines[0], "That is one line only.", "M_TOTAL_OF_UNIT_PRICES"]],
         hints: ["Add the Cost column.", "Do not add the price of one."],
         steps: [`${lines.join(" + ")} = ${tot}.`, `${sh(tot)}.`],
         chk: (v) => v === lines.reduce((a, b) => a + b, 0)
@@ -16088,10 +16089,10 @@ var FAMILIES13 = [
     form: "table",
     rung: 3,
     gen: () => {
-      const L2 = { E: [3, 1], H: [1, 2], T: [1, 1], L: [1, 1], F: [2, 1], I: [0, 1] }, k = pick(Object.keys(L2)), [h, v] = L2[k];
+      const L3 = { E: [3, 1], H: [1, 2], T: [1, 1], L: [1, 1], F: [2, 1], I: [0, 1] }, k = pick(Object.keys(L3)), [h, v] = L3[k];
       return {
         question: `${person().name} counts the straight lines in the capital letter ${k} drawn upright in a plain way. The table shows the letters with their horizontal and vertical lines. How many horizontal lines does ${k} have?`,
-        model: tbl(["Letter", "Horizontal lines", "Vertical lines"], Object.entries(L2).slice(0, 4).map(([a, b]) => [a, String(b[0]), String(b[1])]).concat([[k, "?", String(v)]])),
+        model: tbl(["Letter", "Horizontal lines", "Vertical lines"], Object.entries(L3).slice(0, 4).map(([a, b]) => [a, String(b[0]), String(b[1])]).concat([[k, "?", String(v)]])),
         answer: h,
         wrong: [[v, `That is how many vertical lines ${k} has. The question asks for the horizontal lines.`, "M_HV_SWAP_NAMES"], [h + v, "Count only the level lines.", "M_HV_SWAP_NAMES"], [h + 1, "Check the picture again: count the level lines.", "M_HV_SLANT_COUNTS"], [Math.max(0, h - 1), "Check the picture again: count the level lines.", "M_HV_SLANT_COUNTS"]],
         hints: [`Picture the letter ${k}.`, "Horizontal lines lie level."],
@@ -16753,15 +16754,15 @@ var FAMILIES13 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const v = [randInt(8, 13), randInt(7, 10), randInt(5, 8), randInt(3, 6)], asked = randInt(26, 32), tot = v.reduce((a, b) => a + b, 0), p = person();
-      if (tot === asked) return null;
+      const v = [randInt(8, 13), randInt(7, 10), randInt(5, 8), randInt(3, 6)], asked2 = randInt(26, 32), tot = v.reduce((a, b) => a + b, 0), p = person();
+      if (tot === asked2) return null;
       return {
-        question: `Records from a survey: ${asked} classmates were asked, and ${p.name} wrote tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. By how many does the recorded total differ from the number asked?`,
-        answer: Math.abs(tot - asked),
-        wrong: [[tot, "That is the total recorded. Find how far it is from the number asked.", "M_DOUBLE_COUNTING"], [asked, "That is the number asked.", "M_DOUBLE_COUNTING"], [tot + asked, "Take away to find the difference.", "M_DOUBLE_COUNTING"], [Math.abs(tot - asked) + 1, "Check the addition of the four numbers.", "M_DOUBLE_COUNTING"]],
+        question: `Records from a survey: ${asked2} classmates were asked, and ${p.name} wrote tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. By how many does the recorded total differ from the number asked?`,
+        answer: Math.abs(tot - asked2),
+        wrong: [[tot, "That is the total recorded. Find how far it is from the number asked.", "M_DOUBLE_COUNTING"], [asked2, "That is the number asked.", "M_DOUBLE_COUNTING"], [tot + asked2, "Take away to find the difference.", "M_DOUBLE_COUNTING"], [Math.abs(tot - asked2) + 1, "Check the addition of the four numbers.", "M_DOUBLE_COUNTING"]],
         hints: ["Add the four recorded numbers.", "Compare with the number asked."],
-        steps: [`${v.join(" + ")} = ${tot}.`, `${tot} and ${asked} differ by ${Math.abs(tot - asked)}.`],
-        chk: (x) => x === Math.abs(v.reduce((a, b) => a + b, 0) - asked)
+        steps: [`${v.join(" + ")} = ${tot}.`, `${tot} and ${asked2} differ by ${Math.abs(tot - asked2)}.`],
+        chk: (x) => x === Math.abs(v.reduce((a, b) => a + b, 0) - asked2)
       };
     }
   }),
@@ -16874,13 +16875,13 @@ var FAMILIES13 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const items = shuffle2(["tea", "uji", "milk"]), list = [], count = { tea: 0, uji: 0, milk: 0 }, n = randInt(10, 14);
+      const items2 = shuffle2(["tea", "uji", "milk"]), list = [], count = { tea: 0, uji: 0, milk: 0 }, n = randInt(10, 14);
       for (let i = 0; i < n; i++) {
-        const x = pick(items);
+        const x = pick(items2);
         list.push(x);
         count[x]++;
       }
-      const t = pick(items);
+      const t = pick(items2);
       if (count[t] < 3) return null;
       return {
         question: `A learner records the drinks of ${n} classmates, one after another: ${list.join(", ")}. How many chose ${t}?`,
@@ -17198,6 +17199,88 @@ var FAMILIES13 = [
 ];
 
 // src/ai-tutor/content/curriculumMap.science.g5.js
+var SUBSTRANDS_SCI_G5 = {
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS": {
+    "name": "Classification of Plants",
+    "strand": "Living Things and their Environment",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a",
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c",
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.d"
+    ]
+  },
+  "SCIE.G5.LIVING.VERTEBRATES": {
+    "name": "Vertebrates",
+    "strand": "Living Things and their Environment",
+    "outcomes": [
+      "SCIE.G5.LIVING.VERTEBRATES.a",
+      "SCIE.G5.LIVING.VERTEBRATES.b",
+      "SCIE.G5.LIVING.VERTEBRATES.c"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST": {
+    "name": "The Human Breathing System",
+    "strand": "Living Things and their Environment",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a",
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b",
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c",
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.d"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES": {
+    "name": "Mixtures",
+    "strand": "Matter",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.a",
+      "SCIE.G5.MATTER.MIXTURES.b",
+      "SCIE.G5.MATTER.MIXTURES.c",
+      "SCIE.G5.MATTER.MIXTURES.d"
+    ]
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION": {
+    "name": "Water Pollution",
+    "strand": "Matter",
+    "outcomes": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.a",
+      "SCIE.G5.MATTER.WATER_POLLUTION.b",
+      "SCIE.G5.MATTER.WATER_POLLUTION.c",
+      "SCIE.G5.MATTER.WATER_POLLUTION.d",
+      "SCIE.G5.MATTER.WATER_POLLUTION.e"
+    ]
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING": {
+    "name": "Floating and Sinking",
+    "strand": "Force and Energy",
+    "outcomes": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a",
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b",
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c",
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.d"
+    ]
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY": {
+    "name": "Sound Energy",
+    "strand": "Force and Energy",
+    "outcomes": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.a",
+      "SCIE.G5.FORCE_.SOUND_ENERGY.b",
+      "SCIE.G5.FORCE_.SOUND_ENERGY.c",
+      "SCIE.G5.FORCE_.SOUND_ENERGY.d"
+    ]
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER": {
+    "name": "Heat transfer",
+    "strand": "Force and Energy",
+    "outcomes": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.a",
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.b",
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.c",
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.d"
+    ]
+  }
+};
 var OUTCOMES_SCI_G5 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a": {
     "letter": "a",
@@ -17957,7 +18040,7 @@ var MIS_FEEDBACK = {
 };
 
 // src/ai-tutor/content/families/sci_signed.js
-var SIGNED2 = [];
+var SIGNED_SCIENCE = [];
 
 // src/ai-tutor/content/families/sci_lib.js
 var shuffle3 = (a) => {
@@ -18022,7 +18105,7 @@ var sfam = (d) => {
   const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
   if (!outcome || !OUTCOMES_SCI_G5[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
   const draw = () => gen();
-  return family({ reviewed: SIGNED2.includes(id), subject: "science", ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
+  return family({ reviewed: SIGNED_SCIENCE.includes(id), subject: "science", ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
 };
 
 // src/ai-tutor/content/families/sci_g5_living.js
@@ -20307,8 +20390,8 @@ var FAMILIES17 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const L2 = [[1, 2], [1, 4], [3, 4], [1, 5], [2, 5], [3, 5], [4, 5], [1, 10], [3, 10], [7, 10], [1, 20], [3, 20], [7, 20], [9, 20], [1, 25], [3, 25]];
-      const rows = shuffle4(L2).slice(0, 3), kind = pick(["dec", "pct"]);
+      const L3 = [[1, 2], [1, 4], [3, 4], [1, 5], [2, 5], [3, 5], [4, 5], [1, 10], [3, 10], [7, 10], [1, 20], [3, 20], [7, 20], [9, 20], [1, 25], [3, 25]];
+      const rows = shuffle4(L3).slice(0, 3), kind = pick(["dec", "pct"]);
       const [n, d] = rows[2], v = n / d, pct = n * 100 / d;
       const ws = kind === "dec" ? [pct, round(1 - v, 2), round(d / n, 2)] : [v, 100 - pct, n];
       return uniq2(kind === "dec" ? v : pct, ...ws) ? { rows, kind, ws } : null;
@@ -20445,16 +20528,16 @@ var FAMILIES17 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const items = shuffle4(["Rent", "Food", "Transport", "School fees", "Water and power"]).slice(0, 4);
-      const planned = items.map(() => randInt(4, 18) * 500), delta = items.map(() => pick([-500, 0, 500, 1e3, 1500]));
+      const items2 = shuffle4(["Rent", "Food", "Transport", "School fees", "Water and power"]).slice(0, 4);
+      const planned = items2.map(() => randInt(4, 18) * 500), delta = items2.map(() => pick([-500, 0, 500, 1e3, 1500]));
       const tp = planned.reduce((x, y) => x + y, 0), net = delta.reduce((x, y) => x + y, 0);
       if (net <= 0) return null;
       const actual = planned.map((v, i) => v + delta[i]), ta = tp + net, maxOver = Math.max(...delta);
-      return uniq2(net, tp, ta, maxOver) ? { items, planned, actual, tp, ta, net, maxOver, p: person() } : null;
+      return uniq2(net, tp, ta, maxOver) ? { items: items2, planned, actual, tp, ta, net, maxOver, p: person() } : null;
     },
-    make: ({ items, planned, actual, tp, ta, net, maxOver, p }) => ({
+    make: ({ items: items2, planned, actual, tp, ta, net, maxOver, p }) => ({
       question: `The table shows ${p.name}'s family budget for a month: what they planned to spend and what they really spent. By how much did they spend more than planned in total, in shillings?`,
-      model: { type: "table", data: { head: ["Item", "Planned (sh)", "Spent (sh)"], rows: items.map((it, i) => ({ cells: [it, commas(planned[i]), commas(actual[i])] })) } },
+      model: { type: "table", data: { head: ["Item", "Planned (sh)", "Spent (sh)"], rows: items2.map((it, i) => ({ cells: [it, commas(planned[i]), commas(actual[i])] })) } },
       answer: net,
       wrong: [[ta, "That is the total spent. The question asks how much more than the plan."], [tp, "That is the total planned. Compare it with the total spent."], [maxOver, "That is only one item. Compare the total planned with the total spent."]],
       hints: ["Add up the planned column. Then add up the spent column.", "Take the smaller total from the bigger total."],
@@ -20532,21 +20615,21 @@ var FAMILIES17 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const W3 = randInt(10, 16), H2 = randInt(7, 10), w = randInt(3, W3 - 5), h = randInt(2, H2 - 4), rate2 = pick([300, 400, 500, 600, 800]);
-      return { W: W3, H: H2, w, h, rate: rate2, p: person() };
+      const W3 = randInt(10, 16), H3 = randInt(7, 10), w = randInt(3, W3 - 5), h = randInt(2, H3 - 4), rate2 = pick([300, 400, 500, 600, 800]);
+      return { W: W3, H: H3, w, h, rate: rate2, p: person() };
     },
-    make: ({ W: W3, H: H2, w, h, rate: rate2, p }) => ({
-      question: `The floor of a hall is a rectangle ${W3} m by ${H2} m, with a corner ${w} m by ${h} m left out. The floor that is left is L-shaped. ${p.name} will cover it with tiles at ${sh(rate2)} for each square metre.`,
+    make: ({ W: W3, H: H3, w, h, rate: rate2, p }) => ({
+      question: `The floor of a hall is a rectangle ${W3} m by ${H3} m, with a corner ${w} m by ${h} m left out. The floor that is left is L-shaped. ${p.name} will cover it with tiles at ${sh(rate2)} for each square metre.`,
       parts: [
-        { prompt: `What is the area of the full rectangle ${W3} m by ${H2} m?`, answer: W3 * H2, unit: "m\xB2", hint: "Length \xD7 width.", wrong: [[2 * (W3 + H2), "That is the distance around. Area is length times width."]] },
+        { prompt: `What is the area of the full rectangle ${W3} m by ${H3} m?`, answer: W3 * H3, unit: "m\xB2", hint: "Length \xD7 width.", wrong: [[2 * (W3 + H3), "That is the distance around. Area is length times width."]] },
         { prompt: `What is the area of the corner ${w} m by ${h} m that is left out?`, answer: w * h, unit: "m\xB2", hint: "Length \xD7 width again.", wrong: [[2 * (w + h), "That is the distance around. Area is length times width."]] },
-        { prompt: "What is the area of the L-shaped floor?", answer: W3 * H2 - w * h, unit: "m\xB2", hint: "Take the corner from the full rectangle.", wrong: [[W3 * H2 + w * h, "The corner is left out, so take it away."]] },
-        { prompt: "What is the cost of the tiles?", answer: (W3 * H2 - w * h) * rate2, unit: "sh", hint: "Area \xD7 cost for each square metre.", wrong: [[W3 * H2 * rate2, "The corner needs no tiles. Use the area of the L-shape."]] }
+        { prompt: "What is the area of the L-shaped floor?", answer: W3 * H3 - w * h, unit: "m\xB2", hint: "Take the corner from the full rectangle.", wrong: [[W3 * H3 + w * h, "The corner is left out, so take it away."]] },
+        { prompt: "What is the cost of the tiles?", answer: (W3 * H3 - w * h) * rate2, unit: "sh", hint: "Area \xD7 cost for each square metre.", wrong: [[W3 * H3 * rate2, "The corner needs no tiles. Use the area of the L-shape."]] }
       ],
       hints: ["Think of the L-shape as a big rectangle with a piece taken out.", "Find each area, subtract, then multiply by the cost."],
-      steps: [`Full: ${W3} \xD7 ${H2} = ${W3 * H2} m\xB2. Corner: ${w} \xD7 ${h} = ${w * h} m\xB2.`, `L-shape: ${W3 * H2} \u2212 ${w * h} = ${W3 * H2 - w * h} m\xB2.`, `Cost: ${W3 * H2 - w * h} \xD7 ${rate2} = ${sh((W3 * H2 - w * h) * rate2)}.`]
+      steps: [`Full: ${W3} \xD7 ${H3} = ${W3 * H3} m\xB2. Corner: ${w} \xD7 ${h} = ${w * h} m\xB2.`, `L-shape: ${W3 * H3} \u2212 ${w * h} = ${W3 * H3 - w * h} m\xB2.`, `Cost: ${W3 * H3 - w * h} \xD7 ${rate2} = ${sh((W3 * H3 - w * h) * rate2)}.`]
     }),
-    check: ({ W: W3, H: H2, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W3 * H2 && v[1] === w * h
+    check: ({ W: W3, H: H3, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W3 * H3 && v[1] === w * h
   }),
   fam6({
     id: "g6.area.circle-count",
@@ -21101,17 +21184,17 @@ var FAMILIES18 = [
     gen: () => {
       const dens = [2, 3, 4, 5, 6, 8, 10, 12], b = pick(dens), d = pick(dens);
       if (b === d || b % d === 0 || d % b === 0) return null;
-      const a = randInt(1, b - 1), c = randInt(1, d - 1), L2 = lcm2(b, d);
-      const top = a * L2 / b - c * L2 / d;
+      const a = randInt(1, b - 1), c = randInt(1, d - 1), L3 = lcm2(b, d);
+      const top = a * L3 / b - c * L3 / d;
       if (top <= 0 || gcd3(a, b) !== 1 || gcd3(c, d) !== 1) return null;
-      const right = frac(top, L2), p = person();
-      const w = [[frac(Math.abs(a - c), L2), "You found the common denominator but did not change the numerators to match."], [b > d && a > c && frac(a - c, b - d) !== "1/1" ? frac(a - c, b - d) : frac(c, b), "You took the numerators from each other and the denominators from each other. The denominator stays the same size."], [frac(Math.abs(a - c), b), "You kept the first denominator. Both fractions must be changed to the common denominator first."], [frac(a * L2 / b + c * L2 / d, L2), "You added. The question asks how much more, so subtract."]];
+      const right = frac(top, L3), p = person();
+      const w = [[frac(Math.abs(a - c), L3), "You found the common denominator but did not change the numerators to match."], [b > d && a > c && frac(a - c, b - d) !== "1/1" ? frac(a - c, b - d) : frac(c, b), "You took the numerators from each other and the denominators from each other. The denominator stays the same size."], [frac(Math.abs(a - c), b), "You kept the first denominator. Both fractions must be changed to the common denominator first."], [frac(a * L3 / b + c * L3 / d, L3), "You added. The question asks how much more, so subtract."]];
       return {
         question: `Maize grows on ${a}/${b} of ${p.name}'s shamba and beans grow on ${c}/${d} of it. What fraction more of the shamba is under maize than under beans? Give the answer in its simplest form.`,
         answer: right,
         wrong: w,
         hints: [`Find a number that both ${b} and ${d} divide into. Use the smallest.`, "Change both fractions to that denominator, then subtract the numerators."],
-        steps: [`The LCM of ${b} and ${d} is ${L2}.`, `${a * L2 / b}/${L2} \u2212 ${c * L2 / d}/${L2} = ${top}/${L2}.`, `In simplest form: ${right}.`],
+        steps: [`The LCM of ${b} and ${d} is ${L3}.`, `${a * L3 / b}/${L3} \u2212 ${c * L3 / d}/${L3} = ${top}/${L3}.`, `In simplest form: ${right}.`],
         chk: (r) => {
           const [n, m] = r.split("/").map(Number);
           return n * b * d === (a * d - c * b) * m;
@@ -21126,22 +21209,22 @@ var FAMILIES18 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const pairs2 = [[2, 4], [3, 6], [4, 2], [6, 3], [5, 10], [4, 8]], [d1, d2] = pick(pairs2), L2 = lcm2(d1, d2);
+      const pairs2 = [[2, 4], [3, 6], [4, 2], [6, 3], [5, 10], [4, 8]], [d1, d2] = pick(pairs2), L3 = lcm2(d1, d2);
       const w1 = randInt(4, 9), w2 = randInt(1, w1 - 2), n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
-      const f1 = n1 * L2 / d1, f2 = n2 * L2 / d2;
+      const f1 = n1 * L3 / d1, f2 = n2 * L3 / d2;
       if (f1 >= f2) return null;
-      const total = w1 * L2 + f1 - (w2 * L2 + f2), wh = Math.floor(total / L2), rem = total % L2;
-      const show = (w, n) => n === 0 ? `${w}` : `${w} ${frac(n, L2)}`;
+      const total = w1 * L3 + f1 - (w2 * L3 + f2), wh = Math.floor(total / L3), rem = total % L3;
+      const show = (w, n) => n === 0 ? `${w}` : `${w} ${frac(n, L3)}`;
       const mixed2 = (w, n, d) => `${w} ${n}/${d}`;
       const right = show(wh, rem);
-      const options = mc2(right, [[show(w1 - w2, f2 - f1), "You took the smaller fraction from the bigger one. The top fraction is smaller, so regroup one whole first."], [show(w1 - w2, L2 + f1 - f2), "You changed a whole into fractions but did not take one away from the whole numbers."], [show(w1 + w2 + Math.floor((f1 + f2) / L2), (f1 + f2) % L2), "You added. The question asks how much is left."]]);
+      const options = mc2(right, [[show(w1 - w2, f2 - f1), "You took the smaller fraction from the bigger one. The top fraction is smaller, so regroup one whole first."], [show(w1 - w2, L3 + f1 - f2), "You changed a whole into fractions but did not take one away from the whole numbers."], [show(w1 + w2 + Math.floor((f1 + f2) / L3), (f1 + f2) % L3), "You added. The question asks how much is left."]]);
       const p = person();
       return {
         question: `${p.name} has ${mixed2(w1, n1, d1)} m of cloth and uses ${mixed2(w2, n2, d2)} m to make a dress. How many metres of cloth are left?`,
         options,
         instruction: "Choose the best answer.",
-        hints: [`Change both fractions to ${L2}ths first.`, "If the first fraction is smaller, take one whole from the whole number and add it to the fraction."],
-        steps: [`${w1} ${frac(f1, L2)} \u2212 ${w2} ${frac(f2, L2)}: ${f1}/${L2} is smaller than ${f2}/${L2}, so regroup.`, `${w1 - 1} and ${L2 + f1}/${L2}, then subtract: ${right}.`]
+        hints: [`Change both fractions to ${L3}ths first.`, "If the first fraction is smaller, take one whole from the whole number and add it to the fraction."],
+        steps: [`${w1} ${frac(f1, L3)} \u2212 ${w2} ${frac(f2, L3)}: ${f1}/${L3} is smaller than ${f2}/${L3}, so regroup.`, `${w1 - 1} and ${L3 + f1}/${L3}, then subtract: ${right}.`]
       };
     }
   }),
@@ -21427,8 +21510,8 @@ var FAMILIES18 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const items = [["an adult elephant", "5 tonnes", ["5 kg", "50 kg", "500 tonnes"]], ["a loaded sand lorry", "12 tonnes", ["12 kg", "120 kg", "1,200 tonnes"]], ["a school bus with no passengers", "8 tonnes", ["8 kg", "80 kg", "800 tonnes"]], ["an adult hippopotamus", "2 tonnes", ["2 kg", "20 kg", "200 tonnes"]], ["a loaded container at the port", "20 tonnes", ["20 kg", "200 kg", "2,000 tonnes"]], ["a small tractor", "3 tonnes", ["3 kg", "30 kg", "300 tonnes"]]];
-      const [what, right, wr] = pick(items);
+      const items2 = [["an adult elephant", "5 tonnes", ["5 kg", "50 kg", "500 tonnes"]], ["a loaded sand lorry", "12 tonnes", ["12 kg", "120 kg", "1,200 tonnes"]], ["a school bus with no passengers", "8 tonnes", ["8 kg", "80 kg", "800 tonnes"]], ["an adult hippopotamus", "2 tonnes", ["2 kg", "20 kg", "200 tonnes"]], ["a loaded container at the port", "20 tonnes", ["20 kg", "200 kg", "2,000 tonnes"]], ["a small tractor", "3 tonnes", ["3 kg", "30 kg", "300 tonnes"]]];
+      const [what, right, wr] = pick(items2);
       const options = mc2(right, wr.map((w) => [w, /tonnes/.test(w) ? "That is far too heavy. Compare it with the heaviest things you know." : "That is far too light. It is the mass of something you could lift."]));
       return {
         question: `Which is the best estimate for the mass of ${what}?`,
@@ -21685,16 +21768,16 @@ var FAMILIES18 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const H2 = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, "0"), h = H2 - 12;
+      const H3 = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, "0"), h = H3 - 12;
       const right = `${h}:${mm} p.m.`;
-      const options = mc2(right, [[`${h}:${mm} a.m.`, "Hours from 13 to 23 are after noon, so they are p.m."], [`${H2 - 10}:${mm} p.m.`, "You took 10 away. Take 12 away from the hour to change from the 24-hour clock."], [`${H2}:${mm} p.m.`, "On the 12-hour clock the hour cannot be more than 12. Take 12 away."]]);
+      const options = mc2(right, [[`${h}:${mm} a.m.`, "Hours from 13 to 23 are after noon, so they are p.m."], [`${H3 - 10}:${mm} p.m.`, "You took 10 away. Take 12 away from the hour to change from the 24-hour clock."], [`${H3}:${mm} p.m.`, "On the 12-hour clock the hour cannot be more than 12. Take 12 away."]]);
       const p = person();
       return {
-        question: `${p.name}'s train ticket says: Departs ${H2}${mm} h. How would ${p.she} write this time on a 12-hour clock?`,
+        question: `${p.name}'s train ticket says: Departs ${H3}${mm} h. How would ${p.she} write this time on a 12-hour clock?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Hours from 13 to 23 are in the afternoon or evening.", "Take 12 away from the hour and write p.m."],
-        steps: [`${H2} \u2212 12 = ${h}.`, `${H2}${mm} h is ${right}.`]
+        steps: [`${H3} \u2212 12 = ${h}.`, `${H3}${mm} h is ${right}.`]
       };
     }
   }),
@@ -21768,8 +21851,8 @@ var FAMILIES18 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const items = [["The top of a tin of beans (a cylinder) is a flat face. What plane figure is it?", "Circle"], ["The biggest face of a matchbox (a cuboid) is a flat face. What plane figure is it?", "Rectangle"], ["Each face of a dice (a cube) is a flat face. What plane figure is it?", "Square"], ["A roof is shaped like a triangular prism. The two ends are flat. What plane figure are they?", "Triangle"], ["The base of a cone-shaped party hat is a flat face. What plane figure is it?", "Circle"]];
-      const [q, right] = pick(items);
+      const items2 = [["The top of a tin of beans (a cylinder) is a flat face. What plane figure is it?", "Circle"], ["The biggest face of a matchbox (a cuboid) is a flat face. What plane figure is it?", "Rectangle"], ["Each face of a dice (a cube) is a flat face. What plane figure is it?", "Square"], ["A roof is shaped like a triangular prism. The two ends are flat. What plane figure are they?", "Triangle"], ["The base of a cone-shaped party hat is a flat face. What plane figure is it?", "Circle"]];
+      const [q, right] = pick(items2);
       const all = ["Circle", "Triangle", "Rectangle", "Square"];
       const why = { Circle: "A circle is round with no corners and no straight sides.", Triangle: "A triangle has three sides and three corners.", Rectangle: "A rectangle has four sides, with opposite sides equal, and its sides are not all equal.", Square: "A square has four equal sides." };
       const options = mcFixed(right, all.filter((a) => a !== right).map((a) => [a, `That is not the shape of this face. ${why[a]}`]), all);
@@ -22607,15 +22690,15 @@ var FAMILIES19 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const s = pick([2, 5, 10, 20, 25]), L2 = randInt(11, 79) / 2, real = L2 * s, [a, b] = shuffle5(["Nakuru", "Naivasha", "Gilgil", "Nyahururu", "Eldoret", "Kitale", "Kisumu", "Kericho"]).slice(0, 2);
+      const s = pick([2, 5, 10, 20, 25]), L3 = randInt(11, 79) / 2, real = L3 * s, [a, b] = shuffle5(["Nakuru", "Naivasha", "Gilgil", "Nyahururu", "Eldoret", "Kitale", "Kisumu", "Kericho"]).slice(0, 2);
       if (real % 0.5 !== 0) return null;
       return {
-        question: `${a} and ${b} are ${L2} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`,
+        question: `${a} and ${b} are ${L3} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`,
         answer: real,
-        wrong: [[round(L2 / s, 2), "You divided. To go from the map to the real distance, multiply by what one centimetre stands for."], [round(L2 + s, 2), "You added. Each centimetre on the map stands for several kilometres, so multiply."], [round(real * 100, 0), "You changed the answer to centimetres. The question asks for kilometres."], [round(real / 2, 2), "Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm."]],
+        wrong: [[round(L3 / s, 2), "You divided. To go from the map to the real distance, multiply by what one centimetre stands for."], [round(L3 + s, 2), "You added. Each centimetre on the map stands for several kilometres, so multiply."], [round(real * 100, 0), "You changed the answer to centimetres. The question asks for kilometres."], [round(real / 2, 2), "Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm."]],
         hints: ["Each centimetre on the map is one lot of the scale distance.", "Multiply the map distance by the kilometres for 1 cm."],
-        steps: [`Real distance = ${L2} \xD7 ${s}.`, `${L2} \xD7 ${s} = ${real} km.`],
-        chk: (a2) => a2 / s === L2
+        steps: [`Real distance = ${L3} \xD7 ${s}.`, `${L3} \xD7 ${s} = ${real} km.`],
+        chk: (a2) => a2 / s === L3
       };
     }
   }),
@@ -23465,9 +23548,9 @@ var LOGS = [
     rung: 2,
     form: "steps",
     draw: () => {
-      const L2 = { 2: 0.301, 3: 0.4771, 5: 0.699, 7: 0.8451 };
+      const L3 = { 2: 0.301, 3: 0.4771, 5: 0.699, 7: 0.8451 };
       const ps = pick([[2, 3], [2, 5], [2, 7], [3, 5], [3, 7], [5, 7]]);
-      return { p: ps[0], q: ps[1], lp: L2[ps[0]], lq: L2[ps[1]] };
+      return { p: ps[0], q: ps[1], lp: L3[ps[0]], lq: L3[ps[1]] };
     },
     make: ({ p, q, lp, lq }) => ({
       question: `Given that log ${p} = ${lp.toFixed(4)} and log ${q} = ${lq.toFixed(4)}, use the laws of logarithms to find the values below.`,
@@ -23514,7 +23597,7 @@ var PROPORTION = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [1, 4], [1, 3]]), L2 = lcm3(a * b, a + b), k = pick([2, 3, 4, 5]), T3 = L2 * k;
+      const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [1, 4], [1, 3]]), L3 = lcm3(a * b, a + b), k = pick([2, 3, 4, 5]), T3 = L3 * k;
       const type = pick(["product", "one-part"]);
       if (T3 > 8e3) return null;
       const s = type === "product" ? a * b : a + b, u = type === "one-part" ? T3 / a : T3 / s;
@@ -23569,7 +23652,7 @@ var PROPORTION = [
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
       if (q === r || s <= r || gcd4(p, q) !== 1 || gcd4(r, s) !== 1) return null;
-      const L2 = lcm3(q, r), A2 = p * L2 / q, B2 = L2, C = s * L2 / r, k = randInt(2, 5), N = A2 * k, hens = C * k;
+      const L3 = lcm3(q, r), A2 = p * L3 / q, B2 = L3, C = s * L3 / r, k = randInt(2, 5), N = A2 * k, hens = C * k;
       const w1 = round(N * s / p, 1), w2 = round(N * s / r, 1), w3 = B2 * k;
       return uniq3(hens, w1, w2, w3) && N <= 90 && hens <= 200 ? { p, q, r, s, N, hens, w1, w2, w3 } : null;
     },
@@ -23594,17 +23677,17 @@ var PROPORTION = [
       return { p, q, r, s, who: person() };
     },
     make: ({ p, q, r, s, who }) => {
-      const L2 = lcm3(q, r), A2 = p * L2 / q, C = s * L2 / r;
+      const L3 = lcm3(q, r), A2 = p * L3 / q, C = s * L3 / r;
       return {
         question: `The ratio of maize to beans on a shamba is ${p}:${q}. The ratio of beans to peas is ${r}:${s}. ${who.name} says maize : beans : peas = ${p}:${q}:${s}. Why is this wrong?`,
         options: [
-          { text: `The beans part is ${q} in one ratio and ${r} in the other. Make both ${L2} first, giving ${A2}:${L2}:${C}`, right: true },
+          { text: `The beans part is ${q} in one ratio and ${r} in the other. Make both ${L3} first, giving ${A2}:${L3}:${C}`, right: true },
           { text: `The ratios must be added together, giving ${p + r}:${q + q}:${s + s}`, right: false, why: "Ratios are not added. Matching the part that both ratios share is what links them." },
           { text: `The peas part should be ${r + s}, the sum of the second ratio`, right: false, why: "The numbers in a ratio are parts, and are not added to find one part." },
           { text: `Nothing is wrong, because the first and last numbers always stay as they are`, right: false, why: "The shared part (beans) must be the same size in both ratios. Here it is not, so the other numbers must be scaled." }
         ],
         hints: ["Which part is in both ratios?", "Make that part the same number in both ratios."],
-        steps: [`Beans: ${q} in the first ratio, ${r} in the second. The common multiple is ${L2}.`, `Maize : beans = ${A2}:${L2} and beans : peas = ${L2}:${C}, so maize : beans : peas = ${A2}:${L2}:${C}.`]
+        steps: [`Beans: ${q} in the first ratio, ${r} in the second. The common multiple is ${L3}.`, `Maize : beans = ${A2}:${L3} and beans : peas = ${L3}:${C}, so maize : beans : peas = ${A2}:${L3}:${C}.`]
       };
     }
   }),
@@ -23753,20 +23836,20 @@ var PROPORTION = [
     draw: () => {
       const T3 = [6, 8, 10, 12, 15, 20, 24, 30], a = pick(T3), b = pick(T3), t = randInt(2, 8);
       if (a === b || a > b) return null;
-      const L2 = lcm3(a, b), ra = L2 / a, rb = L2 / b, left = L2 - t * (ra + rb);
-      return left > 0 && left % ra === 0 ? { a, b, t, L: L2, ra, rb, left, ns: twoPeople() } : null;
+      const L3 = lcm3(a, b), ra = L3 / a, rb = L3 / b, left = L3 - t * (ra + rb);
+      return left > 0 && left % ra === 0 ? { a, b, t, L: L3, ra, rb, left, ns: twoPeople() } : null;
     },
-    make: ({ a, b, t, L: L2, ra, rb, left, ns }) => ({
-      question: `${ns[0].name} can plough a field alone in ${a} days. ${ns[1].name} can plough it alone in ${b} days. They work together for ${t} days. Then ${ns[0].name} finishes the rest alone. Take the whole field as ${L2} units of work.`,
+    make: ({ a, b, t, L: L3, ra, rb, left, ns }) => ({
+      question: `${ns[0].name} can plough a field alone in ${a} days. ${ns[1].name} can plough it alone in ${b} days. They work together for ${t} days. Then ${ns[0].name} finishes the rest alone. Take the whole field as ${L3} units of work.`,
       parts: [
-        { prompt: `How many units does ${ns[0].name} plough in one day?`, answer: ra, hint: `The whole field is ${L2} units, done in ${a} days.`, wrong: [[a, "Divide the work by the days. The days are not the units per day."]] },
-        { prompt: `How many units do they plough together in one day?`, answer: ra + rb, hint: `${ns[1].name} does ${L2} \xF7 ${b} units a day. Add the two rates.`, wrong: [[ra * rb, "Add the units each does in a day."]] },
-        { prompt: `How many units are left after ${t} days together?`, answer: left, hint: `Take away ${t} days of the joint work from ${L2}.`, wrong: [[t * (ra + rb), "That is the work done in those days. Take it away from the whole field."]] },
+        { prompt: `How many units does ${ns[0].name} plough in one day?`, answer: ra, hint: `The whole field is ${L3} units, done in ${a} days.`, wrong: [[a, "Divide the work by the days. The days are not the units per day."]] },
+        { prompt: `How many units do they plough together in one day?`, answer: ra + rb, hint: `${ns[1].name} does ${L3} \xF7 ${b} units a day. Add the two rates.`, wrong: [[ra * rb, "Add the units each does in a day."]] },
+        { prompt: `How many units are left after ${t} days together?`, answer: left, hint: `Take away ${t} days of the joint work from ${L3}.`, wrong: [[t * (ra + rb), "That is the work done in those days. Take it away from the whole field."]] },
         { prompt: `How many more days does ${ns[0].name} need alone to finish?`, answer: left / ra, unit: "days", hint: `Divide the units left by what ${ns[0].name} does in a day.`, wrong: [[left / (ra + rb), "Only one person works now, not both."]] }
       ],
-      steps: [`${ns[0].name}: ${L2} \xF7 ${a} = ${ra} units a day. ${ns[1].name}: ${L2} \xF7 ${b} = ${rb} units a day.`, `Together: ${ra + rb} units a day. After ${t} days: ${t * (ra + rb)} units done, ${left} left.`, `${left} \xF7 ${ra} = ${left / ra} days.`]
+      steps: [`${ns[0].name}: ${L3} \xF7 ${a} = ${ra} units a day. ${ns[1].name}: ${L3} \xF7 ${b} = ${rb} units a day.`, `Together: ${ra + rb} units a day. After ${t} days: ${t * (ra + rb)} units done, ${left} left.`, `${left} \xF7 ${ra} = ${left / ra} days.`]
     }),
-    check: ({ a, b, t, L: L2 }, v) => v[0] * a === L2 && v[1] === v[0] + L2 / b && v[2] + t * v[1] === L2 && v[3] * v[0] === v[2]
+    check: ({ a, b, t, L: L3 }, v) => v[0] * a === L3 && v[1] === v[0] + L3 / b && v[2] + t * v[1] === L3 && v[3] * v[0] === v[2]
   }),
   fam7({
     id: "g9.work.why-average",
@@ -24580,17 +24663,17 @@ var FAMILIES21 = [
       const t = pick([[6, 8, 10], [5, 12, 13], [9, 12, 15]]);
       return { a: t[0], b: t[1], c: t[2], L: pick([10, 12, 15, 20]) };
     },
-    make: ({ a, b, c, L: L2 }) => ({
-      question: `A wooden doorstop is a solid triangular prism. Its two triangular ends are right-angled with sides ${a} cm, ${b} cm and ${c} cm. The doorstop is ${L2} cm long. It will be painted all over.`,
+    make: ({ a, b, c, L: L3 }) => ({
+      question: `A wooden doorstop is a solid triangular prism. Its two triangular ends are right-angled with sides ${a} cm, ${b} cm and ${c} cm. The doorstop is ${L3} cm long. It will be painted all over.`,
       parts: [
         { prompt: "Area of the two triangular ends together, in cm\xB2:", answer: a * b, unit: "cm\xB2", hint: "One end is half of the two short sides multiplied.", wrong: [[a * b / 2, "That is one triangle. There are two ends."], [a + b + c, "That is the distance around one end. Area uses multiplication."]] },
-        { prompt: "Area of the three rectangular faces together, in cm\xB2:", answer: (a + b + c) * L2, unit: "cm\xB2", hint: "The three rectangles have the same length. Their widths are the three sides of the triangle.", wrong: [[(a + b) * L2, "There are three rectangles. The sloping one is missing."], [a * b / 2 * L2, "That is the volume of the prism. You need the area of the rectangles."]] },
-        { prompt: "Total surface area, in cm\xB2:", answer: a * b + (a + b + c) * L2, unit: "cm\xB2", hint: "Add the ends and the rectangles.", wrong: [[(a + b + c) * L2, "That leaves out the two ends."], [a * b / 2 + (a + b + c) * L2, "That has only one triangular end."]] }
+        { prompt: "Area of the three rectangular faces together, in cm\xB2:", answer: (a + b + c) * L3, unit: "cm\xB2", hint: "The three rectangles have the same length. Their widths are the three sides of the triangle.", wrong: [[(a + b) * L3, "There are three rectangles. The sloping one is missing."], [a * b / 2 * L3, "That is the volume of the prism. You need the area of the rectangles."]] },
+        { prompt: "Total surface area, in cm\xB2:", answer: a * b + (a + b + c) * L3, unit: "cm\xB2", hint: "Add the ends and the rectangles.", wrong: [[(a + b + c) * L3, "That leaves out the two ends."], [a * b / 2 + (a + b + c) * L3, "That has only one triangular end."]] }
       ],
       hints: ["Open the prism out: two triangles and three rectangles."],
-      steps: [`Two ends: 2 \xD7 \xBD \xD7 ${a} \xD7 ${b} = ${a * b} cm\xB2.`, `Rectangles: (${a} + ${b} + ${c}) \xD7 ${L2} = ${(a + b + c) * L2} cm\xB2.`, `Total: ${a * b} + ${(a + b + c) * L2} = ${a * b + (a + b + c) * L2} cm\xB2.`]
+      steps: [`Two ends: 2 \xD7 \xBD \xD7 ${a} \xD7 ${b} = ${a * b} cm\xB2.`, `Rectangles: (${a} + ${b} + ${c}) \xD7 ${L3} = ${(a + b + c) * L3} cm\xB2.`, `Total: ${a * b} + ${(a + b + c) * L3} = ${a * b + (a + b + c) * L3} cm\xB2.`]
     }),
-    check: ({ a, b, c, L: L2 }, v) => v[0] === 2 * (a * b / 2) && v[1] === a * L2 + b * L2 + c * L2 && v[2] === v[0] + v[1]
+    check: ({ a, b, c, L: L3 }, v) => v[0] === 2 * (a * b / 2) && v[1] === a * L3 + b * L3 + c * L3 && v[2] === v[0] + v[1]
   }),
   fam8({
     id: "g9.area.prism-trough",
@@ -24603,17 +24686,17 @@ var FAMILIES21 = [
       const b = pick([20, 30, 40]);
       return { o, h, c, b, a: b + 2 * o, L: pick([60, 80, 100]) };
     },
-    make: ({ o, h, c, b, a, L: L2 }) => {
-      const end = (a + b) / 2 * h, sa = 2 * end + (b + 2 * c) * L2;
+    make: ({ o, h, c, b, a, L: L3 }) => {
+      const end = (a + b) / 2 * h, sa = 2 * end + (b + 2 * c) * L3;
       return {
-        question: `A metal water trough is a prism. Its ends are trapeziums. The top of the trough is open. Each end has a top edge of ${a} cm, a bottom edge of ${b} cm, a height of ${h} cm and sloping sides of ${c} cm. The trough is ${L2} cm long. Find the area of metal used, in cm\xB2.`,
+        question: `A metal water trough is a prism. Its ends are trapeziums. The top of the trough is open. Each end has a top edge of ${a} cm, a bottom edge of ${b} cm, a height of ${h} cm and sloping sides of ${c} cm. The trough is ${L3} cm long. Find the area of metal used, in cm\xB2.`,
         answer: sa,
-        wrong: [[sa + a * L2, "The top is open, so there is no metal there."], [end + (b + 2 * c) * L2, "There are two ends, not one."], [2 * end + b * L2, "The two sloping sides are metal too. They are missing."], [2 * end + (a + b + 2 * c) * L2, "Check which faces exist: bottom, two slopes, two ends. The top is open."]],
+        wrong: [[sa + a * L3, "The top is open, so there is no metal there."], [end + (b + 2 * c) * L3, "There are two ends, not one."], [2 * end + b * L3, "The two sloping sides are metal too. They are missing."], [2 * end + (a + b + 2 * c) * L3, "Check which faces exist: bottom, two slopes, two ends. The top is open."]],
         hints: ["List the faces that are metal: two ends, the bottom and two sloping sides.", "The area of a trapezium is half of the sum of the parallel sides times the height."],
-        steps: [`One end: \xBD \xD7 (${a} + ${b}) \xD7 ${h} = ${T2(end)} cm\xB2. Two ends: ${T2(2 * end)} cm\xB2.`, `Bottom and two slopes: (${b} + ${c} + ${c}) \xD7 ${L2} = ${T2((b + 2 * c) * L2)} cm\xB2.`, `Total: ${T2(2 * end)} + ${T2((b + 2 * c) * L2)} = ${T2(sa)} cm\xB2.`]
+        steps: [`One end: \xBD \xD7 (${a} + ${b}) \xD7 ${h} = ${T2(end)} cm\xB2. Two ends: ${T2(2 * end)} cm\xB2.`, `Bottom and two slopes: (${b} + ${c} + ${c}) \xD7 ${L3} = ${T2((b + 2 * c) * L3)} cm\xB2.`, `Total: ${T2(2 * end)} + ${T2((b + 2 * c) * L3)} = ${T2(sa)} cm\xB2.`]
       };
     },
-    check: ({ b, c, h, a, L: L2 }, ans) => ans - (b * L2 + 2 * c * L2) - (a + b) * h === 0
+    check: ({ b, c, h, a, L: L3 }, ans) => ans - (b * L3 + 2 * c * L3) - (a + b) * h === 0
   }),
   // ======================================================== AREA: pyramids
   fam8({
@@ -24860,18 +24943,18 @@ var FAMILIES21 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L2 = pick([100, 150, 200, 250]);
-      const l = b * h * L2 / 2 / 1e3;
-      return dp2(l, 1) ? { b, h, L: L2, l } : null;
+      const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L3 = pick([100, 150, 200, 250]);
+      const l = b * h * L3 / 2 / 1e3;
+      return dp2(l, 1) ? { b, h, L: L3, l } : null;
     },
-    make: ({ b, h, L: L2, l }) => ({
-      question: `A feeding trough for calves is a prism. Its ends are triangles with a base of ${b} cm and a height of ${h} cm. The trough is ${L2} cm long. How many litres of water can it hold when full? (1 litre = 1,000 cm\xB3)`,
+    make: ({ b, h, L: L3, l }) => ({
+      question: `A feeding trough for calves is a prism. Its ends are triangles with a base of ${b} cm and a height of ${h} cm. The trough is ${L3} cm long. How many litres of water can it hold when full? (1 litre = 1,000 cm\xB3)`,
       answer: l,
-      wrong: [[b * h * L2 / 1e3, "The end of the trough is a triangle, so its area is half of base times height."], [b * h * L2 / 2, "That is the volume in cm\xB3. Change it to litres."], [b * h * L2 / 6e3, "The volume of a prism is the area of the end times the length. The one third is for a pyramid."], [b * h * L2 / 200, "To change cm\xB3 to litres, divide by 1,000."]],
+      wrong: [[b * h * L3 / 1e3, "The end of the trough is a triangle, so its area is half of base times height."], [b * h * L3 / 2, "That is the volume in cm\xB3. Change it to litres."], [b * h * L3 / 6e3, "The volume of a prism is the area of the end times the length. The one third is for a pyramid."], [b * h * L3 / 200, "To change cm\xB3 to litres, divide by 1,000."]],
       hints: ["Volume of a prism = area of the end \xD7 length.", "The end is a triangle."],
-      steps: [`End: \xBD \xD7 ${b} \xD7 ${h} = ${T2(b * h / 2)} cm\xB2.`, `Volume: ${T2(b * h / 2)} \xD7 ${L2} = ${T2(b * h * L2 / 2)} cm\xB3.`, `Litres: ${T2(b * h * L2 / 2)} \xF7 1,000 = ${T2(l)}.`]
+      steps: [`End: \xBD \xD7 ${b} \xD7 ${h} = ${T2(b * h / 2)} cm\xB2.`, `Volume: ${T2(b * h / 2)} \xD7 ${L3} = ${T2(b * h * L3 / 2)} cm\xB3.`, `Litres: ${T2(b * h * L3 / 2)} \xF7 1,000 = ${T2(l)}.`]
     }),
-    check: ({ b, h, L: L2 }, a) => a * 1e3 * 2 === b * h * L2
+    check: ({ b, h, L: L3 }, a) => a * 1e3 * 2 === b * h * L3
   }),
   fam8({
     id: "g9.vol.prism-pool",
@@ -24902,21 +24985,21 @@ var FAMILIES21 = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L2 = pick([100, 150, 200]);
-      return { b, h, L: L2, kind: pick(["half", "times", "litres"]), who: person() };
+      const b = pick([40, 60, 80, 100]), h = pick([30, 40, 50]), L3 = pick([100, 150, 200]);
+      return { b, h, L: L3, kind: pick(["half", "times", "litres"]), who: person() };
     },
-    make: ({ b, h, L: L2, kind, who }) => {
+    make: ({ b, h, L: L3, kind, who }) => {
       const area = kind === "half" ? b * h : b * h / 2;
-      const vol = kind === "times" ? area + L2 : area * L2, lit = kind === "litres" ? vol / 100 : vol / 1e3;
+      const vol = kind === "times" ? area + L3 : area * L3, lit = kind === "litres" ? vol / 100 : vol / 1e3;
       return {
-        question: `${who.name} is asked how many litres a water tank holds. It is a prism ${L2} cm long. Each end is a triangle with a base of ${b} cm and a height of ${h} cm. The working is shown. Which step has the mistake?`,
+        question: `${who.name} is asked how many litres a water tank holds. It is a prism ${L3} cm long. Each end is a triangle with a base of ${b} cm and a height of ${h} cm. The working is shown. Which step has the mistake?`,
         working: [
           { text: kind === "half" ? `Area of the end = ${b} \xD7 ${h} = ${T2(area)} cm\xB2` : `Area of the end = \xBD \xD7 ${b} \xD7 ${h} = ${T2(area)} cm\xB2`, ok: area === b * h / 2 },
-          { text: kind === "times" ? `Volume = ${T2(area)} + ${L2} = ${T2(vol)} cm\xB3` : `Volume = ${T2(area)} \xD7 ${L2} = ${T2(vol)} cm\xB3`, ok: vol === area * L2 },
+          { text: kind === "times" ? `Volume = ${T2(area)} + ${L3} = ${T2(vol)} cm\xB3` : `Volume = ${T2(area)} \xD7 ${L3} = ${T2(vol)} cm\xB3`, ok: vol === area * L3 },
           { text: kind === "litres" ? `Litres = ${T2(vol)} \xF7 100 = ${T2(lit)}` : `Litres = ${T2(vol)} \xF7 1,000 = ${T2(lit)}`, ok: lit === vol / 1e3 }
         ],
         fix: kind === "half" ? "The area of a triangle is half of base times height. The half is missing." : kind === "times" ? "The volume of a prism is the area of the end times the length, not plus." : "There are 1,000 cm\xB3 in a litre, so divide by 1,000.",
-        steps: [`End: \xBD \xD7 ${b} \xD7 ${h} = ${T2(b * h / 2)} cm\xB2.`, `Volume: ${T2(b * h / 2)} \xD7 ${L2} = ${T2(b * h * L2 / 2)} cm\xB3, which is ${T2(b * h * L2 / 2e3)} litres.`]
+        steps: [`End: \xBD \xD7 ${b} \xD7 ${h} = ${T2(b * h / 2)} cm\xB2.`, `Volume: ${T2(b * h / 2)} \xD7 ${L3} = ${T2(b * h * L3 / 2)} cm\xB3, which is ${T2(b * h * L3 / 2e3)} litres.`]
       };
     }
   }),
@@ -24986,17 +25069,17 @@ var FAMILIES21 = [
     form: "steps",
     draw: () => ({ h: pick([18, 24, 30]), who: person() }),
     make: ({ h, who }) => {
-      const H2 = 2 * h, big = round(PI * 14 * 14 * H2 / 3, 2), small = round(PI * 7 * 7 * h / 3, 2), bucket = round(big - small, 2);
+      const H3 = 2 * h, big = round(PI * 14 * 14 * H3 / 3, 2), small = round(PI * 7 * 7 * h / 3, 2), bucket = round(big - small, 2);
       return {
-        question: `${who.name}'s bucket is a cone with its pointed end cut off. The cone it was cut from has a radius of 14 cm at the top and a height of ${H2} cm. The piece cut off is a small cone with a radius of 7 cm and a height of ${h} cm. Use \u03C0 = 22/7.`,
+        question: `${who.name}'s bucket is a cone with its pointed end cut off. The cone it was cut from has a radius of 14 cm at the top and a height of ${H3} cm. The piece cut off is a small cone with a radius of 7 cm and a height of ${h} cm. Use \u03C0 = 22/7.`,
         parts: [
-          { prompt: "Volume of the whole cone, in cm\xB3:", answer: big, unit: "cm\xB3", hint: "Volume of a cone = \u2153 \xD7 \u03C0 \xD7 r \xD7 r \xD7 height.", wrong: [[round(PI * 14 * 14 * H2, 2), "A cone has one third of the volume of a cylinder."], [round(PI * 7 * 7 * H2 / 3, 2), "Use the radius of the big cone, 14 cm."]] },
-          { prompt: "Volume of the small cone that was cut off, in cm\xB3:", answer: small, unit: "cm\xB3", hint: "Use its own radius and its own height.", wrong: [[round(PI * 7 * 7 * H2 / 3, 2), "The small cone is only as tall as the piece cut off."], [round(PI * 14 * 14 * h / 3, 2), "The small cone has a radius of 7 cm."]] },
+          { prompt: "Volume of the whole cone, in cm\xB3:", answer: big, unit: "cm\xB3", hint: "Volume of a cone = \u2153 \xD7 \u03C0 \xD7 r \xD7 r \xD7 height.", wrong: [[round(PI * 14 * 14 * H3, 2), "A cone has one third of the volume of a cylinder."], [round(PI * 7 * 7 * H3 / 3, 2), "Use the radius of the big cone, 14 cm."]] },
+          { prompt: "Volume of the small cone that was cut off, in cm\xB3:", answer: small, unit: "cm\xB3", hint: "Use its own radius and its own height.", wrong: [[round(PI * 7 * 7 * H3 / 3, 2), "The small cone is only as tall as the piece cut off."], [round(PI * 14 * 14 * h / 3, 2), "The small cone has a radius of 7 cm."]] },
           { prompt: "Volume of the bucket, in cm\xB3:", answer: bucket, unit: "cm\xB3", hint: "Take the small cone away from the whole cone.", wrong: [[round(big + small, 2), "The small cone was cut away, so take it away."], [big, "The cut-off piece is not part of the bucket."]] },
           { prompt: "How many litres does the bucket hold? (1 litre = 1,000 cm\xB3)", answer: bucket / 1e3, unit: "litres", hint: "Divide by 1,000.", wrong: [[bucket / 100, "There are 1,000 cm\xB3 in a litre."], [bucket * 1e3, "Divide, because a litre is bigger than a cm\xB3."]] }
         ],
         hints: ["Bucket = whole cone minus the cut-off cone."],
-        steps: [`Whole cone: \u2153 \xD7 22/7 \xD7 14 \xD7 14 \xD7 ${H2} = ${T2(big)} cm\xB3.`, `Small cone: \u2153 \xD7 22/7 \xD7 7 \xD7 7 \xD7 ${h} = ${T2(small)} cm\xB3.`, `Bucket: ${T2(big)} \u2212 ${T2(small)} = ${T2(bucket)} cm\xB3.`, `Litres: ${T2(bucket)} \xF7 1,000 = ${T2(bucket / 1e3)}.`]
+        steps: [`Whole cone: \u2153 \xD7 22/7 \xD7 14 \xD7 14 \xD7 ${H3} = ${T2(big)} cm\xB3.`, `Small cone: \u2153 \xD7 22/7 \xD7 7 \xD7 7 \xD7 ${h} = ${T2(small)} cm\xB3.`, `Bucket: ${T2(big)} \u2212 ${T2(small)} = ${T2(bucket)} cm\xB3.`, `Litres: ${T2(bucket)} \xF7 1,000 = ${T2(bucket / 1e3)}.`]
       };
     },
     check: ({ h }, v) => Math.abs(v[0] - v[1] * 8) < 0.01 && Math.abs(v[2] - (v[0] - v[1])) < 0.01 && Math.abs(v[3] * 1e3 - v[2]) < 0.01 && Math.abs(v[1] - 22 / 7 / 3 * 49 * h) < 0.01
@@ -25091,8 +25174,8 @@ var FAMILIES21 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const items = [["maize", 90], ["beans", 50], ["sugar", 50], ["cement", 50], ["rice", 25]].sort(() => Math.random() - 0.5).slice(0, 3);
-      const rows = items.map(([n, m]) => ({ n, m, c: pick([10, 20, 30, 40, 50, 60]) }));
+      const items2 = [["maize", 90], ["beans", 50], ["sugar", 50], ["cement", 50], ["rice", 25]].sort(() => Math.random() - 0.5).slice(0, 3);
+      const rows = items2.map(([n, m]) => ({ n, m, c: pick([10, 20, 30, 40, 50, 60]) }));
       const tot = rows.reduce((a, r) => a + r.c * r.m, 0);
       return dp2(tot / 1e3, 2) && tot > 1500 ? { rows, tot } : null;
     },
@@ -25632,13 +25715,13 @@ var FAMILIES21 = [
     },
     make: ({ name, base, dd, ahead, lon }) => {
       const mins = 4 * dd, h = Math.floor(mins / 60), m = mins % 60;
-      const gap = `${h ? `${h} h ` : ""}${m} min`;
+      const gap2 = `${h ? `${h} h ` : ""}${m} min`;
       return {
-        question: `A town east of the Greenwich meridian has a local time that is ${gap} ${ahead ? "ahead of" : "behind"} the local time in ${name}. ${name} is on longitude ${base}\xB0E. What is the longitude of the town, in degrees east?`,
+        question: `A town east of the Greenwich meridian has a local time that is ${gap2} ${ahead ? "ahead of" : "behind"} the local time in ${name}. ${name} is on longitude ${base}\xB0E. What is the longitude of the town, in degrees east?`,
         answer: lon,
         wrong: [[ahead ? base - dd : base + dd, ahead ? "Places that are ahead in time lie further east, so the longitude gets bigger." : "Places that are behind in time lie further west, so the longitude gets smaller."], [ahead ? base + mins : base - mins, "Each degree is 4 minutes. Divide the minutes by 4 to get degrees."], [ahead ? base + 15 * h : base - 15 * h, "The minutes count too. Change the whole time difference to minutes first."], [dd, "That is the difference in longitude. Add it to, or take it from, the longitude of " + name + "."]].filter((w) => w[0] !== lon),
         hints: ["Change the time difference to minutes, then divide by 4 to find degrees.", "Ahead in time means further east. Behind means further west."],
-        steps: [`Time difference: ${gap} = ${mins} minutes.`, `Degrees: ${mins} \xF7 4 = ${dd}\xB0.`, `${ahead ? "Ahead, so east" : "Behind, so west"}: ${base} ${ahead ? "+" : "\u2212"} ${dd} = ${lon}\xB0E.`]
+        steps: [`Time difference: ${gap2} = ${mins} minutes.`, `Degrees: ${mins} \xF7 4 = ${dd}\xB0.`, `${ahead ? "Ahead, so east" : "Behind, so west"}: ${base} ${ahead ? "+" : "\u2212"} ${dd} = ${lon}\xB0E.`]
       };
     },
     check: ({ base, ahead, dd }, a) => (ahead ? a - base : base - a) * 4 === 4 * dd
@@ -25857,13 +25940,13 @@ var FAMILIES21 = [
     form: "word",
     draw: () => ({ n: pick([2e3, 4e3, 5e3, 8e3]), ml: pick([300, 500]), rt: pick([5, 10, 15]), who: person() }),
     make: ({ n, ml, rt, who }) => {
-      const L2 = n * ml / 1e3;
+      const L3 = n * ml / 1e3;
       return {
         question: `A bottling company makes ${commas(n)} bottles of soda. Each bottle holds ${ml} ml. In this question, excise duty on soda is sh ${rt} for every litre. How much excise duty does the company pay?`,
-        answer: L2 * rt,
-        wrong: [[n * rt, "The excise duty is for each litre, not each bottle. Find the number of litres first."], [n * ml * rt, "That uses millilitres. The rate is for each litre."], [L2, "That is the number of litres. Multiply by the rate for each litre."], [round(n * ml * rt / 100, 1), "There are 1,000 ml in a litre."]].filter((w) => w[0] !== L2 * rt),
+        answer: L3 * rt,
+        wrong: [[n * rt, "The excise duty is for each litre, not each bottle. Find the number of litres first."], [n * ml * rt, "That uses millilitres. The rate is for each litre."], [L3, "That is the number of litres. Multiply by the rate for each litre."], [round(n * ml * rt / 100, 1), "There are 1,000 ml in a litre."]].filter((w) => w[0] !== L3 * rt),
         hints: ["Find the total volume in litres.", "1,000 ml = 1 litre."],
-        steps: [`Volume: ${commas(n)} \xD7 ${ml} ml = ${commas(n * ml)} ml = ${commas(L2)} litres.`, `Excise: ${commas(L2)} \xD7 ${rt} = ${sh(L2 * rt)}.`]
+        steps: [`Volume: ${commas(n)} \xD7 ${ml} ml = ${commas(n * ml)} ml = ${commas(L3)} litres.`, `Excise: ${commas(L3)} \xD7 ${rt} = ${sh(L3 * rt)}.`]
       };
     },
     check: ({ n, ml, rt }, a) => a / rt * 1e3 === n * ml
@@ -25940,8 +26023,8 @@ var FAMILIES21 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const items = ["radio", "mobile phone", "solar panel", "bicycle", "sewing machine"].sort(() => Math.random() - 0.5).slice(0, 4);
-      const rows = items.map((n) => ({ n, p: price(n), v: Math.random() < 0.7 }));
+      const items2 = ["radio", "mobile phone", "solar panel", "bicycle", "sewing machine"].sort(() => Math.random() - 0.5).slice(0, 4);
+      const rows = items2.map((n) => ({ n, p: price(n), v: Math.random() < 0.7 }));
       const tot = rows.filter((r) => r.v).reduce((a, r) => a + r.p, 0);
       return rows.some((r) => !r.v) && rows.filter((r) => r.v).length >= 2 && dp2(tot * 0.16, 1) ? { rows, tot } : null;
     },
@@ -26146,13 +26229,13 @@ var FAMILIES22 = [
       return { m, c, lines: mix(lines) };
     },
     make: ({ m, c, lines }) => {
-      const L2 = ["A", "B", "C", "D"];
+      const L3 = ["A", "B", "C", "D"];
       const why = { next: "This line crosses the y-axis in the same place, but parallel lines need the same gradient. Compare the numbers in front of x.", neg: "This gradient has the opposite sign, so the line slopes the other way. Parallel lines slope the same way.", swap: "The gradient is the number multiplying x, not the number added on at the end." };
       return {
         question: `The table gives the equations of four lines. Which line is parallel to ${lineEq(m, c)}?`,
-        model: { type: "table", data: { head: ["Line", "Equation"], rows: lines.map((l, i) => ({ label: `Line ${L2[i]}`, value: lineEq(l.m, l.c) })) } },
+        model: { type: "table", data: { head: ["Line", "Equation"], rows: lines.map((l, i) => ({ label: `Line ${L3[i]}`, value: lineEq(l.m, l.c) })) } },
         fixedOrder: true,
-        options: lines.map((l, i) => ({ text: `Line ${L2[i]}`, right: l.t === "right", why: l.t === "right" ? void 0 : why[l.t] })),
+        options: lines.map((l, i) => ({ text: `Line ${L3[i]}`, right: l.t === "right", why: l.t === "right" ? void 0 : why[l.t] })),
         hints: ["Parallel lines have the same gradient.", "In y = mx + c, the gradient is the number multiplying x."],
         steps: [`The gradient of ${lineEq(m, c)} is ${m}.`, `Parallel lines have the same gradient, so look for the equation with ${sg(m)} in front of x.`, `That is ${lineEq(lines.find((l) => l.t === "right").m, lines.find((l) => l.t === "right").c)}.`]
       };
@@ -26502,17 +26585,17 @@ var FAMILIES22 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const h = pick([24, 30, 36, 40, 45, 60]), gap = pick([15, 20, 25, 30]);
-      return allDistinct(h, gap, h + gap, h - gap) && h !== gap ? { h, gap } : null;
+      const h = pick([24, 30, 36, 40, 45, 60]), gap2 = pick([15, 20, 25, 30]);
+      return allDistinct(h, gap2, h + gap2, h - gap2) && h !== gap2 ? { h, gap: gap2 } : null;
     },
-    make: ({ h, gap }) => ({
-      question: `A guard on top of a ${h} m watch tower on the shore of Lake Victoria sees two canoes in a straight line out from the tower. The nearer canoe is at an angle of depression of 45\xB0. The farther canoe is ${gap} m beyond it. How far is the farther canoe from the foot of the tower, in metres?`,
-      answer: h + gap,
-      wrong: [[h, "That is how far the nearer canoe is from the tower. The farther canoe is beyond it."], [gap, "That is only the extra distance. Add it to the distance of the nearer canoe."], [Math.abs(h - gap), "Farther away means adding the extra distance, not taking it away."]],
+    make: ({ h, gap: gap2 }) => ({
+      question: `A guard on top of a ${h} m watch tower on the shore of Lake Victoria sees two canoes in a straight line out from the tower. The nearer canoe is at an angle of depression of 45\xB0. The farther canoe is ${gap2} m beyond it. How far is the farther canoe from the foot of the tower, in metres?`,
+      answer: h + gap2,
+      wrong: [[h, "That is how far the nearer canoe is from the tower. The farther canoe is beyond it."], [gap2, "That is only the extra distance. Add it to the distance of the nearer canoe."], [Math.abs(h - gap2), "Farther away means adding the extra distance, not taking it away."]],
       hints: ["At 45\xB0, the distance from the foot of the tower equals the height of the tower.", "The farther canoe is beyond the nearer one by the extra distance given."],
-      steps: [`At 45\xB0, the nearer canoe is ${h} m from the foot of the tower.`, `The farther canoe is ${gap} m beyond it: ${h} + ${gap} = ${h + gap} m.`]
+      steps: [`At 45\xB0, the nearer canoe is ${h} m from the foot of the tower.`, `The farther canoe is ${gap2} m beyond it: ${h} + ${gap2} = ${h + gap2} m.`]
     }),
-    check: ({ h, gap }, a) => a - gap === h
+    check: ({ h, gap: gap2 }, a) => a - gap2 === h
   }),
   // =========================== SIMILARITY AND ENLARGEMENT ===========================
   fam9({
@@ -26800,24 +26883,24 @@ var FAMILIES22 = [
     rung: 2,
     form: "spot",
     draw: () => ({ A: pick([20, 25, 35, 40, 55, 65]), H: pick([12, 15, 20, 25, 30, 40]), side: pick(["opposite", "adjacent"]), kind: pick(["ratio", "op", "val"]), p: person() }),
-    make: ({ A: A2, H: H2, side, kind, p }) => {
+    make: ({ A: A2, H: H3, side, kind, p }) => {
       const tr = side === "opposite" ? "sin" : "cos", other = side === "opposite" ? "cos" : "sin";
       const val = (r) => TRIG[r](A2);
       const usedR = kind === "ratio" ? other : tr, op = kind === "op" ? "\xF7" : "\xD7";
       const valUsed = kind === "val" ? val(other) : val(usedR);
-      const res = op === "\xD7" ? round(H2 * valUsed, 2) : round(H2 / valUsed, 2);
+      const res = op === "\xD7" ? round(H3 * valUsed, 2) : round(H3 / valUsed, 2);
       const working = [
-        { text: `x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle, and ${H2} cm is the hypotenuse.`, ok: true },
-        { text: `Use ${usedR}: ${usedR} ${A2}\xB0 = x \xF7 ${H2}.`, ok: usedR === tr },
-        { text: `So x = ${H2} ${op} ${usedR} ${A2}\xB0.`, ok: op === "\xD7" },
-        { text: `x = ${H2} ${op} ${valUsed} = ${res} cm.`, ok: valUsed === val(usedR) }
+        { text: `x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle, and ${H3} cm is the hypotenuse.`, ok: true },
+        { text: `Use ${usedR}: ${usedR} ${A2}\xB0 = x \xF7 ${H3}.`, ok: usedR === tr },
+        { text: `So x = ${H3} ${op} ${usedR} ${A2}\xB0.`, ok: op === "\xD7" },
+        { text: `x = ${H3} ${op} ${valUsed} = ${res} cm.`, ok: valUsed === val(usedR) }
       ];
-      const fixes = { ratio: `The side x is ${side === "opposite" ? "opposite" : "next to"} the angle and the other side given is the hypotenuse. That pair needs ${tr}, not ${other}.`, op: `From ${tr} ${A2}\xB0 = x \xF7 ${H2}, multiply both sides by ${H2}. Do not divide.`, val: `${usedR} ${A2}\xB0 is ${val(usedR)}. The number used in the last step belongs to ${other}.` };
+      const fixes = { ratio: `The side x is ${side === "opposite" ? "opposite" : "next to"} the angle and the other side given is the hypotenuse. That pair needs ${tr}, not ${other}.`, op: `From ${tr} ${A2}\xB0 = x \xF7 ${H3}, multiply both sides by ${H3}. Do not divide.`, val: `${usedR} ${A2}\xB0 is ${val(usedR)}. The number used in the last step belongs to ${other}.` };
       return {
-        question: `${p.name} finds the side x of a right-angled triangle. The hypotenuse is ${H2} cm and x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle. The table gives sin ${A2}\xB0 = ${val("sin")} and cos ${A2}\xB0 = ${val("cos")}. Which step has the mistake?`,
+        question: `${p.name} finds the side x of a right-angled triangle. The hypotenuse is ${H3} cm and x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle. The table gives sin ${A2}\xB0 = ${val("sin")} and cos ${A2}\xB0 = ${val("cos")}. Which step has the mistake?`,
         working,
         fix: fixes[kind],
-        steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H2} \xD7 ${tr} ${A2}\xB0 = ${H2} \xD7 ${val(tr)} = ${round(H2 * val(tr), 2)} cm.`]
+        steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H3} \xD7 ${tr} ${A2}\xB0 = ${H3} \xD7 ${val(tr)} = ${round(H3 * val(tr), 2)} cm.`]
       };
     }
   }),
@@ -26828,21 +26911,21 @@ var FAMILIES22 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const A2 = randInt(24, 68), L2 = pick([4, 5, 6, 8, 10]), start = A2 - randInt(0, 4);
+      const A2 = randInt(24, 68), L3 = pick([4, 5, 6, 8, 10]), start = A2 - randInt(0, 4);
       const sv = TRIG.sin(A2), sn = TRIG.sin(A2 + 1);
-      const a = round(L2 * sv, 2);
-      if (!allDistinct(a, round(L2 / sv, 2), round(L2 * sn, 2), sv)) return null;
-      return { A: A2, L: L2, start, sv, sn, a };
+      const a = round(L3 * sv, 2);
+      if (!allDistinct(a, round(L3 / sv, 2), round(L3 * sn, 2), sv)) return null;
+      return { A: A2, L: L3, start, sv, sn, a };
     },
-    make: ({ A: A2, L: L2, start, sv, sn, a }) => ({
-      question: `A ladder of ${L2} m leans against a wall and makes an angle of ${A2}\xB0 with the ground. Use the table of sines to find how high up the wall the ladder reaches. Give the answer to 2 decimal places, in metres.`,
+    make: ({ A: A2, L: L3, start, sv, sn, a }) => ({
+      question: `A ladder of ${L3} m leans against a wall and makes an angle of ${A2}\xB0 with the ground. Use the table of sines to find how high up the wall the ladder reaches. Give the answer to 2 decimal places, in metres.`,
       model: { type: "table", data: { head: ["Angle", "sin"], rows: [0, 1, 2, 3, 4].map((i) => ({ label: `${start + i}\xB0`, value: TRIG.sin(start + i).toFixed(4) })) } },
       answer: a,
-      wrong: [[round(L2 / sv, 2), "The height is the side opposite the angle, and the ladder is the hypotenuse. Multiply the ladder by the sine, do not divide."], [round(L2 * sn, 2), "That reads the row below the one needed. Check the angle in the table."], [sv, "That is the sine from the table. Now multiply by the length of the ladder."]],
+      wrong: [[round(L3 / sv, 2), "The height is the side opposite the angle, and the ladder is the hypotenuse. Multiply the ladder by the sine, do not divide."], [round(L3 * sn, 2), "That reads the row below the one needed. Check the angle in the table."], [sv, "That is the sine from the table. Now multiply by the length of the ladder."]],
       hints: ["The height is opposite the angle. The ladder is the hypotenuse.", "Height = ladder length \xD7 sine of the angle."],
-      steps: [`From the table, sin ${A2}\xB0 = ${sv}.`, `Height = ${L2} \xD7 ${sv} = ${round(L2 * sv, 3)}, which is ${a} m to 2 decimal places.`]
+      steps: [`From the table, sin ${A2}\xB0 = ${sv}.`, `Height = ${L3} \xD7 ${sv} = ${round(L3 * sv, 3)}, which is ${a} m to 2 decimal places.`]
     }),
-    check: ({ L: L2, sv }, v) => Math.abs(v - L2 * sv) <= 51e-4
+    check: ({ L: L3, sv }, v) => Math.abs(v - L3 * sv) <= 51e-4
   }),
   fam9({
     id: "g9.trig.table-find-angle",
@@ -26873,24 +26956,24 @@ var FAMILIES22 = [
     rung: 2,
     form: "steps",
     draw: () => ({ A: randInt(22, 68), L: pick([10, 12, 15, 20]), off: randInt(0, 2) }),
-    make: ({ A: A2, L: L2, off }) => {
+    make: ({ A: A2, L: L3, off }) => {
       const s = TRIG.sin(A2), c = TRIG.cos(A2);
       return {
-        question: `A footpath up a hill is ${L2} m long and climbs at ${A2}\xB0 to the horizontal. Read the sine and the cosine of the angle from the table. Then find the rise of the path and its horizontal length.`,
+        question: `A footpath up a hill is ${L3} m long and climbs at ${A2}\xB0 to the horizontal. Read the sine and the cosine of the angle from the table. Then find the rise of the path and its horizontal length.`,
         model: { type: "table", data: { head: ["Angle", "sin", "cos"], rows: [0, 1, 2].map((i) => {
           const a = A2 - off + i;
           return { cells: [`${a}\xB0`, TRIG.sin(a).toFixed(4), TRIG.cos(a).toFixed(4)] };
         }) } },
         parts: [
           { prompt: `Read sin ${A2}\xB0 from the table.`, answer: s, hint: `Find the row for ${A2}\xB0 and the sin column.`, wrong: [[c, "That is the cos column. Use the sin column."]] },
-          { prompt: "Find how far the path rises, in metres, to 2 decimal places.", answer: round(L2 * s, 2), unit: "m", hint: "The rise is opposite the angle: path length \xD7 sine.", wrong: [[round(L2 * c, 2), "The rise is opposite the angle, so use the sine, not the cosine."]] },
+          { prompt: "Find how far the path rises, in metres, to 2 decimal places.", answer: round(L3 * s, 2), unit: "m", hint: "The rise is opposite the angle: path length \xD7 sine.", wrong: [[round(L3 * c, 2), "The rise is opposite the angle, so use the sine, not the cosine."]] },
           { prompt: `Read cos ${A2}\xB0 from the table.`, answer: c, hint: "Use the cos column.", wrong: [[s, "That is the sin column. Use the cos column."]] },
-          { prompt: "Find the horizontal length of the path, in metres, to 2 decimal places.", answer: round(L2 * c, 2), unit: "m", hint: "The horizontal length is next to the angle: path length \xD7 cosine.", wrong: [[round(L2 * s, 2), "The horizontal length is next to the angle, so use the cosine."]] }
+          { prompt: "Find the horizontal length of the path, in metres, to 2 decimal places.", answer: round(L3 * c, 2), unit: "m", hint: "The horizontal length is next to the angle: path length \xD7 cosine.", wrong: [[round(L3 * s, 2), "The horizontal length is next to the angle, so use the cosine."]] }
         ],
-        steps: [`sin ${A2}\xB0 = ${s} and cos ${A2}\xB0 = ${c}.`, `Height = ${L2} \xD7 ${s} = ${round(L2 * s, 2)} m.`, `Horizontal length: ${L2} \xD7 ${c} = ${round(L2 * c, 2)} m.`]
+        steps: [`sin ${A2}\xB0 = ${s} and cos ${A2}\xB0 = ${c}.`, `Height = ${L3} \xD7 ${s} = ${round(L3 * s, 2)} m.`, `Horizontal length: ${L3} \xD7 ${c} = ${round(L3 * c, 2)} m.`]
       };
     },
-    check: ({ L: L2 }, v) => Math.abs(v[1] - L2 * v[0]) <= 51e-4 && Math.abs(v[3] - L2 * v[2]) <= 51e-4 && Math.abs(v[0] ** 2 + v[2] ** 2 - 1) < 1e-3
+    check: ({ L: L3 }, v) => Math.abs(v[1] - L3 * v[0]) <= 51e-4 && Math.abs(v[3] - L3 * v[2]) <= 51e-4 && Math.abs(v[0] ** 2 + v[2] ** 2 - 1) < 1e-3
   }),
   fam9({
     id: "g9.trig.building-elevation-depression",
@@ -27372,14 +27455,14 @@ var FAMILIES22 = [
       const sh2 = bags.map((x) => x.red / x.all), target = least ? Math.min(...sh2) : Math.max(...sh2), ti = sh2.indexOf(target);
       const fewest = bags.map((x) => x.red).indexOf(Math.min(...bags.map((x) => x.red)));
       const most = bags.map((x) => x.red).indexOf(Math.max(...bags.map((x) => x.red)));
-      const L2 = ["A", "B", "C"], extreme = least ? fewest : most;
+      const L3 = ["A", "B", "C"], extreme = least ? fewest : most;
       return {
         question: `The table shows the red beads and all the beads in three bags. A learner takes one bead without looking from one bag. From which bag is the learner ${least ? "least" : "most"} likely to take a red bead?`,
-        model: { type: "table", data: { head: ["Bag", "Red beads", "All beads"], rows: bags.map((x, i) => ({ cells: [`Bag ${L2[i]}`, String(x.red), String(x.all)] })) } },
-        options: bags.map((x, i) => ({ text: `Bag ${L2[i]}`, right: i === ti, why: i === ti ? void 0 : i === extreme ? `Bag ${L2[i]} has the ${least ? "fewest" : "most"} red beads, but it also has a different number of beads in all. Compare red out of all.` : `Another bag gives a ${least ? "smaller" : "bigger"} share of red beads.` })),
+        model: { type: "table", data: { head: ["Bag", "Red beads", "All beads"], rows: bags.map((x, i) => ({ cells: [`Bag ${L3[i]}`, String(x.red), String(x.all)] })) } },
+        options: bags.map((x, i) => ({ text: `Bag ${L3[i]}`, right: i === ti, why: i === ti ? void 0 : i === extreme ? `Bag ${L3[i]} has the ${least ? "fewest" : "most"} red beads, but it also has a different number of beads in all. Compare red out of all.` : `Another bag gives a ${least ? "smaller" : "bigger"} share of red beads.` })),
         fixedOrder: true,
         hints: ["The chance of red is red beads \xF7 all beads.", "Work out the chance for each bag, then compare."],
-        steps: bags.map((x, i) => `Bag ${L2[i]}: ${x.red} \xF7 ${x.all} = ${round(x.red / x.all, 3)}.`).concat([`The ${least ? "smallest" : "biggest"} chance is for Bag ${L2[ti]}.`])
+        steps: bags.map((x, i) => `Bag ${L3[i]}: ${x.red} \xF7 ${x.all} = ${round(x.red / x.all, 3)}.`).concat([`The ${least ? "smallest" : "biggest"} chance is for Bag ${L3[ti]}.`])
       };
     }
   }),
@@ -28037,22 +28120,22 @@ var FAMILIES23 = [
     form: "why",
     draw: () => {
       const a = randInt(4, 9), c = randInt(a + 2, 12), b = randInt(2, a - 1), d = randInt(3, c - 1);
-      const L2 = c * d / gcd5(c, d);
-      return b * c > a * d && L2 <= 60 && c !== d ? { a, b, c, d, L: L2 } : null;
+      const L3 = c * d / gcd5(c, d);
+      return b * c > a * d && L3 <= 60 && c !== d ? { a, b, c, d, L: L3 } : null;
     },
-    make: ({ a, b, c, d, L: L2 }) => {
+    make: ({ a, b, c, d, L: L3 }) => {
       const strong = a * d > b * c ? "A" : "B";
-      const [sa, sb] = [a * L2 / c, b * L2 / d];
+      const [sa, sb] = [a * L3 / c, b * L3 / d];
       return {
         question: `Cement and sand are mixed for mortar. Mix A has cement to sand in the ratio ${a}:${c}. Mix B has the ratio ${b}:${d}. Which mix has more cement for each bag of sand, and why?`,
         options: [
-          { text: `Mix ${strong}. With ${L2} bags of sand each, it has more cement`, right: strong === (sa > sb ? "A" : "B") },
+          { text: `Mix ${strong}. With ${L3} bags of sand each, it has more cement`, right: strong === (sa > sb ? "A" : "B") },
           { text: `Mix ${strong === "A" ? "B" : "A"}, because its cement number is the bigger one`, right: false, why: "That compares the cement only. The sand is different in each mix, so the ratios must be compared on the same amount of sand." },
           { text: `Mix ${strong === "A" ? "B" : "A"}, because it makes the bigger batch of mortar`, right: false, why: "The size of the batch is not what is asked. The question is how much cement for each bag of sand." },
           { text: "Both are the same, because each has more sand than cement", right: false, why: "Make the sand equal in both mixes and the cement amounts are different." }
         ],
         hints: ["Make the sand the same amount in both mixes.", "Then compare the bags of cement."],
-        steps: [`Both ratios can be written with ${L2} bags of sand: ${a}:${c} = ${sa}:${L2} and ${b}:${d} = ${sb}:${L2}.`, `Compare the cement: ${sa} and ${sb}.`]
+        steps: [`Both ratios can be written with ${L3} bags of sand: ${a}:${c} = ${sa}:${L3} and ${b}:${d} = ${sb}:${L3}.`, `Compare the cement: ${sa} and ${sb}.`]
       };
     }
   }),
@@ -28665,17 +28748,17 @@ var FAMILIES23 = [
       const h = randInt(5, 20), g = randInt(4, 15);
       return h !== g ? { h, g, N: h + g, L: 2 * h + 4 * g } : null;
     },
-    make: ({ N, L: L2 }) => ({
-      question: `A farmer keeps hens and goats. There are ${N} animals in total and ${L2} legs in total. Let h be the number of hens and g the number of goats. Then h + g = ${N} and 2h + 4g = ${L2}.`,
+    make: ({ N, L: L3 }) => ({
+      question: `A farmer keeps hens and goats. There are ${N} animals in total and ${L3} legs in total. Let h be the number of hens and g the number of goats. Then h + g = ${N} and 2h + 4g = ${L3}.`,
       parts: [
         { prompt: "Double the first equation. What does 2h + 2g equal?", answer: 2 * N, hint: "Double both sides.", wrong: [[N + 2, "Both sides are doubled, not increased by 2."]] },
-        { prompt: "Take that from the second equation. What does 2g equal?", answer: L2 - 2 * N, hint: "The 2h terms cancel. Take the right-hand sides away.", wrong: [[L2 + 2 * N, "The terms must cancel, so subtract."]] },
-        { prompt: "How many goats are there?", answer: (L2 - 2 * N) / 2, unit: "goats", hint: "Divide by 2.", wrong: [[L2 - 2 * N, "That is 2g. How many goats is that?"]] },
-        { prompt: "How many hens are there?", answer: N - (L2 - 2 * N) / 2, unit: "hens", hint: "Take the goats from the total animals.", wrong: [[(L2 - 2 * N) / 2, "That is the number of goats."]] }
+        { prompt: "Take that from the second equation. What does 2g equal?", answer: L3 - 2 * N, hint: "The 2h terms cancel. Take the right-hand sides away.", wrong: [[L3 + 2 * N, "The terms must cancel, so subtract."]] },
+        { prompt: "How many goats are there?", answer: (L3 - 2 * N) / 2, unit: "goats", hint: "Divide by 2.", wrong: [[L3 - 2 * N, "That is 2g. How many goats is that?"]] },
+        { prompt: "How many hens are there?", answer: N - (L3 - 2 * N) / 2, unit: "hens", hint: "Take the goats from the total animals.", wrong: [[(L3 - 2 * N) / 2, "That is the number of goats."]] }
       ],
-      steps: [`2h + 2g = ${2 * N}.`, `(2h + 4g) \u2212 (2h + 2g) = ${L2} \u2212 ${2 * N}, so 2g = ${L2 - 2 * N}.`, `g = ${(L2 - 2 * N) / 2}.`, `h = ${N} \u2212 ${(L2 - 2 * N) / 2} = ${N - (L2 - 2 * N) / 2}.`]
+      steps: [`2h + 2g = ${2 * N}.`, `(2h + 4g) \u2212 (2h + 2g) = ${L3} \u2212 ${2 * N}, so 2g = ${L3 - 2 * N}.`, `g = ${(L3 - 2 * N) / 2}.`, `h = ${N} \u2212 ${(L3 - 2 * N) / 2} = ${N - (L3 - 2 * N) / 2}.`]
     }),
-    check: ({ N, L: L2 }, v) => v[0] === 2 * N && v[1] === L2 - v[0] && v[2] * 2 === v[1] && v[3] + v[2] === N && 2 * v[3] + 4 * v[2] === L2
+    check: ({ N, L: L3 }, v) => v[0] === 2 * N && v[1] === L3 - v[0] && v[2] * 2 === v[1] && v[3] + v[2] === N && 2 * v[3] + 4 * v[2] === L3
   }),
   fam10({
     id: "g8.eq.eliminate-why",
@@ -29044,14 +29127,14 @@ var FAMILIES24 = [
       return null;
     },
     make: ({ sizes, sa, top }) => {
-      const L2 = ["A", "B", "C"];
+      const L3 = ["A", "B", "C"];
       return {
         question: "A factory makes closed cartons from card. The table shows three cuboid cartons. Which carton needs the most card, with no overlaps?",
         story: true,
-        model: { type: "table", data: { head: ["Carton", "Length (cm)", "Width (cm)", "Height (cm)"], rows: sizes.map((s, i) => ({ cells: [L2[i], ...s.map(String)] })) } },
-        options: L2.map((x, i) => ({ text: `Carton ${x}`, right: i === top, why: i === top ? void 0 : `Carton ${x} has a surface area of ${sa[i]} cm\xB2. Work out all three and compare them.` })),
+        model: { type: "table", data: { head: ["Carton", "Length (cm)", "Width (cm)", "Height (cm)"], rows: sizes.map((s, i) => ({ cells: [L3[i], ...s.map(String)] })) } },
+        options: L3.map((x, i) => ({ text: `Carton ${x}`, right: i === top, why: i === top ? void 0 : `Carton ${x} has a surface area of ${sa[i]} cm\xB2. Work out all three and compare them.` })),
         hints: ["The card covers every face, so find the surface area of each carton.", "A cuboid has three pairs of equal faces: length \xD7 width, length \xD7 height, width \xD7 height."],
-        steps: sizes.map((s, i) => `Carton ${L2[i]}: 2 \xD7 (${s[0]}\xD7${s[1]} + ${s[0]}\xD7${s[2]} + ${s[1]}\xD7${s[2]}) = ${sa[i]} cm\xB2.`).concat([`The largest is Carton ${L2[top]}.`])
+        steps: sizes.map((s, i) => `Carton ${L3[i]}: 2 \xD7 (${s[0]}\xD7${s[1]} + ${s[0]}\xD7${s[2]} + ${s[1]}\xD7${s[2]}) = ${sa[i]} cm\xB2.`).concat([`The largest is Carton ${L3[top]}.`])
       };
     }
   }),
@@ -29148,18 +29231,18 @@ var FAMILIES24 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const [a, h, s] = pick([[1.5, 2, 2.5], [3, 4, 5], [2, 1.5, 2.5]]), L2 = pick([3, 4, 5, 6]);
-      const ends = 2 * a * h, slopes = 2 * s * L2, floor = 2 * a * L2, tot = ends + slopes + floor;
-      return uniq4(tot, tot - floor, tot - ends, 2 * a * s + slopes + floor) ? { a, h, s, L: L2, ends, slopes, floor, tot, p: person() } : null;
+      const [a, h, s] = pick([[1.5, 2, 2.5], [3, 4, 5], [2, 1.5, 2.5]]), L3 = pick([3, 4, 5, 6]);
+      const ends = 2 * a * h, slopes = 2 * s * L3, floor = 2 * a * L3, tot = ends + slopes + floor;
+      return uniq4(tot, tot - floor, tot - ends, 2 * a * s + slopes + floor) ? { a, h, s, L: L3, ends, slopes, floor, tot, p: person() } : null;
     },
-    make: ({ a, h, s, L: L2, ends, slopes, floor, tot, p }) => ({
-      question: `${p.name}'s camping tent is a triangular prism lying on its side. Each triangular end is ${2 * a} m wide at the floor and ${h} m high. Each sloping side is ${s} m from the floor to the top, and the tent is ${L2} m long. The floor is sewn in. How much cloth is needed for the whole tent, in m\xB2?`,
+    make: ({ a, h, s, L: L3, ends, slopes, floor, tot, p }) => ({
+      question: `${p.name}'s camping tent is a triangular prism lying on its side. Each triangular end is ${2 * a} m wide at the floor and ${h} m high. Each sloping side is ${s} m from the floor to the top, and the tent is ${L3} m long. The floor is sewn in. How much cloth is needed for the whole tent, in m\xB2?`,
       answer: tot,
       wrong: [[tot - floor, "The floor is sewn in, so it needs cloth too."], [tot - ends, "The two triangular ends need cloth as well as the sloping sides."], [2 * a * s + slopes + floor, "The area of each triangle uses the height (the straight up measure), not the sloping side."]],
       hints: ["List the faces: two triangles, two sloping rectangles, and the floor.", "Each triangle is half of base \xD7 height. Each sloping side is the sloping length \xD7 the length of the tent."],
-      steps: [`Two triangles: 2 \xD7 1/2 \xD7 ${2 * a} \xD7 ${h} = ${ends} m\xB2.`, `Two sloping sides: 2 \xD7 ${s} \xD7 ${L2} = ${slopes} m\xB2.`, `Floor: ${2 * a} \xD7 ${L2} = ${floor} m\xB2.`, `Total: ${ends} + ${slopes} + ${floor} = ${tot} m\xB2.`]
+      steps: [`Two triangles: 2 \xD7 1/2 \xD7 ${2 * a} \xD7 ${h} = ${ends} m\xB2.`, `Two sloping sides: 2 \xD7 ${s} \xD7 ${L3} = ${slopes} m\xB2.`, `Floor: ${2 * a} \xD7 ${L3} = ${floor} m\xB2.`, `Total: ${ends} + ${slopes} + ${floor} = ${tot} m\xB2.`]
     }),
-    check: ({ a, h, s, L: L2 }, v) => near2(v, a * h * 2 + L2 * (2 * s + 2 * a))
+    check: ({ a, h, s, L: L3 }, v) => near2(v, a * h * 2 + L3 * (2 * s + 2 * a))
   }),
   fam11({
     id: "g8.prism.table-faces",
@@ -29168,19 +29251,19 @@ var FAMILIES24 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const [b, h, s] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15]]), L2 = pick([10, 12, 15, 20]);
-      const tot = b * h + (b + h + s) * L2;
-      return uniq4(tot, tot - b * h / 2, tot + b * h, tot - s * L2) ? { b, h, s, L: L2, tot } : null;
+      const [b, h, s] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15]]), L3 = pick([10, 12, 15, 20]);
+      const tot = b * h + (b + h + s) * L3;
+      return uniq4(tot, tot - b * h / 2, tot + b * h, tot - s * L3) ? { b, h, s, L: L3, tot } : null;
     },
-    make: ({ b, h, s, L: L2, tot }) => ({
+    make: ({ b, h, s, L: L3, tot }) => ({
       question: "The table lists the faces of a closed triangular prism made from card. What is the total surface area of the prism, in cm\xB2?",
-      model: { type: "table", data: { head: ["Face", "How many", "Measures (cm)"], rows: [{ cells: ["Triangle", "2", `base ${b}, height ${h}`] }, { cells: ["Rectangle", "1", `${b} by ${L2}`] }, { cells: ["Rectangle", "1", `${h} by ${L2}`] }, { cells: ["Rectangle", "1", `${s} by ${L2}`] }] } },
+      model: { type: "table", data: { head: ["Face", "How many", "Measures (cm)"], rows: [{ cells: ["Triangle", "2", `base ${b}, height ${h}`] }, { cells: ["Rectangle", "1", `${b} by ${L3}`] }, { cells: ["Rectangle", "1", `${h} by ${L3}`] }, { cells: ["Rectangle", "1", `${s} by ${L3}`] }] } },
       answer: tot,
-      wrong: [[tot - b * h / 2, "There are two triangles in the table. Count both."], [tot + b * h, "The area of a triangle is half of base \xD7 height."], [tot - s * L2, "Use all three rectangles in the table."]],
+      wrong: [[tot - b * h / 2, "There are two triangles in the table. Count both."], [tot + b * h, "The area of a triangle is half of base \xD7 height."], [tot - s * L3, "Use all three rectangles in the table."]],
       hints: ['Work out the area of one of each kind of face. Then use the "How many" column.', "Area of a triangle = 1/2 \xD7 base \xD7 height. Area of a rectangle = length \xD7 width."],
-      steps: [`Triangles: 2 \xD7 1/2 \xD7 ${b} \xD7 ${h} = ${b * h} cm\xB2.`, `Rectangles: ${b}\xD7${L2} + ${h}\xD7${L2} + ${s}\xD7${L2} = ${(b + h + s) * L2} cm\xB2.`, `Total: ${b * h} + ${(b + h + s) * L2} = ${tot} cm\xB2.`]
+      steps: [`Triangles: 2 \xD7 1/2 \xD7 ${b} \xD7 ${h} = ${b * h} cm\xB2.`, `Rectangles: ${b}\xD7${L3} + ${h}\xD7${L3} + ${s}\xD7${L3} = ${(b + h + s) * L3} cm\xB2.`, `Total: ${b * h} + ${(b + h + s) * L3} = ${tot} cm\xB2.`]
     }),
-    check: ({ b, h, s, L: L2 }, a) => near2(a, b * h + L2 * b + L2 * h + L2 * s)
+    check: ({ b, h, s, L: L3 }, a) => near2(a, b * h + L3 * b + L3 * h + L3 * s)
   }),
   fam11({
     id: "g8.prism.spot-working",
@@ -29192,18 +29275,18 @@ var FAMILIES24 = [
       const [b, h, s] = pick([[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15]]);
       return { b, h, s, L: pick([10, 12, 15, 20]), m: pick([0, 1]), p: person() };
     },
-    make: ({ b, h, s, L: L2, m, p }) => {
-      const tri = m === 0 ? b * h : b * h / 2, two = 2 * tri, rectLen = m === 1 ? b + h : b + h + s, rect = rectLen * L2, tot = two + rect;
+    make: ({ b, h, s, L: L3, m, p }) => {
+      const tri = m === 0 ? b * h : b * h / 2, two = 2 * tri, rectLen = m === 1 ? b + h : b + h + s, rect = rectLen * L3, tot = two + rect;
       return {
-        question: `${p.name} finds the total surface area of a closed triangular prism. The ends are right-angled triangles with sides ${b} cm, ${h} cm and ${s} cm. The prism is ${L2} cm long. Which step has the mistake?`,
+        question: `${p.name} finds the total surface area of a closed triangular prism. The ends are right-angled triangles with sides ${b} cm, ${h} cm and ${s} cm. The prism is ${L3} cm long. Which step has the mistake?`,
         working: [
           { text: m === 0 ? `One triangle: ${b} \xD7 ${h} = ${tri} cm\xB2` : `One triangle: 1/2 \xD7 ${b} \xD7 ${h} = ${tri} cm\xB2`, ok: tri === b * h / 2 },
           { text: `Two triangles: 2 \xD7 ${tri} = ${two} cm\xB2`, ok: two === 2 * tri },
-          { text: m === 1 ? `Three rectangles: (${b} + ${h}) \xD7 ${L2} = ${rect} cm\xB2` : `Three rectangles: (${b} + ${h} + ${s}) \xD7 ${L2} = ${rect} cm\xB2`, ok: rectLen === b + h + s },
+          { text: m === 1 ? `Three rectangles: (${b} + ${h}) \xD7 ${L3} = ${rect} cm\xB2` : `Three rectangles: (${b} + ${h} + ${s}) \xD7 ${L3} = ${rect} cm\xB2`, ok: rectLen === b + h + s },
           { text: `Total: ${two} + ${rect} = ${tot} cm\xB2`, ok: tot === two + rect }
         ],
         fix: m === 0 ? "The area of a triangle is half of base \xD7 height. Step 1 left out the half." : "There are three rectangles, one for each side of the triangle. Step 3 used only two of the sides.",
-        steps: [`One triangle: 1/2 \xD7 ${b} \xD7 ${h} = ${b * h / 2} cm\xB2.`, `Two triangles: ${b * h} cm\xB2.`, `Three rectangles: (${b} + ${h} + ${s}) \xD7 ${L2} = ${(b + h + s) * L2} cm\xB2.`, `Total: ${b * h + (b + h + s) * L2} cm\xB2.`]
+        steps: [`One triangle: 1/2 \xD7 ${b} \xD7 ${h} = ${b * h / 2} cm\xB2.`, `Two triangles: ${b * h} cm\xB2.`, `Three rectangles: (${b} + ${h} + ${s}) \xD7 ${L3} = ${(b + h + s) * L3} cm\xB2.`, `Total: ${b * h + (b + h + s) * L3} cm\xB2.`]
       };
     }
   }),
@@ -29264,14 +29347,14 @@ var FAMILIES24 = [
       return null;
     },
     make: ({ fs, est, i }) => {
-      const L2 = ["A", "B", "C"];
+      const L3 = ["A", "B", "C"];
       return {
         question: "Three irregular fields are drawn on the same grid. The table shows the squares counted for each field. A part square counts as half. Which field has the largest area?",
         story: true,
-        model: { type: "table", data: { head: ["Field", "Whole squares", "Part squares"], rows: fs.map((f, j) => ({ cells: [L2[j], String(f[0]), String(f[1])] })) } },
-        options: L2.map((x, j) => ({ text: `Field ${x}`, right: j === i, why: j === i ? void 0 : `Field ${x} comes to ${est[j]} squares when part squares count as half. Find the estimate for every field before you compare.` })),
+        model: { type: "table", data: { head: ["Field", "Whole squares", "Part squares"], rows: fs.map((f, j) => ({ cells: [L3[j], String(f[0]), String(f[1])] })) } },
+        options: L3.map((x, j) => ({ text: `Field ${x}`, right: j === i, why: j === i ? void 0 : `Field ${x} comes to ${est[j]} squares when part squares count as half. Find the estimate for every field before you compare.` })),
         hints: ["Find an estimate for each field: whole squares plus half of the part squares.", "Compare the three estimates."],
-        steps: fs.map((f, j) => `Field ${L2[j]}: ${f[0]} + ${f[1]} \xF7 2 = ${est[j]} squares.`).concat([`The largest is Field ${L2[i]}.`])
+        steps: fs.map((f, j) => `Field ${L3[j]}: ${f[0]} + ${f[1]} \xF7 2 = ${est[j]} squares.`).concat([`The largest is Field ${L3[i]}.`])
       };
     }
   }),
@@ -29450,14 +29533,14 @@ var FAMILIES24 = [
       return null;
     },
     make: ({ plans, tot, best }) => {
-      const L2 = ["A", "B", "C"];
+      const L3 = ["A", "B", "C"];
       return {
         question: "A shop sells the same television in three hire purchase plans, shown in the table. Which plan costs the least altogether?",
         story: true,
-        model: { type: "table", data: { head: ["Plan", "Deposit (sh)", "Monthly payment (sh)", "Months"], rows: plans.map((x, i) => ({ cells: [L2[i], commas(x.D), commas(x.m), String(x.n)] })) } },
-        options: L2.map((x, i) => ({ text: `Plan ${x}`, right: i === best, why: i === best ? void 0 : `Plan ${x} costs ${sh(tot[i])} altogether. Add the deposit and all the monthly payments for every plan, then compare.` })),
+        model: { type: "table", data: { head: ["Plan", "Deposit (sh)", "Monthly payment (sh)", "Months"], rows: plans.map((x, i) => ({ cells: [L3[i], commas(x.D), commas(x.m), String(x.n)] })) } },
+        options: L3.map((x, i) => ({ text: `Plan ${x}`, right: i === best, why: i === best ? void 0 : `Plan ${x} costs ${sh(tot[i])} altogether. Add the deposit and all the monthly payments for every plan, then compare.` })),
         hints: ["For each plan, the total is the deposit plus all the monthly payments.", "A low monthly payment can still cost more if it is paid for many months."],
-        steps: plans.map((x, i) => `Plan ${L2[i]}: ${commas(x.D)} + ${x.n} \xD7 ${commas(x.m)} = ${commas(tot[i])}.`).concat([`The least is Plan ${L2[best]}.`])
+        steps: plans.map((x, i) => `Plan ${L3[i]}: ${commas(x.D)} + ${x.n} \xD7 ${commas(x.m)} = ${commas(tot[i])}.`).concat([`The least is Plan ${L3[best]}.`])
       };
     }
   }),
@@ -29492,16 +29575,16 @@ var FAMILIES24 = [
       const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 2], [2, 5], [4, 1]]), k = pick([2, 3, 4, 5]);
       return { a, b, k, L: (a + b) * k, p: person() };
     },
-    make: ({ a, b, k, L: L2, p }) => ({
-      question: `On a drawing, a boundary AB is ${L2} cm long. ${p.name} shares it between two plots in the ratio ${a}:${b}, using the method of equal parts.`,
+    make: ({ a, b, k, L: L3, p }) => ({
+      question: `On a drawing, a boundary AB is ${L3} cm long. ${p.name} shares it between two plots in the ratio ${a}:${b}, using the method of equal parts.`,
       parts: [
         { prompt: "How many equal parts are marked on the ray?", answer: a + b, hint: "Add the two numbers of the ratio.", wrong: [[a * b, "Add the numbers of the ratio, do not multiply."]] },
-        { prompt: "The equal parts cut AB into equal pieces. How long is one piece, in cm?", answer: k, unit: "cm", hint: "Share the length of AB equally between all the parts.", wrong: [[L2 - a - b, "Divide the length by the number of parts."], [L2 * (a + b), "Divide the length by the number of parts."]] },
-        { prompt: `How far is the dividing point from A, in cm? (The part next to A has ${a} pieces.)`, answer: a * k, unit: "cm", hint: "Count the pieces from A up to the dividing point.", wrong: [[b * k, `The part next to A is the ${a} part of the ratio.`], [L2, "That is the whole line AB."]] }
+        { prompt: "The equal parts cut AB into equal pieces. How long is one piece, in cm?", answer: k, unit: "cm", hint: "Share the length of AB equally between all the parts.", wrong: [[L3 - a - b, "Divide the length by the number of parts."], [L3 * (a + b), "Divide the length by the number of parts."]] },
+        { prompt: `How far is the dividing point from A, in cm? (The part next to A has ${a} pieces.)`, answer: a * k, unit: "cm", hint: "Count the pieces from A up to the dividing point.", wrong: [[b * k, `The part next to A is the ${a} part of the ratio.`], [L3, "That is the whole line AB."]] }
       ],
-      steps: [`Equal parts: ${a} + ${b} = ${a + b}.`, `One piece: ${L2} \xF7 ${a + b} = ${k} cm.`, `Dividing point from A: ${a} \xD7 ${k} = ${a * k} cm.`]
+      steps: [`Equal parts: ${a} + ${b} = ${a + b}.`, `One piece: ${L3} \xF7 ${a + b} = ${k} cm.`, `Dividing point from A: ${a} \xD7 ${k} = ${a * k} cm.`]
     }),
-    check: ({ a, b, k, L: L2 }, v) => v[0] === a + b && v[1] * v[0] === L2 && v[2] === v[1] * a
+    check: ({ a, b, k, L: L3 }, v) => v[0] === a + b && v[1] * v[0] === L3 && v[2] === v[1] * a
   }),
   fam11({
     id: "g8.construct.parallel-why",
@@ -29591,17 +29674,17 @@ var FAMILIES24 = [
     rung: 2,
     form: "steps",
     draw: () => ({ x0: randInt(1, 3), y0: randInt(1, 3), W: randInt(4, 8), H: randInt(3, 6) }),
-    make: ({ x0, y0, W: W3, H: H2 }) => ({
-      question: `A rectangular plot ABCD is drawn on a grid. The corner A is at (${x0}, ${y0}), B is at (${x0 + W3}, ${y0}) and C is at (${x0 + W3}, ${y0 + H2}). Each unit on the grid is 1 m. D is the fourth corner.`,
+    make: ({ x0, y0, W: W3, H: H3 }) => ({
+      question: `A rectangular plot ABCD is drawn on a grid. The corner A is at (${x0}, ${y0}), B is at (${x0 + W3}, ${y0}) and C is at (${x0 + W3}, ${y0 + H3}). Each unit on the grid is 1 m. D is the fourth corner.`,
       parts: [
         { prompt: "What is the first number (across) of the point D?", answer: x0, hint: "D is straight above A, so it is the same distance across.", wrong: [[x0 + W3, "That is the first number of B and C. D is above A."]] },
-        { prompt: "What is the second number (up) of the point D?", answer: y0 + H2, hint: "D is level with C, so it is the same height.", wrong: [[y0, "That is the height of A and B. D is level with C."]] },
-        { prompt: "What is the perimeter of the plot, in metres?", answer: 2 * (W3 + H2), unit: "m", hint: "Find the length AB and the length BC from the coordinates.", wrong: [[W3 + H2, "The perimeter goes all the way round: both pairs of sides."]] },
-        { prompt: "What is the area of the plot, in m\xB2?", answer: W3 * H2, unit: "m\xB2", hint: "Area = length \xD7 width.", wrong: [[2 * (W3 + H2), "That is the perimeter. Area is length \xD7 width."]] }
+        { prompt: "What is the second number (up) of the point D?", answer: y0 + H3, hint: "D is level with C, so it is the same height.", wrong: [[y0, "That is the height of A and B. D is level with C."]] },
+        { prompt: "What is the perimeter of the plot, in metres?", answer: 2 * (W3 + H3), unit: "m", hint: "Find the length AB and the length BC from the coordinates.", wrong: [[W3 + H3, "The perimeter goes all the way round: both pairs of sides."]] },
+        { prompt: "What is the area of the plot, in m\xB2?", answer: W3 * H3, unit: "m\xB2", hint: "Area = length \xD7 width.", wrong: [[2 * (W3 + H3), "That is the perimeter. Area is length \xD7 width."]] }
       ],
-      steps: [`D is above A, so across is ${x0}.`, `D is level with C, so up is ${y0 + H2}.`, `AB = ${W3} m and BC = ${H2} m. Perimeter = 2 \xD7 (${W3} + ${H2}) = ${2 * (W3 + H2)} m.`, `Area = ${W3} \xD7 ${H2} = ${W3 * H2} m\xB2.`]
+      steps: [`D is above A, so across is ${x0}.`, `D is level with C, so up is ${y0 + H3}.`, `AB = ${W3} m and BC = ${H3} m. Perimeter = 2 \xD7 (${W3} + ${H3}) = ${2 * (W3 + H3)} m.`, `Area = ${W3} \xD7 ${H3} = ${W3 * H3} m\xB2.`]
     }),
-    check: ({ x0, y0, W: W3, H: H2 }, v) => v[0] === x0 && v[1] === y0 + H2 && v[2] === 2 * W3 + 2 * H2 && v[3] * 2 === 2 * W3 * H2
+    check: ({ x0, y0, W: W3, H: H3 }, v) => v[0] === x0 && v[1] === y0 + H3 && v[2] === 2 * W3 + 2 * H3 && v[3] * 2 === 2 * W3 * H3
   }),
   fam11({
     id: "g8.graphs.table-pattern",
@@ -29675,17 +29758,17 @@ var FAMILIES24 = [
     rung: 1,
     form: "word",
     draw: () => {
-      const L2 = pick([8, 10, 12, 20]), s = pick([2, 5, 10, 20, 50]), V2 = L2 * s;
-      return uniq4(s, V2 - L2, L2 / V2) ? { L: L2, s, V: V2, what: pick(["the kilograms of maize sold", "the number of learners present", "the litres of water used"]), p: person() } : null;
+      const L3 = pick([8, 10, 12, 20]), s = pick([2, 5, 10, 20, 50]), V2 = L3 * s;
+      return uniq4(s, V2 - L3, L3 / V2) ? { L: L3, s, V: V2, what: pick(["the kilograms of maize sold", "the number of learners present", "the litres of water used"]), p: person() } : null;
     },
-    make: ({ L: L2, s, V: V2, what, p }) => ({
-      question: `${p.name} draws a graph of ${what}. The vertical axis is ${L2} cm long and runs from 0 to ${V2}. What scale does ${p.she} use? Give the number of units that 1 cm stands for.`,
+    make: ({ L: L3, s, V: V2, what, p }) => ({
+      question: `${p.name} draws a graph of ${what}. The vertical axis is ${L3} cm long and runs from 0 to ${V2}. What scale does ${p.she} use? Give the number of units that 1 cm stands for.`,
       answer: s,
-      wrong: [[V2 - L2, "Do not take away. The scale says how many units each centimetre stands for."], [round(L2 / V2, 2), "You divided the wrong way round. Divide the units by the centimetres."], [V2, "That is the whole axis in units. Share it between the centimetres."]],
+      wrong: [[V2 - L3, "Do not take away. The scale says how many units each centimetre stands for."], [round(L3 / V2, 2), "You divided the wrong way round. Divide the units by the centimetres."], [V2, "That is the whole axis in units. Share it between the centimetres."]],
       hints: ["How many units does the whole axis show? How many cm is the axis?", "Share the units equally between the centimetres."],
-      steps: [`The axis shows ${V2} units over ${L2} cm.`, `${V2} \xF7 ${L2} = ${s} units for each cm.`]
+      steps: [`The axis shows ${V2} units over ${L3} cm.`, `${V2} \xF7 ${L3} = ${s} units for each cm.`]
     }),
-    check: ({ L: L2, V: V2 }, a) => a * L2 === V2
+    check: ({ L: L3, V: V2 }, a) => a * L3 === V2
   }),
   fam11({
     id: "g8.graphs.scale-choose",
@@ -29968,12 +30051,12 @@ var FAMILIES24 = [
       const r = pick([7, 14, 21]);
       return { r, L: 44 * r / 7, p: person() };
     },
-    make: ({ r, L: L2, p }) => ({
+    make: ({ r, L: L3, p }) => ({
       question: `${p.name} draws the net of a closed tin with a base radius of ${r} cm. The net has two circles and one rectangle that wraps round the side. How long is the rectangle on the edge that wraps round the tin, in cm? (Use \u03C0 = 22/7)`,
-      answer: L2,
+      answer: L3,
       wrong: [[round(22 * r * r / 7, 0), "That is the area of one circle. The edge of the rectangle is as long as the distance round the circle."], [22 * r / 7, "That is \u03C0 \xD7 radius. The distance round a circle is 2 \xD7 \u03C0 \xD7 radius."], [2 * r, "That is the width of the circle across. The rectangle wraps all the way round it."]],
       hints: ["When the rectangle wraps round the tin, its long edge touches the whole edge of a circle.", "What is the distance round a circle called?"],
-      steps: [`The long edge of the rectangle meets the edge of a circle all the way round.`, `So it equals the circumference: 2 \xD7 22/7 \xD7 ${r} = ${L2} cm.`]
+      steps: [`The long edge of the rectangle meets the edge of a circle all the way round.`, `So it equals the circumference: 2 \xD7 22/7 \xD7 ${r} = ${L3} cm.`]
     }),
     check: ({ r }, a) => near2(a * 7 / 44, r)
   }),
@@ -30005,20 +30088,20 @@ var FAMILIES24 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const r = pick([7, 14, 21]), L2 = 44 * r / 7, w = pick([10, 15, 20]);
-      return { r, L: L2, w };
+      const r = pick([7, 14, 21]), L3 = 44 * r / 7, w = pick([10, 15, 20]);
+      return { r, L: L3, w };
     },
-    make: ({ r, L: L2, w }) => ({
-      question: `The net of a closed cylinder has a rectangle ${L2} cm long and ${w} cm wide, and two circles. The ${L2} cm edge fits once round the edge of a circle. Use \u03C0 = 22/7.`,
+    make: ({ r, L: L3, w }) => ({
+      question: `The net of a closed cylinder has a rectangle ${L3} cm long and ${w} cm wide, and two circles. The ${L3} cm edge fits once round the edge of a circle. Use \u03C0 = 22/7.`,
       parts: [
-        { prompt: "What is the radius of each circle, in cm?", answer: r, unit: "cm", hint: "The rectangle's long edge is the circumference of the circle.", wrong: [[L2 * 7 / 22, "That is the diameter. The radius is half of it."], [L2 / 2, "Circumference is 2 \xD7 \u03C0 \xD7 radius, not 2 \xD7 radius."]] },
-        { prompt: "What is the area of the rectangle, in cm\xB2?", answer: L2 * w, unit: "cm\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[2 * (L2 + w), "That is the perimeter of the rectangle. Area is length \xD7 width."]] },
+        { prompt: "What is the radius of each circle, in cm?", answer: r, unit: "cm", hint: "The rectangle's long edge is the circumference of the circle.", wrong: [[L3 * 7 / 22, "That is the diameter. The radius is half of it."], [L3 / 2, "Circumference is 2 \xD7 \u03C0 \xD7 radius, not 2 \xD7 radius."]] },
+        { prompt: "What is the area of the rectangle, in cm\xB2?", answer: L3 * w, unit: "cm\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[2 * (L3 + w), "That is the perimeter of the rectangle. Area is length \xD7 width."]] },
         { prompt: "What is the area of the two circles together, in cm\xB2?", answer: 44 * r * r / 7, unit: "cm\xB2", hint: "Area of one circle = \u03C0 \xD7 r \xD7 r. There are two circles.", wrong: [[22 * r * r / 7, "That is one circle. The net has two."]] },
-        { prompt: "What is the total surface area of the cylinder, in cm\xB2?", answer: L2 * w + 44 * r * r / 7, unit: "cm\xB2", hint: "The surface is all the pieces of the net together.", wrong: [[L2 * w + 22 * r * r / 7, "Use both circles."]] }
+        { prompt: "What is the total surface area of the cylinder, in cm\xB2?", answer: L3 * w + 44 * r * r / 7, unit: "cm\xB2", hint: "The surface is all the pieces of the net together.", wrong: [[L3 * w + 22 * r * r / 7, "Use both circles."]] }
       ],
-      steps: [`${L2} = 2 \xD7 22/7 \xD7 r, so r = ${r} cm.`, `Rectangle: ${L2} \xD7 ${w} = ${L2 * w} cm\xB2.`, `Two circles: 2 \xD7 22/7 \xD7 ${r} \xD7 ${r} = ${44 * r * r / 7} cm\xB2.`, `Total: ${L2 * w} + ${44 * r * r / 7} = ${L2 * w + 44 * r * r / 7} cm\xB2.`]
+      steps: [`${L3} = 2 \xD7 22/7 \xD7 r, so r = ${r} cm.`, `Rectangle: ${L3} \xD7 ${w} = ${L3 * w} cm\xB2.`, `Two circles: 2 \xD7 22/7 \xD7 ${r} \xD7 ${r} = ${44 * r * r / 7} cm\xB2.`, `Total: ${L3 * w} + ${44 * r * r / 7} = ${L3 * w + 44 * r * r / 7} cm\xB2.`]
     }),
-    check: ({ r, L: L2, w }, v) => v[0] === r && v[1] === L2 * w && v[2] * 7 === 44 * r * r && v[3] === v[1] + v[2]
+    check: ({ r, L: L3, w }, v) => v[0] === r && v[1] === L3 * w && v[2] * 7 === 44 * r * r && v[3] === v[1] + v[2]
   }),
   fam11({
     id: "g8.solids.tray-volume",
@@ -30027,17 +30110,17 @@ var FAMILIES24 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const L2 = pick([30, 40, 50]), W3 = pick([20, 30]), x = pick([2, 3, 4, 5]);
-      return uniq4((L2 - 2 * x) * (W3 - 2 * x) * x, L2 * W3 * x, (L2 - x) * (W3 - x) * x, (L2 - 2 * x) * (W3 - 2 * x)) ? { L: L2, W: W3, x, p: person() } : null;
+      const L3 = pick([30, 40, 50]), W3 = pick([20, 30]), x = pick([2, 3, 4, 5]);
+      return uniq4((L3 - 2 * x) * (W3 - 2 * x) * x, L3 * W3 * x, (L3 - x) * (W3 - x) * x, (L3 - 2 * x) * (W3 - 2 * x)) ? { L: L3, W: W3, x, p: person() } : null;
     },
-    make: ({ L: L2, W: W3, x, p }) => ({
-      question: `${p.name} makes a tray from a flat sheet of card ${L2} cm long and ${W3} cm wide. ${p.She} cuts a square of side ${x} cm from each corner, then folds up the sides. What is the volume of the tray, in cm\xB3?`,
-      answer: (L2 - 2 * x) * (W3 - 2 * x) * x,
-      wrong: [[L2 * W3 * x, "The base of the tray is smaller than the sheet, because the corners were cut away."], [(L2 - x) * (W3 - x) * x, "A square is cut from both ends of the length, so take away 2 \xD7 the side, not 1 \xD7."], [(L2 - 2 * x) * (W3 - 2 * x), "That is the area of the base. Volume also needs the height."]],
+    make: ({ L: L3, W: W3, x, p }) => ({
+      question: `${p.name} makes a tray from a flat sheet of card ${L3} cm long and ${W3} cm wide. ${p.She} cuts a square of side ${x} cm from each corner, then folds up the sides. What is the volume of the tray, in cm\xB3?`,
+      answer: (L3 - 2 * x) * (W3 - 2 * x) * x,
+      wrong: [[L3 * W3 * x, "The base of the tray is smaller than the sheet, because the corners were cut away."], [(L3 - x) * (W3 - x) * x, "A square is cut from both ends of the length, so take away 2 \xD7 the side, not 1 \xD7."], [(L3 - 2 * x) * (W3 - 2 * x), "That is the area of the base. Volume also needs the height."]],
       hints: ["After cutting the corners and folding, the height of the tray is the side of the cut-out square.", "The length and the width of the base each lose a square at both ends."],
-      steps: [`Base length: ${L2} \u2212 2 \xD7 ${x} = ${L2 - 2 * x} cm.`, `Base width: ${W3} \u2212 2 \xD7 ${x} = ${W3 - 2 * x} cm.`, `Volume: ${L2 - 2 * x} \xD7 ${W3 - 2 * x} \xD7 ${x} = ${(L2 - 2 * x) * (W3 - 2 * x) * x} cm\xB3.`]
+      steps: [`Base length: ${L3} \u2212 2 \xD7 ${x} = ${L3 - 2 * x} cm.`, `Base width: ${W3} \u2212 2 \xD7 ${x} = ${W3 - 2 * x} cm.`, `Volume: ${L3 - 2 * x} \xD7 ${W3 - 2 * x} \xD7 ${x} = ${(L3 - 2 * x) * (W3 - 2 * x) * x} cm\xB3.`]
     }),
-    check: ({ L: L2, W: W3, x }, a) => a / x / (L2 - 2 * x) === W3 - 2 * x
+    check: ({ L: L3, W: W3, x }, a) => a / x / (L3 - 2 * x) === W3 - 2 * x
   }),
   fam11({
     id: "g8.solids.double-edge-why",
@@ -30482,18 +30565,18 @@ var FAMILIES25 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const L2 = randInt(7, 9);
-      const ds = Array.from({ length: L2 }, () => randInt(1, 9));
-      const j = randInt(L2 - 3, L2 - 1), k = randInt(2, 4);
+      const L3 = randInt(7, 9);
+      const ds = Array.from({ length: L3 }, () => randInt(1, 9));
+      const j = randInt(L3 - 3, L3 - 1), k = randInt(2, 4);
       const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
-      return new Set(ds).size >= 5 && distinct7(A2 + B2, ds[j] + ds[k], A2 + ds[k], ds[j] + B2) ? { ds, L: L2, j, k } : null;
+      return new Set(ds).size >= 5 && distinct7(A2 + B2, ds[j] + ds[k], A2 + ds[k], ds[j] + B2) ? { ds, L: L3, j, k } : null;
     },
-    make: ({ ds, L: L2, j, k }) => {
+    make: ({ ds, L: L3, j, k }) => {
       const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
       return {
         question: `The table shows a number, with one digit in each row. Look at the digit in the ${PLACES2[j]} place and the digit in the ${PLACES2[k]} place. Work out what each digit is worth in this number, then add the two values. What is the total value of the two digits together?`,
         story: false,
-        model: { type: "table", data: { head: ["Place", "Digit"], rows: Array.from({ length: L2 }, (_, i) => ({ label: PLACES2[L2 - 1 - i], value: String(ds[L2 - 1 - i]) })) } },
+        model: { type: "table", data: { head: ["Place", "Digit"], rows: Array.from({ length: L3 }, (_, i) => ({ label: PLACES2[L3 - 1 - i], value: String(ds[L3 - 1 - i]) })) } },
         answer: A2 + B2,
         wrong: [[ds[j] + ds[k], "That adds the digits only. Total value also depends on the place each digit sits in."], [A2 + ds[k], `The digit in the ${PLACES2[k]} place is also worth more than itself.`], [ds[j] + B2, `The digit in the ${PLACES2[j]} place is also worth more than itself.`]],
         hints: ["Find each row in the table and read its digit.", "Total value = the digit \xD7 the value of its place. Do this for both places, then add."],
@@ -30531,12 +30614,12 @@ var FAMILIES25 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const L2 = 7;
-      const ds = Array.from({ length: L2 }, (_, i) => i === 0 ? randInt(1, 9) : randInt(0, 9));
+      const L3 = 7;
+      const ds = Array.from({ length: L3 }, (_, i) => i === 0 ? randInt(1, 9) : randInt(0, 9));
       const zeros = ds.slice(1).filter((x) => x === 0).length;
       if (zeros < 2) return null;
       const alt = [];
-      for (let i = 0; i < L2 - 1; i++) if (ds[i] !== ds[i + 1] && !(i === 0 && ds[i + 1] === 0)) {
+      for (let i = 0; i < L3 - 1; i++) if (ds[i] !== ds[i + 1] && !(i === 0 && ds[i + 1] === 0)) {
         const c = [...ds];
         [c[i], c[i + 1]] = [c[i + 1], c[i]];
         alt.push(Number(c.join("")));
@@ -30866,13 +30949,13 @@ var FAMILIES25 = [
       const g = pick([4, 6, 8, 9, 12, 15]), u = randInt(2, 9), v = randInt(2, 9);
       if (gcd6(u, v) !== 1 || u === v) return null;
       const a = g * Math.min(u, v), b = g * Math.max(u, v);
-      const L2 = lcm4(a, b), dif = b - a, pieces = a / g + b / g;
-      return distinct7(g, L2, dif, pieces, a) && b <= 150 ? { a, b, g, L: L2, dif, pieces, p: person() } : null;
+      const L3 = lcm4(a, b), dif = b - a, pieces = a / g + b / g;
+      return distinct7(g, L3, dif, pieces, a) && b <= 150 ? { a, b, g, L: L3, dif, pieces, p: person() } : null;
     },
-    make: ({ a, b, g, L: L2, dif, pieces, p }) => ({
+    make: ({ a, b, g, L: L3, dif, pieces, p }) => ({
       question: `${p.name} has two ropes, ${a} m and ${b} m long. ${p.She} cuts both into equal pieces with no rope left over. The pieces must be as long as possible, so the length is the GCD (greatest common divisor) of ${a} and ${b}. How many metres long is each piece?`,
       answer: g,
-      wrong: [[L2, "That is the least common multiple. A piece cannot be longer than the shorter rope."], [dif, "The difference between the lengths does not have to fit into both ropes."], [pieces, "That is the number of pieces, not their length."]],
+      wrong: [[L3, "That is the least common multiple. A piece cannot be longer than the shorter rope."], [dif, "The difference between the lengths does not have to fit into both ropes."], [pieces, "That is the number of pieces, not their length."]],
       hints: ["List the factors of each length, or divide both by small numbers.", "The greatest factor they share is the GCD."],
       steps: [`Factors of ${a} and ${b} that both share: the biggest is ${g}.`, `Check: ${a} \xF7 ${g} = ${a / g} and ${b} \xF7 ${g} = ${b / g}, with nothing left.`]
     }),
@@ -30891,10 +30974,10 @@ var FAMILIES25 = [
       const gab = gcd6(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
       return distinct7(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle6(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
     },
-    make: ({ g, nums, gab, mn, per, items, p }) => ({
+    make: ({ g, nums, gab, mn, per, items: items2, p }) => ({
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`,
       story: false,
-      model: { type: "table", data: { head: ["Item", "Number in stock"], rows: items.map((l, i) => ({ label: l, value: String(nums[i]) })) } },
+      model: { type: "table", data: { head: ["Item", "Number in stock"], rows: items2.map((l, i) => ({ label: l, value: String(nums[i]) })) } },
       answer: g,
       wrong: [[mn, "That is the smallest stock. The number of boxes must also divide the other two numbers exactly."], [gab, "That is the HCF of only the first two numbers. The third item must also divide exactly."], [per, "That is the number of items in one box, found by adding. The question asks for the number of boxes."]],
       hints: ["The number of boxes must divide all three numbers exactly.", "Find the greatest number that divides all three."],
@@ -30911,15 +30994,15 @@ var FAMILIES25 = [
     draw: () => {
       const a = pick([6, 8, 10, 12, 15, 18, 20]), b = pick([6, 8, 9, 10, 12, 15, 18, 20, 24]);
       if (a === b || gcd6(a, b) === 1 || a % b === 0 || b % a === 0) return null;
-      const L2 = lcm4(a, b);
-      return L2 <= 120 && distinct7(L2, a * b, a + b, Math.max(a, b)) ? { a, b, L: L2, town: pick(["Thika", "Nakuru", "Kisumu", "Eldoret", "Machakos"]) } : null;
+      const L3 = lcm4(a, b);
+      return L3 <= 120 && distinct7(L3, a * b, a + b, Math.max(a, b)) ? { a, b, L: L3, town: pick(["Thika", "Nakuru", "Kisumu", "Eldoret", "Machakos"]) } : null;
     },
-    make: ({ a, b, L: L2, town }) => ({
+    make: ({ a, b, L: L3, town }) => ({
       question: `Two matatus leave the ${town} stage together at 6:00 a.m. One matatu leaves the stage every ${a} minutes. The other leaves every ${b} minutes. After how many minutes do they leave together again?`,
-      answer: L2,
+      answer: L3,
       wrong: [[a * b, `The two matatus leave together earlier than that. Look for the smallest time that fits both gaps.`], [a + b, "Adding the gaps does not give a time when both leave. Both must arrive at a multiple of their own gap."], [Math.max(a, b), "The shorter gap does not fit exactly into this time. Check it."]],
       hints: ["List the times when the first matatu leaves: multiples of its gap.", "Find the first time that is also on the second list."],
-      steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map((i) => a * i).join(", ")} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map((i) => b * i).join(", ")} ...`, `The first time on both lists is ${L2} minutes.`]
+      steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map((i) => a * i).join(", ")} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map((i) => b * i).join(", ")} ...`, `The first time on both lists is ${L3} minutes.`]
     }),
     check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd6(x / a, x / b) === 1
   }),
@@ -30934,16 +31017,16 @@ var FAMILIES25 = [
       if (a >= b || gcd6(a, b) === 1 || b % a === 0) return null;
       return { a, b, L: lcm4(a, b), p: person() };
     },
-    make: ({ a, b, L: L2, p }) => ({
+    make: ({ a, b, L: L3, p }) => ({
       question: `${p.name} says the LCM of ${a} and ${b} is ${a * b}, because ${a * b} is a common multiple of both numbers. Why is ${p.her} answer not the least common multiple?`,
       options: [
-        { text: `${L2} is also a common multiple, and it is smaller`, right: true },
+        { text: `${L3} is also a common multiple, and it is smaller`, right: true },
         { text: `${a * b} is not a multiple of ${a}, so it cannot be common`, right: false, why: `${a * b} = ${a} \xD7 ${b}, so it is a multiple of ${a}. It is just not the smallest common one.` },
         { text: "The LCM must be smaller than both of the numbers", right: false, why: "A common multiple is never smaller than the numbers themselves." },
         { text: "The LCM is always found by adding the two numbers", right: false, why: "Adding does not give a multiple of both numbers. Look at lists of multiples." }
       ],
       hints: ["The least common multiple is the smallest number on both lists of multiples.", `Is there a common multiple of ${a} and ${b} that is smaller than ${a * b}?`],
-      steps: [`${a * b} is a common multiple, but not the smallest.`, `${L2} \xF7 ${a} = ${L2 / a} and ${L2} \xF7 ${b} = ${L2 / b}, so ${L2} is a smaller common multiple.`]
+      steps: [`${a * b} is a common multiple, but not the smallest.`, `${L3} \xF7 ${a} = ${L3 / a} and ${L3} \xF7 ${b} = ${L3 / b}, so ${L3} is a smaller common multiple.`]
     })
   }),
   fam12({
@@ -30953,18 +31036,18 @@ var FAMILIES25 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const v = shuffle6([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L2 = lcm4(lcm4(v[0], v[1]), v[2]);
+      const v = shuffle6([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L3 = lcm4(lcm4(v[0], v[1]), v[2]);
       const L22 = lcm4(v[0], v[1]);
-      return L2 <= 180 && L2 !== L22 && distinct7(L2, L22, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L: L2, L2: L22 } : null;
+      return L3 <= 180 && L3 !== L22 && distinct7(L3, L22, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L: L3, L2: L22 } : null;
     },
-    make: ({ v, L: L2, L2: L22 }) => ({
+    make: ({ v, L: L3, L2: L22 }) => ({
       question: "The school has three bells. The table shows how often each one rings. At 8:00 a.m. all three ring at the same time. After how many minutes do they next ring at the same time? Find the LCM.",
       story: false,
       model: { type: "table", data: { head: ["Bell", "Rings every (minutes)"], rows: v.map((n, i) => ({ label: `Bell ${"ABC"[i]}`, value: String(n) })) } },
-      answer: L2,
+      answer: L3,
       wrong: [[L22, `That is when only the first two bells ring together. The third bell must fit as well.`], [v[0] * v[1] * v[2], "That is a time all three ring together, but a smaller one exists."], [Math.max(...v), "The other bells do not ring at that time. Check it."]],
       hints: ["Find the LCM of the first two numbers.", "Then find the LCM of that answer and the third number."],
-      steps: [`LCM of ${v[0]} and ${v[1]} is ${L22}.`, `LCM of ${L22} and ${v[2]} is ${L2}.`]
+      steps: [`LCM of ${v[0]} and ${v[1]} is ${L22}.`, `LCM of ${L22} and ${v[2]} is ${L3}.`]
     }),
     check: ({ v }, x) => v.every((n) => x % n === 0) && gcd6(gcd6(x / v[0], x / v[1]), x / v[2]) === 1
   }),
@@ -31035,17 +31118,17 @@ var FAMILIES25 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const [a, b] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [3, 8], [5, 6]]), k = randInt(2, 6), L2 = a * k;
-      return { a, b, k, L: L2, ans: k * b, p: person() };
+      const [a, b] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [3, 8], [5, 6]]), k = randInt(2, 6), L3 = a * k;
+      return { a, b, k, L: L3, ans: k * b, p: person() };
     },
-    make: ({ a, b, k, L: L2, ans, p }) => ({
-      question: `${p.name} has ${L2} litres of juice. ${p.She} pours it into small cups that each hold ${a}/${b} of a litre. To find the number of cups, ${p.she} multiplies ${L2} by the reciprocal of ${a}/${b}. How many cups does ${p.she} fill?`,
+    make: ({ a, b, k, L: L3, ans, p }) => ({
+      question: `${p.name} has ${L3} litres of juice. ${p.She} pours it into small cups that each hold ${a}/${b} of a litre. To find the number of cups, ${p.she} multiplies ${L3} by the reciprocal of ${a}/${b}. How many cups does ${p.she} fill?`,
       answer: ans,
-      wrong: [[round(L2 * a / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`], [L2 * b, "The reciprocal is a fraction. Multiply by the whole fraction, not only the top."], [L2 * a, "The reciprocal has both a top and a bottom. Use both."]],
-      hints: [`Turn ${a}/${b} upside down to get its reciprocal.`, `Multiply ${L2} by the reciprocal.`],
-      steps: [`The reciprocal of ${a}/${b} is ${b}/${a}.`, `${L2} \xD7 ${b}/${a} = ${L2 * b}/${a} = ${ans}.`]
+      wrong: [[round(L3 * a / b, 2), `That multiplies by ${a}/${b} itself. The reciprocal turns the fraction upside down first.`], [L3 * b, "The reciprocal is a fraction. Multiply by the whole fraction, not only the top."], [L3 * a, "The reciprocal has both a top and a bottom. Use both."]],
+      hints: [`Turn ${a}/${b} upside down to get its reciprocal.`, `Multiply ${L3} by the reciprocal.`],
+      steps: [`The reciprocal of ${a}/${b} is ${b}/${a}.`, `${L3} \xD7 ${b}/${a} = ${L3 * b}/${a} = ${ans}.`]
     }),
-    check: ({ a, b, L: L2 }, x) => x * a / b === L2
+    check: ({ a, b, L: L3 }, x) => x * a / b === L3
   }),
   fam12({
     id: "g7.frac.recip-mixed-why",
@@ -31083,16 +31166,16 @@ var FAMILIES25 = [
       const [a, b] = pick([[2, 3], [3, 4], [1, 4], [3, 5], [1, 2]]);
       return { a, b, L: randInt(3, 12), p: person(), item: pick([["flour", "kg", "loaf", "loaves"], ["maize flour", "kg", "bag", "bags"], ["paint", "litres", "door", "doors"]]) };
     },
-    make: ({ a, b, L: L2, p, item }) => ({
-      question: `${p.name} has ${L2} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === "litres" ? "litre" : "kg"}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
+    make: ({ a, b, L: L3, p, item }) => ({
+      question: `${p.name} has ${L3} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === "litres" ? "litre" : "kg"}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
       options: shuffle6([
-        { text: `${L2} \xF7 ${a}/${b}`, right: true },
-        { text: `${L2} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L2}, not how many lots of ${a}/${b} fit into ${L2}.` },
-        { text: `${a}/${b} \xF7 ${L2}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one." },
-        { text: `${L2} \u2212 ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.` }
+        { text: `${L3} \xF7 ${a}/${b}`, right: true },
+        { text: `${L3} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L3}, not how many lots of ${a}/${b} fit into ${L3}.` },
+        { text: `${a}/${b} \xF7 ${L3}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one." },
+        { text: `${L3} \u2212 ${a}/${b}`, right: false, why: `Taking away ${a}/${b} once does not count how many times it fits.` }
       ]),
       hints: ['"How many lots of a small amount fit into a big amount" is a division.', "Which amount is being shared out, and which is the size of each part?"],
-      steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L2} ${item[1]} altogether.`, `The number of ${item[3]} is ${L2} \xF7 ${a}/${b}.`]
+      steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L3} ${item[1]} altogether.`, `The number of ${item[3]} is ${L3} \xF7 ${a}/${b}.`]
     })
   }),
   fam12({
@@ -31273,20 +31356,20 @@ var FAMILIES25 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const L2 = pick([3.2, 4.5, 2.4, 5.5, 3.6, 4.8]), w = pick([2.5, 1.5, 2.4, 3.5, 2.2]), pr = pick([40, 60, 80, 100, 120]);
-      const area = round(L2 * w, 2), cost = round(area * pr, 2);
-      return L2 !== w && Number.isInteger(cost) && distinct7(area, round(2 * (L2 + w), 2), round(L2 + w, 2)) ? { L: L2, w, pr, area, cost, per: round(2 * (L2 + w), 2), p: person() } : null;
+      const L3 = pick([3.2, 4.5, 2.4, 5.5, 3.6, 4.8]), w = pick([2.5, 1.5, 2.4, 3.5, 2.2]), pr = pick([40, 60, 80, 100, 120]);
+      const area = round(L3 * w, 2), cost = round(area * pr, 2);
+      return L3 !== w && Number.isInteger(cost) && distinct7(area, round(2 * (L3 + w), 2), round(L3 + w, 2)) ? { L: L3, w, pr, area, cost, per: round(2 * (L3 + w), 2), p: person() } : null;
     },
-    make: ({ L: L2, w, pr, area, cost, per, p }) => ({
-      question: `${p.name} has a rectangular garden ${L2} m long and ${w} m wide.`,
+    make: ({ L: L3, w, pr, area, cost, per, p }) => ({
+      question: `${p.name} has a rectangular garden ${L3} m long and ${w} m wide.`,
       parts: [
-        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L2 + w, 2), "Area is found by multiplying, not adding."], [per, "That is the distance around the garden, the perimeter."], [round(area * 10, 2), "Count the decimal places in both numbers: the answer has that many in total."]] },
-        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L2 * pr, 2), "Use the whole area, not only the length."], [round(area + pr, 2), "The price is for each square metre. Multiply."], [round(per * pr, 2), "That uses the perimeter. Grass covers the area."]] },
-        { prompt: "What length of fence goes all the way round the garden, in metres?", answer: per, unit: "m", hint: "Add all four sides, or double length + width.", wrong: [[round(L2 + w, 2), "That is only two sides."], [area, "That is the area. The fence goes round the edge."], [round(L2 * 2 + w, 2), "Two sides are long and two are short."]] }
+        { prompt: "What is the area of the garden, in square metres?", answer: area, unit: "m\xB2", hint: "Area of a rectangle = length \xD7 width.", wrong: [[round(L3 + w, 2), "Area is found by multiplying, not adding."], [per, "That is the distance around the garden, the perimeter."], [round(area * 10, 2), "Count the decimal places in both numbers: the answer has that many in total."]] },
+        { prompt: `Grass costs ${sh(pr)} for each square metre. What is the cost of covering the garden with grass? Answer in shillings.`, answer: cost, hint: "Cost = area \xD7 price for each square metre.", wrong: [[round(L3 * pr, 2), "Use the whole area, not only the length."], [round(area + pr, 2), "The price is for each square metre. Multiply."], [round(per * pr, 2), "That uses the perimeter. Grass covers the area."]] },
+        { prompt: "What length of fence goes all the way round the garden, in metres?", answer: per, unit: "m", hint: "Add all four sides, or double length + width.", wrong: [[round(L3 + w, 2), "That is only two sides."], [area, "That is the area. The fence goes round the edge."], [round(L3 * 2 + w, 2), "Two sides are long and two are short."]] }
       ],
-      steps: [`Area: ${L2} \xD7 ${w} = ${area} m\xB2.`, `Cost: ${area} \xD7 ${pr} = ${commas(cost)}.`, `Fence: 2 \xD7 (${L2} + ${w}) = ${per} m.`]
+      steps: [`Area: ${L3} \xD7 ${w} = ${area} m\xB2.`, `Cost: ${area} \xD7 ${pr} = ${commas(cost)}.`, `Fence: 2 \xD7 (${L3} + ${w}) = ${per} m.`]
     }),
-    check: ({ L: L2, w, pr }, v) => Math.abs(v[0] / L2 - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L2 + w)) < 1e-9
+    check: ({ L: L3, w, pr }, v) => Math.abs(v[0] / L3 - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L3 + w)) < 1e-9
   }),
   fam12({
     id: "g7.dec.ribbon-bows",
@@ -31779,16 +31862,16 @@ var FAMILIES25 = [
     rung: 2,
     form: "word",
     draw: () => ({ L: pick([1e3, 1200, 1500, 2e3]), c: pick([200, 300, 400, 500]), s: pick([50, 90, 100]), p: person() }),
-    make: ({ L: L2, c, s, p }) => ({
-      question: `A pick-up can carry at most ${commas(L2)} kg. It already carries ${c} kg of cement. ${p.name} loads n sacks of maize of ${s} kg each. Which inequality shows that the load is allowed?`,
+    make: ({ L: L3, c, s, p }) => ({
+      question: `A pick-up can carry at most ${commas(L3)} kg. It already carries ${c} kg of cement. ${p.name} loads n sacks of maize of ${s} kg each. Which inequality shows that the load is allowed?`,
       options: shuffle6([
-        { text: `${c} + ${s}n \u2264 ${commas(L2)}`, right: true },
-        { text: `${c} + ${s}n < ${commas(L2)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".' },
-        { text: `${c} + ${s}n \u2265 ${commas(L2)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".' },
-        { text: `${s}n \u2264 ${commas(L2)}`, right: false, why: "The cement is already on the pick-up. It counts towards the load too." }
+        { text: `${c} + ${s}n \u2264 ${commas(L3)}`, right: true },
+        { text: `${c} + ${s}n < ${commas(L3)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".' },
+        { text: `${c} + ${s}n \u2265 ${commas(L3)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".' },
+        { text: `${s}n \u2264 ${commas(L3)}`, right: false, why: "The cement is already on the pick-up. It counts towards the load too." }
       ]),
       hints: ["What is the total load? Add the cement and the sacks.", '"At most" means the load can be up to the limit and no more.'],
-      steps: [`Total load: ${c} + ${s}n kg.`, `"At most ${commas(L2)}" means \u2264 ${commas(L2)}.`, `So ${c} + ${s}n \u2264 ${commas(L2)}.`]
+      steps: [`Total load: ${c} + ${s}n kg.`, `"At most ${commas(L3)}" means \u2264 ${commas(L3)}.`, `So ${c} + ${s}n \u2264 ${commas(L3)}.`]
     })
   }),
   fam12({
@@ -32018,16 +32101,16 @@ var FAMILIES25 = [
       return { a, c: a * u, lo: a * (u + t), hi: a * (u + h), t, h, bug: pick(["subtract", "list"]), p: person() };
     },
     make: ({ a, c, lo, hi, t, h, bug, p }) => {
-      const slo = bug === "subtract" ? lo : lo - c, shi = hi - c, L2 = slo / a, H2 = shi / a;
+      const slo = bug === "subtract" ? lo : lo - c, shi = hi - c, L3 = slo / a, H3 = shi / a;
       const ints = [];
-      for (let k = Math.floor(L2); k <= H2; k++) if (k > L2 && k <= H2) ints.push(k);
+      for (let k = Math.floor(L3); k <= H3; k++) if (k > L3 && k <= H3) ints.push(k);
       const shown = bug === "list" ? [t, ...Array.from({ length: h - t }, (_, i) => t + 1 + i)] : ints;
       const trueInts = Array.from({ length: h - t }, (_, i) => t + 1 + i);
       return {
         question: `${p.name} solves the compound inequality ${lo} < ${a}x + ${c} \u2264 ${hi} and lists the whole numbers that fit. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: `Take away ${c} from all three parts: ${slo} < ${a}x \u2264 ${shi}.`, ok: slo === lo - c },
-          { text: `Divide all three parts by ${a}: ${L2} < x \u2264 ${H2}.`, ok: L2 === slo / a && H2 === shi / a },
+          { text: `Divide all three parts by ${a}: ${L3} < x \u2264 ${H3}.`, ok: L3 === slo / a && H3 === shi / a },
           { text: `The whole numbers are ${shown.join(", ")}.`, ok: shown.join() === ints.join() },
           { text: `So there are ${shown.length} whole numbers.`, ok: true }
         ],
@@ -32369,17 +32452,17 @@ var FAMILIES26 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const gap = pick([2, 3, 4, 5, 6]), n = randInt(6, 20);
-      return { gap, n, L: gap * n, p: person() };
+      const gap2 = pick([2, 3, 4, 5, 6]), n = randInt(6, 20);
+      return { gap: gap2, n, L: gap2 * n, p: person() };
     },
-    make: ({ gap, n, L: L2, p }) => ({
-      question: `${p.name} puts up a straight fence ${L2} m long. There is a post every ${gap} m, and one at each end. How many posts does ${p.she} need?`,
+    make: ({ gap: gap2, n, L: L3, p }) => ({
+      question: `${p.name} puts up a straight fence ${L3} m long. There is a post every ${gap2} m, and one at each end. How many posts does ${p.she} need?`,
       answer: n + 1,
-      wrong: [[n, "That counts the gaps between posts. There is a post at both ends too."], [n - 1, "There are more posts than gaps on a straight fence."], [L2 * gap, "Divide the length by the gap. Do not multiply."]],
+      wrong: [[n, "That counts the gaps between posts. There is a post at both ends too."], [n - 1, "There are more posts than gaps on a straight fence."], [L3 * gap2, "Divide the length by the gap. Do not multiply."]],
       hints: ["Draw a short fence with 3 gaps. Count the posts.", "Find the number of gaps first."],
-      steps: [`Number of gaps = ${L2} \xF7 ${gap} = ${n}.`, `A post at each end means one more post than gaps: ${n} + 1 = ${n + 1}.`]
+      steps: [`Number of gaps = ${L3} \xF7 ${gap2} = ${n}.`, `A post at each end means one more post than gaps: ${n} + 1 = ${n + 1}.`]
     }),
-    check: ({ gap, L: L2 }, a) => (a - 1) * gap === L2
+    check: ({ gap: gap2, L: L3 }, a) => (a - 1) * gap2 === L3
   }),
   // =========================================================== PERIMETER
   fam13({
@@ -32429,18 +32512,18 @@ var FAMILIES26 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const gap = pick([2, 4, 5]), n = randInt(10, 30), l = randInt(8, 20) * gap;
-      const w = n * gap / 2 - l;
-      return Number.isInteger(w) && w >= 4 && w !== l ? { gap, n, l, w, p: person() } : null;
+      const gap2 = pick([2, 4, 5]), n = randInt(10, 30), l = randInt(8, 20) * gap2;
+      const w = n * gap2 / 2 - l;
+      return Number.isInteger(w) && w >= 4 && w !== l ? { gap: gap2, n, l, w, p: person() } : null;
     },
-    make: ({ gap, n, l, w, p }) => ({
-      question: `${p.name} fences a rectangular plot ${l} m long and ${w} m wide with a post every ${gap} m, all the way around. How many posts are needed?`,
+    make: ({ gap: gap2, n, l, w, p }) => ({
+      question: `${p.name} fences a rectangular plot ${l} m long and ${w} m wide with a post every ${gap2} m, all the way around. How many posts are needed?`,
       answer: n,
-      wrong: [[n + 1, "Around a closed plot the first post is also the last one. Do not add one for the end."], [l * w / gap, "That uses the area. Posts go around the edge."], [l + w + (l + w) / gap, "Find the distance around, then divide by the gap."]],
+      wrong: [[n + 1, "Around a closed plot the first post is also the last one. Do not add one for the end."], [l * w / gap2, "That uses the area. Posts go around the edge."], [l + w + (l + w) / gap2, "Find the distance around, then divide by the gap."]],
       hints: ["Find the distance all the way around.", "Divide the distance by the gap between posts."],
-      steps: [`Distance around = 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} m.`, `Posts = ${2 * (l + w)} \xF7 ${gap} = ${n}. The last post meets the first, so there is no extra post.`]
+      steps: [`Distance around = 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} m.`, `Posts = ${2 * (l + w)} \xF7 ${gap2} = ${n}. The last post meets the first, so there is no extra post.`]
     }),
-    check: ({ gap, l, w }, a) => a * gap === 2 * (l + w)
+    check: ({ gap: gap2, l, w }, a) => a * gap2 === 2 * (l + w)
   }),
   // =========================================================== CIRCUMFERENCE
   fam13({
@@ -32741,20 +32824,20 @@ var FAMILIES26 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const L2 = randInt(3, 8), W3 = randInt(3, 6), t = pick([20, 25, 50]);
-      const n = L2 * W3 * 1e4 / (t * t);
-      const w2 = L2 * W3 * 100 / (t * t);
-      const w3 = L2 * 100 / t + W3 * 100 / t;
-      return Number.isInteger(n) && Number.isInteger(w2) && L2 !== W3 && uniq5(n, w2, w3, L2 * W3) ? { L: L2, W: W3, t, n, w2, w3, p: person() } : null;
+      const L3 = randInt(3, 8), W3 = randInt(3, 6), t = pick([20, 25, 50]);
+      const n = L3 * W3 * 1e4 / (t * t);
+      const w2 = L3 * W3 * 100 / (t * t);
+      const w3 = L3 * 100 / t + W3 * 100 / t;
+      return Number.isInteger(n) && Number.isInteger(w2) && L3 !== W3 && uniq5(n, w2, w3, L3 * W3) ? { L: L3, W: W3, t, n, w2, w3, p: person() } : null;
     },
-    make: ({ L: L2, W: W3, t, n, w2, w3, p }) => ({
-      question: `The floor of a room is a rectangle ${L2} m long and ${W3} m wide. ${p.name} covers it with square tiles. Each tile has sides of ${t} cm. How many tiles does ${p.she} need?`,
+    make: ({ L: L3, W: W3, t, n, w2, w3, p }) => ({
+      question: `The floor of a room is a rectangle ${L3} m long and ${W3} m wide. ${p.name} covers it with square tiles. Each tile has sides of ${t} cm. How many tiles does ${p.she} need?`,
       answer: n,
-      wrong: [[w2, "One square metre is 100 cm \xD7 100 cm, which is 10,000 cm\xB2, not 100 cm\xB2."], [w3, "That counts the tiles along two sides. Count how many cover the whole floor."], [L2 * W3, "That is the area of the floor in m\xB2. Compare it with the area of one tile."]],
+      wrong: [[w2, "One square metre is 100 cm \xD7 100 cm, which is 10,000 cm\xB2, not 100 cm\xB2."], [w3, "That counts the tiles along two sides. Count how many cover the whole floor."], [L3 * W3, "That is the area of the floor in m\xB2. Compare it with the area of one tile."]],
       hints: ["Use one unit for both areas, for example cm\xB2.", "Floor area \xF7 area of one tile."],
-      steps: [`Floor: ${L2 * 100} cm \xD7 ${W3 * 100} cm = ${commas(L2 * W3 * 1e4)} cm\xB2.`, `One tile: ${t} \xD7 ${t} = ${t * t} cm\xB2.`, `Tiles = ${commas(L2 * W3 * 1e4)} \xF7 ${t * t} = ${n}.`]
+      steps: [`Floor: ${L3 * 100} cm \xD7 ${W3 * 100} cm = ${commas(L3 * W3 * 1e4)} cm\xB2.`, `One tile: ${t} \xD7 ${t} = ${t * t} cm\xB2.`, `Tiles = ${commas(L3 * W3 * 1e4)} \xF7 ${t * t} = ${n}.`]
     }),
-    check: ({ L: L2, W: W3, t }, a) => a * t * t === L2 * 100 * W3 * 100
+    check: ({ L: L3, W: W3, t }, a) => a * t * t === L3 * 100 * W3 * 100
   }),
   fam13({
     id: "g7.area.circle-diameter",
@@ -33066,17 +33149,17 @@ var FAMILIES26 = [
     form: "word",
     draw: () => {
       const l = pick([1, 2, 3, 4]), w = pick([1, 2]), h = pick([1, 1.5, 2]);
-      const L2 = l * w * h * 1e3, n = L2 / 20;
-      return Number.isInteger(n) && uniq5(n, l * w * h / 20, l * w * h * 100 / 20) ? { l, w, h, L: L2, n, p: person() } : null;
+      const L3 = l * w * h * 1e3, n = L3 / 20;
+      return Number.isInteger(n) && uniq5(n, l * w * h / 20, l * w * h * 100 / 20) ? { l, w, h, L: L3, n, p: person() } : null;
     },
-    make: ({ l, w, h, L: L2, n, p }) => ({
+    make: ({ l, w, h, L: L3, n, p }) => ({
       question: `A jerrican holds 20 litres. ${p.name} wants to fill an empty box-shaped tank, ${l} m long, ${w} m wide and ${h} m high, from jerricans. How many jerricans are needed? (1 m\xB3 holds 1,000 litres)`,
       answer: n,
-      wrong: [[round(l * w * h / 20, 3), "The volume is in m\xB3 but the jerrican is in litres. Change to one unit first."], [l * w * h * 100 / 20, "1 m\xB3 holds 1,000 litres, not 100."], [L2 * 20, "Divide the tank by the size of one jerrican. Do not multiply."]],
+      wrong: [[round(l * w * h / 20, 3), "The volume is in m\xB3 but the jerrican is in litres. Change to one unit first."], [l * w * h * 100 / 20, "1 m\xB3 holds 1,000 litres, not 100."], [L3 * 20, "Divide the tank by the size of one jerrican. Do not multiply."]],
       hints: ["Find how many litres the tank holds.", "Divide by the size of one jerrican."],
-      steps: [`Volume = ${l} \xD7 ${w} \xD7 ${h} = ${l * w * h} m\xB3 = ${commas(L2)} litres.`, `Jerricans = ${commas(L2)} \xF7 20 = ${commas(n)}.`]
+      steps: [`Volume = ${l} \xD7 ${w} \xD7 ${h} = ${l * w * h} m\xB3 = ${commas(L3)} litres.`, `Jerricans = ${commas(L3)} \xF7 20 = ${commas(n)}.`]
     }),
-    check: ({ L: L2 }, a) => a * 20 === L2
+    check: ({ L: L3 }, a) => a * 20 === L3
   }),
   fam13({
     id: "g7.vol.days-of-water",
@@ -33108,18 +33191,18 @@ var FAMILIES26 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const c = pick([200, 250, 500]), L2 = pick([5, 10, 12, 20, 25, 30, 40]);
-      const n = L2 * 1e3 / c;
-      return Number.isInteger(n) && uniq5(n, L2 / c, L2 * 100 / c, L2 * c) ? { c, L: L2, n, p: person() } : null;
+      const c = pick([200, 250, 500]), L3 = pick([5, 10, 12, 20, 25, 30, 40]);
+      const n = L3 * 1e3 / c;
+      return Number.isInteger(n) && uniq5(n, L3 / c, L3 * 100 / c, L3 * c) ? { c, L: L3, n, p: person() } : null;
     },
-    make: ({ c, L: L2, n, p }) => ({
-      question: `${p.name} sells tea from a can that holds ${L2} litres. Each cup holds ${c} millilitres (ml). How many full cups can ${p.she} fill from the can?`,
+    make: ({ c, L: L3, n, p }) => ({
+      question: `${p.name} sells tea from a can that holds ${L3} litres. Each cup holds ${c} millilitres (ml). How many full cups can ${p.she} fill from the can?`,
       answer: n,
-      wrong: [[round(L2 / c, 4), "The can is in litres and the cup is in millilitres. Use one unit."], [L2 * 100 / c, "There are 1,000 ml in 1 litre, not 100."], [L2 * c, "Divide the amount in the can by the amount in one cup."]],
+      wrong: [[round(L3 / c, 4), "The can is in litres and the cup is in millilitres. Use one unit."], [L3 * 100 / c, "There are 1,000 ml in 1 litre, not 100."], [L3 * c, "Divide the amount in the can by the amount in one cup."]],
       hints: ["Change litres to millilitres.", "Divide by the size of one cup."],
-      steps: [`${L2} litres = ${L2} \xD7 1,000 = ${commas(L2 * 1e3)} ml.`, `Cups = ${commas(L2 * 1e3)} \xF7 ${c} = ${n}.`]
+      steps: [`${L3} litres = ${L3} \xD7 1,000 = ${commas(L3 * 1e3)} ml.`, `Cups = ${commas(L3 * 1e3)} \xF7 ${c} = ${n}.`]
     }),
-    check: ({ c, L: L2 }, a) => a * c === L2 * 1e3
+    check: ({ c, L: L3 }, a) => a * c === L3 * 1e3
   }),
   // =========================================================== TIME, DISTANCE AND SPEED
   fam13({
@@ -33202,17 +33285,17 @@ var FAMILIES26 = [
     rung: 1,
     form: "word",
     draw: () => {
-      const L2 = pick([200, 250, 400]), n = randInt(3, 12);
-      return L2 * n % 100 === 0 ? { L: L2, n, p: person() } : null;
+      const L3 = pick([200, 250, 400]), n = randInt(3, 12);
+      return L3 * n % 100 === 0 ? { L: L3, n, p: person() } : null;
     },
-    make: ({ L: L2, n, p }) => ({
-      question: `One lap of the school track is ${L2} metres. ${p.name} runs ${n} laps. How many kilometres does ${p.she} run?`,
-      answer: L2 * n / 1e3,
-      wrong: [[L2 * n, "That is in metres. The question asks for kilometres."], [L2 * n / 100, "There are 1,000 m in 1 km, not 100 m."], [L2 * n / 1e4, "There are 1,000 m in 1 km. This divides by too much."]],
+    make: ({ L: L3, n, p }) => ({
+      question: `One lap of the school track is ${L3} metres. ${p.name} runs ${n} laps. How many kilometres does ${p.she} run?`,
+      answer: L3 * n / 1e3,
+      wrong: [[L3 * n, "That is in metres. The question asks for kilometres."], [L3 * n / 100, "There are 1,000 m in 1 km, not 100 m."], [L3 * n / 1e4, "There are 1,000 m in 1 km. This divides by too much."]],
       hints: ["Find the total distance in metres first.", "Change metres to kilometres."],
-      steps: [`${n} \xD7 ${L2} = ${L2 * n} m.`, `${L2 * n} \xF7 1,000 = ${L2 * n / 1e3} km.`]
+      steps: [`${n} \xD7 ${L3} = ${L3 * n} m.`, `${L3 * n} \xF7 1,000 = ${L3 * n / 1e3} km.`]
     }),
-    check: ({ L: L2, n }, a) => Math.round(a * 1e3) === L2 * n
+    check: ({ L: L3, n }, a) => Math.round(a * 1e3) === L3 * n
   }),
   fam13({
     id: "g7.speed.walk-to-school-week",
@@ -33759,8 +33842,8 @@ var FAMILIES26 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const items = ["kg of sugar", "loaf of bread", "litre of milk", "kg of rice"].sort(() => Math.random() - 0.5).slice(0, 3);
-      const rows = items.map((it) => ({ it, q: randInt(1, 4), pr: price(it) }));
+      const items2 = ["kg of sugar", "loaf of bread", "litre of milk", "kg of rice"].sort(() => Math.random() - 0.5).slice(0, 3);
+      const rows = items2.map((it) => ({ it, q: randInt(1, 4), pr: price(it) }));
       const t = rows.reduce((a, r) => a + r.q * r.pr, 0);
       const note = [500, 1e3, 2e3].find((x) => x > t);
       return note && uniq5(t, rows.reduce((a, r) => a + r.pr, 0), note - rows.reduce((a, r) => a + r.pr, 0)) ? { rows, t, note, p: person() } : null;
@@ -34383,20 +34466,20 @@ var FAMILIES27 = [
       const lo = Math.min(a, b), hi = Math.max(a, b);
       const c = possible ? randInt(hi + 1, a + b - 1) : randInt(a + b + 1, a + b + 4);
       if (possible && a + b - 1 < hi + 1) return null;
-      const L2 = Math.max(a, b, c), shorts = [a, b, c].sort((x, y) => x - y);
+      const L3 = Math.max(a, b, c), shorts = [a, b, c].sort((x, y) => x - y);
       if (!uniq6(a, b, c)) return null;
-      return { sides: [a, b, c], L: L2, s1: shorts[0], s2: shorts[1], possible: shorts[0] + shorts[1] > L2, k: randInt(0, 3), p: person() };
+      return { sides: [a, b, c], L: L3, s1: shorts[0], s2: shorts[1], possible: shorts[0] + shorts[1] > L3, k: randInt(0, 3), p: person() };
     },
-    make: ({ sides, L: L2, s1, s2, possible, k, p }) => {
+    make: ({ sides, L: L3, s1, s2, possible, k, p }) => {
       const opts2 = possible ? [
-        { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L2}`, right: true },
+        { text: `Yes. ${s1} + ${s2} = ${s1 + s2}, which is more than ${L3}`, right: true },
         { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. What matters is whether the two shorter sides together are longer than the longest side." },
-        { text: `No. ${L2} cm is longer than each of the other two sides`, right: false, why: "The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it." },
+        { text: `No. ${L3} cm is longer than each of the other two sides`, right: false, why: "The longest side is always longer than each of the others. The test is whether the two shorter sides together beat it." },
         { text: "Yes. Any three lengths make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet." }
       ] : [
-        { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L2}`, right: true },
+        { text: `No. ${s1} + ${s2} = ${s1 + s2}, which is less than ${L3}`, right: true },
         { text: "Yes. Any three lengths at all will make a triangle", right: false, why: "Not any three. If the two shorter sides together are too short, the arcs never meet." },
-        { text: `Yes. ${L2} cm is the longest side, so it can be the base`, right: false, why: "Any side can be the base. The problem is that the two shorter sides together are too short to reach each other." },
+        { text: `Yes. ${L3} cm is the longest side, so it can be the base`, right: false, why: "Any side can be the base. The problem is that the two shorter sides together are too short to reach each other." },
         { text: "No. The three sides are all different lengths", right: false, why: "A triangle can have three different sides. Check whether the two shorter sides together are longer than the longest." }
       ];
       return {
@@ -34404,7 +34487,7 @@ var FAMILIES27 = [
         story: false,
         options: rot4(opts2, k),
         hints: ["Draw the longest side first. The two arcs come from its ends.", "Do the two shorter sides, laid end to end, reach past the longest side?"],
-        steps: [`The two shorter sides are ${s1} cm and ${s2} cm. Together: ${s1 + s2} cm.`, `The longest side is ${L2} cm. ${possible ? "The shorter two together are longer, so the arcs cross and a triangle can be made." : "The shorter two together are not longer, so the arcs do not meet. No triangle."}`]
+        steps: [`The two shorter sides are ${s1} cm and ${s2} cm. Together: ${s1 + s2} cm.`, `The longest side is ${L3} cm. ${possible ? "The shorter two together are longer, so the arcs cross and a triangle can be made." : "The shorter two together are not longer, so the arcs do not meet. No triangle."}`]
       };
     }
   }),
@@ -34419,16 +34502,16 @@ var FAMILIES27 = [
     draw: () => {
       const c = pick([FREQ_CTX[0], FREQ_CTX[3]]);
       const fs = Array.from({ length: 5 }, () => randInt(2, 10));
-      const items = sum2(fs.map((f, i) => f * (c.lo + i)));
-      return uniq6(items, sum2(fs), sum2(Array.from({ length: 5 }, (_, i) => c.lo + i)), sum2(fs) * (c.lo + 4)) ? { c, fs } : null;
+      const items2 = sum2(fs.map((f, i) => f * (c.lo + i)));
+      return uniq6(items2, sum2(fs), sum2(Array.from({ length: 5 }, (_, i) => c.lo + i)), sum2(fs) * (c.lo + 4)) ? { c, fs } : null;
     },
     make: ({ c, fs }) => {
       const xs = fs.map((_, i) => c.lo + i);
-      const items = sum2(fs.map((f, i) => f * xs[i]));
+      const items2 = sum2(fs.map((f, i) => f * xs[i]));
       return {
         question: `The frequency table shows ${c.desc}. Work out the total number of ${c.items}.`,
         model: freqModel(c, fs),
-        answer: items,
+        answer: items2,
         wrong: [[sum2(fs), `That counts the ${c.who}. Each ${c.who === "matches" ? "match" : "learner"} in a row has several ${c.items}.`], [sum2(xs), "That adds the numbers in the first column once each. Each one happened as many times as its frequency."], [sum2(fs) * xs[4], "That treats every row as if it had the biggest value. Each row has its own value."]],
         hints: ["A row with value 3 and frequency 4 means 3 happened 4 times.", "Multiply each value by its frequency, then add the products."],
         steps: xs.map((x, i) => `${x} \xD7 ${fs[i]} = ${x * fs[i]}`).concat([`Total: ${sum2(fs.map((f, i) => f * xs[i]))}.`])
@@ -34540,19 +34623,19 @@ var FAMILIES27 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const H2 = pick([10, 12]), idx = randInt(1, 7), s = SCALES[idx];
-      const M5 = s * randInt(Math.floor(H2 / 2) + 1, H2);
+      const H3 = pick([10, 12]), idx = randInt(1, 7), s = SCALES[idx];
+      const M5 = s * randInt(Math.floor(H3 / 2) + 1, H3);
       const opts2 = [SCALES[idx - 1], s, SCALES[idx + 1], SCALES[idx + 2]];
-      const fits = opts2.filter((x) => M5 / x <= H2);
+      const fits = opts2.filter((x) => M5 / x <= H3);
       const best = Math.min(...fits);
-      return best === s ? { H: H2, M: M5, opts: opts2, s, t: pick(THINGS), p: person(), k: randInt(0, 3) } : null;
+      return best === s ? { H: H3, M: M5, opts: opts2, s, t: pick(THINGS), p: person(), k: randInt(0, 3) } : null;
     },
-    make: ({ H: H2, M: M5, opts: opts2, s, t, p, k }) => ({
-      question: `${p.name} draws a bar graph of the ${t.t} sold by four shops. The vertical axis is ${H2} squares tall. The tallest bar shows ${commas(M5)} ${t.u}. Which scale makes the tallest bar as tall as possible and still fit on the axis?`,
+    make: ({ H: H3, M: M5, opts: opts2, s, t, p, k }) => ({
+      question: `${p.name} draws a bar graph of the ${t.t} sold by four shops. The vertical axis is ${H3} squares tall. The tallest bar shows ${commas(M5)} ${t.u}. Which scale makes the tallest bar as tall as possible and still fit on the axis?`,
       options: rot4(opts2.map((x) => ({
         text: `1 square stands for ${commas(x)} ${t.u}`,
         right: x === s,
-        why: x === s ? void 0 : M5 / x > H2 ? `The tallest bar would need ${round(M5 / x, 1)} squares, but the axis has only ${H2}. It would go off the paper.` : `It fits, but the tallest bar would be only ${round(M5 / x, 1)} squares tall. A bigger bar uses the paper better.`
+        why: x === s ? void 0 : M5 / x > H3 ? `The tallest bar would need ${round(M5 / x, 1)} squares, but the axis has only ${H3}. It would go off the paper.` : `It fits, but the tallest bar would be only ${round(M5 / x, 1)} squares tall. A bigger bar uses the paper better.`
       })), k),
       hints: ["For each scale, divide the tallest value by the size of one square.", "The bar must fit on the axis, so the number of squares cannot be more than its height."],
       steps: opts2.map((x) => `1 square = ${commas(x)}: the tallest bar needs ${commas(round(M5 / x, 1))} squares.`).concat([`The smallest scale that still fits is ${commas(s)} ${t.u} to a square.`])
@@ -34909,6 +34992,2311 @@ for (const f of FAMILIES28) {
   BY_SKILL.get(f.skill).push(f);
 }
 
+// src/ai-tutor/content/families/eng_signed.js
+var SIGNED_ENGLISH = [];
+
+// src/ai-tutor/content/curriculumMap.english.g5.js
+var SUBSTRANDS_E5 = {
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS": {
+    "name": "Listening Comprehension (Theme 1: Child rights and responsibilities)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.a",
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.b",
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.c",
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.d",
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.e"
+    ]
+  },
+  "ENGL.G5.READIN.T1_EXTENSIVE_READING": {
+    "name": "Extensive Reading (Theme 1: Child rights and responsibilities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.a",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.b",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.c",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA": {
+    "name": "Word Class: Demonstrative Determiners (Theme 1: Child rights and responsibilities)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.a",
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.b",
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F": {
+    "name": "Functional Writing: Filling Forms (Theme 1: Child rights and responsibilities)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.a",
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.b",
+      "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 2: National celebrations)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING": {
+    "name": "Intensive Reading (Theme 2: National celebrations)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.d",
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.e"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV": {
+    "name": "Word Class: Collective Nouns/ Reflexive Pronouns (Theme 2: National celebrations)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE": {
+    "name": "Creative Writing: Open ended Compositions (Theme 2: National celebrations)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.a",
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.b",
+      "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 3: Etiquette-table manners)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T3_INTENSIVE_READING_NA": {
+    "name": "Intensive Reading: (Narrative of about 400 words) (Theme 3: Etiquette-table manners)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.a",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.b",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.c",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.d",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.e"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN": {
+    "name": "Language Pattern (Theme 3: Etiquette-table manners)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING": {
+    "name": "Mechanics of Writing: Handwriting (Theme 3: Etiquette-table manners)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.b",
+      "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 4: Road accidents \u2013 prevention)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T4_INTENSIVE_READING_CO": {
+    "name": "Intensive Reading: Comprehension (Theme 4: Road accidents \u2013 prevention)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.a",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.b",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.e"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV": {
+    "name": "Word Class: Possessive Pronouns (Theme 4: Road accidents \u2013 prevention)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.a",
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.b",
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F": {
+    "name": "Functional Writing: Friendly Letter (Theme 4: Road accidents \u2013 prevention)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.a",
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.b",
+      "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS": {
+    "name": "Listening Comprehension (Theme 5: Traditional foods)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.a",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.b",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.c",
+      "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.d"
+    ]
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI": {
+    "name": "Extensive Reading: Fiction and Non Fiction Materials (Theme 5: Traditional foods)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.a",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.b",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.c",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.d",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.e"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE": {
+    "name": "Word Class: Adjectives (Theme 5: Traditional foods)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.a",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.b",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.c",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.d"
+    ]
+  },
+  "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR": {
+    "name": "Creative Writing: Narrative Compositions (Theme 5: Traditional foods)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.a",
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.b",
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.c",
+      "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR.d"
+    ]
+  },
+  "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 6: Jobs and occupations)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T6_INTENSIVE_READING_CO": {
+    "name": "Intensive Reading Comprehension Dialogues (Theme 6: Jobs and occupations)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.a",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.b",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE": {
+    "name": "Word Class: Determiners: Quantifiers: (Theme 6: Jobs and occupations)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC": {
+    "name": "Creative Writing: Pictorial Composition (Theme 6: Jobs and occupations)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.a",
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.b",
+      "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 7: Learning through technology)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI": {
+    "name": "Extensive Reading: Fiction and Non-Fiction Texts (1000- 1250 words) Poems (not more than 5 stanzas) (Theme 7: Learning through technology)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.a",
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.b",
+      "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.c"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US": {
+    "name": "Tense: Future Time using will/shall (Theme 7: Learning through technology)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.a",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.b",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING": {
+    "name": "Mechanics of Writing: Punctuation (Theme 7: Learning through technology)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.b",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 8: The farm-cash crops)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T8_FLUENCY_IN_READING": {
+    "name": "Fluency in Reading (Theme 8: The farm-cash crops)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T8_FLUENCY_IN_READING.a",
+      "ENGL.G5.READIN.T8_FLUENCY_IN_READING.b",
+      "ENGL.G5.READIN.T8_FLUENCY_IN_READING.c"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T8_SENTENCES": {
+    "name": "Sentences (Theme 8: The farm-cash crops)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T8_SENTENCES.a",
+      "ENGL.G5.GRAMMA.T8_SENTENCES.b",
+      "ENGL.G5.GRAMMA.T8_SENTENCES.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T8_CREATIVE_WRITING": {
+    "name": "Creative Writing (Theme 8: The farm-cash crops)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.a",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.b",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.c",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.d"
+    ]
+  },
+  "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO": {
+    "name": "Speaking Fluency: pronunciation (Theme 9: Communicable diseases)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.a",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.b",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.c",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.d",
+      "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.e"
+    ]
+  },
+  "ENGL.G5.READIN.T9_INTENSIVE_READING_DE": {
+    "name": "Intensive Reading: Descriptive Fictional or Non-Fictional Texts (about 400 words) (Theme 9: Communicable diseases)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.a",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.b",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.d",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.e"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS": {
+    "name": "Word Class: Adverbs (Theme 9: Communicable diseases)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.a",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.b",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.c",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.d"
+    ]
+  },
+  "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING": {
+    "name": "Mechanics of Writing: Punctuation Marks (Theme 9: Communicable diseases)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.b",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary: Interactive Listening (Theme 10: Leisure time activities)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G5.READIN.T10_INTENSIVE_READING": {
+    "name": "Intensive Reading (Theme 10: Leisure time activities)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI": {
+    "name": "Word Class: Conjunctions (Theme 10: Leisure time activities)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.a",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.b",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES": {
+    "name": "Creative Writing: Descriptive Composition (120 -160 words) (Theme 10: Leisure time activities)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.a",
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.b",
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.c",
+      "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES.d"
+    ]
+  },
+  "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 11: Sports - appreciating talents)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G5.READIN.T11_INTENSIVE_READING": {
+    "name": "Intensive Reading (Theme 11: Sports - appreciating talents)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE": {
+    "name": "Use of Interrogatives (Theme 11: Sports - appreciating talents)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.a",
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.b",
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T11_SPELLING": {
+    "name": "Spelling (Theme 11: Sports - appreciating talents)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T11_SPELLING.a",
+      "ENGL.G5.WRITIN.T11_SPELLING.b",
+      "ENGL.G5.WRITIN.T11_SPELLING.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary: (Theme 12: Environmental pollution)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G5.READIN.T12_INTENSIVE_READING": {
+    "name": "Intensive Reading (Theme 12: Environmental pollution)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.a",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS": {
+    "name": "Word Class: Nouns (Theme 12: Environmental pollution)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.a",
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.b",
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D": {
+    "name": "Functional Writing: Diary (Theme 12: Environmental pollution)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.a",
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.b",
+      "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D.c"
+    ]
+  },
+  "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO": {
+    "name": "Pronunciation and Vocabulary (Theme 13: Money- savings and banking)",
+    "strand": "Listening and Speaking",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.b",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.c",
+      "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO.d"
+    ]
+  },
+  "ENGL.G5.READIN.T13_EXTENSIVE_READING": {
+    "name": "Extensive Reading (Theme 13: Money- savings and banking)",
+    "strand": "Reading",
+    "outcomes": [
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.a",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.b",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.c",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.d"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI": {
+    "name": "Word Class: Prepositions (Theme 13: Money- savings and banking)",
+    "strand": "Grammar in Use",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.c"
+    ]
+  },
+  "ENGL.G5.WRITIN.T13_SPELLING": {
+    "name": "Spelling (Theme 13: Money- savings and banking)",
+    "strand": "Writing",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T13_SPELLING.a",
+      "ENGL.G5.WRITIN.T13_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.c",
+      "ENGL.G5.WRITIN.T13_SPELLING.d",
+      "ENGL.G5.WRITIN.T13_SPELLING.e"
+    ]
+  }
+};
+var SKILLS_E5 = {
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS": {
+    "name": "Use words about child rights and responsibilities",
+    "sub": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_VOC_RIGHT_RESPONSIBILITY",
+      "M_VOC_NEAR_MEANING"
+    ]
+  },
+  "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
+    "name": "Choose and use reference materials",
+    "sub": "ENGL.G5.READIN.T1_EXTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.a",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_REF_WRONG_SOURCE",
+      "M_REF_ALPHA_FIRST_LETTER",
+      "M_REF_GUIDE_WORDS"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES": {
+    "name": "Use this, these, that and those",
+    "sub": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.a",
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_DEM_THIS_PLURAL",
+      "M_DEM_THESE_SINGULAR",
+      "M_DEM_NEAR_FAR",
+      "M_DEM_THEM"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS": {
+    "name": "Identify characters, places and events",
+    "sub": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_ELEM_MIXES_CHARACTER_PLACE",
+      "M_ELEM_MINOR_FOR_MAIN",
+      "M_ELEM_ORDER_REVERSED",
+      "M_ELEM_ORDER_SWAPPED",
+      "M_ELEM_WRONG_PLACE"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT": {
+    "name": "Predict what happens next",
+    "sub": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.b"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS"
+    ],
+    "mis": [
+      "M_PRED_NO_CLUE",
+      "M_PRED_CONTRADICTS",
+      "M_PRED_ALREADY_HAPPENED"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
+    "name": "Answer factual questions from a text",
+    "sub": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.d",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.d",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.c"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS"
+    ],
+    "mis": [
+      "M_FACT_NEARBY_DETAIL",
+      "M_FACT_NOT_STATED_AS_TRUE",
+      "M_FACT_FALSE_AS_NOT_STATED",
+      "M_FACT_OUTSIDE_KNOWLEDGE",
+      "M_FACT_MISSES_STATED",
+      "M_FACT_FALSE_AS_TRUE"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS": {
+    "name": "Answer inferential questions from a text",
+    "sub": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.d",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.d",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.c"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+    ],
+    "mis": [
+      "M_INFER_REPEATS_TEXT",
+      "M_INFER_CONTRADICTS",
+      "M_INFER_OVERREACH"
+    ]
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
+    "name": "Use context clues to find the meaning of a word",
+    "sub": "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.b",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.b"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+    ],
+    "mis": [
+      "M_CTX_COMMON_MEANING",
+      "M_CTX_LOOKS_LIKE",
+      "M_CTX_OPPOSITE",
+      "M_CTX_WRONG_CLUE"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS": {
+    "name": "Use collective nouns for groups",
+    "sub": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_COLL_WRONG_ANIMAL",
+      "M_COLL_THING_MIX",
+      "M_COLL_OF_MISSING",
+      "M_COLL_PLURAL_S"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS": {
+    "name": "Use reflexive pronouns",
+    "sub": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES"
+    ],
+    "mis": [
+      "M_REFL_HISSELF",
+      "M_REFL_OBJECT_PRONOUN",
+      "M_REFL_SINGULAR_PLURAL",
+      "M_REFL_WRONG_PERSON"
+    ]
+  },
+  "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS": {
+    "name": "Choose polite words and expressions",
+    "sub": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.e"
+    ],
+    "pre": [],
+    "mis": [
+      "M_POL_DEMAND",
+      "M_POL_WRONG_REPLY",
+      "M_POL_EXCUSE_SORRY"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO": {
+    "name": "Use too ... to and too ... for",
+    "sub": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_TOO_MISSING_TO",
+      "M_TOO_FOR_TO",
+      "M_TOO_THAT",
+      "M_TOO_FOR_VERB"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB": {
+    "name": "Use must and should with an adverb",
+    "sub": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS"
+    ],
+    "mis": [
+      "M_MODAL_TO",
+      "M_MODAL_VERB_FORM",
+      "M_MODAL_ADJECTIVE",
+      "M_MODAL_STRENGTH"
+    ]
+  },
+  "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS": {
+    "name": "Use words about road safety",
+    "sub": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M_VOC_ROAD_NEAR",
+      "M_VOC_ROAD_SOUND"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES": {
+    "name": "Use possessive pronouns and their determiners",
+    "sub": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.a",
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_POSS_DET_FOR_PRONOUN",
+      "M_POSS_PRONOUN_BEFORE_NOUN",
+      "M_POSS_APOSTROPHE",
+      "M_POSS_WRONG_PERSON"
+    ]
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM": {
+    "name": "Scan for details and skim for the gist",
+    "sub": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
+    "outcomes": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.b",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.c",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_SCAN_READS_ALL",
+      "M_SCAN_WRONG_LINE",
+      "M_SKIM_DETAIL_FOR_GIST"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE": {
+    "name": "Use comparative and superlative adjectives",
+    "sub": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.a",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_ADJ_DOUBLE_COMPARATIVE",
+      "M_ADJ_LONG_ER",
+      "M_ADJ_IRREGULAR",
+      "M_ADJ_THAN",
+      "M_ADJ_SUPERLATIVE_FOR_TWO",
+      "M_ADJ_SPELLING"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER": {
+    "name": "Put adjectives in order",
+    "sub": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_ADJ_AFTER_NOUN",
+      "M_ADJ_ORDER_SHAPE_FIRST",
+      "M_ADJ_ORDER_AGE"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE": {
+    "name": "Use few, a few, little and a little",
+    "sub": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_QUANT_FEW_UNCOUNTABLE",
+      "M_QUANT_LITTLE_COUNTABLE",
+      "M_QUANT_NEGATIVE_POSITIVE",
+      "M_QUANT_MUCH_MANY"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER": {
+    "name": "Use a lot of, each, all, enough, most and least",
+    "sub": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE"
+    ],
+    "mis": [
+      "M_QUANT_EACH_PLURAL",
+      "M_QUANT_ALL_SINGULAR",
+      "M_QUANT_ENOUGH_POSITION",
+      "M_QUANT_OF_THE_MISSING",
+      "M_QUANT_LEAST_LESS"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL": {
+    "name": "Use will and shall for the future",
+    "sub": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.a",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.b",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_FUT_WILL_PAST",
+      "M_FUT_WILL_S",
+      "M_FUT_WILL_ING",
+      "M_FUT_PRESENT_FOR_FUTURE",
+      "M_FUT_DOUBLE_MODAL"
+    ]
+  },
+  "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS": {
+    "name": "Use the comma",
+    "sub": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_COMMA_LIST_MISSING",
+      "M_COMMA_EVERYWHERE",
+      "M_COMMA_AFTER_OPENING",
+      "M_COMMA_SPLICE"
+    ]
+  },
+  "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH": {
+    "name": "Punctuate direct speech with double quotation marks",
+    "sub": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS"
+    ],
+    "mis": [
+      "M_QUOTE_MISSING",
+      "M_QUOTE_TOO_MUCH",
+      "M_QUOTE_PUNCTUATION_OUTSIDE",
+      "M_QUOTE_NO_CAPITAL",
+      "M_QUOTE_SINGLE",
+      "M_QUOTE_FULL_STOP_BEFORE_SAID"
+    ]
+  },
+  "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS": {
+    "name": "Know proverbs and their meanings",
+    "sub": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.d"
+    ],
+    "pre": [],
+    "mis": [
+      "M_PROV_LITERAL",
+      "M_PROV_NEAR_MEANING",
+      "M_PROV_WORDS_MIXED"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS": {
+    "name": "Use question tags",
+    "sub": "ENGL.G5.GRAMMA.T8_SENTENCES",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T8_SENTENCES.a",
+      "ENGL.G5.GRAMMA.T8_SENTENCES.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_TAG_INVARIABLE",
+      "M_TAG_SAME_SIGN",
+      "M_TAG_WRONG_HELPER",
+      "M_TAG_NOUN_FOR_PRONOUN",
+      "M_TAG_FULL_FORM"
+    ]
+  },
+  "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES": {
+    "name": "Identify and use similes",
+    "sub": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.a",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_SIM_STATEMENT",
+      "M_SIM_METAPHOR",
+      "M_SIM_WRONG_COMPARISON"
+    ]
+  },
+  "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA": {
+    "name": "Find the main idea of a paragraph",
+    "sub": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE",
+    "outcomes": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.a"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS"
+    ],
+    "mis": [
+      "M_MAIN_DETAIL",
+      "M_MAIN_TOO_BROAD",
+      "M_MAIN_NOT_IN_TEXT"
+    ]
+  },
+  "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE": {
+    "name": "Summarise the main points",
+    "sub": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE",
+    "outcomes": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.c",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.c"
+    ],
+    "pre": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA"
+    ],
+    "mis": [
+      "M_SUM_TOO_MUCH_DETAIL",
+      "M_SUM_MISSING_MAIN",
+      "M_SUM_OPINION",
+      "M_SUM_CUTS_MAIN"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS": {
+    "name": "Identify and use adverbs of manner, time, place and frequency",
+    "sub": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.a",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.b",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.d"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE"
+    ],
+    "mis": [
+      "M_ADV_ADJECTIVE_FOR_ADVERB",
+      "M_ADV_GOOD_WELL",
+      "M_ADV_HARD_HARDLY",
+      "M_ADV_TYPE_CONFUSION",
+      "M_ADV_POSITION"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD": {
+    "name": "Use could and would",
+    "sub": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.c"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL"
+    ],
+    "mis": [
+      "M_MOD_CAN_FOR_COULD",
+      "M_MOD_WILL_FOR_WOULD",
+      "M_MOD_PAST_AFTER_MODAL",
+      "M_MOD_HOW_MANY_ORDER"
+    ]
+  },
+  "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE": {
+    "name": "Use the apostrophe",
+    "sub": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES"
+    ],
+    "mis": [
+      "M_APOS_PLURAL",
+      "M_APOS_ITS",
+      "M_APOS_MISSING_OWNER",
+      "M_APOS_CONTRACTION",
+      "M_APOS_PLURAL_OWNER"
+    ]
+  },
+  "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK": {
+    "name": "Use the exclamation mark",
+    "sub": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EXCL_FULL_STOP",
+      "M_EXCL_OVERUSE",
+      "M_EXCL_MANY",
+      "M_EXCL_QUESTION"
+    ]
+  },
+  "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS": {
+    "name": "Tell the mood or feeling in a narrative",
+    "sub": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "outcomes": [
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_MOOD_OPPOSITE",
+      "M_MOOD_NAMED_NOT_SHOWN"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
+    "name": "Join sentences with but, or, yet, because, since and also",
+    "sub": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.a",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.b",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_CONJ_BECAUSE_FOR_BUT",
+      "M_CONJ_DOUBLE",
+      "M_CONJ_OR_AND",
+      "M_CONJ_SINCE_TIME",
+      "M_CONJ_ALSO_JOINING",
+      "M_CONJ_WRONG_MEANING"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES": {
+    "name": "Ask questions with how, what, when, why, who",
+    "sub": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.a",
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_INT_WHO_WHAT",
+      "M_INT_WHEN_WHERE_WHY",
+      "M_INT_WORD_ORDER",
+      "M_INT_DO_MISSING",
+      "M_INT_ELSE_POSITION",
+      "M_INT_HOW_MUCH_MANY"
+    ]
+  },
+  "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES": {
+    "name": "Spell and use homophones",
+    "sub": "ENGL.G5.WRITIN.T11_SPELLING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T11_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.a",
+      "ENGL.G5.WRITIN.T13_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.c"
+    ],
+    "pre": [],
+    "mis": [
+      "M_HOMO_THERE_THEIR",
+      "M_HOMO_TO_TOO_TWO",
+      "M_HOMO_SOUND_ONLY",
+      "M_HOMO_HEAR_HERE"
+    ]
+  },
+  "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS": {
+    "name": "Use homonyms in the right meaning",
+    "sub": "ENGL.G5.WRITIN.T11_SPELLING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T11_SPELLING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_HOMON_FIRST_MEANING",
+      "M_HOMON_CONTEXT_IGNORED"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL": {
+    "name": "Use nouns that are the same in singular and plural",
+    "sub": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.a",
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_NOUN_SHEEPS",
+      "M_NOUN_OVERREGULAR",
+      "M_NOUN_VERB_AGREEMENT",
+      "M_NOUN_A_BEFORE_PLURAL"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE": {
+    "name": "Use in, on and at for time and place",
+    "sub": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_PREP_DAY_IN",
+      "M_PREP_CLOCK_IN",
+      "M_PREP_PART_OF_DAY",
+      "M_PREP_PLACE"
+    ]
+  },
+  "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION": {
+    "name": "Use into, towards, to and through for direction",
+    "sub": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI",
+    "outcomes": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_PREP_TO_HOME",
+      "M_PREP_ENTER_INTO",
+      "M_PREP_TOWARDS_TO",
+      "M_PREP_THROUGH_INTO"
+    ]
+  },
+  "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS": {
+    "name": "Spell words with double consonants and double vowels",
+    "sub": "ENGL.G5.WRITIN.T13_SPELLING",
+    "outcomes": [
+      "ENGL.G5.WRITIN.T13_SPELLING.a",
+      "ENGL.G5.WRITIN.T13_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.c",
+      "ENGL.G5.WRITIN.T11_SPELLING.a",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_SPELL_SINGLE_CONSONANT",
+      "M_SPELL_EXTRA_DOUBLE",
+      "M_SPELL_SINGLE_VOWEL",
+      "M_SPELL_PHONETIC"
+    ]
+  }
+};
+var MIS_FEEDBACK_E5 = {
+  "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS": {
+    "M_VOC_RIGHT_RESPONSIBILITY": "A right is something you are entitled to. A responsibility is a duty, something you must do.",
+    "M_VOC_NEAR_MEANING": "The word is related but does not fit the meaning. Try each word in the gap and check."
+  },
+  "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
+    "M_REF_WRONG_SOURCE": "Each reference book has its own job. A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts on a subject.",
+    "M_REF_ALPHA_FIRST_LETTER": "When the first letters are the same, look at the second letter, then the third, to decide the order.",
+    "M_REF_GUIDE_WORDS": "Guide words show the first and last word on the page. Put your word in alphabetical order to see if it comes between them."
+  },
+  "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES": {
+    "M_DEM_THIS_PLURAL": "This and that go with ONE thing. For more than one thing, change the word.",
+    "M_DEM_THESE_SINGULAR": "These and those go with MORE THAN ONE thing. Here there is only one.",
+    "M_DEM_NEAR_FAR": "Think about where the thing is. This and these are near the speaker. That and those are far from the speaker.",
+    "M_DEM_THEM": "Them cannot come before a noun. Use a pointing word: this, these, that or those."
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS": {
+    "M_ELEM_MIXES_CHARACTER_PLACE": "A character is a person or animal in the story. A place is where it happens. Check which one the question asks for.",
+    "M_ELEM_MINOR_FOR_MAIN": "The main character is the person the story is mostly about, not just the first one named.",
+    "M_ELEM_ORDER_REVERSED": "Go back to the story. Events are told in the order they happened. Look for words like first, then, after that and finally.",
+    "M_ELEM_ORDER_SWAPPED": "Two of the events are the wrong way round. Check the time words in the story: then, after, later.",
+    "M_ELEM_WRONG_PLACE": "That place is in the story, but the event did not happen there. Find the sentence that tells where it happened."
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT": {
+    "M_PRED_NO_CLUE": "A good prediction is based on a clue in the text. Look for the clue that points to it.",
+    "M_PRED_CONTRADICTS": "This prediction goes against something the text already told us. Reread the clues.",
+    "M_PRED_ALREADY_HAPPENED": "That has already happened in the story. A prediction is about what has not happened yet."
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
+    "M_FACT_NEARBY_DETAIL": "This is in the passage, but it does not answer this question. Reread the question and find the exact sentence.",
+    "M_FACT_NOT_STATED_AS_TRUE": 'The passage never says this. "Not stated" means you cannot find it in the text, even if it sounds likely.',
+    "M_FACT_FALSE_AS_NOT_STATED": "The passage says something different, so the statement is false.",
+    "M_FACT_OUTSIDE_KNOWLEDGE": "Answer from the passage, not from what you know. The text says something different.",
+    "M_FACT_MISSES_STATED": "The passage does say this, in different words. Look for the same idea, not the same words.",
+    "M_FACT_FALSE_AS_TRUE": "Check the details. The passage says something different from this statement."
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS": {
+    "M_INFER_REPEATS_TEXT": "This repeats the passage but does not explain why. An inference question asks you to work it out from the clues.",
+    "M_INFER_CONTRADICTS": "The clues in the passage show something different. Look at what the character says and does.",
+    "M_INFER_OVERREACH": "The passage does not give enough clues for this. A good inference is backed by what is written."
+  },
+  "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
+    "M_CTX_COMMON_MEANING": "This is a meaning of the word, but it does not fit here. Try it in place of the word and see.",
+    "M_CTX_LOOKS_LIKE": "Do not guess from how the word looks. Look at the words around it for clues.",
+    "M_CTX_OPPOSITE": "The sentence has a clue word such as but or although. Check which way it points.",
+    "M_CTX_WRONG_CLUE": "These words are near the word, but they do not explain what it means. Look for words that tell more about it."
+  },
+  "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS": {
+    "M_COLL_WRONG_ANIMAL": "That group word belongs to different animals. Each kind of animal has its own group word.",
+    "M_COLL_THING_MIX": "That group word is for animals, not for things like fruit. Think about what is in the group.",
+    "M_COLL_OF_MISSING": 'A collective noun needs the little word "of" before the things it names.',
+    "M_COLL_PLURAL_S": "The number tells you how many groups there are. More than one group needs the plural form of the group word."
+  },
+  "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS": {
+    "M_REFL_HISSELF": "The word is built from him and them: himself, themselves. Hisself and theirselves are not English words.",
+    "M_REFL_OBJECT_PRONOUN": "You did the action to yourself, so the word must end in -self or -selves.",
+    "M_REFL_SINGULAR_PLURAL": "When the doer is more than one person, the word ends in -selves, not -self.",
+    "M_REFL_WRONG_PERSON": "The word must match the doer. Ask who did the action, then choose the -self word for that person."
+  },
+  "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS": {
+    "M_POL_DEMAND": 'That sounds like a command. A polite request starts with "may I" or "could you", and says please.',
+    "M_POL_WRONG_REPLY": 'Reply to thanks with "You are welcome" and to a sorry with "That is all right".',
+    "M_POL_EXCUSE_SORRY": 'Say "Excuse me" when you ask for room or want to speak. Say "Sorry" when you have made a mistake.'
+  },
+  "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO": {
+    "M_TOO_MISSING_TO": 'After too + an adjective, the verb needs the word "to": too heavy to carry.',
+    "M_TOO_FOR_TO": 'Use "for" before a person and "to" before a verb. "For to" is not used together.',
+    "M_TOO_THAT": "Too ... that is not used. Use so ... that, or too ... to.",
+    "M_TOO_FOR_VERB": 'Before a person (me, him, the children) use "for", not "to".'
+  },
+  "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB": {
+    "M_MODAL_TO": 'After must and should, the verb comes straight away. Do not add "to".',
+    "M_MODAL_VERB_FORM": "After must and should, use the plain verb. It does not take -s, -ed or -ing.",
+    "M_MODAL_ADJECTIVE": "The word tells HOW you speak, so it must be an adverb. Adverbs of manner often end in -ly.",
+    "M_MODAL_STRENGTH": "Must is stronger. Use it for a rule or a law. Should is for advice."
+  },
+  "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS": {
+    "M_VOC_ROAD_NEAR": "The word is about roads, but it does not fit this meaning. A pedestrian walks; a passenger travels in a vehicle.",
+    "M_VOC_ROAD_SOUND": 'In Kenya we say "zebra crossing". Learn the whole phrase.'
+  },
+  "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES": {
+    "M_POSS_DET_FOR_PRONOUN": "My, your, her, our and their need a noun after them. When nothing follows, use mine, yours, hers, ours or theirs.",
+    "M_POSS_PRONOUN_BEFORE_NOUN": "Mine, yours, hers, ours and theirs stand alone. Before a noun, use my, your, her, our or their.",
+    "M_POSS_APOSTROPHE": "Possessive pronouns do not have an apostrophe. Write hers, ours, theirs and yours.",
+    "M_POSS_WRONG_PERSON": "The word must match the owner. Ask whose it is, then choose the word for that person."
+  },
+  "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM": {
+    "M_SCAN_READS_ALL": "You need to find the key word first (such as bus), then read that line carefully.",
+    "M_SCAN_WRONG_LINE": "That detail belongs to a different line. Find the line about this event, then read across.",
+    "M_SKIM_DETAIL_FOR_GIST": "This is one detail. Skimming means reading the title and first lines to find what the whole text is about."
+  },
+  "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE": {
+    "M_ADJ_DOUBLE_COMPARATIVE": "Use only one: -er or more. Never both.",
+    "M_ADJ_LONG_ER": "Long adjectives such as beautiful and interesting use more and most, not -er and -est.",
+    "M_ADJ_IRREGULAR": "Good and bad are special. The words are good-better-best and bad-worse-worst.",
+    "M_ADJ_THAN": 'To compare two things, use "than". "Then" is about time.',
+    "M_ADJ_SUPERLATIVE_FOR_TWO": "Count the things. For two, use the -er form. For three or more, use the -est form.",
+    "M_ADJ_SPELLING": "Check the spelling before -er: a short word may double its last letter (bigger), and y changes to i (happier)."
+  },
+  "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER": {
+    "M_ADJ_AFTER_NOUN": "In English the adjective comes BEFORE the noun, not after it.",
+    "M_ADJ_ORDER_SHAPE_FIRST": "Size comes before shape and colour: a small red hat, not a red small hat.",
+    "M_ADJ_ORDER_AGE": "Size comes first, then age, then shape: a big old round stool."
+  },
+  "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE": {
+    "M_QUANT_FEW_UNCOUNTABLE": "You cannot count water, sugar or milk one by one, so use little, not few.",
+    "M_QUANT_LITTLE_COUNTABLE": "You can count chairs one by one, so use few or a few, not little.",
+    "M_QUANT_NEGATIVE_POSITIVE": 'Few and little mean "hardly any". A few and a little mean "some, enough to use". Read the rest of the sentence.',
+    "M_QUANT_MUCH_MANY": "Many goes with things you can count (cars). Much goes with things you cannot count (traffic, water)."
+  },
+  "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER": {
+    "M_QUANT_EACH_PLURAL": 'Each means "one by one", so the verb is singular: has, is, was.',
+    "M_QUANT_ALL_SINGULAR": "All talks about many, so the noun after it is plural.",
+    "M_QUANT_ENOUGH_POSITION": 'Put "enough" before the noun: enough food, enough chairs.',
+    "M_QUANT_OF_THE_MISSING": 'After "most of" and "all of", you need "the" (or them, us): most of the learners.',
+    "M_QUANT_LEAST_LESS": 'Less compares two things; least compares three or more. And write "lots of", never "a lots of".'
+  },
+  "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL": {
+    "M_FUT_WILL_PAST": "After will and shall, use the plain verb: will go. Will already shows the future.",
+    "M_FUT_WILL_S": "After will and shall, the verb never takes -s.",
+    "M_FUT_WILL_ING": "After will and shall, use the plain verb, not the -ing form.",
+    "M_FUT_PRESENT_FOR_FUTURE": "A time word like tomorrow is not enough. Add will or shall before the verb to show the future.",
+    "M_FUT_DOUBLE_MODAL": "Use one helper verb only: will or shall, not both together."
+  },
+  "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS": {
+    "M_COMMA_LIST_MISSING": 'Put commas between the things in a list (before "and" you may leave it out).',
+    "M_COMMA_EVERYWHERE": "Do not put a comma between who and what they did. Commas are for lists and for separating parts.",
+    "M_COMMA_AFTER_OPENING": "Put a comma after an opening word such as Yes or No, and after a phrase that starts a sentence.",
+    "M_COMMA_SPLICE": "A comma cannot join two whole sentences alone. Use a full stop, or add a joining word."
+  },
+  "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH": {
+    "M_QUOTE_MISSING": "Put double quotation marks round the exact words someone says.",
+    "M_QUOTE_TOO_MUCH": 'Only the words the person said go inside the quotation marks, not "said Mother".',
+    "M_QUOTE_PUNCTUATION_OUTSIDE": "The comma, question mark or exclamation mark that ends the speech goes inside the closing quotation marks.",
+    "M_QUOTE_NO_CAPITAL": "The first word the speaker says begins with a capital letter.",
+    "M_QUOTE_SINGLE": 'Your teacher wants double quotation marks " " for speech.',
+    "M_QUOTE_FULL_STOP_BEFORE_SAID": 'When "said" and the speaker follow the spoken words, end the speech with a comma, not a full stop.'
+  },
+  "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS": {
+    "M_PROV_LITERAL": "A proverb has a hidden lesson. Ask what it teaches people, not what the words say.",
+    "M_PROV_NEAR_MEANING": "This is on a similar topic, but the lesson is different. Match the exact lesson.",
+    "M_PROV_WORDS_MIXED": "The proverb has fixed words. Say the whole proverb aloud to remember its ending."
+  },
+  "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS": {
+    "M_TAG_INVARIABLE": `The tag copies the helper verb and the person of the statement. It is not always "isn't it".`,
+    "M_TAG_SAME_SIGN": "The tag has the opposite sign. A positive statement takes a negative tag (doesn't he), a negative one takes a positive tag.",
+    "M_TAG_WRONG_HELPER": "The helper verb in the tag must match the statement: likes goes with does/doesn't, can goes with can/can't.",
+    "M_TAG_NOUN_FOR_PRONOUN": "The tag uses a pronoun (he, she, it, they), not the name.",
+    "M_TAG_FULL_FORM": "A tag puts the short form first (isn't it), then the pronoun, as one quick question."
+  },
+  "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES": {
+    "M_SIM_STATEMENT": 'A simile compares two things using "like" or "as". This sentence does not.',
+    "M_SIM_METAPHOR": 'This is a metaphor. A simile always has the word "like" or "as".',
+    "M_SIM_WRONG_COMPARISON": "This animal or thing is not known for this quality. Think about who is famous for it."
+  },
+  "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA": {
+    "M_MAIN_DETAIL": "This is a true detail, but it is only one part. The main idea covers the whole paragraph.",
+    "M_MAIN_TOO_BROAD": "This is too wide. The paragraph talks about one part of it.",
+    "M_MAIN_NOT_IN_TEXT": "This idea is not in the paragraph. Check what the paragraph is actually about."
+  },
+  "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE": {
+    "M_SUM_TOO_MUCH_DETAIL": "A summary should be short. This one keeps too many small details.",
+    "M_SUM_MISSING_MAIN": "This summary leaves out an important part. A good summary covers all the main points.",
+    "M_SUM_OPINION": "A summary only says what the passage says. This one adds an opinion.",
+    "M_SUM_CUTS_MAIN": "This is a main point, and a summary needs it. Choose the small detail that adds only colour."
+  },
+  "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS": {
+    "M_ADV_ADJECTIVE_FOR_ADVERB": "A word that tells HOW something is done describes the verb, so it needs the adverb form (quickly).",
+    "M_ADV_GOOD_WELL": "Good describes a noun. After a verb, use well.",
+    "M_ADV_HARD_HARDLY": 'The adverb of hard is hard. Hardly means "almost not at all".',
+    "M_ADV_TYPE_CONFUSION": "Always, often, sometimes and never tell HOW OFTEN (frequency). Time words tell WHEN.",
+    "M_ADV_POSITION": "A frequency adverb usually goes before the main verb, but after is, am, are and was."
+  },
+  "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD": {
+    "M_MOD_CAN_FOR_COULD": "Talk about the past with could: when I was five, I could climb trees.",
+    "M_MOD_WILL_FOR_WOULD": "When the if-part is in the past tense, the result uses would, not will.",
+    "M_MOD_PAST_AFTER_MODAL": "After could and would, use the plain verb: could help, would go.",
+    "M_MOD_HOW_MANY_ORDER": 'Keep "how many" together, then could/would, then the person: How many eggs could you carry?'
+  },
+  "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE": {
+    "M_APOS_PLURAL": "An apostrophe is not for a plain plural. Write bananas, books, boys.",
+    "M_APOS_ITS": 'Try "it is" in the gap. If it does not fit, you need its (belonging), with no apostrophe.',
+    "M_APOS_MISSING_OWNER": "To show that something belongs to Juma, add an apostrophe and s: Juma's.",
+    "M_APOS_CONTRACTION": "The apostrophe goes where a letter is missing: do not becomes don't.",
+    "M_APOS_PLURAL_OWNER": "One owner: apostrophe then s. Many owners whose name ends in s: s then apostrophe."
+  },
+  "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK": {
+    "M_EXCL_FULL_STOP": "A warning, shout or strong feeling needs an exclamation mark.",
+    "M_EXCL_OVERUSE": "A calm sentence ends with a full stop. Save the exclamation mark for strong feeling.",
+    "M_EXCL_MANY": "One exclamation mark is enough.",
+    "M_EXCL_QUESTION": "A question that asks for an answer ends with a question mark."
+  },
+  "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS": {
+    "M_MOOD_OPPOSITE": "One word does not tell the whole feeling. Check what the person does and says.",
+    "M_MOOD_NAMED_NOT_SHOWN": "Nothing in the lines shows this feeling. Look for words and actions that show how the person feels."
+  },
+  "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
+    "M_CONJ_BECAUSE_FOR_BUT": "Read both parts. If the second part is a surprise after the first, use but or yet, not because.",
+    "M_CONJ_DOUBLE": "Use ONE joining word between two ideas. Because and so do the same job, so use only one.",
+    "M_CONJ_OR_AND": 'When you choose one of two things, use "or", not "and".',
+    "M_CONJ_SINCE_TIME": 'Since can mean "because" (a reason) or "from a time". Read the meaning.',
+    "M_CONJ_ALSO_JOINING": '"Also" does not join two nouns. Use "and", or begin a new sentence with Also.',
+    "M_CONJ_WRONG_MEANING": "Read both parts of the sentence. This joining word does not fit what the two parts mean together."
+  },
+  "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES": {
+    "M_INT_WHO_WHAT": "Who asks about people. What asks about things.",
+    "M_INT_WHEN_WHERE_WHY": "Look at the answer. An answer that begins with because is a reason, so the question word is why.",
+    "M_INT_WORD_ORDER": "In a question the helper verb comes before the subject: What are you doing?",
+    "M_INT_DO_MISSING": "Most questions need do, does or did. Then the verb goes plain: Why did you come late?",
+    "M_INT_ELSE_POSITION": 'Else means "in addition". Use it alone after who, what, when or why.',
+    "M_INT_HOW_MUCH_MANY": "Use how many for things you can count (goats) and how much for things you cannot count (rice, milk)."
+  },
+  "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES": {
+    "M_HOMO_THERE_THEIR": `Their shows that something belongs to them. There shows a place. They're means "they are".`,
+    "M_HOMO_TO_TOO_TWO": 'Two is the number 2. Too means "also" or "more than enough". To shows where or what for.',
+    "M_HOMO_SOUND_ONLY": "The words sound the same but mean different things. Think about the meaning to choose the spelling.",
+    "M_HOMO_HEAR_HERE": 'Hear is what you do with your ears. Here means "in this place".'
+  },
+  "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS": {
+    "M_HOMON_FIRST_MEANING": "This word has more than one meaning. Read the question and the rest of the sentence to see which meaning is used.",
+    "M_HOMON_CONTEXT_IGNORED": "Check the other words in the sentence. They show which meaning is used."
+  },
+  "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL": {
+    "M_NOUN_SHEEPS": "Sheep, deer, fish, series, species and aircraft stay the same in the plural.",
+    "M_NOUN_OVERREGULAR": "Some plurals change the whole word: child becomes children, man becomes men, foot becomes feet.",
+    "M_NOUN_VERB_AGREEMENT": "The number tells you if it is one or many. With fifty sheep, the verb is plural: are.",
+    "M_NOUN_A_BEFORE_PLURAL": 'The word "a" is for one thing only, so the noun is singular: a fish.'
+  },
+  "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE": {
+    "M_PREP_DAY_IN": 'Use "on" with days and dates: on Monday, on 12 June.',
+    "M_PREP_CLOCK_IN": `Use "at" for exact times and for night: at 8 o'clock, at night.`,
+    "M_PREP_PART_OF_DAY": 'Use "in" with the morning, afternoon and evening, with months and with years.',
+    "M_PREP_PLACE": 'Use "on" for a thing resting on a surface, "in" for inside, and "at" for a point or a place such as the gate.'
+  },
+  "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION": {
+    "M_PREP_TO_HOME": 'The word "home" already tells where. Say "went home", not "went to home".',
+    "M_PREP_ENTER_INTO": 'The verb "enter" already means "go into". Say "entered the classroom".',
+    "M_PREP_TOWARDS_TO": 'Towards is complete on its own. Do not add "to".',
+    "M_PREP_THROUGH_INTO": "Through goes in at one side and out at the other. Into only goes inside."
+  },
+  "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS": {
+    "M_SPELL_SINGLE_CONSONANT": "This word has a double consonant. Look at the middle of the word again.",
+    "M_SPELL_EXTRA_DOUBLE": "Check which letters are doubled. In this word, two different letters are doubled, or the doubled letter is not the one you chose.",
+    "M_SPELL_SINGLE_VOWEL": "This word has a double vowel (oo or ee). The sound is long.",
+    "M_SPELL_PHONETIC": "Do not spell this word by sound alone. Look for the double letters."
+  }
+};
+
+// src/ai-tutor/content/families/eng_lib.js
+var shuffle9 = (a) => {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+};
+var skillCode = (cs) => {
+  const [a, b, id] = cs.split(".");
+  const hit = Object.keys(SKILLS_E5).filter((c) => c.startsWith(`ENGL.G5.${a}.${b}_`) && c.endsWith(`.${id}`));
+  if (hit.length !== 1) throw new Error(`no English Grade 5 skill ${cs}`);
+  return hit[0];
+};
+var outcomeLetters = (cs, n) => {
+  const L3 = SKILLS_E5[skillCode(cs)].outcomes.map((o) => o.split(".").pop());
+  return Array.from({ length: n }, (_, i) => L3[i] || L3[0]);
+};
+var feedbackOf = (cskill, code) => {
+  const own = MIS_FEEDBACK_E5[cskill]?.[code];
+  if (own) return own;
+  const sub = SKILLS_E5[cskill].sub;
+  for (const [c, k] of Object.entries(SKILLS_E5)) if (k.sub === sub && MIS_FEEDBACK_E5[c]?.[code]) return MIS_FEEDBACK_E5[c][code];
+  throw new Error(`${cskill}: no misconception ${code} in its sub-strand`);
+};
+var mc3 = (right, wrongs) => {
+  const texts = [String(right), ...wrongs.map((w) => String(w[0]))];
+  if (new Set(texts).size !== texts.length) return null;
+  return shuffle9([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
+};
+var eng = (d) => {
+  const { cs, oc, gen, ...rest } = d;
+  const cskill = skillCode(cs);
+  const kind = d.kind || { choose: "choose", gap: "type", spot: "spot" }[d.id.split(".").pop()];
+  if (!kind) throw new Error(`${d.id}: needs a kind`);
+  const k = SKILLS_E5[cskill];
+  const letter = oc || k.outcomes[0].split(".").pop();
+  const outcome = k.outcomes.find((o) => o.endsWith(`.${letter}`));
+  if (!outcome) throw new Error(`${d.id}: outcome ${letter} is not on ${cskill}`);
+  const draw = () => {
+    const x = gen(cskill);
+    return x && x.options !== null ? x : null;
+  };
+  return family({ reviewed: SIGNED_ENGLISH.includes(d.id), draft: !SIGNED_ENGLISH.includes(d.id), subject: "english", grade: 5, marker: "text", ...rest, kind, skill: cskill, cskill, outcome, draw, make: (x) => x, check: () => true });
+};
+var parse = (cskill, it) => {
+  const last = it[it.length - 1];
+  const because = typeof last === "string" && it.length > 2 ? last : "";
+  const wrongs = it.slice(2).filter(Array.isArray).map(([w, code, why]) => [w, code, why || feedbackOf(cskill, code)]);
+  const rights = String(it[1]).split("|");
+  if (!because) throw new Error(`item "${it[0]}" has no because`);
+  return { text: it[0], right: rights[0], alt: rights.slice(1), wrongs, because, label: it.label };
+};
+var items = (cskill, pool2) => pool2.map((it) => parse(cskill, it));
+var blankOf = (t) => t.includes("___");
+var fillIn = (text, w) => blankOf(text) ? text.replace("___", w) : w;
+var asked = (it, stem) => it.text === "" ? stem : blankOf(it.text) ? `${stem} "${it.text}"` : it.text;
+var choose2 = (pool2, { stem, hints, n = 3, instruction }) => (cskill) => {
+  const list = items(cskill, pool2), it = pick(list);
+  const options = mc3(it.right, shuffle9(it.wrongs).slice(0, n).map(([w, code, why]) => [w, why, code]));
+  if (!options) return null;
+  return { question: asked(it, stem), options, instruction: instruction || "Choose the best answer.", hints, steps: [it.because, `The answer is "${it.right}".`] };
+};
+var gap = (pool2, { stem, hints }) => (cskill) => {
+  const list = items(cskill, pool2.filter((it2) => blankOf(it2[0]))), it = pick(list);
+  const many = /\s/.test(it.right);
+  return {
+    question: `${stem.replace("{what}", many ? "words" : "word")} "${it.text}"`,
+    answer: it.right,
+    accepts: it.alt,
+    wrong: it.wrongs.map(([w, code, why]) => [w, why, code]),
+    instruction: "Type your answer.",
+    hints: [...hints, `The answer starts with "${it.right[0]}".`],
+    steps: [it.because, `The answer is "${it.right}".`],
+    chk: (a) => [it.right, ...it.alt].includes(String(a))
+  };
+};
+var spot4 = (pool2, { topic, hints }) => (cskill) => {
+  const list = items(cskill, pool2.filter((it) => it.length > 2));
+  const four = shuffle9(list).slice(0, 4);
+  if (four.length < 4) return null;
+  const badAt = randInt(0, 3), bad = four[badAt], [wrong, code] = pick(bad.wrongs);
+  const say = (it, w) => it.label ? `${it.label}: "${fillIn(it.text, w)}"` : fillIn(it.text, w);
+  const working = four.map((it, i) => ({ text: say(it, i === badAt ? wrong : it.right), ok: i !== badAt }));
+  const p = person();
+  return {
+    question: `${p.name} wrote four sentences ${topic}. One of them has a mistake.`,
+    working,
+    mis: [code],
+    fix: `Step ${badAt + 1} has the mistake. ${feedbackOf(cskill, code)} ${bad.because}`,
+    steps: [`The correct sentence is: ${say(bad, bad.right)}`],
+    hints
+  };
+};
+
+// src/ai-tutor/content/families/eng_g5_lang.js
+var WORD = "Choose the word that completes the sentence correctly.";
+var SENT = "Which sentence is correct.";
+var trio = (key, cs, pool2, { stem = WORD, hints, topic, rungs = [1, 2, 3], thinOk = false, oc = outcomeLetters(cs, 3) }) => [
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: rungs[0], gen: choose2(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.gap`, cs, oc: oc[1], form: "direct", rung: rungs[1], thinOk, gen: gap(pool2, { stem: "Type the missing {what} in the sentence.", hints }) }),
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: rungs[2], gen: spot4(pool2, { topic, hints }) })
+];
+var duo = (key, cs, pool2, { stem = SENT, hints, topic, oc = outcomeLetters(cs, 2) }) => [
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose2(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[1], form: "spot", rung: 3, gen: spot4(pool2, { topic, hints }) })
+];
+var DEM = [
+  ["Look at ___ books in my hands.", "these", ["this", "M_DEM_THIS_PLURAL"], ["those", "M_DEM_NEAR_FAR"], ["them", "M_DEM_THEM"], "Books is plural and they are in my hands, so they are near: these."],
+  ["___ mango in my hand is ripe.", "This", ["These", "M_DEM_THESE_SINGULAR"], ["That", "M_DEM_NEAR_FAR"], ["Them", "M_DEM_THEM"], "One mango, and it is in my hand, so it is near: this."],
+  ["Do you see ___ cows across the river?", "those", ["these", "M_DEM_NEAR_FAR"], ["that", "M_DEM_THIS_PLURAL"], ["them", "M_DEM_THEM"], "Cows is plural and they are across the river, far away: those."],
+  ["Look at ___ bird on the roof of the house across the road.", "that", ["this", "M_DEM_NEAR_FAR"], ["those", "M_DEM_THESE_SINGULAR"], ["these", "M_DEM_THESE_SINGULAR"], "One bird, and it is far away: that."],
+  ["I like ___ shoes I am wearing.", "these", ["this", "M_DEM_THIS_PLURAL"], ["those", "M_DEM_NEAR_FAR"], ["them", "M_DEM_THEM"], "Shoes is plural and I am wearing them, so they are near: these."],
+  ['"Who owns ___ umbrella over there by the gate?" asked the teacher.', "that", ["this", "M_DEM_NEAR_FAR"], ["those", "M_DEM_THESE_SINGULAR"], ["these", "M_DEM_THESE_SINGULAR"], "One umbrella, over there by the gate, so it is far: that."],
+  ["Taste ___ sweet potatoes in my bowl, Achieng.", "these", ["this", "M_DEM_THIS_PLURAL"], ["that", "M_DEM_THIS_PLURAL"], ["those", "M_DEM_NEAR_FAR"], "Potatoes is plural and they are in my bowl, so they are near: these."],
+  ["I cannot reach ___ shelf at the top of the wall.", "that", ["this", "M_DEM_NEAR_FAR"], ["these", "M_DEM_THESE_SINGULAR"], ["those", "M_DEM_THESE_SINGULAR"], "One shelf, high up and far from me: that."]
+];
+var COLL = [
+  ["A ___ of cattle was crossing the road.", "herd", ["flock", "M_COLL_WRONG_ANIMAL"], ["swarm", "M_COLL_WRONG_ANIMAL"], ["bunch", "M_COLL_THING_MIX"], "A group of cattle is a herd."],
+  ["A ___ of bees flew out of the hive.", "swarm", ["herd", "M_COLL_WRONG_ANIMAL"], ["flock", "M_COLL_WRONG_ANIMAL"], ["bunch", "M_COLL_THING_MIX"], "A group of bees is a swarm."],
+  ["A ___ of birds sat on the fence.", "flock", ["herd", "M_COLL_WRONG_ANIMAL"], ["swarm", "M_COLL_WRONG_ANIMAL"], ["bunch", "M_COLL_THING_MIX"], "A group of birds is a flock."],
+  ["Wambui carried a ___ of bananas home.", "bunch", ["herd", "M_COLL_THING_MIX"], ["flock", "M_COLL_THING_MIX"], ["swarm", "M_COLL_THING_MIX"], "Bananas that grow together are called a bunch."],
+  ["The fisherman saw a ___ of fish near the rocks.", "school|shoal", ["herd", "M_COLL_WRONG_ANIMAL"], ["flock", "M_COLL_WRONG_ANIMAL"], ["swarm", "M_COLL_WRONG_ANIMAL"], "A group of fish is a school (or a shoal)."],
+  ["A ___ of lions rested under the acacia tree.", "pride", ["herd", "M_COLL_WRONG_ANIMAL"], ["flock", "M_COLL_WRONG_ANIMAL"], ["swarm", "M_COLL_WRONG_ANIMAL"], "A group of lions is a pride."],
+  ["Njeri lost a ___ of keys on the way to school.", "bunch", ["herd", "M_COLL_THING_MIX"], ["flock", "M_COLL_THING_MIX"], ["swarm", "M_COLL_THING_MIX"], "Keys that hang together are a bunch of keys."],
+  ["We saw a ___ of elephants at Tsavo.", "herd", ["pride", "M_COLL_WRONG_ANIMAL"], ["flock", "M_COLL_WRONG_ANIMAL"], ["swarm", "M_COLL_WRONG_ANIMAL"], "A group of elephants is a herd."],
+  ["We saw a ___ birds on the roof.", "flock of", ["flock", "M_COLL_OF_MISSING"], ["herd of", "M_COLL_WRONG_ANIMAL"], ["swarm of", "M_COLL_WRONG_ANIMAL"], "Say the whole pattern: a flock of birds. The little word of joins the group word to the things."],
+  ["Three ___ of sheep were on the hill.", "flocks", ["flock", "M_COLL_PLURAL_S"], ["swarms", "M_COLL_WRONG_ANIMAL"], ["bunches", "M_COLL_THING_MIX"], "Three groups need the plural group word: flocks."]
+];
+var REFL = [
+  ["I cut ___ with the knife while peeling potatoes.", "myself", ["me", "M_REFL_OBJECT_PRONOUN"], ["myselves", "M_REFL_SINGULAR_PLURAL"], ["himself", "M_REFL_WRONG_PERSON"], "I did it to me, so the word is myself."],
+  ["You must be proud of ___, Wanjiru.", "yourself", ["you", "M_REFL_OBJECT_PRONOUN"], ["yourselves", "M_REFL_SINGULAR_PLURAL"], ["herself", "M_REFL_WRONG_PERSON"], "One person is spoken to, so the word is yourself."],
+  ["Juma made the kite all by ___.", "himself", ["hisself", "M_REFL_HISSELF"], ["him", "M_REFL_OBJECT_PRONOUN"], ["herself", "M_REFL_WRONG_PERSON"], "Juma is a boy, so himself."],
+  ["The children taught ___ to swim without any help.", "themselves", ["theirselves", "M_REFL_HISSELF"], ["themself", "M_REFL_SINGULAR_PLURAL"], ["ourselves", "M_REFL_WRONG_PERSON"], "Many children did it, so themselves."],
+  ["We should be proud of ___ for winning.", "ourselves", ["ourself", "M_REFL_SINGULAR_PLURAL"], ["us", "M_REFL_OBJECT_PRONOUN"], ["themselves", "M_REFL_WRONG_PERSON"], "We are more than one person, so ourselves."],
+  ["Achieng baked the cake all by ___.", "herself", ["her", "M_REFL_OBJECT_PRONOUN"], ["himself", "M_REFL_WRONG_PERSON"], ["herselves", "M_REFL_SINGULAR_PLURAL"], "Achieng is a girl, so herself."],
+  ["The cat washed ___ in the sun.", "itself", ["itselves", "M_REFL_SINGULAR_PLURAL"], ["themselves", "M_REFL_WRONG_PERSON"], ["myself", "M_REFL_WRONG_PERSON"], "One cat did it, so itself."],
+  ["Be careful, boys. Do not hurt ___ on the rocks.", "yourselves", ["yourself", "M_REFL_SINGULAR_PLURAL"], ["you", "M_REFL_OBJECT_PRONOUN"], ["themselves", "M_REFL_WRONG_PERSON"], "You is said to many boys, so yourselves."]
+];
+var TOO = [
+  ["The soup was ___ drink.", "too hot to", ["too hot for to", "M_TOO_FOR_TO"], ["too hot", "M_TOO_MISSING_TO"], ["too hot that we", "M_TOO_THAT"], "Too + adjective + to + verb: too hot to drink."],
+  ["The box was ___ me to lift.", "too heavy for", ["too heavy to", "M_TOO_FOR_VERB"], ["too heavy that", "M_TOO_THAT"], ["too heavy for to", "M_TOO_FOR_TO"], "Before a person use for: too heavy for me."],
+  ["Otieno was ___ stay awake.", "too tired to", ["too tired that", "M_TOO_THAT"], ["too tired for to", "M_TOO_FOR_TO"], ["too tired", "M_TOO_MISSING_TO"], "Before a verb use to: too tired to stay awake."],
+  ["The river is ___ the children to cross.", "too deep for", ["too deep to", "M_TOO_FOR_VERB"], ["too deep that", "M_TOO_THAT"], ["too deep for to", "M_TOO_FOR_TO"], "Before the children use for: too deep for the children."],
+  ["This tea is ___ drink.", "too sweet to", ["too sweet for to", "M_TOO_FOR_TO"], ["too sweet", "M_TOO_MISSING_TO"], ["too sweet that", "M_TOO_THAT"], "Too + adjective + to + verb: too sweet to drink."],
+  ["The gate was ___ Baraka to climb.", "too high for", ["too high to", "M_TOO_FOR_VERB"], ["too high that", "M_TOO_THAT"], ["too high for to", "M_TOO_FOR_TO"], "Before a person use for: too high for Baraka."],
+  ["It was ___ go outside, so we stayed in.", "too cold to", ["too cold for to", "M_TOO_FOR_TO"], ["too cold that", "M_TOO_THAT"], ["too cold", "M_TOO_MISSING_TO"], "Before a verb use to: too cold to go outside."],
+  ["The stone was ___ the little boy to move.", "too big for", ["too big to", "M_TOO_FOR_VERB"], ["too big that", "M_TOO_THAT"], ["too big for to", "M_TOO_FOR_TO"], "Before the little boy use for: too big for the little boy."]
+];
+var MUST = [
+  ["You should ___ to elders.", "speak politely", ["speak polite", "M_MODAL_ADJECTIVE"], ["to speak politely", "M_MODAL_TO"], ["speaking politely", "M_MODAL_VERB_FORM"], "Should + plain verb + adverb: speak politely."],
+  ["Children must ___ across the road.", "walk carefully", ["walk careful", "M_MODAL_ADJECTIVE"], ["to walk carefully", "M_MODAL_TO"], ["walks carefully", "M_MODAL_VERB_FORM"], "Must + plain verb + adverb: walk carefully."],
+  ["At the table you should ___ your food.", "eat slowly", ["eat slow", "M_MODAL_ADJECTIVE"], ["eats slowly", "M_MODAL_VERB_FORM"], ["to eat slowly", "M_MODAL_TO"], "Should + plain verb + adverb: eat slowly."],
+  ["Passengers ___ a seat belt. It is the law.", "must wear", ["should wear", "M_MODAL_STRENGTH"], ["must to wear", "M_MODAL_TO"], ["must wearing", "M_MODAL_VERB_FORM"], "A law is a strong rule, so must."],
+  ["You ___ wash your hands before eating. It is good advice.", "should wash", ["must wash", "M_MODAL_STRENGTH"], ["should to wash", "M_MODAL_TO"], ["should washing", "M_MODAL_VERB_FORM"], "Advice is gentle, so should."],
+  ["The learners must ___ when the teacher speaks.", "listen carefully", ["listen careful", "M_MODAL_ADJECTIVE"], ["to listen carefully", "M_MODAL_TO"], ["listening carefully", "M_MODAL_VERB_FORM"], "Must + plain verb + adverb: listen carefully."],
+  ["You must ___ in the library.", "speak quietly", ["speak quiet", "M_MODAL_ADJECTIVE"], ["speaks quietly", "M_MODAL_VERB_FORM"], ["to speak quietly", "M_MODAL_TO"], "Must + plain verb + adverb: speak quietly."],
+  ["Drivers must ___ near a school.", "drive slowly", ["drive slow", "M_MODAL_ADJECTIVE"], ["drives slowly", "M_MODAL_VERB_FORM"], ["to drive slowly", "M_MODAL_TO"], "Must + plain verb + adverb: drive slowly."]
+];
+var POSS = [
+  ["That cup is ___.", "mine", ["my", "M_POSS_DET_FOR_PRONOUN"], ["yours", "M_POSS_WRONG_PERSON"], ["hers", "M_POSS_WRONG_PERSON"], "Nothing follows the gap, so the word that stands alone: mine."],
+  ["Is this ___ book, Wafula?", "your", ["yours", "M_POSS_PRONOUN_BEFORE_NOUN"], ["my", "M_POSS_WRONG_PERSON"], ["her", "M_POSS_WRONG_PERSON"], "A noun (book) follows the gap, so your."],
+  ["Amina lost a pen. The blue pen is ___.", "hers", ["her", "M_POSS_DET_FOR_PRONOUN"], ["her's", "M_POSS_APOSTROPHE"], ["his", "M_POSS_WRONG_PERSON"], "Nothing follows the gap and the owner is Amina: hers."],
+  ["These seats belong to the visitors. They are ___.", "theirs", ["their", "M_POSS_DET_FOR_PRONOUN"], ["their's", "M_POSS_APOSTROPHE"], ["ours", "M_POSS_WRONG_PERSON"], "Nothing follows the gap and the owners are the visitors: theirs."],
+  ["Mama lost ___ keys.", "her", ["hers", "M_POSS_PRONOUN_BEFORE_NOUN"], ["his", "M_POSS_WRONG_PERSON"], ["their", "M_POSS_WRONG_PERSON"], "A noun (keys) follows the gap and Mama is a woman: her."],
+  ["The house on the hill belongs to us. It is ___.", "ours", ["our", "M_POSS_DET_FOR_PRONOUN"], ["our's", "M_POSS_APOSTROPHE"], ["theirs", "M_POSS_WRONG_PERSON"], "Nothing follows the gap and the owners are us: ours."],
+  ["We left ___ bags at the gate.", "our", ["ours", "M_POSS_PRONOUN_BEFORE_NOUN"], ["my", "M_POSS_WRONG_PERSON"], ["their", "M_POSS_WRONG_PERSON"], "A noun (bags) follows the gap and we are the owners: our."],
+  ["You were first, so the prize is ___.", "yours", ["your", "M_POSS_DET_FOR_PRONOUN"], ["your's", "M_POSS_APOSTROPHE"], ["mine", "M_POSS_WRONG_PERSON"], "Nothing follows the gap and the owner is you: yours."]
+];
+var COMP = [
+  ["Kamau is ___ Baraka.", "taller than", ["taller then", "M_ADJ_THAN"], ["more taller than", "M_ADJ_DOUBLE_COMPARATIVE"], ["tallest", "M_ADJ_SUPERLATIVE_FOR_TWO"], "Two people are compared: taller than."],
+  ["This is the ___ story I have read.", "most interesting", ["interestingest", "M_ADJ_LONG_ER"], ["more interesting", "M_ADJ_SUPERLATIVE_FOR_TWO"], ["most interestingest", "M_ADJ_DOUBLE_COMPARATIVE"], "Interesting is a long word, and many stories are compared: most interesting."],
+  ["This mango is ___ than that one.", "better", ["gooder", "M_ADJ_IRREGULAR"], ["more better", "M_ADJ_DOUBLE_COMPARATIVE"], ["best", "M_ADJ_SUPERLATIVE_FOR_TWO"], "Good is special: good, better, best. Two mangoes: better."],
+  ["Of the two sisters, Achieng is the ___.", "taller", ["tallest", "M_ADJ_SUPERLATIVE_FOR_TWO"], ["more taller", "M_ADJ_DOUBLE_COMPARATIVE"], ["most taller", "M_ADJ_DOUBLE_COMPARATIVE"], "Two sisters are compared: taller."],
+  ["Today is ___ yesterday.", "hotter than", ["hoter than", "M_ADJ_SPELLING"], ["more hotter than", "M_ADJ_DOUBLE_COMPARATIVE"], ["hottest", "M_ADJ_SUPERLATIVE_FOR_TWO"], "Hot doubles its last letter: hotter than."],
+  ["Nyambura is the ___ runner in the class of forty.", "fastest", ["faster", "M_ADJ_SUPERLATIVE_FOR_TWO"], ["more fastest", "M_ADJ_DOUBLE_COMPARATIVE"], ["fastiest", "M_ADJ_SPELLING"], "Forty runners are compared: fastest."],
+  ["Her cough is ___ today than it was yesterday.", "worse", ["worser", "M_ADJ_IRREGULAR"], ["badder", "M_ADJ_IRREGULAR"], ["more worse", "M_ADJ_DOUBLE_COMPARATIVE"], "Bad is special: bad, worse, worst."],
+  ["This road is ___ the old road.", "safer than", ["more safer than", "M_ADJ_DOUBLE_COMPARATIVE"], ["safest", "M_ADJ_SUPERLATIVE_FOR_TWO"], ["safer then", "M_ADJ_THAN"], "Two roads are compared: safer than."],
+  ["My little brother is ___ me.", "happier than", ["happyer than", "M_ADJ_SPELLING"], ["more happier than", "M_ADJ_DOUBLE_COMPARATIVE"], ["happiest", "M_ADJ_SUPERLATIVE_FOR_TWO"], "Happy changes y to i: happier than."]
+];
+var ORDER = [
+  ["Grandmother sat on ___.", "a big old stool", ["an old big stool", "M_ADJ_ORDER_AGE"], ["a stool big old", "M_ADJ_AFTER_NOUN"], ["a big stool old", "M_ADJ_AFTER_NOUN"], "Size comes before age, and both come before the noun."],
+  ["Wanjiru bought ___.", "a small red bag", ["a red small bag", "M_ADJ_ORDER_SHAPE_FIRST"], ["a bag small red", "M_ADJ_AFTER_NOUN"], ["a small bag red", "M_ADJ_AFTER_NOUN"], "Size comes before colour, and both come before the noun."],
+  ["He wore ___.", "a big round hat", ["a round big hat", "M_ADJ_ORDER_SHAPE_FIRST"], ["a hat big round", "M_ADJ_AFTER_NOUN"], ["a big hat round", "M_ADJ_AFTER_NOUN"], "Size comes before shape, and both come before the noun."],
+  ["Mama cooked in ___.", "a large black pot", ["a black large pot", "M_ADJ_ORDER_SHAPE_FIRST"], ["a pot large black", "M_ADJ_AFTER_NOUN"], ["a large pot black", "M_ADJ_AFTER_NOUN"], "Size comes before colour, and both come before the noun."],
+  ["The shop sells ___.", "small round baskets", ["round small baskets", "M_ADJ_ORDER_SHAPE_FIRST"], ["baskets small round", "M_ADJ_AFTER_NOUN"], ["small baskets round", "M_ADJ_AFTER_NOUN"], "Size comes before shape, and both come before the noun: small round baskets."],
+  ["Kamau found ___ on the path.", "a small old round coin", ["an old small round coin", "M_ADJ_ORDER_AGE"], ["a round small old coin", "M_ADJ_ORDER_SHAPE_FIRST"], ["a coin small old round", "M_ADJ_AFTER_NOUN"], "Size, then age, then shape, then the noun."],
+  ["My teacher drives ___.", "a new blue car", ["a blue new car", "M_ADJ_ORDER_SHAPE_FIRST"], ["a car new blue", "M_ADJ_AFTER_NOUN"], ["a new car blue", "M_ADJ_AFTER_NOUN"], "Age comes before colour, and both come before the noun."],
+  ["Wafula carried ___ to school.", "a large green bag", ["a green large bag", "M_ADJ_ORDER_SHAPE_FIRST"], ["a bag large green", "M_ADJ_AFTER_NOUN"], ["a large bag green", "M_ADJ_AFTER_NOUN"], "Size comes before colour, and both come before the noun."]
+];
+var FEW = [
+  ["There is ___ water in the jug, so we must fetch more.", "little", ["few", "M_QUANT_FEW_UNCOUNTABLE"], ["a few", "M_QUANT_FEW_UNCOUNTABLE"], ["a little", "M_QUANT_NEGATIVE_POSITIVE"], "Water cannot be counted, so little. We must fetch more, so hardly any: little."],
+  ["We have ___ chairs left, so some learners must stand.", "few", ["little", "M_QUANT_LITTLE_COUNTABLE"], ["a little", "M_QUANT_LITTLE_COUNTABLE"], ["a few", "M_QUANT_NEGATIVE_POSITIVE"], "Chairs can be counted, so few. Some must stand, so hardly any: few."],
+  ["We have ___ eggs, so I can bake a small cake.", "a few", ["a little", "M_QUANT_LITTLE_COUNTABLE"], ["little", "M_QUANT_LITTLE_COUNTABLE"], ["few", "M_QUANT_NEGATIVE_POSITIVE"], "Eggs can be counted, so a few. I can bake, so there are some: a few."],
+  ["There is ___ milk in the cup, enough for my tea.", "a little", ["a few", "M_QUANT_FEW_UNCOUNTABLE"], ["few", "M_QUANT_FEW_UNCOUNTABLE"], ["little", "M_QUANT_NEGATIVE_POSITIVE"], "Milk cannot be counted, so a little. There is enough, so some: a little."],
+  ["We do not have ___ time left.", "much", ["many", "M_QUANT_MUCH_MANY"], ["few", "M_QUANT_FEW_UNCOUNTABLE"], ["a few", "M_QUANT_FEW_UNCOUNTABLE"], "Time cannot be counted, so much."],
+  ["How ___ goats does your uncle keep?", "many", ["much", "M_QUANT_MUCH_MANY"], ["little", "M_QUANT_LITTLE_COUNTABLE"], ["a little", "M_QUANT_LITTLE_COUNTABLE"], "Goats can be counted, so many."],
+  ["Mama added ___ sugar to the porridge, just a spoonful.", "a little", ["a few", "M_QUANT_FEW_UNCOUNTABLE"], ["few", "M_QUANT_FEW_UNCOUNTABLE"], ["many", "M_QUANT_MUCH_MANY"], "Sugar cannot be counted, so a little."],
+  ["Only ___ children came to school on the rainy day.", "a few", ["a little", "M_QUANT_LITTLE_COUNTABLE"], ["little", "M_QUANT_LITTLE_COUNTABLE"], ["much", "M_QUANT_MUCH_MANY"], "Children can be counted, so a few."],
+  ["There is ___ hope that the rains will come, since the sky is clear.", "little", ["few", "M_QUANT_FEW_UNCOUNTABLE"], ["a few", "M_QUANT_FEW_UNCOUNTABLE"], ["a little", "M_QUANT_NEGATIVE_POSITIVE"], "Hope cannot be counted, so little. The sky is clear, so hardly any hope: little."]
+];
+var QUANT = [
+  ["Each of the girls ___ a bag.", "has", ["have", "M_QUANT_EACH_PLURAL"], ["are", "M_QUANT_EACH_PLURAL"], ["were", "M_QUANT_EACH_PLURAL"], "Each means one at a time, so the verb is singular: has."],
+  ["All the ___ were clapping.", "learners", ["learner", "M_QUANT_ALL_SINGULAR"], ["a learner", "M_QUANT_ALL_SINGULAR"], ["each learner", "M_QUANT_ALL_SINGULAR"], "All talks about many, so the noun is plural: learners."],
+  ["We do not have ___ for everyone to eat.", "enough food", ["food enough", "M_QUANT_ENOUGH_POSITION"], ["foods enough", "M_QUANT_ENOUGH_POSITION"], ["enough of food", "M_QUANT_ENOUGH_POSITION"], "Enough goes before the noun: enough food."],
+  ["___ learners in our class walk to school.", "Most of the", ["Most of", "M_QUANT_OF_THE_MISSING"], ["The most of", "M_QUANT_OF_THE_MISSING"], ["Most the", "M_QUANT_OF_THE_MISSING"], "After most of, add the: most of the learners."],
+  ["Of all the shops in town, this one sells the ___ sugar.", "least", ["less", "M_QUANT_LEAST_LESS"], ["lesser", "M_QUANT_LEAST_LESS"], ["littlest", "M_QUANT_LEAST_LESS"], "Many shops are compared, so least."],
+  ["This shop sells ___ sugar than that shop.", "less", ["least", "M_QUANT_LEAST_LESS"], ["lesser", "M_QUANT_LEAST_LESS"], ["littler", "M_QUANT_LEAST_LESS"], "Two shops are compared, so less."],
+  ["There are ___ mangoes on the tree this year.", "a lot of", ["a lots of", "M_QUANT_LEAST_LESS"], ["lot of", "M_QUANT_LEAST_LESS"], ["lots", "M_QUANT_LEAST_LESS"], "Write a lot of or lots of, never a lots of."],
+  ["Each learner in Grade 5 ___ a desk.", "has", ["have", "M_QUANT_EACH_PLURAL"], ["are having", "M_QUANT_EACH_PLURAL"], ["were", "M_QUANT_EACH_PLURAL"], "Each learner means one at a time, so has."]
+];
+var FUT = [
+  ["Tomorrow we will ___ to Nakuru.", "go", ["went", "M_FUT_WILL_PAST"], ["going", "M_FUT_WILL_ING"], ["goes", "M_FUT_WILL_S"], "After will, the plain verb: will go."],
+  ["My mother will ___ us a story tonight.", "tell", ["told", "M_FUT_WILL_PAST"], ["tells", "M_FUT_WILL_S"], ["telling", "M_FUT_WILL_ING"], "After will, the plain verb: will tell."],
+  ["Next week the school will ___ a match.", "play", ["played", "M_FUT_WILL_PAST"], ["plays", "M_FUT_WILL_S"], ["playing", "M_FUT_WILL_ING"], "After will, the plain verb: will play."],
+  ["I promise that I ___ you tomorrow.", "will help|shall help", ["help", "M_FUT_PRESENT_FOR_FUTURE"], ["will helps", "M_FUT_WILL_S"], ["will helped", "M_FUT_WILL_PAST"], "A promise about tomorrow needs will or shall."],
+  ["We ___ Grandmother next Saturday.", "shall visit|will visit", ["visiting", "M_FUT_WILL_ING"], ["will shall visit", "M_FUT_DOUBLE_MODAL"], ["shall visited", "M_FUT_WILL_PAST"], "One helper verb, then the plain verb: shall visit."],
+  ["It ___ soon, because the clouds are dark.", "will rain", ["rain", "M_FUT_PRESENT_FOR_FUTURE"], ["will rains", "M_FUT_WILL_S"], ["will raining", "M_FUT_WILL_ING"], "Dark clouds point to the future: will rain."],
+  ["I am sure Mwende ___ the race next week.", "will win", ["win", "M_FUT_PRESENT_FOR_FUTURE"], ["will won", "M_FUT_WILL_PAST"], ["will winning", "M_FUT_WILL_ING"], "A sure guess about next week: will win."],
+  ["My uncle ___ us a goat for Christmas.", "will give|shall give", ["give", "M_FUT_PRESENT_FOR_FUTURE"], ["will gives", "M_FUT_WILL_S"], ["will gave", "M_FUT_WILL_PAST"], "Christmas has not come yet: will give."]
+];
+var TAG = [
+  ["You are coming to the party, ___?", "aren't you", ["isn't it", "M_TAG_INVARIABLE"], ["are you", "M_TAG_SAME_SIGN"], ["don't you", "M_TAG_WRONG_HELPER"], "The statement has are and you: aren't you."],
+  ["Mwangi plays well, ___?", "doesn't he", ["does he", "M_TAG_SAME_SIGN"], ["isn't he", "M_TAG_WRONG_HELPER"], ["isn't it", "M_TAG_INVARIABLE"], "Plays goes with does, and the statement is positive: doesn't he."],
+  ["She likes tea, ___?", "doesn't she", ["isn't she", "M_TAG_WRONG_HELPER"], ["does she", "M_TAG_SAME_SIGN"], ["isn't it", "M_TAG_INVARIABLE"], "Likes goes with does, and the statement is positive: doesn't she."],
+  ["Baraka is a good footballer, ___?", "isn't he", ["isn't Baraka", "M_TAG_NOUN_FOR_PRONOUN"], ["is he", "M_TAG_SAME_SIGN"], ["doesn't he", "M_TAG_WRONG_HELPER"], "The tag uses a pronoun and the opposite sign: isn't he."],
+  ["The bus is late, ___?", "isn't it", ["is not it", "M_TAG_FULL_FORM"], ["is it", "M_TAG_SAME_SIGN"], ["doesn't it", "M_TAG_WRONG_HELPER"], "The statement has is: isn't it."],
+  ["They can swim, ___?", "can't they", ["isn't it", "M_TAG_INVARIABLE"], ["can they", "M_TAG_SAME_SIGN"], ["don't they", "M_TAG_WRONG_HELPER"], "The statement has can: can't they."],
+  ["We have finished, ___?", "haven't we", ["isn't it", "M_TAG_INVARIABLE"], ["have we", "M_TAG_SAME_SIGN"], ["don't we", "M_TAG_WRONG_HELPER"], "The statement has have: haven't we."],
+  ["Achieng did not come, ___?", "did she", ["didn't she", "M_TAG_SAME_SIGN"], ["isn't it", "M_TAG_INVARIABLE"], ["does she", "M_TAG_WRONG_HELPER"], "The statement is negative, so the tag is positive: did she."]
+];
+var ADV = [
+  ["Wambui spoke ___ so the baby would not wake.", "softly|quietly|gently", ["soft", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["quiet", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["gentle", "M_ADV_ADJECTIVE_FOR_ADVERB"], "The word tells how she spoke, so the adverb: softly."],
+  ["Akinyi sings very ___.", "well", ["good", "M_ADV_GOOD_WELL"], ["goodly", "M_ADV_GOOD_WELL"], ["nice", "M_ADV_ADJECTIVE_FOR_ADVERB"], "After a verb, well."],
+  ["The farmers work ___ in the shamba.", "hard", ["hardly", "M_ADV_HARD_HARDLY"], ["hardily", "M_ADV_HARD_HARDLY"], ["heavy", "M_ADV_ADJECTIVE_FOR_ADVERB"], "The adverb of hard is hard."],
+  ["Juma ___ to school on foot.", "always walks", ["walks always", "M_ADV_POSITION"], ["frequent walks", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["walks frequent", "M_ADV_ADJECTIVE_FOR_ADVERB"], "A frequency adverb goes before the main verb: always walks."],
+  ["The old man walked ___ with his stick.", "slowly", ["slow", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["slower", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["slowness", "M_ADV_ADJECTIVE_FOR_ADVERB"], "The word tells how he walked, so the adverb: slowly."],
+  ["Wanjiru ___ late for assembly.", "is never", ["never is", "M_ADV_POSITION"], ["never", "M_ADV_POSITION"], "A frequency adverb goes after is: is never."],
+  ["The goalkeeper jumped ___ and caught the ball.", "bravely", ["brave", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["braver", "M_ADV_ADJECTIVE_FOR_ADVERB"], ["bravest", "M_ADV_ADJECTIVE_FOR_ADVERB"], "The word tells how he jumped, so the adverb: bravely."]
+];
+var ADV_KIND = [
+  ['In "She often visits her aunt", the adverb often tells us ___.', "how often", ["when", "M_ADV_TYPE_CONFUSION"], ["where", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], "Often says how many times: it is an adverb of frequency."],
+  ['In "The children play outside", the adverb outside tells us ___.', "where", ["when", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Outside says the place: it is an adverb of place."],
+  ['In "Wafula walked slowly", the adverb slowly tells us ___.', "how", ["when", "M_ADV_TYPE_CONFUSION"], ["where", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Slowly says the way he walked: it is an adverb of manner."],
+  ['In "We will leave tomorrow", the adverb tomorrow tells us ___.', "when", ["where", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Tomorrow says the time: it is an adverb of time."],
+  ['In "He seldom eats fish", the adverb seldom tells us ___.', "how often", ["when", "M_ADV_TYPE_CONFUSION"], ["where", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], "Seldom says how often: it is an adverb of frequency."],
+  ['In "Come here", the adverb here tells us ___.', "where", ["when", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Here says the place: it is an adverb of place."],
+  ['In "She answered politely", the adverb politely tells us ___.', "how", ["when", "M_ADV_TYPE_CONFUSION"], ["where", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Politely says the way she answered: it is an adverb of manner."],
+  ['In "I will see you later", the adverb later tells us ___.', "when", ["where", "M_ADV_TYPE_CONFUSION"], ["how", "M_ADV_TYPE_CONFUSION"], ["how often", "M_ADV_TYPE_CONFUSION"], "Later says the time: it is an adverb of time."]
+];
+var COULD = [
+  ["When I was five, I ___ climb trees.", "could", ["can", "M_MOD_CAN_FOR_COULD"], ["cans", "M_MOD_CAN_FOR_COULD"], ["can to", "M_MOD_CAN_FOR_COULD"], "The time is in the past, so could."],
+  ["If I had a bicycle, I ___ ride to school.", "would", ["will", "M_MOD_WILL_FOR_WOULD"], ["can", "M_MOD_WILL_FOR_WOULD"], ["shall", "M_MOD_WILL_FOR_WOULD"], "The if-part is in the past tense, so the result uses would."],
+  ["Long ago, my grandfather ___ walk ten kilometres a day.", "could|would", ["can", "M_MOD_CAN_FOR_COULD"], ["will", "M_MOD_WILL_FOR_WOULD"], ["can to", "M_MOD_CAN_FOR_COULD"], "Long ago is in the past: could (he was able to) or would (he used to)."],
+  ["He said he could ___ us.", "help", ["helped", "M_MOD_PAST_AFTER_MODAL"], ["helps", "M_MOD_PAST_AFTER_MODAL"], ["helping", "M_MOD_PAST_AFTER_MODAL"], "After could, the plain verb: could help."],
+  ["She would ___ if she had time.", "come", ["came", "M_MOD_PAST_AFTER_MODAL"], ["comes", "M_MOD_PAST_AFTER_MODAL"], ["coming", "M_MOD_PAST_AFTER_MODAL"], "After would, the plain verb: would come."],
+  ["___ eggs could you carry in one basket?", "How many", ["How could many", "M_MOD_HOW_MANY_ORDER"], ["How many could", "M_MOD_HOW_MANY_ORDER"], ["How could", "M_MOD_HOW_MANY_ORDER"], "Keep how many together at the start: How many eggs could you carry."],
+  ["Could you please ___ the window?", "open", ["opened", "M_MOD_PAST_AFTER_MODAL"], ["opens", "M_MOD_PAST_AFTER_MODAL"], ["opening", "M_MOD_PAST_AFTER_MODAL"], "After could, the plain verb: could open."],
+  ["If it rained, we ___ stay at home.", "would", ["will", "M_MOD_WILL_FOR_WOULD"], ["can", "M_MOD_WILL_FOR_WOULD"], ["shall", "M_MOD_WILL_FOR_WOULD"], "The if-part is in the past tense, so the result uses would."]
+];
+var CONJ = [
+  ["Ali is small, ___ he runs very fast.", "but|yet", ["because", "M_CONJ_BECAUSE_FOR_BUT"], ["or", "M_CONJ_WRONG_MEANING"], ["since", "M_CONJ_BECAUSE_FOR_BUT"], "Being small and running fast is a surprise: but or yet."],
+  ["Would you like tea ___ milk?", "or", ["and", "M_CONJ_OR_AND"], ["but", "M_CONJ_OR_AND"], ["also", "M_CONJ_ALSO_JOINING"], "You choose one of two: or."],
+  ["We stayed indoors ___ it was raining.", "because|since", ["but", "M_CONJ_BECAUSE_FOR_BUT"], ["or", "M_CONJ_WRONG_MEANING"], ["yet", "M_CONJ_BECAUSE_FOR_BUT"], "The rain is the reason: because or since."],
+  ["We bought sugar ___ rice.", "and", ["also", "M_CONJ_ALSO_JOINING"], ["because", "M_CONJ_WRONG_MEANING"], ["but", "M_CONJ_WRONG_MEANING"], "Two things were bought: and."],
+  ["___ it was raining, we stayed at home.", "Because|Since", ["But", "M_CONJ_BECAUSE_FOR_BUT"], ["Or", "M_CONJ_WRONG_MEANING"], ["Yet", "M_CONJ_BECAUSE_FOR_BUT"], "The rain is the reason: because or since."],
+  ["Kamau studied hard, ___ he did not pass the test.", "but|yet", ["because", "M_CONJ_BECAUSE_FOR_BUT"], ["or", "M_CONJ_WRONG_MEANING"], ["since", "M_CONJ_BECAUSE_FOR_BUT"], "Studying hard and not passing is a surprise: but or yet."],
+  ["You may take only one sweet, a red one ___ a green one.", "or", ["and", "M_CONJ_OR_AND"], ["because", "M_CONJ_WRONG_MEANING"], ["yet", "M_CONJ_WRONG_MEANING"], "You choose one of the two: or."],
+  ["Mama was happy ___ her children had passed.", "because|since", ["but", "M_CONJ_BECAUSE_FOR_BUT"], ["or", "M_CONJ_WRONG_MEANING"], ["yet", "M_CONJ_BECAUSE_FOR_BUT"], "The children passing is the reason: because."]
+];
+var CONJ_SENT = [
+  ["", "Because it was raining, we stayed at home.", ["Because it was raining, so we stayed at home.", "M_CONJ_DOUBLE"], ["It was raining, but we stayed at home.", "M_CONJ_BECAUSE_FOR_BUT", "The two parts do not contrast: the rain is the reason, so but does not fit."], ["We stayed at home, or it was raining.", "M_CONJ_WRONG_MEANING"], "Use one joining word for two ideas."],
+  ["", "Wanjiru is clever, yet she is humble.", ["Wanjiru is clever, yet but she is humble.", "M_CONJ_DOUBLE"], ["Wanjiru is clever because she is humble.", "M_CONJ_WRONG_MEANING"], ["Wanjiru is clever or she is humble.", "M_CONJ_WRONG_MEANING"], "Yet joins two ideas that are a surprise together."],
+  ["", "You can have rice or ugali, but not both.", ["You can have rice and ugali, but not both.", "M_CONJ_OR_AND", "This says both, and then says not both. When you choose one of two things, use or."], ["You can have rice, because ugali, but not both.", "M_CONJ_WRONG_MEANING"], ["You can have rice also ugali, but not both.", "M_CONJ_ALSO_JOINING"], "A choice between two things uses or."],
+  ["", "We were late because the bus broke down.", ["Because the bus broke down, so we were late.", "M_CONJ_DOUBLE"], ["We were late but the bus broke down.", "M_CONJ_BECAUSE_FOR_BUT"], ["We were late or the bus broke down.", "M_CONJ_WRONG_MEANING"], "The breakdown is the reason: because."],
+  ["", "Otieno is tall, but his brother is short.", ["Otieno is tall, because his brother is short.", "M_CONJ_BECAUSE_FOR_BUT"], ["Otieno is tall, or his brother is short.", "M_CONJ_WRONG_MEANING"], ["Otieno is tall also his brother is short.", "M_CONJ_ALSO_JOINING"], "Tall and short are a contrast: but."],
+  ["", "I cannot come since I am ill.", ["I cannot come since, so I am ill.", "M_CONJ_DOUBLE"], ["I cannot come but I am ill.", "M_CONJ_BECAUSE_FOR_BUT"], ["I cannot come or I am ill.", "M_CONJ_WRONG_MEANING"], "Being ill is the reason: since."]
+];
+var INTER = [
+  ["___ is your class teacher?", "Who", ["What", "M_INT_WHO_WHAT"], ["When", "M_INT_WHEN_WHERE_WHY"], ["Why", "M_INT_WHEN_WHERE_WHY"], "The answer is a person: who."],
+  ["___ did you arrive late? Because the bus broke down.", "Why", ["When", "M_INT_WHEN_WHERE_WHY"], ["Who", "M_INT_WHO_WHAT"], ["What", "M_INT_WHO_WHAT"], "The answer gives a reason, so the question word is why."],
+  ["___ did the match start? At four o'clock.", "When", ["Why", "M_INT_WHEN_WHERE_WHY"], ["Where", "M_INT_WHEN_WHERE_WHY"], ["Who", "M_INT_WHO_WHAT"], "The answer gives a time, so the question word is when."],
+  ["___ are you doing? I am washing my uniform.", "What", ["Who", "M_INT_WHO_WHAT"], ["When", "M_INT_WHEN_WHERE_WHY"], ["Why", "M_INT_WHEN_WHERE_WHY"], "The answer tells what she is doing: what."],
+  ["What ___ doing with my pen?", "are you", ["you are", "M_INT_WORD_ORDER"], ["you", "M_INT_DO_MISSING"], ["do you", "M_INT_DO_MISSING"], "In a question the helper verb comes before the subject: are you."],
+  ["Why ___ late?", "did you come", ["you came", "M_INT_DO_MISSING"], ["you come", "M_INT_DO_MISSING"], ["you did come", "M_INT_WORD_ORDER"], "A question about the past needs did, and then the plain verb: did you come."],
+  ["Who ___ came to the party?", "else", ["other else", "M_INT_ELSE_POSITION"], ["else other", "M_INT_ELSE_POSITION"], ["more else", "M_INT_ELSE_POSITION"], "Else on its own already means in addition: who else."],
+  ["How ___ more rice do we need?", "much", ["many", "M_INT_HOW_MUCH_MANY"], ["more", "M_INT_HOW_MUCH_MANY"], "Rice cannot be counted one by one: how much."],
+  ["How ___ goats does he have?", "many", ["much", "M_INT_HOW_MUCH_MANY"], ["more", "M_INT_HOW_MUCH_MANY"], "Goats can be counted: how many."]
+];
+var SAME = [
+  ["The farmer keeps twenty ___.", "sheep", ["sheeps", "M_NOUN_SHEEPS"], ["sheepes", "M_NOUN_SHEEPS"], ["sheepen", "M_NOUN_SHEEPS"], "Sheep is the same in singular and plural."],
+  ["Many ___ were playing outside.", "children", ["childs", "M_NOUN_OVERREGULAR"], ["childrens", "M_NOUN_OVERREGULAR"], ["childes", "M_NOUN_OVERREGULAR"], "The plural of child is children."],
+  ["Fifty sheep ___ on the hill.", "are", ["is", "M_NOUN_VERB_AGREEMENT"], ["was", "M_NOUN_VERB_AGREEMENT"], ["does", "M_NOUN_VERB_AGREEMENT"], "Fifty is many, so the verb is plural: are."],
+  ["I saw ___ in the river.", "a fish", ["a fishes", "M_NOUN_A_BEFORE_PLURAL"], ["a fishs", "M_NOUN_A_BEFORE_PLURAL"], ["an fishes", "M_NOUN_A_BEFORE_PLURAL"], "A means one, so the singular: a fish."],
+  ["We saw two ___ near the forest.", "deer", ["deers", "M_NOUN_SHEEPS"], ["deeres", "M_NOUN_SHEEPS"], ["deer's", "M_NOUN_SHEEPS"], "Deer is the same in singular and plural."],
+  ["Five ___ landed at the airport this morning.", "aircraft", ["aircrafts", "M_NOUN_SHEEPS"], ["aircraftes", "M_NOUN_SHEEPS"], "Aircraft is the same in singular and plural."],
+  ["The dentist checked my ___.", "teeth", ["tooths", "M_NOUN_OVERREGULAR"], ["teeths", "M_NOUN_OVERREGULAR"], ["toothes", "M_NOUN_OVERREGULAR"], "The plural of tooth is teeth."],
+  ["Six ___ stood at the gate.", "men", ["mans", "M_NOUN_OVERREGULAR"], ["mens", "M_NOUN_OVERREGULAR"], ["man", "M_NOUN_OVERREGULAR"], "The plural of man is men."]
+];
+var TIME = [
+  ["We have a test ___ Monday.", "on", ["in", "M_PREP_DAY_IN"], ["at", "M_PREP_DAY_IN"], "Days take on."],
+  ["The bus leaves ___ 8 o'clock.", "at", ["in", "M_PREP_CLOCK_IN"], ["on", "M_PREP_CLOCK_IN"], "Exact clock times take at."],
+  ["I wake up early ___ the morning.", "in", ["at", "M_PREP_PART_OF_DAY"], ["on", "M_PREP_PART_OF_DAY"], "The morning takes in."],
+  ["The cup is ___ the table.", "on", ["in", "M_PREP_PLACE"], ["inside", "M_PREP_PLACE"], "It rests on the top of the table: on."],
+  ["My birthday is ___ June.", "in", ["on", "M_PREP_PART_OF_DAY"], ["at", "M_PREP_PART_OF_DAY"], "Months take in."],
+  ["We wait for the matatu ___ the gate.", "at", ["in", "M_PREP_PLACE"], ["on", "M_PREP_PLACE"], "A point such as the gate takes at."],
+  ["The children are ___ the classroom now.", "in", ["on", "M_PREP_PLACE"], ["at", "M_PREP_PLACE"], "Inside the classroom: in."],
+  ["The owl hunts ___ night.", "at", ["in", "M_PREP_PART_OF_DAY"], ["on", "M_PREP_PART_OF_DAY"], "Night takes at."]
+];
+var DIR = [
+  ["After school I went ___.", "home", ["to home", "M_PREP_TO_HOME"], ["at home", "M_PREP_TO_HOME"], ["into home", "M_PREP_TO_HOME"], "Home needs no to: went home."],
+  ["The teacher ___ the classroom.", "entered", ["entered into", "M_PREP_ENTER_INTO"], ["entered in", "M_PREP_ENTER_INTO"], ["entered to", "M_PREP_ENTER_INTO"], "Enter already means go into: entered the classroom."],
+  ["The goats ran ___ the river.", "towards", ["towards to", "M_PREP_TOWARDS_TO"], ["toward to", "M_PREP_TOWARDS_TO"], ["to towards", "M_PREP_TOWARDS_TO"], "Towards is complete on its own."],
+  ["The train went ___ a tunnel and came out the other side.", "through", ["into", "M_PREP_THROUGH_INTO"], ["towards", "M_PREP_THROUGH_INTO"], ["to", "M_PREP_THROUGH_INTO"], "It came out the other side, so it went through."],
+  ["The boy jumped ___ the water and swam.", "into", ["through", "M_PREP_THROUGH_INTO"], ["towards", "M_PREP_THROUGH_INTO"], ["to", "M_PREP_THROUGH_INTO"], "He went inside the water: into."],
+  ["The thief ran ___ the window and escaped.", "through", ["into", "M_PREP_THROUGH_INTO"], ["towards", "M_PREP_THROUGH_INTO"], ["to", "M_PREP_THROUGH_INTO"], "He went in one side and out the other: through."]
+];
+var COMMA = [
+  ["", "Mama bought maize flour, sugar and tea.", ["Mama bought maize flour sugar and tea.", "M_COMMA_LIST_MISSING"], ["Mama bought, maize flour, sugar, and, tea.", "M_COMMA_EVERYWHERE"], ["Mama, bought maize flour sugar and tea.", "M_COMMA_EVERYWHERE"], "Put commas between the items in a list."],
+  ["", "Yes, I will come.", ["Yes I will come.", "M_COMMA_AFTER_OPENING"], ["Yes I, will come.", "M_COMMA_EVERYWHERE"], ["Yes I will, come.", "M_COMMA_EVERYWHERE"], "A comma follows an opening word such as yes."],
+  ["", "In the morning, we went to the farm.", ["In the morning we went to the farm.", "M_COMMA_AFTER_OPENING"], ["In the morning we, went to the farm.", "M_COMMA_EVERYWHERE"], ["In, the morning we went to the farm.", "M_COMMA_EVERYWHERE"], "A comma follows an opening phrase."],
+  ["", "Juma packed a book, a pencil, a ruler and a rubber.", ["Juma packed a book a pencil a ruler and a rubber.", "M_COMMA_LIST_MISSING"], ["Juma packed a book a pencil, a ruler and a rubber.", "M_COMMA_LIST_MISSING"], ["Juma, packed a book, a pencil, a ruler and a rubber.", "M_COMMA_EVERYWHERE"], "Put commas between the items in a list."],
+  ["", "The bell rang, and we ran outside.", ["The bell rang, we ran outside.", "M_COMMA_SPLICE"], ["The bell rang and, we ran outside.", "M_COMMA_EVERYWHERE"], ["The bell, rang and we ran outside.", "M_COMMA_EVERYWHERE"], "A comma cannot join two whole sentences on its own: add and."],
+  ["", "We saw cows, goats and sheep at the market.", ["We saw cows goats and sheep at the market.", "M_COMMA_LIST_MISSING"], ["We saw, cows, goats and sheep at the market.", "M_COMMA_EVERYWHERE"], ["We, saw cows, goats and sheep at the market.", "M_COMMA_EVERYWHERE"], "Put commas between the items in a list."],
+  ["", "Well, we must start now.", ["Well we must start now.", "M_COMMA_AFTER_OPENING"], ["Well we must, start now.", "M_COMMA_EVERYWHERE"], ["Well we, must start now.", "M_COMMA_EVERYWHERE"], "A comma follows an opening word such as well."],
+  ["", "Achieng sells tomatoes, onions and kale.", ["Achieng sells tomatoes onions and kale.", "M_COMMA_LIST_MISSING"], ["Achieng, sells tomatoes, onions and kale.", "M_COMMA_EVERYWHERE"], ["Achieng sells tomatoes, onions, and, kale.", "M_COMMA_EVERYWHERE"], "Put commas between the items in a list."]
+];
+var SPEECH = [
+  ["", 'Mother said, "Come and eat."', ["Mother said Come and eat.", "M_QUOTE_MISSING"], ['Mother said, "Come and eat".', "M_QUOTE_PUNCTUATION_OUTSIDE"], ["Mother said, 'Come and eat.'", "M_QUOTE_SINGLE"], "Double quotation marks go round the spoken words, and the full stop goes inside."],
+  ["", '"Where are you going?" asked Baba.', ['"Where are you going", asked Baba.', "M_QUOTE_PUNCTUATION_OUTSIDE"], ['"Where are you going?", asked Baba.', "M_QUOTE_PUNCTUATION_OUTSIDE"], ['"Where are you going? asked Baba."', "M_QUOTE_TOO_MUCH"], "The question mark goes inside the quotation marks, and only the spoken words are inside."],
+  ["", 'Juma said, "We are late."', ['Juma said, "we are late."', "M_QUOTE_NO_CAPITAL"], ['Juma said "We are late".', "M_QUOTE_PUNCTUATION_OUTSIDE"], ["Juma said, We are late.", "M_QUOTE_MISSING"], "The spoken words start with a capital letter, and the full stop goes inside."],
+  ["", '"Come and eat," said Mother.', ['"Come and eat, said Mother."', "M_QUOTE_TOO_MUCH"], ['"Come and eat" said Mother.', "M_QUOTE_PUNCTUATION_OUTSIDE"], ["Come and eat, said Mother.", "M_QUOTE_MISSING"], "Only the spoken words are inside the marks, and the comma goes inside."],
+  ["", 'Amina said, "Thank you."', ["Amina said, 'Thank you.'", "M_QUOTE_SINGLE"], ['Amina said, "thank you."', "M_QUOTE_NO_CAPITAL"], ['Amina said "Thank you."', "M_COMMA_AFTER_OPENING"], "Double quotation marks, a comma before them, and a capital letter to start."],
+  ["", '"I am ready," said Otieno.', ['"I am ready." said Otieno.', "M_QUOTE_FULL_STOP_BEFORE_SAID"], ['"I am ready", said Otieno.', "M_QUOTE_PUNCTUATION_OUTSIDE"], ["I am ready, said Otieno.", "M_QUOTE_MISSING"], "When said and the name follow, the speech ends with a comma inside the marks."],
+  ["", 'The teacher asked, "Who has my book?"', ['The teacher asked, "Who has my book"?', "M_QUOTE_PUNCTUATION_OUTSIDE"], ['The teacher asked "Who has my book?"', "M_COMMA_AFTER_OPENING"], ["The teacher asked, who has my book?", "M_QUOTE_MISSING"], "The question mark goes inside the closing quotation marks."],
+  ["", '"Please sit down," said the teacher.', ["Please sit down, said the teacher.", "M_QUOTE_MISSING"], ['"please sit down," said the teacher.', "M_QUOTE_NO_CAPITAL"], ['"Please sit down, said the teacher."', "M_QUOTE_TOO_MUCH"], "Quotation marks round the spoken words only, a capital to start, a comma inside."]
+];
+var APOS = [
+  ["This is ___ bag.", "Juma's", ["Jumas", "M_APOS_MISSING_OWNER"], ["Jumas'", "M_APOS_PLURAL_OWNER"], ["Jum'as", "M_APOS_MISSING_OWNER"], "The bag belongs to Juma, so Juma's."],
+  ["We ___ have school on Saturday.", "don't", ["dont", "M_APOS_CONTRACTION"], ["do'nt", "M_APOS_CONTRACTION"], ["dont'", "M_APOS_CONTRACTION"], "Do not becomes don't: the apostrophe sits where the o is missing."],
+  ["The dog wagged ___ tail.", "its", ["it's", "M_APOS_ITS"], ["its'", "M_APOS_ITS"], ["its's", "M_APOS_ITS"], "It is does not fit the sentence, so its (belonging) has no apostrophe."],
+  ["Fresh ___ for sale.", "bananas", ["banana's", "M_APOS_PLURAL"], ["bananas'", "M_APOS_PLURAL"], ["banana'", "M_APOS_PLURAL"], "More than one banana is just bananas: no apostrophe."],
+  ["Many ___ were sold at the market.", "mangoes", ["mango's", "M_APOS_PLURAL"], ["mangoes'", "M_APOS_PLURAL"], ["mango'es", "M_APOS_PLURAL"], "More than one mango is just mangoes: no apostrophe."],
+  ["___ a sunny day today.", "It's", ["Its", "M_APOS_ITS"], ["Its'", "M_APOS_ITS"], ["It'is", "M_APOS_CONTRACTION"], "It is a sunny day, so it's."],
+  ["We ___ see the board from here.", "can't", ["cant", "M_APOS_CONTRACTION"], ["ca'nt", "M_APOS_CONTRACTION"], ["cann't", "M_APOS_CONTRACTION"], "Cannot becomes can't."],
+  ["Those are ___ shoes.", "Achieng's", ["Achiengs", "M_APOS_MISSING_OWNER"], ["Achiengs'", "M_APOS_PLURAL_OWNER"], ["Achien'gs", "M_APOS_MISSING_OWNER"], "The shoes belong to Achieng, so Achieng's."],
+  ["The ___ room is next to ours. Many girls share it.", "girls'", ["girl's", "M_APOS_PLURAL_OWNER"], ["girls", "M_APOS_MISSING_OWNER"], ["girls's", "M_APOS_PLURAL_OWNER"], "Many girls own the room, so the apostrophe comes after the s."]
+];
+var EXCL = [
+  ["", "Look out for the car!", ["Look out for the car.", "M_EXCL_FULL_STOP"], ["Look out for the car!!!", "M_EXCL_MANY"], ["Look out for the car", "M_EXCL_FULL_STOP"], "A warning needs one exclamation mark."],
+  ["", "We went to the market.", ["We went to the market!", "M_EXCL_OVERUSE"], ["We went to the market!!!", "M_EXCL_MANY"], ["We went to the market!!", "M_EXCL_MANY"], "A calm statement ends with a full stop."],
+  ["", "Where is my pen?", ["Where is my pen!", "M_EXCL_QUESTION"], ["Where is my pen!!", "M_EXCL_QUESTION"], ["Where is my pen!?!", "M_EXCL_MANY"], "A question that asks for an answer ends with a question mark."],
+  ["", "What a goal!", ["What a goal.", "M_EXCL_FULL_STOP"], ["What a goal!!!", "M_EXCL_MANY"], ["What a goal!!", "M_EXCL_MANY"], "A cry of surprise needs one exclamation mark."],
+  ["", "Stop! The road is not safe.", ["Stop. The road is not safe.", "M_EXCL_FULL_STOP"], ["Stop!!! The road is not safe.", "M_EXCL_MANY"], "Stop is a shout, so Stop! The second sentence is calm: a full stop."],
+  ["", "My mother is a nurse.", ["My mother is a nurse!", "M_EXCL_OVERUSE"], ["My mother is a nurse!!", "M_EXCL_MANY"], ["My mother is a nurse!!!", "M_EXCL_MANY"], "A calm statement ends with a full stop."],
+  ["", "Wow! What a big fish!", ["Wow. What a big fish.", "M_EXCL_FULL_STOP"], ["Wow!!! What a big fish!!!", "M_EXCL_MANY"], "Both are cries of surprise, so each needs an exclamation mark."],
+  ["", "Help! The house is on fire!", ["Help. The house is on fire.", "M_EXCL_FULL_STOP"], ["Help!!! The house is on fire!!!", "M_EXCL_MANY"], "A cry for help and a warning each need an exclamation mark."],
+  ["", "What time does the bus leave?", ["What time does the bus leave!", "M_EXCL_QUESTION"], ["What time does the bus leave!!", "M_EXCL_QUESTION"], ["What time does the bus leave!?", "M_EXCL_QUESTION"], "A question that asks for an answer ends with a question mark."]
+];
+var HOMO = [
+  ["The children left ___ bags in the classroom.", "their", ["there", "M_HOMO_THERE_THEIR"], ["they're", "M_HOMO_THERE_THEIR"], ["thare", "M_HOMO_SOUND_ONLY"], "The bags belong to the children: their."],
+  ["Wanjiru has ___ brothers.", "two", ["to", "M_HOMO_TO_TOO_TWO"], ["too", "M_HOMO_TO_TOO_TWO"], ["tu", "M_HOMO_SOUND_ONLY"], "The number 2 is spelt two."],
+  ["We ate a ___ of bread.", "piece", ["peace", "M_HOMO_SOUND_ONLY"], ["peas", "M_HOMO_SOUND_ONLY"], ["pece", "M_HOMO_SOUND_ONLY"], "A part of the bread is a piece. Peace means calm."],
+  ["Come ___ and sit beside me.", "here", ["hear", "M_HOMO_HEAR_HERE"], ["heer", "M_HOMO_SOUND_ONLY"], ["hair", "M_HOMO_SOUND_ONLY"], "Here means in this place."],
+  ["Please ___ your name at the top.", "write", ["right", "M_HOMO_HEAR_HERE"], ["rite", "M_HOMO_SOUND_ONLY"], ["wright", "M_HOMO_SOUND_ONLY"], "To put words on paper is to write."],
+  ["I can ___ the birds singing.", "hear", ["here", "M_HOMO_HEAR_HERE"], ["heer", "M_HOMO_SOUND_ONLY"], ["hare", "M_HOMO_SOUND_ONLY"], "You hear with your ears."],
+  ["The baby is ___ small to walk.", "too", ["to", "M_HOMO_TO_TOO_TWO"], ["two", "M_HOMO_TO_TOO_TWO"], ["tooo", "M_HOMO_SOUND_ONLY"], "Too means more than enough: too small."],
+  ["___ going to the market.", "They're", ["Their", "M_HOMO_THERE_THEIR"], ["There", "M_HOMO_THERE_THEIR"], ["Thare", "M_HOMO_SOUND_ONLY"], "They're is they are: They are going to the market."],
+  ["I will ___ you at the gate.", "meet", ["meat", "M_HOMO_SOUND_ONLY"], ["mete", "M_HOMO_SOUND_ONLY"], ["meit", "M_HOMO_SOUND_ONLY"], "To come together with someone is to meet. Meat is food."],
+  ["We watched the ships on the ___.", "sea", ["see", "M_HOMO_HEAR_HERE"], ["seee", "M_HOMO_SOUND_ONLY"], ["si", "M_HOMO_SOUND_ONLY"], "The big salty water is the sea."]
+];
+var DOUBLE = [
+  ["In ___ the days are hot.", "summer", ["sumer", "M_SPELL_SINGLE_CONSONANT"], ["sommer", "M_SPELL_PHONETIC"], ["summar", "M_SPELL_PHONETIC"], "Summer has a double m."],
+  ["Mama drinks ___ every morning.", "coffee", ["cofee", "M_SPELL_PHONETIC"], ["coffe", "M_SPELL_PHONETIC"], ["cofe", "M_SPELL_SINGLE_CONSONANT"], "Coffee has a double f and a double e."],
+  ["Please write your ___ on the form.", "address", ["adress", "M_SPELL_SINGLE_CONSONANT"], ["addres", "M_SPELL_SINGLE_CONSONANT"], ["adres", "M_SPELL_PHONETIC"], "Address has a double d and a double s."],
+  ["We eat ___ every day.", "food", ["fod", "M_SPELL_SINGLE_VOWEL"], ["foud", "M_SPELL_PHONETIC"], ["fud", "M_SPELL_PHONETIC"], "Food has a double o."],
+  ["I posted a ___ to my cousin.", "letter", ["leter", "M_SPELL_SINGLE_CONSONANT"], ["lettar", "M_SPELL_PHONETIC"], ["leta", "M_SPELL_PHONETIC"], "Letter has a double t."],
+  ["There are fifty-two ___ in a year.", "weeks", ["weks", "M_SPELL_SINGLE_VOWEL"], ["wekes", "M_SPELL_PHONETIC"], ["weaks", "M_SPELL_PHONETIC"], "Weeks has a double e."],
+  ["The ___ sat on the throne.", "queen", ["quen", "M_SPELL_SINGLE_VOWEL"], ["quean", "M_SPELL_PHONETIC"], ["queene", "M_SPELL_EXTRA_DOUBLE"], "Queen has a double e."],
+  ["I am very ___ today.", "happy", ["hapy", "M_SPELL_SINGLE_CONSONANT"], ["happey", "M_SPELL_PHONETIC"], ["hapi", "M_SPELL_PHONETIC"], "Happy has a double p."],
+  ["He has not ___ his letter yet.", "written", ["writen", "M_SPELL_SINGLE_CONSONANT"], ["writtin", "M_SPELL_PHONETIC"], ["ritten", "M_SPELL_PHONETIC"], "Written has a double t."],
+  ["The ___ jumped into its hole.", "rabbit", ["rabit", "M_SPELL_SINGLE_CONSONANT"], ["rabbitt", "M_SPELL_EXTRA_DOUBLE"], ["rabbet", "M_SPELL_PHONETIC"], "Rabbit has a double b."],
+  ["Our school play was a great ___.", "success", ["sucess", "M_SPELL_SINGLE_CONSONANT"], ["succes", "M_SPELL_SINGLE_CONSONANT"], ["sucses", "M_SPELL_PHONETIC"], "Success has a double c and a double s."]
+];
+var FAMILIES29 = [
+  ...trio("dem", "GRAMMA.T1.DEMONSTRATIVES", DEM, { topic: "using this, these, that and those", hints: ["Count the things. One thing, or more than one?", "Is the thing near the speaker, or far away?"] }),
+  ...trio("coll", "GRAMMA.T2.COLLECTIVE_NOUNS", COLL, { topic: "about groups of animals and things", hints: ["Ask what is in the group: animals, fish, fruit or keys?", "Each kind of animal has its own group word. Say the pair aloud: a ___ of cattle."] }),
+  ...trio("refl", "GRAMMA.T2.REFLEXIVE_PRONOUNS", REFL, { topic: "using myself, yourself, himself, herself, itself, ourselves and themselves", hints: ["Ask who did the action and who received it. Are they the same person?", "The word ends in -self for one person and -selves for more than one."] }),
+  ...trio("too", "GRAMMA.T3.TOO_TO", TOO, { stem: "Choose the words that complete the sentence correctly.", topic: "using too ... to and too ... for", hints: ["After too and an adjective, ask: is a person or a verb next?", "A person after the gap needs for. A verb after the gap needs to."] }),
+  ...trio("must", "GRAMMA.T3.MUST_SHOULD_ADVERB", MUST, { stem: "Choose the words that complete the sentence correctly.", topic: "using must and should", hints: ["After must or should, the verb stays plain: no to, no -s, no -ing.", "The word that tells how an action is done is an adverb and often ends in -ly."] }),
+  ...trio("poss", "GRAMMA.T4.POSSESSIVES", POSS, { topic: "using words that show who owns something", hints: ["Look at what comes after the gap. Is there a noun, or nothing?", "A possessive word that comes before a noun is not the same as one that stands alone."] }),
+  ...trio("comp", "GRAMMA.T5.COMPARATIVE_SUPERLATIVE", COMP, { stem: "Choose the words that complete the sentence correctly.", topic: "comparing things", hints: ["Count the things being compared. Two things, or three or more?", "Short words take -er and -est. Long words take more and most. Never use both."] }),
+  ...trio("aorder", "GRAMMA.T5.ADJECTIVE_ORDER", ORDER, { stem: "Choose the words that complete the sentence correctly.", topic: "with describing words before a noun", hints: ["In English the describing words come before the noun.", "Size comes first, then age, then shape or colour."] }),
+  ...trio("few", "GRAMMA.T6.FEW_LITTLE", FEW, { topic: "about how much or how many", hints: ["Can you count the thing one by one? Things you can count and things you cannot need different words.", "Does the rest of the sentence say there is enough, or hardly any? Read it carefully."] }),
+  ...trio("quant", "GRAMMA.T6.QUANTIFIERS_OTHER", QUANT, { stem: "Choose the words that complete the sentence correctly.", topic: "using each, all, enough, most and least", hints: ["Each means one at a time. All means many.", "Say the whole sentence aloud and listen for what sounds wrong."] }),
+  ...trio("fut", "GRAMMA.T7.FUTURE_WILL_SHALL", FUT, { topic: "about the future", hints: ["Is the event still to come? Then use will or shall.", "After will or shall, the verb stays plain: no -s, no -ed, no -ing."] }),
+  ...trio("tag", "GRAMMA.T8.QUESTION_TAGS", TAG, { stem: "Choose the tag that completes the sentence correctly.", topic: "with question tags at the end", hints: ["Find the helper verb in the statement (is, are, does, can, have).", "The tag turns the sign round and uses a pronoun: a positive statement gets a negative tag, and a negative statement gets a positive tag."] }),
+  ...trio("adv", "GRAMMA.T9.ADVERBS", ADV, { topic: "using adverbs", hints: ["Ask: does the word tell how, when, where or how often?", "A word that describes a verb is an adverb. Many end in -ly, but not all of them do."] }),
+  eng({ id: "eng5.advkind.choose", kind: "classify", cs: "GRAMMA.T9.ADVERBS", oc: "a", form: "direct", rung: 1, gen: choose2(ADV_KIND, { stem: "Complete the sentence.", hints: ["Ask: does the word say how, when, where or how often?", "How often: always, never, often, sometimes. When: today, soon, later. Where: here, there, outside."] }) }),
+  ...trio("could", "GRAMMA.T9.COULD_WOULD", COULD, { topic: "using could and would", hints: ["Is the sentence about the past, or about an imagined result?", "After the helper verb, the main verb stays plain."] }),
+  ...trio("conj", "GRAMMA.T10.CONJUNCTIONS", CONJ, { topic: "joining ideas", hints: ["Say the two parts. Is the second a reason, a surprise, an addition or a choice?", "Each kind of link needs its own joining word: one for a reason, one for a surprise, one for a choice."] }),
+  eng({ id: "eng5.conjs.choose", kind: "choose-sentence", cs: "GRAMMA.T10.CONJUNCTIONS", oc: "c", form: "direct", rung: 2, gen: choose2(CONJ_SENT, { stem: SENT, hints: ["Check the meaning of the two parts, then the joining word.", "Use only one joining word between two ideas."] }) }),
+  ...trio("int", "GRAMMA.T11.INTERROGATIVES", INTER, { stem: "Choose the words that complete the question correctly.", topic: "asking questions", hints: ["Look at the answer given. Does it name a person, a time, a reason or a thing?", "In a question the helper verb comes before the subject."] }),
+  ...trio("same", "GRAMMA.T12.SAME_SINGULAR_PLURAL", SAME, { topic: "about animals and people", hints: ["A few nouns do not change in the plural, and some change inside the word.", "Look for a number or the word many: it shows whether there is one or more than one."] }),
+  ...trio("ptime", "GRAMMA.T13.PREPOSITIONS_TIME_PLACE", TIME, { thinOk: true, topic: "about time and place", hints: ["At is for a clock time or a point. On is for days and for a surface. In is for months, parts of the day and inside.", "Say the whole sentence aloud and listen for what sounds right."] }),
+  ...trio("pdir", "GRAMMA.T13.PREPOSITIONS_DIRECTION", DIR, { topic: "about going to places", hints: ["Some words already carry the idea of going to a place.", "Does the movement go in at one side and out at the other, or does it stay inside?"] }),
+  ...duo("comma", "WRITIN.T7.COMMAS", COMMA, { topic: "with commas", hints: ["Look for a list or an opening word: commas go there.", "A comma is not a breath mark: never split who from what they did."] }),
+  ...duo("speech", "WRITIN.T7.DIRECT_SPEECH", SPEECH, { topic: "with someone speaking", hints: ["Double quotation marks go round the spoken words only.", "The comma or question mark that ends the speech goes inside the closing marks, and the speech starts with a capital."] }),
+  ...trio("apos", "WRITIN.T9.APOSTROPHE", APOS, { stem: "Choose the word that completes the sentence correctly.", topic: "with apostrophes", hints: ["An apostrophe shows that something belongs to someone, or that a letter is missing.", "A plain plural has no apostrophe, and the word that means belonging to it has none either."] }),
+  ...duo("excl", "WRITIN.T9.EXCLAMATION_MARK", EXCL, { topic: "with the exclamation mark", hints: ["Is it a shout, a warning or a cry of surprise? Then one exclamation mark.", "Calm statements end with a full stop and questions end with a question mark."] }),
+  ...trio("homo", "WRITIN.T11.HOMOPHONES", HOMO, { topic: "with words that sound the same", hints: ["The words sound the same, so think about the meaning of the sentence.", "Say what the word means in your own words, then match it to the spelling."] }),
+  ...trio("dbl", "WRITIN.T13.DOUBLE_LETTERS", DOUBLE, { stem: "Choose the correct spelling to complete the sentence.", topic: "with words that have double letters", hints: ["Say the word slowly in parts and listen for a sound that needs two letters.", "Think of other words you know that have double letters."] })
+];
+
+// src/ai-tutor/content/families/eng_g5_vocab.js
+var WORD2 = "Choose the word that completes the sentence correctly.";
+var L2 = (label, arr) => {
+  arr.label = label;
+  return arr;
+};
+var trio2 = (key, cs, pool2, { stem = WORD2, hints, topic, oc = outcomeLetters(cs, 3) }) => [
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose2(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.gap`, cs, oc: oc[1], form: "direct", rung: 2, gen: gap(pool2, { stem: "Type the missing {what} in the sentence.", hints }) }),
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: 3, gen: spot4(pool2, { topic, hints }) })
+];
+var RIGHTS = [
+  ["Every child has a ___ to go to school.", "right", ["responsibility", "M_VOC_RIGHT_RESPONSIBILITY"], ["protect", "M_VOC_NEAR_MEANING"], ["rules", "M_VOC_NEAR_MEANING"], "Something every child is entitled to is a right."],
+  ["It is the ___ of every child to keep the classroom clean.", "responsibility", ["right", "M_VOC_RIGHT_RESPONSIBILITY"], ["protect", "M_VOC_NEAR_MEANING"], ["health", "M_VOC_NEAR_MEANING"], "Something a child must do is a responsibility."],
+  ["Parents should ___ their children from harm.", "protect", ["respect", "M_VOC_NEAR_MEANING"], ["protection", "M_VOC_NEAR_MEANING"], ["protected", "M_VOC_NEAR_MEANING"], "To keep someone safe from harm is to protect them."],
+  ["Every child needs a safe ___ to live in.", "shelter", ["education", "M_VOC_NEAR_MEANING"], ["health", "M_VOC_NEAR_MEANING"], ["respect", "M_VOC_NEAR_MEANING"], "A place to live is shelter."],
+  ["We show ___ when we listen to others without interrupting.", "respect", ["shelter", "M_VOC_NEAR_MEANING"], ["education", "M_VOC_NEAR_MEANING"], ["rights", "M_VOC_NEAR_MEANING"], "Listening politely shows respect."],
+  ["___ gives children the chance to read and learn.", "Education", ["Shelter", "M_VOC_NEAR_MEANING"], ["Respect", "M_VOC_NEAR_MEANING"], ["Health", "M_VOC_NEAR_MEANING"], "Learning at school is education."],
+  ["The law says no child should be made to work. This protects a child's ___.", "rights", ["responsibilities", "M_VOC_RIGHT_RESPONSIBILITY"], ["shelters", "M_VOC_NEAR_MEANING"], ["respect", "M_VOC_NEAR_MEANING"], "What the law gives every child are rights."],
+  ["It is our ___ to look after our school books.", "responsibility", ["right", "M_VOC_RIGHT_RESPONSIBILITY"], ["education", "M_VOC_NEAR_MEANING"], ["shelter", "M_VOC_NEAR_MEANING"], "Looking after books is something we must do: a responsibility."]
+];
+var ROAD = [
+  ["A person who walks on the road is a ___.", "pedestrian", ["passenger", "M_VOC_ROAD_NEAR"], ["driver", "M_VOC_ROAD_NEAR"], ["conductor", "M_VOC_ROAD_NEAR"], "A pedestrian walks. A passenger rides in a vehicle."],
+  ["Cross the road at the zebra ___.", "crossing", ["crosswalk", "M_VOC_ROAD_SOUND"], ["crossroad", "M_VOC_ROAD_SOUND"], ["crosser", "M_VOC_ROAD_SOUND"], "In Kenya the place is called a zebra crossing."],
+  ["A ___ protects a rider's head.", "helmet", ["seat belt", "M_VOC_ROAD_NEAR"], ["signal", "M_VOC_ROAD_NEAR"], ["pavement", "M_VOC_ROAD_NEAR"], "A helmet covers and protects the head."],
+  ["Passengers in a car must fasten the ___.", "seat belt", ["helmet", "M_VOC_ROAD_NEAR"], ["signal", "M_VOC_ROAD_NEAR"], ["pavement", "M_VOC_ROAD_NEAR"], "A seat belt holds passengers in their seats."],
+  ["Walk on the ___ when there is one.", "pavement", ["speed limit", "M_VOC_ROAD_NEAR"], ["helmet", "M_VOC_ROAD_NEAR"], ["signal", "M_VOC_ROAD_NEAR"], "The pavement is the path at the side of the road."],
+  ["The ___ says how fast a vehicle may go.", "speed limit", ["zebra crossing", "M_VOC_ROAD_NEAR"], ["pavement", "M_VOC_ROAD_NEAR"], ["seat belt", "M_VOC_ROAD_NEAR"], "The speed limit is the fastest speed allowed."],
+  ["The driver put out his hand to give a ___ before he turned.", "signal", ["pedestrian", "M_VOC_ROAD_NEAR"], ["helmet", "M_VOC_ROAD_NEAR"], ["pavement", "M_VOC_ROAD_NEAR"], "A signal tells other road users what you will do."],
+  ["A boda boda rider must wear a ___.", "helmet", ["pavement", "M_VOC_ROAD_NEAR"], ["speed limit", "M_VOC_ROAD_NEAR"], ["zebra crossing", "M_VOC_ROAD_NEAR"], "A rider wears a helmet to protect the head."]
+];
+var POL = [
+  L2("At the table", ["At the table you want the salt. Choose the polite thing to say.", "May I please have the salt?", ["Give me the salt.", "M_POL_DEMAND"], ["Pass salt.", "M_POL_DEMAND"], ["I want salt.", "M_POL_DEMAND"], "A polite request starts with may I and says please."]),
+  L2("After a drink", ["Someone gives you a drink. Choose the polite thing to say.", "Thank you.", ["Give me more.", "M_POL_DEMAND"], ["Sorry.", "M_POL_WRONG_REPLY"], ["Fine.", "M_POL_WRONG_REPLY"], "When someone gives you something, say thank you."]),
+  L2("Replying to thanks", ['Someone says "Thank you" to you. Choose the polite reply.', "You are welcome.", ["Sorry.", "M_POL_WRONG_REPLY"], ["Please.", "M_POL_WRONG_REPLY"], ["Fine.", "M_POL_WRONG_REPLY"], "The polite reply to thank you is You are welcome."]),
+  L2("Stepping on a foot", ["You step on a friend's foot by accident. Choose the polite thing to say.", "I am sorry.", ["Excuse me.", "M_POL_EXCUSE_SORRY"], ["Thank you.", "M_POL_WRONG_REPLY"], ["Move.", "M_POL_DEMAND"], "When you have made a mistake, say sorry."]),
+  L2("Passing an adult", ["You want to pass in front of an adult. Choose the polite thing to say.", "Excuse me, please.", ["Sorry.", "M_POL_EXCUSE_SORRY"], ["Move.", "M_POL_DEMAND"], ["Get out of the way.", "M_POL_DEMAND"], "To ask for room, say excuse me."]),
+  L2("Not hearing", ["You did not hear what your teacher said. Choose the polite thing to say.", "Pardon, Teacher?", ["What?", "M_POL_DEMAND"], ["Say again.", "M_POL_DEMAND"], ["Huh?", "M_POL_DEMAND"], "Pardon is the polite way to ask someone to say it again."]),
+  L2("Borrowing a ruler", ["You need to borrow a friend's ruler. Choose the polite thing to say.", "Could I please borrow your ruler?", ["Give me your ruler.", "M_POL_DEMAND"], ["I am taking your ruler.", "M_POL_DEMAND"], ["Ruler.", "M_POL_DEMAND"], "Could I please begins a polite request."]),
+  L2("Replying to sorry", ['Someone says "Sorry" because they bumped into you. Choose the polite reply.', "That is all right.", ["You are welcome.", "M_POL_WRONG_REPLY"], ["Thank you.", "M_POL_WRONG_REPLY"], ["Move away.", "M_POL_DEMAND"], "The polite reply to sorry is That is all right."])
+];
+var PROV_MEANING = [
+  ['What does the proverb "A bird in the hand is worth two in the bush" mean.', "It is better to keep what you have than to chase more.", ["Birds are easy to catch.", "M_PROV_LITERAL"], ["Never go into the bush.", "M_PROV_LITERAL"], ["Two birds are better than one.", "M_PROV_NEAR_MEANING"], "A proverb teaches a lesson, not about birds: be happy with what you have."],
+  ['What does the proverb "A stitch in time saves nine" mean.', "Mending a small problem early prevents a big one.", ["Sewing is hard work.", "M_PROV_LITERAL"], ["Nine stitches are better than one.", "M_PROV_LITERAL"], ["Always do things late.", "M_PROV_NEAR_MEANING"], "A small stitch now saves many later: act early."],
+  ['What does the proverb "Slow and steady wins the race" mean.', "Keep going carefully and you will succeed.", ["Tortoises are the fastest.", "M_PROV_LITERAL"], ["Never run.", "M_PROV_LITERAL"], ["Do things in a hurry.", "M_PROV_NEAR_MEANING"], "Steady effort wins in the end."],
+  ['Which situation fits the proverb "Unity is strength".', "The villagers worked together and built the bridge.", ["Wanjiru ran the race alone.", "M_PROV_NEAR_MEANING"], ["Otieno lifted a heavy stone.", "M_PROV_NEAR_MEANING"], ["The team lost the match.", "M_PROV_NEAR_MEANING"], "Unity means working together: the villagers worked together."],
+  ['What does the proverb "Honesty is the best policy" mean.', "Telling the truth is always the wisest choice.", ["Policies are honest.", "M_PROV_LITERAL"], ["Lying is sometimes best.", "M_PROV_NEAR_MEANING"], ["Policemen are honest.", "M_PROV_LITERAL"], "Being honest is the best way to live."],
+  ['Which situation fits the proverb "Look before you leap".', "Baraka checked the depth of the water before he jumped in.", ["Baraka jumped over the fence.", "M_PROV_LITERAL"], ["Baraka ran very fast.", "M_PROV_NEAR_MEANING"], ["Baraka closed his eyes and jumped.", "M_PROV_NEAR_MEANING"], "Look before you leap means think first: he checked the water."],
+  ['What does the proverb "Practice makes perfect" mean.', "The more you practise, the better you become.", ["Perfect people never practise.", "M_PROV_LITERAL"], ["Practice is not important.", "M_PROV_NEAR_MEANING"], ["Perfect work needs no time.", "M_PROV_NEAR_MEANING"], "Practising again and again makes you better."],
+  ['What does the proverb "Do not count your chickens before they hatch" mean.', "Do not plan on something that has not happened yet.", ["Chickens hatch in the night.", "M_PROV_LITERAL"], ["Always count chickens.", "M_PROV_LITERAL"], ["Chickens are hard to look after.", "M_PROV_NEAR_MEANING"], "Do not rely on something that has not happened yet."]
+];
+var PROV_FINISH = [
+  ["A stitch in time saves ___.", "nine", ["ten", "M_PROV_WORDS_MIXED"], ["six", "M_PROV_WORDS_MIXED"], ["one", "M_PROV_WORDS_MIXED"], 'The proverb is "A stitch in time saves nine".'],
+  ["Unity is ___.", "strength", ["power", "M_PROV_WORDS_MIXED"], ["wealth", "M_PROV_WORDS_MIXED"], ["peace", "M_PROV_WORDS_MIXED"], 'The proverb is "Unity is strength".'],
+  ["Slow and steady wins the ___.", "race", ["game", "M_PROV_WORDS_MIXED"], ["match", "M_PROV_WORDS_MIXED"], ["day", "M_PROV_WORDS_MIXED"], 'The proverb is "Slow and steady wins the race".'],
+  ["Honesty is the best ___.", "policy", ["rule", "M_PROV_WORDS_MIXED"], ["way", "M_PROV_WORDS_MIXED"], ["idea", "M_PROV_WORDS_MIXED"], 'The proverb is "Honesty is the best policy".'],
+  ["Practice makes ___.", "perfect", ["better", "M_PROV_WORDS_MIXED"], ["sure", "M_PROV_WORDS_MIXED"], ["easy", "M_PROV_WORDS_MIXED"], 'The proverb is "Practice makes perfect".'],
+  ["Look before you ___.", "leap", ["jump", "M_PROV_WORDS_MIXED"], ["run", "M_PROV_WORDS_MIXED"], ["cross", "M_PROV_WORDS_MIXED"], 'The proverb is "Look before you leap".'],
+  ["A bird in the hand is worth two in the ___.", "bush", ["tree", "M_PROV_WORDS_MIXED"], ["sky", "M_PROV_WORDS_MIXED"], ["field", "M_PROV_WORDS_MIXED"], 'The proverb is "A bird in the hand is worth two in the bush".'],
+  ["Do not count your chickens before they ___.", "hatch", ["grow", "M_PROV_WORDS_MIXED"], ["run", "M_PROV_WORDS_MIXED"], ["sleep", "M_PROV_WORDS_MIXED"], 'The proverb is "Do not count your chickens before they hatch".']
+];
+var SIM_IDENT = [
+  ["", "He is as strong as an ox.", ["He is very strong.", "M_SIM_STATEMENT"], ["He is an ox.", "M_SIM_METAPHOR"], ["He lifted the heavy sack.", "M_SIM_STATEMENT"], "A simile compares two things using as ... as or like."],
+  ["", "The baby slept like a log.", ["The baby slept very well.", "M_SIM_STATEMENT"], ["The baby was a log.", "M_SIM_METAPHOR"], ["The baby slept for hours.", "M_SIM_STATEMENT"], "Like a log compares the baby to a log: a simile."],
+  ["", "Her voice is as sweet as honey.", ["Her voice is very sweet.", "M_SIM_STATEMENT"], ["Her voice is honey.", "M_SIM_METAPHOR"], ["She sings every day.", "M_SIM_STATEMENT"], "As sweet as honey compares her voice to honey: a simile."],
+  ["", "The runner was as quick as lightning.", ["The runner was very quick.", "M_SIM_STATEMENT"], ["The runner was lightning.", "M_SIM_METAPHOR"], ["The runner won the race.", "M_SIM_STATEMENT"], "As quick as lightning is a simile."],
+  ["", "The tomatoes were red like blood.", ["The tomatoes were very red.", "M_SIM_STATEMENT"], ["The tomatoes were blood.", "M_SIM_METAPHOR"], ["The tomatoes were ripe.", "M_SIM_STATEMENT"], "Like blood compares the tomatoes to blood: a simile."],
+  ["", "Otieno is as brave as a lion.", ["Otieno is a lion.", "M_SIM_METAPHOR"], ["Otieno is very brave.", "M_SIM_STATEMENT"], ["Otieno is not afraid of anything.", "M_SIM_STATEMENT"], "As brave as a lion compares Otieno to a lion: a simile."]
+];
+var SIM_FILL = [
+  ["As busy as a ___.", "bee", ["tortoise", "M_SIM_WRONG_COMPARISON"], ["stone", "M_SIM_WRONG_COMPARISON"], ["cloud", "M_SIM_WRONG_COMPARISON"], "A bee is always busy."],
+  ["As brave as a ___.", "lion", ["mouse", "M_SIM_WRONG_COMPARISON"], ["rabbit", "M_SIM_WRONG_COMPARISON"], ["feather", "M_SIM_WRONG_COMPARISON"], "A lion is famous for its bravery."],
+  ["As slow as a ___.", "tortoise", ["hare", "M_SIM_WRONG_COMPARISON"], ["cheetah", "M_SIM_WRONG_COMPARISON"], ["bird", "M_SIM_WRONG_COMPARISON"], "A tortoise walks very slowly."],
+  ["As white as ___.", "snow", ["coal", "M_SIM_WRONG_COMPARISON"], ["mud", "M_SIM_WRONG_COMPARISON"], ["soil", "M_SIM_WRONG_COMPARISON"], "Snow is white."],
+  ["As cold as ___.", "ice", ["fire", "M_SIM_WRONG_COMPARISON"], ["sun", "M_SIM_WRONG_COMPARISON"], ["tea", "M_SIM_WRONG_COMPARISON"], "Ice is very cold."],
+  ["As sweet as ___.", "honey", ["salt", "M_SIM_WRONG_COMPARISON"], ["chilli", "M_SIM_WRONG_COMPARISON"], ["lemon", "M_SIM_WRONG_COMPARISON"], "Honey is very sweet."],
+  ["As light as a ___.", "feather", ["stone", "M_SIM_WRONG_COMPARISON"], ["rock", "M_SIM_WRONG_COMPARISON"], ["brick", "M_SIM_WRONG_COMPARISON"], "A feather weighs almost nothing."],
+  ["As quick as ___.", "lightning", ["a tortoise", "M_SIM_WRONG_COMPARISON"], ["a snail", "M_SIM_WRONG_COMPARISON"], ["mud", "M_SIM_WRONG_COMPARISON"], "Lightning is very quick."]
+];
+var HOMON_SENT = [
+  ["Which sentence uses the word bank to mean the side of a river.", "We sat on the bank of the river.", ["He saved money at the bank.", "M_HOMON_FIRST_MEANING"], ["The bank opens at nine.", "M_HOMON_FIRST_MEANING"], ["Mama went to the bank to pay fees.", "M_HOMON_FIRST_MEANING"], "Bank can mean the land beside a river."],
+  ["Which sentence uses the word bat to mean the animal that flies at night.", "A bat flew out of the cave at dusk.", ["The batsman hit the ball with his bat.", "M_HOMON_CONTEXT_IGNORED"], ["Juma bought a new cricket bat.", "M_HOMON_CONTEXT_IGNORED"], ["The bat is made of wood.", "M_HOMON_CONTEXT_IGNORED"], "Cave and dusk are clues for the animal."],
+  ["Which sentence uses the word light to mean not heavy.", "The bag is light, so I can carry it.", ["Switch on the light, please.", "M_HOMON_FIRST_MEANING"], ["The light is too bright.", "M_HOMON_FIRST_MEANING"], ["Light came through the window.", "M_HOMON_FIRST_MEANING"], "Carry it is the clue: light means not heavy."],
+  ["Which sentence uses the word bark to mean the outside of a tree.", "The bark of the tree was rough.", ["The dog began to bark.", "M_HOMON_FIRST_MEANING"], ["Did you hear the dog bark?", "M_HOMON_FIRST_MEANING"], ["It will bark at strangers.", "M_HOMON_FIRST_MEANING"], "Of the tree is the clue: bark is the tree's covering."],
+  ["Which sentence uses the word match to mean a game between two teams.", "We won the match on Saturday.", ["He struck a match to light the jiko.", "M_HOMON_FIRST_MEANING"], ["Please put the match in the box.", "M_HOMON_CONTEXT_IGNORED"], ["The two socks do not match.", "M_HOMON_CONTEXT_IGNORED"], "We won is the clue: match is a game."],
+  ["Which sentence uses the word fair to mean treating everyone equally.", "The teacher is fair to every learner.", ["We went to the school fair.", "M_HOMON_FIRST_MEANING"], ["The county fair was crowded.", "M_HOMON_FIRST_MEANING"], ["She has fair hair.", "M_HOMON_CONTEXT_IGNORED"], "To every learner is the clue: fair means equal."],
+  ["Which sentence uses the word left to mean the opposite of right.", "Turn left at the gate.", ["Juma left the school early.", "M_HOMON_FIRST_MEANING"], ["Everyone left at five.", "M_HOMON_FIRST_MEANING"], ["Only one mango was left.", "M_HOMON_CONTEXT_IGNORED"], "Turn and gate are clues: left is a direction."],
+  ["Which sentence uses the word ring to mean a circle worn on a finger.", "She wore a gold ring.", ["Did you hear the bell ring?", "M_HOMON_FIRST_MEANING"], ["Please ring me tonight.", "M_HOMON_CONTEXT_IGNORED"], ["The phone began to ring.", "M_HOMON_CONTEXT_IGNORED"], "Wore and gold are clues: a ring is jewellery."]
+];
+var HOMON_MEAN = [
+  ['Say what the word bank means in "We sat on the bank of the river."', "the land beside a river", ["a place for money", "M_HOMON_FIRST_MEANING"], ["a long seat", "M_HOMON_CONTEXT_IGNORED"], ["a kind of boat", "M_HOMON_CONTEXT_IGNORED"], "Of the river is the clue."],
+  ['Say what the word light means in "The suitcase is light."', "not heavy", ["bright", "M_HOMON_FIRST_MEANING"], ["pale", "M_HOMON_CONTEXT_IGNORED"], ["a lamp", "M_HOMON_FIRST_MEANING"], "A suitcase can be heavy or light in weight."],
+  ['Say what the word bat means in "A bat hung upside down in the cave."', "an animal that flies at night", ["a stick for hitting a ball", "M_HOMON_FIRST_MEANING"], ["a kind of bird that sings", "M_HOMON_CONTEXT_IGNORED"], ["a small ball", "M_HOMON_CONTEXT_IGNORED"], "Upside down in the cave is the clue."],
+  ['Say what the word match means in "He struck a match."', "a small stick that makes fire", ["a game between teams", "M_HOMON_FIRST_MEANING"], ["to go well together", "M_HOMON_CONTEXT_IGNORED"], ["a prize", "M_HOMON_CONTEXT_IGNORED"], "Struck is the clue: you strike a match to make fire."],
+  ['Say what the word fair means in "It was a fair test."', "treating everyone the same", ["a market with games", "M_HOMON_FIRST_MEANING"], ["pale in colour", "M_HOMON_CONTEXT_IGNORED"], ["sunny", "M_HOMON_CONTEXT_IGNORED"], "A test can be fair or unfair."],
+  ['Say what the word left means in "Only two mangoes were left."', "still there", ["the opposite of right", "M_HOMON_FIRST_MEANING"], ["went away", "M_HOMON_CONTEXT_IGNORED"], ["lost", "M_HOMON_CONTEXT_IGNORED"], "Only two mangoes remained: left means still there."]
+];
+var REF_SOURCE = [
+  ['Which book tells Juma the meaning of the word "harvest".', "a dictionary", ["an atlas", "M_REF_WRONG_SOURCE"], ["a timetable", "M_REF_WRONG_SOURCE"], ["a diary", "M_REF_WRONG_SOURCE"], "A dictionary gives the meaning of words."],
+  ["Which book shows Mercy where Lake Victoria is on a map.", "an atlas", ["a dictionary", "M_REF_WRONG_SOURCE"], ["a storybook", "M_REF_WRONG_SOURCE"], ["a hymn book", "M_REF_WRONG_SOURCE"], "An atlas is a book of maps."],
+  ["Which book gives Baraka facts about elephants.", "an encyclopaedia", ["a dictionary", "M_REF_WRONG_SOURCE"], ["an atlas", "M_REF_WRONG_SOURCE"], ["a hymn book", "M_REF_WRONG_SOURCE"], "An encyclopaedia gives facts on many subjects."],
+  ['Which book helps Njeri to check the spelling of "necessary".', "a dictionary", ["an atlas", "M_REF_WRONG_SOURCE"], ["a newspaper", "M_REF_WRONG_SOURCE"], ["a calendar", "M_REF_WRONG_SOURCE"], "A dictionary shows how words are spelt."],
+  ["Which book shows Otieno the road from Nairobi to Mombasa on a map.", "an atlas", ["a dictionary", "M_REF_WRONG_SOURCE"], ["an encyclopaedia of insects", "M_REF_WRONG_SOURCE"], ["a storybook", "M_REF_WRONG_SOURCE"], "An atlas shows roads and places on maps."],
+  ["Which book tells Wambui more about how volcanoes form.", "an encyclopaedia", ["a dictionary", "M_REF_WRONG_SOURCE"], ["an atlas", "M_REF_WRONG_SOURCE"], ["a calendar", "M_REF_WRONG_SOURCE"], "An encyclopaedia explains subjects in detail."],
+  ['Which book tells Kiprono what the word "generous" means.', "a dictionary", ["an atlas", "M_REF_WRONG_SOURCE"], ["a timetable", "M_REF_WRONG_SOURCE"], ["a newspaper", "M_REF_WRONG_SOURCE"], "A dictionary gives the meaning of words."],
+  ["Which book shows Hassan the countries next to Kenya.", "an atlas", ["a dictionary", "M_REF_WRONG_SOURCE"], ["a storybook", "M_REF_WRONG_SOURCE"], ["a diary", "M_REF_WRONG_SOURCE"], "An atlas shows countries on maps."]
+];
+var ALPHA = [["back", "bag", "ball", "bat"], ["can", "cap", "car", "cat"], ["dog", "door", "dot", "dove"], ["fan", "farm", "fat", "fast"], ["hand", "happy", "hard", "hat"], ["sand", "sat", "say", "save"], ["map", "mat", "may", "mask"], ["pan", "park", "pat", "past"], ["tab", "tag", "tall", "tap"]];
+var GUIDE_WORDS = ["maize", "mango", "map", "market", "mat", "meal", "meat", "melon", "mend", "milk", "mind", "mouse"];
+var alphaGen = (cskill) => {
+  const words5 = pick(ALPHA), show = shuffle9(words5);
+  const right = [...words5].sort().join(", ");
+  const firstOnly = show.join(", ");
+  const reversed = [...words5].sort().reverse().join(", ");
+  const swapped = (() => {
+    const w = [...words5].sort(), i = randInt(0, 2);
+    [w[i], w[i + 1]] = [w[i + 1], w[i]];
+    return w.join(", ");
+  })();
+  const fb = feedbackOf(cskill, "M_REF_ALPHA_FIRST_LETTER");
+  const options = mc3(right, [[firstOnly, fb, "M_REF_ALPHA_FIRST_LETTER"], [reversed, fb, "M_REF_ALPHA_FIRST_LETTER"], [swapped, fb, "M_REF_ALPHA_FIRST_LETTER"]]);
+  if (!options || firstOnly === right) return null;
+  const q = show.join(", ");
+  return { question: `Which list puts the words ${q} in alphabetical order.`, options, instruction: "Choose the best answer.", hints: ["Look at the first letter of each word. They are the same, so look at the second letter, then the third.", "Compare two words at a time, letter by letter, until they differ."], steps: ["When the first letters match, compare the next letters.", `The alphabetical order is: ${right}.`] };
+};
+var guideGen = (cskill) => {
+  const w = [...GUIDE_WORDS].sort();
+  const i = randInt(0, w.length - 5), j = randInt(i + 3, w.length - 1), g1 = w[i], g2 = w[j];
+  const test = pick(w.filter((x) => x !== g1 && x !== g2));
+  const inside = g1 < test && test < g2;
+  const fb = feedbackOf(cskill, "M_REF_GUIDE_WORDS");
+  return {
+    question: `A dictionary page has the guide words "${g1}" and "${g2}". Would the word "${test}" be on this page.`,
+    options: mc3(inside ? "Yes" : "No", [[inside ? "No" : "Yes", fb, "M_REF_GUIDE_WORDS"]]),
+    instruction: "Choose the best answer.",
+    hints: ["The guide words are the first and last words on the page.", "Put the three words in alphabetical order. Is the word in the middle?"],
+    steps: [`In alphabetical order: ${[g1, test, g2].sort().join(", ")}.`, inside ? `"${test}" comes between the guide words, so it is on this page.` : `"${test}" does not come between the guide words, so it is not on this page.`],
+    chk: () => inside === (g1 < test && test < g2)
+  };
+};
+var MOOD = [
+  ['"Wafula laughed with the others, but his hands shook as the teacher called his name."', "Wafula", "nervous", ["happy", "angry", "bored"], "his hands shook", ["laughed with the others", "called his name"], "His hands shook when his name was called: he was nervous, even though he laughed."],
+  ['"Mama kept looking at the road. She checked her watch again and again. The bus was one hour late."', "Mama", "worried", ["calm", "sleepy", "excited"], "checked her watch again and again", ["kept looking at the road", "one hour late"], "Checking her watch again and again shows worry."],
+  [`"Achieng jumped up and down and hugged her friend. 'We won!' she shouted."`, "Achieng", "excited", ["sad", "afraid", "tired"], "jumped up and down", ["hugged her friend", "she shouted"], "Jumping and shouting after a win show excitement."],
+  ['"Kamau put his head on his arms. His lunch stayed in the box, and he gave no reply to anyone."', "Kamau", "sad", ["cheerful", "proud", "curious"], "His lunch stayed in the box", ["put his head on his arms", "he gave no reply to anyone"], "Leaving his lunch and saying nothing show sadness."],
+  [`"Njeri held her father's hand tightly as the dog barked and came closer."`, "Njeri", "afraid", ["bored", "proud", "brave"], "held her father's hand tightly", ["the dog barked", "came closer"], "Holding tightly to her father shows fear."],
+  [`"The teacher smiled and patted Baraka on the shoulder. 'Well done,' she said softly."`, "the teacher", "pleased", ["angry", "frightened", "bored"], "smiled and patted Baraka", ["on the shoulder", "she said softly"], "A smile and a pat with Well done show she was pleased."],
+  [`"Otieno stamped his foot and slammed the door. 'It is not fair!' he shouted."`, "Otieno", "angry", ["delighted", "sleepy", "shy"], "stamped his foot and slammed the door", ["he shouted", "on the door"], "Stamping, slamming and shouting show anger."],
+  ['"The village was quiet. Dark clouds sat low over the hills, and no bird sang."', "the village", "gloomy", ["cheerful", "playful", "busy"], "Dark clouds sat low", ["over the hills", "The village was quiet"], "Dark clouds and no singing make the mood gloomy."]
+];
+var moodFeel = (cskill) => {
+  const [lines, who, right, wrongs, , , because] = pick(MOOD);
+  const [w1, w2, w3] = shuffle9(wrongs);
+  const options = mc3(right, [[w1, feedbackOf(cskill, "M_MOOD_OPPOSITE"), "M_MOOD_OPPOSITE"], [w2, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"], [w3, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"]]);
+  return { question: `Read the lines. ${lines} Choose the word that best shows how ${who} felt.`, options, instruction: "Choose the best answer.", hints: ["Look at what the person does and says, not one word on its own.", "Which feeling matches all the clues in the lines?"], steps: [because, `The feeling is "${right}".`] };
+};
+var moodEvidence = (cskill) => {
+  const [lines, who, right, , clue, others, because] = pick(MOOD);
+  const options = mc3(clue, others.map((o) => [o, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"]));
+  return { question: `Read the lines. ${lines} Which words best show that ${who} felt ${right}.`, options, instruction: "Choose the best answer.", hints: ["Look for an action or a word that points to the feeling.", "A detail that only tells you what happened does not show the feeling."], steps: [because, `The words that show it are "${clue}".`] };
+};
+var FAMILIES30 = [
+  ...trio2("rights", "LISTEN.T1.THEME_WORDS", RIGHTS, { topic: "about children's rights and responsibilities", hints: ["Read the whole sentence and say what the gap must mean.", "One word is about what you are given and another is about what you must do."] }),
+  ...trio2("road", "LISTEN.T4.ROAD_SAFETY_WORDS", ROAD, { topic: "about road safety", hints: ["Read the whole sentence and say what the gap must mean.", "Think about who uses the road and what keeps them safe."] }),
+  eng({ id: "eng5.polite.choose", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "a", form: "direct", rung: 1, gen: choose2(POL, { stem: "", hints: ["Think about how you would like to be spoken to.", "A polite request starts with may I, could I or could you, and says please."] }) }),
+  eng({ id: "eng5.polite.spot", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "d", form: "spot", rung: 3, gen: spot4(POL, { topic: "about what to say in four different situations", hints: ["Read what each situation needs: a request, thanks, sorry or a reply.", "A command or a short grunt is not polite."] }) }),
+  eng({ id: "eng5.proverb.meaning", kind: "choose-meaning", cs: "LISTEN.T8.PROVERBS", oc: "a", form: "direct", rung: 2, gen: choose2(PROV_MEANING, { stem: "", hints: ["A proverb has a lesson hidden in it. Ask what it teaches people.", "The lesson is not about the animals or objects in the words."] }) }),
+  eng({ id: "eng5.proverb.finish", kind: "type-word", cs: "LISTEN.T8.PROVERBS", oc: "d", form: "direct", rung: 2, gen: gap(PROV_FINISH, { stem: "Type the word that finishes the proverb.", hints: ["Say the whole proverb aloud, as you heard it.", "A proverb always has the same words."] }) }),
+  eng({ id: "eng5.proverb.finish-choose", kind: "choose-word", cs: "LISTEN.T8.PROVERBS", oc: "d", form: "direct", rung: 1, gen: choose2(PROV_FINISH, { stem: "Choose the word that finishes the proverb.", hints: ["Say the whole proverb aloud, as you heard it.", "A proverb always has the same words."] }) }),
+  eng({ id: "eng5.simile.identify", kind: "identify", cs: "WRITIN.T8.SIMILES", oc: "a", form: "direct", rung: 1, gen: choose2(SIM_IDENT, { stem: "Which sentence is a simile.", hints: ["A simile compares two different things.", "Look for the word like, or the pair as ... as."] }) }),
+  eng({ id: "eng5.simile.complete", kind: "type-word", cs: "WRITIN.T8.SIMILES", oc: "b", form: "direct", rung: 2, gen: gap(SIM_FILL, { stem: "Type the missing {what} to finish the simile.", hints: ["Think about the thing that is famous for this quality.", "Say the whole comparison aloud."] }) }),
+  eng({ id: "eng5.simile.complete-choose", kind: "choose-word", cs: "WRITIN.T8.SIMILES", oc: "b", form: "direct", rung: 1, gen: choose2(SIM_FILL, { stem: "Choose the word that finishes the simile.", hints: ["Think about the thing that is famous for this quality.", "Say the whole comparison aloud."] }) }),
+  eng({ id: "eng5.homonym.sentence", kind: "choose-sentence", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose2(HOMON_SENT, { stem: "", hints: ["Read the whole sentence, not just the word.", "Look for clue words that show which meaning is used."] }) }),
+  eng({ id: "eng5.homonym.meaning", kind: "choose-meaning", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose2(HOMON_MEAN, { stem: "", hints: ["Read the whole sentence, not just the word.", "Try each meaning in place of the word and see which one fits."] }) }),
+  eng({ id: "eng5.ref.source", kind: "choose-source", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "a", form: "direct", rung: 1, gen: choose2(REF_SOURCE, { stem: "", hints: ["A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts.", "Ask what the person needs to find out."] }) }),
+  eng({ id: "eng5.ref.alpha", kind: "alphabetical-order", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "c", form: "direct", rung: 2, gen: alphaGen }),
+  eng({ id: "eng5.ref.guide", kind: "guide-words", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "c", form: "direct", rung: 3, gen: guideGen }),
+  eng({ id: "eng5.mood.feeling", kind: "choose-feeling", cs: "LISTEN.T10.MOOD_FEELINGS", oc: "a", form: "direct", rung: 1, gen: moodFeel }),
+  eng({ id: "eng5.mood.evidence", kind: "choose-evidence", cs: "LISTEN.T10.MOOD_FEELINGS", oc: "a", form: "why", rung: 2, gen: moodEvidence })
+];
+
+// src/ai-tutor/content/families/eng_g5_passages.js
+var PASSAGES = [
+  {
+    id: "kamau-ball",
+    title: "The Lost Football",
+    kind: "narrative",
+    text: 'Kamau loved football more than anything. Every afternoon he played on the dusty field behind Kabiru Primary School in Nyeri. One Friday, the old football burst. Kamau felt sad because the school had no money for a new one.\n\nThat evening, he told his grandmother about it. She smiled and went to her trunk. She took out some old rags and a plastic bag. "Let us make one together," she said.\n\nThey tied the rags tightly inside the bag with string. By morning the ball was round and strong. On Monday, Kamau carried it to school. His friends cheered, and soon everyone was kicking the new ball across the field.',
+    who: [["Who helped Kamau to make a new ball.", "his grandmother|grandmother|Grandmother", ["his teacher", "M_ELEM_MINOR_FOR_MAIN"], ["the headteacher", "M_ELEM_MINOR_FOR_MAIN"], ["Kabiru Primary School", "M_ELEM_MIXES_CHARACTER_PLACE"], 'Kamau told his grandmother, and she said, "Let us make one together."', { t: 1 }], ["Where did Kamau play football every afternoon.", "on the dusty field behind the school", ["at his grandmother's house", "M_ELEM_WRONG_PLACE"], ["in Nyeri town", "M_ELEM_WRONG_PLACE"], ["Kamau", "M_ELEM_MIXES_CHARACTER_PLACE"], "He played on the dusty field behind Kabiru Primary School.", { t: 1 }]],
+    order: ["The school football burst.", "Kamau told his grandmother.", "They tied rags inside a plastic bag.", "Everyone kicked the new ball at school."],
+    fact: [["What did Kamau and his grandmother tie inside the plastic bag.", "old rags|rags", ["sand", "M_FACT_NEARBY_DETAIL"], ["grass", "M_FACT_OUTSIDE_KNOWLEDGE"], ["old shoes", "M_FACT_NEARBY_DETAIL"], "The grandmother took out old rags and a plastic bag, and they tied the rags inside the bag.", { t: 1 }]],
+    tf: [["Kamau played football behind his school every afternoon.", "True", "The first paragraph says he played on the field behind the school every afternoon."], ["The school bought Kamau a new football.", "False", "The ball burst and the school had no money for a new one."], ["Kamau scored the winning goal on Monday.", "Not stated", "The passage does not say that Kamau scored a goal."]],
+    infer: ["Why did Kamau feel sad when the ball burst.", "He loved football and could not play without a ball.", ["The school was closed for the holidays.", "M_INFER_CONTRADICTS"], ["A new school was being built.", "M_INFER_OVERREACH"], ["The old football burst.", "M_INFER_REPEATS_TEXT"], "He loved football and the school had no money for a new ball."],
+    infer2: ["Kamau's grandmother is kind and clever.", ["The old football burst on a Friday.", "M_INFER_REPEATS_TEXT"], ["Kamau's grandmother was angry with him.", "M_INFER_CONTRADICTS"], ["Kamau's grandmother is the richest woman in Nyeri.", "M_INFER_OVERREACH"], "She smiled and found a clever way to help, so she is kind and clever."],
+    predict: ["What will probably happen next.", "The children will keep playing football with the homemade ball.", ["The new ball will be taken away.", "M_PRED_NO_CLUE"], ["Kamau will stop playing football.", "M_PRED_CONTRADICTS"], ["Kamau carried the ball to school.", "M_PRED_ALREADY_HAPPENED"], "Everyone was already kicking the new ball happily, so they will keep playing."],
+    clue: ["The children will keep playing football with the homemade ball.", "His friends cheered, and soon everyone was kicking the new ball across the field.", "One Friday, the old football burst.", "Kamau felt sad because the school had no money for a new one.", "She took out some old rags and a plastic bag.", "The children already enjoy the ball, which points to more playing."],
+    ctx: ["burst", "broke open and could not be used", ["rolled away", "M_CTX_LOOKS_LIKE"], ["was kicked very high", "M_CTX_COMMON_MEANING"], ["was kept safely", "M_CTX_OPPOSITE"], "The school needed a new ball, so the old one was spoilt."],
+    ctxclue: ["burst", "the school had no money for a new one", "One Friday", "Every afternoon he played", "in Nyeri", "A new ball was needed, so the old one was broken."],
+    main: ["What is the main idea of the passage.", "A boy and his grandmother make a new football when the old one bursts.", ["Kamau loved football.", "M_MAIN_DETAIL"], ["Grandmothers keep many old things.", "M_MAIN_TOO_BROAD"], ["Kamau wins a football match.", "M_MAIN_NOT_IN_TEXT"], "The whole passage is about making a new ball."],
+    ttl: ["A New Ball for Kamau", ["Football in Nyeri", "M_MAIN_TOO_BROAD"], ["A Friday Afternoon", "M_MAIN_DETAIL"], ["Kamau Wins the Cup", "M_MAIN_NOT_IN_TEXT"], "The passage is about the new ball Kamau gets."],
+    sum: ["Kamau's football burst and the school could not buy another. His grandmother helped him make one from rags and a bag, and the children played with it.", ["Kamau loved football and played on the dusty field behind Kabiru Primary School every afternoon, then one Friday the old ball burst and he felt sad because the school had no money, so that evening he told his grandmother, who took some old rags and a plastic bag from her trunk.", "M_SUM_TOO_MUCH_DETAIL"], ["Kamau's football burst and he felt sad because the school had no money.", "M_SUM_MISSING_MAIN"], ["Kamau has the best grandmother ever, and everyone should make their own ball.", "M_SUM_OPINION"], "A summary keeps the problem, the solution and the result."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "Kamau played on the dusty field every afternoon.", ["The old football burst.", "M_SUM_CUTS_MAIN"], ["His grandmother helped him to make a new ball.", "M_SUM_CUTS_MAIN"], ["The children played with the new ball.", "M_SUM_CUTS_MAIN"], "Where he usually played is background, not a main point."],
+    skim: ["What is the passage mainly about.", "a boy who gets a new football", ["a school in Nyeri", "M_SKIM_DETAIL_FOR_GIST"], ["a grandmother's trunk", "M_SKIM_DETAIL_FOR_GIST"], ["a Friday afternoon", "M_SKIM_DETAIL_FOR_GIST"], "The title and first lines are about the football."]
+  },
+  {
+    id: "achieng-market",
+    title: "Market Day",
+    kind: "narrative",
+    text: 'Achieng woke before the sun on Saturday. Her mother needed help at the market in Kisumu. They carried two big baskets of tomatoes on a boda boda.\n\nAt the market, Achieng set the tomatoes in neat heaps. A woman in a green dress asked for five heaps. Achieng counted slowly and gave her the right change. Her mother nodded proudly.\n\nBy noon only a few tomatoes were left. A dark cloud rolled over the town. "Pack up quickly," said Mother. Soon the first heavy drops of rain began to fall on the tin roofs.',
+    who: [["Who asked Achieng for five heaps of tomatoes.", "a woman in a green dress|a woman|the woman in a green dress", ["her mother", "M_ELEM_MINOR_FOR_MAIN"], ["a boda boda rider", "M_ELEM_MINOR_FOR_MAIN"], ["the market in Kisumu", "M_ELEM_MIXES_CHARACTER_PLACE"], "A woman in a green dress asked for five heaps.", { t: 1 }], ["Where did Kamau play football every afternoon.", "on the dusty field behind the school", ["at his grandmother's house", "M_ELEM_WRONG_PLACE"], ["in Nyeri town", "M_ELEM_WRONG_PLACE"], ["Kamau", "M_ELEM_MIXES_CHARACTER_PLACE"], "He played on the dusty field behind Kabiru Primary School.", { t: 1 }], ["In which town was the market.", "Kisumu", ["Nakuru", "M_ELEM_WRONG_PLACE"], ["Mombasa", "M_ELEM_WRONG_PLACE"], ["her mother", "M_ELEM_MIXES_CHARACTER_PLACE"], "Her mother needed help at the market in Kisumu.", { t: 1 }]],
+    order: ["They carried tomatoes on a boda boda.", "Achieng set the tomatoes in heaps.", "A woman bought five heaps.", "Dark clouds covered the town."],
+    fact: [["How did Achieng and her mother carry the tomatoes to the market.", "on a boda boda|by boda boda|a boda boda", ["by matatu", "M_FACT_OUTSIDE_KNOWLEDGE"], ["on their heads", "M_FACT_OUTSIDE_KNOWLEDGE"], ["in a lorry", "M_FACT_OUTSIDE_KNOWLEDGE"], "They carried two baskets on a boda boda.", { t: 1 }]],
+    tf: [["Achieng gave the woman the right change.", "True", "She counted slowly and gave the right change."], ["The market was in Nakuru.", "False", "The passage says the market was in Kisumu."], ["Achieng's mother also sold fish at the market.", "Not stated", "The passage mentions only tomatoes."]],
+    infer: ["Why did Mother nod proudly.", "Achieng counted carefully and gave the right change.", ["Achieng ran away from the stall.", "M_INFER_CONTRADICTS"], ["Mother wanted to go home early.", "M_INFER_OVERREACH"], ["The woman wore a green dress.", "M_INFER_REPEATS_TEXT"], "Mother was pleased with how well Achieng did her work."],
+    infer2: ["The tomatoes were selling well that day.", ["A woman in a green dress asked for five heaps.", "M_INFER_REPEATS_TEXT"], ["No one bought any tomatoes.", "M_INFER_CONTRADICTS"], ["Achieng will become a famous shopkeeper.", "M_INFER_OVERREACH"], "By noon only a few were left, so they sold well."],
+    predict: ["What will probably happen next.", "They will quickly pack up before the rain gets worse.", ["They will start selling ice cream.", "M_PRED_NO_CLUE"], ["The sun will shine all afternoon.", "M_PRED_CONTRADICTS"], ["Rain began to fall on the tin roofs.", "M_PRED_ALREADY_HAPPENED"], "Mother said to pack up quickly because the rain was starting."],
+    clue: ["They will quickly pack up before the rain gets worse.", '"Pack up quickly," said Mother.', "Achieng woke before the sun on Saturday.", "A woman in a green dress asked for five heaps.", "Her mother nodded proudly.", "Mother's words point to packing up."],
+    ctx: ["heaps", "small piles", ["long ropes", "M_CTX_LOOKS_LIKE"], ["big baskets", "M_CTX_COMMON_MEANING"], ["empty boxes", "M_CTX_OPPOSITE"], "Tomatoes are set out in piles, and the woman bought five of them."],
+    ctxclue: ["heaps", "A woman in a green dress asked for five heaps", "Achieng woke before the sun", "on a boda boda", "A dark cloud rolled over the town", "You can buy a number of heaps, so they are small piles."],
+    main: ["What is the main idea of the passage.", "Achieng helps her mother sell tomatoes at the market until the rain comes.", ["A woman in a green dress buys tomatoes.", "M_MAIN_DETAIL"], ["Markets are busy places.", "M_MAIN_TOO_BROAD"], ["Achieng wins a prize for counting.", "M_MAIN_NOT_IN_TEXT"], "The passage follows Achieng through the market day."],
+    ttl: ["Market Day with Mother", ["A Green Dress", "M_MAIN_DETAIL"], ["Why We Shop", "M_MAIN_TOO_BROAD"], ["Achieng Goes to Mombasa", "M_MAIN_NOT_IN_TEXT"], "It is about a day at the market with her mother."],
+    sum: ["Achieng helped her mother sell tomatoes at the market in Kisumu. She served a customer well, and when rain clouds came they hurried to pack up.", ["Achieng woke before the sun on Saturday and carried two big baskets on a boda boda, set the tomatoes in neat heaps, counted slowly for a woman in a green dress, and then a dark cloud rolled over the town and the rain fell on the tin roofs.", "M_SUM_TOO_MUCH_DETAIL"], ["Achieng woke before the sun on Saturday and went to the market.", "M_SUM_MISSING_MAIN"], ["Achieng is a brilliant girl, and her mother is the best seller in the market.", "M_SUM_OPINION"], "A summary keeps the main events and leaves out small details."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "A woman in a green dress asked for five heaps.", ["Achieng helped her mother at the market.", "M_SUM_CUTS_MAIN"], ["Most of the tomatoes were sold by noon.", "M_SUM_CUTS_MAIN"], ["Rain began to fall.", "M_SUM_CUTS_MAIN"], "The colour of a customer's dress is only a detail."],
+    skim: ["What is the passage mainly about.", "a girl helping at her mother's market stall", ["a green dress", "M_SKIM_DETAIL_FOR_GIST"], ["a boda boda ride", "M_SKIM_DETAIL_FOR_GIST"], ["tin roofs", "M_SKIM_DETAIL_FOR_GIST"], "The text is about Achieng at the stall."]
+  },
+  {
+    id: "kitui-borehole",
+    title: "Water for the Village",
+    kind: "narrative",
+    text: "In a dry village in Kitui, the women walked many hours each day to fetch water. The river had been empty since the last rains failed. Children missed school to carry heavy jerrycans.\n\nOne morning, a lorry rumbled into the village. Men in blue overalls unloaded long metal pipes and a drilling machine. The villagers gathered round, whispering.\n\nFor three days the machine roared. On the fourth day, clear water gushed from the ground. Old Mzee Musyoka raised his hands and laughed. The children splashed and danced. From that day, the school was full again.",
+    who: [["Who laughed when the water gushed out.", "Mzee Musyoka|Old Mzee Musyoka|Musyoka", ["the men in blue overalls", "M_ELEM_MINOR_FOR_MAIN"], ["the children", "M_ELEM_MINOR_FOR_MAIN"], ["a village in Kitui", "M_ELEM_MIXES_CHARACTER_PLACE"], "Old Mzee Musyoka raised his hands and laughed.", { t: 1 }]],
+    order: ["The river became empty.", "A lorry brought a drilling machine.", "The machine roared for three days.", "Clear water gushed from the ground."],
+    fact: [["For how many days did the machine roar before the water came.", "three days|three|3 days|3", ["four days", "M_FACT_NEARBY_DETAIL"], ["one day", "M_FACT_OUTSIDE_KNOWLEDGE"], ["two days", "M_FACT_OUTSIDE_KNOWLEDGE"], "The machine roared for three days, and the water came on the fourth day.", { t: 1 }]],
+    tf: [["The river was empty because the rains failed.", "True", "The river had been empty since the last rains failed."], ["The women walked only ten minutes to fetch water.", "False", "They walked many hours each day."], ["The borehole cost two million shillings.", "Not stated", "The passage does not say what the borehole cost."]],
+    infer: ["Why was the school full again after the borehole was drilled.", "The children no longer had to walk far for water.", ["The children stayed away from school.", "M_INFER_CONTRADICTS"], ["A new school was built in the village.", "M_INFER_OVERREACH"], ["The school was full again.", "M_INFER_REPEATS_TEXT"], "Children missed school to carry water, so water nearby let them return."],
+    infer2: ["The villagers were very happy to have water.", ["Old Mzee Musyoka raised his hands and laughed.", "M_INFER_REPEATS_TEXT"], ["The villagers were angry about the borehole.", "M_INFER_CONTRADICTS"], ["The villagers will never need rain again.", "M_INFER_OVERREACH"], "Laughing, splashing and dancing show happiness."],
+    predict: ["What will probably happen next.", "The villagers will use the borehole water every day and the children will stay in school.", ["The borehole will dry up the next day.", "M_PRED_NO_CLUE"], ["The women will walk for hours to find water again.", "M_PRED_CONTRADICTS"], ["Clear water gushed from the ground.", "M_PRED_ALREADY_HAPPENED"], "The water is now close, so life will be easier."],
+    clue: ["The villagers will use the borehole water every day and the children will stay in school.", "From that day, the school was full again.", "A lorry rumbled into the village.", "Men in blue overalls unloaded long metal pipes.", "The children splashed and danced.", "The school being full again points to children staying in school."],
+    ctx: ["gushed", "flowed out quickly and strongly", ["dripped slowly", "M_CTX_OPPOSITE"], ["was hidden", "M_CTX_COMMON_MEANING"], ["was sold", "M_CTX_LOOKS_LIKE"], "The children splashed and danced, so the water came out fast."],
+    ctxclue: ["gushed", "The children splashed and danced", "Men in blue overalls unloaded long pipes", "For three days the machine roared", "The river had been empty", "Splashing shows there was a lot of water."],
+    main: ["What is the main idea of the passage.", "A village gets a borehole and finally has water.", ["The machine roared for three days.", "M_MAIN_DETAIL"], ["Water is important for life.", "M_MAIN_TOO_BROAD"], ["The villagers go to town to buy water.", "M_MAIN_NOT_IN_TEXT"], "The whole passage is about the village getting water."],
+    ttl: ["Water for the Village", ["A Lorry in Kitui", "M_MAIN_DETAIL"], ["Rivers of Kenya", "M_MAIN_TOO_BROAD"], ["The Great Flood", "M_MAIN_NOT_IN_TEXT"], "It is about the village getting water."],
+    sum: ["A dry village in Kitui had no water. A borehole was drilled and clean water came out, so the children could go back to school.", ["The women of a dry village in Kitui walked many hours for water because the river was empty, children missed school to carry jerrycans, a lorry brought men in blue overalls with pipes and a machine, and the machine roared for three days.", "M_SUM_TOO_MUCH_DETAIL"], ["A dry village in Kitui had no water because the rains failed.", "M_SUM_MISSING_MAIN"], ["The drilling men were very kind, and everyone should dig boreholes.", "M_SUM_OPINION"], "A summary keeps the problem, the solution and the result."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "The men wore blue overalls.", ["The river was empty.", "M_SUM_CUTS_MAIN"], ["A borehole was drilled.", "M_SUM_CUTS_MAIN"], ["The school was full again.", "M_SUM_CUTS_MAIN"], "The colour of the overalls is only a detail."],
+    skim: ["What is the passage mainly about.", "a village that gets water from a new borehole", ["a lorry with blue pipes", "M_SKIM_DETAIL_FOR_GIST"], ["a very old man", "M_SKIM_DETAIL_FOR_GIST"], ["heavy jerrycans", "M_SKIM_DETAIL_FOR_GIST"], "The title and the last lines are about water for the village."]
+  },
+  {
+    id: "njeri-cake",
+    title: "A Cake for Mama",
+    kind: "narrative",
+    text: 'Njeri wanted to surprise her mother on her birthday. She asked her brother Juma to help her bake a cake.\n\nThey mixed flour, sugar, eggs and butter in a big bowl. Then they poured the mixture into a tin and put it in the oven. "Do not open the door!" Juma warned. But Njeri was too curious. She peeped inside, and the cake sank in the middle.\n\nBoth children laughed. "We can cover it with icing," said Juma. When Mama came home, she found a lopsided cake covered in pink icing. She hugged them both. "It is the best cake I have ever seen," she whispered.',
+    who: [["Who peeped into the oven.", "Njeri", ["Juma", "M_ELEM_MINOR_FOR_MAIN"], ["Mama", "M_ELEM_MINOR_FOR_MAIN"], ["the oven", "M_ELEM_MIXES_CHARACTER_PLACE"], "Njeri was too curious and peeped inside.", { t: 1 }]],
+    order: ["Njeri and Juma mixed the cake.", "The cake went into the oven.", "Njeri peeped and the cake sank.", "Juma covered the cake with icing."],
+    fact: [["What colour was the icing.", "pink", ["white", "M_FACT_OUTSIDE_KNOWLEDGE"], ["yellow", "M_FACT_OUTSIDE_KNOWLEDGE"], ["blue", "M_FACT_OUTSIDE_KNOWLEDGE"], "Mama found a lopsided cake covered in pink icing.", { t: 1 }]],
+    tf: [["Juma told Njeri not to open the oven door.", "True", 'Juma warned, "Do not open the door!"'], ["The cake came out perfect.", "False", "The cake sank in the middle."], ["It was a chocolate cake.", "Not stated", "The passage does not say what flavour it was."]],
+    infer: ["Why did the cake sink in the middle.", "Njeri opened the oven door too soon.", ["Juma forgot to put in the eggs.", "M_INFER_CONTRADICTS"], ["The oven was too small.", "M_INFER_OVERREACH"], ["Njeri was curious.", "M_INFER_REPEATS_TEXT"], "She peeped inside and the cake sank."],
+    infer2: ["Mama loved her children very much.", ["She hugged them both.", "M_INFER_REPEATS_TEXT"], ["Mama was angry about the cake.", "M_INFER_CONTRADICTS"], ["Mama will bake a cake every day.", "M_INFER_OVERREACH"], "Hugging them and praising the cake shows her love."],
+    predict: ["What will probably happen next.", "Mama will eat the cake with Njeri and Juma.", ["Mama will throw the cake away.", "M_PRED_CONTRADICTS"], ["Juma will move to another town.", "M_PRED_NO_CLUE"], ["The cake sank in the middle.", "M_PRED_ALREADY_HAPPENED"], "Mama is happy with the cake, so she will enjoy it with them."],
+    clue: ["Mama will eat the cake with Njeri and Juma.", "She hugged them both.", "They mixed flour, sugar, eggs and butter in a big bowl.", '"Do not open the door!" Juma warned.', "She peeped inside, and the cake sank in the middle.", "Her hug shows she was happy with the cake."],
+    ctx: ["curious", "eager to know or see something", ["afraid", "M_CTX_OPPOSITE"], ["hungry", "M_CTX_LOOKS_LIKE"], ["sleepy", "M_CTX_COMMON_MEANING"], "She was told not to open the door but peeped inside anyway."],
+    ctxclue: ["curious", "She peeped inside", "They mixed flour, sugar, eggs and butter", '"Do not open the door!" Juma warned', "We can cover it with icing", "Peeping inside shows she wanted to see."],
+    main: ["What is the main idea of the passage.", "Two children bake a cake for their mother, and it goes wrong but still makes her happy.", ["Juma warned Njeri not to open the oven.", "M_MAIN_DETAIL"], ["Birthdays are special days.", "M_MAIN_TOO_BROAD"], ["Njeri wins a baking competition.", "M_MAIN_NOT_IN_TEXT"], "The passage is about the cake from start to end."],
+    ttl: ["A Cake for Mama", ["The Oven Door", "M_MAIN_DETAIL"], ["All About Baking", "M_MAIN_TOO_BROAD"], ["The Baking Competition", "M_MAIN_NOT_IN_TEXT"], "It is about the cake the children made for Mama."],
+    sum: ["Njeri and Juma baked a birthday cake for their mother. It sank when Njeri peeped, but they covered it with icing and Mama loved it.", ["Njeri and Juma mixed flour, sugar, eggs and butter in a big bowl, poured the mixture into a tin, put it in the oven, and then Njeri peeped inside and the cake sank, so Juma said to cover it with pink icing.", "M_SUM_TOO_MUCH_DETAIL"], ["Njeri and Juma baked a cake and put it in the oven.", "M_SUM_MISSING_MAIN"], ["Njeri should have listened, and baking is silly.", "M_SUM_OPINION"], "A summary keeps the plan, the problem and the ending."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "They used flour, sugar, eggs and butter.", ["The cake sank in the middle.", "M_SUM_CUTS_MAIN"], ["They covered the cake with icing.", "M_SUM_CUTS_MAIN"], ["Mama loved the cake.", "M_SUM_CUTS_MAIN"], "The list of ingredients is only a detail."],
+    skim: ["What is the passage mainly about.", "two children baking a birthday cake", ["a bowl of flour", "M_SKIM_DETAIL_FOR_GIST"], ["a pink icing recipe", "M_SKIM_DETAIL_FOR_GIST"], ["an oven door", "M_SKIM_DETAIL_FOR_GIST"], "The title and the first lines are about baking a cake."]
+  },
+  {
+    id: "baraka-matatu",
+    title: "The Matatu Ride",
+    kind: "narrative",
+    text: 'Baraka was going to Mombasa with his grandmother. The matatu was painted bright yellow, and loud music played inside.\n\nBefore the journey began, the driver turned round. "Please fasten your seat belts," he said. Baraka clicked his belt at once. Grandmother did the same.\n\nOn the highway, a lorry stopped suddenly ahead of them. The driver pressed the brakes hard. The matatu skidded and stopped just in time. Some passengers cried out, but nobody was hurt.\n\n"That was close," sighed Grandmother. Baraka held her hand and was glad he had listened to the driver.',
+    who: [["Who told the passengers to fasten their seat belts.", "the driver|driver|the matatu driver", ["Baraka", "M_ELEM_MINOR_FOR_MAIN"], ["Grandmother", "M_ELEM_MINOR_FOR_MAIN"], ["the highway", "M_ELEM_MIXES_CHARACTER_PLACE"], 'The driver turned round and said, "Please fasten your seat belts."', { t: 1 }], ["Where was Baraka going with his grandmother.", "Mombasa", ["Nairobi", "M_ELEM_WRONG_PLACE"], ["Kisumu", "M_ELEM_WRONG_PLACE"], ["the driver", "M_ELEM_MIXES_CHARACTER_PLACE"], "Baraka was going to Mombasa with his grandmother.", { t: 1 }]],
+    order: ["The driver asked everyone to fasten their seat belts.", "A lorry stopped suddenly ahead.", "The matatu skidded and stopped just in time.", "Baraka held his grandmother's hand."],
+    fact: [["What colour was the matatu.", "bright yellow|yellow", ["green", "M_FACT_OUTSIDE_KNOWLEDGE"], ["blue", "M_FACT_OUTSIDE_KNOWLEDGE"], ["red", "M_FACT_OUTSIDE_KNOWLEDGE"], "The matatu was painted bright yellow.", { t: 1 }]],
+    tf: [["Baraka fastened his seat belt at once.", "True", "Baraka clicked his belt at once."], ["Many passengers were hurt.", "False", "The passage says nobody was hurt."], ["The matatu reached Mombasa at night.", "Not stated", "The passage does not say when they arrived."]],
+    infer: ["Why was Baraka glad he had listened to the driver.", "His seat belt kept him safe when the matatu stopped suddenly.", ["The driver gave him a gift.", "M_INFER_OVERREACH"], ["The matatu was empty.", "M_INFER_CONTRADICTS"], ["He held Grandmother's hand.", "M_INFER_REPEATS_TEXT"], "He had worn his belt, and the sudden stop could have hurt him."],
+    infer2: ["The driver cared about the passengers' safety.", ["The driver turned round.", "M_INFER_REPEATS_TEXT"], ["The driver did not care about the passengers.", "M_INFER_CONTRADICTS"], ["The driver is the best driver in Kenya.", "M_INFER_OVERREACH"], "He asked them to wear seat belts and braked hard in time."],
+    predict: ["What will probably happen next.", "Baraka will remember to wear his seat belt on every journey.", ["The matatu will drive faster to make up time.", "M_PRED_NO_CLUE"], ["Baraka will refuse to ride in a matatu again.", "M_PRED_NO_CLUE"], ["A lorry stopped suddenly ahead of them.", "M_PRED_ALREADY_HAPPENED"], "He was glad he had listened to the driver, so he will do so again."],
+    clue: ["Baraka will remember to wear his seat belt on every journey.", "Baraka held her hand and was glad he had listened to the driver.", "The matatu was painted bright yellow.", "Some passengers cried out.", "Loud music played inside.", "His gladness points to wearing a belt next time."],
+    ctx: ["skidded", "slid along the road without control", ["stopped slowly", "M_CTX_OPPOSITE"], ["drove carefully", "M_CTX_COMMON_MEANING"], ["turned round", "M_CTX_LOOKS_LIKE"], "The brakes were pressed hard, so the matatu slid."],
+    ctxclue: ["skidded", "The driver pressed the brakes hard", "painted bright yellow", "loud music played inside", "Baraka clicked his belt", "Pressing the brakes hard explains the slide."],
+    main: ["What is the main idea of the passage.", "Seat belts and a careful driver kept the passengers safe on a matatu ride.", ["The matatu was bright yellow.", "M_MAIN_DETAIL"], ["Travelling is exciting.", "M_MAIN_TOO_BROAD"], ["Baraka drives the matatu.", "M_MAIN_NOT_IN_TEXT"], "The passage is about the journey and how everyone stayed safe."],
+    ttl: ["A Close Call on the Highway", ["Yellow Paint", "M_MAIN_DETAIL"], ["All About Cars", "M_MAIN_TOO_BROAD"], ["Baraka Wins a Race", "M_MAIN_NOT_IN_TEXT"], "It is about a close call during the journey."],
+    sum: ["Baraka and his grandmother wore seat belts on a matatu to Mombasa. When a lorry stopped suddenly the driver braked in time and nobody was hurt.", ["Baraka was going to Mombasa with his grandmother in a bright yellow matatu with loud music, the driver asked them to fasten their seat belts, and on the highway a lorry stopped suddenly and the driver pressed the brakes hard so the matatu skidded.", "M_SUM_TOO_MUCH_DETAIL"], ["Baraka was going to Mombasa with his grandmother.", "M_SUM_MISSING_MAIN"], ["The driver was a hero, and matatus are better than buses.", "M_SUM_OPINION"], "A summary keeps the journey, the danger and the safe ending."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "The matatu was painted bright yellow.", ["The driver asked them to fasten their seat belts.", "M_SUM_CUTS_MAIN"], ["A lorry stopped suddenly ahead of them.", "M_SUM_CUTS_MAIN"], ["Nobody was hurt.", "M_SUM_CUTS_MAIN"], "The paint colour is only a detail."],
+    skim: ["What is the passage mainly about.", "a safe matatu journey to Mombasa", ["loud music", "M_SKIM_DETAIL_FOR_GIST"], ["a yellow paint job", "M_SKIM_DETAIL_FOR_GIST"], ["a grandmother", "M_SKIM_DETAIL_FOR_GIST"], "The title and the story are about the journey."]
+  },
+  {
+    id: "mercy-garden",
+    title: "The Class Garden",
+    kind: "narrative",
+    text: 'Grade 5 had a small garden behind the classroom. Mercy and her classmates planted sukuma wiki seeds in neat rows. Mr Kiprono, their teacher, showed them how to water the seedlings every morning.\n\nThen the rains stopped. The soil turned dry and hard. Some leaves began to yellow. Mercy worried that all their work would be wasted.\n\nShe had an idea. During break, she asked every child to pour the water left in their bottles onto the garden. The soil darkened. A week later, tiny green shoots stood tall again. "Teamwork saved our garden," said Mr Kiprono, and the class cheered.',
+    who: [["Who had the idea to water the garden with water from bottles.", "Mercy", ["Mr Kiprono", "M_ELEM_MINOR_FOR_MAIN"], ["the whole class", "M_ELEM_MINOR_FOR_MAIN"], ["the garden", "M_ELEM_MIXES_CHARACTER_PLACE"], "Mercy had the idea during break.", { t: 1 }]],
+    order: ["Grade 5 planted sukuma wiki seeds.", "The rains stopped and the soil became dry.", "The children poured their spare water on the garden.", "Green shoots stood tall again."],
+    fact: [["Where was the garden.", "behind the classroom", ["near the river", "M_FACT_OUTSIDE_KNOWLEDGE"], ["in front of the office", "M_FACT_OUTSIDE_KNOWLEDGE"], ["at Mercy's home", "M_FACT_OUTSIDE_KNOWLEDGE"], "Grade 5 had a small garden behind the classroom.", { t: 1 }]],
+    tf: [["Mr Kiprono showed the class how to water the seedlings.", "True", "He showed them how to water the seedlings every morning."], ["The garden grew without any water.", "False", "The shoots grew after the children poured water on the soil."], ["The garden gave sukuma wiki to the whole school.", "Not stated", "The passage does not say who ate the vegetables."]],
+    infer: ["Why did Mercy worry when the rains stopped.", "The plants might die and their work would be lost.", ["The class was going on holiday.", "M_INFER_CONTRADICTS"], ["Mr Kiprono was angry with her.", "M_INFER_OVERREACH"], ["The soil turned dry and hard.", "M_INFER_REPEATS_TEXT"], "Dry soil and yellow leaves mean the plants could die."],
+    infer2: ["Mercy is a thoughtful and caring child.", ["She asked every child to pour the water.", "M_INFER_REPEATS_TEXT"], ["Mercy did not care about the garden.", "M_INFER_CONTRADICTS"], ["Mercy will become the headteacher.", "M_INFER_OVERREACH"], "She worried about the garden and found a way to help."],
+    predict: ["What will probably happen next.", "The class will keep caring for the garden and soon harvest the sukuma wiki.", ["The garden will be dug up and forgotten.", "M_PRED_NO_CLUE"], ["The children will stop caring for the plants.", "M_PRED_CONTRADICTS"], ["The class cheered.", "M_PRED_ALREADY_HAPPENED"], "The plants are growing again, so the class will keep looking after them."],
+    clue: ["The class will keep caring for the garden and soon harvest the sukuma wiki.", "A week later, tiny green shoots stood tall again.", "Grade 5 had a small garden behind the classroom.", "Mr Kiprono showed them how to water the seedlings.", "Some leaves began to yellow.", "The green shoots show the plants are growing again."],
+    ctx: ["wasted", "used for nothing", ["saved", "M_CTX_OPPOSITE"], ["eaten", "M_CTX_LOOKS_LIKE"], ["planted", "M_CTX_COMMON_MEANING"], "If the plants died, all the work would give nothing."],
+    ctxclue: ["wasted", "Some leaves began to yellow", "showed them how to water", "planted sukuma wiki seeds in neat rows", "During break", "Yellow leaves show the plants might die."],
+    main: ["What is the main idea of the passage.", "A class saves its garden by working together when the rains stop.", ["Mercy asked every child to pour water.", "M_MAIN_DETAIL"], ["Plants need water.", "M_MAIN_TOO_BROAD"], ["The class wins a gardening prize.", "M_MAIN_NOT_IN_TEXT"], "The passage is about saving the garden together."],
+    ttl: ["Teamwork Saves the Garden", ["Yellow Leaves", "M_MAIN_DETAIL"], ["All About Plants", "M_MAIN_TOO_BROAD"], ["The Gardening Prize", "M_MAIN_NOT_IN_TEXT"], "It is about how the class saved the garden."],
+    sum: ["Grade 5 planted a garden, but the rains stopped and the plants began to die. Mercy had the children pour their spare water on it, and the garden grew again.", ["Grade 5 had a small garden behind the classroom where Mercy and her classmates planted sukuma wiki seeds in neat rows, Mr Kiprono showed them how to water, then the rains stopped and the soil turned dry and hard and some leaves began to yellow.", "M_SUM_TOO_MUCH_DETAIL"], ["Grade 5 planted a garden and Mr Kiprono showed them how to water it.", "M_SUM_MISSING_MAIN"], ["Mercy is the cleverest girl in school, and gardens are better than football.", "M_SUM_OPINION"], "A summary keeps the problem, the idea and the result."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "The seeds were planted in neat rows.", ["The rains stopped and the soil became dry.", "M_SUM_CUTS_MAIN"], ["Mercy asked every child to pour their spare water.", "M_SUM_CUTS_MAIN"], ["The shoots grew tall again.", "M_SUM_CUTS_MAIN"], "Neat rows are only a detail."],
+    skim: ["What is the passage mainly about.", "a class that saves its garden", ["a teacher called Mr Kiprono", "M_SKIM_DETAIL_FOR_GIST"], ["yellow leaves", "M_SKIM_DETAIL_FOR_GIST"], ["water bottles", "M_SKIM_DETAIL_FOR_GIST"], "The title and the story are about the garden."]
+  },
+  {
+    id: "wash-hands",
+    title: "Why We Wash Our Hands",
+    kind: "info",
+    text: "Our hands touch many things every day. They touch desks, doors, money and animals. Tiny germs that we cannot see can stay on our hands.\n\nIf we do not wash our hands, the germs can get into our mouths when we eat. They can make us sick with diarrhoea and other diseases.\n\nThe best way to stop germs is to wash our hands with soap and clean water. We should rub our hands for at least twenty seconds. We must wash before eating and after using the toilet.\n\nWhen everyone washes their hands, fewer people fall sick. Clean hands help to keep the whole school healthy.",
+    fact: [["For how long should we rub our hands when we wash them.", "at least twenty seconds|twenty seconds|20 seconds", ["ten seconds", "M_FACT_OUTSIDE_KNOWLEDGE"], ["two minutes", "M_FACT_OUTSIDE_KNOWLEDGE"], ["one second", "M_FACT_OUTSIDE_KNOWLEDGE"], "The passage says to rub for at least twenty seconds.", { t: 1 }], ["What do we need to wash our hands properly.", "soap and clean water", ["a towel and a bowl", "M_FACT_NEARBY_DETAIL"], ["hot water only", "M_FACT_OUTSIDE_KNOWLEDGE"], ["sand and a cloth", "M_FACT_OUTSIDE_KNOWLEDGE"], "The best way is to wash with soap and clean water.", { t: 1 }]],
+    tf: [["Germs can stay on our hands.", "True", "The first paragraph says tiny germs can stay on our hands."], ["We can see all germs with our eyes.", "False", "The passage says we cannot see the tiny germs."], ["The school has a hand-washing tap near the toilets.", "Not stated", "The passage does not say where the taps are."]],
+    infer: ["Why does the writer say we must wash our hands before eating.", "Germs on our hands could get into our mouths with the food.", ["Food tastes better with wet hands.", "M_INFER_CONTRADICTS"], ["The teacher will check our hands.", "M_INFER_OVERREACH"], ["We touch many things every day.", "M_INFER_REPEATS_TEXT"], "The second paragraph says germs can get into our mouths when we eat."],
+    infer2: ["A child who washes his hands is less likely to get diarrhoea.", ["Tiny germs can stay on our hands.", "M_INFER_REPEATS_TEXT"], ["Washing hands makes people sicker.", "M_INFER_CONTRADICTS"], ["A child who washes his hands will never be ill.", "M_INFER_OVERREACH"], "Germs cause diarrhoea and washing removes germs, so washing makes it less likely."],
+    ctx: ["germs", "tiny living things that can cause illness", ["small stones", "M_CTX_LOOKS_LIKE"], ["soap bubbles", "M_CTX_COMMON_MEANING"], ["healthy foods", "M_CTX_OPPOSITE"], "The passage says they make us sick."],
+    ctxclue: ["germs", "They can make us sick with diarrhoea and other diseases", "They touch desks, doors, money and animals", "We should rub our hands for at least twenty seconds", "before eating and after using the toilet", "Making us sick tells us what germs do."],
+    main: ["What is the main idea of the passage.", "Washing our hands with soap and water stops germs and keeps us healthy.", ["We should rub our hands for twenty seconds.", "M_MAIN_DETAIL"], ["Health is very important.", "M_MAIN_TOO_BROAD"], ["Doctors visit schools every week.", "M_MAIN_NOT_IN_TEXT"], "Every paragraph is about germs and hand washing."],
+    ttl: ["Why We Wash Our Hands", ["Twenty Seconds", "M_MAIN_DETAIL"], ["All About Health", "M_MAIN_TOO_BROAD"], ["The School Doctor", "M_MAIN_NOT_IN_TEXT"], "It is about why we wash our hands."],
+    sum: ["Germs on our hands can make us sick. Washing with soap and clean water, before eating and after the toilet, stops germs and keeps everyone healthy.", ["Our hands touch desks, doors, money and animals, tiny germs stay on them, we should rub our hands for twenty seconds with soap and clean water before eating and after using the toilet, and then fewer people fall sick at the whole school.", "M_SUM_TOO_MUCH_DETAIL"], ["Our hands touch desks, doors, money and animals.", "M_SUM_MISSING_MAIN"], ["Washing hands is boring, but everyone should do it because the writer says so.", "M_SUM_OPINION"], "A summary keeps the problem, the way to stop it and the result."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "Our hands touch desks, doors, money and animals.", ["Germs can make us sick.", "M_SUM_CUTS_MAIN"], ["We should wash with soap and clean water.", "M_SUM_CUTS_MAIN"], ["Clean hands keep the school healthy.", "M_SUM_CUTS_MAIN"], "The list of things we touch is only a detail."],
+    skim: ["What is the passage mainly about.", "washing hands to stop germs", ["desks and doors", "M_SKIM_DETAIL_FOR_GIST"], ["twenty seconds", "M_SKIM_DETAIL_FOR_GIST"], ["diarrhoea only", "M_SKIM_DETAIL_FOR_GIST"], "The title and the last paragraph are about hand washing."],
+    scan: [["For how long should we rub our hands.", "twenty seconds|20 seconds|at least twenty seconds", ["ten seconds", "M_SCAN_WRONG_LINE"], ["one minute", "M_SCAN_READS_ALL"], ["five seconds", "M_SCAN_WRONG_LINE"], "Scan for the word rub: the sentence says at least twenty seconds.", { t: 1 }]]
+  },
+  {
+    id: "maize",
+    title: "Maize: Kenya's Main Food",
+    kind: "info",
+    text: "Maize is the most important food crop in Kenya. Farmers plant the seeds when the long rains begin in March or April.\n\nMaize needs sunshine and plenty of water to grow tall. After about four months, the cobs are ready to be harvested. Farmers pick them by hand and dry them in the sun.\n\nPeople eat maize in many ways. We grind it into flour to make ugali. We boil it with beans to make githeri. Some people roast the fresh cobs by the roadside.\n\nBecause so many families depend on maize, a poor harvest can make food very expensive.",
+    fact: [["When do farmers plant maize seeds.", "when the long rains begin|in March or April|March or April", ["when the short rains end", "M_FACT_NEARBY_DETAIL"], ["in December", "M_FACT_OUTSIDE_KNOWLEDGE"], ["in the dry season", "M_FACT_OUTSIDE_KNOWLEDGE"], "Farmers plant when the long rains begin in March or April.", { t: 1 }], ["What do people make by boiling maize with beans.", "githeri", ["ugali", "M_FACT_NEARBY_DETAIL"], ["porridge", "M_FACT_OUTSIDE_KNOWLEDGE"], ["chapati", "M_FACT_OUTSIDE_KNOWLEDGE"], "We boil maize with beans to make githeri.", { t: 1 }]],
+    tf: [["Maize takes about four months to be ready.", "True", "The cobs are ready after about four months."], ["Maize grows best without water.", "False", "The passage says maize needs plenty of water."], ["Maize was first grown in Kenya in 1900.", "Not stated", "The passage gives no date."]],
+    infer: ["Why can a poor maize harvest make food expensive.", "Many families need maize, so there is less to go round.", ["Farmers stop planting seeds.", "M_INFER_CONTRADICTS"], ["Shops close for a year.", "M_INFER_OVERREACH"], ["Maize is the most important food crop in Kenya.", "M_INFER_REPEATS_TEXT"], "Many families depend on maize, so a small harvest means less food for them."],
+    infer2: ["Maize is eaten in many homes across Kenya.", ["We grind maize into flour to make ugali.", "M_INFER_REPEATS_TEXT"], ["Nobody in Kenya eats maize.", "M_INFER_CONTRADICTS"], ["Every Kenyan eats maize at every meal.", "M_INFER_OVERREACH"], "It is the most important food crop and many families depend on it."],
+    ctx: ["harvested", "gathered when ripe", ["planted", "M_CTX_OPPOSITE"], ["hidden", "M_CTX_LOOKS_LIKE"], ["sold at the market", "M_CTX_COMMON_MEANING"], "Farmers pick the cobs by hand after four months."],
+    ctxclue: ["harvested", "Farmers pick them by hand and dry them in the sun", "Farmers plant the seeds", "We grind it into flour", "by the roadside", "Picking the cobs shows what harvesting is."],
+    main: ["What is the main idea of the passage.", "Maize is Kenya's most important food crop, grown and eaten in many ways.", ["Some people roast fresh cobs.", "M_MAIN_DETAIL"], ["Farming is hard work.", "M_MAIN_TOO_BROAD"], ["Kenya sells maize to other countries.", "M_MAIN_NOT_IN_TEXT"], "Each paragraph is about growing or eating maize."],
+    ttl: ["Maize: Kenya's Main Food", ["Roasted Cobs", "M_MAIN_DETAIL"], ["All the Crops of Africa", "M_MAIN_TOO_BROAD"], ["Selling Maize Abroad", "M_MAIN_NOT_IN_TEXT"], "It is about maize in Kenya."],
+    sum: ["Maize is Kenya's main food crop. It is planted in the long rains, harvested after four months and eaten in many ways, so a poor harvest makes food expensive.", ["Farmers plant maize when the long rains begin in March or April, it needs sunshine and plenty of water, the cobs are ready after four months, farmers pick them by hand and dry them, and people make ugali, githeri and roast cobs.", "M_SUM_TOO_MUCH_DETAIL"], ["Maize is the most important food crop in Kenya.", "M_SUM_MISSING_MAIN"], ["Maize is the tastiest food, and ugali is better than githeri.", "M_SUM_OPINION"], "A summary keeps how it is grown, how it is used and why it matters."],
+    leave: ["Which sentence is a small detail that a summary can leave out.", "Some people roast the fresh cobs by the roadside.", ["Maize is the most important food crop in Kenya.", "M_SUM_CUTS_MAIN"], ["The cobs are ready after about four months.", "M_SUM_CUTS_MAIN"], ["A poor harvest can make food expensive.", "M_SUM_CUTS_MAIN"], "Roasting cobs by the road is only an example."],
+    skim: ["What is the passage mainly about.", "how maize is grown and eaten in Kenya", ["roasting cobs", "M_SKIM_DETAIL_FOR_GIST"], ["the long rains", "M_SKIM_DETAIL_FOR_GIST"], ["the price of food", "M_SKIM_DETAIL_FOR_GIST"], "The title and every paragraph are about maize."],
+    scan: [["In which months do the long rains begin.", "March or April|March and April", ["December", "M_SCAN_WRONG_LINE"], ["June or July", "M_SCAN_WRONG_LINE"], ["January", "M_SCAN_READS_ALL"], "Scan for the long rains: the first paragraph says March or April.", { t: 1 }]]
+  },
+  {
+    id: "sports-notice",
+    title: "Sports Day Notice",
+    kind: "notice",
+    text: "MWANGAZA PRIMARY SCHOOL: SPORTS DAY\n\nDay: Friday, 20 March\nPlace: the school field\nGates open: 8:00 a.m.\nRaces start: 9:30 a.m.\nParents' race: 12:00 noon\nPrizes: 1:00 p.m.\n\nLearners should wear their house colours and bring a water bottle. Parents are welcome.",
+    scan: [["At what time do the races start.", "9:30 a.m.|9:30|9.30|9.30 a.m.", ["8:00 a.m.", "M_SCAN_WRONG_LINE"], ["12:00 noon", "M_SCAN_WRONG_LINE"], ["1:00 p.m.", "M_SCAN_WRONG_LINE"], "Scan for the word races: Races start 9:30 a.m.", { t: 1 }], ["What should learners bring.", "a water bottle|water bottle", ["a packed lunch", "M_SCAN_READS_ALL"], ["their house colours", "M_SCAN_WRONG_LINE"], ["a football", "M_SCAN_READS_ALL"], "They should wear house colours and bring a water bottle.", { t: 1 }], ["On which day is Sports Day.", "Friday", ["Monday", "M_SCAN_WRONG_LINE"], ["Saturday", "M_SCAN_WRONG_LINE"], ["Sunday", "M_SCAN_WRONG_LINE"], "Scan for the word Day: Friday, 20 March.", { t: 1 }], ["At what time are the prizes given.", "1:00 p.m.|1:00|1.00|1.00 p.m.", ["9:30 a.m.", "M_SCAN_WRONG_LINE"], ["12:00 noon", "M_SCAN_WRONG_LINE"], ["8:00 a.m.", "M_SCAN_WRONG_LINE"], "Scan for the word Prizes: 1:00 p.m.", { t: 1 }]],
+    skim: ["What is the notice mainly about.", "a sports day at a school", ["a water bottle", "M_SKIM_DETAIL_FOR_GIST"], ["a parents' race", "M_SKIM_DETAIL_FOR_GIST"], ["house colours", "M_SKIM_DETAIL_FOR_GIST"], "The heading says Sports Day."]
+  },
+  {
+    id: "bus-timetable",
+    title: "Bus Timetable",
+    kind: "notice",
+    text: "NAKURU TO ELDORET BUS\n\nLeaves Nakuru: 6:30 a.m., 10:00 a.m., 2:00 p.m.\nArrives Eldoret: 9:30 a.m., 1:00 p.m., 5:00 p.m.\n\nFares\nAdults: sh 700\nChildren under twelve: sh 350\nExtra bags: sh 100 each (one bag is free)",
+    scan: [["At what time does the second bus leave Nakuru.", "10:00 a.m.|10:00|10.00|10.00 a.m.", ["6:30 a.m.", "M_SCAN_WRONG_LINE"], ["2:00 p.m.", "M_SCAN_WRONG_LINE"], ["1:00 p.m.", "M_SCAN_WRONG_LINE"], "The second time in the Leaves Nakuru line is 10:00 a.m.", { t: 1 }], ["How much is a child's fare.", "sh 350|350|350 shillings", ["sh 700", "M_SCAN_WRONG_LINE"], ["sh 100", "M_SCAN_WRONG_LINE"], ["sh 1050", "M_SCAN_READS_ALL"], "Scan for children: sh 350.", { t: 1 }], ["At what time does the last bus arrive in Eldoret.", "5:00 p.m.|5:00|5.00|5.00 p.m.", ["2:00 p.m.", "M_SCAN_WRONG_LINE"], ["9:30 a.m.", "M_SCAN_WRONG_LINE"], ["1:00 p.m.", "M_SCAN_WRONG_LINE"], "The last time in the Arrives Eldoret line is 5:00 p.m.", { t: 1 }], ["How much does each extra bag cost.", "sh 100|100|100 shillings", ["sh 350", "M_SCAN_WRONG_LINE"], ["sh 700", "M_SCAN_WRONG_LINE"], ["nothing", "M_SCAN_READS_ALL"], "Scan for bags: extra bags are sh 100 each.", { t: 1 }]],
+    skim: ["What is the notice mainly about.", "bus times and fares from Nakuru to Eldoret", ["one free bag", "M_SKIM_DETAIL_FOR_GIST"], ["a child's ticket", "M_SKIM_DETAIL_FOR_GIST"], ["an adult's ticket", "M_SKIM_DETAIL_FOR_GIST"], "The heading and the lines show times and fares."]
+  }
+];
+
+// src/ai-tutor/content/families/eng_g5_reading.js
+var QTEXT = {
+  ctx: (w) => `In the passage, what does the word "${w}" mean.`,
+  ctxclue: (w) => `Which words in the passage help you to understand the word "${w}".`,
+  clue: (p) => `Which sentence from the passage is the best clue for this prediction: "${p}".`,
+  ttl: () => "Which title best fits the passage.",
+  sum: () => "Which is the best summary of the passage.",
+  infer2: () => "Which of these can you work out from the passage, even though it is not written in it."
+};
+var RAW_CODE = { ctxclue: "M_CTX_WRONG_CLUE", clue: "M_PRED_NO_CLUE" };
+var LEAD_RIGHT = /* @__PURE__ */ new Set(["ttl", "sum", "infer2"]);
+var norm2 = (key, e) => {
+  const a = [...e];
+  const flags = a.length && !Array.isArray(a[a.length - 1]) && typeof a[a.length - 1] === "object" ? a.pop() : {};
+  const because = a.pop();
+  if (key === "ctx") return { q: QTEXT.ctx(a[0]), right: a[1], wrongs: a.slice(2), because, flags };
+  if (RAW_CODE[key]) return { q: QTEXT[key](a[0]), right: a[1], wrongs: a.slice(2).map((t) => [t, RAW_CODE[key]]), because, flags };
+  if (LEAD_RIGHT.has(key)) return { q: QTEXT[key](), right: a[0], wrongs: a.slice(1), because, flags };
+  return { q: a[0], right: a[1], wrongs: a.slice(2), because, flags };
+};
+var LISTY = /* @__PURE__ */ new Set(["who", "fact", "tf", "scan"]);
+var entriesOf = (key) => PASSAGES.flatMap((p) => p[key] ? (LISTY.has(key) ? p[key] : [p[key]]).map((e) => ({ p, e })) : []);
+var showP = (p) => ({ title: p.title, text: p.text });
+var optionsOf2 = (cskill, n, wrongs, right) => mc3(right, shuffle9(wrongs).slice(0, 3).map(([t, code]) => [t, feedbackOf(cskill, code), code]));
+var passChoose = (key, { hints, typedOnly = false }) => (cskill) => {
+  const { p, e } = pick(entriesOf(key).filter((x) => !typedOnly || norm2(key, x.e).flags.t));
+  const n = norm2(key, e), options = optionsOf2(cskill, 3, n.wrongs, n.right.split("|")[0]);
+  if (!options) return null;
+  return { passage: showP(p), question: n.q, options, instruction: "Read the passage. Then choose the best answer.", hints, steps: [n.because, `The answer is "${n.right.split("|")[0]}".`] };
+};
+var passType = (key, { hints }) => (cskill) => {
+  const { p, e } = pick(entriesOf(key).filter((x) => norm2(key, x.e).flags.t));
+  const n = norm2(key, e), [shown, ...alt] = n.right.split("|");
+  return { passage: showP(p), question: n.q, answer: shown, accepts: alt, wrong: n.wrongs.map(([t, code]) => [t, feedbackOf(cskill, code), code]), instruction: "Read the passage. Then type a short answer.", hints: [...hints, `The answer starts with "${shown[0]}".`], steps: [n.because, `The answer is "${shown}".`], chk: (a) => [shown, ...alt].includes(String(a)) };
+};
+var TF_WRONG = { True: [["False", "M_FACT_MISSES_STATED"], ["Not stated", "M_FACT_MISSES_STATED"]], False: [["True", "M_FACT_FALSE_AS_TRUE"], ["Not stated", "M_FACT_FALSE_AS_NOT_STATED"]], "Not stated": [["True", "M_FACT_NOT_STATED_AS_TRUE"], ["False", "M_FACT_NOT_STATED_AS_TRUE"]] };
+var tfn = ({ hints }) => (cskill) => {
+  const { p, e } = pick(entriesOf("tf"));
+  const [statement, ans, because] = e;
+  const options = mc3(ans, TF_WRONG[ans].map(([t, code]) => [t, feedbackOf(cskill, code), code]));
+  if (!options) return null;
+  return { passage: showP(p), question: `Is this true, false or not stated in the passage: "${statement}"`, options, fixedOrder: true, instruction: "Read the passage. Then choose the best answer.", hints, steps: [because, `The answer is "${ans}".`] };
+};
+var orderGen = (cskill) => {
+  const p = pick(PASSAGES.filter((x) => x.order));
+  const ev = p.order;
+  let show;
+  do {
+    show = shuffle9(ev.map((t, i2) => i2));
+  } while (show.every((v, i2) => v === i2));
+  const letter = (idx) => "ABCD"[show.indexOf(idx)];
+  const seq = (arr) => arr.map(letter).join(", ");
+  const base = [0, 1, 2, 3];
+  const right = seq(base), reversed = seq([...base].reverse());
+  const i = randInt(0, 2), sw = [...base];
+  [sw[i], sw[i + 1]] = [sw[i + 1], sw[i]];
+  const rot5 = seq([3, 0, 1, 2]);
+  const options = mc3(right, [[reversed, feedbackOf(cskill, "M_ELEM_ORDER_REVERSED"), "M_ELEM_ORDER_REVERSED"], [seq(sw), feedbackOf(cskill, "M_ELEM_ORDER_SWAPPED"), "M_ELEM_ORDER_SWAPPED"], [rot5, feedbackOf(cskill, "M_ELEM_ORDER_REVERSED"), "M_ELEM_ORDER_REVERSED"]]);
+  if (!options) return null;
+  const list = show.map((idx, k) => `${"ABCD"[k]} ${ev[idx]}`).join(" ");
+  return {
+    passage: showP(p),
+    question: `These four events from the story are mixed up. Which list shows the order in which they happened. ${list}`,
+    options,
+    fixedOrder: false,
+    instruction: "Read the passage. Then choose the best answer.",
+    hints: ["Find the first event in the passage, then the next, and so on.", "Look for time words such as then, after, later and soon."],
+    steps: [`In the story the events happen in this order: ${ev.map((t, k) => `${k + 1}. ${t}`).join(" ")}`, `Written as letters this is ${right}.`],
+    chk: () => seq(base) === right
+  };
+};
+var H2 = (a, b) => [a, b];
+var FAMILIES31 = [
+  eng({ id: "eng5.elem.choose", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "word", rung: 1, gen: passChoose("who", { hints: H2("Find the sentence in the passage that names the person or place.", "A character is a person or animal that acts. A place is where the story happens.") }) }),
+  eng({ id: "eng5.elem.type", kind: "type-short", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "word", rung: 2, gen: passType("who", { hints: H2("Find the sentence in the passage that names the person.", "Write only the name or the short answer.") }) }),
+  eng({ id: "eng5.elem.order", kind: "order-events", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "steps", rung: 2, gen: orderGen }),
+  eng({ id: "eng5.predict.choose", kind: "choose-prediction", cs: "READIN.T2.PREDICT", oc: "b", form: "word", rung: 2, gen: passChoose("predict", { hints: H2("Read the last lines again. Which clue points to what comes next?", "A good prediction is not told yet, and does not go against the story.") }) }),
+  eng({ id: "eng5.predict.clue", kind: "choose-clue", cs: "READIN.T2.PREDICT", oc: "b", form: "why", rung: 3, gen: passChoose("clue", { hints: H2("A clue is a sentence from the passage that points to the prediction.", "Ask: which sentence makes this prediction likely?") }) }),
+  eng({ id: "eng5.fact.choose", cs: "READIN.T2.FACTUAL_QUESTIONS", oc: "c", form: "word", rung: 1, gen: passChoose("fact", { hints: H2("The answer is written in the passage. Find the sentence that answers the question.", "Check that your answer matches what the question asks, not just a word in it.") }) }),
+  eng({ id: "eng5.fact.type", kind: "type-short", cs: "READIN.T2.FACTUAL_QUESTIONS", oc: "c", form: "word", rung: 2, gen: passType("fact", { hints: H2("The answer is written in the passage. Find the sentence that answers the question.", "Write only the short answer.") }) }),
+  eng({ id: "eng5.fact.tfn", kind: "true-false-not-stated", cs: "READIN.T2.FACTUAL_QUESTIONS", oc: "c", form: "word", rung: 2, gen: tfn({ hints: H2("Find the sentence in the passage about this. Does it say the same, say something different, or say nothing?", "True: the passage says it. False: the passage says something different. Not stated: the passage does not say.") }) }),
+  eng({ id: "eng5.infer.choose", cs: "READIN.T2.INFERENCE_QUESTIONS", oc: "c", form: "why", rung: 2, gen: passChoose("infer", { hints: H2("The passage does not say the answer outright. Look for clues.", "Ask: what do the clues in the passage show?") }) }),
+  eng({ id: "eng5.infer.worked-out", kind: "choose-inference", cs: "READIN.T2.INFERENCE_QUESTIONS", oc: "c", form: "why", rung: 3, gen: passChoose("infer2", { hints: H2("Something worked out is not written in the passage, but the clues show it.", "A sentence copied from the passage is stated, not worked out. A claim the passage goes against, or has no clue for, is not a good inference.") }) }),
+  eng({ id: "eng5.ctx.meaning", kind: "choose-meaning", cs: "READIN.T2.CONTEXT_CLUES", oc: "d", form: "word", rung: 2, gen: passChoose("ctx", { hints: H2("Read the sentence with the word, and the sentences around it.", "Try each meaning in place of the word. Which one fits?") }) }),
+  eng({ id: "eng5.ctx.clue", kind: "choose-clue", cs: "READIN.T2.CONTEXT_CLUES", oc: "d", form: "why", rung: 3, gen: passChoose("ctxclue", { hints: H2("A clue is a group of words that tells more about the hard word.", "Ask: which words explain what the word means?") }) }),
+  eng({ id: "eng5.main.idea", kind: "choose-main-idea", cs: "READIN.T9.MAIN_IDEA", oc: "a", form: "word", rung: 2, gen: passChoose("main", { hints: H2("The main idea covers the whole passage, not just one part.", "Ask: what is every paragraph mostly about?") }) }),
+  eng({ id: "eng5.main.title", kind: "choose-title", cs: "READIN.T9.MAIN_IDEA", oc: "a", form: "word", rung: 2, gen: passChoose("ttl", { hints: H2("A good title tells what the whole passage is about.", "A title that names only a detail, or something not in the passage, is not the best.") }) }),
+  eng({ id: "eng5.sum.best", kind: "choose-summary", cs: "READIN.T9.SUMMARISE", oc: "c", form: "word", rung: 3, gen: passChoose("sum", { hints: H2("A summary is short and keeps the main points in order.", "Leave out small details and your own opinion.") }) }),
+  eng({ id: "eng5.sum.leave", kind: "choose-detail", cs: "READIN.T9.SUMMARISE", oc: "c", form: "word", rung: 3, gen: passChoose("leave", { hints: H2("A main point tells what happens or what the passage is about.", "A small detail adds colour but the story still makes sense without it.") }) }),
+  eng({ id: "eng5.scan.choose", kind: "choose-scan", cs: "READIN.T5.SCAN_SKIM", oc: "b", form: "word", rung: 1, gen: passChoose("scan", { hints: H2("Look for the key word of the question, then read only that line.", "Do not read every word. Scan for the number, time or name you need.") }) }),
+  eng({ id: "eng5.scan.type", kind: "type-scan", cs: "READIN.T5.SCAN_SKIM", oc: "b", form: "word", rung: 2, gen: passType("scan", { hints: H2("Look for the key word of the question, then read only that line.", "Write the detail exactly as it appears.") }) }),
+  eng({ id: "eng5.skim.gist", kind: "choose-gist", cs: "READIN.T5.SCAN_SKIM", oc: "c", form: "word", rung: 1, gen: passChoose("skim", { hints: H2("Read the title and the first lines quickly.", "Ask: what is the whole text about, not just one detail?") }) })
+];
+
+// src/ai-tutor/content/families/english.js
+var ENGLISH_G5 = [...FAMILIES29, ...FAMILIES30, ...FAMILIES31];
+var ENGLISH_FAMILIES = [...ENGLISH_G5];
+
+// src/learner/subject.js
+var PREFIX = { MATH: "math", SCIE: "science", ENGL: "english" };
+var subjectOfCskill = (code) => PREFIX[String(code || "").split(".")[0]] || null;
+
 // src/learner/mastery.js
 var MASTERED_DUE_WORDS = "Mastered, due a re-check";
 var RULES = {
@@ -35107,7 +37495,7 @@ function canonicalise(raw) {
   s = s.replace(/\s+/g, "");
   return s;
 }
-function parse(src) {
+function parse2(src) {
   let i = 0;
   const peek = () => src[i];
   const fail = () => {
@@ -35230,7 +37618,7 @@ function parseAlgebra(raw) {
   if (/[a-z]{4,}/.test(s)) return null;
   if (/^[a-z]{3}$/.test(s)) return null;
   try {
-    return parse(s);
+    return parse2(s);
   } catch {
     return null;
   }
@@ -35344,6 +37732,19 @@ function algebraicallyEqual(userRaw, keyRaw, question) {
     return sameValue(user, key) && formOk(u, user, kRaw, key, wanted);
   });
 }
+
+// src/ai-tutor/answerCheckText.js
+var fold = (s) => String(s ?? "").trim().toLowerCase().replace(/[‘’ʼ´`]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").replace(/\s+([,.;:!?])/g, "$1");
+var tidy = (s) => String(s ?? "").trim().replace(/[\u2018\u2019\u02bc\u00b4`]/g, "'").replace(/[\u201c\u201d]/g, '"').replace(/\s+/g, " ");
+var checkTextAnswer = (userAnswer, problem) => {
+  if (problem.choices) return tidy(userAnswer) === tidy(problem.answer);
+  const u = fold(userAnswer);
+  if (!u) return false;
+  const keys = (problem.accepts?.length ? problem.accepts : [problem.answer]).map(fold);
+  if (keys.includes(u)) return true;
+  const bare = u.replace(/\.$/, "");
+  return !/[.!?"]$/.test(keys[0] || "") && keys.includes(bare);
+};
 
 // src/ai-tutor/answerCheck.js
 function normalizeMath(str) {
@@ -35636,23 +38037,24 @@ function askedUnit(problem) {
 function unitConflict(userAnswer, problem) {
   const given = unitAfterNumber(userAnswer);
   if (!given) return false;
-  const asked = askedUnit(problem);
-  if (!asked) return false;
-  if (given.family === "percent" && !asked.family) return false;
-  if (asked.group === "geometry") {
+  const asked2 = askedUnit(problem);
+  if (!asked2) return false;
+  if (given.family === "percent" && !asked2.family) return false;
+  if (asked2.group === "geometry") {
     if (!GEOMETRY[given.family]) return true;
-    const samePower = asked.units.filter((u) => u.family === given.family);
+    const samePower = asked2.units.filter((u) => u.family === given.family);
     return samePower.length > 0 && !samePower.some((u) => sameUnit(u, given));
   }
-  if (asked.family) {
+  if (asked2.family) {
     if (given.family === "percent") return false;
     const liquid = /* @__PURE__ */ new Set(["volume", "capacity"]);
-    if (asked.family !== given.family) return !(liquid.has(asked.family) && liquid.has(given.family));
-    return asked.units.length > 0 && !asked.units.some((u) => sameUnit(u, given));
+    if (asked2.family !== given.family) return !(liquid.has(asked2.family) && liquid.has(given.family));
+    return asked2.units.length > 0 && !asked2.units.some((u) => sameUnit(u, given));
   }
-  return !asked.units.some((u) => sameUnit(u, given));
+  return !asked2.units.some((u) => sameUnit(u, given));
 }
 function checkAnswerMatch(userAnswer, problem) {
+  if (problem && problem.marker === "text") return checkTextAnswer(userAnswer, problem);
   const normalizedUser = normalizeMath(userAnswer);
   const accepts2 = problem.accepts || [problem.answer];
   if (accepts2.some((a) => normalizedUser === normalizeMath(a))) return true;
@@ -35773,18 +38175,20 @@ function checkAnswerMatch(userAnswer, problem) {
 
 // src/school/homeworkSitting.js
 var LEAVE_REASONS = ["left the page", "switched away", "closed the page", "went back"];
-var norm2 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+var norm3 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
 function markItem(it, response) {
   const raw = String(response ?? "").trim();
   if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
   if (it.kind === "choice") {
-    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm2(x.text) === norm2(raw));
+    const same = it.marker === "text" ? (a, b) => String(a).trim() === String(b).trim() : (a, b) => norm3(a) === norm3(b);
+    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => same(x.text, raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
     return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
   }
-  const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
+  const check = it.marker === "text" ? checkTextAnswer : checkAnswerMatch;
+  const correct = check(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find((x) => x.mis && (norm2(x.value) === norm2(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
+  const w = (it.wrong || []).find((x) => x.mis && (norm3(x.value) === norm3(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
   return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
 }
 function step(s, ev, now) {
@@ -35870,23 +38274,35 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES28) if (usable(f)) {
+for (const f of [...FAMILIES28, ...ENGLISH_FAMILIES]) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }
 var familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
-var isCurriculumSkill = (code) => !!SKILLS_G5[code];
-var skillName = (code) => SKILLS_G5[code]?.name || code;
-var isReviewed = (f) => f.core === true || f.reviewed === true;
+var MAPS = { math: { skills: SKILLS_G5, substrands: null }, science: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5 }, english: { skills: SKILLS_E5, substrands: SUBSTRANDS_E5 } };
+var mapOf = (code) => MAPS[subjectOfCskill(code)]?.skills || {};
+var isReviewed = isSigned;
+var isCurriculumSkill = (code) => {
+  const subject = subjectOfCskill(code);
+  if (subject === "math") return !!SKILLS_G5[code];
+  if (subject === "science" || subject === "english") return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
+  return false;
+};
+var skillName = (code) => mapOf(code)[code]?.name || code;
+var topicOf = (code) => {
+  const s = mapOf(code)[code];
+  return MAPS[subjectOfCskill(code)]?.substrands?.[s?.sub]?.name || "";
+};
 var misCode = (cskill, short) => {
   if (!short) return null;
-  if (String(short).startsWith("MATH.")) return short;
-  const sk = SKILLS_G5[cskill];
+  if (/^(MATH|SCIE|ENGL)\./.test(String(short))) return short;
+  const map = mapOf(cskill);
+  const sk = map[cskill];
   if (sk?.mis?.includes(short)) return `${cskill}.${short}`;
-  for (const [code, s] of Object.entries(SKILLS_G5)) if (s.sub === sk?.sub && s.mis?.includes(short)) return `${code}.${short}`;
+  for (const [code, s] of Object.entries(map)) if (s.sub === sk?.sub && s.mis?.includes(short)) return `${code}.${short}`;
   return null;
 };
-var norm3 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+var norm4 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
 function toItem(p, n) {
   const base = {
     n,
@@ -35897,19 +38313,25 @@ function toItem(p, n) {
     question: p.question,
     instruction: p.instruction || ""
   };
+  if (p.marker) base.marker = p.marker;
+  if (subjectOfCskill(p.cskill) !== "math") {
+    base.skill_name = skillName(p.cskill);
+    base.topic = topicOf(p.cskill);
+  }
+  if (p.passage?.text) base.passage = { title: p.passage.title || "", text: p.passage.text };
   if (p.model?.type === "table") base.table = { head: p.model.data.head, rows: p.model.data.rows.map((r) => r.cells) };
   if (p.shownSteps) base.steps_shown = p.shownSteps;
   const workMis = misCode(p.cskill, [].concat(p.mis || [])[0]);
   if (p.choices || p.mc) {
     const texts = (p.choices || p.mc).map(String);
-    const mis = Object.fromEntries((p.misconceptions || []).map((m) => [norm3(m.when), m]));
+    const mis = Object.fromEntries((p.misconceptions || []).map((m) => [norm4(m.when), m]));
     return {
       ...base,
       kind: "choice",
       answer: String(p.answer),
       options: texts.map((text, i) => {
-        const right = norm3(text) === norm3(p.answer);
-        const m = mis[norm3(text)];
+        const right = norm4(text) === norm4(p.answer);
+        const m = mis[norm4(text)];
         return { key: LETTERS3[i], text, right, ...right ? {} : { mis: m?.mis ? misCode(p.cskill, m.mis) : p.type === "spot-mistake" ? workMis : null, why: m?.feedback || "" } };
       })
     };
@@ -35932,6 +38354,8 @@ var keyItem = (it) => it && {
   kind: it.kind,
   question: it.question,
   instruction: it.instruction,
+  ...it.marker ? { marker: it.marker } : {},
+  ...it.passage ? { passage: it.passage } : {},
   ...it.table ? { table: it.table } : {},
   ...it.steps_shown ? { steps_shown: it.steps_shown } : {},
   answer: it.answer,
@@ -35942,7 +38366,8 @@ function allowedFamilies(cskills, approvedIds = []) {
   const families = {};
   const missing = [];
   for (const c of cskills) {
-    const list = familiesForSkill(c).filter((f) => isReviewed(f) || approved.has(f.id));
+    const maths = subjectOfCskill(c) === "math";
+    const list = familiesForSkill(c).filter((f) => isReviewed(f) || maths && approved.has(f.id));
     if (list.length) families[c] = list;
     else missing.push(c);
   }
@@ -35952,6 +38377,7 @@ function samplesFor(cskills, perFamily = 2) {
   const out = [];
   for (const c of cskills) {
     for (const f of familiesForSkill(c)) {
+      if (subjectOfCskill(c) !== "math" && !isReviewed(f)) continue;
       const samples = [];
       for (let k = 0; k < perFamily; k++) samples.push(keyItem(toItem(withSeed(`preview:${f.id}:${k}`, () => drawFamily(f).p), k + 1)));
       out.push({ family_id: f.id, cskill: c, form: f.form, rung: f.rung, reviewed: isReviewed(f), samples });
@@ -35972,9 +38398,9 @@ function drawCore({ seed, cskills, families, count }) {
     queue[c] = { list, next: 0 };
   }
   const skills = cskills.filter((c) => queue[c].list.length);
-  const items = [];
+  const items2 = [];
   const seen = /* @__PURE__ */ new Set();
-  for (let slot = 0; items.length < count && slot < count * 4; slot++) {
+  for (let slot = 0; items2.length < count && slot < count * 4; slot++) {
     const c = skills[slot % skills.length];
     const q = queue[c];
     const f = q.list[q.next % q.list.length];
@@ -35982,30 +38408,30 @@ function drawCore({ seed, cskills, families, count }) {
     let it = null;
     for (let t = 0; t < 4 && !it; t++) {
       const p = withSeed(`${seed}:${slot}:${t}`, () => drawFamily(f).p);
-      if (!seen.has(norm3(p.question))) it = toItem(p, 0);
+      if (!seen.has(norm4(p.question))) it = toItem(p, 0);
     }
     if (!it) continue;
-    seen.add(norm3(it.question));
-    items.push(it);
+    seen.add(norm4(it.question));
+    items2.push(it);
   }
-  items.sort((a, b) => a.rung - b.rung);
-  for (let i = 1; i < items.length; i++) {
-    if (items[i].family_id !== items[i - 1].family_id) continue;
-    const j = items.findIndex((x, k) => k > i && x.rung === items[i].rung && x.family_id !== items[i - 1].family_id);
-    if (j > 0) [items[i], items[j]] = [items[j], items[i]];
+  items2.sort((a, b) => a.rung - b.rung);
+  for (let i = 1; i < items2.length; i++) {
+    if (items2[i].family_id !== items2[i - 1].family_id) continue;
+    const j = items2.findIndex((x, k) => k > i && x.rung === items2[i].rung && x.family_id !== items2[i - 1].family_id);
+    if (j > 0) [items2[i], items2[j]] = [items2[j], items2[i]];
   }
-  return items.map((it, i) => ({ ...it, n: i + 1 }));
+  return items2.map((it, i) => ({ ...it, n: i + 1 }));
 }
 function drawSet({ seed, cskills, families, count, recheck = [] }) {
   const rc = [...new Set(recheck)].filter((c) => (families[c] || []).length);
   const slots = rc.length ? Math.min(recheckSlots(count), count - HW_MIN) : 0;
   if (slots < 1) return drawCore({ seed, cskills, families, count });
   const main = drawCore({ seed, cskills, families, count: count - slots });
-  const seen = new Set(main.map((it) => norm3(it.question)));
-  const extra = drawCore({ seed: `${seed}:recheck`, cskills: rc, families, count: slots + 3 }).filter((it) => !seen.has(norm3(it.question))).slice(0, slots).map((it) => ({ ...it, recheck: true }));
-  const items = [...main];
-  extra.forEach((it, k) => items.splice(Math.min(items.length, 4 + k * 5), 0, it));
-  return items.map((it, i) => ({ ...it, n: i + 1 }));
+  const seen = new Set(main.map((it) => norm4(it.question)));
+  const extra = drawCore({ seed: `${seed}:recheck`, cskills: rc, families, count: slots + 3 }).filter((it) => !seen.has(norm4(it.question))).slice(0, slots).map((it) => ({ ...it, recheck: true }));
+  const items2 = [...main];
+  extra.forEach((it, k) => items2.splice(Math.min(items2.length, 4 + k * 5), 0, it));
+  return items2.map((it, i) => ({ ...it, n: i + 1 }));
 }
 var REF2 = /^[A-Z2-9]{8}$/;
 var UUID = /^[a-f0-9-]{36}$/;
@@ -36042,8 +38468,8 @@ function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   return refs.map((ref, i) => {
     const version = hw.versions ? i % hw.versions + 1 : null;
     const seed = version ? `${homeworkRef}:v${version}` : `${homeworkRef}:${ref}`;
-    const items = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] });
-    return { learner_ref: ref, code: makeCode(), seed, version, items, answers: [], status: "issued", mode: hw.mode };
+    const items2 = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] });
+    return { learner_ref: ref, code: makeCode(), seed, version, items: items2, answers: [], status: "issued", mode: hw.mode };
   });
 }
 
@@ -36168,12 +38594,12 @@ function cleanEvidenceItem(it, door) {
 }
 async function doorEvidence(door, p, deps) {
   if (p.action !== "evidence") return null;
-  const items = Array.isArray(p.items) ? p.items : [];
-  if (!items.length) return no2(400, "No marks given");
-  if (items.length > EVIDENCE_MAX_ITEMS) return no2(413, `${EVIDENCE_MAX_ITEMS} marks at most in one call`);
+  const items2 = Array.isArray(p.items) ? p.items : [];
+  if (!items2.length) return no2(400, "No marks given");
+  if (items2.length > EVIDENCE_MAX_ITEMS) return no2(413, `${EVIDENCE_MAX_ITEMS} marks at most in one call`);
   const skipped = [];
   const rows = /* @__PURE__ */ new Map();
-  items.forEach((it, i) => {
+  items2.forEach((it, i) => {
     const c = cleanEvidenceItem(it, door);
     if (c.why) {
       skipped.push({ i, why: c.why });
@@ -36209,7 +38635,7 @@ async function doorEvidence(door, p, deps) {
     updated++;
   }
   if (fresh.length) await store.insertEvidence(fresh);
-  return ok2({ received: items.length, saved: fresh.length, updated, same, skipped });
+  return ok2({ received: items2.length, saved: fresh.length, updated, same, skipped });
 }
 
 // src/school/recheckDoor.js

@@ -19,7 +19,7 @@
 import { pick } from '../schema.js';
 import { family } from './core.js';
 import { SKILLS_SCI_G5, OUTCOMES_SCI_G5, MIS_FEEDBACK } from '../curriculumMap.science.g5.js';
-import { SIGNED } from './sci_signed.js';
+import { SIGNED_SCIENCE } from './sci_signed.js';
 
 export { pick };
 export const shuffle = (a) => { const b = [...a]; for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; };
@@ -70,5 +70,5 @@ export const sfam = (d) => {
   const outcome = oc ? ck.outcomes.find(o => o.endsWith(`.${oc}`)) : ck.outcome;
   if (!outcome || !OUTCOMES_SCI_G5[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
   const draw = () => gen();
-  return family({ reviewed: SIGNED.includes(id), subject: 'science', ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: x => x, check: () => true });
+  return family({ reviewed: SIGNED_SCIENCE.includes(id), subject: 'science', ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: x => x, check: () => true });
 };

@@ -38,7 +38,7 @@ export function buildChoices(problem) {
     if (!Number.isFinite(v) || !Number.isFinite(d) || v === 0 || d === 0) return true;
     return Math.abs(Math.log10(Math.abs(d)) - Math.log10(Math.abs(v))) <= 1.05;
   };
-  const push = (s) => { s = String(s).trim(); if (isWrong(s) && plausible(s) && !opts.some(o => o === s || checkAnswerMatch(o, { answer: s }))) opts.push(s); };
+  const push = (s) => { s = String(s).trim(); if (isWrong(s) && plausible(s) && !opts.some(o => o === s || checkAnswerMatch(o, { answer: s, ...(problem.marker ? { marker: problem.marker } : {}) }))) opts.push(s); };
   for (const m of problem.misconceptions || []) if (m?.when != null && m.feedback) push(m.when);
   if (opts.length < 2) return null;
   if (opts.length < 3 && Number.isFinite(v) && v !== 0) {

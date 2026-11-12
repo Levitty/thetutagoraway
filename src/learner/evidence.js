@@ -12,6 +12,8 @@
 // written to skill_id as well as cskill until mastery.js reads cskill alone.
 // ============================================================================
 
+import { subjectOfCskill } from './subject.js';
+
 export const SOURCES = ['practice', 'school_homework', 'school_exam', 'tutor', 'visual'];
 export const DIFFICULTIES = ['easy', 'medium', 'hard'];
 
@@ -27,6 +29,9 @@ export function practiceEvidence(ev) {
   const out = { source: 'practice' };
   if (typeof ev?.cskill === 'string' && ev.cskill) out.cskill = ev.cskill.slice(0, 120);
   if (DIFFICULTIES.includes(ev?.difficulty)) out.difficulty = ev.difficulty;
+  // Science and English items also name the official outcome they test, so the roll-up by outcome works as it does for exams.
+  // A Maths practice row is written exactly as before.
+  if (typeof ev?.outcome === 'string' && /^(SCIE|ENGL)\./.test(ev.outcome) && subjectOfCskill(ev.cskill) === subjectOfCskill(ev.outcome)) out.outcome_code = ev.outcome.slice(0, 120);
   return out;
 }
 
@@ -42,7 +47,7 @@ export function homeworkEvidence({ homework, sitting, answer }) {
   if (!item?.cskill || !homework?.door_id || !sitting?.learner_ref) return null;
   return {
     source: 'school_homework', door_id: homework.door_id, learner_ref: sitting.learner_ref,
-    subject: 'math', skill_id: item.cskill, cskill: item.cskill,
+    subject: subjectOfCskill(item.cskill) || 'math', skill_id: item.cskill, cskill: item.cskill,
     correct: !!answer.correct, misconception: answer.mis || null, independent: true, marks: answer.correct ? 1 : 0, max_marks: 1,
     item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}${item.recheck ? ':recheck' : ''}`,
     submitted_value: answer.chosen ? String(answer.chosen).slice(0, 500) : null,

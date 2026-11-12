@@ -348,7 +348,7 @@ for (const [code, k] of Object.entries(SKILLS_SCI_G5)) {
   if (forms.size < 3) sciSoft.push(`${code}: ${forms.size} question form(s), 3 or more wanted`);
 }
 for (const [full, m] of Object.entries(sciMis)) if (!revealed.has(`${m.skill}|${full.slice(m.skill.length + 1)}`)) sciSoft.push(`${full.replace('SCIE.G5.', '')}: no wrong answer reveals this misconception`);
-for (const f of sciFams) if (f.reviewed === true) sciSoft.push(`${f.id}: signed off (reviewed) , confirm in sci_signed.js`);
+for (const f of sciFams) if (f.reviewed === true) sciSoft.push(`${f.id}: signed off (reviewed) , confirm in sci_signed.js (SIGNED_SCIENCE)`);
 setFamilyMode('reviewed');
 console.log(`\n--- Grade 5 Science and Technology (${sciFams.length} families, ${Object.keys(SKILLS_SCI_G5).length} skills, ${Object.keys(OUTCOMES_SCI_G5).length} outcomes) ---`);
 console.log('  skills with 2+ families: ' + sciRows.filter(r => r.families >= 2).length + '/' + sciRows.length + ', 3+ forms: ' + sciRows.filter(r => r.forms >= 3).length + ', median structures: ' + [...sciRows.map(r => r.structures)].sort((a, b) => a - b)[sciRows.length >> 1]);

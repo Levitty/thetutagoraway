@@ -35,6 +35,11 @@
   .lead { color: var(--ink2); margin: 0 0 18px; }
   .card { background: var(--card); border-radius: 24px; padding: 20px; box-shadow: 0 1px 0 rgba(22,22,26,.04); }
   .q { font-size: 21px; line-height: 1.35; font-weight: 700; letter-spacing: -.015em; margin: 0 0 6px; }
+  .passage { background: var(--pink-tint); border-radius: 18px; padding: 14px 16px; margin: 0 0 16px; }
+  .passage .pk { font-size: 11px; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: var(--pink-deep); margin: 0 0 6px; }
+  .passage h2 { font-size: 19px; line-height: 1.25; letter-spacing: -.02em; font-weight: 800; margin: 0 0 8px; }
+  .passage p { font-size: 17px; line-height: 1.6; margin: 0 0 10px; color: var(--ink); overflow-wrap: anywhere; }
+  .passage p:last-child { margin-bottom: 0; }
   .instr { font-size: 14px; color: var(--muted); margin: 0 0 16px; }
   table { border-collapse: collapse; width: 100%; margin: 4px 0 16px; font-size: 16px; font-variant-numeric: tabular-nums; }
   th, td { text-align: left; padding: 8px 10px; border-bottom: 1px solid var(--line); }
@@ -116,9 +121,16 @@
     question(v);
   };
 
+  // A comprehension question's text to read first, above the question: paragraphs split at a blank line.
+  var passage = function (p) {
+    if (!p || !p.text) return '';
+    return '<section class="passage" aria-label="Read this first"><div class="pk">Read this first</div>' + (p.title ? '<h2>' + esc(p.title) + '</h2>' : '')
+      + String(p.text).split(/\n{2,}/).map(function (t) { return t.trim(); }).filter(Boolean).map(function (t) { return '<p>' + esc(t) + '</p>'; }).join('') + '</section>';
+  };
+
   var question = function (v, mark) {
     var it = v.item; if (!it) return;
-    var h = top(v) + '<div class="card"><p class="q">' + esc(it.question) + '</p>' + (it.instruction ? '<p class="instr">' + esc(it.instruction) + '</p>' : '');
+    var h = top(v) + '<div class="card">' + passage(it.passage) + '<p class="q">' + esc(it.question) + '</p>' + (it.instruction ? '<p class="instr">' + esc(it.instruction) + '</p>' : '');
     if (it.table) h += '<table><thead><tr>' + it.table.head.map(function (c) { return '<th>' + esc(c) + '</th>'; }).join('') + '</tr></thead><tbody>'
       + it.table.rows.map(function (r) { return '<tr>' + r.map(function (c) { return '<td>' + esc(c) + '</td>'; }).join('') + '</tr>'; }).join('') + '</tbody></table>';
     if (it.steps_shown) h += '<ol class="work">' + it.steps_shown.map(function (s) { return '<li>' + esc(s) + '</li>'; }).join('') + '</ol>';

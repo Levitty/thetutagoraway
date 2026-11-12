@@ -141,7 +141,7 @@ export const diagnoseError = (problem, studentAnswer) => {
   // are marked, so "1 3/4" and "7/4" both find the same mistake.
   for (const m of problem?.misconceptions || []) {
     if (m?.when == null || !m.feedback) continue;
-    if (checkAnswerMatch(String(studentAnswer), { answer: String(m.when) })) return m.feedback;
+    if (checkAnswerMatch(String(studentAnswer), { answer: String(m.when), ...(problem?.marker ? { marker: problem.marker } : {}) })) return m.feedback;
   }
   const f = parseFractionArithmetic(problem?.question);
   if (f) return diagnoseFraction(f, studentAnswer);

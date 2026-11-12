@@ -5,6 +5,7 @@
 // Pure: no database, no clock of its own.
 // ============================================================================
 import { checkAnswerMatch } from '../ai-tutor/answerCheck.js';
+import { checkTextAnswer } from '../ai-tutor/answerCheckText.js';
 
 // Why a sitting locked, in the words Tuta shows the teacher (the same four as Tuta's own online homework).
 export const LEAVE_REASONS = ['left the page', 'switched away', 'closed the page', 'went back'];
@@ -12,6 +13,7 @@ const norm = (t) => String(t ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
 
 /** What the child's phone is sent: the question only, never the answer or the reasons. */
 export const publicItem = (it) => it && ({ n: it.n, kind: it.kind, question: it.question, instruction: it.instruction,
+  ...(it.passage ? { passage: it.passage } : {}),
   ...(it.table ? { table: it.table } : {}), ...(it.steps_shown ? { steps_shown: it.steps_shown } : {}),
   ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text })) } : {}) });
 
@@ -21,13 +23,17 @@ export function markItem(it, response) {
   const raw = String(response ?? '').trim();
   if (raw === '') return { correct: false, chosen: '', mis: null, blank: true };
   if (it.kind === 'choice') {
-    const o = it.options.find(x => x.key === raw.toUpperCase()) || it.options.find(x => norm(x.text) === norm(raw));
+    // English options differ by capital letters and punctuation, so a tapped text is matched exactly; Maths matches loosely.
+    const same = it.marker === 'text' ? (a, b) => String(a).trim() === String(b).trim() : (a, b) => norm(a) === norm(b);
+    const o = it.options.find(x => x.key === raw.toUpperCase()) || it.options.find(x => same(x.text, raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
     return { correct: !!o.right, chosen: o.key, mis: o.right ? null : (o.mis || null) };
   }
-  const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
+  // A word answer (marker 'text') is marked by answerCheckText.js; Maths by answerCheck.js.
+  const check = it.marker === 'text' ? checkTextAnswer : checkAnswerMatch;
+  const correct = check(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find(x => x.mis && (norm(x.value) === norm(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
+  const w = (it.wrong || []).find(x => x.mis && (norm(x.value) === norm(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
   return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
 }
 

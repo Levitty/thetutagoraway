@@ -28,7 +28,12 @@
 // ============================================================================
 import { FAMILIES } from '../ai-tutor/content/families/index.js';
 import { drawFamily } from '../ai-tutor/content/families/core.js';
+import { ENGLISH_FAMILIES } from '../ai-tutor/content/families/english.js';
+import { isSigned } from '../ai-tutor/content/families/core.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
+import { SKILLS_SCI_G5, SUBSTRANDS_SCI_G5 } from '../ai-tutor/content/curriculumMap.science.g5.js';
+import { SKILLS_E5, SUBSTRANDS_E5 } from '../ai-tutor/content/curriculumMap.english.g5.js';
+import { subjectOfCskill } from '../learner/subject.js';
 import { recheckSlots } from '../learner/recheck.js';
 import { publicItem, markItem, step, sittingView, resultsFor } from './homeworkSitting.js';
 
@@ -70,19 +75,36 @@ export const withSeed = (text, fn) => {
 // working with one wrong step. Multi-part questions stay in the lesson.
 const usable = (f) => !!f.cskill && f.form !== 'steps';
 const BY_CSKILL = new Map();
-for (const f of FAMILIES) if (usable(f)) { if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []); BY_CSKILL.get(f.cskill).push(f); }
+// Maths and Science families are in FAMILIES; English families live in their own list (families/english.js).
+for (const f of [...FAMILIES, ...ENGLISH_FAMILIES]) if (usable(f)) { if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []); BY_CSKILL.get(f.cskill).push(f); }
 export const familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
-export const isCurriculumSkill = (code) => !!SKILLS_G5[code];
-export const skillName = (code) => SKILLS_G5[code]?.name || code;
-const isReviewed = (f) => f.core === true || f.reviewed === true;
+
+// The curriculum map of each subject: the skill codes a homework may name.
+const MAPS = { math: { skills: SKILLS_G5, substrands: null }, science: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5 }, english: { skills: SKILLS_E5, substrands: SUBSTRANDS_E5 } };
+const mapOf = (code) => MAPS[subjectOfCskill(code)]?.skills || {};
+const isReviewed = isSigned;   // the one rule: signed off (core or reviewed) is the only way a family reaches a child
+/**
+ * A homework may name a Maths skill of the Grade 5 map as before. A Science or English skill only when at least one of its
+ * families is signed off: with none signed, no science or english code is accepted and nothing is reachable.
+ */
+export const isCurriculumSkill = (code) => {
+  const subject = subjectOfCskill(code);
+  if (subject === 'math') return !!SKILLS_G5[code];
+  if (subject === 'science' || subject === 'english') return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
+  return false;
+};
+export const skillName = (code) => mapOf(code)[code]?.name || code;
+/** The sub-strand name of a skill, for the learner home; '' for Maths (it reads its own map). */
+export const topicOf = (code) => { const s = mapOf(code)[code]; return MAPS[subjectOfCskill(code)]?.substrands?.[s?.sub]?.name || ''; };
 
 /** The full library code of a family's misconception: the skill's own, else a skill of the same sub-strand that has it. */
 export const misCode = (cskill, short) => {
   if (!short) return null;
-  if (String(short).startsWith('MATH.')) return short;
-  const sk = SKILLS_G5[cskill];
+  if (/^(MATH|SCIE|ENGL)\./.test(String(short))) return short;
+  const map = mapOf(cskill);
+  const sk = map[cskill];
   if (sk?.mis?.includes(short)) return `${cskill}.${short}`;
-  for (const [code, s] of Object.entries(SKILLS_G5)) if (s.sub === sk?.sub && s.mis?.includes(short)) return `${code}.${short}`;
+  for (const [code, s] of Object.entries(map)) if (s.sub === sk?.sub && s.mis?.includes(short)) return `${code}.${short}`;
   return null;
 };
 
@@ -93,6 +115,11 @@ const norm = (t) => String(t ?? '').trim().replace(/\s+/g, ' ').toLowerCase();
 export function toItem(p, n) {
   const base = { n, family_id: p.familyId, cskill: p.cskill, form: p.familyForm, rung: p.rung,
     question: p.question, instruction: p.instruction || '' };
+  // English: marked as words (answerCheckText.js), and a comprehension item carries the text to read first.
+  if (p.marker) base.marker = p.marker;
+  // The learner home names a skill from its own Maths map; for another subject the item carries the name, so that page stays small.
+  if (subjectOfCskill(p.cskill) !== 'math') { base.skill_name = skillName(p.cskill); base.topic = topicOf(p.cskill); }
+  if (p.passage?.text) base.passage = { title: p.passage.title || '', text: p.passage.text };
   if (p.model?.type === 'table') base.table = { head: p.model.data.head, rows: p.model.data.rows.map(r => r.cells) };
   if (p.shownSteps) base.steps_shown = p.shownSteps;
   const workMis = misCode(p.cskill, [].concat(p.mis || [])[0]);
@@ -112,7 +139,7 @@ export function toItem(p, n) {
 
 /** What Tuta keeps for the worksheet and the key: the question, the right answer, and each wrong answer's misconception. */
 export const keyItem = (it) => it && ({ n: it.n, ...(it.recheck ? { recheck: true } : {}), cskill: it.cskill, family_id: it.family_id, form: it.form, rung: it.rung, kind: it.kind,
-  question: it.question, instruction: it.instruction, ...(it.table ? { table: it.table } : {}), ...(it.steps_shown ? { steps_shown: it.steps_shown } : {}),
+  question: it.question, instruction: it.instruction, ...(it.marker ? { marker: it.marker } : {}), ...(it.passage ? { passage: it.passage } : {}), ...(it.table ? { table: it.table } : {}), ...(it.steps_shown ? { steps_shown: it.steps_shown } : {}),
   answer: it.answer,
   ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text, right: o.right, ...(o.right ? {} : { mis: o.mis || null }) })) }
     : { wrong: (it.wrong || []).filter(w => w.mis).map(w => ({ value: w.value, mis: w.mis })) }) });
@@ -126,7 +153,9 @@ export function allowedFamilies(cskills, approvedIds = []) {
   const approved = new Set(approvedIds);
   const families = {}; const missing = [];
   for (const c of cskills) {
-    const list = familiesForSkill(c).filter(f => isReviewed(f) || approved.has(f.id));
+    // A teacher's approval of a draft family for one homework is a Maths provision. Science and English have none: signed off or not at all.
+    const maths = subjectOfCskill(c) === 'math';
+    const list = familiesForSkill(c).filter(f => isReviewed(f) || (maths && approved.has(f.id)));
     if (list.length) families[c] = list; else missing.push(c);
   }
   return { ok: missing.length === 0, families, missing };
@@ -137,6 +166,7 @@ export function samplesFor(cskills, perFamily = 2) {
   const out = [];
   for (const c of cskills) {
     for (const f of familiesForSkill(c)) {
+      if (subjectOfCskill(c) !== 'math' && !isReviewed(f)) continue;   // a draft Science or English family is not previewed for use
       const samples = [];
       for (let k = 0; k < perFamily; k++) samples.push(keyItem(toItem(withSeed(`preview:${f.id}:${k}`, () => drawFamily(f).p), k + 1)));
       out.push({ family_id: f.id, cskill: c, form: f.form, rung: f.rung, reviewed: isReviewed(f), samples });

@@ -11,8 +11,11 @@ import { cambridgeGenerate, cambridgeGenerateExample } from './cambridgeContent.
 
 import { SAT_SKILLS, SAT_SKILL_COUNT, SAT_STRANDS, SAT_BANDS, getSatByBand, getSatByStrand, getSatPostRequisites } from './satKnowledgeGraph.js';
 import { satGenerate, satGenerateExample } from './satContent.js';
+import { EXTRA_SUBJECTS, subjectsForGrade } from './subjectPractice.js';
 
-export const SUBJECTS = {
+export { subjectsForGrade };
+
+const BASE_SUBJECTS = {
   math: {
     id: 'math',
     name: 'Mathematics',
@@ -70,5 +73,10 @@ export const SUBJECTS = {
   },
 };
 
-export const SUBJECT_LIST = Object.values(SUBJECTS);
+// Science and English (subjectPractice.js): built from the families a person has signed off. While none is signed
+// their graphs are empty. They are in SUBJECTS so a saved subject id resolves, but not in SUBJECT_LIST: the picker
+// adds one only for a child whose grade has a signed family (subjectsForGrade).
+export const SUBJECTS = { ...BASE_SUBJECTS, ...EXTRA_SUBJECTS };
+
+export const SUBJECT_LIST = Object.values(BASE_SUBJECTS);
 export const DEFAULT_SUBJECT = 'math';

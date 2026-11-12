@@ -169,4 +169,7 @@ export const allOnFrom = (env) => env?.DEV === true && env?.VITE_HOREB_ALL_FAMIL
 let mode = (allOnFrom(import.meta.env) || (globalThis.process?.env?.HOREB_ALL_FAMILIES === '1' && globalThis.process?.env?.NODE_ENV !== 'production')) ? 'all' : 'reviewed';
 export const familyMode = () => mode;
 export const setFamilyMode = (m) => { mode = m; };   // tools and tests only
-export const isOn = (def) => def.core === true || def.reviewed === true || mode === 'all';
+// THE ONE RULE for every subject (Maths, Science, English): a family a person has not signed off is never served to a child.
+// Signed off = `core` (Maths labels that were wrong) or `reviewed: true`, which each subject's signed list sets on the family.
+export const isSigned = (def) => def.core === true || def.reviewed === true;
+export const isOn = (def) => isSigned(def) || mode === 'all';

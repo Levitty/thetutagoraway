@@ -9,6 +9,7 @@
 // ============================================================================
 
 import { algebraicallyEqual } from './algebraEquivalence.js';
+import { checkTextAnswer } from './answerCheckText.js';
 
 export function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
@@ -383,6 +384,9 @@ export function rightNumberWrongUnit(userAnswer, problem) {
 }
 
 export function checkAnswerMatch(userAnswer, problem) {
+  // English answers are words, not numbers: an item marked 'text' (families carry marker: 'text') is marked by
+  // answerCheckText.js, whichever screen the child answers on. Maths items carry no marker and are marked below, unchanged.
+  if (problem && problem.marker === 'text') return checkTextAnswer(userAnswer, problem);
   const normalizedUser = normalizeMath(userAnswer);
   const accepts = problem.accepts || [problem.answer];
 

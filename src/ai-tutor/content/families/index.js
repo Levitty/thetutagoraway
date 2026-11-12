@@ -32,7 +32,7 @@ export const FAMILY_SHARE = 0.5;
 // Harder rungs open as the child gets more right. Screens other than the
 // lesson (diagnostic, memory check) draw no working or step-marked questions,
 // because only the lesson screen can show them.
-const eligible = (f, opts) => {
+export const eligible = (f, opts) => {
   // Young learners get only what their tap-and-listen lesson can show.
   if (opts.young && !f.young) return false;
   const lesson = opts.lesson === true;

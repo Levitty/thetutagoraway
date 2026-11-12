@@ -116,6 +116,7 @@ try {
  * @param {number}  [ev.scaffold]      faded-example support level answered at
  * @param {number}  [ev.confidence]    engine's prior confidence before the answer
  * @param {string}  [ev.cskill]        curriculum skill code, when the item carries one (family items do)
+ * @param {string}  [ev.outcome]       official outcome code, kept as outcome_code for Science and English items
  * @param {boolean} [ev.isRecheck]     a scheduled retention re-check (item_ref 'recheck:<id>')
  * @param {string}  [ev.difficulty]    'easy' | 'medium' | 'hard', when the item carries one
  */

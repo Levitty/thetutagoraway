@@ -276,6 +276,19 @@ function algebraicallyEqual(userRaw, keyRaw, question) {
   });
 }
 
+// src/ai-tutor/answerCheckText.js
+var fold = (s) => String(s ?? "").trim().toLowerCase().replace(/[‘’ʼ´`]/g, "'").replace(/[“”]/g, '"').replace(/[–—]/g, "-").replace(/\s+/g, " ").replace(/\s+([,.;:!?])/g, "$1");
+var tidy = (s) => String(s ?? "").trim().replace(/[\u2018\u2019\u02bc\u00b4`]/g, "'").replace(/[\u201c\u201d]/g, '"').replace(/\s+/g, " ");
+var checkTextAnswer = (userAnswer, problem) => {
+  if (problem.choices) return tidy(userAnswer) === tidy(problem.answer);
+  const u = fold(userAnswer);
+  if (!u) return false;
+  const keys = (problem.accepts?.length ? problem.accepts : [problem.answer]).map(fold);
+  if (keys.includes(u)) return true;
+  const bare = u.replace(/\.$/, "");
+  return !/[.!?"]$/.test(keys[0] || "") && keys.includes(bare);
+};
+
 // src/ai-tutor/answerCheck.js
 function normalizeMath(str) {
   let s = str.toString().trim().toLowerCase();
@@ -584,6 +597,7 @@ function unitConflict(userAnswer, problem) {
   return !asked.units.some((u) => sameUnit(u, given));
 }
 function checkAnswerMatch(userAnswer, problem) {
+  if (problem && problem.marker === "text") return checkTextAnswer(userAnswer, problem);
   const normalizedUser = normalizeMath(userAnswer);
   const accepts = problem.accepts || [problem.answer];
   if (accepts.some((a) => normalizedUser === normalizeMath(a))) return true;
@@ -710,6 +724,7 @@ var publicItem = (it) => it && {
   kind: it.kind,
   question: it.question,
   instruction: it.instruction,
+  ...it.passage ? { passage: it.passage } : {},
   ...it.table ? { table: it.table } : {},
   ...it.steps_shown ? { steps_shown: it.steps_shown } : {},
   ...it.kind === "choice" ? { options: it.options.map((o) => ({ key: o.key, text: o.text })) } : {}
@@ -718,13 +733,15 @@ function markItem(it, response) {
   const raw = String(response ?? "").trim();
   if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
   if (it.kind === "choice") {
-    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm(x.text) === norm(raw));
+    const same = it.marker === "text" ? (a, b) => String(a).trim() === String(b).trim() : (a, b) => norm(a) === norm(b);
+    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => same(x.text, raw));
     if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
     return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
   }
-  const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
+  const check = it.marker === "text" ? checkTextAnswer : checkAnswerMatch;
+  const correct = check(raw, { answer: it.answer, accepts: it.accepts });
   if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find((x) => x.mis && (norm(x.value) === norm(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
+  const w = (it.wrong || []).find((x) => x.mis && (norm(x.value) === norm(raw) || check(raw, { answer: x.value, accepts: [x.value] })));
   return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
 }
 function step(s, ev, now) {
@@ -4361,9 +4378,9 @@ var sameText = (a, b) => {
 };
 var MASTERY_MIN = 4;
 var LATEST = 5;
-var skillOf = (code) => {
+var skillOf = (code, item) => {
   const s = SKILLS_G5[code];
-  return { code, name: s?.name || code, topic: SUBSTRANDS[s?.sub]?.name || "" };
+  return { code, name: s?.name || item?.skill_name || code, topic: SUBSTRANDS[s?.sub]?.name || (s ? "" : item?.topic || "") };
 };
 function buildHome(school, rows, now) {
   const today = dayOf(now);
@@ -4382,7 +4399,7 @@ function buildHome(school, rows, now) {
       const code = items[a.n - 1]?.cskill;
       if (!code) continue;
       if (!bySkill.has(code)) bySkill.set(code, []);
-      bySkill.get(code).push({ at: a.at || "", correct: !!a.correct });
+      bySkill.get(code).push({ at: a.at || "", correct: !!a.correct, item: items[a.n - 1] });
     }
     if (h.mode === "paper") {
       if (!h.due_on || h.due_on >= today) todo.push({ ...base, status: "paper", answered: 0 });
@@ -4412,8 +4429,8 @@ function buildHome(school, rows, now) {
     list.sort((a, b) => a.at.localeCompare(b.at));
     const latest = list.slice(-LATEST);
     const r = latest.filter((x) => x.correct).length;
-    if (list.length >= MASTERY_MIN && r >= 4) mastered.push({ ...skillOf(code), last: list[list.length - 1].at });
-    else practise.push({ ...skillOf(code), right: list.filter((x) => x.correct).length, of: list.length, last: list[list.length - 1].at });
+    if (list.length >= MASTERY_MIN && r >= 4) mastered.push({ ...skillOf(code, list[list.length - 1].item), last: list[list.length - 1].at });
+    else practise.push({ ...skillOf(code, list[list.length - 1].item), right: list.filter((x) => x.correct).length, of: list.length, last: list[list.length - 1].at });
   }
   mastered.sort((a, b) => b.last.localeCompare(a.last));
   practise.sort((a, b) => a.right / a.of - b.right / b.of || b.last.localeCompare(a.last));
@@ -4470,6 +4487,10 @@ async function learnerHome(p, deps) {
   return ok({ linked: true, home: buildHome(door.name, await store.homeSittings(door.id, c.ref), deps.now()) });
 }
 
+// src/learner/subject.js
+var PREFIX = { MATH: "math", SCIE: "science", ENGL: "english" };
+var subjectOfCskill = (code) => PREFIX[String(code || "").split(".")[0]] || null;
+
 // src/learner/evidence.js
 function homeworkEvidence({ homework, sitting, answer }) {
   const item = (sitting?.items || [])[Number(answer?.n) - 1];
@@ -4478,7 +4499,7 @@ function homeworkEvidence({ homework, sitting, answer }) {
     source: "school_homework",
     door_id: homework.door_id,
     learner_ref: sitting.learner_ref,
-    subject: "math",
+    subject: subjectOfCskill(item.cskill) || "math",
     skill_id: item.cskill,
     cskill: item.cskill,
     correct: !!answer.correct,

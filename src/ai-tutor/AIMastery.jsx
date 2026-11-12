@@ -6,7 +6,9 @@
 import { useHorebLook } from './horebLook.js';
 import { AppShell, useShell } from '../shell/AppShell.jsx';
 import React, { useState, useEffect, useCallback, useMemo, useRef } from 'react';
-import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT } from './subjects.js';
+import { SUBJECTS, SUBJECT_LIST, DEFAULT_SUBJECT, subjectsForGrade } from './subjects.js';
+import { gradeNumber } from '../learner/subject.js';
+import PassageCard from './PassageCard.jsx';
 import { prereqsMet, getStatus, getRecommendedPath, recentMastery, findGaps, getReviews, getNextToLearn, getStats, getStrandStats, strandsInReach, weakestStrand, getGradeStats, getEstimatedGradeLevel, getDiagnosticSkills as getAdaptiveDiagnosticSkills, getEffectivePlacement, getRemediationSkills, calculateXP, getLevel, selectReviewProblems } from './adaptiveEngine.js';
 import { processReviewResult, applyImplicitCredits, calculateMemoryStrength, fluencyExpectedMs } from './spacedRepetition.js';
 import { propagateCredit, withdrawMiss, getTimeWeight, processDiagnosticResults } from './diagnosticEngine.js';
@@ -781,7 +783,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: skill.id,
-      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty, timeMs: timeTaken, isDiagnostic: true,
+      correct, problemType: problem?.type, outcome: problem?.outcome, cskill: problem?.cskill, difficulty: problem?.difficulty, timeMs: timeTaken, isDiagnostic: true,
       confidence: priorConfidence, skipped: skip || undefined,
       submittedValue: skip ? null : (hasVisualAnswer ? JSON.stringify(visualAnswer) : answer),
       expectedValue: problem?.answer,
@@ -981,7 +983,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const timeMs = Date.now() - problemStartRef.current;
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
-      correct, problemType: problem?.type, cskill: interleave.recheck ? interleave.cskill : problem?.cskill, difficulty: problem?.difficulty, timeMs, isReview: true,
+      correct, problemType: problem?.type, outcome: problem?.outcome, cskill: interleave.recheck ? interleave.cskill : problem?.cskill, difficulty: problem?.difficulty, timeMs, isReview: true,
       isRecheck: !!interleave.recheck,
       submittedValue: answer, expectedValue: problem?.answer,
     });
@@ -1076,7 +1078,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // Telemetry: capture the response for the HOREB learning loop.
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId: activeSkill,
-      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty,
+      correct, problemType: problem?.type, outcome: problem?.outcome, cskill: problem?.cskill, difficulty: problem?.difficulty,
       timeMs,
       hintsUsed, attemptNo, taps,
       scaffold: scaffoldableRef.current ? answeredAt : null,
@@ -1290,7 +1292,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
 
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
-      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty,
+      correct, problemType: problem?.type, outcome: problem?.outcome, cskill: problem?.cskill, difficulty: problem?.difficulty,
       timeMs, isReview: true,
       submittedValue: answer, expectedValue: problem?.answer,
     });
@@ -1382,7 +1384,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
           <h2 className="text-[26px] font-extrabold tracking-tight text-center mb-1">What shall we work on?</h2>
           <p className="text-slate-500 text-center text-sm mb-6">Each subject adapts to you and brings skills back before you forget them.</p>
           <div className="space-y-3">
-            {SUBJECT_LIST.map(s => (
+            {[...SUBJECT_LIST, ...subjectsForGrade(gradeNumber(activeLearner?.grade ?? learners.find(l => l.id === activeLearner?.id)?.grade))].map(s => (
               <button key={s.id} onClick={() => setSubjectId(s.id)} className="w-full bg-white border border-slate-200 shadow-sm hover:border-slate-300 rounded-2xl p-5 flex items-center gap-4 transition-colors text-left">
                 <div className="w-12 h-12 rounded-2xl bg-slate-100 text-violet-500 flex items-center justify-center shrink-0"><Icon name={s.icon} className="w-6 h-6" /></div>
                 <div className="flex-1 min-w-0">
@@ -1767,6 +1769,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                   </button>
                 )}
                 {problem.instruction && /^(spot|always|word|steps)/.test(problem.type || '') && <div className="text-sm font-semibold text-[#e8336d] mb-1.5">{problem.instruction}</div>}
+                {problem.passage && <PassageCard passage={problem.passage} />}
                 <div className="text-[22px] font-bold text-slate-900 mb-6 leading-snug">
                   <TermTooltip text={problem.question} definitions={problem.workedExample?.definitions || problem.definitions} />
                 </div>
