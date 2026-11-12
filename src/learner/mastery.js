@@ -265,6 +265,21 @@ export function skillState(rows, { now = Date.now(), difficultyKnown } = {}) {
   return { ...base, state: 'developing', word: STATE_WORDS.developing, dueRecheck: false, evidenceIds: ids, reason };
 }
 
+/**
+ * Where one skill stands on the re-check timeline, whatever its state word says (recheck.js schedules from this).
+ * `reached` is when the mastered level was first met (null when it has not been, or a re-check failed since);
+ * `passed` how many re-checks held; `pending` the next one's due date in ms (null when none is waiting).
+ * @param {object[]} rows  one learner's evidence rows for ONE skill
+ */
+export function recheckInfo(rows, { now = Date.now(), difficultyKnown } = {}) {
+  const nowMs = now instanceof Date ? now.getTime() : now;
+  const all = (rows || []).map((r, i) => ({ ...r, _id: r.id ?? r.item_ref ?? `row-${i}` }))
+    .filter((r) => timeOf(r) != null && timeOf(r) <= nowMs)
+    .sort((a, b) => timeOf(a) - timeOf(b));
+  const w = walk(all, difficultyKnown ?? all.some((r) => r.difficulty));
+  return { reached: w.reached ? w.reached.at : null, passed: w.passed.length, pending: w.pending, failed: !!w.failed && !w.reached };
+}
+
 // ---------------------------------------------------------------- roll-up
 const ORDER = { emerging: 1, developing: 2, mastered: 3 };
 

@@ -30854,6 +30854,10 @@ for (const f of FAMILIES23) {
   BY_SKILL.get(f.skill).push(f);
 }
 
+// src/learner/recheck.js
+var MAX_SHARE = 0.2;
+var recheckSlots = (total) => Math.floor(Math.max(0, Number(total) || 0) * MAX_SHARE + 1e-9);
+
 // src/ai-tutor/algebraEquivalence.js
 var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
 function canonicalise(raw) {
@@ -31683,6 +31687,7 @@ function toItem(p, n) {
 }
 var keyItem = (it) => it && {
   n: it.n,
+  ...it.recheck ? { recheck: true } : {},
   cskill: it.cskill,
   family_id: it.family_id,
   form: it.form,
@@ -31717,7 +31722,7 @@ function samplesFor(cskills, perFamily = 2) {
   }
   return out;
 }
-function drawSet({ seed, cskills, families, count }) {
+function drawCore({ seed, cskills, families, count }) {
   const r = rng(seedOf(`order:${seed}`));
   const queue = {};
   for (const c of cskills) {
@@ -31754,6 +31759,17 @@ function drawSet({ seed, cskills, families, count }) {
   }
   return items.map((it, i) => ({ ...it, n: i + 1 }));
 }
+function drawSet({ seed, cskills, families, count, recheck = [] }) {
+  const rc = [...new Set(recheck)].filter((c) => (families[c] || []).length);
+  const slots = rc.length ? Math.min(recheckSlots(count), count - HW_MIN) : 0;
+  if (slots < 1) return drawCore({ seed, cskills, families, count });
+  const main = drawCore({ seed, cskills, families, count: count - slots });
+  const seen = new Set(main.map((it) => norm3(it.question)));
+  const extra = drawCore({ seed: `${seed}:recheck`, cskills: rc, families, count: slots + 3 }).filter((it) => !seen.has(norm3(it.question))).slice(0, slots).map((it) => ({ ...it, recheck: true }));
+  const items = [...main];
+  extra.forEach((it, k) => items.splice(Math.min(items.length, 4 + k * 5), 0, it));
+  return items.map((it, i) => ({ ...it, n: i + 1 }));
+}
 var REF2 = /^[A-Z2-9]{8}$/;
 var UUID = /^[a-f0-9-]{36}$/;
 var DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -31770,15 +31786,18 @@ function cleanHomeworkSet(p) {
   const versions = mode2 === "paper" ? Math.round(Number(p.versions || 0)) : 0;
   if (!(versions === 0 || versions >= 2 && versions <= 4)) return { ok: false, error: "Paper is one sheet per child, or 2 to 4 versions" };
   const approved = (Array.isArray(p.approved) ? p.approved : []).filter((a) => a && typeof a.family_id === "string").map((a) => ({ family_id: a.family_id.slice(0, 80), by: String(a.by || "").slice(0, 80), at: DATE.test(String(a.at || "").slice(0, 10)) ? String(a.at).slice(0, 25) : null })).slice(0, 200);
+  const recheckWanted = [...new Set((Array.isArray(p.recheck_cskills) ? p.recheck_cskills : []).map(String).filter((c) => isCurriculumSkill(c) && !cskills.includes(c)))].slice(0, recheckSlots(count));
   const allowed = allowedFamilies(cskills, approved.map((a) => a.family_id));
   if (!allowed.ok) return { ok: false, error: "No reviewed or approved questions for: " + allowed.missing.map(skillName).join("; "), missing: allowed.missing };
+  const rcAllowed = allowedFamilies(recheckWanted, approved.map((a) => a.family_id));
+  const recheck = recheckWanted.filter((c) => rcAllowed.families[c]);
   const list = (Array.isArray(p.homework) ? p.homework : []).slice(0, 20).map((h) => ({
     homework_ref: String(h?.homework_ref || ""),
     learner_refs: [...new Set((Array.isArray(h?.learner_refs) ? h.learner_refs : []).map(String).filter((r) => REF2.test(r)))].slice(0, 400)
   }));
   if (!list.length || list.some((h) => !UUID.test(h.homework_ref) || !h.learner_refs.length)) return { ok: false, error: "Each homework needs its reference and its learners" };
   const due = DATE.test(String(p.due_on || "")) ? p.due_on : null;
-  return { ok: true, hw: { title, cskills, count, mode: mode2, versions, due_on: due, approved, homework: list }, families: allowed.families };
+  return { ok: true, hw: { title, cskills, recheck, count, mode: mode2, versions, due_on: due, approved, homework: list }, families: { ...rcAllowed.families, ...allowed.families } };
 }
 function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   const refs = [...learnerRefs].sort();
@@ -31786,7 +31805,7 @@ function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   return refs.map((ref, i) => {
     const version = hw.versions ? i % hw.versions + 1 : null;
     const seed = version ? `${homeworkRef}:v${version}` : `${homeworkRef}:${ref}`;
-    const items = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count });
+    const items = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] });
     return { learner_ref: ref, code: makeCode(), seed, version, items, answers: [], status: "issued", mode: hw.mode };
   });
 }

@@ -20,7 +20,7 @@
 // ============================================================================
 
 import { supabase } from '../supabase.js';
-import { practiceEvidence } from '../learner/evidence.js';
+import { practiceEvidence, recheckRef } from '../learner/evidence.js';
 
 const PARAMS_VERSION = 'heuristic-v0';   // bumped when calibrated params ship
 const OUTBOX_KEY = 'tg_response_outbox';
@@ -116,6 +116,7 @@ try {
  * @param {number}  [ev.scaffold]      faded-example support level answered at
  * @param {number}  [ev.confidence]    engine's prior confidence before the answer
  * @param {string}  [ev.cskill]        curriculum skill code, when the item carries one (family items do)
+ * @param {boolean} [ev.isRecheck]     a scheduled retention re-check (item_ref 'recheck:<id>')
  * @param {string}  [ev.difficulty]    'easy' | 'medium' | 'hard', when the item carries one
  */
 export function logResponse(ev) {
@@ -138,6 +139,9 @@ export function logResponse(ev) {
     params_version: PARAMS_VERSION,
     ...practiceEvidence(ev),   // source 'practice', and the curriculum skill and difficulty when the item has them
   };
+  // A re-check answer (learner-model.md, Re-checks): the same row, flagged so it can be told apart, and written
+  // under the skill being re-checked so mastery.js sees it on that skill.
+  if (ev.isRecheck) { row.item_ref = recheckRef(row.client_event_id); row.is_review = true; }
   if (ev.learnerId) row.learner_id = ev.learnerId;
   if (ev.submittedValue != null && ev.submittedValue !== '') row.submitted_value = String(ev.submittedValue).slice(0, 500);
   if (ev.expectedValue != null && ev.expectedValue !== '') row.expected_value = String(ev.expectedValue).slice(0, 500);

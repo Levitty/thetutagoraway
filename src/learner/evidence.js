@@ -15,6 +15,13 @@
 export const SOURCES = ['practice', 'school_homework', 'school_exam', 'tutor', 'visual'];
 export const DIFFICULTIES = ['easy', 'medium', 'hard'];
 
+/**
+ * Re-check answers are ordinary evidence rows (mastery.js judges them by date alone), flagged in item_ref so they can
+ * be told apart and counted: practice 'recheck:<event id>', homework 'hw:<homework>:<n>:recheck'. No new column.
+ */
+export const recheckRef = (eventId) => `recheck:${eventId}`;
+export const isRecheckRow = (r) => /^recheck:/.test(r?.item_ref || '') || /^hw:.+:recheck$/.test(r?.item_ref || '');
+
 /** What a HOREB practice row adds to the base row: its source, and the curriculum skill and difficulty when the item has them. */
 export function practiceEvidence(ev) {
   const out = { source: 'practice' };
@@ -37,7 +44,7 @@ export function homeworkEvidence({ homework, sitting, answer }) {
     source: 'school_homework', door_id: homework.door_id, learner_ref: sitting.learner_ref,
     subject: 'math', skill_id: item.cskill, cskill: item.cskill,
     correct: !!answer.correct, misconception: answer.mis || null, independent: true, marks: answer.correct ? 1 : 0, max_marks: 1,
-    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}`,
+    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}${item.recheck ? ':recheck' : ''}`,
     submitted_value: answer.chosen ? String(answer.chosen).slice(0, 500) : null,
     client_ts: answer.at || null, hints_used: 0, attempt_no: 1,
   };
