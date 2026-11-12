@@ -261,7 +261,8 @@ const hasCandidate = (text) => readAnswer(mainClause(text)).found.some((f) => !f
  * Not "Why do we cut it again?" (a real question), not "Is it two or four?" (two answers), not a message that is all reason.
  */
 export function isTentative(text) {
-  const raw = String(text || '').trim();
+  // "hmm Two?..." is said unsure: the dots after the question mark do not make it a question to HOREB (P5, run 1900).
+  const raw = String(text || '').trim().replace(/\?(\s*(\.{2,}|…))+\s*$/, '?');
   if (!raw || !hasCandidate(raw)) return false;
   const qs = sentencesIn(raw).filter((x) => /\?\s*$/.test(x));
   if (qs.some((x) => REAL_Q.test(stripLead(x)) || /\bor\b/i.test(x))) return false;
@@ -370,7 +371,13 @@ export function markSpoken(item, text) {
 // thing counted ("tree pieces"); never inside a sentence ("I want to go", "for two children", "I ate it").
 const SOUND_ALIKE = { too: 'two', to: 'two', tu: 'two', tree: 'three', for: 'four', fore: 'four', fife: 'five', ate: 'eight', won: 'one' };
 const ANSWER_LEAD = /^(?:[\s,.!?…'"-]*(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+|so|well|oh|ok(?:ay)?|maybe|perhaps|probably|i think|i guess|is it|it is|it'?s|its|i'?m not sure|not sure)\b)*[\s,.!?…'"-]*/i;
-const SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join('|')})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|halves|quarters|thirds|sixths|eighths))?[\\s.?!…'"-]*$`, 'i');
+// After the answer: fillers and punctuation only ("won over too, umm").
+const ANSWER_TAIL = `(?:[\\s,.?!…'"-]+(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+))*[\\s,.?!…'"-]*$`;
+const SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join('|')})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|half|halves|quarters?|thirds?|sixths?|eighths?))?${ANSWER_TAIL}`, 'i');
+// A fraction said as "X over Y" or "X out of Y" with a sound-alike in it ("won over too"; P5, run 2026-11-12-1900,
+// scenario 30: the child's right "one over two" was not marked).
+const NUM_OR_ALIKE = `(?:${Object.keys(SOUND_ALIKE).join('|')}|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|\\d{1,2})`;
+const SOUND_ALIKE_FRACTION = new RegExp(`^(${NUM_OR_ALIKE})(\\s+(?:over|out of)\\s+)(${NUM_OR_ALIKE})(\\s+(?:equal\\s+)?(?:pieces?|parts?))?${ANSWER_TAIL}`, 'i');
 /**
  * The child's words with a sound-alike number read as the number, when a number is being asked for (`numberOpen`):
  * "Umm, too?" -> "Umm, two?". Anything else is returned as it came.
@@ -380,12 +387,15 @@ export function hearNumbers(text, { numberOpen = true } = {}) {
   if (!numberOpen || !raw.trim()) return raw;
   const lead = ANSWER_LEAD.exec(raw)?.[0] || '';
   const rest = raw.slice(lead.length);
+  const hear = (w) => SOUND_ALIKE[w.toLowerCase()] || w;
+  const f = SOUND_ALIKE_FRACTION.exec(rest);
+  if (f && (SOUND_ALIKE[f[1].toLowerCase()] || SOUND_ALIKE[f[3].toLowerCase()])) return `${lead}${hear(f[1])}${f[2]}${hear(f[3])}${rest.slice(f[1].length + f[2].length + f[3].length)}`;
   const m = SOUND_ALIKE_ANSWER.exec(rest);
   if (!m) return raw;
   return `${lead}${SOUND_ALIKE[m[1].toLowerCase()]}${rest.slice(m[1].length)}`;
 }
 /** Does this question ask for a number (a count, or "what number")? */
-export const asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number)\b/i.test(String(q || ''));
+export const asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number|what fraction|which fraction|as a fraction|out of how many)\b/i.test(String(q || ''));
 
 /** What a message that is not an answer is doing. */
 export function childMove(text) {

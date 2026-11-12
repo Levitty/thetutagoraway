@@ -36,6 +36,12 @@
 //                probe, or after thinking 8 s or more), until a wrong answer; the page doubles its silence times (silence.js)
 //   wins         successes at that level: understood 1, a bare right answer a half, a hedged one 0; a helped one half that
 //                (PLAN_TO_FOUR.md step 2: one more success at the same level before moving up, habits.js nextLevel)
+//   step         { kind, tries } the step the child is on: the kind of the tutor's last question (pacing.js questionKind:
+//                cut, count_total, count_shaded, fraction, compare, ...) and the non-answers and wrong answers on it
+//   solved       the kinds the child has answered right on the picture now on the board (fig: that picture, "circle:2");
+//                a new picture (other parts) starts the list again
+//   closedRun    closed questions (yes or no, this or that) in a row
+//   pressed      the ideas (canonical answers, "1/2") the tutor has already asked "how did you know" about: once per idea
 //
 // THE RULES (decide), first match wins:
 //   first turn                          Open the lesson
@@ -56,23 +62,30 @@
 //   a wrong answer, with how they got it reteach from their way (asking how again is not diagnosing)
 //   a wrong answer                      Diagnose the wrong answer: ONE question about how they got it, nothing else
 //   the child explains a wrong answer   reteach that one idea
-//   right, no reason given              Name what was right, then Press for reasoning
+//   right, no reason given              a fraction, a comparison or a rule, not asked about before, and not an unsure
+//                                       child being helped: Name what was right, then Press for reasoning (once per idea);
+//                                       otherwise (a count, a name, an unsure child who has had help) advance: yes, in their
+//                                       words, then the next step of the target, never this question again
 //   understood, once                    Name what was right, then Check for understanding on a fresh example
 //   understood, then the fresh check    move on: the next stage is allowed
-//   answering "how did you know"        judge the reason, Name what was right, check
+//   answering "how did you know"        judge the reason, Name what was right, then the next step (given or declined,
+//                                       the reason is never asked again)
 //   the last answer: missing earlier    go back to the prerequisite
 //     skill
 //   otherwise                           the stage's own moves
 // After any right answer the decision carries `must` (Name what was right, with the child's own words in `quote`)
 // and `answered` (that question is never asked again); tutorTurn.js holds the turn to both.
+// Then decide() adds the step rules (P5): after two non-answers or wrong answers on the same kind of question the turn
+// shows it another way or makes the step smaller (`stuck`); after a closed question the next is open (`open`); the
+// brief names what the child has found on the picture and the next step (`next`).
 //
 // Pure. Tested in tests/voice-tutor-orchestrator.test.mjs.
 // ============================================================================
-import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN, MAX_SPOKEN_WORDS, wordCap } from './commands.js';
-import { wordsIn, talkShare, shareLow, overtalkLimit, explainedTurn, handoverMoves, HANDOVER_RULES } from './pacing.js';
+import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN, MAX_SPOKEN_WORDS, wordCap, describeItem } from './commands.js';
+import { wordsIn, talkShare, shareLow, overtalkLimit, explainedTurn, handoverMoves, HANDOVER_RULES, questionKind, isClosed, lastQuestionOf, nextStepOf, trivialAnswer, STEP_NAMES } from './pacing.js';
 import { PROBE_KINDS } from './silence.js';
 import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
-import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor } from './habits.js';
+import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor, asksReason } from './habits.js';
 import { fenceTeamText } from './guard.js';
 
 export { soundsLost };
@@ -87,10 +100,11 @@ const REPS = ['bar', 'circle', 'grid', 'shape', 'number line', 'story'];
 
 // Moves that may go with any allowed move (reacting to the child is always right).
 export const ALWAYS_WITH = ['Revoice and build', 'Name what was right', 'Celebrate the strategy', 'Bring back an off-topic child'];
-// Moves a good tutor may make in any stage of the lesson (12 Nov 2026, run 2: "Press for reasoning" and "Name what was
-// right" were flagged as not allowed in the warm-up). Only the stage-specific moves are held to the stage. A turn tagged
-// with one of these is on plan, except in the turns that are not teaching (STRICT).
-export const GENERAL = ['Revoice and build', 'Name what was right', 'Press for reasoning', 'Wait and nudge', 'Smaller-question hint', 'Check for understanding', 'Celebrate the strategy'];
+// Moves a good tutor may make in any stage of the lesson (12 Nov 2026, run 2: "Name what was right" was flagged as not
+// allowed in the warm-up). Only the stage-specific moves are held to the stage. A turn tagged with one of these is on
+// plan, except in the turns that are not teaching (STRICT). "Press for reasoning" is not one of them (P5, run
+// 2026-11-12-1900: "how did you know?" three times on counts for a shy child): it is allowed only where decide says so.
+export const GENERAL = ['Revoice and build', 'Name what was right', 'Wait and nudge', 'Smaller-question hint', 'Check for understanding', 'Celebrate the strategy'];
 const STRICT = ['care', 'care-wait', 'care-return', 'stop', 'open'];
 const STAGE_MOVES = {
   warmup: ['Revoice and build', 'Predict then show', 'Count with the child', 'Smaller-question hint'],
@@ -114,6 +128,7 @@ export const newLesson = () => ({
   found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0, changedFails: 0, examples: 0,
   cw: 0, tw: 0, lastCw: 0, explain: 0, pre: null,
   fillers: 0, tyt: false, lastProbe: false, slow: false,
+  step: null, solved: [], fig: null, closedRun: 0, pressed: [],
 });
 // The warm-up's first maths question (owner, 12 Nov 2026): 'ask' = it must be asked, 'asked' = waiting for the child's answer, 'done' = answered (right or wrong); null = nothing to check first.
 const PRE_STATES = ['ask', 'asked', 'done'];
@@ -158,8 +173,15 @@ export function cleanLesson(raw) {
   s.wins = Number.isFinite(raw.wins) && raw.wins >= 0 && raw.wins <= 10 ? Math.round(raw.wins * 4) / 4 : 0;
   s.changedFails = int(raw.changedFails, 0, 20);
   s.examples = int(raw.examples, 0, 5);
+  const st = raw.step;
+  if (st && typeof st === 'object' && STEP_KINDS.includes(st.kind)) s.step = { kind: st.kind, tries: int(st.tries, 0, 50) };
+  if (Array.isArray(raw.solved)) s.solved = [...new Set(raw.solved.filter((k) => STEP_KINDS.includes(k)))].slice(-8);
+  if (typeof raw.fig === 'string' && /^[a-z ]{3,12}:\d{1,3}$/.test(raw.fig)) s.fig = raw.fig;
+  s.closedRun = int(raw.closedRun, 0, 50);
+  if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === 'string' && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   return s;
 }
+const STEP_KINDS = ['cut', 'reason', 'count_shaded', 'fraction', 'count_total', 'compare', 'equal', 'state', 'notice', 'other'];
 
 // ---------------------------------------------------------------- reading the child
 const words = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9'\s/]/g, ' ').split(/\s+/).filter(Boolean);
@@ -228,10 +250,10 @@ export function stageAllowed(s, { understoodNow = false, closing = false, preNow
  * @returns {{ moves:string[], with:string[], rule:string, reason:string, stageMax:string, avoid:string|null, prelim:string|null }}
  */
 function decideCore(s, ctx = {}) {
-  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null } = ctx;
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null, lastQ = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null), press: extra.press ?? null, noPress: extra.noPress ?? null });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -270,7 +292,11 @@ function decideCore(s, ctx = {}) {
     return out('thinking', ['Wait and nudge'], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : ' with no words'}`, { with: [], authored: true, line, stageMax: s.stage || 'warmup' });
   }
   // An answer said as a question with no open question to mark it against ("maybe four pieces?"): an answer, said tentatively.
-  if (move === 'tentative') return out('tentative', ['Revoice and build', 'Press for reasoning', 'Name what was right'], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask how sure they are, or how they know. Do not answer it for them', { with: ['Celebrate the strategy'] });
+  if (move === 'tentative') {
+    const why = whyNoPress(s, { trivial: trivialAnswer({ question: lastQ || '', answer: readChild(message).fractions[0] || null }), hedged: true });
+    if (!why) return out('tentative', ['Revoice and build', 'Press for reasoning', 'Name what was right'], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask once how sure they are, or how they know. Do not answer it for them', { with: ['Celebrate the strategy'], press: 'tentative' });
+    return out('tentative', ['Revoice and build', 'Name what was right', 'Smaller-question hint'], `the child gave an answer, said as a question ("maybe two?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say yes and take the next step; if it is not, one small question about what they see. No "how did you know" (${why})`, { with: ['Celebrate the strategy'], noPress: why });
+  }
   if (move === 'question') return out('question', ['Revoice and build', 'Smaller-question hint', 'Show then hand over'], 'the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them', { with: ['Name what was right'] });
   if (marked && WRONG.includes(prelim)) {
     // The "never tell" exit (READING_12NOV.md change 2): two failed attempts on a changed representation. One worked example
@@ -299,18 +325,57 @@ function decideCore(s, ctx = {}) {
   // No "yes" to a hedged or one-word answer (PLAN_TO_FOUR.md step 4): say what you heard, then ask what made them say it.
   if (marked && prelim === 'right_unexplained') {
     const cr = readChild(message, { marked });
-    if (cr.hedged || cr.oneWord) return out('press', ['Name what was right', 'Press for reasoning'], `right, but ${cr.hedged ? 'said unsure' : 'one word'} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, { ...right, ack: 'revoice' });
-    return out('press', ['Name what was right', 'Press for reasoning'], 'right, but no reason yet: name what was right in the child\'s own words, then ask how they knew. It does not count as understood until they give a reason', right);
+    const asked = question?.question || lastQ || '';
+    const why = whyNoPress(s, { trivial: trivialAnswer({ question: asked, answer: canonAnswer(question?.answer) || marked.canon || canonAnswer(marked.said) || cr.fractions[0] || null }), idea: marked.canon || null, hedged: cr.hedged });
+    if (why) {
+      const next = nextStepOf([...s.solved, questionKind(asked)].filter(Boolean), { cut: figCut(s.fig) });
+      return out('advance', ['Name what was right', 'Show then hand over', 'Predict then show', 'Count with the child', 'Check for understanding'], `right${cr.hedged ? ', said unsure' : ''}: say yes, in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}"), then take the next step${next ? `: ${next}` : ' of the target'}. No "how did you know" (${why}). Never ask this question again`, { ...right, ack: 'yes', noPress: why });
+    }
+    if (cr.hedged || cr.oneWord) return out('press', ['Name what was right', 'Press for reasoning'], `right, but ${cr.hedged ? 'said unsure' : 'one word'} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, { ...right, ack: 'revoice', press: marked.canon || 'yes' });
+    return out('press', ['Name what was right', 'Press for reasoning'], 'right, but no reason yet: name what was right in the child\'s own words, then ask how they knew. It does not count as understood until they give a reason', { ...right, press: marked.canon || 'yes' });
   }
   if (marked && prelim === 'understood') {
     if (s.streak >= 1) return out('move-on', ['Name what was right', 'Check for understanding', 'Stretch the quick child', 'Show then hand over'], `understood, and the fresh check too: name what was right, then you may move on to ${nextStage(s.stage)}`, right);
     return out('fresh-check', ['Name what was right', 'Check for understanding'], 'understood, with a reason: name what was right in the child\'s own words, then check it once on a fresh example (a new question, not the same one) before moving on', right);
   }
-  if (s.pending && message) return out('reason', ['Name what was right', 'Press for reasoning', 'Check for understanding'], 'the child is giving the reason for their right answer: judge it (assess); if it holds, name it and check on a fresh example', { with: ['Revoice and build', 'Celebrate the strategy'] });
+  // The child's reply to "how did you know" (P5): judged, named if it holds, and never asked for again, given or not.
+  if (s.pending && message) {
+    const next = nextStepOf(s.solved, { cut: figCut(s.fig) });
+    return out('reason', ['Name what was right', 'Check for understanding', 'Show then hand over'], `the child is answering your "how did you know": judge it (assess). If the reason holds, name it in their words; if it does not, or they gave none, do not ask again. Either way take the next step${next ? `: ${next}` : ''}`, { with: ['Revoice and build', 'Celebrate the strategy'], noPress: 'you have asked for this reason already' });
+  }
   if (s.classes[s.classes.length - 1] === 'missing_prerequisite' && prerequisite) return out('prerequisite', ['Smaller-question hint', 'Show then hand over', 'Count with the child'], `the last answer showed a missing earlier skill: go back to ${prerequisite} with a smaller, earlier step, then return`);
   const st = s.stage || 'warmup';
   return out('stage', STAGE_MOVES[st], `the ${st} part of the lesson`);
 }
+
+// ---------------------------------------------------------------- press for reasoning, and the step (P5)
+// "How did you know?" is for an answer worth a reason: a fraction, a comparison, an equivalence or a rule. Never a count
+// or a name, once per idea, and never for an unsure child who is being helped (a probe, a hint, a try that failed on
+// this step, a slow child, the earlier skill, a recent "I don't know"): run 2026-11-12-1900, scenario 1, pressed a shy
+// child three times on a count in a moment that needed support.
+const supported = (s) => !!(s.slow || s.lastProbe || s.hints > 0 || s.prereq || (s.step?.tries || 0) > 0 || s.classes.slice(-2).includes('guess_or_no_attempt'));
+/** Why the tutor may not ask "how did you know" now, or null when it may (pacing.js trivialAnswer says what is trivial). */
+export function whyNoPress(s, { trivial = false, idea = null, hedged = false } = {}) {
+  if (trivial) return 'a count or a name needs no reason';
+  if (idea && (s.pressed || []).includes(idea)) return 'you have asked how they knew this already';
+  if (hedged && supported(s)) return 'the child is unsure and is being helped';
+  return null;
+}
+export const pressAllowed = (s, o) => !whyNoPress(s, o);
+const FIG_CMDS = ['shape', 'fraction_bar', 'figure'];
+/** The picture the child is working on (the newest fraction figure): "circle:2", or null. */
+export function figOf(board = []) {
+  const f = [...(board || [])].reverse().find((b) => b && FIG_CMDS.includes(b.cmd) && (b.cmd !== 'figure' || b.type === 'fraction'));
+  if (!f) return null;
+  const p = f.cmd === 'figure' ? f.params || {} : f;
+  const name = f.cmd === 'shape' ? String(f.kind || 'shape') : f.cmd === 'fraction_bar' ? 'bar' : String(p.shape || 'bar');
+  const parts = name === 'grid' ? (Number(p.rows) || 0) * (Number(p.cols) || 0) || 1 : Math.max(1, Number(p.parts) || 1);
+  return `${name}:${Math.min(999, parts)}`;
+}
+const figCut = (fig) => Number(String(fig || '').split(':')[1]) > 1;
+export const STUCK_AFTER = 2; // non-answers or wrong answers on one kind of question before it is shown another way
+const STUCK_RULES = ['probe', 'lost', 'stage', 'tentative', 'question', 'reteach', 'prerequisite'];
+const OPEN_SKIP = ['open', 'care', 'care-wait', 'care-return', 'close', 'stop', 'thinking', 'bored', 'diagnose'];
 
 const PRE_RULES = ['stage', 'question', 'lost', 'tentative', 'reteach', 'change', 'prerequisite'];
 /**
@@ -325,12 +390,28 @@ export function decide(s, ctx = {}) {
     d.moves = handoverMoves(d.rule);
     d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
     d.handover = true;
-    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing: this turn hands over first, a "you try" or a "tell me why or how", before any more explaining`;
+    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing: this turn hands over first, a "you try" or a question for them to answer, before any more explaining`;
   }
   if (s.pre === 'ask' && ctx.pre && (s.stage == null || s.stage === 'warmup') && PRE_RULES.includes(d.rule) && (ctx.turnIndex || 0) >= 1) {
     d.preFirst = { skill: ctx.pre.skill || null, name: ctx.pre.name };
     d.reason = `${d.reason}. The first maths question is on the earlier skill (${d.preFirst.name}), and the target idea waits until the child has answered it`;
   }
+  // The step (P5): two non-answers or wrong answers on one kind of question, and it is shown another way or made smaller,
+  // never the same kind of question a third time. A probe in that state is not a plain nudge.
+  const st = s.step;
+  const probeKind = ctx.probe?.kind || null;
+  d.stuck = null; d.open = false; d.next = null;
+  if (st && st.tries >= STUCK_AFTER && STUCK_RULES.includes(d.rule) && probeKind !== 'task_checkin') {
+    d.stuck = { kind: st.kind, tries: st.tries };
+    d.moves = [...new Set([...d.moves.filter((m) => m !== 'Wait and nudge'), 'Smaller-question hint', 'Show then hand over', 'Recover a lost child'])];
+    d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
+    const how = 'show the same idea another way (a bar instead of a circle, folding a paper, a short story with a real thing) or make the step much smaller';
+    d.reason = d.rule === 'probe'
+      ? `still no answer on this step (${st.tries} tries on ${STEP_NAMES[st.kind] || 'it'}): one short kind line, then ${how}. Never the answer, and not that kind of question again`
+      : `${d.reason}. The child has not managed ${STEP_NAMES[st.kind] || 'this step'} ${st.tries} times: do not ask that kind of question again now; ${how}`;
+  }
+  if ((s.closedRun || 0) >= 1 && !OPEN_SKIP.includes(d.rule)) d.open = true;
+  if (['stage', 'advance', 'reason', 'fresh-check', 'reteach'].includes(d.rule)) d.next = d.rule === 'advance' ? null : nextStepOf(s.solved, { cut: figCut(s.fig) });
   return d;
 }
 
@@ -376,7 +457,14 @@ export function judgeTurn(decision, steps = [], { fromModel = null, authored = f
   for (const m of authored ? [] : decision.must || []) {
     if (!allTags.some((t) => norm(t) === norm(m))) notes.push(`"${m}" was required this turn and no say carried it`);
   }
-  if (decision.handover && !authored && says.length && explainedTurn(steps)) notes.push('this turn was to hand over (a "you try" or "tell me why or how") and it explained again without asking the child anything');
+  // The step rules (P5), noted: a reason asked where decide said not to, a closed question after a closed one, the same
+  // kind of question again on a step the child is stuck on.
+  const modelSays = says.map((x) => x.text);
+  if (!authored && decision.noPress && modelSays.some(asksReason)) notes.push(`asked how the child knew where the decision said not to (${decision.noPress})`);
+  const q = lastQuestionOf(steps);
+  if (!authored && decision.open && q && isClosed(q)) notes.push(`a closed question again ("${q.slice(0, 50)}"), after a closed one`);
+  if (!authored && decision.stuck && q && questionKind(q) === decision.stuck.kind) notes.push(`the same kind of question a third time (${STEP_NAMES[decision.stuck.kind] || decision.stuck.kind}) on a step the child is stuck on`);
+  if (decision.handover && !authored && says.length && explainedTurn(steps)) notes.push('this turn was to hand over (a "you try" or a question to answer) and it explained again without asking the child anything');
   if (decision.rule === 'diagnose') {
     const says = steps.filter((x) => x.cmd === 'say');
     if (!says.some((x) => ASKS_HOW.test(x.text))) notes.push('the diagnose turn did not ask how the child got their answer');
@@ -390,8 +478,8 @@ export function judgeTurn(decision, steps = [], { fromModel = null, authored = f
  * t: { decision, steps (sent), judged: finalClass() | null, marked, probe, elapsedMin }
  */
 export const SLOW_THINK_S = 8; // a reply after this long thinking (or after a silence probe) is a slow one
-export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null } = {}) {
-  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...(s0.found || [])] };
+export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null, board = null } = {}) {
+  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...(s0.found || [])], solved: [...(s0.solved || [])], pressed: [...(s0.pressed || [])] };
   s.turns += 1;
   // Who talks: words said so far by each side, the child's last reply, and the tutor's turns in a row that explained
   // or showed without handing over (pacing.js). A silent probe counts the tutor's words but is not an explaining turn.
@@ -435,11 +523,34 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
       s.streak += 1; s.sameFails = 0; s.prereq = false; s.changedFails = 0; s.examples = 0;
       if (s.pending && (!marked || marked.ask === s.pending.ask || !judged.ask || judged.ask === s.pending.ask)) s.pending = null;
     } else if (cls === 'right_unexplained') {
-      if (marked) s.pending = { ask: marked.ask, skill: marked.skill || null };
+      // Waiting for a reason only when one was asked for (P5): a count or a name is not left pending.
+      if (marked && decision?.press) s.pending = { ask: marked.ask, skill: marked.skill || null };
     } else if (WRONG.includes(cls)) {
       s.streak = 0;
       if (marked && !marked.correct) { s.sameFails += 1; if (s.tried.length >= 2) s.changedFails = Math.min(20, (s.changedFails || 0) + 1); }
       if (cls === 'missing_prerequisite') s.prereq = true;
+    }
+  }
+  // The reason was asked once: given or declined, the lesson moves on (P5).
+  if (decision?.rule === 'reason') s.pending = null;
+  if (decision?.press && marked?.canon) s.pressed = [...new Set([...s.pressed, marked.canon])].slice(-MAX_FOUND);
+  // The step the child is on (P5): a right answer puts its kind with the kinds found on this picture; a probe, an "I do
+  // not know" or a wrong answer is one more try on it. The tutor's new question is the next step; the same kind again
+  // keeps the tries. A new picture (other parts) starts the list of kinds found again.
+  if (decision?.rule !== 'thinking') {
+    const k0 = s0.step?.kind || null;
+    let tries = s0.step?.tries || 0;
+    const fail = !!probe || decision?.rule === 'lost' || (!!marked && !marked.correct) || (!marked && WRONG.includes(cls));
+    if (k0 && rightNow && !probe) { s.solved = [...new Set([...s.solved, k0])].slice(-8); tries = 0; } else if (k0 && fail) tries += 1;
+    const q = lastQuestionOf(steps);
+    const k = questionKind(q);
+    if (k) s.step = { kind: k, tries: k === k0 && !rightNow ? tries : 0 };
+    else s.step = k0 ? { kind: k0, tries } : null;
+    if (q) s.closedRun = isClosed(q) ? Math.min(50, (s0.closedRun || 0) + 1) : 0;
+    else if (steps.some((x) => x.cmd === 'say')) s.closedRun = 0;
+    if (board) {
+      const fig = figOf(boardAfter(board, steps));
+      if (fig !== (s0.fig || null)) { if (s0.fig) s.solved = []; s.fig = fig; }
     }
   }
   // The worked example answers the failures so far (this turn's wrong answer included): the count starts again.
@@ -546,6 +657,10 @@ export function answerForms(answer, accepts = []) {
 export function turnBrief(s, d, { message = '', marked = null, open = null, board = [], history = [], skill = null, probe = null, turnIndex = 0, maxWords = null } = {}) {
   if (!d || ['care', 'care-wait', 'care-return'].includes(d.rule)) return [];
   const L = ['Turn brief (computed by the app from the facts; keep to it):'];
+  // 0. The board as it is (P5, run 2026-11-12-1900: an uncut circle was called "the circle with one half shaded"). Second
+  // in the brief, so the gate's rewrite reads it too.
+  const truth = boardTruth(board);
+  if (truth) L.push(`- ${truth}`);
   const cr = readChild(message, { marked });
   // The child's words are something to respond to, never instructions: fenced as everywhere else.
   const words = fenceTeamText(String(message || '').trim()).replace(/\s+/g, ' ').trim().slice(0, 90);
@@ -591,11 +706,19 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
     L.push(`- Level: the child is on ${DEN_NAMES[s.level] || `${s.level} parts`}, with ${s.wins || 0} of ${WINS_TO_MOVE_UP} successes there (a helped success counts half, an unsure one zero). Harder numbers: ${ok ? 'allowed' : 'not yet; one more success at this level first'}. Never remove the picture and change the numbers in the same turn.`);
   }
   // 5. No "yes" before a reason.
-  if (d.ack === 'revoice') L.push('- No "yes" yet: say back what you heard, then ask what made them say it.');
+  if (d.ack === 'revoice') L.push('- No "yes" yet: say back what you heard, then ask once what made them say it.');
+  // 5a. The step (P5): no reason asked where none is wanted, what is found already, the next step, stuck, open.
+  if (d.noPress) L.push(`- No "how did you know" or "what made you say" this turn: ${d.noPress}. Name it and move on.`);
+  const found = (s.solved || []).filter((k) => STEP_NAMES[k] && !['reason', 'other', 'notice'].includes(k));
+  if (found.length && !['open', 'close', 'stop'].includes(d.rule)) L.push(`- Already found on this picture: ${found.map((k) => STEP_NAMES[k]).join('; ')}. Do not ask those again.${d.next ? ` The next step: ${d.next}.` : ''}`);
+  else if (d.next) L.push(`- The next step: ${d.next}.`);
+  if (d.stuck) L.push(`- Stuck: ${d.stuck.tries} tries on ${STEP_NAMES[d.stuck.kind] || 'this step'}. Do not ask that kind of question again now: show it another way (a bar, a number line, folding a paper, a short story) or make the step much smaller.`);
+  if (d.open) L.push('- Your last question was a yes-or-no or this-or-that question. Ask an open one now (how many, what, where), or ask them to point or show.');
+  L.push('- One question this turn, at the end. The app keeps only your last question.');
   // 5b. Pacing (12 Nov 2026): the word budget, the hand-over after explaining, the child's share of the talk, the warm-up's first question.
   const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));
   L.push(`- Word budget this turn: at most ${budget} words in all, then wait for the child. Every word over is cut, and the question at the end is what is kept.`);
-  if (d.handover) L.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing. This turn asks them to try the next step, or to tell you why or how, before you explain anything more.`);
+  if (d.handover) L.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing. This turn asks them to try the next step, or asks them a question to answer, before you explain anything more.`);
   if (shareLow(s)) L.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
   if (d.preFirst) L.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : 'a question about that idea, with no picture of the target'}. Do not start on the target idea until the child has answered it, right or wrong.`);
   // 6. The standard for the allowed move.
@@ -606,4 +729,14 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
   return L;
 }
 
-export default { newLesson, cleanLesson, decide, turnBrief, answerForms, ANCHORS, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };
+/**
+ * The board in one line of plain facts: every figure, whole or cut, its parts and its shading (P5). The model may say
+ * only what this line says is there.
+ */
+export function boardTruth(board = []) {
+  const figs = (board || []).filter((b) => b && (FIG_CMDS.includes(b.cmd) || b.cmd === 'number_line'));
+  if (!figs.length) return (board || []).length ? 'On the board now: no picture yet (words only). Do not talk about pieces or shading.' : 'The board is empty: no picture yet. Do not talk about pieces or shading.';
+  return `On the board now: ${figs.map(describeItem).join('; ')}. Say only what is there: a whole is not cut, and nothing is shaded unless it says so.`;
+}
+
+export default { boardTruth, whyNoPress, figOf, newLesson, cleanLesson, decide, turnBrief, answerForms, ANCHORS, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };

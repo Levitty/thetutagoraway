@@ -68,7 +68,9 @@ test('1824 scenario 6 turn 12: a repeat and stock opener whose rewrite fails too
   assert.ok(!r.body.guard.includes('gate-dropped') && !r.body.guard.includes('invalid-turn'), r.body.guard.join(' '));
   assert.deepEqual(texts(r), ['That is okay. Here is one whole chapati.', 'Where would you cut it to share it fairly?']);
   assert.doesNotMatch(texts(r).join(' '), /shaded/);
-  assert.match(r.body.tester.kept.join(' '), /gate: kept the model's sentence \(repeat/);
+  // Since run 2026-11-12-1900 (P5) a short kind line said again and a stock opener are noted, not rewritten at all.
+  assert.equal(callModel.calls.length, 1, 'no rewrite call');
+  assert.match(r.body.tester.kept.join(' '), /gate: noted, not rewritten \(stock/);
 });
 
 // ---------------------------------------------------------------- 2. fallback lines from the board's truth

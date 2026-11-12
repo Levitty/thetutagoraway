@@ -5,7 +5,7 @@
 // passes plays at once, as before. A say that fails is rewritten ONCE by a short model call carrying the reason, the
 // sentence and the turn brief; the rewrite is checked again. If it also fails (12 Nov 2026, after run 2026-11-12-1824):
 // a hard fault (a sealed answer or the board's count said, the rule said for the child, harder numbers too soon) drops the
-// sentence; a soft one (repeat, stock, unanswered) never does: the better of the two sentences is spoken. The request is small (no playbook, no transcript: about 400 tokens in, 60 out) so the pause
+// sentence; a soft one (repeat, unanswered) never does: the better of the two sentences is spoken. Stock phrases are noted, never rewritten (P5, run 2026-11-12-1900). The request is small (no playbook, no transcript: about 400 tokens in, 60 out) so the pause
 // the child hears on a flagged step stays short; a rewrite that takes longer than REWRITE_TIMEOUT_MS is dropped.
 // In tests the model is a fake: nothing here costs money unless a real callModel is passed.
 // Pure apart from the call itself.
@@ -25,7 +25,9 @@ export const REWRITE_SYSTEM = `You fix one sentence of HOREB, a maths tutor spea
 - Never say the answer the child is working on, in any form, nor a count the board will show, nor the rule the child should say. Describe the action and ask for the number ("I cut each half again. How many pieces?").
 - If the child asked something or sounded upset, the first sentence answers that, in 15 words or fewer.
 - No stock praise ("good question", "thank you for telling me", "well done", "great job"). Praise, if any, is 8 words or fewer and names the child's own step with one of their words.
-- No "yes" to an unsure or one-word answer: say what you heard, then ask what made them say it.
+- No "yes" to an unsure fraction or comparison with no reason: say what you heard, then ask what made them say it. A count needs no reason.
+- Never do the child's step: if the child was asked how to cut it or what to shade, do not say you cut or shade it; ask them to say or show it.
+- Say only what the board shows (the brief says what is on it). At most one question, at the end.
 - Do not repeat what HOREB said in the last turns; say something new that responds to the child.
 - Keep the same numbers as the problem the child is on unless the app says moving up is allowed.
 Reply with only one JSON object: {"text":"..."}`;

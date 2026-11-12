@@ -229,14 +229,14 @@ test('a full board makes room: the slot asked for first, then the oldest, never 
 });
 
 test('the tutor is told what each board item really shows, and which slots are free', () => {
-  assert.equal(describeItem({ id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' }), 'chap1: a circle at middle, 2 equal parts, none shaded');
-  assert.equal(describeItem({ id: 'b', cmd: 'fraction_bar', parts: 8, shaded: [1, 2, 3, 4], slot: 'bottom', second_bar: { parts: 2, shaded: 1 } }), 'b: a bar at bottom, 8 equal parts, 4 shaded (parts 1, 2, 3, 4); under it a second bar, 2 parts, 1 shaded');
+  assert.equal(describeItem({ id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' }), 'chap1: a circle at middle, cut into 2 equal parts, none shaded');
+  assert.equal(describeItem({ id: 'b', cmd: 'fraction_bar', parts: 8, shaded: [1, 2, 3, 4], slot: 'bottom', second_bar: { parts: 2, shaded: 1 } }), 'b: a bar at bottom, cut into 8 equal parts, 4 of 8 shaded (parts 1, 2, 3, 4); under it a second bar, cut into 2 equal parts, 1 of 2 shaded');
   assert.equal(describeItem({ id: 't', cmd: 'write_text', text: 'Today: halves', slot: 'top' }), 't: the words "Today: halves" at top');
-  assert.equal(describeItem({ id: 'f', cmd: 'figure', type: 'fraction', params: { shape: 'bar', parts: 3, shaded: 1, second: { parts: 6, shaded: 0 } }, controls: ['shade_second'], slot: 'middle' }), 'f: a fraction bar at middle, 3 equal parts, 1 shaded; a second bar beside it, 6 parts, none shaded (the child may: shade_second)');
+  assert.equal(describeItem({ id: 'f', cmd: 'figure', type: 'fraction', params: { shape: 'bar', parts: 3, shaded: 1, second: { parts: 6, shaded: 0 } }, controls: ['shade_second'], slot: 'middle' }), 'f: a fraction bar at middle, cut into 3 equal parts, 1 of 3 shaded; a second bar, cut into 6 equal parts, none shaded beside it (the child may: shade_second)');
   assert.deepEqual(freeSlots([{ id: 'a', cmd: 'write_text', slot: 'top' }, { id: 'b', cmd: 'shape', slot: 'middle_left' }]), ['middle_right', 'bottom']);
   assert.deepEqual(freeSlots([], ['bottom_left']), ['top', 'middle', 'bottom_right']);
   const lines = boardLines([{ id: 'a', cmd: 'write_text', text: 'x', slot: 'top' }, { id: 'b', cmd: 'shape', kind: 'circle', parts: 4, shaded: 0, slot: 'middle' }, { id: 'c', cmd: 'shape', kind: 'circle', parts: 2, shaded: 1, slot: 'bottom' }]);
-  assert.match(lines[0], /^Board now \(what the child sees\): a: the words "x" at top; b: a circle at middle, 4 equal parts, none shaded; c: a circle at bottom, 2 equal parts, 1 shaded\.$/);
+  assert.match(lines[0], /^Board now \(what the child sees\): a: the words "x" at top; b: a circle at middle, cut into 4 equal parts, none shaded; c: a circle at bottom, cut into 2 equal parts, 1 of 2 shaded\.$/);
   assert.match(lines.at(-1), /Free slots: none\. A new drawing erases the oldest items/);
   assert.deepEqual(boardLines([]), ['Board now (what the child sees): empty.', 'Free slots: top, middle, bottom.']);
 });

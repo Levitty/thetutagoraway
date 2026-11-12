@@ -633,8 +633,8 @@ test('a full board makes room in the stream; the context says what each item sho
   assert.deepEqual(r.body.steps[1].targets, ['chap1']);
   assert.deepEqual(r.body.dropped, []);
   const text = callModel.calls[0].messages[0].content[0].text;
-  assert.match(text, /chap1: a circle at middle, 2 equal parts, none shaded/);
-  assert.match(text, /bar1: a bar at bottom, 4 equal parts, 2 shaded/);
+  assert.match(text, /chap1: a circle at middle, cut into 2 equal parts, none shaded/);
+  assert.match(text, /bar1: a bar at bottom, cut into 4 equal parts, 2 of 4 shaded/);
   assert.match(text, /Free slots: none\. A new drawing erases the oldest items/);
 });
 
@@ -642,8 +642,10 @@ test('the system prompt is the same bytes every turn, and carries the new rules'
   const p = systemPrompt(LIB);
   assert.equal(p, systemPrompt(LIB));
   assert.match(p, /Bad: "Now I cut each half again, into four equal pieces\. How many pieces are there now\?" Good: "Now I cut each half again\. How many pieces are there now\?"/);
-  assert.match(p, /After a right answer given with a reason, your first sentence names it in the child's own words/);
-  assert.match(p, /After an unsure or one-word right answer, no yes yet/);
+  assert.match(p, /After a right answer, your first sentence names it in the child's own words/);
+  assert.match(p, /One question a turn, at the end/);
+  assert.match(p, /Never do the child's step for them/);
+  assert.match(p, /a count or a name needs no reason/);
   assert.match(p, /never \{"cmd":"say","say":"\.\.\."\}/);
   assert.match(p, /never ask about shaded parts when none are shaded/);
 });
@@ -710,10 +712,13 @@ test('an answer to the tutor\'s newer, smaller spoken question is not marked wro
   assert.equal(same.body.marked.correct, false);
 });
 
-test('a right answer said as a question is marked right, tentative, and pressed for its reason', async () => {
+test('a right answer said as a question is marked right and tentative; a count is built on, a fraction pressed for its reason', async () => {
   const { seal } = await asking({ id: 'p2', prompt: 'How many pieces are there now?', expected: '4' });
-  const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Yes, four pieces. How sure are you?', move: 'Press for reasoning' }, HAND])), body: { turn_index: 5, message: 'umm... maybe four pieces?', answer: { seal, response: 'umm... maybe four pieces?' } } });
-  assert.deepEqual([r.body.marked.correct, r.body.marked.tentative, r.body.tester.rule], [true, true, 'press']);
+  const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Yes, four pieces. How many are shaded?', move: 'Name what was right' }, HAND])), body: { turn_index: 5, message: 'umm... maybe four pieces?', answer: { seal, response: 'umm... maybe four pieces?' } } });
+  assert.deepEqual([r.body.marked.correct, r.body.marked.tentative, r.body.tester.rule], [true, true, 'advance']);
+  const f = await asking({ id: 'p3', prompt: 'What fraction is shaded now?', form: 'fraction', expected: '2/4' });
+  const r2 = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Two quarters, you said. What made you say two quarters?', move: 'Press for reasoning' }, HAND])), body: { turn_index: 5, message: 'maybe two quarters?', answer: { seal: f.seal, response: 'maybe two quarters?' } } });
+  assert.deepEqual([r2.body.marked.correct, r2.body.marked.tentative, r2.body.tester.rule], [true, true, 'press']);
 });
 
 test('asked to stop: the goodbye ends the lesson, with no question after it', async () => {

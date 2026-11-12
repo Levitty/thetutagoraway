@@ -14,8 +14,11 @@
 //   probes       silence probes that fired sooner than the new times (a nudge before 8 s, a smaller question before 20 s)
 // Pure over habits.mjs parseTranscript; tested in tests/voice-tutor-run-1824.test.mjs.
 // ============================================================================
-import { boardClaimOf } from '../../src/voice-tutor/habits.js';
-import { childMove, hearNumbers, asksForNumber, isTentative } from '../../src/voice-tutor/spokenAnswer.js';
+import { boardClaimOf, asksReason, stepFlags, habitContext } from '../../src/voice-tutor/habits.js';
+import { childMove, hearNumbers, asksForNumber, isTentative, markSpoken, readAnswer } from '../../src/voice-tutor/spokenAnswer.js';
+import { questionKind, isClosed, trivialAnswer } from '../../src/voice-tutor/pacing.js';
+import { figOf } from '../../src/voice-tutor/orchestrator.js';
+import { lastQuestionOnly } from '../../src/voice-tutor/tutorTurn.js';
 import { sealable } from '../../src/voice-tutor/commands.js';
 import { SILENCE } from '../../src/voice-tutor/silence.js';
 
@@ -80,12 +83,85 @@ export function replayAppLesson(tr) {
   return out;
 }
 
+// ---------------------------------------------------------------- the step rules (P5, after run 2026-11-12-1900)
+// What the run's tutor did that the step rules now hold, read from the transcript alone:
+//   presses        "how did you know" questions after an answer: on a count or a name (trivial), straight after another
+//                  press, or for an unsure child who had just been helped; and the ones the code itself added
+//   loops          a question of a kind the child had already got right on the same picture; the same kind a third time
+//                  after two non-answers or wrong answers; a closed question straight after a closed one
+//   two questions  tutor turns with more than one question (now only the last is said)
+//   child's step   a drawing or a sentence that did the cut or the shading the open question asked the child for
+//   stock rewrites the gate's rewrites for a stock phrase alone (now noted, never rewritten)
+//   missed right   a right answer (the sealed one) the app did not mark, that the spoken marker now reads as right
+const SOLVABLE = ['count_total', 'count_shaded', 'fraction', 'state', 'cut', 'equal'];
+const sentencesOf = (t) => String(t || '').split(/(?<=[.!?])\s+/).filter(Boolean);
+const isQ = (x) => /\?\s*$/.test(x);
+export function replayStepLesson(tr) {
+  const out = { presses: 0, pressTrivial: 0, pressAgain: 0, pressHelped: 0, pressCode: 0, reAskSolved: 0, thirdSame: 0, closedTwice: 0, twoQuestions: 0, childStep: 0, stockRewrites: 0, missedRight: 0, tutorTurns: 0 };
+  let board = []; const history = []; let lastQ = null; let lastPress = false; let step = null; let solved = []; let fig = null; let closedLast = false;
+  let open = null; let helpedRecently = false;
+  for (const t of tr.turns) {
+    const says = t.steps.filter((x) => x.cmd === 'say');
+    const childSaid = t.child != null && !t.probe && childMove(t.child) !== 'filler';
+    // The child's answer to the step: right (marked, or classed right), or one more try.
+    const right = !!t.marked?.correct || (!t.marked && ['understood', 'right_unexplained'].includes(t.cls));
+    const fail = t.probe || t.rule === 'lost' || (t.marked && !t.marked.correct) || ['partly_right', 'misconception', 'guess_or_no_attempt'].includes(t.cls);
+    if (step && t.rule !== 'thinking') { if (right && !t.probe) { solved = [...new Set([...solved, step.kind])]; step = { ...step, tries: 0 }; } else if (fail) step = { ...step, tries: step.tries + 1 }; }
+    // A right answer the app did not mark, that the spoken marker reads as right now.
+    if (childSaid && open && !t.marked && /^\d+(\/\d+)?$/.test(String(open.answer).trim())) {
+      const r = markSpoken({ kind: 'typed', question: open.question, answer: open.answer, accepts: [open.answer], wrong: [] }, hearNumbers(t.child, { numberOpen: true }));
+      if (r.correct) out.missedRight += 1;
+    }
+    if (says.length && !t.authored) {
+      out.tutorTurns += 1;
+      const qs = says.flatMap((x) => sentencesOf(x.text)).filter(isQ);
+      if (qs.length > 1) out.twoQuestions += 1;
+      const pressed = says.some((x) => asksReason(x.text));
+      if (pressed && (childSaid || t.probe)) {
+        out.presses += 1;
+        const answered = childSaid && (t.marked || t.cls) && !/^reason|^diagnose|^reteach/.test(t.rule || '');
+        if (answered && trivialAnswer({ question: lastQ || '', answer: t.marked?.correct && open ? open.answer : null })) out.pressTrivial += 1;
+        if (lastPress) out.pressAgain += 1;
+        if (childSaid && isTentative(t.child) && helpedRecently) out.pressHelped += 1;
+        if (says.some((x) => !x.move && asksReason(x.text))) out.pressCode += 1;
+      }
+      // The child's step done for them, by the checks the live gate runs now.
+      const ctx = habitContext({ message: t.child || '', history, board, level: { level: 0, wins: 0, stage: 'teach' }, example: t.rule === 'example' });
+      for (let i = 0; i < t.steps.length; i += 1) if (stepFlags(t.steps[i], ctx, t.steps.slice(0, i)).some((f) => /^does the child's step/.test(f.reason))) { out.childStep += 1; break; }
+      if (/gate: rewritten \(stock[^;)]*\)/.test(t.check || '') && !/repeat|giveaway|unanswered|level_jump/.test((/gate: rewritten \(([^)]*)\)/.exec(t.check || '') || [])[1] || '')) out.stockRewrites += 1;
+      const q = qs.length ? qs[qs.length - 1] : null;
+      if (q) {
+        const k = questionKind(q);
+        if (k && SOLVABLE.includes(k) && solved.includes(k)) out.reAskSolved += 1;
+        if (k && step && step.kind === k && step.tries >= 2) out.thirdSame += 1;
+        if (isClosed(q) && closedLast) out.closedTwice += 1;
+        closedLast = isClosed(q);
+        if (k) step = { kind: k, tries: step && step.kind === k && !right ? step.tries : 0 };
+        lastQ = q;
+      }
+      lastPress = pressed;
+    }
+    helpedRecently = !!t.probe || t.rule === 'lost' || t.steps.some((x) => x.move === 'Smaller-question hint') || (helpedRecently && t.rule === 'thinking');
+    if (t.child) history.push({ who: 'child', text: t.child });
+    for (const x of says) history.push({ who: 'tutor', text: x.text, turn: t.n });
+    board = boardAfter(board, t.steps);
+    const f = figOf(board);
+    if (f !== fig) { if (fig) solved = []; fig = f; }
+    if (t.marked?.correct) open = null;
+    const ask = [...t.steps].reverse().find((x) => x.cmd === 'ask' && x.answer != null);
+    if (ask) open = { answer: ask.answer, question: ask.prompt || '' };
+  }
+  return out;
+}
+const STEP_KEYS = ['presses', 'pressTrivial', 'pressAgain', 'pressHelped', 'pressCode', 'reAskSolved', 'thirdSame', 'closedTwice', 'twoQuestions', 'childStep', 'stockRewrites', 'missedRight', 'tutorTurns'];
+
 /** Every lesson of a run, added up. */
 export function replayAppRun(parsed) {
-  const lessons = parsed.map((tr) => ({ scenario: tr.scenario, title: tr.title, ...replayAppLesson(tr) }));
+  const lessons = parsed.map((tr) => ({ scenario: tr.scenario, title: tr.title, ...replayAppLesson(tr), step: replayStepLesson(tr) }));
   const sum = (k) => lessons.reduce((n, l) => n + (Array.isArray(l[k]) ? l[k].length : l[k]), 0);
   const keys = ['dropped', 'droppedSoft', 'fixed', 'claims', 'claimsCode', 'fillers', 'fillerLines', 'unsureGuess', 'unsureRightGuess', 'misheard', 'misheardAsQuestion', 'badSeals', 'earlyNudge', 'earlySmaller', 'probes'];
-  return { lessons, total: Object.fromEntries(keys.map((k) => [k, sum(k)])) };
+  const step = Object.fromEntries(STEP_KEYS.map((k) => [k, lessons.reduce((n, l) => n + l.step[k], 0)]));
+  return { lessons, total: { ...Object.fromEntries(keys.map((k) => [k, sum(k)])), step } };
 }
 
 /** The report section, one column per run. */
@@ -105,7 +181,23 @@ export function appReport(runs) {
     row('Questions sealed with no real answer', (t) => String(t.badSeals)),
     row('Silence probes / sooner than the new times', (t) => `${t.probes} / ${t.earlyNudge} nudges before 8 s, ${t.earlySmaller} smaller questions before 20 s`),
     '',
+    '### The step rules (P5, after run 2026-11-12-1900)', '',
+    'Read from the transcripts: what the tutor did that the step rules now hold. "Now" says what the app does instead; what the model would write is not known, so the brief-only rows are what the model is now told not to do, not a promise it will not.', '',
+    `| | ${runs.map((r) => r.run).join(' | ')} |`, `|---|${runs.map(() => '---').join('|')}|`,
+    row('"How did you know?" after an answer', (t) => `${t.step.presses} in ${t.step.tutorTurns} tutor turns`),
+    row('... on a count or a name', (t) => `${t.step.pressTrivial} (now: decide allows no press, the brief says so, the code adds none)`),
+    row('... straight after another press', (t) => `${t.step.pressAgain} (now: once per idea; the reason rule moves on)`),
+    row('... for an unsure child just helped', (t) => `${t.step.pressHelped} (now: no press)`),
+    row('... added by the code itself', (t) => `${t.step.pressCode} (now: only when decide allows a press)`),
+    row('Questions asking again what the child had found on the picture', (t) => `${t.step.reAskSolved} (now: the brief names them and the gate rewrites the re-ask)`),
+    row('The same kind of question a third time after two misses', (t) => `${t.step.thirdSame} (now: stuck, shown another way or smaller)`),
+    row('A closed question straight after a closed one', (t) => `${t.step.closedTwice} (now: the brief asks for an open one)`),
+    row('Tutor turns with two or more questions', (t) => `${t.step.twoQuestions} (now: only the last is said)`),
+    row('The child\'s cut or shading done for them', (t) => `${t.step.childStep} (now: the sentence is rewritten, the drawing not made)`),
+    row('Rewrites for a stock phrase alone', (t) => `${t.step.stockRewrites} (now: none, noted only)`),
+    row('Right answers the app did not mark, read right now', (t) => String(t.step.missedRight)),
+    '',
   ];
 }
 
-export default { replayAppLesson, replayAppRun, appReport, OLD_FIXED };
+export default { replayAppLesson, replayStepLesson, replayAppRun, appReport, OLD_FIXED };

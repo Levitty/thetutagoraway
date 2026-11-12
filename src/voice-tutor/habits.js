@@ -9,12 +9,15 @@
 // The habits (the judge's five failure patterns in run 2, Tutagora/Build/voice-tutor/evals/runs/2026-11-12-1142, and the
 // unanswered question):
 //   giveaway        the sealed answer (or a form of it), or the count the board shows, said before the question that
-//                   asks for it; a figure labelled with the answer; the rule the child should say, said for them
-//   repeat          a sentence that nearly repeats the last question or a sentence of the last two tutor turns
+//                   asks for it; a figure labelled with the answer; the rule the child should say, said for them; the
+//                   child's own step done for them (the open question asks them to cut or shade, and the tutor says it
+//                   does it, or draws it cut or shaded: run 2026-11-12-1900, "The tutor makes the cut and draws two parts")
+//   repeat          a sentence that nearly repeats the last question or a sentence of the last two tutor turns; a question
+//                   of a kind the child has already answered right on the picture now on the board (ctx.solved)
 //   stock           a stock phrase; praise over 8 words, praise on a wrong or unexplained answer, or praise that reuses
 //                   none of the child's words; the same first three words as one of the last four turns
 //   confirm_hedged  "yes" to a hedged or one-word answer that came with no reason, and no question about the reason in
-//                   the turn
+//                   the turn; only for an answer worth a reason (a fraction or a comparison: a count or a yes needs none)
 //   level_jump      harder numbers right after one success (a helped success counts half, a hedged one zero) in the
 //                   guided or independent part, or harder numbers with no picture for them
 //   unanswered      the child asked a question or "why", or sounded upset, and the first sentence does not answer it
@@ -25,6 +28,7 @@
 // ============================================================================
 import { answerInQuestion, checkTurnText, visibleText } from './guard.js';
 import { readAnswer, childMove, isTentative, canonAnswer, reasonWords } from './spokenAnswer.js';
+import { questionKind, STEP_NAMES } from './pacing.js';
 
 export const HABITS = ['giveaway', 'repeat', 'stock', 'confirm_hedged', 'level_jump', 'unanswered'];
 export const HABIT_NAMES = {
@@ -199,6 +203,16 @@ function boardAnswerLeak(step, ctx, sofar) {
   const p = partsOf(fig); const sh = shadedOf(fig);
   const before = visibleText(visible(sofar)).map((x) => x.text);
   const theirs = new Set([...readAnswer(ctx.child || '').found.map((f) => f.value)]);
+  // The fraction the picture shows, said for the child while one of the tutor's last questions still asks for it (P5,
+  // run 2026-11-12-1900, scenario 30 turn 31: "Write it as a fraction on the board with your pencil: two out of four").
+  const asking = (ctx.recentQuestions || []).find((q) => questionKind(q) === 'fraction');
+  if (asking && p > 1 && sh) {
+    const known = new Set([...theirs, ...(ctx.found || []), ...readAnswer(ctx.childSoFar || '').found.map((f) => f.value)]);
+    for (const s of sentencesOf(step.text).filter((x) => !isQ(x))) {
+      const hit = readAnswer(s).found.find((f) => f.kind === 'fraction' && !f.negated && sameValue(f.value, `${sh}/${p}`) && !known.has(f.value));
+      if (hit) return `"${hit.words}" is said while the child is still asked for it ("${asking.slice(0, 60)}"; the board shows ${sh}/${p})`;
+    }
+  }
   for (const s of sentencesOf(step.text)) {
     if (isQ(s)) {
       const said = before.join(' ');
@@ -224,6 +238,48 @@ const newestFigure = (board, steps) => {
   const pointed = [...steps].reverse().map((x) => (['highlight', 'point', 'underline'].includes(x.cmd) ? x.target : null)).find((id) => id && now.some((b) => b.id === id));
   return now.find((b) => b.id === pointed) || now[now.length - 1];
 };
+
+// ---------------------------------------------------------------- the child's own step, done for them (P5)
+const CUT_ASK = /\b(where|how) (would|will|should|could|can|do) (you|we) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\b(can|could|will) you (cut|split) (it|the \w+)\b/i;
+const SHADE_ASK = /\b(which|what) (part|parts|piece|pieces) (would|will|should|could|do) you (shade|colour|color)\b|\b(can|could|will) you (shade|colour|color)\b|\bshade (one|two|three|four|half|the|it|them)\b[^?]*\?/i;
+/** What the question asks the child to do on the board themselves: 'cut', 'shade', or null. */
+export function actionAsked(q) {
+  const t = String(q || '');
+  if (!isQ(t)) return null;
+  return CUT_ASK.test(t) ? 'cut' : SHADE_ASK.test(t) ? 'shade' : null;
+}
+// The child has said how to cut ("in the middle", "two", "half"): the tutor may draw it as they said.
+const CUT_SAID = /\b(middle|half|halves|two|three|four|five|six|eight|equal|across|down|line|[2-9])\b/i;
+const SAYS_CUT = /\b(i|let me|i will|i'?ll|i am going to|watch,? i|now i)\s+(draw (a |one |the )?(line|cut)|cut|split|divide)\b/i;
+const SAYS_SHADE = /\b(i|let me|i will|i'?ll|i am going to|now i)\s+(shade|colour|color)\b/i;
+/** The child's step still open: asked in the tutor's last question (and not answered by the child's words) or earlier this turn. */
+function openAction(ctx, sofar) {
+  const now = sofar.filter((x) => x.cmd === 'say').flatMap((x) => sentencesOf(x.text)).filter(isQ).map(actionAsked).filter(Boolean);
+  if (now.length) return now[now.length - 1];
+  const a = actionAsked(ctx.lastQuestion);
+  if (!a) return null;
+  if (a === 'cut' && CUT_SAID.test(String(ctx.child || ''))) return null;
+  if (a === 'shade' && ctx.child && readAnswer(ctx.child).found.length) return null;
+  return a;
+}
+/** The step does the child's cut or shading for them: a sentence saying so, or a figure drawn cut (or shaded) past the picture before it. */
+function childStepOf(step, ctx, sofar) {
+  if (ctx.closing || ctx.example) return null;
+  const action = openAction(ctx, sofar);
+  if (!action) return null;
+  if (step.cmd === 'say') {
+    const s = sentencesOf(step.text).find((x) => !isQ(x) && (action === 'cut' ? SAYS_CUT : SAYS_SHADE).test(x));
+    return s ? `does the child's step: the question asks them to ${action} it, and the tutor says it does it ("${s.slice(0, 60)}")` : null;
+  }
+  if (!FIGS.includes(step.cmd)) return null;
+  const before = newestFigure(ctx.board, sofar);
+  const p0 = before ? partsOf(before) || 1 : 1; const s0 = before ? shadedOf(before) || 0 : 0;
+  const p = partsOf(step) || 1; const sh = shadedOf(step) || 0;
+  const childShades = step.cmd === 'figure' && (step.controls || []).some((c) => String(c).startsWith('shade'));
+  if (action === 'cut' && p > 1 && p > p0) return `does the child's step: the question asks them to cut it, and ${step.id} is drawn cut into ${p} parts`;
+  if (action === 'shade' && sh > 0 && sh > s0 && !(childShades && sh === s0)) return `does the child's step: the question asks them to shade it, and ${step.id} is drawn with ${sh} shaded`;
+  return null;
+}
 
 /** Giveaways in one step, against what was said before it this turn. `extra`: the answer about to be sealed (the next ask). */
 function giveawayOf(step, ctx, sofar, extra = []) {
@@ -258,6 +314,7 @@ function giveawayOf(step, ctx, sofar, extra = []) {
     for (const s of sentencesOf(text)) { const r = statesRule(s, ctx, words) || keyStepOf(s, ctx); if (r) { out.push(r); break; } }
   }
   if (step.cmd === 'say' && !out.length) { const b = boardAnswerLeak(step, ctx, sofar); if (b) out.push(b); }
+  if (!out.length) { const c = childStepOf(step, ctx, sofar); if (c) out.push(c); }
   if (FIGS.includes(step.cmd) && labelled(step)) {
     // A label prints the shaded fraction: unless the child has said that fraction, it shows an answer they may be asked for.
     const p = partsOf(step); const s = shadedOf(step);
@@ -279,12 +336,18 @@ function repeatOf(text, ctx) {
       if (isQ(p) !== isQ(s)) continue;
       const l = likeness(s, p);
       if (l.min >= 4 && (l.jaccard >= 0.75 || (l.contained && l.min >= 5))) return `nearly repeats "${p.slice(0, 70)}"`;
-      if (l.min >= 2 && l.min < 4 && l.jaccard === 1 && countWords(s) >= 3) return `repeats "${p.slice(0, 70)}" word for word`;
+      // A short question said again word for word; a short kind line ("That is okay.", "Take your time.") said again is
+      // not a repeat (P5, run 2026-11-12-1900: it rewrote openers like the stock check did).
+      if (isQ(s) && l.min >= 2 && l.min < 4 && l.jaccard === 1 && countWords(s) >= 3) return `repeats "${p.slice(0, 70)}" word for word`;
     }
     if (isQ(s) && ctx.lastQuestion) {
       const l = likeness(s, ctx.lastQuestion);
       if (l.min >= 3 && l.jaccard >= 0.7) return `asks the last question again ("${ctx.lastQuestion.slice(0, 70)}")`;
     }
+    // A step the child has already got right on this picture, asked again (P5, run 2026-11-12-1900: "re-counts the same
+    // two pieces"). Only the counting and naming steps: a reason or "what do you see" may come again.
+    const k = isQ(s) ? questionKind(s) : null;
+    if (k && ['count_total', 'count_shaded', 'fraction', 'state', 'cut', 'equal'].includes(k) && (ctx.solved || []).includes(k)) return `asks again what the child has already found on this picture (${STEP_NAMES[k]}): take the next step`;
   }
   return null;
 }
@@ -437,6 +500,8 @@ const REASON_Q = /\b(how did you|how do you know|how you got|how you know|how wo
 function confirmOf(steps, ctx) {
   const c = ctx.childRead || {};
   if (!c.answer || c.reason || !(c.hedged || c.oneWord)) return null;
+  // A count or a yes needs no reason (P5): only a fraction or a comparison word is worth one.
+  if (!c.fractions.length && !/\b(same|equal|more|less|bigger|smaller|half|quarter|third)\b/i.test(c.text)) return null;
   const says = steps.filter((x) => x.cmd === 'say');
   const first = sentencesOf(says[0]?.text || '')[0] || '';
   if (!CONFIRM.test(first)) return null;
@@ -498,7 +563,7 @@ export function turnFlags(steps = [], ctx = {}) {
  * history: [{ who, text, turn? }] (tutor lines are sentences; grouped into turns by `turn`, else by runs between the
  * child's lines). hidden: [{ answer, accepts, question }]. level: { level, wins, stage }.
  */
-export function habitContext({ message = '', marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true } = {}) {
+export function habitContext({ message = '', marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [] } = {}) {
   const turns = [];
   let last = null;
   for (const h of Array.isArray(history) ? history : []) {
@@ -514,11 +579,13 @@ export function habitContext({ message = '', marked = null, cls = null, history 
   const childSoFar = (history || []).filter((h) => h?.who === 'child').map((h) => h.text).join(' ') + (message ? ` ${message}` : '');
   return {
     child: message || '', childRead: readChild(message, { marked }), marked, cls,
-    hidden, found, board, level, closing, exempt, example,
+    hidden, found, board, level, closing, exempt, example, solved,
     // Late in a lesson the habits drift (SafeTutors; 12 Nov 2026 runs: 39% of turns flagged in turns 1-10, 58% after): from the tenth
     // tutor turn the repeat check looks back over four turns, not two.
     prev: tutorTurns.slice(lateRepeat && tutorTurns.length >= LATE_AFTER_TURNS ? -LATE_REPEAT_TURNS : -2), openers: tutorTurns.slice(-4).map((t) => openerOf(t.join(' '))).filter(Boolean),
     lastQuestion, childSoFar,
+    // The questions of the last three tutor turns: a fraction asked for there is still the child's to say.
+    recentQuestions: tutorTurns.slice(-3).flat().filter(isQ),
   };
 }
 

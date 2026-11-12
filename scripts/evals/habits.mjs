@@ -60,6 +60,7 @@ export function parseTranscript(md) {
       else if ((m = /^Answer class: ([a-z_]+)/.exec(l))) t.cls = m[1];
       else if ((m = /; rule: ([a-z-]+); reason: (.*)$/.exec(l))) { t.rule = m[1]; t.reason = m[2]; }
       else if ((m = /^Guard reasons: (.*)$/.exec(l))) t.guard = m[1];
+      else if ((m = /^App's check of the tutor's turn: (.*)$/.exec(l))) t.check = m[1];
       else if (/^\(No model call in this turn/.test(l)) t.authored = true;
     }
     out.turns.push(t);

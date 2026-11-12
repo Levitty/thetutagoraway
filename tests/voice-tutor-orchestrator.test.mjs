@@ -15,6 +15,8 @@ const EQ = `${F}EQUIVALENT_FRACTIONS`;
 const ADD = `${EQ}.M_EQUIV_ADDITIVE`;
 const wrong = (ask = 'q1', mis = ADD) => ({ ask, skill: EQ, correct: false, misconception: mis, answer: '4' });
 const right = (ask = 'q1') => ({ ask, skill: EQ, correct: true, misconception: null, answer: '2' });
+// A right answer worth a reason (P5): a fraction, not a count.
+const half = (ask = 'q1') => ({ ask, skill: EQ, correct: true, misconception: null, answer: 'one half', said: 'one half', canon: '1/2' });
 const at = (o = {}) => ({ ...newLesson(), stage: 'guided', turns: 5, ...o });
 const bar = { cmd: 'fraction_bar', id: 'b1', parts: 4, shaded: 1, slot: 'middle' };
 const line = { cmd: 'number_line', id: 'n1', from: 0, to: 1, divisions: 4, slot: 'middle' };
@@ -77,20 +79,31 @@ test('a wrong answer: diagnose first; a second wrong answer with the same pictur
   assert.deepEqual(s2.tried, ['bar', 'number line']);
 });
 
-test('a right answer with no reason must be pressed for its reason before it counts', () => {
+test('a right fraction with no reason is pressed for its reason before it counts; a count is not (P5)', () => {
   assert.equal(gaveReason('2'), false);
   assert.equal(gaveReason('two because each half is cut into two'), true);
-  const d = decide(at(), { turnIndex: 5, marked: right(), message: '2' });
+  // A count needs no reason: yes, and the next step; nothing waits for a reason.
+  const c = decide(at(), { turnIndex: 5, marked: right(), message: '2' });
+  assert.equal(c.rule, 'advance');
+  assert.match(c.reason, /No "how did you know" \(a count or a name needs no reason\)/);
+  assert.equal(updateLesson(at(), { decision: c, steps: [say('Yes, two. How many are shaded?', 'Name what was right')], judged: finalClass({ marked: right(), message: '2' }), marked: right() }).pending, null);
+  const d = decide(at(), { turnIndex: 5, marked: half(), message: 'one half' });
   assert.deepEqual([d.rule, d.moves, d.prelim, d.must], ['press', ['Name what was right', 'Press for reasoning'], 'right_unexplained', ['Name what was right']]);
-  const s = updateLesson(at(), { decision: d, steps: [say('How did you know?', 'Press for reasoning')], judged: finalClass({ marked: right(), message: '2' }), marked: right() });
+  const s = updateLesson(at(), { decision: d, steps: [say('How did you know?', 'Press for reasoning')], judged: finalClass({ marked: half(), message: 'one half' }), marked: half() });
+  assert.deepEqual(s.pressed, ['1/2'], 'pressed once on this idea');
+  assert.equal(decide(s, { turnIndex: 7, marked: half('q3'), message: 'one half' }).rule, 'advance', 'never twice on one idea');
   assert.deepEqual(s.pending, { ask: 'q1', skill: EQ });
   assert.equal(s.streak, 0, 'not understood yet');
   // The child gives the reason: the rule says judge it.
   const r = decide(s, { turnIndex: 6, message: 'because the bottom doubled and so did the top' });
   assert.equal(r.rule, 'reason');
+  assert.ok(!r.moves.includes('Press for reasoning'), 'the reason is asked for once');
   const s2 = updateLesson(s, { decision: r, steps: [say('Yes, both doubled.', 'Name what was right')], judged: finalClass({ assessment: { class: 'understood', evidence: 'both doubled' } }) });
   assert.equal(s2.pending, null);
   assert.equal(s2.streak, 1);
+  // Declined ("I just knew"): the lesson moves on all the same.
+  const s3 = updateLesson(s, { decision: decide(s, { turnIndex: 6, message: 'I just knew' }), steps: [say('You just knew. Now cut each half again: how many pieces?')], judged: finalClass({ assessment: { class: 'right_unexplained', evidence: 'just knew' } }) });
+  assert.equal(s3.pending, null);
 });
 
 test('understood, then a fresh check, allows the next stage; not before', () => {
@@ -122,7 +135,7 @@ test('a missing earlier skill sends the lesson back to the prerequisite; "I don\
 });
 
 test('the turn is checked against the decision: notes only, and they name what was off', () => {
-  const d = decide(at(), { turnIndex: 5, marked: right(), message: '2' });
+  const d = decide(at(), { turnIndex: 5, marked: half(), message: 'one half' });
   // After a right answer, Name what was right is required: a turn that skips it is noted.
   assert.deepEqual(judgeTurn(d, [say('Yes! How did you know?', 'Press for reasoning'), { cmd: 'pause_for_child' }]), ['"Name what was right" was required this turn and no say carried it']);
   assert.deepEqual(judgeTurn(d, [say('Yes, two.', 'Name what was right'), say('How did you know?', 'Press for reasoning')]), []);
@@ -275,7 +288,9 @@ test('the new lesson fields are cleaned like the rest', () => {
 test('good moves are allowed in every stage; only stage moves are held to the stage; a tag on any say counts', () => {
   const warm = decide(at({ stage: 'warmup' }), { turnIndex: 3, message: 'yes I shared one' });
   assert.equal(warm.rule, 'stage');
-  assert.deepEqual(judgeTurn(warm, [say('You shared it.'), say('How do you know they were the same?', 'Press for reasoning')]), [], 'Press for reasoning in the warm-up, on the second say');
+  // Press for reasoning is no longer a move of every stage (P5): only where decide allows it.
+  assert.match(judgeTurn(warm, [say('You shared it.'), say('How do you know they were the same?', 'Press for reasoning')]).join(' '), /"Press for reasoning" was not allowed/);
+  assert.deepEqual(judgeTurn(warm, [say('You shared it.', 'Revoice and build'), say('How many pieces did you cut?', 'Count with the child')]), [], 'a tag on the second say counts');
   assert.deepEqual(judgeTurn(warm, [say('Yes, two pieces.', 'Name what was right')]), []);
   assert.deepEqual(judgeTurn(warm, [say('Take your time.', 'Wait and nudge')]), []);
   assert.match(judgeTurn(warm, [say('Now a harder one.', 'Stretch the quick child')]).join(' '), /not allowed this turn/);
@@ -289,10 +304,12 @@ test('good moves are allowed in every stage; only stage moves are held to the st
   assert.match(judgeTurn(care, [say('How did you know?', 'Press for reasoning')]).join(' '), /not allowed/);
 });
 
-test('an answer said as a question is an answer: pressed for its reason and how sure the child is', () => {
+test('an answer said as a question is an answer: a count is said back and built on; a fraction is pressed once', () => {
   const d = decide(at({ stage: 'warmup' }), { turnIndex: 3, message: 'umm... so... maybe four pieces?' });
   assert.equal(d.rule, 'tentative');
-  assert.ok(d.moves.includes('Press for reasoning'));
+  assert.ok(!d.moves.includes('Press for reasoning'), 'a count needs no reason (P5)');
+  const f = decide(at({ stage: 'warmup' }), { turnIndex: 3, message: 'maybe one half?', lastQ: 'What fraction is shaded?' });
+  assert.ok(f.moves.includes('Press for reasoning'));
   const p = decide(at(), { turnIndex: 3, marked: { ...right(), tentative: true }, message: 'umm... so... it is... one half?' });
   assert.equal(p.rule, 'press');
   assert.match(p.reason, /how sure they are/);

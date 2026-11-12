@@ -682,11 +682,12 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
 }
 
 // ---------------------------------------------------------------- the board, in words
-const shadedText = (shaded, parts) => {
-  const n = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
-  if (!n) return 'none shaded';
-  if (Array.isArray(shaded)) return `${n} shaded (part${n === 1 ? '' : 's'} ${shaded.join(', ')})`;
-  return n === parts ? 'all shaded' : `${n} shaded`;
+// "a whole circle, not cut, nothing shaded" or "a circle cut into 2 equal parts, 1 of 2 shaded".
+const cutText = (name, parts, shaded, at = '') => {
+  const n = Math.max(1, Number(parts) || 1);
+  if (n <= 1) return `a whole ${name}${at}, not cut into parts, ${Number(Array.isArray(shaded) ? shaded.length : shaded) ? 'all shaded' : 'nothing shaded'}`;
+  const k = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
+  return `a ${name}${at}, cut into ${n} equal parts, ${k ? `${k} of ${n} shaded${Array.isArray(shaded) ? ` (part${k === 1 ? '' : 's'} ${shaded.join(', ')})` : ''}` : 'none shaded'}`;
 };
 /** What one board item really shows, for the tutor's context (12 Nov 2026: it asked about shaded parts when none were shaded). */
 export function describeItem(b) {
@@ -694,9 +695,10 @@ export function describeItem(b) {
   switch (b.cmd) {
     case 'write_text': return `${b.id}: the words "${b.text}"${at}`;
     case 'write_math': return `${b.id}: the maths ${b.expr}${at}`;
-    case 'fraction_bar': return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? '' : 's'}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ''}`;
-    // A figure in one part is a whole, not cut (12 Nov 2026, run 2026-11-12-1824: "1 equal parts" was read as a cut chapati).
-    case 'shape': return Number(b.parts) <= 1 ? `${b.id}: a whole ${b.kind || 'shape'}${at}, not cut into parts, nothing shaded` : `${b.id}: a ${b.kind || 'shape'}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+    case 'fraction_bar': return `${b.id}: ${cutText('bar', b.parts, b.shaded, at)}${b.second_bar ? `; under it a second ${cutText('bar', b.second_bar.parts, b.second_bar.shaded).replace(/^a /, '')}` : ''}`;
+    // A figure in one part is a whole, not cut (12 Nov 2026, run 2026-11-12-1824: "1 equal parts" was read as a cut chapati;
+    // run 2026-11-12-1900: the same for bars and fraction figures, and "a circle with one half shaded" for an uncut one).
+    case 'shape': return `${b.id}: ${cutText(b.kind || 'shape', b.parts, b.shaded, at)}`;
     case 'number_line': return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? '' : 's'} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(', ')}` : ''}`;
     case 'plot_points': return `${b.id}: a graph${at} with ${(b.points || []).length} points`;
     case 'figure': {
@@ -704,8 +706,8 @@ export function describeItem(b) {
       const ctl = b.controls?.length ? ` (the child may: ${b.controls.join(', ')})` : '';
       if (b.type === 'fraction') {
         const n = p.shape === 'grid' ? (p.rows || 0) * (p.cols || 0) : p.parts;
-        const sec = p.second ? `; a second ${p.shape || 'bar'} beside it, ${p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0)} parts, ${shadedText(p.second.shaded, p.second.parts)}` : '';
-        return `${b.id}: a fraction ${p.shape || 'bar'}${at}, ${n} equal parts, ${shadedText(p.shaded, n)}${sec}${ctl}`;
+        const sec = p.second ? `; a second ${cutText(p.shape || 'bar', p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0), p.second.shaded).replace(/^a /, '')} beside it` : '';
+        return `${b.id}: ${cutText(`fraction ${p.shape || 'bar'}`, n, p.shaded, at)}${sec}${ctl}`;
       }
       if (b.type === 'numberline') return `${b.id}: a number line${at} from ${p.from} to ${p.to}, ${p.divisions} steps${p.marker != null ? `, marker at ${p.marker}` : ''}${ctl}`;
       return `${b.id}: a ${b.type} figure${at}${ctl}`;

@@ -47,19 +47,19 @@ test('an explaining turn is one with nothing handed to the child', () => {
   assert.equal(handsOver('Does that make sense?'), false);
 });
 
-test('after an explaining turn the next must hand over: Show then hand over, Press for reasoning, Check for understanding', () => {
+test('after an explaining turn the next must hand over: Show then hand over, Check for understanding', () => {
   const base = decide(at(), { turnIndex: 5, message: 'ok' });
   assert.equal(base.handover, false);
   const d = decide(at({ explain: 1 }), { turnIndex: 5, message: 'ok' });
   assert.equal(d.handover, true);
-  assert.deepEqual(d.moves, ['Show then hand over', 'Press for reasoning', 'Check for understanding']);
+  assert.deepEqual(d.moves, ['Show then hand over', 'Check for understanding']);
   assert.match(d.reason, /hands over first/);
   assert.match(decide(at({ explain: 2 }), { turnIndex: 5, message: 'ok' }).reason, /last 2 turns explained/);
   // The earlier-skill path also hands over (and may hint); a probe, a care turn and the close are not changed.
   assert.ok(decide(at({ explain: 1, classes: ['missing_prerequisite'] }), { turnIndex: 5, message: 'ok', prerequisite: 'Equal parts' }).moves.includes('Smaller-question hint'));
   assert.equal(decide(at({ explain: 1 }), { turnIndex: 5, probe: { kind: 'answer_nudge' } }).handover, false);
   assert.equal(decide(at({ explain: 1 }), { turnIndex: 30, elapsedMin: 18 }).handover, false);
-  assert.deepEqual(handoverMoves('stage'), ['Show then hand over', 'Press for reasoning', 'Check for understanding']);
+  assert.deepEqual(handoverMoves('stage'), ['Show then hand over', 'Check for understanding']);
   // The brief says so, and the judge notes a turn that explains again.
   assert.match(turnBrief(at({ explain: 1 }), d, { turnIndex: 5 }).join('\n'), /Hand over first/);
   assert.match(judgeTurn(d, [say('The bar has four parts.', 'Show then hand over')]).join(' '), /explained again/);

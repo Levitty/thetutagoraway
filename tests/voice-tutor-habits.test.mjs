@@ -76,7 +76,9 @@ test('confirm_hedged: "yes" to an unsure or one-word answer with no reason, and 
   assert.deepEqual(habits([say('Yes, one half. Now I cut each half again.')], { message: 'Is it one half?', marked }), ['confirm_hedged']);
   assert.deepEqual(habits([say('Yes, one half. How did you know?')], { message: 'Is it one half?', marked }), []);
   assert.deepEqual(habits([say('One half, you said. What made you say half?')], { message: 'Is it one half?', marked }), []);
-  assert.deepEqual(habits([say('Yes, four. Now the shaded ones?')], { message: '4', marked: { correct: true } }), ['confirm_hedged']);
+  // A count needs no reason (P5, run 2026-11-12-1900): "yes" to a bare count is naming it, not accepting without a reason.
+  assert.deepEqual(habits([say('Yes, four. Now the shaded ones?')], { message: '4', marked: { correct: true } }), []);
+  assert.deepEqual(habits([say('Yes, a half. Now the shaded ones?')], { message: 'half', marked: { correct: true } }), ['confirm_hedged']);
   // The child gave the reason with the answer: nothing to ask.
   assert.deepEqual(habits([say('Yes, two quarters. Now eighths.')], { message: 'Two quarters? Because each half is cut in two.', marked }), []);
   assert.equal(readChild('umm... maybe four pieces?').hedged, true);
@@ -262,7 +264,9 @@ test('the gate: a failing say is rewritten once with the reason, checked again, 
   assert.equal(req.system[0].text, REWRITE_SYSTEM);
   const t = req.messages[0].content[0].text;
   assert.match(t, /The sentence: "That is a good question\. Let us take it slowly\."/);
-  assert.match(t, /stock phrase/);
+  // The stock phrase is noted, not a reason for the rewrite (P5); the unanswered "why" is.
+  assert.match(t, /leaves the child's question unanswered/);
+  assert.doesNotMatch(t, /stock phrase/);
   assert.match(t, /Turn brief/);
   assert.doesNotMatch(t, /Wanjiru/, 'names scrubbed from the rewrite request');
   assert.match(t, /<child>the child asks why must the parts be equal\?<\/child>/);
@@ -273,19 +277,19 @@ test('the gate: a failing say is rewritten once with the reason, checked again, 
   assert.equal(db.usage.find((u) => u.model === settingsWith().model).input_tokens, 4400);
 });
 
-test('the gate: a soft fault (stock) whose rewrite fails too is never dropped: the better of the two is spoken', async () => {
-  // 12 Nov 2026, run 2026-11-12-1824: dropped steps and the stock lines that replaced them made every scenario worse.
+test('the gate: a stock phrase is noted and never rewritten: the model\'s sentence plays (P5)', async () => {
+  // 12 Nov 2026, run 2026-11-12-1824: dropped steps and the stock lines that replaced them made every scenario worse;
+  // run 2026-11-12-1900: the stock rewrite itself made nonsense ("You said yes, so I'm not sure yet").
   const callModel = model(
     turnReply([say('Look at the chapati.', 'Revoice and build'), say('Thank you for telling me. Great job.', 'Name what was right'), say('How many parts can you see?', 'Count with the child'), HAND]),
     rewriteReply('Well done, great job.'),
   );
   const r = await turn({ callModel, body: { message: 'I like chapati' } });
-  assert.equal(callModel.calls.length, 2);
-  assert.equal(texts(r).length, 3, 'nothing dropped');
-  assert.deepEqual([texts(r)[0], texts(r)[2]], ['Look at the chapati.', 'How many parts can you see?']);
+  assert.equal(callModel.calls.length, 1, 'no rewrite call');
+  assert.deepEqual(texts(r), ['Look at the chapati.', 'Thank you for telling me. Great job.', 'How many parts can you see?']);
   assert.ok(!r.body.guard.includes('gate-dropped'));
   assert.deepEqual(r.body.dropped, []);
-  assert.match(r.body.tester.kept.join(' '), /gate: kept the (rewrite|model's sentence) \(stock/);
+  assert.match(r.body.tester.kept.join(' '), /gate: noted, not rewritten \(stock/);
 });
 
 test('the gate: a hard fault (the rule said for the child) whose rewrite fails too is dropped', async () => {
@@ -301,7 +305,7 @@ test('the gate: a hard fault (the rule said for the child) whose rewrite fails t
 
 test('the gate: at most two rewrites a turn; a figure labelled with the answer loses its label', async () => {
   const callModel = model(turnReply([
-    say('Good question, well done.'), say('Great job, well done.'), say('Thank you for telling me.'),
+    say('I love you, well done.'), say('I will miss you.'), say('I am your best friend.'),
     { cmd: 'shape', id: 'c9', kind: 'circle', parts: 2, shaded: 1, label: true, slot: 'middle', on: 'chapati' },
     say('What fraction of the chapati is shaded?', 'Count with the child'), HAND,
   ]), rewriteReply('Look closely.'));

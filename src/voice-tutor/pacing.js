@@ -17,7 +17,8 @@
 export const SHARE_FLOOR = 0.25;          // below this the brief says so and the gate holds the turn to the child's own length
 export const SHARE_MIN_WORDS = 60;        // the share is not read before this many words have been said in all
 export const OVERTALK_BASE = 15;          // a turn may be twice the child's last reply plus this
-export const HANDOVER_MOVES = ['Show then hand over', 'Press for reasoning', 'Check for understanding'];
+// No "Press for reasoning" here (P5): a hand-over is a "you try" or a question to answer; decide allows the press where it fits.
+export const HANDOVER_MOVES = ['Show then hand over', 'Check for understanding'];
 
 export const wordsIn = (t) => String(t || '').replace(/\.\.\.|…/g, ' ').split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
 
@@ -81,3 +82,76 @@ export function preFor({ target = null, prerequisite = null, prerequisites = [],
 }
 /** Is this ask on the skill the warm-up needs? The skill code when there is one, else the words of the question. */
 export const askIsOnPre = (pre, { skill = null, prompt = '' } = {}) => !pre || (pre.skill ? skill === pre.skill : pre.re.test(String(prompt)));
+
+// ---------------------------------------------------------------- the step the child is on (12 Nov 2026 evening, P5)
+// Run 2026-11-12-1900: the tutor re-counted the same two pieces for whole lessons, asked "whole or cut?" five times in a
+// row, and pressed a shy child three times for how they knew a count. The lesson state now carries the step the child is
+// on: the kind of the tutor's last question (questionKind), the tries on it, the kinds already found on the picture, and
+// the closed (yes-or-no, this-or-that) questions in a row. orchestrator.js decide() reads them, the brief states them.
+const KINDS = [
+  ['cut', /\b(where|how) (would|will|should|could|can|do|did) (you|we|i) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you|i) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\bhow (do|can|would) (we|you) (share|make) (it|them)? ?(fair|equal)/i],
+  ['reason', /\b(how did you|how do you know|how you know|how can you tell|how are you sure|how sure|what made you|why|tell me how|what did you (count|look at|do)|show me why)\b/i],
+  ['fraction', /\b(what|which) fraction\b|\bas a fraction\b|\bhow many out of\b|\bout of how many\b|\bwhat (do|would) (we|you) call\b|\bwhat is (each|one|that|this) (piece|part)( called)?\b|\bwhat part of\b/i],
+  ['compare', /\b(same amount|the same as|more than|less than|bigger|smaller|more|less|equal to|equals|equivalent|make (your|one|the|a) half|fit into)\b|\bhow many (halves|thirds|quarters|fourths|fifths|sixths|eighths|ninths|tenths|twelfths)\b/i],
+  ['count_shaded', /\bhow many\b[^?]*\b(shaded|coloured|colored)\b|\bcount (only )?the shaded\b/i],
+  ['count_total', /\bhow many\b|\bwhat number\b|\bcount\b/i],
+  ['equal', /\b(same size|equal (size|parts|pieces)|fair (share|shares|parts|pieces))\b/i],
+  ['state', /\b(whole|cut)\b/i],
+  ['notice', /\bwhat do you (see|notice)\b|\btell me what you (see|notice)\b|\bwhat do you think\b/i],
+];
+/** The kind of a question the tutor asked (one of the KINDS, else 'other'); null for a sentence that is not a question. */
+export function questionKind(q) {
+  const t = String(q || '').trim();
+  if (!/\?\s*$/.test(t)) return null;
+  return (KINDS.find(([, re]) => re.test(t)) || ['other'])[0];
+}
+/** A closed question: yes or no, or this or that ("Is it whole, or cut?"). An invitation to do something ("Can you point...?") is not. */
+export const isClosed = (q) => {
+  const t = String(q || '').trim().replace(/^\W+/, '');
+  if (!/\?\s*$/.test(t)) return false;
+  if (/\byes or no\b/i.test(t)) return true;
+  if (/^(can|could|will|would) you\b/i.test(t)) return false;
+  if (/^(what|how|which|where|why|who|when)\b/i.test(t)) return /,?\s*\bor\b[^,?]{1,30}\?\s*$/.test(t) && /^which\b/i.test(t);
+  return /^(is|are|was|were|do|does|did|have|has|shall)\b/i.test(t) || /,?\s+or\s+[^,?]{1,30}\?\s*$/i.test(t) || /\bsay one word\b/i.test(t);
+};
+/** The question a turn put to the child: its last spoken question, else its ask's prompt; null when it asked nothing. */
+export function lastQuestionOf(steps = []) {
+  const qs = steps.filter((x) => x.cmd === 'say').flatMap((x) => sentencesOf(x.text)).filter(isQ);
+  if (qs.length) return qs[qs.length - 1];
+  const a = [...steps].reverse().find((x) => x.cmd === 'ask');
+  return a && isQ(a.prompt) ? a.prompt : null;
+}
+// The steps of a part-whole picture in the order a lesson on equal parts and equivalent fractions climbs them.
+export const LADDER = ['state', 'cut', 'count_total', 'count_shaded', 'fraction', 'compare'];
+export const STEP_NAMES = {
+  state: 'whether the whole is cut yet', cut: 'how to cut it into equal parts', equal: 'whether the parts are equal', count_total: 'how many equal pieces in all',
+  count_shaded: 'how many pieces are shaded', fraction: 'the shaded part as a fraction (how many out of how many)', compare: 'whether two fractions are the same amount',
+  reason: 'how they knew', notice: 'what they see', other: 'your last question',
+};
+const NEXT_NAMES = {
+  state: 'ask them how to cut it so two people get fair shares', cut: 'ask how many equal pieces it has now', count_total: 'ask how many of the pieces are shaded',
+  count_shaded: 'ask for the shaded part as a fraction: how many out of how many', fraction: 'cut each piece again (ask them to predict first), then ask if the shaded amount is the same',
+  compare: 'a fresh example, or ask them to say the rule in their own words',
+};
+/** The next step on the picture: the first rung above everything found (and above the cut, when the picture is cut already). */
+export function nextStepOf(solved = [], { cut = false } = {}) {
+  const top = Math.max(-1, ...solved.map((k) => LADDER.indexOf(k)), cut ? LADDER.indexOf('cut') : -1);
+  const k = LADDER[Math.min(top, LADDER.length - 1)] || null;
+  return top < 0 ? null : NEXT_NAMES[k] || null;
+}
+/**
+ * A trivial answer needs no reason (P5): a count, a yes or no, a name ("what do you call it?": "a half"). A fraction,
+ * a comparison, an equivalence or a rule is not trivial. `question`: the question it answered; `answer`: its canonical
+ * form, when the seal holds one.
+ */
+export function trivialAnswer({ question = '', answer = null } = {}) {
+  const q = String(question || '');
+  const kind = questionKind(q);
+  if (/\b(call|called|name)\b/i.test(q)) return true;
+  // "1/3 = ?/6", "How many quarters make one half?": a number, but the question is about fractions.
+  if (FRACTIONISH.test(q) || ['fraction', 'compare'].includes(kind)) return false;
+  if (['count_total', 'count_shaded', 'state', 'cut', 'equal'].includes(kind)) return true;
+  if (answer != null && String(answer) !== '') return /^(\d+|yes|no|whole|cut|middle)$/i.test(String(answer).trim());
+  return true;
+}
+const FRACTIONISH = /\d+\s*\/\s*\d+|=|\b(half|halves|quarters?|thirds?|fifths?|sixths?|eighths?|tenths?|twelfths?|same amount|equal to|equivalent)\b/i;
