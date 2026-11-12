@@ -118,6 +118,28 @@ Run 1's stock and repeat counts are mostly the app's own stand-in line ("Sorry, 
 again?"), since removed. The judge's three worst turns per scenario that a check also flags: run 1 37 of 90, run 2 56 of
 90. A paid run (`eval:tutor`) happens only when these counts say the habits are gone, and only on the owner's word.
 
+### The app's own layers (12 Nov 2026, after run 2026-11-12-1824)
+
+The paid sample got worse after the turn gate and the pacing rules went in, while the habit counts fell to almost nothing:
+our own layers were fighting the model. `scripts/evals/app-replay.mjs` (in the same report) counts what the code did to the
+turns of a saved run and what the rules since then would do instead: steps the gate dropped (and how many for soft faults
+only), the old fixed fallback lines, sentences pointing at something the board does not show (`habits.js boardClaimOf`, a
+yardstick measure only), filler-only replies sent to the model, unsure answers classed as guesses, sound-alike numbers to a
+counting question, questions sealed with no real answer, and silence probes sooner than the new 8 s and 20 s.
+
+| | 2026-11-12-1142 | 2026-11-12-1824 |
+|---|---|---|
+| Turns with a step dropped by the gate | 9 (0 for soft faults only) | 23 (22 for soft faults only: now kept) |
+| Old fixed fallback lines played (now gone) | 0 | 13 |
+| Sentences pointing at something not on the board | 2 (1 the code's) | 17 (8 the code's) |
+| Filler-only replies sent to the model (now no model call) | 6 | 37 (8 "Take your time" under the new rule) |
+| Unsure answers classed guess_or_no_attempt | 1 | 7 |
+| Sound-alike numbers to a counting question | 1 (0 read as a question) | 2 (2 read as a question) |
+| Questions sealed with no real answer | 0 | 1 ("me") |
+| Silence probes, and sooner than the new times | 26: 13 nudges before 8 s, 3 smaller before 20 s | 50: 23 nudges before 8 s, 1 smaller before 20 s |
+
+The parser now also reads steps cut short in a transcript (`[figure {"id":"chap1",...]`), so run 2's giveaway count reads 23, not 22.
+
 ## The pretend child (PLAN_TO_FOUR.md step 6, the part that needs no people)
 
 Why: humans& found that a tutor tested against a generic model as the learner scored much worse than against a realistic one,

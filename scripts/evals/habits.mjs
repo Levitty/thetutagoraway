@@ -18,6 +18,7 @@ import { join, resolve, basename } from 'node:path';
 import { HABITS, HABIT_NAMES, turnFlags, habitContext, habitsOf, nextLevel, readChild } from '../../src/voice-tutor/habits.js';
 import { canonAnswer } from '../../src/voice-tutor/spokenAnswer.js';
 import { replayRun, pacingReport } from './pacing-replay.mjs';
+import { replayAppRun, appReport } from './app-replay.mjs';
 import { matchedDrift, driftByBand, driftByThirds, lessonStats, runStats, statsReport, shareByThirds } from './conversation-stats.mjs';
 // Not imported from api.mjs: that reads the API key, and this script never needs one.
 export const RUNS_DIR = '/Users/mutualevity/Desktop/Tutagora/Build/voice-tutor/evals/runs';
@@ -25,6 +26,14 @@ export const RUNS_DIR = '/Users/mutualevity/Desktop/Tutagora/Build/voice-tutor/e
 export const BASELINE_RUNS = ['2026-11-12-1045', '2026-11-12-1142'];
 const PHASES = ['warmup', 'teach', 'guided', 'independent', 'wrapup'];
 
+// The fields a cut-short step still shows, read one by one (a figure's params are its own object).
+const cutShort = (cmd, text) => {
+  const f = (k, re = '"([^"]*)"') => new RegExp(`"${k}":${re}`).exec(text)?.[1];
+  const id = f('id'); if (!id) return null;
+  const num = (k) => { const v = f(k, '(\\d+)'); return v == null ? undefined : Number(v); };
+  if (cmd === 'figure') return { cmd, id, type: f('type') || 'fraction', params: { shape: f('shape') || 'bar', parts: num('parts'), shaded: num('shaded') ?? 0, rows: num('rows'), cols: num('cols') } };
+  return { cmd, id, kind: f('kind'), parts: num('parts'), shaded: num('shaded') ?? 0 };
+};
 /** One scenario's transcript as turns: { n, kind, child, marked, cls, rule, reason, guard, authored, probe, steps }. */
 export function parseTranscript(md) {
   const out = { scenario: null, title: '', turns: [] };
@@ -43,7 +52,9 @@ export function parseTranscript(md) {
       else if ((m = /^Marked by the app from the sealed answer: (right|wrong)/.exec(l))) t.marked = { correct: m[1] === 'right', tentative: /tentative|unsure/.test(l) };
       else if ((m = /^HOREB(?: \{move: ([^}]*)\})?: (.*)$/.exec(l))) t.steps.push({ cmd: 'say', text: m[2], ...(m[1] ? { move: m[1] } : {}) });
       else if ((m = /^\[hand over: child is now (\w+)/.exec(l))) t.steps.push({ cmd: 'pause_for_child', doing: m[1] });
-      else if ((m = /^\[(\w+) (\{.*\})\]$/.exec(l))) { try { t.steps.push({ cmd: m[1], ...JSON.parse(m[2]) }); } catch { /* not a step */ } }
+      else if ((m = /^\[(\w+) (\{.*\})\]$/.exec(l))) { try { t.steps.push({ cmd: m[1], ...JSON.parse(m[2]) }); } catch { const p = cutShort(m[1], m[2]); if (p) t.steps.push(p); } }
+      // A long step is cut short in the transcript ('[figure {"id":"chap1",...,"slot...]'): its id, shape, parts and shading are kept.
+      else if ((m = /^\[(\w+) (\{.*)\.\.\.\]$/.exec(l))) { const p = cutShort(m[1], m[2]); if (p) t.steps.push(p); }
       else if ((m = /^\[(\w+)\]$/.exec(l))) t.steps.push({ cmd: m[1] });
       else if ((m = /^\(Sealed answer to ([a-z0-9_]+): (.+?): the tutor must/.exec(l))) { const a = t.steps.find((x) => x.cmd === 'ask' && x.id === m[1]); if (a) a.answer = m[2]; }
       else if ((m = /^Answer class: ([a-z_]+)/.exec(l))) t.cls = m[1];
@@ -126,7 +137,7 @@ export function scoreRun(dir) {
     keySteps: counted.filter((t) => t.flags.some((f) => /key step/.test(f.reason))).length,
     honesty: counted.filter((t) => t.flags.some((f) => /claims a feeling|promises or invites a secret/.test(f.reason))).length,
     lateRule: { repeat: strictCounted.filter((t) => t.habits.includes('repeat')).length, any: strictCounted.filter((t) => t.habits.length).length },
-    bands: driftByBand(scenarios, HABITS), matched: matchedDrift(scenarios), lessons, stats: runStats(lessons), pacing: replayRun(parsed),
+    bands: driftByBand(scenarios, HABITS), matched: matchedDrift(scenarios), lessons, stats: runStats(lessons), pacing: replayRun(parsed), app: replayAppRun(parsed),
     // The long lessons, by thirds (scenario 41 and any other of 20 or more tutor turns).
     thirds: scenarios.filter((s) => s.turns.length >= 20).map((s) => ({ scenario: s.scenario, title: s.title, habits: driftByThirds(s), talk: shareByThirds(parsed.find((p) => p.scenario === s.scenario)) })),
   };
@@ -167,6 +178,7 @@ export function report(runs, { spot = 0 } = {}) {
   for (const r of runs) L.push(`${r.run}: of the giveaway turns, ${r.keySteps} are a key intermediate step said for the child (the new check, for example "same bottom number needed"); ${r.honesty} tutor turns claim a feeling or promise a secret.`, '');
   L.push(...statsReport(runs, HABITS, HABIT_NAMES));
   L.push(...pacingReport(runs));
+  L.push(...appReport(runs));
   for (const r of runs) L.push(`${r.run}: with the live gate's late-lesson rule (the repeat check over the last four tutor turns after turn 10, not two) the yardstick would flag ${r.lateRule.repeat} repeat turns instead of ${r.total.repeat.turns}, and ${r.lateRule.any} turns in all instead of ${r.flaggedTurns}.`, '');
   for (const r of runs) {
     for (const t of r.thirds) L.push(`Scenario ${t.scenario} (${t.title}) by thirds of the lesson: habits flagged ${t.habits.map((x) => `${x.flagged} of ${x.turns} (${x.rate}%)`).join(' | ')}; child share of words ${t.talk.map((x) => `${x.sharePct}%`).join(' | ')}; tutor words a turn ${t.talk.map((x) => x.tutorWordsPerTurn).join(' | ')}.`, '');
@@ -198,7 +210,7 @@ if (isMain) {
   const dirs = (names.length ? names : BASELINE_RUNS).map((n) => (existsSync(n) && statSync(n).isDirectory() ? resolve(n) : join(RUNS_DIR, n)));
   const runs = dirs.map(scoreRun);
   if (flag('--json')) {
-    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge, keySteps: r.keySteps, honesty: r.honesty, lateRule: r.lateRule, bands: r.bands, matched: r.matched, stats: r.stats, thirds: r.thirds, pacing: { bands: r.pacing.bands, total: r.pacing.total, share: r.pacing.share, prereq: r.pacing.prereq } })), null, 2));
+    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge, keySteps: r.keySteps, honesty: r.honesty, lateRule: r.lateRule, bands: r.bands, matched: r.matched, stats: r.stats, thirds: r.thirds, pacing: { bands: r.pacing.bands, total: r.pacing.total, share: r.pacing.share, prereq: r.pacing.prereq }, app: r.app.total })), null, 2));
   } else {
     const text = report(runs, { spot });
     console.log(text);

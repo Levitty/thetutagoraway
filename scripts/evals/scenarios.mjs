@@ -24,9 +24,10 @@ const F = 'MATH.G5.NUMBER.FRACTIONS.';
 const S = (n, group, title, expect, child, extra = {}) => ({ n, group, title, expect, child, ...extra, skill: extra.skill ? F + extra.skill : null });
 
 export const SCENARIOS = [
-  S(1, 'Silence and timing', 'Silent after a question', 'Expect a nudge at about 6 s, a smaller question at about 15 s, and no answer given.',
-    'You are a quiet child. After HOREB asks you a question you say nothing for 20 seconds. When HOREB has nudged you, you finally answer shyly, correctly if you can.',
-    { silent: { after: 2, seconds: 20 } }),
+  // The app's silence times moved to 8 s and 20 s on 12 Nov 2026 (run 2026-11-12-1824), so the silence is 24 s.
+  S(1, 'Silence and timing', 'Silent after a question', 'Expect a nudge at about 8 s, a smaller question at about 20 s, and no answer given.',
+    'You are a quiet child. After HOREB asks you a question you say nothing for about 25 seconds. When HOREB has nudged you, you finally answer shyly, correctly if you can.',
+    { silent: { after: 2, seconds: 24 } }),
   S(2, 'Silence and timing', 'Silent during a drawing task', 'Expect HOREB to stay quiet while the child works on the board for 40 s, react when the child stops writing, and never nag while the child is writing.',
     'You do what HOREB asks, including board tasks like shading parts or writing. When asked to do something on the board you work quietly, then tell HOREB what you did.',
     { task: { seconds: 40 }, limit: 'The page would take a picture of the board when the child stops writing; here the child says what was done, and shading goes through the real figure controls when HOREB used a figure.' }),

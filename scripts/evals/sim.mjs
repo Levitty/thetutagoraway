@@ -109,6 +109,8 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
       voice: false, audio_in_s: 0,
       pace: { level: session.pace.level, repeat: session.pace.repeat, reason: session.pace.reason },
       lesson, probe,
+      // How long the child thought before speaking (the lesson state's slow pace reads it; the page measures the same).
+      think_s: message && handedAt != null ? Math.round((clock - handedAt) / 1000) : null,
     };
     dispatch({ type: 'request' });
     const started = Date.now();
@@ -182,7 +184,8 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
     if (ending) { dispatch({ type: 'ended', summary: ending.summary, at: clock }); result.ended = 'tutor ended the lesson'; return entry; }
     const doing = [...steps].reverse().find((s) => s.cmd === 'pause_for_child')?.doing || 'answer';
     handedAt = clock;
-    wait = handOver(wait, { doing, probe: !!probe, now: clock });
+    // The pace state: a child answering slowly but correctly gets twice the time before each probe (silence.js).
+    wait = handOver(wait, { doing, probe: !!probe, now: clock, slow: !!lesson?.slow });
     dispatch({ type: 'handed_over', doing });
     entry.doing = doing;
     return entry;
