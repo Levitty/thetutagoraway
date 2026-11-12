@@ -4494,6 +4494,7 @@ var SUBJECT_PREFIXES = {
   ENGL: "english",
   KISW: "kiswahili",
   AGRI: "agriculture",
+  CRES: "cre",
   SOCI: "socialstudies"
 };
 

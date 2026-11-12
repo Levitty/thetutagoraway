@@ -1,0 +1,420 @@
+{
+ "outcomes": {
+  "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.a": "identify God’s purpose for his or her life to live meaningfully",
+  "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.b": "narrate the parable of the talents",
+  "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.c": "apply lessons learnt from the parable in their day-to-day life",
+  "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.d": "participate in different activities to nurture their talents, gifts and abilities. Specific Learning Outcomes Suggested Learning Experiences Suggested",
+  "CRE.G5.CREATI.WORK.a": "identify three responsibilities given to human beings by God",
+  "CRE.G5.CREATI.WORK.b": "demonstrate good stewardship by taking care of God’s creation",
+  "CRE.G5.CREATI.WORK.c": "outline their roles at home, school and church",
+  "CRE.G5.CREATI.WORK.d": "explain the causes of child labour today",
+  "CRE.G5.CREATI.WORK.e": "explain the effects of child labour for protection of self and others",
+  "CRE.G5.CREATI.WORK.f": "desire to engage in age-appropriate tasks/chores",
+  "CRE.G5.CREATI.THE_FALL_OF_MAN.a": "describe the fall of man according to Genesis 3:1-11",
+  "CRE.G5.CREATI.THE_FALL_OF_MAN.b": "outline five lessons learnt from the fall of man",
+  "CRE.G5.CREATI.THE_FALL_OF_MAN.c": "desire to be obedient in day-to- day life",
+  "CRE.G5.CREATI.FAMILY_UNITY.a": "describe the importance of family unity",
+  "CRE.G5.CREATI.FAMILY_UNITY.b": "identify challenges faced by families today",
+  "CRE.G5.CREATI.FAMILY_UNITY.c": "outline ways he/she can contribute to a happy family",
+  "CRE.G5.CREATI.FAMILY_UNITY.d": "take part in doing simple chores at home",
+  "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.a": "outline different uses of the Bible in society today",
+  "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.b": "identify the benefits of reading the Bible",
+  "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.c": "read the Bible always to grow spiritually",
+  "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.a": "narrate the story of Peter and John in the Temple",
+  "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.b": "outline lessons learnt from the story of Peter and John",
+  "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.c": "discuss why Christians should stand firm in their faith",
+  "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.d": "desire to stand firm in their Christian faith",
+  "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.a": "narrate the story of King Solomon",
+  "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.b": "outline lessons learnt from the story of King Solomon",
+  "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.c": "apply lessons learnt from the story of King Solomon in daily life",
+  "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.d": "make wise decisions in daily life",
+  "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.a": "narrate the story of Noah and his sons",
+  "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.b": "explain five ways of showing respect to the elderly",
+  "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.c": "respect the elderly at home, church and in the community",
+  "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.a": "explain the story of a hand writing on the wall",
+  "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.b": "outline lessons learnt from the story",
+  "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.c": "list five benefits of humility as guided by the story",
+  "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.d": "emulate Daniel’s example by being faithful to God",
+  "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.a": "narrate the story of Mount Carmel contest",
+  "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.b": "distinguish between true and false gods",
+  "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.c": "outline lessons learnt from Mount Carmel contest",
+  "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.d": "emulate prophet Elijah by worshipping the true God",
+  "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.a": "narrate the story of Moses according to the scriptures",
+  "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.b": "outline lessons learnt from the story of Moses",
+  "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.c": "desire to depend on God’s guidance and protection",
+  "CRE.G5.THE_BI.THE_CALL_OF_MOSES.a": "narrate the call of Moses in Exodus 3:1-10",
+  "CRE.G5.THE_BI.THE_CALL_OF_MOSES.b": "outline lessons learnt from the call of Moses",
+  "CRE.G5.THE_BI.THE_CALL_OF_MOSES.c": "explain ways Christian leaders obey God’s instructions today",
+  "CRE.G5.THE_BI.THE_CALL_OF_MOSES.d": "desire to obey God in day-to-day life",
+  "CRE.G5.THE_LI.JOHN_THE_BAPTIST.a": "explain the teachings of John the Baptist",
+  "CRE.G5.THE_LI.JOHN_THE_BAPTIST.b": "outline four lessons learnt from the teachings of John the Baptist",
+  "CRE.G5.THE_LI.JOHN_THE_BAPTIST.c": "practise the values learnt from the teachings of John the Baptist",
+  "CRE.G5.THE_LI.JOHN_THE_BAPTIST.d": "desire to be a God-fearing Christian as exemplified by John the Baptist",
+  "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.a": "outline the events that took place during the baptism of Jesus Christ",
+  "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.b": "state the importance of baptism in the life of a Christian",
+  "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.c": "emulate Jesus Christ by exercising humility in day-to-day life",
+  "CRE.G5.THE_LI.CALMING_THE_STORM.a": "narrate the miracle of calming the storm",
+  "CRE.G5.THE_LI.CALMING_THE_STORM.b": "discuss lessons learnt from the miracle of calming the storm",
+  "CRE.G5.THE_LI.CALMING_THE_STORM.c": "explain challenges faced by Christians today",
+  "CRE.G5.THE_LI.CALMING_THE_STORM.d": "desire to depend on God to overcome daily challenges",
+  "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.a": "list f o u r ways of helping the needy in today’s society",
+  "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.b": "describe the miracle of feeding the four thousand",
+  "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.c": "outline lessons learnt from the feeding of the four thousand",
+  "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.d": "practise the value of love by helping the needy",
+  "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.a": "describe the healing of the paralysed man",
+  "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.b": "outline lessons learnt from the healing of the paralysed man",
+  "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.c": "desire to pray to God when faced with challenges in life",
+  "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.a": "narrate the parable of the lost sheep",
+  "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.b": "outline five lessons learnt from the parable of the lost sheep",
+  "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.c": "reach out to the lost as taught by Jesus Christ",
+  "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.a": "list virtues outlined in the Sermon on the Mountain",
+  "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.b": "apply the virtues in their interaction with others",
+  "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT.c": "desire to live harmoniously with others",
+  "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.a": "retell the story of the rich young man",
+  "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.b": "outline lessons learnt from the story of the rich young man",
+  "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.c": "apply lessons learnt from the story in their day-to-day lives",
+  "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.d": "share resources with others as guided in the story",
+  "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.a": "narrate the story of a friend at midnight",
+  "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.b": "outline lessons learnt from the story of a friend at midnight",
+  "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.c": "apply lessons learnt from the parable in day-to-day life",
+  "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.d": "desire to be persistent in prayers. Specific Learning Outcomes Suggested Learning Experiences Suggested",
+  "CRE.G5.THE_CH.THE_EARLY_CHURCH.a": "outline the importance of Church unity today",
+  "CRE.G5.THE_CH.THE_EARLY_CHURCH.b": "list activities which promoted unity in the early Church",
+  "CRE.G5.THE_CH.THE_EARLY_CHURCH.c": "identify five values needed by Christians to promote Church unity",
+  "CRE.G5.THE_CH.THE_EARLY_CHURCH.d": "appreciate unity in Church today",
+  "CRE.G5.THE_CH.THE_LORD_S_SUPPER.a": "describe the events that took place during the Lord’s Supper",
+  "CRE.G5.THE_CH.THE_LORD_S_SUPPER.b": "explain the significance of the Lord’s Supper to Christians today",
+  "CRE.G5.THE_CH.THE_LORD_S_SUPPER.c": "identify the values required during the celebration of Lord’s Table/Eucharist today",
+  "CRE.G5.THE_CH.THE_LORD_S_SUPPER.d": "desire to participate in the Lords’ Supper/Lord’s Table",
+  "CRE.G5.THE_CH.THE_HOLY_SPIRIT.a": "list the nine gifts of the Holy Spirit",
+  "CRE.G5.THE_CH.THE_HOLY_SPIRIT.b": "outline the fruit of the Holy Spirit from the scriptures provided",
+  "CRE.G5.THE_CH.THE_HOLY_SPIRIT.c": "explain how the fruit of the Holy Spirit promotes harmony among Christians",
+  "CRE.G5.THE_CH.THE_HOLY_SPIRIT.d": "appreciate the role of the Holy Spirit in his or her life",
+  "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.a": "retell the story of Peter’s miraculous rescue from prison",
+  "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.b": "list lessons learnt from the story of Peter’s rescue",
+  "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.c": "have faith in God as exemplified by Apostle Peter",
+  "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.a": "identify five qualities/values to consider in choosing good friends",
+  "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.b": "discuss ways of avoiding negative peer influence",
+  "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.c": "choose friends with good moral character",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.a": "identify changes associated with adolescence",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.b": "outline how they cope with changes in their bodies",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.c": "distinguish between healthy and unhealthy boy-girl relationships",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.d": "explain the consequences of engaging in unhealthy boy-girl relationships",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.e": "discuss how to overcome unhealthy boy-girl relationships",
+  "CRE.G5.CHRIST.HUMAN_SEXUALITY.f": "desire to behave responsibly as a young person",
+  "CRE.G5.CHRIST.SANCTITY_OF_LIFE.a": "discuss Christian teachings on God as the only source of life",
+  "CRE.G5.CHRIST.SANCTITY_OF_LIFE.b": "identify causes of violation of the right to life",
+  "CRE.G5.CHRIST.SANCTITY_OF_LIFE.c": "explain how to cope with difficult emotions to avoid violation of right to life",
+  "CRE.G5.CHRIST.SANCTITY_OF_LIFE.d": "acknowledge that life is sacred and a gift from God",
+  "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a": "list drugs abused by young people today",
+  "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b": "state why young people engage in alcohol, drugs and substance abuse",
+  "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c": "outline the effects of alcohol, drugs and substance abuse",
+  "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d": "identify five values needed to avoid alcohol, drugs and substance abuse",
+  "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e": "avoid alcohol, drugs and substance abuse",
+  "CRE.G5.CHRIST.SOCIAL_MEDIA.a": "list social media platforms commonly used today",
+  "CRE.G5.CHRIST.SOCIAL_MEDIA.b": "debate on the advantages and disadvantages of social media",
+  "CRE.G5.CHRIST.SOCIAL_MEDIA.c": "discuss safety measures to observe when using social media",
+  "CRE.G5.CHRIST.SOCIAL_MEDIA.d": "use social media responsibly as God-fearing Christians"
+ },
+ "skills": {
+  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.TALENTS_PARABLE": {
+   "forms": [
+    "recall a fact of the parable",
+    "what each servant did",
+    "which lesson fits a situation",
+    "say why the third servant was blamed"
+   ],
+   "mastery": "Says that the master gave five, two and one talents, each according to ability; that the first two servants used theirs and gained more; that the third buried his; that the master praised the faithful servants; and that the lesson is to use what God has given. Does not read the talents as only money or say the master was unfair. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.PURPOSE_VERSES": {
+   "forms": [
+    "match a verse to its message",
+    "what a gift is for",
+    "choose the response that fits the verse"
+   ],
+   "mastery": "Says that God has plans for the child's welfare, future and hope (Jeremiah 29:11), that every good gift comes from God (James 1:17) and that each person should use the gift received to serve others (1 Peter 4:10). Does not say that gifts are for showing off or only for adults. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CREATI.WORK.STEWARDSHIP": {
+   "forms": [
+    "which verse gives which work",
+    "what looking after creation means",
+    "a role at home, school or church"
+   ],
+   "mastery": "Names the responsibilities in Genesis 1:26 and 2:15 (rule over, look after, till and keep the garden) and tells caring for creation from using it up. Gives roles a child really has at home, at school and at church. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CREATI.WORK.CHILD_LABOUR": {
+   "forms": [
+    "chore or child labour",
+    "a cause of child labour",
+    "an effect of child labour",
+    "who to tell"
+   ],
+   "mastery": "Separates child labour (work that is heavy, harmful, or keeps a child from school) from light chores that suit a child's age; gives causes (poverty, ignorance, greed of employers, loss of parents) and effects (missing school, harm to health, loss of play and safety); and names safe people to report to (a parent or guardian, a teacher, the chief, a children's officer or the Childline Kenya helpline 116). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CREATI.THE_FALL_OF_MAN.FALL_OF_MAN": {
+   "forms": [
+    "recall a fact of the story",
+    "put events in order",
+    "a lesson from the story",
+    "what the serpent did"
+   ],
+   "mastery": "Says that the serpent tempted the woman, that she and the man ate from the tree God had forbidden, that they hid when they heard God, and that God asked \"Where are you?\"; and states lessons: obey God, do not blame others, wrong choices have results. Does not say the Bible names the fruit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CREATI.FAMILY_UNITY.FAMILY_UNITY": {
+   "forms": [
+    "why unity matters",
+    "a challenge families face",
+    "what a child can do",
+    "what Colossians 3:13-14 says"
+   ],
+   "mastery": "Gives reasons family unity matters (love, help, peace, safety), names challenges families face (quarrels, poverty, illness, long absence, unkind words), and gives ways a child helps (forgiving, doing chores, speaking kindly, obeying). Knows that Colossians 3:13-14 speaks of bearing with one another, forgiving and love. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.THE_BIBLE_AS_A_GUIDE.BIBLE_GUIDE": {
+   "forms": [
+    "a use of the Bible",
+    "a benefit of reading it",
+    "what Joshua 1:8 or Psalm 1:1-3 says"
+   ],
+   "mastery": "Gives uses of the Bible in society (teaching right and wrong, comfort, guidance, worship, prayer, oaths on some occasions, moral teaching in schools) and benefits of reading it (growing in faith, wisdom, strength, direction). Knows that Joshua 1:8 and Psalm 1:1-3 speak of meditating on God's word and its blessing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.BIBLE_STORIES_PETER_AND_.PETER_JOHN": {
+   "forms": [
+    "recall a fact of the story",
+    "what Peter said",
+    "a lesson from the story",
+    "why stand firm"
+   ],
+   "mastery": "Says that Peter and John were arrested for teaching about Jesus, were questioned about the power by which a man had been healed, that Peter, filled with the Holy Spirit, spoke boldly, that he said there is salvation in no other name than Jesus (Acts 4:12), and that the rulers saw their courage and knew they had been with Jesus. Gives a reason to stand firm. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.SOLOMON": {
+   "forms": [
+    "recall a fact of the story",
+    "how Solomon found the mother",
+    "a lesson or a wise choice",
+    "what Proverbs 9:10 says"
+   ],
+   "mastery": "Says that two women claimed one living baby, that Solomon called for a sword to divide the child, that the real mother gave up her claim to save the child, and that Solomon gave the baby to her. Gives lessons (wisdom, listening to both sides, love shows in giving) and what Proverbs 9:10 says. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.NOAH_SONS": {
+   "forms": [
+    "name the sons",
+    "what each son did",
+    "a fact of the story"
+   ],
+   "mastery": "Names Shem, Ham and Japheth as the sons of Noah who came out of the ark; says that Noah planted a vineyard, drank wine and lay uncovered in his tent; that Ham told his brothers; and that Shem and Japheth covered their father without looking. Does not mix up the sons with other Bible brothers. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.NOAH_AND_HIS_SONS.RESPECT_ELDERLY": {
+   "forms": [
+    "which action shows respect",
+    "what to do in a situation",
+    "why respect the elderly"
+   ],
+   "mastery": "Gives ways of showing respect to older people (greeting politely, listening, helping with loads and chores, giving a seat, speaking kindly, visiting) and does not think respect means agreeing with everything or only applies to relatives. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.WRITING_ON_WALL": {
+   "forms": [
+    "recall a fact of the story",
+    "what the writing meant",
+    "who did what",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that King Belshazzar held a feast and used the gold and silver vessels from the temple in Jerusalem, that a human hand wrote on the wall, that no wise man could read it, that Daniel was called and read it, and that the writing said the kingdom had been counted, weighed and divided. Gives lessons (do not misuse holy things, pride has a price, God is above kings). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.HUMILITY_DANIEL": {
+   "forms": [
+    "choose the humble action",
+    "a benefit of humility",
+    "Daniel or the proud king"
+   ],
+   "mastery": "Describes humility as thinking rightly of yourself and others, without boasting; gives benefits (peace, learning, friends, honour from God and people) and tells Daniel's quiet, faithful service from the proud king's behaviour. Does not say that humility means being weak or having no opinion. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.CARMEL": {
+   "forms": [
+    "recall a fact of the contest",
+    "what each side did",
+    "what the people said",
+    "a lesson from the contest"
+   ],
+   "mastery": "Says that Elijah stood alone against 450 prophets of Baal, that each side prepared a bull and no one lit the fire, that Baal did not answer, that Elijah prayed and the fire of the Lord fell, and that the people said the Lord is God. Gives lessons (worship God alone, trust in prayer, courage to stand alone). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.MOUNT_CARMEL_CONTEST.TRUE_GOD": {
+   "forms": [
+    "what can an idol do",
+    "which commandment idea fits",
+    "what to do when invited to a harmful group"
+   ],
+   "mastery": "Tells the Lord who answered by fire from idols that cannot hear, see or speak; knows that the Ten Commandments forbid worshipping other gods and making idols to bow down to; and chooses a safe response when a group or friend invites a child to worship or follow something against these teachings. Never judges other people by name. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.THE_BIRTH_OF_MOSES.MOSES_BIRTH": {
+   "forms": [
+    "recall a fact of the story",
+    "what happened in order",
+    "who helped Moses",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that Moses' mother hid him for three months, put him in a basket among the reeds of the Nile, that his sister watched, that Pharaoh's daughter found him and took pity, that his own mother was paid to nurse him, and that he was named Moses. Gives lessons (God protects, courage of a mother, kindness to a stranger). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_BI.THE_CALL_OF_MOSES.MOSES_CALL": {
+   "forms": [
+    "recall a fact of the call",
+    "what God said to Moses",
+    "a lesson from the call",
+    "how a leader obeys God today"
+   ],
+   "mastery": "Says that Moses was looking after the flock when he saw a bush that burned without burning up, that God told him to take off his sandals because the ground was holy, that God had seen the people's suffering, and that Moses was sent to bring them out of Egypt. Gives lessons and ways Christian leaders obey God today. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.JOHN_THE_BAPTIST.JOHN_BAPTIST": {
+   "forms": [
+    "what John told each group",
+    "what repentance means",
+    "a lesson from John's teaching"
+   ],
+   "mastery": "Says that John preached repentance and baptism, that he told the crowd to share spare clothing and food, told tax collectors to collect no more than was due, and told soldiers not to take money by force or accuse falsely and to be content with their pay. Gives lessons (repent, share, be honest, be content). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.BAPTISM_JESUS": {
+   "forms": [
+    "recall an event at the baptism",
+    "what the voice said",
+    "what baptism shows"
+   ],
+   "mastery": "Says that Jesus was baptised and was praying, that heaven opened, that the Holy Spirit came down like a dove, and that a voice from heaven called him the beloved Son. Gives the meaning Christians agree on (a sign of repentance, new life and belonging to God) without saying how or at what age baptism should be done. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.CALMING_THE_STORM.CALMING_STORM": {
+   "forms": [
+    "recall a fact of the miracle",
+    "what Jesus said and did",
+    "a lesson from the miracle",
+    "what to do in a challenge"
+   ],
+   "mastery": "Says that a great storm came while Jesus slept in the boat, that the disciples woke him and asked if he did not care, that Jesus told the wind and waves to be still and there was a great calm. Gives lessons (Jesus has power over nature, trust in God in trouble) and challenges Christians face. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.FEEDING_4000": {
+   "forms": [
+    "recall a fact of the miracle",
+    "four thousand or five thousand",
+    "a lesson from the miracle",
+    "a way of helping the needy"
+   ],
+   "mastery": "Says that the crowd had been with Jesus three days, that Jesus had compassion, that there were seven loaves and a few small fish, that all ate and seven baskets were left, and does not mix it with the feeding of five thousand. Gives four ways of helping needy people today. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.HEALING_THE_PARALYSED_MA.PARALYSED_MAN": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jesus said first",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that four friends carried the man, that the crowd blocked the door so they made an opening in the roof, that Jesus saw their faith and first said that the man's sins were forgiven. Gives lessons (faith in action, friends who help, pray when in trouble). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.LOST_SHEEP": {
+   "forms": [
+    "recall a fact of the parable",
+    "what the shepherd did",
+    "a lesson from the parable",
+    "who the sheep stands for"
+   ],
+   "mastery": "Says that the shepherd had a hundred sheep and one was lost, that he left the ninety-nine to look for it, carried it home on his shoulders, called friends to rejoice, and that Jesus said there is joy in heaven over one sinner who repents. Gives lessons (God cares for each person, we should reach out to those who are lost). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.SERMON_ON_THE_MOUNT.SERMON_MOUNT": {
+   "forms": [
+    "match the virtue to its promise",
+    "choose the action that shows the virtue",
+    "what a pure heart means"
+   ],
+   "mastery": "Says what Jesus promised to the merciful (they will receive mercy), the pure in heart (they will see God) and the peacemakers (they will be called children of God), and chooses the action that applies each virtue to school and home. Does not say a peacemaker is someone who never disagrees. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.THE_RICH_YOUNG_MAN.RICH_YOUNG_MAN": {
+   "forms": [
+    "recall a fact of the story",
+    "what Jesus told him",
+    "why he went away sad",
+    "a lesson from the story"
+   ],
+   "mastery": "Says that the young man asked what good thing to do to have eternal life, that Jesus pointed him to the commandments, that the young man said he had kept them, that Jesus told him to sell what he had, give to the poor and follow him, and that he went away sad because he had great wealth. Gives lessons (put God first, share, wealth can hold the heart). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.FRIEND_MIDNIGHT": {
+   "forms": [
+    "recall a fact of the parable",
+    "why the friend finally gave",
+    "what Jesus said about asking",
+    "a lesson about prayer"
+   ],
+   "mastery": "Says that a man went to a friend at midnight to ask for three loaves for a visitor, that the friend first refused because the door was shut and the children were in bed, that he got up and gave because the man kept asking, and that Jesus taught ask, seek and knock. Gives the lesson of persistence in prayer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_CH.THE_EARLY_CHURCH.EARLY_CHURCH": {
+   "forms": [
+    "what the early believers did",
+    "a value that keeps a church united",
+    "why unity matters today"
+   ],
+   "mastery": "Lists what the believers devoted themselves to (the apostles' teaching, fellowship, breaking bread, prayer), says that they shared what they owned with anyone in need and met daily with glad hearts, and names values that keep a church united (love, sharing, forgiveness, humility, respect). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_CH.THE_LORD_S_SUPPER.LORDS_SUPPER": {
+   "forms": [
+    "recall an event of the supper",
+    "what Jesus told the apostles",
+    "a value for the Lord's Table",
+    "the names churches use"
+   ],
+   "mastery": "Says that Jesus sat with the apostles at the Passover meal, took bread, gave thanks, broke it and gave it to them, took the cup, and told them to do this in remembrance of him; knows that churches use different names (Lord's Supper, Lord's Table, Holy Communion, Eucharist) for the same remembrance, and that reverence, thankfulness and forgiving others are values to bring to it. No teaching of any one church is asked. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_CH.THE_HOLY_SPIRIT.HOLY_SPIRIT": {
+   "forms": [
+    "gift or fruit",
+    "which one is in the list",
+    "how a fruit helps harmony"
+   ],
+   "mastery": "Tells the nine gifts (wisdom, knowledge, faith, healing, miracles, prophecy, telling spirits apart, tongues, interpreting tongues) from the nine fruit (love, joy, peace, patience, kindness, goodness, faithfulness, gentleness, self-control) and says how the fruit help Christians live in harmony. Does not mix a gift with a fruit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.THE_CH.PETER_S_MIRACULOUS_RESCU.PETER_RESCUE": {
+   "forms": [
+    "recall a fact of the rescue",
+    "what the church was doing",
+    "what Rhoda did",
+    "a lesson from the rescue"
+   ],
+   "mastery": "Says that King Herod arrested Peter and guarded him with soldiers and chains, that the church prayed earnestly for him, that an angel woke him, the chains fell off and the gate opened, that Rhoda was so glad she left him at the door, and that the believers were amazed. Gives lessons (pray for each other, God answers, have faith). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CHRIST.FRIENDSHIP_FORMATION.FRIENDS": {
+   "forms": [
+    "choose the quality of a good friend",
+    "what the proverb says",
+    "what to do when pushed"
+   ],
+   "mastery": "Gives qualities of a good friend (honest, kind, respectful, responsible, hard-working, does not push you to do wrong), says what Proverbs 22:24-25 and 12:26 advise, and names a good way to refuse a friend who pushes a child to do wrong. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CHRIST.HUMAN_SEXUALITY.ADOLESCENCE": {
+   "forms": [
+    "a change of growing up",
+    "who to ask for help",
+    "healthy or unhealthy friendship",
+    "a result or a way to avoid it"
+   ],
+   "mastery": "Names the usual changes of growing up (growing taller, body hair, a deeper voice in boys, periods in girls, new feelings), says that these are normal and that a child can talk to a parent or trusted adult, tells healthy friendships (respect, honesty, group activities, parents know) from unhealthy ones (secrecy, pressure, gifts for favours), and gives the results of unhealthy ones and ways to avoid them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CHRIST.SANCTITY_OF_LIFE.SANCTITY_LIFE": {
+   "forms": [
+    "what the verses teach",
+    "a cause of violence",
+    "how to cope with anger"
+   ],
+   "mastery": "Says that God is the giver of life, that every person is made in God's image (Genesis 1:27), that human life is not to be taken (Genesis 9:6, Exodus 20:13), gives causes of violence against life (anger, revenge, jealousy, greed, drugs) and ways to cope with a hard feeling without harm (walk away, talk to someone, pray, count to ten). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.DRUGS": {
+   "forms": [
+    "which is a misused substance",
+    "why young people start",
+    "an effect of misuse",
+    "a value that helps"
+   ],
+   "mastery": "Names substances young people misuse (alcohol, bhang, miraa, cigarettes, glue and petrol sniffing), tells misuse from medicine taken as a health worker directs, gives reasons young people start (peer pressure, stress, curiosity, copying adults), effects (poor health, failing school, quarrels, crime, addiction) and values that help (self-control, courage, honesty, wisdom). Knows what Proverbs 20:1 and Ephesians 5:18 warn. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CRES.G5.CHRIST.SOCIAL_MEDIA.SOCIAL_MEDIA": {
+   "forms": [
+    "advantage or disadvantage",
+    "safe or unsafe action",
+    "what to do in a situation"
+   ],
+   "mastery": "Names platforms in common use (WhatsApp, Facebook, TikTok, YouTube, Instagram), gives advantages and disadvantages, and applies safety rules (keep passwords and addresses private, do not chat with strangers or meet them, tell a trusted adult about anything that frightens you, do not share unkind or false things). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

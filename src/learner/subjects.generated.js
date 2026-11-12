@@ -6,6 +6,7 @@ export const SUBJECT_IDS = [
   'english',
   'kiswahili',
   'agriculture',
+  'cre',
   'socialstudies',
 ];
 export const SUBJECT_PREFIXES = {
@@ -14,5 +15,6 @@ export const SUBJECT_PREFIXES = {
   ENGL: 'english',
   KISW: 'kiswahili',
   AGRI: 'agriculture',
+  CRES: 'cre',
   SOCI: 'socialstudies',
 };
