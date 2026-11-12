@@ -1,0 +1,355 @@
+{
+ "outcomes": {
+  "SCIE.G6.LIVING.FUNGI.a": "identify common fungi in the environment",
+  "SCIE.G6.LIVING.FUNGI.a_": "describe the importance of fungi in nature",
+  "SCIE.G6.LIVING.FUNGI.b": "appreciate the importance of fungi in the economy",
+  "SCIE.G6.LIVING.INVERTEBRATES.a": "identify common invertebrates in the environment",
+  "SCIE.G6.LIVING.INVERTEBRATES.b": "practise precautions in handling invertebrates",
+  "SCIE.G6.LIVING.INVERTEBRATES.c": "describe the general characteristics of invertebrates",
+  "SCIE.G6.LIVING.INVERTEBRATES.d": "outline the economic importance of invertebrates",
+  "SCIE.G6.LIVING.INVERTEBRATES.e": "appreciate the importance of invertebrates in nature",
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.a": "identify main parts of the human circulatory system",
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b": "describe functions of main parts of the human circulatory system",
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.c": "outline the symptoms and prevention of common health conditions of the human circulatory system",
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.d": "develop a routine plan for maintaining a healthy circulatory system",
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.e": "appreciate the importance of a healthy circulatory system",
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.a": "identify the changes of state when substances are heated or cooled",
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.b": "describe the applications of the change of state of matter in everyday life",
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.c": "appreciate the applications of change of state of matter in day-to-day life",
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.a": "identify the components of air",
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.b": "outline uses of the different components of air",
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.c": "explain the effects of air pollution in the environment",
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.d": "describe methods of reducing air pollution in the environment",
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.e": "appreciate the need for clean air in day-to-day life",
+  "SCIE.G6.FORCE_.LIGHT.a": "demonstrate the movement of light through materials",
+  "SCIE.G6.FORCE_.LIGHT.b": "draw ray diagrams of images formed in plane mirrors",
+  "SCIE.G6.FORCE_.LIGHT.c": "illustrate the formation of shadows and eclipses in nature",
+  "SCIE.G6.FORCE_.LIGHT.d": "describe the formation of rainbow in nature",
+  "SCIE.G6.FORCE_.LIGHT.e": "appreciate the importance of movement light in everyday life",
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.a": "identify common levers used in day-to-day life",
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.b": "describe parts of a lever as used in making work easier",
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.c": "classify levers into the three classes",
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.d": "demonstrate the use of levers in making work easier",
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.e": "appreciate the use of levers in making work easier",
+  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.a": "identify types of slopes used as simple machines",
+  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.b": "demonstrate how a slope makes work easier in day-to-day life",
+  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.c": "appreciate the use of slopes in everyday life"
+ },
+ "skills": {
+  "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY": {
+   "forms": [
+    "pick the fungus from a list",
+    "say which living thing is not a fungus",
+    "decide from a short observation story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names mushrooms, toadstools, puffballs, yeast and moulds as fungi, and does not call a mushroom a plant or a mould a bacterium or a dirt stain. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES": {
+   "forms": [
+    "say which feature fungi lack",
+    "say how a fungus gets its food",
+    "pick the true statement about fungi",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says fungi have no green colour, so they cannot make their own food using sunlight; they take food from dead or living things. The child does not say mushrooms are plants with roots, or that they make food in their leaves. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE": {
+   "forms": [
+    "say what a named fungus is used for",
+    "say what yeast does in dough or in brewing",
+    "say what moulds do to food and to dead matter",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says some mushrooms are eaten, yeast makes dough rise and helps in fermentation, some moulds give medicines, and fungi help dead plants and animals rot away. The child also knows that mould spoils food and some mushrooms are poisonous, so wild ones are not eaten without an adult who knows them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH": {
+   "forms": [
+    "pick the conditions mould likes",
+    "say how to keep bread from going mouldy",
+    "read a short experiment and say what it shows",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says mould grows where it is warm, damp and there is food, so food kept dry, cool and covered or in the fridge keeps longer. The child does not say mould comes from the air only, that it grows best in the dry, or that it is safe to eat if the mould is scraped off. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY": {
+   "forms": [
+    "pick the group a named animal belongs to",
+    "say which animal is not an insect",
+    "read a small table and decide",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child puts insects (ant, housefly, mosquito, bee, grasshopper), spiders, ticks and mites, millipedes and centipedes, snails and slugs, worms, and sea animals (octopus, starfish, crab) with the invertebrates, and knows a spider is not an insect and a worm has no backbone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS": {
+   "forms": [
+    "count the legs and name the group",
+    "say what all invertebrates share",
+    "pick the true statement about a named group",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says invertebrates have no backbone, many have jointed legs and a hard outer cover, an insect has six legs and three body parts, a spider has eight legs and two body parts, and a snail has a soft body and a shell. The child does not count a spider as an insect or say invertebrates are all tiny. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE": {
+   "forms": [
+    "say how an invertebrate helps people",
+    "say which invertebrate spreads a named disease or pest",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says bees pollinate and give honey, earthworms loosen the soil, crabs and some insects are food, mosquitoes carry malaria, ticks carry East Coast fever, locusts and weevils destroy crops and stored grain. The child does not say all invertebrates are harmful or all are helpful. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING": {
+   "forms": [
+    "pick the safe way to handle one",
+    "say what to do after handling",
+    "decide from a short story",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says to look and not touch bees, wasps, scorpions and centipedes, to use a spoon, a stick or a jar, to be gentle and put the animal back where it was found, and to wash hands afterwards. The child does not crush animals for fun or pick up unknown ones with bare hands. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS": {
+   "forms": [
+    "name the part from its description",
+    "pick the part that is not in the circulatory system",
+    "say which organ is the pump",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child names the heart, the blood vessels (arteries, veins and capillaries) and the blood as the main parts of the circulatory system, and does not put the lungs, the stomach or the bones in it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS": {
+   "forms": [
+    "say what the heart does",
+    "say what the upper and lower chambers do",
+    "say where the heart is and how big it is",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child says the heart pumps blood round the body, the upper chambers (auricles) receive blood and the lower chambers (ventricles) push it out with strong squeezes, and the heart is in the chest, a little to the left, about the size of the owner's fist. The child does not say the heart makes the blood or that it is on the far left or in the stomach. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS": {
+   "forms": [
+    "say which vessel does a described job",
+    "say what a named vessel does",
+    "decide from a short story",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child says arteries carry blood away from the heart, veins bring blood back to the heart, and capillaries are tiny vessels that join the two and pass food and oxygen to the body. The child does not swap arteries and veins or say the blood only goes one way and ends in the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS": {
+   "forms": [
+    "say what red cells, white cells and platelets do",
+    "say which part of blood does a described job",
+    "decide from a short story",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child says red blood cells carry oxygen, white blood cells fight germs, platelets help blood clot at a cut, and the liquid part (plasma) carries digested food and the cells. The child does not say white cells carry oxygen or that blood is all red cells. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS": {
+   "forms": [
+    "name the condition from a description",
+    "say what hardening of the arteries or high blood pressure means",
+    "pick a warning sign for a heart attack",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child says hardening of the arteries is when artery walls get stiff and narrow, high blood pressure is when blood pushes too hard on the vessel walls, and a heart attack is when blood cannot reach part of the heart; chest pain, trouble breathing and dizziness are warning signs, and the child says to call an adult and get help at once. The child does not say these conditions are caught from other people. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION": {
+   "forms": [
+    "pick the habit that protects the heart",
+    "say what to avoid",
+    "decide from a short story",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says regular exercise, plenty of water, fruit and vegetables, little salt, fat and sugar, a healthy body size, no smoking, and check-ups protect the heart and blood vessels. The child does not say that only old people need to care or that a heart is strengthened by rest alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE": {
+   "forms": [
+    "pick the best routine for a day",
+    "say which item does not belong in the routine",
+    "decide from a short story",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child chooses a routine with drinking plenty of water, physical activity (running, football, skipping), healthy meals with vegetables and fruit, and enough sleep, and leaves out salty snacks, long hours of sitting, and smoking. The plan itself is marked by the teacher; this skill is the knowledge behind it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES": {
+   "forms": [
+    "name the change from a description",
+    "say which states a change goes between",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child gives melting (solid to liquid), freezing (liquid to solid), evaporation (liquid to gas), condensation (gas to liquid), sublimation (solid to gas) and deposition (gas to solid), and does not mix melting with dissolving or evaporation with boiling only. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT": {
+   "forms": [
+    "say if heat goes in or comes out",
+    "pick the change that needs heating",
+    "say what happens to water on the stove or in the freezer",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says melting, evaporation and sublimation need heat to go in (the substance is heated), and freezing, condensation and deposition happen when heat is taken away (the substance is cooled). The child does not say ice melts because it is \"cold\" or that freezing needs heating. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS": {
+   "forms": [
+    "say which change is at work",
+    "say why a method works",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names evaporation in drying clothes, grain and salt pans, condensation in dew, clouds and the cold glass of a drink, melting in candle and metal making, and freezing in ice-making. The child does not say that the clothes dry because the water \"goes into the cloth\" or that clouds come from smoke. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS": {
+   "forms": [
+    "say which gas is the biggest part of air",
+    "read the amounts and name the gas",
+    "say what a burning candle in a jar shows",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says air is a mixture of gases: nitrogen (about four fifths), oxygen (about one fifth), a very small amount of carbon dioxide, water vapour, rare gases and dust. The child does not say air is mostly oxygen, or that air is a single gas, or that the candle uses up all the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES": {
+   "forms": [
+    "say what a named gas is used for",
+    "pick the gas used for a described job",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says oxygen is used in breathing and burning, carbon dioxide is used by plants to make food and in some fire extinguishers and fizzy drinks, nitrogen helps plants grow when it is changed into plant food in the soil and keeps food fresh in packets, and water vapour forms clouds and rain. The child does not say we breathe out only carbon dioxide or that plants do not need air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS": {
+   "forms": [
+    "pick the source that pollutes the air",
+    "pick the pollutant from a list",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names smoke from vehicles, factories, charcoal and firewood, burning rubbish, dust from quarries and roads, and tobacco smoke as air pollutants, and knows that clean wind, rain and trees are not pollutants. The child does not say only big factories pollute or that smoke you cannot smell is harmless. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS": {
+   "forms": [
+    "say what a named pollutant does",
+    "say who is harmed by smoky air",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says polluted air causes coughs and breathing illnesses, makes eyes sting, dirties buildings and plants, can fall as acid rain, and adds to the warming of the Earth. The child does not say that air pollution only harms the people nearest the smoke or that it does nothing to plants and animals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE": {
+   "forms": [
+    "pick the best way to cut smoke",
+    "say what a named action does for the air",
+    "decide from a short story",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says planting trees, not burning rubbish, servicing vehicles, using cleaner cooking fuel and a vented jiko, walking or using a shared matatu, and fitting filters on factory chimneys reduce air pollution. The child does not say that burning rubbish \"gets rid of it\" or that taller chimneys remove the smoke. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS": {
+   "forms": [
+    "sort a named material",
+    "pick the material that lets all the light through",
+    "say what is seen through a material",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child says transparent materials (clear glass, clear water) let nearly all the light through so you see clearly, translucent materials (frosted glass, tissue paper, thin cloth) let some light through so you see a blur, and opaque materials (wood, metal, stone, thick cardboard) let none through. The child does not call every coloured material opaque or glass always transparent. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.SHADOWS": {
+   "forms": [
+    "say what is needed for a shadow",
+    "say where a shadow falls",
+    "say how the shadow changes when the object moves",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a shadow forms when an opaque object blocks light that travels in straight lines, the shadow falls on the side away from the light, and it is larger when the object is closer to the light source. The child does not say the shadow is made by the object, or that a clear window makes a dark shadow. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.ECLIPSES": {
+   "forms": [
+    "say what blocks the light in each eclipse",
+    "say which body is in the middle",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says in a solar eclipse the Moon is between the Sun and the Earth and its shadow falls on the Earth, in a lunar eclipse the Earth is between the Sun and the Moon and the Earth's shadow falls on the Moon, and a solar eclipse is not safe to look at with the eyes. The child does not say a cloud, or a planet, or the night causes an eclipse. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE": {
+   "forms": [
+    "say which angles are equal",
+    "find the reflected angle from the incident angle",
+    "say where the angles are measured from",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the angle of incidence equals the angle of reflection, both are measured from the normal (the line at a right angle to the mirror) and not from the mirror surface, and the incident ray, normal and reflected ray lie in one plane. The child gives 40 degrees for the reflected ray when the incident ray makes 40 degrees with the normal, and not 50 or 80. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE": {
+   "forms": [
+    "say how big the image is",
+    "say how far behind the mirror it seems to be",
+    "say what happens to left and right",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the image in a plane mirror is the same size as the object, upright, the same distance behind the mirror as the object is in front, laterally inverted (left and right swap), and cannot be caught on a screen. The child does not say the image is smaller, upside down or in front of the mirror. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LIGHT.RAINBOW": {
+   "forms": [
+    "say what is needed to see a rainbow",
+    "say which way to face",
+    "say the order of the colours",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a rainbow forms when sunlight passes into raindrops, bends and splits into seven colours (red, orange, yellow, green, blue, indigo, violet), and the observer stands with the Sun behind them and the rain in front. The child does not say a rainbow is a painted arc, or that it can be touched or reached. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY": {
+   "forms": [
+    "pick the tool that is a lever",
+    "say which tool is not a lever",
+    "decide from a short story",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child says a lever is a rigid bar that turns about a fixed point to make work easier, and names scissors, pliers, a see-saw, a wheelbarrow, a bottle opener, a nutcracker, a shovel, a fishing rod, tongs and tweezers as levers. The child does not call a ladder, a wheel or a pot a lever. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS": {
+   "forms": [
+    "name the part from its job",
+    "point to the part in a described lever",
+    "say where each part is on a see-saw or scissors",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child says the fulcrum (pivot) is the fixed point the bar turns about, the effort is the push or pull put in, and the load is the object to be moved. The child does not call the load the effort or the fulcrum the handle. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER": {
+   "forms": [
+    "say where to put the fulcrum",
+    "say what changes if the effort is far from the fulcrum",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a lever lets a small effort move a big load, the effort is smaller when the fulcrum is closer to the load or the effort is applied further from the fulcrum, and a lever does not give more energy. The child does not say the effort is smaller when the fulcrum is closer to the effort. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS": {
+   "forms": [
+    "say the class from the part in the middle",
+    "sort a named lever",
+    "say which class a described lever is",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child says in a first class lever the fulcrum is in the middle (see-saw, scissors, pliers, crowbar), in a second class lever the load is in the middle (wheelbarrow, bottle opener, nutcracker) and in a third class lever the effort is in the middle (fishing rod, tongs, tweezers, shovel, broom). The child does not use the size or the age of the tool to decide. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES": {
+   "forms": [
+    "pick the tool that is a slope",
+    "say which is not a slope",
+    "decide from a short story",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child says a slope (inclined plane) is a flat surface that is tilted, and names a ramp, a staircase, a road winding up a hill, a loading plank, a ladder against a wall, a wedge (an axe or a knife) and a screw as slopes. The child does not call a pulley, a see-saw or a flat road a slope. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER": {
+   "forms": [
+    "say what a gentler slope does",
+    "choose the slope that needs the least push",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a slope lets you raise a load with less effort than lifting it straight up, a longer and gentler slope needs less effort but a longer path, and the load does not get lighter. The child does not say a steeper slope is easier or that a slope saves distance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

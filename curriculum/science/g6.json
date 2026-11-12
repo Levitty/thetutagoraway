@@ -3,15 +3,15 @@
  "subject_key": "science",
  "grade": 6,
  "source": "KICD Science & Technology, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review",
  "totals": {
   "strands": 3,
   "sub_strands": 8,
   "outcomes": 34,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 35,
+  "prerequisites": 71,
+  "misconceptions": 105
  },
  "sub_strands": [
   {
@@ -69,15 +69,358 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+     "name": "Identify common fungi: mushrooms, toadstools, puffballs, yeast and moulds",
+     "outcomes": [
+      "SCIE.G6.LIVING.FUNGI.a"
+     ],
+     "mastery": "The child names mushrooms, toadstools, puffballs, yeast and moulds as fungi, and does not call a mushroom a plant or a mould a bacterium or a dirt stain. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the fungus from a list",
+      "say which living thing is not a fungus",
+      "decide from a short observation story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+     "name": "Say how fungi differ from green plants",
+     "outcomes": [
+      "SCIE.G6.LIVING.FUNGI.a"
+     ],
+     "mastery": "The child says fungi have no green colour, so they cannot make their own food using sunlight; they take food from dead or living things. The child does not say mushrooms are plants with roots, or that they make food in their leaves. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which feature fungi lack",
+      "say how a fungus gets its food",
+      "pick the true statement about fungi",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+     "name": "Describe the importance of fungi: food, fermentation, medicine and decay",
+     "outcomes": [
+      "SCIE.G6.LIVING.FUNGI.a_"
+     ],
+     "mastery": "The child says some mushrooms are eaten, yeast makes dough rise and helps in fermentation, some moulds give medicines, and fungi help dead plants and animals rot away. The child also knows that mould spoils food and some mushrooms are poisonous, so wild ones are not eaten without an adult who knows them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named fungus is used for",
+      "say what yeast does in dough or in brewing",
+      "say what moulds do to food and to dead matter",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+     "name": "Say what makes mould grow on food and how to prevent it",
+     "outcomes": [
+      "SCIE.G6.LIVING.FUNGI.a_"
+     ],
+     "mastery": "The child says mould grows where it is warm, damp and there is food, so food kept dry, cool and covered or in the fridge keeps longer. The child does not say mould comes from the air only, that it grows best in the dry, or that it is safe to eat if the mould is scraped off. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the conditions mould likes",
+      "say how to keep bread from going mouldy",
+      "read a short experiment and say what it shows",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_PLANT",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+     "error": "Thinks a mushroom is a plant because it grows out of the ground.",
+     "example": {
+      "question": "Which group does a mushroom belong to?",
+      "wrong_answer": "Plants",
+      "correct_answer": "Fungi"
+     },
+     "cause": "The child groups living things by where they grow.",
+     "reveals": "Offer \"Plants\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a mushroom with a hand lens: it has no green leaves, no flowers and no true roots.",
+     "feedback": "A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_MOULD_DIRT",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+     "error": "Thinks the fuzzy patch on old bread or an orange is dirt or a stain, not a living thing.",
+     "example": {
+      "question": "What is the green fuzz that grows on old bread?",
+      "wrong_answer": "Dirt that landed on the bread",
+      "correct_answer": "A living fungus called mould"
+     },
+     "cause": "The child only sees the colour and not that it spreads and grows.",
+     "reveals": "Offer \"Dirt that landed on the bread\" next to the right answer and ask the question again in a new context.",
+     "help": "Keep a damp slice of bread in a closed bag for a week and watch the patch spread.",
+     "feedback": "The green fuzz is mould, a fungus. It grows and spreads, so it is alive.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_YEAST_NOT_LIVING",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
+     "error": "Thinks yeast is a powder or a chemical, not a living fungus.",
+     "example": {
+      "question": "What is yeast, the powder a baker adds to dough?",
+      "wrong_answer": "A chemical like baking soda",
+      "correct_answer": "A tiny living fungus"
+     },
+     "cause": "The child meets yeast as dry grains in a packet.",
+     "reveals": "Offer \"A chemical like baking soda\" next to the right answer and ask the question again in a new context.",
+     "help": "Add warm water and sugar to a spoon of yeast: it froths as the tiny fungi feed and grow.",
+     "feedback": "Yeast is a tiny living fungus. The dry grains wake up when they get warmth, water and food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_GREEN_FOOD",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+     "error": "Thinks fungi make their food in their leaves with sunlight like plants.",
+     "example": {
+      "question": "How does a mushroom get its food?",
+      "wrong_answer": "It makes its own food in its leaves using sunlight",
+      "correct_answer": "It takes food from dead or living things"
+     },
+     "cause": "The child gives every living thing from the garden a plant-like way of feeding.",
+     "reveals": "Offer \"It makes its own food in its leaves using sunlight\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: where would a mushroom find sunlight under a rotting log? It is not green.",
+     "feedback": "Fungi have no green colour and cannot make food with sunlight. They take food from dead matter or other living things.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ROOTS_LEAVES",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+     "error": "Thinks a mushroom has roots, stem and leaves like a plant.",
+     "example": {
+      "question": "What is a mushroom made of?",
+      "wrong_answer": "Roots, stem, leaves and flowers",
+      "correct_answer": "A stalk and a cap, with thin threads in the soil"
+     },
+     "cause": "The child draws a mushroom as a small plant.",
+     "reveals": "Offer \"Roots, stem, leaves and flowers\" next to the right answer and ask the question again in a new context.",
+     "help": "Pull a mushroom apart: a stalk and a cap, thin threads in the soil, and no leaves.",
+     "feedback": "A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ALL_EDIBLE",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
+     "error": "Thinks all mushrooms are safe to eat.",
+     "example": {
+      "question": "A child finds a mushroom growing by the road. Is it safe to eat?",
+      "wrong_answer": "Yes, all mushrooms are safe",
+      "correct_answer": "No, some are poisonous, so only ones an adult knows are eaten"
+     },
+     "cause": "The child knows that people eat mushrooms and generalises.",
+     "reveals": "Offer \"Yes, all mushrooms are safe\" next to the right answer and ask the question again in a new context.",
+     "help": "Name the market mushroom and the toadstool: look the same to a child, but one can make people very sick.",
+     "feedback": "Some mushrooms are food but others are poisonous. Never eat a wild mushroom unless an adult who knows it says it is safe.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_YEAST_GAS",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+     "error": "Thinks yeast makes dough rise by its own weight or by heat only, not by making a gas.",
+     "example": {
+      "question": "Why does dough rise when yeast is added?",
+      "wrong_answer": "The yeast is heavy and pushes the dough up",
+      "correct_answer": "The yeast gives off a gas that makes bubbles in the dough"
+     },
+     "cause": "The child cannot see the gas.",
+     "reveals": "Offer \"The yeast is heavy and pushes the dough up\" next to the right answer and ask the question again in a new context.",
+     "help": "Press a risen dough and watch the holes in the baked bread.",
+     "feedback": "Yeast feeds on sugar and gives off carbon dioxide gas. The gas makes bubbles that push the dough up.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_ALL_HARMFUL",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+     "error": "Thinks all fungi are harmful and cause disease or rot.",
+     "example": {
+      "question": "Which statement about fungi is true?",
+      "wrong_answer": "Fungi are all harmful",
+      "correct_answer": "Some fungi are useful, such as yeast and edible mushrooms"
+     },
+     "cause": "The child knows ringworm and mouldy food first.",
+     "reveals": "Offer \"Fungi are all harmful\" next to the right answer and ask the question again in a new context.",
+     "help": "List what fungi give us: bread, mushrooms, maandazi, medicine and compost.",
+     "feedback": "Some fungi do harm, but many are useful. Yeast makes bread rise, and some moulds give us medicines.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_DECAY_USELESS",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
+     "error": "Thinks rotting is only bad and fungi that rot things have no use.",
+     "example": {
+      "question": "What good do fungi do when they make a dead log rot?",
+      "wrong_answer": "None, rotting is only a loss",
+      "correct_answer": "They break dead matter down so it can return to the soil"
+     },
+     "cause": "The child links rot with smell and waste.",
+     "reveals": "Offer \"None, rotting is only a loss\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig under a heap of old leaves and find the soft, dark soil.",
+     "feedback": "Fungi break down dead plants and animals. This returns food to the soil for new plants.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_DRY_BEST",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+     "error": "Thinks mould grows best on dry food in the hot sun.",
+     "example": {
+      "question": "Where will bread go mouldy first?",
+      "wrong_answer": "On a dry plate in the hot sun",
+      "correct_answer": "In a damp, warm, covered place"
+     },
+     "cause": "The child links heat with spoiling and forgets that moisture is needed.",
+     "reveals": "Offer \"On a dry plate in the hot sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Put two slices in two bags, one with a few drops of water: only the damp one goes mouldy fast.",
+     "feedback": "Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_SCRAPE_SAFE",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+     "error": "Thinks bread is safe to eat after the mould is scraped off.",
+     "example": {
+      "question": "A slice of bread has a small patch of mould. What should you do?",
+      "wrong_answer": "Scrape it off and eat the rest",
+      "correct_answer": "Throw the slice away"
+     },
+     "cause": "The child sees that only a small part looks bad.",
+     "reveals": "Offer \"Scrape it off and eat the rest\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the threads of mould spread through the bread where we cannot see them.",
+     "feedback": "Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_AIR_ONLY",
+     "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
+     "error": "Thinks mould comes out of the food itself and does not come from spores in the air.",
+     "example": {
+      "question": "Where does the mould on a stored orange come from?",
+      "wrong_answer": "It appears from inside the orange for no reason",
+      "correct_answer": "From tiny spores in the air that land on it and grow"
+     },
+     "cause": "The child cannot see the tiny spores.",
+     "reveals": "Offer \"It appears from inside the orange for no reason\" next to the right answer and ask the question again in a new context.",
+     "help": "Keep one orange in a sealed jar and one open: the open one goes mouldy first.",
+     "feedback": "Mould grows from tiny spores in the air that land on damp food and grow when it is warm.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.1.1",
     "SCIE.G6.RUBRIC.1.2",
     "SCIE.G6.RUBRIC.1.3",
     "SCIE.G6.RUBRIC.1.4",
     "SCIE.G6.RUBRIC.1.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and a_ (identify fungi, describe their importance) are tested by questions. Outcome b (appreciate the importance of fungi in the economy) is attitudinal. Practical: grow moulds on food in a closed bag and record it; the KICD text for the first two outcomes is kept as printed (the second also carries letter a)."
   },
   {
    "code": "SCIE.G6.LIVING.INVERTEBRATES",
@@ -153,15 +496,365 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+     "name": "Name the common groups of invertebrates and give an example of each",
+     "outcomes": [
+      "SCIE.G6.LIVING.INVERTEBRATES.a"
+     ],
+     "mastery": "The child puts insects (ant, housefly, mosquito, bee, grasshopper), spiders, ticks and mites, millipedes and centipedes, snails and slugs, worms, and sea animals (octopus, starfish, crab) with the invertebrates, and knows a spider is not an insect and a worm has no backbone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the group a named animal belongs to",
+      "say which animal is not an insect",
+      "read a small table and decide",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+     "name": "Describe the general characteristics of invertebrates and of the main groups",
+     "outcomes": [
+      "SCIE.G6.LIVING.INVERTEBRATES.c"
+     ],
+     "mastery": "The child says invertebrates have no backbone, many have jointed legs and a hard outer cover, an insect has six legs and three body parts, a spider has eight legs and two body parts, and a snail has a soft body and a shell. The child does not count a spider as an insect or say invertebrates are all tiny. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "count the legs and name the group",
+      "say what all invertebrates share",
+      "pick the true statement about a named group",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+     "name": "Outline the economic importance of invertebrates, helpful and harmful",
+     "outcomes": [
+      "SCIE.G6.LIVING.INVERTEBRATES.d"
+     ],
+     "mastery": "The child says bees pollinate and give honey, earthworms loosen the soil, crabs and some insects are food, mosquitoes carry malaria, ticks carry East Coast fever, locusts and weevils destroy crops and stored grain. The child does not say all invertebrates are harmful or all are helpful. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say how an invertebrate helps people",
+      "say which invertebrate spreads a named disease or pest",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+     "name": "Choose safe ways of handling invertebrates",
+     "outcomes": [
+      "SCIE.G6.LIVING.INVERTEBRATES.b"
+     ],
+     "mastery": "The child says to look and not touch bees, wasps, scorpions and centipedes, to use a spoon, a stick or a jar, to be gentle and put the animal back where it was found, and to wash hands afterwards. The child does not crush animals for fun or pick up unknown ones with bare hands. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe way to handle one",
+      "say what to do after handling",
+      "decide from a short story",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_SPIDER_INSECT",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+     "error": "Thinks a spider is an insect.",
+     "example": {
+      "question": "Which group does a spider belong to?",
+      "wrong_answer": "Insects",
+      "correct_answer": "The spiders, ticks and mites group"
+     },
+     "cause": "The child calls every small creature with legs an insect.",
+     "reveals": "Offer \"Insects\" next to the right answer and ask the question again in a new context.",
+     "help": "Count legs: a spider has eight, an ant has six.",
+     "feedback": "A spider is not an insect. It has eight legs, while an insect has six.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_WORM_NOT_ANIMAL_GROUP",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+     "error": "Thinks a worm, a snail or a starfish is not an invertebrate, or is not an animal group of its own.",
+     "example": {
+      "question": "Which of these is an invertebrate?",
+      "wrong_answer": "None of these, they are not animals",
+      "correct_answer": "A snail"
+     },
+     "cause": "The child only counts animals with legs or bones as animals.",
+     "reveals": "Offer \"None of these, they are not animals\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: does a snail have a backbone? Then sort it as in Grade 4.",
+     "feedback": "A snail, a worm and a starfish have no backbone. They are all invertebrates.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_CRAB_FISH",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
+     "error": "Thinks crabs and octopuses are fish because they live in the sea.",
+     "example": {
+      "question": "Which of these sea animals is an invertebrate?",
+      "wrong_answer": "All sea animals are fish",
+      "correct_answer": "The crab"
+     },
+     "cause": "The child groups animals by where they live.",
+     "reveals": "Offer \"All sea animals are fish\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: does it have a backbone and gills with scales? Compare a tilapia with a crab.",
+     "feedback": "A crab, an octopus and a starfish have no backbone. They are sea invertebrates, not fish.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_LEG_COUNT",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+     "error": "Mixes up the number of legs of insects and spiders, or gives every invertebrate six legs.",
+     "example": {
+      "question": "How many legs does an insect have?",
+      "wrong_answer": "Eight",
+      "correct_answer": "Six"
+     },
+     "cause": "The child remembers \"many legs\" for small animals.",
+     "reveals": "Offer \"Eight\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw an ant and a spider side by side and count the legs together.",
+     "feedback": "An insect has six legs. A spider has eight. A centipede and a millipede have many.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_SMALL",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+     "error": "Thinks all invertebrates are tiny.",
+     "example": {
+      "question": "Which statement about invertebrates is true?",
+      "wrong_answer": "All invertebrates are very small",
+      "correct_answer": "Some invertebrates are large, such as the octopus"
+     },
+     "cause": "The child thinks only of ants and flies.",
+     "reveals": "Offer \"All invertebrates are very small\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of an octopus or a large crab.",
+     "feedback": "Invertebrates have no backbone, but not all are small. An octopus can be very big.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_LEGS",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
+     "error": "Thinks all invertebrates have legs.",
+     "example": {
+      "question": "Which invertebrate has no legs?",
+      "wrong_answer": "All invertebrates have legs",
+      "correct_answer": "An earthworm"
+     },
+     "cause": "The child generalises from insects.",
+     "reveals": "Offer \"All invertebrates have legs\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at an earthworm and a snail: no legs at all.",
+     "feedback": "Worms, snails and slugs have no legs. Not all invertebrates have legs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_ALL_PESTS",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+     "error": "Thinks all invertebrates are pests or harmful.",
+     "example": {
+      "question": "Which statement about invertebrates is true?",
+      "wrong_answer": "All invertebrates harm people",
+      "correct_answer": "Some invertebrates help people, such as bees and earthworms"
+     },
+     "cause": "The child remembers mosquitoes, flies and ticks.",
+     "reveals": "Offer \"All invertebrates harm people\" next to the right answer and ask the question again in a new context.",
+     "help": "List what bees, earthworms and crabs give us.",
+     "feedback": "Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_MOSQUITO_WRONG",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+     "error": "Mixes up which invertebrate spreads which disease.",
+     "example": {
+      "question": "Which invertebrate spreads malaria?",
+      "wrong_answer": "The housefly",
+      "correct_answer": "The female Anopheles mosquito"
+     },
+     "cause": "The child links every disease with any insect that is a nuisance.",
+     "reveals": "Offer \"The housefly\" next to the right answer and ask the question again in a new context.",
+     "help": "Match: mosquito with malaria, tick with East Coast fever, housefly with typhoid, tsetse fly with sleeping sickness.",
+     "feedback": "Malaria is spread by mosquitoes. Ticks spread East Coast fever, and houseflies spread germs on food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_WORMS_HARM",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
+     "error": "Thinks earthworms damage the soil or crops.",
+     "example": {
+      "question": "What do earthworms do in the soil?",
+      "wrong_answer": "They harm the roots of crops",
+      "correct_answer": "They loosen the soil so air and water get in"
+     },
+     "cause": "The child sees only that they live where crops grow.",
+     "reveals": "Offer \"They harm the roots of crops\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig a spadeful from a garden with worms and from a hard patch: the first is loose.",
+     "feedback": "Earthworms make tunnels that loosen the soil. This lets air and water reach the roots.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_BARE_HANDS",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+     "error": "Thinks every small animal is safe to pick up with bare hands.",
+     "example": {
+      "question": "How should a learner pick up an unknown insect from the compound?",
+      "wrong_answer": "With bare hands, it is small",
+      "correct_answer": "Not at all, or with a spoon or a jar"
+     },
+     "cause": "The child thinks that small means harmless.",
+     "reveals": "Offer \"With bare hands, it is small\" next to the right answer and ask the question again in a new context.",
+     "help": "Name animals that sting or bite: bees, wasps, scorpions, centipedes, some caterpillars.",
+     "feedback": "Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_CRUSH",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+     "error": "Thinks it is fine to crush or hurt small animals when studying them.",
+     "example": {
+      "question": "What should a learner do after looking at a snail in the garden?",
+      "wrong_answer": "Crush it so it cannot eat the plants",
+      "correct_answer": "Put it back where it was found"
+     },
+     "cause": "The child thinks of all small animals as pests.",
+     "reveals": "Offer \"Crush it so it cannot eat the plants\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the school garden has helpers too; look, draw and return the animal.",
+     "feedback": "Handle animals gently and put them back where you found them. Every animal has a place in nature.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_NO_WASH",
+     "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
+     "error": "Thinks washing hands is not needed after touching small animals or soil.",
+     "example": {
+      "question": "What should be done after handling invertebrates?",
+      "wrong_answer": "Nothing, you can go straight to eat",
+      "correct_answer": "Wash the hands with soap and water"
+     },
+     "cause": "The child sees no dirt on the hands.",
+     "reveals": "Offer \"Nothing, you can go straight to eat\" next to the right answer and ask the question again in a new context.",
+     "help": "Link to handwashing: germs are too small to see.",
+     "feedback": "Always wash your hands with soap and water after handling animals, soil or waste.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.1.1",
     "SCIE.G6.RUBRIC.1.2",
     "SCIE.G6.RUBRIC.1.3",
     "SCIE.G6.RUBRIC.1.4",
     "SCIE.G6.RUBRIC.1.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, c and d are tested by questions. Outcome b (practise precautions in handling invertebrates) is practical: the knowledge is tested, the handling is observed on a nature walk. Outcome e (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM",
@@ -245,15 +938,623 @@
      "indicator": "SCIE.G6.RUBRIC.1.5"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+     "name": "Name the main parts of the human circulatory system",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.a"
+     ],
+     "mastery": "The child names the heart, the blood vessels (arteries, veins and capillaries) and the blood as the main parts of the circulatory system, and does not put the lungs, the stomach or the bones in it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its description",
+      "pick the part that is not in the circulatory system",
+      "say which organ is the pump",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+     "name": "Describe the parts of the heart and what the heart does",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b"
+     ],
+     "mastery": "The child says the heart pumps blood round the body, the upper chambers (auricles) receive blood and the lower chambers (ventricles) push it out with strong squeezes, and the heart is in the chest, a little to the left, about the size of the owner's fist. The child does not say the heart makes the blood or that it is on the far left or in the stomach. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what the heart does",
+      "say what the upper and lower chambers do",
+      "say where the heart is and how big it is",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+     "name": "Describe what arteries, veins and capillaries do",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b"
+     ],
+     "mastery": "The child says arteries carry blood away from the heart, veins bring blood back to the heart, and capillaries are tiny vessels that join the two and pass food and oxygen to the body. The child does not swap arteries and veins or say the blood only goes one way and ends in the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which vessel does a described job",
+      "say what a named vessel does",
+      "decide from a short story",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+     "name": "Describe the parts of blood and their jobs",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b"
+     ],
+     "mastery": "The child says red blood cells carry oxygen, white blood cells fight germs, platelets help blood clot at a cut, and the liquid part (plasma) carries digested food and the cells. The child does not say white cells carry oxygen or that blood is all red cells. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what red cells, white cells and platelets do",
+      "say which part of blood does a described job",
+      "decide from a short story",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.b",
+       "reason": "Grade 7 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+     "name": "Recognise common circulatory conditions and their signs",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.c"
+     ],
+     "mastery": "The child says hardening of the arteries is when artery walls get stiff and narrow, high blood pressure is when blood pushes too hard on the vessel walls, and a heart attack is when blood cannot reach part of the heart; chest pain, trouble breathing and dizziness are warning signs, and the child says to call an adult and get help at once. The child does not say these conditions are caught from other people. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the condition from a description",
+      "say what hardening of the arteries or high blood pressure means",
+      "pick a warning sign for a heart attack",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.c",
+       "reason": "Grade 7 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+     "name": "Say how to prevent common circulatory conditions",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.c"
+     ],
+     "mastery": "The child says regular exercise, plenty of water, fruit and vegetables, little salt, fat and sugar, a healthy body size, no smoking, and check-ups protect the heart and blood vessels. The child does not say that only old people need to care or that a heart is strengthened by rest alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the habit that protects the heart",
+      "say what to avoid",
+      "decide from a short story",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+     "name": "Choose the parts of a daily routine that keeps the circulatory system healthy",
+     "outcomes": [
+      "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.d"
+     ],
+     "mastery": "The child chooses a routine with drinking plenty of water, physical activity (running, football, skipping), healthy meals with vegetables and fruit, and enough sleep, and leaves out salty snacks, long hours of sitting, and smoking. The plan itself is marked by the teacher; this skill is the knowledge behind it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the best routine for a day",
+      "say which item does not belong in the routine",
+      "decide from a short story",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_LUNGS_IN",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+     "error": "Puts the lungs or stomach among the parts of the circulatory system.",
+     "example": {
+      "question": "Which of these is NOT a part of the circulatory system?",
+      "wrong_answer": "The heart",
+      "correct_answer": "The stomach"
+     },
+     "cause": "The child puts every organ in the chest or the trunk together.",
+     "reveals": "Offer \"The heart\" next to the right answer and ask the question again in a new context.",
+     "help": "Use three colours on a body outline: breathing, digestion and blood.",
+     "feedback": "The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_HEART_PRODUCES",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+     "error": "Thinks the heart makes the blood or stores it.",
+     "example": {
+      "question": "What does the heart do with blood?",
+      "wrong_answer": "It makes the blood and keeps it",
+      "correct_answer": "It pumps the blood round the body"
+     },
+     "cause": "The child thinks of the heart as the place blood comes from.",
+     "reveals": "Offer \"It makes the blood and keeps it\" next to the right answer and ask the question again in a new context.",
+     "help": "Feel the pulse at the wrist and count a minute: the heart is pushing blood along.",
+     "feedback": "The heart pumps blood round the body. Blood is made in the bones, not in the heart.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_VESSEL_NAMES",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
+     "error": "Thinks blood vessels are bones or nerves.",
+     "example": {
+      "question": "What are the tubes that carry blood called?",
+      "wrong_answer": "Nerves",
+      "correct_answer": "Blood vessels"
+     },
+     "cause": "The child has met \"veins\" in the hand but thinks they are strings.",
+     "reveals": "Offer \"Nerves\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at the thin blue lines on the inside of the wrist.",
+     "feedback": "The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_POSITION",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+     "error": "Thinks the heart is in the stomach or on the far left side, or as big as the whole chest.",
+     "example": {
+      "question": "About how big is the human heart?",
+      "wrong_answer": "As big as the whole chest",
+      "correct_answer": "About the size of the owner's fist"
+     },
+     "cause": "The child draws the heart on the left side of a doll.",
+     "reveals": "Offer \"As big as the whole chest\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a fist and place it in the middle of the chest, a little to the left.",
+     "feedback": "The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_UPPER_PUMP",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+     "error": "Thinks the upper chambers do the hard pumping and the lower ones only receive blood.",
+     "example": {
+      "question": "Which part of the heart pushes blood out with strong squeezes?",
+      "wrong_answer": "The upper chambers, the auricles",
+      "correct_answer": "The lower chambers, the ventricles"
+     },
+     "cause": "The child links \"upper\" with \"main\".",
+     "reveals": "Offer \"The upper chambers, the auricles\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the lower chambers have thick walls because they push blood far.",
+     "feedback": "The auricles receive blood. The ventricles have thick walls and push blood out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_ONE_ROOM",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
+     "error": "Thinks the heart is one hollow space with no parts.",
+     "example": {
+      "question": "How many main chambers does the human heart have?",
+      "wrong_answer": "One",
+      "correct_answer": "Four"
+     },
+     "cause": "The child draws the heart as a valentine shape.",
+     "reveals": "Offer \"One\" next to the right answer and ask the question again in a new context.",
+     "help": "Cut a model of the heart from clay and show the four rooms.",
+     "feedback": "The heart has four chambers: two auricles on top and two ventricles below.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_SWAP",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+     "error": "Swaps arteries and veins.",
+     "example": {
+      "question": "Which vessels carry blood away from the heart?",
+      "wrong_answer": "Veins",
+      "correct_answer": "Arteries"
+     },
+     "cause": "The child remembers both names but not the direction.",
+     "reveals": "Offer \"Veins\" next to the right answer and ask the question again in a new context.",
+     "help": "Remember: Arteries go Away; Veins come Back.",
+     "feedback": "Arteries carry blood away from the heart. Veins bring blood back to the heart.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_ONE_WAY",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+     "error": "Thinks the blood leaves the heart, goes to the body and stays there.",
+     "example": {
+      "question": "What happens to blood after it reaches the toes?",
+      "wrong_answer": "It stays in the toes",
+      "correct_answer": "It goes back to the heart through the veins"
+     },
+     "cause": "The child thinks of the body as a place where blood is used up.",
+     "reveals": "Offer \"It stays in the toes\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a loop on paper with the heart on the loop.",
+     "feedback": "Blood goes round and round. It returns to the heart in the veins.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_CAPILLARY_BIG",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+     "error": "Thinks capillaries are the biggest vessels, or that they carry blood far.",
+     "example": {
+      "question": "What is special about capillaries?",
+      "wrong_answer": "They are the biggest vessels in the body",
+      "correct_answer": "They are tiny vessels that pass food and oxygen to the body"
+     },
+     "cause": "The child thinks of capillaries as hair-like threads.",
+     "reveals": "Offer \"They are the biggest vessels in the body\" next to the right answer and ask the question again in a new context.",
+     "help": "Say capillary means hair-like in size; show the size on the tip of a pencil.",
+     "feedback": "Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_WHITE_OXYGEN",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+     "error": "Thinks the white cells carry oxygen.",
+     "example": {
+      "question": "Which blood cells fight germs?",
+      "wrong_answer": "Red blood cells",
+      "correct_answer": "White blood cells"
+     },
+     "cause": "The child remembers only that red cells are important.",
+     "reveals": "Offer \"Red blood cells\" next to the right answer and ask the question again in a new context.",
+     "help": "Link colour to jobs: red carry, white fight.",
+     "feedback": "White blood cells fight germs. Red blood cells carry oxygen.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLATELETS",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+     "error": "Does not know what platelets do or says they carry oxygen.",
+     "example": {
+      "question": "What do platelets do when you cut your finger?",
+      "wrong_answer": "They carry oxygen to the cut",
+      "correct_answer": "They help the blood to clot and close the cut"
+     },
+     "cause": "The child has not met the word.",
+     "reveals": "Offer \"They carry oxygen to the cut\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch a small cut stop bleeding after a few minutes.",
+     "feedback": "Platelets stick together to help the blood clot and stop the bleeding.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_ALL_RED",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+     "error": "Thinks blood is made only of red cells.",
+     "example": {
+      "question": "What is the liquid part of blood called?",
+      "wrong_answer": "Blood has no liquid part, it is all red cells",
+      "correct_answer": "Plasma, which carries the cells and digested food"
+     },
+     "cause": "The child has only seen red blood.",
+     "reveals": "Offer \"Blood has no liquid part, it is all red cells\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a picture of blood left to settle in a tube: a pale yellow layer and a red layer.",
+     "feedback": "Blood has a liquid part called plasma. It carries blood cells and digested food around the body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_CATCHING",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+     "error": "Thinks high blood pressure or a heart attack can be caught from another person.",
+     "example": {
+      "question": "Can a child catch high blood pressure from a friend?",
+      "wrong_answer": "Yes, it spreads like a cold",
+      "correct_answer": "No, it is not caught from other people"
+     },
+     "cause": "The child links every illness with germs.",
+     "reveals": "Offer \"Yes, it spreads like a cold\" next to the right answer and ask the question again in a new context.",
+     "help": "Separate illnesses caused by germs (cold, malaria) from those caused by how the body and habits work.",
+     "feedback": "High blood pressure and heart attacks are not caught from other people. They come from how the heart and vessels are working.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_ARTERY_SOFT",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+     "error": "Thinks hardening of the arteries means the arteries become softer, or that arteries turn into bone.",
+     "example": {
+      "question": "What happens in hardening of the arteries?",
+      "wrong_answer": "The artery walls become soft and thin",
+      "correct_answer": "The artery walls become stiff and narrow"
+     },
+     "cause": "The child confuses the word \"hardening\" with \"becoming bone\".",
+     "reveals": "Offer \"The artery walls become soft and thin\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a new rubber pipe with an old stiff one.",
+     "feedback": "In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_BP_MEANING",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+     "error": "Thinks high blood pressure means a lot of blood in the body or red cheeks.",
+     "example": {
+      "question": "What is high blood pressure?",
+      "wrong_answer": "Having more blood than normal in the body",
+      "correct_answer": "Blood pushing too hard against the walls of the vessels"
+     },
+     "cause": "The child reads \"pressure\" as quantity.",
+     "reveals": "Offer \"Having more blood than normal in the body\" next to the right answer and ask the question again in a new context.",
+     "help": "Press a hose full of water and feel the push on the sides.",
+     "feedback": "High blood pressure means the blood pushes too hard against the walls of the vessels.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_REST_ONLY",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+     "error": "Thinks the heart is kept healthy by resting and not exercising.",
+     "example": {
+      "question": "Which habit helps to keep the heart strong?",
+      "wrong_answer": "Resting all day and avoiding running",
+      "correct_answer": "Playing active games such as running and skipping"
+     },
+     "cause": "The child thinks the heart gets tired like a leg.",
+     "reveals": "Offer \"Resting all day and avoiding running\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that a heart is a muscle that grows strong with exercise, like other muscles.",
+     "feedback": "Regular exercise makes the heart strong. Sitting all day does not protect the heart.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_OLD_ONLY",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+     "error": "Thinks only old people need to care about the heart.",
+     "example": {
+      "question": "When should a person start to care for the heart?",
+      "wrong_answer": "Only when they are old",
+      "correct_answer": "From childhood, with good habits every day"
+     },
+     "cause": "The child sees heart illness only in grandparents.",
+     "reveals": "Offer \"Only when they are old\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: when do habits like eating chips every day begin?",
+     "feedback": "Habits begin in childhood. Healthy meals and exercise protect the heart for life.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_SALT_FAT",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
+     "error": "Thinks lots of salt, oil and sugar are good for the heart because they give energy.",
+     "example": {
+      "question": "Which food should be taken only a little at a time to protect the heart?",
+      "wrong_answer": "Plenty of salty and oily snacks",
+      "correct_answer": "Salty and oily snacks"
+     },
+     "cause": "The child links energy with health.",
+     "reveals": "Offer \"Plenty of salty and oily snacks\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at labels of crisps and soft drinks for salt and sugar.",
+     "feedback": "Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WATER_SKIP",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+     "error": "Thinks a routine needs no water or only soft drinks.",
+     "example": {
+      "question": "Which drink is part of a healthy routine?",
+      "wrong_answer": "Soft drinks all day",
+      "correct_answer": "Clean water through the day"
+     },
+     "cause": "The child sees any drink as a drink.",
+     "reveals": "Offer \"Soft drinks all day\" next to the right answer and ask the question again in a new context.",
+     "help": "Count how many cups of water a learner drinks in the school day.",
+     "feedback": "Plenty of clean water is part of a healthy routine. Soft drinks have a lot of sugar.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_ONE_HABIT",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+     "error": "Thinks one good habit, such as exercise, is enough.",
+     "example": {
+      "question": "Which routine best protects the heart?",
+      "wrong_answer": "Exercise only, with any food",
+      "correct_answer": "Water, activity, healthy meals and sleep"
+     },
+     "cause": "The child thinks one habit can do all the work.",
+     "reveals": "Offer \"Exercise only, with any food\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a daily plan with four boxes and tick one for each habit.",
+     "feedback": "A healthy routine has several parts: water, activity, healthy meals and enough sleep.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_SMOKE_SAFE",
+     "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
+     "error": "Thinks smoking or sitting for long hours is harmless for young people.",
+     "example": {
+      "question": "Which item does NOT belong in a routine for a healthy heart?",
+      "wrong_answer": "A walk after school",
+      "correct_answer": "Smoking"
+     },
+     "cause": "The child thinks harm shows only later in life.",
+     "reveals": "Offer \"A walk after school\" next to the right answer and ask the question again in a new context.",
+     "help": "Say tobacco smoke harms vessels at every age.",
+     "feedback": "Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.1.1",
     "SCIE.G6.RUBRIC.1.2",
     "SCIE.G6.RUBRIC.1.3",
     "SCIE.G6.RUBRIC.1.4",
     "SCIE.G6.RUBRIC.1.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d says \"develop a routine plan\": the habits are tested, the plan itself is marked by the teacher with the strand rubric. Outcome e (appreciate) is attitudinal. Medical statements (signs of a heart attack) to be confirmed by a teacher or health worker."
   },
   {
    "code": "SCIE.G6.MATTER.CHANGE_OF_STATE",
@@ -311,13 +1612,292 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+     "name": "Name the changes of state: melting, freezing, evaporation, condensation, sublimation and deposition",
+     "outcomes": [
+      "SCIE.G6.MATTER.CHANGE_OF_STATE.a"
+     ],
+     "mastery": "The child gives melting (solid to liquid), freezing (liquid to solid), evaporation (liquid to gas), condensation (gas to liquid), sublimation (solid to gas) and deposition (gas to solid), and does not mix melting with dissolving or evaporation with boiling only. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the change from a description",
+      "say which states a change goes between",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G7.MIXTUR.MIXTURES.a",
+       "reason": "Grade 7 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+     "name": "Say whether heat is gained or lost when a substance changes state",
+     "outcomes": [
+      "SCIE.G6.MATTER.CHANGE_OF_STATE.a"
+     ],
+     "mastery": "The child says melting, evaporation and sublimation need heat to go in (the substance is heated), and freezing, condensation and deposition happen when heat is taken away (the substance is cooled). The child does not say ice melts because it is \"cold\" or that freezing needs heating. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say if heat goes in or comes out",
+      "pick the change that needs heating",
+      "say what happens to water on the stove or in the freezer",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+     "name": "Describe how changes of state are used in daily life",
+     "outcomes": [
+      "SCIE.G6.MATTER.CHANGE_OF_STATE.b"
+     ],
+     "mastery": "The child names evaporation in drying clothes, grain and salt pans, condensation in dew, clouds and the cold glass of a drink, melting in candle and metal making, and freezing in ice-making. The child does not say that the clothes dry because the water \"goes into the cloth\" or that clouds come from smoke. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which change is at work",
+      "say why a method works",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G7.MIXTUR.MIXTURES.a",
+       "reason": "Grade 7 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "INTE.G7.MIXTUR.MIXTURES.b",
+       "reason": "Grade 7 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_MELT_DISSOLVE",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+     "error": "Confuses melting with dissolving.",
+     "example": {
+      "question": "What is it called when ice becomes water?",
+      "wrong_answer": "Dissolving",
+      "correct_answer": "Melting"
+     },
+     "cause": "The child sees a solid disappearing into a liquid in both.",
+     "reveals": "Offer \"Dissolving\" next to the right answer and ask the question again in a new context.",
+     "help": "Melt a candle and dissolve sugar: the candle wax can be set again, the sugar is mixed in the water.",
+     "feedback": "Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_EVAP_BOIL",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+     "error": "Thinks evaporation only happens when water boils.",
+     "example": {
+      "question": "When does water evaporate?",
+      "wrong_answer": "Only when it boils",
+      "correct_answer": "At any temperature, faster when warm"
+     },
+     "cause": "The child sees steam only from a kettle.",
+     "reveals": "Offer \"Only when it boils\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a wet cloth in the sun and shade: it dries in both, faster in the sun.",
+     "feedback": "Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_CONDENSE_MIXUP",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+     "error": "Mixes up condensation and evaporation, or thinks drops on a cold glass come from inside the glass.",
+     "example": {
+      "question": "Why do drops form on the outside of a cold bottle?",
+      "wrong_answer": "Water leaks through the glass",
+      "correct_answer": "Water vapour in the air turns into liquid on the cold surface"
+     },
+     "cause": "The child cannot see the vapour in the air.",
+     "reveals": "Offer \"Water leaks through the glass\" next to the right answer and ask the question again in a new context.",
+     "help": "Dry the glass, add ice water, and watch drops return; touch the inside.",
+     "feedback": "Condensation is a gas turning into a liquid. The drops come from water vapour in the air.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_COLD_MELTS",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+     "error": "Thinks ice melts because it takes in \"cold\" from the air.",
+     "example": {
+      "question": "Why does ice melt in the sun?",
+      "wrong_answer": "It takes in cold from the air",
+      "correct_answer": "It takes in heat from its surroundings"
+     },
+     "cause": "The child thinks cold is something that moves.",
+     "reveals": "Offer \"It takes in cold from the air\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold ice in the hand and ask which way the heat moves.",
+     "feedback": "Ice melts because it gains heat. Cold is the lack of heat.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_FREEZE_HEAT",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+     "error": "Thinks freezing needs heating, or that heat is added when water freezes.",
+     "example": {
+      "question": "What must happen to water for it to freeze?",
+      "wrong_answer": "It must be heated",
+      "correct_answer": "It must be cooled, so heat is taken away"
+     },
+     "cause": "The child thinks every change needs heat.",
+     "reveals": "Offer \"It must be heated\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a cup in the freezer and ask what the freezer takes away.",
+     "feedback": "Water freezes when heat is taken away. A freezer removes heat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_STEAM_SMOKE",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+     "error": "Thinks the cloud above a boiling pot is the gas, or that the water vanishes.",
+     "example": {
+      "question": "What do we see above a boiling pot?",
+      "wrong_answer": "Tiny drops of liquid water, because steam itself cannot be seen",
+      "correct_answer": "Water vapour, which we can see"
+     },
+     "cause": "The child cannot tell vapour from the drops it makes in the cooler air.",
+     "reveals": "Offer \"Tiny drops of liquid water, because steam itself cannot be seen\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a cold spoon in the steam and see drops collect.",
+     "feedback": "Water vapour is invisible. The white cloud is tiny drops of liquid water formed when the vapour cools.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOTHES_SOAK",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+     "error": "Thinks wet clothes dry because the water soaks into the cloth or into the rope.",
+     "example": {
+      "question": "What happens to the water when wet clothes dry on a line?",
+      "wrong_answer": "It soaks into the rope",
+      "correct_answer": "It evaporates into the air"
+     },
+     "cause": "The child thinks the water has to go somewhere solid.",
+     "reveals": "Offer \"It soaks into the rope\" next to the right answer and ask the question again in a new context.",
+     "help": "Weigh a wet cloth before and after drying.",
+     "feedback": "The water in clothes changes into water vapour and goes into the air. This is evaporation.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOUD_SMOKE",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+     "error": "Thinks clouds are made of smoke or cotton, or that rain is stored in them as water in a tank.",
+     "example": {
+      "question": "How do clouds form?",
+      "wrong_answer": "Smoke from fires gathers in the sky",
+      "correct_answer": "Water vapour cools and condenses into tiny drops"
+     },
+     "cause": "The child sees clouds as solid.",
+     "reveals": "Offer \"Smoke from fires gathers in the sky\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that the water from lakes and puddles evaporates and cools high in the air.",
+     "feedback": "Clouds form when water vapour cools and condenses into tiny drops of water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_SALT_SEA",
+     "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+     "error": "Thinks salt from sea water is got by boiling or freezing it, or does not know that the water has to evaporate.",
+     "example": {
+      "question": "How do salt pans make salt from sea water?",
+      "wrong_answer": "The sun makes the water evaporate and leaves the salt",
+      "correct_answer": "The sun freezes the water"
+     },
+     "cause": "The child does not link the sun with evaporation.",
+     "reveals": "Offer \"The sun makes the water evaporate and leaves the salt\" next to the right answer and ask the question again in a new context.",
+     "help": "Dry a salty water drop on a plate in the sun to see the white salt.",
+     "feedback": "In salt pans the sun makes the water evaporate. The salt stays behind.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.2.1",
     "SCIE.G6.RUBRIC.2.2",
     "SCIE.G6.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Practical: show melting, evaporation and freezing safely with candle wax, a wet cloth and water in a freezer, as the learning experiences suggest. Outcome c (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR",
@@ -396,13 +1976,455 @@
      "status": "kicd_read"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+     "name": "Name the components of air and say which is the most plentiful",
+     "outcomes": [
+      "SCIE.G6.MATTER.COMPOSITION_OF_AIR.a"
+     ],
+     "mastery": "The child says air is a mixture of gases: nitrogen (about four fifths), oxygen (about one fifth), a very small amount of carbon dioxide, water vapour, rare gases and dust. The child does not say air is mostly oxygen, or that air is a single gas, or that the candle uses up all the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which gas is the biggest part of air",
+      "read the amounts and name the gas",
+      "say what a burning candle in a jar shows",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+     "name": "Outline the uses of the different components of air",
+     "outcomes": [
+      "SCIE.G6.MATTER.COMPOSITION_OF_AIR.b"
+     ],
+     "mastery": "The child says oxygen is used in breathing and burning, carbon dioxide is used by plants to make food and in some fire extinguishers and fizzy drinks, nitrogen helps plants grow when it is changed into plant food in the soil and keeps food fresh in packets, and water vapour forms clouds and rain. The child does not say we breathe out only carbon dioxide or that plants do not need air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named gas is used for",
+      "pick the gas used for a described job",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+     "name": "Identify air pollutants and where they come from",
+     "outcomes": [
+      "SCIE.G6.MATTER.COMPOSITION_OF_AIR.c"
+     ],
+     "mastery": "The child names smoke from vehicles, factories, charcoal and firewood, burning rubbish, dust from quarries and roads, and tobacco smoke as air pollutants, and knows that clean wind, rain and trees are not pollutants. The child does not say only big factories pollute or that smoke you cannot smell is harmless. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the source that pollutes the air",
+      "pick the pollutant from a list",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+     "name": "Explain the effects of air pollution on people and the environment",
+     "outcomes": [
+      "SCIE.G6.MATTER.COMPOSITION_OF_AIR.c"
+     ],
+     "mastery": "The child says polluted air causes coughs and breathing illnesses, makes eyes sting, dirties buildings and plants, can fall as acid rain, and adds to the warming of the Earth. The child does not say that air pollution only harms the people nearest the smoke or that it does nothing to plants and animals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named pollutant does",
+      "say who is harmed by smoky air",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+     "name": "Describe methods of reducing air pollution",
+     "outcomes": [
+      "SCIE.G6.MATTER.COMPOSITION_OF_AIR.d"
+     ],
+     "mastery": "The child says planting trees, not burning rubbish, servicing vehicles, using cleaner cooking fuel and a vented jiko, walking or using a shared matatu, and fitting filters on factory chimneys reduce air pollution. The child does not say that burning rubbish \"gets rid of it\" or that taller chimneys remove the smoke. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the best way to cut smoke",
+      "say what a named action does for the air",
+      "decide from a short story",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_MOSTLY_OXYGEN",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+     "error": "Thinks air is mostly oxygen.",
+     "example": {
+      "question": "Which gas makes up the biggest part of air?",
+      "wrong_answer": "Oxygen",
+      "correct_answer": "Nitrogen"
+     },
+     "cause": "The child links air with breathing.",
+     "reveals": "Offer \"Oxygen\" next to the right answer and ask the question again in a new context.",
+     "help": "Say oxygen is about one fifth of air, nitrogen about four fifths.",
+     "feedback": "Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_ONE_GAS",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+     "error": "Thinks air is one gas, or is nothing.",
+     "example": {
+      "question": "What is air?",
+      "wrong_answer": "A single gas called oxygen",
+      "correct_answer": "A mixture of gases"
+     },
+     "cause": "The child cannot see air.",
+     "reveals": "Offer \"A single gas called oxygen\" next to the right answer and ask the question again in a new context.",
+     "help": "Blow into a bag and show that it has weight and takes up space.",
+     "feedback": "Air is a mixture of gases: nitrogen, oxygen, carbon dioxide and others.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CANDLE_ALL",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
+     "error": "Thinks a burning candle uses up all the air in a closed jar, so water fills the jar.",
+     "example": {
+      "question": "A candle goes out in a jar placed in water, and the water rises. What does this show?",
+      "wrong_answer": "The candle used up all the air in the jar",
+      "correct_answer": "The candle used up the oxygen, about one fifth of the air"
+     },
+     "cause": "The child sees the water rise a long way and thinks the jar is emptied.",
+     "reveals": "Offer \"The candle used up all the air in the jar\" next to the right answer and ask the question again in a new context.",
+     "help": "Mark the water level and show that it reaches about one fifth of the jar.",
+     "feedback": "The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_CO2_ONLY_OUT",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+     "error": "Thinks we breathe in only oxygen and breathe out only carbon dioxide, and that CO2 is useless.",
+     "example": {
+      "question": "What do green plants use carbon dioxide for?",
+      "wrong_answer": "Nothing, it is a waste gas",
+      "correct_answer": "To make their food using sunlight"
+     },
+     "cause": "The child hears CO2 only as a waste gas.",
+     "reveals": "Offer \"Nothing, it is a waste gas\" next to the right answer and ask the question again in a new context.",
+     "help": "Link to Grade 4: leaves make food using sunlight, and need carbon dioxide.",
+     "feedback": "Plants take in carbon dioxide and use it with sunlight to make food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_OXYGEN_FUEL",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+     "error": "Thinks oxygen burns, or that oxygen is the fuel itself.",
+     "example": {
+      "question": "Why does a fire need air?",
+      "wrong_answer": "Oxygen is the fuel that burns",
+      "correct_answer": "Oxygen helps the fuel to burn"
+     },
+     "cause": "The child thinks the gas is what is burnt.",
+     "reveals": "Offer \"Oxygen is the fuel that burns\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover a candle with a jar: it goes out when the oxygen is used.",
+     "feedback": "Oxygen is needed for burning, but the fuel (wood, charcoal, wax) is what burns.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_N_USELESS",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
+     "error": "Thinks nitrogen is useless because we do not breathe it.",
+     "example": {
+      "question": "Why is nitrogen important to plants?",
+      "wrong_answer": "It is not important, we cannot breathe it",
+      "correct_answer": "It is changed in the soil into plant food"
+     },
+     "cause": "The child values a gas only by breathing.",
+     "reveals": "Offer \"It is not important, we cannot breathe it\" next to the right answer and ask the question again in a new context.",
+     "help": "Mention beans and groundnuts that add plant food to the soil.",
+     "feedback": "Nitrogen is turned into plant food in the soil. Plants need it to grow.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_FACTORY",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+     "error": "Thinks only big factories pollute the air.",
+     "example": {
+      "question": "Which of these pollutes the air in a home?",
+      "wrong_answer": "Only factory chimneys",
+      "correct_answer": "Smoke from cooking with firewood or charcoal in a closed room"
+     },
+     "cause": "The child thinks pollution is always a faraway big thing.",
+     "reveals": "Offer \"Only factory chimneys\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk around school and list small sources: burning rubbish, a diesel pump, dust.",
+     "feedback": "Cars, burning rubbish and cooking smoke also pollute the air, not only factories.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_SMELL",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+     "error": "Thinks air is clean unless it smells.",
+     "example": {
+      "question": "Which statement is true?",
+      "wrong_answer": "If the air has no smell, it is clean",
+      "correct_answer": "Some harmful gases have no smell"
+     },
+     "cause": "The child uses smell to judge air.",
+     "reveals": "Offer \"If the air has no smell, it is clean\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that carbon monoxide from a charcoal burner has no smell.",
+     "feedback": "Some pollutants, such as carbon monoxide, have no smell or colour but are dangerous.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_DUST_NOT",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
+     "error": "Thinks dust and smoke from burning rubbish are natural and not pollution.",
+     "example": {
+      "question": "Is dust from a quarry or a road under repair a pollutant?",
+      "wrong_answer": "No, dust is part of the soil",
+      "correct_answer": "Yes, it pollutes the air and makes people cough"
+     },
+     "cause": "The child sees dust as ordinary.",
+     "reveals": "Offer \"No, dust is part of the soil\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover your nose near a dusty road and see how the air changes.",
+     "feedback": "Dust in large amounts pollutes the air and harms the lungs and eyes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_ONLY_NEAR",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+     "error": "Thinks air pollution only harms people next to the smoke.",
+     "example": {
+      "question": "How far can air pollution travel?",
+      "wrong_answer": "It stays where the smoke is made",
+      "correct_answer": "The wind can carry it far from where it started"
+     },
+     "cause": "The child thinks the air stays still.",
+     "reveals": "Offer \"It stays where the smoke is made\" next to the right answer and ask the question again in a new context.",
+     "help": "Show smoke from a fire drifting along the wind.",
+     "feedback": "Wind carries polluted air far from its source. Many people can be affected.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_PLANTS_FINE",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+     "error": "Thinks plants and animals are not harmed by air pollution.",
+     "example": {
+      "question": "What can acid rain do?",
+      "wrong_answer": "Nothing, rain is always good for plants",
+      "correct_answer": "Harm plants, buildings and water life"
+     },
+     "cause": "The child links rain with growing crops.",
+     "reveals": "Offer \"Nothing, rain is always good for plants\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that smoke gases mix with rain high up and fall as weak acid.",
+     "feedback": "Pollutants can mix with rain and fall as acid rain. It harms plants, soil and buildings.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_WARM_GOOD",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
+     "error": "Thinks warming of the Earth from smoke gases is only about weather being nice and warm.",
+     "example": {
+      "question": "What can too much carbon dioxide in the air do?",
+      "wrong_answer": "Make the Earth warmer and change the weather",
+      "correct_answer": "Make the air cleaner"
+     },
+     "cause": "The child hears \"warmer\" as good.",
+     "reveals": "Offer \"Make the Earth warmer and change the weather\" next to the right answer and ask the question again in a new context.",
+     "help": "Link to floods and drought the child knows from the news.",
+     "feedback": "Too much carbon dioxide and other gases make the Earth warmer. This changes rainfall and can cause drought.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_BURN_RUBBISH",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+     "error": "Thinks burning rubbish gets rid of it and cleans the compound.",
+     "example": {
+      "question": "What is the best way to deal with plastic rubbish?",
+      "wrong_answer": "Burn it",
+      "correct_answer": "Collect it and take it for recycling or proper disposal"
+     },
+     "cause": "The child sees the rubbish disappear.",
+     "reveals": "Offer \"Burn it\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell burning plastic and ask where the smoke goes.",
+     "feedback": "Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TALL_CHIMNEY",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+     "error": "Thinks a taller chimney removes the pollution.",
+     "example": {
+      "question": "Does a taller factory chimney remove the pollution?",
+      "wrong_answer": "Yes, the smoke disappears higher up",
+      "correct_answer": "No, the smoke still enters the air; filters help"
+     },
+     "cause": "The child thinks that high means gone.",
+     "reveals": "Offer \"Yes, the smoke disappears higher up\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the gases are carried by the wind to other places.",
+     "feedback": "A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TREES_NOT",
+     "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
+     "error": "Thinks trees do not help to clean the air.",
+     "example": {
+      "question": "How do trees help to reduce air pollution?",
+      "wrong_answer": "They do not help",
+      "correct_answer": "They take in carbon dioxide and trap dust"
+     },
+     "cause": "The child thinks trees only give shade and fruit.",
+     "reveals": "Offer \"They do not help\" next to the right answer and ask the question again in a new context.",
+     "help": "Wipe leaves along a dusty road: the cloth turns grey.",
+     "feedback": "Trees take in carbon dioxide and give out oxygen, and their leaves trap dust.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.2.1",
     "SCIE.G6.RUBRIC.2.2",
     "SCIE.G6.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b, c and d are tested by questions. Practical: the burning candle in a jar and a poster on air pollutants. Outcome e (appreciate the need for clean air) is attitudinal. The pie chart of the make-up of air links to Mathematics."
   },
   {
    "code": "SCIE.G6.FORCE_.LIGHT",
@@ -478,13 +2500,512 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+     "name": "Classify materials as transparent, translucent or opaque",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.a"
+     ],
+     "mastery": "The child says transparent materials (clear glass, clear water) let nearly all the light through so you see clearly, translucent materials (frosted glass, tissue paper, thin cloth) let some light through so you see a blur, and opaque materials (wood, metal, stone, thick cardboard) let none through. The child does not call every coloured material opaque or glass always transparent. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "sort a named material",
+      "pick the material that lets all the light through",
+      "say what is seen through a material",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+     "name": "Explain how shadows form and how their size changes",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.c"
+     ],
+     "mastery": "The child says a shadow forms when an opaque object blocks light that travels in straight lines, the shadow falls on the side away from the light, and it is larger when the object is closer to the light source. The child does not say the shadow is made by the object, or that a clear window makes a dark shadow. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what is needed for a shadow",
+      "say where a shadow falls",
+      "say how the shadow changes when the object moves",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+     "name": "Explain solar and lunar eclipses",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.c"
+     ],
+     "mastery": "The child says in a solar eclipse the Moon is between the Sun and the Earth and its shadow falls on the Earth, in a lunar eclipse the Earth is between the Sun and the Moon and the Earth's shadow falls on the Moon, and a solar eclipse is not safe to look at with the eyes. The child does not say a cloud, or a planet, or the night causes an eclipse. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what blocks the light in each eclipse",
+      "say which body is in the middle",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+     "name": "Apply the law of reflection at a plane mirror",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.b"
+     ],
+     "mastery": "The child says the angle of incidence equals the angle of reflection, both are measured from the normal (the line at a right angle to the mirror) and not from the mirror surface, and the incident ray, normal and reflected ray lie in one plane. The child gives 40 degrees for the reflected ray when the incident ray makes 40 degrees with the normal, and not 50 or 80. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which angles are equal",
+      "find the reflected angle from the incident angle",
+      "say where the angles are measured from",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+     "name": "Describe the image formed in a plane mirror",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.b"
+     ],
+     "mastery": "The child says the image in a plane mirror is the same size as the object, upright, the same distance behind the mirror as the object is in front, laterally inverted (left and right swap), and cannot be caught on a screen. The child does not say the image is smaller, upside down or in front of the mirror. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say how big the image is",
+      "say how far behind the mirror it seems to be",
+      "say what happens to left and right",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+     "name": "Describe how a rainbow forms",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LIGHT.d"
+     ],
+     "mastery": "The child says a rainbow forms when sunlight passes into raindrops, bends and splits into seven colours (red, orange, yellow, green, blue, indigo, violet), and the observer stands with the Sun behind them and the rain in front. The child does not say a rainbow is a painted arc, or that it can be touched or reached. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what is needed to see a rainbow",
+      "say which way to face",
+      "say the order of the colours",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_COLOUR_OPAQUE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+     "error": "Thinks coloured materials, such as coloured glass or a coloured bag, are opaque.",
+     "example": {
+      "question": "A red plastic sheet lets light through and you can see a blurred shape behind it. What is it?",
+      "wrong_answer": "Opaque, because it is coloured",
+      "correct_answer": "Translucent"
+     },
+     "cause": "The child links colour with blocking light.",
+     "reveals": "Offer \"Opaque, because it is coloured\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold coloured cellophane to a window and look through it.",
+     "feedback": "Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_TRANSLUCENT_TRANSPARENT",
+     "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+     "error": "Mixes up translucent and transparent.",
+     "example": {
+      "question": "Frosted glass in a bathroom window lets light in but you cannot see clearly through. What is it?",
+      "wrong_answer": "Transparent",
+      "correct_answer": "Translucent"
+     },
+     "cause": "The child hears that both let light through.",
+     "reveals": "Offer \"Transparent\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a friend through clear glass and then through frosted glass.",
+     "feedback": "Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_GLASS_ALWAYS",
+     "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
+     "error": "Thinks a material is always the same kind, for example all glass is transparent or all paper is opaque.",
+     "example": {
+      "question": "Which of these is translucent?",
+      "wrong_answer": "All paper is opaque",
+      "correct_answer": "Tracing paper or tissue paper"
+     },
+     "cause": "The child sorts by name of the material instead of by its thickness or surface.",
+     "reveals": "Offer \"All paper is opaque\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a thin sheet of paper and a thick board to the light.",
+     "feedback": "The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_MADE_BY_OBJECT",
+     "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+     "error": "Thinks the shadow is part of the object or is made by the object, not by blocked light.",
+     "example": {
+      "question": "What makes a shadow?",
+      "wrong_answer": "The object makes it",
+      "correct_answer": "The object blocks the light"
+     },
+     "cause": "The child sees the shadow stuck to the feet of the object.",
+     "reveals": "Offer \"The object makes it\" next to the right answer and ask the question again in a new context.",
+     "help": "Switch the torch off: the shadow disappears.",
+     "feedback": "A shadow is the place the light cannot reach because an opaque object blocks it.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIDE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+     "error": "Thinks the shadow falls on the same side as the light.",
+     "example": {
+      "question": "A torch is on the left of a ball. On which side does the shadow fall?",
+      "wrong_answer": "The left, beside the torch",
+      "correct_answer": "The right, away from the torch"
+     },
+     "cause": "The child draws the shadow beside the source.",
+     "reveals": "Offer \"The left, beside the torch\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the straight ray from the torch to the ball and past it.",
+     "feedback": "Light travels in straight lines. The shadow falls on the side away from the light.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIZE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
+     "error": "Thinks moving the object closer to the light makes the shadow smaller.",
+     "example": {
+      "question": "What happens to a shadow when the object moves closer to the torch?",
+      "wrong_answer": "It becomes smaller",
+      "correct_answer": "It becomes larger"
+     },
+     "cause": "The child thinks that closer means smaller.",
+     "reveals": "Offer \"It becomes smaller\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a hand and a torch against a wall and move the hand closer.",
+     "feedback": "The closer an object is to the light, the bigger its shadow.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_CLOUD",
+     "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+     "error": "Thinks an eclipse is caused by clouds or night coming early.",
+     "example": {
+      "question": "What causes a solar eclipse?",
+      "wrong_answer": "Thick clouds cover the Sun",
+      "correct_answer": "The Moon moves between the Sun and the Earth"
+     },
+     "cause": "The child sees the sky darken and thinks of clouds.",
+     "reveals": "Offer \"Thick clouds cover the Sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Use a ball, a torch and a smaller ball to model it.",
+     "feedback": "In a solar eclipse the Moon is between the Sun and the Earth and blocks the Sun's light.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SWAP",
+     "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+     "error": "Swaps solar and lunar eclipses.",
+     "example": {
+      "question": "In a lunar eclipse, which body is in the middle?",
+      "wrong_answer": "The Moon",
+      "correct_answer": "The Earth"
+     },
+     "cause": "The child remembers only the two names.",
+     "reveals": "Offer \"The Moon\" next to the right answer and ask the question again in a new context.",
+     "help": "Put the three objects in a line and say out loud which is in the middle.",
+     "feedback": "In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SAFE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
+     "error": "Thinks it is safe to look at a solar eclipse with the eyes or through dark glass.",
+     "example": {
+      "question": "How can a learner watch a solar eclipse safely?",
+      "wrong_answer": "Look straight at it for a short time",
+      "correct_answer": "Use a pinhole projector or special eclipse glasses, never the bare eye"
+     },
+     "cause": "The child thinks the Sun is weaker during an eclipse.",
+     "reveals": "Offer \"Look straight at it for a short time\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a pinhole projector from a box and watch the image of the Sun on a card.",
+     "feedback": "Never look at the Sun, even during an eclipse. It can harm the eyes for ever.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NOT_EQUAL",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+     "error": "Thinks the reflected ray leaves at a different angle from the incoming ray.",
+     "example": {
+      "question": "A ray hits a plane mirror at 30 degrees to the normal. At what angle to the normal does it leave?",
+      "wrong_answer": "60 degrees",
+      "correct_answer": "30 degrees"
+     },
+     "cause": "The child thinks the mirror turns the light.",
+     "reveals": "Offer \"60 degrees\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw with a protractor and measure.",
+     "feedback": "The angle of reflection equals the angle of incidence. Both are measured from the normal.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_FROM_SURFACE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+     "error": "Measures the angles from the mirror surface and not from the normal.",
+     "example": {
+      "question": "A ray makes 30 degrees with the mirror surface. What is the angle of incidence?",
+      "wrong_answer": "30 degrees",
+      "correct_answer": "60 degrees"
+     },
+     "cause": "The child measures from the flat mirror because it is the visible line.",
+     "reveals": "Offer \"30 degrees\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the normal as a dotted line and measure from it.",
+     "feedback": "Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_ABSORB",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
+     "error": "Thinks a mirror absorbs part of the light or the light goes through the mirror.",
+     "example": {
+      "question": "What does a plane mirror do to light?",
+      "wrong_answer": "It absorbs the light",
+      "correct_answer": "It bounces the light back"
+     },
+     "cause": "The child sees the image \"inside\" the mirror.",
+     "reveals": "Offer \"It absorbs the light\" next to the right answer and ask the question again in a new context.",
+     "help": "Shine a torch at a mirror in a dark room and see the spot on the wall.",
+     "feedback": "A mirror reflects light. It sends light back in one direction.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_SIZE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+     "error": "Thinks the image in a plane mirror is smaller or larger than the object.",
+     "example": {
+      "question": "How big is the image of a pupil in a plane mirror?",
+      "wrong_answer": "Smaller than the pupil",
+      "correct_answer": "The same size as the pupil"
+     },
+     "cause": "The child confuses image with a photograph or with a curved mirror.",
+     "reveals": "Offer \"Smaller than the pupil\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure your height and the height of your image on the mirror with a ruler.",
+     "feedback": "A plane mirror gives an image the same size as the object.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_DISTANCE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+     "error": "Thinks the image is on the surface of the mirror or at a different distance from the mirror.",
+     "example": {
+      "question": "A pupil stands 2 metres in front of a plane mirror. How far behind the mirror is the image?",
+      "wrong_answer": "1 metre",
+      "correct_answer": "2 metres"
+     },
+     "cause": "The child thinks that the image is where the glass is.",
+     "reveals": "Offer \"1 metre\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand at one, two and three steps and measure how far the image seems.",
+     "feedback": "The image is as far behind the mirror as the object is in front of it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_UPSIDE",
+     "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
+     "error": "Thinks the image is upside down or does not know that left and right swap.",
+     "example": {
+      "question": "What happens to left and right in a plane mirror image?",
+      "wrong_answer": "They stay the same and the image is upside down",
+      "correct_answer": "They swap, but the image is upright"
+     },
+     "cause": "The child says the image is upside down.",
+     "reveals": "Offer \"They stay the same and the image is upside down\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold up a card with a word and read it in the mirror.",
+     "feedback": "The image is upright, but left and right swap. This is lateral inversion.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_PAINT",
+     "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+     "error": "Thinks a rainbow is a solid arc, painted or a thing in the sky that can be reached.",
+     "example": {
+      "question": "What is a rainbow?",
+      "wrong_answer": "A solid coloured bridge in the sky",
+      "correct_answer": "Sunlight split into colours by raindrops"
+     },
+     "cause": "The child sees it as an object at one place.",
+     "reveals": "Offer \"A solid coloured bridge in the sky\" next to the right answer and ask the question again in a new context.",
+     "help": "Spray water from a hose in the sun and see a small rainbow.",
+     "feedback": "A rainbow is light spread into colours by drops of water. It is not a solid thing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_SUN_FRONT",
+     "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+     "error": "Thinks you see a rainbow with the Sun in front of you or when it is only raining.",
+     "example": {
+      "question": "Where is the Sun when you see a rainbow?",
+      "wrong_answer": "In front of you, opposite the rain",
+      "correct_answer": "Behind you, with the rain in front"
+     },
+     "cause": "The child only remembers sun and rain together.",
+     "reveals": "Offer \"In front of you, opposite the rain\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand with your back to the Sun with a hose.",
+     "feedback": "To see a rainbow, the Sun is behind you and the raindrops are in front.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_COLOUR_ORDER",
+     "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
+     "error": "Gives the wrong order or number of colours.",
+     "example": {
+      "question": "What colour is at the top of the outer edge of a main rainbow?",
+      "wrong_answer": "Violet",
+      "correct_answer": "Red"
+     },
+     "cause": "The child lists the colours in the order of a poem and not of the bow.",
+     "reveals": "Offer \"Violet\" next to the right answer and ask the question again in a new context.",
+     "help": "Learn the order red, orange, yellow, green, blue, indigo, violet.",
+     "feedback": "The seven colours are red, orange, yellow, green, blue, indigo and violet, with red on the outside.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.3.1",
     "SCIE.G6.RUBRIC.3.2",
     "SCIE.G6.RUBRIC.3.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes b, c and d are tested by questions, including angles at a plane mirror; the drawing itself (a ray diagram) is checked on paper by the teacher. Outcome a (demonstrate the movement of light through materials) is practical: the classification is tested, the demonstration is observed. Outcome e (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE",
@@ -559,13 +3080,350 @@
      "indicator": "SCIE.G6.RUBRIC.3.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+     "name": "Identify common levers used in daily life",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.a"
+     ],
+     "mastery": "The child says a lever is a rigid bar that turns about a fixed point to make work easier, and names scissors, pliers, a see-saw, a wheelbarrow, a bottle opener, a nutcracker, a shovel, a fishing rod, tongs and tweezers as levers. The child does not call a ladder, a wheel or a pot a lever. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the tool that is a lever",
+      "say which tool is not a lever",
+      "decide from a short story",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+     "name": "Name the fulcrum, effort and load of a lever",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.b"
+     ],
+     "mastery": "The child says the fulcrum (pivot) is the fixed point the bar turns about, the effort is the push or pull put in, and the load is the object to be moved. The child does not call the load the effort or the fulcrum the handle. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "point to the part in a described lever",
+      "say where each part is on a see-saw or scissors",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+     "name": "Explain how a lever makes work easier",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.b",
+      "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.d"
+     ],
+     "mastery": "The child says a lever lets a small effort move a big load, the effort is smaller when the fulcrum is closer to the load or the effort is applied further from the fulcrum, and a lever does not give more energy. The child does not say the effort is smaller when the fulcrum is closer to the effort. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say where to put the fulcrum",
+      "say what changes if the effort is far from the fulcrum",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+     "name": "Classify levers into first, second and third class",
+     "outcomes": [
+      "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.c"
+     ],
+     "mastery": "The child says in a first class lever the fulcrum is in the middle (see-saw, scissors, pliers, crowbar), in a second class lever the load is in the middle (wheelbarrow, bottle opener, nutcracker) and in a third class lever the effort is in the middle (fishing rod, tongs, tweezers, shovel, broom). The child does not use the size or the age of the tool to decide. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say the class from the part in the middle",
+      "sort a named lever",
+      "say which class a described lever is",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_LADDER",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+     "error": "Calls a ladder, a wheel or a pot a lever.",
+     "example": {
+      "question": "Which of these is a lever?",
+      "wrong_answer": "A ladder",
+      "correct_answer": "A pair of pliers"
+     },
+     "cause": "The child thinks every tool that helps is a lever.",
+     "reveals": "Offer \"A ladder\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: is there a bar that turns about a fixed point?",
+     "feedback": "A lever is a bar that turns about a fixed point. A ladder does not turn about a point.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_ONLY_LONG",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+     "error": "Thinks a lever must be a long stick.",
+     "example": {
+      "question": "Which of these is a lever?",
+      "wrong_answer": "Only a long stick or a crowbar",
+      "correct_answer": "Scissors or tweezers"
+     },
+     "cause": "The child thinks of a crowbar.",
+     "reveals": "Offer \"Only a long stick or a crowbar\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at scissors: two bars that turn about a screw.",
+     "feedback": "A lever can be short or long. Scissors, tweezers and a bottle opener are levers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_MORE_ENERGY",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+     "error": "Thinks a lever gives out more energy than is put in.",
+     "example": {
+      "question": "What does a lever do?",
+      "wrong_answer": "Gives more energy than we put in",
+      "correct_answer": "Lets a small effort move a big load"
+     },
+     "cause": "The child thinks easier means free.",
+     "reveals": "Offer \"Gives more energy than we put in\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask: which end moves farther, the effort end or the load end?",
+     "feedback": "A lever makes work easier by changing the effort needed. It does not make energy.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_LOAD_EFFORT",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+     "error": "Swaps effort and load.",
+     "example": {
+      "question": "In a wheelbarrow, what is the load?",
+      "wrong_answer": "The person lifting the handles",
+      "correct_answer": "The soil or bricks in the barrow"
+     },
+     "cause": "The child thinks the person is the load.",
+     "reveals": "Offer \"The person lifting the handles\" next to the right answer and ask the question again in a new context.",
+     "help": "Say effort is what you put in and load is what you move.",
+     "feedback": "The effort is the push or pull we use. The load is what we want to move.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_HANDLE",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+     "error": "Thinks the fulcrum is the handle or the part that is held.",
+     "example": {
+      "question": "On a see-saw, where is the fulcrum?",
+      "wrong_answer": "At the seats",
+      "correct_answer": "At the middle support the plank turns about"
+     },
+     "cause": "The child thinks the fulcrum is where force is put.",
+     "reveals": "Offer \"At the seats\" next to the right answer and ask the question again in a new context.",
+     "help": "Push a ruler over a pencil and point to the pivot.",
+     "feedback": "The fulcrum is the fixed point a lever turns about.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_MOVES",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
+     "error": "Thinks the fulcrum moves with the load.",
+     "example": {
+      "question": "What does the fulcrum do while a lever works?",
+      "wrong_answer": "It moves with the load",
+      "correct_answer": "It stays fixed"
+     },
+     "cause": "The child follows the moving bar.",
+     "reveals": "Offer \"It moves with the load\" next to the right answer and ask the question again in a new context.",
+     "help": "Place a book on a pencil and see that the pencil stays.",
+     "feedback": "The fulcrum stays fixed while the bar turns about it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FAR_FROM_LOAD",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+     "error": "Thinks that putting the fulcrum closer to the effort makes lifting easier.",
+     "example": {
+      "question": "A learner lifts a stone with a plank. Where should the fulcrum be to need the least effort?",
+      "wrong_answer": "Close to the learner's hands",
+      "correct_answer": "Close to the stone"
+     },
+     "cause": "The child thinks the nearer the hands, the easier.",
+     "reveals": "Offer \"Close to the learner's hands\" next to the right answer and ask the question again in a new context.",
+     "help": "Try a ruler over a pencil: slide the pencil near the load.",
+     "feedback": "The closer the fulcrum is to the load, the smaller the effort needed.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_SHORT_ARM",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+     "error": "Thinks pushing close to the fulcrum needs less effort.",
+     "example": {
+      "question": "On a door, where should a person push to open it more easily?",
+      "wrong_answer": "Close to the hinges",
+      "correct_answer": "Far from the hinges, at the handle"
+     },
+     "cause": "The child thinks near is easier.",
+     "reveals": "Offer \"Close to the hinges\" next to the right answer and ask the question again in a new context.",
+     "help": "Push a door near the hinge and then at the handle.",
+     "feedback": "The farther from the fulcrum (hinge) you push, the less effort you need.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FREE_WORK",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
+     "error": "Thinks a lever reduces the work, so the load gets lighter.",
+     "example": {
+      "question": "What happens to the weight of a load when a lever is used?",
+      "wrong_answer": "It gets lighter",
+      "correct_answer": "It stays the same, only the effort is smaller"
+     },
+     "cause": "The child feels the load as lighter.",
+     "reveals": "Offer \"It gets lighter\" next to the right answer and ask the question again in a new context.",
+     "help": "Weigh the load on a scale before and after using a lever.",
+     "feedback": "A lever does not change the weight of the load. It lets a smaller effort move it over a longer distance.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_FIRST_ALWAYS",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+     "error": "Calls every lever a first class lever.",
+     "example": {
+      "question": "Which class of lever is a wheelbarrow?",
+      "wrong_answer": "First class",
+      "correct_answer": "Second class"
+     },
+     "cause": "The child remembers only \"first\".",
+     "reveals": "Offer \"First class\" next to the right answer and ask the question again in a new context.",
+     "help": "Find where the load, effort and fulcrum sit.",
+     "feedback": "A wheelbarrow has the load in the middle. It is a second class lever.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_USE_SIZE",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+     "error": "Decides the class by size or by use rather than by the middle part.",
+     "example": {
+      "question": "Which part is in the middle of a third class lever?",
+      "wrong_answer": "The fulcrum",
+      "correct_answer": "The effort"
+     },
+     "cause": "The child tries to remember the tool and not the layout.",
+     "reveals": "Offer \"The fulcrum\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw a bar with three dots and write F, L, E in each order.",
+     "feedback": "First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_THIRD_SECOND",
+     "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
+     "error": "Mixes up second and third class levers.",
+     "example": {
+      "question": "Which class of lever is a pair of tweezers?",
+      "wrong_answer": "Second class",
+      "correct_answer": "Third class"
+     },
+     "cause": "The child thinks that both have the fulcrum at one end.",
+     "reveals": "Offer \"Second class\" next to the right answer and ask the question again in a new context.",
+     "help": "Squeeze tweezers in the middle and see where the pivot is.",
+     "feedback": "In tweezers the effort is in the middle, so they are third class levers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.3.1",
     "SCIE.G6.RUBRIC.3.2",
     "SCIE.G6.RUBRIC.3.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (demonstrate the use of levers) is practical: the knowledge half is tested, the demonstration with a ruler, a pencil or a see-saw is observed. Outcome e (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE",
@@ -625,13 +3483,186 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+     "name": "Identify the types of slopes used as simple machines",
+     "outcomes": [
+      "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.a"
+     ],
+     "mastery": "The child says a slope (inclined plane) is a flat surface that is tilted, and names a ramp, a staircase, a road winding up a hill, a loading plank, a ladder against a wall, a wedge (an axe or a knife) and a screw as slopes. The child does not call a pulley, a see-saw or a flat road a slope. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the tool that is a slope",
+      "say which is not a slope",
+      "decide from a short story",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+     "name": "Explain how a slope makes work easier",
+     "outcomes": [
+      "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.b"
+     ],
+     "mastery": "The child says a slope lets you raise a load with less effort than lifting it straight up, a longer and gentler slope needs less effort but a longer path, and the load does not get lighter. The child does not say a steeper slope is easier or that a slope saves distance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a gentler slope does",
+      "choose the slope that needs the least push",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_PULLEY",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+     "error": "Calls a pulley or a see-saw a slope.",
+     "example": {
+      "question": "Which of these is a slope?",
+      "wrong_answer": "A see-saw",
+      "correct_answer": "A ramp"
+     },
+     "cause": "The child names any machine from the unit.",
+     "reveals": "Offer \"A see-saw\" next to the right answer and ask the question again in a new context.",
+     "help": "Look for a tilted flat surface.",
+     "feedback": "A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_FLAT_ROAD",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+     "error": "Thinks a flat road is a slope.",
+     "example": {
+      "question": "Which of these is NOT a slope?",
+      "wrong_answer": "A road winding up a hill",
+      "correct_answer": "A flat road on level ground"
+     },
+     "cause": "The child thinks that every road is a slope.",
+     "reveals": "Offer \"A road winding up a hill\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll a ball on a flat table and on a tilted board.",
+     "feedback": "A slope must be tilted. A flat road is not a slope.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_WEDGE",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
+     "error": "Does not know that a wedge such as an axe or a knife is a slope.",
+     "example": {
+      "question": "Which tool is a slope in the shape of a wedge?",
+      "wrong_answer": "A hammer",
+      "correct_answer": "An axe"
+     },
+     "cause": "The child sees the sharp edge only.",
+     "reveals": "Offer \"A hammer\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the side view of an axe: two slopes meeting.",
+     "feedback": "An axe or a knife is a wedge, which is two slopes joined together.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_STEEP_EASIER",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+     "error": "Thinks a steeper slope needs less effort.",
+     "example": {
+      "question": "Which ramp needs the least effort to push a loaded wheelbarrow up?",
+      "wrong_answer": "The steepest ramp",
+      "correct_answer": "The long, gentle ramp"
+     },
+     "cause": "The child thinks that shorter means easier.",
+     "reveals": "Offer \"The steepest ramp\" next to the right answer and ask the question again in a new context.",
+     "help": "Pull a toy car up a steep plank and then a long gentle one with a spring balance.",
+     "feedback": "A longer and gentler slope needs less effort, but it is longer to travel.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_LIGHTER",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+     "error": "Thinks the load becomes lighter on a slope.",
+     "example": {
+      "question": "What happens to the weight of a drum on a ramp?",
+      "wrong_answer": "It becomes lighter",
+      "correct_answer": "It stays the same, only the push needed is smaller"
+     },
+     "cause": "The child feels the push as less weight.",
+     "reveals": "Offer \"It becomes lighter\" next to the right answer and ask the question again in a new context.",
+     "help": "Weigh the drum on a scale on the ground and on the ramp.",
+     "feedback": "The weight does not change. The slope only reduces the effort.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SHORTER_WAY",
+     "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
+     "error": "Thinks a slope saves distance.",
+     "example": {
+      "question": "Compared with lifting a load straight up, how far is it moved along a ramp?",
+      "wrong_answer": "A shorter distance",
+      "correct_answer": "A longer distance"
+     },
+     "cause": "The child thinks easier also means shorter.",
+     "reveals": "Offer \"A shorter distance\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure the straight height and the ramp length with a string.",
+     "feedback": "A ramp is longer than the straight lift. We trade a longer path for less effort.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G6.RUBRIC.3.1",
     "SCIE.G6.RUBRIC.3.2",
     "SCIE.G6.RUBRIC.3.3"
-   ]
+   ],
+   "authoring_notes": "Outcome a is tested by questions. Outcome b (demonstrate how a slope makes work easier) is practical: the reasoning is tested, the demonstration with a plank and a spring balance is observed. Outcome c (appreciate) is attitudinal."
   }
  ],
  "rubrics": [
