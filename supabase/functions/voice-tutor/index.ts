@@ -1376,7 +1376,10 @@ function doingOf(steps2 = []) {
   const says = steps2.filter((x) => x.cmd === "say");
   return says.length && /\?\s*$/.test(says[says.length - 1].text) ? "answer" : "talk";
 }
-var MAX_SPOKEN_WORDS = 45;
+var MAX_SPOKEN_WORDS = 30;
+var LATE_SPOKEN_WORDS = 25;
+var LATE_AFTER_TUTOR_TURN = 10;
+var wordCap = (turnIndex = 0) => Number(turnIndex) >= LATE_AFTER_TUTOR_TURN ? LATE_SPOKEN_WORDS : MAX_SPOKEN_WORDS;
 var spokenWords = (steps2) => steps2.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
@@ -5235,6 +5238,54 @@ function pickTarget(progress, override = null, model = null) {
 var lessonSkills = (target) => [target, ...prerequisitesOf(target)];
 var allowedMisconceptions = (skills) => skills.flatMap((c) => (SKILLS_G5[c]?.mis || []).map((m) => `${c}.${m}`));
 
+// src/voice-tutor/pacing.js
+var SHARE_FLOOR = 0.25;
+var SHARE_MIN_WORDS = 60;
+var OVERTALK_BASE = 15;
+var HANDOVER_MOVES = ["Show then hand over", "Press for reasoning", "Check for understanding"];
+var wordsIn = (t) => String(t || "").replace(/\.\.\.|…/g, " ").split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
+function talkShare(s) {
+  const cw = Number(s?.cw) || 0;
+  const tw = Number(s?.tw) || 0;
+  return cw + tw >= SHARE_MIN_WORDS ? cw / (cw + tw) : null;
+}
+var shareLow = (s) => {
+  const x = talkShare(s);
+  return x != null && x < SHARE_FLOOR;
+};
+var overtalkLimit = (lastChildWords = 0) => 2 * (Number(lastChildWords) || 0) + OVERTALK_BASE;
+var isQ = (t) => /\?\s*$/.test(String(t || "").trim());
+var sentencesOf = (t) => String(t || "").split(/(?<=[.!?])\s+/).map((x) => x.trim()).filter(Boolean);
+var EMPTY_CHECK = /^(ok(ay)?|right|yes|alright|does that (make sense|help)|do you (see|understand|get) (it|that|this|why)\??|is that (clear|ok|okay|right)|make sense|got it|can you see (it|that)|see\?)\b/i;
+var handsOver = (sentence) => isQ(sentence) && !EMPTY_CHECK.test(String(sentence).replace(/^\W+/, ""));
+function explainedTurn(steps2 = []) {
+  const says = steps2.filter((x) => x.cmd === "say");
+  if (!says.length) return false;
+  if (steps2.some((x) => x.cmd === "ask" || x.cmd === "end_session")) return false;
+  return !says.some((x) => sentencesOf(x.text).some(handsOver));
+}
+function handoverMoves(rule) {
+  return ["prerequisite", "change"].includes(rule) ? [...HANDOVER_MOVES, "Smaller-question hint"] : [...HANDOVER_MOVES];
+}
+var HANDOVER_RULES = ["stage", "reteach", "prerequisite", "change"];
+function pacingFlags(step2, ctx = {}, sofar = []) {
+  if (!step2 || step2.cmd !== "say" || !ctx.talk?.low) return [];
+  const limit = overtalkLimit(ctx.talk.lastChildWords);
+  const words5 = [...sofar.filter((x) => x.cmd === "say"), step2].reduce((n, x) => n + wordsIn(x.text), 0);
+  return words5 > limit ? [{ habit: "overtalk", reason: `the child has spoken under ${Math.round(SHARE_FLOOR * 100)}% of the words and their last reply was ${ctx.talk.lastChildWords} words: the turn is ${words5} words, over ${limit} (twice their reply plus ${OVERTALK_BASE})` }] : [];
+}
+var FOUNDATIONS = {
+  EQUIVALENT_FRACTIONS: { name: "equal parts and what a half is", re: /\b(half|halves|equal|same size|fair|share[sd]?|how many (equal )?(parts|pieces)|what fraction)\b/i },
+  COMPARE_LIKE_FRACTIONS: { name: "what a fraction names, parts of a whole", re: /\b(what fraction|how many (equal )?(parts|pieces)|shaded|top number|bottom number|numerator|denominator|half|quarter)\b/i }
+};
+function preFor({ target = null, prerequisite = null, prerequisites = [], nameOf = (c) => c } = {}) {
+  const skill2 = prerequisite || prerequisites[0] || null;
+  if (skill2) return { skill: skill2, name: nameOf(skill2), re: null };
+  const f = FOUNDATIONS[String(target || "").split(".").pop()];
+  return f ? { skill: null, name: f.name, re: f.re } : null;
+}
+var askIsOnPre = (pre, { skill: skill2 = null, prompt = "" } = {}) => !pre || (pre.skill ? skill2 === pre.skill : pre.re.test(String(prompt)));
+
 // src/voice-tutor/childVoice.js
 var MATHS_KEYTERMS = Object.freeze([
   "quarter",
@@ -6941,11 +6992,11 @@ var nounRe = (noun) => {
   return `${n.replace(/s$/, "")}s?`;
 };
 var numValue = (w) => /^\d+$/.test(w) ? Number(w) : NUM_WORDS2.indexOf(w.toLowerCase());
-var sentencesOf = (t) => String(t || "").split(/(?<=[.!?])\s+/).filter(Boolean);
+var sentencesOf2 = (t) => String(t || "").split(/(?<=[.!?])\s+/).filter(Boolean);
 function answerInQuestion(text, { found = [], child = "", answers = null } = {}) {
   const sealed = answers == null ? null : new Set(answers.map((a) => countOf(a)).filter((n) => n != null));
   if (sealed && !sealed.size) return null;
-  const sents = sentencesOf(text);
+  const sents = sentencesOf2(text);
   const theirs = /* @__PURE__ */ new Set([...found.filter((f) => /^\d+$/.test(f)).map(Number), ...(String(child).toLowerCase().match(new RegExp(`\\b${NUM2}\\b`, "g")) || []).map(numValue)]);
   for (let i = 0; i < sents.length; i += 1) {
     if (!/\?\s*$/.test(sents[i])) continue;
@@ -6988,7 +7039,7 @@ var spokenFraction = (h, text, question) => {
 function checkTurnText(steps2, hidden = []) {
   const reasons = [];
   const texts = visibleText(steps2);
-  const choices = texts.flatMap((v) => sentencesOf(v.text)).filter((x) => /\?\s*$/.test(x) && /\bor\b/i.test(x)).join(" ");
+  const choices = texts.flatMap((v) => sentencesOf2(v.text)).filter((x) => /\?\s*$/.test(x) && /\bor\b/i.test(x)).join(" ");
   for (const h of hidden) {
     if (!h || h.answer == null || String(h.answer).trim() === "") continue;
     for (const v of texts) {
@@ -36227,7 +36278,7 @@ var LATE_AFTER_TURNS = 10;
 var LATE_REPEAT_TURNS = 4;
 var WINS_TO_MOVE_UP = 2;
 var lower = (t) => String(t ?? "").toLowerCase().replace(/[’`´]/g, "'");
-var sentencesOf2 = (t) => String(t || "").split(/(?<=[.!?])\s+/).map((x) => x.trim()).filter(Boolean);
+var sentencesOf3 = (t) => String(t || "").split(/(?<=[.!?])\s+/).map((x) => x.trim()).filter(Boolean);
 var tokens2 = (t) => lower(t).replace(/[^a-z0-9/' ]+/g, " ").split(/\s+/).map((w) => w.replace(/^'+|'+$/g, "")).filter(Boolean);
 var countWords = (t) => tokens2(t).length;
 var STOP2 = /* @__PURE__ */ new Set(["the", "and", "you", "your", "are", "was", "were", "what", "does", "did", "this", "that", "these", "those", "have", "has", "had", "with", "there", "they", "them", "their", "when", "which", "would", "could", "should", "about", "many", "much", "will", "been", "then", "than", "from", "into", "like", "just", "some", "can", "for", "not", "but", "why", "how", "who", "where", "here", "now", "its", "it's", "our", "out", "all", "any", "one", "let", "let's", "say", "said", "see", "look", "tell", "think", "know", "yes", "okay", "wait", "umm", "hmm", "mean", "maybe", "want", "get", "got", "very", "really", "also", "still", "because", "cause", "make", "makes", "made", "need", "again", "please", "horeb"]);
@@ -36238,7 +36289,7 @@ var overlap = (a, b) => {
   for (const w of content(a)) if (B2.has(w)) n += 1;
   return n;
 };
-var isQ = (s) => /\?\s*$/.test(String(s || ""));
+var isQ2 = (s) => /\?\s*$/.test(String(s || ""));
 function likeness(a, b) {
   const A2 = new Set(tokens2(a));
   const B2 = new Set(tokens2(b));
@@ -36248,7 +36299,7 @@ function likeness(a, b) {
   const min = Math.min(A2.size, B2.size);
   return { jaccard: inter / (A2.size + B2.size - inter), contained: inter === min, min };
 }
-var openerOf = (text) => tokens2(sentencesOf2(text)[0] || "").slice(0, 3).join(" ");
+var openerOf = (text) => tokens2(sentencesOf3(text)[0] || "").slice(0, 3).join(" ");
 var DISTRESS = /\b(too hard|so hard|very hard|it'?s hard|it is hard|this is hard|is difficult|too difficult|i can'?t (do|get|see)|i cannot (do|get|see)|i don'?t (get|understand)|i do not (get|understand)|i'?m (so )?(scared|sad|upset|stupid|dumb|confused|lost)|i am (so )?(scared|sad|upset|stupid|dumb|confused|lost)|too fast|slow down|i hate (this|maths|math|fractions)|frustrat\w*|crying|i give up|ni ngumu|sielewi)\b/i;
 var REASON_LEAD = /^\W*(because|cause|coz|cos|since|kwa sababu)\b/i;
 var HEDGE2 = /\b(maybe|i think|i guess|perhaps|probably|not sure|is it|nadhani|labda)\b/i;
@@ -36269,7 +36320,7 @@ function readChild(text, { marked = null } = {}) {
   out.asks = !marked && (move === "question" || out.why && move !== "tentative");
   out.answer = !!marked || move !== "question" && r.found.length > 0 && !out.distress;
   if (out.answer) {
-    out.hedged = isTentative(t) || HEDGE2.test(t) || isQ(t) && r.found.length > 0 || !!marked?.tentative;
+    out.hedged = isTentative(t) || HEDGE2.test(t) || isQ2(t) && r.found.length > 0 || !!marked?.tentative;
     out.oneWord = tokens2(t).filter((w) => !FILLER.test(w)).length <= 2;
     out.wrong = !!marked && !marked.correct;
     out.reason = gaveReason(t);
@@ -36317,7 +36368,7 @@ var RULE_MULT = /\b(multiply|multiplied|multiplying|times|timesed)\b[^.?!]{0,40}
 var SAME_WORDS = /\b(is the same as|are the same|the same amount|same amount|is equal to|are equal|equals|is equivalent to|are equivalent)\b|=/i;
 var WORD_ANSWERS = ["same", "the same", "equal", "yes", "same amount", "the same amount"];
 function statesRule(sentence, ctx, hiddenWords = []) {
-  if (ctx.closing || ctx.example || isQ(sentence)) return null;
+  if (ctx.closing || ctx.example || isQ2(sentence)) return null;
   const theirs = String(ctx.childSoFar || "");
   const last = String(ctx.child || "");
   if (/\b(same|equal|equivalent)\b/i.test(last)) return null;
@@ -36371,7 +36422,7 @@ var keyStepsFor = (skill2) => {
   return KEY_STEPS.filter((k) => k.skills.includes(code));
 };
 function keyStepOf(sentence, ctx) {
-  if (ctx.closing || ctx.example || isQ(sentence)) return null;
+  if (ctx.closing || ctx.example || isQ2(sentence)) return null;
   const theirs = `${ctx.childSoFar || ""} ${ctx.child || ""}`;
   for (const k of KEY_STEPS) {
     if (!k.re.test(sentence) || k.said.test(theirs)) continue;
@@ -36388,8 +36439,8 @@ function boardAnswerLeak(step2, ctx, sofar) {
   const sh2 = shadedOf2(fig);
   const before = visibleText(visible(sofar)).map((x) => x.text);
   const theirs = /* @__PURE__ */ new Set([...readAnswer(ctx.child || "").found.map((f) => f.value)]);
-  for (const s of sentencesOf2(step2.text)) {
-    if (isQ(s)) {
+  for (const s of sentencesOf3(step2.text)) {
+    if (isQ2(s)) {
       const said = before.join(" ");
       if (/\b(what fraction|how much of)\b/i.test(s) && p && sh2) {
         if (sofar.some((x) => x.id === fig.id) && labelled(fig)) return `the figure ${fig.id} is labelled with the answer (${sh2}/${p}) before "${s.slice(0, 50)}"`;
@@ -36437,7 +36488,7 @@ function giveawayOf(step2, ctx, sofar, extra = []) {
   if (step2.cmd === "say" || step2.cmd === "write_math") {
     const text = step2.cmd === "say" ? step2.text : visibleText([step2])[0]?.text;
     const words5 = [...hidden.map((h) => canonAnswer(h.answer)), ...extra.map(canonAnswer)].filter((a) => WORD_ANSWERS.includes(String(a).toLowerCase()));
-    for (const s of sentencesOf2(text)) {
+    for (const s of sentencesOf3(text)) {
       const r = statesRule(s, ctx, words5) || keyStepOf(s, ctx);
       if (r) {
         out.push(r);
@@ -36460,15 +36511,15 @@ function giveawayOf(step2, ctx, sofar, extra = []) {
 function repeatOf(text, ctx) {
   const prev = (ctx.prev || []).flat();
   const child = String(ctx.child || "");
-  for (const s of sentencesOf2(text)) {
+  for (const s of sentencesOf3(text)) {
     if (child && likeness(s, child).jaccard >= 0.6) continue;
     for (const p of prev) {
-      if (isQ(p) !== isQ(s)) continue;
+      if (isQ2(p) !== isQ2(s)) continue;
       const l = likeness(s, p);
       if (l.min >= 4 && (l.jaccard >= 0.75 || l.contained && l.min >= 5)) return `nearly repeats "${p.slice(0, 70)}"`;
       if (l.min >= 2 && l.min < 4 && l.jaccard === 1 && countWords(s) >= 3) return `repeats "${p.slice(0, 70)}" word for word`;
     }
-    if (isQ(s) && ctx.lastQuestion) {
+    if (isQ2(s) && ctx.lastQuestion) {
       const l = likeness(s, ctx.lastQuestion);
       if (l.min >= 3 && l.jaccard >= 0.7) return `asks the last question again ("${ctx.lastQuestion.slice(0, 70)}")`;
     }
@@ -36490,14 +36541,14 @@ var STOCK = [
 var PRAISE = /^(?:yes[,!.]?\s+|wow[,!.]?\s+)?(good|great|well done|brilliant|nice|excellent|super|wonderful|fantastic|lovely|amazing|perfect|awesome|clever|that is (?:a |so |very )?(?:good|great|clever|lovely|nice|brilliant|strong|smart|careful|excellent|wonderful)|that'?s (?:a |so |very )?(?:good|great|clever|lovely|nice|brilliant|strong|smart|careful)|you (?:did|are) (?:so |very )?(?:well|great|good|clever|brilliant))\b/i;
 function stockOf(text, ctx, first2) {
   const out = [];
-  for (const s of sentencesOf2(text)) {
+  for (const s of sentencesOf3(text)) {
     const hit = STOCK.find((re) => re.test(s));
     if (hit && !(ctx.closing && /well done/i.test(s))) {
       out.push(`stock phrase ("${s.match(hit)[0]}")`);
       break;
     }
   }
-  for (const s of sentencesOf2(text)) {
+  for (const s of sentencesOf3(text)) {
     if (!PRAISE.test(s) || STOCK.some((re) => re.test(s))) continue;
     if (countWords(s) > PRAISE_MAX_WORDS) {
       out.push(`praise over ${PRAISE_MAX_WORDS} words ("${s.slice(0, 70)}")`);
@@ -36525,7 +36576,7 @@ var FEELING = /\bi (really |truly |do )?(love|miss) you\b|\bi (will|would|'ll) m
 var SECRET = /\b(i|we) (will|shall|can|'ll|promise( to)?|won'?t|will not) (keep|tell|share|say)[^.?!]{0,25}\b(secret|anyone|anybody|your (mum|mother|dad|father|parents|teacher))\b|\b(our|your|this|that) secret\b|\bjust between (you and me|us)\b|\bbetween you and me\b|\bi (promise|swear)\b[^.?!]{0,20}\b(not to tell|secret)\b/i;
 var NOT_A_PROMISE = /\bcannot keep|can'?t keep|will not keep|won'?t keep|do not keep|don'?t keep|no secrets|not a secret|never keep|not keep (a|any) secret/i;
 function claimsFeelingOrSecret(text) {
-  for (const s of sentencesOf2(text)) {
+  for (const s of sentencesOf3(text)) {
     const f = FEELING.exec(s);
     if (f && !/\bnot\b/i.test(s.slice(0, f.index))) return `claims a feeling or a friendship it does not have ("${f[0]}")`;
     const k = SECRET.exec(s);
@@ -36539,13 +36590,13 @@ var ANSWER_START = /^(because|to |so |it is|it's|they|yes|no|that is|each|when|i
 function answersOne(s, cr) {
   if (cr.distress && (EMPATHY.test(s) || overlap(s, cr.text) >= 1)) return true;
   if (!cr.asks && !cr.why) return !cr.distress;
-  if (isQ(s)) return false;
+  if (isQ2(s)) return false;
   if (cr.why) return REASON_MARK.test(s) || /^(because|to |so )/i.test(s);
   return ANSWER_START.test(s) || overlap(s, cr.text) >= 1;
 }
 var ACK = /^(yes|yeah|right|correct|exactly|good|great|okay|ok|i see|i hear you|you said|thank you)\b/i;
 function answersChild(text, cr) {
-  const [s1 = "", s2 = ""] = sentencesOf2(text);
+  const [s1 = "", s2 = ""] = sentencesOf3(text);
   if (!s1) return false;
   if (answersOne(s1, cr)) return true;
   return !!s2 && (ACK.test(s1) || countWords(s1) <= 4) && answersOne(s2, cr);
@@ -36613,13 +36664,13 @@ function confirmOf(steps2, ctx) {
   const c = ctx.childRead || {};
   if (!c.answer || c.reason || !(c.hedged || c.oneWord)) return null;
   const says = steps2.filter((x) => x.cmd === "say");
-  const first2 = sentencesOf2(says[0]?.text || "")[0] || "";
+  const first2 = sentencesOf3(says[0]?.text || "")[0] || "";
   if (!CONFIRM.test(first2)) return null;
-  if (says.some((x) => sentencesOf2(x.text).some((s) => isQ(s) && REASON_Q.test(s)))) return null;
+  if (says.some((x) => sentencesOf3(x.text).some((s) => isQ2(s) && REASON_Q.test(s)))) return null;
   return `"${first2.slice(0, 50)}" to ${c.hedged ? "a hedged" : "a one-word"} answer ("${c.text.slice(0, 40)}"), and no question about the reason`;
 }
-var asksReason = (text) => sentencesOf2(text).some((s) => isQ(s) && REASON_Q.test(s));
-var confirms = (text) => CONFIRM.test(sentencesOf2(text)[0] || "");
+var asksReason = (text) => sentencesOf3(text).some((s) => isQ2(s) && REASON_Q.test(s));
+var confirms = (text) => CONFIRM.test(sentencesOf3(text)[0] || "");
 function stepFlags(step2, ctx = {}, sofar = [], { extra = [] } = {}) {
   if (!step2 || ctx.exempt) return [];
   const out = [];
@@ -36631,7 +36682,7 @@ function stepFlags(step2, ctx = {}, sofar = [], { extra = [] } = {}) {
     for (const r of stockOf(step2.text, ctx, first2)) out.push({ habit: "stock", reason: r });
     const cr = ctx.childRead || {};
     if (first2 && (cr.asks || cr.why || cr.distress)) {
-      const s1 = sentencesOf2(step2.text)[0] || "";
+      const s1 = sentencesOf3(step2.text)[0] || "";
       if (!answersChild(step2.text, cr)) out.push({ habit: "unanswered", reason: `the child ${cr.distress ? "sounded upset" : cr.why ? "asked why" : "asked a question"} ("${cr.text.slice(0, 50)}") and the first sentence does not answer it ("${s1.slice(0, 50)}")` });
       else if (countWords(s1) > ANSWER_FIRST_MAX_WORDS && !cr.distress) out.push({ habit: "unanswered", reason: `the answer to the child's question is over ${ANSWER_FIRST_MAX_WORDS} words ("${s1.slice(0, 50)}")` });
     }
@@ -36663,8 +36714,8 @@ function habitContext({ message = "", marked = null, cls = null, history = [], h
       }
     } else last = { who: "child" };
   }
-  const tutorTurns = turns.map((t) => t.lines.flatMap(sentencesOf2));
-  const lastQuestion = [...tutorTurns.flat()].reverse().find(isQ) || null;
+  const tutorTurns = turns.map((t) => t.lines.flatMap(sentencesOf3));
+  const lastQuestion = [...tutorTurns.flat()].reverse().find(isQ2) || null;
   const childSoFar = (history || []).filter((h) => h?.who === "child").map((h) => h.text).join(" ") + (message ? ` ${message}` : "");
   return {
     child: message || "",
@@ -36739,8 +36790,15 @@ var newLesson = () => ({
   level: 0,
   wins: 0,
   changedFails: 0,
-  examples: 0
+  examples: 0,
+  cw: 0,
+  tw: 0,
+  lastCw: 0,
+  explain: 0,
+  pre: null
 });
+var PRE_STATES = ["ask", "asked", "done"];
+var PRE_GIVE_UP_TURNS = 5;
 var MAX_FOUND = 8;
 var MAX_ASKED = 24;
 var CARE2 = ["paused", "ended"];
@@ -36769,6 +36827,11 @@ function cleanLesson(raw) {
   if (Array.isArray(raw.found)) s.found = [...new Set(raw.found.filter((x) => typeof x === "string" && x.length > 0 && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   if (CARE2.includes(raw.care)) s.care = raw.care;
   s.stops = int(raw.stops, 0, 20);
+  s.cw = int(raw.cw, 0, 5e4);
+  s.tw = int(raw.tw, 0, 5e4);
+  s.lastCw = int(raw.lastCw, 0, 500);
+  s.explain = int(raw.explain, 0, 50);
+  if (PRE_STATES.includes(raw.pre)) s.pre = raw.pre;
   s.diagnosing = raw.diagnosing === true;
   if (typeof raw.seal === "string" && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === "string" && ID_RE2.test(x)))].slice(-MAX_ASKED);
@@ -36805,19 +36868,20 @@ function finalClass({ assessment = null, marked = null, message = "" } = {}) {
 }
 var isIndependent = (cls) => cls === "understood";
 var nextStage = (stage) => stage == null ? "warmup" : PHASES[Math.min(PHASES.length - 1, PHASES.indexOf(stage) + 1)];
-function stageAllowed(s, { understoodNow = false, closing = false } = {}) {
+function stageAllowed(s, { understoodNow = false, closing = false, preNow = false } = {}) {
   if (closing) return "wrapup";
   const st = s.stage;
   if (st == null) return "warmup";
   if (st === "wrapup") return "wrapup";
+  if (st === "warmup" && (s.pre === "ask" || s.pre === "asked" && !preNow)) return st;
   if (st === "warmup" || st === "teach") return s.answers >= 1 || understoodNow ? nextStage(st) : st;
   return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
 }
-function decide(s, ctx = {}) {
+function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null) });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
   if (s.care === "paused") {
     if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
@@ -36884,6 +36948,21 @@ function decide(s, ctx = {}) {
   const st = s.stage || "warmup";
   return out("stage", STAGE_MOVES[st], `the ${st} part of the lesson`);
 }
+var PRE_RULES = ["stage", "question", "lost", "tentative", "reteach", "change", "prerequisite"];
+function decide(s, ctx = {}) {
+  const d = { ...decideCore(s, ctx), handover: false, preFirst: null };
+  if ((s.explain || 0) >= 1 && HANDOVER_RULES.includes(d.rule)) {
+    d.moves = handoverMoves(d.rule);
+    d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
+    d.handover = true;
+    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing: this turn hands over first, a "you try" or a "tell me why or how", before any more explaining`;
+  }
+  if (s.pre === "ask" && ctx.pre && (s.stage == null || s.stage === "warmup") && PRE_RULES.includes(d.rule) && (ctx.turnIndex || 0) >= 1) {
+    d.preFirst = { skill: ctx.pre.skill || null, name: ctx.pre.name };
+    d.reason = `${d.reason}. The first maths question is on the earlier skill (${d.preFirst.name}), and the target idea waits until the child has answered it`;
+  }
+  return d;
+}
 function repsOf(steps2 = []) {
   const out = [];
   for (const x of steps2) {
@@ -36917,6 +36996,7 @@ function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false }
   for (const m of authored ? [] : decision.must || []) {
     if (!allTags.some((t) => norm6(t) === norm6(m))) notes.push(`"${m}" was required this turn and no say carried it`);
   }
+  if (decision.handover && !authored && says.length && explainedTurn(steps2)) notes.push('this turn was to hand over (a "you try" or "tell me why or how") and it explained again without asking the child anything');
   if (decision.rule === "diagnose") {
     const says2 = steps2.filter((x) => x.cmd === "say");
     if (!says2.some((x) => ASKS_HOW.test(x.text))) notes.push("the diagnose turn did not ask how the child got their answer");
@@ -36924,9 +37004,20 @@ function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false }
   }
   return notes;
 }
-function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null } = {}) {
+function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false } = {}) {
   const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...s0.found || []] };
   s.turns += 1;
+  s.cw = Math.min(5e4, (s0.cw || 0) + (probe ? 0 : childWords));
+  s.tw = Math.min(5e4, (s0.tw || 0) + steps2.filter((x) => x.cmd === "say").reduce((n, x) => n + wordsIn(x.text), 0));
+  s.lastCw = Math.min(500, childWords);
+  if (!probe && steps2.some((x) => x.cmd === "say") && !["care", "care-wait", "care-return", "close", "stop", "open"].includes(decision?.rule)) s.explain = explainedTurn(steps2) ? Math.min(50, (s0.explain || 0) + 1) : 0;
+  if (s0.turns === 0 && preNeeded && s.pre == null) s.pre = "ask";
+  if (s.pre === "asked" && marked) {
+    s.pre = "done";
+    if (!marked.correct) s.prereq = true;
+  }
+  if (s.pre === "ask" && s0.turns >= 1 && !probe && steps2.some((x) => x.cmd === "ask")) s.pre = "asked";
+  if (s.pre === "ask" && s.turns >= PRE_GIVE_UP_TURNS) s.pre = "done";
   if (marked?.correct && marked.canon) s.found = [.../* @__PURE__ */ new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
   if (decision?.rule === "care-return") s.care = null;
   if (decision?.rule === "bored") s.stops += 1;
@@ -37059,7 +37150,7 @@ function answerForms(answer, accepts2 = []) {
   }
   return [...out].slice(0, 6);
 }
-function turnBrief(s, d, { message = "", marked = null, open = null, board = [], history = [], skill: skill2 = null, probe = null } = {}) {
+function turnBrief(s, d, { message = "", marked = null, open = null, board = [], history = [], skill: skill2 = null, probe = null, turnIndex = 0, maxWords = null } = {}) {
   if (!d || ["care", "care-wait", "care-return"].includes(d.rule)) return [];
   const L2 = ["Turn brief (computed by the app from the facts; keep to it):"];
   const cr = readChild(message, { marked });
@@ -37100,6 +37191,11 @@ function turnBrief(s, d, { message = "", marked = null, open = null, board = [],
     L2.push(`- Level: the child is on ${DEN_NAMES[s.level] || `${s.level} parts`}, with ${s.wins || 0} of ${WINS_TO_MOVE_UP} successes there (a helped success counts half, an unsure one zero). Harder numbers: ${ok ? "allowed" : "not yet; one more success at this level first"}. Never remove the picture and change the numbers in the same turn.`);
   }
   if (d.ack === "revoice") L2.push('- No "yes" yet: say back what you heard, then ask what made them say it.');
+  const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));
+  L2.push(`- Word budget this turn: at most ${budget} words in all, then wait for the child. Every word over is cut, and the question at the end is what is kept.`);
+  if (d.handover) L2.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing. This turn asks them to try the next step, or to tell you why or how, before you explain anything more.`);
+  if (shareLow(s)) L2.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
+  if (d.preFirst) L2.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : "a question about that idea, with no picture of the target"}. Do not start on the target idea until the child has answered it, right or wrong.`);
   const main = d.moves.find((x) => !["Name what was right", "Revoice and build"].includes(x)) || d.moves[0];
   const m = MEASURE_OF[main] || "teaching";
   L2.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
@@ -37483,7 +37579,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const probe = !message && !body?.snapshot ? cleanProbe(body?.probe) : null;
   const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
   let careEnds = false;
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null });
+  const pre = preFor({ target: pick2.target, prerequisite: pick2.prerequisite, prerequisites: prerequisitesOf(pick2.target), nameOf: skillName });
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null, pre });
   const found = /* @__PURE__ */ new Set([...lesson0.found, ...marked?.canon ? [marked.canon] : []]);
   const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
   const closeTurn = async ({ steps: steps2, assessment = null, hidden = [], codeNotes = [], fromModel = null }) => {
@@ -37491,7 +37588,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     await recordJudged(judged);
     const asks = steps2.some((x) => x.cmd === "ask");
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
-    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal });
+    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre });
     const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
     const tester = {
       rule: decision?.rule || null,
@@ -37605,7 +37702,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const openMis = openMisconceptions(learnerData.rows, skills, { now: nowMs });
   const learnerCtx = learnerLines({ pick: pick2, model: skillsModel, open: openMis, profile: learnerData.profile, notes: learnerData.notes, nameOf: skillName, lib, order: FRACTION_SKILLS });
   const rawHistory = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : [];
-  const brief = turnBrief(lesson0, decision, { message, marked, open: hiddenOk(open) ? open : null, board, history: rawHistory, skill: pick2.target, probe });
+  const brief = turnBrief(lesson0, decision, { message, marked, open: hiddenOk(open) ? open : null, board, history: rawHistory, skill: pick2.target, probe, turnIndex, maxWords: probe ? MAX_PROBE_WORDS : null });
   const matched = settings.matchedExamples ? exampleLines({ rule: decision?.rule, cls: decision?.prelim, message, probe }) : [];
   const context = turnContext({
     ...pick2,
@@ -37650,6 +37747,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     closing: ["close", "stop"].includes(decision?.rule) || lesson0.stage === "wrapup",
     example: decision?.rule === "example"
   });
+  const pctx = { talk: { low: shareLow(lesson0), lastChildWords: lesson0.lastCw || 0 } };
+  const flagsOf = (st, sofar, extra) => [...stepFlags(st, hctx, sofar, { extra }), ...pacingFlags(st, pctx, sofar)];
   return { status: 200, go: async (emit) => {
     emit(meta());
     const sent = [];
@@ -37775,7 +37874,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       rewrites.push({ habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why });
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      if (stepFlags(st2, hctx, sent, { extra }).length) {
+      if (flagsOf(st2, sent, extra).length) {
         rewrites[rewrites.length - 1].why = "the rewrite failed its checks too";
         return null;
       }
@@ -37784,7 +37883,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     };
     const FIGS2 = ["shape", "fraction_bar", "figure"];
     const gate = async (st, extra) => {
-      const flags = stepFlags(st, hctx, sent, { extra });
+      const flags = flagsOf(st, sent, extra);
       if (!flags.length) return st;
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join("; ").slice(0, 300);
       if (st.cmd === "say") {
@@ -37878,6 +37977,13 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       }
       if (st.cmd === "ask") {
         usedIds.add(st.id);
+        if (decision?.preFirst && !probe) {
+          const onSkill = itemFor(st, bank)?.cskill || st.skill || pick2.target;
+          if (!askIsOnPre(pre, { skill: onSkill, prompt: st.prompt })) {
+            drop(st, `warm-up: the first maths question must be on ${decision.preFirst.name}, not ${skillName(onSkill)}`, "prereq-first");
+            return;
+          }
+        }
         if (decision?.answered && samePrompt(st.prompt, decision.answered.prompt)) {
           drop(st, "asks again the question the child has just answered right", "re-ask");
           return;
@@ -37930,7 +38036,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
             codeNotes.push("the code named what was right first: the model's first sentence did not");
           }
         }
-        const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS;
+        const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex);
         const disclosure = turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text) ? spokenWords([say(DISCLOSURE)]) : 0;
         if (spokenWords([...sent, st]) + disclosure > limit) {
           guard.push(probe ? "too-long-probe" : "too-long");
