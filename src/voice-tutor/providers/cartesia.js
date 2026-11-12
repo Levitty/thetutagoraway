@@ -18,6 +18,26 @@ const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `c${Date.now()}${Ma
 export const FIRST_CHUNK_TIMEOUT_MS = 6000;
 export const LEAD_MS = 40;   // scheduling lead for the first chunk
 
+/**
+ * One Sonic request. generation_config.speed (0.6 to 1.5) and .emotion (neutral, calm, angry, content, sad)
+ * are in Cartesia's TTS websocket docs (read 12 Nov 2026). `language` is the base code: en-KE is not a documented
+ * accent, and `locale` and `language` must never both be set. Pure; tested.
+ */
+export function sonicRequest({ cfg, text, id, speed = null, emotion = null, voice = null }) {
+  const gen = {};
+  const sp = Number(speed ?? cfg.speed);
+  if (Number.isFinite(sp) && sp > 0) gen.speed = Math.max(0.6, Math.min(1.5, sp));
+  const EMOTIONS = ['neutral', 'calm', 'angry', 'content', 'sad'];
+  const em = EMOTIONS.includes(emotion) ? emotion : cfg.emotion;
+  if (EMOTIONS.includes(em)) gen.emotion = em;
+  return {
+    model_id: cfg.model, transcript: text, voice: { id: voice || cfg.voice }, language: 'en', context_id: id,
+    output_format: { container: 'raw', encoding: 'pcm_f32le', sample_rate: cfg.sample_rate },
+    ...(Object.keys(gen).length ? { generation_config: gen } : {}),
+    add_timestamps: true, continue: false,
+  };
+}
+
 /** @param {{ getToken: () => Promise<{ token:string, url:string, model:string, voice:string, version:string, sample_rate:number, expires_in:number }> }} o */
 export function cartesiaTts({ getToken }) {
   let ctx = null;
@@ -58,7 +78,7 @@ export function cartesiaTts({ getToken }) {
      * but never before sentence k-1 has ended plus the timeline's gap; its start is
      * reported, so the board timeline uses exactly the time the child hears it.
      */
-    open() {
+    open({ speed = null, emotion = null, voice = null, gapMs = SENTENCE_GAP_MS } = {}) {
       const c = audio();
       const rate = () => cfg.sample_rate;
       const S = [];
@@ -96,7 +116,7 @@ export function cartesiaTts({ getToken }) {
         if (!s || s.offset != null || !s.queue.length) return;
         const prev = S[k - 1];
         if (prev && !(prev.complete && prev.offset != null)) return;
-        const earliest = prev ? prev.offset + prev.duration + SENTENCE_GAP_MS : 0;
+        const earliest = prev ? prev.offset + prev.duration + gapMs : 0;
         s.offset = Math.max(earliest, heardNow() + LEAD_MS - startAt);
         version += 1;
         for (const q of s.queue) schedule(k, q);
@@ -114,7 +134,7 @@ export function cartesiaTts({ getToken }) {
           if (!s.words.length) s.words = t.words;
           s.duration = Math.max(t.duration, s.words.length ? s.words[s.words.length - 1].end : 0);
           s.complete = true;
-          if (s.offset == null) { const p = S[k - 1]; s.offset = Math.max(p ? p.offset + p.duration + SENTENCE_GAP_MS : 0, heardNow() - startAt); }
+          if (s.offset == null) { const p = S[k - 1]; s.offset = Math.max(p ? p.offset + p.duration + gapMs : 0, heardNow() - startAt); }
         });
         version += 1;
       };
@@ -150,11 +170,7 @@ export function cartesiaTts({ getToken }) {
               place(k + 1);
             }
           });
-          w.send(JSON.stringify({
-            model_id: cfg.model, transcript: s.text, voice: { id: cfg.voice }, language: 'en', context_id: s.id,
-            output_format: { container: 'raw', encoding: 'pcm_f32le', sample_rate: cfg.sample_rate },
-            add_timestamps: true, continue: false,
-          }));
+          w.send(JSON.stringify(sonicRequest({ cfg, text: s.text, id: s.id, speed, emotion, voice })));
         }, (e) => fail(e));
       };
       return stream;

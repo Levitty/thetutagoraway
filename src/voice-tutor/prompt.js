@@ -11,6 +11,7 @@ import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES } from './commands.js';
 import { FRACTION_SKILLS, skillName, shortName } from './fractions.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
 import { fenceTeamText, scrubNames } from './guard.js';
+import { paceContext } from './childVoice.js';
 
 export const MAX_TOKENS = 6000;
 export const HISTORY_LINES = 24;
@@ -109,7 +110,7 @@ ${mapText(lib)}`;
 const pct = (x) => (x == null ? 'no attempts' : `${Math.round(x * 100)}% right`);
 
 /** The volatile part of a turn: who, where in the lesson, what just happened. */
-export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [] }) {
+export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || 'not started'}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -126,7 +127,10 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === 'check' ? 'the child pressed "Check my work"' : 'the child stopped writing for a few seconds'}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
-  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Do not repeat everything; answer them.`);
+  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
+  const pc = paceContext(pace);
+  if (pc) lines.push(pc);
+  if (unclearNote) lines.push(unclearNote);
   if (wantsAnswer) lines.push('The child is asking to be given the answer. Do not give it.');
   if (capNote) lines.push(capNote);
   if (bankLines.length) lines.push('Probe bank (questions the app marks itself; ask with bank set to the id):', ...bankLines);

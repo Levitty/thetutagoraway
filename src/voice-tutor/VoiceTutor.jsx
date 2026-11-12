@@ -31,7 +31,8 @@ import { figureNotes } from '../draw/observe.js';
 import { lessonShape, tutorBubble, childBubble, partLabel } from './layout.js';
 import { validateTurn, PHASES, cellsOf, DRAWN, MARKS } from './commands.js';
 import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
-import { sessionReducer, newSession, mascotState } from './session.js';
+import { sessionReducer, newSession, mascotState, DEFAULT_SETTINGS } from './session.js';
+import { paceFor, assessTranscript, askAgainLine, fixMathsWords, TUTOR_VOICES, isTutorVoice } from './childVoice.js';
 import { providersFor, checkProviders } from './providers/index.js';
 import { simulatedTts } from './providers/mockVoice.js';
 import { voiceReducer, initialVoice, bargeIn, canListen, canSpeak } from './providers/voice.js';
@@ -93,7 +94,10 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const [children, setChildren] = useState([]);
   const [childId, setChildId] = useState('');
   const [skill, setSkill] = useState('');
-  const [session, dispatch] = useReducer(sessionReducer, null, () => newSession({ id: uid() }));
+  const [session, rawDispatch] = useReducer(sessionReducer, null, () => newSession({ id: uid() }));
+  // The pace follows what the child just said, and the very next request needs it: sessionRef is advanced here, at once,
+  // with the same pure reducer, instead of waiting for the next render.
+  const dispatch = useCallback((ev) => { sessionRef.current = sessionReducer(sessionRef.current, ev); rawDispatch(ev); }, []);
   const [board, setBoard] = useState(emptyBoard);
   const boardRef = useRef(board);
   const [now, setNow] = useState(0);
@@ -109,6 +113,15 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const providers = useRef(null);
   const sessionRef = useRef(session);
   sessionRef.current = session;
+  const handedAt = useRef(null);       // when HOREB handed over: how long the child thought before answering
+  const [pauseNote, setPauseNote] = useState(false);   // the child paused mid-answer: "Take your time"
+  const unclearAgain = useRef(0);
+  const [voiceId, setVoiceId] = useState(() => { try { const v = localStorage.getItem('horeb-tutor-voice'); return isTutorVoice(v) ? v : null; } catch { return null; } });
+  const voiceIdRef = useRef(voiceId);
+  voiceIdRef.current = voiceId;
+  const chooseVoice = (id) => { setVoiceId(id); voiceIdRef.current = id; try { if (id) localStorage.setItem('horeb-tutor-voice', id); else localStorage.removeItem('horeb-tutor-voice'); } catch { /* private window */ } };
+  // What the voice is given for a turn: the pace's speed, emotion and sentence gap, and the tester's voice if one was picked.
+  const voiceOptions = () => { const p = paceFor(sessionRef.current.pace, DEFAULT_SETTINGS.ttsSpeed); return { speed: p.speed, emotion: p.emotion, gapMs: p.gapMs, voice: voiceIdRef.current || undefined }; };
   const startedAt = useRef(0);
   const svgRef = useRef(null);
   const [tool, setTool] = useState('pen');
@@ -202,7 +215,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         if (done && pl.turn.end && t - pl.startedAt >= pl.timeline.duration) {
           player.current = null;
           setLive(null);
-          if (!boardRef.current.ended) dispatch({ type: 'handed_over' });
+          if (!boardRef.current.ended) { handedAt.current = clock(); dispatch({ type: 'handed_over' }); }
         }
       }
       setNow(t);
@@ -263,7 +276,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     delays.current = {};
   };
   const openVoice = (T) => {
-    T.stream = providers.current.tts.open();
+    T.stream = providers.current.tts.open(voiceOptions());
     T.said = 0;
     T.stream.ready.then((startAt) => firstSound(T, startAt), (err) => {
       if (T.stopped || turnRef.current !== T) return;
@@ -302,6 +315,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       elapsed_s: Math.round((clock() - startedAt.current) / 1000), turn_index: s.turns, phase: s.phase,
       // The voice, priced into the caps on the server: will the words be spoken, and how much the child spoke.
       voice: !!providers.current.tts.hasAudio && !silentVoice.current && mode === 'remote', audio_in_s: audioS,
+      // How HOREB is following this child's pace, for the tutor's context (src/voice-tutor/childVoice.js).
+      pace: { level: s.pace.level, repeat: s.pace.repeat, reason: s.pace.reason },
     };
     dispatch({ type: 'request' });
     delays.current.sent = clock();
@@ -394,7 +409,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     const msg = String(text ?? '').trim();
     if (!msg || session.status === 'ended' || session.status === 'thinking' || !providers.current) return;
     const heard = stopTutor();
-    dispatch({ type: 'child_said', text: msg, at: clock() });
+    dispatch({ type: 'child_said', text: msg, at: clock(), thinkMs: handedAt.current != null ? clock() - handedAt.current : undefined });
     setInput('');
     delays.current = { childDone: clock() };
     request({ message: msg, heard });
@@ -415,13 +430,26 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     vdispatch({ type: 'listen' });
     const sess = p.stt.start({
       onSpeech: () => {},
-      onPartial: (t) => vdispatch({ type: 'partial', text: t }),
-      onFinal: (t, seconds) => {
+      onPartial: (t) => { setPauseNote(false); vdispatch({ type: 'partial', text: t }); },
+      onPause: () => setPauseNote(true),
+      pace: () => sessionRef.current.pace,
+      onFinal: (said, seconds) => {
         listenRef.current = null;
+        setPauseNote(false);
         audioIn.current += Number(seconds) || 0;
         vdispatch({ type: 'heard' });
-        if (!t) { setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return; }
-        dispatch({ type: 'child_said', text: t, at: clock() });
+        if (!said) { setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return; }
+        // Not worth marking (a hum, one stray letter, a word made up from silence): ask again kindly, mark nothing, send nothing.
+        const q = fake ? { ok: true } : assessTranscript(said, seconds);
+        if (!q.ok) {
+          const line = askAgainLine(unclearAgain.current); unclearAgain.current += 1;
+          dispatch({ type: 'unclear' }); setSnapNote(line);
+          try { const st = providers.current.tts.open(voiceOptions()); st.add(line); } catch { /* the line is on the screen */ }
+          return;
+        }
+        unclearAgain.current = 0;
+        const t = fixMathsWords(said);
+        dispatch({ type: 'child_said', text: t, at: clock(), thinkMs: handedAt.current != null ? clock() - handedAt.current : undefined });
         delays.current = { childDone: clock() };
         request({ message: t, heard });
       },
@@ -473,6 +501,15 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     const id = setInterval(() => { if (autoSnapDue(snapState(clock()), clock())) takePicture('idle'); }, 500);
     return () => clearInterval(id);
   }, [takePicture]);
+
+  // The child speaks over HOREB: no tap needed. While HOREB speaks (live voice), the microphone is watched; if the child's voice
+  // holds for about a quarter of a second, HOREB stops (talk() stops the voice, keeps what was heard) and listens.
+  useEffect(() => {
+    const p = providers.current;
+    if (session.status !== 'speaking' || voice.mode !== 'voice' || !p?.stt?.watch || listenRef.current) return undefined;
+    const w = p.stt.watch({ onSpeech: () => { if (!listenRef.current) talk(); } });
+    return () => w.stop();
+  }, [session.status, session.turns, voice.mode]);
 
   // Silence: after 15 s on the child's turn, a gentle line under the box (no model call).
   useEffect(() => {
@@ -655,6 +692,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
               {voiceOn && voice.mode !== 'voice' && providers.current?.stt ? <button type="button" onClick={() => vdispatch({ type: 'retry' })}>Try voice again</button> : null}
             </div>
           ) : null}
+          {pauseNote && voice.listening ? <div className="vt-nudge">Take your time. HOREB is waiting.</div> : null}
           {nudge && session.status === 'listening' ? <div className="vt-nudge">Take your time, or tell HOREB if you would like it another way.</div> : null}
           {canTalk && !ended ? (
             <button type="button" onClick={() => talk()} disabled={session.status === 'thinking'} aria-pressed={voice.listening} className={`vt-talk ${voice.listening ? 'vt-talk-on' : ''}`}>
@@ -693,7 +731,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       </main>
 
       {tester ? (
-        <TesterPanel session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.` : ''} onClose={() => setTester(false)}
+        <TesterPanel voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.` : ''} onClose={() => setTester(false)}
           onFail={started ? (kind) => {
             // As a real failure: the sound stops, the turn finishes in words on the board, the next turns are silent.
             if (kind === 'speak-failed') { providers.current.tts.stop(); providers.current.tts = simulatedTts(); }
@@ -732,7 +770,7 @@ function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck,
   );
 }
 
-function TesterPanel({ session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
+function TesterPanel({ voiceId = null, onVoice = null, session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
@@ -773,6 +811,15 @@ function TesterPanel({ session, board, mode, pics = [], delays = [], offsets = [
       ) : null}
       <h3 className="font-extrabold mt-3">Voice and delay</h3>
       <p>{voiceName || 'Not started.'} Mode: {voice?.mode}.</p>
+      {(() => { const pc = paceFor(session.pace, DEFAULT_SETTINGS.ttsSpeed); return <p className="text-[12px]">Pace: level {pc.level} (speed {pc.speed}, {pc.emotion}, gap {pc.gapMs} ms, at most {pc.maxWords} words){session.pace.reason ? `, because ${session.pace.reason}` : ''}. Asked again: {session.unclear} unclear.</p>; })()}
+      {onVoice ? (
+        <label className="block mt-1 text-[12px]">HOREB's voice (takes effect from the next turn)
+          <select value={voiceId || ''} onChange={(e) => onVoice(e.target.value || null)} className="block w-full mt-0.5 border border-slate-300 rounded px-1 py-1">
+            <option value="">The server's default</option>
+            {TUTOR_VOICES.map((v) => <option key={v.id} value={v.id}>{v.name}: {v.note}</option>)}
+          </select>
+        </label>
+      ) : null}
       {delays.length ? delays.map((d, k) => (
         <p key={k} className="text-[12px]">Turn {d.turn}: {d.total} ms from the end of the child's words to {d.spoken ? 'the first sound' : 'the first word'} (first checked step {d.firstStep} ms, then voice {d.voice} ms)</p>
       )) : <p className="text-slate-500">No replies timed yet.</p>}

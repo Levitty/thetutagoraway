@@ -15,6 +15,7 @@
 // Pure. Tested in tests/voice-tutor-session.test.mjs.
 // ============================================================================
 import { PHASES } from './commands.js';
+import { DEFAULT_TUTOR_VOICE, CHILD_SPEECH, classifyChild, nextPace, newPace } from './childVoice.js';
 
 // The caps, as settings (owner, 10 Nov 2026). The server holds the real ones
 // (VOICE_TUTOR_SESSION_CAP_USD / VOICE_TUTOR_DAY_CAP_USD); these mirror them.
@@ -28,7 +29,10 @@ export const DEFAULT_SETTINGS = Object.freeze({
   maxSnapshots: 30,
   // The voice (milestone 3, option B). The voice id is a setting: see the report on choosing it.
   ttsModel: 'sonic-3.6',
-  ttsVoice: 'f786b574-daa5-4673-aa0c-cbe3e8534c02',
+  ttsVoice: DEFAULT_TUTOR_VOICE,
+  // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
+  ttsSpeed: CHILD_SPEECH.baseSpeed,
+  ttsEmotion: CHILD_SPEECH.emotion,
   ttsSampleRate: 24000,
 });
 
@@ -46,6 +50,8 @@ export const settingsFrom = (get = () => undefined) => ({
   maxSnapshots: num(get('VOICE_TUTOR_MAX_SNAPSHOTS'), DEFAULT_SETTINGS.maxSnapshots),
   ttsModel: get('VOICE_TUTOR_TTS_MODEL') || DEFAULT_SETTINGS.ttsModel,
   ttsVoice: get('VOICE_TUTOR_TTS_VOICE') || DEFAULT_SETTINGS.ttsVoice,
+  ttsSpeed: Math.max(0.6, Math.min(1.5, num(get('VOICE_TUTOR_TTS_SPEED'), DEFAULT_SETTINGS.ttsSpeed))),
+  ttsEmotion: ['neutral', 'calm', 'content', 'sad', 'angry', 'none'].includes(get('VOICE_TUTOR_TTS_EMOTION')) ? get('VOICE_TUTOR_TTS_EMOTION') : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16000, 22050, 24000, 44100].includes(num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0)) ? num(get('VOICE_TUTOR_TTS_SAMPLE_RATE'), 0) : DEFAULT_SETTINGS.ttsSampleRate,
 });
 
@@ -69,8 +75,11 @@ export const newSession = ({ id, mode = 'mock', child = null, target = null, pre
   turns: 0, transcript: [], evidence: [], diagnoses: [], dropped: [],
   cost: { sessionUsd: 0, dayUsd: 0 }, interruptions: 0, ended: null, error: null,
   snapshots: 0, looking: false,
+  // How HOREB follows this child's pace (childVoice.js): level, quiet turns, repeat, reason.
+  pace: newPace(), unclear: 0, thinkMs: null,
 });
 
+export const QUICK_MS = 8000;
 const MAX_TRANSCRIPT = 200;
 const push = (list, x, max = MAX_TRANSCRIPT) => [...list, x].slice(-max);
 
@@ -78,7 +87,15 @@ export function sessionReducer(s, ev) {
   switch (ev.type) {
     case 'child_said':
       if (s.status === 'ended') return s;
-      return { ...s, status: 'thinking', error: null, transcript: push(s.transcript, { who: 'child', text: String(ev.text || '').slice(0, 300), at: ev.at, turn: s.turns }) };
+      return {
+        ...s, status: 'thinking', error: null, unclear: 0, thinkMs: Number.isFinite(ev.thinkMs) ? ev.thinkMs : null,
+        // "slow down", "sorry?", "pole pole", "rudia" slow the tutor; any other turn counts toward easing back.
+        pace: classifyChild(ev.text).reduce((p, sig) => nextPace(p, sig), classifyChild(ev.text).length ? s.pace : nextPace(s.pace, 'turn')),
+        transcript: push(s.transcript, { who: 'child', text: String(ev.text || '').slice(0, 300), at: ev.at, turn: s.turns }),
+      };
+    case 'unclear':
+      // HOREB could not make the child out and asked again kindly: nothing is marked, nothing is sent.
+      return { ...s, unclear: s.unclear + 1 };
     case 'request':
       return { ...s, status: 'thinking', error: null };
     case 'looked':
@@ -117,11 +134,12 @@ export function sessionReducer(s, ev) {
       // One sentence finished (or was cut short): it goes in the transcript as heard.
       return { ...s, transcript: push(s.transcript, { who: 'tutor', text: ev.text, at: ev.at, cut: !!ev.cut, turn: s.turns }) };
     case 'interrupted':
-      return { ...s, interruptions: s.interruptions + 1 };
+      return { ...s, interruptions: s.interruptions + 1, pace: nextPace(s.pace, 'interrupt') };
     case 'handed_over':
       return s.status === 'ended' ? s : { ...s, status: 'listening' };
     case 'marked':
-      return { ...s, evidence: [...s.evidence, evidenceOf(ev)] };
+      // A right answer within 8 s of the hand-over is a quick one (a little brisker next); a wrong one steadies a brisk pace.
+      return { ...s, evidence: [...s.evidence, evidenceOf(ev)], pace: nextPace(s.pace, ev.correct ? (s.thinkMs != null && s.thinkMs <= QUICK_MS ? 'quick' : 'none') : 'wrong') };
     case 'ended':
       return { ...s, status: 'ended', ended: { summary: ev.summary || '', reason: ev.reason || 'wrap-up', at: ev.at } };
     case 'error':

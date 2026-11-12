@@ -5021,6 +5021,98 @@ function pickTarget(progress, override = null, model = null) {
 var lessonSkills = (target) => [target, ...prerequisitesOf(target)];
 var allowedMisconceptions = (skills) => skills.flatMap((c) => (SKILLS_G5[c]?.mis || []).map((m) => `${c}.${m}`));
 
+// src/voice-tutor/childVoice.js
+var MATHS_KEYTERMS = Object.freeze([
+  "quarter",
+  "quarters",
+  "half",
+  "halves",
+  "third",
+  "thirds",
+  "fifth",
+  "fifths",
+  "sixth",
+  "sixths",
+  "eighth",
+  "eighths",
+  "tenth",
+  "tenths",
+  "numerator",
+  "denominator",
+  "fraction",
+  "fractions",
+  "simplify",
+  "equivalent",
+  "nought",
+  "whole",
+  "mixed number",
+  "improper fraction",
+  "number line",
+  "HOREB"
+]);
+var CHILD_LISTEN = Object.freeze({
+  model: "ink-whisper",
+  language: "en",
+  // The server's own auto-finalize waits as long as the page does, so it never cuts a thinking child off.
+  maxSilenceSecs: 2.4,
+  // The page's end of speech (a child pauses to think: an adult's 0.8 s ended turns mid-sentence).
+  baseEndMs: 2e3,
+  // a finished-sounding answer ends after this much quiet
+  thinkingEndMs: 3400,
+  // a short or unfinished answer waits longer
+  pauseNudgeMs: 1500,
+  // quiet this long mid-answer: show "Take your time" (once per pause)
+  slowerExtraMs: 500,
+  // when the tutor has been asked to slow down, wait a little more still
+  maxUtteranceMs: 4e4,
+  noSpeechMs: 1e4
+});
+var NUMBER_WORDS = new Set("zero nought none one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred half halves quarter quarters third thirds fifth fifths sixth sixths eighth eighths tenth tenths whole yes no yeah yep nope ok okay maybe".split(" "));
+var ASK_AGAIN = Object.freeze([
+  "Sorry, I did not catch that. Say it again for me, nice and slowly.",
+  "I still could not hear you well. Tap Talk and try once more, or type your answer if you like."
+]);
+var PACE_MIN = -2;
+var PACE_MAX = 1;
+var CHILD_SPEECH = Object.freeze({
+  // Sonic speed is a multiplier (docs: 0.6 to 1.5, default 1). A ten-year-old learning a new idea
+  // needs slower than conversation: 0.9 steady, 0.07 a step.
+  baseSpeed: 0.9,
+  speedStep: 0.07,
+  minSpeed: 0.7,
+  maxSpeed: 1,
+  // Sonic 3.6 adapts pause length to the sentence by itself (docs), so only the gap between our
+  // separate sentences is ours: longer when slower, so the child can think between ideas.
+  gapMs: 450,
+  maxWords: { [-2]: 18, [-1]: 26, 0: 40, 1: 46 },
+  // `emotion` is one of neutral, calm, angry, content, sad (docs). Warm and settled: content;
+  // calm once the child has asked for slower.
+  emotion: "content",
+  slowEmotion: "calm"
+});
+var clampLevel = (n) => Math.max(PACE_MIN, Math.min(PACE_MAX, n));
+var cleanPace = (raw) => raw && typeof raw === "object" && Number.isFinite(Number(raw.level)) ? { level: clampLevel(Math.round(Number(raw.level))), repeat: raw.repeat === true, reason: String(raw.reason || "").replace(/[^\w\s,.'-]/g, "").slice(0, 80) } : null;
+function paceContext(pace) {
+  if (!pace || typeof pace !== "object") return "";
+  const level = Math.max(PACE_MIN, Math.min(PACE_MAX, Math.round(Number(pace.level) || 0)));
+  const max = CHILD_SPEECH.maxWords[level];
+  const lines = [];
+  if (level < 0) lines.push(`Pace: slow. ${pace.reason ? `(${String(pace.reason).slice(0, 80)}.) ` : ""}Speak slower and shorter: at most ${max} words, one idea, one short question. Leave room for the child to think.`);
+  else if (level > 0) lines.push(`Pace: a little brisker, the child is answering quickly and correctly. You may use at most ${max} words and a slightly harder step, but still one question.`);
+  else lines.push(`Pace: steady. At most ${max} words.`);
+  if (pace.repeat) lines.push("The child did not catch your last turn. Say the same idea again in simpler, shorter words. Do not add anything new, and do not give the answer.");
+  return lines.join("\n");
+}
+var TUTOR_VOICES = Object.freeze([
+  { id: "db6b0ed5-d5d3-463d-ae85-518a07d3c2b4", name: "Skylar", note: "US woman, stable and pleasant (default)" },
+  { id: "9626c31c-bec5-4cca-baa8-f8ba9e84c8bc", name: "Jacqueline", note: "US woman, warmer" },
+  { id: "62ae83ad-4f6a-430b-af41-a9bede9286ca", name: "Gemma", note: "British woman, closer to Kenyan school English than US" },
+  { id: "47c38ca4-5f35-497b-b1a3-415245fb35e1", name: "Daniel", note: "US man" },
+  { id: "ef191366-f52f-447a-a398-ed8c0f2943a1", name: "Archie", note: "British man" },
+  { id: "f786b574-daa5-4673-aa0c-cbe3e8534c02", name: "Earlier choice", note: "the voice used before 12 Nov" }
+]);
+var DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
+
 // src/voice-tutor/session.js
 var DEFAULT_SETTINGS = Object.freeze({
   model: "claude-sonnet-5-5",
@@ -5032,7 +5124,10 @@ var DEFAULT_SETTINGS = Object.freeze({
   maxSnapshots: 30,
   // The voice (milestone 3, option B). The voice id is a setting: see the report on choosing it.
   ttsModel: "sonic-3.6",
-  ttsVoice: "f786b574-daa5-4673-aa0c-cbe3e8534c02",
+  ttsVoice: DEFAULT_TUTOR_VOICE,
+  // Speed (Sonic: 0.6 to 1.5, 1 is normal) and emotion for a ten-year-old; the pace state moves them from here (childVoice.js).
+  ttsSpeed: CHILD_SPEECH.baseSpeed,
+  ttsEmotion: CHILD_SPEECH.emotion,
   ttsSampleRate: 24e3
 });
 var num = (v, d) => Number.isFinite(Number(v)) && String(v ?? "").trim() !== "" ? Number(v) : d;
@@ -5048,6 +5143,8 @@ var settingsFrom = (get = () => void 0) => ({
   maxSnapshots: num(get("VOICE_TUTOR_MAX_SNAPSHOTS"), DEFAULT_SETTINGS.maxSnapshots),
   ttsModel: get("VOICE_TUTOR_TTS_MODEL") || DEFAULT_SETTINGS.ttsModel,
   ttsVoice: get("VOICE_TUTOR_TTS_VOICE") || DEFAULT_SETTINGS.ttsVoice,
+  ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
+  ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
   ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
@@ -5823,7 +5920,7 @@ Example of a teaching turn (shape only): the bar is drawn slowly with its own se
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}`;
 var pct = (x) => x == null ? "no attempts" : `${Math.round(x * 100)}% right`;
-function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [] }) {
+function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || "not started"}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -5838,7 +5935,10 @@ function turnContext({ target, prerequisite, profile = [], learner = [], hasMode
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
-  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Do not repeat everything; answer them.`);
+  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
+  const pc = paceContext(pace);
+  if (pc) lines.push(pc);
+  if (unclearNote) lines.push(unclearNote);
   if (wantsAnswer) lines.push("The child is asking to be given the answer. Do not give it.");
   if (capNote) lines.push(capNote);
   if (bankLines2.length) lines.push("Probe bank (questions the app marks itself; ask with bank set to the id):", ...bankLines2);
@@ -34916,7 +35016,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     wantsAnswer: screen2.wantsAnswer,
     bankLines: bankLines(bank),
     picture,
-    figures
+    figures,
+    pace: cleanPace(body?.pace)
   });
   const PRIVATE_LINE = "(the child said something private; HOREB answered with care)";
   const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : []).map((h) => h.who === "child" && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== "none") ? { ...h, text: PRIVATE_LINE } : h);

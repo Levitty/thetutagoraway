@@ -53,6 +53,7 @@ import { tutorEvidence } from '../learner/evidence.js';
 import { readSkills, openMisconceptions, learnerLines } from '../learner/model.js';
 import { readLearner, rememberEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
 import { FRACTION_SKILLS, skillName } from './fractions.js';
+import { cleanPace } from './childVoice.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
@@ -240,7 +241,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const context = turnContext({
     ...pick, learner: learnerCtx, hasModel: skillsModel.hasEvidence, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
-    bankLines: bankLines(bank), picture, figures,
+    bankLines: bankLines(bank), picture, figures, pace: cleanPace(body?.pace),
   });
   // Earlier lines the child said that a guard would have stopped are never re-sent to the model.
   const PRIVATE_LINE = '(the child said something private; HOREB answered with care)';
