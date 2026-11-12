@@ -1,0 +1,582 @@
+{
+ "outcomes": {
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.a": "pronounce sounds and words correctly for effective oral communication",
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.b": "use vocabulary in sentences for effective oral communication",
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.c": "listen attentively to an oral text for comprehension",
+  "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO.d": "appreciate the importance of accurate pronunciation in oral texts",
+  "ENGL.G4.READIN.T1_EXTENSIVE_READING.a": "identify the spelling and meaning of words from the dictionary",
+  "ENGL.G4.READIN.T1_EXTENSIVE_READING.b": "read the junior encyclopaedia to obtain information for lifelong learning",
+  "ENGL.G4.READIN.T1_EXTENSIVE_READING.c": "promote the use of reference materials to obtain information",
+  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.a": "identify definite and indefinite articles in a written text for effective communication",
+  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.b": "use definite and indefinite articles in sentences for effective communication",
+  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.c": "acknowledge the use of articles in oral and written contexts for self-expression",
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.a": "identify the required information to be filled in forms for different purposes",
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.b": "fill information in forms correctly for self-expression",
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.c": "realise the importance of filling forms correctly for effective communication",
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.a": "discriminate sounds and words for listening, comprehension",
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.b": "pronounce words containing target sounds accurately for effective communication",
+  "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO.c": "appreciate the importance of accurate pronunciation for effective communication",
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.a": "read poems or stories related to the theme for comprehension",
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.b": "apply appropriate reading techniques to answer direct and indirect questions based on a poem or story for self-expression",
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.c": "realise the importance of reading comprehension for lifelong learning",
+  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.a": "identify plurals of regular and irregular nouns for effective communication",
+  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.b": "use plurals of regular and irregular nouns in spoken and written language for communication clarity",
+  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.c": "promote the use of regular and irregular nouns in communication",
+  "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.a": "express relevant ideas on a given topic for effective communication",
+  "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.b": "write an open ended composition creatively for self-expression",
+  "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.c": "realise the importance of creativity in writing for effective communication",
+  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.b": "identify polite words and phrases in a conversation for communication",
+  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.c": "pronounce words and phrases containing target sounds accurately for effective communication",
+  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.d": "use appropriate words and phrases to show politeness in different contexts",
+  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.e": "promote the use of using polite words and phrases in different contexts",
+  "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.a": "read a text of about 300 words for comprehension",
+  "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.b": "apply appropriate reading skills to obtain both factual and inferential information from a text",
+  "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.c": "recommend intensive reading in their day-to-day life",
+  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.a": "use the target language pattern in sentences correctly for fluency in speech",
+  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.b": "respond to questions on the language patterns in written communication",
+  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.c": "adopt the use of language structures for effective communication",
+  "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.a": "write legibly and neatly in print script for clarity of communication",
+  "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.b": "apply accurate and consistent spelling in print script for writing fluency",
+  "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING.c": "adopt the use of accurate and consistent spelling in a variety of print scripts for effective communication",
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.b": "pronounce words related to the theme using the correct stress for effective communication",
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.c": "use vocabulary related to the theme in a variety of contexts for speech clarity",
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.d": "promote appropriate use of stress in a variety of contexts for effective communication",
+  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.a": "read visuals in print and digital formats for information",
+  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.b": "interpret visual media appropriately for comprehension",
+  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.c": "acknowledge the importance of visual media for lifelong learning",
+  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.a": "identify personal and possessive pronouns used as subjects and objects for communication",
+  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.b": "use personal and possessive pronouns as subject and object correctly for self-expression",
+  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.c": "adopt the use of personal and possessive pronouns in communication",
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.a": "identify the key parts of a friendly letter in preparation for writing",
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.b": "write a friendly letter using the correct format for effective communication",
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.c": "send an SMS correctly for effective communication",
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.d": "promote the use of friendly letters and SMS in a variety of communication contexts",
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.a": "listen actively to a variety of texts to gain information",
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.b": "apply vocabulary related to the theme in a variety of contexts for effective communication",
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.c": "use the language pattern correctly for effective oral communication",
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.d": "promote listening to a variety of texts for information and enjoyment",
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.a": "select appropriate reading materials for lifelong learning",
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.b": "read a variety of familiar materials independently to build reading speed and fluency",
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.c": "apply appropriate strategies to read independently for information and enjoyment",
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.d": "realise the importance of independent reading in lifelong learning",
+  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.a": "By the end of the Sub Strand, the learner should be able to: communication",
+  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.b": "use adjectives of size and shape in the right order for clarity of communication",
+  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.c": "adopt the use of adjectives for effective communication",
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.a": "describe the parts of a narrative composition in preparation for writing",
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.b": "organise thoughts fluently, clearly and precisely in a coherent paragraph for self-expression",
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.c": "create a narrative composition of about 60-80 words for self-expression",
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.d": "realise the role of creativity in writing for different purposes",
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.a": "identify correct stress and intonation in ‘WH’ questions, other questions and statements for clarity in speech",
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.b": "use correct stress and intonation in questions and statements to communicate clearly",
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.c": "use vocabulary related to the theme in a variety of contexts for effective oral communication",
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.d": "adopt the use of varying intonation for effective communication",
+  "ENGL.G4.READIN.T6_INTENSIVE_READING.a": "read a variety of dialogues related to email and the internet for comprehension",
+  "ENGL.G4.READIN.T6_INTENSIVE_READING.b": "apply appropriate intensive reading skills to obtain specific factual and inferential information for lifelong learning",
+  "ENGL.G4.READIN.T6_INTENSIVE_READING.c": "adopt reading for purposes of comprehension and information",
+  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.a": "identify quantifiers and nouns used with them appropriately for effective communication",
+  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.b": "use quantifiers in sentences correctly for communication clarity",
+  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.c": "adopt the correct use of quantifiers in everyday communication",
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.a": "organise pictures in a logical sequence to write pictorial compositions of about 60-80 words on the theme",
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.b": "write a pictorial composition of about 60 - 80 words on the theme for effective communication",
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.c": "adopt the use of a wide range of pictures to write pictorial compositions on different topics for communication",
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.a": "participate actively in a two-way conversation (turn-taking) in various settings for self-expression",
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.b": "apply vocabulary related to the theme in different settings for clarity of speech",
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.c": "use the present and past tense correctly in a two-way dialogue for communication",
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.d": "realise the importance of turn taking in oral communication",
+  "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.a": "read a variety of materials (narratives, poems, graded readers) for lifelong learning",
+  "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.b": "demonstrate independent reading of a variety of materials (narratives, poems, graded readers) for information",
+  "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN.c": "realise the importance of independent reading in a variety of contexts for enjoyment",
+  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.a": "identify the present and past progressive forms of the verb in oral and written texts for communication",
+  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.b": "use the present and past progressive aspect correctly in oral and written contexts for self-expression",
+  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.c": "adopt the use of the present and past progressive aspect in communication",
+  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.a": "identify commonly used punctuation marks in written texts for effective communication",
+  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.b": "use full stops and capital letters correctly in written texts for communication clarity",
+  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.c": "promote the use of punctuation marks in various contexts for writing fluency",
+  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.a": "articulate sounds accurately for clarity of speech",
+  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.b": "select sounds correctly from a language sample to improve listening comprehension",
+  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.c": "use vocabulary items related to the theme in a variety of contexts for effective communication",
+  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.d": "realise the role of correct pronunciation in speech for communication clarity",
+  "ENGL.G4.READIN.T8_READING_FLUENCY.a": "read a text of about 300 words accurately, at the right speed and with expression for effective communication",
+  "ENGL.G4.READIN.T8_READING_FLUENCY.b": "use fluency strategies to read a text of about 300 words related to the theme to enhance comprehension",
+  "ENGL.G4.READIN.T8_READING_FLUENCY.c": "realise the importance of fluency in reading for comprehension",
+  "ENGL.G4.LANGUA.T8_WORD_CLASSES.a": "form appropriate contracted forms of verbs in varied texts",
+  "ENGL.G4.LANGUA.T8_WORD_CLASSES.b": "use positive and negative statements in sentences",
+  "ENGL.G4.LANGUA.T8_WORD_CLASSES.c": "realise the importance of correct sentence structures in communication",
+  "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.a": "describe the parts of a narrative composition in preparation for writing",
+  "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.b": "organise thoughts fluently, clearly and precisely in a coherent paragraph for self-expression",
+  "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.c": "create a narrative composition of about 60- 80 words for self-expression",
+  "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.d": "promote the role of creativity in writing for different purposes",
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.a": "speak fluently and confidently on a given topic to enhance oral skills",
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.b": "articulate sounds accurately for effective communication",
+  "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO.c": "promote the importance of speaking at a reasonable speed and without hesitation in daily life",
+  "ENGL.G4.READIN.T9_INTENSIVE_READING.a": "read a short narrative of about 320 words for comprehension",
+  "ENGL.G4.READIN.T9_INTENSIVE_READING.b": "apply appropriate reading strategies to read a narrative of about 320 words for information",
+  "ENGL.G4.READIN.T9_INTENSIVE_READING.c": "appreciate reading for purposes of comprehension and information",
+  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.a": "distinguish adverbs of manner, time and place for effective communication",
+  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.b": "use adverbs of manner, time and place correctly in both oral and written sentences",
+  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.c": "realise the importance of adverbs in oral and written communication",
+  "ENGL.G4.WRITIN.T9_PUNCTUATION.a": "identify commonly used punctuation marks in written texts for effective communication",
+  "ENGL.G4.WRITIN.T9_PUNCTUATION.b": "use commas and question marks correctly in written texts for clarity of writing",
+  "ENGL.G4.WRITIN.T9_PUNCTUATION.c": "adopt the use of punctuation marks for clarity in writing",
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.a": "articulate sounds /ɪ/, /iː/, /s/, /ʃ/ and /əʊ/ accurately for effective communication",
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.b": "interact with a speaker actively during an oral presentation, speech or narration for listening fluency",
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c": "interrupt a speaker appropriately for politeness in conversation",
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.d": "use vocabulary related to the theme in a variety of contexts for self-expression",
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.e": "promote the importance of turn taking in oral interviews or debates for effective oral communication",
+  "ENGL.G4.READIN.T10_INTENSIVE_READING.a": "read factual texts of about 320 words related to the theme for comprehension",
+  "ENGL.G4.READIN.T10_INTENSIVE_READING.b": "apply appropriate reading habits in reading factual texts of about 320 words for information",
+  "ENGL.G4.READIN.T10_INTENSIVE_READING.c": "realise the importance of reading for comprehension and information",
+  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.a": "identify conjunctions correctly in oral and written texts for fluency in speech",
+  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.b": "engage in short dialogues featuring conjunctions for fluency in speech",
+  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.c": "use conjunctions in a variety of contexts for effective oral and written communication",
+  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.d": "realise the importance of conjunctions in communication",
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.a": "describe the parts of a descriptive composition for self-expression",
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.b": "organise thoughts clearly, precisely and creatively into a coherent paragraph for self-expression",
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.c": "create a descriptive composition of about 80- 100 words on various topics for effective communication",
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.d": "promote the role of creativity in descriptive writing for effective communication",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.a": "listen to short speeches related to the theme for listening fluency",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.b": "apply vocabulary related to the theme in a variety of contexts for self-expression",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.c": "distinguish sounds /ð/ and /θ/ and words from an oral text for listening fluency",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d": "interpret nonverbal cues correctly for listening fluency",
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.e": "realise the importance of listening fluency in oral comprehension",
+  "ENGL.G4.READIN.T11_INTENSIVE_READING.a": "read grade- appropriate digital poems and narratives of about 300- 320 words interpretively for comprehension",
+  "ENGL.G4.READIN.T11_INTENSIVE_READING.b": "access grade appropriate online materials of about 300-320 words for lifelong learning",
+  "ENGL.G4.READIN.T11_INTENSIVE_READING.c": "promote reading digital resources for information",
+  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.a": "identify interrogatives in a variety of texts for communication clarity",
+  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.b": "use interrogatives in a variety of contexts for effective communication",
+  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.c": "respond to a variety of questions based on interrogatives for effective communication",
+  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.d": "realise the importance of interrogatives in communication",
+  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.a": "identify commonly misspelt words in oral and written contexts",
+  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.b": "write commonly misspelt words correctly for communication clarity",
+  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.c": "adopt the skill of writing words clearly and correctly in communication",
+  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.a": "speak accurately, with expression and at the right speed (minimal hesitation) for fluency",
+  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.b": "use nonverbal cues appropriately for self-expression",
+  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.c": "use vocabulary related to the theme in a variety of contexts",
+  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.d": "promote the importance of fluency in speech",
+  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.a": "read a poem, song or passage containing proverbs with expression for effective communication",
+  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.b": "apply basic stress and rhythm when reading a poem, song or passage containing proverbs for self-expression",
+  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.c": "respond to questions based on a poem, song or passage containing proverbs for comprehension",
+  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.d": "adopt intensive reading in day-to-day communication",
+  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.a": "identify the present and past perfect aspect in varied texts for effective communication",
+  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.b": "use the present perfect and past perfect aspect correctly in sentences",
+  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.c": "realise the importance of correct use of aspect in everyday communication",
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.a": "identify the components of a diary for effective writing",
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.b": "write a diary in the right format for effective communication",
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.c": "adopt the use of diaries in our day-today lives",
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.a": "listen intensively for specific sounds, words, phrases or sentences for fluency",
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.b": "select silent letters in words from an oral text for listening fluency",
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.c": "use the language pattern ‘very...but...’ correctly for effective oral communication",
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.d": "use vocabulary to construct sentences for effective communication",
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.e": "promote the skill of listening intensively to a variety of texts for information and enjoyment",
+  "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.a": "read a variety of grade-appropriate digital and print texts such as newspapers and magazines for lifelong learning",
+  "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.b": "demonstrate independent reading of grade-appropriate digital and print texts such as newspapers, magazines and articles for information and enjoyment",
+  "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN.c": "adopt independent reading in lifelong learning",
+  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.a": "identify prepositions of position and direction in sentences",
+  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.b": "use prepositions correctly in oral and written contexts",
+  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.c": "promote the use of prepositions for clarity in communication",
+  "ENGL.G4.WRITIN.T13_SPELLING.a": "spell words with double consonants correctly for clarity of writing",
+  "ENGL.G4.WRITIN.T13_SPELLING.b": "construct correct sentences using words with double consonants for cohesive writing",
+  "ENGL.G4.WRITIN.T13_SPELLING.c": "realise the importance of writing words clearly and correctly in communication"
+ },
+ "skills": {
+  "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE": {
+   "forms": [
+    "alphabetical order",
+    "guide words",
+    "choose the meaning"
+   ],
+   "mastery": "Puts words in alphabetical order (using the second and third letters when the first match), uses guide words to find the page, and picks the right meaning of a word from its entry, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the dictionary, junior encyclopaedia, atlas, newspaper or timetable for what the child needs to find out, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses or writes a, an or the (a before a consonant sound, an before a vowel sound, the for a known or named thing, no article for things in general) and finds the one wrong article in a short note, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION": {
+   "forms": [
+    "choose the correct entry",
+    "spot the mistake"
+   ],
+   "mastery": "Says which piece of information belongs in a box of a school, clinic or library form (name, date of birth, class, address, parent contact), in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
+   "forms": [
+    "choose the answer",
+    "type a short answer",
+    "true, false or not stated"
+   ],
+   "mastery": "Finds an answer that is written in the text (who, what, where, when) and says whether a statement is true, false or not stated, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS": {
+   "forms": [
+    "choose the answer",
+    "choose what can be worked out"
+   ],
+   "mastery": "Works out what is not written but is shown by clues (why a person felt or did something) and does not copy a sentence, go against the text or go too far, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES": {
+   "forms": [
+    "choose the meaning",
+    "choose the clue"
+   ],
+   "mastery": "Picks the meaning of a new word from the sentences around it, and the words that give the clue, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Forms the plural of regular nouns (-s, -es after s, x, ch, sh, -ies after a consonant and y, -ves for knife and leaf) and does not add -s to a number-plus-noun that is already plural, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the plural of man, woman, child, foot, tooth, mouse, person, sheep and fish and does not add -s or a second plural ending, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS": {
+   "forms": [
+    "choose the polite words",
+    "spot the mistake"
+   ],
+   "mastery": "Picks the polite word or phrase for a situation (asking, thanking, apologising, refusing) and does not choose a command or a rude answer, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Builds and recognises polite requests and offers (May I go out, please? Could you help me? Would you like some tea?) with the plain verb after May I and Could you, in whole sentences, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of first aid (bandage, wound, bruise, sprain, ambulance, first aid kit) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS": {
+   "forms": [
+    "choose the answer",
+    "type a short answer"
+   ],
+   "mastery": "Finds a detail in a notice, table or timetable written in words and numbers, and says what the visual is for, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the subject form before the verb and the object form after the verb or a small word, and does not repeat a noun with a pronoun (Wanjiru she is tall), in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes mine, yours, his, hers, ours or theirs when no noun follows, my, your, her, our or their before a noun, and never writes your's, her's or our's, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS": {
+   "forms": [
+    "choose the correct part",
+    "choose the correct order"
+   ],
+   "mastery": "Names and orders the parts of a friendly letter (address, date, greeting, body, closing, name) and the punctuation of the greeting and closing, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of nutrition (protein, vitamins, carbohydrates, balanced diet, fibre, nutrients) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL": {
+   "forms": [
+    "choose the answer",
+    "type a short answer"
+   ],
+   "mastery": "Finds a number, time, price or name by looking for the key word in the question, not by reading every word, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names the describing word that tells more about a noun (tall girl, red bus) and does not pick the noun, the verb or an adverb, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Puts size before shape before the noun (a big round ball) and never puts the adjective after the noun as in Kiswahili, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS": {
+   "forms": [
+    "choose the correct part",
+    "spot the mistake"
+   ],
+   "mastery": "Says what the title, beginning, middle and end of a narrative tell (characters and setting, the problem, what happens, how it ends), in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER": {
+   "forms": [
+    "choose the order",
+    "choose the topic sentence"
+   ],
+   "mastery": "Finds the topic sentence and puts four jumbled sentences in the order that makes a clear paragraph, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses email, inbox, attachment, subject, password, website, search and download in the right sentence, and tells safe online habits from unsafe ones, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses many and few with things you can count and much and little with things you cannot count, in statements and questions, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses some in positive sentences, any in questions and negatives, a lot of and enough before the noun, and does not put enough after the noun, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE": {
+   "forms": [
+    "choose the order",
+    "choose the sentence"
+   ],
+   "mastery": "Orders four pictures, given in words, so that the story makes sense, and picks the sentence that tells one picture in the past tense, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the regular (-ed) and irregular (went, ate, saw) past forms when the time is past, and uses the present forms for habits and facts, in short dialogues, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes am, is or are plus the -ing verb for an action happening now, with the right form of be and the right spelling of -ing, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes was or were plus the -ing verb for an action that was going on at a time in the past, and does not use is or are, a past form or a bare verb, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Starts a sentence and every name with a capital letter, writes I as a capital, and ends a statement with a full stop, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of the farm (harvest, seedlings, fertiliser, livestock, plough, weeding) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the short form (don't, isn't, can't, I'm, she's, we'll) with the apostrophe where the letter is missing, and tells it's (it is) from its (belonging to it), in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Makes a negative with do not, does not, did not, is not or cannot, keeps the verb plain after does and did, and does not use two negatives together, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Says whether an adverb tells how, when or where, uses the adverb form (quickly, well) after the verb, and does not use an adjective where the adverb belongs, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Puts a comma between the items of a list (with and before the last), not after the last item and not between a person and what the person does, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Ends an asking sentence with a question mark, and a telling sentence with a full stop, even when the sentence has a question word in it, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of hygiene (germs, sanitiser, latrine, rubbish, disinfect, drainage) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the joining word that matches the meaning of the two parts (addition, contrast, reason, result, choice) and uses one joining word between two ideas, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS": {
+   "forms": [
+    "choose the correct part",
+    "spot the mistake"
+   ],
+   "mastery": "Says what the introduction, the description (using the senses) and the conclusion of a descriptive composition do, and tells a description from a story, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of sport (referee, goalkeeper, tournament, trophy, opponent, whistle) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the question word that fits the answer given, puts the helping verb before the subject, and does not write who's for whose, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Spells words like because, friend, beautiful, believe, library, Wednesday and tomorrow correctly, from the first letters to the last, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of the environment (pollution, recycle, litter, compost, conserve, habitat) in the right sentence, in 8 of 10 new items."
+  },
+  "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS": {
+   "forms": [
+    "choose the meaning",
+    "finish the proverb"
+   ],
+   "mastery": "Says the lesson of a common proverb and finishes a proverb with its right word, and does not read it as only about the animals or things in it, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes have or has plus the past participle (have eaten, has gone) for an action that has just finished or still matters, and does not use it with yesterday or last week, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes had plus the past participle for the action that happened first when two past actions are told, and keeps the order of the two events right, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS": {
+   "forms": [
+    "choose the correct part",
+    "spot the mistake"
+   ],
+   "mastery": "Says what a diary entry has (date, a greeting to the diary, what happened and how the writer felt, in the first person and the past tense) and what it does not have, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses the words of money (savings, budget, price, change, loan, borrow, earn) in the right sentence and does not swap earn with save or borrow with lend, in 8 of 10 new items."
+  },
+  "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS": {
+   "forms": [
+    "choose the letter",
+    "type the letter",
+    "spot the mistake"
+   ],
+   "mastery": "Names the silent letter in words like knife, write, lamb, listen, hour and walk, and does not pick the letter beside it, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the preposition that says where a thing is (in, on, under, behind, in front of, between, next to) from the picture in words, in 8 of 10 new sentences, in 8 of 10 new items."
+  },
+  "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the preposition that says where something moves (into the room, out of the house, across the road, through the gate), and does not write to home or go at school, in 8 of 10 new items."
+  },
+  "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Spells words with a double consonant (summer, coffee, address, rabbit, letter) and does not double a letter that has only one, in 8 of 10 new items."
+  }
+ }
+}

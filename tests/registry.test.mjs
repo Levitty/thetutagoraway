@@ -35,8 +35,8 @@ test('the bank holds the science families (as before) and not the English ones; 
   assert.deepEqual(GRADE_FAMILIES.slice(0, sci.length), sci);   // first in the grade bank, as SCIENCE_G5 was
   assert.equal(FAMILIES.filter(f => f.subject === 'science').length, 84);
   assert.equal(FAMILIES.filter(f => f.subject === 'english').length, 0);
-  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), entryFor('english', 5).families);
-  assert.deepEqual(ENGLISH_FAMILIES, entryFor('english', 5).families);
+  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), [...entryFor('english', 4).families, ...entryFor('english', 5).families]);   // Grade 4 English joined Grade 5 on 12 Nov 2026
+  assert.deepEqual(ENGLISH_FAMILIES, [...entryFor('english', 4).families, ...entryFor('english', 5).families]);
 });
 
 test('every entry is complete and every family sits in its own entry', async () => {
@@ -72,7 +72,7 @@ test('the practice engine reads its subjects from the registry', () => {
   assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
   assert.equal(SUBJECT_DEFS.science.description, 'Science and Technology for Grades 4, 5 from the CBC design');   // Grade 4 joined Grade 5 on 12 Nov 2026
   assert.equal(Object.keys(subjectDef('science').map).length, 58);   // 33 skills in Grade 5 and 25 in Grade 4
-  assert.equal(Object.keys(subjectDef('english').map).length, 41);
+  assert.equal(Object.keys(subjectDef('english').map).length, 93);   // 41 skills in Grade 5 and 52 in Grade 4
 });
 
 test('the phone-bundle list names every family file and its signed list', async () => {

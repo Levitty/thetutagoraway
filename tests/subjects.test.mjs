@@ -145,7 +145,7 @@ test('Marking in the homework door: an English item is marked by answerCheckText
 test('Passages: a comprehension item carries its passage to the practice screen and the homework item', () => {
   const read = ENGLISH_FAMILIES.filter(f => f.id.includes('read') || /passage|comprehens/i.test(f.cskill));
   let p = null;
-  for (const f of ENGLISH_FAMILIES) { for (let i = 0; i < 6 && !p; i++) { const d = drawFamily(f).p; if (d.passage) p = d; } if (p) break; }
+  for (const f of ENGLISH_FAMILIES.filter(x => x.grade === 5)) { for (let i = 0; i < 6 && !p; i++) { const d = drawFamily(f).p; if (d.passage) p = d; } if (p) break; }
   assert.ok(p, 'no English family draws a passage');
   assert.ok(p.passage.title && p.passage.text.length > 80);
   assert.equal(p.marker, 'text');
