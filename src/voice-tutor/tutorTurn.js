@@ -78,7 +78,7 @@ import { screenChild, screenAll, careTurn, checkTurnText, answerInQuestion, visi
 import { stepParser } from './streamSteps.js';
 import { buildRequest, turnContext, MAX_PROBE_WORDS } from './prompt.js';
 import { probeBank, bankLines } from './probes.js';
-import { markSpoken, canonAnswer, speakAnswer } from './spokenAnswer.js';
+import { markSpoken, canonAnswer, speakAnswer, inWords } from './spokenAnswer.js';
 import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
@@ -88,7 +88,10 @@ import { readSkills, openMisconceptions, learnerLines } from '../learner/model.j
 import { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
 import { FRACTION_SKILLS, skillName } from './fractions.js';
 import { cleanPace } from './childVoice.js';
-import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines } from './orchestrator.js';
+import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines, turnBrief } from './orchestrator.js';
+import { stepFlags, endFlags, habitContext, confirms, asksReason } from './habits.js';
+import { rewriteRequest, rewriteOnce, addUsage } from './gate.js';
+import { exampleLines } from './exampleLookup.js';
 import { cleanProbe } from './silence.js';
 
 const reply = (status, body) => ({ status, body });
@@ -116,36 +119,69 @@ export const CARE_WAIT = [say('I am here, and there is no hurry.'), say('Say whe
 
 /**
  * What the tutor says when a turn has to be stopped (no usable words, the model failed, a sentence failed its check),
- * in the context of the lesson: what the code decided, what the child just did, the question still open.
+ * in the context of the lesson: what the code decided, what the child just did, the question still open, the board.
  * It never asks the child to say it again (12 Nov 2026: "Sorry, I lost my words... can you say that again?" was 15% of
  * all turns, and once came straight after a disclosure). `saidAny`: the tutor has already spoken this turn.
+ * Built from facts, not stock sentences (PLAN_TO_FOUR.md step 0, 12 Nov 2026: the judge counted "Thank you for telling
+ * me. How did you get that?", "That is a good question. Look at the board with me. What do you notice?" and "Let me ask
+ * you again" as repetition and stock praise): the child's own words, the picture on the board, the open question, the
+ * answers found; where a line has no fact to carry, it changes with the turn so it is never the same twice running.
  * @returns {{ lines: string[], doing: string, end?: object }}
  */
-export function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, saidAny = false, doing = null } = {}) {
-  const yes = marked?.correct && !saidAny ? [marked.said ? `Yes, ${marked.said}.` : 'Yes, that is right.'] : [];
+export function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, saidAny = false, doing = null, message = '', board = [], turnIndex = 0, found = [], ack = 'yes' } = {}) {
+  const said = marked?.correct ? marked.said || null : null;
+  const yes = marked?.correct && !saidAny ? [said ? (ack === 'revoice' ? `${cap(said)}, you said.` : `Yes, ${said}.`) : 'Yes, that is right.'] : [];
   const again = openPrompt && /\?\s*$/.test(openPrompt) ? openPrompt : null;
+  const fig = figureName(board);
+  const pick = (xs) => xs[Math.abs(Number(turnIndex) || 0) % xs.length];
+  const theirs = childBit(message);
   if (probe) {
     const k = probe.kind;
-    if (k === 'task_checkin') return { lines: ['Take your time.', 'Tell me when you are done.'], doing: doing || 'task' };
-    if (k === 'answer_smaller' || k === 'talk_again') return { lines: ['Take your time.', 'Look at the board. What do you notice?'], doing: doing || 'answer' };
-    return { lines: ['Take your time. A guess is fine.', 'What do you think?'], doing: doing || 'answer' };
+    if (k === 'task_checkin') return { lines: pick([['I can see you are working.', 'Say a word if you want help.'], [fig ? `Take your time with the ${fig}.` : 'Take your time.', 'Tell me when you are done.'], ['No hurry at all.', 'Tell me when you are done.']]), doing: doing || 'task' };
+    if (k === 'answer_smaller' || k === 'talk_again') return { lines: [pick(['That is okay.', 'Here is a smaller step.', 'Let us make it easier.']), smallerQuestion(openPrompt, fig)], doing: doing || 'answer' };
+    return { lines: pick([['Take your time.', 'What is your guess?'], ['There is no hurry.', 'What do you think?'], [fig ? `Look at the ${fig} again.` : 'Think about it for a moment.', 'What do you think?']]).filter(Boolean), doing: doing || 'answer' };
   }
   switch (rule) {
     case 'open': return { lines: [...(saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE]), 'Have you ever shared a chapati with someone?'], doing: 'answer' };
-    case 'care-wait': case 'care': return { lines: ['Thank you. I am listening.', 'Do you want to carry on with our fractions, or stop for today?'], doing: 'talk' };
-    case 'care-return': return { lines: ['I am glad you are here.', 'Let us carry on gently. Look at the board. What do you see?'], doing: 'answer' };
-    case 'stop': return { lines: ['Thank you for working with me today. You did some good thinking.'], doing: 'talk', end: { cmd: 'end_session', summary: 'The child asked to stop, and the lesson closed early.' } };
+    case 'care-wait': case 'care': return { lines: ['I am listening.', 'Do you want to carry on with our fractions, or stop for today?'], doing: 'talk' };
+    case 'care-return': return { lines: ['I am glad you are here.', `Let us carry on gently.${fig ? ` Look at the ${fig}.` : ''} What do you see?`], doing: 'answer' };
+    case 'stop': return { lines: [found.length ? `Today you found ${foundList(found)}. Thank you for working with me.` : 'Thank you for working with me today.'], doing: 'talk', end: { cmd: 'end_session', summary: 'The child asked to stop, and the lesson closed early.' } };
     case 'bored': return { lines: ['I hear you.', 'Shall we play a quick guessing game, or stop for today?'], doing: 'talk' };
-    case 'close': return { lines: ['We did some good thinking today.', 'What is one thing you will remember?'], doing: 'talk' };
-    case 'press': return { lines: [...yes, 'How did you know?'], doing: 'answer' };
-    case 'fresh-check': case 'move-on': case 'reason': return { lines: [...yes, 'Can you show me that on the board?'], doing: 'task' };
-    case 'diagnose': case 'change': return { lines: [...(saidAny ? [] : ['Thank you for telling me.']), 'How did you get that?'], doing: 'answer' };
-    case 'thinking': return { lines: ['Take your time.'], doing: doing || 'answer' };
-    case 'lost': return { lines: ['That is okay. Let us take a smaller step.', 'Look at the board. What do you see?'], doing: 'answer' };
-    case 'question': return again ? { lines: ['That is a good question. Let us take it slowly.', again], doing: 'answer' } : { lines: ['That is a good question.', 'Look at the board with me. What do you notice?'], doing: 'answer' };
-    default: return again ? { lines: [...yes, saidAny ? again : `Let me ask you again. ${again}`], doing: 'answer' } : { lines: [...yes, 'What do you think?'], doing: 'answer' };
+    case 'close': return { lines: [...(found.length ? [`Today you found ${foundList(found)}.`] : []), 'What is one thing you will remember?'], doing: 'talk' };
+    case 'press': return { lines: [...yes, said ? `What made you say ${said}?` : 'How did you know?'], doing: 'answer' };
+    case 'fresh-check': case 'move-on': case 'reason': return { lines: [...yes, said ? `Show me ${said} on the board.` : 'Can you show me that on the board?'], doing: 'task' };
+    case 'diagnose': case 'change': return { lines: [...(saidAny || !theirs ? [] : [`You said ${theirs}.`]), theirs ? 'Tell me how you got that.' : 'How did you work it out?'], doing: 'answer' };
+    case 'thinking': return { lines: [pick(['Take your time.', 'Go on, I am listening.', 'Keep thinking out loud.'])], doing: doing || 'answer' };
+    case 'lost': return { lines: ['That is okay.', smallerQuestion(openPrompt, fig)], doing: 'answer' };
+    case 'question': return { lines: [...(theirs && !saidAny ? [`You asked ${theirs}.`] : []), fig ? `Point at the part of the ${fig} you mean.` : 'Say a little more about what you mean.'], doing: fig ? 'task' : 'answer' };
+    default: return again ? { lines: [...yes, again], doing: 'answer' } : { lines: [...yes, 'What do you think?'], doing: 'answer' };
   }
 }
+const cap = (t) => String(t || '').replace(/^./, (c) => c.toUpperCase());
+// The newest figure on the board, by what the child sees: a circle, a bar, a number line.
+const figureName = (board = []) => {
+  const f = [...(board || [])].reverse().find((b) => b && ['shape', 'fraction_bar', 'figure', 'number_line'].includes(b.cmd));
+  if (!f) return null;
+  if (f.cmd === 'number_line' || (f.cmd === 'figure' && f.type === 'numberline')) return 'number line';
+  if (f.cmd === 'shape') return f.kind === 'circle' ? 'circle' : f.kind || 'shape';
+  if (f.cmd === 'figure') return f.params?.shape === 'circle' ? 'circle' : f.params?.shape === 'grid' ? 'grid' : 'bar';
+  return 'bar';
+};
+// The child's words, short, for a sentence that says them back ("You said two sixths.").
+const childBit = (message) => {
+  const w = String(message || '').replace(/[?!.]+\s*$/, '').replace(/\s+/g, ' ').trim().split(' ');
+  const t = w.slice(0, 6).join(' ').replace(/^(umm*|uh+|hmm+|so|well|oh)[,.\s]+/i, '').toLowerCase();
+  return /^[a-z0-9/' ,-]{1,48}$/.test(t) && !/\b(i|you|my|me)\b/.test(t) ? t : null;
+};
+// A smaller question about the picture on the board, from the open question (never its answer).
+const smallerQuestion = (openPrompt, fig) => {
+  const q = String(openPrompt || '').toLowerCase();
+  if (fig && /\bwhat fraction|how much of\b/.test(q)) return `How many equal parts is the ${fig} cut into?`;
+  if (fig && /\bhow many\b/.test(q)) return `Put your finger on the ${fig}. Which part will you count first?`;
+  if (fig) return `Look at the ${fig}. Which part is shaded?`;
+  return 'Which part of it do you know already?';
+};
+const foundList = (found) => { const w = found.map((f) => inWords(f) || f).slice(-3); return w.length > 1 ? `${w.slice(0, -1).join(', ')} and ${w[w.length - 1]}` : w[0]; };
 const recoverSteps = (r) => [...r.lines.map(say), r.end || { ...handBack, doing: r.doing }];
 
 export const WIND_DOWN = [
@@ -368,7 +404,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   if (!cap.ok) return authored(WIND_DOWN, [cap.reason], spent);
   // The question still open (wrong, or not answered yet): the recovery may put it again. Never one answered right.
   const openPrompt = open?.question || null;
-  const recoverFor = (saidAny) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null }));
+  const recoverFacts = { message, board, turnIndex, found: [...found], ack: decision?.ack || 'yes' };
+  const recoverFor = (saidAny) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts }));
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ['offline'], spent);
 
   // 6. The model, streamed.
@@ -376,22 +413,34 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const names = child?.name ? [{ name: child.name, as: 'the child' }] : [];
   const openMis = openMisconceptions(learnerData.rows, skills, { now: nowMs });
   const learnerCtx = learnerLines({ pick, model: skillsModel, open: openMis, profile: learnerData.profile, notes: learnerData.notes, nameOf: skillName, lib, order: FRACTION_SKILLS });
+  // The turn brief (PLAN_TO_FOUR.md step 2): what the child did, what must not be said, answer first, the level gate and
+  // the standard the move is judged on, all computed here; after the cache breakpoint, so the system prompt never changes.
+  const rawHistory = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
+  const brief = turnBrief(lesson0, decision, { message, marked, open: hiddenOk(open) ? open : null, board, history: rawHistory, skill: pick.target, probe });
+  // Matched good-turn examples (step 5): an A/B switch, off unless VOICE_TUTOR_MATCHED_EXAMPLES=1.
+  const matched = settings.matchedExamples ? exampleLines({ rule: decision?.rule, cls: decision?.prelim, message, probe }) : [];
   const context = turnContext({
     ...pick, learner: learnerCtx, hasModel: skillsModel.hasEvidence, elapsedMin, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
     bankLines: bankLines(bank), picture, figures, pace: cleanPace(body?.pace),
-    lesson: lessonLines(lesson0, decision), probe, inkCells: inkCellsIn, doing: lesson0.doing,
+    lesson: [...lessonLines(lesson0, decision), ...brief, ...matched], probe, inkCells: inkCellsIn, doing: lesson0.doing,
     unanswered: unanswered && question ? { ask: question.question, why: unanswered.why } : null,
   });
   // Earlier lines the child said that a guard would have stopped are never re-sent to the model.
   const PRIVATE_LINE = '(the child said something private; HOREB answered with care)';
-  const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [])
+  const history = rawHistory
     .map((h) => (h.who === 'child' && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== 'none') ? { ...h, text: PRIVATE_LINE } : h));
   // A probe thinks as hard as any turn: at low effort 18 of 21 probes came back in the wrong shape (12 Nov 2026), and
   // probes are a few turns a lesson. The effort is outside the cached prompt either way.
   const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image, probe });
   // A picture taken because the child paused may get only a nod.
   const nod = !!image && image.reason === 'idle' && !message;
+  // The turn gate (step 3): the facts its checks read (habits.js), the same checks the free yardstick counts with.
+  const gateOn = settings.gate !== false && !!decision && !['care', 'care-wait', 'care-return'].includes(decision.rule);
+  const hctx = habitContext({
+    message, marked, cls: decision?.prelim || null, history: rawHistory, hidden: [open].filter(hiddenOk), found: [...found], board,
+    level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage }, closing: ['close', 'stop'].includes(decision?.rule) || lesson0.stage === 'wrapup',
+  });
 
   return { status: 200, go: async (emit) => {
     emit(meta());
@@ -399,6 +448,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const raws = [];          // the model's steps as written, for validation in sequence
     let validated = 0;        // how many of the validated steps have been handled
     const dropped = []; const notes = []; const guard = []; const codeNotes = [];
+    let gateUsage = {}; const rewrites = []; let levelHeld = false; let ended = false;
     // Answers the child has not found: the open question, then any asked now (never one the child has found).
     const hidden = [open].filter(hiddenOk);
     let closed = false;       // pause_for_child / end_session sent, or the turn was stopped
@@ -448,14 +498,16 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       // The child is asked to shade, but nothing on the board can be shaded by them: the bar or circle is offered with the
       // shade control (12 Nov 2026, run 2, scenario 3: "shade them on the bar in the middle", and the child could not).
       if (!probe && !nod) { const offer = shadeOffer(board, sent, vopts); for (const x of offer) await send(x); if (offer.length) codeNotes.push('the child was asked to shade: the shade control was offered'); }
+      await endGate();
       if (!asked() && doing !== 'task') {
         const ask = sent.find((x) => x.cmd === 'ask');
         if (ask && /\?\s*$/.test(ask.prompt)) await speak(say(ask.prompt));
         else if (probe) {
-          // A probe always ends on a short question (12 Nov 2026, run 2: a probe cut for length left the child in silence).
-          const again = openPrompt && /\?\s*$/.test(openPrompt) && openPrompt.split(/\s+/).length <= 12 ? openPrompt : 'What do you think?';
-          await speak(say(saidAny ? again : `Take your time. ${again}`));
-        } else if (!nod || saidAny) { const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny }); for (const l of r.lines) await speak(say(l)); }
+          // A probe always ends on a short question (12 Nov 2026, run 2: a probe cut for length left the child in silence),
+          // and never the open question again word for word (step 0): the probe's own fact-built question.
+          const r = recoverLines({ probe, openPrompt, doing: lesson0.doing, ...recoverFacts });
+          for (const l of saidAny ? r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1) : r.lines) await speak(say(l));
+        } else if (!nod || saidAny) { const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts }); for (const l of r.lines) await speak(say(l)); }
       }
       closed = true;
       await send(handBackAs(doingNow(), sent));
@@ -466,6 +518,79 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     // Names it: tagged so, or opens with a yes, or opens with the child's own words ("Four pieces, yes.").
     const acknowledges = (st) => st.move === 'Name what was right' || /^(yes|yeah|right|correct|exactly|well done|good|great|nice|brilliant|perfect|that'?s right|that is right|you got it|you are right)\b/i.test(st.text)
       || (!!marked?.said && st.text.toLowerCase().split(/\s+/).slice(0, 5).join(' ').replace(/[^a-z' ]/g, '').includes(marked.said.toLowerCase()));
+
+    // After a hedged or one-word answer (decide: ack 'revoice'), no "yes": the child's words said back, then the reason
+    // asked for (PLAN_TO_FOUR.md step 4).
+    const revoice = decision?.ack === 'revoice';
+    const ackLine = () => (marked?.said ? (revoice ? `${marked.said.replace(/^./, (c) => c.toUpperCase())}, you said.` : `Yes, ${marked.said}.`) : (revoice ? 'You said it.' : 'Yes, that is right.'));
+    const noYes = (st) => {
+      if (!revoice || !confirms(st.text)) return st;
+      const text = st.text.replace(/^\s*(yes|yeah|yep|right|correct|exactly|that'?s right|that is right|good|great|well done|perfect|brilliant)\b[\s,!.]*/i, '').replace(/^./, (c) => c.toUpperCase());
+      codeNotes.push('gate: no "yes" to a hedged or one-word answer; the yes was taken off');
+      return text ? { ...st, text } : st;
+    };
+
+    // THE GATE (step 3): the habits checked before the child hears or sees a step the model wrote. A say that fails is
+    // rewritten once (gate.js) with the reason; the rewrite is checked again; if it fails too, the say is dropped (a
+    // hidden answer: the turn stops and recovers in context, as before). A figure labelled with the answer loses its label;
+    // board writing that gives an answer away is dropped. At most MAX_REWRITES rewrites a turn.
+    const MAX_REWRITES = 2;
+    const rewrite = async (st, flags, extra) => {
+      if (!callModel || rewrites.length >= MAX_REWRITES) return null;
+      const req = rewriteRequest({ model: settings.model, text: st.text, reasons: flags, child: message, brief, names, before: sent.filter((x) => x.cmd === 'say').map((x) => x.text) });
+      const r = await rewriteOnce(callModel, req);
+      gateUsage = addUsage(gateUsage, r.usage);
+      rewrites.push({ habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why });
+      if (!r.text) return null;
+      const st2 = { ...st, text: r.text };
+      if (stepFlags(st2, hctx, sent, { extra }).length) { rewrites[rewrites.length - 1].why = 'the rewrite failed its checks too'; return null; }
+      rewrites[rewrites.length - 1].ok = true;
+      return st2;
+    };
+    const FIGS = ['shape', 'fraction_bar', 'figure'];
+    // @returns the step to go on with, or null when it was dropped (or the turn stopped)
+    const gate = async (st, extra) => {
+      const flags = stepFlags(st, hctx, sent, { extra });
+      if (!flags.length) return st;
+      const why = flags.map((f) => `${f.habit}: ${f.reason}`).join('; ').slice(0, 300);
+      if (st.cmd === 'say') {
+        const fixed = await rewrite(st, flags, extra);
+        if (fixed) { codeNotes.push(`gate: rewritten (${why})`); if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true; return fixed; }
+        if (flags.some((f) => f.habit === 'giveaway' && /hidden answer/.test(f.reason))) { await stop('answer-leak'); return null; }
+        if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true;
+        drop(st, `gate: ${why}`, flags.some((f) => /inside its own question/.test(f.reason)) ? 'answer-in-question' : 'gate-dropped');
+        return null;
+      }
+      if (FIGS.includes(st.cmd) && flags.some((f) => f.habit === 'giveaway')) {
+        codeNotes.push(`gate: ${why}; the label was taken off`);
+        st = st.cmd === 'figure' ? { ...st, params: { ...st.params, label: false } } : { ...st, label: false };
+      } else if (['write_text', 'write_math'].includes(st.cmd) && flags.some((f) => f.habit === 'giveaway')) { drop(st, `gate: ${why}`, 'gate-dropped'); return null; }
+      if (flags.some((f) => f.habit === 'level_jump')) {
+        // The sentence that brought in harder numbers was rewritten or dropped: its picture and question go with it.
+        if (levelHeld && (FIGS.includes(st.cmd) || st.cmd === 'number_line' || st.cmd === 'ask')) { drop(st, `gate: ${why}`, 'gate-level'); return null; }
+        codeNotes.push(`gate: ${why} (noted)`);
+      }
+      return st;
+    };
+    // The checks only the whole turn answers, once, before the hand-back: "yes" to a hedged answer with no question about
+    // the reason gets that question, from the child's own words, when the turn has asked nothing else.
+    const endGate = async () => {
+      if (ended || !gateOn) return;
+      ended = true;
+      // After an unsure or one-word right answer the reason is always asked (decide: ack 'revoice'), once.
+      const says = sent.filter((x) => x.cmd === 'say');
+      if (revoice && !probe && !asked() && !says.some((x) => asksReason(x.text))) {
+        await speak({ cmd: 'say', text: marked?.said ? `What made you say ${marked.said}?` : 'What made you say that?', move: 'Press for reasoning' });
+        codeNotes.push('gate: an unsure or one-word answer, and no question about the reason: the reason was asked');
+      }
+      for (const f of endFlags(sent, hctx)) {
+        if (f.habit === 'confirm_hedged' && !asked() && !probe) {
+          const w = marked?.said || null;
+          await speak({ cmd: 'say', text: w ? `What made you say ${w}?` : 'What made you say that?', move: 'Press for reasoning' });
+          codeNotes.push(`gate: ${f.reason}; the reason was asked`);
+        } else codeNotes.push(`gate: ${f.reason} (noted)`);
+      }
+    };
 
     // The answer-in-question check, against the sealed answers only. `extra`: an answer about to be sealed (the next ask).
     const aiqText = (steps) => visibleText(visible(steps)).map((x) => x.text).join(' ');
@@ -520,6 +645,16 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
           hidden.push(it);
         }
       }
+      if (gateOn && fromModel.has(st) && ['say', 'write_text', 'write_math', 'shape', 'fraction_bar', 'figure', 'number_line'].includes(st.cmd)) {
+        const g = await gate(st, extra);
+        if (!g) return;
+        if (g !== st) fromModel.add(g);
+        st = g;
+      } else if (gateOn && st.cmd === 'ask' && levelHeld) {
+        const g = await gate(st, extra);
+        if (!g) return;
+        st = g;
+      }
       if (visible([st]).length) {
         const leak = checkTurnText(visible([...sent, st]), hidden);
         if (!leak.ok) { console.warn('voice-tutor: answer leak', leak.reasons.slice(0, 2)); await stop('answer-leak'); return; }
@@ -536,7 +671,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         // After a right answer: name it first, in the child's words.
         if (!acked) {
           acked = true;
-          if (!acknowledges(st)) { await speak({ cmd: 'say', text: cleanText(marked?.said ? `Yes, ${marked.said}.` : 'Yes, that is right.').text.slice(0, LIMITS.say), move: 'Name what was right' }); codeNotes.push('the code named what was right first: the model\'s first sentence did not'); }
+          st = noYes(st);
+          if (!acknowledges(st) || (revoice && confirms(st.text))) { await speak({ cmd: 'say', text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: 'Name what was right' }); codeNotes.push('the code named what was right first: the model\'s first sentence did not'); }
         }
         // Short turns: past the limit the tutor stops talking; a short question at the end of the sentence is kept.
         const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS;
@@ -562,6 +698,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         const sayable = ask && /\?\s*$/.test(ask.prompt);
         if (!saidAny && !sayable) { await stop('invalid-turn'); return; }
         if (sayable && !asked()) await speak(say(ask.prompt));
+        await endGate();
         if (!probe) { const offer = shadeOffer(board, sent, vopts); for (const x of offer) await send(x); if (offer.length) { st = { ...st, doing: 'task' }; codeNotes.push('the child was asked to shade: the shade control was offered'); } }
       }
       await send(st);
@@ -600,7 +737,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     // Nothing usable said: the tutor carries on in context. Said something but did not hand back: hand back.
     if (!closed && !saidAny && !(nod && sent.length === 0)) await stop('invalid-turn');
     await finish();
+    // The turn's call and its rewrites, billed as one.
+    usage = addUsage(usage, gateUsage);
     const cost = costOf(settings.model, usage);
+    if (rewrites.length) codeNotes.push(`gate: ${rewrites.length} rewrite${rewrites.length === 1 ? '' : 's'} (${rewrites.map((r) => `${r.habits.join('+')} ${r.ok ? 'ok' : `failed${r.why ? `: ${r.why}` : ''}`} in ${r.ms} ms`).join(', ')})`);
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
     // What the tutor learned about the child, and, at the end of the lesson, the note and the report. Never fails the turn.

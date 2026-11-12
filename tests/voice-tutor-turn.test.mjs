@@ -122,7 +122,7 @@ test('the answer is marked on the server from the seal, with the misconception i
   assert.equal(await unseal(await seal({ a: 1 }, SECRET, 0), SECRET, { now: 10 * 60 * 60 * 1000 }), null);
 });
 
-test('streamed: a sentence that gives the answer away is never sent; the turn stops there and carries on in context', async () => {
+test('streamed: a sentence that gives the answer away is never sent; one rewrite is tried, and when it fails the turn stops there and carries on in context', async () => {
   // 2 is a single character, which the shared guard skips as too collision-prone; use a two-digit answer.
   const ask12 = await seal({ session: SID, child: 'u-parent', ask: 'q9', item: { kind: 'typed', cskill: EQ, question: '3/4 = ?/16', answer: '12', accepts: ['12'], wrong: [] } }, SECRET, 1_800_000_000_000);
   const leak12 = reply([
@@ -134,12 +134,16 @@ test('streamed: a sentence that gives the answer away is never sent; the turn st
   const db = world();
   const callModel = model(leak12);
   const r = await turn({ db, callModel, body: { message: '7', answer: { seal: ask12, response: '7' } } });
-  assert.equal(callModel.calls.length, 1, 'no retry: what was said stays said');
+  // The gate (PLAN_TO_FOUR.md step 3) asks for one rewrite of that sentence only; the fake's reply is not a rewrite, so
+  // the sentence is dropped and the turn recovers. What was said stays said.
+  assert.equal(callModel.calls.length, 2, 'one targeted rewrite, no more');
+  assert.equal(callModel.calls[1].max_tokens, 300, 'the rewrite request is small');
+  assert.match(callModel.calls[1].messages[0].content[0].text, /The sentence: "Three quarters is 12 sixteenths\."/);
   assert.ok(r.body.guard.includes('answer-leak'));
   assert.equal(r.body.steps[0].text, 'Not quite. Let us look again.', 'the clean sentence before it was sent');
   assert.doesNotMatch(JSON.stringify(r.body.steps), /12|Well done/, 'neither the leak nor anything after it');
   // After a wrong answer, having already spoken: the one diagnosing question, never "say that again".
-  assert.deepEqual(r.body.steps.slice(1).map((x) => x.text || x.cmd), ['How did you get that?', 'pause_for_child']);
+  assert.deepEqual(r.body.steps.slice(1).map((x) => x.text || x.cmd), ['Tell me how you got that.', 'pause_for_child']);
   assert.ok(db.usage[0].cost_usd > 0, 'every token is still billed');
   // The check covers everything said so far in the turn, not only the newest sentence.
   const split = reply([{ cmd: 'say', text: 'Think of twelve.' }, { cmd: 'write_math', id: 'm', expr: 'frac(3,4) = frac(12,16)', slot: 'top' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
@@ -433,9 +437,9 @@ test('only an understood answer is independent evidence; a reason given later up
 });
 
 test('a move outside the allowed set is noted for the tester, and the turn still plays', async () => {
-  const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Great! Now a harder one.', move: 'Stretch the quick child' }, HAND])), body: { message: '2', answer: { seal: await sealQ1(), response: '2' } } });
-  assert.equal(r.body.steps[0].text, 'Great! Now a harder one.');
-  assert.match(r.body.tester.kept.join(' '), /"Stretch the quick child" was not allowed this turn \(press/);
+  const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Two, yes. Now a harder one.', move: 'Stretch the quick child' }, HAND])), body: { message: '2 because two halves', answer: { seal: await sealQ1(), response: '2 because two halves' } } });
+  assert.equal(r.body.steps[0].text, 'Two, yes. Now a harder one.');
+  assert.match(r.body.tester.kept.join(' '), /"Stretch the quick child" was not allowed this turn \(fresh-check/);
 });
 
 test('a silence probe: the reason and the exact step shape in the context, a short turn, the same cached prompt', async () => {
@@ -497,7 +501,9 @@ test('the child\'s spoken right answer is marked right, named first, and no long
     assert.equal(r.body.marked.correct, true, said);
     assert.equal(r.body.marked.canon, '1/2');
     assert.ok(!r.body.guard.includes('answer-leak'), `${said}: saying the child's own answer back is not a leak`);
-    assert.equal(r.body.steps[0].text, 'Yes, one half: one of two equal pieces.');
+    // No "yes" to a one-word answer with no reason ("a half"): the yes is taken off (PLAN_TO_FOUR.md step 4).
+    const oneWord = ['a half', 'two quarters', 'four eighths'].includes(said);
+    assert.equal(r.body.steps[0].text, oneWord ? 'One half: one of two equal pieces.' : 'Yes, one half: one of two equal pieces.', said);
     assert.deepEqual(r.body.lesson.found, ['1/2']);
     assert.match(callModel.calls[0].messages[0].content[0].text, /Your first say is Name what was right/);
   }
@@ -595,10 +601,18 @@ test('after a care reply: a silence gets an authored line, never the model and n
 });
 
 test('a stopped turn recovers in context: what was asked, what the child did; never "say that again"', () => {
-  assert.deepEqual(recoverLines({ rule: 'press', marked: { correct: true, said: 'one half' } }).lines, ['Yes, one half.', 'How did you know?']);
-  assert.deepEqual(recoverLines({ rule: 'diagnose', marked: { correct: false } }).lines, ['Thank you for telling me.', 'How did you get that?']);
-  assert.deepEqual(recoverLines({ rule: 'stage', openPrompt: 'How many pieces are there now?' }).lines, ['Let me ask you again. How many pieces are there now?']);
-  assert.deepEqual(recoverLines({ probe: { kind: 'task_checkin' }, doing: 'task' }), { lines: ['Take your time.', 'Tell me when you are done.'], doing: 'task' });
+  // Built from facts, never a stock sentence (PLAN_TO_FOUR.md step 0).
+  assert.deepEqual(recoverLines({ rule: 'press', marked: { correct: true, said: 'one half' } }).lines, ['Yes, one half.', 'What made you say one half?']);
+  assert.deepEqual(recoverLines({ rule: 'press', marked: { correct: true, said: 'one half' }, ack: 'revoice' }).lines, ['One half, you said.', 'What made you say one half?']);
+  assert.deepEqual(recoverLines({ rule: 'diagnose', marked: { correct: false }, message: 'two sixths' }).lines, ['You said two sixths.', 'Tell me how you got that.']);
+  assert.deepEqual(recoverLines({ rule: 'diagnose', marked: { correct: false } }).lines, ['How did you work it out?']);
+  assert.deepEqual(recoverLines({ rule: 'stage', openPrompt: 'How many pieces are there now?' }).lines, ['How many pieces are there now?']);
+  assert.deepEqual(recoverLines({ probe: { kind: 'task_checkin' }, doing: 'task', turnIndex: 1, board: [{ cmd: 'fraction_bar', id: 'b', parts: 4 }] }), { lines: ['Take your time with the bar.', 'Tell me when you are done.'], doing: 'task' });
+  assert.deepEqual(recoverLines({ rule: 'lost', openPrompt: 'What fraction is shaded?', board: [{ cmd: 'shape', id: 'c', kind: 'circle', parts: 4 }] }).lines, ['That is okay.', 'How many equal parts is the circle cut into?']);
+  assert.deepEqual(recoverLines({ rule: 'close', found: ['1/2', '2/4'] }).lines, ['Today you found one half and two quarters.', 'What is one thing you will remember?']);
+  // A line with no fact to carry changes with the turn: never the same twice running.
+  assert.notDeepEqual(recoverLines({ rule: 'thinking', turnIndex: 4 }).lines, recoverLines({ rule: 'thinking', turnIndex: 5 }).lines);
+  for (const rule of ['diagnose', 'change', 'question', 'stage', null]) assert.doesNotMatch(recoverLines({ rule, message: 'why?', openPrompt: 'How many?' }).lines.join(' '), /thank you for telling me|good question|let me ask you again/i, `${rule}`);
   assert.deepEqual(recoverLines({ rule: 'open' }).lines, [DISCLOSURE, 'Today we will find fractions that are the same amount.', 'Have you ever shared a chapati with someone?']);
   assert.equal(recoverLines({ rule: 'stop' }).end.cmd, 'end_session');
   assert.equal(recoverLines({ rule: 'care' }).doing, 'talk');
@@ -628,7 +642,8 @@ test('the system prompt is the same bytes every turn, and carries the new rules'
   const p = systemPrompt(LIB);
   assert.equal(p, systemPrompt(LIB));
   assert.match(p, /Bad: "Now I cut each half again, into four equal pieces\. How many pieces are there now\?" Good: "Now I cut each half again\. How many pieces are there now\?"/);
-  assert.match(p, /After a right answer, your first sentence says yes and names it in the child's own words/);
+  assert.match(p, /After a right answer given with a reason, your first sentence names it in the child's own words/);
+  assert.match(p, /After an unsure or one-word right answer, no yes yet/);
   assert.match(p, /never \{"cmd":"say","say":"\.\.\."\}/);
   assert.match(p, /never ask about shaded parts when none are shaded/);
 });

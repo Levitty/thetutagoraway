@@ -121,7 +121,7 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
       session_id: sid, child_id: CHILD.id, skill: sc.skill || null,
       message, heard, answer: open?.seal && message ? { seal: open.seal, response: message } : null,
       snapshot: null, snapshots_taken: 0, ink_cells: [], board: boardSummary(board), figures: figureNotes(board),
-      history: session.transcript.map((h) => ({ who: h.who, text: h.text })),
+      history: session.transcript.map((h) => ({ who: h.who, text: h.text, turn: h.turn })),
       elapsed_s: Math.round(clock / 1000), turn_index: session.turns, phase: session.phase,
       voice: false, audio_in_s: 0,
       pace: { level: session.pace.level, repeat: session.pace.repeat, reason: session.pace.reason },

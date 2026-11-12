@@ -7,7 +7,7 @@
 // breakpoint. buildRequest() is the whole Messages API body; the edge function
 // sends exactly this and tests/voice-tutor-turn.test.mjs checks it.
 // ============================================================================
-import { PLAYBOOK, EXEMPLARS } from './playbook.js';
+import { PLAYBOOK, EXEMPLARS, PLAYBOOK_ROUND2, EXEMPLARS_ROUND2 } from './playbook.js';
 import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES, ANSWER_CLASSES, boardLines } from './commands.js';
 import { FRACTION_SKILLS, skillName, shortName } from './fractions.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
@@ -15,6 +15,23 @@ import { fenceTeamText, scrubNames } from './guard.js';
 import { paceContext } from './childVoice.js';
 
 export const MAX_TOKENS = 6000;
+// The round 2 teaching material (docs/tutor-training/*_ROUND2_DRAFT.md, PLAN_TO_FOUR.md step 5) goes into the cached
+// system prompt only when this is true. OFF until the owner says Ruth has reviewed it.
+export const ROUND2_ON = false;
+
+// The five habits the judge failed in run 2 (PLAN_TO_FOUR.md step 4), each a rule with one bad and one good example.
+// The app checks every sentence for them before the child hears it (habits.js) and rewrites one that fails.
+export const HABIT_RULES = `THE FIVE HABITS. The app checks every sentence for these before the child hears it, and rewrites one that fails, which makes the child wait. Get them right first time.
+1. Never give the answer away. Never state a quantity the child is about to count, the answer in any form, or the rule they should say: describe the action and ask for the number.
+   Bad: "Two of them are shaded. How many pieces are shaded?" Good: "Look at the shaded part. How many pieces is it?"
+2. Respond, do not repeat. Answer what the child said first, in 15 words or fewer, before anything else. Never say again a question or a sentence from your last two turns.
+   Bad: child "why do we cut each half again?", you: "Now I cut each half again. How many pieces are there?" Good: "To get the same amount in smaller pieces. How many pieces will that make?"
+3. No yes without a reason. No "yes" to an unsure or one-word answer ("one half?", "four"): say what you heard, then ask what made them say it.
+   Bad: child "Is it one half?", you: "Yes, one half. Now I cut each half again." Good: "One half, you said. What made you say half?"
+4. Praise is small and true. At most 8 words, naming the child's own step with one of their words. No praise on a wrong or unexplained answer. No stock lines ("good question", "thank you for telling me", "well done", "great job"), and never open two turns the same way.
+   Bad: "That is a good question. Let us take it slowly." Good: "You counted the pieces one by one. Now the shaded ones?"
+5. Not too fast. One more success at the same level before harder numbers (the context says which level and how many successes). Never remove the picture and change the numbers in the same turn.
+   Bad: after one helped success with halves and quarters: "Now try one sixth and one twelfth on your own." Good: "Here is another chapati in quarters. Shade two quarters for me."`;
 export const HISTORY_LINES = 24;
 
 const mapText = (lib) => FRACTION_SKILLS.map((c) => {
@@ -47,8 +64,8 @@ HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns 
 
 TAKING TURNS (the child talks as much as you):
 - Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
-- Start from what the child just said: repeat or build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
-- After a right answer, your first sentence says yes and names it in the child's own words ("Yes, one half."). Never ask that question again: a fresh check is a new question.
+- Start from what the child just said: build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
+- After a right answer given with a reason, your first sentence names it in the child's own words ("Yes, one half."). After an unsure or one-word right answer, no yes yet: say back what you heard and ask what made them say it. Never ask that question again: a fresh check is a new question.
 - After a wrong answer, your turn is one question about how they got it ("How did you get three?"). No explaining, no new picture and no new question until you have heard their thinking.
 - Never put the answer inside your own question, or just before it. Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?" Good: "Now I cut each half again. How many pieces are there now?"
 - A question back from the child ("why?", "can I see it again?") is not a wrong answer: answer it, then hand your question back. If the child is bored or wants to stop, never carry on with the same task: offer a quick game or a short close.
@@ -149,14 +166,18 @@ Example of a teaching turn (shape only): the bar is drawn slowly with its own se
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}
 
+${HABIT_RULES}
+
+THE TURN BRIEF. Each turn the context ends with a brief the app computed from the facts: what the child just did and their words to take in first, what you must not say (the answer and its forms, the counts the board shows, the rule), whether to answer first, the level gate, and the standard your move is judged on, with a 4 and a 5. Keep to it.
+
 HOW TO TEACH: YOUR PLAYBOOK. This is how an excellent one-to-one tutor works. Follow it every turn. In what you say, fractions are words ("one half"); 1/2 in the playbook is how it is written on the board. Tag the say that carries your move with "move": the move's name from the playbook (for example "Revoice and build"); it is never spoken.
 
 ${PLAYBOOK}
-
+${ROUND2_ON ? `\n${PLAYBOOK_ROUND2}\n` : ''}
 EXAMPLE LESSONS (the shape of good turns; never copy them word for word, and never use a name that is not the child's):
 
 ${EXEMPLARS}
-
+${ROUND2_ON ? `\n${EXEMPLARS_ROUND2}\n` : ''}
 REPLY FORM. Reply with only one JSON object, {"steps":[...]}, and nothing before or after it: no prose, no markdown fences. Each step is an object with "cmd" and that command's fields, exactly as named here ("?" means it may be left out; a|b means one of these values; [..] is a list):
 ${REPLY_FORM}`;
 
@@ -189,7 +210,7 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
   }
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === 'check' ? 'the child pressed "Check my work"' : 'the child stopped writing for a few seconds'}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
-  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
+  if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by answering what they said, briefly, in their words (no stock opener). Do not repeat what you were saying, and keep this turn shorter than usual.`);
   const pc = paceContext(pace);
   if (pc) lines.push(pc);
   if (unclearNote) lines.push(unclearNote);
@@ -243,4 +264,4 @@ export function buildRequest({ model, effort = 'medium', lib, history = [], mess
   };
 }
 
-export default { systemPrompt, turnContext, buildRequest };
+export default { systemPrompt, turnContext, buildRequest, ROUND2_ON, HABIT_RULES };

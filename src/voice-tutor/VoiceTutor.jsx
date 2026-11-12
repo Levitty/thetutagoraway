@@ -339,7 +339,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       board: boardNow,
       // What the child did with the figures they could handle, in plain words (src/draw/observe.js).
       figures: figureNotes(boardRef.current),
-      history: s.transcript.map((h) => ({ who: h.who, text: h.text })),
+      history: s.transcript.map((h) => ({ who: h.who, text: h.text, turn: h.turn })),
       elapsed_s: Math.round((clock() - startedAt.current) / 1000), turn_index: s.turns, phase: s.phase,
       // The voice, priced into the caps on the server: will the words be spoken, and how much the child spoke.
       voice: !!providers.current.tts.hasAudio && !silentVoice.current && mode === 'remote', audio_in_s: audioS,

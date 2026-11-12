@@ -578,7 +578,11 @@ var settingsFrom = (get = () => void 0) => ({
   ttsVoice: get("VOICE_TUTOR_TTS_VOICE") || DEFAULT_SETTINGS.ttsVoice,
   ttsSpeed: Math.max(0.6, Math.min(1.5, num(get("VOICE_TUTOR_TTS_SPEED"), DEFAULT_SETTINGS.ttsSpeed))),
   ttsEmotion: ["neutral", "calm", "content", "sad", "angry", "none"].includes(get("VOICE_TUTOR_TTS_EMOTION")) ? get("VOICE_TUTOR_TTS_EMOTION") : DEFAULT_SETTINGS.ttsEmotion,
-  ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate
+  ttsSampleRate: [16e3, 22050, 24e3, 44100].includes(num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0)) ? num(get("VOICE_TUTOR_TTS_SAMPLE_RATE"), 0) : DEFAULT_SETTINGS.ttsSampleRate,
+  // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
+  gate: get("VOICE_TUTOR_GATE") !== "0",
+  // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
+  matchedExamples: get("VOICE_TUTOR_MATCHED_EXAMPLES") === "1"
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
   if (sessionUsd >= s.sessionCapUsd) return { ok: false, reason: "session-cap" };

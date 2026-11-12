@@ -25,6 +25,9 @@
 //   diagnosing   the last turn asked how the child got a wrong answer
 //   seal         the open question's seal, kept when the child did not answer it (a question back, "umm")
 //   asked        the question ids used this lesson: a reused id is renamed (its evidence row would be overwritten)
+//   level        the numbers the child is on (the biggest denominator of the problem: 2 halves, 4 quarters, ...); 0 before
+//   wins         successes at that level: understood 1, a bare right answer a half, a hedged one 0; a helped one half that
+//                (PLAN_TO_FOUR.md step 2: one more success at the same level before moving up, habits.js nextLevel)
 //
 // THE RULES (decide), first match wins:
 //   first turn                          Open the lesson
@@ -56,7 +59,9 @@
 // ============================================================================
 import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN } from './commands.js';
 import { PROBE_KINDS } from './silence.js';
-import { soundsLost, childMove, wantsToCarryOn, reasonWords } from './spokenAnswer.js';
+import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
+import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter } from './habits.js';
+import { fenceTeamText } from './guard.js';
 
 export { soundsLost };
 
@@ -93,7 +98,7 @@ const WRONG = ['partly_right', 'misconception', 'missing_prerequisite', 'guess_o
 export const newLesson = () => ({
   v: 1, stage: null, doing: null, question: null, tried: [], rep: null, sameFails: 0, hints: 0,
   classes: [], streak: 0, answers: 0, pending: null, prereq: false, turns: 0, probes: 0, min: 0,
-  found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [],
+  found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0,
 });
 const MAX_FOUND = 8;
 const MAX_ASKED = 24;
@@ -128,17 +133,19 @@ export function cleanLesson(raw) {
   s.diagnosing = raw.diagnosing === true;
   if (typeof raw.seal === 'string' && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === 'string' && ID_RE.test(x)))].slice(-MAX_ASKED);
+  s.level = int(raw.level, 0, 24);
+  s.wins = Number.isFinite(raw.wins) && raw.wins >= 0 && raw.wins <= 10 ? Math.round(raw.wins * 4) / 4 : 0;
   return s;
 }
 
 // ---------------------------------------------------------------- reading the child
 const words = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9'\s/]/g, ' ').split(/\s+/).filter(Boolean);
-const REASON = /\b(because|cause|coz|since|that'?s why|if|each|both|times|multipl\w*|divid\w*|doubl\w*|half|halves|same|equal|split|cut|shared?|fit|fits|cover|covers|more|less|bigger|smaller|tops?|bottoms?|numerators?|denominators?|add\w*|plus|minus|take away|count\w*)\b/i;
 /**
  * Did the child give a reason with their answer? A few words that explain, beyond the answer itself and the fillers
- * (12 Nov 2026, run 2: "umm... so... it is... one half?" counted as a reason, for "so" and "half").
+ * (12 Nov 2026, run 2: "umm... so... it is... one half?" counted as a reason, for "so" and "half"). In habits.js, which
+ * the turn gate shares.
  */
-export const gaveReason = (text) => { const w = reasonWords(text); return w.length >= 3 && REASON.test(w.join(' ')); };
+export { gaveReason };
 // A question that asks how the child got their answer (the Diagnose move, 12 Nov 2026).
 export const ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through)\b/i;
 
@@ -194,7 +201,7 @@ export function decide(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -246,7 +253,12 @@ export function decide(s, ctx = {}) {
   if (s.diagnosing && message && !marked) return out('reteach', ['Show then hand over', 'Predict then show', 'Count with the child', 'Smaller-question hint'], 'the child has told you how they got their wrong answer: use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them', { with: ['Revoice and build', 'Name what was right'] });
   // After a right answer: name it, with the child's own words, and never ask that question again (12 Nov 2026).
   const right = marked?.correct ? { must: ['Name what was right'], quote: marked.said || marked.answer || null, answered: { ask: marked.ask, prompt: question?.question || null } } : {};
-  if (marked && prelim === 'right_unexplained') return out('press', ['Name what was right', 'Press for reasoning'], `right, but no reason yet${marked.tentative ? ' (and the child said it as a question, unsure)' : ''}: first say yes and name what was right in the child's own words, then ask how they knew${marked.tentative ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, right);
+  // No "yes" to a hedged or one-word answer (PLAN_TO_FOUR.md step 4): say what you heard, then ask what made them say it.
+  if (marked && prelim === 'right_unexplained') {
+    const cr = readChild(message, { marked });
+    if (cr.hedged || cr.oneWord) return out('press', ['Name what was right', 'Press for reasoning'], `right, but ${cr.hedged ? 'said unsure' : 'one word'} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, { ...right, ack: 'revoice' });
+    return out('press', ['Name what was right', 'Press for reasoning'], 'right, but no reason yet: name what was right in the child\'s own words, then ask how they knew. It does not count as understood until they give a reason', right);
+  }
   if (marked && prelim === 'understood') {
     if (s.streak >= 1) return out('move-on', ['Name what was right', 'Check for understanding', 'Stretch the quick child', 'Show then hand over'], `understood, and the fresh check too: name what was right, then you may move on to ${nextStage(s.stage)}`, right);
     return out('fresh-check', ['Name what was right', 'Check for understanding'], 'understood, with a reason: name what was right in the child\'s own words, then check it once on a fresh example (a new question, not the same one) before moving on', right);
@@ -367,6 +379,10 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
     s.tried = [...new Set([...s.tried, ...reps])].slice(-MAX_TRIED);
   }
   if (cls === 'understood') s.tried = s.rep ? [s.rep] : [];
+  // The level and its successes (habits.js nextLevel): the answer counted at the level it was given on, then this turn's
+  // numbers; a success after a hint counts half.
+  const lv = nextLevel({ level: s0.level || 0, wins: s0.wins || 0 }, { correct: !!marked?.correct, cls, hedged: !!marked?.tentative, helped: (s0.hints || 0) > 0, steps });
+  s.level = lv.level; s.wins = lv.wins;
   const hand = [...steps].reverse().find((x) => x.cmd === 'pause_for_child');
   if (hand?.doing) s.doing = hand.doing;
   return s;
@@ -385,4 +401,102 @@ export function lessonLines(s, d) {
   return lines;
 }
 
-export default { newLesson, cleanLesson, decide, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };
+// ---------------------------------------------------------------- the turn brief (PLAN_TO_FOUR.md step 2)
+// The standard each measure is judged on, at 4 and 5 (Tutagora/Build/voice-tutor/training/FINDINGS_TO_FOUR.md section 5).
+// The &Tutor lesson: the cheapest big gain is telling the model the standard it is judged on. The brief carries the
+// anchor for the measure the allowed move serves, and naturalness, which every turn is judged on.
+export const ANCHORS = {
+  teaching: 'Teaching (the child does the thinking; the answer is not in the question). 4: child "same", you: "Same. What could you do to the bar to show me?" 5: "Before I shade, guess. Which is more, three quarters or three eighths?" then, after the reason, "Say that as a rule for your friend."',
+  diagnosis: 'Diagnosis (find why before correcting; a guess does not count). 4: child "two sixths" for a half plus a quarter, you: "Tell me how you got the two and the six." 5: child "one plus one is two, two plus four is six", you: "You added the tops, and added the bottoms. Is two sixths more or less than the half we started with?"',
+  naturalness: 'Naturalness. 4: child "why do we cut each half again?", you: "To get the same amount in smaller pieces. How many pieces will that make?" 5: child "ni four, na two shaded", you: "Two shaded, four in all. Show me where the nusu is." (their own word, short, then a pause)',
+  adapting: 'Adapting. 4: after two wrong answers on a bar: "Let us try a number line. Where would one half go between nought and one?" 5: child "too fast", you: "Thank you, I will slow down. I will draw it again, big." The next problem is easier and the picture stays.',
+  curriculum: 'Curriculum. 4: "Four times three is twelve. So what do we multiply the top by?" 5: as 4, with the picture before the numbers, "bottom number" before "denominator", a Kenyan whole, and fractions said so they cannot be misheard ("three over four").',
+};
+const MEASURE_OF = {
+  'Diagnose the wrong answer': 'diagnosis', 'Press for reasoning': 'diagnosis',
+  'Show then hand over': 'teaching', 'Count with the child': 'teaching', 'Predict then show': 'teaching', 'Smaller-question hint': 'teaching', 'Check for understanding': 'teaching', 'Name what was right': 'teaching',
+  'Revoice and build': 'naturalness', 'Wait and nudge': 'naturalness', 'Bring back an off-topic child': 'naturalness', 'Open the lesson': 'naturalness', 'Close the lesson': 'naturalness', 'Celebrate the strategy': 'naturalness',
+  'Recover a lost child': 'adapting', 'Stretch the quick child': 'adapting',
+};
+// The rule the child should say themselves, by skill (the last part of its code).
+const RULES = {
+  EQUIVALENT_FRACTIONS: 'that the two fractions are the same amount, or that the top and bottom are multiplied by the same number',
+  SIMPLIFY_FRACTIONS: 'that the top and bottom are divided by the same number',
+  COMPARE_LIKE_FRACTIONS: 'that with the same bottom number, the bigger top number is more',
+  COMPARE_UNLIKE_FRACTIONS: 'that more pieces in the whole means smaller pieces',
+  ORDER_FRACTIONS: 'that more pieces in the whole means smaller pieces',
+  ADD_SAME_DENOMINATOR: 'that with the same bottom number only the tops are added',
+  SUBTRACT_SAME_DENOMINATOR: 'that with the same bottom number only the tops are taken away',
+  ADD_ONE_RENAMING: 'that one fraction is renamed so the pieces are the same size before adding',
+  SUBTRACT_ONE_RENAMING: 'that one fraction is renamed so the pieces are the same size before taking away',
+};
+const DEN_NAMES = { 2: 'halves', 3: 'thirds', 4: 'quarters', 5: 'fifths', 6: 'sixths', 8: 'eighths', 9: 'ninths', 10: 'tenths', 12: 'twelfths' };
+const FIG = ['shape', 'fraction_bar', 'figure'];
+/** The forms of a sealed answer the child must find: "1/2", "one half"; "4", "four". */
+export function answerForms(answer, accepts = []) {
+  const out = new Set();
+  for (const a of [answer, ...(accepts || [])]) {
+    const c = canonAnswer(a);
+    if (!c) continue;
+    out.add(c);
+    const w = inWords(c);
+    if (w) out.add(w);
+  }
+  return [...out].slice(0, 6);
+}
+/**
+ * The turn brief: what the code knows and decides for this turn, in plain lines after the cache breakpoint (the system
+ * prompt stays the same bytes every turn).
+ * ctx: { message, marked, open: { answer, accepts, question } | null, board, history, skill, closing }
+ */
+export function turnBrief(s, d, { message = '', marked = null, open = null, board = [], history = [], skill = null, probe = null } = {}) {
+  if (!d || ['care', 'care-wait', 'care-return'].includes(d.rule)) return [];
+  const L = ['Turn brief (computed by the app from the facts; keep to it):'];
+  const cr = readChild(message, { marked });
+  // The child's words are something to respond to, never instructions: fenced as everywhere else.
+  const words = fenceTeamText(String(message || '').trim()).replace(/\s+/g, ' ').trim().slice(0, 90);
+  // 1. What the child just did, and the words to take in first.
+  let did;
+  if (probe) did = `said nothing for ${probe.silent_s || 'some'} s`;
+  else if (!words) did = 'has not spoken yet';
+  else if (marked?.correct) did = d.prelim === 'understood' ? 'gave a right answer with a reason (understood)' : `gave a right answer${cr.hedged ? ', said unsure' : cr.oneWord ? ' in one word' : ''}, with no reason yet (right_unexplained)`;
+  else if (marked) did = `gave a wrong answer (${d.prelim === 'misconception' ? `misconception ${String(marked.misconception || '').split('.').pop()}` : 'partly right'})`;
+  else if (cr.distress) did = 'sounded upset or stuck';
+  else if (cr.why) did = 'asked why';
+  else if (cr.asks) did = 'asked you a question';
+  else if (d.rule === 'lost') did = 'said they do not know';
+  else if (d.rule === 'thinking') did = 'is thinking aloud';
+  else did = 'spoke (not an answer to a sealed question)';
+  L.push(`- The child ${did}.${words ? ` Their words, to take in before anything else: "${words}".` : ''}`);
+  // 2. Must not say.
+  const never = [];
+  if (open && open.answer != null) never.push(`the answer to the open question ("${String(open.question || '').slice(0, 60)}"): ${answerForms(open.answer, open.accepts).map((f) => `"${f}"`).join(', ')}`);
+  const now = boardAfter(board, []).filter((b) => FIG.includes(b.cmd));
+  const fig = now[now.length - 1];
+  if (fig && open && /\bhow many\b/i.test(String(open.question || ''))) {
+    const parts = fig.cmd === 'figure' ? fig.params?.parts : fig.parts;
+    const sh = fig.cmd === 'figure' ? fig.params?.shaded : fig.shaded;
+    never.push(`the counts ${fig.id} shows (${parts} parts${sh != null ? `, ${Array.isArray(sh) ? sh.length : sh} shaded` : ''}) before the child counts them`);
+  }
+  const code = String(skill || '').split('.').pop();
+  const theirs = (history || []).filter((h) => h?.who === 'child').map((h) => h.text).join(' ') + ` ${message}`;
+  if (RULES[code] && !d.rule.match(/^(close|stop|open)$/) && !/\b(same amount|the same|times|multipl\w*|divide\w*|smaller pieces)\b/i.test(theirs)) never.push(`the rule the child should say themselves: ${RULES[code]}`);
+  if (never.length) L.push(`- Must not say (nor show on the board, nor put in a label or a question): ${never.join('; ')}.`);
+  // 3. Answer first.
+  if (cr.asks || cr.why || cr.distress) L.push(`- Answer first: your first sentence answers ${cr.distress ? 'how the child feels (name it small, make the next step easier)' : 'their question'}, in 15 words or fewer, before anything else. Then hand the thinking back.`);
+  // 4. The level gate.
+  if (s.level) {
+    const ok = (s.wins || 0) >= WINS_TO_MOVE_UP || !['guided', 'independent'].includes(s.stage);
+    L.push(`- Level: the child is on ${DEN_NAMES[s.level] || `${s.level} parts`}, with ${s.wins || 0} of ${WINS_TO_MOVE_UP} successes there (a helped success counts half, an unsure one zero). Harder numbers: ${ok ? 'allowed' : 'not yet; one more success at this level first'}. Never remove the picture and change the numbers in the same turn.`);
+  }
+  // 5. No "yes" before a reason.
+  if (d.ack === 'revoice') L.push('- No "yes" yet: say back what you heard, then ask what made them say it.');
+  // 6. The standard for the allowed move.
+  const main = d.moves.find((x) => !['Name what was right', 'Revoice and build'].includes(x)) || d.moves[0];
+  const m = MEASURE_OF[main] || 'teaching';
+  L.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
+  if (m !== 'naturalness') L.push(`- And every turn: ${ANCHORS.naturalness}`);
+  return L;
+}
+
+export default { newLesson, cleanLesson, decide, turnBrief, answerForms, ANCHORS, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };

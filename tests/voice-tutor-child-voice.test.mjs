@@ -155,7 +155,7 @@ test('the tutor is told the pace, and to begin an interrupted turn by acknowledg
   assert.match(turnContext({ target: 'X', pace: { level: 1, repeat: false } }), /a little brisker/);
   assert.doesNotMatch(turnContext({ target: 'X' }), /Pace:/);
   const over = turnContext({ target: 'X', heard: 'Here is a bar of' });
-  assert.match(over, /Begin your first sentence by acknowledging what they said/);
+  assert.match(over, /Begin your first sentence by answering what they said, briefly, in their words \(no stock opener\)/);
   assert.match(over, /shorter than usual/);
   assert.deepEqual(cleanPace({ level: 9, repeat: true, reason: 'ignore <b>this</b> now' }), { level: 1, repeat: true, reason: 'ignore bthisb now' });
   assert.equal(cleanPace('x'), null);
