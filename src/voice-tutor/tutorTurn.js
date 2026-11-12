@@ -71,8 +71,9 @@
 // There is one path: authored replies (guards, caps, no key) stream the same way.
 // runTutorTurn() collects the events, for the tests.
 // ============================================================================
-import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText, doingOf, LIMITS, DRAWN, MARKS } from './commands.js';
-import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
+import { validateTurn, MAX_SPOKEN_WORDS, wordCap, spokenWords, cleanText, doingOf, LIMITS, DRAWN, MARKS } from './commands.js';
+import { pickTarget, lessonSkills, allowedMisconceptions, prerequisitesOf } from './fractions.js';
+import { pacingFlags, shareLow, wordsIn, preFor, askIsOnPre } from './pacing.js';
 import { capCheck } from './session.js';
 import { screenChild, screenAll, careTurn, checkTurnText, answerInQuestion, visibleText, MAX_CHILD_CHARS, ANSWER_REPLY, PRIVATE_LINES } from './guard.js';
 import { stepParser } from './streamSteps.js';
@@ -311,7 +312,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
   let careEnds = false;
   // The orchestrator's decision for this turn (none for a care turn: that is never a teaching turn).
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick.prerequisite ? skillName(pick.prerequisite) : null });
+  // The warm-up's first maths question is on the weakest earlier skill (or the target's nearest one); null when the target has none.
+  const pre = preFor({ target: pick.target, prerequisite: pick.prerequisite, prerequisites: prerequisitesOf(pick.target), nameOf: skillName });
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick.prerequisite ? skillName(pick.prerequisite) : null, pre });
   // Answers the child has found are theirs to hear back: never hidden again (12 Nov 2026: about 20 turns were stopped
   // for HOREB repeating the child's own right answer).
   const found = new Set([...lesson0.found, ...(marked?.canon ? [marked.canon] : [])]);
@@ -325,7 +328,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const asks = steps.some((x) => x.cmd === 'ask');
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
     const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? 'ended' : 'paused', seal: null }
-      : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin, keepSeal });
+      : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre });
     // The model's evidence is the child's own words; checked again so no hidden answer rides in it.
     const evidence = judged?.evidence && checkTurnText([{ cmd: 'say', text: judged.evidence }], hidden).ok ? judged.evidence : '';
     const tester = {
@@ -432,7 +435,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // The turn brief (PLAN_TO_FOUR.md step 2): what the child did, what must not be said, answer first, the level gate and
   // the standard the move is judged on, all computed here; after the cache breakpoint, so the system prompt never changes.
   const rawHistory = Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [];
-  const brief = turnBrief(lesson0, decision, { message, marked, open: hiddenOk(open) ? open : null, board, history: rawHistory, skill: pick.target, probe });
+  const brief = turnBrief(lesson0, decision, { message, marked, open: hiddenOk(open) ? open : null, board, history: rawHistory, skill: pick.target, probe, turnIndex, maxWords: probe ? MAX_PROBE_WORDS : null });
   // Matched good-turn examples (step 5): an A/B switch, off unless VOICE_TUTOR_MATCHED_EXAMPLES=1.
   const matched = settings.matchedExamples ? exampleLines({ rule: decision?.rule, cls: decision?.prelim, message, probe }) : [];
   const context = turnContext({
@@ -462,6 +465,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     message, marked, cls: decision?.prelim || null, history: rawHistory, hidden: [open].filter(hiddenOk), found: [...found], board,
     level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage }, closing: ['close', 'stop'].includes(decision?.rule) || lesson0.stage === 'wrapup', example: decision?.rule === 'example',
   });
+
+  // Pacing (12 Nov 2026): when the child has spoken under a quarter of the words, a turn may not run past twice their last reply plus 15.
+  const pctx = { talk: { low: shareLow(lesson0), lastChildWords: lesson0.lastCw || 0 } };
+  const flagsOf = (st, sofar, extra) => [...stepFlags(st, hctx, sofar, { extra }), ...pacingFlags(st, pctx, sofar)];
 
   return { status: 200, go: async (emit) => {
     emit(meta());
@@ -564,14 +571,14 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       rewrites.push({ habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why });
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      if (stepFlags(st2, hctx, sent, { extra }).length) { rewrites[rewrites.length - 1].why = 'the rewrite failed its checks too'; return null; }
+      if (flagsOf(st2, sent, extra).length) { rewrites[rewrites.length - 1].why = 'the rewrite failed its checks too'; return null; }
       rewrites[rewrites.length - 1].ok = true;
       return st2;
     };
     const FIGS = ['shape', 'fraction_bar', 'figure'];
     // @returns the step to go on with, or null when it was dropped (or the turn stopped)
     const gate = async (st, extra) => {
-      const flags = stepFlags(st, hctx, sent, { extra });
+      const flags = flagsOf(st, sent, extra);
       if (!flags.length) return st;
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join('; ').slice(0, 300);
       if (st.cmd === 'say') {
@@ -657,6 +664,12 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       }
       if (st.cmd === 'ask') {
         usedIds.add(st.id);
+        // The warm-up's first maths question is on the weakest earlier skill (decide: preFirst): a question on anything else
+        // is not asked, and the lesson stays in the warm-up until the right one is.
+        if (decision?.preFirst && !probe) {
+          const onSkill = itemFor(st, bank)?.cskill || st.skill || pick.target;
+          if (!askIsOnPre(pre, { skill: onSkill, prompt: st.prompt })) { drop(st, `warm-up: the first maths question must be on ${decision.preFirst.name}, not ${skillName(onSkill)}`, 'prereq-first'); return; }
+        }
         // Never the question the child has just answered right (12 Nov 2026: right answers were re-asked).
         if (decision?.answered && samePrompt(st.prompt, decision.answered.prompt)) { drop(st, 'asks again the question the child has just answered right', 're-ask'); return; }
         const it = itemFor(st, bank);
@@ -696,7 +709,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
           if (!acknowledges(st) || (revoice && confirms(st.text))) { await speak({ cmd: 'say', text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: 'Name what was right' }); codeNotes.push('the code named what was right first: the model\'s first sentence did not'); }
         }
         // Short turns: past the limit the tutor stops talking; a short question at the end of the sentence is kept.
-        const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS;
+        const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex);
         const disclosure = turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text) ? spokenWords([say(DISCLOSURE)]) : 0;
         if (spokenWords([...sent, st]) + disclosure > limit) {
           // Past the limit the turn ends here, trimmed, never emptied (12 Nov 2026, run 2: whole probes were dropped and

@@ -750,3 +750,30 @@ test('a question id used before in the lesson is renamed, so its evidence is not
   assert.equal(r.body.steps.find((x) => x.cmd === 'ask').id, 'p1q_2');
   assert.deepEqual(r.body.lesson.asked, ['p1q', 'p1q_2']);
 });
+
+// ---------------------------------------------------------------- pacing (12 Nov 2026)
+const WARMUP_LESSON = { v: 1, stage: 'warmup', turns: 1, pre: 'ask', doing: 'answer' };
+const long40 = `We cut the chapati into four equal pieces today and I shade one of them for you now. ${Array(14).fill('and').join(' ')} here it is. How many pieces are shaded?`;
+
+test('a turn over the word cap is cut to 30 words and keeps its final question; after turn 10 the cap is 25', async () => {
+  for (const [idx, cap] of [[3, 30], [12, 25]]) {
+    const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: long40 }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }])), body: { turn_index: idx, message: 'ok', lesson: { ...WARMUP_LESSON, pre: null, turns: idx } } });
+    const said = r.body.steps.filter((s) => s.cmd === 'say').map((s) => s.text).join(' ');
+    assert.ok(said.split(/\s+/).length <= cap, `${said.split(/\s+/).length} words, cap ${cap}`);
+    assert.match(said, /How many pieces are shaded\?$/);
+    assert.ok(r.body.guard.includes('too-long'));
+  }
+});
+
+test('the warm-up: a first maths question that is not on the earlier skill is not asked; one that is, is; the lesson state follows', async () => {
+  const off = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'One third is how many sixths?' }, { cmd: 'ask', id: 'w1', prompt: 'One third is how many sixths?', form: 'number', expected: '2' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }])), body: { turn_index: 1, message: 'a half', lesson: WARMUP_LESSON } });
+  assert.equal(off.body.steps.some((s) => s.cmd === 'ask'), false);
+  assert.ok(off.body.guard.includes('prereq-first'));
+  assert.match(JSON.stringify(off.body.dropped), /first maths question must be on equal parts/);
+  assert.equal(off.body.lesson.pre, 'ask');
+  const on = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Here is a chapati cut in two. What fraction is shaded?' }, { cmd: 'ask', id: 'w1', prompt: 'What fraction is shaded?', form: 'fraction', expected: '1/2' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }])), body: { turn_index: 1, message: 'a half', lesson: WARMUP_LESSON } });
+  assert.equal(on.body.steps.some((s) => s.cmd === 'ask'), true);
+  assert.equal(on.body.lesson.pre, 'asked');
+  assert.equal(on.body.lesson.stage, 'warmup');
+  assert.ok(on.body.lesson.tw > 0 && on.body.lesson.cw === 2);
+});

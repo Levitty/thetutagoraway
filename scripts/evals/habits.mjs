@@ -17,6 +17,7 @@ import { readFileSync, readdirSync, existsSync, writeFileSync, statSync } from '
 import { join, resolve, basename } from 'node:path';
 import { HABITS, HABIT_NAMES, turnFlags, habitContext, habitsOf, nextLevel, readChild } from '../../src/voice-tutor/habits.js';
 import { canonAnswer } from '../../src/voice-tutor/spokenAnswer.js';
+import { replayRun, pacingReport } from './pacing-replay.mjs';
 import { matchedDrift, driftByBand, driftByThirds, lessonStats, runStats, statsReport, shareByThirds } from './conversation-stats.mjs';
 // Not imported from api.mjs: that reads the API key, and this script never needs one.
 export const RUNS_DIR = '/Users/mutualevity/Desktop/Tutagora/Build/voice-tutor/evals/runs';
@@ -125,7 +126,7 @@ export function scoreRun(dir) {
     keySteps: counted.filter((t) => t.flags.some((f) => /key step/.test(f.reason))).length,
     honesty: counted.filter((t) => t.flags.some((f) => /claims a feeling|promises or invites a secret/.test(f.reason))).length,
     lateRule: { repeat: strictCounted.filter((t) => t.habits.includes('repeat')).length, any: strictCounted.filter((t) => t.habits.length).length },
-    bands: driftByBand(scenarios, HABITS), matched: matchedDrift(scenarios), lessons, stats: runStats(lessons),
+    bands: driftByBand(scenarios, HABITS), matched: matchedDrift(scenarios), lessons, stats: runStats(lessons), pacing: replayRun(parsed),
     // The long lessons, by thirds (scenario 41 and any other of 20 or more tutor turns).
     thirds: scenarios.filter((s) => s.turns.length >= 20).map((s) => ({ scenario: s.scenario, title: s.title, habits: driftByThirds(s), talk: shareByThirds(parsed.find((p) => p.scenario === s.scenario)) })),
   };
@@ -165,6 +166,7 @@ export function report(runs, { spot = 0 } = {}) {
   L.push('');
   for (const r of runs) L.push(`${r.run}: of the giveaway turns, ${r.keySteps} are a key intermediate step said for the child (the new check, for example "same bottom number needed"); ${r.honesty} tutor turns claim a feeling or promise a secret.`, '');
   L.push(...statsReport(runs, HABITS, HABIT_NAMES));
+  L.push(...pacingReport(runs));
   for (const r of runs) L.push(`${r.run}: with the live gate's late-lesson rule (the repeat check over the last four tutor turns after turn 10, not two) the yardstick would flag ${r.lateRule.repeat} repeat turns instead of ${r.total.repeat.turns}, and ${r.lateRule.any} turns in all instead of ${r.flaggedTurns}.`, '');
   for (const r of runs) {
     for (const t of r.thirds) L.push(`Scenario ${t.scenario} (${t.title}) by thirds of the lesson: habits flagged ${t.habits.map((x) => `${x.flagged} of ${x.turns} (${x.rate}%)`).join(' | ')}; child share of words ${t.talk.map((x) => `${x.sharePct}%`).join(' | ')}; tutor words a turn ${t.talk.map((x) => x.tutorWordsPerTurn).join(' | ')}.`, '');
@@ -196,7 +198,7 @@ if (isMain) {
   const dirs = (names.length ? names : BASELINE_RUNS).map((n) => (existsSync(n) && statSync(n).isDirectory() ? resolve(n) : join(RUNS_DIR, n)));
   const runs = dirs.map(scoreRun);
   if (flag('--json')) {
-    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge, keySteps: r.keySteps, honesty: r.honesty, lateRule: r.lateRule, bands: r.bands, matched: r.matched, stats: r.stats, thirds: r.thirds })), null, 2));
+    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge, keySteps: r.keySteps, honesty: r.honesty, lateRule: r.lateRule, bands: r.bands, matched: r.matched, stats: r.stats, thirds: r.thirds, pacing: { bands: r.pacing.bands, total: r.pacing.total, share: r.pacing.share, prereq: r.pacing.prereq } })), null, 2));
   } else {
     const text = report(runs, { spot });
     console.log(text);

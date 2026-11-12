@@ -716,7 +716,11 @@ export function doingOf(steps = []) {
  * `nod`: after a picture taken because the child paused, the tutor may only nod
  * (a turn that is just pause_for_child) and let them carry on.
  */
-export const MAX_SPOKEN_WORDS = 45;   // a turn is short: say a little, then wait for the child (owner, 11 Nov; 12 Nov: "verbal slop and a lot of it")
+export const MAX_SPOKEN_WORDS = 30;   // a turn is short: say a little, then wait for the child (owner, 11 Nov; 12 Nov: "verbal slop and a lot of it"; 45 -> 30 on 12 Nov after the yardstick: the child spoke 23-26% of the words)
+export const LATE_SPOKEN_WORDS = 25;  // after tutor turn 10 the turns get no longer (habits rose from 37-39% of turns 1-10 to 50-59% of turns 11-20)
+export const LATE_AFTER_TUTOR_TURN = 10;
+/** The word limit of one normal turn: 30, and 25 after tutor turn 10 (turnIndex counts from 0, so turn 11 is index 10). */
+export const wordCap = (turnIndex = 0) => (Number(turnIndex) >= LATE_AFTER_TUTOR_TURN ? LATE_SPOKEN_WORDS : MAX_SPOKEN_WORDS);
 export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];

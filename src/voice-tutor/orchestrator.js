@@ -62,7 +62,8 @@
 //
 // Pure. Tested in tests/voice-tutor-orchestrator.test.mjs.
 // ============================================================================
-import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN } from './commands.js';
+import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN, MAX_SPOKEN_WORDS, wordCap } from './commands.js';
+import { wordsIn, talkShare, shareLow, overtalkLimit, explainedTurn, handoverMoves, HANDOVER_RULES } from './pacing.js';
 import { PROBE_KINDS } from './silence.js';
 import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
 import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor } from './habits.js';
@@ -105,7 +106,11 @@ export const newLesson = () => ({
   v: 1, stage: null, doing: null, question: null, tried: [], rep: null, sameFails: 0, hints: 0,
   classes: [], streak: 0, answers: 0, pending: null, prereq: false, turns: 0, probes: 0, min: 0,
   found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0, changedFails: 0, examples: 0,
+  cw: 0, tw: 0, lastCw: 0, explain: 0, pre: null,
 });
+// The warm-up's first maths question (owner, 12 Nov 2026): 'ask' = it must be asked, 'asked' = waiting for the child's answer, 'done' = answered (right or wrong); null = nothing to check first.
+const PRE_STATES = ['ask', 'asked', 'done'];
+export const PRE_GIVE_UP_TURNS = 5;  // a lesson that has not got its first prerequisite question out by now carries on (the model is not left to deadlock the lesson)
 const MAX_FOUND = 8;
 const MAX_ASKED = 24;
 const CARE = ['paused', 'ended'];
@@ -136,6 +141,8 @@ export function cleanLesson(raw) {
   if (Array.isArray(raw.found)) s.found = [...new Set(raw.found.filter((x) => typeof x === 'string' && x.length > 0 && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   if (CARE.includes(raw.care)) s.care = raw.care;
   s.stops = int(raw.stops, 0, 20);
+  s.cw = int(raw.cw, 0, 50000); s.tw = int(raw.tw, 0, 50000); s.lastCw = int(raw.lastCw, 0, 500); s.explain = int(raw.explain, 0, 50);
+  if (PRE_STATES.includes(raw.pre)) s.pre = raw.pre;
   s.diagnosing = raw.diagnosing === true;
   if (typeof raw.seal === 'string' && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === 'string' && ID_RE.test(x)))].slice(-MAX_ASKED);
@@ -190,11 +197,13 @@ export const isIndependent = (cls) => cls === 'understood';
 // ---------------------------------------------------------------- the stages
 const nextStage = (stage) => (stage == null ? 'warmup' : PHASES[Math.min(PHASES.length - 1, PHASES.indexOf(stage) + 1)]);
 /** The furthest stage the lesson may be in after this turn (going back is always allowed). */
-export function stageAllowed(s, { understoodNow = false, closing = false } = {}) {
+export function stageAllowed(s, { understoodNow = false, closing = false, preNow = false } = {}) {
   if (closing) return 'wrapup';
   const st = s.stage;
   if (st == null) return 'warmup';
   if (st === 'wrapup') return 'wrapup';
+  // The teach part waits for the warm-up's first question (the weakest earlier skill) to be answered, right or wrong.
+  if (st === 'warmup' && (s.pre === 'ask' || (s.pre === 'asked' && !preNow))) return st;
   if (st === 'warmup' || st === 'teach') return s.answers >= 1 || understoodNow ? nextStage(st) : st;
   // guided and independent: understood, then a fresh check (two in a row).
   return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
@@ -205,11 +214,11 @@ export function stageAllowed(s, { understoodNow = false, closing = false } = {})
  * ctx: { turnIndex, elapsedMin, sessionMinutes, marked, message, probe: {kind}|null, prerequisite }
  * @returns {{ moves:string[], with:string[], rule:string, reason:string, stageMax:string, avoid:string|null, prelim:string|null }}
  */
-export function decide(s, ctx = {}) {
+function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -283,6 +292,28 @@ export function decide(s, ctx = {}) {
   return out('stage', STAGE_MOVES[st], `the ${st} part of the lesson`);
 }
 
+const PRE_RULES = ['stage', 'question', 'lost', 'tentative', 'reteach', 'change', 'prerequisite'];
+/**
+ * The moves allowed this turn and why: the stage rules (decideCore), then two pacing rules (12 Nov 2026):
+ *  - after a turn that explained or showed and asked nothing, the next turn hands over first (a "you try" or "tell me why/how");
+ *  - in the warm-up, until the child has answered it, the first maths question is on the weakest earlier skill.
+ * ctx adds { pre: { skill, name } | null } (pacing.js preFor). The result carries `handover` and `preFirst: { skill, name } | null`.
+ */
+export function decide(s, ctx = {}) {
+  const d = { ...decideCore(s, ctx), handover: false, preFirst: null };
+  if ((s.explain || 0) >= 1 && HANDOVER_RULES.includes(d.rule)) {
+    d.moves = handoverMoves(d.rule);
+    d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
+    d.handover = true;
+    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing: this turn hands over first, a "you try" or a "tell me why or how", before any more explaining`;
+  }
+  if (s.pre === 'ask' && ctx.pre && (s.stage == null || s.stage === 'warmup') && PRE_RULES.includes(d.rule) && (ctx.turnIndex || 0) >= 1) {
+    d.preFirst = { skill: ctx.pre.skill || null, name: ctx.pre.name };
+    d.reason = `${d.reason}. The first maths question is on the earlier skill (${d.preFirst.name}), and the target idea waits until the child has answered it`;
+  }
+  return d;
+}
+
 // ---------------------------------------------------------------- what the model did
 /** The representations a turn drew: a bar, a circle, a number line, ... */
 export function repsOf(steps = []) {
@@ -325,6 +356,7 @@ export function judgeTurn(decision, steps = [], { fromModel = null, authored = f
   for (const m of authored ? [] : decision.must || []) {
     if (!allTags.some((t) => norm(t) === norm(m))) notes.push(`"${m}" was required this turn and no say carried it`);
   }
+  if (decision.handover && !authored && says.length && explainedTurn(steps)) notes.push('this turn was to hand over (a "you try" or "tell me why or how") and it explained again without asking the child anything');
   if (decision.rule === 'diagnose') {
     const says = steps.filter((x) => x.cmd === 'say');
     if (!says.some((x) => ASKS_HOW.test(x.text))) notes.push('the diagnose turn did not ask how the child got their answer');
@@ -337,9 +369,21 @@ export function judgeTurn(decision, steps = [], { fromModel = null, authored = f
  * The state after the turn.
  * t: { decision, steps (sent), judged: finalClass() | null, marked, probe, elapsedMin }
  */
-export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null } = {}) {
+export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false } = {}) {
   const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...(s0.found || [])] };
   s.turns += 1;
+  // Who talks: words said so far by each side, the child's last reply, and the tutor's turns in a row that explained
+  // or showed without handing over (pacing.js). A silent probe counts the tutor's words but is not an explaining turn.
+  s.cw = Math.min(50000, (s0.cw || 0) + (probe ? 0 : childWords));
+  s.tw = Math.min(50000, (s0.tw || 0) + steps.filter((x) => x.cmd === 'say').reduce((n, x) => n + wordsIn(x.text), 0));
+  s.lastCw = Math.min(500, childWords);
+  if (!probe && steps.some((x) => x.cmd === 'say') && !['care', 'care-wait', 'care-return', 'close', 'stop', 'open'].includes(decision?.rule)) s.explain = explainedTurn(steps) ? Math.min(50, (s0.explain || 0) + 1) : 0;
+  // The warm-up's first maths question: required from the hello on, asked once, answered once (right or wrong; wrong
+  // sends the lesson down the earlier-skill path).
+  if (s0.turns === 0 && preNeeded && s.pre == null) s.pre = 'ask';
+  if (s.pre === 'asked' && marked) { s.pre = 'done'; if (!marked.correct) s.prereq = true; }
+  if (s.pre === 'ask' && s0.turns >= 1 && !probe && steps.some((x) => x.cmd === 'ask')) s.pre = 'asked';
+  if (s.pre === 'ask' && s.turns >= PRE_GIVE_UP_TURNS) s.pre = 'done';
   if (marked?.correct && marked.canon) s.found = [...new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
   if (decision?.rule === 'care-return') s.care = null;
   if (decision?.rule === 'bored') s.stops += 1;
@@ -466,7 +510,7 @@ export function answerForms(answer, accepts = []) {
  * prompt stays the same bytes every turn).
  * ctx: { message, marked, open: { answer, accepts, question } | null, board, history, skill, closing }
  */
-export function turnBrief(s, d, { message = '', marked = null, open = null, board = [], history = [], skill = null, probe = null } = {}) {
+export function turnBrief(s, d, { message = '', marked = null, open = null, board = [], history = [], skill = null, probe = null, turnIndex = 0, maxWords = null } = {}) {
   if (!d || ['care', 'care-wait', 'care-return'].includes(d.rule)) return [];
   const L = ['Turn brief (computed by the app from the facts; keep to it):'];
   const cr = readChild(message, { marked });
@@ -515,6 +559,12 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
   }
   // 5. No "yes" before a reason.
   if (d.ack === 'revoice') L.push('- No "yes" yet: say back what you heard, then ask what made them say it.');
+  // 5b. Pacing (12 Nov 2026): the word budget, the hand-over after explaining, the child's share of the talk, the warm-up's first question.
+  const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));
+  L.push(`- Word budget this turn: at most ${budget} words in all, then wait for the child. Every word over is cut, and the question at the end is what is kept.`);
+  if (d.handover) L.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing. This turn asks them to try the next step, or to tell you why or how, before you explain anything more.`);
+  if (shareLow(s)) L.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
+  if (d.preFirst) L.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : 'a question about that idea, with no picture of the target'}. Do not start on the target idea until the child has answered it, right or wrong.`);
   // 6. The standard for the allowed move.
   const main = d.moves.find((x) => !['Name what was right', 'Revoice and build'].includes(x)) || d.moves[0];
   const m = MEASURE_OF[main] || 'teaching';
