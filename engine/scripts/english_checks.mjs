@@ -1,6 +1,7 @@
 // ============================================================================
-// THE CHECKS EVERY ENGLISH QUESTION FAMILY MUST PASS, reviewed or not.
-// Used by the quality gate (engine/scripts/quality_gate.mjs) and tests/english-g5.test.mjs.
+// THE CHECKS EVERY WORD-ANSWER QUESTION FAMILY MUST PASS, reviewed or not (registry entries with checks: 'text': English Grade 5 today).
+// Used by the quality gate (engine/scripts/quality_gate.mjs) and tests/english-g5.test.mjs. The subject, grade, map and id prefix
+// of a family come from its subject registry entry (content/subjects/), so a new word-answer subject-grade is checked with no edit here.
 // The Maths checks (family_checks.mjs) are about numbers; these are about words:
 //   - the family is tagged to a real Grade 5 English skill and one of its official outcomes
 //   - exactly one answer is right, the marker agrees, and no named mistake is marked right
@@ -14,37 +15,42 @@
 // A family stays off for children (reviewed: false) until a teacher signs it off.
 // ============================================================================
 import { drawFamily, FORMS } from '../../src/ai-tutor/content/families/core.js';
-import { ENGLISH_FAMILIES } from '../../src/ai-tutor/content/families/english.js';
-import { SKILLS_E5, OUTCOMES_E5 } from '../../src/ai-tutor/content/curriculumMap.english.g5.js';
+import { SUBJECT_GRADES, entryOfFamily } from '../../src/ai-tutor/content/subjects/registry.js';
 import { checkTextAnswer as marks } from '../../src/ai-tutor/answerCheckText.js';
 import { tidyProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { precheckItem, readingStats } from '../../scripts/lib/item-precheck.mjs';
 
-export { ENGLISH_FAMILIES };
+const TEXT_ENTRIES = SUBJECT_GRADES.filter(e => e.checks === 'text');
+/** Every family of the word-answer subject-grades. */
+export const TEXT_FAMILIES = TEXT_ENTRIES.flatMap(e => e.families);
+export const ENGLISH_FAMILIES = TEXT_ENTRIES.filter(e => e.subject === 'english').flatMap(e => e.families);
 export const ENGLISH_DRAWS = 120;
 const AMERICAN = /\b(color|colorful|meter|meters|liter|center|centers|favorite|gray|neighbor|neighbors|traveled|traveling|realize|organize|recognize|practice (the|a)\b|mom)\b/i;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u;
 const FK_CAP = 7;
 
-const codesNear = (cskill) => {
-  const sub = SKILLS_E5[cskill]?.sub;
-  return new Set(Object.values(SKILLS_E5).filter(k => k.sub === sub).flatMap(k => k.mis));
+const codesNear = (cskill, skills) => {
+  const sub = skills[cskill]?.sub;
+  return new Set(Object.values(skills).filter(k => k.sub === sub).flatMap(k => k.mis));
 };
 
 export function checkEnglishFamily(def, draws = ENGLISH_DRAWS) {
   const out = [];
   const fail = (msg) => { if (out.length < 8) out.push(`${def.id}: ${msg}`); };
-  const ck = SKILLS_E5[def.cskill];
-  if (!ck) { fail(`cskill ${def.cskill} is not in the English Grade 5 map`); return out; }
-  if (!OUTCOMES_E5[def.outcome]) fail(`unknown outcome ${def.outcome}`);
+  const entry = entryOfFamily(def);
+  if (!entry) { fail(`cskill ${def.cskill} is in no subject registry entry`); return out; }
+  const SKILLS = entry.map.skills, OUTCOMES = entry.map.outcomes;
+  const ck = SKILLS[def.cskill];
+  if (!ck) { fail(`cskill ${def.cskill} is not in the ${entry.name} Grade ${entry.grade} map`); return out; }
+  if (!OUTCOMES[def.outcome]) fail(`unknown outcome ${def.outcome}`);
   else if (!ck.outcomes.includes(def.outcome)) fail(`outcome ${def.outcome} is not an outcome of ${def.cskill}`);
-  if (def.subject !== 'english' || def.grade !== 5) fail('needs subject english, grade 5');
-  if (!String(def.id).startsWith('eng5.')) fail('id must start with eng5.');
+  if (def.subject !== entry.subject || def.grade !== entry.grade) fail(`needs subject ${entry.subject}, grade ${entry.grade}`);
+  if (entry.idPrefix && !String(def.id).startsWith(entry.idPrefix)) fail(`id must start with ${entry.idPrefix}`);
   if (def.reviewed !== false && def.reviewed !== true) fail('reviewed must be true or false');
   if (![1, 2, 3].includes(def.rung)) fail(`rung must be 1, 2 or 3, not ${def.rung}`);
   if (!FORMS.includes(def.form)) fail(`form must be one of ${FORMS.join(', ')}`);
   if (!def.kind) fail('needs a kind (its structure)');
-  const near = codesNear(def.cskill);
+  const near = codesNear(def.cskill, SKILLS);
   const checkMis = (list, where) => {
     for (const m of list) {
       const ms = [].concat(m.mis || []);
@@ -76,7 +82,7 @@ export function checkEnglishFamily(def, draws = ENGLISH_DRAWS) {
       if (s.longest > 22) fail(`passage "${p.passage.title}" has a sentence of ${s.longest} words`);
       if (p.passage.text.length > 1100) fail(`passage "${p.passage.title}" is too long for a phone`);
     }
-    for (const f of precheckItem(p, { grade: 5, family: true })) if (f.level === 'hard') fail(`precheck (${f.id}): ${f.message}`);
+    for (const f of precheckItem(p, { grade: entry.grade, family: true })) if (f.level === 'hard') fail(`precheck (${f.id}): ${f.message}`);
 
     if (p.shownSteps) {
       const bad = (p.workingTruth || []).filter(ok => !ok).length;
@@ -119,7 +125,7 @@ export function checkEnglishFamily(def, draws = ENGLISH_DRAWS) {
 }
 
 // Within a skill: every family has its own structure (kind), and there are at least two.
-export function checkEnglishForms(families = ENGLISH_FAMILIES) {
+export function checkTextForms(families = ENGLISH_FAMILIES, skills = null) {
   const out = [], ids = new Set(), by = new Map();
   for (const f of families) {
     if (ids.has(f.id)) out.push(`${f.id}: duplicate id`);
@@ -131,8 +137,11 @@ export function checkEnglishForms(families = ENGLISH_FAMILIES) {
     for (const k of new Set(kinds.filter((x, i) => kinds.indexOf(x) !== i))) out.push(`${skill}: two families share the structure "${k}"`);
     if (new Set(kinds).size < 2) out.push(`${skill}: needs at least two families of different structure`);
   }
-  for (const c of Object.keys(SKILLS_E5)) if (!by.has(c)) out.push(`${c}: a skill with no family`);
+  for (const c of Object.keys(skills || {})) if (!by.has(c)) out.push(`${c}: a skill with no family`);
   return out;
 }
+export const checkEnglishForms = (families = ENGLISH_FAMILIES) => checkTextForms(families, TEXT_ENTRIES.find(e => e.subject === 'english')?.map.skills);
 
-export const englishFailures = (draws = ENGLISH_DRAWS) => [...checkEnglishForms(), ...ENGLISH_FAMILIES.flatMap(f => checkEnglishFamily(f, draws))];
+/** Every failure of every word-answer subject-grade in the registry. */
+export const textFailures = (draws = ENGLISH_DRAWS) => TEXT_ENTRIES.flatMap(e => [...checkTextForms(e.families, e.map.skills), ...e.families.flatMap(f => checkEnglishFamily(f, draws))]);
+export const englishFailures = textFailures;

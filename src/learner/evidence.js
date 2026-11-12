@@ -12,7 +12,9 @@
 // written to skill_id as well as cskill until mastery.js reads cskill alone.
 // ============================================================================
 
-import { subjectOfCskill } from './subject.js';
+import { subjectOfCskill, SUBJECT_PREFIXES } from './subject.js';
+// An outcome code of a subject beyond Maths (SCIE., ENGL., ...): from the subject registry.
+const OUTCOME_PREFIX = new RegExp(`^(${Object.keys(SUBJECT_PREFIXES).filter(k => k !== 'MATH').join('|')})\\.`);
 
 export const SOURCES = ['practice', 'school_homework', 'school_exam', 'tutor', 'visual'];
 export const DIFFICULTIES = ['easy', 'medium', 'hard'];
@@ -31,7 +33,7 @@ export function practiceEvidence(ev) {
   if (DIFFICULTIES.includes(ev?.difficulty)) out.difficulty = ev.difficulty;
   // Science and English items also name the official outcome they test, so the roll-up by outcome works as it does for exams.
   // A Maths practice row is written exactly as before.
-  if (typeof ev?.outcome === 'string' && /^(SCIE|ENGL)\./.test(ev.outcome) && subjectOfCskill(ev.cskill) === subjectOfCskill(ev.outcome)) out.outcome_code = ev.outcome.slice(0, 120);
+  if (typeof ev?.outcome === 'string' && OUTCOME_PREFIX.test(ev.outcome) && subjectOfCskill(ev.cskill) === subjectOfCskill(ev.outcome)) out.outcome_code = ev.outcome.slice(0, 120);
   return out;
 }
 

@@ -12,7 +12,7 @@
 // Counts and codes only. The coverage is of what exists in the bank, reviewed or
 // not: no family is signed off yet, and the report says how many are live.
 // ============================================================================
-import { readFileSync, writeFileSync } from 'node:fs';
+import { readFileSync, writeFileSync, readdirSync } from 'node:fs';
 import { resolve, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
 
@@ -24,7 +24,7 @@ const { generateProblem } = await import(resolve(root, 'src/ai-tutor/problemGene
 const { FAMILIES } = await import(resolve(root, 'src/ai-tutor/content/families/index.js'));
 const { drawFamily, setFamilyMode, isOn } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
 const { SKILLS_G5 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g5.js'));
-const { SKILLS_SCI_G5 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.science.g5.js'));
+const { SUBJECT_ORDER, entriesOf } = await import(resolve(root, 'src/ai-tutor/content/subjects/registry.js'));   // subjects beyond Maths: one section each
 
 const JSON_ONLY = process.argv.includes('--json');
 const DRAWS = 40;
@@ -110,36 +110,49 @@ for (let g = 1; g <= 9; g++) {
     looseFamily: c(o => looseSubs.f.has(subOf(o.code))), looseSkill: c(o => looseSubs.s.has(subOf(o.code))), strict };
   rows.push(r); detail[g] = L;
 }
-// ---- Science and Technology, Grades 4 to 6 (families and skills exist for Grade 5 only) -----------------
-// Official outcomes from curriculum/science/g<N>.json. A Grade 5 outcome is covered by a family (cskill and outcome
-// code), a skill in the curriculum map (SKILLS_SCI_G5, which names its outcomes), misconception feedback on a drawn
-// wrong answer, and a worked example (every family served carries one). Attitude outcomes cannot be tested by a typed
-// or tapped answer, and hands-on outcomes ("demonstrate", "apply") need a practical: both are counted, not hidden.
+// ---- Every subject beyond Maths in the registry (Science today), every grade that has an official design file -------
+// Official outcomes from curriculum/<dir>/g<N>.json. An outcome is covered by a family (cskill and outcome code), a skill in
+// the curriculum map (which names its outcomes), misconception feedback on a drawn wrong answer, and a worked example (every
+// family served carries one). Attitude outcomes cannot be tested by a typed or tapped answer, and hands-on outcomes
+// ("demonstrate", "apply") need a practical: both are counted, not hidden. A subject whose entry names its own coverage
+// script (English: scripts/coverage-english.mjs, with its routes) is left to that script.
 const SCI_ATTITUDE = /^(appreciate|advocate|acknowledge|enjoy|value|develop (interest|a positive)|show (interest|appreciation))/i;
 const SCI_HANDS = /^(demonstrate|apply|carry out|make|construct|design|draw|plan|conduct)/i;
-const sci = {};
-for (const g of [4, 5, 6]) {
-  const j = JSON.parse(readFileSync(resolve(root, `curriculum/science/g${g}.json`), 'utf8'));
-  const list = [];
-  for (const sub of j.sub_strands) for (const o of sub.outcomes || []) list.push({ code: o.code, text: o.text, sub: sub.sub_strand, f: 0, s: 0, m: 0, w: 0, lib: 0, skills: [] });
-  sci[g] = { list, byCode: new Map(list.map(o => [o.code, o])) };
-}
+const SUBJECT_SECTIONS = [];
 setFamilyMode('all');
 console.warn = () => {};
-for (const f of FAMILIES.filter(x => x.subject === 'science')) {
-  const t = sci[5].byCode.get(f.outcome); if (!t) continue;
-  t.f++; t.w++; if (famFacts(f)) t.m++;
+for (const id of SUBJECT_ORDER) {
+  const entries = entriesOf(id);
+  if (entries.some(e => e.coverageScript)) continue;
+  const dir = entries[0].curriculumDir;
+  const gradesHere = readdirSync(resolve(root, `curriculum/${dir}`)).map(f => /^g(\d+)\.json$/.exec(f)?.[1]).filter(Boolean).map(Number).sort((a, b) => a - b);
+  const sci = {};
+  for (const g of gradesHere) {
+    const j = JSON.parse(readFileSync(resolve(root, `curriculum/${dir}/g${g}.json`), 'utf8'));
+    const list = [];
+    for (const sub of j.sub_strands) for (const o of sub.outcomes || []) list.push({ code: o.code, text: o.text, sub: sub.sub_strand, f: 0, s: 0, m: 0, w: 0, lib: 0, skills: [] });
+    sci[g] = { list, byCode: new Map(list.map(o => [o.code, o])) };
+  }
+  for (const e of entries) {
+    if (!sci[e.grade]) continue;
+    for (const f of e.families) {
+      const t = sci[e.grade].byCode.get(f.outcome); if (!t) continue;
+      t.f++; t.w++; if (famFacts(f)) t.m++;
+    }
+    for (const [code, k] of Object.entries(e.map.skills)) for (const o of k.outcomes) { const t = sci[e.grade].byCode.get(o); if (!t) continue; t.s++; t.skills.push(code.split('.').pop()); if (k.mis.length) t.lib++; }
+  }
+  const rowsOf = Object.entries(sci).map(([g, { list }]) => {
+    const c = (fn) => list.filter(fn).length;
+    const att = (o) => SCI_ATTITUDE.test(o.text.trim()), hands = (o) => SCI_HANDS.test(o.text.trim());
+    return { grade: Number(g), outcomes: list.length, family: c(o => o.f > 0), skill: c(o => o.s > 0), misfb: c(o => o.m > 0), worked: c(o => o.w > 0), lib: c(o => o.lib > 0), attitude: c(att), handsOn: c(o => hands(o) && !att(o)), testable: c(o => !att(o) && !hands(o)), testableCovered: c(o => !att(o) && !hands(o) && o.f > 0), none: c(o => !o.f && !o.s && !o.m && !o.w) };
+  });
+  SUBJECT_SECTIONS.push({ id, name: entries[0].name, shortName: entries[0].shortName, dir, prefix: entries[0].prefix, builtGrades: entries.map(e => e.grade), sci, rows: rowsOf });
 }
 console.warn = quiet; setFamilyMode('reviewed');
-for (const [code, k] of Object.entries(SKILLS_SCI_G5)) for (const o of k.outcomes) { const t = sci[5].byCode.get(o); if (!t) continue; t.s++; t.skills.push(code.split('.').pop()); if (k.mis.length) t.lib++; }
-const sciRows = Object.entries(sci).map(([g, { list }]) => {
-  const c = (fn) => list.filter(fn).length;
-  const att = (o) => SCI_ATTITUDE.test(o.text.trim()), hands = (o) => SCI_HANDS.test(o.text.trim());
-  return { grade: Number(g), outcomes: list.length, family: c(o => o.f > 0), skill: c(o => o.s > 0), misfb: c(o => o.m > 0), worked: c(o => o.w > 0), lib: c(o => o.lib > 0), attitude: c(att), handsOn: c(o => hands(o) && !att(o)), testable: c(o => !att(o) && !hands(o)), testableCovered: c(o => !att(o) && !hands(o) && o.f > 0), none: c(o => !o.f && !o.s && !o.m && !o.w) };
-});
+const sciRows = SUBJECT_SECTIONS.find(x => x.id === 'science')?.rows || [];   // kept for the JSON the test reads
 const tot = (k) => rows.reduce((s, r) => s + r[k], 0);
 const live = FAMILIES.filter(f => f.core || f.reviewed).length;
-if (JSON_ONLY) { console.log(JSON.stringify({ date: DATE, rows, science: sciRows, families: FAMILIES.length, familiesLive: live }, null, 1)); process.exit(0); }
+if (JSON_ONLY) { console.log(JSON.stringify({ date: DATE, rows, science: sciRows, subjects: Object.fromEntries(SUBJECT_SECTIONS.map(x => [x.id, x.rows])), families: FAMILIES.length, familiesLive: live }, null, 1)); process.exit(0); }
 
 // ---- the report ----------------------------------------------------------------
 const out = [];
@@ -180,19 +193,26 @@ for (let g = 1; g <= 9; g++) {
   for (const o of L) P(`| ${o.code.replace(`MATH.G${g}.`, '')} | ${o.f || '.'} | ${o.s || '.'} | ${o.m ? 'yes' : '.'} | ${o.w ? 'yes' : '.'} | ${o.lib ? 'yes' : '.'} | ${o.text.replace(/\|/g, '/').slice(0, 110)}${attitude(o) ? ' (attitude)' : ''} |`);
 }
 P();
-P('# Outcome coverage, Science and Technology Grades 4 to 6');
-P();
-P('Official outcomes come from `curriculum/science/g<N>.json` (KICD, word for word). Only **Grade 5** has skills, misconceptions and question families (written offline, all draft and switched off until a CBC science teacher signs them off). **Attitude** outcomes cannot be tested by a typed or tapped answer; **hands-on** outcomes (demonstrate, apply) need a practical, and the questions test the reasoning only. Columns: F family, S skill in the curriculum map, M misconception feedback on a drawn wrong answer, W worked example, L the skill has a misconception library entry.');
-P();
-P('| Grade | Outcomes | With a family | With a skill | With misconception feedback | With a worked example | With a library entry | Attitude | Hands-on | Testable (neither) | Testable with a family | With none of the four |');
-P('|---|---|---|---|---|---|---|---|---|---|---|---|');
-for (const r of sciRows) P(`| ${r.grade} | ${r.outcomes} | ${r.family} | ${r.skill} | ${r.misfb} | ${r.worked} | ${r.lib} | ${r.attitude} | ${r.handsOn} | ${r.testable} | ${r.testableCovered} | ${r.none} |`);
-P();
-P('### Science Grade 5 by outcome');
-P();
-P('| Outcome | F | S | M | W | L | Skills | Outcome text |');
-P('|---|---|---|---|---|---|---|---|');
-for (const o of [...sci[5].list].sort((a, b) => (!a.f && !a.s ? 0 : 1) - (!b.f && !b.s ? 0 : 1) || a.code.localeCompare(b.code))) P(`| ${o.code.replace('SCIE.G5.', '')} | ${o.f || '.'} | ${o.s || '.'} | ${o.m ? 'yes' : '.'} | ${o.w ? 'yes' : '.'} | ${o.lib ? 'yes' : '.'} | ${o.skills.join(', ') || '.'} | ${o.text.replace(/\|/g, '/').slice(0, 100)}${SCI_ATTITUDE.test(o.text.trim()) ? ' (attitude)' : SCI_HANDS.test(o.text.trim()) ? ' (hands-on)' : ''} |`);
+for (const sec of SUBJECT_SECTIONS) {
+  const gs = Object.keys(sec.sci).map(Number);
+  if (sec !== SUBJECT_SECTIONS[0]) P();
+  const built = sec.builtGrades.length === 1 ? `Only **Grade ${sec.builtGrades[0]}** has` : `**Grades ${sec.builtGrades.join(', ')}** have`;
+  P(`# Outcome coverage, ${sec.name} Grades ${gs[0]} to ${gs[gs.length - 1]}`);
+  P();
+  P(`Official outcomes come from \`curriculum/${sec.dir}/g<N>.json\` (KICD, word for word). ${built} skills, misconceptions and question families (written offline, all draft and switched off until a CBC ${sec.shortName.toLowerCase()} teacher signs them off). **Attitude** outcomes cannot be tested by a typed or tapped answer; **hands-on** outcomes (demonstrate, apply) need a practical, and the questions test the reasoning only. Columns: F family, S skill in the curriculum map, M misconception feedback on a drawn wrong answer, W worked example, L the skill has a misconception library entry.`);
+  P();
+  P('| Grade | Outcomes | With a family | With a skill | With misconception feedback | With a worked example | With a library entry | Attitude | Hands-on | Testable (neither) | Testable with a family | With none of the four |');
+  P('|---|---|---|---|---|---|---|---|---|---|---|---|');
+  for (const r of sec.rows) P(`| ${r.grade} | ${r.outcomes} | ${r.family} | ${r.skill} | ${r.misfb} | ${r.worked} | ${r.lib} | ${r.attitude} | ${r.handsOn} | ${r.testable} | ${r.testableCovered} | ${r.none} |`);
+  for (const g of sec.builtGrades.filter(x => sec.sci[x])) {
+    P();
+    P(`### ${sec.shortName} Grade ${g} by outcome`);
+    P();
+    P('| Outcome | F | S | M | W | L | Skills | Outcome text |');
+    P('|---|---|---|---|---|---|---|---|');
+    for (const o of [...sec.sci[g].list].sort((a, b) => (!a.f && !a.s ? 0 : 1) - (!b.f && !b.s ? 0 : 1) || a.code.localeCompare(b.code))) P(`| ${o.code.replace(`${sec.prefix}.G${g}.`, '')} | ${o.f || '.'} | ${o.s || '.'} | ${o.m ? 'yes' : '.'} | ${o.w ? 'yes' : '.'} | ${o.lib ? 'yes' : '.'} | ${o.skills.join(', ') || '.'} | ${o.text.replace(/\|/g, '/').slice(0, 100)}${SCI_ATTITUDE.test(o.text.trim()) ? ' (attitude)' : SCI_HANDS.test(o.text.trim()) ? ' (hands-on)' : ''} |`);
+  }
+}
 writeFileSync(resolve(root, `docs/qa/coverage-${DATE}.md`), out.join('\n') + '\n');
 console.log(`written docs/qa/coverage-${DATE}.md`);
 console.table(rows.map(({ grade, outcomes, family, skill, misfb, worked, none }) => ({ grade, outcomes, family, skill, misfb, worked, none })));

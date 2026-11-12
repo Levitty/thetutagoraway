@@ -28,12 +28,10 @@
 // ============================================================================
 import { FAMILIES } from '../ai-tutor/content/families/index.js';
 import { drawFamily } from '../ai-tutor/content/families/core.js';
-import { ENGLISH_FAMILIES } from '../ai-tutor/content/families/english.js';
+import { familiesOutsideBank, skillMapOf, substrandsOf, SUBJECT_ORDER } from '../ai-tutor/content/subjects/registry.js';
 import { isSigned } from '../ai-tutor/content/families/core.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
-import { SKILLS_SCI_G5, SUBSTRANDS_SCI_G5 } from '../ai-tutor/content/curriculumMap.science.g5.js';
-import { SKILLS_E5, SUBSTRANDS_E5 } from '../ai-tutor/content/curriculumMap.english.g5.js';
-import { subjectOfCskill } from '../learner/subject.js';
+import { subjectOfCskill, SUBJECT_PREFIXES } from '../learner/subject.js';
 import { recheckSlots } from '../learner/recheck.js';
 import { publicItem, markItem, step, sittingView, resultsFor } from './homeworkSitting.js';
 
@@ -75,12 +73,12 @@ export const withSeed = (text, fn) => {
 // working with one wrong step. Multi-part questions stay in the lesson.
 const usable = (f) => !!f.cskill && f.form !== 'steps';
 const BY_CSKILL = new Map();
-// Maths and Science families are in FAMILIES; English families live in their own list (families/english.js).
-for (const f of [...FAMILIES, ...ENGLISH_FAMILIES]) if (usable(f)) { if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []); BY_CSKILL.get(f.cskill).push(f); }
+// Maths families and the subjects that ask to be in the bank are in FAMILIES; the other registry subjects (English) are listed beside it.
+for (const f of [...FAMILIES, ...familiesOutsideBank()]) if (usable(f)) { if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []); BY_CSKILL.get(f.cskill).push(f); }
 export const familiesForSkill = (cskill) => BY_CSKILL.get(cskill) || [];
 
 // The curriculum map of each subject: the skill codes a homework may name.
-const MAPS = { math: { skills: SKILLS_G5, substrands: null }, science: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5 }, english: { skills: SKILLS_E5, substrands: SUBSTRANDS_E5 } };
+const MAPS = { math: { skills: SKILLS_G5, substrands: null }, ...Object.fromEntries(SUBJECT_ORDER.map(id => [id, { skills: skillMapOf(id), substrands: substrandsOf(id) }])) };
 const mapOf = (code) => MAPS[subjectOfCskill(code)]?.skills || {};
 const isReviewed = isSigned;   // the one rule: signed off (core or reviewed) is the only way a family reaches a child
 /**
@@ -90,7 +88,7 @@ const isReviewed = isSigned;   // the one rule: signed off (core or reviewed) is
 export const isCurriculumSkill = (code) => {
   const subject = subjectOfCskill(code);
   if (subject === 'math') return !!SKILLS_G5[code];
-  if (subject === 'science' || subject === 'english') return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
+  if (subject && subject !== 'math') return !!mapOf(code)[code] && familiesForSkill(code).some(isSigned);
   return false;
 };
 export const skillName = (code) => mapOf(code)[code]?.name || code;
@@ -100,7 +98,7 @@ export const topicOf = (code) => { const s = mapOf(code)[code]; return MAPS[subj
 /** The full library code of a family's misconception: the skill's own, else a skill of the same sub-strand that has it. */
 export const misCode = (cskill, short) => {
   if (!short) return null;
-  if (/^(MATH|SCIE|ENGL)\./.test(String(short))) return short;
+  if (new RegExp(`^(${Object.keys(SUBJECT_PREFIXES).join('|')})\\.`).test(String(short))) return short;
   const map = mapOf(cskill);
   const sk = map[cskill];
   if (sk?.mis?.includes(short)) return `${cskill}.${short}`;

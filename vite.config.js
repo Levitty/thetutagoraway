@@ -1,7 +1,8 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import { VitePWA } from 'vite-plugin-pwa'
-import { readdirSync, existsSync } from 'node:fs'
+import { readdirSync, existsSync, readFileSync } from 'node:fs'
+import STRIP_FILES from './src/ai-tutor/content/subjects/strip.generated.js'   // family file -> its signed list file (npm run registry)
 
 // The static SEO pages under public/<slug>/index.html are real files, served
 // ahead of the SPA by .htaccess. They are precached so they work offline too,
@@ -11,15 +12,23 @@ const STATIC_PAGES = readdirSync('public', { withFileTypes: true })
   .map(d => d.name)
 
 // Question families nobody has reviewed stay out of what a phone downloads. In a
-// production build, a family file with no `reviewed: true` in it is replaced by
+// production build, a Maths family file with no `reviewed: true` in it is replaced by
 // an empty list. Children would not get them anyway (families/core.js); this
 // also spares the mobile data, about 1 MB. The dev server keeps them all.
+// The files of a registry subject (Science, English, ...) are listed by the subject registry
+// (content/subjects/strip.generated.js, written by `npm run registry`): they go while that
+// subject-grade's signed list is empty, and come back the moment a family is signed off.
+const signedListEmpty = (file) => /=\s*\[\s*\]/.test(readFileSync(`src/ai-tutor/content/families/${file}`, 'utf8'));
 const reviewedFamiliesOnly = {
   name: 'horeb-reviewed-families-only',
   apply: 'build',
   enforce: 'pre',
   transform(code, id) {
-    if (!/content\/families\/(g[0-9a-z_]+|sci_g5_[a-z]+)\.js$/.test(id.split('?')[0]) && !id.split('?')[0].endsWith('content/families/gaps.js')) return null;
+    const path = id.split('?')[0];
+    const inFamilies = /content\/families\/([^/]+\.js)$/.exec(path);
+    if (!inFamilies) return null;
+    if (STRIP_FILES[inFamilies[1]]) return signedListEmpty(STRIP_FILES[inFamilies[1]]) ? { code: 'export const FAMILIES = [];', map: null } : null;
+    if (!/content\/families\/(g[0-9a-z_]+)\.js$/.test(path) && !path.endsWith('content/families/gaps.js')) return null;
     return /reviewed:\s*true/.test(code) ? null : { code: 'export const FAMILIES = [];', map: null };
   },
 };

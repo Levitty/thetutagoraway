@@ -16,28 +16,16 @@
 // the Maths subject is not built here. Today every list of signed ids is empty, so every graph is empty and no
 // subject is offered (subjectsForGrade is empty).
 // ============================================================================
-import { FAMILIES, eligible } from './content/families/index.js';
-import { ENGLISH_FAMILIES } from './content/families/english.js';
+import { eligible } from './content/families/index.js';
 import { isOn, serveFamily } from './content/families/core.js';
-import { SKILLS_SCI_G5, SUBSTRANDS_SCI_G5 } from './content/curriculumMap.science.g5.js';
-import { SKILLS_E5, SUBSTRANDS_E5 } from './content/curriculumMap.english.g5.js';
+import { SUBJECT_DEFS_LIST } from './content/subjects/registry.js';
 import { gradeOfCskill } from '../learner/subject.js';
 
-/** The subjects beyond Maths: what each is called, its curriculum map, and its families. */
-export const SUBJECT_DEFS = {
-  science: {
-    id: 'science', name: 'Science and Technology', shortName: 'Science', icon: 'zap',
-    description: 'Grade 5 Science and Technology from the CBC design',
-    map: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5,
-    families: () => FAMILIES.filter(f => f.subject === 'science'),
-  },
-  english: {
-    id: 'english', name: 'English', shortName: 'English', icon: 'book',
-    description: 'Grade 5 English from the CBC design',
-    map: SKILLS_E5, substrands: SUBSTRANDS_E5,
-    families: () => ENGLISH_FAMILIES,
-  },
-};
+/**
+ * The subjects beyond Maths: what each is called, its curriculum map (every grade joined), and its families. Read from the
+ * subject registry (content/subjects/registry.js): adding a subject-grade there adds it here with no edit to this file.
+ */
+export const SUBJECT_DEFS = Object.fromEntries(SUBJECT_DEFS_LIST.map(def => [def.id, def]));
 
 const ESTIMATE = { minProblems: 5, estimatedMinutes: 10, xpValue: 15, weight: 3, masteryThreshold: 0.85, knowledgePoints: 1 };
 

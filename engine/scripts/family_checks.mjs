@@ -12,7 +12,7 @@ import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
 import { SKILLS_G5, SUBSTRANDS, OUTCOMES_G5, horebOf } from '../../src/ai-tutor/content/curriculumMap.g5.js';
-import { SKILLS_SCI_G5, OUTCOMES_SCI_G5 } from '../../src/ai-tutor/content/curriculumMap.science.g5.js';
+import { entryOfFamily, entryOfCskill } from '../../src/ai-tutor/content/subjects/registry.js';   // every subject beyond Maths: its map, outcomes and name come from its registry entry
 import { readFileSync } from 'node:fs';
 import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
 
@@ -23,7 +23,7 @@ export const FAMILY_DRAWS = 200;
 // must be one of its own skill's, or of another skill in the same sub-strand.
 const MIS = JSON.parse(readFileSync(new URL('../data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'));
 const misCodesFor = (cskill) => {
-  const map = SKILLS_SCI_G5[cskill] ? SKILLS_SCI_G5 : SKILLS_G5;   // Science skills have their own map
+  const map = entryOfCskill(cskill)?.map.skills[cskill] ? entryOfCskill(cskill).map.skills : SKILLS_G5;   // another subject's skills have their own map (registry)
   const sub = map[cskill]?.sub;
   const own = new Set((map[cskill]?.mis || []));
   const near = new Set(Object.entries(map).filter(([, k]) => k.sub === sub).flatMap(([c, k]) => k.mis));
@@ -43,19 +43,23 @@ const hasAnswerAlone = (answer, text, question) => {
 export function checkFamily(def, draws = FAMILY_DRAWS) {
   const out = [];
   const fail = (msg) => { if (out.length < 8) out.push(`${def.id}: ${msg}`); };
-  const science = def.subject === 'science';
-  const official = science ? OUTCOMES_SCI_G5[def.outcome] : OUTCOMES_G5[def.outcome];
-  const ck = science ? SKILLS_SCI_G5[def.cskill] : SKILLS_G5[def.cskill];
+  // A family of a registry subject (Science, ...): `science` below means "a subject beyond Maths", whatever its name.
+  const science = !!def.subject && def.subject !== 'math';
+  const entry = science ? entryOfFamily(def) : null;
+  const label = entry ? `Grade ${entry.grade} ${entry.name}` : `${def.subject}`;
+  if (science && !entry) fail(`no subject registry entry for ${def.subject} (cskill ${def.cskill})`);
+  const official = science ? entry?.map.outcomes[def.outcome] : OUTCOMES_G5[def.outcome];
+  const ck = science ? entry?.map.skills[def.cskill] : SKILLS_G5[def.cskill];
   let o = science ? null : OUTCOMES[def.outcome];
   if (science) {
-    // Grade 5 Science and Technology: the skill is the cskill (science skills are not in the practice engine's SKILLS yet),
+    // Another subject (registry entry): the skill is the cskill (these skills are not in the practice engine's SKILLS yet),
     // and the outcome must be one of the skill's official outcomes. No regex signal, as for Grade 5 Maths.
-    o = { id: def.outcome, grade: 5, text: official?.letter, signal: /[\s\S]*/, hands: false };
-    if (!official) fail(`outcome ${def.outcome} is not a Grade 5 Science outcome`);
-    if (!ck) fail(`cskill ${def.cskill} is not in the Grade 5 Science map`);
+    o = { id: def.outcome, grade: entry?.grade ?? 5, text: official?.letter, signal: /[\s\S]*/, hands: false };
+    if (!official) fail(`outcome ${def.outcome} is not a ${label} outcome`);
+    if (!ck) fail(`cskill ${def.cskill} is not in the ${label} map`);
     else {
       if (!ck.outcomes.includes(def.outcome)) fail(`outcome ${def.outcome} is not an outcome of ${def.cskill}`);
-      if (def.skill !== def.cskill) fail(`a science family's skill must be its cskill, not ${def.skill}`);
+      if (def.skill !== def.cskill) fail(`a ${def.subject} family's skill must be its cskill, not ${def.skill}`);
     }
   } else if (official) {
     // The design's own outcome code, with the curriculum skill it belongs to.
