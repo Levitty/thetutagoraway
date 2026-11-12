@@ -11,22 +11,21 @@ Hard means the item must not reach a reviewer. Soft means a reviewer should look
 ## Result
 
 - Items drawn: 15660
-- Clean: 15640 (100 percent)
-- With a soft flag only: 20
+- Clean: 15660 (100 percent)
+- With a soft flag only: 0
 - With a hard failure: 0
 
 ## By grade
 
 | Grade | Items | Clean | Soft only | Hard | key (hard/soft) | distractors | reading | ambiguity | units |
 |---|---|---|---|---|---|---|---|---|---|
-| 4 | 8820 | 8800 | 20 | 0 | 0/0 | 0/0 | 0/20 | 0/0 | 0/0 |
+| 4 | 8820 | 8820 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
 | 5 | 6840 | 6840 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
 
 ## Findings, commonest first
 
 | Level | Check | Finding | Items | Example |
 |---|---|---|---|---|
-| soft | reading | reading grade # above # for Grade # | 20 | english4.spa.choose: Choose the word that completes the sentence correctly. "Yesterday Achieng ___ her homework |
 
 ## Sources with a hard failure
 

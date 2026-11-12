@@ -1,0 +1,631 @@
+{
+ "outcomes": {
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.a": "identify the countries of Eastern Africa on a map",
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.b": "describe the position and size of countries in Eastern Africa",
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.c": "use latitudes and longitudes to locate places on a map",
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.d": "appreciate the unity of Eastern African countries",
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.a": "identify the main physical features in Eastern Africa on a map",
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.b": "describe the formation of the main physical features of Eastern Africa",
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.c": "draw a map of Eastern Africa and label the main physical features",
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.d": "value the physical features in the locality",
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.a": "identify the main climatic regions in Eastern Africa on a map",
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.b": "describe characteristics of the main climatic regions in Eastern Africa",
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.c": "explain ways in which climate influences human activities in Eastern Africa",
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.d": "acknowledge the main climatic regions in Eastern Africa",
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.a": "identify the main types of vegetation in Eastern Africa on a map",
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.b": "draw a map of Eastern Africa and label the main types of vegetation",
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.c": "describe the characteristics of the main types of vegetation in Eastern Africa",
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.d": "explain ways of conserving vegetation in the environment",
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.e": "value vegetation found at home and school",
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.a": "identify the main historic built environments in Eastern Africa on a map",
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.b": "describe the importance of the main historic built environments in Eastern Africa",
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.c": "demonstrate ways of conserving historic built environments in Eastern Africa",
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.d": "value historic built environments in Eastern Africa and in the locality",
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.a": "describe the classification of communities in Eastern Africa according to language groups",
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.b": "explain the reasons for migration of selected language groups into Eastern Africa",
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.c": "illustrate the movement and settlement of the selected language groups in Eastern Africa on a map",
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.d": "describe the effects of the migration and settlement of selected language groups in Eastern Africa",
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.e": "appreciate unity of language groups in Eastern Africa",
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.a": "explain factors influencing population distribution in Eastern Africa",
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.b": "locate areas of high and low population density in Eastern Africa on a map",
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.c": "explain effects of high population density in Eastern Africa",
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.d": "acknowledge population distribution in Eastern Africa",
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.a": "describe age-groups and age-sets in African traditional society",
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.b": "explain the functions of a clan in traditional African society",
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.c": "identify aspects of African traditional culture that ought to be preserved",
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.d": "desire to uphold aspects of African traditional culture that ought to be preserved",
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.a": "identify ways in which the school collaborates with the community",
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.b": "explain the benefits of collaboration between school and the community",
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.c": "design strategies for sustaining collaboration between school and the community",
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.d": "appreciate the benefits of collaboration between the school and community",
+  "SOCI.G6.RESOUR.BEEF_FARMING.a": "describe factors influencing beef farming in Eastern Africa",
+  "SOCI.G6.RESOUR.BEEF_FARMING.b": "locate on a map areas where beef farming is practised in Eastern Africa",
+  "SOCI.G6.RESOUR.BEEF_FARMING.c": "identify the contribution of beef farming to the economy of Eastern Africa",
+  "SOCI.G6.RESOUR.BEEF_FARMING.d": "explain the challenges facing beef farming and possible solutions in Eastern Africa",
+  "SOCI.G6.RESOUR.BEEF_FARMING.e": "acknowledge beef farming as an economic activity in Eastern Africa",
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.a": "locate marine and inland fishing grounds on a map",
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.b": "describe methods of marine fishing in Eastern Africa",
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.c": "explain challenges facing fishing in Eastern Africa",
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.d": "design possible solutions to challenges facing fishing in Eastern Africa",
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.e": "value fishing as an economic activity",
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.a": "explain factors that promote tourism in Eastern Africa",
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.b": "locate game reserves and national parks in Eastern Africa on a map",
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.c": "explain challenges facing tourism in Eastern Africa",
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.d": "state possible solutions to challenges facing tourism in Eastern Africa",
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.e": "value tourism as an economic activity",
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.a": "identify the main transport networks in Eastern Africa on a map",
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.b": "draw a map of Eastern Africa showing the main transport networks",
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.c": "explain the challenges facing transport networks in Eastern Africa",
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.d": "state possible solutions to challenges facing transport networks in Eastern Africa",
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.e": "appreciate the role of transport network in economic development",
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.a": "identify modes of communication in Eastern Africa",
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.b": "explain challenges facing communication networks in Eastern Africa",
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.c": "state possible solutions to challenges facing communication networks in Eastern Africa",
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.d": "demonstrate how different modes of communication are used in Eastern Africa",
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.e": "appreciate the role of communication networks in Eastern Africa",
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.a": "identify minerals found in Eastern Africa",
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.b": "describe the methods of extracting minerals in Eastern Africa",
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.c": "explain the effects of smining on the environment in Eastern Africa",
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.d": "state the possible solutions to problems associated with mining",
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.e": "desire to conserve areas affected by mining activities in Eastern Africa",
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.a": "describe traditional forms of government of the Buganda and the Nyamwezi in Eastern Africa",
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.b": "compare traditional forms of government of the Buganda and the Nyamwezi",
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.c": "value aspects of good governance in traditional societies",
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.a": "explain the objectives of East African Community",
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.b": "describe the benefits of the East African Community to member states",
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.c": "identify the challenges facing the East African Community",
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.e": "formulate possible solutions to challenges facing the East African Community",
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.f": "value the unity of Eastern African countries",
+  "SOCI.G6.POLITI.CITIZENSHIP.a": "describe the rights and responsibilities of a Kenyan citizen",
+  "SOCI.G6.POLITI.CITIZENSHIP.b": "state the qualities of a good Kenya citizen",
+  "SOCI.G6.POLITI.CITIZENSHIP.c": "demonstrate the values of a good Kenyan citizen",
+  "SOCI.G6.POLITI.CITIZENSHIP.d": "appreciate patriotism as a Kenyan citizen",
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.a": "explain classification of human rights in society",
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.b": "describe ways in which human rights are upheld in society",
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.c": "demonstrate ways in which human rights are upheld in society",
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.d": "value respect for human rights in Kenya",
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.a": "explain the causes of conflicts in society today",
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.b": "describe peaceful methods of resolving conflicts in society",
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.c": "illustrate ways of promoting peace in society",
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.d": "value peaceful ways of resolving conflicts in society",
+  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.a": "identify sources of revenue for National Government in Kenya",
+  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.b": "explain ways in which the national and county governments in Kenya spend their revenue",
+  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.c": "acknowledge the importance of paying taxes",
+  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.a": "identify key words in the preamble of the Constitution of Kenya",
+  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.b": "explain the meaning of key words in the preamble",
+  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.c": "uphold the Constitution of Kenya in society"
+ },
+ "skills": {
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES": {
+   "forms": [
+    "pick the country that is in Eastern Africa",
+    "pick the list of Eastern African countries",
+    "say which country is not in Eastern Africa",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names Kenya, Uganda, Tanzania, Rwanda, Burundi, South Sudan, Ethiopia, Somalia, Djibouti and Eritrea as countries of Eastern Africa, and does not put countries such as Zambia, Nigeria, Egypt or the DR Congo in the list. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE": {
+   "forms": [
+    "say which country is larger from areas given",
+    "say whether a country has a coast or is landlocked",
+    "say which direction a country lies from Kenya",
+    "read a small table of areas"
+   ],
+   "mastery": "Given a described map or a table of areas, the child says Ethiopia is the largest country of the region and Tanzania the second, that Rwanda, Burundi and Djibouti are among the smallest, that Uganda, Rwanda, Burundi, South Sudan and Ethiopia have no sea coast, and that Kenya, Tanzania, Somalia, Djibouti and Eritrea do. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING": {
+   "forms": [
+    "say which lines run east to west",
+    "say what the equator and the Prime Meridian are",
+    "say what latitude measures",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says latitudes are lines drawn from east to west that measure how far a place is north or south of the equator (0 degrees), longitudes are lines drawn from north to south that measure how far a place is east or west of the Prime Meridian (0 degrees), and does not swap them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE": {
+   "forms": [
+    "say whether a place is north or south of the equator from its latitude",
+    "say whether a place is east or west of the Prime Meridian",
+    "give the hemisphere of a place",
+    "read a small table of towns and their positions"
+   ],
+   "mastery": "Given a table of places with rounded latitudes and longitudes, the child says whether each is north or south of the equator and east or west of the Prime Meridian, reads the latitude first and then the longitude, and knows all of Eastern Africa lies east of the Prime Meridian. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES": {
+   "forms": [
+    "say what kind of feature it is",
+    "say which country a feature lies in",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names Mount Kilimanjaro (Tanzania, the highest mountain in Africa), Mount Kenya, Mount Elgon (on the Kenya and Uganda border), the Rwenzori Mountains (Uganda), the Great Rift Valley, Lake Victoria (the largest lake in Africa), Lake Tanganyika, Lake Turkana, Lake Albert and the Serengeti Plains, says what kind each is, and places each in the right country. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION": {
+   "forms": [
+    "say how a volcanic mountain forms",
+    "say how a block mountain forms",
+    "say how a rift valley forms",
+    "say how a rift valley lake forms"
+   ],
+   "mastery": "The child says volcanic mountains such as Kilimanjaro, Mount Kenya and Elgon formed when magma and ash poured out and piled up, block mountains such as the Rwenzori formed when land between faults was pushed up, the Rift Valley formed when land between faults dropped, and Lake Turkana and Lake Tanganyika filled the floor of the valley, while Lake Victoria lies in a shallow bowl made by the land sagging. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS": {
+   "forms": [
+    "name the region of a place",
+    "pick the place that has a given climate",
+    "read a small table of places",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the equatorial, tropical (savanna), semi-arid, arid and highland (mountain) climatic regions and places them: equatorial around Lake Victoria and western Uganda, tropical over much of Tanzania and lower Kenya, semi-arid in central and eastern Kenya and central Tanzania, arid in northern Kenya, Somalia and Djibouti, and highland on Mount Kenya, Kilimanjaro and the Ethiopian Highlands. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS": {
+   "forms": [
+    "say which description fits a region",
+    "say which region has little rain and high heat",
+    "say why highlands are cooler",
+    "read a small table of temperature and rainfall"
+   ],
+   "mastery": "The child describes the equatorial region as hot and wet all year, the tropical region as warm with a wet and a dry season, the semi-arid region as hot with little and unreliable rain, the arid region as very hot and very dry, and the highland region as cool to cold because it is high up, with more rain on the windward slopes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE": {
+   "forms": [
+    "say which activity suits a climate",
+    "say what a drought does to people",
+    "say why people dress or build differently",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links climate to activity: crops such as tea and coffee in the cool, wet highlands, farming near Lake Victoria, nomadic herding in the arid and semi-arid north, tourism where the weather is dry and sunny, and irrigation where rain is short, and says drought brings hunger and heavy rain brings floods. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES": {
+   "forms": [
+    "name the vegetation of a place",
+    "match a vegetation type to its climate",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names tropical rain forest (western Uganda, the Congo edge, patches in Kenya such as Kakamega), savanna grassland (Serengeti and Maasai Mara), semi-desert and desert scrub (northern Kenya, Somalia, Djibouti), mountain vegetation (that changes with height) and mangrove forest (the coast), and matches each to its climate. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS": {
+   "forms": [
+    "say which description fits a type of vegetation",
+    "say why desert plants have thorns or long roots",
+    "say how mountain vegetation changes with height",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says rain forest has tall evergreen trees in layers with little grass under them, savanna has tall grass with scattered flat-topped trees such as acacia, desert and semi-desert have thorny shrubs, small leaves and long roots that save water, mangroves grow in salt water with stilt and breathing roots, and mountain vegetation changes from forest to bamboo to moorland to bare rock as height increases. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE": {
+   "forms": [
+    "pick the action that conserves vegetation",
+    "say why an action harms vegetation",
+    "say why trees matter to people and soil",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks actions that protect vegetation (planting trees, replanting where trees were cut, agroforestry, controlling fires, avoiding overgrazing, using energy-saving jikos and other fuels, laws and forest guards) and rejects harming actions (bush burning, clearing forests for charcoal, overgrazing). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES": {
+   "forms": [
+    "name the site from a description",
+    "say which country a site is in",
+    "say whether a place is built or natural",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names Fort Jesus, Lamu Old Town and the Gedi Ruins (Kenya), Stone Town in Zanzibar and the Kilwa Kisiwani ruins (Tanzania), the Kasubi Tombs and the Uganda Museum (Uganda) and the rock-hewn churches of Lalibela (Ethiopia), says where each is, and knows a mountain or a lake is natural and not built. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE": {
+   "forms": [
+    "say why a site matters",
+    "pick the action that conserves a site",
+    "say how a site earns money for a country",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says historic sites teach us the history of our people, give a sense of identity, bring tourists and income, give jobs and attract researchers, and picks ways to conserve them (repair with care, laws and protection by museums, guides and visitor rules, teaching others, and not writing on or climbing old walls). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY": {
+   "forms": [
+    "pick the group a community belongs to",
+    "pick the list that belongs to one group",
+    "say which sub-group of Nilotes a community is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the Baganda, Nyamwezi, Chagga, Banyoro and Kikuyu in the Bantu group; the Luo, Acholi, Maasai, Kalenjin, Turkana, Dinka and Nuer in the Nilotic group; and the Somali, Oromo, Afar and Borana in the Cushitic group, and knows the Nilotes are River-Lake, Highland and Plain Nilotes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES": {
+   "forms": [
+    "say why a group moved",
+    "say where a group came from",
+    "say which way a group moved",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives reasons for migration (looking for pasture and water, fertile land, escape from drought, famine, disease and wars, overcrowding, and hunting and trade) and says the Cushites came from the Horn of Africa and Ethiopian highlands and moved south, the Nilotes came from the Nile region of South Sudan and moved south, and the Bantu came from the Congo Basin and moved east and south. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS": {
+   "forms": [
+    "pick an effect of people moving and settling",
+    "say whether an effect is good or bad",
+    "say how languages and customs spread",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says migration and settlement led to intermarriage and a mixing of cultures, the spread of languages, farming and iron working, new trade, new settlements and growth of population, and also to quarrels over land and pasture, and says it did not make every community the same. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS": {
+   "forms": [
+    "say why many people live in a place",
+    "say why few people live in a place",
+    "pick the factor that draws people",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says many people live where there is reliable rain, fertile soil, gentle land, water, jobs and industries, good roads and peace, and few live where it is very dry, very steep, covered in thick forest or swamp, infested by tsetse fly, or unsafe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS": {
+   "forms": [
+    "say whether an area is crowded or empty",
+    "pick the country that is crowded",
+    "read a small table of people per square kilometre",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the Lake Victoria basin, the Kenya and Ethiopian highlands, Rwanda and Burundi, and big cities such as Nairobi, Kampala and Dar es Salaam as crowded, and northern Kenya, the Somali and Ogaden lowlands, the Danakil desert and the swamps of South Sudan as thinly populated, and reads density as people per square kilometre. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS": {
+   "forms": [
+    "pick an effect of overcrowding",
+    "say what happens to farms when families grow",
+    "say what pressure falls on schools and hospitals",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says high population density causes land shortage and shrinking farms, food shortage, unemployment, pressure on schools, hospitals and water, cutting of forests, slums and pollution, and may also give a market and a supply of workers, and does not say it makes land free or cheap. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE": {
+   "forms": [
+    "say what an age-set is",
+    "say the difference between an age-group and an age-set",
+    "say a duty of a warrior age-set",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says an age-group is people of about the same age with the same roles (children, youth, adults, elders) and an age-set is a group of young people who were initiated together and stay a group for life, and gives the duties of age-sets such as defence, herding, building, keeping law and passing on customs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN": {
+   "forms": [
+    "say what a clan is",
+    "pick a function of a clan",
+    "say who a clan member could marry",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a clan is a group of families that trace their descent from one ancestor, and gives its functions: keeping the community together, guiding marriage (people marry outside their own clan), looking after clan land, settling disputes through elders, helping members in need, and passing on customs and history. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE": {
+   "forms": [
+    "pick the practice that ought to be preserved",
+    "pick the practice that should be left behind",
+    "say why a custom is worth keeping",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says respect for elders, community work, hospitality, proverbs, folktales, songs and dances, traditional foods and herbal knowledge should be preserved, and practices that harm people, such as early marriage of girls and keeping girls from school, should not. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS": {
+   "forms": [
+    "pick an example of the school and the community working together",
+    "say who in the community helps the school",
+    "say what a school gives the community",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names parents and the board of management, parents meeting teachers, the community giving land, labour, funds and security, the school field, hall and classrooms used for community events, clinics and elections, visiting speakers, clean-ups and tree planting, and does not call a thing the school does alone a collaboration. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS": {
+   "forms": [
+    "pick a benefit to the school",
+    "pick a benefit to the community",
+    "pick a strategy that keeps collaboration going",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says collaboration gives the school resources, security and support and gives the community better learners, shared facilities and development, and picks strategies that sustain it (open days, regular meetings, sharing facilities, reporting progress, joint projects and thanking helpers). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS": {
+   "forms": [
+    "say which factor helps beef farming",
+    "say why a place suits ranching",
+    "say why a disease or tsetse fly harms it",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says beef farming does well where there is large grassland, enough water, a warm climate, cattle breeds that suit the area (such as the Boran and Zebu), vets and disease control, a market and transport, and enough land and capital for a ranch. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES": {
+   "forms": [
+    "say which area is a beef area",
+    "say which country a beef area is in",
+    "say why an area is a beef area",
+    "read a small table of areas"
+   ],
+   "mastery": "The child names Laikipia, Kajiado, Narok and the Athi plains in Kenya, the cattle corridor of south-western Uganda (Ankole), the Arusha and Shinyanga areas of Tanzania, the Borana lowlands of Ethiopia, and Somalia, which exports live animals, and does not put beef ranching in the crop-growing highlands or on the coast. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY": {
+   "forms": [
+    "pick a contribution of beef farming",
+    "say what is made from hides and skins",
+    "say what a country earns from beef exports",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says beef farming gives meat and food, jobs, income, foreign exchange from meat and live animals, hides and skins for leather, bones and horns for other products, manure, and work for meat factories such as the Kenya Meat Commission. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say why overgrazing is harmful",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs diseases such as foot-and-mouth with vaccination and dips, drought with water pans, boreholes and hay, overgrazing with rotational grazing and limited herds, cattle rustling with better security, poor roads and markets with roads and cooperatives, and poor breeds with improved breeds. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS": {
+   "forms": [
+    "say whether a ground is marine or inland",
+    "say which country a ground is in",
+    "name the fish that comes from a ground",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the marine grounds lie in the Indian Ocean off Kenya, Tanzania and Somalia (and in the Red Sea off Djibouti and Eritrea) and the inland grounds are Lake Victoria, Lake Tanganyika, Lake Turkana, Lake Albert, Lake Kyoga and Lake Naivasha, and knows Nile perch and tilapia come from lakes and tuna and prawns from the sea. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS": {
+   "forms": [
+    "say which method uses a hook and line",
+    "say what trawling is",
+    "tell traditional from modern fishing",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says traditional fishing uses hooks and lines, baskets, spears and small nets from dhows and dug-out canoes, and modern fishing uses motor boats and trawlers that drag a net along the sea bed, purse seine and gill nets and long lines, with cold rooms on board. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say why overfishing is harmful",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs overfishing and small-mesh nets with licences, fishing seasons and mesh-size rules, piracy and illegal foreign trawlers with sea patrols, pollution with waste treatment, poor storage with cold rooms and processing plants, poor boats with loans and training, and water hyacinth with clearing and control. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS": {
+   "forms": [
+    "pick a factor that draws tourists",
+    "say why security matters to tourism",
+    "say what hotels and airports add",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says tourists come for wildlife, beaches, mountains, culture and historic sites, and tourism grows where there is peace and security, good roads and airports, hotels, a pleasant climate and good advertising. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS": {
+   "forms": [
+    "say which country a park is in",
+    "say what a park is known for",
+    "say which two parks share the wildebeest migration",
+    "read a small table of parks"
+   ],
+   "mastery": "The child places the Maasai Mara, Amboseli and Tsavo in Kenya, the Serengeti, Ngorongoro and Mikumi in Tanzania, Queen Elizabeth, Murchison Falls and Bwindi in Uganda, and the Volcanoes National Park in Rwanda, and knows the wildebeest migration crosses between the Serengeti and the Maasai Mara. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say why poaching harms tourism",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs poaching with anti-poaching patrols and strong laws, insecurity with better security, human-wildlife conflict with fences and compensation, poor roads with road building, little advertising with marketing campaigns, and loss of habitat with protected areas and community conservancies. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS": {
+   "forms": [
+    "name the network from a description",
+    "say which port serves which country",
+    "say which mode suits which load",
+    "read a small table of routes"
+   ],
+   "mastery": "The child names the Northern Corridor road from Mombasa through Nairobi to Kampala and Kigali, the Central Corridor from Dar es Salaam, the Standard Gauge Railway in Kenya and Tanzania, the TAZARA line, lake ferries on Lake Victoria, the ports of Mombasa, Dar es Salaam and Djibouti, the airports of Nairobi, Entebbe, Dar es Salaam and Addis Ababa, and the oil pipeline from Mombasa to western Kenya. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say what a one-stop border post does",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs poor roads with repair and maintenance, road crashes with speed limits and driver training, vandalism with laws and guards, delays at borders with one-stop border posts, traffic jams with bypasses and the railway, and high cost with tolls, loans and partnerships. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES": {
+   "forms": [
+    "tell a traditional from a modern mode",
+    "pick the mode that reaches many people at once",
+    "say what each mode is best for",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names drums, horns and messengers as traditional modes and letters, telephone, radio, television, newspapers, mobile phones and the internet as modern modes, and says radio and television reach many people at once and mobile phones and the internet are two-way. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say why electricity matters to communication",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs weak network in remote areas with more masts, no electricity with rural electrification and solar charging, high cost with lower taxes and competition, theft and vandalism with laws and guards, cyber crime and false news with laws and digital skills, and lack of skill with training. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS": {
+   "forms": [
+    "say which country has a mineral",
+    "name the mineral from a use",
+    "pick the odd one out",
+    "read a small table of minerals"
+   ],
+   "mastery": "The child links soda ash to Lake Magadi and fluorspar to the Kerio Valley in Kenya, gold, diamonds and tanzanite to Tanzania, limestone and copper to Uganda, and knows tanzanite is mined only in Tanzania. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS": {
+   "forms": [
+    "say which method digs a pit from the surface",
+    "say which method suits a deep mineral",
+    "say how soda ash is taken from Lake Magadi",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says open-cast mining and quarrying dig from the surface (limestone), underground mining uses shafts and tunnels (gold), panning washes gravel in water, and soda ash at Lake Magadi is taken from the lake by dredging and pumping brine. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS": {
+   "forms": [
+    "pick an effect of mining on the land",
+    "pick a way to repair a mined area",
+    "say what harm chemicals do to rivers",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says mining leaves holes, destroys farmland and forest, makes dust and noise, and can poison water with chemicals such as mercury, and picks repairs such as refilling pits, replanting trees, treating waste water, safe mining laws and making old quarries into parks, as at Haller Park in Mombasa. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA": {
+   "forms": [
+    "name the ruler of Buganda",
+    "say who the Katikkiro was",
+    "say what the Lukiiko did",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says Buganda was one large kingdom ruled by the Kabaka, helped by the Katikkiro (chief minister) and the Lukiiko (council), with chiefs the Kabaka appointed over counties and smaller areas. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI": {
+   "forms": [
+    "name the ruler of a Nyamwezi chiefdom",
+    "say how a Ntemi became a ruler",
+    "say who advised the Ntemi",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Nyamwezi lived in many small chiefdoms each ruled by a Ntemi, who inherited the position, was judge and leader, and was advised by a council of elders. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE": {
+   "forms": [
+    "say what both had in common",
+    "say how they differed",
+    "say which statement is about which",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says both had a ruler and a council and the ruler was a judge, and that Buganda was one large centralised kingdom under a Kabaka with appointed chiefs while the Nyamwezi had many small chiefdoms under inherited Ntemi. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES": {
+   "forms": [
+    "pick an objective of the EAC",
+    "say where the EAC headquarters is",
+    "say what a customs union is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the East African Community was set up so member countries work together in trade, politics and social life, and that its aims include a customs union, a common market, a monetary union and, in time, a political federation, with its headquarters in Arusha, Tanzania. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS": {
+   "forms": [
+    "pick a benefit of the EAC",
+    "say what a common market allows",
+    "say who gains from a bigger market",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the community gives member countries a larger market, easier trade without duties, free movement of people and workers, shared roads and railways, joint tourism and education links, and shared work on peace and security. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS": {
+   "forms": [
+    "pick the solution to a challenge",
+    "pick the challenge a solution answers",
+    "say why trust matters",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs delays and barriers at borders with one-stop border posts and removing non-tariff barriers, different laws with harmonised policies, unequal benefits with fair sharing of gains, conflicts with talks and the EAC Court of Justice, and weak roads with shared infrastructure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP": {
+   "forms": [
+    "pick a right of a Kenyan citizen",
+    "pick a responsibility of a Kenyan citizen",
+    "sort a statement into right or responsibility",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the rights of a Kenyan citizen include to vote when 18 years old, to hold an identity card and a passport, to move freely and to own property, and the responsibilities include obeying the law, paying taxes, voting, protecting public property and the environment and respecting others. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES": {
+   "forms": [
+    "name the quality a person shows",
+    "pick the action of a good citizen",
+    "say what patriotism is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names patriotism, honesty, respect for the law, responsibility, hard work, co-operation, tolerance and love of peace, and picks the action that shows each, and says patriotism is love and loyalty for the country shown in what a person does. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES": {
+   "forms": [
+    "name the category of a right",
+    "pick a political right",
+    "pick an economic right",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child sorts the right to vote, to stand for election and to join a party as political; the right to education, health care, food, water and shelter as social; and the right to work, fair pay, own property and join a trade union as economic. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD": {
+   "forms": [
+    "say who protects human rights",
+    "pick an action that respects rights",
+    "say what to do when a right is broken",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says human rights are upheld by the Constitution and its Bill of Rights, by courts, the police and bodies such as the Kenya National Commission on Human Rights, by schools that teach them, and by people who respect others and report abuse, and knows Human Rights Day is on 10 December. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES": {
+   "forms": [
+    "pick a cause of conflict",
+    "say what land or water disputes cause",
+    "say what unfair sharing causes",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names land and boundary disputes, competition for water and pasture, political differences, ethnic hatred, unfair sharing of resources, unemployment and poverty, drugs and alcohol, bullying and rumours as causes of conflict. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS": {
+   "forms": [
+    "name the method from a description",
+    "say the difference between mediation and arbitration",
+    "pick the peaceful way to react",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says dialogue is the people in conflict talking, negotiation is bargaining for an agreement, mediation is a third person helping them agree, arbitration is a third person deciding for them, and reconciliation is making peace again, and that courts and councils of elders also settle disputes without violence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE": {
+   "forms": [
+    "pick an action that promotes peace",
+    "pick an action that breaks peace",
+    "say what a peace club does",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks peace clubs, sports and cultural days between communities, sharing resources, respect for differences, peace committees and Nyumba Kumi, avoiding hate speech, and teaching peace, and rejects revenge and spreading rumours. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES": {
+   "forms": [
+    "pick a source of government revenue",
+    "say who collects national taxes",
+    "tell a tax from a fee",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names taxes (income tax, value added tax, customs duty and excise duty), fees and licences, fines, income from state corporations, loans and grants, and says the Kenya Revenue Authority collects national taxes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING": {
+   "forms": [
+    "say what the national government pays for",
+    "say what a county government pays for",
+    "say which level pays for a service",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the national government spends on defence and security, national roads, the salaries of teachers and civil servants, national referral hospitals, universities and paying debts, and a county government spends on county health services, county roads, early childhood education, water, markets and farming advice. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS": {
+   "forms": [
+    "say what the preamble is",
+    "pick a key word that belongs in it",
+    "say which word names the people with the power",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the preamble is the opening statement of the Constitution, and picks its key words: sovereign, supremacy of God, heritage, diversity, unity, indivisible, human rights, equality, freedom, democracy, social justice and the rule of law. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING": {
+   "forms": [
+    "say what a word means",
+    "pick the right meaning of a phrase",
+    "say why the preamble matters",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says sovereign means having the supreme power, here the people of Kenya, indivisible means cannot be divided, heritage is what we receive from the past and pass on, diversity is differences among people, democracy is rule by the people, and the rule of law means everyone, including leaders, obeys the law. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
