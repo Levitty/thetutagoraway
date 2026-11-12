@@ -1,0 +1,433 @@
+{
+ "outcomes": {
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.a": "identify indigenous wind musical instruments from Kenyan communities",
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.b": "explain the role of the parts of a wind instrument in sound production",
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.c": "make a wind instrument using locally available materials",
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.d": "care for an indigenous Kenyan musical wind instrument",
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.e": "draw a wind instrument using crayon etching technique",
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.f": "value indigenous wind musical instruments from Kenyan communities",
+  "CREA.G5.CREATI.FOOTBALL.a": "execute the skills of kicking, stopping and dribbling in football",
+  "CREA.G5.CREATI.FOOTBALL.b": "prepare papier mâché for casting cones",
+  "CREA.G5.CREATI.FOOTBALL.c": "cast marking cones using papier mâché for a Football game",
+  "CREA.G5.CREATI.FOOTBALL.d": "appreciate playing Football game on a field marked using cones for enjoyment",
+  "CREA.G5.CREATI.RHYTHM.a": "interpret rhythmic patterns involving minim, crotchet, a pair of quavers and their rests",
+  "CREA.G5.CREATI.RHYTHM.b": "create rhythms using music note symbols and their rests",
+  "CREA.G5.CREATI.RHYTHM.c": "make a calligraphy pen for writing",
+  "CREA.G5.CREATI.RHYTHM.d": "write in calligraphy French rhythm names of a rhythmic pattern",
+  "CREA.G5.CREATI.RHYTHM.e": "aurally identify rhythm in two-beat patterns",
+  "CREA.G5.CREATI.RHYTHM.f": "compose simple rhythms in two-beat patterns",
+  "CREA.G5.CREATI.RHYTHM.g": "enjoy creating rhythms using music notes and their rests",
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.a": "identify primary and secondary colours on the colour wheel",
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.b": "paint a scenery composition using the wash technique",
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.c": "prepare materials for making a mosaic picture",
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.d": "create a mosaic picture to apply the characteristics",
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.e": "appreciate painting and mosaic as picture making techniques",
+  "CREA.G5.CREATI.MELODY.a": "sing the sol-fa syllables d r m f s for pitch discrimination",
+  "CREA.G5.CREATI.MELODY.b": "interpret the hand signs of the sol-fa syllables d r m f s",
+  "CREA.G5.CREATI.MELODY.c": "compose short melodies based on the sol-fa syllables d r m f s",
+  "CREA.G5.CREATI.MELODY.d": "make a decorated melody card for creativity",
+  "CREA.G5.CREATI.MELODY.e": "appreciate melodies created by self and others",
+  "CREA.G5.CREATI.ROUNDERS.a": "identify the features of a rounders bat for familiarisation",
+  "CREA.G5.CREATI.ROUNDERS.b": "identify materials and tools used in carving",
+  "CREA.G5.CREATI.ROUNDERS.c": "carve a bat for playing the Rounders game",
+  "CREA.G5.CREATI.ROUNDERS.d": "execute batting and fielding skills in a Rounders game for skills acquisition",
+  "CREA.G5.CREATI.ROUNDERS.e": "value the safety of self and others when playing the game of Rounders",
+  "CREA.G5.PERFOR.ATHLETICS.a": "improvise batons for relay racing",
+  "CREA.G5.PERFOR.ATHLETICS.b": "make ropes using plaiting technique for relay racing",
+  "CREA.G5.PERFOR.ATHLETICS.c": "perform the skill of visual baton change in a relay race",
+  "CREA.G5.PERFOR.ATHLETICS.d": "execute nonvisual baton change in a relay race",
+  "CREA.G5.PERFOR.ATHLETICS.e": "appraise self and peers’ performance in a relay race",
+  "CREA.G5.PERFOR.FABRIC_DECORATION.a": "identify techniques used to decorate a fabric",
+  "CREA.G5.PERFOR.FABRIC_DECORATION.b": "decorate a fabric using the tie and dye technique",
+  "CREA.G5.PERFOR.FABRIC_DECORATION.c": "decorate a fabric using appliqué for expression",
+  "CREA.G5.PERFOR.FABRIC_DECORATION.d": "value tie and dye and appliqué techniques for decorating a fabric",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.a": "discuss the background of a Kenyan folk dance",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.b": "describe components of a Kenyan folk dance",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.c": "discuss the roles of folk dance in the community",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.d": "make an ornament using available materials to enhance performance of a Kenyan folk dance",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.e": "perform in a folk dance from a Kenyan indigenous community",
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.f": "acknowledge the role of folk dance in the society",
+  "CREA.G5.PERFOR.PUPPETRY.a": "identify a glove puppet for familiarisation",
+  "CREA.G5.PERFOR.PUPPETRY.b": "make a glove puppet using recyclable materials",
+  "CREA.G5.PERFOR.PUPPETRY.c": "perform a puppet show while singing topical songs for enjoyment",
+  "CREA.G5.PERFOR.DESCANT_RECORDER.a": "play notes B A G C1 D1 on the descant recorder",
+  "CREA.G5.PERFOR.DESCANT_RECORDER.b": "play a melody built on the notes G A B C’ D’ on the descant recorder applying appropriate techniques",
+  "CREA.G5.PERFOR.DESCANT_RECORDER.c": "create a random repeat pattern based on the notes B A G C1 D 1 using a stencil",
+  "CREA.G5.PERFOR.DESCANT_RECORDER.d": "enjoy playing melodies using the descant recorder",
+  "CREA.G5.PERFOR.SWIMMING.a_": "describe the Front crawl technique in swimming",
+  "CREA.G5.PERFOR.SWIMMING.b_": "perform the Front crawl technique for skill acquisition",
+  "CREA.G5.PERFOR.SWIMMING.c_": "apply the front crawl technique in swimming for enjoyment",
+  "CREA.G5.PERFOR.SWIMMING.d_": "appreciates own and others' efforts in performing the Front crawl technique",
+  "CREA.G5.PERFOR.SWIMMING.a_2": "identify types of indigenous counting games played in Kenya",
+  "CREA.G5.PERFOR.SWIMMING.b_2": "perform different indigenous counting games for skill acquisition",
+  "CREA.G5.PERFOR.SWIMMING.c_2": "perform indigenous counting games to a musical rhythm",
+  "CREA.G5.PERFOR.SWIMMING.d_2": "appreciate the role played by counting games for fitness and health",
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.a": "showcase artworks in a school gallery for critique",
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.b": "discuss a Kenyan folk dance using appropriate terminologies",
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.c": "discuss the East African Community Anthem to foster patriotism",
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.d": "participate in ball games and athletics",
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.e": "value appreciation of Creative Arts works drawn from various cultural backgrounds"
+ },
+ "skills": {
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.IDENTIFY": {
+   "forms": [
+    "pick the wind instrument from a list",
+    "say how an instrument is played",
+    "match an instrument to its community",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the nzumari and the siwa (Swahili coast) and the animal horn, flute and whistle as wind instruments, knows a wind instrument makes its sound when the player blows air into it, and does not put the nyatiti, orutu, litungu or ngoma in the wind group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.PARTS": {
+   "forms": [
+    "name the part from its job",
+    "say what blowing, the tube and the finger holes each do",
+    "say why uncovering holes raises the sound",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the mouthpiece is where the player blows in, the air inside the tube is what vibrates to make the sound, the finger holes change the length of the vibrating air (more holes covered gives a lower sound, fewer covered a higher sound) and the open end lets the sound out. The child does not say the wood itself sings. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.CARE": {
+   "forms": [
+    "pick the right way to clean or store it",
+    "say why a care step matters",
+    "choose the careful action in a story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child cleans the mouthpiece before another player uses the instrument, keeps the instrument dry and away from rain and hot sun, stores it in a safe place, and handles it gently, and gives the reason for each step. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.ETCHING": {
+   "forms": [
+    "say what cross-hatching is for",
+    "put the etching steps in order",
+    "pick the tool that scratches",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says cross-hatching is lines that cross each other to make texture and dark areas, and puts the etching steps in order: colour the paper with bright crayons, cover with dark crayon, scratch the picture through the dark layer with a pointed tool so the bright colours show. This is the knowledge half of outcome e; drawing it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.FOOTBALL.SKILLS": {
+   "forms": [
+    "pick the part of the foot for a kick or stop",
+    "say how a straight dribble is done",
+    "pick the careful action in a story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says an instep kick uses the laces (top) of the foot, an outside-of-the-foot kick uses the outer side of the foot, stopping uses the inside of the foot, a step trap puts the sole on top of the ball, and a straight dribble pushes the ball forward in small touches with the head up. This is the knowledge half of outcome a; doing it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.FOOTBALL.PAPIER_MACHE": {
+   "forms": [
+    "put the steps in order",
+    "say why a step is needed",
+    "pick the material for a step",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order: shred paper, soak it in water, pound it to a pulp, mix the pulp with an adhesive such as flour paste, press it onto the cone mould, let it dry fully, then remove it. The child knows each step has a reason. This is the knowledge half of outcomes b and c; making the cones is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.RHYTHM.VALUES": {
+   "forms": [
+    "say the beats of a note or rest",
+    "say how a note looks in words",
+    "add the beats of a short pattern",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a minim lasts two beats, a crotchet one beat, a pair of quavers one beat together (half a beat each), and each rest is silent for as long as its note. Questions describe shapes, signs and holes in words, because the phone question has no staff or picture. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.RHYTHM.NAMES": {
+   "forms": [
+    "match a French name to a note",
+    "say how many sounds a name has",
+    "pick the name for a described symbol",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child matches taa-aa to the minim (two beats), taa to the crotchet (one beat) and ta-te to a pair of quavers (two sounds in one beat), and knows a rest is silent: it is counted but not sounded. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.RHYTHM.TWO_BEAT": {
+   "forms": [
+    "pick the pattern that fills two beats",
+    "say which beat is strong",
+    "count beats and not sounds",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child counts beats and not sounds, so ta-te ta-te is two beats (four sounds), knows a two-beat pattern is counted 1 2 with the strong beat on 1, and picks patterns whose notes add up to two beats. This is the knowledge half of outcomes e and f; clapping and composing are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.COLOUR_WHEEL": {
+   "forms": [
+    "pick the primary colours",
+    "pick the secondary colours",
+    "say whether a colour is primary or secondary",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names red, yellow and blue as the primary colours (not made by mixing) and orange, green and purple as the secondary colours (made by mixing two primaries), and does not call green, black or white primary. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MIXING": {
+   "forms": [
+    "say what two colours make a secondary",
+    "say what a mix of two primaries makes",
+    "pick the pair for a needed colour",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says red and yellow make orange, blue and yellow make green, and red and blue make purple, and picks the right pair when a painter needs one of them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.WASH": {
+   "forms": [
+    "say how a wash is painted",
+    "put the steps of a scenery in order",
+    "say which brush and paint suit a wash",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a wash uses thin, watery paint spread in broad strokes with a large brush, light colours go on first (the sky) and darker colours and small details go on last, after the wash has dried. This is the knowledge half of outcome b; painting is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.PAINTING_AND_MOSAIC.MOSAIC": {
+   "forms": [
+    "say what a mosaic is made of",
+    "put the mosaic steps in order",
+    "pick a material that suits a mosaic",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a mosaic picture is made by sticking many small pieces (coloured paper, seeds, bottle tops, small stones or tile pieces) close together on a surface with small gaps, after drawing the design first, and glues a small area at a time. This is the knowledge half of outcomes c and d; making it is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.MELODY.SOLFA": {
+   "forms": [
+    "pick the next syllable going up or down",
+    "say which syllable is highest or lowest",
+    "put the five syllables in order",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts d r m f s in order from the lowest sound to the highest (d lowest, s highest), says the order backwards for going down, and does not treat the first syllable sung as the highest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.MELODY.SIGNS": {
+   "forms": [
+    "say which syllable a described sign shows",
+    "say how a syllable's sign looks",
+    "say how the height of the hand changes",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says d is a closed fist held low, r is a hand sloping upward, m is a flat hand with the palm down, f is the thumb pointing down, s is a flat hand with the palm facing sideways, and that the hands are held higher as the pitch gets higher. Questions describe shapes, signs and holes in words, because the phone question has no staff or picture. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.MELODY.TECHNIQUES": {
+   "forms": [
+    "name the technique used in a short melody",
+    "say what a technique means",
+    "pick the melody that uses a technique",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child reads a melody written as d r m f s letters and names stepwise motion (to the next syllable), a narrow leap (skipping one syllable), repetition of a pitch, variation of a pitch, and an ending on a long note. This is the knowledge half of outcome c; composing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.ROUNDERS.BAT": {
+   "forms": [
+    "name the part from its job",
+    "say which part hits the ball",
+    "pick the feature of a good rounders bat",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the knob (the end that stops the bat slipping from the hand), the handle and grip (where it is held), and the head (the rounded, thicker hitting part), and knows a rounders bat is smooth and rounded, not flat like a cricket bat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.ROUNDERS.CARVING": {
+   "forms": [
+    "pick the tool for a carving job",
+    "pick the wood that suits",
+    "pick the safe carving action",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child pairs the saw with cutting the wood to length, the knife or rasp with shaping, and sandpaper with smoothing, says dry hardwood suits a bat, and cuts away from the body with the wood held steady and an adult watching. This is the knowledge half of outcomes b and c; carving is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.CREATI.ROUNDERS.SAFETY": {
+   "forms": [
+    "pick the safe action at the batting post",
+    "say why a safety rule matters",
+    "say what to do in a game story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child stands well away from the batter, does not swing the bat when others are near, puts the bat down and never throws it, bowls underarm to the batter and not at a person, and says each rule protects someone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.ATHLETICS.BATON": {
+   "forms": [
+    "say what the receiver does in each change",
+    "say which way the baton moves into the hand",
+    "say why a baton change method matters",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says that in a visual change the receiver looks back and watches the baton come into the hand, in a non-visual change the receiver keeps looking ahead and puts the hand back on a signal, an upsweep moves the baton upward into the hand and a downsweep moves it downward, and that both keep the receiver running without slowing. This is the knowledge half of outcomes c and d. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.ATHLETICS.RELAY": {
+   "forms": [
+    "say where the baton must be passed",
+    "say what to do when a baton is dropped",
+    "pick the safe action in a race story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the baton is passed inside the exchange zone and carried by hand, never thrown, the runner who drops it picks it up, runners keep to their lane, and the team wins when its last runner crosses the line with the baton. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.ATHLETICS.PLAITING": {
+   "forms": [
+    "put the plaiting steps in order",
+    "say how many strands and why",
+    "pick a plaiting material",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a plait uses three strands of equal length, fixed together at the top, with the outer strand crossed over the middle strand from the right and then from the left in turn, pulled to an even tightness and tied off at the end. Sisal, leather strips and strips of old fabric are plaiting materials. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.FABRIC_DECORATION.DECOR_TYPES": {
+   "forms": [
+    "name the technique from how it is done",
+    "say how a technique makes its pattern",
+    "pick the technique that suits a job",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says tie and dye makes a pattern by tying parts of the cloth so the dye cannot reach them, appliqué sews or sticks cut shapes of one fabric onto another, batik uses wax to keep dye out, and embroidery uses thread stitches, and does not swap tie and dye with appliqué. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.FABRIC_DECORATION.TIE_DYE": {
+   "forms": [
+    "put the steps in order",
+    "say what the tied part looks like after dyeing",
+    "say how to keep safe with dye",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the steps in order: wet the cloth, pinch and tie it tightly, dye it, rinse, untie, then dry in the shade. The child knows the tied parts keep the cloth's own colour, dye is fixed with a fastener such as salt, and gloves and an adult are needed with dye. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.FABRIC_DECORATION.APPLIQUE": {
+   "forms": [
+    "put the appliqué steps in order",
+    "pick the material for a step",
+    "say what holds the shape on",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says appliqué means cutting shapes from another fabric, placing them on a background cloth (pinned or tacked first), and sewing or sticking round the edges so they stay on, and that the background cloth is not cut away. This is the knowledge half of outcome c. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.BACKGROUND": {
+   "forms": [
+    "pick the community of a dance",
+    "pick the occasion of a dance",
+    "say who does what in a performance",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child matches isukuti to the Luhya, adumu to the Maasai, mwomboko to the Kikuyu, chakacha to the Swahili of the coast and ohangla to the Luo, gives an occasion for each, and says the soloist leads the song, the chorus answers, instrumentalists play and dancers dance. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.COMPONENTS": {
+   "forms": [
+    "name the component from a described example",
+    "sort examples into components",
+    "say what a component adds to the dance",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names songs, body movements, costumes (clothes worn), ornaments (beads, anklets), body adornment (paint, hairstyle), formations (circle, line), props (things held) and instruments (drums, horns), and does not swap ornament with costume or prop with instrument. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.ROLES": {
+   "forms": [
+    "pick a role of folk dance",
+    "pick the statement that is not a role",
+    "say which role fits a story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives roles such as entertainment, handing down culture and values, bringing people together, marking events like weddings and harvests, and earning an income for performers, and does not say a folk dance is only for fun or only for old people. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.DANCE_SAFETY": {
+   "forms": [
+    "pick the safe action before dancing",
+    "pick the respectful action",
+    "say what to do in a rehearsal story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child warms up before dancing, clears stones and sharp things from the space, keeps ornaments secure, waits for a turn, listens to the leader, and respects the dances of other communities and does not laugh at them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.PUPPETRY.TYPES": {
+   "forms": [
+    "pick the glove puppet from a description",
+    "say how a puppet is moved",
+    "say what a puppet type is called",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a glove puppet is worn over the hand with the fingers moving the head and arms, a finger puppet fits on one finger, a string puppet hangs on strings, a rod puppet moves on sticks, and a shadow puppet is a flat shape seen behind a lit screen. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.PUPPETRY.MAKE": {
+   "forms": [
+    "pick the recyclable material",
+    "say what to use for a part",
+    "say why the size must fit the hand",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says recyclable materials are things already used that can be used again (old socks, paper bags, cardboard, bottle tops, cloth scraps), picks one for a part such as eyes or hair, and says the puppet must fit the hand so the fingers can move the head and arms. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.PUPPETRY.SHOW": {
+   "forms": [
+    "say what a puppet show needs",
+    "say what a topical song is",
+    "pick the right action in a show story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a puppet show needs a screen that hides the puppeteers, a story, a different voice for each character, and only the speaking puppet moving, and that a topical song is about an issue the community is talking about, such as hygiene, road safety or looking after trees. This is the knowledge half of outcome c. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.DESCANT_RECORDER.NOTES": {
+   "forms": [
+    "put the notes in order of pitch",
+    "say how many fingers G, A or B needs",
+    "say whether a note is higher or lower",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the notes in order from the lowest, G, A, B, then the higher C and D (C1 and D1), says B covers the thumb hole and one finger, A the thumb and two fingers, G the thumb and three fingers, and that covering more holes gives a lower note. This is the knowledge half of outcome a; playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.DESCANT_RECORDER.TECHNIQUE": {
+   "forms": [
+    "pick the way to hold and finger the recorder",
+    "say how to blow for a good tone",
+    "say what tonguing does",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child covers each hole fully with the soft pad of the finger, blows a gentle steady breath (too hard gives a shrill squeak), starts each note by tonguing softly with a \"too\" sound, and knows a good tone is clear and smooth. This is the knowledge half of outcome b. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.SWIMMING.CRAWL": {
+   "forms": [
+    "say what the arms do",
+    "say what the legs do",
+    "say how to breathe",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the body lies flat on the front with the face in the water, the arms pull one after the other (one under the water while the other swings over it), the legs kick up and down in small quick flutter kicks from the hips, and the swimmer breathes out in the water and turns the head to the side to breathe in. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.SWIMMING.POOL_SAFETY": {
+   "forms": [
+    "pick the safe or clean action",
+    "say why a pool rule matters",
+    "say what to do in a pool story",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child showers before getting in, never swims alone and swims only when a teacher or lifeguard is watching, does not run on the pool side, does not push, and checks the depth and enters feet first when not sure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.PERFOR.SWIMMING.COUNTING_GAMES": {
+   "forms": [
+    "pick a counting game",
+    "say what a counting game trains",
+    "say how rhythm joins a counting game",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names bao (a board game of pits and seeds) and counting rhymes, skipping and clapping games as counting games, says that counting games train counting, planning and teamwork and the moving ones build fitness, and that rhythm means counting and moving to the beat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.CRITIQUE": {
+   "forms": [
+    "pick the helpful, respectful comment",
+    "say what to look at in an artwork",
+    "say what to do in a gallery walk",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child comments on the type of art, the materials and what stands out (colour, line, shape, texture), says what they like and why, offers one polite idea to improve, and does not touch other people's work or use rude words. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLK_TERMS": {
+   "forms": [
+    "pick the word that fits a description",
+    "say what a word means",
+    "fill the word into a sentence",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child uses formation (the shape the dancers make), costume (clothes worn), ornament (beads and anklets), response (the chorus answering the soloist), occasion (when it is performed) and community (the people it comes from) correctly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM": {
+   "forms": [
+    "say what the anthem is for",
+    "pick a value in the anthem",
+    "pick the right behaviour when it is sung",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the East African Community Anthem is the song of the East African Community, a group of countries working together, that it asks for peace, unity and co-operation, that it is not Kenya's national anthem, and that everyone stands still and straight and sings or listens in respectful silence. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -4493,6 +4493,7 @@ var SUBJECT_PREFIXES = {
   SCIE: "science",
   ENGL: "english",
   KISW: "kiswahili",
+  CREA: "creativearts",
   SOCI: "socialstudies"
 };
 
