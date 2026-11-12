@@ -8,7 +8,7 @@ import { createRoot } from 'react-dom/client';
 import { Board, composedItems } from '../../src/voice-tutor/Board.jsx';
 import { emptyBoard, applyStep, playFigure } from '../../src/voice-tutor/board.js';
 import { validateTurn } from '../../src/voice-tutor/commands.js';
-import { lessonShape, SIDE_W } from '../../src/voice-tutor/layout.js';
+import { roomShape } from '../../src/voice-tutor/layout.js';
 import { placeItem } from '../../src/draw/compose.js';
 import { itemStrokes, strokesBox } from '../../src/draw/strokes.js';
 
@@ -86,8 +86,9 @@ function build(scene, H) {
 
 function Lab() {
   const w = window.innerWidth; const h = window.innerHeight;
-  const { kind, boardH } = lessonShape(w, h);
-  const sheetW = kind === 'stack' ? w - 40 : kind === 'table' ? w - SIDE_W(w) * 2 - 80 : w * 0.6;
+  const { wide, side, boardH } = roomShape(w, h);
+  const kind = wide ? 'laptop' : 'phone';
+  const sheetW = Math.min(wide ? w - side - 88 : w - 48, h - 120);
   const only = new URLSearchParams(location.search).get('only');
   const list = only != null ? [SCENES[Number(only)]] : SCENES;
   return (
