@@ -62,7 +62,7 @@ export function cartesiaStt({ getToken }) {
       const finalize = () => {
         if (done || flushTimer) return;
         try { node?.disconnect(); } catch { /* stopped */ }
-        if (!speechAt || ws?.readyState !== WebSocket.OPEN) { finish(); return; }
+        if (ws?.readyState !== WebSocket.OPEN) { finish(); return; }
         ws.send('finalize');
         flushTimer = setTimeout(finish, FLUSH_WAIT_MS);
       };
@@ -85,6 +85,7 @@ export function cartesiaStt({ getToken }) {
           let m; try { m = JSON.parse(e.data); } catch { return; }
           const ev = cartesiaSttEvent(m);
           if (!ev) return;
+          if ((ev.kind === 'partial' || ev.kind === 'final') && ev.text.trim() && !speechAt) { speechAt = performance.now(); clearTimeout(noSpeech); h.onSpeech?.(); }
           if (ev.kind === 'partial') { partial = ev.text; h.onPartial?.(`${finals}${partial}`.trim()); }
           if (ev.kind === 'final') { finals += ev.text; stats.heard += 1; stats.said = finals.trim().slice(0, 80); partial = ''; h.onPartial?.(finals.trim()); }
           if (ev.kind === 'flushed' || ev.kind === 'done') finish();
@@ -102,13 +103,15 @@ export function cartesiaStt({ getToken }) {
             speechAt = performance.now(); clearTimeout(noSpeech); h.onSpeech?.();
             if (ws.readyState === WebSocket.OPEN) pre.splice(0).forEach((b) => ws.send(b));
           }
-          if (!speechAt) { pre.push(bytes); if (pre.length > PREROLL_FRAMES) pre.shift(); return; }
-          if (ws.readyState === WebSocket.OPEN) { pre.splice(0).forEach((b) => ws.send(b)); ws.send(bytes); } else pre.push(bytes);
+          // All the sound goes to the service from the first frame (12 Nov 2026): a quiet microphone or a voice under
+          // the loudness gate was never heard at all. The service's own words also count as the child speaking.
+          if (ws.readyState === WebSocket.OPEN) { pre.splice(0).forEach((x) => ws.send(x)); ws.send(bytes); } else { pre.push(bytes); if (pre.length > PREROLL_FRAMES * 10) pre.shift(); }
+          if (!speechAt) return;
           if (said === 'pause') h.onPause?.();
           if (said === 'end') finalize();
         };
         src.connect(node); node.connect(ctx.destination);
-        noSpeech = setTimeout(finish, NO_SPEECH_MS);
+        noSpeech = setTimeout(finalize, NO_SPEECH_MS); // ask the service for anything it heard, even below the loudness gate
         hard = setTimeout(finalize, MAX_UTTERANCE_MS);
       })();
       return { stop: finalize, cancel() { done = true; cleanup(); } };
