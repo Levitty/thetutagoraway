@@ -1415,6 +1415,1488 @@ var gcdOf = (a, b) => {
   return a || 1;
 };
 
+// src/ai-tutor/content/curriculumMap.agriculture.g5.js
+var SUBSTRANDS = {
+  "AGRI.G5.CONSER.SOIL_CONSERVATION": {
+    "name": "Soil Conservation",
+    "strand": "Conservation of Resources",
+    "outcomes": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.a",
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.b",
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.c"
+    ]
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION": {
+    "name": "Water Conservation",
+    "strand": "Conservation of Resources",
+    "outcomes": [
+      "AGRI.G5.CONSER.WATER_CONSERVATION.a",
+      "AGRI.G5.CONSER.WATER_CONSERVATION.b",
+      "AGRI.G5.CONSER.WATER_CONSERVATION.c"
+    ]
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS": {
+    "name": "Conserving Wild Animals",
+    "strand": "Conservation of Resources",
+    "outcomes": [
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b",
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.c"
+    ]
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES": {
+    "name": "Growing Vegetables",
+    "strand": "Food Production Processes",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a",
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b",
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c",
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.d"
+    ]
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS": {
+    "name": "Uses of Domestic Animals",
+    "strand": "Food Production Processes",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a",
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b",
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c"
+    ]
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_": {
+    "name": "Preservation of Cereals and Pulses",
+    "strand": "Food Production Processes",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a",
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b",
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.c"
+    ]
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS": {
+    "name": "Food Nutrients",
+    "strand": "Food Production Processes",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a",
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b",
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c",
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.d"
+    ]
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD": {
+    "name": "Cooking Food",
+    "strand": "Food Production Processes",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.COOKING_FOOD.a",
+      "AGRI.G5.FOOD_P.COOKING_FOOD.b",
+      "AGRI.G5.FOOD_P.COOKING_FOOD.c"
+    ]
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES": {
+    "name": "Good Grooming Practices",
+    "strand": "Hygiene Practices",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a",
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b",
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.c"
+    ]
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE": {
+    "name": "Home Hygiene",
+    "strand": "Hygiene Practices",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.a",
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.b",
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.c"
+    ]
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM": {
+    "name": "Laundering Cotton Item",
+    "strand": "Hygiene Practices",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a",
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b",
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.c"
+    ]
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS": {
+    "name": "Repairing Garments",
+    "strand": "Production Techniques",
+    "outcomes": [
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a",
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b",
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c",
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.d"
+    ]
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_": {
+    "name": "Constructing Innovative Gardens",
+    "strand": "Production Techniques",
+    "outcomes": [
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a",
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c"
+    ]
+  }
+};
+var OUTCOMES = {
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.CONSER.WATER_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.CONSER.WATER_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.CONSER.WATER_CONSERVATION"
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS"
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS"
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS"
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES"
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES"
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES"
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.d": {
+    "letter": "d",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES"
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS"
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS"
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS"
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_"
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_"
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_"
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS"
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS"
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS"
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.d": {
+    "letter": "d",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS"
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.FOOD_P.COOKING_FOOD"
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.FOOD_P.COOKING_FOOD"
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.FOOD_P.COOKING_FOOD"
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES"
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES"
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES"
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.HYGIEN.HOME_HYGIENE"
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.HYGIEN.HOME_HYGIENE"
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.HYGIEN.HOME_HYGIENE"
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM"
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM"
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM"
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS"
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS"
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS"
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.d": {
+    "letter": "d",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS"
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a": {
+    "letter": "a",
+    "sub": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_"
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b": {
+    "letter": "b",
+    "sub": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_"
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c": {
+    "letter": "c",
+    "sub": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_"
+  }
+};
+var SKILLS = {
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES": {
+    "name": "Identify sites that need soil improvement and a good site for an organic waste pit",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION",
+    "outcome": "AGRI.G5.CONSER.SOIL_CONSERVATION.a",
+    "outcomes": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_SITE_DARK",
+      "M_AG_SITE_PIT_LOW",
+      "M_AG_SITE_BARE_FINE"
+    ]
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT": {
+    "name": "Say what goes into an organic waste pit and how it is built and looked after",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION",
+    "outcome": "AGRI.G5.CONSER.SOIL_CONSERVATION.b",
+    "outcomes": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.b"
+    ],
+    "pre": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES"
+    ],
+    "mis": [
+      "M_AG_PIT_ANYTHING",
+      "M_AG_PIT_COOKED",
+      "M_AG_PIT_NO_CARE"
+    ]
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS": {
+    "name": "Say how plant remains improve soil",
+    "sub": "AGRI.G5.CONSER.SOIL_CONSERVATION",
+    "outcome": "AGRI.G5.CONSER.SOIL_CONSERVATION.c",
+    "outcomes": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.c"
+    ],
+    "pre": [
+      "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT"
+    ],
+    "mis": [
+      "M_AG_REMAINS_BURN",
+      "M_AG_REMAINS_WASTE"
+    ]
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS": {
+    "name": "Identify ways of conserving water in a household garden",
+    "sub": "AGRI.G5.CONSER.WATER_CONSERVATION",
+    "outcome": "AGRI.G5.CONSER.WATER_CONSERVATION.a",
+    "outcomes": [
+      "AGRI.G5.CONSER.WATER_CONSERVATION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_WATER_NOON",
+      "M_AG_WATER_MULCH_WARM",
+      "M_AG_WATER_MORE"
+    ]
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST": {
+    "name": "Plan and read a fair test of mulching",
+    "sub": "AGRI.G5.CONSER.WATER_CONSERVATION",
+    "outcome": "AGRI.G5.CONSER.WATER_CONSERVATION.b",
+    "outcomes": [
+      "AGRI.G5.CONSER.WATER_CONSERVATION.b"
+    ],
+    "pre": [
+      "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS"
+    ],
+    "mis": [
+      "M_AG_TEST_UNFAIR",
+      "M_AG_TEST_RESULT"
+    ]
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE": {
+    "name": "Match wild animals that harm property to the damage they do",
+    "sub": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS",
+    "outcome": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
+    "outcomes": [
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_PEST_MIX",
+      "M_AG_PEST_ALL"
+    ]
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS": {
+    "name": "Choose safe ways of repelling wild animals without harming them",
+    "sub": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS",
+    "outcome": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
+    "outcomes": [
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a",
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b"
+    ],
+    "pre": [
+      "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE"
+    ],
+    "mis": [
+      "M_AG_REPEL_KILL",
+      "M_AG_REPEL_ONE",
+      "M_AG_REPEL_CLOSE"
+    ]
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES": {
+    "name": "Name the gardening practices in growing vegetables and put them in order",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+    "outcome": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_VEG_ORDER",
+      "M_AG_VEG_WATER_ONLY"
+    ]
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED": {
+    "name": "Say how a vegetable nursery bed is made and why",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+    "outcome": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES"
+    ],
+    "mis": [
+      "M_AG_NURS_COARSE",
+      "M_AG_NURS_DEEP",
+      "M_AG_NURS_FLOOD"
+    ]
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE": {
+    "name": "Say how to transplant seedlings and care for them afterwards",
+    "sub": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+    "outcome": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED"
+    ],
+    "mis": [
+      "M_AG_TRANS_NOON",
+      "M_AG_TRANS_DRY",
+      "M_AG_TRANS_NOWATER"
+    ]
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS": {
+    "name": "Name the food that domestic animals give",
+    "sub": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+    "outcome": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_PROD_COCK",
+      "M_AG_PROD_WOOL",
+      "M_AG_PROD_MILK_ALL"
+    ]
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES": {
+    "name": "Relate domestic animals to all their uses, not only food",
+    "sub": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+    "outcome": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS"
+    ],
+    "mis": [
+      "M_AG_USE_FOOD_ONLY",
+      "M_AG_USE_DONKEY",
+      "M_AG_USE_DUNG"
+    ]
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS": {
+    "name": "Describe the ways of preserving cereals and pulses at home",
+    "sub": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
+    "outcome": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_PRES_WET",
+      "M_AG_PRES_SACK",
+      "M_AG_PRES_WATER"
+    ]
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE": {
+    "name": "Say how to dry, treat and store grain and beans so they last",
+    "sub": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
+    "outcome": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS"
+    ],
+    "mis": [
+      "M_AG_PRACT_SEAL_EARLY",
+      "M_AG_PRACT_GROUND",
+      "M_AG_PRACT_DRYNESS"
+    ]
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS": {
+    "name": "Explain what each food nutrient does in the body",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+    "outcome": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_NUT_PROT_ENERGY",
+      "M_AG_NUT_VIT_ENERGY",
+      "M_AG_NUT_FAT_BAD"
+    ]
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS": {
+    "name": "Sort foods by their main nutrient",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+    "outcome": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS"
+    ],
+    "mis": [
+      "M_AG_GRP_PLANT_VIT",
+      "M_AG_GRP_MILK_ENERGY",
+      "M_AG_GRP_FILLING",
+      "M_AG_GRP_BUTTER_PROT"
+    ]
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES": {
+    "name": "Identify nutritional diseases and what causes them",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+    "outcome": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS"
+    ],
+    "mis": [
+      "M_AG_DIS_SWAP",
+      "M_AG_DIS_CATCH",
+      "M_AG_DIS_CAUSE"
+    ]
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION": {
+    "name": "Choose foods and habits that prevent nutritional diseases",
+    "sub": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+    "outcome": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+      "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS"
+    ],
+    "mis": [
+      "M_AG_PREV_ONE_FOOD",
+      "M_AG_PREV_SALT",
+      "M_AG_PREV_MEDICINE"
+    ]
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS": {
+    "name": "Describe dry fat frying and deep frying and the foods that suit each",
+    "sub": "AGRI.G5.FOOD_P.COOKING_FOOD",
+    "outcome": "AGRI.G5.FOOD_P.COOKING_FOOD.a",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.COOKING_FOOD.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_FRY_DEEP_LITTLE",
+      "M_AG_FRY_DRY_LOTS",
+      "M_AG_FRY_MIX"
+    ]
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY": {
+    "name": "Say how to fry safely and serve food well",
+    "sub": "AGRI.G5.FOOD_P.COOKING_FOOD",
+    "outcome": "AGRI.G5.FOOD_P.COOKING_FOOD.b",
+    "outcomes": [
+      "AGRI.G5.FOOD_P.COOKING_FOOD.b"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS"
+    ],
+    "mis": [
+      "M_AG_FSAFE_WATER",
+      "M_AG_FSAFE_WET",
+      "M_AG_FSAFE_FULL",
+      "M_AG_FSAFE_LEAVE"
+    ]
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS": {
+    "name": "Describe good grooming as a daily health habit",
+    "sub": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
+    "outcome": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_GROOM_EXPENSIVE",
+      "M_AG_GROOM_PERFUME",
+      "M_AG_GROOM_SPECIAL"
+    ]
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE": {
+    "name": "Choose dress and manners for different occasions",
+    "sub": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
+    "outcome": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b"
+    ],
+    "pre": [
+      "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS"
+    ],
+    "mis": [
+      "M_AG_DRESS_SAME",
+      "M_AG_ETIQ_GREET"
+    ]
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES": {
+    "name": "Identify the surfaces found in a home from their material",
+    "sub": "AGRI.G5.HYGIEN.HOME_HYGIENE",
+    "outcome": "AGRI.G5.HYGIEN.HOME_HYGIENE.a",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_SURF_TILE_CEMENT",
+      "M_AG_SURF_TILE_GLASS"
+    ]
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING": {
+    "name": "Choose the right way to clean each type of surface",
+    "sub": "AGRI.G5.HYGIEN.HOME_HYGIENE",
+    "outcome": "AGRI.G5.HYGIEN.HOME_HYGIENE.b",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.b"
+    ],
+    "pre": [
+      "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES"
+    ],
+    "mis": [
+      "M_AG_CLEAN_SOAK_WOOD",
+      "M_AG_CLEAN_EARTH_SCRUB",
+      "M_AG_CLEAN_WET_SLIP",
+      "M_AG_CLEAN_WASH_FIRST"
+    ]
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS": {
+    "name": "Put the steps of laundering a cotton item in order",
+    "sub": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM",
+    "outcome": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_LAUN_ORDER",
+      "M_AG_LAUN_MIX",
+      "M_AG_LAUN_RINSE"
+    ]
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE": {
+    "name": "Care for white and fast coloured cotton while washing, drying and ironing",
+    "sub": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM",
+    "outcome": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b",
+    "outcomes": [
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b"
+    ],
+    "pre": [
+      "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS"
+    ],
+    "mis": [
+      "M_AG_CARE_HOT",
+      "M_AG_CARE_SUN",
+      "M_AG_CARE_IRON"
+    ]
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES": {
+    "name": "Identify running stitch and back stitch and tell them apart",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
+    "outcome": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a",
+    "outcomes": [
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_AG_STITCH_SWAP",
+      "M_AG_STITCH_RUN_STRONG",
+      "M_AG_STITCH_BACK_GAPS"
+    ]
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR": {
+    "name": "Say how to repair a gaping seam with stitches",
+    "sub": "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
+    "outcome": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b",
+    "outcomes": [
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b",
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c"
+    ],
+    "pre": [
+      "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES"
+    ],
+    "mis": [
+      "M_AG_SEAM_RUN",
+      "M_AG_SEAM_START",
+      "M_AG_SEAM_TIGHT"
+    ]
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES": {
+    "name": "Tell a vertical garden from a horizontal garden",
+    "sub": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_",
+    "outcome": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a",
+    "outcomes": [
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a"
+    ],
+    "pre": [
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES"
+    ],
+    "mis": [
+      "M_AG_GTYPE_NEED_LAND",
+      "M_AG_GTYPE_SWAP"
+    ]
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD": {
+    "name": "Say how an innovative garden is built and which crops suit it",
+    "sub": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_",
+    "outcome": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+    "outcomes": [
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b",
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c"
+    ],
+    "pre": [
+      "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+      "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES"
+    ],
+    "mis": [
+      "M_AG_GBUILD_ANY_CROP",
+      "M_AG_GBUILD_DRAIN",
+      "M_AG_GBUILD_NO_WATER"
+    ]
+  }
+};
+var MIS_FEEDBACK = {
+  "M_AG_SITE_DARK": "Colour alone does not tell. Dark, crumbly soil is usually rich in rotted plant matter. Bare, hard, washed-away ground is a sign of poor soil.",
+  "M_AG_SITE_PIT_LOW": "A pit in a hollow floods and a pit near drinking water can pollute it. Choose firm ground near the garden and away from the well.",
+  "M_AG_SITE_BARE_FINE": "Hard bare ground and small yellow crops show the soil is poor. It needs rotted plant matter and manure to improve it.",
+  "M_AG_PIT_ANYTHING": "Polythene, tins and glass do not rot and spoil the manure. Only things that were once plants or animal dung go in.",
+  "M_AG_PIT_COOKED": "Meat and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.",
+  "M_AG_PIT_NO_CARE": "Rotting needs a little moisture and cover. Keep the pit damp and covered until the waste is dark and crumbly.",
+  "M_AG_REMAINS_BURN": "Burning wastes the plant matter. Rotted stalks give the soil humus and plant food.",
+  "M_AG_REMAINS_WASTE": "Leaves and grass can be rotted into compost or used as mulch. They are plant food in waiting.",
+  "M_AG_WATER_NOON": "In the heat much of the water dries off before it soaks in. Water early or late.",
+  "M_AG_WATER_MULCH_WARM": "Mulch shades the soil so water dries off slowly. That is how it saves water.",
+  "M_AG_WATER_MORE": "More water can simply dry off or run away. A mulch, a cover crop or shade keeps the water in the soil.",
+  "M_AG_TEST_UNFAIR": "A fair test changes only one thing. Same crop, same soil and same water, with and without mulch.",
+  "M_AG_TEST_RESULT": "Mulch shades the soil and slows drying, so the mulched bed stays damp longer.",
+  "M_AG_PEST_MIX": "Birds eat grain on the plant and fruit. Warthogs and moles dig up roots and tubers.",
+  "M_AG_PEST_ALL": "Bees carry pollen so crops give fruit, and owls eat rats. Many wild animals help.",
+  "M_AG_REPEL_KILL": "We protect wild animals. Scare them off with a scarecrow, noise, a fence or a guard.",
+  "M_AG_REPEL_ONE": "A scarecrow can scare birds, but elephants need stronger measures such as beehive fences, chilli or a trench.",
+  "M_AG_REPEL_CLOSE": "Big animals are dangerous. Keep away and tell an adult or the Kenya Wildlife Service.",
+  "M_AG_VEG_ORDER": "You prepare first, sow in the nursery, then transplant the seedlings, then care and harvest.",
+  "M_AG_VEG_WATER_ONLY": "Plants need weeding, mulch and protection from pests as well as water.",
+  "M_AG_NURS_COARSE": "Tiny seeds need fine soil so they touch the soil and the shoot can push up.",
+  "M_AG_NURS_DEEP": "Tiny seeds are sown shallow and covered thinly. A deep seed cannot push through.",
+  "M_AG_NURS_FLOOD": "Seeds and seedlings rot in standing water. Water lightly and keep the bed well drained.",
+  "M_AG_TRANS_NOON": "The hot midday sun scorches new transplants. Evening or cloudy weather is kinder.",
+  "M_AG_TRANS_DRY": "Water the bed first and lift with soil on the roots so the roots are not torn.",
+  "M_AG_TRANS_NOWATER": "New transplants need water and shade for a few days, then weeding and mulching.",
+  "M_AG_PROD_COCK": "The hen lays eggs. The cock does not.",
+  "M_AG_PROD_WOOL": "Wool comes from sheep. Goats give meat, milk and skins.",
+  "M_AG_PROD_MILK_ALL": "Cows, goats and camels give milk. Hens give eggs, not milk.",
+  "M_AG_USE_FOOD_ONLY": "Oxen pull ploughs and carts. Animals give work as well as food.",
+  "M_AG_USE_DONKEY": "Donkeys carry loads and pull carts, which saves people carrying heavy things.",
+  "M_AG_USE_DUNG": "Dung rots into manure that adds plant food and helps the soil.",
+  "M_AG_PRES_WET": "Damp grain grows mould. Dry it fully before storing.",
+  "M_AG_PRES_SACK": "An airtight container stops air and insects. Open baskets let weevils in.",
+  "M_AG_PRES_WATER": "Soaked beans sprout or rot. Drying and sealed storage preserve beans.",
+  "M_AG_PRACT_SEAL_EARLY": "Sealing damp grain traps the moisture and it grows mould. Dry it first.",
+  "M_AG_PRACT_GROUND": "Floors and walls let in damp and rats. Raise the sacks and keep them away from the wall.",
+  "M_AG_PRACT_DRYNESS": "A dry grain is hard and cracks when bitten or sounds like a rattle when shaken.",
+  "M_AG_NUT_PROT_ENERGY": "Proteins build and repair the body. Carbohydrates give energy.",
+  "M_AG_NUT_VIT_ENERGY": "Vitamins protect the body. Energy comes mostly from carbohydrates and fats.",
+  "M_AG_NUT_FAT_BAD": "Fats store energy and keep the body warm. A little is needed, too much is not good.",
+  "M_AG_GRP_PLANT_VIT": "Cassava, ugali and rice are carbohydrate foods that give energy. Vitamin foods are mostly fruits and green vegetables.",
+  "M_AG_GRP_MILK_ENERGY": "Eggs, milk and beans are rich in protein, so they build the body.",
+  "M_AG_GRP_FILLING": "Ugali is a carbohydrate food that gives energy. Body-building foods are beans, meat, fish, eggs and milk.",
+  "M_AG_GRP_BUTTER_PROT": "Cooking oil and butter are fats.",
+  "M_AG_DIS_SWAP": "Marasmus is very thin and wasted from too little food overall. Kwashiorkor shows swollen legs and belly from lack of protein.",
+  "M_AG_DIS_CATCH": "Lack of a nutrient is not an infection. It does not spread from person to person.",
+  "M_AG_DIS_CAUSE": "Goitre comes from too little iodine. Anaemia comes from too little iron.",
+  "M_AG_PREV_ONE_FOOD": "A varied meal gives all the nutrients. One food cannot.",
+  "M_AG_PREV_SALT": "Only iodised salt carries iodine to prevent goitre.",
+  "M_AG_PREV_MEDICINE": "Eating enough protein foods prevents kwashiorkor. Good food is the best protection.",
+  "M_AG_FRY_DEEP_LITTLE": "In deep frying the food is covered by hot oil.",
+  "M_AG_FRY_DRY_LOTS": "Dry fat frying uses the fat that melts out of the food.",
+  "M_AG_FRY_MIX": "Mandazi are fried in deep oil. Sausages release their own fat in a pan.",
+  "M_AG_FSAFE_WATER": "Water makes burning oil splash and spread. Smother the fire with a lid.",
+  "M_AG_FSAFE_WET": "Water spits in hot oil. Dry food gently with a cloth first.",
+  "M_AG_FSAFE_FULL": "Oil bubbles up when food goes in. Fill the pan no more than half.",
+  "M_AG_FSAFE_LEAVE": "Hot oil can catch fire. Never leave it alone.",
+  "M_AG_GROOM_EXPENSIVE": "Grooming is about being clean and neat, not about cost.",
+  "M_AG_GROOM_PERFUME": "Bathing removes dirt and germs. Scent only covers smell.",
+  "M_AG_GROOM_SPECIAL": "Good grooming is a daily habit.",
+  "M_AG_DRESS_SAME": "Dress to suit the activity: old clothes and gumboots for farm work, sports wear for games, neat clothes for a visit.",
+  "M_AG_ETIQ_GREET": "Greeting visitors and new people politely shows respect. Say please and thank you every day.",
+  "M_AG_SURF_TILE_CEMENT": "Tiles are smooth, shiny squares. Cement is rough and grey.",
+  "M_AG_SURF_TILE_GLASS": "Glass is see-through. Tiles shine but you cannot see through them.",
+  "M_AG_CLEAN_SOAK_WOOD": "Too much water swells and rots wood. Wipe it with a damp cloth and dry it.",
+  "M_AG_CLEAN_EARTH_SCRUB": "Plenty of water turns an earthen floor to mud. Sprinkle a little water to settle the dust and sweep softly.",
+  "M_AG_CLEAN_WET_SLIP": "Wet tiles are slippery. Dry the floor or put up a warning sign.",
+  "M_AG_CLEAN_WASH_FIRST": "Sweep or dust first, then wash. Water on dust makes mud.",
+  "M_AG_LAUN_ORDER": "The order is sort, soak, wash, rinse, dry, iron.",
+  "M_AG_LAUN_MIX": "Colour from coloured clothes can run and stain whites, so wash them separately.",
+  "M_AG_LAUN_RINSE": "Rinse until the water runs clear. Soap left in makes cloth stiff and can itch.",
+  "M_AG_CARE_HOT": "Very hot water can make colours run. Use cool or warm water for coloured cotton.",
+  "M_AG_CARE_SUN": "Strong sun fades colours. Dry coloured clothes inside out in the shade. White clothes may go in the sun.",
+  "M_AG_CARE_IRON": "Cotton takes a hot iron and presses best while a little damp.",
+  "M_AG_STITCH_SWAP": "Back stitch goes back to meet the last stitch. Running stitch goes in and out with gaps.",
+  "M_AG_STITCH_RUN_STRONG": "Back stitch has no gaps and holds much better than running stitch.",
+  "M_AG_STITCH_BACK_GAPS": "Running stitch leaves gaps. Back stitch has none on the front.",
+  "M_AG_SEAM_RUN": "A seam that has split needs back stitch, because it is strong.",
+  "M_AG_SEAM_START": "Start a little before the gap, sew a little past it, and fasten the thread with two small stitches.",
+  "M_AG_SEAM_TIGHT": "Too tight puckers the cloth. Pull firm and even.",
+  "M_AG_GTYPE_NEED_LAND": "A vertical garden grows upwards, so it needs very little ground.",
+  "M_AG_GTYPE_SWAP": "A sack garden grows upwards, so it is a vertical garden.",
+  "M_AG_GBUILD_ANY_CROP": "Choose small crops with shallow roots such as kale, spinach, spring onions and coriander.",
+  "M_AG_GBUILD_DRAIN": "The stone column spreads water through the sack. Containers also need drainage holes so extra water can leave.",
+  "M_AG_GBUILD_NO_WATER": "A small garden dries quickly. Water it regularly through the stone column."
+};
+
+// src/ai-tutor/content/families/subject_kit.js
+var shuffle = (a) => {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+};
+var tbl = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells) => ({ cells })) } });
+var wrongs3 = (w) => w.length > 3 ? shuffle(w).slice(0, 3) : w;
+var hintsOf = (opt) => [opt.h?.[0], opt.h?.[1]].filter(Boolean);
+function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
+  const { skills: SKILLS4, outcomes: OUTCOMES4, misFeedback: MIS_FEEDBACK4 } = map;
+  const feedback = (code, own, why) => {
+    if (own) return own;
+    const f = MIS_FEEDBACK4[code];
+    if (!f) throw new Error(`${subject} family: no misconception ${code}`);
+    return why ? `${why} ${f}` : f;
+  };
+  const choose5 = (cases, opt = {}) => () => {
+    const [q, r, w, why, extra = {}] = pick(cases);
+    const wrong = wrongs3(w).map(([text, mis, own]) => ({ text: String(text), right: false, why: feedback(mis, own, why), mis }));
+    const texts = [String(r), ...wrong.map((x) => x.text)];
+    if (new Set(texts).size !== texts.length) return null;
+    const options = shuffle([{ text: String(r), right: true }, ...wrong]);
+    return {
+      question: q,
+      options,
+      instruction: extra.i || opt.instruction || "Choose the best answer.",
+      fixedOrder: !!extra.fixed,
+      hints: hintsOf(opt),
+      steps: [opt.s1 || "Read the question and think about what it is asking.", why],
+      ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
+    };
+  };
+  const typed4 = (cases, opt = {}) => () => {
+    const [q, a, ok4 = [], w, why, extra = {}] = pick(cases);
+    const wrong = wrongs3(w).map(([text, mis, own]) => [String(text), feedback(mis, own, why), mis]);
+    if ((/* @__PURE__ */ new Set([a, ...wrong.map((x) => x[0])])).size !== wrong.length + 1) return null;
+    const the = String(a).replace(/^(the|a|an) /i, "");
+    return {
+      question: q,
+      answer: a,
+      accepts: [.../* @__PURE__ */ new Set([the, `the ${the}`, ...ok4])],
+      wrong,
+      instruction: extra.i || opt.instruction || "Type your answer.",
+      hints: hintsOf(opt),
+      steps: [opt.s1 || "Read the question and think about what it is asking.", why],
+      ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
+    };
+  };
+  const spot7 = (cases, opt = {}) => () => {
+    const [q, steps, fix, mis] = pick(cases);
+    feedback(mis);
+    return { question: q, working: steps.map(([text, ok4]) => ({ text, ok: ok4 })), fix, mis, hints: hintsOf(opt), steps: [opt.s1 || "Check each step against what you know."], topicDone: true };
+  };
+  const sfam4 = (d) => {
+    const { cs, gen, id, form, rung, oc, ...rest } = d;
+    const code = `${prefix}.G${grade}.${cs}`;
+    const ck = SKILLS4[code];
+    if (!ck) throw new Error(`${id}: no ${subject} skill ${code}`);
+    const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
+    if (!outcome || !OUTCOMES4[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
+    const draw = () => gen();
+    return family({ reviewed: signed2.includes(id), subject, ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
+  };
+  return { choose: choose5, typed: typed4, spot: spot7, sfam: sfam4, pick, shuffle, tbl };
+}
+
+// src/ai-tutor/content/families/agriculture_g5_signed.js
+var SIGNED = [];
+
+// src/ai-tutor/content/families/agriculture_g5_lib.js
+var { choose, typed, spot, sfam } = makeKit({
+  subject: "agriculture",
+  grade: 5,
+  prefix: "AGRI",
+  signed: SIGNED,
+  map: { skills: SKILLS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK }
+});
+var fam = (tag, cs, form, rung, gen, oc) => sfam({ id: `agriculture5.${tag}`, cs, form, rung, gen, ...oc ? { oc } : {} });
+var Q = (q, right, wrongs, why, extra) => [q, right, wrongs.map((w) => {
+  const [t, c] = w.split("|");
+  return [t, `M_AG_${c}`];
+}), why, ...extra ? [extra] : []];
+var S = (q, steps, fix, code) => [q, steps.map((s) => s.startsWith("!") ? [s.slice(1), false] : [s, true]), fix, `M_AG_${code}`];
+
+// src/ai-tutor/content/families/agriculture_g5_a.js
+var SO = "CONSER.SOIL_CONSERVATION.";
+var WA = "CONSER.WATER_CONSERVATION.";
+var WI = "CONSER.CONSERVING_WILD_ANIMALS.";
+var FAMILIES = [
+  // ---------------------------------------------------------------- SOIL_SITES
+  fam("soil.site.which", `${SO}SOIL_SITES`, "direct", 1, choose([
+    Q("Which of these is a sign of poor soil?", "Hard bare ground with gullies", ["Dark crumbly soil|SITE_DARK", "Soil with earthworms in it|SITE_DARK", "Soil under a thick layer of leaves|SITE_DARK"], "Hard, bare, washed-away ground is poor. Dark crumbly soil with worms is usually rich."),
+    Q("Maize planted along the school path stays short and yellow. What does this show about the soil?", "It is poor and needs improving", ["It is normal and needs nothing|SITE_BARE_FINE", "It is too rich for maize|SITE_DARK", "It only needs more sun|SITE_BARE_FINE"], "Short, yellow plants show the soil lacks plant food and is packed hard."),
+    Q("Which patch of the school compound most needs soil improvement?", "A bare, hard patch where nothing grows", ["A patch of dark soil with grass|SITE_DARK", "A patch under the mango tree with leaves|SITE_DARK", "The vegetable garden with healthy kale|SITE_BARE_FINE"], "A bare, hard patch is a sign of poor soil. The other patches are doing well."),
+    Q("Which is the best place to dig a school organic waste pit?", "On firm ground near the garden", ["In the hollow where rain water collects|SITE_PIT_LOW", "Right beside the borehole|SITE_PIT_LOW", "In the middle of the football pitch|SITE_PIT_LOW"], "The pit should be near the garden, on firm ground where water does not stand, away from drinking water."),
+    Q("Why must the pit be dug away from the school well?", "Rotting waste could pollute the water", ["Wells need shade from the pit|SITE_PIT_LOW", "The pit would make the well dry|SITE_PIT_LOW", "It does not matter where the pit is|SITE_PIT_LOW"], "Waste water can seep into a well and make the drinking water unsafe.")
+  ], { h: ["Think about what a healthy soil looks like and what a poor one looks like.", "Poor soil is hard, bare or washed away. A pit is dug on firm ground near the garden and away from the well."], s1: "Check the signs of the soil or the site." })),
+  fam("soil.site.story", `${SO}SOIL_SITES`, "word", 2, choose([
+    Q("Wanjiru notices that nothing grows on the patch where rain water runs off the school roof. The soil is hard and pale. What should the class do?", "Improve that patch with compost", ["Leave it, bare ground is normal|SITE_BARE_FINE", "Plant maize there at once|SITE_BARE_FINE", "Pour more water on it only|SITE_BARE_FINE"], "Bare, hard, washed-away soil is poor. Compost adds plant food and makes it crumbly."),
+    Q("The Grade 5 class at Kamau's school chooses a place for the waste pit. Which choice is wisest?", "A raised firm spot between the kitchen and the garden", ["The low corner where rain water gathers after storms|SITE_PIT_LOW", "A spot right next to the school water tank|SITE_PIT_LOW", "The shaded muddy ground beside the gate|SITE_PIT_LOW"], "It is close to where the waste comes from and where the manure is used, and it will not flood."),
+    Q("Achieng says dark soil is poor soil because it looks dirty. What is the best reply?", "Dark crumbly soil is usually rich in rotted plant matter", ["She is right, pale soil is always the better kind|SITE_DARK", "Colour always tells the whole story about soil|SITE_DARK", "Only red soil is ever good for farming|SITE_DARK"], "Dark crumbly soil often holds rotted leaves and is good for crops. Look at how hard it is and how plants grow."),
+    Q("Two plots at school. Plot A is hard and bare with small yellow kale. Plot B is dark and crumbly with strong kale. Which needs improving?", "Plot A", ["Plot B, because it is dark|SITE_DARK", "Both are the same|SITE_BARE_FINE", "Neither needs anything|SITE_BARE_FINE"], "Small yellow plants on hard bare ground show poor soil."),
+    Q("Hassan wants to dig the pit where the children play. What is the problem?", "Children could fall in and it is not near the garden", ["There is no problem with putting it there|SITE_PIT_LOW", "The pit would only hurt the grass nearby|SITE_PIT_LOW", "It is too far away from the kitchen door|SITE_PIT_LOW"], "A pit must be where children are safe, on firm ground near the garden.")
+  ], { h: ["Look at what grows and how hard the soil is.", "Put the pit on firm ground near the garden and away from the well and the play area."], s1: "Match the signs with the best action." })),
+  // ---------------------------------------------------------------- COMPOST_PIT
+  fam("soil.pit.which", `${SO}COMPOST_PIT`, "direct", 1, choose([
+    Q("Which of these should go into an organic waste pit?", "Banana peelings", ["A polythene bag|PIT_ANYTHING", "An empty tin|PIT_ANYTHING", "A broken bottle|PIT_ANYTHING"], "Peelings rot into manure. Polythene, tins and glass do not rot."),
+    Q("Which of these should NOT go into an organic waste pit?", "Plastic bottles", ["Dry grass|PIT_ANYTHING", "Cow dung|PIT_ANYTHING", "Vegetable leaves|PIT_ANYTHING"], "Plastic does not rot and would spoil the manure."),
+    Q("Why are leftover meat and oily food kept out of the pit?", "They draw rats and flies", ["They make the manure too rich|PIT_COOKED", "They are the best food for the pit|PIT_COOKED", "They turn the pit sour at once|PIT_COOKED"], "Meat and oily leftovers smell and draw rats and flies."),
+    Q("What should be done to the pit after waste is added?", "Keep it damp and covered", ["Leave it dry and open|PIT_NO_CARE", "Fill it with water to the top|PIT_NO_CARE", "Burn the top layer each week|PIT_NO_CARE"], "Rotting needs a little moisture and a cover that keeps out rain and animals."),
+    Q("When is the manure from the pit ready to use?", "When it is dark and crumbly", ["As soon as the pit is full|PIT_NO_CARE", "When it is wet and smelly|PIT_NO_CARE", "When all the plastic has melted|PIT_ANYTHING"], "Finished manure is dark, crumbly and smells like soil.")
+  ], { h: ["Only things that were once plants, or dung, rot into manure.", "A pit is kept damp and covered while the waste rots."], s1: "Ask: will it rot into manure?" })),
+  fam("soil.pit.story", `${SO}COMPOST_PIT`, "word", 2, choose([
+    Q("Baraka is clearing the school kitchen. Which of these can he put into the organic waste pit?", "Potato and cassava peelings", ["A used plastic cup from lunch|PIT_ANYTHING", "A cooked chicken bone|PIT_COOKED", "A rusty tin lid from the kitchen|PIT_ANYTHING"], "Raw peelings rot well. Plastic and tins never rot, and bones draw rats."),
+    Q("Zawadi's class dug a pit and filled it. Weeks later it is dry and nothing has changed. What should they do?", "Wet it a little and cover it", ["Leave it, it will rot alone|PIT_NO_CARE", "Add more plastic|PIT_ANYTHING", "Set fire to it|PIT_NO_CARE"], "A pit needs a little water and a cover to rot properly."),
+    Q("Njoroge wants to throw leftover fried fish into the pit. Why should he not?", "It will draw rats and flies", ["Fish is the best thing for a pit|PIT_COOKED", "Fish makes the pit too wet|PIT_COOKED", "Fish turns the manure blue|PIT_COOKED"], "Cooked and oily food draws rats and flies."),
+    Q("Which layer order is best in an organic waste pit?", "Dry grass, fresh peelings, a little soil, repeated", ["Polythene, peelings and tins in turn, repeated|PIT_ANYTHING", "Only wet peelings pressed into one big heap|PIT_NO_CARE", "Only dry sticks with nothing else added to them|PIT_NO_CARE"], "Mixing dry and fresh plant matter with a little soil makes good manure."),
+    Q("Amina opened the pit and found pieces of polythene. How did they get there?", "Someone put them in, and they did not rot", ["The polythene was made by the pit itself|PIT_ANYTHING", "They are a natural part of the manure|PIT_ANYTHING", "Rotting turns waste into plastic|PIT_ANYTHING"], "Polythene does not rot. It must be kept out of the pit.")
+  ], { h: ["Would the waste rot into manure, or draw pests?", "Plant remains and dung go in. Plastic, tins, glass and cooked food stay out."], s1: "Sort what rots from what does not." })),
+  fam("soil.pit.spot", `${SO}COMPOST_PIT`, "spot", 3, spot([
+    S("Mwangi explains how the class made its organic waste pit. Which step has the mistake?", ["Step 1: We dug the pit near the garden on firm ground.", "!Step 2: We put in leaves, peelings and old plastic bags.", "Step 3: We kept it damp and covered it."], "Plastic bags do not rot. Only leaves, peelings, grass and dung go in.", "PIT_ANYTHING"),
+    S("Atieno describes the pit. Which step has the mistake?", ["Step 1: We put dry grass at the bottom.", "!Step 2: We added leftover meat and cooked fish.", "Step 3: We covered it with soil."], "Meat and cooked fish draw rats and flies. Leave them out.", "PIT_COOKED"),
+    S("Kiprono tells his friends about the pit. Which step has the mistake?", ["Step 1: We filled it with leaves and peelings.", "!Step 2: We left it dry and open all year.", "Step 3: We used the dark manure for the kale."], "A pit must be kept a little damp and covered, or it will not rot well.", "PIT_NO_CARE"),
+    S("Salma lists how the group built the pit. Which step has the mistake?", ["Step 1: We chose firm ground between the kitchen and the garden.", "Step 2: We put in banana leaves and grass.", "!Step 3: We added tins so the manure would be rich."], "Tins do not rot and add nothing. Keep them out.", "PIT_ANYTHING"),
+    S("Odhiambo describes the manure. Which step has the mistake?", ["Step 1: We waited until the heap was dark and crumbly.", "Step 2: We spread it on the vegetable beds.", "!Step 3: We used it after one day, while it was still fresh waste."], "Waste needs weeks to rot. Wait until it is dark and crumbly.", "PIT_NO_CARE")
+  ], { h: ["Which step puts the wrong thing in, or skips the care?", "Only plant matter and dung, kept damp and covered, rots into manure."], s1: "Check each step against what you know." })),
+  // ---------------------------------------------------------------- PLANT_REMAINS
+  fam("soil.rem.which", `${SO}PLANT_REMAINS`, "direct", 1, choose([
+    Q("Which is a good use of plant remains?", "Rot them into compost", ["Burn them all|REMAINS_BURN", "Throw them in the road|REMAINS_WASTE", "Hide them in a drain|REMAINS_WASTE"], "Compost returns plant food and humus to the soil."),
+    Q("What do rotted plant remains add to soil?", "Plant food and humus", ["Only stones|REMAINS_WASTE", "Only water|REMAINS_WASTE", "Nothing at all|REMAINS_WASTE"], "Rotted plant matter feeds the soil and makes it crumbly."),
+    Q("What is lost when a farmer burns the maize stalks?", "The humus and plant food they would give", ["Nothing is lost|REMAINS_BURN", "Only the smoke|REMAINS_BURN", "Only some old roots|REMAINS_BURN"], "Burning wastes the plant matter that would have fed the soil."),
+    Q("Dry grass spread around vegetables is called what?", "Mulch", ["Manure|REMAINS_WASTE", "Rubbish|REMAINS_WASTE", "Fertiliser|REMAINS_WASTE"], "A layer of plant remains on the soil is mulch. It keeps the soil moist and later rots into the soil."),
+    Q("How do rotted plant remains help the soil hold water?", "They make it crumbly and spongy", ["They make it harder|REMAINS_WASTE", "They turn it to stone|REMAINS_WASTE", "They dry it out|REMAINS_WASTE"], "Humus is like a sponge that holds water.")
+  ], { h: ["Plant remains are food for the soil.", "Rotted plant remains make the soil crumbly and feed it."], s1: "Think about what rotted plant matter does." })),
+  fam("soil.rem.story", `${SO}PLANT_REMAINS`, "word", 2, choose([
+    Q("After harvest, Mama Njeri's field is covered with bean stalks. What is the best thing to do?", "Dig them into the soil or rot them as compost", ["Burn them all at once to clear the field|REMAINS_BURN", "Throw them into the river near the field|REMAINS_WASTE", "Leave them lying until the wind blows away|REMAINS_WASTE"], "The stalks will feed the soil as they rot."),
+    Q("The school garden gets plenty of grass cuttings every week. What should the learners do with them?", "Use them as mulch or add them to the pit", ["Burn them behind the school|REMAINS_BURN", "Take them to the road|REMAINS_WASTE", "Leave them to dry in a heap for ever|REMAINS_WASTE"], "Grass is useful as mulch and compost."),
+    Q("Otieno says leaves are rubbish. His teacher replies that leaves are what?", "Food for the soil when they rot", ["Useless as soon as they fall|REMAINS_WASTE", "Only good for a fire|REMAINS_BURN", "Harmful to every crop in the garden|REMAINS_WASTE"], "Fallen leaves rot into humus."),
+    Q("Bed A was mulched with dry grass and bed B was left bare. After a term the soil in bed A is darker and crumbly. Why?", "The grass rotted and added humus", ["The grass turned to sand|REMAINS_WASTE", "The bare soil got more manure|REMAINS_WASTE", "The sun made it darker|REMAINS_WASTE"], "Mulch rots slowly and adds humus."),
+    Q("Wafula burns the stalks after harvest, and the next crop is poor. What might he do next time?", "Rot or dig in the stalks instead", ["Burn twice as many stalks next year|REMAINS_BURN", "Pour water on the ash and leave it|REMAINS_BURN", "Throw away the topsoil from the plot|REMAINS_WASTE"], "Keeping plant remains feeds the soil.")
+  ], { h: ["What does the soil get from rotted plant remains?", "Compost, mulch or digging in all return plant food to the soil."], s1: "Choose the use that feeds the soil." })),
+  // ---------------------------------------------------------------- WATER_WAYS
+  fam("water.ways.which", `${WA}WATER_WAYS`, "direct", 1, choose([
+    Q("A layer of dry grass spread over the soil around kale is called what?", "Mulching", ["Cover cropping|WATER_MULCH_WARM", "Shading|WATER_MULCH_WARM", "Transplanting|WATER_MULCH_WARM"], "Mulching covers the soil with dry plant matter to slow drying."),
+    Q("Growing sweet potato vines or beans to cover the bare soil is called what?", "Cover cropping", ["Mulching|WATER_MULCH_WARM", "Weeding|WATER_MULCH_WARM", "Drip irrigation|WATER_MORE"], "A low crop that shades the soil is a cover crop."),
+    Q("A roof of grass over a seedbed is an example of what?", "Shading", ["Mulching|WATER_MULCH_WARM", "Cover cropping|WATER_MULCH_WARM", "Harvesting|WATER_MORE"], "Shade keeps the sun off the soil and slows drying."),
+    Q("When is the best time to water a garden to save water?", "Early morning or evening", ["At midday|WATER_NOON", "At noon on hot days|WATER_NOON", "Just after lunch|WATER_NOON"], "In the cool times of day less water dries off."),
+    Q("What does mulch do for the water in the soil?", "It slows how fast the soil dries", ["It keeps the plants warm|WATER_MULCH_WARM", "It adds water to the soil|WATER_MORE", "It makes the soil hotter|WATER_MULCH_WARM"], "Mulch shades the soil so water dries off slowly.")
+  ], { h: ["Each way keeps the sun and wind off the soil.", "Water early or late, when it is cool."], s1: "Think about how the water leaves the soil." })),
+  fam("water.ways.story", `${WA}WATER_WAYS`, "word", 2, choose([
+    Q("The kitchen garden at Mama Atieno's home dries quickly in the dry season. What can she do to save water?", "Spread dry grass around the plants", ["Pour much more water at midday|WATER_NOON", "Take away the mulch|WATER_MORE", "Water only when the sun is highest|WATER_NOON"], "Mulch slows drying. Midday watering loses water to the heat."),
+    Q("Kamau's class plants beans between rows of maize so the ground is covered. What is this?", "Cover cropping", ["Mulching|WATER_MULCH_WARM", "Shading with a net|WATER_MULCH_WARM", "Watering at noon|WATER_NOON"], "A crop that covers the soil protects it from the sun."),
+    Q("Njoki waters her tomatoes every day at noon and the soil is dry by afternoon. What should she change?", "Water in the evening and add mulch", ["Water at noon with more water|WATER_NOON", "Remove the plants|WATER_MORE", "Pour water on the leaves only|WATER_MORE"], "Less water is lost in the cool of the evening."),
+    Q("A school puts up a shade net over its seedbeds. How does this save water?", "It keeps the sun off, so the soil dries slowly", ["It adds water to the beds|WATER_MORE", "It keeps the seedlings warm at night|WATER_MULCH_WARM", "It makes the seedlings grow roots up|WATER_MORE"], "Shade slows evaporation."),
+    Q("Which choice saves the most water in a kitchen garden?", "Mulch, shade and early morning watering", ["Water at noon without mulch|WATER_NOON", "Pour water until puddles form|WATER_MORE", "Leave the soil bare in the sun|WATER_MORE"], "Together these keep the water in the soil.")
+  ], { h: ["What stops the sun drying the soil?", "Mulch, a cover crop and shade all help; water early or late."], s1: "Pick the action that slows drying." })),
+  // ---------------------------------------------------------------- MULCH_TEST
+  fam("water.test.which", `${WA}MULCH_TEST`, "direct", 1, choose([
+    Q("In a fair test of mulching, what should be the same in both beds?", "The crop, the soil and the amount of water", ["The amount of mulch|TEST_UNFAIR", "Whether there is mulch|TEST_UNFAIR", "The colour of the mulch|TEST_UNFAIR"], "Only the mulch should differ."),
+    Q("After a week of sun, which bed stays damp longer?", "The mulched bed", ["The bare bed|TEST_RESULT", "Both dry at the same speed|TEST_RESULT", "The bare bed, since it gets more sun|TEST_RESULT"], "Mulch shades the soil and slows drying."),
+    Q("Which of these can be used as mulch?", "Dry grass", ["Stones only|TEST_UNFAIR", "Fresh cement|TEST_UNFAIR", "A plastic bag|TEST_UNFAIR"], "Dry grass, maize stalks and banana leaves make good mulch."),
+    Q("How can a learner check how damp the soil is?", "Dig a finger deep and feel it", ["Look at the colour of the sky|TEST_RESULT", "Smell the air|TEST_RESULT", "Count the leaves|TEST_RESULT"], "Feeling the soil a finger deep tells how damp it is."),
+    Q("Why is only one thing changed in a fair test?", "So we know what caused the difference", ["So the test takes more time|TEST_UNFAIR", "So both beds look the same|TEST_UNFAIR", "So the mulch grows faster|TEST_UNFAIR"], "If two things change we cannot tell which caused the result.")
+  ], { h: ["A fair test changes only one thing.", "Feel the soil a finger deep in each bed."], s1: "Change only the mulch." })),
+  fam("water.test.story", `${WA}MULCH_TEST`, "word", 2, choose([
+    Q("Mwajuma plants kale in two beds. She mulches one and gives it half the water of the other. What is wrong?", "The amount of water is different, so it is not fair", ["Nothing, it is a fair test|TEST_UNFAIR", "She planted kale in both beds|TEST_UNFAIR", "She should use no water at all|TEST_UNFAIR"], "Both beds must receive the same amount of water."),
+    Q("Omondi plants beans in the mulched bed and tomatoes in the bare bed. Why is this not a fair test?", "Two things differ: the crop and the mulch", ["It is perfectly fair|TEST_UNFAIR", "Beans never need mulch|TEST_UNFAIR", "Tomatoes need more water|TEST_UNFAIR"], "Only the mulch should differ."),
+    Q("After three sunny days, Wangari feels the soil of both beds. Which does she expect to feel damper?", "The mulched bed", ["The bare bed|TEST_RESULT", "They will be the same|TEST_RESULT", "The one in the shade only|TEST_RESULT"], "Mulch slows the drying of the soil."),
+    Q("Which plan is a fair test of mulching?", "Two equal beds of kale, same water, one mulched", ["One large bed of kale and one small bed of beans|TEST_UNFAIR", "Two beds with different soils and the same mulch|TEST_UNFAIR", "A mulched bed with more water|TEST_UNFAIR"], "Keep everything the same except the mulch."),
+    Q("Ali has banana leaves, maize stalks and dry grass. What can he use to mulch?", "Any of these", ["Only the banana leaves|TEST_UNFAIR", "Nothing, they are all rubbish|TEST_UNFAIR", "Only the maize stalks|TEST_UNFAIR"], "All of these are plant remains that can serve as mulch.")
+  ], { h: ["What did the learner change besides the mulch?", "Mulched soil stays damp longer."], s1: "Look for what differs in the two beds." })),
+  // ---------------------------------------------------------------- PEST_DAMAGE
+  fam("wild.dam.which", `${WI}PEST_DAMAGE`, "direct", 1, choose([
+    Q("Which wild animal eats ripening grain in rice and millet fields?", "Quelea birds", ["Warthogs|PEST_MIX", "Moles|PEST_MIX", "Elephants|PEST_MIX"], "Flocks of quelea birds eat grain heads."),
+    Q("Which animal digs up sweet potatoes and cassava?", "A warthog", ["A quelea bird|PEST_MIX", "A monkey|PEST_MIX", "A butterfly|PEST_ALL"], "Warthogs dig for roots and tubers."),
+    Q("Which animals pick maize cobs and fruit from trees?", "Monkeys and baboons", ["Moles|PEST_MIX", "Bees|PEST_ALL", "Owls|PEST_ALL"], "Monkeys and baboons climb and pick."),
+    Q("Which animal can trample and eat a whole field in one night?", "An elephant", ["A mole|PEST_MIX", "A sparrow|PEST_MIX", "A rat|PEST_MIX"], "Elephants are very large and eat a great deal."),
+    Q("Which of these wild creatures helps a farmer?", "A bee", ["A monkey|PEST_ALL", "A mole|PEST_ALL", "A quelea bird|PEST_ALL"], "Bees carry pollen from flower to flower so crops can form fruit.")
+  ], { h: ["Think about where each animal can reach and what it eats.", "Birds take grain, diggers take roots, climbers take fruit and maize."], s1: "Match the animal with the food it takes." })),
+  fam("wild.dam.story", `${WI}PEST_DAMAGE`, "word", 2, choose([
+    Q("Farmer Chebet's millet heads are bare each morning and small birds fill the field at dawn. Which animals are they?", "Quelea birds", ["Warthogs|PEST_MIX", "Moles|PEST_MIX", "Elephants|PEST_MIX"], "Quelea birds eat the grain on the plant."),
+    Q("Chebet finds holes in the ground and half-eaten sweet potatoes. Which animal is most likely?", "A warthog or a mole", ["A quelea bird|PEST_MIX", "A bee|PEST_ALL", "A monkey in a tree|PEST_MIX"], "Digging animals take roots and tubers."),
+    Q("Wambui says every wild animal is an enemy of the farmer. What is a good reply?", "Bees and owls help the farmer", ["She is right, all of them harm crops|PEST_ALL", "Only big animals help|PEST_ALL", "Wild animals are all harmless|PEST_ALL"], "Bees pollinate crops and owls eat rats."),
+    Q("Maize cobs are missing at the edge of the shamba near the forest and small hand marks are on the stalks. Which animals are most likely?", "Monkeys or baboons", ["Moles|PEST_MIX", "Quelea birds|PEST_MIX", "Hippos|PEST_MIX"], "Monkeys and baboons pick cobs."),
+    Q("A farmer near Tsavo wakes to find a banana grove broken and trampled. Which animal has visited?", "An elephant", ["A mole|PEST_MIX", "A rat|PEST_MIX", "A sparrow|PEST_MIX"], "Only a large animal like an elephant can trample a grove.")
+  ], { h: ["What did the animal do, and what is the damage?", "Pick the animal that fits the sign."], s1: "Look at the sign the animal left." })),
+  // ---------------------------------------------------------------- REPEL_METHODS
+  fam("wild.rep.which", `${WI}REPEL_METHODS`, "direct", 1, choose([
+    Q("Which is a safe way of keeping birds off a ripening field?", "Hang shiny strips and make a scarecrow", ["Put out poison on the field edge|REPEL_KILL", "Cut down every tree around the field|REPEL_KILL", "Burn the whole field at night|REPEL_KILL"], "Scarecrows and shiny strips scare birds without harming them."),
+    Q("Which is more likely to keep elephants away from a farm?", "A fence with beehives or chilli", ["A scarecrow of old clothes|REPEL_ONE", "A rag on a stick|REPEL_ONE", "A small bell|REPEL_ONE"], "Elephants fear bees and chilli, and are not scared of a scarecrow."),
+    Q("Why do we not poison wild animals that visit our shamba?", "We protect wild animals, and poison also harms others", ["Poison is too cheap to be worth using|REPEL_KILL", "Poison is the quickest and best method|REPEL_KILL", "Wild animals are never harmed by poison|REPEL_KILL"], "Poison also kills birds and other animals that do no harm."),
+    Q("A buffalo enters the shamba at night. What should a child do?", "Keep away and tell an adult at once", ["Run at it and shout to scare it|REPEL_CLOSE", "Throw stones at it from close by|REPEL_CLOSE", "Try to catch it with a rope|REPEL_CLOSE"], "Big wild animals are dangerous."),
+    Q("Which of these makes noise to scare monkeys?", "Tins hung on a string", ["A warm blanket|REPEL_ONE", "A flat stone|REPEL_ONE", "A bucket of water|REPEL_ONE"], "Clanging tins make a noise that scares them.")
+  ], { h: ["We repel wild animals; we do not harm them.", "Different animals need different ways."], s1: "Choose the way that scares and does not harm." })),
+  fam("wild.rep.story", `${WI}REPEL_METHODS`, "word", 2, choose([
+    Q("Monkeys keep eating the maize on Mzee Kimani's farm. What is the best plan?", "Use noise makers and a guard in the field", ["Put poison in the maize cobs|REPEL_KILL", "Cut all the maize early and sell none|REPEL_KILL", "Do nothing and hope they leave|REPEL_ONE"], "Noise and a watchful person scare monkeys and harm nothing."),
+    Q("Elephants near Taita often walk into fields. Which method might the farmers use?", "Beehive fence and chilli", ["A scarecrow only|REPEL_ONE", "A single tin on a post|REPEL_ONE", "A small bush fence|REPEL_ONE"], "These work better than a scarecrow with elephants."),
+    Q("Jamila sees an elephant near the school late at dusk. What should she do?", "Stay inside and tell the teachers", ["Run out into the compound to chase it|REPEL_CLOSE", "Throw stones and shout at it|REPEL_CLOSE", "Walk close and take a photo of it|REPEL_CLOSE"], "Elephants can be dangerous when startled."),
+    Q("The school wants to protect its sorghum from birds. Which is the best choice?", "A scarecrow, shiny strips and a rota of scarers", ["Put poison on all the ripening sorghum heads|REPEL_KILL", "Cut down all the trees around the school|REPEL_KILL", "Do nothing and wait for the birds to leave|REPEL_ONE"], "Several safe measures together work best."),
+    Q("A farmer's son says the best way to deal with pests is to kill all of them. What should his teacher say?", "We repel and live with wildlife", ["He is right, we should kill them|REPEL_KILL", "Only the biggest ones should be killed|REPEL_KILL", "Put poison in their drinking water|REPEL_KILL"], "Wild animals are protected, and many help the farmer.")
+  ], { h: ["Which way scares the animal without harming it or you?", "A scarecrow scares birds, but bees and chilli work with elephants."], s1: "Pick the safe way that suits the animal." }))
+];
+
+// src/ai-tutor/content/families/agriculture_g5_b.js
+var VE = "FOOD_P.GROWING_VEGETABLES.";
+var AN = "FOOD_P.USES_OF_DOMESTIC_ANIMALS.";
+var PR = "FOOD_P.PRESERVATION_OF_CEREALS_.";
+var FAMILIES2 = [
+  // ---------------------------------------------------------------- VEG_PRACTICES
+  fam("veg.pr.which", `${VE}VEG_PRACTICES`, "direct", 1, choose([
+    Q("Which of these is done first when growing kale?", "Preparing the land and adding manure", ["Transplanting the seedlings to the field|VEG_ORDER", "Harvesting the first leaves for sale|VEG_ORDER", "Weeding between the rows of kale|VEG_ORDER"], "The land is prepared before anything is sown or planted."),
+    Q("Which is the correct order of practices for vegetables?", "Make a nursery, sow, transplant, harvest", ["Transplant, make a nursery, sow, harvest|VEG_ORDER", "Harvest, sow, make a nursery, transplant|VEG_ORDER", "Sow, harvest, transplant, make a nursery|VEG_ORDER"], "You sow in the nursery first, then transplant the seedlings, then harvest."),
+    Q("Which job is done after transplanting kale?", "Weeding, mulching and checking for pests", ["Nothing, only water is needed later|VEG_WATER_ONLY", "Nothing, as the crop grows alone|VEG_WATER_ONLY", "Only sowing seeds in the nursery|VEG_ORDER"], "Vegetables need weeding, mulching and protection from pests as well as water."),
+    Q("Why are vegetables weeded?", "Weeds take water and food from the crop", ["Weeds make the crop grow faster|VEG_WATER_ONLY", "Weeds keep the soil damp for it|VEG_WATER_ONLY", "Weeds are only there to look bad|VEG_WATER_ONLY"], "Weeds compete with the vegetables for water, light and food."),
+    Q("Which of these is a gardening practice in growing vegetables?", "Controlling pests such as aphids", ["Selling the leaves in town only|VEG_WATER_ONLY", "Cooking the leaves at night|VEG_WATER_ONLY", "Buying a new school bag|VEG_WATER_ONLY"], "Pest control keeps the plants healthy. Selling and cooking come after harvest.")
+  ], { h: ["Think of the story of a vegetable from land to harvest.", "Prepare, sow in the nursery, transplant, care for, harvest."], s1: "Put the practices in the order the garden needs them." })),
+  fam("veg.pr.story", `${VE}VEG_PRACTICES`, "word", 2, choose([
+    Q("Wanjiku has a new plot for sukuma wiki. What should she do first?", "Dig the plot and mix in manure", ["Transplant seedlings into hard ground|VEG_ORDER", "Pick the leaves and take them home|VEG_ORDER", "Spread mulch on the unprepared plot|VEG_ORDER"], "The soil must be prepared before planting."),
+    Q("Kiprop says growing vegetables is only sowing and watering. What did he leave out?", "Weeding, mulching and controlling pests", ["Nothing at all, he is right|VEG_WATER_ONLY", "Only the cooking of the leaves|VEG_WATER_ONLY", "Only the buying of the seeds|VEG_WATER_ONLY"], "These practices protect the crop as it grows."),
+    Q("The class made a nursery and the seeds have grown into small plants. What is the next practice?", "Transplanting the seedlings", ["Sowing the seeds again|VEG_ORDER", "Harvesting the seedlings|VEG_ORDER", "Preparing the land for the first time|VEG_ORDER"], "Seedlings are moved to the prepared field after the nursery."),
+    Q("Halima's tomatoes are small and a thick bed of weeds covers the plot. Which practice was missed?", "Weeding", ["Sowing in a nursery|VEG_WATER_ONLY", "Transplanting at noon|VEG_ORDER", "Harvesting early|VEG_ORDER"], "Weeds take water and food from the crop."),
+    Q("Which is the right order of three jobs in a school vegetable garden?", "Prepare the land, transplant, weed", ["Weed, transplant, prepare the land|VEG_ORDER", "Transplant, prepare the land, weed|VEG_ORDER", "Harvest, weed, prepare the land|VEG_ORDER"], "You cannot weed or transplant a plot that has not been prepared.")
+  ], { h: ["What stage is the garden in now?", "Prepare, nursery, transplant, care, harvest."], s1: "Place the job in the story of the crop." })),
+  // ---------------------------------------------------------------- NURSERY_BED
+  fam("veg.nur.which", `${VE}NURSERY_BED`, "direct", 1, choose([
+    Q("Why is the soil of a nursery bed broken into fine crumbs?", "Tiny seeds and shoots need fine soil", ["Big lumps hold the seeds in place|NURS_COARSE", "Lumps are better for tiny seeds|NURS_COARSE", "Fine soil is only for looks|NURS_COARSE"], "A fine bed lets tiny seeds touch soil and shoots push up easily."),
+    Q("How deep are tiny kale seeds covered?", "Very thinly with fine soil", ["About ten centimetres of soil|NURS_DEEP", "Under a thick layer of soil|NURS_DEEP", "As deep as the length of a hand|NURS_DEEP"], "Tiny seeds are sown shallow. A deep seed cannot push through."),
+    Q("How is a nursery bed watered?", "Lightly, morning and evening", ["Heavily until water stands|NURS_FLOOD", "Once a week with a full bucket|NURS_FLOOD", "Never until the seeds sprout|NURS_FLOOD"], "Seeds and seedlings rot in standing water, but they must not dry out."),
+    Q("About how wide is a raised nursery bed, so a learner can reach the middle?", "About one metre wide", ["About five metres wide|NURS_COARSE", "About ten metres wide|NURS_COARSE", "As wide as the whole school|NURS_COARSE"], "A bed one metre wide can be reached from both sides without walking on it."),
+    Q("Which seeds are sown in a nursery bed?", "Tiny seeds such as kale and cabbage", ["Large seeds such as maize cobs|NURS_COARSE", "Pumpkin stems from last year|NURS_COARSE", "Sweet potato vines only|NURS_COARSE"], "Tiny seeds need the care of a nursery before they are moved to the field.")
+  ], { h: ["Think about how a tiny seed and its shoot grow.", "Fine soil, shallow sowing, light watering, good drainage."], s1: "Think about what a tiny seed needs." })),
+  fam("veg.nur.story", `${VE}NURSERY_BED`, "word", 2, choose([
+    Q("Mutua leaves big lumps in his nursery bed. What will happen to the tiny seeds?", "Many will not touch soil and will not sprout", ["They will all grow better|NURS_COARSE", "They will grow into big plants|NURS_COARSE", "Nothing will change at all|NURS_COARSE"], "Tiny seeds need fine soil around them."),
+    Q("Atieno buries her tomato seeds a hand deep. Weeks later nothing has come up. Why?", "The seeds were too deep to push through", ["They were not buried deep enough|NURS_DEEP", "They needed to be under rocks|NURS_DEEP", "Tomato seeds never sprout|NURS_DEEP"], "Tiny seeds are covered very thinly."),
+    Q("Njeri pours a bucket of water on her nursery every hour and the seeds rot. What did she do wrong?", "She flooded the bed", ["She gave the bed too little water|NURS_FLOOD", "She watered at the wrong season|NURS_FLOOD", "She made the soil too fine|NURS_COARSE"], "Seeds rot in standing water. Water lightly twice a day."),
+    Q("The class makes a nursery for cabbage. Which plan is best?", "A raised, fine bed, shallow rows, light watering", ["A rough bed with deep holes and heavy watering|NURS_COARSE", "A flooded hollow with large lumps|NURS_FLOOD", "A hard bed with big stones on top|NURS_COARSE"], "The nursery needs fine soil, shallow sowing and good drainage."),
+    Q("Why does the class cover the sown nursery with dry grass until the seeds sprout?", "It keeps the soil moist and the sun off", ["It pushes the seeds deeper into the soil|NURS_DEEP", "It keeps the seeds from ever sprouting|NURS_FLOOD", "It makes the soil dry and hard|NURS_COARSE"], "The cover keeps the soil damp. It is removed once seedlings appear.")
+  ], { h: ["What did the learner do to the bed or the seed?", "Fine bed, shallow seed, light water."], s1: "Match the result with the mistake." })),
+  // ---------------------------------------------------------------- SEEDLING_CARE
+  fam("veg.sc.which", `${VE}SEEDLING_CARE`, "direct", 1, choose([
+    Q("When is the best time to transplant seedlings?", "In the evening or on a cloudy day", ["At midday in the hot sun|TRANS_NOON", "At noon on a bright day|TRANS_NOON", "Just after lunch in strong heat|TRANS_NOON"], "Hot midday sun scorches new transplants."),
+    Q("What should be done to the nursery before lifting seedlings?", "Water the bed so seedlings lift with soil", ["Leave it dry so the soil falls off|TRANS_DRY", "Let it dry for a week first|TRANS_DRY", "Pull them out roughly by the leaves|TRANS_DRY"], "Wet soil stays on the roots so they are not torn."),
+    Q("What is done straight after transplanting?", "Firm the soil and water the seedlings", ["Leave them with no water at all|TRANS_NOWATER", "Pull a few out to check roots|TRANS_NOWATER", "Leave them alone until harvest|TRANS_NOWATER"], "Firming and watering help roots settle."),
+    Q("About how old are seedlings when they are ready to transplant?", "About four to six weeks old", ["About one day old|TRANS_DRY", "About two years old|TRANS_DRY", "As soon as they sprout|TRANS_DRY"], "They are ready when they have several true leaves and are a little hand tall."),
+    Q("A seedling dies after transplanting. What do farmers do?", "Replace it with a new seedling", ["Leave the gap empty for ever|TRANS_NOWATER", "Dig up the whole bed|TRANS_NOWATER", "Pour acid on the gap|TRANS_NOWATER"], "Replacing dead seedlings is called gap filling.")
+  ], { h: ["Think about how to keep the roots and leaves from drying out.", "Water the nursery, lift gently, plant in the evening, water and shade."], s1: "Think about how the seedling stays alive." })),
+  fam("veg.sc.story", `${VE}SEEDLING_CARE`, "word", 2, choose([
+    Q("Otieno transplants his cabbage at noon and the leaves are limp by evening. What should he do next time?", "Transplant in the evening or on a cloudy day", ["Transplant at noon again, in the hot sun|TRANS_NOON", "Transplant only when the sun is hottest|TRANS_NOON", "Take away all the water from them|TRANS_NOWATER"], "Cool, cloudy weather lets seedlings settle."),
+    Q("Kamau pulls seedlings out of the dry nursery and their roots are bare. What would be better?", "Water the nursery first and lift with soil", ["Pull the seedlings harder and faster|TRANS_DRY", "Shake off all the soil from the roots|TRANS_DRY", "Cut off the roots before planting|TRANS_DRY"], "Soil on the roots protects them."),
+    Q("Wanjiru transplanted her tomatoes this morning. What should she do for the next few days?", "Water and shade them, then weed and mulch", ["Do nothing at all until harvest time|TRANS_NOWATER", "Dig them up to look at the roots|TRANS_NOWATER", "Move them into the strong sun|TRANS_NOON"], "New transplants need water and shade at first."),
+    Q("A learner says seedlings can be moved as soon as they sprout. What is the best reply?", "Wait about four to six weeks", ["Yes, move them at once today|TRANS_DRY", "Wait until they bear ripe seeds|TRANS_DRY", "Wait for two whole years first|TRANS_DRY"], "Seedlings need a few true leaves and strong roots first."),
+    Q("Two of Mwangi's transplants die in the first week. What should he do?", "Plant new seedlings in the gaps", ["Leave the gaps empty|TRANS_NOWATER", "Dig up the whole bed again|TRANS_NOWATER", "Water the empty gaps only|TRANS_NOWATER"], "Replacing dead plants is called gap filling.")
+  ], { h: ["What did the learner do wrong, or leave out?", "Water first, lift with soil, evening planting, water and shade."], s1: "Match the care with what the seedling needs." })),
+  fam("veg.sc.spot", `${VE}SEEDLING_CARE`, "spot", 3, spot([
+    S("Mercy explains how the class transplanted kale. Which step has the mistake?", ["Step 1: We watered the nursery bed.", "Step 2: We lifted the seedlings with soil on the roots.", "!Step 3: We planted them at noon in the hot sun."], "Transplant in the evening or on a cloudy day, when the sun will not scorch them.", "TRANS_NOON"),
+    S("Brian tells how he moved the seedlings. Which step has the mistake?", ["Step 1: I left the nursery bed dry.", "!Step 2: I pulled the seedlings out and shook off all the soil.", "Step 3: I planted them in the evening."], "Water the bed first and keep soil on the roots so they are not torn.", "TRANS_DRY"),
+    S("Fatuma describes what happened after planting. Which step has the mistake?", ["Step 1: We planted the seedlings in prepared holes.", "Step 2: We firmed the soil around them.", "!Step 3: We did not water them, so the roots could dry in peace."], "Water the seedlings after planting and shade them for a few days.", "TRANS_NOWATER"),
+    S("Peter describes his transplanting day. Which step has the mistake?", ["Step 1: I chose a cloudy afternoon.", "!Step 2: I moved the seedlings the day after they sprouted.", "Step 3: I watered them after planting."], "Seedlings need about four to six weeks and several true leaves first.", "TRANS_DRY"),
+    S("Grace explains the care of the seedlings. Which step has the mistake?", ["Step 1: We shaded the seedlings for a few days.", "Step 2: We weeded around them.", "!Step 3: When two seedlings died we left the gaps empty."], "Replace dead seedlings with new ones. This is called gap filling.", "TRANS_NOWATER")
+  ], { h: ["Which step harms the seedling?", "Water first, lift with soil, plant in the evening, firm, water and shade."], s1: "Check each step against what a seedling needs." })),
+  // ---------------------------------------------------------------- ANIMAL_PRODUCTS
+  fam("an.pr.which", `${AN}ANIMAL_PRODUCTS`, "direct", 1, choose([
+    Q("Which animal gives wool?", "A sheep", ["A goat|PROD_WOOL", "A cow|PROD_WOOL", "A hen|PROD_WOOL"], "Wool is cut from sheep. Goats give meat, milk and skins."),
+    Q("Which bird lays the eggs that families eat?", "The hen", ["The cockerel|PROD_COCK", "The cock in the compound|PROD_COCK", "Every bird in the flock|PROD_COCK"], "Only hens lay eggs."),
+    Q("Which of these does not give milk to the family?", "A hen", ["A cow|PROD_MILK_ALL", "A goat|PROD_MILK_ALL", "A camel|PROD_MILK_ALL"], "Cows, goats and camels give milk. Hens give eggs."),
+    Q("Which food do bees give?", "Honey", ["Milk|PROD_MILK_ALL", "Eggs|PROD_COCK", "Wool|PROD_WOOL"], "Bees make honey that people harvest from hives."),
+    Q("Which animal gives pork?", "A pig", ["A sheep|PROD_WOOL", "A hen|PROD_COCK", "A camel|PROD_MILK_ALL"], "Pork is the meat of a pig.")
+  ], { h: ["Think about the food or product each animal gives.", "Sheep: wool. Hen: eggs. Cow, goat, camel: milk. Bee: honey."], s1: "Match the animal to its product." })),
+  fam("an.pr.story", `${AN}ANIMAL_PRODUCTS`, "word", 2, choose([
+    Q("Wafula collects eggs each morning from the compound. Which birds laid them?", "The hens", ["The cocks|PROD_COCK", "The cockerels|PROD_COCK", "All the chicks|PROD_COCK"], "Hens lay eggs. Cocks do not."),
+    Q("A shepherd sells wool at the market. Which animals give the wool?", "Sheep", ["Goats|PROD_WOOL", "Cattle|PROD_WOOL", "Camels|PROD_WOOL"], "Wool grows on sheep."),
+    Q("In Turkana, a family drinks milk from the herd every morning. Which of these animals could give it?", "A camel or a goat", ["A hen|PROD_MILK_ALL", "A rabbit|PROD_MILK_ALL", "A donkey in town|PROD_MILK_ALL"], "Camels and goats are milked in dry areas."),
+    Q("Mama Njeri keeps beehives at the edge of her shamba. What food does she harvest?", "Honey", ["Milk|PROD_MILK_ALL", "Eggs|PROD_COCK", "Wool|PROD_WOOL"], "Bees make honey."),
+    Q("A school wants cheap meat from a small animal kept in a hutch. Which one fits?", "A rabbit", ["A cow|PROD_MILK_ALL", "A camel|PROD_MILK_ALL", "A bee|PROD_MILK_ALL"], "Rabbits are small and kept in hutches for meat.")
+  ], { h: ["What does each animal give?", "Sheep give wool, hens give eggs, cows give milk, bees give honey."], s1: "Match the story with the animal." })),
+  // ---------------------------------------------------------------- ANIMAL_USES
+  fam("an.use.which", `${AN}ANIMAL_USES`, "direct", 1, choose([
+    Q("Why does a farmer keep oxen?", "To pull the plough and the cart", ["Only for meat on Sundays|USE_FOOD_ONLY", "Only for milk in the morning|USE_FOOD_ONLY", "Only for their feathers|USE_FOOD_ONLY"], "Oxen do work as well as give meat."),
+    Q("What is the main use of a donkey on many farms?", "To carry loads and pull a cart", ["To give milk for the family tea|USE_DONKEY", "To give wool for jerseys|USE_DONKEY", "To lay eggs for sale|USE_DONKEY"], "Donkeys carry loads and pull carts."),
+    Q("How can cow dung help a vegetable garden?", "It rots into manure that feeds the soil", ["It cannot help, as it is only waste|USE_DUNG", "It is useless to all kinds of plants|USE_DUNG", "It only attracts flies to the plot|USE_DUNG"], "Dung rots into manure."),
+    Q("Which animal is used to carry goods across dry land in northern Kenya?", "A camel", ["A hen|USE_FOOD_ONLY", "A rabbit|USE_FOOD_ONLY", "A pig|USE_FOOD_ONLY"], "Camels cross dry land with loads and give milk."),
+    Q("What do hides and skins from cattle and goats become?", "Leather, drums and sandals", ["Wool for warm blankets|USE_FOOD_ONLY", "Milk for small babies|USE_FOOD_ONLY", "Eggs for the market|USE_FOOD_ONLY"], "Hides and skins are made into leather items.")
+  ], { h: ["Animals give work and materials as well as food.", "Oxen plough, donkeys carry, dung is manure, hides become leather."], s1: "Think of all that an animal gives." })),
+  fam("an.use.story", `${AN}ANIMAL_USES`, "word", 2, choose([
+    Q("Mzee Kimani has no tractor. How does he plough his field?", "With a pair of oxen", ["With hens from the compound|USE_FOOD_ONLY", "With rabbits from the hutch|USE_FOOD_ONLY", "With bees from the hive|USE_FOOD_ONLY"], "Oxen pull the plough."),
+    Q("Wangari fetches water and firewood with her animal each day. Which animal helps her?", "A donkey", ["A hen|USE_DONKEY", "A rabbit|USE_DONKEY", "A pig|USE_DONKEY"], "A donkey carries loads."),
+    Q("Njeri spreads cow dung on her kale beds. What does it do?", "It feeds the soil as it rots", ["It is waste and only smells|USE_DUNG", "It keeps the kale from growing|USE_DUNG", "It makes the kale taste bitter|USE_DUNG"], "Dung becomes manure that feeds the soil."),
+    Q("Ali says animals are kept only to be eaten. What can his teacher show him?", "Oxen ploughing and donkeys carrying loads", ["Hens that only lay eggs in the dark|USE_FOOD_ONLY", "Cows that give people no use at all|USE_FOOD_ONLY", "Goats that never give any milk or meat|USE_FOOD_ONLY"], "Many animals do work."),
+    Q("A farmer's goat dies. What can be made from its skin?", "A drum or a sandal", ["A bag of flour|USE_FOOD_ONLY", "A bottle of milk|USE_FOOD_ONLY", "A basket of eggs|USE_FOOD_ONLY"], "Skins are made into leather items and drums.")
+  ], { h: ["What does the animal do besides give food?", "Work, manure and hides are uses too."], s1: "Match the job with the animal." })),
+  // ---------------------------------------------------------------- PRESERVE_METHODS
+  fam("pr.me.which", `${PR}PRESERVE_METHODS`, "direct", 1, choose([
+    Q("Which is a way of preserving maize at home?", "Dry it in the sun then store it", ["Soak it in water for days|PRES_WATER", "Leave it in the rain to keep fresh|PRES_WATER", "Wash it and store it wet|PRES_WET"], "Dry grain keeps well. Wet grain grows mould."),
+    Q("Why must grain be dried before storing?", "Damp grain grows mould and rots", ["Damp grain stays fresher|PRES_WET", "Damp grain tastes sweeter|PRES_WET", "Dry grain is heavier to carry|PRES_WET"], "Moisture lets mould and weevils spoil grain."),
+    Q("What is wood ash used for in storing beans?", "It fills the gaps and keeps weevils away", ["It makes the beans cook faster|PRES_SACK", "It adds salt to the beans|PRES_SACK", "It makes the beans grow|PRES_SACK"], "Dry ash is mixed with the beans to protect them."),
+    Q("Which container keeps weevils out of stored beans?", "A tightly sealed tin or drum", ["An open basket|PRES_SACK", "A torn sack|PRES_SACK", "A cloth with holes|PRES_SACK"], "An airtight container stops air and insects."),
+    Q("Which of these is a pulse?", "Green grams", ["Maize|PRES_WATER", "Rice|PRES_WATER", "Sorghum|PRES_WATER"], "Beans, green grams and cowpeas are pulses. Maize, rice and sorghum are cereals.")
+  ], { h: ["Grain keeps when it is dry and kept from air and insects.", "Sun drying, ash and sealed containers keep grain safe."], s1: "Think about what spoils grain." })),
+  fam("pr.me.story", `${PR}PRESERVE_METHODS`, "word", 2, choose([
+    Q("Nafula has harvested beans. How can she keep them for the next planting?", "Dry them well and seal them in a container", ["Soak them in water|PRES_WATER", "Leave them in the rain|PRES_WATER", "Store them while still wet|PRES_WET"], "Dry beans keep for months in a sealed container."),
+    Q("Otieno stores damp maize in a sack. Two weeks later it smells bad. Why?", "The damp grain grew mould", ["The sack was too dry|PRES_WET", "The grain grew roots|PRES_WET", "The sack was too clean|PRES_WET"], "Damp grain grows mould."),
+    Q("Mama Njoki mixes dry wood ash with her cowpeas. What does the ash do?", "It keeps weevils away", ["It makes the cowpeas sweet|PRES_SACK", "It makes them cook faster|PRES_SACK", "It makes the sack lighter|PRES_SACK"], "Ash protects the pulses from insects."),
+    Q("Baraka keeps his millet in an open basket and finds weevils inside. What would be better?", "A sealed container", ["A bigger open basket|PRES_SACK", "A basket with more holes|PRES_SACK", "A basket in the rain|PRES_WATER"], "Sealed containers keep insects out."),
+    Q("Which is NOT a way of preserving cereals at home?", "Washing them and leaving them wet", ["Sun drying them|PRES_WATER", "Mixing them with ash|PRES_WATER", "Sealing them in a tin|PRES_WATER"], "Wet grain spoils.")
+  ], { h: ["Dry, protected from air and insects.", "Never store wet grain."], s1: "Pick the method that keeps the grain safe." })),
+  // ---------------------------------------------------------------- PRESERVE_PRACTICE
+  fam("pr.pa.which", `${PR}PRESERVE_PRACTICE`, "direct", 1, choose([
+    Q("Maize is just harvested and still damp. What should be done before it is sealed in a tin?", "Dry it in the sun until it is hard", ["Seal it at once while damp|PRACT_SEAL_EARLY", "Pour water on it first|PRACT_SEAL_EARLY", "Keep it damp for a week|PRACT_SEAL_EARLY"], "Sealing damp grain traps the moisture and it grows mould."),
+    Q("How can you test that grains are dry?", "Bite one and it cracks", ["It feels a bit soft|PRACT_DRYNESS", "It looks yellow|PRACT_DRYNESS", "It is warm from the sun|PRACT_DRYNESS"], "A dry grain is hard and cracks when bitten."),
+    Q("Where should sacks of grain be kept?", "On a raised platform away from the wall", ["On the bare floor beside the wall|PRACT_GROUND", "Against a damp wall on the floor|PRACT_GROUND", "Under a leaking roof|PRACT_GROUND"], "Floors and walls let in damp and rats."),
+    Q("On what should grain be spread to dry in the sun?", "A clean mat or tarpaulin", ["The muddy ground|PRACT_GROUND", "The bare road|PRACT_GROUND", "A wet cloth|PRACT_SEAL_EARLY"], "A clean surface keeps stones and soil out."),
+    Q("Why should stored grain be checked often?", "To find damp, mould or pests early", ["To make the grain heavier|PRACT_DRYNESS", "To make it sweeter|PRACT_DRYNESS", "To make it grow|PRACT_DRYNESS"], "Finding problems early saves the rest.")
+  ], { h: ["Dry first, then store, off the floor, and check.", "Bite test: dry grain cracks."], s1: "Think about what keeps damp and pests away." })),
+  fam("pr.pa.story", `${PR}PRESERVE_PRACTICE`, "word", 2, choose([
+    Q("Chebet has beans drying on a mat. How can she tell they are ready to store?", "A bean cracks when she bites it", ["They have turned a new colour|PRACT_DRYNESS", "The sun has set|PRACT_DRYNESS", "They feel slightly soft|PRACT_DRYNESS"], "Dry beans are hard."),
+    Q("Kamau puts the sacks of maize on the floor against the wall. What may happen?", "Damp and rats may get in", ["Nothing, it is the best place|PRACT_GROUND", "The sacks will get heavier|PRACT_GROUND", "The maize will grow|PRACT_GROUND"], "A raised platform away from the wall is better."),
+    Q("Wangui closes her tin of damp beans tightly and puts it away. What is likely?", "The beans will grow mould", ["The beans will keep for years|PRACT_SEAL_EARLY", "The beans will dry by themselves|PRACT_SEAL_EARLY", "The beans will turn to ash|PRACT_SEAL_EARLY"], "Seal only fully dry beans."),
+    Q("The school stores maize for porridge. What is the best plan?", "Dry it, use clean sacks on a platform and check often", ["Store it damp on the floor|PRACT_GROUND", "Seal damp maize in drums|PRACT_SEAL_EARLY", "Leave it in the rain|PRACT_SEAL_EARLY"], "Dry, raised and checked."),
+    Q("Otieno finds mould on some stored maize. What should he do?", "Remove the bad grain and dry the rest again", ["Eat it all at once|PRACT_DRYNESS", "Add water to the maize|PRACT_SEAL_EARLY", "Seal it tighter|PRACT_SEAL_EARLY"], "Mouldy grain can make people ill. Remove it.")
+  ], { h: ["Where does the damp or the pest get in?", "Dry grain, raised sacks, clean mat, check often."], s1: "Find what spoiled or would spoil the grain." }))
+];
+
+// src/ai-tutor/content/families/agriculture_g5_c.js
+var NU = "FOOD_P.FOOD_NUTRIENTS.";
+var CO = "FOOD_P.COOKING_FOOD.";
+var FAMILIES3 = [
+  // ---------------------------------------------------------------- NUTRIENT_FUNCTIONS
+  fam("nu.fn.which", `${NU}NUTRIENT_FUNCTIONS`, "direct", 1, choose([
+    Q("Which nutrient builds and repairs the body?", "Proteins", ["Carbohydrates|NUT_PROT_ENERGY", "Vitamins|NUT_PROT_ENERGY", "Water only|NUT_PROT_ENERGY"], "Proteins build new body parts and repair worn ones."),
+    Q("Which nutrient gives the body most of its energy?", "Carbohydrates", ["Proteins|NUT_PROT_ENERGY", "Vitamins|NUT_VIT_ENERGY", "Minerals|NUT_VIT_ENERGY"], "Foods such as ugali and rice are rich in carbohydrates, so they give energy."),
+    Q("What do vitamins do in the body?", "Protect it and keep it healthy", ["Give most of its energy|NUT_VIT_ENERGY", "Make it taller only|NUT_VIT_ENERGY", "Make it warmer only|NUT_FAT_BAD"], "Vitamins protect the body from illness."),
+    Q("What is one job of fats in the body?", "They store energy and keep it warm", ["They do nothing useful|NUT_FAT_BAD", "They only make people ill|NUT_FAT_BAD", "They build the bones only|NUT_FAT_BAD"], "Fats store energy and keep the body warm. A little is needed."),
+    Q("Which mineral helps to make strong bones and teeth?", "Calcium", ["Iodine|NUT_VIT_ENERGY", "Sugar|NUT_VIT_ENERGY", "Salt|NUT_VIT_ENERGY"], "Calcium builds bones and teeth. Milk and small fish such as omena have it.")
+  ], { h: ["Each nutrient has its own job.", "Carbohydrates: energy. Proteins: grow and repair. Vitamins: protect."], s1: "Match the nutrient with its job." })),
+  fam("nu.fn.story", `${NU}NUTRIENT_FUNCTIONS`, "word", 2, choose([
+    Q("A growing child needs new muscles. Which nutrient is most needed?", "Proteins", ["Carbohydrates|NUT_PROT_ENERGY", "Vitamins|NUT_PROT_ENERGY", "Fats|NUT_PROT_ENERGY"], "Proteins build and repair the body."),
+    Q("Wanjiru runs a long race and needs quick energy. Which food nutrient helps her most?", "Carbohydrates", ["Proteins|NUT_PROT_ENERGY", "Vitamins|NUT_VIT_ENERGY", "Minerals|NUT_VIT_ENERGY"], "Carbohydrates give energy."),
+    Q("Otieno says vitamins give much energy. What is the best reply?", "They protect the body, but energy comes from carbohydrates", ["He is right, they give the most|NUT_VIT_ENERGY", "They give energy and nothing else|NUT_VIT_ENERGY", "They build the muscles of the body|NUT_VIT_ENERGY"], "Vitamins protect against illness."),
+    Q("Amina says fats are always bad for the body. What is true?", "A little fat stores energy and keeps us warm", ["Fats are always harmful|NUT_FAT_BAD", "Fats do the job of vitamins|NUT_FAT_BAD", "Fats are never found in food|NUT_FAT_BAD"], "The body needs some fat, though not too much."),
+    Q("A doctor tells a family to eat iron-rich food. Which part of the body needs iron?", "The blood", ["The hair|NUT_VIT_ENERGY", "The nails|NUT_VIT_ENERGY", "The skin only|NUT_VIT_ENERGY"], "Iron helps blood carry air around the body.")
+  ], { h: ["Which nutrient does this job?", "Energy: carbohydrates. Growth and repair: proteins. Protection: vitamins."], s1: "Match the need with the nutrient." })),
+  // ---------------------------------------------------------------- FOOD_GROUPS
+  fam("nu.fg.which", `${NU}FOOD_GROUPS`, "direct", 1, choose([
+    Q("Which group is ugali in?", "Energy foods (carbohydrates)", ["Body-building foods (proteins)|GRP_FILLING", "Protective foods (vitamins)|GRP_PLANT_VIT", "Body-building foods and fats|GRP_FILLING"], "Ugali is made from maize and is rich in carbohydrates."),
+    Q("Which group is an egg in?", "Body-building foods (proteins)", ["Energy foods (carbohydrates)|GRP_MILK_ENERGY", "Protective foods (vitamins)|GRP_MILK_ENERGY", "Energy foods and fats|GRP_MILK_ENERGY"], "Eggs, milk, beans and fish are rich in protein."),
+    Q("Which group is sukuma wiki in?", "Protective foods (vitamins and minerals)", ["Energy foods (carbohydrates)|GRP_PLANT_VIT", "Body-building foods (proteins)|GRP_PLANT_VIT", "Energy foods and proteins|GRP_PLANT_VIT"], "Green leaves are rich in vitamins and minerals."),
+    Q("Which of these is a carbohydrate food?", "Cassava", ["Mango|GRP_PLANT_VIT", "Spinach|GRP_PLANT_VIT", "Oranges|GRP_PLANT_VIT"], "Cassava, rice and sweet potatoes are energy foods. Mango, spinach and oranges give vitamins."),
+    Q("Which nutrient is cooking oil rich in?", "Fats", ["Proteins|GRP_BUTTER_PROT", "Vitamins|GRP_BUTTER_PROT", "Carbohydrates|GRP_BUTTER_PROT"], "Cooking oil and butter are fats.")
+  ], { h: ["Think about what each food is mostly made of.", "Ugali, rice, cassava: energy. Eggs, beans, fish, milk: body-building. Green leaves, fruit: protective."], s1: "Think of the main nutrient of the food." })),
+  fam("nu.fg.table", `${NU}FOOD_GROUPS`, "table", 2, choose([
+    Q("Look at the table. Which food gives the body most energy?", "Ugali", ["Sukuma wiki|GRP_PLANT_VIT", "Beans|GRP_MILK_ENERGY", "Eggs|GRP_MILK_ENERGY"], "Ugali is a carbohydrate food. Sukuma wiki gives vitamins, and beans and eggs give protein.", { t: { head: ["Food", "Eaten with"], rows: [["Ugali", "Sukuma wiki"], ["Rice", "Beans"], ["Chapati", "Eggs"]] } }),
+    Q("In the table, which food eaten with rice is rich in protein?", "Beans", ["Cooking oil|GRP_BUTTER_PROT", "Cabbage|GRP_PLANT_VIT", "Ugali|GRP_FILLING"], "Beans build the body, so they are protein foods.", { t: { head: ["Meal", "Foods"], rows: [["Lunch", "Rice, beans, cooking oil"], ["Supper", "Ugali, cabbage"]] } }),
+    Q("In the table, which food is rich in protein and builds the body?", "Fish", ["Ugali|GRP_FILLING", "Rice|GRP_FILLING", "Cabbage|GRP_PLANT_VIT"], "Fish is a protein food. Ugali and rice give energy, and cabbage gives vitamins.", { t: { head: ["Meal", "Foods"], rows: [["Lunch", "Rice, cabbage"], ["Supper", "Ugali, fish, spinach"]] } }),
+    Q("Which food in the table gives mainly body-building protein?", "Eggs", ["Sweet potato|GRP_MILK_ENERGY", "Chapati|GRP_MILK_ENERGY", "Ugali|GRP_FILLING"], "Eggs are rich in protein.", { t: { head: ["Food", "Eaten with"], rows: [["Chapati", "Eggs"], ["Sweet potato", "Milk"], ["Ugali", "Sukuma wiki"]] } }),
+    Q("Which meal in the table has an energy food, a body-building food and a protective food?", "Supper", ["Breakfast|GRP_FILLING", "Neither meal|GRP_FILLING", "Both of the meals|GRP_FILLING"], "Supper has ugali for energy, fish for the body and spinach for protection. Breakfast has only energy foods.", { t: { head: ["Meal", "Foods"], rows: [["Breakfast", "Tea and bread"], ["Supper", "Ugali, fish, spinach"]] } })
+  ], { h: ["Find the food in the table, then think about its main nutrient.", "Ugali: energy. Beans, eggs, fish: body-building. Green leaves: protective."], s1: "Read the table and sort the foods." })),
+  // ---------------------------------------------------------------- DEFICIENCY_DISEASES
+  fam("nu.dd.which", `${NU}DEFICIENCY_DISEASES`, "direct", 1, choose([
+    Q("A child has swollen legs and belly and eats little protein. Which disease is this?", "Kwashiorkor", ["Marasmus|DIS_SWAP", "Goitre|DIS_SWAP", "Anaemia|DIS_SWAP"], "Kwashiorkor shows swollen legs, face and belly, from too little protein."),
+    Q("A very thin child who has had too little food of all kinds has which disease?", "Marasmus", ["Kwashiorkor|DIS_SWAP", "Goitre|DIS_SWAP", "Anaemia|DIS_SWAP"], "Marasmus is a wasted, very thin body from too little food overall."),
+    Q("A swelling at the front of the neck can come from too little of which mineral?", "Iodine", ["Calcium|DIS_CAUSE", "Iron|DIS_CAUSE", "Sugar|DIS_CAUSE"], "Goitre comes from too little iodine."),
+    Q("Pale skin, tiredness and dizziness can come from too little of which mineral?", "Iron", ["Calcium|DIS_CAUSE", "Iodine|DIS_CAUSE", "Salt|DIS_CAUSE"], "Anaemia comes from too little iron in the blood."),
+    Q("Can a child catch kwashiorkor from a friend?", "No, it is caused by poor food", ["Yes, by touching|DIS_CATCH", "Yes, by sharing a cup|DIS_CATCH", "Yes, by playing together|DIS_CATCH"], "Lack of a nutrient is not an infection.")
+  ], { h: ["Each disease comes from a lack of something in the food.", "Kwashiorkor: protein. Marasmus: all food. Goitre: iodine. Anaemia: iron."], s1: "Match the signs with what is missing." })),
+  fam("nu.dd.story", `${NU}DEFICIENCY_DISEASES`, "word", 2, choose([
+    Q("At the clinic, a toddler has a swollen belly and thin, pale hair. The family eats mostly maize. Which disease is likely?", "Kwashiorkor", ["Marasmus|DIS_SWAP", "Goitre|DIS_SWAP", "A cold|DIS_CATCH"], "Too little protein causes kwashiorkor."),
+    Q("During a long drought, a child is very thin and weak because the family had very little food. Which disease is this?", "Marasmus", ["Kwashiorkor|DIS_SWAP", "Goitre|DIS_SWAP", "Anaemia|DIS_SWAP"], "Marasmus comes from too little food overall."),
+    Q("Mama Wanjiru has a swelling at the front of her neck and lives far from the sea where iodised salt is hard to get. Which problem is this?", "Goitre", ["Anaemia|DIS_CAUSE", "Kwashiorkor|DIS_CAUSE", "Marasmus|DIS_CAUSE"], "Goitre is caused by too little iodine."),
+    Q("Hassan feels tired, his palms are pale and he eats little meat or green leaves. Which problem could this be?", "Anaemia", ["Goitre|DIS_CAUSE", "Marasmus|DIS_CAUSE", "Kwashiorkor|DIS_CAUSE"], "Anaemia is from too little iron."),
+    Q("Two sisters share a room. One has anaemia. Will the other catch it?", "No, it is not a germ illness", ["Yes, by sharing the room|DIS_CATCH", "Yes, by sharing the bed|DIS_CATCH", "Yes, by sharing a plate|DIS_CATCH"], "It comes from a lack of iron, not from germs.")
+  ], { h: ["What is missing from the food?", "These diseases are not caught from other people."], s1: "Match the signs and the food with the disease." })),
+  // ---------------------------------------------------------------- DISEASE_PREVENTION
+  fam("nu.dp.which", `${NU}DISEASE_PREVENTION`, "direct", 1, choose([
+    Q("Which salt helps to prevent goitre?", "Iodised salt", ["Any salt without iodine|PREV_SALT", "Salt from a rock|PREV_SALT", "Salt used only for cooking|PREV_SALT"], "Only iodised salt carries iodine."),
+    Q("Which foods help prevent kwashiorkor?", "Beans, eggs, fish and milk", ["Only maize|PREV_ONE_FOOD", "Only sweets and sodas|PREV_ONE_FOOD", "Only plain ugali|PREV_ONE_FOOD"], "These are rich in protein."),
+    Q("Which foods help prevent anaemia?", "Liver, meat and dark green leaves", ["Only sugar and tea|PREV_ONE_FOOD", "Only white bread|PREV_ONE_FOOD", "Only sodas|PREV_ONE_FOOD"], "They contain iron."),
+    Q("Which meal protects a family best from nutritional diseases?", "Ugali with beans and sukuma wiki", ["Only ugali as much as they want|PREV_ONE_FOOD", "Only tea and bread|PREV_ONE_FOOD", "Only a bowl of rice|PREV_ONE_FOOD"], "A varied meal has all the nutrients."),
+    Q("How is kwashiorkor best prevented?", "With enough protein foods", ["Only with medicine|PREV_MEDICINE", "Only with sweet drinks|PREV_MEDICINE", "Only with bigger plates|PREV_MEDICINE"], "Good food is the best protection.")
+  ], { h: ["Prevention is a varied meal.", "Iodised salt, protein foods, iron foods and many kinds of food."], s1: "Match the food with the disease it prevents." })),
+  fam("nu.dp.story", `${NU}DISEASE_PREVENTION`, "word", 2, choose([
+    Q("Mama Atieno buys salt for her family. Which should she choose to prevent goitre?", "Salt marked iodised", ["The cheapest salt of any kind|PREV_SALT", "Salt in the biggest bag|PREV_SALT", "Salt with no label|PREV_SALT"], "The packet should say iodised."),
+    Q("A family can only afford ugali. A health worker advises what?", "Add beans, eggs or greens when they can", ["Eat much more ugali and nothing else|PREV_ONE_FOOD", "Take medicine instead of any food|PREV_MEDICINE", "Drink only tea with every meal|PREV_ONE_FOOD"], "Beans and greens add protein and vitamins."),
+    Q("Njoroge is often tired and pale. Which meal might help his body?", "Ugali with liver and managu", ["Ugali on its own with sweet tea|PREV_ONE_FOOD", "A plate of chips and a soda|PREV_ONE_FOOD", "White bread with plenty of jam|PREV_ONE_FOOD"], "Liver and dark green leaves have iron."),
+    Q("A school feeds children githeri with vegetables. Why is this a good meal?", "It has energy, protein and vitamins", ["It has energy and nothing else|PREV_ONE_FOOD", "It has protein and nothing else|PREV_ONE_FOOD", "It has only water and some salt|PREV_ONE_FOOD"], "Maize and beans with vegetables is a balanced meal."),
+    Q("A mother thinks medicine alone will cure her toddler's kwashiorkor. What does the nurse say?", "Protein foods are also needed", ["Food has no effect on this illness|PREV_MEDICINE", "Only a long rest will help|PREV_MEDICINE", "Only a bottle of syrup helps|PREV_MEDICINE"], "Good food helps the body recover.")
+  ], { h: ["Which food or habit protects the family?", "A varied diet protects most."], s1: "Choose the meal or habit that supplies what is missing." })),
+  // ---------------------------------------------------------------- FRYING_METHODS
+  fam("co.fm.which", `${CO}FRYING_METHODS`, "direct", 1, choose([
+    Q("Which method fries food completely covered in hot oil?", "Deep frying", ["Dry fat frying|FRY_DEEP_LITTLE", "Shallow frying|FRY_DEEP_LITTLE", "Boiling in water|FRY_DEEP_LITTLE"], "In deep frying the food is covered by hot oil."),
+    Q("Sausages are cooked in a pan with no added oil. Which method is this?", "Dry fat frying", ["Deep frying|FRY_DRY_LOTS", "Boiling|FRY_DRY_LOTS", "Baking|FRY_DRY_LOTS"], "The sausages release their own fat."),
+    Q("Which food is usually deep fried?", "Mandazi", ["Sausages|FRY_MIX", "Minced meat|FRY_MIX", "Bacon|FRY_MIX"], "Mandazi are fried in deep oil."),
+    Q("Which food is usually cooked by dry fat frying?", "Minced meat", ["Chips|FRY_MIX", "Mandazi|FRY_MIX", "Samosas|FRY_MIX"], "Minced meat has its own fat."),
+    Q("How much oil does deep frying use?", "Enough to cover the food", ["A teaspoon in the pan|FRY_DEEP_LITTLE", "A thin film at the bottom|FRY_DEEP_LITTLE", "None, the food makes its own|FRY_DRY_LOTS"], "The food floats in the oil.")
+  ], { h: ["Think about how much oil the method needs.", "Deep: food covered in oil. Dry fat: food releases its own fat."], s1: "Match the method with the oil and the food." })),
+  fam("co.fm.story", `${CO}FRYING_METHODS`, "word", 2, choose([
+    Q("Mama Njeri heats a pan, adds no oil and puts in sausages. Which method is she using?", "Dry fat frying", ["Deep frying|FRY_DRY_LOTS", "Steaming|FRY_DRY_LOTS", "Baking|FRY_DRY_LOTS"], "The sausages give out their own fat."),
+    Q("At the market, the vendor drops chips into a big pan of hot oil. Which method is this?", "Deep frying", ["Dry fat frying|FRY_DEEP_LITTLE", "Steaming|FRY_DEEP_LITTLE", "Boiling|FRY_DEEP_LITTLE"], "The chips are covered in oil."),
+    Q("Otieno says mandazi need only a spoonful of oil. What is the best reply?", "They need enough oil to cover them", ["He is right, a spoon is enough|FRY_DEEP_LITTLE", "They need no oil at all|FRY_DRY_LOTS", "They need a drop of water instead|FRY_DEEP_LITTLE"], "Mandazi are deep fried."),
+    Q("Wanjiku wants to fry bacon. Which method suits it best?", "Dry fat frying", ["Deep frying in a pot of oil|FRY_MIX", "Boiling in water|FRY_MIX", "Baking in water|FRY_MIX"], "Bacon releases fat as it cooks."),
+    Q("Which of these pairs of food and method is correct?", "Samosas: deep frying", ["Samosas: dry fat frying|FRY_MIX", "Sausages: deep frying|FRY_MIX", "Mince: deep frying|FRY_MIX"], "Samosas are deep fried. Sausages and mince use their own fat.")
+  ], { h: ["Is the food covered in oil, or cooked in its own fat?", "Mandazi, chips, samosas: deep. Sausages, mince, bacon: dry fat."], s1: "Decide from how much oil the cook uses." })),
+  // ---------------------------------------------------------------- FRYING_SAFETY
+  fam("co.fs.which", `${CO}FRYING_SAFETY`, "direct", 1, choose([
+    Q("A pan of oil catches fire. What should you do?", "Cover it with a lid and turn off the heat", ["Pour water on it|FSAFE_WATER", "Carry it outside quickly|FSAFE_WATER", "Blow on it hard|FSAFE_WATER"], "Water makes burning oil splash and spread. A lid cuts off the air."),
+    Q("Why should food be dry before it goes into hot oil?", "Water makes the hot oil spit", ["Wet food cooks faster|FSAFE_WET", "Wet food tastes better|FSAFE_WET", "Water makes no difference|FSAFE_WET"], "The spitting oil can burn you."),
+    Q("How full should the pan be for deep frying?", "No more than half full", ["Right to the top|FSAFE_FULL", "Filled to the very rim|FSAFE_FULL", "Almost full for more food|FSAFE_FULL"], "Oil bubbles up when food goes in."),
+    Q("Hot oil is on the stove and the phone rings. What do you do?", "Turn off the heat first", ["Go and answer, the oil will wait|FSAFE_LEAVE", "Leave it on and chat outside|FSAFE_LEAVE", "Leave it for a few minutes|FSAFE_LEAVE"], "Never leave hot oil alone."),
+    Q("Which is a good way to serve fried food?", "Hot, on a clean plate, with clean hands", ["Cold, on a dirty plate|FSAFE_LEAVE", "On the floor of the kitchen|FSAFE_LEAVE", "Straight from an uncovered pan|FSAFE_LEAVE"], "Clean hands and plates keep food safe.")
+  ], { h: ["Think about what could burn or spill.", "Dry food, half-full pan, lid for a fire, never leave hot oil."], s1: "Think about the safe action." })),
+  fam("co.fs.story", `${CO}FRYING_SAFETY`, "word", 2, choose([
+    Q("Baraka sees flames in the frying pan at school. What is the safest action?", "Cover with a lid and switch off", ["Throw a cup of water on it|FSAFE_WATER", "Pour a bucket of water over it|FSAFE_WATER", "Run out to find help first|FSAFE_WATER"], "Water on burning oil makes it worse."),
+    Q("Njoki washed some fish and puts it straight into hot oil. What happens?", "The oil spits and can burn her", ["The fish cooks faster and safely|FSAFE_WET", "The oil goes cold|FSAFE_WET", "Nothing happens|FSAFE_WET"], "Dry fish before frying."),
+    Q("Kiprop fills the pan to the top before deep frying. What could go wrong?", "The oil could bubble over and burn him", ["Nothing, more oil is safer|FSAFE_FULL", "The food will cook slowly only|FSAFE_FULL", "The pan will become lighter|FSAFE_FULL"], "Fill no more than half."),
+    Q("Amina leaves the chips frying to go and talk to a friend. Why is that unsafe?", "The oil can overheat and catch fire", ["The chips will cook too slowly|FSAFE_LEAVE", "The pan will get cold|FSAFE_LEAVE", "It is safe for a short while|FSAFE_LEAVE"], "Never leave hot oil."),
+    Q("Which is the safest way to put mandazi into hot oil?", "Lower them in gently, away from your body", ["Throw them in from high up|FSAFE_WET", "Drop them from a distance, wet|FSAFE_WET", "Tip a whole tray in at once|FSAFE_FULL"], "Gentle lowering avoids splashes.")
+  ], { h: ["What could cause a burn?", "Dry food, half-full pan, never leave, lid for a fire."], s1: "Think about the safe step." })),
+  fam("co.fs.spot", `${CO}FRYING_SAFETY`, "spot", 3, spot([
+    S("Mercy explains how she fried mandazi safely. Which step has the mistake?", ["Step 1: I washed my hands and dried the dough.", "!Step 2: I filled the pan to the very top with oil.", "Step 3: I lowered the mandazi in gently."], "Fill the pan no more than half, because oil bubbles up when food goes in.", "FSAFE_FULL"),
+    S("Brian describes a small oil fire. Which step has the mistake?", ["Step 1: I turned off the heat.", "!Step 2: I threw water on the flames.", "Step 3: I put a lid on the pan."], "Never use water on an oil fire. Use a lid.", "FSAFE_WATER"),
+    S("Fatuma explains how she fried fish. Which step has the mistake?", ["Step 1: I heated the oil in a half-full pan.", "!Step 2: I put in the fish straight from the wash water.", "Step 3: I drained the fish on clean paper."], "Dry the fish first, because water makes hot oil spit.", "FSAFE_WET"),
+    S("Peter describes his frying lesson. Which step has the mistake?", ["Step 1: I turned the handle inwards.", "Step 2: I put in the chips carefully.", "!Step 3: I went to play while the oil was hot."], "Never leave hot oil alone.", "FSAFE_LEAVE"),
+    S("Grace explains how she served the food. Which step has the mistake?", ["Step 1: I drained the samosas on clean paper.", "Step 2: I washed my hands first.", "!Step 3: I put them back into the oil to keep them warm all afternoon."], "Serve at once on a clean plate. Oil left on a hot stove is dangerous.", "FSAFE_LEAVE")
+  ], { h: ["Which step is unsafe?", "Dry food, half-full pan, lid for a fire, never leave hot oil."], s1: "Check each step for safety." }))
+];
+
+// src/ai-tutor/content/families/agriculture_g5_d.js
+var GR = "HYGIEN.GOOD_GROOMING_PRACTICES.";
+var HO = "HYGIEN.HOME_HYGIENE.";
+var LA = "HYGIEN.LAUNDERING_COTTON_ITEM.";
+var RE = "PRODUC.REPAIRING_GARMENTS.";
+var GA = "PRODUC.CONSTRUCTING_INNOVATIVE_.";
+var FAMILIES4 = [
+  // ---------------------------------------------------------------- GROOMING_HABITS
+  fam("gr.ha.which", `${GR}GROOMING_HABITS`, "direct", 1, choose([
+    Q("Which of these is part of good grooming every day?", "Bathing and wearing clean clothes", ["Wearing the most costly clothes|GROOM_EXPENSIVE", "Using perfume instead of a bath|GROOM_PERFUME", "Keeping it only for special days|GROOM_SPECIAL"], "Good grooming is about being clean and neat, not about cost."),
+    Q("How often should a child brush their teeth?", "In the morning and at night", ["Only on special days|GROOM_SPECIAL", "Only when going to a party|GROOM_SPECIAL", "Once a month on a Sunday|GROOM_SPECIAL"], "Brushing twice a day keeps teeth healthy."),
+    Q("Which keeps a child healthy and fresh?", "Bathing with soap and water", ["Putting on perfume without a bath|GROOM_PERFUME", "Powdering over dirty skin|GROOM_PERFUME", "Wearing shiny new shoes|GROOM_EXPENSIVE"], "Soap and water remove dirt and germs. Scent only covers smell."),
+    Q("Why are fingernails kept short and clean?", "Dirt and germs hide under long nails", ["Short nails look rich and costly|GROOM_EXPENSIVE", "Long nails are only for parties|GROOM_SPECIAL", "Clean nails need special soap|GROOM_EXPENSIVE"], "Germs hide under dirty nails and can reach food."),
+    Q("Can a child be well groomed in an old but clean shirt?", "Yes, being clean and neat is what counts", ["No, only new clothes count|GROOM_EXPENSIVE", "No, only costly clothes count|GROOM_EXPENSIVE", "No, grooming is for special days|GROOM_SPECIAL"], "Grooming does not depend on cost.")
+  ], { h: ["Grooming is a habit for every day.", "Clean body, teeth, hair, nails and clothes."], s1: "Think about what keeps the body clean and healthy." })),
+  fam("gr.ha.story", `${GR}GROOMING_HABITS`, "word", 2, choose([
+    Q("Achieng uses much perfume but does not bathe on school days. What should her teacher say?", "Bathing with soap and water is needed first", ["Perfume is enough to make a child clean|GROOM_PERFUME", "More perfume is the best answer to this|GROOM_PERFUME", "Bathing is needed only on special days|GROOM_SPECIAL"], "Perfume covers smell but does not remove germs."),
+    Q("Mutua says he will groom himself only when going to church or a party. What is the problem?", "Good grooming is needed every day", ["Nothing, that is enough|GROOM_SPECIAL", "It is needed only in the dry season|GROOM_SPECIAL", "Only grown-ups need it daily|GROOM_SPECIAL"], "Good grooming is a daily health habit."),
+    Q("Wambui says her family cannot afford new clothes, so she cannot be well groomed. What is the best reply?", "Clean, mended clothes and a clean body are enough", ["She is right, grooming needs brand new clothes|GROOM_EXPENSIVE", "It needs the most costly clothes in the whole town|GROOM_EXPENSIVE", "It needs a new school bag and shoes every year|GROOM_EXPENSIVE"], "Grooming means being clean and neat."),
+    Q("Which daily routine is the best for a school child?", "Bath, brush teeth, comb hair, wear clean uniform", ["Wear perfume, skip the bath and the toothbrush|GROOM_PERFUME", "Wear a brand new uniform only once each term|GROOM_EXPENSIVE", "Bathe only on a Saturday evening each week|GROOM_SPECIAL"], "These habits are done every day."),
+    Q("Which part of the uniform should be washed often and why?", "Socks and underwear, to stop germs and smell", ["Only the blazer, so you always look costly|GROOM_EXPENSIVE", "Only the tie, so you are ready for a party|GROOM_SPECIAL", "Nothing, because perfume will do instead|GROOM_PERFUME"], "Clothes next to the skin need washing often.")
+  ], { h: ["What does the body really need to stay clean?", "Soap, water and clean clothes, every day."], s1: "Decide which habit keeps the body clean." })),
+  // ---------------------------------------------------------------- DRESS_ETIQUETTE
+  fam("gr.de.which", `${GR}DRESS_ETIQUETTE`, "direct", 1, choose([
+    Q("What is best to wear for farm work at school?", "Old clothes, gumboots and an apron", ["Your best Sunday clothes|DRESS_SAME", "Your party dress or suit|DRESS_SAME", "Your clean white uniform|DRESS_SAME"], "Dress to suit the job. Best clothes would be spoiled in the mud."),
+    Q("What is the best thing to wear for a games lesson?", "Sports clothes and strong shoes", ["A tie and a long coat|DRESS_SAME", "A party dress|DRESS_SAME", "Your church clothes|DRESS_SAME"], "Sports clothes let you move freely."),
+    Q("A visitor comes to school. What is good manners?", "Greet her politely", ["Ignore her, she is a stranger|ETIQ_GREET", "Hide until she leaves|ETIQ_GREET", "Stare and say nothing|ETIQ_GREET"], "A polite greeting shows respect."),
+    Q("Which words show good manners when you ask for something?", "Please and thank you", ["Give me, I want it|ETIQ_GREET", "Hurry up and bring it|ETIQ_GREET", "You must give it to me|ETIQ_GREET"], "Polite words show respect."),
+    Q("Why do we wear different clothes for different jobs?", "Each job needs its own kind of clothes", ["One outfit suits every job and place|DRESS_SAME", "Clothes make no difference to a job|DRESS_SAME", "Only rich people ever change clothes|DRESS_SAME"], "Dress should suit the place and the work.")
+  ], { h: ["Think about the activity and the place.", "Dress to suit the job, and use polite words and greetings."], s1: "Match the clothes and manners to the occasion." })),
+  fam("gr.de.story", `${GR}DRESS_ETIQUETTE`, "word", 2, choose([
+    Q("Kamau is going to plant kale at school. What should he wear?", "Old clothes and gumboots", ["His best shirt and shoes|DRESS_SAME", "His smart party clothes|DRESS_SAME", "His church clothes|DRESS_SAME"], "Old clothes can get muddy."),
+    Q("Amina visits her grandmother in the village. What is good etiquette when she arrives?", "Greet her warmly and offer to help", ["Walk in without greeting|ETIQ_GREET", "Play with her phone only|ETIQ_GREET", "Wait for her to speak first|ETIQ_GREET"], "Greetings and helping show respect."),
+    Q("Atieno wears the same clothes for the farm, church and sports and says clothes do not matter. What is wrong?", "Different places need different clothes", ["Nothing, she is quite right about it|DRESS_SAME", "Only church needs special clothes|DRESS_SAME", "Only sports need special clothes|DRESS_SAME"], "Dress should match the activity."),
+    Q("At lunch, the class sits to eat together. Which is good table manners?", "Wash hands and wait for everyone to be served", ["Start eating before the others have sat|ETIQ_GREET", "Talk loudly with food in your mouth|ETIQ_GREET", "Reach across the table for food|ETIQ_GREET"], "Washing hands and waiting show respect."),
+    Q("Njoroge is shy and does not greet the new teacher. What should his friend say?", "It is polite to greet people you meet", ["You only greet the people you know|ETIQ_GREET", "Greetings are only meant for the old|ETIQ_GREET", "Greetings are just a waste of time|ETIQ_GREET"], "We greet visitors and new people politely.")
+  ], { h: ["What does the place or person need from you?", "Dress for the job. Greet and thank people."], s1: "Match the clothes and manners to the occasion." })),
+  // ---------------------------------------------------------------- SURFACE_TYPES
+  fam("ho.st.which", `${HO}SURFACE_TYPES`, "direct", 1, choose([
+    Q("A floor is made of smooth shiny squares laid side by side. What is it?", "A tiled floor", ["A cemented floor|SURF_TILE_CEMENT", "An earthen floor|SURF_TILE_CEMENT", "A wooden floor|SURF_TILE_CEMENT"], "Tiles are smooth and glazed squares."),
+    Q("A window pane is smooth and see-through. What is it made of?", "Glass", ["Wood|SURF_TILE_GLASS", "Tile|SURF_TILE_GLASS", "Cement|SURF_TILE_GLASS"], "Glass lets light through."),
+    Q("A rough, grey, hard floor in a kitchen is probably what?", "A cemented floor", ["A tiled floor|SURF_TILE_CEMENT", "A glass floor|SURF_TILE_GLASS", "A soil floor smeared with mud|SURF_TILE_CEMENT"], "Cement is rough and grey."),
+    Q("A floor of packed soil, smeared smooth with mud, is called what?", "An earthen floor", ["A tiled floor|SURF_TILE_CEMENT", "A cemented floor|SURF_TILE_CEMENT", "A glass floor|SURF_TILE_GLASS"], "Many homes have earthen floors."),
+    Q("Which of these is made of wood?", "A door", ["A window pane|SURF_TILE_GLASS", "A mirror|SURF_TILE_GLASS", "A bathroom wall tile|SURF_TILE_GLASS"], "Doors and tables are often wood. Windows and mirrors are glass.")
+  ], { h: ["Think about how the surface looks and feels.", "Glass: see-through. Tile: smooth squares. Cement: rough grey. Earth: packed soil. Wood: grain."], s1: "Match the look to the material." })),
+  fam("ho.st.story", `${HO}SURFACE_TYPES`, "word", 2, choose([
+    Q("Wanjiru cleans the bathroom wall of smooth shiny squares. What material is the wall?", "Tiles", ["Cement|SURF_TILE_CEMENT", "Wood|SURF_TILE_CEMENT", "Glass|SURF_TILE_GLASS"], "Shiny glazed squares are tiles."),
+    Q("At Grandmother's home in the village, the floor is packed soil. What is it?", "An earthen floor", ["A tiled floor|SURF_TILE_CEMENT", "A cemented floor|SURF_TILE_CEMENT", "A glass floor|SURF_TILE_GLASS"], "It is made of soil."),
+    Q("Njoki points at the kitchen window and calls it wood. What should her teacher say?", "It is glass, because it is see-through", ["She is right, it is wood|SURF_TILE_GLASS", "It is tile, because it is shiny|SURF_TILE_GLASS", "It is cement, because it is hard|SURF_TILE_GLASS"], "Glass lets light through."),
+    Q("Otieno says a shiny tiled floor is cement. How can he tell the difference?", "Tiles are smooth and glazed, cement is rough", ["They look exactly the same|SURF_TILE_CEMENT", "Cement is shiny, tiles are rough|SURF_TILE_CEMENT", "Both are made of glass|SURF_TILE_GLASS"], "Feel the surface."),
+    Q("A school classroom has a rough grey floor that is hard and cool. What is it likely to be?", "Cement", ["Tile|SURF_TILE_CEMENT", "Glass|SURF_TILE_GLASS", "Wood|SURF_TILE_CEMENT"], "Cement floors are rough and grey.")
+  ], { h: ["Feel and look: smooth or rough, shiny or dull?", "Glass, tiles, cement, earth and wood each look different."], s1: "Decide from the look and feel." })),
+  // ---------------------------------------------------------------- SURFACE_CLEANING
+  fam("ho.sc.which", `${HO}SURFACE_CLEANING`, "direct", 1, choose([
+    Q("How should a wooden table be cleaned?", "Wipe with a damp cloth and dry it", ["Pour lots of water on it|CLEAN_SOAK_WOOD", "Soak it in a bucket of water|CLEAN_SOAK_WOOD", "Scrub it hard with a wet brush|CLEAN_SOAK_WOOD"], "Too much water swells and rots wood."),
+    Q("How is an earthen floor cleaned?", "Sprinkle a little water and sweep softly", ["Scrub it with plenty of water|CLEAN_EARTH_SCRUB", "Wash it with a hosepipe|CLEAN_EARTH_SCRUB", "Scrub it hard with soap|CLEAN_EARTH_SCRUB"], "Plenty of water turns earth into mud."),
+    Q("After mopping a tiled floor, what should be done?", "Dry it so that nobody slips", ["Leave it wet to dry alone|CLEAN_WET_SLIP", "Pour more water on it|CLEAN_WET_SLIP", "Leave it shiny and wet|CLEAN_WET_SLIP"], "Wet tiles are slippery."),
+    Q("What comes first in cleaning a cemented floor?", "Sweep away the dust", ["Scrub it with water|CLEAN_WASH_FIRST", "Pour water over the dust|CLEAN_WASH_FIRST", "Mop it wet at once|CLEAN_WASH_FIRST"], "Sweep or dust first, then wash."),
+    Q("How is a glass window cleaned?", "Wipe with a damp cloth and dry it", ["Scrub it with a dry brush|CLEAN_SOAK_WOOD", "Pour water on it and leave it|CLEAN_SOAK_WOOD", "Rub it with sand|CLEAN_SOAK_WOOD"], "Drying stops streaks.")
+  ], { h: ["Think about what each material can bear.", "Wood and earth need little water. Tiles are dried. Dust comes off before washing."], s1: "Match the cleaning method to the surface." })),
+  fam("ho.sc.story", `${HO}SURFACE_CLEANING`, "word", 2, choose([
+    Q("Mama Njeri cleans an earthen floor in her home. What should she do?", "Sprinkle a little water and sweep softly", ["Scrub it with plenty of water|CLEAN_EARTH_SCRUB", "Pour a bucket of water on it|CLEAN_EARTH_SCRUB", "Wash it with soap and a brush|CLEAN_EARTH_SCRUB"], "Too much water makes mud."),
+    Q("Wafula soaks the classroom wooden desks with a bucket of water. What is likely to happen?", "The wood may swell and rot", ["The desks will shine|CLEAN_SOAK_WOOD", "The desks will last longer|CLEAN_SOAK_WOOD", "Nothing will change|CLEAN_SOAK_WOOD"], "Wipe wood with a damp cloth."),
+    Q("Halima has mopped the tiled kitchen and a visitor nearly slips. What should she have done?", "Dried the floor or put up a warning", ["Left it wet for longer|CLEAN_WET_SLIP", "Poured on more water|CLEAN_WET_SLIP", "Waxed it while wet|CLEAN_WET_SLIP"], "Wet tiles are slippery."),
+    Q("Baraka pours water on a dusty cement floor and gets mud. What should he have done first?", "Swept the dust away", ["Scrubbed it harder|CLEAN_WASH_FIRST", "Poured on more water|CLEAN_WASH_FIRST", "Left the dust alone|CLEAN_WASH_FIRST"], "Sweep before washing."),
+    Q("The class cleans the classroom windows. Which is the right order?", "Wipe with a damp cloth, then dry", ["Dry first, then wipe with water|CLEAN_WASH_FIRST", "Pour water, then leave it|CLEAN_WASH_FIRST", "Rub with a dry brush only|CLEAN_WASH_FIRST"], "Dry the glass to avoid streaks.")
+  ], { h: ["What happens if the surface gets too wet?", "Match the method to the material."], s1: "Think about what the surface can take." })),
+  // ---------------------------------------------------------------- LAUNDRY_STEPS
+  fam("la.st.which", `${LA}LAUNDRY_STEPS`, "direct", 1, choose([
+    Q("Which step comes first in laundering clothes?", "Sorting the clothes", ["Ironing them|LAUN_ORDER", "Drying them in the sun|LAUN_ORDER", "Rinsing them|LAUN_ORDER"], "Sort white and coloured clothes first."),
+    Q("Why wash white and coloured clothes separately?", "Colour can run and stain the white ones", ["There is no good reason to separate them|LAUN_MIX", "It only saves soap and water|LAUN_MIX", "White clothes need cold water only|LAUN_MIX"], "Colour from new coloured clothes can stain whites."),
+    Q("Why must soap be rinsed out of clothes?", "Left-over soap makes them stiff and itchy", ["It does not matter at all if soap stays in|LAUN_RINSE", "Soap left in keeps them clean for much longer|LAUN_RINSE", "Soap left in makes them softer|LAUN_RINSE"], "Rinse until the water is clear."),
+    Q("Which is the correct order?", "Sort, soak, wash, rinse, dry, iron", ["Iron, wash, sort, dry, rinse, soak|LAUN_ORDER", "Dry, wash, iron, sort, rinse, soak|LAUN_ORDER", "Wash, iron, rinse, sort, dry, soak|LAUN_ORDER"], "Washing comes before drying and ironing."),
+    Q("What is checked before washing a shirt?", "The pockets, for things left inside", ["The colour of the sky above|LAUN_ORDER", "How old the shirt is, in years|LAUN_ORDER", "How much the shirt cost in the shop|LAUN_ORDER"], "Pockets may hold pens or paper that spoil the wash.")
+  ], { h: ["Think about what each step does to the clothes.", "Sort, soak, wash, rinse, dry, iron."], s1: "Put the steps in a sensible order." })),
+  fam("la.st.story", `${LA}LAUNDRY_STEPS`, "word", 2, choose([
+    Q("Wangari has a pile with a white shirt and a new red cloth. What should she do?", "Wash them separately", ["Wash them together to save water|LAUN_MIX", "Wash them together in hot water|LAUN_MIX", "Wash them together in the sun|LAUN_MIX"], "The red colour may run onto the white shirt."),
+    Q("Otieno finishes washing a shirt. What is the next step?", "Rinse out the soap", ["Iron it while it is soapy|LAUN_RINSE", "Hang it with the soap still in|LAUN_RINSE", "Put it away at once|LAUN_RINSE"], "Rinse until the water is clear."),
+    Q("A learner irons a dirty shirt and then washes it. What is wrong?", "The order is wrong: wash, dry, then iron", ["Nothing, the order is fine|LAUN_ORDER", "Washing is only for the weekend|LAUN_ORDER", "Ironing comes before sorting|LAUN_ORDER"], "Wash first, then iron."),
+    Q("Mercy's mother says soap left in clothes does not matter. What is the best reply?", "Soap left in makes cloth stiff and itchy", ["She is right, it does not matter|LAUN_RINSE", "Soap left in keeps clothes new|LAUN_RINSE", "Soap left in makes cloth whiter|LAUN_RINSE"], "Rinse well."),
+    Q("The class does a laundry lesson. Which step is missing: sort, wash, rinse, dry, iron?", "Soaking in soapy water", ["Cooking the clothes|LAUN_ORDER", "Burying the clothes|LAUN_ORDER", "Painting the clothes|LAUN_ORDER"], "Soaking loosens the dirt before washing.")
+  ], { h: ["What happens to the clothes at each step?", "Sort, soak, wash, rinse, dry, iron."], s1: "Put the steps in the right order." })),
+  fam("la.st.spot", `${LA}LAUNDRY_STEPS`, "spot", 3, spot([
+    S("Faith explains how she washed her uniform. Which step has the mistake?", ["Step 1: I checked the pockets.", "!Step 2: I washed the white shirt with the new red scarf.", "Step 3: I rinsed until the water was clear."], "Wash white and coloured items separately. The colour may run.", "LAUN_MIX"),
+    S("Brian describes washing his socks. Which step has the mistake?", ["Step 1: I soaked them in soapy water.", "Step 2: I rubbed them clean.", "!Step 3: I hung them up without rinsing the soap."], "Rinse out the soap before drying.", "LAUN_RINSE"),
+    S("Salma tells how she did the laundry. Which step has the mistake?", ["Step 1: I sorted the clothes.", "!Step 2: I ironed them while dirty.", "Step 3: I washed them afterwards."], "Wash first, then dry and iron.", "LAUN_ORDER"),
+    S("Joseph explains his laundry day. Which step has the mistake?", ["Step 1: I sorted the white clothes from the coloured ones.", "Step 2: I washed the whites first.", "!Step 3: I ironed them before they were rinsed."], "Rinse, then dry, then iron.", "LAUN_ORDER"),
+    S("Linet tells how she did her washing. Which step has the mistake?", ["Step 1: I took things out of the pockets.", "!Step 2: I put everything in one tub together.", "Step 3: I rinsed and dried each item."], "Sort white from coloured so the colours do not stain.", "LAUN_MIX")
+  ], { h: ["Which step is out of order, or spoils the clothes?", "Sort, soak, wash, rinse, dry, iron."], s1: "Check each step against the order." })),
+  // ---------------------------------------------------------------- LAUNDRY_CARE
+  fam("la.ca.which", `${LA}LAUNDRY_CARE`, "direct", 1, choose([
+    Q("What is best for washing coloured cotton?", "Cool or warm water", ["Very hot water|CARE_HOT", "Boiling water every time|CARE_HOT", "Water as hot as possible|CARE_HOT"], "Hot water can make colours run."),
+    Q("How should coloured clothes be dried?", "Inside out in the shade", ["Face out in the hot sun|CARE_SUN", "Face out on a bright rock|CARE_SUN", "Face out on the roof at noon|CARE_SUN"], "Strong sun fades colours."),
+    Q("How is cotton ironed?", "With a hot iron while a little damp", ["With a cool iron when soaking wet|CARE_IRON", "With a cold iron when bone dry|CARE_IRON", "With no iron at all|CARE_IRON"], "Cotton can take a hot iron."),
+    Q("What does a fast colour mean?", "The colour does not run in water", ["The colour is very bright|CARE_HOT", "The colour dries very fast|CARE_HOT", "The colour is very dark|CARE_HOT"], "Fast colours stay put."),
+    Q("Why are white cotton clothes dried in the sun?", "The sun helps keep them bright", ["The sun makes them colourful|CARE_SUN", "The sun shrinks them nicely|CARE_SUN", "The sun irons them for you|CARE_IRON"], "Sunshine whitens cotton.")
+  ], { h: ["What spoils colour, and what keeps white bright?", "Coloured: cool water, shade, inside out. White: sun."], s1: "Think about what the cloth needs." })),
+  fam("la.ca.story", `${LA}LAUNDRY_CARE`, "word", 2, choose([
+    Q("Wangui hangs her blue school shirt in strong sun and the blue fades. What should she do next time?", "Dry it inside out in the shade", ["Dry it face out at noon|CARE_SUN", "Dry it in the hottest place|CARE_SUN", "Dry it on a bright rock|CARE_SUN"], "Strong sun fades colours."),
+    Q("Kamau uses boiling water for a coloured shirt and the dye runs. What went wrong?", "The water was too hot for the colour", ["The water was too cool|CARE_HOT", "The soap was too mild|CARE_HOT", "The shirt was too dry|CARE_HOT"], "Use cool or warm water."),
+    Q("Njeri irons a soaking wet cotton shirt on a cool setting. What should she change?", "Use a hot iron when it is slightly damp", ["Use a cooler iron still|CARE_IRON", "Iron it while it is dripping|CARE_IRON", "Do not iron cotton at all|CARE_IRON"], "Cotton needs heat and a little dampness."),
+    Q("Hassan's mother dries the white sheets in the sun. Why?", "The sun keeps them bright", ["The sun colours them blue|CARE_SUN", "The sun makes them smaller|CARE_SUN", "The sun washes them again|CARE_SUN"], "Sunshine whitens cotton."),
+    Q("Which of these fast coloured items should be washed apart from whites?", "A new red dress", ["A white towel|CARE_HOT", "A white sock|CARE_HOT", "A cream blouse|CARE_HOT"], "Coloured clothes should be washed apart from white ones.")
+  ], { h: ["What did the cloth need?", "Coloured: cool water, shade. White: sun. Cotton: hot iron, slightly damp."], s1: "Match the care to the cloth." })),
+  // ---------------------------------------------------------------- STITCH_TYPES
+  fam("re.st.which", `${RE}STITCH_TYPES`, "direct", 1, choose([
+    Q("Which stitch goes back to meet the last stitch, leaving no gap?", "Back stitch", ["Running stitch|STITCH_SWAP", "Tacking stitch|STITCH_SWAP", "Loose stitch|STITCH_SWAP"], "Back stitch has no gaps."),
+    Q("Which stitch goes in and out in a straight line with even gaps?", "Running stitch", ["Back stitch|STITCH_SWAP", "Double stitch|STITCH_SWAP", "Cross stitch|STITCH_SWAP"], "Running stitch is quick, with gaps."),
+    Q("Which stitch is stronger?", "Back stitch", ["Running stitch|STITCH_RUN_STRONG", "Both are the same|STITCH_RUN_STRONG", "Neither is strong|STITCH_RUN_STRONG"], "Back stitch has no gaps and holds well."),
+    Q("Which stitch leaves gaps between stitches on the front?", "Running stitch", ["Back stitch|STITCH_BACK_GAPS", "Both leave gaps|STITCH_BACK_GAPS", "Neither leaves gaps|STITCH_BACK_GAPS"], "Running stitch has gaps. Back stitch does not."),
+    Q("Which stitch would you use where the seam will be pulled hard?", "Back stitch", ["Running stitch|STITCH_RUN_STRONG", "A single loose stitch|STITCH_RUN_STRONG", "A pin only|STITCH_RUN_STRONG"], "Back stitch is strong.")
+  ], { h: ["Picture how the needle moves.", "Running: in and out with gaps. Back: goes back, no gaps, strong."], s1: "Think of the shape of each stitch." })),
+  fam("re.st.story", `${RE}STITCH_TYPES`, "word", 2, choose([
+    Q("Mercy sews quickly in a straight line with even gaps for a light seam. Which stitch is she using?", "Running stitch", ["Back stitch|STITCH_SWAP", "Cross stitch|STITCH_SWAP", "Zigzag stitch|STITCH_SWAP"], "In and out with gaps is running stitch."),
+    Q("Otieno's trouser seam splits when he sits. Which stitch should be used to repair it?", "Back stitch", ["Running stitch|STITCH_RUN_STRONG", "A loose tacking stitch|STITCH_RUN_STRONG", "No stitch|STITCH_RUN_STRONG"], "Back stitch is strong."),
+    Q("Wafula says running stitch is the strongest stitch. What does his teacher reply?", "Back stitch is stronger, as it has no gaps", ["He is right|STITCH_RUN_STRONG", "Both are equally strong|STITCH_RUN_STRONG", "Neither can hold cloth|STITCH_RUN_STRONG"], "Back stitch has no gaps."),
+    Q("Njoki looks at the front of her sewing and sees even gaps between stitches. Which stitch is it?", "Running stitch", ["Back stitch|STITCH_BACK_GAPS", "Both stitches look the same|STITCH_BACK_GAPS", "A knot|STITCH_BACK_GAPS"], "Back stitch has no gaps."),
+    Q("A learner swaps the names of running stitch and back stitch. Which statement is right?", "Back stitch goes back to meet the last stitch", ["Running stitch goes back each time|STITCH_SWAP", "Running stitch has no gaps|STITCH_SWAP", "Back stitch is always loose|STITCH_SWAP"], "Back stitch doubles back.")
+  ], { h: ["Picture the stitches on the cloth.", "Running: gaps, quick. Back: no gaps, strong."], s1: "Match the stitch with its look and job." })),
+  // ---------------------------------------------------------------- SEAM_REPAIR
+  fam("re.sr.which", `${RE}SEAM_REPAIR`, "direct", 1, choose([
+    Q("Which stitch repairs a gaping seam?", "Back stitch", ["Running stitch|SEAM_RUN", "Loose tacking|SEAM_RUN", "No stitch|SEAM_RUN"], "Use back stitch for strength."),
+    Q("Where should the repair of a gaping seam start?", "A little before the gap on the sound seam", ["Exactly at the very first gap|SEAM_START", "In the middle of the open gap|SEAM_START", "Far away from the gap on the hem|SEAM_START"], "Start before and end after the gap."),
+    Q("How should you finish the repair?", "With two small stitches over each other", ["With no stitches at all, just a knot|SEAM_START", "With one long loose loop of thread|SEAM_START", "With a big knot on the outside|SEAM_START"], "Secure the thread so it does not unravel."),
+    Q("How tight should the thread be pulled?", "Firm but not puckering the cloth", ["As tight as possible|SEAM_TIGHT", "Tight enough to bunch up|SEAM_TIGHT", "Very tight, to make it strong|SEAM_TIGHT"], "Too tight puckers the cloth."),
+    Q("Which thread is best for repairing a blue school shirt?", "Blue thread that matches the cloth", ["Bright red thread of any kind|SEAM_START", "Thick white string from the shop|SEAM_START", "Black wool from an old jersey|SEAM_START"], "Matching thread hides the repair.")
+  ], { h: ["Think about strength and neatness.", "Back stitch, start before the gap, secure the end, do not pull too tight."], s1: "Think about how to make the repair strong." })),
+  fam("re.sr.story", `${RE}SEAM_REPAIR`, "word", 2, choose([
+    Q("Kamau repairs a split side seam using running stitch, and it splits again. What should he change?", "Use back stitch", ["Use longer running stitches|SEAM_RUN", "Use a thinner thread|SEAM_RUN", "Use no thread|SEAM_RUN"], "Back stitch is stronger."),
+    Q("Amina starts sewing exactly at the first gap and the seam opens at the end. What went wrong?", "She did not start before and end after the gap", ["She started in exactly the right place|SEAM_START", "She used a thread that was too long|SEAM_START", "She sewed the stitches too neatly|SEAM_START"], "Overlap the sound seam on both sides."),
+    Q("Njeri pulls the thread tight and the seam puckers. What should she do?", "Pull it firm but not too tight", ["Pull it even tighter|SEAM_TIGHT", "Leave it loose, baggy and untidy|SEAM_TIGHT", "Add many more knots to it|SEAM_TIGHT"], "Too tight puckers the cloth."),
+    Q("Which plan repairs a gaping seam properly?", "Matching thread, back stitch, overlap, secure the end", ["Any thread, running stitch, no overlap, no knot|SEAM_RUN", "Wool, long stitches, no overlap, no knot|SEAM_START", "Thick string pulled very tight and knotted|SEAM_TIGHT"], "This plan makes a strong, neat repair."),
+    Q("Atieno has finished sewing. What should she do with the loose thread?", "Fasten it and trim the end", ["Leave it long and loose|SEAM_START", "Pull it hard until it snaps|SEAM_TIGHT", "Tie it to a button|SEAM_START"], "Secure and trim.")
+  ], { h: ["Which part of the repair was done wrongly?", "Back stitch, overlap the ends, secure, firm but not tight."], s1: "Find what made the repair weak." })),
+  fam("re.sr.spot", `${RE}SEAM_REPAIR`, "spot", 3, spot([
+    S("Mwangi explains how he mended a gaping seam. Which step has the mistake?", ["Step 1: I chose thread that matched the cloth.", "!Step 2: I used running stitch to hold the seam.", "Step 3: I fastened the thread at the end."], "Use back stitch for a gaping seam, since it is strong.", "SEAM_RUN"),
+    S("Fatuma describes her repair. Which step has the mistake?", ["Step 1: I turned the garment inside out.", "!Step 2: I started exactly at the gap with no knot.", "Step 3: I sewed with back stitch."], "Start a little before the gap on the sound seam and secure the thread.", "SEAM_START"),
+    S("Peter tells how he repaired his shorts. Which step has the mistake?", ["Step 1: I used back stitch along the gap.", "!Step 2: I pulled each stitch as tight as I could.", "Step 3: I trimmed the thread."], "Pull firm, not tight, or the cloth will pucker.", "SEAM_TIGHT"),
+    S("Grace explains the repair of her skirt. Which step has the mistake?", ["Step 1: I matched the thread colour.", "Step 2: I used back stitch.", "!Step 3: I stopped sewing exactly at the end of the gap."], "Sew a little past the gap, then secure the thread.", "SEAM_START"),
+    S("Brian describes the mending of his shirt. Which step has the mistake?", ["Step 1: I picked up the shirt and found the split.", "!Step 2: I chose running stitch because it is the quickest.", "Step 3: I fastened the thread."], "A split seam needs back stitch, which is stronger.", "SEAM_RUN")
+  ], { h: ["Which step makes the repair weak?", "Back stitch, start before the gap, end after it, secure, not too tight."], s1: "Check each step for strength." })),
+  // ---------------------------------------------------------------- GARDEN_TYPES
+  fam("ga.ty.which", `${GA}GARDEN_TYPES`, "direct", 1, choose([
+    Q("A sack garden is which kind of garden?", "A vertical garden", ["A horizontal garden|GTYPE_SWAP", "A flat garden|GTYPE_SWAP", "A garden on the ground only|GTYPE_SWAP"], "A sack garden grows crops upwards."),
+    Q("A flat bed of kale at ground level is which kind of garden?", "A horizontal garden", ["A vertical garden|GTYPE_SWAP", "A hanging garden|GTYPE_SWAP", "A wall garden|GTYPE_SWAP"], "It spreads along the ground."),
+    Q("Which kind of garden needs the least ground?", "A vertical garden", ["A horizontal garden|GTYPE_NEED_LAND", "A flat garden|GTYPE_NEED_LAND", "A big field|GTYPE_NEED_LAND"], "Vertical gardens grow upwards."),
+    Q("Which of these is a vertical garden?", "Plastic bottles hung on a wall", ["A flat bed of spinach|GTYPE_SWAP", "A field of maize|GTYPE_SWAP", "A seedbed on the ground|GTYPE_SWAP"], "Hanging bottles use height."),
+    Q("Which of these is a horizontal garden?", "A flat raised bed of vegetables", ["A tower of tyres filled with soil|GTYPE_SWAP", "A sack with holes in the sides|GTYPE_SWAP", "Bottles hung from a rope|GTYPE_SWAP"], "It lies along the ground.")
+  ], { h: ["Vertical means upwards. Horizontal means flat.", "Sacks, hanging bottles and towers are vertical."], s1: "Picture the direction the garden grows." })),
+  fam("ga.ty.story", `${GA}GARDEN_TYPES`, "word", 2, choose([
+    Q("Wanjiru lives in a town flat with only a small balcony. Which garden suits her best?", "A vertical garden in sacks or bottles", ["A big horizontal field behind the flat|GTYPE_NEED_LAND", "A maize shamba on a large plot|GTYPE_NEED_LAND", "A large flat plot of ground|GTYPE_NEED_LAND"], "Vertical gardens need little ground."),
+    Q("Otieno says a vertical garden needs more land than a flat one. What is the best reply?", "It needs less, as it grows upwards", ["He is right, it needs more land|GTYPE_NEED_LAND", "It needs exactly the same land|GTYPE_NEED_LAND", "It needs twice as much land|GTYPE_NEED_LAND"], "It saves ground."),
+    Q("The school fills a sack with soil and plants kale in holes in the sides. What is this?", "A vertical garden", ["A horizontal garden|GTYPE_SWAP", "A flat seedbed|GTYPE_SWAP", "A rice paddy|GTYPE_SWAP"], "It grows upwards."),
+    Q("Amina makes a flat tray of spinach on the ground. Which garden is it?", "A horizontal garden", ["A vertical garden|GTYPE_SWAP", "A wall garden|GTYPE_SWAP", "A hanging garden|GTYPE_SWAP"], "It lies flat on the ground."),
+    Q("A class has a small compound and many learners. Which choice helps them grow the most crops?", "Vertical gardens on walls and sacks", ["One big flat plot at the school|GTYPE_NEED_LAND", "A flat plot far away from school|GTYPE_NEED_LAND", "No gardens, as there is no room|GTYPE_NEED_LAND"], "Vertical gardens use height.")
+  ], { h: ["How much ground does the garden need?", "Vertical: upwards, little ground. Horizontal: flat on the ground."], s1: "Think about space." })),
+  // ---------------------------------------------------------------- GARDEN_BUILD
+  fam("ga.bu.which", `${GA}GARDEN_BUILD`, "direct", 1, choose([
+    Q("Which crop suits a sack garden?", "Kale", ["Maize|GBUILD_ANY_CROP", "Cassava|GBUILD_ANY_CROP", "Sweet potato|GBUILD_ANY_CROP"], "Small crops with shallow roots grow well in a sack."),
+    Q("Why is a column of stones placed in the middle of a sack garden?", "To let water reach the lower soil", ["For decoration only|GBUILD_DRAIN", "To make the sack heavier|GBUILD_DRAIN", "To keep the kale from growing|GBUILD_DRAIN"], "The stones spread water through the sack."),
+    Q("How often does a sack garden need water?", "Regularly, through the stone column", ["Never, the sack keeps it|GBUILD_NO_WATER", "Only once a year|GBUILD_NO_WATER", "Only when it is cold|GBUILD_NO_WATER"], "It dries quickly and needs regular watering."),
+    Q("What is made in plastic bottles before planting?", "Small holes for drainage", ["No holes at all|GBUILD_DRAIN", "Large holes in the base|GBUILD_DRAIN", "A hole for the seeds only|GBUILD_DRAIN"], "Extra water must be able to drain out."),
+    Q("Which of these crops is a good choice for a vertical garden?", "Spinach", ["Maize|GBUILD_ANY_CROP", "Bananas|GBUILD_ANY_CROP", "Sugarcane|GBUILD_ANY_CROP"], "Spinach is small and has shallow roots.")
+  ], { h: ["Think about the size of the roots and the water.", "Small crops, a stone column, drainage holes, regular watering."], s1: "Think about what the small garden needs." })),
+  fam("ga.bu.story", `${GA}GARDEN_BUILD`, "word", 2, choose([
+    Q("Kamau plants maize in a sack garden and it grows poorly. Why?", "Maize is too big for a sack", ["Maize needs almost no water|GBUILD_ANY_CROP", "The sack was far too clean|GBUILD_ANY_CROP", "The sack was too wide|GBUILD_ANY_CROP"], "Choose small, shallow-rooted crops."),
+    Q("Njeri's sack garden is dry at the bottom and wet at the top. What did she leave out?", "The column of stones for watering", ["A bag of salt poured on top|GBUILD_DRAIN", "A layer of sand spread on the top|GBUILD_DRAIN", "A second sack to hold the first one|GBUILD_DRAIN"], "The column spreads water down."),
+    Q("Wafula thinks his vertical garden needs no watering. What will happen?", "It will dry out and the crops will wilt", ["It will grow very well on its own|GBUILD_NO_WATER", "It will grow bigger if kept dark|GBUILD_NO_WATER", "It will turn into a small pond|GBUILD_NO_WATER"], "Small gardens dry fast."),
+    Q("Amina fills bottles with soil but makes no holes at the bottom. What may happen?", "The soil stays too wet and the roots rot", ["The soil will dry out at once|GBUILD_DRAIN", "The crops will grow much faster|GBUILD_DRAIN", "The bottles will float away in rain|GBUILD_DRAIN"], "Water needs a way out."),
+    Q("The school plans a sack garden. Which plan is best?", "Stone column, soil with manure, kale in side holes", ["Solid soil only, with maize planted on top|GBUILD_ANY_CROP", "Sand only, with cassava in the side holes|GBUILD_ANY_CROP", "No holes, no stone column and no watering|GBUILD_NO_WATER"], "This plan lets water reach all the plants.")
+  ], { h: ["What does the small garden need to live?", "Small crops, stone column, drainage, regular water."], s1: "Find what the garden is missing." })),
+  fam("ga.bu.spot", `${GA}GARDEN_BUILD`, "spot", 3, spot([
+    S("Mercy explains how the class built a sack garden. Which step has the mistake?", ["Step 1: We put a column of stones in the middle.", "Step 2: We filled around it with soil and manure.", "!Step 3: We planted maize in the side holes."], "Maize is too big. Choose kale, spinach or spring onions.", "GBUILD_ANY_CROP"),
+    S("Brian describes his bottle garden. Which step has the mistake?", ["Step 1: I cut a window in the bottle.", "!Step 2: I filled it with soil and made no drainage holes.", "Step 3: I hung it on the wall."], "Make small holes so extra water can drain out.", "GBUILD_DRAIN"),
+    S("Fatuma tells how she cared for the sack garden. Which step has the mistake?", ["Step 1: I filled the sack with soil and manure.", "Step 2: I planted spinach in the side holes.", "!Step 3: I decided it needs no watering, because the sack holds water for ever."], "A sack garden dries quickly. Water it regularly through the stone column.", "GBUILD_NO_WATER"),
+    S("Peter explains his plan. Which step has the mistake?", ["Step 1: I chose kale.", "!Step 2: I left out the stone column so the soil would be solid.", "Step 3: I watered the top every morning."], "Without the column, water does not reach the lower soil.", "GBUILD_DRAIN"),
+    S("Grace describes her vertical garden. Which step has the mistake?", ["Step 1: I used a sack on a small patch of ground.", "Step 2: I put in a stone column.", "!Step 3: I planted cassava in the sides."], "Cassava has big roots. Choose small crops.", "GBUILD_ANY_CROP")
+  ], { h: ["Which step would harm the garden?", "Small crops, stone column, drainage, regular water."], s1: "Check each step against what the garden needs." }))
+];
+
+// src/ai-tutor/content/subjects/agriculture_g5.js
+var agriculture_g5_default = {
+  subject: "agriculture",
+  grade: 5,
+  prefix: "AGRI",
+  name: "Agriculture and Nutrition",
+  shortName: "Agriculture and Nutrition",
+  icon: "home",
+  description: "Grade 5 Agriculture and Nutrition from the CBC design",
+  map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
+  families: [...FAMILIES, ...FAMILIES2, ...FAMILIES3, ...FAMILIES4],
+  // add each family file you write: [...A, ...B]
+  familyFiles: ["agriculture_g5_a.js", "agriculture_g5_b.js", "agriculture_g5_c.js", "agriculture_g5_d.js"],
+  // the same files by name (a phone build drops them while nothing is signed)
+  signed: SIGNED,
+  signedFile: "agriculture_g5_signed.js",
+  checks: "family",
+  // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
+  idPrefix: "agriculture5.",
+  // every family id starts with this
+  marker: null,
+  // 'text' when answers are marked as words by answerCheckText.js
+  bank: false,
+  // true only to also list the families in the shared bank (FAMILIES): Science G5 only
+  curriculumDir: "agriculture",
+  // curriculum/<dir>/g<N>.json
+  misconceptionsFile: "engine/data/curriculum/agriculture.g5.misconceptions.json",
+  reviewDoc: "docs/qa/agriculture-g5-review-2026-11-12.md",
+  // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  precheckLabel: "Agriculture and Nutrition 5"
+};
+
 // src/ai-tutor/content/curriculumMap.english.g5.js
 var OUTCOMES_E5 = {
   "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.a": {
@@ -3643,7 +5125,7 @@ var MIS_FEEDBACK_E5 = {
 var SIGNED_ENGLISH = [];
 
 // src/ai-tutor/content/families/eng_lib.js
-var shuffle = (a) => {
+var shuffle2 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -3671,7 +5153,7 @@ var feedbackOf = (cskill, code) => {
 var mc = (right, wrongs) => {
   const texts = [String(right), ...wrongs.map((w) => String(w[0]))];
   if (new Set(texts).size !== texts.length) return null;
-  return shuffle([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
+  return shuffle2([{ text: String(right), right: true }, ...wrongs.map(([text, why, mis]) => ({ text: String(text), right: false, why, mis }))]);
 };
 var eng = (d) => {
   const { cs, oc, gen, ...rest } = d;
@@ -3700,9 +5182,9 @@ var items = (cskill, pool2) => pool2.map((it) => parse(cskill, it));
 var blankOf = (t) => t.includes("___");
 var fillIn = (text, w) => blankOf(text) ? text.replace("___", w) : w;
 var asked = (it, stem) => it.text === "" ? stem : blankOf(it.text) ? `${stem} "${it.text}"` : it.text;
-var choose = (pool2, { stem, hints, n = 3, instruction }) => (cskill) => {
+var choose2 = (pool2, { stem, hints, n = 3, instruction }) => (cskill) => {
   const list = items(cskill, pool2), it = pick(list);
-  const options = mc(it.right, shuffle(it.wrongs).slice(0, n).map(([w, code, why]) => [w, why, code]));
+  const options = mc(it.right, shuffle2(it.wrongs).slice(0, n).map(([w, code, why]) => [w, why, code]));
   if (!options) return null;
   return { question: asked(it, stem), options, instruction: instruction || "Choose the best answer.", hints, steps: [it.because, `The answer is "${it.right}".`] };
 };
@@ -3720,9 +5202,9 @@ var gap = (pool2, { stem, hints }) => (cskill) => {
     chk: (a) => [it.right, ...it.alt].includes(String(a))
   };
 };
-var spot = (pool2, { topic, hints }) => (cskill) => {
+var spot2 = (pool2, { topic, hints }) => (cskill) => {
   const list = items(cskill, pool2.filter((it) => it.length > 2));
-  const four = shuffle(list).slice(0, 4);
+  const four = shuffle2(list).slice(0, 4);
   if (four.length < 4) return null;
   const badAt = randInt(0, 3), bad = four[badAt], [wrong, code] = pick(bad.wrongs);
   const say = (it, w) => it.label ? `${it.label}: "${fillIn(it.text, w)}"` : fillIn(it.text, w);
@@ -3742,13 +5224,13 @@ var spot = (pool2, { topic, hints }) => (cskill) => {
 var WORD = "Choose the word that completes the sentence correctly.";
 var SENT = "Which sentence is correct.";
 var trio = (key, cs, pool2, { stem = WORD, hints, topic, rungs = [1, 2, 3], thinOk = false, oc = outcomeLetters(cs, 3) }) => [
-  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: rungs[0], gen: choose(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: rungs[0], gen: choose2(pool2, { stem, hints }) }),
   eng({ id: `eng5.${key}.gap`, cs, oc: oc[1], form: "direct", rung: rungs[1], thinOk, gen: gap(pool2, { stem: "Type the missing {what} in the sentence.", hints }) }),
-  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: rungs[2], gen: spot(pool2, { topic, hints }) })
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: rungs[2], gen: spot2(pool2, { topic, hints }) })
 ];
 var duo = (key, cs, pool2, { stem = SENT, hints, topic, oc = outcomeLetters(cs, 2) }) => [
-  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose(pool2, { stem, hints }) }),
-  eng({ id: `eng5.${key}.spot`, cs, oc: oc[1], form: "spot", rung: 3, gen: spot(pool2, { topic, hints }) })
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose2(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[1], form: "spot", rung: 3, gen: spot2(pool2, { topic, hints }) })
 ];
 var DEM = [
   ["Look at ___ books in my hands.", "these", ["this", "M_DEM_THIS_PLURAL"], ["those", "M_DEM_NEAR_FAR"], ["them", "M_DEM_THEM"], "Books is plural and they are in my hands, so they are near: these."],
@@ -4027,7 +5509,7 @@ var DOUBLE = [
   ["The ___ jumped into its hole.", "rabbit", ["rabit", "M_SPELL_SINGLE_CONSONANT"], ["rabbitt", "M_SPELL_EXTRA_DOUBLE"], ["rabbet", "M_SPELL_PHONETIC"], "Rabbit has a double b."],
   ["Our school play was a great ___.", "success", ["sucess", "M_SPELL_SINGLE_CONSONANT"], ["succes", "M_SPELL_SINGLE_CONSONANT"], ["sucses", "M_SPELL_PHONETIC"], "Success has a double c and a double s."]
 ];
-var FAMILIES = [
+var FAMILIES5 = [
   ...trio("dem", "GRAMMA.T1.DEMONSTRATIVES", DEM, { topic: "using this, these, that and those", hints: ["Count the things. One thing, or more than one?", "Is the thing near the speaker, or far away?"] }),
   ...trio("coll", "GRAMMA.T2.COLLECTIVE_NOUNS", COLL, { topic: "about groups of animals and things", hints: ["Ask what is in the group: animals, fish, fruit or keys?", "Each kind of animal has its own group word. Say the pair aloud: a ___ of cattle."] }),
   ...trio("refl", "GRAMMA.T2.REFLEXIVE_PRONOUNS", REFL, { topic: "using myself, yourself, himself, herself, itself, ourselves and themselves", hints: ["Ask who did the action and who received it. Are they the same person?", "The word ends in -self for one person and -selves for more than one."] }),
@@ -4041,10 +5523,10 @@ var FAMILIES = [
   ...trio("fut", "GRAMMA.T7.FUTURE_WILL_SHALL", FUT, { topic: "about the future", hints: ["Is the event still to come? Then use will or shall.", "After will or shall, the verb stays plain: no -s, no -ed, no -ing."] }),
   ...trio("tag", "GRAMMA.T8.QUESTION_TAGS", TAG, { stem: "Choose the tag that completes the sentence correctly.", topic: "with question tags at the end", hints: ["Find the helper verb in the statement (is, are, does, can, have).", "The tag turns the sign round and uses a pronoun: a positive statement gets a negative tag, and a negative statement gets a positive tag."] }),
   ...trio("adv", "GRAMMA.T9.ADVERBS", ADV, { topic: "using adverbs", hints: ["Ask: does the word tell how, when, where or how often?", "A word that describes a verb is an adverb. Many end in -ly, but not all of them do."] }),
-  eng({ id: "eng5.advkind.choose", kind: "classify", cs: "GRAMMA.T9.ADVERBS", oc: "a", form: "direct", rung: 1, gen: choose(ADV_KIND, { stem: "Complete the sentence.", hints: ["Ask: does the word say how, when, where or how often?", "How often: always, never, often, sometimes. When: today, soon, later. Where: here, there, outside."] }) }),
+  eng({ id: "eng5.advkind.choose", kind: "classify", cs: "GRAMMA.T9.ADVERBS", oc: "a", form: "direct", rung: 1, gen: choose2(ADV_KIND, { stem: "Complete the sentence.", hints: ["Ask: does the word say how, when, where or how often?", "How often: always, never, often, sometimes. When: today, soon, later. Where: here, there, outside."] }) }),
   ...trio("could", "GRAMMA.T9.COULD_WOULD", COULD, { topic: "using could and would", hints: ["Is the sentence about the past, or about an imagined result?", "After the helper verb, the main verb stays plain."] }),
   ...trio("conj", "GRAMMA.T10.CONJUNCTIONS", CONJ, { topic: "joining ideas", hints: ["Say the two parts. Is the second a reason, a surprise, an addition or a choice?", "Each kind of link needs its own joining word: one for a reason, one for a surprise, one for a choice."] }),
-  eng({ id: "eng5.conjs.choose", kind: "choose-sentence", cs: "GRAMMA.T10.CONJUNCTIONS", oc: "c", form: "direct", rung: 2, gen: choose(CONJ_SENT, { stem: SENT, hints: ["Check the meaning of the two parts, then the joining word.", "Use only one joining word between two ideas."] }) }),
+  eng({ id: "eng5.conjs.choose", kind: "choose-sentence", cs: "GRAMMA.T10.CONJUNCTIONS", oc: "c", form: "direct", rung: 2, gen: choose2(CONJ_SENT, { stem: SENT, hints: ["Check the meaning of the two parts, then the joining word.", "Use only one joining word between two ideas."] }) }),
   ...trio("int", "GRAMMA.T11.INTERROGATIVES", INTER, { stem: "Choose the words that complete the question correctly.", topic: "asking questions", hints: ["Look at the answer given. Does it name a person, a time, a reason or a thing?", "In a question the helper verb comes before the subject."] }),
   ...trio("same", "GRAMMA.T12.SAME_SINGULAR_PLURAL", SAME, { topic: "about animals and people", hints: ["A few nouns do not change in the plural, and some change inside the word.", "Look for a number or the word many: it shows whether there is one or more than one."] }),
   ...trio("ptime", "GRAMMA.T13.PREPOSITIONS_TIME_PLACE", TIME, { thinOk: true, topic: "about time and place", hints: ["At is for a clock time or a point. On is for days and for a surface. In is for months, parts of the day and inside.", "Say the whole sentence aloud and listen for what sounds right."] }),
@@ -4064,9 +5546,9 @@ var L = (label, arr) => {
   return arr;
 };
 var trio2 = (key, cs, pool2, { stem = WORD2, hints, topic, oc = outcomeLetters(cs, 3) }) => [
-  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose(pool2, { stem, hints }) }),
+  eng({ id: `eng5.${key}.choose`, cs, oc: oc[0], form: "direct", rung: 1, gen: choose2(pool2, { stem, hints }) }),
   eng({ id: `eng5.${key}.gap`, cs, oc: oc[1], form: "direct", rung: 2, gen: gap(pool2, { stem: "Type the missing {what} in the sentence.", hints }) }),
-  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: 3, gen: spot(pool2, { topic, hints }) })
+  eng({ id: `eng5.${key}.spot`, cs, oc: oc[2], form: "spot", rung: 3, gen: spot2(pool2, { topic, hints }) })
 ];
 var RIGHTS = [
   ["Every child has a ___ to go to school.", "right", ["responsibility", "M_VOC_RIGHT_RESPONSIBILITY"], ["protect", "M_VOC_NEAR_MEANING"], ["rules", "M_VOC_NEAR_MEANING"], "Something every child is entitled to is a right."],
@@ -4167,7 +5649,7 @@ var REF_SOURCE = [
 var ALPHA = [["back", "bag", "ball", "bat"], ["can", "cap", "car", "cat"], ["dog", "door", "dot", "dove"], ["fan", "farm", "fat", "fast"], ["hand", "happy", "hard", "hat"], ["sand", "sat", "say", "save"], ["map", "mat", "may", "mask"], ["pan", "park", "pat", "past"], ["tab", "tag", "tall", "tap"]];
 var GUIDE_WORDS = ["maize", "mango", "map", "market", "mat", "meal", "meat", "melon", "mend", "milk", "mind", "mouse"];
 var alphaGen = (cskill) => {
-  const words5 = pick(ALPHA), show = shuffle(words5);
+  const words5 = pick(ALPHA), show = shuffle2(words5);
   const right = [...words5].sort().join(", ");
   const firstOnly = show.join(", ");
   const reversed = [...words5].sort().reverse().join(", ");
@@ -4209,7 +5691,7 @@ var MOOD = [
 ];
 var moodFeel = (cskill) => {
   const [lines, who, right, wrongs, , , because] = pick(MOOD);
-  const [w1, w2, w3] = shuffle(wrongs);
+  const [w1, w2, w3] = shuffle2(wrongs);
   const options = mc(right, [[w1, feedbackOf(cskill, "M_MOOD_OPPOSITE"), "M_MOOD_OPPOSITE"], [w2, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"], [w3, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"]]);
   return { question: `Read the lines. ${lines} Choose the word that best shows how ${who} felt.`, options, instruction: "Choose the best answer.", hints: ["Look at what the person does and says, not one word on its own.", "Which feeling matches all the clues in the lines?"], steps: [because, `The feeling is "${right}".`] };
 };
@@ -4218,20 +5700,20 @@ var moodEvidence = (cskill) => {
   const options = mc(clue, others.map((o) => [o, feedbackOf(cskill, "M_MOOD_NAMED_NOT_SHOWN"), "M_MOOD_NAMED_NOT_SHOWN"]));
   return { question: `Read the lines. ${lines} Which words best show that ${who} felt ${right}.`, options, instruction: "Choose the best answer.", hints: ["Look for an action or a word that points to the feeling.", "A detail that only tells you what happened does not show the feeling."], steps: [because, `The words that show it are "${clue}".`] };
 };
-var FAMILIES2 = [
+var FAMILIES6 = [
   ...trio2("rights", "LISTEN.T1.THEME_WORDS", RIGHTS, { topic: "about children's rights and responsibilities", hints: ["Read the whole sentence and say what the gap must mean.", "One word is about what you are given and another is about what you must do."] }),
   ...trio2("road", "LISTEN.T4.ROAD_SAFETY_WORDS", ROAD, { topic: "about road safety", hints: ["Read the whole sentence and say what the gap must mean.", "Think about who uses the road and what keeps them safe."] }),
-  eng({ id: "eng5.polite.choose", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "a", form: "direct", rung: 1, gen: choose(POL, { stem: "", hints: ["Think about how you would like to be spoken to.", "A polite request starts with may I, could I or could you, and says please."] }) }),
-  eng({ id: "eng5.polite.spot", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "d", form: "spot", rung: 3, gen: spot(POL, { topic: "about what to say in four different situations", hints: ["Read what each situation needs: a request, thanks, sorry or a reply.", "A command or a short grunt is not polite."] }) }),
-  eng({ id: "eng5.proverb.meaning", kind: "choose-meaning", cs: "LISTEN.T8.PROVERBS", oc: "a", form: "direct", rung: 2, gen: choose(PROV_MEANING, { stem: "", hints: ["A proverb has a lesson hidden in it. Ask what it teaches people.", "The lesson is not about the animals or objects in the words."] }) }),
+  eng({ id: "eng5.polite.choose", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "a", form: "direct", rung: 1, gen: choose2(POL, { stem: "", hints: ["Think about how you would like to be spoken to.", "A polite request starts with may I, could I or could you, and says please."] }) }),
+  eng({ id: "eng5.polite.spot", cs: "LISTEN.T3.POLITE_EXPRESSIONS", oc: "d", form: "spot", rung: 3, gen: spot2(POL, { topic: "about what to say in four different situations", hints: ["Read what each situation needs: a request, thanks, sorry or a reply.", "A command or a short grunt is not polite."] }) }),
+  eng({ id: "eng5.proverb.meaning", kind: "choose-meaning", cs: "LISTEN.T8.PROVERBS", oc: "a", form: "direct", rung: 2, gen: choose2(PROV_MEANING, { stem: "", hints: ["A proverb has a lesson hidden in it. Ask what it teaches people.", "The lesson is not about the animals or objects in the words."] }) }),
   eng({ id: "eng5.proverb.finish", kind: "type-word", cs: "LISTEN.T8.PROVERBS", oc: "d", form: "direct", rung: 2, gen: gap(PROV_FINISH, { stem: "Type the word that finishes the proverb.", hints: ["Say the whole proverb aloud, as you heard it.", "A proverb always has the same words."] }) }),
-  eng({ id: "eng5.proverb.finish-choose", kind: "choose-word", cs: "LISTEN.T8.PROVERBS", oc: "d", form: "direct", rung: 1, gen: choose(PROV_FINISH, { stem: "Choose the word that finishes the proverb.", hints: ["Say the whole proverb aloud, as you heard it.", "A proverb always has the same words."] }) }),
-  eng({ id: "eng5.simile.identify", kind: "identify", cs: "WRITIN.T8.SIMILES", oc: "a", form: "direct", rung: 1, gen: choose(SIM_IDENT, { stem: "Which sentence is a simile.", hints: ["A simile compares two different things.", "Look for the word like, or the pair as ... as."] }) }),
+  eng({ id: "eng5.proverb.finish-choose", kind: "choose-word", cs: "LISTEN.T8.PROVERBS", oc: "d", form: "direct", rung: 1, gen: choose2(PROV_FINISH, { stem: "Choose the word that finishes the proverb.", hints: ["Say the whole proverb aloud, as you heard it.", "A proverb always has the same words."] }) }),
+  eng({ id: "eng5.simile.identify", kind: "identify", cs: "WRITIN.T8.SIMILES", oc: "a", form: "direct", rung: 1, gen: choose2(SIM_IDENT, { stem: "Which sentence is a simile.", hints: ["A simile compares two different things.", "Look for the word like, or the pair as ... as."] }) }),
   eng({ id: "eng5.simile.complete", kind: "type-word", cs: "WRITIN.T8.SIMILES", oc: "b", form: "direct", rung: 2, gen: gap(SIM_FILL, { stem: "Type the missing {what} to finish the simile.", hints: ["Think about the thing that is famous for this quality.", "Say the whole comparison aloud."] }) }),
-  eng({ id: "eng5.simile.complete-choose", kind: "choose-word", cs: "WRITIN.T8.SIMILES", oc: "b", form: "direct", rung: 1, gen: choose(SIM_FILL, { stem: "Choose the word that finishes the simile.", hints: ["Think about the thing that is famous for this quality.", "Say the whole comparison aloud."] }) }),
-  eng({ id: "eng5.homonym.sentence", kind: "choose-sentence", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose(HOMON_SENT, { stem: "", hints: ["Read the whole sentence, not just the word.", "Look for clue words that show which meaning is used."] }) }),
-  eng({ id: "eng5.homonym.meaning", kind: "choose-meaning", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose(HOMON_MEAN, { stem: "", hints: ["Read the whole sentence, not just the word.", "Try each meaning in place of the word and see which one fits."] }) }),
-  eng({ id: "eng5.ref.source", kind: "choose-source", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "a", form: "direct", rung: 1, gen: choose(REF_SOURCE, { stem: "", hints: ["A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts.", "Ask what the person needs to find out."] }) }),
+  eng({ id: "eng5.simile.complete-choose", kind: "choose-word", cs: "WRITIN.T8.SIMILES", oc: "b", form: "direct", rung: 1, gen: choose2(SIM_FILL, { stem: "Choose the word that finishes the simile.", hints: ["Think about the thing that is famous for this quality.", "Say the whole comparison aloud."] }) }),
+  eng({ id: "eng5.homonym.sentence", kind: "choose-sentence", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose2(HOMON_SENT, { stem: "", hints: ["Read the whole sentence, not just the word.", "Look for clue words that show which meaning is used."] }) }),
+  eng({ id: "eng5.homonym.meaning", kind: "choose-meaning", cs: "WRITIN.T11.HOMONYMS", oc: "b", form: "direct", rung: 2, gen: choose2(HOMON_MEAN, { stem: "", hints: ["Read the whole sentence, not just the word.", "Try each meaning in place of the word and see which one fits."] }) }),
+  eng({ id: "eng5.ref.source", kind: "choose-source", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "a", form: "direct", rung: 1, gen: choose2(REF_SOURCE, { stem: "", hints: ["A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts.", "Ask what the person needs to find out."] }) }),
   eng({ id: "eng5.ref.alpha", kind: "alphabetical-order", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "c", form: "direct", rung: 2, gen: alphaGen }),
   eng({ id: "eng5.ref.guide", kind: "guide-words", cs: "READIN.T1.REFERENCE_MATERIALS", oc: "c", form: "direct", rung: 3, gen: guideGen }),
   eng({ id: "eng5.mood.feeling", kind: "choose-feeling", cs: "LISTEN.T10.MOOD_FEELINGS", oc: "a", form: "direct", rung: 1, gen: moodFeel }),
@@ -4443,7 +5925,7 @@ var norm = (key, e) => {
 var LISTY = /* @__PURE__ */ new Set(["who", "fact", "tf", "scan"]);
 var entriesOf = (key) => PASSAGES.flatMap((p) => p[key] ? (LISTY.has(key) ? p[key] : [p[key]]).map((e) => ({ p, e })) : []);
 var showP = (p) => ({ title: p.title, text: p.text });
-var optionsOf = (cskill, n, wrongs, right) => mc(right, shuffle(wrongs).slice(0, 3).map(([t, code]) => [t, feedbackOf(cskill, code), code]));
+var optionsOf = (cskill, n, wrongs, right) => mc(right, shuffle2(wrongs).slice(0, 3).map(([t, code]) => [t, feedbackOf(cskill, code), code]));
 var passChoose = (key, { hints, typedOnly = false }) => (cskill) => {
   const { p, e } = pick(entriesOf(key).filter((x) => !typedOnly || norm(key, x.e).flags.t));
   const n = norm(key, e), options = optionsOf(cskill, 3, n.wrongs, n.right.split("|")[0]);
@@ -4468,7 +5950,7 @@ var orderGen = (cskill) => {
   const ev = p.order;
   let show;
   do {
-    show = shuffle(ev.map((t, i2) => i2));
+    show = shuffle2(ev.map((t, i2) => i2));
   } while (show.every((v, i2) => v === i2));
   const letter = (idx) => "ABCD"[show.indexOf(idx)];
   const seq = (arr) => arr.map(letter).join(", ");
@@ -4492,7 +5974,7 @@ var orderGen = (cskill) => {
   };
 };
 var H = (a, b) => [a, b];
-var FAMILIES3 = [
+var FAMILIES7 = [
   eng({ id: "eng5.elem.choose", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "word", rung: 1, gen: passChoose("who", { hints: H("Find the sentence in the passage that names the person or place.", "A character is a person or animal that acts. A place is where the story happens.") }) }),
   eng({ id: "eng5.elem.type", kind: "type-short", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "word", rung: 2, gen: passType("who", { hints: H("Find the sentence in the passage that names the person.", "Write only the name or the short answer.") }) }),
   eng({ id: "eng5.elem.order", kind: "order-events", cs: "READIN.T2.STORY_ELEMENTS", oc: "a", form: "steps", rung: 2, gen: orderGen }),
@@ -4525,7 +6007,7 @@ var english_g5_default = {
   icon: "book",
   description: "Grade 5 English from the CBC design",
   map: { skills: SKILLS_E5, substrands: SUBSTRANDS_E5, outcomes: OUTCOMES_E5, misFeedback: MIS_FEEDBACK_E5 },
-  families: [...FAMILIES, ...FAMILIES2, ...FAMILIES3],
+  families: [...FAMILIES5, ...FAMILIES6, ...FAMILIES7],
   familyFiles: ["eng_g5_lang.js", "eng_g5_vocab.js", "eng_g5_reading.js"],
   signed: SIGNED_ENGLISH,
   signedFile: "eng_signed.js",
@@ -4542,7 +6024,7 @@ var english_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.science.g5.js
-var SUBSTRANDS = {
+var SUBSTRANDS2 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS": {
     "name": "Classification of Plants",
     "strand": "Living Things and their Environment",
@@ -4624,7 +6106,7 @@ var SUBSTRANDS = {
     ]
   }
 };
-var OUTCOMES = {
+var OUTCOMES2 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a": {
     "letter": "a",
     "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
@@ -4754,7 +6236,7 @@ var OUTCOMES = {
     "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
   }
 };
-var SKILLS = {
+var SKILLS2 = {
   "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT": {
     "name": "Classify plants as flowering or non-flowering",
     "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
@@ -5275,7 +6757,7 @@ var SKILLS = {
     ]
   }
 };
-var MIS_FEEDBACK = {
+var MIS_FEEDBACK2 = {
   "M_FL_SMALL_FLOWER_NOT_FLOWER": "Many flowers are small and not bright. Maize has flowers too: the tassel at the top and the silk on the cob. A plant that makes seeds inside fruits or grains is a flowering plant.",
   "M_FL_ALL_TREES_FLOWER": "Cypress and pine are trees, but they make cones, not flowers and fruits. That makes them non-flowering plants.",
   "M_FL_ALL_PLANTS_FLOWER": "Ferns and mosses never make flowers. They make tiny spores instead. They are non-flowering plants.",
@@ -5381,104 +6863,34 @@ var MIS_FEEDBACK = {
   "M_HS_OFF_FIRE_COOL": "Metal can stay very hot for a long time even when there is no flame or steam. Do not touch it.",
   "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle."
 };
-var SKILLS_SCI_G5 = SKILLS;
-var SUBSTRANDS_SCI_G5 = SUBSTRANDS;
-var OUTCOMES_SCI_G5 = OUTCOMES;
-
-// src/ai-tutor/content/families/subject_kit.js
-var shuffle2 = (a) => {
-  const b = [...a];
-  for (let i = b.length - 1; i > 0; i--) {
-    const j = Math.floor(Math.random() * (i + 1));
-    [b[i], b[j]] = [b[j], b[i]];
-  }
-  return b;
-};
-var tbl = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells) => ({ cells })) } });
-var wrongs3 = (w) => w.length > 3 ? shuffle2(w).slice(0, 3) : w;
-var hintsOf = (opt) => [opt.h?.[0], opt.h?.[1]].filter(Boolean);
-function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
-  const { skills: SKILLS3, outcomes: OUTCOMES3, misFeedback: MIS_FEEDBACK3 } = map;
-  const feedback = (code, own, why) => {
-    if (own) return own;
-    const f = MIS_FEEDBACK3[code];
-    if (!f) throw new Error(`${subject} family: no misconception ${code}`);
-    return why ? `${why} ${f}` : f;
-  };
-  const choose4 = (cases, opt = {}) => () => {
-    const [q, r, w, why, extra = {}] = pick(cases);
-    const wrong = wrongs3(w).map(([text, mis, own]) => ({ text: String(text), right: false, why: feedback(mis, own, why), mis }));
-    const texts = [String(r), ...wrong.map((x) => x.text)];
-    if (new Set(texts).size !== texts.length) return null;
-    const options = shuffle2([{ text: String(r), right: true }, ...wrong]);
-    return {
-      question: q,
-      options,
-      instruction: extra.i || opt.instruction || "Choose the best answer.",
-      fixedOrder: !!extra.fixed,
-      hints: hintsOf(opt),
-      steps: [opt.s1 || "Read the question and think about what it is asking.", why],
-      ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
-    };
-  };
-  const typed3 = (cases, opt = {}) => () => {
-    const [q, a, ok4 = [], w, why, extra = {}] = pick(cases);
-    const wrong = wrongs3(w).map(([text, mis, own]) => [String(text), feedback(mis, own, why), mis]);
-    if ((/* @__PURE__ */ new Set([a, ...wrong.map((x) => x[0])])).size !== wrong.length + 1) return null;
-    const the = String(a).replace(/^(the|a|an) /i, "");
-    return {
-      question: q,
-      answer: a,
-      accepts: [.../* @__PURE__ */ new Set([the, `the ${the}`, ...ok4])],
-      wrong,
-      instruction: extra.i || opt.instruction || "Type your answer.",
-      hints: hintsOf(opt),
-      steps: [opt.s1 || "Read the question and think about what it is asking.", why],
-      ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
-    };
-  };
-  const spot6 = (cases, opt = {}) => () => {
-    const [q, steps, fix, mis] = pick(cases);
-    feedback(mis);
-    return { question: q, working: steps.map(([text, ok4]) => ({ text, ok: ok4 })), fix, mis, hints: hintsOf(opt), steps: [opt.s1 || "Check each step against what you know."], topicDone: true };
-  };
-  const sfam3 = (d) => {
-    const { cs, gen, id, form, rung, oc, ...rest } = d;
-    const code = `${prefix}.G${grade}.${cs}`;
-    const ck = SKILLS3[code];
-    if (!ck) throw new Error(`${id}: no ${subject} skill ${code}`);
-    const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
-    if (!outcome || !OUTCOMES3[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
-    const draw = () => gen();
-    return family({ reviewed: signed2.includes(id), subject, ...rest, id, form, rung, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
-  };
-  return { choose: choose4, typed: typed3, spot: spot6, sfam: sfam3, pick, shuffle: shuffle2, tbl };
-}
+var SKILLS_SCI_G5 = SKILLS2;
+var SUBSTRANDS_SCI_G5 = SUBSTRANDS2;
+var OUTCOMES_SCI_G5 = OUTCOMES2;
 
 // src/ai-tutor/content/families/sci_signed.js
 var SIGNED_SCIENCE = [];
 
 // src/ai-tutor/content/families/sci_lib.js
-var { choose: choose2, typed, spot: spot2, sfam } = makeKit({
+var { choose: choose3, typed: typed2, spot: spot3, sfam: sfam2 } = makeKit({
   subject: "science",
   grade: 5,
   prefix: "SCIE",
   signed: SIGNED_SCIENCE,
-  map: { skills: SKILLS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK }
+  map: { skills: SKILLS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK2 }
 });
 
 // src/ai-tutor/content/families/sci_g5_living.js
 var P = "LIVING.CLASSIFICATION_OF_PLANTS.";
 var V = "LIVING.VERTEBRATES.";
 var B = "LIVING.THE_HUMAN_BREATHING_SYST.";
-var FAMILIES4 = [
+var FAMILIES8 = [
   // ---------------------------------------------------------------- FLOWERING_OR_NOT
-  sfam({
+  sfam2({
     id: "sci5.plants.fl.which",
     cs: `${P}FLOWERING_OR_NOT`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which plant from the shamba is a flowering plant?", "Maize", [["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Moss", "M_FL_ALL_PLANTS_FLOWER"], ["Cypress tree", "M_FL_ALL_TREES_FLOWER"]], "Maize makes flowers (the tassel and the silk) and then grains, so it is a flowering plant."],
       ["Which tree or plant below is a flowering plant?", "Mango tree", [["Pine tree", "M_FL_ALL_TREES_FLOWER"], ["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Moss", "M_FL_ALL_PLANTS_FLOWER"]], "A mango tree makes flowers and then fruits with a seed inside, so it is a flowering plant."],
       ["One of these plants makes flowers, pods and seeds. Which one is it?", "Beans", [["Cypress tree", "M_FL_ALL_TREES_FLOWER"], ["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Pine tree", "M_FL_ALL_TREES_FLOWER"]], "Bean plants make flowers, then pods with seeds, so they are flowering plants."],
@@ -5487,12 +6899,12 @@ var FAMILIES4 = [
       ["Which green plant growing on a damp rock or wall is a non-flowering plant?", "Moss", [["Sunflower", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Banana plant", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Tomato plant", "M_FL_NOT_FLOWERING_NOW"]], "Moss never makes flowers. It is a non-flowering plant."]
     ], { h: ["Think about which plants make flowers and then seeds in fruits, pods or grains.", "Ferns, mosses, pines and cypress trees never make flowers."], s1: "A flowering plant makes flowers, then fruits or grains with seeds." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.fl.list",
     cs: `${P}FLOWERING_OR_NOT`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Amani plans a school garden. He wants only flowering plants. Which list should he use?", "Beans, tomato, sukuma wiki", [["Beans, tomato, fern", "M_FL_ALL_PLANTS_FLOWER"], ["Beans, cypress, sukuma wiki", "M_FL_ALL_TREES_FLOWER"], ["Moss, tomato, sukuma wiki", "M_FL_ALL_PLANTS_FLOWER"]], "Beans, tomato and sukuma wiki all make flowers when they grow. Ferns, mosses and cypress trees do not."],
       ["A teacher asks the class to bring flowering plants from home. Whose list is right?", "Mango, maize, bean plant", [["Pine, maize, bean plant", "M_FL_ALL_TREES_FLOWER"], ["Mango, fern, bean plant", "M_FL_ALL_PLANTS_FLOWER"], ["Mango, maize, moss", "M_FL_ALL_PLANTS_FLOWER"]], "Mango, maize and beans all make flowers and seeds. Pine, ferns and mosses do not."],
       ["Njeri looks for non-flowering plants near a stream. Which list is correct?", "Fern, moss, pine", [["Fern, moss, mango", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Fern, grass, pine", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Maize, moss, pine", "M_FL_SMALL_FLOWER_NOT_FLOWER"]], "Ferns, mosses and pines have no flowers. Mango, grass and maize all make small flowers."],
@@ -5500,12 +6912,12 @@ var FAMILIES4 = [
       ["The farmer picks flowering plants for his shamba. Which list is right?", "Maize, banana, sunflower", [["Maize, banana, pine", "M_FL_ALL_TREES_FLOWER"], ["Maize, fern, sunflower", "M_FL_ALL_PLANTS_FLOWER"], ["Moss, banana, sunflower", "M_FL_ALL_PLANTS_FLOWER"]], "Maize, banana and sunflower all make flowers. Pine, fern and moss do not."]
     ], { h: ["Cross out any plant in a list that never makes flowers.", "Ferns, mosses, pines and cypress make spores or cones, not flowers."], s1: "Check every plant in a list, not only the first one." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.fl.table",
     cs: `${P}FLOWERING_OR_NOT`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "Look at what a class saw on a school walk. Which plant is a flowering plant?",
         "Plant C",
@@ -5543,12 +6955,12 @@ var FAMILIES4 = [
       ]
     ], { h: ["Look at each row. Does the plant make flowers, fruits, pods or grains?", "Plants with cones or spores are non-flowering."], s1: "Read each row of the table." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.fl.nowflower-spot",
     cs: `${P}FLOWERING_OR_NOT`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Amina says a kale plant in her shamba is a non-flowering plant. Which step has the mistake?", [["Step 1: Amina looks at the kale this week and sees no flowers.", true], ["Step 2: She decides that a plant with no flowers this week never makes flowers.", false], ["Step 3: She writes that kale is a non-flowering plant.", true]], "A flowering plant may not have flowers this week. Kale makes flowers when it is left to grow, so it is a flowering plant.", "M_FL_NOT_FLOWERING_NOW"],
       ["Baraka says that maize is non-flowering. Which step has the mistake?", [["Step 1: Baraka looks for big, bright petals on a maize plant.", true], ["Step 2: He finds none and decides that maize has no flowers.", false], ["Step 3: He writes that maize is non-flowering.", true]], "Maize has small flowers: the tassel and the silk. Flowers do not have to be bright, so maize is a flowering plant.", "M_FL_SMALL_FLOWER_NOT_FLOWER"],
       ["Chebet says every tree is a flowering plant. Which step has the mistake?", [["Step 1: Chebet sees a cypress tree and knows it has seeds.", true], ["Step 2: She decides all trees with seeds make flowers.", false], ["Step 3: She writes that cypress is a flowering plant.", true]], "A cypress makes its seeds in cones, not in flowers and fruits. So it is a non-flowering plant.", "M_FL_ALL_TREES_FLOWER"],
@@ -5556,12 +6968,12 @@ var FAMILIES4 = [
     ], { h: ["Which step says something that is not true?", "Think about what makes a plant a flowering plant."], s1: "A flowering plant makes flowers and seeds at some time in its life." })
   }),
   // ---------------------------------------------------------------- FLOWER_PART_NAMES
-  sfam({
+  sfam2({
     id: "sci5.plants.pn.name",
     cs: `${P}FLOWER_PART_NAMES`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which part of a flower is the small green part at the bottom that covered the bud?", "Sepal", [["Petal", "M_PN_PETAL_SEPAL"], ["Stamen", "M_PN_STAMEN_PISTIL"], ["Stigma", "M_PN_STIGMA_ANTHER"]], "The sepals are green and sit below the petals. They covered the flower when it was a bud."],
       ["Which part of a flower is bright and coloured?", "Petal", [["Sepal", "M_PN_PETAL_SEPAL"], ["Anther", "M_PN_STIGMA_ANTHER"], ["Ovary", "M_PN_STAMEN_PISTIL"]], "Petals are the bright, coloured parts of a flower."],
       ["Which part has a thin stalk with a small knob full of pollen on top?", "Stamen", [["Pistil", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"], ["Petal", "M_PN_PETAL_SEPAL"]], "The stamen has a thin stalk and an anther on top that holds the pollen."],
@@ -5570,12 +6982,12 @@ var FAMILIES4 = [
       ["Which part at the top of the stamen holds the pollen?", "Anther", [["Stigma", "M_PN_STIGMA_ANTHER"], ["Ovary", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"]], "The anther sits on top of the stamen and holds the pollen."]
     ], { h: ["Think about where the part is in the flower and what it looks like.", "Picture a hibiscus or a bean flower you have looked at closely."], s1: "Picture the flower and find the part by its place and look." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.pn.typed",
     cs: `${P}FLOWER_PART_NAMES`,
     form: "word",
     rung: 2,
-    gen: typed([
+    gen: typed2([
       ["In science class Juma takes a hibiscus flower apart on his desk. The bright, coloured parts on the outside are the petals. Underneath he finds small green parts that covered the bud. What are these green parts called?", "sepals", ["sepal"], [["petals", "M_PN_PETAL_SEPAL"], ["stamens", "M_PN_STAMEN_PISTIL"], ["stigmas", "M_PN_STIGMA_ANTHER"]], "The green parts below the petals are the sepals. They covered the bud."],
       ["Wafula looks at a bean flower with a hand lens. He sees thin stalks with yellow dust on top. These are the stamens. He also sees a part in the middle that has an ovary at its base. What is this middle part called?", "pistil", ["carpel"], [["stamen", "M_PN_STAMEN_PISTIL"], ["petal", "M_PN_PETAL_SEPAL"], ["anther", "M_PN_STIGMA_ANTHER"]], "The pistil is in the middle. Its base is the ovary, which holds the ovules."],
       ["A learner touches the very top of a stamen and gets yellow powder on her finger. The powder is pollen. What is the knob at the top of the stamen called?", "anther", ["the anther"], [["stigma", "M_PN_STIGMA_ANTHER"], ["sepal", "M_PN_PETAL_SEPAL"], ["ovary", "M_PN_STAMEN_PISTIL"]], "The part on top of the stamen that holds the pollen is the anther."],
@@ -5583,12 +6995,12 @@ var FAMILIES4 = [
       ["Amani pulls off the outside parts of a flower to see what is under them. They are soft, bright and coloured, and they fall off first. What are they called?", "petals", ["petal"], [["sepals", "M_PN_PETAL_SEPAL"], ["stamens", "M_PN_STAMEN_PISTIL"], ["anthers", "M_PN_STIGMA_ANTHER"]], "The bright, coloured parts of a flower are the petals."]
     ], { h: ["Think about the part's place in the flower and its colour or shape.", "The words to choose from are petal, sepal, stamen, pistil, anther and stigma."], s1: "Picture the flower and find the part by its place." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.pn.table",
     cs: `${P}FLOWER_PART_NAMES`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "A learner describes the parts of a flower in a table. Which part is described in row 2?",
         "Stamen",
@@ -5627,12 +7039,12 @@ var FAMILIES4 = [
     ], { h: ["Read the description in the row and think where that part is in a flower.", "Petals are coloured; sepals are green; stamens have pollen; the pistil is in the middle."], s1: "Read the description in the row." })
   }),
   // ---------------------------------------------------------------- FLOWER_PART_FUNCTIONS
-  sfam({
+  sfam2({
     id: "sci5.plants.pf.job",
     cs: `${P}FLOWER_PART_FUNCTIONS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which part of a flower attracts bees and other insects?", "Petals", [["Sepals", "M_PF_PETAL_SEPAL_JOBS"], ["Ovary", "M_PF_OVARY_MAKES_POLLEN"], ["Stigma", "M_PF_POLLEN_IS_SEED"]], "Bright, scented petals attract insects, which carry pollen from flower to flower."],
       ["Which part of a flower protects the bud before it opens?", "Sepals", [["Petals", "M_PF_PETAL_SEPAL_JOBS"], ["Anthers", "M_PF_POLLEN_IS_SEED"], ["Ovary", "M_PF_OVARY_MAKES_POLLEN"]], "The tough green sepals wrap the young bud and protect it."],
       ["Which part of a flower makes the pollen?", "Anther", [["Ovary", "M_PF_OVARY_MAKES_POLLEN"], ["Petal", "M_PF_PETAL_SEPAL_JOBS"], ["Stigma", "M_PF_POLLEN_IS_SEED"]], "Pollen is made in the anther, at the top of the stamen."],
@@ -5640,12 +7052,12 @@ var FAMILIES4 = [
       ["Which part of a flower holds the ovules that become seeds?", "Ovary", [["Anther", "M_PF_OVARY_MAKES_POLLEN"], ["Petal", "M_PF_PETAL_SEPAL_JOBS"], ["Sepal", "M_PF_PETAL_SEPAL_JOBS"]], "The ovary holds the ovules. After pollen reaches them, they grow into seeds."]
     ], { h: ["Think about what each part of a flower does for the plant.", "Pollen is made in one part and caught by another."], s1: "Match the job to the part of the flower that does it." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.pf.typed",
     cs: `${P}FLOWER_PART_FUNCTIONS`,
     form: "word",
     rung: 2,
-    gen: typed([
+    gen: typed2([
       ["Wanjiru sees a bee land on a bright pumpkin flower in her mother's garden. The bee had flown past the green leaves without stopping. Which part of the flower made the bee come?", "petals", ["petal", "the petals"], [["sepals", "M_PF_PETAL_SEPAL_JOBS"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["stigma", "M_PF_POLLEN_IS_SEED"]], "Bright petals attract bees and other insects."],
       ["Yellow dust rubs off on a bee's legs as it climbs into a flower. Which part of the flower made this dust?", "anther", ["the anther", "anthers", "stamen"], [["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["petal", "M_PF_PETAL_SEPAL_JOBS"], ["sepal", "M_PF_PETAL_SEPAL_JOBS"]], "The dust is pollen, and it is made in the anther."],
       ["A bean flower is still a tight green bud on the plant. Which parts wrap it round to keep the young flower safe?", "sepals", ["sepal", "the sepals"], [["petals", "M_PF_PETAL_SEPAL_JOBS"], ["anthers", "M_PF_POLLEN_IS_SEED"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"]], "Green sepals wrap the bud and protect it."],
@@ -5653,12 +7065,12 @@ var FAMILIES4 = [
       ["A bee arrives with pollen on its legs and brushes against the top of a pistil. The pollen stays there. Which part of the flower catches the pollen?", "stigma", ["the stigma"], [["anther", "M_PF_POLLEN_IS_SEED"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["petal", "M_PF_PETAL_SEPAL_JOBS"]], "Pollen sticks to the stigma. Then it can reach the ovules."]
     ], { h: ["Think about the job the story describes.", "Petals, sepals, anthers, stigma and ovary all have one job each."], s1: "Find the part whose job matches the story." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.pf.removed",
     cs: `${P}FLOWER_PART_FUNCTIONS`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["A child pulls all the petals off a pumpkin flower. What is most likely to happen?", "Fewer bees will visit it, so it may not be pollinated", [["Nothing changes, because petals have no job", "M_PF_PETAL_SEPAL_JOBS"], ["The flower cannot make any pollen", "M_PF_POLLEN_IS_SEED"], ["The ovary will stop growing seeds at once", "M_PF_OVARY_MAKES_POLLEN"]], "Petals attract insects. Without them fewer insects visit, so less pollen is carried to the stigma."],
       ["A caterpillar eats the sepals of a young bean bud. What is the danger?", "The bud has lost its cover and may be damaged", [["The flower will make less pollen at once", "M_PF_POLLEN_IS_SEED"], ["The flower will lose its bright colour", "M_PF_PETAL_SEPAL_JOBS"], ["Bees will no longer find it", "M_PF_PETAL_SEPAL_JOBS"]], "Sepals wrap and protect the bud. Without them the young flower can be damaged."],
       ["Someone cuts off all the anthers of a flower. What can the flower no longer make?", "Pollen", [["Petals", "M_PF_PETAL_SEPAL_JOBS"], ["Ovules", "M_PF_OVARY_MAKES_POLLEN"], ["Sepals", "M_PF_PETAL_SEPAL_JOBS"]], "Anthers make pollen. Without them the flower makes none."],
@@ -5667,12 +7079,12 @@ var FAMILIES4 = [
     ], { h: ["Think about what job the removed part was doing.", "Ask what the flower needs that part for."], s1: "Name the part and its job, then think what is lost." })
   }),
   // ---------------------------------------------------------------- FLOWER_TO_SEED
-  sfam({
+  sfam2({
     id: "sci5.plants.fs.order",
     cs: `${P}FLOWER_TO_SEED`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Which list shows what happens in a pumpkin flower in the right order?", "Bee brings pollen, seeds start to grow, ovary swells into the fruit", [["Ovary swells into the fruit, bee brings pollen, then seeds grow", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Seeds blow away, bee brings pollen, then the fruit grows", "M_FS_POLLINATION_DISPERSAL"], ["Fruit grows from the root, bee brings pollen to the stem", "M_FS_FRUIT_NOT_FROM_FLOWER"]], "Pollen must reach the stigma first. Only then do the ovules grow into seeds and the ovary into the fruit."],
       ["Wafula watches a tomato flower. Which list shows the right order of what happens?", "Pollen reaches the stigma, petals fall off, ovary swells into a tomato", [["Ovary swells into a tomato, then pollen reaches the stigma", "M_FS_BEES_NOT_NEEDED"], ["Tomato grows on the root, then the flower opens up", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Pollen blows away to a new field, then the tomato grows", "M_FS_POLLINATION_DISPERSAL"]], "The flower is pollinated first. The petals then fall and the ovary swells into the fruit."],
       ["Which list shows the right order for a mango flower becoming a mango?", "Insects bring pollen, flower is pollinated, ovary grows into the mango", [["Mango grows from the roots, then insects bring pollen to it", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Mango grows with no pollen at all, then insects visit it", "M_FS_BEES_NOT_NEEDED"], ["Insects carry the seeds away, then the mango grows up", "M_FS_POLLINATION_DISPERSAL"]], "Insects bring pollen first. After pollination the ovary grows into the fruit."],
@@ -5680,12 +7092,12 @@ var FAMILIES4 = [
       ["Which list shows the correct order for a passion fruit flower?", "Bee brings pollen, seeds grow inside, ovary swells into a fruit", [["Fruit grows from the root, then a bee brings pollen to it", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Bee takes the seeds to a new place, then the flower opens", "M_FS_POLLINATION_DISPERSAL"], ["Fruit swells with no pollen at all, then seeds grow in it", "M_FS_BEES_NOT_NEEDED"]], "Pollination comes first, then the seeds, and the ovary grows into the fruit."]
     ], { h: ["Think about what has to happen before seeds can start to grow.", "Pollen must reach the stigma before the ovary can grow into a fruit."], s1: "Start with the step that must happen first: pollen arriving." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.fs.effect",
     cs: `${P}FLOWER_TO_SEED`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["A farmer sprays a pesticide that kills all the bees near his pumpkin flowers. What is likely to happen to the pumpkins?", "Fewer fruits will grow", [["They will still grow just as many fruits", "M_FS_BEES_NOT_NEEDED"], ["The fruits will grow from the roots instead", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["The bees will carry the seeds away instead", "M_FS_POLLINATION_DISPERSAL"]], "Pumpkin flowers need insects to carry pollen. With no bees fewer flowers are pollinated, so fewer fruits grow."],
       ["A net bag covers a passion fruit flower so that no insects reach it. What happens to that flower?", "It is not pollinated, so it makes no fruit", [["It grows a fruit as usual", "M_FS_BEES_NOT_NEEDED"], ["It grows a fruit on a root", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["It carries its seeds away on its own", "M_FS_POLLINATION_DISPERSAL"]], "With the net, no pollen reaches the stigma. Without pollination, no fruit grows."],
       ["After a flower on a mango tree is pollinated, what happens to its ovary?", "It grows into the fruit", [["It falls off with the petals", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["It is carried away by the wind", "M_FS_POLLINATION_DISPERSAL"], ["It stays the same size", "M_FS_BEES_NOT_NEEDED"]], "After pollination the ovary swells and grows into the fruit, with the seeds inside."],
@@ -5694,12 +7106,12 @@ var FAMILIES4 = [
     ], { h: ["Think about what has to reach the flower before a fruit can grow.", "Fruits grow from flowers, not from roots."], s1: "Ask what the flower needs before its ovary can become a fruit." })
   }),
   // ---------------------------------------------------------------- IMPORTANCE_OF_FLOWERS
-  sfam({
+  sfam2({
     id: "sci5.plants.im.pick",
     cs: `${P}IMPORTANCE_OF_FLOWERS`,
     form: "word",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Wanjiru says flowers are only for decoration. What can you tell her?", "Flowers make the fruits and seeds that we eat and plant", [["She is right, flowers are only for looking at", "M_IM_ONLY_DECORATION"], ["Flowers are important only for their smell", "M_IM_ONLY_DECORATION"], ["Flowers are only for bees to harm the plant", "M_IM_INSECTS_HARM"]], "Flowers make fruits and seeds. They also feed bees and bring in money for farmers."],
       ["Which of these is a true reason flowers are important to bees?", "Flowers give bees nectar and pollen to eat", [["Flowers have nothing a bee can use", "M_IM_INSECTS_HARM"], ["Bees only visit flowers to harm them", "M_IM_INSECTS_HARM"], ["Flowers are only there to look nice to bees", "M_IM_ONLY_DECORATION"]], "Bees collect nectar and pollen from flowers to feed on, and they make honey from nectar."],
       ["Which food began as a flower?", "Mango", [["Cassava", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Sweet potato", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Carrot", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "A mango is the grown ovary of a mango flower. Cassava, sweet potato and carrot are roots."],
@@ -5707,12 +7119,12 @@ var FAMILIES4 = [
       ["Which food came from a flower?", "Beans", [["Onion bulbs", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Arrowroot", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Cassava roots", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Beans are seeds from the pods that grow from bean flowers."]
     ], { h: ["Think about what flowers do for the plant, for bees and for people.", "Many of the foods we eat are fruits or seeds."], s1: "Think of one thing that flowers give to plants, animals or people." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.plants.im.effect",
     cs: `${P}IMPORTANCE_OF_FLOWERS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A village sprays a pesticide that kills all insects. What may happen to the flowers and fruits?", "Fewer flowers are pollinated, so fewer fruits grow", [["Nothing, since insects do not matter to flowers", "M_IM_INSECTS_HARM"], ["More fruits grow, because insects harm flowers", "M_IM_INSECTS_HARM"], ["The fruits grow from the roots instead", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Many flowers need insects to carry pollen. Without insects fewer flowers are pollinated, so fewer fruits grow."],
       ["A school garden has no flowers at all for a year. What would the school lose?", "Fruits and seeds, and food for bees", [["Only some decoration", "M_IM_ONLY_DECORATION"], ["Nothing that matters", "M_IM_ONLY_DECORATION"], ["Only a few insects that harm plants", "M_IM_INSECTS_HARM"]], "Flowers become fruits and seeds, and they feed bees. A garden with no flowers makes no fruit and few seeds."],
       ["Without flowers, which of these foods would be hard to get?", "Maize grain, beans and mangoes", [["Only the decoration at weddings", "M_IM_ONLY_DECORATION"], ["Cassava roots and sweet potato roots only", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["No foods at all", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Maize grains, beans and mangoes all come from flowers."],
@@ -5721,12 +7133,12 @@ var FAMILIES4 = [
     ], { h: ["Think about what flowers give to plants, animals and people.", "Fruits, seeds and honey all depend on flowers."], s1: "Ask what the flowers do that would be lost." })
   }),
   // ---------------------------------------------------------------- VERTEBRATE_CHARACTERISTICS
-  sfam({
+  sfam2({
     id: "sci5.vert.vc.which",
     cs: `${V}VERTEBRATE_CHARACTERISTICS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which small animal below has a backbone?", "Mouse", [["Butterfly", "M_VC_SIZE_DECIDES"], ["Termite", "M_VC_SIZE_DECIDES"], ["Earthworm", "M_VC_SIZE_DECIDES"]], "A mouse is small but it has a backbone. Butterflies, termites and earthworms have none."],
       ["Which of these animals is a vertebrate?", "Snake", [["Crab", "M_VC_SHELL_IS_BACKBONE"], ["Snail", "M_VC_SHELL_IS_BACKBONE"], ["Beetle", "M_VC_SHELL_IS_BACKBONE"]], "A snake has a long backbone. Crabs, snails and beetles have hard outsides but no backbone."],
       ["Which of these animals is an invertebrate?", "Crab", [["Fish", "M_VC_NEEDS_LEGS"], ["Snake", "M_VC_NEEDS_LEGS"], ["Frog", "M_VC_SIZE_DECIDES"]], "A crab has no backbone. Fish, snakes and frogs all have backbones."],
@@ -5734,12 +7146,12 @@ var FAMILIES4 = [
       ["Which animal that lives in the lake is a vertebrate?", "Tilapia", [["Snail", "M_VC_SHELL_IS_BACKBONE"], ["Water beetle", "M_VC_SHELL_IS_BACKBONE"], ["Mosquito larva", "M_VC_SIZE_DECIDES"]], "Tilapia is a fish with a backbone, though it has no legs."]
     ], { h: ["Vertebrates have a backbone inside the body.", "Size, legs and a hard outside do not tell you whether an animal has a backbone."], s1: "Ask: does the animal have a backbone?" })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vc.why",
     cs: `${V}VERTEBRATE_CHARACTERISTICS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Wambui says a snake cannot be a vertebrate because it has no legs. What can you tell her?", "A snake has a backbone, and legs are not needed", [["She is right, a vertebrate needs legs", "M_VC_NEEDS_LEGS"], ["A snake is a vertebrate because it is long", "M_VC_SIZE_DECIDES"], ["A snake is an invertebrate with a hard skin", "M_VC_SHELL_IS_BACKBONE"]], "What makes an animal a vertebrate is a backbone. A snake has a long one."],
       ["Kiprono says a crab is a vertebrate because it has a hard shell. What is wrong with this?", "The shell is outside; a crab has no backbone inside", [["Nothing, a hard shell is like a backbone", "M_VC_SHELL_IS_BACKBONE"], ["A crab is too small to be a vertebrate", "M_VC_SIZE_DECIDES"], ["A crab has legs, so it must be an invertebrate", "M_VC_NEEDS_LEGS"]], "A crab's hard shell is on the outside. It has no backbone inside, so it is an invertebrate."],
       ["Mutua says a gecko is too small to be a vertebrate. What can you tell him?", "Size does not matter; a gecko has a backbone", [["He is right, only big animals are vertebrates", "M_VC_SIZE_DECIDES"], ["A gecko has legs, so it is an invertebrate", "M_VC_NEEDS_LEGS"], ["A gecko has a hard shell, so it is a vertebrate", "M_VC_SHELL_IS_BACKBONE"]], "A gecko is small, but it has a backbone. Size does not decide."],
@@ -5747,12 +7159,12 @@ var FAMILIES4 = [
       ["Omondi says a beetle is a vertebrate because it has a hard cover. What is wrong with this?", "The cover is outside; a beetle has no backbone", [["Nothing, a hard cover means a backbone", "M_VC_SHELL_IS_BACKBONE"], ["A beetle is too small to have a backbone", "M_VC_SIZE_DECIDES"], ["A beetle has legs, so it is an invertebrate", "M_VC_NEEDS_LEGS"]], "A beetle's hard cover is outside. It has no backbone inside, so it is an invertebrate."]
     ], { h: ["Think about what all vertebrates have in common inside their bodies.", "Look at the reason given. Is it about a backbone?"], s1: "Check the reason against the one thing that makes a vertebrate: a backbone." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vc.table",
     cs: `${V}VERTEBRATE_CHARACTERISTICS`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "A class sorted animals in a table. Which animal is a vertebrate?",
         "Animal B",
@@ -5791,12 +7203,12 @@ var FAMILIES4 = [
     ], { h: ["Read the last words of each row: does the animal have a backbone?", "Ignore the size, the legs and the hard cover."], s1: 'Look for "has a backbone" in each row.' })
   }),
   // ---------------------------------------------------------------- VERTEBRATE_GROUPS
-  sfam({
+  sfam2({
     id: "sci5.vert.vg.group",
     cs: `${V}VERTEBRATE_GROUPS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["To which group does a bat belong?", "Mammals", [["Birds", "M_VG_BAT_BIRD"], ["Reptiles", "M_VG_BAT_BIRD"], ["Amphibians", "M_VG_BAT_BIRD"]], "A bat has fur and feeds its young on milk, so it is a mammal. It flies, but it has no feathers."],
       ["To which group does a dolphin belong?", "Mammals", [["Fish", "M_VG_WATER_IS_FISH"], ["Reptiles", "M_VG_WATER_IS_FISH"], ["Amphibians", "M_VG_WATER_IS_FISH"]], "A dolphin breathes air and feeds its young on milk, so it is a mammal. It lives in water but is not a fish."],
       ["To which group does a chameleon belong?", "Reptiles", [["Amphibians", "M_VG_REPTILE_AMPHIBIAN"], ["Mammals", "M_VG_REPTILE_AMPHIBIAN"], ["Fish", "M_VG_WATER_IS_FISH"]], "A chameleon has dry scales and lays eggs on land, so it is a reptile."],
@@ -5805,12 +7217,12 @@ var FAMILIES4 = [
       ["To which group does a frog belong?", "Amphibians", [["Reptiles", "M_VG_REPTILE_AMPHIBIAN"], ["Fish", "M_VG_WATER_IS_FISH"], ["Birds", "M_VG_EGGS_ARE_BIRDS"]], "A frog has moist skin and starts life in water as a tadpole, so it is an amphibian."]
     ], { h: ["Think about the animal's body covering and how its young are born or fed.", "Where the animal lives or whether it flies does not decide its group."], s1: "Look at the body covering and how the young are born." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vg.list",
     cs: `${V}VERTEBRATE_GROUPS`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Achieng makes a chart of mammals. Which list has only mammals?", "Cow, bat, goat", [["Cow, bat, hen", "M_VG_EGGS_ARE_BIRDS"], ["Cow, dolphin, tilapia", "M_VG_WATER_IS_FISH"], ["Cow, goat, crocodile", "M_VG_WATER_IS_FISH"]], "A cow, a bat and a goat all have fur and feed their young on milk. A hen is a bird, a tilapia is a fish and a crocodile is a reptile."],
       ["A teacher asks for a list of birds. Which list has only birds?", "Ostrich, flamingo, hen", [["Ostrich, bat, hen", "M_VG_BAT_BIRD"], ["Ostrich, flamingo, crocodile", "M_VG_EGGS_ARE_BIRDS"], ["Bat, flamingo, hen", "M_VG_BAT_BIRD"]], "Ostriches, flamingos and hens have feathers and lay eggs. A bat has fur and a crocodile has dry scales."],
       ["Which list has only reptiles?", "Snake, chameleon, tortoise", [["Snake, frog, tortoise", "M_VG_REPTILE_AMPHIBIAN"], ["Snake, chameleon, tilapia", "M_VG_WATER_IS_FISH"], ["Snake, chameleon, hen", "M_VG_EGGS_ARE_BIRDS"]], "Snakes, chameleons and tortoises all have dry scales or plates. A frog is an amphibian, tilapia is a fish and a hen is a bird."],
@@ -5818,12 +7230,12 @@ var FAMILIES4 = [
       ["Which list has only amphibians?", "Frog, toad, newt", [["Frog, toad, lizard", "M_VG_REPTILE_AMPHIBIAN"], ["Frog, chameleon, newt", "M_VG_REPTILE_AMPHIBIAN"], ["Frog, toad, tilapia", "M_VG_WATER_IS_FISH"]], "Frogs, toads and newts have moist skin and start life in water. A lizard and a chameleon are reptiles and tilapia is a fish."]
     ], { h: ["Check every animal in a list, not only the first one.", "One animal in each wrong list belongs to another group."], s1: "Cross out any animal whose body covering or young do not fit the group." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vg.table",
     cs: `${V}VERTEBRATE_GROUPS`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "The table shows what a learner found about four animals. Which animal is a mammal?",
         "Animal B",
@@ -5861,12 +7273,12 @@ var FAMILIES4 = [
       ]
     ], { h: ["Read the covering of the animal first, then how its young are born.", "Fur and milk: mammal. Feathers: bird. Dry scales: reptile. Wet scales and gills: fish. Moist skin: amphibian."], s1: "Match the covering and the young to a group." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vg.spot",
     cs: `${V}VERTEBRATE_GROUPS`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says a bat is a bird. Which step has the mistake?", [["Step 1: Hassan sees that a bat has wings and flies.", true], ["Step 2: He decides that every animal that flies is a bird.", false], ["Step 3: He writes that a bat is a bird.", true]], "Flying does not make a bird. A bat has fur and feeds its young on milk, so it is a mammal.", "M_VG_BAT_BIRD"],
       ["Karimi says a dolphin is a fish. Which step has the mistake?", [["Step 1: Karimi sees that a dolphin lives in the sea.", true], ["Step 2: He decides that every animal in water is a fish.", false], ["Step 3: He writes that a dolphin is a fish.", true]], "Living in water does not make a fish. A dolphin breathes air and feeds its young on milk, so it is a mammal.", "M_VG_WATER_IS_FISH"],
       ["Zawadi says an ostrich is not a bird. Which step has the mistake?", [["Step 1: Zawadi sees that an ostrich has feathers and lays eggs.", true], ["Step 2: She decides that an animal that cannot fly is not a bird.", false], ["Step 3: She writes that an ostrich is not a bird.", true]], "A bird has feathers and lays hard eggs. Many birds, such as the ostrich, cannot fly, but they are still birds.", "M_VG_NOFLY_NOT_BIRD"],
@@ -5874,12 +7286,12 @@ var FAMILIES4 = [
     ], { h: ["Which step gives a reason that is not true for every animal?", "Think about the body covering and how the young are fed."], s1: "A group is decided by body covering and young, not by habitat or flying." })
   }),
   // ---------------------------------------------------------------- VERTEBRATE_FEATURES
-  sfam({
+  sfam2({
     id: "sci5.vert.vf.feature",
     cs: `${V}VERTEBRATE_FEATURES`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which group of vertebrates has dry scales and lays eggs on land?", "Reptiles", [["Fish", "M_VF_SCALES_FISH_ONLY"], ["Amphibians", "M_VF_SCALES_FISH_ONLY"], ["Birds", "M_VF_SCALES_FISH_ONLY"]], "Reptiles such as snakes and crocodiles have dry scales and lay eggs on land."],
       ["Which feature is found in all birds and in no other group?", "Feathers", [["Wings", "M_VF_WINGS_MEAN_BIRD"], ["A beak", "M_VF_WINGS_MEAN_BIRD"], ["The ability to fly", "M_VF_WINGS_MEAN_BIRD"]], "Bats and insects have wings too, and some birds cannot fly. Only birds have feathers."],
       ["What does it mean to say a frog is an amphibian?", "It lives part of its life in water and part on land", [["It lives all its life in water", "M_VF_AMPHIBIAN_WATER_ONLY"], ["It lives only on land and eats insects", "M_VF_AMPHIBIAN_WATER_ONLY"], ["It has dry scales and lays eggs on land", "M_VF_SCALES_FISH_ONLY"]], "Amphibian means living two lives. A frog starts as a tadpole in water and the adult can live on land."],
@@ -5887,12 +7299,12 @@ var FAMILIES4 = [
       ["Which group has fur or hair and feeds its young on milk?", "Mammals", [["Birds", "M_VF_WINGS_MEAN_BIRD"], ["Reptiles", "M_VF_SCALES_FISH_ONLY"], ["Amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"]], "Mammals such as cows and goats have hair and feed their young on milk."]
     ], { h: ["Think about the body covering and what the young drink or hatch from.", "Each group has its own set of features."], s1: "Match the feature to the group it belongs to." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.vert.vf.typed",
     cs: `${V}VERTEBRATE_FEATURES`,
     form: "word",
     rung: 2,
-    gen: typed([
+    gen: typed2([
       ["Kamau looks at a snake and a crocodile on a school trip to the park. Both have dry scales and both lay their eggs on the land. What is this group of vertebrates called?", "reptiles", ["reptile"], [["fish", "M_VF_SCALES_FISH_ONLY"], ["amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"], ["mammals", "M_VF_SCALES_FISH_ONLY"]], "Animals with dry scales that lay eggs on land are reptiles."],
       ["A hen, an ostrich and a flamingo have something that no other group of animals has. They cannot all fly, but all of them are covered in it. What is it?", "feathers", ["feather"], [["wings", "M_VF_WINGS_MEAN_BIRD"], ["a beak", "M_VF_WINGS_MEAN_BIRD"], ["legs", "M_VF_WINGS_MEAN_BIRD"]], "Only birds have feathers. Bats and insects have wings, and many animals have legs."],
       ["Nyambura finds a tadpole in a pond near her home. When it grows it will be able to live on land and in water. What group of vertebrates does a frog belong to?", "amphibians", ["amphibian"], [["fish", "M_VF_AMPHIBIAN_WATER_ONLY"], ["reptiles", "M_VF_SCALES_FISH_ONLY"], ["mammals", "M_VF_AMPHIBIAN_WATER_ONLY"]], "A frog lives part of its life in water and part on land. That is an amphibian."],
@@ -5901,12 +7313,12 @@ var FAMILIES4 = [
     ], { h: ["Think about the body covering and how the young start life.", "The five groups are mammals, birds, reptiles, fish and amphibians."], s1: "Put the features together and name the group." })
   }),
   // ---------------------------------------------------------------- BREATHING_PARTS
-  sfam({
+  sfam2({
     id: "sci5.breath.bp.name",
     cs: `${B}BREATHING_PARTS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which part carries air from the nose down to the lungs?", "Windpipe (trachea)", [["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["Stomach", "M_BP_LUNGS_LOCATION"]], "The windpipe, or trachea, carries air from the nose to the lungs."],
       ["Which part is the sheet of muscle under the lungs?", "Diaphragm", [["Windpipe (trachea)", "M_BP_DIAPHRAGM_PLACE"], ["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"], ["Ribs", "M_BP_DIAPHRAGM_PLACE"]], "The diaphragm is a sheet of muscle under the lungs. It moves when we breathe."],
       ["Where are the lungs?", "In the chest, inside the ribs", [["In the belly, next to the stomach", "M_BP_LUNGS_LOCATION"], ["In the neck, above the windpipe", "M_BP_LUNGS_LOCATION"], ["Under the diaphragm", "M_BP_DIAPHRAGM_PLACE"]], "There are two lungs in the upper chest. The ribs protect them."],
@@ -5914,12 +7326,12 @@ var FAMILIES4 = [
       ["Which part of the breathing system is on the face and lets air in?", "Nose", [["Lungs", "M_BP_LUNGS_LOCATION"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"]], "Air goes in through the nose and passes to the windpipe."]
     ], { h: ["Picture the body and where each part is.", "The windpipe is not the same as the food pipe."], s1: "Picture the breathing system from the nose to the diaphragm." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bp.order",
     cs: `${B}BREATHING_PARTS`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Wanjiru breathes in deeply while the class is quiet. Which list shows the parts the air reaches, in order?", "Nose, windpipe, lungs", [["Nose, food pipe, stomach", "M_BP_TRACHEA_FOOD"], ["Nose, lungs, windpipe", "M_BP_LUNGS_LOCATION"], ["Nose, diaphragm, lungs", "M_BP_DIAPHRAGM_PLACE"]], "Air passes from the nose to the windpipe and then to the lungs."],
       ["A teacher draws the breathing system on the board. She asks which part comes just after the windpipe. What is the answer?", "The lungs", [["The stomach", "M_BP_TRACHEA_FOOD"], ["The diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["The food pipe", "M_BP_TRACHEA_FOOD"]], "The windpipe leads straight into the lungs."],
       ["Which part of the body lies under the lungs and helps us to breathe by moving up and down?", "The diaphragm", [["The stomach", "M_BP_LUNGS_LOCATION"], ["The windpipe", "M_BP_DIAPHRAGM_PLACE"], ["The nose", "M_BP_DIAPHRAGM_PLACE"]], "The diaphragm lies under the lungs and moves as we breathe."],
@@ -5928,12 +7340,12 @@ var FAMILIES4 = [
     ], { h: ["Follow the air from the nose to the end of its journey.", "Food goes down the food pipe, air goes down the windpipe."], s1: "Follow a breath of air through the body." })
   }),
   // ---------------------------------------------------------------- BREATHING_FUNCTIONS
-  sfam({
+  sfam2({
     id: "sci5.breath.bf.job",
     cs: `${B}BREATHING_FUNCTIONS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Where does the air go after the windpipe?", "To the lungs", [["To the stomach", "M_BF_AIR_TO_STOMACH"], ["Back to the nose", "M_BF_AIR_TO_STOMACH"], ["Into the food pipe", "M_BF_AIR_TO_STOMACH"]], "The windpipe leads to the lungs. The stomach is for food."],
       ["What do the hairs and mucus in the nose do?", "They trap dust and germs", [["They are only for smelling", "M_BF_NOSE_ONLY_SMELL"], ["They make air for the lungs", "M_BF_NOSE_ONLY_SMELL"], ["They help us taste food", "M_BF_NOSE_ONLY_SMELL"]], "The hairs and the sticky mucus catch dust and germs before the air reaches the lungs."],
       ["What happens to the oxygen in the air that reaches the lungs?", "It passes into the blood", [["It goes into the stomach", "M_BF_AIR_TO_STOMACH"], ["It stays in the lungs for ever", "M_BF_NO_OXYGEN_OUT"], ["It goes back out with no change", "M_BF_NO_OXYGEN_OUT"]], "The lungs pass oxygen from the air into the blood, which carries it round the body."],
@@ -5941,12 +7353,12 @@ var FAMILIES4 = [
       ["Which part moves to help the lungs fill with air?", "The diaphragm", [["The windpipe", "M_BF_LUNGS_PUSH_SELF"], ["The lungs pull themselves", "M_BF_LUNGS_PUSH_SELF"], ["The nose", "M_BF_NOSE_ONLY_SMELL"]], "The lungs have no muscles. The diaphragm and the rib muscles move and the lungs follow."]
     ], { h: ["Think about the job of each part of the breathing system.", "The lungs do not have muscles of their own."], s1: "Match the job to the part." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bf.true",
     cs: `${B}BREATHING_FUNCTIONS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Which statement about the air we breathe out is true?", "It has less oxygen and more carbon dioxide", [["It has no oxygen in it at all", "M_BF_NO_OXYGEN_OUT"], ["It is exactly the same as the air we breathe in", "M_BF_NO_OXYGEN_OUT"], ["It has only carbon dioxide and nothing else", "M_BF_NO_OXYGEN_OUT"]], "Breathed-out air still has some oxygen, but less than before. It has more carbon dioxide."],
       ["Amani says air goes to the stomach when we breathe in. What can you tell him?", "Air goes to the lungs, not the stomach", [["He is right, air fills the stomach first", "M_BF_AIR_TO_STOMACH"], ["Air goes to the stomach and then to the lungs", "M_BF_AIR_TO_STOMACH"], ["Air goes to the diaphragm only", "M_BF_LUNGS_PUSH_SELF"]], "The windpipe leads to the lungs. The stomach is joined to the food pipe."],
       ["Which statement about the lungs is true?", "Diaphragm and rib muscles make them change size", [["They have strong muscles that move them", "M_BF_LUNGS_PUSH_SELF"], ["The stomach moves them in and out", "M_BF_AIR_TO_STOMACH"], ["They never change in size at all", "M_BF_LUNGS_PUSH_SELF"]], "The lungs have no muscles. They change in size when the diaphragm and the muscles between the ribs move."],
@@ -5955,12 +7367,12 @@ var FAMILIES4 = [
     ], { h: ["Think about what each part of the system really does.", "Breathed-out air still has some oxygen."], s1: "Check each statement against the job of the part it names." })
   }),
   // ---------------------------------------------------------------- BREATHING_MOVEMENT
-  sfam({
+  sfam2({
     id: "sci5.breath.bi.chest",
     cs: `${B}BREATHING_MOVEMENT`,
     form: "direct",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["What happens to the chest when you breathe in?", "It gets bigger as the ribs move up and out", [["It gets smaller as the ribs move in", "M_BI_RIBS_IN"], ["It stays the same size", "M_BI_RIBS_IN"], ["It is pushed out by the air", "M_BI_AIR_PUSHES_CHEST"]], "The ribs move up and out and the diaphragm moves down, so the chest gets bigger."],
       ["What does the diaphragm do when you breathe in?", "It moves down", [["It moves up", "M_BI_RIBS_IN"], ["It stays still", "M_BI_AIR_PUSHES_CHEST"], ["It pushes air out", "M_BI_RIBS_IN"]], "The diaphragm moves down, so there is more space in the chest for air."],
       ["What happens to the chest when you breathe out?", "It gets smaller as the ribs move down and in", [["It gets bigger as the ribs move out", "M_BI_RIBS_IN"], ["It stays the same size", "M_BI_RIBS_IN"], ["It fills up with more air", "M_BI_AIR_PUSHES_CHEST"]], "The ribs move down and in and the diaphragm moves up, so the chest gets smaller and air is pushed out."],
@@ -5968,12 +7380,12 @@ var FAMILIES4 = [
       ["What makes the air come into the lungs when you breathe in?", "The chest gets bigger, so air flows into the space", [["The air pushes the chest out first", "M_BI_AIR_PUSHES_CHEST"], ["The chest gets smaller and squeezes air in", "M_BI_RIBS_IN"], ["The stomach pulls the air in", "M_BI_AIR_PUSHES_CHEST"]], "The muscles make the chest bigger first. Air flows into the new space."]
     ], { h: ["Think about what the diaphragm and the ribs do when you breathe in.", "The space in the chest has to get bigger for air to come in."], s1: "Feel your chest and belly as you breathe in and out." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bi.cause",
     cs: `${B}BREATHING_MOVEMENT`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["Wanjiru takes a deep breath in. Which is the first thing that happens inside her body?", "Her diaphragm and rib muscles move and her chest gets bigger", [["Air rushes in and pushes her chest out", "M_BI_AIR_PUSHES_CHEST"], ["Her chest gets smaller", "M_BI_RIBS_IN"], ["Her lungs squeeze themselves flat", "M_BI_AIR_PUSHES_CHEST"]], "The muscles move first. Air then flows in to fill the bigger space."],
       ["Mutua notices that his chest rises each time he breathes in. Why does it rise?", "The muscles lift the ribs and the chest space grows", [["The air pushes the ribs up from inside", "M_BI_AIR_PUSHES_CHEST"], ["The lungs squeeze the ribs up", "M_BI_AIR_PUSHES_CHEST"], ["The ribs move in towards the middle", "M_BI_RIBS_IN"]], "The rib muscles do the lifting. The air only fills the space they make."],
       ["During a race, Baraka breathes out hard at the finish line. Which action pushes the air out of his lungs?", "His chest gets smaller and pushes the air out", [["His chest gets bigger and lets the air out", "M_BI_RIBS_IN"], ["The air jumps out of the lungs by itself", "M_BI_AIR_PUSHES_CHEST"], ["His ribs move up and out", "M_BI_RIBS_IN"]], "When the chest gets smaller the lungs are squeezed and air is pushed out."],
@@ -5981,12 +7393,12 @@ var FAMILIES4 = [
       ["Chebet knows her diaphragm moves down when she breathes in. What does that do inside her chest?", "It makes more space, so air flows in", [["It makes less space, so air flows in", "M_BI_RIBS_IN"], ["The air pushes the diaphragm down", "M_BI_AIR_PUSHES_CHEST"], ["Nothing happens to the space", "M_BI_RIBS_IN"]], "More space means lower pressure inside, so air flows in from outside."]
     ], { h: ["Think about which comes first: the chest changing or the air arriving.", "Muscles move first, then air follows."], s1: "Put the events in order: muscles, space, air." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bi.spot",
     cs: `${B}BREATHING_MOVEMENT`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Baraka explains breathing in. Which step has the mistake?", [["Step 1: The diaphragm moves down.", true], ["Step 2: The ribs move in, so the chest gets smaller.", false], ["Step 3: Air flows into the lungs.", true]], "When we breathe in, the ribs move up and out, so the chest gets bigger. A smaller chest cannot take more air.", "M_BI_RIBS_IN"],
       ["Chebet explains why the chest rises. Which step has the mistake?", [["Step 1: Chebet breathes in.", true], ["Step 2: Air rushes in and pushes the ribs out.", false], ["Step 3: The chest is bigger than before.", true]], "The muscles move first and make the chest bigger. Air flows in after that. The air does not push the ribs.", "M_BI_AIR_PUSHES_CHEST"],
       ["Otieno explains breathing out. Which step has the mistake?", [["Step 1: The diaphragm moves up.", true], ["Step 2: The ribs move up and out.", false], ["Step 3: Air is pushed out of the lungs.", true]], "When we breathe out, the ribs move down and in. The chest gets smaller and air is pushed out.", "M_BI_RIBS_IN"],
@@ -5995,12 +7407,12 @@ var FAMILIES4 = [
     ], { h: ["Which step says the chest does something it does not do?", "Picture your ribs when you breathe in and out."], s1: "Breathing in: chest bigger. Breathing out: chest smaller." })
   }),
   // ---------------------------------------------------------------- BREATHING_ILLNESS_SYMPTOMS
-  sfam({
+  sfam2({
     id: "sci5.breath.bs.match",
     cs: `${B}BREATHING_ILLNESS_SYMPTOMS`,
     form: "word",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Wambui sneezes and has itchy eyes every time she sweeps the dusty classroom. What is the most likely cause?", "An allergy to the dust", [["A cold caught from another child", "M_BS_ALLERGY_IS_INFECTION"], ["Asthma caught from a classmate", "M_BS_ASTHMA_CATCHING"], ["The same illness as any cough", "M_BS_ALL_SAME"]], "Sneezing that starts with dust and stops without it points to an allergy. An allergy is not caught from others."],
       ["A child breathes with a whistling sound and finds it hard to catch his breath after running. Which condition is most likely?", "Asthma", [["A common cold caught from a friend", "M_BS_ALL_SAME"], ["An allergy caught from a friend", "M_BS_ALLERGY_IS_INFECTION"], ["A cough that every child gets", "M_BS_ALL_SAME"]], "Wheezing and short breath are signs of asthma."],
       ["Njeri has a runny nose, a sore throat and sneezing for two days. Which condition is most likely?", "A common cold", [["Asthma", "M_BS_ASTHMA_CATCHING"], ["An allergy to dust", "M_BS_ALLERGY_IS_INFECTION"], ["A broken rib", "M_BS_ALL_SAME"]], "A runny nose, sore throat and sneezing are the usual signs of a common cold."],
@@ -6008,12 +7420,12 @@ var FAMILIES4 = [
       ["Mutua coughs and wheezes when the family cooks in a smoky room, and he is fine outside. What can this be?", "A sign of asthma set off by smoke", [["A cold caught from the cooking fire", "M_BS_ALL_SAME"], ["An allergy that spreads to others", "M_BS_ALLERGY_IS_INFECTION"], ["Asthma that he caught from his mother", "M_BS_ASTHMA_CATCHING"]], "Smoke can bring on asthma. The signs go away when he is out of the smoke."]
     ], { h: ["Think about when the symptoms start and what they look like.", "Colds spread between people. Asthma and allergies do not."], s1: "Match the pattern of the symptoms to the condition." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bs.spread",
     cs: `${B}BREATHING_ILLNESS_SYMPTOMS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Which of these can spread from one person to another?", "A common cold", [["Asthma", "M_BS_ASTHMA_CATCHING"], ["Allergy to dust", "M_BS_ALLERGY_IS_INFECTION"], ["Allergy to pollen", "M_BS_ALLERGY_IS_INFECTION"]], "A cold is caused by a virus that spreads. Asthma and allergies do not spread."],
       ["A child has asthma. Is it safe to sit next to her at school?", "Yes, asthma cannot be caught from another person", [["No, she may pass asthma on", "M_BS_ASTHMA_CATCHING"], ["No, asthma is a cold in the chest", "M_BS_ALL_SAME"], ["Only if she coughs near you", "M_BS_ASTHMA_CATCHING"]], "Asthma is not an infection, so it cannot be passed on."],
       ["Which condition cannot be caught from another person?", "Allergy to dust", [["Common cold", "M_BS_ALL_SAME"], ["COVID-19", "M_BS_ALL_SAME"], ["A cough from a chest infection", "M_BS_ALL_SAME"]], "An allergy is the body reacting to something such as dust. It does not spread."],
@@ -6022,12 +7434,12 @@ var FAMILIES4 = [
     ], { h: ["Think about which conditions are caused by germs and which are not.", "Asthma and allergies are not caused by germs."], s1: "Sort the conditions into those that spread and those that do not." })
   }),
   // ---------------------------------------------------------------- BREATHING_ILLNESS_PREVENTION
-  sfam({
+  sfam2({
     id: "sci5.breath.bv.best",
     cs: `${B}BREATHING_ILLNESS_PREVENTION`,
     form: "word",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Juma has a cold. What should he do to stop it spreading to his friends?", "Cover his mouth and nose when he coughs or sneezes", [["Sit in the sun so the cold goes away", "M_BV_COLD_WEATHER"], ["Take antibiotics to kill the virus", "M_BV_ANTIBIOTICS"], ["Nothing, since colds only come from the weather", "M_BV_COLD_WEATHER"]], "Covering the mouth and nose keeps the virus from spreading in the air."],
       ["Why does washing hands help to stop a cold spreading?", "Germs on the hands can reach the nose and mouth", [["It does not help, since colds are only in the nose", "M_BV_HANDS_NO_MATTER"], ["It warms the body", "M_BV_COLD_WEATHER"], ["It kills the cold virus inside the body", "M_BV_ANTIBIOTICS"]], "Hands pick up virus from surfaces. Washing them removes it before it reaches the face."],
       ["Why is it better to cook outdoors or in a kitchen with a chimney?", "Smoke can harm the lungs and make coughing worse", [["Smoke does not harm the lungs, so it makes no difference", "M_BV_SMOKE_HARMLESS"], ["Smoke only makes food taste better", "M_BV_SMOKE_HARMLESS"], ["Smoke keeps the cold away", "M_BV_COLD_WEATHER"]], "Smoke irritates the nose and lungs and can start coughing and asthma."],
@@ -6035,12 +7447,12 @@ var FAMILIES4 = [
       ["Wanjiru has a bad cough that does not go away. What should she do?", "Tell an adult and visit a clinic", [["Take antibiotics from last time", "M_BV_ANTIBIOTICS"], ["Wait, since cold weather caused it", "M_BV_COLD_WEATHER"], ["Cook in a smoky room to clear it", "M_BV_SMOKE_HARMLESS"]], "A cough that lasts needs a health worker. Only they can say what medicine is right."]
     ], { h: ["Think about how the germs get from one person to the next.", "Weather and antibiotics are not the answer for a cold."], s1: "Choose the action that stops germs or smoke reaching the lungs." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.breath.bv.cause",
     cs: `${B}BREATHING_ILLNESS_PREVENTION`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["What causes a common cold?", "A virus that passes between people", [["Cold weather and rain on the body", "M_BV_COLD_WEATHER"], ["Drinking cold water from the tap", "M_BV_COLD_WEATHER"], ["Walking without shoes on the floor", "M_BV_COLD_WEATHER"]], "A cold is caused by a virus. Cold weather can make people stay close indoors, but it does not cause the cold."],
       ["Juma has a cold. Which of these helps him get better?", "Rest and drinking water", [["Antibiotics, which kill the cold virus", "M_BV_ANTIBIOTICS"], ["Standing in the cold wind outside", "M_BV_COLD_WEATHER"], ["Breathing in smoke from a fire", "M_BV_SMOKE_HARMLESS"]], "Antibiotics do not kill viruses. Rest and water help the body fight the virus."],
       ["A family cooks on a three-stone fire in a closed room. Which problem is most likely?", "Smoke may cause coughing and asthma attacks", [["None, smoke is harmless to the lungs", "M_BV_SMOKE_HARMLESS"], ["Colds, since smoke is cold air", "M_BV_COLD_WEATHER"], ["Colds, from the wood in the fire", "M_BV_COLD_WEATHER"]], "Smoke irritates the nose and lungs. It can bring on coughs and asthma attacks."],
@@ -6053,14 +7465,14 @@ var FAMILIES4 = [
 // src/ai-tutor/content/families/sci_g5_matter.js
 var M = "MATTER.MIXTURES.";
 var W = "MATTER.WATER_POLLUTION.";
-var FAMILIES5 = [
+var FAMILIES9 = [
   // ---------------------------------------------------------------- MIXTURE_MEANING
-  sfam({
+  sfam2({
     id: "sci5.mix.mm.meaning",
     cs: `${M}MIXTURE_MEANING`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which sentence best tells what a mixture is?", "Two or more substances put together that can be separated again", [["A new substance made from the parts, which cannot be separated again", "M_MM_CANNOT_BE_UNMIXED"], ["Substances mixed in exactly equal amounts, like a recipe", "M_MM_EQUAL_PARTS"], ["Something that people mix on purpose in a kitchen or workshop", "M_MM_NATURAL_NOT_MIXTURE"]], "In a mixture the substances are only put together. Each keeps its own properties and can be separated."],
       ["Is air a mixture?", "Yes, it is made of several gases", [["No, air is one single substance", "M_MM_NATURAL_NOT_MIXTURE"], ["No, only things made by people are mixtures", "M_MM_NATURAL_NOT_MIXTURE"], ["No, a mixture needs a liquid in it", "M_MM_NATURAL_NOT_MIXTURE"]], "Air holds nitrogen, oxygen and other gases. They are not joined, so air is a mixture."],
       ["Is soil a mixture?", "Yes, it holds sand, clay and bits of plants", [["No, soil is only one substance, called earth", "M_MM_NATURAL_NOT_MIXTURE"], ["No, soil was not mixed on purpose by anybody", "M_MM_NATURAL_NOT_MIXTURE"], ["No, the parts of soil are never in equal amounts", "M_MM_EQUAL_PARTS"]], "Soil has sand, clay, water and bits of dead plants. It is a natural mixture."],
@@ -6068,12 +7480,12 @@ var FAMILIES5 = [
       ["One spoon of sand is put in a bucket of water. Is it a mixture?", "Yes, the amounts can be different", [["No, the amounts are not equal", "M_MM_EQUAL_PARTS"], ["No, sand is too small to mix", "M_MM_EQUAL_PARTS"], ["No, a mixture needs two liquids", "M_MM_EQUAL_PARTS"]], "A mixture can have any amounts of its parts. A little sand in a lot of water is still a mixture."]
     ], { h: ["Think about whether each substance is still there, and can be got back.", "A mixture can be natural and the amounts can be different."], s1: "In a mixture, the substances are only put together." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mm.back",
     cs: `${M}MIXTURE_MEANING`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["In the school kitchen the cook mixes salt into a pot of cold water and stirs. The salt seems to vanish. A learner says it can never be got back. What can you tell her?", "Boil the water away and the salt is left", [["She is right, mixing destroys the salt", "M_MM_CANNOT_BE_UNMIXED"], ["The salt becomes part of the water for good", "M_MM_CANNOT_BE_UNMIXED"], ["Only cooking can bring the salt back", "M_MM_CANNOT_BE_UNMIXED"]], "The salt is still in the water. When the water is boiled away, the salt is left in the pot."],
       ["Wafula pours sand into a jar of water, shakes it, and leaves it on the shelf overnight. Next day the sand is at the bottom. What does this show?", "The sand and water were only mixed, not joined", [["The sand has turned into mud for good", "M_MM_CANNOT_BE_UNMIXED"], ["The sand was never really in the water", "M_MM_CANNOT_BE_UNMIXED"], ["The water is now one new substance", "M_MM_CANNOT_BE_UNMIXED"]], "The parts of a mixture keep their own properties, so the sand settles and can be separated."],
       ["Njeri says the air in the classroom is not a mixture because nobody mixed it. Which reply is correct?", "Air is a natural mixture of gases", [["She is right, only people can make mixtures", "M_MM_NATURAL_NOT_MIXTURE"], ["Air is one substance called oxygen", "M_MM_NATURAL_NOT_MIXTURE"], ["A mixture must have a liquid in it", "M_MM_NATURAL_NOT_MIXTURE"]], "Air holds oxygen, nitrogen and other gases, and they are not joined. It is a natural mixture."],
@@ -6082,12 +7494,12 @@ var FAMILIES5 = [
     ], { h: ["Think about whether each substance is changed or only put with the other.", "Ask whether you could get each part back."], s1: "Decide whether the parts are only put together." })
   }),
   // ---------------------------------------------------------------- HOMOGENEOUS_OR_HETEROGENEOUS
-  sfam({
+  sfam2({
     id: "sci5.mix.mh.type",
     cs: `${M}HOMOGENEOUS_OR_HETEROGENEOUS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Salt is dissolved in clear water. What kind of mixture is this?", "Homogeneous: it looks the same all through", [["Heterogeneous: the salt can be seen", "M_MH_DISSOLVED_GONE"], ["Not a mixture: the salt has disappeared", "M_MH_DISSOLVED_GONE"], ["Not a mixture: clear water is pure", "M_MH_CLEAR_IS_PURE"]], "Dissolved salt is spread evenly through the water, so the mixture looks the same all through."],
       ["Sand is stirred into water. What kind of mixture is this?", "Heterogeneous: the sand settles and can be seen", [["Homogeneous: it looked the same when stirred", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: sand is in every part", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: sand and water are alike", "M_MH_DISSOLVED_GONE"]], "Sand does not dissolve. It settles, and you can see the sand and the water separately."],
       ["Maize and beans are mixed in a sack. What kind of mixture is this?", "Heterogeneous: both can be seen", [["Homogeneous: they are in the same sack", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: shaking made them look alike", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: both are foods", "M_MH_DISSOLVED_GONE"]], "You can see maize and beans as separate parts, so the mixture is heterogeneous."],
@@ -6095,12 +7507,12 @@ var FAMILIES5 = [
       ["Cooking oil is poured onto water. What kind of mixture is this?", "Heterogeneous: the oil floats in a layer", [["Homogeneous: both are liquids", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: it looks the same after stirring", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: oil and water are both clear", "M_MH_CLEAR_IS_PURE"]], "Oil does not mix evenly with water. It forms a separate layer that you can see."]
     ], { h: ["Ask: can I see different parts, or does it look the same all through?", "Dissolved things are still there, even when you cannot see them."], s1: "Look at whether different parts can be seen." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mh.list",
     cs: `${M}HOMOGENEOUS_OR_HETEROGENEOUS`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A teacher asks the class to find mixtures where different parts can be seen. Which list is correct?", "Soil and water, maize and beans, sand and gravel", [["Soil and water, salt in water, sand and gravel", "M_MH_DISSOLVED_GONE"], ["Sugar in tea, maize and beans, sand and gravel", "M_MH_CLEAR_IS_PURE"], ["Soil and water, maize and beans, salty water", "M_MH_DISSOLVED_GONE"]], "Soil and water, maize and beans, and sand and gravel all show separate parts. Salt, sugar and salty water look the same all through."],
       ["Which list has only mixtures that look the same all through?", "Salt in water, sugar in tea, air", [["Salt in water, sugar in tea, sand in water", "M_MH_STIRRED_IS_HOMO"], ["Salt in water, oil in water, air", "M_MH_STIRRED_IS_HOMO"], ["Maize and beans, sugar in tea, air", "M_MH_STIRRED_IS_HOMO"]], "Salt in water, sugar in tea and air look the same all through. Sand in water and oil in water show different parts."],
       ["In a school kitchen the cook stirs one cup of muddy water and one cup of sugar water. Which statement is right?", "The muddy water is heterogeneous, the sugar water is homogeneous", [["Both are homogeneous, because both were stirred", "M_MH_STIRRED_IS_HOMO"], ["Both are heterogeneous, because both have two parts", "M_MH_DISSOLVED_GONE"], ["The sugar water is not a mixture at all", "M_MH_CLEAR_IS_PURE"]], "The mud settles and shows separate parts. The sugar is dissolved and looks the same all through."],
@@ -6108,12 +7520,12 @@ var FAMILIES5 = [
       ["A learner makes four drinks. Which one is a heterogeneous mixture?", "Orange juice with bits of fruit pulp floating in it", [["Sugar dissolved in clear water", "M_MH_DISSOLVED_GONE"], ["Salt dissolved in clear water", "M_MH_DISSOLVED_GONE"], ["Clear tea with sugar and no leaves", "M_MH_CLEAR_IS_PURE"]], "You can see the pulp as a separate part. The clear drinks look the same all through."]
     ], { h: ["Check each item in the list: can you see different parts?", "Dissolved sugar and salt look the same all through."], s1: "Check every item in each list." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mh.table",
     cs: `${M}HOMOGENEOUS_OR_HETEROGENEOUS`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "The table shows what a class saw in four mixtures. Which one is homogeneous?",
         "Mixture B",
@@ -6151,12 +7563,12 @@ var FAMILIES5 = [
       ]
     ], { h: ["Read the words about what was seen: are there separate parts?", "Dissolved things look the same all through."], s1: "Look for whether separate parts are described." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mh.spot",
     cs: `${M}HOMOGENEOUS_OR_HETEROGENEOUS`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says salty water is not a mixture. Which step has the mistake?", [["Step 1: Hassan stirs salt into clear water.", true], ["Step 2: He cannot see the salt, so he decides it has gone.", false], ["Step 3: He writes that salty water is only water.", true]], "The salt is still there, but you cannot see it. Salty water is a mixture, and it looks the same all through, so it is homogeneous.", "M_MH_DISSOLVED_GONE"],
       ["Karimi says muddy water is homogeneous. Which step has the mistake?", [["Step 1: Karimi stirs soil into water.", true], ["Step 2: It looks even brown, so he decides it will stay that way.", false], ["Step 3: He writes that muddy water is homogeneous.", true]], "Stirred muddy water looks even for a short time, but the soil settles. Different parts can be seen, so it is heterogeneous.", "M_MH_STIRRED_IS_HOMO"],
       ["Zawadi says sugar water is pure water. Which step has the mistake?", [["Step 1: Zawadi dissolves sugar in a glass of clear water.", true], ["Step 2: The water is clear, so she decides it is pure.", false], ["Step 3: She writes that it is pure water.", true]], "Clear does not mean pure. Sugar water tastes sweet because it holds sugar. It is a mixture.", "M_MH_CLEAR_IS_PURE"],
@@ -6164,12 +7576,12 @@ var FAMILIES5 = [
     ], { h: ["Which step gives a reason that is not true?", "Think about what stays when the mixture is left to stand."], s1: "A homogeneous mixture stays the same all through when left to stand." })
   }),
   // ---------------------------------------------------------------- MIXTURE_TYPES
-  sfam({
+  sfam2({
     id: "sci5.mix.mt.type",
     cs: `${M}MIXTURE_TYPES`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Salt is dissolved in water. What type of mixture is this?", "Solid-liquid", [["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-solid", "M_MT_LOOKS_LIQUID"], ["Liquid-gas", "M_MT_LOOKS_LIQUID"]], "Salt is a solid and water is a liquid, so it is a solid-liquid mixture."],
       ["Cooking oil and water are mixed. What type of mixture is this?", "Liquid-liquid", [["Solid-liquid", "M_MT_THICK_IS_SOLID"], ["Solid-solid", "M_MT_THICK_IS_SOLID"], ["Gas-liquid", "M_MT_THICK_IS_SOLID"]], "Oil flows, so it is a liquid. Oil and water make a liquid-liquid mixture."],
       ["Maize and beans are mixed in a sack. What type of mixture is this?", "Solid-solid", [["Solid-liquid", "M_MT_LOOKS_LIQUID"], ["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-gas", "M_MT_LOOKS_LIQUID"]], "Maize and beans are both solids, so this is a solid-solid mixture."],
@@ -6177,12 +7589,12 @@ var FAMILIES5 = [
       ["Soil is mixed with water. What type of mixture is this?", "Solid-liquid", [["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-solid", "M_MT_LOOKS_LIQUID"], ["Gas-liquid", "M_MT_LOOKS_LIQUID"]], "Soil is a solid and water is a liquid. The mixture is solid-liquid."]
     ], { h: ["Name the state of each part before they were mixed.", "A thick liquid, such as oil or honey, still flows."], s1: "Name the state of each part: solid, liquid or gas." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mt.sort",
     cs: `${M}MIXTURE_TYPES`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A teacher asks for solid-liquid mixtures. Which list has only solid-liquid mixtures?", "Sand in water, salt in water, tea leaves in tea", [["Sand in water, oil in water, tea leaves in tea", "M_MT_THICK_IS_SOLID"], ["Sand in water, salt in water, maize and beans", "M_MT_LOOKS_LIQUID"], ["Milk in water, salt in water, tea leaves in tea", "M_MT_LOOKS_LIQUID"]], "In each of these a solid is mixed with a liquid. Oil, milk and water are liquids, and maize and beans are solids."],
       ["Which list has only liquid-liquid mixtures?", "Oil and water, milk and water, vinegar and water", [["Oil and water, salt and water, vinegar and water", "M_MT_LOOKS_LIQUID"], ["Oil and water, milk and water, soil and water", "M_MT_THICK_IS_SOLID"], ["Maize and water, milk and water, vinegar and water", "M_MT_THICK_IS_SOLID"]], "Oil, milk, vinegar and water are all liquids. Salt, soil and maize are solids."],
       ["Which list has only solid-solid mixtures?", "Maize and beans, sand and gravel, rice and stones", [["Maize and beans, sand and water, rice and stones", "M_MT_LOOKS_LIQUID"], ["Maize and beans, sand and gravel, honey and sand", "M_MT_THICK_IS_SOLID"], ["Salt in water, sand and gravel, rice and stones", "M_MT_LOOKS_LIQUID"]], "Each of these has two solids. Water and honey are liquids."],
@@ -6191,12 +7603,12 @@ var FAMILIES5 = [
     ], { h: ["Decide whether each part is a solid, a liquid or a gas.", "The type depends on what the parts were before mixing."], s1: "List the state of each part in every mixture." })
   }),
   // ---------------------------------------------------------------- SEPARATION_METHOD_CHOICE
-  sfam({
+  sfam2({
     id: "sci5.mix.ms.method",
     cs: `${M}SEPARATION_METHOD_CHOICE`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which method separates stones from rice?", "Picking", [["Filtering", "M_MS_FILTER_FOR_ALL"], ["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "Stones in rice are easy to see and to pick out by hand. Filtering is for solids in a liquid."],
       ["Which method separates soil from muddy water?", "Filtering", [["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"], ["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Picking with the hand", "M_MS_FILTER_FOR_ALL"]], "Filter paper or cloth lets the water through and keeps the soil back."],
       ["Which method separates cooking oil from water?", "Using a separating funnel", [["Filtering", "M_MS_FILTER_FOR_ALL"], ["Sieving", "M_MS_FILTER_FOR_ALL"], ["Winnowing", "M_MS_FILTER_FOR_ALL"]], "Oil floats on water. A separating funnel lets the water run out of the tap first."],
@@ -6204,12 +7616,12 @@ var FAMILIES5 = [
       ["Which method separates chaff from maize grain after harvest?", "Winnowing", [["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Filtering", "M_MS_FILTER_FOR_ALL"], ["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "Wind blows the light chaff away and the heavier grain falls."]
     ], { h: ["Think about how the parts of the mixture are different: size, weight, iron or liquid.", "Filtering is for a solid mixed in a liquid."], s1: "Find what is different about the parts and choose the method that uses it." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.ms.story",
     cs: `${M}SEPARATION_METHOD_CHOICE`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A jua kali worker has a box with iron nails and aluminium bits mixed together. He wants only the nails. What can a magnet do?", "Pick out the iron nails and leave the aluminium", [["Pick out both the nails and the aluminium", "M_MS_MAGNET_ANY_METAL"], ["Pick out only the aluminium", "M_MS_MAGNET_ANY_METAL"], ["Pick out nothing, since metals are not magnetic", "M_MS_MAGNET_ANY_METAL"]], "A magnet picks up iron and steel. It does not pick up aluminium."],
       ["After a class experiment, a learner has a jar with cooking oil floating on water. Which tool should she use to separate them?", "A separating funnel", [["A piece of filter paper", "M_MS_FILTER_FOR_ALL"], ["A sieve with big holes", "M_MS_FILTER_FOR_ALL"], ["A magnet", "M_MS_MAGNET_ANY_METAL"]], "The two liquids do not mix. A separating funnel lets the lower liquid run out first."],
       ["A mother wants to take out the big husks from a basin of maize flour before cooking ugali. What should she use?", "A sieve", [["A separating funnel", "M_MS_FUNNEL_SOLIDS"], ["A magnet", "M_MS_MAGNET_ANY_METAL"], ["Filter paper and water", "M_MS_FILTER_FOR_ALL"]], "The fine flour falls through the holes of a sieve and the big husks stay on it."],
@@ -6217,12 +7629,12 @@ var FAMILIES5 = [
       ["At harvest a family tosses maize from a basin into the wind. What are they separating, and how?", "Chaff from grain, by winnowing", [["Iron from grain, with a magnet", "M_MS_MAGNET_ANY_METAL"], ["Water from grain, by filtering", "M_MS_FILTER_FOR_ALL"], ["Oil from grain, with a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "The light chaff blows away and the heavier grain falls back into the basin."]
     ], { h: ["Think about what is different about the parts of the mixture.", "A magnet picks up only iron and steel."], s1: "Match the difference between the parts to a method." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.ms.why",
     cs: `${M}SEPARATION_METHOD_CHOICE`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["Why will a sieve not separate salt dissolved in water?", "Dissolved salt is in tiny pieces that pass through", [["Salt is much too big to fit through the holes", "M_MS_FILTER_FOR_ALL"], ["A sieve only works on liquids and not on solids", "M_MS_FILTER_FOR_ALL"], ["Salt is magnetic so it sticks to the sieve", "M_MS_MAGNET_ANY_METAL"]], "Dissolved salt is broken into tiny pieces that go through any sieve or filter."],
       ["Why is a magnet no use for separating sand and salt?", "Neither of them is attracted by a magnet", [["A magnet only works on liquids and not on solids", "M_MS_MAGNET_ANY_METAL"], ["Sand and salt are both kinds of metal", "M_MS_MAGNET_ANY_METAL"], ["A magnet always works, but it takes a long time", "M_MS_MAGNET_ANY_METAL"]], "A magnet attracts only iron, steel and a few other metals. Sand and salt are not metals."],
       ["Why is a separating funnel the wrong tool for sand in water?", "It is for liquids that do not mix, not for solids", [["It only works on solids that are dissolved in water", "M_MS_FUNNEL_SOLIDS"], ["The sand would be pulled out through the tap by the water", "M_MS_FUNNEL_SOLIDS"], ["It works on any mixture that has a liquid in it", "M_MS_FUNNEL_SOLIDS"]], "A separating funnel separates two liquids that do not mix, such as oil and water."],
@@ -6231,12 +7643,12 @@ var FAMILIES5 = [
     ], { h: ["Think about what the method uses: size, weight, magnetism or a liquid.", "Check whether the method fits the parts of the mixture."], s1: "State what the method needs, then check the mixture." })
   }),
   // ---------------------------------------------------------------- SEPARATION_PRINCIPLE
-  sfam({
+  sfam2({
     id: "sci5.mix.mp.what",
     cs: `${M}SEPARATION_PRINCIPLE`,
     form: "direct",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Salty water is poured through filter paper. What comes through the paper?", "Water with the salt still dissolved in it", [["Only pure water", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Only salt", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Nothing at all", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved salt is in tiny pieces that go through the paper with the water."],
       ["When grain is winnowed, what does the wind blow away?", "The lighter chaff", [["The heavier grain", "M_MP_WINNOW_REVERSED"], ["Both equally", "M_MP_WINNOW_REVERSED"], ["Neither one", "M_MP_WINNOW_REVERSED"]], "The wind blows away the light chaff. The heavier grain falls straight down."],
       ["Maize flour with husks is passed through a sieve. What stays on top?", "The big husks", [["The fine flour", "M_MP_SIEVE_REVERSED"], ["Both stay on top", "M_MP_SIEVE_REVERSED"], ["Nothing stays on top", "M_MP_SIEVE_REVERSED"]], "The holes let the fine flour fall through. The big husks cannot fit through."],
@@ -6244,12 +7656,12 @@ var FAMILIES5 = [
       ["Sugar is dissolved in water and the mixture is filtered. Where is the sugar afterwards?", "In the water that has gone through", [["Left on the filter paper", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Gone for ever", "M_MP_FILTER_REMOVES_DISSOLVED"], ["At the bottom of the funnel only", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved sugar goes through the filter with the water."]
     ], { h: ["Think about the size or the weight of the pieces.", "Dissolved things are in tiny pieces."], s1: "Think about what is different about the pieces." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mp.cause",
     cs: `${M}SEPARATION_PRINCIPLE`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["A family winnows maize on a windy day. Why does the chaff blow away but the grain does not?", "The chaff is lighter than the grain", [["The chaff is heavier than the grain", "M_MP_WINNOW_REVERSED"], ["The grain is lighter than the chaff", "M_MP_WINNOW_REVERSED"], ["The wind chooses what to blow", "M_MP_WINNOW_REVERSED"]], "Light things are blown away by the wind. The heavier grain falls down."],
       ["Wanjiru sieves flour and finds husks left on the sieve. Why did the husks stay on it?", "The husks are bigger than the holes", [["The husks are smaller than the holes", "M_MP_SIEVE_REVERSED"], ["The husks are lighter than the flour", "M_MP_SIEVE_REVERSED"], ["The holes catch small things", "M_MP_SIEVE_REVERSED"]], "A sieve lets pieces smaller than its holes go through. Bigger pieces stay on top."],
       ["A learner filters salty water and tastes it. It is still salty. Why?", "Dissolved salt is in tiny pieces that go through the paper", [["The filter was dirty", "M_MP_FILTER_REMOVES_DISSOLVED"], ["The salt was too big for the paper to catch", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Filter paper adds salt to the water", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved salt is much smaller than the holes in filter paper. It goes through with the water."],
@@ -6257,12 +7669,12 @@ var FAMILIES5 = [
       ["Which statement explains why a magnet can separate iron nails from sand?", "The magnet attracts iron but not sand", [["The magnet attracts everything but sand is too heavy", "M_MP_WINNOW_REVERSED"], ["The magnet pushes the sand away", "M_MP_SIEVE_REVERSED"], ["The magnet makes the nails dissolve", "M_MP_FILTER_REMOVES_DISSOLVED"]], "A magnet only attracts iron and steel. The sand is not attracted, so it stays behind."]
     ], { h: ["Think about size, weight or magnetism: which property is different?", "Dissolved things pass through a filter."], s1: "Name the property that the method uses." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mp.spot",
     cs: `${M}SEPARATION_PRINCIPLE`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan explains why filtering will separate salt from salty water. Which step has the mistake?", [["Step 1: Hassan pours salty water into filter paper.", true], ["Step 2: He says the paper holds the salt back.", false], ["Step 3: He says only pure water drips through.", true]], "Dissolved salt is in tiny pieces that go through the paper with the water. Filtering cannot take out dissolved things.", "M_MP_FILTER_REMOVES_DISSOLVED"],
       ["Karimi explains winnowing. Which step has the mistake?", [["Step 1: Karimi tosses grain and chaff into the wind.", true], ["Step 2: He says the wind blows the heavy grain away.", false], ["Step 3: He says the chaff is left in the basin.", true]], "The wind blows away the light chaff. The heavy grain falls back into the basin.", "M_MP_WINNOW_REVERSED"],
       ["Zawadi explains sieving flour. Which step has the mistake?", [["Step 1: Zawadi shakes flour with husks in a sieve.", true], ["Step 2: She says the big husks fall through the holes.", false], ["Step 3: She says the fine flour stays on top.", true]], "Small pieces fall through the holes. The big husks stay on top.", "M_MP_SIEVE_REVERSED"],
@@ -6270,12 +7682,12 @@ var FAMILIES5 = [
     ], { h: ["Which step says something that is not true about the method?", "Think about which pieces are small enough to go through."], s1: "Check each step against what the method really does." })
   }),
   // ---------------------------------------------------------------- SEPARATION_USES
-  sfam({
+  sfam2({
     id: "sci5.mix.mu.use",
     cs: `${M}SEPARATION_USES`,
     form: "word",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["A grandmother strains tea through a small sieve into the cups. Which method is she using?", "Sieving or filtering, to hold back the tea leaves", [["Winnowing, to blow the leaves out of the cup", "M_MU_ONLY_LAB"], ["A magnet, to pick the tea leaves out of the cup", "M_MU_ONLY_LAB"], ["A separating funnel, to separate two liquids", "M_MU_ONLY_LAB"]], "The strainer lets the liquid through and holds the tea leaves back."],
       ["Where do people separate mixtures?", "At home, on farms and at work as well as in labs", [["Only in a science laboratory with special tools", "M_MU_ONLY_LAB"], ["Only in big factories that make food or goods", "M_MU_ONLY_LAB"], ["Only in schools, by teachers and learners", "M_MU_ONLY_LAB"]], "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain."],
       ["A scrap metal dealer at a jua kali workshop wants to take iron out of a heap of mixed waste. What can help?", "A strong magnet, which picks up iron", [["A sieve, which keeps small pieces", "M_MU_ONLY_LAB"], ["A funnel, which pours liquids", "M_MU_ONLY_LAB"], ["Winnowing, which blows light things away", "M_MU_ONLY_LAB"]], "A magnet picks up iron and steel from a heap of mixed waste."],
@@ -6283,12 +7695,12 @@ var FAMILIES5 = [
       ["A family pours muddy rainwater through a clean cloth before using it for washing. Which statement is correct?", "It holds back soil but does not make water safe", [["The water is now safe to drink right away", "M_MU_FILTER_IS_SAFE"], ["The cloth takes out all the germs in the water", "M_MU_FILTER_IS_SAFE"], ["This only works in a laboratory with special cloth", "M_MU_ONLY_LAB"]], "The cloth takes out the bits of soil you can see. Germs and dissolved things pass through."]
     ], { h: ["Think about the job and what is different about the parts.", "Filtering does not make water safe to drink."], s1: "Match the job to the method that fits it." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.mix.mu.odd",
     cs: `${M}SEPARATION_USES`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Which of these is not an example of separating a mixture?", "Stirring sugar into tea", [["Straining tea leaves from tea", "M_MU_ONLY_LAB"], ["Picking stones from beans", "M_MU_ONLY_LAB"], ["Sieving flour to take out husks", "M_MU_ONLY_LAB"]], "Stirring sugar into tea makes a mixture. The other three take the parts of a mixture apart."],
       ["Which job is an example of separating a mixture in a Kenyan home?", "Picking stones out of rice before cooking", [["Adding salt to the ugali", "M_MU_ONLY_LAB"], ["Mixing flour and water for chapati", "M_MU_ONLY_LAB"], ["Boiling milk for tea", "M_MU_ONLY_LAB"]], "Picking stones out of rice takes apart a mixture. The other jobs make mixtures or heat food."],
       ["Where is winnowing done?", "On a farm after harvest, in the wind", [["Only in a laboratory with a machine", "M_MU_ONLY_LAB"], ["Only in a river", "M_MU_ONLY_LAB"], ["Only in a school kitchen", "M_MU_ONLY_LAB"]], "Farmers winnow grain after harvest, using the wind to blow away the chaff."],
@@ -6297,12 +7709,12 @@ var FAMILIES5 = [
     ], { h: ["Think about which action takes a mixture apart.", "Filtering takes out soil but not germs."], s1: "Ask whether the action takes the parts of a mixture apart." })
   }),
   // ---------------------------------------------------------------- POLLUTANT_IDENTIFY
-  sfam({
+  sfam2({
     id: "sci5.water.wp.which",
     cs: `${W}POLLUTANT_IDENTIFY`,
     form: "word",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Wanjiru and her mother wash clothes at the river bank. Which thing from this job pollutes the water?", "Soap and dirty washing water", [["Rain falling into the river", "M_WP_HELPFUL_THINGS_SAFE"], ["Clean water from a spring", "M_WP_ONLY_VISIBLE"], ["Fish swimming in the river", "M_WP_ONLY_FACTORIES"]], "Soap and dirty water can harm fish and make water unsafe to use."],
       ["A garage in town pours used engine oil into a drain that goes to a stream. What is the oil in the stream?", "A water pollutant", [["Clean rainwater that is clear", "M_WP_ONLY_VISIBLE"], ["Fresh spring water for fish", "M_WP_ONLY_VISIBLE"], ["A river stone that is smooth", "M_WP_ONLY_FACTORIES"]], "Oil floats on water and harms animals and plants."],
       ["After heavy rain, extra fertiliser from a maize shamba is washed into a pond. What is the fertiliser in the pond?", "A water pollutant", [["Clear water from a borehole", "M_WP_ONLY_VISIBLE"], ["Sand at the pond bed", "M_WP_HELPFUL_THINGS_SAFE"], ["Air bubbles in the pond", "M_WP_ONLY_VISIBLE"]], "Fertiliser helps crops, but in a pond it can make algae grow and harm fish."],
@@ -6310,12 +7722,12 @@ var FAMILIES5 = [
       ["A latrine has been dug right at the bank of a stream. What can happen to the stream water?", "Waste can seep into it and spread germs", [["Nothing, since the latrine is a pit", "M_WP_ONLY_FACTORIES"], ["It stays clean, since waste sinks", "M_WP_ONLY_VISIBLE"], ["It becomes cleaner as the waste feeds fish", "M_WP_HELPFUL_THINGS_SAFE"]], "Waste from a latrine near water carries germs into the water."]
     ], { h: ["Think about what harms the living things in the water.", "Clean rain and spring water are not pollutants."], s1: "Pick the thing that makes water unsafe or harms living things." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.water.wp.who",
     cs: `${W}POLLUTANT_IDENTIFY`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["The water in a stream looks clear. Does that mean it is not polluted?", "No, germs and chemicals cannot be seen", [["Yes, clear water cannot be polluted", "M_WP_ONLY_VISIBLE"], ["Yes, pollution always has a colour", "M_WP_ONLY_VISIBLE"], ["Yes, it is clear so it is safe to drink", "M_WP_ONLY_VISIBLE"]], "Many germs and chemicals cannot be seen. Clear water can still be polluted."],
       ["Which of these can pollute a river?", "Factory pipes, bank washing and latrines", [["Only a factory pipe pouring out waste", "M_WP_ONLY_FACTORIES"], ["Only oil leaking from big ships at sea", "M_WP_ONLY_FACTORIES"], ["Nothing, rivers always clean themselves", "M_WP_ONLY_FACTORIES"]], "Homes, shambas and schools pollute water too, not only factories."],
       ["A farmer says fertiliser cannot pollute water because it helps plants grow. What is wrong with this?", "Rain can wash it into a river and harm fish", [["Nothing, helpful things cannot harm anyone", "M_WP_HELPFUL_THINGS_SAFE"], ["Fertiliser is only harmful when it is dry", "M_WP_HELPFUL_THINGS_SAFE"], ["Fertiliser makes rivers cleaner for fish", "M_WP_HELPFUL_THINGS_SAFE"]], "Useful things can pollute when they get into water in the wrong place."],
@@ -6324,12 +7736,12 @@ var FAMILIES5 = [
     ], { h: ["Think about who and what can put waste into water.", "Looks, size of the polluter and usefulness do not decide."], s1: "Check the reason: is it about what harms living things?" })
   }),
   // ---------------------------------------------------------------- POLLUTION_EFFECTS
-  sfam({
+  sfam2({
     id: "sci5.water.we.effect",
     cs: `${W}POLLUTION_EFFECTS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Oil spills into a river. What happens to the fish?", "Many fish may die or fall ill", [["Nothing, pollution only harms people", "M_WE_ONLY_PEOPLE"], ["The fish grow faster", "M_WE_ONLY_PEOPLE"], ["The fish drink the oil and are cleaned", "M_WE_ONLY_PEOPLE"]], "Oil covers the water and harms fish and other animals."],
       ["A factory dumps waste into a river. Who may be harmed?", "People and animals living further down the river", [["Only the people who live next to the factory", "M_WE_UPSTREAM_ONLY"], ["Nobody, since the river is so big and wide", "M_WE_UPSTREAM_ONLY"], ["Only the people who work inside the factory", "M_WE_UPSTREAM_ONLY"]], "A river carries pollution with the water, so people far downstream can be harmed."],
       ["Which illness can be caused by drinking polluted water?", "Diarrhoea, cholera or typhoid", [["A broken bone in the leg", "M_WE_ONLY_PEOPLE"], ["A sunburn from the sun", "M_WE_BAD_TASTE_ONLY"], ["A sprained ankle from a fall", "M_WE_BAD_TASTE_ONLY"]], "Germs in polluted water cause diarrhoea, cholera and typhoid."],
@@ -6337,12 +7749,12 @@ var FAMILIES5 = [
       ["Too much fertiliser washes into a pond and the water turns green with algae. What can happen to the fish?", "Many fish may die for lack of oxygen", [["The fish eat the algae and grow bigger", "M_WE_ONLY_PEOPLE"], ["Nothing, pollution only harms people", "M_WE_ONLY_PEOPLE"], ["The fish move to the green water", "M_WE_ONLY_PEOPLE"]], "Too much algae uses up the oxygen in the water, so fish cannot breathe."]
     ], { h: ["Think about who is harmed: people, animals and plants, near and far.", "Pollution travels with moving water."], s1: "Think of all the living things that use the water." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.water.we.story",
     cs: `${W}POLLUTION_EFFECTS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A village gets its water from a river. Last week a mine upstream let waste into it. Today many children in the village have stomach pains. What is the most likely reason?", "The polluted river water made them ill", [["The children ate too much sugar", "M_WE_BAD_TASTE_ONLY"], ["The river water is only harmful where the mine is", "M_WE_UPSTREAM_ONLY"], ["Pollution only harms animals, not children", "M_WE_ONLY_PEOPLE"]], "A river carries waste downstream, and polluted water can make people ill far away."],
       ["Near a lake, a hotel pours dirty water into the shallows. After some weeks many dead fish float near the shore. What does this show?", "Pollution harms animals as well as people", [["The fish died because they were too old", "M_WE_ONLY_PEOPLE"], ["Pollution harms only people, so the fish died for another reason", "M_WE_ONLY_PEOPLE"], ["The dirty water cannot reach the fish", "M_WE_UPSTREAM_ONLY"]], "Fish live in the water. When it is polluted, they can die."],
       ["A family collects water from a stream. It looks and tastes fine, but one week the baby gets diarrhoea. What may have happened?", "The water held germs that cannot be seen or tasted", [["The water was clear, so it cannot be to blame", "M_WE_BAD_TASTE_ONLY"], ["The baby drank too little water", "M_WE_BAD_TASTE_ONLY"], ["Only factory waste can cause diarrhoea", "M_WE_ONLY_PEOPLE"]], "Germs from waste can be in clear water. They cause diarrhoea and cholera."],
@@ -6351,12 +7763,12 @@ var FAMILIES5 = [
     ], { h: ["Think about who uses the water: people, animals and plants.", "Germs have no smell or taste."], s1: "Name who is harmed and how the pollution reached them." })
   }),
   // ---------------------------------------------------------------- POLLUTION_PREVENTION
-  sfam({
+  sfam2({
     id: "sci5.water.wr.action",
     cs: `${W}POLLUTION_PREVENTION`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which action helps to keep a river clean?", "Throwing rubbish in a pit, far from the water", [["Throwing rubbish into the river", "M_WR_RIVER_WASHES_AWAY"], ["Washing clothes in the river", "M_WR_WASH_IN_RIVER"], ["Digging a latrine next to the river", "M_WR_LATRINE_NEAR_WELL"]], "Rubbish in a pit stays away from the water."],
       ["Where is the best place to dig a latrine?", "Far from the well and the river", [["Next to the well, so it is easy to reach", "M_WR_LATRINE_NEAR_WELL"], ["Beside the river, so waste is carried away", "M_WR_RIVER_WASHES_AWAY"], ["Under the tree next to the well", "M_WR_LATRINE_NEAR_WELL"]], "Waste from a latrine can seep through the soil into wells and rivers."],
       ["Where should a family wash clothes to keep a stream clean?", "Away from the stream, pouring used water on the ground", [["In the stream, because soap washes away", "M_WR_WASH_IN_RIVER"], ["At the edge of the stream, with a little soap", "M_WR_WASH_IN_RIVER"], ["In the stream, if the water is big", "M_WR_RIVER_WASHES_AWAY"]], "Soap and dirt harm fish and make the water unsafe for others."],
@@ -6364,12 +7776,12 @@ var FAMILIES5 = [
       ["A farmer uses too much pesticide on his shamba near a stream. What should he do to protect the stream?", "Use less pesticide and keep it away from the water", [["Pour the extra into the stream", "M_WR_RIVER_WASHES_AWAY"], ["Use more, since rain washes it away", "M_WR_RIVER_WASHES_AWAY"], ["Wash the sprayer in the stream", "M_WR_WASH_IN_RIVER"]], "Pesticides can reach the stream and harm fish. Using less, and keeping it away from the water, helps."]
     ], { h: ["Think about keeping waste and chemicals away from the water.", "A big river does not make waste disappear."], s1: "Choose the action that keeps waste away from the water." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.water.wr.why",
     cs: `${W}POLLUTION_PREVENTION`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ['Kamau says, "The river is big, so one bag of rubbish does no harm." What is wrong with this?', "The waste spreads and harms others downstream", [["Nothing, a big river washes it all away", "M_WR_RIVER_WASHES_AWAY"], ["Nothing, rubbish dissolves in a big river", "M_WR_RIVER_WASHES_AWAY"], ["Nothing, only factories pollute rivers", "M_WR_RIVER_WASHES_AWAY"]], "A river carries waste away to other places, where it still harms."],
       ["Why should a latrine be dug far from a well?", "Waste can seep through the soil into the well", [["Latrines smell too much near wells", "M_WR_LATRINE_NEAR_WELL"], ["Wells make latrines fill up faster", "M_WR_LATRINE_NEAR_WELL"], ["There is no reason, it is only a custom", "M_WR_LATRINE_NEAR_WELL"]], "Germs from a latrine can travel through the soil to the well water."],
       ["Why is it better to wash clothes at home and pour the used water on the ground?", "Soap and dirt stay out of the stream", [["The stream is too cold for washing", "M_WR_WASH_IN_RIVER"], ["Soap does no harm in a river", "M_WR_WASH_IN_RIVER"], ["Stream water is too dirty for washing", "M_WR_WASH_IN_RIVER"]], "Soap and dirt harm fish and make the stream unsafe for others to use."],
@@ -6378,12 +7790,12 @@ var FAMILIES5 = [
     ], { h: ["Think about where the waste goes after it leaves you.", "A big river carries waste, it does not remove it."], s1: "Follow the waste to find where it ends up." })
   }),
   // ---------------------------------------------------------------- WATER_TREATMENT_CHOICE
-  sfam({
+  sfam2({
     id: "sci5.water.wt.method",
     cs: `${W}WATER_TREATMENT_CHOICE`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which method kills germs in water?", "Boiling", [["Filtering through cloth", "M_WT_FILTER_MAKES_SAFE"], ["Letting it stand for a minute", "M_WT_FILTER_MAKES_SAFE"], ["Pouring it into a clean bucket", "M_WT_FILTER_MAKES_SAFE"]], "Boiling for at least one minute kills germs. Filtering only takes out solid bits."],
       ["Water is muddy. Which should be done first?", "Let it settle, then filter it", [["Put it in the sun in a bucket", "M_WT_SOLAR_MUDDY"], ["Add three tablets of chlorine", "M_WT_MORE_CHLORINE"], ["Boil it and drink it at once", "M_WT_BOIL_REMOVES_ALL"]], "Mud makes it hard to kill germs. Settle and filter first, then boil or treat it."],
       ["Water has soap and oil in it. Will boiling make it safe to drink?", "No, boiling does not remove soap or oil", [["Yes, boiling removes everything harmful", "M_WT_BOIL_REMOVES_ALL"], ["Yes, boiling turns soap into water", "M_WT_BOIL_REMOVES_ALL"], ["Yes, as long as it boils for an hour", "M_WT_BOIL_REMOVES_ALL"]], "Boiling does not take out chemicals. Water with soap and oil should not be drunk."],
@@ -6391,12 +7803,12 @@ var FAMILIES5 = [
       ["A mother adds more water treatment tablets than the packet says. Why is this wrong?", "Too much chlorine tastes bad and harms people", [["More tablets always make it much safer", "M_WT_MORE_CHLORINE"], ["It does not matter how many she adds", "M_WT_MORE_CHLORINE"], ["The tablets only work if she uses more", "M_WT_MORE_CHLORINE"]], "Use exactly the amount on the packet."]
     ], { h: ["Think about what each method does: it removes bits, kills germs, or both.", "Boiling does not remove chemicals."], s1: "Match the method to the problem in the water." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.water.wt.order",
     cs: `${W}WATER_TREATMENT_CHOICE`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A family takes water from a muddy stream. Which list shows what they should do, in order?", "Let it settle, filter it, then boil it", [["Boil it, then filter it, then let it settle", "M_WT_BOIL_REMOVES_ALL"], ["Filter it, then drink it", "M_WT_FILTER_MAKES_SAFE"], ["Add more chlorine than needed, then drink it", "M_WT_MORE_CHLORINE"]], "First take out the soil, then kill the germs by boiling."],
       ["A school wants to use the sun to treat its drinking water. Which list shows what they should do?", "Filter the water, pour it in a clear bottle and leave it in the sun", [["Pour muddy water in a clear bottle and leave it in the sun", "M_WT_SOLAR_MUDDY"], ["Pour muddy water in a black bucket in the sun", "M_WT_SOLAR_MUDDY"], ["Filter it and then drink it at once", "M_WT_FILTER_MAKES_SAFE"]], "Clear water in a clear bottle lets sunlight kill the germs."],
       ["A health worker treats stream water with chlorine tablets. Which list shows the right steps?", "Filter out the dirt, add the tablets as the packet says, wait before drinking", [["Add the tablets to muddy water and drink it at once", "M_WT_SOLAR_MUDDY"], ["Add three times the amount on the packet", "M_WT_MORE_CHLORINE"], ["Boil it with soap to clean it", "M_WT_BOIL_REMOVES_ALL"]], "Clear water, the right amount of chlorine, and time to work make the water safe."],
@@ -6404,12 +7816,12 @@ var FAMILIES5 = [
       ["A family has dirty rainwater with soap in it from the roof tank. What is right?", "Do not drink it, even after boiling; use it for washing", [["Boil it and drink it, since boiling removes soap", "M_WT_BOIL_REMOVES_ALL"], ["Filter it with cloth and drink it", "M_WT_FILTER_MAKES_SAFE"], ["Add extra chlorine and drink it", "M_WT_MORE_CHLORINE"]], "Boiling and filtering do not take out soap. Do not drink water with soap in it."]
     ], { h: ["Think about what has to be done first: settle and filter, then kill germs.", "Each method does one job."], s1: "Put the jobs in order: remove dirt first, then kill germs." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.water.wt.spot",
     cs: `${W}WATER_TREATMENT_CHOICE`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says filtered stream water is safe to drink. Which step has the mistake?", [["Step 1: Hassan pours stream water through a clean cloth.", true], ["Step 2: The water looks clear, so he decides it is safe.", false], ["Step 3: He drinks it.", true]], "Clear water can still hold germs. It must also be boiled or treated before drinking.", "M_WT_FILTER_MAKES_SAFE"],
       ["Karimi says boiling will make soapy water safe to drink. Which step has the mistake?", [["Step 1: Karimi boils water that has soap in it.", true], ["Step 2: He decides boiling removes everything harmful.", false], ["Step 3: He drinks the water.", true]], "Boiling kills germs, but it does not remove soap or chemicals. The water is not safe to drink.", "M_WT_BOIL_REMOVES_ALL"],
       ["Zawadi wants to treat muddy water in the sun. Which step has the mistake?", [["Step 1: Zawadi fills a clear bottle with muddy river water.", true], ["Step 2: She leaves it in the sun for six hours without filtering.", false], ["Step 3: She decides the water is safe.", true]], "The mud blocks the sunlight, so germs are not killed. The water must be settled and filtered first.", "M_WT_SOLAR_MUDDY"],
@@ -6420,16 +7832,16 @@ var FAMILIES5 = [
 
 // src/ai-tutor/content/families/sci_g5_force.js
 var F = "FORCE_.FLOATING_AND_SINKING.";
-var S = "FORCE_.SOUND_ENERGY.";
+var S2 = "FORCE_.SOUND_ENERGY.";
 var H2 = "FORCE_.HEAT_TRANSFER.";
-var FAMILIES6 = [
+var FAMILIES10 = [
   // ---------------------------------------------------------------- FLOAT_OR_SINK
-  sfam({
+  sfam2({
     id: "sci5.float.fa.will",
     cs: `${F}FLOAT_OR_SINK`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["A big wooden log is much heavier than a small stone. Which one sinks in water?", "The small stone", [["The big log, because it is heavier", "M_FA_HEAVY_SINKS"], ["Both sink, since both are solid", "M_FA_HEAVY_SINKS"], ["Neither sinks, since water holds up everything", "M_FA_HEAVY_SINKS"]], "Weight alone does not decide. The log is light for its size, so it floats. The small stone is heavy for its size, so it sinks."],
       ["Will an iron nail float or sink in water?", "It sinks", [["It floats, because it is so small and light", "M_FA_HEAVY_SINKS"], ["It floats, because it is made of metal", "M_FA_MATERIAL_ALWAYS"], ["It floats if the water is deep enough", "M_FA_DEEP_WATER"]], "An iron nail is heavy for its size, so it sinks."],
       ["Which of these will float on water?", "A dry piece of wood", [["A coin", "M_FA_HEAVY_SINKS"], ["A house key", "M_FA_MATERIAL_ALWAYS"], ["A small stone", "M_FA_HEAVY_SINKS"]], "Dry wood is light for its size, so it floats. Coins, keys and stones sink."],
@@ -6437,12 +7849,12 @@ var FAMILIES6 = [
       ["Will an empty plastic bottle with its cap on float or sink?", "It floats", [["It sinks, because plastic is heavy", "M_FA_MATERIAL_ALWAYS"], ["It sinks, because it is a solid", "M_FA_HEAVY_SINKS"], ["It floats only in a deep lake", "M_FA_DEEP_WATER"]], "The bottle holds a lot of air, so it is light for its size and floats."]
     ], { h: ["Think about whether the object is heavy or light for its size.", "The depth of the water does not change what floats."], s1: "Ask how heavy the object is for its size." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.float.fa.table",
     cs: `${F}FLOAT_OR_SINK`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "A class tested objects in a bucket of water. Which object sank although it was the smallest?",
         "The iron nail",
@@ -6480,12 +7892,12 @@ var FAMILIES6 = [
       ]
     ], { h: ["Compare what happened with the mass and the material.", "Heavy things can float and light things can sink."], s1: "Read each row of the table." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.float.fa.list",
     cs: `${F}FLOAT_OR_SINK`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A teacher puts objects in water. Which list has only objects that float?", "Cork, dry wood, empty bottle", [["Cork, coin, empty bottle", "M_FA_HEAVY_SINKS"], ["Cork, dry wood, steel spoon", "M_FA_MATERIAL_ALWAYS"], ["Stone, dry wood, empty bottle", "M_FA_HEAVY_SINKS"]], "Cork, dry wood and an empty bottle are light for their size. Coins, spoons and stones are not."],
       ["Which list has only objects that sink?", "Stone, coin, iron nail", [["Stone, coin, cork", "M_FA_HEAVY_SINKS"], ["Stone, wooden log, iron nail", "M_FA_HEAVY_SINKS"], ["Leaf, coin, iron nail", "M_FA_HEAVY_SINKS"]], "A stone, a coin and an iron nail are heavy for their size. A cork, a log and a leaf float."],
       ["A fisherman tests three things for his net. Which one floats?", "A piece of dry wood", [["A metal key", "M_FA_MATERIAL_ALWAYS"], ["A steel bolt", "M_FA_MATERIAL_ALWAYS"], ["A wet stone", "M_FA_HEAVY_SINKS"]], "Dry wood floats. The key, the bolt and the stone sink."],
@@ -6494,12 +7906,12 @@ var FAMILIES6 = [
     ], { h: ["Check each object in the list.", "Think whether each is light or heavy for its size."], s1: "Check each object, not only the first one." })
   }),
   // ---------------------------------------------------------------- FLOAT_FACTORS
-  sfam({
+  sfam2({
     id: "sci5.float.ff.change",
     cs: `${F}FLOAT_FACTORS`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A ball of clay sinks. The same clay is made into a bowl shape. What happens?", "It can float, because the bowl pushes aside more water", [["It still sinks, because it is the same clay", "M_FF_SHAPE_NO_EFFECT"], ["It sinks faster, since a bowl is lighter than a ball", "M_FF_SHAPE_NO_EFFECT"], ["It floats only if the bucket is made deeper", "M_FF_SHAPE_NO_EFFECT"]], "The same clay can float or sink depending on its shape. A bowl pushes aside more water."],
       ["Two blocks are the same size. Block A is heavier than block B. Which is more likely to sink?", "Block A, which is heavier for its size", [["Both of them float in just the same way", "M_FF_WEIGHT_ONLY"], ["Block B, which is the lighter of the two", "M_FF_WEIGHT_ONLY"], ["Neither, since only size decides the result", "M_FF_SIZE_ONLY"]], "For objects of the same size, the heavier one is more likely to sink."],
       ["A small piece of dry wood floats. Will a much bigger piece of the same wood float?", "Yes, it floats as well", [["No, it is too big", "M_FF_SIZE_ONLY"], ["No, it is too heavy", "M_FF_WEIGHT_ONLY"], ["Only in a deep lake", "M_FF_SIZE_ONLY"]], "Size alone does not decide. Big and small pieces of the same wood both float."],
@@ -6507,12 +7919,12 @@ var FAMILIES6 = [
       ["Many people climb into a small canoe on Lake Victoria. What happens?", "It floats lower and can sink if overloaded", [["Nothing changes, it floats just as high", "M_FF_LOAD_NO_EFFECT"], ["It floats higher, since the people are lighter than water", "M_FF_LOAD_NO_EFFECT"], ["It floats the same, only it goes faster", "M_FF_LOAD_NO_EFFECT"]], "Each extra load makes the canoe float lower. With too much load water comes in and it sinks."]
     ], { h: ["Think about the shape, the weight and the size together.", "More load makes a boat sit lower in the water."], s1: "Name what changed: shape, weight, size or load." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.float.ff.table",
     cs: `${F}FLOAT_FACTORS`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "A class changed one thing about the same lump of clay each time. What did they change?",
         "The shape",
@@ -6550,12 +7962,12 @@ var FAMILIES6 = [
       ]
     ], { h: ["Find which column stays the same and which column changes.", "Shape, weight, size and load all matter."], s1: "Look for what changed between the rows." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.float.ff.spot",
     cs: `${F}FLOAT_FACTORS`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says a clay bowl will sink because a clay ball sank. Which step has the mistake?", [["Step 1: Hassan drops a ball of clay in water and it sinks.", true], ["Step 2: He decides that shape makes no difference.", false], ["Step 3: He says the clay bowl will sink too.", true]], "Shape matters. A bowl shape pushes aside more water, so the same clay can float.", "M_FF_SHAPE_NO_EFFECT"],
       ["Karimi says the heavier of two same-size blocks floats better. Which step has the mistake?", [["Step 1: Karimi has two blocks of the same size.", true], ["Step 2: He says the heavier block is more likely to float.", false], ["Step 3: He tests both.", true]], "For the same size, the heavier block is more likely to sink, not float.", "M_FF_WEIGHT_ONLY"],
       ["Zawadi says the boat will float as high as ever with ten people in it. Which step has the mistake?", [["Step 1: Zawadi has a small boat with one person.", true], ["Step 2: She says adding people does not change how high it floats.", false], ["Step 3: She says ten people can get in.", true]], "More load makes a boat sit lower. With ten people it may sink.", "M_FF_LOAD_NO_EFFECT"],
@@ -6563,12 +7975,12 @@ var FAMILIES6 = [
     ], { h: ["Which step says something that is not true?", "Think about shape, weight, size and load together."], s1: "Check each step against what changes the way things float." })
   }),
   // ---------------------------------------------------------------- FLOAT_APPLICATIONS
-  sfam({
+  sfam2({
     id: "sci5.float.fu.why",
     cs: `${F}FLOAT_APPLICATIONS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Why does a huge steel ship float?", "Its shape pushes aside a lot of water", [["Steel is lighter than the sea water", "M_FU_STEEL_LIGHT"], ["The ship has no weight at all in water", "M_FU_FLOAT_NO_WEIGHT"], ["The sea is very deep and very wide", "M_FU_STEEL_LIGHT"]], "A ship is like a big hollow bowl. It pushes aside a lot of water, so it floats even though steel is heavy."],
       ["Why does a life jacket keep a swimmer up?", "It is light for its size, so it floats", [["It is heavier than water and pushes down", "M_FU_FLOAT_NO_WEIGHT"], ["It has no weight at all, so it rises", "M_FU_FLOAT_NO_WEIGHT"], ["It pulls the swimmer up with a rope", "M_FU_STEEL_LIGHT"]], "A life jacket is made of light foam. It is light for its size, so it floats and lifts the swimmer."],
       ["A floating log is lifted onto a scale. What does the scale show?", "The weight of the log", [["Nothing, since floating things weigh nothing", "M_FU_FLOAT_NO_WEIGHT"], ["Less than the log weighs in water", "M_FU_FLOAT_NO_WEIGHT"], ["The weight of the water under it", "M_FU_FLOAT_NO_WEIGHT"]], "A floating log still has weight. It floats because it is light for its size."],
@@ -6576,12 +7988,12 @@ var FAMILIES6 = [
       ["The water tank at a school has a ball float that rises with the water. What is its job?", "To shut the tap when the tank is full", [["To keep the water in the tank cold", "M_FU_FLOAT_NO_WEIGHT"], ["To make the water in the tank heavy", "M_FU_FLOAT_NO_WEIGHT"], ["To let all the water out at once", "M_FU_STEEL_LIGHT"]], "The float rises with the water. At the top it closes the tap, so the tank does not overflow."]
     ], { h: ["Think about shape and about being light for its size.", "A floating object still has weight."], s1: "Link the use to the shape or lightness for its size." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.float.fu.match",
     cs: `${F}FLOAT_APPLICATIONS`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A fisherman on Lake Naivasha ties a plastic bottle to the end of a net. What is the bottle for?", "It is a float that shows where the net is", [["It is a sinker that holds the net down", "M_FU_FLOAT_NO_WEIGHT"], ["It is a weight to keep the boat still", "M_FU_FLOAT_NO_WEIGHT"], ["It is a gift for the fish", "M_FU_STEEL_LIGHT"]], "An empty plastic bottle floats. It shows the fisherman where the net lies."],
       ["Which object helps a person who cannot swim to stay safe near water?", "A life jacket of light foam", [["A heavy bag full of stones", "M_FU_FLOAT_NO_WEIGHT"], ["A heavy metal belt with weights", "M_FU_STEEL_LIGHT"], ["A long coil of wet rope", "M_FU_FLOAT_NO_WEIGHT"]], "A foam life jacket is light for its size and floats."],
       ["Which object is a sinker for a fishing line?", "A small weight of lead or iron", [["A cork from a bottle", "M_FU_FLOAT_NO_WEIGHT"], ["A plastic bottle full of air", "M_FU_FLOAT_NO_WEIGHT"], ["A piece of light foam", "M_FU_FLOAT_NO_WEIGHT"]], "A sinker is heavy for its size, so it pulls the line down."],
@@ -6590,12 +8002,12 @@ var FAMILIES6 = [
     ], { h: ["Think about whether the object should float or sink to do its job.", "Floats are light for their size, sinkers are heavy for their size."], s1: "Say whether the object floats or sinks and why that helps." })
   }),
   // ---------------------------------------------------------------- SOUND_SOURCES
-  sfam({
+  sfam2({
     id: "sci5.sound.ss.what",
-    cs: `${S}SOUND_SOURCES`,
+    cs: `${S2}SOUND_SOURCES`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["What happens to the skin of a drum when it makes a sound?", "It vibrates, moving quickly to and fro", [["It stays still; the sound is inside", "M_SS_NO_VIBRATION"], ["It gets hot and glows", "M_SS_NO_VIBRATION"], ["It stretches and stays stretched", "M_SS_NO_VIBRATION"]], "Every sound is made by something vibrating. The drum skin moves quickly to and fro."],
       ["What vibrates to make the sound in a flute?", "The air inside the flute", [["Only the metal or wood of the flute", "M_SS_AIR_SILENT"], ["Nothing, the flute makes sound by itself", "M_SS_NO_VIBRATION"], ["The player's fingers on the holes", "M_SS_AIR_SILENT"]], "In a flute or whistle the air inside the pipe vibrates."],
       ["Which action can make a sound from a guitar string?", "Plucking it with a finger", [["Only hitting it with a stick", "M_SS_HIT_ONLY"], ["Only blowing on it", "M_SS_HIT_ONLY"], ["Nothing, strings cannot make sound", "M_SS_NO_VIBRATION"]], "Plucking makes the string vibrate. Sound can come from plucking, blowing, rubbing or banging."],
@@ -6603,12 +8015,12 @@ var FAMILIES6 = [
       ["A ruler is held over the edge of a desk and twanged. What makes the sound?", "The ruler vibrating up and down", [["The desk making the sound by itself", "M_SS_NO_VIBRATION"], ["The ruler standing still", "M_SS_NO_VIBRATION"], ["The air staying still around it", "M_SS_NO_VIBRATION"]], "The ruler moves quickly up and down. This vibration makes the sound."]
     ], { h: ["Think about what moves quickly to and fro.", "All sounds come from something vibrating."], s1: "Find the part that vibrates." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.sound.ss.instrument",
-    cs: `${S}SOUND_SOURCES`,
+    cs: `${S2}SOUND_SOURCES`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["At a cultural day a boy plays a nyatiti, a string instrument. What vibrates to make its sound?", "The strings", [["The wooden bowl only", "M_SS_NO_VIBRATION"], ["Nothing, the sound is already inside", "M_SS_NO_VIBRATION"], ["The player's hand only", "M_SS_HIT_ONLY"]], "Plucked strings vibrate quickly to make the sound."],
       ["A girl blows across the top of an empty bottle and hears a note. What vibrates?", "The air inside the bottle", [["The glass of the bottle only", "M_SS_AIR_SILENT"], ["Nothing vibrates", "M_SS_NO_VIBRATION"], ["Her lips only", "M_SS_AIR_SILENT"]], "The air inside the bottle vibrates and makes the sound."],
       ["A teacher sprinkles rice on a drum and taps it. The rice jumps. What does this show?", "The drum skin is vibrating", [["The drum skin is not moving", "M_SS_NO_VIBRATION"], ["The rice makes the sound", "M_SS_NO_VIBRATION"], ["Sound only comes from hitting", "M_SS_HIT_ONLY"]], "The rice jumps because the drum skin moves quickly to and fro."],
@@ -6617,12 +8029,12 @@ var FAMILIES6 = [
     ], { h: ["Think about what moves quickly to and fro in the story.", "Strings, air and skins can all vibrate."], s1: "Name what vibrates in each instrument." })
   }),
   // ---------------------------------------------------------------- SOUND_TRAVEL
-  sfam({
+  sfam2({
     id: "sci5.sound.st.through",
-    cs: `${S}SOUND_TRAVEL`,
+    cs: `${S2}SOUND_TRAVEL`,
     form: "direct",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Through which material does sound travel fastest?", "Steel", [["Air", "M_ST_FASTER_IN_AIR"], ["Water vapour in the air", "M_ST_FASTER_IN_AIR"], ["A cloud", "M_ST_FASTER_IN_AIR"]], "Sound travels fastest through solids, slower through liquids and slowest through gases such as air."],
       ["Can sound travel through space between stars?", "No, space has no air or other material", [["Yes, sound travels everywhere", "M_ST_IN_SPACE"], ["Yes, but only loud sounds", "M_ST_LOUD_FASTER"], ["Yes, if there is a bright light", "M_ST_IN_SPACE"]], "Sound needs something to travel through. Space is empty."],
       ["A swimmer under water hears a boat engine. What does this show?", "Sound can travel through water", [["Sound travels only through air", "M_ST_ONLY_AIR"], ["Sound travels only through solids", "M_ST_ONLY_AIR"], ["The swimmer imagined the sound", "M_ST_ONLY_AIR"]], "Sound travels through water as well as air and solids."],
@@ -6630,12 +8042,12 @@ var FAMILIES6 = [
       ["Two drums are played at the same distance, one very loud and one very quiet. Which sound arrives first?", "Both arrive at the same time", [["The louder one", "M_ST_LOUD_FASTER"], ["The quieter one", "M_ST_LOUD_FASTER"], ["The one that is played first", "M_ST_LOUD_FASTER"]], "Loudness does not change the speed of sound."]
     ], { h: ["Think about what sound needs to travel through, and in which material it is fastest.", "Loudness does not change speed."], s1: "Remember: sound needs a material to travel through." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.sound.st.story",
-    cs: `${S}SOUND_TRAVEL`,
+    cs: `${S2}SOUND_TRAVEL`,
     form: "why",
     rung: 3,
-    gen: choose2([
+    gen: choose3([
       ["A learner puts an ear against a wooden desk while a friend taps the other end. She hears the tap clearly. Why?", "Sound travels through the wood", [["Sound travels only through air", "M_ST_ONLY_AIR"], ["The tap is louder in the air", "M_ST_ONLY_AIR"], ["She imagined it", "M_ST_ONLY_AIR"]], "Sound travels through solids such as wood, often better than through air."],
       ["An astronaut outside a spacecraft shouts to another astronaut far away. Why can he not be heard?", "There is no air or other material to carry sound", [["He is too far away to be loud", "M_ST_LOUD_FASTER"], ["Sound is too slow in space", "M_ST_FASTER_IN_AIR"], ["Sound only travels through light", "M_ST_IN_SPACE"]], "Sound needs a material to travel through. Space is empty, so sound cannot travel in it."],
       ["A bell rings inside a glass jar. When the air is pumped out, the sound fades. Why?", "Sound cannot travel well without air", [["Sound travels faster without air", "M_ST_IN_SPACE"], ["The bell stops moving for no reason", "M_ST_IN_SPACE"], ["Sound only comes from heat", "M_ST_IN_SPACE"]], "With the air removed, there is less to carry the sound to the glass and out."],
@@ -6643,12 +8055,12 @@ var FAMILIES6 = [
       ["In a storm Juma sees lightning and then hears thunder four seconds later. Why the delay?", "Light travels much faster than sound", [["The thunder was quiet at first", "M_ST_LOUD_FASTER"], ["Sound is faster than light", "M_ST_FASTER_IN_AIR"], ["The thunder started after the lightning", "M_ST_FASTER_IN_AIR"]], "Thunder and lightning start together. The light reaches us first because it travels much faster."]
     ], { h: ["Think about what sound needs and how fast it goes.", "Light is much faster than sound."], s1: "Link the story to what sound needs in order to travel." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.sound.st.spot",
-    cs: `${S}SOUND_TRAVEL`,
+    cs: `${S2}SOUND_TRAVEL`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says sound cannot go through water. Which step has the mistake?", [["Step 1: Hassan hears the radio in the room.", true], ["Step 2: He decides sound travels only through air.", false], ["Step 3: He says swimmers cannot hear under water.", true]], "Sound travels through water too. Swimmers can hear boats and other swimmers under water.", "M_ST_ONLY_AIR"],
       ["Karimi says the loudest drum is heard first. Which step has the mistake?", [["Step 1: Karimi stands far from two drums.", true], ["Step 2: He says the louder sound travels faster.", false], ["Step 3: He says he hears the loud one first.", true]], "Loudness does not change speed. Both sounds arrive at the same time.", "M_ST_LOUD_FASTER"],
       ["Zawadi says a film shows explosions in space with sound. Which step has the mistake?", [["Step 1: Zawadi sees a spaceship explode on the screen.", true], ["Step 2: She says the sound would travel through space.", false], ["Step 3: She says an astronaut would hear it.", true]], "Space is empty, so there is nothing to carry sound. There would be no sound.", "M_ST_IN_SPACE"],
@@ -6656,12 +8068,12 @@ var FAMILIES6 = [
     ], { h: ["Which step is not true about how sound travels?", "Sound needs a material and is fastest in solids."], s1: "Check each step against what sound needs." })
   }),
   // ---------------------------------------------------------------- SOUND_EFFECTS
-  sfam({
+  sfam2({
     id: "sci5.sound.se.effect",
-    cs: `${S}SOUND_EFFECTS`,
+    cs: `${S2}SOUND_EFFECTS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which problems can very loud noise cause?", "Damage to hearing, headaches and poor sleep", [["Only ringing in the ears for a moment", "M_SL_ONLY_EARS"], ["Nothing, the ears get used to it", "M_SL_GETS_USED"], ["Nothing, if it is music", "M_SL_MUSIC_SAFE"]], "Very loud sound can damage hearing for good. It can also cause headaches and poor sleep."],
       ["A boda boda rider says he is used to loud engines. What is true?", "His hearing may still be getting damaged", [["His ears have become strong, so no harm is done", "M_SL_GETS_USED"], ["Only new riders are harmed by loud noise", "M_SL_GETS_USED"], ["The noise only harms people who dislike it", "M_SL_MUSIC_SAFE"]], "Feeling used to a noise does not stop the damage."],
       ["A matatu plays music at full volume. What is true for the passengers?", "It can harm their hearing, as any very loud sound can", [["It cannot harm them, because music is pleasant", "M_SL_MUSIC_SAFE"], ["It only harms people who dislike music", "M_SL_MUSIC_SAFE"], ["It only makes their ears ring for a minute", "M_SL_ONLY_EARS"]], "It is the loudness, not the kind of sound, that harms."],
@@ -6669,12 +8081,12 @@ var FAMILIES6 = [
       ["Which is a good way to treat a neighbour who plays very loud music at night?", "Ask politely for the music to be turned down", [["Say nothing, since the ears get used to it", "M_SL_GETS_USED"], ["Play louder music, since music is harmless", "M_SL_MUSIC_SAFE"], ["Cover only one ear", "M_SL_ONLY_EARS"]], "Loud noise at night harms sleep and health. Asking politely can fix it."]
     ], { h: ["Think about the effects on hearing, sleep and health.", "Being used to a noise does not remove the harm."], s1: "Think of all the effects very loud sound has on the body." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.sound.se.story",
-    cs: `${S}SOUND_EFFECTS`,
+    cs: `${S2}SOUND_EFFECTS`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A school beside a busy road finds that the children cannot hear the teacher in class. What is the best way to deal with it?", "Put classrooms away from the road or plant trees", [["Tell the children to get used to it", "M_SL_GETS_USED"], ["Play loud music in class", "M_SL_MUSIC_SAFE"], ["Do nothing, since noise only affects the ears", "M_SL_ONLY_EARS"]], "Noise makes learning hard and can harm hearing. Moving classrooms or planting trees reduces it."],
       ["A miller works every day next to a loud grinding machine. After some years he cannot hear well. Why?", "The loud noise damaged his hearing over time", [["His ears got used to it, so they cannot be damaged", "M_SL_GETS_USED"], ["Only music can damage hearing", "M_SL_MUSIC_SAFE"], ["Noise only rings the ears for a moment", "M_SL_ONLY_EARS"]], "Loud noise day after day damages the tiny parts of the ear. The damage can be permanent."],
       ["A child listens to music through earphones at full volume for hours. What can happen?", "Her hearing can be damaged", [["Nothing, because music is pleasant", "M_SL_MUSIC_SAFE"], ["Nothing, since earphones are small", "M_SL_MUSIC_SAFE"], ["Her ears will ring for a minute only", "M_SL_ONLY_EARS"]], "Very loud sound can harm hearing even if it is music in earphones."],
@@ -6683,12 +8095,12 @@ var FAMILIES6 = [
     ], { h: ["Think about hearing, sleep and learning.", "Being used to noise does not stop the harm."], s1: "Name the effect of the loud sound in the story." })
   }),
   // ---------------------------------------------------------------- HEAT_MODES
-  sfam({
+  sfam2({
     id: "sci5.heat.hm.mode",
     cs: `${H2}HEAT_MODES`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["A metal spoon is left in hot tea. Which mode moves heat along the spoon?", "Conduction", [["Convection", "M_HM_CONVECTION_SOLID"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Evaporation", "M_HM_CONVECTION_SOLID"]], "Heat moves along a solid by conduction."],
       ["Water in a pan is heated from below. Which mode carries the heat through the water?", "Convection", [["Conduction", "M_HM_HEAT_RISES"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Insulation", "M_HM_HEAT_RISES"]], "Hot water rises and cooler water sinks. This movement carries heat through the water: convection."],
       ["Which mode of heat transfer lets the Sun warm the Earth?", "Radiation", [["Conduction through the air", "M_HM_SUN_NEEDS_AIR"], ["Convection through space", "M_HM_SUN_NEEDS_AIR"], ["Conduction through clouds", "M_HM_SUN_NEEDS_AIR"]], "Radiation is heat that travels without anything to carry it, so it can cross empty space."],
@@ -6696,12 +8108,12 @@ var FAMILIES6 = [
       ["A cold drink is held in a warm hand. What is moving?", "Heat moves from the hand into the drink", [["Cold moves from the drink into the hand", "M_HM_COLD_TRAVELS"], ["Heat moves from the drink to the hand", "M_HM_COLD_TRAVELS"], ["Nothing moves", "M_HM_COLD_TRAVELS"]], "Heat always moves from a warmer place to a colder place. There is no flow of cold."]
     ], { h: ["Think about whether the heat moves through a solid, a liquid or gas, or through space.", "Heat moves from hot to cold."], s1: "Decide what the heat is travelling through." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hm.example",
     cs: `${H2}HEAT_MODES`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A mother cooks githeri on a jiko. The sufuria gets hot where it touches the fire. Which mode of heat transfer is this?", "Conduction", [["Convection", "M_HM_CONVECTION_SOLID"], ["Radiation", "M_HM_HEAT_RISES"], ["None, heat is only made by the fire", "M_HM_COLD_TRAVELS"]], "The heat passes from the fire to the metal that touches it by conduction."],
       ["Smoke from a cooking fire rises up and out through a hole in the roof. Which mode carries the heat away with it?", "Convection", [["Conduction", "M_HM_HEAT_RISES"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Cold air rising", "M_HM_COLD_TRAVELS"]], "Hot air and smoke rise and carry heat with them. This is convection."],
       ["A hot afternoon sun warms the iron sheets of a roof. Which mode brings the heat from the Sun?", "Radiation", [["Conduction through the air", "M_HM_SUN_NEEDS_AIR"], ["Convection through space", "M_HM_SUN_NEEDS_AIR"], ["Cold going out", "M_HM_COLD_TRAVELS"]], "The Sun's heat crosses empty space as radiation."],
@@ -6709,12 +8121,12 @@ var FAMILIES6 = [
       ["A learner holds a lit candle sideways under a metal rod. Which statement about heat is right?", "Heat can spread along the rod, not only upwards", [["Heat can only move upwards", "M_HM_HEAT_RISES"], ["Cold moves from the rod into the flame", "M_HM_COLD_TRAVELS"], ["The rod makes its own heat", "M_HM_COLD_TRAVELS"]], "Hot air rises, but heat in a solid spreads along it in every direction."]
     ], { h: ["Think about whether it is a solid, a moving liquid or gas, or heat crossing space.", "Heat moves from hot to cold, in every direction."], s1: "Name what the heat travels through, then the mode." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hm.spot",
     cs: `${H2}HEAT_MODES`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan explains how the Sun's heat reaches the Earth. Which step has the mistake?", [["Step 1: Hassan knows there is empty space between the Sun and the Earth.", true], ["Step 2: He says heat travels there by conduction through the air.", false], ["Step 3: He says the Earth is warmed by the Sun.", true]], "Space has no air to carry heat. The Sun's heat crosses it as radiation.", "M_HM_SUN_NEEDS_AIR"],
       ["Karimi explains why ice feels cold. Which step has the mistake?", [["Step 1: Karimi holds an ice cube in his hand.", true], ["Step 2: He says cold moves from the ice into his hand.", false], ["Step 3: He says his hand feels cold.", true]], "Heat moves from his warm hand into the ice. There is no flow of cold.", "M_HM_COLD_TRAVELS"],
       ["Zawadi explains why a metal spoon in hot tea gets hot. Which step has the mistake?", [["Step 1: Zawadi puts a metal spoon in hot tea.", true], ["Step 2: She says convection moves heat along the solid spoon.", false], ["Step 3: She says the handle gets warm.", true]], "Convection needs a liquid or gas that can flow. Heat moves along a solid spoon by conduction.", "M_HM_CONVECTION_SOLID"],
@@ -6722,12 +8134,12 @@ var FAMILIES6 = [
     ], { h: ["Which step says something that is not true about heat?", "Think about what each mode needs."], s1: "Check each step against the three modes of heat transfer." })
   }),
   // ---------------------------------------------------------------- HEAT_CONDUCTORS
-  sfam({
+  sfam2({
     id: "sci5.heat.hc.which",
     cs: `${H2}HEAT_CONDUCTORS`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Which of these materials is a good conductor of heat?", "Aluminium", [["Wood", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Plastic", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Wool", "M_HC_WOOL_MAKES_HEAT"]], "Metals such as aluminium are good conductors of heat."],
       ["Which material makes a good handle for a hot sufuria?", "Wood", [["Iron", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Aluminium", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Copper", "M_HC_CONDUCTOR_KEEPS_HEAT"]], "Wood is a poor conductor, so the heat does not pass quickly to the hand."],
       ["A learner touches an iron gate and a wooden door on a cool morning, and the gate feels colder. What is true about their temperatures?", "They are both at the same temperature", [["The gate is colder, because it feels colder", "M_HC_METAL_COLDER"], ["The door is colder, because it feels warmer", "M_HC_METAL_COLDER"], ["The gate is colder, because metal is always cold", "M_HC_METAL_COLDER"]], "Metal feels colder because it takes heat away from the hand faster."],
@@ -6735,12 +8147,12 @@ var FAMILIES6 = [
       ["Which of these is a poor conductor of heat?", "Plastic", [["Copper wire", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Iron nail", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Steel spoon", "M_HC_CONDUCTOR_KEEPS_HEAT"]], "Plastic is a poor conductor, also called an insulator."]
     ], { h: ["Metals are good conductors; wood, plastic and wool are poor conductors.", "Feeling cold is not the same as being cold."], s1: "Metals carry heat well. Wood, plastic and wool do not." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hc.table",
     cs: `${H2}HEAT_CONDUCTORS`,
     form: "table",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       [
         "A class put one end of each rod in hot water and timed how long the other end took to feel warm. Which rod is the poorest conductor?",
         "The wooden rod",
@@ -6778,12 +8190,12 @@ var FAMILIES6 = [
       ]
     ], { h: ["Read which materials warmed fast and which warmed slowly.", "Fast to warm means a good conductor."], s1: "Compare the readings in the table." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hc.spot",
     cs: `${H2}HEAT_CONDUCTORS`,
     form: "spot",
     rung: 3,
-    gen: spot2([
+    gen: spot3([
       ["Hassan says a metal spoon is colder than a wooden spoon in the same room. Which step has the mistake?", [["Step 1: Hassan touches both spoons and the metal one feels colder.", true], ["Step 2: He decides the metal spoon is colder in temperature.", false], ["Step 3: He tells the class.", true]], "Both spoons are at room temperature. Metal feels colder because it takes heat from the hand faster.", "M_HC_METAL_COLDER"],
       ["Karimi says a woollen jumper makes heat. Which step has the mistake?", [["Step 1: Karimi puts a jumper on and feels warm.", true], ["Step 2: He decides the wool makes heat of its own.", false], ["Step 3: He says everyone should wear wool.", true]], "Wool makes no heat. It is a poor conductor that keeps your own heat in.", "M_HC_WOOL_MAKES_HEAT"],
       ["Zawadi chooses a pot handle. Which step has the mistake?", [["Step 1: Zawadi has a choice of a wooden or an iron handle.", true], ["Step 2: She says iron is better because a good conductor keeps heat in.", false], ["Step 3: She picks the iron handle.", true]], "A good conductor carries heat fast, so an iron handle gets hot. A wooden handle stays cooler.", "M_HC_CONDUCTOR_KEEPS_HEAT"],
@@ -6792,12 +8204,12 @@ var FAMILIES6 = [
     ], { h: ["Which step says something that is not true about conductors?", "Feeling cold is not the same as being cold."], s1: "Check the step against how conductors and insulators work." })
   }),
   // ---------------------------------------------------------------- HEAT_USES
-  sfam({
+  sfam2({
     id: "sci5.heat.hu.why",
     cs: `${H2}HEAT_USES`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Why is a vent put near the roof of a hot kitchen?", "Hot air and smoke rise and go out through it", [["Heat goes down, so the vent has to catch it", "M_HU_VENT_LOW"], ["Cold air rises through it", "M_HU_VENT_LOW"], ["It keeps the floor warm", "M_HU_VENT_LOW"]], "Hot air is lighter and rises, so smoke and hot air leave through a high vent. This is convection."],
       ["Two iron roofs, one painted white and one black, stand in the sun. Which gets hotter?", "The black roof", [["They get equally hot", "M_HU_COLOUR_NO_EFFECT"], ["The white roof", "M_HU_COLOUR_NO_EFFECT"], ["Neither, since roofs do not take in heat", "M_HU_COLOUR_NO_EFFECT"]], "Dark surfaces take in more of the Sun's radiation. Light surfaces reflect more."],
       ["Which of these uses heat transfer?", "Cooking, drying clothes in the sun and a flask of hot tea", [["Only cooking", "M_HU_COOKING_ONLY"], ["Only the Sun warming the roof", "M_HU_COOKING_ONLY"], ["None of them", "M_HU_COOKING_ONLY"]], "Heat moves in cooking, in drying and in a flask. It moves everywhere we use heat."],
@@ -6805,12 +8217,12 @@ var FAMILIES6 = [
       ["Why do people in a hot place often paint their houses white?", "White walls reflect more of the Sun's heat", [["White walls make their own cold", "M_HU_COLOUR_NO_EFFECT"], ["Colour does not change how hot walls get", "M_HU_COLOUR_NO_EFFECT"], ["White walls take in more heat", "M_HU_COLOUR_NO_EFFECT"]], "Light colours reflect radiation, so the walls and rooms stay cooler."]
     ], { h: ["Think about convection, conduction and radiation.", "Colour changes how much radiation a surface takes in."], s1: "Name the mode of heat transfer that the story uses." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hu.match",
     cs: `${H2}HEAT_USES`,
     form: "word",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["A family dries maize cobs on a mat in the sun. Which mode of heat transfer helps?", "Radiation from the Sun", [["Conduction through the air", "M_HU_COOKING_ONLY"], ["Convection through space", "M_HU_COOKING_ONLY"], ["Cold air passing through the maize", "M_HU_COOKING_ONLY"]], "The Sun's heat reaches the maize as radiation and dries it."],
       ["A thermos flask keeps tea hot for hours. What is true about the flask?", "It slows down the loss of heat from the tea", [["It makes heat inside", "M_HU_COOKING_ONLY"], ["It lets cold in", "M_HU_COOKING_ONLY"], ["Heat transfer does not happen in a flask", "M_HU_COOKING_ONLY"]], "A flask is a poor conductor, so the heat leaves the tea slowly."],
       ["Why are sufurias made of metal?", "Metal is a good conductor, so food heats quickly", [["Metal keeps heat out of the food", "M_HU_COOKING_ONLY"], ["Metal is a poor conductor, so it stays cool", "M_HU_COOKING_ONLY"], ["Metal cannot get hot", "M_HU_COOKING_ONLY"]], "The metal quickly carries heat from the fire to the food."],
@@ -6819,12 +8231,12 @@ var FAMILIES6 = [
     ], { h: ["Think about the mode: conduction, convection or radiation.", "Poor conductors slow heat; good conductors carry it quickly."], s1: "Name the mode and the material." })
   }),
   // ---------------------------------------------------------------- HEAT_SAFETY
-  sfam({
+  sfam2({
     id: "sci5.heat.hs.safe",
     cs: `${H2}HEAT_SAFETY`,
     form: "direct",
     rung: 1,
-    gen: choose2([
+    gen: choose3([
       ["Wanjiru needs to lift a hot sufuria. Which cloth is safest to use?", "A thick, dry cloth", [["A wet cloth", "M_HS_WET_CLOTH"], ["A wet towel, folded", "M_HS_WET_CLOTH"], ["A thin, wet cloth", "M_HS_WET_CLOTH"]], "A wet cloth conducts heat and makes steam, which burns. A thick dry cloth is safe."],
       ["A sufuria has just been taken off the jiko. There is no flame or steam. Is it safe to touch?", "No, it can stay hot for a long time", [["Yes, there is no flame or steam", "M_HS_OFF_FIRE_COOL"], ["Yes, it is off the fire", "M_HS_OFF_FIRE_COOL"], ["Yes, metal cools at once", "M_HS_OFF_FIRE_COOL"]], "Metal can stay very hot without a flame or steam. Do not touch it."],
       ["A pan has a metal handle. What is the danger when it is on the fire?", "The handle gets hot, as metal carries heat", [["None, since metal is strong and very safe", "M_HS_METAL_HANDLE_OK"], ["None, because metal never gets hot at all", "M_HS_METAL_HANDLE_OK"], ["The handle melts at once on the fire", "M_HS_METAL_HANDLE_OK"]], "Metal is a good conductor, so the handle becomes hot too."],
@@ -6832,12 +8244,12 @@ var FAMILIES6 = [
       ["How should a child be kept safe when a pot of hot water is on the floor?", "Keep the child away and turn the handle in", [["Let the child touch it to learn", "M_HS_OFF_FIRE_COOL"], ["Pour cold water on the pot at once", "M_HS_WET_CLOTH"], ["Hold the handle with a wet cloth", "M_HS_WET_CLOTH"]], "Hot water can scald. Keep children away and keep handles turned inwards."]
     ], { h: ["Think about what makes handles and cloths get hot.", "A pot can stay hot with no flame or steam."], s1: "Choose the action that keeps heat away from the hands." })
   }),
-  sfam({
+  sfam2({
     id: "sci5.heat.hs.why",
     cs: `${H2}HEAT_SAFETY`,
     form: "why",
     rung: 2,
-    gen: choose2([
+    gen: choose3([
       ["Why is a wet cloth a dangerous way to lift a hot pot?", "It carries heat quickly and makes steam", [["A wet cloth is thicker and safer", "M_HS_WET_CLOTH"], ["Water cools every hot thing at once", "M_HS_WET_CLOTH"], ["A wet cloth has no effect on heat", "M_HS_WET_CLOTH"]], "Water in the cloth carries heat to the hand fast, and it can make burning steam."],
       ["Why should you not touch a pot just after taking it off the fire?", "It can stay hot, even with no flame", [["It is cool as soon as the flame is out", "M_HS_OFF_FIRE_COOL"], ["Only pots with steam are hot", "M_HS_OFF_FIRE_COOL"], ["Metal pots are cool when off the fire", "M_HS_OFF_FIRE_COOL"]], "Heat stays in the metal long after the flame has gone."],
       ["Why do some pans have wooden or plastic handles?", "They are poor conductors, so stay cooler", [["Metal handles are always much safer", "M_HS_METAL_HANDLE_OK"], ["They make the whole pan heat faster", "M_HS_METAL_HANDLE_OK"], ["They are strong, heavy and very safe", "M_HS_METAL_HANDLE_OK"]], "Heat passes slowly along wood and plastic. The handle stays cooler."],
@@ -6858,8 +8270,8 @@ var science_g5_default = {
   icon: "zap",
   description: "Grade 5 Science and Technology from the CBC design",
   // The curriculum map (generated by scripts/build-subject-map.mjs) and the families written from it.
-  map: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK },
-  families: [...FAMILIES4, ...FAMILIES5, ...FAMILIES6],
+  map: { skills: SKILLS_SCI_G5, substrands: SUBSTRANDS_SCI_G5, outcomes: OUTCOMES_SCI_G5, misFeedback: MIS_FEEDBACK2 },
+  families: [...FAMILIES8, ...FAMILIES9, ...FAMILIES10],
   // The files that hold the families (basenames in content/families/): a phone build drops them while the signed list is empty.
   familyFiles: ["sci_g5_living.js", "sci_g5_matter.js", "sci_g5_force.js"],
   // The one switch: ids a teacher has signed off. The family file reads this list to set reviewed.
@@ -6881,7 +8293,7 @@ var science_g5_default = {
 };
 
 // src/ai-tutor/content/curriculumMap.socialstudies.g5.js
-var SUBSTRANDS2 = {
+var SUBSTRANDS3 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP": {
     "name": "Elements of a Map",
     "strand": "Natural and the Built Environments",
@@ -7101,7 +8513,7 @@ var SUBSTRANDS2 = {
     ]
   }
 };
-var OUTCOMES2 = {
+var OUTCOMES3 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a": {
     "letter": "a",
     "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
@@ -7447,7 +8859,7 @@ var OUTCOMES2 = {
     "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
   }
 };
-var SKILLS2 = {
+var SKILLS3 = {
   "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS": {
     "name": "Name the elements of a map and say what each is for",
     "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
@@ -8164,7 +9576,7 @@ var SKILLS2 = {
     ]
   }
 };
-var MIS_FEEDBACK2 = {
+var MIS_FEEDBACK3 = {
   "M_EM_SCALE_KEY": "The key tells what each symbol means. The scale tells how far a distance on the map is on the ground.",
   "M_EM_FRAME_TITLE": "The title says what the map is about. The frame is the border line around the map.",
   "M_EM_COMPASS_ROLE": "The compass shows direction. It tells you which way is north, south, east and west on the map.",
@@ -8267,17 +9679,17 @@ var MIS_FEEDBACK2 = {
 };
 
 // src/ai-tutor/content/families/socialstudies_g5_signed.js
-var SIGNED = [];
+var SIGNED2 = [];
 
 // src/ai-tutor/content/families/socialstudies_g5_lib.js
-var { choose: choose3, typed: typed2, spot: spot3, sfam: sfam2 } = makeKit({
+var { choose: choose4, typed: typed3, spot: spot4, sfam: sfam3 } = makeKit({
   subject: "socialstudies",
   grade: 5,
   prefix: "SOCI",
-  signed: SIGNED,
-  map: { skills: SKILLS2, outcomes: OUTCOMES2, misFeedback: MIS_FEEDBACK2 }
+  signed: SIGNED2,
+  map: { skills: SKILLS3, outcomes: OUTCOMES3, misFeedback: MIS_FEEDBACK3 }
 });
-var fam = (tag, cs, form, rung, gen, oc) => sfam2({ id: `socialstudies5.${tag}`, cs, form, rung, gen, ...oc ? { oc } : {} });
+var fam2 = (tag, cs, form, rung, gen, oc) => sfam3({ id: `socialstudies5.${tag}`, cs, form, rung, gen, ...oc ? { oc } : {} });
 
 // src/ai-tutor/content/families/socialstudies_g5_a.js
 var EM = "NATURA.ELEMENTS_OF_A_MAP.";
@@ -8285,16 +9697,16 @@ var LP = "NATURA.LOCATION_POSITION_AND_SI.";
 var PF = "NATURA.MAIN_PHYSICAL_FEATURES_I.";
 var WC = "NATURA.WEATHER_AND_CLIMATE.";
 var BE = "NATURA.THE_BUILT_ENVIRONMENTS.";
-var FAMILIES7 = [
+var FAMILIES11 = [
   // ---------------------------------------------------------------- MAP_ELEMENTS
-  fam("map.el.which", `${EM}MAP_ELEMENTS`, "direct", 1, choose3([
+  fam2("map.el.which", `${EM}MAP_ELEMENTS`, "direct", 1, choose4([
     ["Which part of a map turns a map distance into a ground distance?", "The scale", [["The key", "M_EM_SCALE_KEY"], ["The frame", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The scale turns a distance on the map into a distance on the ground."],
     ["Which part of a map tells you what each symbol means?", "The key", [["The scale", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The key lists the symbols and says what each one stands for."],
     ["Which part of a map shows the direction north?", "The compass", [["The scale", "M_EM_SCALE_KEY"], ["The key", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"]], "The compass shows north, south, east and west on the map."],
     ["Which part of a map tells you what the map is about?", "The title", [["The frame", "M_EM_FRAME_TITLE"], ["The scale", "M_EM_SCALE_KEY"], ["The compass", "M_EM_COMPASS_ROLE"]], 'The title names the map, for example "Map of Kenya".'],
     ["Which part of a map is the line drawn around the edge?", "The frame", [["The title", "M_EM_FRAME_TITLE"], ["The key", "M_EM_SCALE_KEY"], ["The scale", "M_EM_SCALE_KEY"]], "The frame is the border that holds the whole map."]
   ], { h: ["Think about the job each part of a map does.", "Title: name. Frame: border. Scale: distance. Compass: direction. Key: symbols."], s1: "A map has five parts: title, frame, scale, compass and key." })),
-  fam("map.el.story", `${EM}MAP_ELEMENTS`, "word", 2, choose3([
+  fam2("map.el.story", `${EM}MAP_ELEMENTS`, "word", 2, choose4([
     ["Njeri wants to know what a small blue line on her sketch map means. Where should she look?", "In the key", [["At the scale", "M_EM_SCALE_KEY"], ["At the frame", "M_EM_FRAME_TITLE"], ["At the compass", "M_EM_COMPASS_ROLE"]], "The key explains each colour and symbol used on the map."],
     ["Otieno must find how far his school is from the market on a map. Which part helps him?", "The scale", [["The key", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The scale tells how long the real distance is for each centimetre on the map."],
     ["A teacher asks which way is north on a wall map. The learners look at one part. Which part is it?", "The compass", [["The key", "M_EM_SCALE_KEY"], ["The scale", "M_EM_SCALE_KEY"], ["The frame", "M_EM_FRAME_TITLE"]], "The compass shows direction, so it shows which way is north."],
@@ -8302,7 +9714,7 @@ var FAMILIES7 = [
     ["Baraka draws a neat line round the edge of his map. What is this line called?", "The frame", [["The title", "M_EM_FRAME_TITLE"], ["The scale", "M_EM_SCALE_KEY"], ["The key", "M_EM_SCALE_KEY"]], "The frame is the border round the map."]
   ], { h: ["Which part of the map answers the learner's question?", "Direction, distance and symbols each have their own part."], s1: "Match what the learner needs with the part of the map that gives it." })),
   // ---------------------------------------------------------------- MAP_READING
-  fam("map.rd.key", `${EM}MAP_READING`, "table", 1, choose3([
+  fam2("map.rd.key", `${EM}MAP_READING`, "table", 1, choose4([
     [
       'A sketch map has this key. What does the symbol "+" stand for on the map?',
       "A clinic",
@@ -8333,7 +9745,7 @@ var FAMILIES7 = [
       { t: { head: ["Symbol", "Meaning"], rows: [["Black dot", "Market"], ["Red square", "School"], ["Blue line", "River"], ["Green patch", "Forest"]] } }
     ]
   ], { h: ["Read the key. It says what each symbol means.", "Do not guess a symbol from how it looks."], s1: "Find the symbol in the key and read its meaning." })),
-  fam("map.rd.scale", `${EM}MAP_READING`, "word", 2, choose3([
+  fam2("map.rd.scale", `${EM}MAP_READING`, "word", 2, choose4([
     ["A map says 1 cm stands for 10 km. Two towns are 4 cm apart. How far apart are they on the ground?", "40 km", [["4 km", "M_EM_SCALE_IGNORE"], ["14 km", "M_EM_SCALE_IGNORE"], ["400 km", "M_EM_SCALE_IGNORE"]], "Each centimetre is 10 km, so 4 cm is 4 times 10 km, which is 40 km."],
     ["On a map, 1 cm stands for 5 km. A learner measures 6 cm between two schools. How far apart are the schools on the ground?", "30 km", [["6 km", "M_EM_SCALE_IGNORE"], ["11 km", "M_EM_SCALE_IGNORE"], ["300 km", "M_EM_SCALE_IGNORE"]], "6 cm times 5 km is 30 km."],
     ["The scale of a map says 1 cm stands for 20 km. The distance on the map from Nairobi to Nakuru is 3 cm. What is the distance on the ground?", "60 km", [["3 km", "M_EM_SCALE_IGNORE"], ["23 km", "M_EM_SCALE_IGNORE"], ["600 km", "M_EM_SCALE_IGNORE"]], "3 cm times 20 km is 60 km."],
@@ -8341,14 +9753,14 @@ var FAMILIES7 = [
     ["On a map of Kenya, 1 cm stands for 50 km. Two lakes are 5 cm apart. How far apart are the lakes on the ground?", "250 km", [["5 km", "M_EM_SCALE_IGNORE"], ["55 km", "M_EM_SCALE_IGNORE"], ["2,500 km", "M_EM_SCALE_IGNORE"]], "5 cm times 50 km is 250 km."]
   ], { h: ["Find how many kilometres 1 cm stands for.", "Multiply the centimetres on the map by that number."], s1: "Use the scale: ground distance is map distance times the scale." })),
   // ---------------------------------------------------------------- NEIGHBOURS
-  fam("nb.which", `${LP}NEIGHBOURS`, "direct", 1, choose3([
+  fam2("nb.which", `${LP}NEIGHBOURS`, "direct", 1, choose4([
     ["Which country shares a border with Kenya?", "Uganda", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["Zambia", "M_LP_NEAR_NOT_BORDER"], ["Burundi", "M_LP_NEAR_NOT_BORDER"]], "Uganda lies on the western border of Kenya. Rwanda, Zambia and Burundi do not touch Kenya."],
     ["Which country is a neighbour of Kenya in the north?", "Ethiopia", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["Burundi", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"]], "Ethiopia shares the northern border with Kenya."],
     ["Which country borders Kenya to the south?", "Tanzania", [["Zambia", "M_LP_NEAR_NOT_BORDER"], ["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"]], "Tanzania lies to the south of Kenya."],
     ["Which one of these is a country that shares a border with Kenya?", "Somalia", [["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"], ["Burundi", "M_LP_NEAR_NOT_BORDER"], ["Zambia", "M_LP_NEAR_NOT_BORDER"]], "Somalia is on the east side of Kenya. The ocean is water, not a country."],
     ["Which country lies to the north-west of Kenya and shares a border?", "South Sudan", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"], ["Burundi", "M_LP_NEAR_NOT_BORDER"]], "South Sudan is Kenya's north-western neighbour."]
   ], { h: ["Kenya has five neighbours on land: Ethiopia, South Sudan, Uganda, Tanzania and Somalia.", "The Indian Ocean is water, not a country."], s1: "Check whether the country touches Kenya at a border line." })),
-  fam("nb.list", `${LP}NEIGHBOURS`, "word", 2, choose3([
+  fam2("nb.list", `${LP}NEIGHBOURS`, "word", 2, choose4([
     ["Zawadi lists the countries that share a border with Kenya. Whose list is right?", "Ethiopia, Uganda, Tanzania, Somalia, South Sudan", [["Ethiopia, Uganda, Rwanda, Somalia, South Sudan", "M_LP_NEAR_NOT_BORDER"], ["Ethiopia, Uganda, Tanzania, Somalia, Zambia", "M_LP_NEAR_NOT_BORDER"], ["Ethiopia, Indian Ocean, Tanzania, Somalia, South Sudan", "M_LP_OCEAN_AS_COUNTRY"]], "The five countries are Ethiopia, South Sudan, Uganda, Tanzania and Somalia."],
     ["A class makes a poster of Kenya's neighbours. Which list should they put on the poster?", "Uganda, Tanzania, Somalia, Ethiopia, South Sudan", [["Uganda, Tanzania, Rwanda, Ethiopia, Burundi", "M_LP_NEAR_NOT_BORDER"], ["Uganda, Zambia, Somalia, Ethiopia, South Sudan", "M_LP_NEAR_NOT_BORDER"], ["Uganda, Tanzania, Somalia, Indian Ocean, Ethiopia", "M_LP_OCEAN_AS_COUNTRY"]], "Only these five touch Kenya's land border."],
     ["Which is a country that is in East Africa but does not share a border with Kenya?", "Rwanda", [["Uganda", "M_LP_NEAR_NOT_BORDER"], ["Tanzania", "M_LP_NEAR_NOT_BORDER"], ["Somalia", "M_LP_NEAR_NOT_BORDER"]], "Rwanda is in East Africa, but Uganda and Tanzania lie between it and Kenya."],
@@ -8356,14 +9768,14 @@ var FAMILIES7 = [
     ["A learner says the Indian Ocean is a neighbour of Kenya. What should the teacher say?", "It is water along the coast, not a country", [["It is a country in the east", "M_LP_OCEAN_AS_COUNTRY"], ["It is a country in the south", "M_LP_OCEAN_AS_COUNTRY"], ["It is a country in the north", "M_LP_OCEAN_AS_COUNTRY"]], "The Indian Ocean is the water that touches the south-east coast. It has no government."]
   ], { h: ["Which countries touch Kenya at a border line on land?", "Rwanda, Burundi and Zambia are near, but do not touch Kenya."], s1: "Count only countries that share a border with Kenya." })),
   // ---------------------------------------------------------------- NEIGHBOUR_DIRECTIONS
-  fam("nd.which", `${LP}NEIGHBOUR_DIRECTIONS`, "direct", 1, choose3([
+  fam2("nd.which", `${LP}NEIGHBOUR_DIRECTIONS`, "direct", 1, choose4([
     ["In which direction from Kenya does Uganda lie?", "West", [["East", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "Uganda lies to the west of Kenya."],
     ["In which direction from Kenya does Somalia lie?", "East", [["West", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "Somalia is east of Kenya."],
     ["In which direction from Kenya does Tanzania lie?", "South", [["North", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Tanzania lies south of Kenya."],
     ["In which direction from Kenya does Ethiopia lie?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"]], "Ethiopia lies north of Kenya."],
     ["Kenya's coast is on the Indian Ocean. In which direction from Kenya does the ocean lie?", "South-east", [["North-west", "M_LP_EAST_WEST_SWAP"], ["North-east", "M_LP_NORTH_SOUTH_SWAP"], ["South-west", "M_LP_EAST_WEST_SWAP"]], "The Indian Ocean lies to the south-east of Kenya."]
   ], { h: ["Think of a map of Kenya with north at the top.", "The Indian Ocean is on the east side. Lake Victoria is on the west side."], s1: "Place Kenya in the middle and find the neighbour on the map." })),
-  fam("nd.turn", `${LP}NEIGHBOUR_DIRECTIONS`, "word", 2, choose3([
+  fam2("nd.turn", `${LP}NEIGHBOUR_DIRECTIONS`, "word", 2, choose4([
     ["Uganda is to the west of Kenya. Which way must you go from Uganda to reach Kenya?", "East", [["West", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "If Uganda is west of Kenya, then Kenya is east of Uganda."],
     ["Tanzania is to the south of Kenya. Which way must you go from Tanzania to reach Kenya?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "If Tanzania is south of Kenya, then Kenya is north of Tanzania."],
     ["Amina travels from Kenya to Ethiopia by road. Which way does she go?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Ethiopia is north of Kenya, so she travels north."],
@@ -8371,28 +9783,28 @@ var FAMILIES7 = [
     ["Wanjiru drives from Namanga in Kenya to Arusha in Tanzania. Which way does she drive?", "South", [["North", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Tanzania is south of Kenya, so she travels south."]
   ], { h: ["Opposite directions: north and south, east and west.", "Draw Kenya and the neighbour, then turn the arrow round."], s1: "Find the direction, then turn it round if the question asks for the other country." })),
   // ---------------------------------------------------------------- FEATURE_NAMES
-  fam("pf.type", `${PF}FEATURE_NAMES`, "direct", 1, choose3([
+  fam2("pf.type", `${PF}FEATURE_NAMES`, "direct", 1, choose4([
     ["What kind of feature is Lake Turkana?", "A lake", [["A river", "M_PF_TYPE_MIX"], ["A mountain", "M_PF_TYPE_MIX"], ["A valley", "M_PF_TYPE_MIX"]], "Lake Turkana is a large body of water with land around it."],
     ["What kind of feature is the Tana River?", "A river", [["A lake", "M_PF_TYPE_MIX"], ["A mountain", "M_PF_TYPE_MIX"], ["An ocean", "M_PF_TYPE_MIX"]], "The Tana is a river that flows to the Indian Ocean."],
     ["What kind of feature is Mount Elgon?", "A mountain", [["A lake", "M_PF_TYPE_MIX"], ["A valley", "M_PF_TYPE_MIX"], ["A river", "M_PF_TYPE_MIX"]], "Mount Elgon is a mountain on the border with Uganda."],
     ["Which is the highest mountain in Kenya?", "Mount Kenya", [["Mount Kilimanjaro", "M_PF_KILIMANJARO"], ["Mount Elgon", "M_PF_KILIMANJARO"], ["The Aberdare Range", "M_PF_KILIMANJARO"]], "Mount Kenya is the highest in Kenya. Mount Kilimanjaro is in Tanzania."],
     ["Which of these is a lake in Kenya?", "Lake Naivasha", [["Tana", "M_PF_TYPE_MIX"], ["Aberdare", "M_PF_TYPE_MIX"], ["Elgon", "M_PF_TYPE_MIX"]], "Lake Naivasha is in the Rift Valley. The Tana is a river, and the Aberdare and Elgon are mountains."]
   ], { h: ["Think about whether the water stands still or flows.", "Lakes hold water, rivers flow, mountains are high ground."], s1: "Find what kind of feature the name tells you." })),
-  fam("pf.spot", `${PF}FEATURE_NAMES`, "spot", 3, spot3([
+  fam2("pf.spot", `${PF}FEATURE_NAMES`, "spot", 3, spot4([
     ["Juma says Mount Kilimanjaro is the highest mountain in Kenya. Which step has the mistake?", [["Step 1: Juma has seen Kilimanjaro from Amboseli.", true], ["Step 2: He decides the mountain must be inside Kenya.", false], ["Step 3: He writes that it is the highest in Kenya.", true]], "Mount Kilimanjaro stands in Tanzania. Mount Kenya, at 5,199 metres, is Kenya's highest mountain.", "M_PF_KILIMANJARO"],
     ["Chebet says Lake Turkana is a river. Which step has the mistake?", [["Step 1: Chebet reads the name Lake Turkana.", true], ["Step 2: She decides that all water in Kenya flows.", false], ["Step 3: She writes that it is a river.", true]], "A lake is water with land all round it. Lake Turkana is a lake, not a river.", "M_PF_TYPE_MIX"],
     ["Otieno says the Tana is a lake because it has much water. Which step has the mistake?", [["Step 1: Otieno sees that the Tana has a lot of water.", true], ["Step 2: He decides that a lot of water means a lake.", false], ["Step 3: He writes that the Tana is a lake.", true]], "The Tana flows in a line to the Indian Ocean, so it is a river.", "M_PF_TYPE_MIX"],
     ["Wanjiru says Mount Elgon is a lake. Which step has the mistake?", [["Step 1: Wanjiru finds Mount Elgon on the map.", true], ["Step 2: She decides every Kenyan feature with a name is a lake.", false], ["Step 3: She writes that it is a lake.", true]], 'The word "Mount" tells us it is a mountain. Lakes have the word "Lake".', "M_PF_TYPE_MIX"]
   ], { h: ["Which step says something that is not true?", "Use the word in the name: Lake, River or Mount."], s1: "Check each step against what you know about Kenya's features." })),
   // ---------------------------------------------------------------- FEATURE_WHERE
-  fam("pw.where", `${PF}FEATURE_WHERE`, "direct", 1, choose3([
+  fam2("pw.where", `${PF}FEATURE_WHERE`, "direct", 1, choose4([
     ["In which part of Kenya is Lake Victoria?", "The west", [["The east", "M_PF_REGION_MIX"], ["The north-east", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"]], "Lake Victoria lies in the west, shared with Uganda and Tanzania."],
     ["In which part of Kenya is Lake Turkana?", "The north-west", [["The south", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"], ["The centre", "M_PF_REGION_MIX"]], "Lake Turkana is in the dry north-west."],
     ["Where is Mount Kenya?", "In the central highlands", [["On the coast", "M_PF_REGION_MIX"], ["In the far west", "M_PF_REGION_MIX"], ["In the north-east", "M_PF_REGION_MIX"]], "Mount Kenya stands in the central highlands, on the equator."],
     ["Where is the Indian Ocean coast of Kenya?", "In the south-east", [["In the west", "M_PF_REGION_MIX"], ["In the north-west", "M_PF_REGION_MIX"], ["In the centre", "M_PF_REGION_MIX"]], "The coast is in the south-east, along the Indian Ocean."],
     ["In which direction does the Great Rift Valley run through Kenya?", "North to south", [["East to west", "M_PF_RIFT_DIRECTION"], ["Along the coast", "M_PF_RIFT_DIRECTION"], ["South-east to north-west", "M_PF_RIFT_DIRECTION"]], "The Rift Valley runs north to south, from Lake Turkana towards Lake Magadi."]
   ], { h: ["Link each feature to a neighbour or a side of Kenya.", "Lake Victoria is next to Uganda. The ocean is on the east side."], s1: "Picture a map of Kenya and find the feature." })),
-  fam("pw.table", `${PF}FEATURE_WHERE`, "table", 2, choose3([
+  fam2("pw.table", `${PF}FEATURE_WHERE`, "table", 2, choose4([
     [
       "Read the table of places in Kenya. Which feature is in the central highlands?",
       "Mount Kenya",
@@ -8430,14 +9842,14 @@ var FAMILIES7 = [
     ]
   ], { h: ["Read the row that has the part of Kenya in the question.", "Check the second column of the table."], s1: "Read each row of the table." })),
   // ---------------------------------------------------------------- WEATHER_ELEMENTS
-  fam("we.inst", `${WC}WEATHER_ELEMENTS`, "direct", 1, choose3([
+  fam2("we.inst", `${WC}WEATHER_ELEMENTS`, "direct", 1, choose4([
     ["Which instrument measures the amount of rain that falls?", "A rain gauge", [["A thermometer", "M_WC_INSTRUMENT_MIX"], ["A wind vane", "M_WC_INSTRUMENT_MIX"], ["A compass", "M_WC_INSTRUMENT_MIX"]], "A rain gauge collects rain so we can measure it."],
     ["Which instrument measures temperature?", "A thermometer", [["A rain gauge", "M_WC_INSTRUMENT_MIX"], ["A wind vane", "M_WC_INSTRUMENT_MIX"], ["A ruler", "M_WC_INSTRUMENT_MIX"]], "A thermometer shows how hot or cold the air is."],
     ["Which instrument shows the direction the wind is blowing from?", "A wind vane", [["A thermometer", "M_WC_INSTRUMENT_MIX"], ["A rain gauge", "M_WC_INSTRUMENT_MIX"], ["A clock", "M_WC_INSTRUMENT_MIX"]], "A wind vane points to where the wind is coming from."],
     ["Which of these is an element of weather?", "Rainfall", [["Soil", "M_WC_INSTRUMENT_MIX"], ["Rocks", "M_WC_INSTRUMENT_MIX"], ["Rivers", "M_WC_INSTRUMENT_MIX"]], "Rainfall, temperature, wind, cloud cover and sunshine are elements of weather."],
     ["Which element of weather is measured in degrees Celsius?", "Temperature", [["Rainfall", "M_WC_INSTRUMENT_MIX"], ["Wind", "M_WC_INSTRUMENT_MIX"], ["Cloud cover", "M_WC_INSTRUMENT_MIX"]], "Temperature is measured in degrees Celsius with a thermometer."]
   ], { h: ["Think about what each instrument is built to measure.", "Rain gauge: rain. Thermometer: temperature. Wind vane: wind direction."], s1: "Match each instrument to the element it measures." })),
-  fam("we.wc", `${WC}WEATHER_ELEMENTS`, "why", 2, choose3([
+  fam2("we.wc", `${WC}WEATHER_ELEMENTS`, "why", 2, choose4([
     ["Which statement is about weather and not climate?", "It rained in Kisumu this morning.", [["Mombasa is hot and humid for most of the year.", "M_WC_WEATHER_CLIMATE"], ["Turkana gets little rain every year.", "M_WC_WEATHER_CLIMATE"], ["Nyeri is cool for most of the year.", "M_WC_WEATHER_CLIMATE"]], "Weather is the condition of one day or one moment. This morning's rain is weather."],
     ["Which statement is about climate?", "Lodwar is hot and dry all year.", [["It is windy in Lodwar today.", "M_WC_WEATHER_CLIMATE"], ["It is cloudy in Nyeri now.", "M_WC_WEATHER_CLIMATE"], ["It rained in Mombasa last night.", "M_WC_WEATHER_CLIMATE"]], "Climate is the usual pattern over many years. Being hot and dry all year is climate."],
     ["Wanjiru says it is a sunny day. Is she talking about weather or climate?", "Weather", [["Climate", "M_WC_WEATHER_CLIMATE"], ["Both", "M_WC_WEATHER_CLIMATE"], ["Neither", "M_WC_WEATHER_CLIMATE"]], "A sunny day is weather. It is the condition of one day."],
@@ -8445,14 +9857,14 @@ var FAMILIES7 = [
     ["How long do we record the weather of a place before we can describe its climate?", "Many years", [["One day", "M_WC_WEATHER_CLIMATE"], ["One hour", "M_WC_WEATHER_CLIMATE"], ["One week", "M_WC_WEATHER_CLIMATE"]], "Climate comes from weather records of many years, not a short time."]
   ], { h: ["Weather is for a short time. Climate is for a long time.", "Ask how long the statement covers: a day or many years."], s1: "Decide whether the statement covers a short time or many years." })),
   // ---------------------------------------------------------------- CLIMATE_REGION_PLACES
-  fam("cp.where", `${WC}CLIMATE_REGION_PLACES`, "direct", 1, choose3([
+  fam2("cp.where", `${WC}CLIMATE_REGION_PLACES`, "direct", 1, choose4([
     ["Which part of Kenya has an arid climate with very little rain?", "The north, around Turkana", [["The Mount Kenya area", "M_WC_REGION_MIX"], ["The Lake Victoria area", "M_WC_REGION_MIX"], ["The coast around Mombasa", "M_WC_COAST_DRY"]], "The north is arid, with very little rain."],
     ["Which place has a hot, humid climate with plenty of rain?", "Mombasa on the coast", [["Lodwar in the north-west", "M_WC_COAST_DRY"], ["Wajir in the north-east", "M_WC_COAST_DRY"], ["Nyeri in the highlands", "M_WC_REGION_MIX"]], "Mombasa is hot and humid."],
     ["Which place has a cool climate because it is high up?", "Nyeri near Mount Kenya", [["Mombasa on the coast", "M_WC_REGION_MIX"], ["Lodwar in the north-west", "M_WC_REGION_MIX"], ["Mandera in the north-east", "M_WC_REGION_MIX"]], "The highlands near Mount Kenya are high and cool."],
     ["Which area is warm with rain through most of the year?", "Around Lake Victoria", [["Marsabit", "M_WC_REGION_MIX"], ["Turkana", "M_WC_REGION_MIX"], ["Wajir", "M_WC_REGION_MIX"]], "The Lake Victoria area is warm and gets rain in most months."],
     ["In which part of Kenya is the climate hot and dry, with little rain?", "The north-east, around Mandera", [["The central highlands", "M_WC_REGION_MIX"], ["The Lake Victoria basin", "M_WC_REGION_MIX"], ["The coast", "M_WC_COAST_DRY"]], "Mandera and Wajir in the north-east are arid."]
   ], { h: ["The north and east are dry. The coast is humid. The highlands are cool.", "High places are cool, even near the equator."], s1: "Match the climate to the part of Kenya." })),
-  fam("cp.table", `${WC}CLIMATE_REGION_PLACES`, "table", 2, choose3([
+  fam2("cp.table", `${WC}CLIMATE_REGION_PLACES`, "table", 2, choose4([
     [
       "A table shows rain in four towns. Which town is in the arid north?",
       "Lodwar",
@@ -8490,14 +9902,14 @@ var FAMILIES7 = [
     ]
   ], { h: ["Read the row with the clue in the question.", "Little rain means arid. Cool means high up."], s1: "Read each row of the table." })),
   // ---------------------------------------------------------------- CLIMATE_REGION_TRAITS
-  fam("ct.trait", `${WC}CLIMATE_REGION_TRAITS`, "direct", 1, choose3([
+  fam2("ct.trait", `${WC}CLIMATE_REGION_TRAITS`, "direct", 1, choose4([
     ["Which description fits the climate of the coast?", "Hot and humid with plenty of rain", [["Hot and dry with little rain", "M_WC_COAST_DRY"], ["Cool with frost at night", "M_WC_EQUATOR_HOT"], ["Cold all year", "M_WC_EQUATOR_HOT"]], "The coast is hot and humid."],
     ["Which description fits the arid north of Kenya?", "Hot with very little rain", [["Cool with plenty of rain", "M_WC_HUMID_DRY"], ["Hot and damp all year", "M_WC_HUMID_DRY"], ["Cold and wet", "M_WC_EQUATOR_HOT"]], "The north is hot and dry."],
     ["Which description fits the highlands around Mount Kenya?", "Cool with reliable rain", [["Very hot and dry", "M_WC_EQUATOR_HOT"], ["Hot and humid", "M_WC_HUMID_DRY"], ["Hot with no rain", "M_WC_EQUATOR_HOT"]], "The highlands are cool, with reliable rain."],
     ["What does it mean when the air at the coast is humid?", "It has a lot of water vapour", [["It is very dry", "M_WC_HUMID_DRY"], ["It is very cold", "M_WC_HUMID_DRY"], ["It has no wind", "M_WC_HUMID_DRY"]], "Humid means a lot of water vapour in the air."],
     ["Which description fits the Lake Victoria area?", "Warm with rain in most months", [["Very dry all year", "M_WC_HUMID_DRY"], ["Cold with snow", "M_WC_EQUATOR_HOT"], ["Hot with almost no rain", "M_WC_HUMID_DRY"]], "The Lake Victoria area is warm and gets rain in most months."]
   ], { h: ["Think about the temperature and the rainfall of each region.", "Humid means damp air."], s1: "Match the description to the region." })),
-  fam("ct.why", `${WC}CLIMATE_REGION_TRAITS`, "why", 2, choose3([
+  fam2("ct.why", `${WC}CLIMATE_REGION_TRAITS`, "why", 2, choose4([
     ["Mount Kenya is on the equator but has snow at the top. Why is it cold there?", "The air gets cooler as you go higher", [["It is not really on the equator", "M_WC_EQUATOR_HOT"], ["The sun does not shine there", "M_WC_EQUATOR_HOT"], ["It is near the sea", "M_WC_EQUATOR_HOT"]], "Air gets cooler with height, even on the equator."],
     ["Nyeri is high up. Why is it cooler than Mombasa on the coast?", "High places have cooler air", [["Nyeri is nearer the sea", "M_WC_EQUATOR_HOT"], ["Nyeri is far from the equator", "M_WC_EQUATOR_HOT"], ["Nyeri has no sun", "M_WC_EQUATOR_HOT"]], "Nyeri is high above sea level, so the air is cooler."],
     ["Njeri says the coast feels sticky because the air is humid. What does humid mean?", "The air holds a lot of water vapour", [["The air is very dry", "M_WC_HUMID_DRY"], ["The wind is strong", "M_WC_HUMID_DRY"], ["The air is cold", "M_WC_HUMID_DRY"]], "Humid air holds a lot of water vapour, so it feels damp and sticky."],
@@ -8505,14 +9917,14 @@ var FAMILIES7 = [
     ["Why is farming hard in Turkana?", "There is very little rain", [["There is too much rain", "M_WC_HUMID_DRY"], ["The air is very cold", "M_WC_EQUATOR_HOT"], ["It is humid all year", "M_WC_HUMID_DRY"]], "Turkana is arid, so crops lack water."]
   ], { h: ["Think about height, rain and heat.", "The higher you go, the cooler the air."], s1: "Think of what makes the place hot, cool, wet or dry." })),
   // ---------------------------------------------------------------- HISTORIC_SITES
-  fam("hs.which", `${BE}HISTORIC_SITES`, "direct", 1, choose3([
+  fam2("hs.which", `${BE}HISTORIC_SITES`, "direct", 1, choose4([
     ["Which of these is a historic built environment in Kenya?", "Fort Jesus", [["Mount Kenya", "M_BE_NATURAL_AS_BUILT"], ["Lake Victoria", "M_BE_NATURAL_AS_BUILT"], ["The Tana River", "M_BE_NATURAL_AS_BUILT"]], "Fort Jesus was built by people long ago. The others were made by nature."],
     ["In which town is Fort Jesus?", "Mombasa", [["Lamu", "M_BE_PLACE_MIX"], ["Kisumu", "M_BE_PLACE_MIX"], ["Nairobi", "M_BE_PLACE_MIX"]], "Fort Jesus is in Mombasa, built by the Portuguese."],
     ["Which historic site is an old town on an island, with houses of coral stone?", "Lamu Old Town", [["Fort Jesus", "M_BE_PLACE_MIX"], ["Gedi Ruins", "M_BE_PLACE_MIX"], ["Nairobi National Museum", "M_BE_PLACE_MIX"]], "Lamu Old Town is on Lamu Island."],
     ["Which historic site is a ruined Swahili town in the forest near Malindi?", "The Gedi Ruins", [["Fort Jesus", "M_BE_PLACE_MIX"], ["Lamu Old Town", "M_BE_PLACE_MIX"], ["Mount Elgon", "M_BE_NATURAL_AS_BUILT"]], "The Gedi Ruins are the remains of a Swahili town near Malindi."],
     ["Which of these is a built historic site and not a natural feature?", "Thimlich Ohinga", [["Lake Turkana", "M_BE_NATURAL_AS_BUILT"], ["Mount Elgon", "M_BE_NATURAL_AS_BUILT"], ["The Aberdare Range", "M_BE_NATURAL_AS_BUILT"]], "Thimlich Ohinga in Migori is an old stone enclosure built by people."]
   ], { h: ["Was it built by people, or made by nature?", "Fort Jesus, Lamu, Gedi and Thimlich Ohinga were built by people."], s1: "Decide whether people built it long ago." })),
-  fam("hs.table", `${BE}HISTORIC_SITES`, "table", 2, choose3([
+  fam2("hs.table", `${BE}HISTORIC_SITES`, "table", 2, choose4([
     [
       "Read the table of historic sites. Which site is in Migori County?",
       "Thimlich Ohinga",
@@ -8550,14 +9962,14 @@ var FAMILIES7 = [
     ]
   ], { h: ["Read the row that matches the question.", "A fort, a town and a wall are built by people."], s1: "Read each row of the table." }), "b"),
   // ---------------------------------------------------------------- CONSERVATION
-  fam("cv.act", `${BE}CONSERVATION`, "direct", 1, choose3([
+  fam2("cv.act", `${BE}CONSERVATION`, "direct", 1, choose4([
     ["Which action helps to conserve an old fort?", "Repair it carefully", [["Pull it down to build a new one", "M_BE_KEEP_OUT"], ["Write names on the walls", "M_BE_TOUCH_TAKE"], ["Take small stones home", "M_BE_TOUCH_TAKE"]], "Careful repair keeps the fort standing for the future."],
     ["What should a visitor do at a historic site?", "Follow the rules and leave things as they are", [["Climb on the old walls", "M_BE_TOUCH_TAKE"], ["Take a small piece as a souvenir", "M_BE_TOUCH_TAKE"], ["Write a name on the wall", "M_BE_TOUCH_TAKE"]], "Visitors help conserve a site by following the rules."],
     ["Why do people keep historic buildings?", "They show how people lived long ago", [["They are useless old things", "M_BE_KEEP_OUT"], ["They should be pulled down", "M_BE_KEEP_OUT"], ["They only belong to the tourists", "M_BE_KEEP_OUT"]], "Historic buildings are part of our cultural heritage."],
     ["Which is a good way to help others value a historic site?", "Teach people about its history", [["Keep it secret", "M_BE_KEEP_OUT"], ["Let people damage it", "M_BE_TOUCH_TAKE"], ["Close it forever", "M_BE_KEEP_OUT"]], "People who know the history care more about the place."],
     ["You see a visitor breaking a piece off an old wall. What is the best thing to do?", "Tell a guide or a teacher", [["Join in", "M_BE_TOUCH_TAKE"], ["Say nothing, it is only a stone", "M_BE_TOUCH_TAKE"], ["Take a piece too", "M_BE_TOUCH_TAKE"]], "Telling a guide helps protect the site."]
   ], { h: ["Which action keeps the site for the next generation?", "Small damage by many people adds up."], s1: "Choose the action that protects the site for the future." })),
-  fam("cv.story", `${BE}CONSERVATION`, "word", 2, choose3([
+  fam2("cv.story", `${BE}CONSERVATION`, "word", 2, choose4([
     ["A class visits the Gedi Ruins. Amina wants to carve her name in a wall. What should the teacher say?", "No, it harms the old wall", [["Go ahead, it is only one name", "M_BE_TOUCH_TAKE"], ["Go ahead, the ruins are old", "M_BE_KEEP_OUT"], ["Do it quickly so no one sees", "M_BE_TOUCH_TAKE"]], "Carving damages the wall. Heritage must be kept as it is."],
     ["Kiprono finds a loose old stone at a historic site and puts it in his bag. What should he do?", "Put it back and tell the guide", [["Keep it, it is only a stone", "M_BE_TOUCH_TAKE"], ["Sell it to a visitor", "M_BE_TOUCH_TAKE"], ["Throw it away", "M_BE_TOUCH_TAKE"]], "Every stone is part of the site. We leave them where they are."],
     ["A town wants more space and plans to pull down an old fort. Which idea best protects the fort?", "Build the new houses elsewhere", [["Pull the fort down", "M_BE_KEEP_OUT"], ["Let the fort fall in time", "M_BE_KEEP_OUT"], ["Cover the fort with sheets", "M_BE_KEEP_OUT"]], "The fort cannot be rebuilt once lost, so new houses go elsewhere."],
@@ -8573,16 +9985,16 @@ var TE = "PEOPLE.AFRICAN_TRADITIONAL_EDUC.";
 var SA = "PEOPLE.SCHOOL_ADMINISTRATION.";
 var RK = "RESOUR.RESOURCES_IN_KENYA.";
 var MK = "RESOUR.MINING_IN_KENYA.";
-var FAMILIES8 = [
+var FAMILIES12 = [
   // ---------------------------------------------------------------- GROUP_SORT
-  fam("lg.which", `${LG}GROUP_SORT`, "direct", 1, choose3([
+  fam2("lg.which", `${LG}GROUP_SORT`, "direct", 1, choose4([
     ["To which language group do the Kikuyu belong?", "Bantu", [["Nilotic", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_CUSHITE_AS_NILOTE"]], "The Kikuyu are Bantu, like the Luhya, Kamba and Meru."],
     ["To which language group do the Luo belong?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "The Luo are Nilotes. They live by Lake Victoria."],
     ["To which language group do the Somali belong?", "Cushitic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Nilotic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_CUSHITE_AS_NILOTE"]], "The Somali are Cushites, like the Borana and Rendille."],
     ["To which language group do the Kalenjin belong?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "The Kalenjin are Highland Nilotes."],
     ["Which community belongs to the Bantu language group?", "The Kamba", [["The Maasai", "M_LG_NILOTE_AS_BANTU"], ["The Luo", "M_LG_NILOTE_AS_BANTU"], ["The Somali", "M_LG_CUSHITE_AS_NILOTE"]], "The Kamba are Bantu. The Maasai and Luo are Nilotes, and the Somali are Cushites."]
   ], { h: ["Kenya has three main language groups: Bantu, Nilotic and Cushitic.", "Bantu: Kikuyu, Luhya, Kamba. Nilotic: Luo, Kalenjin, Maasai. Cushitic: Somali, Borana."], s1: "Recall the group each community belongs to." })),
-  fam("lg.list", `${LG}GROUP_SORT`, "word", 2, choose3([
+  fam2("lg.list", `${LG}GROUP_SORT`, "word", 2, choose4([
     ["Atieno lists three Nilotic communities. Which list is right?", "Luo, Kalenjin, Maasai", [["Luo, Kikuyu, Maasai", "M_LG_NILOTE_AS_BANTU"], ["Luo, Kalenjin, Somali", "M_LG_CUSHITE_AS_NILOTE"], ["Kamba, Kalenjin, Maasai", "M_LG_NILOTE_AS_BANTU"]], "The Luo, Kalenjin and Maasai are all Nilotes."],
     ["Mutua lists three Bantu communities. Which list is right?", "Kikuyu, Luhya, Kamba", [["Kikuyu, Luo, Kamba", "M_LG_NILOTE_AS_BANTU"], ["Kikuyu, Luhya, Somali", "M_LG_CUSHITE_AS_NILOTE"], ["Maasai, Luhya, Kamba", "M_LG_NILOTE_AS_BANTU"]], "The Kikuyu, Luhya and Kamba are Bantu."],
     ["Which list has only Cushitic communities of northern Kenya?", "Somali, Borana, Rendille", [["Somali, Turkana, Rendille", "M_LG_CUSHITE_AS_NILOTE"], ["Somali, Borana, Samburu", "M_LG_CUSHITE_AS_NILOTE"], ["Kamba, Borana, Rendille", "M_LG_CUSHITE_AS_NILOTE"]], "The Somali, Borana and Rendille are Cushites. The Turkana and Samburu are Nilotes."],
@@ -8590,14 +10002,14 @@ var FAMILIES8 = [
     ["Njeri's family speaks Dholuo at home. Which language group is Dholuo in?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "Dholuo is the language of the Luo, who are Nilotes."]
   ], { h: ["Sort each community by the family of its language.", "Herding is a way of life and does not decide the language group."], s1: "Check every community in the list, not only the first." })),
   // ---------------------------------------------------------------- INTERDEPENDENCE
-  fam("id.which", `${LG}INTERDEPENDENCE`, "direct", 1, choose3([
+  fam2("id.which", `${LG}INTERDEPENDENCE`, "direct", 1, choose4([
     ["A herding community has plenty of milk and meat but little grain. What can it do?", "Trade milk and meat for grain with farmers", [["Do without any grain at all", "M_LG_SELF_SUFFICIENT"], ["Fight the farmers to get the grain", "M_LG_RIVALRY"], ["Give up herding and farm instead", "M_LG_SELF_SUFFICIENT"]], "Each side has what the other needs, so they trade and both gain."],
     ["What does interdependence between communities mean?", "They help each other by sharing", [["They compete to be the strongest", "M_LG_RIVALRY"], ["Each community lives on its own", "M_LG_SELF_SUFFICIENT"], ["They never meet or trade at all", "M_LG_SELF_SUFFICIENT"]], "Interdependence means depending on one another and helping each other."],
     ["Why can fishing communities near Lake Victoria not live on fish alone?", "They need farm foods and tools", [["Fish is enough for everything", "M_LG_SELF_SUFFICIENT"], ["They need nothing from others", "M_LG_SELF_SUFFICIENT"], ["Farmers dislike buying any fish", "M_LG_RIVALRY"]], "They trade fish for grain, vegetables and other goods."],
     ["Which language helps many Kenyan communities talk and trade with each other?", "Kiswahili", [["The language of one village", "M_LG_SELF_SUFFICIENT"], ["Only Latin", "M_LG_SELF_SUFFICIENT"], ["Sign only", "M_LG_SELF_SUFFICIENT"]], "Kiswahili is a shared language that links communities at markets and in towns."],
     ["Which is a benefit of communities depending on each other?", "They share goods, skills and ideas", [["They all become exactly the same", "M_LG_RIVALRY"], ["They stop trading with each other", "M_LG_SELF_SUFFICIENT"], ["They begin to quarrel more often", "M_LG_RIVALRY"]], "Sharing makes life better for everyone."]
   ], { h: ["Think about what each community has and what it lacks.", "Interdependence means helping each other."], s1: "Think about what each community gains from the other." })),
-  fam("id.story", `${LG}INTERDEPENDENCE`, "word", 2, choose3([
+  fam2("id.story", `${LG}INTERDEPENDENCE`, "word", 2, choose4([
     ["At Kisii market, Amina sells maize and buys fish from a Luo trader. How do the two communities gain?", "Each gets food it does not have", [["Only Amina gains from the trade", "M_LG_SELF_SUFFICIENT"], ["Neither of them gains anything", "M_LG_RIVALRY"], ["They end up quarrelling at the end", "M_LG_RIVALRY"]], "Both communities have a food the other needs, so both gain."],
     ["Maasai herders bring hides and milk to a market. Kikuyu farmers bring vegetables. What is this an example of?", "Interdependence", [["Competition", "M_LG_RIVALRY"], ["Self-sufficiency", "M_LG_SELF_SUFFICIENT"], ["Isolation", "M_LG_SELF_SUFFICIENT"]], "Each group provides what the other lacks."],
     ["A teacher says no Kenyan community can live alone. Which is her best reason?", "Each needs goods and skills of others", [["Communities are all exactly identical", "M_LG_SELF_SUFFICIENT"], ["Communities do not need any food", "M_LG_SELF_SUFFICIENT"], ["Communities like to fight each other", "M_LG_RIVALRY"]], "No community can produce everything it needs, so they trade and share."],
@@ -8605,14 +10017,14 @@ var FAMILIES8 = [
     ["Coastal traders buy cattle from herders in the north and sell them cloth. Who gains?", "Both traders and herders", [["Only the traders", "M_LG_SELF_SUFFICIENT"], ["Only the herders", "M_LG_SELF_SUFFICIENT"], ["Nobody gains", "M_LG_RIVALRY"]], "Both sides get goods they need, so both gain."]
   ], { h: ["Who gets something they need?", "Interdependence is helping each other, not fighting."], s1: "Think about what each group gives and gets." }), "c"),
   // ---------------------------------------------------------------- DENSITY_AREAS
-  fam("da.where", `${PD}DENSITY_AREAS`, "direct", 1, choose3([
+  fam2("da.where", `${PD}DENSITY_AREAS`, "direct", 1, choose4([
     ["Which area of Kenya has a high population density?", "The central highlands", [["The dry area around Marsabit", "M_PD_DESERT_DENSE"], ["The dry area around Wajir", "M_PD_DESERT_DENSE"], ["The dry area around Mandera", "M_PD_DESERT_DENSE"]], "The central highlands have good rain and fertile soil, so many people live there."],
     ["Which area has a low population density?", "The dry north around Turkana", [["Nairobi", "M_PD_DESERT_DENSE"], ["The Lake Victoria basin", "M_PD_DESERT_DENSE"], ["The coast near Mombasa", "M_PD_DESERT_DENSE"]], "Few people live in the dry north because water and farmland are scarce."],
     ["Why do so many people live in the highlands around Mount Kenya?", "There is rain and fertile soil", [["The land is dry and empty", "M_PD_DESERT_DENSE"], ["It is very hot there", "M_PD_DESERT_DENSE"], ["There are no farms", "M_PD_DESERT_DENSE"]], "Good rain and fertile soil support farming and many people."],
     ["Why do few people live in the dry north-east of Kenya?", "There is little water for farming", [["It has the most fertile soil", "M_PD_DESERT_DENSE"], ["It has rain every day", "M_PD_DESERT_DENSE"], ["It is the smallest area", "M_PD_SIZE_DENSITY"]], "Little water makes farming hard, so fewer people settle."],
     ["Which city has the highest population density in Kenya?", "Nairobi", [["Lodwar", "M_PD_DESERT_DENSE"], ["Marsabit", "M_PD_DESERT_DENSE"], ["Garissa", "M_PD_DESERT_DENSE"]], "Nairobi has jobs, schools and services, so many people live there."]
   ], { h: ["People settle where there is water, good soil and jobs.", "Density is the number of people for each square kilometre."], s1: "Think about water, soil and jobs." })),
-  fam("da.calc", `${PD}DENSITY_AREAS`, "word", 2, choose3([
+  fam2("da.calc", `${PD}DENSITY_AREAS`, "word", 2, choose4([
     ["Area A has 600 people on 3 square kilometres. Area B has 600 people on 6 square kilometres. Which area is more crowded?", "Area A", [["Area B", "M_PD_SIZE_DENSITY"], ["Both are the same", "M_PD_SIZE_DENSITY"]], "Area A has 200 people for each square kilometre. Area B has 100."],
     ["Wanjiru's village has 400 people on 2 square kilometres. Hassan's village has 400 people on 8 square kilometres. Which village has the higher density?", "Wanjiru's village", [["Hassan's village", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "Wanjiru's village has 200 people per square kilometre. Hassan's has 50."],
     ["Town P has 900 people on 3 square kilometres. Town Q has 900 people on 9 square kilometres. Which has the lower density?", "Town Q", [["Town P", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "Town P has 300 per square kilometre. Town Q has 100, which is lower."],
@@ -8620,14 +10032,14 @@ var FAMILIES8 = [
     ["A large dry county has 200 people on 100 square kilometres. A small town has 200 people on 1 square kilometre. Which has the higher density?", "The small town", [["The large dry county", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "The town has 200 people per square kilometre. The county has only 2."]
   ], { h: ["Density is people divided by area.", "Compare the number of people for each square kilometre."], s1: "Work out the people for each square kilometre in each area." })),
   // ---------------------------------------------------------------- DENSITY_EFFECTS
-  fam("de.effect", `${PD}DENSITY_EFFECTS`, "direct", 1, choose3([
+  fam2("de.effect", `${PD}DENSITY_EFFECTS`, "direct", 1, choose4([
     ["What is a problem of very high population density?", "Pressure on land, water and housing", [["Too much empty and unused land", "M_PD_DENSE_ALL_GOOD"], ["No markets or shops at all", "M_PD_DENSE_ALL_GOOD"], ["No people left to do any work", "M_PD_DENSE_ALL_GOOD"]], "Many people share limited land, water and houses."],
     ["What is a problem of very low population density?", "Schools and clinics are far apart", [["Crowded roads and busy streets", "M_PD_SPARSE_NO_PROBLEM"], ["Not enough land for everyone", "M_PD_SPARSE_NO_PROBLEM"], ["Too many houses close together", "M_PD_SPARSE_NO_PROBLEM"]], "With few people, services are costly and far apart."],
     ["What is an advantage of a high population density?", "Markets and services are close by", [["Plenty of empty land for all", "M_PD_DENSE_ALL_GOOD"], ["Quiet roads with no traffic", "M_PD_DENSE_ALL_GOOD"], ["Large farms for every family", "M_PD_DENSE_ALL_GOOD"]], "Many people mean customers, jobs and services nearby."],
     ["What is an advantage of low population density?", "There is plenty of land for herding", [["Many shops very close by", "M_PD_SPARSE_NO_PROBLEM"], ["Crowded schools with big classes", "M_PD_SPARSE_NO_PROBLEM"], ["Short queues for water points", "M_PD_SPARSE_NO_PROBLEM"]], "Few people leave more land for herding and wildlife."],
     ["What often happens to farm sizes in areas with a high population density?", "Farms become smaller", [["Farms become larger", "M_PD_DENSE_ALL_GOOD"], ["Farms stay the same", "M_PD_DENSE_ALL_GOOD"], ["Farms disappear overnight", "M_PD_DENSE_ALL_GOOD"]], "As families grow, land is divided into smaller plots."]
   ], { h: ["Think about how many people share the land, water and services.", "Crowded areas and empty areas each have good and bad sides."], s1: "Think about what many people, or few people, mean for services and land." })),
-  fam("de.story", `${PD}DENSITY_EFFECTS`, "word", 2, choose3([
+  fam2("de.story", `${PD}DENSITY_EFFECTS`, "word", 2, choose4([
     ["A town with a very high population density has crowded classrooms. What caused this?", "Too many children for the schools", [["Too few children", "M_PD_DENSE_ALL_GOOD"], ["Too many empty classrooms", "M_PD_DENSE_ALL_GOOD"], ["A shortage of land for houses only", "M_PD_DENSE_ALL_GOOD"]], "When many people live close together, schools can fill up."],
     ["Amina walks 10 kilometres to the nearest clinic in a thinly settled area. What is the cause?", "Few people live there, so clinics are few", [["Many people live there, so clinics are many", "M_PD_SPARSE_NO_PROBLEM"], ["There are far too many clinics there", "M_PD_SPARSE_NO_PROBLEM"], ["The clinic is on the next street", "M_PD_SPARSE_NO_PROBLEM"]], "Where few people live, services are costly to provide."],
     ["A family in a crowded area has only a small plot to farm. What is the likely reason?", "Land is shared among many people", [["There is much too much land", "M_PD_DENSE_ALL_GOOD"], ["The soil in that area is poor", "M_PD_DENSE_ALL_GOOD"], ["There are only very few families", "M_PD_DENSE_ALL_GOOD"]], "In a crowded area, land is divided into smaller pieces."],
@@ -8635,14 +10047,14 @@ var FAMILIES8 = [
     ["A busy market town has many shops and good roads. Why does this happen?", "Many nearby people buy things", [["Few people live nearby at all", "M_PD_SPARSE_NO_PROBLEM"], ["There are no customers there", "M_PD_SPARSE_NO_PROBLEM"], ["No one needs any shops", "M_PD_SPARSE_NO_PROBLEM"]], "More people mean more customers, so businesses and services grow."]
   ], { h: ["Many people or few people: who shares the land and services?", "Match the effect to crowded or thinly settled."], s1: "Decide whether the story is about a crowded or a thinly settled area." })),
   // ---------------------------------------------------------------- ATE_METHODS
-  fam("tm.which", `${TE}ATE_METHODS`, "direct", 1, choose3([
+  fam2("tm.which", `${TE}ATE_METHODS`, "direct", 1, choose4([
     ["Which was a way elders taught children long ago?", "Storytelling", [["Writing on a blackboard", "M_TE_NO_SCHOOL"], ["Reading a textbook", "M_TE_NO_SCHOOL"], ["Using a computer", "M_TE_NO_SCHOOL"]], "Elders taught by telling stories that carried lessons."],
     ["Who taught children in African traditional education?", "Parents and elders", [["Only a headteacher", "M_TE_NO_SCHOOL"], ["No one", "M_TE_NO_SCHOOL"], ["Only a textbook", "M_TE_NO_SCHOOL"]], "Parents, elders and the whole community taught the young."],
     ["What is a proverb used for?", "Teach wise lessons in short sayings", [["Show how to farm", "M_TE_METHOD_MIX"], ["Train children to run", "M_TE_METHOD_MIX"], ["Count the cattle", "M_TE_METHOD_MIX"]], "A proverb is a short saying that carries wisdom."],
     ["Which method teaches by working beside someone with the skill?", "Learning by doing", [["Riddles", "M_TE_METHOD_MIX"], ["Songs", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"]], "Children learned skills such as farming by doing the work with an adult."],
     ["Which of these did children use to learn and remember in traditional education?", "Songs and dances", [["Exam papers", "M_TE_NO_SCHOOL"], ["Computer games", "M_TE_NO_SCHOOL"], ["Text messages", "M_TE_NO_SCHOOL"]], "Songs and dances help people remember lessons and customs."]
   ], { h: ["Think how a child learned before classrooms.", "Stories, proverbs, riddles, songs, and doing the work."], s1: "Recall the ways children were taught by elders." })),
-  fam("tm.scene", `${TE}ATE_METHODS`, "word", 2, choose3([
+  fam2("tm.scene", `${TE}ATE_METHODS`, "word", 2, choose4([
     ["Wambui helps her aunt cook every evening and learns how to cook. Which method is this?", "Learning by doing", [["Storytelling", "M_TE_METHOD_MIX"], ["A riddle", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"]], "She learns by working beside someone with the skill."],
     ["An old man tells children the story of the hare and the hyena to teach them honesty. Which method is this?", "Storytelling", [["Learning by doing", "M_TE_METHOD_MIX"], ["A riddle", "M_TE_METHOD_MIX"], ["A dance", "M_TE_METHOD_MIX"]], "A story carries a lesson about how to behave."],
     [`Kiprono's grandfather says, "A child who is not taught by the mother is taught by the world." Which method is this?`, "A proverb", [["Learning by doing", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"]], "A short wise saying is a proverb."],
@@ -8650,14 +10062,14 @@ var FAMILIES8 = [
     ["A boy watches his father mend a fence and then copies him. Which method is this?", "Observation and imitation", [["A riddle", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"]], "He learns by watching and copying a skilled person."]
   ], { h: ["What is the child doing: listening, watching, singing or working?", "Match each scene to its method."], s1: "Decide what the child is doing to learn." })),
   // ---------------------------------------------------------------- ATE_VALUES
-  fam("tv.which", `${TE}ATE_VALUES`, "direct", 1, choose3([
+  fam2("tv.which", `${TE}ATE_VALUES`, "direct", 1, choose4([
     ["Which value do children learn by greeting elders first?", "Respect", [["Greed", "M_TE_ONLY_SKILLS"], ["Pride", "M_TE_ONLY_SKILLS"], ["Laziness", "M_TE_ONLY_SKILLS"]], "Greeting elders first teaches respect."],
     ["Which value did traditional stories about the greedy hyena teach?", "Sharing and honesty", [["Cheating", "M_TE_ONLY_SKILLS"], ["Greed", "M_TE_ONLY_SKILLS"], ["Anger", "M_TE_ONLY_SKILLS"]], "Such stories warn against greed and teach honesty and sharing."],
     ["Why is African traditional education important?", "It taught values and skills", [["It taught nothing at all", "M_TE_OUTDATED"], ["It is useless in our time", "M_TE_OUTDATED"], ["It only ever taught skills", "M_TE_ONLY_SKILLS"]], "It prepared children for adult life with values and skills."],
     ["Which value is taught when children share work like fetching water together?", "Responsibility and teamwork", [["Laziness and selfishness", "M_TE_ONLY_SKILLS"], ["Fighting and shouting loudly", "M_TE_ONLY_SKILLS"], ["Pride and showing off", "M_TE_ONLY_SKILLS"]], "Sharing work teaches children to be responsible and work as a team."],
     ["How can a Grade 5 learner apply a traditional value at school?", "Greet teachers and elders politely", [["Ignore all the older people", "M_TE_OUTDATED"], ["Laugh at the people who are old", "M_TE_OUTDATED"], ["Refuse to share with others", "M_TE_OUTDATED"]], "Showing respect to elders is a value still used today."]
   ], { h: ["What value does the practice teach?", "Respect, honesty, sharing and responsibility are traditional values."], s1: "Think of the lesson behind each practice." })),
-  fam("tv.why", `${TE}ATE_VALUES`, "why", 2, choose3([
+  fam2("tv.why", `${TE}ATE_VALUES`, "why", 2, choose4([
     ["Njeri says traditional education taught only farming and herding. What did she leave out?", "Values like respect and honesty", [["Nothing at all was left out", "M_TE_ONLY_SKILLS"], ["The names of all the animals", "M_TE_ONLY_SKILLS"], ["The ages of all the elders", "M_TE_ONLY_SKILLS"]], "Traditional education also taught values."],
     ["Why do some elders still tell stories to children today?", "Stories teach values that still matter", [["Stories are of no use today", "M_TE_OUTDATED"], ["Children do not like any stories", "M_TE_OUTDATED"], ["The stories are all very new", "M_TE_OUTDATED"]], "Values such as honesty and respect are useful in every age."],
     ["A child in your village is rude to an elder. Which traditional value should he practise?", "Respect", [["Greed", "M_TE_ONLY_SKILLS"], ["Pride", "M_TE_ONLY_SKILLS"], ["Anger", "M_TE_ONLY_SKILLS"]], "Respect for elders was taught in every community."],
@@ -8665,14 +10077,14 @@ var FAMILIES8 = [
     ["Which sentence about teaching by elders is true today?", "Its values still guide good behaviour", [["It has no use in our time", "M_TE_OUTDATED"], ["It teaches only farming skills", "M_TE_ONLY_SKILLS"], ["It is meant for the old only", "M_TE_OUTDATED"]], "Honesty, respect and sharing are still useful."]
   ], { h: ["What did traditional education teach besides skills?", "Values such as respect and honesty help people in every age."], s1: "Think of the lessons behind the practices." })),
   // ---------------------------------------------------------------- ADMIN_LEADERS
-  fam("al.who", `${SA}ADMIN_LEADERS`, "direct", 1, choose3([
+  fam2("al.who", `${SA}ADMIN_LEADERS`, "direct", 1, choose4([
     ["Who is in charge of the whole school?", "The headteacher", [["The deputy headteacher", "M_SA_DEPUTY_HEAD"], ["A class teacher", "M_SA_DUTY_MIX"], ["A prefect", "M_SA_DUTY_MIX"]], "The headteacher runs the whole school."],
     ["Who acts for the headteacher when the headteacher is away?", "The deputy headteacher", [["A prefect", "M_SA_DUTY_MIX"], ["The cook", "M_SA_DUTY_MIX"], ["The newest teacher", "M_SA_DUTY_MIX"]], "The deputy helps the head and acts when the head is away."],
     ["Who takes the class register each morning?", "The class teacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["The headteacher", "M_SA_DUTY_MIX"], ["A visitor", "M_SA_DUTY_MIX"]], "A class teacher looks after a class and takes the register."],
     ["Which group helps oversee the development of a public school?", "The Board of Management", [["The class prefects", "M_SA_DUTY_MIX"], ["The cooks", "M_SA_DUTY_MIX"], ["The learners", "M_SA_DUTY_MIX"]], "The Board of Management oversees development and discipline in a public school."],
     ["Who helps keep order among learners at break time?", "The prefects", [["The Board of Management", "M_SA_DUTY_MIX"], ["The deputy headteacher alone", "M_SA_DUTY_MIX"], ["The visitors", "M_SA_DUTY_MIX"]], "Prefects help teachers keep order."]
   ], { h: ["Which leader has this duty?", "The head runs the school. The deputy helps. The class teacher looks after a class."], s1: "Match the duty to the person who does it." })),
-  fam("al.duty", `${SA}ADMIN_LEADERS`, "word", 2, choose3([
+  fam2("al.duty", `${SA}ADMIN_LEADERS`, "word", 2, choose4([
     ["Achieng has a problem that needs the person in charge of the whole school. Whom should she see?", "The headteacher", [["The deputy headteacher", "M_SA_DEPUTY_HEAD"], ["A prefect", "M_SA_DUTY_MIX"], ["A cook", "M_SA_DUTY_MIX"]], "The headteacher is in charge of the whole school."],
     ["The headteacher is at a meeting. Who looks after the school for the day?", "The deputy headteacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["A prefect", "M_SA_DUTY_MIX"], ["The cook", "M_SA_DUTY_MIX"]], "The deputy acts when the head is away."],
     ["Baraka is absent. Who marks the register?", "His class teacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["The headteacher", "M_SA_DUTY_MIX"], ["The deputy headteacher", "M_SA_DUTY_MIX"]], "The class teacher marks the register for the class."],
@@ -8680,28 +10092,28 @@ var FAMILIES8 = [
     ["A head of department guides teachers of one subject. Which duty does the head of department have?", "Guides a subject or section", [["Runs the whole school", "M_SA_DEPUTY_HEAD"], ["Keeps order at break only", "M_SA_DUTY_MIX"], ["Takes the register of every class", "M_SA_DUTY_MIX"]], "Heads of department supervise a subject or section."]
   ], { h: ["Which job does the problem need?", "Head: whole school. Deputy: helps and acts. Class teacher: class and register."], s1: "Decide which duty the story describes." }), "b"),
   // ---------------------------------------------------------------- ADMIN_STRUCTURE
-  fam("as.order", `${SA}ADMIN_STRUCTURE`, "direct", 1, choose3([
+  fam2("as.order", `${SA}ADMIN_STRUCTURE`, "direct", 1, choose4([
     ["Who is directly under the headteacher on a school chart?", "The deputy headteacher", [["The class teachers", "M_SA_ORDER_REVERSED"], ["The learners", "M_SA_ORDER_REVERSED"], ["The prefects", "M_SA_PREFECT_ABOVE"]], "The deputy headteacher comes directly after the head."],
     ["Who is at the top of the staff on a school chart?", "The headteacher", [["The deputy headteacher", "M_SA_ORDER_REVERSED"], ["A class teacher", "M_SA_ORDER_REVERSED"], ["The prefects", "M_SA_PREFECT_ABOVE"]], "The headteacher is at the top of the school staff."],
     ["Who reports to the class teacher?", "The learners and class prefects", [["The headteacher", "M_SA_ORDER_REVERSED"], ["The deputy headteacher", "M_SA_ORDER_REVERSED"], ["The Board of Management", "M_SA_ORDER_REVERSED"]], "Learners and prefects are below the class teacher."],
     ["Where do prefects belong on a school chart?", "Below the teachers", [["Above the headteacher", "M_SA_PREFECT_ABOVE"], ["Above the teachers", "M_SA_PREFECT_ABOVE"], ["Next to the headteacher", "M_SA_PREFECT_ABOVE"]], "Prefects are learners who help, so they come below teachers."],
     ["Who comes between the deputy headteacher and the class teachers?", "Senior teachers and heads of department", [["The prefects", "M_SA_PREFECT_ABOVE"], ["The headteacher", "M_SA_ORDER_REVERSED"], ["The learners", "M_SA_ORDER_REVERSED"]], "Senior teachers and heads of department lead sections."]
   ], { h: ["Draw the chart from the top down.", "Head, deputy, senior teachers, class teachers, learners and prefects."], s1: "Place each person one level below the one above." })),
-  fam("as.spot", `${SA}ADMIN_STRUCTURE`, "spot", 3, spot3([
+  fam2("as.spot", `${SA}ADMIN_STRUCTURE`, "spot", 3, spot4([
     ["Juma draws a school chart. He says the deputy is above the headteacher. Which step has the mistake?", [["Step 1: Juma knows the school has a headteacher and a deputy.", true], ["Step 2: He puts the deputy above the headteacher.", false], ["Step 3: He puts the class teachers below.", true]], "The headteacher is at the top. The deputy comes directly under the head.", "M_SA_ORDER_REVERSED"],
     ["Amina says prefects are above teachers. Which step has the mistake?", [["Step 1: Amina sees prefects help keep order.", true], ["Step 2: She decides prefects are above teachers.", false], ["Step 3: She draws prefects at the top.", true]], "Prefects are learners. They report to teachers, so they come below them.", "M_SA_PREFECT_ABOVE"],
     ["Kamau says class teachers report to prefects. Which step has the mistake?", [["Step 1: Kamau sees that prefects help teachers.", true], ["Step 2: He decides class teachers report to prefects.", false], ["Step 3: He draws an arrow from teachers to prefects.", true]], "Prefects report to teachers. The order is head, deputy, teachers, then learners and prefects.", "M_SA_PREFECT_ABOVE"],
     ["Wairimu says the headteacher is below the class teachers on the chart. Which step has the mistake?", [["Step 1: Wairimu knows class teachers work with learners daily.", true], ["Step 2: She decides the head is below them.", false], ["Step 3: She draws the head at the bottom.", true]], "The headteacher is at the top of the staff chart.", "M_SA_ORDER_REVERSED"]
   ], { h: ["Which step says the wrong order?", "The head is at the top. The learners are at the bottom."], s1: "Check the order step by step." })),
   // ---------------------------------------------------------------- RESOURCE_TYPES
-  fam("rt.which", `${RK}RESOURCE_TYPES`, "direct", 1, choose3([
+  fam2("rt.which", `${RK}RESOURCE_TYPES`, "direct", 1, choose4([
     ["Which of these is a natural resource of Kenya?", "Water in Lake Victoria", [["Money in a bank", "M_RK_MONEY_ONLY"], ["A school building", "M_RK_BUILT_NATURAL"], ["A new road", "M_RK_BUILT_NATURAL"]], "Water comes from nature. Money, buildings and roads are made by people."],
     ["Which of these is a natural resource?", "A forest", [["A bridge", "M_RK_BUILT_NATURAL"], ["A shop", "M_RK_BUILT_NATURAL"], ["A bank account", "M_RK_MONEY_ONLY"]], "A forest grows in nature."],
     ["Which of these is a mineral resource?", "Limestone", [["Maize", "M_RK_BUILT_NATURAL"], ["Timber", "M_RK_BUILT_NATURAL"], ["Fish", "M_RK_BUILT_NATURAL"]], "Limestone is a mineral found in rocks."],
     ["Which of these is a resource from wildlife?", "Elephants in a park", [["A hotel", "M_RK_BUILT_NATURAL"], ["A car", "M_RK_BUILT_NATURAL"], ["A phone", "M_RK_BUILT_NATURAL"]], "Wildlife is a natural resource."],
     ["Which one is NOT a natural resource?", "A hospital building", [["A river", "M_RK_BUILT_NATURAL"], ["Soil", "M_RK_BUILT_NATURAL"], ["Sunshine", "M_RK_BUILT_NATURAL"]], "A hospital is built by people. Rivers, soil and sunshine come from nature."]
   ], { h: ["Did people make it, or did nature provide it?", "Land, soil, water, minerals, forests, wildlife, fish, sun and wind are natural."], s1: "Decide whether it comes from nature." })),
-  fam("rt.sort", `${RK}RESOURCE_TYPES`, "table", 2, choose3([
+  fam2("rt.sort", `${RK}RESOURCE_TYPES`, "table", 2, choose4([
     [
       "A class sorts things on a table. Which row is a natural resource?",
       "Row C",
@@ -8739,14 +10151,14 @@ var FAMILIES8 = [
     ]
   ], { h: ["Natural means made by nature, not by people.", "Money and buildings are made by people."], s1: "Read each row and ask who made it." })),
   // ---------------------------------------------------------------- PRUDENT_USE
-  fam("pu.act", `${RK}PRUDENT_USE`, "direct", 1, choose3([
+  fam2("pu.act", `${RK}PRUDENT_USE`, "direct", 1, choose4([
     ["What does it mean to use a resource prudently?", "Use it carefully so it lasts", [["Never use it", "M_RK_CONSERVE_NO_USE"], ["Use it up quickly", "M_RK_UNLIMITED"], ["Waste what you do not need", "M_RK_UNLIMITED"]], "Prudent use means using a resource carefully so it lasts."],
     ["Which action uses water prudently?", "Mend a leaking tap", [["Leave the tap running", "M_RK_UNLIMITED"], ["Wash the car every day", "M_RK_UNLIMITED"], ["Pour water on the road", "M_RK_UNLIMITED"]], "A leaking tap wastes water, so mending it saves it."],
     ["What should we do after cutting a tree?", "Plant a new tree", [["Cut more trees quickly", "M_RK_UNLIMITED"], ["Do nothing, forests grow back by themselves", "M_RK_UNLIMITED"], ["Burn the stump", "M_RK_UNLIMITED"]], "Planting new trees replaces what we cut."],
     ["Which action helps to use resources sustainably?", "Reuse and recycle things", [["Throw everything away", "M_RK_UNLIMITED"], ["Never use anything", "M_RK_CONSERVE_NO_USE"], ["Burn all plastic", "M_RK_UNLIMITED"]], "Reusing and recycling makes resources last longer."],
     ["Why can a forest finish if people keep cutting trees?", "Trees grow slowly but are cut fast", [["Forests always grow back at once", "M_RK_UNLIMITED"], ["Trees never grow at all", "M_RK_UNLIMITED"], ["Forests can never be cut down", "M_RK_UNLIMITED"]], "If we cut trees faster than they grow, the forest can finish."]
   ], { h: ["Prudent use means careful use so it lasts.", "Resources can run out if used too fast."], s1: "Choose the action that makes the resource last." })),
-  fam("pu.story", `${RK}PRUDENT_USE`, "word", 2, choose3([
+  fam2("pu.story", `${RK}PRUDENT_USE`, "word", 2, choose4([
     ["A school has a leaking tap that wastes water all day. What should the learners do?", "Report it so it can be mended", [["Leave it, water is endless", "M_RK_UNLIMITED"], ["Turn it on more", "M_RK_UNLIMITED"], ["Use the water for play", "M_RK_UNLIMITED"]], "Reporting the leak saves water."],
     ["Wafula cuts one tree for firewood. What should his family also do?", "Plant a new tree", [["Cut three more", "M_RK_UNLIMITED"], ["Cut the whole forest", "M_RK_UNLIMITED"], ["Wait for it to regrow in a day", "M_RK_UNLIMITED"]], "Planting a tree replaces the one cut."],
     ["A farmer plants the same crop on his land each year until the soil is weak. What could he do to use the soil prudently?", "Rotate crops", [["Leave the land unused for ever", "M_RK_CONSERVE_NO_USE"], ["Plant the same crop again", "M_RK_UNLIMITED"], ["Burn the land", "M_RK_UNLIMITED"]], "Rotating crops keeps the soil fertile."],
@@ -8754,14 +10166,14 @@ var FAMILIES8 = [
     ["The headteacher asks learners to use both sides of paper. Why?", "It saves paper and trees", [["It wastes paper", "M_RK_UNLIMITED"], ["It is only for exams", "M_RK_UNLIMITED"], ["Trees do not matter", "M_RK_UNLIMITED"]], "Using both sides saves paper, so fewer trees are cut."]
   ], { h: ["Which choice keeps the resource for later?", "Resources can finish if they are wasted."], s1: "Think about what makes the resource last." }), "c"),
   // ---------------------------------------------------------------- MINERAL_PLACES
-  fam("mp.where", `${MK}MINERAL_PLACES`, "direct", 1, choose3([
+  fam2("mp.where", `${MK}MINERAL_PLACES`, "direct", 1, choose4([
     ["Where in Kenya is soda ash mined?", "Lake Magadi", [["The Kerio Valley", "M_MK_PLACE_MIX"], ["Kwale", "M_MK_PLACE_MIX"], ["Lake Victoria", "M_MK_PLACE_MIX"]], "Soda ash is taken from Lake Magadi."],
     ["Where is fluorspar mined in Kenya?", "The Kerio Valley", [["Lake Magadi", "M_MK_PLACE_MIX"], ["Mombasa", "M_MK_PLACE_MIX"], ["Lake Turkana", "M_MK_PLACE_MIX"]], "Fluorspar is dug in the Kerio Valley."],
     ["Which mineral is mined in Kwale County?", "Titanium", [["Soda ash", "M_MK_PLACE_MIX"], ["Fluorspar", "M_MK_PLACE_MIX"], ["Salt", "M_MK_PLACE_MIX"]], "Titanium is mined in Kwale."],
     ["Which minerals are mined in Taita Taveta?", "Gemstones", [["Soda ash", "M_MK_PLACE_MIX"], ["Fluorspar", "M_MK_PLACE_MIX"], ["Titanium", "M_MK_PLACE_MIX"]], "Gemstones such as tsavorite come from Taita Taveta."],
     ["Which of these is a mineral found in Kenya?", "Gold", [["Coffee", "M_MK_NOT_MINERAL"], ["Tea", "M_MK_NOT_MINERAL"], ["Timber", "M_MK_NOT_MINERAL"]], "Gold is a mineral. Coffee, tea and timber are plants."]
   ], { h: ["Link each mineral to its place.", "Magadi: soda ash. Kerio Valley: fluorspar. Kwale: titanium. Taita Taveta: gemstones."], s1: "Match the mineral to the place it is mined." })),
-  fam("mp.table", `${MK}MINERAL_PLACES`, "table", 2, choose3([
+  fam2("mp.table", `${MK}MINERAL_PLACES`, "table", 2, choose4([
     [
       "Read the table. Which mineral is mined at Lake Magadi?",
       "Soda ash",
@@ -8799,14 +10211,14 @@ var FAMILIES8 = [
     ]
   ], { h: ["Read the row that has the clue.", "Match the mineral and its place."], s1: "Read each row of the table." }), "b"),
   // ---------------------------------------------------------------- MINERAL_IMPORTANCE
-  fam("mi.use", `${MK}MINERAL_IMPORTANCE`, "direct", 1, choose3([
+  fam2("mi.use", `${MK}MINERAL_IMPORTANCE`, "direct", 1, choose4([
     ["What is limestone used to make?", "Cement", [["Jewellery", "M_MK_USE_MIX"], ["Cooking oil", "M_MK_USE_MIX"], ["Cloth", "M_MK_USE_MIX"]], "Limestone is heated and ground to make cement."],
     ["What are gemstones used for?", "Jewellery", [["Cement", "M_MK_USE_MIX"], ["Fuel", "M_MK_USE_MIX"], ["Roads", "M_MK_USE_MIX"]], "Gemstones are cut and polished for jewellery."],
     ["What is soda ash used for?", "Making glass and soap", [["Making cement", "M_MK_USE_MIX"], ["Making cloth", "M_MK_USE_MIX"], ["Growing maize", "M_MK_USE_MIX"]], "Soda ash is used in glass and soap making."],
     ["How does mining help a country?", "It gives jobs and income", [["It gives only problems", "M_MK_NO_HARM"], ["It gives no jobs at all", "M_MK_NO_HARM"], ["It stops all other work", "M_MK_NO_HARM"]], "Mining creates jobs and income."],
     ["What can happen if mining is not controlled?", "Land and water can be damaged", [["Nothing at all happens", "M_MK_NO_HARM"], ["The land becomes much better", "M_MK_NO_HARM"], ["Crops all grow much faster", "M_MK_NO_HARM"]], "Uncontrolled mining can damage land, water and people's health."]
   ], { h: ["What is the mineral used for?", "Mining has good and bad effects."], s1: "Think about the use of the mineral and the effect of mining." })),
-  fam("mi.story", `${MK}MINERAL_IMPORTANCE`, "word", 2, choose3([
+  fam2("mi.story", `${MK}MINERAL_IMPORTANCE`, "word", 2, choose4([
     ["A cement factory needs limestone from the ground. How does mining help?", "It supplies the raw material", [["It makes cement quite useless", "M_MK_USE_MIX"], ["It stops all building work", "M_MK_NO_HARM"], ["It supplies cloth for clothes", "M_MK_USE_MIX"]], "Limestone is the raw material for cement."],
     ["A mine near a village gives many people work. What is this an example of?", "Jobs from mining", [["Harm from mining", "M_MK_NO_HARM"], ["Loss of jobs", "M_MK_NO_HARM"], ["No benefit", "M_MK_NO_HARM"]], "Mining gives people work and income."],
     ["A mining company leaves open pits after digging. What problem can this cause?", "Danger and damaged land", [["More land for farming crops", "M_MK_NO_HARM"], ["Fewer accidents at the mine", "M_MK_NO_HARM"], ["Cleaner water in the rivers", "M_MK_NO_HARM"]], "Open pits are unsafe and spoil the land."],
@@ -8820,16 +10232,16 @@ var FK = "RESOUR.FISHING_IN_KENYA.";
 var WT = "RESOUR.WILDLIFE_AND_TOURISM_IN_.";
 var TR = "RESOUR.DEVELOPMENT_OF_TRANSPORT.";
 var CM = "RESOUR.DEVELOPMENT_OF_COMMUNICA.";
-var FAMILIES9 = [
+var FAMILIES13 = [
   // ---------------------------------------------------------------- FISHING_GROUNDS
-  fam("fg.which", `${FK}FISHING_GROUNDS`, "direct", 1, choose3([
+  fam2("fg.which", `${FK}FISHING_GROUNDS`, "direct", 1, choose4([
     ["Which of these is the main inland fishing ground in Kenya?", "Lake Victoria", [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Lake Magadi", "M_FK_SODA_LAKE"], ["Mount Kenya", "M_FK_SEA_AS_INLAND"]], "Lake Victoria gives most of the fish caught inland in Kenya."],
     ["Which of these is an inland fishing ground?", "Lake Turkana", [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["The Tsavo plains", "M_FK_SEA_AS_INLAND"], ["The Rift Valley floor", "M_FK_SEA_AS_INLAND"]], "Lake Turkana is a lake inside Kenya with plenty of fish."],
     ["Why is the Indian Ocean not an inland fishing ground?", "It is the sea, not a lake or river", [["It has no fish in it at all", "M_FK_SEA_AS_INLAND"], ["It is far too small to fish in", "M_FK_SEA_AS_INLAND"], ["It is a lake inside the land", "M_FK_SEA_AS_INLAND"]], "Inland means inside the country, away from the sea."],
     ["Lake Magadi is a soda lake. What is true about fishing there?", "It is not a main fishing ground", [["It is the biggest fishing ground", "M_FK_SODA_LAKE"], ["It is full of Nile perch", "M_FK_SODA_LAKE"], ["It supplies most of Kenya's fish", "M_FK_SODA_LAKE"]], "The soda water is too salty for most fish."],
     ["Which of these lakes in the Rift Valley supports fishing, including tilapia?", "Lake Naivasha", [["Lake Magadi", "M_FK_SODA_LAKE"], ["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Mount Elgon", "M_FK_SEA_AS_INLAND"]], "Lake Naivasha is a freshwater lake where fish are caught."]
   ], { h: ["Inland fishing grounds are lakes, rivers and dams inside the country.", "Lake Victoria and Lake Turkana are the largest."], s1: "Think of lakes, rivers and dams inside Kenya." })),
-  fam("fg.where", `${FK}FISHING_GROUNDS`, "word", 2, choose3([
+  fam2("fg.where", `${FK}FISHING_GROUNDS`, "word", 2, choose4([
     ["Atieno fishes at the lake in the west that Kenya shares with Uganda and Tanzania. Which lake is it?", "Lake Victoria", [["Lake Turkana", "M_FK_REGION_MIX"], ["Lake Naivasha", "M_FK_REGION_MIX"], ["Lake Magadi", "M_FK_SODA_LAKE"]], "Lake Victoria is in the west and is shared by three countries."],
     ["Ekiru fishes in a large lake in the dry north-west of Kenya. Which lake is it?", "Lake Turkana", [["Lake Victoria", "M_FK_REGION_MIX"], ["Lake Naivasha", "M_FK_REGION_MIX"], ["Lake Magadi", "M_FK_SODA_LAKE"]], "Lake Turkana is in the north-west."],
     ["Which lake is in the Rift Valley near Naivasha town?", "Lake Naivasha", [["Lake Victoria", "M_FK_REGION_MIX"], ["Lake Turkana", "M_FK_REGION_MIX"], ["The Indian Ocean", "M_FK_SEA_AS_INLAND"]], "Lake Naivasha is a freshwater lake in the Rift Valley."],
@@ -8843,14 +10255,14 @@ var FAMILIES9 = [
     ]
   ], { h: ["Lake Victoria is in the west. Lake Turkana is in the north-west.", "The Indian Ocean is not inland."], s1: "Link each lake to its part of Kenya." }), "b"),
   // ---------------------------------------------------------------- FISHING_ECONOMY
-  fam("fe.which", `${FK}FISHING_ECONOMY`, "direct", 1, choose3([
+  fam2("fe.which", `${FK}FISHING_ECONOMY`, "direct", 1, choose4([
     ["How does fishing help Kenya's economy?", "It gives jobs and income", [["It gives food only to one family", "M_FK_FOOD_ONLY"], ["It gives no work to anyone", "M_FK_FOOD_ONLY"], ["It stops other trades", "M_FK_FOOD_ONLY"]], "Fishing gives jobs to fishers, traders and processors, and money from sales."],
     ["Which of these earns money from fish?", "A fish trader at a market", [["A person who sleeps all day", "M_FK_FOOD_ONLY"], ["A person who never sells", "M_FK_FOOD_ONLY"], ["A person who buys nothing", "M_FK_FOOD_ONLY"]], "Traders, fishers and processors all earn from fish."],
     ["Why is fish good for people?", "It gives protein", [["It gives no food value", "M_FK_FOOD_ONLY"], ["It is only meant for sale", "M_FK_FOOD_ONLY"], ["It makes people sleepy", "M_FK_FOOD_ONLY"]], "Fish is a food rich in protein."],
     ["Why should fishers not catch young fish?", "The young fish must grow and breed", [["Young fish taste bad", "M_FK_NO_SUSTAIN"], ["There is no reason to spare them", "M_FK_NO_SUSTAIN"], ["They are too small to see", "M_FK_NO_SUSTAIN"]], "If young fish are caught, fewer will grow and breed for the future."],
     ["How does Kenya earn money from Nile perch from Lake Victoria?", "By selling it in Kenya and abroad", [["By keeping all of it at home", "M_FK_FOOD_ONLY"], ["By burying it in the ground", "M_FK_FOOD_ONLY"], ["By giving all of it away", "M_FK_FOOD_ONLY"]], "Fish are sold in markets at home and exported."]
   ], { h: ["Think about who works with fish, from the lake to the plate.", "Fish stocks must not be over-fished."], s1: "Follow a fish from the boat to the market and the plate." })),
-  fam("fe.story", `${FK}FISHING_ECONOMY`, "word", 2, choose3([
+  fam2("fe.story", `${FK}FISHING_ECONOMY`, "word", 2, choose4([
     ["Atieno's family sells fish at the lakeside and buys school books. How does fishing help them?", "It gives the family an income", [["It gives no income at all", "M_FK_FOOD_ONLY"], ["It only gives them fish to eat", "M_FK_FOOD_ONLY"], ["It makes them poor", "M_FK_FOOD_ONLY"]], "Selling fish brings money for needs such as books."],
     ["A fish factory at the lake buys fish and employs many workers. What does this show?", "Fishing creates jobs", [["Fishing has no value", "M_FK_FOOD_ONLY"], ["Fishing only feeds one person", "M_FK_FOOD_ONLY"], ["Fishing closes factories", "M_FK_FOOD_ONLY"]], "Fishing supports processors and many other workers."],
     ["Fishers use nets with very small holes that catch young fish too. What may happen to the lake?", "There will be fewer fish later", [["There will be more fish later", "M_FK_NO_SUSTAIN"], ["Nothing will change", "M_FK_NO_SUSTAIN"], ["Fish will grow faster", "M_FK_NO_SUSTAIN"]], "Catching young fish leaves too few to grow and breed."],
@@ -8858,14 +10270,14 @@ var FAMILIES9 = [
     ["A truck takes fresh fish from Lake Victoria to Nairobi and sells it. Who gains?", "Fishers, drivers and traders", [["Only the fish", "M_FK_FOOD_ONLY"], ["No one at all", "M_FK_FOOD_ONLY"], ["Only the lake", "M_FK_FOOD_ONLY"]], "Many people earn from moving and selling fish."]
   ], { h: ["Who earns, and what keeps fish for the future?", "Fish must be allowed to grow and breed."], s1: "Think about who gains and what protects the fish." })),
   // ---------------------------------------------------------------- ATTRACTIONS_PLACES
-  fam("ap.which", `${WT}ATTRACTIONS_PLACES`, "direct", 1, choose3([
+  fam2("ap.which", `${WT}ATTRACTIONS_PLACES`, "direct", 1, choose4([
     ["Which park is famous for the wildebeest migration?", "The Maasai Mara", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"], ["Nairobi National Park", "M_WT_ANIMAL_MIX"]], "Wildebeest cross the Mara River in the Maasai Mara each year."],
     ["Which park is known for elephants and views of Mount Kilimanjaro?", "Amboseli", [["The Maasai Mara", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"], ["Samburu", "M_WT_ANIMAL_MIX"]], "Amboseli has many elephants and a view of Kilimanjaro."],
     ["Which park is famous for flamingos and rhinos?", "Lake Nakuru National Park", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Tsavo East", "M_WT_ANIMAL_MIX"], ["The Maasai Mara", "M_WT_ANIMAL_MIX"]], "Flamingos gather at the shore of Lake Nakuru."],
     ["In which county is the Maasai Mara?", "Narok", [["Kajiado", "M_WT_PLACE_MIX"], ["Mombasa", "M_WT_PLACE_MIX"], ["Turkana", "M_WT_PLACE_MIX"]], "The Maasai Mara is in Narok County."],
     ["Which park is the largest in Kenya and is known for red elephants?", "Tsavo", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Nairobi National Park", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"]], "Tsavo is the largest and its elephants look red from the soil."]
   ], { h: ["Think of the one thing each park is known for.", "Mara: wildebeest. Amboseli: elephants and Kilimanjaro. Nakuru: flamingos."], s1: "Match each park with what it is known for." })),
-  fam("ap.table", `${WT}ATTRACTIONS_PLACES`, "table", 2, choose3([
+  fam2("ap.table", `${WT}ATTRACTIONS_PLACES`, "table", 2, choose4([
     [
       "Read the table. Which park is in the south, near the Tanzania border, and is known for elephants?",
       "Amboseli",
@@ -8903,14 +10315,14 @@ var FAMILIES9 = [
     ]
   ], { h: ["Read the row with the clue.", "Match the park, the animal and the place."], s1: "Read each row of the table." }), "b"),
   // ---------------------------------------------------------------- TOURISM_ECONOMY
-  fam("te.which", `${WT}TOURISM_ECONOMY`, "direct", 1, choose3([
+  fam2("te.which", `${WT}TOURISM_ECONOMY`, "direct", 1, choose4([
     ["How does tourism help Kenya?", "It brings money and jobs", [["It brings no benefit at all", "M_WT_ANIMALS_NO_VALUE"], ["It only helps hotel owners", "M_WT_HOTELS_ONLY"], ["It takes away jobs", "M_WT_ANIMALS_NO_VALUE"]], "Tourists spend money on hotels, food, guides and crafts."],
     ["Who earns from tourism besides hotel owners?", "Guides, drivers and craft sellers", [["No one else earns anything", "M_WT_HOTELS_ONLY"], ["Only the park animals earn", "M_WT_HOTELS_ONLY"], ["Only the visitors themselves", "M_WT_HOTELS_ONLY"]], "Many people earn from tourism."],
     ["Why does Kenya protect its wildlife?", "Wildlife brings tourists and money", [["Animals bring no benefit at all", "M_WT_ANIMALS_NO_VALUE"], ["Parks are just wasted open land", "M_WT_ANIMALS_NO_VALUE"], ["Farms are always much better", "M_WT_ANIMALS_NO_VALUE"]], "Protecting wildlife protects the tourism income."],
     ["What does poaching do to Kenya's tourism?", "It reduces animals tourists see", [["It brings many more tourists", "M_WT_ANIMALS_NO_VALUE"], ["It makes parks safer for all", "M_WT_ANIMALS_NO_VALUE"], ["It helps every visitor to come", "M_WT_ANIMALS_NO_VALUE"]], "Fewer animals mean fewer tourists and less income."],
     ["Why is foreign money from tourists useful to Kenya?", "It helps pay for what we need", [["It is not useful to anyone", "M_WT_ANIMALS_NO_VALUE"], ["It is simply thrown away", "M_WT_ANIMALS_NO_VALUE"], ["It must be kept hidden away", "M_WT_ANIMALS_NO_VALUE"]], "Foreign money helps the country buy what it needs."]
   ], { h: ["Think of all the people who work when tourists visit.", "Wildlife must be protected to keep tourists coming."], s1: "Think of who gains when tourists visit." })),
-  fam("te.story", `${WT}TOURISM_ECONOMY`, "word", 2, choose3([
+  fam2("te.story", `${WT}TOURISM_ECONOMY`, "word", 2, choose4([
     ["Amina sells beaded bracelets to visitors outside the Maasai Mara. How does tourism help her?", "It gives her customers and income", [["It takes away all her work", "M_WT_HOTELS_ONLY"], ["It helps only the hotel owners", "M_WT_HOTELS_ONLY"], ["It gives her no benefit at all", "M_WT_HOTELS_ONLY"]], "Tourists buy crafts, so sellers earn money."],
     ["A park charges visitors an entry fee. What can the money pay for?", "Looking after the park", [["Nothing at all can be paid", "M_WT_ANIMALS_NO_VALUE"], ["Closing the park for ever", "M_WT_ANIMALS_NO_VALUE"], ["Hunting all of the animals", "M_WT_ANIMALS_NO_VALUE"]], "Fees help pay for rangers, roads and conservation."],
     ["A community near a park builds a lodge and employs local guides. What does this show?", "Tourism gives local people jobs", [["Tourism takes jobs away from them", "M_WT_HOTELS_ONLY"], ["Tourism helps only the rich people", "M_WT_HOTELS_ONLY"], ["Tourism gives no jobs to anyone", "M_WT_HOTELS_ONLY"]], "Lodges and guiding give local people work."],
@@ -8918,14 +10330,14 @@ var FAMILIES9 = [
     ["A driver takes visitors from Nairobi to Amboseli every week. Who gains?", "The driver and the company", [["Only the elephants gain", "M_WT_HOTELS_ONLY"], ["No one gains anything", "M_WT_HOTELS_ONLY"], ["Only the hotel owner gains", "M_WT_HOTELS_ONLY"]], "Drivers and companies earn from taking tourists to parks."]
   ], { h: ["Who earns money when a tourist visits?", "Wildlife is the reason many tourists come."], s1: "Think of who earns in the story." })),
   // ---------------------------------------------------------------- EARLY_TRANSPORT
-  fam("et.which", `${TR}EARLY_TRANSPORT`, "direct", 1, choose3([
+  fam2("et.which", `${TR}EARLY_TRANSPORT`, "direct", 1, choose4([
     ["Which of these was an early means of transport in Kenya?", "A donkey", [["A lorry", "M_TR_EARLY_MODERN_MIX"], ["An aeroplane", "M_TR_EARLY_MODERN_MIX"], ["A train", "M_TR_EARLY_MODERN_MIX"]], "Donkeys carried goods long before roads and lorries."],
     ["How did people move goods before roads and lorries?", "They carried loads on heads and backs", [["They did not move any goods", "M_TR_WALK_NOT_TRANSPORT"], ["They used aeroplanes to move them", "M_TR_EARLY_MODERN_MIX"], ["They used trains to move them", "M_TR_EARLY_MODERN_MIX"]], "Carrying loads on heads and backs was an early means of transport."],
     ["Which animal was used to carry goods in dry northern Kenya?", "The camel", [["The elephant", "M_TR_EARLY_MODERN_MIX"], ["The lion", "M_TR_EARLY_MODERN_MIX"], ["The hippo", "M_TR_EARLY_MODERN_MIX"]], "Camels can travel far with little water."],
     ["Which early means of transport was used on Lake Victoria and the coast?", "A canoe or dhow", [["A lorry", "M_TR_EARLY_MODERN_MIX"], ["A bus", "M_TR_EARLY_MODERN_MIX"], ["A train", "M_TR_EARLY_MODERN_MIX"]], "Canoes and dhows moved people and goods on water."],
     ["Long lines of porters and traders carrying goods over long distances were called what?", "Caravans", [["Trains", "M_TR_EARLY_MODERN_MIX"], ["Convoys of lorries", "M_TR_EARLY_MODERN_MIX"], ["Fleets of planes", "M_TR_EARLY_MODERN_MIX"]], "Caravans carried goods such as salt, cloth and ivory."]
   ], { h: ["Which would a person have used before engines?", "People, animals, canoes and dhows."], s1: "Think of the way things moved before engines." })),
-  fam("et.sort", `${TR}EARLY_TRANSPORT`, "table", 2, choose3([
+  fam2("et.sort", `${TR}EARLY_TRANSPORT`, "table", 2, choose4([
     [
       "A table lists ways of moving goods. Which one is an early means of transport?",
       "Row B",
@@ -8963,14 +10375,14 @@ var FAMILIES9 = [
     ]
   ], { h: ["Early means used people, animals and simple boats.", "Modern means use engines."], s1: "Read each row and decide early or modern." })),
   // ---------------------------------------------------------------- MODERN_TRANSPORT
-  fam("mt.job", `${TR}MODERN_TRANSPORT`, "direct", 1, choose3([
+  fam2("mt.job", `${TR}MODERN_TRANSPORT`, "direct", 1, choose4([
     ["Which is the best way to carry large amounts of fuel across the country?", "A pipeline or tanker lorry", [["A bicycle", "M_TR_MODE_MIX"], ["A boda boda", "M_TR_MODE_MIX"], ["A donkey cart", "M_TR_MODE_MIX"]], "Large amounts of fuel move best by pipeline or tanker."],
     ["Which means of transport is fastest for a long journey across the world?", "An aeroplane", [["A bicycle", "M_TR_MODE_MIX"], ["A bus", "M_TR_MODE_MIX"], ["A train", "M_TR_MODE_MIX"]], "Aeroplanes are the fastest for long distances."],
     ["Which means of transport crosses Lake Victoria?", "A ferry or ship", [["A lorry", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"], ["A matatu", "M_TR_MODE_MIX"]], "Ferries and ships travel on water."],
     ["Which railway was built first in Kenya?", "The railway from Mombasa to Kisumu", [["The Standard Gauge Railway", "M_TR_SGR_FIRST"], ["A railway from Nairobi to Lamu", "M_TR_SGR_FIRST"], ["The Standard Gauge Railway to Naivasha", "M_TR_SGR_FIRST"]], "The first railway was built over 100 years ago. The Standard Gauge Railway is much newer."],
     ["Which port is the main sea port of Kenya?", "Mombasa", [["Kisumu", "M_TR_MODE_MIX"], ["Nakuru", "M_TR_MODE_MIX"], ["Eldoret", "M_TR_MODE_MIX"]], "Mombasa is the main sea port on the Indian Ocean."]
   ], { h: ["Match the load and the journey with the right means.", "Road, rail, air, water and pipeline each suit different jobs."], s1: "Think about the load, the distance and the speed." })),
-  fam("mt.story", `${TR}MODERN_TRANSPORT`, "word", 2, choose3([
+  fam2("mt.story", `${TR}MODERN_TRANSPORT`, "word", 2, choose4([
     ["Njeri must travel from Nairobi to Mombasa quickly with a large family. Which means could she use?", "The Standard Gauge Railway", [["A donkey cart", "M_TR_MODE_MIX"], ["A canoe", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"]], "The Standard Gauge Railway runs between Nairobi and Mombasa."],
     ["A business in Kisumu wants to send a small parcel to London in one day. What is the best way?", "By air", [["By donkey", "M_TR_MODE_MIX"], ["By ox cart", "M_TR_MODE_MIX"], ["By bicycle", "M_TR_MODE_MIX"]], "Only air transport is fast enough across the sea."],
     ["A farmer in Kitale must take 20 sacks of maize to the town. Which means suits the load?", "A lorry", [["A boda boda", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"], ["An aeroplane", "M_TR_MODE_MIX"]], "A lorry can carry a heavy load over land."],
@@ -8978,14 +10390,14 @@ var FAMILIES9 = [
     ["Ouma says the Standard Gauge Railway is the first railway built in Kenya. What should we tell him?", "It was built over 100 years ago", [["He is right, it was the first", "M_TR_SGR_FIRST"], ["It was built only last year", "M_TR_SGR_FIRST"], ["Kenya had no railway before it", "M_TR_SGR_FIRST"]], "The Mombasa to Kisumu railway came first, more than 100 years ago."]
   ], { h: ["Think about the load and how far it must go.", "Land, water and air each need different means."], s1: "Match the means to the job." })),
   // ---------------------------------------------------------------- ROAD_SAFETY
-  fam("rs.act", `${TR}ROAD_SAFETY`, "direct", 1, choose3([
+  fam2("rs.act", `${TR}ROAD_SAFETY`, "direct", 1, choose4([
     ["Where is the safest place for a child to cross the road?", "At a zebra crossing or footbridge", [["Anywhere if the road looks empty", "M_TR_CROSS_ANYWHERE"], ["Between two parked cars", "M_TR_CROSS_ANYWHERE"], ["On a bend in the road", "M_TR_CROSS_ANYWHERE"]], "A crossing or footbridge keeps you where drivers can see you."],
     ["When should a boda boda rider and passenger wear helmets?", "On every trip", [["Only on long trips", "M_TR_BELT_LATER"], ["Only at night", "M_TR_BELT_LATER"], ["Only when it rains", "M_TR_BELT_LATER"]], "A crash can happen on any trip."],
     ["What should you do before crossing a road?", "Look right, left and right again", [["Run across the road quickly", "M_TR_CROSS_ANYWHERE"], ["Close your eyes and cross", "M_TR_CROSS_ANYWHERE"], ["Look at your phone and go", "M_TR_CROSS_ANYWHERE"]], "Looking carefully lets you see approaching vehicles."],
     ["Where should you wait for a bus?", "At the bus stop on the pavement", [["In the middle of the road", "M_TR_CROSS_ANYWHERE"], ["Behind a parked big lorry", "M_TR_CROSS_ANYWHERE"], ["At a bend in the road", "M_TR_CROSS_ANYWHERE"]], "A bus stop is a safe, marked place to wait."],
     ["Why should a passenger wear a seat belt?", "It protects the body in a crash", [["It is only for long trips", "M_TR_BELT_LATER"], ["It makes the car go faster", "M_TR_BELT_LATER"], ["It is only for the driver", "M_TR_BELT_LATER"]], "A seat belt holds you safely in your seat if the car stops suddenly."]
   ], { h: ["Which choice keeps you where drivers can see you?", "Short trips can be dangerous too."], s1: "Choose the safe action." })),
-  fam("rs.story", `${TR}ROAD_SAFETY`, "word", 2, choose3([
+  fam2("rs.story", `${TR}ROAD_SAFETY`, "word", 2, choose4([
     ["Achieng's school is across a busy road. A zebra crossing is 50 metres away. What should she do?", "Walk to the crossing and use it", [["Dash across the road at once", "M_TR_CROSS_ANYWHERE"], ["Cross between the parked cars", "M_TR_CROSS_ANYWHERE"], ["Wait until the road is empty", "M_TR_CROSS_ANYWHERE"]], "A crossing is safer, even if it is a short walk away."],
     ["Kiprono wants to ride on a boda boda to the shop nearby. He says a helmet is not needed for such a short trip. What is the best reply?", "A helmet is needed each trip", [["He is right, it is not needed", "M_TR_BELT_LATER"], ["Only at night when it is dark", "M_TR_BELT_LATER"], ["Only on the long highway trips", "M_TR_BELT_LATER"]], "Crashes can happen on short trips too."],
     ["Children are playing football near the main road. What might happen?", "A ball may roll into the road", [["Nothing at all will happen", "M_TR_CROSS_ANYWHERE"], ["Cars will always stop in time", "M_TR_CROSS_ANYWHERE"], ["The road will be made safer", "M_TR_CROSS_ANYWHERE"]], "Play away from roads so no one chases a ball into traffic."],
@@ -8993,14 +10405,14 @@ var FAMILIES9 = [
     ["Amina is crossing the road and her phone rings. What should she do?", "Finish crossing, then answer", [["Answer it while crossing", "M_TR_CROSS_ANYWHERE"], ["Stop in the middle to talk", "M_TR_CROSS_ANYWHERE"], ["Close her eyes and answer", "M_TR_CROSS_ANYWHERE"]], "Pay full attention to the road while crossing."]
   ], { h: ["Think about what could go wrong, and choose the safe action.", "Always give the road your full attention."], s1: "Picture what could happen and choose the safe action." }), "d"),
   // ---------------------------------------------------------------- EARLY_COMMUNICATION
-  fam("ec.which", `${CM}EARLY_COMMUNICATION`, "direct", 1, choose3([
+  fam2("ec.which", `${CM}EARLY_COMMUNICATION`, "direct", 1, choose4([
     ["Which was an early form of communication in Kenya?", "A drum", [["Email", "M_CM_EARLY_MODERN_MIX"], ["A mobile phone", "M_CM_EARLY_MODERN_MIX"], ["Television", "M_CM_EARLY_MODERN_MIX"]], "Drums sent messages across villages."],
     ["How did people send a warning over a long distance in the past?", "By a horn or a smoke signal", [["By sending an email message", "M_CM_EARLY_MODERN_MIX"], ["By using the internet at home", "M_CM_EARLY_MODERN_MIX"], ["By making a phone call", "M_CM_EARLY_MODERN_MIX"]], "Horns and smoke could be heard or seen from far away."],
     ["Which person carried news from village to village in the past?", "A messenger or runner", [["An online blogger", "M_CM_EARLY_MODERN_MIX"], ["A television presenter", "M_CM_EARLY_MODERN_MIX"], ["A radio host", "M_CM_EARLY_MODERN_MIX"]], "Messengers on foot carried news over distances."],
     ["What was the ululation of women used for in many communities?", "To raise an alarm or share news", [["To send an email to a friend", "M_CM_EARLY_MODERN_MIX"], ["To print the daily newspapers", "M_CM_EARLY_MODERN_MIX"], ["To make a call on a phone", "M_CM_EARLY_MODERN_MIX"]], "Ululation could call people together or warn of danger."],
     ["Why is a mobile phone faster than a messenger on foot?", "It sends the message at once", [["It is not any faster at all", "M_CM_EARLY_FAST"], ["It walks quickly to the place", "M_CM_EARLY_FAST"], ["It is slower than a runner", "M_CM_EARLY_FAST"]], "A phone carries a message at once, not at walking speed."]
   ], { h: ["Which could be used long before electricity?", "Drums, horns, smoke signals and runners."], s1: "Think of the way news travelled before electricity." })),
-  fam("ec.sort", `${CM}EARLY_COMMUNICATION`, "table", 2, choose3([
+  fam2("ec.sort", `${CM}EARLY_COMMUNICATION`, "table", 2, choose4([
     [
       "A table lists ways of sending news. Which row is an early form of communication?",
       "Row B",
@@ -9038,14 +10450,14 @@ var FAMILIES9 = [
     ]
   ], { h: ["Early means need no electricity.", "Modern means use electricity or networks."], s1: "Read each row and decide early or modern." })),
   // ---------------------------------------------------------------- MODERN_COMMUNICATION
-  fam("mc.which", `${CM}MODERN_COMMUNICATION`, "direct", 1, choose3([
+  fam2("mc.which", `${CM}MODERN_COMMUNICATION`, "direct", 1, choose4([
     ["Which means of communication shows pictures and sound together?", "Television", [["Radio", "M_CM_MEDIUM_MIX"], ["A newspaper", "M_CM_MEDIUM_MIX"], ["A letter", "M_CM_MEDIUM_MIX"]], "Television shows pictures with sound. Radio has sound only."],
     ["Which means of communication works on batteries in villages?", "Radio", [["Television", "M_CM_MEDIUM_MIX"], ["The internet", "M_CM_MEDIUM_MIX"], ["A computer", "M_CM_MEDIUM_MIX"]], "A battery radio works where there is no mains power."],
     ["Which is best for sending a parcel to a relative?", "The post office", [["A radio", "M_CM_MEDIUM_MIX"], ["Television", "M_CM_MEDIUM_MIX"], ["A newspaper", "M_CM_MEDIUM_MIX"]], "The post office sends letters and parcels."],
     ["You get a message that claims something shocking. What should you do first?", "Check whether it is true", [["Share it with everyone", "M_CM_NO_RISK"], ["Believe it at once", "M_CM_NO_RISK"], ["Send it to all your friends", "M_CM_NO_RISK"]], "Not everything we read is true. Check before sharing."],
     ["Which means lets people see news printed on paper each day?", "A newspaper", [["A drum", "M_CM_EARLY_MODERN_MIX"], ["A horn", "M_CM_EARLY_MODERN_MIX"], ["A smoke signal", "M_CM_EARLY_MODERN_MIX"]], "A newspaper prints the news on paper."]
   ], { h: ["What does each means send: sound, pictures, letters or print?", "Check before you share a message."], s1: "Match the means to what it does." })),
-  fam("mc.story", `${CM}MODERN_COMMUNICATION`, "word", 2, choose3([
+  fam2("mc.story", `${CM}MODERN_COMMUNICATION`, "word", 2, choose4([
     ["A farmer in a village with no electricity wants to hear the weather news. What can he use?", "A battery radio", [["A television", "M_CM_MEDIUM_MIX"], ["A computer", "M_CM_MEDIUM_MIX"], ["A fax machine", "M_CM_MEDIUM_MIX"]], "A battery radio needs no mains electricity."],
     ["Wanjiru in Nairobi wants to speak to her grandmother in Kisumu right now. What is best?", "A phone call", [["A letter by post", "M_CM_EARLY_FAST"], ["A messenger on foot", "M_CM_EARLY_FAST"], ["A smoke signal", "M_CM_EARLY_MODERN_MIX"]], "A phone call connects them at once."],
     ["A school wants to tell parents about a closing day at once. What is the quickest way?", "A text message", [["A letter sent by post", "M_CM_EARLY_FAST"], ["A drum in the village", "M_CM_EARLY_MODERN_MIX"], ["A message by a runner", "M_CM_EARLY_FAST"]], "A text message reaches many phones in seconds."],
@@ -9059,19 +10471,19 @@ var TL = "POLITI.TRADITIONAL_LEADERS_IN_K.";
 var EG = "POLITI.EARLY_FORMS_OF_GOVERNM_E.";
 var CZ = "POLITI.CITIZENSHIP_IN_KENYA.";
 var NG = "POLITI.NATIONAL_GOVERNMENT.";
-var NU = "GOVERN.NATIONAL_UNITY_IN_KENYA.";
+var NU2 = "GOVERN.NATIONAL_UNITY_IN_KENYA.";
 var HR = "GOVERN.HUMAN_RIGHTS.";
 var DM = "GOVERN.DEMOCRACY_IN_SOCIETY.";
-var FAMILIES10 = [
+var FAMILIES14 = [
   // ---------------------------------------------------------------- LEADER_FACTS
-  fam("lf.who", `${TL}LEADER_FACTS`, "direct", 1, choose3([
+  fam2("lf.who", `${TL}LEADER_FACTS`, "direct", 1, choose4([
     ["Mekatilili wa Menza led which community?", "The Giriama", [["The Maasai", "M_TL_COMMUNITY_MIX"], ["The Luo", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"]], "Mekatilili led the Giriama of the coast against forced labour."],
     ["Which leader led the Nandi against the building of the railway?", "Koitalel Arap Samoei", [["Nabongo Mumia", "M_TL_ROLE_MIX"], ["Mekatilili wa Menza", "M_TL_ROLE_MIX"], ["Waiyaki wa Hinga", "M_TL_ROLE_MIX"]], "Koitalel was the Nandi leader who resisted the railway."],
     ["Nabongo Mumia was the king of which people?", "The Wanga", [["The Giriama", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"], ["The Maasai", "M_TL_COMMUNITY_MIX"]], "Nabongo Mumia ruled the Wanga kingdom."],
     ["Lenana was a famous laibon of which community?", "The Maasai", [["The Luo", "M_TL_COMMUNITY_MIX"], ["The Kamba", "M_TL_COMMUNITY_MIX"], ["The Giriama", "M_TL_COMMUNITY_MIX"]], "Lenana was a Maasai leader and spiritual guide."],
     ["Waiyaki wa Hinga was a leader of which community?", "The Agikuyu", [["The Wanga", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"], ["The Giriama", "M_TL_COMMUNITY_MIX"]], "Waiyaki wa Hinga led the Agikuyu in the Dagoretti area."]
   ], { h: ["Link each leader to a community and a place.", "Mekatilili: Giriama. Koitalel: Nandi. Mumia: Wanga. Lenana: Maasai."], s1: "Recall the community of the leader." })),
-  fam("lf.table", `${TL}LEADER_FACTS`, "table", 2, choose3([
+  fam2("lf.table", `${TL}LEADER_FACTS`, "table", 2, choose4([
     [
       "Read the table. Which leader resisted forced labour at the coast?",
       "Mekatilili wa Menza",
@@ -9109,14 +10521,14 @@ var FAMILIES10 = [
     ]
   ], { h: ["Find the row with the clue.", "Match the leader, community and action."], s1: "Read each row of the table." })),
   // ---------------------------------------------------------------- LEADER_QUALITIES
-  fam("lq.which", `${TL}LEADER_QUALITIES`, "direct", 1, choose3([
+  fam2("lq.which", `${TL}LEADER_QUALITIES`, "direct", 1, choose4([
     ["Which quality makes a good traditional leader?", "Wisdom and fairness", [["Making people afraid", "M_TL_FEAR_LEADER"], ["Being the loudest", "M_TL_FEAR_LEADER"], ["Being the richest", "M_TL_FEAR_LEADER"]], "Good leaders are respected for wisdom and fairness."],
     ["Mekatilili wa Menza led people against forced labour. Which quality did she show?", "Bravery", [["Fear", "M_TL_FEAR_LEADER"], ["Laziness", "M_TL_FEAR_LEADER"], ["Selfishness", "M_TL_FEAR_LEADER"]], "Standing up for her people showed bravery."],
     ["Which is something elders still do in many communities?", "Settle disputes", [["Nothing at all", "M_TL_NO_ROLE_TODAY"], ["Close all schools", "M_TL_NO_ROLE_TODAY"], ["Collect fines for fun", "M_TL_NO_ROLE_TODAY"]], "Elders still help settle quarrels in many places."],
     ["Why were traditional leaders respected?", "They guided and protected their people", [["They frightened people", "M_TL_FEAR_LEADER"], ["They took all the cattle", "M_TL_FEAR_LEADER"], ["They never listened", "M_TL_FEAR_LEADER"]], "Leaders earned respect by serving their people."],
     ["Which of these is a role of elders today?", "Guiding ceremonies and teaching values", [["Doing nothing at all", "M_TL_NO_ROLE_TODAY"], ["Having no part in the community", "M_TL_NO_ROLE_TODAY"], ["Stopping all meetings", "M_TL_NO_ROLE_TODAY"]], "Elders pass on values and guide customs."]
   ], { h: ["What makes people respect a leader?", "Elders still serve many communities today."], s1: "Think about the qualities that make a leader respected." })),
-  fam("lq.story", `${TL}LEADER_QUALITIES`, "word", 2, choose3([
+  fam2("lq.story", `${TL}LEADER_QUALITIES`, "word", 2, choose4([
     ["A leader listens to everyone before he decides a quarrel. Which quality is he showing?", "Fairness", [["Fear", "M_TL_FEAR_LEADER"], ["Greed", "M_TL_FEAR_LEADER"], ["Pride", "M_TL_FEAR_LEADER"]], "Listening to all sides shows fairness."],
     ["Two neighbours quarrel over a boundary. Whom might the community call first?", "The village elders", [["No one at all", "M_TL_NO_ROLE_TODAY"], ["Only a foreign visitor", "M_TL_NO_ROLE_TODAY"], ["A passing stranger", "M_TL_NO_ROLE_TODAY"]], "Elders still settle disputes in many communities."],
     ["A leader gathers his people to face danger together and shares the food. Which quality is shown?", "Unity and generosity", [["Fear and anger", "M_TL_FEAR_LEADER"], ["Greed and pride", "M_TL_FEAR_LEADER"], ["Laziness and trickery", "M_TL_FEAR_LEADER"]], "Bringing people together and sharing shows unity and generosity."],
@@ -9124,28 +10536,28 @@ var FAMILIES10 = [
     ["Koitalel Arap Samoei stood against the railway to protect his people's land. Which quality did he show?", "Courage", [["Fear", "M_TL_FEAR_LEADER"], ["Laziness", "M_TL_FEAR_LEADER"], ["Greed", "M_TL_FEAR_LEADER"]], "Standing up to protect his people showed courage."]
   ], { h: ["What did the leader do, and what quality does that show?", "Leaders are respected for fairness, courage and wisdom."], s1: "Read what the leader did and name the quality." })),
   // ---------------------------------------------------------------- EARLY_FORMS
-  fam("ef.which", `${EG}EARLY_FORMS`, "direct", 1, choose3([
+  fam2("ef.which", `${EG}EARLY_FORMS`, "direct", 1, choose4([
     ["How did Kenyan communities govern themselves long ago?", "By councils of elders and other leaders", [["They had no government", "M_EG_NO_GOVT"], ["They had no rules at all", "M_EG_NO_GOVT"], ["By a single foreign king", "M_EG_KING_ALL"]], "Communities had their own leaders, rules and councils."],
     ["Which of these communities was ruled by a king?", "The Wanga", [["The Maasai", "M_EG_KING_ALL"], ["The Ameru", "M_EG_KING_ALL"], ["The Agikuyu", "M_EG_KING_ALL"]], "The Wanga kingdom was ruled by the Nabongo."],
     ["What was the Kiama among the Agikuyu?", "A council of elders", [["A king", "M_EG_KING_ALL"], ["A warrior group", "M_EG_ONE_RULER"], ["A kind of market", "M_EG_NO_GOVT"]], "The Kiama was the council of elders that made decisions."],
     ["Which group of young men defended the Maasai?", "The morans", [["The elders", "M_EG_ONE_RULER"], ["The laibon", "M_EG_ONE_RULER"], ["The kings", "M_EG_KING_ALL"]], "Maasai morans were warriors who defended the community."],
     ["Who made decisions in most Kenyan communities in the past?", "A council of elders", [["One foreign ruler", "M_EG_KING_ALL"], ["No one", "M_EG_NO_GOVT"], ["Only children", "M_EG_NO_GOVT"]], "Most decisions were made by councils of elders."]
   ], { h: ["Communities had leaders and rules long before colonial rule.", "Most ruled through councils of elders, not kings."], s1: "Recall how communities governed themselves." })),
-  fam("ef.spot", `${EG}EARLY_FORMS`, "spot", 3, spot3([
+  fam2("ef.spot", `${EG}EARLY_FORMS`, "spot", 3, spot4([
     ["Juma says Kenyans had no government before colonial rule. Which step has the mistake?", [["Step 1: Juma knows the colonial government started later.", true], ["Step 2: He decides that nobody ruled before it.", false], ["Step 3: He writes that there was no government.", true]], "Communities had councils of elders, age-sets and other leaders long before colonial rule.", "M_EG_NO_GOVT"],
     ["Amina says every Kenyan community had a king. Which step has the mistake?", [["Step 1: Amina has heard of the Wanga king.", true], ["Step 2: She decides all communities had a king.", false], ["Step 3: She writes that every community had one.", true]], "Only some, such as the Wanga, had a king. Most had councils of elders.", "M_EG_KING_ALL"],
     ["Kamau says the laibon ruled the Maasai alone like a king. Which step has the mistake?", [["Step 1: Kamau knows the laibon was an important leader.", true], ["Step 2: He decides the laibon made every decision alone.", false], ["Step 3: He writes that the laibon was a king.", true]], "The laibon gave spiritual guidance. Elders and age-sets made decisions.", "M_EG_ONE_RULER"],
     ["Wanjiru says that the Njuri Ncheke was a Maasai council. Which step has the mistake?", [["Step 1: Wanjiru knows the Njuri Ncheke is a council of elders.", true], ["Step 2: She decides it belongs to the Maasai.", false], ["Step 3: She writes it is a Maasai council.", true]], "The Njuri Ncheke is the council of elders of the Ameru.", "M_EG_NO_GOVT"]
   ], { h: ["Which step says something that is not true?", "Think about how communities governed themselves."], s1: "Check each step against what you know." })),
   // ---------------------------------------------------------------- MAASAI_AMERU
-  fam("ma.which", `${EG}MAASAI_AMERU`, "direct", 1, choose3([
+  fam2("ma.which", `${EG}MAASAI_AMERU`, "direct", 1, choose4([
     ["What was the council of elders of the Ameru called?", "Njuri Ncheke", [["Laibon", "M_EG_SAME_NAMES"], ["Moran", "M_EG_SAME_NAMES"], ["Kiama", "M_EG_SAME_NAMES"]], "The Njuri Ncheke was the council of elders of the Ameru."],
     ["Who was the spiritual leader of the Maasai?", "The laibon", [["The Mugwe", "M_EG_SAME_NAMES"], ["Njuri Ncheke", "M_EG_SAME_NAMES"], ["The Nabongo", "M_EG_SAME_NAMES"]], "The laibon guided the Maasai spiritually."],
     ["Who was the spiritual leader of the Ameru?", "The Mugwe", [["The laibon", "M_EG_SAME_NAMES"], ["The moran", "M_EG_SAME_NAMES"], ["The Nabongo", "M_EG_SAME_NAMES"]], "The Mugwe was the spiritual leader of the Ameru."],
     ["What do the Maasai and the Ameru have in common in their early government?", "Both used councils of elders and age-sets", [["Both were ruled by one king", "M_EG_ONE_RULER"], ["Both had no government", "M_EG_NO_GOVT"], ["Both used no leaders at all", "M_EG_NO_GOVT"]], "Neither had a king. Decisions came from elders and age-sets."],
     ["Which group of Maasai young men defended the community?", "The morans", [["The Njuri Ncheke", "M_EG_SAME_NAMES"], ["The Mugwe", "M_EG_SAME_NAMES"], ["The laibon", "M_EG_SAME_NAMES"]], "Morans were the warriors of the Maasai."]
   ], { h: ["Match each title to its community.", "Maasai: laibon and morans. Ameru: Njuri Ncheke and Mugwe."], s1: "Match the title with its community." })),
-  fam("ma.table", `${EG}MAASAI_AMERU`, "table", 2, choose3([
+  fam2("ma.table", `${EG}MAASAI_AMERU`, "table", 2, choose4([
     [
       "The table compares early government. Which title belongs to the Ameru?",
       "Njuri Ncheke",
@@ -9183,14 +10595,14 @@ var FAMILIES10 = [
     ]
   ], { h: ["Read the row of the community in the question.", "The laibon was Maasai. The Njuri Ncheke and Mugwe were Ameru."], s1: "Read each row of the table." })),
   // ---------------------------------------------------------------- LESSONS
-  fam("ls.which", `${EG}LESSONS`, "direct", 1, choose3([
+  fam2("ls.which", `${EG}LESSONS`, "direct", 1, choose4([
     ["Which practice from early government is still useful today?", "Settling quarrels by talking", [["Harsh and painful punishments", "M_EG_COPY_ALL"], ["Giving no one any voice at all", "M_EG_OLD_USELESS"], ["Ruling without ever listening", "M_EG_OLD_USELESS"]], "Talking to settle disputes is still a good way today."],
     ["Which old practice should not be copied today?", "Punishments that hurt people", [["Consulting elders", "M_EG_COPY_ALL"], ["Settling quarrels by talk", "M_EG_COPY_ALL"], ["Leaders serving their people", "M_EG_COPY_ALL"]], "Harsh punishments go against human rights."],
     ["How is the old practice of asking elders for advice used today?", "Leaders ask the public for views", [["Leaders never ask anyone at all", "M_EG_OLD_USELESS"], ["Only elders are allowed to vote", "M_EG_COPY_ALL"], ["No one is ever given advice", "M_EG_OLD_USELESS"]], "Public participation is like consulting the community."],
     ["Which old practice is like mediation today?", "Elders helping neighbours to agree", [["Elders punishing both of the sides", "M_EG_COPY_ALL"], ["Neighbours fighting over the matter", "M_EG_OLD_USELESS"], ["Everyone ignoring the quarrel", "M_EG_OLD_USELESS"]], "Mediation helps people agree by talking."],
     ["A child says nothing from early government is useful today. What is the best reply?", "Some, like listening, still help", [["He is right, none of them do", "M_EG_OLD_USELESS"], ["All of them must return today", "M_EG_COPY_ALL"], ["Only the harsh ones are of use", "M_EG_COPY_ALL"]], "Good practices still guide leaders today."]
   ], { h: ["Which practice helps people today and respects rights?", "Keep the good practices and leave the harmful ones."], s1: "Decide which practice still serves people and respects rights." })),
-  fam("ls.story", `${EG}LESSONS`, "word", 2, choose3([
+  fam2("ls.story", `${EG}LESSONS`, "word", 2, choose4([
     ["A village headman asks everyone to share ideas before building a new well. Which old practice is this like?", "Consulting the community", [["Ruling alone", "M_EG_OLD_USELESS"], ["Ignoring the elders", "M_EG_OLD_USELESS"], ["Punishing everyone", "M_EG_COPY_ALL"]], "Asking for views is like the old council of elders."],
     ["Two families disagree about a boundary. Elders listen to both and help them agree. What is this?", "Settling a dispute by talking", [["Taking one side straight away", "M_EG_OLD_USELESS"], ["Fighting it out in the open", "M_EG_OLD_USELESS"], ["Hiding the whole problem away", "M_EG_OLD_USELESS"]], "Mediation by elders is still used today."],
     ["A school asks older learners to help guide the young ones. Which old practice does this copy?", "Giving duties by age", [["Ignoring all the older learners", "M_EG_OLD_USELESS"], ["Letting the young rule alone", "M_EG_COPY_ALL"], ["Making rules without any ideas", "M_EG_OLD_USELESS"]], "Age-sets gave duties to each group of people."],
@@ -9198,14 +10610,14 @@ var FAMILIES10 = [
     ["A county asks residents for ideas before making a budget. Which old practice is this like?", "Asking the people's views", [["Hiding the plan from them", "M_EG_OLD_USELESS"], ["Ruling by one person alone", "M_EG_OLD_USELESS"], ["Ignoring every resident", "M_EG_OLD_USELESS"]], "Public participation is like the council of elders asking the community."]
   ], { h: ["Which good practice from the past does the story copy?", "Good practices respect people and their rights."], s1: "Think of the old practice behind the story." })),
   // ---------------------------------------------------------------- HOW_CITIZEN
-  fam("hc.which", `${CZ}HOW_CITIZEN`, "direct", 1, choose3([
+  fam2("hc.which", `${CZ}HOW_CITIZEN`, "direct", 1, choose4([
     ["How can a person become a citizen of Kenya?", "By birth or by registration", [["By having an ID card only", "M_CZ_ID_MAKES"], ["By living there for one day", "M_CZ_BORN_IN_KENYA_ONLY"], ["By paying a small fee", "M_CZ_ID_MAKES"]], "Citizenship comes by birth or by registration."],
     ["Which of these is a Kenyan citizen by birth?", "A child born to a Kenyan mother in Nairobi", [["A visitor on a short trip", "M_CZ_BORN_IN_KENYA_ONLY"], ["A tourist who bought a hat", "M_CZ_BORN_IN_KENYA_ONLY"], ["A person with no parents from Kenya", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child with a Kenyan parent is a citizen by birth."],
     ["A person marries a Kenyan. After how many years may she apply to be registered?", "Seven years", [["One day", "M_CZ_MARRIAGE_INSTANT"], ["One week", "M_CZ_MARRIAGE_INSTANT"], ["One month", "M_CZ_MARRIAGE_INSTANT"]], "The Constitution sets seven years of marriage."],
     ["What is an ID card?", "A document that shows a person is a citizen", [["What makes a person a citizen", "M_CZ_ID_MAKES"], ["A ticket to travel", "M_CZ_ID_MAKES"], ["A school certificate", "M_CZ_ID_MAKES"]], "An ID card proves citizenship, but it does not make someone a citizen."],
     ["Which child is a Kenyan citizen by birth?", "A child born abroad to a Kenyan father", [["A child born in Kenya to two visitors", "M_CZ_BORN_IN_KENYA_ONLY"], ["A child who has no ID yet", "M_CZ_ID_MAKES"], ["A child with no Kenyan parent", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child with a Kenyan parent is a citizen by birth, even when born abroad."]
   ], { h: ["Citizenship comes by birth or by registration.", "A parent who is a citizen makes the child a citizen by birth."], s1: "Recall the two ways of becoming a citizen." })),
-  fam("hc.story", `${CZ}HOW_CITIZEN`, "word", 2, choose3([
+  fam2("hc.story", `${CZ}HOW_CITIZEN`, "word", 2, choose4([
     ["Aisha was born in London. Her mother is a Kenyan citizen. Is Aisha a Kenyan citizen by birth?", "Yes, as her mother is a Kenyan", [["No, she was not born in Kenya", "M_CZ_BORN_IN_KENYA_ONLY"], ["No, because she has no ID card", "M_CZ_ID_MAKES"], ["Only if she moves to live in Kenya", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child born abroad is a citizen by birth when one parent is a Kenyan citizen."],
     ["A woman from another country marries a Kenyan man today. When does she become a citizen?", "She may apply in seven years", [["She becomes one the same day", "M_CZ_MARRIAGE_INSTANT"], ["She becomes one after a week", "M_CZ_MARRIAGE_INSTANT"], ["She becomes one at once with a card", "M_CZ_MARRIAGE_INSTANT"]], "Marriage does not give citizenship at once."],
     ["Kamau is 12 and has no ID card yet. Is he a Kenyan citizen?", "Yes, if he is a citizen by birth", [["No, he needs an ID first", "M_CZ_ID_MAKES"], ["No, only adults are citizens", "M_CZ_ID_MAKES"], ["Yes, but only after 18", "M_CZ_ID_MAKES"]], "An ID card is a document. It does not make a person a citizen."],
@@ -9213,14 +10625,14 @@ var FAMILIES10 = [
     ["A person has lived lawfully in Kenya for seven years and applies to be registered. Which kind of citizen would she be?", "A citizen by registration", [["A citizen by birth", "M_CZ_BORN_IN_KENYA_ONLY"], ["A visitor", "M_CZ_ID_MAKES"], ["A citizen by ID card", "M_CZ_ID_MAKES"]], "Lawful residence for seven years is one way to be registered."]
   ], { h: ["Is there a Kenyan parent, or a registration?", "An ID is a paper. It does not make a citizen."], s1: "Check birth, parents and registration." })),
   // ---------------------------------------------------------------- DUAL
-  fam("du.which", `${CZ}DUAL`, "direct", 1, choose3([
+  fam2("du.which", `${CZ}DUAL`, "direct", 1, choose4([
     ["What does dual citizenship mean?", "Being a citizen of two countries", [["Having two ID cards in one country", "M_CZ_ONE_PASSPORT"], ["Living in two houses", "M_CZ_ONE_PASSPORT"], ["Having two names", "M_CZ_ONE_PASSPORT"]], "A dual citizen belongs to Kenya and another country."],
     ["Does Kenya allow dual citizenship?", "Yes, the 2010 Constitution allows it", [["No, never", "M_CZ_ONE_PASSPORT"], ["Only for visitors", "M_CZ_ONE_PASSPORT"], ["Only before 2010", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution allows Kenyans to hold another citizenship."],
     ["A Kenyan by birth takes the citizenship of another country. What happens to her Kenyan citizenship?", "She keeps it", [["She loses it at once", "M_CZ_DUAL_LOSE"], ["She loses it after a week", "M_CZ_DUAL_LOSE"], ["She must give it back", "M_CZ_DUAL_LOSE"]], "A citizen by birth does not lose Kenyan citizenship."],
     ["Which person could be a dual citizen?", "A Kenyan who also holds a British passport", [["A person with two Kenyan ID cards", "M_CZ_ONE_PASSPORT"], ["A visitor with two bags", "M_CZ_ONE_PASSPORT"], ["A person with two homes in Kenya", "M_CZ_ONE_PASSPORT"]], "Dual means two countries, not two cards."],
     ["Which year's Constitution allowed Kenyans to be dual citizens?", "2010", [["1963", "M_CZ_ONE_PASSPORT"], ["1990", "M_CZ_ONE_PASSPORT"], ["2001", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution introduced dual citizenship."]
   ], { h: ["Dual means two countries.", "A citizen by birth keeps Kenyan citizenship."], s1: "Think of the meaning of dual." })),
-  fam("du.story", `${CZ}DUAL`, "word", 2, choose3([
+  fam2("du.story", `${CZ}DUAL`, "word", 2, choose4([
     ["Achieng, a Kenyan by birth, moves to Canada and becomes a Canadian citizen. Is she still a Kenyan?", "Yes, she keeps her citizenship", [["No, she lost it when she left", "M_CZ_DUAL_LOSE"], ["No, Kenya cancels it at once", "M_CZ_DUAL_LOSE"], ["Only if she returns within a year", "M_CZ_DUAL_LOSE"]], "A citizen by birth can hold two citizenships."],
     ["Mutua says Kenya does not allow anyone to have two passports. What should his teacher say?", "The 2010 Constitution allows it", [["He is right, it is not allowed", "M_CZ_ONE_PASSPORT"], ["It was never allowed in Kenya", "M_CZ_ONE_PASSPORT"], ["It is allowed only for tourists", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution changed the old rule."],
     ["Nafula is a citizen of Kenya and of Uganda. What is this called?", "Dual citizenship", [["Single citizenship", "M_CZ_ONE_PASSPORT"], ["A visitor pass", "M_CZ_ONE_PASSPORT"], ["A school card", "M_CZ_ONE_PASSPORT"]], "Belonging to two countries is dual citizenship."],
@@ -9228,14 +10640,14 @@ var FAMILIES10 = [
     ["A teacher says one flag cancels another. A child asks about dual citizenship. What is true?", "He belongs to both countries", [["The first flag is cancelled", "M_CZ_DUAL_LOSE"], ["He may belong to neither one", "M_CZ_ONE_PASSPORT"], ["He must give one up at once", "M_CZ_DUAL_LOSE"]], "A dual citizen belongs to two countries."]
   ], { h: ["Does Kenya allow dual citizenship? Yes, since 2010.", "A Kenyan by birth keeps Kenyan citizenship."], s1: "Recall the rule about dual citizenship in the Constitution." })),
   // ---------------------------------------------------------------- GOOD_CITIZEN
-  fam("gc.which", `${CZ}GOOD_CITIZEN`, "direct", 1, choose3([
+  fam2("gc.which", `${CZ}GOOD_CITIZEN`, "direct", 1, choose4([
     ["Which action shows good citizenship for a child?", "Keeping the school compound clean", [["Waiting until 18 to do anything", "M_CZ_ONLY_VOTING"], ["Doing whatever one likes", "M_CZ_RIGHTS_NO_DUTY"], ["Leaving litter around", "M_CZ_RIGHTS_NO_DUTY"]], "Good citizens care for their surroundings at any age."],
     ["Which is a duty of a citizen?", "To obey the law", [["To do whatever one likes", "M_CZ_RIGHTS_NO_DUTY"], ["To only receive services", "M_CZ_RIGHTS_NO_DUTY"], ["To avoid all rules", "M_CZ_RIGHTS_NO_DUTY"]], "Citizens have duties as well as rights."],
     ["What should a good citizen do if she sees someone breaking the law?", "Report to the right people", [["Join in", "M_CZ_RIGHTS_NO_DUTY"], ["Ignore it", "M_CZ_RIGHTS_NO_DUTY"], ["Laugh at it", "M_CZ_RIGHTS_NO_DUTY"]], "Reporting to the police or a teacher helps keep order."],
     ["Which action shows a good citizen at 18?", "Voting in an election", [["Staying away from voting", "M_CZ_ONLY_VOTING"], ["Ignoring all rules", "M_CZ_RIGHTS_NO_DUTY"], ["Breaking the law", "M_CZ_RIGHTS_NO_DUTY"]], "Voting is one duty of an adult citizen."],
     ["Which is the best way for a ten-year-old to show good citizenship?", "Respecting others and obeying rules", [["Saying citizenship starts at 18", "M_CZ_ONLY_VOTING"], ["Doing only what she likes", "M_CZ_RIGHTS_NO_DUTY"], ["Taking what is not hers", "M_CZ_RIGHTS_NO_DUTY"]], "Good citizenship starts with how we treat others now."]
   ], { h: ["Which action helps others and the community?", "Citizens have duties as well as rights."], s1: "Choose the action that helps others." })),
-  fam("gc.story", `${CZ}GOOD_CITIZEN`, "word", 2, choose3([
+  fam2("gc.story", `${CZ}GOOD_CITIZEN`, "word", 2, choose4([
     ["A class cleans the roadside near the school on Saturday. What does this show?", "Good citizenship", [["Wasting time", "M_CZ_ONLY_VOTING"], ["Breaking rules", "M_CZ_RIGHTS_NO_DUTY"], ["Ignoring duties", "M_CZ_RIGHTS_NO_DUTY"]], "Caring for the community shows good citizenship."],
     ["Mutua says only people who vote are good citizens. What is a better answer?", "Children can also be good citizens", [["He is right", "M_CZ_ONLY_VOTING"], ["Only adults can be good citizens", "M_CZ_ONLY_VOTING"], ["Voting is the only duty", "M_CZ_ONLY_VOTING"]], "Good citizens help and respect others at every age."],
     ["Amina finds a lost wallet and hands it to the teacher. Which quality did she show?", "Honesty", [["Greed", "M_CZ_RIGHTS_NO_DUTY"], ["Pride", "M_CZ_RIGHTS_NO_DUTY"], ["Fear", "M_CZ_RIGHTS_NO_DUTY"]], "Returning lost property shows honesty, a quality of a good citizen."],
@@ -9243,14 +10655,14 @@ var FAMILIES10 = [
     ["Kiprono says he has rights, so he need not follow any school rules. What is wrong?", "Citizens have duties as well as rights", [["Nothing is wrong", "M_CZ_RIGHTS_NO_DUTY"], ["Rules are only for adults", "M_CZ_RIGHTS_NO_DUTY"], ["Rights cancel all rules", "M_CZ_RIGHTS_NO_DUTY"]], "Every right comes with duties."]
   ], { h: ["What helps the community?", "Rights come with duties."], s1: "Think about what helps others and the community." })),
   // ---------------------------------------------------------------- ARMS_DUTIES
-  fam("ad.which", `${NG}ARMS_DUTIES`, "direct", 1, choose3([
+  fam2("ad.which", `${NG}ARMS_DUTIES`, "direct", 1, choose4([
     ["Which arm of government makes laws?", "The Legislature", [["The Judiciary", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The President alone", "M_NG_PRESIDENT_ALL"]], "Parliament, the Legislature, makes laws."],
     ["Which arm of government explains the law and settles disputes in courts?", "The Judiciary", [["The Legislature", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The President alone", "M_NG_PRESIDENT_ALL"]], "Courts, the Judiciary, explain the law."],
     ["Which arm of government carries out the laws and runs the country?", "The Executive", [["The Judiciary", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The courts", "M_NG_ARM_MIX"]], "The President and Cabinet make up the Executive."],
     ["What are the three arms of the National Government?", "Executive, Legislature and Judiciary", [["President, Governor and Senator", "M_NG_ARM_MIX"], ["Police, army and prison", "M_NG_ARM_MIX"], ["Cabinet, county and school", "M_NG_ARM_MIX"]], "The three arms are the Executive, the Legislature and the Judiciary."],
     ["Who makes laws for Kenya?", "Parliament", [["The President alone", "M_NG_PRESIDENT_ALL"], ["The courts", "M_NG_ARM_MIX"], ["The police", "M_NG_ARM_MIX"]], "Parliament makes the laws."]
   ], { h: ["Use one job for each arm: runs, makes, explains.", "Executive runs. Legislature makes laws. Judiciary explains the law."], s1: "Match each arm with its job." })),
-  fam("ad.story", `${NG}ARMS_DUTIES`, "word", 2, choose3([
+  fam2("ad.story", `${NG}ARMS_DUTIES`, "word", 2, choose4([
     ["A new law about school fees is being discussed in a big hall where members debate and vote. Which arm is at work?", "The Legislature", [["The Judiciary", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The police", "M_NG_ARM_MIX"]], "Members of Parliament debate and pass laws."],
     ["Two neighbours go to court to settle a quarrel about land. Which arm helps them?", "The Judiciary", [["The Legislature", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The Senate alone", "M_NG_ARM_MIX"]], "Courts settle disputes."],
     ["The Cabinet builds new roads and runs government offices. Which arm is this?", "The Executive", [["The Judiciary", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The courts", "M_NG_ARM_MIX"]], "Running government and carrying out the laws is the work of the Executive."],
@@ -9258,14 +10670,14 @@ var FAMILIES10 = [
     ["A judge decides whether a person broke a law. Which arm does the judge serve?", "The Judiciary", [["The Executive", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The Cabinet", "M_NG_ARM_MIX"]], "Judges are part of the Judiciary."]
   ], { h: ["Does the story show making laws, running the country or explaining the law?", "One arm has each job."], s1: "Decide the job in the story." })),
   // ---------------------------------------------------------------- ARMS_MEMBERS
-  fam("am.which", `${NG}ARMS_MEMBERS`, "direct", 1, choose3([
+  fam2("am.which", `${NG}ARMS_MEMBERS`, "direct", 1, choose4([
     ["To which arm do judges belong?", "The Judiciary", [["The Executive", "M_NG_MEMBER_MIX"], ["The Legislature", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "Judges and magistrates belong to the Judiciary."],
     ["To which arm does the President belong?", "The Executive", [["The Judiciary", "M_NG_MEMBER_MIX"], ["The Legislature", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "The President leads the Executive."],
     ["To which arm do members of the National Assembly belong?", "The Legislature", [["The Executive", "M_NG_MEMBER_MIX"], ["The Judiciary", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "Members of Parliament belong to the Legislature."],
     ["Which of these belongs to the Executive?", "The Deputy President", [["A county governor", "M_NG_COUNTY_NATIONAL"], ["A High Court judge", "M_NG_MEMBER_MIX"], ["A Senator", "M_NG_MEMBER_MIX"]], "The Deputy President is part of the national Executive."],
     ["Who heads the Judiciary?", "The Chief Justice", [["The President", "M_NG_MEMBER_MIX"], ["The Speaker", "M_NG_MEMBER_MIX"], ["A county governor", "M_NG_COUNTY_NATIONAL"]], "The Chief Justice heads the Judiciary."]
   ], { h: ["Place each person by their job: run, make laws or judge.", "County governors lead counties, not the national arms."], s1: "Match the person with the arm." })),
-  fam("am.table", `${NG}ARMS_MEMBERS`, "table", 2, choose3([
+  fam2("am.table", `${NG}ARMS_MEMBERS`, "table", 2, choose4([
     [
       "Look at the table. Which title belongs to the Legislature?",
       "Senator",
@@ -9303,14 +10715,14 @@ var FAMILIES10 = [
     ]
   ], { h: ["Match the job in the row with the arm.", "Make laws, run the country, judge cases."], s1: "Read each row of the table." })),
   // ---------------------------------------------------------------- SYMBOLS
-  fam("sy.which", `${NU}SYMBOLS`, "direct", 1, choose3([
+  fam2("sy.which", `${NU2}SYMBOLS`, "direct", 1, choose4([
     ["What does the red on the Kenyan flag stand for?", "The blood shed for freedom", [["The people of Kenya", "M_NU_COLOUR_MEANING"], ["The land and its wealth", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Red stands for the blood shed in the struggle for freedom."],
     ["What does the black on the Kenyan flag stand for?", "The people of Kenya", [["The blood shed for freedom", "M_NU_COLOUR_MEANING"], ["The land and its wealth", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Black stands for the people of Kenya."],
     ["What does the green on the Kenyan flag stand for?", "The land and its wealth", [["The people of Kenya", "M_NU_COLOUR_MEANING"], ["The blood shed for freedom", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Green stands for the land and its natural wealth."],
     ["Which of these is a national symbol of Kenya?", "The national anthem", [["The Safari Rally", "M_NU_SYMBOL_MIX"], ["A football club", "M_NU_SYMBOL_MIX"], ["A popular song", "M_NU_SYMBOL_MIX"]], "The flag, coat of arms and anthem are official symbols."],
     ["What is shown in the middle of the Kenyan flag?", "A Maasai shield and two spears", [["A lion and an eagle", "M_NU_SYMBOL_MIX"], ["A cockerel and an axe", "M_NU_SYMBOL_MIX"], ["A mountain and a lake", "M_NU_SYMBOL_MIX"]], "The shield and two spears stand for the defence of freedom."]
   ], { h: ["Black people, red blood, green land, white peace.", "The flag, coat of arms and anthem are official symbols."], s1: "Recall the meaning of each colour." })),
-  fam("sy.story", `${NU}SYMBOLS`, "word", 2, choose3([
+  fam2("sy.story", `${NU2}SYMBOLS`, "word", 2, choose4([
     ["Njeri is making a flag for Jamhuri Day. She paints a stripe to show the people of Kenya. Which colour should it be?", "Black", [["Red", "M_NU_COLOUR_MEANING"], ["Green", "M_NU_COLOUR_MEANING"], ["White", "M_NU_COLOUR_MEANING"]], "Black stands for the people."],
     ["A learner says the green part of the flag stands for the blood shed for freedom. What is the correct meaning of green?", "The land and its wealth", [["The blood shed", "M_NU_COLOUR_MEANING"], ["The people", "M_NU_COLOUR_MEANING"], ["Peace", "M_NU_COLOUR_MEANING"]], "Red stands for blood. Green stands for the land and its wealth."],
     ["The school sings the national anthem at assembly. What is the anthem?", "A national symbol", [["A school game", "M_NU_SYMBOL_MIX"], ["A local dance", "M_NU_SYMBOL_MIX"], ["A club song", "M_NU_SYMBOL_MIX"]], "The anthem is one of Kenya's official symbols."],
@@ -9318,14 +10730,14 @@ var FAMILIES10 = [
     ["A learner says the Safari Rally is a national symbol of Kenya. What is the best reply?", "It is a sports event, not an official symbol", [["He is right", "M_NU_SYMBOL_MIX"], ["It is the flag", "M_NU_SYMBOL_MIX"], ["It is the anthem", "M_NU_SYMBOL_MIX"]], "The official symbols include the flag, coat of arms and anthem."]
   ], { h: ["Black people, red blood, green land, white peace.", "Only the official symbols count."], s1: "Match the colour or symbol to its meaning." })),
   // ---------------------------------------------------------------- UNITY_FACTORS
-  fam("uf.which", `${NU}UNITY_FACTORS`, "direct", 1, choose3([
+  fam2("uf.which", `${NU2}UNITY_FACTORS`, "direct", 1, choose4([
     ["What does national unity mean?", "Different communities live in peace", [["Everyone is exactly the same", "M_NU_UNITY_SAME"], ["Everyone speaks one language only", "M_NU_UNITY_SAME"], ["Everyone lives in one single town", "M_NU_UNITY_SAME"]], "Unity means living and working together although we are different."],
     ["Which one helps national unity?", "Shared national languages", [["Keeping communities well apart", "M_NU_TRIBE_FIX"], ["Insulting other groups of people", "M_NU_TRIBE_FIX"], ["Refusing to mix with anyone", "M_NU_TRIBE_FIX"]], "Shared languages help communities talk to each other."],
     ["Which of these is a challenge to national unity?", "Tribalism", [["National holidays", "M_NU_UNITY_SAME"], ["The national flag", "M_NU_UNITY_SAME"], ["Schools with mixed pupils", "M_NU_UNITY_SAME"]], "Tribalism divides people."],
     ["How can we overcome tribalism?", "Mix and respect all communities", [["Keep the communities apart", "M_NU_TRIBE_FIX"], ["Ignore the problem and move on", "M_NU_TRIBE_FIX"], ["Praise only our own group", "M_NU_TRIBE_FIX"]], "Mixing and respect build understanding."],
     ['What does the national motto "Harambee" mean?', "Let us all pull together", [["Let us all compete", "M_NU_UNITY_SAME"], ["Let us keep apart", "M_NU_TRIBE_FIX"], ["Let us all be the same", "M_NU_UNITY_SAME"]], "Harambee means pulling together for a common purpose."]
   ], { h: ["Unity is living together in peace even when we are different.", "Respect and sharing overcome tribalism."], s1: "Think about what brings people together." })),
-  fam("uf.story", `${NU}UNITY_FACTORS`, "word", 2, choose3([
+  fam2("uf.story", `${NU2}UNITY_FACTORS`, "word", 2, choose4([
     ["Learners from many communities play in one school football team. What does this help?", "National unity", [["Tribalism", "M_NU_TRIBE_FIX"], ["Quarrels", "M_NU_TRIBE_FIX"], ["Separation", "M_NU_TRIBE_FIX"]], "Sports bring people of different communities together."],
     ["A leader gives jobs only to people from his own community. Which problem does this cause?", "Unfair sharing that harms unity", [["Better unity among them all", "M_NU_UNITY_SAME"], ["More peace in the whole land", "M_NU_UNITY_SAME"], ["Fair treatment of every person", "M_NU_UNITY_SAME"]], "Unfair sharing makes other groups feel left out."],
     ["Two groups in a village quarrel. What is a good way to overcome the problem?", "Talk and listen to each side", [["Keep them apart for ever", "M_NU_TRIBE_FIX"], ["Take one side and support it", "M_NU_TRIBE_FIX"], ["Ignore the quarrel and go on", "M_NU_TRIBE_FIX"]], "Dialogue helps people understand each other."],
@@ -9333,14 +10745,14 @@ var FAMILIES10 = [
     ["The whole country celebrates Madaraka Day. How does this help unity?", "People share one national day", [["It divides people into groups", "M_NU_TRIBE_FIX"], ["It helps only one single group", "M_NU_TRIBE_FIX"], ["It stops all sharing between them", "M_NU_TRIBE_FIX"]], "National days bring all Kenyans together."]
   ], { h: ["What brings people of different communities together?", "Unfair treatment and tribalism divide people."], s1: "Think about whether the story joins people or divides them." }), "c"),
   // ---------------------------------------------------------------- BASIC_RIGHTS
-  fam("br.which", `${HR}BASIC_RIGHTS`, "direct", 1, choose3([
+  fam2("br.which", `${HR}BASIC_RIGHTS`, "direct", 1, choose4([
     ["Which of these is a human right?", "Education", [["A new phone", "M_HR_WANT_AS_RIGHT"], ["Sweets every day", "M_HR_WANT_AS_RIGHT"], ["A toy of your choice", "M_HR_WANT_AS_RIGHT"]], "Education is a right. A phone, sweets and a toy are things we want."],
     ["Who has the right to education?", "Every child", [["Only adults", "M_HR_ADULT_ONLY"], ["Only boys", "M_HR_ADULT_ONLY"], ["Only rich children", "M_HR_ADULT_ONLY"]], "Every child has the right to education."],
     ["Which is a right of a child?", "Protection from abuse", [["Choosing not to go to school", "M_HR_WANT_AS_RIGHT"], ["Getting everything you ask for", "M_HR_WANT_AS_RIGHT"], ["Ruling the house", "M_HR_WANT_AS_RIGHT"]], "Every child has the right to be protected from abuse."],
     ["Which of these is a right to life and health?", "Access to medical care", [["Owning a car", "M_HR_WANT_AS_RIGHT"], ["Having a big house", "M_HR_WANT_AS_RIGHT"], ["A new bicycle each year", "M_HR_WANT_AS_RIGHT"]], "Health care is a basic right."],
     ["Who has human rights?", "Every person, including children", [["Only adults", "M_HR_ADULT_ONLY"], ["Only citizens with ID", "M_HR_ADULT_ONLY"], ["Only men", "M_HR_ADULT_ONLY"]], "Human rights belong to every person."]
   ], { h: ["Rights protect life and dignity.", "A want is nice to have but is not a right."], s1: "Decide whether it protects life and dignity." })),
-  fam("br.story", `${HR}BASIC_RIGHTS`, "word", 2, choose3([
+  fam2("br.story", `${HR}BASIC_RIGHTS`, "word", 2, choose4([
     ["A boy of ten is kept at home to work and is never sent to school. Which right is denied?", "The right to education", [["The right to a phone", "M_HR_WANT_AS_RIGHT"], ["The right to sweets", "M_HR_WANT_AS_RIGHT"], ["The right to a toy", "M_HR_WANT_AS_RIGHT"]], "Every child has the right to education."],
     ["A girl is beaten badly at home. Which right is broken?", "The right to be protected", [["The right to a holiday trip", "M_HR_WANT_AS_RIGHT"], ["The right to the newest phone", "M_HR_WANT_AS_RIGHT"], ["The right to sweets every day", "M_HR_WANT_AS_RIGHT"]], "Children have the right to be protected from abuse."],
     ["Wafula says children have no rights because they are young. What is the best reply?", "Every person has rights", [["He is right, only adults do", "M_HR_ADULT_ONLY"], ["Only adults have any rights", "M_HR_ADULT_ONLY"], ["Rights only start at age 18", "M_HR_ADULT_ONLY"]], "Human rights belong to everyone."],
@@ -9348,14 +10760,14 @@ var FAMILIES10 = [
     ["A child falls sick and the family takes her to a clinic. Which right is being met?", "The right to health", [["The right to a toy", "M_HR_WANT_AS_RIGHT"], ["The right to a car", "M_HR_WANT_AS_RIGHT"], ["The right to sweets", "M_HR_WANT_AS_RIGHT"]], "Health care is a basic right."]
   ], { h: ["Which right protects the child in the story?", "A want is not a right."], s1: "Think about which right the story is about." })),
   // ---------------------------------------------------------------- RIGHTS_RESPONSIBILITY
-  fam("rr.which", `${HR}RIGHTS_RESPONSIBILITY`, "direct", 1, choose3([
+  fam2("rr.which", `${HR}RIGHTS_RESPONSIBILITY`, "direct", 1, choose4([
     ["What goes with every right?", "A duty to respect others' rights", [["A right to do anything at all", "M_HR_NO_LIMIT"], ["No duties of any kind at all", "M_HR_NO_LIMIT"], ["A right to harm other people", "M_HR_NO_LIMIT"]], "Each right comes with a duty to respect it in others."],
     ["A child is badly beaten at home. What should another child do?", "Tell an adult or call Childline 116", [["Keep quiet, it is a family matter", "M_HR_NO_REPORT"], ["Tell no one about it at all", "M_HR_NO_REPORT"], ["Pretend not to have seen it", "M_HR_NO_REPORT"]], "Abuse is never a secret to keep."],
     ["Why do human rights matter?", "They protect dignity and fairness", [["They allow people to do anything", "M_HR_NO_LIMIT"], ["They help only the rich people", "M_HR_NO_LIMIT"], ["They have no use in real life", "M_HR_NO_LIMIT"]], "Rights protect every person's dignity."],
     ["Which is a way to protect human rights?", "Report when rights are denied", [["Say nothing", "M_HR_NO_REPORT"], ["Join those breaking rights", "M_HR_NO_LIMIT"], ["Look away", "M_HR_NO_REPORT"]], "Speaking up helps protect rights."],
     ["Where can a child get help if her rights are denied?", "A teacher or a children's officer", [["Nowhere at all in the land", "M_HR_NO_REPORT"], ["A stranger met on the road", "M_HR_NO_REPORT"], ["No one at all cares about it", "M_HR_NO_REPORT"]], "Teachers and the children's office help children."]
   ], { h: ["Rights come with duties.", "A child whose rights are denied should tell a trusted adult."], s1: "Think about what a right needs from other people." })),
-  fam("rr.story", `${HR}RIGHTS_RESPONSIBILITY`, "word", 2, choose3([
+  fam2("rr.story", `${HR}RIGHTS_RESPONSIBILITY`, "word", 2, choose4([
     ["Eve plays loud music late at night, saying she has a right to enjoy herself. Whose right is she forgetting?", "The right of neighbours to rest", [["Her own right", "M_HR_NO_LIMIT"], ["No one's right", "M_HR_NO_LIMIT"], ["The teacher's right", "M_HR_NO_LIMIT"]], "Our rights end where they harm others."],
     ["Juma sees a classmate being hurt by an older boy. What should he do?", "Tell a teacher at once", [["Say nothing", "M_HR_NO_REPORT"], ["Join in", "M_HR_NO_LIMIT"], ["Laugh", "M_HR_NO_LIMIT"]], "Telling a teacher protects the classmate's rights."],
     ["Amina says she can say anything she likes to a classmate because of her right to speak. What is missing?", "Respect for the classmate's feelings and rights", [["Nothing is missing", "M_HR_NO_LIMIT"], ["A louder voice", "M_HR_NO_LIMIT"], ["More friends", "M_HR_NO_LIMIT"]], "Rights come with the duty to respect others."],
@@ -9363,28 +10775,28 @@ var FAMILIES10 = [
     ["Which number can a child call in Kenya to get help when in danger?", "116", [["100", "M_HR_NO_REPORT"], ["999 only for fires", "M_HR_NO_REPORT"], ["No number exists", "M_HR_NO_REPORT"]], "Childline 116 is a free helpline for children."]
   ], { h: ["Which choice respects the rights of others?", "Abuse should be reported, not hidden."], s1: "Think about the rights of everyone in the story." }), "d"),
   // ---------------------------------------------------------------- TYPES
-  fam("dt.which", `${DM}TYPES`, "direct", 1, choose3([
+  fam2("dt.which", `${DM}TYPES`, "direct", 1, choose4([
     ["The class raises hands to choose a game. What type of democracy is this?", "Direct democracy", [["Representative democracy", "M_DM_TYPE_MIX"], ["Rule by one person", "M_DM_NOT_DEMOCRACY"], ["No democracy", "M_DM_NOT_DEMOCRACY"]], "When every person votes on the matter, it is direct democracy."],
     ["Voters elect a Member of Parliament to speak for them. What type of democracy is this?", "Representative democracy", [["Direct democracy", "M_DM_TYPE_MIX"], ["Rule by one person", "M_DM_NOT_DEMOCRACY"], ["No democracy", "M_DM_NOT_DEMOCRACY"]], "People elect leaders to decide for them."],
     ["Which is an example of representative democracy?", "Electing a class monitor", [["A family meeting where all vote", "M_DM_TYPE_MIX"], ["A leader who takes power without a vote", "M_DM_NOT_DEMOCRACY"], ["A teacher who appoints everyone", "M_DM_NOT_DEMOCRACY"]], "The class chooses someone to act for them."],
     ["Which is an example of direct democracy?", "Everyone voting by raising hands", [["Electing a Senator", "M_DM_TYPE_MIX"], ["A king choosing alone", "M_DM_NOT_DEMOCRACY"], ["A chief ruling for life", "M_DM_NOT_DEMOCRACY"]], "Each person decides directly."],
     ["Which of these is a democracy?", "People choose their leaders by voting", [["A leader keeps power for life without elections", "M_DM_NOT_DEMOCRACY"], ["One person decides everything", "M_DM_NOT_DEMOCRACY"], ["The strongest takes over", "M_DM_NOT_DEMOCRACY"]], "In a democracy people choose their leaders."]
   ], { h: ["Did each person decide, or did chosen people decide?", "Democracy means people choose their leaders."], s1: "Ask who made the decision." })),
-  fam("dt.spot", `${DM}TYPES`, "spot", 3, spot3([
+  fam2("dt.spot", `${DM}TYPES`, "spot", 3, spot4([
     ["Juma says that a class vote by raising hands is representative democracy. Which step has the mistake?", [["Step 1: Juma sees every learner raising a hand.", true], ["Step 2: He decides that is representative democracy.", false], ["Step 3: He writes that learners elected a leader.", true]], "When every person votes, it is direct democracy.", "M_DM_TYPE_MIX"],
     ["Amina says that voting for a Member of Parliament is direct democracy. Which step has the mistake?", [["Step 1: Amina sees voters choosing a person.", true], ["Step 2: She decides that is direct democracy.", false], ["Step 3: She writes that voters decide every law themselves.", true]], "Voters choose a person to decide for them. This is representative democracy.", "M_DM_TYPE_MIX"],
     ["Wafula says a leader who rules for life without elections is a democrat. Which step has the mistake?", [["Step 1: Wafula sees a leader with a lot of power.", true], ["Step 2: He decides that makes him a democrat.", false], ["Step 3: He writes that the country is a democracy.", true]], "In a democracy, people choose their leaders by voting.", "M_DM_NOT_DEMOCRACY"],
     ["Njeri says a school where the head picks the prefects alone has an election. Which step has the mistake?", [["Step 1: Njeri sees the head choosing prefects.", true], ["Step 2: She decides this is an election.", false], ["Step 3: She writes that learners voted.", true]], "An election needs the learners to vote.", "M_DM_NOT_DEMOCRACY"]
   ], { h: ["Which step says something that is not true?", "Direct: everyone votes. Representative: elected leaders decide."], s1: "Check each step against the meaning of democracy." })),
   // ---------------------------------------------------------------- BENEFITS_PRACTICE
-  fam("db.which", `${DM}BENEFITS_PRACTICE`, "direct", 1, choose3([
+  fam2("db.which", `${DM}BENEFITS_PRACTICE`, "direct", 1, choose4([
     ["What is the fair way to choose a class monitor?", "A fair secret vote", [["The loudest learner is chosen", "M_DM_LOUDEST"], ["The teacher picks her own friend", "M_DM_LOUDEST"], ["The strongest learner just wins", "M_DM_LOUDEST"]], "A free, secret vote is fair."],
     ["What is a benefit of democracy?", "Everyone's voice counts", [["Only the loudest is heard", "M_DM_LOUDEST"], ["One person decides all", "M_DM_LOUDEST"], ["Only the majority matters", "M_DM_MAJORITY_ALL"]], "Democracy lets all people take part."],
     ["After a vote, 12 learners chose football and 8 chose netball. What is fair?", "Play football, respect the 8", [["Ignore the 8 learners totally", "M_DM_MAJORITY_ALL"], ["Stop all games for everyone", "M_DM_MAJORITY_ALL"], ["Punish the 8 for their choice", "M_DM_MAJORITY_ALL"]], "The majority decides, but the minority is still respected."],
     ["Why is it good for leaders to be chosen by voting?", "They answer to the people", [["They can ignore everyone", "M_DM_LOUDEST"], ["They need not listen", "M_DM_LOUDEST"], ["They rule for life", "M_DM_LOUDEST"]], "Leaders chosen by voting must listen to the people."],
     ["What should learners do when their candidate loses a fair election?", "Accept the result peacefully", [["Refuse to follow the winner", "M_DM_LOUDEST"], ["Insult the winner in public", "M_DM_LOUDEST"], ["Start a fight with the winner", "M_DM_LOUDEST"]], "In a democracy we accept fair results peacefully."]
   ], { h: ["What makes a vote fair?", "The majority decides, but the minority is still respected."], s1: "Think about fairness for everyone." })),
-  fam("db.story", `${DM}BENEFITS_PRACTICE`, "word", 2, choose3([
+  fam2("db.story", `${DM}BENEFITS_PRACTICE`, "word", 2, choose4([
     ["Kamau wants to be class monitor. He gives sweets to learners who vote for him. What is wrong?", "A vote must be free and fair", [["Nothing at all is wrong here", "M_DM_LOUDEST"], ["Sweets make the vote fairer", "M_DM_LOUDEST"], ["Winning is all that matters", "M_DM_LOUDEST"]], "A fair election must be free from bribes."],
     ["In a class vote, 15 learners chose a trip to the museum and 10 chose the park. What is the best next step?", "Go to the museum, respect the 10", [["Ignore the 10 learners totally", "M_DM_MAJORITY_ALL"], ["Cancel the trip for everyone", "M_DM_MAJORITY_ALL"], ["Let the loudest learner decide", "M_DM_LOUDEST"]], "The majority decides, and the minority is still respected."],
     ["The headteacher lets learners vote for school captains by secret ballot. What benefit does this show?", "Learners have a say in leaders", [["The head loses all authority", "M_DM_LOUDEST"], ["Fewer people will take part", "M_DM_LOUDEST"], ["The loudest learner always wins", "M_DM_LOUDEST"]], "Voting gives people a say in who leads."],
@@ -9402,12 +10814,12 @@ var socialstudies_g5_default = {
   shortName: "Social Studies",
   icon: "globe",
   description: "Grade 5 Social Studies from the CBC design",
-  map: { skills: SKILLS2, substrands: SUBSTRANDS2, outcomes: OUTCOMES2, misFeedback: MIS_FEEDBACK2 },
-  families: [...FAMILIES7, ...FAMILIES8, ...FAMILIES9, ...FAMILIES10],
+  map: { skills: SKILLS3, substrands: SUBSTRANDS3, outcomes: OUTCOMES3, misFeedback: MIS_FEEDBACK3 },
+  families: [...FAMILIES11, ...FAMILIES12, ...FAMILIES13, ...FAMILIES14],
   // add each family file you write: [...A, ...B]
   familyFiles: ["socialstudies_g5_a.js", "socialstudies_g5_b.js", "socialstudies_g5_c.js", "socialstudies_g5_d.js"],
   // the same files by name (a phone build drops them while nothing is signed)
-  signed: SIGNED,
+  signed: SIGNED2,
   signedFile: "socialstudies_g5_signed.js",
   checks: "family",
   // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
@@ -9427,6 +10839,7 @@ var socialstudies_g5_default = {
 
 // src/ai-tutor/content/subjects/index.generated.js
 var ENTRIES = [
+  agriculture_g5_default,
   english_g5_default,
   science_g5_default,
   socialstudies_g5_default
@@ -9466,9 +10879,9 @@ var skillMapOf = (subject) => subjectDef(subject)?.map || {};
 var substrandsOf = (subject) => subjectDef(subject)?.substrands || {};
 
 // src/ai-tutor/content/families/gaps.js
-var fam2 = (def) => family({ reviewed: false, ...def });
-var FAMILIES11 = [
-  fam2({
+var fam3 = (def) => family({ reviewed: false, ...def });
+var FAMILIES15 = [
+  fam3({
     id: "g7.dec.tiles-row",
     skill: "G6_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -9487,7 +10900,7 @@ var FAMILIES11 = [
     }),
     check: ({ w, n }, a) => Math.abs(a / w - n) < 1e-9
   }),
-  fam2({
+  fam3({
     id: "g7.dec.point-spot",
     skill: "G6_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -9508,7 +10921,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g7.dec.share-litres",
     skill: "G6_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -9527,7 +10940,7 @@ var FAMILIES11 = [
     }),
     check: ({ each, n }, a) => Math.abs(a * n - each * n) < 1e-9
   }),
-  fam2({
+  fam3({
     id: "g7.dec.how-many-packets",
     skill: "G6_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -9545,7 +10958,7 @@ var FAMILIES11 = [
       steps: [`${s} goes into 1 exactly ${round(1 / s, 0)} times.`, `So ${s} goes into ${k} exactly ${round(k / s, 0)} times, which is more than ${k}.`]
     })
   }),
-  fam2({
+  fam3({
     id: "g7.eq.money-left",
     skill: "G6_SIMPLE_EQUATIONS",
     outcome: "G7.EQUATIONS.c",
@@ -9564,7 +10977,7 @@ var FAMILIES11 = [
     }),
     check: ({ spent, left }, a) => a - spent === left
   }),
-  fam2({
+  fam3({
     id: "g7.eq.balance-why",
     skill: "G6_SIMPLE_EQUATIONS",
     outcome: "G7.EQUATIONS.b",
@@ -9579,7 +10992,7 @@ var FAMILIES11 = [
       steps: ["An equation is like a level balance.", "Taking the same from both sides keeps it level."]
     })
   }),
-  fam2({
+  fam3({
     id: "g7.vol.box-carton",
     skill: "G6_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -9601,7 +11014,7 @@ var FAMILIES11 = [
     },
     check: ({ l, w, h, s }, a) => a * s * s * s === l * w * h
   }),
-  fam2({
+  fam3({
     id: "g7.vol.find-height",
     skill: "G6_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -9620,7 +11033,7 @@ var FAMILIES11 = [
     }),
     check: ({ l, w, h }, a) => a * l * w === l * w * h
   }),
-  fam2({
+  fam3({
     id: "g7.whole.cheque-digit",
     skill: "G7_PLACE_VALUE",
     outcome: "G7.WHOLE.a",
@@ -9639,7 +11052,7 @@ var FAMILIES11 = [
     }),
     check: ({ n, m }, a) => Math.floor(n / 1e6) === m && a % 1e6 === 0
   }),
-  fam2({
+  fam3({
     id: "g7.whole.round-county-budget",
     skill: "G7_ROUNDING_WHOLE",
     outcome: "G7.WHOLE.d",
@@ -9659,7 +11072,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g7.angles.road-crossing",
     skill: "G8_ANGLE_RELATIONSHIPS",
     outcome: "G7.ANGLES.c",
@@ -9678,7 +11091,7 @@ var FAMILIES11 = [
     }),
     check: ({ a }, v) => v + (180 - a) === 180
   }),
-  fam2({
+  fam3({
     id: "g7.angles.parallel-reason",
     skill: "G8_ANGLE_RELATIONSHIPS",
     outcome: "G7.ANGLES.c",
@@ -9696,7 +11109,7 @@ var FAMILIES11 = [
       steps: [`Co-interior angles add up to 180\xB0.`, `180 \u2212 ${a} = ${180 - a}\xB0.`]
     })
   }),
-  fam2({
+  fam3({
     id: "g5.length.cloth-table",
     skill: "G5_LENGTH_OPS",
     cskill: "MATH.G5.MEASUR.LENGTH.ADD_KM_M",
@@ -9721,7 +11134,7 @@ var FAMILIES11 = [
     },
     check: ({ a, b, c, d }, v) => v - b - d === (a + c) * 1e3
   }),
-  fam2({
+  fam3({
     id: "g5.area.tile-floor",
     skill: "G5_AREA_INTRO",
     cskill: "MATH.G5.MEASUR.AREA.AREA_PROBLEMS",
@@ -9742,7 +11155,7 @@ var FAMILIES11 = [
     }),
     check: ({ l, w, left }, a) => a + l * w === l * w + left
   }),
-  fam2({
+  fam3({
     id: "g5.whole.words-to-digits",
     skill: "G5_PLACE_VALUE",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
@@ -9768,7 +11181,7 @@ var FAMILIES11 = [
     },
     check: ({ t, h }, a) => a % 100 === 0 && Math.floor(a / 1e3) === t && a % 1e3 / 100 === h
   }),
-  fam2({
+  fam3({
     id: "g8.money.interest-table",
     skill: "G9_COMPOUND_INTEREST",
     outcome: "G8.MONEY.c",
@@ -9794,7 +11207,7 @@ var FAMILIES11 = [
 ];
 
 // src/ai-tutor/content/families/g1_3.js
-var fam3 = (def) => family({ reviewed: false, young: true, ...def });
+var fam4 = (def) => family({ reviewed: false, young: true, ...def });
 var distinct = (...v) => new Set(v).size === v.length;
 var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 var shuffle3 = (a) => {
@@ -9806,9 +11219,9 @@ var shuffle3 = (a) => {
   return b;
 };
 var opts = (items2, rightText, why) => items2.map((t) => ({ text: t, right: t === rightText, why: t === rightText ? void 0 : typeof why === "function" ? why(t) : why }));
-var FAMILIES12 = [
+var FAMILIES16 = [
   // ================================================================ GRADE 1
-  fam3({
+  fam4({
     id: "g1.add.got-more",
     skill: "G1_ADD",
     outcome: "G1.ADD.0",
@@ -9827,7 +11240,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => ans - b === a
   }),
-  fam3({
+  fam4({
     id: "g1.add.how-many-more",
     skill: "G1_ADD",
     outcome: "G1.ADD.0",
@@ -9846,7 +11259,7 @@ var FAMILIES12 = [
     }),
     check: ({ t, a }, ans) => a + ans === t
   }),
-  fam3({
+  fam4({
     id: "g1.sub.gave-away",
     skill: "G1_SUB",
     outcome: "G1.SUB.0",
@@ -9865,7 +11278,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => ans + b === a
   }),
-  fam3({
+  fam4({
     id: "g1.sub.how-many-ate",
     skill: "G1_SUB",
     outcome: "G1.SUB.0",
@@ -9884,7 +11297,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, left }, ans) => left + ans === a
   }),
-  fam3({
+  fam4({
     id: "g1.counting.ten-more",
     skill: "G1_COUNTING",
     outcome: "G1.WHOLE.0",
@@ -9901,7 +11314,7 @@ var FAMILIES12 = [
     }),
     check: ({ n }, ans) => ans - n === 10
   }),
-  fam3({
+  fam4({
     id: "g1.prenumber.skip-gap",
     skill: "G1_PRENUMBER",
     outcome: "G1.PRENUMBER.0",
@@ -9922,7 +11335,7 @@ var FAMILIES12 = [
     }),
     check: ({ s, a }, ans) => ans - (a + s) === s && a + 3 * s - ans === s
   }),
-  fam3({
+  fam4({
     id: "g1.prenumber.bead-pattern",
     skill: "G1_PRENUMBER",
     outcome: "G1.PRENUMBER.0",
@@ -9947,7 +11360,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g1.length.longest-of-three",
     skill: "G1_LENGTH",
     outcome: "G1.LENGTH.0",
@@ -9970,7 +11383,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g1.mass.lightest-chain",
     skill: "G1_MASS",
     outcome: "G1.MASS.0",
@@ -9993,7 +11406,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g1.cap.holds-more",
     skill: "G1_CAPACITY",
     outcome: "G1.CAP.0",
@@ -10014,7 +11427,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g1.time.days-ahead",
     skill: "G1_TIME",
     outcome: "G1.TIME.0",
@@ -10031,7 +11444,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g1.time.hours-to-wait",
     skill: "G1_TIME",
     outcome: "G1.TIME.0",
@@ -10050,7 +11463,7 @@ var FAMILIES12 = [
     }),
     check: ({ now, k }, ans) => now + ans === now + k && ans > 0
   }),
-  fam3({
+  fam4({
     id: "g1.money.mixed-coins",
     skill: "G1_MONEY",
     outcome: "G1.MONEY.0",
@@ -10066,7 +11479,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => (ans - 5 * b) / 10 === a
   }),
-  fam3({
+  fam4({
     id: "g1.lines.curved-edge",
     skill: "G1_LINES",
     outcome: "G1.LINES.0",
@@ -10085,7 +11498,7 @@ var FAMILIES12 = [
       steps: [`A curved edge bends round, like a wheel. A straight edge does not bend, like a ruler.`, `The ${right} has the ${ask3 ? "curved" : "straight"} edge.`]
     })
   }),
-  fam3({
+  fam4({
     id: "g1.shapes.which-shape",
     skill: "G1_SHAPES",
     outcome: "G1.SHAPES.0",
@@ -10105,7 +11518,7 @@ var FAMILIES12 = [
     })
   }),
   // ================================================================ GRADE 2
-  fam3({
+  fam4({
     id: "g2.add.make-100",
     skill: "G2_ADD",
     outcome: "G2.ADD.0",
@@ -10124,7 +11537,7 @@ var FAMILIES12 = [
     }),
     check: ({ a }, ans) => a + ans === 100
   }),
-  fam3({
+  fam4({
     id: "g2.sub.how-many-fewer",
     skill: "G2_SUB",
     outcome: "G2.SUB.0",
@@ -10143,7 +11556,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => b + ans === a
   }),
-  fam3({
+  fam4({
     id: "g2.counting.skip-gap",
     skill: "G2_COUNTING",
     outcome: "G2.WHOLE.0",
@@ -10164,7 +11577,7 @@ var FAMILIES12 = [
     }),
     check: ({ s, d, a }, ans) => Math.abs(ans - (a + d)) === s && Math.abs(a + 3 * d - ans) === s
   }),
-  fam3({
+  fam4({
     id: "g2.place.tens-and-ones",
     skill: "G2_PLACE_VALUE",
     outcome: "G2.WHOLE.0",
@@ -10184,7 +11597,7 @@ var FAMILIES12 = [
     }),
     check: ({ t, o }, ans) => Math.floor(ans / 10) === t && ans % 10 === o
   }),
-  fam3({
+  fam4({
     id: "g2.mul.rows",
     skill: "G2_MULTIPLY_INTRO",
     outcome: "G2.MUL.0",
@@ -10203,7 +11616,7 @@ var FAMILIES12 = [
     }),
     check: ({ r, c }, ans) => ans / c === r
   }),
-  fam3({
+  fam4({
     id: "g2.mul.legs",
     skill: "G2_MULTIPLY_INTRO",
     outcome: "G2.MUL.0",
@@ -10223,7 +11636,7 @@ var FAMILIES12 = [
     }),
     check: ({ an, n }, ans) => ans / n === an[1]
   }),
-  fam3({
+  fam4({
     id: "g2.div.benches",
     skill: "G2_DIVISION_INTRO",
     outcome: "G2.DIV.0",
@@ -10243,7 +11656,7 @@ var FAMILIES12 = [
     }),
     check: ({ per, tot }, ans) => ans * per === tot
   }),
-  fam3({
+  fam4({
     id: "g2.frac.half-of",
     skill: "G2_FRACTIONS",
     outcome: "G2.FRAC.0",
@@ -10262,7 +11675,7 @@ var FAMILIES12 = [
     }),
     check: ({ n }, ans) => ans * 2 === n
   }),
-  fam3({
+  fam4({
     id: "g2.length.which-unit",
     skill: "G2_LENGTH",
     outcome: "G2.LENGTH.0",
@@ -10280,7 +11693,7 @@ var FAMILIES12 = [
       steps: [`${it[0][0].toUpperCase() + it[0].slice(1)} is ${it[1] === "metres" ? "big, so we count in metres" : "small, so we count in centimetres"}.`, `The best unit is ${it[1]}.`]
     })
   }),
-  fam3({
+  fam4({
     id: "g2.cap.buckets-fill",
     skill: "G2_CAPACITY",
     outcome: "G2.CAP.0",
@@ -10299,7 +11712,7 @@ var FAMILIES12 = [
     }),
     check: ({ j, tot }, ans) => ans * j === tot
   }),
-  fam3({
+  fam4({
     id: "g2.time.weeks-days",
     skill: "G2_TIME",
     outcome: "G2.TIME.0",
@@ -10315,7 +11728,7 @@ var FAMILIES12 = [
     }),
     check: ({ w }, ans) => ans / 7 === w
   }),
-  fam3({
+  fam4({
     id: "g2.money.two-things",
     skill: "G2_MONEY",
     outcome: "G2.MONEY.0",
@@ -10340,7 +11753,7 @@ var FAMILIES12 = [
     },
     check: ({ pa, pb }, ans) => ans - pb === pa
   }),
-  fam3({
+  fam4({
     id: "g2.shapes.tile-pattern",
     skill: "G2_SHAPES",
     outcome: "G2.SHAPES.0",
@@ -10366,7 +11779,7 @@ var FAMILIES12 = [
     }
   }),
   // ================================================================ GRADE 3
-  fam3({
+  fam4({
     id: "g3.count.build-number",
     skill: "G3_COUNTING",
     outcome: "G3.WHOLE.0",
@@ -10388,7 +11801,7 @@ var FAMILIES12 = [
     }),
     check: ({ h, t, o }, ans) => Math.floor(ans / 100) === h && Math.floor(ans / 10) % 10 === t && ans % 10 === o
   }),
-  fam3({
+  fam4({
     id: "g3.count.greatest-of-three",
     skill: "G3_COUNTING",
     outcome: "G3.WHOLE.0",
@@ -10410,7 +11823,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g3.add.two-days",
     skill: "G3_ADD",
     outcome: "G3.ADD.0",
@@ -10429,7 +11842,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => ans - a === b
   }),
-  fam3({
+  fam4({
     id: "g3.sub.trip",
     skill: "G3_SUB",
     outcome: "G3.SUB.0",
@@ -10451,7 +11864,7 @@ var FAMILIES12 = [
     }),
     check: ({ a, b }, ans) => ans + b === a
   }),
-  fam3({
+  fam4({
     id: "g3.mul.shelves",
     skill: "G3_MULTIPLY",
     outcome: "G3.MUL.0",
@@ -10470,7 +11883,7 @@ var FAMILIES12 = [
     }),
     check: ({ r, c }, ans) => ans / c === r
   }),
-  fam3({
+  fam4({
     id: "g3.mul.buy-many",
     skill: "G3_MULTIPLY",
     outcome: "G3.MUL.0",
@@ -10489,7 +11902,7 @@ var FAMILIES12 = [
     }),
     check: ({ pr, n }, ans) => ans / n === pr
   }),
-  fam3({
+  fam4({
     id: "g3.div.rope-pieces",
     skill: "G3_DIVIDE",
     outcome: "G3.DIV.0",
@@ -10508,7 +11921,7 @@ var FAMILIES12 = [
     }),
     check: ({ s, tot }, ans) => ans * s === tot
   }),
-  fam3({
+  fam4({
     id: "g3.frac.biggest-piece",
     skill: "G3_FRACTIONS",
     outcome: "G3.FRAC.0",
@@ -10522,7 +11935,7 @@ var FAMILIES12 = [
       steps: ["Halves make 2 pieces, quarters 4 pieces and eighths 8 pieces.", big ? "The fewest pieces are the biggest: halves." : "The most pieces are the smallest: eighths."]
     })
   }),
-  fam3({
+  fam4({
     id: "g3.length.cut-rope",
     skill: "G3_LENGTH",
     outcome: "G3.LENGTH.0",
@@ -10541,7 +11954,7 @@ var FAMILIES12 = [
     }),
     check: ({ m, c }, ans) => ans + c === 100 * m
   }),
-  fam3({
+  fam4({
     id: "g3.cap.pour-buckets",
     skill: "G3_CAPACITY",
     outcome: "G3.CAP.0",
@@ -10560,7 +11973,7 @@ var FAMILIES12 = [
     }),
     check: ({ b, n }, ans) => ans / b === n
   }),
-  fam3({
+  fam4({
     id: "g3.time.weeks-and-days",
     skill: "G3_TIME",
     outcome: "G3.TIME.0",
@@ -10579,7 +11992,7 @@ var FAMILIES12 = [
     }),
     check: ({ w, d }, ans) => ans - d === 7 * w
   }),
-  fam3({
+  fam4({
     id: "g3.money.bread-and-milk",
     skill: "G3_MONEY",
     outcome: "G3.MONEY.0",
@@ -10599,7 +12012,7 @@ var FAMILIES12 = [
     }),
     check: ({ x, y }, ans) => ans + x + y === 200
   }),
-  fam3({
+  fam4({
     id: "g3.position.turn",
     skill: "G3_POSITION",
     outcome: "G3.POSITION.0",
@@ -10617,7 +12030,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g3.shapes.name-by-count",
     skill: "G3_SHAPES",
     outcome: "G3.SHAPES.0",
@@ -10638,7 +12051,7 @@ var FAMILIES12 = [
 ];
 
 // src/ai-tutor/content/families/g4.js
-var fam4 = (def) => family({ reviewed: false, ...def });
+var fam5 = (def) => family({ reviewed: false, ...def });
 var rot = (arr, k) => {
   const n = k % arr.length;
   return [...arr.slice(n), ...arr.slice(0, n)];
@@ -10659,11 +12072,11 @@ var words = (n) => {
   return s.join(" ");
 };
 var ROMAN = { 2: "II", 3: "III", 4: "IV", 7: "VII", 8: "VIII", 9: "IX" };
-var FAMILIES13 = [
+var FAMILIES17 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.num.figures-notice",
     skill: "G4_NUMBER_WORDS",
     outcome: "G4.WHOLE.b",
@@ -10682,7 +12095,7 @@ var FAMILIES13 = [
     },
     check: ({ t, tu }, a) => a % 1e3 === tu && Math.floor(a / 1e3) === t && words(a) === words(t * 1e3 + tu)
   }),
-  fam4({
+  fam5({
     id: "g4.num.words-pick",
     skill: "G4_NUMBER_WORDS",
     outcome: "G4.WHOLE.c",
@@ -10701,7 +12114,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.place.chart-total",
     skill: "G4_PLACE_VALUE",
     outcome: "G4.WHOLE.a",
@@ -10726,7 +12139,7 @@ var FAMILIES13 = [
     }),
     check: ({ n, place: place3 }, a) => Math.floor(n % (place3 * 10) / place3) * place3 === a
   }),
-  fam4({
+  fam5({
     id: "g4.order.third-smallest",
     skill: "G4_ORDER_ROUND",
     outcome: "G4.WHOLE.d",
@@ -10750,7 +12163,7 @@ var FAMILIES13 = [
     }),
     check: ({ vals, s }, a) => vals.filter((v) => v < a).length === 2 && vals.includes(a) && s.indexOf(a) === 2
   }),
-  fam4({
+  fam5({
     id: "g4.round.spot-ones",
     skill: "G4_ORDER_ROUND",
     outcome: "G4.WHOLE.e",
@@ -10779,7 +12192,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.factors.not-a-factor",
     skill: "G4_FACTORS_MULTIPLES",
     outcome: "G4.WHOLE.f",
@@ -10804,7 +12217,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.multiples.why-multiple",
     skill: "G4_FACTORS_MULTIPLES",
     outcome: "G4.WHOLE.g",
@@ -10829,7 +12242,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.oddeven.pattern-why",
     skill: "G4_ODD_EVEN",
     outcome: "G4.WHOLE.i",
@@ -10852,7 +12265,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.oddeven.house-numbers",
     skill: "G4_ODD_EVEN",
     outcome: "G4.WHOLE.i",
@@ -10871,7 +12284,7 @@ var FAMILIES13 = [
     }),
     check: ({ o, n }, a) => a % 2 === 1 && (a - o) / 2 === n - 1
   }),
-  fam4({
+  fam5({
     id: "g4.roman.minute-hand",
     skill: "G4_ROMAN_NUMERALS",
     outcome: "G4.WHOLE.j",
@@ -10890,7 +12303,7 @@ var FAMILIES13 = [
   // ======================================================================
   // ADDITION: estimate, patterns
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.add.estimate-sales",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -10916,7 +12329,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a + b)) <= 10
   }),
-  fam4({
+  fam5({
     id: "g4.add.estimate-water",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -10943,7 +12356,7 @@ var FAMILIES13 = [
     }),
     check: ({ v }, a) => a % 10 === 0 && Math.abs(a - sum(v)) <= 15
   }),
-  fam4({
+  fam5({
     id: "g4.add.pattern-savings",
     skill: "G4_ADD",
     outcome: "G4.ADD.d",
@@ -10962,7 +12375,7 @@ var FAMILIES13 = [
     }),
     check: ({ s, d, n }, a) => (a - s) / d === n - 1
   }),
-  fam4({
+  fam5({
     id: "g4.add.pattern-missing",
     skill: "G4_ADD",
     outcome: "G4.ADD.d",
@@ -10985,7 +12398,7 @@ var FAMILIES13 = [
   // ======================================================================
   // SUBTRACTION: estimate, patterns
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.sub.estimate-stock",
     skill: "G4_SUB",
     outcome: "G4.SUB.c",
@@ -11013,7 +12426,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a - b)) <= 10 && v + r10(b) === r10(a)
   }),
-  fam4({
+  fam5({
     id: "g4.sub.estimate-steps",
     skill: "G4_SUB",
     outcome: "G4.SUB.c",
@@ -11045,7 +12458,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b }, v) => v[0] + 0 === r10(a) && v[1] === r10(b) && v[2] === v[0] - v[1] && v[3] + b === a && Math.abs(v[2] - v[3]) <= 10
   }),
-  fam4({
+  fam5({
     id: "g4.sub.pattern-next",
     skill: "G4_SUB",
     outcome: "G4.SUB.d",
@@ -11068,7 +12481,7 @@ var FAMILIES13 = [
     },
     check: ({ s, d }, a) => (s - a) / d === 4
   }),
-  fam4({
+  fam5({
     id: "g4.sub.pattern-tank",
     skill: "G4_SUB",
     outcome: "G4.SUB.d",
@@ -11090,7 +12503,7 @@ var FAMILIES13 = [
   // ======================================================================
   // MULTIPLICATION: estimate, patterns
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.mul.estimate-boxes",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.c",
@@ -11113,7 +12526,7 @@ var FAMILIES13 = [
     }),
     check: ({ n, k }, a) => a % k === 0 && a / k === r10(n)
   }),
-  fam4({
+  fam5({
     id: "g4.mul.estimate-why",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.c",
@@ -11142,7 +12555,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.mul.pattern-seedlings",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.d",
@@ -11161,7 +12574,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, m }, v) => v / m / m / m === a
   }),
-  fam4({
+  fam5({
     id: "g4.mul.pattern-table",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.d",
@@ -11185,7 +12598,7 @@ var FAMILIES13 = [
   // ======================================================================
   // DIVISION: relating multiplication and division
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.div.related-facts",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -11206,7 +12619,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b }, v) => v[0] === a * b && v[1] * a === v[0] && v[2] * b === v[0]
   }),
-  fam4({
+  fam5({
     id: "g4.div.spot-check",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -11232,7 +12645,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.div.why-check",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -11260,7 +12673,7 @@ var FAMILIES13 = [
   // ======================================================================
   // FRACTIONS: numerator and denominator, types, improper and mixed
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.frac.denominator-chapati",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.a",
@@ -11285,7 +12698,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.type-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -11319,7 +12732,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.type-why",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -11344,7 +12757,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.type-table",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -11377,7 +12790,7 @@ var FAMILIES13 = [
     },
     check: ({ texts, ask: ask3 }, a) => texts.filter((x) => ask3 === 2 ? x.includes(" ") : ask3 === 1 ? !x.includes(" ") && Number(x.split("/")[0]) > Number(x.split("/")[1]) : !x.includes(" ") && Number(x.split("/")[0]) < Number(x.split("/")[1])).length === a
   }),
-  fam4({
+  fam5({
     id: "g4.frac.improper-to-mixed-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -11402,7 +12815,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.improper-to-mixed-steps",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -11423,7 +12836,7 @@ var FAMILIES13 = [
     }),
     check: ({ d, n }, v) => v[0] * d + v[1] === n && v[1] < d && v[2] === n
   }),
-  fam4({
+  fam5({
     id: "g4.frac.improper-to-mixed-spot",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -11449,7 +12862,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.mixed-to-improper-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.e",
@@ -11474,7 +12887,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.frac.mixed-to-improper-steps",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.e",
@@ -11498,7 +12911,7 @@ var FAMILIES13 = [
   // ======================================================================
   // DECIMALS: order, place value
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.dec.largest-ribbon",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.d",
@@ -11526,7 +12939,7 @@ var FAMILIES13 = [
     },
     check: ({ t, hv }, a) => hv.every((h) => h / 100 < a) && Math.round(a * 10) === t
   }),
-  fam4({
+  fam5({
     id: "g4.dec.why-bigger",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.d",
@@ -11556,7 +12969,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.dec.place-chart",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.c",
@@ -11588,7 +13001,7 @@ var FAMILIES13 = [
   // ======================================================================
   // LETTERS: simplify, expressions, what a letter stands for
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.letters.spot-simplify",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.c",
@@ -11614,7 +13027,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.letters.why-same-thing",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.c",
@@ -11639,7 +13052,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.letters.form-boxes",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.b",
@@ -11662,7 +13075,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.letters.price-p",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.a",
@@ -11684,7 +13097,7 @@ var FAMILIES13 = [
   // ======================================================================
   // LENGTH, AREA, VOLUME
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.length.compare-cloth",
     skill: "G4_LENGTH",
     outcome: "G4.LENGTH.d",
@@ -11708,7 +13121,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.perimeter.fence-posts",
     skill: "G5_PERIMETER_INTRO",
     outcome: "G4.LENGTH.e",
@@ -11727,7 +13140,7 @@ var FAMILIES13 = [
     }),
     check: ({ g, l, w }, a) => a * g === 2 * l + 2 * w
   }),
-  fam4({
+  fam5({
     id: "g4.area.rows-missing",
     skill: "G4_AREA",
     outcome: "G4.AREA.c",
@@ -11746,7 +13159,7 @@ var FAMILIES13 = [
     }),
     check: ({ r }, a) => a * r === r * a && a >= 5 && a * r % r === 0
   }),
-  fam4({
+  fam5({
     id: "g4.area.rooms-table",
     skill: "G4_AREA",
     outcome: "G4.AREA.b",
@@ -11768,7 +13181,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.area.why-multiply",
     skill: "G4_AREA",
     outcome: "G4.AREA.c",
@@ -11790,7 +13203,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.vol.tower-layers",
     skill: "G4_VOLUME",
     outcome: "G4.VOL.a",
@@ -11809,7 +13222,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b, c }, v) => v % c === 0 && v / c === a * b
   }),
-  fam4({
+  fam5({
     id: "g4.vol.boxes-table",
     skill: "G4_VOLUME",
     outcome: "G4.VOL.b",
@@ -11833,7 +13246,7 @@ var FAMILIES13 = [
   // ======================================================================
   // MONEY: cents, shopping lists
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.money.cents-purse",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -11852,7 +13265,7 @@ var FAMILIES13 = [
     }),
     check: ({ a, b }, v) => v % 100 === b && Math.floor(v / 100) === a
   }),
-  fam4({
+  fam5({
     id: "g4.money.cents-to-shillings",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -11873,7 +13286,7 @@ var FAMILIES13 = [
     }),
     check: ({ c, s }, v) => v[0] * 100 + v[1] === c && v[2] === c - s * 100
   }),
-  fam4({
+  fam5({
     id: "g4.money.list-table-total",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.c",
@@ -11894,7 +13307,7 @@ var FAMILIES13 = [
     }),
     check: ({ q, pr, total }, a) => q.reduce((t, n, i) => t + pr[i] * n, 0) === a && a === total
   }),
-  fam4({
+  fam5({
     id: "g4.money.list-three-items",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.b",
@@ -11920,7 +13333,7 @@ var FAMILIES13 = [
   // ======================================================================
   // ANGLES AND SYMMETRY
   // ======================================================================
-  fam4({
+  fam5({
     id: "g4.angles.turn-kind",
     skill: "G4_ANGLES",
     outcome: "G4.ANGLES.a",
@@ -11939,7 +13352,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.angles.clock-hands",
     skill: "G4_ANGLES",
     outcome: "G4.ANGLES.a",
@@ -11958,7 +13371,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.symmetry.count-lines",
     skill: "G4_PLANE_FIGURES",
     outcome: "G4.PLANE.c",
@@ -11977,7 +13390,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.symmetry.letters",
     skill: "G4_PLANE_FIGURES",
     outcome: "G4.PLANE.c",
@@ -12007,7 +13420,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.add.spot-estimate",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -12039,7 +13452,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g4.money.spot-cents",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -12065,14 +13478,14 @@ var FAMILIES13 = [
 ];
 
 // src/ai-tutor/content/families/g5.js
-var fam5 = (def) => family({ reviewed: false, ...def });
+var fam6 = (def) => family({ reviewed: false, ...def });
 var rot2 = (a, k) => [...a.slice(k), ...a.slice(0, k)];
 var distinct2 = (...v) => new Set(v).size === v.length;
 var rnd = (n, to) => Math.round(n / to) * to;
 var fl = (n, to) => Math.floor(n / to) * to;
-var FAMILIES14 = [
+var FAMILIES18 = [
   // ================================================================ MONEY
-  fam5({
+  fam6({
     id: "g5.money.budget-table",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -12096,7 +13509,7 @@ var FAMILIES14 = [
     }),
     check: ({ have, food, water, fare, air, clothes }, a) => have - a - clothes - air - fare - water === food
   }),
-  fam5({
+  fam6({
     id: "g5.money.budget-steps",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -12120,7 +13533,7 @@ var FAMILIES14 = [
     }),
     check: ({ P: P2, X }, v) => v[0] + v[1] === P2 && v[1] * v[2] === X
   }),
-  fam5({
+  fam6({
     id: "g5.money.budget-spot",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -12147,7 +13560,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.money.budget-cut-why",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE",
@@ -12172,7 +13585,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.money.tax-add",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
@@ -12196,7 +13609,7 @@ var FAMILIES14 = [
     },
     check: ({ goods, r }, a) => (a - goods) * 100 === goods * r
   }),
-  fam5({
+  fam6({
     id: "g5.money.tax-receipt",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
@@ -12222,7 +13635,7 @@ var FAMILIES14 = [
     },
     check: ({ a, b, c, tax }, v) => v - tax - a - b === c
   }),
-  fam5({
+  fam6({
     id: "g5.money.bank-interest",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
@@ -12246,7 +13659,7 @@ var FAMILIES14 = [
     },
     check: ({ sav, r }, a) => (a - sav) * 100 === sav * r
   }),
-  fam5({
+  fam6({
     id: "g5.money.bank-statement",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
@@ -12255,21 +13668,21 @@ var FAMILIES14 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const S3 = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
-      const end = S3 + d1 - w1 + d2 - w2;
-      return end > 0 && distinct2(end, S3 + d1 + w1 + d2 + w2, S3 + d1 - w1, S3 + d1 + d2, S3 + d1 + d2 - w1) ? { S: S3, d1, w1, d2, w2, end, p: person() } : null;
+      const S4 = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
+      const end = S4 + d1 - w1 + d2 - w2;
+      return end > 0 && distinct2(end, S4 + d1 + w1 + d2 + w2, S4 + d1 - w1, S4 + d1 + d2, S4 + d1 + d2 - w1) ? { S: S4, d1, w1, d2, w2, end, p: person() } : null;
     },
-    make: ({ S: S3, d1, w1, d2, w2, end, p }) => ({
+    make: ({ S: S4, d1, w1, d2, w2, end, p }) => ({
       question: `The table shows what happened in ${p.name}'s bank account in one week. A deposit puts money in. A withdrawal takes money out. How much is in the account at the end of Saturday?`,
-      model: { type: "table", data: { head: ["Day", "What happened", "Amount"], rows: [{ cells: ["Monday", "Opening balance", sh(S3)] }, { cells: ["Tuesday", "Deposit", sh(d1)] }, { cells: ["Wednesday", "Withdrawal", sh(w1)] }, { cells: ["Friday", "Deposit", sh(d2)] }, { cells: ["Saturday", "Withdrawal", sh(w2)] }] } },
+      model: { type: "table", data: { head: ["Day", "What happened", "Amount"], rows: [{ cells: ["Monday", "Opening balance", sh(S4)] }, { cells: ["Tuesday", "Deposit", sh(d1)] }, { cells: ["Wednesday", "Withdrawal", sh(w1)] }, { cells: ["Friday", "Deposit", sh(d2)] }, { cells: ["Saturday", "Withdrawal", sh(w2)] }] } },
       answer: end,
-      wrong: [[S3 + d1 + w1 + d2 + w2, "A withdrawal takes money out, so subtract it."], [S3 + d1 - w1, "Two more things happened on Friday and Saturday."], [S3 + d1 + d2, "A withdrawal takes money out. Do not leave the withdrawals out."], [S3 + d1 + d2 - w1, "There is one more withdrawal, on Saturday."]],
+      wrong: [[S4 + d1 + w1 + d2 + w2, "A withdrawal takes money out, so subtract it."], [S4 + d1 - w1, "Two more things happened on Friday and Saturday."], [S4 + d1 + d2, "A withdrawal takes money out. Do not leave the withdrawals out."], [S4 + d1 + d2 - w1, "There is one more withdrawal, on Saturday."]],
       hints: ["Start with the opening balance.", "Add each deposit and take away each withdrawal in order."],
-      steps: [`Start: ${sh(S3)}. Tuesday: ${S3} + ${d1} = ${S3 + d1}.`, `Wednesday: ${S3 + d1} \u2212 ${w1} = ${S3 + d1 - w1}. Friday: + ${d2} = ${S3 + d1 - w1 + d2}.`, `Saturday: \u2212 ${w2} = ${sh(end)}.`]
+      steps: [`Start: ${sh(S4)}. Tuesday: ${S4} + ${d1} = ${S4 + d1}.`, `Wednesday: ${S4 + d1} \u2212 ${w1} = ${S4 + d1 - w1}. Friday: + ${d2} = ${S4 + d1 - w1 + d2}.`, `Saturday: \u2212 ${w2} = ${sh(end)}.`]
     }),
-    check: ({ S: S3, d1, w1, d2, w2 }, a) => a + w1 + w2 === S3 + d1 + d2
+    check: ({ S: S4, d1, w1, d2, w2 }, a) => a + w1 + w2 === S4 + d1 + d2
   }),
-  fam5({
+  fam6({
     id: "g5.money.save-goal-steps",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -12292,7 +13705,7 @@ var FAMILIES14 = [
     }),
     check: ({ p, s, w, have }, v) => v[0] === p - have && v[1] * s === v[0] && v[2] * (w / 2) === v[0]
   }),
-  fam5({
+  fam6({
     id: "g5.money.save-place-why",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -12317,7 +13730,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.money.save-spot",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -12346,7 +13759,7 @@ var FAMILIES14 = [
     }
   }),
   // ================================================================ ESTIMATING
-  fam5({
+  fam6({
     id: "g5.add.estimate-word",
     skill: "G5_ADDITION",
     cskill: "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100",
@@ -12378,7 +13791,7 @@ var FAMILIES14 = [
     },
     check: ({ ra, rb }, a) => a - rb === ra
   }),
-  fam5({
+  fam6({
     id: "g5.add.estimate-check-why",
     skill: "G5_ADDITION",
     cskill: "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM",
@@ -12407,7 +13820,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.sub.estimate-word",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -12438,7 +13851,7 @@ var FAMILIES14 = [
     },
     check: ({ ra, rb }, a) => a + rb === ra
   }),
-  fam5({
+  fam6({
     id: "g5.sub.estimate-table",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -12465,7 +13878,7 @@ var FAMILIES14 = [
     },
     check: ({ v, hi, lo }, a) => a + rnd(v[lo], 100) === rnd(v[hi], 100)
   }),
-  fam5({
+  fam6({
     id: "g5.sub.estimate-spot",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -12494,7 +13907,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.mul.estimate-word",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
@@ -12524,7 +13937,7 @@ var FAMILIES14 = [
     },
     check: ({ ra, rb }, x) => x / rb === ra
   }),
-  fam5({
+  fam6({
     id: "g5.mul.estimate-steps",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
@@ -12550,7 +13963,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, b, ex, est }, v) => v[0] % 100 === 0 && v[1] % 10 === 0 && v[2] === v[0] * v[1] && (v[3] === est - ex || v[3] === ex - est) && a * b === ex
   }),
-  fam5({
+  fam6({
     id: "g5.mul.estimate-why",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE",
@@ -12580,7 +13993,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.div.estimate-word",
     skill: "G5_DIVISION",
     cskill: "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
@@ -12611,7 +14024,7 @@ var FAMILIES14 = [
     },
     check: ({ ra, rb }, x) => x * rb === ra
   }),
-  fam5({
+  fam6({
     id: "g5.div.estimate-spot",
     skill: "G5_DIVISION",
     cskill: "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
@@ -12642,7 +14055,7 @@ var FAMILIES14 = [
     }
   }),
   // ================================================================ EQUATIONS
-  fam5({
+  fam6({
     id: "g5.eq.let-add",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -12663,7 +14076,7 @@ var FAMILIES14 = [
     }),
     check: ({ kind, a, b }, v) => kind === "add" ? v + a === b : v - a === b
   }),
-  fam5({
+  fam6({
     id: "g5.eq.let-twostep",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
@@ -12684,7 +14097,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, b, c }, v) => a * v + b === c
   }),
-  fam5({
+  fam6({
     id: "g5.eq.balance-word",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -12705,7 +14118,7 @@ var FAMILIES14 = [
     }),
     check: ({ kind, a, b }, v) => kind === "plus" ? v + a === b : v + v === b
   }),
-  fam5({
+  fam6({
     id: "g5.eq.form-spot",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -12733,7 +14146,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.eq.form-why",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
@@ -12761,7 +14174,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.eq.choose-direct",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -12791,7 +14204,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.eq.solve-why",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -12822,7 +14235,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.missing.story",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
@@ -12855,7 +14268,7 @@ var FAMILIES14 = [
     },
     check: ({ kind, a, b }, v) => ({ sub: v - a === b, add: v + a === b, mul: a * v === b, div: v / a === b })[kind]
   }),
-  fam5({
+  fam6({
     id: "g5.missing.machine-table",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -12877,7 +14290,7 @@ var FAMILIES14 = [
     }),
     check: ({ m, c0, n }, a) => (a - c0) / m === n
   }),
-  fam5({
+  fam6({
     id: "g5.missing.think-number",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -12900,7 +14313,7 @@ var FAMILIES14 = [
     check: ({ m, b, op, c }, v) => op === "+" ? v * m + b === c : v * m - b === c
   }),
   // ================================================================ DECIMALS
-  fam5({
+  fam6({
     id: "g5.dec.place-table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
@@ -12923,7 +14336,7 @@ var FAMILIES14 = [
     }),
     check: ({ ds }, a) => Math.round(a * 1e3) === ds[0] * 1e3 + ds[1] * 100 + ds[2] * 10 + ds[3]
   }),
-  fam5({
+  fam6({
     id: "g5.dec.place-spot",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
@@ -12948,7 +14361,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.dec.order-word",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
@@ -12983,7 +14396,7 @@ var FAMILIES14 = [
     },
     check: ({ vals, small }, a) => vals.includes(a) && vals.filter((v) => small ? v < a : v > a).length === 0
   }),
-  fam5({
+  fam6({
     id: "g5.dec.order-why",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE",
@@ -13011,7 +14424,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.dec.order-table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
@@ -13044,7 +14457,7 @@ var FAMILIES14 = [
     },
     check: ({ t }, a) => t.includes(a) && t.every((x) => x >= a)
   }),
-  fam5({
+  fam6({
     id: "g5.decadd.table",
     skill: "G5_DECIMALS_ADD",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES",
@@ -13069,7 +14482,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, b, c }, v) => Math.round(v * 100) - Math.round(c * 100) - Math.round(b * 100) === Math.round(a * 100)
   }),
-  fam5({
+  fam6({
     id: "g5.decsub.word",
     skill: "G5_DECIMALS_SUB",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
@@ -13096,7 +14509,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, b }, v) => Math.round(v * 100) + Math.round(b * 100) === Math.round(a * 100)
   }),
-  fam5({
+  fam6({
     id: "g5.decmul.word",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -13122,7 +14535,7 @@ var FAMILIES14 = [
     },
     check: ({ m, a }, v) => Math.round(v / m * 1e3) / 1e3 === a
   }),
-  fam5({
+  fam6({
     id: "g5.decmul.table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -13144,7 +14557,7 @@ var FAMILIES14 = [
     }),
     check: ({ a }, v) => Math.round(v) === Math.round(a * 1e3)
   }),
-  fam5({
+  fam6({
     id: "g5.decmul.why",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -13173,7 +14586,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.decmul.steps",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -13197,7 +14610,7 @@ var FAMILIES14 = [
     check: ({ a }, v) => Math.round(v[0] * 10) === Math.round(v[1]) && Math.round(v[1] * 10) === Math.round(v[2]) && Math.round(v[0] * 100) === Math.round(a * 1e3)
   }),
   // ================================================================ PATTERNS
-  fam5({
+  fam6({
     id: "g5.pat.add-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
@@ -13218,7 +14631,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, d, n }, v) => (v - a) / (n - 1) === d
   }),
-  fam5({
+  fam6({
     id: "g5.pat.add-spot",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
@@ -13245,7 +14658,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.pat.sub-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE",
@@ -13266,7 +14679,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, d, n }, x) => (a - x) / (n - 1) === d
   }),
-  fam5({
+  fam6({
     id: "g5.pat.mul-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
@@ -13287,7 +14700,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, r, n }, x) => x === Array.from({ length: n - 1 }).reduce((t) => t * r, a)
   }),
-  fam5({
+  fam6({
     id: "g5.pat.mul-why",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
@@ -13318,7 +14731,7 @@ var FAMILIES14 = [
     }
   }),
   // ================================================================ ROUNDING
-  fam5({
+  fam6({
     id: "g5.round.news-word",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
@@ -13344,7 +14757,7 @@ var FAMILIES14 = [
     },
     check: ({ n, u }, a) => a % u === 0 && Math.abs(a - n) < u / 2
   }),
-  fam5({
+  fam6({
     id: "g5.round.crowd-table",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
@@ -13367,7 +14780,7 @@ var FAMILIES14 = [
     }),
     check: ({ big }, a) => a % 1e3 === 0 && Math.abs(a - big) < 500
   }),
-  fam5({
+  fam6({
     id: "g5.round.spot",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED",
@@ -13397,7 +14810,7 @@ var FAMILIES14 = [
     }
   }),
   // ================================================================ LENGTH
-  fam5({
+  fam6({
     id: "g5.length.est-trip-table",
     skill: "G5_LENGTH",
     cskill: "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE",
@@ -13421,7 +14834,7 @@ var FAMILIES14 = [
     check: ({ km }, a) => a % 200 === 0 && Math.abs(a / 2 - km) < 50
   }),
   // ================================================================ MASS AND CAPACITY
-  fam5({
+  fam6({
     id: "g5.mass.shop-left",
     skill: "G5_MASS_OPS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G",
@@ -13442,7 +14855,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, pk, n }, v) => v + pk * n === a * 1e3
   }),
-  fam5({
+  fam6({
     id: "g5.mass.parcels-table",
     skill: "G5_MASS_OPS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G",
@@ -13464,7 +14877,7 @@ var FAMILIES14 = [
     }),
     check: ({ g1, k2, g3 }, a) => Math.round(a * 1e3) - g1 - g3 === k2 * 1e3
   }),
-  fam5({
+  fam6({
     id: "g5.mass.written-why",
     skill: "G5_MASS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG",
@@ -13493,7 +14906,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.cap.dairy-left",
     skill: "G5_CAPACITY_OPS",
     cskill: "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML",
@@ -13514,7 +14927,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, pk, n }, v) => Math.round((v + a - a) * 1e3) + pk * n === a * 1e3
   }),
-  fam5({
+  fam6({
     id: "g5.cap.drums-table",
     skill: "G5_CAPACITY_OPS",
     cskill: "MATH.G5.MEASUR.CAPACITY.ADD_L_ML",
@@ -13537,7 +14950,7 @@ var FAMILIES14 = [
     }),
     check: ({ l1, ml1, l2, ml2 }, a) => a - ml1 - ml2 === (l1 + l2) * 1e3
   }),
-  fam5({
+  fam6({
     id: "g5.cap.cups-word",
     skill: "G5_CAPACITY",
     cskill: "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP",
@@ -13558,7 +14971,7 @@ var FAMILIES14 = [
     }),
     check: ({ cup, l }, a) => a * cup === l * 1e3
   }),
-  fam5({
+  fam6({
     id: "g5.cap.sensible-why",
     skill: "G5_CAPACITY",
     cskill: "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE",
@@ -13587,7 +15000,7 @@ var FAMILIES14 = [
     }
   }),
   // ================================================================ FRACTIONS
-  fam5({
+  fam6({
     id: "g5.frac.sub-word",
     skill: "G5_FRACTIONS_SUB_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
@@ -13608,7 +15021,7 @@ var FAMILIES14 = [
     }),
     check: ({ a, b }, v) => v + b === a
   }),
-  fam5({
+  fam6({
     id: "g5.frac.sub-spot",
     skill: "G5_FRACTIONS_SUB_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
@@ -13636,7 +15049,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5.frac.add-word",
     skill: "G5_FRACTIONS_ADD_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR",
@@ -13660,7 +15073,7 @@ var FAMILIES14 = [
     },
     check: ({ a, b, c }, v) => v - c - b === a
   }),
-  fam5({
+  fam6({
     id: "g5.frac.equiv-word",
     skill: "G5_FRACTIONS_EQUIV",
     cskill: "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
@@ -16977,7 +18390,7 @@ var SKILLS_G5 = {
 };
 
 // src/ai-tutor/content/families/g5c_signed.js
-var SIGNED2 = [];
+var SIGNED3 = [];
 
 // src/ai-tutor/content/families/g5c_lib.js
 var shuffle4 = (a) => {
@@ -17011,7 +18424,7 @@ var clean = (wrong, answer, need, neg2) => {
   }
   return out.length >= need ? out : null;
 };
-var fam6 = (d) => {
+var fam7 = (d) => {
   const { cs, gen, id, form, rung, ...rest } = d;
   const ck = SKILLS_G5[`MATH.G5.${cs}`];
   if (!ck) throw new Error(`${id}: no curriculum skill MATH.G5.${cs}`);
@@ -17043,7 +18456,7 @@ var fam6 = (d) => {
     return x;
   };
   return family({
-    reviewed: SIGNED2.includes(id),
+    reviewed: SIGNED3.includes(id),
     ...rest,
     id,
     form,
@@ -17081,9 +18494,9 @@ var digitAt = (n, p) => Math.floor(n / 10 ** p) % 10;
 var tv = (n, p) => digitAt(n, p) * 10 ** p;
 var SCHOOLS = ["Mwangaza", "Tumaini", "Baraka", "Upendo", "Jitegemee", "Amani"];
 var TOWNS = ["Nyeri", "Kisumu", "Nakuru", "Embu", "Kakamega", "Meru"];
-var FAMILIES15 = [
+var FAMILIES19 = [
   // ---------------------------------------------------------------- PLACE_VALUE_HTH
-  fam6({
+  fam7({
     id: "g5c.whole.pv.choose",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "direct",
@@ -17101,7 +18514,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.pv.digit-in",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "word",
@@ -17120,7 +18533,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.pv.build",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "steps",
@@ -17141,7 +18554,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- TOTAL_VALUE_HTH
-  fam6({
+  fam7({
     id: "g5c.whole.tv.worth",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "word",
@@ -17160,7 +18573,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.tv.expand",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "direct",
@@ -17182,7 +18595,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.tv.rebuild-spot",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "spot",
@@ -17211,7 +18624,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- NUMBERS_TO_WORDS
-  fam6({
+  fam7({
     id: "g5c.whole.words.choose",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "direct",
@@ -17231,7 +18644,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.words.cheque",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "word",
@@ -17251,7 +18664,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.words.spot",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "spot",
@@ -17273,7 +18686,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- WORDS_TO_SYMBOLS
-  fam6({
+  fam7({
     id: "g5c.whole.sym.news",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "word",
@@ -17293,7 +18706,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.sym.match",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "direct",
@@ -17311,7 +18724,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.sym.dictate",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "steps",
@@ -17332,7 +18745,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_NUMBERS
-  fam6({
+  fam7({
     id: "g5c.whole.cmp.longer",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "word",
@@ -17351,7 +18764,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cmp.symbol",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "direct",
@@ -17372,7 +18785,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cmp.explain",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "why",
@@ -17392,7 +18805,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_NUMBERS
-  fam6({
+  fam7({
     id: "g5c.whole.ord.increasing",
     cs: `${W2}ORDER_NUMBERS`,
     form: "direct",
@@ -17416,7 +18829,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.ord.distances",
     cs: `${W2}ORDER_NUMBERS`,
     form: "word",
@@ -17440,7 +18853,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.ord.out-of-place",
     cs: `${W2}ORDER_NUMBERS`,
     form: "spot",
@@ -17463,7 +18876,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_HUNDRED
-  fam6({
+  fam7({
     id: "g5c.whole.rh.fees",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "word",
@@ -17485,7 +18898,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.rh.which",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "direct",
@@ -17504,7 +18917,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.rh.list",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "why",
@@ -17523,7 +18936,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_THOUSAND
-  fam6({
+  fam7({
     id: "g5c.whole.rt.crowd",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "word",
@@ -17546,7 +18959,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.rt.both",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "steps",
@@ -17566,7 +18979,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.rt.spot",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "spot",
@@ -17585,7 +18998,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- DIVISIBLE_BY_2
-  fam6({
+  fam7({
     id: "g5c.whole.d2.yesno",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "why",
@@ -17606,7 +19019,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.d2.pick",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "direct",
@@ -17626,7 +19039,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.d2.missing",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "word",
@@ -17648,7 +19061,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- DIVISIBLE_BY_5_AND_10
-  fam6({
+  fam7({
     id: "g5c.whole.d510.packs",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "word",
@@ -17668,7 +19081,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.d510.sort",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "direct",
@@ -17688,7 +19101,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.d510.pattern",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "why",
@@ -17706,7 +19119,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- DIVISIBILITY_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.whole.dp.share",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "word",
@@ -17724,7 +19137,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.dp.pack",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "direct",
@@ -17743,7 +19156,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.dp.coins",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "steps",
@@ -17762,7 +19175,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- COMMON_FACTORS
-  fam6({
+  fam7({
     id: "g5c.whole.cf.list",
     cs: `${W2}COMMON_FACTORS`,
     form: "direct",
@@ -17783,7 +19196,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cf.common",
     cs: `${W2}COMMON_FACTORS`,
     form: "word",
@@ -17802,7 +19215,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cf.spot",
     cs: `${W2}COMMON_FACTORS`,
     form: "spot",
@@ -17823,7 +19236,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- HCF_GCD
-  fam6({
+  fam7({
     id: "g5c.whole.hcf.find",
     cs: `${W2}HCF_GCD`,
     form: "word",
@@ -17842,7 +19255,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.hcf.truefalse",
     cs: `${W2}HCF_GCD`,
     form: "why",
@@ -17861,7 +19274,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.hcf.three",
     cs: `${W2}HCF_GCD`,
     form: "steps",
@@ -17880,7 +19293,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- HCF_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.whole.hp.ribbon",
     cs: `${W2}HCF_PROBLEMS`,
     form: "word",
@@ -17897,7 +19310,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.hp.bags",
     cs: `${W2}HCF_PROBLEMS`,
     form: "steps",
@@ -17915,7 +19328,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.hp.which",
     cs: `${W2}HCF_PROBLEMS`,
     form: "why",
@@ -17935,7 +19348,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- COMMON_MULTIPLES
-  fam6({
+  fam7({
     id: "g5c.whole.cm.list",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "direct",
@@ -17953,7 +19366,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cm.common",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "word",
@@ -17971,7 +19384,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.cm.yesno",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "spot",
@@ -17990,7 +19403,7 @@ var FAMILIES15 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- LCM
-  fam6({
+  fam7({
     id: "g5c.whole.lcm.find",
     cs: `${W2}LCM`,
     form: "word",
@@ -18008,7 +19421,7 @@ var FAMILIES15 = [
     },
     allowNegative: false
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.lcm.truefalse",
     cs: `${W2}LCM`,
     form: "why",
@@ -18028,7 +19441,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.lcm.three",
     cs: `${W2}LCM`,
     form: "steps",
@@ -18047,7 +19460,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- LCM_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.whole.lp.matatu",
     cs: `${W2}LCM_PROBLEMS`,
     form: "word",
@@ -18064,7 +19477,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.lp.clock",
     cs: `${W2}LCM_PROBLEMS`,
     form: "direct",
@@ -18086,7 +19499,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.whole.lp.packs",
     cs: `${W2}LCM_PROBLEMS`,
     form: "steps",
@@ -18108,7 +19521,7 @@ var FAMILIES15 = [
 
 // src/ai-tutor/content/families/g5c_addsub.js
 var A = "NUMBER.ADDITION.";
-var S2 = "NUMBER.SUBTRACTION.";
+var S3 = "NUMBER.SUBTRACTION.";
 var cols = (n) => String(n).padStart(7, "0").split("").map(Number).reverse();
 var num2 = (c) => Number(c.slice().reverse().join(""));
 var addDropCarry = (a, b) => {
@@ -18186,9 +19599,9 @@ var noBorrowPair = () => {
 var r6 = () => randInt(1e5, 499999);
 var KG = ["maize", "beans", "rice", "sugar cane", "potatoes"];
 var TOWNS2 = ["Kisumu", "Nyeri", "Nakuru", "Eldoret", "Embu", "Meru"];
-var FAMILIES16 = [
+var FAMILIES20 = [
   // ---------------------------------------------------------------- ADD_NO_REGROUP_UP_TO_THREE
-  fam6({
+  fam7({
     id: "g5c.add.noreg.harvest",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "word",
@@ -18209,7 +19622,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.noreg.zeros",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "direct",
@@ -18228,7 +19641,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.noreg.different-lengths",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "spot",
@@ -18248,7 +19661,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_DOUBLE_REGROUP_TWO
-  fam6({
+  fam7({
     id: "g5c.add.dbl.fees",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "word",
@@ -18267,7 +19680,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.dbl.nines",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "direct",
@@ -18293,7 +19706,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.dbl.spot",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "spot",
@@ -18313,7 +19726,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_IN_SITUATIONS
-  fam6({
+  fam7({
     id: "g5c.add.sit.words",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "word",
@@ -18331,7 +19744,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.sit.extra",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "steps",
@@ -18350,7 +19763,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.sit.table",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "table",
@@ -18370,7 +19783,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_SUM_NEAREST_100
-  fam6({
+  fam7({
     id: "g5c.add.e100.round",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "word",
@@ -18389,7 +19802,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.e100.best",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "direct",
@@ -18407,7 +19820,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.e100.spot",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "spot",
@@ -18425,7 +19838,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_SUM_NEAREST_1000
-  fam6({
+  fam7({
     id: "g5c.add.e1000.round",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "word",
@@ -18443,7 +19856,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.e1000.both",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "steps",
@@ -18461,7 +19874,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.e1000.spot",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "spot",
@@ -18479,7 +19892,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_TO_CHECK_SUM
-  fam6({
+  fam7({
     id: "g5c.add.chk.reasonable",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "why",
@@ -18497,7 +19910,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.chk.must-be-wrong",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "direct",
@@ -18515,7 +19928,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.chk.compare",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "word",
@@ -18534,7 +19947,7 @@ var FAMILIES16 = [
     allowNegative: false
   }),
   // ---------------------------------------------------------------- ADD_PATTERN_EXTEND
-  fam6({
+  fam7({
     id: "g5c.add.pat.next",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "direct",
@@ -18553,7 +19966,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.pat.missing",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "word",
@@ -18571,7 +19984,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.pat.nth",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "table",
@@ -18591,7 +20004,7 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_PATTERN_CREATE
-  fam6({
+  fam7({
     id: "g5c.add.cre.rule",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "direct",
@@ -18609,7 +20022,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.cre.make",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "word",
@@ -18626,7 +20039,7 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.add.cre.spot",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "spot",
@@ -18645,9 +20058,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_6DIGIT_NO_REGROUP
-  fam6({
+  fam7({
     id: "g5c.sub.noreg.stock",
-    cs: `${S2}SUB_6DIGIT_NO_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_NO_REGROUP`,
     form: "word",
     rung: 1,
     gen: () => {
@@ -18664,9 +20077,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.noreg.short",
-    cs: `${S2}SUB_6DIGIT_NO_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_NO_REGROUP`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -18683,9 +20096,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.noreg.spot",
-    cs: `${S2}SUB_6DIGIT_NO_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_NO_REGROUP`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -18704,9 +20117,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_6DIGIT_REGROUP
-  fam6({
+  fam7({
     id: "g5c.sub.reg.budget",
-    cs: `${S2}SUB_6DIGIT_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_REGROUP`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -18723,9 +20136,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.reg.check",
-    cs: `${S2}SUB_6DIGIT_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_REGROUP`,
     form: "steps",
     rung: 3,
     gen: () => {
@@ -18743,9 +20156,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.reg.spot",
-    cs: `${S2}SUB_6DIGIT_REGROUP`,
+    cs: `${S3}SUB_6DIGIT_REGROUP`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -18763,9 +20176,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_REGROUP_ACROSS_ZEROS
-  fam6({
+  fam7({
     id: "g5c.sub.zero.round",
-    cs: `${S2}SUB_REGROUP_ACROSS_ZEROS`,
+    cs: `${S3}SUB_REGROUP_ACROSS_ZEROS`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -18789,9 +20202,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.zero.note",
-    cs: `${S2}SUB_REGROUP_ACROSS_ZEROS`,
+    cs: `${S3}SUB_REGROUP_ACROSS_ZEROS`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -18815,9 +20228,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.zero.spot",
-    cs: `${S2}SUB_REGROUP_ACROSS_ZEROS`,
+    cs: `${S3}SUB_REGROUP_ACROSS_ZEROS`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -18837,9 +20250,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_WORD_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.sub.wp.fewer",
-    cs: `${S2}SUB_WORD_PROBLEMS`,
+    cs: `${S3}SUB_WORD_PROBLEMS`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -18854,9 +20267,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.wp.target",
-    cs: `${S2}SUB_WORD_PROBLEMS`,
+    cs: `${S3}SUB_WORD_PROBLEMS`,
     form: "direct",
     rung: 1,
     gen: () => {
@@ -18872,9 +20285,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.wp.sentence",
-    cs: `${S2}SUB_WORD_PROBLEMS`,
+    cs: `${S3}SUB_WORD_PROBLEMS`,
     form: "why",
     rung: 3,
     gen: () => {
@@ -18890,9 +20303,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_100_1000
-  fam6({
+  fam7({
     id: "g5c.sub.round.carry",
-    cs: `${S2}ROUND_NEAREST_100_1000`,
+    cs: `${S3}ROUND_NEAREST_100_1000`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -18909,9 +20322,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.round.both",
-    cs: `${S2}ROUND_NEAREST_100_1000`,
+    cs: `${S3}ROUND_NEAREST_100_1000`,
     form: "table",
     rung: 2,
     gen: () => {
@@ -18927,9 +20340,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.round.halfway",
-    cs: `${S2}ROUND_NEAREST_100_1000`,
+    cs: `${S3}ROUND_NEAREST_100_1000`,
     form: "why",
     rung: 3,
     gen: () => {
@@ -18945,9 +20358,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_DIFFERENCE
-  fam6({
+  fam7({
     id: "g5c.sub.est.thousand",
-    cs: `${S2}ESTIMATE_DIFFERENCE`,
+    cs: `${S3}ESTIMATE_DIFFERENCE`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -18963,9 +20376,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.est.hundred",
-    cs: `${S2}ESTIMATE_DIFFERENCE`,
+    cs: `${S3}ESTIMATE_DIFFERENCE`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -18981,9 +20394,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.sub.est.reasonable",
-    cs: `${S2}ESTIMATE_DIFFERENCE`,
+    cs: `${S3}ESTIMATE_DIFFERENCE`,
     form: "why",
     rung: 3,
     gen: () => {
@@ -19000,9 +20413,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_ADD_SUB_CALC
-  fam6({
+  fam7({
     id: "g5c.comb.calc.story",
-    cs: `${S2}COMBINED_ADD_SUB_CALC`,
+    cs: `${S3}COMBINED_ADD_SUB_CALC`,
     form: "word",
     rung: 1,
     gen: () => {
@@ -19017,9 +20430,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.comb.calc.missing",
-    cs: `${S2}COMBINED_ADD_SUB_CALC`,
+    cs: `${S3}COMBINED_ADD_SUB_CALC`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -19034,9 +20447,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.comb.calc.spot",
-    cs: `${S2}COMBINED_ADD_SUB_CALC`,
+    cs: `${S3}COMBINED_ADD_SUB_CALC`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -19052,9 +20465,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_ADD_SUB_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.comb.prob.money",
-    cs: `${S2}COMBINED_ADD_SUB_PROBLEMS`,
+    cs: `${S3}COMBINED_ADD_SUB_PROBLEMS`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -19069,9 +20482,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.comb.prob.table",
-    cs: `${S2}COMBINED_ADD_SUB_PROBLEMS`,
+    cs: `${S3}COMBINED_ADD_SUB_PROBLEMS`,
     form: "table",
     rung: 3,
     gen: () => {
@@ -19089,9 +20502,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.comb.prob.sentence",
-    cs: `${S2}COMBINED_ADD_SUB_PROBLEMS`,
+    cs: `${S3}COMBINED_ADD_SUB_PROBLEMS`,
     form: "why",
     rung: 3,
     gen: () => {
@@ -19107,9 +20520,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_PATTERN_CONTINUE
-  fam6({
+  fam7({
     id: "g5c.subpat.next",
-    cs: `${S2}SUB_PATTERN_CONTINUE`,
+    cs: `${S3}SUB_PATTERN_CONTINUE`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -19125,9 +20538,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.subpat.rule",
-    cs: `${S2}SUB_PATTERN_CONTINUE`,
+    cs: `${S3}SUB_PATTERN_CONTINUE`,
     form: "why",
     rung: 2,
     gen: () => {
@@ -19142,9 +20555,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.subpat.table",
-    cs: `${S2}SUB_PATTERN_CONTINUE`,
+    cs: `${S3}SUB_PATTERN_CONTINUE`,
     form: "table",
     rung: 3,
     gen: () => {
@@ -19162,9 +20575,9 @@ var FAMILIES16 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_PATTERN_CREATE
-  fam6({
+  fam7({
     id: "g5c.subcre.stop",
-    cs: `${S2}SUB_PATTERN_CREATE`,
+    cs: `${S3}SUB_PATTERN_CREATE`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -19182,9 +20595,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.subcre.make",
-    cs: `${S2}SUB_PATTERN_CREATE`,
+    cs: `${S3}SUB_PATTERN_CREATE`,
     form: "direct",
     rung: 1,
     gen: () => {
@@ -19200,9 +20613,9 @@ var FAMILIES16 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.subcre.spot",
-    cs: `${S2}SUB_PATTERN_CREATE`,
+    cs: `${S3}SUB_PATTERN_CREATE`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -19265,9 +20678,9 @@ var likeAdd = (n, m) => {
 };
 var mixedRows = (n, m) => n * (m % 10) + (n * Math.floor(m / 10) + Math.floor(n * (m % 10) / 100)) * 10;
 var place2 = () => pick(["Nyandarua", "Murang'a", "Kitale", "Naivasha", "Kericho"]);
-var FAMILIES17 = [
+var FAMILIES21 = [
   // ---------------------------------------------------------------- MULT_3D_BY_1D
-  fam6({
+  fam7({
     id: "g5c.mul.d1.packets",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "word",
@@ -19285,7 +20698,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.d1.zero",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "direct",
@@ -19303,7 +20716,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.d1.spot",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "spot",
@@ -19322,7 +20735,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_3D_BY_2D
-  fam6({
+  fam7({
     id: "g5c.mul.d2.grid",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "table",
@@ -19343,7 +20756,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.d2.compare",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "direct",
@@ -19361,7 +20774,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.d2.spot",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "spot",
@@ -19380,7 +20793,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_WORD_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.mul.wp.buses",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "word",
@@ -19397,7 +20810,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.wp.change",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "steps",
@@ -19415,7 +20828,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.wp.sentence",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "why",
@@ -19433,7 +20846,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_PRODUCT_ROUND10
-  fam6({
+  fam7({
     id: "g5c.mul.est.round",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "word",
@@ -19451,7 +20864,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.est.best",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "direct",
@@ -19469,7 +20882,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.est.spot",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "spot",
@@ -19487,7 +20900,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_CHECK_REASONABLE
-  fam6({
+  fam7({
     id: "g5c.mul.chk.reasonable",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "why",
@@ -19506,7 +20919,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.chk.money",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "word",
@@ -19526,7 +20939,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.chk.wrong",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "direct",
@@ -19545,7 +20958,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_PATTERN_EXTEND
-  fam6({
+  fam7({
     id: "g5c.mul.pat.next",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "direct",
@@ -19564,7 +20977,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.pat.first",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "word",
@@ -19582,7 +20995,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.pat.table",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "table",
@@ -19602,7 +21015,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_PATTERN_CREATE
-  fam6({
+  fam7({
     id: "g5c.mul.cre.list",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "direct",
@@ -19622,7 +21035,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.cre.stop",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "word",
@@ -19641,7 +21054,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mul.cre.spot",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "spot",
@@ -19659,7 +21072,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_3DIGIT_BY_1DIGIT
-  fam6({
+  fam7({
     id: "g5c.div.d1.zero",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "word",
@@ -19678,7 +21091,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.d1.remainder",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "direct",
@@ -19697,7 +21110,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.d1.spot",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "spot",
@@ -19717,7 +21130,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_3DIGIT_BY_2DIGIT
-  fam6({
+  fam7({
     id: "g5c.div.d2.long",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "word",
@@ -19735,7 +21148,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.d2.zero",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "direct",
@@ -19753,7 +21166,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.d2.spot",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "spot",
@@ -19772,7 +21185,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_WORD_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.div.wp.roundup",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "word",
@@ -19791,7 +21204,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.wp.left",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "direct",
@@ -19809,7 +21222,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.wp.choose",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "why",
@@ -19828,7 +21241,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_DIV_FACT_FAMILIES
-  fam6({
+  fam7({
     id: "g5c.div.fam.write",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "direct",
@@ -19845,7 +21258,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.fam.missing",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "word",
@@ -19863,7 +21276,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.fam.tf",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "why",
@@ -19881,7 +21294,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- CHECK_DIVISION_BY_MULT
-  fam6({
+  fam7({
     id: "g5c.div.chk.verify",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "why",
@@ -19899,7 +21312,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.chk.dividend",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "word",
@@ -19917,7 +21330,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.chk.which",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "direct",
@@ -19936,7 +21349,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_BY_1000
-  fam6({
+  fam7({
     id: "g5c.div.k.grams",
     cs: `${D}DIV_BY_1000`,
     form: "word",
@@ -19953,7 +21366,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.k.which",
     cs: `${D}DIV_BY_1000`,
     form: "direct",
@@ -19970,7 +21383,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.k.table",
     cs: `${D}DIV_BY_1000`,
     form: "table",
@@ -19990,7 +21403,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_QUOTIENTS
-  fam6({
+  fam7({
     id: "g5c.div.est.word",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "word",
@@ -20008,7 +21421,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.est.best",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "direct",
@@ -20026,7 +21439,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.div.est.reasonable",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "why",
@@ -20046,7 +21459,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_OF_OPERATIONS
-  fam6({
+  fam7({
     id: "g5c.ops.order.value",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "word",
@@ -20063,7 +21476,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.ops.order.addsub",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "direct",
@@ -20080,7 +21493,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.ops.order.spot",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "spot",
@@ -20098,7 +21511,7 @@ var FAMILIES17 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_OPS_PROBLEMS
-  fam6({
+  fam7({
     id: "g5c.ops.prob.change",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "word",
@@ -20116,7 +21529,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.ops.prob.share",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "steps",
@@ -20135,7 +21548,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.ops.prob.expr",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "why",
@@ -20173,9 +21586,9 @@ var places = (x) => (String(x).split(".")[1] || "").length;
 var digs = (x, n) => Number(Number(x).toFixed(n).replace(".", ""));
 var GRAMS = ["sukuma wiki", "tomatoes", "onions", "potatoes", "beans"];
 var pairs = [[2, 4], [2, 6], [3, 6], [4, 8], [2, 8], [3, 9], [4, 12], [6, 12], [3, 12], [2, 10], [5, 10], [2, 12]];
-var FAMILIES18 = [
+var FAMILIES22 = [
   // ---------------------------------------------------------------- EQUIVALENT_FRACTIONS
-  fam6({
+  fam7({
     id: "g5c.fra.eq.missing",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "word",
@@ -20194,7 +21607,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.eq.who-more",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "why",
@@ -20212,7 +21625,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.eq.truefalse",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "direct",
@@ -20232,7 +21645,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- SIMPLIFY_FRACTIONS
-  fam6({
+  fam7({
     id: "g5c.fra.simp.mandazi",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "word",
@@ -20252,7 +21665,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.simp.is-it",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "why",
@@ -20269,7 +21682,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.simp.spot",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "spot",
@@ -20288,7 +21701,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_LIKE_FRACTIONS
-  fam6({
+  fam7({
     id: "g5c.fra.cl.loaf",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "word",
@@ -20306,7 +21719,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.cl.symbol",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "direct",
@@ -20325,7 +21738,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.cl.whole",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "why",
@@ -20344,7 +21757,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_UNLIKE_FRACTIONS
-  fam6({
+  fam7({
     id: "g5c.fra.cu.plot",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "word",
@@ -20365,7 +21778,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.cu.symbol",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "direct",
@@ -20385,7 +21798,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.cu.method",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "spot",
@@ -20404,7 +21817,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_FRACTIONS
-  fam6({
+  fam7({
     id: "g5c.fra.ord.inc",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "direct",
@@ -20425,7 +21838,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.ord.walk",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "word",
@@ -20446,7 +21859,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.ord.out",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "spot",
@@ -20464,7 +21877,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_SAME_DENOMINATOR
-  fam6({
+  fam7({
     id: "g5c.fra.add.flour",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "word",
@@ -20482,7 +21895,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.add.missing",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "direct",
@@ -20499,7 +21912,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.add.spot",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "spot",
@@ -20518,7 +21931,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- SUBTRACT_SAME_DENOMINATOR
-  fam6({
+  fam7({
     id: "g5c.fra.sub.pawpaw",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "word",
@@ -20535,7 +21948,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.sub.missing",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "direct",
@@ -20552,7 +21965,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.sub.line",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "table",
@@ -20573,7 +21986,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_ONE_RENAMING
-  fam6({
+  fam7({
     id: "g5c.fra.addr.sugar",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "word",
@@ -20592,7 +22005,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.addr.which",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "direct",
@@ -20611,7 +22024,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.addr.spot",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "spot",
@@ -20630,7 +22043,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- SUBTRACT_ONE_RENAMING
-  fam6({
+  fam7({
     id: "g5c.fra.subr.milk",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "word",
@@ -20649,7 +22062,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.subr.moremissing",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "why",
@@ -20667,7 +22080,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.fra.subr.spot",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "spot",
@@ -20686,7 +22099,7 @@ var FAMILIES18 = [
   }),
   // ================================================================ DECIMALS
   // ---------------------------------------------------------------- DEC_PLACE_NAME
-  fam6({
+  fam7({
     id: "g5c.dec.place.name",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "direct",
@@ -20704,7 +22117,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.place.size",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "why",
@@ -20721,7 +22134,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.place.chart",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "table",
@@ -20741,7 +22154,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_DIGIT_VALUE
-  fam6({
+  fam7({
     id: "g5c.dec.value.worth",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "word",
@@ -20760,7 +22173,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.value.write",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "direct",
@@ -20778,7 +22191,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.value.expanded",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "steps",
@@ -20797,7 +22210,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_COMPARE
-  fam6({
+  fam7({
     id: "g5c.dec.cmp.which",
     cs: `${DC}DEC_COMPARE`,
     form: "word",
@@ -20815,7 +22228,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.cmp.symbol",
     cs: `${DC}DEC_COMPARE`,
     form: "direct",
@@ -20835,7 +22248,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.cmp.spot",
     cs: `${DC}DEC_COMPARE`,
     form: "spot",
@@ -20854,7 +22267,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ORDER
-  fam6({
+  fam7({
     id: "g5c.dec.ord.race",
     cs: `${DC}DEC_ORDER`,
     form: "word",
@@ -20874,7 +22287,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.ord.list",
     cs: `${DC}DEC_ORDER`,
     form: "direct",
@@ -20895,7 +22308,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.ord.between",
     cs: `${DC}DEC_ORDER`,
     form: "steps",
@@ -20914,7 +22327,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ADD_SAME_PLACES
-  fam6({
+  fam7({
     id: "g5c.dec.add.same.market",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "word",
@@ -20933,7 +22346,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.add.same.thousandths",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "direct",
@@ -20951,7 +22364,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.add.same.missing",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "spot",
@@ -20971,7 +22384,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ADD_MIXED_PLACES
-  fam6({
+  fam7({
     id: "g5c.dec.addm.market",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "word",
@@ -20990,7 +22403,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.addm.whole",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "direct",
@@ -21009,7 +22422,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.addm.price",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "steps",
@@ -21029,7 +22442,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_SUB_SAME_PLACES
-  fam6({
+  fam7({
     id: "g5c.dec.sub.same.change",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "word",
@@ -21047,7 +22460,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.sub.same.zero",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "direct",
@@ -21067,7 +22480,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.sub.same.spot",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "spot",
@@ -21086,7 +22499,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_SUB_MIXED_PLACES
-  fam6({
+  fam7({
     id: "g5c.dec.subm.whole",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "word",
@@ -21105,7 +22518,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.subm.extra",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "direct",
@@ -21124,7 +22537,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.subm.change",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "steps",
@@ -21144,7 +22557,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_MULT_1000
-  fam6({
+  fam7({
     id: "g5c.dec.k.grams",
     cs: `${DC}DEC_MULT_1000`,
     form: "word",
@@ -21161,7 +22574,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.k.missing",
     cs: `${DC}DEC_MULT_1000`,
     form: "direct",
@@ -21178,7 +22591,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dec.k.spot",
     cs: `${DC}DEC_MULT_1000`,
     form: "spot",
@@ -21211,15 +22624,15 @@ function noDec(a, b, n) {
 }
 
 // src/ai-tutor/content/families/g5c_eq.js
-var Q = "NUMBER.SIMPLE_EQUATIONS.";
+var Q2 = "NUMBER.SIMPLE_EQUATIONS.";
 var LETTERS = ["n", "p", "x", "m", "a", "b"];
 var SHOP = ["mandazi", "exercise books", "pencils", "bananas", "eggs"];
 var L2 = () => pick(LETTERS);
-var FAMILIES19 = [
+var FAMILIES23 = [
   // ---------------------------------------------------------------- EQ_MEANING
-  fam6({
+  fam7({
     id: "g5c.eq.mean.pick",
-    cs: `${Q}EQ_MEANING`,
+    cs: `${Q2}EQ_MEANING`,
     form: "direct",
     rung: 1,
     gen: () => {
@@ -21234,9 +22647,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.mean.balance",
-    cs: `${Q}EQ_MEANING`,
+    cs: `${Q2}EQ_MEANING`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -21252,9 +22665,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.mean.letter",
-    cs: `${Q}EQ_MEANING`,
+    cs: `${Q2}EQ_MEANING`,
     form: "why",
     rung: 2,
     gen: () => {
@@ -21270,9 +22683,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_FORM_ADD_SUB
-  fam6({
+  fam7({
     id: "g5c.eq.fadd.spent",
-    cs: `${Q}EQ_FORM_ADD_SUB`,
+    cs: `${Q2}EQ_FORM_ADD_SUB`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -21289,9 +22702,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.fadd.more",
-    cs: `${Q}EQ_FORM_ADD_SUB`,
+    cs: `${Q2}EQ_FORM_ADD_SUB`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -21307,9 +22720,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.fadd.spot",
-    cs: `${Q}EQ_FORM_ADD_SUB`,
+    cs: `${Q2}EQ_FORM_ADD_SUB`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -21325,9 +22738,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_FORM_MUL_DIV
-  fam6({
+  fam7({
     id: "g5c.eq.fmul.times",
-    cs: `${Q}EQ_FORM_MUL_DIV`,
+    cs: `${Q2}EQ_FORM_MUL_DIV`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -21342,9 +22755,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.fmul.share",
-    cs: `${Q}EQ_FORM_MUL_DIV`,
+    cs: `${Q2}EQ_FORM_MUL_DIV`,
     form: "why",
     rung: 2,
     gen: () => {
@@ -21359,9 +22772,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.fmul.cost",
-    cs: `${Q}EQ_FORM_MUL_DIV`,
+    cs: `${Q2}EQ_FORM_MUL_DIV`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -21377,9 +22790,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_ADD_SUB
-  fam6({
+  fam7({
     id: "g5c.eq.sadd.plus",
-    cs: `${Q}EQ_SOLVE_ADD_SUB`,
+    cs: `${Q2}EQ_SOLVE_ADD_SUB`,
     form: "word",
     rung: 1,
     gen: () => {
@@ -21394,9 +22807,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.sadd.minus",
-    cs: `${Q}EQ_SOLVE_ADD_SUB`,
+    cs: `${Q2}EQ_SOLVE_ADD_SUB`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -21414,9 +22827,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.sadd.spot",
-    cs: `${Q}EQ_SOLVE_ADD_SUB`,
+    cs: `${Q2}EQ_SOLVE_ADD_SUB`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -21432,9 +22845,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_MUL_DIV
-  fam6({
+  fam7({
     id: "g5c.eq.smul.groups",
-    cs: `${Q}EQ_SOLVE_MUL_DIV`,
+    cs: `${Q2}EQ_SOLVE_MUL_DIV`,
     form: "word",
     rung: 1,
     gen: () => {
@@ -21449,9 +22862,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.smul.divide",
-    cs: `${Q}EQ_SOLVE_MUL_DIV`,
+    cs: `${Q2}EQ_SOLVE_MUL_DIV`,
     form: "direct",
     rung: 2,
     gen: () => {
@@ -21467,9 +22880,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.smul.spot",
-    cs: `${Q}EQ_SOLVE_MUL_DIV`,
+    cs: `${Q2}EQ_SOLVE_MUL_DIV`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -21485,9 +22898,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_IN_CONTEXT
-  fam6({
+  fam7({
     id: "g5c.eq.ctx.sukuma",
-    cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
+    cs: `${Q2}EQ_SOLVE_IN_CONTEXT`,
     form: "word",
     rung: 2,
     gen: () => {
@@ -21502,9 +22915,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.ctx.matatu",
-    cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
+    cs: `${Q2}EQ_SOLVE_IN_CONTEXT`,
     form: "steps",
     rung: 3,
     gen: () => {
@@ -21520,9 +22933,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.ctx.sense",
-    cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
+    cs: `${Q2}EQ_SOLVE_IN_CONTEXT`,
     form: "why",
     rung: 3,
     gen: () => {
@@ -21538,9 +22951,9 @@ var FAMILIES19 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_TWO_STEP
-  fam6({
+  fam7({
     id: "g5c.eq.two.pens",
-    cs: `${Q}EQ_TWO_STEP`,
+    cs: `${Q2}EQ_TWO_STEP`,
     form: "word",
     rung: 3,
     gen: () => {
@@ -21555,9 +22968,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.two.order",
-    cs: `${Q}EQ_TWO_STEP`,
+    cs: `${Q2}EQ_TWO_STEP`,
     form: "direct",
     rung: 3,
     gen: () => {
@@ -21573,9 +22986,9 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.eq.two.spot",
-    cs: `${Q}EQ_TWO_STEP`,
+    cs: `${Q2}EQ_TWO_STEP`,
     form: "spot",
     rung: 3,
     gen: () => {
@@ -21731,11 +23144,11 @@ var CTX = {
   time: { add: (p, a, b) => `${p.name} sweeps the classroom for ${a} and then the verandah for ${b}. What is the total time spent sweeping?`, sub: (p, a, b) => `${p.name} ran a race in ${a} and a friend ran it in ${b}. How much longer did ${p.she} take?`, mul: (p, a, n) => `One batch of mandazi fries in ${a}. How long do ${n} batches take, one after another?`, div: (p, a, n) => `A lesson of ${a} is shared equally among ${n} groups for reading. How long does each group read?`, conv: (p) => `${p.name} times an activity with a stopwatch.`, parts: "songs", ex: "a song" }
 };
 function build(name) {
-  const S3 = SETS[name], C = CTX[name], { big, small, f } = S3, sk = (k) => `${M3}${S3.key}.${S3.sk[k]}`, mis = S3.mis;
+  const S4 = SETS[name], C = CTX[name], { big, small, f } = S4, sk = (k) => `${M3}${S4.key}.${S4.sk[k]}`, mis = S4.mis;
   const fmt = (b, s) => comp(b, s, big, small), W3 = `${name.slice(0, 3)}`;
   const acc = (b, s) => [`${plain(b, s, f)} ${small}`];
   const out = [];
-  const F4 = (o) => out.push(fam6(o));
+  const F4 = (o) => out.push(fam7(o));
   const rnd1 = () => randInt(1, f === 60 ? 9 : 9);
   const smallPart = () => f === 60 ? randInt(5, 55) : randInt(1, 9) * 50 + (Math.random() < 0.4 ? randInt(1, 9) * 5 : 0) * 1;
   const any = (n) => Array.from({ length: n }, () => 0);
@@ -22176,7 +23589,7 @@ function build(name) {
   });
   return out;
 }
-var FAMILIES20 = [...build("length"), ...build("capacity"), ...build("mass"), ...build("time")];
+var FAMILIES24 = [...build("length"), ...build("capacity"), ...build("mass"), ...build("time")];
 
 // src/ai-tutor/content/families/g5c_meas.js
 var M4 = "MEASUR.";
@@ -22187,9 +23600,9 @@ var ML = [["a spoon of cough medicine", "ml"], ["a cup of chai", "ml"], ["a jerr
 var GM = [["an egg", "g"], ["a sack of potatoes", "kg"], ["a pencil", "g"], ["a bag of sugar", "kg"], ["a packet of chewing gum", "g"], ["a schoolchild", "kg"], ["a tomato", "g"], ["a bag of cement", "kg"]];
 var NAMES_ML = { ml: "millilitres", l: "litres" };
 var unitOpts = (right, units, mismatch, extra) => mc2(right, [...units.filter((u) => u !== right).map((u) => [u, `${WHY_L[u] || ""} ${mismatch || ""}`.trim(), "M_UNIT_SIZE_MISMATCH"]), ...extra ? [extra] : []]);
-var FAMILIES21 = [
+var FAMILIES25 = [
   // ================================================================ LENGTH
-  fam6({
+  fam7({
     id: "g5c.lenc.kmid.choose",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "direct",
@@ -22206,7 +23619,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.lenc.kmid.sign",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "word",
@@ -22223,7 +23636,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.lenc.kmid.sort",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "table",
@@ -22242,7 +23655,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.lenc.kmest.pick",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "direct",
@@ -22259,7 +23672,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.lenc.kmest.compare",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "word",
@@ -22279,7 +23692,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.lenc.kmest.sense",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "why",
@@ -22298,7 +23711,7 @@ var FAMILIES21 = [
     }
   }),
   // ================================================================ CAPACITY
-  fam6({
+  fam7({
     id: "g5c.capc.mlid.label",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "direct",
@@ -22315,7 +23728,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlid.odd",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "table",
@@ -22334,7 +23747,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlid.more",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "why",
@@ -22351,7 +23764,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlscale.read",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "word",
@@ -22370,7 +23783,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlscale.step",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "direct",
@@ -22388,7 +23801,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlscale.eye",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "why",
@@ -22405,7 +23818,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.fill.count",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "word",
@@ -22422,7 +23835,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.fill.compare",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "why",
@@ -22439,7 +23852,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.fill.needed",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "steps",
@@ -22458,7 +23871,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlest.best",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "direct",
@@ -22475,7 +23888,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlest.which",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "why",
@@ -22492,7 +23905,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.capc.mlest.record",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "word",
@@ -22510,7 +23923,7 @@ var FAMILIES21 = [
     }
   }),
   // ================================================================ MASS
-  fam6({
+  fam7({
     id: "g5c.masc.gram.label",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "word",
@@ -22527,7 +23940,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.gram.which",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "table",
@@ -22545,7 +23958,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.gram.spot",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "spot",
@@ -22562,7 +23975,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.unit.choose",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "direct",
@@ -22579,7 +23992,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.unit.complete",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "word",
@@ -22596,7 +24009,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.unit.size",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "why",
@@ -22614,7 +24027,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.bal.sum",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "word",
@@ -22631,7 +24044,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.bal.heavier",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "why",
@@ -22648,7 +24061,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.bal.which-masses",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "direct",
@@ -22665,7 +24078,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.scale.dial",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "word",
@@ -22682,7 +24095,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.scale.half",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "direct",
@@ -22698,7 +24111,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.scale.diff",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "steps",
@@ -22716,7 +24129,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.est.bench",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "word",
@@ -22733,7 +24146,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.est.heavier",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "why",
@@ -22749,7 +24162,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.masc.est.record",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "direct",
@@ -22767,7 +24180,7 @@ var FAMILIES21 = [
     }
   }),
   // ================================================================ TIME
-  fam6({
+  fam7({
     id: "g5c.timc.sec.hand",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "direct",
@@ -22783,7 +24196,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.sec.which",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "word",
@@ -22800,7 +24213,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.sec.tf",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "why",
@@ -22816,7 +24229,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dur.which",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "direct",
@@ -22834,7 +24247,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dur.measure",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "word",
@@ -22851,7 +24264,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dur.order",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "why",
@@ -22870,7 +24283,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.read.analog",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "word",
@@ -22887,7 +24300,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.read.marks",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "direct",
@@ -22904,7 +24317,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.read.spot",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "spot",
@@ -22921,7 +24334,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dig.stopwatch",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "direct",
@@ -22938,7 +24351,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dig.clock",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "word",
@@ -22955,7 +24368,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.timc.dig.match",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "why",
@@ -22973,7 +24386,7 @@ var FAMILIES21 = [
     }
   }),
   // ================================================================ AREA
-  fam6({
+  fam7({
     id: "g5c.arec.unit.which",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "direct",
@@ -22991,7 +24404,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.unit.side2",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "word",
@@ -23008,7 +24421,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.unit.mean",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "why",
@@ -23025,7 +24438,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.cover.count",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "word",
@@ -23042,7 +24455,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.cover.stamp",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "direct",
@@ -23059,7 +24472,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.cover.spot",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "spot",
@@ -23076,7 +24489,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.real.pick",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "direct",
@@ -23093,7 +24506,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.real.unit",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "why",
@@ -23111,7 +24524,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.real.list",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "table",
@@ -23129,7 +24542,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.rows.array",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "word",
@@ -23146,7 +24559,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.rows.partial",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "direct",
@@ -23163,7 +24576,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.rows.why",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "why",
@@ -23180,7 +24593,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.calc.word",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "word",
@@ -23198,7 +24611,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.calc.square",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "direct",
@@ -23215,7 +24628,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.calc.labelled",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "table",
@@ -23234,7 +24647,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.prob.cloth",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "word",
@@ -23252,7 +24665,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.prob.side",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "direct",
@@ -23270,7 +24683,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.arec.prob.choose",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "why",
@@ -23288,7 +24701,7 @@ var FAMILIES21 = [
     }
   }),
   // ================================================================ VOLUME
-  fam6({
+  fam7({
     id: "g5c.volc.cm3.cubes",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "direct",
@@ -23305,7 +24718,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cm3.edge",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "why",
@@ -23321,7 +24734,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cm3.mass",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "word",
@@ -23338,7 +24751,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.count.layers",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "word",
@@ -23355,7 +24768,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.count.picture",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "direct",
@@ -23373,7 +24786,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.count.same",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "why",
@@ -23390,7 +24803,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.derive.table",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "table",
@@ -23408,7 +24821,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.derive.why",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "why",
@@ -23425,7 +24838,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.derive.rotate",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "direct",
@@ -23442,7 +24855,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.calc.word",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "word",
@@ -23459,7 +24872,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.calc.table",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "table",
@@ -23477,7 +24890,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.calc.spot",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "spot",
@@ -23494,7 +24907,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.prob.metre",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "word",
@@ -23511,7 +24924,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.prob.extra",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "direct",
@@ -23528,7 +24941,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.prob.fill",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "steps",
@@ -23546,7 +24959,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cubederive.build",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "word",
@@ -23563,7 +24976,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cubederive.tf",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "why",
@@ -23580,7 +24993,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cubederive.which",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "direct",
@@ -23597,7 +25010,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cube.calc",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "word",
@@ -23614,7 +25027,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cube.dice",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "direct",
@@ -23631,7 +25044,7 @@ var FAMILIES21 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.volc.cube.table",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "table",
@@ -23661,10 +25074,10 @@ var pool = (items2, lead) => () => {
   const x = pick(items2);
   return ask(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against what you know."], [x.s, `So: ${x.r}.`]);
 };
-var spot4 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES22 = [
+var spot5 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
+var FAMILIES26 = [
   // ---------------------------------------------------------------- BUDGET_MEANING
-  fam6({
+  fam7({
     id: "g5c.mon.bm.which",
     cs: `${Y}BUDGET_MEANING`,
     form: "direct",
@@ -23674,7 +25087,7 @@ var FAMILIES22 = [
       { q: "got a paper from the shop after buying sugar and bread. It shows what was bought and the total paid. Is it a budget?", r: "No, it is a receipt", w: [["Yes, because it shows money paid", "A budget is a plan made before spending.", "M_BUDGET_IS_RECEIPT"], ["Yes, because it lists the items bought", "Items and amounts after buying make a receipt.", "M_BUDGET_IS_RECEIPT"]], s: "A receipt is a record, not a plan." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bm.complete",
     cs: `${Y}BUDGET_MEANING`,
     form: "why",
@@ -23691,7 +25104,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bm.who",
     cs: `${Y}BUDGET_MEANING`,
     form: "word",
@@ -23709,7 +25122,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- BUDGET_IMPORTANCE
-  fam6({
+  fam7({
     id: "g5c.mon.bi.fail",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "why",
@@ -23726,7 +25139,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bi.drop",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "direct",
@@ -23743,7 +25156,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bi.reasons",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "word",
@@ -23761,7 +25174,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- BUDGET_ITEM_COSTS
-  fam6({
+  fam7({
     id: "g5c.mon.bic.line",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "word",
@@ -23778,7 +25191,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bic.table",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "table",
@@ -23796,18 +25209,18 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bic.spot",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), q = randInt(3, 6), pr = pick([45, 65, 85]);
-      return spot4(`${p.name} works out the cost of ${q} exercise books at ${sh(pr)} each. Which step has the mistake?`, [`Step 1: One book costs ${sh(pr)}.`, `Step 2: The cost of ${q} books is ${pr} + ${q} = ${pr + q}.`, `Step 3: The line costs ${sh(pr + q)}.`], 1, `Several equal items: multiply. ${q} \xD7 ${pr} = ${q * pr}, so the line costs ${sh(q * pr)}.`, "M_ADD_QTY_AND_PRICE", "Is the cost of 5 books really close to the cost of 1?");
+      return spot5(`${p.name} works out the cost of ${q} exercise books at ${sh(pr)} each. Which step has the mistake?`, [`Step 1: One book costs ${sh(pr)}.`, `Step 2: The cost of ${q} books is ${pr} + ${q} = ${pr + q}.`, `Step 3: The line costs ${sh(pr + q)}.`], 1, `Several equal items: multiply. ${q} \xD7 ${pr} = ${q * pr}, so the line costs ${sh(q * pr)}.`, "M_ADD_QTY_AND_PRICE", "Is the cost of 5 books really close to the cost of 1?");
     }
   }),
   // ---------------------------------------------------------------- BUDGET_TOTAL_BALANCE
-  fam6({
+  fam7({
     id: "g5c.mon.bt.balance",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "word",
@@ -23825,7 +25238,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bt.total",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "table",
@@ -23843,7 +25256,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bt.afford",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "why",
@@ -23861,7 +25274,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- TAX_MEANING
-  fam6({
+  fam7({
     id: "g5c.mon.tm.what",
     cs: `${Y}TAX_MEANING`,
     form: "direct",
@@ -23871,7 +25284,7 @@ var FAMILIES22 = [
       { q: "sees tax on a supermarket receipt. Who gets this money in the end?", r: "The government", w: [["The supermarket", "The shop collects it and passes it to the government.", "M_TAX_KEPT_BY_SHOP"], ["The cashier", "The cashier is not paid tax money. It goes to the government.", "M_TAX_KEPT_BY_SHOP"]], s: "The shop collects tax and pays it to the government." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.tm.why",
     cs: `${Y}TAX_MEANING`,
     form: "why",
@@ -23881,18 +25294,18 @@ var FAMILIES22 = [
       { q: "asks which of these is paid for by tax: a public school, or a shop owner's own car?", r: "A public school", w: [["A shop owner's own car", "Taxes pay for public services, not private things.", "M_TAX_KEPT_BY_SHOP"], ["Neither, because tax is a fine", "Tax is paid for public services.", "M_TAX_IS_FINE"]], s: "Public schools are paid for with taxes." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.tm.tf",
     cs: `${Y}TAX_MEANING`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot4(`${p.name} explains tax. Which step has the mistake?`, ["Step 1: Tax is money that people and businesses pay to the government.", "Step 2: The tax on a shop receipt is kept by the shop as extra profit.", "Step 3: The government uses tax for roads, schools and hospitals."], 1, "The shop collects the tax from the customer and passes it to the government. It is not extra profit for the shop.", "M_TAX_KEPT_BY_SHOP", "Who gets the tax money in the end?");
+      return spot5(`${p.name} explains tax. Which step has the mistake?`, ["Step 1: Tax is money that people and businesses pay to the government.", "Step 2: The tax on a shop receipt is kept by the shop as extra profit.", "Step 3: The government uses tax for roads, schools and hospitals."], 1, "The shop collects the tax from the customer and passes it to the government. It is not extra profit for the shop.", "M_TAX_KEPT_BY_SHOP", "Who gets the tax money in the end?");
     }
   }),
   // ---------------------------------------------------------------- TAX_ON_RECEIPT
-  fam6({
+  fam7({
     id: "g5c.mon.tr.amount",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "table",
@@ -23910,7 +25323,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.tr.total",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "word",
@@ -23927,7 +25340,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.tr.before",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "direct",
@@ -23945,7 +25358,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- BANK_SERVICES
-  fam6({
+  fam7({
     id: "g5c.mon.bs.match",
     cs: `${Y}BANK_SERVICES`,
     form: "direct",
@@ -23956,7 +25369,7 @@ var FAMILIES22 = [
       { q: "keeps her land title in the bank's strong room for safety. Which bank service is this?", r: "Safe custody", w: [["A loan", "A loan is money borrowed from the bank.", "M_LOAN_IS_GIFT"], ["A withdrawal", "A withdrawal takes money out of an account. Keeping a valuable safe is safe custody.", "M_DEPOSIT_WITHDRAW_SWAP"]], s: "Banks keep valuables safe." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bs.loan",
     cs: `${Y}BANK_SERVICES`,
     form: "why",
@@ -23973,7 +25386,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.bs.notes",
     cs: `${Y}BANK_SERVICES`,
     form: "word",
@@ -23991,7 +25404,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- MONEY_TRANSFER_DIGITAL
-  fam6({
+  fam7({
     id: "g5c.mon.mt.pin",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "direct",
@@ -24001,7 +25414,7 @@ var FAMILIES22 = [
       { q: "is asked by an agent to say the PIN aloud so the agent can send money quickly. What should be done?", r: "Keep it secret, enter it yourself", w: [["Say the PIN aloud to save time", "Never say the PIN. Someone may hear it.", "M_SHARE_PIN"], ["Write the PIN on the back of the phone", "Never write a PIN where others can see it.", "M_SHARE_PIN"]], s: "Enter the PIN yourself in private." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.mt.check",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "why",
@@ -24018,7 +25431,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.mt.order",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "word",
@@ -24037,7 +25450,7 @@ var FAMILIES22 = [
     }
   }),
   // ---------------------------------------------------------------- SAVING_FACTORS
-  fam6({
+  fam7({
     id: "g5c.mon.sf.plan",
     cs: `${Y}SAVING_FACTORS`,
     form: "direct",
@@ -24054,7 +25467,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.sf.safe",
     cs: `${Y}SAVING_FACTORS`,
     form: "why",
@@ -24071,7 +25484,7 @@ var FAMILIES22 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.mon.sf.small",
     cs: `${Y}SAVING_FACTORS`,
     form: "word",
@@ -24101,10 +25514,10 @@ var fromPool = (pool2, lead) => () => {
   const x = pick(pool2);
   return ask2(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against the picture in your mind."], [x.s, `So the answer is: ${x.r}.`], x.i);
 };
-var spot5 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES23 = [
+var spot6 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
+var FAMILIES27 = [
   // ================================================================ LINES
-  fam6({
+  fam7({
     id: "g5c.geol.hv.classify",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "direct",
@@ -24116,7 +25529,7 @@ var FAMILIES23 = [
       { q: "stands in the classroom and studies the sill at the foot of the window frame. Which word describes the sill: horizontal, vertical or neither?", r: "horizontal", w: [["vertical", "The bottom edge lies level on the floor.", "M_HV_SWAP_NAMES"], ["neither", "The bottom edge is level, so it is horizontal.", "M_HV_SLANT_COUNTS"]], s: "A level line is horizontal." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.hv.tilted",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "word",
@@ -24133,7 +25546,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.hv.letters",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "table",
@@ -24151,7 +25564,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawhv.ruler",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "word",
@@ -24168,7 +25581,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawhv.how",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "direct",
@@ -24178,17 +25591,17 @@ var FAMILIES23 = [
       { q: "must draw a horizontal line 8 cm long. Which is correct?", r: "Ruler along the page bottom, 0 to 8", w: [["Tilt the book and draw straight to the 8 mark", "The line will slope. Keep the page level.", "M_DRAW_HV_DRIFT"], ["Draw from the very end of the ruler to the 8 mark", "The ruler may have a gap before 0. Start at the 0 mark.", "M_RULER_FROM_ONE"]], s: "Keep the paper straight and measure from 0." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawhv.spot",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), n = randInt(5, 10);
-      return spot5(`${p.name} draws a vertical line ${n} cm long. Which step has the mistake?`, ["Step 1: Put the ruler on the paper.", `Step 2: Turn the book so that the ruler leans, and draw from the 1 mark to the ${n + 1} mark.`, `Step 3: Say the line is ${n} cm long.`], 1, `The page must be straight and measuring starts from 0. A vertical line goes straight up the page from the 0 mark to the ${n} mark.`, "M_DRAW_HV_DRIFT", "Is the line really upright?");
+      return spot6(`${p.name} draws a vertical line ${n} cm long. Which step has the mistake?`, ["Step 1: Put the ruler on the paper.", `Step 2: Turn the book so that the ruler leans, and draw from the 1 mark to the ${n + 1} mark.`, `Step 3: Say the line is ${n} cm long.`], 1, `The page must be straight and measuring starts from 0. A vertical line goes straight up the page from the 0 mark to the ${n} mark.`, "M_DRAW_HV_DRIFT", "Is the line really upright?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.perp.which",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "direct",
@@ -24200,7 +25613,7 @@ var FAMILIES23 = [
       { q: "checks two lines that meet at an angle just a little smaller than a right angle. A set square leaves a small gap. Are they perpendicular?", r: "No, it is not exactly a right angle", w: [["Yes, it looks like a right angle to me", "Judging by eye is not enough. Check with a set square.", "M_PERP_BY_EYE"], ["Yes, because it is nearly a right angle", "Nearly is not the same. A gap means it is not a right angle.", "M_PERP_BY_EYE"]], s: "A gap with the set square means the angle is not a right angle." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.perp.shape",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "word",
@@ -24217,7 +25630,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.perp.tilted",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "why",
@@ -24227,7 +25640,7 @@ var FAMILIES23 = [
       { q: "looks at two lines on a map that cross at a right angle, but neither is horizontal. Are they perpendicular?", r: "Yes, they meet at a right angle", w: [["No, one of them must be horizontal", "Perpendicular lines can face any direction.", "M_PERP_MUST_BE_UPRIGHT"], ["No, they only touch each other", "Crossing at a right angle is perpendicular.", "M_PERP_ANY_CROSSING"]], s: "Only the angle between the lines matters." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawperp.tool",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "direct",
@@ -24237,7 +25650,7 @@ var FAMILIES23 = [
       { q: "wants a line perpendicular to line CD through a point Q marked 3 cm from C. Which is correct?", r: "Put the set square corner exactly at Q on CD", w: [["Draw the right angle anywhere along CD", "The line must pass through Q.", "M_DRAWPERP_MISSES_POINT"], ["Use the long edge of the set square along CD", "The long edge does not give a right angle.", "M_SETSQUARE_WRONG_EDGE"]], s: "The right angle goes exactly at the marked point." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawperp.check",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "why",
@@ -24247,17 +25660,17 @@ var FAMILIES23 = [
       { q: "drew a line that meets a slanting line at a right angle, but 1 cm away from the point P marked on it. Was the task done correctly?", r: "No, the line must go through P", w: [["Yes, because it is at a right angle", "The line must go through the marked point P as well.", "M_DRAWPERP_MISSES_POINT"], ["Yes, near enough", "Check the instructions. The line must pass through P.", "M_DRAWPERP_MISSES_POINT"]], s: "The perpendicular must pass through the marked point." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawperp.spot",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot5(`${p.name} draws a line perpendicular to a slanting line AB through P. Which step has the mistake?`, ["Step 1: Mark the point P on AB.", "Step 2: Draw a straight upward line through P, because perpendicular means upright.", "Step 3: Say the lines are perpendicular."], 1, "Perpendicular means at a right angle to the given line, even when it slants. Use a set square on the line at P.", "M_DRAWPERP_ALWAYS_VERTICAL", "Is the new line at a right angle to AB?");
+      return spot6(`${p.name} draws a line perpendicular to a slanting line AB through P. Which step has the mistake?`, ["Step 1: Mark the point P on AB.", "Step 2: Draw a straight upward line through P, because perpendicular means upright.", "Step 3: Say the lines are perpendicular."], 1, "Perpendicular means at a right angle to the given line, even when it slants. Use a set square on the line at P.", "M_DRAWPERP_ALWAYS_VERTICAL", "Is the new line at a right angle to AB?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.par.pairs",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "direct",
@@ -24268,7 +25681,7 @@ var FAMILIES23 = [
       { q: "lays a ruler diagonally on a desk. Are the two long edges of the ruler parallel?", r: "Yes, parallel lines can slant", w: [["No, they are not lying flat across the desk", "Parallel lines do not have to be horizontal.", "M_PAR_ONLY_HORIZONTAL"], ["No, only horizontal lines are parallel", "Parallel lines can be vertical or slanting too.", "M_PAR_ONLY_HORIZONTAL"]], s: "The edges of a ruler stay the same distance apart." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.par.shape",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "word",
@@ -24285,7 +25698,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.par.sort",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "table",
@@ -24297,7 +25710,7 @@ var FAMILIES23 = [
       return { question: "The table shows four pairs of lines. Which pair of lines stays the same distance apart, so is parallel? Choose one that is parallel and is a railway.", model: tbl2(["Pair of lines"], rows.map((r) => [r[0]])), options, instruction: "Choose the parallel pair.", hints: ["Parallel lines never meet.", "They stay the same distance apart."], steps: ["Railway rails stay the same distance apart.", "They are parallel."] };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawpar.how",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "direct",
@@ -24307,7 +25720,7 @@ var FAMILIES23 = [
       { q: "is told line MN slopes downwards from left to right. Which line is parallel to MN?", r: "A line sloping down the same way", w: [["A horizontal line drawn well below it", "A parallel line follows the same slant as the given line.", "M_DRAWPAR_IGNORES_DIRECTION"], ["A vertical line drawn right next to it", "A parallel line follows the same slant.", "M_DRAWPAR_IGNORES_DIRECTION"]], s: "Parallel lines have the same direction." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawpar.dist",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "word",
@@ -24324,18 +25737,18 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geol.drawpar.spot",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), d = randInt(3, 5);
-      return spot5(`${p.name} draws a line parallel to AB, ${d} cm away. Which step has the mistake?`, ["Step 1: Mark the line AB.", `Step 2: Measure ${d} cm from AB at one end only, mark it, and draw the new line by eye.`, "Step 3: Say the lines are parallel."], 1, `Measure ${d} cm in at least two places and join the marks so the line stays the same distance from AB.`, "M_DRAWPAR_ONE_MEASURE", "Is the distance the same all along?");
+      return spot6(`${p.name} draws a line parallel to AB, ${d} cm away. Which step has the mistake?`, ["Step 1: Mark the line AB.", `Step 2: Measure ${d} cm from AB at one end only, mark it, and draw the new line by eye.`, "Step 3: Say the lines are parallel."], 1, `Measure ${d} cm in at least two places and join the marks so the line stays the same distance from AB.`, "M_DRAWPAR_ONE_MEASURE", "Is the distance the same all along?");
     }
   }),
   // ================================================================ ANGLES
-  fam6({
+  fam7({
     id: "g5c.geoa.turn.degrees",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "word",
@@ -24352,7 +25765,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.turn.clock",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "direct",
@@ -24371,7 +25784,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.turn.compass",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "why",
@@ -24388,7 +25801,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.deg.arms",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "direct",
@@ -24405,7 +25818,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.deg.which",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "word",
@@ -24422,7 +25835,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.deg.right",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "why",
@@ -24438,7 +25851,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.prot.scale",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "word",
@@ -24455,7 +25868,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.prot.which",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "direct",
@@ -24471,17 +25884,17 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.prot.spot",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), a = randInt(4, 8) * 10 + randInt(1, 4);
-      return spot5(`${p.name} reads an angle of ${a}\xB0 on a protractor as ${180 - a}\xB0. Which step has the mistake?`, ["Step 1: One arm lies along the baseline with the 0 on the right.", `Step 2: Read the scale that starts at 0 on the left, ${180 - a}.`, `Step 3: The angle is ${180 - a}\xB0.`], 1, `Read the scale that starts at 0 on the baseline arm. The angle is ${a}\xB0.`, "M_WRONG_SCALE", "Which scale starts at 0 on the baseline arm?");
+      return spot6(`${p.name} reads an angle of ${a}\xB0 on a protractor as ${180 - a}\xB0. Which step has the mistake?`, ["Step 1: One arm lies along the baseline with the 0 on the right.", `Step 2: Read the scale that starts at 0 on the left, ${180 - a}.`, `Step 3: The angle is ${180 - a}\xB0.`], 1, `Read the scale that starts at 0 on the baseline arm. The angle is ${a}\xB0.`, "M_WRONG_SCALE", "Which scale starts at 0 on the baseline arm?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.meas.place",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "direct",
@@ -24492,7 +25905,7 @@ var FAMILIES23 = [
       { q: "lines up the bottom edge of the protractor with one arm, instead of the baseline. What is the likely problem?", r: "The reading may be a few degrees wrong", w: [["The reading will be exactly right", "The 0 line is the baseline, which may not be the bottom edge.", "M_EDGE_NOT_BASELINE"], ["The angle gets bigger", "The angle does not change, but the reading can be wrong.", "M_EDGE_NOT_BASELINE"]], s: "Use the 0 baseline, not the bottom edge." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.meas.tilted",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "word",
@@ -24509,17 +25922,17 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.meas.spot",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), a = randInt(3, 7) * 10;
-      return spot5(`${p.name} measures a ${a}\xB0 angle with arms 1 cm long. Which step has the mistake?`, ["Step 1: Put the centre of the protractor on the vertex.", `Step 2: The arms are too short to reach the scale, so guess about ${a + 10}\xB0.`, `Step 3: Write ${a + 10}\xB0.`], 1, `Extend the arms with a ruler until they reach the scale, then read the angle: ${a}\xB0.`, "M_SHORT_ARMS_GUESS", "Should we guess a measurement?");
+      return spot6(`${p.name} measures a ${a}\xB0 angle with arms 1 cm long. Which step has the mistake?`, ["Step 1: Put the centre of the protractor on the vertex.", `Step 2: The arms are too short to reach the scale, so guess about ${a + 10}\xB0.`, `Step 3: Write ${a + 10}\xB0.`], 1, `Extend the arms with a ruler until they reach the scale, then read the angle: ${a}\xB0.`, "M_SHORT_ARMS_GUESS", "Should we guess a measurement?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.ctx.unit",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "direct",
@@ -24536,7 +25949,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.ctx.sense",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "why",
@@ -24553,7 +25966,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.ctx.bigger",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "word",
@@ -24570,7 +25983,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.env.right",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "direct",
@@ -24581,7 +25994,7 @@ var FAMILIES23 = [
       { q: "opens a classroom door a quarter turn. Does the door make an angle with its closed position?", r: "Yes, a right angle (90\xB0)", w: [["No, there are no drawn lines", "A turning object makes an angle even with no lines drawn.", "M_NO_ANGLE_IN_MOVEMENT"], ["No, only drawn shapes have angles", "Moving objects make angles too.", "M_NO_ANGLE_IN_MOVEMENT"]], s: "A quarter turn is 90\xB0." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.env.compare",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "why",
@@ -24591,7 +26004,7 @@ var FAMILIES23 = [
       { q: "sees a clock hand move from 12 to 3. What does this show?", r: "A turn that makes a right angle", w: [["Nothing, because no line is drawn", "A turning hand makes an angle.", "M_NO_ANGLE_IN_MOVEMENT"], ["A point only", "The hand sweeps an opening, which is an angle.", "M_ANGLE_IS_THE_CORNER_POINT"]], s: "12 to 3 is a quarter turn of 90\xB0." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geoa.env.roof",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "word",
@@ -24609,7 +26022,7 @@ var FAMILIES23 = [
     }
   }),
   // ================================================================ 3-D OBJECTS
-  fam6({
+  fam7({
     id: "g5c.geo3.name.object",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "direct",
@@ -24621,7 +26034,7 @@ var FAMILIES23 = [
       { q: "wonders whether a plastic water tank and a tin of milk are the same kind of 3-D object. Are they?", r: "Yes, both are cylinders", w: [["No, the tank is much bigger", "Size does not change the kind of shape.", "M_SIZE_CHANGES_SHAPE"], ["No, one is plastic", "Material does not change the shape.", "M_SIZE_CHANGES_SHAPE"]], s: "Both have two round flat ends and a curved side." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.name.sort",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "table",
@@ -24641,7 +26054,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.name.odd",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "why",
@@ -24651,7 +26064,7 @@ var FAMILIES23 = [
       { q: "compares a football, a ball of string, a tin and an orange. Which is the odd one out?", r: "The tin, because it is a cylinder", w: [["The orange, because it is a fruit and not a toy", "The material does not decide the shape.", "M_SIZE_CHANGES_SHAPE"], ["The football, because it is the biggest of them", "Size does not change the shape.", "M_SIZE_CHANGES_SHAPE"]], s: "The football, string ball and orange are spheres." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.feat.surfaces",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "direct",
@@ -24662,7 +26075,7 @@ var FAMILIES23 = [
       { q: "wonders which can roll: a football, a tin of milk, a matchbox. Which can roll?", r: "The football and the tin", w: [["Only the football", "A tin rolls on its curved side.", "M_ONLY_BALLS_ROLL"], ["All three", "A matchbox has flat sides and does not roll.", "M_ONLY_BALLS_ROLL"]], s: "Curved surfaces can roll." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.feat.count",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "word",
@@ -24679,7 +26092,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.feat.guess",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "why",
@@ -24689,7 +26102,7 @@ var FAMILIES23 = [
       { q: "describes an object: two flat circles and one curved surface, and it can roll. Which object is it?", r: "A cylinder", w: [["A sphere", "A sphere has no flat circles.", "M_CYLINDER_SURFACES"], ["A cone", "A cone has one flat circle and a point.", "M_POINTED_MEANS_PYRAMID"]], s: "A cylinder has two circles and a curved side." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.dim.sort",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "direct",
@@ -24699,7 +26112,7 @@ var FAMILIES23 = [
       { q: "looks at a dice. Which is its correct name?", r: "A cube", w: [["A square", "A square is a flat shape. A dice is solid.", "M_PLANE_NAME_FOR_SOLID"], ["A box", "The mathematical name of a solid with six equal squares is a cube.", "M_PLANE_NAME_FOR_SOLID"]], s: "A cube has six square faces." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.dim.which",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "why",
@@ -24709,7 +26122,7 @@ var FAMILIES23 = [
       { q: "draws a circle on a page of an exercise book. Is that circle a flat 2-D shape or a solid 3-D object?", r: "2-D, because a drawing is flat", w: [["3-D, because it is round like a ball", "Round does not mean 3-D. A drawn circle is flat.", "M_PLANE_NAME_FOR_SOLID"], ["3-D, because it is printed on a page", "A drawn circle is a flat shape.", "M_PLANE_NAME_FOR_SOLID"]], s: "A drawn shape is flat." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.dim.match",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "table",
@@ -24721,7 +26134,7 @@ var FAMILIES23 = [
       return { question: `The table lists objects and their solid names. What kind of thing is a ${t[0].toLowerCase()}?`, model: tbl2(["Object", "Solid name"], rows), options, instruction: "Choose the best answer.", hints: ["Does it take up space?", "Flat shapes do not."], steps: ["It is a 3-D object.", "Its solid name is " + t[1] + "."] };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.face.count",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "word",
@@ -24738,7 +26151,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.face.shape",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "direct",
@@ -24749,7 +26162,7 @@ var FAMILIES23 = [
       { q: "looks at a tin of Kimbo. What flat shapes are found on it?", r: "Two circles", w: [["Two circles and a rectangle", "The side is curved. It is not a flat rectangle.", "M_CYLINDER_SIDE_RECTANGLE_FACE"], ["One circle", "There is one at the top and one at the bottom.", "M_CYLINDER_SIDE_RECTANGLE_FACE"]], s: "A cylinder has two flat circles." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.geo3.face.tf",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "why",
@@ -24760,7 +26173,7 @@ var FAMILIES23 = [
     ], (p) => `${p.name} `)
   }),
   // ================================================================ DATA REPRESENTATION
-  fam6({
+  fam7({
     id: "g5c.dat.plan.categories",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "direct",
@@ -24770,7 +26183,7 @@ var FAMILIES23 = [
       { q: "records favourite foods using: ugali, rice, chapati, food. What is wrong?", r: "Food includes all the others", w: [["Nothing is wrong with these categories", "Every food is also food. Categories must not overlap.", "M_OVERLAPPING_CATEGORIES"], ["Foods cannot be used as data", "Foods can be data. Data does not have to be numbers.", "M_DATA_ONLY_NUMBERS"]], s: "Categories must not overlap." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.plan.what",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "why",
@@ -24780,7 +26193,7 @@ var FAMILIES23 = [
       { q: "asks whether the colours of vehicles seen at the gate are data.", r: "Yes, colours are data", w: [["No, only numbers are data", "Colours are data. We can count how many of each.", "M_DATA_ONLY_NUMBERS"], ["No, colours cannot be counted", "We can count how many are red, blue, white.", "M_DATA_ONLY_NUMBERS"]], s: "We can count items in each category." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.plan.method",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "word",
@@ -24798,7 +26211,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.col.check",
     cs: `${D2}COLLECT_DATA_30`,
     form: "word",
@@ -24816,7 +26229,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.col.error",
     cs: `${D2}COLLECT_DATA_30`,
     form: "direct",
@@ -24826,17 +26239,17 @@ var FAMILIES23 = [
       { q: "asked 30 classmates their favourite drink and the record shows tea 12, uji 9, milk 8, juice 6. What should be checked?", r: "Whether the total matches the 30 asked", w: [["Nothing is wrong, the numbers look fine to me", "The total is 35 but only 30 were asked, so some answers were counted twice.", "M_DOUBLE_COUNTING"], ["Whether tea is the biggest number", "Check that the total equals the number asked.", "M_DOUBLE_COUNTING"]], s: "12 + 9 + 8 + 6 = 35, not 30." }
     ], (p) => `${p.name} checks a friend's survey. The friend `)
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.col.fix",
     cs: `${D2}COLLECT_DATA_30`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), v = [11, 9, 8, 6];
-      return spot5(`${p.name} asked 30 classmates their favourite drink and recorded tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. Which step has the mistake?`, ["Step 1: Ask each of the 30 classmates one question.", `Step 2: Record the answers: ${v.join(", ")}. The record is finished without adding them.`, "Step 3: Say the record is correct."], 1, `The numbers add to ${v.reduce((a, b) => a + b, 0)}, not 30, so some answers were counted twice or missed. Check the total against the number asked.`, "M_DOUBLE_COUNTING", "Does the total equal 30?");
+      return spot6(`${p.name} asked 30 classmates their favourite drink and recorded tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. Which step has the mistake?`, ["Step 1: Ask each of the 30 classmates one question.", `Step 2: Record the answers: ${v.join(", ")}. The record is finished without adding them.`, "Step 3: Say the record is correct."], 1, `The numbers add to ${v.reduce((a, b) => a + b, 0)}, not 30, so some answers were counted twice or missed. Check the total against the number asked.`, "M_DOUBLE_COUNTING", "Does the total equal 30?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tab.headings",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "direct",
@@ -24846,7 +26259,7 @@ var FAMILIES23 = [
       { q: "records numbers of boda bodas and matatus in a table with no title. Why is this a problem?", r: "The reader cannot tell what was counted", w: [["It is not a problem for the reader", "A title and headings are needed to read a table.", "M_TABLE_NO_HEADINGS"], ["The table is far too small to read", "The size is fine. The headings are missing.", "M_TABLE_NO_HEADINGS"]], s: "A table needs a title and headings." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tab.align",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "table",
@@ -24864,7 +26277,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tab.build",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "why",
@@ -24873,7 +26286,7 @@ var FAMILIES23 = [
       { q: "wants to record the names and ages of 3 learners. Which table is set out correctly?", r: "Headings Name and Age, one row each", w: [["A list of names with ages on the next line", "A table needs rows and columns with headings.", "M_TABLE_NO_HEADINGS"], ["A table with each age beside the wrong name", "Each age must be in the same row as its name.", "M_ROW_MISALIGNMENT"]], s: "Headings and matching rows." }
     ], (p) => `${p.name} `)
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tg.draw",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "direct",
@@ -24892,7 +26305,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tg.count",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "word",
@@ -24909,17 +26322,17 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tg.spot",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), n = randInt(7, 13);
-      return spot5(`${p.name} draws ${n} using tally marks. Which step has the mistake?`, ["Step 1: Draw groups of five.", "Step 2: Draw five upright strokes and then one more crossing them, so each group has six strokes.", "Step 3: Add the single strokes left."], 1, "A group of five is four uprights with one stroke across them. Five uprights and a crossing stroke make six.", "M_GATE_SIX_STROKES", "How many strokes make a group of five?");
+      return spot6(`${p.name} draws ${n} using tally marks. Which step has the mistake?`, ["Step 1: Draw groups of five.", "Step 2: Draw five upright strokes and then one more crossing them, so each group has six strokes.", "Step 3: Add the single strokes left."], 1, "A group of five is four uprights with one stroke across them. Five uprights and a crossing stroke make six.", "M_GATE_SIX_STROKES", "How many strokes make a group of five?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.traw.drinks",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "word",
@@ -24943,7 +26356,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.traw.sizes",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "direct",
@@ -24963,17 +26376,17 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.traw.spot",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot5(`${p.name} tallies the drinks: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. ${p.She} gets tea ||||, uji |||, milk ||. Which step has the mistake?`, ["Step 1: Go through the list one by one.", "Step 2: Tally tea 4, uji 3, milk 2 and do not tick the items off.", "Step 3: The total is 9."], 1, "There are 10 items, so one was missed. Tick off each item as it is tallied. Tea has 5, uji 3 and milk 2.", "M_TALLY_SKIP_OR_REPEAT", "Does the total match the list?");
+      return spot6(`${p.name} tallies the drinks: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. ${p.She} gets tea ||||, uji |||, milk ||. Which step has the mistake?`, ["Step 1: Go through the list one by one.", "Step 2: Tally tea 4, uji 3, milk 2 and do not tick the items off.", "Step 3: The total is 9."], 1, "There are 10 items, so one was missed. Tick off each item as it is tallied. Tea has 5, uji 3 and milk 2.", "M_TALLY_SKIP_OR_REPEAT", "Does the total match the list?");
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tf.read",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "word",
@@ -24997,7 +26410,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tf.complete",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "table",
@@ -25016,7 +26429,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.tf.bigger",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "direct",
@@ -25036,7 +26449,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.prep.rows",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "word",
@@ -25053,7 +26466,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.prep.total",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "table",
@@ -25071,7 +26484,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.prep.check",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "why",
@@ -25089,7 +26502,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.read.most",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "direct",
@@ -25108,7 +26521,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.read.count",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "word",
@@ -25126,7 +26539,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.read.least",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "why",
@@ -25144,7 +26557,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.cmp.more",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "word",
@@ -25161,7 +26574,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.cmp.total",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "table",
@@ -25179,7 +26592,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.cmp.not",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "direct",
@@ -25196,7 +26609,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.inf.majority",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "why",
@@ -25213,7 +26626,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.inf.decide",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "direct",
@@ -25230,7 +26643,7 @@ var FAMILIES23 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g5c.dat.inf.support",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "word",
@@ -25249,7 +26662,7 @@ var FAMILIES23 = [
 ];
 
 // src/ai-tutor/content/families/g6.js
-var fam7 = (def) => family({ reviewed: false, ...def });
+var fam8 = (def) => family({ reviewed: false, ...def });
 var uniq2 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
 var shuffle5 = (a) => {
   const b = [...a];
@@ -25306,9 +26719,9 @@ var words3 = (n) => {
   return s.join(" ");
 };
 var TOWNS3 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega"];
-var FAMILIES24 = [
+var FAMILIES28 = [
   // =========================================================== WHOLE NUMBERS
-  fam7({
+  fam8({
     id: "g6.place.two-digits",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.a",
@@ -25334,7 +26747,7 @@ var FAMILIES24 = [
     },
     check: ({ ds, i, j }, v) => v[0] - v[1] === v[2] && String(v[0]).length === 7 - i && String(v[1]).length === 7 - j && String(v[0])[0] === String(ds[i])
   }),
-  fam7({
+  fam8({
     id: "g6.place.words-to-figures",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.c",
@@ -25354,7 +26767,7 @@ var FAMILIES24 = [
     }),
     check: ({ M: M5, T: T3, U: U2 }, a) => Math.floor(a / 1e6) === M5 && Math.floor(a / 1e3) % 1e3 === T3 && a % 1e3 === U2
   }),
-  fam7({
+  fam8({
     id: "g6.place.figures-to-words",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.c",
@@ -25373,7 +26786,7 @@ var FAMILIES24 = [
       steps: [`${commas(N)} has three groups: millions, thousands and the last three digits.`, `In words: ${words3(N)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.whole.round-stadium",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.e",
@@ -25399,7 +26812,7 @@ var FAMILIES24 = [
     },
     check: ({ pl, N }, a) => a % pl === 0 && Math.abs(N - a) < pl / 2
   }),
-  fam7({
+  fam8({
     id: "g6.whole.round-spot",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.e",
@@ -25430,7 +26843,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.squares.root-plot",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.g",
@@ -25449,7 +26862,7 @@ var FAMILIES24 = [
     }),
     check: ({ A: A2 }, a) => a * a === A2
   }),
-  fam7({
+  fam8({
     id: "g6.squares.not-square",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.g",
@@ -25471,7 +26884,7 @@ var FAMILIES24 = [
       steps: ["The squares of 1 to 9 are 1, 4, 9, 16, 25, 36, 49, 64, 81.", `Their last digits are only 1, 4, 9, 6, 5, 0. A number ending in ${d} cannot be a square.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.squares.seeds-left",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.f",
@@ -25491,7 +26904,7 @@ var FAMILIES24 = [
     check: ({ n, total }, a) => a + n * n === total
   }),
   // =========================================================== MULTIPLICATION
-  fam7({
+  fam8({
     id: "g6.mul.estimate-cost",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -25513,7 +26926,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, b }, v) => Math.abs(v - a * b) < 0.4 * a * b && v % 1e4 === 0 && v / 1e4 >= 1
   }),
-  fam7({
+  fam8({
     id: "g6.mul.estimate-pick",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -25535,7 +26948,7 @@ var FAMILIES24 = [
       steps: [`${commas(a)} is close to ${commas(Math.round(a / 1e3) * 1e3)}, and ${b} is close to ${Math.round(b / 10) * 10}.`, `The estimate is ${commas(e)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.mul.estimate-spot",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -25567,7 +26980,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.pattern.growth",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -25594,7 +27007,7 @@ var FAMILIES24 = [
       return t === a;
     }
   }),
-  fam7({
+  fam8({
     id: "g6.pattern.table-rule",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -25615,7 +27028,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, r }, v) => v / r ** 5 === a
   }),
-  fam7({
+  fam8({
     id: "g6.pattern.rule-pick",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -25634,7 +27047,7 @@ var FAMILIES24 = [
     })
   }),
   // =========================================================== DIVISION
-  fam7({
+  fam8({
     id: "g6.div.estimate-trips",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.b",
@@ -25657,7 +27070,7 @@ var FAMILIES24 = [
     }),
     check: ({ T: T3, D: D3 }, a) => Math.abs(a - T3 / D3) < 0.25 * (T3 / D3) + 1
   }),
-  fam7({
+  fam8({
     id: "g6.div.estimate-pick",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.b",
@@ -25680,7 +27093,7 @@ var FAMILIES24 = [
     }),
     check: ({ T: T3, D: D3, q }) => Math.abs(q - T3 / D3) < 0.25 * q + 1
   }),
-  fam7({
+  fam8({
     id: "g6.div.bodmas-pick",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.c",
@@ -25706,7 +27119,7 @@ var FAMILIES24 = [
     }
   }),
   // =========================================================== FRACTIONS
-  fam7({
+  fam8({
     id: "g6.fadd.flour",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -25727,7 +27140,7 @@ var FAMILIES24 = [
       steps: [`Common denominator: ${d1 * d2}.`, `${fr2(n1, d1)} = ${fr2(n1 * d2, d1 * d2)} and ${fr2(n2, d2)} = ${fr2(n2 * d1, d1 * d2)}.`, `${n1 * d2} + ${n2 * d1} = ${n1 * d2 + n2 * d1}, so ${right} of the bag.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fadd.steps",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -25755,7 +27168,7 @@ var FAMILIES24 = [
     },
     check: ({ n1, d1, n2, d2 }, v) => v[0] % d1 === 0 && v[0] % d2 === 0 && v[1] * d1 === n1 * v[0] && v[2] * d2 === n2 * v[0] && v[3] === v[1] + v[2]
   }),
-  fam7({
+  fam8({
     id: "g6.fadd.why",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -25777,7 +27190,7 @@ var FAMILIES24 = [
       steps: ["Fractions with different denominators show pieces of different sizes.", "Change both to the same denominator, then add the numerators only."]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fsub.jerrycan",
     skill: "G6_FRACTIONS_SUB",
     outcome: "G6.FRAC.a",
@@ -25797,7 +27210,7 @@ var FAMILIES24 = [
       steps: [`${fr2(n2, d2)} = ${fr2(n2 * k, d1)}.`, `${n1} \u2212 ${n2 * k} = ${n1 - n2 * k}, so ${fr2(n1 - n2 * k, d1)} is left. Simplest form: ${right}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fsub.spot",
     skill: "G6_FRACTIONS_SUB",
     outcome: "G6.FRAC.a",
@@ -25824,7 +27237,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.mixed.add-cloth",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -25844,7 +27257,7 @@ var FAMILIES24 = [
       steps: [`Wholes: ${w1} + ${w2} = ${w1 + w2}.`, `Fractions: ${fr2(a, 4)} + ${fr2(b, 4)} = ${fr2(a + b, 4)}, which is 1 whole and ${simp2(a + b - 4, 4)}.`, `Total: ${right} ${thing[1]}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.mixed.sub-quarters",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -25870,7 +27283,7 @@ var FAMILIES24 = [
     },
     check: ({ a, b }, v) => v[0] - v[1] === v[2] && v[3] * 4 === v[2] && v[0] % 4 === a && v[1] % 4 === b
   }),
-  fam7({
+  fam8({
     id: "g6.mixed.convert-spot",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -25896,7 +27309,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.recip.pick",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.e",
@@ -25916,7 +27329,7 @@ var FAMILIES24 = [
       steps: [`Swap the top and the bottom of ${fr2(n, d)}.`, `The reciprocal is ${fr2(d, n)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.recip.check-why",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.e",
@@ -25937,7 +27350,7 @@ var FAMILIES24 = [
       steps: [`${fr2(n, d)} \xD7 ${fr2(d, n)} = ${fr2(n * d, n * d)} = 1.`, "Two numbers are reciprocals when their product is 1."]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fsq.pick",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -25957,7 +27370,7 @@ var FAMILIES24 = [
       steps: [`${fr2(n, d)} \xD7 ${fr2(n, d)} = ${fr2(n * n, d * d)}.`, "Both the numerator and the denominator are squared."]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fsq.cloth",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -25976,7 +27389,7 @@ var FAMILIES24 = [
       steps: [`Area = ${fr2(n, d)} \xD7 ${fr2(n, d)}.`, `= ${fr2(n * n, d * d)} m\xB2.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.fsq.spot",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -26002,7 +27415,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.pct.score",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26021,7 +27434,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, b }, v) => v * b === a * 100
   }),
-  fam7({
+  fam8({
     id: "g6.pct.simplest-fraction",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26038,7 +27451,7 @@ var FAMILIES24 = [
       steps: [`${pct}% = ${fr2(pct, 100)}.`, `Divide the top and the bottom by ${gcd2(pct, 100)}: ${fr2(n, d)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.pct.best-subject",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26062,7 +27475,7 @@ var FAMILIES24 = [
     })
   }),
   // =========================================================== DECIMALS
-  fam7({
+  fam8({
     id: "g6.dec.round-scale",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.b",
@@ -26084,7 +27497,7 @@ var FAMILIES24 = [
     }),
     check: ({ x }, a) => Math.abs(a - x) <= 5e-4 + 1e-9
   }),
-  fam7({
+  fam8({
     id: "g6.dec.round-carry",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.b",
@@ -26107,7 +27520,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g6.dec.to-percent",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26126,7 +27539,7 @@ var FAMILIES24 = [
     }),
     check: ({ x }, a) => a / 100 === x
   }),
-  fam7({
+  fam8({
     id: "g6.dec.to-fraction",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26143,7 +27556,7 @@ var FAMILIES24 = [
       steps: [`${x} = ${fr2(n, 100)}.`, `Divide top and bottom by ${gcd2(n, 100)}: ${fr2(a, b)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.dec.table-forms",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26172,7 +27585,7 @@ var FAMILIES24 = [
       return kind === "dec" ? a * d === n : a / 100 * d === n;
     }
   }),
-  fam7({
+  fam8({
     id: "g6.dec4.add-options",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.e",
@@ -26181,9 +27594,9 @@ var FAMILIES24 = [
     draw: () => {
       const A2 = randInt(11e3, 59999), B2 = randInt(11e3, 59999);
       if (A2 % 10 === 0 || B2 % 10 === 0) return null;
-      const S3 = A2 + B2, nc = noCarry(A2, B2), df = Math.abs(A2 - B2), rd = (Math.round(A2 / 100) + Math.round(B2 / 100)) / 100;
-      const t = [T4(S3), T4(nc), T4(df), rd.toFixed(2)];
-      return uniq2(S3, nc, df, rd * 1e4) && nc !== S3 ? { A: A2, B: B2, t, k: randInt(0, 3), p: person() } : null;
+      const S4 = A2 + B2, nc = noCarry(A2, B2), df = Math.abs(A2 - B2), rd = (Math.round(A2 / 100) + Math.round(B2 / 100)) / 100;
+      const t = [T4(S4), T4(nc), T4(df), rd.toFixed(2)];
+      return uniq2(S4, nc, df, rd * 1e4) && nc !== S4 ? { A: A2, B: B2, t, k: randInt(0, 3), p: person() } : null;
     },
     make: ({ A: A2, B: B2, t, k, p }) => ({
       question: `In a science class, ${p.name} weighs two packets of seeds. They have masses ${T4(A2)} kg and ${T4(B2)} kg. What is the total mass?`,
@@ -26192,7 +27605,7 @@ var FAMILIES24 = [
       steps: [`${T4(A2)} + ${T4(B2)}, with the decimal points lined up.`, `Total: ${t[0]} kg.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.dec4.wire-cuts",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.e",
@@ -26215,7 +27628,7 @@ var FAMILIES24 = [
     check: ({ T: T3 }, v) => Math.round(v[1] * 1e4) + Math.round(v[2] * 1e4) === T3
   }),
   // =========================================================== INEQUALITIES
-  fam7({
+  fam8({
     id: "g6.ineq.at-least-fees",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.a",
@@ -26232,7 +27645,7 @@ var FAMILIES24 = [
       steps: [`Money after w weeks: ${have} + ${s}w.`, `"At least ${sh(need)}" means \u2265 ${need}.`, `So ${have} + ${s}w \u2265 ${need}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.ineq.count-solutions",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.a",
@@ -26255,7 +27668,7 @@ var FAMILIES24 = [
       return c === v;
     }
   }),
-  fam7({
+  fam8({
     id: "g6.ineq.spot-solve",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.c",
@@ -26281,7 +27694,7 @@ var FAMILIES24 = [
     }
   }),
   // =========================================================== MONEY
-  fam7({
+  fam8({
     id: "g6.money.budget-over",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.a",
@@ -26305,7 +27718,7 @@ var FAMILIES24 = [
     }),
     check: ({ planned, actual }, a) => actual.reduce((x, y) => x + y, 0) - a === planned.reduce((x, y) => x + y, 0)
   }),
-  fam7({
+  fam8({
     id: "g6.money.vat-total",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.e",
@@ -26327,7 +27740,7 @@ var FAMILIES24 = [
     },
     check: ({ a }, v) => v * 100 === a * 116
   }),
-  fam7({
+  fam8({
     id: "g6.money.payslip",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.e",
@@ -26347,7 +27760,7 @@ var FAMILIES24 = [
     }),
     check: ({ g, paye, other }, a) => a + paye + other === g
   }),
-  fam7({
+  fam8({
     id: "g6.money.tomatoes-spoiled",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.c",
@@ -26368,7 +27781,7 @@ var FAMILIES24 = [
     check: ({ buy, n, bad, sell }, a) => a + n * buy === (n - bad) * sell
   }),
   // =========================================================== AREA
-  fam7({
+  fam8({
     id: "g6.area.l-floor",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.b",
@@ -26391,7 +27804,7 @@ var FAMILIES24 = [
     }),
     check: ({ W: W3, H: H3, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W3 * H3 && v[1] === w * h
   }),
-  fam7({
+  fam8({
     id: "g6.area.circle-count",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.c",
@@ -26421,7 +27834,7 @@ var FAMILIES24 = [
     }),
     check: ({ whole, part }, a) => a * 2 === whole * 2 + part
   }),
-  fam7({
+  fam8({
     id: "g6.area.circle-half-why",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.c",
@@ -26439,7 +27852,7 @@ var FAMILIES24 = [
       steps: ["Whole squares inside the circle can be counted exactly.", "The squares cut by the curved edge are only part inside, so their share is guessed. That makes the total an estimate."]
     })
   }),
-  fam7({
+  fam8({
     id: "g6.area.triangle-bed",
     skill: "G6_AREA_TRIANGLE",
     outcome: "G6.AREA.a",
@@ -26460,7 +27873,7 @@ var FAMILIES24 = [
     }),
     check: ({ b, h, rate: rate2 }, v) => v[0] * 2 === b * h && v[1] === v[0] * rate2
   }),
-  fam7({
+  fam8({
     id: "g6.area.triangle-height",
     skill: "G6_AREA_TRIANGLE",
     outcome: "G6.AREA.a",
@@ -26480,7 +27893,7 @@ var FAMILIES24 = [
     check: ({ b, A: A2 }, v) => b * v / 2 === A2
   }),
   // =========================================================== CIRCUMFERENCE
-  fam7({
+  fam8({
     id: "g6.circ.string-table",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26501,7 +27914,7 @@ var FAMILIES24 = [
     }),
     check: ({ u }, a) => a / 22 === u
   }),
-  fam7({
+  fam8({
     id: "g6.circ.wheel-turns",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26526,7 +27939,7 @@ var FAMILIES24 = [
     },
     check: ({ d, N }, v) => v[0] * 7 / 22 === d && v[1] === v[0] * N && v[2] * 100 === v[1]
   }),
-  fam7({
+  fam8({
     id: "g6.circ.find-diameter",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26546,7 +27959,7 @@ var FAMILIES24 = [
     check: ({ c }, a) => a * 22 / 7 === c
   }),
   // =========================================================== MASS
-  fam7({
+  fam8({
     id: "g6.mass.deliveries-table",
     skill: "G6_MASS",
     outcome: "G6.MASS.e",
@@ -26567,7 +27980,7 @@ var FAMILIES24 = [
     }),
     check: ({ kg }, a) => Math.round(a * 1e3) === kg.reduce((x, y) => x + y, 0)
   }),
-  fam7({
+  fam8({
     id: "g6.mass.which-in-tonnes",
     skill: "G6_MASS",
     outcome: "G6.MASS.a",
@@ -26587,7 +28000,7 @@ var FAMILIES24 = [
     })
   }),
   // =========================================================== TIME
-  fam7({
+  fam8({
     id: "g6.time.wait-then-ride",
     skill: "G6_TIME",
     outcome: "G6.TIME.e",
@@ -26612,7 +28025,7 @@ var FAMILIES24 = [
     }),
     check: ({ arrive, dep, dur, j }, a) => dep[j] + dur[j] - arrive === a
   }),
-  fam7({
+  fam8({
     id: "g6.time.shortest-trip",
     skill: "G6_TIME",
     outcome: "G6.TIME.e",
@@ -26635,7 +28048,7 @@ var FAMILIES24 = [
     })
   }),
   // =========================================================== ANGLES
-  fam7({
+  fam8({
     id: "g6.angle.sectors-point",
     skill: "G6_ANGLE_PROPERTIES",
     outcome: "G6.ANGLES.a",
@@ -26654,7 +28067,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, b }, v) => a + b + v === 360
   }),
-  fam7({
+  fam8({
     id: "g6.angle.line-double",
     skill: "G6_ANGLE_PROPERTIES",
     outcome: "G6.ANGLES.a",
@@ -26675,7 +28088,7 @@ var FAMILIES24 = [
     check: ({ k }, v) => v[0] === 180 && v[2] * v[1] === v[0] && v[3] + v[2] === v[0] && v[3] === k * v[2]
   }),
   // =========================================================== DATA
-  fam7({
+  fam8({
     id: "g6.data.freq-learners",
     skill: "G6_DATA_COLLECTION",
     outcome: "G6.DATA.a",
@@ -26695,7 +28108,7 @@ var FAMILIES24 = [
     }),
     check: ({ fs }, a) => a === fs.reduce((x, y) => x + y, 0)
   }),
-  fam7({
+  fam8({
     id: "g6.data.freq-missing",
     skill: "G6_DATA_COLLECTION",
     outcome: "G6.DATA.a",
@@ -26781,7 +28194,7 @@ var sup = (n) => String(n).split("").map((c) => SUP[c]).join("");
 // src/ai-tutor/content/families/g6_cov.js
 var T42 = (n) => (n / 1e4).toFixed(4);
 var TOWNS4 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
-var FAMILIES25 = [
+var FAMILIES29 = [
   // ================================================================ WHOLE NUMBERS
   cov({
     id: "g6c.whole.symbols-from-parts",
@@ -27758,7 +29171,7 @@ var FAMILIES25 = [
 // src/ai-tutor/content/families/g8_cov.js
 var TOWNS5 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
 var sgn = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
-var FAMILIES26 = [
+var FAMILIES30 = [
   // ================================================================ INTEGERS
   cov({
     id: "g8c.int.number-line-lift",
@@ -28109,16 +29522,16 @@ var FAMILIES26 = [
     form: "steps",
     rung: 3,
     gen: () => {
-      const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S3 = big + small, p = person();
+      const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S4 = big + small, p = person();
       const goods = pick(["maize", "beans", "rice", "sugar"]), other = pick(["flour", "salt"]);
-      const w1 = [[round(S3 / 2, 2), "You divided the sum by 2, as if both sacks were equal. They differ."], [S3 - diff, "You took the difference from the sum but did not divide by 2."]];
-      const w2 = [[diff, "This is the difference between the sacks. Find the mass of the lighter sack itself."], [round((S3 + diff) / 2, 2), "You added the difference. To find the lighter sack, take it away from the bigger sack."]];
+      const w1 = [[round(S4 / 2, 2), "You divided the sum by 2, as if both sacks were equal. They differ."], [S4 - diff, "You took the difference from the sum but did not divide by 2."]];
+      const w2 = [[diff, "This is the difference between the sacks. Find the mass of the lighter sack itself."], [round((S4 + diff) / 2, 2), "You added the difference. To find the lighter sack, take it away from the bigger sack."]];
       return {
-        question: `A sack of ${goods} and a sack of ${other} together have a mass of ${S3} kg. The sack of ${goods} is ${diff} kg heavier than the sack of ${other}. Let x be the mass of the ${goods} and y the mass of the ${other}, so x + y = ${S3} and x \u2212 y = ${diff}. Solve by elimination.`,
+        question: `A sack of ${goods} and a sack of ${other} together have a mass of ${S4} kg. The sack of ${goods} is ${diff} kg heavier than the sack of ${other}. Let x be the mass of the ${goods} and y the mass of the ${other}, so x + y = ${S4} and x \u2212 y = ${diff}. Solve by elimination.`,
         parts: [{ prompt: `What is the mass of the sack of ${goods}, in kg?`, answer: big, wrong: w1, hint: "Add the two equations. The y terms cancel." }, { prompt: `What is the mass of the sack of ${other}, in kg?`, answer: small, wrong: w2, hint: "Put your first answer into x + y and find y." }],
         hints: ["The y terms have opposite signs, so add the two equations.", "Find x first, then y."],
-        steps: [`Add the equations: 2x = ${S3 + diff}, so x = ${big}.`, `${big} + y = ${S3}, so y = ${small}.`],
-        chk: (v) => v[0] + v[1] === S3 && v[0] - v[1] === diff
+        steps: [`Add the equations: 2x = ${S4 + diff}, so x = ${big}.`, `${big} + y = ${S4}, so y = ${small}.`],
+        chk: (v) => v[0] + v[1] === S4 && v[0] - v[1] === diff
       };
     }
   }),
@@ -28561,7 +29974,7 @@ var FAMILIES26 = [
 ];
 
 // src/ai-tutor/content/families/g9_num_alg.js
-var fam8 = (def) => family({ reviewed: false, ...def });
+var fam9 = (def) => family({ reviewed: false, ...def });
 var fm = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
 var br = (n) => n < 0 ? `(\u2212${-n})` : `${n}`;
 var uniq3 = (...v) => new Set(v).size === v.length;
@@ -28585,7 +29998,7 @@ var cubeOf = (x100) => Number((x100 ** 3 / 1e6).toPrecision(4));
 var rootOf = (x100) => Number(Math.cbrt(x100 / 100).toPrecision(4));
 var cell = (v) => v.toPrecision(4);
 var INTEGERS = [
-  fam8({
+  fam9({
     id: "g9.int.lift-basement",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -28606,7 +30019,7 @@ var INTEGERS = [
     }),
     check: ({ s, u, dn }, a) => a + dn - u === -s
   }),
-  fam8({
+  fam9({
     id: "g9.int.overdraft-shop",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -28627,7 +30040,7 @@ var INTEGERS = [
     }),
     check: ({ o, p, q }, a) => a + q - p + o === 0
   }),
-  fam8({
+  fam9({
     id: "g9.int.altitude-table",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -28651,7 +30064,7 @@ var INTEGERS = [
     check: ({ hi, lo }, a) => lo + a === hi,
     allowNegative: false
   }),
-  fam8({
+  fam9({
     id: "g9.int.spot-minus-negative",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -28660,15 +30073,15 @@ var INTEGERS = [
     draw: () => ({ x: randInt(2, 9), y: randInt(2, 8), z: randInt(2, 6), type: pick(["product", "rewrite", "arith"]), who: person() }),
     make: ({ x, y, z, type, who }) => {
       const P2 = type === "product" ? y * z : -y * z;
-      const Q2 = type === "rewrite" ? P2 : -P2;
-      const V2 = type === "arith" ? Q2 - x : x + Q2;
-      const s2 = `${x} \u2212 (${fm(P2)}) = ${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)}`;
+      const Q3 = type === "rewrite" ? P2 : -P2;
+      const V2 = type === "arith" ? Q3 - x : x + Q3;
+      const s2 = `${x} \u2212 (${fm(P2)}) = ${x} ${Q3 < 0 ? "\u2212" : "+"} ${Math.abs(Q3)}`;
       const working = [
         { text: `(\u2212${y}) \xD7 ${z} = ${fm(P2)}`, ok: P2 === -y * z },
-        { text: s2, ok: Q2 === -P2 },
-        { text: `${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)} = ${fm(V2)}`, ok: V2 === x + Q2 }
+        { text: s2, ok: Q3 === -P2 },
+        { text: `${x} ${Q3 < 0 ? "\u2212" : "+"} ${Math.abs(Q3)} = ${fm(V2)}`, ok: V2 === x + Q3 }
       ];
-      const fix = { product: "A negative number times a positive number is negative, so the product in Step 1 is negative.", rewrite: "Subtracting a negative number is the same as adding its positive. The sign in Step 2 should change to plus.", arith: `In Step 3 the sum ${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)} was worked out the wrong way round.` }[type];
+      const fix = { product: "A negative number times a positive number is negative, so the product in Step 1 is negative.", rewrite: "Subtracting a negative number is the same as adding its positive. The sign in Step 2 should change to plus.", arith: `In Step 3 the sum ${x} ${Q3 < 0 ? "\u2212" : "+"} ${Math.abs(Q3)} was worked out the wrong way round.` }[type];
       return {
         question: `${who.name} worked out ${x} \u2212 (\u2212${y}) \xD7 ${z}. Which step has the mistake?`,
         working,
@@ -28677,7 +30090,7 @@ var INTEGERS = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.int.why-order",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -28699,7 +30112,7 @@ var INTEGERS = [
       steps: [`Multiplication first: ${b} \xD7 (\u2212${c}) = \u2212${b * c}.`, `Then ${a} \u2212 (\u2212${b * c}) = ${a} + ${b * c} = ${a + b * c}.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.int.steps-brackets",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -28732,7 +30145,7 @@ function cubeTable(t, fn) {
   return { head, rows };
 }
 var CUBES = [
-  fam8({
+  fam9({
     id: "g9.cubes.spot-negative",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -28759,7 +30172,7 @@ var CUBES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.steps-decimal",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -28780,7 +30193,7 @@ var CUBES = [
     },
     check: ({ n }, v) => Math.abs(v[0] * n - v[1]) < 1e-9 && Math.abs(v[1] - v[0] - v[2]) < 1e-9
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.which-cube",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -28802,7 +30215,7 @@ var CUBES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.table-read",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.b",
@@ -28826,7 +30239,7 @@ var CUBES = [
     },
     check: ({ t, c }, a) => Math.abs(a - ((t * 10 + c) / 100) ** 3) < 6e-4 * ((t * 10 + c) / 100) ** 3
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.table-scale",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.b",
@@ -28851,7 +30264,7 @@ var CUBES = [
       return Math.abs(a - n ** 3) < 1e-3 * n ** 3;
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.factor-steps",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -28879,7 +30292,7 @@ var CUBES = [
       return v[2] ** 3 === N && ps[0] ** v[0] * ps[1] ** v[1] === N;
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.factor-spot",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -28909,7 +30322,7 @@ var CUBES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.smallest-multiplier",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -28935,7 +30348,7 @@ var CUBES = [
     }),
     check: ({ N }, a) => isCube(N * a) && ![...Array(a - 1).keys()].some((i) => isCube(N * (i + 1)))
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.root-table-read",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.d",
@@ -28955,7 +30368,7 @@ var CUBES = [
     },
     check: ({ t, c }, a) => Math.abs(a ** 3 - (t * 10 + c) / 100) < 4e-3 * (t * 10 + c) / 100
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.root-table-scale",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.d",
@@ -28981,7 +30394,7 @@ var CUBES = [
       return Math.abs(a ** 3 - n) < 4e-3 * n;
     }
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.tank-litres",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -28997,7 +30410,7 @@ var CUBES = [
     }),
     check: ({ e }, a) => Math.abs(Math.cbrt(a / 1e3) - e) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.carton-pack",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29016,7 +30429,7 @@ var CUBES = [
     }),
     check: ({ s, E }, a) => a * s ** 3 === E ** 3
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.double-edge-why",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29038,7 +30451,7 @@ var CUBES = [
       steps: [`Old volume: ${e}\xB3 = ${e ** 3} cm\xB3.`, `New volume: ${k * e}\xB3 = ${(k * e) ** 3} cm\xB3, which is ${k ** 3} times as much.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.cubes.box-edge",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29059,7 +30472,7 @@ var CUBES = [
   })
 ];
 var INDICES = [
-  fam8({
+  fam9({
     id: "g9.ind.growth-power",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29078,7 +30491,7 @@ var INDICES = [
     }),
     check: ({ b, n }, a) => Math.round(Math.log(a) / Math.log(b)) === n
   }),
-  fam8({
+  fam9({
     id: "g9.ind.zero-why",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29097,7 +30510,7 @@ var INDICES = [
       steps: [`${b}^${n} \xF7 ${b}^${n} = 1, because the two are equal.`, `By the law, ${b}^${n} \xF7 ${b}^${n} = ${b}^${n - n} = ${b}^0. So ${b}^0 = 1.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.ind.table-powers",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29117,7 +30530,7 @@ var INDICES = [
     }),
     check: ({ b, i, j }, a) => a === b ** i * b ** j
   }),
-  fam8({
+  fam9({
     id: "g9.ind.find-index",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29144,7 +30557,7 @@ var INDICES = [
     },
     check: ({ kind, p, n, t }, a) => kind === "mul" ? a + p === t : kind === "div" ? a - p === t : a * p === t
   }),
-  fam8({
+  fam9({
     id: "g9.ind.spot-laws",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29174,7 +30587,7 @@ var INDICES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ind.why-add-bases",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29196,7 +30609,7 @@ var INDICES = [
       steps: [`The bases are both ${b}, so the base stays ${b}.`, `The indices are added: ${m} + ${n} = ${m + n}. So the answer is ${b}^${m + n}.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.ind.rope-pieces",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29217,7 +30630,7 @@ var INDICES = [
   })
 ];
 var LOGS = [
-  fam8({
+  fam9({
     id: "g9.log.spot-laws",
     skill: "G10_LOG_LAWS",
     outcome: "G9.INDICES.d",
@@ -29257,7 +30670,7 @@ var LOGS = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.log.table-pattern",
     skill: "G10_LOGARITHMS_INTRO",
     outcome: "G9.INDICES.d",
@@ -29282,7 +30695,7 @@ var LOGS = [
     },
     check: ({ k }, a) => Math.round(Math.log10(k < 0 ? Number((10 ** k).toFixed(-k)) : 10 ** k)) === a
   }),
-  fam8({
+  fam9({
     id: "g9.log.tremor-scale",
     skill: "G10_LOGARITHMS_INTRO",
     outcome: "G9.INDICES.d",
@@ -29301,7 +30714,7 @@ var LOGS = [
     }),
     check: ({ m1, m2 }, a) => Math.abs(Math.log10(a) - (m2 - m1)) < 1e-9
   }),
-  fam8({
+  fam9({
     id: "g9.log.given-values",
     skill: "G10_LOG_LAWS",
     outcome: "G9.INDICES.d",
@@ -29325,7 +30738,7 @@ var LOGS = [
   })
 ];
 var PROPORTION = [
-  fam8({
+  fam9({
     id: "g9.prop.three-way-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29350,7 +30763,7 @@ var PROPORTION = [
       return a * (v[0] + v[1] + v[2]) === T3 * (big ? hi : lo);
     }
   }),
-  fam8({
+  fam9({
     id: "g9.prop.spot-two-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29381,7 +30794,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.prop.table-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29403,7 +30816,7 @@ var PROPORTION = [
     }),
     check: ({ ps, T: T3, i }, a) => a * (ps[0] + ps[1] + ps[2]) === T3 * ps[i]
   }),
-  fam8({
+  fam9({
     id: "g9.prop.chain-ratio",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.b",
@@ -29425,7 +30838,7 @@ var PROPORTION = [
     }),
     check: ({ p, q, r, s, N }, a) => N * q * s === a * p * r
   }),
-  fam8({
+  fam9({
     id: "g9.prop.why-chain",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.b",
@@ -29451,7 +30864,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.prop.machines-output",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29471,7 +30884,7 @@ var PROPORTION = [
     }),
     check: ({ m1, m2, h1, h2, u1 }, a) => a * m1 * h1 === u1 * m2 * h2
   }),
-  fam8({
+  fam9({
     id: "g9.prop.spot-compound",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29500,7 +30913,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.prop.table-workers",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29522,7 +30935,7 @@ var PROPORTION = [
     }),
     check: ({ P: P2, w }, a) => a * w === P2
   }),
-  fam8({
+  fam9({
     id: "g9.var.table-type",
     skill: "G9_VARIATION",
     outcome: "G9.PROPORTION.c",
@@ -29545,7 +30958,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.var.steps-inverse",
     skill: "G9_VARIATION",
     outcome: "G9.PROPORTION.c",
@@ -29567,7 +30980,7 @@ var PROPORTION = [
     }),
     check: ({ k, p1, p2, d3 }, v) => v[0] === p1 * (k / p1) && v[1] * p2 === v[0] && v[2] * d3 === v[0]
   }),
-  fam8({
+  fam9({
     id: "g9.work.tap-and-leak",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -29587,7 +31000,7 @@ var PROPORTION = [
     }),
     check: ({ a, b }, t) => t / a - t / b === 1
   }),
-  fam8({
+  fam9({
     id: "g9.work.leftover-steps",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -29611,7 +31024,7 @@ var PROPORTION = [
     }),
     check: ({ a, b, t, L: L3 }, v) => v[0] * a === L3 && v[1] === v[0] + L3 / b && v[2] + t * v[1] === L3 && v[3] * v[0] === v[2]
   }),
-  fam8({
+  fam9({
     id: "g9.work.why-average",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -29637,7 +31050,7 @@ var PROPORTION = [
 var mat = (m) => `[${m.map((r) => r.map(fm).join(" ")).join("; ")}]`;
 var ord = (r, c) => `${r} \xD7 ${c}`;
 var MATRICES = [
-  fam8({
+  fam9({
     id: "g9.mat.table-position",
     skill: "G11_MATRICES_INTRO",
     outcome: "G9.MATRICES.a",
@@ -29664,7 +31077,7 @@ var MATRICES = [
     }),
     check: ({ M: M5, r, c }, a) => M5.flat().indexOf(a) === r * 3 + c
   }),
-  fam8({
+  fam9({
     id: "g9.mat.add-why",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -29686,7 +31099,7 @@ var MATRICES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.mat.compat-table",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -29709,7 +31122,7 @@ var MATRICES = [
       steps: [`Orders: ${orders.map((o, i) => `${names[i]} is ${ord(...o)}`).join(", ")}.`, `${names[opts2[0][0]]} and ${names[opts2[0][1]]} have the same order, so they can be added.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.mat.spot-compat",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -29739,7 +31152,7 @@ var MATRICES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.mat.spot-subtract",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.e",
@@ -29770,7 +31183,7 @@ var MATRICES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.mat.solve-unknown",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.e",
@@ -29795,7 +31208,7 @@ var MATRICES = [
 ];
 var eq = (m, c) => `y = ${m === 1 ? "" : m === -1 ? "\u2212" : fm(m)}x${c === 0 ? "" : c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
 var LINES = [
-  fam8({
+  fam9({
     id: "g9.line.road-percent",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.a",
@@ -29814,7 +31227,7 @@ var LINES = [
     }),
     check: ({ g, run }, a) => a / run * 100 === g
   }),
-  fam8({
+  fam9({
     id: "g9.line.roof-table",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.a",
@@ -29833,7 +31246,7 @@ var LINES = [
       steps: rows.map((r) => `${r[0]}: ${r[1]} \xF7 ${r[2]} = ${round(r[1] / r[2], 2)}.`).concat([`The largest gradient is for the ${rows[best][0].toLowerCase()}.`])
     })
   }),
-  fam8({
+  fam9({
     id: "g9.line.drain-negative",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.b",
@@ -29854,7 +31267,7 @@ var LINES = [
     }),
     check: ({ t1, t2, d1, d2 }, a) => d1 + a * (t2 - t1) === d2
   }),
-  fam8({
+  fam9({
     id: "g9.line.spot-gradient",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.b",
@@ -29880,7 +31293,7 @@ var LINES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.line.steps-two-points",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -29902,7 +31315,7 @@ var LINES = [
     }),
     check: ({ x1, y1, x2, y2, X }, v) => v[0] * (x2 - x1) === y2 - y1 && v[0] * x1 + v[1] === y1 && v[0] * X + v[1] === v[2]
   }),
-  fam8({
+  fam9({
     id: "g9.line.why-eq",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -29924,7 +31337,7 @@ var LINES = [
       steps: [`Put x = ${x1} and y = ${y1} into y = ${m}x + c: ${y1} = ${m * x1} + c.`, `c = ${y1} \u2212 ${m * x1} = ${fm(c)}, so the equation is ${eq(m, c)}.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.line.fare-fixed-charge",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -29944,7 +31357,7 @@ var LINES = [
     }),
     check: ({ m, x1, y1 }, a) => a + m * x1 === y1
   }),
-  fam8({
+  fam9({
     id: "g9.line.spot-point-gradient",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.d",
@@ -29974,7 +31387,7 @@ var LINES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.line.steps-rearrange",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.e",
@@ -29995,7 +31408,7 @@ var LINES = [
     }),
     check: ({ a, b, k }, p) => p[0] === -a && p[1] * b === p[0] && p[2] * b === k
   }),
-  fam8({
+  fam9({
     id: "g9.line.spot-rearrange",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.e",
@@ -30021,7 +31434,7 @@ var LINES = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.line.steps-intercepts",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30042,7 +31455,7 @@ var LINES = [
     }),
     check: ({ a, b, k }, v) => a * v[0] === k && b * v[1] === k && v[2] * 2 === v[0] * v[1]
   }),
-  fam8({
+  fam9({
     id: "g9.line.tank-meets-axis",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30061,7 +31474,7 @@ var LINES = [
     }),
     check: ({ A: A2, B: B2 }, a) => A2 - B2 * a === 0
   }),
-  fam8({
+  fam9({
     id: "g9.line.why-intercept",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30086,7 +31499,7 @@ var LINES = [
 ];
 var FLIP = { ">": "<", "\u2265": "\u2264", "<": ">", "\u2264": "\u2265" };
 var INEQ = [
-  fam8({
+  fam9({
     id: "g9.ineq.spot-negative-divide",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.a",
@@ -30116,7 +31529,7 @@ var INEQ = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.why-reverse",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.a",
@@ -30138,7 +31551,7 @@ var INEQ = [
       steps: [`Divide both sides by \u2212${m}. A negative divisor reverses the order.`, `x ${FLIP[sign]} \u2212${v}.`]
     })
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.number-line-words",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.b",
@@ -30160,7 +31573,7 @@ var INEQ = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.why-circle",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.b",
@@ -30182,7 +31595,7 @@ var INEQ = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.region-graph",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.c",
@@ -30209,7 +31622,7 @@ var INEQ = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.why-boundary",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.c",
@@ -30231,7 +31644,7 @@ var INEQ = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.budget-max",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30251,7 +31664,7 @@ var INEQ = [
     }),
     check: ({ p, B: B2 }, a) => p * a <= B2 && p * (a + 1) > B2
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.at-least-tickets",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30272,7 +31685,7 @@ var INEQ = [
     }),
     check: ({ E, X, p }, a) => p * a - E >= X && p * (a - 1) - E < X
   }),
-  fam8({
+  fam9({
     id: "g9.ineq.steps-pickup-load",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30297,10 +31710,10 @@ var INEQ = [
     check: ({ W: W3, b, w }, v) => v[0] + b === W3 && v[1] * w <= v[0] && (v[1] + 1) * w > v[0] && v[2] + v[1] * w === v[0]
   })
 ];
-var FAMILIES27 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
+var FAMILIES31 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
 
 // src/ai-tutor/content/families/g9_measure.js
-var fam9 = (def) => family({ reviewed: false, ...def });
+var fam10 = (def) => family({ reviewed: false, ...def });
 var PI = 22 / 7;
 var dp2 = (x, k = 2) => Math.abs(x * 10 ** k - Math.round(x * 10 ** k)) < 1e-6;
 var distinct5 = (...v) => new Set(v.map((x) => round(x, 4))).size === v.length;
@@ -30315,9 +31728,9 @@ var clock = (min) => `${Math.floor(min / 60)}:${String(Math.round(min) % 60).pad
 var clock24 = (min) => `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(Math.round(min) % 60).padStart(2, "0")}`;
 var ROADS = [["Nairobi", "Nakuru", 160], ["Nairobi", "Thika", 45], ["Nairobi", "Machakos", 60], ["Nairobi", "Nyeri", 150], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50], ["Nakuru", "Eldoret", 155], ["Eldoret", "Kitale", 70], ["Nairobi", "Meru", 225], ["Nakuru", "Kisumu", 185]];
 var TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
-var FAMILIES28 = [
+var FAMILIES32 = [
   // ======================================================== AREA: pentagon, hexagon
-  fam9({
+  fam10({
     id: "g9.area.hexagon-slab",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30339,7 +31752,7 @@ var FAMILIES28 = [
     },
     check: ({ s, h }, a) => Math.abs(a / 3 / s - h) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.area.pentagon-plot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30364,7 +31777,7 @@ var FAMILIES28 = [
     },
     check: ({ w, l, t }, v) => v[0] === l * w && v[1] * 2 === w * t && v[2] - v[1] === w * l
   }),
-  fam9({
+  fam10({
     id: "g9.area.pentagon-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30390,7 +31803,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.area.centre-angle-why",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30413,7 +31826,7 @@ var FAMILIES28 = [
     }
   }),
   // ======================================================== AREA: prisms
-  fam9({
+  fam10({
     id: "g9.area.prism-doorstop",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.b",
@@ -30435,7 +31848,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b, c, L: L3 }, v) => v[0] === 2 * (a * b / 2) && v[1] === a * L3 + b * L3 + c * L3 && v[2] === v[0] + v[1]
   }),
-  fam9({
+  fam10({
     id: "g9.area.prism-trough",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.b",
@@ -30459,7 +31872,7 @@ var FAMILIES28 = [
     check: ({ b, c, h, a, L: L3 }, ans) => ans - (b * L3 + 2 * c * L3) - (a + b) * h === 0
   }),
   // ======================================================== AREA: pyramids
-  fam9({
+  fam10({
     id: "g9.area.pyramid-slant",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30484,7 +31897,7 @@ var FAMILIES28 = [
     },
     check: ({ b, hb, h }, v) => v[0] ** 2 === h ** 2 + hb ** 2 && v[1] * 2 === b * v[0] && v[2] === 2 * b * v[0] + b ** 2
   }),
-  fam9({
+  fam10({
     id: "g9.area.pyramid-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30510,7 +31923,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.area.pyramid-roof",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30533,7 +31946,7 @@ var FAMILIES28 = [
     check: ({ b, l, rate: rate2 }, a) => a / rate2 / 4 * 2 === b * l
   }),
   // ======================================================== AREA: sectors and segments
-  fam9({
+  fam10({
     id: "g9.area.sector-light",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -30556,7 +31969,7 @@ var FAMILIES28 = [
     },
     check: ({ r, th }, a) => Math.abs(a * 360 / th - 22 / 7 * r * r) < 0.06
   }),
-  fam9({
+  fam10({
     id: "g9.area.sector-angle",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -30579,7 +31992,7 @@ var FAMILIES28 = [
     },
     check: ({ r, a }, ans) => Math.abs(ans / 360 * (22 / 7) * r * r - a) < 0.06
   }),
-  fam9({
+  fam10({
     id: "g9.area.segment-bed",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -30602,7 +32015,7 @@ var FAMILIES28 = [
     check: ({ r }, v) => Math.abs(v[0] * 4 - 22 / 7 * r * r) < 0.06 && v[1] * 2 === r * r && Math.abs(v[2] + v[1] - v[0]) < 0.01
   }),
   // ======================================================== AREA: cones
-  fam9({
+  fam10({
     id: "g9.area.cone-top",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.e",
@@ -30627,7 +32040,7 @@ var FAMILIES28 = [
     },
     check: ({ r, h, p }, v) => v[0] ** 2 === r ** 2 + h ** 2 && Math.abs(v[1] - p * r * v[0]) < 0.011 && Math.abs(v[2] - v[1] - p * r * r) < 0.02
   }),
-  fam9({
+  fam10({
     id: "g9.area.cone-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.e",
@@ -30654,7 +32067,7 @@ var FAMILIES28 = [
     }
   }),
   // ======================================================== AREA: spheres
-  fam9({
+  fam10({
     id: "g9.area.sphere-tank-paint",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.f",
@@ -30673,7 +32086,7 @@ var FAMILIES28 = [
     },
     check: ({ r }, a) => Math.abs(a * 14 - 4 * (22 / 7) * r * r) < 0.06
   }),
-  fam9({
+  fam10({
     id: "g9.area.hemisphere-dome",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.f",
@@ -30696,7 +32109,7 @@ var FAMILIES28 = [
     check: ({ r }, v) => Math.abs(v[2] - 3 * (22 / 7) * r * r) < 0.07 && Math.abs(v[0] - 2 * v[1]) < 0.02
   }),
   // ======================================================== VOLUME
-  fam9({
+  fam10({
     id: "g9.vol.prism-trough",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -30716,7 +32129,7 @@ var FAMILIES28 = [
     }),
     check: ({ b, h, L: L3 }, a) => a * 1e3 * 2 === b * h * L3
   }),
-  fam9({
+  fam10({
     id: "g9.vol.prism-pool",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -30738,7 +32151,7 @@ var FAMILIES28 = [
     },
     check: ({ d1, d2, len, w }, v) => Math.abs(v[0] - (d1 + d2) * len / 2) < 1e-9 && v[1] === v[0] * w && v[2] === v[1] * 1e3
   }),
-  fam9({
+  fam10({
     id: "g9.vol.prism-spot",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -30763,7 +32176,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.vol.pyramid-third",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.b",
@@ -30779,7 +32192,7 @@ var FAMILIES28 = [
     }),
     check: ({ v }, a) => a * 3 === v
   }),
-  fam9({
+  fam10({
     id: "g9.vol.pyramid-height",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.b",
@@ -30799,7 +32212,7 @@ var FAMILIES28 = [
     }),
     check: ({ b, v }, a) => b * b * a / 3 === v
   }),
-  fam9({
+  fam10({
     id: "g9.vol.cone-sand",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.c",
@@ -30821,7 +32234,7 @@ var FAMILIES28 = [
     },
     check: ({ r, h, cap: cap3 }, a) => Math.abs(a * cap3 * 3 / h - 22 / 7 * r * r) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.vol.bucket-frustum",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.d",
@@ -30844,7 +32257,7 @@ var FAMILIES28 = [
     },
     check: ({ h }, v) => Math.abs(v[0] - v[1] * 8) < 0.01 && Math.abs(v[2] - (v[0] - v[1])) < 0.01 && Math.abs(v[3] * 1e3 - v[2]) < 0.01 && Math.abs(v[1] - 22 / 7 / 3 * 49 * h) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.vol.frustum-scale",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.d",
@@ -30866,7 +32279,7 @@ var FAMILIES28 = [
     },
     check: ({ k, v }, a) => a * k ** 3 === v * (k ** 3 - 1)
   }),
-  fam9({
+  fam10({
     id: "g9.vol.hemisphere-bowl",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -30885,7 +32298,7 @@ var FAMILIES28 = [
     },
     check: ({ r }, a) => Math.abs(a * 2 - 4 / 3 * (22 / 7) * r ** 3) < 0.02
   }),
-  fam9({
+  fam10({
     id: "g9.vol.sphere-recast",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -30905,7 +32318,7 @@ var FAMILIES28 = [
     check: ({ R, r }, a) => a * r ** 3 === R ** 3
   }),
   // ======================================================== MASS, WEIGHT AND DENSITY
-  fam9({
+  fam10({
     id: "g9.density.lorry-weighbridge",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.a",
@@ -30927,7 +32340,7 @@ var FAMILIES28 = [
     },
     check: ({ gross, empty }, a) => Math.abs(a * 1e3 + empty - gross * 1e3) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.density.load-table",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.a",
@@ -30949,7 +32362,7 @@ var FAMILIES28 = [
     }),
     check: ({ rows }, a) => Math.abs(a * 1e3 - rows.reduce((t, r) => t + r.m * r.c, 0)) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.density.weight-newtons",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.b",
@@ -30965,7 +32378,7 @@ var FAMILIES28 = [
     }),
     check: ({ m }, a) => a / 10 === m
   }),
-  fam9({
+  fam10({
     id: "g9.density.weight-moon",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.b",
@@ -30987,7 +32400,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.density.find-volume",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31008,7 +32421,7 @@ var FAMILIES28 = [
     }),
     check: ({ rho, m }, a) => Math.abs(rho * a - m) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.density.convert-units",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31038,7 +32451,7 @@ var FAMILIES28 = [
     },
     check: ({ rho, toKg }, a) => toKg ? Math.abs(a / 1e3 - rho) < 1e-9 : Math.abs(a - rho) < 1e-9
   }),
-  fam9({
+  fam10({
     id: "g9.density.iron-block",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31062,7 +32475,7 @@ var FAMILIES28 = [
     }),
     check: ({ rho, l, w, h }, v) => v[0] === l * w * h && Math.abs(v[1] / v[0] - rho) < 1e-6 && Math.abs(v[2] * 1e3 - v[1]) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.density.sample-table",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31086,7 +32499,7 @@ var FAMILIES28 = [
       steps: rows.map((x) => `${x.n}: ${T2(x.m)} \xF7 ${x.v} = ${x.r} g/cm\xB3.`).concat([`The greatest is ${top.n}.`])
     })
   }),
-  fam9({
+  fam10({
     id: "g9.density.float-sink-why",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31111,7 +32524,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.density.ice-volume",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31130,7 +32543,7 @@ var FAMILIES28 = [
     },
     check: ({ m }, a) => Math.abs(a * 0.9 - m) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.density.liquid-mix",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31153,7 +32566,7 @@ var FAMILIES28 = [
     },
     check: ({ r1, r2, v1, v2 }, a) => Math.abs(a * (v1 + v2) - (r1 * v1 + r2 * v2)) < 0.011
   }),
-  fam9({
+  fam10({
     id: "g9.density.stone-cylinder",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31176,7 +32589,7 @@ var FAMILIES28 = [
     check: ({ rho, rise, start, chip }, v) => v[0] === rise && Math.abs(v[1] * v[0] - rho * rise) < 1e-6 && Math.abs(v[2] / chip - v[1]) < 1e-6
   }),
   // ======================================================== SPEED
-  fam9({
+  fam10({
     id: "g9.speed.stage-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.a",
@@ -31204,7 +32617,7 @@ var FAMILIES28 = [
     },
     check: ({ rows, k }, a) => Math.abs(a * rows[k].min / 60 - rows[k].d) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.speed.meet-on-road",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.a",
@@ -31231,7 +32644,7 @@ var FAMILIES28 = [
     },
     check: ({ D: D3, v1, v2 }, v) => v[0] === v1 + v2 && Math.abs(v[1] * v[0] - D3) < 1e-6 && Math.abs(v[2] + v2 * v[1] - D3) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.speed.journey-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31255,7 +32668,7 @@ var FAMILIES28 = [
     },
     check: ({ d1, d2, t1, t2, rest }, a) => Math.abs(a * (t1 + t2 + rest) - (d1 + d2)) < 0.011
   }),
-  fam9({
+  fam10({
     id: "g9.speed.there-and-back-spot",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31281,7 +32694,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.speed.whole-journey-stop",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31304,7 +32717,7 @@ var FAMILIES28 = [
     },
     check: ({ D: D3, span }, a) => Math.abs(a * span / 60 - D3) < 0.011
   }),
-  fam9({
+  fam10({
     id: "g9.speed.velocity-two-legs",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.c",
@@ -31324,7 +32737,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b, t }, ans) => Math.abs((ans * t) ** 2 - (a * a + b * b)) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.speed.accel-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31348,7 +32761,7 @@ var FAMILIES28 = [
     },
     check: ({ u, a }, ans) => Math.abs(u + ans * 6 - (u + ans * 2) - 4 * ans) < 1e-9 && Math.abs(u + a * 6 - (u + a * 2) - 4 * ans) < 1e-9
   }),
-  fam9({
+  fam10({
     id: "g9.speed.accel-graph",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31369,7 +32782,7 @@ var FAMILIES28 = [
     },
     check: ({ u, a }, ans) => u + ans * 8 === u + a * 8
   }),
-  fam9({
+  fam10({
     id: "g9.speed.distance-from-graph",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31393,7 +32806,7 @@ var FAMILIES28 = [
     },
     check: ({ t1, v, t2 }, ans) => Math.abs(ans - 0.5 * (t2 + (t2 - t1)) * v) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.speed.brake-time",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31417,7 +32830,7 @@ var FAMILIES28 = [
     check: ({ kmh, a }, ans) => Math.abs(ans * a * 3.6 - kmh) < 0.01
   }),
   // ---- longitude and local time
-  fam9({
+  fam10({
     id: "g9.speed.longitude-minutes",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31437,7 +32850,7 @@ var FAMILIES28 = [
     }),
     check: ({ c1, c2 }, a) => a / 4 === Math.abs(c1[1] - c2[1])
   }),
-  fam9({
+  fam10({
     id: "g9.speed.local-time-options",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31461,7 +32874,7 @@ var FAMILIES28 = [
       steps: [`Difference: ${Math.abs(d)}\xB0. Time difference: ${Math.abs(d)} \xD7 4 = ${4 * Math.abs(d)} minutes.`, `${c2[0]} is ${d > 0 ? "east" : "west"}, so add${d > 0 ? "" : " (no: take away)"} to noon: ${clock24(right)}.`].map((x, i) => i === 1 ? `${c2[0]} is ${d > 0 ? "east, so the time is later" : "west, so the time is earlier"}: ${clock24(right)}.` : x)
     })
   }),
-  fam9({
+  fam10({
     id: "g9.speed.find-longitude",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31486,7 +32899,7 @@ var FAMILIES28 = [
     },
     check: ({ base, ahead, dd }, a) => (ahead ? a - base : base - a) * 4 === 4 * dd
   }),
-  fam9({
+  fam10({
     id: "g9.speed.longitude-spot",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31513,7 +32926,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.speed.flight-local-arrival",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31537,7 +32950,7 @@ var FAMILIES28 = [
     check: ({ dep, dur, d }, v) => v[0] === Math.abs(d) && v[1] === 4 * v[0] && v[2] === Number(clock24(dep + dur * 60 + (d > 0 ? v[1] : -v[1])).replace(":", ""))
   }),
   // ======================================================== MONEY
-  fam9({
+  fam10({
     id: "g9.money.bureau-sell",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31556,7 +32969,7 @@ var FAMILIES28 = [
     }),
     check: ({ buy, n }, a) => a / n === buy
   }),
-  fam9({
+  fam10({
     id: "g9.money.bureau-trip",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31578,7 +32991,7 @@ var FAMILIES28 = [
     }),
     check: ({ sell, buy, n, left }, v) => v[0] / n === sell && v[1] / left === buy && v[0] - v[1] === v[2]
   }),
-  fam9({
+  fam10({
     id: "g9.money.rate-board",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31603,7 +33016,7 @@ var FAMILIES28 = [
     },
     check: ({ k, toKes, amt }, a) => a / amt === (toKes ? k.buy : k.sell)
   }),
-  fam9({
+  fam10({
     id: "g9.money.cross-ush",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31625,7 +33038,7 @@ var FAMILIES28 = [
     }),
     check: ({ usd, ush, sh0 }, a) => Math.abs(a / ush * usd - sh0) < 0.5
   }),
-  fam9({
+  fam10({
     id: "g9.money.duty-rate",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -31646,7 +33059,7 @@ var FAMILIES28 = [
     }),
     check: ({ V: V2, D: D3 }, a) => Math.abs(V2 * a / 100 - D3) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.money.duty-shipment",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -31668,7 +33081,7 @@ var FAMILIES28 = [
     }),
     check: ({ rows }, a) => Math.abs(a - rows.map((x) => x.v * x.r).reduce((p, c) => p + c, 0) / 100) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.money.duty-excise-vat-steps",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -31692,7 +33105,7 @@ var FAMILIES28 = [
     }),
     check: ({ V: V2, du, ex }, v) => v[0] * 100 === V2 * du && v[1] * 100 === (V2 + v[0]) * ex && v[2] * 100 === (V2 + v[0] + v[1]) * 16 && v[3] === V2 + v[0] + v[1] + v[2]
   }),
-  fam9({
+  fam10({
     id: "g9.money.excise-per-litre",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -31711,7 +33124,7 @@ var FAMILIES28 = [
     },
     check: ({ n, ml, rt }, a) => a / rt * 1e3 === n * ml
   }),
-  fam9({
+  fam10({
     id: "g9.money.excise-find-factory",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -31730,7 +33143,7 @@ var FAMILIES28 = [
     }),
     check: ({ r, P: P2 }, a) => Math.abs(a * (1 + r / 100) - P2) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.money.layered-tax-spot",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -31756,7 +33169,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.money.vat-find-price",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -31776,7 +33189,7 @@ var FAMILIES28 = [
     }),
     check: ({ P: P2 }, a) => Math.abs(a * 1.16 - P2) < 0.01
   }),
-  fam9({
+  fam10({
     id: "g9.money.vat-receipt",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -31798,7 +33211,7 @@ var FAMILIES28 = [
     }),
     check: ({ rows }, a) => Math.abs(a * 100 - 16 * rows.filter((r) => r.v).reduce((p, r) => p + r.p, 0)) < 0.5
   }),
-  fam9({
+  fam10({
     id: "g9.money.vat-base-why",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -31824,7 +33237,7 @@ var FAMILIES28 = [
     }
   }),
   // ======================================================== APPROXIMATIONS AND ERRORS
-  fam9({
+  fam10({
     id: "g9.approx.upper-bound-area",
     skill: "G9_ERRORS",
     outcome: "G9.APPROX.b",
@@ -31843,7 +33256,7 @@ var FAMILIES28 = [
     },
     check: ({ l, w }, a) => Math.abs(a / (w + 0.5) - (l + 0.5)) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.approx.error-table",
     skill: "G9_ERRORS",
     outcome: "G9.APPROX.c",
@@ -31868,7 +33281,7 @@ var FAMILIES28 = [
       steps: rows.map((r) => `${r.n}: ${T2(r.e)} \xF7 ${r.t} \xD7 100 = ${T2(round(r.pc, 2))}%.`).concat([`The greatest is ${top.n}.`])
     })
   }),
-  fam9({
+  fam10({
     id: "g9.approx.estimate-then-check",
     skill: "G9_ROUNDING",
     outcome: "G9.APPROX.a",
@@ -31896,7 +33309,7 @@ var FAMILIES28 = [
     check: ({ n, p }, v) => v[1] === n * p && Math.abs(v[0] - v[1]) === v[2]
   }),
   // ======================================================== MORE PICTURES AND REASONS
-  fam9({
+  fam10({
     id: "g9.money.rate-graph",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31920,7 +33333,7 @@ var FAMILIES28 = [
     },
     check: ({ r }, a) => a * 40 === r * 40
   }),
-  fam9({
+  fam10({
     id: "g9.density.mass-volume-graph",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31940,7 +33353,7 @@ var FAMILIES28 = [
     },
     check: ({ rho }, a) => a * 40 === rho * 40
   }),
-  fam9({
+  fam10({
     id: "g9.vol.sphere-double-why",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -31962,7 +33375,7 @@ var FAMILIES28 = [
 ];
 
 // src/ai-tutor/content/families/g9_geo_data.js
-var fam10 = (def) => family({ reviewed: false, ...def });
+var fam11 = (def) => family({ reviewed: false, ...def });
 var pad3 = (n) => String(n).padStart(3, "0");
 var sg = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
 var lineEq = (m, c) => `y = ${m === 1 ? "" : m === -1 ? "\u2212" : sg(m)}x${c === 0 ? "" : c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
@@ -31973,9 +33386,9 @@ var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
 var near = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
-var FAMILIES29 = [
+var FAMILIES33 = [
   // =========================== COORDINATES AND GRAPHS ===========================
-  fam10({
+  fam11({
     id: "g9.graphs.parallel-table-pick",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.d",
@@ -32001,7 +33414,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.parallel-find-k",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.d",
@@ -32024,7 +33437,7 @@ var FAMILIES29 = [
     }),
     check: ({ r1, s1, r2, g }, v) => v[0] === g && v[2] - s1 === v[1] && (v[2] - s1) / (r2 - r1) === v[0]
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.perpendicular-c",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32050,7 +33463,7 @@ var FAMILIES29 = [
     }),
     check: ({ p, q }, v) => near(v[0] * v[1], -1) && near(v[1] * p + v[2], q)
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.perpendicular-why-opposite",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32069,7 +33482,7 @@ var FAMILIES29 = [
       steps: [`The gradients are ${m} and ${sg(-m)}.`, `${m} \xD7 ${sg(-m)} = ${sg(-m * m)}, not \u22121, so the lines are not perpendicular.`]
     })
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.perpendicular-spot",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32104,7 +33517,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.fare-rate",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32131,7 +33544,7 @@ var FAMILIES29 = [
     },
     check: ({ rate: rate2, fix }, a) => (fix + 3 * rate2 - (fix + rate2)) / 2 === a
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.tariff-fixed",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32153,7 +33566,7 @@ var FAMILIES29 = [
     }),
     check: ({ r, x, y }, a) => a + r * x[2] === y[2]
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.tariff-cross",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32181,7 +33594,7 @@ var FAMILIES29 = [
     check: ({ x0, rA, rB, fA, fB }, a) => fA + rA * a === fB + rB * a
   }),
   // =========================== SCALE DRAWING: BEARINGS ===========================
-  fam10({
+  fam11({
     id: "g9.bearings.turn-clockwise",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.a",
@@ -32203,7 +33616,7 @@ var FAMILIES29 = [
     }),
     check: ({ b, t }, a) => (a - b - t) % 360 === 0
   }),
-  fam10({
+  fam11({
     id: "g9.bearings.back-bearing-spot",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.b",
@@ -32233,7 +33646,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.bearings.isosceles-legs",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.b",
@@ -32255,7 +33668,7 @@ var FAMILIES29 = [
     },
     check: ({ east }, v) => v[1] === 180 && v[0] === (east ? 90 : 270) && (v[2] + 180) % 360 === v[3] && Math.abs(v[2] - v[1]) === 45
   }),
-  fam10({
+  fam11({
     id: "g9.bearings.distance-from-start",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.c",
@@ -32276,7 +33689,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b }, ans) => ans * ans === a * a + b * b
   }),
-  fam10({
+  fam11({
     id: "g9.bearings.which-direction",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.c",
@@ -32297,7 +33710,7 @@ var FAMILIES29 = [
     }
   }),
   // =========================== ANGLES OF ELEVATION AND DEPRESSION ===========================
-  fam10({
+  fam11({
     id: "g9.elevation.eye-height-45",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.d",
@@ -32315,7 +33728,7 @@ var FAMILIES29 = [
     }),
     check: ({ d, eye, flag }, v) => v[0] === d && near(v[1] - eye, v[0]) && near(v[2] - v[1], flag)
   }),
-  fam10({
+  fam11({
     id: "g9.depression.equals-elevation-why",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.f",
@@ -32338,7 +33751,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.depression.two-canoes",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.f",
@@ -32358,7 +33771,7 @@ var FAMILIES29 = [
     check: ({ h, gap: gap2 }, a) => a - gap2 === h
   }),
   // =========================== SIMILARITY AND ENLARGEMENT ===========================
-  fam10({
+  fam11({
     id: "g9.similar.table-missing-side",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32380,7 +33793,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, k }, ans) => ans / b === a * k / a
   }),
-  fam10({
+  fam11({
     id: "g9.similar.rectangles-added-length",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32404,7 +33817,7 @@ var FAMILIES29 = [
       steps: [`Length: ${b + g} \xF7 ${b} = ${r2}. Width: ${a + g} \xF7 ${a} = ${r1}.`, "The scale factors are different, so the photos are not similar."]
     })
   }),
-  fam10({
+  fam11({
     id: "g9.similar.pole-and-tree",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32425,7 +33838,7 @@ var FAMILIES29 = [
     }),
     check: ({ hp, sp, st }, a) => a * sp === hp * st
   }),
-  fam10({
+  fam11({
     id: "g9.similar.missing-side-spot",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32457,7 +33870,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.enlarge.then-translate",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.c",
@@ -32482,7 +33895,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, k, px, py }, v) => v[0] / k === a && v[1] / k === b && v[2] - v[0] === px && v[3] - v[1] === py
   }),
-  fam10({
+  fam11({
     id: "g9.enlarge.find-centre",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.c",
@@ -32504,7 +33917,7 @@ var FAMILIES29 = [
     }),
     check: ({ k, ax, bx }, a) => a + k * (ax - a) === bx
   }),
-  fam10({
+  fam11({
     id: "g9.scalefactor.area-photo",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32523,7 +33936,7 @@ var FAMILIES29 = [
     }),
     check: ({ k, A: A2 }, a) => a / A2 === k * k
   }),
-  fam10({
+  fam11({
     id: "g9.scalefactor.volume-tank",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32542,7 +33955,7 @@ var FAMILIES29 = [
     }),
     check: ({ k, V: V2 }, a) => a / V2 === k ** 3
   }),
-  fam10({
+  fam11({
     id: "g9.scalefactor.paint-tins",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32561,7 +33974,7 @@ var FAMILIES29 = [
     }),
     check: ({ k, A: A2 }, v) => v[1] ** 3 === v[0] && v[2] === v[1] * v[1] && v[3] === A2 * v[2]
   }),
-  fam10({
+  fam11({
     id: "g9.scalefactor.doubling-box-why",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32584,7 +33997,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.scalefactor.similar-cartons-table",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32609,7 +34022,7 @@ var FAMILIES29 = [
     check: ({ h, k, ask: ask3, SA: SA2, V: V2 }, a) => ask3 === "area" ? a / SA2 === (k * h / h) ** 2 : a / V2 === (k * h / h) ** 3
   }),
   // =========================== TRIGONOMETRY ===========================
-  fam10({
+  fam11({
     id: "g9.trig.which-fraction",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.b",
@@ -32636,7 +34049,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.trig.find-side-spot",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.b",
@@ -32664,7 +34077,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.trig.table-ladder-sine",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -32687,7 +34100,7 @@ var FAMILIES29 = [
     }),
     check: ({ L: L3, sv }, v) => Math.abs(v - L3 * sv) <= 51e-4
   }),
-  fam10({
+  fam11({
     id: "g9.trig.table-find-angle",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -32709,7 +34122,7 @@ var FAMILIES29 = [
     }),
     check: ({ kind, A: A2 }, a) => TRIG[kind](a) === TRIG[kind](A2)
   }),
-  fam10({
+  fam11({
     id: "g9.trig.table-ramp-steps",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -32735,7 +34148,7 @@ var FAMILIES29 = [
     },
     check: ({ L: L3 }, v) => Math.abs(v[1] - L3 * v[0]) <= 51e-4 && Math.abs(v[3] - L3 * v[2]) <= 51e-4 && Math.abs(v[0] ** 2 + v[2] ** 2 - 1) < 1e-3
   }),
-  fam10({
+  fam11({
     id: "g9.trig.building-elevation-depression",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -32756,7 +34169,7 @@ var FAMILIES29 = [
     },
     check: ({ A: A2, d, eye }, v) => Math.abs(v[0] - d * TRIG.tan(A2)) <= 0.051 && Math.abs(v[1] - v[0] - eye) < 1e-6 && v[2] === A2
   }),
-  fam10({
+  fam11({
     id: "g9.trig.which-ratio-ramp",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -32777,7 +34190,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.trig.tower-height-spot",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -32805,7 +34218,7 @@ var FAMILIES29 = [
     }
   }),
   // =========================== GROUPED DATA ===========================
-  fam10({
+  fam11({
     id: "g9.data.modal-class-table",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.c",
@@ -32832,7 +34245,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.data.modal-gap-graph",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.c",
@@ -32855,7 +34268,7 @@ var FAMILIES29 = [
     }),
     check: ({ s }, a) => s[1] + a === s[0]
   }),
-  fam10({
+  fam11({
     id: "g9.data.mean-from-table",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.d",
@@ -32880,7 +34293,7 @@ var FAMILIES29 = [
     }),
     check: ({ sf, f, mids }, a) => Math.abs(a * sf - f.reduce((t, v, i) => t + v * mids[i], 0)) < 0.051 * sf
   }),
-  fam10({
+  fam11({
     id: "g9.data.mean-spot",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.d",
@@ -32911,7 +34324,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.data.mean-why-weighted",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.d",
@@ -32938,7 +34351,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.data.median-interpolate",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.e",
@@ -32972,7 +34385,7 @@ var FAMILIES29 = [
     }),
     check: ({ lo, fj }, v) => v[0] === 2 * v[1] && Math.abs(v[3] - (lo + (v[1] - v[2]) * 10 / fj)) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.data.cumulative-graph-between",
     skill: "G8_CUMULATIVE_FREQ",
     outcome: "G9.DATA.e",
@@ -33002,7 +34415,7 @@ var FAMILIES29 = [
     check: ({ cf }, a) => cf[2] + a === cf[4]
   }),
   // =========================== PROBABILITY ===========================
-  fam10({
+  fam11({
     id: "g9.prob.raffle-either",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33024,7 +34437,7 @@ var FAMILIES29 = [
     }),
     check: ({ N, a, b }, v) => Math.abs(v * N - (a + b)) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.prob.football-netball-why",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33050,7 +34463,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.prob.way-to-school-table",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33077,7 +34490,7 @@ var FAMILIES29 = [
     }),
     check: ({ N, x, y }, v) => Math.abs(v * N - (x + y)) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.prob.neither-road-spot",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33107,7 +34520,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.prob.late-matatu-independent",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.e",
@@ -33128,7 +34541,7 @@ var FAMILIES29 = [
     }),
     check: ({ pa, pb }, a) => Math.abs(a / pb - pa) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.prob.coin-and-spinner",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.e",
@@ -33147,7 +34560,7 @@ var FAMILIES29 = [
     }),
     check: ({ T: T3 }, v) => v[2] === round(v[0] * v[1], 4) && Math.abs(v[3] / T3 - v[2]) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.prob.tree-table-one-grows",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.f",
@@ -33169,7 +34582,7 @@ var FAMILIES29 = [
     }),
     check: ({ p, q }, a) => Math.abs(a - (p + q - 2 * p * q)) < 1e-6
   }),
-  fam10({
+  fam11({
     id: "g9.prob.tree-without-replacement",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.f",
@@ -33194,7 +34607,7 @@ var FAMILIES29 = [
     },
     check: ({ r, b }, v) => Math.abs(v[0] * v[1] - v[2]) < 1e-3 && Math.abs(v[3] - (r * (r - 1) + b * (b - 1)) / 20) < 1e-3
   }),
-  fam10({
+  fam11({
     id: "g9.prob.least-likely-table",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.b",
@@ -33226,7 +34639,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g9.graphs.water-bill-line",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -33246,7 +34659,7 @@ var FAMILIES29 = [
     }),
     check: ({ F: F4, r, B: B2 }, a) => F4 + r * a === B2
   }),
-  fam10({
+  fam11({
     id: "g9.prob.seeds-expected",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.b",
@@ -33269,7 +34682,7 @@ var FAMILIES29 = [
 ];
 
 // src/ai-tutor/content/families/g8_num_alg.js
-var fam11 = (def) => family({ reviewed: false, ...def });
+var fam12 = (def) => family({ reviewed: false, ...def });
 var gcd5 = (a, b) => b ? gcd5(b, a % b) : Math.abs(a);
 var neg = (n) => n < 0 ? `\u2212${-n}` : String(n);
 var distinct6 = (...v) => new Set(v).size === v.length;
@@ -33278,9 +34691,9 @@ var simp3 = (n, d) => {
   return [n / g, d / g];
 };
 var signed = (c) => c < 0 ? `\u2212 ${-c}` : `+ ${c}`;
-var FAMILIES30 = [
+var FAMILIES34 = [
   // ======================================================== INTEGERS
-  fam11({
+  fam12({
     id: "g8.int.lift-floors",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33300,7 +34713,7 @@ var FAMILIES30 = [
     }),
     check: ({ s, d }, a) => a + d === s
   }),
-  fam11({
+  fam12({
     id: "g8.int.order-why",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33322,7 +34735,7 @@ var FAMILIES30 = [
       steps: [`On the number line, ${neg(lo)} is ${-lo} places left of zero and ${neg(hi)} is ${-hi} places left of zero.`, `${neg(lo)} is further left, so ${neg(lo)} < ${neg(hi)}.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.int.distance-spot",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33347,7 +34760,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.int.balance-table",
     skill: "G6_INTEGERS_ADD_SUB",
     outcome: "G8.INTEGERS.b",
@@ -33378,7 +34791,7 @@ var FAMILIES30 = [
     },
     check: ({ start, ch }, a) => start + ch.reduce((s, c) => s + c, 0) === a
   }),
-  fam11({
+  fam12({
     id: "g8.int.mountain-rate",
     skill: "G7_INTEGERS_MUL_DIV",
     outcome: "G8.INTEGERS.b",
@@ -33398,7 +34811,7 @@ var FAMILIES30 = [
     }),
     check: ({ h, start, per }, a) => start + a * h === start - per * h
   }),
-  fam11({
+  fam12({
     id: "g8.int.borehole-steps",
     skill: "G7_INTEGERS_MUL_DIV",
     outcome: "G8.INTEGERS.b",
@@ -33421,7 +34834,7 @@ var FAMILIES30 = [
     check: ({ a, f, n, k }, v) => v[0] === -f * n && v[1] === -a + v[0] && -a - f * v[2] === -(a + f * k)
   }),
   // ======================================================== FRACTIONS
-  fam11({
+  fam12({
     id: "g8.frac.shamba-share",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.b",
@@ -33444,7 +34857,7 @@ var FAMILIES30 = [
     }),
     check: ({ A: A2, m, be }, x) => x + m + be === A2
   }),
-  fam11({
+  fam12({
     id: "g8.frac.tank-steps",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.b",
@@ -33467,7 +34880,7 @@ var FAMILIES30 = [
     }),
     check: ({ C, d1, d2, n1 }, v) => v[0] * d1 === C * n1 && v[1] * d2 === v[0] && v[2] + v[1] === v[0]
   }),
-  fam11({
+  fam12({
     id: "g8.frac.divide-first-spot",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.a",
@@ -33495,7 +34908,7 @@ var FAMILIES30 = [
       steps: ["Do the division before the subtraction.", "To divide by a fraction, multiply by its reciprocal."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.frac.day-table",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.a",
@@ -33524,7 +34937,7 @@ var FAMILIES30 = [
     check: ({ fr: fr3, mins }, a) => Math.abs(a / 480 + fr3.reduce((s, [n, d]) => s + n / d, 0) - 1) < 1e-9
   }),
   // ======================================================== DECIMALS
-  fam11({
+  fam12({
     id: "g8.dec.recurring-why",
     skill: "G8_RECURRING_DECIMALS",
     outcome: "G8.DEC.a",
@@ -33563,7 +34976,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.dec.recurring-steps",
     skill: "G8_RECURRING_DECIMALS",
     outcome: "G8.DEC.a",
@@ -33588,7 +35001,7 @@ var FAMILIES30 = [
     },
     check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd5(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
   }),
-  fam11({
+  fam12({
     id: "g8.dec.cloth-profit",
     skill: "G8_DECIMALS_COMBINED",
     outcome: "G8.DEC.b",
@@ -33609,7 +35022,7 @@ var FAMILIES30 = [
     }),
     check: ({ n, cost, sell, len, rate: rate2 }, a) => a / n + len * rate2 === sell && cost === len * rate2
   }),
-  fam11({
+  fam12({
     id: "g8.dec.point-spot",
     skill: "G8_DECIMALS_COMBINED",
     outcome: "G8.DEC.b",
@@ -33635,7 +35048,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.dec.sf-spot",
     skill: "G8_STANDARD_FORM",
     outcome: "G8.DEC.d",
@@ -33661,7 +35074,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.dec.sf-product-steps",
     skill: "G8_STANDARD_FORM",
     outcome: "G8.DEC.d",
@@ -33684,7 +35097,7 @@ var FAMILIES30 = [
     check: ({ a, b, m, n }, v) => v[0] === a * b && v[1] === m + n && v[2] === m + n + 1 && v[3] === a * 10 ** m * (b * 10 ** n)
   }),
   // ======================================================== SQUARES AND ROOTS
-  fam11({
+  fam12({
     id: "g8.sq.table-shift",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.a",
@@ -33709,7 +35122,7 @@ var FAMILIES30 = [
     },
     check: ({ t, sh: sh2 }, a) => a === (t * (sh2 / 10)) ** 2
   }),
-  fam11({
+  fam12({
     id: "g8.sq.root-table-shift",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.b",
@@ -33733,7 +35146,7 @@ var FAMILIES30 = [
     },
     check: ({ N, sc }, a) => Math.abs(a * a / (N * sc) - 1) < 0.01
   }),
-  fam11({
+  fam12({
     id: "g8.sq.between-why",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.b",
@@ -33756,7 +35169,7 @@ var FAMILIES30 = [
       steps: [`${lo}\xB2 = ${lo * lo} and ${lo + 1}\xB2 = ${(lo + 1) ** 2}.`, `${lo * lo} < ${n} < ${(lo + 1) ** 2}, so ${lo} < \u221A${n} < ${lo + 1}.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.sq.tiles-cost",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.a",
@@ -33773,7 +35186,7 @@ var FAMILIES30 = [
     check: ({ s, rate: rate2 }, a) => Math.abs(Math.sqrt(a / rate2) - s) < 1e-9
   }),
   // ======================================================== RATES, RATIO, PERCENTAGE, PROPORTION
-  fam11({
+  fam12({
     id: "g8.rates.boda-same-rate",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -33792,7 +35205,7 @@ var FAMILIES30 = [
     }),
     check: ({ km1, h1, h2 }, a) => a / h2 === km1 / h1
   }),
-  fam11({
+  fam12({
     id: "g8.rates.pump-steps",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -33813,7 +35226,7 @@ var FAMILIES30 = [
     }),
     check: ({ C, have, r, t0 }, v) => v[0] + have === C && v[1] * t0 === r * t0 && v[2] * v[1] === v[0]
   }),
-  fam11({
+  fam12({
     id: "g8.rates.sugar-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -33842,7 +35255,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.class-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -33872,7 +35285,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.mix-why",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -33899,7 +35312,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.rope-units",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -33920,7 +35333,7 @@ var FAMILIES30 = [
     }),
     check: ({ m, s }, a) => s * (1 + a) === 100 * m
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.three-way-share",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.e",
@@ -33942,7 +35355,7 @@ var FAMILIES30 = [
     }),
     check: ({ r, total }, x) => x * (r[0] + r[1] + r[2]) === total * (r[2] - r[0])
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.one-part-known",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.e",
@@ -33961,7 +35374,7 @@ var FAMILIES30 = [
     }),
     check: ({ g, s, k }, a) => a * s === (g + s) * s * k
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.increase-flour",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -33980,7 +35393,7 @@ var FAMILIES30 = [
     }),
     check: ({ base, big, small }, a) => a * small === base * big
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.decrease-rent",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -33999,7 +35412,7 @@ var FAMILIES30 = [
     }),
     check: ({ rent, nw, old }, a) => a * old === rent * nw
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.fare-steps",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34021,7 +35434,7 @@ var FAMILIES30 = [
     }),
     check: ({ big, small, old }, v) => v[0] * small === old && v[1] * small === old * big && v[2] + old === v[1] && Math.abs(old * (1 + v[3] / 100) - v[1]) < 1e-9
   }),
-  fam11({
+  fam12({
     id: "g8.ratio.increase-why",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34043,7 +35456,7 @@ var FAMILIES30 = [
       steps: [`Increase means the new amount is bigger, so multiply by ${big}/${small}.`, `${base} \xD7 ${big}/${small} = ${base * big / small}.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.pct.fare-change",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34064,7 +35477,7 @@ var FAMILIES30 = [
     }),
     check: ({ old, nw, up }, a) => Math.abs(old * (up ? 1 + a / 100 : 1 - a / 100) - nw) < 1e-9
   }),
-  fam11({
+  fam12({
     id: "g8.pct.before-change",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34085,7 +35498,7 @@ var FAMILIES30 = [
     }),
     check: ({ up, pc, final }, a) => Math.abs(a * (up ? 100 + pc : 100 - pc) / 100 - final) < 1e-9
   }),
-  fam11({
+  fam12({
     id: "g8.pct.enrolment-table",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34109,7 +35522,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.prop.workers-days",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34130,7 +35543,7 @@ var FAMILIES30 = [
     }),
     check: ({ w, d, w2 }, a) => a * w2 === w * d
   }),
-  fam11({
+  fam12({
     id: "g8.prop.which-inverse",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34149,7 +35562,7 @@ var FAMILIES30 = [
       steps: [`${r[1]}`, "So when one doubles, the other halves: inverse proportion."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.prop.wall-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34173,7 +35586,7 @@ var FAMILIES30 = [
     })
   }),
   // ======================================================== ALGEBRAIC EXPRESSIONS
-  fam11({
+  fam12({
     id: "g8.fact.fully-outside",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34193,7 +35606,7 @@ var FAMILIES30 = [
     }),
     check: ({ g, p, q }, a) => gcd5(a * p, a * q) === a
   }),
-  fam11({
+  fam12({
     id: "g8.fact.rectangle-steps",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34214,7 +35627,7 @@ var FAMILIES30 = [
     }),
     check: ({ g, p, q, X }, v) => v[0] === g && v[1] === p * X + q && v[2] === v[0] * v[1] && v[2] === g * p * X + g * q
   }),
-  fam11({
+  fam12({
     id: "g8.fact.hcf-spot",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34239,7 +35652,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.algfrac.divide-top-spot",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34261,7 +35674,7 @@ var FAMILIES30 = [
       steps: ["Divide each part of the top by the bottom number.", "Do not leave any part undivided."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.algfrac.add-why",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34283,7 +35696,7 @@ var FAMILIES30 = [
       steps: [`Common denominator of ${a} and ${b}: ${a * b}.`, `x/${a} + x/${b} = ${b}x/${a * b} + ${a}x/${a * b} = ${a + b}x/${a * b}.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.algfrac.shamba-solve",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34302,7 +35715,7 @@ var FAMILIES30 = [
     }),
     check: ({ a, b, T: T3 }, x) => x / a + x / b === T3
   }),
-  fam11({
+  fam12({
     id: "g8.subst.boda-fare",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34318,7 +35731,7 @@ var FAMILIES30 = [
     }),
     check: ({ f, r, k }, a) => (a - f) / r === k
   }),
-  fam11({
+  fam12({
     id: "g8.subst.negative-steps",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34341,7 +35754,7 @@ var FAMILIES30 = [
     }),
     check: ({ a, b, s, t }, v) => v[0] === -s * -s && v[1] === a * v[0] && v[2] === b * t && v[3] === a * (-s) ** 2 - b * t
   }),
-  fam11({
+  fam12({
     id: "g8.subst.sign-why",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34364,7 +35777,7 @@ var FAMILIES30 = [
     })
   }),
   // ======================================================== LINEAR EQUATIONS
-  fam11({
+  fam12({
     id: "g8.eq.form-prices",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.a",
@@ -34390,29 +35803,29 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.eq.form-sign-spot",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.a",
     rung: 3,
     form: "spot",
     draw: () => ({ S: randInt(14, 40) * 2, d: randInt(2, 6) * 2, p: person() }),
-    make: ({ S: S3, d, p }) => {
+    make: ({ S: S4, d, p }) => {
       const sign = "\u2212";
       return {
-        question: `Two bags of maize weigh ${S3} kg together. The big bag is ${d} kg heavier than the small bag. ${p.name} forms two equations and solves them. Which step has the mistake?`,
+        question: `Two bags of maize weigh ${S4} kg together. The big bag is ${d} kg heavier than the small bag. ${p.name} forms two equations and solves them. Which step has the mistake?`,
         working: [
           { text: "Let x be the mass of the big bag and y the mass of the small bag.", ok: true },
-          { text: `Together: x + y = ${S3}.`, ok: true },
+          { text: `Together: x + y = ${S4}.`, ok: true },
           { text: `The big bag is heavier: x = y ${sign} ${d}.`, ok: sign === "+" },
-          { text: `Substitute: (y ${sign} ${d}) + y = ${S3}, so 2y = ${S3 + d}.`, ok: true }
+          { text: `Substitute: (y ${sign} ${d}) + y = ${S4}, so 2y = ${S4 + d}.`, ok: true }
         ],
         fix: `If the big bag is ${d} kg heavier, you add ${d} to the small bag: x = y + ${d}.`,
         steps: ["Write what is the same in both statements.", "A heavier bag is the lighter one plus the difference."]
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.eq.eliminate-steps",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.b",
@@ -34433,7 +35846,7 @@ var FAMILIES30 = [
     }),
     check: ({ a, b1, b2, c1, c2 }, v) => a * v[2] + b1 * v[1] === c1 && a * v[2] + b2 * v[1] === c2 && v[0] === (b2 - b1) * v[1]
   }),
-  fam11({
+  fam12({
     id: "g8.eq.substitute-spot",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.b",
@@ -34459,7 +35872,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.eq.museum-tickets",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34479,7 +35892,7 @@ var FAMILIES30 = [
     }),
     check: ({ a1, a2, n, T1, T2: T22, C }, a) => a1 * a + n * C === T1 && a2 * a + n * C === T22
   }),
-  fam11({
+  fam12({
     id: "g8.eq.coins",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34498,7 +35911,7 @@ var FAMILIES30 = [
     }),
     check: ({ N, V: V2 }, a) => 5 * (N - a) + 10 * a === V2
   }),
-  fam11({
+  fam12({
     id: "g8.eq.hens-goats-steps",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34520,7 +35933,7 @@ var FAMILIES30 = [
     }),
     check: ({ N, L: L3 }, v) => v[0] === 2 * N && v[1] === L3 - v[0] && v[2] * 2 === v[1] && v[3] + v[2] === N && 2 * v[3] + 4 * v[2] === L3
   }),
-  fam11({
+  fam12({
     id: "g8.eq.eliminate-why",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EQUATIONS.b",
@@ -34545,15 +35958,15 @@ var FAMILIES30 = [
 ];
 
 // src/ai-tutor/content/families/g8_measure_geo.js
-var fam12 = (def) => family({ reviewed: false, ...def });
+var fam13 = (def) => family({ reviewed: false, ...def });
 var PI2 = 22 / 7;
 var uniq4 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.length;
 var near2 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI2 * r;
 var nice = (v) => Number.isInteger(v * 2);
-var FAMILIES31 = [
+var FAMILIES35 = [
   // ================================================================ CIRCLES
-  fam12({
+  fam13({
     id: "g8.circ.wheel-distance",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -34574,7 +35987,7 @@ var FAMILIES31 = [
     }),
     check: ({ d, n }, a) => near2(a * 100 / n / d, 22 / 7)
   }),
-  fam12({
+  fam13({
     id: "g8.circ.radius-slip",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -34593,7 +36006,7 @@ var FAMILIES31 = [
       steps: [`The radius is ${r} cm, so the diameter is 2 \xD7 ${r} = ${2 * r} cm.`, "Circumference = \u03C0 \xD7 diameter, so it is \u03C0 \xD7 diameter, not \u03C0 \xD7 radius."]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.circ.track-laps",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -34614,7 +36027,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, n, m, c }, v) => v[0] * 7 === 44 * r && v[1] === v[0] * n && v[2] * v[0] === c * m
   }),
-  fam12({
+  fam13({
     id: "g8.arc.flowerbed",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -34636,7 +36049,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, th }, a) => near2(a * 360 / th, 44 * r / 7)
   }),
-  fam12({
+  fam13({
     id: "g8.arc.minute-hand",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -34658,7 +36071,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, m }, a) => near2(a * 60 / m, 44 * r / 7)
   }),
-  fam12({
+  fam13({
     id: "g8.arc.table-angles",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -34682,7 +36095,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, miss }, a) => near2(a * 360 / miss, 44 * r / 7)
   }),
-  fam12({
+  fam13({
     id: "g8.arc.spot-fraction",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -34707,7 +36120,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.sector.fence",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.c",
@@ -34729,7 +36142,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, th }, a) => near2(a - 2 * r, th * 44 * r / (7 * 360))
   }),
-  fam12({
+  fam13({
     id: "g8.sector.semicircle-radius",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.c",
@@ -34750,7 +36163,7 @@ var FAMILIES31 = [
     check: ({ r, P: P2 }, a) => near2(a * (22 / 7 + 2), P2)
   }),
   // ================================================================ AREA
-  fam12({
+  fam13({
     id: "g8.area.path-round-field",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -34771,7 +36184,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, w, A1, A2 }, v) => v[0] === A1 && v[1] === r + w && v[2] + A1 === A2
   }),
-  fam12({
+  fam13({
     id: "g8.area.arched-window",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -34790,7 +36203,7 @@ var FAMILIES31 = [
     }),
     check: ({ w, h }, a) => near2(a, w * h + 0.5 * PI2 * (w / 2) ** 2)
   }),
-  fam12({
+  fam13({
     id: "g8.area.double-radius",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -34809,7 +36222,7 @@ var FAMILIES31 = [
       steps: [`Area = \u03C0 \xD7 r \xD7 r. Replace r with ${k} \xD7 r.`, `\u03C0 \xD7 (${k}r) \xD7 (${k}r) = ${k * k} \xD7 \u03C0 \xD7 r \xD7 r.`, `So the area is ${k * k} times as much.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.sector.sprinkler-area",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -34830,7 +36243,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, th }, a) => near2(a * 360 / th, 22 * r * r / 7)
   }),
-  fam12({
+  fam13({
     id: "g8.sector.find-angle",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -34849,7 +36262,7 @@ var FAMILIES31 = [
     }),
     check: ({ th, r, A: A2 }, a) => near2(A2 / 1386 * 360, a) && r === 21
   }),
-  fam12({
+  fam13({
     id: "g8.sector.fraction-why",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -34871,7 +36284,7 @@ var FAMILIES31 = [
       steps: [`A full turn is 360\xB0.`, `${th}/360 = 1/${n}.`, `Equal turns cut equal slices, so the sector is 1/${n} of the circle's area.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.surface.carton-table",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -34898,7 +36311,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.surface.classroom-paint",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -34921,7 +36334,7 @@ var FAMILIES31 = [
     }),
     check: ({ l, w, h, o, cov: cov2 }, v) => v[0] === 2 * h * (l + w) && v[1] === l * w && v[2] === v[0] + v[1] - o && v[3] * cov2 === v[2]
   }),
-  fam12({
+  fam13({
     id: "g8.surface.spot-cuboid",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -34946,7 +36359,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.surface.open-water-tank",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.d",
@@ -34965,7 +36378,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, h }, a) => near2(a, PI2 * r * (r + 2 * h))
   }),
-  fam12({
+  fam13({
     id: "g8.surface.tin-label",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.d",
@@ -34984,7 +36397,7 @@ var FAMILIES31 = [
     }),
     check: ({ d, h }, a) => near2(a / h, PI2 * d)
   }),
-  fam12({
+  fam13({
     id: "g8.prism.tent",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35004,7 +36417,7 @@ var FAMILIES31 = [
     }),
     check: ({ a, h, s, L: L3 }, v) => near2(v, a * h * 2 + L3 * (2 * s + 2 * a))
   }),
-  fam12({
+  fam13({
     id: "g8.prism.table-faces",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35025,7 +36438,7 @@ var FAMILIES31 = [
     }),
     check: ({ b, h, s, L: L3 }, a) => near2(a, b * h + L3 * b + L3 * h + L3 * s)
   }),
-  fam12({
+  fam13({
     id: "g8.prism.spot-working",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35050,7 +36463,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.grid.count-squares",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35070,7 +36483,7 @@ var FAMILIES31 = [
     }),
     check: ({ F: F4, P: P2 }, a) => 2 * a === 2 * F4 + P2
   }),
-  fam12({
+  fam13({
     id: "g8.grid.scaled-plot",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35091,7 +36504,7 @@ var FAMILIES31 = [
     }),
     check: ({ side, F: F4, P: P2 }, v) => v[0] === side * side && 2 * v[1] === 2 * F4 + P2 && v[2] === v[1] * v[0]
   }),
-  fam12({
+  fam13({
     id: "g8.grid.compare-fields",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35119,7 +36532,7 @@ var FAMILIES31 = [
     }
   }),
   // ================================================================ MONEY
-  fam12({
+  fam13({
     id: "g8.money.compound-two-years",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35141,7 +36554,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, P: P2 }, a) => near2(a * 100 * 100 / ((100 + r) * (100 + r)), P2)
   }),
-  fam12({
+  fam13({
     id: "g8.money.compound-steps",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35164,7 +36577,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, P: P2 }, v) => v[0] === P2 + P2 * r / 100 && v[1] === v[0] * r / 100 && v[2] === v[0] + v[1] && v[3] + P2 === v[2]
   }),
-  fam12({
+  fam13({
     id: "g8.money.compound-why",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35186,7 +36599,7 @@ var FAMILIES31 = [
       steps: [`Simple interest: 10% of ${sh(P2)} each year, always the same.`, `Compound interest: year 2 interest is 10% of the larger amount from year 1.`, "The interest earns interest, so the compound account grows faster."]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.money.depreciate-motorcycle",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35207,7 +36620,7 @@ var FAMILIES31 = [
     }),
     check: ({ P: P2, r }, a) => near2(a * 1e4 / ((100 - r) * (100 - r)), P2)
   }),
-  fam12({
+  fam13({
     id: "g8.money.depreciate-table",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35230,7 +36643,7 @@ var FAMILIES31 = [
     }),
     check: ({ P: P2, V1, V3 }, a) => near2(a * P2 * P2, V1 * V1 * V1) && V3 > 0
   }),
-  fam12({
+  fam13({
     id: "g8.money.depreciate-why",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35252,7 +36665,7 @@ var FAMILIES31 = [
       steps: [`Year 1: ${P2} \u2212 ${r}% = ${P2 * (100 - r) / 100}.`, `Year 2: ${P2 * (100 - r) / 100} \u2212 ${r}% = ${V2}.`, `Loss: ${P2 - V2} out of ${P2} is ${real}%, not ${tot}%.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.money.hp-extra",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.e",
@@ -35273,7 +36686,7 @@ var FAMILIES31 = [
     }),
     check: ({ C, D: D3, n, m }, a) => C + a === D3 + n * m
   }),
-  fam12({
+  fam13({
     id: "g8.money.hp-plans",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.e",
@@ -35305,7 +36718,7 @@ var FAMILIES31 = [
     }
   }),
   // ================================================================ CONSTRUCTIONS
-  fam12({
+  fam13({
     id: "g8.construct.ray-parts",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35325,7 +36738,7 @@ var FAMILIES31 = [
     }),
     check: ({ a, b }, v) => v - a === b
   }),
-  fam12({
+  fam13({
     id: "g8.construct.divide-fence",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35346,7 +36759,7 @@ var FAMILIES31 = [
     }),
     check: ({ a, b, k, L: L3 }, v) => v[0] === a + b && v[1] * v[0] === L3 && v[2] === v[1] * a
   }),
-  fam12({
+  fam13({
     id: "g8.construct.parallel-why",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35368,7 +36781,7 @@ var FAMILIES31 = [
       steps: ["The marks on the ray are equal distances apart.", "Lines parallel to the one that ends at B carry those equal steps across to AB.", "So AB is cut into the same ratio as the ray."]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.construct.circle-right-triangle",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.f",
@@ -35387,7 +36800,7 @@ var FAMILIES31 = [
     }),
     check: ({ a, b }, r) => near2((2 * r) ** 2, a * a + b * b)
   }),
-  fam12({
+  fam13({
     id: "g8.construct.which-centre-lines",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.f",
@@ -35409,7 +36822,7 @@ var FAMILIES31 = [
     }
   }),
   // ================================================================ COORDINATES AND GRAPHS
-  fam12({
+  fam13({
     id: "g8.graphs.shop-point",
     skill: "G8_COORDINATES",
     outcome: "G8.GRAPHS.b",
@@ -35427,7 +36840,7 @@ var FAMILIES31 = [
       steps: [`Across: ${x} + ${dx} = ${x + dx}.`, `Up: ${y} + ${dy} = ${y + dy}.`, `The shop is at ${right}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.rectangle-corners",
     skill: "G8_COORDINATES",
     outcome: "G8.GRAPHS.b",
@@ -35446,7 +36859,7 @@ var FAMILIES31 = [
     }),
     check: ({ x0, y0, W: W3, H: H3 }, v) => v[0] === x0 && v[1] === y0 + H3 && v[2] === 2 * W3 + 2 * H3 && v[3] * 2 === 2 * W3 * H3
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.table-pattern",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.d",
@@ -35466,7 +36879,7 @@ var FAMILIES31 = [
     }),
     check: ({ m, c }, a) => (a - c) / m === 6
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.spot-negative-x",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.d",
@@ -35489,7 +36902,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.scale-why",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35511,7 +36924,7 @@ var FAMILIES31 = [
       steps: [`The axis reaches 10 \xD7 ${s} = ${10 * s}.`, `${V2} is bigger than ${10 * s}, so the largest value is off the graph.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.scale-number",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35530,7 +36943,7 @@ var FAMILIES31 = [
     }),
     check: ({ L: L3, V: V2 }, a) => a * L3 === V2
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.scale-choose",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35558,7 +36971,7 @@ var FAMILIES31 = [
       steps: [`The largest value is ${M5} mm.`, `10 squares of ${prev} mm reach ${10 * prev}, which is too small.`, `10 squares of ${r} mm reach ${10 * r}, which fits.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.hall-hire-graph",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -35585,7 +36998,7 @@ var FAMILIES31 = [
     },
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.table-meet",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -35606,7 +37019,7 @@ var FAMILIES31 = [
     }),
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v
   }),
-  fam12({
+  fam13({
     id: "g8.graphs.cross-why",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -35632,7 +37045,7 @@ var FAMILIES31 = [
     }
   }),
   // ================================================================ SCALE
-  fam12({
+  fam13({
     id: "g8.scale.plan-table",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.b",
@@ -35652,7 +37065,7 @@ var FAMILIES31 = [
     }),
     check: ({ s, cl, hall }, a) => a / s + cl === hall
   }),
-  fam12({
+  fam13({
     id: "g8.scale.ratio-to-km",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -35671,7 +37084,7 @@ var FAMILIES31 = [
     }),
     check: ({ n }, a) => near2(a * 1e5, n)
   }),
-  fam12({
+  fam13({
     id: "g8.scale.spot-ratio",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -35693,7 +37106,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.scale.more-detail-why",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -35718,7 +37131,7 @@ var FAMILIES31 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g8.scale.find-scale-route",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -35739,7 +37152,7 @@ var FAMILIES31 = [
     }),
     check: ({ km, cm }, a) => near2(a * cm, km * 1e5)
   }),
-  fam12({
+  fam13({
     id: "g8.scale.two-legs",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -35759,7 +37172,7 @@ var FAMILIES31 = [
     }),
     check: ({ c1, c2, n }, a) => near2((c1 + c2) * n / 1e5, a)
   }),
-  fam12({
+  fam13({
     id: "g8.scale.shamba-area",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -35782,7 +37195,7 @@ var FAMILIES31 = [
     check: ({ s, l, w }, v) => v[0] === l * s && v[1] === w * s && v[2] === v[0] * v[1] && near2(v[3] * 1e4, v[2])
   }),
   // ================================================================ SOLIDS
-  fam12({
+  fam13({
     id: "g8.solids.edges-euler",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.a",
@@ -35801,7 +37214,7 @@ var FAMILIES31 = [
     }),
     check: ({ F: F4, V: V2 }, e) => F4 + V2 - e === 2
   }),
-  fam12({
+  fam13({
     id: "g8.solids.cylinder-net",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.b",
@@ -35820,7 +37233,7 @@ var FAMILIES31 = [
     }),
     check: ({ r }, a) => near2(a * 7 / 44, r)
   }),
-  fam12({
+  fam13({
     id: "g8.solids.cube-net-yes-no",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.b",
@@ -35841,7 +37254,7 @@ var FAMILIES31 = [
       steps: ok4 ? ["The row makes four sides.", "One extra square is above and one is below, so they make the top and the bottom.", "All six faces are covered, so it folds into a cube."] : ["The row makes four sides.", "Both extra squares are above the row, so both fold to the top.", "The bottom face is missing, so it does not fold into a cube."]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.solids.cylinder-net-steps",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.SOLIDS.c",
@@ -35863,7 +37276,7 @@ var FAMILIES31 = [
     }),
     check: ({ r, L: L3, w }, v) => v[0] === r && v[1] === L3 * w && v[2] * 7 === 44 * r * r && v[3] === v[1] + v[2]
   }),
-  fam12({
+  fam13({
     id: "g8.solids.tray-volume",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.c",
@@ -35882,7 +37295,7 @@ var FAMILIES31 = [
     }),
     check: ({ L: L3, W: W3, x }, a) => a / x / (L3 - 2 * x) === W3 - 2 * x
   }),
-  fam12({
+  fam13({
     id: "g8.solids.double-edge-why",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.SOLIDS.c",
@@ -35901,7 +37314,7 @@ var FAMILIES31 = [
       steps: [`A face is edge \xD7 edge, so each face is ${k} \xD7 ${k} = ${k * k} times as big.`, `Volume is edge \xD7 edge \xD7 edge: ${k} \xD7 ${k} \xD7 ${k} = ${k * k * k} times as big.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.solids.ant-two-faces",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.d",
@@ -35921,7 +37334,7 @@ var FAMILIES31 = [
     }),
     check: ({ a, r }, d) => near2(d * d, a * a + r * r)
   }),
-  fam12({
+  fam13({
     id: "g8.solids.beetle-tin",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.d",
@@ -35941,7 +37354,7 @@ var FAMILIES31 = [
     check: ({ r }, a) => near2(2 * a, circ(r))
   }),
   // ================================================================ DATA
-  fam12({
+  fam13({
     id: "g8.data.bar-top-two",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -35963,7 +37376,7 @@ var FAMILIES31 = [
     }),
     check: ({ top, bot }, a) => bot + a === top
   }),
-  fam12({
+  fam13({
     id: "g8.data.line-biggest-rise",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -35987,7 +37400,7 @@ var FAMILIES31 = [
     }),
     check: ({ ys, best }, a) => ys.slice(1).some((v, i) => v - ys[i] === a) && ys.slice(1).every((v, i) => v - ys[i] <= a)
   }),
-  fam12({
+  fam13({
     id: "g8.data.table-bar-squares",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -36007,15 +37420,15 @@ var FAMILIES31 = [
     }),
     check: ({ s, mx }, a) => a * s === mx
   }),
-  fam12({
+  fam13({
     id: "g8.data.which-graph-why",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
     rung: 2,
     form: "why",
     draw: () => {
-      const S3 = [["the number of learners in each of Grades 4 to 8", "bar"], ["how many learners chose each of four school clubs", "bar"], ["the maize harvest of five farmers", "bar"], ["the temperature of a school every hour of the day", "line"], ["the price of a kilogram of maize in each month of the year", "line"], ["the height of a seedling at the end of each week", "line"]];
-      const [what, kind] = pick(S3);
+      const S4 = [["the number of learners in each of Grades 4 to 8", "bar"], ["how many learners chose each of four school clubs", "bar"], ["the maize harvest of five farmers", "bar"], ["the temperature of a school every hour of the day", "line"], ["the price of a kilogram of maize in each month of the year", "line"], ["the height of a seedling at the end of each week", "line"]];
+      const [what, kind] = pick(S4);
       return { what, kind, p: person() };
     },
     make: ({ what, kind, p }) => ({
@@ -36030,7 +37443,7 @@ var FAMILIES31 = [
       steps: kind === "bar" ? ["The values are for separate groups.", "Bars stand side by side without joining, so a bar graph suits them."] : ["The values come one after another in time.", "A line shows the way the value rises and falls, so a line graph suits them."]
     })
   }),
-  fam12({
+  fam13({
     id: "g8.data.table-mean",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36053,7 +37466,7 @@ var FAMILIES31 = [
     }),
     check: ({ n, tot }, a) => near2(a * n, tot)
   }),
-  fam12({
+  fam13({
     id: "g8.data.table-median",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36089,7 +37502,7 @@ var FAMILIES31 = [
       return n % 2 ? at((n + 1) / 2) === med : (at(n / 2) + at(n / 2 + 1)) / 2 === med;
     }
   }),
-  fam12({
+  fam13({
     id: "g8.data.new-mean",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36110,7 +37523,7 @@ var FAMILIES31 = [
     }),
     check: ({ m, x }, a) => a * 5 === 4 * m + x
   }),
-  fam12({
+  fam13({
     id: "g8.data.seven-days",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36139,14 +37552,14 @@ var FAMILIES31 = [
     }),
     check: ({ list, sorted }, v) => list.filter((q) => q === v[0]).length === 2 && sorted[3] === v[1] && v[2] * 7 === list.reduce((a, b) => a + b, 0)
   }),
-  fam12({
+  fam13({
     id: "g8.data.which-average-why",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
     rung: 3,
     form: "why",
     draw: () => {
-      const S3 = [
+      const S4 = [
         ["A shoe seller wants to know which size to stock the most of.", "mode"],
         ["A tailor wants to know which school uniform size is bought most often, to sew more of it.", "mode"],
         ["A duka owner records the flavour of soda bought each day and wants to know which to order the most of.", "mode"],
@@ -36157,7 +37570,7 @@ var FAMILIES31 = [
         ["Most houses in a village rent for about sh 3,000, but one big house rents for sh 60,000. A teacher wants one value that shows a typical rent.", "median"],
         ["Four learners walk about 2 km to school, and one walks 15 km. A teacher wants one value that shows a typical walk.", "median"]
       ];
-      const [what, right] = pick(S3);
+      const [what, right] = pick(S4);
       return { what, right };
     },
     make: ({ what, right }) => {
@@ -36171,7 +37584,7 @@ var FAMILIES31 = [
     }
   }),
   // ================================================================ PROBABILITY
-  fam12({
+  fam13({
     id: "g8.prob.bottle-top-table",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36193,7 +37606,7 @@ var FAMILIES31 = [
     }),
     check: ({ n, side }, a) => near2(a * n, side)
   }),
-  fam12({
+  fam13({
     id: "g8.prob.spinner-expected",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36216,7 +37629,7 @@ var FAMILIES31 = [
     }),
     check: ({ n, g, N }, v) => v[0] === g + (n - g) && near2(v[1] * v[0], g) && near2(v[2], g * N / n)
   }),
-  fam12({
+  fam13({
     id: "g8.prob.expected-times",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36236,7 +37649,7 @@ var FAMILIES31 = [
     }),
     check: ({ n, c, N }, a) => a * n === c * N
   }),
-  fam12({
+  fam13({
     id: "g8.prob.more-tosses-why",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36261,7 +37674,7 @@ var FAMILIES31 = [
 ];
 
 // src/ai-tutor/content/families/g7_num_alg.js
-var fam13 = (def) => family({ reviewed: false, ...def });
+var fam14 = (def) => family({ reviewed: false, ...def });
 var shuffle7 = (a) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
@@ -36314,11 +37727,11 @@ var mixed = (n, d) => {
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
   return `${a}/${b}`;
 };
-var FAMILIES32 = [
+var FAMILIES36 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.whole.place-chart",
     skill: "G7_PLACE_VALUE",
     outcome: "G7.WHOLE.a",
@@ -36345,7 +37758,7 @@ var FAMILIES32 = [
     },
     check: ({ ds, j, k }, a) => String(a).length === j + 1 && Number(String(ds[j]) + "0".repeat(j)) + Number(String(ds[k]) + "0".repeat(k)) === a
   }),
-  fam13({
+  fam14({
     id: "g7.whole.words-spot",
     skill: "G7_NUMBERS_WORDS",
     outcome: "G7.WHOLE.c",
@@ -36367,7 +37780,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.whole.words-cheque",
     skill: "G7_NUMBERS_WORDS",
     outcome: "G7.WHOLE.c",
@@ -36395,7 +37808,7 @@ var FAMILIES32 = [
       steps: [`Groups: ${commas(n).split(",").join(" | ")}.`, `In words: ${words4(n)}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.whole.round-report",
     skill: "G7_ROUNDING_WHOLE",
     outcome: "G7.WHOLE.d",
@@ -36417,7 +37830,7 @@ var FAMILIES32 = [
     }),
     check: ({ N }, a) => a % 1e8 === 0 && Math.abs(N - a) <= 5e7
   }),
-  fam13({
+  fam14({
     id: "g7.whole.prime-jerseys",
     skill: "G7_PRIMES",
     outcome: "G7.WHOLE.e",
@@ -36448,7 +37861,7 @@ var FAMILIES32 = [
     }),
     check: ({ v }, a) => v.filter((n) => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every((f) => n % f !== 0)).length === a
   }),
-  fam13({
+  fam14({
     id: "g7.whole.matatu-takings",
     skill: "G7_BODMAS_ADV",
     outcome: "G7.WHOLE.f",
@@ -36467,7 +37880,7 @@ var FAMILIES32 = [
     }),
     check: ({ f, k, F: F4, P: P2 }, a) => a + F4 + P2 === f * k
   }),
-  fam13({
+  fam14({
     id: "g7.whole.mangoes-spot",
     skill: "G7_BODMAS_ADV",
     outcome: "G7.WHOLE.f",
@@ -36493,7 +37906,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.whole.hall-rows",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.g",
@@ -36511,7 +37924,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, d, n }, x) => (x - a) % d === 0 && (x - a) / d + 1 === n
   }),
-  fam13({
+  fam14({
     id: "g7.whole.odd-term-out",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.g",
@@ -36535,7 +37948,7 @@ var FAMILIES32 = [
     },
     check: ({ a, d }, x) => (x - a) % d !== 0
   }),
-  fam13({
+  fam14({
     id: "g7.whole.rule-fourth-term",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.h",
@@ -36556,7 +37969,7 @@ var FAMILIES32 = [
     }),
     check: ({ m, c, t }, x) => (x - c) / m === t[2]
   }),
-  fam13({
+  fam14({
     id: "g7.whole.sticks-rule",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.h",
@@ -36567,21 +37980,21 @@ var FAMILIES32 = [
       const k = randInt(12, 20);
       return { ...s, k, S: s.f + (k - 1) * s.d, p: person() };
     },
-    make: ({ n, f, d, k, S: S3, p }) => ({
+    make: ({ n, f, d, k, S: S4, p }) => ({
       question: `${p.name} joins matchsticks to make a row of ${n}s. The first ${n} uses ${f} sticks. Each new ${n} shares a side with the one before, so it adds ${d} sticks. Use this rule to answer.`,
       parts: [
         { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`], [f + 4 * d, "The first shape is already in place. Only 3 more are added."], [f + 3, "Each new shape adds more than 1 stick."]] },
         { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: "The rule is added once for each shape after the first.", wrong: [[10 * f, "Shapes in the row share sides. Use the rule."], [f + 10 * d, "The first shape is not an addition. Count the added shapes again."], [10 * d, "The first shape uses more sticks than a new one adds."]] },
-        { prompt: `${p.name} has ${S3} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S3 / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, "Do not forget the first shape."], [Math.floor(S3 / d), "The first shape uses a different number of sticks from the new ones."]] }
+        { prompt: `${p.name} has ${S4} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S4 / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, "Do not forget the first shape."], [Math.floor(S4 / d), "The first shape uses a different number of sticks from the new ones."]] }
       ],
-      steps: [`4 shapes: ${f} + 3 \xD7 ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 \xD7 ${d} = ${f + 9 * d}.`, `${S3} \u2212 ${f} = ${S3 - f}, and ${S3 - f} \xF7 ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`]
+      steps: [`4 shapes: ${f} + 3 \xD7 ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 \xD7 ${d} = ${f + 9 * d}.`, `${S4} \u2212 ${f} = ${S4 - f}, and ${S4 - f} \xF7 ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`]
     }),
-    check: ({ f, d, k, S: S3 }, v) => v[0] === f + 3 * d && v[1] === f + 9 * d && v[2] === k && f + (v[2] - 1) * d === S3
+    check: ({ f, d, k, S: S4 }, v) => v[0] === f + 3 * d && v[1] === f + 9 * d && v[2] === k && f + (v[2] - 1) * d === S4
   }),
   // ======================================================================
   // FACTORS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.factors.div-baskets",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -36602,7 +38015,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.factors.eleven-spot",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -36630,7 +38043,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.factors.div-six-table",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -36653,7 +38066,7 @@ var FAMILIES32 = [
     }),
     check: ({ v }, a) => v.filter((n) => n % 2 === 0 && digitSum(n) % 3 === 0).length === a
   }),
-  fam13({
+  fam14({
     id: "g7.factors.prime-factor-spot",
     skill: "G7_PRIME_FACTORIZATION",
     outcome: "G7.FACTORS.b",
@@ -36677,7 +38090,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.factors.not-prime-why",
     skill: "G7_PRIMES",
     outcome: "G7.FACTORS.b",
@@ -36699,7 +38112,7 @@ var FAMILIES32 = [
       steps: [`${N} \xF7 ${p} = ${q}.`, `So ${N} has the factors ${p} and ${q}, and it is composite.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.factors.gcd-rope",
     skill: "G7_GCD",
     outcome: "G7.FACTORS.c",
@@ -36721,7 +38134,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd6(a / x, b / x) === 1
   }),
-  fam13({
+  fam14({
     id: "g7.factors.hcf-gift-boxes",
     skill: "G7_GCD",
     outcome: "G7.FACTORS.c",
@@ -36745,7 +38158,7 @@ var FAMILIES32 = [
     }),
     check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd6(n / a, nums[0] / a) >= 1) && gcd6(gcd6(nums[0] / a, nums[1] / a), nums[2] / a) === 1
   }),
-  fam13({
+  fam14({
     id: "g7.factors.lcm-matatus",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -36766,7 +38179,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd6(x / a, x / b) === 1
   }),
-  fam13({
+  fam14({
     id: "g7.factors.lcm-product-why",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -36789,7 +38202,7 @@ var FAMILIES32 = [
       steps: [`${a * b} is a common multiple, but not the smallest.`, `${L3} \xF7 ${a} = ${L3 / a} and ${L3} \xF7 ${b} = ${L3 / b}, so ${L3} is a smaller common multiple.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.factors.lcm-three-bells",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -36814,7 +38227,7 @@ var FAMILIES32 = [
   // ======================================================================
   // FRACTIONS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.frac.compare-books",
     skill: "G7_FRACTIONS_COMPARE",
     outcome: "G7.FRAC.a",
@@ -36845,7 +38258,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.frac.one-piece-short",
     skill: "G7_FRACTIONS_COMPARE",
     outcome: "G7.FRAC.a",
@@ -36871,7 +38284,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.frac.recip-cups",
     skill: "G7_RECIPROCALS",
     outcome: "G7.FRAC.e",
@@ -36890,7 +38303,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, b, L: L3 }, x) => x * a / b === L3
   }),
-  fam13({
+  fam14({
     id: "g7.frac.recip-mixed-why",
     skill: "G7_RECIPROCALS",
     outcome: "G7.FRAC.e",
@@ -36916,7 +38329,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.frac.div-operation",
     skill: "G7_FRACTIONS_DIV",
     outcome: "G7.FRAC.f",
@@ -36938,7 +38351,7 @@ var FAMILIES32 = [
       steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L3} ${item[1]} altogether.`, `The number of ${item[3]} is ${L3} \xF7 ${a}/${b}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.frac.div-tank-buckets",
     skill: "G7_FRACTIONS_DIV",
     outcome: "G7.FRAC.f",
@@ -36957,7 +38370,7 @@ var FAMILIES32 = [
       steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd6(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.frac.mul-land",
     skill: "G7_FRACTIONS_MUL",
     outcome: "G7.FRAC.d",
@@ -36978,7 +38391,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, b, c, d, N }, x) => x * b * d === N * a * c
   }),
-  fam13({
+  fam14({
     id: "g7.frac.seq-tank",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -36999,7 +38412,7 @@ var FAMILIES32 = [
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? "to" : "taking it from"} ${shown[3]} gives ${right}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.frac.seq-fill-table",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -37017,7 +38430,7 @@ var FAMILIES32 = [
     }),
     check: ({ m }, a) => a * 1 === m && a / 2 % 1 === 0 && a > 6
   }),
-  fam13({
+  fam14({
     id: "g7.frac.seq-rule",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -37040,7 +38453,7 @@ var FAMILIES32 = [
   // ======================================================================
   // DECIMALS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.dec.read-chart",
     skill: "G7_DECIMAL_PV",
     outcome: "G7.DEC.a",
@@ -37068,7 +38481,7 @@ var FAMILIES32 = [
     },
     check: ({ ds }, a) => String(a).replace(".", "").length >= 3 && Math.floor(a / 10) === ds[0] && Math.round(a * 1e3 % 10) === ds[4]
   }),
-  fam13({
+  fam14({
     id: "g7.dec.how-many-hundredths",
     skill: "G7_DECIMAL_PV",
     outcome: "G7.DEC.a",
@@ -37090,7 +38503,7 @@ var FAMILIES32 = [
     },
     check: ({ dp: dp3, N }, a) => a / 10 ** dp3 === round(N / 10 ** dp3, 2)
   }),
-  fam13({
+  fam14({
     id: "g7.dec.price-per-kg",
     skill: "G7_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -37109,7 +38522,7 @@ var FAMILIES32 = [
     }),
     check: ({ pr, q }, a) => a / q === pr
   }),
-  fam13({
+  fam14({
     id: "g7.dec.garden-steps",
     skill: "G7_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -37131,7 +38544,7 @@ var FAMILIES32 = [
     }),
     check: ({ L: L3, w, pr }, v) => Math.abs(v[0] / L3 - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L3 + w)) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.dec.ribbon-bows",
     skill: "G7_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -37150,7 +38563,7 @@ var FAMILIES32 = [
     }),
     check: ({ q, t }, a) => Math.abs(a * q - t) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.dec.beans-steps",
     skill: "G7_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -37175,7 +38588,7 @@ var FAMILIES32 = [
   // ======================================================================
   // SQUARES AND SQUARE ROOTS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.sq.garden-double",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37197,7 +38610,7 @@ var FAMILIES32 = [
     }),
     check: ({ s, pr }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / v[0] - 4) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.sq.decimal-spot",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37220,7 +38633,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.sq.fraction-options",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37240,7 +38653,7 @@ var FAMILIES32 = [
       steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd6(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.sq.plot-side",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37258,7 +38671,7 @@ var FAMILIES32 = [
     }),
     check: ({ s, pr }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] && v[2] / pr === v[1]
   }),
-  fam13({
+  fam14({
     id: "g7.sq.between-roots",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37275,7 +38688,7 @@ var FAMILIES32 = [
       steps: [`${k}\xB2 = ${k * k} and ${k + 1}\xB2 = ${(k + 1) ** 2}.`, `${A2} is between ${k * k} and ${(k + 1) ** 2}, so \u221A${A2} is between ${k} and ${k + 1}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.sq.root-of-sum-why",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37298,7 +38711,7 @@ var FAMILIES32 = [
       steps: [`${a * a} + ${b * b} = ${c * c}, and \u221A${c * c} = ${c}.`, `${a} + ${b} = ${a + b}, which is a different number, so the two methods do not agree.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.sq.root-table-sides",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37323,7 +38736,7 @@ var FAMILIES32 = [
   // ======================================================================
   // ALGEBRAIC EXPRESSIONS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.expr.vendor-table",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37346,7 +38759,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.expr.three-ages",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37365,7 +38778,7 @@ var FAMILIES32 = [
       steps: [`Child: x. Brother: x \u2212 ${j}. Mother: ${m}x.`, `Total: x + (x \u2212 ${j}) + ${m}x = ${m + 2}x \u2212 ${j}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.expr.perimeter-spot",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37387,7 +38800,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.simplify.triangle-plot",
     skill: "G7_SIMPLIFY",
     outcome: "G7.EXPR.c",
@@ -37415,7 +38828,7 @@ var FAMILIES32 = [
   // ======================================================================
   // LINEAR EQUATIONS
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.eq.form-books",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.a",
@@ -37437,7 +38850,7 @@ var FAMILIES32 = [
       steps: [`${a} books cost ${a}x.`, `Add the geometry set: ${a}x + ${b}.`, `The total is ${c}, so ${a}x + ${b} = ${c}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.eq.consecutive-spot",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.a",
@@ -37447,22 +38860,22 @@ var FAMILIES32 = [
       const n0 = randInt(5, 30);
       return { n0, S: 3 * n0 + 3, bug: pick(["divide", "move"]), p: person() };
     },
-    make: ({ n0, S: S3, bug, p }) => {
-      const k2 = 3, r3 = bug === "move" ? S3 + 3 : S3 - k2, n4 = bug === "divide" ? r3 * 3 : r3 / 3;
+    make: ({ n0, S: S4, bug, p }) => {
+      const k2 = 3, r3 = bug === "move" ? S4 + 3 : S4 - k2, n4 = bug === "divide" ? r3 * 3 : r3 / 3;
       return {
-        question: `The sum of three consecutive whole numbers is ${S3}. ${p.name} takes n as the smallest number, forms an equation and solves it. Here is ${p.her} working. Which step has the mistake?`,
+        question: `The sum of three consecutive whole numbers is ${S4}. ${p.name} takes n as the smallest number, forms an equation and solves it. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: "The numbers are n, n + 1 and n + 2.", ok: true },
           { text: "Add them: n + (n + 1) + (n + 2) = 3n + 3.", ok: true },
-          { text: `So 3n + 3 = ${S3}. Take 3 from both sides: 3n = ${S3} ${bug === "move" ? "+" : "\u2212"} 3 = ${r3}.`, ok: r3 === S3 - 3 },
+          { text: `So 3n + 3 = ${S4}. Take 3 from both sides: 3n = ${S4} ${bug === "move" ? "+" : "\u2212"} 3 = ${r3}.`, ok: r3 === S4 - 3 },
           { text: `Divide both sides by 3: n = ${r3} ${bug === "divide" ? "\xD7" : "\xF7"} 3 = ${n4}.`, ok: n4 === r3 / 3 }
         ],
-        fix: bug === "divide" ? `3n means 3 times n, so undo it by dividing: ${r3} \xF7 3, not ${r3} \xD7 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S3} \u2212 3, not ${S3} + 3.`,
-        steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S3}.`, `3n = ${S3 - 3}, so n = ${n0}.`]
+        fix: bug === "divide" ? `3n means 3 times n, so undo it by dividing: ${r3} \xF7 3, not ${r3} \xD7 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S4} \u2212 3, not ${S4} + 3.`,
+        steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S4}.`, `3n = ${S4 - 3}, so n = ${n0}.`]
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.eq.solve-from-table",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.b",
@@ -37483,7 +38896,7 @@ var FAMILIES32 = [
     }),
     check: ({ a, b, T: T3 }, x) => a * x + b === T3
   }),
-  fam13({
+  fam14({
     id: "g7.eq.both-sides-spot",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.b",
@@ -37508,26 +38921,26 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.eq.apply-ages",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.c",
     rung: 3,
     form: "word",
     draw: () => {
-      const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S3 = (m + 1) * x + 2 * t;
-      return distinct7(m * x, x, round(m * S3 / (m + 1), 2), m * x + t) ? { x, m, t, S: S3, p: person() } : null;
+      const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S4 = (m + 1) * x + 2 * t;
+      return distinct7(m * x, x, round(m * S4 / (m + 1), 2), m * x + t) ? { x, m, t, S: S4, p: person() } : null;
     },
-    make: ({ x, m, t, S: S3, p }) => ({
-      question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S3} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
+    make: ({ x, m, t, S: S4, p }) => ({
+      question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S4} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
       answer: m * x,
-      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round(m * S3 / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S3}.`], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
-      hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S3}.`],
-      steps: [`Now: ${p.name} is x, the mother is ${m}x. In ${t} years: x + ${t} and ${m}x + ${t}.`, `(x + ${t}) + (${m}x + ${t}) = ${S3}, so ${m + 1}x + ${2 * t} = ${S3}.`, `${m + 1}x = ${S3 - 2 * t}, x = ${x}. The mother is ${m} \xD7 ${x} = ${m * x}.`]
+      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round(m * S4 / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S4}.`], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
+      hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S4}.`],
+      steps: [`Now: ${p.name} is x, the mother is ${m}x. In ${t} years: x + ${t} and ${m}x + ${t}.`, `(x + ${t}) + (${m}x + ${t}) = ${S4}, so ${m + 1}x + ${2 * t} = ${S4}.`, `${m + 1}x = ${S4 - 2 * t}, x = ${x}. The mother is ${m} \xD7 ${x} = ${m * x}.`]
     }),
-    check: ({ m, t, S: S3 }, a) => a + t + (a / m + t) === S3
+    check: ({ m, t, S: S4 }, a) => a + t + (a / m + t) === S4
   }),
-  fam13({
+  fam14({
     id: "g7.eq.parking-table",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.c",
@@ -37548,7 +38961,7 @@ var FAMILIES32 = [
     }),
     check: ({ b, r, T: T3 }, a) => b + r * a === T3
   }),
-  fam13({
+  fam14({
     id: "g7.eq.mango-boxes",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.c",
@@ -37572,7 +38985,7 @@ var FAMILIES32 = [
   // ======================================================================
   // LINEAR INEQUALITIES
   // ======================================================================
-  fam13({
+  fam14({
     id: "g7.ineq.symbol-notice",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.a",
@@ -37591,7 +39004,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.true-statement",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.a",
@@ -37615,7 +39028,7 @@ var FAMILIES32 = [
       steps: [`Test each one with a = ${v}.`, `Only a ${opts2[0].op} ${opts2[0].k} is true: ${v} ${opts2[0].op} ${opts2[0].k}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.form-pickup",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -37634,7 +39047,7 @@ var FAMILIES32 = [
       steps: [`Total load: ${c} + ${s}n kg.`, `"At most ${commas(L3)}" means \u2264 ${commas(L3)}.`, `So ${c} + ${s}n \u2264 ${commas(L3)}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.seats-spot",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -37659,7 +39072,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.most-books",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -37678,7 +39091,7 @@ var FAMILIES32 = [
     }),
     check: ({ B: B2, g, e }, a) => g + e * a <= B2 && g + e * (a + 1) > B2
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.circle-why",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -37701,7 +39114,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.match-line",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -37719,7 +39132,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.which-in-shade",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -37739,7 +39152,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-swim",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37759,7 +39172,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-line",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37779,7 +39192,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-fridge",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37801,7 +39214,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-list",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37826,7 +39239,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-rides",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37850,7 +39263,7 @@ var FAMILIES32 = [
     }),
     check: ({ A: A2, rows }, a) => rows.map((r) => (A2 > r.lo || r.li && A2 === r.lo) && (A2 < r.hi || r.hi_i && A2 === r.hi)).filter(Boolean).length === a
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-solve-spot",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37879,7 +39292,7 @@ var FAMILIES32 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.ineq.compound-or-why",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -37906,7 +39319,7 @@ var FAMILIES32 = [
 ];
 
 // src/ai-tutor/content/families/g7_measure.js
-var fam14 = (def) => family({ reviewed: false, ...def });
+var fam15 = (def) => family({ reviewed: false, ...def });
 var uniq5 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
 var shuffle8 = (a) => {
   const b = [...a];
@@ -37930,9 +39343,9 @@ var isRight = (x, y, z) => {
 };
 var LETTERS2 = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 var F3 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
-var FAMILIES33 = [
+var FAMILIES37 = [
   // =========================================================== PYTHAGORAS
-  fam14({
+  fam15({
     id: "g7.pyth.name-hypotenuse",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.a",
@@ -37950,7 +39363,7 @@ var FAMILIES33 = [
       steps: [`The right angle is at ${q}, so the two sides that meet there are ${p}${q} and ${q}${r}.`, `The side left over, opposite ${q}, is the hypotenuse: ${p}${r}.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.which-triangle",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.b",
@@ -37978,7 +39391,7 @@ var FAMILIES33 = [
       })
     })
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.spot-missing-side",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.b",
@@ -38005,7 +39418,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.gate-brace",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38027,7 +39440,7 @@ var FAMILIES33 = [
     },
     check: ({ a, b }, v) => v * v === a * a + b * b
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.shortcut-path",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38046,7 +39459,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, c }, v) => v + c * 10 === (a + b) * 10
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.pole-wire",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38064,7 +39477,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, c, per }, v) => v[0] === a * a + b * b && v[1] * v[1] === v[0] && v[2] / per === v[1]
   }),
-  fam14({
+  fam15({
     id: "g7.pyth.why-345",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38087,7 +39500,7 @@ var FAMILIES33 = [
     })
   }),
   // =========================================================== LENGTH
-  fam14({
+  fam15({
     id: "g7.length.convert-story",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38119,7 +39532,7 @@ var FAMILIES33 = [
     },
     check: ({ f, t, v, raw }, a) => Math.abs(a * F3[t] - (raw ? v * 10 : v) * F3[f]) < 1e-9
   }),
-  fam14({
+  fam15({
     id: "g7.length.table-compare",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38142,7 +39555,7 @@ var FAMILIES33 = [
     }),
     check: ({ ma, mb }, a) => Math.abs(Math.min(ma, mb) + a - Math.max(ma, mb)) < 1e-9
   }),
-  fam14({
+  fam15({
     id: "g7.length.why-divide",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38164,7 +39577,7 @@ var FAMILIES33 = [
       steps: [`A ${f} is longer than a ${t}, so one ${f} holds many ${t}.`, `${v} ${f} = ${v} \xD7 ${commas(r)} = ${commas(v * r)} ${t}.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.length.spot-hm-cm",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38185,7 +39598,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.length.rope-left",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.b",
@@ -38205,7 +39618,7 @@ var FAMILIES33 = [
     }),
     check: ({ n, pc, R }, a) => Math.round((R - a) * 100) === n * pc
   }),
-  fam14({
+  fam15({
     id: "g7.length.fence-posts-line",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.b",
@@ -38225,7 +39638,7 @@ var FAMILIES33 = [
     check: ({ gap: gap2, L: L3 }, a) => (a - 1) * gap2 === L3
   }),
   // =========================================================== PERIMETER
-  fam14({
+  fam15({
     id: "g7.perim.l-shape",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38244,7 +39657,7 @@ var FAMILIES33 = [
     }),
     check: ({ w, h }, a) => a === w + h + w + h
   }),
-  fam14({
+  fam15({
     id: "g7.perim.longest-fence",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38265,7 +39678,7 @@ var FAMILIES33 = [
       steps: rows.map(([l, w], i) => `Plot ${"ABC"[i]}: 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} m.`)
     })
   }),
-  fam14({
+  fam15({
     id: "g7.perim.fence-posts-round",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38286,7 +39699,7 @@ var FAMILIES33 = [
     check: ({ gap: gap2, l, w }, a) => a * gap2 === 2 * (l + w)
   }),
   // =========================================================== CIRCUMFERENCE
-  fam14({
+  fam15({
     id: "g7.circ.wheel-distance",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38307,7 +39720,7 @@ var FAMILIES33 = [
     }),
     check: ({ n, c }, a) => a * 100 === c * n
   }),
-  fam14({
+  fam15({
     id: "g7.circ.find-diameter",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38326,7 +39739,7 @@ var FAMILIES33 = [
     }),
     check: ({ d }, a) => 22 * a / 7 === 22 * d / 7 && a === d
   }),
-  fam14({
+  fam15({
     id: "g7.circ.why-double",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38348,7 +39761,7 @@ var FAMILIES33 = [
       steps: [`First pond: \u03C0 \xD7 ${d}. Second pond: \u03C0 \xD7 ${2 * d}.`, "The second is 2 times the first: it is the area, not the distance round, that becomes 4 times as big."]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.circ.table-pattern",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38368,7 +39781,7 @@ var FAMILIES33 = [
     }),
     check: ({ target }, a) => a * 7 === target * 22
   }),
-  fam14({
+  fam15({
     id: "g7.circ.running-track",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38390,7 +39803,7 @@ var FAMILIES33 = [
     check: ({ d, s }, a) => a[0] * 7 === 22 * d && a[1] === 2 * s && a[2] === a[0] + a[1]
   }),
   // =========================================================== AREA
-  fam14({
+  fam15({
     id: "g7.area.acres-to-m2",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38406,7 +39819,7 @@ var FAMILIES33 = [
     }),
     check: ({ n }, a) => a / 4e3 === n
   }),
-  fam14({
+  fam15({
     id: "g7.area.hectares-field",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38426,7 +39839,7 @@ var FAMILIES33 = [
     }),
     check: ({ l, w }, a) => a * 1e4 === l * w
   }),
-  fam14({
+  fam15({
     id: "g7.area.spot-m2-cm2",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38448,7 +39861,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.area.table-total-ha",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38469,7 +39882,7 @@ var FAMILIES33 = [
     }),
     check: ({ v }, a) => Math.round(a * 1e4) === v[0] + v[1] + v[2]
   }),
-  fam14({
+  fam15({
     id: "g7.area.parallelogram-slant",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38488,7 +39901,7 @@ var FAMILIES33 = [
     }),
     check: ({ b, h }, a) => a / b === h
   }),
-  fam14({
+  fam15({
     id: "g7.area.trapezium-shamba",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38507,7 +39920,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, h }, v) => v * 2 === (a + b) * h
   }),
-  fam14({
+  fam15({
     id: "g7.area.trapezium-missing",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38530,7 +39943,7 @@ var FAMILIES33 = [
     },
     check: ({ a, b, h }, v) => v[0] * h / 2 === (a + b) * h / 2 && v[1] + a === v[0]
   }),
-  fam14({
+  fam15({
     id: "g7.area.spot-trapezium",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38555,7 +39968,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.area.why-height",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38577,7 +39990,7 @@ var FAMILIES33 = [
       steps: ["Moving the triangle makes a rectangle with the same area.", `Its sides are the base ${b} cm and the height ${h} cm, so the area is ${b} \xD7 ${h} = ${b * h} cm\xB2.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.area.tiles-floor",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38599,7 +40012,7 @@ var FAMILIES33 = [
     }),
     check: ({ L: L3, W: W3, t }, a) => a * t * t === L3 * 100 * W3 * 100
   }),
-  fam14({
+  fam15({
     id: "g7.area.circle-diameter",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -38615,7 +40028,7 @@ var FAMILIES33 = [
     }),
     check: ({ d }, a) => a * 7 / 22 === d / 2 * (d / 2)
   }),
-  fam14({
+  fam15({
     id: "g7.area.semicircle-window",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -38631,7 +40044,7 @@ var FAMILIES33 = [
     }),
     check: ({ d }, a) => a * 2 * 7 / 22 === (d / 2) ** 2
   }),
-  fam14({
+  fam15({
     id: "g7.area.from-circumference",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -38649,7 +40062,7 @@ var FAMILIES33 = [
     }),
     check: ({ r }, v) => v[0] === 2 * r && v[1] * 2 === v[0] && v[2] * 7 === 22 * v[1] * v[1]
   }),
-  fam14({
+  fam15({
     id: "g7.area.why-radius-double",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -38668,7 +40081,7 @@ var FAMILIES33 = [
       steps: [`Small mat: \u03C0 \xD7 ${r} \xD7 ${r}. Big mat: \u03C0 \xD7 ${2 * r} \xD7 ${2 * r}.`, `${2 * r} \xD7 ${2 * r} is 4 times ${r} \xD7 ${r}, so the area is 4 times as big.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.area.path-around",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.d",
@@ -38688,7 +40101,7 @@ var FAMILIES33 = [
     }),
     check: ({ l, w, x }, a) => a + l * w === (l + 2 * x) * (w + 2 * x)
   }),
-  fam14({
+  fam15({
     id: "g7.area.l-floor-cost",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.d",
@@ -38707,7 +40120,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, c, d, per }, v) => v[0] === a * b && v[1] === c * d && v[2] === v[0] + v[1] && v[3] / per === v[2]
   }),
-  fam14({
+  fam15({
     id: "g7.area.rect-and-semicircle",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.d",
@@ -38725,7 +40138,7 @@ var FAMILIES33 = [
     }),
     check: ({ w, l }, v) => v[0] === l * w && v[1] * 7 * 2 === 22 * (w / 2) ** 2 && v[2] === v[0] + v[1]
   }),
-  fam14({
+  fam15({
     id: "g7.area.pond-path-ring",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.d",
@@ -38744,7 +40157,7 @@ var FAMILIES33 = [
     check: ({ r, x }, v) => v[0] === r + x && v[1] * 7 === 22 * v[0] * v[0] && v[2] + 22 * r * r / 7 === v[1]
   }),
   // =========================================================== VOLUME AND CAPACITY
-  fam14({
+  fam15({
     id: "g7.vol.why-million",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -38763,7 +40176,7 @@ var FAMILIES33 = [
       steps: ["1 m\xB3 = 100 cm \xD7 100 cm \xD7 100 cm = 1,000,000 cm\xB3.", `${n} m\xB3 = ${n} \xD7 1,000,000 = ${commas(n * 1e6)} cm\xB3.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.vol.spot-m3-cm3",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -38785,7 +40198,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.vol.blocks-in-cubic-metre",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -38805,7 +40218,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, c }, n) => n * a * b * c === 1e6
   }),
-  fam14({
+  fam15({
     id: "g7.vol.cube-edges",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -38824,7 +40237,7 @@ var FAMILIES33 = [
     }),
     check: ({ E }, a) => Math.round(Math.cbrt(a)) * 12 === E
   }),
-  fam14({
+  fam15({
     id: "g7.vol.cylinder-diameter",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.c",
@@ -38840,7 +40253,7 @@ var FAMILIES33 = [
     }),
     check: ({ d, h }, a) => a * 7 / 22 === d / 2 * (d / 2) * h
   }),
-  fam14({
+  fam15({
     id: "g7.vol.drum-litres",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.d",
@@ -38862,7 +40275,7 @@ var FAMILIES33 = [
     }),
     check: ({ r, h }, a) => a[0] * 7 === 22 * r * r && a[1] === a[0] * h && a[2] * 1e3 === a[1]
   }),
-  fam14({
+  fam15({
     id: "g7.vol.cylinder-height",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.c",
@@ -38881,7 +40294,7 @@ var FAMILIES33 = [
     }),
     check: ({ r, V: V2 }, a) => a * 22 * r * r === V2 * 7
   }),
-  fam14({
+  fam15({
     id: "g7.vol.tank-litres",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -38901,7 +40314,7 @@ var FAMILIES33 = [
     }),
     check: ({ l, w, h }, a) => Math.abs(a / 1e3 - l * w * h) < 1e-9
   }),
-  fam14({
+  fam15({
     id: "g7.vol.jerricans-fill-tank",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -38921,7 +40334,7 @@ var FAMILIES33 = [
     }),
     check: ({ L: L3 }, a) => a * 20 === L3
   }),
-  fam14({
+  fam15({
     id: "g7.vol.days-of-water",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -38944,7 +40357,7 @@ var FAMILIES33 = [
     }),
     check: ({ t, V: V2 }, a) => a * t === Math.round(V2 * 1e3)
   }),
-  fam14({
+  fam15({
     id: "g7.vol.cups-from-can",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -38965,7 +40378,7 @@ var FAMILIES33 = [
     check: ({ c, L: L3 }, a) => a * c === L3 * 1e3
   }),
   // =========================================================== TIME, DISTANCE AND SPEED
-  fam14({
+  fam15({
     id: "g7.speed.seconds-to-hm",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -38986,7 +40399,7 @@ var FAMILIES33 = [
     },
     check: ({ h, m }, v) => v[0] * 60 === (h * 60 + m) * 60 && v[1] * 60 + v[2] === v[0]
   }),
-  fam14({
+  fam15({
     id: "g7.speed.timetable-moving",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -39010,7 +40423,7 @@ var FAMILIES33 = [
     },
     check: ({ t0, wait, a2 }, a) => a + wait === a2 - t0
   }),
-  fam14({
+  fam15({
     id: "g7.speed.timetable-speed",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39038,7 +40451,7 @@ var FAMILIES33 = [
     },
     check: ({ km, mins }, a) => Math.round(a * mins) === km * 60
   }),
-  fam14({
+  fam15({
     id: "g7.speed.laps-km",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.c",
@@ -39057,7 +40470,7 @@ var FAMILIES33 = [
     }),
     check: ({ L: L3, n }, a) => Math.round(a * 1e3) === L3 * n
   }),
-  fam14({
+  fam15({
     id: "g7.speed.walk-to-school-week",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.c",
@@ -39076,7 +40489,7 @@ var FAMILIES33 = [
     }),
     check: ({ d, days }, a) => Math.round(a * 1e3) === 2 * d * days
   }),
-  fam14({
+  fam15({
     id: "g7.speed.hours-and-minutes",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39099,7 +40512,7 @@ var FAMILIES33 = [
     },
     check: ({ d, t }, a) => Math.abs(a * t - d) < 1e-9
   }),
-  fam14({
+  fam15({
     id: "g7.speed.minutes-for-trip",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -39122,7 +40535,7 @@ var FAMILIES33 = [
     },
     check: ({ v, d, mins }, a) => a * v === d * 60
   }),
-  fam14({
+  fam15({
     id: "g7.speed.spot-minutes-hours",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39145,7 +40558,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.speed.average-two-legs",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39170,7 +40583,7 @@ var FAMILIES33 = [
     },
     check: ({ v1, v2, D: D3 }, a) => a[0] * v1 === D3 && a[1] * v2 === D3 && a[2] * (a[0] + a[1]) === 2 * D3
   }),
-  fam14({
+  fam15({
     id: "g7.speed.ms-steps",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39191,7 +40604,7 @@ var FAMILIES33 = [
     }),
     check: ({ d, t }, a) => a[0] * t === d && a[1] === a[0] * 3600 && Math.abs(a[2] * 1e3 - a[1]) < 1e-6
   }),
-  fam14({
+  fam15({
     id: "g7.speed.kmh-to-ms-animal",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39211,7 +40624,7 @@ var FAMILIES33 = [
     }),
     check: ({ v, kmh }, a) => Math.abs(a * 3.6 - kmh) < 1e-9
   }),
-  fam14({
+  fam15({
     id: "g7.speed.why-divide-60",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39233,7 +40646,7 @@ var FAMILIES33 = [
       steps: ["1 hour = 60 \xD7 60 = 3,600 seconds.", `${kmh} km/h = ${commas(kmh * 1e3)} m in 3,600 s = ${v} m/s.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.speed.fastest-mixed-units",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39258,7 +40671,7 @@ var FAMILIES33 = [
     }
   }),
   // =========================================================== TEMPERATURE
-  fam14({
+  fam15({
     id: "g7.temp.word-from-table",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.a",
@@ -39277,7 +40690,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.temp.rise-then-fall",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.b",
@@ -39296,7 +40709,7 @@ var FAMILIES33 = [
     }),
     check: ({ s, r, f }, a) => a + f - r === s
   }),
-  fam14({
+  fam15({
     id: "g7.temp.spot-kelvin-minus",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.d",
@@ -39317,7 +40730,7 @@ var FAMILIES33 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.temp.daily-range-graph",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.b",
@@ -39343,7 +40756,7 @@ var FAMILIES33 = [
     check: ({ vals }, a) => Math.min(...vals) + a === Math.max(...vals)
   }),
   // =========================================================== MONEY
-  fam14({
+  fam15({
     id: "g7.money.profit-tomatoes",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39362,7 +40775,7 @@ var FAMILIES33 = [
     }),
     check: ({ c, m, n }, a) => n * c + a === n * (c + m)
   }),
-  fam14({
+  fam15({
     id: "g7.money.loss-fault",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39382,7 +40795,7 @@ var FAMILIES33 = [
     }),
     check: ({ c, l }, a) => c - a === c - l
   }),
-  fam14({
+  fam15({
     id: "g7.money.cement-transport",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39403,7 +40816,7 @@ var FAMILIES33 = [
     }),
     check: ({ c, n, t, m }, v) => v[0] === n * c + t && v[1] === n * (c + m) && v[2] === v[1] - v[0]
   }),
-  fam14({
+  fam15({
     id: "g7.money.percent-profit",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39423,7 +40836,7 @@ var FAMILIES33 = [
     }),
     check: ({ c, pc, pr }, a) => c * a / 100 === pr
   }),
-  fam14({
+  fam15({
     id: "g7.money.spot-percent-profit",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39445,7 +40858,7 @@ var FAMILIES33 = [
       steps: [`${pr} \xF7 ${c} = ${pc / 100}.`, `${pc / 100} \xD7 100 = ${pc}%.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.money.table-best-percent",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39468,7 +40881,7 @@ var FAMILIES33 = [
       steps: rows.map((r, i) => `${names[i]}: profit ${r.pr}, ${r.pr} \xF7 ${r.c} \xD7 100 = ${r.pc}%.`)
     })
   }),
-  fam14({
+  fam15({
     id: "g7.money.reverse-discount",
     skill: "G7_PERCENTAGES",
     outcome: "G7.MONEY.c",
@@ -39476,19 +40889,19 @@ var FAMILIES33 = [
     form: "word",
     draw: () => {
       const M5 = pick([500, 800, 1e3, 1200, 1500, 2e3, 2500, 4e3]), d = pick([10, 20, 25, 40]);
-      const S3 = M5 * (100 - d) / 100;
-      return Number.isInteger(S3) && uniq5(M5, S3 * (100 + d) / 100, S3 + d, S3 * 100 / d) ? { M: M5, d, S: S3, p: person(), item: pick(["jacket", "pair of shoes", "school bag"]) } : null;
+      const S4 = M5 * (100 - d) / 100;
+      return Number.isInteger(S4) && uniq5(M5, S4 * (100 + d) / 100, S4 + d, S4 * 100 / d) ? { M: M5, d, S: S4, p: person(), item: pick(["jacket", "pair of shoes", "school bag"]) } : null;
     },
-    make: ({ M: M5, d, S: S3, p, item }) => ({
-      question: `A shop gives ${d}% discount on a ${item}. ${p.name} pays ${sh(S3)} after the discount. What was the price marked on the ${item} before the discount?`,
+    make: ({ M: M5, d, S: S4, p, item }) => ({
+      question: `A shop gives ${d}% discount on a ${item}. ${p.name} pays ${sh(S4)} after the discount. What was the price marked on the ${item} before the discount?`,
       answer: M5,
-      wrong: [[round(S3 * (100 + d) / 100, 2), `The discount was taken off the marked price, so ${sh(S3)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S3)} gives the wrong base.`], [S3 + d, "The discount is a percentage, not an amount of shillings."], [round(S3 * 100 / d, 2), `${sh(S3)} is ${100 - d}% of the marked price, not ${d}%.`]],
+      wrong: [[round(S4 * (100 + d) / 100, 2), `The discount was taken off the marked price, so ${sh(S4)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S4)} gives the wrong base.`], [S4 + d, "The discount is a percentage, not an amount of shillings."], [round(S4 * 100 / d, 2), `${sh(S4)} is ${100 - d}% of the marked price, not ${d}%.`]],
       hints: [`After a ${d}% discount, ${p.name} pays what percentage of the marked price?`, "Find 1% of the marked price, then 100%."],
-      steps: [`Paid = 100% \u2212 ${d}% = ${100 - d}% of the marked price.`, `${100 - d}% is ${sh(S3)}, so 1% is ${sh(round(S3 / (100 - d), 4))} and 100% is ${sh(M5)}.`]
+      steps: [`Paid = 100% \u2212 ${d}% = ${100 - d}% of the marked price.`, `${100 - d}% is ${sh(S4)}, so 1% is ${sh(round(S4 / (100 - d), 4))} and 100% is ${sh(M5)}.`]
     }),
-    check: ({ d, S: S3 }, a) => a * (100 - d) / 100 === S3
+    check: ({ d, S: S4 }, a) => a * (100 - d) / 100 === S4
   }),
-  fam14({
+  fam15({
     id: "g7.money.why-two-discounts",
     skill: "G7_PERCENTAGES",
     outcome: "G7.MONEY.c",
@@ -39510,52 +40923,52 @@ var FAMILIES33 = [
       steps: [`Start at 100. After ${d1}% off: ${100 - d1}.`, `${d2}% of ${100 - d1} is ${round((100 - d1) * d2 / 100, 2)}, so the price is ${round(100 - tot, 2)}. Altogether ${tot}% cheaper.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.money.commission-above-target",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.d",
     rung: 3,
     form: "word",
     draw: () => {
-      const b = pick([15e3, 18e3, 2e4, 25e3]), r = pick([2, 3, 4, 5]), T3 = pick([5e4, 1e5, 2e5]), S3 = T3 + pick([5e4, 1e5, 15e4]);
-      const c = r * (S3 - T3) / 100;
-      return uniq5(b + c, b + r * S3 / 100, c, b + r * T3 / 100) ? { b, r, T: T3, S: S3, c, p: person() } : null;
+      const b = pick([15e3, 18e3, 2e4, 25e3]), r = pick([2, 3, 4, 5]), T3 = pick([5e4, 1e5, 2e5]), S4 = T3 + pick([5e4, 1e5, 15e4]);
+      const c = r * (S4 - T3) / 100;
+      return uniq5(b + c, b + r * S4 / 100, c, b + r * T3 / 100) ? { b, r, T: T3, S: S4, c, p: person() } : null;
     },
-    make: ({ b, r, T: T3, S: S3, c, p }) => ({
-      question: `${p.name} sells phones. ${p.She} is paid a basic salary of ${sh(b)} a month. ${p.She} also earns ${r}% commission on the value of sales above ${sh(T3)}. This month ${p.she} sells goods worth ${sh(S3)}. How much is ${p.her} pay for the month?`,
+    make: ({ b, r, T: T3, S: S4, c, p }) => ({
+      question: `${p.name} sells phones. ${p.She} is paid a basic salary of ${sh(b)} a month. ${p.She} also earns ${r}% commission on the value of sales above ${sh(T3)}. This month ${p.she} sells goods worth ${sh(S4)}. How much is ${p.her} pay for the month?`,
       answer: b + c,
-      wrong: [[b + r * S3 / 100, `The commission is only on the sales above ${sh(T3)}.`], [c, "That is the commission only. Add the basic salary."], [b + r * T3 / 100, "Use the part of the sales above the target, not the target itself."]],
+      wrong: [[b + r * S4 / 100, `The commission is only on the sales above ${sh(T3)}.`], [c, "That is the commission only. Add the basic salary."], [b + r * T3 / 100, "Use the part of the sales above the target, not the target itself."]],
       hints: ["How much of the sales is above the target?", "Work out the commission on that part only, then add the basic salary."],
-      steps: [`Sales above target: ${sh(S3)} \u2212 ${sh(T3)} = ${sh(S3 - T3)}.`, `Commission: ${r}% of ${sh(S3 - T3)} = ${sh(c)}. Pay = ${sh(b)} + ${sh(c)} = ${sh(b + c)}.`]
+      steps: [`Sales above target: ${sh(S4)} \u2212 ${sh(T3)} = ${sh(S4 - T3)}.`, `Commission: ${r}% of ${sh(S4 - T3)} = ${sh(c)}. Pay = ${sh(b)} + ${sh(c)} = ${sh(b + c)}.`]
     }),
-    check: ({ b, r, T: T3, S: S3 }, a) => (a - b) * 100 / r === S3 - T3
+    check: ({ b, r, T: T3, S: S4 }, a) => (a - b) * 100 / r === S4 - T3
   }),
-  fam14({
+  fam15({
     id: "g7.money.spot-commission-decimal",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.d",
     rung: 2,
     form: "spot",
     draw: () => {
-      const r = pick([3, 4, 5, 6, 8]), S3 = pick([12e4, 24e4, 3e5, 45e4]);
-      return { r, S: S3, p: person() };
+      const r = pick([3, 4, 5, 6, 8]), S4 = pick([12e4, 24e4, 3e5, 45e4]);
+      return { r, S: S4, p: person() };
     },
-    make: ({ r, S: S3, p }) => {
+    make: ({ r, S: S4, p }) => {
       const bad = r / 10, good = r / 100;
       return {
-        question: `A land agent earns ${r}% commission on sales of ${sh(S3)}. ${p.name} works out the commission. Which step has the mistake?`,
+        question: `A land agent earns ${r}% commission on sales of ${sh(S4)}. ${p.name} works out the commission. Which step has the mistake?`,
         working: [
           { text: "Commission = rate \xD7 value of sales", ok: true },
           { text: `${r}% as a decimal = ${bad}`, ok: bad === good },
-          { text: `${bad} \xD7 ${commas(S3)} = ${commas(bad * S3)}`, ok: round(bad * S3, 2) === round(bad * S3, 2) },
-          { text: `The agent earns ${sh(bad * S3)}.`, ok: true }
+          { text: `${bad} \xD7 ${commas(S4)} = ${commas(bad * S4)}`, ok: round(bad * S4, 2) === round(bad * S4, 2) },
+          { text: `The agent earns ${sh(bad * S4)}.`, ok: true }
         ],
         fix: `${r}% means ${r} out of 100, so the decimal is ${r} \xF7 100.`,
-        steps: [`${r}% = ${r} \xF7 100 = ${good}.`, `${good} \xD7 ${commas(S3)} = ${sh(round(good * S3, 2))}.`]
+        steps: [`${r}% = ${r} \xF7 100 = ${good}.`, `${good} \xD7 ${commas(S4)} = ${sh(round(good * S4, 2))}.`]
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.money.electricity-bill",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -39575,7 +40988,7 @@ var FAMILIES33 = [
     }),
     check: ({ u, rate: rate2, fixed }, a) => (a - fixed) / rate2 === u
   }),
-  fam14({
+  fam15({
     id: "g7.money.water-bill-bands",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -39595,7 +41008,7 @@ var FAMILIES33 = [
     }),
     check: ({ a, b, c, n, F: F4 }, v) => v - F4 - 10 * a - 10 * b === (n - 20) * c
   }),
-  fam14({
+  fam15({
     id: "g7.money.shop-bill-change",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -39618,27 +41031,27 @@ var FAMILIES33 = [
     }),
     check: ({ rows, note }, a) => note - a === rows.reduce((s, r) => s + r.q * r.pr, 0)
   }),
-  fam14({
+  fam15({
     id: "g7.money.kplc-tokens",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
     rung: 2,
     form: "word",
     draw: () => {
-      const S3 = pick([500, 1e3, 1500, 2e3]), C = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]);
-      const n = (S3 - C) / u;
-      return Number.isInteger(n) && uniq5(n, S3 / u, S3 - C, C / u) ? { S: S3, C, u, n, p: person() } : null;
+      const S4 = pick([500, 1e3, 1500, 2e3]), C = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]);
+      const n = (S4 - C) / u;
+      return Number.isInteger(n) && uniq5(n, S4 / u, S4 - C, C / u) ? { S: S4, C, u, n, p: person() } : null;
     },
-    make: ({ S: S3, C, u, n, p }) => ({
-      question: `${p.name} buys KPLC tokens for ${sh(S3)}. In this question, ${sh(C)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
+    make: ({ S: S4, C, u, n, p }) => ({
+      question: `${p.name} buys KPLC tokens for ${sh(S4)}. In this question, ${sh(C)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
       answer: n,
-      wrong: [[round(S3 / u, 2), `The charges of ${sh(C)} are taken first. Only the rest buys units.`], [S3 - C, "That is the money left for units. Divide it by the price of one unit."], [round(C / u, 2), "The units are bought with the money left after the charges, not with the charges."]],
+      wrong: [[round(S4 / u, 2), `The charges of ${sh(C)} are taken first. Only the rest buys units.`], [S4 - C, "That is the money left for units. Divide it by the price of one unit."], [round(C / u, 2), "The units are bought with the money left after the charges, not with the charges."]],
       hints: ["How much money is left after the charges?", "Divide that money by the price of one unit."],
-      steps: [`Money for units = ${sh(S3)} \u2212 ${sh(C)} = ${sh(S3 - C)}.`, `Units = ${S3 - C} \xF7 ${u} = ${n}.`]
+      steps: [`Money for units = ${sh(S4)} \u2212 ${sh(C)} = ${sh(S4 - C)}.`, `Units = ${S4 - C} \xF7 ${u} = ${n}.`]
     }),
-    check: ({ S: S3, C, u }, a) => a * u + C === S3
+    check: ({ S: S4, C, u }, a) => a * u + C === S4
   }),
-  fam14({
+  fam15({
     id: "g7.money.parcels-table",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.g",
@@ -39668,7 +41081,7 @@ var FAMILIES33 = [
     },
     check: ({ ans, ch, ms }, a) => a === ms.reduce((s, m) => s + ch[m <= 500 ? 0 : m <= 1e3 ? 1 : m <= 2e3 ? 2 : 3], 0)
   }),
-  fam14({
+  fam15({
     id: "g7.money.parcel-per-100g",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.g",
@@ -39687,7 +41100,7 @@ var FAMILIES33 = [
     }),
     check: ({ F: F4, E, k }, a) => (a - F4) / E === k - 1
   }),
-  fam14({
+  fam15({
     id: "g7.money.mobile-two-sends",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.h",
@@ -39711,7 +41124,7 @@ var FAMILIES33 = [
     }),
     check: ({ ch, X, Y: Y2, ans, band }, a) => a === ch[band(X)] + ch[band(Y2)]
   }),
-  fam14({
+  fam15({
     id: "g7.money.mobile-withdraw-left",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.h",
@@ -39737,7 +41150,7 @@ var FAMILIES33 = [
 ];
 
 // src/ai-tutor/content/families/g7_geo_data.js
-var fam15 = (def) => family({ reviewed: false, ...def });
+var fam16 = (def) => family({ reviewed: false, ...def });
 var rot4 = (arr, k) => {
   const n = k % arr.length;
   return [...arr.slice(n), ...arr.slice(0, n)];
@@ -39762,9 +41175,9 @@ var freqModel = (c, fs) => ({ type: "table", data: { head: [c.h, "Frequency"], r
 var tally = (f) => [...Array(Math.floor(f / 5)).fill("||||/"), "|".repeat(f % 5)].filter(Boolean).join(" ");
 var SCALES = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3];
 var THINGS = [{ t: "kilograms of maize", u: "kg" }, { t: "litres of milk", u: "litres" }, { t: "mangoes", u: "mangoes" }, { t: "exercise books", u: "books" }];
-var FAMILIES34 = [
+var FAMILIES38 = [
   // ================================================================ ANGLES
-  fam15({
+  fam16({
     id: "g7.angles.point-cake",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -39786,7 +41199,7 @@ var FAMILIES34 = [
     }),
     check: ({ a, b, c }, v) => a + b + c + v === 360
   }),
-  fam15({
+  fam16({
     id: "g7.angles.line-algebra",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -39811,7 +41224,7 @@ var FAMILIES34 = [
       return [A2, B2].some((t) => Number.isInteger(t) && 3 * t + p + 2 * t + q === 180);
     }
   }),
-  fam15({
+  fam16({
     id: "g7.angles.opposite-why",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -39833,7 +41246,7 @@ var FAMILIES34 = [
       steps: ["Opposite angles at a crossing are equal (vertically opposite angles).", `So the angle opposite ${a}\xB0 is also ${a}\xB0.`, `The angle beside it on the line is ${180 - a}\xB0, and that is the one ${p.name} found.`]
     })
   }),
-  fam15({
+  fam16({
     id: "g7.angles.transversal-reason",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -39862,7 +41275,7 @@ var FAMILIES34 = [
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.angles.gate-brace",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -39880,7 +41293,7 @@ var FAMILIES34 = [
     }),
     check: ({ a }, v) => v[0] === a && v[0] + v[1] === 180 && v[2] === v[0]
   }),
-  fam15({
+  fam16({
     id: "g7.angles.spot-cointerior",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -39910,7 +41323,7 @@ var FAMILIES34 = [
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.angles.gable-isosceles",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -39929,7 +41342,7 @@ var FAMILIES34 = [
     }),
     check: ({ t }, a) => 2 * a + t === 180
   }),
-  fam15({
+  fam16({
     id: "g7.angles.triangle-algebra",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -39952,7 +41365,7 @@ var FAMILIES34 = [
     }),
     check: ({ p, q }, v) => v[0] === p + q && 4 * v[1] + v[0] === 180 && v[1] + (v[1] + p) + (2 * v[1] + q) === 180 && v[2] === Math.max(v[1], v[1] + p, 2 * v[1] + q)
   }),
-  fam15({
+  fam16({
     id: "g7.angles.exterior-triangle",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -39971,7 +41384,7 @@ var FAMILIES34 = [
     }),
     check: ({ e, pA }, a) => a + pA + (180 - e) === 180
   }),
-  fam15({
+  fam16({
     id: "g7.angles.quad-why",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -39990,7 +41403,7 @@ var FAMILIES34 = [
       steps: ["One diagonal splits the shape into two triangles.", "The angles of each triangle add up to 180\xB0, and the angles of the two triangles together make the angles of the shape: 2 \xD7 180\xB0 = 360\xB0."]
     })
   }),
-  fam15({
+  fam16({
     id: "g7.angles.parallelogram-steps",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40008,7 +41421,7 @@ var FAMILIES34 = [
     }),
     check: ({ a }, v) => v[0] === a && v[1] === 180 - a && v[2] === v[0] + v[1] + v[0] + v[1]
   }),
-  fam15({
+  fam16({
     id: "g7.angles.parallelogram-why",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40027,7 +41440,7 @@ var FAMILIES34 = [
       steps: ["AD and BC are parallel, and AB crosses them.", `Angles A and B are co-interior, so they add up to 180\xB0: B = 180 \u2212 ${a} = ${180 - a}\xB0.`]
     })
   }),
-  fam15({
+  fam16({
     id: "g7.angles.rhombus-diagonal",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40046,7 +41459,7 @@ var FAMILIES34 = [
     }),
     check: ({ b }, a) => 2 * a + b === 180
   }),
-  fam15({
+  fam16({
     id: "g7.angles.polygon-sum-table",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40059,29 +41472,29 @@ var FAMILIES34 = [
       const row = (n) => ({ cells: [name[n], String(n), String(n - 2), String((n - 2) * 180)] });
       const hidden = { cells: [type === "sum" ? name[target] : "?", type === "sum" ? String(target) : "?", "?", "?"] };
       const rows = known === 5 ? [row(3), row(4), row(5), hidden] : [row(3), row(4), hidden, row(6)];
-      const S3 = (target - 2) * 180;
+      const S4 = (target - 2) * 180;
       const common = { model: { type: "table", data: { head: ["Shape", "Sides", "Triangles", "Angle sum \xB0"], rows } } };
       return type === "sum" ? {
         ...common,
         story: false,
         question: `The table shows how the angle sum of a polygon grows. Use it to find the sum of the interior angles of the ${name[target].toLowerCase()}, in degrees.`,
-        answer: S3,
+        answer: S4,
         wrong: [[target * 180, "The polygon splits into 2 fewer triangles than it has sides."], [(target - 1) * 180, "Look at the pattern in the table: how many fewer triangles than sides?"], [(target - 3) * 180, "Count the triangles again. The table shows the pattern."]],
         hints: ["Look at how the number of triangles changes with the number of sides.", "Each triangle has an angle sum of 180\xB0."],
-        steps: [`The number of triangles is 2 fewer than the number of sides: ${target} \u2212 2 = ${target - 2}.`, `${target - 2} \xD7 180 = ${S3}\xB0.`]
+        steps: [`The number of triangles is 2 fewer than the number of sides: ${target} \u2212 2 = ${target - 2}.`, `${target - 2} \xD7 180 = ${S4}\xB0.`]
       } : {
         ...common,
         story: false,
-        question: `The table shows how the angle sum of a polygon grows. The interior angles of one more polygon add up to ${S3}\xB0. How many sides does it have?`,
+        question: `The table shows how the angle sum of a polygon grows. The interior angles of one more polygon add up to ${S4}\xB0. How many sides does it have?`,
         answer: target,
-        wrong: [[S3 / 180, "That is the number of triangles. The polygon has 2 more sides than triangles."], [S3 / 180 + 1, "Look at the table: sides are always 2 more than triangles."], [S3 / 90, "Divide the sum by 180\xB0 to count triangles, then use the table pattern."]],
+        wrong: [[S4 / 180, "That is the number of triangles. The polygon has 2 more sides than triangles."], [S4 / 180 + 1, "Look at the table: sides are always 2 more than triangles."], [S4 / 90, "Divide the sum by 180\xB0 to count triangles, then use the table pattern."]],
         hints: ["How many triangles of 180\xB0 fit in the sum?", "In the table, how many more sides than triangles are there?"],
-        steps: [`${S3} \xF7 180 = ${S3 / 180} triangles.`, `Sides = triangles + 2 = ${target}.`]
+        steps: [`${S4} \xF7 180 = ${S4 / 180} triangles.`, `Sides = triangles + 2 = ${target}.`]
       };
     },
     check: ({ type }, a) => type === "sum" ? a % 180 === 0 && a / 180 + 2 >= 5 : (a - 2) * 180 >= 540
   }),
-  fam15({
+  fam16({
     id: "g7.angles.exterior-sides",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40110,7 +41523,7 @@ var FAMILIES34 = [
     },
     check: ({ n, kind }, a) => kind === "ext" ? a * (360 / n) === 360 : a * (180 - (180 - 360 / n)) === 360
   }),
-  fam15({
+  fam16({
     id: "g7.angles.hexagon-why",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40132,7 +41545,7 @@ var FAMILIES34 = [
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.angles.polygon-spot",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40161,7 +41574,7 @@ var FAMILIES34 = [
     }
   }),
   // ========================================================= CONSTRUCTIONS
-  fam15({
+  fam16({
     id: "g7.construct.spot-plan",
     skill: "G7_ANGLE_CONSTRUCTION",
     outcome: "G7.CONSTRUCT.b",
@@ -40191,7 +41604,7 @@ var FAMILIES34 = [
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.construct.arc-reasons",
     skill: "G7_CONSTRUCTIONS",
     outcome: "G7.CONSTRUCT.b",
@@ -40199,23 +41612,23 @@ var FAMILIES34 = [
     form: "why",
     draw: () => ({ step: randInt(0, 3), k: randInt(0, 3) }),
     make: ({ step: step2, k }) => {
-      const S3 = [
+      const S4 = [
         { do: "put the compass point on the corner of the angle and draw one arc across both arms", why: "So that the two marks on the arms are the same distance from the corner" },
         { do: "keep the compasses at the same width when you draw the two arcs that cross inside the angle", why: "So that the crossing point is the same distance from each of the two marks on the arms" },
         { do: "join the corner to the point where the two arcs cross", why: "That point is equally far from both arms, so the line splits the angle into two equal angles" },
         { do: "open the compasses wider than half the gap between the two marks before drawing the crossing arcs", why: "Otherwise the two arcs would be too short to meet" }
       ];
-      const opts2 = S3.map((s, i) => ({ text: s.why, right: i === step2, why: i === step2 ? void 0 : "That is a good reason, but for a different step of the method. Check which step the question asks about." }));
+      const opts2 = S4.map((s, i) => ({ text: s.why, right: i === step2, why: i === step2 ? void 0 : "That is a good reason, but for a different step of the method. Check which step the question asks about." }));
       return {
-        question: `When you bisect an angle with a ruler and compasses, you ${S3[step2].do}. Why?`,
+        question: `When you bisect an angle with a ruler and compasses, you ${S4[step2].do}. Why?`,
         story: false,
         options: rot4(opts2, k),
         hints: ["Think about what the compasses measure: a distance.", "Which of the reasons is about that exact step?"],
-        steps: [`The step: ${S3[step2].do}.`, `${S3[step2].why}.`]
+        steps: [`The step: ${S4[step2].do}.`, `${S4[step2].why}.`]
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.construct.triangle-possible",
     skill: "G7_CONSTRUCTIONS",
     outcome: "G7.CONSTRUCT.b",
@@ -40253,7 +41666,7 @@ var FAMILIES34 = [
   }),
   // ================================================================== DATA
   // ---- frequency tables
-  fam15({
+  fam16({
     id: "g7.data.freq-items-total",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40283,7 +41696,7 @@ var FAMILIES34 = [
       return t === a;
     }
   }),
-  fam15({
+  fam16({
     id: "g7.data.tally-fruit",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40310,7 +41723,7 @@ var FAMILIES34 = [
     },
     check: ({ fs, A: A2, B: B2 }, a) => a - fs[B2] === fs[A2] && a + sum2(fs.filter((_, i) => i !== A2 && i !== B2)) === sum2(fs)
   }),
-  fam15({
+  fam16({
     id: "g7.data.freq-percent",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40341,7 +41754,7 @@ var FAMILIES34 = [
       return a * all / 100 === part;
     }
   }),
-  fam15({
+  fam16({
     id: "g7.data.freq-missing-steps",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40376,7 +41789,7 @@ var FAMILIES34 = [
     check: ({ c, fs, m, total, k }, v) => v[0] + sum2(fs.filter((_, i) => i !== m)) === total && v[1] === fs.reduce((s, f, i) => s + (c.lo + i >= k ? f : 0), 0) && fs[v[2] - c.lo] === Math.max(...fs)
   }),
   // ---- a suitable scale
-  fam15({
+  fam16({
     id: "g7.data.scale-choose",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40401,7 +41814,7 @@ var FAMILIES34 = [
       steps: opts2.map((x) => `1 square = ${commas(x)}: the tallest bar needs ${commas(round(M5 / x, 1))} squares.`).concat([`The smallest scale that still fits is ${commas(s)} ${t.u} to a square.`])
     })
   }),
-  fam15({
+  fam16({
     id: "g7.data.pictograph-compare",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40426,7 +41839,7 @@ var FAMILIES34 = [
     }),
     check: ({ each, u, a, b }, v) => v / each + u[b] === u[a]
   }),
-  fam15({
+  fam16({
     id: "g7.data.symbol-choose",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40458,7 +41871,7 @@ var FAMILIES34 = [
     }
   }),
   // ---- bar graphs, pie charts, line graphs
-  fam15({
+  fam16({
     id: "g7.data.bar-top-two",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.f",
@@ -40485,7 +41898,7 @@ var FAMILIES34 = [
       return sum2(vals) - sum2(rest) === a;
     }
   }),
-  fam15({
+  fam16({
     id: "g7.data.pie-missing-steps",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -40518,7 +41931,7 @@ var FAMILIES34 = [
       return v[0] + others === 360 && v[1] * 360 === v[0] * T3 && v[2] * 360 === v[0] * 100;
     }
   }),
-  fam15({
+  fam16({
     id: "g7.data.pie-percent-read",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -40542,7 +41955,7 @@ var FAMILIES34 = [
     }),
     check: ({ deg }, a) => a * 360 / 100 === deg
   }),
-  fam15({
+  fam16({
     id: "g7.data.pie-totals-why",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -40568,7 +41981,7 @@ var FAMILIES34 = [
       };
     }
   }),
-  fam15({
+  fam16({
     id: "g7.data.line-biggest-rise",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.j",
@@ -40599,7 +42012,7 @@ var FAMILIES34 = [
       steps: ys.slice(1).map((y, i) => `Week ${i + 1} to ${i + 2}: ${y} \u2212 ${ys[i]} = ${y - ys[i]}.`).concat([`The biggest rise is between week ${best + 1} and week ${best + 2}.`])
     })
   }),
-  fam15({
+  fam16({
     id: "g7.data.line-halfway",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.j",
@@ -40622,7 +42035,7 @@ var FAMILIES34 = [
     }),
     check: ({ ys, w }, a) => a - ys[w] === ys[w + 1] - a
   }),
-  fam15({
+  fam16({
     id: "g7.data.which-graph-why",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.f",
@@ -40658,7 +42071,7 @@ var FAMILIES34 = [
     }
   }),
   // ---- travel graphs
-  fam15({
+  fam16({
     id: "g7.data.travel-stages-steps",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -40686,7 +42099,7 @@ var FAMILIES34 = [
     },
     check: ({ a, b, d1, d2 }, v) => v[1] * a === d1 && v[2] * b === d2 - d1 && v[3] * (a + v[0] + b) === d2
   }),
-  fam15({
+  fam16({
     id: "g7.data.travel-spot-average",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -40714,7 +42127,7 @@ var FAMILIES34 = [
       steps: [`Total time = ${T3} hours, including the stop.`, `${D3} \xF7 ${T3} = ${D3 / T3} km/h.`]
     })
   }),
-  fam15({
+  fam16({
     id: "g7.data.travel-meet",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -40740,13 +42153,13 @@ var FAMILIES34 = [
 ];
 
 // src/ai-tutor/content/families/bank.js
-var G5_CURRICULUM = [...FAMILIES15, ...FAMILIES16, ...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23];
-var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES27, ...FAMILIES28, ...FAMILIES29, ...FAMILIES30, ...FAMILIES31, ...FAMILIES32, ...FAMILIES33, ...FAMILIES34, ...FAMILIES24, ...FAMILIES25, ...FAMILIES26, ...G5_CURRICULUM, ...FAMILIES14, ...FAMILIES13, ...FAMILIES12, ...FAMILIES11];
+var G5_CURRICULUM = [...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23, ...FAMILIES24, ...FAMILIES25, ...FAMILIES26, ...FAMILIES27];
+var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES31, ...FAMILIES32, ...FAMILIES33, ...FAMILIES34, ...FAMILIES35, ...FAMILIES36, ...FAMILIES37, ...FAMILIES38, ...FAMILIES28, ...FAMILIES29, ...FAMILIES30, ...G5_CURRICULUM, ...FAMILIES18, ...FAMILIES17, ...FAMILIES16, ...FAMILIES15];
 
 // src/ai-tutor/content/families/index.js
-var FAMILIES35 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
+var FAMILIES39 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
 var BY_SKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES35) {
+for (const f of FAMILIES39) {
   if (!BY_SKILL.has(f.skill)) BY_SKILL.set(f.skill, []);
   BY_SKILL.get(f.skill).push(f);
 }
@@ -40756,6 +42169,7 @@ var SUBJECT_PREFIXES = {
   MATH: "math",
   SCIE: "science",
   ENGL: "english",
+  AGRI: "agriculture",
   SOCI: "socialstudies"
 };
 
@@ -41740,7 +43154,7 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of [...FAMILIES35, ...familiesOutsideBank()]) if (usable(f)) {
+for (const f of [...FAMILIES39, ...familiesOutsideBank()]) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }

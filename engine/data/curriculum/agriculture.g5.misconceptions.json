@@ -1,0 +1,1292 @@
+{
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_DARK": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+  "error": "Judges soil quality by colour alone (thinks dark soil is poor and pale soil is rich).",
+  "example": {
+   "question": "Which soil is likely to be poor for growing crops?",
+   "wrong_answer": "Dark, crumbly soil full of rotted leaves",
+   "correct_answer": "Pale, hard soil with no plants and gullies"
+  },
+  "cause": "The child links dark with dirty or burnt and pale with clean.",
+  "reveals": "Offer \"Dark, crumbly soil full of rotted leaves\" next to the right answer and ask the question again in a new context.",
+  "help": "Show two soils: dark crumbly and pale packed. Ask which holds water and which grows a seed, then ask what the colour tells.",
+  "feedback": "Colour alone does not tell. Dark, crumbly soil is usually rich in rotted plant matter. Bare, hard, washed-away ground is a sign of poor soil.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_PIT_LOW": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+  "error": "Digs the waste pit anywhere (in a hollow where rain collects, or beside the borehole).",
+  "example": {
+   "question": "Where is the best place for the school organic waste pit?",
+   "wrong_answer": "In the low place where rain water collects",
+   "correct_answer": "On firm higher ground near the garden, away from the well"
+  },
+  "cause": "The child thinks wet ground helps waste to rot and does not think about drinking water.",
+  "reveals": "Offer \"In the low place where rain water collects\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk the site after rain. Ask what happens to a pit that fills with water, and what could happen to a nearby well.",
+  "feedback": "A pit in a hollow floods and a pit near drinking water can pollute it. Choose firm ground near the garden and away from the well.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES.M_AG_SITE_BARE_FINE": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES",
+  "error": "Thinks a bare patch is just normal ground that needs no help.",
+  "example": {
+   "question": "The playground edge is hard and bare and crops there turn yellow and stay small. What is this a sign of?",
+   "wrong_answer": "The ground is normal and needs nothing",
+   "correct_answer": "The soil is poor and needs improving"
+  },
+  "cause": "The child has seen bare ground all their life and does not read it as a problem.",
+  "reveals": "Offer \"The ground is normal and needs nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Plant the same seed in a bare patch and in the garden and compare after two weeks.",
+  "feedback": "Hard bare ground and small yellow crops show the soil is poor. It needs rotted plant matter and manure to improve it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_ANYTHING": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+  "error": "Puts any rubbish in the organic waste pit (polythene, tins, glass).",
+  "example": {
+   "question": "Which of these should NOT go into an organic waste pit?",
+   "wrong_answer": "A polythene bag",
+   "correct_answer": "Banana peelings"
+  },
+  "cause": "The child thinks a pit is a general rubbish pit.",
+  "reveals": "Offer \"A polythene bag\" next to the right answer and ask the question again in a new context.",
+  "help": "Dig up an old pit with a teacher. Ask what rotted and what did not.",
+  "feedback": "Polythene, tins and glass do not rot and spoil the manure. Only things that were once plants or animal dung go in.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_COOKED": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+  "error": "Thinks cooked food, meat and bones are good for the pit.",
+  "example": {
+   "question": "Why do we keep leftover meat and oily food out of the organic waste pit?",
+   "wrong_answer": "They are the best food for the pit",
+   "correct_answer": "They draw rats and flies and smell"
+  },
+  "cause": "The child knows meat rots and so thinks it belongs.",
+  "reveals": "Offer \"They are the best food for the pit\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what comes to a rubbish heap with meat scraps. Then say what a pit for a school garden should attract.",
+  "feedback": "Meat and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT.M_AG_PIT_NO_CARE": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+  "error": "Fills the pit once and never wets, turns or covers it.",
+  "example": {
+   "question": "After the pit is filled, what should the school do?",
+   "wrong_answer": "Leave it dry and open for the whole year",
+   "correct_answer": "Keep it damp and covered and wait for it to rot"
+  },
+  "cause": "The child thinks rotting happens by itself.",
+  "reveals": "Offer \"Leave it dry and open for the whole year\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a damp covered heap and a dry open heap after a month.",
+  "feedback": "Rotting needs a little moisture and cover. Keep the pit damp and covered until the waste is dark and crumbly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_BURN": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+  "error": "Thinks burning plant remains is the best way to clear them.",
+  "example": {
+   "question": "After harvest, a farmer burns the maize stalks. What does the soil lose?",
+   "wrong_answer": "Nothing, burning is best",
+   "correct_answer": "The humus and plant food the stalks would have given"
+  },
+  "cause": "Burning is the common way of clearing and the child has seen ash on the field.",
+  "reveals": "Offer \"Nothing, burning is best\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the soil would receive if the stalks were rotted or dug in.",
+  "feedback": "Burning wastes the plant matter. Rotted stalks give the soil humus and plant food.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS.M_AG_REMAINS_WASTE": {
+  "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+  "error": "Calls plant remains rubbish with no use.",
+  "example": {
+   "question": "What is a good use of the leaves and grass cleared from the school compound?",
+   "wrong_answer": "Throw them away on the road",
+   "correct_answer": "Make compost or spread them as mulch"
+  },
+  "cause": "The child sees cleared leaves as waste to get rid of.",
+  "reveals": "Offer \"Throw them away on the road\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where forest soil gets its food from, then link to fallen leaves.",
+  "feedback": "Leaves and grass can be rotted into compost or used as mulch. They are plant food in waiting.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_NOON": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+  "error": "Thinks midday is the best time to water because it is hot and the plants are thirsty.",
+  "example": {
+   "question": "When is it best to water a garden to save water?",
+   "wrong_answer": "At midday when the sun is hottest",
+   "correct_answer": "Early in the morning or in the evening"
+  },
+  "cause": "The child links heat with thirst.",
+  "reveals": "Offer \"At midday when the sun is hottest\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour a cup of water on the ground at noon and one at six in the evening and compare how long each stays damp.",
+  "feedback": "In the heat much of the water dries off before it soaks in. Water early or late.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MULCH_WARM": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+  "error": "Thinks mulch is for keeping plants warm or for feeding them, not for keeping water in.",
+  "example": {
+   "question": "What does a layer of dry grass around kale do for the water in the soil?",
+   "wrong_answer": "It keeps the plants warm at night",
+   "correct_answer": "It slows the drying of the soil"
+  },
+  "cause": "The child knows a cover keeps something warm.",
+  "reveals": "Offer \"It keeps the plants warm at night\" next to the right answer and ask the question again in a new context.",
+  "help": "Uncover a mulched patch and a bare patch at midday and feel both.",
+  "feedback": "Mulch shades the soil so water dries off slowly. That is how it saves water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS.M_AG_WATER_MORE": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+  "error": "Thinks the only way to help a dry garden is to use more water.",
+  "example": {
+   "question": "A garden dries out quickly. Which action saves water?",
+   "wrong_answer": "Pouring much more water on it each day",
+   "correct_answer": "Covering the soil with a layer of dry grass"
+  },
+  "cause": "The child links dry with more water.",
+  "reveals": "Offer \"Pouring much more water on it each day\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where the water went. Then show that a cover stops it escaping.",
+  "feedback": "More water can simply dry off or run away. A mulch, a cover crop or shade keeps the water in the soil.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_UNFAIR": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+  "error": "Changes more than one thing in a test (different crop or different water).",
+  "example": {
+   "question": "To test mulch, Otieno gives the mulched bed less water and plants beans there and kale in the other bed. What is wrong?",
+   "wrong_answer": "Nothing is wrong, this is fair",
+   "correct_answer": "More than one thing differs, so the result tells nothing"
+  },
+  "cause": "The child wants to help the mulched bed or does not know what a fair test is.",
+  "reveals": "Offer \"Nothing is wrong, this is fair\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what Otieno could blame if the mulched bed did better.",
+  "feedback": "A fair test changes only one thing. Same crop, same soil and same water, with and without mulch.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST.M_AG_TEST_RESULT": {
+  "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+  "error": "Expects the mulched bed to dry faster.",
+  "example": {
+   "question": "After a week of sun, which bed will stay damp longer, the mulched one or the bare one?",
+   "wrong_answer": "The bare one",
+   "correct_answer": "The mulched one"
+  },
+  "cause": "The child thinks a cover traps heat and dries soil.",
+  "reveals": "Offer \"The bare one\" next to the right answer and ask the question again in a new context.",
+  "help": "Do the test: dig a finger deep in both beds and feel.",
+  "feedback": "Mulch shades the soil and slows drying, so the mulched bed stays damp longer.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_MIX": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+  "error": "Mixes up which animal does which damage.",
+  "example": {
+   "question": "Which wild animal digs up sweet potatoes and cassava from the ground?",
+   "wrong_answer": "A quelea bird",
+   "correct_answer": "A warthog"
+  },
+  "cause": "The child knows pests only as a list of names.",
+  "reveals": "Offer \"A quelea bird\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where a bird can reach and where a digger can reach.",
+  "feedback": "Birds eat grain on the plant and fruit. Warthogs and moles dig up roots and tubers.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE.M_AG_PEST_ALL": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+  "error": "Thinks every wild animal is an enemy of the farmer.",
+  "example": {
+   "question": "Which wild creature helps a farmer?",
+   "wrong_answer": "A bee that visits the flowers",
+   "correct_answer": "A monkey in the maize"
+  },
+  "cause": "The child sorts the whole of nature into harmful and not harmful.",
+  "reveals": "Offer \"A bee that visits the flowers\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what bees do to the flowers on a tomato plant and what owls do to rats.",
+  "feedback": "Bees carry pollen so crops give fruit, and owls eat rats. Many wild animals help.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_KILL": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+  "error": "Thinks poisoning or killing the animals is the answer.",
+  "example": {
+   "question": "Monkeys keep eating the maize. What is the best thing to do?",
+   "wrong_answer": "Poison them",
+   "correct_answer": "Use a scarecrow, noise makers or a guard to scare them away"
+  },
+  "cause": "The child sees only the loss and wants it to stop.",
+  "reveals": "Offer \"Poison them\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to other animals that eat the poison and what the law says about wild animals.",
+  "feedback": "We protect wild animals. Scare them off with a scarecrow, noise, a fence or a guard.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_ONE": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+  "error": "Thinks one method suits every animal (a scarecrow for elephants).",
+  "example": {
+   "question": "Which is more likely to keep elephants off a farm?",
+   "wrong_answer": "A scarecrow made of old clothes",
+   "correct_answer": "A fence with beehives or chilli"
+  },
+  "cause": "The child learned one method and applies it to every pest.",
+  "reveals": "Offer \"A scarecrow made of old clothes\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether an elephant is afraid of a coat on a stick.",
+  "feedback": "A scarecrow can scare birds, but elephants need stronger measures such as beehive fences, chilli or a trench.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS.M_AG_REPEL_CLOSE": {
+  "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+  "error": "Would go close to chase away a big animal.",
+  "example": {
+   "question": "A buffalo comes into the shamba at dusk. What should a child do?",
+   "wrong_answer": "Run at it and shout",
+   "correct_answer": "Stay away and tell an adult or the Kenya Wildlife Service"
+  },
+  "cause": "The child is brave but does not see the danger.",
+  "reveals": "Offer \"Run at it and shout\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who gets hurt when a person meets a frightened buffalo.",
+  "feedback": "Big animals are dangerous. Keep away and tell an adult or the Kenya Wildlife Service.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_ORDER": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+  "error": "Puts the practices in the wrong order (transplants before the nursery, sows before preparing).",
+  "example": {
+   "question": "Which is the correct order?",
+   "wrong_answer": "Transplant, make a nursery, sow, harvest",
+   "correct_answer": "Prepare the land, make a nursery, sow, transplant, harvest"
+  },
+  "cause": "The child remembers the words but not how one practice depends on another.",
+  "reveals": "Offer \"Transplant, make a nursery, sow, harvest\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what you transplant if you have not sown.",
+  "feedback": "You prepare first, sow in the nursery, then transplant the seedlings, then care and harvest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES.M_AG_VEG_WATER_ONLY": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+  "error": "Thinks growing vegetables means only sowing and watering.",
+  "example": {
+   "question": "What else must be done after transplanting kale?",
+   "wrong_answer": "Nothing, only watering is needed",
+   "correct_answer": "Weeding, mulching and controlling pests"
+  },
+  "cause": "The child has not seen a garden through to harvest.",
+  "reveals": "Offer \"Nothing, only watering is needed\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a weeded and an unweeded bed after three weeks.",
+  "feedback": "Plants need weeding, mulch and protection from pests as well as water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_COARSE": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+  "error": "Leaves big lumps in the nursery bed.",
+  "example": {
+   "question": "Why is the nursery soil broken to a fine crumb?",
+   "wrong_answer": "Big lumps are better for tiny seeds",
+   "correct_answer": "Tiny seeds and roots need fine soil to touch"
+  },
+  "cause": "The child thinks a rough bed saves work.",
+  "reveals": "Offer \"Big lumps are better for tiny seeds\" next to the right answer and ask the question again in a new context.",
+  "help": "Hide a tiny seed under a lump and under a crumb and ask which one can push through.",
+  "feedback": "Tiny seeds need fine soil so they touch the soil and the shoot can push up.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_DEEP": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+  "error": "Buries tiny seeds deep.",
+  "example": {
+   "question": "How deep should you cover tiny kale seeds?",
+   "wrong_answer": "About 10 cm deep",
+   "correct_answer": "Very thinly, about a finger nail deep"
+  },
+  "cause": "The child thinks deeper is safer.",
+  "reveals": "Offer \"About 10 cm deep\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a tiny shoot can push through a thick layer of soil.",
+  "feedback": "Tiny seeds are sown shallow and covered thinly. A deep seed cannot push through.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED.M_AG_NURS_FLOOD": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+  "error": "Floods the bed with water or builds it on ground that holds water.",
+  "example": {
+   "question": "How should the nursery bed be watered?",
+   "wrong_answer": "Soaked heavily until water stands",
+   "correct_answer": "Lightly in the morning and evening on well-drained ground"
+  },
+  "cause": "The child thinks wet is better for seeds.",
+  "reveals": "Offer \"Soaked heavily until water stands\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to tiny seeds in a puddle.",
+  "feedback": "Seeds and seedlings rot in standing water. Water lightly and keep the bed well drained.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOON": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+  "error": "Transplants at midday in full sun.",
+  "example": {
+   "question": "When is it best to transplant seedlings?",
+   "wrong_answer": "At midday in the sun",
+   "correct_answer": "In the evening or on a cloudy day"
+  },
+  "cause": "The child sees no difference between times of the day.",
+  "reveals": "Offer \"At midday in the sun\" next to the right answer and ask the question again in a new context.",
+  "help": "Place one wilted and one shaded seedling in the sun and compare.",
+  "feedback": "The hot midday sun scorches new transplants. Evening or cloudy weather is kinder.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_DRY": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+  "error": "Pulls seedlings from dry soil with the roots bare.",
+  "example": {
+   "question": "What should you do before lifting seedlings from the nursery?",
+   "wrong_answer": "Leave the bed dry so the soil falls off",
+   "correct_answer": "Water the bed so the seedlings lift with soil on their roots"
+  },
+  "cause": "The child thinks clean roots are neater.",
+  "reveals": "Offer \"Leave the bed dry so the soil falls off\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which seedlings keep their roots: one pulled dry or one lifted wet with soil.",
+  "feedback": "Water the bed first and lift with soil on the roots so the roots are not torn.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE.M_AG_TRANS_NOWATER": {
+  "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+  "error": "Thinks no care is needed after transplanting.",
+  "example": {
+   "question": "What is done after transplanting seedlings?",
+   "wrong_answer": "Nothing until harvest",
+   "correct_answer": "Firm the soil, water and shade them for a few days"
+  },
+  "cause": "The child thinks the job ends when the seedling is in the ground.",
+  "reveals": "Offer \"Nothing until harvest\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at two transplanted beds, one cared for and one left.",
+  "feedback": "New transplants need water and shade for a few days, then weeding and mulching.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_COCK": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+  "error": "Thinks a cock (or any chicken) can be the source of eggs or mixes hens and cocks.",
+  "example": {
+   "question": "Which bird lays the eggs we eat?",
+   "wrong_answer": "The cockerel",
+   "correct_answer": "The hen"
+  },
+  "cause": "The child uses chicken for both without separating them.",
+  "reveals": "Offer \"The cockerel\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the child to watch the flock: who sits on a nest?",
+  "feedback": "The hen lays eggs. The cock does not.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_WOOL": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+  "error": "Thinks wool comes from goats (or that every animal gives every product).",
+  "example": {
+   "question": "Which animal gives wool?",
+   "wrong_answer": "A goat",
+   "correct_answer": "A sheep"
+  },
+  "cause": "The child treats sheep and goats as the same animal.",
+  "reveals": "Offer \"A goat\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a sample of wool and a sample of goat skin and ask where each comes from.",
+  "feedback": "Wool comes from sheep. Goats give meat, milk and skins.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS.M_AG_PROD_MILK_ALL": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+  "error": "Thinks every domestic animal gives milk.",
+  "example": {
+   "question": "Which of these does not give milk to the family?",
+   "wrong_answer": "A hen",
+   "correct_answer": "A cow"
+  },
+  "cause": "The child groups all farm animals together.",
+  "reveals": "Offer \"A hen\" next to the right answer and ask the question again in a new context.",
+  "help": "List the animals the family milks.",
+  "feedback": "Cows, goats and camels give milk. Hens give eggs, not milk.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_FOOD_ONLY": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+  "error": "Thinks animals are kept only to be eaten.",
+  "example": {
+   "question": "Why does a farmer keep oxen?",
+   "wrong_answer": "Only for meat",
+   "correct_answer": "To pull the plough and the cart"
+  },
+  "cause": "The child sees animals through the plate.",
+  "reveals": "Offer \"Only for meat\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who ploughs the field in a family with no tractor.",
+  "feedback": "Oxen pull ploughs and carts. Animals give work as well as food.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DONKEY": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+  "error": "Thinks donkeys give milk or meat in the family (instead of carrying).",
+  "example": {
+   "question": "What is the main use of a donkey on many farms?",
+   "wrong_answer": "To give milk for tea",
+   "correct_answer": "To carry loads and pull a cart"
+  },
+  "cause": "The child gives the same use to all animals.",
+  "reveals": "Offer \"To give milk for tea\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who carries water in the dry season.",
+  "feedback": "Donkeys carry loads and pull carts, which saves people carrying heavy things.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG_USE_DUNG": {
+  "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+  "error": "Thinks animal dung is just waste.",
+  "example": {
+   "question": "How can cow dung help a vegetable garden?",
+   "wrong_answer": "It cannot, it is only waste",
+   "correct_answer": "It rots into manure that feeds the soil"
+  },
+  "cause": "The child links dung with dirt.",
+  "reveals": "Offer \"It cannot, it is only waste\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare kale grown with and without manure.",
+  "feedback": "Dung rots into manure that adds plant food and helps the soil.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WET": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+  "error": "Stores grain while it is still damp.",
+  "example": {
+   "question": "Why must grain be dried before storing?",
+   "wrong_answer": "It stores better when damp",
+   "correct_answer": "Damp grain grows mould and rots"
+  },
+  "cause": "The child thinks wet grain is fresh.",
+  "reveals": "Offer \"It stores better when damp\" next to the right answer and ask the question again in a new context.",
+  "help": "Store a handful dry and a handful damp in jars for a week.",
+  "feedback": "Damp grain grows mould. Dry it fully before storing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_SACK": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+  "error": "Thinks a loosely tied or torn sack or polythene bag is good enough.",
+  "example": {
+   "question": "Which container keeps weevils from grain?",
+   "wrong_answer": "An open basket",
+   "correct_answer": "A tightly sealed container"
+  },
+  "cause": "The child thinks any container will do.",
+  "reveals": "Offer \"An open basket\" next to the right answer and ask the question again in a new context.",
+  "help": "Place weevils in an open jar and a sealed jar overnight.",
+  "feedback": "An airtight container stops air and insects. Open baskets let weevils in.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS.M_AG_PRES_WATER": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS",
+  "error": "Thinks washing grain or keeping it in water preserves it.",
+  "example": {
+   "question": "Which is a way of preserving beans?",
+   "wrong_answer": "Soak them in water",
+   "correct_answer": "Dry them in the sun and store them in a sealed container"
+  },
+  "cause": "The child thinks wet keeps food fresh as with some vegetables.",
+  "reveals": "Offer \"Soak them in water\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to soaked beans after a day.",
+  "feedback": "Soaked beans sprout or rot. Drying and sealed storage preserve beans.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_SEAL_EARLY": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+  "error": "Seals the grain in a container as soon as it is harvested.",
+  "example": {
+   "question": "Maize is just harvested and still damp. What should be done before it is sealed?",
+   "wrong_answer": "Seal it at once",
+   "correct_answer": "Dry it in the sun until it is hard"
+  },
+  "cause": "The child thinks sealed means safe.",
+  "reveals": "Offer \"Seal it at once\" next to the right answer and ask the question again in a new context.",
+  "help": "Seal two jars, one with dry maize and one with damp, and look after a week.",
+  "feedback": "Sealing damp grain traps the moisture and it grows mould. Dry it first.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_GROUND": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+  "error": "Stores sacks on the floor against the wall.",
+  "example": {
+   "question": "Where should sacks of grain be kept?",
+   "wrong_answer": "On the bare floor against the wall",
+   "correct_answer": "On a raised platform away from the wall"
+  },
+  "cause": "The child sees no reason to lift them.",
+  "reveals": "Offer \"On the bare floor against the wall\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where rats and damp enter.",
+  "feedback": "Floors and walls let in damp and rats. Raise the sacks and keep them away from the wall.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE.M_AG_PRACT_DRYNESS": {
+  "skill": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE",
+  "error": "Judges that grain is dry by looking at it or by how hot it felt.",
+  "example": {
+   "question": "How can you test that maize grains are dry?",
+   "wrong_answer": "Look at the colour",
+   "correct_answer": "Bite one and it cracks"
+  },
+  "cause": "The child has no feel for the test.",
+  "reveals": "Offer \"Look at the colour\" next to the right answer and ask the question again in a new context.",
+  "help": "Try the bite test on a dry and a damp grain.",
+  "feedback": "A dry grain is hard and cracks when bitten or sounds like a rattle when shaken.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_PROT_ENERGY": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+  "error": "Gives proteins the job of energy and carbohydrates the job of growth.",
+  "example": {
+   "question": "Which nutrient builds and repairs the body?",
+   "wrong_answer": "Carbohydrates",
+   "correct_answer": "Proteins"
+  },
+  "cause": "The child remembers only that ugali \"fills\".",
+  "reveals": "Offer \"Carbohydrates\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a growing child needs to make new muscle.",
+  "feedback": "Proteins build and repair the body. Carbohydrates give energy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_VIT_ENERGY": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+  "error": "Thinks vitamins give energy.",
+  "example": {
+   "question": "What do vitamins do in the body?",
+   "wrong_answer": "Give most of the energy",
+   "correct_answer": "Protect the body and help it stay healthy"
+  },
+  "cause": "The child links all nutrients with strength.",
+  "reveals": "Offer \"Give most of the energy\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which group of foods stops illness.",
+  "feedback": "Vitamins protect the body. Energy comes mostly from carbohydrates and fats.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS.M_AG_NUT_FAT_BAD": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+  "error": "Thinks fats do nothing useful.",
+  "example": {
+   "question": "What is one job of fats in the body?",
+   "wrong_answer": "They do nothing useful",
+   "correct_answer": "They store energy and keep the body warm"
+  },
+  "cause": "The child has only heard that too much fat is bad.",
+  "reveals": "Offer \"They do nothing useful\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask why animals in cold places have a layer of fat.",
+  "feedback": "Fats store energy and keep the body warm. A little is needed, too much is not good.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_PLANT_VIT": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+  "error": "Thinks every plant food is rich in vitamins.",
+  "example": {
+   "question": "Which group is cassava in?",
+   "wrong_answer": "Foods that protect the body (vitamins)",
+   "correct_answer": "Energy foods (carbohydrates)"
+  },
+  "cause": "The child thinks plant means vitamin.",
+  "reveals": "Offer \"Foods that protect the body (vitamins)\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what ugali, rice and cassava have in common.",
+  "feedback": "Cassava, ugali and rice are carbohydrate foods that give energy. Vitamin foods are mostly fruits and green vegetables.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_MILK_ENERGY": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+  "error": "Puts milk, eggs and beans among the energy foods.",
+  "example": {
+   "question": "Which group is an egg in?",
+   "wrong_answer": "Energy foods",
+   "correct_answer": "Body-building foods (proteins)"
+  },
+  "cause": "The child sees all filling food as energy.",
+  "reveals": "Offer \"Energy foods\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what chicks grow from.",
+  "feedback": "Eggs, milk and beans are rich in protein, so they build the body.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_FILLING": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+  "error": "Thinks a food that fills the stomach, such as ugali, is a body-building food.",
+  "example": {
+   "question": "Which group is ugali in?",
+   "wrong_answer": "Body-building foods (proteins)",
+   "correct_answer": "Energy foods (carbohydrates)"
+  },
+  "cause": "The child links a big plate with growing.",
+  "reveals": "Offer \"Body-building foods (proteins)\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what ugali is made from and what it gives for running and playing.",
+  "feedback": "Ugali is a carbohydrate food that gives energy. Body-building foods are beans, meat, fish, eggs and milk.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS.M_AG_GRP_BUTTER_PROT": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+  "error": "Thinks butter and cooking oil are proteins because they come from animals or seeds.",
+  "example": {
+   "question": "Which nutrient is cooking oil rich in?",
+   "wrong_answer": "Proteins",
+   "correct_answer": "Fats"
+  },
+  "cause": "The child thinks all animal and seed foods are protein.",
+  "reveals": "Offer \"Proteins\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what is left on the pan after frying.",
+  "feedback": "Cooking oil and butter are fats.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_SWAP": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+  "error": "Mixes up kwashiorkor and marasmus.",
+  "example": {
+   "question": "A very thin child with little muscle has had too little food overall. Which disease is this?",
+   "wrong_answer": "Kwashiorkor",
+   "correct_answer": "Marasmus"
+  },
+  "cause": "The child knows both are hunger diseases and has no detail.",
+  "reveals": "Offer \"Kwashiorkor\" next to the right answer and ask the question again in a new context.",
+  "help": "Describe the pictures: a swollen belly and puffy legs, and a very thin wasted child.",
+  "feedback": "Marasmus is very thin and wasted from too little food overall. Kwashiorkor shows swollen legs and belly from lack of protein.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CATCH": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+  "error": "Thinks these diseases spread from person to person.",
+  "example": {
+   "question": "Can anaemia from lack of iron spread from one child to another?",
+   "wrong_answer": "Yes, through touch",
+   "correct_answer": "No, it comes from food that lacks iron"
+  },
+  "cause": "The child treats every illness as catching.",
+  "reveals": "Offer \"Yes, through touch\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what two children from the same home both ate and what they both missed.",
+  "feedback": "Lack of a nutrient is not an infection. It does not spread from person to person.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES.M_AG_DIS_CAUSE": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES",
+  "error": "Gives the wrong lack (anaemia from lack of calcium, goitre from lack of vitamins).",
+  "example": {
+   "question": "A swelling at the front of the neck can come from too little of which mineral?",
+   "wrong_answer": "Calcium",
+   "correct_answer": "Iodine"
+  },
+  "cause": "The child recalls that minerals matter but not which.",
+  "reveals": "Offer \"Calcium\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each disease with its missing nutrient on a card.",
+  "feedback": "Goitre comes from too little iodine. Anaemia comes from too little iron.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_ONE_FOOD": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+  "error": "Thinks eating much of one food (ugali) is enough.",
+  "example": {
+   "question": "Which meal protects a family best from nutritional diseases?",
+   "wrong_answer": "Only ugali, as much as they want",
+   "correct_answer": "Ugali with beans and sukuma wiki"
+  },
+  "cause": "The child thinks full means well fed.",
+  "reveals": "Offer \"Only ugali, as much as they want\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which nutrients ugali alone is missing.",
+  "feedback": "A varied meal gives all the nutrients. One food cannot.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_SALT": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+  "error": "Thinks any salt prevents goitre.",
+  "example": {
+   "question": "Which salt helps prevent goitre?",
+   "wrong_answer": "Any salt, even if it has no iodine",
+   "correct_answer": "Iodised salt"
+  },
+  "cause": "The child does not know iodised salt is different.",
+  "reveals": "Offer \"Any salt, even if it has no iodine\" next to the right answer and ask the question again in a new context.",
+  "help": "Check the packet for the word iodised.",
+  "feedback": "Only iodised salt carries iodine to prevent goitre.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION.M_AG_PREV_MEDICINE": {
+  "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+  "error": "Thinks only medicine, not food, prevents these diseases.",
+  "example": {
+   "question": "How is kwashiorkor best prevented?",
+   "wrong_answer": "Only with medicine",
+   "correct_answer": "With enough protein foods such as beans, eggs, milk and fish"
+  },
+  "cause": "The child links every health problem with medicine.",
+  "reveals": "Offer \"Only with medicine\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a family can do at the next meal.",
+  "feedback": "Eating enough protein foods prevents kwashiorkor. Good food is the best protection.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DEEP_LITTLE": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+  "error": "Thinks deep frying uses only a little oil.",
+  "example": {
+   "question": "How much oil does deep frying use?",
+   "wrong_answer": "A spoonful",
+   "correct_answer": "Enough to cover the food completely"
+  },
+  "cause": "The child mixes deep and shallow frying.",
+  "reveals": "Offer \"A spoonful\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a pan of mandazi frying in deep oil and eggs frying in a little oil.",
+  "feedback": "In deep frying the food is covered by hot oil.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_DRY_LOTS": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+  "error": "Thinks dry fat frying needs much added oil.",
+  "example": {
+   "question": "Sausages are cooked in a pan with no added oil. Which method is this?",
+   "wrong_answer": "Deep frying",
+   "correct_answer": "Dry fat frying"
+  },
+  "cause": "The child thinks all frying uses oil.",
+  "reveals": "Offer \"Deep frying\" next to the right answer and ask the question again in a new context.",
+  "help": "Warm sausages in a dry pan and watch the fat come out.",
+  "feedback": "Dry fat frying uses the fat that melts out of the food.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS.M_AG_FRY_MIX": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+  "error": "Mixes up the foods (mandazi and chips as dry fat frying, sausages as deep frying).",
+  "example": {
+   "question": "Which food is usually deep fried?",
+   "wrong_answer": "Sausages",
+   "correct_answer": "Mandazi"
+  },
+  "cause": "The child names the method from the food, not from how it is cooked.",
+  "reveals": "Offer \"Sausages\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether the food floats in oil or cooks in its own fat.",
+  "feedback": "Mandazi are fried in deep oil. Sausages release their own fat in a pan.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WATER": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+  "error": "Throws water on a burning pan of oil.",
+  "example": {
+   "question": "A pan of oil catches fire. What do you do?",
+   "wrong_answer": "Pour water on it",
+   "correct_answer": "Cover it with a lid and turn off the heat"
+  },
+  "cause": "The child thinks water puts out every fire.",
+  "reveals": "Offer \"Pour water on it\" next to the right answer and ask the question again in a new context.",
+  "help": "Show with a teacher why water and hot oil spit and spread the fire.",
+  "feedback": "Water makes burning oil splash and spread. Smother the fire with a lid.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_WET": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+  "error": "Puts wet food into hot oil.",
+  "example": {
+   "question": "Why should food be dry before it goes into hot oil?",
+   "wrong_answer": "Water in the oil makes no difference",
+   "correct_answer": "Water makes the hot oil spit and can burn you"
+  },
+  "cause": "The child washed the food and goes straight to the pan.",
+  "reveals": "Offer \"Water in the oil makes no difference\" next to the right answer and ask the question again in a new context.",
+  "help": "Dry one piece and leave another wet, drop each into a safe test with a teacher.",
+  "feedback": "Water spits in hot oil. Dry food gently with a cloth first.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_FULL": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+  "error": "Fills the pan to the top with oil.",
+  "example": {
+   "question": "How full should the pan be for deep frying?",
+   "wrong_answer": "Right to the top",
+   "correct_answer": "No more than half full"
+  },
+  "cause": "The child thinks more oil is safer.",
+  "reveals": "Offer \"Right to the top\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens when food goes into a full pan.",
+  "feedback": "Oil bubbles up when food goes in. Fill the pan no more than half.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY.M_AG_FSAFE_LEAVE": {
+  "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+  "error": "Leaves the pan of hot oil to do something else.",
+  "example": {
+   "question": "Hot oil is on the stove and the phone rings. What do you do?",
+   "wrong_answer": "Go and answer, the oil will wait",
+   "correct_answer": "Turn off the heat first, or stay at the stove"
+  },
+  "cause": "The child thinks frying is slow.",
+  "reveals": "Offer \"Go and answer, the oil will wait\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how fast oil heats and when it smokes.",
+  "feedback": "Hot oil can catch fire. Never leave it alone.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_EXPENSIVE": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+  "error": "Thinks good grooming needs expensive clothes or soaps.",
+  "example": {
+   "question": "Which is part of good grooming?",
+   "wrong_answer": "Wearing the most expensive clothes",
+   "correct_answer": "Bathing daily and wearing clean clothes"
+  },
+  "cause": "The child links neat with rich.",
+  "reveals": "Offer \"Wearing the most expensive clothes\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether a clean old shirt is good grooming.",
+  "feedback": "Grooming is about being clean and neat, not about cost.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_PERFUME": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+  "error": "Thinks perfume or powder can replace bathing.",
+  "example": {
+   "question": "Which keeps a child healthy and fresh?",
+   "wrong_answer": "Perfume without bathing",
+   "correct_answer": "Bathing with soap and water"
+  },
+  "cause": "The child has seen adults use scent.",
+  "reveals": "Offer \"Perfume without bathing\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what scent covers and what soap removes.",
+  "feedback": "Bathing removes dirt and germs. Scent only covers smell.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS.M_AG_GROOM_SPECIAL": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+  "error": "Thinks grooming is only for special days.",
+  "example": {
+   "question": "How often should a child brush teeth and bathe?",
+   "wrong_answer": "Only on special days",
+   "correct_answer": "Every day"
+  },
+  "cause": "The child links grooming with parties.",
+  "reveals": "Offer \"Only on special days\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask when germs gather.",
+  "feedback": "Good grooming is a daily habit.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_DRESS_SAME": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+  "error": "Thinks one kind of clothing suits every place and activity.",
+  "example": {
+   "question": "What is best to wear for farm work at school?",
+   "wrong_answer": "Your best clothes",
+   "correct_answer": "Old clothes with gumboots and an apron"
+  },
+  "cause": "The child does not match dress to the job and thinks neat means best clothes.",
+  "reveals": "Offer \"Your best clothes\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to best clothes in the mud, and what a games kit is for.",
+  "feedback": "Dress to suit the activity: old clothes and gumboots for farm work, sports wear for games, neat clothes for a visit.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE.M_AG_ETIQ_GREET": {
+  "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE",
+  "error": "Thinks greeting and polite words are only for people one knows or for the old.",
+  "example": {
+   "question": "A visitor comes to school. What is good manners?",
+   "wrong_answer": "Ignore her, she is a stranger",
+   "correct_answer": "Greet her politely"
+  },
+  "cause": "The child is shy, or has been taught not to speak to strangers and mixes this up with manners at school.",
+  "reveals": "Offer \"Ignore her, she is a stranger\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise a greeting for a visitor in class, then ask how the visitor would feel with no greeting.",
+  "feedback": "Greeting visitors and new people politely shows respect. Say please and thank you every day.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_CEMENT": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+  "error": "Mixes up a cemented floor and a tiled floor.",
+  "example": {
+   "question": "A floor is made of smooth shiny squares laid side by side. What is it?",
+   "wrong_answer": "A cemented floor",
+   "correct_answer": "A tiled floor"
+  },
+  "cause": "Both are hard and cool, and the child has not touched both.",
+  "reveals": "Offer \"A cemented floor\" next to the right answer and ask the question again in a new context.",
+  "help": "Let the child feel a piece of rough cement and a glazed tile and say which is which.",
+  "feedback": "Tiles are smooth, shiny squares. Cement is rough and grey.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES.M_AG_SURF_TILE_GLASS": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES",
+  "error": "Thinks a shiny surface must be glass (or a see-through one is wood or tile).",
+  "example": {
+   "question": "A window pane is see-through and smooth. What is it made of?",
+   "wrong_answer": "Wood",
+   "correct_answer": "Glass"
+  },
+  "cause": "The child links shine with glass and ignores the test of seeing through.",
+  "reveals": "Offer \"Wood\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold each material up to the light and ask which lets the light through.",
+  "feedback": "Glass is see-through. Tiles shine but you cannot see through them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_SOAK_WOOD": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+  "error": "Soaks or floods wooden things with water.",
+  "example": {
+   "question": "How should a wooden table be cleaned?",
+   "wrong_answer": "Pour lots of water on it",
+   "correct_answer": "Wipe it with a damp cloth and dry it"
+  },
+  "cause": "The child thinks water cleans every surface.",
+  "reveals": "Offer \"Pour lots of water on it\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a piece of wood soaked overnight with a piece wiped damp, after a day.",
+  "feedback": "Too much water swells and rots wood. Wipe it with a damp cloth and dry it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_EARTH_SCRUB": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+  "error": "Scrubs an earthen floor with plenty of water (as for cement).",
+  "example": {
+   "question": "How is an earthen floor cleaned?",
+   "wrong_answer": "Scrub it with plenty of water",
+   "correct_answer": "Sprinkle a little water and sweep softly"
+  },
+  "cause": "The child uses the cement method for every floor.",
+  "reveals": "Offer \"Scrub it with plenty of water\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what plenty of water does to packed soil.",
+  "feedback": "Plenty of water turns an earthen floor to mud. Sprinkle a little water to settle the dust and sweep softly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WET_SLIP": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+  "error": "Leaves a tiled floor wet after mopping.",
+  "example": {
+   "question": "After mopping the tiles, what must be done?",
+   "wrong_answer": "Leave them wet",
+   "correct_answer": "Dry them so that no one slips"
+  },
+  "cause": "The child thinks wet means clean and has not thought about slipping.",
+  "reveals": "Offer \"Leave them wet\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk carefully on a wet tile and a dry tile, and ask which is safer.",
+  "feedback": "Wet tiles are slippery. Dry the floor or put up a warning sign.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING.M_AG_CLEAN_WASH_FIRST": {
+  "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+  "error": "Washes a floor before sweeping or dusting it.",
+  "example": {
+   "question": "What comes first in cleaning a cemented floor?",
+   "wrong_answer": "Scrub it with water",
+   "correct_answer": "Sweep away the dust"
+  },
+  "cause": "The child goes straight to water, as washing seems the real cleaning.",
+  "reveals": "Offer \"Scrub it with water\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour water on a dusty floor and look at the mud, then sweep first and try again.",
+  "feedback": "Sweep or dust first, then wash. Water on dust makes mud.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_ORDER": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+  "error": "Puts the laundry steps in the wrong order (ironing before washing, drying before rinsing).",
+  "example": {
+   "question": "Which comes first in laundering clothes?",
+   "wrong_answer": "Ironing them",
+   "correct_answer": "Sorting the clothes"
+  },
+  "cause": "The child has not seen the whole job done in order.",
+  "reveals": "Offer \"Ironing them\" next to the right answer and ask the question again in a new context.",
+  "help": "Lay out the steps on cards and do a real small wash in that order.",
+  "feedback": "The order is sort, soak, wash, rinse, dry, iron.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_MIX": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+  "error": "Washes white and coloured clothes together.",
+  "example": {
+   "question": "Why wash white and coloured clothes separately?",
+   "wrong_answer": "There is no reason",
+   "correct_answer": "Colour can run and stain the white ones"
+  },
+  "cause": "The child wants to save water and soap and has not seen colour run.",
+  "reveals": "Offer \"There is no reason\" next to the right answer and ask the question again in a new context.",
+  "help": "Soak a red cloth with a white one in a basin and look at the water.",
+  "feedback": "Colour from coloured clothes can run and stain whites, so wash them separately.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS.M_AG_LAUN_RINSE": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+  "error": "Skips or rushes the rinse and leaves soap in the cloth.",
+  "example": {
+   "question": "What happens if soap is left in clothes?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "They stay stiff and can make the skin itch"
+  },
+  "cause": "The child thinks soap in the cloth keeps it clean.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel a rinsed and an unrinsed cloth when dry.",
+  "feedback": "Rinse until the water runs clear. Soap left in makes cloth stiff and can itch.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_HOT": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+  "error": "Uses very hot water on coloured clothes.",
+  "example": {
+   "question": "What is best for washing coloured cotton?",
+   "wrong_answer": "Very hot water",
+   "correct_answer": "Cool or warm water"
+  },
+  "cause": "The child thinks hotter water always cleans better.",
+  "reveals": "Offer \"Very hot water\" next to the right answer and ask the question again in a new context.",
+  "help": "Wash two cloths of the same colour, one in cool and one in hot water, and look at the water.",
+  "feedback": "Very hot water can make colours run. Use cool or warm water for coloured cotton.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_SUN": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+  "error": "Dries coloured clothes face out in strong sun.",
+  "example": {
+   "question": "How should coloured clothes be dried?",
+   "wrong_answer": "Face out in the hot sun",
+   "correct_answer": "Inside out in the shade"
+  },
+  "cause": "The child dries all clothes the same way and has seen white clothes dried in the sun.",
+  "reveals": "Offer \"Face out in the hot sun\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare an old shirt dried face out in the sun for a term with a shirt dried in the shade.",
+  "feedback": "Strong sun fades colours. Dry coloured clothes inside out in the shade. White clothes may go in the sun.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE.M_AG_CARE_IRON": {
+  "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE",
+  "error": "Irons cotton on a cool setting, or when soaking wet or bone dry.",
+  "example": {
+   "question": "How is cotton ironed?",
+   "wrong_answer": "With a cool iron when soaking wet",
+   "correct_answer": "With a hot iron while a little damp"
+  },
+  "cause": "The child fears burning the cloth.",
+  "reveals": "Offer \"With a cool iron when soaking wet\" next to the right answer and ask the question again in a new context.",
+  "help": "Iron two pieces of cotton, one dripping and one a little damp, with a teacher.",
+  "feedback": "Cotton takes a hot iron and presses best while a little damp.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_SWAP": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+  "error": "Swaps the names or the look of running stitch and back stitch.",
+  "example": {
+   "question": "Which stitch goes back to meet the last stitch, leaving no gap?",
+   "wrong_answer": "Running stitch",
+   "correct_answer": "Back stitch"
+  },
+  "cause": "The child knows the names but not the picture they make on the cloth.",
+  "reveals": "Offer \"Running stitch\" next to the right answer and ask the question again in a new context.",
+  "help": "Have the child sew a short line of each on a scrap of cloth and name them from the pattern.",
+  "feedback": "Back stitch goes back to meet the last stitch. Running stitch goes in and out with gaps.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_RUN_STRONG": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+  "error": "Thinks running stitch is the strongest because it is quick and long.",
+  "example": {
+   "question": "Which stitch is stronger?",
+   "wrong_answer": "Running stitch",
+   "correct_answer": "Back stitch"
+  },
+  "cause": "The child thinks that the quickest stitch must be the best.",
+  "reveals": "Offer \"Running stitch\" next to the right answer and ask the question again in a new context.",
+  "help": "Pull two seams, one in each stitch, and see which gives way.",
+  "feedback": "Back stitch has no gaps and holds much better than running stitch.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES.M_AG_STITCH_BACK_GAPS": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+  "error": "Thinks back stitch leaves gaps (and running stitch does not).",
+  "example": {
+   "question": "Which stitch leaves gaps between stitches on the front?",
+   "wrong_answer": "Back stitch",
+   "correct_answer": "Running stitch"
+  },
+  "cause": "The child mixes the two pictures.",
+  "reveals": "Offer \"Back stitch\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at the front of both stitches on a scrap and count the gaps.",
+  "feedback": "Running stitch leaves gaps. Back stitch has none on the front.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_RUN": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+  "error": "Uses running stitch to repair a gaping seam because it is quicker.",
+  "example": {
+   "question": "Which stitch repairs a gaping seam?",
+   "wrong_answer": "Running stitch",
+   "correct_answer": "Back stitch"
+  },
+  "cause": "The child chooses the stitch that is quickest to sew.",
+  "reveals": "Offer \"Running stitch\" next to the right answer and ask the question again in a new context.",
+  "help": "Repair two seams, one in each stitch, and pull them.",
+  "feedback": "A seam that has split needs back stitch, because it is strong.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_START": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+  "error": "Starts exactly at the gap and stops at its end, without securing the thread.",
+  "example": {
+   "question": "Where should the repair of a gaping seam start?",
+   "wrong_answer": "Exactly at the first gap",
+   "correct_answer": "A little before the gap on the sound seam"
+  },
+  "cause": "The child sews only the gap and not the cloth around it.",
+  "reveals": "Offer \"Exactly at the first gap\" next to the right answer and ask the question again in a new context.",
+  "help": "Pull a seam that started at the gap and one that started before it.",
+  "feedback": "Start a little before the gap, sew a little past it, and fasten the thread with two small stitches.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR.M_AG_SEAM_TIGHT": {
+  "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+  "error": "Pulls the thread as tight as possible.",
+  "example": {
+   "question": "How tight should the thread be pulled?",
+   "wrong_answer": "As tight as possible",
+   "correct_answer": "Firm but not puckering the cloth"
+  },
+  "cause": "The child believes tight means strong.",
+  "reveals": "Offer \"As tight as possible\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at a puckered seam and a flat seam side by side.",
+  "feedback": "Too tight puckers the cloth. Pull firm and even.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_NEED_LAND": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+  "error": "Thinks a vertical garden needs more land than a flat one.",
+  "example": {
+   "question": "Which kind of garden needs the least ground?",
+   "wrong_answer": "A horizontal garden",
+   "correct_answer": "A vertical garden"
+  },
+  "cause": "The child thinks vertical means bigger.",
+  "reveals": "Offer \"A horizontal garden\" next to the right answer and ask the question again in a new context.",
+  "help": "Stand a sack on the ground and measure the ground it covers.",
+  "feedback": "A vertical garden grows upwards, so it needs very little ground.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES.M_AG_GTYPE_SWAP": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES",
+  "error": "Calls a sack garden horizontal, or a flat bed vertical.",
+  "example": {
+   "question": "A sack garden is which kind of garden?",
+   "wrong_answer": "Horizontal",
+   "correct_answer": "Vertical"
+  },
+  "cause": "The child mixes the two words and does not picture the direction.",
+  "reveals": "Offer \"Horizontal\" next to the right answer and ask the question again in a new context.",
+  "help": "Stand a sack up and lay a tray flat and name each one.",
+  "feedback": "A sack garden grows upwards, so it is a vertical garden.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_ANY_CROP": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+  "error": "Thinks any crop (maize, cassava) will grow in a sack or bottle garden.",
+  "example": {
+   "question": "Which crop suits a sack garden?",
+   "wrong_answer": "Maize",
+   "correct_answer": "Kale"
+  },
+  "cause": "The child thinks a sack garden is simply a small field.",
+  "reveals": "Offer \"Maize\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how deep the roots of maize and cassava go compared with kale.",
+  "feedback": "Choose small crops with shallow roots such as kale, spinach, spring onions and coriander.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_DRAIN": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+  "error": "Leaves out drainage holes or the stone column, so the water does not move through the soil.",
+  "example": {
+   "question": "Why is a column of stones placed in the middle of a sack garden?",
+   "wrong_answer": "For decoration only",
+   "correct_answer": "To let water reach the lower soil"
+  },
+  "cause": "The child sees the stones as a weight and not as a water path.",
+  "reveals": "Offer \"For decoration only\" next to the right answer and ask the question again in a new context.",
+  "help": "Pour water into one sack with a column and one without, then open them.",
+  "feedback": "The stone column spreads water through the sack. Containers also need drainage holes so extra water can leave.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD.M_AG_GBUILD_NO_WATER": {
+  "skill": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD",
+  "error": "Thinks a vertical garden needs no watering.",
+  "example": {
+   "question": "How often does a sack garden need water?",
+   "wrong_answer": "Never, the sack keeps it",
+   "correct_answer": "Regularly, through the stone column"
+  },
+  "cause": "The child thinks soil in a sack stays damp for ever.",
+  "reveals": "Offer \"Never, the sack keeps it\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel the soil of a sack garden two days after watering.",
+  "feedback": "A small garden dries quickly. Water it regularly through the stone column.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}
