@@ -25,6 +25,15 @@ const mapText = (lib) => FRACTION_SKILLS.map((c) => {
   return `  ${c} (${s.name}). Builds on: ${(s.pre || []).map(shortName).join(', ') || 'Grade 4 fractions'}.\n${mis}`;
 }).join('\n');
 
+// The reply form, written out from TURN_SCHEMA so the prompt and the validator never disagree.
+const objShape = (o) => `{${Object.entries(o.properties).map(([k, v]) => `${k}${(o.required || []).includes(k) ? '' : '?'}: ${fieldType(v)}`).join(', ')}}`;
+const fieldType = (f) => (f.type === 'object' && f.properties ? objShape(f) : f.type === 'array' && f.items?.properties ? `[${objShape(f.items)}]` : f.enum ? f.enum.join('|') : f.const ? JSON.stringify(f.const) : f.type === 'array' ? `[${f.items?.enum ? f.items.enum.join('|') : f.items?.type || ''}]` : Array.isArray(f.type) ? f.type.join('|') : f.anyOf ? f.anyOf.map((x) => x.type).join('|') : f.type || 'any');
+export const REPLY_FORM = TURN_SCHEMA.properties.steps.items.anyOf.map((st) => {
+  const req = st.required || [];
+  const fields = Object.entries(st.properties).filter(([k]) => k !== 'cmd').map(([k, f]) => `${k}${req.includes(k) ? '' : '?'}: ${fieldType(f)}`);
+  return `- ${st.properties.cmd.const}: ${fields.join(', ') || '(no fields)'}`;
+}).join('\n');
+
 export const systemPrompt = (lib) => `You are HOREB, Tutagora's maths tutor, giving a live one-to-one lesson on Grade 5 fractions (Kenya's CBC) to a child of about ten, on a phone or laptop. You teach the way a good teacher does at a whiteboard: you say a short sentence and draw or point at the same moment.
 
 You are an AI, and the child must know it. In your first turn, say in your own words that you are an AI tutor, a computer program, not a person.
@@ -105,7 +114,10 @@ Example of a teaching turn (shape only): the bar is drawn slowly with its own se
 {"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
-${mapText(lib)}`;
+${mapText(lib)}
+
+REPLY FORM. Reply with only one JSON object, {"steps":[...]}, and nothing before or after it: no prose, no markdown fences. Each step is an object with "cmd" and that command's fields, exactly as named here ("?" means it may be left out; a|b means one of these values; [..] is a list):
+${REPLY_FORM}`;
 
 const pct = (x) => (x == null ? 'no attempts' : `${Math.round(x * 100)}% right`);
 
@@ -158,7 +170,10 @@ export function buildRequest({ model, effort = 'low', lib, history = [], message
   return {
     model,
     max_tokens: MAX_TOKENS,
-    output_config: { effort, format: { type: 'json_schema', schema: TURN_SCHEMA } },
+    // No json_schema format (12 Nov 2026): the 20 commands' schema (65 optional fields, 20 unions) is past what the
+    // API will compile for structured outputs, so every live turn failed. The form is in the prompt (REPLY FORM) and
+    // validateTurn() checks every step, as it always did; a step that is not right is dropped.
+    output_config: { effort },
     system: [{ type: 'text', text: systemPrompt(lib), cache_control: { type: 'ephemeral' } }],
     messages,
     // Streamed: each step is checked and spoken as soon as it is written (tutorTurn.js).

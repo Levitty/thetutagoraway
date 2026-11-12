@@ -74,7 +74,9 @@ export const tokenGetter = (supabase, sessionId, childId = () => null) => {
     if (cached && Date.now() < until) return cached;
     const { data, error } = await supabase.functions.invoke('voice-tutor-token', { body: { session_id: sessionId(), child_id: childId() } });
     if (error) {
-      const e = new Error(error.message || 'No voice token.');
+      // The function's own reason (status and the voice service's answer), for the tester view.
+      let body = null; try { body = await error.context?.json?.(); } catch { /* not JSON */ }
+      const e = new Error(`voice token ${error.context?.status || ''}: ${body?.detail || body?.error || error.message || 'no token'}`);
       e.kind = error.context?.status === 403 ? 'token-refused' : 'listen-failed';
       throw e;
     }

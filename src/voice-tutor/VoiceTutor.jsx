@@ -140,6 +140,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const turnNo = useRef(0);
   const delays = useRef({});
   const offsets = useRef([]);
+  const voiceError = useRef('');   // the last voice failure, for the tester view
+  const listenError = useRef('');  // the last listening failure, for the tester view
   const silentVoice = useRef(false);   // the practice voice could not keep time: timed silent mode   // ms between a word being heard and its stroke starting (frame lag)
   const [delayLog, setDelayLog] = useState([]);
   const [voiceName, setVoiceName] = useState('');
@@ -282,6 +284,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       if (T.stopped || turnRef.current !== T) return;
       // No voice: carry on silently in words, from the same place.
       console.warn('voice-tutor: voice failed', err?.message);
+      voiceError.current = String(err?.message || err || 'unknown').slice(0, 200);
       vdispatch({ type: 'fail', kind: 'speak-failed' });
       providers.current.tts = simulatedTts();
       silentVoice.current = true;
@@ -364,7 +367,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
     startedAt.current = clock();
     // Audio may start only after a tap: this is that tap (the browser's voice is unlocked inside it).
     let unlocked;
-    try { unlocked = await providers.current.tts.unlock(); } catch { unlocked = { ok: false, reason: 'audio-blocked' }; }
+    try { unlocked = await providers.current.tts.unlock(); } catch (e) { voiceError.current = String(e?.message || e).slice(0, 200); unlocked = { ok: false, reason: 'audio-blocked' }; }
+    if (unlocked && !unlocked.ok && unlocked.reason) voiceError.current = voiceError.current || unlocked.reason;
     if (!voiceOn) vdispatch({ type: 'retry', mode: 'typed' });
     else {
       if (!unlocked?.ok) {
@@ -453,7 +457,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
         delays.current = { childDone: clock() };
         request({ message: t, heard });
       },
-      onError: (kind) => { listenRef.current = null; vdispatch({ type: 'fail', kind }); },
+      onError: (kind, detail) => { listenRef.current = null; listenError.current = `${kind}${detail ? `: ${String(detail).slice(0, 160)}` : ''}`; vdispatch({ type: 'fail', kind }); },
     });
     listenRef.current = sess;
     if (fake) { setInput(''); sess.say(text); }
@@ -731,7 +735,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
       </main>
 
       {tester ? (
-        <TesterPanel voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.` : ''} onClose={() => setTester(false)}
+        <TesterPanel voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.${voiceError.current ? ` Last voice error: ${voiceError.current}.` : ''}${listenError.current ? ` Last listening error: ${listenError.current}.` : ''}` : ''} onClose={() => setTester(false)}
           onFail={started ? (kind) => {
             // As a real failure: the sound stops, the turn finishes in words on the board, the next turns are silent.
             if (kind === 'speak-failed') { providers.current.tts.stop(); providers.current.tts = simulatedTts(); }

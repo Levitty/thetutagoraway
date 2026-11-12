@@ -48,12 +48,17 @@ const FRACTION_LIB = Object.fromEntries(Object.entries(LIB).filter(([k]) => k.st
 const callModelWith = (key) => async (request, { onText }) => {
   const res = await fetch("https://api.anthropic.com/v1/messages", {
     method: "POST",
-    headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01", "anthropic-beta": "server-side-fallback-2026-07-01" },
-    body: JSON.stringify({ ...request, stream: true, fallbacks: "default" }),
+    // No server-side fallback parameter (12 Nov 2026): one fewer thing the API can refuse. A refusal ends the turn
+    // with an authored line (tutorTurn.js), as before.
+    headers: { "content-type": "application/json", "x-api-key": key, "anthropic-version": "2023-06-01" },
+    body: JSON.stringify({ ...request, stream: true }),
   });
   if (!res.ok || !res.body) {
-    console.error("anthropic", res.status, (await res.text().catch(() => "")).slice(0, 400));
-    throw new Error(`model ${res.status}`);
+    const text = await res.text().catch(() => "");
+    console.error("anthropic", res.status, text.slice(0, 400));
+    // The API's own message (never a key) goes to the tester view, so a failure is never silent again.
+    let why = ""; try { why = JSON.parse(text)?.error?.message || ""; } catch { why = text; }
+    throw new Error(`model ${res.status}: ${String(why).slice(0, 160)}`);
   }
   const usage = {}; let stop_reason = null;
   const reader = res.body.getReader();

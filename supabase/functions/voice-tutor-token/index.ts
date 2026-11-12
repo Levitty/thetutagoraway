@@ -626,13 +626,16 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
       headers: { Authorization: `Bearer ${key}`, "Cartesia-Version": CARTESIA_VERSION, "Content-Type": "application/json" },
       body: JSON.stringify({ grants: { tts: true, stt: true }, expires_in: TOKEN_TTL_S })
     });
-    if (!r.ok) throw new Error(`cartesia ${r.status}`);
+    if (!r.ok) {
+      const t = typeof r.text === "function" ? await r.text().catch(() => "") : "";
+      throw new Error(`cartesia ${r.status} ${t.slice(0, 120)}`);
+    }
     const j = await r.json();
     if (!j?.token) throw new Error("cartesia gave no token");
     out = { token: j.token, expires_in: TOKEN_TTL_S, version: CARTESIA_VERSION, url: CARTESIA_WS, model: settings.ttsModel, voice: settings.ttsVoice, speed: settings.ttsSpeed, emotion: settings.ttsEmotion === "none" ? null : settings.ttsEmotion, sample_rate: settings.ttsSampleRate };
   } catch (e) {
     console.error("voice token", String(e?.message || e).slice(0, 200));
-    return reply(502, { error: "The voice service did not answer. Please type for now." });
+    return reply(502, { error: "The voice service did not answer. Please type for now.", detail: String(e?.message || e).slice(0, 160) });
   }
   await db.recordUsage({ user_id: user.id, child_key: childKey, session_id: sid, model: "cartesia", cost_usd: 0, guard: ["token-voice"], dropped_steps: 0 });
   return reply(200, out);

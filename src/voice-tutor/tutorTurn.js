@@ -316,6 +316,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       await queue.catch(() => {});
       console.error('voice-tutor: model', String(e?.message || e).slice(0, 200));
       await stop('model-error');
+      guard.push(`model-error: ${String(e?.message || e).slice(0, 180)}`); // shown in the tester view
     }
     if (stopReason === 'refusal') await stop('refusal');
     // Nothing usable said: an authored line. Said something but did not hand back: hand back.

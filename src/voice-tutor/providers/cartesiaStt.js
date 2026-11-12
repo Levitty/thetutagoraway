@@ -55,7 +55,7 @@ export function cartesiaStt({ getToken }) {
         setTimeout(() => { try { ws?.close(); } catch { /* closed */ } }, 500);
       };
       const finish = () => { if (done) return; done = true; const s = seconds(); cleanup(); h.onFinal?.(finals.trim(), s); };
-      const fail = (kind) => { if (done) return; done = true; cleanup(); h.onError?.(kind); };
+      const fail = (kind, detail) => { if (done) return; done = true; cleanup(); h.onError?.(kind, detail); };
       const finalize = () => {
         if (done || flushTimer) return;
         try { node?.disconnect(); } catch { /* stopped */ }
@@ -65,14 +65,14 @@ export function cartesiaStt({ getToken }) {
       };
       (async () => {
         let s; let tok;
-        try { s = await mic(); } catch (e) { fail(e.kind || 'listen-failed'); return; }
-        try { tok = await getToken(); } catch (e) { fail(e.kind === 'token-refused' ? 'token-refused' : 'listen-failed'); return; }
+        try { s = await mic(); } catch (e) { fail(e.kind || 'listen-failed', `microphone: ${e?.message || e}`); return; }
+        try { tok = await getToken(); } catch (e) { fail(e.kind === 'token-refused' ? 'token-refused' : 'listen-failed', e?.message); return; }
         if (done) return;
         try { ctx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 }); } catch { ctx = new (window.AudioContext || window.webkitAudioContext)(); }
         ws = new WebSocket(sttUrl({ token: tok.token, version: tok.version, rate: Math.round(ctx.sampleRate), model: CHILD_LISTEN.model, language: CHILD_LISTEN.language, maxSilenceSecs: CHILD_LISTEN.maxSilenceSecs, keyterms: keytermsText(MATHS_KEYTERMS) }));
         ws.binaryType = 'arraybuffer';
-        ws.onerror = () => fail('listen-failed');
-        ws.onclose = () => { if (!done) { if (finals.trim()) finish(); else fail('listen-failed'); } };
+        ws.onerror = () => fail('listen-failed', 'the listening connection failed');
+        ws.onclose = (ce) => { if (!done) { if (finals.trim()) finish(); else fail('listen-failed', `listening closed (code ${ce?.code ?? '?'}${ce?.reason ? `, ${ce.reason}` : ''})`); } };
         ws.onmessage = (e) => {
           let m; try { m = JSON.parse(e.data); } catch { return; }
           const ev = cartesiaSttEvent(m);
@@ -80,7 +80,7 @@ export function cartesiaStt({ getToken }) {
           if (ev.kind === 'partial') { partial = ev.text; h.onPartial?.(`${finals}${partial}`.trim()); }
           if (ev.kind === 'final') { finals += ev.text; partial = ''; h.onPartial?.(finals.trim()); }
           if (ev.kind === 'flushed' || ev.kind === 'done') finish();
-          if (ev.kind === 'error') fail('listen-failed');
+          if (ev.kind === 'error') fail('listen-failed', `listening service: ${String(m.message || m.error || m.title || JSON.stringify(m)).slice(0, 140)}`);
         };
         src = ctx.createMediaStreamSource(s);
         node = ctx.createScriptProcessor(2048, 1, 1);

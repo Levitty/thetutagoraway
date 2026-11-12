@@ -97,10 +97,12 @@ test('a good turn: validated, the question sealed (no answer in the reply), cost
   assert.equal(db.usage.length, 1);
   assert.ok(db.usage[0].cost_usd > 0);
   assert.equal(r.body.target, EQ);
-  // The request: Sonnet 5.5, structured output with our schema, the prompt cached.
+  // The request: Sonnet 5.5, the reply form in the cached prompt (no json_schema format: 20 commands are past what
+  // the API compiles for structured outputs, 12 Nov 2026), every step still checked by validateTurn.
   const req = callModel.calls[0];
   assert.equal(req.model, 'claude-sonnet-5-5');
-  assert.deepEqual(req.output_config.format.schema, TURN_SCHEMA);
+  assert.equal(req.output_config.format, undefined);
+  for (const st of TURN_SCHEMA.properties.steps.items.anyOf) assert.ok(req.system[0].text.includes(`- ${st.properties.cmd.const}: `), st.properties.cmd.const);
   assert.equal(req.system[0].cache_control.type, 'ephemeral');
   assert.equal(req.tool_choice, undefined);
 });
