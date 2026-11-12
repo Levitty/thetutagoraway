@@ -73,6 +73,7 @@ function buildProblem(def, d) {
     rung: def.rung,
     outcome: def.outcome,
     ...(def.cskill ? { cskill: def.cskill } : {}),
+    ...(def.marker ? { marker: def.marker } : {}),   // 'text': marked by answerCheckText.js (English), not the Maths marker
     question: m.question,
     hints: hintLadder(...(m.hints || [])),
     hint: (m.hints || [])[0],
@@ -80,6 +81,7 @@ function buildProblem(def, d) {
     solution: { steps: (m.steps || []).map(text => ({ text })), answer: '' },
   };
   if (m.model) base.model = m.model;
+  if (m.passage) base.passage = m.passage;   // a short text to read first (English comprehension): { title, text }
   if (m.mis) base.mis = [].concat(m.mis);
   if (m.story !== false && def.form !== 'direct') base.story = true;
 

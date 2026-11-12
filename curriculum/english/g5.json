@@ -3,15 +3,15 @@
  "subject_key": "english",
  "grade": 5,
  "source": "KICD ENGLISH GRADE 5 UPDATED - Revised Sept.pdf, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions (12 Nov 2026) are proposed or draft, written offline by Claude, awaiting a Kenyan English teacher's review",
  "totals": {
   "strands": 4,
   "sub_strands": 52,
   "outcomes": 200,
   "lessons": 149,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 41,
+  "prerequisites": 19,
+  "misconceptions": 163
  },
  "sub_strands": [
   {
@@ -84,8 +84,61 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS",
+     "name": "Use words about child rights and responsibilities",
+     "outcomes": [
+      "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.b"
+     ],
+     "mastery": "Chooses the right word from the theme (right, responsibility, protect, education, shelter, health, safe, respect) to complete a sentence, and spots a sentence where one of them is misused, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M_VOC_RIGHT_RESPONSIBILITY",
+     "skill": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS",
+     "error": "Mixes up right and responsibility.",
+     "example": {
+      "question": "Every child has a ___ to go to school.",
+      "wrong_answer": "responsibility",
+      "correct_answer": "right"
+     },
+     "cause": "Does not separate what you are given from what you must do.",
+     "reveals": "right and responsibility in one sentence.",
+     "help": "A right is something every child is entitled to. A responsibility is something you must do.",
+     "feedback": "A right is something you are entitled to. A responsibility is a duty, something you must do.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS.M_VOC_NEAR_MEANING",
+     "skill": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.THEME_WORDS",
+     "error": "Chooses a word with a related meaning that does not fit the sentence.",
+     "example": {
+      "question": "Parents should ___ their children from harm.",
+      "wrong_answer": "respect",
+      "correct_answer": "protect"
+     },
+     "cause": "Knows the topic words but not their exact meaning.",
+     "reveals": "Two theme words close in meaning.",
+     "help": "Replace the gap with each word and test the meaning.",
+     "feedback": "The word is related but does not fit the meaning. Try each word in the gap and check.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING",
@@ -149,8 +202,94 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+     "name": "Choose and use reference materials",
+     "outcomes": [
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.a",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.c"
+     ],
+     "mastery": "Chooses the right reference book for a need (dictionary for meaning and spelling, atlas for places, encyclopaedia for facts), puts words in alphabetical order beyond the first letter, and uses guide words to decide whether a word is on a page, in 8 of 10 new questions.",
+     "question_forms": [
+      "choose the correct book",
+      "put words in alphabetical order",
+      "decide from guide words"
+     ],
+     "thinking": [
+      "recall",
+      "procedure"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G4.READIN.T1_EXTENSIVE_READING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G4.READIN.T1_EXTENSIVE_READING.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_WRONG_SOURCE",
+     "skill": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+     "error": "Chooses the wrong reference book for the need (an atlas for the meaning of a word).",
+     "example": {
+      "question": "Which book tells you the meaning of the word \"harvest\"?",
+      "wrong_answer": "an atlas",
+      "correct_answer": "a dictionary"
+     },
+     "cause": "Does not know what each book is for.",
+     "reveals": "A book that fits another need among the options.",
+     "help": "Dictionary: meaning and spelling. Atlas: maps and places. Encyclopaedia: facts about a subject.",
+     "feedback": "Each reference book has its own job. A dictionary gives meanings and spellings. An atlas gives maps. An encyclopaedia gives facts on a subject.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ALPHA_FIRST_LETTER",
+     "skill": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+     "error": "Sorts words by the first letter only.",
+     "example": {
+      "question": "Put in alphabetical order: bag, bat, back, ball.",
+      "wrong_answer": "bag, bat, back, ball",
+      "correct_answer": "back, bag, ball, bat"
+     },
+     "cause": "Stops when the first letters match.",
+     "reveals": "Words that start with the same letter.",
+     "help": "When the first letters match, look at the second letter, then the third.",
+     "feedback": "When the first letters are the same, look at the second letter, then the third, to decide the order.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_GUIDE_WORDS",
+     "skill": "ENGL.G5.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+     "error": "Cannot use guide words to decide if a word is on the page.",
+     "example": {
+      "question": "Is \"mango\" on the page with guide words \"maize\" and \"market\"?",
+      "wrong_answer": "No",
+      "correct_answer": "Yes"
+     },
+     "cause": "Compares only the first letter, or does not know what guide words are.",
+     "reveals": "A word that sits between the guide words alphabetically.",
+     "help": "Guide words are the first and last words on the page. Everything on the page comes between them in alphabetical order.",
+     "feedback": "Guide words show the first and last word on the page. Put your word in alphabetical order to see if it comes between them.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA",
@@ -209,8 +348,95 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+     "name": "Use this, these, that and those",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.a",
+      "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.b"
+     ],
+     "mastery": "Chooses or writes this, these, that or those so that it agrees in number with the noun and fits the distance (near or far), in 8 of 10 new sentences, and finds the one wrong demonstrative in a short note.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THIS_PLURAL",
+     "skill": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+     "error": "Uses this or that with a plural noun.",
+     "example": {
+      "question": "Look at ___ books on my desk.",
+      "wrong_answer": "this",
+      "correct_answer": "these"
+     },
+     "cause": "Learns \"this\" as the word for pointing and does not match it to singular or plural.",
+     "reveals": "A plural noun after this/that, with the same sentence also offered with these/those.",
+     "help": "Point to one object and say this, to two and say these. Say the noun first: one book, two books.",
+     "feedback": "This and that go with ONE thing. For more than one thing, change the word.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THESE_SINGULAR",
+     "skill": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+     "error": "Uses these or those with a singular noun.",
+     "example": {
+      "question": "___ pencil is mine.",
+      "wrong_answer": "These",
+      "correct_answer": "This"
+     },
+     "cause": "Over-corrects after learning that \"these\" is the word for many things.",
+     "reveals": "A singular noun with these/those among the options.",
+     "help": "Count the things. One thing needs this or that.",
+     "feedback": "These and those go with MORE THAN ONE thing. Here there is only one.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_NEAR_FAR",
+     "skill": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+     "error": "Mixes up near words (this, these) and far words (that, those).",
+     "example": {
+      "question": "Mama is holding a cup. \"___ cup is mine,\" she said.",
+      "wrong_answer": "That",
+      "correct_answer": "This"
+     },
+     "cause": "Does not use the position of the speaker to choose.",
+     "reveals": "A sentence that says where the thing is (in my hand, across the field).",
+     "help": "Use this and these for things near you, that and those for things far away.",
+     "feedback": "Think about where the thing is. This and these are near the speaker. That and those are far from the speaker.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES.M_DEM_THEM",
+     "skill": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.DEMONSTRATIVES",
+     "error": "Writes \"them\" in place of these or those in front of a noun.",
+     "example": {
+      "question": "Pass me ___ mangoes, please.",
+      "wrong_answer": "them",
+      "correct_answer": "those"
+     },
+     "cause": "Them is heard in speech before a noun; it is a pronoun, not a pointing word.",
+     "reveals": "The option \"them\" before a noun.",
+     "help": "Them stands alone (Pass them to me). Before a noun use these or those.",
+     "feedback": "Them cannot come before a noun. Use a pointing word: this, these, that or those.",
+     "source": "common learner error; widespread in speech",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F",
@@ -415,8 +641,495 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "name": "Identify characters, places and events",
+     "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.a"
+     ],
+     "mastery": "Names the characters and the places in a short story and puts its main events in the order they happened, in 8 of 10 new passages.",
+     "question_forms": [
+      "short comprehension: choose",
+      "short comprehension: type",
+      "put the events in order"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G4.READIN.T2_INTENSIVE_READING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+     "name": "Predict what happens next",
+     "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.b"
+     ],
+     "mastery": "Uses clues in the title and the story to choose the most likely next event, and says which clue supports it, in 8 of 10 new passages.",
+     "question_forms": [
+      "choose the best prediction",
+      "choose the clue that supports it"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "name": "Answer factual questions from a text",
+     "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.d",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.d",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.c"
+     ],
+     "mastery": "Finds an answer that is stated in the text, tells true from false and not stated, and does not pick a detail that sits near the answer, in 8 of 10 new passages.",
+     "question_forms": [
+      "short comprehension: choose",
+      "true, false or not stated",
+      "short comprehension: type"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+     "name": "Answer inferential questions from a text",
+     "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.d",
+      "ENGL.G5.READIN.T4_INTENSIVE_READING_CO.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.c",
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.d",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
+      "ENGL.G5.READIN.T11_INTENSIVE_READING.c",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.c"
+     ],
+     "mastery": "Works out what the text does not say outright (why a character acts, how they feel, what a clue means) and does not give an answer the text contradicts or merely repeats, in 8 of 10 new passages.",
+     "question_forms": [
+      "short comprehension: choose",
+      "stated or worked out"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+     "name": "Use context clues to find the meaning of a word",
+     "outcomes": [
+      "ENGL.G5.READIN.T2_INTENSIVE_READING.d",
+      "ENGL.G5.READIN.T6_INTENSIVE_READING_CO.b",
+      "ENGL.G5.READIN.T12_INTENSIVE_READING.b"
+     ],
+     "mastery": "Uses the words around an unfamiliar word to choose its meaning, and says which words gave the clue, in 8 of 10 new passages.",
+     "question_forms": [
+      "short comprehension: choose",
+      "choose the clue words"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_MIXES_CHARACTER_PLACE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "error": "Names a place when asked for a character, or the other way round.",
+     "example": {
+      "question": "Who is the story mainly about?",
+      "wrong_answer": "the market",
+      "correct_answer": "Achieng"
+     },
+     "cause": "Picks a noun from the first sentence without checking its job.",
+     "reveals": "A place and a person offered together.",
+     "help": "A character is a person or animal that acts. A place is where the story happens.",
+     "feedback": "A character is a person or animal in the story. A place is where it happens. Check which one the question asks for.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_MINOR_FOR_MAIN",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "error": "Names a minor character as the main one.",
+     "example": {
+      "question": "Who is the main character?",
+      "wrong_answer": "the shopkeeper",
+      "correct_answer": "Kamau"
+     },
+     "cause": "Picks the first name mentioned.",
+     "reveals": "A character who appears briefly.",
+     "help": "The main character is the one the story follows most.",
+     "feedback": "The main character is the person the story is mostly about, not just the first one named.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_ORDER_REVERSED",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "error": "Puts events in reverse order or starts from the most exciting event.",
+     "example": {
+      "question": "Put the events in the order they happened.",
+      "wrong_answer": "last event first",
+      "correct_answer": "order of the story"
+     },
+     "cause": "Remembers the ending best.",
+     "reveals": "The ending event offered first.",
+     "help": "Go through the story from the start and number each event as it happens.",
+     "feedback": "Go back to the story. Events are told in the order they happened. Look for words like first, then, after that and finally.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_ORDER_SWAPPED",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "error": "Swaps two neighbouring events.",
+     "example": {
+      "question": "Put the events in the order they happened.",
+      "wrong_answer": "two swapped",
+      "correct_answer": "order of the story"
+     },
+     "cause": "Does not check each linking word.",
+     "reveals": "Two events that are close together.",
+     "help": "Look for time words like then, soon after, later.",
+     "feedback": "Two of the events are the wrong way round. Check the time words in the story: then, after, later.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_NO_CLUE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+     "error": "Predicts something that has no support in the text.",
+     "example": {
+      "question": "What will probably happen next?",
+      "wrong_answer": "a prediction with no clue",
+      "correct_answer": "a prediction from a clue"
+     },
+     "cause": "Guesses from personal experience rather than the text.",
+     "reveals": "A dramatic event with no clue in the passage.",
+     "help": "Find a clue in the passage first, then predict.",
+     "feedback": "A good prediction is based on a clue in the text. Look for the clue that points to it.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_CONTRADICTS",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+     "error": "Predicts something the text makes unlikely.",
+     "example": {
+      "question": "What will probably happen next?",
+      "wrong_answer": "a prediction that goes against the text",
+      "correct_answer": "a prediction that fits the text"
+     },
+     "cause": "Does not reread the facts.",
+     "reveals": "An event the passage rules out.",
+     "help": "Check that the prediction does not go against what you have read.",
+     "feedback": "This prediction goes against something the text already told us. Reread the clues.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT.M_PRED_ALREADY_HAPPENED",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.PREDICT",
+     "error": "Says something that has already happened.",
+     "example": {
+      "question": "What will probably happen next?",
+      "wrong_answer": "something already told",
+      "correct_answer": "something still to happen"
+     },
+     "cause": "Repeats the last sentence.",
+     "reveals": "An option that repeats the end of the passage.",
+     "help": "A prediction is about what is NOT yet told.",
+     "feedback": "That has already happened in the story. A prediction is about what has not happened yet.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Picks a detail from the passage that is nearby but does not answer the question.",
+     "example": {
+      "question": "What did Achieng buy at the market?",
+      "wrong_answer": "a nearby detail",
+      "correct_answer": "the stated answer"
+     },
+     "cause": "Matches a word in the question to the same word in the passage.",
+     "reveals": "A detail from the same sentence as the answer.",
+     "help": "Find the exact sentence that answers the question. Check the wh- word.",
+     "feedback": "This is in the passage, but it does not answer this question. Reread the question and find the exact sentence.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NOT_STATED_AS_TRUE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Says \"true\" for something the text does not say.",
+     "example": {
+      "question": "The passage says the bus was late. True, false or not stated?",
+      "wrong_answer": "True",
+      "correct_answer": "Not stated"
+     },
+     "cause": "Fills the gap with what seems likely.",
+     "reveals": "A sentence that sounds likely but is never written.",
+     "help": "True means the passage says it. If you cannot find it, it is not stated.",
+     "feedback": "The passage never says this. \"Not stated\" means you cannot find it in the text, even if it sounds likely.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_NOT_STATED",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Says \"not stated\" when the passage says the opposite.",
+     "example": {
+      "question": "The passage says Wafula walked to school. True, false or not stated?",
+      "wrong_answer": "Not stated",
+      "correct_answer": "False"
+     },
+     "cause": "Does not look for a sentence that contradicts the statement.",
+     "reveals": "A statement the passage contradicts.",
+     "help": "If the passage says the opposite, the statement is false.",
+     "feedback": "The passage says something different, so the statement is false.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_OUTSIDE_KNOWLEDGE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Answers from what the child knows, not from the passage.",
+     "example": {
+      "question": "How many people were at the meeting?",
+      "wrong_answer": "a number from memory",
+      "correct_answer": "the number in the passage"
+     },
+     "cause": "Uses own experience instead of the text.",
+     "reveals": "An answer that is true in life but different from the passage.",
+     "help": "The passage is the authority. Find the sentence in it.",
+     "feedback": "Answer from the passage, not from what you know. The text says something different.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_REPEATS_TEXT",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+     "error": "Repeats a sentence from the text when asked to work something out.",
+     "example": {
+      "question": "Why do you think Mercy was smiling?",
+      "wrong_answer": "a repeated sentence",
+      "correct_answer": "a reason from clues"
+     },
+     "cause": "Treats an inference question as a find-it question.",
+     "reveals": "An answer copied from the passage that does not say why.",
+     "help": "Ask: what clues does the text give? What do they show?",
+     "feedback": "This repeats the passage but does not explain why. An inference question asks you to work it out from the clues.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_CONTRADICTS",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+     "error": "Gives an answer that goes against the text.",
+     "example": {
+      "question": "How did Otieno feel?",
+      "wrong_answer": "the opposite feeling",
+      "correct_answer": "the feeling shown by the clues"
+     },
+     "cause": "Takes one word and ignores the rest.",
+     "reveals": "The opposite feeling offered beside the right one.",
+     "help": "Check all the clues: what he said, what he did, what happened.",
+     "feedback": "The clues in the passage show something different. Look at what the character says and does.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_OVERREACH",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+     "error": "Gives an answer that goes far beyond the clues.",
+     "example": {
+      "question": "What can you tell about Mama from the passage?",
+      "wrong_answer": "an unsupported claim",
+      "correct_answer": "a supported claim"
+     },
+     "cause": "Builds a story that the text does not support.",
+     "reveals": "A dramatic reason with no clue in the passage.",
+     "help": "An inference must be backed by something written in the passage.",
+     "feedback": "The passage does not give enough clues for this. A good inference is backed by what is written.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_COMMON_MEANING",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+     "error": "Gives the word's commonest meaning instead of the one the passage needs.",
+     "example": {
+      "question": "In the passage, what does \"bank\" mean?",
+      "wrong_answer": "a place for money",
+      "correct_answer": "the side of the river"
+     },
+     "cause": "Does not read the words around it.",
+     "reveals": "The commonest meaning offered beside the right one.",
+     "help": "Reread the sentence with each meaning in place of the word.",
+     "feedback": "This is a meaning of the word, but it does not fit here. Try it in place of the word and see.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_LOOKS_LIKE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+     "error": "Chooses a meaning from how the word looks or sounds.",
+     "example": {
+      "question": "What does \"ravenous\" mean?",
+      "wrong_answer": "a word that looks similar",
+      "correct_answer": "very hungry"
+     },
+     "cause": "Matches the word to a known word with a similar shape.",
+     "reveals": "A distractor that sounds like the word.",
+     "help": "Ignore the shape and read the clue words around it.",
+     "feedback": "Do not guess from how the word looks. Look at the words around it for clues.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_OPPOSITE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+     "error": "Chooses the opposite meaning.",
+     "example": {
+      "question": "What does \"reluctant\" mean?",
+      "wrong_answer": "eager",
+      "correct_answer": "unwilling"
+     },
+     "cause": "Misreads a \"but\" or \"although\" clue.",
+     "reveals": "The opposite meaning offered.",
+     "help": "Look for words like but, although, however. They flip the meaning.",
+     "feedback": "The sentence has a clue word such as but or although. Check which way it points.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_MISSES_STATED",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Says false or not stated for something the passage does state, perhaps in different words.",
+     "example": {
+      "question": "The passage says Wafula walked to school. True, false or not stated?",
+      "wrong_answer": "Not stated",
+      "correct_answer": "True"
+     },
+     "cause": "Looks for the exact words and misses a rewording.",
+     "reveals": "A true statement that rewords the passage.",
+     "help": "Look for the idea, not the exact words.",
+     "feedback": "The passage does say this, in different words. Look for the same idea, not the same words.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_TRUE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+     "error": "Says true for a statement the passage contradicts.",
+     "example": {
+      "question": "The passage says the bus was early. True, false or not stated?",
+      "wrong_answer": "True",
+      "correct_answer": "False"
+     },
+     "cause": "Reads quickly and matches only the topic.",
+     "reveals": "A statement that changes one detail of the passage.",
+     "help": "Check each detail of the statement against the passage.",
+     "feedback": "Check the details. The passage says something different from this statement.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_WRONG_CLUE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+     "error": "Chooses words that do not help to find the meaning.",
+     "example": {
+      "question": "Which words help you understand the word \"ravenous\"?",
+      "wrong_answer": "on Tuesday",
+      "correct_answer": "had not eaten all day"
+     },
+     "cause": "Picks words next to the target word, not words about its meaning.",
+     "reveals": "Words from the same sentence that do not explain the word.",
+     "help": "Ask: which words tell me what the word means?",
+     "feedback": "These words are near the word, but they do not explain what it means. Look for words that tell more about it.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M_ELEM_WRONG_PLACE",
+     "skill": "ENGL.G5.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+     "error": "Names a different place from the story.",
+     "example": {
+      "question": "Where does the story take place?",
+      "wrong_answer": "a different place in the story",
+      "correct_answer": "the place named for the scene"
+     },
+     "cause": "Remembers a place but not the one the question asks about.",
+     "reveals": "Another place named in the passage.",
+     "help": "Find the sentence that says where the event happened.",
+     "feedback": "That place is in the story, but the event did not happen there. Find the sentence that tells where it happened.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV",
@@ -472,8 +1185,187 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+     "name": "Use collective nouns for groups",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b"
+     ],
+     "mastery": "Names the usual collective noun for a group of animals or things (a flock of birds, a herd of cattle, a swarm of bees, a bunch of bananas, a school of fish) and does not use one group word for every group, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+     "name": "Use reflexive pronouns",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
+      "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b"
+     ],
+     "mastery": "Uses myself, yourself, himself, herself, itself, ourselves, yourselves and themselves when the doer and the receiver are the same, and does not write hisself, theirselves or an object pronoun in their place, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_WRONG_ANIMAL",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+     "error": "Uses the group word of one animal for another animal.",
+     "example": {
+      "question": "A ___ of cattle was crossing the road.",
+      "wrong_answer": "flock",
+      "correct_answer": "herd"
+     },
+     "cause": "Learns a few group words and uses one of them for every group.",
+     "reveals": "The group word of a different animal as a distractor.",
+     "help": "Match a group word to the animal: flock of birds or sheep, herd of cattle, swarm of bees.",
+     "feedback": "That group word belongs to different animals. Each kind of animal has its own group word.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_THING_MIX",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+     "error": "Uses an animal group word for things (a herd of keys), or a thing group word for animals.",
+     "example": {
+      "question": "Wambui carried a ___ of bananas home.",
+      "wrong_answer": "herd",
+      "correct_answer": "bunch"
+     },
+     "cause": "Treats collective nouns as one list for everything.",
+     "reveals": "An animal group word offered for fruit, keys or books.",
+     "help": "Bunch is for things that grow or hang together: bananas, keys, flowers.",
+     "feedback": "That group word is for animals, not for things like fruit. Think about what is in the group.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_OF_MISSING",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+     "error": "Leaves out \"of\" after the collective noun.",
+     "example": {
+      "question": "We saw a flock birds on the roof.",
+      "wrong_answer": "a flock birds",
+      "correct_answer": "a flock of birds"
+     },
+     "cause": "Kiswahili puts the group word and noun together without a small linking word.",
+     "reveals": "A sentence with \"of\" missing among the options.",
+     "help": "Say the whole pattern: a flock OF birds, a herd OF cows.",
+     "feedback": "A collective noun needs the little word \"of\" before the things it names.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS.M_COLL_PLURAL_S",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.COLLECTIVE_NOUNS",
+     "error": "Puts -s on the thing instead of using the group word, or writes the group word as plural when one group is meant.",
+     "example": {
+      "question": "Three ___ of sheep were on the hill.",
+      "wrong_answer": "flock",
+      "correct_answer": "flocks"
+     },
+     "cause": "Does not see that \"three\" asks for the plural group word.",
+     "reveals": "A number before the group word.",
+     "help": "Count the groups, not the animals: one flock, three flocks.",
+     "feedback": "The number tells you how many groups there are. More than one group needs the plural form of the group word.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_HISSELF",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+     "error": "Writes hisself or theirselves.",
+     "example": {
+      "question": "Juma made the kite all by ___.",
+      "wrong_answer": "hisself",
+      "correct_answer": "himself"
+     },
+     "cause": "Builds the word from his and their, which are the possessive words, instead of him and them.",
+     "reveals": "hisself and theirselves among the options.",
+     "help": "Say: himself, themselves. The first part is him and them.",
+     "feedback": "The word is built from him and them: himself, themselves. Hisself and theirselves are not English words.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_OBJECT_PRONOUN",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+     "error": "Uses me, you, us or them where the doer and the receiver are the same person.",
+     "example": {
+      "question": "I cut ___ with the knife.",
+      "wrong_answer": "me",
+      "correct_answer": "myself"
+     },
+     "cause": "Kiswahili uses one verb form (ni-ji-) for this, so English needs a separate learned word.",
+     "reveals": "A first or second person sentence where the doer is also the receiver.",
+     "help": "If I do it to me, say myself. The word ends in self.",
+     "feedback": "You did the action to yourself, so the word must end in -self or -selves.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_SINGULAR_PLURAL",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+     "error": "Writes ourself, yourselfs or themself, or mixes one self with many people.",
+     "example": {
+      "question": "We taught ___ to swim.",
+      "wrong_answer": "ourself",
+      "correct_answer": "ourselves"
+     },
+     "cause": "Does not change self to selves for more than one person.",
+     "reveals": "ourself and yourselfs among the options.",
+     "help": "One person: self. More than one person: selves.",
+     "feedback": "When the doer is more than one person, the word ends in -selves, not -self.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS.M_REFL_WRONG_PERSON",
+     "skill": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.REFLEXIVE_PRONOUNS",
+     "error": "Uses a reflexive pronoun for a different person (myself for he).",
+     "example": {
+      "question": "Amina hurt ___ at the market.",
+      "wrong_answer": "myself",
+      "correct_answer": "herself"
+     },
+     "cause": "Remembers that the word ends in self but not which person it matches.",
+     "reveals": "A reflexive pronoun for the wrong person among the options.",
+     "help": "Ask who did it. Amina is she, so herself.",
+     "feedback": "The word must match the doer. Ask who did the action, then choose the -self word for that person.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE",
@@ -604,8 +1496,80 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+     "name": "Choose polite words and expressions",
+     "outcomes": [
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.d",
+      "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.e"
+     ],
+     "mastery": "Chooses the polite expression for a table or classroom situation (please, thank you, excuse me, may I, pardon, sorry) and the polite reply to thanks or an apology, in 8 of 10 new situations.",
+     "question_forms": [
+      "choose the polite expression",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_DEMAND",
+     "skill": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+     "error": "Uses a command where a polite request is needed.",
+     "example": {
+      "question": "At the table you want the salt. You say, \"___.\"",
+      "wrong_answer": "Give me the salt",
+      "correct_answer": "Please may I have the salt"
+     },
+     "cause": "Uses the shortest form from home language or speech.",
+     "reveals": "A command beside a polite request.",
+     "help": "Start with please, may I, or could you.",
+     "feedback": "That sounds like a command. A polite request starts with \"may I\" or \"could you\", and says please.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_WRONG_REPLY",
+     "skill": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+     "error": "Gives the wrong reply to thanks or sorry.",
+     "example": {
+      "question": "Someone says \"Thank you.\" You reply, \"___.\"",
+      "wrong_answer": "Sorry",
+      "correct_answer": "You are welcome"
+     },
+     "cause": "Mixes up the replies to thanks and to apologies.",
+     "reveals": "sorry offered as a reply to thank you.",
+     "help": "Thank you: you are welcome. Sorry: that is all right.",
+     "feedback": "Reply to thanks with \"You are welcome\" and to a sorry with \"That is all right\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS.M_POL_EXCUSE_SORRY",
+     "skill": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_EXPRESSIONS",
+     "error": "Says sorry when excuse me is needed, or the other way round.",
+     "example": {
+      "question": "You want to pass in front of an adult. You say, \"___.\"",
+      "wrong_answer": "Sorry",
+      "correct_answer": "Excuse me"
+     },
+     "cause": "Does not separate asking for room from saying you are sorry.",
+     "reveals": "sorry offered where you ask for something.",
+     "help": "Excuse me: to ask, to pass, to interrupt. Sorry: when you have done something wrong.",
+     "feedback": "Say \"Excuse me\" when you ask for room or want to speak. Say \"Sorry\" when you have made a mistake.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA",
@@ -734,8 +1698,186 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+     "name": "Use too ... to and too ... for",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b"
+     ],
+     "mastery": "Completes and builds sentences with too + adjective + to + verb and too + adjective + for + person (too hot to drink, too heavy for me), and does not add for to or a that-clause, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+     "name": "Use must and should with an adverb",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
+      "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b"
+     ],
+     "mastery": "Writes must or should followed by the base verb and an adverb of manner (You must speak politely), without to, -s, -ing or an adjective where the adverb belongs, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_MISSING_TO",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+     "error": "Leaves out \"to\" before the verb after too + adjective.",
+     "example": {
+      "question": "The bag was too heavy carry.",
+      "wrong_answer": "too heavy carry",
+      "correct_answer": "too heavy to carry"
+     },
+     "cause": "Kiswahili joins the verb with ku-, so a separate small word feels unnecessary.",
+     "reveals": "A sentence with \"to\" missing.",
+     "help": "Say the pattern: too + adjective + TO + verb.",
+     "feedback": "After too + an adjective, the verb needs the word \"to\": too heavy to carry.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_FOR_TO",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+     "error": "Writes \"for to\" or \"for\" before a verb.",
+     "example": {
+      "question": "The soup was too hot for to drink.",
+      "wrong_answer": "too hot for to drink",
+      "correct_answer": "too hot to drink"
+     },
+     "cause": "Mixes the pattern too ... for (person) with too ... to (verb).",
+     "reveals": "for to among the options.",
+     "help": "Use for before a person (for me) and to before a verb (to drink).",
+     "feedback": "Use \"for\" before a person and \"to\" before a verb. \"For to\" is not used together.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_THAT",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+     "error": "Uses a that-clause after too, as in \"too tired that he slept\".",
+     "example": {
+      "question": "Otieno was too tired that he slept.",
+      "wrong_answer": "too tired that",
+      "correct_answer": "too tired to stay awake"
+     },
+     "cause": "Confuses too with so ... that.",
+     "reveals": "A that-clause after too.",
+     "help": "So tired THAT he slept. Too tired TO stay awake.",
+     "feedback": "Too ... that is not used. Use so ... that, or too ... to.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO.M_TOO_FOR_VERB",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.TOO_TO",
+     "error": "Puts the person after to instead of for (too heavy to me).",
+     "example": {
+      "question": "The box is too heavy to me to lift.",
+      "wrong_answer": "too heavy to me",
+      "correct_answer": "too heavy for me"
+     },
+     "cause": "Uses to for every person in a sentence.",
+     "reveals": "to + person among the options.",
+     "help": "Before a person, say for: for me, for him.",
+     "feedback": "Before a person (me, him, the children) use \"for\", not \"to\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_TO",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+     "error": "Writes \"to\" after must or should.",
+     "example": {
+      "question": "You should to wash your hands.",
+      "wrong_answer": "should to wash",
+      "correct_answer": "should wash"
+     },
+     "cause": "Copies the pattern want to, need to, have to.",
+     "reveals": "must/should + to among the options.",
+     "help": "Must and should go straight to the verb, with no to.",
+     "feedback": "After must and should, the verb comes straight away. Do not add \"to\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_VERB_FORM",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+     "error": "Puts -s, -ed or -ing on the verb after must or should.",
+     "example": {
+      "question": "Children must walking carefully.",
+      "wrong_answer": "must walking",
+      "correct_answer": "must walk"
+     },
+     "cause": "Thinks every verb must change for tense or number.",
+     "reveals": "must/should + verb form among the options.",
+     "help": "After must and should the verb never changes: must walk, she should walk.",
+     "feedback": "After must and should, use the plain verb. It does not take -s, -ed or -ing.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_ADJECTIVE",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+     "error": "Uses an adjective where an adverb is needed (speak polite).",
+     "example": {
+      "question": "You must speak polite to elders.",
+      "wrong_answer": "speak polite",
+      "correct_answer": "speak politely"
+     },
+     "cause": "Kiswahili uses one word for both (kwa adabu / mpole), so the -ly change is not obvious.",
+     "reveals": "The adjective in place of the adverb.",
+     "help": "Ask: how must you speak? Politely. The word describes the verb, so it ends in -ly.",
+     "feedback": "The word tells HOW you speak, so it must be an adverb. Adverbs of manner often end in -ly.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB.M_MODAL_STRENGTH",
+     "skill": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.MUST_SHOULD_ADVERB",
+     "error": "Uses should for a strict rule, or must for a gentle suggestion.",
+     "example": {
+      "question": "Passengers ___ wear a seat belt. It is the law.",
+      "wrong_answer": "should",
+      "correct_answer": "must"
+     },
+     "cause": "Treats must and should as the same word.",
+     "reveals": "A rule or law next to should, and advice next to must.",
+     "help": "Must is for rules and strong duty. Should is for advice.",
+     "feedback": "Must is stronger. Use it for a rule or a law. Should is for advice.",
+     "source": "to confirm by a Kenyan English teacher: strength of must and should",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING",
@@ -865,8 +2007,61 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS",
+     "name": "Use words about road safety",
+     "outcomes": [
+      "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.d"
+     ],
+     "mastery": "Chooses the right road safety word (pedestrian, zebra crossing, speed limit, helmet, seat belt, pavement, signal) to complete a sentence, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M_VOC_ROAD_NEAR",
+     "skill": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS",
+     "error": "Chooses a road word with a related meaning that does not fit.",
+     "example": {
+      "question": "A person who walks on the road is a ___.",
+      "wrong_answer": "passenger",
+      "correct_answer": "pedestrian"
+     },
+     "cause": "Knows the topic words but not their exact meaning.",
+     "reveals": "Two road words that are close in meaning.",
+     "help": "Pedestrian walks. Passenger rides.",
+     "feedback": "The word is about roads, but it does not fit this meaning. A pedestrian walks; a passenger travels in a vehicle.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS.M_VOC_ROAD_SOUND",
+     "skill": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO.ROAD_SAFETY_WORDS",
+     "error": "Chooses a word that sounds like the right one.",
+     "example": {
+      "question": "Cross the road at the zebra ___.",
+      "wrong_answer": "crosswalk",
+      "correct_answer": "crossing"
+     },
+     "cause": "Uses a word met elsewhere.",
+     "reveals": "A word from American English or one with a similar sound.",
+     "help": "Say the whole phrase: zebra crossing.",
+     "feedback": "In Kenya we say \"zebra crossing\". Learn the whole phrase.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T4_INTENSIVE_READING_CO",
@@ -999,8 +2194,95 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+     "name": "Use possessive pronouns and their determiners",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.a",
+      "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.b"
+     ],
+     "mastery": "Tells a possessive determiner (my, your, her, our, their) from a possessive pronoun (mine, yours, hers, ours, theirs), writes each in the right place and never writes her's, our's or their's, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_DET_FOR_PRONOUN",
+     "skill": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+     "error": "Uses my, your, her, our or their when nothing follows the word.",
+     "example": {
+      "question": "That cup is ___.",
+      "wrong_answer": "my",
+      "correct_answer": "mine"
+     },
+     "cause": "Does not see that my needs a noun after it.",
+     "reveals": "A gap at the end of the sentence.",
+     "help": "My bag, but the bag is mine. If no noun follows, use mine, yours, hers, ours or theirs.",
+     "feedback": "My, your, her, our and their need a noun after them. When nothing follows, use mine, yours, hers, ours or theirs.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_PRONOUN_BEFORE_NOUN",
+     "skill": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+     "error": "Uses mine, yours, ours or theirs in front of a noun.",
+     "example": {
+      "question": "Is this ___ book?",
+      "wrong_answer": "yours",
+      "correct_answer": "your"
+     },
+     "cause": "Learns the stand-alone forms and uses them everywhere.",
+     "reveals": "A noun straight after the gap.",
+     "help": "If a noun comes next, use my, your, her, our or their.",
+     "feedback": "Mine, yours, hers, ours and theirs stand alone. Before a noun, use my, your, her, our or their.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_APOSTROPHE",
+     "skill": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+     "error": "Writes her's, our's, their's or your's.",
+     "example": {
+      "question": "The blue pen is her's.",
+      "wrong_answer": "her's",
+      "correct_answer": "hers"
+     },
+     "cause": "Copies the apostrophe from Juma's and Amina's.",
+     "reveals": "her's, our's, their's among the options.",
+     "help": "Possessive pronouns never take an apostrophe: hers, ours, theirs, yours.",
+     "feedback": "Possessive pronouns do not have an apostrophe. Write hers, ours, theirs and yours.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES.M_POSS_WRONG_PERSON",
+     "skill": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+     "error": "Uses a possessive word for the wrong person (his for Mama).",
+     "example": {
+      "question": "Mama lost ___ keys.",
+      "wrong_answer": "his",
+      "correct_answer": "her"
+     },
+     "cause": "Does not link the possessive word to the owner.",
+     "reveals": "A possessive for the wrong person.",
+     "help": "Ask: whose keys? Mama is a woman, so her.",
+     "feedback": "The word must match the owner. Ask whose it is, then choose the word for that person.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F",
@@ -1199,8 +2481,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM",
+     "name": "Scan for details and skim for the gist",
+     "outcomes": [
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.b",
+      "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.c",
+      "ENGL.G5.READIN.T13_EXTENSIVE_READING.c"
+     ],
+     "mastery": "Finds a name, time, place or number in a notice or timetable by scanning, and says what a text is mostly about by skimming, in 8 of 10 new texts.",
+     "question_forms": [
+      "scan: type the detail",
+      "scan: choose the detail",
+      "skim: choose what it is about"
+     ],
+     "thinking": [
+      "procedure"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SCAN_READS_ALL",
+     "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM",
+     "error": "Reads the whole text word by word instead of looking for the key word.",
+     "example": {
+      "question": "At what time does the bus leave?",
+      "wrong_answer": "a wrong time",
+      "correct_answer": "the time shown"
+     },
+     "cause": "Does not know that scanning means looking for one key word.",
+     "reveals": "A time near the right time in the notice.",
+     "help": "Look for the key word (bus), then read only that line.",
+     "feedback": "You need to find the key word first (such as bus), then read that line carefully.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SCAN_WRONG_LINE",
+     "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM",
+     "error": "Reads the nearest line and takes the detail from the wrong item.",
+     "example": {
+      "question": "Which day is the sports day?",
+      "wrong_answer": "a nearby day",
+      "correct_answer": "the correct day"
+     },
+     "cause": "Matches the number or day without matching the item.",
+     "reveals": "The detail beside another event in the same notice.",
+     "help": "Match the key word of the question to the right line first.",
+     "feedback": "That detail belongs to a different line. Find the line about this event, then read across.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM.M_SKIM_DETAIL_FOR_GIST",
+     "skill": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.SCAN_SKIM",
+     "error": "Says a text is about one detail, not what it is mostly about.",
+     "example": {
+      "question": "What is the notice mainly about?",
+      "wrong_answer": "a detail",
+      "correct_answer": "the whole purpose"
+     },
+     "cause": "Stops after the first line.",
+     "reveals": "A single detail offered as the topic.",
+     "help": "Skim the title, first sentence and last sentence to find the gist.",
+     "feedback": "This is one detail. Skimming means reading the title and first lines to find what the whole text is about.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE",
@@ -1266,8 +2619,193 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "name": "Use comparative and superlative adjectives",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.a",
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.c"
+     ],
+     "mastery": "Forms and uses -er/-est, more/most and the irregular forms good-better-best and bad-worse-worst, with than for two things and the for three or more, and avoids double comparatives (more taller) and gooder, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER",
+     "name": "Put adjectives in order",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.b"
+     ],
+     "mastery": "Places two or three adjectives before the noun in the usual order (opinion, size, age, shape, colour, material) and does not put the adjective after the noun as in Kiswahili, in 8 of 10 new phrases.",
+     "question_forms": [
+      "choose the correct phrase",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_DOUBLE_COMPARATIVE",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Uses more and -er together, or most and -est together.",
+     "example": {
+      "question": "Kamau is more taller than Baraka.",
+      "wrong_answer": "more taller",
+      "correct_answer": "taller"
+     },
+     "cause": "Adds both signals to be sure the comparison is clear.",
+     "reveals": "more/most together with -er/-est among the options.",
+     "help": "One signal only: taller OR more careful.",
+     "feedback": "Use only one: -er or more. Never both.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_LONG_ER",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Puts -er or -est on a long adjective (beautifuler).",
+     "example": {
+      "question": "This is the ___ story I have read.",
+      "wrong_answer": "interestingest",
+      "correct_answer": "most interesting"
+     },
+     "cause": "Applies the short-word rule to every adjective.",
+     "reveals": "A long adjective with -er or -est among the options.",
+     "help": "Short words take -er/-est. Long words take more/most.",
+     "feedback": "Long adjectives such as beautiful and interesting use more and most, not -er and -est.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_IRREGULAR",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Writes gooder, more better, badder or worser.",
+     "example": {
+      "question": "This mango is ___ than that one.",
+      "wrong_answer": "gooder",
+      "correct_answer": "better"
+     },
+     "cause": "Applies the regular rule to good and bad.",
+     "reveals": "gooder, more better, badder among the options.",
+     "help": "Good, better, best. Bad, worse, worst. Learn these three words by heart.",
+     "feedback": "Good and bad are special. The words are good-better-best and bad-worse-worst.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_THAN",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Writes \"that\" or \"then\" instead of \"than\", or leaves it out.",
+     "example": {
+      "question": "Nyambura is taller then Mercy.",
+      "wrong_answer": "taller then",
+      "correct_answer": "taller than"
+     },
+     "cause": "Than and then sound alike in fast speech.",
+     "reveals": "then or that in place of than.",
+     "help": "Than compares two things. Then tells us what happened next.",
+     "feedback": "To compare two things, use \"than\". \"Then\" is about time.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_SUPERLATIVE_FOR_TWO",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Uses the -est form to compare only two things, or the -er form for three or more.",
+     "example": {
+      "question": "Of the two sisters, Achieng is the ___.",
+      "wrong_answer": "tallest",
+      "correct_answer": "taller"
+     },
+     "cause": "Does not count how many things are compared.",
+     "reveals": "A comparison of exactly two (or of many) things.",
+     "help": "Two things: -er. Three or more: -est, with the.",
+     "feedback": "Count the things. For two, use the -er form. For three or more, use the -est form.",
+     "source": "to confirm by a Kenyan English teacher: strictness for two things",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE.M_ADJ_SPELLING",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+     "error": "Spells the -er and -est forms wrongly (biger, happyer).",
+     "example": {
+      "question": "Mwende is ___ than her sister today.",
+      "wrong_answer": "happyer",
+      "correct_answer": "happier"
+     },
+     "cause": "Does not double the last letter or change y to i.",
+     "reveals": "A misspelt -er or -est form among the options.",
+     "help": "Big has one vowel and one consonant at the end: bigger. Happy ends in y: happier.",
+     "feedback": "Check the spelling before -er: a short word may double its last letter (bigger), and y changes to i (happier).",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER.M_ADJ_AFTER_NOUN",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER",
+     "error": "Puts the adjective after the noun (a table big).",
+     "example": {
+      "question": "We bought ___.",
+      "wrong_answer": "a table big",
+      "correct_answer": "a big table"
+     },
+     "cause": "In Kiswahili the adjective follows the noun (meza kubwa).",
+     "reveals": "The adjective after the noun among the options.",
+     "help": "In English the describing word goes in front of the noun: big table, red cup.",
+     "feedback": "In English the adjective comes BEFORE the noun, not after it.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER.M_ADJ_ORDER_SHAPE_FIRST",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER",
+     "error": "Puts shape or colour before size.",
+     "example": {
+      "question": "She wore ___ hat.",
+      "wrong_answer": "a red small",
+      "correct_answer": "a small red"
+     },
+     "cause": "Does not know the usual order of describing words.",
+     "reveals": "Colour or shape before size.",
+     "help": "Usual order: opinion, size, age, shape, colour, material. Size comes before colour.",
+     "feedback": "Size comes before shape and colour: a small red hat, not a red small hat.",
+     "source": "to confirm by a Kenyan English teacher: order taught with size, shape and age",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER.M_ADJ_ORDER_AGE",
+     "skill": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.ADJECTIVE_ORDER",
+     "error": "Puts age before size, or shape before age.",
+     "example": {
+      "question": "Grandfather sat on ___ stool.",
+      "wrong_answer": "an old big",
+      "correct_answer": "a big old"
+     },
+     "cause": "Orders the words by the order they come to mind.",
+     "reveals": "Age before size.",
+     "help": "Size first, then age, then shape: a big old round stool.",
+     "feedback": "Size comes first, then age, then shape: a big old round stool.",
+     "source": "to confirm by a Kenyan English teacher: order taught with size, shape and age",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR",
@@ -1529,8 +3067,205 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+     "name": "Use few, a few, little and a little",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c"
+     ],
+     "mastery": "Chooses few or a few for things that can be counted and little or a little for things that cannot, and knows that few and little say \"hardly any\" while a few and a little say \"some\", in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "name": "Use a lot of, each, all, enough, most and least",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
+      "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c"
+     ],
+     "mastery": "Chooses and places a lot of, lots of, each, all, enough, most and least correctly, with the right verb after each, and writes most of the learners (not most of learners), in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_FEW_UNCOUNTABLE",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+     "error": "Uses few or a few with something that cannot be counted (few water).",
+     "example": {
+      "question": "There is ___ water in the jug.",
+      "wrong_answer": "a few",
+      "correct_answer": "a little"
+     },
+     "cause": "Does not ask whether the noun can be counted.",
+     "reveals": "A noun such as water, milk, sugar or time.",
+     "help": "Can you count it one by one? Books yes (few), water no (little).",
+     "feedback": "You cannot count water, sugar or milk one by one, so use little, not few.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_LITTLE_COUNTABLE",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+     "error": "Uses little or a little with something that can be counted (little books).",
+     "example": {
+      "question": "We have ___ chairs left.",
+      "wrong_answer": "a little",
+      "correct_answer": "a few"
+     },
+     "cause": "Learns \"little\" as the word for a small amount of anything.",
+     "reveals": "A noun such as books, chairs, eggs or children.",
+     "help": "Chairs can be counted, so few or a few.",
+     "feedback": "You can count chairs one by one, so use few or a few, not little.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_NEGATIVE_POSITIVE",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+     "error": "Does not tell few/little (\"hardly any\") from a few/a little (\"some\").",
+     "example": {
+      "question": "We have ___ eggs, so I can bake a small cake.",
+      "wrong_answer": "few",
+      "correct_answer": "a few"
+     },
+     "cause": "Treats the little word \"a\" as unimportant.",
+     "reveals": "A sentence where the next part shows there is some (or hardly any).",
+     "help": "\"A few\" means enough to do something. \"Few\" means hardly any.",
+     "feedback": "Few and little mean \"hardly any\". A few and a little mean \"some, enough to use\". Read the rest of the sentence.",
+     "source": "to confirm by a Kenyan English teacher: depth expected at Grade 5",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE.M_QUANT_MUCH_MANY",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.FEW_LITTLE",
+     "error": "Uses much with countable nouns or many with uncountable nouns.",
+     "example": {
+      "question": "There are too ___ cars on this road.",
+      "wrong_answer": "much",
+      "correct_answer": "many"
+     },
+     "cause": "Does not ask whether the noun can be counted.",
+     "reveals": "much and many offered together.",
+     "help": "Many goes with things you can count; much goes with things you cannot.",
+     "feedback": "Many goes with things you can count (cars). Much goes with things you cannot count (traffic, water).",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_EACH_PLURAL",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "error": "Uses a plural verb after each.",
+     "example": {
+      "question": "Each of the girls ___ a bag.",
+      "wrong_answer": "have",
+      "correct_answer": "has"
+     },
+     "cause": "Hears \"girls\" and chooses the plural verb.",
+     "reveals": "each + a plural noun and a plural verb among the options.",
+     "help": "Each means one at a time, so the verb is singular: each girl has.",
+     "feedback": "Each means \"one by one\", so the verb is singular: has, is, was.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_ALL_SINGULAR",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "error": "Uses a singular noun after all (all the learner).",
+     "example": {
+      "question": "All the ___ were clapping.",
+      "wrong_answer": "learner",
+      "correct_answer": "learners"
+     },
+     "cause": "Does not match the noun to a word that means \"every one of many\".",
+     "reveals": "all + a singular noun among the options.",
+     "help": "All means many, so the noun is plural: all the learners.",
+     "feedback": "All talks about many, so the noun after it is plural.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_ENOUGH_POSITION",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "error": "Puts enough after the noun (water enough).",
+     "example": {
+      "question": "We do not have ___ for everyone.",
+      "wrong_answer": "food enough",
+      "correct_answer": "enough food"
+     },
+     "cause": "Kiswahili puts the describing word after the noun (chakula cha kutosha).",
+     "reveals": "enough after the noun among the options.",
+     "help": "Enough goes in front of a noun: enough food, enough chairs.",
+     "feedback": "Put \"enough\" before the noun: enough food, enough chairs.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_OF_THE_MISSING",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "error": "Writes most of learners or all of children, leaving out the.",
+     "example": {
+      "question": "___ walk to school.",
+      "wrong_answer": "Most of learners",
+      "correct_answer": "Most of the learners"
+     },
+     "cause": "Drops the small word the after of.",
+     "reveals": "most of + a plural noun with no the.",
+     "help": "After most of, all of and each of, add the or a pronoun: most of THE learners, all of THEM.",
+     "feedback": "After \"most of\" and \"all of\", you need \"the\" (or them, us): most of the learners.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER.M_QUANT_LEAST_LESS",
+     "skill": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.QUANTIFIERS_OTHER",
+     "error": "Uses least for two things, or less where least is needed, or a lots of.",
+     "example": {
+      "question": "Of all the shops, this one sells the ___ sugar.",
+      "wrong_answer": "less",
+      "correct_answer": "least"
+     },
+     "cause": "Does not see the difference between comparing two and comparing many.",
+     "reveals": "less and least offered together, or \"a lots of\".",
+     "help": "Less compares two. Least compares three or more. We write a lot of or lots of, never a lots of.",
+     "feedback": "Less compares two things; least compares three or more. And write \"lots of\", never \"a lots of\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC",
@@ -1782,8 +3517,111 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "name": "Use will and shall for the future",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.a",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.b",
+      "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.c"
+     ],
+     "mastery": "Writes will or shall followed by the base verb to talk about the future, and does not write will goes, will went, will going or a present tense where a future is meant, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_PAST",
+     "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "error": "Puts the past tense after will or shall (will went).",
+     "example": {
+      "question": "Tomorrow we will ___ to Nakuru.",
+      "wrong_answer": "went",
+      "correct_answer": "go"
+     },
+     "cause": "Thinks the verb must show tense after will.",
+     "reveals": "will/shall + a past form among the options.",
+     "help": "Will already says the future. The verb after it stays plain: will go.",
+     "feedback": "After will and shall, use the plain verb: will go. Will already shows the future.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_S",
+     "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "error": "Adds -s to the verb after will (will goes).",
+     "example": {
+      "question": "My mother will ___ us a story tonight.",
+      "wrong_answer": "tells",
+      "correct_answer": "tell"
+     },
+     "cause": "Matches the verb to he/she/it even after will.",
+     "reveals": "will + a verb with -s among the options.",
+     "help": "After will the verb never changes: will tell.",
+     "feedback": "After will and shall, the verb never takes -s.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_WILL_ING",
+     "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "error": "Writes will going or will playing.",
+     "example": {
+      "question": "Next week the school will ___ a match.",
+      "wrong_answer": "playing",
+      "correct_answer": "play"
+     },
+     "cause": "Mixes the future with the -ing form heard in \"I am going to\".",
+     "reveals": "will + an -ing verb among the options.",
+     "help": "Will + plain verb. Or am going to + plain verb. Do not mix them.",
+     "feedback": "After will and shall, use the plain verb, not the -ing form.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_PRESENT_FOR_FUTURE",
+     "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "error": "Uses the present tense for a future event with a time word (Tomorrow I go).",
+     "example": {
+      "question": "Tomorrow I ___ to Kisumu.",
+      "wrong_answer": "go",
+      "correct_answer": "will go"
+     },
+     "cause": "In speech the time word seems enough to show the future.",
+     "reveals": "A future time word with a present tense verb among the options.",
+     "help": "Tomorrow, next week and soon point to the future, so the verb needs will or shall.",
+     "feedback": "A time word like tomorrow is not enough. Add will or shall before the verb to show the future.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL.M_FUT_DOUBLE_MODAL",
+     "skill": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+     "error": "Uses two helper verbs together (will shall go, will can).",
+     "example": {
+      "question": "We ___ visit Grandmother in December.",
+      "wrong_answer": "will shall",
+      "correct_answer": "shall"
+     },
+     "cause": "Combines two ways of speaking about the future.",
+     "reveals": "will shall or will can among the options.",
+     "help": "Choose one helper verb: will OR shall.",
+     "feedback": "Use one helper verb only: will or shall, not both together.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING",
@@ -1843,8 +3681,231 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+     "name": "Use the comma",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "Puts commas between the items in a list, after an opening word or phrase and before the words a speaker says, and does not put a comma between a subject and its verb, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "name": "Punctuate direct speech with double quotation marks",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "Puts double quotation marks round the exact words spoken, a capital letter at the start of the speech, and the comma, question mark or full stop inside the closing marks, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.b",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_LIST_MISSING",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+     "error": "Leaves out commas in a list.",
+     "example": {
+      "question": "Mama bought maize flour sugar and tea.",
+      "wrong_answer": "maize flour sugar and tea",
+      "correct_answer": "maize flour, sugar and tea"
+     },
+     "cause": "Does not see where one item ends.",
+     "reveals": "A list written with no commas.",
+     "help": "Put a comma after each item, except before and.",
+     "feedback": "Put commas between the things in a list (before \"and\" you may leave it out).",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_EVERYWHERE",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+     "error": "Puts a comma between the subject and the verb, or at every pause.",
+     "example": {
+      "question": "The children, played in the yard.",
+      "wrong_answer": "The children, played",
+      "correct_answer": "The children played"
+     },
+     "cause": "Writes a comma wherever the voice stops.",
+     "reveals": "A comma that splits a subject from its verb.",
+     "help": "A comma is not a breath mark. Do not split who from what they did.",
+     "feedback": "Do not put a comma between who and what they did. Commas are for lists and for separating parts.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_AFTER_OPENING",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+     "error": "Leaves out the comma after an opening word or phrase (Yes I will; In the morning we left).",
+     "example": {
+      "question": "Yes I will come.",
+      "wrong_answer": "Yes I will come.",
+      "correct_answer": "Yes, I will come."
+     },
+     "cause": "Does not mark the end of an opening word.",
+     "reveals": "A sentence that starts with yes, no, well, or a time phrase and has no comma.",
+     "help": "After Yes, No, Well or an opening phrase, add a comma.",
+     "feedback": "Put a comma after an opening word such as Yes or No, and after a phrase that starts a sentence.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS.M_COMMA_SPLICE",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.COMMAS",
+     "error": "Joins two full sentences with only a comma.",
+     "example": {
+      "question": "The bell rang, we ran outside.",
+      "wrong_answer": "The bell rang, we ran",
+      "correct_answer": "The bell rang, and we ran"
+     },
+     "cause": "Uses the comma as a full stop.",
+     "reveals": "Two complete sentences with only a comma between them.",
+     "help": "Use a full stop, or add and, but, so.",
+     "feedback": "A comma cannot join two whole sentences alone. Use a full stop, or add a joining word.",
+     "source": "to confirm by a Kenyan English teacher: whether comma splice is taught at Grade 5",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_MISSING",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Writes spoken words with no quotation marks.",
+     "example": {
+      "question": "Mother said Come and eat.",
+      "wrong_answer": "Mother said Come and eat.",
+      "correct_answer": "Mother said, \"Come and eat.\""
+     },
+     "cause": "Does not mark where speech begins and ends.",
+     "reveals": "The spoken words with no marks.",
+     "help": "Put double quotation marks around the exact words spoken.",
+     "feedback": "Put double quotation marks round the exact words someone says.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_TOO_MUCH",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Puts the quotation marks round the words said and the speaker too.",
+     "example": {
+      "question": "\"Come and eat, said Mother.\"",
+      "wrong_answer": "\"Come and eat, said Mother.\"",
+      "correct_answer": "\"Come and eat,\" said Mother."
+     },
+     "cause": "Does not see where the speech stops.",
+     "reveals": "Quotation marks that include said + name.",
+     "help": "Only the spoken words go between the marks.",
+     "feedback": "Only the words the person said go inside the quotation marks, not \"said Mother\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_PUNCTUATION_OUTSIDE",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Puts the comma, question mark or full stop outside the closing marks.",
+     "example": {
+      "question": "\"Where are you going\", asked Baba.",
+      "wrong_answer": "\"Where are you going\", asked Baba.",
+      "correct_answer": "\"Where are you going?\" asked Baba."
+     },
+     "cause": "Sees the end punctuation as part of the sentence, not of the speech.",
+     "reveals": "A comma outside the closing marks, or a missing question mark.",
+     "help": "The mark that ends the spoken words goes inside the quotation marks.",
+     "feedback": "The comma, question mark or exclamation mark that ends the speech goes inside the closing quotation marks.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_NO_CAPITAL",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Starts the spoken words with a small letter.",
+     "example": {
+      "question": "Juma said, \"we are late.\"",
+      "wrong_answer": "Juma said, \"we are late.\"",
+      "correct_answer": "Juma said, \"We are late.\""
+     },
+     "cause": "Treats the speech as the middle of the sentence.",
+     "reveals": "Spoken words that begin with a small letter.",
+     "help": "The first word of the spoken words starts with a capital letter.",
+     "feedback": "The first word the speaker says begins with a capital letter.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_SINGLE",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Uses single quotation marks.",
+     "example": {
+      "question": "Amina said, 'Thank you.'",
+      "wrong_answer": "single marks",
+      "correct_answer": "double marks"
+     },
+     "cause": "Single quotation marks are used in some books and the learner copies them.",
+     "reveals": "A sentence with single marks.",
+     "help": "The Grade 5 design asks for double quotation marks: \" \".",
+     "feedback": "Your teacher wants double quotation marks \" \" for speech.",
+     "source": "KICD Grade 5 design: double quotation marks (single marks are valid British style; to confirm with the teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH.M_QUOTE_FULL_STOP_BEFORE_SAID",
+     "skill": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.DIRECT_SPEECH",
+     "error": "Ends the spoken words with a full stop when the speaker is named after them.",
+     "example": {
+      "question": "\"I am ready.\" said Otieno.",
+      "wrong_answer": "\"I am ready.\" said Otieno.",
+      "correct_answer": "\"I am ready,\" said Otieno."
+     },
+     "cause": "Thinks the spoken words are a complete sentence on their own.",
+     "reveals": "A full stop before said + name.",
+     "help": "When said + name follows, end the speech with a comma (or ? or !).",
+     "feedback": "When \"said\" and the speaker follow the spoken words, end the speech with a comma, not a full stop.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO",
@@ -1918,8 +3979,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS",
+     "name": "Know proverbs and their meanings",
+     "outcomes": [
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.a",
+      "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.d"
+     ],
+     "mastery": "Matches a common English proverb to its meaning, finishes a proverb, and uses it for the situation it fits, in 8 of 10 new questions.",
+     "question_forms": [
+      "choose the meaning",
+      "finish the proverb",
+      "choose the situation"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_LITERAL",
+     "skill": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS",
+     "error": "Takes the proverb literally.",
+     "example": {
+      "question": "What does \"A bird in the hand is worth two in the bush\" mean?",
+      "wrong_answer": "Birds are easy to catch.",
+      "correct_answer": "Be happy with what you have."
+     },
+     "cause": "Reads the words and not the lesson.",
+     "reveals": "A literal reading among the options.",
+     "help": "Ask: what lesson does the saying teach about people?",
+     "feedback": "A proverb has a hidden lesson. Ask what it teaches people, not what the words say.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_NEAR_MEANING",
+     "skill": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS",
+     "error": "Chooses a lesson that is related but not the proverb's.",
+     "example": {
+      "question": "Which situation fits \"Unity is strength\"?",
+      "wrong_answer": "a related lesson",
+      "correct_answer": "the right lesson"
+     },
+     "cause": "Remembers the general topic but not the exact lesson.",
+     "reveals": "A situation about teamwork that fits another saying better.",
+     "help": "Match the lesson, not the topic.",
+     "feedback": "This is on a similar topic, but the lesson is different. Match the exact lesson.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS.M_PROV_WORDS_MIXED",
+     "skill": "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO.PROVERBS",
+     "error": "Mixes the words of two proverbs.",
+     "example": {
+      "question": "Finish the proverb: A stitch in time saves ___.",
+      "wrong_answer": "ten",
+      "correct_answer": "nine"
+     },
+     "cause": "Remembers the shape and not the exact words.",
+     "reveals": "A number or word from another proverb.",
+     "help": "Say the proverb aloud three times and listen for the ending.",
+     "feedback": "The proverb has fixed words. Say the whole proverb aloud to remember its ending.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING",
@@ -2043,8 +4175,110 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "name": "Use question tags",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T8_SENTENCES.a",
+      "ENGL.G5.GRAMMA.T8_SENTENCES.b"
+     ],
+     "mastery": "Adds the right question tag to a statement: the same helper verb, the opposite sign (is/isn't, does/doesn't, can/can't), and a pronoun, never the same tag for every sentence, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct tag",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_INVARIABLE",
+     "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "error": "Uses \"isn't it?\" after every statement.",
+     "example": {
+      "question": "You are coming to the party, ___?",
+      "wrong_answer": "isn't it",
+      "correct_answer": "aren't you"
+     },
+     "cause": "Treats the tag as one fixed phrase.",
+     "reveals": "isn't it offered after a statement with you, they, we or a different helper verb.",
+     "help": "Repeat the helper verb from the statement, then the pronoun: are you coming, ... aren't you.",
+     "feedback": "The tag copies the helper verb and the person of the statement. It is not always \"isn't it\".",
+     "source": "common learner error; widespread in East African and South Asian English",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_SAME_SIGN",
+     "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "error": "Uses a tag with the same sign as the statement (He is tall, is he?).",
+     "example": {
+      "question": "Mwangi plays well, ___?",
+      "wrong_answer": "does he",
+      "correct_answer": "doesn't he"
+     },
+     "cause": "Does not know that the tag reverses positive and negative.",
+     "reveals": "A tag with the same sign as the statement.",
+     "help": "A positive statement takes a negative tag. A negative statement takes a positive tag.",
+     "feedback": "The tag has the opposite sign. A positive statement takes a negative tag (doesn't he), a negative one takes a positive tag.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_WRONG_HELPER",
+     "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "error": "Uses a different helper verb in the tag (She likes tea, isn't she?).",
+     "example": {
+      "question": "She likes tea, ___?",
+      "wrong_answer": "isn't she",
+      "correct_answer": "doesn't she"
+     },
+     "cause": "Does not link the tag to the verb in the statement.",
+     "reveals": "A tag with a helper verb that is not in the statement.",
+     "help": "If the statement has likes, the tag uses does. If it has is, the tag uses is.",
+     "feedback": "The helper verb in the tag must match the statement: likes goes with does/doesn't, can goes with can/can't.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_NOUN_FOR_PRONOUN",
+     "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "error": "Repeats the noun in the tag instead of a pronoun.",
+     "example": {
+      "question": "Baraka is a good footballer, ___?",
+      "wrong_answer": "isn't Baraka",
+      "correct_answer": "isn't he"
+     },
+     "cause": "Copies the subject word for word.",
+     "reveals": "A noun inside the tag.",
+     "help": "The tag uses a short word for the person: he, she, it, they.",
+     "feedback": "The tag uses a pronoun (he, she, it, they), not the name.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS.M_TAG_FULL_FORM",
+     "skill": "ENGL.G5.GRAMMA.T8_SENTENCES.QUESTION_TAGS",
+     "error": "Writes the tag in full (is not he) or in the wrong order (he isn't).",
+     "example": {
+      "question": "The bus is late, ___?",
+      "wrong_answer": "is not it",
+      "correct_answer": "isn't it"
+     },
+     "cause": "Does not know the tag turns the helper verb in front of the pronoun and is said short.",
+     "reveals": "A tag written in full or in statement order.",
+     "help": "Say it the way people speak: isn't it, doesn't she. The helper verb comes first.",
+     "feedback": "A tag puts the short form first (isn't it), then the pronoun, as one quick question.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING",
@@ -2111,8 +4345,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+     "name": "Identify and use similes",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.a",
+      "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.b"
+     ],
+     "mastery": "Spots a simile (a comparison with like or as), completes a common simile (as brave as a lion) and tells a simile from a plain statement or a metaphor, in 8 of 10 new questions.",
+     "question_forms": [
+      "choose the simile",
+      "fill the gap",
+      "finish the comparison"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_STATEMENT",
+     "skill": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+     "error": "Takes any description for a simile.",
+     "example": {
+      "question": "Which sentence is a simile?",
+      "wrong_answer": "He is very strong.",
+      "correct_answer": "He is as strong as an ox."
+     },
+     "cause": "Does not look for like or as.",
+     "reveals": "A plain description beside a comparison.",
+     "help": "A simile compares two different things using like or as.",
+     "feedback": "A simile compares two things using \"like\" or \"as\". This sentence does not.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_METAPHOR",
+     "skill": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+     "error": "Takes a metaphor (without like or as) for a simile.",
+     "example": {
+      "question": "Which sentence is a simile?",
+      "wrong_answer": "He is a lion.",
+      "correct_answer": "He is as brave as a lion."
+     },
+     "cause": "Sees a comparison and does not check the joining word.",
+     "reveals": "A metaphor beside a simile.",
+     "help": "A simile has like or as. A metaphor says one thing IS another.",
+     "feedback": "This is a metaphor. A simile always has the word \"like\" or \"as\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES.M_SIM_WRONG_COMPARISON",
+     "skill": "ENGL.G5.WRITIN.T8_CREATIVE_WRITING.SIMILES",
+     "error": "Completes a simile with a word that does not fit the quality.",
+     "example": {
+      "question": "As busy as a ___.",
+      "wrong_answer": "tortoise",
+      "correct_answer": "bee"
+     },
+     "cause": "Does not match the animal to the quality.",
+     "reveals": "An animal known for a different quality.",
+     "help": "Which animal or thing is famous for this quality?",
+     "feedback": "This animal or thing is not known for this quality. Think about who is famous for it.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO",
@@ -2258,8 +4563,175 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+     "name": "Find the main idea of a paragraph",
+     "outcomes": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.a"
+     ],
+     "mastery": "Chooses the sentence or title that covers the whole paragraph, and does not pick one detail or an idea the paragraph does not discuss, in 8 of 10 new passages.",
+     "question_forms": [
+      "short comprehension: choose the main idea",
+      "choose the best title"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+     "name": "Summarise the main points",
+     "outcomes": [
+      "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.c",
+      "ENGL.G5.READIN.T10_INTENSIVE_READING.c"
+     ],
+     "mastery": "Chooses the summary that keeps the main points in order and leaves out the small details and the writer's own opinion, in 8 of 10 new passages.",
+     "question_forms": [
+      "choose the best summary",
+      "choose what a summary leaves out"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_DETAIL",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+     "error": "Picks one detail as the main idea.",
+     "example": {
+      "question": "What is the main idea of the paragraph?",
+      "wrong_answer": "a single detail",
+      "correct_answer": "the whole idea"
+     },
+     "cause": "Chooses the sentence that was easiest to find.",
+     "reveals": "A true detail from the paragraph.",
+     "help": "The main idea covers the whole paragraph. A detail covers only one part.",
+     "feedback": "This is a true detail, but it is only one part. The main idea covers the whole paragraph.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_TOO_BROAD",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+     "error": "Picks a statement that is too wide for the paragraph.",
+     "example": {
+      "question": "What is the main idea of the paragraph?",
+      "wrong_answer": "a broad statement",
+      "correct_answer": "a fitting statement"
+     },
+     "cause": "Chooses a big idea the paragraph only touches.",
+     "reveals": "A statement about the whole subject, bigger than the paragraph.",
+     "help": "The main idea fits this paragraph, not the whole topic.",
+     "feedback": "This is too wide. The paragraph talks about one part of it.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA.M_MAIN_NOT_IN_TEXT",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.MAIN_IDEA",
+     "error": "Picks an idea that the paragraph does not discuss.",
+     "example": {
+      "question": "Which title best fits the paragraph?",
+      "wrong_answer": "an unrelated idea",
+      "correct_answer": "a fitting title"
+     },
+     "cause": "Chooses from background knowledge.",
+     "reveals": "An idea on the same subject but not in the paragraph.",
+     "help": "Check that the title matches what the paragraph says.",
+     "feedback": "This idea is not in the paragraph. Check what the paragraph is actually about.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_TOO_MUCH_DETAIL",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+     "error": "Chooses a summary that retells every detail.",
+     "example": {
+      "question": "Which is the best summary?",
+      "wrong_answer": "a long retelling",
+      "correct_answer": "a short summary"
+     },
+     "cause": "Believes a longer answer is better.",
+     "reveals": "A summary almost as long as the passage.",
+     "help": "A summary is shorter and keeps only the main points.",
+     "feedback": "A summary should be short. This one keeps too many small details.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_MISSING_MAIN",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+     "error": "Chooses a summary that leaves out a main point.",
+     "example": {
+      "question": "Which is the best summary?",
+      "wrong_answer": "a summary missing a main point",
+      "correct_answer": "a complete summary"
+     },
+     "cause": "Takes the first half of the passage only.",
+     "reveals": "A summary that stops half way.",
+     "help": "Check that every main point is in your summary.",
+     "feedback": "This summary leaves out an important part. A good summary covers all the main points.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_OPINION",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+     "error": "Adds an opinion or an idea that is not in the passage.",
+     "example": {
+      "question": "Which is the best summary?",
+      "wrong_answer": "a summary with an opinion",
+      "correct_answer": "a summary of the passage only"
+     },
+     "cause": "Adds what he or she thinks.",
+     "reveals": "A summary with a judging word such as best, silly, lazy.",
+     "help": "A summary tells what the passage says, not what you think.",
+     "feedback": "A summary only says what the passage says. This one adds an opinion.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE.M_SUM_CUTS_MAIN",
+     "skill": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE.SUMMARISE",
+     "error": "Leaves out a main point and keeps a small detail.",
+     "example": {
+      "question": "Which sentence is a small detail that a summary can leave out?",
+      "wrong_answer": "a main point",
+      "correct_answer": "a small detail"
+     },
+     "cause": "Cannot tell main points from details.",
+     "reveals": "A main point offered as the one to leave out.",
+     "help": "Main points say what happens or what the text is about. Details add colour.",
+     "feedback": "This is a main point, and a summary needs it. Choose the small detail that adds only colour.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS",
@@ -2326,8 +4798,212 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "name": "Identify and use adverbs of manner, time, place and frequency",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.a",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.b",
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.d"
+     ],
+     "mastery": "Tells whether an adverb shows manner, time, place or frequency, and uses the adverb (not the adjective) after the verb (runs quickly, sings well), in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake",
+      "say what the adverb tells us"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.COMPARATIVE_SUPERLATIVE",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+     "name": "Use could and would",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.c"
+     ],
+     "mastery": "Uses could for past ability or a polite request and would for a polite request or an imagined result, followed by the base verb, and builds how many ... could/would questions, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.FUTURE_WILL_SHALL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_ADJECTIVE_FOR_ADVERB",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "error": "Uses an adjective after the verb (runs quick, speaks soft).",
+     "example": {
+      "question": "The boy ran ___ to school.",
+      "wrong_answer": "quick",
+      "correct_answer": "quickly"
+     },
+     "cause": "Kiswahili uses one word for both (haraka).",
+     "reveals": "The adjective form among the options after a verb.",
+     "help": "Ask: how did he run? The word describes the verb, so add -ly.",
+     "feedback": "A word that tells HOW something is done describes the verb, so it needs the adverb form (quickly).",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_GOOD_WELL",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "error": "Uses good where well is needed (sings good).",
+     "example": {
+      "question": "Akinyi sings very ___.",
+      "wrong_answer": "good",
+      "correct_answer": "well"
+     },
+     "cause": "Treats good as the adverb of well.",
+     "reveals": "good among the options after a verb.",
+     "help": "Good describes a noun (a good singer). Well describes a verb (sings well).",
+     "feedback": "Good describes a noun. After a verb, use well.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_HARD_HARDLY",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "error": "Uses hardly for hard (works hardly).",
+     "example": {
+      "question": "The farmers work ___ in the shamba.",
+      "wrong_answer": "hardly",
+      "correct_answer": "hard"
+     },
+     "cause": "Adds -ly to every adjective to make an adverb.",
+     "reveals": "hardly among the options.",
+     "help": "Hard stays hard: works hard. Hardly means almost not at all.",
+     "feedback": "The adverb of hard is hard. Hardly means \"almost not at all\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_TYPE_CONFUSION",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "error": "Mixes up the kinds of adverb (time, frequency, place, manner).",
+     "example": {
+      "question": "In \"She often visits her aunt\", often tells us ___.",
+      "wrong_answer": "when (time)",
+      "correct_answer": "how often (frequency)"
+     },
+     "cause": "Sees \"when\" in every adverb that is about time.",
+     "reveals": "A frequency word offered with time as an option.",
+     "help": "Frequency answers how often: always, never, often, sometimes. Time answers when: today, soon.",
+     "feedback": "Always, often, sometimes and never tell HOW OFTEN (frequency). Time words tell WHEN.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS.M_ADV_POSITION",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.ADVERBS",
+     "error": "Puts the adverb of frequency in the wrong place (She is late always).",
+     "example": {
+      "question": "Wanjiru ___ late.",
+      "wrong_answer": "always is",
+      "correct_answer": "is always"
+     },
+     "cause": "Places the adverb at the end as in Kiswahili (huchelewa kila mara).",
+     "reveals": "A frequency word at the end of the sentence among the options.",
+     "help": "Frequency words usually go before the main verb, but after is, am, are.",
+     "feedback": "A frequency adverb usually goes before the main verb, but after is, am, are and was.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_CAN_FOR_COULD",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+     "error": "Uses can to talk about the past.",
+     "example": {
+      "question": "When I was five, I ___ climb trees.",
+      "wrong_answer": "can",
+      "correct_answer": "could"
+     },
+     "cause": "Does not change can for the past.",
+     "reveals": "can in a sentence that begins with a past time.",
+     "help": "Can is now. Could is the past of can.",
+     "feedback": "Talk about the past with could: when I was five, I could climb trees.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_WILL_FOR_WOULD",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+     "error": "Uses will for an imagined result (If I had money, I will buy).",
+     "example": {
+      "question": "If I had a bicycle, I ___ ride to school.",
+      "wrong_answer": "will",
+      "correct_answer": "would"
+     },
+     "cause": "Does not match the if-part in the past with would in the result.",
+     "reveals": "will after an if-part in the past tense.",
+     "help": "If + past tense, then would + verb.",
+     "feedback": "When the if-part is in the past tense, the result uses would, not will.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_PAST_AFTER_MODAL",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+     "error": "Puts a past tense after could or would (could went).",
+     "example": {
+      "question": "He said he could ___ us.",
+      "wrong_answer": "helped",
+      "correct_answer": "help"
+     },
+     "cause": "Thinks the past needs two past words.",
+     "reveals": "could/would + a past form.",
+     "help": "Could already shows the past. The verb after it stays plain: could help.",
+     "feedback": "After could and would, use the plain verb: could help, would go.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD.M_MOD_HOW_MANY_ORDER",
+     "skill": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.COULD_WOULD",
+     "error": "Gets the order wrong in how many ... could/would questions.",
+     "example": {
+      "question": "___ eggs could you carry?",
+      "wrong_answer": "How could you many",
+      "correct_answer": "How many"
+     },
+     "cause": "Does not keep how many together.",
+     "reveals": "How and many split apart.",
+     "help": "Keep how many together, then could, then the person, then the verb.",
+     "feedback": "Keep \"how many\" together, then could/would, then the person: How many eggs could you carry?",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING",
@@ -2387,8 +5063,201 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "name": "Use the apostrophe",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "Uses the apostrophe for belonging (Juma's bag, the girls' room) and for missing letters (don't, it's), tells its from it's, and does not put an apostrophe in a plain plural (banana's), in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.POSSESSIVES",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+     "name": "Use the exclamation mark",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.a",
+      "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.b"
+     ],
+     "mastery": "Ends a sentence of strong feeling, surprise, warning or a shout with an exclamation mark, keeps the full stop for ordinary statements and the question mark for questions, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct sentence",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_PLURAL",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "error": "Puts an apostrophe in a plain plural (banana's for sale).",
+     "example": {
+      "question": "Fresh ___ for sale.",
+      "wrong_answer": "banana's",
+      "correct_answer": "bananas"
+     },
+     "cause": "Thinks every s needs an apostrophe.",
+     "reveals": "An apostrophe in a plural with no owner.",
+     "help": "An apostrophe shows belonging or missing letters, never just more than one.",
+     "feedback": "An apostrophe is not for a plain plural. Write bananas, books, boys.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_ITS",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "error": "Mixes up its (belonging) and it's (it is).",
+     "example": {
+      "question": "The dog wagged ___ tail.",
+      "wrong_answer": "it's",
+      "correct_answer": "its"
+     },
+     "cause": "Both sound the same and both look as if they need an apostrophe.",
+     "reveals": "its and it's offered together.",
+     "help": "Say it is. If it fits, it's. If not, its.",
+     "feedback": "Try \"it is\" in the gap. If it does not fit, you need its (belonging), with no apostrophe.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_MISSING_OWNER",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "error": "Leaves out the apostrophe when something belongs to someone (Jumas bag).",
+     "example": {
+      "question": "This is ___ bag.",
+      "wrong_answer": "Jumas",
+      "correct_answer": "Juma's"
+     },
+     "cause": "Does not mark belonging in writing.",
+     "reveals": "A noun with s and no apostrophe where belonging is meant.",
+     "help": "Add apostrophe and s to show belonging: Juma's bag.",
+     "feedback": "To show that something belongs to Juma, add an apostrophe and s: Juma's.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_CONTRACTION",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "error": "Leaves out the apostrophe in don't or puts it in the wrong place (do'nt).",
+     "example": {
+      "question": "We ___ have school on Saturday.",
+      "wrong_answer": "dont",
+      "correct_answer": "don't"
+     },
+     "cause": "Does not mark the missing letter.",
+     "reveals": "dont or do'nt among the options.",
+     "help": "The apostrophe sits where the letter is missing: do not becomes don't.",
+     "feedback": "The apostrophe goes where a letter is missing: do not becomes don't.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE.M_APOS_PLURAL_OWNER",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.APOSTROPHE",
+     "error": "Puts the apostrophe before the s when the owners are plural (the girl's room, for many girls), or the reverse.",
+     "example": {
+      "question": "The ___ room is next to ours. (many girls)",
+      "wrong_answer": "girl's",
+      "correct_answer": "girls'"
+     },
+     "cause": "Does not ask if one or many own it.",
+     "reveals": "girl's and girls' offered together.",
+     "help": "One owner: 's. Many owners ending in s: s'.",
+     "feedback": "One owner: apostrophe then s. Many owners whose name ends in s: s then apostrophe.",
+     "source": "to confirm by a Kenyan English teacher: whether plural possessives are taught at Grade 5",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_FULL_STOP",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+     "error": "Uses a full stop after a shout, a warning or a strong feeling.",
+     "example": {
+      "question": "Look out for the car.",
+      "wrong_answer": "Look out for the car.",
+      "correct_answer": "Look out for the car!"
+     },
+     "cause": "Treats every sentence the same.",
+     "reveals": "A warning or a cry that ends in a full stop.",
+     "help": "A shout, a warning and strong surprise need !",
+     "feedback": "A warning, shout or strong feeling needs an exclamation mark.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_OVERUSE",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+     "error": "Uses an exclamation mark after calm, ordinary sentences.",
+     "example": {
+      "question": "We went to the market!",
+      "wrong_answer": "We went to the market!",
+      "correct_answer": "We went to the market."
+     },
+     "cause": "Thinks ! makes writing more exciting.",
+     "reveals": "A calm statement ending in !",
+     "help": "Keep ! for strong feeling. A calm statement ends in a full stop.",
+     "feedback": "A calm sentence ends with a full stop. Save the exclamation mark for strong feeling.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_MANY",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+     "error": "Writes more than one exclamation mark (!!!).",
+     "example": {
+      "question": "What a goal!!!",
+      "wrong_answer": "What a goal!!!",
+      "correct_answer": "What a goal!"
+     },
+     "cause": "Copies the style of messages on phones.",
+     "reveals": "More than one ! at the end of a sentence.",
+     "help": "One mark is enough in school writing.",
+     "feedback": "One exclamation mark is enough.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK.M_EXCL_QUESTION",
+     "skill": "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING.EXCLAMATION_MARK",
+     "error": "Ends a real question with an exclamation mark.",
+     "example": {
+      "question": "Where is my pen!",
+      "wrong_answer": "Where is my pen!",
+      "correct_answer": "Where is my pen?"
+     },
+     "cause": "Writes a strong voice as ! even for a question.",
+     "reveals": "A question that ends in !",
+     "help": "A question that asks something ends with ?",
+     "feedback": "A question that asks for an answer ends with a question mark.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO",
@@ -2455,8 +5324,60 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS",
+     "name": "Tell the mood or feeling in a narrative",
+     "outcomes": [
+      "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.a"
+     ],
+     "mastery": "Reads a few lines of a narrative and names the feeling or mood, using the words and actions as evidence, and does not name the opposite feeling from one cheerful or sad word, in 8 of 10 new extracts.",
+     "question_forms": [
+      "choose the feeling",
+      "choose the evidence"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M_MOOD_OPPOSITE",
+     "skill": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS",
+     "error": "Names the opposite feeling from one cheerful or sad word.",
+     "example": {
+      "question": "Wafula laughed, but his hands shook. He felt ___.",
+      "wrong_answer": "happy",
+      "correct_answer": "nervous"
+     },
+     "cause": "Reads one word (laughed) and ignores the rest.",
+     "reveals": "A mood that matches one word and not the others.",
+     "help": "Check what the person does and says, not just one word.",
+     "feedback": "One word does not tell the whole feeling. Check what the person does and says.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS.M_MOOD_NAMED_NOT_SHOWN",
+     "skill": "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO.MOOD_FEELINGS",
+     "error": "Names a feeling that is not supported by the lines.",
+     "example": {
+      "question": "How does Mama feel?",
+      "wrong_answer": "angry",
+      "correct_answer": "worried"
+     },
+     "cause": "Picks a strong feeling without evidence.",
+     "reveals": "A strong feeling with no supporting words.",
+     "help": "Find the words and actions that show the feeling.",
+     "feedback": "Nothing in the lines shows this feeling. Look for words and actions that show how the person feels.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T10_INTENSIVE_READING",
@@ -2580,8 +5501,128 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "name": "Join sentences with but, or, yet, because, since and also",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.a",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.b",
+      "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.c"
+     ],
+     "mastery": "Chooses the conjunction that fits the meaning (contrast, choice, reason) and uses only one joining word in a sentence (not Because ..., so ...), in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_BECAUSE_FOR_BUT",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Uses because where but (a contrast) is needed.",
+     "example": {
+      "question": "Ali is small, ___ he runs very fast.",
+      "wrong_answer": "because",
+      "correct_answer": "but"
+     },
+     "cause": "Joins two ideas without asking how they relate.",
+     "reveals": "because/so offered where the second idea is a surprise.",
+     "help": "Ask: is the second part a reason, a surprise or a choice?",
+     "feedback": "Read both parts. If the second part is a surprise after the first, use but or yet, not because.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_DOUBLE",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Uses two joining words together (Because ..., so ...; Although ..., but ...).",
+     "example": {
+      "question": "Because it was raining, so we stayed home.",
+      "wrong_answer": "Because..., so...",
+      "correct_answer": "Because ... , we stayed home"
+     },
+     "cause": "Kiswahili uses two joining words (kwa sababu... kwa hivyo).",
+     "reveals": "A sentence with both because and so.",
+     "help": "One joining word per sentence. Because it rained, we stayed. Or: It rained, so we stayed.",
+     "feedback": "Use ONE joining word between two ideas. Because and so do the same job, so use only one.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_OR_AND",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Uses and where or (a choice) is needed.",
+     "example": {
+      "question": "Would you like tea ___ milk?",
+      "wrong_answer": "and",
+      "correct_answer": "or"
+     },
+     "cause": "Treats and as the only joining word.",
+     "reveals": "and offered when two things are being chosen between.",
+     "help": "A choice between two things uses or.",
+     "feedback": "When you choose one of two things, use \"or\", not \"and\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_SINCE_TIME",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Uses since only for time and misses its meaning of because.",
+     "example": {
+      "question": "We stayed indoors ___ it was raining.",
+      "wrong_answer": "since",
+      "correct_answer": "because"
+     },
+     "cause": "Learns only the time meaning of since.",
+     "reveals": "Since as a reason offered or rejected.",
+     "help": "Since can mean because. Since I was five means a time. Since it rained means a reason.",
+     "feedback": "Since can mean \"because\" (a reason) or \"from a time\". Read the meaning.",
+     "source": "to confirm by a Kenyan English teacher: whether since for a reason is taught at Grade 5",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_ALSO_JOINING",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Uses also as if it joined two words (tea also coffee).",
+     "example": {
+      "question": "We bought sugar ___ rice.",
+      "wrong_answer": "also",
+      "correct_answer": "and"
+     },
+     "cause": "Thinks also is another way to say and.",
+     "reveals": "also between two nouns.",
+     "help": "Also adds an idea in a new sentence or after the verb. And joins two words.",
+     "feedback": "\"Also\" does not join two nouns. Use \"and\", or begin a new sentence with Also.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CONJ_WRONG_MEANING",
+     "skill": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+     "error": "Chooses a joining word that does not fit the meaning of the two parts.",
+     "example": {
+      "question": "We bought sugar ___ rice.",
+      "wrong_answer": "but",
+      "correct_answer": "and"
+     },
+     "cause": "Treats all joining words as the same.",
+     "reveals": "A joining word whose meaning does not fit the two ideas.",
+     "help": "Say the two parts and ask: do they add, contrast, give a reason or offer a choice?",
+     "feedback": "Read both parts of the sentence. This joining word does not fit what the two parts mean together.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES",
@@ -2834,8 +5875,127 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "name": "Ask questions with how, what, when, why, who",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.a",
+      "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.b"
+     ],
+     "mastery": "Chooses the question word that fits the answer given, puts the helper verb before the subject (What are you doing?), and uses how much more and when/who/why/what else correctly, in 8 of 10 new questions.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WHO_WHAT",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Uses who for things or what for people.",
+     "example": {
+      "question": "___ is your class teacher?",
+      "wrong_answer": "What",
+      "correct_answer": "Who"
+     },
+     "cause": "Does not ask whether the answer is a person or a thing.",
+     "reveals": "who and what swapped in a question about a person or a thing.",
+     "help": "A person: who. A thing or idea: what.",
+     "feedback": "Who asks about people. What asks about things.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WHEN_WHERE_WHY",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Mixes when (time), where (place) and why (reason).",
+     "example": {
+      "question": "\"___ did you arrive late?\" \"Because the bus broke down.\"",
+      "wrong_answer": "When",
+      "correct_answer": "Why"
+     },
+     "cause": "Does not read the answer to see what is being asked.",
+     "reveals": "An answer that is a reason, a time or a place beside the wrong question word.",
+     "help": "Because gives a reason: why. At six o'clock gives a time: when.",
+     "feedback": "Look at the answer. An answer that begins with because is a reason, so the question word is why.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_WORD_ORDER",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Keeps statement order in a question (What you are doing?).",
+     "example": {
+      "question": "What ___?",
+      "wrong_answer": "you are doing",
+      "correct_answer": "are you doing"
+     },
+     "cause": "Kiswahili questions keep the same word order as statements.",
+     "reveals": "A question with the subject before the helper verb.",
+     "help": "In a question, the helper verb comes first: are you, did he, can she.",
+     "feedback": "In a question the helper verb comes before the subject: What are you doing?",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_DO_MISSING",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Leaves out do, does or did (Why you came late?).",
+     "example": {
+      "question": "Why ___ late?",
+      "wrong_answer": "you came",
+      "correct_answer": "did you come"
+     },
+     "cause": "Drops the helper verb as in quick speech.",
+     "reveals": "A question with no do, does or did.",
+     "help": "With most verbs the question needs did, do or does, and the verb goes back to plain.",
+     "feedback": "Most questions need do, does or did. Then the verb goes plain: Why did you come late?",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_ELSE_POSITION",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Puts else in the wrong place or adds another word (what other else).",
+     "example": {
+      "question": "Who ___ came to the party?",
+      "wrong_answer": "else other",
+      "correct_answer": "else"
+     },
+     "cause": "Adds a second word of the same meaning.",
+     "reveals": "else with other or more.",
+     "help": "Else already means \"in addition\". Use one word: who else, what else.",
+     "feedback": "Else means \"in addition\". Use it alone after who, what, when or why.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES.M_INT_HOW_MUCH_MANY",
+     "skill": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.INTERROGATIVES",
+     "error": "Mixes how much (cannot be counted) and how many (can be counted).",
+     "example": {
+      "question": "How ___ goats does he have?",
+      "wrong_answer": "much",
+      "correct_answer": "many"
+     },
+     "cause": "Does not ask whether the thing can be counted.",
+     "reveals": "how much with a countable noun, or how many with an uncountable one.",
+     "help": "Goats can be counted: how many. Rice cannot be counted one by one: how much.",
+     "feedback": "Use how many for things you can count (goats) and how much for things you cannot count (rice, milk).",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T11_SPELLING",
@@ -2896,8 +6056,147 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+     "name": "Spell and use homophones",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T11_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.a",
+      "ENGL.G5.WRITIN.T13_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.c"
+     ],
+     "mastery": "Chooses the right word from a pair or trio of words that sound alike (there/their, to/too/two, hear/here, write/right, piece/peace) from the meaning of the sentence, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS",
+     "name": "Use homonyms in the right meaning",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T11_SPELLING.b"
+     ],
+     "mastery": "Recognises that one spelling can carry two meanings (bank, bat, bark, light, match) and picks the sentence that uses the word in the meaning asked for, in 8 of 10 new questions.",
+     "question_forms": [
+      "choose the sentence with this meaning",
+      "choose the meaning in a sentence"
+     ],
+     "thinking": [
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_THERE_THEIR",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+     "error": "Mixes there, their and they're.",
+     "example": {
+      "question": "The children left ___ bags in the classroom.",
+      "wrong_answer": "there",
+      "correct_answer": "their"
+     },
+     "cause": "The three words sound the same.",
+     "reveals": "there/their/they're in one sentence.",
+     "help": "Their means belonging to them. There is a place. They're means they are.",
+     "feedback": "Their shows that something belongs to them. There shows a place. They're means \"they are\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_TO_TOO_TWO",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+     "error": "Mixes to, too and two.",
+     "example": {
+      "question": "Wanjiru has ___ brothers.",
+      "wrong_answer": "to",
+      "correct_answer": "two"
+     },
+     "cause": "The three words sound the same.",
+     "reveals": "to/too/two in one sentence.",
+     "help": "Two is the number. Too means also or more than needed. To is a direction word.",
+     "feedback": "Two is the number 2. Too means \"also\" or \"more than enough\". To shows where or what for.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_SOUND_ONLY",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+     "error": "Chooses by sound alone, so picks whichever spelling comes to mind.",
+     "example": {
+      "question": "We ate the ___ of bread.",
+      "wrong_answer": "peace",
+      "correct_answer": "piece"
+     },
+     "cause": "Does not stop to think about the meaning.",
+     "reveals": "Two words that sound the same where the meaning decides.",
+     "help": "Say what the word means, then match it to the spelling: piece is a part, peace is calm.",
+     "feedback": "The words sound the same but mean different things. Think about the meaning to choose the spelling.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES.M_HOMO_HEAR_HERE",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMOPHONES",
+     "error": "Mixes up hear and here, write and right, see and sea.",
+     "example": {
+      "question": "Come ___ and sit beside me.",
+      "wrong_answer": "hear",
+      "correct_answer": "here"
+     },
+     "cause": "Knows both spellings but not which meaning each carries.",
+     "reveals": "hear/here, write/right, see/sea, meet/meat.",
+     "help": "Hear has an ear in it. Here is about a place, like there.",
+     "feedback": "Hear is what you do with your ears. Here means \"in this place\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M_HOMON_FIRST_MEANING",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS",
+     "error": "Picks the commonest meaning of the word and ignores the one asked for.",
+     "example": {
+      "question": "Which sentence uses bank to mean the side of a river?",
+      "wrong_answer": "He saved money at the bank.",
+      "correct_answer": "We sat on the bank of the river."
+     },
+     "cause": "Knows only the first meaning learned.",
+     "reveals": "The common meaning among the options next to the less common.",
+     "help": "Read the whole sentence before you choose.",
+     "feedback": "This word has more than one meaning. Read the question and the rest of the sentence to see which meaning is used.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS.M_HOMON_CONTEXT_IGNORED",
+     "skill": "ENGL.G5.WRITIN.T11_SPELLING.HOMONYMS",
+     "error": "Matches on the word alone and does not check the other words in the sentence.",
+     "example": {
+      "question": "Which sentence uses bat to mean the animal that flies at night?",
+      "wrong_answer": "The batsman hit the ball with his bat.",
+      "correct_answer": "A bat flew out of the cave at dusk."
+     },
+     "cause": "Sees the same spelling and stops.",
+     "reveals": "Two sentences with the same word and different surrounding clues.",
+     "help": "Look for clue words: cave, night, wings; or ball, cricket.",
+     "feedback": "Check the other words in the sentence. They show which meaning is used.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO",
@@ -3088,8 +6387,95 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+     "name": "Use nouns that are the same in singular and plural",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.a",
+      "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.b"
+     ],
+     "mastery": "Uses sheep, fish, deer, aircraft, series and species (and does not write sheeps or deers), keeps the verb in agreement with the number meant, and still writes the irregular plurals children, men, feet and teeth, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_SHEEPS",
+     "skill": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+     "error": "Adds -s to a noun that does not change (sheeps, deers, aircrafts).",
+     "example": {
+      "question": "The farmer keeps twenty ___.",
+      "wrong_answer": "sheeps",
+      "correct_answer": "sheep"
+     },
+     "cause": "Applies the regular plural rule to every noun.",
+     "reveals": "sheeps, deers and fishs among the options.",
+     "help": "A few words stay the same: sheep, deer, fish, series, species, aircraft.",
+     "feedback": "Sheep, deer, fish, series, species and aircraft stay the same in the plural.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_OVERREGULAR",
+     "skill": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+     "error": "Adds -s to an irregular plural (childs, mans, foots, tooths).",
+     "example": {
+      "question": "Many ___ were playing outside.",
+      "wrong_answer": "childs",
+      "correct_answer": "children"
+     },
+     "cause": "Applies the regular plural rule to a word that changes inside.",
+     "reveals": "childs, mans, foots among the options.",
+     "help": "Learn these by heart: child-children, man-men, foot-feet, tooth-teeth.",
+     "feedback": "Some plurals change the whole word: child becomes children, man becomes men, foot becomes feet.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_VERB_AGREEMENT",
+     "skill": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+     "error": "Uses a singular verb with many sheep or fish (The sheep is grazing).",
+     "example": {
+      "question": "Fifty sheep ___ on the hill.",
+      "wrong_answer": "is",
+      "correct_answer": "are"
+     },
+     "cause": "Sees the noun without -s and takes it as singular.",
+     "reveals": "A number before a same-form noun, and a singular verb.",
+     "help": "Look for a number or many. Fifty sheep are; one sheep is.",
+     "feedback": "The number tells you if it is one or many. With fifty sheep, the verb is plural: are.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL.M_NOUN_A_BEFORE_PLURAL",
+     "skill": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.SAME_SINGULAR_PLURAL",
+     "error": "Puts a or one before a plural form (a sheeps; one fishes).",
+     "example": {
+      "question": "I saw ___ in the river.",
+      "wrong_answer": "a fishes",
+      "correct_answer": "a fish"
+     },
+     "cause": "Does not link a/an to a single thing.",
+     "reveals": "a/an with a plural form.",
+     "help": "A fish is one. Fish can also mean many, with a number: five fish.",
+     "feedback": "The word \"a\" is for one thing only, so the noun is singular: a fish.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D",
@@ -3351,8 +6737,180 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+     "name": "Use in, on and at for time and place",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b"
+     ],
+     "mastery": "Chooses in, on or at for times (at 8 o'clock, on Monday, in June) and places (at the gate, on the table, in the room), in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+     "name": "Use into, towards, to and through for direction",
+     "outcomes": [
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
+      "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b"
+     ],
+     "mastery": "Chooses into, towards, to or through for movement, and does not write to home or entered into, in 8 of 10 new sentences.",
+     "question_forms": [
+      "choose the correct word",
+      "fill the gap",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall",
+      "rule"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_DAY_IN",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+     "error": "Uses in or at for a day or date (in Monday, at Saturday).",
+     "example": {
+      "question": "We have a test ___ Monday.",
+      "wrong_answer": "in",
+      "correct_answer": "on"
+     },
+     "cause": "Uses one preposition for all times.",
+     "reveals": "in/at beside a day of the week or a date.",
+     "help": "On for days and dates. At for clock times and moments. In for months, years and parts of the day.",
+     "feedback": "Use \"on\" with days and dates: on Monday, on 12 June.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_CLOCK_IN",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+     "error": "Uses in or on for a clock time (in 8 o'clock).",
+     "example": {
+      "question": "The bus leaves ___ 8 o'clock.",
+      "wrong_answer": "in",
+      "correct_answer": "at"
+     },
+     "cause": "Uses in for every time.",
+     "reveals": "in or on beside a clock time.",
+     "help": "At for exact clock times and for night: at 8 o'clock, at night.",
+     "feedback": "Use \"at\" for exact times and for night: at 8 o'clock, at night.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_PART_OF_DAY",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+     "error": "Uses at or on for parts of the day, months and years (at the morning).",
+     "example": {
+      "question": "I wake up early ___ the morning.",
+      "wrong_answer": "at",
+      "correct_answer": "in"
+     },
+     "cause": "Translates the Kiswahili phrase for each time word with the same word.",
+     "reveals": "at/on beside morning, afternoon, evening, a month or a year.",
+     "help": "In for morning, afternoon, evening, months, years and seasons.",
+     "feedback": "Use \"in\" with the morning, afternoon and evening, with months and with years.",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE.M_PREP_PLACE",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_TIME_PLACE",
+     "error": "Mixes in, on and at for places (on the room, at the table in).",
+     "example": {
+      "question": "The cup is ___ the table.",
+      "wrong_answer": "in",
+      "correct_answer": "on"
+     },
+     "cause": "Does not think about how the thing sits in the place.",
+     "reveals": "in/at beside a surface or a point.",
+     "help": "On touches a surface, in is inside, at is a point or place.",
+     "feedback": "Use \"on\" for a thing resting on a surface, \"in\" for inside, and \"at\" for a point or a place such as the gate.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_TO_HOME",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+     "error": "Writes to home (went to home).",
+     "example": {
+      "question": "After school I went ___.",
+      "wrong_answer": "to home",
+      "correct_answer": "home"
+     },
+     "cause": "Kiswahili says kwenda nyumbani; the word for to is built into the verb.",
+     "reveals": "to home among the options.",
+     "help": "Home needs no to: go home, come home, walk home.",
+     "feedback": "The word \"home\" already tells where. Say \"went home\", not \"went to home\".",
+     "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_ENTER_INTO",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+     "error": "Writes entered into for walking into a place.",
+     "example": {
+      "question": "The teacher entered ___ the classroom.",
+      "wrong_answer": "into",
+      "correct_answer": "nothing"
+     },
+     "cause": "Mixes into (movement) with the verb enter, which has the meaning built in.",
+     "reveals": "entered into among the options.",
+     "help": "Enter already means go into. Say entered the room, or went into the room.",
+     "feedback": "The verb \"enter\" already means \"go into\". Say \"entered the classroom\".",
+     "source": "common learner error; widespread in East African English",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_TOWARDS_TO",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+     "error": "Writes towards to, or uses to for a movement in the direction of.",
+     "example": {
+      "question": "The goats ran ___ the river.",
+      "wrong_answer": "towards to",
+      "correct_answer": "towards"
+     },
+     "cause": "Joins two direction words.",
+     "reveals": "towards to among the options.",
+     "help": "Towards is already a direction word. Use it alone.",
+     "feedback": "Towards is complete on its own. Do not add \"to\".",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION.M_PREP_THROUGH_INTO",
+     "skill": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.PREPOSITIONS_DIRECTION",
+     "error": "Mixes through (from one side to the other) with into (going inside).",
+     "example": {
+      "question": "The train went ___ a tunnel and came out the other side.",
+      "wrong_answer": "into",
+      "correct_answer": "through"
+     },
+     "cause": "Does not think about whether the movement ends inside or comes out.",
+     "reveals": "into and through offered together.",
+     "help": "Through goes in one side and out the other. Into stops inside.",
+     "feedback": "Through goes in at one side and out at the other. Into only goes inside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   },
   {
    "code": "ENGL.G5.WRITIN.T13_SPELLING",
@@ -3426,8 +6984,105 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": []
+   "skills": [
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+     "name": "Spell words with double consonants and double vowels",
+     "outcomes": [
+      "ENGL.G5.WRITIN.T13_SPELLING.a",
+      "ENGL.G5.WRITIN.T13_SPELLING.b",
+      "ENGL.G5.WRITIN.T13_SPELLING.c",
+      "ENGL.G5.WRITIN.T11_SPELLING.a",
+      "ENGL.G5.READIN.T1_EXTENSIVE_READING.b"
+     ],
+     "mastery": "Spells words such as summer, happy, address, letter, coffee, see, food, week and queen with the right doubled letters, in 8 of 10 new words, and chooses the correctly spelt word in a sentence.",
+     "question_forms": [
+      "choose the correct spelling",
+      "type the spelling",
+      "spot the mistake"
+     ],
+     "thinking": [
+      "recall"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G4.WRITIN.T13_SPELLING.a",
+       "kind": "outcome",
+       "strength": "essential",
+       "reason": "Proposed: this skill builds on it. To confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_SINGLE_CONSONANT",
+     "skill": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+     "error": "Writes one consonant where two are needed (sumer, leter).",
+     "example": {
+      "question": "In ___ the days are hot.",
+      "wrong_answer": "sumer",
+      "correct_answer": "summer"
+     },
+     "cause": "Spells by sound and does not hear the double letter.",
+     "reveals": "A word spelt with one consonant among the options.",
+     "help": "Learn the double letters in common words: summer, letter, happy, address.",
+     "feedback": "This word has a double consonant. Look at the middle of the word again.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_EXTRA_DOUBLE",
+     "skill": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+     "error": "Doubles a letter that should be single, or doubles the wrong letter (adress, succes, comittee).",
+     "example": {
+      "question": "Please write your ___ on the form.",
+      "wrong_answer": "adress",
+      "correct_answer": "address"
+     },
+     "cause": "Guesses which letter to double.",
+     "reveals": "A word with the wrong letter doubled.",
+     "help": "Check every double letter: address has dd and ss.",
+     "feedback": "Check which letters are doubled. In this word, two different letters are doubled, or the doubled letter is not the one you chose.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_SINGLE_VOWEL",
+     "skill": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+     "error": "Writes one vowel where two are needed (fod, shep, wek).",
+     "example": {
+      "question": "We eat ___ every day.",
+      "wrong_answer": "fod",
+      "correct_answer": "food"
+     },
+     "cause": "Spells by the short sound.",
+     "reveals": "A word with one vowel among the options.",
+     "help": "The sound is long, so two vowels: oo, ee.",
+     "feedback": "This word has a double vowel (oo or ee). The sound is long.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS.M_SPELL_PHONETIC",
+     "skill": "ENGL.G5.WRITIN.T13_SPELLING.DOUBLE_LETTERS",
+     "error": "Spells a word the way it sounds (sucess, coffe).",
+     "example": {
+      "question": "Mama drinks ___ every morning.",
+      "wrong_answer": "cofee",
+      "correct_answer": "coffee"
+     },
+     "cause": "Spells by ear and does not remember the shape of the word.",
+     "reveals": "A word that is a sound-for-sound spelling.",
+     "help": "Say the word in syllables and write each: cof-fee.",
+     "feedback": "Do not spell this word by sound alone. Look for the double letters.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ]
   }
  ]
 }
