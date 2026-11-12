@@ -38,6 +38,7 @@ const { auditUniqueAnswers, reportUniqueAnswers } = await import(resolve(root, '
 const { measureAll, summarise, gradeTable, rangeFailures } = await import(resolve(root, 'engine/scripts/range_report.mjs'));
 const { setFamilyMode } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
 const { checkFamily, checkForms, baseFormsOf, FAMILIES } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
+const { englishFailures, ENGLISH_FAMILIES } = await import(resolve(root, 'engine/scripts/english_checks.mjs'));   // English Grade 5 (words, not numbers)
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
@@ -299,7 +300,8 @@ if (uniqueAudit.failing.length) {
 // Exit non-zero if any authored skill fails — usable as a CI gate.
 // ---- Range: forms, fit, one right answer, and the families ------------------
 setFamilyMode('reviewed');
-const familyFails = [...checkForms(baseFormsOf(new Set(FAMILIES.map(f => f.skill)))), ...FAMILIES.flatMap(f => checkFamily(f))];
+const familyFails = [...checkForms(baseFormsOf(new Set(FAMILIES.map(f => f.skill)))), ...FAMILIES.flatMap(f => checkFamily(f)), ...englishFailures()];
+console.log(`\nEnglish families checked: ${ENGLISH_FAMILIES.length} (all draft, off for children)`);
 const childFails = rangeFailures(childView, { formsMin: 0, onTopicMin: ON_TOPIC_MIN });
 const bankFails = rangeFailures(bankView, { formsMin: FORMS_MIN, onTopicMin: ON_TOPIC_MIN });
 

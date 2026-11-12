@@ -8,9 +8,13 @@
 // ============================================================================
 import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
+import { checkTextAnswer } from '../../src/ai-tutor/answerCheckText.js';
 import { textOf, senseFlags } from '../../engine/scripts/content_measures.mjs';
 
 export const CHECKS = ['key', 'distractors', 'reading', 'ambiguity', 'units'];
+
+// English problems (marker: 'text') are marked by answerCheckText.js: the Maths marker ignores articles, punctuation and word order.
+const marks = (x, p) => (p.marker === 'text' ? checkTextAnswer(x, p) : checkAnswerMatch(x, p));
 
 // ---- 1. the answer key computes ---------------------------------------------
 // An arithmetic expression in the question is evaluated here, independently of
@@ -31,7 +35,7 @@ export function checkKey(p) {
   const out = [];
   const bad = (message) => out.push({ id: 'key', level: 'hard', message });
   if (p.parts) {
-    for (const q of p.parts) if (!checkAnswerMatch(String(q.answer), q)) bad(`part key does not mark itself right: ${String(q.prompt).slice(0, 50)}`);
+    for (const q of p.parts) if (!marks(String(q.answer), q)) bad(`part key does not mark itself right: ${String(q.prompt).slice(0, 50)}`);
     return out;
   }
   if (p.shownSteps) {
@@ -40,14 +44,14 @@ export function checkKey(p) {
     return out;
   }
   if (p.answer == null || String(p.answer).trim() === '') { bad('no answer key'); return out; }
-  if (!checkAnswerMatch(String(p.answer), p)) bad(`key does not mark itself right: ${p.answer}`);
-  const opts = p.mc || p.choices || buildChoices(p);
+  if (!marks(String(p.answer), p)) bad(`key does not mark itself right: ${p.answer}`);
+  const opts = p.mc || p.choices || (p.marker === 'text' ? null : buildChoices(p));
   if (opts) {
-    const right = opts.filter(o => checkAnswerMatch(String(o), p)).length;
+    const right = opts.filter(o => marks(String(o), p)).length;
     if (right !== 1) bad(`${right} options marked right`);
     if (new Set(opts.map(String)).size !== opts.length) bad('options repeat');
   }
-  for (const m of p.misconceptions || []) if (m.when != null && !p.choices && checkAnswerMatch(String(m.when), p)) bad(`named wrong answer "${m.when}" is marked right`);
+  for (const m of p.misconceptions || []) if (m.when != null && !p.choices && marks(String(m.when), p)) bad(`named wrong answer "${m.when}" is marked right`);
   const v = /\d\/\d/.test(String(p.question)) ? null : evaluateExpression(p.question);
   const k = numeric(p.answer);
   if (v != null && k != null && Math.abs(v - k) > 1e-9 && !/estimate|round|nearest|approximately|about|remainder|how many (times|groups|whole)/i.test(p.question)) bad(`the question computes to ${v}, the key says ${p.answer}`);
