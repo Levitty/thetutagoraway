@@ -617,7 +617,7 @@ async function mintToken({ user, body, db, settings, keys = {}, fetch: f, now = 
   if (!cap.ok) return reply(402, { error: "This lesson has used its allowance for today.", reason: cap.reason });
   const recent = await db.countTokens({ userId: user.id, since: new Date(now - 6e4).toISOString() });
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: "Too many voice requests. Wait a moment." });
-  const key = keys.cartesia;
+  const key = String(keys.cartesia || "").trim().replace(/^["']|["']$/g, "");
   if (!key) return reply(503, { error: "Voice is not set up (CARTESIA_API_KEY is missing)." });
   let out;
   try {

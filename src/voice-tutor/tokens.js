@@ -54,7 +54,8 @@ export async function mintToken({ user, body, db, settings, keys = {}, fetch: f,
   const recent = await db.countTokens({ userId: user.id, since: new Date(now - 60000).toISOString() });
   if (recent >= TOKENS_PER_MINUTE) return reply(429, { error: 'Too many voice requests. Wait a moment.' });
 
-  const key = keys.cartesia;
+  // A key pasted with a line break, spaces or quotes round it is still the key.
+  const key = String(keys.cartesia || '').trim().replace(/^["']|["']$/g, '');
   if (!key) return reply(503, { error: 'Voice is not set up (CARTESIA_API_KEY is missing).' });
 
   let out;

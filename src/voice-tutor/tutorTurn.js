@@ -279,7 +279,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       // Validate in sequence: the step as it stands after everything before it.
       const v = validateTurn({ steps: raws }, vopts);
       const bad = v.dropped.find((d) => d.index === raws.length - 1);
-      if (bad) { dropped.push(bad); raws.pop(); return; }
+      if (bad) { dropped.push(raw?.__bad ? { ...bad, reason: `not readable: ${String(raw.__bad).slice(0, 140)}` } : bad); raws.pop(); return; }
       const st = v.steps[v.steps.length - 1];
       notes.splice(0, notes.length, ...v.notes);
       // The check, before the child hears or sees anything of this step.

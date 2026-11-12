@@ -11,6 +11,19 @@
 // on as { __bad: text } so it can be dropped and logged like any other.
 // Pure. Tested in tests/voice-tutor-stream.test.mjs.
 // ============================================================================
+// A step that is almost JSON (a raw line break inside a sentence, a trailing comma) is mended once; otherwise it is
+// passed on as { __bad } with its text, which the tester view shows (12 Nov 2026).
+export function repairStep(raw) {
+  let t = ''; let inStr = false; let esc = false;
+  for (const c of raw) {
+    if (inStr) { if (esc) esc = false; else if (c === '\\') esc = true; else if (c === '"') inStr = false; else if (c === '\n' || c === '\r') { t += ' '; continue; } }
+    else if (c === '"') inStr = true;
+    t += c;
+  }
+  t = t.replace(/,\s*([}\]])/g, '$1');
+  try { return JSON.parse(t); } catch { return { __bad: raw.slice(0, 200) }; }
+}
+
 export function stepParser() {
   let buf = '';
   let i = 0;
@@ -44,7 +57,7 @@ export function stepParser() {
           depth -= 1;
           if (depth === 0 && start >= 0) {
             const raw = buf.slice(start, i + 1);
-            try { out.push(JSON.parse(raw)); } catch { out.push({ __bad: raw.slice(0, 200) }); }
+            try { out.push(JSON.parse(raw)); } catch { out.push(repairStep(raw)); }
             start = -1;
           }
           continue;

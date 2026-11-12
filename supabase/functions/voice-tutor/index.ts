@@ -5765,6 +5765,29 @@ function careTurn(hit) {
 }
 
 // src/voice-tutor/streamSteps.js
+function repairStep(raw) {
+  let t = "";
+  let inStr = false;
+  let esc2 = false;
+  for (const c of raw) {
+    if (inStr) {
+      if (esc2) esc2 = false;
+      else if (c === "\\") esc2 = true;
+      else if (c === '"') inStr = false;
+      else if (c === "\n" || c === "\r") {
+        t += " ";
+        continue;
+      }
+    } else if (c === '"') inStr = true;
+    t += c;
+  }
+  t = t.replace(/,\s*([}\]])/g, "$1");
+  try {
+    return JSON.parse(t);
+  } catch {
+    return { __bad: raw.slice(0, 200) };
+  }
+}
 function stepParser() {
   let buf = "";
   let i = 0;
@@ -5811,7 +5834,7 @@ function stepParser() {
             try {
               out.push(JSON.parse(raw));
             } catch {
-              out.push({ __bad: raw.slice(0, 200) });
+              out.push(repairStep(raw));
             }
             start = -1;
           }
@@ -5843,7 +5866,8 @@ var fieldType = (f) => f.type === "object" && f.properties ? objShape(f) : f.typ
 var REPLY_FORM = TURN_SCHEMA.properties.steps.items.anyOf.map((st) => {
   const req = st.required || [];
   const fields = Object.entries(st.properties).filter(([k]) => k !== "cmd").map(([k, f]) => `${k}${req.includes(k) ? "" : "?"}: ${fieldType(f)}`);
-  return `- ${st.properties.cmd.const}: ${fields.join(", ") || "(no fields)"}`;
+  const fig = st.properties.cmd.const === "figure";
+  return `- ${st.properties.cmd.const}: ${(fig ? fields.map((f) => f.replace(/^(params|goal)(\??): string$/, "$1$2: object")) : fields).join(", ") || "(no fields)"}`;
 }).join("\n");
 var systemPrompt = (lib) => `You are HOREB, Tutagora's maths tutor, giving a live one-to-one lesson on Grade 5 fractions (Kenya's CBC) to a child of about ten, on a phone or laptop. You teach the way a good teacher does at a whiteboard: you say a short sentence and draw or point at the same moment.
 
@@ -5902,7 +5926,7 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
 
-FIGURES (figure): Grade 5 maths figures the board draws stroke by stroke and the child can handle. Fill in type, params (JSON text with that type's settings; anything left out takes its default), controls (what the child may do; leave it out for a figure that is only shown) and goal (JSON text; the app marks it, never you). A figure takes about 5 to 12 seconds to draw: give it two sentences.
+FIGURES (figure): Grade 5 maths figures the board draws stroke by stroke and the child can handle. Fill in type, params (an object with that type's settings; anything left out takes its default), controls (what the child may do; leave it out for a figure that is only shown) and goal (an object; the app marks it, never you). A figure takes about 5 to 12 seconds to draw: give it two sentences.
 - Composition: the board lays out the slots you use. Put the main figure in middle and the writing about it in top or bottom: the figure is drawn big and centred with its words round it. A half slot with nothing beside it takes the whole row.
 - fraction: shape bar|circle|grid; parts 1 to 12 (a grid has rows and cols up to 10 and its parts are its squares); shaded (a count, from the first part); second {parts or rows and cols, shaded}, a second model to compare or to show an equivalent fraction; label. Controls: shade, shade_second (the child taps parts to shade them). Goals: {"kind":"shade","n":3,"d":4}, {"kind":"shade_second","n":2,"d":6}, {"kind":"match"} (the same amount of both).
 - numberline: from, to, divisions (equal steps, 1 to 24), label_as whole|fraction|decimal, labels every|ends|wholes, jumps [{"from":0,"to":0.25}], jump_label, marker, start. Controls: marker (the child drags it), jump (the child taps ticks to jump along from start). Goals: {"kind":"marker_at","value":0.7}, {"kind":"land_on","value":1}.
@@ -5917,7 +5941,7 @@ TEACHING WITH FIGURES:
 - Count with the child here too: highlight with part counts a fraction's parts, a number line's jumps (its ticks when it has none), a chart's columns from the left, an area's squares, a graph's points.
 - A protractor is read from the zero on the fixed arm: with base left, that is the outer scale. Reading the other scale is a common mistake to diagnose.
 - Never show a figure's answer before the child has given it: no label, shading, marker or jump on the answer.
-Example: {"cmd":"figure","id":"f1","type":"fraction","params":"{\\"parts\\":3,\\"shaded\\":1,\\"second\\":{\\"parts\\":6,\\"shaded\\":0}}","controls":["shade_second"],"goal":"{\\"kind\\":\\"match\\"}","slot":"middle","colour":"orange","on":"sixths"}
+Example: {"cmd":"figure","id":"f1","type":"fraction","params":{"parts":3,"shaded":1,"second":{"parts":6,"shaded":0}},"controls":["shade_second"],"goal":{"kind":"match"},"slot":"middle","colour":"orange","on":"sixths"}
 
 TEACHING MOVES AT THE BOARD:
 - Count with the child. To count parts, count only the first ones aloud, one highlight per part, each "on" the number word you say ("One." "Two."). Then ask the child to carry on and say how many, and pause_for_child. Never say or show the total before the child has had a go.
@@ -35086,7 +35110,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       const v = validateTurn({ steps: raws }, vopts);
       const bad2 = v.dropped.find((d) => d.index === raws.length - 1);
       if (bad2) {
-        dropped.push(bad2);
+        dropped.push(raw?.__bad ? { ...bad2, reason: `not readable: ${String(raw.__bad).slice(0, 140)}` } : bad2);
         raws.pop();
         return;
       }
