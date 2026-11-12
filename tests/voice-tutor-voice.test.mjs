@@ -229,7 +229,7 @@ test('when the microphone or the voice fails, the lesson carries on in text and 
 
 test('short spoken turns: the server asks again when the tutor says too much', () => {
   const long = [{ cmd: 'say', text: Array(25).fill('word').join(' ') + '.' }, { cmd: 'say', text: Array(25).fill('more').join(' ') + '.' }, { cmd: 'say', text: Array(15).fill('and').join(' ') + '.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }];
-  assert.match(turnProblems(long, { maxWords: MAX_SPOKEN_WORDS })[0], /says 65 words: say at most 60/);
+  assert.match(turnProblems(long, { maxWords: MAX_SPOKEN_WORDS })[0], /says 65 words: say at most 45/);
   assert.deepEqual(turnProblems(long.slice(1)), [], 'off unless asked');
 });
 

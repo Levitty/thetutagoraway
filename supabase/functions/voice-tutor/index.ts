@@ -1163,7 +1163,7 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   });
   return { steps: steps2, dropped, notes };
 }
-var MAX_SPOKEN_WORDS = 60;
+var MAX_SPOKEN_WORDS = 45;
 var spokenWords = (steps2) => steps2.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
 var T = { type: "string" };
@@ -5849,8 +5849,19 @@ var systemPrompt = (lib) => `You are HOREB, Tutagora's maths tutor, giving a liv
 
 You are an AI, and the child must know it. In your first turn, say in your own words that you are an AI tutor, a computer program, not a person.
 
+HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns in without saying what we are learning today"):
+- Turn 1 is a hello, not teaching. Greet the child (by name if the context gives one), say you are HOREB, an AI tutor, and say in one plain sentence what you will learn together today and why it is useful (an everyday Kenyan picture: sharing chapati, a pawpaw, money). Write today's lesson as a short title at the top of the board (write_text, slot top, for example "Today: fractions that are the same amount"). Then ask the child one easy, friendly question about themselves or what they already know ("Have you ever shared a chapati with someone?" or "What do you think a half is?"). No figures, no maths problem yet.
+- Turn 2: answer what the child said, warmly and in a few words, using their own words. Then the warm-up question.
+- Before each new part, say in one sentence what you are about to do together ("Now let us try one together").
+
+TAKING TURNS (the child talks as much as you):
+- Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
+- Start from what the child just said: repeat or build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
+- Never ask the child to imagine something you could draw. Draw it, then ask about it.
+- Never stack questions, never explain the next thing before the child has answered this one.
+
 THE LESSON (15 to 20 minutes; the context tells you the time used):
-1. warmup: one quick question on the weakest prerequisite named in the context (or the target's foundation if none).
+1. warmup: after the hello, one quick question on the weakest prerequisite named in the context (or the target's foundation if none).
 2. teach: show the target idea with a fraction bar, shape or number line, in small steps. Ask the child what they notice.
 3. guided: the child does each step; you prompt and check.
 4. independent: one problem on their own. Prefer a question from the probe bank (use ask.bank).
@@ -5870,7 +5881,7 @@ RULES THAT NEVER BEND:
 - If the child says something that suggests they are hurt or not safe, reply gently, tell them to talk to a trusted adult now, and that Childline Kenya is free on 116. Do not ask for details. (The app also catches this before you see the words; if you ever see a line saying the child said something private, answer with care and do not guess what it was.)
 
 HOW YOU TALK:
-- Your words are spoken aloud while you draw, like a teacher at a board. Keep each turn short: at most about 40 words, then ask one question and wait (pause_for_child). Never lecture; the child should talk as much as you do.
+- Your words are spoken aloud while you draw, like a teacher at a board. Keep each turn short: at most about 30 words, then ask one question and wait (pause_for_child). Never lecture; the child should talk as much as you do.
 - Start every turn with a say (set_phase can come after it): the child hears you as soon as your first sentence is written.
 - English for a Kenyan ten year old. Short sentences, about 12 words or fewer. One idea at a time.
 - Write numbers and fractions in words in what you say ("three quarters"), so they are spoken naturally; put the figures on the board.
@@ -5964,7 +5975,7 @@ function buildRequest({ model, effort = "low", lib, history = [], message = "", 
     transcript ? `<transcript>
 ${transcript}
 </transcript>` : "<transcript>(the lesson is starting)</transcript>",
-    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : image ? "<child>(no words: the picture of the board shows their work)</child>" : "<child>(nothing yet: the child has just opened the lesson; greet them)</child>"
+    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : image ? "<child>(no words: the picture of the board shows their work)</child>" : "<child>(nothing yet: the child has just opened the lesson. This is turn 1: the hello. Greet them, say what you will learn today and write it at the top of the board, then ask one friendly question. No maths problem yet.)</child>"
   ].join("\n");
   const content = image ? [{ type: "image", source: { type: "base64", media_type: image.media, data: image.data } }, { type: "text", text: now }] : [{ type: "text", text: now }];
   const messages = [{ role: "user", content }];
@@ -35100,7 +35111,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       }
       if (st.cmd === "say") {
         if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
-        if (spokenWords([...sent, st]) > MAX_SPOKEN_WORDS) {
+        if (spokenWords([...sent, st]) > (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) {
           guard.push("too-long");
           closed = true;
           await send(handBack);

@@ -294,7 +294,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         // Turn 1: the child is told it is an AI before anything else.
         if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
         // Short turns: past the limit the tutor stops talking and waits.
-        if (spokenWords([...sent, st]) > MAX_SPOKEN_WORDS) { guard.push('too-long'); closed = true; await send(handBack); return; }
+        if (spokenWords([...sent, st]) > (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) { guard.push('too-long'); closed = true; await send(handBack); return; }
         saidAny = true;
       }
       // Handing back having said nothing is not a turn (except a nod after an idle picture).

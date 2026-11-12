@@ -499,7 +499,7 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
  * `nod`: after a picture taken because the child paused, the tutor may only nod
  * (a turn that is just pause_for_child) and let them carry on.
  */
-export const MAX_SPOKEN_WORDS = 60;   // a turn is short: say a little, then wait for the child (owner, 11 Nov)
+export const MAX_SPOKEN_WORDS = 45;   // a turn is short: say a little, then wait for the child (owner, 11 Nov; 12 Nov: "verbal slop and a lot of it")
 export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
 export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];

@@ -248,7 +248,7 @@ test('the prompt carries the fraction map and its misconceptions, and is the sam
   assert.match(p, /never give the final answer|Never give the final answer/);
   assert.match(p, /AI tutor/);
   const r = buildRequest({ model: 'claude-sonnet-5-5', lib: LIB, context: '<context>x</context>' });
-  assert.match(r.messages[0].content[0].text, /greet them/);
+  assert.match(r.messages[0].content[0].text, /Greet them, say what you will learn today/);
 });
 
 test('a bank question is shown as the bank has it, and marked from the bank', async () => {
