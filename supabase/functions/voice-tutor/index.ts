@@ -1335,11 +1335,11 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   });
   return { steps: steps2, dropped, notes };
 }
-var shadedText = (shaded, parts) => {
-  const n = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
-  if (!n) return "none shaded";
-  if (Array.isArray(shaded)) return `${n} shaded (part${n === 1 ? "" : "s"} ${shaded.join(", ")})`;
-  return n === parts ? "all shaded" : `${n} shaded`;
+var cutText = (name, parts, shaded, at = "") => {
+  const n = Math.max(1, Number(parts) || 1);
+  if (n <= 1) return `a whole ${name}${at}, not cut into parts, ${Number(Array.isArray(shaded) ? shaded.length : shaded) ? "all shaded" : "nothing shaded"}`;
+  const k = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
+  return `a ${name}${at}, cut into ${n} equal parts, ${k ? `${k} of ${n} shaded${Array.isArray(shaded) ? ` (part${k === 1 ? "" : "s"} ${shaded.join(", ")})` : ""}` : "none shaded"}`;
 };
 function describeItem(b) {
   const at = b.slot ? ` at ${b.slot}` : "";
@@ -1349,9 +1349,9 @@ function describeItem(b) {
     case "write_math":
       return `${b.id}: the maths ${b.expr}${at}`;
     case "fraction_bar":
-      return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? "" : "s"}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ""}`;
+      return `${b.id}: ${cutText("bar", b.parts, b.shaded, at)}${b.second_bar ? `; under it a second ${cutText("bar", b.second_bar.parts, b.second_bar.shaded).replace(/^a /, "")}` : ""}`;
     case "shape":
-      return Number(b.parts) <= 1 ? `${b.id}: a whole ${b.kind || "shape"}${at}, not cut into parts, nothing shaded` : `${b.id}: a ${b.kind || "shape"}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+      return `${b.id}: ${cutText(b.kind || "shape", b.parts, b.shaded, at)}`;
     case "number_line":
       return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? "" : "s"} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(", ")}` : ""}`;
     case "plot_points":
@@ -1361,8 +1361,8 @@ function describeItem(b) {
       const ctl = b.controls?.length ? ` (the child may: ${b.controls.join(", ")})` : "";
       if (b.type === "fraction") {
         const n = p.shape === "grid" ? (p.rows || 0) * (p.cols || 0) : p.parts;
-        const sec = p.second ? `; a second ${p.shape || "bar"} beside it, ${p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0)} parts, ${shadedText(p.second.shaded, p.second.parts)}` : "";
-        return `${b.id}: a fraction ${p.shape || "bar"}${at}, ${n} equal parts, ${shadedText(p.shaded, n)}${sec}${ctl}`;
+        const sec = p.second ? `; a second ${cutText(p.shape || "bar", p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0), p.second.shaded).replace(/^a /, "")} beside it` : "";
+        return `${b.id}: ${cutText(`fraction ${p.shape || "bar"}`, n, p.shaded, at)}${sec}${ctl}`;
       }
       if (b.type === "numberline") return `${b.id}: a number line${at} from ${p.from} to ${p.to}, ${p.divisions} steps${p.marker != null ? `, marker at ${p.marker}` : ""}${ctl}`;
       return `${b.id}: a ${b.type} figure${at}${ctl}`;
@@ -5263,7 +5263,7 @@ var allowedMisconceptions = (skills) => skills.flatMap((c) => (SKILLS_G5[c]?.mis
 var SHARE_FLOOR = 0.25;
 var SHARE_MIN_WORDS = 60;
 var OVERTALK_BASE = 15;
-var HANDOVER_MOVES = ["Show then hand over", "Press for reasoning", "Check for understanding"];
+var HANDOVER_MOVES = ["Show then hand over", "Check for understanding"];
 var wordsIn = (t) => String(t || "").replace(/\.\.\.|…/g, " ").split(/\s+/).filter((w) => /[\p{L}\p{N}]/u.test(w)).length;
 function talkShare(s) {
   const cw = Number(s?.cw) || 0;
@@ -5300,6 +5300,72 @@ function preFor({ target = null, prerequisite = null, prerequisites = [], nameOf
   return f ? { skill: null, name: f.name, re: f.re } : null;
 }
 var askIsOnPre = (pre, { skill: skill2 = null, prompt = "" } = {}) => !pre || (pre.skill ? skill2 === pre.skill : pre.re.test(String(prompt)));
+var KINDS = [
+  ["cut", /\b(where|how) (would|will|should|could|can|do|did) (you|we|i) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you|i) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\bhow (do|can|would) (we|you) (share|make) (it|them)? ?(fair|equal)/i],
+  ["reason", /\b(how did you|how do you know|how you know|how can you tell|how are you sure|how sure|what made you|why|tell me how|what did you (count|look at|do)|show me why)\b/i],
+  ["fraction", /\b(what|which) fraction\b|\bas a fraction\b|\bhow many out of\b|\bout of how many\b|\bwhat (do|would) (we|you) call\b|\bwhat is (each|one|that|this) (piece|part)( called)?\b|\bwhat part of\b/i],
+  ["compare", /\b(same amount|the same as|more than|less than|bigger|smaller|more|less|equal to|equals|equivalent|make (your|one|the|a) half|fit into)\b|\bhow many (halves|thirds|quarters|fourths|fifths|sixths|eighths|ninths|tenths|twelfths)\b/i],
+  ["count_shaded", /\bhow many\b[^?]*\b(shaded|coloured|colored)\b|\bcount (only )?the shaded\b/i],
+  ["count_total", /\bhow many\b|\bwhat number\b|\bcount\b/i],
+  ["equal", /\b(same size|equal (size|parts|pieces)|fair (share|shares|parts|pieces))\b/i],
+  ["state", /\b(whole|cut)\b/i],
+  ["notice", /\bwhat do you (see|notice)\b|\btell me what you (see|notice)\b|\bwhat do you think\b/i]
+];
+function questionKind(q) {
+  const t = String(q || "").trim();
+  if (!/\?\s*$/.test(t)) return null;
+  return (KINDS.find(([, re]) => re.test(t)) || ["other"])[0];
+}
+var isClosed = (q) => {
+  const t = String(q || "").trim().replace(/^\W+/, "");
+  if (!/\?\s*$/.test(t)) return false;
+  if (/\byes or no\b/i.test(t)) return true;
+  if (/^(can|could|will|would) you\b/i.test(t)) return false;
+  if (/^(what|how|which|where|why|who|when)\b/i.test(t)) return /,?\s*\bor\b[^,?]{1,30}\?\s*$/.test(t) && /^which\b/i.test(t);
+  return /^(is|are|was|were|do|does|did|have|has|shall)\b/i.test(t) || /,?\s+or\s+[^,?]{1,30}\?\s*$/i.test(t) || /\bsay one word\b/i.test(t);
+};
+function lastQuestionOf(steps2 = []) {
+  const qs = steps2.filter((x) => x.cmd === "say").flatMap((x) => sentencesOf(x.text)).filter(isQ);
+  if (qs.length) return qs[qs.length - 1];
+  const a = [...steps2].reverse().find((x) => x.cmd === "ask");
+  return a && isQ(a.prompt) ? a.prompt : null;
+}
+var LADDER = ["state", "cut", "count_total", "count_shaded", "fraction", "compare"];
+var STEP_NAMES = {
+  state: "whether the whole is cut yet",
+  cut: "how to cut it into equal parts",
+  equal: "whether the parts are equal",
+  count_total: "how many equal pieces in all",
+  count_shaded: "how many pieces are shaded",
+  fraction: "the shaded part as a fraction (how many out of how many)",
+  compare: "whether two fractions are the same amount",
+  reason: "how they knew",
+  notice: "what they see",
+  other: "your last question"
+};
+var NEXT_NAMES = {
+  state: "ask them how to cut it so two people get fair shares",
+  cut: "ask how many equal pieces it has now",
+  count_total: "ask how many of the pieces are shaded",
+  count_shaded: "ask for the shaded part as a fraction: how many out of how many",
+  fraction: "cut each piece again (ask them to predict first), then ask if the shaded amount is the same",
+  compare: "a fresh example, or ask them to say the rule in their own words"
+};
+function nextStepOf(solved = [], { cut = false } = {}) {
+  const top = Math.max(-1, ...solved.map((k2) => LADDER.indexOf(k2)), cut ? LADDER.indexOf("cut") : -1);
+  const k = LADDER[Math.min(top, LADDER.length - 1)] || null;
+  return top < 0 ? null : NEXT_NAMES[k] || null;
+}
+function trivialAnswer({ question = "", answer = null } = {}) {
+  const q = String(question || "");
+  const kind = questionKind(q);
+  if (/\b(call|called|name)\b/i.test(q)) return true;
+  if (FRACTIONISH.test(q) || ["fraction", "compare"].includes(kind)) return false;
+  if (["count_total", "count_shaded", "state", "cut", "equal"].includes(kind)) return true;
+  if (answer != null && String(answer) !== "") return /^(\d+|yes|no|whole|cut|middle)$/i.test(String(answer).trim());
+  return true;
+}
+var FRACTIONISH = /\d+\s*\/\s*\d+|=|\b(half|halves|quarters?|thirds?|fifths?|sixths?|eighths?|tenths?|twelfths?|same amount|equal to|equivalent)\b/i;
 
 // src/voice-tutor/childVoice.js
 var MATHS_KEYTERMS = Object.freeze([
@@ -6821,7 +6887,7 @@ var sentencesIn = (raw) => String(raw || "").split(/(?<=[.!?])\s+/).map((x) => x
 var NOT_COUNTED = /^(minutes?|seconds?|hours?|days?|years?|times|o'?clock|more|of)$/;
 var hasCandidate = (text) => readAnswer(mainClause(text)).found.some((f) => !f.negated && !(f.kind === "number" && NOT_COUNTED.test(tokensOf(mainClause(text))[tokensOf(mainClause(text)).indexOf(f.words.split(" ").at(-1)) + 1] || ""))) || !!saidClass(text, "compare") || !!saidClass(text, "place");
 function isTentative(text) {
-  const raw = String(text || "").trim();
+  const raw = String(text || "").trim().replace(/\?(\s*(\.{2,}|…))+\s*$/, "?");
   if (!raw || !hasCandidate(raw)) return false;
   const qs = sentencesIn(raw).filter((x) => /\?\s*$/.test(x));
   if (qs.some((x) => REAL_Q.test(stripLead(x)) || /\bor\b/i.test(x))) return false;
@@ -6902,17 +6968,23 @@ function markSpoken(item, text) {
 }
 var SOUND_ALIKE = { too: "two", to: "two", tu: "two", tree: "three", for: "four", fore: "four", fife: "five", ate: "eight", won: "one" };
 var ANSWER_LEAD = /^(?:[\s,.!?…'"-]*(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+|so|well|oh|ok(?:ay)?|maybe|perhaps|probably|i think|i guess|is it|it is|it'?s|its|i'?m not sure|not sure)\b)*[\s,.!?…'"-]*/i;
-var SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join("|")})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|halves|quarters|thirds|sixths|eighths))?[\\s.?!\u2026'"-]*$`, "i");
+var ANSWER_TAIL = `(?:[\\s,.?!\u2026'"-]+(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+))*[\\s,.?!\u2026'"-]*$`;
+var SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join("|")})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|half|halves|quarters?|thirds?|sixths?|eighths?))?${ANSWER_TAIL}`, "i");
+var NUM_OR_ALIKE = `(?:${Object.keys(SOUND_ALIKE).join("|")}|one|two|three|four|five|six|seven|eight|nine|ten|eleven|twelve|\\d{1,2})`;
+var SOUND_ALIKE_FRACTION = new RegExp(`^(${NUM_OR_ALIKE})(\\s+(?:over|out of)\\s+)(${NUM_OR_ALIKE})(\\s+(?:equal\\s+)?(?:pieces?|parts?))?${ANSWER_TAIL}`, "i");
 function hearNumbers(text, { numberOpen = true } = {}) {
   const raw = String(text ?? "");
   if (!numberOpen || !raw.trim()) return raw;
   const lead = ANSWER_LEAD.exec(raw)?.[0] || "";
   const rest = raw.slice(lead.length);
+  const hear = (w) => SOUND_ALIKE[w.toLowerCase()] || w;
+  const f = SOUND_ALIKE_FRACTION.exec(rest);
+  if (f && (SOUND_ALIKE[f[1].toLowerCase()] || SOUND_ALIKE[f[3].toLowerCase()])) return `${lead}${hear(f[1])}${f[2]}${hear(f[3])}${rest.slice(f[1].length + f[2].length + f[3].length)}`;
   const m = SOUND_ALIKE_ANSWER.exec(rest);
   if (!m) return raw;
   return `${lead}${SOUND_ALIKE[m[1].toLowerCase()]}${rest.slice(m[1].length)}`;
 }
-var asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number)\b/i.test(String(q || ""));
+var asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number|what fraction|which fraction|as a fraction|out of how many)\b/i.test(String(q || ""));
 function childMove(text) {
   const r = readAnswer(text);
   if (!String(text || "").trim()) return null;
@@ -7854,8 +7926,9 @@ var HABIT_RULES = `THE FIVE HABITS. The app checks every sentence for these befo
    Bad: "Two of them are shaded. How many pieces are shaded?" Good: "Look at the shaded part. How many pieces is it?"
 2. Respond, do not repeat. Answer what the child said first, in 15 words or fewer, before anything else. Never say again a question or a sentence from your last two turns.
    Bad: child "why do we cut each half again?", you: "Now I cut each half again. How many pieces are there?" Good: "To get the same amount in smaller pieces. How many pieces will that make?"
-3. No yes without a reason. No "yes" to an unsure or one-word answer ("one half?", "four"): say what you heard, then ask what made them say it.
+3. A reason only where it is worth one. A fraction, a comparison or a rule said unsure or in one word ("one half?"): say what you heard, then ask once what made them say it. A count or a name ("two", "four pieces") needs no reason: say yes in their words and take the next step. Never ask for a reason twice about one idea, and not when the context says the child is being helped.
    Bad: child "Is it one half?", you: "Yes, one half. Now I cut each half again." Good: "One half, you said. What made you say half?"
+   Bad: child "Two", you: "Two, you said. What made you say two?" Good: "Yes, two pieces. How many are shaded?"
 4. Praise is small and true. At most 8 words, naming the child's own step with one of their words. No praise on a wrong or unexplained answer. No stock lines ("good question", "thank you for telling me", "well done", "great job"), and never open two turns the same way.
    Bad: "That is a good question. Let us take it slowly." Good: "You counted the pieces one by one. Now the shaded ones?"
 5. Not too fast. One more success at the same level before harder numbers (the context says which level and how many successes). Never remove the picture and change the numbers in the same turn.
@@ -7890,7 +7963,10 @@ HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns 
 TAKING TURNS (the child talks as much as you):
 - Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
 - Start from what the child just said: build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
-- After a right answer given with a reason, your first sentence names it in the child's own words ("Yes, one half."). After an unsure or one-word right answer, no yes yet: say back what you heard and ask what made them say it. Never ask that question again: a fresh check is a new question.
+- After a right answer, your first sentence names it in the child's own words ("Yes, two pieces.") and the turn takes the next step of the lesson. Never ask that question again: a fresh check is a new question. Ask what made them say it only about a fraction, a comparison or a rule, once, when the allowed moves include Press for reasoning; a count or a name needs no reason.
+- One question a turn, at the end. If you write two, the app keeps only the last one.
+- Never do the child's step for them. When you have asked how to cut it or what to shade, do not cut or shade it yourself in that turn (the app will not draw it): let the child say or show it.
+- When the child is stuck on one kind of question (the context says so), do not ask it again: show it another way (a bar, a number line, folding a paper, a short story) or make the step much smaller. Ask a yes-or-no question at most once in a row.
 - After a wrong answer, your turn is one question about how they got it ("How did you get three?"). No explaining, no new picture and no new question until you have heard their thinking.
 - Never put the answer inside your own question, or just before it. Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?" Good: "Now I cut each half again. How many pieces are there now?"
 - A question back from the child ("why?", "can I see it again?") is not a wrong answer: answer it, then hand your question back. If the child is bored or wants to stop, never carry on with the same task: offer a quick game or a short close.
@@ -7906,7 +7982,7 @@ HANDING OVER (pause_for_child), and silence:
 
 THE LESSON PLAN IS RUN BY THE APP:
 - Each turn the context gives the lesson state (stage, what the child is doing, the question and attempts, what has been tried, hints, the last answers) and the allowed moves for this turn with the reason. Choose one of the allowed moves, carry it in your words and drawing, and tag that say with it in "move". Moves listed as alongside may also be used (for example Revoice and build before the main move).
-- When the allowed moves say change the approach, use a different picture than before (the context names what was tried). When they say press for reasoning, ask how the child knew before you praise or move on. Move to a later part (set_phase) only as far as the context allows.
+- When the allowed moves say change the approach, use a different picture than before (the context names what was tried). When they include Press for reasoning, ask once how the child knew; when they do not, do not ask. Move to a later part (set_phase) only as far as the context allows.
 
 JUDGING THE CHILD'S ANSWER (assess, silent):
 - Whenever the child has just answered (in words, on the board or with a figure), first emit assess: class is one of ${ANSWER_CLASSES.join(", ")}; misconception (the full code from the list below) only with class misconception; evidence quotes the child's own words or work in a short phrase; ask is the question's id if it was one of yours.
@@ -36467,6 +36543,14 @@ function boardAnswerLeak(step2, ctx, sofar) {
   const sh2 = shadedOf2(fig);
   const before = visibleText(visible(sofar)).map((x) => x.text);
   const theirs = /* @__PURE__ */ new Set([...readAnswer(ctx.child || "").found.map((f) => f.value)]);
+  const asking = (ctx.recentQuestions || []).find((q) => questionKind(q) === "fraction");
+  if (asking && p > 1 && sh2) {
+    const known = /* @__PURE__ */ new Set([...theirs, ...ctx.found || [], ...readAnswer(ctx.childSoFar || "").found.map((f) => f.value)]);
+    for (const s of sentencesOf3(step2.text).filter((x) => !isQ2(x))) {
+      const hit = readAnswer(s).found.find((f) => f.kind === "fraction" && !f.negated && sameValue2(f.value, `${sh2}/${p}`) && !known.has(f.value));
+      if (hit) return `"${hit.words}" is said while the child is still asked for it ("${asking.slice(0, 60)}"; the board shows ${sh2}/${p})`;
+    }
+  }
   for (const s of sentencesOf3(step2.text)) {
     if (isQ2(s)) {
       const said = before.join(" ");
@@ -36492,6 +36576,44 @@ var newestFigure = (board, steps2) => {
   const pointed = [...steps2].reverse().map((x) => ["highlight", "point", "underline"].includes(x.cmd) ? x.target : null).find((id) => id && now.some((b) => b.id === id));
   return now.find((b) => b.id === pointed) || now[now.length - 1];
 };
+var CUT_ASK = /\b(where|how) (would|will|should|could|can|do) (you|we) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\b(can|could|will) you (cut|split) (it|the \w+)\b/i;
+var SHADE_ASK = /\b(which|what) (part|parts|piece|pieces) (would|will|should|could|do) you (shade|colour|color)\b|\b(can|could|will) you (shade|colour|color)\b|\bshade (one|two|three|four|half|the|it|them)\b[^?]*\?/i;
+function actionAsked(q) {
+  const t = String(q || "");
+  if (!isQ2(t)) return null;
+  return CUT_ASK.test(t) ? "cut" : SHADE_ASK.test(t) ? "shade" : null;
+}
+var CUT_SAID = /\b(middle|half|halves|two|three|four|five|six|eight|equal|across|down|line|[2-9])\b/i;
+var SAYS_CUT = /\b(i|let me|i will|i'?ll|i am going to|watch,? i|now i)\s+(draw (a |one |the )?(line|cut)|cut|split|divide)\b/i;
+var SAYS_SHADE = /\b(i|let me|i will|i'?ll|i am going to|now i)\s+(shade|colour|color)\b/i;
+function openAction(ctx, sofar) {
+  const now = sofar.filter((x) => x.cmd === "say").flatMap((x) => sentencesOf3(x.text)).filter(isQ2).map(actionAsked).filter(Boolean);
+  if (now.length) return now[now.length - 1];
+  const a = actionAsked(ctx.lastQuestion);
+  if (!a) return null;
+  if (a === "cut" && CUT_SAID.test(String(ctx.child || ""))) return null;
+  if (a === "shade" && ctx.child && readAnswer(ctx.child).found.length) return null;
+  return a;
+}
+function childStepOf(step2, ctx, sofar) {
+  if (ctx.closing || ctx.example) return null;
+  const action = openAction(ctx, sofar);
+  if (!action) return null;
+  if (step2.cmd === "say") {
+    const s = sentencesOf3(step2.text).find((x) => !isQ2(x) && (action === "cut" ? SAYS_CUT : SAYS_SHADE).test(x));
+    return s ? `does the child's step: the question asks them to ${action} it, and the tutor says it does it ("${s.slice(0, 60)}")` : null;
+  }
+  if (!FIGS.includes(step2.cmd)) return null;
+  const before = newestFigure(ctx.board, sofar);
+  const p0 = before ? partsOf2(before) || 1 : 1;
+  const s0 = before ? shadedOf2(before) || 0 : 0;
+  const p = partsOf2(step2) || 1;
+  const sh2 = shadedOf2(step2) || 0;
+  const childShades = step2.cmd === "figure" && (step2.controls || []).some((c) => String(c).startsWith("shade"));
+  if (action === "cut" && p > 1 && p > p0) return `does the child's step: the question asks them to cut it, and ${step2.id} is drawn cut into ${p} parts`;
+  if (action === "shade" && sh2 > 0 && sh2 > s0 && !(childShades && sh2 === s0)) return `does the child's step: the question asks them to shade it, and ${step2.id} is drawn with ${sh2} shaded`;
+  return null;
+}
 function giveawayOf(step2, ctx, sofar, extra = []) {
   const out = [];
   const asked = sofar.filter((x) => x.cmd === "ask" && (x.expected ?? x.answer) != null).map((x) => ({ answer: String(x.expected ?? x.answer), accepts: x.accepts || [], question: x.prompt || "" }));
@@ -36528,6 +36650,10 @@ function giveawayOf(step2, ctx, sofar, extra = []) {
     const b = boardAnswerLeak(step2, ctx, sofar);
     if (b) out.push(b);
   }
+  if (!out.length) {
+    const c = childStepOf(step2, ctx, sofar);
+    if (c) out.push(c);
+  }
   if (FIGS.includes(step2.cmd) && labelled(step2)) {
     const p = partsOf2(step2);
     const s = shadedOf2(step2);
@@ -36545,12 +36671,14 @@ function repeatOf(text, ctx) {
       if (isQ2(p) !== isQ2(s)) continue;
       const l = likeness(s, p);
       if (l.min >= 4 && (l.jaccard >= 0.75 || l.contained && l.min >= 5)) return `nearly repeats "${p.slice(0, 70)}"`;
-      if (l.min >= 2 && l.min < 4 && l.jaccard === 1 && countWords(s) >= 3) return `repeats "${p.slice(0, 70)}" word for word`;
+      if (isQ2(s) && l.min >= 2 && l.min < 4 && l.jaccard === 1 && countWords(s) >= 3) return `repeats "${p.slice(0, 70)}" word for word`;
     }
     if (isQ2(s) && ctx.lastQuestion) {
       const l = likeness(s, ctx.lastQuestion);
       if (l.min >= 3 && l.jaccard >= 0.7) return `asks the last question again ("${ctx.lastQuestion.slice(0, 70)}")`;
     }
+    const k = isQ2(s) ? questionKind(s) : null;
+    if (k && ["count_total", "count_shaded", "fraction", "state", "cut", "equal"].includes(k) && (ctx.solved || []).includes(k)) return `asks again what the child has already found on this picture (${STEP_NAMES[k]}): take the next step`;
   }
   return null;
 }
@@ -36691,6 +36819,7 @@ var REASON_Q = /\b(how did you|how do you know|how you got|how you know|how woul
 function confirmOf(steps2, ctx) {
   const c = ctx.childRead || {};
   if (!c.answer || c.reason || !(c.hedged || c.oneWord)) return null;
+  if (!c.fractions.length && !/\b(same|equal|more|less|bigger|smaller|half|quarter|third)\b/i.test(c.text)) return null;
   const says = steps2.filter((x) => x.cmd === "say");
   const first2 = sentencesOf3(says[0]?.text || "")[0] || "";
   if (!CONFIRM.test(first2)) return null;
@@ -36728,7 +36857,7 @@ function endFlags(steps2 = [], ctx = {}) {
   if (p) out.push({ habit: "level_jump", reason: p });
   return out;
 }
-function habitContext({ message = "", marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true } = {}) {
+function habitContext({ message = "", marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [] } = {}) {
   const turns = [];
   let last = null;
   for (const h of Array.isArray(history) ? history : []) {
@@ -36757,12 +36886,15 @@ function habitContext({ message = "", marked = null, cls = null, history = [], h
     closing,
     exempt,
     example,
+    solved,
     // Late in a lesson the habits drift (SafeTutors; 12 Nov 2026 runs: 39% of turns flagged in turns 1-10, 58% after): from the tenth
     // tutor turn the repeat check looks back over four turns, not two.
     prev: tutorTurns.slice(lateRepeat && tutorTurns.length >= LATE_AFTER_TURNS ? -LATE_REPEAT_TURNS : -2),
     openers: tutorTurns.slice(-4).map((t) => openerOf(t.join(" "))).filter(Boolean),
     lastQuestion,
-    childSoFar
+    childSoFar,
+    // The questions of the last three tutor turns: a fraction asked for there is still the child's to say.
+    recentQuestions: tutorTurns.slice(-3).flat().filter(isQ2)
   };
 }
 var SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?)\b/i;
@@ -36793,7 +36925,7 @@ var ID_RE2 = /^[a-z][a-z0-9_]{0,23}$/;
 var SKILL_RE = /^[A-Z0-9_.]{3,120}$/;
 var REPS = ["bar", "circle", "grid", "shape", "number line", "story"];
 var ALWAYS_WITH = ["Revoice and build", "Name what was right", "Celebrate the strategy", "Bring back an off-topic child"];
-var GENERAL = ["Revoice and build", "Name what was right", "Press for reasoning", "Wait and nudge", "Smaller-question hint", "Check for understanding", "Celebrate the strategy"];
+var GENERAL = ["Revoice and build", "Name what was right", "Wait and nudge", "Smaller-question hint", "Check for understanding", "Celebrate the strategy"];
 var STRICT = ["care", "care-wait", "care-return", "stop", "open"];
 var STAGE_MOVES = {
   warmup: ["Revoice and build", "Predict then show", "Count with the child", "Smaller-question hint"],
@@ -36845,7 +36977,12 @@ var newLesson = () => ({
   fillers: 0,
   tyt: false,
   lastProbe: false,
-  slow: false
+  slow: false,
+  step: null,
+  solved: [],
+  fig: null,
+  closedRun: 0,
+  pressed: []
 });
 var PRE_STATES = ["ask", "asked", "done"];
 var PRE_GIVE_UP_TURNS = 5;
@@ -36893,8 +37030,15 @@ function cleanLesson(raw) {
   s.wins = Number.isFinite(raw.wins) && raw.wins >= 0 && raw.wins <= 10 ? Math.round(raw.wins * 4) / 4 : 0;
   s.changedFails = int(raw.changedFails, 0, 20);
   s.examples = int(raw.examples, 0, 5);
+  const st = raw.step;
+  if (st && typeof st === "object" && STEP_KINDS.includes(st.kind)) s.step = { kind: st.kind, tries: int(st.tries, 0, 50) };
+  if (Array.isArray(raw.solved)) s.solved = [...new Set(raw.solved.filter((k) => STEP_KINDS.includes(k)))].slice(-8);
+  if (typeof raw.fig === "string" && /^[a-z ]{3,12}:\d{1,3}$/.test(raw.fig)) s.fig = raw.fig;
+  s.closedRun = int(raw.closedRun, 0, 50);
+  if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === "string" && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   return s;
 }
+var STEP_KINDS = ["cut", "reason", "count_shaded", "fraction", "count_total", "compare", "equal", "state", "notice", "other"];
 var ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through)\b/i;
 function prelimClass({ marked = null, message = "" } = {}) {
   if (!marked) return null;
@@ -36936,10 +37080,10 @@ function stageAllowed(s, { understoodNow = false, closing = false, preNow = fals
   return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
 }
 function decideCore(s, ctx = {}) {
-  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null } = ctx;
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null, lastQ: lastQ2 = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null), press: extra.press ?? null, noPress: extra.noPress ?? null });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
   if (s.care === "paused") {
     if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
@@ -36970,7 +37114,11 @@ function decideCore(s, ctx = {}) {
     const line = n >= 2 && !s.tyt ? "Take your time." : null;
     return out("thinking", ["Wait and nudge"], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : " with no words"}`, { with: [], authored: true, line, stageMax: s.stage || "warmup" });
   }
-  if (move === "tentative") return out("tentative", ["Revoice and build", "Press for reasoning", "Name what was right"], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask how sure they are, or how they know. Do not answer it for them', { with: ["Celebrate the strategy"] });
+  if (move === "tentative") {
+    const why = whyNoPress(s, { trivial: trivialAnswer({ question: lastQ2 || "", answer: readChild(message).fractions[0] || null }), hedged: true });
+    if (!why) return out("tentative", ["Revoice and build", "Press for reasoning", "Name what was right"], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask once how sure they are, or how they know. Do not answer it for them', { with: ["Celebrate the strategy"], press: "tentative" });
+    return out("tentative", ["Revoice and build", "Name what was right", "Smaller-question hint"], `the child gave an answer, said as a question ("maybe two?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say yes and take the next step; if it is not, one small question about what they see. No "how did you know" (${why})`, { with: ["Celebrate the strategy"], noPress: why });
+  }
   if (move === "question") return out("question", ["Revoice and build", "Smaller-question hint", "Show then hand over"], "the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them", { with: ["Name what was right"] });
   if (marked && WRONG.includes(prelim)) {
     if (s.tried.length >= 2 && s.changedFails + 1 >= WORKED_EXAMPLE_AFTER && (s.examples || 0) < 1) {
@@ -36998,18 +37146,47 @@ function decideCore(s, ctx = {}) {
   const right = marked?.correct ? { must: ["Name what was right"], quote: marked.said || marked.answer || null, answered: { ask: marked.ask, prompt: question?.question || null } } : {};
   if (marked && prelim === "right_unexplained") {
     const cr = readChild(message, { marked });
-    if (cr.hedged || cr.oneWord) return out("press", ["Name what was right", "Press for reasoning"], `right, but ${cr.hedged ? "said unsure" : "one word"} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? " and how sure they are" : ""}. It does not count as understood until they give a reason`, { ...right, ack: "revoice" });
-    return out("press", ["Name what was right", "Press for reasoning"], "right, but no reason yet: name what was right in the child's own words, then ask how they knew. It does not count as understood until they give a reason", right);
+    const asked = question?.question || lastQ2 || "";
+    const why = whyNoPress(s, { trivial: trivialAnswer({ question: asked, answer: canonAnswer(question?.answer) || marked.canon || canonAnswer(marked.said) || cr.fractions[0] || null }), idea: marked.canon || null, hedged: cr.hedged });
+    if (why) {
+      const next = nextStepOf([...s.solved, questionKind(asked)].filter(Boolean), { cut: figCut(s.fig) });
+      return out("advance", ["Name what was right", "Show then hand over", "Predict then show", "Count with the child", "Check for understanding"], `right${cr.hedged ? ", said unsure" : ""}: say yes, in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}"), then take the next step${next ? `: ${next}` : " of the target"}. No "how did you know" (${why}). Never ask this question again`, { ...right, ack: "yes", noPress: why });
+    }
+    if (cr.hedged || cr.oneWord) return out("press", ["Name what was right", "Press for reasoning"], `right, but ${cr.hedged ? "said unsure" : "one word"} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? " and how sure they are" : ""}. It does not count as understood until they give a reason`, { ...right, ack: "revoice", press: marked.canon || "yes" });
+    return out("press", ["Name what was right", "Press for reasoning"], "right, but no reason yet: name what was right in the child's own words, then ask how they knew. It does not count as understood until they give a reason", { ...right, press: marked.canon || "yes" });
   }
   if (marked && prelim === "understood") {
     if (s.streak >= 1) return out("move-on", ["Name what was right", "Check for understanding", "Stretch the quick child", "Show then hand over"], `understood, and the fresh check too: name what was right, then you may move on to ${nextStage(s.stage)}`, right);
     return out("fresh-check", ["Name what was right", "Check for understanding"], "understood, with a reason: name what was right in the child's own words, then check it once on a fresh example (a new question, not the same one) before moving on", right);
   }
-  if (s.pending && message) return out("reason", ["Name what was right", "Press for reasoning", "Check for understanding"], "the child is giving the reason for their right answer: judge it (assess); if it holds, name it and check on a fresh example", { with: ["Revoice and build", "Celebrate the strategy"] });
+  if (s.pending && message) {
+    const next = nextStepOf(s.solved, { cut: figCut(s.fig) });
+    return out("reason", ["Name what was right", "Check for understanding", "Show then hand over"], `the child is answering your "how did you know": judge it (assess). If the reason holds, name it in their words; if it does not, or they gave none, do not ask again. Either way take the next step${next ? `: ${next}` : ""}`, { with: ["Revoice and build", "Celebrate the strategy"], noPress: "you have asked for this reason already" });
+  }
   if (s.classes[s.classes.length - 1] === "missing_prerequisite" && prerequisite) return out("prerequisite", ["Smaller-question hint", "Show then hand over", "Count with the child"], `the last answer showed a missing earlier skill: go back to ${prerequisite} with a smaller, earlier step, then return`);
   const st = s.stage || "warmup";
   return out("stage", STAGE_MOVES[st], `the ${st} part of the lesson`);
 }
+var supported = (s) => !!(s.slow || s.lastProbe || s.hints > 0 || s.prereq || (s.step?.tries || 0) > 0 || s.classes.slice(-2).includes("guess_or_no_attempt"));
+function whyNoPress(s, { trivial = false, idea = null, hedged = false } = {}) {
+  if (trivial) return "a count or a name needs no reason";
+  if (idea && (s.pressed || []).includes(idea)) return "you have asked how they knew this already";
+  if (hedged && supported(s)) return "the child is unsure and is being helped";
+  return null;
+}
+var FIG_CMDS = ["shape", "fraction_bar", "figure"];
+function figOf(board = []) {
+  const f = [...board || []].reverse().find((b) => b && FIG_CMDS.includes(b.cmd) && (b.cmd !== "figure" || b.type === "fraction"));
+  if (!f) return null;
+  const p = f.cmd === "figure" ? f.params || {} : f;
+  const name = f.cmd === "shape" ? String(f.kind || "shape") : f.cmd === "fraction_bar" ? "bar" : String(p.shape || "bar");
+  const parts = name === "grid" ? (Number(p.rows) || 0) * (Number(p.cols) || 0) || 1 : Math.max(1, Number(p.parts) || 1);
+  return `${name}:${Math.min(999, parts)}`;
+}
+var figCut = (fig) => Number(String(fig || "").split(":")[1]) > 1;
+var STUCK_AFTER = 2;
+var STUCK_RULES = ["probe", "lost", "stage", "tentative", "question", "reteach", "prerequisite"];
+var OPEN_SKIP = ["open", "care", "care-wait", "care-return", "close", "stop", "thinking", "bored", "diagnose"];
 var PRE_RULES = ["stage", "question", "lost", "tentative", "reteach", "change", "prerequisite"];
 function decide(s, ctx = {}) {
   const d = { ...decideCore(s, ctx), handover: false, preFirst: null };
@@ -37017,12 +37194,26 @@ function decide(s, ctx = {}) {
     d.moves = handoverMoves(d.rule);
     d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
     d.handover = true;
-    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing: this turn hands over first, a "you try" or a "tell me why or how", before any more explaining`;
+    d.reason = `${d.reason}. But your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing: this turn hands over first, a "you try" or a question for them to answer, before any more explaining`;
   }
   if (s.pre === "ask" && ctx.pre && (s.stage == null || s.stage === "warmup") && PRE_RULES.includes(d.rule) && (ctx.turnIndex || 0) >= 1) {
     d.preFirst = { skill: ctx.pre.skill || null, name: ctx.pre.name };
     d.reason = `${d.reason}. The first maths question is on the earlier skill (${d.preFirst.name}), and the target idea waits until the child has answered it`;
   }
+  const st = s.step;
+  const probeKind = ctx.probe?.kind || null;
+  d.stuck = null;
+  d.open = false;
+  d.next = null;
+  if (st && st.tries >= STUCK_AFTER && STUCK_RULES.includes(d.rule) && probeKind !== "task_checkin") {
+    d.stuck = { kind: st.kind, tries: st.tries };
+    d.moves = [.../* @__PURE__ */ new Set([...d.moves.filter((m) => m !== "Wait and nudge"), "Smaller-question hint", "Show then hand over", "Recover a lost child"])];
+    d.with = ALWAYS_WITH.filter((m) => !d.moves.includes(m));
+    const how = "show the same idea another way (a bar instead of a circle, folding a paper, a short story with a real thing) or make the step much smaller";
+    d.reason = d.rule === "probe" ? `still no answer on this step (${st.tries} tries on ${STEP_NAMES[st.kind] || "it"}): one short kind line, then ${how}. Never the answer, and not that kind of question again` : `${d.reason}. The child has not managed ${STEP_NAMES[st.kind] || "this step"} ${st.tries} times: do not ask that kind of question again now; ${how}`;
+  }
+  if ((s.closedRun || 0) >= 1 && !OPEN_SKIP.includes(d.rule)) d.open = true;
+  if (["stage", "advance", "reason", "fresh-check", "reteach"].includes(d.rule)) d.next = d.rule === "advance" ? null : nextStepOf(s.solved, { cut: figCut(s.fig) });
   return d;
 }
 function repsOf(steps2 = []) {
@@ -37058,7 +37249,12 @@ function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false }
   for (const m of authored ? [] : decision.must || []) {
     if (!allTags.some((t) => norm6(t) === norm6(m))) notes.push(`"${m}" was required this turn and no say carried it`);
   }
-  if (decision.handover && !authored && says.length && explainedTurn(steps2)) notes.push('this turn was to hand over (a "you try" or "tell me why or how") and it explained again without asking the child anything');
+  const modelSays = says.map((x) => x.text);
+  if (!authored && decision.noPress && modelSays.some(asksReason)) notes.push(`asked how the child knew where the decision said not to (${decision.noPress})`);
+  const q = lastQuestionOf(steps2);
+  if (!authored && decision.open && q && isClosed(q)) notes.push(`a closed question again ("${q.slice(0, 50)}"), after a closed one`);
+  if (!authored && decision.stuck && q && questionKind(q) === decision.stuck.kind) notes.push(`the same kind of question a third time (${STEP_NAMES[decision.stuck.kind] || decision.stuck.kind}) on a step the child is stuck on`);
+  if (decision.handover && !authored && says.length && explainedTurn(steps2)) notes.push('this turn was to hand over (a "you try" or a question to answer) and it explained again without asking the child anything');
   if (decision.rule === "diagnose") {
     const says2 = steps2.filter((x) => x.cmd === "say");
     if (!says2.some((x) => ASKS_HOW.test(x.text))) notes.push("the diagnose turn did not ask how the child got their answer");
@@ -37067,8 +37263,8 @@ function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false }
   return notes;
 }
 var SLOW_THINK_S = 8;
-function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null } = {}) {
-  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...s0.found || []] };
+function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null, board = null } = {}) {
+  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...s0.found || []], solved: [...s0.solved || []], pressed: [...s0.pressed || []] };
   s.turns += 1;
   s.cw = Math.min(5e4, (s0.cw || 0) + (probe ? 0 : childWords));
   s.tw = Math.min(5e4, (s0.tw || 0) + steps2.filter((x) => x.cmd === "say").reduce((n, x) => n + wordsIn(x.text), 0));
@@ -37116,7 +37312,7 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
       s.examples = 0;
       if (s.pending && (!marked || marked.ask === s.pending.ask || !judged.ask || judged.ask === s.pending.ask)) s.pending = null;
     } else if (cls === "right_unexplained") {
-      if (marked) s.pending = { ask: marked.ask, skill: marked.skill || null };
+      if (marked && decision?.press) s.pending = { ask: marked.ask, skill: marked.skill || null };
     } else if (WRONG.includes(cls)) {
       s.streak = 0;
       if (marked && !marked.correct) {
@@ -37124,6 +37320,30 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
         if (s.tried.length >= 2) s.changedFails = Math.min(20, (s.changedFails || 0) + 1);
       }
       if (cls === "missing_prerequisite") s.prereq = true;
+    }
+  }
+  if (decision?.rule === "reason") s.pending = null;
+  if (decision?.press && marked?.canon) s.pressed = [.../* @__PURE__ */ new Set([...s.pressed, marked.canon])].slice(-MAX_FOUND);
+  if (decision?.rule !== "thinking") {
+    const k0 = s0.step?.kind || null;
+    let tries = s0.step?.tries || 0;
+    const fail = !!probe || decision?.rule === "lost" || !!marked && !marked.correct || !marked && WRONG.includes(cls);
+    if (k0 && rightNow && !probe) {
+      s.solved = [.../* @__PURE__ */ new Set([...s.solved, k0])].slice(-8);
+      tries = 0;
+    } else if (k0 && fail) tries += 1;
+    const q = lastQuestionOf(steps2);
+    const k = questionKind(q);
+    if (k) s.step = { kind: k, tries: k === k0 && !rightNow ? tries : 0 };
+    else s.step = k0 ? { kind: k0, tries } : null;
+    if (q) s.closedRun = isClosed(q) ? Math.min(50, (s0.closedRun || 0) + 1) : 0;
+    else if (steps2.some((x) => x.cmd === "say")) s.closedRun = 0;
+    if (board) {
+      const fig = figOf(boardAfter(board, steps2));
+      if (fig !== (s0.fig || null)) {
+        if (s0.fig) s.solved = [];
+        s.fig = fig;
+      }
     }
   }
   if (decision?.rule === "example") s.changedFails = 0;
@@ -37230,6 +37450,8 @@ function answerForms(answer, accepts2 = []) {
 function turnBrief(s, d, { message = "", marked = null, open = null, board = [], history = [], skill: skill2 = null, probe = null, turnIndex = 0, maxWords = null } = {}) {
   if (!d || ["care", "care-wait", "care-return"].includes(d.rule)) return [];
   const L2 = ["Turn brief (computed by the app from the facts; keep to it):"];
+  const truth = boardTruth(board);
+  if (truth) L2.push(`- ${truth}`);
   const cr = readChild(message, { marked });
   const words5 = fenceTeamText(String(message || "").trim()).replace(/\s+/g, " ").trim().slice(0, 90);
   let did;
@@ -37267,10 +37489,17 @@ function turnBrief(s, d, { message = "", marked = null, open = null, board = [],
     const ok = (s.wins || 0) >= WINS_TO_MOVE_UP || !["guided", "independent"].includes(s.stage);
     L2.push(`- Level: the child is on ${DEN_NAMES[s.level] || `${s.level} parts`}, with ${s.wins || 0} of ${WINS_TO_MOVE_UP} successes there (a helped success counts half, an unsure one zero). Harder numbers: ${ok ? "allowed" : "not yet; one more success at this level first"}. Never remove the picture and change the numbers in the same turn.`);
   }
-  if (d.ack === "revoice") L2.push('- No "yes" yet: say back what you heard, then ask what made them say it.');
+  if (d.ack === "revoice") L2.push('- No "yes" yet: say back what you heard, then ask once what made them say it.');
+  if (d.noPress) L2.push(`- No "how did you know" or "what made you say" this turn: ${d.noPress}. Name it and move on.`);
+  const found = (s.solved || []).filter((k) => STEP_NAMES[k] && !["reason", "other", "notice"].includes(k));
+  if (found.length && !["open", "close", "stop"].includes(d.rule)) L2.push(`- Already found on this picture: ${found.map((k) => STEP_NAMES[k]).join("; ")}. Do not ask those again.${d.next ? ` The next step: ${d.next}.` : ""}`);
+  else if (d.next) L2.push(`- The next step: ${d.next}.`);
+  if (d.stuck) L2.push(`- Stuck: ${d.stuck.tries} tries on ${STEP_NAMES[d.stuck.kind] || "this step"}. Do not ask that kind of question again now: show it another way (a bar, a number line, folding a paper, a short story) or make the step much smaller.`);
+  if (d.open) L2.push("- Your last question was a yes-or-no or this-or-that question. Ask an open one now (how many, what, where), or ask them to point or show.");
+  L2.push("- One question this turn, at the end. The app keeps only your last question.");
   const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));
   L2.push(`- Word budget this turn: at most ${budget} words in all, then wait for the child. Every word over is cut, and the question at the end is what is kept.`);
-  if (d.handover) L2.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing. This turn asks them to try the next step, or to tell you why or how, before you explain anything more.`);
+  if (d.handover) L2.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing. This turn asks them to try the next step, or asks them a question to answer, before you explain anything more.`);
   if (shareLow(s)) L2.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
   if (d.preFirst) L2.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : "a question about that idea, with no picture of the target"}. Do not start on the target idea until the child has answered it, right or wrong.`);
   const main = d.moves.find((x) => !["Name what was right", "Revoice and build"].includes(x)) || d.moves[0];
@@ -37278,6 +37507,11 @@ function turnBrief(s, d, { message = "", marked = null, open = null, board = [],
   L2.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
   if (m !== "naturalness") L2.push(`- And every turn: ${ANCHORS.naturalness}`);
   return L2;
+}
+function boardTruth(board = []) {
+  const figs = (board || []).filter((b) => b && (FIG_CMDS.includes(b.cmd) || b.cmd === "number_line"));
+  if (!figs.length) return (board || []).length ? "On the board now: no picture yet (words only). Do not talk about pieces or shading." : "The board is empty: no picture yet. Do not talk about pieces or shading.";
+  return `On the board now: ${figs.map(describeItem).join("; ")}. Say only what is there: a whole is not cut, and nothing is shaded unless it says so.`;
 }
 
 // src/voice-tutor/gate.js
@@ -37288,7 +37522,9 @@ var REWRITE_SYSTEM = `You fix one sentence of HOREB, a maths tutor speaking live
 - Never say the answer the child is working on, in any form, nor a count the board will show, nor the rule the child should say. Describe the action and ask for the number ("I cut each half again. How many pieces?").
 - If the child asked something or sounded upset, the first sentence answers that, in 15 words or fewer.
 - No stock praise ("good question", "thank you for telling me", "well done", "great job"). Praise, if any, is 8 words or fewer and names the child's own step with one of their words.
-- No "yes" to an unsure or one-word answer: say what you heard, then ask what made them say it.
+- No "yes" to an unsure fraction or comparison with no reason: say what you heard, then ask what made them say it. A count needs no reason.
+- Never do the child's step: if the child was asked how to cut it or what to shade, do not say you cut or shade it; ask them to say or show it.
+- Say only what the board shows (the brief says what is on it). At most one question, at the end.
 - Do not repeat what HOREB said in the last turns; say something new that responds to the child.
 - Keep the same numbers as the problem the child is on unless the app says moving up is allowed.
 Reply with only one JSON object: {"text":"..."}`;
@@ -37703,7 +37939,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
   let careEnds = false;
   const pre = preFor({ target: pick2.target, prerequisite: pick2.prerequisite, prerequisites: prerequisitesOf(pick2.target), nameOf: skillName });
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null, pre });
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null, pre, lastQ: lastSpokenQ });
   const found = /* @__PURE__ */ new Set([...lesson0.found, ...marked?.canon ? [marked.canon] : []]);
   const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
   const closeTurn = async ({ steps: steps2, assessment = null, hidden = [], codeNotes = [], fromModel = null }) => {
@@ -37711,7 +37947,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     await recordJudged(judged);
     const asks = steps2.some((x) => x.cmd === "ask");
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
-    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null });
+    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null, board });
     const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
     const tester = {
       rule: decision?.rule || null,
@@ -37870,9 +38106,12 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     board,
     level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage },
     closing: ["close", "stop"].includes(decision?.rule) || lesson0.stage === "wrapup",
-    example: decision?.rule === "example"
+    example: decision?.rule === "example",
+    solved: lesson0.solved || []
   });
-  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra });
+  const logOnly = (f) => f.habit === "stock" && !/^(claims a feeling|promises or invites a secret)/.test(f.reason);
+  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter((f) => !logOnly(f));
+  const stockOf2 = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter(logOnly);
   return { status: 200, go: async (emit) => {
     emit(meta());
     const sent = [];
@@ -37916,8 +38155,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
       await send(st);
     };
-    const lastSay = () => [...sent].reverse().find((x) => x.cmd === "say");
-    const asked = () => /\?\s*$/.test(lastSay()?.text || "");
+    const asked = () => sent.some((x) => x.cmd === "say" && hasQ(x.text));
     const doingNow = () => probe ? lesson0.doing : null;
     const stop = async (why) => {
       if (closed) return;
@@ -38006,6 +38244,10 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     };
     const FIGS2 = ["shape", "fraction_bar", "figure"];
     const gate = async (st, extra) => {
+      if (st.cmd === "say") {
+        const stock = stockOf2(st, sent, extra);
+        if (stock.length) codeNotes.push(`gate: noted, not rewritten (${stock.map((f) => `stock: ${f.reason}`).join("; ").slice(0, 200)})`);
+      }
       const flags = flagsOf(st, sent, extra);
       if (!flags.length) return st;
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join("; ").slice(0, 300);
@@ -38034,6 +38276,11 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         codeNotes.push(`gate: kept the ${pickRewrite ? "rewrite" : "model's sentence"} (${why})${fixed ? "" : "; no rewrite was made"}`);
         return pickRewrite ? fixed.st : st;
       }
+      if (flags.some((f) => /^does the child's step/.test(f.reason))) {
+        drop(st, `gate: ${why}`, "child-step");
+        await stop("child-step");
+        return null;
+      }
       if (FIGS2.includes(st.cmd) && flags.some((f) => f.habit === "giveaway")) {
         codeNotes.push(`gate: ${why}; the label was taken off`);
         st = st.cmd === "figure" ? { ...st, params: { ...st.params, label: false } } : { ...st, label: false };
@@ -38059,7 +38306,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         codeNotes.push("gate: an unsure or one-word answer, and no question about the reason: the reason was asked");
       }
       for (const f of endFlags(sent, hctx)) {
-        if (f.habit === "confirm_hedged" && !asked() && !probe) {
+        if (f.habit === "confirm_hedged" && !asked() && !probe && decision?.press) {
           const w = marked?.said || null;
           await speak({ cmd: "say", text: w ? `What made you say ${w}?` : "What made you say that?", move: "Press for reasoning" });
           codeNotes.push(`gate: ${f.reason}; the reason was asked`);
@@ -38078,10 +38325,15 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     const WAITS = [...DRAWN.filter((c) => c !== "write_text"), ...MARKS, "erase", "clear", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "assess"];
     const release = async (next = null) => {
       if (!held) return;
-      const [h, ...rest] = held;
+      let [h, ...rest] = held;
       held = null;
       const it = next?.cmd === "ask" ? itemFor(next, bank) : null;
-      await step2(h, it && hiddenOk(it) ? [it.answer] : [], true);
+      if (next?.cmd === "say" && hasQ(next.text) && hasQ(h.text)) {
+        const kept = dropQuestions(h.text);
+        codeNotes.push(`one question a turn: "${lastQ(h.text).slice(0, 60)}" was not said, a later question was`);
+        h = kept ? { ...h, text: kept } : null;
+      }
+      if (h) await step2(h, it && hiddenOk(it) ? [it.answer] : [], true);
       for (const x of rest) await step2(x, [], true);
     };
     const fromModel = /* @__PURE__ */ new Set();
@@ -38091,12 +38343,27 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       if (!releasing) {
         fromModel.add(st);
         if (held && WAITS.includes(st.cmd)) {
+          if (gateOn && FIGS2.includes(st.cmd) && flagsOf(st, [...sent, ...held]).some((f) => /^does the child's step/.test(f.reason))) {
+            drop(st, "gate: does the child's step (the question asks the child to do it, and the drawing does it)", "child-step");
+            await release();
+            if (!closed) await stop("child-step");
+            return;
+          }
           held.push(st);
           return;
         }
         if (held) await release(st);
         if (closed) return;
-        if (mayGiveAway(st)) {
+        if (st.cmd === "say") {
+          const one = lastQuestionOnly(st.text);
+          if (one !== st.text) {
+            codeNotes.push(`one question a turn: only the last question of "${st.text.slice(0, 60)}" was kept`);
+            const st2 = { ...st, text: one };
+            fromModel.add(st2);
+            st = st2;
+          }
+        }
+        if (mayGiveAway(st) || st.cmd === "say" && hasQ(st.text)) {
           held = [st];
           return;
         }
@@ -38259,7 +38526,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
 }
-var SHADE_ASK = /\b(shade|colour in|color in)\b/i;
+var SHADE_ASK2 = /\b(shade|colour in|color in)\b/i;
 var SHADE_SHAPES = { fraction_bar: "bar", shape: "circle" };
 var boardAfter2 = (board, steps2) => {
   const items = new Map(board.map((b) => [b.id, b]));
@@ -38271,7 +38538,7 @@ var boardAfter2 = (board, steps2) => {
   return [...items.values()];
 };
 function shadeOffer(board = [], steps2 = [], vopts = {}) {
-  if (!steps2.some((x) => x.cmd === "say" && SHADE_ASK.test(x.text) && !/\b(I|I'll|I will|let me)\s+(shade|colour|color)\b/i.test(x.text))) return [];
+  if (!steps2.some((x) => x.cmd === "say" && SHADE_ASK2.test(x.text) && !/\b(I|I'll|I will|let me)\s+(shade|colour|color)\b/i.test(x.text))) return [];
   const now = boardAfter2(board, steps2);
   if (now.some((b) => b.cmd === "figure" && (b.controls || []).some((c) => c.startsWith("shade")))) return [];
   const can = (b) => {
@@ -38344,6 +38611,18 @@ function trimToWords(text, budget, { mustSay = false } = {}) {
   const comma = cut.map((x) => /,$/.test(x)).lastIndexOf(true);
   return `${(comma >= 1 ? cut.slice(0, comma + 1) : cut).join(" ").replace(/[,;:]$/, "")}.`;
 }
+var sentencesIn2 = (t) => String(t || "").split(/(?<=[.!?])\s+/).filter(Boolean);
+var isQs = (x) => /\?\s*$/.test(x);
+var hasQ = (t) => sentencesIn2(t).some(isQs);
+var lastQ = (t) => sentencesIn2(t).filter(isQs).pop() || "";
+function lastQuestionOnly(text) {
+  const ss = sentencesIn2(text);
+  const qs = ss.filter(isQs);
+  if (qs.length <= 1) return text;
+  let n = 0;
+  return ss.filter((x) => !isQs(x) || (n += 1) === qs.length).join(" ");
+}
+var dropQuestions = (text) => sentencesIn2(text).filter((x) => !isQs(x)).join(" ");
 var HARD_HABITS = ["giveaway", "level_jump"];
 var hardOf = (flags = []) => flags.filter((f) => HARD_HABITS.includes(f.habit));
 var softScore = ({ st, flags = [] }) => (flags.some((f) => f.habit === "repeat") ? 100 : 0) + 10 * flags.length + Math.min(9, wordsIn(st?.text || "") / 10);
