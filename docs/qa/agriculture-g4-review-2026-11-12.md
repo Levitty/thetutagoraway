@@ -136,91 +136,91 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS`, outcome `a`, form direct, rung 1.
 
-**Q:** Why are meat bones kept out of the compost heap?
-Options: They make the heap too rich | They turn the heap sour at once | **They draw rats and flies** | They are the best food for the heap
-- If a child answers "They make the heap too rich": Bones and meat smell and draw rats and flies. Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.
-- If a child answers "They turn the heap sour at once": Bones and meat smell and draw rats and flies. Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.
+**Q:** Which one is made by rotting plant remains and dung?
+Options: Fertiliser from a factory | Fertiliser from the shop | Pesticide from the shop | **Compost manure**
+- If a child answers "Fertiliser from a factory": Compost is made at home. Fertiliser from the shop is made in a factory. Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.
+- If a child answers "Fertiliser from the shop": Compost is made at home. Fertiliser from the shop is made in a factory. Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.
 
 ### agriculture4.compost.mat.story
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS`, outcome `a`, form word, rung 2.
 
-**Q:** Mama Achieng says she will buy compost from the shop. What is really sold in a bag at the shop?
-Options: Rotted peelings from the school | Dung from her own farm | **Fertiliser made in a factory** | Compost made in a factory
-- If a child answers "Rotted peelings from the school": Shop fertiliser is made in a factory. Compost is made at home. Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.
-- If a child answers "Dung from her own farm": Shop fertiliser is made in a factory. Compost is made at home. Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.
+**Q:** Njoroge wants to put leftover fried fish on the heap. Why should he not?
+Options: Fish turns the manure blue | **It will draw rats and flies** | Fish is the best thing for a heap | Fish makes the heap too wet
+- If a child answers "Fish turns the manure blue": Cooked and oily food draws rats and flies. Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.
+- If a child answers "Fish is the best thing for a heap": Cooked and oily food draws rats and flies. Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.
 
 ### agriculture4.compost.mat.spot
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS`, outcome `a`, form spot, rung 3.
 
-**Q:** Atieno describes the heap. Which step has the mistake?
-Steps: Step 1: We put leaves at the bottom. / **Step 2: We added leftover meat and cooked fish.** / Step 3: We covered it with soil.
+**Q:** Salma lists how the group made compost. Which step has the mistake?
+Steps: Step 1: We chose a shady corner of the garden. / Step 2: We put on banana leaves and grass. / **Step 3: We added tins so the manure would be rich.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### agriculture4.compost.make.which
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MAKING`, outcome `b`, form direct, rung 1.
 
-**Q:** Why are dry and fresh materials put in layers?
-Options: Layers make the heap look neat | Dry ones are the only ones that rot | **Dry ones let in air and fresh ones give moisture** | Only one layer is really needed
-- If a child answers "Layers make the heap look neat": Both kinds help the rotting. A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.
-- If a child answers "Dry ones are the only ones that rot": Both kinds help the rotting. A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.
+**Q:** Why is the compost heap covered?
+Options: To stop the heap from rotting | To keep all the air out for good | To make it dry faster | **To keep the heat and moisture in**
+- If a child answers "To stop the heap from rotting": A cover keeps the heap warm and damp so it rots well. A heap rots best when it is damp, not soaking, and covered. Too dry and it stops rotting. Too wet and it goes smelly.
+- If a child answers "To keep all the air out for good": A cover keeps the heap warm and damp so it rots well. A heap rots best when it is damp, not soaking, and covered. Too dry and it stops rotting. Too wet and it goes smelly.
 
 ### agriculture4.compost.make.story
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MAKING`, outcome `b`, form word, rung 2.
 
-**Q:** The class has only fresh peelings. What should they add to the heap?
-Options: Nothing at all | **Dry grass and leaves** | More fresh peelings | Only water
-- If a child answers "Nothing at all": Dry material mixed with fresh material makes better compost. A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.
-- If a child answers "More fresh peelings": Dry material mixed with fresh material makes better compost. A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.
+**Q:** Omondi says his compost is ready. How can he tell?
+Options: **It is dark, crumbly and smells like soil** | It still has whole peelings in it | It was made yesterday | It is wet and smelly
+- If a child answers "It still has whole peelings in it": Ready compost is dark and crumbly. Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.
+- If a child answers "It was made yesterday": Ready compost is dark and crumbly. Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.
 
 ### agriculture4.compost.make.spot
 
 Skill `CONSER.SOIL_CONSERVATION.COMPOST_MAKING`, outcome `b`, form spot, rung 3.
 
-**Q:** Otieno says how to make compost. Which step has the mistake?
-Steps: Step 1: We made layers of dry and fresh waste. / **Step 2: We poured water on until it was soaking and smelly.** / Step 3: We waited for it to turn dark.
+**Q:** Chebet explains when compost is ready. Which step has the mistake?
+Steps: Step 1: We waited for some weeks. / Step 2: We looked at the heap. / **Step 3: It was ready because it still looked like peelings.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### agriculture4.drip.mean.which
 
 Skill `CONSER.WATER_CONSERVATION.DRIP_MEANING`, outcome `a`, form direct, rung 1.
 
-**Q:** Where does the water from a drip system go?
-Options: Onto the whole garden path | **Into the soil at the roots** | Onto the leaves of the plant | Into the air above the plant
-- If a child answers "Onto the whole garden path": Roots take up water, so the drip goes beside the roots. The roots take up water, so the drip goes into the soil beside the roots.
-- If a child answers "Onto the leaves of the plant": Roots take up water, so the drip goes beside the roots. The roots take up water, so the drip goes into the soil beside the roots.
+**Q:** How does drip irrigation give water to a plant?
+Options: **Slowly, drop by drop** | Like a running hosepipe | Like a heavy rain shower | In one big pour
+- If a child answers "Like a running hosepipe": Drip irrigation gives water slowly, drop by drop. Drip irrigation gives water slowly, drop by drop, so the soil can soak it up.
+- If a child answers "Like a heavy rain shower": Drip irrigation gives water slowly, drop by drop. Drip irrigation gives water slowly, drop by drop, so the soil can soak it up.
 
 ### agriculture4.drip.mean.story
 
 Skill `CONSER.WATER_CONSERVATION.DRIP_MEANING`, outcome `a`, form word, rung 2.
 
-**Q:** Why does a drip tube end beside the plant?
-Options: Because it looks tidy | Because the leaves drink the drip | **Because the roots take up the water** | Because the stem needs washing
-- If a child answers "Because it looks tidy": Water must reach the roots. The roots take up water, so the drip goes into the soil beside the roots.
-- If a child answers "Because the leaves drink the drip": Water must reach the roots. The roots take up water, so the drip goes into the soil beside the roots.
+**Q:** The school garden is watered by drip. Compared with a bucket, how much water is lost?
+Options: The same | All of it | **Very little** | Much more
+- If a child answers "The same": Little water runs off or dries up with drip irrigation. Drip irrigation puts a small amount of water only where it is needed, so little is wasted.
+- If a child answers "All of it": Little water runs off or dries up with drip irrigation. Drip irrigation puts a small amount of water only where it is needed, so little is wasted.
 
 ### agriculture4.drip.set.which
 
 Skill `CONSER.WATER_CONSERVATION.DRIP_SETUP`, outcome `b`, form direct, rung 1.
 
-**Q:** What should be done after the bottle is set up?
-Options: **Fill it with water and check the drip** | Make a second big hole | Leave it empty for a week | Move it far from the plant
-- If a child answers "Make a second big hole": Fill it and make sure the water is dripping. A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.
-- If a child answers "Leave it empty for a week": Fill it and make sure the water is dripping. Water runs downhill. The container must stand higher than the bed so the water drips out.
+**Q:** How big should the hole in a drip bottle be?
+Options: Big enough for a finger | **Tiny, so the water comes out drop by drop** | As wide as the bottle neck | Big, so all the water comes out at once
+- If a child answers "Big enough for a finger": A tiny hole keeps the drip going for hours. A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.
+- If a child answers "As wide as the bottle neck": A tiny hole keeps the drip going for hours. A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.
 
 ### agriculture4.drip.set.story
 
 Skill `CONSER.WATER_CONSERVATION.DRIP_SETUP`, outcome `b`, form word, rung 2.
 
-**Q:** What is the first thing to do when setting up a bottle drip?
-Options: **Make a tiny hole near the bottom or in the cap** | Put the bottle far from the plant | Make a large hole in the side | Bury the bottle in the ground
-- If a child answers "Put the bottle far from the plant": Start with a tiny hole. The water must fall where the roots are, so the drip end is placed next to the plant.
-- If a child answers "Make a large hole in the side": Start with a tiny hole. A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.
+**Q:** Amani's drip stops after one week. He finds soil in the hole. What should he do?
+Options: Make the hole bigger | **Clear the hole** | Move the bottle lower | Stop watering the plant
+- If a child answers "Make the hole bigger": A blocked hole must be cleared. A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.
+- If a child answers "Move the bottle lower": A blocked hole must be cleared. Water runs downhill. The container must stand higher than the bed so the water drips out.
 
 ### agriculture4.drip.set.spot
 
@@ -235,89 +235,89 @@ Steps: Step 1: I made a tiny hole in the bottle. / **Step 2: I put the bottle on
 
 Skill `CONSER.FUEL_CONSERVATION.FUEL_TYPES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which of these is a solid fuel?
-Options: Biogas | Paraffin | **Charcoal** | Cooking gas
-- If a child answers "Biogas": Charcoal is a solid. It is made by burning wood slowly. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
-- If a child answers "Paraffin": Charcoal is a solid. It is made by burning wood slowly. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
+**Q:** Which of these is a gas fuel?
+Options: Paraffin | Charcoal | **Biogas** | Firewood
+- If a child answers "Paraffin": Biogas is made from rotting dung and is a gas. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
+- If a child answers "Charcoal": Biogas is made from rotting dung and is a gas. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
 
 ### agriculture4.fuel.type.story
 
 Skill `CONSER.FUEL_CONSERVATION.FUEL_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** Mama Njoki cooks on a jiko with black lumps from burnt wood. Which fuel is this?
-Options: Cooking gas | Paraffin | **Charcoal** | Petrol
-- If a child answers "Cooking gas": Charcoal is a solid fuel from wood. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
-- If a child answers "Paraffin": Charcoal is a solid fuel from wood. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
+**Q:** Kamande's family lights a stove with a liquid from a bottle. What fuel is it?
+Options: Firewood | **Paraffin** | Biogas | Charcoal
+- If a child answers "Firewood": Paraffin is a liquid fuel. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
+- If a child answers "Biogas": Paraffin is a liquid fuel. Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.
 
 ### agriculture4.fuel.save.which
 
 Skill `CONSER.FUEL_CONSERVATION.FUEL_SAVING`, outcome `b`, form direct, rung 1.
 
-**Q:** Which firewood saves the most fuel?
-Options: Wood soaked in rain | Wet wood | Freshly cut green wood | **Dry wood**
-- If a child answers "Wood soaked in rain": Dry wood burns well. Wet wood makes smoke. Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.
-- If a child answers "Wet wood": Dry wood burns well. Wet wood makes smoke. Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.
+**Q:** Which habit saves fuel when boiling beans?
+Options: **Cooking with a lid on the pot** | Cooking with the lid off to let steam out | Cooking with the pot open to the wind | Cooking with the lid off so you can watch
+- If a child answers "Cooking with the lid off to let steam out": A lid keeps the heat in. A lid keeps the heat in so the food cooks faster and uses less fuel.
+- If a child answers "Cooking with the pot open to the wind": A lid keeps the heat in. A lid keeps the heat in so the food cooks faster and uses less fuel.
 
 ### agriculture4.fuel.save.story
 
 Skill `CONSER.FUEL_CONSERVATION.FUEL_SAVING`, outcome `b`, form word, rung 2.
 
-**Q:** Which cook wastes fuel?
-Options: **The one with an open pot on a big fire** | The one who uses very dry wood | The one who cuts food into small bits | The one who puts a lid on the pot
-- If a child answers "The one who uses very dry wood": An open pot on a big fire wastes the heat. Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.
-- If a child answers "The one who cuts food into small bits": An open pot on a big fire wastes the heat. Once water boils it does not get hotter. A big flame only wastes fuel.
+**Q:** The sufuria is boiling hard. Peter wants to put on more charcoal. What does his mother say?
+Options: Yes, a bigger fire cooks faster | **No, it cannot get any hotter** | Yes, use some wet charcoal | Yes, take the lid off as well
+- If a child answers "Yes, a bigger fire cooks faster": Boiling water does not get hotter, so keep the fire small. Once water boils it does not get hotter. A big flame only wastes fuel.
+- If a child answers "Yes, use some wet charcoal": Boiling water does not get hotter, so keep the fire small. Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.
 
 ### agriculture4.fuel.save.spot
 
 Skill `CONSER.FUEL_CONSERVATION.FUEL_SAVING`, outcome `b`, form spot, rung 3.
 
-**Q:** Mwende tells how she saves fuel. Which step has the mistake?
-Steps: Step 1: I soak the beans first. / **Step 2: I take the lid off the pot to let the heat out.** / Step 3: I keep the fire small once it boils.
+**Q:** Hamisi explains saving fuel. Which step has the mistake?
+Steps: Step 1: I put a lid on the pot. / Step 2: I cook the beans and the greens on one fire. / **Step 3: I make the flame as big as I can.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ### agriculture4.pests.small.which
 
 Skill `CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS`, outcome `a`, form direct, rung 1.
 
 **Q:** Which small animal does NOT harm the crop?
-Options: A squirrel in the maize | A rat in the maize | A bird in the millet | **A bee on a bean flower**
+Options: **A bee on a bean flower** | A squirrel in the maize | A bird in the millet | A rat in the maize
 - If a child answers "A squirrel in the maize": Bees help the flowers to make seed. Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.
-- If a child answers "A rat in the maize": Bees help the flowers to make seed. Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.
+- If a child answers "A bird in the millet": Bees help the flowers to make seed. Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.
 
 ### agriculture4.pests.small.story
 
 Skill `CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS`, outcome `a`, form word, rung 2.
 
-**Q:** Mr Kimani says only big animals harm crops. What is the best reply?
-Options: **Small animals such as birds and rats harm crops too** | Bees harm crops most | He is right, small animals never harm crops | Only moles harm crops
-- If a child answers "Bees harm crops most": Small animals come in great numbers. Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.
-- If a child answers "He is right, small animals never harm crops": Small animals come in great numbers. Small animals such as birds, rats and squirrels also harm crops, because there are many of them.
+**Q:** Flocks of small birds fall on the school millet field every morning. What damage do they do?
+Options: They help the flowers | They dig up the roots | **They peck the grain** | They do no harm
+- If a child answers "They help the flowers": Weaver birds and queleas eat the grain. Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.
+- If a child answers "They dig up the roots": Weaver birds and queleas eat the grain. Birds peck grain, rats gnaw grain and cobs, and moles tunnel under the ground and eat roots and tubers.
 
 ### agriculture4.scare.make.which
 
 Skill `CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE`, outcome `b`, form direct, rung 1.
 
 **Q:** Which of these helps a scarecrow scare birds?
-Options: **Old tins that rattle in the wind** | A heap of grain next to the sticks | A trap with sharp wire around it | A bowl of poison next to the sticks
+Options: A bowl of poison next to the sticks | A heap of grain next to the sticks | A trap with sharp wire around it | **Old tins that rattle in the wind**
+- If a child answers "A bowl of poison next to the sticks": Noise and movement scare birds. A scarecrow only scares animals away. Poison and traps can harm many other animals as well.
 - If a child answers "A heap of grain next to the sticks": Noise and movement scare birds. A scarecrow only scares animals away. Poison and traps can harm many other animals as well.
-- If a child answers "A trap with sharp wire around it": Noise and movement scare birds. A scarecrow only scares animals away. Poison and traps can harm many other animals as well.
 
 ### agriculture4.scare.make.story
 
 Skill `CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE`, outcome `b`, form word, rung 2.
 
-**Q:** The class dresses the scarecrow in an old shirt and a hat. Why?
-Options: **To make it look like a person** | To hide it from the birds | To keep it warm | To make it kill the birds
-- If a child answers "To hide it from the birds": Birds fear a shape that looks like a person. Birds must see the scarecrow from far. Put it high in the middle of the crop.
-- If a child answers "To keep it warm": Birds fear a shape that looks like a person. Birds soon learn that a still scarecrow is harmless. Moving it and changing its clothes keeps them afraid.
+**Q:** A farmer ties strips of cloth that flap in the wind to his scarecrow. How does this help?
+Options: The cloth keeps the scarecrow still | The cloth traps the birds | **The moving cloth scares the birds** | The cloth feeds the birds
+- If a child answers "The cloth keeps the scarecrow still": Movement scares birds. Birds soon learn that a still scarecrow is harmless. Moving it and changing its clothes keeps them afraid.
+- If a child answers "The cloth traps the birds": Movement scares birds. A scarecrow only scares animals away. Poison and traps can harm many other animals as well.
 
 ### agriculture4.scare.make.spot
 
 Skill `CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE`, outcome `b`, form spot, rung 3.
 
-**Q:** Mutiso explains how the class made a scarecrow. Which step has the mistake?
-Steps: Step 1: We tied two sticks in a cross. / Step 2: We put on an old shirt and a hat. / **Step 3: We left it in the same place all season.**
+**Q:** Tom explains what a scarecrow does. Which step has the mistake?
+Steps: Step 1: It looks like a person. / Step 2: It moves in the wind. / **Step 3: It kills the birds that come close.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -326,52 +326,52 @@ Steps: Step 1: We tied two sticks in a cross. / Step 2: We put on an old shirt a
 Skill `FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS`, outcome `a`, form direct, rung 1.
 
 **Q:** Which crop is sown straight in the plot from tiny seeds?
-Options: Sweet potato | Beans | Maize | **Carrot**
-- If a child answers "Sweet potato": Carrot has tiny seeds and is sown where it will grow. Sweet potato is planted from vine cuttings, not seeds.
+Options: Beans | Maize | **Carrot** | Sweet potato
 - If a child answers "Beans": Carrot has tiny seeds and is sown where it will grow. Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.
+- If a child answers "Maize": Carrot has tiny seeds and is sown where it will grow. Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.
 
 ### agriculture4.sow.crops.story
 
 Skill `FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS`, outcome `a`, form word, rung 2.
 
-**Q:** Mzee Otieno plants maize. How big are the seeds?
-Options: Tiny like dust | **Large** | The same as carrot seed | Too small to see
-- If a child answers "Tiny like dust": Maize seeds are large. Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.
-- If a child answers "The same as carrot seed": Maize seeds are large. Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.
+**Q:** Wambui wants cabbage. How will her father start it?
+Options: **In a nursery, then move the seedlings** | Sow big seeds like maize | Sow the seeds straight in the plot like carrot | Plant a vine cutting
+- If a child answers "Sow big seeds like maize": Cabbage seedlings are moved from a nursery. Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.
+- If a child answers "Sow the seeds straight in the plot like carrot": Cabbage seedlings are moved from a nursery. Carrots do not like being moved, so they are sown where they will grow. Cabbage and tomato are started in a nursery.
 
 ### agriculture4.sow.bed.which
 
 Skill `FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING`, outcome `b`, form direct, rung 1.
 
-**Q:** How should the soil of a seedbed for tiny seeds be?
-Options: Full of weeds | Rough, with lumps and stones | Hard, packed down | **Fine, like flour**
-- If a child answers "Full of weeds": Tiny seeds need fine soil to touch. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
-- If a child answers "Rough, with lumps and stones": Tiny seeds need fine soil to touch. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
+**Q:** What should be removed from the seedbed before sowing?
+Options: Nothing, the seeds will find a way | All the water | **Stones, lumps and weeds** | Only the fine soil
+- If a child answers "Nothing, the seeds will find a way": Stones and lumps stop tiny seeds from coming up. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
+- If a child answers "All the water": Stones and lumps stop tiny seeds from coming up. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
 
 ### agriculture4.sow.bed.story
 
 Skill `FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING`, outcome `b`, form word, rung 2.
 
-**Q:** Rehema digs the seedbed and breaks the lumps. What else should she do before sowing?
-Options: Leave the stones in to give shade | **Take out stones and weeds** | Sow at once without any raking | Pack the soil down very hard
-- If a child answers "Leave the stones in to give shade": The bed should be fine and level, with no stones or weeds. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
-- If a child answers "Sow at once without any raking": The bed should be fine and level, with no stones or weeds. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
+**Q:** Maina covers his spinach seeds with a thick layer of soil. What is the problem?
+Options: The soil is much too fine | The seeds will grow better there | The seeds were too big to sow | **The seeds cannot push up**
+- If a child answers "The soil is much too fine": Cover tiny seeds only lightly, because they cannot push up through thick soil. Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.
+- If a child answers "The seeds will grow better there": Cover tiny seeds only lightly, because they cannot push up through thick soil. Tiny seeds have little stored food and cannot push up from deep soil. Sow them very shallow.
 
 ### agriculture4.sow.bed.spot
 
 Skill `FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING`, outcome `b`, form spot, rung 3.
 
-**Q:** Dennis explains the sowing. Which step has the mistake?
-Steps: Step 1: I mixed the seeds with sand. / Step 2: I sowed them in a fine bed. / **Step 3: I covered them with a thick layer of soil.**
+**Q:** Achieng explains how she made a seedbed. Which step has the mistake?
+Steps: Step 1: I dug the soil. / **Step 2: I left the big lumps and stones in the bed.** / Step 3: I watered gently after sowing.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture4.fruit.type.which
 
 Skill `FOOD_P.GROWING_FRUITS.FRUIT_TYPES`, outcome `a`, form direct, rung 1.
 
 **Q:** Passion fruit grows on what?
-Options: **A climbing vine** | A cassava stem | A root under the ground | A tall tree only
+Options: A cassava stem | A root under the ground | **A climbing vine** | A tall tree only
 - If a child answers "A cassava stem": Passion fruit is a vine. Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.
 - If a child answers "A root under the ground": Passion fruit is a vine. Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.
 
@@ -379,35 +379,35 @@ Options: **A climbing vine** | A cassava stem | A root under the ground | A tall
 
 Skill `FOOD_P.GROWING_FRUITS.FRUIT_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** Peter has a small plot. He wants a fruit plant that is not a tall tree. Which can he choose?
-Options: Mango tree | Coconut palm | Avocado tree | **Banana**
-- If a child answers "Mango tree": A banana is a plant, not a tall tree. Fruits grow on trees, bushes, vines and plants like banana and pawpaw.
-- If a child answers "Coconut palm": A banana is a plant, not a tall tree. Fruits grow on trees, bushes, vines and plants like banana and pawpaw.
+**Q:** Wafula says cassava is a fruit crop because it is sweet. What is the best reply?
+Options: **Cassava is a root crop, not a fruit** | He is right, cassava is a fruit | All sweet foods are fruits | Roots are the fruits of the plant
+- If a child answers "He is right, cassava is a fruit": Cassava is a root crop. Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.
+- If a child answers "All sweet foods are fruits": Cassava is a root crop. Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.
 
 ### agriculture4.fruit.grow.which
 
 Skill `FOOD_P.GROWING_FRUITS.FRUIT_GROWING`, outcome `b`, form direct, rung 1.
 
 **Q:** How much space should mango seedlings be given?
-Options: In one hole together | As close as possible to save space | Touching each other | **Far enough for each tree to grow wide**
+Options: **Far enough for each tree to grow wide** | Touching each other | In one hole together | As close as possible to save space
+- If a child answers "Touching each other": A fruit tree grows big and needs room. A fruit tree grows big. It needs room for its roots and branches.
 - If a child answers "In one hole together": A fruit tree grows big and needs room. A fruit tree grows big. It needs room for its roots and branches.
-- If a child answers "As close as possible to save space": A fruit tree grows big and needs room. A fruit tree grows big. It needs room for its roots and branches.
 
 ### agriculture4.fruit.grow.story
 
 Skill `FOOD_P.GROWING_FRUITS.FRUIT_GROWING`, outcome `b`, form word, rung 2.
 
-**Q:** Mama Salome plants five orange seedlings close together to save land. What will happen later?
-Options: They will make more fruit than ever | **The trees will crowd each other** | They will need no water | They will all grow big and strong
-- If a child answers "They will make more fruit than ever": Trees need room as they grow. A fruit tree grows big. It needs room for its roots and branches.
-- If a child answers "They will need no water": Trees need room as they grow. A young seedling has short roots and dries quickly. It needs regular water and a mulch.
+**Q:** Aisha spreads dry grass around her avocado seedling but not touching the stem. What does it do?
+Options: It feeds the seedling | **It keeps the soil moist** | It keeps the roots dry | It stops the tree growing
+- If a child answers "It feeds the seedling": Mulch keeps the soil moist. Manure in the hole feeds the young plant and loosens the soil so the roots can spread.
+- If a child answers "It keeps the roots dry": Mulch keeps the soil moist. A young seedling has short roots and dries quickly. It needs regular water and a mulch.
 
 ### agriculture4.fruit.grow.spot
 
 Skill `FOOD_P.GROWING_FRUITS.FRUIT_GROWING`, outcome `b`, form spot, rung 3.
 
-**Q:** Kelvin describes planting a fruit tree. Which step has the mistake?
-Steps: Step 1: I dug a hole. / **Step 2: I filled it with plain hard soil and nothing else.** / Step 3: I put mulch around.
+**Q:** Hannah tells how she planted five seedlings. Which step has the mistake?
+Steps: Step 1: I dug five holes. / **Step 2: I made them so close they touch.** / Step 3: I watered them well.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -416,44 +416,44 @@ Steps: Step 1: I dug a hole. / **Step 2: I filled it with plain hard soil and no
 Skill `FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which of these is a domestic animal?
-Options: **A goat** | An antelope | A giraffe | A zebra
-- If a child answers "An antelope": Domestic animals are kept and cared for by people. Domestic animals are kept and cared for by people. Zebras are wild.
+Options: A giraffe | An antelope | A zebra | **A goat**
 - If a child answers "A giraffe": Domestic animals are kept and cared for by people. Domestic animals are kept and cared for by people. Zebras are wild.
+- If a child answers "An antelope": Domestic animals are kept and cared for by people. Domestic animals are kept and cared for by people. Zebras are wild.
 
 ### agriculture4.animal.type.story
 
 Skill `FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES`, outcome `a`, form word, rung 2.
 
 **Q:** Oluoch keeps a duck. To which group does it belong?
-Options: **Poultry** | Pets only | Livestock | Wild animals
-- If a child answers "Pets only": Ducks are poultry. Poultry are birds kept for eggs and meat, like chickens, ducks and turkeys. Goats are livestock.
+Options: **Poultry** | Wild animals | Livestock | Pets only
+- If a child answers "Wild animals": Ducks are poultry. Domestic animals are kept and cared for by people. Zebras are wild.
 - If a child answers "Livestock": Ducks are poultry. Poultry are birds kept for eggs and meat, like chickens, ducks and turkeys. Goats are livestock.
 
 ### agriculture4.animal.use.which
 
 Skill `FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES`, outcome `b`, form direct, rung 1.
 
-**Q:** Which animal gives us wool?
-Options: A cow | A hen | **A sheep** | A goat
-- If a child answers "A cow": Sheep give wool. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
-- If a child answers "A hen": Sheep give wool. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
+**Q:** Which insect gives us honey?
+Options: A hen | A goat | **A bee** | A cow
+- If a child answers "A hen": Bees make honey. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
+- If a child answers "A goat": Bees make honey. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
 
 ### agriculture4.animal.use.story
 
 Skill `FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES`, outcome `b`, form word, rung 2.
 
-**Q:** Mama Lemayian loads her goods on an animal to go to the market. Which animal is best?
-Options: **A donkey** | A duck | A rabbit | A hen
-- If a child answers "A duck": Donkeys and camels carry loads. Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.
-- If a child answers "A rabbit": Donkeys and camels carry loads. Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.
+**Q:** Njuguna says a cow gives only milk. What is the best reply?
+Options: A cow gives honey | **A cow also gives meat and hides** | A cow gives eggs too | He is right, only milk
+- If a child answers "A cow gives honey": Many animals give more than one thing. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
+- If a child answers "A cow gives eggs too": Many animals give more than one thing. Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.
 
 ### agriculture4.meal.imp.which
 
 Skill `FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE`, outcome `a`, form direct, rung 1.
 
 **Q:** Why do children need a balanced meal?
-Options: **To grow, play, learn and fight illness** | To look rich | To fill the stomach only | To eat only one food
-- If a child answers "To look rich": A balanced meal helps the body in every way. Beans, greens and a staple make a balanced meal that costs little.
+Options: To eat only one food | To fill the stomach only | **To grow, play, learn and fight illness** | To look rich
+- If a child answers "To eat only one food": A balanced meal helps the body in every way. No single food has everything. The body needs a mix of foods.
 - If a child answers "To fill the stomach only": A balanced meal helps the body in every way. A full stomach is not the same as a balanced meal. A balanced meal has foods from every group.
 
 ### agriculture4.meal.imp.story
@@ -461,153 +461,153 @@ Options: **To grow, play, learn and fight illness** | To look rich | To fill the
 Skill `FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE`, outcome `a`, form word, rung 2.
 
 **Q:** Mama Akinyi cooks ugali, ndengu and managu. Why is this a good meal?
-Options: It is a very big meal for everyone | It has only one kind of food in it | It costs a lot of money to cook | **It has foods from different groups**
-- If a child answers "It is a very big meal for everyone": Ugali gives energy, ndengu builds the body and managu protects it. A full stomach is not the same as a balanced meal. A balanced meal has foods from every group.
+Options: **It has foods from different groups** | It has only one kind of food in it | It costs a lot of money to cook | It is a very big meal for everyone
 - If a child answers "It has only one kind of food in it": Ugali gives energy, ndengu builds the body and managu protects it. No single food has everything. The body needs a mix of foods.
+- If a child answers "It costs a lot of money to cook": Ugali gives energy, ndengu builds the body and managu protects it. Beans, greens and a staple make a balanced meal that costs little.
 
 ### agriculture4.meal.group.which
 
 Skill `FOOD_P.BALANCED_MEAL.GROUPS_SORT`, outcome `b`, form direct, rung 1.
 
 **Q:** Eggs, fish and beans help the body to do what mainly?
-Options: Make the body hot | Protect from colds only | **Build and repair the body** | Give energy
-- If a child answers "Make the body hot": Eggs, fish and beans are body-building foods. Eggs, fish, meat and beans are body-building foods. They help the body grow and mend.
+Options: Protect from colds only | Make the body hot | Give energy | **Build and repair the body**
 - If a child answers "Protect from colds only": Eggs, fish and beans are body-building foods. Eggs, fish, meat and beans are body-building foods. They help the body grow and mend.
+- If a child answers "Make the body hot": Eggs, fish and beans are body-building foods. Eggs, fish, meat and beans are body-building foods. They help the body grow and mend.
 
 ### agriculture4.meal.group.story
 
 Skill `FOOD_P.BALANCED_MEAL.GROUPS_SORT`, outcome `b`, form word, rung 2.
 
-**Q:** Which of these is the odd one out: ugali, rice, chapati, fish?
-Options: Ugali | Rice | Chapati | **Fish**
-- If a child answers "Ugali": Fish is body-building. The others give energy. Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.
-- If a child answers "Rice": Fish is body-building. The others give energy. Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.
+**Q:** Wanza has a cut on her knee that needs to heal. Which food builds the body to help it mend?
+Options: Rice | Sweet potato | **Beans** | Chapati
+- If a child answers "Rice": Beans are body-building. Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.
+- If a child answers "Sweet potato": Beans are body-building. Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.
 
 ### agriculture4.meal.pick.which
 
 Skill `FOOD_P.BALANCED_MEAL.MEAL_PICK`, outcome `b`, form direct, rung 1.
 
-**Q:** Which one makes a meal more balanced?
-Options: A biscuit | A sweet | **A fruit** | A bottle of soda
-- If a child answers "A biscuit": A fruit gives protective food. Soda and sweets give sugar only. A fruit or vegetable gives protective food.
-- If a child answers "A sweet": A fruit gives protective food. Soda and sweets give sugar only. A fruit or vegetable gives protective food.
+**Q:** Which plate has all three groups?
+Options: Rice, bread and chapati | **Rice, fish and spinach** | Cake, sweets and soda | Meat, fish and eggs
+- If a child answers "Rice, bread and chapati": It has one food from each group. Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.
+- If a child answers "Cake, sweets and soda": It has one food from each group. Soda and sweets give sugar only. A fruit or vegetable gives protective food.
 
 ### agriculture4.meal.pick.story
 
 Skill `FOOD_P.BALANCED_MEAL.MEAL_PICK`, outcome `b`, form word, rung 2.
 
-**Q:** Mama Ochieng has rice, beans and spinach for supper. Is it balanced?
-Options: No, vegetables do not count | **Yes, it has all three groups** | No, it needs more rice | No, it needs a soda
-- If a child answers "No, vegetables do not count": Rice, beans and spinach cover all three groups. Ugali is energy and fish is body-building. Add vegetables or fruit for the protective group.
-- If a child answers "No, it needs more rice": Rice, beans and spinach cover all three groups. Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.
+**Q:** Kamau's plate is chapati, bread and mandazi. How can he fix it?
+Options: Add nothing, it is fine | **Add beans and a vegetable** | Add more bread | Add a sweet
+- If a child answers "Add nothing, it is fine": He needs body-building and protective foods. Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.
+- If a child answers "Add more bread": He needs body-building and protective foods. Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.
 
 ### agriculture4.meal.pick.spot
 
 Skill `FOOD_P.BALANCED_MEAL.MEAL_PICK`, outcome `b`, form spot, rung 3.
 
-**Q:** Anne plans breakfast. Which step has the mistake?
-Steps: Step 1: Porridge gives energy. / Step 2: An egg builds the body. / **Step 3: We do not need a fruit, so the meal is balanced.**
+**Q:** Kelvin plans supper. Which step has the mistake?
+Steps: Step 1: I will cook rice. / **Step 2: I will add chapati and bread, so it is balanced.** / Step 3: I will wash my hands first.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture4.cook.meth.which
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_METHODS`, outcome `a`, form direct, rung 1.
 
 **Q:** What is used in shallow frying?
-Options: No oil at all | A pot full of oil to cover the food | Boiling water | **A little oil in a pan**
-- If a child answers "No oil at all": Chapati and eggs are shallow fried. Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.
+Options: A pot full of oil to cover the food | Boiling water | **A little oil in a pan** | No oil at all
 - If a child answers "A pot full of oil to cover the food": Chapati and eggs are shallow fried. Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.
+- If a child answers "Boiling water": Chapati and eggs are shallow fried. Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.
 
 ### agriculture4.cook.meth.story
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_METHODS`, outcome `a`, form word, rung 2.
 
-**Q:** A boy roasts maize on a jiko at the roadside. Which method is this?
-Options: Shallow frying | Steaming | **Roasting** | Boiling
-- If a child answers "Shallow frying": Roasting uses dry heat. Roasting cooks food by dry heat over a fire or in an oven. Boiling uses water.
-- If a child answers "Steaming": Roasting uses dry heat. Roasting cooks food by dry heat over a fire or in an oven. Boiling uses water.
+**Q:** Wanyama puts sweet potato on a rack above boiling water and covers it. Which method is this?
+Options: Boiling | Shallow frying | **Steaming** | Roasting
+- If a child answers "Boiling": The steam cooks the food above the water. In steaming the food stays above the water and the steam cooks it.
+- If a child answers "Shallow frying": The steam cooks the food above the water. Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.
 
 ### agriculture4.cook.suit.which
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_SUIT`, outcome `b`, form direct, rung 1.
 
-**Q:** Which method suits a maize cob?
-Options: Soaking in cold water | Shallow frying in a pan | **Roasting** | Keeping it in a cold box
-- If a child answers "Soaking in cold water": A maize cob can be roasted or boiled. Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.
-- If a child answers "Shallow frying in a pan": A maize cob can be roasted or boiled. Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.
+**Q:** What is the right cooking time for sukuma wiki?
+Options: For two hours | **For a short time, until just soft and still green** | For a very long time until brown | Until it turns black
+- If a child answers "For two hours": Overcooked greens lose colour and goodness. Overcooked greens lose their colour and goodness. Cook them only until soft.
+- If a child answers "For a very long time until brown": Overcooked greens lose colour and goodness. Overcooked greens lose their colour and goodness. Cook them only until soft.
 
 ### agriculture4.cook.suit.story
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_SUIT`, outcome `b`, form word, rung 2.
 
-**Q:** Why should green vegetables not be overcooked?
-Options: They become better for you | **They lose their colour and goodness** | They become too hard | They are safer when overcooked
-- If a child answers "They become better for you": Overcooking spoils vegetables. Overcooked greens lose their colour and goodness. Cook them only until soft.
-- If a child answers "They become too hard": Overcooking spoils vegetables. Overcooked greens lose their colour and goodness. Cook them only until soft.
+**Q:** Mama Wanjala fries dry beans in a pan and they stay hard. What should she do?
+Options: Fry them longer | **Boil them for a long time** | Roast them over the fire | Cook them for a minute
+- If a child answers "Fry them longer": Dry beans need boiling. Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.
+- If a child answers "Roast them over the fire": Dry beans need boiling. Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.
 
 ### agriculture4.cook.safe.which
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_SAFE`, outcome `b`, form direct, rung 1.
 
-**Q:** The oil in a pan catches fire. What should be done?
-Options: **Cover it with a lid and call a grown-up** | Fan it hard | Throw a cup of water on it | Pour water on it
-- If a child answers "Fan it hard": Water spreads burning oil. A lid puts it out. Water spreads burning oil. A lid shuts out the air and puts the fire out.
-- If a child answers "Throw a cup of water on it": Water spreads burning oil. A lid puts it out. Water spreads burning oil. A lid shuts out the air and puts the fire out.
+**Q:** How should a hot pot be held?
+Options: With a plastic bag | **With a thick cloth** | With wet hands | With bare hands
+- If a child answers "With a plastic bag": A thick dry cloth protects the hands. A handle that sticks out can be knocked and the hot food spills. Turn it inwards.
+- If a child answers "With wet hands": A thick dry cloth protects the hands. A handle that sticks out can be knocked and the hot food spills. Turn it inwards.
 
 ### agriculture4.cook.safe.story
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_SAFE`, outcome `b`, form word, rung 2.
 
 **Q:** Nancy needs to lift a hot sufuria. What should she use?
-Options: **A thick dry cloth** | A wet cloth | Her bare hands | Her sleeve only
-- If a child answers "A wet cloth": A wet cloth can let the heat through. A handle that sticks out can be knocked and the hot food spills. Turn it inwards.
+Options: Her sleeve only | Her bare hands | A wet cloth | **A thick dry cloth**
+- If a child answers "Her sleeve only": A wet cloth can let the heat through. A handle that sticks out can be knocked and the hot food spills. Turn it inwards.
 - If a child answers "Her bare hands": A wet cloth can let the heat through. A handle that sticks out can be knocked and the hot food spills. Turn it inwards.
 
 ### agriculture4.cook.safe.spot
 
 Skill `FOOD_P.COOKING_FOOD.COOKING_SAFE`, outcome `b`, form spot, rung 3.
 
-**Q:** Joy says what to do about an oil fire. Which step has the mistake?
-Steps: Step 1: I stay calm. / Step 2: I turn off the heat if I can. / **Step 3: I throw a bucket of water on the pan.**
+**Q:** Kiprop tells what to do in a kitchen fire. Which step has the mistake?
+Steps: Step 1: I call a grown-up. / **Step 2: I pour water on the burning oil.** / Step 3: I cover the pan with a lid.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
+- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
 ### agriculture4.hyg.pract.which
 
 Skill `HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES`, outcome `a`, form direct, rung 1.
 
-**Q:** How often should the body be bathed?
-Options: Once a month | **Every day** | Only on special days | Only when it smells
-- If a child answers "Once a month": Bathe every day. Teeth should be brushed in the morning and at night. The body should be bathed every day.
-- If a child answers "Only on special days": Bathe every day. Teeth should be brushed in the morning and at night. The body should be bathed every day.
+**Q:** How often should teeth be brushed?
+Options: Once a week | Only when they hurt | Only on Sundays | **In the morning and at night**
+- If a child answers "Once a week": Brush teeth in the morning and at night. Teeth should be brushed in the morning and at night. The body should be bathed every day.
+- If a child answers "Only when they hurt": Brush teeth in the morning and at night. Teeth should be brushed in the morning and at night. The body should be bathed every day.
 
 ### agriculture4.hyg.pract.story
 
 Skill `HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES`, outcome `a`, form word, rung 2.
 
-**Q:** Mutua sprays perfume instead of bathing before school. What is the best advice?
-Options: Perfume cleans the skin well | Perfume is better than soap | Bathing is only for weekends | **Perfume only hides the smell, so bathe with soap**
-- If a child answers "Perfume cleans the skin well": Perfume does not remove dirt or germs. Perfume only covers a smell. Soap and water take dirt and germs off the body.
-- If a child answers "Perfume is better than soap": Perfume does not remove dirt or germs. Perfume only covers a smell. Soap and water take dirt and germs off the body.
+**Q:** Ali says his hands look clean so he will skip washing before lunch. What is the best reply?
+Options: Right, only dirty hands carry germs | **Germs are too small to see, so wash with soap** | Right, soap spoils the food | Right, clean-looking hands are safe
+- If a child answers "Right, only dirty hands carry germs": You cannot see germs. Germs are too small to see. Wash hands with soap before eating even if they look clean.
+- If a child answers "Right, soap spoils the food": You cannot see germs. Germs are too small to see. Wash hands with soap before eating even if they look clean.
 
 ### agriculture4.hyg.hand.which
 
 Skill `HYGIEN.PERSONAL_HYGIENE.HAND_WASHING`, outcome `b`, form direct, rung 1.
 
 **Q:** After washing, hands are dried with what?
-Options: Your dirty clothes | **A clean cloth or the air** | A dirty rag | The soil
+Options: The soil | **A clean cloth or the air** | Your dirty clothes | A dirty rag
+- If a child answers "The soil": A dirty cloth puts germs back on clean hands. Rub the soap on all parts of the hands for about as long as a short song, then rinse.
 - If a child answers "Your dirty clothes": A dirty cloth puts germs back on clean hands. Rub the soap on all parts of the hands for about as long as a short song, then rinse.
-- If a child answers "A dirty rag": A dirty cloth puts germs back on clean hands. Rub the soap on all parts of the hands for about as long as a short song, then rinse.
 
 ### agriculture4.hyg.hand.story
 
 Skill `HYGIEN.PERSONAL_HYGIENE.HAND_WASHING`, outcome `b`, form word, rung 2.
 
-**Q:** A class washes hands before the school meal. What do they do first?
-Options: **Wet the hands with clean water** | Rub them on the classroom wall | Dry them with a dirty rag | Put on gloves without washing
-- If a child answers "Rub them on the classroom wall": The first step is to wet the hands. Rub the soap on all parts of the hands for about as long as a short song, then rinse.
-- If a child answers "Dry them with a dirty rag": The first step is to wet the hands. Rub the soap on all parts of the hands for about as long as a short song, then rinse.
+**Q:** Brian washes his hands only after eating. When else should he wash?
+Options: **Before eating** | Only after playing | Only on Fridays | Never
+- If a child answers "Only after playing": Wash before eating too. Wash before eating or cooking, and after the toilet, playing outside or touching animals.
+- If a child answers "Only on Fridays": Wash before eating too. Wash before eating or cooking, and after the toilet, playing outside or touching animals.
 
 ### agriculture4.hyg.hand.spot
 
@@ -622,37 +622,37 @@ Steps: Step 1: I wet my hands. / Step 2: I rub soap between my fingers and under
 
 Skill `HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which method removes dry dirt from a floor?
-Options: Washing clothes | **Sweeping** | Dusting | Mopping
-- If a child answers "Washing clothes": Sweeping removes dry dirt with a broom. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
-- If a child answers "Dusting": Sweeping removes dry dirt with a broom. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
+**Q:** Where should rubbish from the house go?
+Options: Into the river | **Into a bin or a rubbish pit** | Anywhere outside, the wind will take it | Under the bed
+- If a child answers "Into the river": Loose rubbish attracts flies and rats. Rubbish goes into a bin or a pit. Loose rubbish attracts flies and rats and spreads sickness.
+- If a child answers "Anywhere outside, the wind will take it": Loose rubbish attracts flies and rats. Rubbish goes into a bin or a pit. Loose rubbish attracts flies and rats and spreads sickness.
 
 ### agriculture4.home.clean.story
 
 Skill `HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS`, outcome `a`, form word, rung 2.
 
-**Q:** Mr Kiprono tells the children to sweep the classroom. What does sweeping remove?
-Options: Wet mud only | Dishes | **Dry dirt** | Germs from hands
-- If a child answers "Wet mud only": Sweeping removes dry dirt. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
-- If a child answers "Dishes": Sweeping removes dry dirt. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
+**Q:** Mama Achieng uses a broom on a dry dusty floor. Which method is this?
+Options: **Sweeping** | Mopping | Washing | Dusting
+- If a child answers "Mopping": A broom sweeps dry dirt. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
+- If a child answers "Washing": A broom sweeps dry dirt. Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.
 
 ### agriculture4.home.order.which
 
 Skill `HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER`, outcome `b`, form direct, rung 1.
 
-**Q:** What is the right tool for sweeping dry dirt?
-Options: A mop | **A broom** | A bucket | A wet cloth
-- If a child answers "A mop": A broom is for dry dirt. Sweep first to lift the dry dirt. Mop last so the floor comes out clean.
-- If a child answers "A bucket": A broom is for dry dirt. Sweep first to lift the dry dirt. Mop last so the floor comes out clean.
+**Q:** Which job comes first when cleaning a room?
+Options: Washing the cloths | **Dusting the shelves** | Mopping the floor | Sweeping the floor
+- If a child answers "Washing the cloths": Dust falls to the floor, so dust first. Dust falls to the floor, so dust the shelves first and sweep the floor after.
+- If a child answers "Mopping the floor": Dust falls to the floor, so dust first. Dust falls to the floor, so dust the shelves first and sweep the floor after.
 
 ### agriculture4.home.order.story
 
 Skill `HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER`, outcome `b`, form word, rung 2.
 
-**Q:** Wanjiru swept the floor and then dusted the shelf. What happened to the floor?
-Options: It became cleaner | Nothing happened | It dried faster | **Dust fell on it again**
-- If a child answers "It became cleaner": Dust the shelves before sweeping. Dust falls to the floor, so dust the shelves first and sweep the floor after.
-- If a child answers "Nothing happened": Dust the shelves before sweeping. Dust falls to the floor, so dust the shelves first and sweep the floor after.
+**Q:** Sam mopped a dusty floor and got mud. What should he have done first?
+Options: Mopped twice | Washed the cloth | **Swept it** | Dusted the shelves
+- If a child answers "Mopped twice": Sweep first, mop last. Sweep first to lift the dry dirt. Mop last so the floor comes out clean.
+- If a child answers "Washed the cloth": Sweep first, mop last. Sweep first to lift the dry dirt. Mop last so the floor comes out clean.
 
 ### agriculture4.home.order.spot
 
@@ -667,37 +667,37 @@ Steps: Step 1: I dust the shelves. / **Step 2: I mop the floor, then sweep.** / 
 
 Skill `HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which footwear protects a farmer in wet muddy ground?
-Options: **Gumboots** | No shoes at all | Flip-flops | Open sandals
-- If a child answers "No shoes at all": Gumboots cover the whole foot. Gumboots cover the whole foot and keep out water, mud, thorns and snakes.
-- If a child answers "Flip-flops": Gumboots cover the whole foot. Gumboots cover the whole foot and keep out water, mud, thorns and snakes.
+**Q:** Which item protects the eyes?
+Options: An apron | Gloves | **Goggles** | Gumboots
+- If a child answers "An apron": Goggles protect the eyes. Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.
+- If a child answers "Gloves": Goggles protect the eyes. Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.
 
 ### agriculture4.ppe.item.story
 
 Skill `HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS`, outcome `a`, form word, rung 2.
 
-**Q:** Mama Rehema sprays the beans with medicine. What should she wear on her face?
-Options: Perfume | Goggles only | **A mask** | Gloves only
-- If a child answers "Perfume": A mask keeps the spray out of the nose and mouth. Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.
-- If a child answers "Goggles only": A mask keeps the spray out of the nose and mouth. Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.
+**Q:** Brenda says protective clothing is just for looks. What is the best reply?
+Options: It is for parties | **It keeps dirt, germs and chemicals off the body** | She is right, it is for looks | It is for hiding
+- If a child answers "It is for parties": Protective clothing protects the body. Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.
+- If a child answers "She is right, it is for looks": Protective clothing protects the body. Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.
 
 ### agriculture4.ppe.care.which
 
 Skill `HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE`, outcome `b`, form direct, rung 1.
 
-**Q:** What is done with a muddy apron after work?
-Options: Throw it away in the bin | Fold it up while it is dirty | **Wash it with soap and water** | Hang it away just as it is
-- If a child answers "Throw it away in the bin": Dirty protective clothing keeps germs and chemicals. Dirty protective clothing keeps germs and chemicals. Wash it after use.
-- If a child answers "Fold it up while it is dirty": Dirty protective clothing keeps germs and chemicals. Dirty protective clothing keeps germs and chemicals. Wash it after use.
+**Q:** Two children want the same dirty gloves. What is best?
+Options: **Wash them first, or use a clean pair** | Wear one glove each, left and right | Share them without washing them | Share them, gloves are just gloves
+- If a child answers "Wear one glove each, left and right": Dirty clothing can pass germs. Dirty protective clothing can pass germs from one child to another. Clean it first.
+- If a child answers "Share them without washing them": Dirty clothing can pass germs. Dirty protective clothing can pass germs from one child to another. Clean it first.
 
 ### agriculture4.ppe.care.story
 
 Skill `HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE`, outcome `b`, form word, rung 2.
 
-**Q:** Faith puts her muddy apron in the cupboard without washing it. What will happen?
-Options: It will clean itself in the dark | Nothing at all will happen to it | It will become as good as new | **It will smell and keep the germs**
-- If a child answers "It will clean itself in the dark": Wash it after use. Dirty protective clothing keeps germs and chemicals. Wash it after use.
-- If a child answers "Nothing at all will happen to it": Wash it after use. Dirty protective clothing keeps germs and chemicals. Wash it after use.
+**Q:** What is the first step in cleaning muddy gumboots?
+Options: Wear them again | Put them away | **Rinse off the mud** | Leave the mud on
+- If a child answers "Wear them again": Remove mud first, then wash. Dirty protective clothing keeps germs and chemicals. Wash it after use.
+- If a child answers "Put them away": Remove mud first, then wash. Dirty protective clothing keeps germs and chemicals. Wash it after use.
 
 ### agriculture4.ppe.care.spot
 
@@ -712,46 +712,46 @@ Steps: Step 1: I use the mask for spraying. / **Step 2: I hand the dirty mask to
 
 Skill `PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which tacking has long stitches on top and short stitches underneath?
-Options: **Uneven tacking** | Back stitch | Diagonal tacking | Even tacking
-- If a child answers "Back stitch": Uneven tacking has long top stitches and short ones underneath. Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.
-- If a child answers "Diagonal tacking": Uneven tacking has long top stitches and short ones underneath. Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.
+**Q:** What are tacking stitches like?
+Options: **Long and loose** | Tiny and strong | Short and tight | Tiny and tight
+- If a child answers "Tiny and strong": They are easy to make and to take out. Tacking stitches are long and loose so they are quick to make and easy to take out.
+- If a child answers "Short and tight": They are easy to make and to take out. Tacking stitches are long and loose so they are quick to make and easy to take out.
 
 ### agriculture4.tack.type.story
 
 Skill `PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** A tailor sews slanting stitches over the layers of a thick cloth. Which tacking is it?
-Options: Uneven tacking | Even tacking | **Diagonal tacking** | Hemming
-- If a child answers "Uneven tacking": Diagonal tacking holds layers flat. Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.
-- If a child answers "Even tacking": Diagonal tacking holds layers flat. Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.
+**Q:** Mama Fatuma tacks two pieces of cloth before sewing. Why?
+Options: To decorate the cloth | To join them for good | **To hold them in place until she sews** | To make the stitches strong
+- If a child answers "To decorate the cloth": Tacking is temporary. Tacking is temporary. It holds the cloth in place until the final stitching is done.
+- If a child answers "To join them for good": Tacking is temporary. Tacking is temporary. It holds the cloth in place until the final stitching is done.
 
 ### agriculture4.tack.use.which
 
 Skill `PRODUC.MAKING_TACKING_STITCHES.TACK_USE`, outcome `b`, form direct, rung 1.
 
-**Q:** Which tacking is best to hold thick or slippery layers flat?
-Options: No tacking | **Diagonal tacking** | Tiny back stitches | Final stitching first
-- If a child answers "No tacking": Diagonal tacking holds layers flat. Tack first to hold the cloth, then sew the final stitching beside it.
-- If a child answers "Tiny back stitches": Diagonal tacking holds layers flat. Long loose stitches in a thread that shows are easy to see and to pull out.
+**Q:** How should tacking be sewn?
+Options: **With long, loose stitches in a thread that shows** | With matching thread so it hides | With very tight stitches | With tiny, strong stitches
+- If a child answers "With matching thread so it hides": Long loose stitches are easy to see and pull out. Long loose stitches in a thread that shows are easy to see and to pull out.
+- If a child answers "With very tight stitches": Long loose stitches are easy to see and pull out. Long loose stitches in a thread that shows are easy to see and to pull out.
 
 ### agriculture4.tack.use.story
 
 Skill `PRODUC.MAKING_TACKING_STITCHES.TACK_USE`, outcome `b`, form word, rung 2.
 
-**Q:** The cloth is thick and slides about. What helps?
-Options: Strong tiny stitches | **Diagonal tacking** | Sewing the seam first | No tacking at all
-- If a child answers "Strong tiny stitches": Diagonal tacking holds layers flat. Long loose stitches in a thread that shows are easy to see and to pull out.
-- If a child answers "Sewing the seam first": Diagonal tacking holds layers flat. Tack first to hold the cloth, then sew the final stitching beside it.
+**Q:** Cynthia tacks with tiny strong stitches in matching thread. What is the problem?
+Options: It is much too loose to hold | Nothing, it is just perfect | The thread is too colourful | **It is hard to see and pull out**
+- If a child answers "It is much too loose to hold": Use long loose stitches in a thread that shows. Long loose stitches in a thread that shows are easy to see and to pull out.
+- If a child answers "Nothing, it is just perfect": Use long loose stitches in a thread that shows. Long loose stitches in a thread that shows are easy to see and to pull out.
 
 ### agriculture4.tack.use.spot
 
 Skill `PRODUC.MAKING_TACKING_STITCHES.TACK_USE`, outcome `b`, form spot, rung 3.
 
-**Q:** Janet tells how she tacked a dress. Which step has the mistake?
-Steps: Step 1: I pinned the layers. / **Step 2: I tacked with tiny strong stitches in matching thread.** / Step 3: I sewed the seam.
+**Q:** Kevin describes finishing a bag. Which step has the mistake?
+Steps: Step 1: I tacked the pieces. / Step 2: I sewed beside the tacking. / **Step 3: I left the tacking in the bag.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
-- If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
+- If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
 ## How to sign a family off
 

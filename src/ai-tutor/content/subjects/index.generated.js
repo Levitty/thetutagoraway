@@ -3,6 +3,7 @@ import agriculture_g4 from './agriculture_g4.js';
 import agriculture_g5 from './agriculture_g5.js';
 import cre_g5 from './cre_g5.js';
 import creativearts_g5 from './creativearts_g5.js';
+import english_g4 from './english_g4.js';
 import english_g5 from './english_g5.js';
 import kiswahili_g5 from './kiswahili_g5.js';
 import science_g4 from './science_g4.js';
@@ -16,6 +17,7 @@ export const ENTRIES = [
   agriculture_g5,
   cre_g5,
   creativearts_g5,
+  english_g4,
   english_g5,
   kiswahili_g5,
   science_g4,
