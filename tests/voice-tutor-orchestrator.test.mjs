@@ -145,8 +145,11 @@ test('the answer\'s class: the model judges the reasoning, the seal holds it to 
   assert.equal(finalClass({ assessment: { class: 'right_unexplained', evidence: 'x' }, marked: wrong('q1', null) }).class, 'partly_right');
   // Right, with a misconception for a reason: partly right.
   assert.equal(finalClass({ assessment: { class: 'misconception', misconception: ADD, evidence: 'x' }, marked: right() }).class, 'partly_right');
-  // A lucky guess at the right answer is the model's call.
-  assert.equal(finalClass({ assessment: { class: 'guess_or_no_attempt', evidence: 'said "maybe 2?"' }, marked: right() }).class, 'guess_or_no_attempt');
+  // A right answer said unsure is an answer, never a guess (12 Nov 2026, run 2026-11-12-1824: "one half?" and "Half,
+  // umm..." were classed guess_or_no_attempt): right_unexplained, with a note.
+  const unsure = finalClass({ assessment: { class: 'guess_or_no_attempt', evidence: 'said "maybe 2?"' }, marked: { ...right(), tentative: true } });
+  assert.equal(unsure.class, 'right_unexplained');
+  assert.match(unsure.note, /seal marked the answer right \(said unsure\)/);
   // No assessment: the code's own reading.
   assert.deepEqual([finalClass({ marked: right(), message: '2' }).class, finalClass({ marked: right(), message: '2' }).source], ['right_unexplained', 'code']);
   assert.equal(finalClass({}), null);

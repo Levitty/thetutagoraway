@@ -607,11 +607,11 @@ test('a stopped turn recovers in context: what was asked, what the child did; ne
   assert.deepEqual(recoverLines({ rule: 'diagnose', marked: { correct: false }, message: 'two sixths' }).lines, ['You said two sixths.', 'Tell me how you got that.']);
   assert.deepEqual(recoverLines({ rule: 'diagnose', marked: { correct: false } }).lines, ['How did you work it out?']);
   assert.deepEqual(recoverLines({ rule: 'stage', openPrompt: 'How many pieces are there now?' }).lines, ['How many pieces are there now?']);
-  assert.deepEqual(recoverLines({ probe: { kind: 'task_checkin' }, doing: 'task', turnIndex: 1, board: [{ cmd: 'fraction_bar', id: 'b', parts: 4 }] }), { lines: ['Take your time with the bar.', 'Tell me when you are done.'], doing: 'task' });
-  assert.deepEqual(recoverLines({ rule: 'lost', openPrompt: 'What fraction is shaded?', board: [{ cmd: 'shape', id: 'c', kind: 'circle', parts: 4 }] }).lines, ['That is okay.', 'How many equal parts is the circle cut into?']);
+  assert.deepEqual(recoverLines({ probe: { kind: 'task_checkin' }, doing: 'task', turnIndex: 1, board: [{ cmd: 'fraction_bar', id: 'b', parts: 4 }] }), { lines: ['Take your time.', 'Tell me when you are done.'], doing: 'task' });
+  assert.deepEqual(recoverLines({ rule: 'lost', openPrompt: 'What fraction is shaded?', board: [{ cmd: 'shape', id: 'c', kind: 'circle', parts: 4 }] }).lines, ['That is okay.', 'Can you put your finger on one part of the circle?']);
   assert.deepEqual(recoverLines({ rule: 'close', found: ['1/2', '2/4'] }).lines, ['Today you found one half and two quarters.', 'What is one thing you will remember?']);
   // A line with no fact to carry changes with the turn: never the same twice running.
-  assert.notDeepEqual(recoverLines({ rule: 'thinking', turnIndex: 4 }).lines, recoverLines({ rule: 'thinking', turnIndex: 5 }).lines);
+  assert.notDeepEqual(recoverLines({ probe: { kind: 'answer_nudge' }, turnIndex: 4 }).lines, recoverLines({ probe: { kind: 'answer_nudge' }, turnIndex: 5 }).lines);
   for (const rule of ['diagnose', 'change', 'question', 'stage', null]) assert.doesNotMatch(recoverLines({ rule, message: 'why?', openPrompt: 'How many?' }).lines.join(' '), /thank you for telling me|good question|let me ask you again/i, `${rule}`);
   assert.deepEqual(recoverLines({ rule: 'open' }).lines, [DISCLOSURE, 'Today we will find fractions that are the same amount.', 'Have you ever shared a chapati with someone?']);
   assert.equal(recoverLines({ rule: 'stop' }).end.cmd, 'end_session');

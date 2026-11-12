@@ -29,6 +29,11 @@
 //   changedFails wrong answers since the representation was changed on this idea (two pictures tried or more): after two,
 //                one worked example is allowed (READING_12NOV.md change 2, the "never tell" exit; MathDial)
 //   examples     worked examples given on this idea (one is allowed; reset when the child understands)
+//   fillers      the child's filler-only replies ("um...") in a row since they last said something; tyt: "Take your time"
+//                has been said since then (once at most)
+//   lastProbe    the turn before was a silence probe (still true across filler-only replies)
+//   slow         the pace state for the silences: the child answers slowly but correctly (a right answer after a silence
+//                probe, or after thinking 8 s or more), until a wrong answer; the page doubles its silence times (silence.js)
 //   wins         successes at that level: understood 1, a bare right answer a half, a hedged one 0; a helped one half that
 //                (PLAN_TO_FOUR.md step 2: one more success at the same level before moving up, habits.js nextLevel)
 //
@@ -40,7 +45,8 @@
 //   wants to stop, bored                offer a short close or a quick game; the second time, close
 //   a silence probe                     Wait and nudge, then Smaller-question hint (silence.js kinds)
 //   "I don't know"                      Recover a lost child or Smaller-question hint
-//   "umm" (thinking aloud)              Wait and nudge: one short line, no new question
+//   "umm" alone (filler only)           not a turn to answer: no model call; the app waits (a hand-back with no words); after
+//                                       two filler-only replies, one "Take your time" at most, never a loop
 //   an answer said as a question        an answer (tentative): say it back, then ask how sure they are, how they know
 //   a question back                     answer it, then hand the question back (it is not a wrong answer)
 //   a wrong answer, second on a changed  the "never tell" exit: ONE worked example, on a different question, with the picture,
@@ -107,6 +113,7 @@ export const newLesson = () => ({
   classes: [], streak: 0, answers: 0, pending: null, prereq: false, turns: 0, probes: 0, min: 0,
   found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0, changedFails: 0, examples: 0,
   cw: 0, tw: 0, lastCw: 0, explain: 0, pre: null,
+  fillers: 0, tyt: false, lastProbe: false, slow: false,
 });
 // The warm-up's first maths question (owner, 12 Nov 2026): 'ask' = it must be asked, 'asked' = waiting for the child's answer, 'done' = answered (right or wrong); null = nothing to check first.
 const PRE_STATES = ['ask', 'asked', 'done'];
@@ -143,6 +150,7 @@ export function cleanLesson(raw) {
   s.stops = int(raw.stops, 0, 20);
   s.cw = int(raw.cw, 0, 50000); s.tw = int(raw.tw, 0, 50000); s.lastCw = int(raw.lastCw, 0, 500); s.explain = int(raw.explain, 0, 50);
   if (PRE_STATES.includes(raw.pre)) s.pre = raw.pre;
+  s.fillers = int(raw.fillers, 0, 20); s.tyt = raw.tyt === true; s.lastProbe = raw.lastProbe === true; s.slow = raw.slow === true;
   s.diagnosing = raw.diagnosing === true;
   if (typeof raw.seal === 'string' && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === 'string' && ID_RE.test(x)))].slice(-MAX_ASKED);
@@ -185,6 +193,11 @@ export function finalClass({ assessment = null, marked = null, message = '' } = 
     const to = marked.misconception ? 'misconception' : 'partly_right';
     note = `assess said ${cls}, but the seal marked the answer wrong: read as ${to}`;
     cls = to; mis = to === 'misconception' ? marked.misconception : null;
+  } else if (marked && marked.correct && cls === 'guess_or_no_attempt') {
+    // A right answer said unsure ("one half?", "maybe two") is an answer: right_unexplained, never a guess (12 Nov 2026,
+    // run 2026-11-12-1824, scenarios 1 and 17).
+    note = `assess said guess_or_no_attempt, but the seal marked the answer right${marked.tentative ? ' (said unsure)' : ''}: read as right_unexplained`;
+    cls = 'right_unexplained'; mis = null;
   } else if (marked && marked.correct && (cls === 'misconception' || cls === 'missing_prerequisite')) {
     note = `assess said ${cls}, but the seal marked the answer right: read as partly_right (right answer, shaky reason)`;
     cls = 'partly_right'; mis = null;
@@ -218,7 +231,7 @@ function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null) });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -248,7 +261,14 @@ function decideCore(s, ctx = {}) {
     return out('probe', PROBE_MOVES[probe.kind], why, { with: [] });
   }
   if (move === 'lost' || (soundsLost(message) && !marked)) return out('lost', ['Recover a lost child', 'Smaller-question hint'], 'the child says they do not know: lower the question, go back to the last thing they got right');
-  if (move === 'filler') return out('thinking', ['Wait and nudge'], 'the child is still thinking aloud ("umm"): one short line such as "Take your time", no new question and no answer, then hand back with the same doing', { with: [] });
+  // Fillers alone ("um...", "eh", "so") are not a turn to answer (12 Nov 2026, run 2026-11-12-1824: the thinking rule
+  // fired on every "um..." and locked the tutor in nudge loops). No model call: the app hands back and waits, until the
+  // child says something or the silence rules fire. After two filler-only replies in a row, one "Take your time", once.
+  if (move === 'filler') {
+    const n = (s.fillers || 0) + 1;
+    const line = n >= 2 && !s.tyt ? 'Take your time.' : null;
+    return out('thinking', ['Wait and nudge'], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : ' with no words'}`, { with: [], authored: true, line, stageMax: s.stage || 'warmup' });
+  }
   // An answer said as a question with no open question to mark it against ("maybe four pieces?"): an answer, said tentatively.
   if (move === 'tentative') return out('tentative', ['Revoice and build', 'Press for reasoning', 'Name what was right'], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask how sure they are, or how they know. Do not answer it for them', { with: ['Celebrate the strategy'] });
   if (move === 'question') return out('question', ['Revoice and build', 'Smaller-question hint', 'Show then hand over'], 'the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them', { with: ['Name what was right'] });
@@ -369,7 +389,8 @@ export function judgeTurn(decision, steps = [], { fromModel = null, authored = f
  * The state after the turn.
  * t: { decision, steps (sent), judged: finalClass() | null, marked, probe, elapsedMin }
  */
-export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false } = {}) {
+export const SLOW_THINK_S = 8; // a reply after this long thinking (or after a silence probe) is a slow one
+export function updateLesson(s0, { decision = null, steps = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null, childWords = 0, preNeeded = false, thinkS = null } = {}) {
   const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...(s0.found || [])] };
   s.turns += 1;
   // Who talks: words said so far by each side, the child's last reply, and the tutor's turns in a row that explained
@@ -377,7 +398,7 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   s.cw = Math.min(50000, (s0.cw || 0) + (probe ? 0 : childWords));
   s.tw = Math.min(50000, (s0.tw || 0) + steps.filter((x) => x.cmd === 'say').reduce((n, x) => n + wordsIn(x.text), 0));
   s.lastCw = Math.min(500, childWords);
-  if (!probe && steps.some((x) => x.cmd === 'say') && !['care', 'care-wait', 'care-return', 'close', 'stop', 'open'].includes(decision?.rule)) s.explain = explainedTurn(steps) ? Math.min(50, (s0.explain || 0) + 1) : 0;
+  if (!probe && steps.some((x) => x.cmd === 'say') && !['care', 'care-wait', 'care-return', 'close', 'stop', 'open', 'thinking'].includes(decision?.rule)) s.explain = explainedTurn(steps) ? Math.min(50, (s0.explain || 0) + 1) : 0;
   // The warm-up's first maths question: required from the hello on, asked once, answered once (right or wrong; wrong
   // sends the lesson down the earlier-skill path).
   if (s0.turns === 0 && preNeeded && s.pre == null) s.pre = 'ask';
@@ -388,9 +409,21 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   if (decision?.rule === 'care-return') s.care = null;
   if (decision?.rule === 'bored') s.stops += 1;
   if (decision?.rule === 'example') s.examples = (s.examples || 0) + 1;
-  if (!probe) s.diagnosing = decision?.rule === 'diagnose';
+  if (!probe && decision?.rule !== 'thinking') s.diagnosing = decision?.rule === 'diagnose';
   s.seal = keepSeal || null;
   if (probe) s.probes += 1;
+  // Fillers in a row, and the one "Take your time" (decide: thinking). Anything the child says starts the count again.
+  if (decision?.rule === 'thinking') { s.fillers = Math.min(20, (s0.fillers || 0) + 1); if (decision.line) s.tyt = true; }
+  else if (!probe && childWords > 0) { s.fillers = 0; s.tyt = false; }
+  // The pace state for the silences: a right answer that came slowly (after a probe, or after SLOW_THINK_S of thinking)
+  // makes the page wait twice as long before its next nudge; a wrong answer ends it.
+  const slowReply = !!s0.lastProbe || (Number.isFinite(thinkS) && thinkS >= SLOW_THINK_S);
+  const rightNow = !!marked?.correct || (!marked && ['understood', 'right_unexplained'].includes(judged?.class));
+  if (!probe && decision?.rule !== 'thinking') {
+    if (marked && !marked.correct) s.slow = false;
+    else if (rightNow && slowReply) s.slow = true;
+  }
+  s.lastProbe = probe ? true : decision?.rule === 'thinking' ? !!s0.lastProbe : false;
   s.min = Math.round(Math.max(0, elapsedMin) * 10) / 10;
   // The answer to the question before this turn.
   if (marked && s.question && marked.ask === s.question.id) s.question = { ...s.question, attempts: s.question.attempts + 1 };

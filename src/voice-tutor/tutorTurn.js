@@ -63,6 +63,18 @@
 //   - a child asked to shade a plain bar or circle is given it with the shade control (shadeOffer);
 //   - a question id used before in the lesson is renamed; the code's own sentences are never held to a move tag.
 //
+// AFTER THE PAID SAMPLE GOT WORSE (12 Nov 2026, runs/2026-11-12-1824: our own layers fought the model). Fewer, better
+// rules; the code never makes a turn worse than the model's own:
+//   - the gate drops a sentence only for a hard fault (an answer given away, harder numbers too soon); for repeat, stock
+//     and unanswered the better of the model's sentence and its rewrite is spoken; overtalk is not in the live gate;
+//   - the code's own lines are built from the board as it is (boardFacts: the figure, its parts, its shading) and the open
+//     question; the fixed fallbacks ("Look at the circle. Which part is shaded?", "You asked ...") are gone;
+//   - a filler alone ("um...") gets no model call: a hand-back, and one "Take your time" after two in a row;
+//   - a sound-alike number ("too", "tree") is read as the number when a count is asked for (spokenAnswer.js hearNumbers);
+//   - a right answer said unsure is right_unexplained, never a guess (orchestrator.js finalClass);
+//   - an offer or a social question is never sealed (commands.js sealable);
+//   - the lesson state carries the pace (slow), which the page's silence times double for (silence.js).
+//
 // prepareTurn() does 1 to 5 and either refuses (a status and an error) or
 // returns go(emit), which streams the turn as events:
 //   { type:'meta', target, prerequisite, marked, picture }
@@ -73,13 +85,13 @@
 // ============================================================================
 import { validateTurn, MAX_SPOKEN_WORDS, wordCap, spokenWords, cleanText, doingOf, LIMITS, DRAWN, MARKS } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions, prerequisitesOf } from './fractions.js';
-import { pacingFlags, shareLow, wordsIn, preFor, askIsOnPre } from './pacing.js';
+import { wordsIn, preFor, askIsOnPre } from './pacing.js';
 import { capCheck } from './session.js';
 import { screenChild, screenAll, careTurn, checkTurnText, answerInQuestion, visibleText, MAX_CHILD_CHARS, ANSWER_REPLY, PRIVATE_LINES } from './guard.js';
 import { stepParser } from './streamSteps.js';
 import { buildRequest, turnContext, MAX_PROBE_WORDS } from './prompt.js';
 import { probeBank, bankLines } from './probes.js';
-import { markSpoken, canonAnswer, speakAnswer, inWords } from './spokenAnswer.js';
+import { markSpoken, canonAnswer, speakAnswer, inWords, hearNumbers, asksForNumber } from './spokenAnswer.js';
 import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
@@ -90,7 +102,7 @@ import { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLess
 import { FRACTION_SKILLS, skillName } from './fractions.js';
 import { cleanPace } from './childVoice.js';
 import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines, turnBrief } from './orchestrator.js';
-import { stepFlags, endFlags, habitContext, confirms, asksReason } from './habits.js';
+import { stepFlags, endFlags, habitContext, confirms, asksReason, boardClaimOf } from './habits.js';
 import { rewriteRequest, rewriteOnce, addUsage } from './gate.js';
 import { exampleLines } from './exampleLookup.js';
 import { cleanProbe } from './silence.js';
@@ -119,54 +131,77 @@ export const ENDED_TURN = [say('Our lesson has stopped for today.'), say('Please
 export const CARE_WAIT = [say('I am here, and there is no hurry.'), say('Say when you want to carry on, or we can stop for today.'), { cmd: 'pause_for_child', expect: 'any', max_wait_s: 60, doing: 'talk' }];
 
 /**
- * What the tutor says when a turn has to be stopped (no usable words, the model failed, a sentence failed its check),
+ * What the tutor says when a turn has to be stopped (no usable words, the model failed, a sentence failed a hard check),
  * in the context of the lesson: what the code decided, what the child just did, the question still open, the board.
  * It never asks the child to say it again (12 Nov 2026: "Sorry, I lost my words... can you say that again?" was 15% of
- * all turns, and once came straight after a disclosure). `saidAny`: the tutor has already spoken this turn.
- * Built from facts, not stock sentences (PLAN_TO_FOUR.md step 0, 12 Nov 2026: the judge counted "Thank you for telling
- * me. How did you get that?", "That is a good question. Look at the board with me. What do you notice?" and "Let me ask
- * you again" as repetition and stock praise): the child's own words, the picture on the board, the open question, the
- * answers found; where a line has no fact to carry, it changes with the turn so it is never the same twice running.
+ * all turns, and once came straight after a disclosure).
+ * Built from facts only (12 Nov 2026, run 2026-11-12-1824: the fixed line "Look at the circle. Which part is shaded?"
+ * played in four scenarios when nothing was shaded, and "Look at the half on the board" when nothing was cut): a line
+ * about the board says only what the board model holds (boardFacts: the figure, its parts, its shading), the question is
+ * the open one (sealed, or the tutor's last spoken one), and where nothing true can be said the child gets the open
+ * question alone. `board` is the board as the child sees it now; `safe(line)` says a line gives no hidden answer away.
  * @returns {{ lines: string[], doing: string, end?: object }}
  */
-export function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, saidAny = false, doing = null, message = '', board = [], turnIndex = 0, found = [], ack = 'yes' } = {}) {
+export function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = '', board = [], turnIndex = 0, found = [], ack = 'yes', safe = () => true } = {}) {
   const said = marked?.correct ? marked.said || null : null;
   const yes = marked?.correct && !saidAny ? [said ? (ack === 'revoice' ? `${cap(said)}, you said.` : `Yes, ${said}.`) : 'Yes, that is right.'] : [];
-  const again = openPrompt && /\?\s*$/.test(openPrompt) ? openPrompt : null;
-  const fig = figureName(board);
+  // The open question: the sealed one, else the tutor's last spoken one. Never one the child has just answered right.
+  // A question that points at something the board does not show ("What do you see in the bar?" with no bar) is not repeated.
+  const q = [marked?.correct ? null : openPrompt, marked?.correct ? null : lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
+  const facts = boardFacts(board);
   const pick = (xs) => xs[Math.abs(Number(turnIndex) || 0) % xs.length];
   const theirs = childBit(message);
+  const fact = factLine(facts, { q, safe });
+  const ask = q || 'What do you think?';
   if (probe) {
     const k = probe.kind;
-    if (k === 'task_checkin') return { lines: pick([['I can see you are working.', 'Say a word if you want help.'], [fig ? `Take your time with the ${fig}.` : 'Take your time.', 'Tell me when you are done.'], ['No hurry at all.', 'Tell me when you are done.']]), doing: doing || 'task' };
-    if (k === 'answer_smaller' || k === 'talk_again') return { lines: [pick(['That is okay.', 'Here is a smaller step.', 'Let us make it easier.']), smallerQuestion(openPrompt, fig)], doing: doing || 'answer' };
-    return { lines: pick([['Take your time.', 'What is your guess?'], ['There is no hurry.', 'What do you think?'], [fig ? `Look at the ${fig} again.` : 'Think about it for a moment.', 'What do you think?']]).filter(Boolean), doing: doing || 'answer' };
+    if (k === 'task_checkin') return { lines: pick([['I can see you are working.', 'Say a word if you want help.'], ['Take your time.', 'Tell me when you are done.'], ['No hurry at all.', 'Tell me when you are done.']]), doing: doing || 'task' };
+    if (k === 'answer_smaller' || k === 'talk_again') return { lines: [pick(['That is okay.', 'Here is a smaller step.', 'Let us make it smaller.']), smallerQuestion(facts, q)], doing: doing || 'answer' };
+    return { lines: [pick(['Take your time.', 'There is no hurry.', 'I am listening.']), ask], doing: doing || 'answer' };
   }
   switch (rule) {
     case 'open': return { lines: [...(saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE]), 'Have you ever shared a chapati with someone?'], doing: 'answer' };
     case 'care-wait': case 'care': return { lines: ['I am listening.', 'Do you want to carry on with our fractions, or stop for today?'], doing: 'talk' };
-    case 'care-return': return { lines: ['I am glad you are here.', `Let us carry on gently.${fig ? ` Look at the ${fig}.` : ''} What do you see?`], doing: 'answer' };
+    case 'care-return': return { lines: ['I am glad you are here.', q ? `Let us carry on gently. ${q}` : 'Shall we carry on gently?'], doing: 'answer' };
     case 'stop': return { lines: [found.length ? `Today you found ${foundList(found)}. Thank you for working with me.` : 'Thank you for working with me today.'], doing: 'talk', end: { cmd: 'end_session', summary: 'The child asked to stop, and the lesson closed early.' } };
     case 'bored': return { lines: ['I hear you.', 'Shall we play a quick guessing game, or stop for today?'], doing: 'talk' };
     case 'close': return { lines: [...(found.length ? [`Today you found ${foundList(found)}.`] : []), 'What is one thing you will remember?'], doing: 'talk' };
     case 'press': return { lines: [...yes, said ? `What made you say ${said}?` : 'How did you know?'], doing: 'answer' };
     case 'fresh-check': case 'move-on': case 'reason': return { lines: [...yes, said ? `Show me ${said} on the board.` : 'Can you show me that on the board?'], doing: 'task' };
     case 'diagnose': case 'change': return { lines: [...(saidAny || !theirs ? [] : [`You said ${theirs}.`]), theirs ? 'Tell me how you got that.' : 'How did you work it out?'], doing: 'answer' };
-    case 'thinking': return { lines: [pick(['Take your time.', 'Go on, I am listening.', 'Keep thinking out loud.'])], doing: doing || 'answer' };
-    case 'lost': return { lines: ['That is okay.', smallerQuestion(openPrompt, fig)], doing: 'answer' };
-    case 'question': return { lines: [...(theirs && !saidAny ? [`You asked ${theirs}.`] : []), fig ? `Point at the part of the ${fig} you mean.` : 'Say a little more about what you mean.'], doing: fig ? 'task' : 'answer' };
-    default: return again ? { lines: [...yes, again], doing: 'answer' } : { lines: [...yes, 'What do you think?'], doing: 'answer' };
+    case 'thinking': return { lines: ['Take your time.'], doing: doing || 'answer' };
+    case 'lost': return { lines: ['That is okay.', smallerQuestion(facts, q)], doing: 'answer' };
+    default: return { lines: [...yes, ...(fact ? [fact] : []), ask], doing: 'answer' };
   }
 }
 const cap = (t) => String(t || '').replace(/^./, (c) => c.toUpperCase());
-// The newest figure on the board, by what the child sees: a circle, a bar, a number line.
-const figureName = (board = []) => {
-  const f = [...(board || [])].reverse().find((b) => b && ['shape', 'fraction_bar', 'figure', 'number_line'].includes(b.cmd));
+/**
+ * The newest figure on the board as the child sees it: { id, name: circle | bar | grid | shape | number line, parts,
+ * shaded } (parts 1 is a whole, not cut), or null when nothing is drawn.
+ */
+export function boardFacts(board = []) {
+  const f = [...(board || [])].reverse().find((b) => b && (['shape', 'fraction_bar', 'number_line'].includes(b.cmd) || (b.cmd === 'figure' && ['fraction', 'numberline'].includes(b.type))));
   if (!f) return null;
-  if (f.cmd === 'number_line' || (f.cmd === 'figure' && f.type === 'numberline')) return 'number line';
-  if (f.cmd === 'shape') return f.kind === 'circle' ? 'circle' : f.kind || 'shape';
-  if (f.cmd === 'figure') return f.params?.shape === 'circle' ? 'circle' : f.params?.shape === 'grid' ? 'grid' : 'bar';
-  return 'bar';
+  if (f.cmd === 'number_line' || f.type === 'numberline') return { id: f.id, name: 'number line', line: true };
+  const p = f.cmd === 'figure' ? f.params || {} : f;
+  const name = f.cmd === 'shape' ? (f.kind === 'circle' ? 'circle' : f.kind || 'shape') : f.cmd === 'fraction_bar' ? 'bar' : p.shape === 'circle' ? 'circle' : p.shape === 'grid' ? 'grid' : 'bar';
+  const parts = name === 'grid' ? (Number(p.rows) || 0) * (Number(p.cols) || 0) || 1 : Math.max(1, Number(p.parts) || 1);
+  const sh = Array.isArray(p.shaded) ? p.shaded.length : Number(p.shaded) || 0;
+  return { id: f.id, name, parts, shaded: Math.max(0, Math.min(sh, parts)) };
+}
+const nw = (n) => inWords(String(n)) || String(n);
+// A sentence that is true of the board: the figure whole, or its parts and what is shaded. No counts when the question
+// asks for one (they are the child's to find), and only a line that gives no hidden answer away.
+const factLine = (facts, { q = null, safe = () => true } = {}) => {
+  if (!facts) return null;
+  if (facts.line) return 'Look at the number line.';
+  const countsOk = !/\b(how many|what fraction|which fraction|how much|count)\b/i.test(String(q || ''));
+  let line;
+  if (facts.parts <= 1) line = `The ${facts.name} is whole: it is not cut yet.`;
+  else if (!countsOk) line = facts.shaded ? `Look at the ${facts.name}.` : `Look at the ${facts.name}: none of it is shaded yet.`;
+  else if (!facts.shaded) line = `The ${facts.name} is cut into ${nw(facts.parts)} parts, and none is shaded yet.`;
+  else line = `The ${facts.name} has ${nw(facts.parts)} parts, and ${nw(facts.shaded)} ${facts.shaded === 1 ? 'is' : 'are'} shaded.`;
+  return safe(line) ? line : `Look at the ${facts.name}.`;
 };
 // The child's words, short, for a sentence that says them back ("You said two sixths.").
 const childBit = (message) => {
@@ -174,16 +209,38 @@ const childBit = (message) => {
   const t = w.slice(0, 6).join(' ').replace(/^(umm*|uh+|hmm+|so|well|oh)[,.\s]+/i, '').toLowerCase();
   return /^[a-z0-9/' ,-]{1,48}$/.test(t) && !/\b(i|you|my|me)\b/.test(t) ? t : null;
 };
-// A smaller question about the picture on the board, from the open question (never its answer).
-const smallerQuestion = (openPrompt, fig) => {
-  const q = String(openPrompt || '').toLowerCase();
-  if (fig && /\bwhat fraction|how much of\b/.test(q)) return `How many equal parts is the ${fig} cut into?`;
-  if (fig && /\bhow many\b/.test(q)) return `Put your finger on the ${fig}. Which part will you count first?`;
-  if (fig) return `Look at the ${fig}. Which part is shaded?`;
-  return 'Which part of it do you know already?';
+// A smaller, easier question about what is really on the board (never its answer, never something not there).
+const smallerQuestion = (facts, q) => {
+  if (!facts) return q && /\?\s*$/.test(q) ? q : 'Which part of it do you know already?';
+  if (facts.line) return 'Where does the number line start?';
+  if (facts.parts <= 1) return `Is the ${facts.name} whole, or is it cut into pieces?`;
+  if (!facts.shaded) return `Can you put your finger on one part of the ${facts.name}?`;
+  return 'Can you put your finger on a shaded part?';
 };
 const foundList = (found) => { const w = found.map((f) => inWords(f) || f).slice(-3); return w.length > 1 ? `${w.slice(0, -1).join(', ')} and ${w[w.length - 1]}` : w[0]; };
 const recoverSteps = (r) => [...r.lines.map(say), r.end || { ...handBack, doing: r.doing }];
+/** The tutor's last spoken question (the last question in its last turn, from the transcript the page sends), or null. */
+export function lastTutorQuestion(history) {
+  const h = Array.isArray(history) ? history : [];
+  let i = h.length - 1;
+  while (i >= 0 && h[i]?.who !== 'tutor') i -= 1;
+  for (; i >= 0 && h[i]?.who === 'tutor'; i -= 1) {
+    const qs = String(h[i].text || '').split(/(?<=[.!?])\s+/).filter((x) => /\?\s*$/.test(x));
+    if (qs.length) return qs[qs.length - 1].trim();
+  }
+  return null;
+}
+/** The questions of the tutor's last `n` turns, newest first (a turn is a run of tutor lines between the child's). */
+export function recentTutorQuestions(history, n = 3) {
+  const h = Array.isArray(history) ? history : [];
+  const out = []; let turns = 0; let inTutor = false;
+  for (let i = h.length - 1; i >= 0 && turns <= n; i -= 1) {
+    if (h[i]?.who !== 'tutor') { inTutor = false; continue; }
+    if (!inTutor) { turns += 1; inTutor = true; if (turns > n) break; }
+    out.push(...String(h[i].text || '').split(/(?<=[.!?])\s+/).filter((x) => /\?\s*$/.test(x)).reverse());
+  }
+  return out;
+}
 
 export const WIND_DOWN = [
   { cmd: 'set_phase', phase: 'wrapup' },
@@ -220,7 +277,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     if (!child || child.parent_id !== user.id) return reply(403, { error: 'That child is not on this account.' });
   }
   const childKey = child ? `${user.id}_c${child.id}` : user.id;
-  const message = String(body?.message ?? '').trim().slice(0, MAX_CHILD_CHARS);
+  let message = String(body?.message ?? '').trim().slice(0, MAX_CHILD_CHARS);
   const turnIndex = Math.max(0, Number(body?.turn_index) || 0);
 
   // 2. Safeguarding, before anything that can return early: the child's message AND a typed answer
@@ -250,21 +307,27 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   let question = null;  // that question's item, answered or not (its prompt, for the recovery and the re-ask check)
   let unanswered = null; // { seal } when the child's words were not an answer: the question stays open
   const sealToken = body?.answer?.seal || (message && lesson0.seal) || null;
-  const response = String((body?.answer?.seal ? body.answer.response : message) ?? '').slice(0, MAX_CHILD_CHARS);
-  if (sealToken && !concern) {
-    const q = await unseal(sealToken, secret, { session: sid, child: childKey, now });
-    if (q) {
-      question = q.item;
-      let r = markSpoken(q.item, response);
-      // Not right against the seal, but the tutor's last spoken question was a different, smaller one ("How many pieces
-      // is the chapati cut into?" while the sealed question asks for the fraction): the child answered that one, so it
-      // is not marked wrong (12 Nov 2026, run 2: right answers to a smaller question were marked wrong and forced Diagnose).
-      if (r.attempt && !r.correct && askedOther(body?.history, q.item.question)) r = { ...r, attempt: false, why: 'answered the tutor\'s newer spoken question' };
-      if (r.attempt) {
-        marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null, tentative: !!r.tentative };
-        if (!r.correct) open = q.item;
-      } else { open = q.item; unanswered = { seal: sealToken, why: r.why }; }
-    }
+  const sealed = sealToken && !concern ? await unseal(sealToken, secret, { session: sid, child: childKey, now }) : null;
+  // A number word heard as its sound-alike ("too", "tree") is read as the number when a number is being asked for: the
+  // sealed question's answer is a number, or one of the tutor's last three turns asked how many (spokenAnswer.js hearNumbers).
+  const lastSpokenQ = lastTutorQuestion(body?.history);
+  // The counting thread stays open across a few turns of nudges ("How many pieces?" ... "Take your time." ... "tree?").
+  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(asksForNumber) || (!!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer))));
+  const heardFrom = numberOpen && hearNumbers(message) !== message ? message : null;
+  if (heardFrom) message = hearNumbers(message);
+  const response = hearNumbers(String((body?.answer?.seal ? body.answer.response : message) ?? '').slice(0, MAX_CHILD_CHARS), { numberOpen });
+  if (sealed) {
+    const q = sealed;
+    question = q.item;
+    let r = markSpoken(q.item, response);
+    // Not right against the seal, but the tutor's last spoken question was a different, smaller one ("How many pieces
+    // is the chapati cut into?" while the sealed question asks for the fraction): the child answered that one, so it
+    // is not marked wrong (12 Nov 2026, run 2: right answers to a smaller question were marked wrong and forced Diagnose).
+    if (r.attempt && !r.correct && askedOther(body?.history, q.item.question)) r = { ...r, attempt: false, why: 'answered the tutor\'s newer spoken question' };
+    if (r.attempt) {
+      marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null, tentative: !!r.tentative };
+      if (!r.correct) open = q.item;
+    } else { open = q.item; unanswered = { seal: sealToken, why: r.why }; }
   }
   // One row in the learner's evidence log per marked answer, written at the end of the turn with the answer's
   // class (only 'understood' is independent). A right answer whose reason came this turn upgrades its earlier row.
@@ -328,7 +391,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const asks = steps.some((x) => x.cmd === 'ask');
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
     const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? 'ended' : 'paused', seal: null }
-      : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre });
+      : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null });
     // The model's evidence is the child's own words; checked again so no hidden answer rides in it.
     const evidence = judged?.evidence && checkTurnText([{ cmd: 'say', text: judged.evidence }], hidden).ok ? judged.evidence : '';
     const tester = {
@@ -336,6 +399,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
       kept: [...judgeTurn(decision, steps, { fromModel, authored: !fromModel }), ...codeNotes], probe,
       unanswered: unanswered ? unanswered.why : null,
+      ...(heardFrom ? { heard: `"${heardFrom.slice(0, 40)}" read as "${message.slice(0, 40)}": a number was asked for` } : {}),
     };
     return { lesson, tester };
   };
@@ -375,7 +439,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   if (concern) { const care = careTurn(concern); careEnds = care.ends; return authored(care.steps, [care.ends ? 'safeguarding-crisis' : 'safeguarding'], null); }
   // After a crisis the lesson has ended; after a care reply, a silence is met by an authored line, never the model.
   if (lesson0.care === 'ended') return authored(ENDED_TURN, ['lesson-ended'], null);
-  if (decision?.authored) return authored(CARE_WAIT, [decision.rule], null);
+  // A filler-only reply ("um...") is not a turn to answer: no model; the page waits (a hand-back with no words, or the one
+  // "Take your time" after two in a row: orchestrator.js decide, rule thinking).
+  if (decision?.authored) return authored(decision.rule === 'thinking' ? [...(decision.line ? [say(decision.line)] : []), { ...handBack, doing: lesson0.doing || 'answer' }] : CARE_WAIT, [decision.rule], null);
 
   // 4. The child's words.
   const screen = message ? screenChild(message) : { ok: true, wantsAnswer: false };
@@ -423,8 +489,11 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   if (!cap.ok) return authored(WIND_DOWN, [cap.reason], spent);
   // The question still open (wrong, or not answered yet): the recovery may put it again. Never one answered right.
   const openPrompt = open?.question || null;
-  const recoverFacts = { message, board, turnIndex, found: [...found], ack: decision?.ack || 'yes' };
-  const recoverFor = (saidAny) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts }));
+  // What a line the code says may rest on: the board as the child sees it now (the turn's own drawings too), the open
+  // question (sealed, else the tutor's last spoken one) and a check that the line gives no hidden answer away.
+  const safeLine = (line) => checkTurnText([say(line)], [open].filter(hiddenOk)).ok;
+  const recoverFacts = (steps = []) => ({ message, board: boardAfter(board, steps), turnIndex, found: [...found], ack: decision?.ack || 'yes', lastQuestion: lastSpokenQ, safe: safeLine });
+  const recoverFor = (saidAny, steps = []) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts(steps) }));
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ['offline'], spent);
 
   // 6. The model, streamed.
@@ -466,9 +535,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage }, closing: ['close', 'stop'].includes(decision?.rule) || lesson0.stage === 'wrapup', example: decision?.rule === 'example',
   });
 
-  // Pacing (12 Nov 2026): when the child has spoken under a quarter of the words, a turn may not run past twice their last reply plus 15.
-  const pctx = { talk: { low: shareLow(lesson0), lastChildWords: lesson0.lastCw || 0 } };
-  const flagsOf = (st, sofar, extra) => [...stepFlags(st, hctx, sofar, { extra }), ...pacingFlags(st, pctx, sofar)];
+  // The overtalk check (pacing.js pacingFlags) is NOT in the live gate (12 Nov 2026, run 2026-11-12-1824: its failed rewrites
+  // dropped whole steps in all five scenarios); the word budget in the brief and the trim hold the length, and the free
+  // yardstick still counts overtalk.
+  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra });
 
   return { status: 200, go: async (emit) => {
     emit(meta());
@@ -509,7 +579,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       guard.push(why);
       if (screen.wantsAnswer && !saidAny) { closed = true; for (const st of [say(ANSWER_REPLY), handBack]) await send(st); return; }
       if (saidAny && asked()) { closed = true; await send(handBackAs(doingNow() || 'answer', sent)); return; }
-      const steps = recoverFor(saidAny);
+      const steps = recoverFor(saidAny, sent);
       closed = true;
       for (const st of steps) await (st.cmd === 'say' ? speak(st) : send(st));
     };
@@ -533,9 +603,13 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         else if (probe) {
           // A probe always ends on a short question (12 Nov 2026, run 2: a probe cut for length left the child in silence),
           // and never the open question again word for word (step 0): the probe's own fact-built question.
-          const r = recoverLines({ probe, openPrompt, doing: lesson0.doing, ...recoverFacts });
+          const r = recoverLines({ probe, openPrompt, doing: lesson0.doing, ...recoverFacts(sent) });
           for (const l of saidAny ? r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1) : r.lines) await speak(say(l));
-        } else if (!nod || saidAny) { const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts }); for (const l of r.lines) await speak(say(l)); }
+        } else if (!nod || saidAny) {
+          // After the model's own words, only the question to hand back; with nothing said, the whole recovery.
+          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts(sent) });
+          for (const l of saidAny ? r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1) : r.lines) await speak(say(l));
+        }
       }
       closed = true;
       await send(handBackAs(doingNow(), sent));
@@ -558,22 +632,28 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       return text ? { ...st, text } : st;
     };
 
-    // THE GATE (step 3): the habits checked before the child hears or sees a step the model wrote. A say that fails is
-    // rewritten once (gate.js) with the reason; the rewrite is checked again; if it fails too, the say is dropped (a
-    // hidden answer: the turn stops and recovers in context, as before). A figure labelled with the answer loses its label;
-    // board writing that gives an answer away is dropped. At most MAX_REWRITES rewrites a turn.
+    // THE GATE (step 3, made gentler 12 Nov 2026 after run 2026-11-12-1824, where its dropped steps and the stock lines
+    // that replaced them made every scenario worse): the habits checked before the child hears or sees a step the model
+    // wrote. The code never makes a sentence worse than the model's own:
+    //   - a sealed answer said (giveaway) or harder numbers too soon (level_jump) are HARD faults: one rewrite, and if the
+    //     rewrite still has a hard fault the sentence is dropped (a hidden answer: the turn stops and recovers in context);
+    //   - repeat, stock and unanswered are SOFT: one rewrite, and the better of the two is spoken (fewer faults, not a
+    //     repeat, then the shorter), with a note; a soft fault never drops a sentence.
+    // A figure labelled with the answer loses its label; board writing that gives an answer away is dropped. At most
+    // MAX_REWRITES rewrites a turn (after that a soft fault is kept and noted).
     const MAX_REWRITES = 2;
     const rewrite = async (st, flags, extra) => {
       if (!callModel || rewrites.length >= MAX_REWRITES) return null;
       const req = rewriteRequest({ model: settings.model, text: st.text, reasons: flags, child: message, brief, names, before: sent.filter((x) => x.cmd === 'say').map((x) => x.text) });
       const r = await rewriteOnce(callModel, req);
       gateUsage = addUsage(gateUsage, r.usage);
-      rewrites.push({ habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why });
+      const rec = { habits: [...new Set(flags.map((f) => f.habit))], ok: false, ms: r.ms, why: r.why };
+      rewrites.push(rec);
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      if (flagsOf(st2, sent, extra).length) { rewrites[rewrites.length - 1].why = 'the rewrite failed its checks too'; return null; }
-      rewrites[rewrites.length - 1].ok = true;
-      return st2;
+      const flags2 = flagsOf(st2, sent, extra);
+      if (flags2.length) rec.why = 'the rewrite failed its checks too'; else rec.ok = true;
+      return { st: st2, flags: flags2 };
     };
     const FIGS = ['shape', 'fraction_bar', 'figure'];
     // @returns the step to go on with, or null when it was dropped (or the turn stopped)
@@ -583,11 +663,19 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join('; ').slice(0, 300);
       if (st.cmd === 'say') {
         const fixed = await rewrite(st, flags, extra);
-        if (fixed) { codeNotes.push(`gate: rewritten (${why})`); if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true; return fixed; }
-        if (flags.some((f) => f.habit === 'giveaway' && /hidden answer/.test(f.reason))) { await stop('answer-leak'); return null; }
-        if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true;
-        drop(st, `gate: ${why}`, flags.some((f) => /inside its own question/.test(f.reason)) ? 'answer-in-question' : 'gate-dropped');
-        return null;
+        if (fixed && !fixed.flags.length) { codeNotes.push(`gate: rewritten (${why})`); if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true; return fixed.st; }
+        if (hardOf(flags).length) {
+          // The hard fault is gone in the rewrite (only a soft one is left): the rewrite is spoken.
+          if (fixed && !hardOf(fixed.flags).length) { codeNotes.push(`gate: rewritten (${why}); the rewrite still ${fixed.flags.map((f) => f.habit).join('+')}, kept`); if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true; return fixed.st; }
+          if (flags.some((f) => f.habit === 'giveaway' && /hidden answer/.test(f.reason))) { await stop('answer-leak'); return null; }
+          if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true;
+          drop(st, `gate: ${why}`, flags.some((f) => /inside its own question/.test(f.reason)) ? 'answer-in-question' : 'gate-dropped');
+          return null;
+        }
+        // Soft faults only: the better of the model's sentence and the rewrite, never nothing.
+        const pickRewrite = !!fixed && !hardOf(fixed.flags).length && softScore(fixed) < softScore({ st, flags });
+        codeNotes.push(`gate: kept the ${pickRewrite ? 'rewrite' : 'model\'s sentence'} (${why})${fixed ? '' : '; no rewrite was made'}`);
+        return pickRewrite ? fixed.st : st;
       }
       if (FIGS.includes(st.cmd) && flags.some((f) => f.habit === 'giveaway')) {
         codeNotes.push(`gate: ${why}; the label was taken off`);
@@ -891,6 +979,13 @@ export function trimToWords(text, budget, { mustSay = false } = {}) {
   const comma = cut.map((x) => /,$/.test(x)).lastIndexOf(true);
   return `${(comma >= 1 ? cut.slice(0, comma + 1) : cut).join(' ').replace(/[,;:]$/, '')}.`;
 }
+
+// The gate's two kinds of fault (above, in prepareTurn): hard ones drop a sentence whose rewrite still has them, soft
+// ones never drop anything.
+export const HARD_HABITS = ['giveaway', 'level_jump'];
+const hardOf = (flags = []) => flags.filter((f) => HARD_HABITS.includes(f.habit));
+/** Lower is better: a repeat counts most, then each fault, then the length (words) as the tie-break. */
+export const softScore = ({ st, flags = [] }) => (flags.some((f) => f.habit === 'repeat') ? 100 : 0) + 10 * flags.length + Math.min(9, wordsIn(st?.text || '') / 10);
 
 const addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
 export const dayStart = (now) => { const d = new Date(now); d.setUTCHours(0, 0, 0, 0); return d.toISOString(); };

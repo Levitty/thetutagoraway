@@ -522,7 +522,32 @@ export function habitContext({ message = '', marked = null, cls = null, history 
   };
 }
 
+// ---------------------------------------------------------------- board claims (a yardstick measure, not in the live gate)
+// A sentence that points the child at something the board does not show (12 Nov 2026, run 2026-11-12-1824: "Look at the
+// circle. Which part is shaded?" with nothing shaded, "the half on the board" on an uncut circle, "the bar" with no bar).
+// Counted by the free yardstick (scripts/evals/app-replay.mjs); the live turn tells the model what the board really shows
+// (commands.js describeItem) and the code's own lines are built from the board (tutorTurn.js boardFacts).
+const SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?)\b/i;
+const SHADE_NONE = /\b(not|none|nothing|no part|no piece|isn'?t|aren'?t|yet to)\b[^.?!]{0,24}\bshaded\b|\bshaded yet\b/i;
+const CUT_CLAIM = /\b(the (two )?(pieces|parts|halves)|the half (on|in|of) the|(chapati|circle|bar) pieces|cut in(to)? (halves|two|pieces|two pieces)|on one side|the line (in|down))\b/i;
+const CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
+/** What a sentence claims about the board that is not there, or null. `board`: the items the child sees. */
+export function boardClaimOf(text, board = []) {
+  const figs = (board || []).filter((b) => b && FIGS.includes(b.cmd));
+  const shaded = figs.some((b) => (shadedOf(b) || 0) > 0);
+  const cut = figs.some((b) => (partsOf(b) || 1) > 1);
+  const bar = figs.some((b) => b.cmd === 'fraction_bar' || (b.cmd === 'figure' && (b.params?.shape || 'bar') === 'bar'));
+  const line = (board || []).some((b) => b && (b.cmd === 'number_line' || (b.cmd === 'figure' && b.type === 'numberline')));
+  for (const s of sentencesOf(text)) {
+    if (!shaded && SHADE_CLAIM.test(s) && !SHADE_NONE.test(s)) return `shading that is not on the board ("${s.slice(0, 70)}")`;
+    if (figs.length && !cut && CUT_CLAIM.test(s) && !CUT_FUTURE.test(s)) return `pieces or halves on a figure that is not cut ("${s.slice(0, 70)}")`;
+    if (!figs.length && !line && /\b(look at the (circle|picture|bar|board)|the (circle|picture|bar)|(pieces|parts|halves) on the (board|picture))\b/i.test(s) && !/\b(draw|let me|i will|here is)\b/i.test(s)) return `a picture when nothing is drawn ("${s.slice(0, 70)}")`;
+    if (!bar && figs.length && /\bthe bar\b/i.test(s)) return `a bar that is not on the board ("${s.slice(0, 70)}")`;
+  }
+  return null;
+}
+
 /** Flags counted once per habit (a turn with two stock phrases is one stock turn). */
 export const habitsOf = (flags) => [...new Set(flags.map((f) => f.habit))];
 
-export default { HABITS, HABIT_NAMES, KEY_STEPS, keyStepsFor, claimsFeelingOrSecret, stepFlags, endFlags, turnFlags, habitContext, readChild, answersChild, likeness, levelOf, winOf, nextLevel, boardAfter, habitsOf, openerOf, asksReason, confirms };
+export default { boardClaimOf, HABITS, HABIT_NAMES, KEY_STEPS, keyStepsFor, claimsFeelingOrSecret, stepFlags, endFlags, turnFlags, habitContext, readChild, answersChild, likeness, levelOf, winOf, nextLevel, boardAfter, habitsOf, openerOf, asksReason, confirms };

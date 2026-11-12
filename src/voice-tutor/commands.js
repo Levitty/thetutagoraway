@@ -160,6 +160,35 @@ const clip = (v, max, name, notes) => {
 };
 const readsAsNumber = (v) => /^\s*\d+(\s*\/\s*\d+)?\s*$/.test(String(v));
 
+// WHAT A QUESTION MAY SEAL (12 Nov 2026, run 2026-11-12-1824, scenario 1: "Do you want to shade it, or shall I?" was asked
+// with expected "me", so the child's right count "Two" was marked wrong against it and the turn was forced to Diagnose).
+// A sealed answer is a real value (a number, a fraction, a comparison or a place word, yes or no to a yes/no question)
+// or one of the question's own options (a choice, or a word the question itself offers: "Is it Asha or Baraka?"). An
+// offer or a social question ("Shall I?", "Do you want to...?") is never sealed: it is asked, and nothing is marked.
+const OFFER_Q = /^\W*(do|would) you (want|like)\b|\bshall (i|we)\b|\bshould i\b|\bare you ready\b|\bcan you (see|hear)( it| me| that| this)?\s*\?|\bis that (ok|okay|all right)\b|\bwho (should|will|wants to)\b|\b(you|me) or (me|you|i)\b|\bor (shall|should|can) i\b/i;
+const YES_NO_Q = /^\W*(is|are|does|do|did|can|could|will|would|was|were|has|have|should)\b/i;
+const VALUE_WORD = new Set(('zero nought one two three four five six seven eight nine ten eleven twelve thirteen fourteen fifteen sixteen twenty hundred '
+  + 'half halves third thirds quarter quarters fourth fourths fifth fifths sixth sixths seventh sevenths eighth eighths ninth ninths tenth tenths twelfth twelfths '
+  + 'nusu robo theluthi moja mbili tatu nne tano sita saba nane tisa kumi whole wholes over out of '
+  + 'numerator numerators denominator denominators fraction fractions multiply times divide add plus minus '
+  + 'same equal equivalent bigger larger greater more smaller less fewer longer shorter top bottom middle left right first second last both neither').split(' '));
+const VALUE_SKIP = new Set(['over', 'out', 'of', 'first', 'second', 'last', 'right', 'left']);
+// A value is in the answer: a numeral, a number or fraction word, or a word that compares or places ("1/2 of the bar",
+// "they ate the same amount", "the top one"). "me", "you", a name or an opinion has none.
+const hasValueWord = (e) => String(e).toLowerCase().replace(/[^a-z0-9/ ]+/g, ' ').split(/\s+/).filter(Boolean)
+  .some((x) => /^\d+(\/\d+)?$/.test(x) || (VALUE_WORD.has(x) && !VALUE_SKIP.has(x)));
+/** May this question seal this answer? (choice questions: the answer must also be one of the choices, checked below) */
+export function sealable(prompt, expected, choices = null) {
+  const p = String(prompt || ''); const e = String(expected ?? '').trim();
+  if (!e || OFFER_Q.test(p)) return false;
+  if (Array.isArray(choices) && choices.some((c) => String(c).trim().toLowerCase() === e.toLowerCase())) return true;
+  if (/^(yes|no)$/i.test(e)) return YES_NO_Q.test(p);
+  if (readsAsNumber(e) || hasValueWord(e) || /^[<>=]$/.test(e)) return true;
+  // One of the question's own options: its words are in the question ("Who gets more, Asha or Baraka?" -> "Asha").
+  const words = (t) => ` ${String(t).toLowerCase().replace(/[^a-z0-9/ ]+/g, ' ').replace(/\s+/g, ' ').trim()} `;
+  return words(p).includes(words(e));
+}
+
 // A shaded value is a count (0..parts) or a list of distinct part numbers (1..parts).
 const shadedOf = (v, parts) => {
   if (isInt(v)) { need(v >= 0 && v <= parts, 'shaded: count out of range'); return v; }
@@ -425,16 +454,22 @@ function checkStep(s0, ctx, notes) {
       }
       // The hidden half. Kept on the server, sealed, never sent to the browser.
       if (s.expected !== undefined && s.expected !== null) out.expected = str(String(s.expected), LIMITS.expected, 'expected', notes);
+      // An offer or a social question, or an answer that is not a value nor one of the question's options: asked, not sealed.
+      let social = false;
+      if (out.expected && !out.bank && !ctx.publicAsk && (out.form === 'choice' ? OFFER_Q.test(out.prompt) : !sealable(out.prompt, out.expected, s.choices))) {
+        notes.push(`ask: "${out.expected}" is not a value nor one of the question's own options, so the question is asked without a sealed answer`);
+        delete out.expected; social = true;
+      } else if (!out.expected && !out.bank && !ctx.publicAsk && out.form !== 'draw' && OFFER_Q.test(out.prompt)) social = true;
       // The browser checks the public half (the server sealed the answer away).
-      if (out.form !== 'draw' && !ctx.publicAsk) need(out.expected || out.bank, 'ask: expected answer missing');
+      if (out.form !== 'draw' && !ctx.publicAsk && !social) need(out.expected || out.bank, 'ask: expected answer missing');
       if (out.form === 'choice' && out.expected) need(out.choices.some((c) => c.toLowerCase() === out.expected.toLowerCase()), 'ask: the expected answer is not one of the choices');
-      if (s.accepts != null) {
+      if (s.accepts != null && !social) {
         // More ways of saying the answer only help the marking: the first LIMITS.accepts are kept (12 Nov 2026, run 2).
         need(Array.isArray(s.accepts), 'ask: accepts is not a list');
         if (s.accepts.length > LIMITS.accepts) notes.push(`ask: ${s.accepts.length} accepts, the first ${LIMITS.accepts} kept`);
         out.accepts = s.accepts.slice(0, LIMITS.accepts).map((a) => str(String(a), LIMITS.expected, 'accepts', notes));
       }
-      if (s.wrong != null) {
+      if (s.wrong != null && !social) {
         need(Array.isArray(s.wrong), 'ask: wrong is not a list');
         if (s.wrong.length > LIMITS.wrong) notes.push(`ask: ${s.wrong.length} wrong answers, the first ${LIMITS.wrong} kept`);
         out.wrong = s.wrong.slice(0, LIMITS.wrong).map((w) => {
@@ -660,7 +695,8 @@ export function describeItem(b) {
     case 'write_text': return `${b.id}: the words "${b.text}"${at}`;
     case 'write_math': return `${b.id}: the maths ${b.expr}${at}`;
     case 'fraction_bar': return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? '' : 's'}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ''}`;
-    case 'shape': return `${b.id}: a ${b.kind || 'shape'}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+    // A figure in one part is a whole, not cut (12 Nov 2026, run 2026-11-12-1824: "1 equal parts" was read as a cut chapati).
+    case 'shape': return Number(b.parts) <= 1 ? `${b.id}: a whole ${b.kind || 'shape'}${at}, not cut into parts, nothing shaded` : `${b.id}: a ${b.kind || 'shape'}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
     case 'number_line': return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? '' : 's'} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(', ')}` : ''}`;
     case 'plot_points': return `${b.id}: a graph${at} with ${(b.points || []).length} points`;
     case 'figure': {

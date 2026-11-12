@@ -3,8 +3,9 @@
 //
 // Every step the model writes is checked by habits.js before the child hears or sees it (tutorTurn.js). A step that
 // passes plays at once, as before. A say that fails is rewritten ONCE by a short model call carrying the reason, the
-// sentence and the turn brief; the rewrite is checked again, and if it also fails the step is dropped and the turn
-// carries on in context. The request is small (no playbook, no transcript: about 400 tokens in, 60 out) so the pause
+// sentence and the turn brief; the rewrite is checked again. If it also fails (12 Nov 2026, after run 2026-11-12-1824):
+// a hard fault (a sealed answer or the board's count said, the rule said for the child, harder numbers too soon) drops the
+// sentence; a soft one (repeat, stock, unanswered) never does: the better of the two sentences is spoken. The request is small (no playbook, no transcript: about 400 tokens in, 60 out) so the pause
 // the child hears on a flagged step stays short; a rewrite that takes longer than REWRITE_TIMEOUT_MS is dropped.
 // In tests the model is a fake: nothing here costs money unless a real callModel is passed.
 // Pure apart from the call itself.

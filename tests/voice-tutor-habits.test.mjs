@@ -273,16 +273,30 @@ test('the gate: a failing say is rewritten once with the reason, checked again, 
   assert.equal(db.usage.find((u) => u.model === settingsWith().model).input_tokens, 4400);
 });
 
-test('the gate: a rewrite that fails its checks too is dropped, and the turn carries on', async () => {
+test('the gate: a soft fault (stock) whose rewrite fails too is never dropped: the better of the two is spoken', async () => {
+  // 12 Nov 2026, run 2026-11-12-1824: dropped steps and the stock lines that replaced them made every scenario worse.
   const callModel = model(
     turnReply([say('Look at the chapati.', 'Revoice and build'), say('Thank you for telling me. Great job.', 'Name what was right'), say('How many parts can you see?', 'Count with the child'), HAND]),
     rewriteReply('Well done, great job.'),
   );
   const r = await turn({ callModel, body: { message: 'I like chapati' } });
   assert.equal(callModel.calls.length, 2);
-  assert.deepEqual(texts(r), ['Look at the chapati.', 'How many parts can you see?']);
+  assert.equal(texts(r).length, 3, 'nothing dropped');
+  assert.deepEqual([texts(r)[0], texts(r)[2]], ['Look at the chapati.', 'How many parts can you see?']);
+  assert.ok(!r.body.guard.includes('gate-dropped'));
+  assert.deepEqual(r.body.dropped, []);
+  assert.match(r.body.tester.kept.join(' '), /gate: kept the (rewrite|model's sentence) \(stock/);
+});
+
+test('the gate: a hard fault (the rule said for the child) whose rewrite fails too is dropped', async () => {
+  const callModel = model(
+    turnReply([say('Look at the two bars.', 'Show then hand over'), say('You multiply the top and the bottom by the same number.', 'Show then hand over'), say('What do you notice?', 'Check for understanding'), HAND]),
+    rewriteReply('Multiply the top and the bottom by the same number.'),
+  );
+  const r = await turn({ callModel, body: { message: 'ok' } });
+  assert.ok(!texts(r).some((t) => /multiply/i.test(t)), texts(r).join(' | '));
   assert.ok(r.body.guard.includes('gate-dropped'));
-  assert.match(r.body.dropped.map((d) => d.reason).join(' '), /gate: stock/);
+  assert.deepEqual(texts(r), ['Look at the two bars.', 'What do you notice?']);
 });
 
 test('the gate: at most two rewrites a turn; a figure labelled with the answer loses its label', async () => {

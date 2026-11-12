@@ -22,15 +22,31 @@ const run = (w, from, to, { onProbe = null } = {}) => {
   return { got, w };
 };
 
-test('answering: a nudge at about 6 s, a smaller question at about 15 s, then quiet listening (never a loop)', () => {
+test('answering: a nudge at about 8 s, a smaller question at about 20 s, then quiet listening (never a loop)', () => {
+  // 12 Nov 2026, run 2026-11-12-1824, scenario 17: probes at 6 s and 15 s nagged a slow, careful child.
   const w = handOver(null, { doing: 'answer', now: 0 });
-  assert.equal(nextProbe(w, 5500), null);
-  assert.equal(nextProbe(w, 6000).kind, 'answer_nudge');
+  assert.equal(nextProbe(w, 7500), null);
+  assert.equal(nextProbe(w, 8000).kind, 'answer_nudge');
   // Each probe is a turn that hands over again a few seconds later; the wait carries on across it.
   const { got } = run(w, 0, 120000, { onProbe: (x, t) => handOver(x, { doing: 'answer', probe: true, now: t + 3000 }) });
   assert.deepEqual(got.map((g) => g[1]), ['answer_nudge', 'answer_smaller'], 'two probes, then HOREB waits and keeps listening');
-  assert.equal(got[0][0], 6000);
-  assert.ok(got[1][0] >= 15000 && got[1][0] - got[0][0] >= 9000, `the smaller question at ${got[1][0]} ms`);
+  assert.equal(got[0][0], 8000);
+  assert.ok(got[1][0] >= 20000 && got[1][0] - got[0][0] >= 11000, `the smaller question at ${got[1][0]} ms`);
+});
+
+test('the pace: a child answering slowly but correctly gets twice the time before each probe', () => {
+  // The lesson state's slow (orchestrator.js) rides on the hand-over; the wait keeps it until a hand-over says otherwise.
+  const w = handOver(null, { doing: 'answer', now: 0, slow: true });
+  assert.equal(nextProbe(w, 15500), null);
+  assert.equal(nextProbe(w, 16000).kind, 'answer_nudge');
+  const { got } = run(w, 0, 200000, { onProbe: (x, t) => handOver(x, { doing: 'answer', probe: true, now: t + 3000 }) });
+  assert.deepEqual(got.map((g) => g[1]), ['answer_nudge', 'answer_smaller']);
+  assert.ok(got[1][0] >= 40000, `the smaller question at ${got[1][0]} ms`);
+  // Kept across hand-overs that do not name it, and across the child's activity; cleared when a hand-over says so.
+  assert.equal(handOver(w, { doing: 'answer', now: 50000 }).slow, true);
+  assert.equal(activity(w, 1000).slow, true);
+  assert.equal(handOver(w, { doing: 'answer', now: 50000, slow: false }).slow, false);
+  assert.equal(nextProbe(handOver(w, { doing: 'answer', now: 0, slow: false }), SILENCE.answer.firstMs).kind, 'answer_nudge');
 });
 
 test('a probe\'s own hand-over never starts the count again; only the child does', () => {
@@ -44,8 +60,8 @@ test('a probe\'s own hand-over never starts the count again; only the child does
   // Speech, ink or typing: the wait starts again from now.
   const a = activity(w, 12000);
   assert.deepEqual([a.since, a.probes], [12000, 0]);
-  assert.equal(nextProbe(a, 17500), null);
-  assert.equal(nextProbe(a, 18000).kind, 'answer_nudge');
+  assert.equal(nextProbe(a, 19500), null);
+  assert.equal(nextProbe(a, 20000).kind, 'answer_nudge');
 });
 
 test('a board task: quiet while the child works, one check-in after about 45 s of nothing', () => {

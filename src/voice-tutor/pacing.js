@@ -6,8 +6,9 @@
 //   talkShare(s)                the child's share of the words so far, from the lesson state (cw, tw), or null while it is early
 //   explainedTurn(steps)        did the tutor explain or show without handing anything to the child (no question, no ask)?
 //   handoverMoves(rule)         the moves allowed after an explaining turn: hand over before any further explaining
-//   pacingFlags(step, ctx, sofar)   the gate's one check on pacing: when the running share is low, a turn's words may not
-//                               exceed twice the child's last reply plus 15
+//   pacingFlags(step, ctx, sofar)   overtalk, a yardstick measure only (12 Nov 2026, run 2026-11-12-1824: in the live gate
+//                               its failed rewrites dropped whole steps): when the running share is low, a turn's words
+//                               over twice the child's last reply plus 15
 //   prereqSkillFor(...)         the warm-up rule: the first maths question is on the weakest prerequisite (earlier skill)
 //
 // The lesson state carries cw (child words), tw (tutor words), lastCw (the child's last reply, in words) and explain

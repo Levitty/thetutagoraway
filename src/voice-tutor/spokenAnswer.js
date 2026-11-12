@@ -40,7 +40,7 @@ const SINGLE = new Set(['half', 'third', 'quarter', 'fourth', 'fifth', 'sixth', 
 // Kiswahili fraction words: nusu (a half), robo (a quarter; robo tatu, three quarters), theluthi (a third; theluthi mbili).
 const SW_DEN = { nusu: 2, robo: 4, theluthi: 3 };
 const NEGATE = new Set(['not', 'isnt', "isn't", 'arent', "aren't", 'never', 'nor']);
-const FILLERS = new Set(['um', 'umm', 'ummm', 'uh', 'uhh', 'uhm', 'hmm', 'hmmm', 'mm', 'mmm', 'er', 'erm', 'ah', 'ahh', 'eh', 'ehh', 'so', 'like', 'well', 'wait', 'oh', 'aaa', 'eee', 'mmh', 'let', 'me', 'think']);
+const FILLERS = new Set(['um', 'umm', 'ummm', 'uh', 'uhh', 'uhm', 'hmm', 'hmmm', 'mm', 'mmm', 'er', 'erm', 'ah', 'ahh', 'aah', 'aahh', 'eh', 'ehh', 'ehhh', 'so', 'like', 'well', 'wait', 'oh', 'aaa', 'eee', 'mmh', 'let', 'me', 'think']);
 const LOST = /\b(i (do ?n[o']?t|dont) know|idk|no idea|not sure|i'?m (lost|confused)|confus\w*|sijui|sielewi|sijaelewa|i give up|i (can'?t|cannot|can not) do (it|this|that))\b/i;
 // Asking to hear or see it again; not "each half is cut again" (12 Nov 2026, run 2: that made answers into questions).
 const AGAIN = /\b((say|show|do|read|ask|tell|explain|draw|see|hear|go over|play)\b[^.?!]{0,24}\bagain|again,? please|one more time|repeat|didn'?t hear|did not hear|can'?t hear|cannot hear|can'?t see|cannot see|did not see|didn'?t see|what did you say|sorry\?)\b/i;
@@ -363,6 +363,30 @@ export function markSpoken(item, text) {
   return no(exact.mis, 'wrong');
 }
 
+// ---------------------------------------------------------------- number words heard as their sound-alikes
+// The microphone hears "two" as "too" and "three" as "tree" (12 Nov 2026, run 2026-11-12-1824, scenario 30: "Umm, too?"
+// was read as a question to the tutor, and "Umm, tree?" became "You asked tree."). They are read as numbers only when a
+// number is being asked for, and only where they stand as the answer: alone, after the hedges and fillers, or before the
+// thing counted ("tree pieces"); never inside a sentence ("I want to go", "for two children", "I ate it").
+const SOUND_ALIKE = { too: 'two', to: 'two', tu: 'two', tree: 'three', for: 'four', fore: 'four', fife: 'five', ate: 'eight', won: 'one' };
+const ANSWER_LEAD = /^(?:[\s,.!?…'"-]*(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+|so|well|oh|ok(?:ay)?|maybe|perhaps|probably|i think|i guess|is it|it is|it'?s|its|i'?m not sure|not sure)\b)*[\s,.!?…'"-]*/i;
+const SOUND_ALIKE_ANSWER = new RegExp(`^(${Object.keys(SOUND_ALIKE).join('|')})(\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|bits?|halves|quarters|thirds|sixths|eighths))?[\\s.?!…'"-]*$`, 'i');
+/**
+ * The child's words with a sound-alike number read as the number, when a number is being asked for (`numberOpen`):
+ * "Umm, too?" -> "Umm, two?". Anything else is returned as it came.
+ */
+export function hearNumbers(text, { numberOpen = true } = {}) {
+  const raw = String(text ?? '');
+  if (!numberOpen || !raw.trim()) return raw;
+  const lead = ANSWER_LEAD.exec(raw)?.[0] || '';
+  const rest = raw.slice(lead.length);
+  const m = SOUND_ALIKE_ANSWER.exec(rest);
+  if (!m) return raw;
+  return `${lead}${SOUND_ALIKE[m[1].toLowerCase()]}${rest.slice(m[1].length)}`;
+}
+/** Does this question ask for a number (a count, or "what number")? */
+export const asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number)\b/i.test(String(q || ''));
+
 /** What a message that is not an answer is doing. */
 export function childMove(text) {
   const r = readAnswer(text);
@@ -403,4 +427,4 @@ export function speakAnswer(said) {
   return f ? (inWords(f.value) || null) : null;
 }
 
-export default { readAnswer, markSpoken, canonAnswer, childMove, isTentative, mainClause, saidClass, keyClass, namesIn, reasonWords, soundsLost, wantsToStop, wantsToCarryOn, speakAnswer, inWords };
+export default { readAnswer, markSpoken, canonAnswer, childMove, hearNumbers, asksForNumber, isTentative, mainClause, saidClass, keyClass, namesIn, reasonWords, soundsLost, wantsToStop, wantsToCarryOn, speakAnswer, inWords };
