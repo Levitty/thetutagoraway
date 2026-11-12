@@ -21,6 +21,8 @@ const PREROLL_FRAMES = 3;
 /** @param {{ getToken: () => Promise<{ token:string, version:string }> }} o */
 export function cartesiaStt({ getToken }) {
   let stream = null;
+  // What the last listen saw, for the tester view: did sound arrive, how loud, did the service answer (12 Nov 2026).
+  const stats = { frames: 0, loudest: 0, socket: 'not opened', said: '', heard: 0, ctx: '' };
   const mic = async () => {
     if (stream && stream.getAudioTracks().some((t) => t.readyState === 'live')) return stream;
     if (!navigator.mediaDevices?.getUserMedia) { const e = new Error('no microphone'); e.kind = 'mic-missing'; throw e; }
@@ -37,6 +39,7 @@ export function cartesiaStt({ getToken }) {
   return {
     name: 'cartesia-ink',
     listens: true,
+    stats,
     async prepare() { await mic(); },
     /** h: { onSpeech(), onPartial(text), onPause(), onFinal(text, seconds), onError(kind), pace() -> { level } } */
     start(h = {}) {
@@ -69,8 +72,13 @@ export function cartesiaStt({ getToken }) {
         try { tok = await getToken(); } catch (e) { fail(e.kind === 'token-refused' ? 'token-refused' : 'listen-failed', e?.message); return; }
         if (done) return;
         try { ctx = new (window.AudioContext || window.webkitAudioContext)({ sampleRate: 16000 }); } catch { ctx = new (window.AudioContext || window.webkitAudioContext)(); }
+        // A context made after an await may start suspended: then no sound ever reaches the detector.
+        try { if (ctx.state !== 'running') await ctx.resume(); } catch { /* reported below */ }
+        Object.assign(stats, { frames: 0, loudest: 0, socket: 'opening', said: '', heard: 0, ctx: ctx.state });
         ws = new WebSocket(sttUrl({ token: tok.token, version: tok.version, rate: Math.round(ctx.sampleRate), model: CHILD_LISTEN.model, language: CHILD_LISTEN.language, maxSilenceSecs: CHILD_LISTEN.maxSilenceSecs, keyterms: keytermsText(MATHS_KEYTERMS) }));
         ws.binaryType = 'arraybuffer';
+        ws.addEventListener('open', () => { stats.socket = 'open'; });
+        ws.addEventListener('close', (ce) => { if (stats.socket !== 'open') stats.socket = `closed before opening (code ${ce.code})`; });
         ws.onerror = () => fail('listen-failed', 'the listening connection failed');
         ws.onclose = (ce) => { if (!done) { if (finals.trim()) finish(); else fail('listen-failed', `listening closed (code ${ce?.code ?? '?'}${ce?.reason ? `, ${ce.reason}` : ''})`); } };
         ws.onmessage = (e) => {
@@ -78,7 +86,7 @@ export function cartesiaStt({ getToken }) {
           const ev = cartesiaSttEvent(m);
           if (!ev) return;
           if (ev.kind === 'partial') { partial = ev.text; h.onPartial?.(`${finals}${partial}`.trim()); }
-          if (ev.kind === 'final') { finals += ev.text; partial = ''; h.onPartial?.(finals.trim()); }
+          if (ev.kind === 'final') { finals += ev.text; stats.heard += 1; stats.said = finals.trim().slice(0, 80); partial = ''; h.onPartial?.(finals.trim()); }
           if (ev.kind === 'flushed' || ev.kind === 'done') finish();
           if (ev.kind === 'error') fail('listen-failed', `listening service: ${String(m.message || m.error || m.title || JSON.stringify(m)).slice(0, 140)}`);
         };
@@ -87,6 +95,7 @@ export function cartesiaStt({ getToken }) {
         node.onaudioprocess = (e) => {
           if (done) return;
           const f = e.inputBuffer.getChannelData(0);
+          stats.frames += 1; stats.loudest = Math.max(stats.loudest, rmsOf(f));
           const bytes = pcm16(f);
           const said = vad.feed(rmsOf(f), (f.length / ctx.sampleRate) * 1000);
           if (said === 'speech' && !speechAt) {
@@ -117,6 +126,7 @@ export function cartesiaStt({ getToken }) {
         let s; try { s = await mic(); } catch { return; }
         if (!live) return;
         ctx = new (window.AudioContext || window.webkitAudioContext)();
+        try { if (ctx.state !== 'running') await ctx.resume(); } catch { /* no barge-in this turn */ }
         src = ctx.createMediaStreamSource(s);
         node = ctx.createScriptProcessor(2048, 1, 1);
         node.onaudioprocess = (e) => { if (live && det.feed(rmsOf(e.inputBuffer.getChannelData(0)))) { stop(); onSpeech?.(); } };
