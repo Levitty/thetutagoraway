@@ -5,6 +5,7 @@ import creativearts_g5 from './creativearts_g5.js';
 import english_g5 from './english_g5.js';
 import kiswahili_g5 from './kiswahili_g5.js';
 import science_g5 from './science_g5.js';
+import socialstudies_g4 from './socialstudies_g4.js';
 import socialstudies_g5 from './socialstudies_g5.js';
 export const ENTRIES = [
   agriculture_g5,
@@ -13,5 +14,6 @@ export const ENTRIES = [
   english_g5,
   kiswahili_g5,
   science_g5,
+  socialstudies_g4,
   socialstudies_g5,
 ];

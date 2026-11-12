@@ -1,0 +1,43 @@
+# Social Studies Grade 4: outcomes a question cannot fully test (12 Nov 2026)
+
+Built from `curriculum/social_studies/g4.json` and the registry entry. Outcome text is KICD’s. **Q** means a question can test it, **A** an attitude (teacher observation or portfolio), **O** a speaking check, **P** a practical or product (drawing, chart, class task), scored by the rubrics planned in PLAN_OBSERVATION_RUBRICS.md. The kind is read from the outcome’s verb.
+
+- Outcomes: 72. By what tests them best: Q 40, A 18, O 2, P 12.
+- Q outcomes with at least one question family: 40. Q outcomes with no family: 0.
+- Outcomes with at least one question family: 41. A P outcome that has a family: the family tests the knowledge half and the practical half still needs the task below.
+- The county is the learner’s own, so the families use general Kenyan facts and made-up counties on maps. The practical tasks use the learner’s real county.
+
+| Outcome | Kind | Has a family | Outcome text | What it needs |
+|---|---|---|---|---|
+| NATURA.COMPASS_DIRECTION.c | A | no | appreciate the use of four cardinal points in everyday life | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| NATURA.LOCATION_AND_SIZE_OF_THE.d | A | no | acknowledge the location and size of the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| NATURA.PHYSICAL_FEATURES_IN_THE.c | P | no | illustrate the main physical features in the county | A drawing, chart or model the learner makes, scored by rubric. The question families test the content it should show. |
+| NATURA.PHYSICAL_FEATURES_IN_THE.d | A | no | appreciate the main physical features in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| NATURA.SEASONS_IN_THE_COUNTY.d | P | no | model weather charts of seasons in the county | A drawing, chart or model the learner makes, scored by rubric. The question families test the content it should show. |
+| NATURA.SEASONS_IN_THE_COUNTY.e | A | no | appreciate the different seasons experienced in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| NATURA.HISTORIC_BUILT_ENVIRONME.c | P | no | participate in conservation activities of the historic built environments within the county | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| NATURA.HISTORIC_BUILT_ENVIRONME.d | A | no | appreciate historic built environments in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| PEOPLE.INTERDEPENDENCE_OF_PEOPL.c | P | no | use chart to illustrate the benefits of interdependence people | A drawing, chart or model the learner makes, scored by rubric. The question families test the content it should show. |
+| PEOPLE.INTERDEPENDENCE_OF_PEOPL.d | A | no | appreciate the interdependence of people in the County | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| PEOPLE.POPULATION_DISTRIBUTION.b | P | no | illustrate the patterns of population distribution in the county | A drawing, chart or model the learner makes, scored by rubric. The question families test the content it should show. |
+| PEOPLE.POPULATION_DISTRIBUTION.c | A | no | appreciate population distribution in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| SOCIAL.ASPECTS_OF_TRADITIONAL_C.b | P | no | illustrate aspects of traditional culture practised in the county | A drawing, chart or model the learner makes, scored by rubric. The question families test the content it should show. |
+| SOCIAL.ASPECTS_OF_TRADITIONAL_C.c | A | no | appreciate the importance of traditional culture in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| SOCIAL.THE_SCHOOL.a | O | no | narrate the history of the school | A speaking check: the learner tells or recites to the teacher, who scores it with the four-level rubric. The school’s own history and motto differ from school to school, so no question can test it. |
+| SOCIAL.THE_SCHOOL.c | O | no | recite the school motto | A speaking check: the learner tells or recites to the teacher, who scores it with the four-level rubric. The school’s own history and motto differ from school to school, so no question can test it. |
+| SOCIAL.THE_SCHOOL.d | A | no | desire to obey the school rules | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| RESOUR.ECONOMIC_ACTIVITIES_IN_T.d | P | no | participate in economic activities in the locality | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| RESOUR.ECONOMIC_ACTIVITIES_IN_T.e | A | no | appreciate the economic activities in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| RESOUR.INDUSTRIES_IN_THE_COUNTY.d | A | no | recognise the role of industries in the county | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| RESOUR.ENTERPRISE_PROJECT_AT_SC.b | P | no | participate in initiating an enterprise project at school | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| CITIZE.GOOD_CITIZENSHIP_IN_SCHO.b | P | no | develop qualities of good citizenship in school | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| CITIZE.GOOD_CITIZENSHIP_IN_SCHO.c | A | no | appreciate qualities of good citizenship in school | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.PEACE.c | A | no | desire to uphold peace in school | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.CHILD_RIGHTS.d | A | no | desire to promote child rights and responsibilities in the school | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.DEMOCRACY_IN_SCHOOL.c | P | no | practise democratic elements in school | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| CITIZE.DEMOCRACY_IN_SCHOOL.d | A | no | appreciate democratic practices in school | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.CHILDREN_S_GOVERNMENT_IN.c | P | no | participate in Children’s Government in school | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| CITIZE.CHILDREN_S_GOVERNMENT_IN.d | A | no | respect Children’s Government in school | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.COMMUNITY_LEADERSHIP.c | P | yes (knowledge half) | demonstrate qualities of good leadership in the community | Teacher observation over the term (checklist) or a class task such as a role play or a school project. The question families test the knowledge behind it. |
+| CITIZE.COMMUNITY_LEADERSHIP.d | A | no | appreciate good leadership in the community | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
+| CITIZE.THE_COUNTY_GOVERNMENTS_I.d | A | no | appreciate the County Government in Kenya | Teacher observation or a portfolio entry (PLAN_OBSERVATION_RUBRICS.md). A typed or tapped answer cannot show a feeling or a habit. |
