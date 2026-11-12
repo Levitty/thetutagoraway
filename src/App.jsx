@@ -6112,7 +6112,9 @@ const ROUTES = new Set(['consulting', 'tutors', 'teach', 'why', 'dashboard', 'ai
   // The HOREB live tutor prototype exists only in a build with VITE_VOICE_TUTOR=1 (.env.production sets it; admins and the server allowlist only).
   ...(import.meta.env.VITE_VOICE_TUTOR === '1' ? ['voice-tutor'] : [])]);
 const pageFromPath = (pathname) => {
-  const path = String(pathname || '').replace(/^\//, '');
+  // A link pasted from WhatsApp or a message often carries the sentence's full stop or a trailing slash
+  // ("tutagora.com/voice-tutor."): forgive it rather than fall back to the home page (12 Nov 2026).
+  const path = String(pathname || '').replace(/^\//, '').replace(/[./,;:!?)]+$/, '');
   if (ROUTES.has(path)) return path;
   if (path.startsWith('t/')) return 'tablet-link';
   return 'home';
