@@ -7,6 +7,7 @@ import kiswahili_g5 from './kiswahili_g5.js';
 import science_g4 from './science_g4.js';
 import science_g5 from './science_g5.js';
 import science_g6 from './science_g6.js';
+import socialstudies_g4 from './socialstudies_g4.js';
 import socialstudies_g5 from './socialstudies_g5.js';
 export const ENTRIES = [
   agriculture_g5,
@@ -17,5 +18,6 @@ export const ENTRIES = [
   science_g4,
   science_g5,
   science_g6,
+  socialstudies_g4,
   socialstudies_g5,
 ];

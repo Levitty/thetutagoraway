@@ -1,0 +1,1442 @@
+{
+ "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_OPPOSITE": {
+  "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+  "error": "Gives the wrong opposite (thinks the opposite of north is east or west).",
+  "example": {
+   "question": "Which point is opposite north on a compass?",
+   "wrong_answer": "East",
+   "correct_answer": "South"
+  },
+  "cause": "The child reads the four points as a list, not as two straight lines crossing.",
+  "reveals": "Offer \"East\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw a plus sign: north at the top, south at the bottom, east and west across. Ask for the point straight across.",
+  "feedback": "North and south are opposite, and east and west are opposite. The opposite point is straight across the compass.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_LEFT_RIGHT": {
+  "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+  "error": "Swaps east and west (thinks that facing north, east is on the left).",
+  "example": {
+   "question": "You face north. Which side is east on?",
+   "wrong_answer": "The left hand",
+   "correct_answer": "The right hand"
+  },
+  "cause": "The child pictures the compass on a page instead of standing in it.",
+  "reveals": "Offer \"The left hand\" next to the right answer and ask the question again in a new context.",
+  "help": "Have the child stand and face north, stretch out the right arm and say \"east\". Then turn and do it again.",
+  "feedback": "Face north and east is on your right hand. West is on your left hand.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS.M_CD_SUN": {
+  "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS",
+  "error": "Thinks the sun rises in the west and sets in the east, or rises in the north.",
+  "example": {
+   "question": "In which direction does the sun rise?",
+   "wrong_answer": "The west",
+   "correct_answer": "The east"
+  },
+  "cause": "The child remembers the sun being high or low but not the side.",
+  "reveals": "Offer \"The west\" next to the right answer and ask the question again in a new context.",
+  "help": "Watch the sun rise on a school morning and name the side; use it to find east and then the other points.",
+  "feedback": "The sun rises in the east and sets in the west.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_REVERSE": {
+  "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS",
+  "error": "Gives the direction the wrong way round (school is north of the market, so says the market is north of the school).",
+  "example": {
+   "question": "A school is north of a market. In which direction is the market from the school?",
+   "wrong_answer": "North",
+   "correct_answer": "South"
+  },
+  "cause": "The child repeats the word in the sentence and does not turn round to the other place.",
+  "reveals": "Offer \"North\" next to the right answer and ask the question again in a new context.",
+  "help": "Put two objects on the desk. Ask \"from this one to that one\", then swap and ask again.",
+  "feedback": "If the school is north of the market, then the market is south of the school. Turn the direction round.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS.M_CD_TURN": {
+  "skill": "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS",
+  "error": "Gets the direction wrong after a turn (facing east and turning left gives south).",
+  "example": {
+   "question": "Wanjiku faces east and turns left. Which direction does she face now?",
+   "wrong_answer": "South",
+   "correct_answer": "North"
+  },
+  "cause": "The child turns the wrong way or does not picture facing the direction.",
+  "reveals": "Offer \"South\" next to the right answer and ask the question again in a new context.",
+  "help": "Have the child stand and face a wall called east, then turn a quarter turn left and name the new wall.",
+  "feedback": "Facing east, a turn to the left faces north. A turn to the right would face south.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_SUB_BIGGER": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+  "error": "Thinks a sub-county is bigger than a county.",
+  "example": {
+   "question": "Which is bigger, a county or a sub-county?",
+   "wrong_answer": "A sub-county",
+   "correct_answer": "A county"
+  },
+  "cause": "The child knows both names and not which holds the other.",
+  "reveals": "Offer \"A sub-county\" next to the right answer and ask the question again in a new context.",
+  "help": "Use boxes inside boxes: the county box holds several sub-county boxes, which hold wards.",
+  "feedback": "A county is divided into sub-counties. Many sub-counties make one county, so the county is bigger.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_ORDER": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+  "error": "Puts county, sub-county and ward in the wrong order of size.",
+  "example": {
+   "question": "Which is the smallest unit: county, sub-county or ward?",
+   "wrong_answer": "Sub-county",
+   "correct_answer": "Ward"
+  },
+  "cause": "The child has heard the three words but not learned how they nest.",
+  "reveals": "Offer \"Sub-county\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the three nested boxes and label them from the outside in; then ask for smallest and largest.",
+  "feedback": "A county is the biggest. It has sub-counties, and each sub-county has wards. A ward is the smallest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY.M_LS_NEIGHBOUR_SUB": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY",
+  "error": "Thinks a neighbouring county is a sub-county of the learner's own county.",
+  "example": {
+   "question": "Kalia County has a neighbour called Mwangaza County. Is Mwangaza one of the sub-counties of Kalia?",
+   "wrong_answer": "Yes, it is a sub-county of Kalia",
+   "correct_answer": "No, it is a separate county next to Kalia"
+  },
+  "cause": "The child treats everything nearby as inside the home county.",
+  "reveals": "Offer \"Yes, it is a sub-county of Kalia\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw two county boxes side by side and a boundary line between them; sub-counties are drawn inside one box only.",
+  "feedback": "A neighbouring county is a different county. Sub-counties are only the parts inside one county.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_DIR_REVERSE": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+  "error": "Reverses the direction of a neighbour.",
+  "example": {
+   "question": "On a map, Kitale County lies north of Meru County. In which direction is Meru County from Kitale County?",
+   "wrong_answer": "North",
+   "correct_answer": "South"
+  },
+  "cause": "The child repeats the word in the sentence and does not turn round.",
+  "reveals": "Offer \"North\" next to the right answer and ask the question again in a new context.",
+  "help": "Mark two dots on paper and ask the direction from each dot to the other.",
+  "feedback": "If Kitale lies north of Meru, then Meru lies south of Kitale.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION.M_LS_NOT_TOUCHING": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION",
+  "error": "Calls a county a neighbour when it does not share a boundary with the county.",
+  "example": {
+   "question": "Which county is a neighbour of Kalia County, with a shared boundary?",
+   "wrong_answer": "A county two counties away",
+   "correct_answer": "The county whose boundary touches Kalia"
+  },
+  "cause": "The child thinks near means next to.",
+  "reveals": "Offer \"A county two counties away\" next to the right answer and ask the question again in a new context.",
+  "help": "Use a described map: trace the boundary of the county and name only the counties that touch it.",
+  "feedback": "A neighbour shares a boundary with the county. A county with another county between is not a neighbour.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_POP_SIZE": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+  "error": "Thinks the county with more people is the bigger county.",
+  "example": {
+   "question": "County A has 3,000 square kilometres and 900,000 people. County B has 12,000 square kilometres and 400,000 people. Which county is larger in size?",
+   "wrong_answer": "County A, because it has more people",
+   "correct_answer": "County B, because its area is larger"
+  },
+  "cause": "The child mixes up how big a place is with how many people live there.",
+  "reveals": "Offer \"County A, because it has more people\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a large empty field and a small crowded classroom: which has more space and which has more people?",
+  "feedback": "Size is the area of the land in square kilometres. The number of people tells how crowded it is, not how big it is.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE.M_LS_DIGIT": {
+  "skill": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE",
+  "error": "Compares numbers by their first digit instead of their size (thinks 800 is more than 3,000 because 8 is more than 3).",
+  "example": {
+   "question": "County A is 800 square kilometres and County B is 3,000 square kilometres. Which is larger?",
+   "wrong_answer": "County A",
+   "correct_answer": "County B"
+  },
+  "cause": "The child looks at the first digit and not at the number of digits.",
+  "reveals": "Offer \"County A\" next to the right answer and ask the question again in a new context.",
+  "help": "Write the two numbers in a place value table and compare the thousands first.",
+  "feedback": "Compare the whole numbers. 3,000 is more than 800, so County B has the larger area.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_HILL_MOUNTAIN": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+  "error": "Thinks a hill and a mountain are the same or a hill is higher.",
+  "example": {
+   "question": "Which is higher, a hill or a mountain?",
+   "wrong_answer": "A hill",
+   "correct_answer": "A mountain"
+  },
+  "cause": "The child uses the two words for any raised ground.",
+  "reveals": "Offer \"A hill\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare Mount Kenya with a small hill near school: describe the height of each.",
+  "feedback": "A mountain is much higher than a hill. A hill is lower and usually rounded.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_RIVER_LAKE": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+  "error": "Mixes up a river and a lake.",
+  "example": {
+   "question": "Which one is water that flows along in a channel?",
+   "wrong_answer": "A lake",
+   "correct_answer": "A river"
+  },
+  "cause": "The child knows both have water.",
+  "reveals": "Offer \"A lake\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: does the water stay in one place or move on to the sea or a lake?",
+  "feedback": "A river flows along a channel. A lake is water that stays in a hollow, with land all round it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS.M_PH_PLAIN_VALLEY": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS",
+  "error": "Mixes up a plain and a valley (thinks a valley is wide flat land).",
+  "example": {
+   "question": "Which is wide flat land?",
+   "wrong_answer": "A valley",
+   "correct_answer": "A plain"
+  },
+  "cause": "The child thinks low land is flat land.",
+  "reveals": "Offer \"A valley\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a bowl and a flat table: a valley lies between high land on both sides, a plain is wide and flat.",
+  "feedback": "A plain is wide, flat land. A valley is low land between hills or mountains.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_NO_USE": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE",
+  "error": "Thinks physical features have no use for people (only beautiful).",
+  "example": {
+   "question": "Why is a river important to people near it?",
+   "wrong_answer": "It is only nice to look at",
+   "correct_answer": "It gives water for drinking, farming and fish"
+  },
+  "cause": "The child sees the features as scenery.",
+  "reveals": "Offer \"It is only nice to look at\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask each learner to name one thing in the day that comes from water or land near home.",
+  "feedback": "Physical features are useful. Rivers give water and fish, mountains bring rain and visitors, plains give farmland.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_WRONG_USE": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE",
+  "error": "Matches a feature to a use it does not have (farming on a lake, fishing on a plain).",
+  "example": {
+   "question": "Which feature is best for fishing?",
+   "wrong_answer": "A plain",
+   "correct_answer": "A lake"
+  },
+  "cause": "The child guesses from the word and not from what the feature is.",
+  "reveals": "Offer \"A plain\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each feature to what it is made of: water, high ground, flat land. Then ask what each can give.",
+  "feedback": "Fish live in water, so lakes, rivers and the sea give fish. Plains are flat dry land, good for farming.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE.M_PH_HARM_ONLY": {
+  "skill": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE",
+  "error": "Thinks mountains and valleys only get in the way and do no good.",
+  "example": {
+   "question": "How does a mountain help people?",
+   "wrong_answer": "It only blocks the road",
+   "correct_answer": "It brings rain, rivers and visitors"
+  },
+  "cause": "The child sees only the difficulty of travelling over a mountain.",
+  "reveals": "Offer \"It only blocks the road\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace a river from its source on a mountain to the farms below.",
+  "feedback": "Mountains help us. Rain falls on them and feeds rivers, they grow tea and trees, and visitors come to climb them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_FOREIGN_NAMES": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES",
+  "error": "Uses spring, summer, autumn and winter as the seasons of the county.",
+  "example": {
+   "question": "Which of these is a season in our county?",
+   "wrong_answer": "Autumn",
+   "correct_answer": "The rainy season"
+  },
+  "cause": "The child has met the four names in picture books from other lands.",
+  "reveals": "Offer \"Autumn\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the child to name the weather of each month of the school year, then give each stretch its own name.",
+  "feedback": "Our seasons are hot, cold, dry and rainy. Autumn and winter belong to places far from the equator.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_COLD_RAIN": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES",
+  "error": "Mixes up the seasons (thinks the rainy season is the hot season, or cold means rain).",
+  "example": {
+   "question": "When there is little rain and no clouds for many days, which season is it?",
+   "wrong_answer": "The rainy season",
+   "correct_answer": "The dry season"
+  },
+  "cause": "The child names a season by one feature and not by the whole.",
+  "reveals": "Offer \"The rainy season\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a weather chart over a week and name the season from what it shows.",
+  "feedback": "No rain for many days is the dry season. Long rains come about March to May and short rains about October to December.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES.M_SE_DAY_SEASON": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES",
+  "error": "Treats one day of weather as a whole season.",
+  "example": {
+   "question": "It rained on Tuesday. What can we say?",
+   "wrong_answer": "It is now the rainy season",
+   "correct_answer": "It rained that day, and a season lasts for many weeks"
+  },
+  "cause": "The child does not tell weather of a day from a season.",
+  "reveals": "Offer \"It is now the rainy season\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the weather was every day of one month, then name the season.",
+  "feedback": "One rainy day is weather. A season is the weather that comes for many weeks, month after month.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_PLANT_DRY": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES",
+  "error": "Thinks farmers should plant when the ground is dry.",
+  "example": {
+   "question": "When do farmers plant maize?",
+   "wrong_answer": "In the dry season",
+   "correct_answer": "When the rains begin"
+  },
+  "cause": "The child does not link the seeds to the need for water.",
+  "reveals": "Offer \"In the dry season\" next to the right answer and ask the question again in a new context.",
+  "help": "Plant two cups of beans, water one, and compare after a week.",
+  "feedback": "Farmers plant when the rains begin, so that the seeds get water. They harvest and dry the crop in the dry season.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_ACT_MISMATCH": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES",
+  "error": "Matches a season to an activity that does not fit it (warm sweaters in the hot season).",
+  "example": {
+   "question": "What do people wear in the cold season?",
+   "wrong_answer": "Light cotton shirts only",
+   "correct_answer": "Warm clothes such as sweaters"
+  },
+  "cause": "The child does not think of the weather of the season.",
+  "reveals": "Offer \"Light cotton shirts only\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the child wears on a cold morning and what on a hot afternoon.",
+  "feedback": "In the cold season people wear sweaters and jackets. In the hot season they wear light clothes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES.M_SE_NO_EFFECT": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES",
+  "error": "Thinks seasons make no difference to what people do.",
+  "example": {
+   "question": "Do seasons change what people do?",
+   "wrong_answer": "No, people do the same all year",
+   "correct_answer": "Yes, farmers, traders and travellers change what they do"
+  },
+  "cause": "The child lives in a town and does not see farming.",
+  "reveals": "Offer \"No, people do the same all year\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what changes at home when the rains start: crops, roads, clothes, school trips.",
+  "feedback": "Seasons change many things: when farmers plant and harvest, what people wear, sell and how they travel.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_RUN_ACROSS": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+  "error": "Thinks it is safe to run across a wet road to get out of the rain.",
+  "example": {
+   "question": "It is raining. What should Njeri do at the road?",
+   "wrong_answer": "Run across fast to get out of the rain",
+   "correct_answer": "Wait at the side and cross only when the road is clear"
+  },
+  "cause": "The child thinks of being dry, not of slippery roads and poor sight.",
+  "reveals": "Offer \"Run across fast to get out of the rain\" next to the right answer and ask the question again in a new context.",
+  "help": "Role play crossing in the rain: slow, look both ways, hold a friend's hand.",
+  "feedback": "Never run across a road. Rain makes roads slippery and drivers cannot see well. Wait and cross when it is clear.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_FLOOD_CROSS": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+  "error": "Thinks it is safe to cross flooded water if it looks shallow.",
+  "example": {
+   "question": "A road has water flowing across it after heavy rain. What should you do?",
+   "wrong_answer": "Cross if the water looks shallow",
+   "correct_answer": "Do not cross: go back and tell an adult"
+  },
+  "cause": "The child cannot judge how deep or how fast water is.",
+  "reveals": "Offer \"Cross if the water looks shallow\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of a drift in flood; ask what is hidden under the water.",
+  "feedback": "Never cross flooded water. It may be deep, strong and hide holes. Wait or find another way with an adult.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD.M_SE_RAIN_SAFER": {
+  "skill": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD",
+  "error": "Thinks rain makes the road safer or that drivers should speed up to get out of the rain.",
+  "example": {
+   "question": "How should a driver drive in heavy rain?",
+   "wrong_answer": "Faster, to get out of the rain",
+   "correct_answer": "Slowly, because the road is slippery and it is hard to see"
+  },
+  "cause": "The child links getting home sooner with safety.",
+  "reveals": "Offer \"Faster, to get out of the rain\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how long it takes to stop on a slippery floor when you run.",
+  "feedback": "Rain makes roads slippery, so a vehicle takes longer to stop. A driver must go slowly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_MUSEUM_MONUMENT": {
+  "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS",
+  "error": "Mixes up a museum and a monument.",
+  "example": {
+   "question": "Which place keeps and shows old objects and records?",
+   "wrong_answer": "A monument",
+   "correct_answer": "A museum"
+  },
+  "cause": "The child treats all old built places as the same thing.",
+  "reveals": "Offer \"A monument\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: where do you go inside to see old tools and pictures, and what do you pass in a town square that remembers a person?",
+  "feedback": "A museum keeps and shows old objects. A monument is a structure built to remember a person or an event.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_NEW_IS_HISTORIC": {
+  "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS",
+  "error": "Thinks any big or famous new building is a historic built environment.",
+  "example": {
+   "question": "Which is a historic built environment?",
+   "wrong_answer": "A new shopping mall",
+   "correct_answer": "An old fort that still stands"
+  },
+  "cause": "The child thinks big or famous means historic.",
+  "reveals": "Offer \"A new shopping mall\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask for the date of each place and what it tells about the past.",
+  "feedback": "A historic place is old and tells about the past. A new mall is not historic, however big it is.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS.M_HB_CENTRE_MARKET": {
+  "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS",
+  "error": "Thinks a cultural centre is a market or a shop.",
+  "example": {
+   "question": "What is a cultural centre?",
+   "wrong_answer": "A place to buy and sell goods",
+   "correct_answer": "A place that shows the way of life of communities"
+  },
+  "cause": "The child links \"centre\" with a shopping centre.",
+  "reveals": "Offer \"A place to buy and sell goods\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what you might see and do at a cultural centre: dances, houses, crafts, food.",
+  "feedback": "A cultural centre shows the traditions of communities, such as dance, food, dress and crafts.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_OLD_USELESS": {
+  "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+  "error": "Thinks old places should be pulled down because they are old.",
+  "example": {
+   "question": "An old fort is crumbling. What should the county do?",
+   "wrong_answer": "Pull it down and build a new shop",
+   "correct_answer": "Repair and protect it because it tells our history"
+  },
+  "cause": "The child values only what is new.",
+  "reveals": "Offer \"Pull it down and build a new shop\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a grandmother's stories give that a new book does not, then link this to old places.",
+  "feedback": "Historic places cannot be rebuilt once they are gone. They teach history and keep our identity, so we protect them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE.M_HB_MONEY_ONLY": {
+  "skill": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE",
+  "error": "Thinks historic places matter only for the money from visitors.",
+  "example": {
+   "question": "Why do we keep museums and monuments?",
+   "wrong_answer": "Only to earn money from visitors",
+   "correct_answer": "To learn about the past and keep our identity, and visitors also bring income"
+  },
+  "cause": "The child sees one reason where there are several.",
+  "reveals": "Offer \"Only to earn money from visitors\" next to the right answer and ask the question again in a new context.",
+  "help": "Brainstorm three reasons for keeping a place; mark which are about learning and which about income.",
+  "feedback": "Visitors bring income, but the first reasons are learning about the past and keeping the identity of the community.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_SELF_SUFFICIENT": {
+  "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+  "error": "Thinks a family can make or grow everything it needs.",
+  "example": {
+   "question": "Can one family grow, make and do everything it needs?",
+   "wrong_answer": "Yes, if it works hard",
+   "correct_answer": "No, so people depend on each other"
+  },
+  "cause": "The child sees one family in the home, not the work of others behind each thing.",
+  "reveals": "Offer \"Yes, if it works hard\" next to the right answer and ask the question again in a new context.",
+  "help": "List what a family uses in one day and who made each thing.",
+  "feedback": "No family can do everything. People depend on farmers, traders, health workers and many others.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_ONE_WAY": {
+  "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+  "error": "Thinks only one side depends on the other (the shopkeeper does not need the farmer).",
+  "example": {
+   "question": "A farmer sells vegetables to a shopkeeper. Who needs the other?",
+   "wrong_answer": "Only the farmer needs the shopkeeper",
+   "correct_answer": "Both need each other"
+  },
+  "cause": "The child sees the farmer as the one with the problem.",
+  "reveals": "Offer \"Only the farmer needs the shopkeeper\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the shopkeeper sells if no farmers sell to him, and what the farmer does if there is no shop.",
+  "feedback": "Each needs the other. The farmer needs a market, and the shopkeeper needs goods to sell.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS.M_ID_SERVICE_MATCH": {
+  "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS",
+  "error": "Matches a worker or place to the wrong service (a hospital for food, a church for medicine).",
+  "example": {
+   "question": "What does a hospital give people?",
+   "wrong_answer": "Food to eat",
+   "correct_answer": "Care for the sick"
+  },
+  "cause": "The child guesses from the building and not from what it does.",
+  "reveals": "Offer \"Food to eat\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a matching chart of five places and what they give.",
+  "feedback": "A hospital gives care for the sick. A farm gives food, and a place of worship gives spiritual guidance.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_WEAKNESS": {
+  "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+  "error": "Thinks needing other people is a weakness or a bad thing.",
+  "example": {
+   "question": "Is it bad to depend on other people?",
+   "wrong_answer": "Yes, strong people do things alone",
+   "correct_answer": "No, it lets everyone use their skills and gain more"
+  },
+  "cause": "The child equates depending on others with being unable.",
+  "reveals": "Offer \"Yes, strong people do things alone\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who made the school desk, who grew the lunch and who taught the lesson.",
+  "feedback": "Depending on each other is a strength. We get what we cannot make and share what we can.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS.M_ID_MONEY_ONLY": {
+  "skill": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS",
+  "error": "Thinks the only benefit of trade or sharing is money.",
+  "example": {
+   "question": "What do people get when they depend on each other?",
+   "wrong_answer": "Only money",
+   "correct_answer": "Goods and services they cannot make and also friendship and income"
+  },
+  "cause": "The child links trade only to cash.",
+  "reveals": "Offer \"Only money\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a neighbour who lends a tool gives that is not money.",
+  "feedback": "People get goods, services, skills, income and friendship. Money is only one benefit.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_TOTAL": {
+  "skill": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS",
+  "error": "Mixes up population distribution with the total number of people.",
+  "example": {
+   "question": "What does population distribution mean?",
+   "wrong_answer": "The total number of people in a county",
+   "correct_answer": "How people are spread over an area"
+  },
+  "cause": "The child links \"population\" with counting.",
+  "reveals": "Offer \"The total number of people in a county\" next to the right answer and ask the question again in a new context.",
+  "help": "Place twelve counters on a page: first all in one corner, then spread out; the total is the same.",
+  "feedback": "Distribution is how people are spread over the area. The total number is a different thing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_DENSE_BIG": {
+  "skill": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS",
+  "error": "Thinks a dense area is a large area.",
+  "example": {
+   "question": "An area has many people living close together. Is it dense or sparse?",
+   "wrong_answer": "Sparse",
+   "correct_answer": "Dense"
+  },
+  "cause": "The child links dense with large size or fills the word with a different meaning.",
+  "reveals": "Offer \"Sparse\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare ten learners in a small room and ten on a football pitch.",
+  "feedback": "Dense means many people in a small space. Sparse means few people spread over a large space.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS.M_PD_REASON_REVERSE": {
+  "skill": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS",
+  "error": "Gives reasons the wrong way round (people crowd into very dry, steep or unsafe places).",
+  "example": {
+   "question": "Why do many people live near a river with good soil and rain?",
+   "wrong_answer": "Because there is no water there",
+   "correct_answer": "Because they get water, food and work there"
+  },
+  "cause": "The child does not link where people live with what the land gives.",
+  "reveals": "Offer \"Because there is no water there\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the family needs each day and where they find it.",
+  "feedback": "People live where they can get water, food, work, roads and safety. Dry, steep, flooded or unsafe places have few people.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_MIX_ASPECT": {
+  "skill": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+  "error": "Sorts an example under the wrong aspect (a drum under dressing, ugali under housing).",
+  "example": {
+   "question": "Under which aspect of culture is a kiondo (a sisal basket)?",
+   "wrong_answer": "Dressing",
+   "correct_answer": "Artefacts"
+  },
+  "cause": "The child sorts by the first thing that comes to mind.",
+  "reveals": "Offer \"Dressing\" next to the right answer and ask the question again in a new context.",
+  "help": "Make six boxes, one for each aspect, and sort a pile of picture cards.",
+  "feedback": "A kiondo is made by hand, so it is an artefact. Clothes are dressing, ugali is food, a manyatta is housing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_PAST_ONLY": {
+  "skill": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+  "error": "Thinks traditional culture belongs only to the past or only to old people.",
+  "example": {
+   "question": "Is traditional culture still practised today?",
+   "wrong_answer": "No, it is finished",
+   "correct_answer": "Yes, many people still practise it"
+  },
+  "cause": "The child sees culture as something in a museum.",
+  "reveals": "Offer \"No, it is finished\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which dishes, songs and ceremonies the family still shares.",
+  "feedback": "Culture is alive. People still practise many traditions, in food, dress, songs, games and ceremonies.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS.M_TC_ONE_CULTURE": {
+  "skill": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS",
+  "error": "Thinks all communities in a county have the same traditions.",
+  "example": {
+   "question": "Do all the communities in a county have the same traditions?",
+   "wrong_answer": "Yes, they all do the same things",
+   "correct_answer": "No, each community has its own as well as shared ones"
+  },
+  "cause": "The child knows only the home community well.",
+  "reveals": "Offer \"Yes, they all do the same things\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask each learner to name one dish, dance or dress from their own community.",
+  "feedback": "Communities differ in dress, food, houses and ceremonies, and respecting the differences keeps us at peace.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_VALUE_MIX": {
+  "skill": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES",
+  "error": "Names the wrong value for a situation (calls handing in lost money respect, not honesty).",
+  "example": {
+   "question": "Wekesa finds a lost shilling coin and hands it to the teacher. Which value does he show?",
+   "wrong_answer": "Hard work",
+   "correct_answer": "Honesty"
+  },
+  "cause": "The child knows the words and does not tie them to actions.",
+  "reveals": "Offer \"Hard work\" next to the right answer and ask the question again in a new context.",
+  "help": "Make cards of the value words and match them to six short scenes.",
+  "feedback": "Handing in what is not yours is honesty. Respect is speaking and acting kindly to others.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES.M_SC_RULES_ONLY": {
+  "skill": "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES",
+  "error": "Thinks values are the same as rules or punishments.",
+  "example": {
+   "question": "Which is a value of a school?",
+   "wrong_answer": "The cane",
+   "correct_answer": "Respect"
+  },
+  "cause": "The child links school with rules and punishments.",
+  "reveals": "Offer \"The cane\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the child what a value is: a good idea that guides us, even without a teacher watching.",
+  "feedback": "A value is a belief about what is good, such as respect or honesty. Rules and punishments are different.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_MADE_NATURAL": {
+  "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+  "error": "Calls a thing made by people a natural resource (a building, a road).",
+  "example": {
+   "question": "Which is a natural resource?",
+   "wrong_answer": "A road",
+   "correct_answer": "A river"
+  },
+  "cause": "The child counts every useful thing as natural.",
+  "reveals": "Offer \"A road\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort a list into things that were here before people and things people built.",
+  "feedback": "Natural resources are given by nature: soil, water, forests, minerals and wildlife. Roads and buildings are made by people.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_NOT_ECONOMIC": {
+  "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+  "error": "Calls play or rest an economic activity (or does not see farming as one).",
+  "example": {
+   "question": "Which is an economic activity?",
+   "wrong_answer": "Playing football after school",
+   "correct_answer": "Selling vegetables at the market"
+  },
+  "cause": "The child counts every kind of activity.",
+  "reveals": "Offer \"Playing football after school\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether the activity gives food, goods or an income.",
+  "feedback": "An economic activity gives goods, services or an income, such as farming, fishing and trading.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES.M_EA_ACT_RESOURCE": {
+  "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES",
+  "error": "Matches an activity to the wrong resource (fishing for a forest, mining for water).",
+  "example": {
+   "question": "Which resource does fishing use?",
+   "wrong_answer": "Forests",
+   "correct_answer": "Lakes, rivers or the sea"
+  },
+  "cause": "The child guesses from the word and not from the product.",
+  "reveals": "Offer \"Forests\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what does the activity bring in? Then ask where it comes from.",
+  "feedback": "Fishing uses water, in lakes, rivers or the sea. Mining uses minerals, and lumbering uses forests.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_RICH_ONLY": {
+  "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+  "error": "Thinks economic activities help only rich people.",
+  "example": {
+   "question": "Who gains from farming in a county?",
+   "wrong_answer": "Only rich people",
+   "correct_answer": "Farmers, workers, traders and everyone who eats"
+  },
+  "cause": "The child links activity to the wealth of the owner.",
+  "reveals": "Offer \"Only rich people\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace a loaf of bread from the farm to the table and name the people who gain at each step.",
+  "feedback": "Many people gain: the farmer, the worker, the trader and every person who buys food.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE.M_EA_FOOD_ONLY": {
+  "skill": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE",
+  "error": "Thinks activities give only food, not jobs, income or raw materials.",
+  "example": {
+   "question": "Which is a reason that mining matters to a county?",
+   "wrong_answer": "It gives food",
+   "correct_answer": "It gives jobs, income and raw materials"
+  },
+  "cause": "The child gives the answer for farming to every activity.",
+  "reveals": "Offer \"It gives food\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a table of five activities and what each gives.",
+  "feedback": "Activities give jobs, income and raw materials, and some give food. Mining gives jobs and minerals.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_RAW_PRODUCT": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+  "error": "Swaps the raw material and the product (thinks sugar is the raw material for sugarcane).",
+  "example": {
+   "question": "What is the raw material in a sugar factory?",
+   "wrong_answer": "Sugar",
+   "correct_answer": "Sugarcane"
+  },
+  "cause": "The child names the thing he or she knows best.",
+  "reveals": "Offer \"Sugar\" next to the right answer and ask the question again in a new context.",
+  "help": "Use pairs: before the factory and after the factory.",
+  "feedback": "The raw material goes in. Sugarcane goes into the factory and sugar comes out.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS.M_IN_SHOP_INDUSTRY": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS",
+  "error": "Calls a shop or a farm an industry.",
+  "example": {
+   "question": "Which place is an industry?",
+   "wrong_answer": "A shop that sells sugar",
+   "correct_answer": "A factory that turns sugarcane into sugar"
+  },
+  "cause": "The child thinks any busy business is an industry.",
+  "reveals": "Offer \"A shop that sells sugar\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: does this place make something new from something else?",
+  "feedback": "An industry makes or processes goods. A shop only sells goods and a farm grows the raw materials.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_OWNER_ONLY": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS",
+  "error": "Thinks only the owner gains from an industry.",
+  "example": {
+   "question": "Who gains when a factory opens in a county?",
+   "wrong_answer": "Only the owner",
+   "correct_answer": "Workers, farmers, shoppers and the county"
+  },
+  "cause": "The child sees the owner as the only person involved.",
+  "reveals": "Offer \"Only the owner\" next to the right answer and ask the question again in a new context.",
+  "help": "List who works at a milk factory, who sells it the milk and who buys the milk.",
+  "feedback": "Workers get jobs, farmers get a market, shoppers get goods and the county gets money.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS.M_IN_POLLUTION_BENEFIT": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS",
+  "error": "Lists pollution or noise as a benefit.",
+  "example": {
+   "question": "Which is a benefit of an industry?",
+   "wrong_answer": "Dirty smoke from the chimney",
+   "correct_answer": "Jobs for people in the county"
+  },
+  "cause": "The child does not tell a benefit from a problem.",
+  "reveals": "Offer \"Dirty smoke from the chimney\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort a list into \"good for people\" and \"problem to solve\".",
+  "feedback": "Jobs, income and goods are benefits. Smoke and waste are problems that industries must control.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_ANYWHERE": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+  "error": "Thinks an industry can be built anywhere with no reason.",
+  "example": {
+   "question": "Why is a sugar factory built near sugarcane farms?",
+   "wrong_answer": "Because there is no reason, any place does",
+   "correct_answer": "Because the heavy cane is cheap to carry a short way"
+  },
+  "cause": "The child does not link the place to the cost or ease of work.",
+  "reveals": "Offer \"Because there is no reason, any place does\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the child to carry a heavy bag a short way and a long way.",
+  "feedback": "Factories are placed near raw materials, workers, roads, water and a market, so that costs are lower.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE.M_IN_RAW_FAR": {
+  "skill": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE",
+  "error": "Places an industry far from its raw material (a milk factory far from dairy farms).",
+  "example": {
+   "question": "Where is the best place for a milk factory?",
+   "wrong_answer": "Far from any dairy farms",
+   "correct_answer": "Near the dairy farms, with good roads"
+  },
+  "cause": "The child thinks only about the buyer, not about milk that goes bad.",
+  "reveals": "Offer \"Far from any dairy farms\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to fresh milk after a day in the sun.",
+  "feedback": "Milk goes bad quickly, so the factory is near the farms, on a good road.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_UNSUITABLE": {
+  "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+  "error": "Chooses a project that needs what the school does not have (fish ponds with no water).",
+  "example": {
+   "question": "A school has a dry field and no water tank. Which project suits it best?",
+   "wrong_answer": "Fish farming",
+   "correct_answer": "Keeping bees or planting drought-resistant trees"
+  },
+  "cause": "The child picks the most exciting project and does not check what is needed.",
+  "reveals": "Offer \"Fish farming\" next to the right answer and ask the question again in a new context.",
+  "help": "List what each project needs and tick what the school has.",
+  "feedback": "Choose a project that suits your land, water, money and people. Fish need water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS.M_EP_NO_PLAN": {
+  "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS",
+  "error": "Thinks a project needs no plan, just start.",
+  "example": {
+   "question": "What should a school do before starting a project?",
+   "wrong_answer": "Start at once with no plan",
+   "correct_answer": "Make a plan of work, materials and who does what"
+  },
+  "cause": "The child links enterprise with action only.",
+  "reveals": "Offer \"Start at once with no plan\" next to the right answer and ask the question again in a new context.",
+  "help": "Plan a class lunch together: who brings what, and what does it cost?",
+  "feedback": "A project needs a plan: what to do, the materials, the people, the cost and the time.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_PROFIT_SELF": {
+  "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+  "error": "Thinks a leader can keep the money the project makes.",
+  "example": {
+   "question": "The class sold vegetables and made 500 shillings. What should the treasurer do?",
+   "wrong_answer": "Keep it for himself",
+   "correct_answer": "Record it and keep it safely for the project"
+  },
+  "cause": "The child sees money as belonging to whoever holds it.",
+  "reveals": "Offer \"Keep it for himself\" next to the right answer and ask the question again in a new context.",
+  "help": "Role play the treasurer with a record book and a locked box.",
+  "feedback": "Project money belongs to the project and the school. Keep it safe and record every shilling.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_HIDE_LOSS": {
+  "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+  "error": "Thinks a mistake or a loss should be hidden to avoid blame.",
+  "example": {
+   "question": "A group loses some money by mistake. What is right?",
+   "wrong_answer": "Hide it so no one is blamed",
+   "correct_answer": "Report it honestly and learn from it"
+  },
+  "cause": "The child fears blame.",
+  "reveals": "Offer \"Hide it so no one is blamed\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise saying \"we lost it, and here is what we will do\".",
+  "feedback": "Honest groups report their mistakes and lose less over time. Hiding them breaks trust.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS.M_EP_ONE_PERSON": {
+  "skill": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS",
+  "error": "Thinks one strong leader should do all the work or decide everything.",
+  "example": {
+   "question": "How should a project team decide?",
+   "wrong_answer": "The leader decides everything alone",
+   "correct_answer": "The team shares ideas and decides together"
+  },
+  "cause": "The child sees leadership as control.",
+  "reveals": "Offer \"The leader decides everything alone\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask the team to decide where to keep the tools, then compare it with one person deciding.",
+  "feedback": "Teams share the work and the decisions, so everyone takes part and feels the project belongs to them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_CLEVER_ONLY": {
+  "skill": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+  "error": "Thinks only learners with the top marks are good citizens.",
+  "example": {
+   "question": "Who is a good citizen in school?",
+   "wrong_answer": "Only the learner with the top marks",
+   "correct_answer": "Any learner who is respectful, honest and helpful"
+  },
+  "cause": "The child links a good learner with good marks.",
+  "reveals": "Offer \"Only the learner with the top marks\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a learner can do for others even with low marks.",
+  "feedback": "A good citizen shows qualities such as respect, honesty and helpfulness. Marks are different from character.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_OBEY_ONLY": {
+  "skill": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+  "error": "Thinks a good citizen only keeps quiet and obeys, never speaks up.",
+  "example": {
+   "question": "Which learner is a good citizen?",
+   "wrong_answer": "The one who never speaks",
+   "correct_answer": "The one who keeps fair rules and helps others, and speaks up kindly when something is wrong"
+  },
+  "cause": "The child links good with silent.",
+  "reveals": "Offer \"The one who never speaks\" next to the right answer and ask the question again in a new context.",
+  "help": "Role play a learner who sees someone bullied: what is the good action?",
+  "feedback": "A good citizen follows fair rules, cares for others, and politely speaks up when something is wrong.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES.M_GC_REPORT_BAD": {
+  "skill": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES",
+  "error": "Thinks telling a teacher about bullying is wrong (telling tales).",
+  "example": {
+   "question": "You see a learner being bullied. What does a good citizen do?",
+   "wrong_answer": "Say nothing, because telling tales is wrong",
+   "correct_answer": "Tell a teacher and help the learner"
+  },
+  "cause": "The child confuses reporting harm with gossip.",
+  "reveals": "Offer \"Say nothing, because telling tales is wrong\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: is it gossip to tell a teacher that someone is being hurt?",
+  "feedback": "Telling a teacher about harm is not telling tales. A good citizen helps keep everyone safe.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_NO_DISAGREE": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+  "error": "Thinks peace means nobody ever disagrees.",
+  "example": {
+   "question": "What does peace mean in school?",
+   "wrong_answer": "Nobody ever disagrees",
+   "correct_answer": "Settling disagreements without hurting anyone"
+  },
+  "cause": "The child sees peace as quiet.",
+  "reveals": "Offer \"Nobody ever disagrees\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask for a time when two friends disagreed and still stayed friends.",
+  "feedback": "People will sometimes disagree. Peace is settling it with respect and without harm.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_THREAT": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+  "error": "Thinks peace comes from fear and punishment.",
+  "example": {
+   "question": "What keeps a school peaceful?",
+   "wrong_answer": "Fear of strict punishment",
+   "correct_answer": "Respect, fairness and listening"
+  },
+  "cause": "The child links order with punishment.",
+  "reveals": "Offer \"Fear of strict punishment\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a class that is quiet for the cane and a class that is kind by choice.",
+  "feedback": "Peace grows from respect, fairness, sharing and forgiveness, not from fear.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_FACTORS.M_PE_GOSSIP": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_FACTORS",
+  "error": "Thinks spreading talk about others or taking sides helps peace.",
+  "example": {
+   "question": "Which action breaks peace?",
+   "wrong_answer": "Listening to both sides",
+   "correct_answer": "Spreading rumours about a classmate"
+  },
+  "cause": "The child does not see how talk hurts.",
+  "reveals": "Offer \"Listening to both sides\" next to the right answer and ask the question again in a new context.",
+  "help": "Pass a message along a line and watch it change.",
+  "feedback": "Rumours and name-calling break peace. Listening, honesty and kind words keep it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_FIGHT_BACK": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+  "error": "Thinks hitting back or revenge settles a quarrel.",
+  "example": {
+   "question": "A classmate pushes you by mistake. What is the peaceful reply?",
+   "wrong_answer": "Push back harder",
+   "correct_answer": "Stay calm and say what happened"
+  },
+  "cause": "The child thinks strength ends a quarrel.",
+  "reveals": "Offer \"Push back harder\" next to the right answer and ask the question again in a new context.",
+  "help": "Role play both: what happens after a push back, and after a calm word?",
+  "feedback": "Hitting back makes a quarrel bigger. Stay calm, talk, and ask a teacher to help if needed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_AVOID": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+  "error": "Thinks pretending the problem is not there is the best way, and never speaking again.",
+  "example": {
+   "question": "Two friends quarrelled. What is the best way to settle it?",
+   "wrong_answer": "Never speak to each other again",
+   "correct_answer": "Talk about it, say sorry and forgive"
+  },
+  "cause": "The child thinks silence ends a quarrel.",
+  "reveals": "Offer \"Never speak to each other again\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how the friendship feels after a week of silence.",
+  "feedback": "Silence does not settle a quarrel. Talk, listen, say sorry and forgive.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES.M_PE_ORDER": {
+  "skill": "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES",
+  "error": "Puts the steps of settling a quarrel in the wrong order (apologise before listening).",
+  "example": {
+   "question": "What comes first when settling a quarrel?",
+   "wrong_answer": "Shout until the other gives in",
+   "correct_answer": "Calm down and listen"
+  },
+  "cause": "The child does not think of steps.",
+  "reveals": "Offer \"Shout until the other gives in\" next to the right answer and ask the question again in a new context.",
+  "help": "Write the steps on cards and order them: calm, listen, talk, say sorry, forgive.",
+  "feedback": "First calm down and listen. Then talk about it, say sorry and forgive. A mediator can help.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_DISCIPLINE": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS",
+  "error": "Thinks beating a child is only discipline and never abuse.",
+  "example": {
+   "question": "A teacher beats a learner until he is hurt. Is this child abuse?",
+   "wrong_answer": "No, it is only discipline",
+   "correct_answer": "Yes, hurting a child is abuse"
+  },
+  "cause": "The child has seen beating treated as normal.",
+  "reveals": "Offer \"No, it is only discipline\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: does discipline teach with care or hurt? Discuss other ways, such as talking and fair consequences.",
+  "feedback": "Hurting a child is abuse. Discipline teaches without harming the child.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_WORK_OK": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS",
+  "error": "Thinks any work a child does is fine (or that all chores are child labour).",
+  "example": {
+   "question": "Which is child labour?",
+   "wrong_answer": "Washing a plate after supper",
+   "correct_answer": "Working all day in a quarry instead of going to school"
+  },
+  "cause": "The child does not tell light chores from harmful work.",
+  "reveals": "Offer \"Washing a plate after supper\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort examples by: safe, short, does not stop school, does not harm.",
+  "feedback": "Light chores that do not stop school or harm the child are fine. Heavy or dangerous work that stops school is child labour.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS.M_CR_ONLY_BEATING": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS",
+  "error": "Thinks only beating counts as child abuse.",
+  "example": {
+   "question": "Which of these is child abuse?",
+   "wrong_answer": "Only beating a child",
+   "correct_answer": "Forcing a girl to marry early"
+  },
+  "cause": "The child knows only the form seen most often.",
+  "reveals": "Offer \"Only beating a child\" next to the right answer and ask the question again in a new context.",
+  "help": "List six forms and ask: how does each harm the child?",
+  "feedback": "Child abuse takes many forms: forced marriage, labour, trafficking, neglect and sexual abuse, as well as beating.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_CHILD_FAULT": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES",
+  "error": "Thinks a child causes the abuse by bad behaviour.",
+  "example": {
+   "question": "Why was a child abused by an adult?",
+   "wrong_answer": "The child behaved badly",
+   "correct_answer": "The adult chose to harm the child"
+  },
+  "cause": "The child has heard \"you made me do it\".",
+  "reveals": "Offer \"The child behaved badly\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: can anything a child does make it right for an adult to hurt him or her?",
+  "feedback": "Abuse is never the child's fault. The adult is responsible for the harm.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES.M_CR_TRADITION_OK": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES",
+  "error": "Thinks a custom or tradition makes an abuse acceptable.",
+  "example": {
+   "question": "Some say a harmful custom is fine because it is old. What is right?",
+   "wrong_answer": "It is fine if it is a tradition",
+   "correct_answer": "A custom that harms a child must stop"
+  },
+  "cause": "The child respects elders and customs.",
+  "reveals": "Offer \"It is fine if it is a tradition\" next to the right answer and ask the question again in a new context.",
+  "help": "Discuss that culture changes, and that keeping children safe is also a tradition.",
+  "feedback": "No custom makes harm to a child right. Many customs are good, but harmful ones must stop.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_NO_EFFECT": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS",
+  "error": "Thinks children forget abuse and are not changed by it.",
+  "example": {
+   "question": "What can child abuse do to a child?",
+   "wrong_answer": "Nothing, children forget",
+   "correct_answer": "It can hurt the body, cause fear and make the child leave school"
+  },
+  "cause": "The child thinks harm only shows on the body.",
+  "reveals": "Offer \"Nothing, children forget\" next to the right answer and ask the question again in a new context.",
+  "help": "List ways a bad experience at school changes how a learner feels.",
+  "feedback": "Abuse can injure, frighten and make a child sad, sick or leave school.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS.M_CR_SECRET": {
+  "skill": "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS",
+  "error": "Thinks a hurt child or a friend should keep it secret.",
+  "example": {
+   "question": "A friend tells you an adult is hurting him. What should you do?",
+   "wrong_answer": "Keep it a secret",
+   "correct_answer": "Tell a trusted adult such as a teacher, or call Childline on 116"
+  },
+  "cause": "The child fears trouble or being a tell-tale.",
+  "reveals": "Offer \"Keep it a secret\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a list of the adults who keep children safe and practise saying \"I need to tell you something\".",
+  "feedback": "Never keep harm secret. Tell a trusted adult, or call Childline on 116, which is free.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_APPOINT": {
+  "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES",
+  "error": "Thinks a leader chosen by the teacher is an election.",
+  "example": {
+   "question": "Which way of choosing a head prefect is democratic?",
+   "wrong_answer": "The teacher picks a favourite",
+   "correct_answer": "All learners vote"
+  },
+  "cause": "The child thinks any choosing is an election.",
+  "reveals": "Offer \"The teacher picks a favourite\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare: who chose? how many people had a say?",
+  "feedback": "In an election all voters have a say. A teacher choosing alone is appointing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_ORDER": {
+  "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES",
+  "error": "Puts election steps in the wrong order (voting before the campaign).",
+  "example": {
+   "question": "Which comes first in a school election?",
+   "wrong_answer": "Counting the votes",
+   "correct_answer": "Nominating the candidates"
+  },
+  "cause": "The child remembers voting and counting only.",
+  "reveals": "Offer \"Counting the votes\" next to the right answer and ask the question again in a new context.",
+  "help": "Order the steps on cards: nominate, campaign, vote, count, announce.",
+  "feedback": "The order is nomination, campaign, voting, counting and announcing the winner.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES.M_DS_LOUD_WINS": {
+  "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES",
+  "error": "Thinks the loudest or most popular learner wins by right.",
+  "example": {
+   "question": "How should a winner be decided?",
+   "wrong_answer": "The loudest learner wins",
+   "correct_answer": "By counting the votes of everyone"
+  },
+  "cause": "The child links winning with being strong.",
+  "reveals": "Offer \"The loudest learner wins\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a vote on a class song and count each hand.",
+  "feedback": "The winner is the candidate with the most votes, counted fairly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_MINORITY_IGNORED": {
+  "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS",
+  "error": "Thinks those who lose a vote have no say and no value.",
+  "example": {
+   "question": "After a vote, what happens to the views of those who lost?",
+   "wrong_answer": "They are ignored",
+   "correct_answer": "They are still respected"
+  },
+  "cause": "The child sees the vote as a win or loss only.",
+  "reveals": "Offer \"They are ignored\" next to the right answer and ask the question again in a new context.",
+  "help": "After a class vote, ask the losers to say one idea that could still be used.",
+  "feedback": "The majority choice is followed, but everyone's views are respected.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS.M_DS_SLOW_BAD": {
+  "skill": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS",
+  "error": "Thinks democracy wastes time and one person should decide.",
+  "example": {
+   "question": "Why is democracy good for a school?",
+   "wrong_answer": "It is not, one person is quicker",
+   "correct_answer": "It gives everyone a voice and is fair"
+  },
+  "cause": "The child values speed over fairness.",
+  "reveals": "Offer \"It is not, one person is quicker\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a lunch menu chosen by one person with one chosen by the class.",
+  "feedback": "Democracy gives everyone a voice, is fair and builds peace, even if it takes a little time.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_TEACHERS_ONLY": {
+  "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION",
+  "error": "Thinks the Children's Government is made up of teachers.",
+  "example": {
+   "question": "Who forms the Children's Government?",
+   "wrong_answer": "The teachers",
+   "correct_answer": "Learners elected by their classmates"
+  },
+  "cause": "The child thinks anything with \"government\" belongs to adults.",
+  "reveals": "Offer \"The teachers\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who voted for last year's prefects.",
+  "feedback": "The Children's Government is made of learners chosen by learners, with a teacher patron to guide them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION.M_CG_APPOINTED": {
+  "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION",
+  "error": "Thinks the head teacher alone appoints all members.",
+  "example": {
+   "question": "How are members of the Children's Government chosen?",
+   "wrong_answer": "The head teacher picks them all",
+   "correct_answer": "Learners vote for them"
+  },
+  "cause": "The child has not seen the election.",
+  "reveals": "Offer \"The head teacher picks them all\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk through one election: nomination, campaign, vote.",
+  "feedback": "Learners vote for their leaders, so that the leaders speak for them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_PUNISH": {
+  "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS",
+  "error": "Thinks the Children's Government can punish or cane learners.",
+  "example": {
+   "question": "Which is NOT a duty of the Children's Government?",
+   "wrong_answer": "Caning learners who are late",
+   "correct_answer": "Passing learners' worries to the teachers"
+  },
+  "cause": "The child links prefects with punishing.",
+  "reveals": "Offer \"Caning learners who are late\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a prefect can do kindly: remind, report, help.",
+  "feedback": "The Children's Government helps keep order but does not punish. Teachers handle punishment.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS.M_CG_RUN_SCHOOL": {
+  "skill": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS",
+  "error": "Thinks it runs the school in place of the head teacher.",
+  "example": {
+   "question": "Who runs the school?",
+   "wrong_answer": "The Children's Government",
+   "correct_answer": "The head teacher and the school management"
+  },
+  "cause": "The child thinks leaders have the power of the head.",
+  "reveals": "Offer \"The Children's Government\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw who reports to whom.",
+  "feedback": "The Children's Government speaks for learners and helps. The head teacher runs the school.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_POLITICIAN_ONLY": {
+  "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+  "error": "Thinks leaders are only politicians.",
+  "example": {
+   "question": "Which is a leader in the community?",
+   "wrong_answer": "Only a politician",
+   "correct_answer": "A village elder, a religious leader or the chief"
+  },
+  "cause": "The child hears \"leader\" mainly in the news.",
+  "reveals": "Offer \"Only a politician\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who helps settle problems in the village.",
+  "feedback": "Leaders in the community include religious leaders, clan leaders, village elders and the chief.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS.M_CL_DUTY_SWAP": {
+  "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS",
+  "error": "Gives a leader the wrong duty (the chief counsels in worship).",
+  "example": {
+   "question": "Who guides people in faith and prayer?",
+   "wrong_answer": "The chief",
+   "correct_answer": "A religious leader"
+  },
+  "cause": "The child knows the names but not the duties.",
+  "reveals": "Offer \"The chief\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each leader to the duty on a chart.",
+  "feedback": "Religious leaders guide in faith, elders settle disputes and the chief keeps law and order.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_STRONG_RICH": {
+  "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES",
+  "error": "Thinks the strongest or richest person is the best leader.",
+  "example": {
+   "question": "Which person would make a good leader?",
+   "wrong_answer": "The richest person",
+   "correct_answer": "The honest person who listens"
+  },
+  "cause": "The child links power with leading.",
+  "reveals": "Offer \"The richest person\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which classmate you would follow and why.",
+  "feedback": "A good leader is honest, fair and listens. Strength and wealth do not make a leader good.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES.M_CL_OWN_BENEFIT": {
+  "skill": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES",
+  "error": "Thinks leaders can use their post to benefit themselves.",
+  "example": {
+   "question": "A leader is given money for the village well. What should he do?",
+   "wrong_answer": "Keep some for himself",
+   "correct_answer": "Use it all for the well"
+  },
+  "cause": "The child has heard of leaders enriching themselves.",
+  "reveals": "Offer \"Keep some for himself\" next to the right answer and ask the question again in a new context.",
+  "help": "Discuss why trust matters to a leader.",
+  "feedback": "A good leader serves everyone and is honest with what belongs to the community.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_NATIONAL": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+  "error": "Mixes county government with national government (puts the President and MPs in the county).",
+  "example": {
+   "question": "Who is in the county executive?",
+   "wrong_answer": "The President",
+   "correct_answer": "The Governor"
+  },
+  "cause": "The child hears the names on the news and puts them all together.",
+  "reveals": "Offer \"The President\" next to the right answer and ask the question again in a new context.",
+  "help": "Make two columns: national and county, and place each leader.",
+  "feedback": "The county executive has the Governor, Deputy Governor and executive committee. The President belongs to the national government.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE.M_CO_ASSEMBLY_MIX": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE",
+  "error": "Puts the Governor in the county assembly or the MCAs in the executive.",
+  "example": {
+   "question": "Which one is a member of the county assembly?",
+   "wrong_answer": "The Governor",
+   "correct_answer": "A Member of the County Assembly (MCA)"
+  },
+  "cause": "The child does not tell the two parts apart.",
+  "reveals": "Offer \"The Governor\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw two boxes: executive, assembly; place each person.",
+  "feedback": "The assembly is made of the MCAs and the Speaker. The Governor heads the executive.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_LAWS": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+  "error": "Thinks the Governor makes the county laws.",
+  "example": {
+   "question": "Who makes the county laws?",
+   "wrong_answer": "The Governor",
+   "correct_answer": "The county assembly"
+  },
+  "cause": "The child thinks the head makes all rules.",
+  "reveals": "Offer \"The Governor\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: who makes the rules at school and who sees they are followed?",
+  "feedback": "The assembly makes county laws. The Governor sees that they are carried out.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR.M_CO_GOV_PRESIDENT": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR",
+  "error": "Thinks the Governor is the head of the whole country.",
+  "example": {
+   "question": "The Governor is head of which?",
+   "wrong_answer": "The whole country",
+   "correct_answer": "The county"
+  },
+  "cause": "The child has the Governor and the President confused.",
+  "reveals": "Offer \"The whole country\" next to the right answer and ask the question again in a new context.",
+  "help": "Place the Governor and the President on a map of Kenya: which area does each lead?",
+  "feedback": "The Governor leads the county. The President leads the whole country.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_ENFORCES": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+  "error": "Thinks the MCA carries out county work, building roads and running hospitals himself.",
+  "example": {
+   "question": "What does an MCA do?",
+   "wrong_answer": "Builds the roads himself",
+   "correct_answer": "Makes county laws and approves the budget"
+  },
+  "cause": "The child links leaders with doing the work.",
+  "reveals": "Offer \"Builds the roads himself\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who writes the plan and who builds the road.",
+  "feedback": "The MCA makes county laws, approves the budget and checks the executive. The county executive carries out the work.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA.M_CO_MCA_WHOLE": {
+  "skill": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA",
+  "error": "Thinks an MCA speaks for the whole country or the whole county.",
+  "example": {
+   "question": "Whom does an MCA represent?",
+   "wrong_answer": "The whole country",
+   "correct_answer": "The people of his or her ward"
+  },
+  "cause": "The child mixes up an MCA and an MP.",
+  "reveals": "Offer \"The whole country\" next to the right answer and ask the question again in a new context.",
+  "help": "Mark a ward on a sketch and name the MCA.",
+  "feedback": "An MCA is elected by a ward and speaks for its people. Members of Parliament sit in the National Assembly.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

@@ -1,0 +1,429 @@
+{
+ "outcomes": {
+  "SOCI.G4.NATURA.COMPASS_DIRECTION.a": "identify the four cardinal points of a compass",
+  "SOCI.G4.NATURA.COMPASS_DIRECTION.b": "use the four cardinal points to give directions on a map",
+  "SOCI.G4.NATURA.COMPASS_DIRECTION.c": "appreciate the use of four cardinal points in everyday life",
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.a": "identify sub-counties in the county",
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.b": "locate the county in relation to neighbouring counties",
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.c": "estimate the size of the county in relation to neighbouring counties",
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.d": "acknowledge the location and size of the county",
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.a": "identify the main physical features in the county",
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.b": "state the importance of the main physical features in the county",
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.c": "illustrate the main physical features in the county",
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.d": "appreciate the main physical features in the county",
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.a": "identify the four seasons experienced in the county",
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.b": "explain how the four seasons influence human activities in the county",
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.c": "explore how rainy weather affects road safety in the county",
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.d": "model weather charts of seasons in the county",
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.e": "appreciate the different seasons experienced in the county",
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.a": "identify the main historic built environments in the county",
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.b": "explain the importance of the main historic built environments in the county",
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.c": "participate in conservation activities of the historic built environments within the county",
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.d": "appreciate historic built environments in the county",
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.a": "identify ways in which people depend on each other in the county",
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.b": "explain the benefits of interdependence of people in the county",
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.c": "use chart to illustrate the benefits of interdependence people",
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.d": "appreciate the interdependence of people in the County",
+  "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.a": "describe patterns of population distribution in the county",
+  "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.b": "illustrate the patterns of population distribution in the county",
+  "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.c": "appreciate population distribution in the county",
+  "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.a": "identify aspects of traditional culture in the county",
+  "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.b": "illustrate aspects of traditional culture practised in the county",
+  "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.c": "appreciate the importance of traditional culture in the county",
+  "SOCI.G4.SOCIAL.THE_SCHOOL.a": "narrate the history of the school",
+  "SOCI.G4.SOCIAL.THE_SCHOOL.b": "explain the values of the school",
+  "SOCI.G4.SOCIAL.THE_SCHOOL.c": "recite the school motto",
+  "SOCI.G4.SOCIAL.THE_SCHOOL.d": "desire to obey the school rules",
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.a": "Explore the main resources found in the county",
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.b": "identify the main economic activities carried out in the county",
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.c": "explain the importance of economic activities carried out in the county",
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.d": "participate in economic activities in the locality",
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.e": "appreciate the economic activities in the county",
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.a": "identify industries in the county",
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.b": "explain the benefits of industries in the county",
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.c": "locate industries in the county",
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.d": "recognise the role of industries in the county",
+  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.a": "identify the projects that can be initiated at school",
+  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.b": "participate in initiating an enterprise project at school",
+  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.c": "uphold ethics and collective efforts in managing enterprise projects at school",
+  "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.a": "identify qualities of a good citizen in school",
+  "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.b": "develop qualities of good citizenship in school",
+  "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.c": "appreciate qualities of good citizenship in school",
+  "SOCI.G4.CITIZE.PEACE.a": "identify factors that promote peace in school",
+  "SOCI.G4.CITIZE.PEACE.b": "develop strategies of living in peace with others in school",
+  "SOCI.G4.CITIZE.PEACE.c": "desire to uphold peace in school",
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.a": "outline forms of child abuse in the community",
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.b": "explain the causes of child abuse in the community",
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.c": "explain effects of child abuse in the community",
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.d": "desire to promote child rights and responsibilities in the school",
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.a": "identify democratic processes in the school",
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.b": "explain the benefits of democracy in school",
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.c": "practise democratic elements in school",
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.d": "appreciate democratic practices in school",
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.a": "explain the composition of Children’s Government in school",
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.b": "describe the functions of the Children’s Government in school",
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.c": "participate in Children’s Government in school",
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.d": "respect Children’s Government in school",
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.a": "identify leaders in the community",
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.b": "explain the duties of leaders in the community",
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.c": "demonstrate qualities of good leadership in the community",
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.d": "appreciate good leadership in the community",
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.a": "identify the structure of county government",
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.b": "explain the duties of County Governor in Kenya",
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.c": "explain the roles of a member of county assembly",
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.d": "appreciate the County Government in Kenya"
+ },
+ "skills": {
+  "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_POINTS": {
+   "forms": [
+    "name the point opposite another",
+    "say which side east or west is when facing north",
+    "say where the sun rises and sets",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names north, east, south and west in order round a compass, knows north is opposite south and east is opposite west, knows that facing north east is on the right hand and west on the left, and knows the sun rises in the east and sets in the west. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.COMPASS_DIRECTION.CD_DIRECTIONS": {
+   "forms": [
+    "say which direction one place lies from another",
+    "turn a direction round (A is north of B, so B is south of A)",
+    "say the direction after a turn",
+    "read a small table of places"
+   ],
+   "mastery": "Given a map described in words or a small table, the child says the direction from one place to another, reverses it correctly and gives the direction a walker faces after a quarter turn. Map questions are in words or a small described table, and any county named on a map is an imaginary one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SUBCOUNTY": {
+   "forms": [
+    "pick the unit that is part of a county",
+    "put county, sub-county and ward in order of size",
+    "say whether a place is inside or outside the county",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child knows a county is divided into sub-counties and a sub-county into wards, that a sub-county is smaller than its county, and that a neighbouring county is a different county and not one of its sub-counties. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_NEIGHBOUR_DIRECTION": {
+   "forms": [
+    "say which direction a neighbour lies from the county",
+    "name the neighbour in a given direction",
+    "say which counties share a boundary",
+    "read a small table of neighbours"
+   ],
+   "mastery": "Given a described map or table, the child says which neighbouring county lies in each direction, turns the direction round, and names only the counties that share a boundary, not those further away. Map questions are in words or a small described table, and any county named on a map is an imaginary one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE.LS_SIZE": {
+   "forms": [
+    "say which county is larger from the areas given",
+    "say about how many times larger one is",
+    "tell size from population",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "Given the areas of counties in square kilometres, the child says which is larger and about how many times, compares the whole numbers by their size and not by their first digit, and does not mix up the size of a county with the number of people in it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_KINDS": {
+   "forms": [
+    "name the kind of feature from a description",
+    "pick the odd one out",
+    "tell a hill from a mountain, a river from a lake, a plain from a valley",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names a hill (low rounded high ground), a mountain (much higher), a valley (low land between hills or mountains), a plain (wide flat land), a river (water flowing in a channel), a lake (water with land around it) and the ocean coast from a short description. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.PH_IMPORTANCE": {
+   "forms": [
+    "match a feature to its use",
+    "say why a feature matters to the people near it",
+    "pick the false use",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child matches rivers and lakes to water, fish and irrigation, mountains and hills to rain, forests and tourism, plains to farming and building, and the coast to fishing and ports, and does not call a feature useless or give it a use it does not have. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_NAMES": {
+   "forms": [
+    "name the season from its weather",
+    "pick the season that has long or short rains",
+    "say whether a statement is about one day or a whole season",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the four seasons as hot, cold, dry and rainy, matches each to its weather, knows the long rains come around March to May and the short rains around October to December, and does not use the names spring, summer, autumn and winter or call one rainy day a season. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ACTIVITIES": {
+   "forms": [
+    "pick the activity that suits a season",
+    "say what a farmer does in a season",
+    "say what people wear or sell in a season",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says farmers plant when the rains begin and harvest and dry crops in the dry season, that people wear warm clothes in the cold season and drink and sell cold drinks in the hot season, and that the seasons do change what people do. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.SE_ROAD": {
+   "forms": [
+    "say what rain does to a road",
+    "choose the safe thing to do near a flooded road",
+    "say what a driver should do in heavy rain",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says rain makes roads slippery, muddy and sometimes flooded and makes it harder to see, that a driver must slow down, and that a person must never cross flooded water, never run across a road, and wait in a safe place. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_KINDS": {
+   "forms": [
+    "name the kind of place from its job",
+    "pick the place that is a historic built environment",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a museum keeps and shows old objects and records, a monument is a structure built to remember a person or event, and a cultural centre shows the way of life of communities, and knows a place is historic because of its age and meaning, not because it is new or big. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.HB_IMPORTANCE": {
+   "forms": [
+    "pick the reason a place is kept",
+    "say what people gain from visiting",
+    "say how to treat a historic place",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says historic places teach history, keep a community's identity, bring visitors and need to be cared for, and does not say they should be pulled down because they are old. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_WAYS": {
+   "forms": [
+    "say who a person depends on for a need",
+    "say what a worker gives others",
+    "match a place or worker to what it gives",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names trade (a farmer sells to a shopkeeper), farming (farmers feed others), the hospital (health workers care for the sick) and places of worship (leaders guide people) as ways people depend on each other, and says that each side needs the other. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.ID_BENEFITS": {
+   "forms": [
+    "pick the benefit of sharing work",
+    "say what happens when nobody depends on anyone",
+    "say who gains from a trade",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says depending on each other gives us goods and services we cannot make ourselves, brings income, lets people use different skills and builds friendship, and does not say a family can supply every need alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.PD_PATTERNS": {
+   "forms": [
+    "say whether an area is dense or sparse from the figures",
+    "pick the reason an area has many or few people",
+    "tell distribution from total population",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says population distribution is how people are spread over an area, that dense means many people for the space and sparse few, and gives reasons: many people live where soil is fertile, rain is reliable, there is water, work, roads, health care and security, and few where it is very dry, steep, flooded or unsafe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C.TC_ASPECTS": {
+   "forms": [
+    "name the aspect an item belongs to",
+    "match a practice to its aspect",
+    "say whether a statement about culture is true",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the six aspects of traditional culture (dressing, food, housing, artefacts, sports and games, festivals and ceremonies), sorts everyday examples into them, knows culture is alive and not only the past, and knows communities in one county can have different traditions. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.SOCIAL.THE_SCHOOL.SC_VALUES": {
+   "forms": [
+    "name the value a learner shows",
+    "pick the action that shows a value",
+    "say why a value matters",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "Given a short school situation, the child names the value it shows (respect, honesty, responsibility, hard work, unity, cleanliness) and says why it matters, and does not treat values as the same thing as written rules or punishments. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_RESOURCES_ACTIVITIES": {
+   "forms": [
+    "say whether a resource is natural or made by people",
+    "match a resource to the activity that uses it",
+    "say whether an activity is economic",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names natural resources (soil, water, forests, minerals, wildlife, climate), matches them to the activities that use them (farming, fishing, mining, lumbering, tourism, trading, manufacturing) and knows an economic activity earns a living or a product, which play and rest do not. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.EA_IMPORTANCE": {
+   "forms": [
+    "pick a reason an activity matters",
+    "say what an activity gives a family",
+    "say what an activity gives the county",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says economic activities give food, income, jobs, raw materials for industries and money for the county, and does not say they only help the rich or only give money. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_KINDS": {
+   "forms": [
+    "name the raw material or the product",
+    "say what an industry does to a raw material",
+    "say whether a place is an industry",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says an industry makes or processes goods from raw materials (milk to packed milk, sugarcane to sugar, tea leaves to tea, maize to flour), keeps raw material and product the right way round, and does not call a shop or a farm an industry. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_BENEFITS": {
+   "forms": [
+    "pick a benefit of an industry",
+    "say who gains from a factory",
+    "say what happens to farmers near a factory",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says industries give jobs, income, a market for farmers, goods to buy and money for the county, and says the benefits reach workers, farmers and shoppers, not only the owner. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.IN_LOCATE": {
+   "forms": [
+    "pick the best place for an industry",
+    "read where an industry is from a small table",
+    "say why an industry is near its raw material or market",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "Given a described map or table, the child places an industry near its raw material, workers, roads and water and reads where an industry is from the table. Map questions are in words or a small described table, and any county named on a map is an imaginary one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_PROJECTS": {
+   "forms": [
+    "pick the project that suits the school's resources",
+    "say what a project needs before it starts",
+    "say what a project earns or gives",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names school projects (kitchen garden, poultry, tree nursery, bee-keeping, making liquid soap, recycling), chooses the one that suits the land, water and people the school has, and knows a project needs a plan. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.EP_ETHICS": {
+   "forms": [
+    "pick the honest action with project money",
+    "say how the team should work",
+    "say what to do with a mistake or a loss",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says project money is kept honestly and recorded, the team shares the work and decisions, mistakes are reported, and profit belongs to the project and school, not to one person. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.GC_QUALITIES": {
+   "forms": [
+    "name the quality in a situation",
+    "pick the action of a good citizen",
+    "say whether a statement about good citizens is true",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the qualities of a good school citizen (respect, honesty, responsibility, obedience to fair rules, helping others, keeping the school clean, being on time, caring for property) and does not say that only the top learners or those who never speak are good citizens. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.PEACE.PE_FACTORS": {
+   "forms": [
+    "pick what promotes peace",
+    "pick what breaks peace",
+    "say what peace means",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says respect, sharing, honesty, listening, fairness, forgiveness and accepting differences promote peace, and that peace means disagreements are settled without hurting anyone, not that nobody ever disagrees. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.PEACE.PE_STRATEGIES": {
+   "forms": [
+    "pick the peaceful way to react",
+    "put the steps of settling a quarrel in order",
+    "say who can help",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child chooses to stay calm, listen, talk it through, say sorry and forgive, and to ask a teacher or peer mediator for help, and does not choose to fight back, take revenge or gossip. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_FORMS": {
+   "forms": [
+    "pick the example that is child abuse",
+    "pick the example that is not child abuse",
+    "say whether a chore is child labour",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names early and forced marriage, female genital mutilation, slavery, child trafficking, child and forced labour, sexual abuse, abuse of children with special needs and unsafe unauthorised school transport as child abuse, knows that beating and neglect also harm, and knows that light chores at home are not child labour. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_CAUSES": {
+   "forms": [
+    "pick a cause of child abuse",
+    "say who is responsible",
+    "say whether a custom is a good reason",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives causes such as poverty, ignorance, harmful customs, greed, war and the harmful use of alcohol and drugs by adults, and says abuse is never the child's fault and a custom does not make it right. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.CHILD_RIGHTS.CR_EFFECTS": {
+   "forms": [
+    "pick an effect of child abuse",
+    "say what a child should do who is being hurt",
+    "say what a child should do when a friend is hurt",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names effects (injury, fear, sadness, dropping out of school, poor health), says a child who is hurt or whose friend is hurt must tell a trusted adult such as a teacher, parent or the Childline helpline on 116, and says harm is not kept secret. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_PROCESSES": {
+   "forms": [
+    "pick the democratic way to choose",
+    "put the steps of a school election in order",
+    "say whether a way of choosing is democratic",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says democratic processes in school include electing prefects by a secret vote, class meetings, debates and suggestion boxes, puts the election steps in order (nomination, campaign, voting, counting, announcing) and knows a teacher appointing someone is not an election. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.DS_BENEFITS": {
+   "forms": [
+    "pick a benefit of democracy",
+    "say what the majority and the minority each get",
+    "say why everyone should vote",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says democracy gives everyone a voice, is fair, builds peace, and makes decisions that most learners accept, and that the choice of the majority is followed while the views of the others are still respected. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_COMPOSITION": {
+   "forms": [
+    "pick who belongs to the Children's Government",
+    "say how members are chosen",
+    "say who guides the learners",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Children's Government is made up of learners elected by their classmates, with a leader and ministers or prefects for different areas, guided by a patron teacher, and not by teachers alone. Posts and names vary by school. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.CG_FUNCTIONS": {
+   "forms": [
+    "pick a duty of the Children's Government",
+    "pick what it does not do",
+    "say who a learner takes a worry to",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Children's Government speaks for learners, helps keep order and cleanliness, organises school activities and passes learners' worries to the teachers, and does not punish learners or run the school in place of the head teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_LEADERS": {
+   "forms": [
+    "name the leader from a duty",
+    "say what a leader does",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names religious leaders (guide people in faith and counsel), clan leaders and village elders (settle disputes and guard customs) and the chief (keeps law and order and links the village to the government), and does not say that leaders are only politicians. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.CL_QUALITIES": {
+   "forms": [
+    "pick the quality of a good leader",
+    "say how a good leader acts in a situation",
+    "say why leaders must be honest",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a good leader is honest, fair, listens, serves everyone and sets an example, and does not say a leader is good because he or she is the strongest, the richest or the loudest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_STRUCTURE": {
+   "forms": [
+    "pick who is in the county executive",
+    "pick who is in the county assembly",
+    "tell county government from national government",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a county government has a county executive (the Governor, the Deputy Governor and the county executive committee members) and a county assembly (the Members of the County Assembly and the Speaker), and does not mix it up with the President and Members of Parliament. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_GOVERNOR": {
+   "forms": [
+    "pick a duty of the Governor",
+    "pick what the Governor does not do",
+    "say who elects the Governor",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Governor is elected by the people of the county for five years, heads the county executive, sees that county laws are carried out, appoints the county executive committee with the assembly's approval and reports on the county, and does not make laws or head the country. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.CO_MCA": {
+   "forms": [
+    "pick a duty of the MCA",
+    "say whom an MCA represents",
+    "pick what an MCA does not do",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a Member of the County Assembly (MCA) is elected by a ward, makes county laws, approves the county budget, checks the work of the executive and speaks for the people of the ward, and does not carry out the laws or speak for the whole country. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

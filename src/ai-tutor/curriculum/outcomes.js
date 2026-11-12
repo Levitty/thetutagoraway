@@ -41,7 +41,7 @@ const N = 'Numbers', A = 'Algebra', M = 'Measurement', MS = 'Measurements', G = 
 
 // ---------------------------------------------------------------- Grade 4
 sub(4, N, 'Whole numbers', 'WHOLE', [
-  ['a', 'Place value and total value up to thousands', /place value|total value|thousands|hundreds|value of the digit/i],
+  ['a', 'Place value and total value of digits up to tens of thousands', /place value|total value|thousands|hundreds|value of the digit/i],
   ['b', 'Read and write numbers to 10,000 in symbols', /in (figures|symbols)|write .*number|as a number/i],
   ['c', 'Read and write numbers to 1,000 in words', /in words|words/i],
   ['d', 'Order numbers to 1,000', /order|smallest|largest|biggest|greatest|ascending|descending|which is (more|less)/i],
@@ -58,12 +58,12 @@ sub(4, N, 'Addition', 'ADD', [
   ['d', 'Addition patterns', /pattern|next number|sequence/i],
 ]);
 sub(4, N, 'Subtraction', 'SUB', [
-  ['a', 'Subtract 4-digit numbers with regrouping', /\d\s*[−-]\s*\d|subtract|difference|how many (are )?(left|more)|left|take away|less than/i],
+  ['a', 'Subtract 4-digit numbers, with and without regrouping', /\d\s*[−-]\s*\d|subtract|difference|how many (are )?(left|more)|left|take away|less than/i],
   ['c', 'Estimate a difference by rounding', /estimate|about how/i],
   ['d', 'Subtraction patterns', /pattern|next number|sequence/i],
 ]);
 sub(4, N, 'Multiplication', 'MUL', [
-  ['a', 'Multiply by a two-digit or one-digit number', /×|multipl|times|product|each|rows of|altogether/i],
+  ['a', 'Multiply by multiples of 10, and a two-digit number by a two-digit number', /×|multipl|times|product|each|rows of|altogether/i],
   ['c', 'Estimate a product by rounding', /estimate|about how/i],
   ['d', 'Multiplication patterns', /pattern|next number|sequence/i],
 ]);
@@ -122,7 +122,7 @@ sub(4, M, 'Money', 'MONEY', [
 ]);
 sub(4, G, 'Position and direction', 'POSITION', [
   ['a', 'Clockwise and anticlockwise turns', /clockwise|anti|turn/i],
-  ['c', 'Quarter, half and three-quarter turns', /quarter|half|turn|facing|north|south|east|west/i],
+  ['c', 'Quarter, half and full turns', /quarter|half|turn|facing|north|south|east|west/i],
 ]);
 sub(4, G, 'Angles', 'ANGLES', [
   ['a', 'Identify and relate angles to turns', /angle|turn|acute|right|obtuse|corner/i],

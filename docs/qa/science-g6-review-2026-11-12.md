@@ -163,26 +163,26 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `LIVING.FUNGI.FUNGI_IDENTIFY`, outcome `a`, form direct, rung 1.
 
-**Q:** What is the green fuzz that grows on old bread?
-Options: A stain from the plate | A tiny plant | **Mould, a kind of fungus** | Dirt from the air
-- If a child answers "A stain from the plate": The fuzz is mould. It grows and spreads, so it is alive. The green fuzz is mould, a fungus. It grows and spreads, so it is alive.
-- If a child answers "A tiny plant": The fuzz is mould. It grows and spreads, so it is alive. A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.
+**Q:** Which of these is a fungus found in the school compound after rain?
+Options: A blade of grass | A small bean seedling | A lump of soil | **A puffball**
+- If a child answers "A blade of grass": A puffball is a round fungus that puffs out spores. A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.
+- If a child answers "A small bean seedling": A puffball is a round fungus that puffs out spores. A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.
 
 ### science6.fu.id.story
 
 Skill `LIVING.FUNGI.FUNGI_IDENTIFY`, outcome `a`, form word, rung 2.
 
-**Q:** A learner says puffballs are lumps of soil because they grow on the ground. What can you tell her?
-Options: They are dried mud | She is right, they are lumps of soil | **They are fungi that release tiny spores** | They are small plants
-- If a child answers "They are dried mud": A puffball is a fungus. When pressed it puffs out spores like smoke. The green fuzz is mould, a fungus. It grows and spreads, so it is alive.
-- If a child answers "She is right, they are lumps of soil": A puffball is a fungus. When pressed it puffs out spores like smoke. The green fuzz is mould, a fungus. It grows and spreads, so it is alive.
+**Q:** Otieno leaves an orange in his school bag for two weeks. It is covered with blue-green fuzz. What is the fuzz?
+Options: Paint from the bag | A plant growing on the orange | Dust from the bag | **A fungus called mould**
+- If a child answers "Paint from the bag": Mould is a fungus. It grows on damp food. The green fuzz is mould, a fungus. It grows and spreads, so it is alive.
+- If a child answers "A plant growing on the orange": Mould is a fungus. It grows on damp food. A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.
 
 ### science6.fu.id.spot
 
 Skill `LIVING.FUNGI.FUNGI_IDENTIFY`, outcome `a`, form spot, rung 3.
 
-**Q:** Faith says yeast is a powder like salt and is not alive. Which step has the mistake?
-Steps: Step 1: Faith sees dry yeast grains in a packet. / Step 2: She adds warm water and sugar and sees froth. / **Step 3: She says the froth proves yeast is a chemical, not a living thing.**
+**Q:** Mwajuma says the white fur on a damp sandal is a stain. Which step has the mistake?
+Steps: Step 1: Mwajuma sees a white fur on a sandal kept in a wet bag. / Step 2: A week later the fur has spread to the strap. / **Step 3: She says it is a stain that has spread by itself.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -191,25 +191,25 @@ Steps: Step 1: Faith sees dry yeast grains in a packet. / Step 2: She adds warm 
 Skill `LIVING.FUNGI.FUNGI_FEATURES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which of these do fungi NOT have?
-Options: A stalk | A way of getting food | The signs of life that all living things show | **Green colour for making food with sunlight**
-- If a child answers "A stalk": Fungi have no green colour (chlorophyll). They cannot make their own food. A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.
+Options: **Green colour for making food with sunlight** | A way of getting food | A stalk | The signs of life that all living things show
 - If a child answers "A way of getting food": Fungi have no green colour (chlorophyll). They cannot make their own food. Fungi have no green colour and cannot make food with sunlight. They take food from dead matter or other living things.
+- If a child answers "A stalk": Fungi have no green colour (chlorophyll). They cannot make their own food. A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.
 
 ### science6.fu.feat.story
 
 Skill `LIVING.FUNGI.FUNGI_FEATURES`, outcome `a`, form word, rung 2.
 
-**Q:** Hassan draws a mushroom with roots, green leaves and flowers. What is wrong with his drawing?
-Options: **A mushroom has no leaves or flowers** | The roots should be longer | The leaves should be bigger so they make more food | Nothing, a mushroom has leaves and flowers
-- If a child answers "The roots should be longer": A mushroom has a stalk and a cap and no leaves, flowers or seeds. A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.
-- If a child answers "The leaves should be bigger so they make more food": A mushroom has a stalk and a cap and no leaves, flowers or seeds. Fungi have no green colour and cannot make food with sunlight. They take food from dead matter or other living things.
+**Q:** Chebet says fungi and green plants feed in the same way. Which reply is right?
+Options: Fungi make their own food in their stalks and caps using sunlight | Fungi make food in their roots | She is right, both make food with sunlight | **Green plants make food using sunlight, fungi take it from other things**
+- If a child answers "Fungi make their own food in their stalks and caps using sunlight": Plants make their own food. Fungi cannot, so they feed on dead or living things. Fungi have no green colour and cannot make food with sunlight. They take food from dead matter or other living things.
+- If a child answers "Fungi make food in their roots": Plants make their own food. Fungi cannot, so they feed on dead or living things. A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.
 
 ### science6.fu.feat.spot
 
 Skill `LIVING.FUNGI.FUNGI_FEATURES`, outcome `a`, form spot, rung 3.
 
-**Q:** Samuel says every mushroom is safe because his mother cooks some. Which step has the mistake?
-Steps: Step 1: Samuel sees his mother cook mushrooms from the market. / Step 2: He finds a different mushroom in the field. / **Step 3: He says it must be safe because all mushrooms are safe.**
+**Q:** Kiprop says a fungus has flowers and seeds like a plant. Which step has the mistake?
+Steps: Step 1: Kiprop looks at a toadstool. / Step 2: He cannot see any flowers on it. / **Step 3: He says the flowers are hidden inside, so it is a plant.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -217,19 +217,19 @@ Steps: Step 1: Samuel sees his mother cook mushrooms from the market. / Step 2: 
 
 Skill `LIVING.FUNGI.FUNGI_IMPORTANCE`, outcome `a_`, form direct, rung 1.
 
-**Q:** Why does dough rise when yeast is added?
-Options: **Yeast gives off a gas that makes bubbles** | The yeast spoils the dough | The yeast is heavy and pushes the dough up | The yeast soaks up the water
-- If a child answers "The yeast spoils the dough": Yeast feeds on sugar and gives off carbon dioxide gas. The gas makes the dough rise. Some fungi do harm, but many are useful. Yeast makes bread rise, and some moulds give us medicines.
-- If a child answers "The yeast is heavy and pushes the dough up": Yeast feeds on sugar and gives off carbon dioxide gas. The gas makes the dough rise. Yeast feeds on sugar and gives off carbon dioxide gas. The gas makes bubbles that push the dough up.
+**Q:** Which statement about fungi is true?
+Options: All fungi spoil food | No fungi are useful | **Some fungi are useful, such as yeast** | All fungi are harmful and cause disease
+- If a child answers "All fungi spoil food": Many fungi are useful. Yeast helps make bread, and some moulds give medicines. Some fungi do harm, but many are useful. Yeast makes bread rise, and some moulds give us medicines.
+- If a child answers "No fungi are useful": Many fungi are useful. Yeast helps make bread, and some moulds give medicines. Fungi break down dead plants and animals. This returns food to the soil for new plants.
 
 ### science6.fu.imp.story
 
 Skill `LIVING.FUNGI.FUNGI_IMPORTANCE`, outcome `a_`, form word, rung 2.
 
-**Q:** Njoki says that if fungi did not rot dead things, nothing bad would happen. What would really happen?
-Options: **Dead plants and animals would pile up** | Nothing, because rotting is only a waste | The soil would be richer | Everything would be safer
-- If a child answers "Nothing, because rotting is only a waste": Without fungi, dead matter would not rot and food would not return to the soil. Fungi break down dead plants and animals. This returns food to the soil for new plants.
-- If a child answers "The soil would be richer": Without fungi, dead matter would not rot and food would not return to the soil. Fungi break down dead plants and animals. This returns food to the soil for new plants.
+**Q:** A scientist finds a mould that kills germs. What can the mould be used for?
+Options: To rot rubbish | **To make medicine** | To make food go bad | Nothing, all moulds are harmful
+- If a child answers "To rot rubbish": Some moulds make substances that kill germs. These are used as medicines. Fungi break down dead plants and animals. This returns food to the soil for new plants.
+- If a child answers "To make food go bad": Some moulds make substances that kill germs. These are used as medicines. Some fungi do harm, but many are useful. Yeast makes bread rise, and some moulds give us medicines.
 
 ### science6.fu.imp.spot
 
@@ -244,26 +244,26 @@ Steps: Step 1: Brian sees mould on old bread. / Step 2: He knows ringworm is cau
 
 Skill `LIVING.FUNGI.FUNGI_MOULD_GROWTH`, outcome `a_`, form direct, rung 1.
 
-**Q:** A slice of bread has a small patch of mould. What should you do?
-Options: Scrape it off and eat the rest | Toast it and eat it | Leave it in the sun to dry | **Throw the slice away**
-- If a child answers "Scrape it off and eat the rest": Mould spreads in the bread as thin threads we cannot see. Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.
-- If a child answers "Toast it and eat it": Mould spreads in the bread as thin threads we cannot see. Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.
+**Q:** Why is a fridge good for keeping food fresh?
+Options: It is damp, so mould cannot live | **It is cool, so mould grows slowly** | It is hot, so mould dies at once | It makes air spores disappear completely
+- If a child answers "It is damp, so mould cannot live": Cold slows the growth of mould and other germs. Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.
+- If a child answers "It is hot, so mould dies at once": Cold slows the growth of mould and other germs. Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.
 
 ### science6.fu.mould.story
 
 Skill `LIVING.FUNGI.FUNGI_MOULD_GROWTH`, outcome `a_`, form word, rung 2.
 
-**Q:** A shopkeeper stores flour in a wet, warm room. Soon the flour smells and has mould. What should she do?
-Options: Wet the flour more | Store it in a warmer room | Scrape off the mould and use it | **Move the flour to a dry, cool place**
-- If a child answers "Wet the flour more": A dry, cool place stops mould growing. Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.
-- If a child answers "Store it in a warmer room": A dry, cool place stops mould growing. Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.
+**Q:** Mwangi says mould appears out of the bread by itself. What can you tell him?
+Options: He is right, mould is made by the bread itself | Mould is made by the knife | Mould grows from dry bread only | **It grows from tiny spores that land on the bread**
+- If a child answers "He is right, mould is made by the bread itself": Spores float in the air and grow when they land on damp food. Mould grows from tiny spores in the air that land on damp food and grow when it is warm.
+- If a child answers "Mould is made by the knife": Spores float in the air and grow when they land on damp food. Mould grows from tiny spores in the air that land on damp food and grow when it is warm.
 
 ### science6.fu.mould.spot
 
 Skill `LIVING.FUNGI.FUNGI_MOULD_GROWTH`, outcome `a_`, form spot, rung 3.
 
-**Q:** Dorcas says it is fine to eat bread after scraping off the mould. Which step has the mistake?
-Steps: Step 1: Dorcas sees one green patch on the bread. / Step 2: She scrapes it off with a knife. / **Step 3: She says the rest is now safe to eat.**
+**Q:** Kioko says dry food in the hot sun goes mouldy fastest. Which step has the mistake?
+Steps: Step 1: Kioko leaves bread in the sun. / Step 2: The bread becomes dry and hard. / **Step 3: He says it will have the most mould.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -271,26 +271,26 @@ Steps: Step 1: Dorcas sees one green patch on the bread. / Step 2: She scrapes i
 
 Skill `LIVING.INVERTEBRATES.INVERT_IDENTIFY`, outcome `a`, form direct, rung 1.
 
-**Q:** Which animal belongs with the worms?
-Options: A snake | A caterpillar with legs | A spider | **An earthworm**
-- If a child answers "A snake": An earthworm is a worm. It has no legs and no backbone. A snail, a worm and a starfish have no backbone. They are all invertebrates.
-- If a child answers "A caterpillar with legs": An earthworm is a worm. It has no legs and no backbone. A snail, a worm and a starfish have no backbone. They are all invertebrates.
+**Q:** Which of these is an invertebrate?
+Options: None of them, they are not animals | A tilapia | A tilapia fish | **A snail**
+- If a child answers "None of them, they are not animals": A snail has no backbone, so it is an invertebrate. A snail, a worm and a starfish have no backbone. They are all invertebrates.
+- If a child answers "A tilapia": A snail has no backbone, so it is an invertebrate. A snail, a worm and a starfish have no backbone. They are all invertebrates.
 
 ### science6.iv.id.story
 
 Skill `LIVING.INVERTEBRATES.INVERT_IDENTIFY`, outcome `a`, form word, rung 2.
 
-**Q:** Ouko lists a housefly, a bee and a tick as insects. Which one is not an insect?
-Options: All three are not animals | **The tick** | The housefly | The bee
-- If a child answers "All three are not animals": A tick has eight legs and belongs with spiders. Houseflies and bees have six legs. A snail, a worm and a starfish have no backbone. They are all invertebrates.
-- If a child answers "The housefly": A tick has eight legs and belongs with spiders. Houseflies and bees have six legs. A spider is not an insect. It has eight legs, while an insect has six.
+**Q:** Which of these animals found on the beach is an invertebrate?
+Options: None, all are fish | A shark | A tilapia | **An octopus**
+- If a child answers "None, all are fish": An octopus has no backbone. A snail, a worm and a starfish have no backbone. They are all invertebrates.
+- If a child answers "A shark": An octopus has no backbone. A crab, an octopus and a starfish have no backbone. They are sea invertebrates, not fish.
 
 ### science6.iv.id.spot
 
 Skill `LIVING.INVERTEBRATES.INVERT_IDENTIFY`, outcome `a`, form spot, rung 3.
 
-**Q:** Neema says a tick is an insect. Which step has the mistake?
-Steps: Step 1: Neema finds a tick on a cow. / Step 2: She counts eight legs. / **Step 3: She says it is an insect.**
+**Q:** Kevin says an octopus is a fish. Which step has the mistake?
+Steps: Step 1: Kevin sees an octopus in a book. / Step 2: It has eight arms and no bones. / **Step 3: He says it is a fish because it lives in the sea.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -298,19 +298,19 @@ Steps: Step 1: Neema finds a tick on a cow. / Step 2: She counts eight legs. / *
 
 Skill `LIVING.INVERTEBRATES.INVERT_CHARS`, outcome `c`, form direct, rung 1.
 
-**Q:** How many legs does a spider have?
-Options: Six | Ten | **Eight** | None
-- If a child answers "Six": A spider has eight legs and two body parts. An insect has six legs. A spider has eight. A centipede and a millipede have many.
-- If a child answers "Ten": A spider has eight legs and two body parts. An insect has six legs. A spider has eight. A centipede and a millipede have many.
+**Q:** How many legs does an insect have?
+Options: Eight | None | Four | **Six**
+- If a child answers "Eight": An insect has six legs and three body parts. An insect has six legs. A spider has eight. A centipede and a millipede have many.
+- If a child answers "None": An insect has six legs and three body parts. Worms, snails and slugs have no legs. Not all invertebrates have legs.
 
 ### science6.iv.ch.story
 
 Skill `LIVING.INVERTEBRATES.INVERT_CHARS`, outcome `c`, form word, rung 2.
 
-**Q:** A learner draws an insect with eight legs. What should she change?
-Options: Give it ten legs | Remove all the legs | **Give it six legs** | Nothing, eight is right
-- If a child answers "Give it ten legs": An insect has six legs and three body parts. An insect has six legs. A spider has eight. A centipede and a millipede have many.
-- If a child answers "Remove all the legs": An insect has six legs and three body parts. Worms, snails and slugs have no legs. Not all invertebrates have legs.
+**Q:** Chebet counts the legs of an animal and finds eight legs and two body parts. Which group is it?
+Options: Insects | **Spiders, ticks and mites** | Millipedes | Worms
+- If a child answers "Insects": Eight legs and two body parts show a spider-like animal. An insect has six legs. A spider has eight. A centipede and a millipede have many.
+- If a child answers "Millipedes": Eight legs and two body parts show a spider-like animal. An insect has six legs. A spider has eight. A centipede and a millipede have many.
 
 ### science6.iv.ch.spot
 
@@ -325,26 +325,26 @@ Steps: Step 1: Sarah looks at a beetle. / Step 2: It has six legs. / **Step 3: S
 
 Skill `LIVING.INVERTEBRATES.INVERT_IMPORTANCE`, outcome `d`, form direct, rung 1.
 
-**Q:** What do earthworms do in the soil?
-Options: Harm the roots of crops and the soil | Spread diseases | **Loosen it so air and water get in** | Make the soil hard
-- If a child answers "Harm the roots of crops and the soil": Earthworms make tunnels that loosen the soil. Earthworms make tunnels that loosen the soil. This lets air and water reach the roots.
-- If a child answers "Spread diseases": Earthworms make tunnels that loosen the soil. Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.
+**Q:** How do bees help farmers?
+Options: They eat the crops | They harm the roots | They spread diseases to the crops and to the farmer | **They carry pollen between flowers, so fruits and seeds form**
+- If a child answers "They eat the crops": Bees pollinate flowers. This helps crops to give fruit and seed. Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.
+- If a child answers "They harm the roots": Bees pollinate flowers. This helps crops to give fruit and seed. Earthworms make tunnels that loosen the soil. This lets air and water reach the roots.
 
 ### science6.iv.imp.story
 
 Skill `LIVING.INVERTEBRATES.INVERT_IMPORTANCE`, outcome `d`, form word, rung 2.
 
-**Q:** Weevils eat the stored maize in a store. How are weevils important?
-Options: They help the stored grain to last longer | They pollinate the grain | They spread malaria | **They damage stored food, so they are pests**
-- If a child answers "They help the stored grain to last longer": Weevils eat stored grain. Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.
-- If a child answers "They pollinate the grain": Weevils eat stored grain. Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.
+**Q:** Mama Nekesa keeps bees. How do the bees help her family?
+Options: They harm the soil | They eat the flowers | They only sting people and give no help | **They give honey and pollinate her crops**
+- If a child answers "They harm the soil": Bees give honey and wax and help crops to make fruits and seeds. Earthworms make tunnels that loosen the soil. This lets air and water reach the roots.
+- If a child answers "They eat the flowers": Bees give honey and wax and help crops to make fruits and seeds. Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.
 
 ### science6.iv.imp.spot
 
 Skill `LIVING.INVERTEBRATES.INVERT_IMPORTANCE`, outcome `d`, form spot, rung 3.
 
-**Q:** Grace says all invertebrates are pests. Which step has the mistake?
-Steps: Step 1: Grace sees mosquitoes and weevils. / Step 2: They do harm to people and crops. / **Step 3: She decides every invertebrate is a pest.**
+**Q:** Hillary says ticks spread malaria. Which step has the mistake?
+Steps: Step 1: Hillary finds ticks on cattle. / Step 2: He knows ticks suck blood. / **Step 3: He says ticks spread malaria.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -352,26 +352,26 @@ Steps: Step 1: Grace sees mosquitoes and weevils. / Step 2: They do harm to peop
 
 Skill `LIVING.INVERTEBRATES.INVERT_HANDLING`, outcome `b`, form direct, rung 1.
 
-**Q:** What should be done after handling invertebrates?
-Options: **Wash the hands with soap and water** | Nothing, go straight to eat | Touch more animals | Wipe the hands on the uniform
-- If a child answers "Nothing, go straight to eat": Wash hands to remove germs. Always wash your hands with soap and water after handling animals, soil or waste.
-- If a child answers "Touch more animals": Wash hands to remove germs. Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.
+**Q:** How should a learner treat a caterpillar found on a leaf?
+Options: Crush it for safety | Take it home for good | Pick it up with bare hands without looking | **Look gently, then leave it on the leaf**
+- If a child answers "Crush it for safety": Be gentle and leave the animal where it lives. Handle animals gently and put them back where you found them. Every animal has a place in nature.
+- If a child answers "Take it home for good": Be gentle and leave the animal where it lives. Handle animals gently and put them back where you found them. Every animal has a place in nature.
 
 ### science6.iv.hand.story
 
 Skill `LIVING.INVERTEBRATES.INVERT_HANDLING`, outcome `b`, form word, rung 2.
 
 **Q:** After the lesson the class has handled soil with worms. What should they do before eating?
-Options: **Wash their hands with soap and water** | Touch their faces first and then eat | Wipe hands on grass | Eat straight away
+Options: Touch their faces first and then eat | Eat straight away | Wipe hands on grass | **Wash their hands with soap and water**
 - If a child answers "Touch their faces first and then eat": Wash hands after handling animals or soil. Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.
-- If a child answers "Wipe hands on grass": Wash hands after handling animals or soil. Always wash your hands with soap and water after handling animals, soil or waste.
+- If a child answers "Eat straight away": Wash hands after handling animals or soil. Always wash your hands with soap and water after handling animals, soil or waste.
 
 ### science6.iv.hand.spot
 
 Skill `LIVING.INVERTEBRATES.INVERT_HANDLING`, outcome `b`, form spot, rung 3.
 
-**Q:** Susan says it is fine to hold a scorpion with bare fingers if she is quick. Which step has the mistake?
-Steps: Step 1: Susan sees a scorpion in the grass. / Step 2: She knows it can sting. / **Step 3: She says she will catch it with her fingers.**
+**Q:** Ken says small animals are always safe to pick up. Which step has the mistake?
+Steps: Step 1: Ken sees a wasp on a wall. / Step 2: It is very small. / **Step 3: He says he can pick it up with his hand.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -379,26 +379,26 @@ Steps: Step 1: Susan sees a scorpion in the grass. / Step 2: She knows it can st
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which part of the circulatory system is the pump?
-Options: **The heart** | The blood vessels | The lungs | The blood
-- If a child answers "The blood vessels": The heart pumps blood to all parts of the body. The heart pumps blood round the body. Blood is made in the bones, not in the heart.
-- If a child answers "The lungs": The heart pumps blood to all parts of the body. The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.
+**Q:** What are the tubes that carry blood called?
+Options: **Blood vessels** | Nerves | Bones | Windpipes
+- If a child answers "Nerves": Arteries, veins and capillaries are blood vessels. The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.
+- If a child answers "Bones": Arteries, veins and capillaries are blood vessels. The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.
 
 ### science6.ci.parts.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS`, outcome `a`, form word, rung 2.
 
-**Q:** A child cuts her finger and sees red liquid. What is it?
-Options: Liquid that comes from the stomach | Water from the nerves | Juice from the bones | **Blood, part of the circulatory system**
-- If a child answers "Liquid that comes from the stomach": Blood carries food and oxygen round the body. The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.
-- If a child answers "Water from the nerves": Blood carries food and oxygen round the body. The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.
+**Q:** Njoroge says the heart makes blood. What is true?
+Options: The heart stores all the blood | **The heart pumps blood, which is made in the bones** | He is right, the heart makes all the blood | The lungs make blood
+- If a child answers "The heart stores all the blood": The heart moves blood. It does not make it. The heart pumps blood round the body. Blood is made in the bones, not in the heart.
+- If a child answers "He is right, the heart makes all the blood": The heart moves blood. It does not make it. The heart pumps blood round the body. Blood is made in the bones, not in the heart.
 
 ### science6.ci.parts.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS`, outcome `a`, form spot, rung 3.
 
-**Q:** Mark says the heart makes the blood. Which step has the mistake?
-Steps: Step 1: Mark feels his heartbeat. / Step 2: He knows blood moves round his body. / **Step 3: He says the heart makes the blood.**
+**Q:** Linda says the lungs are part of the circulatory system. Which step has the mistake?
+Steps: Step 1: Linda looks at a body chart. / Step 2: She sees the heart and the lungs in the chest. / **Step 3: She says that every organ in the chest is part of the circulatory system.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -406,26 +406,26 @@ Steps: Step 1: Mark feels his heartbeat. / Step 2: He knows blood moves round hi
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS`, outcome `b`, form direct, rung 1.
 
-**Q:** What do the upper chambers of the heart, the auricles, do?
-Options: **Receive blood coming to the heart** | Make new blood | Nothing, they are empty | Push the blood out to the body with great force
-- If a child answers "Make new blood": The auricles receive blood and pass it to the ventricles. The auricles receive blood. The ventricles have thick walls and push blood out.
-- If a child answers "Nothing, they are empty": The auricles receive blood and pass it to the ventricles. The heart has four chambers: two auricles on top and two ventricles below.
+**Q:** Which part of the heart pushes blood out with strong squeezes?
+Options: **The lower chambers, the ventricles** | The whole heart is one room | The skin of the heart | The upper chambers, the auricles
+- If a child answers "The whole heart is one room": The ventricles have thick walls and push blood out. The heart has four chambers: two auricles on top and two ventricles below.
+- If a child answers "The skin of the heart": The ventricles have thick walls and push blood out. The auricles receive blood. The ventricles have thick walls and push blood out.
 
 ### science6.ci.heart.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS`, outcome `b`, form word, rung 2.
 
-**Q:** Kevin says the heart is on the far left of his body, near his arm. What is true?
-Options: It is in the stomach | He is right | **It is in the middle of the chest, tilted a little left** | It is in one corner of the lungs, beside the ribs
-- If a child answers "It is in the stomach": Most of the heart is in the middle, with its tip pointing left. The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.
-- If a child answers "He is right": Most of the heart is in the middle, with its tip pointing left. The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.
+**Q:** Odhiambo makes a fist and places it in the middle of his chest, a little to the left. What is he showing?
+Options: The size of the lungs | The place of the stomach in the body | **The size and place of the heart** | The place of the ribs
+- If a child answers "The size of the lungs": The heart is about the size of the owner's fist. The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.
+- If a child answers "The place of the stomach in the body": The heart is about the size of the owner's fist. The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.
 
 ### science6.ci.heart.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS`, outcome `b`, form spot, rung 3.
 
-**Q:** Brian says the heart is in the stomach. Which step has the mistake?
-Steps: Step 1: Brian feels his heartbeat. / Step 2: It is in his chest. / **Step 3: He says the heart is in the stomach.**
+**Q:** Zuri says the auricles push the blood out of the heart. Which step has the mistake?
+Steps: Step 1: Zuri reads about the heart. / Step 2: She learns it has upper and lower chambers. / **Step 3: She says the upper chambers push the blood out hardest.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -433,26 +433,26 @@ Steps: Step 1: Brian feels his heartbeat. / Step 2: It is in his chest. / **Step
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS`, outcome `b`, form direct, rung 1.
 
-**Q:** What happens to blood after it reaches the toes?
-Options: **It goes back to the heart in the veins** | It stays in the toes | It goes back to the heart in the arteries | It leaves the body
-- If a child answers "It stays in the toes": Blood goes round and round the body. Blood goes round and round. It returns to the heart in the veins.
-- If a child answers "It goes back to the heart in the arteries": Blood goes round and round the body. Arteries carry blood away from the heart. Veins bring blood back to the heart.
+**Q:** Which vessels have thin walls and join arteries to veins?
+Options: **Capillaries** | The largest veins | The largest arteries | Only veins
+- If a child answers "The largest veins": Capillaries are the tiny links between arteries and veins. Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.
+- If a child answers "The largest arteries": Capillaries are the tiny links between arteries and veins. Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.
 
 ### science6.ci.ves.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS`, outcome `b`, form word, rung 2.
 
-**Q:** Food and oxygen pass from the blood into the muscle. Which vessels do this?
-Options: The largest artery | The largest vein | Veins only | **Capillaries**
-- If a child answers "The largest artery": The thin walls of capillaries let food and oxygen pass. Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.
-- If a child answers "The largest vein": The thin walls of capillaries let food and oxygen pass. Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.
+**Q:** Wambui says blood goes to the body and stays there. What can you tell her?
+Options: It goes out of the body | She is right, it stays in the body for ever | **Blood goes round and returns to the heart** | Only arteries bring it back
+- If a child answers "It goes out of the body": It is a loop. The veins bring it back. Blood goes round and round. It returns to the heart in the veins.
+- If a child answers "She is right, it stays in the body for ever": It is a loop. The veins bring it back. Blood goes round and round. It returns to the heart in the veins.
 
 ### science6.ci.ves.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS`, outcome `b`, form spot, rung 3.
 
-**Q:** Pat says arteries bring blood back to the heart. Which step has the mistake?
-Steps: Step 1: Pat draws the heart. / Step 2: She draws arrows out of it. / **Step 3: She says the same vessels bring blood back.**
+**Q:** Eli says veins carry blood away from the heart. Which step has the mistake?
+Steps: Step 1: Eli learns two kinds of vessels. / Step 2: He remembers that one carries blood away. / **Step 3: He says veins carry blood away from the heart.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -461,25 +461,25 @@ Steps: Step 1: Pat draws the heart. / Step 2: She draws arrows out of it. / **St
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS`, outcome `b`, form direct, rung 1.
 
 **Q:** What is the liquid part of blood called?
-Options: **Plasma** | Blood has no liquid part | Platelets | Red cells
-- If a child answers "Blood has no liquid part": Plasma carries cells and digested food. Blood has a liquid part called plasma. It carries blood cells and digested food around the body.
+Options: Platelets | Blood has no liquid part | Red cells | **Plasma**
 - If a child answers "Platelets": Plasma carries cells and digested food. Platelets stick together to help the blood clot and stop the bleeding.
+- If a child answers "Blood has no liquid part": Plasma carries cells and digested food. Blood has a liquid part called plasma. It carries blood cells and digested food around the body.
 
 ### science6.ci.blood.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS`, outcome `b`, form word, rung 2.
 
-**Q:** Njeri says white blood cells carry oxygen because they are clean. What is true?
-Options: She is right | White cells clot blood | **White cells fight germs; red cells carry oxygen** | White cells make the blood red and carry oxygen
-- If a child answers "She is right": Each kind of blood cell has its own job. White blood cells fight germs. Red blood cells carry oxygen.
-- If a child answers "White cells clot blood": Each kind of blood cell has its own job. Platelets stick together to help the blood clot and stop the bleeding.
+**Q:** A runner breathes in air. Which blood cells carry the oxygen to her muscles?
+Options: Platelets | All parts of blood in the same way | White blood cells | **Red blood cells**
+- If a child answers "Platelets": Red cells carry oxygen. White blood cells fight germs. Red blood cells carry oxygen.
+- If a child answers "All parts of blood in the same way": Red cells carry oxygen. Blood has a liquid part called plasma. It carries blood cells and digested food around the body.
 
 ### science6.ci.blood.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS`, outcome `b`, form spot, rung 3.
 
-**Q:** Dan says platelets carry oxygen to a cut. Which step has the mistake?
-Steps: Step 1: Dan cuts his finger. / Step 2: The blood slowly thickens. / **Step 3: He says platelets carry oxygen to the cut.**
+**Q:** Mary says blood is made only of red cells. Which step has the mistake?
+Steps: Step 1: Mary sees red blood. / Step 2: She hears about plasma. / **Step 3: She says there is no liquid part.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -487,26 +487,26 @@ Steps: Step 1: Dan cuts his finger. / Step 2: The blood slowly thickens. / **Ste
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS`, outcome `c`, form direct, rung 1.
 
-**Q:** What happens in hardening of the arteries?
-Options: The walls become soft and thin | Germs enter the arteries | **The walls become stiff and narrow** | The arteries turn into bone
-- If a child answers "The walls become soft and thin": Blood flows less easily. In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.
-- If a child answers "Germs enter the arteries": Blood flows less easily. High blood pressure and heart attacks are not caught from other people. They come from how the heart and vessels are working.
+**Q:** Can a child catch high blood pressure from a friend?
+Options: Yes, it spreads from person to person like a cold | **No, it is not caught from other people** | Yes, by touching a red face | Yes, by sharing a cup
+- If a child answers "Yes, it spreads from person to person like a cold": It is not caused by germs. High blood pressure and heart attacks are not caught from other people. They come from how the heart and vessels are working.
+- If a child answers "Yes, by touching a red face": It is not caused by germs. High blood pressure means the blood pushes too hard against the walls of the vessels.
 
 ### science6.ci.cond.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS`, outcome `c`, form word, rung 2.
 
-**Q:** A doctor says Mr Otieno's arteries have hardened. What does this mean?
-Options: The walls turn into bone, so they cannot bend at all | The walls are soft and thin | He caught a germ | **The walls are stiff and narrow, so blood flows less easily**
-- If a child answers "The walls turn into bone, so they cannot bend at all": Stiff, narrow vessels slow the blood. In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.
-- If a child answers "The walls are soft and thin": Stiff, narrow vessels slow the blood. In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.
+**Q:** Why can hardened arteries be dangerous?
+Options: They become too soft to hold blood | They break into pieces for no reason | They spread to others | **They let less blood through to the body**
+- If a child answers "They become too soft to hold blood": Narrow, stiff arteries slow blood to the heart and other parts. In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.
+- If a child answers "They break into pieces for no reason": Narrow, stiff arteries slow blood to the heart and other parts. In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.
 
 ### science6.ci.cond.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS`, outcome `c`, form spot, rung 3.
 
-**Q:** Mike says high blood pressure means too much blood. Which step has the mistake?
-Steps: Step 1: Mike sees a blood pressure machine. / Step 2: It squeezes the arm. / **Step 3: He says it counts how much blood there is.**
+**Q:** Dave says stiff arteries let more blood through. Which step has the mistake?
+Steps: Step 1: Dave reads about hardened arteries. / Step 2: He knows the walls are stiff. / **Step 3: He says they are wider and let more blood through.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -514,26 +514,26 @@ Steps: Step 1: Mike sees a blood pressure machine. / Step 2: It squeezes the arm
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION`, outcome `c`, form direct, rung 1.
 
-**Q:** Which food should be taken only a little to protect the heart?
-Options: **Salty and oily snacks** | Plenty of salty and oily snacks | Chips every day | Fruit and vegetables
-- If a child answers "Plenty of salty and oily snacks": Too much salt, fat and sugar harm the heart. Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.
-- If a child answers "Chips every day": Too much salt, fat and sugar harm the heart. Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.
+**Q:** Which of these protects the heart?
+Options: Eating a lot of sugar | Eating a lot of salt | **Eating vegetables and fruit** | Lying down after eating
+- If a child answers "Eating a lot of sugar": Vegetables and fruit are good for the heart. Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.
+- If a child answers "Eating a lot of salt": Vegetables and fruit are good for the heart. Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.
 
 ### science6.ci.prev.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION`, outcome `c`, form word, rung 2.
 
-**Q:** Wanjiru wants a healthy heart. What should she add to her day?
-Options: More long hours lying down | More salty snacks | **Playing, walking or skipping** | More sitting
-- If a child answers "More long hours lying down": Activity strengthens the heart. Regular exercise makes the heart strong. Sitting all day does not protect the heart.
-- If a child answers "More salty snacks": Activity strengthens the heart. Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.
+**Q:** Kamau says only grandparents need to look after their hearts. What is true?
+Options: **Good habits from childhood protect the heart for life** | He is right | Hearts only need any care after the age of 60 | Children should rest more
+- If a child answers "He is right": Habits begin early. Habits begin in childhood. Healthy meals and exercise protect the heart for life.
+- If a child answers "Hearts only need any care after the age of 60": Habits begin early. Habits begin in childhood. Healthy meals and exercise protect the heart for life.
 
 ### science6.ci.prev.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION`, outcome `c`, form spot, rung 3.
 
-**Q:** Liam says the heart must rest and never be exercised. Which step has the mistake?
-Steps: Step 1: Liam gets tired after running. / Step 2: He thinks his heart is tired. / **Step 3: He says he should never run again.**
+**Q:** Edna says smoking is safe for young people. Which step has the mistake?
+Steps: Step 1: Edna sees a young man smoke. / Step 2: He looks well. / **Step 3: She says smoking cannot harm the young.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -542,25 +542,25 @@ Steps: Step 1: Liam gets tired after running. / Step 2: He thinks his heart is t
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE`, outcome `d`, form direct, rung 1.
 
 **Q:** Which routine best protects the heart?
-Options: Sleep only | Water, exercise and smoking at weekends | **Water, activity, healthy meals and sleep** | Exercise only
-- If a child answers "Sleep only": A good routine has several parts. A healthy routine has several parts: water, activity, healthy meals and enough sleep.
+Options: Water, exercise and smoking at weekends | Sleep only | **Water, activity, healthy meals and sleep** | Exercise only
 - If a child answers "Water, exercise and smoking at weekends": A good routine has several parts. Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.
+- If a child answers "Sleep only": A good routine has several parts. A healthy routine has several parts: water, activity, healthy meals and enough sleep.
 
 ### science6.ci.rout.story
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE`, outcome `d`, form word, rung 2.
 
-**Q:** A teenager smokes at the weekend. What should he do?
-Options: Nothing, it is safe for the young | Smoke only a little | **Stop, since smoking harms the heart** | Run more
-- If a child answers "Nothing, it is safe for the young": Smoking harms at any age. Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.
-- If a child answers "Smoke only a little": Smoking harms at any age. Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.
+**Q:** Atieno exercises every day but eats only salty chips. What is missing?
+Options: **Healthy meals as part of the routine** | More exercise only | Nothing, because exercise is enough | Soft drinks
+- If a child answers "More exercise only": One habit is not enough. A healthy routine has several parts: water, activity, healthy meals and enough sleep.
+- If a child answers "Nothing, because exercise is enough": One habit is not enough. A healthy routine has several parts: water, activity, healthy meals and enough sleep.
 
 ### science6.ci.rout.spot
 
 Skill `LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE`, outcome `d`, form spot, rung 3.
 
-**Q:** Hugh says exercise alone makes a healthy routine. Which step has the mistake?
-Steps: Step 1: Hugh runs every day. / Step 2: He eats only fried food. / **Step 3: He says his routine is perfect.**
+**Q:** Dina says soft drinks are as good as water. Which step has the mistake?
+Steps: Step 1: Dina is thirsty. / Step 2: She buys a soft drink. / **Step 3: She says it is as good as water.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -568,19 +568,19 @@ Steps: Step 1: Hugh runs every day. / Step 2: He eats only fried food. / **Step 
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES`, outcome `a`, form direct, rung 1.
 
-**Q:** What is it called when water vapour turns into liquid water?
-Options: Melting | **Condensation** | Evaporation | Boiling
-- If a child answers "Melting": Condensation is a gas turning into a liquid. Condensation is a gas turning into a liquid. The drops come from water vapour in the air.
-- If a child answers "Evaporation": Condensation is a gas turning into a liquid. Condensation is a gas turning into a liquid. The drops come from water vapour in the air.
+**Q:** Why do drops form on the outside of a cold bottle?
+Options: The bottle makes water | The water in the bottle boils | **Water vapour in the air turns to liquid on the cold surface** | Water leaks out through tiny holes in the glass wall
+- If a child answers "The bottle makes water": The vapour in the air cools and condenses on the cold bottle. Condensation is a gas turning into a liquid. The drops come from water vapour in the air.
+- If a child answers "The water in the bottle boils": The vapour in the air cools and condenses on the cold bottle. Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.
 
 ### science6.cs.names.story
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES`, outcome `a`, form word, rung 2.
 
-**Q:** Atieno says water only evaporates when it boils. What is true?
-Options: It evaporates only in the freezer | It only dissolves | **It evaporates slowly at any temperature** | She is right
-- If a child answers "It evaporates only in the freezer": A puddle dries without boiling. Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.
-- If a child answers "It only dissolves": A puddle dries without boiling. Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.
+**Q:** Wanjiru leaves a piece of candle wax in the sun and it turns to liquid. What change is this?
+Options: **Melting** | Dissolving | Boiling | Condensation
+- If a child answers "Dissolving": A solid becomes a liquid when heated. Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.
+- If a child answers "Boiling": A solid becomes a liquid when heated. Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.
 
 ### science6.cs.names.spot
 
@@ -595,26 +595,26 @@ Steps: Step 1: Rita stirs sugar in hot tea. / Step 2: The sugar disappears. / **
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT`, outcome `a`, form direct, rung 1.
 
-**Q:** What do we see above a boiling pot?
-Options: **Tiny drops of liquid water, because steam itself cannot be seen** | Ice | Smoke from the water | Water vapour, which we can see rising above the hot pot
-- If a child answers "Ice": Steam is invisible. The white cloud is tiny drops. Water freezes when heat is taken away. A freezer removes heat.
-- If a child answers "Smoke from the water": Steam is invisible. The white cloud is tiny drops. Water vapour is invisible. The white cloud is tiny drops of liquid water formed when the vapour cools.
+**Q:** What must happen to water for it to freeze?
+Options: It must be boiled for a long time first | **Heat must be taken away from it** | It must take in cold | It must be heated
+- If a child answers "It must be boiled for a long time first": A freezer takes heat away. Water freezes when heat is taken away. A freezer removes heat.
+- If a child answers "It must take in cold": A freezer takes heat away. Ice melts because it gains heat. Cold is the lack of heat.
 
 ### science6.cs.heat.story
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT`, outcome `a`, form word, rung 2.
 
-**Q:** Wambui puts a cup of water in the freezer. What does the freezer do?
-Options: Adds cold to the water | **Takes heat away from the water** | Pushes cold into the water | Adds heat to the water
-- If a child answers "Adds cold to the water": Taking heat away makes the water freeze. Water freezes when heat is taken away. A freezer removes heat.
-- If a child answers "Pushes cold into the water": Taking heat away makes the water freeze. Ice melts because it gains heat. Cold is the lack of heat.
+**Q:** Aisha holds an ice cube in her hand and it melts. Which way does the heat go?
+Options: Heat is taken from the ice | The cold goes from the ice into her hand | **From her hand into the ice** | Heat goes from the ice to her hand
+- If a child answers "Heat is taken from the ice": Ice gains heat from the warm hand. Water freezes when heat is taken away. A freezer removes heat.
+- If a child answers "The cold goes from the ice into her hand": Ice gains heat from the warm hand. Ice melts because it gains heat. Cold is the lack of heat.
 
 ### science6.cs.heat.spot
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT`, outcome `a`, form spot, rung 3.
 
-**Q:** Paul says water freezes when it is heated. Which step has the mistake?
-Steps: Step 1: Paul puts water in the freezer. / Step 2: It turns to ice. / **Step 3: He says the freezer added heat.**
+**Q:** Maria says we can see steam above a pot. Which step has the mistake?
+Steps: Step 1: Maria boils water. / Step 2: She sees a white cloud. / **Step 3: She says the cloud is steam, the gas itself.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -622,26 +622,26 @@ Steps: Step 1: Paul puts water in the freezer. / Step 2: It turns to ice. / **St
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which change of state is used to make ice blocks?
-Options: Evaporation | **Freezing** | Condensation | Soaking
-- If a child answers "Evaporation": Water freezes when heat is removed. Clouds form when water vapour cools and condenses into tiny drops of water.
-- If a child answers "Condensation": Water freezes when heat is removed. Clouds form when water vapour cools and condenses into tiny drops of water.
+**Q:** What happens to the water when wet clothes dry on a line?
+Options: It freezes in the clothes | It soaks into the rope | **It evaporates into the air** | It becomes a cloud at once
+- If a child answers "It freezes in the clothes": The water changes into vapour. The water in clothes changes into water vapour and goes into the air. This is evaporation.
+- If a child answers "It soaks into the rope": The water changes into vapour. The water in clothes changes into water vapour and goes into the air. This is evaporation.
 
 ### science6.cs.app.story
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS`, outcome `b`, form word, rung 2.
 
-**Q:** At Lake Magadi people leave sea-like water in shallow pans in the sun, and white salt is left. Which change happened to the water?
-Options: It condensed into a cloud | It froze | **It evaporated** | It melted
-- If a child answers "It condensed into a cloud": Water evaporates in the sun and salt stays. Clouds form when water vapour cools and condenses into tiny drops of water.
-- If a child answers "It froze": Water evaporates in the sun and salt stays. In salt pans the sun makes the water evaporate. The salt stays behind.
+**Q:** Early morning dew forms on grass. Where did the water come from?
+Options: Smoke from the night fires | Water that soaked out of the soil into the grass blades | Water from the soil melting | **Water vapour in the air that condensed on the cold grass**
+- If a child answers "Smoke from the night fires": Vapour cools and turns to liquid. Clouds form when water vapour cools and condenses into tiny drops of water.
+- If a child answers "Water that soaked out of the soil into the grass blades": Vapour cools and turns to liquid. The water in clothes changes into water vapour and goes into the air. This is evaporation.
 
 ### science6.cs.app.spot
 
 Skill `MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS`, outcome `b`, form spot, rung 3.
 
-**Q:** Eve says wet maize dries because water goes into the mat. Which step has the mistake?
-Steps: Step 1: Eve dries maize on a mat. / Step 2: The maize becomes dry. / **Step 3: She says the mat took the water.**
+**Q:** Ben says clouds are made of cotton. Which step has the mistake?
+Steps: Step 1: Ben sees white clouds. / Step 2: They look soft. / **Step 3: He says they are cotton.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -649,26 +649,26 @@ Steps: Step 1: Eve dries maize on a mat. / Step 2: The maize becomes dry. / **St
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS`, outcome `a`, form direct, rung 1.
 
-**Q:** A candle burns in a closed jar over water and goes out. The water rises about one fifth of the jar. What does this show?
-Options: **The candle used the oxygen, about one fifth of the air** | Air is mostly oxygen | The candle made water | The candle used up all the air that was in the jar
-- If a child answers "Air is mostly oxygen": Oxygen is about one fifth of air. Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.
-- If a child answers "The candle made water": Oxygen is about one fifth of air. The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.
+**Q:** Which gas is the biggest part of air?
+Options: Hydrogen | Oxygen | Carbon dioxide | **Nitrogen**
+- If a child answers "Hydrogen": About four fifths of air is nitrogen. Air is a mixture of gases: nitrogen, oxygen, carbon dioxide and others.
+- If a child answers "Oxygen": About four fifths of air is nitrogen. Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.
 
 ### science6.ar.comp.story
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS`, outcome `a`, form word, rung 2.
 
 **Q:** A burning candle goes out in a closed jar. Why does it go out?
-Options: It used up all the air | The jar is too small for the air | There was too much oxygen | **It used up the oxygen**
+Options: It used up all the air | There was too much oxygen | The jar is too small for the air | **It used up the oxygen**
 - If a child answers "It used up all the air": Burning needs oxygen. The air that is left cannot keep it burning. The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.
-- If a child answers "The jar is too small for the air": Burning needs oxygen. The air that is left cannot keep it burning. The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.
+- If a child answers "There was too much oxygen": Burning needs oxygen. The air that is left cannot keep it burning. Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.
 
 ### science6.ar.comp.spot
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS`, outcome `a`, form spot, rung 3.
 
-**Q:** Ada says air is one gas. Which step has the mistake?
-Steps: Step 1: Ada blows up a balloon. / Step 2: The balloon is full of air. / **Step 3: She says air is just one gas.**
+**Q:** Carl says air is empty. Which step has the mistake?
+Steps: Step 1: Carl waves his hand. / Step 2: He feels no weight. / **Step 3: He says air is nothing.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -676,10 +676,10 @@ Steps: Step 1: Ada blows up a balloon. / Step 2: The balloon is full of air. / *
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_USES`, outcome `b`, form direct, rung 1.
 
-**Q:** Which gas do living things use for breathing?
-Options: Water vapour | **Oxygen** | Nitrogen | Carbon dioxide
-- If a child answers "Water vapour": Oxygen is used in breathing. Nitrogen is turned into plant food in the soil. Plants need it to grow.
-- If a child answers "Nitrogen": Oxygen is used in breathing. Nitrogen is turned into plant food in the soil. Plants need it to grow.
+**Q:** What do green plants use carbon dioxide for?
+Options: **To make their food using sunlight** | Nothing, it is only a waste gas | To breathe in | To make nitrogen
+- If a child answers "Nothing, it is only a waste gas": Plants use carbon dioxide to make food. Plants take in carbon dioxide and use it with sunlight to make food.
+- If a child answers "To breathe in": Plants use carbon dioxide to make food. Plants take in carbon dioxide and use it with sunlight to make food.
 
 ### science6.ar.uses.story
 
@@ -694,8 +694,8 @@ Options: **Plants take in carbon dioxide from air to make food** | She is right 
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_USES`, outcome `b`, form spot, rung 3.
 
-**Q:** Vic says the fuel is not needed if there is oxygen. Which step has the mistake?
-Steps: Step 1: Vic puts a candle in a jar of oxygen. / Step 2: It burns brightly. / **Step 3: He says the wax is not needed.**
+**Q:** Rhoda says carbon dioxide is only a waste gas. Which step has the mistake?
+Steps: Step 1: Rhoda breathes out on a cold mirror. / Step 2: She learns the breath has carbon dioxide. / **Step 3: She says it has no use.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -703,26 +703,26 @@ Steps: Step 1: Vic puts a candle in a jar of oxygen. / Step 2: It burns brightly
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS`, outcome `c`, form direct, rung 1.
 
-**Q:** Which of these does NOT pollute the air?
-Options: Burning tyres | Dust clouds | **Trees** | Vehicle exhaust
-- If a child answers "Burning tyres": Trees help to clean the air. Cars, burning rubbish and cooking smoke also pollute the air, not only factories.
-- If a child answers "Dust clouds": Trees help to clean the air. Dust in large amounts pollutes the air and harms the lungs and eyes.
+**Q:** Which statement is true?
+Options: Only smelly air is harmful | **Some harmful gases have no smell** | If the air has no smell, it is clean | Only factories make harmful gases
+- If a child answers "Only smelly air is harmful": Carbon monoxide has no smell. Some pollutants, such as carbon monoxide, have no smell or colour but are dangerous.
+- If a child answers "If the air has no smell, it is clean": Carbon monoxide has no smell. Some pollutants, such as carbon monoxide, have no smell or colour but are dangerous.
 
 ### science6.ar.pol.story
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS`, outcome `c`, form word, rung 2.
 
-**Q:** A charcoal jiko burns in a closed room and has no smell. Is the air safe?
-Options: Yes, charcoal is clean | Yes, only factories pollute | Yes, it has no smell | **No, it may have a harmful gas**
-- If a child answers "Yes, charcoal is clean": Carbon monoxide has no smell. Some pollutants, such as carbon monoxide, have no smell or colour but are dangerous.
-- If a child answers "Yes, only factories pollute": Carbon monoxide has no smell. Cars, burning rubbish and cooking smoke also pollute the air, not only factories.
+**Q:** A lorry carrying stones goes by and a cloud of dust rises. Is this pollution?
+Options: No, dust is harmless | **Yes, dust in the air can harm the lungs** | Only black smoke is pollution | No, dust is natural soil and not a pollutant
+- If a child answers "No, dust is harmless": Dust is an air pollutant. Dust in large amounts pollutes the air and harms the lungs and eyes.
+- If a child answers "Only black smoke is pollution": Dust is an air pollutant. Cars, burning rubbish and cooking smoke also pollute the air, not only factories.
 
 ### science6.ar.pol.spot
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS`, outcome `c`, form spot, rung 3.
 
-**Q:** Moses says only factories pollute air. Which step has the mistake?
-Steps: Step 1: Moses sees factory smoke. / Step 2: He sees vehicles pass by. / **Step 3: He says only factories pollute.**
+**Q:** Dan says only black smoke is pollution. Which step has the mistake?
+Steps: Step 1: Dan sees black smoke from a lorry. / Step 2: He sees no smoke from a jiko. / **Step 3: He says the jiko cannot pollute.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -730,26 +730,26 @@ Steps: Step 1: Moses sees factory smoke. / Step 2: He sees vehicles pass by. / *
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS`, outcome `c`, form direct, rung 1.
 
-**Q:** Where can air pollution go after smoke leaves a chimney?
-Options: It stays next to the chimney where it was made | **The wind can carry it to places far from the chimney** | It stops at the compound | It never moves
-- If a child answers "It stays next to the chimney where it was made": Polluted air moves with the wind. Wind carries polluted air far from its source. Many people can be affected.
-- If a child answers "It stops at the compound": Polluted air moves with the wind. Pollutants can mix with rain and fall as acid rain. It harms plants, soil and buildings.
+**Q:** What illness can polluted air cause?
+Options: Broken bones | Only bruises and cuts on the skin | **Coughs and breathing problems** | Nothing
+- If a child answers "Broken bones": Smoke and dust harm the lungs. Pollutants can mix with rain and fall as acid rain. It harms plants, soil and buildings.
+- If a child answers "Only bruises and cuts on the skin": Smoke and dust harm the lungs. Wind carries polluted air far from its source. Many people can be affected.
 
 ### science6.ar.eff.story
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS`, outcome `c`, form word, rung 2.
 
-**Q:** A child living near a busy road coughs often. What may be the cause?
-Options: **Smoke and dust from vehicles** | Only the sun | The road itself | The plants growing nearby
-- If a child answers "Only the sun": Polluted air harms breathing. Wind carries polluted air far from its source. Many people can be affected.
-- If a child answers "The road itself": Polluted air harms breathing. Wind carries polluted air far from its source. Many people can be affected.
+**Q:** Scientists say the Earth is getting warmer because of too much carbon dioxide. Is this good news?
+Options: It only matters in one country | Yes, it helps all crops | Yes, because warm weather is always nice | **No, it changes rainfall and can bring drought**
+- If a child answers "It only matters in one country": Warming changes the weather. Wind carries polluted air far from its source. Many people can be affected.
+- If a child answers "Yes, it helps all crops": Warming changes the weather. Too much carbon dioxide and other gases make the Earth warmer. This changes rainfall and can cause drought.
 
 ### science6.ar.eff.spot
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS`, outcome `c`, form spot, rung 3.
 
-**Q:** Lucy says acid rain is good for plants. Which step has the mistake?
-Steps: Step 1: Lucy knows rain helps crops. / Step 2: She hears about acid rain. / **Step 3: She says it is just as good.**
+**Q:** Hugo says a warmer Earth is only good. Which step has the mistake?
+Steps: Step 1: Hugo likes warm days. / Step 2: He hears the Earth is warming. / **Step 3: He says it can only bring good.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -757,26 +757,26 @@ Steps: Step 1: Lucy knows rain helps crops. / Step 2: She hears about acid rain.
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_REDUCE`, outcome `d`, form direct, rung 1.
 
-**Q:** What is the best way to deal with plastic rubbish?
-Options: **Collect it and take it for recycling or proper disposal** | Burn it at night when nobody can see the smoke from it | Burn it | Leave it under a tree
-- If a child answers "Burn it at night when nobody can see the smoke from it": Burning plastic makes harmful smoke. Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.
-- If a child answers "Burn it": Burning plastic makes harmful smoke. Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.
+**Q:** Which way of travelling pollutes the air least?
+Options: **Walking** | Driving alone in an old car | Using a smoky lorry | Standing still
+- If a child answers "Driving alone in an old car": Walking gives no smoke. A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.
+- If a child answers "Using a smoky lorry": Walking gives no smoke. A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.
 
 ### science6.ar.red.story
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_REDUCE`, outcome `d`, form word, rung 2.
 
-**Q:** A factory builds a taller chimney to solve its smoke problem. What is true?
-Options: The problem is solved | **The smoke still pollutes; it needs filters or cleaner fuel** | The smoke is gone | The factory should burn more fuel to clear the smoke
-- If a child answers "The problem is solved": A tall chimney does not clean smoke. A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.
-- If a child answers "The smoke is gone": A tall chimney does not clean smoke. A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.
+**Q:** A family cooks with firewood in a closed room and the smoke makes them cough. What change helps most?
+Options: Close all the windows and the door so smoke stays in | Make a taller house | **Cook in a ventilated place or use a cleaner stove** | Burn more wood
+- If a child answers "Close all the windows and the door so smoke stays in": Less smoke means cleaner air. Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.
+- If a child answers "Make a taller house": Less smoke means cleaner air. A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.
 
 ### science6.ar.red.spot
 
 Skill `MATTER.COMPOSITION_OF_AIR.AIR_REDUCE`, outcome `d`, form spot, rung 3.
 
-**Q:** Kofi says trees do not help the air. Which step has the mistake?
-Steps: Step 1: Kofi sees trees along a road. / Step 2: He wipes a leaf and finds dust. / **Step 3: He says trees do not help the air.**
+**Q:** Max says tall chimneys mean cleaner air. Which step has the mistake?
+Steps: Step 1: Max sees a new factory. / Step 2: It has a very tall chimney. / **Step 3: He says the air will be clean.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -785,25 +785,25 @@ Steps: Step 1: Kofi sees trees along a road. / Step 2: He wipes a leaf and finds
 Skill `FORCE_.LIGHT.LIGHT_MATERIALS`, outcome `a`, form direct, rung 1.
 
 **Q:** Which of these is translucent?
-Options: Thick cardboard | Clear water | A brick | **Tracing paper**
-- If a child answers "Thick cardboard": It lets some light through. The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.
+Options: Clear water | **Tracing paper** | Thick cardboard | A brick
 - If a child answers "Clear water": It lets some light through. Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.
+- If a child answers "Thick cardboard": It lets some light through. The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.
 
 ### science6.lt.mat.story
 
 Skill `FORCE_.LIGHT.LIGHT_MATERIALS`, outcome `a`, form word, rung 2.
 
-**Q:** A thick wall casts no light to the other side. What kind of material is it?
-Options: Glass | **Opaque** | Translucent | Transparent
-- If a child answers "Glass": It blocks all light. The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.
-- If a child answers "Translucent": It blocks all light. Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).
+**Q:** Njeri says coloured cellophane is opaque because it is coloured. What can you tell her?
+Options: It is transparent only if it is not coloured | It must be transparent | **It lets light through, so it is not opaque** | She is right
+- If a child answers "It is transparent only if it is not coloured": Colour does not decide. Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).
+- If a child answers "It must be transparent": Colour does not decide. Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.
 
 ### science6.lt.mat.spot
 
 Skill `FORCE_.LIGHT.LIGHT_MATERIALS`, outcome `a`, form spot, rung 3.
 
-**Q:** Jane says tissue paper is opaque. Which step has the mistake?
-Steps: Step 1: Jane holds tissue paper to the window. / Step 2: Some light comes through. / **Step 3: She says it is opaque.**
+**Q:** Vic says transparent and translucent mean the same. Which step has the mistake?
+Steps: Step 1: Vic looks through clear glass. / Step 2: He looks through frosted glass. / **Step 3: He says both show things equally clearly.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -811,26 +811,26 @@ Steps: Step 1: Jane holds tissue paper to the window. / Step 2: Some light comes
 
 Skill `FORCE_.LIGHT.SHADOWS`, outcome `c`, form direct, rung 1.
 
-**Q:** What happens to a shadow if the light is switched off?
-Options: It stays because the object makes it | It gets bigger | It gets darker | **It disappears**
-- If a child answers "It stays because the object makes it": No light means no shadow. A shadow is the place the light cannot reach because an opaque object blocks it.
-- If a child answers "It gets bigger": No light means no shadow. The closer an object is to the light, the bigger its shadow.
+**Q:** What makes a shadow?
+Options: **An object blocking light** | The torch makes it | The object makes it | The ground makes it
+- If a child answers "The torch makes it": A shadow is where light cannot reach. Light travels in straight lines. The shadow falls on the side away from the light.
+- If a child answers "The object makes it": A shadow is where light cannot reach. A shadow is the place the light cannot reach because an opaque object blocks it.
 
 ### science6.lt.sh.story
 
 Skill `FORCE_.LIGHT.SHADOWS`, outcome `c`, form word, rung 2.
 
-**Q:** In the afternoon the Sun is in the west. On which side of a tree does the shadow fall?
-Options: The tree makes it | Under the tree only, near the trunk | The west side | **The east side, away from the Sun**
-- If a child answers "The tree makes it": The shadow is away from the light. A shadow is the place the light cannot reach because an opaque object blocks it.
-- If a child answers "Under the tree only, near the trunk": The shadow is away from the light. Light travels in straight lines. The shadow falls on the side away from the light.
+**Q:** Ouma says the shadow is a part of him that follows him. What is true?
+Options: It is a copy that shines | **It is the place his body blocks the light** | It is a part of his clothes that follows him | He is right
+- If a child answers "It is a copy that shines": Light is blocked. Light travels in straight lines. The shadow falls on the side away from the light.
+- If a child answers "It is a part of his clothes that follows him": Light is blocked. A shadow is the place the light cannot reach because an opaque object blocks it.
 
 ### science6.lt.sh.spot
 
 Skill `FORCE_.LIGHT.SHADOWS`, outcome `c`, form spot, rung 3.
 
-**Q:** Abdi says the shadow is made by the object. Which step has the mistake?
-Steps: Step 1: Abdi stands in the sun. / Step 2: He sees his shadow. / **Step 3: He says he makes the shadow by himself.**
+**Q:** Eli says if you move the torch the shadow stays in place. Which step has the mistake?
+Steps: Step 1: Eli moves the torch to the right. / Step 2: He keeps the ball in place. / **Step 3: He says the shadow does not move.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -838,26 +838,26 @@ Steps: Step 1: Abdi stands in the sun. / Step 2: He sees his shadow. / **Step 3:
 
 Skill `FORCE_.LIGHT.ECLIPSES`, outcome `c`, form direct, rung 1.
 
-**Q:** In a solar eclipse, whose shadow falls on the Earth?
-Options: **The Moon's** | A cloud's | The night's | The Earth's
-- If a child answers "A cloud's": The Moon blocks the light. In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.
-- If a child answers "The night's": The Moon blocks the light. In a solar eclipse the Moon is between the Sun and the Earth and blocks the Sun's light.
+**Q:** In a lunar eclipse, whose shadow falls on the Moon?
+Options: The Sun's | The Moon's | **The Earth's** | A cloud's
+- If a child answers "The Sun's": The Earth blocks the Sun's light. In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.
+- If a child answers "The Moon's": The Earth blocks the Sun's light. In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.
 
 ### science6.lt.ec.story
 
 Skill `FORCE_.LIGHT.ECLIPSES`, outcome `c`, form word, rung 2.
 
-**Q:** Which sequence is right for a solar eclipse?
-Options: Cloud, Sun, Earth | Moon, Sun, Earth | Sun, Earth, Moon | **Sun, Moon, Earth**
-- If a child answers "Cloud, Sun, Earth": The Moon is in the middle. In a solar eclipse the Moon is between the Sun and the Earth and blocks the Sun's light.
-- If a child answers "Moon, Sun, Earth": The Moon is in the middle. In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.
+**Q:** Ken says eclipses are caused by clouds. What is true?
+Options: **They are caused by the Moon or the Earth blocking light** | They are caused by the Sun moving across the sky | Birds cause them | He is right
+- If a child answers "They are caused by the Sun moving across the sky": Eclipses are shadows of the Moon or Earth. In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.
+- If a child answers "Birds cause them": Eclipses are shadows of the Moon or Earth. In a solar eclipse the Moon is between the Sun and the Earth and blocks the Sun's light.
 
 ### science6.lt.ec.spot
 
 Skill `FORCE_.LIGHT.ECLIPSES`, outcome `c`, form spot, rung 3.
 
-**Q:** Cy says it is safe to look at an eclipse for a short time. Which step has the mistake?
-Steps: Step 1: Cy sees the Sun partly covered. / Step 2: It looks less bright. / **Step 3: He says it is safe to look.**
+**Q:** Ed says dark sunglasses make eclipse watching safe. Which step has the mistake?
+Steps: Step 1: Ed puts on sunglasses. / Step 2: He looks at the Sun. / **Step 3: He says they protect his eyes.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -866,25 +866,25 @@ Steps: Step 1: Cy sees the Sun partly covered. / Step 2: It looks less bright. /
 Skill `FORCE_.LIGHT.MIRROR_RULE`, outcome `b`, form direct, rung 1.
 
 **Q:** From which line are the angles of incidence and reflection measured?
-Options: The ray itself | The mirror surface | The edge of the frame | **The normal**
+Options: **The normal** | The ray itself | The edge of the frame | The mirror surface
 - If a child answers "The ray itself": The normal is at right angles to the mirror. The angle of reflection equals the angle of incidence. Both are measured from the normal.
-- If a child answers "The mirror surface": The normal is at right angles to the mirror. Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.
+- If a child answers "The edge of the frame": The normal is at right angles to the mirror. Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.
 
 ### science6.lt.mr.story
 
 Skill `FORCE_.LIGHT.MIRROR_RULE`, outcome `b`, form word, rung 2.
 
-**Q:** A learner says the mirror soaks up some of the light. What is true?
-Options: She is right, it absorbs light | It makes the light turn by double the angle | It lets light through | **A plane mirror reflects the light that reaches it**
-- If a child answers "She is right, it absorbs light": It sends the light back. A mirror reflects light. It sends light back in one direction.
-- If a child answers "It makes the light turn by double the angle": It sends the light back. The angle of reflection equals the angle of incidence. Both are measured from the normal.
+**Q:** Ken measures that a ray makes 20 degrees with the mirror surface. What is the angle of incidence?
+Options: 20 degrees | 160 degrees | **70 degrees** | 40 degrees
+- If a child answers "20 degrees": 90 minus 20 is 70. Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.
+- If a child answers "160 degrees": 90 minus 20 is 70. Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.
 
 ### science6.lt.mr.spot
 
 Skill `FORCE_.LIGHT.MIRROR_RULE`, outcome `b`, form spot, rung 3.
 
-**Q:** Gus says a ray at 30 degrees to the surface has an incidence angle of 30 degrees. Which step has the mistake?
-Steps: Step 1: Gus measures from the mirror surface. / Step 2: He gets 30 degrees. / **Step 3: He says that is the angle of incidence.**
+**Q:** Jon measures angles from the mirror. Which step has the mistake?
+Steps: Step 1: Jon draws a mirror and a ray. / Step 2: He measures from the mirror surface. / **Step 3: He says this is the angle of incidence.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -892,26 +892,26 @@ Steps: Step 1: Gus measures from the mirror surface. / Step 2: He gets 30 degree
 
 Skill `FORCE_.LIGHT.MIRROR_IMAGE`, outcome `b`, form direct, rung 1.
 
-**Q:** How big is the image of a pupil in a plane mirror?
-Options: **The same size as the pupil** | Half the size | Smaller than the pupil | Larger than the pupil
-- If a child answers "Half the size": A plane mirror gives an image of the same size. The image is upright, but left and right swap. This is lateral inversion.
-- If a child answers "Smaller than the pupil": A plane mirror gives an image of the same size. A plane mirror gives an image the same size as the object.
+**Q:** Can the image in a plane mirror be caught on a screen?
+Options: Yes, on a screen behind the mirror | Yes, on a screen in front | Yes, it is upside down | **No, it is a virtual image**
+- If a child answers "Yes, on a screen behind the mirror": Light does not really reach the image. The image is as far behind the mirror as the object is in front of it.
+- If a child answers "Yes, on a screen in front": Light does not really reach the image. The image is as far behind the mirror as the object is in front of it.
 
 ### science6.lt.mi.story
 
 Skill `FORCE_.LIGHT.MIRROR_IMAGE`, outcome `b`, form word, rung 2.
 
-**Q:** Njoki is 1.4 metres tall. How tall is her image?
-Options: 2.8 metres | 1 metre | **1.4 metres** | 0.7 metres
-- If a child answers "2.8 metres": The image is the same size. A plane mirror gives an image the same size as the object.
-- If a child answers "1 metre": The image is the same size. The image is as far behind the mirror as the object is in front of it.
+**Q:** Ken says his image is upside down. What is true?
+Options: It is turned on its side like a book | It is smaller | **It is upright, but left and right swap** | He is right
+- If a child answers "It is turned on its side like a book": A plane mirror does not turn the image upside down. The image is upright, but left and right swap. This is lateral inversion.
+- If a child answers "It is smaller": A plane mirror does not turn the image upside down. A plane mirror gives an image the same size as the object.
 
 ### science6.lt.mi.spot
 
 Skill `FORCE_.LIGHT.MIRROR_IMAGE`, outcome `b`, form spot, rung 3.
 
-**Q:** Lou says the image is on the surface of the mirror. Which step has the mistake?
-Steps: Step 1: Lou touches the glass. / Step 2: His image seems to be on the other side. / **Step 3: He says it is on the glass.**
+**Q:** Nia says her image is 1 metre behind the mirror when she is 2 metres in front. Which step has the mistake?
+Steps: Step 1: Nia stands 2 metres from the mirror. / Step 2: She measures the image. / **Step 3: She says it is 1 metre behind.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -919,26 +919,26 @@ Steps: Step 1: Lou touches the glass. / Step 2: His image seems to be on the oth
 
 Skill `FORCE_.LIGHT.RAINBOW`, outcome `d`, form direct, rung 1.
 
-**Q:** How many colours are in the rainbow?
-Options: As many as the rain has | Three | **Seven** | Five
-- If a child answers "As many as the rain has": Red, orange, yellow, green, blue, indigo and violet. A rainbow is light spread into colours by drops of water. It is not a solid thing.
-- If a child answers "Three": Red, orange, yellow, green, blue, indigo and violet. The seven colours are red, orange, yellow, green, blue, indigo and violet, with red on the outside.
+**Q:** Where is the Sun when you see a rainbow?
+Options: Directly above | **Behind you, with the rain in front** | It does not matter | In front of you, opposite the rain
+- If a child answers "Directly above": The Sun is behind the observer. To see a rainbow, the Sun is behind you and the raindrops are in front.
+- If a child answers "It does not matter": The Sun is behind the observer. A rainbow is light spread into colours by drops of water. It is not a solid thing.
 
 ### science6.lt.rb.story
 
 Skill `FORCE_.LIGHT.RAINBOW`, outcome `d`, form word, rung 2.
 
 **Q:** Wanjiku sprays water from a hose in the sun and sees a small rainbow. What is happening?
-Options: The hose makes colours | **Sunlight is split into colours by the water drops** | The water is painted | The Sun is shining from the front of the hose
+Options: The hose makes colours | The Sun is shining from the front of the hose | **Sunlight is split into colours by the water drops** | The water is painted
 - If a child answers "The hose makes colours": Drops of water split light. A rainbow is light spread into colours by drops of water. It is not a solid thing.
-- If a child answers "The water is painted": Drops of water split light. A rainbow is light spread into colours by drops of water. It is not a solid thing.
+- If a child answers "The Sun is shining from the front of the hose": Drops of water split light. To see a rainbow, the Sun is behind you and the raindrops are in front.
 
 ### science6.lt.rb.spot
 
 Skill `FORCE_.LIGHT.RAINBOW`, outcome `d`, form spot, rung 3.
 
-**Q:** Pam says a rainbow is a solid bridge. Which step has the mistake?
-Steps: Step 1: Pam sees a rainbow after rain. / Step 2: It looks like an arc. / **Step 3: She says it is a solid bridge.**
+**Q:** Tex says you can see a rainbow with the Sun in front at noon. Which step has the mistake?
+Steps: Step 1: Tex faces the Sun. / Step 2: Rain is falling behind him. / **Step 3: He says he can see the rainbow in front.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -946,26 +946,26 @@ Steps: Step 1: Pam sees a rainbow after rain. / Step 2: It looks like an arc. / 
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY`, outcome `a`, form direct, rung 1.
 
-**Q:** Which of these is NOT a lever?
-Options: A shovel | A wheelbarrow | A see-saw | **A ladder**
-- If a child answers "A shovel": A ladder does not turn about a point. A lever can be short or long. Scissors, tweezers and a bottle opener are levers.
-- If a child answers "A wheelbarrow": A ladder does not turn about a point. A lever is a bar that turns about a fixed point. A ladder does not turn about a point.
+**Q:** Which of these is a lever?
+Options: A rope | Only a very large bar | **Scissors or tweezers** | Only a long stick or a crowbar
+- If a child answers "A rope": A lever can be short. A lever is a bar that turns about a fixed point. A ladder does not turn about a point.
+- If a child answers "Only a very large bar": A lever can be short. A lever can be short or long. Scissors, tweezers and a bottle opener are levers.
 
 ### science6.lv.id.story
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY`, outcome `a`, form word, rung 2.
 
-**Q:** A child says a ladder is a lever because it helps her climb. What can you tell her?
-Options: It gives her extra energy | She is right | **A ladder does not turn about a point, so it is not a lever** | A ladder is a lever of the third class, for climbing
-- If a child answers "It gives her extra energy": A lever turns about a fixed point. A lever makes work easier by changing the effort needed. It does not make energy.
-- If a child answers "She is right": A lever turns about a fixed point. A lever is a bar that turns about a fixed point. A ladder does not turn about a point.
+**Q:** Ouma says only long sticks are levers. Which tool shows he is wrong?
+Options: A ladder | **Scissors** | A long pole | A crowbar
+- If a child answers "A ladder": Scissors are short levers. A lever is a bar that turns about a fixed point. A ladder does not turn about a point.
+- If a child answers "A long pole": Scissors are short levers. A lever can be short or long. Scissors, tweezers and a bottle opener are levers.
 
 ### science6.lv.id.spot
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY`, outcome `a`, form spot, rung 3.
 
-**Q:** Eve says tweezers are too small to be levers. Which step has the mistake?
-Steps: Step 1: Eve picks up a crumb with tweezers. / Step 2: The tweezers turn about a point. / **Step 3: She says they are too small to be levers.**
+**Q:** Cora says a lever gives extra energy. Which step has the mistake?
+Steps: Step 1: Cora uses a bar to lift a stone. / Step 2: It is easier. / **Step 3: She says the bar made new energy.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -973,26 +973,26 @@ Steps: Step 1: Eve picks up a crumb with tweezers. / Step 2: The tweezers turn a
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS`, outcome `b`, form direct, rung 1.
 
-**Q:** What does the fulcrum do while a lever works?
-Options: It carries the effort | **It stays fixed** | It moves with the effort | It moves with the load
-- If a child answers "It carries the effort": The bar turns about it. The effort is the push or pull we use. The load is what we want to move.
-- If a child answers "It moves with the effort": The bar turns about it. The fulcrum stays fixed while the bar turns about it.
+**Q:** On a see-saw, where is the fulcrum?
+Options: At the ends | At the seats | **At the middle support the plank turns about** | At the child who is moving up and down
+- If a child answers "At the ends": The fulcrum is the fixed point. The fulcrum is the fixed point a lever turns about.
+- If a child answers "At the seats": The fulcrum is the fixed point. The fulcrum is the fixed point a lever turns about.
 
 ### science6.lv.pt.story
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS`, outcome `b`, form word, rung 2.
 
-**Q:** Kamau uses a plank on a log to lift a stone. What is the log?
-Options: The load | The moving part | **The fulcrum** | The effort
-- If a child answers "The load": The plank turns about the log. The fulcrum is the fixed point a lever turns about.
-- If a child answers "The moving part": The plank turns about the log. The fulcrum stays fixed while the bar turns about it.
+**Q:** In the same job, Kamau pushes down on the plank. What is his push?
+Options: The load | **The effort** | The fixed point | The fulcrum
+- If a child answers "The load": It is what he puts in. The effort is the push or pull we use. The load is what we want to move.
+- If a child answers "The fixed point": It is what he puts in. The fulcrum stays fixed while the bar turns about it.
 
 ### science6.lv.pt.spot
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS`, outcome `b`, form spot, rung 3.
 
-**Q:** Fay says the person is the load in a wheelbarrow. Which step has the mistake?
-Steps: Step 1: Fay watches a man push a wheelbarrow. / Step 2: It carries sand. / **Step 3: She says the man is the load.**
+**Q:** Jay says the fulcrum is the handle of the scissors. Which step has the mistake?
+Steps: Step 1: Jay holds scissors. / Step 2: He sees the screw between the blades. / **Step 3: He says the handle is the fulcrum.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1000,26 +1000,26 @@ Steps: Step 1: Fay watches a man push a wheelbarrow. / Step 2: It carries sand. 
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER`, outcome `b`, form direct, rung 1.
 
-**Q:** What does a lever do?
-Options: Needs a bigger effort | **Lets a small effort move a heavy load** | Gives more energy | Makes the load lighter and easier to hold
-- If a child answers "Needs a bigger effort": It trades effort for distance. The closer the fulcrum is to the load, the smaller the effort needed.
-- If a child answers "Gives more energy": It trades effort for distance. A lever does not change the weight of the load. It lets a smaller effort move it over a longer distance.
+**Q:** On a door, where should a person push to open it more easily?
+Options: **Far from the hinges, at the handle** | Anywhere on the door, the effort is the same | On the hinges | Close to the hinges
+- If a child answers "Anywhere on the door, the effort is the same": A longer distance from the fulcrum needs less effort. A lever does not change the weight of the load. It lets a smaller effort move it over a longer distance.
+- If a child answers "On the hinges": A longer distance from the fulcrum needs less effort. The farther from the fulcrum (hinge) you push, the less effort you need.
 
 ### science6.lv.ea.story
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER`, outcome `d`, form word, rung 2.
 
-**Q:** Okoth has a long crowbar and a heavy rock. To lift the rock with the least effort, where should he put the stone for the pivot?
-Options: Close to his hands | Far from the rock | It does not matter | **Close to the rock**
-- If a child answers "Close to his hands": A close fulcrum to the load means less effort. The closer the fulcrum is to the load, the smaller the effort needed.
-- If a child answers "Far from the rock": A close fulcrum to the load means less effort. The closer the fulcrum is to the load, the smaller the effort needed.
+**Q:** A spanner with a long handle loosens a tight nut more easily than a short one. Why?
+Options: The handle makes the nut lighter | The nut loses weight | **The longer handle is further from the nut and needs less effort** | The short handle needs less effort because it is closer to the nut
+- If a child answers "The handle makes the nut lighter": The longer arm needs less effort. The farther from the fulcrum (hinge) you push, the less effort you need.
+- If a child answers "The nut loses weight": The longer arm needs less effort. A lever does not change the weight of the load. It lets a smaller effort move it over a longer distance.
 
 ### science6.lv.ea.spot
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER`, outcome `b`, form spot, rung 3.
 
-**Q:** Lia says push a door near the hinge to open it easily. Which step has the mistake?
-Steps: Step 1: Lia pushes near the hinge. / Step 2: The door is hard to move. / **Step 3: She says this is the easiest place.**
+**Q:** Max says the load gets lighter on a lever. Which step has the mistake?
+Steps: Step 1: Max lifts a box with a lever. / Step 2: It feels easy. / **Step 3: He says the box lost weight.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1027,26 +1027,26 @@ Steps: Step 1: Lia pushes near the hinge. / Step 2: The door is hard to move. / 
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS`, outcome `c`, form direct, rung 1.
 
-**Q:** Which class of lever are tweezers?
-Options: **Third class** | Second class | First class | No class
-- If a child answers "Second class": The effort is in the middle. In tweezers the effort is in the middle, so they are third class levers.
-- If a child answers "First class": The effort is in the middle. In tweezers the effort is in the middle, so they are third class levers.
+**Q:** Which class of lever is a see-saw?
+Options: **First class** | Second class | It depends on its size | Third class
+- If a child answers "Second class": The fulcrum is in the middle. A wheelbarrow has the load in the middle. It is a second class lever.
+- If a child answers "It depends on its size": The fulcrum is in the middle. First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.
 
 ### science6.lv.cl.story
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS`, outcome `c`, form word, rung 2.
 
-**Q:** A fishing rod has the fulcrum at the handle end, the effort in the middle and the load at the tip. Which class is it?
-Options: Second class | First class | No class | **Third class**
-- If a child answers "Second class": The effort is in the middle. In tweezers the effort is in the middle, so they are third class levers.
-- If a child answers "First class": The effort is in the middle. In tweezers the effort is in the middle, so they are third class levers.
+**Q:** Scissors have the fulcrum at the screw between the handles and blades. Which class are they?
+Options: It depends on the size of the scissors | Third class | **First class** | Second class
+- If a child answers "It depends on the size of the scissors": Fulcrum in the middle. First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.
+- If a child answers "Third class": Fulcrum in the middle. A wheelbarrow has the load in the middle. It is a second class lever.
 
 ### science6.lv.cl.spot
 
 Skill `FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS`, outcome `c`, form spot, rung 3.
 
-**Q:** Raj says a lever's class depends on its size. Which step has the mistake?
-Steps: Step 1: Raj compares a big and a small lever. / Step 2: He sees they differ in size. / **Step 3: He says size decides the class.**
+**Q:** Uma says a fishing rod is second class. Which step has the mistake?
+Steps: Step 1: Uma holds a fishing rod. / Step 2: Her hand is in the middle. / **Step 3: She says it is second class.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1055,25 +1055,25 @@ Steps: Step 1: Raj compares a big and a small lever. / Step 2: He sees they diff
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which tool is a slope in the shape of a wedge?
-Options: **An axe** | A rope | A hammer | A pulley
+Options: A rope | **An axe** | A pulley | A hammer
 - If a child answers "A rope": A wedge is two slopes joined. An axe or a knife is a wedge, which is two slopes joined together.
-- If a child answers "A hammer": A wedge is two slopes joined. An axe or a knife is a wedge, which is two slopes joined together.
+- If a child answers "A pulley": A wedge is two slopes joined. A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.
 
 ### science6.sl.ty.story
 
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** A road climbs a hill in many bends. Why?
-Options: It is a pulley | The road is flat, with no slope at all | It is a lever | **A gentle slope is easier for vehicles**
-- If a child answers "It is a pulley": It is a slope. A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.
-- If a child answers "The road is flat, with no slope at all": It is a slope. A slope must be tilted. A flat road is not a slope.
+**Q:** Ken says a flat road is a slope. What is true?
+Options: He is right | Every road is a slope, even a flat one | A flat road is a pulley | **It must be tilted to be a slope**
+- If a child answers "He is right": Slopes are tilted. A slope must be tilted. A flat road is not a slope.
+- If a child answers "Every road is a slope, even a flat one": Slopes are tilted. A slope must be tilted. A flat road is not a slope.
 
 ### science6.sl.ty.spot
 
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES`, outcome `a`, form spot, rung 3.
 
-**Q:** Wes says a flat road is a slope. Which step has the mistake?
-Steps: Step 1: Wes walks on a road. / Step 2: It is level. / **Step 3: He says it is a slope.**
+**Q:** Xia says an axe is not a slope. Which step has the mistake?
+Steps: Step 1: Xia looks at the blade. / Step 2: It is thick at the back and thin at the edge. / **Step 3: She says it is not a slope.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -1081,26 +1081,26 @@ Steps: Step 1: Wes walks on a road. / Step 2: It is level. / **Step 3: He says i
 
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER`, outcome `b`, form direct, rung 1.
 
-**Q:** Which ramp needs the least effort to push a loaded wheelbarrow up?
-Options: The steepest ramp | **The long, gentle ramp** | The shortest ramp | A ramp the same as a straight lift
-- If a child answers "The steepest ramp": A gentler slope needs less effort. A longer and gentler slope needs less effort, but it is longer to travel.
-- If a child answers "The shortest ramp": A gentler slope needs less effort. A longer and gentler slope needs less effort, but it is longer to travel.
+**Q:** A load is pushed up a ramp instead of being lifted straight up. What is true of the path it takes?
+Options: The path along the ramp is shorter | **The path along the ramp is longer** | The load takes no path at all | The path is the same length
+- If a child answers "The path along the ramp is shorter": A ramp is longer than a straight lift. A ramp is longer than the straight lift. We trade a longer path for less effort.
+- If a child answers "The load takes no path at all": A ramp is longer than a straight lift. The weight does not change. The slope only reduces the effort.
 
 ### science6.sl.ea.story
 
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER`, outcome `b`, form word, rung 2.
 
-**Q:** Ken says a ramp saves distance. What is true?
-Options: He is right | A ramp is the same | The load is lighter when it is on a ramp | **A ramp is longer than a straight lift**
-- If a child answers "He is right": The path is longer. A ramp is longer than the straight lift. We trade a longer path for less effort.
-- If a child answers "A ramp is the same": The path is longer. A ramp is longer than the straight lift. We trade a longer path for less effort.
+**Q:** Why do roads climbing a mountain wind in bends?
+Options: To save distance | **A longer, gentler slope is easier to climb** | To make the road shorter and save distance | A steep road is easier
+- If a child answers "To save distance": Gentler slope, less effort. A ramp is longer than the straight lift. We trade a longer path for less effort.
+- If a child answers "To make the road shorter and save distance": Gentler slope, less effort. A longer and gentler slope needs less effort, but it is longer to travel.
 
 ### science6.sl.ea.spot
 
 Skill `FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER`, outcome `b`, form spot, rung 3.
 
-**Q:** Eli says a short steep slope saves effort. Which step has the mistake?
-Steps: Step 1: Eli builds a short steep slope. / Step 2: He builds a long gentle slope. / **Step 3: He says the short one needs less effort.**
+**Q:** Bea says a ramp makes a load lighter. Which step has the mistake?
+Steps: Step 1: Bea pushes a box up a ramp. / Step 2: It is easier. / **Step 3: She says the box lost weight.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
