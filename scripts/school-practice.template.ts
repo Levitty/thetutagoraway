@@ -18,6 +18,9 @@
 //   evidence { items: [{ learner_ref, question_id, outcome_code, substrand_code, marks, max_marks, ... }] }
 //           -> { success: true, received, saved, updated, same, skipped }   exam marks into the learner's evidence log
 //           (12 Nov 2026), see src/school/evidenceDoor.js
+//   mark_writing { learner_ref, language, grade, type?, prompt, title?, text } -> { success: true, mock, model, suggestion: { total, level, bands, ... },
+//           attention? }   a SUGGESTED mark for one composition or insha, the teacher marks (12 Nov 2026), see src/school/writingDoor.js.
+//           MOCK unless this function has SCHOOL_WRITING_LIVE=1 and ANTHROPIC_API_KEY (secrets); nothing is stored here
 //   homework_preview, homework_set, homework_status, homework_reopen   homework drawn from the curriculum
 //           families (10 Nov 2026), see src/school/homeworkDoor.js
 //
@@ -33,6 +36,7 @@ import { doorHomework, makeCodeFrom } from "../src/school/homeworkDoor.js";
 import { doorEvidence } from "../src/school/evidenceDoor.js";
 import { doorClassRechecks } from "../src/school/recheckDoor.js";
 import { doorLearnerStates } from "../src/school/statesDoor.js";
+import { doorMarkWriting } from "../src/school/writingDoor.js";
 import { supabaseStore } from "../src/school/homeworkStore.js";
 
 // The child's link: HOREB's own page, keyed by the sitting's code (public/hw/index.html).
@@ -86,6 +90,24 @@ Deno.serve(async (req) => {
 
   if (p.action === "evidence") {
     const r = await doorEvidence(door, p, { store: supabaseStore(admin) }).catch(() => ({ status: 500, body: { success: false, error: "Not saved" } }));
+    return json(r.status, r.body);
+  }
+
+  if (p.action === "mark_writing") {
+    // Switched off unless the owner sets SCHOOL_WRITING_LIVE=1 (and the key) on this function: then it is the mock, and says so.
+    const live = env("SCHOOL_WRITING_LIVE") === "1" && env("ANTHROPIC_API_KEY") !== "";
+    const model = env("MARKING_MODEL") || "claude-sonnet-5";
+    const marker = live ? async (reqBody) => {
+      const res = await fetch("https://api.anthropic.com/v1/messages", {
+        method: "POST",
+        headers: { "content-type": "application/json", "x-api-key": env("ANTHROPIC_API_KEY"), "anthropic-version": "2023-06-01" },
+        body: JSON.stringify(reqBody),
+      });
+      if (!res.ok) throw new Error("anthropic " + res.status);
+      const out = await res.json();
+      return (out.content || []).find((c) => c.type === "tool_use" && c.name === "mark")?.input;
+    } : null;
+    const r = await doorMarkWriting(door, p, { marker, model }).catch(() => ({ status: 500, body: { success: false, error: "Not marked" } }));
     return json(r.status, r.body);
   }
 
