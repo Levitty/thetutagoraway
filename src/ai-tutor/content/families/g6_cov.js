@@ -13,7 +13,7 @@ const PLACE = ['ones', 'tens', 'hundreds', 'thousands', 'ten thousands'];
 
 export const FAMILIES = [
   // ================================================================ WHOLE NUMBERS
-  cov({ id: 'g6c.whole.symbols-from-parts', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.b', form: 'direct', rung: 2,
+  cov({ id: 'g6c.whole.symbols-from-parts', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.b', misMapped: false, reveals: ['M_JOIN_PARTS', 'M_MISPLACED_GROUP'], form: 'direct', rung: 2,
     gen: () => {
       const M = randInt(1, 9), T = randInt(1, 99) * (Math.random() < 0.5 ? 1 : 10) + (Math.random() < 0.5 ? 0 : 100 * randInt(1, 9)), U = randInt(1, 99);
       if (T > 999 || T % 100 === 0) return null;
@@ -25,7 +25,7 @@ export const FAMILIES = [
         steps: [`${M} million is ${commas(M * 1e6)}.`, `${T} thousand is ${commas(T * 1e3)} and the last part is ${U}.`, `Together: ${commas(N)}.`] };
     } }),
 
-  cov({ id: 'g6c.whole.order-list', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.d', form: 'word', rung: 2,
+  cov({ id: 'g6c.whole.order-list', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.d', misMapped: false, reveals: ['M_FIRST_DIGIT_ONLY', 'M_LARGEST_FIRST'], form: 'word', rung: 2,
     gen: () => {
       const four = [randInt(5, 9) * 1000 + randInt(0, 999), randInt(5, 9) * 1000 + randInt(0, 999)], five = [randInt(10, 99) * 1000 + randInt(0, 999), randInt(10, 99) * 1000 + randInt(0, 999)];
       const nums = [...four, ...five];
@@ -41,7 +41,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ DECIMALS
-  cov({ id: 'g6c.dec.name-the-place', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.a', form: 'direct', rung: 1,
+  cov({ id: 'g6c.dec.name-the-place', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS', outcome: 'MATH.G6.NUMBER.DECIMALS.a', misMapped: false, reveals: ['M_PLACE_NAME_SHIFT'], form: 'direct', rung: 1,
     gen: () => {
       const ds = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 4), W = randInt(0, 9), i = randInt(0, 3);
       const names = ['tenths', 'hundredths', 'thousandths', 'ten-thousandths'];
@@ -52,7 +52,7 @@ export const FAMILIES = [
         steps: ['The places after the point are tenths, hundredths, thousandths, ten-thousandths.', `The digit ${ds[i]} is in the ${ord[i]} place, the ${names[i]} place.`] };
     } }),
 
-  cov({ id: 'g6c.dec.write-ten-thousandths', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.a', form: 'word', rung: 2,
+  cov({ id: 'g6c.dec.write-ten-thousandths', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS', outcome: 'MATH.G6.NUMBER.DECIMALS.a', misMapped: false, reveals: ['M_TH_SOUNDS_LIKE_WHOLE', 'M_PLACE_NAME_SHIFT'], form: 'word', rung: 2,
     gen: () => {
       const n = randInt(2, 9), tot = n / 10000, T = T4(n);
       const options = mc(T, [[(n / 1000).toFixed(3), 'That is thousandths. A ten-thousandth is ten times smaller.'], [(n / 100).toFixed(2), 'That is hundredths. Count four places after the point.'], [(n / 100000).toFixed(5), 'That is hundred-thousandths. Count only four places after the point.']]);
@@ -62,7 +62,7 @@ export const FAMILIES = [
         steps: ['The fourth place after the point is the ten-thousandths place.', `${n} ten-thousandths is ${T}.`] };
     } }),
 
-  cov({ id: 'g6c.dec.to-percent', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.d', form: 'word', rung: 2,
+  cov({ id: 'g6c.dec.to-percent', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT', outcome: 'MATH.G6.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_MOVE_ONE_PLACE'], form: 'word', rung: 2,
     gen: () => {
       const v = randInt(3, 97) / 100;
       if (Math.round(v * 100) % 10 === 0) return null;
@@ -72,7 +72,7 @@ export const FAMILIES = [
         hints: ['A percentage means out of 100.', 'Multiply the decimal by 100.'], steps: [`${v.toFixed(2)} × 100 = ${pc}.`, `So the tank is ${pc}% full.`], chk: (a) => round(a / 100, 4) === v };
     } }),
 
-  cov({ id: 'g6c.dec.from-percent', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.d', form: 'direct', rung: 2,
+  cov({ id: 'g6c.dec.from-percent', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL', outcome: 'MATH.G6.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_DIVIDE_BY_TEN'], form: 'direct', rung: 2,
     gen: () => {
       const pc = randInt(2, 98);
       if (pc % 10 === 0) return null;
@@ -82,7 +82,7 @@ export const FAMILIES = [
         hints: ['Per cent means out of 100.', 'Divide the number by 100.'], steps: [`${pc}% = ${pc} ÷ 100.`, `${pc} ÷ 100 = ${d}.`], chk: (a) => Math.round(a * 100) === pc };
     } }),
 
-  cov({ id: 'g6c.dec.subtract-four-places', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.f', form: 'word', rung: 3,
+  cov({ id: 'g6c.dec.subtract-four-places', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP', outcome: 'MATH.G6.NUMBER.DECIMALS.f', misMapped: false, reveals: ['M_SMALLER_FROM_LARGER_DIGIT'], form: 'word', rung: 3,
     gen: () => {
       const A = randInt(20000, 99999), B = randInt(10000, A - 5000), R = A - B;
       const dig = (n) => String(n).padStart(5, '0').split('').map(Number);
@@ -97,7 +97,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ FRACTIONS
-  cov({ id: 'g6c.frac.subtract-lcm', skill: 'G6_FRACTIONS_SUB', outcome: 'G6.FRAC.b', form: 'word', rung: 2,
+  cov({ id: 'g6c.frac.subtract-lcm', skill: 'G6_FRACTIONS_SUB', cskill: 'MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.b', misMapped: false, reveals: ['M_SUBTRACT_ACROSS', 'M_RENAME_BOTTOM_ONLY'], form: 'word', rung: 2,
     gen: () => {
       const dens = [2, 3, 4, 5, 6, 8, 10, 12], b = pick(dens), d = pick(dens);
       if (b === d || b % d === 0 || d % b === 0) return null;
@@ -111,7 +111,7 @@ export const FAMILIES = [
         steps: [`The LCM of ${b} and ${d} is ${L}.`, `${(a * L) / b}/${L} − ${(c * L) / d}/${L} = ${top}/${L}.`, `In simplest form: ${right}.`], chk: (r) => { const [n, m] = r.split('/').map(Number); return n * b * d === (a * d - c * b) * m; } };
     } }),
 
-  cov({ id: 'g6c.frac.subtract-mixed', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.d', form: 'word', rung: 3,
+  cov({ id: 'g6c.frac.subtract-mixed', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS', outcome: 'MATH.G6.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_WHOLE_NOT_REDUCED', 'M_SMALLER_FROM_LARGER_FRACTION'], form: 'word', rung: 3,
     gen: () => {
       const pairs = [[2, 4], [3, 6], [4, 2], [6, 3], [5, 10], [4, 8]], [d1, d2] = pick(pairs), L = lcm(d1, d2);
       const w1 = randInt(4, 9), w2 = randInt(1, w1 - 2), n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
@@ -128,7 +128,7 @@ export const FAMILIES = [
         steps: [`${w1} ${frac(f1, L)} − ${w2} ${frac(f2, L)}: ${f1}/${L} is smaller than ${f2}/${L}, so regroup.`, `${w1 - 1} and ${L + f1}/${L}, then subtract: ${right}.`] };
     } }),
 
-  cov({ id: 'g6c.frac.percent-to-fraction', skill: 'G6_PERCENTAGES_INTRO', outcome: 'G6.FRAC.h', form: 'word', rung: 2,
+  cov({ id: 'g6c.frac.percent-to-fraction', skill: 'G6_PERCENTAGES_INTRO', cskill: 'MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION', outcome: 'MATH.G6.NUMBER.FRACTIONS.h', misMapped: false, reveals: ['M_PERCENT_ONE_OVER'], form: 'word', rung: 2,
     gen: () => {
       const pc = pick([4, 6, 8, 12, 15, 16, 24, 28, 35, 36, 45, 55, 60, 65, 72, 75, 85]);
       const right = frac(pc, 100), p = person();
@@ -140,7 +140,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ INEQUALITIES
-  cov({ id: 'g6c.ineq.simplify-add', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.b', form: 'direct', rung: 2,
+  cov({ id: 'g6c.ineq.simplify-add', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.b', misMapped: false, reveals: ['M_FLIP_THE_SYMBOL_FOR_NOTHING', 'M_OPERATION_NOT_INVERTED'], form: 'direct', rung: 2,
     gen: () => {
       const a = randInt(8, 30), b = a + randInt(5, 40), ops = [['≤', 'at most', '≥'], ['≥', 'at least', '≤'], ['<', 'fewer than', '>'], ['>', 'more than', '<']], [sym, words, flip] = pick(ops), r = b - a;
       const options = mc(`n ${sym} ${r}`, [[`n ${flip} ${r}`, 'The sign has been turned the wrong way. Read the words again: which way does the sign point?'], [`n ${sym} ${a + b}`, 'You added the numbers. To get n alone, take away the number added to it.'], [`n ${sym} ${b}`, `You ignored the ${a}. It must be taken from both sides.`]]);
@@ -149,7 +149,7 @@ export const FAMILIES = [
         steps: [`n + ${a} ${sym} ${b}.`, `Take ${a} from both sides: n ${sym} ${b} − ${a}.`, `n ${sym} ${r}.`] };
     } }),
 
-  cov({ id: 'g6c.ineq.simplify-multiply', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.b', form: 'word', rung: 3,
+  cov({ id: 'g6c.ineq.simplify-multiply', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.b', misMapped: false, reveals: ['M_OPERATION_NOT_INVERTED', 'M_FLIP_THE_SYMBOL_FOR_NOTHING'], form: 'word', rung: 3,
     gen: () => {
       const k = randInt(2, 9), r = randInt(3, 30), b = k * r, [sym, words, flip] = pick([['≥', 'at least', '≤'], ['≤', 'at most', '≥'], ['>', 'more than', '<'], ['<', 'less than', '>']]);
       const options = mc(`n ${sym} ${r}`, [[`n ${flip} ${r}`, 'The sign has been turned the wrong way. Read the words again.'], [`n ${sym} ${b * k}`, 'You multiplied. The number is multiplying n, so divide both sides by it.'], [`n ${sym} ${b - k}`, 'You took the number away. It is multiplying n, so divide both sides by it.']]);
@@ -160,7 +160,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ LENGTH (mm and cm)
-  cov({ id: 'g6c.len.best-in-mm', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.a', form: 'direct', rung: 1,
+  cov({ id: 'g6c.len.best-in-mm', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.MM_AS_UNIT', outcome: 'MATH.G6.MEASUR.LENGTH.a', misMapped: false, reveals: ['M_UNIT_TOO_BIG'], form: 'direct', rung: 1,
     gen: () => {
       const mm = pick(['the thickness of a one-shilling coin', 'the thickness of a page of an exercise book', 'the thickness of a thin mobile phone', 'the width of a grain of rice', 'the thickness of a ruler', 'the length of an ant']);
       const others = shuffle([['the length of a classroom', 'metres (m), because a classroom is several metres long'], ['the distance from Kisumu to Kakamega', 'kilometres (km), because the road is many kilometres long'], ['the height of a mango tree', 'metres (m), because a tree is several metres tall'], ['the length of a football pitch', 'metres (m), because a pitch is many metres long'], ['the distance from Nairobi to Thika', 'kilometres (km), because towns are far apart']]).slice(0, 3);
@@ -170,7 +170,7 @@ export const FAMILIES = [
         steps: ['A millimetre is one thousandth of a metre, so it suits very small lengths.', `${cap(mm)} is tiny, so it is measured in millimetres.`] };
     } }),
 
-  cov({ id: 'g6c.len.ruler-marks', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.b', form: 'word', rung: 2,
+  cov({ id: 'g6c.len.ruler-marks', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP', outcome: 'MATH.G6.MEASUR.LENGTH.b', misMapped: false, reveals: ['M_HUNDRED_NOT_TEN', 'M_RULER_COUNT_FROM_ONE'], form: 'word', rung: 2,
     gen: () => {
       const lo = randInt(1, 8), hi = randInt(lo + 2, 14), diff = hi - lo;
       return { question: `A ruler has a small mark every millimetre. How many millimetre spaces are between the ${lo} cm mark and the ${hi} cm mark?`, answer: 10 * diff,
@@ -179,7 +179,7 @@ export const FAMILIES = [
         steps: ['1 cm = 10 mm.', `${hi} cm − ${lo} cm = ${diff} cm.`, `${diff} × 10 = ${10 * diff} mm.`], chk: (a) => a / 10 + lo === hi };
     } }),
 
-  cov({ id: 'g6c.len.to-millimetres', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.c', form: 'direct', rung: 2,
+  cov({ id: 'g6c.len.to-millimetres', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM', outcome: 'MATH.G6.MEASUR.LENGTH.c', misMapped: false, reveals: ['M_TIMES_HUNDRED', 'M_ADD_NOT_MULTIPLY'], form: 'direct', rung: 2,
     gen: () => {
       const c = randInt(2, 19), m = randInt(1, 9);
             return { question: `The label on a box of screws says each screw measures ${c} cm ${m} mm. Write this measurement using millimetres only.`, answer: 10 * c + m,
@@ -188,7 +188,7 @@ export const FAMILIES = [
         steps: [`${c} cm = ${c} × 10 = ${10 * c} mm.`, `${10 * c} mm + ${m} mm = ${10 * c + m} mm.`], chk: (a) => Math.floor(a / 10) === c && a % 10 === m };
     } }),
 
-  cov({ id: 'g6c.len.subtract-cm-mm', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.e', form: 'word', rung: 3,
+  cov({ id: 'g6c.len.subtract-cm-mm', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM', outcome: 'MATH.G6.MEASUR.LENGTH.e', misMapped: false, reveals: ['M_SMALLER_FROM_LARGER_MM', 'M_TIMES_HUNDRED'], form: 'word', rung: 3,
     gen: () => {
       const c1 = randInt(10, 30), c2 = randInt(2, c1 - 3), m1 = randInt(0, 6), m2 = randInt(m1 + 1, 9);
       const A = 10 * c1 + m1, B = 10 * c2 + m2, R = A - B;
@@ -199,7 +199,7 @@ export const FAMILIES = [
         steps: [`${c1} cm ${m1} mm = ${A} mm.`, `${c2} cm ${m2} mm = ${B} mm.`, `${A} − ${B} = ${R} mm.`], chk: (a) => a + B === A };
     } }),
 
-  cov({ id: 'g6c.len.multiply-cm-mm', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.f', form: 'word', rung: 3,
+  cov({ id: 'g6c.len.multiply-cm-mm', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM', outcome: 'MATH.G6.MEASUR.LENGTH.f', misMapped: false, reveals: ['M_MULTIPLY_CM_ONLY', 'M_TIMES_HUNDRED'], form: 'word', rung: 3,
     gen: () => {
       const c = randInt(1, 4), m = randInt(1, 9), n = randInt(3, 9), one = 10 * c + m;
       const w = [[10 * c * n + m, 'Each book has the extra millimetres too. Multiply the millimetres by the number of books as well.'], [100 * c * n + m * n, 'There are 10 mm in a centimetre, not 100.'], [c * n + m * n, 'You multiplied but did not change the centimetres to millimetres.'], [one + n, 'You added. A stack of equal books needs multiplying.']];
@@ -209,7 +209,7 @@ export const FAMILIES = [
         steps: [`${c} cm ${m} mm = ${one} mm.`, `${one} × ${n} = ${one * n} mm.`], chk: (a) => a / n === one };
     } }),
 
-  cov({ id: 'g6c.len.divide-cm-mm', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.g', form: 'word', rung: 3,
+  cov({ id: 'g6c.len.divide-cm-mm', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM', outcome: 'MATH.G6.MEASUR.LENGTH.g', misMapped: false, reveals: ['M_REMAINDER_CM_LOST'], form: 'word', rung: 3,
     gen: () => {
       const n = pick([2, 3, 4, 5, 6]), each = randInt(6, 39), total = each * n, c = Math.floor(total / 10), m = total % 10;
       if (each % 10 === 0) return null;
@@ -220,7 +220,7 @@ export const FAMILIES = [
         steps: [`${c} cm ${m} mm = ${total} mm.`, `${total} ÷ ${n} = ${each} mm.`], chk: (a) => a * n === total };
     } }),
 
-  cov({ id: 'g6c.len.round-the-edge', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.i', form: 'direct', rung: 2,
+  cov({ id: 'g6c.len.round-the-edge', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION', outcome: 'MATH.G6.MEASUR.LENGTH.i', misMapped: false, reveals: ['M_CIRCUMFERENCE_TWICE_DIAMETER'], form: 'direct', rung: 2,
     gen: () => {
       const [thing, ds] = pick([['a round cake tin', [14, 21]], ['a bicycle wheel', [70]], ['a round table', [70, 140]], ['a round water tank', [140, 210]]]), d = pick(ds), C = (22 * d) / 7;
       const options = mc(`about ${C} cm`, [[`about ${d} cm`, 'That is the distance across, the diameter. The rope goes round the edge, which is longer.'], [`about ${2 * d} cm`, 'Going round is more than two times across. Try a little more than three diameters.'], [`about ${4 * d} cm`, 'Going round is less than four diameters. It is a little more than three.']]);
@@ -230,7 +230,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ CAPACITY
-  cov({ id: 'g6c.cap.litres-to-ml', skill: 'G6_CAPACITY', outcome: 'G6.CAP.b', form: 'direct', rung: 1,
+  cov({ id: 'g6c.cap.litres-to-ml', skill: 'G6_CAPACITY', cskill: 'MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML', outcome: 'MATH.G6.MEASUR.CAPACITY.b', misMapped: false, reveals: ['M_TIMES_HUNDRED'], form: 'direct', rung: 1,
     gen: () => {
       const l = pick([2, 3, 4, 5, 6, 8, 10, 1.5, 2.5, 3.5]), ml = l * 1000, p = person();
       return { question: `${p.name}'s jerrican holds ${l} litres of water. How many millilitres is that?`, answer: ml,
@@ -239,7 +239,7 @@ export const FAMILIES = [
         steps: ['1 litre = 1,000 ml.', `${l} × 1,000 = ${commas(ml)} ml.`], chk: (a) => a / 1000 === l };
     } }),
 
-  cov({ id: 'g6c.cap.ml-to-litres', skill: 'G6_CAPACITY', outcome: 'G6.CAP.c', form: 'word', rung: 2,
+  cov({ id: 'g6c.cap.ml-to-litres', skill: 'G6_CAPACITY', cskill: 'MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES', outcome: 'MATH.G6.MEASUR.CAPACITY.c', misMapped: false, reveals: ['M_DIVIDE_BY_HUNDRED'], form: 'word', rung: 2,
     gen: () => {
       const bot = pick([250, 300, 500, 750]), n = pick([4, 6, 8, 12]), ml = bot * n, l = ml / 1000;
       if (ml % 10 !== 0) return null;
@@ -251,7 +251,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ MASS
-  cov({ id: 'g6c.mass.which-in-tonnes', skill: 'G6_MASS', outcome: 'G6.MASS.b', form: 'direct', rung: 1,
+  cov({ id: 'g6c.mass.which-in-tonnes', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES', outcome: 'MATH.G6.MEASUR.MASS.b', misMapped: false, reveals: ['M_BIG_MEANS_TONNES'], form: 'direct', rung: 1,
     gen: () => {
       const t = pick(['a lorry full of sand', 'a container loaded at Mombasa port', 'an adult elephant', 'a loaded bus', 'a train wagon full of maize']);
       const l = shuffle([['a bag of sugar', 'kilograms'], ['a chicken', 'kilograms'], ['a school bag', 'kilograms'], ['a mango', 'grams'], ['a loaf of bread', 'grams'], ['a cooking-oil bottle', 'kilograms']]).slice(0, 3);
@@ -261,7 +261,7 @@ export const FAMILIES = [
         steps: ['1 tonne = 1,000 kg, so tonnes are for very heavy things.', `${cap(t)} is very heavy, so it is measured in tonnes.`] };
     } }),
 
-  cov({ id: 'g6c.mass.sacks-in-tonne', skill: 'G6_MASS', outcome: 'G6.MASS.c', form: 'word', rung: 2,
+  cov({ id: 'g6c.mass.sacks-in-tonne', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP', outcome: 'MATH.G6.MEASUR.MASS.c', misMapped: false, reveals: ['M_HUNDRED_KG'], form: 'word', rung: 2,
     gen: () => {
       const w = pick([20, 25, 40, 50, 100]), n = 1000 / w, goods = pick(['cement', 'maize', 'sugar', 'rice', 'fertiliser']);
       return { question: `A lorry can carry 1 tonne. Each sack of ${goods} has a mass of ${w} kg. How many sacks can the lorry carry?`, answer: n,
@@ -270,7 +270,7 @@ export const FAMILIES = [
         steps: ['1 tonne = 1,000 kg.', `1,000 ÷ ${w} = ${n} sacks.`], chk: (a) => a * w === 1000 };
     } }),
 
-  cov({ id: 'g6c.mass.estimate-tonnes', skill: 'G6_MASS', outcome: 'G6.MASS.d', form: 'direct', rung: 2,
+  cov({ id: 'g6c.mass.estimate-tonnes', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.ESTIMATE_TONNES', outcome: 'MATH.G6.MEASUR.MASS.d', misMapped: false, reveals: ['M_UNIT_NOT_CONVERTED'], form: 'direct', rung: 2,
     gen: () => {
       const items = [['an adult elephant', '5 tonnes', ['5 kg', '50 kg', '500 tonnes']], ['a loaded sand lorry', '12 tonnes', ['12 kg', '120 kg', '1,200 tonnes']], ['a school bus with no passengers', '8 tonnes', ['8 kg', '80 kg', '800 tonnes']], ['an adult hippopotamus', '2 tonnes', ['2 kg', '20 kg', '200 tonnes']], ['a loaded container at the port', '20 tonnes', ['20 kg', '200 kg', '2,000 tonnes']], ['a small tractor', '3 tonnes', ['3 kg', '30 kg', '300 tonnes']]];
       const [what, right, wr] = pick(items);
@@ -280,7 +280,7 @@ export const FAMILIES = [
         steps: ['A tonne is 1,000 kg.', `${cap(what)} is much heavier than a person, but not as heavy as a thousand tonnes: about ${right}.`] };
     } }),
 
-  cov({ id: 'g6c.mass.add-tonnes-kg', skill: 'G6_MASS', outcome: 'G6.MASS.f', form: 'word', rung: 2,
+  cov({ id: 'g6c.mass.add-tonnes-kg', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.ADD_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.f', misMapped: false, reveals: ['M_HUNDRED_KG', 'M_KG_OVER_THOUSAND_LEFT'], form: 'word', rung: 2,
     gen: () => {
       const t1 = randInt(1, 5), t2 = randInt(1, 5), k1 = randInt(1, 9) * 100 + randInt(0, 1) * 50, k2 = randInt(1, 9) * 100 + randInt(0, 1) * 50;
       if (k1 + k2 < 1000) return null;
@@ -291,7 +291,7 @@ export const FAMILIES = [
         steps: [`${t1} t ${k1} kg = ${commas(t1 * 1000 + k1)} kg.`, `${t2} t ${k2} kg = ${commas(t2 * 1000 + k2)} kg.`, `Total: ${commas(R)} kg.`], chk: (a) => a - (t1 * 1000 + k1) === t2 * 1000 + k2 };
     } }),
 
-  cov({ id: 'g6c.mass.subtract-tonnes-kg', skill: 'G6_MASS', outcome: 'G6.MASS.g', form: 'word', rung: 3,
+  cov({ id: 'g6c.mass.subtract-tonnes-kg', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.g', misMapped: false, reveals: ['M_SMALLER_FROM_LARGER_KG', 'M_HUNDRED_KG'], form: 'word', rung: 3,
     gen: () => {
       const t1 = randInt(5, 12), t2 = randInt(1, t1 - 3), k1 = randInt(1, 4) * 100, k2 = randInt(k1 / 100 + 1, 9) * 100;
       const A = t1 * 1000 + k1, B = t2 * 1000 + k2, R = A - B;
@@ -302,7 +302,7 @@ export const FAMILIES = [
         steps: [`${t1} t ${k1} kg = ${commas(A)} kg.`, `${t2} t ${k2} kg = ${commas(B)} kg.`, `${commas(A)} − ${commas(B)} = ${commas(R)} kg.`], chk: (a) => a + B === A };
     } }),
 
-  cov({ id: 'g6c.mass.multiply-tonnes-kg', skill: 'G6_MASS', outcome: 'G6.MASS.h', form: 'word', rung: 3,
+  cov({ id: 'g6c.mass.multiply-tonnes-kg', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.h', misMapped: false, reveals: ['M_MULTIPLY_TONNES_ONLY', 'M_HUNDRED_KG'], form: 'word', rung: 3,
     gen: () => {
       const t = randInt(1, 4), k = randInt(1, 9) * 100 + randInt(0, 1) * 50, n = randInt(3, 8), one = t * 1000 + k;
       const w = [[t * n * 1000 + k, 'Every trip carries the kilograms too. Multiply the kilograms as well.'], [t * n * 100 + k * n, 'A tonne is 1,000 kg, not 100 kg.'], [t * n + k * n, 'You multiplied but did not change the tonnes to kilograms.'], [one + n, 'You added. Equal trips need multiplying.']];
@@ -312,7 +312,7 @@ export const FAMILIES = [
         steps: [`${t} t ${k} kg = ${commas(one)} kg.`, `${commas(one)} × ${n} = ${commas(one * n)} kg.`], chk: (a) => a / n === one };
     } }),
 
-  cov({ id: 'g6c.mass.divide-tonnes-kg', skill: 'G6_MASS', outcome: 'G6.MASS.i', form: 'word', rung: 3,
+  cov({ id: 'g6c.mass.divide-tonnes-kg', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.i', misMapped: false, reveals: ['M_REMAINDER_TONNE_LOST', 'M_HUNDRED_KG'], form: 'word', rung: 3,
     gen: () => {
       const n = pick([3, 4, 5]), t = randInt(n + 1, 14), k = randInt(1, 9) * 100, total = t * 1000 + k;
       if (t % n === 0 || total % n !== 0) return null;
@@ -324,7 +324,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ MONEY
-  cov({ id: 'g6c.money.selling-price', skill: 'G6_MONEY', outcome: 'G6.MONEY.b', form: 'word', rung: 2,
+  cov({ id: 'g6c.money.selling-price', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE', outcome: 'MATH.G6.MEASUR.MONEY.b', misMapped: false, reveals: ['M_SELLING_FOR_BUYING'], form: 'word', rung: 2,
     gen: () => {
       const item = pick([['box of soap', 800], ['box of chalk', 450], ['bale of cloth', 3000], ['sack of onions', 2500]]), buy = item[1] + 10 * randInt(0, 30), profit = pick([50, 100, 150, 200, 300]), p = person();
       const w = [[buy - profit, 'You took the profit away. A profit is added to the buying price to get the selling price.'], [profit, 'This is only the profit. The selling price includes the buying price too.'], [buy, 'This is the buying price. To make a profit, sell for more than this.'], [buy + 2 * profit, 'The profit has been added twice.']];
@@ -333,7 +333,7 @@ export const FAMILIES = [
         steps: ['Selling price = buying price + profit.', `${commas(buy)} + ${profit} = ${commas(buy + profit)}.`], chk: (a) => a - profit === buy };
     } }),
 
-  cov({ id: 'g6c.money.buying-price', skill: 'G6_MONEY', outcome: 'G6.MONEY.b', form: 'direct', rung: 3,
+  cov({ id: 'g6c.money.buying-price', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE', outcome: 'MATH.G6.MEASUR.MONEY.b', misMapped: false, reveals: ['M_SELLING_FOR_BUYING'], form: 'direct', rung: 3,
     gen: () => {
       const sell = 20 * randInt(30, 120), profit = pick([100, 150, 200, 250, 300]), p = person();
       const w = [[sell + profit, 'You added the profit. The buyer paid the selling price, which already includes the profit.'], [profit, 'This is only the profit. Take it away from the selling price.'], [sell, 'This is the selling price. The buying price was less, as there was a profit.'], [sell - 2 * profit, 'The profit has been taken away twice.']];
@@ -342,7 +342,7 @@ export const FAMILIES = [
         steps: ['Buying price = selling price − profit.', `${commas(sell)} − ${profit} = ${commas(sell - profit)}.`], chk: (a) => a + profit === sell };
     } }),
 
-  cov({ id: 'g6c.money.loss-amount', skill: 'G6_MONEY', outcome: 'G6.MONEY.d', form: 'word', rung: 2,
+  cov({ id: 'g6c.money.loss-amount', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES', outcome: 'MATH.G6.MEASUR.MONEY.d', misMapped: false, reveals: [], form: 'word', rung: 2,
     gen: () => {
       const buy = 10 * randInt(100, 300), loss = 10 * randInt(5, 40), sell = buy - loss, item = pick(['dress', 'pair of shoes', 'radio', 'blanket']), p = person();
       const w = [[buy + sell, 'You added. The loss is the difference between the two prices.'], [buy, 'This is the buying price. The loss is how much less ' + 'it was sold for.'], [sell, 'This is the selling price. Find how much less it is than the buying price.'], [loss * 10, 'There is one zero too many. Check the place values when you take the selling price from the buying price.']];
@@ -351,7 +351,7 @@ export const FAMILIES = [
         steps: ['Loss = buying price − selling price.', `${commas(buy)} − ${commas(sell)} = ${loss}.`], chk: (a) => sell + a === buy };
     } }),
 
-  cov({ id: 'g6c.money.profit-or-loss', skill: 'G6_MONEY', outcome: 'G6.MONEY.d', form: 'why', rung: 2,
+  cov({ id: 'g6c.money.profit-or-loss', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES', outcome: 'MATH.G6.MEASUR.MONEY.d', misMapped: false, reveals: ['M_LOSS_AS_PROFIT'], form: 'why', rung: 2,
     gen: () => {
       const n = pick([10, 12, 20, 24]), each = pick([20, 25, 30, 35, 40]), buy = n * each, sellEach = each + pick([-10, -5, 5, 10]);
       if (sellEach <= 0) return null;
@@ -364,7 +364,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ TIME
-  cov({ id: 'g6c.time.ampm-event', skill: 'G6_TIME', outcome: 'G6.TIME.a', form: 'why', rung: 1,
+  cov({ id: 'g6c.time.ampm-event', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY', outcome: 'MATH.G6.MEASUR.TIME.a', misMapped: false, reveals: ['M_NIGHT_IS_PM'], form: 'why', rung: 1,
     gen: () => {
       const ev = [['morning assembly starts', 8, 0, 'a.m.'], ['the first lesson begins', 7, 30, 'a.m.'], ['lunch break starts', 1, 0, 'p.m.'], ['the family eats supper', 7, 30, 'p.m.'], ['the evening news is read', 9, 0, 'p.m.'], ['the cock crows at dawn', 5, 45, 'a.m.'], ['school closes for the day', 4, 0, 'p.m.']];
       const [what, h, m, ap] = pick(ev), other = ap === 'a.m.' ? 'p.m.' : 'a.m.', mm = String(m).padStart(2, '0');
@@ -375,7 +375,7 @@ export const FAMILIES = [
         steps: ['a.m. means before noon. p.m. means after noon.', `This event is ${ap === 'a.m.' ? 'before' : 'after'} noon, so it is ${h}:${mm} ${ap}.`] };
     } }),
 
-  cov({ id: 'g6c.time.write-ampm', skill: 'G6_TIME', outcome: 'G6.TIME.b', form: 'direct', rung: 2,
+  cov({ id: 'g6c.time.write-ampm', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.WRITE_AM_PM', outcome: 'MATH.G6.MEASUR.TIME.b', misMapped: false, reveals: ['M_AM_PM_LEFT_OUT'], form: 'direct', rung: 2,
     gen: () => {
       const part = pick([['in the morning', 'a.m.', [6, 7, 8, 9, 10, 11]], ['in the afternoon', 'p.m.', [1, 2, 3, 4, 5]], ['in the evening', 'p.m.', [6, 7, 8, 9]]]);
       const [dayWord, ap, hours] = part, other = ap === 'a.m.' ? 'p.m.' : 'a.m.';
@@ -390,7 +390,7 @@ export const FAMILIES = [
         steps: [`${words} is ${t(hh, mm)}.`, `${dayWord.charAt(0).toUpperCase()}${dayWord.slice(1)} is ${ap}, so ${t(hh, mm)} ${ap}.`] };
     } }),
 
-  cov({ id: 'g6c.time.to-24-hour', skill: 'G6_TIME', outcome: 'G6.TIME.d', form: 'direct', rung: 2,
+  cov({ id: 'g6c.time.to-24-hour', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.CONVERT_12_24', outcome: 'MATH.G6.MEASUR.TIME.d', misMapped: false, reveals: ['M_ADD_TEN', 'M_SAME_NUMBER'], form: 'direct', rung: 2,
     gen: () => {
       const h = randInt(1, 11), m = pick([0, 5, 10, 15, 20, 30, 40, 45, 50]), mm = String(m).padStart(2, '0'), pm = Math.random() < 0.6, pad = (x) => String(x).padStart(2, '0');
       const right = pm ? `${h + 12}${mm} h` : `${pad(h)}${mm} h`;
@@ -402,7 +402,7 @@ export const FAMILIES = [
         steps: [pm ? `${h} p.m. is ${h} + 12 = ${h + 12}.` : `${h} a.m. stays ${pad(h)}.`, `The time is ${right}.`] };
     } }),
 
-  cov({ id: 'g6c.time.to-12-hour', skill: 'G6_TIME', outcome: 'G6.TIME.d', form: 'word', rung: 3,
+  cov({ id: 'g6c.time.to-12-hour', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.CONVERT_12_24', outcome: 'MATH.G6.MEASUR.TIME.d', misMapped: false, reveals: ['M_ADD_TEN'], form: 'word', rung: 3,
     gen: () => {
       const H = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, '0'), h = H - 12;
       const right = `${h}:${mm} p.m.`;
@@ -414,7 +414,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ ANGLES
-  cov({ id: 'g6c.ang.straight-two', skill: 'G6_ANGLE_PROPERTIES', outcome: 'G6.ANGLES.c', form: 'word', rung: 1,
+  cov({ id: 'g6c.ang.straight-two', skill: 'G6_ANGLE_PROPERTIES', cskill: 'MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE', outcome: 'MATH.G6.GEOMET.ANGLES.c', misMapped: false, reveals: ['M_NINETY_NOT_180', 'M_THREE_HUNDRED_SIXTY'], form: 'word', rung: 1,
     gen: () => {
       const a = pick([20, 35, 40, 55, 65, 70, 85, 110, 125, 130, 145, 160]);
       return { question: `A carpenter fixes a brace to a straight beam. On one side of the brace the angle is ${a}°. What is the angle on the other side of the brace, on the same straight beam?`, answer: 180 - a,
@@ -423,7 +423,7 @@ export const FAMILIES = [
         steps: ['Angles on a straight line add up to 180°.', `180° − ${a}° = ${180 - a}°.`], chk: (r) => r + a === 180 };
     } }),
 
-  cov({ id: 'g6c.ang.straight-three', skill: 'G6_ANGLE_PROPERTIES', outcome: 'G6.ANGLES.c', form: 'direct', rung: 2,
+  cov({ id: 'g6c.ang.straight-three', skill: 'G6_ANGLE_PROPERTIES', cskill: 'MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE', outcome: 'MATH.G6.GEOMET.ANGLES.c', misMapped: false, reveals: ['M_NINETY_NOT_180', 'M_THREE_HUNDRED_SIXTY'], form: 'direct', rung: 2,
     gen: () => {
       const a = randInt(2, 8) * 10, b = randInt(2, 8) * 10, x = 180 - a - b;
       if (x < 10) return null;
@@ -434,7 +434,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ 3-D OBJECTS
-  cov({ id: 'g6c.3d.cylinder-parts', skill: 'G6_3D_OBJECTS', outcome: 'G6.3D.b', form: 'direct', rung: 1,
+  cov({ id: 'g6c.3d.cylinder-parts', skill: 'G6_3D_OBJECTS', cskill: 'MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS', outcome: 'MATH.G6.GEOMET.3_D_OBJECTS.b', misMapped: false, reveals: ['M_CYLINDER_THREE_FACES_ALL_FLAT', 'M_CYLINDER_HAS_VERTICES'], form: 'direct', rung: 1,
     gen: () => {
       const q = pick([
         ['How many flat faces does it have?', 2, [[1, 'A cylinder has a flat top and a flat bottom. Count both.'], [3, 'The side is curved, not flat. Only the top and the bottom are flat.'], [0, 'The top and the bottom of a cylinder are flat circles.']]],
@@ -448,7 +448,7 @@ export const FAMILIES = [
         steps: ['A cylinder has two flat circular faces and one curved face.', `It has two edges and no corners. The answer is ${q[1]}.`], chk: (a) => [0, 1, 2].includes(a) };
     } }),
 
-  cov({ id: 'g6c.3d.plane-in-solid', skill: 'G6_3D_OBJECTS', outcome: 'G6.3D.c', form: 'direct', rung: 2,
+  cov({ id: 'g6c.3d.plane-in-solid', skill: 'G6_3D_OBJECTS', cskill: 'MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS', outcome: 'MATH.G6.GEOMET.3_D_OBJECTS.c', misMapped: false, reveals: [], form: 'direct', rung: 2,
     gen: () => {
       const items = [['The top of a tin of beans (a cylinder) is a flat face. What plane figure is it?', 'Circle'], ['The biggest face of a matchbox (a cuboid) is a flat face. What plane figure is it?', 'Rectangle'], ['Each face of a dice (a cube) is a flat face. What plane figure is it?', 'Square'], ['A roof is shaped like a triangular prism. The two ends are flat. What plane figure are they?', 'Triangle'], ['The base of a cone-shaped party hat is a flat face. What plane figure is it?', 'Circle']];
       const [q, right] = pick(items);
@@ -461,7 +461,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ BAR GRAPHS AND PICTOGRAPHS
-  cov({ id: 'g6c.data.pictograph-symbols', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.b', form: 'word', rung: 2,
+  cov({ id: 'g6c.data.pictograph-symbols', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.b', misMapped: false, reveals: ['M_KEY_IGNORED', 'M_HALF_SYMBOL_AS_WHOLE'], form: 'word', rung: 2,
     gen: () => {
       const each = pick([10, 20, 50]), u = randInt(2, 17) / 2, v = u * each, p = person(), thing = pick(['learners who walk to school', 'bags of maize sold in a week', 'eggs sold at a kiosk']);
       return { question: `${p.name} draws a pictograph of ${thing}. One whole symbol stands for ${each}, and a half symbol stands for ${each / 2}. How many whole symbols should ${p.she} draw for ${v}? Count a half symbol as 0.5.`, answer: u,
@@ -470,7 +470,7 @@ export const FAMILIES = [
         steps: [`One symbol = ${each}.`, `${v} ÷ ${each} = ${u} symbols.`], chk: (a) => a * each === v };
     } }),
 
-  cov({ id: 'g6c.data.pictograph-key', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.b', form: 'word', rung: 3,
+  cov({ id: 'g6c.data.pictograph-key', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.b', misMapped: false, reveals: [], form: 'word', rung: 3,
     gen: () => {
       const R = pick([10, 20, 50]), units = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
       if (units.every(x => x % 2 === 0) || units.some(x => x % 2 === 1) === false) return null;
@@ -484,7 +484,7 @@ export const FAMILIES = [
         steps: opts.map(e => `${e} for one symbol: ${valid(e) ? 'works' : vals.some(v => v % e !== 0) ? 'some numbers do not fit' : 'too many symbols'}.`) };
     } }),
 
-  cov({ id: 'g6c.data.bar-squares', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.d', form: 'word', rung: 2,
+  cov({ id: 'g6c.data.bar-squares', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.d', misMapped: false, reveals: ['M_SCALE_STEP_ONE'], form: 'word', rung: 2,
     gen: () => {
       const s = pick([5, 10, 20, 50]), k = randInt(3, 9), v = s * k, p = person(), thing = pick(['kilograms of tomatoes', 'litres of milk', 'bags of maize']);
       return { question: `${p.name} is drawing a bar graph of ${v} ${thing} sold on Monday. On the vertical axis, one square stands for ${s}. How many squares tall should the Monday bar be?`, answer: k,
@@ -493,7 +493,7 @@ export const FAMILIES = [
         steps: [`One square = ${s}.`, `${v} ÷ ${s} = ${k} squares.`], chk: (a) => a * s === v };
     } }),
 
-  cov({ id: 'g6c.data.bar-heights', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.d', form: 'table', rung: 3,
+  cov({ id: 'g6c.data.bar-heights', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.d', misMapped: false, reveals: ['M_SCALE_STEP_ONE'], form: 'table', rung: 3,
     gen: () => {
       const s = pick([10, 20]), days = ['Mon', 'Tue', 'Wed', 'Thu'], k = days.map(() => randInt(2, 9)), vals = k.map(x => x * s);
       if (new Set(k).size < 4) return null;
@@ -507,7 +507,7 @@ export const FAMILIES = [
         steps: days.map((d, i) => `${d}: ${vals[i]} ÷ ${s} = ${k[i]} squares.`) };
     } }),
 
-  cov({ id: 'g6c.data.bar-difference', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.e', form: 'graph', rung: 2,
+  cov({ id: 'g6c.data.bar-difference', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.e', misMapped: false, reveals: ['M_DIFFERENCE_AS_TOTAL'], form: 'graph', rung: 2,
     gen: () => {
       const u = pick([10, 20]), days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], vals = days.map(() => u * randInt(1, 8));
       const hi = Math.max(...vals), lo = Math.min(...vals);
@@ -520,7 +520,7 @@ export const FAMILIES = [
         steps: [`The tallest bar is ${hi} and the shortest is ${lo}.`, `${hi} − ${lo} = ${hi - lo}.`], chk: (a) => a + lo === hi };
     } }),
 
-  cov({ id: 'g6c.data.bar-second-highest', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.e', form: 'graph', rung: 3,
+  cov({ id: 'g6c.data.bar-second-highest', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.e', misMapped: false, reveals: ['M_SECOND_HIGHEST_AS_HIGHEST'], form: 'graph', rung: 3,
     gen: () => {
       const u = pick([10, 20]), days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri'], vals = days.map(() => u * randInt(1, 8)), s = [...vals].sort((a, b) => b - a);
       if (new Set(vals).size < 5) return null;

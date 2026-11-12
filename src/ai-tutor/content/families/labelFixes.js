@@ -151,7 +151,7 @@ export const CORE_FAMILIES = [
     check: ({ scale, cm, km }, v) => v[0] === scale && v[1] === cm * scale && v[2] * 100000 === cm * scale }),
 
   // ---- G6_3D_OBJECTS: faces, edges, vertices and nets, not volume (alias removed)
-  fx({ id: 'g6.solids.count', skill: 'G6_3D_OBJECTS', outcome: 'G6.3D.a', rung: 1, form: 'direct',
+  fx({ id: 'g6.solids.count', skill: 'G6_3D_OBJECTS', cskill: 'MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS', outcome: 'MATH.G6.GEOMET.3_D_OBJECTS.a', misMapped: false, reveals: ['M_EDGES_AS_FACES'], rung: 1, form: 'direct',
     draw: () => { const s = pick(SOLIDS), part = pick(['faces', 'edges', 'vertices']); return s.f === s.v && part !== 'edges' ? null : { s, part }; },
     make: ({ s, part }) => {
       const a = part === 'faces' ? s.f : part === 'edges' ? s.e : s.v;
@@ -162,7 +162,7 @@ export const CORE_FAMILIES = [
         steps: [`A ${s.name} has ${s.f} faces, ${s.e} edges and ${s.v} vertices.`, `So it has ${a} ${part}.`] };
     },
     check: ({ s, part }, a) => s.f + s.v - s.e === 2 && a === { faces: s.f, edges: s.e, vertices: s.v }[part] }),
-  fx({ id: 'g6.solids.net', skill: 'G6_3D_OBJECTS', outcome: 'G6.3D.a', rung: 2, form: 'direct',
+  fx({ id: 'g6.solids.net', skill: 'G6_3D_OBJECTS', cskill: 'MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS', outcome: 'MATH.G6.GEOMET.3_D_OBJECTS.a', misMapped: false, reveals: [], rung: 2, form: 'direct',
     draw: () => ({ n: pick(NETS), k: randInt(0, 3) }),
     make: ({ n, k }) => {
       const opts = [{ text: n.right, right: true }, ...n.wrong.map(([text, why]) => ({ text, right: false, why }))];
@@ -170,7 +170,7 @@ export const CORE_FAMILIES = [
         hints: ['A net is the solid opened out flat. Each face becomes one shape.', `List the faces of a ${n.solid}.`],
         steps: [`Open a ${n.solid} out flat and look at each face.`, `Its net contains: ${n.right.toLowerCase()}.`] };
     } }),
-  fx({ id: 'g6.solids.wire-frame', skill: 'G6_3D_OBJECTS', outcome: 'G6.3D.a', rung: 3, form: 'word',
+  fx({ id: 'g6.solids.wire-frame', skill: 'G6_3D_OBJECTS', cskill: 'MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS', outcome: 'MATH.G6.GEOMET.3_D_OBJECTS.a', misMapped: false, reveals: ['M_EDGES_AS_FACES'], rung: 3, form: 'word',
     draw: () => ({ side: pick([10, 12, 15, 20, 25, 30]), p: person() }),
     make: ({ side, p }) => ({
       question: `${p.name} makes the frame of a cube from wire, with edges of ${side} cm. How much wire does ${p.she} need, in cm?`,
@@ -182,7 +182,7 @@ export const CORE_FAMILIES = [
     check: ({ side }, a) => a % side === 0 && a / side === 6 + 8 - 2 }),
 
   // ---- G6_INEQUALITIES: form and solve, not 725147 ☐ 611943
-  fx({ id: 'g6.ineq.solve-add', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.c', rung: 1, form: 'direct',
+  fx({ id: 'g6.ineq.solve-add', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.c', misMapped: false, reveals: ['M_BOUNDARY_INCLUDED'], rung: 1, form: 'direct',
     draw: () => ({ b: randInt(2, 15), c: randInt(16, 40), v: pick(['x', 'y', 'm', 'p']), sym: pick(['>', '<']) }),
     make: ({ b, c, v, sym }) => {
       const r = c - b, right = `${v} ${sym} ${r}`;
@@ -191,7 +191,7 @@ export const CORE_FAMILIES = [
         hints: ['Treat it like an equation, and keep the symbol.', `Take ${b} from both sides.`],
         steps: [`${v} + ${b} ${sym} ${c}`, `${v} ${sym} ${c} − ${b}`, `${right}`] };
     } }),
-  fx({ id: 'g6.ineq.form-matatu', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.a', rung: 2, form: 'word',
+  fx({ id: 'g6.ineq.form-matatu', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.a', misMapped: false, reveals: ['M_SYMBOL_DIRECTION'], rung: 2, form: 'word',
     draw: () => { const cap = pick([14, 18, 25, 33, 41]); return { cap, on: randInt(3, cap - 3) }; },
     make: ({ cap, on }) => ({
       question: `A matatu can carry at most ${cap} passengers. There are ${on} on board and p more get on. Which inequality fits?`,
@@ -199,7 +199,7 @@ export const CORE_FAMILIES = [
       hints: ['"At most" means no more than.', 'Passengers on board plus those getting on must stay within the limit.'],
       steps: [`Total passengers: ${on} + p.`, `"At most ${cap}" means ≤ ${cap}.`, `So ${on} + p ≤ ${cap}.`],
     }) }),
-  fx({ id: 'g6.ineq.most-tickets', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.c', rung: 3, form: 'word',
+  fx({ id: 'g6.ineq.most-tickets', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.c', misMapped: false, reveals: ['M_BOUNDARY_INCLUDED'], rung: 3, form: 'word',
     draw: () => { const cost = pick([30, 40, 50, 60, 80]), money = cost * randInt(4, 12) + randInt(1, cost - 1); return { cost, money, p: person() }; },
     make: ({ cost, money, p }) => {
       const a = Math.floor(money / cost);
@@ -212,7 +212,7 @@ export const CORE_FAMILIES = [
     check: ({ cost, money }, a) => a * cost <= money && (a + 1) * cost > money }),
 
   // ---- G6_MONEY: budget, profit and loss, taxes
-  fx({ id: 'g6.money.budget-left', skill: 'G6_MONEY', outcome: 'G6.MONEY.a', rung: 1, form: 'word',
+  fx({ id: 'g6.money.budget-left', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.PREPARE_BUDGET', outcome: 'MATH.G6.MEASUR.MONEY.a', misMapped: false, reveals: ['M_ADD_INCOME_TO_SPENDING', 'M_ITEM_LEFT_OUT'], rung: 1, form: 'word',
     draw: () => { const inc = pick([8000, 9000, 12000, 15000, 20000]), f = inc * pick([0.4, 0.5]), r = inc * pick([0.1, 0.2]), t = pick([800, 1200, 1500]), s = pick([500, 700, 900]); const left = inc - f - r - t - s; return left > 0 ? { inc, f, r, t, s, p: person() } : null; },
     make: ({ inc, f, r, t, s, p }) => {
       const left = inc - f - r - t - s;
@@ -223,7 +223,7 @@ export const CORE_FAMILIES = [
         steps: [`Total spending: ${commas(f)} + ${commas(r)} + ${commas(t)} + ${commas(s)} = ${sh(f + r + t + s)}.`, `Left: ${commas(inc)} − ${commas(f + r + t + s)} = ${sh(left)}.`] };
     },
     check: ({ inc, f, r, t, s }, a) => a + f + r + t + s === inc }),
-  fx({ id: 'g6.money.profit-loss', skill: 'G6_MONEY', outcome: 'G6.MONEY.c', rung: 2, form: 'word',
+  fx({ id: 'g6.money.profit-loss', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES', outcome: 'MATH.G6.MEASUR.MONEY.c', misMapped: false, reveals: ['M_SELLING_LESS_BUYING_REVERSED'], rung: 2, form: 'word',
     draw: () => { const item = pick(['hen', 'radio', 'bag of maize', 'sack of potatoes', 'goat']); const buy = price(item); const change = pick([-1, 1]) * pick([100, 150, 200, 250, 300, 500]); const sell = buy + change; return sell > 0 ? { item, buy, sell, p: person() } : null; },
     make: ({ item, buy, sell, p }) => {
       const gain = sell > buy;
@@ -234,7 +234,7 @@ export const CORE_FAMILIES = [
         steps: [`Selling price ${sh(sell)}, buying price ${sh(buy)}.`, `${gain ? 'Profit' : 'Loss'} = ${commas(Math.max(buy, sell))} − ${commas(Math.min(buy, sell))} = ${sh(Math.abs(sell - buy))}.`] };
     },
     check: ({ buy, sell }, a) => (sell > buy ? buy + a === sell : sell + a === buy) }),
-  fx({ id: 'g6.money.tax-type', skill: 'G6_MONEY', outcome: 'G6.MONEY.e', rung: 1, form: 'direct',
+  fx({ id: 'g6.money.tax-type', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES', outcome: 'MATH.G6.MEASUR.MONEY.e', misMapped: false, reveals: ['M_VAT_ON_PAY'], rung: 1, form: 'direct',
     draw: () => (() => { const list = [['a shopper pays on top of the price of goods in a shop', 'Value added tax (VAT)'], ["is taken from a worker's salary each month", 'Pay As You Earn (PAYE)'], ['a trader pays on goods brought into Kenya from another country', 'Import duty'], ['a shop owner pays the county each year to run a business', 'A business permit fee']]; const [q, right] = pick(list); return { q, right, all: list.map(x => x[1]), k: randInt(0, 3) }; })(),
     make: ({ q, right, all, k }) => {
       const opts = all.map(text => ({ text, right: text === right, why: text === right ? undefined : `${text} is paid in a different situation. Read who pays it and when.` }));
@@ -244,7 +244,7 @@ export const CORE_FAMILIES = [
     } }),
 
   // ---- G6_ANGLE_MEASURE: reading a protractor, as far as a phone can test it
-  fx({ id: 'g6.angle.protractor-read', skill: 'G6_ANGLE_MEASURE', outcome: 'G6.ANGLES.b', rung: 1, form: 'direct',
+  fx({ id: 'g6.angle.protractor-read', skill: 'G6_ANGLE_MEASURE', cskill: 'MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR', outcome: 'MATH.G6.GEOMET.ANGLES.b', misMapped: false, reveals: ['M_WRONG_SCALE'], rung: 1, form: 'direct',
     draw: () => { const a = randInt(2, 17) * 10 + pick([0, 5]); return { a }; },
     make: ({ a }) => ({
       question: `A protractor's centre is on the point of an angle. One arm lies on the 0 mark, and the other arm crosses the scale at ${a}°. How big is the angle, in degrees?`, story: false,
@@ -254,7 +254,7 @@ export const CORE_FAMILIES = [
       steps: ['One arm is on 0, so the reading is the size of the angle.', `The angle is ${a}°.`],
     }),
     check: ({ a }, v) => v + (180 - a) === 180 }),
-  fx({ id: 'g6.angle.protractor-diff', skill: 'G6_ANGLE_MEASURE', outcome: 'G6.ANGLES.b', rung: 2, form: 'direct',
+  fx({ id: 'g6.angle.protractor-diff', skill: 'G6_ANGLE_MEASURE', cskill: 'MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR', outcome: 'MATH.G6.GEOMET.ANGLES.b', misMapped: false, reveals: ['M_DIFFERENCE_AS_SUM'], rung: 2, form: 'direct',
     draw: () => { const a = randInt(1, 8) * 10, b = randInt(10, 17) * 10; return b - a >= 20 ? { a, b } : null; },
     make: ({ a, b }) => ({
       question: `Baraka did not line his protractor up with 0. He reads ${a}° for one arm and ${b}° for the other, on the same scale. How big is the angle between them?`, story: false,
@@ -264,7 +264,7 @@ export const CORE_FAMILIES = [
       steps: [`The two arms are at ${a}° and ${b}°.`, `Gap: ${b} − ${a} = ${b - a}°.`],
     }),
     check: ({ a, b }, v) => a + v === b }),
-  fx({ id: 'g6.angle.which-scale', skill: 'G6_ANGLE_MEASURE', outcome: 'G6.ANGLES.b', rung: 3, form: 'why',
+  fx({ id: 'g6.angle.which-scale', skill: 'G6_ANGLE_MEASURE', cskill: 'MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR', outcome: 'MATH.G6.GEOMET.ANGLES.b', misMapped: false, reveals: ['M_WRONG_SCALE'], rung: 3, form: 'why',
     draw: () => { const a = randInt(3, 8) * 10 + pick([0, 5]); return { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `An acute angle is measured with a protractor. The arm crosses the marks ${a} and ${180 - a}. ${p.name} says the angle is ${180 - a}°. Why is ${p.she} wrong?`,
@@ -274,7 +274,7 @@ export const CORE_FAMILIES = [
     }) }),
 
   // ---- G6_MASS: tonnes, as the design says
-  fx({ id: 'g6.mass.to-kg', skill: 'G6_MASS', outcome: 'G6.MASS.a', rung: 1, form: 'word',
+  fx({ id: 'g6.mass.to-kg', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES', outcome: 'MATH.G6.MEASUR.MASS.e', misMapped: false, reveals: ['M_TENS_NOT_THOUSANDS', 'M_HUNDRED_KG'], rung: 1, form: 'word',
     draw: () => { const t = randInt(2, 9) + pick([0, 0.5, 0.25]); return { t, what: pick(['maize', 'sand', 'sugar cane', 'ballast']) }; },
     make: ({ t, what }) => ({
       question: `A lorry carries ${t} tonnes of ${what}. How many kilograms is that?`,
@@ -284,7 +284,7 @@ export const CORE_FAMILIES = [
       steps: ['1 tonne = 1,000 kg.', `${t} × 1,000 = ${commas(t * 1000)} kg.`],
     }),
     check: ({ t }, a) => a / 1000 === t }),
-  fx({ id: 'g6.mass.bags-to-tonnes', skill: 'G6_MASS', outcome: 'G6.MASS.e', rung: 2, form: 'word',
+  fx({ id: 'g6.mass.bags-to-tonnes', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES', outcome: 'MATH.G6.MEASUR.MASS.e', misMapped: false, reveals: ['M_DIVIDE_BY_HUNDRED_TONNES'], rung: 2, form: 'word',
     draw: () => { const bag = pick([50, 90, 100]), n = randInt(2, 20) * 10; return { bag, n, p: person() }; },
     make: ({ bag, n, p }) => ({
       question: `${p.name} loads ${n} bags of maize onto a lorry. Each bag has a mass of ${bag} kg. What is the total mass, in tonnes?`,
@@ -294,7 +294,7 @@ export const CORE_FAMILIES = [
       steps: [`Total: ${n} × ${bag} = ${commas(bag * n)} kg.`, `${commas(bag * n)} ÷ 1,000 = ${(bag * n) / 1000} tonnes.`],
     }),
     check: ({ bag, n }, a) => Math.round(a * 1000) === bag * n }),
-  fx({ id: 'g6.mass.tonnes-kg-add', skill: 'G6_MASS', outcome: 'G6.MASS.e', rung: 2, form: 'word',
+  fx({ id: 'g6.mass.tonnes-kg-add', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.ADD_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.f', misMapped: false, reveals: ['M_HUNDRED_KG', 'M_ADD_AS_DECIMAL_TONNES'], rung: 2, form: 'word',
     draw: () => ({ t1: randInt(1, 6), kg1: randInt(1, 9) * 100, t2: randInt(1, 4), kg2: randInt(1, 9) * 100 }),
     make: ({ t1, kg1, t2, kg2 }) => {
       const total = t1 * 1000 + kg1 + t2 * 1000 + kg2;

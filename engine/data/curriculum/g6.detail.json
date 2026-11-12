@@ -1,0 +1,862 @@
+{
+ "outcomes": {
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.a": "use place value and total value of digits up to millions in real life",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.b": "use numbers up to millions in symbols in real life",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.c": "read and write numbers up to 100,000 in words in real life",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.d": "order numbers up to 100,000 in real-life situations",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.e": "round off numbers up to 100,000 to the nearest thousand in different situations",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.f": "apply squares of whole numbers up to 100 in different situations",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.g": "apply square roots of perfect squares up to 10,000 in different situations",
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.h": "appreciate use of whole numbers in real-life situations",
+  "MATH.G6.NUMBER.MULTIPLICATION.a": "multiply up to a 4-digit number by a 2-digit number in real-life situations",
+  "MATH.G6.NUMBER.MULTIPLICATION.b": "estimate products by rounding off numbers being multiplied to the nearest ten in real-life situations",
+  "MATH.G6.NUMBER.MULTIPLICATION.c": "make patterns involving multiplication of numbers not exceeding 1,000 in different situations",
+  "MATH.G6.NUMBER.MULTIPLICATION.d": "appreciate use of multiplication in real life",
+  "MATH.G6.NUMBER.DIVISION.a": "divide up to a 4-digit number by up to a 3-digit number where the dividend is greater than the divisor in real -life situations",
+  "MATH.G6.NUMBER.DIVISION.b": "estimate quotients by rounding off the dividend and divisor to the nearest ten in real-life situations",
+  "MATH.G6.NUMBER.DIVISION.c": "perform combined operations involving addition, subtraction, multiplication and division up to 3-digit number",
+  "MATH.G6.NUMBER.DIVISION.d": "appreciate use of division of whole numbers in real life",
+  "MATH.G6.NUMBER.FRACTIONS.a": "add fractions using LCM in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.b": "subtract fractions using LCM in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.c": "add mixed numbers in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.d": "subtract mixed numbers in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.e": "identify reciprocal of proper fractions up to a 2-digit number in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.f": "work out squares of fractions with a numerator of one digit and denominator of a 2-digit number in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.g": "express a fraction as a percentage in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.h": "convert percentage to fractions in different situations",
+  "MATH.G6.NUMBER.FRACTIONS.i": "appreciate use of fractions in real life",
+  "MATH.G6.NUMBER.DECIMALS.a": "identify decimals up to ten thousandths in different situations",
+  "MATH.G6.NUMBER.DECIMALS.b": "round off decimals up to 3 decimal places in different situations",
+  "MATH.G6.NUMBER.DECIMALS.c": "convert decimals to fractions and fractions to decimals in different situations",
+  "MATH.G6.NUMBER.DECIMALS.d": "convert decimals to percentages and percentages to decimals in different situations",
+  "MATH.G6.NUMBER.DECIMALS.e": "add decimals up to 4-decimal places in different situations",
+  "MATH.G6.NUMBER.DECIMALS.f": "subtract decimals up to 4- decimal places in different situations",
+  "MATH.G6.NUMBER.DECIMALS.g": "appreciate use of decimals in real-life situations",
+  "MATH.G6.NUMBER.INEQUALITIES.a": "form simple inequalities in one unknown involving real- life situations",
+  "MATH.G6.NUMBER.INEQUALITIES.b": "simplify inequalities in one unknown involving real- life situations",
+  "MATH.G6.NUMBER.INEQUALITIES.c": "solve simple inequalities in one unknown involving real-life situations",
+  "MATH.G6.NUMBER.INEQUALITIES.d": "appreciate use of inequalities in real-life situations",
+  "MATH.G6.MEASUR.LENGTH.a": "use the millimetre (mm) as a unit of measuring length in different situations, •",
+  "MATH.G6.MEASUR.LENGTH.b": "establish the relationship between the millimetre and • centimetre in different situations",
+  "MATH.G6.MEASUR.LENGTH.c": "convert centimetres and • millimetres to millimetres in different situations",
+  "MATH.G6.MEASUR.LENGTH.d": "add centimetres and millimetres in different • situations",
+  "MATH.G6.MEASUR.LENGTH.e": "subtract centimetres and • millimetres in different situations",
+  "MATH.G6.MEASUR.LENGTH.f": "multiply centimetres and millimetres by whole • numbers in real- life situations",
+  "MATH.G6.MEASUR.LENGTH.g": "divide centimetres and millimetres by whole numbers in real-life situations",
+  "MATH.G6.MEASUR.LENGTH.h": "determine the circumference of a circle practically",
+  "MATH.G6.MEASUR.LENGTH.i": "identify the relationship between circumference and diameter in different situations",
+  "MATH.G6.MEASUR.LENGTH.j": "appreciate use of length in real-life situations",
+  "MATH.G6.MEASUR.AREA.a": "work out area of triangles in square centimetres (cm²)",
+  "MATH.G6.MEASUR.AREA.b": "work out area of combined shapes involving squares, rectangles and triangles in icm²",
+  "MATH.G6.MEASUR.AREA.c": "estimate the area of circles by counting squares",
+  "MATH.G6.MEASUR.AREA.d": "appreciate the use of cm² in working out area in real life",
+  "MATH.G6.MEASUR.CAPACITY.a": "identify the relationship among cubic centimetres (cm³), millilitres and litres in real life",
+  "MATH.G6.MEASUR.CAPACITY.b": "convert litres to millilitres in different situations",
+  "MATH.G6.MEASUR.CAPACITY.c": "convert capacity in millilitres to litres in different situations",
+  "MATH.G6.MEASUR.CAPACITY.d": "appreciate use of cm³ and litres in measuring capacity in real life",
+  "MATH.G6.MEASUR.MASS.a": "identify the tonne as a unit for measuring mass in real life",
+  "MATH.G6.MEASUR.MASS.b": "identify items measured in tonnes in real life",
+  "MATH.G6.MEASUR.MASS.c": "identify the relationship between the kilogramme and the tonne",
+  "MATH.G6.MEASUR.MASS.d": "estimate mass in tonnes in different situations",
+  "MATH.G6.MEASUR.MASS.e": "convert kilogrammes to tonnes and tonnes to kilogrammes in real-life situations",
+  "MATH.G6.MEASUR.MASS.f": "add tonnes and kilogrammes in real life situations",
+  "MATH.G6.MEASUR.MASS.g": "subtract tonnes and kilogrames in real-life situations",
+  "MATH.G6.MEASUR.MASS.h": "multiply tonnes and kilogrammes by whole numbers in real-life situations",
+  "MATH.G6.MEASUR.MASS.i": "divide tonnes and kilogrammes by whole numbers in real-life situations",
+  "MATH.G6.MEASUR.MASS.j": "appreciate use of the kilogramme and tonne in measuring mass",
+  "MATH.G6.MEASUR.TIME.a": "identify time in a.m. and p.m. in day-to-day life experiences",
+  "MATH.G6.MEASUR.TIME.b": "write time in a.m. and p.m. in day-to-day life",
+  "MATH.G6.MEASUR.TIME.c": "relate time in a.m. and p.m. to the 24h clock system",
+  "MATH.G6.MEASUR.TIME.d": "convert time from 12h to 24h and 24h to 12h system",
+  "MATH.G6.MEASUR.TIME.e": "interpret travel timetable in different situations",
+  "MATH.G6.MEASUR.TIME.f": "appreciate use of time in both 12h and 24h systems",
+  "MATH.G6.MEASUR.MONEY.a": "prepare simple budget in different situations",
+  "MATH.G6.MEASUR.MONEY.b": "determine buying and selling prices of different items in the community",
+  "MATH.G6.MEASUR.MONEY.c": "work out profit from sales of different items in the community",
+  "MATH.G6.MEASUR.MONEY.d": "calculate loss realised from sales of different items in the community",
+  "MATH.G6.MEASUR.MONEY.e": "identify types of taxes in different situations",
+  "MATH.G6.MEASUR.MONEY.f": "appreciate use of money in real-life situations",
+  "MATH.G6.GEOMET.LINES.a": "draw parallel lines in different situations",
+  "MATH.G6.GEOMET.LINES.b": "bisect lines by construction",
+  "MATH.G6.GEOMET.LINES.c": "construct perpendicular lines in different situations",
+  "MATH.G6.GEOMET.LINES.d": "appreciate use of lines in daily life",
+  "MATH.G6.GEOMET.ANGLES.a": "identify angles on a straight line at a point in different situations",
+  "MATH.G6.GEOMET.ANGLES.b": "measure angles on a straight line at a point in different situations",
+  "MATH.G6.GEOMET.ANGLES.c": "work out sum of angles on a straight line in different situations",
+  "MATH.G6.GEOMET.ANGLES.d": "determine the sum of angles in rectangles and triangle s",
+  "MATH.G6.GEOMET.ANGLES.e": "construct equilateral, right-angled and isosceles triangles",
+  "MATH.G6.GEOMET.ANGLES.f": "measure the interior angles of equilateral, right-angled and isosceles triangles",
+  "MATH.G6.GEOMET.ANGLES.g": "appreciate use of angles in real life",
+  "MATH.G6.GEOMET.3_D_OBJECTS.a": "identify vertices, faces and edges in cuboids and cubes in different situations",
+  "MATH.G6.GEOMET.3_D_OBJECTS.b": "identify faces and edges of cylinders in different situations",
+  "MATH.G6.GEOMET.3_D_OBJECTS.c": "describe plane figures in 3-D objects in the environment",
+  "MATH.G6.GEOMET.3_D_OBJECTS.d": "appreciate use of 3-D objects in real life",
+  "MATH.G6.DATA_H.BAR_GRAPHS.a": "draw a frequency table of real-life situation data",
+  "MATH.G6.DATA_H.BAR_GRAPHS.b": "represent data from real-life situations using pictographs",
+  "MATH.G6.DATA_H.BAR_GRAPHS.c": "represent data from real-life situation through piling",
+  "MATH.G6.DATA_H.BAR_GRAPHS.d": "represent data from real-life situations using bar graphs",
+  "MATH.G6.DATA_H.BAR_GRAPHS.e": "interpret information from bar graphs",
+  "MATH.G6.DATA_H.BAR_GRAPHS.f": "appreciate use of bar graphs in real life"
+ },
+ "skills": {
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS": {
+   "forms": [
+    "name the place of a digit",
+    "which digit is in the given place",
+    "read a place value chart",
+    "missing digit from clues"
+   ],
+   "mastery": "Given a whole number up to 9,999,999, the child names the place of any digit (ones to millions), including digits beside zeros, and says which digit is in a named place. Numbers in real settings such as a county population or a school budget."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_MILLIONS": {
+   "forms": [
+    "total value of an underlined digit",
+    "expanded form",
+    "difference between two digits of the same value",
+    "build a number from total values"
+   ],
+   "mastery": "Given a whole number up to 9,999,999 the child gives the total value of a chosen digit (digit times its place) and writes the number in expanded form. The child does not confuse the total value of a digit with its place value."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.SYMBOLS_MILLIONS": {
+   "forms": [
+    "write from parts",
+    "choose the number in symbols",
+    "spot the missing zero",
+    "read a number aloud and write it"
+   ],
+   "mastery": "Given a number said or described in parts (for example 3 million, 45 thousand and 7) the child writes it in symbols with every place filled, using zero as a place holder. Numbers up to 9,999,999."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K": {
+   "forms": [
+    "figures to words",
+    "words to figures",
+    "which word form matches",
+    "spot the spelling or place mistake"
+   ],
+   "mastery": "The child writes a number up to 100,000 in words (British spelling, hyphen in twenty-one to ninety-nine) and writes a number given in words in figures. Limit as the design sets it: 100,000."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.ORDER_100K": {
+   "forms": [
+    "order a list",
+    "which is largest or smallest",
+    "insert < or >",
+    "order real quantities such as crowds or prices"
+   ],
+   "mastery": "The child orders a list of four to five numbers up to 100,000 from smallest to largest and largest to smallest, comparing digit counts first and then place by place from the left. Uses < and > correctly."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND": {
+   "forms": [
+    "round a number",
+    "round in a real situation",
+    "which number rounds to",
+    "spot the rounding mistake"
+   ],
+   "mastery": "The child rounds any whole number up to 100,000 to the nearest 1,000: looks at the hundreds digit, rounds 500 up, and keeps the answer in thousands (for example 49,500 rounds to 50,000)."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100": {
+   "forms": [
+    "square of a number",
+    "area of a square plot",
+    "which is a square number",
+    "spot: doubled instead of squared"
+   ],
+   "mastery": "The child works out the square of a whole number up to 100 as the number times itself (for example 40 squared is 1,600) and recalls the squares of 1 to 12 from memory. Squares of 13 to 100 are worked out, not recalled."
+  },
+  "MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000": {
+   "forms": [
+    "find the square root",
+    "side of a square from its area",
+    "is it a perfect square, and why",
+    "check a root by squaring"
+   ],
+   "mastery": "Given a perfect square up to 10,000 the child finds its square root and checks it by squaring. The child can say that a number such as 50 is not a perfect square because no whole number multiplied by itself gives 50."
+  },
+  "MATH.G6.NUMBER.MULTIPLICATION.MULT_4D_BY_2D": {
+   "forms": [
+    "calculate the product",
+    "story problem",
+    "find the missing digit",
+    "spot the mistake in a partial product"
+   ],
+   "mastery": "The child multiplies a number up to 4 digits by a 2-digit number by the standard written method (two partial products, with zero placed in the ones of the tens row) or by partitioning, and solves a story that needs it. Products below 1,000,000."
+  },
+  "MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10": {
+   "forms": [
+    "estimate a cost",
+    "choose the best estimate",
+    "spot the rounding mistake",
+    "is this answer sensible?"
+   ],
+   "mastery": "The child rounds both numbers to the nearest ten, multiplies the rounded numbers, and says whether an exact answer is sensible. Rounding to the nearest ten for both factors, as outcome b says."
+  },
+  "MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS": {
+   "forms": [
+    "continue the pattern",
+    "find the rule from a table",
+    "missing term",
+    "choose the rule"
+   ],
+   "mastery": "The child finds the rule of a pattern made by multiplying (for example times 2 or times 3), continues it, and finds a missing term. Terms do not exceed 1,000."
+  },
+  "MATH.G6.NUMBER.DIVISION.DIV_4D_BY_UP_TO_3D": {
+   "forms": [
+    "calculate the quotient",
+    "story problem with a remainder",
+    "check by multiplying",
+    "spot the mistake in the working"
+   ],
+   "mastery": "The child divides a 4-digit number by a 1-, 2- or 3-digit number by long division, with the dividend greater than the divisor, gives any remainder as a whole number, and checks by multiplying back and adding the remainder."
+  },
+  "MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT": {
+   "forms": [
+    "estimate how many trips",
+    "choose the best estimate",
+    "is the answer sensible?"
+   ],
+   "mastery": "The child rounds the dividend and divisor to the nearest ten, divides the rounded numbers, and uses the estimate to check that an exact answer is sensible."
+  },
+  "MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS": {
+   "forms": [
+    "calculate the expression",
+    "choose the correct value",
+    "story needing two operations",
+    "spot the step done in the wrong order"
+   ],
+   "mastery": "The child works out an expression with two or three of the four operations, doing multiplication and division before addition and subtraction and working left to right within each level, with numbers up to 3 digits. Brackets are taken first where they appear."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM": {
+   "forms": [
+    "add two fractions in a story",
+    "complete the steps",
+    "why we need a common denominator",
+    "spot the mistake"
+   ],
+   "mastery": "The child finds the LCM of two denominators (each up to 12), renames both fractions with it, adds the numerators, keeps the denominator, and simplifies. Sums that exceed 1 are written as a mixed number."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM": {
+   "forms": [
+    "subtract in a story",
+    "complete the steps",
+    "spot the mistake",
+    "what is left"
+   ],
+   "mastery": "The child renames two unlike fractions with the LCM of their denominators (each up to 12), subtracts the numerators, keeps the denominator, and simplifies. The first fraction is larger."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS": {
+   "forms": [
+    "add two mixed numbers",
+    "change a mixed number to an improper fraction",
+    "spot the mistake in the conversion",
+    "story with lengths or masses"
+   ],
+   "mastery": "The child adds two mixed numbers by adding the wholes and the fractions separately (using the LCM when the denominators differ) or by changing to improper fractions, and writes the answer in simplest form, renaming when the fractions total more than 1."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS": {
+   "forms": [
+    "subtract in a story",
+    "complete the steps",
+    "spot the mistake when the fraction is too small",
+    "choose the answer"
+   ],
+   "mastery": "The child subtracts one mixed number from a larger one, including the case where the fraction part is too small and one whole must be renamed, and gives the answer in simplest form."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.RECIPROCAL": {
+   "forms": [
+    "write the reciprocal",
+    "check that the product is 1",
+    "which pair are reciprocals",
+    "why has a whole number no reciprocal fraction written 0"
+   ],
+   "mastery": "The child writes the reciprocal of a proper fraction whose numerator and denominator are up to 2 digits by turning it upside down, and knows that a number times its reciprocal is 1."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION": {
+   "forms": [
+    "square the fraction",
+    "story about area of a square cloth",
+    "spot: squared only the top",
+    "choose the correct square"
+   ],
+   "mastery": "The child squares a fraction with a one-digit numerator and a denominator of up to 2 digits by squaring the numerator and the denominator, and writes the answer in simplest form."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT": {
+   "forms": [
+    "write a score as a percentage",
+    "which fraction is the larger percentage",
+    "percentage from a table",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a fraction as a percentage by making the denominator 100 or by dividing and multiplying by 100, including fractions with denominators that are factors of 100 and a mark out of a total."
+  },
+  "MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION": {
+   "forms": [
+    "write as a fraction",
+    "simplest form",
+    "choose the equivalent fraction",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a percentage as a fraction out of 100 and simplifies it to simplest form."
+  },
+  "MATH.G6.NUMBER.DECIMALS.DECIMAL_PLACES_TEN_THOUSANDTHS": {
+   "forms": [
+    "name the place",
+    "write the decimal from its words",
+    "value of a digit",
+    "compare two decimals by place"
+   ],
+   "mastery": "The child names the place of a digit after the decimal point up to ten-thousandths, gives its value as a fraction, and writes a decimal from a place description (for example 7 ten-thousandths as 0.0007)."
+  },
+  "MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP": {
+   "forms": [
+    "round to a stated place",
+    "round a measurement",
+    "spot the rounding mistake",
+    "which number rounds to"
+   ],
+   "mastery": "The child rounds a decimal to 1, 2 or 3 decimal places by looking at the next digit, including when the rounding carries across a 9 (for example 4.9996 to 3 places is 5.000)."
+  },
+  "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION": {
+   "forms": [
+    "write as a simplest fraction",
+    "table of fraction, decimal, percentage",
+    "which fraction equals the decimal",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a decimal with up to 3 places as a fraction with denominator 10, 100 or 1,000 and simplifies it."
+  },
+  "MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL": {
+   "forms": [
+    "write as a decimal",
+    "choose the decimal",
+    "complete a conversion table",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a fraction as a decimal by dividing the numerator by the denominator or by renaming it with denominator 10, 100 or 1,000 (denominators such as 2, 4, 5, 8, 10, 20, 25, 50)."
+  },
+  "MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT": {
+   "forms": [
+    "write as a percentage",
+    "story about a tank or a score",
+    "table of equivalent forms",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a decimal as a percentage by multiplying by 100 (moving the point two places), including decimals less than 0.1 and more than 1."
+  },
+  "MATH.G6.NUMBER.DECIMALS.PERCENT_TO_DECIMAL": {
+   "forms": [
+    "write as a decimal",
+    "discount story",
+    "table of equivalent forms",
+    "spot the mistake"
+   ],
+   "mastery": "The child writes a percentage as a decimal by dividing by 100 (moving the point two places left), including 5%, 0.5% and 120%."
+  },
+  "MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP": {
+   "forms": [
+    "add two decimals",
+    "add several amounts in a story",
+    "spot the misaligned point",
+    "choose the total"
+   ],
+   "mastery": "The child adds two or three decimals with up to 4 decimal places in columns with the points in line, filling empty places with zeros."
+  },
+  "MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP": {
+   "forms": [
+    "subtract in a story",
+    "subtract from a whole number",
+    "spot the mistake",
+    "check by adding"
+   ],
+   "mastery": "The child subtracts one decimal from another with up to 4 decimal places in columns with the points in line, renaming across zeros and filling empty places with zeros."
+  },
+  "MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY": {
+   "forms": [
+    "write the inequality",
+    "choose the symbol",
+    "which story matches",
+    "list numbers that fit"
+   ],
+   "mastery": "The child writes an inequality using <, >, at least, at most, from a short story (for example \"at least 30 learners\" as x >= 30 or \"fewer than 12\" as x < 12) and chooses the right symbol."
+  },
+  "MATH.G6.NUMBER.INEQUALITIES.SIMPLIFY_INEQUALITY": {
+   "forms": [
+    "simplify one step",
+    "story that gives an inequality",
+    "spot the mistake",
+    "choose the simplified form"
+   ],
+   "mastery": "The child simplifies an inequality such as x + 5 < 12 or 3x > 18 in one step to x < 7 or x > 6 by doing the same operation to both sides, and keeps the symbol pointing the same way."
+  },
+  "MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY": {
+   "forms": [
+    "solve",
+    "largest whole number that fits",
+    "count the solutions",
+    "spot the mistake",
+    "check a value"
+   ],
+   "mastery": "The child solves a one-step or two-step inequality, lists the whole-number solutions or the largest or smallest one, and checks a value by substituting. No negative multipliers or divisors."
+  },
+  "MATH.G6.MEASUR.LENGTH.MM_AS_UNIT": {
+   "forms": [
+    "choose the best unit",
+    "read a ruler to the nearest mm",
+    "which object is measured in mm",
+    "estimate a small length in mm"
+   ],
+   "mastery": "The child chooses the sensible unit (mm, cm, m or km) for a small length such as a coin, a pencil lead or a wire thickness, and reads a length to the nearest millimetre on a ruler."
+  },
+  "MATH.G6.MEASUR.LENGTH.MM_CM_RELATIONSHIP": {
+   "forms": [
+    "how many mm in a cm",
+    "marks on a ruler",
+    "cm and mm as a mixed length",
+    "which is longer"
+   ],
+   "mastery": "The child knows that 1 cm is 10 mm and uses it to say how many mm are in a number of cm and how many cm in a number of mm (whole and half centimetres), for example 25 mm is 2 cm and 5 mm."
+  },
+  "MATH.G6.MEASUR.LENGTH.CONVERT_TO_MM": {
+   "forms": [
+    "convert to mm",
+    "mixed length to mm",
+    "compare two lengths",
+    "spot the mistake"
+   ],
+   "mastery": "The child changes a length given in cm, or in cm and mm, to mm (multiply the cm by 10 and add the mm), for lengths up to 1,000 mm."
+  },
+  "MATH.G6.MEASUR.LENGTH.ADD_CM_MM": {
+   "forms": [
+    "add two lengths",
+    "total of several pieces",
+    "spot the missing rename",
+    "story about a fence or ribbon"
+   ],
+   "mastery": "The child adds two lengths in cm and mm, adds mm to mm and cm to cm, and renames 10 mm or more as cm, giving the answer as cm and mm."
+  },
+  "MATH.G6.MEASUR.LENGTH.SUBTRACT_CM_MM": {
+   "forms": [
+    "subtract two lengths",
+    "what is left of a ribbon",
+    "spot the mistake when mm are too few",
+    "check by adding"
+   ],
+   "mastery": "The child subtracts one length in cm and mm from a longer one, renaming 1 cm as 10 mm when the mm are too few."
+  },
+  "MATH.G6.MEASUR.LENGTH.MULTIPLY_CM_MM": {
+   "forms": [
+    "multiply a length",
+    "equal pieces laid end to end",
+    "spot the missing rename",
+    "total of several equal lengths"
+   ],
+   "mastery": "The child multiplies a length in cm and mm by a whole number (up to 12), multiplies each part and renames mm of 10 or more as cm."
+  },
+  "MATH.G6.MEASUR.LENGTH.DIVIDE_CM_MM": {
+   "forms": [
+    "share a length equally",
+    "how long is each piece",
+    "spot the leftover cm not renamed",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a length in cm and mm into a whole number of equal parts (up to 12), changing to mm when the cm do not divide exactly, and gives the answer in cm and mm."
+  },
+  "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL": {
+   "forms": [
+    "read measured values from a table",
+    "use the pattern to find a missing value",
+    "distance rolled by a wheel",
+    "which tool measures round the edge"
+   ],
+   "mastery": "The child reads a circumference measured with string or a tape (the length round the edge) and uses a measured table of circumference and diameter to work out a missing one, and the distance a wheel rolls in turns. The measuring itself is a hands-on task and stays with a practical.",
+   "hands_on": "The practical measuring with string stays with the teacher; the questions test reading and using the measurements."
+  },
+  "MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION": {
+   "forms": [
+    "circumference from diameter",
+    "diameter from circumference",
+    "is the answer sensible (about 3 times)",
+    "radius, diameter and distance round"
+   ],
+   "mastery": "The child knows that the circumference of a circle is about 3 times its diameter (pi, with 22/7 or 3.14 given in the question), finds the circumference from the diameter and the diameter from the circumference, and knows that the diameter is twice the radius."
+  },
+  "MATH.G6.MEASUR.AREA.AREA_TRIANGLE": {
+   "forms": [
+    "area from base and height",
+    "find the missing height",
+    "story about a flower bed or a sail",
+    "spot: forgot to halve"
+   ],
+   "mastery": "The child works out the area of a triangle as half of base times height in cm2, with the height at right angles to the base, and finds a missing base or height from the area."
+  },
+  "MATH.G6.MEASUR.AREA.AREA_COMBINED": {
+   "forms": [
+    "area of an L-shape",
+    "area of a shape with a triangle on top",
+    "subtract the cut-out",
+    "spot the missing part"
+   ],
+   "mastery": "The child splits a shape made of squares, rectangles and triangles into parts, finds each part's area in cm2 and adds (or subtracts a cut-out), giving the area in cm2."
+  },
+  "MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING": {
+   "forms": [
+    "estimate by counting",
+    "half the part-squares",
+    "why the answer is only an estimate",
+    "which estimate is sensible"
+   ],
+   "mastery": "The child estimates the area of a circle drawn on squared paper by counting whole squares and adding half for the part-squares, and says the answer is an estimate."
+  },
+  "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION": {
+   "forms": [
+    "capacity of a cube of side 1 cm",
+    "litres to cm3",
+    "a box of 1,000 cm3 holds how many litres",
+    "match equal amounts"
+   ],
+   "mastery": "The child knows that 1 cm3 holds 1 ml and that 1,000 cm3 (1,000 ml) is 1 litre, and uses this to say the capacity of a small cube or a box in ml or litres."
+  },
+  "MATH.G6.MEASUR.CAPACITY.LITRES_TO_ML": {
+   "forms": [
+    "convert to ml",
+    "story about bottles or a jug",
+    "compare two amounts",
+    "spot the mistake"
+   ],
+   "mastery": "The child changes litres, or litres and millilitres, to millilitres (multiply the litres by 1,000, add the ml), including decimals of a litre such as 2.5 l."
+  },
+  "MATH.G6.MEASUR.CAPACITY.ML_TO_LITRES": {
+   "forms": [
+    "convert to litres",
+    "how many full bottles",
+    "litres and ml",
+    "spot the mistake"
+   ],
+   "mastery": "The child changes millilitres to litres (divide by 1,000) and gives litres and millilitres, or a decimal of a litre, for amounts up to 10,000 ml."
+  },
+  "MATH.G6.MEASUR.MASS.TONNE_AS_UNIT": {
+   "forms": [
+    "choose the unit",
+    "which is heavier",
+    "what does t stand for"
+   ],
+   "mastery": "The child knows the tonne (t) as a unit for very heavy masses and that it is bigger than the kilogramme, and chooses g, kg or t for a stated object."
+  },
+  "MATH.G6.MEASUR.MASS.ITEMS_IN_TONNES": {
+   "forms": [
+    "which is measured in tonnes",
+    "choose the sensible mass for a lorry or an elephant",
+    "sort items into g, kg and t"
+   ],
+   "mastery": "The child picks from a list the items whose mass is given in tonnes (a lorry, a heap of sand, a harvest of maize) and not those given in kg or g."
+  },
+  "MATH.G6.MEASUR.MASS.KG_TONNE_RELATIONSHIP": {
+   "forms": [
+    "how many kg in a tonne",
+    "sacks in a tonne",
+    "which is greater: kg or t",
+    "match equal masses"
+   ],
+   "mastery": "The child knows that 1 tonne is 1,000 kg and uses it to say how many equal sacks make a tonne, for example how many 50 kg sacks."
+  },
+  "MATH.G6.MEASUR.MASS.ESTIMATE_TONNES": {
+   "forms": [
+    "choose the sensible estimate",
+    "estimate the load of a lorry",
+    "estimate from the number of sacks"
+   ],
+   "mastery": "The child estimates the mass of a large load in tonnes from a familiar comparison (a bag of maize 90 kg, a lorry load of sacks) and chooses a sensible estimate."
+  },
+  "MATH.G6.MEASUR.MASS.CONVERT_KG_TONNES": {
+   "forms": [
+    "tonnes to kg",
+    "kg to tonnes",
+    "total of bags in tonnes",
+    "spot the mistake"
+   ],
+   "mastery": "The child changes tonnes, or tonnes and kilogrammes, to kilogrammes (multiply by 1,000, add the kg) and kilogrammes to tonnes (divide by 1,000, giving t and kg or a decimal)."
+  },
+  "MATH.G6.MEASUR.MASS.ADD_TONNES_KG": {
+   "forms": [
+    "add two loads",
+    "total of several deliveries",
+    "spot the missing rename"
+   ],
+   "mastery": "The child adds two masses in tonnes and kilogrammes, adds kg to kg and t to t, and renames 1,000 kg or more as tonnes."
+  },
+  "MATH.G6.MEASUR.MASS.SUBTRACT_TONNES_KG": {
+   "forms": [
+    "what is left of a load",
+    "spot the mistake when kg are too few",
+    "check by adding"
+   ],
+   "mastery": "The child subtracts one mass in tonnes and kilogrammes from a larger one, renaming 1 tonne as 1,000 kg when the kg are too few."
+  },
+  "MATH.G6.MEASUR.MASS.MULTIPLY_TONNES_KG": {
+   "forms": [
+    "total of equal loads",
+    "trips of a lorry",
+    "spot the missing rename"
+   ],
+   "mastery": "The child multiplies a mass in tonnes and kilogrammes by a whole number (up to 12) and renames kg of 1,000 or more as tonnes."
+  },
+  "MATH.G6.MEASUR.MASS.DIVIDE_TONNES_KG": {
+   "forms": [
+    "share a load equally",
+    "mass of each part",
+    "spot the mistake",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a mass in tonnes and kilogrammes into equal parts (up to 12), changing to kg when the tonnes do not divide exactly."
+  },
+  "MATH.G6.MEASUR.TIME.AM_PM_IDENTIFY": {
+   "forms": [
+    "a.m. or p.m. for an event",
+    "which time is after noon",
+    "put events in order",
+    "noon and midnight"
+   ],
+   "mastery": "The child says whether an everyday event (breakfast, assembly, evening news) happens in the a.m. or the p.m. and knows that a.m. is from midnight to noon and p.m. from noon to midnight."
+  },
+  "MATH.G6.MEASUR.TIME.WRITE_AM_PM": {
+   "forms": [
+    "write the time with a.m. or p.m.",
+    "read a clock and write the time",
+    "which is correct",
+    "spot the mistake at 12"
+   ],
+   "mastery": "The child writes a time shown on a clock or described in words with a.m. or p.m. (for example 7:30 p.m.), including 12 noon and 12 midnight."
+  },
+  "MATH.G6.MEASUR.TIME.AM_PM_TO_24H_RELATE": {
+   "forms": [
+    "which 24-hour time matches",
+    "which 12-hour time matches",
+    "on the same clock face",
+    "timetable in both systems"
+   ],
+   "mastery": "The child matches times in a.m. and p.m. to the 24-hour clock (for example 3 p.m. and 15:00) and sees that the hours after noon are 12 more than on the 12-hour clock."
+  },
+  "MATH.G6.MEASUR.TIME.CONVERT_12_24": {
+   "forms": [
+    "to the 24-hour clock",
+    "to the 12-hour clock",
+    "spot the mistake at noon or midnight",
+    "choose the matching time"
+   ],
+   "mastery": "The child writes a 12-hour time in 24-hour form (add 12 hours to p.m. times other than 12 noon, 12 a.m. is 00:00) and a 24-hour time in 12-hour form with a.m. or p.m."
+  },
+  "MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE": {
+   "forms": [
+    "journey time",
+    "waiting time between buses",
+    "earliest bus",
+    "which trip is shortest"
+   ],
+   "mastery": "The child reads a table of departure and arrival times, in the 12-hour or 24-hour system, and works out the length of a journey, the waiting time and the shortest or earliest trip."
+  },
+  "MATH.G6.MEASUR.MONEY.PREPARE_BUDGET": {
+   "forms": [
+    "balance of a budget",
+    "is the budget over?",
+    "complete the budget table",
+    "which item to reduce"
+   ],
+   "mastery": "The child lists income and planned spending in a table, totals each, and finds the balance (income less spending) and whether the budget is over or under."
+  },
+  "MATH.G6.MEASUR.MONEY.BUYING_SELLING_PRICE": {
+   "forms": [
+    "selling price from cost and profit",
+    "buying price from selling price and profit",
+    "which is the buying price",
+    "selling price after a loss"
+   ],
+   "mastery": "The child tells the buying price (cost) from the selling price, works out the selling price from the buying price and the profit or loss, and the buying price from the selling price and profit or loss."
+  },
+  "MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES": {
+   "forms": [
+    "profit on one item",
+    "profit on several items",
+    "total cost then profit",
+    "story with spoilt goods"
+   ],
+   "mastery": "The child works out profit as selling price less buying price when the selling price is greater, for a single item or for a number of items bought and sold together."
+  },
+  "MATH.G6.MEASUR.MONEY.LOSS_FROM_SALES": {
+   "forms": [
+    "loss on one item",
+    "profit or loss?",
+    "loss on several items",
+    "selling price after a loss"
+   ],
+   "mastery": "The child works out the loss as buying price less selling price when the selling price is less, and decides from the two prices whether the sale made a profit or a loss."
+  },
+  "MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES": {
+   "forms": [
+    "which tax is on goods",
+    "which tax is taken from pay",
+    "price plus VAT",
+    "take-home pay on a pay slip"
+   ],
+   "mastery": "The child names common taxes in Kenya (VAT on goods, PAYE on pay, import duty, land rates) and says what each is charged on, and works out an amount of tax or a total when a rate is stated in the question."
+  },
+  "MATH.G6.GEOMET.LINES.PARALLEL_LINES": {
+   "forms": [
+    "which pair is parallel",
+    "parallel lines in the environment",
+    "how to draw parallel lines",
+    "spot the pair that will meet"
+   ],
+   "mastery": "The child knows that parallel lines are always the same distance apart and never meet, picks them out from a set of lines in the environment (rails, ruled lines, a window frame), and says that a set square slid along a ruler draws them.",
+   "hands_on": "Drawing or constructing is a practical done with a pencil and instruments; a typed or tapped question tests the idea behind it, not the construction."
+  },
+  "MATH.G6.GEOMET.LINES.BISECT_LINES": {
+   "forms": [
+    "length of each half",
+    "what does bisect mean",
+    "which step of the construction is wrong",
+    "midpoint of a line"
+   ],
+   "mastery": "The child knows that to bisect is to cut into two equal parts, that the bisector of a line meets it at its midpoint at a right angle, works out each half of a line of given length, and knows the compass arcs have the same radius on both ends.",
+   "hands_on": "Drawing or constructing is a practical done with a pencil and instruments; a typed or tapped question tests the idea behind it, not the construction."
+  },
+  "MATH.G6.GEOMET.LINES.PERPENDICULAR_LINES": {
+   "forms": [
+    "which pair is perpendicular",
+    "angle between perpendicular lines",
+    "perpendicular in the environment",
+    "which tool checks a right angle"
+   ],
+   "mastery": "The child knows that perpendicular lines meet at a right angle (90 degrees), picks out perpendicular lines in the environment (wall and floor, a window corner), and says that a set square or a compass construction makes them.",
+   "hands_on": "Drawing or constructing is a practical done with a pencil and instruments; a typed or tapped question tests the idea behind it, not the construction."
+  },
+  "MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY": {
+   "forms": [
+    "which angles are on a line",
+    "name the angle type",
+    "how many angles on a line",
+    "angles in a cut round cake at a point"
+   ],
+   "mastery": "The child picks out the angles that share a point on a straight line (they make a straight angle), and says that two or more angles on a straight line at a point lie along it, and names right, acute and obtuse ones."
+  },
+  "MATH.G6.GEOMET.ANGLES.MEASURE_ANGLES_PROTRACTOR": {
+   "forms": [
+    "read the angle",
+    "which scale to use",
+    "difference between two readings",
+    "is the angle acute or obtuse?"
+   ],
+   "mastery": "The child reads an angle on a protractor from the correct scale (starting from zero on the baseline) and finds the difference between two readings.",
+   "hands_on": "Placing the protractor on a real angle stays a practical; the questions test reading a drawn protractor."
+  },
+  "MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE": {
+   "forms": [
+    "find the missing angle",
+    "three angles on a line",
+    "one angle is 4 times the other",
+    "spot the mistake"
+   ],
+   "mastery": "The child knows that angles on a straight line at a point add up to 180 degrees and finds a missing angle (two or three angles, including an angle given as a multiple of another)."
+  },
+  "MATH.G6.GEOMET.ANGLES.ANGLE_SUM_RECT_TRIANGLE": {
+   "forms": [
+    "missing angle of a triangle",
+    "sum of the angles of a rectangle",
+    "right-angled triangle other two angles",
+    "spot the mistake"
+   ],
+   "mastery": "The child knows that the angles of a triangle add up to 180 degrees and the angles of a rectangle to 360 degrees (each 90 degrees), and finds a missing angle of a triangle."
+  },
+  "MATH.G6.GEOMET.ANGLES.CONSTRUCT_TRIANGLES": {
+   "forms": [
+    "name the triangle from its sides",
+    "which sides are equal",
+    "angle in an equilateral triangle",
+    "which triangle has a right angle"
+   ],
+   "mastery": "The child names a triangle from its sides and angles (three equal sides, a right angle, two equal sides), knows the angles of an equilateral triangle are all 60 degrees, and which sides are equal in an isosceles triangle. The construction itself is a practical.",
+   "hands_on": "Drawing or constructing is a practical done with a pencil and instruments; a typed or tapped question tests the idea behind it, not the construction."
+  },
+  "MATH.G6.GEOMET.ANGLES.INTERIOR_ANGLES_TRIANGLES": {
+   "forms": [
+    "missing angle of an isosceles triangle",
+    "angles of an equilateral triangle",
+    "other angle of a right-angled triangle",
+    "spot the mistake"
+   ],
+   "mastery": "The child finds an unknown interior angle of an equilateral, right-angled or isosceles triangle using that the angles add to 180 degrees, the angles opposite equal sides are equal, and the right angle is 90 degrees. Measuring with a protractor is a practical.",
+   "hands_on": "Drawing or constructing is a practical done with a pencil and instruments; a typed or tapped question tests the idea behind it, not the construction."
+  },
+  "MATH.G6.GEOMET.3_D_OBJECTS.CUBOID_CUBE_PARTS": {
+   "forms": [
+    "how many faces, edges, vertices",
+    "wire for the frame",
+    "which net makes a cube",
+    "equal faces of a cuboid"
+   ],
+   "mastery": "The child counts the vertices (8), faces (6) and edges (12) of a cube or a cuboid, tells which faces are equal, works out the length of wire for the edges of a cube or cuboid, and matches a net to its solid."
+  },
+  "MATH.G6.GEOMET.3_D_OBJECTS.CYLINDER_PARTS": {
+   "forms": [
+    "faces of a cylinder",
+    "edges of a cylinder",
+    "does it have vertices",
+    "which object is a cylinder"
+   ],
+   "mastery": "The child says a cylinder has 2 flat circular faces, 1 curved surface and 2 curved edges, no vertices, and identifies cylinders in the environment (tin, pipe, drum)."
+  },
+  "MATH.G6.GEOMET.3_D_OBJECTS.PLANE_FIGURES_IN_SOLIDS": {
+   "forms": [
+    "which shape is the face",
+    "which solid has circular faces",
+    "what shapes make a pyramid",
+    "trace a face and name it"
+   ],
+   "mastery": "The child names the plane figure that is the shape of a face of a solid (squares on a cube, rectangles on a cuboid, circles on a cylinder, triangles on a pyramid) and a solid that has a given face."
+  },
+  "MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE": {
+   "forms": [
+    "total number asked",
+    "missing frequency",
+    "which is most frequent",
+    "complete a table from tallies"
+   ],
+   "mastery": "The child tallies raw data into a frequency table, adds the frequencies to find the total, finds a missing frequency, and says which value is the most frequent."
+  },
+  "MATH.G6.DATA_H.BAR_GRAPHS.PICTOGRAPH": {
+   "forms": [
+    "symbols needed",
+    "what does the key say",
+    "value of a half symbol",
+    "complete a pictograph"
+   ],
+   "mastery": "The child works out how many symbols a frequency needs when a symbol stands for more than one (2, 5 or 10), reads the key, and deals with half symbols."
+  },
+  "MATH.G6.DATA_H.BAR_GRAPHS.PILING": {
+   "forms": [
+    "which pile is the biggest",
+    "total of the piles",
+    "difference between two piles",
+    "what does each counter stand for"
+   ],
+   "mastery": "The child says that in piling each object stands for one item counted, that the tallest pile is the most frequent, finds the total of all piles, and which pile has the fewest. The sorting and piling itself is a practical.",
+   "hands_on": "Piling objects is a practical; the questions test counting and comparing piles."
+  },
+  "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_DRAW": {
+   "forms": [
+    "height of a bar",
+    "choose a scale",
+    "what is missing on the graph",
+    "squares for a frequency"
+   ],
+   "mastery": "The child chooses a scale for the vertical axis, works out how many squares or what height a frequency needs, and says what a bar graph needs (a title, labelled axes, equal bar widths).",
+   "hands_on": "Drawing the graph on paper stays a practical; the questions test the scale and the heights."
+  },
+  "MATH.G6.DATA_H.BAR_GRAPHS.BAR_GRAPH_INTERPRET": {
+   "forms": [
+    "read a bar",
+    "difference between two bars",
+    "second highest",
+    "what conclusion can we draw"
+   ],
+   "mastery": "The child reads values from a bar graph (including a scale that goes up in 2s, 5s or 10s), finds the difference between two bars, the total, and the second highest bar, and draws a conclusion."
+  }
+ }
+}
