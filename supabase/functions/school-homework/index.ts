@@ -4491,7 +4491,8 @@ async function learnerHome(p, deps) {
 var SUBJECT_PREFIXES = {
   MATH: "math",
   SCIE: "science",
-  ENGL: "english"
+  ENGL: "english",
+  KISW: "kiswahili"
 };
 
 // src/learner/subject.js

@@ -98,7 +98,8 @@ export function checkReading(p, grade = 5) {
   const q = [p.instruction, p.question, ...(p.parts || []).map(x => x.prompt)].filter(Boolean).join(' ');
   const s = readingStats(q);
   const cap = Math.max(5, grade + 2);
-  if (s.words >= 12 && s.fk > cap) out.push({ id: 'reading', level: 'soft', message: `reading grade ${s.fk.toFixed(1)}, above ${cap} for Grade ${grade}` });
+  // The Flesch-Kincaid formula counts English syllables: it says nothing about Kiswahili (KISW.) items, so only sentence and question length apply to them.
+  if (s.words >= 12 && s.fk > cap && !/^KISW\./.test(p.cskill || '')) out.push({ id: 'reading', level: 'soft', message: `reading grade ${s.fk.toFixed(1)}, above ${cap} for Grade ${grade}` });
   if (s.longest > 30) out.push({ id: 'reading', level: 'soft', message: `a sentence of ${s.longest} words` });
   if (String(p.question || '').length > 420) out.push({ id: 'reading', level: 'hard', message: 'question too long to read on a phone' });
   return out;
