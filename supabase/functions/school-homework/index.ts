@@ -4606,6 +4606,31 @@ function supabaseStore(admin) {
       const { error } = await admin.from("response_events").insert(row);
       if (error && error.code !== "23505") throw new Error("Not saved");
     },
+    // School exam evidence (evidenceDoor.js): what is already in the log for these items, new rows in batches, a corrected mark in place.
+    async examEvidence(doorId, itemRefs) {
+      const out = [];
+      for (let i = 0; i < itemRefs.length; i += 100) {
+        const { data, error } = await admin.from("response_events").select("id, item_ref, learner_ref, marks, max_marks, outcome_code, substrand_code").eq("source", "school_exam").eq("door_id", doorId).in("item_ref", itemRefs.slice(i, i + 100)).limit(2e4);
+        if (error) throw new Error("Not read");
+        out.push(...data || []);
+      }
+      return out;
+    },
+    async insertEvidence(rows) {
+      for (let i = 0; i < rows.length; i += 200) {
+        const { error } = await admin.from("response_events").insert(rows.slice(i, i + 200));
+        if (error && error.code === "23505") {
+          for (const r of rows.slice(i, i + 200)) {
+            const e = (await admin.from("response_events").insert(r)).error;
+            if (e && e.code !== "23505") throw new Error("Not saved");
+          }
+        } else if (error) throw new Error("Not saved");
+      }
+    },
+    async updateEvidence(id, patch) {
+      const { error } = await admin.from("response_events").update(patch).eq("id", id).eq("source", "school_exam");
+      if (error) throw new Error("Not saved");
+    },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {
       const { data } = await admin.from("school_doors").select("id, code, name, secret, active").eq("code", code).maybeSingle();

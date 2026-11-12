@@ -14,6 +14,7 @@ import { dirname, resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
 import { verifyCall, signCall } from '../src/school/schoolDoor.js';
 import { doorHomework, makeCodeFrom } from '../src/school/homeworkDoor.js';
+import { doorEvidence } from '../src/school/evidenceDoor.js';
 import { learnerHomework } from '../src/school/homeworkLearner.js';
 import { memoryStore } from '../src/school/homeworkStore.js';
 
@@ -53,7 +54,7 @@ createServer(async (req, res) => {
     if ((req.headers['x-door-code'] || '').toUpperCase() !== door.code) { send(res, 401, { success: false, error: 'Not allowed' }); return; }
     const v = await verifyCall(door.secret, req.headers['x-door-time'], body, req.headers['x-door-sign'], Math.floor(Date.now() / 1000));
     if (!v.ok) { send(res, 401, { success: false, error: 'Not allowed' }); return; }
-    const r = await doorHomework(door, p, deps);
+    const r = (await doorEvidence(door, p, deps)) || (await doorHomework(door, p, deps));
     keep(); console.log(`door ${p.action}: ${r ? r.status : 400}`);
     send(res, r ? r.status : 400, r ? r.body : { success: false, error: 'Unknown action' }); return;
   }

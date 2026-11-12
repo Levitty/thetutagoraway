@@ -11,10 +11,13 @@
 //           -> { success: true }       (the same practice_ref again replaces it)
 //   status  { practice_refs: [...] }
 //           -> { success: true, status: { [practice_ref]: { [learner_ref]: { linked, mastered, mastered_at, practised } } } }
+//   evidence { items: [{ learner_ref, question_id, outcome_code, substrand_code, marks, max_marks, ... }] }
+//           -> { success: true, received, saved, updated, same, skipped }   exam marks into the learner's evidence log
+//           (12 Nov 2026), see src/school/evidenceDoor.js
 //   homework_preview, homework_set, homework_status, homework_reopen   homework drawn from the curriculum
 //           families (10 Nov 2026), see src/school/homeworkDoor.js
 //
-// Only learner references and HOREB skill ids cross. No names, phones or marks.
+// Only learner references and HOREB skill ids cross. No names or phones. Marks cross only for `evidence`.
 // Deploy: supabase functions deploy school-practice --no-verify-jwt   (Tuta has no HOREB login;
 // the signature is the proof). Then record it: node scripts/function-drift.mjs --record school-practice
 
@@ -23,6 +26,7 @@ import { createClient } from "https://esm.sh/@supabase/supabase-js@2.39.0";
 
 import { verifyCall, cleanAssign, practiceStatus, childProfileKey } from "../src/school/schoolDoor.js";
 import { doorHomework, makeCodeFrom } from "../src/school/homeworkDoor.js";
+import { doorEvidence } from "../src/school/evidenceDoor.js";
 import { supabaseStore } from "../src/school/homeworkStore.js";
 
 // The child's link: HOREB's own page, keyed by the sitting's code (public/hw/index.html).
@@ -72,6 +76,11 @@ Deno.serve(async (req) => {
       for (const r of rows || []) progress[r.profile_key] = r.progress || {};
     }
     return json(200, { success: true, status: practiceStatus(practices || [], links || [], progress) });
+  }
+
+  if (p.action === "evidence") {
+    const r = await doorEvidence(door, p, { store: supabaseStore(admin) }).catch(() => ({ status: 500, body: { success: false, error: "Not saved" } }));
+    return json(r.status, r.body);
   }
 
   if (String(p.action || "").startsWith("homework_")) {
