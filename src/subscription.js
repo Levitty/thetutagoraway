@@ -11,7 +11,9 @@
 // ============================================================================
 
 // ---- master switches -------------------------------------------------------
-export const PAYWALL_ENABLED = true;           // paid practice is on
+// Off from 12 Nov 2026, owner: "remove the payment gateway for now". No pass, prices or pay prompts while
+// it is off; practice is free. Set true to bring paid practice back (the Paystack flow is kept, untouched).
+export const PAYWALL_ENABLED = false;
 export const PAYWALL_START_ISO = '2026-09-29'; // paid practice starts on this date
 
 // ---- plans -----------------------------------------------------------------
