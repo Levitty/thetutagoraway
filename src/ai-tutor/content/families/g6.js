@@ -45,7 +45,7 @@ const TOWNS = ['Nyeri', 'Kitale', 'Embu', 'Machakos', 'Kericho', 'Garissa', 'Thi
 
 export const FAMILIES = [
   // =========================================================== WHOLE NUMBERS
-  fam({ id: 'g6.place.two-digits', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.a', rung: 2, form: 'steps',
+  fam({ id: 'g6.place.two-digits', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_MILLIONS', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.a', misMapped: false, reveals: ['M_COUNT_FROM_LEFT', 'M_PLACE_FOR_TOTAL'], rung: 2, form: 'steps',
     draw: () => {
       const ds = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 7);
       const i = randInt(0, 4), j = randInt(i + 1, 5);
@@ -66,7 +66,7 @@ export const FAMILIES = [
     },
     check: ({ ds, i, j }, v) => v[0] - v[1] === v[2] && String(v[0]).length === 7 - i && String(v[1]).length === 7 - j && String(v[0])[0] === String(ds[i]) }),
 
-  fam({ id: 'g6.place.words-to-figures', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.c', rung: 2, form: 'word',
+  fam({ id: 'g6.place.words-to-figures', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.c', misMapped: false, reveals: ['M_JOIN_PARTS', 'M_MISPLACED_GROUP'], rung: 2, form: 'word',
     draw: () => { const M = randInt(1, 9), T = randInt(1, 999), U = randInt(1, 99); const N = M * 1e6 + T * 1e3 + U; return T === U ? null : { M, T, U, N, p: person() }; },
     make: ({ M, T, U, N, p }) => ({
       question: `${p.name}'s SACCO reports its savings as "${words(N)} shillings". Write the amount in figures.`,
@@ -77,7 +77,7 @@ export const FAMILIES = [
     }),
     check: ({ M, T, U }, a) => Math.floor(a / 1e6) === M && Math.floor(a / 1000) % 1000 === T && a % 1000 === U }),
 
-  fam({ id: 'g6.place.figures-to-words', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.c', rung: 2, form: 'direct',
+  fam({ id: 'g6.place.figures-to-words', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.READ_WRITE_WORDS_100K', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.c', misMapped: false, reveals: ['M_HUNDRED_DROPPED', 'M_MISPLACED_GROUP'], rung: 2, form: 'direct',
     draw: () => {
       const M = randInt(1, 9), T = randInt(1, 999), U = randInt(1, 99), N = M * 1e6 + T * 1e3 + U;
       const sw = M * 1e6 + U * 1e3 + T, cc = Number(`${M}${T}${U}`), zs = M * 1e6 + T * 1e3 + U * 10;
@@ -90,7 +90,7 @@ export const FAMILIES = [
       steps: [`${commas(N)} has three groups: millions, thousands and the last three digits.`, `In words: ${words(N)}.`],
     }) }),
 
-  fam({ id: 'g6.whole.round-stadium', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.e', rung: 2, form: 'word',
+  fam({ id: 'g6.whole.round-stadium', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.e', misMapped: false, reveals: ['M_WRONG_DIGIT_LOOKED_AT', 'M_ROUND_DOWN_ALWAYS'], rung: 2, form: 'word',
     draw: () => {
       const pl = pick([100, 1000, 10000]), N = randInt(11000, 98999);
       if (N % pl === pl / 2) return null;
@@ -111,7 +111,7 @@ export const FAMILIES = [
     },
     check: ({ pl, N }, a) => a % pl === 0 && Math.abs(N - a) < pl / 2 }),
 
-  fam({ id: 'g6.whole.round-spot', skill: 'G6_PLACE_VALUE', outcome: 'G6.WHOLE.e', rung: 3, form: 'spot',
+  fam({ id: 'g6.whole.round-spot', skill: 'G6_PLACE_VALUE', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.e', misMapped: false, reveals: ['M_WRONG_DIGIT_LOOKED_AT'], rung: 3, form: 'spot',
     draw: () => { const pl = pick([100, 1000, 10000]); const N = randInt(11000, 98999); return N % pl === 0 ? null : { pl, N, p: person() }; },
     make: ({ pl, N, p }) => {
       const pname = { 100: 'hundreds', 1000: 'thousands', 10000: 'ten thousands' }[pl];
@@ -133,7 +133,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.squares.root-plot', skill: 'G6_SQUARES', outcome: 'G6.WHOLE.g', rung: 2, form: 'word',
+  fam({ id: 'g6.squares.root-plot', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.g', misMapped: false, reveals: ['M_HALVE_NOT_ROOT'], rung: 2, form: 'word',
     draw: () => { const n = randInt(11, 100), A = n * n; return { n, A, p: person(), alt: n <= 90 ? n + 10 : n - 10 }; },
     make: ({ n, A, p, alt }) => ({
       question: `${p.name}'s square shamba covers ${commas(A)} m². Find the square root of ${commas(A)} to get the length of one side, in metres.`,
@@ -144,7 +144,7 @@ export const FAMILIES = [
     }),
     check: ({ A }, a) => a * a === A }),
 
-  fam({ id: 'g6.squares.not-square', skill: 'G6_SQUARES', outcome: 'G6.WHOLE.g', rung: 3, form: 'why',
+  fam({ id: 'g6.squares.not-square', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARE_ROOTS_10000', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.g', misMapped: false, reveals: [], rung: 3, form: 'why',
     draw: () => { const d = pick([2, 3, 7, 8]); const N = randInt(100, 999) * 10 + d; return { N, d, k: randInt(0, 3) }; },
     make: ({ N, d, k }) => ({
       question: `${commas(N)} is not a perfect square, so it has no whole number square root. Which reason is correct?`,
@@ -156,7 +156,7 @@ export const FAMILIES = [
       steps: ['The squares of 1 to 9 are 1, 4, 9, 16, 25, 36, 49, 64, 81.', `Their last digits are only 1, 4, 9, 6, 5, 0. A number ending in ${d} cannot be a square.`],
     }) }),
 
-  fam({ id: 'g6.squares.seeds-left', skill: 'G6_SQUARES', outcome: 'G6.WHOLE.f', rung: 2, form: 'word',
+  fam({ id: 'g6.squares.seeds-left', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.WHOLE_NUMBERS.SQUARES_TO_100', outcome: 'MATH.G6.NUMBER.WHOLE_NUMBERS.f', misMapped: false, reveals: ['M_DOUBLE_NOT_SQUARE'], rung: 2, form: 'word',
     draw: () => { const n = randInt(4, 12), extra = randInt(5, 40); return { n, extra, total: n * n + extra, p: person() }; },
     make: ({ n, extra, total, p }) => ({
       question: `${p.name} plants bean seeds in a square: ${n} rows with ${n} seeds in each row. ${p.She} began with ${total} seeds. How many seeds are left?`,
@@ -168,7 +168,7 @@ export const FAMILIES = [
     check: ({ n, total }, a) => a + n * n === total }),
 
   // =========================================================== MULTIPLICATION
-  fam({ id: 'g6.mul.estimate-cost', skill: 'G6_MULTIPLICATION', outcome: 'G6.MUL.b', rung: 2, form: 'word',
+  fam({ id: 'g6.mul.estimate-cost', skill: 'G6_MULTIPLICATION', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.b', misMapped: false, reveals: ['M_ROUND_ONE_FACTOR'], rung: 2, form: 'word',
     draw: () => {
       const item = pick(['bag of maize', 'sack of potatoes']), a = price(item), b = randInt(21, 79);
       if (b % 10 === 5 || Math.abs((a % 1000) - 500) < 100) return null;
@@ -185,7 +185,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => Math.abs(v - a * b) < 0.4 * a * b && v % 10000 === 0 && v / 10000 >= 1 }),
 
-  fam({ id: 'g6.mul.estimate-pick', skill: 'G6_MULTIPLICATION', outcome: 'G6.MUL.b', rung: 1, form: 'direct',
+  fam({ id: 'g6.mul.estimate-pick', skill: 'G6_MULTIPLICATION', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.b', misMapped: false, reveals: ['M_ROUND_ONE_FACTOR', 'M_ZEROS_LOST_IN_ESTIMATE'], rung: 1, form: 'direct',
     draw: () => {
       const a = randInt(1500, 9500), b = randInt(21, 89);
       if (a % 1000 > 400 && a % 1000 < 600) return null;
@@ -201,7 +201,7 @@ export const FAMILIES = [
       steps: [`${commas(a)} is close to ${commas(Math.round(a / 1000) * 1000)}, and ${b} is close to ${Math.round(b / 10) * 10}.`, `The estimate is ${commas(e)}.`],
     }) }),
 
-  fam({ id: 'g6.mul.estimate-spot', skill: 'G6_MULTIPLICATION', outcome: 'G6.MUL.b', rung: 3, form: 'spot',
+  fam({ id: 'g6.mul.estimate-spot', skill: 'G6_MULTIPLICATION', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.b', misMapped: false, reveals: ['M_ROUND_ONE_FACTOR'], rung: 3, form: 'spot',
     draw: () => {
       const a = randInt(2100, 8900), b = randInt(21, 89), kind = pick(['round', 'product']);
       if (a % 1000 > 400 && a % 1000 < 600) return null;
@@ -228,7 +228,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.pattern.growth', skill: 'G6_PATTERNS', outcome: 'G6.MUL.c', rung: 2, form: 'word',
+  fam({ id: 'g6.pattern.growth', skill: 'G6_PATTERNS', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: ['M_ADD_NOT_MULTIPLY'], rung: 2, form: 'word',
     draw: () => { const a = randInt(2, 5), r = randInt(2, 4), n = randInt(4, 5); const v = a * r ** (n - 1); return uniq(v, a * r, a + r * (n - 1), a * r ** n) ? { a, r, n, v, p: person() } : null; },
     make: ({ a, r, n, v, p }) => ({
       question: `${p.name} plants ${a} trees in week 1 and follows a pattern. Each week ${p.she} plants ${r} times as many trees as the week before. How many trees does ${p.she} plant in week ${n}?`,
@@ -239,7 +239,7 @@ export const FAMILIES = [
     }),
     check: ({ a, r, n }, x) => { let t = x; for (let i = 0; i < n - 1; i++) { if (t % r) return false; t /= r; } return t === a; } }),
 
-  fam({ id: 'g6.pattern.table-rule', skill: 'G6_PATTERNS', outcome: 'G6.MUL.c', rung: 3, form: 'table',
+  fam({ id: 'g6.pattern.table-rule', skill: 'G6_PATTERNS', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: ['M_ADD_NOT_MULTIPLY', 'M_CONSTANT_DIFFERENCE'], rung: 3, form: 'table',
     draw: () => { const a = randInt(2, 5), r = pick([2, 3]); const v6 = a * r ** 5; return uniq(v6, a * r ** 4, a * r ** 3 + 2 * (a * r ** 3 - a * r ** 2), a * 6) ? { a, r, v6 } : null; },
     make: ({ a, r, v6 }) => ({
       question: 'The table shows the number of tiles in each row of a pattern. Each number comes from the one before it by multiplying. How many tiles are in row 6?',
@@ -251,7 +251,7 @@ export const FAMILIES = [
     }),
     check: ({ a, r }, v) => v / r ** 5 === a }),
 
-  fam({ id: 'g6.pattern.rule-pick', skill: 'G6_PATTERNS', outcome: 'G6.MUL.c', rung: 2, form: 'direct',
+  fam({ id: 'g6.pattern.rule-pick', skill: 'G6_PATTERNS', cskill: 'MATH.G6.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G6.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: ['M_ADD_NOT_MULTIPLY'], rung: 2, form: 'direct',
     draw: () => { const a = randInt(2, 6), r = randInt(2, 5); return uniq(a, r, a * r - a, r + 1) && a !== r && a * r - a !== r ? { a, r, k: randInt(0, 3) } : null; },
     make: ({ a, r, k }) => ({
       question: `Which rule makes this pattern: ${a}, ${a * r}, ${a * r * r}, ${a * r ** 3}, ...?`, story: false,
@@ -261,7 +261,7 @@ export const FAMILIES = [
     }) }),
 
   // =========================================================== DIVISION
-  fam({ id: 'g6.div.estimate-trips', skill: 'G6_DIVISION', outcome: 'G6.DIV.b', rung: 2, form: 'word',
+  fam({ id: 'g6.div.estimate-trips', skill: 'G6_DIVISION', cskill: 'MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT', outcome: 'MATH.G6.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_ZEROS_CANCELLED_WRONG', 'M_ROUND_ONLY_DIVIDEND'], rung: 2, form: 'word',
     draw: () => {
       const rd = pick([20, 30, 40, 50, 60, 80]), q = randInt(15, 150);
       const rt = rd * q;
@@ -279,7 +279,7 @@ export const FAMILIES = [
     }),
     check: ({ T, D }, a) => Math.abs(a - T / D) < 0.25 * (T / D) + 1 }),
 
-  fam({ id: 'g6.div.estimate-pick', skill: 'G6_DIVISION', outcome: 'G6.DIV.b', rung: 1, form: 'direct',
+  fam({ id: 'g6.div.estimate-pick', skill: 'G6_DIVISION', cskill: 'MATH.G6.NUMBER.DIVISION.ESTIMATE_QUOTIENT', outcome: 'MATH.G6.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_ZEROS_CANCELLED_WRONG', 'M_ROUND_ONLY_DIVIDEND'], rung: 1, form: 'direct',
     draw: retry(() => {
       const rd = pick([20, 30, 40, 50, 60]), q = randInt(20, 190);
       const rt = rd * q;
@@ -296,7 +296,7 @@ export const FAMILIES = [
     }),
     check: ({ T, D, q }) => Math.abs(q - T / D) < 0.25 * q + 1 }),
 
-  fam({ id: 'g6.div.bodmas-pick', skill: 'G6_DIVISION', outcome: 'G6.DIV.c', rung: 2, form: 'direct',
+  fam({ id: 'g6.div.bodmas-pick', skill: 'G6_DIVISION', cskill: 'MATH.G6.NUMBER.DIVISION.COMBINED_OPERATIONS', outcome: 'MATH.G6.NUMBER.DIVISION.c', misMapped: false, reveals: ['M_LEFT_TO_RIGHT_ONLY'], rung: 2, form: 'direct',
     draw: () => {
       const mul = pick([true, false]), add = pick([true, false]), c = randInt(2, 9), q = randInt(2, 9), a = randInt(12, 60);
       const b = mul ? q : q * c, part = mul ? b * c : q;
@@ -316,7 +316,7 @@ export const FAMILIES = [
     } }),
 
   // =========================================================== FRACTIONS
-  fam({ id: 'g6.fadd.flour', skill: 'G6_FRACTIONS_ADD', outcome: 'G6.FRAC.a', rung: 2, form: 'word',
+  fam({ id: 'g6.fadd.flour', skill: 'G6_FRACTIONS_ADD', cskill: 'MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.a', misMapped: false, reveals: ['M_ADD_ACROSS', 'M_RENAME_BOTTOM_ONLY'], rung: 2, form: 'word',
     draw: () => {
       const [d1, d2] = pick([[2, 3], [2, 5], [3, 4], [3, 5], [4, 5], [2, 7], [3, 7]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
@@ -332,7 +332,7 @@ export const FAMILIES = [
       steps: [`Common denominator: ${d1 * d2}.`, `${fr(n1, d1)} = ${fr(n1 * d2, d1 * d2)} and ${fr(n2, d2)} = ${fr(n2 * d1, d1 * d2)}.`, `${n1 * d2} + ${n2 * d1} = ${n1 * d2 + n2 * d1}, so ${right} of the bag.`],
     }) }),
 
-  fam({ id: 'g6.fadd.steps', skill: 'G6_FRACTIONS_ADD', outcome: 'G6.FRAC.a', rung: 2, form: 'steps',
+  fam({ id: 'g6.fadd.steps', skill: 'G6_FRACTIONS_ADD', cskill: 'MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.a', misMapped: false, reveals: ['M_ADD_ACROSS', 'M_RENAME_BOTTOM_ONLY'], rung: 2, form: 'steps',
     draw: () => {
       const [d1, d2] = pick([[2, 3], [3, 4], [3, 5], [4, 5], [2, 5], [5, 6], [3, 7]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
@@ -354,7 +354,7 @@ export const FAMILIES = [
     },
     check: ({ n1, d1, n2, d2 }, v) => v[0] % d1 === 0 && v[0] % d2 === 0 && v[1] * d1 === n1 * v[0] && v[2] * d2 === n2 * v[0] && v[3] === v[1] + v[2] }),
 
-  fam({ id: 'g6.fadd.why', skill: 'G6_FRACTIONS_ADD', outcome: 'G6.FRAC.a', rung: 3, form: 'why',
+  fam({ id: 'g6.fadd.why', skill: 'G6_FRACTIONS_ADD', cskill: 'MATH.G6.NUMBER.FRACTIONS.ADD_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.a', misMapped: false, reveals: ['M_ADD_ACROSS'], rung: 3, form: 'why',
     draw: () => {
       const [d1, d2] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [4, 5]]);
       const n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
@@ -370,7 +370,7 @@ export const FAMILIES = [
       steps: ['Fractions with different denominators show pieces of different sizes.', 'Change both to the same denominator, then add the numerators only.'],
     }) }),
 
-  fam({ id: 'g6.fsub.jerrycan', skill: 'G6_FRACTIONS_SUB', outcome: 'G6.FRAC.a', rung: 2, form: 'word',
+  fam({ id: 'g6.fsub.jerrycan', skill: 'G6_FRACTIONS_SUB', cskill: 'MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.b', misMapped: false, reveals: ['M_SUBTRACT_ACROSS', 'M_RENAME_BOTTOM_ONLY'], rung: 2, form: 'word',
     draw: retry(() => {
       const d1 = pick([6, 8, 10, 12]), d2 = pick([2, 3, 4, 5].filter(x => d1 % x === 0)), k = d1 / d2;
       const n2 = randInt(1, d2 - 1), n1 = randInt(n2 * k + 1, d1 - 1);
@@ -385,7 +385,7 @@ export const FAMILIES = [
       steps: [`${fr(n2, d2)} = ${fr(n2 * k, d1)}.`, `${n1} − ${n2 * k} = ${n1 - n2 * k}, so ${fr(n1 - n2 * k, d1)} is left. Simplest form: ${right}.`],
     }) }),
 
-  fam({ id: 'g6.fsub.spot', skill: 'G6_FRACTIONS_SUB', outcome: 'G6.FRAC.a', rung: 3, form: 'spot',
+  fam({ id: 'g6.fsub.spot', skill: 'G6_FRACTIONS_SUB', cskill: 'MATH.G6.NUMBER.FRACTIONS.SUBTRACT_FRACTIONS_LCM', outcome: 'MATH.G6.NUMBER.FRACTIONS.b', misMapped: false, reveals: ['M_SUBTRACT_ACROSS'], rung: 3, form: 'spot',
     draw: () => {
       const d1 = pick([6, 8, 10, 12]), d2 = pick([2, 3, 4, 5].filter(x => d1 % x === 0)), k = d1 / d2;
       const n2 = randInt(1, d2 - 1), n1 = randInt(n2 * k + 1, d1 - 1);
@@ -407,7 +407,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.mixed.add-cloth', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.c', rung: 2, form: 'word',
+  fam({ id: 'g6.mixed.add-cloth', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS', outcome: 'MATH.G6.NUMBER.FRACTIONS.c', misMapped: false, reveals: ['M_ADD_ACROSS', 'M_WHOLE_ONLY_FRACTION_DROPPED'], rung: 2, form: 'word',
     draw: () => {
       const w1 = randInt(1, 5), w2 = randInt(1, 5), a = randInt(1, 3), b = randInt(1, 3);
       if (a + b < 5) return null;
@@ -422,7 +422,7 @@ export const FAMILIES = [
       steps: [`Wholes: ${w1} + ${w2} = ${w1 + w2}.`, `Fractions: ${fr(a, 4)} + ${fr(b, 4)} = ${fr(a + b, 4)}, which is 1 whole and ${simp(a + b - 4, 4)}.`, `Total: ${right} ${thing[1]}.`],
     }) }),
 
-  fam({ id: 'g6.mixed.sub-quarters', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.c', rung: 3, form: 'steps',
+  fam({ id: 'g6.mixed.sub-quarters', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.SUBTRACT_MIXED_NUMBERS', outcome: 'MATH.G6.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_CONVERT_ADD_WHOLE'], rung: 3, form: 'steps',
     draw: () => {
       const w1 = randInt(3, 8), w2 = randInt(1, w1 - 2), a = randInt(1, 3), b = randInt(1, 3);
       return a < b ? { w1, w2, a, b, p: person(), thing: pick(['sugar', 'flour', 'rice']) } : null;
@@ -443,7 +443,7 @@ export const FAMILIES = [
     },
     check: ({ a, b }, v) => v[0] - v[1] === v[2] && v[3] * 4 === v[2] && v[0] % 4 === a && v[1] % 4 === b }),
 
-  fam({ id: 'g6.mixed.convert-spot', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.c', rung: 3, form: 'spot',
+  fam({ id: 'g6.mixed.convert-spot', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.ADD_MIXED_NUMBERS', outcome: 'MATH.G6.NUMBER.FRACTIONS.c', misMapped: false, reveals: ['M_CONVERT_ADD_WHOLE'], rung: 3, form: 'spot',
     draw: () => { const d = randInt(3, 9), n = randInt(1, d - 1), w = randInt(2, 6); return gcd(n, d) > 1 ? null : { d, n, w, p: person() }; },
     make: ({ d, n, w, p }) => {
       const s1 = w * n, s2 = s1 + n;
@@ -461,7 +461,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.recip.pick', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.e', rung: 1, form: 'direct',
+  fam({ id: 'g6.recip.pick', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.RECIPROCAL', outcome: 'MATH.G6.NUMBER.FRACTIONS.e', misMapped: false, reveals: ['M_NEGATIVE_NOT_FLIP', 'M_FLIP_ONE_PART'], rung: 1, form: 'direct',
     draw: () => {
       const n = randInt(2, 9), d = randInt(2, 9);
       if (n === d || gcd(n, d) > 1) return null;
@@ -475,7 +475,7 @@ export const FAMILIES = [
       steps: [`Swap the top and the bottom of ${fr(n, d)}.`, `The reciprocal is ${fr(d, n)}.`],
     }) }),
 
-  fam({ id: 'g6.recip.check-why', skill: 'G6_MIXED_NUMBERS', outcome: 'G6.FRAC.e', rung: 3, form: 'why',
+  fam({ id: 'g6.recip.check-why', skill: 'G6_MIXED_NUMBERS', cskill: 'MATH.G6.NUMBER.FRACTIONS.RECIPROCAL', outcome: 'MATH.G6.NUMBER.FRACTIONS.e', misMapped: false, reveals: [], rung: 3, form: 'why',
     draw: () => { const n = randInt(1, 8), d = randInt(n + 1, 9); return gcd(n, d) > 1 ? null : { n, d, p: person(), k: randInt(0, 3) }; },
     make: ({ n, d, p, k }) => ({
       question: `${p.name} says ${fr(d, n)} is the reciprocal of ${fr(n, d)}. Which check shows ${p.she} is right?`,
@@ -487,7 +487,7 @@ export const FAMILIES = [
       steps: [`${fr(n, d)} × ${fr(d, n)} = ${fr(n * d, n * d)} = 1.`, 'Two numbers are reciprocals when their product is 1.'],
     }) }),
 
-  fam({ id: 'g6.fsq.pick', skill: 'G6_SQUARES', outcome: 'G6.FRAC.f', rung: 1, form: 'direct',
+  fam({ id: 'g6.fsq.pick', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION', outcome: 'MATH.G6.NUMBER.FRACTIONS.f', misMapped: false, reveals: ['M_SQUARE_TOP_ONLY', 'M_DOUBLE_THE_FRACTION'], rung: 1, form: 'direct',
     draw: () => {
       const n = randInt(1, 8), d = randInt(2, 9);
       if (n >= d || gcd(n, d) > 1) return null;
@@ -501,7 +501,7 @@ export const FAMILIES = [
       steps: [`${fr(n, d)} × ${fr(n, d)} = ${fr(n * n, d * d)}.`, 'Both the numerator and the denominator are squared.'],
     }) }),
 
-  fam({ id: 'g6.fsq.cloth', skill: 'G6_SQUARES', outcome: 'G6.FRAC.f', rung: 2, form: 'word',
+  fam({ id: 'g6.fsq.cloth', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION', outcome: 'MATH.G6.NUMBER.FRACTIONS.f', misMapped: false, reveals: ['M_SQUARE_TOP_ONLY', 'M_DOUBLE_THE_FRACTION'], rung: 2, form: 'word',
     draw: () => {
       const n = randInt(2, 8), d = randInt(3, 9);
       if (n >= d || gcd(n, d) > 1) return null;
@@ -515,7 +515,7 @@ export const FAMILIES = [
       steps: [`Area = ${fr(n, d)} × ${fr(n, d)}.`, `= ${fr(n * n, d * d)} m².`],
     }) }),
 
-  fam({ id: 'g6.fsq.spot', skill: 'G6_SQUARES', outcome: 'G6.FRAC.f', rung: 3, form: 'spot',
+  fam({ id: 'g6.fsq.spot', skill: 'G6_SQUARES', cskill: 'MATH.G6.NUMBER.FRACTIONS.SQUARE_OF_FRACTION', outcome: 'MATH.G6.NUMBER.FRACTIONS.f', misMapped: false, reveals: ['M_SQUARE_TOP_ONLY'], rung: 3, form: 'spot',
     draw: () => { const n = randInt(2, 8), d = randInt(3, 9); return n >= d || gcd(n, d) > 1 || n === 2 ? null : { n, d, kind: pick(['num', 'den']), p: person() }; },
     make: ({ n, d, kind, p }) => {
       const sn = kind === 'num' ? n + n : n * n, sd = kind === 'den' ? d + d : d * d;
@@ -533,7 +533,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.pct.score', skill: 'G6_PERCENTAGES_INTRO', outcome: 'G6.FRAC.g', rung: 2, form: 'word',
+  fam({ id: 'g6.pct.score', skill: 'G6_PERCENTAGES_INTRO', cskill: 'MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT', outcome: 'MATH.G6.NUMBER.FRACTIONS.g', misMapped: false, reveals: ['M_DENOMINATOR_AS_PERCENT'], rung: 2, form: 'word',
     draw: () => {
       const b = pick([20, 25, 40, 50]), a = randInt(Math.ceil(b * 0.3), b - 1), pct = (a * 100) / b;
       return Number.isInteger(pct) && uniq(pct, a, round(a / b, 2), 100 - pct) ? { a, b, pct, p: person(), sub: pick(['Maths', 'Science', 'English', 'Kiswahili']) } : null;
@@ -547,7 +547,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => v * b === a * 100 }),
 
-  fam({ id: 'g6.pct.simplest-fraction', skill: 'G6_PERCENTAGES_INTRO', outcome: 'G6.FRAC.g', rung: 2, form: 'word',
+  fam({ id: 'g6.pct.simplest-fraction', skill: 'G6_PERCENTAGES_INTRO', cskill: 'MATH.G6.NUMBER.FRACTIONS.PERCENT_TO_FRACTION', outcome: 'MATH.G6.NUMBER.FRACTIONS.h', misMapped: false, reveals: ['M_NOT_SIMPLIFIED', 'M_PERCENT_ONE_OVER'], rung: 2, form: 'word',
     draw: () => {
       const pct = pick([12, 15, 16, 24, 35, 36, 45, 55, 64, 65, 85]), g = gcd(pct, 100), n = pct / g, d = 100 / g;
       return { pct, n, d, k: randInt(0, 3), p: person() };
@@ -559,7 +559,7 @@ export const FAMILIES = [
       steps: [`${pct}% = ${fr(pct, 100)}.`, `Divide the top and the bottom by ${gcd(pct, 100)}: ${fr(n, d)}.`],
     }) }),
 
-  fam({ id: 'g6.pct.best-subject', skill: 'G6_PERCENTAGES_INTRO', outcome: 'G6.FRAC.g', rung: 3, form: 'table',
+  fam({ id: 'g6.pct.best-subject', skill: 'G6_PERCENTAGES_INTRO', cskill: 'MATH.G6.NUMBER.FRACTIONS.FRACTION_TO_PERCENT', outcome: 'MATH.G6.NUMBER.FRACTIONS.g', misMapped: false, reveals: ['M_COMPARE_NUMERATORS'], rung: 3, form: 'table',
     draw: () => {
       const subs = shuffle(['Maths', 'English', 'Science', 'Kiswahili']).slice(0, 3);
       const outs = shuffle([20, 25, 40, 50]).slice(0, 3);
@@ -578,7 +578,7 @@ export const FAMILIES = [
     }) }),
 
   // =========================================================== DECIMALS
-  fam({ id: 'g6.dec.round-scale', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.b', rung: 2, form: 'word',
+  fam({ id: 'g6.dec.round-scale', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP', outcome: 'MATH.G6.NUMBER.DECIMALS.b', misMapped: false, reveals: ['M_DROP_DIGITS'], rung: 2, form: 'word',
     draw: () => {
       const N = randInt(11000, 99999);
       if (N % 10 === 0) return null;
@@ -595,7 +595,7 @@ export const FAMILIES = [
     }),
     check: ({ x }, a) => Math.abs(a - x) <= 0.0005 + 1e-9 }),
 
-  fam({ id: 'g6.dec.round-carry', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.b', rung: 3, form: 'spot',
+  fam({ id: 'g6.dec.round-carry', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.ROUND_DECIMALS_3DP', outcome: 'MATH.G6.NUMBER.DECIMALS.b', misMapped: false, reveals: ['M_NINE_CARRY'], rung: 3, form: 'spot',
     draw: () => ({ a: randInt(1, 9), b: randInt(0, 9), c: randInt(0, 8), d: randInt(5, 9), p: person() }),
     make: ({ a, b, c, d, p }) => {
       const x = `${a}.${b}${c}9${d}`, good = `${a}.${b}${c + 1}0`, shown = `${a}.${b}${c}0`;
@@ -613,7 +613,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g6.dec.to-percent', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.c', rung: 2, form: 'word',
+  fam({ id: 'g6.dec.to-percent', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_PERCENT', outcome: 'MATH.G6.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_MOVE_ONE_PLACE'], rung: 2, form: 'word',
     draw: () => { const n = randInt(5, 95); return n % 10 === 0 ? null : { n, x: n / 100, p: person() }; },
     make: ({ n, x, p }) => ({
       question: `${p.name} spends ${x} of ${p.her} pocket money on a book. What percentage of the pocket money is that?`,
@@ -624,7 +624,7 @@ export const FAMILIES = [
     }),
     check: ({ x }, a) => a / 100 === x }),
 
-  fam({ id: 'g6.dec.to-fraction', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.c', rung: 2, form: 'word',
+  fam({ id: 'g6.dec.to-fraction', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.DECIMAL_TO_FRACTION', outcome: 'MATH.G6.NUMBER.DECIMALS.c', misMapped: false, reveals: ['M_DENOMINATOR_TEN_ALWAYS', 'M_POINT_DROPPED_THEN_ONE'], rung: 2, form: 'word',
     draw: () => { const n = pick([12, 15, 24, 35, 45, 55, 65, 75, 85]), g = gcd(n, 100); return { n, x: n / 100, a: n / g, b: 100 / g, k: randInt(0, 3), p: person() }; },
     make: ({ n, x, a, b, k, p }) => ({
       question: `${p.name} uses ${x} of a roll of cloth. Which fraction of the roll is that, in its simplest form?`,
@@ -633,7 +633,7 @@ export const FAMILIES = [
       steps: [`${x} = ${fr(n, 100)}.`, `Divide top and bottom by ${gcd(n, 100)}: ${fr(a, b)}.`],
     }) }),
 
-  fam({ id: 'g6.dec.table-forms', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.c', rung: 2, form: 'table',
+  fam({ id: 'g6.dec.table-forms', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.FRACTION_TO_DECIMAL', outcome: 'MATH.G6.NUMBER.DECIMALS.c', misMapped: false, reveals: ['M_DIVIDE_THE_WRONG_WAY', 'M_NUMERATOR_POINT_DENOMINATOR'], rung: 2, form: 'table',
     draw: () => {
       const L = [[1, 2], [1, 4], [3, 4], [1, 5], [2, 5], [3, 5], [4, 5], [1, 10], [3, 10], [7, 10], [1, 20], [3, 20], [7, 20], [9, 20], [1, 25], [3, 25]];
       const rows = shuffle(L).slice(0, 3), kind = pick(['dec', 'pct']);
@@ -656,7 +656,7 @@ export const FAMILIES = [
     },
     check: ({ rows, kind }, a) => { const [n, d] = rows[2]; return kind === 'dec' ? a * d === n : (a / 100) * d === n; } }),
 
-  fam({ id: 'g6.dec4.add-options', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.e', rung: 2, form: 'word',
+  fam({ id: 'g6.dec4.add-options', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.ADD_DECIMALS_4DP', outcome: 'MATH.G6.NUMBER.DECIMALS.e', misMapped: false, reveals: ['M_CARRY_ACROSS_POINT'], rung: 2, form: 'word',
     draw: () => {
       const A = randInt(11000, 59999), B = randInt(11000, 59999);
       if (A % 10 === 0 || B % 10 === 0) return null;
@@ -671,7 +671,7 @@ export const FAMILIES = [
       steps: [`${T4(A)} + ${T4(B)}, with the decimal points lined up.`, `Total: ${t[0]} kg.`],
     }) }),
 
-  fam({ id: 'g6.dec4.wire-cuts', skill: 'G6_FRACTIONS_DECIMALS', outcome: 'G6.DEC.e', rung: 3, form: 'steps',
+  fam({ id: 'g6.dec4.wire-cuts', skill: 'G6_FRACTIONS_DECIMALS', cskill: 'MATH.G6.NUMBER.DECIMALS.SUBTRACT_DECIMALS_4DP', outcome: 'MATH.G6.NUMBER.DECIMALS.f', misMapped: false, reveals: [], rung: 3, form: 'steps',
     draw: () => {
       const T = randInt(8, 12) * 10000 + 5000, c1 = randInt(10000, 39999), c2 = randInt(10000, 29999);
       return T - c1 - c2 > 10000 && c1 % 10 && c2 % 10 ? { T, c1, c2, p: person() } : null;
@@ -689,7 +689,7 @@ export const FAMILIES = [
     check: ({ T }, v) => Math.round(v[1] * 1e4) + Math.round(v[2] * 1e4) === T }),
 
   // =========================================================== INEQUALITIES
-  fam({ id: 'g6.ineq.at-least-fees', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.a', rung: 2, form: 'word',
+  fam({ id: 'g6.ineq.at-least-fees', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.a', misMapped: false, reveals: ['M_AT_LEAST_STRICT'], rung: 2, form: 'word',
     draw: () => { const s = pick([100, 150, 200, 250]), have = pick([300, 400, 500, 600]), need = have + s * randInt(4, 12) + pick([0, 50]); return { s, have, need, p: person(), k: randInt(0, 3) }; },
     make: ({ s, have, need, p, k }) => ({
       question: `${p.name} needs at least ${sh(need)} for a school trip. ${p.She} has ${sh(have)} and saves ${sh(s)} each week. After w weeks ${p.she} has enough money. Which inequality shows this?`,
@@ -698,7 +698,7 @@ export const FAMILIES = [
       steps: [`Money after w weeks: ${have} + ${s}w.`, `"At least ${sh(need)}" means ≥ ${need}.`, `So ${have} + ${s}w ≥ ${need}.`],
     }) }),
 
-  fam({ id: 'g6.ineq.count-solutions', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.a', rung: 3, form: 'word',
+  fam({ id: 'g6.ineq.count-solutions', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.FORM_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.a', misMapped: false, reveals: ['M_BOUNDARY_INCLUDED', 'M_COUNT_ENDS_WRONG'], rung: 3, form: 'word',
     draw: () => { const a = randInt(3, 20), b = a + randInt(4, 12); return { a, b }; },
     make: ({ a, b }) => ({
       question: `The number of learners on a school trip, n, is more than ${a} and at most ${b}. How many different whole numbers can n be?`,
@@ -709,7 +709,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => { let c = 0; for (let n = 0; n <= b + 5; n++) if (n > a && n <= b) c++; return c === v; } }),
 
-  fam({ id: 'g6.ineq.spot-solve', skill: 'G6_INEQUALITIES', outcome: 'G6.INEQ.c', rung: 3, form: 'spot',
+  fam({ id: 'g6.ineq.spot-solve', skill: 'G6_INEQUALITIES', cskill: 'MATH.G6.NUMBER.INEQUALITIES.SOLVE_INEQUALITY', outcome: 'MATH.G6.NUMBER.INEQUALITIES.c', misMapped: false, reveals: ['M_FLIP_THE_SYMBOL_FOR_NOTHING'], rung: 3, form: 'spot',
     draw: () => { const m = randInt(2, 6), x = randInt(3, 9), c = randInt(2, 9); return { m, c, rhs: m * x + c, x, p: person() }; },
     make: ({ m, c, rhs, x, p }) => {
       const shown = rhs + c, right = rhs - c;
@@ -727,7 +727,7 @@ export const FAMILIES = [
     } }),
 
   // =========================================================== MONEY
-  fam({ id: 'g6.money.budget-over', skill: 'G6_MONEY', outcome: 'G6.MONEY.a', rung: 3, form: 'table',
+  fam({ id: 'g6.money.budget-over', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.PREPARE_BUDGET', outcome: 'MATH.G6.MEASUR.MONEY.a', misMapped: false, reveals: [], rung: 3, form: 'table',
     draw: () => {
       const items = shuffle(['Rent', 'Food', 'Transport', 'School fees', 'Water and power']).slice(0, 4);
       const planned = items.map(() => randInt(4, 18) * 500), delta = items.map(() => pick([-500, 0, 500, 1000, 1500]));
@@ -746,7 +746,7 @@ export const FAMILIES = [
     }),
     check: ({ planned, actual }, a) => actual.reduce((x, y) => x + y, 0) - a === planned.reduce((x, y) => x + y, 0) }),
 
-  fam({ id: 'g6.money.vat-total', skill: 'G6_MONEY', outcome: 'G6.MONEY.e', rung: 2, form: 'word',
+  fam({ id: 'g6.money.vat-total', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES', outcome: 'MATH.G6.MEASUR.MONEY.e', misMapped: false, reveals: ['M_TAX_PERCENT_OFF_THE_PRICE'], rung: 2, form: 'word',
     draw: () => { const item = pick(['radio', 'mobile phone', 'bicycle', 'sewing machine', 'television']), a = price(item); return { item, a, p: person() }; },
     make: ({ item, a, p }) => {
       const vat = (a * 16) / 100;
@@ -760,7 +760,7 @@ export const FAMILIES = [
     },
     check: ({ a }, v) => v * 100 === a * 116 }),
 
-  fam({ id: 'g6.money.payslip', skill: 'G6_MONEY', outcome: 'G6.MONEY.e', rung: 2, form: 'table',
+  fam({ id: 'g6.money.payslip', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.TYPES_OF_TAXES', outcome: 'MATH.G6.MEASUR.MONEY.e', misMapped: false, reveals: [], rung: 2, form: 'table',
     draw: () => {
       const g = pick([30000, 40000, 45000, 60000, 80000]), paye = g * pick([0.1, 0.15, 0.2]), other = pick([1500, 2000, 2500, 3000]);
       return uniq(g - paye - other, g - paye, g - other, g + paye) ? { g, paye, other, p: person() } : null;
@@ -775,7 +775,7 @@ export const FAMILIES = [
     }),
     check: ({ g, paye, other }, a) => a + paye + other === g }),
 
-  fam({ id: 'g6.money.tomatoes-spoiled', skill: 'G6_MONEY', outcome: 'G6.MONEY.c', rung: 3, form: 'word',
+  fam({ id: 'g6.money.tomatoes-spoiled', skill: 'G6_MONEY', cskill: 'MATH.G6.MEASUR.MONEY.PROFIT_FROM_SALES', outcome: 'MATH.G6.MEASUR.MONEY.c', misMapped: false, reveals: ['M_SPOILT_GOODS_IGNORED'], rung: 3, form: 'word',
     draw: () => {
       const buy = price('kg of tomatoes'), n = pick([20, 25, 30, 40]), bad = pick([2, 3, 4, 5]), sell = buy + pick([30, 40, 50, 60]);
       const profit = (n - bad) * sell - n * buy;
@@ -791,7 +791,7 @@ export const FAMILIES = [
     check: ({ buy, n, bad, sell }, a) => a + n * buy === (n - bad) * sell }),
 
   // =========================================================== AREA
-  fam({ id: 'g6.area.l-floor', skill: 'G6_AREA_RECT', outcome: 'G6.AREA.b', rung: 3, form: 'steps',
+  fam({ id: 'g6.area.l-floor', skill: 'G6_AREA_RECT', cskill: 'MATH.G6.MEASUR.AREA.AREA_COMBINED', outcome: 'MATH.G6.MEASUR.AREA.b', misMapped: false, reveals: ['M_PERIMETER_FOR_AREA', 'M_CUT_OUT_ADDED'], rung: 3, form: 'steps',
     draw: () => {
       const W = randInt(10, 16), H = randInt(7, 10), w = randInt(3, W - 5), h = randInt(2, H - 4), rate = pick([300, 400, 500, 600, 800]);
       return { W, H, w, h, rate, p: person() };
@@ -809,7 +809,7 @@ export const FAMILIES = [
     }),
     check: ({ W, H, w, h, rate }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate && v[0] === W * H && v[1] === w * h }),
 
-  fam({ id: 'g6.area.circle-count', skill: 'G6_AREA_RECT', outcome: 'G6.AREA.c', rung: 2, form: 'word',
+  fam({ id: 'g6.area.circle-count', skill: 'G6_AREA_RECT', cskill: 'MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING', outcome: 'MATH.G6.MEASUR.AREA.c', misMapped: false, reveals: ['M_COUNT_WHOLE_ONLY', 'M_COUNT_PART_AS_WHOLE'], rung: 2, form: 'word',
     draw: () => {
       const r = pick([3, 4, 5, 6]);
       let whole = 0, part = 0;
@@ -833,7 +833,7 @@ export const FAMILIES = [
     }),
     check: ({ whole, part }, a) => a * 2 === whole * 2 + part }),
 
-  fam({ id: 'g6.area.circle-half-why', skill: 'G6_AREA_RECT', outcome: 'G6.AREA.c', rung: 3, form: 'why',
+  fam({ id: 'g6.area.circle-half-why', skill: 'G6_AREA_RECT', cskill: 'MATH.G6.MEASUR.AREA.AREA_CIRCLE_BY_COUNTING', outcome: 'MATH.G6.MEASUR.AREA.c', misMapped: false, reveals: [], rung: 3, form: 'why',
     draw: () => ({ p: person(), k: randInt(0, 3) }),
     make: ({ p, k }) => ({
       question: `${p.name} says the area from counting squares inside a circle is only an estimate, never exact. Why is that?`,
@@ -845,7 +845,7 @@ export const FAMILIES = [
       steps: ['Whole squares inside the circle can be counted exactly.', 'The squares cut by the curved edge are only part inside, so their share is guessed. That makes the total an estimate.'],
     }) }),
 
-  fam({ id: 'g6.area.triangle-bed', skill: 'G6_AREA_TRIANGLE', outcome: 'G6.AREA.a', rung: 2, form: 'steps',
+  fam({ id: 'g6.area.triangle-bed', skill: 'G6_AREA_TRIANGLE', cskill: 'MATH.G6.MEASUR.AREA.AREA_TRIANGLE', outcome: 'MATH.G6.MEASUR.AREA.a', misMapped: false, reveals: ['M_NO_HALF'], rung: 2, form: 'steps',
     draw: () => { const b = randInt(4, 16) * 2, h = randInt(3, 12), rate = pick([50, 80, 100, 120, 150]); return { b, h, rate, p: person() }; },
     make: ({ b, h, rate, p }) => ({
       question: `${p.name} has a triangular flower bed. The base is ${b} m and the height is ${h} m. ${p.She} plants grass that costs ${sh(rate)} for each square metre.`,
@@ -858,7 +858,7 @@ export const FAMILIES = [
     }),
     check: ({ b, h, rate }, v) => v[0] * 2 === b * h && v[1] === v[0] * rate }),
 
-  fam({ id: 'g6.area.triangle-height', skill: 'G6_AREA_TRIANGLE', outcome: 'G6.AREA.a', rung: 3, form: 'word',
+  fam({ id: 'g6.area.triangle-height', skill: 'G6_AREA_TRIANGLE', cskill: 'MATH.G6.MEASUR.AREA.AREA_TRIANGLE', outcome: 'MATH.G6.MEASUR.AREA.a', misMapped: false, reveals: ['M_NO_HALF'], rung: 3, form: 'word',
     draw: () => { const b = randInt(4, 20), h = randInt(3, 15), A = (b * h) / 2; return Number.isInteger(A) && uniq(h, A / b, b * h, A) ? { b, h, A, p: person() } : null; },
     make: ({ b, h, A, p }) => ({
       question: `A triangular sign made by ${p.name} has an area of ${A} cm² and a base of ${b} cm. What is its height, in cm?`,
@@ -870,7 +870,7 @@ export const FAMILIES = [
     check: ({ b, A }, v) => (b * v) / 2 === A }),
 
   // =========================================================== CIRCUMFERENCE
-  fam({ id: 'g6.circ.string-table', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.h', rung: 2, form: 'table',
+  fam({ id: 'g6.circ.string-table', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_PRACTICAL', outcome: 'MATH.G6.MEASUR.LENGTH.h', misMapped: false, reveals: ['M_CIRCUMFERENCE_AS_DIAMETER'], rung: 2, form: 'table',
     draw: () => {
       const ks = shuffle([1, 2, 3, 4, 5, 6, 7]).slice(0, 4), names = shuffle(['Cup', 'Tin', 'Bucket', 'Drum', 'Basin', 'Pot']).slice(0, 4);
       const [a, b, c, u] = ks;
@@ -886,7 +886,7 @@ export const FAMILIES = [
     }),
     check: ({ u }, a) => a / 22 === u }),
 
-  fam({ id: 'g6.circ.wheel-turns', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.h', rung: 3, form: 'steps',
+  fam({ id: 'g6.circ.wheel-turns', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION', outcome: 'MATH.G6.MEASUR.LENGTH.i', misMapped: false, reveals: ['M_RADIUS_FOR_DIAMETER', 'M_TURNS_NOT_USED'], rung: 3, form: 'steps',
     draw: () => { const k = pick([5, 6, 8, 9, 10, 12]), N = pick([50, 100]); return { d: 7 * k, N, p: person() }; },
     make: ({ d, N, p }) => {
       const c = (d * 22) / 7;
@@ -903,7 +903,7 @@ export const FAMILIES = [
     },
     check: ({ d, N }, v) => (v[0] * 7) / 22 === d && v[1] === v[0] * N && v[2] * 100 === v[1] }),
 
-  fam({ id: 'g6.circ.find-diameter', skill: 'G6_UNIT_CONVERSIONS', outcome: 'G6.LENGTH.h', rung: 2, form: 'word',
+  fam({ id: 'g6.circ.find-diameter', skill: 'G6_UNIT_CONVERSIONS', cskill: 'MATH.G6.MEASUR.LENGTH.CIRCUMFERENCE_DIAMETER_RELATION', outcome: 'MATH.G6.MEASUR.LENGTH.i', misMapped: false, reveals: ['M_CIRCUMFERENCE_TWICE_DIAMETER'], rung: 2, form: 'word',
     draw: () => { const k = randInt(2, 14), d = 7 * k; return { d, c: 22 * k, p: person() }; },
     make: ({ d, c, p }) => ({
       question: `The distance round the edge of ${p.name}'s round tank cover is ${c} cm. This is the circumference. Use π = 22/7. What is the diameter of the cover, in cm?`,
@@ -915,7 +915,7 @@ export const FAMILIES = [
     check: ({ c }, a) => (a * 22) / 7 === c }),
 
   // =========================================================== MASS
-  fam({ id: 'g6.mass.deliveries-table', skill: 'G6_MASS', outcome: 'G6.MASS.e', rung: 2, form: 'table',
+  fam({ id: 'g6.mass.deliveries-table', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.ADD_TONNES_KG', outcome: 'MATH.G6.MEASUR.MASS.f', misMapped: false, reveals: ['M_DIVIDE_BY_HUNDRED_TONNES'], rung: 2, form: 'table',
     draw: () => {
       const days = ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], kg = days.map(() => randInt(4, 19) * 50);
       const tot = kg.reduce((x, y) => x + y, 0);
@@ -931,7 +931,7 @@ export const FAMILIES = [
     }),
     check: ({ kg }, a) => Math.round(a * 1000) === kg.reduce((x, y) => x + y, 0) }),
 
-  fam({ id: 'g6.mass.which-in-tonnes', skill: 'G6_MASS', outcome: 'G6.MASS.a', rung: 1, form: 'direct',
+  fam({ id: 'g6.mass.which-in-tonnes', skill: 'G6_MASS', cskill: 'MATH.G6.MEASUR.MASS.TONNE_AS_UNIT', outcome: 'MATH.G6.MEASUR.MASS.a', misMapped: false, reveals: ['M_UNIT_FOR_SMALL_OBJECT'], rung: 1, form: 'direct',
     draw: () => {
       const big = pick(['A lorry full of sand', 'A ship carrying cargo', 'A wagon full of cement', 'A truck full of stones']);
       const small = shuffle(['A sack of maize', 'A goat', 'A bag of sugar', 'A bicycle', 'A school bag full of books']).slice(0, 3);
@@ -945,7 +945,7 @@ export const FAMILIES = [
     }) }),
 
   // =========================================================== TIME
-  fam({ id: 'g6.time.wait-then-ride', skill: 'G6_TIME', outcome: 'G6.TIME.e', rung: 3, form: 'table',
+  fam({ id: 'g6.time.wait-then-ride', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE', outcome: 'MATH.G6.MEASUR.TIME.e', misMapped: false, reveals: [], rung: 3, form: 'table',
     draw: () => {
       const [a, b, km] = pick([['Nairobi', 'Nakuru', 160], ['Nairobi', 'Nyeri', 150], ['Nairobi', 'Machakos', 60], ['Nairobi', 'Thika', 45], ['Nakuru', 'Eldoret', 155], ['Mombasa', 'Malindi', 120]]);
       const base = randInt(6, 9) * 60 + pick([0, 15, 30]), g = pick([30, 45, 60]);
@@ -965,7 +965,7 @@ export const FAMILIES = [
     }),
     check: ({ arrive, dep, dur, j }, a) => dep[j] + dur[j] - arrive === a }),
 
-  fam({ id: 'g6.time.shortest-trip', skill: 'G6_TIME', outcome: 'G6.TIME.e', rung: 2, form: 'table',
+  fam({ id: 'g6.time.shortest-trip', skill: 'G6_TIME', cskill: 'MATH.G6.MEASUR.TIME.TRAVEL_TIMETABLE', outcome: 'MATH.G6.MEASUR.TIME.e', misMapped: false, reveals: [], rung: 2, form: 'table',
     draw: () => {
       const [a, b, km] = pick([['Nairobi', 'Nakuru', 160], ['Nairobi', 'Nyeri', 150], ['Nakuru', 'Eldoret', 155], ['Mombasa', 'Malindi', 120], ['Kisumu', 'Kakamega', 50]]);
       const base = randInt(6, 9) * 60, g = pick([30, 45, 60]);
@@ -983,7 +983,7 @@ export const FAMILIES = [
     }) }),
 
   // =========================================================== ANGLES
-  fam({ id: 'g6.angle.sectors-point', skill: 'G6_ANGLE_PROPERTIES', outcome: 'G6.ANGLES.a', rung: 2, form: 'word',
+  fam({ id: 'g6.angle.sectors-point', skill: 'G6_ANGLE_PROPERTIES', cskill: 'MATH.G6.GEOMET.ANGLES.ANGLES_STRAIGHT_LINE_IDENTIFY', outcome: 'MATH.G6.GEOMET.ANGLES.a', misMapped: false, reveals: ['M_THREE_HUNDRED_SIXTY'], rung: 2, form: 'word',
     draw: () => { const a = randInt(8, 18) * 10, b = randInt(5, 15) * 10, x = 360 - a - b; return x > 30 && uniq(x, 180 - a - b, 360 - a, 360 - b, a + b) ? { a, b, x, p: person() } : null; },
     make: ({ a, b, x, p }) => ({
       question: `${p.name} cuts a round cake into three pieces. The three angles meet at a point in the centre. Two angles are ${a}° and ${b}°. What is the third angle, in degrees?`,
@@ -994,7 +994,7 @@ export const FAMILIES = [
     }),
     check: ({ a, b }, v) => a + b + v === 360 }),
 
-  fam({ id: 'g6.angle.line-double', skill: 'G6_ANGLE_PROPERTIES', outcome: 'G6.ANGLES.a', rung: 3, form: 'steps',
+  fam({ id: 'g6.angle.line-double', skill: 'G6_ANGLE_PROPERTIES', cskill: 'MATH.G6.GEOMET.ANGLES.SUM_ANGLES_STRAIGHT_LINE', outcome: 'MATH.G6.GEOMET.ANGLES.c', misMapped: false, reveals: ['M_THREE_HUNDRED_SIXTY'], rung: 3, form: 'steps',
     draw: () => ({ k: pick([2, 3, 4, 5, 8, 9]) }),
     make: ({ k }) => ({
       question: `Two angles lie on a straight line. One angle is ${k} times as big as the other. Use x° for the small angle.`,
@@ -1010,7 +1010,7 @@ export const FAMILIES = [
     check: ({ k }, v) => v[0] === 180 && v[2] * v[1] === v[0] && v[3] + v[2] === v[0] && v[3] === k * v[2] }),
 
   // =========================================================== DATA
-  fam({ id: 'g6.data.freq-learners', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.a', rung: 2, form: 'table',
+  fam({ id: 'g6.data.freq-learners', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.a', misMapped: false, reveals: ['M_ADD_VALUES_NOT_FREQUENCIES'], rung: 2, form: 'table',
     draw: () => {
       const fs = [1, 2, 3, 4, 5].map(() => randInt(2, 9)), tot = fs.reduce((x, y) => x + y, 0), books = fs.reduce((x, f, i) => x + f * (i + 1), 0);
       return uniq(tot, 15, books, Math.max(...fs)) ? { fs, tot, books } : null;
@@ -1025,7 +1025,7 @@ export const FAMILIES = [
     }),
     check: ({ fs }, a) => a === fs.reduce((x, y) => x + y, 0) }),
 
-  fam({ id: 'g6.data.freq-missing', skill: 'G6_DATA_COLLECTION', outcome: 'G6.DATA.a', rung: 3, form: 'table',
+  fam({ id: 'g6.data.freq-missing', skill: 'G6_DATA_COLLECTION', cskill: 'MATH.G6.DATA_H.BAR_GRAPHS.FREQUENCY_TABLE', outcome: 'MATH.G6.DATA_H.BAR_GRAPHS.a', misMapped: false, reveals: [], rung: 3, form: 'table',
     draw: () => {
       const fs = [1, 2, 3, 4].map(() => randInt(3, 12)), hole = randInt(0, 3), tot = fs.reduce((x, y) => x + y, 0), others = tot - fs[hole];
       return uniq(fs[hole], tot, others, tot - Math.max(...fs)) ? { fs, hole, tot, others, p: person() } : null;

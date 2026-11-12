@@ -123,19 +123,19 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `LIVING.PLANTS.PLANT_LIFE_CHARS`, outcome `a`, form direct, rung 1.
 
-**Q:** The leaves of a touch-me-not plant fold when a child touches them. What does this show?
-Options: The leaves fold for no reason | **Plants respond to touch** | Plants cannot react to touch | The plant is not alive
-- If a child answers "The leaves fold for no reason": Folding leaves are a response. The plant reacts to touch. Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.
-- If a child answers "Plants cannot react to touch": Folding leaves are a response. The plant reacts to touch. Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.
+**Q:** A bean seedling on a window sill bends towards the light. What does this show?
+Options: The plant is not alive | **The plant responds to light** | The plant is only leaning for no reason | Plants cannot respond to anything
+- If a child answers "The plant is not alive": A seedling grows towards the light. This is a response to its surroundings. Plants are alive even though they do not walk. They grow, make seeds, remove waste, respond to their surroundings and die.
+- If a child answers "The plant is only leaning for no reason": A seedling grows towards the light. This is a response to its surroundings. Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.
 
 ### science4.pl.life.story
 
 Skill `LIVING.PLANTS.PLANT_LIFE_CHARS`, outcome `a`, form word, rung 2.
 
-**Q:** Wanjiru says a bean plant keeps all its waste inside, because it has no toilet. What can you tell her?
-Options: **It gives out waste through its leaves** | Plants keep all the waste inside for ever | A plant is not alive so it has no waste | She is right, plants make no waste
-- If a child answers "Plants keep all the waste inside for ever": Plants lose waste gases and water through the leaves, and old leaves fall. Plants also remove waste. They give out waste gases and water through the leaves, and old leaves fall.
-- If a child answers "A plant is not alive so it has no waste": Plants lose waste gases and water through the leaves, and old leaves fall. Plants are alive even though they do not walk. They grow, make seeds, remove waste, respond to their surroundings and die.
+**Q:** Kamau keeps a pot plant on the shelf. Which sign tells him it is alive?
+Options: It does not lose anything | **New leaves grow, old ones fall** | Nothing about it ever changes | It stays in the same place
+- If a child answers "It does not lose anything": New leaves show growth. Falling old leaves show that the plant gets rid of what it does not need. Plants also remove waste. They give out waste gases and water through the leaves, and old leaves fall.
+- If a child answers "Nothing about it ever changes": New leaves show growth. Falling old leaves show that the plant gets rid of what it does not need. Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.
 
 ### science4.pl.life.spot
 
@@ -151,16 +151,16 @@ Steps: Step 1: She watches the maize in the shamba. / Step 2: She sees it stays 
 Skill `LIVING.PLANTS.PLANT_PART_FUNCTIONS`, outcome `b`, form direct, rung 1.
 
 **Q:** Which part of a plant takes in water from the soil?
-Options: The leaves | **The roots** | The stem | The flower
+Options: The flower | The leaves | **The roots** | The stem
+- If a child answers "The flower": The roots take in water and mineral salts from the soil. The stem holds the plant up and also carries water and food to the other parts.
 - If a child answers "The leaves": The roots take in water and mineral salts from the soil. The roots take in water and mineral salts from the soil. The leaves make food using sunlight.
-- If a child answers "The stem": The roots take in water and mineral salts from the soil. The roots take in water and mineral salts from the soil. The leaves make food using sunlight.
 
 ### science4.pl.part.story
 
 Skill `LIVING.PLANTS.PLANT_PART_FUNCTIONS`, outcome `b`, form word, rung 2.
 
 **Q:** Achieng puts a stem of a white flower in a glass of water with red ink. After a day the flower has red lines. What does this show?
-Options: **The stem carries water upwards** | The leaves took in the ink | The stem only holds the flower up
+Options: The leaves took in the ink | **The stem carries water upwards** | The stem only holds the flower up
 - If a child answers "The leaves took in the ink": The red water climbed up the stem. The stem carries water to other parts. The roots take in water and mineral salts from the soil. The leaves make food using sunlight.
 - If a child answers "The stem only holds the flower up": The red water climbed up the stem. The stem carries water to other parts. The stem holds the plant up and also carries water and food to the other parts.
 
@@ -168,8 +168,8 @@ Options: **The stem carries water upwards** | The leaves took in the ink | The s
 
 Skill `LIVING.PLANTS.PLANT_PART_FUNCTIONS`, outcome `b`, form spot, rung 3.
 
-**Q:** Hassan says a stem only holds the leaves. Which step has the mistake?
-Steps: Step 1: Hassan cuts a celery stem. / Step 2: He puts it in red water. / **Step 3: He sees the colour go up the stem and says the stem carries nothing.**
+**Q:** Zawadi says the stem only holds the plant up. Which step has the mistake?
+Steps: Step 1: Zawadi sees that the stem is upright and strong. / Step 2: She sees the stem is between the roots and the leaves. / **Step 3: She says it carries nothing, it only holds up the plant.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -177,26 +177,26 @@ Steps: Step 1: Hassan cuts a celery stem. / Step 2: He puts it in red water. / *
 
 Skill `LIVING.ANIMALS.ANIMAL_LIFE_CHARS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which animals lay eggs to reproduce?
-Options: No animals reproduce | **Hens and fish** | All animals give birth to live young | Only cows and goats
-- If a child answers "No animals reproduce": Birds, fish, frogs and snakes lay eggs. Cows and goats give birth to live young. An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.
-- If a child answers "All animals give birth to live young": Birds, fish, frogs and snakes lay eggs. Cows and goats give birth to live young. Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.
+**Q:** Is an earthworm an animal?
+Options: **Yes, it feeds, moves and grows** | No, it is too small | No, only animals with legs are animals | No, it hides in the soil and does not move
+- If a child answers "No, it is too small": An earthworm is an animal. It feeds, moves, grows and reproduces. Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.
+- If a child answers "No, only animals with legs are animals": An earthworm is an animal. It feeds, moves, grows and reproduces. Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.
 
 ### science4.an.life.story
 
 Skill `LIVING.ANIMALS.ANIMAL_LIFE_CHARS`, outcome `a`, form word, rung 2.
 
-**Q:** A hen sits on eggs, and the eggs hatch into chicks. What does this show about animals?
-Options: **Some animals reproduce by laying eggs** | The hen is not alive when it sits still | All animals give birth to live young | Animals can only reproduce by giving birth
-- If a child answers "The hen is not alive when it sits still": A hen lays eggs, and chicks hatch out. This is how birds reproduce. An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.
-- If a child answers "All animals give birth to live young": A hen lays eggs, and chicks hatch out. This is how birds reproduce. Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.
+**Q:** Njoki collects ants, a snail and a worm in the school garden and says none are animals because they are small. What can you tell her?
+Options: They are not alive because they hide | Only the snail is an animal | **They are all animals, small ones too** | She is right, only big animals count
+- If a child answers "They are not alive because they hide": Ants, snails and worms are all animals, even though they are small. An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.
+- If a child answers "Only the snail is an animal": Ants, snails and worms are all animals, even though they are small. Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.
 
 ### science4.an.life.spot
 
 Skill `LIVING.ANIMALS.ANIMAL_LIFE_CHARS`, outcome `a`, form spot, rung 3.
 
-**Q:** Eunice says a butterfly is not an animal. Which step has the mistake?
-Steps: Step 1: Eunice looks at a butterfly in the garden. / Step 2: It feeds on a flower and flies away. / **Step 3: She says only big animals are animals.**
+**Q:** Lucy says a worm is not an animal. Which step has the mistake?
+Steps: Step 1: Lucy digs up a worm. / Step 2: It moves, feeds on dead leaves and grows. / **Step 3: She says it is too small to count as an animal.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -205,7 +205,7 @@ Steps: Step 1: Eunice looks at a butterfly in the garden. / Step 2: It feeds on 
 Skill `LIVING.ANIMALS.VERTEBRATE_SORT`, outcome `b`, form direct, rung 1.
 
 **Q:** Is a spider a vertebrate or an invertebrate?
-Options: A vertebrate, its body is hard | A vertebrate, it walks on legs | A vertebrate, it has eight legs | **An invertebrate**
+Options: A vertebrate, its body is hard | **An invertebrate** | A vertebrate, it walks on legs | A vertebrate, it has eight legs
 - If a child answers "A vertebrate, its body is hard": A spider has eight legs but no backbone, so it is an invertebrate. A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.
 - If a child answers "A vertebrate, it walks on legs": A spider has eight legs but no backbone, so it is an invertebrate. A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.
 
@@ -213,37 +213,37 @@ Options: A vertebrate, its body is hard | A vertebrate, it walks on legs | A ver
 
 Skill `LIVING.ANIMALS.VERTEBRATE_SORT`, outcome `b`, form word, rung 2.
 
-**Q:** Which list has only vertebrates?
-Options: Cow, hen, ant, tilapia | Cow, snail, snake, tilapia | **Cow, hen, snake, tilapia** | Cow, hen, snake, earthworm
-- If a child answers "Cow, hen, ant, tilapia": Cow, hen, snake and tilapia all have backbones. A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.
-- If a child answers "Cow, snail, snake, tilapia": Cow, hen, snake and tilapia all have backbones. A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.
+**Q:** Which list has only invertebrates?
+Options: Ant, spider, earthworm, goat | Ant, spider, frog, snail | Ant, snake, earthworm, snail | **Ant, spider, earthworm, snail**
+- If a child answers "Ant, spider, earthworm, goat": Ant, spider, earthworm and snail have no backbone. A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.
+- If a child answers "Ant, spider, frog, snail": Ant, spider, earthworm and snail have no backbone. A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.
 
 ### science4.an.vsort.table
 
 Skill `LIVING.ANIMALS.VERTEBRATE_SORT`, outcome `b`, form table, rung 2.
 
-**Q:** Read the table. Which animal is an invertebrate?
-Options: **Animal C** | Animal B | Animal D | Animal A
-- If a child answers "Animal B": Animal C has no backbone. A snake has a backbone, with many small bones in a row. So a snake is a vertebrate even without legs.
-- If a child answers "Animal D": Animal C has no backbone. A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.
+**Q:** The table shows what a class found. Which animal is a vertebrate?
+Options: Animal C | Animal A | Animal D | **Animal B**
+- If a child answers "Animal C": Animal B has a backbone, so it is a vertebrate. A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.
+- If a child answers "Animal A": Animal B has a backbone, so it is a vertebrate. A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.
 
 ### science4.an.vrule.direct
 
 Skill `LIVING.ANIMALS.VERTEBRATE_RULE`, outcome `b`, form direct, rung 1.
 
-**Q:** What makes an animal a vertebrate?
-Options: It lives in water | It has four legs | It is a big animal | **It has a backbone**
-- If a child answers "It lives in water": A backbone is what makes an animal a vertebrate. Where an animal lives does not decide it. A crab lives in water but has no backbone, so it is an invertebrate.
-- If a child answers "It has four legs": A backbone is what makes an animal a vertebrate. The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.
+**Q:** Why is a tiny chick a vertebrate?
+Options: **It has a backbone** | It has two legs | It is not, because it is small | It lives near water
+- If a child answers "It has two legs": A chick is small but has a backbone. The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.
+- If a child answers "It is not, because it is small": A chick is small but has a backbone. Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.
 
 ### science4.an.vrule.story
 
 Skill `LIVING.ANIMALS.VERTEBRATE_RULE`, outcome `b`, form word, rung 2.
 
-**Q:** Joseph says all small animals are invertebrates. Which animal shows he is wrong?
-Options: An ant, which has no backbone | A tiny worm, which has no backbone | **A new chick, which has a backbone** | A spider, which has eight legs
-- If a child answers "An ant, which has no backbone": A chick is small but has a backbone. Size is not the rule. Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.
-- If a child answers "A tiny worm, which has no backbone": A chick is small but has a backbone. Size is not the rule. Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.
+**Q:** Mutiso finds a long, thin animal in the soil with no legs. He says it must be a snake and therefore a vertebrate. How can he check?
+Options: Measure its size | **Look for a backbone** | Check whether it has wings | Count its legs
+- If a child answers "Measure its size": The backbone decides. A snake has one and an earthworm does not. Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.
+- If a child answers "Check whether it has wings": The backbone decides. A snake has one and an earthworm does not. The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.
 
 ### science4.an.vrule.spot
 
@@ -258,26 +258,26 @@ Steps: Step 1: Wekesa catches a butterfly. / Step 2: He sees its wings and six l
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which part is NOT in the digestive system?
-Options: **The windpipe** | The stomach | The oesophagus | The large intestine
-- If a child answers "The stomach": The windpipe carries air to the lungs. It belongs to the breathing system. The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.
-- If a child answers "The oesophagus": The windpipe carries air to the lungs. It belongs to the breathing system. The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.
+**Q:** Which tube carries food from the mouth to the stomach?
+Options: **The food pipe** | The large intestine | The small intestine | The windpipe
+- If a child answers "The large intestine": The oesophagus, or food pipe, carries food to the stomach. The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.
+- If a child answers "The small intestine": The oesophagus, or food pipe, carries food to the stomach. The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.
 
 ### science4.dg.parts.story
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS`, outcome `a`, form word, rung 2.
 
-**Q:** Naserian swallows a mouthful of ugali. Which tube takes it down to her stomach?
-Options: The windpipe | The small intestine | The anus | **The oesophagus**
-- If a child answers "The windpipe": The oesophagus is the food pipe. It takes food to the stomach. The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.
-- If a child answers "The small intestine": The oesophagus is the food pipe. It takes food to the stomach. The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.
+**Q:** A child chokes because food went down the wrong tube. Which tube is for air only?
+Options: **The windpipe** | The large intestine | The oesophagus | The small intestine
+- If a child answers "The large intestine": The windpipe carries air. The oesophagus carries food. The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.
+- If a child answers "The oesophagus": The windpipe carries air. The oesophagus carries food. The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.
 
 ### science4.dg.parts.spot
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS`, outcome `a`, form spot, rung 3.
 
-**Q:** Amina says the large intestine takes in most of the food. Which step has the mistake?
-Steps: Step 1: Amina looks at a body chart. / Step 2: She sees the wide large intestine. / **Step 3: She says it takes in most of the food.**
+**Q:** Peter says the stomach takes the digested food into the blood. Which step has the mistake?
+Steps: Step 1: Peter eats a meal. / Step 2: The stomach churns it. / **Step 3: He says most of it goes into the blood from the stomach.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -285,19 +285,19 @@ Steps: Step 1: Amina looks at a body chart. / Step 2: She sees the wide large in
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER`, outcome `a`, form direct, rung 1.
 
-**Q:** Which part comes just before the large intestine?
-Options: The stomach | The oesophagus | The anus | **The small intestine**
-- If a child answers "The stomach": The small intestine comes before the large intestine. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
-- If a child answers "The oesophagus": The small intestine comes before the large intestine. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
+**Q:** Which list shows the correct order of the path of food?
+Options: **Mouth, oesophagus, stomach, small intestine, large intestine, anus** | Stomach, mouth, oesophagus, small intestine, large intestine, anus | Mouth, oesophagus, stomach, large intestine, small intestine, anus | Mouth, stomach, oesophagus, small intestine, large intestine, anus
+- If a child answers "Stomach, mouth, oesophagus, small intestine, large intestine, anus": Food goes mouth, oesophagus, stomach, small intestine, large intestine, anus. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
+- If a child answers "Mouth, oesophagus, stomach, large intestine, small intestine, anus": Food goes mouth, oesophagus, stomach, small intestine, large intestine, anus. After the stomach, food goes to the small intestine, and then to the large intestine.
 
 ### science4.dg.order.story
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER`, outcome `a`, form word, rung 2.
 
-**Q:** A teacher draws the parts on the board but swaps two. Which drawing order is right?
-Options: Small intestine, stomach, large intestine | Large intestine, small intestine, stomach | Stomach, large intestine, small intestine | **Stomach, small intestine, large intestine**
-- If a child answers "Small intestine, stomach, large intestine": Food goes from the stomach to the small intestine and then the large intestine. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
-- If a child answers "Large intestine, small intestine, stomach": Food goes from the stomach to the small intestine and then the large intestine. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
+**Q:** Juma swallows a piece of mandazi. Which part does the mandazi reach just after the oesophagus?
+Options: **The stomach** | The small intestine | The large intestine | The anus
+- If a child answers "The small intestine": After the oesophagus, food reaches the stomach. After the stomach, food goes to the small intestine, and then to the large intestine.
+- If a child answers "The large intestine": After the oesophagus, food reaches the stomach. Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.
 
 ### science4.dg.order.spot
 
@@ -312,19 +312,19 @@ Steps: Step 1: Ibrahim looks at the word small. / Step 2: He says the large inte
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH`, outcome `b`, form direct, rung 1.
 
-**Q:** Before eating, what should be done to mangoes and to the hands?
-Options: Wash only the mangoes | Wash neither, mangoes have skins | Rinse the mangoes with water from a puddle | **Wash both the mangoes and the hands**
-- If a child answers "Wash only the mangoes": Wash the fruit and wash the hands with soap. Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.
-- If a child answers "Wash neither, mangoes have skins": Wash the fruit and wash the hands with soap. Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.
+**Q:** Which habit protects the digestive system?
+Options: Washing only the food and not the hands | **Washing hands with soap before eating** | Drinking water straight from a stream | Drinking soda instead of water
+- If a child answers "Washing only the food and not the hands": Soap on the hands washes off germs that could reach the mouth. Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.
+- If a child answers "Drinking water straight from a stream": Soap on the hands washes off germs that could reach the mouth. Clear water can still hold germs. Boil or treat water before drinking.
 
 ### science4.dg.health.story
 
 Skill `LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH`, outcome `b`, form word, rung 2.
 
-**Q:** Zuhura skips fruits and vegetables and eats only chips and sweets every day. What may happen?
-Options: **She may get constipated** | Nothing, if she drinks stream water | Nothing, sweets can replace a meal | Nothing, as long as she washes the sweets
-- If a child answers "Nothing, if she drinks stream water": Fruits and vegetables give fibre that helps food move through. Clear water can still hold germs. Boil or treat water before drinking.
-- If a child answers "Nothing, sweets can replace a meal": Fruits and vegetables give fibre that helps food move through. Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.
+**Q:** Kamau is thirsty after football. His friend offers him a bottle of soda. What is better for his body?
+Options: The soda, it is the same as water | **Clean water** | Water from the roadside ditch | Two bottles of soda
+- If a child answers "The soda, it is the same as water": Clean water is better. Soda does not replace water. Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.
+- If a child answers "Water from the roadside ditch": Clean water is better. Soda does not replace water. Clear water can still hold germs. Boil or treat water before drinking.
 
 ### science4.dg.health.spot
 
@@ -340,52 +340,52 @@ Steps: Step 1: Joy is hungry at break. / Step 2: She has money for sweets. / **S
 Skill `MATTER.PROPERTIES_OF_MATTER.STATES_SORT`, outcome `a`, form direct, rung 1.
 
 **Q:** Is sand a solid, a liquid or a gas?
-Options: None of them, it is too soft | A liquid, because it pours | A gas | **A solid**
+Options: None of them, it is too soft | A gas | **A solid** | A liquid, because it pours
 - If a child answers "None of them, it is too soft": Sand pours, but each grain is a small solid with its own shape. A sponge is soft but it keeps its own shape, so it is a solid.
-- If a child answers "A liquid, because it pours": Sand pours, but each grain is a small solid with its own shape. Sand pours, but each grain is a small solid with its own shape. Sand is a solid.
+- If a child answers "A gas": Sand pours, but each grain is a small solid with its own shape. Air is a gas. A gas is matter. It takes up room even if we cannot see it.
 
 ### science4.pm.sort.list
 
 Skill `MATTER.PROPERTIES_OF_MATTER.STATES_SORT`, outcome `a`, form word, rung 2.
 
-**Q:** Which list has only gases?
-Options: Air, a sponge, steam | Air, steam, sand | Air, milk, the air in a tyre | **Air, steam, the air in a tyre**
-- If a child answers "Air, a sponge, steam": Air, steam and the air in a tyre are gases. A sponge is soft but it keeps its own shape, so it is a solid.
-- If a child answers "Air, steam, sand": Air, steam and the air in a tyre are gases. Air is a gas. A gas is matter. It takes up room even if we cannot see it.
+**Q:** Njeri puts salt, flour, sugar and rice in four bowls. She says they are liquids because they pour. What is right?
+Options: She is right, they are liquids | They are gases that settle | **They are all solids, small grains** | They are not solids because they are soft
+- If a child answers "She is right, they are liquids": Grains pour, but each grain is a solid. Sand pours, but each grain is a small solid with its own shape. Sand is a solid.
+- If a child answers "They are gases that settle": Grains pour, but each grain is a solid. Sand pours, but each grain is a small solid with its own shape. Sand is a solid.
 
 ### science4.pm.sort.table
 
 Skill `MATTER.PROPERTIES_OF_MATTER.STATES_SORT`, outcome `a`, form table, rung 2.
 
 **Q:** A learner records four things. Which one is a gas?
-Options: Substance B | Substance A | **Substance D** | Substance C
-- If a child answers "Substance B": Substance D spreads to fill its container, so it is a gas. Sand pours, but each grain is a small solid with its own shape. Sand is a solid.
+Options: Substance C | Substance A | Substance B | **Substance D**
+- If a child answers "Substance C": Substance D spreads to fill its container, so it is a gas. A sponge is soft but it keeps its own shape, so it is a solid.
 - If a child answers "Substance A": Substance D spreads to fill its container, so it is a gas. Air is a gas. A gas is matter. It takes up room even if we cannot see it.
 
 ### science4.pm.prop.direct
 
 Skill `MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES`, outcome `b`, form direct, rung 1.
 
-**Q:** Water is poured from a tall glass into a wide basin. What happens to its shape?
-Options: It keeps its own shape | It gets bigger | It keeps the shape of the glass | **It takes the shape of the basin**
-- If a child answers "It keeps its own shape": A liquid takes the shape of its container. A liquid takes the shape of its container. It has no shape of its own.
-- If a child answers "It gets bigger": A liquid takes the shape of its container. The amount stays the same. Only the shape changes. One litre is still one litre.
+**Q:** One litre of water is poured from a bottle into a wide basin. How much water is there now?
+Options: Less than one litre, it is spread out | **One litre, the same amount** | Water has no amount | More than one litre, it looks bigger
+- If a child answers "Less than one litre, it is spread out": The shape changes but the amount stays the same. The amount stays the same. Only the shape changes. One litre is still one litre.
+- If a child answers "Water has no amount": The shape changes but the amount stays the same. A liquid takes the shape of its container. It has no shape of its own.
 
 ### science4.pm.prop.story
 
 Skill `MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES`, outcome `b`, form word, rung 2.
 
-**Q:** A cook pours cooking oil from a bottle into a pan. What happens to the shape of the oil?
-Options: It stays in a round ball | **It takes the shape of the pan** | It becomes more oil | It keeps the shape of the bottle
-- If a child answers "It stays in a round ball": A liquid takes the shape of its container. A liquid takes the shape of its container. It has no shape of its own.
-- If a child answers "It becomes more oil": A liquid takes the shape of its container. The amount stays the same. Only the shape changes. One litre is still one litre.
+**Q:** Omondi pours one cup of milk into a tall glass, and then into a wide bowl. He says there is more milk in the bowl. What is right?
+Options: There is less milk in the bowl | The milk has its own shape in each | **The amount is the same** | He is right, the bowl holds more milk
+- If a child answers "There is less milk in the bowl": The amount of milk stays the same. Only its shape changes. The amount stays the same. Only the shape changes. One litre is still one litre.
+- If a child answers "The milk has its own shape in each": The amount of milk stays the same. Only its shape changes. A liquid takes the shape of its container. It has no shape of its own.
 
 ### science4.pm.prop.spot
 
 Skill `MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES`, outcome `b`, form spot, rung 3.
 
-**Q:** Paul says air weighs nothing. Which step has the mistake?
-Steps: Step 1: Paul weighs a flat balloon. / Step 2: He blows it up and weighs it again. / **Step 3: He says the air inside has no weight.**
+**Q:** Nancy says half a litre of juice becomes smaller when poured into a tall thin glass. Which step has the mistake?
+Steps: Step 1: Nancy measures half a litre of juice. / Step 2: She pours it into a tall thin glass. / **Step 3: She says there is now less juice.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -393,53 +393,53 @@ Steps: Step 1: Paul weighs a flat balloon. / Step 2: He blows it up and weighs i
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY`, outcome `a`, form direct, rung 1.
 
-**Q:** Is a glass bottle decomposable or non-decomposable?
-Options: **Non-decomposable** | Decomposable, it goes away when buried | Decomposable, it breaks into pieces | Decomposable, because it changes in the sun
-- If a child answers "Decomposable, it goes away when buried": Glass does not rot, even when it breaks. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
-- If a child answers "Decomposable, it breaks into pieces": Glass does not rot, even when it breaks. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
+**Q:** Is a banana peel decomposable or non-decomposable?
+Options: **Decomposable** | Non-decomposable, like a plastic bag | Non-decomposable, it turns brown | Non-decomposable, it is only food waste
+- If a child answers "Non-decomposable, like a plastic bag": A banana peel rots into soil, so it is decomposable. A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.
+- If a child answers "Non-decomposable, it turns brown": A banana peel rots into soil, so it is decomposable. A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.
 
 ### science4.sw.class.list
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY`, outcome `a`, form word, rung 2.
 
-**Q:** Which list has only decomposable waste?
-Options: Banana peel, glass bottle, vegetable leaves | Banana peel, tin can, vegetable leaves | Banana peel, plastic bag, vegetable leaves | **Banana peel, maize cob, vegetable leaves**
-- If a child answers "Banana peel, glass bottle, vegetable leaves": Banana peel, maize cob and vegetable leaves all rot. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
-- If a child answers "Banana peel, tin can, vegetable leaves": Banana peel, maize cob and vegetable leaves all rot. A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.
+**Q:** Chebet says a rusty tin can will rot away like a mango peel. What is right?
+Options: **It will not rot; rust is not rot** | It will disappear in the soil | She is right, rust shows it is rotting | It will rot in a month
+- If a child answers "It will disappear in the soil": A tin rusts slowly but does not rot into soil. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
+- If a child answers "She is right, rust shows it is rotting": A tin rusts slowly but does not rot into soil. A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.
 
 ### science4.sw.class.table
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY`, outcome `a`, form table, rung 2.
 
-**Q:** Read the table. Which item is non-decomposable?
-Options: Item D | Item B | Item C | **Item A**
-- If a child answers "Item D": Item A is still whole after a month, so it is non-decomposable. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
-- If a child answers "Item B": Item A is still whole after a month, so it is non-decomposable. A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.
+**Q:** A class sorts waste into two heaps. Which item belongs in the decomposable heap?
+Options: Item D | **Item B** | Item A | Item C
+- If a child answers "Item D": Item B is a plant waste that rots. Glass does not rot. Buried glass stays for ages, so it is non-decomposable.
+- If a child answers "Item A": Item B is a plant waste that rots. A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.
 
 ### science4.sw.danger.direct
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS`, outcome `b`, form direct, rung 1.
 
-**Q:** What can happen when waste blocks a drain?
-Options: Nothing, only a smell comes out | The drain gets cleaner | The water goes faster | **Water cannot flow and may flood**
-- If a child answers "Nothing, only a smell comes out": A blocked drain causes floods and still water where mosquitoes breed. A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.
-- If a child answers "The drain gets cleaner": A blocked drain causes floods and still water where mosquitoes breed. Burning waste makes smoke that pollutes the air and can make people sick.
+**Q:** What can a heap of rotting waste breed?
+Options: Fresh vegetables for sale | Only a bad smell and nothing else | Nothing, it only smells | **Flies and rats, which spread diseases**
+- If a child answers "Fresh vegetables for sale": Flies and rats breed in waste and spread diseases. Burning waste makes smoke that pollutes the air and can make people sick.
+- If a child answers "Only a bad smell and nothing else": Flies and rats breed in waste and spread diseases. A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.
 
 ### science4.sw.danger.story
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS`, outcome `b`, form word, rung 2.
 
 **Q:** Beside the market there is a big heap of rotting waste. Flies from it land on the food. What may happen?
-Options: Nothing, flies are harmless | The waste cleans the food | **People can get diarrhoea** | The food will get fresher
+Options: **People can get diarrhoea** | Only a bad smell and nothing else | Nothing, flies are harmless | The waste cleans the food
+- If a child answers "Only a bad smell and nothing else": Flies carry germs from waste to food, which can cause disease. A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.
 - If a child answers "Nothing, flies are harmless": Flies carry germs from waste to food, which can cause disease. A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.
-- If a child answers "The waste cleans the food": Flies carry germs from waste to food, which can cause disease. Burning waste makes smoke that pollutes the air and can make people sick.
 
 ### science4.sw.danger.spot
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS`, outcome `b`, form spot, rung 3.
 
-**Q:** Esther says waste in a drain only smells and causes no floods. Which step has the mistake?
-Steps: Step 1: Esther sees waste in the drain. / Step 2: The water stops flowing. / **Step 3: She says the blocked drain cannot cause a flood.**
+**Q:** Millicent says the only problem with a waste heap is the smell. Which step has the mistake?
+Steps: Step 1: Millicent walks past a waste heap. / Step 2: She notices a bad smell. / **Step 3: She says there is no other danger.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -447,26 +447,26 @@ Steps: Step 1: Esther sees waste in the drain. / Step 2: The water stops flowing
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE`, outcome `c`, form direct, rung 1.
 
-**Q:** Which is the best way to deal with leftover food and peelings?
-Options: **Make compost with them** | Throw them in the river | Mix them with plastic in one bin | Burn them
-- If a child answers "Throw them in the river": Food waste rots into compost that feeds the garden. Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.
-- If a child answers "Mix them with plastic in one bin": Food waste rots into compost that feeds the garden. Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.
+**Q:** Which waste can go in the compost pit?
+Options: Plastic bottles and leaves | Only waste that floats | **Vegetable peels and dry leaves** | Vegetable peels and plastic bags
+- If a child answers "Plastic bottles and leaves": Only waste that rots goes in the compost pit. Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.
+- If a child answers "Only waste that floats": Only waste that rots goes in the compost pit. Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.
 
 ### science4.sw.manage.story
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE`, outcome `c`, form word, rung 2.
 
 **Q:** Muthoni digs a compost pit at home. What can she put in it?
-Options: Waste that has been burnt only | Plastic cups and peelings | **Peelings, leaves and food scraps** | Peelings, leaves and plastic bags
-- If a child answers "Waste that has been burnt only": The pit is for waste that rots. Plastic bottles are better recycled or reused. Burning makes smoke that pollutes the air.
+Options: **Peelings, leaves and food scraps** | Plastic cups and peelings | Waste from the river | Peelings, leaves and plastic bags
 - If a child answers "Plastic cups and peelings": The pit is for waste that rots. Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.
+- If a child answers "Waste from the river": The pit is for waste that rots. Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.
 
 ### science4.sw.manage.spot
 
 Skill `MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE`, outcome `c`, form spot, rung 3.
 
-**Q:** Brian says the best plan for all rubbish is to burn it. Which step has the mistake?
-Steps: Step 1: Brian collects the rubbish in one heap. / Step 2: He lights a fire. / **Step 3: He says burning is the right way for every kind of waste.**
+**Q:** Joyce says burn the school's plastic bottles each Friday. Which step has the mistake?
+Steps: Step 1: Joyce sees many plastic bottles. / Step 2: She thinks of the easiest way to remove them. / **Step 3: She says burning them is safe and best.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -474,26 +474,26 @@ Steps: Step 1: Brian collects the rubbish in one heap. / Step 2: He lights a fir
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_MEANING`, outcome `a`, form direct, rung 1.
 
-**Q:** Why must we conserve water?
-Options: Rain always fills the rivers | **Clean water is not always enough** | Water never runs out, so we do not need to | So that we can keep it all and not drink it
-- If a child answers "Rain always fills the rivers": In dry seasons, rivers and wells can dry up. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
-- If a child answers "Water never runs out, so we do not need to": In dry seasons, rivers and wells can dry up. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
+**Q:** Which is an example of conserving water?
+Options: Pouring clean water away after washing | **Reusing vegetable-washing water on plants** | Storing water and never using it | Treating water with chlorine
+- If a child answers "Pouring clean water away after washing": Reusing water saves it. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
+- If a child answers "Storing water and never using it": Reusing water saves it. To conserve is to use wisely and not waste, so that there is enough for later.
 
 ### science4.wc.mean.story
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_MEANING`, outcome `a`, form word, rung 2.
 
-**Q:** A farmer collects rainwater from the roof into a tank and uses it carefully in the dry season. Is he conserving water?
-Options: **Yes, he saves and uses it wisely** | No, he should never use any of it | No, water never runs out so why save | No, he has not boiled the water first
-- If a child answers "No, he should never use any of it": Saving rainwater and using it wisely is conserving water. To conserve is to use wisely and not waste, so that there is enough for later.
-- If a child answers "No, water never runs out so why save": Saving rainwater and using it wisely is conserving water. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
+**Q:** Wekesa says there is no need to save water because it rains every year. What can you tell him?
+Options: He is right, water never runs out | It always rains enough for everyone | He should store it all and never use it | **Dry seasons can dry up rivers and wells**
+- If a child answers "He is right, water never runs out": Clean water is not always enough, so we conserve it. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
+- If a child answers "It always rains enough for everyone": Clean water is not always enough, so we conserve it. Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.
 
 ### science4.wc.mean.spot
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_MEANING`, outcome `a`, form spot, rung 3.
 
-**Q:** Philip says it is fine to waste water because rain is free. Which step has the mistake?
-Steps: Step 1: Philip sees rain fall on the roof. / Step 2: He knows rain does not cost money. / **Step 3: He says water will never be short.**
+**Q:** Sharon says water cannot run out, so we need not conserve it. Which step has the mistake?
+Steps: Step 1: Sharon sees the river is full in the rainy season. / Step 2: She thinks of the water in the river. / **Step 3: She says it will always be full.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -501,26 +501,26 @@ Steps: Step 1: Philip sees rain fall on the roof. / Step 2: He knows rain does n
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_METHODS`, outcome `b`, form direct, rung 1.
 
-**Q:** Amina brushes her teeth. What should she do with the tap?
-Options: **Close it** | Open it more | Use a hose | Leave it running
-- If a child answers "Open it more": A running tap wastes a lot of water. A running tap wastes a lot of water. Close it while you brush or soap.
-- If a child answers "Use a hose": A running tap wastes a lot of water. A watering can uses less water and puts it where it is needed.
+**Q:** What can a school do with rain that falls on its roof?
+Options: Use it to fill a running tap | Let it run into the drain | **Collect it in a tank and use it** | Spray it over the playground
+- If a child answers "Use it to fill a running tap": Rainwater from the roof is useful for washing and watering. A running tap wastes a lot of water. Close it while you brush or soap.
+- If a child answers "Let it run into the drain": Rainwater from the roof is useful for washing and watering. Rainwater from the roof can be collected in tanks and used for washing and watering.
 
 ### science4.wc.meth.story
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_METHODS`, outcome `b`, form word, rung 2.
 
-**Q:** The roof of the school classroom has gutters that lead to a tank. What does this help with?
-Options: Sending rain into the drain faster | Keeping the tap running | **Collecting rainwater to use later** | Watering with a hose
-- If a child answers "Sending rain into the drain faster": Gutters bring rainwater into a tank so it can be used in dry weather. Rainwater from the roof can be collected in tanks and used for washing and watering.
-- If a child answers "Keeping the tap running": Gutters bring rainwater into a tank so it can be used in dry weather. A running tap wastes a lot of water. Close it while you brush or soap.
+**Q:** A pipe near the school gate drips all day. What should the school do?
+Options: Cover the drip with soil | Use the water to wash the compound | Leave it, drips are small | **Mend the pipe soon**
+- If a child answers "Cover the drip with soil": Many drips add up to a lot of waste. Rainwater from the roof can be collected in tanks and used for washing and watering.
+- If a child answers "Use the water to wash the compound": Many drips add up to a lot of waste. A watering can uses less water and puts it where it is needed.
 
 ### science4.wc.meth.spot
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_METHODS`, outcome `b`, form spot, rung 3.
 
-**Q:** Moses says a tap that leaks is not important. Which step has the mistake?
-Steps: Step 1: Moses sees a tap that drips. / Step 2: The drips are slow. / **Step 3: He says a drip cannot waste much water.**
+**Q:** Edwin says a hose is the best way to water four tomato plants. Which step has the mistake?
+Steps: Step 1: Edwin has four tomato plants. / Step 2: He fetches a hose. / **Step 3: He says a hose uses less water than a can.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -528,26 +528,26 @@ Steps: Step 1: Moses sees a tap that drips. / Step 2: The drips are slow. / **St
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE`, outcome `c`, form direct, rung 1.
 
-**Q:** Why is it important to save water?
-Options: **So there is enough for all, now and later** | Only to pay a smaller water bill each month | So that the taps and pipes last longer | Because water is always plenty, everywhere
-- If a child answers "Only to pay a smaller water bill each month": Saving water keeps enough for everyone and for the future. We save water so there is enough for everyone now and later, and not only to save money.
-- If a child answers "So that the taps and pipes last longer": Saving water keeps enough for everyone and for the future. We save water so there is enough for everyone now and later, and not only to save money.
+**Q:** What can happen in a long dry season?
+Options: Only bills rise | Nothing, there is always enough water | **Rivers and wells can dry up** | Only people go thirsty
+- If a child answers "Only bills rise": Dry seasons can leave rivers and wells empty. We save water so there is enough for everyone now and later, and not only to save money.
+- If a child answers "Nothing, there is always enough water": Dry seasons can leave rivers and wells empty. In a long dry season rivers and wells can dry up, so it is important to save water before it happens.
 
 ### science4.wc.imp.story
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE`, outcome `c`, form word, rung 2.
 
-**Q:** A girl says she saves water only to keep the bill low. A friend says there is another reason. What is it?
-Options: **All living things need it and it may run short** | Water never runs out, even in a drought | Only people need water, nothing else does | There is no other reason to save water at all
-- If a child answers "Water never runs out, even in a drought": Saving water keeps enough for everyone, not only money. In a long dry season rivers and wells can dry up, so it is important to save water before it happens.
-- If a child answers "Only people need water, nothing else does": Saving water keeps enough for everyone, not only money. People, animals and plants all need water to live.
+**Q:** In a dry year, Mama Atieno walks two hours each day to fetch water. What does this show?
+Options: Only people suffer when water is short | **Water is hard to find, so do not waste it** | Water only costs money | Water is always plenty near homes
+- If a child answers "Only people suffer when water is short": When water is short it is hard to find and carry. People, animals and plants all need water to live.
+- If a child answers "Water only costs money": When water is short it is hard to find and carry. We save water so there is enough for everyone now and later, and not only to save money.
 
 ### science4.wc.imp.spot
 
 Skill `MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE`, outcome `c`, form spot, rung 3.
 
-**Q:** Ken says we save water only to pay a smaller bill. Which step has the mistake?
-Steps: Step 1: Ken looks at the family water bill. / Step 2: He sees it is smaller when less water is used. / **Step 3: He says money is the only reason to save water.**
+**Q:** Alice says only people need water. Which step has the mistake?
+Steps: Step 1: Alice drinks a cup of water. / Step 2: She sees the cows drink at the trough. / **Step 3: She says animals and plants do not need water.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -556,25 +556,25 @@ Steps: Step 1: Ken looks at the family water bill. / Step 2: He sees it is small
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which of these will a magnet pick up?
-Options: **An iron nail** | An aluminium spoon | A copper wire | A coin made of brass
-- If a child answers "An aluminium spoon": A magnet picks up only things made of iron or steel. A magnet picks up only iron and steel things, not all metals.
+Options: **An iron nail** | A coin made of brass | A copper wire | An aluminium spoon
+- If a child answers "A coin made of brass": A magnet picks up only things made of iron or steel. A magnet picks up only iron and steel things, not all metals.
 - If a child answers "A copper wire": A magnet picks up only things made of iron or steel. A magnet picks up only iron and steel things, not all metals.
 
 ### science4.ff.type.story
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** Kamau pulls a heavy cart along the road. Which kind of force is he using?
-Options: Gravity | Muscular force, a push | Magnetic force | **Muscular force, a pull**
-- If a child answers "Gravity": He uses the force of his muscles to pull the cart towards him. Gravity pulls down on everything all the time, even things at rest.
-- If a child answers "Muscular force, a push": He uses the force of his muscles to pull the cart towards him. Moving something towards you is a pull. Moving something away from you is a push.
+**Q:** Wanjiru pushes a door open. What did she use?
+Options: A magnet | **A push, from the muscles of her arm** | Gravity, which makes doors open | A pull
+- If a child answers "A magnet": She pushed the door away from her. A magnet picks up only iron and steel things, not all metals.
+- If a child answers "Gravity, which makes doors open": She pushed the door away from her. Gravity pulls down on everything all the time, even things at rest.
 
 ### science4.ff.type.spot
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES`, outcome `a`, form spot, rung 3.
 
-**Q:** Joan says gravity does not act on a book on a table. Which step has the mistake?
-Steps: Step 1: Joan puts a book on a table. / Step 2: The book stays still. / **Step 3: She says gravity is not pulling on it.**
+**Q:** Nancy says a magnet picks up copper wire. Which step has the mistake?
+Steps: Step 1: Nancy touches a magnet to copper wire. / Step 2: Nothing happens. / **Step 3: She says copper must be pulled by a magnet.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -582,26 +582,26 @@ Steps: Step 1: Joan puts a book on a table. / Step 2: The book stays still. / **
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which of these is an effect of a force?
-Options: It can only start a movement | It must keep acting for things to keep moving | It can never change a shape | **It can change the direction of a moving thing**
-- If a child answers "It can only start a movement": Forces can start, stop, speed up, slow down, turn or change the shape of things. A force can also stop a moving object, speed it up, slow it down or turn it.
-- If a child answers "It must keep acting for things to keep moving": Forces can start, stop, speed up, slow down, turn or change the shape of things. The ball slows and stops because friction with the ground acts on it.
+**Q:** A boy stretches a rubber band. What did the force do?
+Options: **It changed the shape of the rubber band** | It started the band moving | It moved the band without changing it | It kept the band moving
+- If a child answers "It started the band moving": Stretching changes the shape of the rubber band. A force can also stop a moving object, speed it up, slow it down or turn it.
+- If a child answers "It moved the band without changing it": Stretching changes the shape of the rubber band. A force can change the shape of an object, as when clay is squeezed.
 
 ### science4.ff.effect.story
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS`, outcome `b`, form word, rung 2.
 
-**Q:** A boy kicks a stationary ball and it rolls. A girl then stops it with her foot. What did her foot do?
-Options: Nothing, the ball stopped by itself | **It used a force to stop the ball** | It started the ball moving again | It changed the shape of the ball
-- If a child answers "Nothing, the ball stopped by itself": A force can stop a moving object. The ball slows and stops because friction with the ground acts on it.
-- If a child answers "It started the ball moving again": A force can stop a moving object. A force can also stop a moving object, speed it up, slow it down or turn it.
+**Q:** A boy bats a cricket ball and it changes direction. What did the bat do?
+Options: **It changed the ball's direction** | Nothing, the ball turned by itself | It changed its shape only | It only started the ball moving
+- If a child answers "Nothing, the ball turned by itself": A force can turn a moving object. The ball slows and stops because friction with the ground acts on it.
+- If a child answers "It changed its shape only": A force can turn a moving object. A force can change the shape of an object, as when clay is squeezed.
 
 ### science4.ff.effect.spot
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS`, outcome `b`, form spot, rung 3.
 
-**Q:** Lilian says squeezing clay uses no force. Which step has the mistake?
-Steps: Step 1: Lilian squeezes a lump of clay. / Step 2: The clay becomes flat. / **Step 3: She says no force was used on the clay.**
+**Q:** Victor says stretching a rubber band is not an effect of a force. Which step has the mistake?
+Steps: Step 1: Victor holds a rubber band. / Step 2: He pulls it and it gets longer. / **Step 3: He says it did not change because of any force.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -609,26 +609,26 @@ Steps: Step 1: Lilian squeezes a lump of clay. / Step 2: The clay becomes flat. 
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES`, outcome `c`, form direct, rung 1.
 
-**Q:** How does gravity help us?
-Options: It only works on big things | It does not help us | It only breaks things | **It makes rain fall**
-- If a child answers "It only works on big things": Without gravity, rain would not fall and things would float away. A push or a pull is a force. Even writing and walking use a force.
-- If a child answers "It does not help us": Without gravity, rain would not fall and things would float away. Gravity makes rain fall and keeps us and things on the ground.
+**Q:** Why do bicycle brakes work?
+Options: **Friction in the brakes** | Because friction is only a problem | Because friction is never useful | Because of gravity only
+- If a child answers "Because friction is only a problem": Brakes work by friction, which slows the wheel. Friction is useful in brakes, in walking and in holding things. It is a force that slows things.
+- If a child answers "Because friction is never useful": Brakes work by friction, which slows the wheel. Friction is useful in brakes, in walking and in holding things. It is a force that slows things.
 
 ### science4.ff.use.story
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES`, outcome `c`, form word, rung 2.
 
-**Q:** Odhiambo rides downhill and uses his brakes to stop at the junction. Which force stops the bicycle?
-Options: A magnet | No force, the bicycle stops by itself | **Friction** | Gravity only
-- If a child answers "A magnet": The brake pads rub on the wheel. This friction slows the bicycle. A push or a pull is a force. Even writing and walking use a force.
-- If a child answers "No force, the bicycle stops by itself": The brake pads rub on the wheel. This friction slows the bicycle. Friction is useful in brakes, in walking and in holding things. It is a force that slows things.
+**Q:** A hunter's catapult flings a stone when the rubber is pulled back and let go. Which force flings the stone?
+Options: **Elastic force** | No force, it just flies | Friction | Gravity
+- If a child answers "No force, it just flies": A stretched rubber pulls back and pushes the stone away. A push or a pull is a force. Even writing and walking use a force.
+- If a child answers "Friction": A stretched rubber pulls back and pushes the stone away. Friction is useful in brakes, in walking and in holding things. It is a force that slows things.
 
 ### science4.ff.use.spot
 
 Skill `FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES`, outcome `c`, form spot, rung 3.
 
-**Q:** Ruth says only hard work uses a force. Which step has the mistake?
-Steps: Step 1: Ruth carries a heavy sack and says it takes force. / Step 2: She writes in her book. / **Step 3: She says writing uses no force.**
+**Q:** Dennis says brakes work without friction. Which step has the mistake?
+Steps: Step 1: Dennis squeezes the brake lever. / Step 2: The pads touch the wheel. / **Step 3: He says no friction is needed to slow it.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -636,53 +636,53 @@ Steps: Step 1: Ruth carries a heavy sack and says it takes force. / Step 2: She 
 
 Skill `FORCE_.LIGHT.LIGHT_SOURCES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which of these is a source of light?
-Options: The Moon | A shiny tin roof in the sun | **A burning candle** | A mirror
-- If a child answers "The Moon": A candle flame makes its own light. The Moon only reflects light from the Sun. The Sun gives out its own light.
-- If a child answers "A shiny tin roof in the sun": A candle flame makes its own light. A shiny roof only reflects light. A burning candle makes its own light.
+**Q:** Which of these is a natural source of light?
+Options: The Moon | An electric bulb | A mirror | **A firefly**
+- If a child answers "The Moon": Fireflies make light, and so do the Sun, stars and lightning. The Moon only reflects light from the Sun. The Sun gives out its own light.
+- If a child answers "An electric bulb": Fireflies make light, and so do the Sun, stars and lightning. Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.
 
 ### science4.lt.src.story
 
 Skill `FORCE_.LIGHT.LIGHT_SOURCES`, outcome `a`, form word, rung 2.
 
-**Q:** A tin roof flashes brightly in the afternoon sun. A boy says the roof is a source of light. What is right?
-Options: **The roof only reflects light from the Sun** | It is a natural source in the sky | He is right, shiny things make light | The roof makes its own light when it is hot
-- If a child answers "It is a natural source in the sky": A shiny roof reflects sunlight and makes none of its own. Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.
-- If a child answers "He is right, shiny things make light": A shiny roof reflects sunlight and makes none of its own. A shiny roof only reflects light. A burning candle makes its own light.
+**Q:** A learner says the Moon is a source of light because it shines at night. What is right?
+Options: The Moon makes light from lightning | The Moon is a mirror that makes light | **The Moon only reflects light from the Sun** | She is right, the Moon makes its own light
+- If a child answers "The Moon makes light from lightning": We see the Moon because light from the Sun bounces off it. Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.
+- If a child answers "The Moon is a mirror that makes light": We see the Moon because light from the Sun bounces off it. A shiny roof only reflects light. A burning candle makes its own light.
 
 ### science4.lt.src.table
 
 Skill `FORCE_.LIGHT.LIGHT_SOURCES`, outcome `a`, form table, rung 2.
 
 **Q:** A class lists what gives light and what only reflects it. Which object belongs to the list of sources?
-Options: Object A | Object D | **Object B** | Object C
-- If a child answers "Object A": Object B makes light of its own. A shiny roof only reflects light. A burning candle makes its own light.
+Options: Object D | **Object B** | Object A | Object C
 - If a child answers "Object D": Object B makes light of its own. Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.
+- If a child answers "Object A": Object B makes light of its own. A shiny roof only reflects light. A burning candle makes its own light.
 
 ### science4.lt.house.direct
 
 Skill `FORCE_.LIGHT.HOUSE_LIGHTING`, outcome `b`, form direct, rung 1.
 
-**Q:** How does a window help a classroom in the day?
-Options: **It lets in light and air** | It lets in air only | It makes the walls dark | It lets in nothing
-- If a child answers "It lets in air only": A window lets in daylight as well as air. A window lets in light as well as air. It is a way of lighting a room in the day.
-- If a child answers "It makes the walls dark": A window lets in daylight as well as air. Light-coloured walls reflect more light, so the room is brighter.
+**Q:** Which walls make a small room brighter?
+Options: Dark brown walls | Walls near a candle | Walls with no window | **Light, like white walls**
+- If a child answers "Dark brown walls": Light colours reflect more light. Light-coloured walls reflect more light, so the room is brighter.
+- If a child answers "Walls near a candle": Light colours reflect more light. A lit candle or lamp can start a fire. Put it out before sleeping and keep it away from cloth.
 
 ### science4.lt.house.story
 
 Skill `FORCE_.LIGHT.HOUSE_LIGHTING`, outcome `b`, form word, rung 2.
 
-**Q:** A family has no electricity. Which is a safe way to light their house at night?
-Options: Dark walls | **A solar lamp or a torch** | The window, at night | A candle left by the curtain
-- If a child answers "Dark walls": A solar lamp or a torch is safe and gives light. Light-coloured walls reflect more light, so the room is brighter.
-- If a child answers "The window, at night": A solar lamp or a torch is safe and gives light. A window lets in light as well as air. It is a way of lighting a room in the day.
+**Q:** A family wants a small room to look brighter. Which plan is best?
+Options: **Paint the walls a light colour** | Light a candle and go to bed | Paint the walls dark brown | Close the window
+- If a child answers "Light a candle and go to bed": Light walls reflect more light and the room looks brighter. A lit candle or lamp can start a fire. Put it out before sleeping and keep it away from cloth.
+- If a child answers "Paint the walls dark brown": Light walls reflect more light and the room looks brighter. Light-coloured walls reflect more light, so the room is brighter.
 
 ### science4.lt.house.spot
 
 Skill `FORCE_.LIGHT.HOUSE_LIGHTING`, outcome `b`, form spot, rung 3.
 
-**Q:** Joyce says a closed shutter lights the room. Which step has the mistake?
-Steps: Step 1: Joyce closes the shutter. / Step 2: The room gets darker. / **Step 3: She says the shutter gives light.**
+**Q:** Titus says a lamp can be left near a bed to burn all night. Which step has the mistake?
+Steps: Step 1: Titus lights a paraffin lamp. / Step 2: He puts it by the bed. / **Step 3: He says it is safe to leave burning while all sleep.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -690,26 +690,26 @@ Steps: Step 1: Joyce closes the shutter. / Step 2: The room gets darker. / **Ste
 
 Skill `FORCE_.LIGHT.LIGHT_USES`, outcome `c`, form direct, rung 1.
 
-**Q:** What do traffic lights use light for?
-Options: **To send signals to drivers** | To feed the plants beside the road | To see in the dark only | Only to light the road
-- If a child answers "To feed the plants beside the road": Coloured lights tell drivers when to stop and go. Plants use light to make their food in the leaves.
-- If a child answers "To see in the dark only": Coloured lights tell drivers when to stop and go. Light is used to see, and also for signals, for plants to make food and for solar energy.
+**Q:** How do we see a book?
+Options: Light comes out of our eyes and lands on the book | Light goes from the book into the soil | **Light from a source bounces off the book into our eyes** | The book makes its own light
+- If a child answers "Light comes out of our eyes and lands on the book": We see things because light bounces off them into our eyes. We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.
+- If a child answers "Light goes from the book into the soil": We see things because light bounces off them into our eyes. Plants use light to make their food in the leaves.
 
 ### science4.lt.use.story
 
 Skill `FORCE_.LIGHT.LIGHT_USES`, outcome `c`, form word, rung 2.
 
-**Q:** Kibet says we see because light comes out of our eyes. A teacher asks him to sit in a dark room with a book. What happens?
-Options: **He cannot see the book until a light is on** | The book grows in the dark | The book shines by itself | He sees the book clearly, his eyes make light
-- If a child answers "The book grows in the dark": Light must bounce off the book into the eyes. In the dark there is none. Plants use light to make their food in the leaves.
-- If a child answers "The book shines by itself": Light must bounce off the book into the eyes. In the dark there is none. Light is used to see, and also for signals, for plants to make food and for solar energy.
+**Q:** A school has solar panels on the roof. What do the panels do?
+Options: Help learners to see | Make light for our eyes to send out | **Change light from the Sun into electricity** | Feed the plants on the roof
+- If a child answers "Help learners to see": Solar panels turn sunlight into electricity. Light is used to see, and also for signals, for plants to make food and for solar energy.
+- If a child answers "Make light for our eyes to send out": Solar panels turn sunlight into electricity. We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.
 
 ### science4.lt.use.spot
 
 Skill `FORCE_.LIGHT.LIGHT_USES`, outcome `c`, form spot, rung 3.
 
-**Q:** Caroline says we can see in a dark room because our eyes make light. Which step has the mistake?
-Steps: Step 1: Caroline sits in a room with no window. / Step 2: She turns off the lamp. / **Step 3: She says she can still see everything.**
+**Q:** Daudi says we see because light comes out of our eyes. Which step has the mistake?
+Steps: Step 1: Daudi looks at a book in a bright room. / Step 2: He sees the words. / **Step 3: He says light leaves his eyes and lands on the book.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -717,53 +717,53 @@ Steps: Step 1: Caroline sits in a room with no window. / Step 2: She turns off t
 
 Skill `FORCE_.HEAT.HEAT_SOURCES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which sentence is true about the Sun?
-Options: **It is one source, so is fire** | It is the only source of heat | It is hot only because a stone is hot | It is a source of cold
-- If a child answers "It is the only source of heat": Many things are sources of heat, not only the Sun. The Sun is a source of heat, and so are fire, electricity and cooking gas.
-- If a child answers "It is hot only because a stone is hot": Many things are sources of heat, not only the Sun. A hot stone was warmed by the Sun. The Sun is the source.
+**Q:** Which of these is a source of heat?
+Options: A hot stone in the sun | Rubbing the hands together does nothing | A cup of hot tea | **A charcoal fire**
+- If a child answers "A hot stone in the sun": A burning charcoal fire gives out heat. A hot stone was warmed by the Sun. The Sun is the source.
+- If a child answers "Rubbing the hands together does nothing": A burning charcoal fire gives out heat. Rubbing makes friction, and friction makes heat.
 
 ### science4.ht.src.story
 
 Skill `FORCE_.HEAT.HEAT_SOURCES`, outcome `a`, form word, rung 2.
 
 **Q:** Mama Njeri cooks ugali on a charcoal jiko. Which is the source of heat?
-Options: **The burning charcoal** | The wooden spoon | The Sun | The hot sufuria
-- If a child answers "The wooden spoon": The charcoal burns and gives out heat. The pot is only heated. Rubbing makes friction, and friction makes heat.
+Options: The Sun | The hot sufuria | The wooden spoon | **The burning charcoal**
 - If a child answers "The Sun": The charcoal burns and gives out heat. The pot is only heated. The Sun is a source of heat, and so are fire, electricity and cooking gas.
+- If a child answers "The hot sufuria": The charcoal burns and gives out heat. The pot is only heated. A hot stone was warmed by the Sun. The Sun is the source.
 
 ### science4.ht.src.table
 
 Skill `FORCE_.HEAT.HEAT_SOURCES`, outcome `a`, form table, rung 2.
 
-**Q:** A class lists sources of heat. Which object belongs on the list?
-Options: Object D | **Object C** | Object A | Object B
-- If a child answers "Object D": Object C gives out heat of its own. Rubbing makes friction, and friction makes heat.
-- If a child answers "Object A": Object C gives out heat of its own. A hot stone was warmed by the Sun. The Sun is the source.
+**Q:** Which object in the table is NOT a source of heat?
+Options: Object B | Object C | **Object A** | Object D
+- If a child answers "Object B": Object A was warmed by something else, so it is not a source. A hot stone was warmed by the Sun. The Sun is the source.
+- If a child answers "Object C": Object A was warmed by something else, so it is not a source. The Sun is a source of heat, and so are fire, electricity and cooking gas.
 
 ### science4.ht.use.direct
 
 Skill `FORCE_.HEAT.HEAT_USES`, outcome `b`, form direct, rung 1.
 
 **Q:** Why do we boil drinking water?
-Options: To make it taste nice | Only to cook with it | **To kill germs** | To make it cold
-- If a child answers "To make it taste nice": Boiling kills germs in the water. Boiling kills germs in the water and makes it safer to drink.
+Options: **To kill germs** | To make it cold | Only to cook with it | To make it taste nice
+- If a child answers "To make it cold": Boiling kills germs in the water. Boiling kills germs in the water and makes it safer to drink.
 - If a child answers "Only to cook with it": Boiling kills germs in the water. Heat is used for cooking and also for drying, warming, ironing and boiling water.
 
 ### science4.ht.use.story
 
 Skill `FORCE_.HEAT.HEAT_USES`, outcome `b`, form word, rung 2.
 
-**Q:** At the coast, fishermen lay fish in the sun after the catch. Why?
-Options: **The heat dries the fish so it keeps longer** | To cook the fish | To keep it cool | To make the fish clean with boiling
-- If a child answers "To cook the fish": Drying keeps fish from going bad. Heat is used for cooking and also for drying, warming, ironing and boiling water.
-- If a child answers "To keep it cool": Drying keeps fish from going bad. Heat from the Sun, with wind, dries clothes fastest.
+**Q:** Wekesa says heat is only for cooking. Which example shows he is wrong?
+Options: **A blacksmith heats iron** | A girl drinks cold water | A child sits in the shade | A cook fries an egg
+- If a child answers "A girl drinks cold water": Heat is used to shape metal too, not only to cook. Boiling kills germs in the water and makes it safer to drink.
+- If a child answers "A child sits in the shade": Heat is used to shape metal too, not only to cook. Heat from the Sun, with wind, dries clothes fastest.
 
 ### science4.ht.use.spot
 
 Skill `FORCE_.HEAT.HEAT_USES`, outcome `b`, form spot, rung 3.
 
-**Q:** Brian says boiling does not make water any safer. Which step has the mistake?
-Steps: Step 1: Brian sees his mother boil stream water. / Step 2: The water bubbles for a few minutes. / **Step 3: He says the germs are still alive.**
+**Q:** Joan says wet clothes dry fastest in the shade. Which step has the mistake?
+Steps: Step 1: Joan hangs one shirt in the sun. / Step 2: She hangs another in the shade. / **Step 3: She says the shaded shirt will dry first.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
@@ -771,26 +771,26 @@ Steps: Step 1: Brian sees his mother boil stream water. / Step 2: The water bubb
 
 Skill `FORCE_.HEAT.HEAT_SAFETY`, outcome `c`, form direct, rung 1.
 
-**Q:** When you have finished cooking on the jiko, what should you do?
-Options: **Put out the fire and let it cool** | Cover it with a wet cloth | Leave it burning and go out | Add fresh charcoal and leave it
-- If a child answers "Cover it with a wet cloth": A fire left burning can start a house fire. Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn.
-- If a child answers "Leave it burning and go out": A fire left burning can start a house fire. Put out the flame, let the stove cool, and then refill it.
+**Q:** A child burns her hand. What should be done first?
+Options: Rub oil on it | Rub butter on it | **Run cool water on it** | Cover it with ash
+- If a child answers "Rub oil on it": Cool running water takes the heat out of the skin. Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.
+- If a child answers "Rub butter on it": Cool running water takes the heat out of the skin. Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.
 
 ### science4.ht.safe.story
 
 Skill `FORCE_.HEAT.HEAT_SAFETY`, outcome `c`, form word, rung 2.
 
-**Q:** The cook leaves the room while the jiko is still burning with children playing nearby. What should she have done?
-Options: **Put out the fire first** | Add more charcoal and leave | Fan it harder and walk away | Leave it burning and go out
-- If a child answers "Add more charcoal and leave": A burning fire should not be left with children near. Put out the flame, let the stove cool, and then refill it.
-- If a child answers "Fan it harder and walk away": A burning fire should not be left with children near. Put out the flame, let the stove cool, and then refill it.
+**Q:** Wanjiru touches the hot handle of a sufuria and burns her finger. What should her mother do first?
+Options: **Run cool water on it** | Cover it with ash | Rub butter on the burn | Cover it with cooking oil
+- If a child answers "Cover it with ash": Cool running water takes the heat out of the skin. Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.
+- If a child answers "Rub butter on the burn": Cool running water takes the heat out of the skin. Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.
 
 ### science4.ht.safe.spot
 
 Skill `FORCE_.HEAT.HEAT_SAFETY`, outcome `c`, form spot, rung 3.
 
-**Q:** Collins says to refill a lit paraffin stove with paraffin. Which step has the mistake?
-Steps: Step 1: Collins sees the stove is nearly empty. / Step 2: He fetches the paraffin. / **Step 3: He says it is safe to pour while the flame burns.**
+**Q:** Esther says butter should be put on a burn. Which step has the mistake?
+Steps: Step 1: Esther sees a child with a burnt hand. / Step 2: She remembers a home custom. / **Step 3: She says butter is the right thing to put on a burn.**
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 2": Step 2 is right. Keep checking the steps after it.
 
