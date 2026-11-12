@@ -3,15 +3,15 @@
  "subject_key": "science",
  "grade": 4,
  "source": "KICD Science And Technology, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review",
  "totals": {
   "strands": 3,
   "sub_strands": 9,
   "outcomes": 32,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 25,
+  "prerequisites": 33,
+  "misconceptions": 75
  },
  "sub_strands": [
   {
@@ -71,14 +71,187 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+     "name": "Identify the characteristics of plants as living things",
+     "outcomes": [
+      "SCIE.G4.LIVING.PLANTS.a"
+     ],
+     "mastery": "The child names the five signs: plants grow, reproduce (make seeds or new plants), remove waste, respond to changes in their surroundings (a seedling bends to light, the touch-me-not leaf folds) and die. The child knows a plant is alive even though it does not walk, and does not say plants make no waste or never respond. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the sign that shows a plant is alive",
+      "say which statement about plants is true",
+      "decide from a short observation story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.RESOUR.PLANTS.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+     "name": "Describe what the roots, stem and leaves of a plant do",
+     "outcomes": [
+      "SCIE.G4.LIVING.PLANTS.b"
+     ],
+     "mastery": "The child says the roots hold the plant in the soil and take in water and mineral salts, the stem holds the plant up and carries water and food to other parts, and the leaves make food using sunlight. The child does not say leaves take water from the soil or that the stem only holds the plant up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named part does",
+      "name the part that does a described job",
+      "decide from a short story about a plant",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NOT_ALIVE",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+     "error": "Thinks plants are not alive because they do not walk or move about.",
+     "example": {
+      "question": "Why do we say a maize plant is a living thing?",
+      "wrong_answer": "It moves from place to place",
+      "correct_answer": "It grows, makes seeds, and responds to its surroundings"
+     },
+     "cause": "The child links being alive with moving the whole body.",
+     "reveals": "Offer \"It moves from place to place\" next to the right answer and ask the question again in a new context.",
+     "help": "Plant a bean seed in a cup and look at it every day: it grows and bends to the window without walking.",
+     "feedback": "Plants are alive even though they do not walk. They grow, make seeds, remove waste, respond to their surroundings and die.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_WASTE",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+     "error": "Thinks plants make no waste, only animals do.",
+     "example": {
+      "question": "Which of these do living things do? Does a plant remove waste?",
+      "wrong_answer": "No, only animals remove waste",
+      "correct_answer": "Yes, plants also get rid of waste"
+     },
+     "cause": "The child links waste with toilets and droppings.",
+     "reveals": "Offer \"No, only animals remove waste\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that plants lose water vapour and gases through their leaves and drop old leaves and fruits.",
+     "feedback": "Plants also remove waste. They give out waste gases and water through the leaves, and old leaves fall.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_RESPOND",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+     "error": "Thinks plants do not respond to changes around them.",
+     "example": {
+      "question": "A seedling on a window sill bends towards the light. What does this show?",
+      "wrong_answer": "The plant is not alive, it is only leaning",
+      "correct_answer": "The plant responds to light"
+     },
+     "cause": "The child thinks only animals react to things.",
+     "reveals": "Offer \"The plant is not alive, it is only leaning\" next to the right answer and ask the question again in a new context.",
+     "help": "Turn the cup around and watch the seedling bend back over two days.",
+     "feedback": "Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_ABSORB",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+     "error": "Thinks the leaves take in water from the soil, or that roots make the plant's food.",
+     "example": {
+      "question": "Which part of a plant takes in water from the soil?",
+      "wrong_answer": "The leaves",
+      "correct_answer": "The roots"
+     },
+     "cause": "The child mixes up where water enters and where food is made.",
+     "reveals": "Offer \"The leaves\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a bean plant in coloured water and see which part first turns colour.",
+     "feedback": "The roots take in water and mineral salts from the soil. The leaves make food using sunlight.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_STEM_ONLY_HOLDS",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+     "error": "Thinks the stem only holds the plant up.",
+     "example": {
+      "question": "What does the stem do for a plant?",
+      "wrong_answer": "It only holds the plant up",
+      "correct_answer": "It holds the plant up and carries water and food"
+     },
+     "cause": "The child sees only the stem's shape and strength.",
+     "reveals": "Offer \"It only holds the plant up\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand a stem of a white flower in coloured water and see the colour climb up the stem.",
+     "feedback": "The stem holds the plant up and also carries water and food to the other parts.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_SHADE_ONLY",
+     "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+     "error": "Thinks leaves are only for shade or to look green, not to make food.",
+     "example": {
+      "question": "What do the leaves of a maize plant do?",
+      "wrong_answer": "They give shade only",
+      "correct_answer": "They make food for the plant using sunlight"
+     },
+     "cause": "The child has seen leaves as decoration or shelter.",
+     "reveals": "Offer \"They give shade only\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover one leaf with dark paper for a week and look at how it fades.",
+     "feedback": "Leaves are the kitchen of the plant. They make food using sunlight.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.1.1",
     "SCIE.G4.RUBRIC.1.2",
     "SCIE.G4.RUBRIC.1.3",
     "SCIE.G4.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcome c (appreciate the need to care for plants) is attitudinal: observe it in the school garden or a plant-care log. Outcomes a and b are tested by questions."
   },
   {
    "code": "SCIE.G4.LIVING.ANIMALS",
@@ -135,14 +308,270 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+     "name": "Identify the characteristics of animals as living things",
+     "outcomes": [
+      "SCIE.G4.LIVING.ANIMALS.a"
+     ],
+     "mastery": "The child names the signs: animals move, feed, breathe, grow, reproduce (some give birth, some lay eggs), respond to what is around them, remove waste and die. The child counts insects, fish, birds and worms as animals, and does not say an animal that is resting is not alive. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the sign that shows an animal is alive",
+      "say which statement about animals is true",
+      "decide from a short observation story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.RESOUR.ANIMALS.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+     "name": "Sort animals into vertebrates and invertebrates",
+     "outcomes": [
+      "SCIE.G4.LIVING.ANIMALS.b"
+     ],
+     "mastery": "Given an animal from Kenya (cow, goat, hen, tilapia, snake, frog, lizard, mouse, butterfly, ant, spider, earthworm, snail, grasshopper, crab), the child says whether it is a vertebrate (has a backbone) or an invertebrate (has no backbone). The child does not use legs, size or a hard cover to decide. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "sort a named animal",
+      "pick the list that holds only vertebrates",
+      "read a small table of animals and decide",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+     "name": "Give the backbone as the reason for sorting animals",
+     "outcomes": [
+      "SCIE.G4.LIVING.ANIMALS.b"
+     ],
+     "mastery": "The child says an animal is a vertebrate because it has a backbone and an invertebrate because it has none. The child knows a small animal can be a vertebrate (a chick, a mouse, a small frog), a legless animal can be a vertebrate (a snake, a fish), and an animal with many legs can be an invertebrate (a spider, a centipede). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what makes an animal a vertebrate",
+      "say why a named animal is or is not a vertebrate",
+      "pick the reason that is not a good rule",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_REPRODUCE_BIRTH_ONLY",
+     "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+     "error": "Thinks animals reproduce only by giving birth to live young (not by eggs).",
+     "example": {
+      "question": "How do birds and fish reproduce?",
+      "wrong_answer": "They give birth to live young like a cow",
+      "correct_answer": "They lay eggs"
+     },
+     "cause": "The child has met the cow and the goat at home and not the egg.",
+     "reveals": "Offer \"They give birth to live young like a cow\" next to the right answer and ask the question again in a new context.",
+     "help": "List animals that lay eggs (hen, fish, frog, snake) and animals that give birth (cow, goat, dog).",
+     "feedback": "Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_STILL_NOT_ALIVE",
+     "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+     "error": "Thinks an animal that lies still or sleeps is not alive.",
+     "example": {
+      "question": "A lizard lies still in the sun. Is it alive?",
+      "wrong_answer": "No, it is not moving",
+      "correct_answer": "Yes, it is only resting and is still breathing"
+     },
+     "cause": "The child links being alive with moving all the time.",
+     "reveals": "Offer \"No, it is not moving\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch a sleeping cat: its sides move as it breathes.",
+     "feedback": "An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_INSECT_NOT_ANIMAL",
+     "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+     "error": "Thinks insects, worms and fish are not animals (only cows, goats, lions and other big animals are).",
+     "example": {
+      "question": "Is a butterfly an animal?",
+      "wrong_answer": "No, only big animals are animals",
+      "correct_answer": "Yes, it is an animal"
+     },
+     "cause": "The child uses \"animal\" to mean the big mammals.",
+     "reveals": "Offer \"No, only big animals are animals\" next to the right answer and ask the question again in a new context.",
+     "help": "List every living thing in the school compound that is not a plant: ants, birds, worms are animals too.",
+     "feedback": "Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_NO_LEGS_INVERT",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+     "error": "Thinks an animal with no legs (snake, fish) has no backbone.",
+     "example": {
+      "question": "Is a snake a vertebrate or an invertebrate?",
+      "wrong_answer": "An invertebrate, it has no legs",
+      "correct_answer": "A vertebrate, it has a backbone"
+     },
+     "cause": "The child looks at legs and not at the backbone.",
+     "reveals": "Offer \"An invertebrate, it has no legs\" next to the right answer and ask the question again in a new context.",
+     "help": "Feel your own backbone, then show a picture of a snake skeleton with its many small bones in a line.",
+     "feedback": "A snake has a backbone, with many small bones in a row. So a snake is a vertebrate even without legs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_LEGS_VERTEBRATE",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+     "error": "Thinks every animal with legs is a vertebrate (spider, ant, grasshopper, crab).",
+     "example": {
+      "question": "Is a grasshopper a vertebrate or an invertebrate?",
+      "wrong_answer": "A vertebrate, it has legs",
+      "correct_answer": "An invertebrate, it has no backbone"
+     },
+     "cause": "The child links legs with bones.",
+     "reveals": "Offer \"A vertebrate, it has legs\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a dead grasshopper: legs, but the body is soft inside a hard cover and there is no backbone.",
+     "feedback": "A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_SHELL_IS_BONE",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
+     "error": "Thinks a hard shell or hard cover (snail, crab, beetle) is a backbone.",
+     "example": {
+      "question": "Is a snail a vertebrate or an invertebrate?",
+      "wrong_answer": "A vertebrate, it has a hard shell",
+      "correct_answer": "An invertebrate, the shell is not a backbone"
+     },
+     "cause": "The child treats anything hard as bone.",
+     "reveals": "Offer \"A vertebrate, it has a hard shell\" next to the right answer and ask the question again in a new context.",
+     "help": "Note that a shell is on the outside and a backbone is inside the body along the back.",
+     "feedback": "A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_SMALL_INVERT",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+     "error": "Thinks small animals are invertebrates and big ones are vertebrates (a chick, a mouse or a small frog taken as invertebrates).",
+     "example": {
+      "question": "Why is a small frog a vertebrate?",
+      "wrong_answer": "It is not, because it is small",
+      "correct_answer": "It has a backbone"
+     },
+     "cause": "The child uses size as the rule.",
+     "reveals": "Offer \"It is not, because it is small\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a large earthworm and a tiny chick: the small chick has a backbone and the long worm has none.",
+     "feedback": "Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WINGS_OR_LEGS_RULE",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+     "error": "Uses wings or the number of legs as the rule for vertebrates.",
+     "example": {
+      "question": "Which rule tells us an animal is an invertebrate?",
+      "wrong_answer": "It has more than four legs",
+      "correct_answer": "It has no backbone"
+     },
+     "cause": "The child picks a visible feature that is not the rule.",
+     "reveals": "Offer \"It has more than four legs\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort pictures only by the backbone and ignore legs, wings and size.",
+     "feedback": "The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WATER_RULE",
+     "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
+     "error": "Thinks all animals that live in water are vertebrates, or that all animals on land are.",
+     "example": {
+      "question": "Is a crab, which lives in water, a vertebrate?",
+      "wrong_answer": "Yes, because it lives in water like fish",
+      "correct_answer": "No, it has no backbone"
+     },
+     "cause": "The child sorts by where animals live.",
+     "reveals": "Offer \"Yes, because it lives in water like fish\" next to the right answer and ask the question again in a new context.",
+     "help": "Find crabs, snails and jellyfish among water animals that are invertebrates.",
+     "feedback": "Where an animal lives does not decide it. A crab lives in water but has no backbone, so it is an invertebrate.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.1.1",
     "SCIE.G4.RUBRIC.1.2",
     "SCIE.G4.RUBRIC.1.3",
     "SCIE.G4.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcome c (appreciate the need to care for animals) is attitudinal: observe it in care of a class pet or school animals. Outcomes a and b are tested by questions; classifying living animals from a nature walk is better checked by the teacher."
   },
   {
    "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM",
@@ -205,14 +634,273 @@
      "indicator": "SCIE.G4.RUBRIC.1.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+     "name": "Name the parts of the human digestive system and say what each does",
+     "outcomes": [
+      "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.a"
+     ],
+     "mastery": "The child names the mouth (teeth chew food), the oesophagus or food pipe (carries food to the stomach), the stomach (churns food into a soft mixture), the small intestine (digested food goes into the blood), the large intestine (takes in water, leaving waste) and the anus (waste leaves). The child does not mix up the food pipe and the windpipe or say the stomach does all the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say what a named part does",
+      "pick the part that is not in the digestive system",
+      "find the false step in a learner's account"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+     "name": "Put the parts of the digestive system in the order food passes through them",
+     "outcomes": [
+      "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.a"
+     ],
+     "mastery": "The child gives the path of food as mouth, oesophagus, stomach, small intestine, large intestine, anus. The child does not put the large intestine before the small intestine and does not think the small intestine is the short one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the correct order",
+      "say which part comes next",
+      "say which part comes before a named part",
+      "find the false step in a learner's order"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+     "name": "Choose habits that keep the digestive system healthy",
+     "outcomes": [
+      "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.b"
+     ],
+     "mastery": "The child chooses habits that protect the digestive system: wash hands with soap before eating and after the toilet, drink clean boiled or treated water, eat a balanced diet with fruits, vegetables and fibre, chew food well, and keep food covered. The child knows that sweets or soda do not replace water or meals, and that washing food alone is not enough. Writing a whole plan is a task for the teacher to mark: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the habit that protects the digestive system",
+      "pick the habit that harms it",
+      "decide what a learner in a story should do",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.d",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_WINDPIPE",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+     "error": "Mixes up the food pipe (oesophagus) with the windpipe.",
+     "example": {
+      "question": "Which tube carries food from the mouth to the stomach?",
+      "wrong_answer": "The windpipe",
+      "correct_answer": "The oesophagus (food pipe)"
+     },
+     "cause": "The child links \"pipe in the neck\" with food and air together.",
+     "reveals": "Offer \"The windpipe\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the food pipe is for food and the windpipe is for air to the lungs.",
+     "feedback": "The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_STOMACH_ALL",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+     "error": "Thinks the stomach does all the digesting and takes in all the food.",
+     "example": {
+      "question": "Where does most digested food go into the blood?",
+      "wrong_answer": "The stomach",
+      "correct_answer": "The small intestine"
+     },
+     "cause": "The child knows the stomach is the \"food bag\" and nothing more.",
+     "reveals": "Offer \"The stomach\" next to the right answer and ask the question again in a new context.",
+     "help": "Say the stomach churns the food and the small intestine takes the good parts into the blood.",
+     "feedback": "The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_LARGE_INTESTINE_FOOD",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+     "error": "Thinks the large intestine takes in food (rather than water) or makes the food.",
+     "example": {
+      "question": "What does the large intestine take in from the leftover food?",
+      "wrong_answer": "Most of the food",
+      "correct_answer": "Water"
+     },
+     "cause": "The child expects the biggest tube to do the biggest job on food.",
+     "reveals": "Offer \"Most of the food\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that the small intestine takes the food and the large intestine takes water and leaves the waste.",
+     "feedback": "The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_LARGE_BEFORE_SMALL",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+     "error": "Puts the large intestine before the small intestine.",
+     "example": {
+      "question": "Which comes first after the stomach?",
+      "wrong_answer": "The large intestine",
+      "correct_answer": "The small intestine"
+     },
+     "cause": "The child follows the words large then small.",
+     "reveals": "Offer \"The large intestine\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace the path with a finger on a body chart: stomach, long small intestine, then large intestine.",
+     "feedback": "After the stomach, food goes to the small intestine, and then to the large intestine.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_SMALL_IS_SHORT",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+     "error": "Thinks the small intestine is short (small in length).",
+     "example": {
+      "question": "Which part of the intestine is longer?",
+      "wrong_answer": "The small intestine is short",
+      "correct_answer": "The small intestine is longer (it is narrow, not short)"
+     },
+     "cause": "The child hears small as short.",
+     "reveals": "Offer \"The small intestine is short\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure a long string and say it stands for the small intestine, about six metres in an adult. The large intestine is wider and about 1.5 metres.",
+     "feedback": "The small intestine is narrow but very long. The large intestine is wider but shorter.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_STOMACH_FIRST",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+     "error": "Thinks food goes straight from the mouth to the stomach (leaves out the oesophagus), or that the stomach is the last part.",
+     "example": {
+      "question": "Which part is the last in the path of food?",
+      "wrong_answer": "The stomach",
+      "correct_answer": "The anus"
+     },
+     "cause": "The child stops the path at the stomach, where the food seems to go.",
+     "reveals": "Offer \"The stomach\" next to the right answer and ask the question again in a new context.",
+     "help": "Count the six parts with a finger, mouth to anus.",
+     "feedback": "Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_ONLY_WASH_FOOD",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+     "error": "Thinks washing food is enough, so washing hands does not matter.",
+     "example": {
+      "question": "Wanjiru washes the mangoes but not her hands. Is this enough?",
+      "wrong_answer": "Yes, clean food is all that matters",
+      "correct_answer": "No, she should wash her hands with soap too"
+     },
+     "cause": "The child sees only the food as a source of germs.",
+     "reveals": "Offer \"Yes, clean food is all that matters\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at dirty hands under a lens and then at clean ones.",
+     "feedback": "Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_SODA_FOR_WATER",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+     "error": "Thinks soda or sweets can take the place of water and meals.",
+     "example": {
+      "question": "What should Baraka drink most of through the day?",
+      "wrong_answer": "Soda",
+      "correct_answer": "Clean water"
+     },
+     "cause": "The child has seen drinks as the same as water.",
+     "reveals": "Offer \"Soda\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare how much sugar sits in a bottle of soda with a glass of water.",
+     "feedback": "Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_UNBOILED_WATER",
+     "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
+     "error": "Thinks any clear water from a stream is safe to drink without boiling or treating.",
+     "example": {
+      "question": "Njeri finds clear water in a stream. What should she do before drinking it?",
+      "wrong_answer": "Drink it, it looks clean",
+      "correct_answer": "Boil it or treat it first"
+     },
+     "cause": "The child judges water by how it looks.",
+     "reveals": "Offer \"Drink it, it looks clean\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that clear water can still carry germs we cannot see.",
+     "feedback": "Clear water can still hold germs. Boil or treat water before drinking.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.1.1",
     "SCIE.G4.RUBRIC.1.2",
     "SCIE.G4.RUBRIC.1.3",
     "SCIE.G4.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcome a is tested by questions (parts, order, jobs). Outcome b says \"develop a plan\": the knowledge is tested (healthy habits) but the plan itself is a task for the teacher to mark with a short rubric. Outcome c (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER",
@@ -274,13 +962,190 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+     "name": "Sort substances into solids, liquids and gases",
+     "outcomes": [
+      "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.a"
+     ],
+     "mastery": "Given a substance from home (stone, wood, sand, sugar, salt, flour, soil, water, milk, cooking oil, tea, air, steam, the air in a tyre), the child says solid, liquid or gas. The child knows sand, sugar and flour are solids even though they pour, that air is a gas and is matter, and that a soft solid such as a sponge or ugali is still a solid. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "sort a named substance",
+      "pick the list that holds only solids (or only liquids or gases)",
+      "read a small table and decide",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.RESOUR.WATER.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+     "name": "Describe the properties of solids, liquids and gases",
+     "outcomes": [
+      "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.b"
+     ],
+     "mastery": "The child says a solid keeps its own shape and size, a liquid flows and takes the shape of its container but keeps its size, and a gas spreads to fill its container and has no shape or size of its own. The child knows a gas has weight and takes up room, and does not think a liquid changes in amount when poured into another container. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the property of a named state",
+      "say which state has a described property",
+      "decide from a short story (a balloon, a jug, a stone)",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_POWDER_LIQUID",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+     "error": "Thinks sand, sugar or flour are liquids because they pour.",
+     "example": {
+      "question": "Is sand a solid, a liquid or a gas?",
+      "wrong_answer": "A liquid, it pours",
+      "correct_answer": "A solid"
+     },
+     "cause": "The child sees pouring as the mark of a liquid.",
+     "reveals": "Offer \"A liquid, it pours\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at one grain of sand with a lens: each grain keeps its own shape.",
+     "feedback": "Sand pours, but each grain is a small solid with its own shape. Sand is a solid.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_AIR_NOTHING",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+     "error": "Thinks air is nothing, or that a gas is not matter because it cannot be seen.",
+     "example": {
+      "question": "Is air a solid, a liquid or a gas?",
+      "wrong_answer": "Air is nothing, so it is none of them",
+      "correct_answer": "A gas"
+     },
+     "cause": "The child cannot see or hold air.",
+     "reveals": "Offer \"Air is nothing, so it is none of them\" next to the right answer and ask the question again in a new context.",
+     "help": "Blow up a balloon and feel it fill: the air takes up room.",
+     "feedback": "Air is a gas. A gas is matter. It takes up room even if we cannot see it.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_SOFT_NOT_SOLID",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
+     "error": "Thinks soft things (a sponge, ugali, clay) are liquids, or not solids.",
+     "example": {
+      "question": "Is a sponge a solid, a liquid or a gas?",
+      "wrong_answer": "A liquid, because it is soft",
+      "correct_answer": "A solid"
+     },
+     "cause": "The child treats hard as the mark of a solid.",
+     "reveals": "Offer \"A liquid, because it is soft\" next to the right answer and ask the question again in a new context.",
+     "help": "Squeeze a sponge: it changes shape but keeps its own shape and does not flow.",
+     "feedback": "A sponge is soft but it keeps its own shape, so it is a solid.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_LIQUID_OWN_SHAPE",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+     "error": "Thinks a liquid has its own shape.",
+     "example": {
+      "question": "Water is poured from a tall glass into a wide basin. What happens to its shape?",
+      "wrong_answer": "It keeps the shape of the glass",
+      "correct_answer": "It takes the shape of the basin"
+     },
+     "cause": "The child has seen a water drop and thinks a liquid has a shape.",
+     "reveals": "Offer \"It keeps the shape of the glass\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour the same water into three different containers and draw its shape each time.",
+     "feedback": "A liquid takes the shape of its container. It has no shape of its own.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_GAS_WEIGHTLESS",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+     "error": "Thinks a gas has no weight, or no mass, or does not take up room.",
+     "example": {
+      "question": "Which statement about air is true?",
+      "wrong_answer": "Air has no weight and takes no room",
+      "correct_answer": "Air takes up room and has weight"
+     },
+     "cause": "The child cannot feel air.",
+     "reveals": "Offer \"Air has no weight and takes no room\" next to the right answer and ask the question again in a new context.",
+     "help": "Weigh a balloon before and after you blow it up on a simple balance.",
+     "feedback": "Air takes up room and has weight. A blown-up balloon weighs more than a flat one.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_VOLUME_CHANGES",
+     "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
+     "error": "Thinks the amount of a liquid changes when it is poured into a different container.",
+     "example": {
+      "question": "One litre of water is poured from a bottle into a wide basin. How much water is there now?",
+      "wrong_answer": "More, it looks bigger in the basin",
+      "correct_answer": "The same, one litre"
+     },
+     "cause": "The child judges the amount by how it looks.",
+     "reveals": "Offer \"More, it looks bigger in the basin\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour back from the basin into the bottle and see it fill again.",
+     "feedback": "The amount stays the same. Only the shape changes. One litre is still one litre.",
+     "source": "Conservation of volume; cited from memory (Piaget). Verify the reference.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.2.1",
     "SCIE.G4.RUBRIC.2.2",
     "SCIE.G4.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Practical: the child shows the states with water, ice and steam or with a balloon, a jug and a stone, as the learning experiences suggest. Outcome c (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST",
@@ -352,13 +1217,279 @@
      "indicator": "SCIE.G4.RUBRIC.2.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+     "name": "Classify solid waste as decomposable or non-decomposable",
+     "outcomes": [
+      "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.a"
+     ],
+     "mastery": "The child says waste that rots and breaks down into soil (banana peels, maize cobs, vegetable leaves, food left over, dry leaves) is decomposable, and waste that does not rot (plastic bags, plastic bottles, glass bottles, tins, rubber, polythene) is non-decomposable. The child does not say a rusting tin rots, or that a buried plastic bag disappears. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "sort a named piece of waste",
+      "pick the list that holds only decomposable waste",
+      "read a small table of waste and decide",
+      "find the false step in a learner's sorting"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+     "name": "Describe the dangers of solid waste to the environment",
+     "outcomes": [
+      "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.b"
+     ],
+     "mastery": "The child says heaps of waste breed flies, rats and mosquitoes that spread diseases, block drains and cause floods, are eaten by animals that can choke or die (polythene), smell, cut people (broken glass, tins) and make smoke when burnt that pollutes the air. The child does not say polythene is harmless to animals or that burning waste has no danger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a danger of a named kind of waste",
+      "say what may happen when waste is left in the open",
+      "decide from a short story about a heap of waste",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.WATER.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+     "name": "Choose the right way to manage a named piece of waste",
+     "outcomes": [
+      "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.c"
+     ],
+     "mastery": "The child chooses a fitting method: compost or bury decomposable waste, reuse a container or jar, recycle plastic, glass and tins, sort waste into separate bins, and take waste to the dump or collection point. The child does not burn or throw all waste in a river and does not put plastic in the compost pit. The doing (sorting waste, making compost) is practical work for the teacher to observe: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the best way to deal with a named waste",
+      "pick what to do with a full bin at school",
+      "decide from a short story about a school or home",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PLASTIC_ROTS",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+     "error": "Thinks plastic and polythene rot in the soil like food scraps.",
+     "example": {
+      "question": "Is a plastic bag decomposable or non-decomposable?",
+      "wrong_answer": "Decomposable, it will rot in the soil",
+      "correct_answer": "Non-decomposable"
+     },
+     "cause": "The child sees old torn bags and thinks they are going.",
+     "reveals": "Offer \"Decomposable, it will rot in the soil\" next to the right answer and ask the question again in a new context.",
+     "help": "Bury a banana peel and a polythene bag and dig up after a month.",
+     "feedback": "A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_RUST_IS_ROT",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+     "error": "Thinks a rusting tin or metal rots, so it is decomposable.",
+     "example": {
+      "question": "Is a tin can decomposable or non-decomposable?",
+      "wrong_answer": "Decomposable, it goes brown and rusts",
+      "correct_answer": "Non-decomposable"
+     },
+     "cause": "The child sees rust and treats it as rotting.",
+     "reveals": "Offer \"Decomposable, it goes brown and rusts\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that a tin takes very many years to break up and does not give soil back.",
+     "feedback": "A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_BURY_DISAPPEARS",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+     "error": "Thinks anything buried in the soil disappears (glass, plastic) or that all waste that burns is decomposable.",
+     "example": {
+      "question": "A glass bottle is buried. Will it rot away into the soil?",
+      "wrong_answer": "Yes, anything buried disappears",
+      "correct_answer": "No, glass does not rot"
+     },
+     "cause": "The child sees buried things leave sight and thinks they have gone.",
+     "reveals": "Offer \"Yes, anything buried disappears\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig up a buried bottle after a month and see it is unchanged.",
+     "feedback": "Glass does not rot. Buried glass stays for ages, so it is non-decomposable.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_POLYTHENE_HARMLESS",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+     "error": "Thinks polythene is harmless to animals that eat it.",
+     "example": {
+      "question": "A cow eats polythene bags thrown on the roadside. What can happen?",
+      "wrong_answer": "Nothing, the cow will digest it",
+      "correct_answer": "The cow can choke or fall sick and die"
+     },
+     "cause": "The child thinks animals can digest anything they eat.",
+     "reveals": "Offer \"Nothing, the cow will digest it\" next to the right answer and ask the question again in a new context.",
+     "help": "Tell the story of a cow whose stomach was found full of polythene.",
+     "feedback": "Animals cannot digest polythene. It can block the stomach and kill them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_BURNING_SAFE",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+     "error": "Thinks burning waste has no danger.",
+     "example": {
+      "question": "Is there any danger in burning plastic waste?",
+      "wrong_answer": "No, the fire destroys the waste",
+      "correct_answer": "Yes, the smoke is harmful to breathe and pollutes the air"
+     },
+     "cause": "The child sees the heap disappear and thinks the problem is gone.",
+     "reveals": "Offer \"No, the fire destroys the waste\" next to the right answer and ask the question again in a new context.",
+     "help": "Notice the black smoke and the smell when plastic burns and who breathes it.",
+     "feedback": "Burning waste makes smoke that pollutes the air and can make people sick.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_ONLY_SMELL",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
+     "error": "Thinks the only trouble with a heap of waste is the smell.",
+     "example": {
+      "question": "Besides the smell, what can a heap of rotting waste cause?",
+      "wrong_answer": "Nothing more",
+      "correct_answer": "Diseases, as flies and rats breed in it"
+     },
+     "cause": "The child sees waste as unpleasant but not harmful.",
+     "reveals": "Offer \"Nothing more\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that flies from the heap land on food and carry germs.",
+     "feedback": "A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_BURN_ALL",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+     "error": "Thinks burning is the right way to get rid of all waste.",
+     "example": {
+      "question": "What is the best way to manage plastic bottles at school?",
+      "wrong_answer": "Burn them",
+      "correct_answer": "Collect them for recycling"
+     },
+     "cause": "The child sees burning as the quickest and cleanest way.",
+     "reveals": "Offer \"Burn them\" next to the right answer and ask the question again in a new context.",
+     "help": "List waste that is better reused or recycled, and note the smoke from burning.",
+     "feedback": "Plastic bottles are better recycled or reused. Burning makes smoke that pollutes the air.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_DUMP_RIVER",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+     "error": "Thinks the river will carry waste away, so dumping in a river is fine.",
+     "example": {
+      "question": "Where should a family put household rubbish?",
+      "wrong_answer": "In the river, it will be carried away",
+      "correct_answer": "In a bin or collection point"
+     },
+     "cause": "The child thinks a river takes things to nowhere.",
+     "reveals": "Offer \"In the river, it will be carried away\" next to the right answer and ask the question again in a new context.",
+     "help": "Follow a river on a map and see it flows to a place where people live and fish.",
+     "feedback": "Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_COMPOST_PLASTIC",
+     "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
+     "error": "Thinks all waste can go in the compost pit, including plastic.",
+     "example": {
+      "question": "Which waste can go into the compost pit?",
+      "wrong_answer": "Vegetable peels and plastic bags",
+      "correct_answer": "Vegetable peels and dry leaves"
+     },
+     "cause": "The child sees the pit as a place for all waste.",
+     "reveals": "Offer \"Vegetable peels and plastic bags\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a compost heap: peels turn to soil, plastic stays.",
+     "feedback": "Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.2.1",
     "SCIE.G4.RUBRIC.2.2",
     "SCIE.G4.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (apply methods) is practical: sorting waste and making a compost pit or a reuse item; the knowledge of which method fits is tested. Outcome d (appreciate) is attitudinal and is seen in the school's waste habits."
   },
   {
    "code": "SCIE.G4.MATTER.WATER_CONSERVATION",
@@ -427,13 +1558,272 @@
      "indicator": "SCIE.G4.RUBRIC.2.3"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+     "name": "Explain what water conservation means",
+     "outcomes": [
+      "SCIE.G4.MATTER.WATER_CONSERVATION.a"
+     ],
+     "mastery": "The child says to conserve water is to use it wisely, not waste it, and protect its sources so it lasts. The child does not say conserving is storing as much as possible and never using it, or that rain will always fill the rivers again. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the meaning of conserving water",
+      "say which action is conserving",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.RESOUR.WATER.c",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+     "name": "Describe ways of conserving water at home and school",
+     "outcomes": [
+      "SCIE.G4.MATTER.WATER_CONSERVATION.b"
+     ],
+     "mastery": "The child names ways: close taps well, mend leaking pipes, collect rainwater from the roof, reuse water (water used to wash vegetables goes to the garden), use a basin or a bucket instead of a running tap, and protect springs and rivers by planting trees. The child does not say a tap may run while one soaps or brushes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a way of saving water",
+      "pick the action that wastes water",
+      "decide what a learner in a story should do",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.RESOUR.WATER.c",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+     "name": "Outline why conserving water matters",
+     "outcomes": [
+      "SCIE.G4.MATTER.WATER_CONSERVATION.c"
+     ],
+     "mastery": "The child says water is needed by people, animals and plants, it is not always enough (dry seasons, drought), wasting it makes it costly and far to fetch, and saving it means there is enough for the people who come after us. The child does not say it is only about the water bill or that only people need it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a reason for conserving water",
+      "say what may happen if water is wasted",
+      "decide from a short story about a dry season",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_STORE_ALL",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+     "error": "Thinks conserving water means storing as much as possible and never using it.",
+     "example": {
+      "question": "What does it mean to conserve water?",
+      "wrong_answer": "To store a lot and not use it",
+      "correct_answer": "To use it wisely and not waste it"
+     },
+     "cause": "The child hears save and thinks keep away.",
+     "reveals": "Offer \"To store a lot and not use it\" next to the right answer and ask the question again in a new context.",
+     "help": "Contrast a family that uses water wisely with one that wastes some.",
+     "feedback": "To conserve is to use wisely and not waste, so that there is enough for later.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_WATER_NEVER_ENDS",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+     "error": "Thinks water never runs out, because rain always fills the rivers.",
+     "example": {
+      "question": "Why must we conserve water?",
+      "wrong_answer": "Because water never runs out, so it does not matter",
+      "correct_answer": "Because clean water is not always enough"
+     },
+     "cause": "The child lives where water is always near.",
+     "reveals": "Offer \"Because water never runs out, so it does not matter\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about dry seasons when the river or the tank dries.",
+     "feedback": "Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_CLEAN_DRINKING",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
+     "error": "Thinks conserving water is only about keeping drinking water clean.",
+     "example": {
+      "question": "Which is an example of conserving water?",
+      "wrong_answer": "Boiling water for drinking only",
+      "correct_answer": "Closing a tap after use"
+     },
+     "cause": "The child mixes up conserving with making water safe.",
+     "reveals": "Offer \"Boiling water for drinking only\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort actions into saving water and cleaning water.",
+     "feedback": "Conserving means not wasting water. Closing a tap or reusing water saves it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_TAP_RUNS",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+     "error": "Thinks leaving the tap running while soaping hands or brushing teeth is fine.",
+     "example": {
+      "question": "Amina brushes her teeth. What should she do with the tap?",
+      "wrong_answer": "Leave it running",
+      "correct_answer": "Close it while she brushes"
+     },
+     "cause": "The child sees water as plentiful from a tap.",
+     "reveals": "Offer \"Leave it running\" next to the right answer and ask the question again in a new context.",
+     "help": "Measure water used when the tap is closed and when it runs.",
+     "feedback": "A running tap wastes a lot of water. Close it while you brush or soap.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_HOSE_BETTER",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+     "error": "Thinks a hose or a running tap is a quicker, better way to water or wash.",
+     "example": {
+      "question": "How should a school water the vegetable garden?",
+      "wrong_answer": "With a running hose to be quick",
+      "correct_answer": "With a watering can, in the cool evening"
+     },
+     "cause": "The child links quickness with good use.",
+     "reveals": "Offer \"With a running hose to be quick\" next to the right answer and ask the question again in a new context.",
+     "help": "Time the work with a watering can and with a hose and compare how much water is used.",
+     "feedback": "A watering can uses less water and puts it where it is needed.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_NO_RAINWATER",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+     "error": "Thinks rainwater is useless or must run away into the drain.",
+     "example": {
+      "question": "What can a school do with rain that falls on the roof?",
+      "wrong_answer": "Let it run away into the drain",
+      "correct_answer": "Collect it in a tank and use it"
+     },
+     "cause": "The child sees rain as only a nuisance.",
+     "reveals": "Offer \"Let it run away into the drain\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a gutter and tank at school or at a neighbour's house.",
+     "feedback": "Rainwater from the roof can be collected in tanks and used for washing and watering.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_BILL",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+     "error": "Thinks the only reason to save water is to pay a smaller bill.",
+     "example": {
+      "question": "Why is it important to save water?",
+      "wrong_answer": "Only to pay a smaller bill",
+      "correct_answer": "So there is enough for people, animals and plants, now and later"
+     },
+     "cause": "The child links saving with money only.",
+     "reveals": "Offer \"Only to pay a smaller bill\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask a family who fetches water from far how they feel about wasted water.",
+     "feedback": "We save water so there is enough for everyone now and later, and not only to save money.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_PEOPLE",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+     "error": "Thinks only people need water, not animals and plants.",
+     "example": {
+      "question": "Who needs water?",
+      "wrong_answer": "Only people",
+      "correct_answer": "People, animals and plants"
+     },
+     "cause": "The child links water with drinking and washing.",
+     "reveals": "Offer \"Only people\" next to the right answer and ask the question again in a new context.",
+     "help": "List what a farm needs water for: people, cattle, vegetables.",
+     "feedback": "People, animals and plants all need water to live.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_RAIN_ENOUGH",
+     "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
+     "error": "Thinks there is always enough water because of the rains.",
+     "example": {
+      "question": "What can happen in a long dry season?",
+      "wrong_answer": "Nothing, there is always enough water",
+      "correct_answer": "Rivers and wells can dry up and water becomes hard to find"
+     },
+     "cause": "The child has seen water in the rainy season only.",
+     "reveals": "Offer \"Nothing, there is always enough water\" next to the right answer and ask the question again in a new context.",
+     "help": "Recall the last dry season and how far people walked for water.",
+     "feedback": "In a long dry season rivers and wells can dry up, so it is important to save water before it happens.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.2.1",
     "SCIE.G4.RUBRIC.2.2",
     "SCIE.G4.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (develop interest) is attitudinal; a class campaign or a rainwater-collection project can show it."
   },
   {
    "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT",
@@ -500,15 +1890,282 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+     "name": "Describe types of forces in nature",
+     "outcomes": [
+      "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.a"
+     ],
+     "mastery": "The child says a force is a push or a pull, and names muscular force (from our body), gravity (pulls things to the ground), friction (rubbing that slows things), magnetic force (a magnet pulls iron and steel) and elastic force (a stretched rubber or spring pulls back). The child knows a magnet attracts only iron and steel things (not all metals), and that gravity acts on things that are not falling too. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the force in a described situation",
+      "say whether a force is a push or a pull",
+      "say what a named force does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.NATURA.SOIL.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+     "name": "Say the effects of a force on an object",
+     "outcomes": [
+      "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.b"
+     ],
+     "mastery": "The child says a force can make a still object move, make a moving object stop, speed up, slow down or turn, and can change the shape of an object (squeezing clay, stretching a rubber band). The child does not say a force can only start a movement, or that a moving ball needs a push all the time to keep moving. Showing the effect with real objects is practical work: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say the effect of a force in a described situation",
+      "pick the situation that shows a named effect",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+     "name": "Describe the uses of force in daily life",
+     "outcomes": [
+      "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.c"
+     ],
+     "mastery": "The child names uses: muscular force to lift, dig, kick and carry, friction in brakes and in walking on a path without slipping, gravity bringing rain down and keeping things on the ground, magnets in a fridge door or in a toy, and elastic force in a catapult. The child does not say friction is only bad, or that gravity is only a problem. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a use of a named force",
+      "name the force used in a daily task",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_PUSH_PULL_MIX",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+     "error": "Mixes up push and pull (calls opening a drawer a push, or kicking a pull).",
+     "example": {
+      "question": "A learner opens a drawer by holding the handle and moving it towards her. Is this a push or a pull?",
+      "wrong_answer": "A push",
+      "correct_answer": "A pull"
+     },
+     "cause": "The child thinks every action with force is a push.",
+     "reveals": "Offer \"A push\" next to the right answer and ask the question again in a new context.",
+     "help": "Do both with a real drawer and say which way the hand moves compared with the body.",
+     "feedback": "Moving something towards you is a pull. Moving something away from you is a push.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_MAGNET_ALL",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+     "error": "Thinks a magnet attracts all metals (aluminium, copper, coins).",
+     "example": {
+      "question": "Which of these will a magnet pick up?",
+      "wrong_answer": "An aluminium spoon",
+      "correct_answer": "An iron nail"
+     },
+     "cause": "The child thinks magnetism is a property of every shiny metal.",
+     "reveals": "Offer \"An aluminium spoon\" next to the right answer and ask the question again in a new context.",
+     "help": "Test a spoon, a copper wire and an iron nail with a magnet.",
+     "feedback": "A magnet picks up only iron and steel things, not all metals.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_GRAVITY_ONLY_FALLING",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+     "error": "Thinks gravity acts only on things that are falling.",
+     "example": {
+      "question": "A book is resting on a table. Is gravity acting on it?",
+      "wrong_answer": "No, it is not falling",
+      "correct_answer": "Yes, gravity is pulling it down and the table holds it up"
+     },
+     "cause": "The child thinks forces work only on moving things.",
+     "reveals": "Offer \"No, it is not falling\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a book in your hand and feel it press down.",
+     "feedback": "Gravity pulls down on everything all the time, even things at rest.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_ONLY_START",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+     "error": "Thinks a force can only start a movement and cannot stop one or change its direction.",
+     "example": {
+      "question": "A goalkeeper catches a fast ball. What did the force do?",
+      "wrong_answer": "It started the ball moving",
+      "correct_answer": "It stopped the ball"
+     },
+     "cause": "The child sees forces as only pushes that start things.",
+     "reveals": "Offer \"It started the ball moving\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll a ball and stop it with the hand, then turn it with a stick.",
+     "feedback": "A force can also stop a moving object, speed it up, slow it down or turn it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_SHAPE_NOT_EFFECT",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+     "error": "Does not count a change of shape as an effect of a force.",
+     "example": {
+      "question": "A girl squeezes a lump of clay and it becomes flat. What did the force do?",
+      "wrong_answer": "Nothing, it only moved the clay",
+      "correct_answer": "It changed the shape of the clay"
+     },
+     "cause": "The child thinks forces only move things.",
+     "reveals": "Offer \"Nothing, it only moved the clay\" next to the right answer and ask the question again in a new context.",
+     "help": "Squeeze clay, a sponge and a rubber band and say what changed.",
+     "feedback": "A force can change the shape of an object, as when clay is squeezed.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_MOTION_NEEDS_FORCE",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+     "error": "Thinks a moving ball must still be pushed all the time to keep moving.",
+     "example": {
+      "question": "A ball rolls on the pitch after a kick. Why does it finally stop?",
+      "wrong_answer": "The push is used up",
+      "correct_answer": "Friction with the ground slows it down"
+     },
+     "cause": "The child thinks motion needs a force to continue.",
+     "reveals": "Offer \"The push is used up\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll a ball over grass, over a road and over smooth floor, and compare how far it goes.",
+     "feedback": "The ball slows and stops because friction with the ground acts on it.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_FRICTION_BAD_ONLY",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+     "error": "Thinks friction is only a problem and is never useful.",
+     "example": {
+      "question": "Why do bicycle brakes work?",
+      "wrong_answer": "Because of gravity",
+      "correct_answer": "Because of friction between the brake and the wheel"
+     },
+     "cause": "The child knows friction as what wears things out.",
+     "reveals": "Offer \"Because of gravity\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to walk on a wet, smooth floor and say why it is hard.",
+     "feedback": "Friction is useful in brakes, in walking and in holding things. It is a force that slows things.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_GRAVITY_ONLY_PROBLEM",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+     "error": "Thinks gravity is only a nuisance or only works on big things.",
+     "example": {
+      "question": "How does gravity help us?",
+      "wrong_answer": "It does not help us",
+      "correct_answer": "It makes rain fall and keeps things on the ground"
+     },
+     "cause": "The child knows gravity as what makes things fall and break.",
+     "reveals": "Offer \"It does not help us\" next to the right answer and ask the question again in a new context.",
+     "help": "Say what would happen to our water and cups if there were no gravity.",
+     "feedback": "Gravity makes rain fall and keeps us and things on the ground.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_NOT_EVERYDAY",
+     "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
+     "error": "Thinks only strong pushing and pulling uses force (carrying a box), not small tasks (writing, walking).",
+     "example": {
+      "question": "Which of these uses a force?",
+      "wrong_answer": "Only lifting a heavy sack",
+      "correct_answer": "Lifting a sack and also writing with a pencil"
+     },
+     "cause": "The child thinks only hard work uses force.",
+     "reveals": "Offer \"Only lifting a heavy sack\" next to the right answer and ask the question again in a new context.",
+     "help": "Press your hand on the desk and say which small tasks use a push or a pull.",
+     "feedback": "A push or a pull is a force. Even writing and walking use a force.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.3.1",
     "SCIE.G4.RUBRIC.3.2",
     "SCIE.G4.RUBRIC.3.3",
     "SCIE.G4.RUBRIC.3.4",
     "SCIE.G4.RUBRIC.3.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and c are tested by questions. Outcome b (demonstrate the effects of force) is practical: the knowledge is tested, the demonstration is observed. Outcome d (appreciate) is attitudinal."
   },
   {
    "code": "SCIE.G4.FORCE_.LIGHT",
@@ -574,15 +2231,267 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+     "name": "Identify the sources of light in nature",
+     "outcomes": [
+      "SCIE.G4.FORCE_.LIGHT.a"
+     ],
+     "mastery": "The child names natural sources (the Sun, stars, lightning, fireflies) and sources made by people (a torch, an electric bulb, a candle, a paraffin lamp, a solar lamp), and knows the Moon, a mirror and a shiny roof only reflect light and give none of their own. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the source of light",
+      "sort sources into natural and made by people",
+      "pick the thing that is not a source of light",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+     "name": "Describe ways of lighting a house",
+     "outcomes": [
+      "SCIE.G4.FORCE_.LIGHT.b"
+     ],
+     "mastery": "The child names ways: windows and clear roofing sheets in the day, electric bulbs, solar lamps, a paraffin lamp, a candle and a torch at night. The child knows light-coloured walls make a room brighter, a window lets in light as well as air, and that a lit candle or lamp must never be left alone near cloth or children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a way of lighting a house by day or by night",
+      "pick the safe way to use a named light",
+      "decide from a short story about a home",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+     "name": "Explain the uses of light in daily life",
+     "outcomes": [
+      "SCIE.G4.FORCE_.LIGHT.c"
+     ],
+     "mastery": "The child says light helps us see (light from a source bounces off things into our eyes), lets plants make their food, sends signals (traffic lights, a torch signal) and gives solar energy. The child does not say we see because light comes out of our eyes, or that plants take all their food from the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a use of light",
+      "say why light is needed in a described situation",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_MOON_SOURCE",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+     "error": "Thinks the Moon is a source of light.",
+     "example": {
+      "question": "Which of these gives out its own light?",
+      "wrong_answer": "The Moon",
+      "correct_answer": "The Sun"
+     },
+     "cause": "The child sees the Moon shining at night.",
+     "reveals": "Offer \"The Moon\" next to the right answer and ask the question again in a new context.",
+     "help": "Shine a torch on a mirror and look: the mirror lights up but is not a source.",
+     "feedback": "The Moon only reflects light from the Sun. The Sun gives out its own light.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_SHINY_SOURCE",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+     "error": "Thinks shiny things (mirror, glass, a tin roof) are sources of light.",
+     "example": {
+      "question": "Which of these is a source of light?",
+      "wrong_answer": "A shiny tin roof in the sun",
+      "correct_answer": "A burning candle"
+     },
+     "cause": "The child links shiny with giving light.",
+     "reveals": "Offer \"A shiny tin roof in the sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover the torch: the mirror goes dark. Cover a candle: the light stays with the flame.",
+     "feedback": "A shiny roof only reflects light. A burning candle makes its own light.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_NATURAL_ONLY_SKY",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
+     "error": "Thinks natural sources are only in the sky (Sun, stars) and leaves out lightning and fireflies.",
+     "example": {
+      "question": "Which of these is a natural source of light?",
+      "wrong_answer": "An electric bulb",
+      "correct_answer": "A firefly"
+     },
+     "cause": "The child thinks only big things in the sky give light.",
+     "reveals": "Offer \"An electric bulb\" next to the right answer and ask the question again in a new context.",
+     "help": "Say which living things make light on a dark night.",
+     "feedback": "Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_WINDOW_ONLY_AIR",
+     "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+     "error": "Thinks windows are only for air and not a way of lighting a house.",
+     "example": {
+      "question": "How does a window help a classroom in the day?",
+      "wrong_answer": "It only lets in air",
+      "correct_answer": "It lets in light and air"
+     },
+     "cause": "The child thinks light comes only from bulbs.",
+     "reveals": "Offer \"It only lets in air\" next to the right answer and ask the question again in a new context.",
+     "help": "Close the shutters in a classroom and say what changes.",
+     "feedback": "A window lets in light as well as air. It is a way of lighting a room in the day.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_DARK_WALLS",
+     "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+     "error": "Thinks dark walls make a room brighter.",
+     "example": {
+      "question": "Which walls make a small room brighter?",
+      "wrong_answer": "Dark brown walls",
+      "correct_answer": "Light-coloured walls, like white"
+     },
+     "cause": "The child thinks dark means strong.",
+     "reveals": "Offer \"Dark brown walls\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a dark corner of a room and a white wall.",
+     "feedback": "Light-coloured walls reflect more light, so the room is brighter.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_CANDLE_LEFT",
+     "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
+     "error": "Thinks a lit candle or paraffin lamp can be left alone while the family sleeps.",
+     "example": {
+      "question": "A family goes to sleep. What should they do with the lit candle?",
+      "wrong_answer": "Leave it burning near the curtain",
+      "correct_answer": "Put it out before sleeping"
+     },
+     "cause": "The child has not thought about fire risks.",
+     "reveals": "Offer \"Leave it burning near the curtain\" next to the right answer and ask the question again in a new context.",
+     "help": "Tell the story of a house fire from a candle.",
+     "feedback": "A lit candle or lamp can start a fire. Put it out before sleeping and keep it away from cloth.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_EYES_SEND",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+     "error": "Thinks we see because light comes out of our eyes.",
+     "example": {
+      "question": "How do we see a book?",
+      "wrong_answer": "Light comes out of our eyes and lands on it",
+      "correct_answer": "Light from a source bounces off the book into our eyes"
+     },
+     "cause": "The child thinks looking is an act we do to the thing.",
+     "reveals": "Offer \"Light comes out of our eyes and lands on it\" next to the right answer and ask the question again in a new context.",
+     "help": "Sit in a dark room with a book and say why you cannot see it until the lamp is on.",
+     "feedback": "We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_PLANT_SOIL_FOOD",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+     "error": "Thinks plants get all their food from the soil and do not need light.",
+     "example": {
+      "question": "Why do plants need light?",
+      "wrong_answer": "They do not need light, only soil",
+      "correct_answer": "To make their food"
+     },
+     "cause": "The child thinks the soil is the plant's food.",
+     "reveals": "Offer \"They do not need light, only soil\" next to the right answer and ask the question again in a new context.",
+     "help": "Grow one seedling in the dark and one in the light and compare after a week.",
+     "feedback": "Plants use light to make their food in the leaves.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_ONLY_SEE",
+     "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
+     "error": "Thinks the only use of light is to see.",
+     "example": {
+      "question": "What do traffic lights use light for?",
+      "wrong_answer": "To see in the dark",
+      "correct_answer": "To send signals to drivers"
+     },
+     "cause": "The child thinks light is only a way of seeing.",
+     "reveals": "Offer \"To see in the dark\" next to the right answer and ask the question again in a new context.",
+     "help": "List other uses: signals, solar power, plants, drying.",
+     "feedback": "Light is used to see, and also for signals, for plants to make food and for solar energy.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.3.1",
     "SCIE.G4.RUBRIC.3.2",
     "SCIE.G4.RUBRIC.3.3",
     "SCIE.G4.RUBRIC.3.4",
     "SCIE.G4.RUBRIC.3.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (appreciate) is attitudinal. Practical: a class sorts sources of light or lists how rooms at home are lit."
   },
   {
    "code": "SCIE.G4.FORCE_.HEAT",
@@ -650,15 +2559,292 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+     "name": "Identify the sources of heat in nature",
+     "outcomes": [
+      "SCIE.G4.FORCE_.HEAT.a"
+     ],
+     "mastery": "The child names the Sun, fire (firewood, charcoal), electricity (a cooker, an iron, a kettle), cooking gas, paraffin, friction (rubbing the hands) and hot springs and volcanoes (such as around Lake Bogoria) as sources of heat. The child does not call a cup of tea or a hot stone a source of heat, since they were only warmed by one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the source of heat",
+      "pick the thing that is not a source of heat",
+      "sort sources into natural and made by people",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.a",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.b",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+     "name": "Describe the uses of heat in daily life",
+     "outcomes": [
+      "SCIE.G4.FORCE_.HEAT.b"
+     ],
+     "mastery": "The child names uses: cooking, boiling drinking water to make it safe, drying clothes, grain and fish in the sun, warming a house, ironing, baking, and melting metal. The child knows boiling makes water safer and that clothes dry fastest where it is hot and windy, not in the shade. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a use of heat",
+      "name the heat used in a daily task",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.b",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+     "name": "Choose safe ways of using heat",
+     "outcomes": [
+      "SCIE.G4.FORCE_.HEAT.c"
+     ],
+     "mastery": "The child chooses safe habits: a dry cloth or pot holder for a hot pot, matches and lit stoves kept away from young children, a stove put out and cooled before it is refilled, fire put out before leaving, and cool running water on a burn for several minutes. The child does not choose a wet cloth for a hot pot, refilling a lit stove, or butter or oil on a burn. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe way to handle a hot thing",
+      "pick what to do after a burn",
+      "decide what a learner in a story should do",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "ENVI.G3.NATURA.HEAT.c",
+       "kind": "outcome",
+       "reason": "Grade 3 Environmental Activities introduced it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_SUN_ONLY",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+     "error": "Thinks the Sun is the only source of heat.",
+     "example": {
+      "question": "Which of these is a source of heat?",
+      "wrong_answer": "Only the Sun",
+      "correct_answer": "The Sun and a charcoal fire"
+     },
+     "cause": "The child thinks heat comes only from the sky.",
+     "reveals": "Offer \"Only the Sun\" next to the right answer and ask the question again in a new context.",
+     "help": "List what we use for heat in the kitchen.",
+     "feedback": "The Sun is a source of heat, and so are fire, electricity and cooking gas.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_HOT_OBJECT_SOURCE",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+     "error": "Thinks a hot thing (a cup of tea, a hot stone) is a source of heat.",
+     "example": {
+      "question": "Which is a source of heat?",
+      "wrong_answer": "A hot stone in the sun",
+      "correct_answer": "A burning charcoal stove"
+     },
+     "cause": "The child thinks anything hot makes heat.",
+     "reveals": "Offer \"A hot stone in the sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what made the stone hot: the Sun.",
+     "feedback": "A hot stone was warmed by the Sun. The Sun is the source.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_RUBBING_NOT_HEAT",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+     "error": "Does not think rubbing makes heat (friction as a source).",
+     "example": {
+      "question": "Njoroge rubs his hands together on a cold morning. What happens?",
+      "wrong_answer": "Nothing, rubbing does not make heat",
+      "correct_answer": "His hands get warm because of friction"
+     },
+     "cause": "The child thinks heat comes only from fires.",
+     "reveals": "Offer \"Nothing, rubbing does not make heat\" next to the right answer and ask the question again in a new context.",
+     "help": "Rub the palms for 20 seconds and say how they feel.",
+     "feedback": "Rubbing makes friction, and friction makes heat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_BOIL_NOT_SAFE",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+     "error": "Thinks boiling water does not make it safer to drink.",
+     "example": {
+      "question": "Why do we boil drinking water?",
+      "wrong_answer": "To make it taste nice",
+      "correct_answer": "To kill germs and make it safe"
+     },
+     "cause": "The child sees boiling as only for making tea.",
+     "reveals": "Offer \"To make it taste nice\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that germs in water die when it boils.",
+     "feedback": "Boiling kills germs in the water and makes it safer to drink.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_DRY_IN_SHADE",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+     "error": "Thinks clothes dry best in the shade or in the rain.",
+     "example": {
+      "question": "Where do wet clothes dry fastest?",
+      "wrong_answer": "In the shade",
+      "correct_answer": "In the sun and wind"
+     },
+     "cause": "The child links drying with not getting hot.",
+     "reveals": "Offer \"In the shade\" next to the right answer and ask the question again in a new context.",
+     "help": "Hang two cloths, one in the sun and one in the shade, and compare.",
+     "feedback": "Heat from the Sun, with wind, dries clothes fastest.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_ONLY_COOKING",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+     "error": "Thinks the only use of heat is to cook.",
+     "example": {
+      "question": "Which of these is also a use of heat?",
+      "wrong_answer": "There is no other use, only cooking",
+      "correct_answer": "Drying grain and warming a house"
+     },
+     "cause": "The child links heat with the kitchen.",
+     "reveals": "Offer \"There is no other use, only cooking\" next to the right answer and ask the question again in a new context.",
+     "help": "List five jobs done with heat at home and on the farm.",
+     "feedback": "Heat is used for cooking and also for drying, warming, ironing and boiling water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_BUTTER_ON_BURN",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+     "error": "Thinks butter, oil or ash should be put on a burn.",
+     "example": {
+      "question": "A child burns her hand. What should be done first?",
+      "wrong_answer": "Rub butter on it",
+      "correct_answer": "Put the burn under cool running water"
+     },
+     "cause": "This is a common home custom.",
+     "reveals": "Offer \"Rub butter on it\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that cool water takes the heat out of the skin.",
+     "feedback": "Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_REFILL_LIT",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+     "error": "Thinks a lit stove or jiko can be refilled with paraffin or charcoal while burning.",
+     "example": {
+      "question": "A paraffin stove is nearly empty and still burning. What is the safe thing to do?",
+      "wrong_answer": "Pour more paraffin in at once",
+      "correct_answer": "Put it out, let it cool, then refill"
+     },
+     "cause": "The child wants to save time.",
+     "reveals": "Offer \"Pour more paraffin in at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that paraffin catches fire from a flame.",
+     "feedback": "Put out the flame, let the stove cool, and then refill it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WET_CLOTH",
+     "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+     "error": "Thinks a wet cloth is good for holding a hot pot.",
+     "example": {
+      "question": "What should you use to lift a hot pot?",
+      "wrong_answer": "A wet cloth",
+      "correct_answer": "A dry cloth or pot holder"
+     },
+     "cause": "The child thinks wet cools the pot.",
+     "reveals": "Offer \"A wet cloth\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that steam from a wet cloth burns.",
+     "feedback": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "SCIE.G4.RUBRIC.3.1",
     "SCIE.G4.RUBRIC.3.2",
     "SCIE.G4.RUBRIC.3.3",
     "SCIE.G4.RUBRIC.3.4",
     "SCIE.G4.RUBRIC.3.5"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b (knowledge) and c are tested by questions. Outcome b says \"demonstrate\": the demonstration is practical and observed (safely). Outcome d (appreciate) is attitudinal."
   }
  ],
  "rubrics": [
