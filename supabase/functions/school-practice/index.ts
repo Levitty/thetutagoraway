@@ -1265,14 +1265,14 @@ var CORE_FAMILIES = [
       return { r, b };
     },
     make: ({ r, b }) => {
-      const n = r + b, num3 = r * r, den = n * n, g = gcdOf(num3, den), ans = `${num3 / g}/${den / g}`;
+      const n = r + b, num4 = r * r, den = n * n, g = gcdOf(num4, den), ans = `${num4 / g}/${den / g}`;
       return {
         question: `A bag has ${r} red and ${b} blue counters. One is taken, its colour noted, and it is put back. A second is taken. Find the probability that both are red, as a fraction in its simplest form.`,
         instruction: "Give the answer as a fraction in its simplest form.",
         answer: ans,
         wrong: [[`${r}/${n}`, "That is for one counter. There are two draws: multiply."], [`${r * (r - 1) / gcdOf(r * (r - 1), n * (n - 1))}/${n * (n - 1) / gcdOf(r * (r - 1), n * (n - 1))}`, "The counter was put back, so the second draw has the same chances as the first."], [`${2 * r}/${n}`, "Along a path you multiply probabilities, not add them."]],
         hints: ["The counter goes back, so both draws are the same.", `Each draw has ${n} counters.`],
-        steps: [`P(red on one draw) = ${r}/${n}.`, `Both red: ${r}/${n} \xD7 ${r}/${n} = ${num3}/${den} = ${ans}.`]
+        steps: [`P(red on one draw) = ${r}/${n}.`, `Both red: ${r}/${n} \xD7 ${r}/${n} = ${num4}/${den} = ${ans}.`]
       };
     },
     check: ({ r, b }, a) => {
@@ -1291,14 +1291,14 @@ var CORE_FAMILIES = [
       return { g, b };
     },
     make: ({ g, b }) => {
-      const n = g + b, num3 = g * (g - 1), den = n * (n - 1), k = gcdOf(num3, den), ans = `${num3 / k}/${den / k}`;
+      const n = g + b, num4 = g * (g - 1), den = n * (n - 1), k = gcdOf(num4, den), ans = `${num4 / k}/${den / k}`;
       return {
         question: `A class list has ${g} girls and ${b} boys. The teacher picks one learner to lead and then another to help. A learner cannot be picked twice. Find the probability that both are girls, as a fraction in its simplest form.`,
         instruction: "Give the answer as a fraction in its simplest form.",
         answer: ans,
         wrong: [[`${g * g / gcdOf(g * g, n * n)}/${n * n / gcdOf(g * g, n * n)}`, "After the first pick there is one fewer learner, and one fewer girl."], [`${g / gcdOf(g, n)}/${n / gcdOf(g, n)}`, "That is for one pick. Two picks: multiply."], [`${(g - 1) / gcdOf(g - 1, n - 1)}/${(n - 1) / gcdOf(g - 1, n - 1)}`, "That is only the second pick. Multiply it by the first."]],
         hints: ["After the first girl is picked, what changes?", `Second pick: ${g - 1} girls out of ${n - 1}.`],
-        steps: [`First pick: ${g}/${n}.`, `Second pick: ${g - 1}/${n - 1}.`, `Both: ${g}/${n} \xD7 ${g - 1}/${n - 1} = ${num3}/${den} = ${ans}.`]
+        steps: [`First pick: ${g}/${n}.`, `Second pick: ${g - 1}/${n - 1}.`, `Both: ${g}/${n} \xD7 ${g - 1}/${n - 1} = ${num4}/${den} = ${ans}.`]
       };
     },
     check: ({ g, b }, a) => {
@@ -5567,14 +5567,14 @@ var FAMILIES4 = [
       return a - b > 0 && distinct2(a - b, a + b, d - b) ? { d, a, b, k: randInt(0, 1), p: person() } : null;
     },
     make: ({ d, a, b, k, p }) => {
-      const num3 = k === 0 ? a + b : a - b, den = k === 1 ? d - b : d;
+      const num4 = k === 0 ? a + b : a - b, den = k === 1 ? d - b : d;
       return {
         question: `${p.name} works out ${a}/${d} \u2212 ${b}/${d}. Which step has the mistake?`,
         working: [
           { text: `Both fractions have the denominator ${d}.`, ok: true },
-          { text: `Numerators: ${a} ${k === 0 ? "+" : "\u2212"} ${b} = ${num3}`, ok: num3 === a - b },
+          { text: `Numerators: ${a} ${k === 0 ? "+" : "\u2212"} ${b} = ${num4}`, ok: num4 === a - b },
           { text: `Denominator: ${k === 1 ? `${d} \u2212 ${b} = ${den}` : `stays ${d}`}`, ok: den === d },
-          { text: `So the answer is ${num3}/${den}.`, ok: true }
+          { text: `So the answer is ${num4}/${den}.`, ok: true }
         ],
         fix: k === 0 ? "Subtracting fractions takes the numerators away. Here they were added." : "The denominator tells the size of the parts. It does not change when fractions with the same denominator are subtracted.",
         hints: ["Check each step against the one before it.", "Which parts change when like fractions are subtracted: the number of parts or their size?"],
@@ -9456,8 +9456,8 @@ var FAMILIES5 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const h = randInt(100, 990) * 100, ok2 = [h - 50, h + 49], no2 = [h + 50, h - 51];
-      const t = pick(ok2), bad = pick(no2);
+      const h = randInt(100, 990) * 100, ok4 = [h - 50, h + 49], no4 = [h + 50, h - 51];
+      const t = pick(ok4), bad = pick(no4);
       const options = mc(commas(t), [[commas(bad), `${commas(bad)} rounds to ${commas(rnd2(bad, 100))}, not ${commas(h)}.`, "M_ROUND_CHAIN_ROUNDING"], [commas(h + 100 + 30), "It rounds to a different hundred.", "M_ROUND_DOWN_DECREASES_DIGIT"], [commas(h - 100 - 20), "It rounds to a different hundred.", "M_ROUND_DOWN_DECREASES_DIGIT"]]);
       return {
         question: `A shopkeeper rounds every price to the nearest hundred shillings. Which of these prices becomes sh ${commas(h)}?`,
@@ -9579,8 +9579,8 @@ var FAMILIES5 = [
     rung: 3,
     gen: () => {
       const a = randInt(1, 9), b = randInt(1, 9), c = randInt(1, 9), d = pick([0, 2, 4, 6, 8]);
-      const ok2 = pick([1, 2, 4, 6, 8, 0].filter((x) => true)), p = person();
-      const n = Number(`${a}${b}${c}${ok2 === 1 ? 2 : ok2}`);
+      const ok4 = pick([1, 2, 4, 6, 8, 0].filter((x) => true)), p = person();
+      const n = Number(`${a}${b}${c}${ok4 === 1 ? 2 : ok4}`);
       const big = Number(`${a}${b}${c}0`);
       const wrongDig = [1, 3, 5, 7, 9][randInt(0, 4)];
       return {
@@ -9601,16 +9601,16 @@ var FAMILIES5 = [
     rung: 1,
     gen: () => {
       const k = pick([2, 3, 4, 7]), n = k * 100 + pick([0, 5, 1, 3]) + randInt(1, 9) * 10 * pick([0, 1, 1]), t = pick([5, 10]);
-      const ok2 = n % t === 0, p = person();
+      const ok4 = n % t === 0, p = person();
       const o = n % 10;
-      const right = ok2 ? `Yes, the ones digit ${o} means it divides by ${t}` : `No, the ones digit ${o} means it does not divide by ${t}`;
-      const options = mc(right, [[ok2 ? `No, the ones digit ${o} means it does not divide by ${t}` : `Yes, the ones digit ${o} means it divides by ${t}`, ok2 ? t === 5 ? "Numbers ending in 0 as well as 5 are divisible by 5." : "A number is divisible by 10 when its ones digit is 0." : "Check the ones digit against the rule again.", ok2 ? "M_DIV5_ONLY_ENDS_5" : "M_DIV10_ANY_ZERO"], [`Yes, because the number contains a zero somewhere`, "A zero in the middle does not matter. Only the ones digit decides.", "M_DIV10_ANY_ZERO"]].filter((w) => !(String(n).includes("0") === false && w[2] === "M_DIV10_ANY_ZERO" && false)));
+      const right = ok4 ? `Yes, the ones digit ${o} means it divides by ${t}` : `No, the ones digit ${o} means it does not divide by ${t}`;
+      const options = mc(right, [[ok4 ? `No, the ones digit ${o} means it does not divide by ${t}` : `Yes, the ones digit ${o} means it divides by ${t}`, ok4 ? t === 5 ? "Numbers ending in 0 as well as 5 are divisible by 5." : "A number is divisible by 10 when its ones digit is 0." : "Check the ones digit against the rule again.", ok4 ? "M_DIV5_ONLY_ENDS_5" : "M_DIV10_ANY_ZERO"], [`Yes, because the number contains a zero somewhere`, "A zero in the middle does not matter. Only the ones digit decides.", "M_DIV10_ANY_ZERO"]].filter((w) => !(String(n).includes("0") === false && w[2] === "M_DIV10_ANY_ZERO" && false)));
       return {
         question: `${p.name} has ${n} eggs to pack in trays of ${t}. Test the number with a divisibility rule: can all the eggs be packed with none left over?`,
         options,
         instruction: "Choose the answer and the reason.",
         hints: [`A number is divisible by ${t} when its ones digit is ${t === 5 ? "0 or 5" : "0"}.`, "Look only at the ones digit."],
-        steps: [`The ones digit of ${n} is ${o}.`, ok2 ? `So ${n} is divisible by ${t}.` : `So ${n} is not divisible by ${t}.`]
+        steps: [`The ones digit of ${n} is ${o}.`, ok4 ? `So ${n} is divisible by ${t}.` : `So ${n} is not divisible by ${t}.`]
       };
     }
   }),
@@ -9658,15 +9658,15 @@ var FAMILIES5 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const n = randInt(100, 999) * 2 + pick([0, 1]), ok2 = n % 2 === 0, t = TOWNS[randInt(0, 5)];
-      const right = ok2 ? `Yes, ${n} is even, so each class gets ${n / 2}` : `No, ${n} is odd, so 1 is left over`;
-      const options = mc(right, [[ok2 ? `No, ${n} is even, so 1 is left over` : `Yes, each class gets ${Math.floor(n / 2)} and a half`, ok2 ? "An even number divides into two equal shares with nothing left." : "A half banana is not allowed here. We need none left over.", "M_DIVPROB_DIVIDE_ANYWAY"], [`Yes, any number can be shared`, "Not every number shares exactly. Test the ones digit.", "M_DIVPROB_DIVIDE_ANYWAY"]]);
+      const n = randInt(100, 999) * 2 + pick([0, 1]), ok4 = n % 2 === 0, t = TOWNS[randInt(0, 5)];
+      const right = ok4 ? `Yes, ${n} is even, so each class gets ${n / 2}` : `No, ${n} is odd, so 1 is left over`;
+      const options = mc(right, [[ok4 ? `No, ${n} is even, so 1 is left over` : `Yes, each class gets ${Math.floor(n / 2)} and a half`, ok4 ? "An even number divides into two equal shares with nothing left." : "A half banana is not allowed here. We need none left over.", "M_DIVPROB_DIVIDE_ANYWAY"], [`Yes, any number can be shared`, "Not every number shares exactly. Test the ones digit.", "M_DIVPROB_DIVIDE_ANYWAY"]]);
       return {
         question: `A school near ${t} has ${commas(n)} bananas. Can they be shared equally between 2 classes with none left over? Use a divisibility test to decide.`,
         options,
         instruction: "Choose the answer and the reason.",
         hints: ["Which divisibility test is needed for sharing between 2?", "Look at the ones digit."],
-        steps: [`Sharing between 2 needs divisibility by 2. The ones digit is ${n % 10}.`, ok2 ? "It is even, so there is nothing left." : "It is odd, so 1 is left."]
+        steps: [`Sharing between 2 needs divisibility by 2. The ones digit is ${n % 10}.`, ok4 ? "It is even, so there is nothing left." : "It is odd, so 1 is left."]
       };
     }
   }),
@@ -9676,10 +9676,10 @@ var FAMILIES5 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const t = pick([5, 10]), n = randInt(20, 99) * 5 + pick([0, 0, 1, 2]), ok2 = n % t === 0, p = person();
+      const t = pick([5, 10]), n = randInt(20, 99) * 5 + pick([0, 0, 1, 2]), ok4 = n % t === 0, p = person();
       const wrongTest = t === 5 ? "No, because it does not end in 0" : "No, because it ends in 5";
-      const right = ok2 ? `Yes, the test for ${t} says it divides` : `No, the test for ${t} says it does not divide`;
-      const options = mc(right, [[ok2 ? t === 5 ? "No, because it does not end in 0" : `No, ${n} does not divide by ${t}` : `Yes, ${n} divides by ${t}`, ok2 ? t === 5 ? "Numbers ending in 5 are divisible by 5. The test for 10 is a different test." : "Check the ones digit against 0." : "Check the ones digit.", ok2 && t === 5 ? "M_DIVPROB_5_NEEDS_0" : "M_DIVPROB_DIVIDE_ANYWAY"], [`It cannot be decided without dividing`, "The divisibility tests decide it from the ones digit alone.", "M_DIVPROB_DIVIDE_ANYWAY"]]);
+      const right = ok4 ? `Yes, the test for ${t} says it divides` : `No, the test for ${t} says it does not divide`;
+      const options = mc(right, [[ok4 ? t === 5 ? "No, because it does not end in 0" : `No, ${n} does not divide by ${t}` : `Yes, ${n} divides by ${t}`, ok4 ? t === 5 ? "Numbers ending in 5 are divisible by 5. The test for 10 is a different test." : "Check the ones digit against 0." : "Check the ones digit.", ok4 && t === 5 ? "M_DIVPROB_5_NEEDS_0" : "M_DIVPROB_DIVIDE_ANYWAY"], [`It cannot be decided without dividing`, "The divisibility tests decide it from the ones digit alone.", "M_DIVPROB_DIVIDE_ANYWAY"]]);
       return {
         question: `${p.name} has ${n} mandazi to pack into bags of ${t}, with none left over. Which statement is correct?`,
         options,
@@ -9796,8 +9796,8 @@ var FAMILIES5 = [
     gen: () => {
       const [a, b] = pick([[12, 18], [24, 36], [20, 30], [16, 24], [30, 45], [28, 42]]), g = gcd(a, b), p = person();
       const claimed = pick([g, 2, Math.min(a, b), lcm(a, b)]);
-      const ok2 = claimed === g;
-      const options = mc(ok2 ? "True: it divides both and no bigger number does" : "False", [[ok2 ? "False: it is too small" : "True: it divides both", ok2 ? "Check whether a bigger number also divides both." : "Check: is it the highest common factor, or just a common factor or a multiple?", ok2 ? "M_HCF_ANY_COMMON" : claimed === lcm(a, b) ? "M_HCF_GIVES_LCM_OR_PRODUCT" : claimed === Math.min(a, b) ? "M_HCF_SMALLER_NUMBER" : "M_HCF_ANY_COMMON"]]);
+      const ok4 = claimed === g;
+      const options = mc(ok4 ? "True: it divides both and no bigger number does" : "False", [[ok4 ? "False: it is too small" : "True: it divides both", ok4 ? "Check whether a bigger number also divides both." : "Check: is it the highest common factor, or just a common factor or a multiple?", ok4 ? "M_HCF_ANY_COMMON" : claimed === lcm(a, b) ? "M_HCF_GIVES_LCM_OR_PRODUCT" : claimed === Math.min(a, b) ? "M_HCF_SMALLER_NUMBER" : "M_HCF_ANY_COMMON"]]);
       return {
         question: `${p.name} says the GCD of ${a} and ${b} is ${claimed}. The GCD is the greatest common divisor, another name for the HCF. Is ${p.she} right?`,
         options,
@@ -9962,9 +9962,9 @@ var FAMILIES5 = [
     gen: () => {
       const [a, b] = pick([[3, 9], [4, 6], [6, 8], [4, 12], [5, 10], [6, 9]]), l = lcm(a, b), p = person();
       const claimed = pick([l, a * b, Math.min(a, b), gcd(a, b)]);
-      const ok2 = claimed === l;
+      const ok4 = claimed === l;
       const codeMap = claimed === a * b ? "M_LCM_ALWAYS_PRODUCT" : claimed === gcd(a, b) ? "M_LCM_GIVES_HCF" : "M_LCM_SMALLER_NUMBER";
-      const options = mc(ok2 ? "True: it is the smallest number both divide into" : "False", [[ok2 ? "False: the LCM is the product" : "True", ok2 ? "The LCM is not always the product. Check for a smaller common multiple." : "Check: is it a multiple of both numbers, and is it the smallest such number?", ok2 ? "M_LCM_ALWAYS_PRODUCT" : codeMap]]);
+      const options = mc(ok4 ? "True: it is the smallest number both divide into" : "False", [[ok4 ? "False: the LCM is the product" : "True", ok4 ? "The LCM is not always the product. Check for a smaller common multiple." : "Check: is it a multiple of both numbers, and is it the smallest such number?", ok4 ? "M_LCM_ALWAYS_PRODUCT" : codeMap]]);
       return {
         question: `${p.name} claims that ${claimed} is the smallest number both ${a} and ${b} go into evenly. Is the claim true or false? Give a reason.`,
         options,
@@ -10431,15 +10431,15 @@ var FAMILIES6 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const a = randInt(200, 700) * 1e3 + randInt(100, 999), b = randInt(100, 280) * 1e3 + randInt(100, 999), ok2 = Math.random() < 0.5, p = person();
-      const shown = ok2 ? a + b : a + b - 1e5, est = rnd2(a, 1e3) + rnd2(b, 1e3);
-      const options = mc(ok2 ? "Yes, it is close to the estimate" : "No, it is far from the estimate", [[ok2 ? "No, it is not exactly the estimate" : "Yes, it looks about right", ok2 ? "An estimate is only close. A correct answer does not have to match it exactly." : "Compare with the estimate. It is far from your answer.", ok2 ? "M_EXACT_MUST_EQUAL_ESTIMATE" : "M_NO_SENSE_CHECK"], [ok2 ? "No, the first digit is different" : "Yes, it ends in a similar digit", "Compare the whole size of the numbers with the estimate.", ok2 ? "M_EXACT_MUST_EQUAL_ESTIMATE" : "M_NO_SENSE_CHECK"]]);
+      const a = randInt(200, 700) * 1e3 + randInt(100, 999), b = randInt(100, 280) * 1e3 + randInt(100, 999), ok4 = Math.random() < 0.5, p = person();
+      const shown = ok4 ? a + b : a + b - 1e5, est = rnd2(a, 1e3) + rnd2(b, 1e3);
+      const options = mc(ok4 ? "Yes, it is close to the estimate" : "No, it is far from the estimate", [[ok4 ? "No, it is not exactly the estimate" : "Yes, it looks about right", ok4 ? "An estimate is only close. A correct answer does not have to match it exactly." : "Compare with the estimate. It is far from your answer.", ok4 ? "M_EXACT_MUST_EQUAL_ESTIMATE" : "M_NO_SENSE_CHECK"], [ok4 ? "No, the first digit is different" : "Yes, it ends in a similar digit", "Compare the whole size of the numbers with the estimate.", ok4 ? "M_EXACT_MUST_EQUAL_ESTIMATE" : "M_NO_SENSE_CHECK"]]);
       return {
         question: `${p.name} works out ${commas(a)} + ${commas(b)} = ${commas(shown)}. A quick estimate rounds each number to the nearest thousand and gives ${commas(est)}. Is ${p.her} answer reasonable?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Round each number to the nearest thousand and add.", "Is the exact answer close to the estimate?"],
-        steps: [`${commas(a)} \u2192 ${commas(rnd2(a, 1e3))}, ${commas(b)} \u2192 ${commas(rnd2(b, 1e3))}. Estimate ${commas(est)}.`, ok2 ? "The answer is close, so it is reasonable." : "The answer is far away, so it must be checked."]
+        steps: [`${commas(a)} \u2192 ${commas(rnd2(a, 1e3))}, ${commas(b)} \u2192 ${commas(rnd2(b, 1e3))}. Estimate ${commas(est)}.`, ok4 ? "The answer is close, so it is reasonable." : "The answer is far away, so it must be checked."]
       };
     }
   }),
@@ -10933,15 +10933,15 @@ var FAMILIES6 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const a = randInt(400, 900) * 100 + randInt(11, 89), b = randInt(100, 350) * 100 + randInt(11, 89), p = person(), ok2 = Math.random() < 0.5;
-      const shown = ok2 ? a - b : a - b + 2e3, est = rnd2(a, 1e3) - rnd2(b, 1e3);
-      const options = mc(ok2 ? "Reasonable: it is close to the estimate" : "Not reasonable: it is far from the estimate", [[ok2 ? "Not reasonable: it is not exactly the estimate" : "Reasonable: it looks right", "An estimate is only a guide. Compare the sizes.", "M_EXACT_THEN_ROUND"], [ok2 ? "Not reasonable: the digits are different" : "Reasonable: both numbers are five digits", "Compare the size of the answer with the estimate.", "M_EXACT_THEN_ROUND"]]);
+      const a = randInt(400, 900) * 100 + randInt(11, 89), b = randInt(100, 350) * 100 + randInt(11, 89), p = person(), ok4 = Math.random() < 0.5;
+      const shown = ok4 ? a - b : a - b + 2e3, est = rnd2(a, 1e3) - rnd2(b, 1e3);
+      const options = mc(ok4 ? "Reasonable: it is close to the estimate" : "Not reasonable: it is far from the estimate", [[ok4 ? "Not reasonable: it is not exactly the estimate" : "Reasonable: it looks right", "An estimate is only a guide. Compare the sizes.", "M_EXACT_THEN_ROUND"], [ok4 ? "Not reasonable: the digits are different" : "Reasonable: both numbers are five digits", "Compare the size of the answer with the estimate.", "M_EXACT_THEN_ROUND"]]);
       return {
         question: `${p.name} works out ${commas(a)} \u2212 ${commas(b)} = ${commas(shown)}. The estimate to the nearest thousand is ${commas(est)}. Is the answer reasonable?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["How far is the exact answer from the estimate?", "An exact answer may be a little different from an estimate."],
-        steps: [`Estimate ${commas(est)}, exact answer ${commas(shown)}.`, ok2 ? "They are close." : "They are far apart."]
+        steps: [`Estimate ${commas(est)}, exact answer ${commas(shown)}.`, ok4 ? "They are close." : "They are far apart."]
       };
     }
   }),
@@ -11439,16 +11439,16 @@ var FAMILIES7 = [
     form: "why",
     rung: 2,
     gen: () => {
-      const a = randInt(12, 48), b = randInt(12, 48), ok2 = Math.random() < 0.5, p = person();
-      const exact = a * b, shown = ok2 ? exact : Math.round(exact / 10), est = rnd2(a, 10) * rnd2(b, 10);
-      if (a % 10 === 0 || b % 10 === 0 || shown === exact && !ok2) return null;
-      const options = mc(ok2 ? "Yes, it is close to the estimate" : "No, it is about ten times too small", [[ok2 ? "No, it is not exactly the estimate" : "Yes, it looks about right", ok2 ? "An estimate is only close. The exact answer does not have to equal it." : "Compare the size with the estimate. It is far too small.", ok2 ? "M_ESTIMATE_MUST_MATCH" : "M_NO_SIZE_CHECK"], [ok2 ? "No, the digits are different" : "Yes, it has the same last digit", "Compare the size of the exact answer with the estimate.", ok2 ? "M_ESTIMATE_MUST_MATCH" : "M_NO_SIZE_CHECK"]]);
+      const a = randInt(12, 48), b = randInt(12, 48), ok4 = Math.random() < 0.5, p = person();
+      const exact = a * b, shown = ok4 ? exact : Math.round(exact / 10), est = rnd2(a, 10) * rnd2(b, 10);
+      if (a % 10 === 0 || b % 10 === 0 || shown === exact && !ok4) return null;
+      const options = mc(ok4 ? "Yes, it is close to the estimate" : "No, it is about ten times too small", [[ok4 ? "No, it is not exactly the estimate" : "Yes, it looks about right", ok4 ? "An estimate is only close. The exact answer does not have to equal it." : "Compare the size with the estimate. It is far too small.", ok4 ? "M_ESTIMATE_MUST_MATCH" : "M_NO_SIZE_CHECK"], [ok4 ? "No, the digits are different" : "Yes, it has the same last digit", "Compare the size of the exact answer with the estimate.", ok4 ? "M_ESTIMATE_MUST_MATCH" : "M_NO_SIZE_CHECK"]]);
       return {
         question: `${p.name} says ${a} \xD7 ${b} = ${commas(shown)}. Rounded to tens, the sum is ${commas(est)}. Is the answer reasonable?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Is the answer close to the estimate, or far away?", "A product ten times too small is a sign of a missing zero."],
-        steps: [`Estimate ${commas(est)}.`, ok2 ? `${commas(exact)} is close to it.` : `${commas(exact)} is the right product, so ${commas(shown)} is too small.`]
+        steps: [`Estimate ${commas(est)}.`, ok4 ? `${commas(exact)} is close to it.` : `${commas(exact)} is the right product, so ${commas(shown)} is too small.`]
       };
     }
   }),
@@ -11978,16 +11978,16 @@ var FAMILIES7 = [
     form: "why",
     rung: 3,
     gen: () => {
-      const n = randInt(300, 960), d = randInt(1, 4) * 10 + randInt(5, 9), est = rnd2(n, 10) / rnd2(d, 10), ok2 = Math.random() < 0.5;
+      const n = randInt(300, 960), d = randInt(1, 4) * 10 + randInt(5, 9), est = rnd2(n, 10) / rnd2(d, 10), ok4 = Math.random() < 0.5;
       if (!Number.isInteger(est) || est < 4) return null;
-      const shown = ok2 ? Math.floor(n / d) : Math.floor(n / d) * 10;
-      const options = mc(ok2 ? "Reasonable: it is close to the estimate" : "Not reasonable: it is about ten times too big", [[ok2 ? "Not reasonable: it is not exactly the estimate" : "Reasonable: it is a whole number", "Compare the size with the estimate.", "M_ESTIMATE_COMPUTED_EXACTLY"], [ok2 ? "Not reasonable: the estimate has different digits" : "Reasonable: it has the same digits as the estimate", "Compare the size, not the digits.", "M_ESTIMATE_COMPUTED_EXACTLY"]]);
+      const shown = ok4 ? Math.floor(n / d) : Math.floor(n / d) * 10;
+      const options = mc(ok4 ? "Reasonable: it is close to the estimate" : "Not reasonable: it is about ten times too big", [[ok4 ? "Not reasonable: it is not exactly the estimate" : "Reasonable: it is a whole number", "Compare the size with the estimate.", "M_ESTIMATE_COMPUTED_EXACTLY"], [ok4 ? "Not reasonable: the estimate has different digits" : "Reasonable: it has the same digits as the estimate", "Compare the size, not the digits.", "M_ESTIMATE_COMPUTED_EXACTLY"]]);
       return {
         question: `${person().name} says ${n} \xF7 ${d} is about ${shown}. Rounding both numbers to tens gives ${est}. Is that sensible?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Is the answer near the estimate?", "An answer ten times too big is a sign of a misplaced digit."],
-        steps: [`Estimate ${est}.`, ok2 ? `${shown} is close.` : `${shown} is far larger.`]
+        steps: [`Estimate ${est}.`, ok4 ? `${shown} is close.` : `${shown} is far larger.`]
       };
     }
   }),
@@ -13912,8 +13912,8 @@ function build(name) {
     rung: 3,
     gen: () => {
       const b1 = randInt(1, 6), b2 = randInt(1, 6), s1 = f === 60 ? randInt(30, 50) : randInt(5, 8) * 10, s2 = f === 60 ? randInt(30, 45) : randInt(5, 9) * 10, sum3 = s1 + s2;
-      const ok2 = f === 60 ? sum3 >= 60 && sum3 < 100 : sum3 >= 100 && sum3 < f;
-      if (!ok2) return null;
+      const ok4 = f === 60 ? sum3 >= 60 && sum3 < 100 : sum3 >= 100 && sum3 < f;
+      if (!ok4) return null;
       const rb = b1 + b2 + (f === 60 ? 1 : 0), rs = f === 60 ? sum3 - 60 : sum3, wb = f === 60 ? b1 + b2 : b1 + b2 + 1, ws = f === 60 ? sum3 : sum3 - 100, p = person();
       return {
         question: `${p.name} adds ${fmt(b1, s1)} and ${fmt(b2, s2)}. Which step has the mistake?`,
@@ -19372,15 +19372,15 @@ var LOGS = [
       return { k };
     },
     make: ({ k }) => {
-      const num3 = (e) => e >= 0 ? commas(10 ** e) : (10 ** e).toFixed(-e);
+      const num4 = (e) => e >= 0 ? commas(10 ** e) : (10 ** e).toFixed(-e);
       const neg2 = k < 0, z = neg2 ? -k - 1 : k;
       return {
-        question: `The table shows common logarithms of powers of 10. Continue the pattern to find log ${num3(k)}.`,
-        model: { type: "table", data: { head: ["Number", "Power of 10", "log"], rows: [3, 2, 1, 0, -1, -2].map((e) => ({ cells: [num3(e), `10^${e}`, String(e)] })) } },
+        question: `The table shows common logarithms of powers of 10. Continue the pattern to find log ${num4(k)}.`,
+        model: { type: "table", data: { head: ["Number", "Power of 10", "log"], rows: [3, 2, 1, 0, -1, -2].map((e) => ({ cells: [num4(e), `10^${e}`, String(e)] })) } },
         answer: k,
         wrong: neg2 ? [[-k, "Numbers smaller than 1 have negative logarithms. See what happens in the table as the numbers get smaller."], [-z, "That counts only the zeros after the decimal point. Count up to and including the 1."], [k - 1, "Check which decimal place the 1 is in, and compare with the last row of the table."]] : [[k + 1, "That counts the digits. Count the zeros after the 1."], [-k, "Large numbers have positive logarithms. The table goes up as the numbers get bigger."], [k * 10, "The logarithm is the index of the power of 10, not 10 times it."]],
         hints: ["Write the number as a power of 10, as in the table.", "The logarithm is the index of that power of 10."],
-        steps: [neg2 ? `${num3(k)} = 10^${k}, since the 1 is in decimal place ${-k}.` : `${num3(k)} = 10^${k}, since there are ${k} zeros after the 1.`, `So log ${num3(k)} = ${k}.`]
+        steps: [neg2 ? `${num4(k)} = 10^${k}, since the 1 is in decimal place ${-k}.` : `${num4(k)} = 10^${k}, since there are ${k} zeros after the 1.`, `So log ${num4(k)} = ${k}.`]
       };
     },
     check: ({ k }, a) => Math.round(Math.log10(k < 0 ? Number((10 ** k).toFixed(-k)) : 10 ** k)) === a
@@ -23238,15 +23238,15 @@ var FAMILIES17 = [
     rung: 3,
     form: "steps",
     draw: () => ({ n: pick([4, 5, 10, 20]), T: 200, num: randInt(1, 3) }),
-    make: ({ n, T: T3, num: num3 }) => ({
-      question: `At a school fete, a game uses a fair coin and a fair spinner with ${n} equal sectors numbered 1 to ${n}. A player wins by getting a head on the coin and ${num3} on the spinner. The coin and the spinner are independent of each other.`,
+    make: ({ n, T: T3, num: num4 }) => ({
+      question: `At a school fete, a game uses a fair coin and a fair spinner with ${n} equal sectors numbered 1 to ${n}. A player wins by getting a head on the coin and ${num4} on the spinner. The coin and the spinner are independent of each other.`,
       parts: [
         { prompt: "Find the probability of a head.", answer: 0.5, hint: "A fair coin has two equally likely sides.", wrong: [[1, "There are two sides, so one of them has half of the chance."]] },
-        { prompt: `Find the probability that the spinner shows ${num3}, as a decimal.`, answer: round(1 / n, 4), hint: `${n} equal sectors, one of them is ${num3}.`, wrong: [[n, "A probability is the number of favourable sectors out of all of them, not the number of sectors."]] },
+        { prompt: `Find the probability that the spinner shows ${num4}, as a decimal.`, answer: round(1 / n, 4), hint: `${n} equal sectors, one of them is ${num4}.`, wrong: [[n, "A probability is the number of favourable sectors out of all of them, not the number of sectors."]] },
         { prompt: "Find the probability of winning.", answer: round(0.5 / n, 4), hint: "The two events are independent, so multiply.", wrong: [[round(0.5 + 1 / n, 4), 'For "and" with independent events, multiply, do not add.']] },
         { prompt: `If ${T3} players each have one turn, about how many are expected to win?`, answer: round(T3 * 0.5 / n, 2), hint: "Expected number = probability of winning \xD7 number of players.", wrong: [[round(0.5 / n, 4), "That is the probability of winning. Multiply it by the number of players."]] }
       ],
-      steps: [`P(head) = 0.5 and P(${num3}) = 1 \xF7 ${n} = ${round(1 / n, 4)}.`, `P(win) = 0.5 \xD7 ${round(1 / n, 4)} = ${round(0.5 / n, 4)}.`, `Expected wins = ${T3} \xD7 ${round(0.5 / n, 4)} = ${round(T3 * 0.5 / n, 2)}.`]
+      steps: [`P(head) = 0.5 and P(${num4}) = 1 \xF7 ${n} = ${round(1 / n, 4)}.`, `P(win) = 0.5 \xD7 ${round(1 / n, 4)} = ${round(0.5 / n, 4)}.`, `Expected wins = ${T3} \xD7 ${round(0.5 / n, 4)} = ${round(T3 * 0.5 / n, 2)}.`]
     }),
     check: ({ T: T3 }, v) => v[2] === round(v[0] * v[1], 4) && Math.abs(v[3] / T3 - v[2]) < 1e-6
   }),
@@ -23959,8 +23959,8 @@ var FAMILIES18 = [
         if (!ks.includes(k)) ks.push(k);
       }
       const rows = [[a * ks[0], b * ks[0]], [b * ks[1], a * ks[1]], [a * ks[2] + 2, b * ks[2]]];
-      const ok2 = rows.map(([x, y]) => x * b === y * a);
-      if (ok2.filter(Boolean).length !== 1) return null;
+      const ok4 = rows.map(([x, y]) => x * b === y * a);
+      if (ok4.filter(Boolean).length !== 1) return null;
       const order = [0, 1, 2].sort(() => Math.random() - 0.5);
       return { a, b, rows: order.map((i) => rows[i]), swapped: order.indexOf(1) };
     },
@@ -25933,15 +25933,15 @@ var FAMILIES19 = [
       const p1 = randInt(1, 4), p2 = randInt(1, 4), side2 = pick(["above", "below"]);
       return p1 === p2 && side2 === "above" ? null : { p1, p2, side2, ok: side2 === "below" };
     },
-    make: ({ p1, p2, side2, ok: ok2 }) => ({
+    make: ({ p1, p2, side2, ok: ok4 }) => ({
       question: `A net is made of squares. Four squares sit in a row. One more square is joined above square ${p1} of the row, counting from the left. Another square is joined ${side2} square ${p2}. Does this net fold into a cube?`,
       options: [
-        { text: "Yes, it folds into a cube", right: ok2, why: ok2 ? void 0 : "Both extra squares are on the same side of the row, so they fold onto the same face. One face of the cube would be covered twice and the opposite face left open." },
-        { text: "No, it does not fold into a cube", right: !ok2, why: ok2 ? "The row of four squares makes the four sides. One extra square goes on top and one underneath, so all six faces are covered." : void 0 }
+        { text: "Yes, it folds into a cube", right: ok4, why: ok4 ? void 0 : "Both extra squares are on the same side of the row, so they fold onto the same face. One face of the cube would be covered twice and the opposite face left open." },
+        { text: "No, it does not fold into a cube", right: !ok4, why: ok4 ? "The row of four squares makes the four sides. One extra square goes on top and one underneath, so all six faces are covered." : void 0 }
       ],
       fixedOrder: true,
       hints: ["The row of four squares folds round to make four sides of the cube.", "The other two squares must make the top and the bottom. Are they on opposite sides of the row?"],
-      steps: ok2 ? ["The row makes four sides.", "One extra square is above and one is below, so they make the top and the bottom.", "All six faces are covered, so it folds into a cube."] : ["The row makes four sides.", "Both extra squares are above the row, so both fold to the top.", "The bottom face is missing, so it does not fold into a cube."]
+      steps: ok4 ? ["The row makes four sides.", "One extra square is above and one is below, so they make the top and the bottom.", "All six faces are covered, so it folds into a cube."] : ["The row makes four sides.", "Both extra squares are above the row, so both fold to the top.", "The bottom face is missing, so it does not fold into a cube."]
     })
   }),
   fam11({
@@ -26691,9 +26691,9 @@ var FAMILIES20 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const N = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter((k) => N % k === 0), no2 = ks.filter((k) => N % k !== 0);
-      if (yes.length < 1 || no2.length < 3) return null;
-      return { N, r: pick(yes), ws: shuffle4(no2).slice(0, 3), p: person() };
+      const N = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter((k) => N % k === 0), no4 = ks.filter((k) => N % k !== 0);
+      if (yes.length < 1 || no4.length < 3) return null;
+      return { N, r: pick(yes), ws: shuffle4(no4).slice(0, 3), p: person() };
     },
     make: ({ N, r, ws, p }) => {
       const reason = (k) => ({ 2: "its last digit is not even", 3: `its digits add up to ${digitSum(N)}, which is not a multiple of 3`, 4: `its last two digits make ${N % 100}, which does not divide by 4`, 5: "its last digit is not 0 or 5", 6: "it must divide by both 2 and 3, and it fails one of them", 7: `dividing leaves a remainder of ${N % 7}`, 8: `its last three digits make ${N % 1e3}, which does not divide by 8`, 9: `its digits add up to ${digitSum(N)}, which is not a multiple of 9`, 10: "its last digit is not 0", 11: "the difference between the sums of its alternate digits is not 0 or a multiple of 11" })[k];
@@ -27308,18 +27308,18 @@ var FAMILIES20 = [
     form: "spot",
     draw: () => ({ dp: pick([1, 2]), a: randInt(2, 9), p: person() }),
     make: ({ dp: dp3, a, p }) => {
-      const x = round(a / 10 ** dp3, 3), shownDp = dp3, num3 = a * a, shown = round(num3 / 10 ** shownDp, 6);
+      const x = round(a / 10 ** dp3, 3), shownDp = dp3, num4 = a * a, shown = round(num4 / 10 ** shownDp, 6);
       const fmt = (v) => String(round(v, 6));
       return {
         question: `${p.name} works out the square of ${fmt(x)}. Here is ${p.her} working. Which step has the mistake?`,
         working: [
-          { text: `Ignore the point: ${a} \xD7 ${a} = ${num3}.`, ok: num3 === a * a },
+          { text: `Ignore the point: ${a} \xD7 ${a} = ${num4}.`, ok: num4 === a * a },
           { text: `${fmt(x)} has ${dp3} decimal place${dp3 > 1 ? "s" : ""}, so its square has ${shownDp} decimal place${shownDp > 1 ? "s" : ""}.`, ok: shownDp === 2 * dp3 },
-          { text: `Put the point in ${num3}, with ${shownDp} decimal place${shownDp > 1 ? "s" : ""}: ${fmt(shown)}.`, ok: shown === round(num3 / 10 ** shownDp, 6) },
+          { text: `Put the point in ${num4}, with ${shownDp} decimal place${shownDp > 1 ? "s" : ""}: ${fmt(shown)}.`, ok: shown === round(num4 / 10 ** shownDp, 6) },
           { text: `So (${fmt(x)})\xB2 = ${fmt(shown)}.`, ok: true }
         ],
         fix: `Squaring multiplies the number by itself, so the decimal places double: ${dp3} + ${dp3} = ${2 * dp3}. The square has ${2 * dp3} decimal places.`,
-        steps: [`${a} \xD7 ${a} = ${num3}.`, `${2 * dp3} decimal places: ${fmt(round(num3 / 10 ** (2 * dp3), 6))}.`]
+        steps: [`${a} \xD7 ${a} = ${num4}.`, `${2 * dp3} decimal places: ${fmt(round(num4 / 10 ** (2 * dp3), 6))}.`]
       };
     }
   }),
@@ -27706,9 +27706,9 @@ var FAMILIES20 = [
         const k = v + off;
         cands.push({ op, k, ok: op === "<" ? v < k : op === ">" ? v > k : op === "\u2264" ? v <= k : v >= k });
       }
-      const yes = shuffle4(cands.filter((c) => c.ok)), no2 = shuffle4(cands.filter((c) => !c.ok));
+      const yes = shuffle4(cands.filter((c) => c.ok)), no4 = shuffle4(cands.filter((c) => !c.ok));
       const pickOpts = [yes[0]];
-      for (const c of no2) if (pickOpts.length < 4 && !pickOpts.some((o) => o.op === c.op && o.k === c.k)) pickOpts.push(c);
+      for (const c of no4) if (pickOpts.length < 4 && !pickOpts.some((o) => o.op === c.op && o.k === c.k)) pickOpts.push(c);
       return { v, opts: pickOpts, p: person() };
     },
     make: ({ v, opts: opts2, p }) => ({
@@ -27830,13 +27830,13 @@ var FAMILIES20 = [
     form: "word",
     draw: () => ({ closed: Math.random() < 0.5, right: Math.random() < 0.5, v: randInt(-4, 10) }),
     make: ({ closed, right, v }) => {
-      const ok2 = (t2) => right ? closed ? t2 >= v : t2 > v : closed ? t2 <= v : t2 < v;
+      const ok4 = (t2) => right ? closed ? t2 >= v : t2 > v : closed ? t2 <= v : t2 < v;
       const tS = right ? [v + 1, v + 2, v + 3] : [v - 1, v - 2, v - 3], fS = right ? [v - 1, v - 2, v - 3] : [v + 1, v + 2, v + 3];
       const vals = closed ? [v, ...shuffle4(fS).slice(0, 3)] : [shuffle4(tS)[0], v, ...shuffle4(fS).slice(0, 2)];
       const t = (n) => n < 0 ? `\u2212${-n}` : String(n);
       return {
         question: `Mwende shades a number line. The shading starts at ${circ2(closed)} at ${t(v)}. It runs to the ${right ? "right" : "left"}. Which of these numbers lies under the shading?`,
-        options: shuffle4(vals.map((n) => ({ text: t(n), right: ok2(n), why: ok2(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
+        options: shuffle4(vals.map((n) => ({ text: t(n), right: ok4(n), why: ok4(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
         hints: ["Which side of the circle is shaded?", "Is the number at the circle included? Look at whether the circle is open or closed."],
         steps: [`The shaded part is the numbers ${right ? "greater" : "less"} than ${t(v)}${closed ? `, and ${t(v)} itself` : ""}.`, "Only one of the four numbers is in that part."]
       };
@@ -27894,11 +27894,11 @@ var FAMILIES20 = [
     },
     make: ({ lo, hi, kind }) => {
       const li = kind === "B", hi_i = kind === "A", LS = (b) => b ? "\u2264" : "<";
-      const ok2 = (t) => (li ? t >= lo : t > lo) && (hi_i ? t <= hi : t < hi);
+      const ok4 = (t) => (li ? t >= lo : t > lo) && (hi_i ? t <= hi : t < hi);
       const vals = kind === "C" ? [lo, hi, lo + 2, hi + 1] : [lo, hi, lo - 1, hi + 1];
       return {
         question: `A clinic fridge must keep its temperature t, in \xB0C, so that ${lo} ${LS(li)} t ${LS(hi_i)} ${hi}. Which of these readings is allowed?`,
-        options: shuffle4(vals.map((t) => ({ text: `${t} \xB0C`, right: ok2(t), why: ok2(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
+        options: shuffle4(vals.map((t) => ({ text: `${t} \xB0C`, right: ok4(t), why: ok4(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
         hints: ["Test each reading in both parts of the inequality.", "Be careful with the readings that sit exactly on an end value."],
         steps: [`The allowed readings are bigger than ${lo}${li ? " or equal to it" : ""}, and smaller than ${hi}${hi_i ? " or equal to it" : ""}.`, "Check each option against both ends. Only one passes."]
       };
@@ -30854,6 +30854,192 @@ for (const f of FAMILIES23) {
   BY_SKILL.get(f.skill).push(f);
 }
 
+// src/learner/mastery.js
+var MASTERED_DUE_WORDS = "Mastered, due a re-check";
+var RULES = {
+  /** The newest this many marks on a skill decide its state. */
+  WINDOW: 10,
+  /** Fewer marks than this is "not enough evidence". */
+  MIN_MARKS: 4,
+  /** For every state except mastered, only marks this recent count. */
+  RECENT_DAYS: 30,
+  /** Share of the newest marks right without help: under this is emerging. */
+  EMERGING_BELOW: 0.5,
+  /** Share of the newest marks right without help: this or more is mastered-level. */
+  MASTERED_FROM: 0.8,
+  /** An item counts as "right" (for the medium/hard count) at this share of its marks. */
+  ITEM_RIGHT_FROM: 0.5,
+  /** Mastered needs this many medium or hard items right without help in the window. */
+  MIN_HARD_RIGHT: 2,
+  /** When no item in the evidence has a difficulty (a stated assumption): this many unaided marks in the window instead. */
+  MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN: 8,
+  /** The first re-check is at least this many days after first reaching the threshold. */
+  FIRST_RECHECK_DAYS: 14,
+  /** Re-checks fall due this many weeks after first reaching the threshold. */
+  RECHECK_WEEKS: [2, 4, 8],
+  /** A re-check is judged on the first this-many marks on or after its due date. */
+  RECHECK_BATCH: 5,
+  /** A re-check's marks must fall within this many days of its first mark (one sitting, not weeks of practice). */
+  RECHECK_SPAN_DAYS: 3,
+  /** A re-check needs at least this many marks to be judged. */
+  MIN_RECHECK_MARKS: 2,
+  /** Share right without help that passes a re-check. */
+  RECHECK_PASS_FROM: 0.8,
+  /** A re-check overdue by more than this many days shows "mastered, due a re-check". */
+  OVERDUE_DAYS: 28
+};
+var DAY = 864e5;
+var timeOf = (r) => {
+  const t = Date.parse(r?.created_at || r?.client_ts || "");
+  return Number.isFinite(t) ? t : null;
+};
+var skillKeyOf = (r) => r?.cskill || r?.skill_id || null;
+var isHelped = (r) => r?.independent === false || Number(r?.hints_used) > 0;
+var scoreOf = (r) => {
+  const max = Number(r?.max_marks);
+  if (max > 0) return Math.max(0, Math.min(1, Number(r.marks ?? (r.correct ? max : 0)) / max));
+  return r?.correct ? 1 : 0;
+};
+var unaided = (r) => isHelped(r) ? 0 : scoreOf(r);
+var isHard = (r) => r?.difficulty === "medium" || r?.difficulty === "hard";
+var labelFromCode = (code) => {
+  if (!code) return "Unnamed skill";
+  const tail = String(code).split(".").pop().replace(/^G\d+_/, "");
+  return tail.toLowerCase().split("_").filter(Boolean).map((w) => w[0].toUpperCase() + w.slice(1)).join(" ") || String(code);
+};
+var summarise = (win) => {
+  const n = win.length;
+  const aided = win.reduce((s, r) => s + unaided(r), 0);
+  const independent = win.filter((r) => !isHelped(r));
+  const hardRight = win.filter((r) => isHard(r) && !isHelped(r) && scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
+  const rightAny = win.filter((r) => scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
+  return {
+    n,
+    rate: n ? aided / n : 0,
+    independentCount: independent.length,
+    hardRight,
+    rightAny,
+    helped: win.filter(isHelped).length,
+    hardItems: win.filter(isHard).length,
+    onlyEasy: n > 0 && win.every((r) => r.difficulty === "easy")
+  };
+};
+var meetsMastered = (win, difficultyKnown) => {
+  const s = summarise(win);
+  if (s.n < RULES.MIN_MARKS || s.rate < RULES.MASTERED_FROM) return false;
+  return difficultyKnown ? s.hardRight >= RULES.MIN_HARD_RIGHT : s.independentCount >= RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN;
+};
+function walk(asc, difficultyKnown) {
+  const times = asc.map(timeOf);
+  let pos = 0;
+  let reached = null;
+  let passed = [];
+  let failed = null;
+  let pending = null;
+  while (pos < asc.length) {
+    if (!reached) {
+      const win = asc.slice(Math.max(0, pos - RULES.WINDOW + 1), pos + 1);
+      if (meetsMastered(win, difficultyKnown)) reached = { at: times[pos], ids: win.map((r) => r._id), idx: pos };
+      pos += 1;
+      continue;
+    }
+    const k = passed.length;
+    if (k >= RULES.RECHECK_WEEKS.length) break;
+    const due = reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY;
+    const batch = [];
+    for (let j = pos; j < asc.length && batch.length < RULES.RECHECK_BATCH; j += 1) {
+      if (times[j] < due) continue;
+      if (batch.length && times[j] - times[batch[0]] > RULES.RECHECK_SPAN_DAYS * DAY) break;
+      batch.push(j);
+    }
+    if (batch.length < RULES.MIN_RECHECK_MARKS) break;
+    const rows = batch.map((j) => asc[j]);
+    const rate2 = rows.reduce((s, r) => s + unaided(r), 0) / rows.length;
+    const last = batch[batch.length - 1];
+    if (rate2 >= RULES.RECHECK_PASS_FROM) {
+      passed.push({ week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), at: times[last] });
+    } else {
+      failed = { week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), lastIdx: last };
+      reached = null;
+      passed = [];
+    }
+    pos = last + 1;
+  }
+  if (reached) {
+    const k = passed.length;
+    pending = k < RULES.RECHECK_WEEKS.length ? reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY : null;
+  }
+  return { reached, passed, failed, pending };
+}
+function recheckInfo(rows, { now = Date.now(), difficultyKnown } = {}) {
+  const nowMs = now instanceof Date ? now.getTime() : now;
+  const all = (rows || []).map((r, i) => ({ ...r, _id: r.id ?? r.item_ref ?? `row-${i}` })).filter((r) => timeOf(r) != null && timeOf(r) <= nowMs).sort((a, b) => timeOf(a) - timeOf(b));
+  const w = walk(all, difficultyKnown ?? all.some((r) => r.difficulty));
+  return { reached: w.reached ? w.reached.at : null, passed: w.passed.length, pending: w.pending, failed: !!w.failed && !w.reached };
+}
+
+// src/learner/evidence.js
+var DIFFICULTIES = ["easy", "medium", "hard"];
+
+// src/learner/recheck.js
+var DAY2 = 864e5;
+var MAX_SHARE = 0.2;
+var CLASS_SHARE = 0.25;
+var MIN_LEARNERS = 3;
+var isoDay = (ms) => new Date(ms).toISOString().slice(0, 10);
+function recheckSchedule(rows, { now = Date.now() } = {}) {
+  const nowMs = now instanceof Date ? now.getTime() : now;
+  const evidence = (rows || []).filter((r) => skillKeyOf(r));
+  const difficultyKnown = evidence.some((r) => r.difficulty);
+  const bySkill = /* @__PURE__ */ new Map();
+  for (const r of evidence) {
+    const k = skillKeyOf(r);
+    if (!bySkill.has(k)) bySkill.set(k, []);
+    bySkill.get(k).push(r);
+  }
+  const schedule = [];
+  const backToDeveloping = [];
+  for (const [key, list] of bySkill) {
+    const info = recheckInfo(list, { now: nowMs, difficultyKnown });
+    if (info.failed) backToDeveloping.push(key);
+    if (info.reached == null || info.pending == null) continue;
+    const overdue = nowMs > info.pending + RULES.OVERDUE_DAYS * DAY2;
+    const due = nowMs > info.pending;
+    const skillIds = [...new Set(list.filter((r) => r.skill_id && r.skill_id !== key && r.source !== "school_homework").map((r) => r.skill_id))];
+    if (list.some((r) => r.skill_id === key && (r.source || "practice") === "practice")) skillIds.unshift(key);
+    schedule.push({
+      key,
+      label: labelFromCode(key),
+      skillIds: [...new Set(skillIds)],
+      week: RULES.RECHECK_WEEKS[info.passed],
+      due: isoDay(info.pending),
+      status: overdue ? "overdue" : due ? "due" : "upcoming",
+      daysLate: due ? Math.floor((nowMs - info.pending) / DAY2) : 0,
+      word: overdue ? MASTERED_DUE_WORDS : null
+    });
+  }
+  const rank = { overdue: 0, due: 1, upcoming: 2 };
+  schedule.sort((a, b) => rank[a.status] - rank[b.status] || a.due.localeCompare(b.due) || a.key.localeCompare(b.key));
+  return { schedule, backToDeveloping };
+}
+var dueRechecks = (rows, opts2) => recheckSchedule(rows, opts2).schedule.filter((s) => s.status !== "upcoming");
+var recheckSlots = (total) => Math.floor(Math.max(0, Number(total) || 0) * MAX_SHARE + 1e-9);
+function classRechecks(rowsByLearner, { now = Date.now(), max = 2, minShare = CLASS_SHARE, minLearners = MIN_LEARNERS } = {}) {
+  const have = /* @__PURE__ */ new Map();
+  const due = /* @__PURE__ */ new Map();
+  for (const rows of Object.values(rowsByLearner || {})) {
+    const keys = new Set((rows || []).map(skillKeyOf).filter(Boolean));
+    for (const k of keys) have.set(k, (have.get(k) || 0) + 1);
+    for (const s of dueRechecks(rows, { now })) {
+      const d = due.get(s.key) || { due: 0, overdue: 0 };
+      d.due += 1;
+      if (s.status === "overdue") d.overdue += 1;
+      due.set(s.key, d);
+    }
+  }
+  return [...due.entries()].map(([cskill, d]) => ({ cskill, due: d.due, of: have.get(cskill) || d.due, overdue: d.overdue })).filter((c) => c.due >= minLearners && c.due / c.of >= minShare).sort((a, b) => b.due - a.due || b.overdue - a.overdue || a.cskill.localeCompare(b.cskill)).slice(0, Math.max(0, max));
+}
+
 // src/ai-tutor/algebraEquivalence.js
 var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
 function canonicalise(raw) {
@@ -31023,15 +31209,15 @@ var isProduct = (e) => {
 };
 var likeKey = (t) => {
   const pows = {};
-  const walk = (e, p) => {
+  const walk2 = (e, p) => {
     e = strip(e);
     if (e.t === "var") pows[e.name] = (pows[e.name] || 0) + p;
-    else if (e.t === "neg") walk(e.e, p);
-    else if (e.t === "prod") e.fs.forEach((f) => walk(f.e, f.op === "/" ? -p : p));
-    else if (e.t === "pow" && strip(e.n).t === "num") walk(e.a, p * strip(e.n).k);
+    else if (e.t === "neg") walk2(e.e, p);
+    else if (e.t === "prod") e.fs.forEach((f) => walk2(f.e, f.op === "/" ? -p : p));
+    else if (e.t === "pow" && strip(e.n).t === "num") walk2(e.a, p * strip(e.n).k);
     else if (e.t !== "num") pows["?" + JSON.stringify(e)] = 1;
   };
-  walk(t, 1);
+  walk2(t, 1);
   return Object.keys(pows).filter((n) => pows[n]).sort().map((n) => n + pows[n]).join("");
 };
 var repeatsLikeTerm = (e) => {
@@ -31202,8 +31388,8 @@ function mathValue(raw, child = false) {
   const mixed2 = s.match(/^(-?\d+)\s+(\d+)\/(\d+)$/);
   if (mixed2) {
     const whole = parseInt(mixed2[1]);
-    const num3 = parseInt(mixed2[2]) / parseInt(mixed2[3]);
-    return whole < 0 ? whole - num3 : whole + num3;
+    const num4 = parseInt(mixed2[2]) / parseInt(mixed2[3]);
+    return whole < 0 ? whole - num4 : whole + num4;
   }
   s = s.replace(/\s+/g, "").replace(/^=+/, "");
   const frac2 = s.match(/^(-?\d+)\/(-?\d+)$/);
@@ -31683,6 +31869,7 @@ function toItem(p, n) {
 }
 var keyItem = (it) => it && {
   n: it.n,
+  ...it.recheck ? { recheck: true } : {},
   cskill: it.cskill,
   family_id: it.family_id,
   form: it.form,
@@ -31717,7 +31904,7 @@ function samplesFor(cskills, perFamily = 2) {
   }
   return out;
 }
-function drawSet({ seed, cskills, families, count }) {
+function drawCore({ seed, cskills, families, count }) {
   const r = rng(seedOf(`order:${seed}`));
   const queue = {};
   for (const c of cskills) {
@@ -31754,6 +31941,17 @@ function drawSet({ seed, cskills, families, count }) {
   }
   return items.map((it, i) => ({ ...it, n: i + 1 }));
 }
+function drawSet({ seed, cskills, families, count, recheck = [] }) {
+  const rc = [...new Set(recheck)].filter((c) => (families[c] || []).length);
+  const slots = rc.length ? Math.min(recheckSlots(count), count - HW_MIN) : 0;
+  if (slots < 1) return drawCore({ seed, cskills, families, count });
+  const main = drawCore({ seed, cskills, families, count: count - slots });
+  const seen = new Set(main.map((it) => norm3(it.question)));
+  const extra = drawCore({ seed: `${seed}:recheck`, cskills: rc, families, count: slots + 3 }).filter((it) => !seen.has(norm3(it.question))).slice(0, slots).map((it) => ({ ...it, recheck: true }));
+  const items = [...main];
+  extra.forEach((it, k) => items.splice(Math.min(items.length, 4 + k * 5), 0, it));
+  return items.map((it, i) => ({ ...it, n: i + 1 }));
+}
 var REF2 = /^[A-Z2-9]{8}$/;
 var UUID = /^[a-f0-9-]{36}$/;
 var DATE = /^\d{4}-\d{2}-\d{2}$/;
@@ -31770,15 +31968,18 @@ function cleanHomeworkSet(p) {
   const versions = mode2 === "paper" ? Math.round(Number(p.versions || 0)) : 0;
   if (!(versions === 0 || versions >= 2 && versions <= 4)) return { ok: false, error: "Paper is one sheet per child, or 2 to 4 versions" };
   const approved = (Array.isArray(p.approved) ? p.approved : []).filter((a) => a && typeof a.family_id === "string").map((a) => ({ family_id: a.family_id.slice(0, 80), by: String(a.by || "").slice(0, 80), at: DATE.test(String(a.at || "").slice(0, 10)) ? String(a.at).slice(0, 25) : null })).slice(0, 200);
+  const recheckWanted = [...new Set((Array.isArray(p.recheck_cskills) ? p.recheck_cskills : []).map(String).filter((c) => isCurriculumSkill(c) && !cskills.includes(c)))].slice(0, recheckSlots(count));
   const allowed = allowedFamilies(cskills, approved.map((a) => a.family_id));
   if (!allowed.ok) return { ok: false, error: "No reviewed or approved questions for: " + allowed.missing.map(skillName).join("; "), missing: allowed.missing };
+  const rcAllowed = allowedFamilies(recheckWanted, approved.map((a) => a.family_id));
+  const recheck = recheckWanted.filter((c) => rcAllowed.families[c]);
   const list = (Array.isArray(p.homework) ? p.homework : []).slice(0, 20).map((h) => ({
     homework_ref: String(h?.homework_ref || ""),
     learner_refs: [...new Set((Array.isArray(h?.learner_refs) ? h.learner_refs : []).map(String).filter((r) => REF2.test(r)))].slice(0, 400)
   }));
   if (!list.length || list.some((h) => !UUID.test(h.homework_ref) || !h.learner_refs.length)) return { ok: false, error: "Each homework needs its reference and its learners" };
   const due = DATE.test(String(p.due_on || "")) ? p.due_on : null;
-  return { ok: true, hw: { title, cskills, count, mode: mode2, versions, due_on: due, approved, homework: list }, families: allowed.families };
+  return { ok: true, hw: { title, cskills, recheck, count, mode: mode2, versions, due_on: due, approved, homework: list }, families: { ...rcAllowed.families, ...allowed.families } };
 }
 function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   const refs = [...learnerRefs].sort();
@@ -31786,7 +31987,7 @@ function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   return refs.map((ref, i) => {
     const version = hw.versions ? i % hw.versions + 1 : null;
     const seed = version ? `${homeworkRef}:v${version}` : `${homeworkRef}:${ref}`;
-    const items = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count });
+    const items = version ? byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] }) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] });
     return { learner_ref: ref, code: makeCode(), seed, version, items, answers: [], status: "issued", mode: hw.mode };
   });
 }
@@ -31861,6 +32062,117 @@ var makeCodeFrom = (randomBytes) => () => {
   return Array.from(randomBytes(10)).map((b) => CH[b % 31]).join("");
 };
 
+// src/school/evidenceDoor.js
+var EVIDENCE_MAX_ITEMS = 500;
+var REF4 = /^[A-Z2-9]{8}$/;
+var UUID3 = /^[a-f0-9-]{36}$/i;
+var CODE2 = /^[A-Za-z0-9_.]{3,120}$/;
+var SUBJECT = /^[a-z][a-z_]{1,29}$/;
+var ok2 = (body) => ({ status: 200, body: { success: true, ...body } });
+var no2 = (status, error) => ({ status, body: { success: false, error } });
+var num3 = (v) => typeof v === "number" || typeof v === "string" && /^\d+(\.\d+)?$/.test(v.trim()) ? Number(v) : NaN;
+var subjectOfCode = (code) => {
+  const k = String(code || "").split(".")[0].toLowerCase();
+  return SUBJECT.test(k) ? k : null;
+};
+function cleanEvidenceItem(it, door) {
+  if (!it || typeof it !== "object") return { why: "not an item" };
+  const learner = String(it.learner_ref || "");
+  if (!REF4.test(learner)) return { why: "learner_ref" };
+  const q = String(it.question_id || "").toLowerCase();
+  if (!UUID3.test(q)) return { why: "question_id" };
+  const outcome = CODE2.test(String(it.outcome_code || "")) ? String(it.outcome_code) : null;
+  const sub = CODE2.test(String(it.substrand_code || "")) ? String(it.substrand_code) : null;
+  if (!outcome && !sub) return { why: "no outcome or sub-strand" };
+  const marks = num3(it.marks), max = num3(it.max_marks);
+  if (!(max > 0 && max <= 200)) return { why: "max_marks" };
+  if (!(marks >= 0 && marks <= max)) return { why: "marks" };
+  const at = it.at && !Number.isNaN(Date.parse(it.at)) ? new Date(it.at).toISOString() : null;
+  const code = outcome || sub;
+  return {
+    row: {
+      source: "school_exam",
+      door_id: door.id,
+      learner_ref: learner,
+      subject: (SUBJECT.test(String(it.subject || "")) ? it.subject : subjectOfCode(code)) || "math",
+      skill_id: code,
+      outcome_code: outcome,
+      substrand_code: sub,
+      framework: "cbc",
+      difficulty: DIFFICULTIES.includes(it.difficulty) ? it.difficulty : null,
+      correct: marks >= max,
+      marks,
+      max_marks: max,
+      independent: true,
+      item_ref: `exam:${q}`,
+      client_ts: at,
+      hints_used: 0,
+      attempt_no: 1
+    }
+  };
+}
+async function doorEvidence(door, p, deps) {
+  if (p.action !== "evidence") return null;
+  const items = Array.isArray(p.items) ? p.items : [];
+  if (!items.length) return no2(400, "No marks given");
+  if (items.length > EVIDENCE_MAX_ITEMS) return no2(413, `${EVIDENCE_MAX_ITEMS} marks at most in one call`);
+  const skipped = [];
+  const rows = /* @__PURE__ */ new Map();
+  items.forEach((it, i) => {
+    const c = cleanEvidenceItem(it, door);
+    if (c.why) {
+      skipped.push({ i, why: c.why });
+      return;
+    }
+    rows.set(`${c.row.learner_ref}|${c.row.item_ref}`, c.row);
+  });
+  const { store } = deps;
+  const have = rows.size ? await store.examEvidence(door.id, [...new Set([...rows.values()].map((r) => r.item_ref))]) : [];
+  const byKey = new Map(have.map((h) => [`${h.learner_ref}|${h.item_ref}`, h]));
+  const fresh = [];
+  let updated = 0, same = 0;
+  for (const [key, row] of rows) {
+    const h = byKey.get(key);
+    if (!h) {
+      fresh.push(row);
+      continue;
+    }
+    if (Number(h.marks) === row.marks && Number(h.max_marks) === row.max_marks && (h.outcome_code || null) === row.outcome_code && (h.substrand_code || null) === row.substrand_code) {
+      same++;
+      continue;
+    }
+    await store.updateEvidence(h.id, {
+      marks: row.marks,
+      max_marks: row.max_marks,
+      correct: row.correct,
+      outcome_code: row.outcome_code,
+      substrand_code: row.substrand_code,
+      skill_id: row.skill_id,
+      difficulty: row.difficulty,
+      ...row.client_ts ? { client_ts: row.client_ts } : {}
+    });
+    updated++;
+  }
+  if (fresh.length) await store.insertEvidence(fresh);
+  return ok2({ received: items.length, saved: fresh.length, updated, same, skipped });
+}
+
+// src/school/recheckDoor.js
+var CLASS_MAX_LEARNERS = 300;
+var REF5 = /^[A-Z2-9]{8}$/;
+var ok3 = (body) => ({ status: 200, body: { success: true, ...body } });
+var no3 = (status, error) => ({ status, body: { success: false, error } });
+async function doorClassRechecks(door, p, deps) {
+  if (p.action !== "class_rechecks") return null;
+  const refs = [...new Set((Array.isArray(p.learner_refs) ? p.learner_refs : []).map(String).filter((r) => REF5.test(r)))];
+  if (!refs.length) return no3(400, "No learners given");
+  if (refs.length > CLASS_MAX_LEARNERS) return no3(413, `${CLASS_MAX_LEARNERS} learners at most in one call`);
+  const max = Math.min(5, Math.max(1, Math.floor(Number(p.max)) || 2));
+  const byLearner = await deps.store.learnerEvidence(door.id, refs);
+  const rechecks = classRechecks(byLearner, { now: deps.now ? deps.now() : Date.now(), max: 20 }).filter((c) => isCurriculumSkill(c.cskill)).slice(0, max);
+  return ok3({ learners: refs.length, with_evidence: Object.values(byLearner).filter((r) => r && r.length).length, rechecks });
+}
+
 // src/school/homeworkStore.js
 var SITTING_COLS = [
   "id",
@@ -31919,6 +32231,61 @@ function supabaseStore(admin) {
       const { error } = await admin.from("response_events").insert(row);
       if (error && error.code !== "23505") throw new Error("Not saved");
     },
+    // School exam evidence (evidenceDoor.js): what is already in the log for these items, new rows in batches, a corrected mark in place.
+    async examEvidence(doorId, itemRefs) {
+      const out = [];
+      for (let i = 0; i < itemRefs.length; i += 100) {
+        const { data, error } = await admin.from("response_events").select("id, item_ref, learner_ref, marks, max_marks, outcome_code, substrand_code").eq("source", "school_exam").eq("door_id", doorId).in("item_ref", itemRefs.slice(i, i + 100)).limit(2e4);
+        if (error) throw new Error("Not read");
+        out.push(...data || []);
+      }
+      return out;
+    },
+    // Everything the log holds for these school learners, by reference (class_rechecks, recheckDoor.js): school rows by
+    // door and reference, practice rows where the learner is linked to a HOREB child. Evidence columns only.
+    async learnerEvidence(doorId, refs) {
+      const COLS = "source, skill_id, cskill, outcome_code, substrand_code, correct, marks, max_marks, independent, hints_used, difficulty, item_ref, client_ts, created_at";
+      const out = {};
+      for (let i = 0; i < refs.length; i += 50) {
+        const part = refs.slice(i, i + 50);
+        const { data, error } = await admin.from("response_events").select(`learner_ref, ${COLS}`).eq("door_id", doorId).in("learner_ref", part).limit(2e4);
+        if (error) throw new Error("Not read");
+        for (const r of data || []) {
+          const { learner_ref, ...row } = r;
+          (out[learner_ref] ||= []).push(row);
+        }
+        const { data: links, error: le } = await admin.from("school_learner_links").select("learner_ref, parent_id, child_id").eq("door_id", doorId).in("learner_ref", part);
+        if (le) throw new Error("Not read");
+        const byPair = new Map((links || []).map((l) => [`${l.parent_id}|${l.child_id}`, l.learner_ref]));
+        const parents = [...new Set((links || []).map((l) => l.parent_id))], kids = [...new Set((links || []).map((l) => l.child_id))];
+        if (parents.length) {
+          const { data: rows, error: pe } = await admin.from("response_events").select(`student_id, learner_id, ${COLS}`).in("student_id", parents).in("learner_id", kids).eq("source", "practice").limit(2e4);
+          if (pe) throw new Error("Not read");
+          for (const r of rows || []) {
+            const ref = byPair.get(`${r.student_id}|${r.learner_id}`);
+            if (!ref) continue;
+            const { student_id, learner_id, ...row } = r;
+            (out[ref] ||= []).push(row);
+          }
+        }
+      }
+      return out;
+    },
+    async insertEvidence(rows) {
+      for (let i = 0; i < rows.length; i += 200) {
+        const { error } = await admin.from("response_events").insert(rows.slice(i, i + 200));
+        if (error && error.code === "23505") {
+          for (const r of rows.slice(i, i + 200)) {
+            const e = (await admin.from("response_events").insert(r)).error;
+            if (e && e.code !== "23505") throw new Error("Not saved");
+          }
+        } else if (error) throw new Error("Not saved");
+      }
+    },
+    async updateEvidence(id, patch) {
+      const { error } = await admin.from("response_events").update(patch).eq("id", id).eq("source", "school_exam");
+      if (error) throw new Error("Not saved");
+    },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {
       const { data } = await admin.from("school_doors").select("id, code, name, secret, active").eq("code", code).maybeSingle();
@@ -31932,8 +32299,8 @@ function supabaseStore(admin) {
       const { count } = await admin.from("school_home_attempts").select("id", { count: "exact", head: true }).eq("try_key", key).eq("ok", false).gte("at", sinceIso);
       return count || 0;
     },
-    async homeTry(key, ok2) {
-      await admin.from("school_home_attempts").insert({ try_key: key, ok: ok2 });
+    async homeTry(key, ok4) {
+      await admin.from("school_home_attempts").insert({ try_key: key, ok: ok4 });
       await admin.from("school_home_attempts").delete().eq("try_key", key).lt("at", new Date(Date.now() - 864e5).toISOString());
     },
     async childLink(userId, childId) {
@@ -31988,6 +32355,14 @@ Deno.serve(async (req) => {
       for (const r of rows || []) progress[r.profile_key] = r.progress || {};
     }
     return json(200, { success: true, status: practiceStatus(practices || [], links || [], progress) });
+  }
+  if (p.action === "evidence") {
+    const r = await doorEvidence(door, p, { store: supabaseStore(admin) }).catch(() => ({ status: 500, body: { success: false, error: "Not saved" } }));
+    return json(r.status, r.body);
+  }
+  if (p.action === "class_rechecks") {
+    const r = await doorClassRechecks(door, p, { store: supabaseStore(admin), now: () => Date.now() }).catch(() => ({ status: 500, body: { success: false, error: "Not read" } }));
+    return json(r.status, r.body);
   }
   if (String(p.action || "").startsWith("homework_")) {
     const r = await doorHomework(door, p, {

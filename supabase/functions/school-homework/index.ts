@@ -4486,7 +4486,7 @@ function homeworkEvidence({ homework, sitting, answer }) {
     independent: true,
     marks: answer.correct ? 1 : 0,
     max_marks: 1,
-    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}`,
+    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}${item.recheck ? ":recheck" : ""}`,
     submitted_value: answer.chosen ? String(answer.chosen).slice(0, 500) : null,
     client_ts: answer.at || null,
     hints_used: 0,
@@ -4605,6 +4605,61 @@ function supabaseStore(admin) {
     async saveEvidence(row) {
       const { error } = await admin.from("response_events").insert(row);
       if (error && error.code !== "23505") throw new Error("Not saved");
+    },
+    // School exam evidence (evidenceDoor.js): what is already in the log for these items, new rows in batches, a corrected mark in place.
+    async examEvidence(doorId, itemRefs) {
+      const out = [];
+      for (let i = 0; i < itemRefs.length; i += 100) {
+        const { data, error } = await admin.from("response_events").select("id, item_ref, learner_ref, marks, max_marks, outcome_code, substrand_code").eq("source", "school_exam").eq("door_id", doorId).in("item_ref", itemRefs.slice(i, i + 100)).limit(2e4);
+        if (error) throw new Error("Not read");
+        out.push(...data || []);
+      }
+      return out;
+    },
+    // Everything the log holds for these school learners, by reference (class_rechecks, recheckDoor.js): school rows by
+    // door and reference, practice rows where the learner is linked to a HOREB child. Evidence columns only.
+    async learnerEvidence(doorId, refs) {
+      const COLS = "source, skill_id, cskill, outcome_code, substrand_code, correct, marks, max_marks, independent, hints_used, difficulty, item_ref, client_ts, created_at";
+      const out = {};
+      for (let i = 0; i < refs.length; i += 50) {
+        const part = refs.slice(i, i + 50);
+        const { data, error } = await admin.from("response_events").select(`learner_ref, ${COLS}`).eq("door_id", doorId).in("learner_ref", part).limit(2e4);
+        if (error) throw new Error("Not read");
+        for (const r of data || []) {
+          const { learner_ref, ...row } = r;
+          (out[learner_ref] ||= []).push(row);
+        }
+        const { data: links, error: le } = await admin.from("school_learner_links").select("learner_ref, parent_id, child_id").eq("door_id", doorId).in("learner_ref", part);
+        if (le) throw new Error("Not read");
+        const byPair = new Map((links || []).map((l) => [`${l.parent_id}|${l.child_id}`, l.learner_ref]));
+        const parents = [...new Set((links || []).map((l) => l.parent_id))], kids = [...new Set((links || []).map((l) => l.child_id))];
+        if (parents.length) {
+          const { data: rows, error: pe } = await admin.from("response_events").select(`student_id, learner_id, ${COLS}`).in("student_id", parents).in("learner_id", kids).eq("source", "practice").limit(2e4);
+          if (pe) throw new Error("Not read");
+          for (const r of rows || []) {
+            const ref = byPair.get(`${r.student_id}|${r.learner_id}`);
+            if (!ref) continue;
+            const { student_id, learner_id, ...row } = r;
+            (out[ref] ||= []).push(row);
+          }
+        }
+      }
+      return out;
+    },
+    async insertEvidence(rows) {
+      for (let i = 0; i < rows.length; i += 200) {
+        const { error } = await admin.from("response_events").insert(rows.slice(i, i + 200));
+        if (error && error.code === "23505") {
+          for (const r of rows.slice(i, i + 200)) {
+            const e = (await admin.from("response_events").insert(r)).error;
+            if (e && e.code !== "23505") throw new Error("Not saved");
+          }
+        } else if (error) throw new Error("Not saved");
+      }
+    },
+    async updateEvidence(id, patch) {
+      const { error } = await admin.from("response_events").update(patch).eq("id", id).eq("source", "school_exam");
+      if (error) throw new Error("Not saved");
     },
     // The learner home (learnerHome.js, migration 20261111_learner_home.sql).
     async homeDoor(code) {

@@ -19,6 +19,7 @@ import { TeachingVisual } from './TeachingVisual.jsx';
 import { QuestionMedia, ChoiceGrid } from './QuestionMedia.jsx';
 import { computeSteps, diagnoseError, genericNudge, hintRungs } from './remediation.js';
 import { shouldInterleave, pickInterleavedReview } from './interleave.js';
+import { dueRechecks, shouldServeRecheck, pickRecheck } from '../learner/recheck.js';
 import { openForLearner } from './assignments.js';
 import { SchoolHome } from '../school/SchoolHome.jsx';
 import { defaultProgress, loadProgress, loadLocalProgress, saveProgress, forceSave, updateStreak } from './progressStore.js';
@@ -228,6 +229,22 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
   // Interleaved review interlude inside a lesson (Rohrer): { skillId, name } | null.
   const [interleave, setInterleave] = useState(null);
   const interleaveCountRef = useRef(0);
+  // Scheduled re-checks of mastered skills (learner-model.md, Re-checks): the skills due now from this learner's
+  // evidence log, and how many this lesson has served. Best effort: no rows, no re-checks, practice unchanged.
+  const dueRecheckRef = useRef([]);
+  const recheckServedRef = useRef([]);
+  useEffect(() => {
+    dueRecheckRef.current = [];
+    if (!userId || guest || !subjectId) return undefined;
+    let live = true;
+    const since = new Date(Date.now() - 200 * 86400000).toISOString();
+    let q = supabase.from('response_events')
+      .select('skill_id, cskill, created_at, client_ts, correct, marks, max_marks, independent, hints_used, difficulty, item_ref, source')
+      .eq('student_id', userId).eq('subject', subjectId).gte('created_at', since).order('created_at', { ascending: false }).limit(2000);
+    q = learnerId ? q.eq('learner_id', learnerId) : q.is('learner_id', null);
+    q.then(({ data, error }) => { if (live && !error && Array.isArray(data)) dueRecheckRef.current = dueRechecks(data); }, () => {});
+    return () => { live = false; };
+  }, [userId, learnerId, subjectId, guest]);
   const [kpIndex, setKpIndex] = useState(0);
   // Ref mirror so problem generation always reads the CURRENT knowledge-point,
   // even when nextProblem() runs synchronously right after finalizeResult().
@@ -904,6 +921,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     setSession({ correct: 0, total: 0, streak: 0, startTime: Date.now() });
     setInterleave(null);
     interleaveCountRef.current = 0;
+    recheckServedRef.current = [];
     setKpIndex(0); kpIndexRef.current = 0;
     setLessonFailCount(0);
     setModalityLevel('abstract');
@@ -963,7 +981,8 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     const timeMs = Date.now() - problemStartRef.current;
     logResponse({
       studentId: userId, learnerId, subject: subjectId, skillId,
-      correct, problemType: problem?.type, cskill: problem?.cskill, difficulty: problem?.difficulty, timeMs, isReview: true,
+      correct, problemType: problem?.type, cskill: interleave.recheck ? interleave.cskill : problem?.cskill, difficulty: problem?.difficulty, timeMs, isReview: true,
+      isRecheck: !!interleave.recheck,
       submittedValue: answer, expectedValue: problem?.answer,
     });
     if (!correct) {
@@ -1209,7 +1228,19 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
     // flow only: young learners keep their uninterrupted count-together rhythm.
     const due = (lg > 3 && shouldInterleave(session.total, interleaveCountRef.current))
       ? pickInterleavedReview(getReviews(progress, ctx), activeSkill) : null;
-    if (due) {
+    // A due re-check takes a turn instead when the interlude is not already due: never more than 1 item in 5.
+    const rc = (!due && lg > 3 && shouldServeRecheck({
+      position: session.total + interleaveCountRef.current + recheckServedRef.current.length,
+      served: recheckServedRef.current.length, anyDue: dueRecheckRef.current.length > 0 }))
+      ? pickRecheck(dueRecheckRef.current, { served: recheckServedRef.current, exclude: [activeSkill],
+          canServe: (d) => d.skillIds.some((id) => id !== activeSkill && SKILLS[id]) }) : null;
+    if (rc) {
+      const skillId = rc.skillIds.find((id) => id !== activeSkill && SKILLS[id]);
+      recheckServedRef.current = [...recheckServedRef.current, rc.key];
+      // Written under the skill being re-checked: the curriculum code when that is the key, else no code (the HOREB id is the key).
+      setInterleave({ skillId, name: SKILLS[skillId]?.name || rc.label, recheck: true, cskill: rc.key === skillId ? undefined : rc.key });
+      setProblem(ownChoicesOnly(generateProblem(skillId)));
+    } else if (due) {
       interleaveCountRef.current += 1;
       setInterleave({ skillId: due.id, name: due.name || SKILLS[due.id]?.name || 'earlier skill' });
       setProblem(ownChoicesOnly(generateProblem(due.id)));
@@ -1725,7 +1756,7 @@ export function AIMastery({ onBack, userId, studentName, onFindTutor, profileAva
                 )}
                 {interleave && (
                   <div className="inline-flex items-center gap-1.5 mb-3 text-xs font-bold text-violet-500 bg-[#f5f6fc] border border-[#e8e9f6] rounded-full px-3 py-1.5">
-                    <Icon name="refresh" className="w-3.5 h-3.5" /> Quick review · {interleave.name}
+                    <Icon name="refresh" className="w-3.5 h-3.5" /> {interleave.recheck ? 'Re-check' : 'Quick review'} · {interleave.name}
                   </div>
                 )}
                 {canSpeak() && (

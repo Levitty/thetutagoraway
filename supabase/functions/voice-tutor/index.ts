@@ -33842,6 +33842,258 @@ for (const f of FAMILIES23) {
   BY_SKILL.get(f.skill).push(f);
 }
 
+// src/learner/mastery.js
+var STATE_WORDS = {
+  not_assessed: "Not yet assessed",
+  not_enough: "Not enough evidence",
+  emerging: "Emerging",
+  developing: "Developing",
+  mastered: "Mastered"
+};
+var MASTERED_DUE_WORDS = "Mastered, due a re-check";
+var RULES = {
+  /** The newest this many marks on a skill decide its state. */
+  WINDOW: 10,
+  /** Fewer marks than this is "not enough evidence". */
+  MIN_MARKS: 4,
+  /** For every state except mastered, only marks this recent count. */
+  RECENT_DAYS: 30,
+  /** Share of the newest marks right without help: under this is emerging. */
+  EMERGING_BELOW: 0.5,
+  /** Share of the newest marks right without help: this or more is mastered-level. */
+  MASTERED_FROM: 0.8,
+  /** An item counts as "right" (for the medium/hard count) at this share of its marks. */
+  ITEM_RIGHT_FROM: 0.5,
+  /** Mastered needs this many medium or hard items right without help in the window. */
+  MIN_HARD_RIGHT: 2,
+  /** When no item in the evidence has a difficulty (a stated assumption): this many unaided marks in the window instead. */
+  MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN: 8,
+  /** The first re-check is at least this many days after first reaching the threshold. */
+  FIRST_RECHECK_DAYS: 14,
+  /** Re-checks fall due this many weeks after first reaching the threshold. */
+  RECHECK_WEEKS: [2, 4, 8],
+  /** A re-check is judged on the first this-many marks on or after its due date. */
+  RECHECK_BATCH: 5,
+  /** A re-check's marks must fall within this many days of its first mark (one sitting, not weeks of practice). */
+  RECHECK_SPAN_DAYS: 3,
+  /** A re-check needs at least this many marks to be judged. */
+  MIN_RECHECK_MARKS: 2,
+  /** Share right without help that passes a re-check. */
+  RECHECK_PASS_FROM: 0.8,
+  /** A re-check overdue by more than this many days shows "mastered, due a re-check". */
+  OVERDUE_DAYS: 28
+};
+var DAY = 864e5;
+var timeOf = (r) => {
+  const t = Date.parse(r?.created_at || r?.client_ts || "");
+  return Number.isFinite(t) ? t : null;
+};
+var skillKeyOf = (r) => r?.cskill || r?.skill_id || null;
+var isHelped = (r) => r?.independent === false || Number(r?.hints_used) > 0;
+var scoreOf = (r) => {
+  const max = Number(r?.max_marks);
+  if (max > 0) return Math.max(0, Math.min(1, Number(r.marks ?? (r.correct ? max : 0)) / max));
+  return r?.correct ? 1 : 0;
+};
+var unaided = (r) => isHelped(r) ? 0 : scoreOf(r);
+var isHard = (r) => r?.difficulty === "medium" || r?.difficulty === "hard";
+var plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
+var pct2 = (x) => `${Math.round(x * 100)}%`;
+var dateWords = (ms) => new Date(ms).toLocaleDateString("en-GB", { day: "numeric", month: "long", timeZone: "UTC" });
+var summarise = (win) => {
+  const n = win.length;
+  const aided = win.reduce((s, r) => s + unaided(r), 0);
+  const independent = win.filter((r) => !isHelped(r));
+  const hardRight = win.filter((r) => isHard(r) && !isHelped(r) && scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
+  const rightAny = win.filter((r) => scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
+  return {
+    n,
+    rate: n ? aided / n : 0,
+    independentCount: independent.length,
+    hardRight,
+    rightAny,
+    helped: win.filter(isHelped).length,
+    hardItems: win.filter(isHard).length,
+    onlyEasy: n > 0 && win.every((r) => r.difficulty === "easy")
+  };
+};
+var meetsMastered = (win, difficultyKnown) => {
+  const s = summarise(win);
+  if (s.n < RULES.MIN_MARKS || s.rate < RULES.MASTERED_FROM) return false;
+  return difficultyKnown ? s.hardRight >= RULES.MIN_HARD_RIGHT : s.independentCount >= RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN;
+};
+function walk(asc, difficultyKnown) {
+  const times = asc.map(timeOf);
+  let pos = 0;
+  let reached = null;
+  let passed = [];
+  let failed = null;
+  let pending = null;
+  while (pos < asc.length) {
+    if (!reached) {
+      const win = asc.slice(Math.max(0, pos - RULES.WINDOW + 1), pos + 1);
+      if (meetsMastered(win, difficultyKnown)) reached = { at: times[pos], ids: win.map((r) => r._id), idx: pos };
+      pos += 1;
+      continue;
+    }
+    const k = passed.length;
+    if (k >= RULES.RECHECK_WEEKS.length) break;
+    const due = reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY;
+    const batch = [];
+    for (let j = pos; j < asc.length && batch.length < RULES.RECHECK_BATCH; j += 1) {
+      if (times[j] < due) continue;
+      if (batch.length && times[j] - times[batch[0]] > RULES.RECHECK_SPAN_DAYS * DAY) break;
+      batch.push(j);
+    }
+    if (batch.length < RULES.MIN_RECHECK_MARKS) break;
+    const rows = batch.map((j) => asc[j]);
+    const rate2 = rows.reduce((s, r) => s + unaided(r), 0) / rows.length;
+    const last = batch[batch.length - 1];
+    if (rate2 >= RULES.RECHECK_PASS_FROM) {
+      passed.push({ week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), at: times[last] });
+    } else {
+      failed = { week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), lastIdx: last };
+      reached = null;
+      passed = [];
+    }
+    pos = last + 1;
+  }
+  if (reached) {
+    const k = passed.length;
+    pending = k < RULES.RECHECK_WEEKS.length ? reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY : null;
+  }
+  return { reached, passed, failed, pending };
+}
+function skillState(rows, { now = Date.now(), difficultyKnown } = {}) {
+  const nowMs = now instanceof Date ? now.getTime() : now;
+  const all = (rows || []).map((r, i) => ({ ...r, _id: r.id ?? r.item_ref ?? `row-${i}`, _t: timeOf(r) })).filter((r) => r._t != null && r._t <= nowMs).sort((a, b) => a._t - b._t);
+  const dk = difficultyKnown ?? all.some((r) => r.difficulty);
+  const base = { difficultyKnown: dk, marks: all.length };
+  if (!all.length) {
+    return {
+      ...base,
+      state: "not_assessed",
+      word: STATE_WORDS.not_assessed,
+      dueRecheck: false,
+      evidenceIds: [],
+      reason: "Nothing has been answered on this skill yet."
+    };
+  }
+  const w = walk(all, dk);
+  const newest = all.slice(-RULES.WINDOW);
+  if (w.reached && w.passed.length >= 1) {
+    const last = w.passed[w.passed.length - 1];
+    const next = w.pending;
+    const overdue = next != null && nowMs > next + RULES.OVERDUE_DAYS * DAY;
+    const due = next != null && nowMs > next;
+    const checks = `${plural(w.passed.length, "time", "times")} (last on ${dateWords(last.at)})`;
+    const win = all.filter((r) => w.reached.ids.includes(r._id));
+    const s2 = summarise(win);
+    const lead = `${Math.round(s2.rate * s2.n)} of ${s2.n} answers were right without help when it was first reached${dk ? `, ${plural(s2.hardRight, "medium or hard question", "medium or hard questions")} among them` : ""}`;
+    const tail = next == null ? `and it held when re-checked ${checks}, so all re-checks are done` : overdue ? `and it held when re-checked ${checks}, but the next re-check was due on ${dateWords(next)} and is now well overdue` : due ? `and it held when re-checked ${checks}, and the next re-check is due now` : `and it held when re-checked ${checks}, with the next due on ${dateWords(next)}`;
+    return {
+      ...base,
+      state: "mastered",
+      word: overdue ? MASTERED_DUE_WORDS : STATE_WORDS.mastered,
+      dueRecheck: overdue,
+      recheckDue: due,
+      nextRecheck: next ? new Date(next).toISOString().slice(0, 10) : null,
+      recheckPassed: w.passed.length,
+      firstReachedAt: new Date(w.reached.at).toISOString().slice(0, 10),
+      evidenceIds: [...w.reached.ids, ...w.passed.flatMap((p) => p.ids)],
+      reason: `${lead}, ${tail}.`
+    };
+  }
+  const recent = all.filter((r) => nowMs - r._t <= RULES.RECENT_DAYS * DAY).slice(-RULES.WINDOW);
+  const daysAgo = Math.floor((nowMs - all[all.length - 1]._t) / DAY);
+  if (!recent.length) {
+    return {
+      ...base,
+      state: "not_enough",
+      word: STATE_WORDS.not_enough,
+      dueRecheck: false,
+      evidenceIds: newest.map((r) => r._id),
+      reason: `Nothing has been answered in the last ${RULES.RECENT_DAYS} days; the last answer was ${plural(daysAgo, "day", "days")} ago.`
+    };
+  }
+  const s = summarise(recent);
+  const ids = recent.map((r) => r._id);
+  const right = Math.round(s.rate * s.n);
+  const failedHere = w.failed && !w.reached && newest.some((r) => w.failed.ids.includes(r._id));
+  if (failedHere) {
+    return {
+      ...base,
+      state: "developing",
+      word: STATE_WORDS.developing,
+      dueRecheck: false,
+      evidenceIds: [.../* @__PURE__ */ new Set([...w.failed.ids, ...ids])],
+      reason: `It slipped back at the ${w.failed.week}-week re-check, with ${right} of the last ${s.n} answers right without help.`
+    };
+  }
+  if (s.n < RULES.MIN_MARKS) {
+    return {
+      ...base,
+      state: "not_enough",
+      word: STATE_WORDS.not_enough,
+      dueRecheck: false,
+      evidenceIds: ids,
+      reason: `There ${s.n === 1 ? "is" : "are"} only ${plural(s.n, "answer", "answers")} in the last ${RULES.RECENT_DAYS} days, and at least ${RULES.MIN_MARKS} are needed.`
+    };
+  }
+  if (s.onlyEasy && s.rate >= RULES.EMERGING_BELOW) {
+    return {
+      ...base,
+      state: "not_enough",
+      word: STATE_WORDS.not_enough,
+      dueRecheck: false,
+      evidenceIds: ids,
+      reason: `All ${s.n} questions so far were easy ones, so there is no sign yet of how they cope with harder ones.`
+    };
+  }
+  if (s.rate < RULES.EMERGING_BELOW) {
+    const rightWithHelp = recent.filter((r) => isHelped(r) && scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
+    const reason2 = rightWithHelp * 2 > s.rightAny && rightWithHelp > 0 ? `Of the last ${s.n} answers, ${rightWithHelp} were right only with help and ${right} on their own.` : `Only ${right} of the last ${s.n} answers were right without help.`;
+    return { ...base, state: "emerging", word: STATE_WORDS.emerging, dueRecheck: false, evidenceIds: ids, reason: reason2 };
+  }
+  const need2 = [];
+  if (s.rate < RULES.MASTERED_FROM) need2.push(`${pct2(RULES.MASTERED_FROM)} right without help`);
+  if (dk && s.hardRight < RULES.MIN_HARD_RIGHT) need2.push(`${RULES.MIN_HARD_RIGHT} medium or hard questions right without help`);
+  if (!dk && s.independentCount < RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN) need2.push(`${RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN} answers without help (question difficulty is not recorded)`);
+  let reason;
+  if (w.reached && !w.passed.length) {
+    reason = `${right} of the last ${s.n} answers were right without help; the level was reached on ${dateWords(w.reached.at)} and a re-check from ${dateWords(w.pending)} will confirm it.`;
+  } else if (need2.length) {
+    reason = `${right} of the last ${s.n} answers were right without help; mastered needs ${need2.join(" and ")}.`;
+  } else {
+    reason = `${right} of the last ${s.n} answers were right without help.`;
+  }
+  return { ...base, state: "developing", word: STATE_WORDS.developing, dueRecheck: false, evidenceIds: ids, reason };
+}
+
+// src/learner/evidence.js
+function tutorEvidence({ userId, childId = null, sid, marked, now }) {
+  if (!userId || !sid || !marked?.skill || marked.ask == null) return null;
+  return {
+    source: "tutor",
+    student_id: userId,
+    ...childId ? { learner_id: childId } : {},
+    .../^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sid) ? { session_id: sid } : {},
+    subject: "math",
+    skill_id: marked.skill,
+    cskill: marked.skill,
+    correct: !!marked.correct,
+    misconception: marked.misconception || null,
+    independent: false,
+    marks: marked.correct ? 1 : 0,
+    max_marks: 1,
+    item_ref: `tutor:${sid}:${marked.ask}`,
+    submitted_value: marked.answer ? String(marked.answer).slice(0, 500) : null,
+    client_ts: new Date(now ?? Date.now()).toISOString(),
+    hints_used: 0,
+    attempt_no: 1
+  };
+}
+
 // src/ai-tutor/algebraEquivalence.js
 var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
 function canonicalise(raw) {
@@ -34722,258 +34974,6 @@ var PRICES3 = {
 var speechCost = (chars, p = PRICES3) => Math.max(0, chars) * p.ttsUsdPerChar;
 var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdPerMinute;
 var spokenChars = (steps2) => (steps2 || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
-
-// src/learner/evidence.js
-function tutorEvidence({ userId, childId = null, sid, marked, now }) {
-  if (!userId || !sid || !marked?.skill || marked.ask == null) return null;
-  return {
-    source: "tutor",
-    student_id: userId,
-    ...childId ? { learner_id: childId } : {},
-    .../^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sid) ? { session_id: sid } : {},
-    subject: "math",
-    skill_id: marked.skill,
-    cskill: marked.skill,
-    correct: !!marked.correct,
-    misconception: marked.misconception || null,
-    independent: false,
-    marks: marked.correct ? 1 : 0,
-    max_marks: 1,
-    item_ref: `tutor:${sid}:${marked.ask}`,
-    submitted_value: marked.answer ? String(marked.answer).slice(0, 500) : null,
-    client_ts: new Date(now ?? Date.now()).toISOString(),
-    hints_used: 0,
-    attempt_no: 1
-  };
-}
-
-// src/learner/mastery.js
-var STATE_WORDS = {
-  not_assessed: "Not yet assessed",
-  not_enough: "Not enough evidence",
-  emerging: "Emerging",
-  developing: "Developing",
-  mastered: "Mastered"
-};
-var MASTERED_DUE_WORDS = "Mastered, due a re-check";
-var RULES = {
-  /** The newest this many marks on a skill decide its state. */
-  WINDOW: 10,
-  /** Fewer marks than this is "not enough evidence". */
-  MIN_MARKS: 4,
-  /** For every state except mastered, only marks this recent count. */
-  RECENT_DAYS: 30,
-  /** Share of the newest marks right without help: under this is emerging. */
-  EMERGING_BELOW: 0.5,
-  /** Share of the newest marks right without help: this or more is mastered-level. */
-  MASTERED_FROM: 0.8,
-  /** An item counts as "right" (for the medium/hard count) at this share of its marks. */
-  ITEM_RIGHT_FROM: 0.5,
-  /** Mastered needs this many medium or hard items right without help in the window. */
-  MIN_HARD_RIGHT: 2,
-  /** When no item in the evidence has a difficulty (a stated assumption): this many unaided marks in the window instead. */
-  MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN: 8,
-  /** The first re-check is at least this many days after first reaching the threshold. */
-  FIRST_RECHECK_DAYS: 14,
-  /** Re-checks fall due this many weeks after first reaching the threshold. */
-  RECHECK_WEEKS: [2, 4, 8],
-  /** A re-check is judged on the first this-many marks on or after its due date. */
-  RECHECK_BATCH: 5,
-  /** A re-check's marks must fall within this many days of its first mark (one sitting, not weeks of practice). */
-  RECHECK_SPAN_DAYS: 3,
-  /** A re-check needs at least this many marks to be judged. */
-  MIN_RECHECK_MARKS: 2,
-  /** Share right without help that passes a re-check. */
-  RECHECK_PASS_FROM: 0.8,
-  /** A re-check overdue by more than this many days shows "mastered, due a re-check". */
-  OVERDUE_DAYS: 28
-};
-var DAY = 864e5;
-var timeOf = (r) => {
-  const t = Date.parse(r?.created_at || r?.client_ts || "");
-  return Number.isFinite(t) ? t : null;
-};
-var skillKeyOf = (r) => r?.cskill || r?.skill_id || null;
-var isHelped = (r) => r?.independent === false || Number(r?.hints_used) > 0;
-var scoreOf = (r) => {
-  const max = Number(r?.max_marks);
-  if (max > 0) return Math.max(0, Math.min(1, Number(r.marks ?? (r.correct ? max : 0)) / max));
-  return r?.correct ? 1 : 0;
-};
-var unaided = (r) => isHelped(r) ? 0 : scoreOf(r);
-var isHard = (r) => r?.difficulty === "medium" || r?.difficulty === "hard";
-var plural = (n, one, many) => `${n} ${n === 1 ? one : many}`;
-var pct2 = (x) => `${Math.round(x * 100)}%`;
-var dateWords = (ms) => new Date(ms).toLocaleDateString("en-GB", { day: "numeric", month: "long", timeZone: "UTC" });
-var summarise = (win) => {
-  const n = win.length;
-  const aided = win.reduce((s, r) => s + unaided(r), 0);
-  const independent = win.filter((r) => !isHelped(r));
-  const hardRight = win.filter((r) => isHard(r) && !isHelped(r) && scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
-  const rightAny = win.filter((r) => scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
-  return {
-    n,
-    rate: n ? aided / n : 0,
-    independentCount: independent.length,
-    hardRight,
-    rightAny,
-    helped: win.filter(isHelped).length,
-    hardItems: win.filter(isHard).length,
-    onlyEasy: n > 0 && win.every((r) => r.difficulty === "easy")
-  };
-};
-var meetsMastered = (win, difficultyKnown) => {
-  const s = summarise(win);
-  if (s.n < RULES.MIN_MARKS || s.rate < RULES.MASTERED_FROM) return false;
-  return difficultyKnown ? s.hardRight >= RULES.MIN_HARD_RIGHT : s.independentCount >= RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN;
-};
-function walk(asc, difficultyKnown) {
-  const times = asc.map(timeOf);
-  let pos = 0;
-  let reached = null;
-  let passed = [];
-  let failed = null;
-  let pending = null;
-  while (pos < asc.length) {
-    if (!reached) {
-      const win = asc.slice(Math.max(0, pos - RULES.WINDOW + 1), pos + 1);
-      if (meetsMastered(win, difficultyKnown)) reached = { at: times[pos], ids: win.map((r) => r._id), idx: pos };
-      pos += 1;
-      continue;
-    }
-    const k = passed.length;
-    if (k >= RULES.RECHECK_WEEKS.length) break;
-    const due = reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY;
-    const batch = [];
-    for (let j = pos; j < asc.length && batch.length < RULES.RECHECK_BATCH; j += 1) {
-      if (times[j] < due) continue;
-      if (batch.length && times[j] - times[batch[0]] > RULES.RECHECK_SPAN_DAYS * DAY) break;
-      batch.push(j);
-    }
-    if (batch.length < RULES.MIN_RECHECK_MARKS) break;
-    const rows = batch.map((j) => asc[j]);
-    const rate2 = rows.reduce((s, r) => s + unaided(r), 0) / rows.length;
-    const last = batch[batch.length - 1];
-    if (rate2 >= RULES.RECHECK_PASS_FROM) {
-      passed.push({ week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), at: times[last] });
-    } else {
-      failed = { week: RULES.RECHECK_WEEKS[k], due, ids: rows.map((r) => r._id), lastIdx: last };
-      reached = null;
-      passed = [];
-    }
-    pos = last + 1;
-  }
-  if (reached) {
-    const k = passed.length;
-    pending = k < RULES.RECHECK_WEEKS.length ? reached.at + Math.max(RULES.RECHECK_WEEKS[k] * 7, k === 0 ? RULES.FIRST_RECHECK_DAYS : 0) * DAY : null;
-  }
-  return { reached, passed, failed, pending };
-}
-function skillState(rows, { now = Date.now(), difficultyKnown } = {}) {
-  const nowMs = now instanceof Date ? now.getTime() : now;
-  const all = (rows || []).map((r, i) => ({ ...r, _id: r.id ?? r.item_ref ?? `row-${i}`, _t: timeOf(r) })).filter((r) => r._t != null && r._t <= nowMs).sort((a, b) => a._t - b._t);
-  const dk = difficultyKnown ?? all.some((r) => r.difficulty);
-  const base = { difficultyKnown: dk, marks: all.length };
-  if (!all.length) {
-    return {
-      ...base,
-      state: "not_assessed",
-      word: STATE_WORDS.not_assessed,
-      dueRecheck: false,
-      evidenceIds: [],
-      reason: "Nothing has been answered on this skill yet."
-    };
-  }
-  const w = walk(all, dk);
-  const newest = all.slice(-RULES.WINDOW);
-  if (w.reached && w.passed.length >= 1) {
-    const last = w.passed[w.passed.length - 1];
-    const next = w.pending;
-    const overdue = next != null && nowMs > next + RULES.OVERDUE_DAYS * DAY;
-    const due = next != null && nowMs > next;
-    const checks = `${plural(w.passed.length, "time", "times")} (last on ${dateWords(last.at)})`;
-    const win = all.filter((r) => w.reached.ids.includes(r._id));
-    const s2 = summarise(win);
-    const lead = `${Math.round(s2.rate * s2.n)} of ${s2.n} answers were right without help when it was first reached${dk ? `, ${plural(s2.hardRight, "medium or hard question", "medium or hard questions")} among them` : ""}`;
-    const tail = next == null ? `and it held when re-checked ${checks}, so all re-checks are done` : overdue ? `and it held when re-checked ${checks}, but the next re-check was due on ${dateWords(next)} and is now well overdue` : due ? `and it held when re-checked ${checks}, and the next re-check is due now` : `and it held when re-checked ${checks}, with the next due on ${dateWords(next)}`;
-    return {
-      ...base,
-      state: "mastered",
-      word: overdue ? MASTERED_DUE_WORDS : STATE_WORDS.mastered,
-      dueRecheck: overdue,
-      recheckDue: due,
-      nextRecheck: next ? new Date(next).toISOString().slice(0, 10) : null,
-      recheckPassed: w.passed.length,
-      firstReachedAt: new Date(w.reached.at).toISOString().slice(0, 10),
-      evidenceIds: [...w.reached.ids, ...w.passed.flatMap((p) => p.ids)],
-      reason: `${lead}, ${tail}.`
-    };
-  }
-  const recent = all.filter((r) => nowMs - r._t <= RULES.RECENT_DAYS * DAY).slice(-RULES.WINDOW);
-  const daysAgo = Math.floor((nowMs - all[all.length - 1]._t) / DAY);
-  if (!recent.length) {
-    return {
-      ...base,
-      state: "not_enough",
-      word: STATE_WORDS.not_enough,
-      dueRecheck: false,
-      evidenceIds: newest.map((r) => r._id),
-      reason: `Nothing has been answered in the last ${RULES.RECENT_DAYS} days; the last answer was ${plural(daysAgo, "day", "days")} ago.`
-    };
-  }
-  const s = summarise(recent);
-  const ids = recent.map((r) => r._id);
-  const right = Math.round(s.rate * s.n);
-  const failedHere = w.failed && !w.reached && newest.some((r) => w.failed.ids.includes(r._id));
-  if (failedHere) {
-    return {
-      ...base,
-      state: "developing",
-      word: STATE_WORDS.developing,
-      dueRecheck: false,
-      evidenceIds: [.../* @__PURE__ */ new Set([...w.failed.ids, ...ids])],
-      reason: `It slipped back at the ${w.failed.week}-week re-check, with ${right} of the last ${s.n} answers right without help.`
-    };
-  }
-  if (s.n < RULES.MIN_MARKS) {
-    return {
-      ...base,
-      state: "not_enough",
-      word: STATE_WORDS.not_enough,
-      dueRecheck: false,
-      evidenceIds: ids,
-      reason: `There ${s.n === 1 ? "is" : "are"} only ${plural(s.n, "answer", "answers")} in the last ${RULES.RECENT_DAYS} days, and at least ${RULES.MIN_MARKS} are needed.`
-    };
-  }
-  if (s.onlyEasy && s.rate >= RULES.EMERGING_BELOW) {
-    return {
-      ...base,
-      state: "not_enough",
-      word: STATE_WORDS.not_enough,
-      dueRecheck: false,
-      evidenceIds: ids,
-      reason: `All ${s.n} questions so far were easy ones, so there is no sign yet of how they cope with harder ones.`
-    };
-  }
-  if (s.rate < RULES.EMERGING_BELOW) {
-    const rightWithHelp = recent.filter((r) => isHelped(r) && scoreOf(r) >= RULES.ITEM_RIGHT_FROM).length;
-    const reason2 = rightWithHelp * 2 > s.rightAny && rightWithHelp > 0 ? `Of the last ${s.n} answers, ${rightWithHelp} were right only with help and ${right} on their own.` : `Only ${right} of the last ${s.n} answers were right without help.`;
-    return { ...base, state: "emerging", word: STATE_WORDS.emerging, dueRecheck: false, evidenceIds: ids, reason: reason2 };
-  }
-  const need2 = [];
-  if (s.rate < RULES.MASTERED_FROM) need2.push(`${pct2(RULES.MASTERED_FROM)} right without help`);
-  if (dk && s.hardRight < RULES.MIN_HARD_RIGHT) need2.push(`${RULES.MIN_HARD_RIGHT} medium or hard questions right without help`);
-  if (!dk && s.independentCount < RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN) need2.push(`${RULES.MIN_INDEPENDENT_WHEN_DIFFICULTY_UNKNOWN} answers without help (question difficulty is not recorded)`);
-  let reason;
-  if (w.reached && !w.passed.length) {
-    reason = `${right} of the last ${s.n} answers were right without help; the level was reached on ${dateWords(w.reached.at)} and a re-check from ${dateWords(w.pending)} will confirm it.`;
-  } else if (need2.length) {
-    reason = `${right} of the last ${s.n} answers were right without help; mastered needs ${need2.join(" and ")}.`;
-  } else {
-    reason = `${right} of the last ${s.n} answers were right without help.`;
-  }
-  return { ...base, state: "developing", word: STATE_WORDS.developing, dueRecheck: false, evidenceIds: ids, reason };
-}
 
 // src/learner/model.js
 var SECURE = { OF_NEWEST: 4, RIGHT: 3 };
