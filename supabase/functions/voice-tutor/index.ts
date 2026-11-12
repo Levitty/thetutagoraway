@@ -11678,14 +11678,14 @@ var tbl = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells)
 var wrongs3 = (w) => w.length > 3 ? shuffle2(w).slice(0, 3) : w;
 var hintsOf = (opt) => [opt.h?.[0], opt.h?.[1]].filter(Boolean);
 function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
-  const { skills: SKILLS3, outcomes: OUTCOMES2, misFeedback: MIS_FEEDBACK2 } = map;
+  const { skills: SKILLS4, outcomes: OUTCOMES3, misFeedback: MIS_FEEDBACK3 } = map;
   const feedback = (code, own, why) => {
     if (own) return own;
-    const f = MIS_FEEDBACK2[code];
+    const f = MIS_FEEDBACK3[code];
     if (!f) throw new Error(`${subject} family: no misconception ${code}`);
     return why ? `${why} ${f}` : f;
   };
-  const choose3 = (cases, opt = {}) => () => {
+  const choose4 = (cases, opt = {}) => () => {
     const [q, r, w, why, extra = {}] = pick(cases);
     const wrong = wrongs3(w).map(([text, mis, own]) => ({ text: String(text), right: false, why: feedback(mis, own, why), mis }));
     const texts = [String(r), ...wrong.map((x) => x.text)];
@@ -11701,7 +11701,7 @@ function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
       ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
     };
   };
-  const typed2 = (cases, opt = {}) => () => {
+  const typed3 = (cases, opt = {}) => () => {
     const [q, a, ok = [], w, why, extra = {}] = pick(cases);
     const wrong = wrongs3(w).map(([text, mis, own]) => [String(text), feedback(mis, own, why), mis]);
     if ((/* @__PURE__ */ new Set([a, ...wrong.map((x) => x[0])])).size !== wrong.length + 1) return null;
@@ -11717,22 +11717,22 @@ function makeKit({ subject, grade, prefix, map, signed: signed2 }) {
       ...extra.t ? { model: tbl(extra.t.head, extra.t.rows) } : {}
     };
   };
-  const spot5 = (cases, opt = {}) => () => {
+  const spot6 = (cases, opt = {}) => () => {
     const [q, steps2, fix, mis] = pick(cases);
     feedback(mis);
     return { question: q, working: steps2.map(([text, ok]) => ({ text, ok })), fix, mis, hints: hintsOf(opt), steps: [opt.s1 || "Check each step against what you know."], topicDone: true };
   };
-  const sfam2 = (d) => {
+  const sfam3 = (d) => {
     const { cs, gen, id, form, rung: rung2, oc, ...rest } = d;
     const code = `${prefix}.G${grade}.${cs}`;
-    const ck = SKILLS3[code];
+    const ck = SKILLS4[code];
     if (!ck) throw new Error(`${id}: no ${subject} skill ${code}`);
     const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
-    if (!outcome || !OUTCOMES2[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
+    if (!outcome || !OUTCOMES3[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
     const draw = () => gen();
     return family({ reviewed: signed2.includes(id), subject, ...rest, id, form, rung: rung2, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
   };
-  return { choose: choose3, typed: typed2, spot: spot5, sfam: sfam2, pick, shuffle: shuffle2, tbl };
+  return { choose: choose4, typed: typed3, spot: spot6, sfam: sfam3, pick, shuffle: shuffle2, tbl };
 }
 
 // src/ai-tutor/content/families/sci_signed.js
@@ -13160,10 +13160,2556 @@ var science_g5_default = {
   precheckLabel: "Science 5"
 };
 
+// src/ai-tutor/content/curriculumMap.socialstudies.g5.js
+var SUBSTRANDS2 = {
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP": {
+    "name": "Elements of a Map",
+    "strand": "Natural and the Built Environments",
+    "outcomes": [
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a",
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.b",
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c",
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.d"
+    ]
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI": {
+    "name": "Location, Position and Size of Kenya",
+    "strand": "Natural and the Built Environments",
+    "outcomes": [
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.a",
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b",
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.c"
+    ]
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I": {
+    "name": "Main physical features in Kenya",
+    "strand": "Natural and the Built Environments",
+    "outcomes": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a",
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b",
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.c"
+    ]
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE": {
+    "name": "Weather and Climate",
+    "strand": "Natural and the Built Environments",
+    "outcomes": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.a",
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b",
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c",
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.d"
+    ]
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS": {
+    "name": "The Built Environments",
+    "strand": "Natural and the Built Environments",
+    "outcomes": [
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a",
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.b",
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c",
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.d"
+    ]
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA": {
+    "name": "Language Groups in Kenya",
+    "strand": "People and Social Organisation",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a",
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b",
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.c",
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.d"
+    ]
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_": {
+    "name": "Population distribution in Kenya",
+    "strand": "People and Social Organisation",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a",
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b",
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.c"
+    ]
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC": {
+    "name": "African Traditional Education",
+    "strand": "People and Social Organisation",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a",
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b",
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.c",
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.d"
+    ]
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION": {
+    "name": "School administration",
+    "strand": "People and Social Organisation",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.a",
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.b",
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c",
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.d"
+    ]
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA": {
+    "name": "Resources in Kenya",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a",
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b",
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.c",
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.d"
+    ]
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA": {
+    "name": "Mining in Kenya",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.a",
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.b",
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.c",
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.d"
+    ]
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA": {
+    "name": "Fishing in Kenya",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.a",
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.b",
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.c",
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.d"
+    ]
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_": {
+    "name": "Wildlife and Tourism in Kenya",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.a",
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.b",
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c",
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.d"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT": {
+    "name": "Development of Transport",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.a",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.b",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.d",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.e"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA": {
+    "name": "Development of Communication",
+    "strand": "Resources and Economic Activities in Eastern Africa",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.c",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.d"
+    ]
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K": {
+    "name": "Traditional Leaders in Kenya",
+    "strand": "Political Systems",
+    "outcomes": [
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a",
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b",
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.c"
+    ]
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E": {
+    "name": "Early forms of Governm ent in Kenya",
+    "strand": "Political Systems",
+    "outcomes": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a",
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b",
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c",
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.d"
+    ]
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA": {
+    "name": "Citizenship in Kenya",
+    "strand": "Political Systems",
+    "outcomes": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.a",
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b",
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c",
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.d"
+    ]
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT": {
+    "name": "National Government",
+    "strand": "Political Systems",
+    "outcomes": [
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.a",
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.b",
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.c"
+    ]
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA": {
+    "name": "National Unity in Kenya",
+    "strand": "Governance",
+    "outcomes": [
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.a",
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.b",
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.c",
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.d",
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.e"
+    ]
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS": {
+    "name": "Human Rights",
+    "strand": "Governance",
+    "outcomes": [
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.a",
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.b",
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.c",
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.d",
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.e"
+    ]
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY": {
+    "name": "Democracy in Society",
+    "strand": "Governance",
+    "outcomes": [
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.a",
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.b",
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.c",
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.d"
+    ]
+  }
+};
+var OUTCOMES2 = {
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
+  },
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
+  },
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
+  },
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP"
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI"
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI"
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI"
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I"
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I"
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I"
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE"
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE"
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE"
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE"
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS"
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS"
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS"
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS"
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA"
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA"
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA"
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA"
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_"
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_"
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_"
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC"
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC"
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC"
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC"
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION"
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION"
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION"
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION"
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA"
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_"
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_"
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_"
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.e": {
+    "letter": "e",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA"
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA"
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K"
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K"
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K"
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E"
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E"
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E"
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E"
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA"
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA"
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA"
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA"
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT"
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT"
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT"
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA"
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA"
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA"
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA"
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.e": {
+    "letter": "e",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA"
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS"
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS"
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS"
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS"
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.e": {
+    "letter": "e",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS"
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.a": {
+    "letter": "a",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.b": {
+    "letter": "b",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.c": {
+    "letter": "c",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.d": {
+    "letter": "d",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
+  }
+};
+var SKILLS3 = {
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS": {
+    "name": "Name the elements of a map and say what each is for",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
+    "outcome": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a",
+    "outcomes": [
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a",
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EM_SCALE_KEY",
+      "M_EM_FRAME_TITLE",
+      "M_EM_COMPASS_ROLE"
+    ]
+  },
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING": {
+    "name": "Read a described map using its key, scale and compass",
+    "sub": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
+    "outcome": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c",
+    "outcomes": [
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS"
+    ],
+    "mis": [
+      "M_EM_SYMBOL_GUESS",
+      "M_EM_SCALE_IGNORE"
+    ]
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS": {
+    "name": "Name the countries that share a border with Kenya",
+    "sub": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI",
+    "outcome": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.a",
+    "outcomes": [
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_LP_NEAR_NOT_BORDER",
+      "M_LP_OCEAN_AS_COUNTRY"
+    ]
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS": {
+    "name": "Give the position of Kenya's neighbours by compass direction",
+    "sub": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI",
+    "outcome": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b",
+    "outcomes": [
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS"
+    ],
+    "mis": [
+      "M_LP_EAST_WEST_SWAP",
+      "M_LP_NORTH_SOUTH_SWAP"
+    ]
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES": {
+    "name": "Identify the main physical features of Kenya and what kind each is",
+    "sub": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I",
+    "outcome": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a",
+    "outcomes": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_PF_KILIMANJARO",
+      "M_PF_TYPE_MIX"
+    ]
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE": {
+    "name": "Say where the main physical features lie in Kenya",
+    "sub": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I",
+    "outcome": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b",
+    "outcomes": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES",
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS"
+    ],
+    "mis": [
+      "M_PF_REGION_MIX",
+      "M_PF_RIFT_DIRECTION"
+    ]
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS": {
+    "name": "Identify the elements of weather and tell weather from climate",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
+    "outcome": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.a",
+    "outcomes": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_WC_WEATHER_CLIMATE",
+      "M_WC_INSTRUMENT_MIX"
+    ]
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES": {
+    "name": "Say where the main climatic regions lie in Kenya",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
+    "outcome": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b",
+    "outcomes": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS",
+      "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS"
+    ],
+    "mis": [
+      "M_WC_REGION_MIX",
+      "M_WC_COAST_DRY"
+    ]
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS": {
+    "name": "Describe the characteristics of the main climatic regions in Kenya",
+    "sub": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
+    "outcome": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c",
+    "outcomes": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES"
+    ],
+    "mis": [
+      "M_WC_EQUATOR_HOT",
+      "M_WC_HUMID_DRY"
+    ]
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES": {
+    "name": "Identify the main historic built environments of Kenya and where they are",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS",
+    "outcome": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a",
+    "outcomes": [
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a",
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_BE_NATURAL_AS_BUILT",
+      "M_BE_PLACE_MIX"
+    ]
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION": {
+    "name": "Choose ways of conserving historic built environments",
+    "sub": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS",
+    "outcome": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c",
+    "outcomes": [
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c",
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.d"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES"
+    ],
+    "mis": [
+      "M_BE_KEEP_OUT",
+      "M_BE_TOUCH_TAKE"
+    ]
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT": {
+    "name": "Sort Kenyan communities into the Bantu, Nilotic and Cushitic language groups",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA",
+    "outcome": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_LG_NILOTE_AS_BANTU",
+      "M_LG_CUSHITE_AS_NILOTE"
+    ]
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE": {
+    "name": "Explain how language groups depend on each other",
+    "sub": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA",
+    "outcome": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b",
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.c",
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.d"
+    ],
+    "pre": [
+      "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT"
+    ],
+    "mis": [
+      "M_LG_SELF_SUFFICIENT",
+      "M_LG_RIVALRY"
+    ]
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS": {
+    "name": "Say where population density is high and low in Kenya, and why",
+    "sub": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_",
+    "outcome": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE",
+      "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS"
+    ],
+    "mis": [
+      "M_PD_DESERT_DENSE",
+      "M_PD_SIZE_DENSITY"
+    ]
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS": {
+    "name": "Explain the effects of high and low population density",
+    "sub": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_",
+    "outcome": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a"
+    ],
+    "pre": [
+      "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS"
+    ],
+    "mis": [
+      "M_PD_DENSE_ALL_GOOD",
+      "M_PD_SPARSE_NO_PROBLEM"
+    ]
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS": {
+    "name": "Identify the methods of instruction in African traditional education",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC",
+    "outcome": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_TE_NO_SCHOOL",
+      "M_TE_METHOD_MIX"
+    ]
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES": {
+    "name": "Explain how African traditional education promoted values",
+    "sub": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC",
+    "outcome": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b",
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.c",
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.d"
+    ],
+    "pre": [
+      "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS"
+    ],
+    "mis": [
+      "M_TE_ONLY_SKILLS",
+      "M_TE_OUTDATED"
+    ]
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS": {
+    "name": "Identify school leaders and state their duties",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION",
+    "outcome": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.a",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.a",
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_SA_DEPUTY_HEAD",
+      "M_SA_DUTY_MIX"
+    ]
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE": {
+    "name": "Show the order of authority in a school",
+    "sub": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION",
+    "outcome": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c",
+    "outcomes": [
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c"
+    ],
+    "pre": [
+      "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS"
+    ],
+    "mis": [
+      "M_SA_ORDER_REVERSED",
+      "M_SA_PREFECT_ABOVE"
+    ]
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES": {
+    "name": "Identify the resources found in Kenya",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_RK_MONEY_ONLY",
+      "M_RK_BUILT_NATURAL"
+    ]
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE": {
+    "name": "Say how to use resources prudently and sustainably",
+    "sub": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b",
+    "outcomes": [
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b",
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.c"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES"
+    ],
+    "mis": [
+      "M_RK_CONSERVE_NO_USE",
+      "M_RK_UNLIMITED"
+    ]
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES": {
+    "name": "Identify the major minerals of Kenya and where they are mined",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.MINING_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.a",
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE"
+    ],
+    "mis": [
+      "M_MK_PLACE_MIX",
+      "M_MK_NOT_MINERAL"
+    ]
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE": {
+    "name": "Explain the importance of minerals to Kenya",
+    "sub": "SOCI.G5.RESOUR.MINING_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.MINING_IN_KENYA.c",
+    "outcomes": [
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.c",
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.d"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES"
+    ],
+    "mis": [
+      "M_MK_USE_MIX",
+      "M_MK_NO_HARM"
+    ]
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS": {
+    "name": "Identify and locate the main inland fishing grounds of Kenya",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.FISHING_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.a",
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE"
+    ],
+    "mis": [
+      "M_FK_SEA_AS_INLAND",
+      "M_FK_SODA_LAKE",
+      "M_FK_REGION_MIX"
+    ]
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY": {
+    "name": "Explain how fishing helps the economy of Kenya",
+    "sub": "SOCI.G5.RESOUR.FISHING_IN_KENYA",
+    "outcome": "SOCI.G5.RESOUR.FISHING_IN_KENYA.c",
+    "outcomes": [
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.c",
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.d"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS"
+    ],
+    "mis": [
+      "M_FK_FOOD_ONLY",
+      "M_FK_NO_SUSTAIN"
+    ]
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES": {
+    "name": "Identify the main tourist attractions, game reserves and national parks and where they are",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+    "outcome": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.a",
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.b"
+    ],
+    "pre": [
+      "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE"
+    ],
+    "mis": [
+      "M_WT_PLACE_MIX",
+      "M_WT_ANIMAL_MIX"
+    ]
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY": {
+    "name": "Explain how wildlife and tourism help the economy of Kenya",
+    "sub": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+    "outcome": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c",
+    "outcomes": [
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c",
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.d"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES"
+    ],
+    "mis": [
+      "M_WT_HOTELS_ONLY",
+      "M_WT_ANIMALS_NO_VALUE"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT": {
+    "name": "Outline the main early means of transport",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
+    "outcome": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_TR_EARLY_MODERN_MIX",
+      "M_TR_WALK_NOT_TRANSPORT"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT": {
+    "name": "Identify the modern means of transport in Kenya and what each is best for",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
+    "outcome": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.b",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.b",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.e"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT"
+    ],
+    "mis": [
+      "M_TR_MODE_MIX",
+      "M_TR_SGR_FIRST"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY": {
+    "name": "Choose safe behaviour on and near roads",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
+    "outcome": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.d"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT"
+    ],
+    "mis": [
+      "M_TR_CROSS_ANYWHERE",
+      "M_TR_BELT_LATER"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION": {
+    "name": "Outline the main early forms of communication",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA",
+    "outcome": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_CM_EARLY_MODERN_MIX",
+      "M_CM_EARLY_FAST"
+    ]
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION": {
+    "name": "Identify the modern means of communication and their role in Kenya",
+    "sub": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA",
+    "outcome": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b",
+    "outcomes": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.c",
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.d"
+    ],
+    "pre": [
+      "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION"
+    ],
+    "mis": [
+      "M_CM_MEDIUM_MIX",
+      "M_CM_NO_RISK"
+    ]
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS": {
+    "name": "Match selected traditional leaders to their community and contribution",
+    "sub": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K",
+    "outcome": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b",
+    "outcomes": [
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_TL_COMMUNITY_MIX",
+      "M_TL_ROLE_MIX"
+    ]
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES": {
+    "name": "Outline the leadership qualities of traditional leaders and their role today",
+    "sub": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K",
+    "outcome": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a",
+    "outcomes": [
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a",
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.c"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS"
+    ],
+    "mis": [
+      "M_TL_FEAR_LEADER",
+      "M_TL_NO_ROLE_TODAY"
+    ]
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS": {
+    "name": "Describe early forms of government among selected Kenyan communities",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
+    "outcome": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a",
+    "outcomes": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_EG_NO_GOVT",
+      "M_EG_KING_ALL"
+    ]
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU": {
+    "name": "Compare early government of the Maasai and the Ameru",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
+    "outcome": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b",
+    "outcomes": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS"
+    ],
+    "mis": [
+      "M_EG_SAME_NAMES",
+      "M_EG_ONE_RULER"
+    ]
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS": {
+    "name": "Apply good practices from early government to modern governance",
+    "sub": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
+    "outcome": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c",
+    "outcomes": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c",
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.d"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS"
+    ],
+    "mis": [
+      "M_EG_OLD_USELESS",
+      "M_EG_COPY_ALL"
+    ]
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN": {
+    "name": "State how a person becomes a citizen of Kenya",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
+    "outcome": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_CZ_BORN_IN_KENYA_ONLY",
+      "M_CZ_ID_MAKES",
+      "M_CZ_MARRIAGE_INSTANT"
+    ]
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL": {
+    "name": "Explain dual citizenship in Kenya",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
+    "outcome": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b",
+    "outcomes": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN"
+    ],
+    "mis": [
+      "M_CZ_ONE_PASSPORT",
+      "M_CZ_DUAL_LOSE"
+    ]
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN": {
+    "name": "Show good citizenship for personal and social well-being",
+    "sub": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
+    "outcome": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c",
+    "outcomes": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c",
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.d"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN"
+    ],
+    "mis": [
+      "M_CZ_ONLY_VOTING",
+      "M_CZ_RIGHTS_NO_DUTY"
+    ]
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES": {
+    "name": "Describe the three arms of the National Government",
+    "sub": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT",
+    "outcome": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.a",
+    "outcomes": [
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_NG_ARM_MIX",
+      "M_NG_PRESIDENT_ALL"
+    ]
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS": {
+    "name": "Show which people and bodies belong to which arm",
+    "sub": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT",
+    "outcome": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.b",
+    "outcomes": [
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.b"
+    ],
+    "pre": [
+      "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES"
+    ],
+    "mis": [
+      "M_NG_MEMBER_MIX",
+      "M_NG_COUNTY_NATIONAL"
+    ]
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS": {
+    "name": "Identify the national symbols of Kenya and what they mean",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA",
+    "outcome": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.a",
+    "outcomes": [
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_NU_COLOUR_MEANING",
+      "M_NU_SYMBOL_MIX"
+    ]
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS": {
+    "name": "Explain what promotes national unity and how to overcome its challenges",
+    "sub": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA",
+    "outcome": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.b",
+    "outcomes": [
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.b",
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.c"
+    ],
+    "pre": [
+      "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS"
+    ],
+    "mis": [
+      "M_NU_UNITY_SAME",
+      "M_NU_TRIBE_FIX"
+    ]
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS": {
+    "name": "Identify basic human rights",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS",
+    "outcome": "SOCI.G5.GOVERN.HUMAN_RIGHTS.a",
+    "outcomes": [
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_HR_WANT_AS_RIGHT",
+      "M_HR_ADULT_ONLY"
+    ]
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY": {
+    "name": "Explain why rights come with responsibilities and how to protect them",
+    "sub": "SOCI.G5.GOVERN.HUMAN_RIGHTS",
+    "outcome": "SOCI.G5.GOVERN.HUMAN_RIGHTS.b",
+    "outcomes": [
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.b",
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.d"
+    ],
+    "pre": [
+      "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS"
+    ],
+    "mis": [
+      "M_HR_NO_LIMIT",
+      "M_HR_NO_REPORT"
+    ]
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES": {
+    "name": "Identify types of democracy",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY",
+    "outcome": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.a",
+    "outcomes": [
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_DM_TYPE_MIX",
+      "M_DM_NOT_DEMOCRACY"
+    ]
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE": {
+    "name": "Explain the benefits of democracy and the fair way to practise it",
+    "sub": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY",
+    "outcome": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.b",
+    "outcomes": [
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.b",
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.c"
+    ],
+    "pre": [
+      "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES"
+    ],
+    "mis": [
+      "M_DM_MAJORITY_ALL",
+      "M_DM_LOUDEST"
+    ]
+  }
+};
+var MIS_FEEDBACK2 = {
+  "M_EM_SCALE_KEY": "The key tells what each symbol means. The scale tells how far a distance on the map is on the ground.",
+  "M_EM_FRAME_TITLE": "The title says what the map is about. The frame is the border line around the map.",
+  "M_EM_COMPASS_ROLE": "The compass shows direction. It tells you which way is north, south, east and west on the map.",
+  "M_EM_SYMBOL_GUESS": "Use the key. A symbol means what the key says it means, not what it looks like.",
+  "M_EM_SCALE_IGNORE": "Use the scale. If 3 cm stands for 30 km, then 1 cm stands for 10 km, so 2 cm stands for 20 km.",
+  "M_LP_NEAR_NOT_BORDER": "Rwanda is in East Africa but does not touch Kenya. Kenya's five neighbours are Ethiopia, South Sudan, Uganda, Tanzania and Somalia.",
+  "M_LP_OCEAN_AS_COUNTRY": "The Indian Ocean touches Kenya but it is water, not a country. Somalia is a country that shares a border with Kenya.",
+  "M_LP_EAST_WEST_SWAP": "Uganda is to the west of Kenya. Somalia and the Indian Ocean are to the east.",
+  "M_LP_NORTH_SOUTH_SWAP": "Tanzania is to the south of Kenya. Ethiopia is to the north.",
+  "M_PF_KILIMANJARO": "Mount Kilimanjaro is in Tanzania. Mount Kenya, at 5,199 metres, is the highest mountain in Kenya.",
+  "M_PF_TYPE_MIX": "Lake Turkana is a lake, a large body of water with land all round it. Rivers like the Tana flow in a line to the sea.",
+  "M_PF_REGION_MIX": "Lake Victoria lies in the west of Kenya and is shared with Uganda and Tanzania.",
+  "M_PF_RIFT_DIRECTION": "The Great Rift Valley runs north to south through Kenya, past Lake Turkana, Lake Baringo, Lake Nakuru, Lake Naivasha and Lake Magadi.",
+  "M_WC_WEATHER_CLIMATE": "Weather is what the air is like on one day. Climate is the usual pattern over many years.",
+  "M_WC_INSTRUMENT_MIX": "A rain gauge measures rainfall. A thermometer measures temperature.",
+  "M_WC_REGION_MIX": "The arid north, around Turkana and Marsabit, gets very little rain. The Mount Kenya area is cool and wet.",
+  "M_WC_COAST_DRY": "The coast is hot and humid, with plenty of rain. Dry heat is the climate of the arid north.",
+  "M_WC_EQUATOR_HOT": "Even on the equator, the air gets cooler as you go higher. That is why Mount Kenya has snow at the top.",
+  "M_WC_HUMID_DRY": "Humid means there is a lot of water vapour in the air, so the air feels damp and sticky.",
+  "M_BE_NATURAL_AS_BUILT": "Fort Jesus was built by people, so it is a built environment. Mount Kenya was not built by anyone.",
+  "M_BE_PLACE_MIX": "Fort Jesus is in Mombasa. Lamu has its own old town, a historic town on an island.",
+  "M_BE_KEEP_OUT": "Conserving means looking after a place so it lasts. Careful repair and visitor rules keep it for later generations.",
+  "M_BE_TOUCH_TAKE": "A small stone seems harmless, but many people doing it ruins the site. We leave heritage sites as we find them.",
+  "M_LG_NILOTE_AS_BANTU": "The Luo are Nilotes. The Bantu group includes the Kikuyu, Luhya and Kamba.",
+  "M_LG_CUSHITE_AS_NILOTE": "The Somali are Cushites. Herding is a way of life; language group depends on the family of languages.",
+  "M_LG_SELF_SUFFICIENT": "No community has everything. Communities swap goods and skills, so they depend on each other.",
+  "M_LG_RIVALRY": "Interdependence means helping each other. Both sides gain when they exchange goods, skills and ideas.",
+  "M_PD_DESERT_DENSE": "Few people live in the dry north because there is little water and farming is hard. The highlands have rain and fertile soil.",
+  "M_PD_SIZE_DENSITY": "Density is people per square kilometre. Area A has 200 people for each square kilometre and Area B has 100, so Area A is more crowded.",
+  "M_PD_DENSE_ALL_GOOD": "High density brings pressure on land, water and housing, even though markets and services are close.",
+  "M_PD_SPARSE_NO_PROBLEM": "Where few people live, services such as schools, clinics and roads are far apart and costly to provide.",
+  "M_TE_NO_SCHOOL": "Children learned a lot before classrooms: elders and parents taught through stories, proverbs, songs and work.",
+  "M_TE_METHOD_MIX": "She learns by doing, working beside someone with the skill. Storytelling means learning from told stories.",
+  "M_TE_ONLY_SKILLS": "Traditional education taught values too: respect for elders, honesty, sharing and responsibility.",
+  "M_TE_OUTDATED": "Traditional education taught respect, honesty and teamwork. These values still help us live well with others.",
+  "M_SA_DEPUTY_HEAD": "The headteacher runs the whole school. The deputy helps the head and acts when the head is away.",
+  "M_SA_DUTY_MIX": "The class teacher looks after a class and takes the register. The Board of Management oversees the school as a whole.",
+  "M_SA_ORDER_REVERSED": "The deputy headteacher comes directly under the headteacher. Class teachers come below them.",
+  "M_SA_PREFECT_ABOVE": "Prefects are learners who help keep order. They report to teachers, who are above them in the school structure.",
+  "M_RK_MONEY_ONLY": "Natural resources come from nature: land, water, forests, minerals and wildlife. Money is not a natural resource.",
+  "M_RK_BUILT_NATURAL": "A forest grows by itself, so it is a natural resource. A school is built by people.",
+  "M_RK_CONSERVE_NO_USE": "To use a resource prudently is to use it carefully so it does not run out and others can use it too.",
+  "M_RK_UNLIMITED": "Forests grow slowly. If we cut trees faster than they grow, the forest can finish. Replanting keeps it going.",
+  "M_MK_PLACE_MIX": "Soda ash comes from Lake Magadi. Fluorspar is mined in the Kerio Valley.",
+  "M_MK_NOT_MINERAL": "Minerals are found in the ground or rocks. Coffee grows on a plant. Gold is a mineral.",
+  "M_MK_USE_MIX": "Limestone is crushed and heated to make cement. Gemstones are cut for jewellery.",
+  "M_MK_NO_HARM": "Mining gives jobs and income, but if it is not controlled it can damage land, spread dust and put workers in danger.",
+  "M_FK_SEA_AS_INLAND": "Inland fishing grounds are lakes, rivers and dams inside the country. The Indian Ocean is the sea.",
+  "M_FK_SODA_LAKE": "Lake Magadi has water too salty with soda for most fish. Lake Turkana and Lake Victoria are main fishing grounds.",
+  "M_FK_REGION_MIX": "Lake Turkana is in the dry north-west of Kenya. Lake Victoria is in the west.",
+  "M_FK_FOOD_ONLY": "Fishing gives food, jobs for fishers, traders and processors, and money from selling fish at home and abroad.",
+  "M_FK_NO_SUSTAIN": "Fish need to grow and breed. If we catch all young fish, there will be fewer fish later.",
+  "M_WT_PLACE_MIX": "The Maasai Mara is in Narok County. Amboseli is in Kajiado County.",
+  "M_WT_ANIMAL_MIX": "Lake Nakuru is famous for flamingos, which gather at the shore, and for rhinos.",
+  "M_WT_HOTELS_ONLY": "Tourism supports many people: guides, drivers, cooks, craft sellers and local communities.",
+  "M_WT_ANIMALS_NO_VALUE": "Wildlife attracts tourists, who bring money and jobs. Protecting it protects that income.",
+  "M_TR_EARLY_MODERN_MIX": "Early means of transport include donkeys, canoes and people carrying loads. Lorries are modern.",
+  "M_TR_WALK_NOT_TRANSPORT": "Carrying loads on the head or back was an early means of transport, along with donkeys, camels and canoes.",
+  "M_TR_MODE_MIX": "Fuel in large amounts moves best by pipeline or tanker lorry. A bicycle carries a very small load.",
+  "M_TR_SGR_FIRST": "The first railway ran from Mombasa to Kisumu and was built over 100 years ago. The Standard Gauge Railway is much newer.",
+  "M_TR_CROSS_ANYWHERE": "Cross at a zebra crossing or footbridge. A road that looks empty can hide a fast vehicle.",
+  "M_TR_BELT_LATER": "A crash can happen on any trip, short or long. Wear a helmet or seat belt every time.",
+  "M_CM_EARLY_MODERN_MIX": "Drums, horns and smoke signals were early forms. Email needs the internet and is modern.",
+  "M_CM_EARLY_FAST": "A runner carries a message only as fast as he walks. A phone sends it at once, however far.",
+  "M_CM_MEDIUM_MIX": "Television shows pictures with sound. Radio has sound only.",
+  "M_CM_NO_RISK": "Not everything we read or are sent is true. Check first, then share.",
+  "M_TL_COMMUNITY_MIX": "Mekatilili wa Menza led the Giriama of the Kenyan coast against forced labour.",
+  "M_TL_ROLE_MIX": "Koitalel Arap Samoei led the Nandi against the railway. Nabongo Mumia ruled the Wanga and welcomed the British.",
+  "M_TL_FEAR_LEADER": "Good leaders are respected for qualities such as bravery, wisdom and fairness, not because they are feared.",
+  "M_TL_NO_ROLE_TODAY": "Elders still settle disputes, guide ceremonies and teach values in many communities.",
+  "M_EG_NO_GOVT": "Communities had their own governments: councils of elders, age-sets, spiritual leaders and, in some places, kings.",
+  "M_EG_KING_ALL": "Most Kenyan communities were ruled by councils of elders. The Wanga kingdom, under the Nabongo, was one with a king.",
+  "M_EG_SAME_NAMES": "The Njuri Ncheke is the council of elders of the Ameru. The laibon was a Maasai spiritual leader.",
+  "M_EG_ONE_RULER": "The laibon gave spiritual guidance. Decisions were made by elders and age-sets, so he was not a king.",
+  "M_EG_OLD_USELESS": "Settling quarrels by talk, consulting wise people and serving the community are still good practices.",
+  "M_EG_COPY_ALL": "We keep good practices such as consulting elders. Harsh punishments break rights and are left behind.",
+  "M_CZ_BORN_IN_KENYA_ONLY": "A child is a Kenyan citizen by birth if at least one parent is a Kenyan citizen, even when born abroad.",
+  "M_CZ_ID_MAKES": "An ID card is a document that proves citizenship. A person is a citizen by birth or registration.",
+  "M_CZ_MARRIAGE_INSTANT": "Marriage to a Kenyan does not give citizenship at once. A person may apply to be registered after seven years of marriage.",
+  "M_CZ_ONE_PASSPORT": "The 2010 Constitution allows a Kenyan to hold the citizenship of another country too.",
+  "M_CZ_DUAL_LOSE": "A Kenyan citizen by birth does not lose Kenyan citizenship by getting another nationality.",
+  "M_CZ_ONLY_VOTING": "Good citizens obey rules, respect others and care for the environment at any age, not only when they vote.",
+  "M_CZ_RIGHTS_NO_DUTY": "Citizens have rights and duties. One duty is to obey the law.",
+  "M_NG_ARM_MIX": "The Legislature, or Parliament, makes laws. The Judiciary explains the law and settles disputes in courts.",
+  "M_NG_PRESIDENT_ALL": "Laws are made by Parliament. The President leads the Executive that carries them out.",
+  "M_NG_MEMBER_MIX": "Judges and magistrates belong to the Judiciary. The President and Cabinet belong to the Executive.",
+  "M_NG_COUNTY_NATIONAL": "A county governor leads a county government. The Deputy President is part of the national Executive.",
+  "M_NU_COLOUR_MEANING": "Red on the flag stands for the blood shed in the struggle for freedom. Black stands for the people.",
+  "M_NU_SYMBOL_MIX": "The national flag, the coat of arms and the national anthem are official symbols. The Safari Rally is a sports event.",
+  "M_NU_UNITY_SAME": "Unity does not mean being the same. It means people of different communities live and work together.",
+  "M_NU_TRIBE_FIX": "Tribalism is overcome by mixing, sharing and respecting each other, not by keeping apart.",
+  "M_HR_WANT_AS_RIGHT": "Rights protect life and dignity, such as education and health. A new phone is something we want.",
+  "M_HR_ADULT_ONLY": "Every person has rights, including children. Children have the right to education.",
+  "M_HR_NO_LIMIT": "Our rights end where they harm another person. Each right comes with a duty to respect it in others.",
+  "M_HR_NO_REPORT": "Abuse is never a secret to keep. Tell a trusted adult, a teacher or Childline 116.",
+  "M_DM_TYPE_MIX": "When every person votes on the matter, that is direct democracy. In representative democracy we elect others to decide.",
+  "M_DM_NOT_DEMOCRACY": "In a democracy, people choose their leaders. A leader who keeps power without elections is not a democratic leader.",
+  "M_DM_MAJORITY_ALL": "The majority decides, but the minority is still respected and can speak and try again next time.",
+  "M_DM_LOUDEST": "A fair election uses a free, secret vote, counted honestly. Shouting does not decide it."
+};
+
+// src/ai-tutor/content/families/socialstudies_g5_signed.js
+var SIGNED = [];
+
+// src/ai-tutor/content/families/socialstudies_g5_lib.js
+var { choose: choose3, typed: typed2, spot: spot3, sfam: sfam2 } = makeKit({
+  subject: "socialstudies",
+  grade: 5,
+  prefix: "SOCI",
+  signed: SIGNED,
+  map: { skills: SKILLS3, outcomes: OUTCOMES2, misFeedback: MIS_FEEDBACK2 }
+});
+var fam = (tag, cs, form, rung2, gen, oc) => sfam2({ id: `socialstudies5.${tag}`, cs, form, rung: rung2, gen, ...oc ? { oc } : {} });
+
+// src/ai-tutor/content/families/socialstudies_g5_a.js
+var EM = "NATURA.ELEMENTS_OF_A_MAP.";
+var LP = "NATURA.LOCATION_POSITION_AND_SI.";
+var PF = "NATURA.MAIN_PHYSICAL_FEATURES_I.";
+var WC = "NATURA.WEATHER_AND_CLIMATE.";
+var BE = "NATURA.THE_BUILT_ENVIRONMENTS.";
+var FAMILIES7 = [
+  // ---------------------------------------------------------------- MAP_ELEMENTS
+  fam("map.el.which", `${EM}MAP_ELEMENTS`, "direct", 1, choose3([
+    ["Which part of a map turns a map distance into a ground distance?", "The scale", [["The key", "M_EM_SCALE_KEY"], ["The frame", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The scale turns a distance on the map into a distance on the ground."],
+    ["Which part of a map tells you what each symbol means?", "The key", [["The scale", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The key lists the symbols and says what each one stands for."],
+    ["Which part of a map shows the direction north?", "The compass", [["The scale", "M_EM_SCALE_KEY"], ["The key", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"]], "The compass shows north, south, east and west on the map."],
+    ["Which part of a map tells you what the map is about?", "The title", [["The frame", "M_EM_FRAME_TITLE"], ["The scale", "M_EM_SCALE_KEY"], ["The compass", "M_EM_COMPASS_ROLE"]], 'The title names the map, for example "Map of Kenya".'],
+    ["Which part of a map is the line drawn around the edge?", "The frame", [["The title", "M_EM_FRAME_TITLE"], ["The key", "M_EM_SCALE_KEY"], ["The scale", "M_EM_SCALE_KEY"]], "The frame is the border that holds the whole map."]
+  ], { h: ["Think about the job each part of a map does.", "Title: name. Frame: border. Scale: distance. Compass: direction. Key: symbols."], s1: "A map has five parts: title, frame, scale, compass and key." })),
+  fam("map.el.story", `${EM}MAP_ELEMENTS`, "word", 2, choose3([
+    ["Njeri wants to know what a small blue line on her sketch map means. Where should she look?", "In the key", [["At the scale", "M_EM_SCALE_KEY"], ["At the frame", "M_EM_FRAME_TITLE"], ["At the compass", "M_EM_COMPASS_ROLE"]], "The key explains each colour and symbol used on the map."],
+    ["Otieno must find how far his school is from the market on a map. Which part helps him?", "The scale", [["The key", "M_EM_SCALE_KEY"], ["The title", "M_EM_FRAME_TITLE"], ["The compass", "M_EM_COMPASS_ROLE"]], "The scale tells how long the real distance is for each centimetre on the map."],
+    ["A teacher asks which way is north on a wall map. The learners look at one part. Which part is it?", "The compass", [["The key", "M_EM_SCALE_KEY"], ["The scale", "M_EM_SCALE_KEY"], ["The frame", "M_EM_FRAME_TITLE"]], "The compass shows direction, so it shows which way is north."],
+    ['Amina draws a sketch map of her school. She writes "Map of Our School" at the top. What did she add?', "A title", [["A frame", "M_EM_FRAME_TITLE"], ["A key", "M_EM_SCALE_KEY"], ["A scale", "M_EM_SCALE_KEY"]], "A title tells the reader what the map shows."],
+    ["Baraka draws a neat line round the edge of his map. What is this line called?", "The frame", [["The title", "M_EM_FRAME_TITLE"], ["The scale", "M_EM_SCALE_KEY"], ["The key", "M_EM_SCALE_KEY"]], "The frame is the border round the map."]
+  ], { h: ["Which part of the map answers the learner's question?", "Direction, distance and symbols each have their own part."], s1: "Match what the learner needs with the part of the map that gives it." })),
+  // ---------------------------------------------------------------- MAP_READING
+  fam("map.rd.key", `${EM}MAP_READING`, "table", 1, choose3([
+    [
+      'A sketch map has this key. What does the symbol "+" stand for on the map?',
+      "A clinic",
+      [["A church", "M_EM_SYMBOL_GUESS"], ["A road", "M_EM_SYMBOL_GUESS"], ["A river", "M_EM_SYMBOL_GUESS"]],
+      'The key says "+" is a clinic. We always read the key, not guess from the look.',
+      { t: { head: ["Symbol", "Meaning"], rows: [["+", "Clinic"], ["T", "Church"], ["Blue line", "River"], ["Black line", "Road"]] } }
+    ],
+    [
+      "Look at the key of a school map. What does the blue line stand for?",
+      "A river",
+      [["A road", "M_EM_SYMBOL_GUESS"], ["A fence", "M_EM_SYMBOL_GUESS"], ["A railway", "M_EM_SYMBOL_GUESS"]],
+      "The key says the blue line is a river.",
+      { t: { head: ["Symbol", "Meaning"], rows: [["Blue line", "River"], ["Black line", "Road"], ["Green patch", "Forest"], ["Red square", "School"]] } }
+    ],
+    [
+      "In this key, a green patch is used on the map. What does it stand for?",
+      "A forest",
+      [["A lake", "M_EM_SYMBOL_GUESS"], ["A market", "M_EM_SYMBOL_GUESS"], ["A town", "M_EM_SYMBOL_GUESS"]],
+      "The key shows the green patch is a forest.",
+      { t: { head: ["Symbol", "Meaning"], rows: [["Green patch", "Forest"], ["Blue patch", "Lake"], ["Red square", "School"], ["Black dot", "Market"]] } }
+    ],
+    ["A map of a village uses a triangle for a church. Which sentence is right?", "The triangle stands for a church", [["The triangle stands for a tent", "M_EM_SYMBOL_GUESS"], ["The triangle stands for a hill", "M_EM_SYMBOL_GUESS"], ["The triangle stands for a school", "M_EM_SYMBOL_GUESS"]], "The key decides what a symbol means, not how it looks."],
+    [
+      "The key of a map shows a black dot for a market. What does the black dot stand for?",
+      "A market",
+      [["A school", "M_EM_SYMBOL_GUESS"], ["A well", "M_EM_SYMBOL_GUESS"], ["A farm", "M_EM_SYMBOL_GUESS"]],
+      "The key says a black dot is a market.",
+      { t: { head: ["Symbol", "Meaning"], rows: [["Black dot", "Market"], ["Red square", "School"], ["Blue line", "River"], ["Green patch", "Forest"]] } }
+    ]
+  ], { h: ["Read the key. It says what each symbol means.", "Do not guess a symbol from how it looks."], s1: "Find the symbol in the key and read its meaning." })),
+  fam("map.rd.scale", `${EM}MAP_READING`, "word", 2, choose3([
+    ["A map says 1 cm stands for 10 km. Two towns are 4 cm apart. How far apart are they on the ground?", "40 km", [["4 km", "M_EM_SCALE_IGNORE"], ["14 km", "M_EM_SCALE_IGNORE"], ["400 km", "M_EM_SCALE_IGNORE"]], "Each centimetre is 10 km, so 4 cm is 4 times 10 km, which is 40 km."],
+    ["On a map, 1 cm stands for 5 km. A learner measures 6 cm between two schools. How far apart are the schools on the ground?", "30 km", [["6 km", "M_EM_SCALE_IGNORE"], ["11 km", "M_EM_SCALE_IGNORE"], ["300 km", "M_EM_SCALE_IGNORE"]], "6 cm times 5 km is 30 km."],
+    ["The scale of a map says 1 cm stands for 20 km. The distance on the map from Nairobi to Nakuru is 3 cm. What is the distance on the ground?", "60 km", [["3 km", "M_EM_SCALE_IGNORE"], ["23 km", "M_EM_SCALE_IGNORE"], ["600 km", "M_EM_SCALE_IGNORE"]], "3 cm times 20 km is 60 km."],
+    ["A map has the scale 1 cm to 2 km. Achieng's home is 7 cm from the river on the map. How far is it on the ground?", "14 km", [["7 km", "M_EM_SCALE_IGNORE"], ["9 km", "M_EM_SCALE_IGNORE"], ["140 km", "M_EM_SCALE_IGNORE"]], "7 cm times 2 km is 14 km."],
+    ["On a map of Kenya, 1 cm stands for 50 km. Two lakes are 5 cm apart. How far apart are the lakes on the ground?", "250 km", [["5 km", "M_EM_SCALE_IGNORE"], ["55 km", "M_EM_SCALE_IGNORE"], ["2,500 km", "M_EM_SCALE_IGNORE"]], "5 cm times 50 km is 250 km."]
+  ], { h: ["Find how many kilometres 1 cm stands for.", "Multiply the centimetres on the map by that number."], s1: "Use the scale: ground distance is map distance times the scale." })),
+  // ---------------------------------------------------------------- NEIGHBOURS
+  fam("nb.which", `${LP}NEIGHBOURS`, "direct", 1, choose3([
+    ["Which country shares a border with Kenya?", "Uganda", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["Zambia", "M_LP_NEAR_NOT_BORDER"], ["Burundi", "M_LP_NEAR_NOT_BORDER"]], "Uganda lies on the western border of Kenya. Rwanda, Zambia and Burundi do not touch Kenya."],
+    ["Which country is a neighbour of Kenya in the north?", "Ethiopia", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["Burundi", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"]], "Ethiopia shares the northern border with Kenya."],
+    ["Which country borders Kenya to the south?", "Tanzania", [["Zambia", "M_LP_NEAR_NOT_BORDER"], ["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"]], "Tanzania lies to the south of Kenya."],
+    ["Which one of these is a country that shares a border with Kenya?", "Somalia", [["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"], ["Burundi", "M_LP_NEAR_NOT_BORDER"], ["Zambia", "M_LP_NEAR_NOT_BORDER"]], "Somalia is on the east side of Kenya. The ocean is water, not a country."],
+    ["Which country lies to the north-west of Kenya and shares a border?", "South Sudan", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"], ["Burundi", "M_LP_NEAR_NOT_BORDER"]], "South Sudan is Kenya's north-western neighbour."]
+  ], { h: ["Kenya has five neighbours on land: Ethiopia, South Sudan, Uganda, Tanzania and Somalia.", "The Indian Ocean is water, not a country."], s1: "Check whether the country touches Kenya at a border line." })),
+  fam("nb.list", `${LP}NEIGHBOURS`, "word", 2, choose3([
+    ["Zawadi lists the countries that share a border with Kenya. Whose list is right?", "Ethiopia, Uganda, Tanzania, Somalia, South Sudan", [["Ethiopia, Uganda, Rwanda, Somalia, South Sudan", "M_LP_NEAR_NOT_BORDER"], ["Ethiopia, Uganda, Tanzania, Somalia, Zambia", "M_LP_NEAR_NOT_BORDER"], ["Ethiopia, Indian Ocean, Tanzania, Somalia, South Sudan", "M_LP_OCEAN_AS_COUNTRY"]], "The five countries are Ethiopia, South Sudan, Uganda, Tanzania and Somalia."],
+    ["A class makes a poster of Kenya's neighbours. Which list should they put on the poster?", "Uganda, Tanzania, Somalia, Ethiopia, South Sudan", [["Uganda, Tanzania, Rwanda, Ethiopia, Burundi", "M_LP_NEAR_NOT_BORDER"], ["Uganda, Zambia, Somalia, Ethiopia, South Sudan", "M_LP_NEAR_NOT_BORDER"], ["Uganda, Tanzania, Somalia, Indian Ocean, Ethiopia", "M_LP_OCEAN_AS_COUNTRY"]], "Only these five touch Kenya's land border."],
+    ["Which is a country that is in East Africa but does not share a border with Kenya?", "Rwanda", [["Uganda", "M_LP_NEAR_NOT_BORDER"], ["Tanzania", "M_LP_NEAR_NOT_BORDER"], ["Somalia", "M_LP_NEAR_NOT_BORDER"]], "Rwanda is in East Africa, but Uganda and Tanzania lie between it and Kenya."],
+    ["Halima counts four countries that touch Kenya. Which country did she leave out? She named Uganda, Tanzania, Ethiopia and Somalia.", "South Sudan", [["Rwanda", "M_LP_NEAR_NOT_BORDER"], ["Burundi", "M_LP_NEAR_NOT_BORDER"], ["The Indian Ocean", "M_LP_OCEAN_AS_COUNTRY"]], "South Sudan is the fifth neighbour, in the north-west."],
+    ["A learner says the Indian Ocean is a neighbour of Kenya. What should the teacher say?", "It is water along the coast, not a country", [["It is a country in the east", "M_LP_OCEAN_AS_COUNTRY"], ["It is a country in the south", "M_LP_OCEAN_AS_COUNTRY"], ["It is a country in the north", "M_LP_OCEAN_AS_COUNTRY"]], "The Indian Ocean is the water that touches the south-east coast. It has no government."]
+  ], { h: ["Which countries touch Kenya at a border line on land?", "Rwanda, Burundi and Zambia are near, but do not touch Kenya."], s1: "Count only countries that share a border with Kenya." })),
+  // ---------------------------------------------------------------- NEIGHBOUR_DIRECTIONS
+  fam("nd.which", `${LP}NEIGHBOUR_DIRECTIONS`, "direct", 1, choose3([
+    ["In which direction from Kenya does Uganda lie?", "West", [["East", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "Uganda lies to the west of Kenya."],
+    ["In which direction from Kenya does Somalia lie?", "East", [["West", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "Somalia is east of Kenya."],
+    ["In which direction from Kenya does Tanzania lie?", "South", [["North", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Tanzania lies south of Kenya."],
+    ["In which direction from Kenya does Ethiopia lie?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"]], "Ethiopia lies north of Kenya."],
+    ["Kenya's coast is on the Indian Ocean. In which direction from Kenya does the ocean lie?", "South-east", [["North-west", "M_LP_EAST_WEST_SWAP"], ["North-east", "M_LP_NORTH_SOUTH_SWAP"], ["South-west", "M_LP_EAST_WEST_SWAP"]], "The Indian Ocean lies to the south-east of Kenya."]
+  ], { h: ["Think of a map of Kenya with north at the top.", "The Indian Ocean is on the east side. Lake Victoria is on the west side."], s1: "Place Kenya in the middle and find the neighbour on the map." })),
+  fam("nd.turn", `${LP}NEIGHBOUR_DIRECTIONS`, "word", 2, choose3([
+    ["Uganda is to the west of Kenya. Which way must you go from Uganda to reach Kenya?", "East", [["West", "M_LP_EAST_WEST_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"]], "If Uganda is west of Kenya, then Kenya is east of Uganda."],
+    ["Tanzania is to the south of Kenya. Which way must you go from Tanzania to reach Kenya?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "If Tanzania is south of Kenya, then Kenya is north of Tanzania."],
+    ["Amina travels from Kenya to Ethiopia by road. Which way does she go?", "North", [["South", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Ethiopia is north of Kenya, so she travels north."],
+    ["Mutua crosses the border from Busia into Uganda. Which way is he going?", "West", [["East", "M_LP_EAST_WEST_SWAP"], ["South", "M_LP_NORTH_SOUTH_SWAP"], ["North", "M_LP_NORTH_SOUTH_SWAP"]], "Uganda lies west of Kenya, so he travels west."],
+    ["Wanjiru drives from Namanga in Kenya to Arusha in Tanzania. Which way does she drive?", "South", [["North", "M_LP_NORTH_SOUTH_SWAP"], ["East", "M_LP_EAST_WEST_SWAP"], ["West", "M_LP_EAST_WEST_SWAP"]], "Tanzania is south of Kenya, so she travels south."]
+  ], { h: ["Opposite directions: north and south, east and west.", "Draw Kenya and the neighbour, then turn the arrow round."], s1: "Find the direction, then turn it round if the question asks for the other country." })),
+  // ---------------------------------------------------------------- FEATURE_NAMES
+  fam("pf.type", `${PF}FEATURE_NAMES`, "direct", 1, choose3([
+    ["What kind of feature is Lake Turkana?", "A lake", [["A river", "M_PF_TYPE_MIX"], ["A mountain", "M_PF_TYPE_MIX"], ["A valley", "M_PF_TYPE_MIX"]], "Lake Turkana is a large body of water with land around it."],
+    ["What kind of feature is the Tana River?", "A river", [["A lake", "M_PF_TYPE_MIX"], ["A mountain", "M_PF_TYPE_MIX"], ["An ocean", "M_PF_TYPE_MIX"]], "The Tana is a river that flows to the Indian Ocean."],
+    ["What kind of feature is Mount Elgon?", "A mountain", [["A lake", "M_PF_TYPE_MIX"], ["A valley", "M_PF_TYPE_MIX"], ["A river", "M_PF_TYPE_MIX"]], "Mount Elgon is a mountain on the border with Uganda."],
+    ["Which is the highest mountain in Kenya?", "Mount Kenya", [["Mount Kilimanjaro", "M_PF_KILIMANJARO"], ["Mount Elgon", "M_PF_KILIMANJARO"], ["The Aberdare Range", "M_PF_KILIMANJARO"]], "Mount Kenya is the highest in Kenya. Mount Kilimanjaro is in Tanzania."],
+    ["Which of these is a lake in Kenya?", "Lake Naivasha", [["Tana", "M_PF_TYPE_MIX"], ["Aberdare", "M_PF_TYPE_MIX"], ["Elgon", "M_PF_TYPE_MIX"]], "Lake Naivasha is in the Rift Valley. The Tana is a river, and the Aberdare and Elgon are mountains."]
+  ], { h: ["Think about whether the water stands still or flows.", "Lakes hold water, rivers flow, mountains are high ground."], s1: "Find what kind of feature the name tells you." })),
+  fam("pf.spot", `${PF}FEATURE_NAMES`, "spot", 3, spot3([
+    ["Juma says Mount Kilimanjaro is the highest mountain in Kenya. Which step has the mistake?", [["Step 1: Juma has seen Kilimanjaro from Amboseli.", true], ["Step 2: He decides the mountain must be inside Kenya.", false], ["Step 3: He writes that it is the highest in Kenya.", true]], "Mount Kilimanjaro stands in Tanzania. Mount Kenya, at 5,199 metres, is Kenya's highest mountain.", "M_PF_KILIMANJARO"],
+    ["Chebet says Lake Turkana is a river. Which step has the mistake?", [["Step 1: Chebet reads the name Lake Turkana.", true], ["Step 2: She decides that all water in Kenya flows.", false], ["Step 3: She writes that it is a river.", true]], "A lake is water with land all round it. Lake Turkana is a lake, not a river.", "M_PF_TYPE_MIX"],
+    ["Otieno says the Tana is a lake because it has much water. Which step has the mistake?", [["Step 1: Otieno sees that the Tana has a lot of water.", true], ["Step 2: He decides that a lot of water means a lake.", false], ["Step 3: He writes that the Tana is a lake.", true]], "The Tana flows in a line to the Indian Ocean, so it is a river.", "M_PF_TYPE_MIX"],
+    ["Wanjiru says Mount Elgon is a lake. Which step has the mistake?", [["Step 1: Wanjiru finds Mount Elgon on the map.", true], ["Step 2: She decides every Kenyan feature with a name is a lake.", false], ["Step 3: She writes that it is a lake.", true]], 'The word "Mount" tells us it is a mountain. Lakes have the word "Lake".', "M_PF_TYPE_MIX"]
+  ], { h: ["Which step says something that is not true?", "Use the word in the name: Lake, River or Mount."], s1: "Check each step against what you know about Kenya's features." })),
+  // ---------------------------------------------------------------- FEATURE_WHERE
+  fam("pw.where", `${PF}FEATURE_WHERE`, "direct", 1, choose3([
+    ["In which part of Kenya is Lake Victoria?", "The west", [["The east", "M_PF_REGION_MIX"], ["The north-east", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"]], "Lake Victoria lies in the west, shared with Uganda and Tanzania."],
+    ["In which part of Kenya is Lake Turkana?", "The north-west", [["The south", "M_PF_REGION_MIX"], ["The south-east", "M_PF_REGION_MIX"], ["The centre", "M_PF_REGION_MIX"]], "Lake Turkana is in the dry north-west."],
+    ["Where is Mount Kenya?", "In the central highlands", [["On the coast", "M_PF_REGION_MIX"], ["In the far west", "M_PF_REGION_MIX"], ["In the north-east", "M_PF_REGION_MIX"]], "Mount Kenya stands in the central highlands, on the equator."],
+    ["Where is the Indian Ocean coast of Kenya?", "In the south-east", [["In the west", "M_PF_REGION_MIX"], ["In the north-west", "M_PF_REGION_MIX"], ["In the centre", "M_PF_REGION_MIX"]], "The coast is in the south-east, along the Indian Ocean."],
+    ["In which direction does the Great Rift Valley run through Kenya?", "North to south", [["East to west", "M_PF_RIFT_DIRECTION"], ["Along the coast", "M_PF_RIFT_DIRECTION"], ["South-east to north-west", "M_PF_RIFT_DIRECTION"]], "The Rift Valley runs north to south, from Lake Turkana towards Lake Magadi."]
+  ], { h: ["Link each feature to a neighbour or a side of Kenya.", "Lake Victoria is next to Uganda. The ocean is on the east side."], s1: "Picture a map of Kenya and find the feature." })),
+  fam("pw.table", `${PF}FEATURE_WHERE`, "table", 2, choose3([
+    [
+      "Read the table of places in Kenya. Which feature is in the central highlands?",
+      "Mount Kenya",
+      [["Lake Victoria", "M_PF_REGION_MIX"], ["Lake Turkana", "M_PF_REGION_MIX"], ["The Indian Ocean", "M_PF_REGION_MIX"]],
+      "Mount Kenya is in the central highlands.",
+      { t: { head: ["Feature", "Part of Kenya"], rows: [["Mount Kenya", "Central highlands"], ["Lake Victoria", "West"], ["Lake Turkana", "North-west"], ["Indian Ocean", "South-east coast"]] } }
+    ],
+    [
+      "The table lists four features of Kenya. Which one lies on the coast?",
+      "The Indian Ocean",
+      [["Mount Elgon", "M_PF_REGION_MIX"], ["Lake Victoria", "M_PF_REGION_MIX"], ["Mount Kenya", "M_PF_REGION_MIX"]],
+      "The Indian Ocean touches the south-east coast.",
+      { t: { head: ["Feature", "Part of Kenya"], rows: [["Mount Elgon", "West, on the Uganda border"], ["Lake Victoria", "West"], ["Mount Kenya", "Central highlands"], ["Indian Ocean", "South-east coast"]] } }
+    ],
+    [
+      "A learner records where she saw features on a map. Which feature is in the north-west?",
+      "Lake Turkana",
+      [["Lake Victoria", "M_PF_REGION_MIX"], ["Mount Kenya", "M_PF_REGION_MIX"], ["The Indian Ocean", "M_PF_REGION_MIX"]],
+      "Lake Turkana is in the north-west, in a dry area.",
+      { t: { head: ["Feature", "Part of Kenya"], rows: [["Lake Turkana", "North-west"], ["Lake Victoria", "West"], ["Mount Kenya", "Central highlands"], ["Indian Ocean", "South-east coast"]] } }
+    ],
+    [
+      "The table names four features. Which one is a lake on the western border?",
+      "Lake Victoria",
+      [["Lake Turkana", "M_PF_REGION_MIX"], ["Mount Kenya", "M_PF_REGION_MIX"], ["Mount Elgon", "M_PF_REGION_MIX"]],
+      "Lake Victoria is in the west of Kenya.",
+      { t: { head: ["Feature", "Kind", "Part of Kenya"], rows: [["Lake Victoria", "Lake", "West"], ["Lake Turkana", "Lake", "North-west"], ["Mount Kenya", "Mountain", "Central highlands"], ["Mount Elgon", "Mountain", "West, on the Uganda border"]] } }
+    ],
+    [
+      "The Rift Valley runs through many Kenyan lakes. Which lake in the table is on the Rift Valley floor in the south?",
+      "Lake Magadi",
+      [["Lake Victoria", "M_PF_RIFT_DIRECTION"], ["Lake Turkana", "M_PF_REGION_MIX"], ["Lake Naivasha", "M_PF_REGION_MIX"]],
+      "Lake Magadi lies in the southern Rift Valley near the Tanzania border.",
+      { t: { head: ["Lake", "Part of the Rift Valley"], rows: [["Lake Turkana", "North"], ["Lake Naivasha", "Middle"], ["Lake Magadi", "South"], ["Lake Victoria", "Outside the Rift Valley, in the west"]] } }
+    ]
+  ], { h: ["Read the row that has the part of Kenya in the question.", "Check the second column of the table."], s1: "Read each row of the table." })),
+  // ---------------------------------------------------------------- WEATHER_ELEMENTS
+  fam("we.inst", `${WC}WEATHER_ELEMENTS`, "direct", 1, choose3([
+    ["Which instrument measures the amount of rain that falls?", "A rain gauge", [["A thermometer", "M_WC_INSTRUMENT_MIX"], ["A wind vane", "M_WC_INSTRUMENT_MIX"], ["A compass", "M_WC_INSTRUMENT_MIX"]], "A rain gauge collects rain so we can measure it."],
+    ["Which instrument measures temperature?", "A thermometer", [["A rain gauge", "M_WC_INSTRUMENT_MIX"], ["A wind vane", "M_WC_INSTRUMENT_MIX"], ["A ruler", "M_WC_INSTRUMENT_MIX"]], "A thermometer shows how hot or cold the air is."],
+    ["Which instrument shows the direction the wind is blowing from?", "A wind vane", [["A thermometer", "M_WC_INSTRUMENT_MIX"], ["A rain gauge", "M_WC_INSTRUMENT_MIX"], ["A clock", "M_WC_INSTRUMENT_MIX"]], "A wind vane points to where the wind is coming from."],
+    ["Which of these is an element of weather?", "Rainfall", [["Soil", "M_WC_INSTRUMENT_MIX"], ["Rocks", "M_WC_INSTRUMENT_MIX"], ["Rivers", "M_WC_INSTRUMENT_MIX"]], "Rainfall, temperature, wind, cloud cover and sunshine are elements of weather."],
+    ["Which element of weather is measured in degrees Celsius?", "Temperature", [["Rainfall", "M_WC_INSTRUMENT_MIX"], ["Wind", "M_WC_INSTRUMENT_MIX"], ["Cloud cover", "M_WC_INSTRUMENT_MIX"]], "Temperature is measured in degrees Celsius with a thermometer."]
+  ], { h: ["Think about what each instrument is built to measure.", "Rain gauge: rain. Thermometer: temperature. Wind vane: wind direction."], s1: "Match each instrument to the element it measures." })),
+  fam("we.wc", `${WC}WEATHER_ELEMENTS`, "why", 2, choose3([
+    ["Which statement is about weather and not climate?", "It rained in Kisumu this morning.", [["Mombasa is hot and humid for most of the year.", "M_WC_WEATHER_CLIMATE"], ["Turkana gets little rain every year.", "M_WC_WEATHER_CLIMATE"], ["Nyeri is cool for most of the year.", "M_WC_WEATHER_CLIMATE"]], "Weather is the condition of one day or one moment. This morning's rain is weather."],
+    ["Which statement is about climate?", "Lodwar is hot and dry all year.", [["It is windy in Lodwar today.", "M_WC_WEATHER_CLIMATE"], ["It is cloudy in Nyeri now.", "M_WC_WEATHER_CLIMATE"], ["It rained in Mombasa last night.", "M_WC_WEATHER_CLIMATE"]], "Climate is the usual pattern over many years. Being hot and dry all year is climate."],
+    ["Wanjiru says it is a sunny day. Is she talking about weather or climate?", "Weather", [["Climate", "M_WC_WEATHER_CLIMATE"], ["Both", "M_WC_WEATHER_CLIMATE"], ["Neither", "M_WC_WEATHER_CLIMATE"]], "A sunny day is weather. It is the condition of one day."],
+    ["A farmer in Kericho says the area has rain nearly every month. Is he talking about weather or climate?", "Climate", [["Weather", "M_WC_WEATHER_CLIMATE"], ["Both", "M_WC_WEATHER_CLIMATE"], ["Neither", "M_WC_WEATHER_CLIMATE"]], "Rain nearly every month is a long-term pattern, so it is climate."],
+    ["How long do we record the weather of a place before we can describe its climate?", "Many years", [["One day", "M_WC_WEATHER_CLIMATE"], ["One hour", "M_WC_WEATHER_CLIMATE"], ["One week", "M_WC_WEATHER_CLIMATE"]], "Climate comes from weather records of many years, not a short time."]
+  ], { h: ["Weather is for a short time. Climate is for a long time.", "Ask how long the statement covers: a day or many years."], s1: "Decide whether the statement covers a short time or many years." })),
+  // ---------------------------------------------------------------- CLIMATE_REGION_PLACES
+  fam("cp.where", `${WC}CLIMATE_REGION_PLACES`, "direct", 1, choose3([
+    ["Which part of Kenya has an arid climate with very little rain?", "The north, around Turkana", [["The Mount Kenya area", "M_WC_REGION_MIX"], ["The Lake Victoria area", "M_WC_REGION_MIX"], ["The coast around Mombasa", "M_WC_COAST_DRY"]], "The north is arid, with very little rain."],
+    ["Which place has a hot, humid climate with plenty of rain?", "Mombasa on the coast", [["Lodwar in the north-west", "M_WC_COAST_DRY"], ["Wajir in the north-east", "M_WC_COAST_DRY"], ["Nyeri in the highlands", "M_WC_REGION_MIX"]], "Mombasa is hot and humid."],
+    ["Which place has a cool climate because it is high up?", "Nyeri near Mount Kenya", [["Mombasa on the coast", "M_WC_REGION_MIX"], ["Lodwar in the north-west", "M_WC_REGION_MIX"], ["Mandera in the north-east", "M_WC_REGION_MIX"]], "The highlands near Mount Kenya are high and cool."],
+    ["Which area is warm with rain through most of the year?", "Around Lake Victoria", [["Marsabit", "M_WC_REGION_MIX"], ["Turkana", "M_WC_REGION_MIX"], ["Wajir", "M_WC_REGION_MIX"]], "The Lake Victoria area is warm and gets rain in most months."],
+    ["In which part of Kenya is the climate hot and dry, with little rain?", "The north-east, around Mandera", [["The central highlands", "M_WC_REGION_MIX"], ["The Lake Victoria basin", "M_WC_REGION_MIX"], ["The coast", "M_WC_COAST_DRY"]], "Mandera and Wajir in the north-east are arid."]
+  ], { h: ["The north and east are dry. The coast is humid. The highlands are cool.", "High places are cool, even near the equator."], s1: "Match the climate to the part of Kenya." })),
+  fam("cp.table", `${WC}CLIMATE_REGION_PLACES`, "table", 2, choose3([
+    [
+      "A table shows rain in four towns. Which town is in the arid north?",
+      "Lodwar",
+      [["Mombasa", "M_WC_COAST_DRY"], ["Nyeri", "M_WC_REGION_MIX"], ["Kisumu", "M_WC_REGION_MIX"]],
+      "Lodwar has the least rain. It is in the arid north-west.",
+      { t: { head: ["Town", "Rain in a year"], rows: [["Lodwar", "Very little"], ["Mombasa", "Plenty"], ["Nyeri", "Plenty"], ["Kisumu", "Plenty"]] } }
+    ],
+    [
+      "Look at the table of towns. Which town is cool and high up?",
+      "Nyeri",
+      [["Mombasa", "M_WC_REGION_MIX"], ["Lodwar", "M_WC_REGION_MIX"], ["Wajir", "M_WC_REGION_MIX"]],
+      "Nyeri is in the highlands, so it is cool.",
+      { t: { head: ["Town", "Temperature"], rows: [["Nyeri", "Cool"], ["Mombasa", "Hot"], ["Lodwar", "Very hot"], ["Wajir", "Very hot"]] } }
+    ],
+    [
+      "The table gives facts about four places. Which place is hot and humid?",
+      "Mombasa",
+      [["Lodwar", "M_WC_COAST_DRY"], ["Nyeri", "M_WC_REGION_MIX"], ["Wajir", "M_WC_COAST_DRY"]],
+      "Mombasa is hot with moist air.",
+      { t: { head: ["Place", "Air"], rows: [["Mombasa", "Hot and damp"], ["Lodwar", "Hot and dry"], ["Nyeri", "Cool and fresh"], ["Wajir", "Hot and dry"]] } }
+    ],
+    [
+      "The table lists the climate of four areas. Which area is around Lake Victoria?",
+      "Area C",
+      [["Area A", "M_WC_REGION_MIX"], ["Area B", "M_WC_REGION_MIX"], ["Area D", "M_WC_REGION_MIX"]],
+      "Area C is warm with rain in most months, like the Lake Victoria area.",
+      { t: { head: ["Area", "Climate"], rows: [["Area A", "Hot and dry, very little rain"], ["Area B", "Cool, high up"], ["Area C", "Warm, rain in most months"], ["Area D", "Hot and damp, on the coast"]] } }
+    ],
+    [
+      "Which town in the table is in the dry north-east?",
+      "Mandera",
+      [["Mombasa", "M_WC_COAST_DRY"], ["Kericho", "M_WC_REGION_MIX"], ["Kisumu", "M_WC_REGION_MIX"]],
+      "Mandera is in the north-east, where rain is very little.",
+      { t: { head: ["Town", "Rain"], rows: [["Mandera", "Very little"], ["Kericho", "Plenty, most of the year"], ["Kisumu", "Plenty"], ["Mombasa", "Plenty"]] } }
+    ]
+  ], { h: ["Read the row with the clue in the question.", "Little rain means arid. Cool means high up."], s1: "Read each row of the table." })),
+  // ---------------------------------------------------------------- CLIMATE_REGION_TRAITS
+  fam("ct.trait", `${WC}CLIMATE_REGION_TRAITS`, "direct", 1, choose3([
+    ["Which description fits the climate of the coast?", "Hot and humid with plenty of rain", [["Hot and dry with little rain", "M_WC_COAST_DRY"], ["Cool with frost at night", "M_WC_EQUATOR_HOT"], ["Cold all year", "M_WC_EQUATOR_HOT"]], "The coast is hot and humid."],
+    ["Which description fits the arid north of Kenya?", "Hot with very little rain", [["Cool with plenty of rain", "M_WC_HUMID_DRY"], ["Hot and damp all year", "M_WC_HUMID_DRY"], ["Cold and wet", "M_WC_EQUATOR_HOT"]], "The north is hot and dry."],
+    ["Which description fits the highlands around Mount Kenya?", "Cool with reliable rain", [["Very hot and dry", "M_WC_EQUATOR_HOT"], ["Hot and humid", "M_WC_HUMID_DRY"], ["Hot with no rain", "M_WC_EQUATOR_HOT"]], "The highlands are cool, with reliable rain."],
+    ["What does it mean when the air at the coast is humid?", "It has a lot of water vapour", [["It is very dry", "M_WC_HUMID_DRY"], ["It is very cold", "M_WC_HUMID_DRY"], ["It has no wind", "M_WC_HUMID_DRY"]], "Humid means a lot of water vapour in the air."],
+    ["Which description fits the Lake Victoria area?", "Warm with rain in most months", [["Very dry all year", "M_WC_HUMID_DRY"], ["Cold with snow", "M_WC_EQUATOR_HOT"], ["Hot with almost no rain", "M_WC_HUMID_DRY"]], "The Lake Victoria area is warm and gets rain in most months."]
+  ], { h: ["Think about the temperature and the rainfall of each region.", "Humid means damp air."], s1: "Match the description to the region." })),
+  fam("ct.why", `${WC}CLIMATE_REGION_TRAITS`, "why", 2, choose3([
+    ["Mount Kenya is on the equator but has snow at the top. Why is it cold there?", "The air gets cooler as you go higher", [["It is not really on the equator", "M_WC_EQUATOR_HOT"], ["The sun does not shine there", "M_WC_EQUATOR_HOT"], ["It is near the sea", "M_WC_EQUATOR_HOT"]], "Air gets cooler with height, even on the equator."],
+    ["Nyeri is high up. Why is it cooler than Mombasa on the coast?", "High places have cooler air", [["Nyeri is nearer the sea", "M_WC_EQUATOR_HOT"], ["Nyeri is far from the equator", "M_WC_EQUATOR_HOT"], ["Nyeri has no sun", "M_WC_EQUATOR_HOT"]], "Nyeri is high above sea level, so the air is cooler."],
+    ["Njeri says the coast feels sticky because the air is humid. What does humid mean?", "The air holds a lot of water vapour", [["The air is very dry", "M_WC_HUMID_DRY"], ["The wind is strong", "M_WC_HUMID_DRY"], ["The air is cold", "M_WC_HUMID_DRY"]], "Humid air holds a lot of water vapour, so it feels damp and sticky."],
+    ["Why can farmers near Mount Kenya grow crops that need steady rain?", "The highlands get reliable rain", [["The highlands are very dry", "M_WC_HUMID_DRY"], ["The highlands are hot all year", "M_WC_EQUATOR_HOT"], ["The highlands get no wind", "M_WC_HUMID_DRY"]], "The highlands have reliable rain, which suits many crops."],
+    ["Why is farming hard in Turkana?", "There is very little rain", [["There is too much rain", "M_WC_HUMID_DRY"], ["The air is very cold", "M_WC_EQUATOR_HOT"], ["It is humid all year", "M_WC_HUMID_DRY"]], "Turkana is arid, so crops lack water."]
+  ], { h: ["Think about height, rain and heat.", "The higher you go, the cooler the air."], s1: "Think of what makes the place hot, cool, wet or dry." })),
+  // ---------------------------------------------------------------- HISTORIC_SITES
+  fam("hs.which", `${BE}HISTORIC_SITES`, "direct", 1, choose3([
+    ["Which of these is a historic built environment in Kenya?", "Fort Jesus", [["Mount Kenya", "M_BE_NATURAL_AS_BUILT"], ["Lake Victoria", "M_BE_NATURAL_AS_BUILT"], ["The Tana River", "M_BE_NATURAL_AS_BUILT"]], "Fort Jesus was built by people long ago. The others were made by nature."],
+    ["In which town is Fort Jesus?", "Mombasa", [["Lamu", "M_BE_PLACE_MIX"], ["Kisumu", "M_BE_PLACE_MIX"], ["Nairobi", "M_BE_PLACE_MIX"]], "Fort Jesus is in Mombasa, built by the Portuguese."],
+    ["Which historic site is an old town on an island, with houses of coral stone?", "Lamu Old Town", [["Fort Jesus", "M_BE_PLACE_MIX"], ["Gedi Ruins", "M_BE_PLACE_MIX"], ["Nairobi National Museum", "M_BE_PLACE_MIX"]], "Lamu Old Town is on Lamu Island."],
+    ["Which historic site is a ruined Swahili town in the forest near Malindi?", "The Gedi Ruins", [["Fort Jesus", "M_BE_PLACE_MIX"], ["Lamu Old Town", "M_BE_PLACE_MIX"], ["Mount Elgon", "M_BE_NATURAL_AS_BUILT"]], "The Gedi Ruins are the remains of a Swahili town near Malindi."],
+    ["Which of these is a built historic site and not a natural feature?", "Thimlich Ohinga", [["Lake Turkana", "M_BE_NATURAL_AS_BUILT"], ["Mount Elgon", "M_BE_NATURAL_AS_BUILT"], ["The Aberdare Range", "M_BE_NATURAL_AS_BUILT"]], "Thimlich Ohinga in Migori is an old stone enclosure built by people."]
+  ], { h: ["Was it built by people, or made by nature?", "Fort Jesus, Lamu, Gedi and Thimlich Ohinga were built by people."], s1: "Decide whether people built it long ago." })),
+  fam("hs.table", `${BE}HISTORIC_SITES`, "table", 2, choose3([
+    [
+      "Read the table of historic sites. Which site is in Migori County?",
+      "Thimlich Ohinga",
+      [["Fort Jesus", "M_BE_PLACE_MIX"], ["Gedi Ruins", "M_BE_PLACE_MIX"], ["Lamu Old Town", "M_BE_PLACE_MIX"]],
+      "Thimlich Ohinga is in Migori.",
+      { t: { head: ["Site", "Place"], rows: [["Fort Jesus", "Mombasa"], ["Lamu Old Town", "Lamu Island"], ["Gedi Ruins", "Near Malindi"], ["Thimlich Ohinga", "Migori"]] } }
+    ],
+    [
+      "Which site in the table is found in Mombasa?",
+      "Fort Jesus",
+      [["Lamu Old Town", "M_BE_PLACE_MIX"], ["Thimlich Ohinga", "M_BE_PLACE_MIX"], ["Gedi Ruins", "M_BE_PLACE_MIX"]],
+      "Fort Jesus is in Mombasa.",
+      { t: { head: ["Site", "Place"], rows: [["Fort Jesus", "Mombasa"], ["Lamu Old Town", "Lamu Island"], ["Gedi Ruins", "Near Malindi"], ["Thimlich Ohinga", "Migori"]] } }
+    ],
+    [
+      "The table shows four places. Which one is a historic built environment?",
+      "Place C",
+      [["Place A", "M_BE_NATURAL_AS_BUILT"], ["Place B", "M_BE_NATURAL_AS_BUILT"], ["Place D", "M_BE_NATURAL_AS_BUILT"]],
+      "Place C is an old fort built by people. The others are natural features.",
+      { t: { head: ["Place", "What it is"], rows: [["Place A", "A mountain with snow"], ["Place B", "A large lake"], ["Place C", "An old fort with stone walls"], ["Place D", "A river"]] } }
+    ],
+    [
+      "The table lists four sites. Which one is a ruined Swahili town?",
+      "Gedi Ruins",
+      [["Fort Jesus", "M_BE_PLACE_MIX"], ["Lamu Old Town", "M_BE_PLACE_MIX"], ["Thimlich Ohinga", "M_BE_PLACE_MIX"]],
+      "The Gedi Ruins are the remains of a Swahili town.",
+      { t: { head: ["Site", "What it is"], rows: [["Fort Jesus", "Fort built by the Portuguese"], ["Lamu Old Town", "Town still lived in"], ["Gedi Ruins", "Ruined Swahili town"], ["Thimlich Ohinga", "Stone enclosure"]] } }
+    ],
+    [
+      'A learner sorts places. Which one belongs in the "built by people long ago" column?',
+      "Lamu Old Town",
+      [["Mount Kenya", "M_BE_NATURAL_AS_BUILT"], ["Lake Naivasha", "M_BE_NATURAL_AS_BUILT"], ["The Rift Valley", "M_BE_NATURAL_AS_BUILT"]],
+      "Lamu Old Town was built by people. The others are natural.",
+      { t: { head: ["Place", "Kind"], rows: [["Mount Kenya", "Mountain"], ["Lake Naivasha", "Lake"], ["Lamu Old Town", "Old town"], ["Rift Valley", "Valley"]] } }
+    ]
+  ], { h: ["Read the row that matches the question.", "A fort, a town and a wall are built by people."], s1: "Read each row of the table." }), "b"),
+  // ---------------------------------------------------------------- CONSERVATION
+  fam("cv.act", `${BE}CONSERVATION`, "direct", 1, choose3([
+    ["Which action helps to conserve an old fort?", "Repair it carefully", [["Pull it down to build a new one", "M_BE_KEEP_OUT"], ["Write names on the walls", "M_BE_TOUCH_TAKE"], ["Take small stones home", "M_BE_TOUCH_TAKE"]], "Careful repair keeps the fort standing for the future."],
+    ["What should a visitor do at a historic site?", "Follow the rules and leave things as they are", [["Climb on the old walls", "M_BE_TOUCH_TAKE"], ["Take a small piece as a souvenir", "M_BE_TOUCH_TAKE"], ["Write a name on the wall", "M_BE_TOUCH_TAKE"]], "Visitors help conserve a site by following the rules."],
+    ["Why do people keep historic buildings?", "They show how people lived long ago", [["They are useless old things", "M_BE_KEEP_OUT"], ["They should be pulled down", "M_BE_KEEP_OUT"], ["They only belong to the tourists", "M_BE_KEEP_OUT"]], "Historic buildings are part of our cultural heritage."],
+    ["Which is a good way to help others value a historic site?", "Teach people about its history", [["Keep it secret", "M_BE_KEEP_OUT"], ["Let people damage it", "M_BE_TOUCH_TAKE"], ["Close it forever", "M_BE_KEEP_OUT"]], "People who know the history care more about the place."],
+    ["You see a visitor breaking a piece off an old wall. What is the best thing to do?", "Tell a guide or a teacher", [["Join in", "M_BE_TOUCH_TAKE"], ["Say nothing, it is only a stone", "M_BE_TOUCH_TAKE"], ["Take a piece too", "M_BE_TOUCH_TAKE"]], "Telling a guide helps protect the site."]
+  ], { h: ["Which action keeps the site for the next generation?", "Small damage by many people adds up."], s1: "Choose the action that protects the site for the future." })),
+  fam("cv.story", `${BE}CONSERVATION`, "word", 2, choose3([
+    ["A class visits the Gedi Ruins. Amina wants to carve her name in a wall. What should the teacher say?", "No, it harms the old wall", [["Go ahead, it is only one name", "M_BE_TOUCH_TAKE"], ["Go ahead, the ruins are old", "M_BE_KEEP_OUT"], ["Do it quickly so no one sees", "M_BE_TOUCH_TAKE"]], "Carving damages the wall. Heritage must be kept as it is."],
+    ["Kiprono finds a loose old stone at a historic site and puts it in his bag. What should he do?", "Put it back and tell the guide", [["Keep it, it is only a stone", "M_BE_TOUCH_TAKE"], ["Sell it to a visitor", "M_BE_TOUCH_TAKE"], ["Throw it away", "M_BE_TOUCH_TAKE"]], "Every stone is part of the site. We leave them where they are."],
+    ["A town wants more space and plans to pull down an old fort. Which idea best protects the fort?", "Build the new houses elsewhere", [["Pull the fort down", "M_BE_KEEP_OUT"], ["Let the fort fall in time", "M_BE_KEEP_OUT"], ["Cover the fort with sheets", "M_BE_KEEP_OUT"]], "The fort cannot be rebuilt once lost, so new houses go elsewhere."],
+    ["A school club wants to protect the Fort Jesus walls. Which is the best plan?", "Explain the rules to visitors", [["Keep everyone away for ever", "M_BE_KEEP_OUT"], ["Let visitors climb on the walls", "M_BE_TOUCH_TAKE"], ["Remove the old stones", "M_BE_TOUCH_TAKE"]], "Rules and care protect the fort while visitors still learn from it."],
+    ["Why do guides at Lamu Old Town ask visitors not to touch the old carved doors?", "Touching slowly wears them away", [["The doors are not important at all", "M_BE_KEEP_OUT"], ["The doors are brand new and strong", "M_BE_KEEP_OUT"], ["Visitors are not allowed to see them", "M_BE_KEEP_OUT"]], "Many hands can slowly damage old wood and carving."]
+  ], { h: ["Which choice keeps the site safe for later generations?", "One small act by many people can ruin an old site."], s1: "Think what keeps the site safe for the future." }))
+];
+
+// src/ai-tutor/content/families/socialstudies_g5_b.js
+var LG = "PEOPLE.LANGUAGE_GROUPS_IN_KENYA.";
+var PD = "PEOPLE.POPULATION_DISTRIBUTION_.";
+var TE = "PEOPLE.AFRICAN_TRADITIONAL_EDUC.";
+var SA = "PEOPLE.SCHOOL_ADMINISTRATION.";
+var RK = "RESOUR.RESOURCES_IN_KENYA.";
+var MK = "RESOUR.MINING_IN_KENYA.";
+var FAMILIES8 = [
+  // ---------------------------------------------------------------- GROUP_SORT
+  fam("lg.which", `${LG}GROUP_SORT`, "direct", 1, choose3([
+    ["To which language group do the Kikuyu belong?", "Bantu", [["Nilotic", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_CUSHITE_AS_NILOTE"]], "The Kikuyu are Bantu, like the Luhya, Kamba and Meru."],
+    ["To which language group do the Luo belong?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "The Luo are Nilotes. They live by Lake Victoria."],
+    ["To which language group do the Somali belong?", "Cushitic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Nilotic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_CUSHITE_AS_NILOTE"]], "The Somali are Cushites, like the Borana and Rendille."],
+    ["To which language group do the Kalenjin belong?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "The Kalenjin are Highland Nilotes."],
+    ["Which community belongs to the Bantu language group?", "The Kamba", [["The Maasai", "M_LG_NILOTE_AS_BANTU"], ["The Luo", "M_LG_NILOTE_AS_BANTU"], ["The Somali", "M_LG_CUSHITE_AS_NILOTE"]], "The Kamba are Bantu. The Maasai and Luo are Nilotes, and the Somali are Cushites."]
+  ], { h: ["Kenya has three main language groups: Bantu, Nilotic and Cushitic.", "Bantu: Kikuyu, Luhya, Kamba. Nilotic: Luo, Kalenjin, Maasai. Cushitic: Somali, Borana."], s1: "Recall the group each community belongs to." })),
+  fam("lg.list", `${LG}GROUP_SORT`, "word", 2, choose3([
+    ["Atieno lists three Nilotic communities. Which list is right?", "Luo, Kalenjin, Maasai", [["Luo, Kikuyu, Maasai", "M_LG_NILOTE_AS_BANTU"], ["Luo, Kalenjin, Somali", "M_LG_CUSHITE_AS_NILOTE"], ["Kamba, Kalenjin, Maasai", "M_LG_NILOTE_AS_BANTU"]], "The Luo, Kalenjin and Maasai are all Nilotes."],
+    ["Mutua lists three Bantu communities. Which list is right?", "Kikuyu, Luhya, Kamba", [["Kikuyu, Luo, Kamba", "M_LG_NILOTE_AS_BANTU"], ["Kikuyu, Luhya, Somali", "M_LG_CUSHITE_AS_NILOTE"], ["Maasai, Luhya, Kamba", "M_LG_NILOTE_AS_BANTU"]], "The Kikuyu, Luhya and Kamba are Bantu."],
+    ["Which list has only Cushitic communities of northern Kenya?", "Somali, Borana, Rendille", [["Somali, Turkana, Rendille", "M_LG_CUSHITE_AS_NILOTE"], ["Somali, Borana, Samburu", "M_LG_CUSHITE_AS_NILOTE"], ["Kamba, Borana, Rendille", "M_LG_CUSHITE_AS_NILOTE"]], "The Somali, Borana and Rendille are Cushites. The Turkana and Samburu are Nilotes."],
+    ["Wafula says the Maasai are herders, so they must be Cushites like the Somali. What is the best reply?", "The Maasai are Nilotes, herding is a way of life", [["He is right, all herders are Cushites", "M_LG_CUSHITE_AS_NILOTE"], ["The Maasai are Bantu, like the Kikuyu", "M_LG_NILOTE_AS_BANTU"], ["The Maasai are Swahili, like coast people", "M_LG_NILOTE_AS_BANTU"]], "Language group depends on the family of languages, not on how people earn a living."],
+    ["Njeri's family speaks Dholuo at home. Which language group is Dholuo in?", "Nilotic", [["Bantu", "M_LG_NILOTE_AS_BANTU"], ["Cushitic", "M_LG_CUSHITE_AS_NILOTE"], ["Swahili", "M_LG_NILOTE_AS_BANTU"]], "Dholuo is the language of the Luo, who are Nilotes."]
+  ], { h: ["Sort each community by the family of its language.", "Herding is a way of life and does not decide the language group."], s1: "Check every community in the list, not only the first." })),
+  // ---------------------------------------------------------------- INTERDEPENDENCE
+  fam("id.which", `${LG}INTERDEPENDENCE`, "direct", 1, choose3([
+    ["A herding community has plenty of milk and meat but little grain. What can it do?", "Trade milk and meat for grain with farmers", [["Do without any grain at all", "M_LG_SELF_SUFFICIENT"], ["Fight the farmers to get the grain", "M_LG_RIVALRY"], ["Give up herding and farm instead", "M_LG_SELF_SUFFICIENT"]], "Each side has what the other needs, so they trade and both gain."],
+    ["What does interdependence between communities mean?", "They help each other by sharing", [["They compete to be the strongest", "M_LG_RIVALRY"], ["Each community lives on its own", "M_LG_SELF_SUFFICIENT"], ["They never meet or trade at all", "M_LG_SELF_SUFFICIENT"]], "Interdependence means depending on one another and helping each other."],
+    ["Why can fishing communities near Lake Victoria not live on fish alone?", "They need farm foods and tools", [["Fish is enough for everything", "M_LG_SELF_SUFFICIENT"], ["They need nothing from others", "M_LG_SELF_SUFFICIENT"], ["Farmers dislike buying any fish", "M_LG_RIVALRY"]], "They trade fish for grain, vegetables and other goods."],
+    ["Which language helps many Kenyan communities talk and trade with each other?", "Kiswahili", [["The language of one village", "M_LG_SELF_SUFFICIENT"], ["Only Latin", "M_LG_SELF_SUFFICIENT"], ["Sign only", "M_LG_SELF_SUFFICIENT"]], "Kiswahili is a shared language that links communities at markets and in towns."],
+    ["Which is a benefit of communities depending on each other?", "They share goods, skills and ideas", [["They all become exactly the same", "M_LG_RIVALRY"], ["They stop trading with each other", "M_LG_SELF_SUFFICIENT"], ["They begin to quarrel more often", "M_LG_RIVALRY"]], "Sharing makes life better for everyone."]
+  ], { h: ["Think about what each community has and what it lacks.", "Interdependence means helping each other."], s1: "Think about what each community gains from the other." })),
+  fam("id.story", `${LG}INTERDEPENDENCE`, "word", 2, choose3([
+    ["At Kisii market, Amina sells maize and buys fish from a Luo trader. How do the two communities gain?", "Each gets food it does not have", [["Only Amina gains from the trade", "M_LG_SELF_SUFFICIENT"], ["Neither of them gains anything", "M_LG_RIVALRY"], ["They end up quarrelling at the end", "M_LG_RIVALRY"]], "Both communities have a food the other needs, so both gain."],
+    ["Maasai herders bring hides and milk to a market. Kikuyu farmers bring vegetables. What is this an example of?", "Interdependence", [["Competition", "M_LG_RIVALRY"], ["Self-sufficiency", "M_LG_SELF_SUFFICIENT"], ["Isolation", "M_LG_SELF_SUFFICIENT"]], "Each group provides what the other lacks."],
+    ["A teacher says no Kenyan community can live alone. Which is her best reason?", "Each needs goods and skills of others", [["Communities are all exactly identical", "M_LG_SELF_SUFFICIENT"], ["Communities do not need any food", "M_LG_SELF_SUFFICIENT"], ["Communities like to fight each other", "M_LG_RIVALRY"]], "No community can produce everything it needs, so they trade and share."],
+    ["Njeri's class puts on a show with songs from the Luo, Kikuyu and Somali. What does it show?", "Communities share ideas and culture", [["Communities must compete", "M_LG_RIVALRY"], ["Communities need nothing from others", "M_LG_SELF_SUFFICIENT"], ["Only one culture matters", "M_LG_SELF_SUFFICIENT"]], "Sharing songs and customs shows how communities enrich each other."],
+    ["Coastal traders buy cattle from herders in the north and sell them cloth. Who gains?", "Both traders and herders", [["Only the traders", "M_LG_SELF_SUFFICIENT"], ["Only the herders", "M_LG_SELF_SUFFICIENT"], ["Nobody gains", "M_LG_RIVALRY"]], "Both sides get goods they need, so both gain."]
+  ], { h: ["Who gets something they need?", "Interdependence is helping each other, not fighting."], s1: "Think about what each group gives and gets." }), "c"),
+  // ---------------------------------------------------------------- DENSITY_AREAS
+  fam("da.where", `${PD}DENSITY_AREAS`, "direct", 1, choose3([
+    ["Which area of Kenya has a high population density?", "The central highlands", [["The dry area around Marsabit", "M_PD_DESERT_DENSE"], ["The dry area around Wajir", "M_PD_DESERT_DENSE"], ["The dry area around Mandera", "M_PD_DESERT_DENSE"]], "The central highlands have good rain and fertile soil, so many people live there."],
+    ["Which area has a low population density?", "The dry north around Turkana", [["Nairobi", "M_PD_DESERT_DENSE"], ["The Lake Victoria basin", "M_PD_DESERT_DENSE"], ["The coast near Mombasa", "M_PD_DESERT_DENSE"]], "Few people live in the dry north because water and farmland are scarce."],
+    ["Why do so many people live in the highlands around Mount Kenya?", "There is rain and fertile soil", [["The land is dry and empty", "M_PD_DESERT_DENSE"], ["It is very hot there", "M_PD_DESERT_DENSE"], ["There are no farms", "M_PD_DESERT_DENSE"]], "Good rain and fertile soil support farming and many people."],
+    ["Why do few people live in the dry north-east of Kenya?", "There is little water for farming", [["It has the most fertile soil", "M_PD_DESERT_DENSE"], ["It has rain every day", "M_PD_DESERT_DENSE"], ["It is the smallest area", "M_PD_SIZE_DENSITY"]], "Little water makes farming hard, so fewer people settle."],
+    ["Which city has the highest population density in Kenya?", "Nairobi", [["Lodwar", "M_PD_DESERT_DENSE"], ["Marsabit", "M_PD_DESERT_DENSE"], ["Garissa", "M_PD_DESERT_DENSE"]], "Nairobi has jobs, schools and services, so many people live there."]
+  ], { h: ["People settle where there is water, good soil and jobs.", "Density is the number of people for each square kilometre."], s1: "Think about water, soil and jobs." })),
+  fam("da.calc", `${PD}DENSITY_AREAS`, "word", 2, choose3([
+    ["Area A has 600 people on 3 square kilometres. Area B has 600 people on 6 square kilometres. Which area is more crowded?", "Area A", [["Area B", "M_PD_SIZE_DENSITY"], ["Both are the same", "M_PD_SIZE_DENSITY"]], "Area A has 200 people for each square kilometre. Area B has 100."],
+    ["Wanjiru's village has 400 people on 2 square kilometres. Hassan's village has 400 people on 8 square kilometres. Which village has the higher density?", "Wanjiru's village", [["Hassan's village", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "Wanjiru's village has 200 people per square kilometre. Hassan's has 50."],
+    ["Town P has 900 people on 3 square kilometres. Town Q has 900 people on 9 square kilometres. Which has the lower density?", "Town Q", [["Town P", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "Town P has 300 per square kilometre. Town Q has 100, which is lower."],
+    ["Area A has 1,000 people on 10 square kilometres. Area B has 500 people on 10 square kilometres. Which area has the higher density?", "Area A", [["Area B", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "The areas are the same size, but Area A has more people, so its density is higher."],
+    ["A large dry county has 200 people on 100 square kilometres. A small town has 200 people on 1 square kilometre. Which has the higher density?", "The small town", [["The large dry county", "M_PD_SIZE_DENSITY"], ["They are equal", "M_PD_SIZE_DENSITY"]], "The town has 200 people per square kilometre. The county has only 2."]
+  ], { h: ["Density is people divided by area.", "Compare the number of people for each square kilometre."], s1: "Work out the people for each square kilometre in each area." })),
+  // ---------------------------------------------------------------- DENSITY_EFFECTS
+  fam("de.effect", `${PD}DENSITY_EFFECTS`, "direct", 1, choose3([
+    ["What is a problem of very high population density?", "Pressure on land, water and housing", [["Too much empty and unused land", "M_PD_DENSE_ALL_GOOD"], ["No markets or shops at all", "M_PD_DENSE_ALL_GOOD"], ["No people left to do any work", "M_PD_DENSE_ALL_GOOD"]], "Many people share limited land, water and houses."],
+    ["What is a problem of very low population density?", "Schools and clinics are far apart", [["Crowded roads and busy streets", "M_PD_SPARSE_NO_PROBLEM"], ["Not enough land for everyone", "M_PD_SPARSE_NO_PROBLEM"], ["Too many houses close together", "M_PD_SPARSE_NO_PROBLEM"]], "With few people, services are costly and far apart."],
+    ["What is an advantage of a high population density?", "Markets and services are close by", [["Plenty of empty land for all", "M_PD_DENSE_ALL_GOOD"], ["Quiet roads with no traffic", "M_PD_DENSE_ALL_GOOD"], ["Large farms for every family", "M_PD_DENSE_ALL_GOOD"]], "Many people mean customers, jobs and services nearby."],
+    ["What is an advantage of low population density?", "There is plenty of land for herding", [["Many shops very close by", "M_PD_SPARSE_NO_PROBLEM"], ["Crowded schools with big classes", "M_PD_SPARSE_NO_PROBLEM"], ["Short queues for water points", "M_PD_SPARSE_NO_PROBLEM"]], "Few people leave more land for herding and wildlife."],
+    ["What often happens to farm sizes in areas with a high population density?", "Farms become smaller", [["Farms become larger", "M_PD_DENSE_ALL_GOOD"], ["Farms stay the same", "M_PD_DENSE_ALL_GOOD"], ["Farms disappear overnight", "M_PD_DENSE_ALL_GOOD"]], "As families grow, land is divided into smaller plots."]
+  ], { h: ["Think about how many people share the land, water and services.", "Crowded areas and empty areas each have good and bad sides."], s1: "Think about what many people, or few people, mean for services and land." })),
+  fam("de.story", `${PD}DENSITY_EFFECTS`, "word", 2, choose3([
+    ["A town with a very high population density has crowded classrooms. What caused this?", "Too many children for the schools", [["Too few children", "M_PD_DENSE_ALL_GOOD"], ["Too many empty classrooms", "M_PD_DENSE_ALL_GOOD"], ["A shortage of land for houses only", "M_PD_DENSE_ALL_GOOD"]], "When many people live close together, schools can fill up."],
+    ["Amina walks 10 kilometres to the nearest clinic in a thinly settled area. What is the cause?", "Few people live there, so clinics are few", [["Many people live there, so clinics are many", "M_PD_SPARSE_NO_PROBLEM"], ["There are far too many clinics there", "M_PD_SPARSE_NO_PROBLEM"], ["The clinic is on the next street", "M_PD_SPARSE_NO_PROBLEM"]], "Where few people live, services are costly to provide."],
+    ["A family in a crowded area has only a small plot to farm. What is the likely reason?", "Land is shared among many people", [["There is much too much land", "M_PD_DENSE_ALL_GOOD"], ["The soil in that area is poor", "M_PD_DENSE_ALL_GOOD"], ["There are only very few families", "M_PD_DENSE_ALL_GOOD"]], "In a crowded area, land is divided into smaller pieces."],
+    ["A county has few people and wide grassland. Which activity suits it best?", "Keeping herds of cattle or goats", [["Building very tall flats", "M_PD_SPARSE_NO_PROBLEM"], ["Running many small shops", "M_PD_SPARSE_NO_PROBLEM"], ["Starting a very large factory", "M_PD_SPARSE_NO_PROBLEM"]], "Large open land suits herding."],
+    ["A busy market town has many shops and good roads. Why does this happen?", "Many nearby people buy things", [["Few people live nearby at all", "M_PD_SPARSE_NO_PROBLEM"], ["There are no customers there", "M_PD_SPARSE_NO_PROBLEM"], ["No one needs any shops", "M_PD_SPARSE_NO_PROBLEM"]], "More people mean more customers, so businesses and services grow."]
+  ], { h: ["Many people or few people: who shares the land and services?", "Match the effect to crowded or thinly settled."], s1: "Decide whether the story is about a crowded or a thinly settled area." })),
+  // ---------------------------------------------------------------- ATE_METHODS
+  fam("tm.which", `${TE}ATE_METHODS`, "direct", 1, choose3([
+    ["Which was a way elders taught children long ago?", "Storytelling", [["Writing on a blackboard", "M_TE_NO_SCHOOL"], ["Reading a textbook", "M_TE_NO_SCHOOL"], ["Using a computer", "M_TE_NO_SCHOOL"]], "Elders taught by telling stories that carried lessons."],
+    ["Who taught children in African traditional education?", "Parents and elders", [["Only a headteacher", "M_TE_NO_SCHOOL"], ["No one", "M_TE_NO_SCHOOL"], ["Only a textbook", "M_TE_NO_SCHOOL"]], "Parents, elders and the whole community taught the young."],
+    ["What is a proverb used for?", "Teach wise lessons in short sayings", [["Show how to farm", "M_TE_METHOD_MIX"], ["Train children to run", "M_TE_METHOD_MIX"], ["Count the cattle", "M_TE_METHOD_MIX"]], "A proverb is a short saying that carries wisdom."],
+    ["Which method teaches by working beside someone with the skill?", "Learning by doing", [["Riddles", "M_TE_METHOD_MIX"], ["Songs", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"]], "Children learned skills such as farming by doing the work with an adult."],
+    ["Which of these did children use to learn and remember in traditional education?", "Songs and dances", [["Exam papers", "M_TE_NO_SCHOOL"], ["Computer games", "M_TE_NO_SCHOOL"], ["Text messages", "M_TE_NO_SCHOOL"]], "Songs and dances help people remember lessons and customs."]
+  ], { h: ["Think how a child learned before classrooms.", "Stories, proverbs, riddles, songs, and doing the work."], s1: "Recall the ways children were taught by elders." })),
+  fam("tm.scene", `${TE}ATE_METHODS`, "word", 2, choose3([
+    ["Wambui helps her aunt cook every evening and learns how to cook. Which method is this?", "Learning by doing", [["Storytelling", "M_TE_METHOD_MIX"], ["A riddle", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"]], "She learns by working beside someone with the skill."],
+    ["An old man tells children the story of the hare and the hyena to teach them honesty. Which method is this?", "Storytelling", [["Learning by doing", "M_TE_METHOD_MIX"], ["A riddle", "M_TE_METHOD_MIX"], ["A dance", "M_TE_METHOD_MIX"]], "A story carries a lesson about how to behave."],
+    [`Kiprono's grandfather says, "A child who is not taught by the mother is taught by the world." Which method is this?`, "A proverb", [["Learning by doing", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"]], "A short wise saying is a proverb."],
+    ["Children sing a work song while grinding millet and learn the steps. Which method is this?", "Songs", [["A proverb", "M_TE_METHOD_MIX"], ["A riddle", "M_TE_METHOD_MIX"], ["Reading a book", "M_TE_NO_SCHOOL"]], "The song helps them remember and work together."],
+    ["A boy watches his father mend a fence and then copies him. Which method is this?", "Observation and imitation", [["A riddle", "M_TE_METHOD_MIX"], ["A song", "M_TE_METHOD_MIX"], ["Storytelling", "M_TE_METHOD_MIX"]], "He learns by watching and copying a skilled person."]
+  ], { h: ["What is the child doing: listening, watching, singing or working?", "Match each scene to its method."], s1: "Decide what the child is doing to learn." })),
+  // ---------------------------------------------------------------- ATE_VALUES
+  fam("tv.which", `${TE}ATE_VALUES`, "direct", 1, choose3([
+    ["Which value do children learn by greeting elders first?", "Respect", [["Greed", "M_TE_ONLY_SKILLS"], ["Pride", "M_TE_ONLY_SKILLS"], ["Laziness", "M_TE_ONLY_SKILLS"]], "Greeting elders first teaches respect."],
+    ["Which value did traditional stories about the greedy hyena teach?", "Sharing and honesty", [["Cheating", "M_TE_ONLY_SKILLS"], ["Greed", "M_TE_ONLY_SKILLS"], ["Anger", "M_TE_ONLY_SKILLS"]], "Such stories warn against greed and teach honesty and sharing."],
+    ["Why is African traditional education important?", "It taught values and skills", [["It taught nothing at all", "M_TE_OUTDATED"], ["It is useless in our time", "M_TE_OUTDATED"], ["It only ever taught skills", "M_TE_ONLY_SKILLS"]], "It prepared children for adult life with values and skills."],
+    ["Which value is taught when children share work like fetching water together?", "Responsibility and teamwork", [["Laziness and selfishness", "M_TE_ONLY_SKILLS"], ["Fighting and shouting loudly", "M_TE_ONLY_SKILLS"], ["Pride and showing off", "M_TE_ONLY_SKILLS"]], "Sharing work teaches children to be responsible and work as a team."],
+    ["How can a Grade 5 learner apply a traditional value at school?", "Greet teachers and elders politely", [["Ignore all the older people", "M_TE_OUTDATED"], ["Laugh at the people who are old", "M_TE_OUTDATED"], ["Refuse to share with others", "M_TE_OUTDATED"]], "Showing respect to elders is a value still used today."]
+  ], { h: ["What value does the practice teach?", "Respect, honesty, sharing and responsibility are traditional values."], s1: "Think of the lesson behind each practice." })),
+  fam("tv.why", `${TE}ATE_VALUES`, "why", 2, choose3([
+    ["Njeri says traditional education taught only farming and herding. What did she leave out?", "Values like respect and honesty", [["Nothing at all was left out", "M_TE_ONLY_SKILLS"], ["The names of all the animals", "M_TE_ONLY_SKILLS"], ["The ages of all the elders", "M_TE_ONLY_SKILLS"]], "Traditional education also taught values."],
+    ["Why do some elders still tell stories to children today?", "Stories teach values that still matter", [["Stories are of no use today", "M_TE_OUTDATED"], ["Children do not like any stories", "M_TE_OUTDATED"], ["The stories are all very new", "M_TE_OUTDATED"]], "Values such as honesty and respect are useful in every age."],
+    ["A child in your village is rude to an elder. Which traditional value should he practise?", "Respect", [["Greed", "M_TE_ONLY_SKILLS"], ["Pride", "M_TE_ONLY_SKILLS"], ["Anger", "M_TE_ONLY_SKILLS"]], "Respect for elders was taught in every community."],
+    ["Why was initiation important in many communities?", "It prepared youth for adult duties", [["It was only a big party", "M_TE_ONLY_SKILLS"], ["It was meant as a punishment", "M_TE_ONLY_SKILLS"], ["It had no purpose at all", "M_TE_OUTDATED"]], "It taught young people their responsibilities and values."],
+    ["Which sentence about teaching by elders is true today?", "Its values still guide good behaviour", [["It has no use in our time", "M_TE_OUTDATED"], ["It teaches only farming skills", "M_TE_ONLY_SKILLS"], ["It is meant for the old only", "M_TE_OUTDATED"]], "Honesty, respect and sharing are still useful."]
+  ], { h: ["What did traditional education teach besides skills?", "Values such as respect and honesty help people in every age."], s1: "Think of the lessons behind the practices." })),
+  // ---------------------------------------------------------------- ADMIN_LEADERS
+  fam("al.who", `${SA}ADMIN_LEADERS`, "direct", 1, choose3([
+    ["Who is in charge of the whole school?", "The headteacher", [["The deputy headteacher", "M_SA_DEPUTY_HEAD"], ["A class teacher", "M_SA_DUTY_MIX"], ["A prefect", "M_SA_DUTY_MIX"]], "The headteacher runs the whole school."],
+    ["Who acts for the headteacher when the headteacher is away?", "The deputy headteacher", [["A prefect", "M_SA_DUTY_MIX"], ["The cook", "M_SA_DUTY_MIX"], ["The newest teacher", "M_SA_DUTY_MIX"]], "The deputy helps the head and acts when the head is away."],
+    ["Who takes the class register each morning?", "The class teacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["The headteacher", "M_SA_DUTY_MIX"], ["A visitor", "M_SA_DUTY_MIX"]], "A class teacher looks after a class and takes the register."],
+    ["Which group helps oversee the development of a public school?", "The Board of Management", [["The class prefects", "M_SA_DUTY_MIX"], ["The cooks", "M_SA_DUTY_MIX"], ["The learners", "M_SA_DUTY_MIX"]], "The Board of Management oversees development and discipline in a public school."],
+    ["Who helps keep order among learners at break time?", "The prefects", [["The Board of Management", "M_SA_DUTY_MIX"], ["The deputy headteacher alone", "M_SA_DUTY_MIX"], ["The visitors", "M_SA_DUTY_MIX"]], "Prefects help teachers keep order."]
+  ], { h: ["Which leader has this duty?", "The head runs the school. The deputy helps. The class teacher looks after a class."], s1: "Match the duty to the person who does it." })),
+  fam("al.duty", `${SA}ADMIN_LEADERS`, "word", 2, choose3([
+    ["Achieng has a problem that needs the person in charge of the whole school. Whom should she see?", "The headteacher", [["The deputy headteacher", "M_SA_DEPUTY_HEAD"], ["A prefect", "M_SA_DUTY_MIX"], ["A cook", "M_SA_DUTY_MIX"]], "The headteacher is in charge of the whole school."],
+    ["The headteacher is at a meeting. Who looks after the school for the day?", "The deputy headteacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["A prefect", "M_SA_DUTY_MIX"], ["The cook", "M_SA_DUTY_MIX"]], "The deputy acts when the head is away."],
+    ["Baraka is absent. Who marks the register?", "His class teacher", [["The Board of Management", "M_SA_DUTY_MIX"], ["The headteacher", "M_SA_DUTY_MIX"], ["The deputy headteacher", "M_SA_DUTY_MIX"]], "The class teacher marks the register for the class."],
+    ["A new classroom is needed. Which group helps to plan and oversee it in a public school?", "The Board of Management", [["The prefects", "M_SA_DUTY_MIX"], ["The class teacher alone", "M_SA_DUTY_MIX"], ["The learners", "M_SA_DUTY_MIX"]], "The Board of Management oversees school development."],
+    ["A head of department guides teachers of one subject. Which duty does the head of department have?", "Guides a subject or section", [["Runs the whole school", "M_SA_DEPUTY_HEAD"], ["Keeps order at break only", "M_SA_DUTY_MIX"], ["Takes the register of every class", "M_SA_DUTY_MIX"]], "Heads of department supervise a subject or section."]
+  ], { h: ["Which job does the problem need?", "Head: whole school. Deputy: helps and acts. Class teacher: class and register."], s1: "Decide which duty the story describes." }), "b"),
+  // ---------------------------------------------------------------- ADMIN_STRUCTURE
+  fam("as.order", `${SA}ADMIN_STRUCTURE`, "direct", 1, choose3([
+    ["Who is directly under the headteacher on a school chart?", "The deputy headteacher", [["The class teachers", "M_SA_ORDER_REVERSED"], ["The learners", "M_SA_ORDER_REVERSED"], ["The prefects", "M_SA_PREFECT_ABOVE"]], "The deputy headteacher comes directly after the head."],
+    ["Who is at the top of the staff on a school chart?", "The headteacher", [["The deputy headteacher", "M_SA_ORDER_REVERSED"], ["A class teacher", "M_SA_ORDER_REVERSED"], ["The prefects", "M_SA_PREFECT_ABOVE"]], "The headteacher is at the top of the school staff."],
+    ["Who reports to the class teacher?", "The learners and class prefects", [["The headteacher", "M_SA_ORDER_REVERSED"], ["The deputy headteacher", "M_SA_ORDER_REVERSED"], ["The Board of Management", "M_SA_ORDER_REVERSED"]], "Learners and prefects are below the class teacher."],
+    ["Where do prefects belong on a school chart?", "Below the teachers", [["Above the headteacher", "M_SA_PREFECT_ABOVE"], ["Above the teachers", "M_SA_PREFECT_ABOVE"], ["Next to the headteacher", "M_SA_PREFECT_ABOVE"]], "Prefects are learners who help, so they come below teachers."],
+    ["Who comes between the deputy headteacher and the class teachers?", "Senior teachers and heads of department", [["The prefects", "M_SA_PREFECT_ABOVE"], ["The headteacher", "M_SA_ORDER_REVERSED"], ["The learners", "M_SA_ORDER_REVERSED"]], "Senior teachers and heads of department lead sections."]
+  ], { h: ["Draw the chart from the top down.", "Head, deputy, senior teachers, class teachers, learners and prefects."], s1: "Place each person one level below the one above." })),
+  fam("as.spot", `${SA}ADMIN_STRUCTURE`, "spot", 3, spot3([
+    ["Juma draws a school chart. He says the deputy is above the headteacher. Which step has the mistake?", [["Step 1: Juma knows the school has a headteacher and a deputy.", true], ["Step 2: He puts the deputy above the headteacher.", false], ["Step 3: He puts the class teachers below.", true]], "The headteacher is at the top. The deputy comes directly under the head.", "M_SA_ORDER_REVERSED"],
+    ["Amina says prefects are above teachers. Which step has the mistake?", [["Step 1: Amina sees prefects help keep order.", true], ["Step 2: She decides prefects are above teachers.", false], ["Step 3: She draws prefects at the top.", true]], "Prefects are learners. They report to teachers, so they come below them.", "M_SA_PREFECT_ABOVE"],
+    ["Kamau says class teachers report to prefects. Which step has the mistake?", [["Step 1: Kamau sees that prefects help teachers.", true], ["Step 2: He decides class teachers report to prefects.", false], ["Step 3: He draws an arrow from teachers to prefects.", true]], "Prefects report to teachers. The order is head, deputy, teachers, then learners and prefects.", "M_SA_PREFECT_ABOVE"],
+    ["Wairimu says the headteacher is below the class teachers on the chart. Which step has the mistake?", [["Step 1: Wairimu knows class teachers work with learners daily.", true], ["Step 2: She decides the head is below them.", false], ["Step 3: She draws the head at the bottom.", true]], "The headteacher is at the top of the staff chart.", "M_SA_ORDER_REVERSED"]
+  ], { h: ["Which step says the wrong order?", "The head is at the top. The learners are at the bottom."], s1: "Check the order step by step." })),
+  // ---------------------------------------------------------------- RESOURCE_TYPES
+  fam("rt.which", `${RK}RESOURCE_TYPES`, "direct", 1, choose3([
+    ["Which of these is a natural resource of Kenya?", "Water in Lake Victoria", [["Money in a bank", "M_RK_MONEY_ONLY"], ["A school building", "M_RK_BUILT_NATURAL"], ["A new road", "M_RK_BUILT_NATURAL"]], "Water comes from nature. Money, buildings and roads are made by people."],
+    ["Which of these is a natural resource?", "A forest", [["A bridge", "M_RK_BUILT_NATURAL"], ["A shop", "M_RK_BUILT_NATURAL"], ["A bank account", "M_RK_MONEY_ONLY"]], "A forest grows in nature."],
+    ["Which of these is a mineral resource?", "Limestone", [["Maize", "M_RK_BUILT_NATURAL"], ["Timber", "M_RK_BUILT_NATURAL"], ["Fish", "M_RK_BUILT_NATURAL"]], "Limestone is a mineral found in rocks."],
+    ["Which of these is a resource from wildlife?", "Elephants in a park", [["A hotel", "M_RK_BUILT_NATURAL"], ["A car", "M_RK_BUILT_NATURAL"], ["A phone", "M_RK_BUILT_NATURAL"]], "Wildlife is a natural resource."],
+    ["Which one is NOT a natural resource?", "A hospital building", [["A river", "M_RK_BUILT_NATURAL"], ["Soil", "M_RK_BUILT_NATURAL"], ["Sunshine", "M_RK_BUILT_NATURAL"]], "A hospital is built by people. Rivers, soil and sunshine come from nature."]
+  ], { h: ["Did people make it, or did nature provide it?", "Land, soil, water, minerals, forests, wildlife, fish, sun and wind are natural."], s1: "Decide whether it comes from nature." })),
+  fam("rt.sort", `${RK}RESOURCE_TYPES`, "table", 2, choose3([
+    [
+      "A class sorts things on a table. Which row is a natural resource?",
+      "Row C",
+      [["Row A", "M_RK_BUILT_NATURAL"], ["Row B", "M_RK_MONEY_ONLY"], ["Row D", "M_RK_BUILT_NATURAL"]],
+      "Row C, a river, comes from nature.",
+      { t: { head: ["Row", "Thing"], rows: [["Row A", "A school building"], ["Row B", "Money in a purse"], ["Row C", "A river"], ["Row D", "A tarmac road"]] } }
+    ],
+    [
+      "Which row in the table lists a natural resource that people can mine?",
+      "Row B",
+      [["Row A", "M_RK_BUILT_NATURAL"], ["Row C", "M_RK_BUILT_NATURAL"], ["Row D", "M_RK_BUILT_NATURAL"]],
+      "Row B, gold, is a mineral found in rocks.",
+      { t: { head: ["Row", "Thing"], rows: [["Row A", "A factory"], ["Row B", "Gold"], ["Row C", "A bridge"], ["Row D", "A hotel"]] } }
+    ],
+    [
+      "Which row shows a resource that grows in nature?",
+      "Row D",
+      [["Row A", "M_RK_BUILT_NATURAL"], ["Row B", "M_RK_MONEY_ONLY"], ["Row C", "M_RK_BUILT_NATURAL"]],
+      "Row D, a forest, grows without being built.",
+      { t: { head: ["Row", "Thing"], rows: [["Row A", "A railway"], ["Row B", "A bank note"], ["Row C", "A market stall"], ["Row D", "A forest"]] } }
+    ],
+    [
+      "Which row is a living natural resource?",
+      "Row A",
+      [["Row B", "M_RK_BUILT_NATURAL"], ["Row C", "M_RK_BUILT_NATURAL"], ["Row D", "M_RK_MONEY_ONLY"]],
+      "Row A, fish in a lake, is a living natural resource.",
+      { t: { head: ["Row", "Thing"], rows: [["Row A", "Fish in a lake"], ["Row B", "A fishing boat"], ["Row C", "A cold room"], ["Row D", "Money from fish sales"]] } }
+    ],
+    [
+      "Which row is made by people and is not a natural resource?",
+      "Row C",
+      [["Row A", "M_RK_BUILT_NATURAL"], ["Row B", "M_RK_BUILT_NATURAL"], ["Row D", "M_RK_BUILT_NATURAL"]],
+      "Row C, a school, is built by people.",
+      { t: { head: ["Row", "Thing"], rows: [["Row A", "Soil"], ["Row B", "Rain water"], ["Row C", "A school"], ["Row D", "Sunshine"]] } }
+    ]
+  ], { h: ["Natural means made by nature, not by people.", "Money and buildings are made by people."], s1: "Read each row and ask who made it." })),
+  // ---------------------------------------------------------------- PRUDENT_USE
+  fam("pu.act", `${RK}PRUDENT_USE`, "direct", 1, choose3([
+    ["What does it mean to use a resource prudently?", "Use it carefully so it lasts", [["Never use it", "M_RK_CONSERVE_NO_USE"], ["Use it up quickly", "M_RK_UNLIMITED"], ["Waste what you do not need", "M_RK_UNLIMITED"]], "Prudent use means using a resource carefully so it lasts."],
+    ["Which action uses water prudently?", "Mend a leaking tap", [["Leave the tap running", "M_RK_UNLIMITED"], ["Wash the car every day", "M_RK_UNLIMITED"], ["Pour water on the road", "M_RK_UNLIMITED"]], "A leaking tap wastes water, so mending it saves it."],
+    ["What should we do after cutting a tree?", "Plant a new tree", [["Cut more trees quickly", "M_RK_UNLIMITED"], ["Do nothing, forests grow back by themselves", "M_RK_UNLIMITED"], ["Burn the stump", "M_RK_UNLIMITED"]], "Planting new trees replaces what we cut."],
+    ["Which action helps to use resources sustainably?", "Reuse and recycle things", [["Throw everything away", "M_RK_UNLIMITED"], ["Never use anything", "M_RK_CONSERVE_NO_USE"], ["Burn all plastic", "M_RK_UNLIMITED"]], "Reusing and recycling makes resources last longer."],
+    ["Why can a forest finish if people keep cutting trees?", "Trees grow slowly but are cut fast", [["Forests always grow back at once", "M_RK_UNLIMITED"], ["Trees never grow at all", "M_RK_UNLIMITED"], ["Forests can never be cut down", "M_RK_UNLIMITED"]], "If we cut trees faster than they grow, the forest can finish."]
+  ], { h: ["Prudent use means careful use so it lasts.", "Resources can run out if used too fast."], s1: "Choose the action that makes the resource last." })),
+  fam("pu.story", `${RK}PRUDENT_USE`, "word", 2, choose3([
+    ["A school has a leaking tap that wastes water all day. What should the learners do?", "Report it so it can be mended", [["Leave it, water is endless", "M_RK_UNLIMITED"], ["Turn it on more", "M_RK_UNLIMITED"], ["Use the water for play", "M_RK_UNLIMITED"]], "Reporting the leak saves water."],
+    ["Wafula cuts one tree for firewood. What should his family also do?", "Plant a new tree", [["Cut three more", "M_RK_UNLIMITED"], ["Cut the whole forest", "M_RK_UNLIMITED"], ["Wait for it to regrow in a day", "M_RK_UNLIMITED"]], "Planting a tree replaces the one cut."],
+    ["A farmer plants the same crop on his land each year until the soil is weak. What could he do to use the soil prudently?", "Rotate crops", [["Leave the land unused for ever", "M_RK_CONSERVE_NO_USE"], ["Plant the same crop again", "M_RK_UNLIMITED"], ["Burn the land", "M_RK_UNLIMITED"]], "Rotating crops keeps the soil fertile."],
+    ["Fishers at a lake catch every fish they can, including young ones. What might happen?", "There will be fewer fish later", [["The lake will have more fish", "M_RK_UNLIMITED"], ["Nothing will change", "M_RK_UNLIMITED"], ["Fish will grow faster", "M_RK_UNLIMITED"]], "Catching young fish leaves too few to breed."],
+    ["The headteacher asks learners to use both sides of paper. Why?", "It saves paper and trees", [["It wastes paper", "M_RK_UNLIMITED"], ["It is only for exams", "M_RK_UNLIMITED"], ["Trees do not matter", "M_RK_UNLIMITED"]], "Using both sides saves paper, so fewer trees are cut."]
+  ], { h: ["Which choice keeps the resource for later?", "Resources can finish if they are wasted."], s1: "Think about what makes the resource last." }), "c"),
+  // ---------------------------------------------------------------- MINERAL_PLACES
+  fam("mp.where", `${MK}MINERAL_PLACES`, "direct", 1, choose3([
+    ["Where in Kenya is soda ash mined?", "Lake Magadi", [["The Kerio Valley", "M_MK_PLACE_MIX"], ["Kwale", "M_MK_PLACE_MIX"], ["Lake Victoria", "M_MK_PLACE_MIX"]], "Soda ash is taken from Lake Magadi."],
+    ["Where is fluorspar mined in Kenya?", "The Kerio Valley", [["Lake Magadi", "M_MK_PLACE_MIX"], ["Mombasa", "M_MK_PLACE_MIX"], ["Lake Turkana", "M_MK_PLACE_MIX"]], "Fluorspar is dug in the Kerio Valley."],
+    ["Which mineral is mined in Kwale County?", "Titanium", [["Soda ash", "M_MK_PLACE_MIX"], ["Fluorspar", "M_MK_PLACE_MIX"], ["Salt", "M_MK_PLACE_MIX"]], "Titanium is mined in Kwale."],
+    ["Which minerals are mined in Taita Taveta?", "Gemstones", [["Soda ash", "M_MK_PLACE_MIX"], ["Fluorspar", "M_MK_PLACE_MIX"], ["Titanium", "M_MK_PLACE_MIX"]], "Gemstones such as tsavorite come from Taita Taveta."],
+    ["Which of these is a mineral found in Kenya?", "Gold", [["Coffee", "M_MK_NOT_MINERAL"], ["Tea", "M_MK_NOT_MINERAL"], ["Timber", "M_MK_NOT_MINERAL"]], "Gold is a mineral. Coffee, tea and timber are plants."]
+  ], { h: ["Link each mineral to its place.", "Magadi: soda ash. Kerio Valley: fluorspar. Kwale: titanium. Taita Taveta: gemstones."], s1: "Match the mineral to the place it is mined." })),
+  fam("mp.table", `${MK}MINERAL_PLACES`, "table", 2, choose3([
+    [
+      "Read the table. Which mineral is mined at Lake Magadi?",
+      "Soda ash",
+      [["Fluorspar", "M_MK_PLACE_MIX"], ["Titanium", "M_MK_PLACE_MIX"], ["Gold", "M_MK_PLACE_MIX"]],
+      "Soda ash is mined at Lake Magadi.",
+      { t: { head: ["Mineral", "Where it is mined"], rows: [["Soda ash", "Lake Magadi"], ["Fluorspar", "Kerio Valley"], ["Titanium", "Kwale"], ["Gemstones", "Taita Taveta"]] } }
+    ],
+    [
+      "Which place in the table is known for fluorspar?",
+      "Kerio Valley",
+      [["Lake Magadi", "M_MK_PLACE_MIX"], ["Kwale", "M_MK_PLACE_MIX"], ["Taita Taveta", "M_MK_PLACE_MIX"]],
+      "Fluorspar is mined in the Kerio Valley.",
+      { t: { head: ["Mineral", "Where it is mined"], rows: [["Soda ash", "Lake Magadi"], ["Fluorspar", "Kerio Valley"], ["Titanium", "Kwale"], ["Gemstones", "Taita Taveta"]] } }
+    ],
+    [
+      "The table shows what some minerals are used for. Which mineral is used to make cement?",
+      "Limestone",
+      [["Soda ash", "M_MK_USE_MIX"], ["Gold", "M_MK_USE_MIX"], ["Fluorspar", "M_MK_USE_MIX"]],
+      "Limestone is crushed and heated to make cement.",
+      { t: { head: ["Mineral", "Use"], rows: [["Limestone", "Cement"], ["Soda ash", "Glass and soap"], ["Gold", "Jewellery"], ["Fluorspar", "Steel and chemicals"]] } }
+    ],
+    [
+      "Which mineral in the table is found in the Taita Taveta area?",
+      "Gemstones",
+      [["Soda ash", "M_MK_PLACE_MIX"], ["Titanium", "M_MK_PLACE_MIX"], ["Fluorspar", "M_MK_PLACE_MIX"]],
+      "Gemstones are mined in Taita Taveta.",
+      { t: { head: ["Place", "Mineral"], rows: [["Lake Magadi", "Soda ash"], ["Kerio Valley", "Fluorspar"], ["Kwale", "Titanium"], ["Taita Taveta", "Gemstones"]] } }
+    ],
+    [
+      "Which place in the table has titanium?",
+      "Kwale",
+      [["Lake Magadi", "M_MK_PLACE_MIX"], ["Kerio Valley", "M_MK_PLACE_MIX"], ["Taita Taveta", "M_MK_PLACE_MIX"]],
+      "Titanium is mined in Kwale.",
+      { t: { head: ["Place", "Mineral"], rows: [["Lake Magadi", "Soda ash"], ["Kerio Valley", "Fluorspar"], ["Kwale", "Titanium"], ["Taita Taveta", "Gemstones"]] } }
+    ]
+  ], { h: ["Read the row that has the clue.", "Match the mineral and its place."], s1: "Read each row of the table." }), "b"),
+  // ---------------------------------------------------------------- MINERAL_IMPORTANCE
+  fam("mi.use", `${MK}MINERAL_IMPORTANCE`, "direct", 1, choose3([
+    ["What is limestone used to make?", "Cement", [["Jewellery", "M_MK_USE_MIX"], ["Cooking oil", "M_MK_USE_MIX"], ["Cloth", "M_MK_USE_MIX"]], "Limestone is heated and ground to make cement."],
+    ["What are gemstones used for?", "Jewellery", [["Cement", "M_MK_USE_MIX"], ["Fuel", "M_MK_USE_MIX"], ["Roads", "M_MK_USE_MIX"]], "Gemstones are cut and polished for jewellery."],
+    ["What is soda ash used for?", "Making glass and soap", [["Making cement", "M_MK_USE_MIX"], ["Making cloth", "M_MK_USE_MIX"], ["Growing maize", "M_MK_USE_MIX"]], "Soda ash is used in glass and soap making."],
+    ["How does mining help a country?", "It gives jobs and income", [["It gives only problems", "M_MK_NO_HARM"], ["It gives no jobs at all", "M_MK_NO_HARM"], ["It stops all other work", "M_MK_NO_HARM"]], "Mining creates jobs and income."],
+    ["What can happen if mining is not controlled?", "Land and water can be damaged", [["Nothing at all happens", "M_MK_NO_HARM"], ["The land becomes much better", "M_MK_NO_HARM"], ["Crops all grow much faster", "M_MK_NO_HARM"]], "Uncontrolled mining can damage land, water and people's health."]
+  ], { h: ["What is the mineral used for?", "Mining has good and bad effects."], s1: "Think about the use of the mineral and the effect of mining." })),
+  fam("mi.story", `${MK}MINERAL_IMPORTANCE`, "word", 2, choose3([
+    ["A cement factory needs limestone from the ground. How does mining help?", "It supplies the raw material", [["It makes cement quite useless", "M_MK_USE_MIX"], ["It stops all building work", "M_MK_NO_HARM"], ["It supplies cloth for clothes", "M_MK_USE_MIX"]], "Limestone is the raw material for cement."],
+    ["A mine near a village gives many people work. What is this an example of?", "Jobs from mining", [["Harm from mining", "M_MK_NO_HARM"], ["Loss of jobs", "M_MK_NO_HARM"], ["No benefit", "M_MK_NO_HARM"]], "Mining gives people work and income."],
+    ["A mining company leaves open pits after digging. What problem can this cause?", "Danger and damaged land", [["More land for farming crops", "M_MK_NO_HARM"], ["Fewer accidents at the mine", "M_MK_NO_HARM"], ["Cleaner water in the rivers", "M_MK_NO_HARM"]], "Open pits are unsafe and spoil the land."],
+    ["The government earns money when a company sells minerals. How can it use this money?", "Build schools, roads and hospitals", [["Throw all of it away", "M_MK_NO_HARM"], ["Close every mine for good", "M_MK_NO_HARM"], ["Hide all of it somewhere", "M_MK_NO_HARM"]], "Money from minerals can pay for public services."],
+    ["A jeweller buys gemstones from Taita Taveta. What is she going to make?", "Jewellery", [["Cement", "M_MK_USE_MIX"], ["Soap", "M_MK_USE_MIX"], ["Glass", "M_MK_USE_MIX"]], "Gemstones are used to make jewellery."]
+  ], { h: ["What does the mineral become, and who gains?", "Mining can give jobs and income but can also harm land."], s1: "Think about the use and the effect." }))
+];
+
+// src/ai-tutor/content/families/socialstudies_g5_c.js
+var FK = "RESOUR.FISHING_IN_KENYA.";
+var WT = "RESOUR.WILDLIFE_AND_TOURISM_IN_.";
+var TR = "RESOUR.DEVELOPMENT_OF_TRANSPORT.";
+var CM = "RESOUR.DEVELOPMENT_OF_COMMUNICA.";
+var FAMILIES9 = [
+  // ---------------------------------------------------------------- FISHING_GROUNDS
+  fam("fg.which", `${FK}FISHING_GROUNDS`, "direct", 1, choose3([
+    ["Which of these is the main inland fishing ground in Kenya?", "Lake Victoria", [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Lake Magadi", "M_FK_SODA_LAKE"], ["Mount Kenya", "M_FK_SEA_AS_INLAND"]], "Lake Victoria gives most of the fish caught inland in Kenya."],
+    ["Which of these is an inland fishing ground?", "Lake Turkana", [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["The Tsavo plains", "M_FK_SEA_AS_INLAND"], ["The Rift Valley floor", "M_FK_SEA_AS_INLAND"]], "Lake Turkana is a lake inside Kenya with plenty of fish."],
+    ["Why is the Indian Ocean not an inland fishing ground?", "It is the sea, not a lake or river", [["It has no fish in it at all", "M_FK_SEA_AS_INLAND"], ["It is far too small to fish in", "M_FK_SEA_AS_INLAND"], ["It is a lake inside the land", "M_FK_SEA_AS_INLAND"]], "Inland means inside the country, away from the sea."],
+    ["Lake Magadi is a soda lake. What is true about fishing there?", "It is not a main fishing ground", [["It is the biggest fishing ground", "M_FK_SODA_LAKE"], ["It is full of Nile perch", "M_FK_SODA_LAKE"], ["It supplies most of Kenya's fish", "M_FK_SODA_LAKE"]], "The soda water is too salty for most fish."],
+    ["Which of these lakes in the Rift Valley supports fishing, including tilapia?", "Lake Naivasha", [["Lake Magadi", "M_FK_SODA_LAKE"], ["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Mount Elgon", "M_FK_SEA_AS_INLAND"]], "Lake Naivasha is a freshwater lake where fish are caught."]
+  ], { h: ["Inland fishing grounds are lakes, rivers and dams inside the country.", "Lake Victoria and Lake Turkana are the largest."], s1: "Think of lakes, rivers and dams inside Kenya." })),
+  fam("fg.where", `${FK}FISHING_GROUNDS`, "word", 2, choose3([
+    ["Atieno fishes at the lake in the west that Kenya shares with Uganda and Tanzania. Which lake is it?", "Lake Victoria", [["Lake Turkana", "M_FK_REGION_MIX"], ["Lake Naivasha", "M_FK_REGION_MIX"], ["Lake Magadi", "M_FK_SODA_LAKE"]], "Lake Victoria is in the west and is shared by three countries."],
+    ["Ekiru fishes in a large lake in the dry north-west of Kenya. Which lake is it?", "Lake Turkana", [["Lake Victoria", "M_FK_REGION_MIX"], ["Lake Naivasha", "M_FK_REGION_MIX"], ["Lake Magadi", "M_FK_SODA_LAKE"]], "Lake Turkana is in the north-west."],
+    ["Which lake is in the Rift Valley near Naivasha town?", "Lake Naivasha", [["Lake Victoria", "M_FK_REGION_MIX"], ["Lake Turkana", "M_FK_REGION_MIX"], ["The Indian Ocean", "M_FK_SEA_AS_INLAND"]], "Lake Naivasha is a freshwater lake in the Rift Valley."],
+    ["Njeri says fishers at Kisumu catch fish from the Indian Ocean. What is wrong?", "Kisumu is on Lake Victoria", [["Kisumu is on the coast", "M_FK_REGION_MIX"], ["Kisumu is in the far north", "M_FK_REGION_MIX"], ["Kisumu is on Lake Turkana", "M_FK_REGION_MIX"]], "Kisumu is a lakeside town on Lake Victoria in the west."],
+    [
+      "Which place in the table is a main inland fishing ground in the west of Kenya?",
+      "Lake Victoria",
+      [["The Indian Ocean", "M_FK_SEA_AS_INLAND"], ["Lake Magadi", "M_FK_SODA_LAKE"], ["Mount Kenya", "M_FK_REGION_MIX"]],
+      "Lake Victoria lies in the west.",
+      { t: { head: ["Water body", "Part of Kenya"], rows: [["Lake Victoria", "West"], ["Lake Turkana", "North-west"], ["Lake Magadi", "South of the Rift Valley"], ["Indian Ocean", "South-east coast"]] } }
+    ]
+  ], { h: ["Lake Victoria is in the west. Lake Turkana is in the north-west.", "The Indian Ocean is not inland."], s1: "Link each lake to its part of Kenya." }), "b"),
+  // ---------------------------------------------------------------- FISHING_ECONOMY
+  fam("fe.which", `${FK}FISHING_ECONOMY`, "direct", 1, choose3([
+    ["How does fishing help Kenya's economy?", "It gives jobs and income", [["It gives food only to one family", "M_FK_FOOD_ONLY"], ["It gives no work to anyone", "M_FK_FOOD_ONLY"], ["It stops other trades", "M_FK_FOOD_ONLY"]], "Fishing gives jobs to fishers, traders and processors, and money from sales."],
+    ["Which of these earns money from fish?", "A fish trader at a market", [["A person who sleeps all day", "M_FK_FOOD_ONLY"], ["A person who never sells", "M_FK_FOOD_ONLY"], ["A person who buys nothing", "M_FK_FOOD_ONLY"]], "Traders, fishers and processors all earn from fish."],
+    ["Why is fish good for people?", "It gives protein", [["It gives no food value", "M_FK_FOOD_ONLY"], ["It is only meant for sale", "M_FK_FOOD_ONLY"], ["It makes people sleepy", "M_FK_FOOD_ONLY"]], "Fish is a food rich in protein."],
+    ["Why should fishers not catch young fish?", "The young fish must grow and breed", [["Young fish taste bad", "M_FK_NO_SUSTAIN"], ["There is no reason to spare them", "M_FK_NO_SUSTAIN"], ["They are too small to see", "M_FK_NO_SUSTAIN"]], "If young fish are caught, fewer will grow and breed for the future."],
+    ["How does Kenya earn money from Nile perch from Lake Victoria?", "By selling it in Kenya and abroad", [["By keeping all of it at home", "M_FK_FOOD_ONLY"], ["By burying it in the ground", "M_FK_FOOD_ONLY"], ["By giving all of it away", "M_FK_FOOD_ONLY"]], "Fish are sold in markets at home and exported."]
+  ], { h: ["Think about who works with fish, from the lake to the plate.", "Fish stocks must not be over-fished."], s1: "Follow a fish from the boat to the market and the plate." })),
+  fam("fe.story", `${FK}FISHING_ECONOMY`, "word", 2, choose3([
+    ["Atieno's family sells fish at the lakeside and buys school books. How does fishing help them?", "It gives the family an income", [["It gives no income at all", "M_FK_FOOD_ONLY"], ["It only gives them fish to eat", "M_FK_FOOD_ONLY"], ["It makes them poor", "M_FK_FOOD_ONLY"]], "Selling fish brings money for needs such as books."],
+    ["A fish factory at the lake buys fish and employs many workers. What does this show?", "Fishing creates jobs", [["Fishing has no value", "M_FK_FOOD_ONLY"], ["Fishing only feeds one person", "M_FK_FOOD_ONLY"], ["Fishing closes factories", "M_FK_FOOD_ONLY"]], "Fishing supports processors and many other workers."],
+    ["Fishers use nets with very small holes that catch young fish too. What may happen to the lake?", "There will be fewer fish later", [["There will be more fish later", "M_FK_NO_SUSTAIN"], ["Nothing will change", "M_FK_NO_SUSTAIN"], ["Fish will grow faster", "M_FK_NO_SUSTAIN"]], "Catching young fish leaves too few to grow and breed."],
+    ["A fishing community agrees to rest the lake for some weeks each year. Why is this wise?", "The fish can breed and grow", [["The fish become tired", "M_FK_NO_SUSTAIN"], ["The lake becomes dry", "M_FK_NO_SUSTAIN"], ["It stops all trade", "M_FK_NO_SUSTAIN"]], "Rest periods let fish stocks recover."],
+    ["A truck takes fresh fish from Lake Victoria to Nairobi and sells it. Who gains?", "Fishers, drivers and traders", [["Only the fish", "M_FK_FOOD_ONLY"], ["No one at all", "M_FK_FOOD_ONLY"], ["Only the lake", "M_FK_FOOD_ONLY"]], "Many people earn from moving and selling fish."]
+  ], { h: ["Who earns, and what keeps fish for the future?", "Fish must be allowed to grow and breed."], s1: "Think about who gains and what protects the fish." })),
+  // ---------------------------------------------------------------- ATTRACTIONS_PLACES
+  fam("ap.which", `${WT}ATTRACTIONS_PLACES`, "direct", 1, choose3([
+    ["Which park is famous for the wildebeest migration?", "The Maasai Mara", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"], ["Nairobi National Park", "M_WT_ANIMAL_MIX"]], "Wildebeest cross the Mara River in the Maasai Mara each year."],
+    ["Which park is known for elephants and views of Mount Kilimanjaro?", "Amboseli", [["The Maasai Mara", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"], ["Samburu", "M_WT_ANIMAL_MIX"]], "Amboseli has many elephants and a view of Kilimanjaro."],
+    ["Which park is famous for flamingos and rhinos?", "Lake Nakuru National Park", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Tsavo East", "M_WT_ANIMAL_MIX"], ["The Maasai Mara", "M_WT_ANIMAL_MIX"]], "Flamingos gather at the shore of Lake Nakuru."],
+    ["In which county is the Maasai Mara?", "Narok", [["Kajiado", "M_WT_PLACE_MIX"], ["Mombasa", "M_WT_PLACE_MIX"], ["Turkana", "M_WT_PLACE_MIX"]], "The Maasai Mara is in Narok County."],
+    ["Which park is the largest in Kenya and is known for red elephants?", "Tsavo", [["Amboseli", "M_WT_ANIMAL_MIX"], ["Nairobi National Park", "M_WT_ANIMAL_MIX"], ["Lake Nakuru", "M_WT_ANIMAL_MIX"]], "Tsavo is the largest and its elephants look red from the soil."]
+  ], { h: ["Think of the one thing each park is known for.", "Mara: wildebeest. Amboseli: elephants and Kilimanjaro. Nakuru: flamingos."], s1: "Match each park with what it is known for." })),
+  fam("ap.table", `${WT}ATTRACTIONS_PLACES`, "table", 2, choose3([
+    [
+      "Read the table. Which park is in the south, near the Tanzania border, and is known for elephants?",
+      "Amboseli",
+      [["Samburu", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"], ["Maasai Mara", "M_WT_PLACE_MIX"]],
+      "Amboseli is in Kajiado, near the Tanzania border.",
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+    ],
+    [
+      "In the table, which park has the Grevy's zebra and lies in the north?",
+      "Samburu",
+      [["Amboseli", "M_WT_PLACE_MIX"], ["Maasai Mara", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"]],
+      "Samburu is in Isiolo County in the north.",
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+    ],
+    [
+      "Which park in the table is found in the Rift Valley and has flamingos?",
+      "Lake Nakuru",
+      [["Samburu", "M_WT_ANIMAL_MIX"], ["Amboseli", "M_WT_ANIMAL_MIX"], ["Maasai Mara", "M_WT_ANIMAL_MIX"]],
+      "Lake Nakuru National Park is in the Rift Valley.",
+      { t: { head: ["Park", "Known for", "Place"], rows: [["Amboseli", "Elephants", "South, near Tanzania"], ["Samburu", "Grevy's zebra", "North, in Isiolo"], ["Lake Nakuru", "Flamingos", "Rift Valley"], ["Maasai Mara", "Wildebeest", "Narok"]] } }
+    ],
+    [
+      "Which place in the table is a park in a city?",
+      "Nairobi National Park",
+      [["Tsavo", "M_WT_PLACE_MIX"], ["Samburu", "M_WT_PLACE_MIX"], ["Amboseli", "M_WT_PLACE_MIX"]],
+      "Nairobi National Park lies next to Nairobi city.",
+      { t: { head: ["Park", "Where it is"], rows: [["Nairobi National Park", "Next to Nairobi city"], ["Tsavo", "South-east, large park"], ["Samburu", "North, in Isiolo"], ["Amboseli", "South, near Tanzania"]] } }
+    ],
+    [
+      "Which tourist attraction in the table is found at the coast?",
+      "Diani Beach",
+      [["Maasai Mara", "M_WT_PLACE_MIX"], ["Samburu", "M_WT_PLACE_MIX"], ["Lake Nakuru", "M_WT_PLACE_MIX"]],
+      "Diani Beach is on the south coast.",
+      { t: { head: ["Attraction", "Where it is"], rows: [["Diani Beach", "South coast"], ["Maasai Mara", "Narok"], ["Samburu", "Isiolo, north"], ["Lake Nakuru", "Rift Valley"]] } }
+    ]
+  ], { h: ["Read the row with the clue.", "Match the park, the animal and the place."], s1: "Read each row of the table." }), "b"),
+  // ---------------------------------------------------------------- TOURISM_ECONOMY
+  fam("te.which", `${WT}TOURISM_ECONOMY`, "direct", 1, choose3([
+    ["How does tourism help Kenya?", "It brings money and jobs", [["It brings no benefit at all", "M_WT_ANIMALS_NO_VALUE"], ["It only helps hotel owners", "M_WT_HOTELS_ONLY"], ["It takes away jobs", "M_WT_ANIMALS_NO_VALUE"]], "Tourists spend money on hotels, food, guides and crafts."],
+    ["Who earns from tourism besides hotel owners?", "Guides, drivers and craft sellers", [["No one else earns anything", "M_WT_HOTELS_ONLY"], ["Only the park animals earn", "M_WT_HOTELS_ONLY"], ["Only the visitors themselves", "M_WT_HOTELS_ONLY"]], "Many people earn from tourism."],
+    ["Why does Kenya protect its wildlife?", "Wildlife brings tourists and money", [["Animals bring no benefit at all", "M_WT_ANIMALS_NO_VALUE"], ["Parks are just wasted open land", "M_WT_ANIMALS_NO_VALUE"], ["Farms are always much better", "M_WT_ANIMALS_NO_VALUE"]], "Protecting wildlife protects the tourism income."],
+    ["What does poaching do to Kenya's tourism?", "It reduces animals tourists see", [["It brings many more tourists", "M_WT_ANIMALS_NO_VALUE"], ["It makes parks safer for all", "M_WT_ANIMALS_NO_VALUE"], ["It helps every visitor to come", "M_WT_ANIMALS_NO_VALUE"]], "Fewer animals mean fewer tourists and less income."],
+    ["Why is foreign money from tourists useful to Kenya?", "It helps pay for what we need", [["It is not useful to anyone", "M_WT_ANIMALS_NO_VALUE"], ["It is simply thrown away", "M_WT_ANIMALS_NO_VALUE"], ["It must be kept hidden away", "M_WT_ANIMALS_NO_VALUE"]], "Foreign money helps the country buy what it needs."]
+  ], { h: ["Think of all the people who work when tourists visit.", "Wildlife must be protected to keep tourists coming."], s1: "Think of who gains when tourists visit." })),
+  fam("te.story", `${WT}TOURISM_ECONOMY`, "word", 2, choose3([
+    ["Amina sells beaded bracelets to visitors outside the Maasai Mara. How does tourism help her?", "It gives her customers and income", [["It takes away all her work", "M_WT_HOTELS_ONLY"], ["It helps only the hotel owners", "M_WT_HOTELS_ONLY"], ["It gives her no benefit at all", "M_WT_HOTELS_ONLY"]], "Tourists buy crafts, so sellers earn money."],
+    ["A park charges visitors an entry fee. What can the money pay for?", "Looking after the park", [["Nothing at all can be paid", "M_WT_ANIMALS_NO_VALUE"], ["Closing the park for ever", "M_WT_ANIMALS_NO_VALUE"], ["Hunting all of the animals", "M_WT_ANIMALS_NO_VALUE"]], "Fees help pay for rangers, roads and conservation."],
+    ["A community near a park builds a lodge and employs local guides. What does this show?", "Tourism gives local people jobs", [["Tourism takes jobs away from them", "M_WT_HOTELS_ONLY"], ["Tourism helps only the rich people", "M_WT_HOTELS_ONLY"], ["Tourism gives no jobs to anyone", "M_WT_HOTELS_ONLY"]], "Lodges and guiding give local people work."],
+    ["Some people want to turn a park into farmland. What is one reason to keep it as a park?", "Wildlife brings tourist money", [["Animals bring no benefit at all", "M_WT_ANIMALS_NO_VALUE"], ["Farms never earn any money", "M_WT_ANIMALS_NO_VALUE"], ["Parks have no animals in them", "M_WT_ANIMALS_NO_VALUE"]], "A park can earn money every year from tourists."],
+    ["A driver takes visitors from Nairobi to Amboseli every week. Who gains?", "The driver and the company", [["Only the elephants gain", "M_WT_HOTELS_ONLY"], ["No one gains anything", "M_WT_HOTELS_ONLY"], ["Only the hotel owner gains", "M_WT_HOTELS_ONLY"]], "Drivers and companies earn from taking tourists to parks."]
+  ], { h: ["Who earns money when a tourist visits?", "Wildlife is the reason many tourists come."], s1: "Think of who earns in the story." })),
+  // ---------------------------------------------------------------- EARLY_TRANSPORT
+  fam("et.which", `${TR}EARLY_TRANSPORT`, "direct", 1, choose3([
+    ["Which of these was an early means of transport in Kenya?", "A donkey", [["A lorry", "M_TR_EARLY_MODERN_MIX"], ["An aeroplane", "M_TR_EARLY_MODERN_MIX"], ["A train", "M_TR_EARLY_MODERN_MIX"]], "Donkeys carried goods long before roads and lorries."],
+    ["How did people move goods before roads and lorries?", "They carried loads on heads and backs", [["They did not move any goods", "M_TR_WALK_NOT_TRANSPORT"], ["They used aeroplanes to move them", "M_TR_EARLY_MODERN_MIX"], ["They used trains to move them", "M_TR_EARLY_MODERN_MIX"]], "Carrying loads on heads and backs was an early means of transport."],
+    ["Which animal was used to carry goods in dry northern Kenya?", "The camel", [["The elephant", "M_TR_EARLY_MODERN_MIX"], ["The lion", "M_TR_EARLY_MODERN_MIX"], ["The hippo", "M_TR_EARLY_MODERN_MIX"]], "Camels can travel far with little water."],
+    ["Which early means of transport was used on Lake Victoria and the coast?", "A canoe or dhow", [["A lorry", "M_TR_EARLY_MODERN_MIX"], ["A bus", "M_TR_EARLY_MODERN_MIX"], ["A train", "M_TR_EARLY_MODERN_MIX"]], "Canoes and dhows moved people and goods on water."],
+    ["Long lines of porters and traders carrying goods over long distances were called what?", "Caravans", [["Trains", "M_TR_EARLY_MODERN_MIX"], ["Convoys of lorries", "M_TR_EARLY_MODERN_MIX"], ["Fleets of planes", "M_TR_EARLY_MODERN_MIX"]], "Caravans carried goods such as salt, cloth and ivory."]
+  ], { h: ["Which would a person have used before engines?", "People, animals, canoes and dhows."], s1: "Think of the way things moved before engines." })),
+  fam("et.sort", `${TR}EARLY_TRANSPORT`, "table", 2, choose3([
+    [
+      "A table lists ways of moving goods. Which one is an early means of transport?",
+      "Row B",
+      [["Row A", "M_TR_EARLY_MODERN_MIX"], ["Row C", "M_TR_EARLY_MODERN_MIX"], ["Row D", "M_TR_EARLY_MODERN_MIX"]],
+      "Row B, a donkey, is an early means. The others use engines.",
+      { t: { head: ["Row", "Means of transport"], rows: [["Row A", "A lorry"], ["Row B", "A donkey"], ["Row C", "A train"], ["Row D", "An aeroplane"]] } }
+    ],
+    [
+      "Which row in the table is a modern means of transport?",
+      "Row D",
+      [["Row A", "M_TR_EARLY_MODERN_MIX"], ["Row B", "M_TR_EARLY_MODERN_MIX"], ["Row C", "M_TR_EARLY_MODERN_MIX"]],
+      "Row D, a train, runs on an engine. The others are early means.",
+      { t: { head: ["Row", "Means of transport"], rows: [["Row A", "A camel"], ["Row B", "A canoe"], ["Row C", "Carrying on the head"], ["Row D", "A train"]] } }
+    ],
+    [
+      "Which row shows a way of moving goods on water long ago?",
+      "Row C",
+      [["Row A", "M_TR_EARLY_MODERN_MIX"], ["Row B", "M_TR_EARLY_MODERN_MIX"], ["Row D", "M_TR_EARLY_MODERN_MIX"]],
+      "Row C, a dhow, moved goods on the sea.",
+      { t: { head: ["Row", "Means of transport"], rows: [["Row A", "A bus"], ["Row B", "A donkey"], ["Row C", "A dhow"], ["Row D", "A matatu"]] } }
+    ],
+    [
+      "Which row shows a way of moving goods using only a person?",
+      "Row A",
+      [["Row B", "M_TR_WALK_NOT_TRANSPORT"], ["Row C", "M_TR_EARLY_MODERN_MIX"], ["Row D", "M_TR_EARLY_MODERN_MIX"]],
+      "Row A, carrying a load on the back, needs only a person.",
+      { t: { head: ["Row", "Means of transport"], rows: [["Row A", "A load carried on the back"], ["Row B", "A camel"], ["Row C", "A lorry"], ["Row D", "A train"]] } }
+    ],
+    [
+      "Which row is a modern means that moves goods by road?",
+      "Row B",
+      [["Row A", "M_TR_EARLY_MODERN_MIX"], ["Row C", "M_TR_EARLY_MODERN_MIX"], ["Row D", "M_TR_EARLY_MODERN_MIX"]],
+      "Row B, a lorry, is a modern means of road transport.",
+      { t: { head: ["Row", "Means of transport"], rows: [["Row A", "A donkey"], ["Row B", "A lorry"], ["Row C", "A canoe"], ["Row D", "A camel"]] } }
+    ]
+  ], { h: ["Early means used people, animals and simple boats.", "Modern means use engines."], s1: "Read each row and decide early or modern." })),
+  // ---------------------------------------------------------------- MODERN_TRANSPORT
+  fam("mt.job", `${TR}MODERN_TRANSPORT`, "direct", 1, choose3([
+    ["Which is the best way to carry large amounts of fuel across the country?", "A pipeline or tanker lorry", [["A bicycle", "M_TR_MODE_MIX"], ["A boda boda", "M_TR_MODE_MIX"], ["A donkey cart", "M_TR_MODE_MIX"]], "Large amounts of fuel move best by pipeline or tanker."],
+    ["Which means of transport is fastest for a long journey across the world?", "An aeroplane", [["A bicycle", "M_TR_MODE_MIX"], ["A bus", "M_TR_MODE_MIX"], ["A train", "M_TR_MODE_MIX"]], "Aeroplanes are the fastest for long distances."],
+    ["Which means of transport crosses Lake Victoria?", "A ferry or ship", [["A lorry", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"], ["A matatu", "M_TR_MODE_MIX"]], "Ferries and ships travel on water."],
+    ["Which railway was built first in Kenya?", "The railway from Mombasa to Kisumu", [["The Standard Gauge Railway", "M_TR_SGR_FIRST"], ["A railway from Nairobi to Lamu", "M_TR_SGR_FIRST"], ["The Standard Gauge Railway to Naivasha", "M_TR_SGR_FIRST"]], "The first railway was built over 100 years ago. The Standard Gauge Railway is much newer."],
+    ["Which port is the main sea port of Kenya?", "Mombasa", [["Kisumu", "M_TR_MODE_MIX"], ["Nakuru", "M_TR_MODE_MIX"], ["Eldoret", "M_TR_MODE_MIX"]], "Mombasa is the main sea port on the Indian Ocean."]
+  ], { h: ["Match the load and the journey with the right means.", "Road, rail, air, water and pipeline each suit different jobs."], s1: "Think about the load, the distance and the speed." })),
+  fam("mt.story", `${TR}MODERN_TRANSPORT`, "word", 2, choose3([
+    ["Njeri must travel from Nairobi to Mombasa quickly with a large family. Which means could she use?", "The Standard Gauge Railway", [["A donkey cart", "M_TR_MODE_MIX"], ["A canoe", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"]], "The Standard Gauge Railway runs between Nairobi and Mombasa."],
+    ["A business in Kisumu wants to send a small parcel to London in one day. What is the best way?", "By air", [["By donkey", "M_TR_MODE_MIX"], ["By ox cart", "M_TR_MODE_MIX"], ["By bicycle", "M_TR_MODE_MIX"]], "Only air transport is fast enough across the sea."],
+    ["A farmer in Kitale must take 20 sacks of maize to the town. Which means suits the load?", "A lorry", [["A boda boda", "M_TR_MODE_MIX"], ["A bicycle", "M_TR_MODE_MIX"], ["An aeroplane", "M_TR_MODE_MIX"]], "A lorry can carry a heavy load over land."],
+    ["People cross the water between Mombasa island and Likoni daily. What do they use?", "A ferry", [["An aeroplane", "M_TR_MODE_MIX"], ["A train", "M_TR_MODE_MIX"], ["A lorry on the water", "M_TR_MODE_MIX"]], "A ferry carries people and vehicles across the channel."],
+    ["Ouma says the Standard Gauge Railway is the first railway built in Kenya. What should we tell him?", "It was built over 100 years ago", [["He is right, it was the first", "M_TR_SGR_FIRST"], ["It was built only last year", "M_TR_SGR_FIRST"], ["Kenya had no railway before it", "M_TR_SGR_FIRST"]], "The Mombasa to Kisumu railway came first, more than 100 years ago."]
+  ], { h: ["Think about the load and how far it must go.", "Land, water and air each need different means."], s1: "Match the means to the job." })),
+  // ---------------------------------------------------------------- ROAD_SAFETY
+  fam("rs.act", `${TR}ROAD_SAFETY`, "direct", 1, choose3([
+    ["Where is the safest place for a child to cross the road?", "At a zebra crossing or footbridge", [["Anywhere if the road looks empty", "M_TR_CROSS_ANYWHERE"], ["Between two parked cars", "M_TR_CROSS_ANYWHERE"], ["On a bend in the road", "M_TR_CROSS_ANYWHERE"]], "A crossing or footbridge keeps you where drivers can see you."],
+    ["When should a boda boda rider and passenger wear helmets?", "On every trip", [["Only on long trips", "M_TR_BELT_LATER"], ["Only at night", "M_TR_BELT_LATER"], ["Only when it rains", "M_TR_BELT_LATER"]], "A crash can happen on any trip."],
+    ["What should you do before crossing a road?", "Look right, left and right again", [["Run across the road quickly", "M_TR_CROSS_ANYWHERE"], ["Close your eyes and cross", "M_TR_CROSS_ANYWHERE"], ["Look at your phone and go", "M_TR_CROSS_ANYWHERE"]], "Looking carefully lets you see approaching vehicles."],
+    ["Where should you wait for a bus?", "At the bus stop on the pavement", [["In the middle of the road", "M_TR_CROSS_ANYWHERE"], ["Behind a parked big lorry", "M_TR_CROSS_ANYWHERE"], ["At a bend in the road", "M_TR_CROSS_ANYWHERE"]], "A bus stop is a safe, marked place to wait."],
+    ["Why should a passenger wear a seat belt?", "It protects the body in a crash", [["It is only for long trips", "M_TR_BELT_LATER"], ["It makes the car go faster", "M_TR_BELT_LATER"], ["It is only for the driver", "M_TR_BELT_LATER"]], "A seat belt holds you safely in your seat if the car stops suddenly."]
+  ], { h: ["Which choice keeps you where drivers can see you?", "Short trips can be dangerous too."], s1: "Choose the safe action." })),
+  fam("rs.story", `${TR}ROAD_SAFETY`, "word", 2, choose3([
+    ["Achieng's school is across a busy road. A zebra crossing is 50 metres away. What should she do?", "Walk to the crossing and use it", [["Dash across the road at once", "M_TR_CROSS_ANYWHERE"], ["Cross between the parked cars", "M_TR_CROSS_ANYWHERE"], ["Wait until the road is empty", "M_TR_CROSS_ANYWHERE"]], "A crossing is safer, even if it is a short walk away."],
+    ["Kiprono wants to ride on a boda boda to the shop nearby. He says a helmet is not needed for such a short trip. What is the best reply?", "A helmet is needed each trip", [["He is right, it is not needed", "M_TR_BELT_LATER"], ["Only at night when it is dark", "M_TR_BELT_LATER"], ["Only on the long highway trips", "M_TR_BELT_LATER"]], "Crashes can happen on short trips too."],
+    ["Children are playing football near the main road. What might happen?", "A ball may roll into the road", [["Nothing at all will happen", "M_TR_CROSS_ANYWHERE"], ["Cars will always stop in time", "M_TR_CROSS_ANYWHERE"], ["The road will be made safer", "M_TR_CROSS_ANYWHERE"]], "Play away from roads so no one chases a ball into traffic."],
+    ["A matatu driver wants to take 20 passengers in a 14-seat matatu. What is the problem?", "It is overloaded and unsafe", [["There is no problem here", "M_TR_BELT_LATER"], ["It will be much faster", "M_TR_BELT_LATER"], ["It will be much safer", "M_TR_BELT_LATER"]], "Overloading makes a vehicle unsafe in a crash."],
+    ["Amina is crossing the road and her phone rings. What should she do?", "Finish crossing, then answer", [["Answer it while crossing", "M_TR_CROSS_ANYWHERE"], ["Stop in the middle to talk", "M_TR_CROSS_ANYWHERE"], ["Close her eyes and answer", "M_TR_CROSS_ANYWHERE"]], "Pay full attention to the road while crossing."]
+  ], { h: ["Think about what could go wrong, and choose the safe action.", "Always give the road your full attention."], s1: "Picture what could happen and choose the safe action." }), "d"),
+  // ---------------------------------------------------------------- EARLY_COMMUNICATION
+  fam("ec.which", `${CM}EARLY_COMMUNICATION`, "direct", 1, choose3([
+    ["Which was an early form of communication in Kenya?", "A drum", [["Email", "M_CM_EARLY_MODERN_MIX"], ["A mobile phone", "M_CM_EARLY_MODERN_MIX"], ["Television", "M_CM_EARLY_MODERN_MIX"]], "Drums sent messages across villages."],
+    ["How did people send a warning over a long distance in the past?", "By a horn or a smoke signal", [["By sending an email message", "M_CM_EARLY_MODERN_MIX"], ["By using the internet at home", "M_CM_EARLY_MODERN_MIX"], ["By making a phone call", "M_CM_EARLY_MODERN_MIX"]], "Horns and smoke could be heard or seen from far away."],
+    ["Which person carried news from village to village in the past?", "A messenger or runner", [["An online blogger", "M_CM_EARLY_MODERN_MIX"], ["A television presenter", "M_CM_EARLY_MODERN_MIX"], ["A radio host", "M_CM_EARLY_MODERN_MIX"]], "Messengers on foot carried news over distances."],
+    ["What was the ululation of women used for in many communities?", "To raise an alarm or share news", [["To send an email to a friend", "M_CM_EARLY_MODERN_MIX"], ["To print the daily newspapers", "M_CM_EARLY_MODERN_MIX"], ["To make a call on a phone", "M_CM_EARLY_MODERN_MIX"]], "Ululation could call people together or warn of danger."],
+    ["Why is a mobile phone faster than a messenger on foot?", "It sends the message at once", [["It is not any faster at all", "M_CM_EARLY_FAST"], ["It walks quickly to the place", "M_CM_EARLY_FAST"], ["It is slower than a runner", "M_CM_EARLY_FAST"]], "A phone carries a message at once, not at walking speed."]
+  ], { h: ["Which could be used long before electricity?", "Drums, horns, smoke signals and runners."], s1: "Think of the way news travelled before electricity." })),
+  fam("ec.sort", `${CM}EARLY_COMMUNICATION`, "table", 2, choose3([
+    [
+      "A table lists ways of sending news. Which row is an early form of communication?",
+      "Row B",
+      [["Row A", "M_CM_EARLY_MODERN_MIX"], ["Row C", "M_CM_EARLY_MODERN_MIX"], ["Row D", "M_CM_EARLY_MODERN_MIX"]],
+      "Row B, a drum, was used long ago. The others need electricity.",
+      { t: { head: ["Row", "Way of sending news"], rows: [["Row A", "A text message"], ["Row B", "A drum"], ["Row C", "An email"], ["Row D", "A radio broadcast"]] } }
+    ],
+    [
+      "Which row is a modern means of communication?",
+      "Row C",
+      [["Row A", "M_CM_EARLY_MODERN_MIX"], ["Row B", "M_CM_EARLY_MODERN_MIX"], ["Row D", "M_CM_EARLY_MODERN_MIX"]],
+      "Row C, a television broadcast, is modern.",
+      { t: { head: ["Row", "Way of sending news"], rows: [["Row A", "A horn"], ["Row B", "A smoke signal"], ["Row C", "A television broadcast"], ["Row D", "A runner"]] } }
+    ],
+    [
+      "Which row shows a way of sending a message that people could see far away?",
+      "Row D",
+      [["Row A", "M_CM_EARLY_FAST"], ["Row B", "M_CM_EARLY_FAST"], ["Row C", "M_CM_EARLY_FAST"]],
+      "Row D, a smoke signal, could be seen from far away.",
+      { t: { head: ["Row", "Way of sending news"], rows: [["Row A", "A whisper"], ["Row B", "A handshake"], ["Row C", "A short walk"], ["Row D", "A smoke signal"]] } }
+    ],
+    [
+      "Which row shows a way of sending a message that people could hear far away?",
+      "Row A",
+      [["Row B", "M_CM_EARLY_FAST"], ["Row C", "M_CM_EARLY_FAST"], ["Row D", "M_CM_EARLY_FAST"]],
+      "Row A, a drum, could be heard across the village.",
+      { t: { head: ["Row", "Way of sending news"], rows: [["Row A", "A drum"], ["Row B", "A whisper"], ["Row C", "A secret note"], ["Row D", "A quiet word"]] } }
+    ],
+    [
+      "Which row is slowest for sending news to a far village?",
+      "Row B",
+      [["Row A", "M_CM_EARLY_FAST"], ["Row C", "M_CM_EARLY_FAST"], ["Row D", "M_CM_EARLY_FAST"]],
+      "Row B, a runner on foot, is slow compared with a phone.",
+      { t: { head: ["Row", "Way of sending news"], rows: [["Row A", "A phone call"], ["Row B", "A runner on foot"], ["Row C", "A text message"], ["Row D", "An email"]] } }
+    ]
+  ], { h: ["Early means need no electricity.", "Modern means use electricity or networks."], s1: "Read each row and decide early or modern." })),
+  // ---------------------------------------------------------------- MODERN_COMMUNICATION
+  fam("mc.which", `${CM}MODERN_COMMUNICATION`, "direct", 1, choose3([
+    ["Which means of communication shows pictures and sound together?", "Television", [["Radio", "M_CM_MEDIUM_MIX"], ["A newspaper", "M_CM_MEDIUM_MIX"], ["A letter", "M_CM_MEDIUM_MIX"]], "Television shows pictures with sound. Radio has sound only."],
+    ["Which means of communication works on batteries in villages?", "Radio", [["Television", "M_CM_MEDIUM_MIX"], ["The internet", "M_CM_MEDIUM_MIX"], ["A computer", "M_CM_MEDIUM_MIX"]], "A battery radio works where there is no mains power."],
+    ["Which is best for sending a parcel to a relative?", "The post office", [["A radio", "M_CM_MEDIUM_MIX"], ["Television", "M_CM_MEDIUM_MIX"], ["A newspaper", "M_CM_MEDIUM_MIX"]], "The post office sends letters and parcels."],
+    ["You get a message that claims something shocking. What should you do first?", "Check whether it is true", [["Share it with everyone", "M_CM_NO_RISK"], ["Believe it at once", "M_CM_NO_RISK"], ["Send it to all your friends", "M_CM_NO_RISK"]], "Not everything we read is true. Check before sharing."],
+    ["Which means lets people see news printed on paper each day?", "A newspaper", [["A drum", "M_CM_EARLY_MODERN_MIX"], ["A horn", "M_CM_EARLY_MODERN_MIX"], ["A smoke signal", "M_CM_EARLY_MODERN_MIX"]], "A newspaper prints the news on paper."]
+  ], { h: ["What does each means send: sound, pictures, letters or print?", "Check before you share a message."], s1: "Match the means to what it does." })),
+  fam("mc.story", `${CM}MODERN_COMMUNICATION`, "word", 2, choose3([
+    ["A farmer in a village with no electricity wants to hear the weather news. What can he use?", "A battery radio", [["A television", "M_CM_MEDIUM_MIX"], ["A computer", "M_CM_MEDIUM_MIX"], ["A fax machine", "M_CM_MEDIUM_MIX"]], "A battery radio needs no mains electricity."],
+    ["Wanjiru in Nairobi wants to speak to her grandmother in Kisumu right now. What is best?", "A phone call", [["A letter by post", "M_CM_EARLY_FAST"], ["A messenger on foot", "M_CM_EARLY_FAST"], ["A smoke signal", "M_CM_EARLY_MODERN_MIX"]], "A phone call connects them at once."],
+    ["A school wants to tell parents about a closing day at once. What is the quickest way?", "A text message", [["A letter sent by post", "M_CM_EARLY_FAST"], ["A drum in the village", "M_CM_EARLY_MODERN_MIX"], ["A message by a runner", "M_CM_EARLY_FAST"]], "A text message reaches many phones in seconds."],
+    ["Kamau reads on a phone that a bank will give free money to anyone who sends a code. What should he do?", "Check first with a trusted adult", [["Send the code to the bank", "M_CM_NO_RISK"], ["Share it with all friends", "M_CM_NO_RISK"], ["Believe it at once and act", "M_CM_NO_RISK"]], "Messages like this are often tricks. Check first."],
+    ["Njeri says radio and television are the same. What is one difference?", "Television shows pictures", [["Radio shows pictures as well", "M_CM_MEDIUM_MIX"], ["Both of them show pictures", "M_CM_MEDIUM_MIX"], ["Neither of them has sound", "M_CM_MEDIUM_MIX"]], "Television has pictures and sound. Radio has sound only."]
+  ], { h: ["Think about speed, power and cost.", "Not everything on a phone is true."], s1: "Choose the means that fits the job." }))
+];
+
+// src/ai-tutor/content/families/socialstudies_g5_d.js
+var TL = "POLITI.TRADITIONAL_LEADERS_IN_K.";
+var EG = "POLITI.EARLY_FORMS_OF_GOVERNM_E.";
+var CZ = "POLITI.CITIZENSHIP_IN_KENYA.";
+var NG = "POLITI.NATIONAL_GOVERNMENT.";
+var NU = "GOVERN.NATIONAL_UNITY_IN_KENYA.";
+var HR = "GOVERN.HUMAN_RIGHTS.";
+var DM = "GOVERN.DEMOCRACY_IN_SOCIETY.";
+var FAMILIES10 = [
+  // ---------------------------------------------------------------- LEADER_FACTS
+  fam("lf.who", `${TL}LEADER_FACTS`, "direct", 1, choose3([
+    ["Mekatilili wa Menza led which community?", "The Giriama", [["The Maasai", "M_TL_COMMUNITY_MIX"], ["The Luo", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"]], "Mekatilili led the Giriama of the coast against forced labour."],
+    ["Which leader led the Nandi against the building of the railway?", "Koitalel Arap Samoei", [["Nabongo Mumia", "M_TL_ROLE_MIX"], ["Mekatilili wa Menza", "M_TL_ROLE_MIX"], ["Waiyaki wa Hinga", "M_TL_ROLE_MIX"]], "Koitalel was the Nandi leader who resisted the railway."],
+    ["Nabongo Mumia was the king of which people?", "The Wanga", [["The Giriama", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"], ["The Maasai", "M_TL_COMMUNITY_MIX"]], "Nabongo Mumia ruled the Wanga kingdom."],
+    ["Lenana was a famous laibon of which community?", "The Maasai", [["The Luo", "M_TL_COMMUNITY_MIX"], ["The Kamba", "M_TL_COMMUNITY_MIX"], ["The Giriama", "M_TL_COMMUNITY_MIX"]], "Lenana was a Maasai leader and spiritual guide."],
+    ["Waiyaki wa Hinga was a leader of which community?", "The Agikuyu", [["The Wanga", "M_TL_COMMUNITY_MIX"], ["The Nandi", "M_TL_COMMUNITY_MIX"], ["The Giriama", "M_TL_COMMUNITY_MIX"]], "Waiyaki wa Hinga led the Agikuyu in the Dagoretti area."]
+  ], { h: ["Link each leader to a community and a place.", "Mekatilili: Giriama. Koitalel: Nandi. Mumia: Wanga. Lenana: Maasai."], s1: "Recall the community of the leader." })),
+  fam("lf.table", `${TL}LEADER_FACTS`, "table", 2, choose3([
+    [
+      "Read the table. Which leader resisted forced labour at the coast?",
+      "Mekatilili wa Menza",
+      [["Nabongo Mumia", "M_TL_ROLE_MIX"], ["Lenana", "M_TL_ROLE_MIX"], ["Koitalel Arap Samoei", "M_TL_ROLE_MIX"]],
+      "Mekatilili led the Giriama against forced labour.",
+      { t: { head: ["Leader", "Community", "What the leader did"], rows: [["Mekatilili wa Menza", "Giriama", "Resisted forced labour"], ["Koitalel Arap Samoei", "Nandi", "Resisted the railway"], ["Nabongo Mumia", "Wanga", "Welcomed the British"], ["Lenana", "Maasai", "Guided his people as laibon"]] } }
+    ],
+    [
+      "Which leader in the table was a Maasai laibon?",
+      "Lenana",
+      [["Koitalel Arap Samoei", "M_TL_COMMUNITY_MIX"], ["Mekatilili wa Menza", "M_TL_COMMUNITY_MIX"], ["Nabongo Mumia", "M_TL_COMMUNITY_MIX"]],
+      "Lenana was a Maasai laibon.",
+      { t: { head: ["Leader", "Community", "What the leader did"], rows: [["Mekatilili wa Menza", "Giriama", "Resisted forced labour"], ["Koitalel Arap Samoei", "Nandi", "Resisted the railway"], ["Nabongo Mumia", "Wanga", "Welcomed the British"], ["Lenana", "Maasai", "Guided his people as laibon"]] } }
+    ],
+    [
+      "Which leader in the table was a king of the Wanga?",
+      "Nabongo Mumia",
+      [["Lenana", "M_TL_COMMUNITY_MIX"], ["Mekatilili wa Menza", "M_TL_COMMUNITY_MIX"], ["Koitalel Arap Samoei", "M_TL_COMMUNITY_MIX"]],
+      "Nabongo Mumia was the king of the Wanga.",
+      { t: { head: ["Leader", "Community", "What the leader did"], rows: [["Mekatilili wa Menza", "Giriama", "Resisted forced labour"], ["Koitalel Arap Samoei", "Nandi", "Resisted the railway"], ["Nabongo Mumia", "Wanga", "Welcomed the British"], ["Lenana", "Maasai", "Guided his people as laibon"]] } }
+    ],
+    [
+      "Which leader in the table resisted the railway?",
+      "Koitalel Arap Samoei",
+      [["Nabongo Mumia", "M_TL_ROLE_MIX"], ["Lenana", "M_TL_ROLE_MIX"], ["Mekatilili wa Menza", "M_TL_ROLE_MIX"]],
+      "Koitalel led the Nandi against the railway.",
+      { t: { head: ["Leader", "Community", "What the leader did"], rows: [["Mekatilili wa Menza", "Giriama", "Resisted forced labour"], ["Koitalel Arap Samoei", "Nandi", "Resisted the railway"], ["Nabongo Mumia", "Wanga", "Welcomed the British"], ["Lenana", "Maasai", "Guided his people as laibon"]] } }
+    ],
+    [
+      "Which community does the leader who welcomed the British in the table belong to?",
+      "The Wanga",
+      [["The Nandi", "M_TL_COMMUNITY_MIX"], ["The Giriama", "M_TL_COMMUNITY_MIX"], ["The Maasai", "M_TL_COMMUNITY_MIX"]],
+      "Nabongo Mumia was a Wanga king who welcomed the British.",
+      { t: { head: ["Leader", "Community", "What the leader did"], rows: [["Mekatilili wa Menza", "Giriama", "Resisted forced labour"], ["Koitalel Arap Samoei", "Nandi", "Resisted the railway"], ["Nabongo Mumia", "Wanga", "Welcomed the British"], ["Lenana", "Maasai", "Guided his people as laibon"]] } }
+    ]
+  ], { h: ["Find the row with the clue.", "Match the leader, community and action."], s1: "Read each row of the table." })),
+  // ---------------------------------------------------------------- LEADER_QUALITIES
+  fam("lq.which", `${TL}LEADER_QUALITIES`, "direct", 1, choose3([
+    ["Which quality makes a good traditional leader?", "Wisdom and fairness", [["Making people afraid", "M_TL_FEAR_LEADER"], ["Being the loudest", "M_TL_FEAR_LEADER"], ["Being the richest", "M_TL_FEAR_LEADER"]], "Good leaders are respected for wisdom and fairness."],
+    ["Mekatilili wa Menza led people against forced labour. Which quality did she show?", "Bravery", [["Fear", "M_TL_FEAR_LEADER"], ["Laziness", "M_TL_FEAR_LEADER"], ["Selfishness", "M_TL_FEAR_LEADER"]], "Standing up for her people showed bravery."],
+    ["Which is something elders still do in many communities?", "Settle disputes", [["Nothing at all", "M_TL_NO_ROLE_TODAY"], ["Close all schools", "M_TL_NO_ROLE_TODAY"], ["Collect fines for fun", "M_TL_NO_ROLE_TODAY"]], "Elders still help settle quarrels in many places."],
+    ["Why were traditional leaders respected?", "They guided and protected their people", [["They frightened people", "M_TL_FEAR_LEADER"], ["They took all the cattle", "M_TL_FEAR_LEADER"], ["They never listened", "M_TL_FEAR_LEADER"]], "Leaders earned respect by serving their people."],
+    ["Which of these is a role of elders today?", "Guiding ceremonies and teaching values", [["Doing nothing at all", "M_TL_NO_ROLE_TODAY"], ["Having no part in the community", "M_TL_NO_ROLE_TODAY"], ["Stopping all meetings", "M_TL_NO_ROLE_TODAY"]], "Elders pass on values and guide customs."]
+  ], { h: ["What makes people respect a leader?", "Elders still serve many communities today."], s1: "Think about the qualities that make a leader respected." })),
+  fam("lq.story", `${TL}LEADER_QUALITIES`, "word", 2, choose3([
+    ["A leader listens to everyone before he decides a quarrel. Which quality is he showing?", "Fairness", [["Fear", "M_TL_FEAR_LEADER"], ["Greed", "M_TL_FEAR_LEADER"], ["Pride", "M_TL_FEAR_LEADER"]], "Listening to all sides shows fairness."],
+    ["Two neighbours quarrel over a boundary. Whom might the community call first?", "The village elders", [["No one at all", "M_TL_NO_ROLE_TODAY"], ["Only a foreign visitor", "M_TL_NO_ROLE_TODAY"], ["A passing stranger", "M_TL_NO_ROLE_TODAY"]], "Elders still settle disputes in many communities."],
+    ["A leader gathers his people to face danger together and shares the food. Which quality is shown?", "Unity and generosity", [["Fear and anger", "M_TL_FEAR_LEADER"], ["Greed and pride", "M_TL_FEAR_LEADER"], ["Laziness and trickery", "M_TL_FEAR_LEADER"]], "Bringing people together and sharing shows unity and generosity."],
+    ["A child says elders are no use now. What is the best reply?", "Elders still guide and teach values", [["He is right, they are useless", "M_TL_NO_ROLE_TODAY"], ["They only live in the past", "M_TL_NO_ROLE_TODAY"], ["They have no role left", "M_TL_NO_ROLE_TODAY"]], "Elders keep culture alive and guide the young."],
+    ["Koitalel Arap Samoei stood against the railway to protect his people's land. Which quality did he show?", "Courage", [["Fear", "M_TL_FEAR_LEADER"], ["Laziness", "M_TL_FEAR_LEADER"], ["Greed", "M_TL_FEAR_LEADER"]], "Standing up to protect his people showed courage."]
+  ], { h: ["What did the leader do, and what quality does that show?", "Leaders are respected for fairness, courage and wisdom."], s1: "Read what the leader did and name the quality." })),
+  // ---------------------------------------------------------------- EARLY_FORMS
+  fam("ef.which", `${EG}EARLY_FORMS`, "direct", 1, choose3([
+    ["How did Kenyan communities govern themselves long ago?", "By councils of elders and other leaders", [["They had no government", "M_EG_NO_GOVT"], ["They had no rules at all", "M_EG_NO_GOVT"], ["By a single foreign king", "M_EG_KING_ALL"]], "Communities had their own leaders, rules and councils."],
+    ["Which of these communities was ruled by a king?", "The Wanga", [["The Maasai", "M_EG_KING_ALL"], ["The Ameru", "M_EG_KING_ALL"], ["The Agikuyu", "M_EG_KING_ALL"]], "The Wanga kingdom was ruled by the Nabongo."],
+    ["What was the Kiama among the Agikuyu?", "A council of elders", [["A king", "M_EG_KING_ALL"], ["A warrior group", "M_EG_ONE_RULER"], ["A kind of market", "M_EG_NO_GOVT"]], "The Kiama was the council of elders that made decisions."],
+    ["Which group of young men defended the Maasai?", "The morans", [["The elders", "M_EG_ONE_RULER"], ["The laibon", "M_EG_ONE_RULER"], ["The kings", "M_EG_KING_ALL"]], "Maasai morans were warriors who defended the community."],
+    ["Who made decisions in most Kenyan communities in the past?", "A council of elders", [["One foreign ruler", "M_EG_KING_ALL"], ["No one", "M_EG_NO_GOVT"], ["Only children", "M_EG_NO_GOVT"]], "Most decisions were made by councils of elders."]
+  ], { h: ["Communities had leaders and rules long before colonial rule.", "Most ruled through councils of elders, not kings."], s1: "Recall how communities governed themselves." })),
+  fam("ef.spot", `${EG}EARLY_FORMS`, "spot", 3, spot3([
+    ["Juma says Kenyans had no government before colonial rule. Which step has the mistake?", [["Step 1: Juma knows the colonial government started later.", true], ["Step 2: He decides that nobody ruled before it.", false], ["Step 3: He writes that there was no government.", true]], "Communities had councils of elders, age-sets and other leaders long before colonial rule.", "M_EG_NO_GOVT"],
+    ["Amina says every Kenyan community had a king. Which step has the mistake?", [["Step 1: Amina has heard of the Wanga king.", true], ["Step 2: She decides all communities had a king.", false], ["Step 3: She writes that every community had one.", true]], "Only some, such as the Wanga, had a king. Most had councils of elders.", "M_EG_KING_ALL"],
+    ["Kamau says the laibon ruled the Maasai alone like a king. Which step has the mistake?", [["Step 1: Kamau knows the laibon was an important leader.", true], ["Step 2: He decides the laibon made every decision alone.", false], ["Step 3: He writes that the laibon was a king.", true]], "The laibon gave spiritual guidance. Elders and age-sets made decisions.", "M_EG_ONE_RULER"],
+    ["Wanjiru says that the Njuri Ncheke was a Maasai council. Which step has the mistake?", [["Step 1: Wanjiru knows the Njuri Ncheke is a council of elders.", true], ["Step 2: She decides it belongs to the Maasai.", false], ["Step 3: She writes it is a Maasai council.", true]], "The Njuri Ncheke is the council of elders of the Ameru.", "M_EG_NO_GOVT"]
+  ], { h: ["Which step says something that is not true?", "Think about how communities governed themselves."], s1: "Check each step against what you know." })),
+  // ---------------------------------------------------------------- MAASAI_AMERU
+  fam("ma.which", `${EG}MAASAI_AMERU`, "direct", 1, choose3([
+    ["What was the council of elders of the Ameru called?", "Njuri Ncheke", [["Laibon", "M_EG_SAME_NAMES"], ["Moran", "M_EG_SAME_NAMES"], ["Kiama", "M_EG_SAME_NAMES"]], "The Njuri Ncheke was the council of elders of the Ameru."],
+    ["Who was the spiritual leader of the Maasai?", "The laibon", [["The Mugwe", "M_EG_SAME_NAMES"], ["Njuri Ncheke", "M_EG_SAME_NAMES"], ["The Nabongo", "M_EG_SAME_NAMES"]], "The laibon guided the Maasai spiritually."],
+    ["Who was the spiritual leader of the Ameru?", "The Mugwe", [["The laibon", "M_EG_SAME_NAMES"], ["The moran", "M_EG_SAME_NAMES"], ["The Nabongo", "M_EG_SAME_NAMES"]], "The Mugwe was the spiritual leader of the Ameru."],
+    ["What do the Maasai and the Ameru have in common in their early government?", "Both used councils of elders and age-sets", [["Both were ruled by one king", "M_EG_ONE_RULER"], ["Both had no government", "M_EG_NO_GOVT"], ["Both used no leaders at all", "M_EG_NO_GOVT"]], "Neither had a king. Decisions came from elders and age-sets."],
+    ["Which group of Maasai young men defended the community?", "The morans", [["The Njuri Ncheke", "M_EG_SAME_NAMES"], ["The Mugwe", "M_EG_SAME_NAMES"], ["The laibon", "M_EG_SAME_NAMES"]], "Morans were the warriors of the Maasai."]
+  ], { h: ["Match each title to its community.", "Maasai: laibon and morans. Ameru: Njuri Ncheke and Mugwe."], s1: "Match the title with its community." })),
+  fam("ma.table", `${EG}MAASAI_AMERU`, "table", 2, choose3([
+    [
+      "The table compares early government. Which title belongs to the Ameru?",
+      "Njuri Ncheke",
+      [["Laibon", "M_EG_SAME_NAMES"], ["Moran", "M_EG_SAME_NAMES"], ["Nabongo", "M_EG_SAME_NAMES"]],
+      "Njuri Ncheke is the Ameru council of elders.",
+      { t: { head: ["Community", "Council or leader", "Spiritual leader"], rows: [["Maasai", "Council of elders", "Laibon"], ["Ameru", "Njuri Ncheke", "Mugwe"]] } }
+    ],
+    [
+      "Read the table. Who was the spiritual leader of the Maasai?",
+      "Laibon",
+      [["Mugwe", "M_EG_SAME_NAMES"], ["Njuri Ncheke", "M_EG_SAME_NAMES"], ["Nabongo", "M_EG_SAME_NAMES"]],
+      "The laibon was the Maasai spiritual leader.",
+      { t: { head: ["Community", "Council or leader", "Spiritual leader"], rows: [["Maasai", "Council of elders", "Laibon"], ["Ameru", "Njuri Ncheke", "Mugwe"]] } }
+    ],
+    [
+      "What do the two rows of the table show about Maasai and Ameru leaders?",
+      "Both had councils of elders and a spiritual leader",
+      [["Both had a king", "M_EG_ONE_RULER"], ["Neither had a leader", "M_EG_NO_GOVT"], ["Both had no council", "M_EG_NO_GOVT"]],
+      "Both had elders and a spiritual leader, and neither was ruled by a king.",
+      { t: { head: ["Community", "Council or leader", "Spiritual leader"], rows: [["Maasai", "Council of elders", "Laibon"], ["Ameru", "Njuri Ncheke", "Mugwe"]] } }
+    ],
+    [
+      "Which community in the table had the Mugwe?",
+      "The Ameru",
+      [["The Maasai", "M_EG_SAME_NAMES"], ["The Wanga", "M_EG_SAME_NAMES"], ["The Luo", "M_EG_SAME_NAMES"]],
+      "The Mugwe was the Ameru spiritual leader.",
+      { t: { head: ["Community", "Council or leader", "Spiritual leader"], rows: [["Maasai", "Council of elders", "Laibon"], ["Ameru", "Njuri Ncheke", "Mugwe"]] } }
+    ],
+    [
+      "In the table, who judged cases among the Ameru?",
+      "The Njuri Ncheke",
+      [["The laibon", "M_EG_SAME_NAMES"], ["The moran", "M_EG_SAME_NAMES"], ["The Nabongo", "M_EG_SAME_NAMES"]],
+      "The Njuri Ncheke judged cases and made decisions for the Ameru.",
+      { t: { head: ["Community", "Council or leader", "Spiritual leader"], rows: [["Maasai", "Council of elders", "Laibon"], ["Ameru", "Njuri Ncheke", "Mugwe"]] } }
+    ]
+  ], { h: ["Read the row of the community in the question.", "The laibon was Maasai. The Njuri Ncheke and Mugwe were Ameru."], s1: "Read each row of the table." })),
+  // ---------------------------------------------------------------- LESSONS
+  fam("ls.which", `${EG}LESSONS`, "direct", 1, choose3([
+    ["Which practice from early government is still useful today?", "Settling quarrels by talking", [["Harsh and painful punishments", "M_EG_COPY_ALL"], ["Giving no one any voice at all", "M_EG_OLD_USELESS"], ["Ruling without ever listening", "M_EG_OLD_USELESS"]], "Talking to settle disputes is still a good way today."],
+    ["Which old practice should not be copied today?", "Punishments that hurt people", [["Consulting elders", "M_EG_COPY_ALL"], ["Settling quarrels by talk", "M_EG_COPY_ALL"], ["Leaders serving their people", "M_EG_COPY_ALL"]], "Harsh punishments go against human rights."],
+    ["How is the old practice of asking elders for advice used today?", "Leaders ask the public for views", [["Leaders never ask anyone at all", "M_EG_OLD_USELESS"], ["Only elders are allowed to vote", "M_EG_COPY_ALL"], ["No one is ever given advice", "M_EG_OLD_USELESS"]], "Public participation is like consulting the community."],
+    ["Which old practice is like mediation today?", "Elders helping neighbours to agree", [["Elders punishing both of the sides", "M_EG_COPY_ALL"], ["Neighbours fighting over the matter", "M_EG_OLD_USELESS"], ["Everyone ignoring the quarrel", "M_EG_OLD_USELESS"]], "Mediation helps people agree by talking."],
+    ["A child says nothing from early government is useful today. What is the best reply?", "Some, like listening, still help", [["He is right, none of them do", "M_EG_OLD_USELESS"], ["All of them must return today", "M_EG_COPY_ALL"], ["Only the harsh ones are of use", "M_EG_COPY_ALL"]], "Good practices still guide leaders today."]
+  ], { h: ["Which practice helps people today and respects rights?", "Keep the good practices and leave the harmful ones."], s1: "Decide which practice still serves people and respects rights." })),
+  fam("ls.story", `${EG}LESSONS`, "word", 2, choose3([
+    ["A village headman asks everyone to share ideas before building a new well. Which old practice is this like?", "Consulting the community", [["Ruling alone", "M_EG_OLD_USELESS"], ["Ignoring the elders", "M_EG_OLD_USELESS"], ["Punishing everyone", "M_EG_COPY_ALL"]], "Asking for views is like the old council of elders."],
+    ["Two families disagree about a boundary. Elders listen to both and help them agree. What is this?", "Settling a dispute by talking", [["Taking one side straight away", "M_EG_OLD_USELESS"], ["Fighting it out in the open", "M_EG_OLD_USELESS"], ["Hiding the whole problem away", "M_EG_OLD_USELESS"]], "Mediation by elders is still used today."],
+    ["A school asks older learners to help guide the young ones. Which old practice does this copy?", "Giving duties by age", [["Ignoring all the older learners", "M_EG_OLD_USELESS"], ["Letting the young rule alone", "M_EG_COPY_ALL"], ["Making rules without any ideas", "M_EG_OLD_USELESS"]], "Age-sets gave duties to each group of people."],
+    ["A leader says he will bring back beating as a punishment because the old leaders used it. What is wrong?", "It breaks people's rights", [["Nothing at all is wrong", "M_EG_COPY_ALL"], ["It is always the best way", "M_EG_COPY_ALL"], ["It is meant only for the old", "M_EG_COPY_ALL"]], "We keep good practices and leave harmful ones behind."],
+    ["A county asks residents for ideas before making a budget. Which old practice is this like?", "Asking the people's views", [["Hiding the plan from them", "M_EG_OLD_USELESS"], ["Ruling by one person alone", "M_EG_OLD_USELESS"], ["Ignoring every resident", "M_EG_OLD_USELESS"]], "Public participation is like the council of elders asking the community."]
+  ], { h: ["Which good practice from the past does the story copy?", "Good practices respect people and their rights."], s1: "Think of the old practice behind the story." })),
+  // ---------------------------------------------------------------- HOW_CITIZEN
+  fam("hc.which", `${CZ}HOW_CITIZEN`, "direct", 1, choose3([
+    ["How can a person become a citizen of Kenya?", "By birth or by registration", [["By having an ID card only", "M_CZ_ID_MAKES"], ["By living there for one day", "M_CZ_BORN_IN_KENYA_ONLY"], ["By paying a small fee", "M_CZ_ID_MAKES"]], "Citizenship comes by birth or by registration."],
+    ["Which of these is a Kenyan citizen by birth?", "A child born to a Kenyan mother in Nairobi", [["A visitor on a short trip", "M_CZ_BORN_IN_KENYA_ONLY"], ["A tourist who bought a hat", "M_CZ_BORN_IN_KENYA_ONLY"], ["A person with no parents from Kenya", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child with a Kenyan parent is a citizen by birth."],
+    ["A person marries a Kenyan. After how many years may she apply to be registered?", "Seven years", [["One day", "M_CZ_MARRIAGE_INSTANT"], ["One week", "M_CZ_MARRIAGE_INSTANT"], ["One month", "M_CZ_MARRIAGE_INSTANT"]], "The Constitution sets seven years of marriage."],
+    ["What is an ID card?", "A document that shows a person is a citizen", [["What makes a person a citizen", "M_CZ_ID_MAKES"], ["A ticket to travel", "M_CZ_ID_MAKES"], ["A school certificate", "M_CZ_ID_MAKES"]], "An ID card proves citizenship, but it does not make someone a citizen."],
+    ["Which child is a Kenyan citizen by birth?", "A child born abroad to a Kenyan father", [["A child born in Kenya to two visitors", "M_CZ_BORN_IN_KENYA_ONLY"], ["A child who has no ID yet", "M_CZ_ID_MAKES"], ["A child with no Kenyan parent", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child with a Kenyan parent is a citizen by birth, even when born abroad."]
+  ], { h: ["Citizenship comes by birth or by registration.", "A parent who is a citizen makes the child a citizen by birth."], s1: "Recall the two ways of becoming a citizen." })),
+  fam("hc.story", `${CZ}HOW_CITIZEN`, "word", 2, choose3([
+    ["Aisha was born in London. Her mother is a Kenyan citizen. Is Aisha a Kenyan citizen by birth?", "Yes, as her mother is a Kenyan", [["No, she was not born in Kenya", "M_CZ_BORN_IN_KENYA_ONLY"], ["No, because she has no ID card", "M_CZ_ID_MAKES"], ["Only if she moves to live in Kenya", "M_CZ_BORN_IN_KENYA_ONLY"]], "A child born abroad is a citizen by birth when one parent is a Kenyan citizen."],
+    ["A woman from another country marries a Kenyan man today. When does she become a citizen?", "She may apply in seven years", [["She becomes one the same day", "M_CZ_MARRIAGE_INSTANT"], ["She becomes one after a week", "M_CZ_MARRIAGE_INSTANT"], ["She becomes one at once with a card", "M_CZ_MARRIAGE_INSTANT"]], "Marriage does not give citizenship at once."],
+    ["Kamau is 12 and has no ID card yet. Is he a Kenyan citizen?", "Yes, if he is a citizen by birth", [["No, he needs an ID first", "M_CZ_ID_MAKES"], ["No, only adults are citizens", "M_CZ_ID_MAKES"], ["Yes, but only after 18", "M_CZ_ID_MAKES"]], "An ID card is a document. It does not make a person a citizen."],
+    ["A girl was born in Kenya. Neither parent is a Kenyan citizen. Why may she not be a citizen by birth?", "The law needs a Kenyan parent", [["Because she has no phone yet", "M_CZ_BORN_IN_KENYA_ONLY"], ["Because she has no ID card yet", "M_CZ_ID_MAKES"], ["Because she lives in a big town", "M_CZ_BORN_IN_KENYA_ONLY"]], "Citizenship by birth depends on a Kenyan parent."],
+    ["A person has lived lawfully in Kenya for seven years and applies to be registered. Which kind of citizen would she be?", "A citizen by registration", [["A citizen by birth", "M_CZ_BORN_IN_KENYA_ONLY"], ["A visitor", "M_CZ_ID_MAKES"], ["A citizen by ID card", "M_CZ_ID_MAKES"]], "Lawful residence for seven years is one way to be registered."]
+  ], { h: ["Is there a Kenyan parent, or a registration?", "An ID is a paper. It does not make a citizen."], s1: "Check birth, parents and registration." })),
+  // ---------------------------------------------------------------- DUAL
+  fam("du.which", `${CZ}DUAL`, "direct", 1, choose3([
+    ["What does dual citizenship mean?", "Being a citizen of two countries", [["Having two ID cards in one country", "M_CZ_ONE_PASSPORT"], ["Living in two houses", "M_CZ_ONE_PASSPORT"], ["Having two names", "M_CZ_ONE_PASSPORT"]], "A dual citizen belongs to Kenya and another country."],
+    ["Does Kenya allow dual citizenship?", "Yes, the 2010 Constitution allows it", [["No, never", "M_CZ_ONE_PASSPORT"], ["Only for visitors", "M_CZ_ONE_PASSPORT"], ["Only before 2010", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution allows Kenyans to hold another citizenship."],
+    ["A Kenyan by birth takes the citizenship of another country. What happens to her Kenyan citizenship?", "She keeps it", [["She loses it at once", "M_CZ_DUAL_LOSE"], ["She loses it after a week", "M_CZ_DUAL_LOSE"], ["She must give it back", "M_CZ_DUAL_LOSE"]], "A citizen by birth does not lose Kenyan citizenship."],
+    ["Which person could be a dual citizen?", "A Kenyan who also holds a British passport", [["A person with two Kenyan ID cards", "M_CZ_ONE_PASSPORT"], ["A visitor with two bags", "M_CZ_ONE_PASSPORT"], ["A person with two homes in Kenya", "M_CZ_ONE_PASSPORT"]], "Dual means two countries, not two cards."],
+    ["Which year's Constitution allowed Kenyans to be dual citizens?", "2010", [["1963", "M_CZ_ONE_PASSPORT"], ["1990", "M_CZ_ONE_PASSPORT"], ["2001", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution introduced dual citizenship."]
+  ], { h: ["Dual means two countries.", "A citizen by birth keeps Kenyan citizenship."], s1: "Think of the meaning of dual." })),
+  fam("du.story", `${CZ}DUAL`, "word", 2, choose3([
+    ["Achieng, a Kenyan by birth, moves to Canada and becomes a Canadian citizen. Is she still a Kenyan?", "Yes, she keeps her citizenship", [["No, she lost it when she left", "M_CZ_DUAL_LOSE"], ["No, Kenya cancels it at once", "M_CZ_DUAL_LOSE"], ["Only if she returns within a year", "M_CZ_DUAL_LOSE"]], "A citizen by birth can hold two citizenships."],
+    ["Mutua says Kenya does not allow anyone to have two passports. What should his teacher say?", "The 2010 Constitution allows it", [["He is right, it is not allowed", "M_CZ_ONE_PASSPORT"], ["It was never allowed in Kenya", "M_CZ_ONE_PASSPORT"], ["It is allowed only for tourists", "M_CZ_ONE_PASSPORT"]], "The 2010 Constitution changed the old rule."],
+    ["Nafula is a citizen of Kenya and of Uganda. What is this called?", "Dual citizenship", [["Single citizenship", "M_CZ_ONE_PASSPORT"], ["A visitor pass", "M_CZ_ONE_PASSPORT"], ["A school card", "M_CZ_ONE_PASSPORT"]], "Belonging to two countries is dual citizenship."],
+    ["Hassan was born in Mombasa to Kenyan parents. He gets a second citizenship from another country. What happens to his Kenyan citizenship?", "It stays", [["It ends at once", "M_CZ_DUAL_LOSE"], ["It ends after a year", "M_CZ_DUAL_LOSE"], ["It is given to his father", "M_CZ_DUAL_LOSE"]], "Citizens by birth keep their Kenyan citizenship."],
+    ["A teacher says one flag cancels another. A child asks about dual citizenship. What is true?", "He belongs to both countries", [["The first flag is cancelled", "M_CZ_DUAL_LOSE"], ["He may belong to neither one", "M_CZ_ONE_PASSPORT"], ["He must give one up at once", "M_CZ_DUAL_LOSE"]], "A dual citizen belongs to two countries."]
+  ], { h: ["Does Kenya allow dual citizenship? Yes, since 2010.", "A Kenyan by birth keeps Kenyan citizenship."], s1: "Recall the rule about dual citizenship in the Constitution." })),
+  // ---------------------------------------------------------------- GOOD_CITIZEN
+  fam("gc.which", `${CZ}GOOD_CITIZEN`, "direct", 1, choose3([
+    ["Which action shows good citizenship for a child?", "Keeping the school compound clean", [["Waiting until 18 to do anything", "M_CZ_ONLY_VOTING"], ["Doing whatever one likes", "M_CZ_RIGHTS_NO_DUTY"], ["Leaving litter around", "M_CZ_RIGHTS_NO_DUTY"]], "Good citizens care for their surroundings at any age."],
+    ["Which is a duty of a citizen?", "To obey the law", [["To do whatever one likes", "M_CZ_RIGHTS_NO_DUTY"], ["To only receive services", "M_CZ_RIGHTS_NO_DUTY"], ["To avoid all rules", "M_CZ_RIGHTS_NO_DUTY"]], "Citizens have duties as well as rights."],
+    ["What should a good citizen do if she sees someone breaking the law?", "Report to the right people", [["Join in", "M_CZ_RIGHTS_NO_DUTY"], ["Ignore it", "M_CZ_RIGHTS_NO_DUTY"], ["Laugh at it", "M_CZ_RIGHTS_NO_DUTY"]], "Reporting to the police or a teacher helps keep order."],
+    ["Which action shows a good citizen at 18?", "Voting in an election", [["Staying away from voting", "M_CZ_ONLY_VOTING"], ["Ignoring all rules", "M_CZ_RIGHTS_NO_DUTY"], ["Breaking the law", "M_CZ_RIGHTS_NO_DUTY"]], "Voting is one duty of an adult citizen."],
+    ["Which is the best way for a ten-year-old to show good citizenship?", "Respecting others and obeying rules", [["Saying citizenship starts at 18", "M_CZ_ONLY_VOTING"], ["Doing only what she likes", "M_CZ_RIGHTS_NO_DUTY"], ["Taking what is not hers", "M_CZ_RIGHTS_NO_DUTY"]], "Good citizenship starts with how we treat others now."]
+  ], { h: ["Which action helps others and the community?", "Citizens have duties as well as rights."], s1: "Choose the action that helps others." })),
+  fam("gc.story", `${CZ}GOOD_CITIZEN`, "word", 2, choose3([
+    ["A class cleans the roadside near the school on Saturday. What does this show?", "Good citizenship", [["Wasting time", "M_CZ_ONLY_VOTING"], ["Breaking rules", "M_CZ_RIGHTS_NO_DUTY"], ["Ignoring duties", "M_CZ_RIGHTS_NO_DUTY"]], "Caring for the community shows good citizenship."],
+    ["Mutua says only people who vote are good citizens. What is a better answer?", "Children can also be good citizens", [["He is right", "M_CZ_ONLY_VOTING"], ["Only adults can be good citizens", "M_CZ_ONLY_VOTING"], ["Voting is the only duty", "M_CZ_ONLY_VOTING"]], "Good citizens help and respect others at every age."],
+    ["Amina finds a lost wallet and hands it to the teacher. Which quality did she show?", "Honesty", [["Greed", "M_CZ_RIGHTS_NO_DUTY"], ["Pride", "M_CZ_RIGHTS_NO_DUTY"], ["Fear", "M_CZ_RIGHTS_NO_DUTY"]], "Returning lost property shows honesty, a quality of a good citizen."],
+    ["A neighbour dumps rubbish in a stream. What should a good citizen do?", "Tell the right people and keep the stream clean", [["Join the dumping", "M_CZ_RIGHTS_NO_DUTY"], ["Say nothing and walk away", "M_CZ_RIGHTS_NO_DUTY"], ["Ask for a reward", "M_CZ_RIGHTS_NO_DUTY"]], "Good citizens protect the environment."],
+    ["Kiprono says he has rights, so he need not follow any school rules. What is wrong?", "Citizens have duties as well as rights", [["Nothing is wrong", "M_CZ_RIGHTS_NO_DUTY"], ["Rules are only for adults", "M_CZ_RIGHTS_NO_DUTY"], ["Rights cancel all rules", "M_CZ_RIGHTS_NO_DUTY"]], "Every right comes with duties."]
+  ], { h: ["What helps the community?", "Rights come with duties."], s1: "Think about what helps others and the community." })),
+  // ---------------------------------------------------------------- ARMS_DUTIES
+  fam("ad.which", `${NG}ARMS_DUTIES`, "direct", 1, choose3([
+    ["Which arm of government makes laws?", "The Legislature", [["The Judiciary", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The President alone", "M_NG_PRESIDENT_ALL"]], "Parliament, the Legislature, makes laws."],
+    ["Which arm of government explains the law and settles disputes in courts?", "The Judiciary", [["The Legislature", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The President alone", "M_NG_PRESIDENT_ALL"]], "Courts, the Judiciary, explain the law."],
+    ["Which arm of government carries out the laws and runs the country?", "The Executive", [["The Judiciary", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The courts", "M_NG_ARM_MIX"]], "The President and Cabinet make up the Executive."],
+    ["What are the three arms of the National Government?", "Executive, Legislature and Judiciary", [["President, Governor and Senator", "M_NG_ARM_MIX"], ["Police, army and prison", "M_NG_ARM_MIX"], ["Cabinet, county and school", "M_NG_ARM_MIX"]], "The three arms are the Executive, the Legislature and the Judiciary."],
+    ["Who makes laws for Kenya?", "Parliament", [["The President alone", "M_NG_PRESIDENT_ALL"], ["The courts", "M_NG_ARM_MIX"], ["The police", "M_NG_ARM_MIX"]], "Parliament makes the laws."]
+  ], { h: ["Use one job for each arm: runs, makes, explains.", "Executive runs. Legislature makes laws. Judiciary explains the law."], s1: "Match each arm with its job." })),
+  fam("ad.story", `${NG}ARMS_DUTIES`, "word", 2, choose3([
+    ["A new law about school fees is being discussed in a big hall where members debate and vote. Which arm is at work?", "The Legislature", [["The Judiciary", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The police", "M_NG_ARM_MIX"]], "Members of Parliament debate and pass laws."],
+    ["Two neighbours go to court to settle a quarrel about land. Which arm helps them?", "The Judiciary", [["The Legislature", "M_NG_ARM_MIX"], ["The Executive", "M_NG_ARM_MIX"], ["The Senate alone", "M_NG_ARM_MIX"]], "Courts settle disputes."],
+    ["The Cabinet builds new roads and runs government offices. Which arm is this?", "The Executive", [["The Judiciary", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The courts", "M_NG_ARM_MIX"]], "Running government and carrying out the laws is the work of the Executive."],
+    ["Someone says the President alone makes laws, runs the courts and runs the government. What is wrong?", "Each arm has its own job", [["Nothing is wrong", "M_NG_PRESIDENT_ALL"], ["The President is the only arm", "M_NG_PRESIDENT_ALL"], ["The courts make laws", "M_NG_ARM_MIX"]], "Power is shared between three arms."],
+    ["A judge decides whether a person broke a law. Which arm does the judge serve?", "The Judiciary", [["The Executive", "M_NG_ARM_MIX"], ["The Legislature", "M_NG_ARM_MIX"], ["The Cabinet", "M_NG_ARM_MIX"]], "Judges are part of the Judiciary."]
+  ], { h: ["Does the story show making laws, running the country or explaining the law?", "One arm has each job."], s1: "Decide the job in the story." })),
+  // ---------------------------------------------------------------- ARMS_MEMBERS
+  fam("am.which", `${NG}ARMS_MEMBERS`, "direct", 1, choose3([
+    ["To which arm do judges belong?", "The Judiciary", [["The Executive", "M_NG_MEMBER_MIX"], ["The Legislature", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "Judges and magistrates belong to the Judiciary."],
+    ["To which arm does the President belong?", "The Executive", [["The Judiciary", "M_NG_MEMBER_MIX"], ["The Legislature", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "The President leads the Executive."],
+    ["To which arm do members of the National Assembly belong?", "The Legislature", [["The Executive", "M_NG_MEMBER_MIX"], ["The Judiciary", "M_NG_MEMBER_MIX"], ["The county government", "M_NG_COUNTY_NATIONAL"]], "Members of Parliament belong to the Legislature."],
+    ["Which of these belongs to the Executive?", "The Deputy President", [["A county governor", "M_NG_COUNTY_NATIONAL"], ["A High Court judge", "M_NG_MEMBER_MIX"], ["A Senator", "M_NG_MEMBER_MIX"]], "The Deputy President is part of the national Executive."],
+    ["Who heads the Judiciary?", "The Chief Justice", [["The President", "M_NG_MEMBER_MIX"], ["The Speaker", "M_NG_MEMBER_MIX"], ["A county governor", "M_NG_COUNTY_NATIONAL"]], "The Chief Justice heads the Judiciary."]
+  ], { h: ["Place each person by their job: run, make laws or judge.", "County governors lead counties, not the national arms."], s1: "Match the person with the arm." })),
+  fam("am.table", `${NG}ARMS_MEMBERS`, "table", 2, choose3([
+    [
+      "Look at the table. Which title belongs to the Legislature?",
+      "Senator",
+      [["Cabinet Secretary", "M_NG_MEMBER_MIX"], ["Judge", "M_NG_MEMBER_MIX"], ["Governor", "M_NG_COUNTY_NATIONAL"]],
+      "A Senator belongs to the Legislature.",
+      { t: { head: ["Title", "Job"], rows: [["Senator", "Debates and makes laws in the Senate"], ["Cabinet Secretary", "Runs a ministry"], ["Judge", "Hears cases in court"], ["Governor", "Leads a county"]] } }
+    ],
+    [
+      "Which title in the table belongs to the Executive?",
+      "Cabinet Secretary",
+      [["Senator", "M_NG_MEMBER_MIX"], ["Judge", "M_NG_MEMBER_MIX"], ["Governor", "M_NG_COUNTY_NATIONAL"]],
+      "A Cabinet Secretary runs a ministry as part of the Executive.",
+      { t: { head: ["Title", "Job"], rows: [["Senator", "Debates and makes laws in the Senate"], ["Cabinet Secretary", "Runs a ministry"], ["Judge", "Hears cases in court"], ["Governor", "Leads a county"]] } }
+    ],
+    [
+      "Which title in the table belongs to the Judiciary?",
+      "Judge",
+      [["Senator", "M_NG_MEMBER_MIX"], ["Cabinet Secretary", "M_NG_MEMBER_MIX"], ["Governor", "M_NG_COUNTY_NATIONAL"]],
+      "A judge hears cases in court as part of the Judiciary.",
+      { t: { head: ["Title", "Job"], rows: [["Senator", "Debates and makes laws in the Senate"], ["Cabinet Secretary", "Runs a ministry"], ["Judge", "Hears cases in court"], ["Governor", "Leads a county"]] } }
+    ],
+    [
+      "Which title in the table is NOT part of the three arms of the National Government?",
+      "Governor",
+      [["Senator", "M_NG_COUNTY_NATIONAL"], ["Cabinet Secretary", "M_NG_COUNTY_NATIONAL"], ["Judge", "M_NG_COUNTY_NATIONAL"]],
+      "A governor leads a county government, which is a different level.",
+      { t: { head: ["Title", "Job"], rows: [["Senator", "Debates and makes laws in the Senate"], ["Cabinet Secretary", "Runs a ministry"], ["Judge", "Hears cases in court"], ["Governor", "Leads a county"]] } }
+    ],
+    [
+      "The table lists four jobs. Which job belongs to a Member of the National Assembly?",
+      "Debates and makes laws",
+      [["Hears cases in court", "M_NG_MEMBER_MIX"], ["Runs a ministry", "M_NG_MEMBER_MIX"], ["Leads a county", "M_NG_COUNTY_NATIONAL"]],
+      "Members of the National Assembly make laws.",
+      { t: { head: ["Job", "Example"], rows: [["Debates and makes laws", "Member of the National Assembly"], ["Hears cases in court", "Judge"], ["Runs a ministry", "Cabinet Secretary"], ["Leads a county", "Governor"]] } }
+    ]
+  ], { h: ["Match the job in the row with the arm.", "Make laws, run the country, judge cases."], s1: "Read each row of the table." })),
+  // ---------------------------------------------------------------- SYMBOLS
+  fam("sy.which", `${NU}SYMBOLS`, "direct", 1, choose3([
+    ["What does the red on the Kenyan flag stand for?", "The blood shed for freedom", [["The people of Kenya", "M_NU_COLOUR_MEANING"], ["The land and its wealth", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Red stands for the blood shed in the struggle for freedom."],
+    ["What does the black on the Kenyan flag stand for?", "The people of Kenya", [["The blood shed for freedom", "M_NU_COLOUR_MEANING"], ["The land and its wealth", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Black stands for the people of Kenya."],
+    ["What does the green on the Kenyan flag stand for?", "The land and its wealth", [["The people of Kenya", "M_NU_COLOUR_MEANING"], ["The blood shed for freedom", "M_NU_COLOUR_MEANING"], ["Peace and honesty", "M_NU_COLOUR_MEANING"]], "Green stands for the land and its natural wealth."],
+    ["Which of these is a national symbol of Kenya?", "The national anthem", [["The Safari Rally", "M_NU_SYMBOL_MIX"], ["A football club", "M_NU_SYMBOL_MIX"], ["A popular song", "M_NU_SYMBOL_MIX"]], "The flag, coat of arms and anthem are official symbols."],
+    ["What is shown in the middle of the Kenyan flag?", "A Maasai shield and two spears", [["A lion and an eagle", "M_NU_SYMBOL_MIX"], ["A cockerel and an axe", "M_NU_SYMBOL_MIX"], ["A mountain and a lake", "M_NU_SYMBOL_MIX"]], "The shield and two spears stand for the defence of freedom."]
+  ], { h: ["Black people, red blood, green land, white peace.", "The flag, coat of arms and anthem are official symbols."], s1: "Recall the meaning of each colour." })),
+  fam("sy.story", `${NU}SYMBOLS`, "word", 2, choose3([
+    ["Njeri is making a flag for Jamhuri Day. She paints a stripe to show the people of Kenya. Which colour should it be?", "Black", [["Red", "M_NU_COLOUR_MEANING"], ["Green", "M_NU_COLOUR_MEANING"], ["White", "M_NU_COLOUR_MEANING"]], "Black stands for the people."],
+    ["A learner says the green part of the flag stands for the blood shed for freedom. What is the correct meaning of green?", "The land and its wealth", [["The blood shed", "M_NU_COLOUR_MEANING"], ["The people", "M_NU_COLOUR_MEANING"], ["Peace", "M_NU_COLOUR_MEANING"]], "Red stands for blood. Green stands for the land and its wealth."],
+    ["The school sings the national anthem at assembly. What is the anthem?", "A national symbol", [["A school game", "M_NU_SYMBOL_MIX"], ["A local dance", "M_NU_SYMBOL_MIX"], ["A club song", "M_NU_SYMBOL_MIX"]], "The anthem is one of Kenya's official symbols."],
+    ["Which symbol has two lions holding a shield?", "The coat of arms", [["The flag", "M_NU_SYMBOL_MIX"], ["The anthem", "M_NU_SYMBOL_MIX"], ["The Safari Rally", "M_NU_SYMBOL_MIX"]], "The coat of arms shows two lions holding a shield."],
+    ["A learner says the Safari Rally is a national symbol of Kenya. What is the best reply?", "It is a sports event, not an official symbol", [["He is right", "M_NU_SYMBOL_MIX"], ["It is the flag", "M_NU_SYMBOL_MIX"], ["It is the anthem", "M_NU_SYMBOL_MIX"]], "The official symbols include the flag, coat of arms and anthem."]
+  ], { h: ["Black people, red blood, green land, white peace.", "Only the official symbols count."], s1: "Match the colour or symbol to its meaning." })),
+  // ---------------------------------------------------------------- UNITY_FACTORS
+  fam("uf.which", `${NU}UNITY_FACTORS`, "direct", 1, choose3([
+    ["What does national unity mean?", "Different communities live in peace", [["Everyone is exactly the same", "M_NU_UNITY_SAME"], ["Everyone speaks one language only", "M_NU_UNITY_SAME"], ["Everyone lives in one single town", "M_NU_UNITY_SAME"]], "Unity means living and working together although we are different."],
+    ["Which one helps national unity?", "Shared national languages", [["Keeping communities well apart", "M_NU_TRIBE_FIX"], ["Insulting other groups of people", "M_NU_TRIBE_FIX"], ["Refusing to mix with anyone", "M_NU_TRIBE_FIX"]], "Shared languages help communities talk to each other."],
+    ["Which of these is a challenge to national unity?", "Tribalism", [["National holidays", "M_NU_UNITY_SAME"], ["The national flag", "M_NU_UNITY_SAME"], ["Schools with mixed pupils", "M_NU_UNITY_SAME"]], "Tribalism divides people."],
+    ["How can we overcome tribalism?", "Mix and respect all communities", [["Keep the communities apart", "M_NU_TRIBE_FIX"], ["Ignore the problem and move on", "M_NU_TRIBE_FIX"], ["Praise only our own group", "M_NU_TRIBE_FIX"]], "Mixing and respect build understanding."],
+    ['What does the national motto "Harambee" mean?', "Let us all pull together", [["Let us all compete", "M_NU_UNITY_SAME"], ["Let us keep apart", "M_NU_TRIBE_FIX"], ["Let us all be the same", "M_NU_UNITY_SAME"]], "Harambee means pulling together for a common purpose."]
+  ], { h: ["Unity is living together in peace even when we are different.", "Respect and sharing overcome tribalism."], s1: "Think about what brings people together." })),
+  fam("uf.story", `${NU}UNITY_FACTORS`, "word", 2, choose3([
+    ["Learners from many communities play in one school football team. What does this help?", "National unity", [["Tribalism", "M_NU_TRIBE_FIX"], ["Quarrels", "M_NU_TRIBE_FIX"], ["Separation", "M_NU_TRIBE_FIX"]], "Sports bring people of different communities together."],
+    ["A leader gives jobs only to people from his own community. Which problem does this cause?", "Unfair sharing that harms unity", [["Better unity among them all", "M_NU_UNITY_SAME"], ["More peace in the whole land", "M_NU_UNITY_SAME"], ["Fair treatment of every person", "M_NU_UNITY_SAME"]], "Unfair sharing makes other groups feel left out."],
+    ["Two groups in a village quarrel. What is a good way to overcome the problem?", "Talk and listen to each side", [["Keep them apart for ever", "M_NU_TRIBE_FIX"], ["Take one side and support it", "M_NU_TRIBE_FIX"], ["Ignore the quarrel and go on", "M_NU_TRIBE_FIX"]], "Dialogue helps people understand each other."],
+    ["Amina says unity means everyone must be the same. What is the best reply?", "Unity is peace although we differ", [["She is right, we must be alike", "M_NU_UNITY_SAME"], ["We must all speak one language", "M_NU_UNITY_SAME"], ["We must all look exactly alike", "M_NU_UNITY_SAME"]], "Different communities live together peacefully."],
+    ["The whole country celebrates Madaraka Day. How does this help unity?", "People share one national day", [["It divides people into groups", "M_NU_TRIBE_FIX"], ["It helps only one single group", "M_NU_TRIBE_FIX"], ["It stops all sharing between them", "M_NU_TRIBE_FIX"]], "National days bring all Kenyans together."]
+  ], { h: ["What brings people of different communities together?", "Unfair treatment and tribalism divide people."], s1: "Think about whether the story joins people or divides them." }), "c"),
+  // ---------------------------------------------------------------- BASIC_RIGHTS
+  fam("br.which", `${HR}BASIC_RIGHTS`, "direct", 1, choose3([
+    ["Which of these is a human right?", "Education", [["A new phone", "M_HR_WANT_AS_RIGHT"], ["Sweets every day", "M_HR_WANT_AS_RIGHT"], ["A toy of your choice", "M_HR_WANT_AS_RIGHT"]], "Education is a right. A phone, sweets and a toy are things we want."],
+    ["Who has the right to education?", "Every child", [["Only adults", "M_HR_ADULT_ONLY"], ["Only boys", "M_HR_ADULT_ONLY"], ["Only rich children", "M_HR_ADULT_ONLY"]], "Every child has the right to education."],
+    ["Which is a right of a child?", "Protection from abuse", [["Choosing not to go to school", "M_HR_WANT_AS_RIGHT"], ["Getting everything you ask for", "M_HR_WANT_AS_RIGHT"], ["Ruling the house", "M_HR_WANT_AS_RIGHT"]], "Every child has the right to be protected from abuse."],
+    ["Which of these is a right to life and health?", "Access to medical care", [["Owning a car", "M_HR_WANT_AS_RIGHT"], ["Having a big house", "M_HR_WANT_AS_RIGHT"], ["A new bicycle each year", "M_HR_WANT_AS_RIGHT"]], "Health care is a basic right."],
+    ["Who has human rights?", "Every person, including children", [["Only adults", "M_HR_ADULT_ONLY"], ["Only citizens with ID", "M_HR_ADULT_ONLY"], ["Only men", "M_HR_ADULT_ONLY"]], "Human rights belong to every person."]
+  ], { h: ["Rights protect life and dignity.", "A want is nice to have but is not a right."], s1: "Decide whether it protects life and dignity." })),
+  fam("br.story", `${HR}BASIC_RIGHTS`, "word", 2, choose3([
+    ["A boy of ten is kept at home to work and is never sent to school. Which right is denied?", "The right to education", [["The right to a phone", "M_HR_WANT_AS_RIGHT"], ["The right to sweets", "M_HR_WANT_AS_RIGHT"], ["The right to a toy", "M_HR_WANT_AS_RIGHT"]], "Every child has the right to education."],
+    ["A girl is beaten badly at home. Which right is broken?", "The right to be protected", [["The right to a holiday trip", "M_HR_WANT_AS_RIGHT"], ["The right to the newest phone", "M_HR_WANT_AS_RIGHT"], ["The right to sweets every day", "M_HR_WANT_AS_RIGHT"]], "Children have the right to be protected from abuse."],
+    ["Wafula says children have no rights because they are young. What is the best reply?", "Every person has rights", [["He is right, only adults do", "M_HR_ADULT_ONLY"], ["Only adults have any rights", "M_HR_ADULT_ONLY"], ["Rights only start at age 18", "M_HR_ADULT_ONLY"]], "Human rights belong to everyone."],
+    ["Njeri says she has a right to the latest phone. What is wrong?", "A phone is a want, not a right", [["Nothing is wrong with it", "M_HR_WANT_AS_RIGHT"], ["A phone is a basic human right", "M_HR_WANT_AS_RIGHT"], ["Every want is also a right", "M_HR_WANT_AS_RIGHT"]], "Rights protect life and dignity. Wants are different."],
+    ["A child falls sick and the family takes her to a clinic. Which right is being met?", "The right to health", [["The right to a toy", "M_HR_WANT_AS_RIGHT"], ["The right to a car", "M_HR_WANT_AS_RIGHT"], ["The right to sweets", "M_HR_WANT_AS_RIGHT"]], "Health care is a basic right."]
+  ], { h: ["Which right protects the child in the story?", "A want is not a right."], s1: "Think about which right the story is about." })),
+  // ---------------------------------------------------------------- RIGHTS_RESPONSIBILITY
+  fam("rr.which", `${HR}RIGHTS_RESPONSIBILITY`, "direct", 1, choose3([
+    ["What goes with every right?", "A duty to respect others' rights", [["A right to do anything at all", "M_HR_NO_LIMIT"], ["No duties of any kind at all", "M_HR_NO_LIMIT"], ["A right to harm other people", "M_HR_NO_LIMIT"]], "Each right comes with a duty to respect it in others."],
+    ["A child is badly beaten at home. What should another child do?", "Tell an adult or call Childline 116", [["Keep quiet, it is a family matter", "M_HR_NO_REPORT"], ["Tell no one about it at all", "M_HR_NO_REPORT"], ["Pretend not to have seen it", "M_HR_NO_REPORT"]], "Abuse is never a secret to keep."],
+    ["Why do human rights matter?", "They protect dignity and fairness", [["They allow people to do anything", "M_HR_NO_LIMIT"], ["They help only the rich people", "M_HR_NO_LIMIT"], ["They have no use in real life", "M_HR_NO_LIMIT"]], "Rights protect every person's dignity."],
+    ["Which is a way to protect human rights?", "Report when rights are denied", [["Say nothing", "M_HR_NO_REPORT"], ["Join those breaking rights", "M_HR_NO_LIMIT"], ["Look away", "M_HR_NO_REPORT"]], "Speaking up helps protect rights."],
+    ["Where can a child get help if her rights are denied?", "A teacher or a children's officer", [["Nowhere at all in the land", "M_HR_NO_REPORT"], ["A stranger met on the road", "M_HR_NO_REPORT"], ["No one at all cares about it", "M_HR_NO_REPORT"]], "Teachers and the children's office help children."]
+  ], { h: ["Rights come with duties.", "A child whose rights are denied should tell a trusted adult."], s1: "Think about what a right needs from other people." })),
+  fam("rr.story", `${HR}RIGHTS_RESPONSIBILITY`, "word", 2, choose3([
+    ["Eve plays loud music late at night, saying she has a right to enjoy herself. Whose right is she forgetting?", "The right of neighbours to rest", [["Her own right", "M_HR_NO_LIMIT"], ["No one's right", "M_HR_NO_LIMIT"], ["The teacher's right", "M_HR_NO_LIMIT"]], "Our rights end where they harm others."],
+    ["Juma sees a classmate being hurt by an older boy. What should he do?", "Tell a teacher at once", [["Say nothing", "M_HR_NO_REPORT"], ["Join in", "M_HR_NO_LIMIT"], ["Laugh", "M_HR_NO_LIMIT"]], "Telling a teacher protects the classmate's rights."],
+    ["Amina says she can say anything she likes to a classmate because of her right to speak. What is missing?", "Respect for the classmate's feelings and rights", [["Nothing is missing", "M_HR_NO_LIMIT"], ["A louder voice", "M_HR_NO_LIMIT"], ["More friends", "M_HR_NO_LIMIT"]], "Rights come with the duty to respect others."],
+    ["A child tells her teacher that an adult hurts her at home. What should the teacher do?", "Take her seriously and get help", [["Tell her to keep it secret", "M_HR_NO_REPORT"], ["Ignore it", "M_HR_NO_REPORT"], ["Blame her", "M_HR_NO_REPORT"]], "Abuse must be reported so the child is safe."],
+    ["Which number can a child call in Kenya to get help when in danger?", "116", [["100", "M_HR_NO_REPORT"], ["999 only for fires", "M_HR_NO_REPORT"], ["No number exists", "M_HR_NO_REPORT"]], "Childline 116 is a free helpline for children."]
+  ], { h: ["Which choice respects the rights of others?", "Abuse should be reported, not hidden."], s1: "Think about the rights of everyone in the story." }), "d"),
+  // ---------------------------------------------------------------- TYPES
+  fam("dt.which", `${DM}TYPES`, "direct", 1, choose3([
+    ["The class raises hands to choose a game. What type of democracy is this?", "Direct democracy", [["Representative democracy", "M_DM_TYPE_MIX"], ["Rule by one person", "M_DM_NOT_DEMOCRACY"], ["No democracy", "M_DM_NOT_DEMOCRACY"]], "When every person votes on the matter, it is direct democracy."],
+    ["Voters elect a Member of Parliament to speak for them. What type of democracy is this?", "Representative democracy", [["Direct democracy", "M_DM_TYPE_MIX"], ["Rule by one person", "M_DM_NOT_DEMOCRACY"], ["No democracy", "M_DM_NOT_DEMOCRACY"]], "People elect leaders to decide for them."],
+    ["Which is an example of representative democracy?", "Electing a class monitor", [["A family meeting where all vote", "M_DM_TYPE_MIX"], ["A leader who takes power without a vote", "M_DM_NOT_DEMOCRACY"], ["A teacher who appoints everyone", "M_DM_NOT_DEMOCRACY"]], "The class chooses someone to act for them."],
+    ["Which is an example of direct democracy?", "Everyone voting by raising hands", [["Electing a Senator", "M_DM_TYPE_MIX"], ["A king choosing alone", "M_DM_NOT_DEMOCRACY"], ["A chief ruling for life", "M_DM_NOT_DEMOCRACY"]], "Each person decides directly."],
+    ["Which of these is a democracy?", "People choose their leaders by voting", [["A leader keeps power for life without elections", "M_DM_NOT_DEMOCRACY"], ["One person decides everything", "M_DM_NOT_DEMOCRACY"], ["The strongest takes over", "M_DM_NOT_DEMOCRACY"]], "In a democracy people choose their leaders."]
+  ], { h: ["Did each person decide, or did chosen people decide?", "Democracy means people choose their leaders."], s1: "Ask who made the decision." })),
+  fam("dt.spot", `${DM}TYPES`, "spot", 3, spot3([
+    ["Juma says that a class vote by raising hands is representative democracy. Which step has the mistake?", [["Step 1: Juma sees every learner raising a hand.", true], ["Step 2: He decides that is representative democracy.", false], ["Step 3: He writes that learners elected a leader.", true]], "When every person votes, it is direct democracy.", "M_DM_TYPE_MIX"],
+    ["Amina says that voting for a Member of Parliament is direct democracy. Which step has the mistake?", [["Step 1: Amina sees voters choosing a person.", true], ["Step 2: She decides that is direct democracy.", false], ["Step 3: She writes that voters decide every law themselves.", true]], "Voters choose a person to decide for them. This is representative democracy.", "M_DM_TYPE_MIX"],
+    ["Wafula says a leader who rules for life without elections is a democrat. Which step has the mistake?", [["Step 1: Wafula sees a leader with a lot of power.", true], ["Step 2: He decides that makes him a democrat.", false], ["Step 3: He writes that the country is a democracy.", true]], "In a democracy, people choose their leaders by voting.", "M_DM_NOT_DEMOCRACY"],
+    ["Njeri says a school where the head picks the prefects alone has an election. Which step has the mistake?", [["Step 1: Njeri sees the head choosing prefects.", true], ["Step 2: She decides this is an election.", false], ["Step 3: She writes that learners voted.", true]], "An election needs the learners to vote.", "M_DM_NOT_DEMOCRACY"]
+  ], { h: ["Which step says something that is not true?", "Direct: everyone votes. Representative: elected leaders decide."], s1: "Check each step against the meaning of democracy." })),
+  // ---------------------------------------------------------------- BENEFITS_PRACTICE
+  fam("db.which", `${DM}BENEFITS_PRACTICE`, "direct", 1, choose3([
+    ["What is the fair way to choose a class monitor?", "A fair secret vote", [["The loudest learner is chosen", "M_DM_LOUDEST"], ["The teacher picks her own friend", "M_DM_LOUDEST"], ["The strongest learner just wins", "M_DM_LOUDEST"]], "A free, secret vote is fair."],
+    ["What is a benefit of democracy?", "Everyone's voice counts", [["Only the loudest is heard", "M_DM_LOUDEST"], ["One person decides all", "M_DM_LOUDEST"], ["Only the majority matters", "M_DM_MAJORITY_ALL"]], "Democracy lets all people take part."],
+    ["After a vote, 12 learners chose football and 8 chose netball. What is fair?", "Play football, respect the 8", [["Ignore the 8 learners totally", "M_DM_MAJORITY_ALL"], ["Stop all games for everyone", "M_DM_MAJORITY_ALL"], ["Punish the 8 for their choice", "M_DM_MAJORITY_ALL"]], "The majority decides, but the minority is still respected."],
+    ["Why is it good for leaders to be chosen by voting?", "They answer to the people", [["They can ignore everyone", "M_DM_LOUDEST"], ["They need not listen", "M_DM_LOUDEST"], ["They rule for life", "M_DM_LOUDEST"]], "Leaders chosen by voting must listen to the people."],
+    ["What should learners do when their candidate loses a fair election?", "Accept the result peacefully", [["Refuse to follow the winner", "M_DM_LOUDEST"], ["Insult the winner in public", "M_DM_LOUDEST"], ["Start a fight with the winner", "M_DM_LOUDEST"]], "In a democracy we accept fair results peacefully."]
+  ], { h: ["What makes a vote fair?", "The majority decides, but the minority is still respected."], s1: "Think about fairness for everyone." })),
+  fam("db.story", `${DM}BENEFITS_PRACTICE`, "word", 2, choose3([
+    ["Kamau wants to be class monitor. He gives sweets to learners who vote for him. What is wrong?", "A vote must be free and fair", [["Nothing at all is wrong here", "M_DM_LOUDEST"], ["Sweets make the vote fairer", "M_DM_LOUDEST"], ["Winning is all that matters", "M_DM_LOUDEST"]], "A fair election must be free from bribes."],
+    ["In a class vote, 15 learners chose a trip to the museum and 10 chose the park. What is the best next step?", "Go to the museum, respect the 10", [["Ignore the 10 learners totally", "M_DM_MAJORITY_ALL"], ["Cancel the trip for everyone", "M_DM_MAJORITY_ALL"], ["Let the loudest learner decide", "M_DM_LOUDEST"]], "The majority decides, and the minority is still respected."],
+    ["The headteacher lets learners vote for school captains by secret ballot. What benefit does this show?", "Learners have a say in leaders", [["The head loses all authority", "M_DM_LOUDEST"], ["Fewer people will take part", "M_DM_LOUDEST"], ["The loudest learner always wins", "M_DM_LOUDEST"]], "Voting gives people a say in who leads."],
+    ["Achieng lost the class election by two votes. What should she do?", "Accept the result and help", [["Refuse to help the winner", "M_DM_LOUDEST"], ["Say the vote was not fair", "M_DM_LOUDEST"], ["Leave the class for good", "M_DM_LOUDEST"]], "Accepting a fair result keeps peace."],
+    ["A leader promises to listen but never asks the people. Which democratic benefit is missing?", "Leaders answer to the people", [["A bigger crowd of people", "M_DM_LOUDEST"], ["A louder voice for the leader", "M_DM_LOUDEST"], ["More power for him alone", "M_DM_LOUDEST"]], "In a democracy leaders answer to the people."]
+  ], { h: ["Is the vote free, fair and respectful of everyone?", "Accept fair results peacefully."], s1: "Think about fairness and respect for everyone." }), "c")
+];
+
+// src/ai-tutor/content/subjects/socialstudies_g5.js
+var socialstudies_g5_default = {
+  subject: "socialstudies",
+  grade: 5,
+  prefix: "SOCI",
+  name: "Social Studies",
+  shortName: "Social Studies",
+  icon: "globe",
+  description: "Grade 5 Social Studies from the CBC design",
+  map: { skills: SKILLS3, substrands: SUBSTRANDS2, outcomes: OUTCOMES2, misFeedback: MIS_FEEDBACK2 },
+  families: [...FAMILIES7, ...FAMILIES8, ...FAMILIES9, ...FAMILIES10],
+  // add each family file you write: [...A, ...B]
+  familyFiles: ["socialstudies_g5_a.js", "socialstudies_g5_b.js", "socialstudies_g5_c.js", "socialstudies_g5_d.js"],
+  // the same files by name (a phone build drops them while nothing is signed)
+  signed: SIGNED,
+  signedFile: "socialstudies_g5_signed.js",
+  checks: "family",
+  // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
+  idPrefix: "socialstudies5.",
+  // every family id starts with this
+  marker: null,
+  // 'text' when answers are marked as words by answerCheckText.js
+  bank: false,
+  // true only to also list the families in the shared bank (FAMILIES): Science G5 only
+  curriculumDir: "social_studies",
+  // curriculum/<dir>/g<N>.json
+  misconceptionsFile: "engine/data/curriculum/socialstudies.g5.misconceptions.json",
+  reviewDoc: "docs/qa/socialstudies-g5-review-2026-11-12.md",
+  // the pack a teacher reads: node scripts/build-subject-review-doc.mjs <subject> <grade> writes docs/qa/<subject>-g<N>-review-<date>.md
+  precheckLabel: "Social Studies 5"
+};
+
 // src/ai-tutor/content/subjects/index.generated.js
 var ENTRIES = [
   english_g5_default,
-  science_g5_default
+  science_g5_default,
+  socialstudies_g5_default
 ];
 
 // src/ai-tutor/content/subjects/registry.js
@@ -13200,9 +15746,9 @@ var skillMapOf = (subject) => subjectDef(subject)?.map || {};
 var substrandsOf = (subject) => subjectDef(subject)?.substrands || {};
 
 // src/ai-tutor/content/families/gaps.js
-var fam = (def) => family({ reviewed: false, ...def });
-var FAMILIES7 = [
-  fam({
+var fam2 = (def) => family({ reviewed: false, ...def });
+var FAMILIES11 = [
+  fam2({
     id: "g7.dec.tiles-row",
     skill: "G6_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -13221,7 +15767,7 @@ var FAMILIES7 = [
     }),
     check: ({ w, n }, a) => Math.abs(a / w - n) < 1e-9
   }),
-  fam({
+  fam2({
     id: "g7.dec.point-spot",
     skill: "G6_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -13242,7 +15788,7 @@ var FAMILIES7 = [
       };
     }
   }),
-  fam({
+  fam2({
     id: "g7.dec.share-litres",
     skill: "G6_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -13261,7 +15807,7 @@ var FAMILIES7 = [
     }),
     check: ({ each, n }, a) => Math.abs(a * n - each * n) < 1e-9
   }),
-  fam({
+  fam2({
     id: "g7.dec.how-many-packets",
     skill: "G6_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -13279,7 +15825,7 @@ var FAMILIES7 = [
       steps: [`${s} goes into 1 exactly ${round(1 / s, 0)} times.`, `So ${s} goes into ${k} exactly ${round(k / s, 0)} times, which is more than ${k}.`]
     })
   }),
-  fam({
+  fam2({
     id: "g7.eq.money-left",
     skill: "G6_SIMPLE_EQUATIONS",
     outcome: "G7.EQUATIONS.c",
@@ -13298,7 +15844,7 @@ var FAMILIES7 = [
     }),
     check: ({ spent, left }, a) => a - spent === left
   }),
-  fam({
+  fam2({
     id: "g7.eq.balance-why",
     skill: "G6_SIMPLE_EQUATIONS",
     outcome: "G7.EQUATIONS.b",
@@ -13313,7 +15859,7 @@ var FAMILIES7 = [
       steps: ["An equation is like a level balance.", "Taking the same from both sides keeps it level."]
     })
   }),
-  fam({
+  fam2({
     id: "g7.vol.box-carton",
     skill: "G6_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -13335,7 +15881,7 @@ var FAMILIES7 = [
     },
     check: ({ l, w, h, s }, a) => a * s * s * s === l * w * h
   }),
-  fam({
+  fam2({
     id: "g7.vol.find-height",
     skill: "G6_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -13354,7 +15900,7 @@ var FAMILIES7 = [
     }),
     check: ({ l, w, h }, a) => a * l * w === l * w * h
   }),
-  fam({
+  fam2({
     id: "g7.whole.cheque-digit",
     skill: "G7_PLACE_VALUE",
     outcome: "G7.WHOLE.a",
@@ -13373,7 +15919,7 @@ var FAMILIES7 = [
     }),
     check: ({ n, m }, a) => Math.floor(n / 1e6) === m && a % 1e6 === 0
   }),
-  fam({
+  fam2({
     id: "g7.whole.round-county-budget",
     skill: "G7_ROUNDING_WHOLE",
     outcome: "G7.WHOLE.d",
@@ -13393,7 +15939,7 @@ var FAMILIES7 = [
       };
     }
   }),
-  fam({
+  fam2({
     id: "g7.angles.road-crossing",
     skill: "G8_ANGLE_RELATIONSHIPS",
     outcome: "G7.ANGLES.c",
@@ -13412,7 +15958,7 @@ var FAMILIES7 = [
     }),
     check: ({ a }, v) => v + (180 - a) === 180
   }),
-  fam({
+  fam2({
     id: "g7.angles.parallel-reason",
     skill: "G8_ANGLE_RELATIONSHIPS",
     outcome: "G7.ANGLES.c",
@@ -13430,7 +15976,7 @@ var FAMILIES7 = [
       steps: [`Co-interior angles add up to 180\xB0.`, `180 \u2212 ${a} = ${180 - a}\xB0.`]
     })
   }),
-  fam({
+  fam2({
     id: "g5.length.cloth-table",
     skill: "G5_LENGTH_OPS",
     cskill: "MATH.G5.MEASUR.LENGTH.ADD_KM_M",
@@ -13455,7 +16001,7 @@ var FAMILIES7 = [
     },
     check: ({ a, b, c, d }, v) => v - b - d === (a + c) * 1e3
   }),
-  fam({
+  fam2({
     id: "g5.area.tile-floor",
     skill: "G5_AREA_INTRO",
     cskill: "MATH.G5.MEASUR.AREA.AREA_PROBLEMS",
@@ -13476,7 +16022,7 @@ var FAMILIES7 = [
     }),
     check: ({ l, w, left }, a) => a + l * w === l * w + left
   }),
-  fam({
+  fam2({
     id: "g5.whole.words-to-digits",
     skill: "G5_PLACE_VALUE",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.WORDS_TO_SYMBOLS",
@@ -13502,7 +16048,7 @@ var FAMILIES7 = [
     },
     check: ({ t, h }, a) => a % 100 === 0 && Math.floor(a / 1e3) === t && a % 1e3 / 100 === h
   }),
-  fam({
+  fam2({
     id: "g8.money.interest-table",
     skill: "G9_COMPOUND_INTEREST",
     outcome: "G8.MONEY.c",
@@ -13528,7 +16074,7 @@ var FAMILIES7 = [
 ];
 
 // src/ai-tutor/content/families/g1_3.js
-var fam2 = (def) => family({ reviewed: false, young: true, ...def });
+var fam3 = (def) => family({ reviewed: false, young: true, ...def });
 var distinct = (...v) => new Set(v).size === v.length;
 var DAYS = ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
 var shuffle3 = (a) => {
@@ -13540,9 +16086,9 @@ var shuffle3 = (a) => {
   return b;
 };
 var opts = (items2, rightText, why) => items2.map((t) => ({ text: t, right: t === rightText, why: t === rightText ? void 0 : typeof why === "function" ? why(t) : why }));
-var FAMILIES8 = [
+var FAMILIES12 = [
   // ================================================================ GRADE 1
-  fam2({
+  fam3({
     id: "g1.add.got-more",
     skill: "G1_ADD",
     outcome: "G1.ADD.0",
@@ -13561,7 +16107,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => ans - b === a
   }),
-  fam2({
+  fam3({
     id: "g1.add.how-many-more",
     skill: "G1_ADD",
     outcome: "G1.ADD.0",
@@ -13580,7 +16126,7 @@ var FAMILIES8 = [
     }),
     check: ({ t, a }, ans) => a + ans === t
   }),
-  fam2({
+  fam3({
     id: "g1.sub.gave-away",
     skill: "G1_SUB",
     outcome: "G1.SUB.0",
@@ -13599,7 +16145,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => ans + b === a
   }),
-  fam2({
+  fam3({
     id: "g1.sub.how-many-ate",
     skill: "G1_SUB",
     outcome: "G1.SUB.0",
@@ -13618,7 +16164,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, left }, ans) => left + ans === a
   }),
-  fam2({
+  fam3({
     id: "g1.counting.ten-more",
     skill: "G1_COUNTING",
     outcome: "G1.WHOLE.0",
@@ -13635,7 +16181,7 @@ var FAMILIES8 = [
     }),
     check: ({ n }, ans) => ans - n === 10
   }),
-  fam2({
+  fam3({
     id: "g1.prenumber.skip-gap",
     skill: "G1_PRENUMBER",
     outcome: "G1.PRENUMBER.0",
@@ -13656,7 +16202,7 @@ var FAMILIES8 = [
     }),
     check: ({ s, a }, ans) => ans - (a + s) === s && a + 3 * s - ans === s
   }),
-  fam2({
+  fam3({
     id: "g1.prenumber.bead-pattern",
     skill: "G1_PRENUMBER",
     outcome: "G1.PRENUMBER.0",
@@ -13681,7 +16227,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g1.length.longest-of-three",
     skill: "G1_LENGTH",
     outcome: "G1.LENGTH.0",
@@ -13704,7 +16250,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g1.mass.lightest-chain",
     skill: "G1_MASS",
     outcome: "G1.MASS.0",
@@ -13727,7 +16273,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g1.cap.holds-more",
     skill: "G1_CAPACITY",
     outcome: "G1.CAP.0",
@@ -13748,7 +16294,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g1.time.days-ahead",
     skill: "G1_TIME",
     outcome: "G1.TIME.0",
@@ -13765,7 +16311,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g1.time.hours-to-wait",
     skill: "G1_TIME",
     outcome: "G1.TIME.0",
@@ -13784,7 +16330,7 @@ var FAMILIES8 = [
     }),
     check: ({ now, k }, ans) => now + ans === now + k && ans > 0
   }),
-  fam2({
+  fam3({
     id: "g1.money.mixed-coins",
     skill: "G1_MONEY",
     outcome: "G1.MONEY.0",
@@ -13800,7 +16346,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => (ans - 5 * b) / 10 === a
   }),
-  fam2({
+  fam3({
     id: "g1.lines.curved-edge",
     skill: "G1_LINES",
     outcome: "G1.LINES.0",
@@ -13819,7 +16365,7 @@ var FAMILIES8 = [
       steps: [`A curved edge bends round, like a wheel. A straight edge does not bend, like a ruler.`, `The ${right} has the ${ask3 ? "curved" : "straight"} edge.`]
     })
   }),
-  fam2({
+  fam3({
     id: "g1.shapes.which-shape",
     skill: "G1_SHAPES",
     outcome: "G1.SHAPES.0",
@@ -13839,7 +16385,7 @@ var FAMILIES8 = [
     })
   }),
   // ================================================================ GRADE 2
-  fam2({
+  fam3({
     id: "g2.add.make-100",
     skill: "G2_ADD",
     outcome: "G2.ADD.0",
@@ -13858,7 +16404,7 @@ var FAMILIES8 = [
     }),
     check: ({ a }, ans) => a + ans === 100
   }),
-  fam2({
+  fam3({
     id: "g2.sub.how-many-fewer",
     skill: "G2_SUB",
     outcome: "G2.SUB.0",
@@ -13877,7 +16423,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => b + ans === a
   }),
-  fam2({
+  fam3({
     id: "g2.counting.skip-gap",
     skill: "G2_COUNTING",
     outcome: "G2.WHOLE.0",
@@ -13898,7 +16444,7 @@ var FAMILIES8 = [
     }),
     check: ({ s, d, a }, ans) => Math.abs(ans - (a + d)) === s && Math.abs(a + 3 * d - ans) === s
   }),
-  fam2({
+  fam3({
     id: "g2.place.tens-and-ones",
     skill: "G2_PLACE_VALUE",
     outcome: "G2.WHOLE.0",
@@ -13918,7 +16464,7 @@ var FAMILIES8 = [
     }),
     check: ({ t, o }, ans) => Math.floor(ans / 10) === t && ans % 10 === o
   }),
-  fam2({
+  fam3({
     id: "g2.mul.rows",
     skill: "G2_MULTIPLY_INTRO",
     outcome: "G2.MUL.0",
@@ -13937,7 +16483,7 @@ var FAMILIES8 = [
     }),
     check: ({ r, c }, ans) => ans / c === r
   }),
-  fam2({
+  fam3({
     id: "g2.mul.legs",
     skill: "G2_MULTIPLY_INTRO",
     outcome: "G2.MUL.0",
@@ -13957,7 +16503,7 @@ var FAMILIES8 = [
     }),
     check: ({ an, n }, ans) => ans / n === an[1]
   }),
-  fam2({
+  fam3({
     id: "g2.div.benches",
     skill: "G2_DIVISION_INTRO",
     outcome: "G2.DIV.0",
@@ -13977,7 +16523,7 @@ var FAMILIES8 = [
     }),
     check: ({ per, tot }, ans) => ans * per === tot
   }),
-  fam2({
+  fam3({
     id: "g2.frac.half-of",
     skill: "G2_FRACTIONS",
     outcome: "G2.FRAC.0",
@@ -13996,7 +16542,7 @@ var FAMILIES8 = [
     }),
     check: ({ n }, ans) => ans * 2 === n
   }),
-  fam2({
+  fam3({
     id: "g2.length.which-unit",
     skill: "G2_LENGTH",
     outcome: "G2.LENGTH.0",
@@ -14014,7 +16560,7 @@ var FAMILIES8 = [
       steps: [`${it[0][0].toUpperCase() + it[0].slice(1)} is ${it[1] === "metres" ? "big, so we count in metres" : "small, so we count in centimetres"}.`, `The best unit is ${it[1]}.`]
     })
   }),
-  fam2({
+  fam3({
     id: "g2.cap.buckets-fill",
     skill: "G2_CAPACITY",
     outcome: "G2.CAP.0",
@@ -14033,7 +16579,7 @@ var FAMILIES8 = [
     }),
     check: ({ j, tot }, ans) => ans * j === tot
   }),
-  fam2({
+  fam3({
     id: "g2.time.weeks-days",
     skill: "G2_TIME",
     outcome: "G2.TIME.0",
@@ -14049,7 +16595,7 @@ var FAMILIES8 = [
     }),
     check: ({ w }, ans) => ans / 7 === w
   }),
-  fam2({
+  fam3({
     id: "g2.money.two-things",
     skill: "G2_MONEY",
     outcome: "G2.MONEY.0",
@@ -14074,7 +16620,7 @@ var FAMILIES8 = [
     },
     check: ({ pa, pb }, ans) => ans - pb === pa
   }),
-  fam2({
+  fam3({
     id: "g2.shapes.tile-pattern",
     skill: "G2_SHAPES",
     outcome: "G2.SHAPES.0",
@@ -14100,7 +16646,7 @@ var FAMILIES8 = [
     }
   }),
   // ================================================================ GRADE 3
-  fam2({
+  fam3({
     id: "g3.count.build-number",
     skill: "G3_COUNTING",
     outcome: "G3.WHOLE.0",
@@ -14122,7 +16668,7 @@ var FAMILIES8 = [
     }),
     check: ({ h, t, o }, ans) => Math.floor(ans / 100) === h && Math.floor(ans / 10) % 10 === t && ans % 10 === o
   }),
-  fam2({
+  fam3({
     id: "g3.count.greatest-of-three",
     skill: "G3_COUNTING",
     outcome: "G3.WHOLE.0",
@@ -14144,7 +16690,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g3.add.two-days",
     skill: "G3_ADD",
     outcome: "G3.ADD.0",
@@ -14163,7 +16709,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => ans - a === b
   }),
-  fam2({
+  fam3({
     id: "g3.sub.trip",
     skill: "G3_SUB",
     outcome: "G3.SUB.0",
@@ -14185,7 +16731,7 @@ var FAMILIES8 = [
     }),
     check: ({ a, b }, ans) => ans + b === a
   }),
-  fam2({
+  fam3({
     id: "g3.mul.shelves",
     skill: "G3_MULTIPLY",
     outcome: "G3.MUL.0",
@@ -14204,7 +16750,7 @@ var FAMILIES8 = [
     }),
     check: ({ r, c }, ans) => ans / c === r
   }),
-  fam2({
+  fam3({
     id: "g3.mul.buy-many",
     skill: "G3_MULTIPLY",
     outcome: "G3.MUL.0",
@@ -14223,7 +16769,7 @@ var FAMILIES8 = [
     }),
     check: ({ pr, n }, ans) => ans / n === pr
   }),
-  fam2({
+  fam3({
     id: "g3.div.rope-pieces",
     skill: "G3_DIVIDE",
     outcome: "G3.DIV.0",
@@ -14242,7 +16788,7 @@ var FAMILIES8 = [
     }),
     check: ({ s, tot }, ans) => ans * s === tot
   }),
-  fam2({
+  fam3({
     id: "g3.frac.biggest-piece",
     skill: "G3_FRACTIONS",
     outcome: "G3.FRAC.0",
@@ -14256,7 +16802,7 @@ var FAMILIES8 = [
       steps: ["Halves make 2 pieces, quarters 4 pieces and eighths 8 pieces.", big ? "The fewest pieces are the biggest: halves." : "The most pieces are the smallest: eighths."]
     })
   }),
-  fam2({
+  fam3({
     id: "g3.length.cut-rope",
     skill: "G3_LENGTH",
     outcome: "G3.LENGTH.0",
@@ -14275,7 +16821,7 @@ var FAMILIES8 = [
     }),
     check: ({ m, c }, ans) => ans + c === 100 * m
   }),
-  fam2({
+  fam3({
     id: "g3.cap.pour-buckets",
     skill: "G3_CAPACITY",
     outcome: "G3.CAP.0",
@@ -14294,7 +16840,7 @@ var FAMILIES8 = [
     }),
     check: ({ b, n }, ans) => ans / b === n
   }),
-  fam2({
+  fam3({
     id: "g3.time.weeks-and-days",
     skill: "G3_TIME",
     outcome: "G3.TIME.0",
@@ -14313,7 +16859,7 @@ var FAMILIES8 = [
     }),
     check: ({ w, d }, ans) => ans - d === 7 * w
   }),
-  fam2({
+  fam3({
     id: "g3.money.bread-and-milk",
     skill: "G3_MONEY",
     outcome: "G3.MONEY.0",
@@ -14333,7 +16879,7 @@ var FAMILIES8 = [
     }),
     check: ({ x, y }, ans) => ans + x + y === 200
   }),
-  fam2({
+  fam3({
     id: "g3.position.turn",
     skill: "G3_POSITION",
     outcome: "G3.POSITION.0",
@@ -14351,7 +16897,7 @@ var FAMILIES8 = [
       };
     }
   }),
-  fam2({
+  fam3({
     id: "g3.shapes.name-by-count",
     skill: "G3_SHAPES",
     outcome: "G3.SHAPES.0",
@@ -14372,7 +16918,7 @@ var FAMILIES8 = [
 ];
 
 // src/ai-tutor/content/families/g4.js
-var fam3 = (def) => family({ reviewed: false, ...def });
+var fam4 = (def) => family({ reviewed: false, ...def });
 var rot = (arr, k) => {
   const n = k % arr.length;
   return [...arr.slice(n), ...arr.slice(0, n)];
@@ -14393,11 +16939,11 @@ var words = (n) => {
   return s.join(" ");
 };
 var ROMAN = { 2: "II", 3: "III", 4: "IV", 7: "VII", 8: "VIII", 9: "IX" };
-var FAMILIES9 = [
+var FAMILIES13 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.num.figures-notice",
     skill: "G4_NUMBER_WORDS",
     outcome: "G4.WHOLE.b",
@@ -14416,7 +16962,7 @@ var FAMILIES9 = [
     },
     check: ({ t, tu }, a) => a % 1e3 === tu && Math.floor(a / 1e3) === t && words(a) === words(t * 1e3 + tu)
   }),
-  fam3({
+  fam4({
     id: "g4.num.words-pick",
     skill: "G4_NUMBER_WORDS",
     outcome: "G4.WHOLE.c",
@@ -14435,7 +16981,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.place.chart-total",
     skill: "G4_PLACE_VALUE",
     outcome: "G4.WHOLE.a",
@@ -14460,7 +17006,7 @@ var FAMILIES9 = [
     }),
     check: ({ n, place: place3 }, a) => Math.floor(n % (place3 * 10) / place3) * place3 === a
   }),
-  fam3({
+  fam4({
     id: "g4.order.third-smallest",
     skill: "G4_ORDER_ROUND",
     outcome: "G4.WHOLE.d",
@@ -14484,7 +17030,7 @@ var FAMILIES9 = [
     }),
     check: ({ vals, s }, a) => vals.filter((v) => v < a).length === 2 && vals.includes(a) && s.indexOf(a) === 2
   }),
-  fam3({
+  fam4({
     id: "g4.round.spot-ones",
     skill: "G4_ORDER_ROUND",
     outcome: "G4.WHOLE.e",
@@ -14513,7 +17059,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.factors.not-a-factor",
     skill: "G4_FACTORS_MULTIPLES",
     outcome: "G4.WHOLE.f",
@@ -14538,7 +17084,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.multiples.why-multiple",
     skill: "G4_FACTORS_MULTIPLES",
     outcome: "G4.WHOLE.g",
@@ -14563,7 +17109,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.oddeven.pattern-why",
     skill: "G4_ODD_EVEN",
     outcome: "G4.WHOLE.i",
@@ -14586,7 +17132,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.oddeven.house-numbers",
     skill: "G4_ODD_EVEN",
     outcome: "G4.WHOLE.i",
@@ -14605,7 +17151,7 @@ var FAMILIES9 = [
     }),
     check: ({ o, n }, a) => a % 2 === 1 && (a - o) / 2 === n - 1
   }),
-  fam3({
+  fam4({
     id: "g4.roman.minute-hand",
     skill: "G4_ROMAN_NUMERALS",
     outcome: "G4.WHOLE.j",
@@ -14624,7 +17170,7 @@ var FAMILIES9 = [
   // ======================================================================
   // ADDITION: estimate, patterns
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.add.estimate-sales",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -14650,7 +17196,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a + b)) <= 10
   }),
-  fam3({
+  fam4({
     id: "g4.add.estimate-water",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -14677,7 +17223,7 @@ var FAMILIES9 = [
     }),
     check: ({ v }, a) => a % 10 === 0 && Math.abs(a - sum(v)) <= 15
   }),
-  fam3({
+  fam4({
     id: "g4.add.pattern-savings",
     skill: "G4_ADD",
     outcome: "G4.ADD.d",
@@ -14696,7 +17242,7 @@ var FAMILIES9 = [
     }),
     check: ({ s, d, n }, a) => (a - s) / d === n - 1
   }),
-  fam3({
+  fam4({
     id: "g4.add.pattern-missing",
     skill: "G4_ADD",
     outcome: "G4.ADD.d",
@@ -14719,7 +17265,7 @@ var FAMILIES9 = [
   // ======================================================================
   // SUBTRACTION: estimate, patterns
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.sub.estimate-stock",
     skill: "G4_SUB",
     outcome: "G4.SUB.c",
@@ -14747,7 +17293,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a - b)) <= 10 && v + r10(b) === r10(a)
   }),
-  fam3({
+  fam4({
     id: "g4.sub.estimate-steps",
     skill: "G4_SUB",
     outcome: "G4.SUB.c",
@@ -14779,7 +17325,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b }, v) => v[0] + 0 === r10(a) && v[1] === r10(b) && v[2] === v[0] - v[1] && v[3] + b === a && Math.abs(v[2] - v[3]) <= 10
   }),
-  fam3({
+  fam4({
     id: "g4.sub.pattern-next",
     skill: "G4_SUB",
     outcome: "G4.SUB.d",
@@ -14802,7 +17348,7 @@ var FAMILIES9 = [
     },
     check: ({ s, d }, a) => (s - a) / d === 4
   }),
-  fam3({
+  fam4({
     id: "g4.sub.pattern-tank",
     skill: "G4_SUB",
     outcome: "G4.SUB.d",
@@ -14824,7 +17370,7 @@ var FAMILIES9 = [
   // ======================================================================
   // MULTIPLICATION: estimate, patterns
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.mul.estimate-boxes",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.c",
@@ -14847,7 +17393,7 @@ var FAMILIES9 = [
     }),
     check: ({ n, k }, a) => a % k === 0 && a / k === r10(n)
   }),
-  fam3({
+  fam4({
     id: "g4.mul.estimate-why",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.c",
@@ -14876,7 +17422,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.mul.pattern-seedlings",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.d",
@@ -14895,7 +17441,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, m }, v) => v / m / m / m === a
   }),
-  fam3({
+  fam4({
     id: "g4.mul.pattern-table",
     skill: "G4_MULTIPLY",
     outcome: "G4.MUL.d",
@@ -14919,7 +17465,7 @@ var FAMILIES9 = [
   // ======================================================================
   // DIVISION: relating multiplication and division
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.div.related-facts",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -14940,7 +17486,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b }, v) => v[0] === a * b && v[1] * a === v[0] && v[2] * b === v[0]
   }),
-  fam3({
+  fam4({
     id: "g4.div.spot-check",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -14966,7 +17512,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.div.why-check",
     skill: "G4_DIVIDE",
     outcome: "G4.DIV.b",
@@ -14994,7 +17540,7 @@ var FAMILIES9 = [
   // ======================================================================
   // FRACTIONS: numerator and denominator, types, improper and mixed
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.frac.denominator-chapati",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.a",
@@ -15019,7 +17565,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.type-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -15053,7 +17599,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.type-why",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -15078,7 +17624,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.type-table",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.c",
@@ -15111,7 +17657,7 @@ var FAMILIES9 = [
     },
     check: ({ texts, ask: ask3 }, a) => texts.filter((x) => ask3 === 2 ? x.includes(" ") : ask3 === 1 ? !x.includes(" ") && Number(x.split("/")[0]) > Number(x.split("/")[1]) : !x.includes(" ") && Number(x.split("/")[0]) < Number(x.split("/")[1])).length === a
   }),
-  fam3({
+  fam4({
     id: "g4.frac.improper-to-mixed-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -15136,7 +17682,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.improper-to-mixed-steps",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -15157,7 +17703,7 @@ var FAMILIES9 = [
     }),
     check: ({ d, n }, v) => v[0] * d + v[1] === n && v[1] < d && v[2] === n
   }),
-  fam3({
+  fam4({
     id: "g4.frac.improper-to-mixed-spot",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.d",
@@ -15183,7 +17729,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.mixed-to-improper-pick",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.e",
@@ -15208,7 +17754,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.frac.mixed-to-improper-steps",
     skill: "G4_FRACTIONS",
     outcome: "G4.FRAC.e",
@@ -15232,7 +17778,7 @@ var FAMILIES9 = [
   // ======================================================================
   // DECIMALS: order, place value
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.dec.largest-ribbon",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.d",
@@ -15260,7 +17806,7 @@ var FAMILIES9 = [
     },
     check: ({ t, hv }, a) => hv.every((h) => h / 100 < a) && Math.round(a * 10) === t
   }),
-  fam3({
+  fam4({
     id: "g4.dec.why-bigger",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.d",
@@ -15290,7 +17836,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.dec.place-chart",
     skill: "G4_DECIMALS",
     outcome: "G4.DEC.c",
@@ -15322,7 +17868,7 @@ var FAMILIES9 = [
   // ======================================================================
   // LETTERS: simplify, expressions, what a letter stands for
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.letters.spot-simplify",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.c",
@@ -15348,7 +17894,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.letters.why-same-thing",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.c",
@@ -15373,7 +17919,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.letters.form-boxes",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.b",
@@ -15396,7 +17942,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.letters.price-p",
     skill: "G4_LETTERS",
     outcome: "G4.LETTERS.a",
@@ -15418,7 +17964,7 @@ var FAMILIES9 = [
   // ======================================================================
   // LENGTH, AREA, VOLUME
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.length.compare-cloth",
     skill: "G4_LENGTH",
     outcome: "G4.LENGTH.d",
@@ -15442,7 +17988,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.perimeter.fence-posts",
     skill: "G5_PERIMETER_INTRO",
     outcome: "G4.LENGTH.e",
@@ -15461,7 +18007,7 @@ var FAMILIES9 = [
     }),
     check: ({ g, l, w }, a) => a * g === 2 * l + 2 * w
   }),
-  fam3({
+  fam4({
     id: "g4.area.rows-missing",
     skill: "G4_AREA",
     outcome: "G4.AREA.c",
@@ -15480,7 +18026,7 @@ var FAMILIES9 = [
     }),
     check: ({ r }, a) => a * r === r * a && a >= 5 && a * r % r === 0
   }),
-  fam3({
+  fam4({
     id: "g4.area.rooms-table",
     skill: "G4_AREA",
     outcome: "G4.AREA.b",
@@ -15502,7 +18048,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.area.why-multiply",
     skill: "G4_AREA",
     outcome: "G4.AREA.c",
@@ -15524,7 +18070,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.vol.tower-layers",
     skill: "G4_VOLUME",
     outcome: "G4.VOL.a",
@@ -15543,7 +18089,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b, c }, v) => v % c === 0 && v / c === a * b
   }),
-  fam3({
+  fam4({
     id: "g4.vol.boxes-table",
     skill: "G4_VOLUME",
     outcome: "G4.VOL.b",
@@ -15567,7 +18113,7 @@ var FAMILIES9 = [
   // ======================================================================
   // MONEY: cents, shopping lists
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.money.cents-purse",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -15586,7 +18132,7 @@ var FAMILIES9 = [
     }),
     check: ({ a, b }, v) => v % 100 === b && Math.floor(v / 100) === a
   }),
-  fam3({
+  fam4({
     id: "g4.money.cents-to-shillings",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -15607,7 +18153,7 @@ var FAMILIES9 = [
     }),
     check: ({ c, s }, v) => v[0] * 100 + v[1] === c && v[2] === c - s * 100
   }),
-  fam3({
+  fam4({
     id: "g4.money.list-table-total",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.c",
@@ -15628,7 +18174,7 @@ var FAMILIES9 = [
     }),
     check: ({ q, pr, total }, a) => q.reduce((t, n, i) => t + pr[i] * n, 0) === a && a === total
   }),
-  fam3({
+  fam4({
     id: "g4.money.list-three-items",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.b",
@@ -15654,7 +18200,7 @@ var FAMILIES9 = [
   // ======================================================================
   // ANGLES AND SYMMETRY
   // ======================================================================
-  fam3({
+  fam4({
     id: "g4.angles.turn-kind",
     skill: "G4_ANGLES",
     outcome: "G4.ANGLES.a",
@@ -15673,7 +18219,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.angles.clock-hands",
     skill: "G4_ANGLES",
     outcome: "G4.ANGLES.a",
@@ -15692,7 +18238,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.symmetry.count-lines",
     skill: "G4_PLANE_FIGURES",
     outcome: "G4.PLANE.c",
@@ -15711,7 +18257,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.symmetry.letters",
     skill: "G4_PLANE_FIGURES",
     outcome: "G4.PLANE.c",
@@ -15741,7 +18287,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.add.spot-estimate",
     skill: "G4_ADD",
     outcome: "G4.ADD.c",
@@ -15773,7 +18319,7 @@ var FAMILIES9 = [
       };
     }
   }),
-  fam3({
+  fam4({
     id: "g4.money.spot-cents",
     skill: "G4_MONEY",
     outcome: "G4.MONEY.a",
@@ -15799,14 +18345,14 @@ var FAMILIES9 = [
 ];
 
 // src/ai-tutor/content/families/g5.js
-var fam4 = (def) => family({ reviewed: false, ...def });
+var fam5 = (def) => family({ reviewed: false, ...def });
 var rot2 = (a, k) => [...a.slice(k), ...a.slice(0, k)];
 var distinct2 = (...v) => new Set(v).size === v.length;
 var rnd = (n, to) => Math.round(n / to) * to;
 var fl = (n, to) => Math.floor(n / to) * to;
-var FAMILIES10 = [
+var FAMILIES14 = [
   // ================================================================ MONEY
-  fam4({
+  fam5({
     id: "g5.money.budget-table",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -15830,7 +18376,7 @@ var FAMILIES10 = [
     }),
     check: ({ have, food, water, fare, air, clothes }, a) => have - a - clothes - air - fare - water === food
   }),
-  fam4({
+  fam5({
     id: "g5.money.budget-steps",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -15854,7 +18400,7 @@ var FAMILIES10 = [
     }),
     check: ({ P: P2, X }, v) => v[0] + v[1] === P2 && v[1] * v[2] === X
   }),
-  fam4({
+  fam5({
     id: "g5.money.budget-spot",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_TOTAL_BALANCE",
@@ -15881,7 +18427,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.money.budget-cut-why",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BUDGET_IMPORTANCE",
@@ -15906,7 +18452,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.money.tax-add",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
@@ -15930,7 +18476,7 @@ var FAMILIES10 = [
     },
     check: ({ goods, r }, a) => (a - goods) * 100 === goods * r
   }),
-  fam4({
+  fam5({
     id: "g5.money.tax-receipt",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.TAX_ON_RECEIPT",
@@ -15956,7 +18502,7 @@ var FAMILIES10 = [
     },
     check: ({ a, b, c, tax }, v) => v - tax - a - b === c
   }),
-  fam4({
+  fam5({
     id: "g5.money.bank-interest",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
@@ -15980,7 +18526,7 @@ var FAMILIES10 = [
     },
     check: ({ sav, r }, a) => (a - sav) * 100 === sav * r
   }),
-  fam4({
+  fam5({
     id: "g5.money.bank-statement",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.BANK_SERVICES",
@@ -16003,7 +18549,7 @@ var FAMILIES10 = [
     }),
     check: ({ S: S5, d1, w1, d2, w2 }, a) => a + w1 + w2 === S5 + d1 + d2
   }),
-  fam4({
+  fam5({
     id: "g5.money.save-goal-steps",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -16026,7 +18572,7 @@ var FAMILIES10 = [
     }),
     check: ({ p, s, w, have }, v) => v[0] === p - have && v[1] * s === v[0] && v[2] * (w / 2) === v[0]
   }),
-  fam4({
+  fam5({
     id: "g5.money.save-place-why",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -16051,7 +18597,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.money.save-spot",
     skill: "G5_MONEY",
     cskill: "MATH.G5.MEASUR.MONEY.SAVING_FACTORS",
@@ -16080,7 +18626,7 @@ var FAMILIES10 = [
     }
   }),
   // ================================================================ ESTIMATING
-  fam4({
+  fam5({
     id: "g5.add.estimate-word",
     skill: "G5_ADDITION",
     cskill: "MATH.G5.NUMBER.ADDITION.ESTIMATE_SUM_NEAREST_100",
@@ -16112,7 +18658,7 @@ var FAMILIES10 = [
     },
     check: ({ ra, rb }, a) => a - rb === ra
   }),
-  fam4({
+  fam5({
     id: "g5.add.estimate-check-why",
     skill: "G5_ADDITION",
     cskill: "MATH.G5.NUMBER.ADDITION.ESTIMATE_TO_CHECK_SUM",
@@ -16141,7 +18687,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.sub.estimate-word",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -16172,7 +18718,7 @@ var FAMILIES10 = [
     },
     check: ({ ra, rb }, a) => a + rb === ra
   }),
-  fam4({
+  fam5({
     id: "g5.sub.estimate-table",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -16199,7 +18745,7 @@ var FAMILIES10 = [
     },
     check: ({ v, hi, lo }, a) => a + rnd(v[lo], 100) === rnd(v[hi], 100)
   }),
-  fam4({
+  fam5({
     id: "g5.sub.estimate-spot",
     skill: "G5_SUBTRACTION",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.ESTIMATE_DIFFERENCE",
@@ -16228,7 +18774,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.mul.estimate-word",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
@@ -16258,7 +18804,7 @@ var FAMILIES10 = [
     },
     check: ({ ra, rb }, x) => x / rb === ra
   }),
-  fam4({
+  fam5({
     id: "g5.mul.estimate-steps",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_ROUND10",
@@ -16284,7 +18830,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, b, ex, est }, v) => v[0] % 100 === 0 && v[1] % 10 === 0 && v[2] === v[0] * v[1] && (v[3] === est - ex || v[3] === ex - est) && a * b === ex
   }),
-  fam4({
+  fam5({
     id: "g5.mul.estimate-why",
     skill: "G5_MULTIPLICATION",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.ESTIMATE_CHECK_REASONABLE",
@@ -16314,7 +18860,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.div.estimate-word",
     skill: "G5_DIVISION",
     cskill: "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
@@ -16345,7 +18891,7 @@ var FAMILIES10 = [
     },
     check: ({ ra, rb }, x) => x * rb === ra
   }),
-  fam4({
+  fam5({
     id: "g5.div.estimate-spot",
     skill: "G5_DIVISION",
     cskill: "MATH.G5.NUMBER.DIVISION.ESTIMATE_QUOTIENTS",
@@ -16376,7 +18922,7 @@ var FAMILIES10 = [
     }
   }),
   // ================================================================ EQUATIONS
-  fam4({
+  fam5({
     id: "g5.eq.let-add",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -16397,7 +18943,7 @@ var FAMILIES10 = [
     }),
     check: ({ kind, a, b }, v) => kind === "add" ? v + a === b : v - a === b
   }),
-  fam4({
+  fam5({
     id: "g5.eq.let-twostep",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_TWO_STEP",
@@ -16418,7 +18964,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, b, c }, v) => a * v + b === c
   }),
-  fam4({
+  fam5({
     id: "g5.eq.balance-word",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -16439,7 +18985,7 @@ var FAMILIES10 = [
     }),
     check: ({ kind, a, b }, v) => kind === "plus" ? v + a === b : v + v === b
   }),
-  fam4({
+  fam5({
     id: "g5.eq.form-spot",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -16467,7 +19013,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.eq.form-why",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_MUL_DIV",
@@ -16495,7 +19041,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.eq.choose-direct",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_FORM_ADD_SUB",
@@ -16525,7 +19071,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.eq.solve-why",
     skill: "G5_SIMPLE_EQUATIONS",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -16556,7 +19102,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.missing.story",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_MUL_DIV",
@@ -16589,7 +19135,7 @@ var FAMILIES10 = [
     },
     check: ({ kind, a, b }, v) => ({ sub: v - a === b, add: v + a === b, mul: a * v === b, div: v / a === b })[kind]
   }),
-  fam4({
+  fam5({
     id: "g5.missing.machine-table",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -16611,7 +19157,7 @@ var FAMILIES10 = [
     }),
     check: ({ m, c0, n }, a) => (a - c0) / m === n
   }),
-  fam4({
+  fam5({
     id: "g5.missing.think-number",
     skill: "G5_MISSING_NUMBER",
     cskill: "MATH.G5.NUMBER.SIMPLE_EQUATIONS.EQ_SOLVE_ADD_SUB",
@@ -16634,7 +19180,7 @@ var FAMILIES10 = [
     check: ({ m, b, op, c }, v) => op === "+" ? v * m + b === c : v * m - b === c
   }),
   // ================================================================ DECIMALS
-  fam4({
+  fam5({
     id: "g5.dec.place-table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
@@ -16657,7 +19203,7 @@ var FAMILIES10 = [
     }),
     check: ({ ds }, a) => Math.round(a * 1e3) === ds[0] * 1e3 + ds[1] * 100 + ds[2] * 10 + ds[3]
   }),
-  fam4({
+  fam5({
     id: "g5.dec.place-spot",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
@@ -16682,7 +19228,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.dec.order-word",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
@@ -16717,7 +19263,7 @@ var FAMILIES10 = [
     },
     check: ({ vals, small }, a) => vals.includes(a) && vals.filter((v) => small ? v < a : v > a).length === 0
   }),
-  fam4({
+  fam5({
     id: "g5.dec.order-why",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE",
@@ -16745,7 +19291,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.dec.order-table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
@@ -16778,7 +19324,7 @@ var FAMILIES10 = [
     },
     check: ({ t }, a) => t.includes(a) && t.every((x) => x >= a)
   }),
-  fam4({
+  fam5({
     id: "g5.decadd.table",
     skill: "G5_DECIMALS_ADD",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES",
@@ -16803,7 +19349,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, b, c }, v) => Math.round(v * 100) - Math.round(c * 100) - Math.round(b * 100) === Math.round(a * 100)
   }),
-  fam4({
+  fam5({
     id: "g5.decsub.word",
     skill: "G5_DECIMALS_SUB",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
@@ -16830,7 +19376,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, b }, v) => Math.round(v * 100) + Math.round(b * 100) === Math.round(a * 100)
   }),
-  fam4({
+  fam5({
     id: "g5.decmul.word",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -16856,7 +19402,7 @@ var FAMILIES10 = [
     },
     check: ({ m, a }, v) => Math.round(v / m * 1e3) / 1e3 === a
   }),
-  fam4({
+  fam5({
     id: "g5.decmul.table",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -16878,7 +19424,7 @@ var FAMILIES10 = [
     }),
     check: ({ a }, v) => Math.round(v) === Math.round(a * 1e3)
   }),
-  fam4({
+  fam5({
     id: "g5.decmul.why",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -16907,7 +19453,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.decmul.steps",
     skill: "G5_DECIMALS_INTRO",
     cskill: "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
@@ -16931,7 +19477,7 @@ var FAMILIES10 = [
     check: ({ a }, v) => Math.round(v[0] * 10) === Math.round(v[1]) && Math.round(v[1] * 10) === Math.round(v[2]) && Math.round(v[0] * 100) === Math.round(a * 1e3)
   }),
   // ================================================================ PATTERNS
-  fam4({
+  fam5({
     id: "g5.pat.add-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
@@ -16952,7 +19498,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, d, n }, v) => (v - a) / (n - 1) === d
   }),
-  fam4({
+  fam5({
     id: "g5.pat.add-spot",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.ADDITION.ADD_PATTERN_EXTEND",
@@ -16979,7 +19525,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.pat.sub-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.SUBTRACTION.SUB_PATTERN_CONTINUE",
@@ -17000,7 +19546,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, d, n }, x) => (a - x) / (n - 1) === d
   }),
-  fam4({
+  fam5({
     id: "g5.pat.mul-word",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
@@ -17021,7 +19567,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, r, n }, x) => x === Array.from({ length: n - 1 }).reduce((t) => t * r, a)
   }),
-  fam4({
+  fam5({
     id: "g5.pat.mul-why",
     skill: "G5_PATTERNS",
     cskill: "MATH.G5.NUMBER.MULTIPLICATION.MULT_PATTERN_EXTEND",
@@ -17052,7 +19598,7 @@ var FAMILIES10 = [
     }
   }),
   // ================================================================ ROUNDING
-  fam4({
+  fam5({
     id: "g5.round.news-word",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
@@ -17078,7 +19624,7 @@ var FAMILIES10 = [
     },
     check: ({ n, u }, a) => a % u === 0 && Math.abs(a - n) < u / 2
   }),
-  fam4({
+  fam5({
     id: "g5.round.crowd-table",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_THOUSAND",
@@ -17101,7 +19647,7 @@ var FAMILIES10 = [
     }),
     check: ({ big }, a) => a % 1e3 === 0 && Math.abs(a - big) < 500
   }),
-  fam4({
+  fam5({
     id: "g5.round.spot",
     skill: "G5_ROUNDING",
     cskill: "MATH.G5.NUMBER.WHOLE_NUMBERS.ROUND_NEAREST_HUNDRED",
@@ -17131,7 +19677,7 @@ var FAMILIES10 = [
     }
   }),
   // ================================================================ LENGTH
-  fam4({
+  fam5({
     id: "g5.length.est-trip-table",
     skill: "G5_LENGTH",
     cskill: "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE",
@@ -17155,7 +19701,7 @@ var FAMILIES10 = [
     check: ({ km }, a) => a % 200 === 0 && Math.abs(a / 2 - km) < 50
   }),
   // ================================================================ MASS AND CAPACITY
-  fam4({
+  fam5({
     id: "g5.mass.shop-left",
     skill: "G5_MASS_OPS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G",
@@ -17176,7 +19722,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, pk, n }, v) => v + pk * n === a * 1e3
   }),
-  fam4({
+  fam5({
     id: "g5.mass.parcels-table",
     skill: "G5_MASS_OPS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G",
@@ -17198,7 +19744,7 @@ var FAMILIES10 = [
     }),
     check: ({ g1, k2, g3 }, a) => Math.round(a * 1e3) - g1 - g3 === k2 * 1e3
   }),
-  fam4({
+  fam5({
     id: "g5.mass.written-why",
     skill: "G5_MASS",
     cskill: "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG",
@@ -17227,7 +19773,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.cap.dairy-left",
     skill: "G5_CAPACITY_OPS",
     cskill: "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML",
@@ -17248,7 +19794,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, pk, n }, v) => Math.round((v + a - a) * 1e3) + pk * n === a * 1e3
   }),
-  fam4({
+  fam5({
     id: "g5.cap.drums-table",
     skill: "G5_CAPACITY_OPS",
     cskill: "MATH.G5.MEASUR.CAPACITY.ADD_L_ML",
@@ -17271,7 +19817,7 @@ var FAMILIES10 = [
     }),
     check: ({ l1, ml1, l2, ml2 }, a) => a - ml1 - ml2 === (l1 + l2) * 1e3
   }),
-  fam4({
+  fam5({
     id: "g5.cap.cups-word",
     skill: "G5_CAPACITY",
     cskill: "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP",
@@ -17292,7 +19838,7 @@ var FAMILIES10 = [
     }),
     check: ({ cup, l }, a) => a * cup === l * 1e3
   }),
-  fam4({
+  fam5({
     id: "g5.cap.sensible-why",
     skill: "G5_CAPACITY",
     cskill: "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE",
@@ -17321,7 +19867,7 @@ var FAMILIES10 = [
     }
   }),
   // ================================================================ FRACTIONS
-  fam4({
+  fam5({
     id: "g5.frac.sub-word",
     skill: "G5_FRACTIONS_SUB_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
@@ -17342,7 +19888,7 @@ var FAMILIES10 = [
     }),
     check: ({ a, b }, v) => v + b === a
   }),
-  fam4({
+  fam5({
     id: "g5.frac.sub-spot",
     skill: "G5_FRACTIONS_SUB_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.SUBTRACT_SAME_DENOMINATOR",
@@ -17370,7 +19916,7 @@ var FAMILIES10 = [
       };
     }
   }),
-  fam4({
+  fam5({
     id: "g5.frac.add-word",
     skill: "G5_FRACTIONS_ADD_LIKE",
     cskill: "MATH.G5.NUMBER.FRACTIONS.ADD_SAME_DENOMINATOR",
@@ -17394,7 +19940,7 @@ var FAMILIES10 = [
     },
     check: ({ a, b, c }, v) => v - c - b === a
   }),
-  fam4({
+  fam5({
     id: "g5.frac.equiv-word",
     skill: "G5_FRACTIONS_EQUIV",
     cskill: "MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS",
@@ -17418,7 +19964,7 @@ var FAMILIES10 = [
 ];
 
 // src/ai-tutor/content/families/g5c_signed.js
-var SIGNED = [];
+var SIGNED2 = [];
 
 // src/ai-tutor/content/families/g5c_lib.js
 var shuffle4 = (a) => {
@@ -17452,7 +19998,7 @@ var clean = (wrong, answer, need2, neg2) => {
   }
   return out.length >= need2 ? out : null;
 };
-var fam5 = (d) => {
+var fam6 = (d) => {
   const { cs, gen, id, form, rung: rung2, ...rest } = d;
   const ck = SKILLS_G5[`MATH.G5.${cs}`];
   if (!ck) throw new Error(`${id}: no curriculum skill MATH.G5.${cs}`);
@@ -17484,7 +20030,7 @@ var fam5 = (d) => {
     return x;
   };
   return family({
-    reviewed: SIGNED.includes(id),
+    reviewed: SIGNED2.includes(id),
     ...rest,
     id,
     form,
@@ -17522,9 +20068,9 @@ var digitAt = (n, p) => Math.floor(n / 10 ** p) % 10;
 var tv = (n, p) => digitAt(n, p) * 10 ** p;
 var SCHOOLS = ["Mwangaza", "Tumaini", "Baraka", "Upendo", "Jitegemee", "Amani"];
 var TOWNS = ["Nyeri", "Kisumu", "Nakuru", "Embu", "Kakamega", "Meru"];
-var FAMILIES11 = [
+var FAMILIES15 = [
   // ---------------------------------------------------------------- PLACE_VALUE_HTH
-  fam5({
+  fam6({
     id: "g5c.whole.pv.choose",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "direct",
@@ -17542,7 +20088,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.pv.digit-in",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "word",
@@ -17561,7 +20107,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.pv.build",
     cs: `${W2}PLACE_VALUE_HTH`,
     form: "steps",
@@ -17582,7 +20128,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- TOTAL_VALUE_HTH
-  fam5({
+  fam6({
     id: "g5c.whole.tv.worth",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "word",
@@ -17601,7 +20147,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.tv.expand",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "direct",
@@ -17623,7 +20169,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.tv.rebuild-spot",
     cs: `${W2}TOTAL_VALUE_HTH`,
     form: "spot",
@@ -17652,7 +20198,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- NUMBERS_TO_WORDS
-  fam5({
+  fam6({
     id: "g5c.whole.words.choose",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "direct",
@@ -17672,7 +20218,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.words.cheque",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "word",
@@ -17692,7 +20238,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.words.spot",
     cs: `${W2}NUMBERS_TO_WORDS`,
     form: "spot",
@@ -17714,7 +20260,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- WORDS_TO_SYMBOLS
-  fam5({
+  fam6({
     id: "g5c.whole.sym.news",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "word",
@@ -17734,7 +20280,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.sym.match",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "direct",
@@ -17752,7 +20298,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.sym.dictate",
     cs: `${W2}WORDS_TO_SYMBOLS`,
     form: "steps",
@@ -17773,7 +20319,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_NUMBERS
-  fam5({
+  fam6({
     id: "g5c.whole.cmp.longer",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "word",
@@ -17792,7 +20338,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cmp.symbol",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "direct",
@@ -17813,7 +20359,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cmp.explain",
     cs: `${W2}COMPARE_NUMBERS`,
     form: "why",
@@ -17833,7 +20379,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_NUMBERS
-  fam5({
+  fam6({
     id: "g5c.whole.ord.increasing",
     cs: `${W2}ORDER_NUMBERS`,
     form: "direct",
@@ -17857,7 +20403,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.ord.distances",
     cs: `${W2}ORDER_NUMBERS`,
     form: "word",
@@ -17881,7 +20427,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.ord.out-of-place",
     cs: `${W2}ORDER_NUMBERS`,
     form: "spot",
@@ -17904,7 +20450,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_HUNDRED
-  fam5({
+  fam6({
     id: "g5c.whole.rh.fees",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "word",
@@ -17926,7 +20472,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.rh.which",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "direct",
@@ -17945,7 +20491,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.rh.list",
     cs: `${W2}ROUND_NEAREST_HUNDRED`,
     form: "why",
@@ -17964,7 +20510,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_THOUSAND
-  fam5({
+  fam6({
     id: "g5c.whole.rt.crowd",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "word",
@@ -17987,7 +20533,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.rt.both",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "steps",
@@ -18007,7 +20553,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.rt.spot",
     cs: `${W2}ROUND_NEAREST_THOUSAND`,
     form: "spot",
@@ -18026,7 +20572,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- DIVISIBLE_BY_2
-  fam5({
+  fam6({
     id: "g5c.whole.d2.yesno",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "why",
@@ -18047,7 +20593,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.d2.pick",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "direct",
@@ -18067,7 +20613,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.d2.missing",
     cs: `${W2}DIVISIBLE_BY_2`,
     form: "word",
@@ -18089,7 +20635,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- DIVISIBLE_BY_5_AND_10
-  fam5({
+  fam6({
     id: "g5c.whole.d510.packs",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "word",
@@ -18109,7 +20655,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.d510.sort",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "direct",
@@ -18129,7 +20675,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.d510.pattern",
     cs: `${W2}DIVISIBLE_BY_5_AND_10`,
     form: "why",
@@ -18147,7 +20693,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- DIVISIBILITY_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.whole.dp.share",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "word",
@@ -18165,7 +20711,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.dp.pack",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "direct",
@@ -18184,7 +20730,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.dp.coins",
     cs: `${W2}DIVISIBILITY_PROBLEMS`,
     form: "steps",
@@ -18203,7 +20749,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- COMMON_FACTORS
-  fam5({
+  fam6({
     id: "g5c.whole.cf.list",
     cs: `${W2}COMMON_FACTORS`,
     form: "direct",
@@ -18224,7 +20770,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cf.common",
     cs: `${W2}COMMON_FACTORS`,
     form: "word",
@@ -18243,7 +20789,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cf.spot",
     cs: `${W2}COMMON_FACTORS`,
     form: "spot",
@@ -18264,7 +20810,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- HCF_GCD
-  fam5({
+  fam6({
     id: "g5c.whole.hcf.find",
     cs: `${W2}HCF_GCD`,
     form: "word",
@@ -18283,7 +20829,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.hcf.truefalse",
     cs: `${W2}HCF_GCD`,
     form: "why",
@@ -18302,7 +20848,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.hcf.three",
     cs: `${W2}HCF_GCD`,
     form: "steps",
@@ -18321,7 +20867,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- HCF_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.whole.hp.ribbon",
     cs: `${W2}HCF_PROBLEMS`,
     form: "word",
@@ -18338,7 +20884,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.hp.bags",
     cs: `${W2}HCF_PROBLEMS`,
     form: "steps",
@@ -18356,7 +20902,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.hp.which",
     cs: `${W2}HCF_PROBLEMS`,
     form: "why",
@@ -18376,7 +20922,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- COMMON_MULTIPLES
-  fam5({
+  fam6({
     id: "g5c.whole.cm.list",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "direct",
@@ -18394,7 +20940,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cm.common",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "word",
@@ -18412,7 +20958,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.cm.yesno",
     cs: `${W2}COMMON_MULTIPLES`,
     form: "spot",
@@ -18431,7 +20977,7 @@ var FAMILIES11 = [
     check: () => true
   }),
   // ---------------------------------------------------------------- LCM
-  fam5({
+  fam6({
     id: "g5c.whole.lcm.find",
     cs: `${W2}LCM`,
     form: "word",
@@ -18449,7 +20995,7 @@ var FAMILIES11 = [
     },
     allowNegative: false
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.lcm.truefalse",
     cs: `${W2}LCM`,
     form: "why",
@@ -18469,7 +21015,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.lcm.three",
     cs: `${W2}LCM`,
     form: "steps",
@@ -18488,7 +21034,7 @@ var FAMILIES11 = [
     }
   }),
   // ---------------------------------------------------------------- LCM_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.whole.lp.matatu",
     cs: `${W2}LCM_PROBLEMS`,
     form: "word",
@@ -18505,7 +21051,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.lp.clock",
     cs: `${W2}LCM_PROBLEMS`,
     form: "direct",
@@ -18527,7 +21073,7 @@ var FAMILIES11 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.whole.lp.packs",
     cs: `${W2}LCM_PROBLEMS`,
     form: "steps",
@@ -18627,9 +21173,9 @@ var noBorrowPair = () => {
 var r6 = () => randInt(1e5, 499999);
 var KG = ["maize", "beans", "rice", "sugar cane", "potatoes"];
 var TOWNS2 = ["Kisumu", "Nyeri", "Nakuru", "Eldoret", "Embu", "Meru"];
-var FAMILIES12 = [
+var FAMILIES16 = [
   // ---------------------------------------------------------------- ADD_NO_REGROUP_UP_TO_THREE
-  fam5({
+  fam6({
     id: "g5c.add.noreg.harvest",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "word",
@@ -18650,7 +21196,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.noreg.zeros",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "direct",
@@ -18669,7 +21215,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.noreg.different-lengths",
     cs: `${A}ADD_NO_REGROUP_UP_TO_THREE`,
     form: "spot",
@@ -18689,7 +21235,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_DOUBLE_REGROUP_TWO
-  fam5({
+  fam6({
     id: "g5c.add.dbl.fees",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "word",
@@ -18708,7 +21254,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.dbl.nines",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "direct",
@@ -18734,7 +21280,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.dbl.spot",
     cs: `${A}ADD_DOUBLE_REGROUP_TWO`,
     form: "spot",
@@ -18754,7 +21300,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_IN_SITUATIONS
-  fam5({
+  fam6({
     id: "g5c.add.sit.words",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "word",
@@ -18772,7 +21318,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.sit.extra",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "steps",
@@ -18791,7 +21337,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.sit.table",
     cs: `${A}ADD_IN_SITUATIONS`,
     form: "table",
@@ -18811,7 +21357,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_SUM_NEAREST_100
-  fam5({
+  fam6({
     id: "g5c.add.e100.round",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "word",
@@ -18830,7 +21376,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.e100.best",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "direct",
@@ -18848,7 +21394,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.e100.spot",
     cs: `${A}ESTIMATE_SUM_NEAREST_100`,
     form: "spot",
@@ -18866,7 +21412,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_SUM_NEAREST_1000
-  fam5({
+  fam6({
     id: "g5c.add.e1000.round",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "word",
@@ -18884,7 +21430,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.e1000.both",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "steps",
@@ -18902,7 +21448,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.e1000.spot",
     cs: `${A}ESTIMATE_SUM_NEAREST_1000`,
     form: "spot",
@@ -18920,7 +21466,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_TO_CHECK_SUM
-  fam5({
+  fam6({
     id: "g5c.add.chk.reasonable",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "why",
@@ -18938,7 +21484,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.chk.must-be-wrong",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "direct",
@@ -18956,7 +21502,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.chk.compare",
     cs: `${A}ESTIMATE_TO_CHECK_SUM`,
     form: "word",
@@ -18975,7 +21521,7 @@ var FAMILIES12 = [
     allowNegative: false
   }),
   // ---------------------------------------------------------------- ADD_PATTERN_EXTEND
-  fam5({
+  fam6({
     id: "g5c.add.pat.next",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "direct",
@@ -18994,7 +21540,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.pat.missing",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "word",
@@ -19012,7 +21558,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.pat.nth",
     cs: `${A}ADD_PATTERN_EXTEND`,
     form: "table",
@@ -19032,7 +21578,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_PATTERN_CREATE
-  fam5({
+  fam6({
     id: "g5c.add.cre.rule",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "direct",
@@ -19050,7 +21596,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.cre.make",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "word",
@@ -19067,7 +21613,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.add.cre.spot",
     cs: `${A}ADD_PATTERN_CREATE`,
     form: "spot",
@@ -19086,7 +21632,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_6DIGIT_NO_REGROUP
-  fam5({
+  fam6({
     id: "g5c.sub.noreg.stock",
     cs: `${S4}SUB_6DIGIT_NO_REGROUP`,
     form: "word",
@@ -19105,7 +21651,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.noreg.short",
     cs: `${S4}SUB_6DIGIT_NO_REGROUP`,
     form: "direct",
@@ -19124,7 +21670,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.noreg.spot",
     cs: `${S4}SUB_6DIGIT_NO_REGROUP`,
     form: "spot",
@@ -19145,7 +21691,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_6DIGIT_REGROUP
-  fam5({
+  fam6({
     id: "g5c.sub.reg.budget",
     cs: `${S4}SUB_6DIGIT_REGROUP`,
     form: "word",
@@ -19164,7 +21710,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.reg.check",
     cs: `${S4}SUB_6DIGIT_REGROUP`,
     form: "steps",
@@ -19184,7 +21730,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.reg.spot",
     cs: `${S4}SUB_6DIGIT_REGROUP`,
     form: "spot",
@@ -19204,7 +21750,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_REGROUP_ACROSS_ZEROS
-  fam5({
+  fam6({
     id: "g5c.sub.zero.round",
     cs: `${S4}SUB_REGROUP_ACROSS_ZEROS`,
     form: "word",
@@ -19230,7 +21776,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.zero.note",
     cs: `${S4}SUB_REGROUP_ACROSS_ZEROS`,
     form: "direct",
@@ -19256,7 +21802,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.zero.spot",
     cs: `${S4}SUB_REGROUP_ACROSS_ZEROS`,
     form: "spot",
@@ -19278,7 +21824,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_WORD_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.sub.wp.fewer",
     cs: `${S4}SUB_WORD_PROBLEMS`,
     form: "word",
@@ -19295,7 +21841,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.wp.target",
     cs: `${S4}SUB_WORD_PROBLEMS`,
     form: "direct",
@@ -19313,7 +21859,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.wp.sentence",
     cs: `${S4}SUB_WORD_PROBLEMS`,
     form: "why",
@@ -19331,7 +21877,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ROUND_NEAREST_100_1000
-  fam5({
+  fam6({
     id: "g5c.sub.round.carry",
     cs: `${S4}ROUND_NEAREST_100_1000`,
     form: "word",
@@ -19350,7 +21896,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.round.both",
     cs: `${S4}ROUND_NEAREST_100_1000`,
     form: "table",
@@ -19368,7 +21914,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.round.halfway",
     cs: `${S4}ROUND_NEAREST_100_1000`,
     form: "why",
@@ -19386,7 +21932,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_DIFFERENCE
-  fam5({
+  fam6({
     id: "g5c.sub.est.thousand",
     cs: `${S4}ESTIMATE_DIFFERENCE`,
     form: "word",
@@ -19404,7 +21950,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.est.hundred",
     cs: `${S4}ESTIMATE_DIFFERENCE`,
     form: "direct",
@@ -19422,7 +21968,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.sub.est.reasonable",
     cs: `${S4}ESTIMATE_DIFFERENCE`,
     form: "why",
@@ -19441,7 +21987,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_ADD_SUB_CALC
-  fam5({
+  fam6({
     id: "g5c.comb.calc.story",
     cs: `${S4}COMBINED_ADD_SUB_CALC`,
     form: "word",
@@ -19458,7 +22004,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.comb.calc.missing",
     cs: `${S4}COMBINED_ADD_SUB_CALC`,
     form: "direct",
@@ -19475,7 +22021,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.comb.calc.spot",
     cs: `${S4}COMBINED_ADD_SUB_CALC`,
     form: "spot",
@@ -19493,7 +22039,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_ADD_SUB_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.comb.prob.money",
     cs: `${S4}COMBINED_ADD_SUB_PROBLEMS`,
     form: "word",
@@ -19510,7 +22056,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.comb.prob.table",
     cs: `${S4}COMBINED_ADD_SUB_PROBLEMS`,
     form: "table",
@@ -19530,7 +22076,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.comb.prob.sentence",
     cs: `${S4}COMBINED_ADD_SUB_PROBLEMS`,
     form: "why",
@@ -19548,7 +22094,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_PATTERN_CONTINUE
-  fam5({
+  fam6({
     id: "g5c.subpat.next",
     cs: `${S4}SUB_PATTERN_CONTINUE`,
     form: "direct",
@@ -19566,7 +22112,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.subpat.rule",
     cs: `${S4}SUB_PATTERN_CONTINUE`,
     form: "why",
@@ -19583,7 +22129,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.subpat.table",
     cs: `${S4}SUB_PATTERN_CONTINUE`,
     form: "table",
@@ -19603,7 +22149,7 @@ var FAMILIES12 = [
     }
   }),
   // ---------------------------------------------------------------- SUB_PATTERN_CREATE
-  fam5({
+  fam6({
     id: "g5c.subcre.stop",
     cs: `${S4}SUB_PATTERN_CREATE`,
     form: "word",
@@ -19623,7 +22169,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.subcre.make",
     cs: `${S4}SUB_PATTERN_CREATE`,
     form: "direct",
@@ -19641,7 +22187,7 @@ var FAMILIES12 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.subcre.spot",
     cs: `${S4}SUB_PATTERN_CREATE`,
     form: "spot",
@@ -19706,9 +22252,9 @@ var likeAdd = (n, m) => {
 };
 var mixedRows = (n, m) => n * (m % 10) + (n * Math.floor(m / 10) + Math.floor(n * (m % 10) / 100)) * 10;
 var place2 = () => pick(["Nyandarua", "Murang'a", "Kitale", "Naivasha", "Kericho"]);
-var FAMILIES13 = [
+var FAMILIES17 = [
   // ---------------------------------------------------------------- MULT_3D_BY_1D
-  fam5({
+  fam6({
     id: "g5c.mul.d1.packets",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "word",
@@ -19726,7 +22272,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.d1.zero",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "direct",
@@ -19744,7 +22290,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.d1.spot",
     cs: `${M2}MULT_3D_BY_1D`,
     form: "spot",
@@ -19763,7 +22309,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_3D_BY_2D
-  fam5({
+  fam6({
     id: "g5c.mul.d2.grid",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "table",
@@ -19784,7 +22330,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.d2.compare",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "direct",
@@ -19802,7 +22348,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.d2.spot",
     cs: `${M2}MULT_3D_BY_2D`,
     form: "spot",
@@ -19821,7 +22367,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_WORD_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.mul.wp.buses",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "word",
@@ -19838,7 +22384,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.wp.change",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "steps",
@@ -19856,7 +22402,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.wp.sentence",
     cs: `${M2}MULT_WORD_PROBLEMS`,
     form: "why",
@@ -19874,7 +22420,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_PRODUCT_ROUND10
-  fam5({
+  fam6({
     id: "g5c.mul.est.round",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "word",
@@ -19892,7 +22438,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.est.best",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "direct",
@@ -19910,7 +22456,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.est.spot",
     cs: `${M2}ESTIMATE_PRODUCT_ROUND10`,
     form: "spot",
@@ -19928,7 +22474,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_CHECK_REASONABLE
-  fam5({
+  fam6({
     id: "g5c.mul.chk.reasonable",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "why",
@@ -19947,7 +22493,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.chk.money",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "word",
@@ -19967,7 +22513,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.chk.wrong",
     cs: `${M2}ESTIMATE_CHECK_REASONABLE`,
     form: "direct",
@@ -19986,7 +22532,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_PATTERN_EXTEND
-  fam5({
+  fam6({
     id: "g5c.mul.pat.next",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "direct",
@@ -20005,7 +22551,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.pat.first",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "word",
@@ -20023,7 +22569,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.pat.table",
     cs: `${M2}MULT_PATTERN_EXTEND`,
     form: "table",
@@ -20043,7 +22589,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_PATTERN_CREATE
-  fam5({
+  fam6({
     id: "g5c.mul.cre.list",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "direct",
@@ -20063,7 +22609,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.cre.stop",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "word",
@@ -20082,7 +22628,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mul.cre.spot",
     cs: `${M2}MULT_PATTERN_CREATE`,
     form: "spot",
@@ -20100,7 +22646,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_3DIGIT_BY_1DIGIT
-  fam5({
+  fam6({
     id: "g5c.div.d1.zero",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "word",
@@ -20119,7 +22665,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.d1.remainder",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "direct",
@@ -20138,7 +22684,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.d1.spot",
     cs: `${D}DIV_3DIGIT_BY_1DIGIT`,
     form: "spot",
@@ -20158,7 +22704,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_3DIGIT_BY_2DIGIT
-  fam5({
+  fam6({
     id: "g5c.div.d2.long",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "word",
@@ -20176,7 +22722,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.d2.zero",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "direct",
@@ -20194,7 +22740,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.d2.spot",
     cs: `${D}DIV_3DIGIT_BY_2DIGIT`,
     form: "spot",
@@ -20213,7 +22759,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_WORD_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.div.wp.roundup",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "word",
@@ -20232,7 +22778,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.wp.left",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "direct",
@@ -20250,7 +22796,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.wp.choose",
     cs: `${D}DIV_WORD_PROBLEMS`,
     form: "why",
@@ -20269,7 +22815,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- MULT_DIV_FACT_FAMILIES
-  fam5({
+  fam6({
     id: "g5c.div.fam.write",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "direct",
@@ -20286,7 +22832,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.fam.missing",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "word",
@@ -20304,7 +22850,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.fam.tf",
     cs: `${D}MULT_DIV_FACT_FAMILIES`,
     form: "why",
@@ -20322,7 +22868,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- CHECK_DIVISION_BY_MULT
-  fam5({
+  fam6({
     id: "g5c.div.chk.verify",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "why",
@@ -20340,7 +22886,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.chk.dividend",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "word",
@@ -20358,7 +22904,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.chk.which",
     cs: `${D}CHECK_DIVISION_BY_MULT`,
     form: "direct",
@@ -20377,7 +22923,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- DIV_BY_1000
-  fam5({
+  fam6({
     id: "g5c.div.k.grams",
     cs: `${D}DIV_BY_1000`,
     form: "word",
@@ -20394,7 +22940,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.k.which",
     cs: `${D}DIV_BY_1000`,
     form: "direct",
@@ -20411,7 +22957,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.k.table",
     cs: `${D}DIV_BY_1000`,
     form: "table",
@@ -20431,7 +22977,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- ESTIMATE_QUOTIENTS
-  fam5({
+  fam6({
     id: "g5c.div.est.word",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "word",
@@ -20449,7 +22995,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.est.best",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "direct",
@@ -20467,7 +23013,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.div.est.reasonable",
     cs: `${D}ESTIMATE_QUOTIENTS`,
     form: "why",
@@ -20487,7 +23033,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_OF_OPERATIONS
-  fam5({
+  fam6({
     id: "g5c.ops.order.value",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "word",
@@ -20504,7 +23050,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.ops.order.addsub",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "direct",
@@ -20521,7 +23067,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.ops.order.spot",
     cs: `${D}ORDER_OF_OPERATIONS`,
     form: "spot",
@@ -20539,7 +23085,7 @@ var FAMILIES13 = [
     }
   }),
   // ---------------------------------------------------------------- COMBINED_OPS_PROBLEMS
-  fam5({
+  fam6({
     id: "g5c.ops.prob.change",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "word",
@@ -20557,7 +23103,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.ops.prob.share",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "steps",
@@ -20576,7 +23122,7 @@ var FAMILIES13 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.ops.prob.expr",
     cs: `${D}COMBINED_OPS_PROBLEMS`,
     form: "why",
@@ -20614,9 +23160,9 @@ var places = (x) => (String(x).split(".")[1] || "").length;
 var digs = (x, n) => Number(Number(x).toFixed(n).replace(".", ""));
 var GRAMS = ["sukuma wiki", "tomatoes", "onions", "potatoes", "beans"];
 var pairs = [[2, 4], [2, 6], [3, 6], [4, 8], [2, 8], [3, 9], [4, 12], [6, 12], [3, 12], [2, 10], [5, 10], [2, 12]];
-var FAMILIES14 = [
+var FAMILIES18 = [
   // ---------------------------------------------------------------- EQUIVALENT_FRACTIONS
-  fam5({
+  fam6({
     id: "g5c.fra.eq.missing",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "word",
@@ -20635,7 +23181,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.eq.who-more",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "why",
@@ -20653,7 +23199,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.eq.truefalse",
     cs: `${F2}EQUIVALENT_FRACTIONS`,
     form: "direct",
@@ -20673,7 +23219,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- SIMPLIFY_FRACTIONS
-  fam5({
+  fam6({
     id: "g5c.fra.simp.mandazi",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "word",
@@ -20693,7 +23239,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.simp.is-it",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "why",
@@ -20710,7 +23256,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.simp.spot",
     cs: `${F2}SIMPLIFY_FRACTIONS`,
     form: "spot",
@@ -20729,7 +23275,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_LIKE_FRACTIONS
-  fam5({
+  fam6({
     id: "g5c.fra.cl.loaf",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "word",
@@ -20747,7 +23293,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.cl.symbol",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "direct",
@@ -20766,7 +23312,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.cl.whole",
     cs: `${F2}COMPARE_LIKE_FRACTIONS`,
     form: "why",
@@ -20785,7 +23331,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- COMPARE_UNLIKE_FRACTIONS
-  fam5({
+  fam6({
     id: "g5c.fra.cu.plot",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "word",
@@ -20806,7 +23352,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.cu.symbol",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "direct",
@@ -20826,7 +23372,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.cu.method",
     cs: `${F2}COMPARE_UNLIKE_FRACTIONS`,
     form: "spot",
@@ -20845,7 +23391,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- ORDER_FRACTIONS
-  fam5({
+  fam6({
     id: "g5c.fra.ord.inc",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "direct",
@@ -20866,7 +23412,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.ord.walk",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "word",
@@ -20887,7 +23433,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.ord.out",
     cs: `${F2}ORDER_FRACTIONS`,
     form: "spot",
@@ -20905,7 +23451,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_SAME_DENOMINATOR
-  fam5({
+  fam6({
     id: "g5c.fra.add.flour",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "word",
@@ -20923,7 +23469,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.add.missing",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "direct",
@@ -20940,7 +23486,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.add.spot",
     cs: `${F2}ADD_SAME_DENOMINATOR`,
     form: "spot",
@@ -20959,7 +23505,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- SUBTRACT_SAME_DENOMINATOR
-  fam5({
+  fam6({
     id: "g5c.fra.sub.pawpaw",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "word",
@@ -20976,7 +23522,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.sub.missing",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "direct",
@@ -20993,7 +23539,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.sub.line",
     cs: `${F2}SUBTRACT_SAME_DENOMINATOR`,
     form: "table",
@@ -21014,7 +23560,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- ADD_ONE_RENAMING
-  fam5({
+  fam6({
     id: "g5c.fra.addr.sugar",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "word",
@@ -21033,7 +23579,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.addr.which",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "direct",
@@ -21052,7 +23598,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.addr.spot",
     cs: `${F2}ADD_ONE_RENAMING`,
     form: "spot",
@@ -21071,7 +23617,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- SUBTRACT_ONE_RENAMING
-  fam5({
+  fam6({
     id: "g5c.fra.subr.milk",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "word",
@@ -21090,7 +23636,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.subr.moremissing",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "why",
@@ -21108,7 +23654,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.fra.subr.spot",
     cs: `${F2}SUBTRACT_ONE_RENAMING`,
     form: "spot",
@@ -21127,7 +23673,7 @@ var FAMILIES14 = [
   }),
   // ================================================================ DECIMALS
   // ---------------------------------------------------------------- DEC_PLACE_NAME
-  fam5({
+  fam6({
     id: "g5c.dec.place.name",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "direct",
@@ -21145,7 +23691,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.place.size",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "why",
@@ -21162,7 +23708,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.place.chart",
     cs: `${DC}DEC_PLACE_NAME`,
     form: "table",
@@ -21182,7 +23728,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_DIGIT_VALUE
-  fam5({
+  fam6({
     id: "g5c.dec.value.worth",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "word",
@@ -21201,7 +23747,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.value.write",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "direct",
@@ -21219,7 +23765,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.value.expanded",
     cs: `${DC}DEC_DIGIT_VALUE`,
     form: "steps",
@@ -21238,7 +23784,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_COMPARE
-  fam5({
+  fam6({
     id: "g5c.dec.cmp.which",
     cs: `${DC}DEC_COMPARE`,
     form: "word",
@@ -21256,7 +23802,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.cmp.symbol",
     cs: `${DC}DEC_COMPARE`,
     form: "direct",
@@ -21276,7 +23822,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.cmp.spot",
     cs: `${DC}DEC_COMPARE`,
     form: "spot",
@@ -21295,7 +23841,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ORDER
-  fam5({
+  fam6({
     id: "g5c.dec.ord.race",
     cs: `${DC}DEC_ORDER`,
     form: "word",
@@ -21315,7 +23861,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.ord.list",
     cs: `${DC}DEC_ORDER`,
     form: "direct",
@@ -21336,7 +23882,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.ord.between",
     cs: `${DC}DEC_ORDER`,
     form: "steps",
@@ -21355,7 +23901,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ADD_SAME_PLACES
-  fam5({
+  fam6({
     id: "g5c.dec.add.same.market",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "word",
@@ -21374,7 +23920,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.add.same.thousandths",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "direct",
@@ -21392,7 +23938,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.add.same.missing",
     cs: `${DC}DEC_ADD_SAME_PLACES`,
     form: "spot",
@@ -21412,7 +23958,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_ADD_MIXED_PLACES
-  fam5({
+  fam6({
     id: "g5c.dec.addm.market",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "word",
@@ -21431,7 +23977,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.addm.whole",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "direct",
@@ -21450,7 +23996,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.addm.price",
     cs: `${DC}DEC_ADD_MIXED_PLACES`,
     form: "steps",
@@ -21470,7 +24016,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_SUB_SAME_PLACES
-  fam5({
+  fam6({
     id: "g5c.dec.sub.same.change",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "word",
@@ -21488,7 +24034,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.sub.same.zero",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "direct",
@@ -21508,7 +24054,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.sub.same.spot",
     cs: `${DC}DEC_SUB_SAME_PLACES`,
     form: "spot",
@@ -21527,7 +24073,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_SUB_MIXED_PLACES
-  fam5({
+  fam6({
     id: "g5c.dec.subm.whole",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "word",
@@ -21546,7 +24092,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.subm.extra",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "direct",
@@ -21565,7 +24111,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.subm.change",
     cs: `${DC}DEC_SUB_MIXED_PLACES`,
     form: "steps",
@@ -21585,7 +24131,7 @@ var FAMILIES14 = [
     }
   }),
   // ---------------------------------------------------------------- DEC_MULT_1000
-  fam5({
+  fam6({
     id: "g5c.dec.k.grams",
     cs: `${DC}DEC_MULT_1000`,
     form: "word",
@@ -21602,7 +24148,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.k.missing",
     cs: `${DC}DEC_MULT_1000`,
     form: "direct",
@@ -21619,7 +24165,7 @@ var FAMILIES14 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dec.k.spot",
     cs: `${DC}DEC_MULT_1000`,
     form: "spot",
@@ -21656,9 +24202,9 @@ var Q = "NUMBER.SIMPLE_EQUATIONS.";
 var LETTERS = ["n", "p", "x", "m", "a", "b"];
 var SHOP = ["mandazi", "exercise books", "pencils", "bananas", "eggs"];
 var L2 = () => pick(LETTERS);
-var FAMILIES15 = [
+var FAMILIES19 = [
   // ---------------------------------------------------------------- EQ_MEANING
-  fam5({
+  fam6({
     id: "g5c.eq.mean.pick",
     cs: `${Q}EQ_MEANING`,
     form: "direct",
@@ -21675,7 +24221,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.mean.balance",
     cs: `${Q}EQ_MEANING`,
     form: "word",
@@ -21693,7 +24239,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.mean.letter",
     cs: `${Q}EQ_MEANING`,
     form: "why",
@@ -21711,7 +24257,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_FORM_ADD_SUB
-  fam5({
+  fam6({
     id: "g5c.eq.fadd.spent",
     cs: `${Q}EQ_FORM_ADD_SUB`,
     form: "direct",
@@ -21730,7 +24276,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.fadd.more",
     cs: `${Q}EQ_FORM_ADD_SUB`,
     form: "word",
@@ -21748,7 +24294,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.fadd.spot",
     cs: `${Q}EQ_FORM_ADD_SUB`,
     form: "spot",
@@ -21766,7 +24312,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_FORM_MUL_DIV
-  fam5({
+  fam6({
     id: "g5c.eq.fmul.times",
     cs: `${Q}EQ_FORM_MUL_DIV`,
     form: "direct",
@@ -21783,7 +24329,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.fmul.share",
     cs: `${Q}EQ_FORM_MUL_DIV`,
     form: "why",
@@ -21800,7 +24346,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.fmul.cost",
     cs: `${Q}EQ_FORM_MUL_DIV`,
     form: "word",
@@ -21818,7 +24364,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_ADD_SUB
-  fam5({
+  fam6({
     id: "g5c.eq.sadd.plus",
     cs: `${Q}EQ_SOLVE_ADD_SUB`,
     form: "word",
@@ -21835,7 +24381,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.sadd.minus",
     cs: `${Q}EQ_SOLVE_ADD_SUB`,
     form: "direct",
@@ -21855,7 +24401,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.sadd.spot",
     cs: `${Q}EQ_SOLVE_ADD_SUB`,
     form: "spot",
@@ -21873,7 +24419,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_MUL_DIV
-  fam5({
+  fam6({
     id: "g5c.eq.smul.groups",
     cs: `${Q}EQ_SOLVE_MUL_DIV`,
     form: "word",
@@ -21890,7 +24436,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.smul.divide",
     cs: `${Q}EQ_SOLVE_MUL_DIV`,
     form: "direct",
@@ -21908,7 +24454,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.smul.spot",
     cs: `${Q}EQ_SOLVE_MUL_DIV`,
     form: "spot",
@@ -21926,7 +24472,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_SOLVE_IN_CONTEXT
-  fam5({
+  fam6({
     id: "g5c.eq.ctx.sukuma",
     cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
     form: "word",
@@ -21943,7 +24489,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.ctx.matatu",
     cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
     form: "steps",
@@ -21961,7 +24507,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.ctx.sense",
     cs: `${Q}EQ_SOLVE_IN_CONTEXT`,
     form: "why",
@@ -21979,7 +24525,7 @@ var FAMILIES15 = [
     }
   }),
   // ---------------------------------------------------------------- EQ_TWO_STEP
-  fam5({
+  fam6({
     id: "g5c.eq.two.pens",
     cs: `${Q}EQ_TWO_STEP`,
     form: "word",
@@ -21996,7 +24542,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.two.order",
     cs: `${Q}EQ_TWO_STEP`,
     form: "direct",
@@ -22014,7 +24560,7 @@ var FAMILIES15 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.eq.two.spot",
     cs: `${Q}EQ_TWO_STEP`,
     form: "spot",
@@ -22176,7 +24722,7 @@ function build(name) {
   const fmt2 = (b, s) => comp(b, s, big, small), W3 = `${name.slice(0, 3)}`;
   const acc = (b, s) => [`${plain(b, s, f)} ${small}`];
   const out = [];
-  const F4 = (o) => out.push(fam5(o));
+  const F4 = (o) => out.push(fam6(o));
   const rnd1 = () => randInt(1, f === 60 ? 9 : 9);
   const smallPart = () => f === 60 ? randInt(5, 55) : randInt(1, 9) * 50 + (Math.random() < 0.4 ? randInt(1, 9) * 5 : 0) * 1;
   const any = (n) => Array.from({ length: n }, () => 0);
@@ -22617,7 +25163,7 @@ function build(name) {
   });
   return out;
 }
-var FAMILIES16 = [...build("length"), ...build("capacity"), ...build("mass"), ...build("time")];
+var FAMILIES20 = [...build("length"), ...build("capacity"), ...build("mass"), ...build("time")];
 
 // src/ai-tutor/content/families/g5c_meas.js
 var M4 = "MEASUR.";
@@ -22628,9 +25174,9 @@ var ML = [["a spoon of cough medicine", "ml"], ["a cup of chai", "ml"], ["a jerr
 var GM = [["an egg", "g"], ["a sack of potatoes", "kg"], ["a pencil", "g"], ["a bag of sugar", "kg"], ["a packet of chewing gum", "g"], ["a schoolchild", "kg"], ["a tomato", "g"], ["a bag of cement", "kg"]];
 var NAMES_ML = { ml: "millilitres", l: "litres" };
 var unitOpts = (right, units, mismatch, extra) => mc2(right, [...units.filter((u) => u !== right).map((u) => [u, `${WHY_L[u] || ""} ${mismatch || ""}`.trim(), "M_UNIT_SIZE_MISMATCH"]), ...extra ? [extra] : []]);
-var FAMILIES17 = [
+var FAMILIES21 = [
   // ================================================================ LENGTH
-  fam5({
+  fam6({
     id: "g5c.lenc.kmid.choose",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "direct",
@@ -22647,7 +25193,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.lenc.kmid.sign",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "word",
@@ -22664,7 +25210,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.lenc.kmid.sort",
     cs: `${M4}LENGTH.KM_IDENTIFY_UNIT`,
     form: "table",
@@ -22683,7 +25229,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.lenc.kmest.pick",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "direct",
@@ -22700,7 +25246,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.lenc.kmest.compare",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "word",
@@ -22720,7 +25266,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.lenc.kmest.sense",
     cs: `${M4}LENGTH.KM_ESTIMATE_DISTANCE`,
     form: "why",
@@ -22739,7 +25285,7 @@ var FAMILIES17 = [
     }
   }),
   // ================================================================ CAPACITY
-  fam5({
+  fam6({
     id: "g5c.capc.mlid.label",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "direct",
@@ -22756,7 +25302,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlid.odd",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "table",
@@ -22775,7 +25321,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlid.more",
     cs: `${M4}CAPACITY.ML_IDENTIFY_UNIT`,
     form: "why",
@@ -22792,7 +25338,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlscale.read",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "word",
@@ -22811,7 +25357,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlscale.step",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "direct",
@@ -22829,7 +25375,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlscale.eye",
     cs: `${M4}CAPACITY.ML_MEASURE_SCALE`,
     form: "why",
@@ -22846,7 +25392,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.fill.count",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "word",
@@ -22863,7 +25409,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.fill.compare",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "why",
@@ -22880,7 +25426,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.fill.needed",
     cs: `${M4}CAPACITY.ML_MEASURE_BY_FILLING`,
     form: "steps",
@@ -22899,7 +25445,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlest.best",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "direct",
@@ -22916,7 +25462,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlest.which",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "why",
@@ -22933,7 +25479,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.capc.mlest.record",
     cs: `${M4}CAPACITY.ML_ESTIMATE`,
     form: "word",
@@ -22951,7 +25497,7 @@ var FAMILIES17 = [
     }
   }),
   // ================================================================ MASS
-  fam5({
+  fam6({
     id: "g5c.masc.gram.label",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "word",
@@ -22968,7 +25514,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.gram.which",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "table",
@@ -22986,7 +25532,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.gram.spot",
     cs: `${M4}MASS.MASS_GRAMME_RECOGNISE`,
     form: "spot",
@@ -23003,7 +25549,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.unit.choose",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "direct",
@@ -23020,7 +25566,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.unit.complete",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "word",
@@ -23037,7 +25583,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.unit.size",
     cs: `${M4}MASS.MASS_CHOOSE_UNIT`,
     form: "why",
@@ -23055,7 +25601,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.bal.sum",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "word",
@@ -23072,7 +25618,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.bal.heavier",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "why",
@@ -23089,7 +25635,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.bal.which-masses",
     cs: `${M4}MASS.MASS_MEASURE_BALANCE`,
     form: "direct",
@@ -23106,7 +25652,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.scale.dial",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "word",
@@ -23123,7 +25669,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.scale.half",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "direct",
@@ -23139,7 +25685,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.scale.diff",
     cs: `${M4}MASS.MASS_READ_SCALE`,
     form: "steps",
@@ -23157,7 +25703,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.est.bench",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "word",
@@ -23174,7 +25720,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.est.heavier",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "why",
@@ -23190,7 +25736,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.masc.est.record",
     cs: `${M4}MASS.MASS_ESTIMATE_GRAMMES`,
     form: "direct",
@@ -23208,7 +25754,7 @@ var FAMILIES17 = [
     }
   }),
   // ================================================================ TIME
-  fam5({
+  fam6({
     id: "g5c.timc.sec.hand",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "direct",
@@ -23224,7 +25770,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.sec.which",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "word",
@@ -23241,7 +25787,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.sec.tf",
     cs: `${M4}TIME.SECOND_IDENTIFY`,
     form: "why",
@@ -23257,7 +25803,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dur.which",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "direct",
@@ -23275,7 +25821,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dur.measure",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "word",
@@ -23292,7 +25838,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dur.order",
     cs: `${M4}TIME.SECOND_DURATION_SENSE`,
     form: "why",
@@ -23311,7 +25857,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.read.analog",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "word",
@@ -23328,7 +25874,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.read.marks",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "direct",
@@ -23345,7 +25891,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.read.spot",
     cs: `${M4}TIME.READ_SECONDS_ANALOGUE`,
     form: "spot",
@@ -23362,7 +25908,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dig.stopwatch",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "direct",
@@ -23379,7 +25925,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dig.clock",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "word",
@@ -23396,7 +25942,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.timc.dig.match",
     cs: `${M4}TIME.READ_SECONDS_DIGITAL`,
     form: "why",
@@ -23414,7 +25960,7 @@ var FAMILIES17 = [
     }
   }),
   // ================================================================ AREA
-  fam5({
+  fam6({
     id: "g5c.arec.unit.which",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "direct",
@@ -23432,7 +25978,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.unit.side2",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "word",
@@ -23449,7 +25995,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.unit.mean",
     cs: `${M4}AREA.CM2_UNIT_MEANING`,
     form: "why",
@@ -23466,7 +26012,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.cover.count",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "word",
@@ -23483,7 +26029,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.cover.stamp",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "direct",
@@ -23500,7 +26046,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.cover.spot",
     cs: `${M4}AREA.AREA_COVER_AND_COUNT`,
     form: "spot",
@@ -23517,7 +26063,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.real.pick",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "direct",
@@ -23534,7 +26080,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.real.unit",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "why",
@@ -23552,7 +26098,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.real.list",
     cs: `${M4}AREA.CM2_REAL_LIFE`,
     form: "table",
@@ -23570,7 +26116,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.rows.array",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "word",
@@ -23587,7 +26133,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.rows.partial",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "direct",
@@ -23604,7 +26150,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.rows.why",
     cs: `${M4}AREA.AREA_ROWS_BY_COLUMNS`,
     form: "why",
@@ -23621,7 +26167,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.calc.word",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "word",
@@ -23639,7 +26185,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.calc.square",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "direct",
@@ -23656,7 +26202,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.calc.labelled",
     cs: `${M4}AREA.AREA_RECT_SQUARE_CALC`,
     form: "table",
@@ -23675,7 +26221,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.prob.cloth",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "word",
@@ -23693,7 +26239,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.prob.side",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "direct",
@@ -23711,7 +26257,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.arec.prob.choose",
     cs: `${M4}AREA.AREA_PROBLEMS`,
     form: "why",
@@ -23729,7 +26275,7 @@ var FAMILIES17 = [
     }
   }),
   // ================================================================ VOLUME
-  fam5({
+  fam6({
     id: "g5c.volc.cm3.cubes",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "direct",
@@ -23746,7 +26292,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cm3.edge",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "why",
@@ -23762,7 +26308,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cm3.mass",
     cs: `${M4}VOLUME.CM3_UNIT_IDENTIFY`,
     form: "word",
@@ -23779,7 +26325,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.count.layers",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "word",
@@ -23796,7 +26342,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.count.picture",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "direct",
@@ -23814,7 +26360,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.count.same",
     cs: `${M4}VOLUME.VOLUME_COUNT_CM3_CUBES`,
     form: "why",
@@ -23831,7 +26377,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.derive.table",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "table",
@@ -23849,7 +26395,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.derive.why",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "why",
@@ -23866,7 +26412,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.derive.rotate",
     cs: `${M4}VOLUME.CUBOID_FORMULA_DERIVE`,
     form: "direct",
@@ -23883,7 +26429,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.calc.word",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "word",
@@ -23900,7 +26446,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.calc.table",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "table",
@@ -23918,7 +26464,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.calc.spot",
     cs: `${M4}VOLUME.CUBOID_VOLUME_CALC`,
     form: "spot",
@@ -23935,7 +26481,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.prob.metre",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "word",
@@ -23952,7 +26498,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.prob.extra",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "direct",
@@ -23969,7 +26515,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.prob.fill",
     cs: `${M4}VOLUME.CUBOID_VOLUME_PROBLEMS`,
     form: "steps",
@@ -23987,7 +26533,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cubederive.build",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "word",
@@ -24004,7 +26550,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cubederive.tf",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "why",
@@ -24021,7 +26567,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cubederive.which",
     cs: `${M4}VOLUME.CUBE_FORMULA_DERIVE`,
     form: "direct",
@@ -24038,7 +26584,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cube.calc",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "word",
@@ -24055,7 +26601,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cube.dice",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "direct",
@@ -24072,7 +26618,7 @@ var FAMILIES17 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.volc.cube.table",
     cs: `${M4}VOLUME.CUBE_VOLUME_CALC`,
     form: "table",
@@ -24102,10 +26648,10 @@ var pool = (items2, lead) => () => {
   const x = pick(items2);
   return ask(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against what you know."], [x.s, `So: ${x.r}.`]);
 };
-var spot3 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES18 = [
+var spot4 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
+var FAMILIES22 = [
   // ---------------------------------------------------------------- BUDGET_MEANING
-  fam5({
+  fam6({
     id: "g5c.mon.bm.which",
     cs: `${Y}BUDGET_MEANING`,
     form: "direct",
@@ -24115,7 +26661,7 @@ var FAMILIES18 = [
       { q: "got a paper from the shop after buying sugar and bread. It shows what was bought and the total paid. Is it a budget?", r: "No, it is a receipt", w: [["Yes, because it shows money paid", "A budget is a plan made before spending.", "M_BUDGET_IS_RECEIPT"], ["Yes, because it lists the items bought", "Items and amounts after buying make a receipt.", "M_BUDGET_IS_RECEIPT"]], s: "A receipt is a record, not a plan." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bm.complete",
     cs: `${Y}BUDGET_MEANING`,
     form: "why",
@@ -24132,7 +26678,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bm.who",
     cs: `${Y}BUDGET_MEANING`,
     form: "word",
@@ -24150,7 +26696,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- BUDGET_IMPORTANCE
-  fam5({
+  fam6({
     id: "g5c.mon.bi.fail",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "why",
@@ -24167,7 +26713,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bi.drop",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "direct",
@@ -24184,7 +26730,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bi.reasons",
     cs: `${Y}BUDGET_IMPORTANCE`,
     form: "word",
@@ -24202,7 +26748,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- BUDGET_ITEM_COSTS
-  fam5({
+  fam6({
     id: "g5c.mon.bic.line",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "word",
@@ -24219,7 +26765,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bic.table",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "table",
@@ -24237,18 +26783,18 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bic.spot",
     cs: `${Y}BUDGET_ITEM_COSTS`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), q = randInt(3, 6), pr = pick([45, 65, 85]);
-      return spot3(`${p.name} works out the cost of ${q} exercise books at ${sh(pr)} each. Which step has the mistake?`, [`Step 1: One book costs ${sh(pr)}.`, `Step 2: The cost of ${q} books is ${pr} + ${q} = ${pr + q}.`, `Step 3: The line costs ${sh(pr + q)}.`], 1, `Several equal items: multiply. ${q} \xD7 ${pr} = ${q * pr}, so the line costs ${sh(q * pr)}.`, "M_ADD_QTY_AND_PRICE", "Is the cost of 5 books really close to the cost of 1?");
+      return spot4(`${p.name} works out the cost of ${q} exercise books at ${sh(pr)} each. Which step has the mistake?`, [`Step 1: One book costs ${sh(pr)}.`, `Step 2: The cost of ${q} books is ${pr} + ${q} = ${pr + q}.`, `Step 3: The line costs ${sh(pr + q)}.`], 1, `Several equal items: multiply. ${q} \xD7 ${pr} = ${q * pr}, so the line costs ${sh(q * pr)}.`, "M_ADD_QTY_AND_PRICE", "Is the cost of 5 books really close to the cost of 1?");
     }
   }),
   // ---------------------------------------------------------------- BUDGET_TOTAL_BALANCE
-  fam5({
+  fam6({
     id: "g5c.mon.bt.balance",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "word",
@@ -24266,7 +26812,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bt.total",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "table",
@@ -24284,7 +26830,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bt.afford",
     cs: `${Y}BUDGET_TOTAL_BALANCE`,
     form: "why",
@@ -24302,7 +26848,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- TAX_MEANING
-  fam5({
+  fam6({
     id: "g5c.mon.tm.what",
     cs: `${Y}TAX_MEANING`,
     form: "direct",
@@ -24312,7 +26858,7 @@ var FAMILIES18 = [
       { q: "sees tax on a supermarket receipt. Who gets this money in the end?", r: "The government", w: [["The supermarket", "The shop collects it and passes it to the government.", "M_TAX_KEPT_BY_SHOP"], ["The cashier", "The cashier is not paid tax money. It goes to the government.", "M_TAX_KEPT_BY_SHOP"]], s: "The shop collects tax and pays it to the government." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.tm.why",
     cs: `${Y}TAX_MEANING`,
     form: "why",
@@ -24322,18 +26868,18 @@ var FAMILIES18 = [
       { q: "asks which of these is paid for by tax: a public school, or a shop owner's own car?", r: "A public school", w: [["A shop owner's own car", "Taxes pay for public services, not private things.", "M_TAX_KEPT_BY_SHOP"], ["Neither, because tax is a fine", "Tax is paid for public services.", "M_TAX_IS_FINE"]], s: "Public schools are paid for with taxes." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.tm.tf",
     cs: `${Y}TAX_MEANING`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot3(`${p.name} explains tax. Which step has the mistake?`, ["Step 1: Tax is money that people and businesses pay to the government.", "Step 2: The tax on a shop receipt is kept by the shop as extra profit.", "Step 3: The government uses tax for roads, schools and hospitals."], 1, "The shop collects the tax from the customer and passes it to the government. It is not extra profit for the shop.", "M_TAX_KEPT_BY_SHOP", "Who gets the tax money in the end?");
+      return spot4(`${p.name} explains tax. Which step has the mistake?`, ["Step 1: Tax is money that people and businesses pay to the government.", "Step 2: The tax on a shop receipt is kept by the shop as extra profit.", "Step 3: The government uses tax for roads, schools and hospitals."], 1, "The shop collects the tax from the customer and passes it to the government. It is not extra profit for the shop.", "M_TAX_KEPT_BY_SHOP", "Who gets the tax money in the end?");
     }
   }),
   // ---------------------------------------------------------------- TAX_ON_RECEIPT
-  fam5({
+  fam6({
     id: "g5c.mon.tr.amount",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "table",
@@ -24351,7 +26897,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.tr.total",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "word",
@@ -24368,7 +26914,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.tr.before",
     cs: `${Y}TAX_ON_RECEIPT`,
     form: "direct",
@@ -24386,7 +26932,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- BANK_SERVICES
-  fam5({
+  fam6({
     id: "g5c.mon.bs.match",
     cs: `${Y}BANK_SERVICES`,
     form: "direct",
@@ -24397,7 +26943,7 @@ var FAMILIES18 = [
       { q: "keeps her land title in the bank's strong room for safety. Which bank service is this?", r: "Safe custody", w: [["A loan", "A loan is money borrowed from the bank.", "M_LOAN_IS_GIFT"], ["A withdrawal", "A withdrawal takes money out of an account. Keeping a valuable safe is safe custody.", "M_DEPOSIT_WITHDRAW_SWAP"]], s: "Banks keep valuables safe." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bs.loan",
     cs: `${Y}BANK_SERVICES`,
     form: "why",
@@ -24414,7 +26960,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.bs.notes",
     cs: `${Y}BANK_SERVICES`,
     form: "word",
@@ -24432,7 +26978,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- MONEY_TRANSFER_DIGITAL
-  fam5({
+  fam6({
     id: "g5c.mon.mt.pin",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "direct",
@@ -24442,7 +26988,7 @@ var FAMILIES18 = [
       { q: "is asked by an agent to say the PIN aloud so the agent can send money quickly. What should be done?", r: "Keep it secret, enter it yourself", w: [["Say the PIN aloud to save time", "Never say the PIN. Someone may hear it.", "M_SHARE_PIN"], ["Write the PIN on the back of the phone", "Never write a PIN where others can see it.", "M_SHARE_PIN"]], s: "Enter the PIN yourself in private." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.mt.check",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "why",
@@ -24459,7 +27005,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.mt.order",
     cs: `${Y}MONEY_TRANSFER_DIGITAL`,
     form: "word",
@@ -24478,7 +27024,7 @@ var FAMILIES18 = [
     }
   }),
   // ---------------------------------------------------------------- SAVING_FACTORS
-  fam5({
+  fam6({
     id: "g5c.mon.sf.plan",
     cs: `${Y}SAVING_FACTORS`,
     form: "direct",
@@ -24495,7 +27041,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.sf.safe",
     cs: `${Y}SAVING_FACTORS`,
     form: "why",
@@ -24512,7 +27058,7 @@ var FAMILIES18 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.mon.sf.small",
     cs: `${Y}SAVING_FACTORS`,
     form: "word",
@@ -24542,10 +27088,10 @@ var fromPool = (pool2, lead) => () => {
   const x = pick(pool2);
   return ask2(x.r, x.w, `${lead(person())}${x.q}`, x.h || ["Think about what the words mean.", "Check each choice against the picture in your mind."], [x.s, `So the answer is: ${x.r}.`], x.i);
 };
-var spot4 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
-var FAMILIES19 = [
+var spot5 = (stem, steps3, badIdx, fix, mis, hint) => ({ question: stem, working: steps3.map((text, i) => ({ text, ok: i !== badIdx })), fix, mis, hints: [hint], steps: [fix] });
+var FAMILIES23 = [
   // ================================================================ LINES
-  fam5({
+  fam6({
     id: "g5c.geol.hv.classify",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "direct",
@@ -24557,7 +27103,7 @@ var FAMILIES19 = [
       { q: "stands in the classroom and studies the sill at the foot of the window frame. Which word describes the sill: horizontal, vertical or neither?", r: "horizontal", w: [["vertical", "The bottom edge lies level on the floor.", "M_HV_SWAP_NAMES"], ["neither", "The bottom edge is level, so it is horizontal.", "M_HV_SLANT_COUNTS"]], s: "A level line is horizontal." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.hv.tilted",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "word",
@@ -24574,7 +27120,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.hv.letters",
     cs: `${G}LINES.IDENTIFY_HORIZONTAL_VERTICAL`,
     form: "table",
@@ -24592,7 +27138,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawhv.ruler",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "word",
@@ -24609,7 +27155,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawhv.how",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "direct",
@@ -24619,17 +27165,17 @@ var FAMILIES19 = [
       { q: "must draw a horizontal line 8 cm long. Which is correct?", r: "Ruler along the page bottom, 0 to 8", w: [["Tilt the book and draw straight to the 8 mark", "The line will slope. Keep the page level.", "M_DRAW_HV_DRIFT"], ["Draw from the very end of the ruler to the 8 mark", "The ruler may have a gap before 0. Start at the 0 mark.", "M_RULER_FROM_ONE"]], s: "Keep the paper straight and measure from 0." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawhv.spot",
     cs: `${G}LINES.DRAW_HORIZONTAL_VERTICAL`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), n = randInt(5, 10);
-      return spot4(`${p.name} draws a vertical line ${n} cm long. Which step has the mistake?`, ["Step 1: Put the ruler on the paper.", `Step 2: Turn the book so that the ruler leans, and draw from the 1 mark to the ${n + 1} mark.`, `Step 3: Say the line is ${n} cm long.`], 1, `The page must be straight and measuring starts from 0. A vertical line goes straight up the page from the 0 mark to the ${n} mark.`, "M_DRAW_HV_DRIFT", "Is the line really upright?");
+      return spot5(`${p.name} draws a vertical line ${n} cm long. Which step has the mistake?`, ["Step 1: Put the ruler on the paper.", `Step 2: Turn the book so that the ruler leans, and draw from the 1 mark to the ${n + 1} mark.`, `Step 3: Say the line is ${n} cm long.`], 1, `The page must be straight and measuring starts from 0. A vertical line goes straight up the page from the 0 mark to the ${n} mark.`, "M_DRAW_HV_DRIFT", "Is the line really upright?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.perp.which",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "direct",
@@ -24641,7 +27187,7 @@ var FAMILIES19 = [
       { q: "checks two lines that meet at an angle just a little smaller than a right angle. A set square leaves a small gap. Are they perpendicular?", r: "No, it is not exactly a right angle", w: [["Yes, it looks like a right angle to me", "Judging by eye is not enough. Check with a set square.", "M_PERP_BY_EYE"], ["Yes, because it is nearly a right angle", "Nearly is not the same. A gap means it is not a right angle.", "M_PERP_BY_EYE"]], s: "A gap with the set square means the angle is not a right angle." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.perp.shape",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "word",
@@ -24658,7 +27204,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.perp.tilted",
     cs: `${G}LINES.IDENTIFY_PERPENDICULAR`,
     form: "why",
@@ -24668,7 +27214,7 @@ var FAMILIES19 = [
       { q: "looks at two lines on a map that cross at a right angle, but neither is horizontal. Are they perpendicular?", r: "Yes, they meet at a right angle", w: [["No, one of them must be horizontal", "Perpendicular lines can face any direction.", "M_PERP_MUST_BE_UPRIGHT"], ["No, they only touch each other", "Crossing at a right angle is perpendicular.", "M_PERP_ANY_CROSSING"]], s: "Only the angle between the lines matters." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawperp.tool",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "direct",
@@ -24678,7 +27224,7 @@ var FAMILIES19 = [
       { q: "wants a line perpendicular to line CD through a point Q marked 3 cm from C. Which is correct?", r: "Put the set square corner exactly at Q on CD", w: [["Draw the right angle anywhere along CD", "The line must pass through Q.", "M_DRAWPERP_MISSES_POINT"], ["Use the long edge of the set square along CD", "The long edge does not give a right angle.", "M_SETSQUARE_WRONG_EDGE"]], s: "The right angle goes exactly at the marked point." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawperp.check",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "why",
@@ -24688,17 +27234,17 @@ var FAMILIES19 = [
       { q: "drew a line that meets a slanting line at a right angle, but 1 cm away from the point P marked on it. Was the task done correctly?", r: "No, the line must go through P", w: [["Yes, because it is at a right angle", "The line must go through the marked point P as well.", "M_DRAWPERP_MISSES_POINT"], ["Yes, near enough", "Check the instructions. The line must pass through P.", "M_DRAWPERP_MISSES_POINT"]], s: "The perpendicular must pass through the marked point." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawperp.spot",
     cs: `${G}LINES.DRAW_PERPENDICULAR`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot4(`${p.name} draws a line perpendicular to a slanting line AB through P. Which step has the mistake?`, ["Step 1: Mark the point P on AB.", "Step 2: Draw a straight upward line through P, because perpendicular means upright.", "Step 3: Say the lines are perpendicular."], 1, "Perpendicular means at a right angle to the given line, even when it slants. Use a set square on the line at P.", "M_DRAWPERP_ALWAYS_VERTICAL", "Is the new line at a right angle to AB?");
+      return spot5(`${p.name} draws a line perpendicular to a slanting line AB through P. Which step has the mistake?`, ["Step 1: Mark the point P on AB.", "Step 2: Draw a straight upward line through P, because perpendicular means upright.", "Step 3: Say the lines are perpendicular."], 1, "Perpendicular means at a right angle to the given line, even when it slants. Use a set square on the line at P.", "M_DRAWPERP_ALWAYS_VERTICAL", "Is the new line at a right angle to AB?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.par.pairs",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "direct",
@@ -24709,7 +27255,7 @@ var FAMILIES19 = [
       { q: "lays a ruler diagonally on a desk. Are the two long edges of the ruler parallel?", r: "Yes, parallel lines can slant", w: [["No, they are not lying flat across the desk", "Parallel lines do not have to be horizontal.", "M_PAR_ONLY_HORIZONTAL"], ["No, only horizontal lines are parallel", "Parallel lines can be vertical or slanting too.", "M_PAR_ONLY_HORIZONTAL"]], s: "The edges of a ruler stay the same distance apart." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.par.shape",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "word",
@@ -24726,7 +27272,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.par.sort",
     cs: `${G}LINES.IDENTIFY_PARALLEL`,
     form: "table",
@@ -24738,7 +27284,7 @@ var FAMILIES19 = [
       return { question: "The table shows four pairs of lines. Which pair of lines stays the same distance apart, so is parallel? Choose one that is parallel and is a railway.", model: tbl2(["Pair of lines"], rows.map((r) => [r[0]])), options, instruction: "Choose the parallel pair.", hints: ["Parallel lines never meet.", "They stay the same distance apart."], steps: ["Railway rails stay the same distance apart.", "They are parallel."] };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawpar.how",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "direct",
@@ -24748,7 +27294,7 @@ var FAMILIES19 = [
       { q: "is told line MN slopes downwards from left to right. Which line is parallel to MN?", r: "A line sloping down the same way", w: [["A horizontal line drawn well below it", "A parallel line follows the same slant as the given line.", "M_DRAWPAR_IGNORES_DIRECTION"], ["A vertical line drawn right next to it", "A parallel line follows the same slant.", "M_DRAWPAR_IGNORES_DIRECTION"]], s: "Parallel lines have the same direction." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawpar.dist",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "word",
@@ -24765,18 +27311,18 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geol.drawpar.spot",
     cs: `${G}LINES.DRAW_PARALLEL`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), d = randInt(3, 5);
-      return spot4(`${p.name} draws a line parallel to AB, ${d} cm away. Which step has the mistake?`, ["Step 1: Mark the line AB.", `Step 2: Measure ${d} cm from AB at one end only, mark it, and draw the new line by eye.`, "Step 3: Say the lines are parallel."], 1, `Measure ${d} cm in at least two places and join the marks so the line stays the same distance from AB.`, "M_DRAWPAR_ONE_MEASURE", "Is the distance the same all along?");
+      return spot5(`${p.name} draws a line parallel to AB, ${d} cm away. Which step has the mistake?`, ["Step 1: Mark the line AB.", `Step 2: Measure ${d} cm from AB at one end only, mark it, and draw the new line by eye.`, "Step 3: Say the lines are parallel."], 1, `Measure ${d} cm in at least two places and join the marks so the line stays the same distance from AB.`, "M_DRAWPAR_ONE_MEASURE", "Is the distance the same all along?");
     }
   }),
   // ================================================================ ANGLES
-  fam5({
+  fam6({
     id: "g5c.geoa.turn.degrees",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "word",
@@ -24793,7 +27339,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.turn.clock",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "direct",
@@ -24812,7 +27358,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.turn.compass",
     cs: `${G}ANGLES.TURNS_AS_ANGLES`,
     form: "why",
@@ -24829,7 +27375,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.deg.arms",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "direct",
@@ -24846,7 +27392,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.deg.which",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "word",
@@ -24863,7 +27409,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.deg.right",
     cs: `${G}ANGLES.DEGREE_AS_UNIT`,
     form: "why",
@@ -24879,7 +27425,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.prot.scale",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "word",
@@ -24896,7 +27442,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.prot.which",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "direct",
@@ -24912,17 +27458,17 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.prot.spot",
     cs: `${G}ANGLES.READ_PROTRACTOR_BOTH_SCALES`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), a = randInt(4, 8) * 10 + randInt(1, 4);
-      return spot4(`${p.name} reads an angle of ${a}\xB0 on a protractor as ${180 - a}\xB0. Which step has the mistake?`, ["Step 1: One arm lies along the baseline with the 0 on the right.", `Step 2: Read the scale that starts at 0 on the left, ${180 - a}.`, `Step 3: The angle is ${180 - a}\xB0.`], 1, `Read the scale that starts at 0 on the baseline arm. The angle is ${a}\xB0.`, "M_WRONG_SCALE", "Which scale starts at 0 on the baseline arm?");
+      return spot5(`${p.name} reads an angle of ${a}\xB0 on a protractor as ${180 - a}\xB0. Which step has the mistake?`, ["Step 1: One arm lies along the baseline with the 0 on the right.", `Step 2: Read the scale that starts at 0 on the left, ${180 - a}.`, `Step 3: The angle is ${180 - a}\xB0.`], 1, `Read the scale that starts at 0 on the baseline arm. The angle is ${a}\xB0.`, "M_WRONG_SCALE", "Which scale starts at 0 on the baseline arm?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.meas.place",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "direct",
@@ -24933,7 +27479,7 @@ var FAMILIES19 = [
       { q: "lines up the bottom edge of the protractor with one arm, instead of the baseline. What is the likely problem?", r: "The reading may be a few degrees wrong", w: [["The reading will be exactly right", "The 0 line is the baseline, which may not be the bottom edge.", "M_EDGE_NOT_BASELINE"], ["The angle gets bigger", "The angle does not change, but the reading can be wrong.", "M_EDGE_NOT_BASELINE"]], s: "Use the 0 baseline, not the bottom edge." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.meas.tilted",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "word",
@@ -24950,17 +27496,17 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.meas.spot",
     cs: `${G}ANGLES.MEASURE_WITH_PROTRACTOR`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), a = randInt(3, 7) * 10;
-      return spot4(`${p.name} measures a ${a}\xB0 angle with arms 1 cm long. Which step has the mistake?`, ["Step 1: Put the centre of the protractor on the vertex.", `Step 2: The arms are too short to reach the scale, so guess about ${a + 10}\xB0.`, `Step 3: Write ${a + 10}\xB0.`], 1, `Extend the arms with a ruler until they reach the scale, then read the angle: ${a}\xB0.`, "M_SHORT_ARMS_GUESS", "Should we guess a measurement?");
+      return spot5(`${p.name} measures a ${a}\xB0 angle with arms 1 cm long. Which step has the mistake?`, ["Step 1: Put the centre of the protractor on the vertex.", `Step 2: The arms are too short to reach the scale, so guess about ${a + 10}\xB0.`, `Step 3: Write ${a + 10}\xB0.`], 1, `Extend the arms with a ruler until they reach the scale, then read the angle: ${a}\xB0.`, "M_SHORT_ARMS_GUESS", "Should we guess a measurement?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.ctx.unit",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "direct",
@@ -24977,7 +27523,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.ctx.sense",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "why",
@@ -24994,7 +27540,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.ctx.bigger",
     cs: `${G}ANGLES.MEASURE_ANGLES_IN_CONTEXT`,
     form: "word",
@@ -25011,7 +27557,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.env.right",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "direct",
@@ -25022,7 +27568,7 @@ var FAMILIES19 = [
       { q: "opens a classroom door a quarter turn. Does the door make an angle with its closed position?", r: "Yes, a right angle (90\xB0)", w: [["No, there are no drawn lines", "A turning object makes an angle even with no lines drawn.", "M_NO_ANGLE_IN_MOVEMENT"], ["No, only drawn shapes have angles", "Moving objects make angles too.", "M_NO_ANGLE_IN_MOVEMENT"]], s: "A quarter turn is 90\xB0." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.env.compare",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "why",
@@ -25032,7 +27578,7 @@ var FAMILIES19 = [
       { q: "sees a clock hand move from 12 to 3. What does this show?", r: "A turn that makes a right angle", w: [["Nothing, because no line is drawn", "A turning hand makes an angle.", "M_NO_ANGLE_IN_MOVEMENT"], ["A point only", "The hand sweeps an opening, which is an angle.", "M_ANGLE_IS_THE_CORNER_POINT"]], s: "12 to 3 is a quarter turn of 90\xB0." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geoa.env.roof",
     cs: `${G}ANGLES.ANGLES_IN_ENVIRONMENT`,
     form: "word",
@@ -25050,7 +27596,7 @@ var FAMILIES19 = [
     }
   }),
   // ================================================================ 3-D OBJECTS
-  fam5({
+  fam6({
     id: "g5c.geo3.name.object",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "direct",
@@ -25062,7 +27608,7 @@ var FAMILIES19 = [
       { q: "wonders whether a plastic water tank and a tin of milk are the same kind of 3-D object. Are they?", r: "Yes, both are cylinders", w: [["No, the tank is much bigger", "Size does not change the kind of shape.", "M_SIZE_CHANGES_SHAPE"], ["No, one is plastic", "Material does not change the shape.", "M_SIZE_CHANGES_SHAPE"]], s: "Both have two round flat ends and a curved side." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.name.sort",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "table",
@@ -25082,7 +27628,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.name.odd",
     cs: `${G}3_D_OBJECTS.NAME_3D_OBJECTS`,
     form: "why",
@@ -25092,7 +27638,7 @@ var FAMILIES19 = [
       { q: "compares a football, a ball of string, a tin and an orange. Which is the odd one out?", r: "The tin, because it is a cylinder", w: [["The orange, because it is a fruit and not a toy", "The material does not decide the shape.", "M_SIZE_CHANGES_SHAPE"], ["The football, because it is the biggest of them", "Size does not change the shape.", "M_SIZE_CHANGES_SHAPE"]], s: "The football, string ball and orange are spheres." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.feat.surfaces",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "direct",
@@ -25103,7 +27649,7 @@ var FAMILIES19 = [
       { q: "wonders which can roll: a football, a tin of milk, a matchbox. Which can roll?", r: "The football and the tin", w: [["Only the football", "A tin rolls on its curved side.", "M_ONLY_BALLS_ROLL"], ["All three", "A matchbox has flat sides and does not roll.", "M_ONLY_BALLS_ROLL"]], s: "Curved surfaces can roll." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.feat.count",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "word",
@@ -25120,7 +27666,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.feat.guess",
     cs: `${G}3_D_OBJECTS.DESCRIBE_3D_FEATURES`,
     form: "why",
@@ -25130,7 +27676,7 @@ var FAMILIES19 = [
       { q: "describes an object: two flat circles and one curved surface, and it can roll. Which object is it?", r: "A cylinder", w: [["A sphere", "A sphere has no flat circles.", "M_CYLINDER_SURFACES"], ["A cone", "A cone has one flat circle and a point.", "M_POINTED_MEANS_PYRAMID"]], s: "A cylinder has two circles and a curved side." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.dim.sort",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "direct",
@@ -25140,7 +27686,7 @@ var FAMILIES19 = [
       { q: "looks at a dice. Which is its correct name?", r: "A cube", w: [["A square", "A square is a flat shape. A dice is solid.", "M_PLANE_NAME_FOR_SOLID"], ["A box", "The mathematical name of a solid with six equal squares is a cube.", "M_PLANE_NAME_FOR_SOLID"]], s: "A cube has six square faces." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.dim.which",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "why",
@@ -25150,7 +27696,7 @@ var FAMILIES19 = [
       { q: "draws a circle on a page of an exercise book. Is that circle a flat 2-D shape or a solid 3-D object?", r: "2-D, because a drawing is flat", w: [["3-D, because it is round like a ball", "Round does not mean 3-D. A drawn circle is flat.", "M_PLANE_NAME_FOR_SOLID"], ["3-D, because it is printed on a page", "A drawn circle is a flat shape.", "M_PLANE_NAME_FOR_SOLID"]], s: "A drawn shape is flat." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.dim.match",
     cs: `${G}3_D_OBJECTS.2D_VS_3D`,
     form: "table",
@@ -25162,7 +27708,7 @@ var FAMILIES19 = [
       return { question: `The table lists objects and their solid names. What kind of thing is a ${t[0].toLowerCase()}?`, model: tbl2(["Object", "Solid name"], rows), options, instruction: "Choose the best answer.", hints: ["Does it take up space?", "Flat shapes do not."], steps: ["It is a 3-D object.", "Its solid name is " + t[1] + "."] };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.face.count",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "word",
@@ -25179,7 +27725,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.face.shape",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "direct",
@@ -25190,7 +27736,7 @@ var FAMILIES19 = [
       { q: "looks at a tin of Kimbo. What flat shapes are found on it?", r: "Two circles", w: [["Two circles and a rectangle", "The side is curved. It is not a flat rectangle.", "M_CYLINDER_SIDE_RECTANGLE_FACE"], ["One circle", "There is one at the top and one at the bottom.", "M_CYLINDER_SIDE_RECTANGLE_FACE"]], s: "A cylinder has two flat circles." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.geo3.face.tf",
     cs: `${G}3_D_OBJECTS.2D_FACES_IN_3D`,
     form: "why",
@@ -25201,7 +27747,7 @@ var FAMILIES19 = [
     ], (p) => `${p.name} `)
   }),
   // ================================================================ DATA REPRESENTATION
-  fam5({
+  fam6({
     id: "g5c.dat.plan.categories",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "direct",
@@ -25211,7 +27757,7 @@ var FAMILIES19 = [
       { q: "records favourite foods using: ugali, rice, chapati, food. What is wrong?", r: "Food includes all the others", w: [["Nothing is wrong with these categories", "Every food is also food. Categories must not overlap.", "M_OVERLAPPING_CATEGORIES"], ["Foods cannot be used as data", "Foods can be data. Data does not have to be numbers.", "M_DATA_ONLY_NUMBERS"]], s: "Categories must not overlap." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.plan.what",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "why",
@@ -25221,7 +27767,7 @@ var FAMILIES19 = [
       { q: "asks whether the colours of vehicles seen at the gate are data.", r: "Yes, colours are data", w: [["No, only numbers are data", "Colours are data. We can count how many of each.", "M_DATA_ONLY_NUMBERS"], ["No, colours cannot be counted", "We can count how many are red, blue, white.", "M_DATA_ONLY_NUMBERS"]], s: "We can count items in each category." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.plan.method",
     cs: `${D2}PLAN_DATA_COLLECTION`,
     form: "word",
@@ -25239,7 +27785,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.col.check",
     cs: `${D2}COLLECT_DATA_30`,
     form: "word",
@@ -25257,7 +27803,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.col.error",
     cs: `${D2}COLLECT_DATA_30`,
     form: "direct",
@@ -25267,17 +27813,17 @@ var FAMILIES19 = [
       { q: "asked 30 classmates their favourite drink and the record shows tea 12, uji 9, milk 8, juice 6. What should be checked?", r: "Whether the total matches the 30 asked", w: [["Nothing is wrong, the numbers look fine to me", "The total is 35 but only 30 were asked, so some answers were counted twice.", "M_DOUBLE_COUNTING"], ["Whether tea is the biggest number", "Check that the total equals the number asked.", "M_DOUBLE_COUNTING"]], s: "12 + 9 + 8 + 6 = 35, not 30." }
     ], (p) => `${p.name} checks a friend's survey. The friend `)
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.col.fix",
     cs: `${D2}COLLECT_DATA_30`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), v = [11, 9, 8, 6];
-      return spot4(`${p.name} asked 30 classmates their favourite drink and recorded tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. Which step has the mistake?`, ["Step 1: Ask each of the 30 classmates one question.", `Step 2: Record the answers: ${v.join(", ")}. The record is finished without adding them.`, "Step 3: Say the record is correct."], 1, `The numbers add to ${v.reduce((a, b) => a + b, 0)}, not 30, so some answers were counted twice or missed. Check the total against the number asked.`, "M_DOUBLE_COUNTING", "Does the total equal 30?");
+      return spot5(`${p.name} asked 30 classmates their favourite drink and recorded tea ${v[0]}, uji ${v[1]}, milk ${v[2]}, juice ${v[3]}. Which step has the mistake?`, ["Step 1: Ask each of the 30 classmates one question.", `Step 2: Record the answers: ${v.join(", ")}. The record is finished without adding them.`, "Step 3: Say the record is correct."], 1, `The numbers add to ${v.reduce((a, b) => a + b, 0)}, not 30, so some answers were counted twice or missed. Check the total against the number asked.`, "M_DOUBLE_COUNTING", "Does the total equal 30?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tab.headings",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "direct",
@@ -25287,7 +27833,7 @@ var FAMILIES19 = [
       { q: "records numbers of boda bodas and matatus in a table with no title. Why is this a problem?", r: "The reader cannot tell what was counted", w: [["It is not a problem for the reader", "A title and headings are needed to read a table.", "M_TABLE_NO_HEADINGS"], ["The table is far too small to read", "The size is fine. The headings are missing.", "M_TABLE_NO_HEADINGS"]], s: "A table needs a title and headings." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tab.align",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "table",
@@ -25305,7 +27851,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tab.build",
     cs: `${D2}DRAW_RECORDING_TABLE`,
     form: "why",
@@ -25314,7 +27860,7 @@ var FAMILIES19 = [
       { q: "wants to record the names and ages of 3 learners. Which table is set out correctly?", r: "Headings Name and Age, one row each", w: [["A list of names with ages on the next line", "A table needs rows and columns with headings.", "M_TABLE_NO_HEADINGS"], ["A table with each age beside the wrong name", "Each age must be in the same row as its name.", "M_ROW_MISALIGNMENT"]], s: "Headings and matching rows." }
     ], (p) => `${p.name} `)
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tg.draw",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "direct",
@@ -25333,7 +27879,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tg.count",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "word",
@@ -25350,17 +27896,17 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tg.spot",
     cs: `${D2}DRAW_TALLY_GROUPS`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person(), n = randInt(7, 13);
-      return spot4(`${p.name} draws ${n} using tally marks. Which step has the mistake?`, ["Step 1: Draw groups of five.", "Step 2: Draw five upright strokes and then one more crossing them, so each group has six strokes.", "Step 3: Add the single strokes left."], 1, "A group of five is four uprights with one stroke across them. Five uprights and a crossing stroke make six.", "M_GATE_SIX_STROKES", "How many strokes make a group of five?");
+      return spot5(`${p.name} draws ${n} using tally marks. Which step has the mistake?`, ["Step 1: Draw groups of five.", "Step 2: Draw five upright strokes and then one more crossing them, so each group has six strokes.", "Step 3: Add the single strokes left."], 1, "A group of five is four uprights with one stroke across them. Five uprights and a crossing stroke make six.", "M_GATE_SIX_STROKES", "How many strokes make a group of five?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.traw.drinks",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "word",
@@ -25384,7 +27930,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.traw.sizes",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "direct",
@@ -25404,17 +27950,17 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.traw.spot",
     cs: `${D2}TALLY_RAW_DATA`,
     form: "spot",
     rung: 3,
     gen: () => {
       const p = person();
-      return spot4(`${p.name} tallies the drinks: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. ${p.She} gets tea ||||, uji |||, milk ||. Which step has the mistake?`, ["Step 1: Go through the list one by one.", "Step 2: Tally tea 4, uji 3, milk 2 and do not tick the items off.", "Step 3: The total is 9."], 1, "There are 10 items, so one was missed. Tick off each item as it is tallied. Tea has 5, uji 3 and milk 2.", "M_TALLY_SKIP_OR_REPEAT", "Does the total match the list?");
+      return spot5(`${p.name} tallies the drinks: tea, uji, tea, milk, tea, uji, milk, tea, uji, tea. ${p.She} gets tea ||||, uji |||, milk ||. Which step has the mistake?`, ["Step 1: Go through the list one by one.", "Step 2: Tally tea 4, uji 3, milk 2 and do not tick the items off.", "Step 3: The total is 9."], 1, "There are 10 items, so one was missed. Tick off each item as it is tallied. Tea has 5, uji 3 and milk 2.", "M_TALLY_SKIP_OR_REPEAT", "Does the total match the list?");
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tf.read",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "word",
@@ -25438,7 +27984,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tf.complete",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "table",
@@ -25457,7 +28003,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.tf.bigger",
     cs: `${D2}TALLY_TO_FREQUENCY`,
     form: "direct",
@@ -25477,7 +28023,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.prep.rows",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "word",
@@ -25494,7 +28040,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.prep.total",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "table",
@@ -25512,7 +28058,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.prep.check",
     cs: `${D2}PREPARE_FREQUENCY_TABLE`,
     form: "why",
@@ -25530,7 +28076,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.read.most",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "direct",
@@ -25549,7 +28095,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.read.count",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "word",
@@ -25567,7 +28113,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.read.least",
     cs: `${D2}READ_FREQUENCY_TABLE`,
     form: "why",
@@ -25585,7 +28131,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.cmp.more",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "word",
@@ -25602,7 +28148,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.cmp.total",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "table",
@@ -25620,7 +28166,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.cmp.not",
     cs: `${D2}COMPARE_TOTAL_FREQUENCIES`,
     form: "direct",
@@ -25637,7 +28183,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.inf.majority",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "why",
@@ -25654,7 +28200,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.inf.decide",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "direct",
@@ -25671,7 +28217,7 @@ var FAMILIES19 = [
       };
     }
   }),
-  fam5({
+  fam6({
     id: "g5c.dat.inf.support",
     cs: `${D2}INFER_FROM_FREQUENCY_TABLE`,
     form: "word",
@@ -25690,7 +28236,7 @@ var FAMILIES19 = [
 ];
 
 // src/ai-tutor/content/families/g6.js
-var fam6 = (def) => family({ reviewed: false, ...def });
+var fam7 = (def) => family({ reviewed: false, ...def });
 var uniq2 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
 var shuffle5 = (a) => {
   const b = [...a];
@@ -25747,9 +28293,9 @@ var words3 = (n) => {
   return s.join(" ");
 };
 var TOWNS3 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega"];
-var FAMILIES20 = [
+var FAMILIES24 = [
   // =========================================================== WHOLE NUMBERS
-  fam6({
+  fam7({
     id: "g6.place.two-digits",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.a",
@@ -25775,7 +28321,7 @@ var FAMILIES20 = [
     },
     check: ({ ds, i, j }, v) => v[0] - v[1] === v[2] && String(v[0]).length === 7 - i && String(v[1]).length === 7 - j && String(v[0])[0] === String(ds[i])
   }),
-  fam6({
+  fam7({
     id: "g6.place.words-to-figures",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.c",
@@ -25795,7 +28341,7 @@ var FAMILIES20 = [
     }),
     check: ({ M: M5, T: T5, U: U2 }, a) => Math.floor(a / 1e6) === M5 && Math.floor(a / 1e3) % 1e3 === T5 && a % 1e3 === U2
   }),
-  fam6({
+  fam7({
     id: "g6.place.figures-to-words",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.c",
@@ -25814,7 +28360,7 @@ var FAMILIES20 = [
       steps: [`${commas(N2)} has three groups: millions, thousands and the last three digits.`, `In words: ${words3(N2)}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.whole.round-stadium",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.e",
@@ -25840,7 +28386,7 @@ var FAMILIES20 = [
     },
     check: ({ pl, N: N2 }, a) => a % pl === 0 && Math.abs(N2 - a) < pl / 2
   }),
-  fam6({
+  fam7({
     id: "g6.whole.round-spot",
     skill: "G6_PLACE_VALUE",
     outcome: "G6.WHOLE.e",
@@ -25871,7 +28417,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.squares.root-plot",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.g",
@@ -25890,7 +28436,7 @@ var FAMILIES20 = [
     }),
     check: ({ A: A2 }, a) => a * a === A2
   }),
-  fam6({
+  fam7({
     id: "g6.squares.not-square",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.g",
@@ -25912,7 +28458,7 @@ var FAMILIES20 = [
       steps: ["The squares of 1 to 9 are 1, 4, 9, 16, 25, 36, 49, 64, 81.", `Their last digits are only 1, 4, 9, 6, 5, 0. A number ending in ${d} cannot be a square.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.squares.seeds-left",
     skill: "G6_SQUARES",
     outcome: "G6.WHOLE.f",
@@ -25932,7 +28478,7 @@ var FAMILIES20 = [
     check: ({ n, total }, a) => a + n * n === total
   }),
   // =========================================================== MULTIPLICATION
-  fam6({
+  fam7({
     id: "g6.mul.estimate-cost",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -25954,7 +28500,7 @@ var FAMILIES20 = [
     }),
     check: ({ a, b }, v) => Math.abs(v - a * b) < 0.4 * a * b && v % 1e4 === 0 && v / 1e4 >= 1
   }),
-  fam6({
+  fam7({
     id: "g6.mul.estimate-pick",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -25976,7 +28522,7 @@ var FAMILIES20 = [
       steps: [`${commas(a)} is close to ${commas(Math.round(a / 1e3) * 1e3)}, and ${b} is close to ${Math.round(b / 10) * 10}.`, `The estimate is ${commas(e)}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.mul.estimate-spot",
     skill: "G6_MULTIPLICATION",
     outcome: "G6.MUL.b",
@@ -26008,7 +28554,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.pattern.growth",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -26035,7 +28581,7 @@ var FAMILIES20 = [
       return t === a;
     }
   }),
-  fam6({
+  fam7({
     id: "g6.pattern.table-rule",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -26056,7 +28602,7 @@ var FAMILIES20 = [
     }),
     check: ({ a, r }, v) => v / r ** 5 === a
   }),
-  fam6({
+  fam7({
     id: "g6.pattern.rule-pick",
     skill: "G6_PATTERNS",
     outcome: "G6.MUL.c",
@@ -26075,7 +28621,7 @@ var FAMILIES20 = [
     })
   }),
   // =========================================================== DIVISION
-  fam6({
+  fam7({
     id: "g6.div.estimate-trips",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.b",
@@ -26098,7 +28644,7 @@ var FAMILIES20 = [
     }),
     check: ({ T: T5, D: D3 }, a) => Math.abs(a - T5 / D3) < 0.25 * (T5 / D3) + 1
   }),
-  fam6({
+  fam7({
     id: "g6.div.estimate-pick",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.b",
@@ -26121,7 +28667,7 @@ var FAMILIES20 = [
     }),
     check: ({ T: T5, D: D3, q }) => Math.abs(q - T5 / D3) < 0.25 * q + 1
   }),
-  fam6({
+  fam7({
     id: "g6.div.bodmas-pick",
     skill: "G6_DIVISION",
     outcome: "G6.DIV.c",
@@ -26147,7 +28693,7 @@ var FAMILIES20 = [
     }
   }),
   // =========================================================== FRACTIONS
-  fam6({
+  fam7({
     id: "g6.fadd.flour",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -26168,7 +28714,7 @@ var FAMILIES20 = [
       steps: [`Common denominator: ${d1 * d2}.`, `${fr2(n1, d1)} = ${fr2(n1 * d2, d1 * d2)} and ${fr2(n2, d2)} = ${fr2(n2 * d1, d1 * d2)}.`, `${n1 * d2} + ${n2 * d1} = ${n1 * d2 + n2 * d1}, so ${right} of the bag.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fadd.steps",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -26196,7 +28742,7 @@ var FAMILIES20 = [
     },
     check: ({ n1, d1, n2, d2 }, v) => v[0] % d1 === 0 && v[0] % d2 === 0 && v[1] * d1 === n1 * v[0] && v[2] * d2 === n2 * v[0] && v[3] === v[1] + v[2]
   }),
-  fam6({
+  fam7({
     id: "g6.fadd.why",
     skill: "G6_FRACTIONS_ADD",
     outcome: "G6.FRAC.a",
@@ -26218,7 +28764,7 @@ var FAMILIES20 = [
       steps: ["Fractions with different denominators show pieces of different sizes.", "Change both to the same denominator, then add the numerators only."]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fsub.jerrycan",
     skill: "G6_FRACTIONS_SUB",
     outcome: "G6.FRAC.a",
@@ -26238,7 +28784,7 @@ var FAMILIES20 = [
       steps: [`${fr2(n2, d2)} = ${fr2(n2 * k, d1)}.`, `${n1} \u2212 ${n2 * k} = ${n1 - n2 * k}, so ${fr2(n1 - n2 * k, d1)} is left. Simplest form: ${right}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fsub.spot",
     skill: "G6_FRACTIONS_SUB",
     outcome: "G6.FRAC.a",
@@ -26265,7 +28811,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.mixed.add-cloth",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -26285,7 +28831,7 @@ var FAMILIES20 = [
       steps: [`Wholes: ${w1} + ${w2} = ${w1 + w2}.`, `Fractions: ${fr2(a, 4)} + ${fr2(b, 4)} = ${fr2(a + b, 4)}, which is 1 whole and ${simp2(a + b - 4, 4)}.`, `Total: ${right} ${thing[1]}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.mixed.sub-quarters",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -26311,7 +28857,7 @@ var FAMILIES20 = [
     },
     check: ({ a, b }, v) => v[0] - v[1] === v[2] && v[3] * 4 === v[2] && v[0] % 4 === a && v[1] % 4 === b
   }),
-  fam6({
+  fam7({
     id: "g6.mixed.convert-spot",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.c",
@@ -26337,7 +28883,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.recip.pick",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.e",
@@ -26357,7 +28903,7 @@ var FAMILIES20 = [
       steps: [`Swap the top and the bottom of ${fr2(n, d)}.`, `The reciprocal is ${fr2(d, n)}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.recip.check-why",
     skill: "G6_MIXED_NUMBERS",
     outcome: "G6.FRAC.e",
@@ -26378,7 +28924,7 @@ var FAMILIES20 = [
       steps: [`${fr2(n, d)} \xD7 ${fr2(d, n)} = ${fr2(n * d, n * d)} = 1.`, "Two numbers are reciprocals when their product is 1."]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fsq.pick",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -26398,7 +28944,7 @@ var FAMILIES20 = [
       steps: [`${fr2(n, d)} \xD7 ${fr2(n, d)} = ${fr2(n * n, d * d)}.`, "Both the numerator and the denominator are squared."]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fsq.cloth",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -26417,7 +28963,7 @@ var FAMILIES20 = [
       steps: [`Area = ${fr2(n, d)} \xD7 ${fr2(n, d)}.`, `= ${fr2(n * n, d * d)} m\xB2.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.fsq.spot",
     skill: "G6_SQUARES",
     outcome: "G6.FRAC.f",
@@ -26443,7 +28989,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.pct.score",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26462,7 +29008,7 @@ var FAMILIES20 = [
     }),
     check: ({ a, b }, v) => v * b === a * 100
   }),
-  fam6({
+  fam7({
     id: "g6.pct.simplest-fraction",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26479,7 +29025,7 @@ var FAMILIES20 = [
       steps: [`${pct3}% = ${fr2(pct3, 100)}.`, `Divide the top and the bottom by ${gcd3(pct3, 100)}: ${fr2(n, d)}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.pct.best-subject",
     skill: "G6_PERCENTAGES_INTRO",
     outcome: "G6.FRAC.g",
@@ -26503,7 +29049,7 @@ var FAMILIES20 = [
     })
   }),
   // =========================================================== DECIMALS
-  fam6({
+  fam7({
     id: "g6.dec.round-scale",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.b",
@@ -26525,7 +29071,7 @@ var FAMILIES20 = [
     }),
     check: ({ x }, a) => Math.abs(a - x) <= 5e-4 + 1e-9
   }),
-  fam6({
+  fam7({
     id: "g6.dec.round-carry",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.b",
@@ -26548,7 +29094,7 @@ var FAMILIES20 = [
       };
     }
   }),
-  fam6({
+  fam7({
     id: "g6.dec.to-percent",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26567,7 +29113,7 @@ var FAMILIES20 = [
     }),
     check: ({ x }, a) => a / 100 === x
   }),
-  fam6({
+  fam7({
     id: "g6.dec.to-fraction",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26584,7 +29130,7 @@ var FAMILIES20 = [
       steps: [`${x} = ${fr2(n, 100)}.`, `Divide top and bottom by ${gcd3(n, 100)}: ${fr2(a, b)}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.dec.table-forms",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.c",
@@ -26613,7 +29159,7 @@ var FAMILIES20 = [
       return kind === "dec" ? a * d === n : a / 100 * d === n;
     }
   }),
-  fam6({
+  fam7({
     id: "g6.dec4.add-options",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.e",
@@ -26633,7 +29179,7 @@ var FAMILIES20 = [
       steps: [`${T4(A2)} + ${T4(B3)}, with the decimal points lined up.`, `Total: ${t[0]} kg.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.dec4.wire-cuts",
     skill: "G6_FRACTIONS_DECIMALS",
     outcome: "G6.DEC.e",
@@ -26656,7 +29202,7 @@ var FAMILIES20 = [
     check: ({ T: T5 }, v) => Math.round(v[1] * 1e4) + Math.round(v[2] * 1e4) === T5
   }),
   // =========================================================== INEQUALITIES
-  fam6({
+  fam7({
     id: "g6.ineq.at-least-fees",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.a",
@@ -26673,7 +29219,7 @@ var FAMILIES20 = [
       steps: [`Money after w weeks: ${have} + ${s}w.`, `"At least ${sh(need2)}" means \u2265 ${need2}.`, `So ${have} + ${s}w \u2265 ${need2}.`]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.ineq.count-solutions",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.a",
@@ -26696,7 +29242,7 @@ var FAMILIES20 = [
       return c === v;
     }
   }),
-  fam6({
+  fam7({
     id: "g6.ineq.spot-solve",
     skill: "G6_INEQUALITIES",
     outcome: "G6.INEQ.c",
@@ -26722,7 +29268,7 @@ var FAMILIES20 = [
     }
   }),
   // =========================================================== MONEY
-  fam6({
+  fam7({
     id: "g6.money.budget-over",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.a",
@@ -26746,7 +29292,7 @@ var FAMILIES20 = [
     }),
     check: ({ planned, actual }, a) => actual.reduce((x, y) => x + y, 0) - a === planned.reduce((x, y) => x + y, 0)
   }),
-  fam6({
+  fam7({
     id: "g6.money.vat-total",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.e",
@@ -26768,7 +29314,7 @@ var FAMILIES20 = [
     },
     check: ({ a }, v) => v * 100 === a * 116
   }),
-  fam6({
+  fam7({
     id: "g6.money.payslip",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.e",
@@ -26788,7 +29334,7 @@ var FAMILIES20 = [
     }),
     check: ({ g, paye, other }, a) => a + paye + other === g
   }),
-  fam6({
+  fam7({
     id: "g6.money.tomatoes-spoiled",
     skill: "G6_MONEY",
     outcome: "G6.MONEY.c",
@@ -26809,7 +29355,7 @@ var FAMILIES20 = [
     check: ({ buy, n, bad: bad2, sell }, a) => a + n * buy === (n - bad2) * sell
   }),
   // =========================================================== AREA
-  fam6({
+  fam7({
     id: "g6.area.l-floor",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.b",
@@ -26832,7 +29378,7 @@ var FAMILIES20 = [
     }),
     check: ({ W: W3, H: H3, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W3 * H3 && v[1] === w * h
   }),
-  fam6({
+  fam7({
     id: "g6.area.circle-count",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.c",
@@ -26862,7 +29408,7 @@ var FAMILIES20 = [
     }),
     check: ({ whole, part }, a) => a * 2 === whole * 2 + part
   }),
-  fam6({
+  fam7({
     id: "g6.area.circle-half-why",
     skill: "G6_AREA_RECT",
     outcome: "G6.AREA.c",
@@ -26880,7 +29426,7 @@ var FAMILIES20 = [
       steps: ["Whole squares inside the circle can be counted exactly.", "The squares cut by the curved edge are only part inside, so their share is guessed. That makes the total an estimate."]
     })
   }),
-  fam6({
+  fam7({
     id: "g6.area.triangle-bed",
     skill: "G6_AREA_TRIANGLE",
     outcome: "G6.AREA.a",
@@ -26901,7 +29447,7 @@ var FAMILIES20 = [
     }),
     check: ({ b, h, rate: rate2 }, v) => v[0] * 2 === b * h && v[1] === v[0] * rate2
   }),
-  fam6({
+  fam7({
     id: "g6.area.triangle-height",
     skill: "G6_AREA_TRIANGLE",
     outcome: "G6.AREA.a",
@@ -26921,7 +29467,7 @@ var FAMILIES20 = [
     check: ({ b, A: A2 }, v) => b * v / 2 === A2
   }),
   // =========================================================== CIRCUMFERENCE
-  fam6({
+  fam7({
     id: "g6.circ.string-table",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26942,7 +29488,7 @@ var FAMILIES20 = [
     }),
     check: ({ u }, a) => a / 22 === u
   }),
-  fam6({
+  fam7({
     id: "g6.circ.wheel-turns",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26967,7 +29513,7 @@ var FAMILIES20 = [
     },
     check: ({ d, N: N2 }, v) => v[0] * 7 / 22 === d && v[1] === v[0] * N2 && v[2] * 100 === v[1]
   }),
-  fam6({
+  fam7({
     id: "g6.circ.find-diameter",
     skill: "G6_UNIT_CONVERSIONS",
     outcome: "G6.LENGTH.h",
@@ -26987,7 +29533,7 @@ var FAMILIES20 = [
     check: ({ c }, a) => a * 22 / 7 === c
   }),
   // =========================================================== MASS
-  fam6({
+  fam7({
     id: "g6.mass.deliveries-table",
     skill: "G6_MASS",
     outcome: "G6.MASS.e",
@@ -27008,7 +29554,7 @@ var FAMILIES20 = [
     }),
     check: ({ kg }, a) => Math.round(a * 1e3) === kg.reduce((x, y) => x + y, 0)
   }),
-  fam6({
+  fam7({
     id: "g6.mass.which-in-tonnes",
     skill: "G6_MASS",
     outcome: "G6.MASS.a",
@@ -27028,7 +29574,7 @@ var FAMILIES20 = [
     })
   }),
   // =========================================================== TIME
-  fam6({
+  fam7({
     id: "g6.time.wait-then-ride",
     skill: "G6_TIME",
     outcome: "G6.TIME.e",
@@ -27053,7 +29599,7 @@ var FAMILIES20 = [
     }),
     check: ({ arrive, dep, dur, j }, a) => dep[j] + dur[j] - arrive === a
   }),
-  fam6({
+  fam7({
     id: "g6.time.shortest-trip",
     skill: "G6_TIME",
     outcome: "G6.TIME.e",
@@ -27076,7 +29622,7 @@ var FAMILIES20 = [
     })
   }),
   // =========================================================== ANGLES
-  fam6({
+  fam7({
     id: "g6.angle.sectors-point",
     skill: "G6_ANGLE_PROPERTIES",
     outcome: "G6.ANGLES.a",
@@ -27095,7 +29641,7 @@ var FAMILIES20 = [
     }),
     check: ({ a, b }, v) => a + b + v === 360
   }),
-  fam6({
+  fam7({
     id: "g6.angle.line-double",
     skill: "G6_ANGLE_PROPERTIES",
     outcome: "G6.ANGLES.a",
@@ -27116,7 +29662,7 @@ var FAMILIES20 = [
     check: ({ k }, v) => v[0] === 180 && v[2] * v[1] === v[0] && v[3] + v[2] === v[0] && v[3] === k * v[2]
   }),
   // =========================================================== DATA
-  fam6({
+  fam7({
     id: "g6.data.freq-learners",
     skill: "G6_DATA_COLLECTION",
     outcome: "G6.DATA.a",
@@ -27136,7 +29682,7 @@ var FAMILIES20 = [
     }),
     check: ({ fs }, a) => a === fs.reduce((x, y) => x + y, 0)
   }),
-  fam6({
+  fam7({
     id: "g6.data.freq-missing",
     skill: "G6_DATA_COLLECTION",
     outcome: "G6.DATA.a",
@@ -27222,7 +29768,7 @@ var sup = (n) => String(n).split("").map((c) => SUP[c]).join("");
 // src/ai-tutor/content/families/g6_cov.js
 var T42 = (n) => (n / 1e4).toFixed(4);
 var TOWNS4 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
-var FAMILIES21 = [
+var FAMILIES25 = [
   // ================================================================ WHOLE NUMBERS
   cov({
     id: "g6c.whole.symbols-from-parts",
@@ -28199,7 +30745,7 @@ var FAMILIES21 = [
 // src/ai-tutor/content/families/g8_cov.js
 var TOWNS5 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
 var sgn = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
-var FAMILIES22 = [
+var FAMILIES26 = [
   // ================================================================ INTEGERS
   cov({
     id: "g8c.int.number-line-lift",
@@ -29002,7 +31548,7 @@ var FAMILIES22 = [
 ];
 
 // src/ai-tutor/content/families/g9_num_alg.js
-var fam7 = (def) => family({ reviewed: false, ...def });
+var fam8 = (def) => family({ reviewed: false, ...def });
 var fm = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
 var br = (n) => n < 0 ? `(\u2212${-n})` : `${n}`;
 var uniq3 = (...v) => new Set(v).size === v.length;
@@ -29026,7 +31572,7 @@ var cubeOf = (x100) => Number((x100 ** 3 / 1e6).toPrecision(4));
 var rootOf = (x100) => Number(Math.cbrt(x100 / 100).toPrecision(4));
 var cell = (v) => v.toPrecision(4);
 var INTEGERS = [
-  fam7({
+  fam8({
     id: "g9.int.lift-basement",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -29047,7 +31593,7 @@ var INTEGERS = [
     }),
     check: ({ s, u, dn }, a) => a + dn - u === -s
   }),
-  fam7({
+  fam8({
     id: "g9.int.overdraft-shop",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -29068,7 +31614,7 @@ var INTEGERS = [
     }),
     check: ({ o, p, q }, a) => a + q - p + o === 0
   }),
-  fam7({
+  fam8({
     id: "g9.int.altitude-table",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.c",
@@ -29092,7 +31638,7 @@ var INTEGERS = [
     check: ({ hi, lo }, a) => lo + a === hi,
     allowNegative: false
   }),
-  fam7({
+  fam8({
     id: "g9.int.spot-minus-negative",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -29118,7 +31664,7 @@ var INTEGERS = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.int.why-order",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -29140,7 +31686,7 @@ var INTEGERS = [
       steps: [`Multiplication first: ${b} \xD7 (\u2212${c}) = \u2212${b * c}.`, `Then ${a} \u2212 (\u2212${b * c}) = ${a} + ${b * c} = ${a + b * c}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.int.steps-brackets",
     skill: "G9_INTEGERS_COMBINED",
     outcome: "G9.INTEGERS.b",
@@ -29173,7 +31719,7 @@ function cubeTable(t, fn) {
   return { head, rows };
 }
 var CUBES = [
-  fam7({
+  fam8({
     id: "g9.cubes.spot-negative",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -29200,7 +31746,7 @@ var CUBES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.steps-decimal",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -29221,7 +31767,7 @@ var CUBES = [
     },
     check: ({ n }, v) => Math.abs(v[0] * n - v[1]) < 1e-9 && Math.abs(v[1] - v[0] - v[2]) < 1e-9
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.which-cube",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.a",
@@ -29243,7 +31789,7 @@ var CUBES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.table-read",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.b",
@@ -29267,7 +31813,7 @@ var CUBES = [
     },
     check: ({ t, c }, a) => Math.abs(a - ((t * 10 + c) / 100) ** 3) < 6e-4 * ((t * 10 + c) / 100) ** 3
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.table-scale",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.b",
@@ -29292,7 +31838,7 @@ var CUBES = [
       return Math.abs(a - n ** 3) < 1e-3 * n ** 3;
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.factor-steps",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -29320,7 +31866,7 @@ var CUBES = [
       return v[2] ** 3 === N2 && ps[0] ** v[0] * ps[1] ** v[1] === N2;
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.factor-spot",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -29350,7 +31896,7 @@ var CUBES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.smallest-multiplier",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.c",
@@ -29376,7 +31922,7 @@ var CUBES = [
     }),
     check: ({ N: N2 }, a) => isCube(N2 * a) && ![...Array(a - 1).keys()].some((i) => isCube(N2 * (i + 1)))
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.root-table-read",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.d",
@@ -29396,7 +31942,7 @@ var CUBES = [
     },
     check: ({ t, c }, a) => Math.abs(a ** 3 - (t * 10 + c) / 100) < 4e-3 * (t * 10 + c) / 100
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.root-table-scale",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.d",
@@ -29422,7 +31968,7 @@ var CUBES = [
       return Math.abs(a ** 3 - n) < 4e-3 * n;
     }
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.tank-litres",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29438,7 +31984,7 @@ var CUBES = [
     }),
     check: ({ e }, a) => Math.abs(Math.cbrt(a / 1e3) - e) < 1e-6
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.carton-pack",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29457,7 +32003,7 @@ var CUBES = [
     }),
     check: ({ s, E: E2 }, a) => a * s ** 3 === E2 ** 3
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.double-edge-why",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29479,7 +32025,7 @@ var CUBES = [
       steps: [`Old volume: ${e}\xB3 = ${e ** 3} cm\xB3.`, `New volume: ${k * e}\xB3 = ${(k * e) ** 3} cm\xB3, which is ${k ** 3} times as much.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.cubes.box-edge",
     skill: "G8_CUBES_CUBE_ROOTS",
     outcome: "G9.CUBES.e",
@@ -29500,7 +32046,7 @@ var CUBES = [
   })
 ];
 var INDICES = [
-  fam7({
+  fam8({
     id: "g9.ind.growth-power",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29519,7 +32065,7 @@ var INDICES = [
     }),
     check: ({ b, n }, a) => Math.round(Math.log(a) / Math.log(b)) === n
   }),
-  fam7({
+  fam8({
     id: "g9.ind.zero-why",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29538,7 +32084,7 @@ var INDICES = [
       steps: [`${b}^${n} \xF7 ${b}^${n} = 1, because the two are equal.`, `By the law, ${b}^${n} \xF7 ${b}^${n} = ${b}^${n - n} = ${b}^0. So ${b}^0 = 1.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.ind.table-powers",
     skill: "G8_INDICES_INTRO",
     outcome: "G9.INDICES.a",
@@ -29558,7 +32104,7 @@ var INDICES = [
     }),
     check: ({ b, i, j }, a) => a === b ** i * b ** j
   }),
-  fam7({
+  fam8({
     id: "g9.ind.find-index",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29585,7 +32131,7 @@ var INDICES = [
     },
     check: ({ kind, p, n, t }, a) => kind === "mul" ? a + p === t : kind === "div" ? a - p === t : a * p === t
   }),
-  fam7({
+  fam8({
     id: "g9.ind.spot-laws",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29615,7 +32161,7 @@ var INDICES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ind.why-add-bases",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29637,7 +32183,7 @@ var INDICES = [
       steps: [`The bases are both ${b}, so the base stays ${b}.`, `The indices are added: ${m} + ${n} = ${m + n}. So the answer is ${b}^${m + n}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.ind.rope-pieces",
     skill: "G8_INDICES_LAWS",
     outcome: "G9.INDICES.c",
@@ -29658,7 +32204,7 @@ var INDICES = [
   })
 ];
 var LOGS = [
-  fam7({
+  fam8({
     id: "g9.log.spot-laws",
     skill: "G10_LOG_LAWS",
     outcome: "G9.INDICES.d",
@@ -29698,7 +32244,7 @@ var LOGS = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.log.table-pattern",
     skill: "G10_LOGARITHMS_INTRO",
     outcome: "G9.INDICES.d",
@@ -29723,7 +32269,7 @@ var LOGS = [
     },
     check: ({ k }, a) => Math.round(Math.log10(k < 0 ? Number((10 ** k).toFixed(-k)) : 10 ** k)) === a
   }),
-  fam7({
+  fam8({
     id: "g9.log.tremor-scale",
     skill: "G10_LOGARITHMS_INTRO",
     outcome: "G9.INDICES.d",
@@ -29742,7 +32288,7 @@ var LOGS = [
     }),
     check: ({ m1, m2 }, a) => Math.abs(Math.log10(a) - (m2 - m1)) < 1e-9
   }),
-  fam7({
+  fam8({
     id: "g9.log.given-values",
     skill: "G10_LOG_LAWS",
     outcome: "G9.INDICES.d",
@@ -29766,7 +32312,7 @@ var LOGS = [
   })
 ];
 var PROPORTION = [
-  fam7({
+  fam8({
     id: "g9.prop.three-way-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29791,7 +32337,7 @@ var PROPORTION = [
       return a * (v[0] + v[1] + v[2]) === T5 * (big ? hi : lo);
     }
   }),
-  fam7({
+  fam8({
     id: "g9.prop.spot-two-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29822,7 +32368,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.prop.table-share",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.a",
@@ -29844,7 +32390,7 @@ var PROPORTION = [
     }),
     check: ({ ps, T: T5, i }, a) => a * (ps[0] + ps[1] + ps[2]) === T5 * ps[i]
   }),
-  fam7({
+  fam8({
     id: "g9.prop.chain-ratio",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.b",
@@ -29866,7 +32412,7 @@ var PROPORTION = [
     }),
     check: ({ p, q, r, s, N: N2 }, a) => N2 * q * s === a * p * r
   }),
-  fam7({
+  fam8({
     id: "g9.prop.why-chain",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.b",
@@ -29892,7 +32438,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.prop.machines-output",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29912,7 +32458,7 @@ var PROPORTION = [
     }),
     check: ({ m1, m2, h1, h2, u1 }, a) => a * m1 * h1 === u1 * m2 * h2
   }),
-  fam7({
+  fam8({
     id: "g9.prop.spot-compound",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29941,7 +32487,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.prop.table-workers",
     skill: "G9_COMPOUND_PROPORTION",
     outcome: "G9.PROPORTION.c",
@@ -29963,7 +32509,7 @@ var PROPORTION = [
     }),
     check: ({ P: P2, w }, a) => a * w === P2
   }),
-  fam7({
+  fam8({
     id: "g9.var.table-type",
     skill: "G9_VARIATION",
     outcome: "G9.PROPORTION.c",
@@ -29986,7 +32532,7 @@ var PROPORTION = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.var.steps-inverse",
     skill: "G9_VARIATION",
     outcome: "G9.PROPORTION.c",
@@ -30008,7 +32554,7 @@ var PROPORTION = [
     }),
     check: ({ k, p1, p2, d3 }, v) => v[0] === p1 * (k / p1) && v[1] * p2 === v[0] && v[2] * d3 === v[0]
   }),
-  fam7({
+  fam8({
     id: "g9.work.tap-and-leak",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -30028,7 +32574,7 @@ var PROPORTION = [
     }),
     check: ({ a, b }, t) => t / a - t / b === 1
   }),
-  fam7({
+  fam8({
     id: "g9.work.leftover-steps",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -30052,7 +32598,7 @@ var PROPORTION = [
     }),
     check: ({ a, b, t, L: L3 }, v) => v[0] * a === L3 && v[1] === v[0] + L3 / b && v[2] + t * v[1] === L3 && v[3] * v[0] === v[2]
   }),
-  fam7({
+  fam8({
     id: "g9.work.why-average",
     skill: "G9_RATES_OF_WORK",
     outcome: "G9.PROPORTION.d",
@@ -30078,7 +32624,7 @@ var PROPORTION = [
 var mat = (m) => `[${m.map((r) => r.map(fm).join(" ")).join("; ")}]`;
 var ord = (r, c) => `${r} \xD7 ${c}`;
 var MATRICES = [
-  fam7({
+  fam8({
     id: "g9.mat.table-position",
     skill: "G11_MATRICES_INTRO",
     outcome: "G9.MATRICES.a",
@@ -30105,7 +32651,7 @@ var MATRICES = [
     }),
     check: ({ M: M5, r, c }, a) => M5.flat().indexOf(a) === r * 3 + c
   }),
-  fam7({
+  fam8({
     id: "g9.mat.add-why",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -30127,7 +32673,7 @@ var MATRICES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.mat.compat-table",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -30150,7 +32696,7 @@ var MATRICES = [
       steps: [`Orders: ${orders.map((o, i) => `${names[i]} is ${ord(...o)}`).join(", ")}.`, `${names[opts2[0][0]]} and ${names[opts2[0][1]]} have the same order, so they can be added.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.mat.spot-compat",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.d",
@@ -30180,7 +32726,7 @@ var MATRICES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.mat.spot-subtract",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.e",
@@ -30211,7 +32757,7 @@ var MATRICES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.mat.solve-unknown",
     skill: "G11_MATRICES_OPS",
     outcome: "G9.MATRICES.e",
@@ -30236,7 +32782,7 @@ var MATRICES = [
 ];
 var eq = (m, c) => `y = ${m === 1 ? "" : m === -1 ? "\u2212" : fm(m)}x${c === 0 ? "" : c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
 var LINES = [
-  fam7({
+  fam8({
     id: "g9.line.road-percent",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.a",
@@ -30255,7 +32801,7 @@ var LINES = [
     }),
     check: ({ g, run }, a) => a / run * 100 === g
   }),
-  fam7({
+  fam8({
     id: "g9.line.roof-table",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.a",
@@ -30274,7 +32820,7 @@ var LINES = [
       steps: rows.map((r) => `${r[0]}: ${r[1]} \xF7 ${r[2]} = ${round(r[1] / r[2], 2)}.`).concat([`The largest gradient is for the ${rows[best][0].toLowerCase()}.`])
     })
   }),
-  fam7({
+  fam8({
     id: "g9.line.drain-negative",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.b",
@@ -30295,7 +32841,7 @@ var LINES = [
     }),
     check: ({ t1, t2, d1, d2 }, a) => d1 + a * (t2 - t1) === d2
   }),
-  fam7({
+  fam8({
     id: "g9.line.spot-gradient",
     skill: "G8_GRADIENT",
     outcome: "G9.LINE.b",
@@ -30321,7 +32867,7 @@ var LINES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.line.steps-two-points",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -30343,7 +32889,7 @@ var LINES = [
     }),
     check: ({ x1, y1, x2, y2, X }, v) => v[0] * (x2 - x1) === y2 - y1 && v[0] * x1 + v[1] === y1 && v[0] * X + v[1] === v[2]
   }),
-  fam7({
+  fam8({
     id: "g9.line.why-eq",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -30365,7 +32911,7 @@ var LINES = [
       steps: [`Put x = ${x1} and y = ${y1} into y = ${m}x + c: ${y1} = ${m * x1} + c.`, `c = ${y1} \u2212 ${m * x1} = ${fm(c)}, so the equation is ${eq(m, c)}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.line.fare-fixed-charge",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.c",
@@ -30385,7 +32931,7 @@ var LINES = [
     }),
     check: ({ m, x1, y1 }, a) => a + m * x1 === y1
   }),
-  fam7({
+  fam8({
     id: "g9.line.spot-point-gradient",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.d",
@@ -30415,7 +32961,7 @@ var LINES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.line.steps-rearrange",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.e",
@@ -30436,7 +32982,7 @@ var LINES = [
     }),
     check: ({ a, b, k }, p) => p[0] === -a && p[1] * b === p[0] && p[2] * b === k
   }),
-  fam7({
+  fam8({
     id: "g9.line.spot-rearrange",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.e",
@@ -30462,7 +33008,7 @@ var LINES = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.line.steps-intercepts",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30483,7 +33029,7 @@ var LINES = [
     }),
     check: ({ a, b, k }, v) => a * v[0] === k && b * v[1] === k && v[2] * 2 === v[0] * v[1]
   }),
-  fam7({
+  fam8({
     id: "g9.line.tank-meets-axis",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30502,7 +33048,7 @@ var LINES = [
     }),
     check: ({ A: A2, B: B3 }, a) => A2 - B3 * a === 0
   }),
-  fam7({
+  fam8({
     id: "g9.line.why-intercept",
     skill: "G8_EQUATION_OF_LINE",
     outcome: "G9.LINE.g",
@@ -30527,7 +33073,7 @@ var LINES = [
 ];
 var FLIP = { ">": "<", "\u2265": "\u2264", "<": ">", "\u2264": "\u2265" };
 var INEQ = [
-  fam7({
+  fam8({
     id: "g9.ineq.spot-negative-divide",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.a",
@@ -30557,7 +33103,7 @@ var INEQ = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.why-reverse",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.a",
@@ -30579,7 +33125,7 @@ var INEQ = [
       steps: [`Divide both sides by \u2212${m}. A negative divisor reverses the order.`, `x ${FLIP[sign]} \u2212${v}.`]
     })
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.number-line-words",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.b",
@@ -30601,7 +33147,7 @@ var INEQ = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.why-circle",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.b",
@@ -30623,7 +33169,7 @@ var INEQ = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.region-graph",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.c",
@@ -30650,7 +33196,7 @@ var INEQ = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.why-boundary",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.c",
@@ -30672,7 +33218,7 @@ var INEQ = [
       };
     }
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.budget-max",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30692,7 +33238,7 @@ var INEQ = [
     }),
     check: ({ p, B: B3 }, a) => p * a <= B3 && p * (a + 1) > B3
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.at-least-tickets",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30713,7 +33259,7 @@ var INEQ = [
     }),
     check: ({ E: E2, X, p }, a) => p * a - E2 >= X && p * (a - 1) - E2 < X
   }),
-  fam7({
+  fam8({
     id: "g9.ineq.steps-pickup-load",
     skill: "G8_INEQUALITIES",
     outcome: "G9.INEQ.d",
@@ -30738,10 +33284,10 @@ var INEQ = [
     check: ({ W: W3, b, w }, v) => v[0] + b === W3 && v[1] * w <= v[0] && (v[1] + 1) * w > v[0] && v[2] + v[1] * w === v[0]
   })
 ];
-var FAMILIES23 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
+var FAMILIES27 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
 
 // src/ai-tutor/content/families/g9_measure.js
-var fam8 = (def) => family({ reviewed: false, ...def });
+var fam9 = (def) => family({ reviewed: false, ...def });
 var PI = 22 / 7;
 var dp2 = (x, k = 2) => Math.abs(x * 10 ** k - Math.round(x * 10 ** k)) < 1e-6;
 var distinct5 = (...v) => new Set(v.map((x) => round(x, 4))).size === v.length;
@@ -30756,9 +33302,9 @@ var clock = (min) => `${Math.floor(min / 60)}:${String(Math.round(min) % 60).pad
 var clock24 = (min) => `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(Math.round(min) % 60).padStart(2, "0")}`;
 var ROADS = [["Nairobi", "Nakuru", 160], ["Nairobi", "Thika", 45], ["Nairobi", "Machakos", 60], ["Nairobi", "Nyeri", 150], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50], ["Nakuru", "Eldoret", 155], ["Eldoret", "Kitale", 70], ["Nairobi", "Meru", 225], ["Nakuru", "Kisumu", 185]];
 var TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
-var FAMILIES24 = [
+var FAMILIES28 = [
   // ======================================================== AREA: pentagon, hexagon
-  fam8({
+  fam9({
     id: "g9.area.hexagon-slab",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30780,7 +33326,7 @@ var FAMILIES24 = [
     },
     check: ({ s, h }, a) => Math.abs(a / 3 / s - h) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.area.pentagon-plot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30805,7 +33351,7 @@ var FAMILIES24 = [
     },
     check: ({ w, l, t }, v) => v[0] === l * w && v[1] * 2 === w * t && v[2] - v[1] === w * l
   }),
-  fam8({
+  fam9({
     id: "g9.area.pentagon-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30831,7 +33377,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.area.centre-angle-why",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.a",
@@ -30854,7 +33400,7 @@ var FAMILIES24 = [
     }
   }),
   // ======================================================== AREA: prisms
-  fam8({
+  fam9({
     id: "g9.area.prism-doorstop",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.b",
@@ -30876,7 +33422,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, b, c, L: L3 }, v) => v[0] === 2 * (a * b / 2) && v[1] === a * L3 + b * L3 + c * L3 && v[2] === v[0] + v[1]
   }),
-  fam8({
+  fam9({
     id: "g9.area.prism-trough",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.b",
@@ -30900,7 +33446,7 @@ var FAMILIES24 = [
     check: ({ b, c, h, a, L: L3 }, ans) => ans - (b * L3 + 2 * c * L3) - (a + b) * h === 0
   }),
   // ======================================================== AREA: pyramids
-  fam8({
+  fam9({
     id: "g9.area.pyramid-slant",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30925,7 +33471,7 @@ var FAMILIES24 = [
     },
     check: ({ b, hb, h }, v) => v[0] ** 2 === h ** 2 + hb ** 2 && v[1] * 2 === b * v[0] && v[2] === 2 * b * v[0] + b ** 2
   }),
-  fam8({
+  fam9({
     id: "g9.area.pyramid-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30951,7 +33497,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.area.pyramid-roof",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.c",
@@ -30974,7 +33520,7 @@ var FAMILIES24 = [
     check: ({ b, l, rate: rate2 }, a) => a / rate2 / 4 * 2 === b * l
   }),
   // ======================================================== AREA: sectors and segments
-  fam8({
+  fam9({
     id: "g9.area.sector-light",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -30997,7 +33543,7 @@ var FAMILIES24 = [
     },
     check: ({ r, th }, a) => Math.abs(a * 360 / th - 22 / 7 * r * r) < 0.06
   }),
-  fam8({
+  fam9({
     id: "g9.area.sector-angle",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -31020,7 +33566,7 @@ var FAMILIES24 = [
     },
     check: ({ r, a }, ans) => Math.abs(ans / 360 * (22 / 7) * r * r - a) < 0.06
   }),
-  fam8({
+  fam9({
     id: "g9.area.segment-bed",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.d",
@@ -31043,7 +33589,7 @@ var FAMILIES24 = [
     check: ({ r }, v) => Math.abs(v[0] * 4 - 22 / 7 * r * r) < 0.06 && v[1] * 2 === r * r && Math.abs(v[2] + v[1] - v[0]) < 0.01
   }),
   // ======================================================== AREA: cones
-  fam8({
+  fam9({
     id: "g9.area.cone-top",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.e",
@@ -31068,7 +33614,7 @@ var FAMILIES24 = [
     },
     check: ({ r, h, p }, v) => v[0] ** 2 === r ** 2 + h ** 2 && Math.abs(v[1] - p * r * v[0]) < 0.011 && Math.abs(v[2] - v[1] - p * r * r) < 0.02
   }),
-  fam8({
+  fam9({
     id: "g9.area.cone-spot",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.e",
@@ -31095,7 +33641,7 @@ var FAMILIES24 = [
     }
   }),
   // ======================================================== AREA: spheres
-  fam8({
+  fam9({
     id: "g9.area.sphere-tank-paint",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.f",
@@ -31114,7 +33660,7 @@ var FAMILIES24 = [
     },
     check: ({ r }, a) => Math.abs(a * 14 - 4 * (22 / 7) * r * r) < 0.06
   }),
-  fam8({
+  fam9({
     id: "g9.area.hemisphere-dome",
     skill: "G9_SURFACE_AREA_ADV",
     outcome: "G9.AREA.f",
@@ -31137,7 +33683,7 @@ var FAMILIES24 = [
     check: ({ r }, v) => Math.abs(v[2] - 3 * (22 / 7) * r * r) < 0.07 && Math.abs(v[0] - 2 * v[1]) < 0.02
   }),
   // ======================================================== VOLUME
-  fam8({
+  fam9({
     id: "g9.vol.prism-trough",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -31157,7 +33703,7 @@ var FAMILIES24 = [
     }),
     check: ({ b, h, L: L3 }, a) => a * 1e3 * 2 === b * h * L3
   }),
-  fam8({
+  fam9({
     id: "g9.vol.prism-pool",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -31179,7 +33725,7 @@ var FAMILIES24 = [
     },
     check: ({ d1, d2, len, w }, v) => Math.abs(v[0] - (d1 + d2) * len / 2) < 1e-9 && v[1] === v[0] * w && v[2] === v[1] * 1e3
   }),
-  fam8({
+  fam9({
     id: "g9.vol.prism-spot",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.a",
@@ -31204,7 +33750,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.vol.pyramid-third",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.b",
@@ -31220,7 +33766,7 @@ var FAMILIES24 = [
     }),
     check: ({ v }, a) => a * 3 === v
   }),
-  fam8({
+  fam9({
     id: "g9.vol.pyramid-height",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.b",
@@ -31240,7 +33786,7 @@ var FAMILIES24 = [
     }),
     check: ({ b, v }, a) => b * b * a / 3 === v
   }),
-  fam8({
+  fam9({
     id: "g9.vol.cone-sand",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.c",
@@ -31262,7 +33808,7 @@ var FAMILIES24 = [
     },
     check: ({ r, h, cap: cap3 }, a) => Math.abs(a * cap3 * 3 / h - 22 / 7 * r * r) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.vol.bucket-frustum",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.d",
@@ -31285,7 +33831,7 @@ var FAMILIES24 = [
     },
     check: ({ h }, v) => Math.abs(v[0] - v[1] * 8) < 0.01 && Math.abs(v[2] - (v[0] - v[1])) < 0.01 && Math.abs(v[3] * 1e3 - v[2]) < 0.01 && Math.abs(v[1] - 22 / 7 / 3 * 49 * h) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.vol.frustum-scale",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.d",
@@ -31307,7 +33853,7 @@ var FAMILIES24 = [
     },
     check: ({ k, v }, a) => a * k ** 3 === v * (k ** 3 - 1)
   }),
-  fam8({
+  fam9({
     id: "g9.vol.hemisphere-bowl",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -31326,7 +33872,7 @@ var FAMILIES24 = [
     },
     check: ({ r }, a) => Math.abs(a * 2 - 4 / 3 * (22 / 7) * r ** 3) < 0.02
   }),
-  fam8({
+  fam9({
     id: "g9.vol.sphere-recast",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -31346,7 +33892,7 @@ var FAMILIES24 = [
     check: ({ R, r }, a) => a * r ** 3 === R ** 3
   }),
   // ======================================================== MASS, WEIGHT AND DENSITY
-  fam8({
+  fam9({
     id: "g9.density.lorry-weighbridge",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.a",
@@ -31368,7 +33914,7 @@ var FAMILIES24 = [
     },
     check: ({ gross, empty: empty2 }, a) => Math.abs(a * 1e3 + empty2 - gross * 1e3) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.density.load-table",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.a",
@@ -31390,7 +33936,7 @@ var FAMILIES24 = [
     }),
     check: ({ rows }, a) => Math.abs(a * 1e3 - rows.reduce((t, r) => t + r.m * r.c, 0)) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.density.weight-newtons",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.b",
@@ -31406,7 +33952,7 @@ var FAMILIES24 = [
     }),
     check: ({ m }, a) => a / 10 === m
   }),
-  fam8({
+  fam9({
     id: "g9.density.weight-moon",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.b",
@@ -31428,7 +33974,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.density.find-volume",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31449,7 +33995,7 @@ var FAMILIES24 = [
     }),
     check: ({ rho, m }, a) => Math.abs(rho * a - m) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.density.convert-units",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31479,7 +34025,7 @@ var FAMILIES24 = [
     },
     check: ({ rho, toKg }, a) => toKg ? Math.abs(a / 1e3 - rho) < 1e-9 : Math.abs(a - rho) < 1e-9
   }),
-  fam8({
+  fam9({
     id: "g9.density.iron-block",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31503,7 +34049,7 @@ var FAMILIES24 = [
     }),
     check: ({ rho, l, w, h }, v) => v[0] === l * w * h && Math.abs(v[1] / v[0] - rho) < 1e-6 && Math.abs(v[2] * 1e3 - v[1]) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.density.sample-table",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -31527,7 +34073,7 @@ var FAMILIES24 = [
       steps: rows.map((x) => `${x.n}: ${T3(x.m)} \xF7 ${x.v} = ${x.r} g/cm\xB3.`).concat([`The greatest is ${top.n}.`])
     })
   }),
-  fam8({
+  fam9({
     id: "g9.density.float-sink-why",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31552,7 +34098,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.density.ice-volume",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31571,7 +34117,7 @@ var FAMILIES24 = [
     },
     check: ({ m }, a) => Math.abs(a * 0.9 - m) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.density.liquid-mix",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31594,7 +34140,7 @@ var FAMILIES24 = [
     },
     check: ({ r1, r2, v1, v2 }, a) => Math.abs(a * (v1 + v2) - (r1 * v1 + r2 * v2)) < 0.011
   }),
-  fam8({
+  fam9({
     id: "g9.density.stone-cylinder",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.d",
@@ -31617,7 +34163,7 @@ var FAMILIES24 = [
     check: ({ rho, rise, start, chip }, v) => v[0] === rise && Math.abs(v[1] * v[0] - rho * rise) < 1e-6 && Math.abs(v[2] / chip - v[1]) < 1e-6
   }),
   // ======================================================== SPEED
-  fam8({
+  fam9({
     id: "g9.speed.stage-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.a",
@@ -31645,7 +34191,7 @@ var FAMILIES24 = [
     },
     check: ({ rows, k }, a) => Math.abs(a * rows[k].min / 60 - rows[k].d) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.speed.meet-on-road",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.a",
@@ -31672,7 +34218,7 @@ var FAMILIES24 = [
     },
     check: ({ D: D3, v1, v2 }, v) => v[0] === v1 + v2 && Math.abs(v[1] * v[0] - D3) < 1e-6 && Math.abs(v[2] + v2 * v[1] - D3) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.speed.journey-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31696,7 +34242,7 @@ var FAMILIES24 = [
     },
     check: ({ d1, d2, t1, t2, rest }, a) => Math.abs(a * (t1 + t2 + rest) - (d1 + d2)) < 0.011
   }),
-  fam8({
+  fam9({
     id: "g9.speed.there-and-back-spot",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31722,7 +34268,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.speed.whole-journey-stop",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.b",
@@ -31745,7 +34291,7 @@ var FAMILIES24 = [
     },
     check: ({ D: D3, span }, a) => Math.abs(a * span / 60 - D3) < 0.011
   }),
-  fam8({
+  fam9({
     id: "g9.speed.velocity-two-legs",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.c",
@@ -31765,7 +34311,7 @@ var FAMILIES24 = [
     }),
     check: ({ a, b, t }, ans) => Math.abs((ans * t) ** 2 - (a * a + b * b)) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.speed.accel-table",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31789,7 +34335,7 @@ var FAMILIES24 = [
     },
     check: ({ u, a }, ans) => Math.abs(u + ans * 6 - (u + ans * 2) - 4 * ans) < 1e-9 && Math.abs(u + a * 6 - (u + a * 2) - 4 * ans) < 1e-9
   }),
-  fam8({
+  fam9({
     id: "g9.speed.accel-graph",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31810,7 +34356,7 @@ var FAMILIES24 = [
     },
     check: ({ u, a }, ans) => u + ans * 8 === u + a * 8
   }),
-  fam8({
+  fam9({
     id: "g9.speed.distance-from-graph",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31834,7 +34380,7 @@ var FAMILIES24 = [
     },
     check: ({ t1, v, t2 }, ans) => Math.abs(ans - 0.5 * (t2 + (t2 - t1)) * v) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.speed.brake-time",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.d",
@@ -31858,7 +34404,7 @@ var FAMILIES24 = [
     check: ({ kmh, a }, ans) => Math.abs(ans * a * 3.6 - kmh) < 0.01
   }),
   // ---- longitude and local time
-  fam8({
+  fam9({
     id: "g9.speed.longitude-minutes",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31878,7 +34424,7 @@ var FAMILIES24 = [
     }),
     check: ({ c1, c2 }, a) => a / 4 === Math.abs(c1[1] - c2[1])
   }),
-  fam8({
+  fam9({
     id: "g9.speed.local-time-options",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31902,7 +34448,7 @@ var FAMILIES24 = [
       steps: [`Difference: ${Math.abs(d)}\xB0. Time difference: ${Math.abs(d)} \xD7 4 = ${4 * Math.abs(d)} minutes.`, `${c2[0]} is ${d > 0 ? "east" : "west"}, so add${d > 0 ? "" : " (no: take away)"} to noon: ${clock24(right)}.`].map((x, i) => i === 1 ? `${c2[0]} is ${d > 0 ? "east, so the time is later" : "west, so the time is earlier"}: ${clock24(right)}.` : x)
     })
   }),
-  fam8({
+  fam9({
     id: "g9.speed.find-longitude",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31927,7 +34473,7 @@ var FAMILIES24 = [
     },
     check: ({ base, ahead, dd }, a) => (ahead ? a - base : base - a) * 4 === 4 * dd
   }),
-  fam8({
+  fam9({
     id: "g9.speed.longitude-spot",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31954,7 +34500,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.speed.flight-local-arrival",
     skill: "G9_SPEED_VELOCITY",
     outcome: "G9.SPEED.g",
@@ -31978,7 +34524,7 @@ var FAMILIES24 = [
     check: ({ dep, dur, d }, v) => v[0] === Math.abs(d) && v[1] === 4 * v[0] && v[2] === Number(clock24(dep + dur * 60 + (d > 0 ? v[1] : -v[1])).replace(":", ""))
   }),
   // ======================================================== MONEY
-  fam8({
+  fam9({
     id: "g9.money.bureau-sell",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -31997,7 +34543,7 @@ var FAMILIES24 = [
     }),
     check: ({ buy, n }, a) => a / n === buy
   }),
-  fam8({
+  fam9({
     id: "g9.money.bureau-trip",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -32019,7 +34565,7 @@ var FAMILIES24 = [
     }),
     check: ({ sell, buy, n, left }, v) => v[0] / n === sell && v[1] / left === buy && v[0] - v[1] === v[2]
   }),
-  fam8({
+  fam9({
     id: "g9.money.rate-board",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -32044,7 +34590,7 @@ var FAMILIES24 = [
     },
     check: ({ k, toKes, amt }, a) => a / amt === (toKes ? k.buy : k.sell)
   }),
-  fam8({
+  fam9({
     id: "g9.money.cross-ush",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -32066,7 +34612,7 @@ var FAMILIES24 = [
     }),
     check: ({ usd, ush, sh0 }, a) => Math.abs(a / ush * usd - sh0) < 0.5
   }),
-  fam8({
+  fam9({
     id: "g9.money.duty-rate",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -32087,7 +34633,7 @@ var FAMILIES24 = [
     }),
     check: ({ V: V2, D: D3 }, a) => Math.abs(V2 * a / 100 - D3) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.money.duty-shipment",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -32109,7 +34655,7 @@ var FAMILIES24 = [
     }),
     check: ({ rows }, a) => Math.abs(a - rows.map((x) => x.v * x.r).reduce((p, c) => p + c, 0) / 100) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.money.duty-excise-vat-steps",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.c",
@@ -32133,7 +34679,7 @@ var FAMILIES24 = [
     }),
     check: ({ V: V2, du, ex }, v) => v[0] * 100 === V2 * du && v[1] * 100 === (V2 + v[0]) * ex && v[2] * 100 === (V2 + v[0] + v[1]) * 16 && v[3] === V2 + v[0] + v[1] + v[2]
   }),
-  fam8({
+  fam9({
     id: "g9.money.excise-per-litre",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -32152,7 +34698,7 @@ var FAMILIES24 = [
     },
     check: ({ n, ml, rt }, a) => a / rt * 1e3 === n * ml
   }),
-  fam8({
+  fam9({
     id: "g9.money.excise-find-factory",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -32171,7 +34717,7 @@ var FAMILIES24 = [
     }),
     check: ({ r, P: P2 }, a) => Math.abs(a * (1 + r / 100) - P2) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.money.layered-tax-spot",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.d",
@@ -32197,7 +34743,7 @@ var FAMILIES24 = [
       };
     }
   }),
-  fam8({
+  fam9({
     id: "g9.money.vat-find-price",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -32217,7 +34763,7 @@ var FAMILIES24 = [
     }),
     check: ({ P: P2 }, a) => Math.abs(a * 1.16 - P2) < 0.01
   }),
-  fam8({
+  fam9({
     id: "g9.money.vat-receipt",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -32239,7 +34785,7 @@ var FAMILIES24 = [
     }),
     check: ({ rows }, a) => Math.abs(a * 100 - 16 * rows.filter((r) => r.v).reduce((p, r) => p + r.p, 0)) < 0.5
   }),
-  fam8({
+  fam9({
     id: "g9.money.vat-base-why",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.e",
@@ -32265,7 +34811,7 @@ var FAMILIES24 = [
     }
   }),
   // ======================================================== APPROXIMATIONS AND ERRORS
-  fam8({
+  fam9({
     id: "g9.approx.upper-bound-area",
     skill: "G9_ERRORS",
     outcome: "G9.APPROX.b",
@@ -32284,7 +34830,7 @@ var FAMILIES24 = [
     },
     check: ({ l, w }, a) => Math.abs(a / (w + 0.5) - (l + 0.5)) < 1e-6
   }),
-  fam8({
+  fam9({
     id: "g9.approx.error-table",
     skill: "G9_ERRORS",
     outcome: "G9.APPROX.c",
@@ -32309,7 +34855,7 @@ var FAMILIES24 = [
       steps: rows.map((r) => `${r.n}: ${T3(r.e)} \xF7 ${r.t} \xD7 100 = ${T3(round(r.pc, 2))}%.`).concat([`The greatest is ${top.n}.`])
     })
   }),
-  fam8({
+  fam9({
     id: "g9.approx.estimate-then-check",
     skill: "G9_ROUNDING",
     outcome: "G9.APPROX.a",
@@ -32337,7 +34883,7 @@ var FAMILIES24 = [
     check: ({ n, p }, v) => v[1] === n * p && Math.abs(v[0] - v[1]) === v[2]
   }),
   // ======================================================== MORE PICTURES AND REASONS
-  fam8({
+  fam9({
     id: "g9.money.rate-graph",
     skill: "G9_COMMERCIAL_ARITH",
     outcome: "G9.MONEY.b",
@@ -32361,7 +34907,7 @@ var FAMILIES24 = [
     },
     check: ({ r }, a) => a * 40 === r * 40
   }),
-  fam8({
+  fam9({
     id: "g9.density.mass-volume-graph",
     skill: "G8_DENSITY",
     outcome: "G9.DENSITY.c",
@@ -32381,7 +34927,7 @@ var FAMILIES24 = [
     },
     check: ({ rho }, a) => a * 40 === rho * 40
   }),
-  fam8({
+  fam9({
     id: "g9.vol.sphere-double-why",
     skill: "G9_VOLUME_ADV",
     outcome: "G9.VOL.e",
@@ -32403,7 +34949,7 @@ var FAMILIES24 = [
 ];
 
 // src/ai-tutor/content/families/g9_geo_data.js
-var fam9 = (def) => family({ reviewed: false, ...def });
+var fam10 = (def) => family({ reviewed: false, ...def });
 var pad3 = (n) => String(n).padStart(3, "0");
 var sg = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
 var lineEq = (m, c) => `y = ${m === 1 ? "" : m === -1 ? "\u2212" : sg(m)}x${c === 0 ? "" : c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
@@ -32414,9 +34960,9 @@ var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
 var near2 = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
-var FAMILIES25 = [
+var FAMILIES29 = [
   // =========================== COORDINATES AND GRAPHS ===========================
-  fam9({
+  fam10({
     id: "g9.graphs.parallel-table-pick",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.d",
@@ -32442,7 +34988,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.parallel-find-k",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.d",
@@ -32465,7 +35011,7 @@ var FAMILIES25 = [
     }),
     check: ({ r1, s1, r2, g }, v) => v[0] === g && v[2] - s1 === v[1] && (v[2] - s1) / (r2 - r1) === v[0]
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.perpendicular-c",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32491,7 +35037,7 @@ var FAMILIES25 = [
     }),
     check: ({ p, q }, v) => near2(v[0] * v[1], -1) && near2(v[1] * p + v[2], q)
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.perpendicular-why-opposite",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32510,7 +35056,7 @@ var FAMILIES25 = [
       steps: [`The gradients are ${m} and ${sg(-m)}.`, `${m} \xD7 ${sg(-m)} = ${sg(-m * m)}, not \u22121, so the lines are not perpendicular.`]
     })
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.perpendicular-spot",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.f",
@@ -32545,7 +35091,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.fare-rate",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32572,7 +35118,7 @@ var FAMILIES25 = [
     },
     check: ({ rate: rate2, fix }, a) => (fix + 3 * rate2 - (fix + rate2)) / 2 === a
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.tariff-fixed",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32594,7 +35140,7 @@ var FAMILIES25 = [
     }),
     check: ({ r, x, y }, a) => a + r * x[2] === y[2]
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.tariff-cross",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -32622,7 +35168,7 @@ var FAMILIES25 = [
     check: ({ x0, rA, rB, fA, fB }, a) => fA + rA * a === fB + rB * a
   }),
   // =========================== SCALE DRAWING: BEARINGS ===========================
-  fam9({
+  fam10({
     id: "g9.bearings.turn-clockwise",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.a",
@@ -32644,7 +35190,7 @@ var FAMILIES25 = [
     }),
     check: ({ b, t }, a) => (a - b - t) % 360 === 0
   }),
-  fam9({
+  fam10({
     id: "g9.bearings.back-bearing-spot",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.b",
@@ -32674,7 +35220,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.bearings.isosceles-legs",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.b",
@@ -32696,7 +35242,7 @@ var FAMILIES25 = [
     },
     check: ({ east }, v) => v[1] === 180 && v[0] === (east ? 90 : 270) && (v[2] + 180) % 360 === v[3] && Math.abs(v[2] - v[1]) === 45
   }),
-  fam9({
+  fam10({
     id: "g9.bearings.distance-from-start",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.c",
@@ -32717,7 +35263,7 @@ var FAMILIES25 = [
     }),
     check: ({ a, b }, ans) => ans * ans === a * a + b * b
   }),
-  fam9({
+  fam10({
     id: "g9.bearings.which-direction",
     skill: "G9_BEARINGS",
     outcome: "G9.SCALE.c",
@@ -32738,7 +35284,7 @@ var FAMILIES25 = [
     }
   }),
   // =========================== ANGLES OF ELEVATION AND DEPRESSION ===========================
-  fam9({
+  fam10({
     id: "g9.elevation.eye-height-45",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.d",
@@ -32756,7 +35302,7 @@ var FAMILIES25 = [
     }),
     check: ({ d, eye, flag }, v) => v[0] === d && near2(v[1] - eye, v[0]) && near2(v[2] - v[1], flag)
   }),
-  fam9({
+  fam10({
     id: "g9.depression.equals-elevation-why",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.f",
@@ -32779,7 +35325,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.depression.two-canoes",
     skill: "G9_ELEVATION_DEPRESSION",
     outcome: "G9.SCALE.f",
@@ -32799,7 +35345,7 @@ var FAMILIES25 = [
     check: ({ h, gap: gap2 }, a) => a - gap2 === h
   }),
   // =========================== SIMILARITY AND ENLARGEMENT ===========================
-  fam9({
+  fam10({
     id: "g9.similar.table-missing-side",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32821,7 +35367,7 @@ var FAMILIES25 = [
     }),
     check: ({ a, b, k }, ans) => ans / b === a * k / a
   }),
-  fam9({
+  fam10({
     id: "g9.similar.rectangles-added-length",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32845,7 +35391,7 @@ var FAMILIES25 = [
       steps: [`Length: ${b + g} \xF7 ${b} = ${r2}. Width: ${a + g} \xF7 ${a} = ${r1}.`, "The scale factors are different, so the photos are not similar."]
     })
   }),
-  fam9({
+  fam10({
     id: "g9.similar.pole-and-tree",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32866,7 +35412,7 @@ var FAMILIES25 = [
     }),
     check: ({ hp, sp, st }, a) => a * sp === hp * st
   }),
-  fam9({
+  fam10({
     id: "g9.similar.missing-side-spot",
     skill: "G8_SIMILARITY",
     outcome: "G9.SIMILAR.a",
@@ -32898,7 +35444,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.enlarge.then-translate",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.c",
@@ -32923,7 +35469,7 @@ var FAMILIES25 = [
     }),
     check: ({ a, b, k, px, py }, v) => v[0] / k === a && v[1] / k === b && v[2] - v[0] === px && v[3] - v[1] === py
   }),
-  fam9({
+  fam10({
     id: "g9.enlarge.find-centre",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.c",
@@ -32945,7 +35491,7 @@ var FAMILIES25 = [
     }),
     check: ({ k, ax, bx }, a) => a + k * (ax - a) === bx
   }),
-  fam9({
+  fam10({
     id: "g9.scalefactor.area-photo",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32964,7 +35510,7 @@ var FAMILIES25 = [
     }),
     check: ({ k, A: A2 }, a) => a / A2 === k * k
   }),
-  fam9({
+  fam10({
     id: "g9.scalefactor.volume-tank",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -32983,7 +35529,7 @@ var FAMILIES25 = [
     }),
     check: ({ k, V: V2 }, a) => a / V2 === k ** 3
   }),
-  fam9({
+  fam10({
     id: "g9.scalefactor.paint-tins",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -33002,7 +35548,7 @@ var FAMILIES25 = [
     }),
     check: ({ k, A: A2 }, v) => v[1] ** 3 === v[0] && v[2] === v[1] * v[1] && v[3] === A2 * v[2]
   }),
-  fam9({
+  fam10({
     id: "g9.scalefactor.doubling-box-why",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -33025,7 +35571,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.scalefactor.similar-cartons-table",
     skill: "G9_TRANSFORMATIONS_ADV",
     outcome: "G9.SIMILAR.e",
@@ -33033,24 +35579,24 @@ var FAMILIES25 = [
     form: "table",
     draw: () => {
       const [l, w, h] = pick([[10, 15, 20], [5, 8, 10], [10, 10, 25], [4, 6, 10], [8, 10, 20]]), k = pick([2, 3]), ask3 = pick(["area", "volume"]);
-      const SA = 2 * (l * w + l * h + w * h), V2 = l * w * h;
-      return { l, w, h, k, ask: ask3, SA, V: V2 };
+      const SA2 = 2 * (l * w + l * h + w * h), V2 = l * w * h;
+      return { l, w, h, k, ask: ask3, SA: SA2, V: V2 };
     },
-    make: ({ h, k, ask: ask3, SA, V: V2 }) => {
-      const big = ask3 === "area" ? SA * k * k : V2 * k ** 3;
+    make: ({ h, k, ask: ask3, SA: SA2, V: V2 }) => {
+      const big = ask3 === "area" ? SA2 * k * k : V2 * k ** 3;
       return {
         question: `The table gives measurements of two similar cartons. Use the scale factor to find the missing ${ask3 === "area" ? "surface area" : "volume"} of the large carton, in ${ask3 === "area" ? "cm\xB2" : "cm\xB3"}.`,
-        model: { type: "table", data: { head: ["Measure", "Small carton", "Large carton"], rows: [{ cells: ["Height (cm)", `${h}`, `${h * k}`] }, { cells: ["Surface area (cm\xB2)", commas(SA), ask3 === "area" ? "?" : commas(SA * k * k)] }, { cells: ["Volume (cm\xB3)", commas(V2), ask3 === "volume" ? "?" : commas(V2 * k ** 3)] }] } },
+        model: { type: "table", data: { head: ["Measure", "Small carton", "Large carton"], rows: [{ cells: ["Height (cm)", `${h}`, `${h * k}`] }, { cells: ["Surface area (cm\xB2)", commas(SA2), ask3 === "area" ? "?" : commas(SA2 * k * k)] }, { cells: ["Volume (cm\xB3)", commas(V2), ask3 === "volume" ? "?" : commas(V2 * k ** 3)] }] } },
         answer: big,
-        wrong: ask3 === "area" ? [[SA * k, "The surface area is not multiplied by the linear scale factor. Area needs the factor squared."], [SA * k ** 3, "That is the volume factor. Surface area is flat."], [SA + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]] : [[V2 * k, "Volume is not multiplied by the linear scale factor alone. It needs the factor cubed."], [V2 * k * k, "That is the area factor. Volume has one more length."], [V2 + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]],
+        wrong: ask3 === "area" ? [[SA2 * k, "The surface area is not multiplied by the linear scale factor. Area needs the factor squared."], [SA2 * k ** 3, "That is the volume factor. Surface area is flat."], [SA2 + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]] : [[V2 * k, "Volume is not multiplied by the linear scale factor alone. It needs the factor cubed."], [V2 * k * k, "That is the area factor. Volume has one more length."], [V2 + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]],
         hints: ["Find the linear scale factor from the two heights.", ask3 === "area" ? "Surface area is multiplied by the scale factor squared." : "Volume is multiplied by the scale factor cubed."],
-        steps: [`Linear scale factor = ${h * k} \xF7 ${h} = ${k}.`, ask3 === "area" ? `Area factor = ${k * k}. Missing area = ${commas(SA)} \xD7 ${k * k} = ${commas(big)} cm\xB2.` : `Volume factor = ${k ** 3}. Missing volume = ${commas(V2)} \xD7 ${k ** 3} = ${commas(big)} cm\xB3.`]
+        steps: [`Linear scale factor = ${h * k} \xF7 ${h} = ${k}.`, ask3 === "area" ? `Area factor = ${k * k}. Missing area = ${commas(SA2)} \xD7 ${k * k} = ${commas(big)} cm\xB2.` : `Volume factor = ${k ** 3}. Missing volume = ${commas(V2)} \xD7 ${k ** 3} = ${commas(big)} cm\xB3.`]
       };
     },
-    check: ({ h, k, ask: ask3, SA, V: V2 }, a) => ask3 === "area" ? a / SA === (k * h / h) ** 2 : a / V2 === (k * h / h) ** 3
+    check: ({ h, k, ask: ask3, SA: SA2, V: V2 }, a) => ask3 === "area" ? a / SA2 === (k * h / h) ** 2 : a / V2 === (k * h / h) ** 3
   }),
   // =========================== TRIGONOMETRY ===========================
-  fam9({
+  fam10({
     id: "g9.trig.which-fraction",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.b",
@@ -33077,7 +35623,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.trig.find-side-spot",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.b",
@@ -33105,7 +35651,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.trig.table-ladder-sine",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -33128,7 +35674,7 @@ var FAMILIES25 = [
     }),
     check: ({ L: L3, sv }, v) => Math.abs(v - L3 * sv) <= 51e-4
   }),
-  fam9({
+  fam10({
     id: "g9.trig.table-find-angle",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -33150,7 +35696,7 @@ var FAMILIES25 = [
     }),
     check: ({ kind, A: A2 }, a) => TRIG[kind](a) === TRIG[kind](A2)
   }),
-  fam9({
+  fam10({
     id: "g9.trig.table-ramp-steps",
     skill: "G9_TRIG_INTRO",
     outcome: "G9.TRIG.c",
@@ -33176,7 +35722,7 @@ var FAMILIES25 = [
     },
     check: ({ L: L3 }, v) => Math.abs(v[1] - L3 * v[0]) <= 51e-4 && Math.abs(v[3] - L3 * v[2]) <= 51e-4 && Math.abs(v[0] ** 2 + v[2] ** 2 - 1) < 1e-3
   }),
-  fam9({
+  fam10({
     id: "g9.trig.building-elevation-depression",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -33197,7 +35743,7 @@ var FAMILIES25 = [
     },
     check: ({ A: A2, d, eye }, v) => Math.abs(v[0] - d * TRIG.tan(A2)) <= 0.051 && Math.abs(v[1] - v[0] - eye) < 1e-6 && v[2] === A2
   }),
-  fam9({
+  fam10({
     id: "g9.trig.which-ratio-ramp",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -33218,7 +35764,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.trig.tower-height-spot",
     skill: "G9_TRIG_PROBLEMS",
     outcome: "G9.TRIG.e",
@@ -33246,7 +35792,7 @@ var FAMILIES25 = [
     }
   }),
   // =========================== GROUPED DATA ===========================
-  fam9({
+  fam10({
     id: "g9.data.modal-class-table",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.c",
@@ -33273,7 +35819,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.data.modal-gap-graph",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.c",
@@ -33296,7 +35842,7 @@ var FAMILIES25 = [
     }),
     check: ({ s }, a) => s[1] + a === s[0]
   }),
-  fam9({
+  fam10({
     id: "g9.data.mean-from-table",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.d",
@@ -33321,7 +35867,7 @@ var FAMILIES25 = [
     }),
     check: ({ sf, f, mids }, a) => Math.abs(a * sf - f.reduce((t, v, i) => t + v * mids[i], 0)) < 0.051 * sf
   }),
-  fam9({
+  fam10({
     id: "g9.data.mean-spot",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.d",
@@ -33352,7 +35898,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.data.mean-why-weighted",
     skill: "G9_GROUPED_DATA",
     outcome: "G9.DATA.d",
@@ -33379,7 +35925,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.data.median-interpolate",
     skill: "G9_GROUPED_MEASURES",
     outcome: "G9.DATA.e",
@@ -33413,7 +35959,7 @@ var FAMILIES25 = [
     }),
     check: ({ lo, fj }, v) => v[0] === 2 * v[1] && Math.abs(v[3] - (lo + (v[1] - v[2]) * 10 / fj)) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.data.cumulative-graph-between",
     skill: "G8_CUMULATIVE_FREQ",
     outcome: "G9.DATA.e",
@@ -33443,7 +35989,7 @@ var FAMILIES25 = [
     check: ({ cf }, a) => cf[2] + a === cf[4]
   }),
   // =========================== PROBABILITY ===========================
-  fam9({
+  fam10({
     id: "g9.prob.raffle-either",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33465,7 +36011,7 @@ var FAMILIES25 = [
     }),
     check: ({ N: N2, a, b }, v) => Math.abs(v * N2 - (a + b)) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.prob.football-netball-why",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33491,7 +36037,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.prob.way-to-school-table",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33518,7 +36064,7 @@ var FAMILIES25 = [
     }),
     check: ({ N: N2, x, y }, v) => Math.abs(v * N2 - (x + y)) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.prob.neither-road-spot",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.c",
@@ -33548,7 +36094,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.prob.late-matatu-independent",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.e",
@@ -33569,7 +36115,7 @@ var FAMILIES25 = [
     }),
     check: ({ pa, pb }, a) => Math.abs(a / pb - pa) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.prob.coin-and-spinner",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.e",
@@ -33588,7 +36134,7 @@ var FAMILIES25 = [
     }),
     check: ({ T: T5 }, v) => v[2] === round(v[0] * v[1], 4) && Math.abs(v[3] / T5 - v[2]) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.prob.tree-table-one-grows",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.f",
@@ -33610,7 +36156,7 @@ var FAMILIES25 = [
     }),
     check: ({ p, q }, a) => Math.abs(a - (p + q - 2 * p * q)) < 1e-6
   }),
-  fam9({
+  fam10({
     id: "g9.prob.tree-without-replacement",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.f",
@@ -33635,7 +36181,7 @@ var FAMILIES25 = [
     },
     check: ({ r, b }, v) => Math.abs(v[0] * v[1] - v[2]) < 1e-3 && Math.abs(v[3] - (r * (r - 1) + b * (b - 1)) / 20) < 1e-3
   }),
-  fam9({
+  fam10({
     id: "g9.prob.least-likely-table",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.b",
@@ -33667,7 +36213,7 @@ var FAMILIES25 = [
       };
     }
   }),
-  fam9({
+  fam10({
     id: "g9.graphs.water-bill-line",
     skill: "G9_PARALLEL_PERPENDICULAR",
     outcome: "G9.GRAPHS.g",
@@ -33687,7 +36233,7 @@ var FAMILIES25 = [
     }),
     check: ({ F: F4, r, B: B3 }, a) => F4 + r * a === B3
   }),
-  fam9({
+  fam10({
     id: "g9.prob.seeds-expected",
     skill: "G9_PROBABILITY_ADV",
     outcome: "G9.PROB.b",
@@ -33710,7 +36256,7 @@ var FAMILIES25 = [
 ];
 
 // src/ai-tutor/content/families/g8_num_alg.js
-var fam10 = (def) => family({ reviewed: false, ...def });
+var fam11 = (def) => family({ reviewed: false, ...def });
 var gcd6 = (a, b) => b ? gcd6(b, a % b) : Math.abs(a);
 var neg = (n) => n < 0 ? `\u2212${-n}` : String(n);
 var distinct6 = (...v) => new Set(v).size === v.length;
@@ -33719,9 +36265,9 @@ var simp3 = (n, d) => {
   return [n / g, d / g];
 };
 var signed = (c) => c < 0 ? `\u2212 ${-c}` : `+ ${c}`;
-var FAMILIES26 = [
+var FAMILIES30 = [
   // ======================================================== INTEGERS
-  fam10({
+  fam11({
     id: "g8.int.lift-floors",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33741,7 +36287,7 @@ var FAMILIES26 = [
     }),
     check: ({ s, d }, a) => a + d === s
   }),
-  fam10({
+  fam11({
     id: "g8.int.order-why",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33763,7 +36309,7 @@ var FAMILIES26 = [
       steps: [`On the number line, ${neg(lo)} is ${-lo} places left of zero and ${neg(hi)} is ${-hi} places left of zero.`, `${neg(lo)} is further left, so ${neg(lo)} < ${neg(hi)}.`]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.int.distance-spot",
     skill: "G6_INTEGERS_INTRO",
     outcome: "G8.INTEGERS.a",
@@ -33788,7 +36334,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.int.balance-table",
     skill: "G6_INTEGERS_ADD_SUB",
     outcome: "G8.INTEGERS.b",
@@ -33819,7 +36365,7 @@ var FAMILIES26 = [
     },
     check: ({ start, ch }, a) => start + ch.reduce((s, c) => s + c, 0) === a
   }),
-  fam10({
+  fam11({
     id: "g8.int.mountain-rate",
     skill: "G7_INTEGERS_MUL_DIV",
     outcome: "G8.INTEGERS.b",
@@ -33839,7 +36385,7 @@ var FAMILIES26 = [
     }),
     check: ({ h, start, per }, a) => start + a * h === start - per * h
   }),
-  fam10({
+  fam11({
     id: "g8.int.borehole-steps",
     skill: "G7_INTEGERS_MUL_DIV",
     outcome: "G8.INTEGERS.b",
@@ -33862,7 +36408,7 @@ var FAMILIES26 = [
     check: ({ a, f, n, k }, v) => v[0] === -f * n && v[1] === -a + v[0] && -a - f * v[2] === -(a + f * k)
   }),
   // ======================================================== FRACTIONS
-  fam10({
+  fam11({
     id: "g8.frac.shamba-share",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.b",
@@ -33885,7 +36431,7 @@ var FAMILIES26 = [
     }),
     check: ({ A: A2, m, be }, x) => x + m + be === A2
   }),
-  fam10({
+  fam11({
     id: "g8.frac.tank-steps",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.b",
@@ -33908,7 +36454,7 @@ var FAMILIES26 = [
     }),
     check: ({ C: C2, d1, d2, n1 }, v) => v[0] * d1 === C2 * n1 && v[1] * d2 === v[0] && v[2] + v[1] === v[0]
   }),
-  fam10({
+  fam11({
     id: "g8.frac.divide-first-spot",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.a",
@@ -33936,7 +36482,7 @@ var FAMILIES26 = [
       steps: ["Do the division before the subtraction.", "To divide by a fraction, multiply by its reciprocal."]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.frac.day-table",
     skill: "G8_FRACTIONS_COMBINED",
     outcome: "G8.FRAC.a",
@@ -33965,7 +36511,7 @@ var FAMILIES26 = [
     check: ({ fr: fr3, mins }, a) => Math.abs(a / 480 + fr3.reduce((s, [n, d]) => s + n / d, 0) - 1) < 1e-9
   }),
   // ======================================================== DECIMALS
-  fam10({
+  fam11({
     id: "g8.dec.recurring-why",
     skill: "G8_RECURRING_DECIMALS",
     outcome: "G8.DEC.a",
@@ -34004,7 +36550,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.dec.recurring-steps",
     skill: "G8_RECURRING_DECIMALS",
     outcome: "G8.DEC.a",
@@ -34029,7 +36575,7 @@ var FAMILIES26 = [
     },
     check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd6(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
   }),
-  fam10({
+  fam11({
     id: "g8.dec.cloth-profit",
     skill: "G8_DECIMALS_COMBINED",
     outcome: "G8.DEC.b",
@@ -34050,7 +36596,7 @@ var FAMILIES26 = [
     }),
     check: ({ n, cost, sell, len, rate: rate2 }, a) => a / n + len * rate2 === sell && cost === len * rate2
   }),
-  fam10({
+  fam11({
     id: "g8.dec.point-spot",
     skill: "G8_DECIMALS_COMBINED",
     outcome: "G8.DEC.b",
@@ -34076,7 +36622,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.dec.sf-spot",
     skill: "G8_STANDARD_FORM",
     outcome: "G8.DEC.d",
@@ -34102,7 +36648,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.dec.sf-product-steps",
     skill: "G8_STANDARD_FORM",
     outcome: "G8.DEC.d",
@@ -34125,7 +36671,7 @@ var FAMILIES26 = [
     check: ({ a, b, m, n }, v) => v[0] === a * b && v[1] === m + n && v[2] === m + n + 1 && v[3] === a * 10 ** m * (b * 10 ** n)
   }),
   // ======================================================== SQUARES AND ROOTS
-  fam10({
+  fam11({
     id: "g8.sq.table-shift",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.a",
@@ -34150,7 +36696,7 @@ var FAMILIES26 = [
     },
     check: ({ t, sh: sh2 }, a) => a === (t * (sh2 / 10)) ** 2
   }),
-  fam10({
+  fam11({
     id: "g8.sq.root-table-shift",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.b",
@@ -34174,7 +36720,7 @@ var FAMILIES26 = [
     },
     check: ({ N: N2, sc }, a) => Math.abs(a * a / (N2 * sc) - 1) < 0.01
   }),
-  fam10({
+  fam11({
     id: "g8.sq.between-why",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.b",
@@ -34197,7 +36743,7 @@ var FAMILIES26 = [
       steps: [`${lo}\xB2 = ${lo * lo} and ${lo + 1}\xB2 = ${(lo + 1) ** 2}.`, `${lo * lo} < ${n} < ${(lo + 1) ** 2}, so ${lo} < \u221A${n} < ${lo + 1}.`]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.sq.tiles-cost",
     skill: "G8_SQUARES_TABLES",
     outcome: "G8.SQUARES.a",
@@ -34214,7 +36760,7 @@ var FAMILIES26 = [
     check: ({ s, rate: rate2 }, a) => Math.abs(Math.sqrt(a / rate2) - s) < 1e-9
   }),
   // ======================================================== RATES, RATIO, PERCENTAGE, PROPORTION
-  fam10({
+  fam11({
     id: "g8.rates.boda-same-rate",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -34233,7 +36779,7 @@ var FAMILIES26 = [
     }),
     check: ({ km1, h1, h2 }, a) => a / h2 === km1 / h1
   }),
-  fam10({
+  fam11({
     id: "g8.rates.pump-steps",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -34254,7 +36800,7 @@ var FAMILIES26 = [
     }),
     check: ({ C: C2, have, r, t0 }, v) => v[0] + have === C2 && v[1] * t0 === r * t0 && v[2] * v[1] === v[0]
   }),
-  fam10({
+  fam11({
     id: "g8.rates.sugar-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.a",
@@ -34283,7 +36829,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.class-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -34313,7 +36859,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.mix-why",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -34340,7 +36886,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.rope-units",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.c",
@@ -34361,7 +36907,7 @@ var FAMILIES26 = [
     }),
     check: ({ m, s }, a) => s * (1 + a) === 100 * m
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.three-way-share",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.e",
@@ -34383,7 +36929,7 @@ var FAMILIES26 = [
     }),
     check: ({ r, total }, x) => x * (r[0] + r[1] + r[2]) === total * (r[2] - r[0])
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.one-part-known",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.e",
@@ -34402,7 +36948,7 @@ var FAMILIES26 = [
     }),
     check: ({ g, s, k }, a) => a * s === (g + s) * s * k
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.increase-flour",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34421,7 +36967,7 @@ var FAMILIES26 = [
     }),
     check: ({ base, big, small }, a) => a * small === base * big
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.decrease-rent",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34440,7 +36986,7 @@ var FAMILIES26 = [
     }),
     check: ({ rent, nw, old }, a) => a * old === rent * nw
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.fare-steps",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34462,7 +37008,7 @@ var FAMILIES26 = [
     }),
     check: ({ big, small, old }, v) => v[0] * small === old && v[1] * small === old * big && v[2] + old === v[1] && Math.abs(old * (1 + v[3] / 100) - v[1]) < 1e-9
   }),
-  fam10({
+  fam11({
     id: "g8.ratio.increase-why",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.f",
@@ -34484,7 +37030,7 @@ var FAMILIES26 = [
       steps: [`Increase means the new amount is bigger, so multiply by ${big}/${small}.`, `${base} \xD7 ${big}/${small} = ${base * big / small}.`]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.pct.fare-change",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34505,7 +37051,7 @@ var FAMILIES26 = [
     }),
     check: ({ old, nw, up }, a) => Math.abs(old * (up ? 1 + a / 100 : 1 - a / 100) - nw) < 1e-9
   }),
-  fam10({
+  fam11({
     id: "g8.pct.before-change",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34526,7 +37072,7 @@ var FAMILIES26 = [
     }),
     check: ({ up, pc, final }, a) => Math.abs(a * (up ? 100 + pc : 100 - pc) / 100 - final) < 1e-9
   }),
-  fam10({
+  fam11({
     id: "g8.pct.enrolment-table",
     skill: "G8_PERCENTAGE_CHANGE",
     outcome: "G8.RATES.g",
@@ -34550,7 +37096,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.prop.workers-days",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34571,7 +37117,7 @@ var FAMILIES26 = [
     }),
     check: ({ w, d, w2 }, a) => a * w2 === w * d
   }),
-  fam10({
+  fam11({
     id: "g8.prop.which-inverse",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34590,7 +37136,7 @@ var FAMILIES26 = [
       steps: [`${r[1]}`, "So when one doubles, the other halves: inverse proportion."]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.prop.wall-table",
     skill: "G8_RATIO_PROPORTION",
     outcome: "G8.RATES.j",
@@ -34614,7 +37160,7 @@ var FAMILIES26 = [
     })
   }),
   // ======================================================== ALGEBRAIC EXPRESSIONS
-  fam10({
+  fam11({
     id: "g8.fact.fully-outside",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34634,7 +37180,7 @@ var FAMILIES26 = [
     }),
     check: ({ g, p, q }, a) => gcd6(a * p, a * q) === a
   }),
-  fam10({
+  fam11({
     id: "g8.fact.rectangle-steps",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34655,7 +37201,7 @@ var FAMILIES26 = [
     }),
     check: ({ g, p, q, X }, v) => v[0] === g && v[1] === p * X + q && v[2] === v[0] * v[1] && v[2] === g * p * X + g * q
   }),
-  fam10({
+  fam11({
     id: "g8.fact.hcf-spot",
     skill: "G8_FACTORIZE_COMMON",
     outcome: "G8.EXPR.a",
@@ -34680,7 +37226,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.algfrac.divide-top-spot",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34702,7 +37248,7 @@ var FAMILIES26 = [
       steps: ["Divide each part of the top by the bottom number.", "Do not leave any part undivided."]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.algfrac.add-why",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34724,7 +37270,7 @@ var FAMILIES26 = [
       steps: [`Common denominator of ${a} and ${b}: ${a * b}.`, `x/${a} + x/${b} = ${b}x/${a * b} + ${a}x/${a * b} = ${a + b}x/${a * b}.`]
     })
   }),
-  fam10({
+  fam11({
     id: "g8.algfrac.shamba-solve",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EXPR.b",
@@ -34743,7 +37289,7 @@ var FAMILIES26 = [
     }),
     check: ({ a, b, T: T5 }, x) => x / a + x / b === T5
   }),
-  fam10({
+  fam11({
     id: "g8.subst.boda-fare",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34759,7 +37305,7 @@ var FAMILIES26 = [
     }),
     check: ({ f, r, k }, a) => (a - f) / r === k
   }),
-  fam10({
+  fam11({
     id: "g8.subst.negative-steps",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34782,7 +37328,7 @@ var FAMILIES26 = [
     }),
     check: ({ a, b, s, t }, v) => v[0] === -s * -s && v[1] === a * v[0] && v[2] === b * t && v[3] === a * (-s) ** 2 - b * t
   }),
-  fam10({
+  fam11({
     id: "g8.subst.sign-why",
     skill: "G8_EXPAND_BRACKETS",
     outcome: "G8.EXPR.c",
@@ -34805,7 +37351,7 @@ var FAMILIES26 = [
     })
   }),
   // ======================================================== LINEAR EQUATIONS
-  fam10({
+  fam11({
     id: "g8.eq.form-prices",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.a",
@@ -34831,7 +37377,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.eq.form-sign-spot",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.a",
@@ -34853,7 +37399,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.eq.eliminate-steps",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.b",
@@ -34874,7 +37420,7 @@ var FAMILIES26 = [
     }),
     check: ({ a, b1, b2, c1, c2 }, v) => a * v[2] + b1 * v[1] === c1 && a * v[2] + b2 * v[1] === c2 && v[0] === (b2 - b1) * v[1]
   }),
-  fam10({
+  fam11({
     id: "g8.eq.substitute-spot",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.b",
@@ -34900,7 +37446,7 @@ var FAMILIES26 = [
       };
     }
   }),
-  fam10({
+  fam11({
     id: "g8.eq.museum-tickets",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34920,7 +37466,7 @@ var FAMILIES26 = [
     }),
     check: ({ a1, a2, n, T1, T2: T22, C: C2 }, a) => a1 * a + n * C2 === T1 && a2 * a + n * C2 === T22
   }),
-  fam10({
+  fam11({
     id: "g8.eq.coins",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34939,7 +37485,7 @@ var FAMILIES26 = [
     }),
     check: ({ N: N2, V: V2 }, a) => 5 * (N2 - a) + 10 * a === V2
   }),
-  fam10({
+  fam11({
     id: "g8.eq.hens-goats-steps",
     skill: "G8_SIMULTANEOUS_INTRO",
     outcome: "G8.EQUATIONS.d",
@@ -34961,7 +37507,7 @@ var FAMILIES26 = [
     }),
     check: ({ N: N2, L: L3 }, v) => v[0] === 2 * N2 && v[1] === L3 - v[0] && v[2] * 2 === v[1] && v[3] + v[2] === N2 && 2 * v[3] + 4 * v[2] === L3
   }),
-  fam10({
+  fam11({
     id: "g8.eq.eliminate-why",
     skill: "G8_LINEAR_EQ_ADV",
     outcome: "G8.EQUATIONS.b",
@@ -34986,15 +37532,15 @@ var FAMILIES26 = [
 ];
 
 // src/ai-tutor/content/families/g8_measure_geo.js
-var fam11 = (def) => family({ reviewed: false, ...def });
+var fam12 = (def) => family({ reviewed: false, ...def });
 var PI2 = 22 / 7;
 var uniq4 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.length;
 var near3 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI2 * r;
 var nice = (v) => Number.isInteger(v * 2);
-var FAMILIES27 = [
+var FAMILIES31 = [
   // ================================================================ CIRCLES
-  fam11({
+  fam12({
     id: "g8.circ.wheel-distance",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -35015,7 +37561,7 @@ var FAMILIES27 = [
     }),
     check: ({ d, n }, a) => near3(a * 100 / n / d, 22 / 7)
   }),
-  fam11({
+  fam12({
     id: "g8.circ.radius-slip",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -35034,7 +37580,7 @@ var FAMILIES27 = [
       steps: [`The radius is ${r} cm, so the diameter is 2 \xD7 ${r} = ${2 * r} cm.`, "Circumference = \u03C0 \xD7 diameter, so it is \u03C0 \xD7 diameter, not \u03C0 \xD7 radius."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.circ.track-laps",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.a",
@@ -35055,7 +37601,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, n, m, c }, v) => v[0] * 7 === 44 * r && v[1] === v[0] * n && v[2] * v[0] === c * m
   }),
-  fam11({
+  fam12({
     id: "g8.arc.flowerbed",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -35077,7 +37623,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, th }, a) => near3(a * 360 / th, 44 * r / 7)
   }),
-  fam11({
+  fam12({
     id: "g8.arc.minute-hand",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -35099,7 +37645,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, m }, a) => near3(a * 60 / m, 44 * r / 7)
   }),
-  fam11({
+  fam12({
     id: "g8.arc.table-angles",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -35123,7 +37669,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, miss }, a) => near3(a * 360 / miss, 44 * r / 7)
   }),
-  fam11({
+  fam12({
     id: "g8.arc.spot-fraction",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.b",
@@ -35148,7 +37694,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.sector.fence",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.c",
@@ -35170,7 +37716,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, th }, a) => near3(a - 2 * r, th * 44 * r / (7 * 360))
   }),
-  fam11({
+  fam12({
     id: "g8.sector.semicircle-radius",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.CIRCLES.c",
@@ -35191,7 +37737,7 @@ var FAMILIES27 = [
     check: ({ r, P: P2 }, a) => near3(a * (22 / 7 + 2), P2)
   }),
   // ================================================================ AREA
-  fam11({
+  fam12({
     id: "g8.area.path-round-field",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -35212,7 +37758,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, w, A1, A2 }, v) => v[0] === A1 && v[1] === r + w && v[2] + A1 === A2
   }),
-  fam11({
+  fam12({
     id: "g8.area.arched-window",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -35231,7 +37777,7 @@ var FAMILIES27 = [
     }),
     check: ({ w, h }, a) => near3(a, w * h + 0.5 * PI2 * (w / 2) ** 2)
   }),
-  fam11({
+  fam12({
     id: "g8.area.double-radius",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.a",
@@ -35250,7 +37796,7 @@ var FAMILIES27 = [
       steps: [`Area = \u03C0 \xD7 r \xD7 r. Replace r with ${k} \xD7 r.`, `\u03C0 \xD7 (${k}r) \xD7 (${k}r) = ${k * k} \xD7 \u03C0 \xD7 r \xD7 r.`, `So the area is ${k * k} times as much.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.sector.sprinkler-area",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -35271,7 +37817,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, th }, a) => near3(a * 360 / th, 22 * r * r / 7)
   }),
-  fam11({
+  fam12({
     id: "g8.sector.find-angle",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -35290,7 +37836,7 @@ var FAMILIES27 = [
     }),
     check: ({ th, r, A: A2 }, a) => near3(A2 / 1386 * 360, a) && r === 21
   }),
-  fam11({
+  fam12({
     id: "g8.sector.fraction-why",
     skill: "G9_ARC_LENGTH",
     outcome: "G8.AREA.b",
@@ -35312,7 +37858,7 @@ var FAMILIES27 = [
       steps: [`A full turn is 360\xB0.`, `${th}/360 = 1/${n}.`, `Equal turns cut equal slices, so the sector is 1/${n} of the circle's area.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.surface.carton-table",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -35339,7 +37885,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.surface.classroom-paint",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -35362,7 +37908,7 @@ var FAMILIES27 = [
     }),
     check: ({ l, w, h, o, cov: cov2 }, v) => v[0] === 2 * h * (l + w) && v[1] === l * w && v[2] === v[0] + v[1] - o && v[3] * cov2 === v[2]
   }),
-  fam11({
+  fam12({
     id: "g8.surface.spot-cuboid",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.c",
@@ -35387,7 +37933,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.surface.open-water-tank",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.d",
@@ -35406,7 +37952,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, h }, a) => near3(a, PI2 * r * (r + 2 * h))
   }),
-  fam11({
+  fam12({
     id: "g8.surface.tin-label",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.d",
@@ -35425,7 +37971,7 @@ var FAMILIES27 = [
     }),
     check: ({ d, h }, a) => near3(a / h, PI2 * d)
   }),
-  fam11({
+  fam12({
     id: "g8.prism.tent",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35445,7 +37991,7 @@ var FAMILIES27 = [
     }),
     check: ({ a, h, s, L: L3 }, v) => near3(v, a * h * 2 + L3 * (2 * s + 2 * a))
   }),
-  fam11({
+  fam12({
     id: "g8.prism.table-faces",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35466,7 +38012,7 @@ var FAMILIES27 = [
     }),
     check: ({ b, h, s, L: L3 }, a) => near3(a, b * h + L3 * b + L3 * h + L3 * s)
   }),
-  fam11({
+  fam12({
     id: "g8.prism.spot-working",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.AREA.e",
@@ -35491,7 +38037,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.grid.count-squares",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35511,7 +38057,7 @@ var FAMILIES27 = [
     }),
     check: ({ F: F4, P: P2 }, a) => 2 * a === 2 * F4 + P2
   }),
-  fam11({
+  fam12({
     id: "g8.grid.scaled-plot",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35532,7 +38078,7 @@ var FAMILIES27 = [
     }),
     check: ({ side, F: F4, P: P2 }, v) => v[0] === side * side && 2 * v[1] === 2 * F4 + P2 && v[2] === v[1] * v[0]
   }),
-  fam11({
+  fam12({
     id: "g8.grid.compare-fields",
     skill: "G8_AREA_COMPOSITE",
     outcome: "G8.AREA.f",
@@ -35560,7 +38106,7 @@ var FAMILIES27 = [
     }
   }),
   // ================================================================ MONEY
-  fam11({
+  fam12({
     id: "g8.money.compound-two-years",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35582,7 +38128,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, P: P2 }, a) => near3(a * 100 * 100 / ((100 + r) * (100 + r)), P2)
   }),
-  fam11({
+  fam12({
     id: "g8.money.compound-steps",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35605,7 +38151,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, P: P2 }, v) => v[0] === P2 + P2 * r / 100 && v[1] === v[0] * r / 100 && v[2] === v[0] + v[1] && v[3] + P2 === v[2]
   }),
-  fam11({
+  fam12({
     id: "g8.money.compound-why",
     skill: "G8_SIMPLE_INTEREST",
     outcome: "G8.MONEY.c",
@@ -35627,7 +38173,7 @@ var FAMILIES27 = [
       steps: [`Simple interest: 10% of ${sh(P2)} each year, always the same.`, `Compound interest: year 2 interest is 10% of the larger amount from year 1.`, "The interest earns interest, so the compound account grows faster."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.money.depreciate-motorcycle",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35648,7 +38194,7 @@ var FAMILIES27 = [
     }),
     check: ({ P: P2, r }, a) => near3(a * 1e4 / ((100 - r) * (100 - r)), P2)
   }),
-  fam11({
+  fam12({
     id: "g8.money.depreciate-table",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35671,7 +38217,7 @@ var FAMILIES27 = [
     }),
     check: ({ P: P2, V1, V3 }, a) => near3(a * P2 * P2, V1 * V1 * V1) && V3 > 0
   }),
-  fam11({
+  fam12({
     id: "g8.money.depreciate-why",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.d",
@@ -35693,7 +38239,7 @@ var FAMILIES27 = [
       steps: [`Year 1: ${P2} \u2212 ${r}% = ${P2 * (100 - r) / 100}.`, `Year 2: ${P2 * (100 - r) / 100} \u2212 ${r}% = ${V2}.`, `Loss: ${P2 - V2} out of ${P2} is ${real}%, not ${tot}%.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.money.hp-extra",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.e",
@@ -35714,7 +38260,7 @@ var FAMILIES27 = [
     }),
     check: ({ C: C2, D: D3, n, m }, a) => C2 + a === D3 + n * m
   }),
-  fam11({
+  fam12({
     id: "g8.money.hp-plans",
     skill: "G8_PROFIT_LOSS",
     outcome: "G8.MONEY.e",
@@ -35746,7 +38292,7 @@ var FAMILIES27 = [
     }
   }),
   // ================================================================ CONSTRUCTIONS
-  fam11({
+  fam12({
     id: "g8.construct.ray-parts",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35766,7 +38312,7 @@ var FAMILIES27 = [
     }),
     check: ({ a, b }, v) => v - a === b
   }),
-  fam11({
+  fam12({
     id: "g8.construct.divide-fence",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35787,7 +38333,7 @@ var FAMILIES27 = [
     }),
     check: ({ a, b, k, L: L3 }, v) => v[0] === a + b && v[1] * v[0] === L3 && v[2] === v[1] * a
   }),
-  fam11({
+  fam12({
     id: "g8.construct.parallel-why",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.b",
@@ -35809,7 +38355,7 @@ var FAMILIES27 = [
       steps: ["The marks on the ray are equal distances apart.", "Lines parallel to the one that ends at B carry those equal steps across to AB.", "So AB is cut into the same ratio as the ray."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.construct.circle-right-triangle",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.f",
@@ -35828,7 +38374,7 @@ var FAMILIES27 = [
     }),
     check: ({ a, b }, r) => near3((2 * r) ** 2, a * a + b * b)
   }),
-  fam11({
+  fam12({
     id: "g8.construct.which-centre-lines",
     skill: "G9_CONSTRUCTION",
     outcome: "G8.CONSTRUCT.f",
@@ -35850,7 +38396,7 @@ var FAMILIES27 = [
     }
   }),
   // ================================================================ COORDINATES AND GRAPHS
-  fam11({
+  fam12({
     id: "g8.graphs.shop-point",
     skill: "G8_COORDINATES",
     outcome: "G8.GRAPHS.b",
@@ -35868,7 +38414,7 @@ var FAMILIES27 = [
       steps: [`Across: ${x} + ${dx} = ${x + dx}.`, `Up: ${y} + ${dy} = ${y + dy}.`, `The shop is at ${right}.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.rectangle-corners",
     skill: "G8_COORDINATES",
     outcome: "G8.GRAPHS.b",
@@ -35887,7 +38433,7 @@ var FAMILIES27 = [
     }),
     check: ({ x0, y0, W: W3, H: H3 }, v) => v[0] === x0 && v[1] === y0 + H3 && v[2] === 2 * W3 + 2 * H3 && v[3] * 2 === 2 * W3 * H3
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.table-pattern",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.d",
@@ -35907,7 +38453,7 @@ var FAMILIES27 = [
     }),
     check: ({ m, c }, a) => (a - c) / m === 6
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.spot-negative-x",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.d",
@@ -35930,7 +38476,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.scale-why",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35952,7 +38498,7 @@ var FAMILIES27 = [
       steps: [`The axis reaches 10 \xD7 ${s} = ${10 * s}.`, `${V2} is bigger than ${10 * s}, so the largest value is off the graph.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.scale-number",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35971,7 +38517,7 @@ var FAMILIES27 = [
     }),
     check: ({ L: L3, V: V2 }, a) => a * L3 === V2
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.scale-choose",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.e",
@@ -35999,7 +38545,7 @@ var FAMILIES27 = [
       steps: [`The largest value is ${M5} mm.`, `10 squares of ${prev} mm reach ${10 * prev}, which is too small.`, `10 squares of ${r} mm reach ${10 * r}, which fits.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.hall-hire-graph",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -36026,7 +38572,7 @@ var FAMILIES27 = [
     },
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.table-meet",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -36047,7 +38593,7 @@ var FAMILIES27 = [
     }),
     check: ({ m1, m2, a, b }, v) => a + m1 * v === b + m2 * v
   }),
-  fam11({
+  fam12({
     id: "g8.graphs.cross-why",
     skill: "G8_LINEAR_GRAPHS",
     outcome: "G8.GRAPHS.g",
@@ -36073,7 +38619,7 @@ var FAMILIES27 = [
     }
   }),
   // ================================================================ SCALE
-  fam11({
+  fam12({
     id: "g8.scale.plan-table",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.b",
@@ -36093,7 +38639,7 @@ var FAMILIES27 = [
     }),
     check: ({ s, cl, hall }, a) => a / s + cl === hall
   }),
-  fam11({
+  fam12({
     id: "g8.scale.ratio-to-km",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -36112,7 +38658,7 @@ var FAMILIES27 = [
     }),
     check: ({ n }, a) => near3(a * 1e5, n)
   }),
-  fam11({
+  fam12({
     id: "g8.scale.spot-ratio",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -36134,7 +38680,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.scale.more-detail-why",
     skill: "G8_SCALE_FORMS",
     outcome: "G8.SCALE.d",
@@ -36159,7 +38705,7 @@ var FAMILIES27 = [
       };
     }
   }),
-  fam11({
+  fam12({
     id: "g8.scale.find-scale-route",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -36180,7 +38726,7 @@ var FAMILIES27 = [
     }),
     check: ({ km, cm }, a) => near3(a * cm, km * 1e5)
   }),
-  fam11({
+  fam12({
     id: "g8.scale.two-legs",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -36200,7 +38746,7 @@ var FAMILIES27 = [
     }),
     check: ({ c1, c2, n }, a) => near3((c1 + c2) * n / 1e5, a)
   }),
-  fam11({
+  fam12({
     id: "g8.scale.shamba-area",
     skill: "G8_SCALE_DRAWING",
     outcome: "G8.SCALE.j",
@@ -36223,7 +38769,7 @@ var FAMILIES27 = [
     check: ({ s, l, w }, v) => v[0] === l * s && v[1] === w * s && v[2] === v[0] * v[1] && near3(v[3] * 1e4, v[2])
   }),
   // ================================================================ SOLIDS
-  fam11({
+  fam12({
     id: "g8.solids.edges-euler",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.a",
@@ -36242,7 +38788,7 @@ var FAMILIES27 = [
     }),
     check: ({ F: F4, V: V2 }, e) => F4 + V2 - e === 2
   }),
-  fam11({
+  fam12({
     id: "g8.solids.cylinder-net",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.b",
@@ -36261,7 +38807,7 @@ var FAMILIES27 = [
     }),
     check: ({ r }, a) => near3(a * 7 / 44, r)
   }),
-  fam11({
+  fam12({
     id: "g8.solids.cube-net-yes-no",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.b",
@@ -36282,7 +38828,7 @@ var FAMILIES27 = [
       steps: ok ? ["The row makes four sides.", "One extra square is above and one is below, so they make the top and the bottom.", "All six faces are covered, so it folds into a cube."] : ["The row makes four sides.", "Both extra squares are above the row, so both fold to the top.", "The bottom face is missing, so it does not fold into a cube."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.solids.cylinder-net-steps",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.SOLIDS.c",
@@ -36304,7 +38850,7 @@ var FAMILIES27 = [
     }),
     check: ({ r, L: L3, w }, v) => v[0] === r && v[1] === L3 * w && v[2] * 7 === 44 * r * r && v[3] === v[1] + v[2]
   }),
-  fam11({
+  fam12({
     id: "g8.solids.tray-volume",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.c",
@@ -36323,7 +38869,7 @@ var FAMILIES27 = [
     }),
     check: ({ L: L3, W: W3, x }, a) => a / x / (L3 - 2 * x) === W3 - 2 * x
   }),
-  fam11({
+  fam12({
     id: "g8.solids.double-edge-why",
     skill: "G8_SURFACE_AREA",
     outcome: "G8.SOLIDS.c",
@@ -36342,7 +38888,7 @@ var FAMILIES27 = [
       steps: [`A face is edge \xD7 edge, so each face is ${k} \xD7 ${k} = ${k * k} times as big.`, `Volume is edge \xD7 edge \xD7 edge: ${k} \xD7 ${k} \xD7 ${k} = ${k * k * k} times as big.`]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.solids.ant-two-faces",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.d",
@@ -36362,7 +38908,7 @@ var FAMILIES27 = [
     }),
     check: ({ a, r }, d) => near3(d * d, a * a + r * r)
   }),
-  fam11({
+  fam12({
     id: "g8.solids.beetle-tin",
     skill: "G8_VOLUME_ADV",
     outcome: "G8.SOLIDS.d",
@@ -36382,7 +38928,7 @@ var FAMILIES27 = [
     check: ({ r }, a) => near3(2 * a, circ(r))
   }),
   // ================================================================ DATA
-  fam11({
+  fam12({
     id: "g8.data.bar-top-two",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -36404,7 +38950,7 @@ var FAMILIES27 = [
     }),
     check: ({ top, bot }, a) => bot + a === top
   }),
-  fam11({
+  fam12({
     id: "g8.data.line-biggest-rise",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -36428,7 +38974,7 @@ var FAMILIES27 = [
     }),
     check: ({ ys, best }, a) => ys.slice(1).some((v, i) => v - ys[i] === a) && ys.slice(1).every((v, i) => v - ys[i] <= a)
   }),
-  fam11({
+  fam12({
     id: "g8.data.table-bar-squares",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -36448,7 +38994,7 @@ var FAMILIES27 = [
     }),
     check: ({ s, mx }, a) => a * s === mx
   }),
-  fam11({
+  fam12({
     id: "g8.data.which-graph-why",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.b",
@@ -36471,7 +39017,7 @@ var FAMILIES27 = [
       steps: kind === "bar" ? ["The values are for separate groups.", "Bars stand side by side without joining, so a bar graph suits them."] : ["The values come one after another in time.", "A line shows the way the value rises and falls, so a line graph suits them."]
     })
   }),
-  fam11({
+  fam12({
     id: "g8.data.table-mean",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36494,7 +39040,7 @@ var FAMILIES27 = [
     }),
     check: ({ n, tot }, a) => near3(a * n, tot)
   }),
-  fam11({
+  fam12({
     id: "g8.data.table-median",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36530,7 +39076,7 @@ var FAMILIES27 = [
       return n % 2 ? at((n + 1) / 2) === med : (at(n / 2) + at(n / 2 + 1)) / 2 === med;
     }
   }),
-  fam11({
+  fam12({
     id: "g8.data.new-mean",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36551,7 +39097,7 @@ var FAMILIES27 = [
     }),
     check: ({ m, x }, a) => a * 5 === 4 * m + x
   }),
-  fam11({
+  fam12({
     id: "g8.data.seven-days",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36580,7 +39126,7 @@ var FAMILIES27 = [
     }),
     check: ({ list: list2, sorted }, v) => list2.filter((q) => q === v[0]).length === 2 && sorted[3] === v[1] && v[2] * 7 === list2.reduce((a, b) => a + b, 0)
   }),
-  fam11({
+  fam12({
     id: "g8.data.which-average-why",
     skill: "G8_DATA_GRAPHS",
     outcome: "G8.DATA.e",
@@ -36612,7 +39158,7 @@ var FAMILIES27 = [
     }
   }),
   // ================================================================ PROBABILITY
-  fam11({
+  fam12({
     id: "g8.prob.bottle-top-table",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36634,7 +39180,7 @@ var FAMILIES27 = [
     }),
     check: ({ n, side }, a) => near3(a * n, side)
   }),
-  fam11({
+  fam12({
     id: "g8.prob.spinner-expected",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36657,7 +39203,7 @@ var FAMILIES27 = [
     }),
     check: ({ n, g, N: N2 }, v) => v[0] === g + (n - g) && near3(v[1] * v[0], g) && near3(v[2], g * N2 / n)
   }),
-  fam11({
+  fam12({
     id: "g8.prob.expected-times",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36677,7 +39223,7 @@ var FAMILIES27 = [
     }),
     check: ({ n, c, N: N2 }, a) => a * n === c * N2
   }),
-  fam11({
+  fam12({
     id: "g8.prob.more-tosses-why",
     skill: "G8_PROBABILITY_INTRO",
     outcome: "G8.PROB.b",
@@ -36702,7 +39248,7 @@ var FAMILIES27 = [
 ];
 
 // src/ai-tutor/content/families/g7_num_alg.js
-var fam12 = (def) => family({ reviewed: false, ...def });
+var fam13 = (def) => family({ reviewed: false, ...def });
 var shuffle7 = (a) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
@@ -36755,11 +39301,11 @@ var mixed = (n, d) => {
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
   return `${a}/${b}`;
 };
-var FAMILIES28 = [
+var FAMILIES32 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.whole.place-chart",
     skill: "G7_PLACE_VALUE",
     outcome: "G7.WHOLE.a",
@@ -36786,7 +39332,7 @@ var FAMILIES28 = [
     },
     check: ({ ds, j, k }, a) => String(a).length === j + 1 && Number(String(ds[j]) + "0".repeat(j)) + Number(String(ds[k]) + "0".repeat(k)) === a
   }),
-  fam12({
+  fam13({
     id: "g7.whole.words-spot",
     skill: "G7_NUMBERS_WORDS",
     outcome: "G7.WHOLE.c",
@@ -36808,7 +39354,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.whole.words-cheque",
     skill: "G7_NUMBERS_WORDS",
     outcome: "G7.WHOLE.c",
@@ -36836,7 +39382,7 @@ var FAMILIES28 = [
       steps: [`Groups: ${commas(n).split(",").join(" | ")}.`, `In words: ${words4(n)}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.whole.round-report",
     skill: "G7_ROUNDING_WHOLE",
     outcome: "G7.WHOLE.d",
@@ -36858,7 +39404,7 @@ var FAMILIES28 = [
     }),
     check: ({ N: N2 }, a) => a % 1e8 === 0 && Math.abs(N2 - a) <= 5e7
   }),
-  fam12({
+  fam13({
     id: "g7.whole.prime-jerseys",
     skill: "G7_PRIMES",
     outcome: "G7.WHOLE.e",
@@ -36889,7 +39435,7 @@ var FAMILIES28 = [
     }),
     check: ({ v }, a) => v.filter((n) => n > 1 && Array.from({ length: n - 2 }, (_, i) => i + 2).every((f) => n % f !== 0)).length === a
   }),
-  fam12({
+  fam13({
     id: "g7.whole.matatu-takings",
     skill: "G7_BODMAS_ADV",
     outcome: "G7.WHOLE.f",
@@ -36908,7 +39454,7 @@ var FAMILIES28 = [
     }),
     check: ({ f, k, F: F4, P: P2 }, a) => a + F4 + P2 === f * k
   }),
-  fam12({
+  fam13({
     id: "g7.whole.mangoes-spot",
     skill: "G7_BODMAS_ADV",
     outcome: "G7.WHOLE.f",
@@ -36934,7 +39480,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.whole.hall-rows",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.g",
@@ -36952,7 +39498,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, d, n }, x) => (x - a) % d === 0 && (x - a) / d + 1 === n
   }),
-  fam12({
+  fam13({
     id: "g7.whole.odd-term-out",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.g",
@@ -36976,7 +39522,7 @@ var FAMILIES28 = [
     },
     check: ({ a, d }, x) => (x - a) % d !== 0
   }),
-  fam12({
+  fam13({
     id: "g7.whole.rule-fourth-term",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.h",
@@ -36997,7 +39543,7 @@ var FAMILIES28 = [
     }),
     check: ({ m, c, t }, x) => (x - c) / m === t[2]
   }),
-  fam12({
+  fam13({
     id: "g7.whole.sticks-rule",
     skill: "G7_NUMBER_SEQUENCES",
     outcome: "G7.WHOLE.h",
@@ -37022,7 +39568,7 @@ var FAMILIES28 = [
   // ======================================================================
   // FACTORS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.factors.div-baskets",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -37043,7 +39589,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.factors.eleven-spot",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -37071,7 +39617,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.factors.div-six-table",
     skill: "G7_DIVISIBILITY",
     outcome: "G7.FACTORS.a",
@@ -37094,7 +39640,7 @@ var FAMILIES28 = [
     }),
     check: ({ v }, a) => v.filter((n) => n % 2 === 0 && digitSum(n) % 3 === 0).length === a
   }),
-  fam12({
+  fam13({
     id: "g7.factors.prime-factor-spot",
     skill: "G7_PRIME_FACTORIZATION",
     outcome: "G7.FACTORS.b",
@@ -37118,7 +39664,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.factors.not-prime-why",
     skill: "G7_PRIMES",
     outcome: "G7.FACTORS.b",
@@ -37140,7 +39686,7 @@ var FAMILIES28 = [
       steps: [`${N2} \xF7 ${p} = ${q}.`, `So ${N2} has the factors ${p} and ${q}, and it is composite.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.factors.gcd-rope",
     skill: "G7_GCD",
     outcome: "G7.FACTORS.c",
@@ -37162,7 +39708,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd7(a / x, b / x) === 1
   }),
-  fam12({
+  fam13({
     id: "g7.factors.hcf-gift-boxes",
     skill: "G7_GCD",
     outcome: "G7.FACTORS.c",
@@ -37186,7 +39732,7 @@ var FAMILIES28 = [
     }),
     check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd7(n / a, nums[0] / a) >= 1) && gcd7(gcd7(nums[0] / a, nums[1] / a), nums[2] / a) === 1
   }),
-  fam12({
+  fam13({
     id: "g7.factors.lcm-matatus",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -37207,7 +39753,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd7(x / a, x / b) === 1
   }),
-  fam12({
+  fam13({
     id: "g7.factors.lcm-product-why",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -37230,7 +39776,7 @@ var FAMILIES28 = [
       steps: [`${a * b} is a common multiple, but not the smallest.`, `${L3} \xF7 ${a} = ${L3 / a} and ${L3} \xF7 ${b} = ${L3 / b}, so ${L3} is a smaller common multiple.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.factors.lcm-three-bells",
     skill: "G7_LCM",
     outcome: "G7.FACTORS.d",
@@ -37255,7 +39801,7 @@ var FAMILIES28 = [
   // ======================================================================
   // FRACTIONS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.frac.compare-books",
     skill: "G7_FRACTIONS_COMPARE",
     outcome: "G7.FRAC.a",
@@ -37286,7 +39832,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.frac.one-piece-short",
     skill: "G7_FRACTIONS_COMPARE",
     outcome: "G7.FRAC.a",
@@ -37312,7 +39858,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.frac.recip-cups",
     skill: "G7_RECIPROCALS",
     outcome: "G7.FRAC.e",
@@ -37331,7 +39877,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b, L: L3 }, x) => x * a / b === L3
   }),
-  fam12({
+  fam13({
     id: "g7.frac.recip-mixed-why",
     skill: "G7_RECIPROCALS",
     outcome: "G7.FRAC.e",
@@ -37357,7 +39903,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.frac.div-operation",
     skill: "G7_FRACTIONS_DIV",
     outcome: "G7.FRAC.f",
@@ -37379,7 +39925,7 @@ var FAMILIES28 = [
       steps: [`Each ${item[2]} needs ${a}/${b}, and there are ${L3} ${item[1]} altogether.`, `The number of ${item[3]} is ${L3} \xF7 ${a}/${b}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.frac.div-tank-buckets",
     skill: "G7_FRACTIONS_DIV",
     outcome: "G7.FRAC.f",
@@ -37398,7 +39944,7 @@ var FAMILIES28 = [
       steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd7(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.frac.mul-land",
     skill: "G7_FRACTIONS_MUL",
     outcome: "G7.FRAC.d",
@@ -37419,7 +39965,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b, c, d, N: N2 }, x) => x * b * d === N2 * a * c
   }),
-  fam12({
+  fam13({
     id: "g7.frac.seq-tank",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -37440,7 +39986,7 @@ var FAMILIES28 = [
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? "to" : "taking it from"} ${shown[3]} gives ${right}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.frac.seq-fill-table",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -37458,7 +40004,7 @@ var FAMILIES28 = [
     }),
     check: ({ m }, a) => a * 1 === m && a / 2 % 1 === 0 && a > 6
   }),
-  fam12({
+  fam13({
     id: "g7.frac.seq-rule",
     skill: "G7_FRACTIONS_ADD_UNLIKE",
     outcome: "G7.FRAC.h",
@@ -37481,7 +40027,7 @@ var FAMILIES28 = [
   // ======================================================================
   // DECIMALS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.dec.read-chart",
     skill: "G7_DECIMAL_PV",
     outcome: "G7.DEC.a",
@@ -37509,7 +40055,7 @@ var FAMILIES28 = [
     },
     check: ({ ds }, a) => String(a).replace(".", "").length >= 3 && Math.floor(a / 10) === ds[0] && Math.round(a * 1e3 % 10) === ds[4]
   }),
-  fam12({
+  fam13({
     id: "g7.dec.how-many-hundredths",
     skill: "G7_DECIMAL_PV",
     outcome: "G7.DEC.a",
@@ -37531,7 +40077,7 @@ var FAMILIES28 = [
     },
     check: ({ dp: dp3, N: N2 }, a) => a / 10 ** dp3 === round(N2 / 10 ** dp3, 2)
   }),
-  fam12({
+  fam13({
     id: "g7.dec.price-per-kg",
     skill: "G7_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -37550,7 +40096,7 @@ var FAMILIES28 = [
     }),
     check: ({ pr, q }, a) => a / q === pr
   }),
-  fam12({
+  fam13({
     id: "g7.dec.garden-steps",
     skill: "G7_DECIMALS_MUL",
     outcome: "G7.DEC.b",
@@ -37572,7 +40118,7 @@ var FAMILIES28 = [
     }),
     check: ({ L: L3, w, pr }, v) => Math.abs(v[0] / L3 - w) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / 2 - (L3 + w)) < 1e-9
   }),
-  fam12({
+  fam13({
     id: "g7.dec.ribbon-bows",
     skill: "G7_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -37591,7 +40137,7 @@ var FAMILIES28 = [
     }),
     check: ({ q, t }, a) => Math.abs(a * q - t) < 1e-9
   }),
-  fam12({
+  fam13({
     id: "g7.dec.beans-steps",
     skill: "G7_DECIMALS_DIV",
     outcome: "G7.DEC.c",
@@ -37616,7 +40162,7 @@ var FAMILIES28 = [
   // ======================================================================
   // SQUARES AND SQUARE ROOTS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.sq.garden-double",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37638,7 +40184,7 @@ var FAMILIES28 = [
     }),
     check: ({ s, pr }, v) => Math.abs(v[0] / s - s) < 1e-9 && Math.abs(v[1] / pr - v[0]) < 1e-9 && Math.abs(v[2] / v[0] - 4) < 1e-9
   }),
-  fam12({
+  fam13({
     id: "g7.sq.decimal-spot",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37661,7 +40207,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.sq.fraction-options",
     skill: "G7_SQUARES_EXT",
     outcome: "G7.SQUARES.a",
@@ -37681,7 +40227,7 @@ var FAMILIES28 = [
       steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd7(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.sq.plot-side",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37699,7 +40245,7 @@ var FAMILIES28 = [
     }),
     check: ({ s, pr }, v) => v[0] * v[0] === s * s && v[1] === 4 * v[0] && v[2] / pr === v[1]
   }),
-  fam12({
+  fam13({
     id: "g7.sq.between-roots",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37716,7 +40262,7 @@ var FAMILIES28 = [
       steps: [`${k}\xB2 = ${k * k} and ${k + 1}\xB2 = ${(k + 1) ** 2}.`, `${A2} is between ${k * k} and ${(k + 1) ** 2}, so \u221A${A2} is between ${k} and ${k + 1}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.sq.root-of-sum-why",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37739,7 +40285,7 @@ var FAMILIES28 = [
       steps: [`${a * a} + ${b * b} = ${c * c}, and \u221A${c * c} = ${c}.`, `${a} + ${b} = ${a + b}, which is a different number, so the two methods do not agree.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.sq.root-table-sides",
     skill: "G7_SQUARE_ROOTS",
     outcome: "G7.SQUARES.b",
@@ -37764,7 +40310,7 @@ var FAMILIES28 = [
   // ======================================================================
   // ALGEBRAIC EXPRESSIONS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.expr.vendor-table",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37787,7 +40333,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.expr.three-ages",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37806,7 +40352,7 @@ var FAMILIES28 = [
       steps: [`Child: x. Brother: x \u2212 ${j}. Mother: ${m}x.`, `Total: x + (x \u2212 ${j}) + ${m}x = ${m + 2}x \u2212 ${j}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.expr.perimeter-spot",
     skill: "G7_EXPRESSIONS",
     outcome: "G7.EXPR.a",
@@ -37828,7 +40374,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.simplify.triangle-plot",
     skill: "G7_SIMPLIFY",
     outcome: "G7.EXPR.c",
@@ -37856,7 +40402,7 @@ var FAMILIES28 = [
   // ======================================================================
   // LINEAR EQUATIONS
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.eq.form-books",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.a",
@@ -37878,7 +40424,7 @@ var FAMILIES28 = [
       steps: [`${a} books cost ${a}x.`, `Add the geometry set: ${a}x + ${b}.`, `The total is ${c}, so ${a}x + ${b} = ${c}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.eq.consecutive-spot",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.a",
@@ -37903,7 +40449,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.eq.solve-from-table",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.b",
@@ -37924,7 +40470,7 @@ var FAMILIES28 = [
     }),
     check: ({ a, b, T: T5 }, x) => a * x + b === T5
   }),
-  fam12({
+  fam13({
     id: "g7.eq.both-sides-spot",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.b",
@@ -37949,7 +40495,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.eq.apply-ages",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.c",
@@ -37968,7 +40514,7 @@ var FAMILIES28 = [
     }),
     check: ({ m, t, S: S5 }, a) => a + t + (a / m + t) === S5
   }),
-  fam12({
+  fam13({
     id: "g7.eq.parking-table",
     skill: "G7_EQUATIONS_SOLVE",
     outcome: "G7.EQUATIONS.c",
@@ -37989,7 +40535,7 @@ var FAMILIES28 = [
     }),
     check: ({ b, r, T: T5 }, a) => b + r * a === T5
   }),
-  fam12({
+  fam13({
     id: "g7.eq.mango-boxes",
     skill: "G7_EQUATIONS_FORM",
     outcome: "G7.EQUATIONS.c",
@@ -38013,7 +40559,7 @@ var FAMILIES28 = [
   // ======================================================================
   // LINEAR INEQUALITIES
   // ======================================================================
-  fam12({
+  fam13({
     id: "g7.ineq.symbol-notice",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.a",
@@ -38032,7 +40578,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.true-statement",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.a",
@@ -38056,7 +40602,7 @@ var FAMILIES28 = [
       steps: [`Test each one with a = ${v}.`, `Only a ${opts2[0].op} ${opts2[0].k} is true: ${v} ${opts2[0].op} ${opts2[0].k}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.form-pickup",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -38075,7 +40621,7 @@ var FAMILIES28 = [
       steps: [`Total load: ${c} + ${s}n kg.`, `"At most ${commas(L3)}" means \u2264 ${commas(L3)}.`, `So ${c} + ${s}n \u2264 ${commas(L3)}.`]
     })
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.seats-spot",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -38100,7 +40646,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.most-books",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.b",
@@ -38119,7 +40665,7 @@ var FAMILIES28 = [
     }),
     check: ({ B: B3, g, e }, a) => g + e * a <= B3 && g + e * (a + 1) > B3
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.circle-why",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -38142,7 +40688,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.match-line",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -38160,7 +40706,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.which-in-shade",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.c",
@@ -38180,7 +40726,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-swim",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38200,7 +40746,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-line",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38220,7 +40766,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-fridge",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38242,7 +40788,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-list",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38267,7 +40813,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-rides",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38291,7 +40837,7 @@ var FAMILIES28 = [
     }),
     check: ({ A: A2, rows }, a) => rows.map((r) => (A2 > r.lo || r.li && A2 === r.lo) && (A2 < r.hi || r.hi_i && A2 === r.hi)).filter(Boolean).length === a
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-solve-spot",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38320,7 +40866,7 @@ var FAMILIES28 = [
       };
     }
   }),
-  fam12({
+  fam13({
     id: "g7.ineq.compound-or-why",
     skill: "G7_INEQUALITIES_INTRO",
     outcome: "G7.INEQ.d",
@@ -38347,7 +40893,7 @@ var FAMILIES28 = [
 ];
 
 // src/ai-tutor/content/families/g7_measure.js
-var fam13 = (def) => family({ reviewed: false, ...def });
+var fam14 = (def) => family({ reviewed: false, ...def });
 var uniq5 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
 var shuffle8 = (a) => {
   const b = [...a];
@@ -38371,9 +40917,9 @@ var isRight = (x, y, z) => {
 };
 var LETTERS2 = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 var F3 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
-var FAMILIES29 = [
+var FAMILIES33 = [
   // =========================================================== PYTHAGORAS
-  fam13({
+  fam14({
     id: "g7.pyth.name-hypotenuse",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.a",
@@ -38391,7 +40937,7 @@ var FAMILIES29 = [
       steps: [`The right angle is at ${q}, so the two sides that meet there are ${p}${q} and ${q}${r}.`, `The side left over, opposite ${q}, is the hypotenuse: ${p}${r}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.which-triangle",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.b",
@@ -38419,7 +40965,7 @@ var FAMILIES29 = [
       })
     })
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.spot-missing-side",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.b",
@@ -38446,7 +40992,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.gate-brace",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38468,7 +41014,7 @@ var FAMILIES29 = [
     },
     check: ({ a, b }, v) => v * v === a * a + b * b
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.shortcut-path",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38487,7 +41033,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, c }, v) => v + c * 10 === (a + b) * 10
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.pole-wire",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38505,7 +41051,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, c, per }, v) => v[0] === a * a + b * b && v[1] * v[1] === v[0] && v[2] / per === v[1]
   }),
-  fam13({
+  fam14({
     id: "g7.pyth.why-345",
     skill: "G7_PYTHAGORAS",
     outcome: "G7.PYTH.c",
@@ -38528,7 +41074,7 @@ var FAMILIES29 = [
     })
   }),
   // =========================================================== LENGTH
-  fam13({
+  fam14({
     id: "g7.length.convert-story",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38560,7 +41106,7 @@ var FAMILIES29 = [
     },
     check: ({ f, t, v, raw }, a) => Math.abs(a * F3[t] - (raw ? v * 10 : v) * F3[f]) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.length.table-compare",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38583,7 +41129,7 @@ var FAMILIES29 = [
     }),
     check: ({ ma, mb }, a) => Math.abs(Math.min(ma, mb) + a - Math.max(ma, mb)) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.length.why-divide",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38605,7 +41151,7 @@ var FAMILIES29 = [
       steps: [`A ${f} is longer than a ${t}, so one ${f} holds many ${t}.`, `${v} ${f} = ${v} \xD7 ${commas(r)} = ${commas(v * r)} ${t}.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.length.spot-hm-cm",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.a",
@@ -38626,7 +41172,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.length.rope-left",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.b",
@@ -38646,7 +41192,7 @@ var FAMILIES29 = [
     }),
     check: ({ n, pc, R }, a) => Math.round((R - a) * 100) === n * pc
   }),
-  fam13({
+  fam14({
     id: "g7.length.fence-posts-line",
     skill: "G7_LENGTH_CONV",
     outcome: "G7.LENGTH.b",
@@ -38666,7 +41212,7 @@ var FAMILIES29 = [
     check: ({ gap: gap2, L: L3 }, a) => (a - 1) * gap2 === L3
   }),
   // =========================================================== PERIMETER
-  fam13({
+  fam14({
     id: "g7.perim.l-shape",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38685,7 +41231,7 @@ var FAMILIES29 = [
     }),
     check: ({ w, h }, a) => a === w + h + w + h
   }),
-  fam13({
+  fam14({
     id: "g7.perim.longest-fence",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38706,7 +41252,7 @@ var FAMILIES29 = [
       steps: rows.map(([l, w], i) => `Plot ${"ABC"[i]}: 2 \xD7 (${l} + ${w}) = ${2 * (l + w)} m.`)
     })
   }),
-  fam13({
+  fam14({
     id: "g7.perim.fence-posts-round",
     skill: "G7_PERIMETER",
     outcome: "G7.LENGTH.c",
@@ -38727,7 +41273,7 @@ var FAMILIES29 = [
     check: ({ gap: gap2, l, w }, a) => a * gap2 === 2 * (l + w)
   }),
   // =========================================================== CIRCUMFERENCE
-  fam13({
+  fam14({
     id: "g7.circ.wheel-distance",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38748,7 +41294,7 @@ var FAMILIES29 = [
     }),
     check: ({ n, c }, a) => a * 100 === c * n
   }),
-  fam13({
+  fam14({
     id: "g7.circ.find-diameter",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38767,7 +41313,7 @@ var FAMILIES29 = [
     }),
     check: ({ d }, a) => 22 * a / 7 === 22 * d / 7 && a === d
   }),
-  fam13({
+  fam14({
     id: "g7.circ.why-double",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38789,7 +41335,7 @@ var FAMILIES29 = [
       steps: [`First pond: \u03C0 \xD7 ${d}. Second pond: \u03C0 \xD7 ${2 * d}.`, "The second is 2 times the first: it is the area, not the distance round, that becomes 4 times as big."]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.circ.table-pattern",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38809,7 +41355,7 @@ var FAMILIES29 = [
     }),
     check: ({ target }, a) => a * 7 === target * 22
   }),
-  fam13({
+  fam14({
     id: "g7.circ.running-track",
     skill: "G7_CIRCUMFERENCE",
     outcome: "G7.LENGTH.d",
@@ -38831,7 +41377,7 @@ var FAMILIES29 = [
     check: ({ d, s }, a) => a[0] * 7 === 22 * d && a[1] === 2 * s && a[2] === a[0] + a[1]
   }),
   // =========================================================== AREA
-  fam13({
+  fam14({
     id: "g7.area.acres-to-m2",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38847,7 +41393,7 @@ var FAMILIES29 = [
     }),
     check: ({ n }, a) => a / 4e3 === n
   }),
-  fam13({
+  fam14({
     id: "g7.area.hectares-field",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38867,7 +41413,7 @@ var FAMILIES29 = [
     }),
     check: ({ l, w }, a) => a * 1e4 === l * w
   }),
-  fam13({
+  fam14({
     id: "g7.area.spot-m2-cm2",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38889,7 +41435,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.area.table-total-ha",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.a",
@@ -38910,7 +41456,7 @@ var FAMILIES29 = [
     }),
     check: ({ v }, a) => Math.round(a * 1e4) === v[0] + v[1] + v[2]
   }),
-  fam13({
+  fam14({
     id: "g7.area.parallelogram-slant",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38929,7 +41475,7 @@ var FAMILIES29 = [
     }),
     check: ({ b, h }, a) => a / b === h
   }),
-  fam13({
+  fam14({
     id: "g7.area.trapezium-shamba",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38948,7 +41494,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, h }, v) => v * 2 === (a + b) * h
   }),
-  fam13({
+  fam14({
     id: "g7.area.trapezium-missing",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38971,7 +41517,7 @@ var FAMILIES29 = [
     },
     check: ({ a, b, h }, v) => v[0] * h / 2 === (a + b) * h / 2 && v[1] + a === v[0]
   }),
-  fam13({
+  fam14({
     id: "g7.area.spot-trapezium",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -38996,7 +41542,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.area.why-height",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -39018,7 +41564,7 @@ var FAMILIES29 = [
       steps: ["Moving the triangle makes a rectangle with the same area.", `Its sides are the base ${b} cm and the height ${h} cm, so the area is ${b} \xD7 ${h} = ${b * h} cm\xB2.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.area.tiles-floor",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.b",
@@ -39040,7 +41586,7 @@ var FAMILIES29 = [
     }),
     check: ({ L: L3, W: W3, t }, a) => a * t * t === L3 * 100 * W3 * 100
   }),
-  fam13({
+  fam14({
     id: "g7.area.circle-diameter",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -39056,7 +41602,7 @@ var FAMILIES29 = [
     }),
     check: ({ d }, a) => a * 7 / 22 === d / 2 * (d / 2)
   }),
-  fam13({
+  fam14({
     id: "g7.area.semicircle-window",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -39072,7 +41618,7 @@ var FAMILIES29 = [
     }),
     check: ({ d }, a) => a * 2 * 7 / 22 === (d / 2) ** 2
   }),
-  fam13({
+  fam14({
     id: "g7.area.from-circumference",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -39090,7 +41636,7 @@ var FAMILIES29 = [
     }),
     check: ({ r }, v) => v[0] === 2 * r && v[1] * 2 === v[0] && v[2] * 7 === 22 * v[1] * v[1]
   }),
-  fam13({
+  fam14({
     id: "g7.area.why-radius-double",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.c",
@@ -39109,7 +41655,7 @@ var FAMILIES29 = [
       steps: [`Small mat: \u03C0 \xD7 ${r} \xD7 ${r}. Big mat: \u03C0 \xD7 ${2 * r} \xD7 ${2 * r}.`, `${2 * r} \xD7 ${2 * r} is 4 times ${r} \xD7 ${r}, so the area is 4 times as big.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.area.path-around",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.d",
@@ -39129,7 +41675,7 @@ var FAMILIES29 = [
     }),
     check: ({ l, w, x }, a) => a + l * w === (l + 2 * x) * (w + 2 * x)
   }),
-  fam13({
+  fam14({
     id: "g7.area.l-floor-cost",
     skill: "G7_AREA_RECT",
     outcome: "G7.AREA.d",
@@ -39148,7 +41694,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, c, d, per }, v) => v[0] === a * b && v[1] === c * d && v[2] === v[0] + v[1] && v[3] / per === v[2]
   }),
-  fam13({
+  fam14({
     id: "g7.area.rect-and-semicircle",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.d",
@@ -39166,7 +41712,7 @@ var FAMILIES29 = [
     }),
     check: ({ w, l }, v) => v[0] === l * w && v[1] * 7 * 2 === 22 * (w / 2) ** 2 && v[2] === v[0] + v[1]
   }),
-  fam13({
+  fam14({
     id: "g7.area.pond-path-ring",
     skill: "G7_AREA_CIRCLE",
     outcome: "G7.AREA.d",
@@ -39185,7 +41731,7 @@ var FAMILIES29 = [
     check: ({ r, x }, v) => v[0] === r + x && v[1] * 7 === 22 * v[0] * v[0] && v[2] + 22 * r * r / 7 === v[1]
   }),
   // =========================================================== VOLUME AND CAPACITY
-  fam13({
+  fam14({
     id: "g7.vol.why-million",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -39204,7 +41750,7 @@ var FAMILIES29 = [
       steps: ["1 m\xB3 = 100 cm \xD7 100 cm \xD7 100 cm = 1,000,000 cm\xB3.", `${n} m\xB3 = ${n} \xD7 1,000,000 = ${commas(n * 1e6)} cm\xB3.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.vol.spot-m3-cm3",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -39226,7 +41772,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.vol.blocks-in-cubic-metre",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.a",
@@ -39246,7 +41792,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, c }, n) => n * a * b * c === 1e6
   }),
-  fam13({
+  fam14({
     id: "g7.vol.cube-edges",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.c",
@@ -39265,7 +41811,7 @@ var FAMILIES29 = [
     }),
     check: ({ E: E2 }, a) => Math.round(Math.cbrt(a)) * 12 === E2
   }),
-  fam13({
+  fam14({
     id: "g7.vol.cylinder-diameter",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.c",
@@ -39281,7 +41827,7 @@ var FAMILIES29 = [
     }),
     check: ({ d, h }, a) => a * 7 / 22 === d / 2 * (d / 2) * h
   }),
-  fam13({
+  fam14({
     id: "g7.vol.drum-litres",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.d",
@@ -39303,7 +41849,7 @@ var FAMILIES29 = [
     }),
     check: ({ r, h }, a) => a[0] * 7 === 22 * r * r && a[1] === a[0] * h && a[2] * 1e3 === a[1]
   }),
-  fam13({
+  fam14({
     id: "g7.vol.cylinder-height",
     skill: "G7_VOLUME_CYLINDER",
     outcome: "G7.VOL.c",
@@ -39322,7 +41868,7 @@ var FAMILIES29 = [
     }),
     check: ({ r, V: V2 }, a) => a * 22 * r * r === V2 * 7
   }),
-  fam13({
+  fam14({
     id: "g7.vol.tank-litres",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -39342,7 +41888,7 @@ var FAMILIES29 = [
     }),
     check: ({ l, w, h }, a) => Math.abs(a / 1e3 - l * w * h) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.vol.jerricans-fill-tank",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -39362,7 +41908,7 @@ var FAMILIES29 = [
     }),
     check: ({ L: L3 }, a) => a * 20 === L3
   }),
-  fam13({
+  fam14({
     id: "g7.vol.days-of-water",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -39385,7 +41931,7 @@ var FAMILIES29 = [
     }),
     check: ({ t, V: V2 }, a) => a * t === Math.round(V2 * 1e3)
   }),
-  fam13({
+  fam14({
     id: "g7.vol.cups-from-can",
     skill: "G7_VOLUME_CUBOID",
     outcome: "G7.VOL.d",
@@ -39406,7 +41952,7 @@ var FAMILIES29 = [
     check: ({ c, L: L3 }, a) => a * c === L3 * 1e3
   }),
   // =========================================================== TIME, DISTANCE AND SPEED
-  fam13({
+  fam14({
     id: "g7.speed.seconds-to-hm",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -39427,7 +41973,7 @@ var FAMILIES29 = [
     },
     check: ({ h, m }, v) => v[0] * 60 === (h * 60 + m) * 60 && v[1] * 60 + v[2] === v[0]
   }),
-  fam13({
+  fam14({
     id: "g7.speed.timetable-moving",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -39451,7 +41997,7 @@ var FAMILIES29 = [
     },
     check: ({ t0, wait, a2 }, a) => a + wait === a2 - t0
   }),
-  fam13({
+  fam14({
     id: "g7.speed.timetable-speed",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39479,7 +42025,7 @@ var FAMILIES29 = [
     },
     check: ({ km, mins }, a) => Math.round(a * mins) === km * 60
   }),
-  fam13({
+  fam14({
     id: "g7.speed.laps-km",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.c",
@@ -39498,7 +42044,7 @@ var FAMILIES29 = [
     }),
     check: ({ L: L3, n }, a) => Math.round(a * 1e3) === L3 * n
   }),
-  fam13({
+  fam14({
     id: "g7.speed.walk-to-school-week",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.c",
@@ -39517,7 +42063,7 @@ var FAMILIES29 = [
     }),
     check: ({ d, days }, a) => Math.round(a * 1e3) === 2 * d * days
   }),
-  fam13({
+  fam14({
     id: "g7.speed.hours-and-minutes",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39540,7 +42086,7 @@ var FAMILIES29 = [
     },
     check: ({ d, t }, a) => Math.abs(a * t - d) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.speed.minutes-for-trip",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.a",
@@ -39563,7 +42109,7 @@ var FAMILIES29 = [
     },
     check: ({ v, d, mins }, a) => a * v === d * 60
   }),
-  fam13({
+  fam14({
     id: "g7.speed.spot-minutes-hours",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39586,7 +42132,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.speed.average-two-legs",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.d",
@@ -39611,7 +42157,7 @@ var FAMILIES29 = [
     },
     check: ({ v1, v2, D: D3 }, a) => a[0] * v1 === D3 && a[1] * v2 === D3 && a[2] * (a[0] + a[1]) === 2 * D3
   }),
-  fam13({
+  fam14({
     id: "g7.speed.ms-steps",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39632,7 +42178,7 @@ var FAMILIES29 = [
     }),
     check: ({ d, t }, a) => a[0] * t === d && a[1] === a[0] * 3600 && Math.abs(a[2] * 1e3 - a[1]) < 1e-6
   }),
-  fam13({
+  fam14({
     id: "g7.speed.kmh-to-ms-animal",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39652,7 +42198,7 @@ var FAMILIES29 = [
     }),
     check: ({ v, kmh }, a) => Math.abs(a * 3.6 - kmh) < 1e-9
   }),
-  fam13({
+  fam14({
     id: "g7.speed.why-divide-60",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39674,7 +42220,7 @@ var FAMILIES29 = [
       steps: ["1 hour = 60 \xD7 60 = 3,600 seconds.", `${kmh} km/h = ${commas(kmh * 1e3)} m in 3,600 s = ${v} m/s.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.speed.fastest-mixed-units",
     skill: "G7_SPEED",
     outcome: "G7.SPEED.f",
@@ -39699,7 +42245,7 @@ var FAMILIES29 = [
     }
   }),
   // =========================================================== TEMPERATURE
-  fam13({
+  fam14({
     id: "g7.temp.word-from-table",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.a",
@@ -39718,7 +42264,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.temp.rise-then-fall",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.b",
@@ -39737,7 +42283,7 @@ var FAMILIES29 = [
     }),
     check: ({ s, r, f }, a) => a + f - r === s
   }),
-  fam13({
+  fam14({
     id: "g7.temp.spot-kelvin-minus",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.d",
@@ -39758,7 +42304,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.temp.daily-range-graph",
     skill: "G7_TEMPERATURE",
     outcome: "G7.TEMP.b",
@@ -39784,7 +42330,7 @@ var FAMILIES29 = [
     check: ({ vals }, a) => Math.min(...vals) + a === Math.max(...vals)
   }),
   // =========================================================== MONEY
-  fam13({
+  fam14({
     id: "g7.money.profit-tomatoes",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39803,7 +42349,7 @@ var FAMILIES29 = [
     }),
     check: ({ c, m, n }, a) => n * c + a === n * (c + m)
   }),
-  fam13({
+  fam14({
     id: "g7.money.loss-fault",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39823,7 +42369,7 @@ var FAMILIES29 = [
     }),
     check: ({ c, l }, a) => c - a === c - l
   }),
-  fam13({
+  fam14({
     id: "g7.money.cement-transport",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.a",
@@ -39844,7 +42390,7 @@ var FAMILIES29 = [
     }),
     check: ({ c, n, t, m }, v) => v[0] === n * c + t && v[1] === n * (c + m) && v[2] === v[1] - v[0]
   }),
-  fam13({
+  fam14({
     id: "g7.money.percent-profit",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39864,7 +42410,7 @@ var FAMILIES29 = [
     }),
     check: ({ c, pc, pr }, a) => c * a / 100 === pr
   }),
-  fam13({
+  fam14({
     id: "g7.money.spot-percent-profit",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39886,7 +42432,7 @@ var FAMILIES29 = [
       steps: [`${pr} \xF7 ${c} = ${pc / 100}.`, `${pc / 100} \xD7 100 = ${pc}%.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.money.table-best-percent",
     skill: "G7_MONEY",
     outcome: "G7.MONEY.b",
@@ -39909,7 +42455,7 @@ var FAMILIES29 = [
       steps: rows.map((r, i) => `${names[i]}: profit ${r.pr}, ${r.pr} \xF7 ${r.c} \xD7 100 = ${r.pc}%.`)
     })
   }),
-  fam13({
+  fam14({
     id: "g7.money.reverse-discount",
     skill: "G7_PERCENTAGES",
     outcome: "G7.MONEY.c",
@@ -39929,7 +42475,7 @@ var FAMILIES29 = [
     }),
     check: ({ d, S: S5 }, a) => a * (100 - d) / 100 === S5
   }),
-  fam13({
+  fam14({
     id: "g7.money.why-two-discounts",
     skill: "G7_PERCENTAGES",
     outcome: "G7.MONEY.c",
@@ -39951,7 +42497,7 @@ var FAMILIES29 = [
       steps: [`Start at 100. After ${d1}% off: ${100 - d1}.`, `${d2}% of ${100 - d1} is ${round((100 - d1) * d2 / 100, 2)}, so the price is ${round(100 - tot, 2)}. Altogether ${tot}% cheaper.`]
     })
   }),
-  fam13({
+  fam14({
     id: "g7.money.commission-above-target",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.d",
@@ -39971,7 +42517,7 @@ var FAMILIES29 = [
     }),
     check: ({ b, r, T: T5, S: S5 }, a) => (a - b) * 100 / r === S5 - T5
   }),
-  fam13({
+  fam14({
     id: "g7.money.spot-commission-decimal",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.d",
@@ -39996,7 +42542,7 @@ var FAMILIES29 = [
       };
     }
   }),
-  fam13({
+  fam14({
     id: "g7.money.electricity-bill",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -40016,7 +42562,7 @@ var FAMILIES29 = [
     }),
     check: ({ u, rate: rate2, fixed }, a) => (a - fixed) / rate2 === u
   }),
-  fam13({
+  fam14({
     id: "g7.money.water-bill-bands",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -40036,7 +42582,7 @@ var FAMILIES29 = [
     }),
     check: ({ a, b, c, n, F: F4 }, v) => v - F4 - 10 * a - 10 * b === (n - 20) * c
   }),
-  fam13({
+  fam14({
     id: "g7.money.shop-bill-change",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -40059,7 +42605,7 @@ var FAMILIES29 = [
     }),
     check: ({ rows, note }, a) => note - a === rows.reduce((s, r) => s + r.q * r.pr, 0)
   }),
-  fam13({
+  fam14({
     id: "g7.money.kplc-tokens",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.e",
@@ -40079,7 +42625,7 @@ var FAMILIES29 = [
     }),
     check: ({ S: S5, C: C2, u }, a) => a * u + C2 === S5
   }),
-  fam13({
+  fam14({
     id: "g7.money.parcels-table",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.g",
@@ -40109,7 +42655,7 @@ var FAMILIES29 = [
     },
     check: ({ ans, ch, ms }, a) => a === ms.reduce((s, m) => s + ch[m <= 500 ? 0 : m <= 1e3 ? 1 : m <= 2e3 ? 2 : 3], 0)
   }),
-  fam13({
+  fam14({
     id: "g7.money.parcel-per-100g",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.g",
@@ -40128,7 +42674,7 @@ var FAMILIES29 = [
     }),
     check: ({ F: F4, E: E2, k }, a) => (a - F4) / E2 === k - 1
   }),
-  fam13({
+  fam14({
     id: "g7.money.mobile-two-sends",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.h",
@@ -40152,7 +42698,7 @@ var FAMILIES29 = [
     }),
     check: ({ ch, X, Y: Y2, ans, band }, a) => a === ch[band(X)] + ch[band(Y2)]
   }),
-  fam13({
+  fam14({
     id: "g7.money.mobile-withdraw-left",
     skill: "G7_MONEY_TRANSACTIONS",
     outcome: "G7.MONEY.h",
@@ -40178,7 +42724,7 @@ var FAMILIES29 = [
 ];
 
 // src/ai-tutor/content/families/g7_geo_data.js
-var fam14 = (def) => family({ reviewed: false, ...def });
+var fam15 = (def) => family({ reviewed: false, ...def });
 var rot4 = (arr, k) => {
   const n = k % arr.length;
   return [...arr.slice(n), ...arr.slice(0, n)];
@@ -40203,9 +42749,9 @@ var freqModel = (c, fs) => ({ type: "table", data: { head: [c.h, "Frequency"], r
 var tally = (f) => [...Array(Math.floor(f / 5)).fill("||||/"), "|".repeat(f % 5)].filter(Boolean).join(" ");
 var SCALES2 = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3];
 var THINGS = [{ t: "kilograms of maize", u: "kg" }, { t: "litres of milk", u: "litres" }, { t: "mangoes", u: "mangoes" }, { t: "exercise books", u: "books" }];
-var FAMILIES30 = [
+var FAMILIES34 = [
   // ================================================================ ANGLES
-  fam14({
+  fam15({
     id: "g7.angles.point-cake",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -40227,7 +42773,7 @@ var FAMILIES30 = [
     }),
     check: ({ a, b, c }, v) => a + b + c + v === 360
   }),
-  fam14({
+  fam15({
     id: "g7.angles.line-algebra",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -40252,7 +42798,7 @@ var FAMILIES30 = [
       return [A2, B22].some((t) => Number.isInteger(t) && 3 * t + p + 2 * t + q === 180);
     }
   }),
-  fam14({
+  fam15({
     id: "g7.angles.opposite-why",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.a",
@@ -40274,7 +42820,7 @@ var FAMILIES30 = [
       steps: ["Opposite angles at a crossing are equal (vertically opposite angles).", `So the angle opposite ${a}\xB0 is also ${a}\xB0.`, `The angle beside it on the line is ${180 - a}\xB0, and that is the one ${p.name} found.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.angles.transversal-reason",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -40303,7 +42849,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.angles.gate-brace",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -40321,7 +42867,7 @@ var FAMILIES30 = [
     }),
     check: ({ a }, v) => v[0] === a && v[0] + v[1] === 180 && v[2] === v[0]
   }),
-  fam14({
+  fam15({
     id: "g7.angles.spot-cointerior",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.c",
@@ -40351,7 +42897,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.angles.gable-isosceles",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -40370,7 +42916,7 @@ var FAMILIES30 = [
     }),
     check: ({ t }, a) => 2 * a + t === 180
   }),
-  fam14({
+  fam15({
     id: "g7.angles.triangle-algebra",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -40393,7 +42939,7 @@ var FAMILIES30 = [
     }),
     check: ({ p, q }, v) => v[0] === p + q && 4 * v[1] + v[0] === 180 && v[1] + (v[1] + p) + (2 * v[1] + q) === 180 && v[2] === Math.max(v[1], v[1] + p, 2 * v[1] + q)
   }),
-  fam14({
+  fam15({
     id: "g7.angles.exterior-triangle",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -40412,7 +42958,7 @@ var FAMILIES30 = [
     }),
     check: ({ e, pA }, a) => a + pA + (180 - e) === 180
   }),
-  fam14({
+  fam15({
     id: "g7.angles.quad-why",
     skill: "G7_ANGLES",
     outcome: "G7.ANGLES.d",
@@ -40431,7 +42977,7 @@ var FAMILIES30 = [
       steps: ["One diagonal splits the shape into two triangles.", "The angles of each triangle add up to 180\xB0, and the angles of the two triangles together make the angles of the shape: 2 \xD7 180\xB0 = 360\xB0."]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.angles.parallelogram-steps",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40449,7 +42995,7 @@ var FAMILIES30 = [
     }),
     check: ({ a }, v) => v[0] === a && v[1] === 180 - a && v[2] === v[0] + v[1] + v[0] + v[1]
   }),
-  fam14({
+  fam15({
     id: "g7.angles.parallelogram-why",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40468,7 +43014,7 @@ var FAMILIES30 = [
       steps: ["AD and BC are parallel, and AB crosses them.", `Angles A and B are co-interior, so they add up to 180\xB0: B = 180 \u2212 ${a} = ${180 - a}\xB0.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.angles.rhombus-diagonal",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.e",
@@ -40487,7 +43033,7 @@ var FAMILIES30 = [
     }),
     check: ({ b }, a) => 2 * a + b === 180
   }),
-  fam14({
+  fam15({
     id: "g7.angles.polygon-sum-table",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40522,7 +43068,7 @@ var FAMILIES30 = [
     },
     check: ({ type }, a) => type === "sum" ? a % 180 === 0 && a / 180 + 2 >= 5 : (a - 2) * 180 >= 540
   }),
-  fam14({
+  fam15({
     id: "g7.angles.exterior-sides",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40551,7 +43097,7 @@ var FAMILIES30 = [
     },
     check: ({ n, kind }, a) => kind === "ext" ? a * (360 / n) === 360 : a * (180 - (180 - 360 / n)) === 360
   }),
-  fam14({
+  fam15({
     id: "g7.angles.hexagon-why",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40573,7 +43119,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.angles.polygon-spot",
     skill: "G8_POLYGON_ANGLES",
     outcome: "G7.ANGLES.f",
@@ -40602,7 +43148,7 @@ var FAMILIES30 = [
     }
   }),
   // ========================================================= CONSTRUCTIONS
-  fam14({
+  fam15({
     id: "g7.construct.spot-plan",
     skill: "G7_ANGLE_CONSTRUCTION",
     outcome: "G7.CONSTRUCT.b",
@@ -40632,7 +43178,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.construct.arc-reasons",
     skill: "G7_CONSTRUCTIONS",
     outcome: "G7.CONSTRUCT.b",
@@ -40656,7 +43202,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.construct.triangle-possible",
     skill: "G7_CONSTRUCTIONS",
     outcome: "G7.CONSTRUCT.b",
@@ -40694,7 +43240,7 @@ var FAMILIES30 = [
   }),
   // ================================================================== DATA
   // ---- frequency tables
-  fam14({
+  fam15({
     id: "g7.data.freq-items-total",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40724,7 +43270,7 @@ var FAMILIES30 = [
       return t === a;
     }
   }),
-  fam14({
+  fam15({
     id: "g7.data.tally-fruit",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40751,7 +43297,7 @@ var FAMILIES30 = [
     },
     check: ({ fs, A: A2, B: B3 }, a) => a - fs[B3] === fs[A2] && a + sum2(fs.filter((_, i) => i !== A2 && i !== B3)) === sum2(fs)
   }),
-  fam14({
+  fam15({
     id: "g7.data.freq-percent",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40782,7 +43328,7 @@ var FAMILIES30 = [
       return a * all / 100 === part;
     }
   }),
-  fam14({
+  fam15({
     id: "g7.data.freq-missing-steps",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.c",
@@ -40817,7 +43363,7 @@ var FAMILIES30 = [
     check: ({ c, fs, m, total, k }, v) => v[0] + sum2(fs.filter((_, i) => i !== m)) === total && v[1] === fs.reduce((s, f, i) => s + (c.lo + i >= k ? f : 0), 0) && fs[v[2] - c.lo] === Math.max(...fs)
   }),
   // ---- a suitable scale
-  fam14({
+  fam15({
     id: "g7.data.scale-choose",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40842,7 +43388,7 @@ var FAMILIES30 = [
       steps: opts2.map((x) => `1 square = ${commas(x)}: the tallest bar needs ${commas(round(M5 / x, 1))} squares.`).concat([`The smallest scale that still fits is ${commas(s)} ${t.u} to a square.`])
     })
   }),
-  fam14({
+  fam15({
     id: "g7.data.pictograph-compare",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40867,7 +43413,7 @@ var FAMILIES30 = [
     }),
     check: ({ each, u, a, b }, v) => v / each + u[b] === u[a]
   }),
-  fam14({
+  fam15({
     id: "g7.data.symbol-choose",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.d",
@@ -40899,7 +43445,7 @@ var FAMILIES30 = [
     }
   }),
   // ---- bar graphs, pie charts, line graphs
-  fam14({
+  fam15({
     id: "g7.data.bar-top-two",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.f",
@@ -40926,7 +43472,7 @@ var FAMILIES30 = [
       return sum2(vals) - sum2(rest) === a;
     }
   }),
-  fam14({
+  fam15({
     id: "g7.data.pie-missing-steps",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -40959,7 +43505,7 @@ var FAMILIES30 = [
       return v[0] + others === 360 && v[1] * 360 === v[0] * T5 && v[2] * 360 === v[0] * 100;
     }
   }),
-  fam14({
+  fam15({
     id: "g7.data.pie-percent-read",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -40983,7 +43529,7 @@ var FAMILIES30 = [
     }),
     check: ({ deg }, a) => a * 360 / 100 === deg
   }),
-  fam14({
+  fam15({
     id: "g7.data.pie-totals-why",
     skill: "G6_PIE_CHARTS",
     outcome: "G7.DATA.h",
@@ -41009,7 +43555,7 @@ var FAMILIES30 = [
       };
     }
   }),
-  fam14({
+  fam15({
     id: "g7.data.line-biggest-rise",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.j",
@@ -41040,7 +43586,7 @@ var FAMILIES30 = [
       steps: ys.slice(1).map((y, i) => `Week ${i + 1} to ${i + 2}: ${y} \u2212 ${ys[i]} = ${y - ys[i]}.`).concat([`The biggest rise is between week ${best + 1} and week ${best + 2}.`])
     })
   }),
-  fam14({
+  fam15({
     id: "g7.data.line-halfway",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.j",
@@ -41063,7 +43609,7 @@ var FAMILIES30 = [
     }),
     check: ({ ys, w }, a) => a - ys[w] === ys[w + 1] - a
   }),
-  fam14({
+  fam15({
     id: "g7.data.which-graph-why",
     skill: "G7_DATA_REPRESENT",
     outcome: "G7.DATA.f",
@@ -41099,7 +43645,7 @@ var FAMILIES30 = [
     }
   }),
   // ---- travel graphs
-  fam14({
+  fam15({
     id: "g7.data.travel-stages-steps",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -41127,7 +43673,7 @@ var FAMILIES30 = [
     },
     check: ({ a, b, d1, d2 }, v) => v[1] * a === d1 && v[2] * b === d2 - d1 && v[3] * (a + v[0] + b) === d2
   }),
-  fam14({
+  fam15({
     id: "g7.data.travel-spot-average",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -41155,7 +43701,7 @@ var FAMILIES30 = [
       steps: [`Total time = ${T5} hours, including the stop.`, `${D3} \xF7 ${T5} = ${D3 / T5} km/h.`]
     })
   }),
-  fam14({
+  fam15({
     id: "g7.data.travel-meet",
     skill: "G7_PIE_CHARTS",
     outcome: "G7.DATA.k",
@@ -41181,13 +43727,13 @@ var FAMILIES30 = [
 ];
 
 // src/ai-tutor/content/families/bank.js
-var G5_CURRICULUM = [...FAMILIES11, ...FAMILIES12, ...FAMILIES13, ...FAMILIES14, ...FAMILIES15, ...FAMILIES16, ...FAMILIES17, ...FAMILIES18, ...FAMILIES19];
-var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES23, ...FAMILIES24, ...FAMILIES25, ...FAMILIES26, ...FAMILIES27, ...FAMILIES28, ...FAMILIES29, ...FAMILIES30, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...G5_CURRICULUM, ...FAMILIES10, ...FAMILIES9, ...FAMILIES8, ...FAMILIES7];
+var G5_CURRICULUM = [...FAMILIES15, ...FAMILIES16, ...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23];
+var GRADE_FAMILIES = [...bankFamilies(), ...FAMILIES27, ...FAMILIES28, ...FAMILIES29, ...FAMILIES30, ...FAMILIES31, ...FAMILIES32, ...FAMILIES33, ...FAMILIES34, ...FAMILIES24, ...FAMILIES25, ...FAMILIES26, ...G5_CURRICULUM, ...FAMILIES14, ...FAMILIES13, ...FAMILIES12, ...FAMILIES11];
 
 // src/ai-tutor/content/families/index.js
-var FAMILIES31 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
+var FAMILIES35 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
 var BY_SKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES31) {
+for (const f of FAMILIES35) {
   if (!BY_SKILL.has(f.skill)) BY_SKILL.set(f.skill, []);
   BY_SKILL.get(f.skill).push(f);
 }
@@ -41196,7 +43742,8 @@ for (const f of FAMILIES31) {
 var SUBJECT_PREFIXES = {
   MATH: "math",
   SCIE: "science",
-  ENGL: "english"
+  ENGL: "english",
+  SOCI: "socialstudies"
 };
 
 // src/learner/subject.js
@@ -42194,7 +44741,7 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of [...FAMILIES31, ...familiesOutsideBank()]) if (usable(f)) {
+for (const f of [...FAMILIES35, ...familiesOutsideBank()]) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }

@@ -6,4 +6,8 @@ export default {
   'sci_g5_force.js': 'sci_signed.js',
   'sci_g5_living.js': 'sci_signed.js',
   'sci_g5_matter.js': 'sci_signed.js',
+  'socialstudies_g5_a.js': 'socialstudies_g5_signed.js',
+  'socialstudies_g5_b.js': 'socialstudies_g5_signed.js',
+  'socialstudies_g5_c.js': 'socialstudies_g5_signed.js',
+  'socialstudies_g5_d.js': 'socialstudies_g5_signed.js',
 };
