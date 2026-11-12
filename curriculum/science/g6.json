@@ -70,7 +70,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.1.1",
+    "SCIE.G6.RUBRIC.1.2",
+    "SCIE.G6.RUBRIC.1.3",
+    "SCIE.G6.RUBRIC.1.4",
+    "SCIE.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SCIE.G6.LIVING.INVERTEBRATES",
@@ -123,7 +130,8 @@
      "code": "SCIE.G6.LIVING.INVERTEBRATES.b",
      "letter": "b",
      "text": "practise precautions in handling invertebrates",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.2"
     },
     {
      "code": "SCIE.G6.LIVING.INVERTEBRATES.c",
@@ -135,7 +143,8 @@
      "code": "SCIE.G6.LIVING.INVERTEBRATES.d",
      "letter": "d",
      "text": "outline the economic importance of invertebrates",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.3"
     },
     {
      "code": "SCIE.G6.LIVING.INVERTEBRATES.e",
@@ -145,7 +154,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.1.1",
+    "SCIE.G6.RUBRIC.1.2",
+    "SCIE.G6.RUBRIC.1.3",
+    "SCIE.G6.RUBRIC.1.4",
+    "SCIE.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM",
@@ -197,35 +213,47 @@
      "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.a",
      "letter": "a",
      "text": "identify main parts of the human circulatory system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.4"
     },
     {
      "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.b",
      "letter": "b",
      "text": "describe functions of main parts of the human circulatory system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.4"
     },
     {
      "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.c",
      "letter": "c",
      "text": "outline the symptoms and prevention of common health conditions of the human circulatory system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.4"
     },
     {
      "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.d",
      "letter": "d",
      "text": "develop a routine plan for maintaining a healthy circulatory system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.5"
     },
     {
      "code": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.e",
      "letter": "e",
      "text": "appreciate the importance of a healthy circulatory system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.1.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.1.1",
+    "SCIE.G6.RUBRIC.1.2",
+    "SCIE.G6.RUBRIC.1.3",
+    "SCIE.G6.RUBRIC.1.4",
+    "SCIE.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SCIE.G6.MATTER.CHANGE_OF_STATE",
@@ -267,7 +295,8 @@
      "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.a",
      "letter": "a",
      "text": "identify the changes of state when substances are heated or cooled",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SCIE.G6.RUBRIC.2.1"
     },
     {
      "code": "SCIE.G6.MATTER.CHANGE_OF_STATE.b",
@@ -283,7 +312,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.2.1",
+    "SCIE.G6.RUBRIC.2.2",
+    "SCIE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR",
@@ -331,25 +365,29 @@
      "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.a",
      "letter": "a",
      "text": "identify the components of air",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SCIE.G6.RUBRIC.2.2"
     },
     {
      "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.b",
      "letter": "b",
      "text": "outline uses of the different components of air",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SCIE.G6.RUBRIC.2.2"
     },
     {
      "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.c",
      "letter": "c",
      "text": "explain the effects of air pollution in the environment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SCIE.G6.RUBRIC.2.3"
     },
     {
      "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.d",
      "letter": "d",
      "text": "describe methods of reducing air pollution in the environment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SCIE.G6.RUBRIC.2.3"
     },
     {
      "code": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.e",
@@ -359,7 +397,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.2.1",
+    "SCIE.G6.RUBRIC.2.2",
+    "SCIE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "SCIE.G6.FORCE_.LIGHT",
@@ -419,7 +462,8 @@
      "code": "SCIE.G6.FORCE_.LIGHT.c",
      "letter": "c",
      "text": "illustrate the formation of shadows and eclipses in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.3.1"
     },
     {
      "code": "SCIE.G6.FORCE_.LIGHT.d",
@@ -435,7 +479,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.3.1",
+    "SCIE.G6.RUBRIC.3.2",
+    "SCIE.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE",
@@ -486,7 +535,8 @@
      "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.b",
      "letter": "b",
      "text": "describe parts of a lever as used in making work easier",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.3.2"
     },
     {
      "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.c",
@@ -498,17 +548,24 @@
      "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.d",
      "letter": "d",
      "text": "demonstrate the use of levers in making work easier",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.3.2"
     },
     {
      "code": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.e",
      "letter": "e",
      "text": "appreciate the use of levers in making work easier",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.3.1",
+    "SCIE.G6.RUBRIC.3.2",
+    "SCIE.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE",
@@ -558,7 +615,8 @@
      "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.b",
      "letter": "b",
      "text": "demonstrate how a slope makes work easier in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G6.RUBRIC.3.3"
     },
     {
      "code": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.c",
@@ -568,7 +626,184 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SCIE.G6.RUBRIC.3.1",
+    "SCIE.G6.RUBRIC.3.2",
+    "SCIE.G6.RUBRIC.3.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SCIE.G6.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Living things and their Environment",
+   "covers": [
+    "SCIE.G6.LIVING.FUNGI",
+    "SCIE.G6.LIVING.INVERTEBRATES",
+    "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM"
+   ],
+   "page": 21,
+   "indicators": [
+    {
+     "code": "SCIE.G6.RUBRIC.1.1",
+     "indicator": "Ability to describe the importance of fungi.",
+     "levels": {
+      "EE": "The learner describes the importance of fungi correctly and comprehensively.",
+      "ME": "The learner describes the importance of fungi correctly.",
+      "AE": "The learner describes the importance of fungi partially.",
+      "BE": "The learner has challenges describing the importance of fungi , with prompt."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.1.2",
+     "indicator": "Ability to practise precautions in handling invertebrates.",
+     "levels": {
+      "EE": "The learner practises precautions in handling invertebrates consistently.",
+      "ME": "The learner practises precautions in handling invertebrates.",
+      "AE": "The learner sometimes precautions in handling invertebrates.",
+      "BE": "The learner has challenges practising precautions in handling invertebrates."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.1.3",
+     "indicator": "Ability to outline the economic importance of invertebrates.",
+     "levels": {
+      "EE": "The learner outlines the economic importance of invertebrates correctly, giving example(s) from the locality.",
+      "ME": "The learner outlines the economic importance of invertebrates correctly.",
+      "AE": "The learner outlines most of the economic importance of invertebrates correctly with help",
+      "BE": "The learner outlines a few economic importance of invertebrates."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.1.4",
+     "indicator": "Ability to describe functions of main parts of the human circulatory system.",
+     "levels": {
+      "EE": "The learner describes functions of main parts of the human circulatory system correctly and comprehensively.",
+      "ME": "The learner describes functions of main parts of the human circulatory system correctly",
+      "AE": "The learner describes most of the functions of main parts of the human circulatory system correctly.",
+      "BE": "The learner describes a few functions of main parts of the human circulatory system."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.1.5",
+     "indicator": "Ability to develop a routine plan for maintaining a healthy circulatory system.",
+     "levels": {
+      "EE": "The learner develops a comprehensive routine plan for maintaining a healthy circulatory system.",
+      "ME": "The learner develops a routine plan for maintaining a healthy circulatory system.",
+      "AE": "The learner develops a routine plan for maintaining a healthy circulatory system omitting some parts.",
+      "BE": "The learner develops a routine plan for maintaining a healthy circulatory system."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SCIE.G6.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Matter",
+   "covers": [
+    "SCIE.G6.MATTER.CHANGE_OF_STATE",
+    "SCIE.G6.MATTER.COMPOSITION_OF_AIR"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "SCIE.G6.RUBRIC.2.1",
+     "indicator": "Ability to identify the changes of state when substances are heated or cooled.",
+     "levels": {
+      "EE": "The learner correctly identifies the changes of state when substances are heated or cooled giving examples from locality.",
+      "ME": "The learner correctly identifies at least four changes of state when substances are heated or cooled.",
+      "AE": "The learner identifies at least two changes of state when substances are heated or cooled.",
+      "BE": "The learner identifies less than two changes of state when substances are heated or cooled."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.2.2",
+     "indicator": "Ability to identify the components of air.",
+     "levels": {
+      "EE": "The learner correctly identifies the major components of air giving some examples.",
+      "ME": "The learner identifies the major components of air correctly.",
+      "AE": "The learner identifies most of the major components of air correctly.",
+      "BE": "The learner correctly identifies a few of the major component of air."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.2.3",
+     "indicator": "Ability to explain the effects of air pollution on the environment.",
+     "levels": {
+      "EE": "The learner correctly and comprehensively explains the effects of air pollution on the environment.",
+      "ME": "The learner correctly explains the effects of air pollution on the environment.",
+      "AE": "The learner explains most of the effects of air pollution on the environment correctly.",
+      "BE": "The learner explains a few effects of air pollution on the environment."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SCIE.G6.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Force and energy",
+   "covers": [
+    "SCIE.G6.FORCE_.LIGHT",
+    "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE",
+    "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "SCIE.G6.RUBRIC.3.1",
+     "indicator": "Ability to illustrate the formation of shadows and eclipses in nature.",
+     "levels": {
+      "EE": "The learner illustrates the formation of shadows and eclipses in nature correctly and labels.",
+      "ME": "The learner illustrates the formation of shadows and eclipses in nature correctly.",
+      "AE": "The learner illustrates the formation of shadows and eclipses in nature omitting some basic details.",
+      "BE": "The learner illustrates the formation of shadows and eclipses in nature, with help."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.3.2",
+     "indicator": "Ability to demonstrate the use of levers to make work easier.",
+     "levels": {
+      "EE": "The learner demonstrates the use of levers to make work easier correctly and innovatively.",
+      "ME": "The learner demonstrates the use of levers to make work easier correctly.",
+      "AE": "The learner partially demonstrates the use of levers to make work easier correctly",
+      "BE": "The learner demonstrates the use of levers to make work easier, with prompt."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G6.RUBRIC.3.3",
+     "indicator": "Ability to demonstrate how a slope makes work easier in day-to-day life.",
+     "levels": {
+      "EE": "The learner demonstrates how a slope makes work easier in day-to-day life correctly and innovatively, giving illustrations.",
+      "ME": "The learner demonstrates how a slope makes work easier in day-to-day life correctly.",
+      "AE": "The learner partially demonstrates how a slope makes work easier in day-to-day life correctly.",
+      "BE": "The learner requires prompt to demonstrate how a slope makes work easier in day-to-day life."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

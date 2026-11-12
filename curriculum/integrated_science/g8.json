@@ -65,13 +65,15 @@
      "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.b",
      "letter": "b",
      "text": "assign symbols to selected elements",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.1.1"
     },
     {
      "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.c",
      "letter": "c",
      "text": "write word equations to represent reactions of selected elements to form compounds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.1.2"
     },
     {
      "code": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.d",
@@ -87,7 +89,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.1.1",
+    "INTE.G8.RUBRIC.1.2",
+    "INTE.G8.RUBRIC.1.3",
+    "INTE.G8.RUBRIC.1.4",
+    "INTE.G8.RUBRIC.1.5",
+    "INTE.G8.RUBRIC.1.6",
+    "INTE.G8.RUBRIC.1.7"
+   ]
   },
   {
    "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH",
@@ -136,7 +147,8 @@
      "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.a",
      "letter": "a",
      "text": "describe the characteristics of particles in the three states of matter",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INTE.G8.RUBRIC.1.3"
     },
     {
      "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.b",
@@ -148,7 +160,8 @@
      "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.c",
      "letter": "c",
      "text": "distinguish between physical and chemical changes in substances",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INTE.G8.RUBRIC.1.4"
     },
     {
      "code": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.d",
@@ -164,7 +177,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.1.1",
+    "INTE.G8.RUBRIC.1.2",
+    "INTE.G8.RUBRIC.1.3",
+    "INTE.G8.RUBRIC.1.4",
+    "INTE.G8.RUBRIC.1.5",
+    "INTE.G8.RUBRIC.1.6",
+    "INTE.G8.RUBRIC.1.7"
+   ]
   },
   {
    "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE",
@@ -222,7 +244,8 @@
      "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.c",
      "letter": "c",
      "text": "describe ways of controlling different classes of fires",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.1.7"
     },
     {
      "code": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.d",
@@ -232,7 +255,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.1.1",
+    "INTE.G8.RUBRIC.1.2",
+    "INTE.G8.RUBRIC.1.3",
+    "INTE.G8.RUBRIC.1.4",
+    "INTE.G8.RUBRIC.1.5",
+    "INTE.G8.RUBRIC.1.6",
+    "INTE.G8.RUBRIC.1.7"
+   ]
   },
   {
    "code": "INTE.G8.LIVING.THE_CELL",
@@ -276,35 +308,46 @@
      "code": "INTE.G8.LIVING.THE_CELL.a",
      "letter": "a",
      "text": "describe the structure of plant and animal cells as observed under a light microscope",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.1"
     },
     {
      "code": "INTE.G8.LIVING.THE_CELL.b",
      "letter": "b",
      "text": "describe the functions of components of cells seen under the light microscope",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.1"
     },
     {
      "code": "INTE.G8.LIVING.THE_CELL.c",
      "letter": "c",
      "text": "compare plant and animal cells as observed under a light microscope",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.1"
     },
     {
      "code": "INTE.G8.LIVING.THE_CELL.d",
      "letter": "d",
      "text": "determine the magnification of cells under the light microscope",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.1"
     },
     {
      "code": "INTE.G8.LIVING.THE_CELL.e",
      "letter": "e",
      "text": "appreciate the role of cells in living things",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.2.1",
+    "INTE.G8.RUBRIC.2.2",
+    "INTE.G8.RUBRIC.2.3",
+    "INTE.G8.RUBRIC.2.4"
+   ]
   },
   {
    "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
@@ -359,7 +402,8 @@
      "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.c",
      "letter": "c",
      "text": "explain the role of diffusion and osmosis in living things",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.2"
     },
     {
      "code": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.d",
@@ -369,7 +413,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.2.1",
+    "INTE.G8.RUBRIC.2.2",
+    "INTE.G8.RUBRIC.2.3",
+    "INTE.G8.RUBRIC.2.4"
+   ]
   },
   {
    "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE",
@@ -415,13 +465,15 @@
      "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.a",
      "letter": "a",
      "text": "outline the menstrual cycle and its related challenges in human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.4"
     },
     {
      "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b",
      "letter": "b",
      "text": "develop a plan to manage challenges related to menstrual cycle in human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.2.4"
     },
     {
      "code": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.c",
@@ -449,7 +501,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.2.1",
+    "INTE.G8.RUBRIC.2.2",
+    "INTE.G8.RUBRIC.2.3",
+    "INTE.G8.RUBRIC.2.4"
+   ]
   },
   {
    "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY",
@@ -507,19 +565,22 @@
      "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.b",
      "letter": "b",
      "text": "classify energy sources into renewable or non-renewable",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.3.1"
     },
     {
      "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.c",
      "letter": "c",
      "text": "demonstrate simple energy transformations in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.3.2"
     },
     {
      "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.d",
      "letter": "d",
      "text": "describe safety measures associated with energy transformation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.3.3"
     },
     {
      "code": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.e",
@@ -529,7 +590,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.3.1",
+    "INTE.G8.RUBRIC.3.2",
+    "INTE.G8.RUBRIC.3.3",
+    "INTE.G8.RUBRIC.3.4",
+    "INTE.G8.RUBRIC.3.5"
+   ]
   },
   {
    "code": "INTE.G8.FORCE_.PRESSURE",
@@ -580,17 +648,258 @@
      "code": "INTE.G8.FORCE_.PRESSURE.b",
      "letter": "b",
      "text": "identify applications of pressure in solids and liquids",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.3.5"
     },
     {
      "code": "INTE.G8.FORCE_.PRESSURE.c",
      "letter": "c",
      "text": "appreciate the applications of pressure in solids and liquids",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G8.RUBRIC.3.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G8.RUBRIC.3.1",
+    "INTE.G8.RUBRIC.3.2",
+    "INTE.G8.RUBRIC.3.3",
+    "INTE.G8.RUBRIC.3.4",
+    "INTE.G8.RUBRIC.3.5"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "INTE.G8.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Mixtures, Elements and Compounds",
+   "covers": [
+    "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS",
+    "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH",
+    "INTE.G8.MIXTUR.CLASSES_OF_FIRE"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "INTE.G8.RUBRIC.1.1",
+     "indicator": "Ability to assign symbol to elements.",
+     "levels": {
+      "EE": "The learner assigns symbols to all elements provided correctly and systematically.",
+      "ME": "The learner assigns symbols to all elements provided correctly.",
+      "AE": "The learner assigns symbols to most of the elements provided correctly.",
+      "BE": "The learner assigns symbols to a few elements provided correctly."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.2",
+     "indicator": "Ability to write word equation for reactions of elements to form compounds.",
+     "levels": {
+      "EE": "The learner writes word equation for all given reactions correctly, giving illustrations.",
+      "ME": "The learner writes word equation for all given reactions correctly.",
+      "AE": "The learner writes word equation for most of the reactions correctly.",
+      "BE": "The learner writes word equation for a few reactions correctly."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.3",
+     "indicator": "Ability to describe the characteristics of particles in the three states of matter.",
+     "levels": {
+      "EE": "The learner describes the characteristics of particles in all the three states comprehensively.",
+      "ME": "The learner describes the characteristics of particles in all the three states of matter correctly.",
+      "AE": "The learner describes the characteristics of particles in the two states of matter correctly.",
+      "BE": "The learner describes the characteristics of particles in one state of matter correctly."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.4",
+     "indicator": "Ability to distinguish between physical and chemical changes.",
+     "levels": {
+      "EE": "The learner distinguishes between physical and chemical changes elaborately and comprehensively.",
+      "ME": "The learner distinguishes between physical and chemical changes correctly.",
+      "AE": "The learner distinguishes between physical and chemical changes partially.",
+      "BE": "The learner partially distinguishes between physical and chemical changes leaving some points."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.5",
+     "indicator": "Ability to outline applications of physical and chemical changes.",
+     "levels": {
+      "EE": "The learner outlines applications of physical and chemical changes exhaustively.",
+      "ME": "The learner outlines applications of physical and chemical changes Correctly.",
+      "AE": "The learner partially outlines most of the applications of physical and chemical changes correctly.",
+      "BE": "The learner outlines a few applications of the physical and chemical changes correctly."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.6",
+     "indicator": "Ability to identify classes of fires in nature.",
+     "levels": {
+      "EE": "The learner identifies all classes of fires in nature exhaustively.",
+      "ME": "The learner identifies all the classes of fire in nature correctly.",
+      "AE": "The learner identifies most of the classes of fire in nature correctly.",
+      "BE": "The learner identifies a few classes of fire in nature correctly."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.1.7",
+     "indicator": "Ability to describe ways of controlling fires.",
+     "levels": {
+      "EE": "The learner describes ways of controlling all classes comprehensively.",
+      "ME": "The learner describes ways of controlling all classes of fires correctly.",
+      "AE": "The learner describes ways of controlling most of the classes of fires correctly.",
+      "BE": "The learner describes ways of controlling a few classes of fires correctly."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G8.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Living Things and the Environment",
+   "covers": [
+    "INTE.G8.LIVING.THE_CELL",
+    "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN",
+    "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE"
+   ],
+   "page": 27,
+   "indicators": [
+    {
+     "code": "INTE.G8.RUBRIC.2.1",
+     "indicator": "Ability to compare plant and animal cells as observed under a light microscope.",
+     "levels": {
+      "EE": "The learner compares plant and animal cells as observed under a light microscope comprehensively.",
+      "ME": "The learner compares plant and animal cells as observed under a light microscope.",
+      "AE": "The learner partially compares plant and animal cells as observed under a light microscope.",
+      "BE": "The learner partially compares plant and animal cells as observed under a light microscope leaving out some points."
+     },
+     "page": 27,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.2.2",
+     "indicator": "Ability to explain the role of diffusion and osmosis in living things.",
+     "levels": {
+      "EE": "The learner explains the role of diffusion and osmosis in living things comprehensively.",
+      "ME": "The learner explains the role of diffusion and osmosis in living things.",
+      "AE": "The learner explains the role of diffusion and osmosis in living things partially.",
+      "BE": "The learner explains the role of diffusion or osmosis in living things partially, leaving out some key points."
+     },
+     "page": 27,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.2.3",
+     "indicator": "Ability to demonstrate diffusion and osmosis in living things.",
+     "levels": {
+      "EE": "The learner demonstrates diffusion and osmosis in living things systematically.",
+      "ME": "The learner demonstrates diffusion and osmosis in living things.",
+      "AE": "The learner partially demonstrates diffusion and osmosis in living things.",
+      "BE": "The learner partially demonstrates diffusion or osmosis in living things."
+     },
+     "page": 27,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.2.4",
+     "indicator": "Ability to outline the menstrual cycle and its related challenges in human beings.",
+     "levels": {
+      "EE": "The learner outlines the menstrual cycle and its related challenges in human beings comprehensively.",
+      "ME": "The learner outlines the menstrual cycle and its related challenges in human beings.",
+      "AE": "The learner partially outlines the menstrual cycle and its related challenges in human beings.",
+      "BE": "The learner partially outlines the menstrual cycle or its related challenges in human beings."
+     },
+     "page": 27,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G8.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Force and Energy",
+   "covers": [
+    "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY",
+    "INTE.G8.FORCE_.PRESSURE"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "INTE.G8.RUBRIC.3.1",
+     "indicator": "Ability to classify energy sources into renewable or nonrenewable.",
+     "levels": {
+      "EE": "The learner classifies energy sources into renewable or non-renewable exhaustively.",
+      "ME": "The learner classifies energy sources into renewable or non-renewable.",
+      "AE": "The learner classifies most energy sources into renewable or non-renewable.",
+      "BE": "The learner classifies a few energy sources into renewable or non-renewable."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.3.2",
+     "indicator": "Ability to demonstrate simple energy transformations.",
+     "levels": {
+      "EE": "The learner demonstrates simple energy transformations in details and comprehensively.",
+      "ME": "The learner demonstrates simple energy transformations.",
+      "AE": "The learner partially demonstrates simple energy transformations.",
+      "BE": "The learner partially demonstrates simple energy transformations, leaving some key points."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.3.3",
+     "indicator": "Ability to describe safety measures associated with energy transformation.",
+     "levels": {
+      "EE": "The learner describes safety measures associated with energy transformation comprehensively.",
+      "ME": "The learner describes all safety measures associated with energy transformation correctly.",
+      "AE": "The learner describes most of the safety measures associated with energy transformation correctly.",
+      "BE": "The learner describes a few safety measures associated with energy transformation correctly."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.3.4",
+     "indicator": "Ability to demonstrate pressure in solids and liquids.",
+     "levels": {
+      "EE": "The learner demonstrates pressure in solids and liquids consistently.",
+      "ME": "The learner demonstrates pressure in solids and liquids.",
+      "AE": "The learner partially demonstrates pressure in solids and liquids.",
+      "BE": "The learner partially demonstrates pressure in solids or liquids."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G8.RUBRIC.3.5",
+     "indicator": "Ability to identify applications of pressure in solids and liquids.",
+     "levels": {
+      "EE": "The learner identifies applications of pressure in solids and liquids exhaustively.",
+      "ME": "The learner identifies applications of pressure in solids and liquids sufficiently.",
+      "AE": "The learner identifies most of the applications of pressure in solids and liquids.",
+      "BE": "The learner identifies few applications of pressure in solids or liquids."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

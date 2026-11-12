@@ -72,7 +72,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.1.1",
+    "INDI.G3.RUBRIC.1.2"
+   ]
   },
   {
    "code": "INDI.G3.READIN.T1_INDEPENDENT_READING",
@@ -117,13 +121,15 @@
      "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.a",
      "letter": "a",
      "text": "read simple texts related to the theme for information",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.2.3"
     },
     {
      "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.b",
      "letter": "b",
      "text": "answer questions based on texts for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.2.4"
     },
     {
      "code": "INDI.G3.READIN.T1_INDEPENDENT_READING.c",
@@ -133,7 +139,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.2.1",
+    "INDI.G3.RUBRIC.2.2",
+    "INDI.G3.RUBRIC.2.3",
+    "INDI.G3.RUBRIC.2.4",
+    "INDI.G3.RUBRIC.2.5",
+    "INDI.G3.RUBRIC.2.6",
+    "INDI.G3.RUBRIC.2.7"
+   ]
   },
   {
    "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION",
@@ -176,7 +191,8 @@
      "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION.a",
      "letter": "a",
      "text": "arrange words to form sentences for expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.3.2"
     },
     {
      "code": "INDI.G3.WRITIN.T1_SENTENCE_FORMATION.b",
@@ -192,7 +208,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.3.1",
+    "INDI.G3.RUBRIC.3.2",
+    "INDI.G3.RUBRIC.3.3",
+    "INDI.G3.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INDI.G3.LISTEN.T2_STORYTELLING",
@@ -254,7 +276,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.1.1",
+    "INDI.G3.RUBRIC.1.2"
+   ]
   },
   {
    "code": "INDI.G3.READIN.T2_READING_ALOUD",
@@ -299,7 +325,8 @@
      "code": "INDI.G3.READIN.T2_READING_ALOUD.a",
      "letter": "a",
      "text": "pronounce words in sentencesrelated to the theme for accuracy",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.2.5"
     },
     {
      "code": "INDI.G3.READIN.T2_READING_ALOUD.b",
@@ -315,7 +342,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.2.1",
+    "INDI.G3.RUBRIC.2.2",
+    "INDI.G3.RUBRIC.2.3",
+    "INDI.G3.RUBRIC.2.4",
+    "INDI.G3.RUBRIC.2.5",
+    "INDI.G3.RUBRIC.2.6",
+    "INDI.G3.RUBRIC.2.7"
+   ]
   },
   {
    "code": "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI",
@@ -377,7 +413,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.3.1",
+    "INDI.G3.RUBRIC.3.2",
+    "INDI.G3.RUBRIC.3.3",
+    "INDI.G3.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS",
@@ -427,7 +469,8 @@
      "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS.b",
      "letter": "b",
      "text": "make a presentation using audience awareness skills for communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.1.2"
     },
     {
      "code": "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS.c",
@@ -437,7 +480,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.1.1",
+    "INDI.G3.RUBRIC.1.2"
+   ]
   },
   {
    "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO",
@@ -490,7 +537,8 @@
      "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO.b",
      "letter": "b",
      "text": "respond to questions from passages about wild animals for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.2.7"
     },
     {
      "code": "INDI.G3.READIN.T3_READING_COMPREHENSIO.c",
@@ -500,7 +548,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.2.1",
+    "INDI.G3.RUBRIC.2.2",
+    "INDI.G3.RUBRIC.2.3",
+    "INDI.G3.RUBRIC.2.4",
+    "INDI.G3.RUBRIC.2.5",
+    "INDI.G3.RUBRIC.2.6",
+    "INDI.G3.RUBRIC.2.7"
+   ]
   },
   {
    "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP",
@@ -552,7 +609,8 @@
      "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP.b",
      "letter": "b",
      "text": "re-write short paragraphs on wild animals using correct spelling",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.3.3"
     },
     {
      "code": "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP.c",
@@ -562,7 +620,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.3.1",
+    "INDI.G3.RUBRIC.3.2",
+    "INDI.G3.RUBRIC.3.3",
+    "INDI.G3.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INDI.G3.LISTEN.T4_ACTIVE_LISTENING",
@@ -623,7 +687,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.1.1",
+    "INDI.G3.RUBRIC.1.2"
+   ]
   },
   {
    "code": "INDI.G3.READIN.T4_READING_FOR_FLUENCY",
@@ -683,7 +751,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.2.1",
+    "INDI.G3.RUBRIC.2.2",
+    "INDI.G3.RUBRIC.2.3",
+    "INDI.G3.RUBRIC.2.4",
+    "INDI.G3.RUBRIC.2.5",
+    "INDI.G3.RUBRIC.2.6",
+    "INDI.G3.RUBRIC.2.7"
+   ]
   },
   {
    "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO",
@@ -726,7 +803,8 @@
      "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO.a",
      "letter": "a",
      "text": "re-organise sentences to form a coherent paragraph for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.3.2"
     },
     {
      "code": "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO.b",
@@ -742,7 +820,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.3.1",
+    "INDI.G3.RUBRIC.3.2",
+    "INDI.G3.RUBRIC.3.3",
+    "INDI.G3.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA",
@@ -804,7 +888,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.1.1",
+    "INDI.G3.RUBRIC.1.2"
+   ]
   },
   {
    "code": "INDI.G3.READIN.T5_READING_FOR_INFORMAT",
@@ -864,7 +952,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.2.1",
+    "INDI.G3.RUBRIC.2.2",
+    "INDI.G3.RUBRIC.2.3",
+    "INDI.G3.RUBRIC.2.4",
+    "INDI.G3.RUBRIC.2.5",
+    "INDI.G3.RUBRIC.2.6",
+    "INDI.G3.RUBRIC.2.7"
+   ]
   },
   {
    "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING",
@@ -913,7 +1010,8 @@
      "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING.b",
      "letter": "b",
      "text": "create short poems about seasons using vocabulary related to the seasons of the year",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G3.RUBRIC.3.4"
     },
     {
      "code": "INDI.G3.WRITIN.T5_CREATIVE_WRITING.c",
@@ -923,7 +1021,216 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G3.RUBRIC.3.1",
+    "INDI.G3.RUBRIC.3.2",
+    "INDI.G3.RUBRIC.3.3",
+    "INDI.G3.RUBRIC.3.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "INDI.G3.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "INDI.G3.LISTEN.T1_SELF_EXPRESSION",
+    "INDI.G3.LISTEN.T2_STORYTELLING",
+    "INDI.G3.LISTEN.T3_PRESENTATION_SKILLS",
+    "INDI.G3.LISTEN.T4_ACTIVE_LISTENING",
+    "INDI.G3.LISTEN.T5_EXPRESSING_SELF_CREA"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "INDI.G3.RUBRIC.1.1",
+     "indicator": "Ability to retell a story creatively on a theme",
+     "levels": {
+      "EE": "Retells a story creatively and artistically on various themes",
+      "ME": "Retells a story creatively on a theme",
+      "AE": "Retells a story on a theme with minor omission of details",
+      "BE": "Retells a story on a theme with major omissions of details"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.1.2",
+     "indicator": "Ability to make a presentation using audience awareness skills",
+     "levels": {
+      "EE": "Makes a presentation using audience awareness skills creatively",
+      "ME": "Makes a presentation using audience awareness skills",
+      "AE": "Attempts to make a presentation using audience awareness skills",
+      "BE": "Makes a presentation using audience awareness skills with assistance"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INDI.G3.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading",
+   "strand": "Reading",
+   "covers": [
+    "INDI.G3.READIN.T1_INDEPENDENT_READING",
+    "INDI.G3.READIN.T2_READING_ALOUD",
+    "INDI.G3.READIN.T3_READING_COMPREHENSIO",
+    "INDI.G3.READIN.T4_READING_FOR_FLUENCY",
+    "INDI.G3.READIN.T5_READING_FOR_INFORMAT"
+   ],
+   "page": 37,
+   "indicators": [
+    {
+     "code": "INDI.G3.RUBRIC.2.1",
+     "indicator": "Ability to retell experiences",
+     "levels": {
+      "EE": "Retells detailed experiences related to the theme",
+      "ME": "Retells experiences related to the theme",
+      "AE": "Retells experiences but omits minor details",
+      "BE": "Retells experiences but omits major details"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.2",
+     "indicator": "Ability to solve simple riddles",
+     "levels": {
+      "EE": "Solves simple and complex riddles with precision",
+      "ME": "Solves simple riddles",
+      "AE": "Makes attempts to solve simple riddles",
+      "BE": "Solves simple riddles with peer prompts"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.3",
+     "indicator": "Ability to read simple texts based on the theme fluently and clearly",
+     "levels": {
+      "EE": "Reads a variety of simple texts based on the theme fluently and clearly",
+      "ME": "Reads simple texts based on the theme fluently and clearly",
+      "AE": "Reads portions of simple texts based on the theme fluently and clearly",
+      "BE": "Reads simple texts based on the theme with assistance"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.4",
+     "indicator": "Ability to answer questions based on texts simple stories fluently and clearly",
+     "levels": {
+      "EE": "Answers questions based on a text with precision Reads a variety of simple stories fluently and clearly",
+      "ME": "Answers questions based on texts 240 112 Reads simple stories fluently and clearly",
+      "AE": "Answers most questions based on texts Reads simple stories with less fluency and clarity",
+      "BE": "Answers a few questions based on texts Reads simple stories with assistance"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.5",
+     "indicator": "Ability to pronounce words related to the theme",
+     "levels": {
+      "EE": "Pronounces words related to the theme articulately",
+      "ME": "Pronounces words related to the theme",
+      "AE": "Pronounces most words related to the theme",
+      "BE": "Pronounces a few words related to the theme"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.6",
+     "indicator": "Ability to create a collection of vocabulary based on the themes",
+     "levels": {
+      "EE": "Creates a rich collection of vocabulary based on the themes meticulously",
+      "ME": "Creates a collection of vocabulary based on the themes",
+      "AE": "Creates a collection of limited vocabulary based on the themes",
+      "BE": "Creates a collection of vocabulary based on the themes with prompts"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.2.7",
+     "indicator": "Ability to respond to questions from passages",
+     "levels": {
+      "EE": "Responds to questions from passages",
+      "ME": "Responds to questions from passages",
+      "AE": "Responds to most questions from passages",
+      "BE": "Responds to a few questions from passages"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INDI.G3.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "INDI.G3.WRITIN.T1_SENTENCE_FORMATION",
+    "INDI.G3.WRITIN.T2_WRITING_SIMPLE_STORI",
+    "INDI.G3.WRITIN.T3_SPELLING_RULES_OF_SP",
+    "INDI.G3.WRITIN.T4_WRITING_TO_GIVE_INFO",
+    "INDI.G3.WRITIN.T5_CREATIVE_WRITING"
+   ],
+   "page": 39,
+   "indicators": [
+    {
+     "code": "INDI.G3.RUBRIC.3.1",
+     "indicator": "Ability to read a passage at the correct speed",
+     "levels": {
+      "EE": "Reads a passage at the correct speed with understanding and correct intonation",
+      "ME": "Reads a passage at the correct speed",
+      "AE": "Reads a passage at a slow speed",
+      "BE": "Reads a part of the passage at the correct speed with prompts"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.3.2",
+     "indicator": "Ability to arrange words to form sentences words and simple sentences neatly and legibly thematic words for comprehension",
+     "levels": {
+      "EE": "Arranges words to form sentences with precision Writes words and simple sentences neatly and legibly in a variety of contexts Spells varied thematic words for comprehension",
+      "ME": "Arranges words to form sentences Writes words and simple sentences neatly and legibly Spells thematic words for comprehension 242 114",
+      "AE": "Makes attempts to arrange words to form sentences Attempts to write words and simple sentences neatly and legibly Spells most thematic words for comprehension",
+      "BE": "Arranges words to form sentences with clues Writes words and simple sentences neatly and legibly with assistance Spells a few thematic words for comprehension Writes very short"
+     },
+     "page": 39,
+     "status": "kicd_read"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.3.3",
+     "indicator": "Ability to write short passages using correct spelling paragraphs about the theme",
+     "levels": {
+      "EE": "Writes short and long passages using correct spelling Composes a variety of paragraphs about various themes",
+      "ME": "Writes short passages using correct spelling Composes paragraphs about the theme",
+      "AE": "Writes very short passages with few spelling errors Composes portions of a paragraph leaving out minor details",
+      "BE": "passages with many spelling errors Composes a paragraph with assistance"
+     },
+     "page": 40,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G3.RUBRIC.3.4",
+     "indicator": "Ability to create short poems",
+     "levels": {
+      "EE": "Creates short poems creatively",
+      "ME": "Creates short poems about themes",
+      "AE": "Creates short poems but leaves out a few details",
+      "BE": "Creates short poems but leaves out most details"
+     },
+     "page": 40,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

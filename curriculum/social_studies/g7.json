@@ -54,7 +54,8 @@
      "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.a",
      "letter": "a",
      "text": "explore personal abilities and interests for holistic development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G7.SOCIAL.SELF_EXPLORATION.b",
@@ -76,7 +77,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.1.1",
+    "SOCI.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN",
@@ -117,7 +122,8 @@
      "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.a",
      "letter": "a",
      "text": "identify entrepreneurial opportunities that closely match their personality",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.b",
@@ -133,7 +139,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.1.1",
+    "SOCI.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.HUMAN_ORIGIN",
@@ -197,7 +207,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION",
@@ -240,29 +258,41 @@
      "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.a",
      "letter": "a",
      "text": "explore factors that led to the growth of the selected ancient Kingdoms in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.b",
      "letter": "b",
      "text": "locate the selected ancient Kingdoms on a map of Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.3"
     },
     {
      "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.c",
      "letter": "c",
      "text": "assess the contribution of ancient Kingdoms to the modern world civilisation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.d",
      "letter": "d",
      "text": "appreciate the contribution of ancient kingdoms to the development of the modern world",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE",
@@ -302,7 +332,8 @@
      "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.a",
      "letter": "a",
      "text": "identify the various forms of slavery and servitude in traditional African and contemporary society",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.b",
@@ -324,7 +355,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O",
@@ -369,13 +408,15 @@
      "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.b",
      "letter": "b",
      "text": "trace the factors that led to the introduction of money in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.c",
      "letter": "c",
      "text": "deduce the impact of the introduction of money in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.d",
@@ -385,7 +426,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO",
@@ -447,11 +496,20 @@
      "code": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.d",
      "letter": "d",
      "text": "appreciate the importance of building healthy relationships in a multicultural society",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.2.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE",
@@ -493,7 +551,8 @@
      "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.a",
      "letter": "a",
      "text": "outline the qualities of a peaceful person in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.2.6"
     },
     {
      "code": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.b",
@@ -515,7 +574,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.2.1",
+    "SOCI.G7.RUBRIC.2.2",
+    "SOCI.G7.RUBRIC.2.3",
+    "SOCI.G7.RUBRIC.2.4",
+    "SOCI.G7.RUBRIC.2.5",
+    "SOCI.G7.RUBRIC.2.6"
+   ]
   },
   {
    "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI",
@@ -563,19 +630,22 @@
      "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.a",
      "letter": "a",
      "text": "explain the meaning of key terms used in community service learning (CSL) and CSL projects",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.b",
      "letter": "b",
      "text": "describe the importance of CSL in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.c",
      "letter": "c",
      "text": "outline steps of a CSL project/activity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.d",
@@ -587,11 +657,17 @@
      "code": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.e",
      "letter": "e",
      "text": "desire to conduct CSL projects in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.3.1",
+    "SOCI.G7.RUBRIC.3.2",
+    "SOCI.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.HISTORICAL_INFORMATION",
@@ -652,7 +728,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O",
@@ -691,13 +774,15 @@
      "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.a",
      "letter": "a",
      "text": "locate areas where early agriculture was practised in selected geographical regions in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.b",
      "letter": "b",
      "text": "explore factors that favoured growing of crops and rearing of animals in selected regions during early agriculture",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.c",
@@ -713,7 +798,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK",
@@ -755,13 +847,15 @@
      "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.a",
      "letter": "a",
      "text": "describe the position, shape, and size of Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.b",
      "letter": "b",
      "text": "locate places and features using latitudes and longitudes on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.3"
     },
     {
      "code": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.c",
@@ -777,7 +871,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST",
@@ -825,7 +926,8 @@
      "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.b",
      "letter": "b",
      "text": "explore the size, shape, and position of the Earth in the solar system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.4"
     },
     {
      "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.c",
@@ -837,7 +939,8 @@
      "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.d",
      "letter": "d",
      "text": "illustrate the internal structure of the earth in the solar system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.4"
     },
     {
      "code": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.e",
@@ -847,7 +950,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.WEATHER",
@@ -913,7 +1023,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.NATURA.FIELDWORK",
@@ -954,19 +1071,22 @@
      "code": "SOCI.G7.NATURA.FIELDWORK.a",
      "letter": "a",
      "text": "examine methods of data collection used in fieldwork",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G7.NATURA.FIELDWORK.b",
      "letter": "b",
      "text": "explore challenges and possible solutions in carrying out fieldwork",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G7.NATURA.FIELDWORK.c",
      "letter": "c",
      "text": "illustrate methods of data analysis after fieldwork",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G7.NATURA.FIELDWORK.d",
@@ -976,7 +1096,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.4.1",
+    "SOCI.G7.RUBRIC.4.2",
+    "SOCI.G7.RUBRIC.4.3",
+    "SOCI.G7.RUBRIC.4.4",
+    "SOCI.G7.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN",
@@ -1039,7 +1166,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.5.1",
+    "SOCI.G7.RUBRIC.5.2",
+    "SOCI.G7.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY",
@@ -1086,7 +1218,8 @@
      "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.b",
      "letter": "b",
      "text": "analyse ways of upholding and protecting the Constitution of Kenya for social cohesion",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.5.1"
     },
     {
      "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.c",
@@ -1098,11 +1231,17 @@
      "code": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.d",
      "letter": "d",
      "text": "uphold and protect the Constitution of Kenya to promote ethical and responsible citizenship",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.5.1",
+    "SOCI.G7.RUBRIC.5.2",
+    "SOCI.G7.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G7.POLITI.HUMAN_RIGHTS",
@@ -1150,19 +1289,22 @@
      "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.b",
      "letter": "b",
      "text": "explore characteristics of human rights in the society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.c",
      "letter": "c",
      "text": "explain the concept of equity and non-discrimination in fostering solidarity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.d",
      "letter": "d",
      "text": "take action to promote equity and non-discrimination for social justice",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G7.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G7.POLITI.HUMAN_RIGHTS.e",
@@ -1172,7 +1314,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.5.1",
+    "SOCI.G7.RUBRIC.5.2",
+    "SOCI.G7.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS",
@@ -1214,7 +1361,8 @@
      "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.a",
      "letter": "a",
      "text": "explore the factors that contributed to the presence of African diasporas across the world",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.b",
@@ -1226,17 +1374,24 @@
      "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.c",
      "letter": "c",
      "text": "assess the role of the diasporas in the political development in Africa",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.d",
      "letter": "d",
      "text": "acknowledge the African diasporas and promotion of African unity in society today",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.5.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.5.1",
+    "SOCI.G7.RUBRIC.5.2",
+    "SOCI.G7.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G7.POLITI.CITIZENSHIP",
@@ -1291,7 +1446,8 @@
      "code": "SOCI.G7.POLITI.CITIZENSHIP.c",
      "letter": "c",
      "text": "describe the qualities of a global citizen in the modern society",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G7.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G7.POLITI.CITIZENSHIP.d",
@@ -1313,7 +1469,312 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G7.RUBRIC.5.1",
+    "SOCI.G7.RUBRIC.5.2",
+    "SOCI.G7.RUBRIC.5.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SOCI.G7.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Social Studies Personal Development",
+   "covers": [
+    "SOCI.G7.SOCIAL.SELF_EXPLORATION",
+    "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "SOCI.G7.RUBRIC.1.1",
+     "indicator": "Ability to explore personal abilities and interests for self-improvement.",
+     "levels": {
+      "EE": "Learner explores personal abilities and interests for self-improvement with examples.",
+      "ME": "Learner explores personal abilities and interests for self-improvement.",
+      "AE": "Learner explores personal abilities and interests for self-improvement omitting a few details.",
+      "BE": "Learner explores personal abilities and interests for self-improvement omitting many details."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.1.2",
+     "indicator": "Ability to identify entrepreneurial opportunities that closely match their personality.",
+     "levels": {
+      "EE": "Learner identifies entrepreneurial opportunities that closely match their personality using examples.",
+      "ME": "Learner identifies entrepreneurial opportunities that closely match their personality.",
+      "AE": "Learner identifies entrepreneurial opportunities that closely match their personality leaving out a few of them.",
+      "BE": "Learner identifies entrepreneurial opportunities that closely match their personality leaving out many of them."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G7.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "People and Relationships",
+   "covers": [
+    "SOCI.G7.PEOPLE.HUMAN_ORIGIN",
+    "SOCI.G7.PEOPLE.EARLY_CIVILISATION",
+    "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE",
+    "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O",
+    "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO",
+    "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE"
+   ],
+   "page": 30,
+   "indicators": [
+    {
+     "code": "SOCI.G7.RUBRIC.2.1",
+     "indicator": "Ability to assess the contribution of ancient Kingdoms to modern world civilisation.",
+     "levels": {
+      "EE": "learner assesses the contribution of ancient Kingdoms to modern world civilisation comprehensively.",
+      "ME": "learner assesses the contribution of ancient Kingdoms to modern world civilisation.",
+      "AE": "learner assesses the contribution of ancient Kingdoms to the modern world civilisation leaving out few contributions.",
+      "BE": "learner assesses the contribution of ancient Kingdoms to the modern world civilisation leaving out many contributions."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.2.2",
+     "indicator": "Ability to identify the various forms of slavery and servitude in traditional African society.",
+     "levels": {
+      "EE": "Learner identifies the various forms of slavery and servitude in traditional African society with examples.",
+      "ME": "Learner identifies the various forms of slavery and servitude in traditional African society.",
+      "AE": "Learner identifies the various forms of slavery and servitude in traditional African society omitting a few details.",
+      "BE": "Learner identifies the various forms of slavery and servitude in traditional African society omitting many details."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.2.3",
+     "indicator": "Ability to locate on a map of Africa the areas settled by the three selected African communities.",
+     "levels": {
+      "EE": "learner locates on a map of Africa the areas settled by the three selected African communities with precision.",
+      "ME": "learner locates on a map of Africa the areas settled by the three selected African communities.",
+      "AE": "learner locates on a map of Africa the areas settled by 2 selected African communities.",
+      "BE": "learner locates on a map of Africa the areas settled by one or none of the selected African communities."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.2.4",
+     "indicator": "Ability to trace the factors that led to the introduction of money in Africa.",
+     "levels": {
+      "EE": "Learner traces the factors that led to the introduction of money in Africa comprehensively.",
+      "ME": "Learner traces the factors that led to the introduction of money in Africa.",
+      "AE": "Learner traces the factors that led to the introduction of money in Africa leaving out few factors.",
+      "BE": "Learner traces the factors that led to the introduction of money in Africa leaving out many factors."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.2.5",
+     "indicator": "Ability to identify different relationships in society.",
+     "levels": {
+      "EE": "Learner identifies different relationships in society.",
+      "ME": "Learner identifies different relationships in society.",
+      "AE": "Learner identifies different relationships in society Omitting minor details.",
+      "BE": "Learner identifies different relationships in society omitting major details."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.2.6",
+     "indicator": "Ability to explore the qualities of a peaceful person in the community.",
+     "levels": {
+      "EE": "Learner explores the qualities of a peaceful person in the community exhaustively.",
+      "ME": "Learner explores the qualities of a peaceful person in the community.",
+      "AE": "Learner explores the qualities of a peaceful person in the community leaving out a few qualities.",
+      "BE": "Learner explores the qualities of a peaceful person in the community leaving out many details."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G7.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Community Service-Learning",
+   "covers": [
+    "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI"
+   ],
+   "page": 34,
+   "indicators": [
+    {
+     "code": "SOCI.G7.RUBRIC.3.1",
+     "indicator": "Ability to explain the steps in a CSL project/activity.",
+     "levels": {
+      "EE": "Learner explains the steps in a CSL project exhaustively.",
+      "ME": "Learner explains the steps in a CSL project.",
+      "AE": "Learner explains most of the details in the CSL project.",
+      "BE": "Learner explains a few of the steps in the CSL project."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.3.2",
+     "indicator": "Ability to accomplish a CSL project/activity in group(s).",
+     "levels": {
+      "EE": "Learner accomplished a CSL project/activity in group(s) excellently.",
+      "ME": "Learner accomplished a CSL project/activity in group(s).",
+      "AE": "Learner did not complete the CSL project/activity in group(s).",
+      "BE": "Learner did not attempt the CSL project/activity in group(s)."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.3.3",
+     "indicator": "Ability to explain the importance of CSL in the community.",
+     "levels": {
+      "EE": "Learner explains clearly the importance of CSL in the community.",
+      "ME": "Learner explains the importance of CSL in the community.",
+      "AE": "Learner explains fairly the importance of CSL in the community.",
+      "BE": "Learner hardly explains the importance of CSL in the community."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G7.RUBRIC.4",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Natural and Historic Built Environments",
+   "covers": [
+    "SOCI.G7.NATURA.HISTORICAL_INFORMATION",
+    "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O",
+    "SOCI.G7.NATURA.MAPS_AND_MAP_WORK",
+    "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST",
+    "SOCI.G7.NATURA.WEATHER",
+    "SOCI.G7.NATURA.FIELDWORK"
+   ],
+   "page": 47,
+   "indicators": [
+    {
+     "code": "SOCI.G7.RUBRIC.4.1",
+     "indicator": "Ability to explore crops grown and animals kept in selected regions during early agriculture.",
+     "levels": {
+      "EE": "Learner explores crops grown and animals kept in selected regions during early agriculture with examples.",
+      "ME": "Learner explores crops grown and animals kept in selected regions during early agriculture.",
+      "AE": "Learner explores some crops grown and animals kept in selected regions during early agriculture.",
+      "BE": "Learner explores very few crops grown and animals kept in selected regions during early agriculture."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.4.2",
+     "indicator": "Ability to describe the position, shape, and size of Africa.",
+     "levels": {
+      "EE": "Learner describes comprehensively the position, shape, and size of Africa.",
+      "ME": "Learner describes the position, shape, and size of Africa.",
+      "AE": "Learner describes the position, shape, and size of Africa leaving fewer gaps.",
+      "BE": "Learner describes with major gaps the position, shape, and size of Africa."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.4.3",
+     "indicator": "Ability to use latitudes and longitudes to locate places and features on a map.",
+     "levels": {
+      "EE": "Learner uses latitudes and longitudes to locate places and features on a map excellently.",
+      "ME": "Learner uses latitudes and longitudes to locate places and features on a map.",
+      "AE": "Learner uses latitudes and longitudes to locate most places and features on a map.",
+      "BE": "Learner uses latitudes and longitudes to locate fewer places and features on a map."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.4.4",
+     "indicator": "Ability to describe the origin, size, shape, and position of the earth in the solar system.",
+     "levels": {
+      "EE": "Learner describes the origin, size, shape, and position of the earth in the solar system with examples.",
+      "ME": "Learner describes the origin, size, shape, and position of the earth in the solar system.",
+      "AE": "Learner partially describes the origin, size, shape, and position of the earth in the solar system.",
+      "BE": "Learner hardly describes the origin, size, shape, and position of the earth in the solar system."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.4.5",
+     "indicator": "Ability to examine methods of data collection used in fieldwork, Ability to explore challenges and possible solutions in carrying out fieldwork, Ability to illustrate methods of data analysis after fieldwork",
+     "levels": {
+      "EE": "Examines all the methods of data collection used in fieldwork, Explores challenges and possible solutions in carrying out fieldwork using detailed examples illustrates methods of data analysis after fieldwork with detailed examples",
+      "ME": "Examines most of methods of data collection used in fieldwork, explores challenges and possible solutions in carrying out fieldwork using most of the examples Illustrates methods of data analysis after fieldwork with most examples",
+      "AE": "Examines the methods of data collection used in fieldwork,leaving out some. Explores challenges and possible solutions in carrying out fieldwork,using some examples Illustrates methods of data analysis after fieldwork while leaving out some examples",
+      "BE": "examines methods of data collection used in fieldwork, leaving out most. Explores challenges and possible solutions in carrying out fieldwork,using very few examples. Illustrates methods of data analysis after fieldwork while leaving most examples."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G7.RUBRIC.5",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Political Development and Governance",
+   "covers": [
+    "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN",
+    "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY",
+    "SOCI.G7.POLITI.HUMAN_RIGHTS",
+    "SOCI.G7.POLITI.AFRICAN_DIASPORAS",
+    "SOCI.G7.POLITI.CITIZENSHIP"
+   ],
+   "page": 59,
+   "indicators": [
+    {
+     "code": "SOCI.G7.RUBRIC.5.1",
+     "indicator": "Ability to examine the political organisation of the selected African communities up to 1900. Ability to discuss the importance of the Constitution of Kenya for social well-being. Ability to analyse ways of upholding and protecting the Constitution of Kenya for social cohesion.",
+     "levels": {
+      "EE": "Examines the political organisation of the selected African communities up to 1900 exhaustively. Discusses the importance of the Constitution of Kenya for social well-being with examples. Analyses ways of upholding and protecting the Constitution of Kenya for social cohesion with examples.",
+      "ME": "Examines the political organisation of the selected African communities up to 1900. Discusses the importance of the Constitution of Kenya for social well-being. Analyses ways of upholding and protecting the Constitution of Kenya for social cohesion.",
+      "AE": "Fairly examines the political organisation of the selected African communities up to 1900. Discusses the importance of the Constitution of Kenya for social well-being with minor gaps Analyses ways of upholding and protecting the Constitution of Kenya for social cohesion with many few errors.",
+      "BE": "Hardly examines the political organisation of the selected African communities up to 1900. Discusses the importance of the Constitution of Kenya for social wellbeing with major gaps. Analyses ways of upholding and protecting the Constitution of Kenya for social cohesion with many errors."
+     },
+     "page": 59,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.5.2",
+     "indicator": "Ability to explore the characteristics of Human Rights as practised for the preservation of life. Ability to explain the concept of equity and non-discrimination in fostering solidarity. Ability to explore the factors that contributed to the presence of African diasporas across the world.",
+     "levels": {
+      "EE": "Explores the characteristics of Human Rights as practised for the preservation of life exhaustively. Explains the concept of equity and non-discrimination in fostering solidarity elaborately. Explores the factors which contributed to the presence of African diasporas across the world comprehensively.",
+      "ME": "Explores the characteristics of Human Rights as practised for the preservation of life. Explains the concept of equity and non-discrimination in fostering solidarity. Explores the factors which contributed to the presence of African diasporas across the world.",
+      "AE": "Explores some characteristics of Human Rights as practised for the preservation of life. Explains one of the concepts of equity and non-discrimination in fostering solidarity. Explores more than half of the factors that contributed to the presence of African diasporas across the world.",
+      "BE": "Explores some characteristics of Human Rights as practised for the preservation of life. Explains the concept of equity and non-discrimination in fostering solidarity with support. Explores less than half of the factors that contributed to the presence of African diasporas across the world."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G7.RUBRIC.5.3",
+     "indicator": "Ability to assess the role of the diaspora in the political development in Africa. Ability to explain the interconnectedness and interdependence of different countries. Ability to describe qualities of a global citizen in modern society.",
+     "levels": {
+      "EE": "Assesses the role of the diaspora in the political development in Africa exhaustively. Explains the interconnectedness and interdependence of different countries with examples. Describes the qualities of a global citizen in modern society with examples.",
+      "ME": "Assesses the role of the diaspora in the political development in Africa. Explains the interconnectedness and interdependence of different countries. Describes qualities of a global citizen in modern society.",
+      "AE": "Partly assesses the role of the diaspora in the political development in Africa partially. Explains the interconnectedness and interdependence of different countries partially. Describes some qualities of a global citizen in modern society.",
+      "BE": "Hardly assesses the role of the diaspora in the political development in Africa. Explains the interconnectedness and interdependence of different countries with support. Describes qualities of a global citizen in modern society with assistance."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

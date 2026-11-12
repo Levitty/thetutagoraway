@@ -51,23 +51,32 @@
      "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.a",
      "letter": "a",
      "text": "identify the four cardinal points of a compass",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.b",
      "letter": "b",
      "text": "use the four cardinal points to give directions on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G4.NATURA.COMPASS_DIRECTION.c",
      "letter": "c",
      "text": "appreciate the use of four cardinal points in everyday life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.1.1",
+    "SOCI.G4.RUBRIC.1.2",
+    "SOCI.G4.RUBRIC.1.3",
+    "SOCI.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE",
@@ -129,7 +138,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.1.1",
+    "SOCI.G4.RUBRIC.1.2",
+    "SOCI.G4.RUBRIC.1.3",
+    "SOCI.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE",
@@ -169,29 +184,39 @@
      "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.a",
      "letter": "a",
      "text": "identify the main physical features in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.b",
      "letter": "b",
      "text": "state the importance of the main physical features in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.c",
      "letter": "c",
      "text": "illustrate the main physical features in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE.d",
      "letter": "d",
      "text": "appreciate the main physical features in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.1.1",
+    "SOCI.G4.RUBRIC.1.2",
+    "SOCI.G4.RUBRIC.1.3",
+    "SOCI.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY",
@@ -238,13 +263,15 @@
      "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.a",
      "letter": "a",
      "text": "identify the four seasons experienced in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.3"
     },
     {
      "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.b",
      "letter": "b",
      "text": "explain how the four seasons influence human activities in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.3"
     },
     {
      "code": "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY.c",
@@ -266,7 +293,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.1.1",
+    "SOCI.G4.RUBRIC.1.2",
+    "SOCI.G4.RUBRIC.1.3",
+    "SOCI.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME",
@@ -310,29 +343,39 @@
      "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.a",
      "letter": "a",
      "text": "identify the main historic built environments in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.b",
      "letter": "b",
      "text": "explain the importance of the main historic built environments in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.c",
      "letter": "c",
      "text": "participate in conservation activities of the historic built environments within the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME.d",
      "letter": "d",
      "text": "appreciate historic built environments in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.1.1",
+    "SOCI.G4.RUBRIC.1.2",
+    "SOCI.G4.RUBRIC.1.3",
+    "SOCI.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL",
@@ -385,23 +428,30 @@
      "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.b",
      "letter": "b",
      "text": "explain the benefits of interdependence of people in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.c",
      "letter": "c",
      "text": "use chart to illustrate the benefits of interdependence people",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL.d",
      "letter": "d",
      "text": "appreciate the interdependence of people in the County",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.2.1",
+    "SOCI.G4.RUBRIC.2.2"
+   ]
   },
   {
    "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION",
@@ -442,23 +492,30 @@
      "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.a",
      "letter": "a",
      "text": "describe patterns of population distribution in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.b",
      "letter": "b",
      "text": "illustrate the patterns of population distribution in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION.c",
      "letter": "c",
      "text": "appreciate population distribution in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.2.1",
+    "SOCI.G4.RUBRIC.2.2"
+   ]
   },
   {
    "code": "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C",
@@ -521,7 +578,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.3.1",
+    "SOCI.G4.RUBRIC.3.2",
+    "SOCI.G4.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G4.SOCIAL.THE_SCHOOL",
@@ -562,7 +624,8 @@
      "code": "SOCI.G4.SOCIAL.THE_SCHOOL.a",
      "letter": "a",
      "text": "narrate the history of the school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G4.SOCIAL.THE_SCHOOL.b",
@@ -584,7 +647,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.3.1",
+    "SOCI.G4.RUBRIC.3.2",
+    "SOCI.G4.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T",
@@ -630,13 +698,15 @@
      "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.b",
      "letter": "b",
      "text": "identify the main economic activities carried out in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.c",
      "letter": "c",
      "text": "explain the importance of economic activities carried out in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.d",
@@ -648,11 +718,17 @@
      "code": "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T.e",
      "letter": "e",
      "text": "appreciate the economic activities in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.4.1",
+    "SOCI.G4.RUBRIC.4.2",
+    "SOCI.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY",
@@ -692,29 +768,38 @@
      "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.a",
      "letter": "a",
      "text": "identify industries in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.b",
      "letter": "b",
      "text": "explain the benefits of industries in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.c",
      "letter": "c",
      "text": "locate industries in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY.d",
      "letter": "d",
      "text": "recognise the role of industries in the county",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.4.1",
+    "SOCI.G4.RUBRIC.4.2",
+    "SOCI.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC",
@@ -756,13 +841,15 @@
      "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.a",
      "letter": "a",
      "text": "identify the projects that can be initiated at school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.3"
     },
     {
      "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.b",
      "letter": "b",
      "text": "participate in initiating an enterprise project at school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.4.3"
     },
     {
      "code": "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC.c",
@@ -772,7 +859,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.4.1",
+    "SOCI.G4.RUBRIC.4.2",
+    "SOCI.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO",
@@ -813,23 +905,31 @@
      "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.a",
      "letter": "a",
      "text": "identify qualities of a good citizen in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.1"
     },
     {
      "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.b",
      "letter": "b",
      "text": "develop qualities of good citizenship in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.1"
     },
     {
      "code": "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO.c",
      "letter": "c",
      "text": "appreciate qualities of good citizenship in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.5.1",
+    "SOCI.G4.RUBRIC.5.2",
+    "SOCI.G4.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.PEACE",
@@ -877,7 +977,8 @@
      "code": "SOCI.G4.CITIZE.PEACE.b",
      "letter": "b",
      "text": "develop strategies of living in peace with others in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G4.CITIZE.PEACE.c",
@@ -887,7 +988,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.5.1",
+    "SOCI.G4.RUBRIC.5.2",
+    "SOCI.G4.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.CHILD_RIGHTS",
@@ -939,19 +1045,22 @@
      "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.a",
      "letter": "a",
      "text": "outline forms of child abuse in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.b",
      "letter": "b",
      "text": "explain the causes of child abuse in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.c",
      "letter": "c",
      "text": "explain effects of child abuse in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILD_RIGHTS.d",
@@ -961,7 +1070,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.5.1",
+    "SOCI.G4.RUBRIC.5.2",
+    "SOCI.G4.RUBRIC.5.3"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL",
@@ -1003,7 +1117,8 @@
      "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.a",
      "letter": "a",
      "text": "identify democratic processes in the school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.1"
     },
     {
      "code": "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL.b",
@@ -1025,7 +1140,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.6.1",
+    "SOCI.G4.RUBRIC.6.2",
+    "SOCI.G4.RUBRIC.6.3",
+    "SOCI.G4.RUBRIC.6.4"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN",
@@ -1068,29 +1189,39 @@
      "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.a",
      "letter": "a",
      "text": "explain the composition of Children’s Government in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.2"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.b",
      "letter": "b",
      "text": "describe the functions of the Children’s Government in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.2"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.c",
      "letter": "c",
      "text": "participate in Children’s Government in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.2"
     },
     {
      "code": "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN.d",
      "letter": "d",
      "text": "respect Children’s Government in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.6.1",
+    "SOCI.G4.RUBRIC.6.2",
+    "SOCI.G4.RUBRIC.6.3",
+    "SOCI.G4.RUBRIC.6.4"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP",
@@ -1147,7 +1278,8 @@
      "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.c",
      "letter": "c",
      "text": "demonstrate qualities of good leadership in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.3"
     },
     {
      "code": "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP.d",
@@ -1157,7 +1289,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.6.1",
+    "SOCI.G4.RUBRIC.6.2",
+    "SOCI.G4.RUBRIC.6.3",
+    "SOCI.G4.RUBRIC.6.4"
+   ]
   },
   {
    "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I",
@@ -1210,7 +1348,8 @@
      "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.c",
      "letter": "c",
      "text": "explain the roles of a member of county assembly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G4.RUBRIC.6.4"
     },
     {
      "code": "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I.d",
@@ -1220,7 +1359,322 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G4.RUBRIC.6.1",
+    "SOCI.G4.RUBRIC.6.2",
+    "SOCI.G4.RUBRIC.6.3",
+    "SOCI.G4.RUBRIC.6.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SOCI.G4.RUBRIC.1",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Natural and Historic Built Environments",
+   "covers": [
+    "SOCI.G4.NATURA.COMPASS_DIRECTION",
+    "SOCI.G4.NATURA.LOCATION_AND_SIZE_OF_THE",
+    "SOCI.G4.NATURA.PHYSICAL_FEATURES_IN_THE",
+    "SOCI.G4.NATURA.SEASONS_IN_THE_COUNTY",
+    "SOCI.G4.NATURA.HISTORIC_BUILT_ENVIRONME"
+   ],
+   "page": 23,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.1.1",
+     "indicator": "Ability to use the four cardinal points to give direction of places",
+     "levels": {
+      "EE": "Leaner uses the four cardinal points to give direction of places with illustrations",
+      "ME": "Learner uses the four cardinal points to give direction of places",
+      "AE": "Learner uses 2-3 cardinal points to give direction of places",
+      "BE": "Learner uses less than 2 cardinal points to give direction of places"
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.1.2",
+     "indicator": "Ability to identify the main physical features in the county",
+     "levels": {
+      "EE": "Learner identifies the main physical features in the county with illustrations",
+      "ME": "Learner identifies the main physical features in the county",
+      "AE": "Learner identifies some of the main physical features in the county",
+      "BE": "Learner has challenges identifying the main physical features in the county"
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.1.3",
+     "indicator": "Ability to explain how the four seasons influence human activities in the county",
+     "levels": {
+      "EE": "Learner explains how the four seasons influence human activities in the county with examples",
+      "ME": "Learner explains how the four seasons influence human activities in the county",
+      "AE": "Learner explains how 2-3 seasons influence human activities in the county",
+      "BE": "Learner explains how less than 2 seasons influence human activities in the county"
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.1.4",
+     "indicator": "Ability to explain the importance of the main historic built environments in the county",
+     "levels": {
+      "EE": "Learner explains the importance of the main historic built environments in the county with examples.",
+      "ME": "Learner explains the importance of the main historic built environments in the county",
+      "AE": "Learner explains the importance of some of the main historic built environments in the county",
+      "BE": "Learner struggles to explain the importance of the main historic built environments in the county"
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G4.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "People and Population Inter-dependence of people (6 Lessons)",
+   "covers": [
+    "SOCI.G4.PEOPLE.INTERDEPENDENCE_OF_PEOPL",
+    "SOCI.G4.PEOPLE.POPULATION_DISTRIBUTION"
+   ],
+   "page": 28,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.2.1",
+     "indicator": "Ability to explain the benefits of interdependence of people in the county.",
+     "levels": {
+      "EE": "Learner explains the benefits of interdependence of people in the county with examples.",
+      "ME": "Learner explains the benefits of inter-dependence of people in the county.",
+      "AE": "Leaner explains some of the benefits of interdependence of people in the county.",
+      "BE": "Learner struggles to explain the benefits of interdependence of people in the county."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.2.2",
+     "indicator": "Ability to describe patterns of population distribution in the county.",
+     "levels": {
+      "EE": "Learner describes patterns of population distribution in the county with illustrations.",
+      "ME": "Learner describes patterns of population distribution in the county.",
+      "AE": "Learner describes some patterns of population distribution in the county.",
+      "BE": "Learner struggles to describe patterns of population distribution in the county."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G4.RUBRIC.3",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Social Organisations",
+   "covers": [
+    "SOCI.G4.SOCIAL.ASPECTS_OF_TRADITIONAL_C",
+    "SOCI.G4.SOCIAL.THE_SCHOOL"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.3.1",
+     "indicator": "Ability to identify the six aspects of traditional culture in the county",
+     "levels": {
+      "EE": "Learner identifies all the six aspects of traditional culture in the county with examples",
+      "ME": "Learner identifies all the six aspects of traditional culture in the county",
+      "AE": "Learner identifies 3- 5 of the aspects of traditional culture in the county",
+      "BE": "Learner identifies less than 3 aspects of traditional culture in the county."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.3.2",
+     "indicator": "Ability to describe aspects of traditional culture in the county",
+     "levels": {
+      "EE": "Learner describes the aspects of traditional culture in the county with examples",
+      "ME": "Learner describes the aspects of traditional culture in the county",
+      "AE": "Leaner describes some of the aspects of traditional culture in the county",
+      "BE": "Learner struggles to describes the aspects of traditional culture in the county"
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.3.3",
+     "indicator": "Ability to narrate the history of the school",
+     "levels": {
+      "EE": "Learner narrates the history of the school, highlighting significant events in the history of the school",
+      "ME": "Learner narrates the history of the school",
+      "AE": "Learner narrates the history of the school omitting some details",
+      "BE": "Learner struggles to narrate the history of the school"
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G4.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Resources and Economic Activities",
+   "covers": [
+    "SOCI.G4.RESOUR.ECONOMIC_ACTIVITIES_IN_T",
+    "SOCI.G4.RESOUR.INDUSTRIES_IN_THE_COUNTY",
+    "SOCI.G4.RESOUR.ENTERPRISE_PROJECT_AT_SC"
+   ],
+   "page": 39,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.4.1",
+     "indicator": "Ability to explain the importance of economic activities carried out in the county",
+     "levels": {
+      "EE": "Learner explains the importance of economic activities carried out in the county with examples",
+      "ME": "Learner explains the importance of economic activities carried out in the county",
+      "AE": "Learner explains the importance of economic activities carried out in the county leaving out some details",
+      "BE": "Learner struggles to explain the importance of economic activities carried out in the county"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.4.2",
+     "indicator": "Ability to identify industries in the county",
+     "levels": {
+      "EE": "Learner identifies industries in the county with examples",
+      "ME": "Learner identifies industries in the county",
+      "AE": "Learner identifies some industries in the county",
+      "BE": "Leaner struggles to identify industries in the county"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.4.3",
+     "indicator": "Ability to identify the projects that can be initiated at school",
+     "levels": {
+      "EE": "Learner identifies projects that can be initiated at school with examples",
+      "ME": "Learner identifies the projects that can be initiated at school",
+      "AE": "Learner identifies some of the projects that can be initiated at school",
+      "BE": "Learner can hardly identify the projects that can be initiated at school"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G4.RUBRIC.5",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "covers": [
+    "SOCI.G4.CITIZE.GOOD_CITIZENSHIP_IN_SCHO",
+    "SOCI.G4.CITIZE.PEACE",
+    "SOCI.G4.CITIZE.CHILD_RIGHTS"
+   ],
+   "page": 46,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.5.1",
+     "indicator": "Ability to identify qualities of good citizenship in school",
+     "levels": {
+      "EE": "Learner identifies qualities of good citizenship in school with examples",
+      "ME": "Learner identifies qualities of good citizens in school",
+      "AE": "Learner identifies some qualities of good citizens in school",
+      "BE": "Learner has challenges identifying the qualities of good citizens in school"
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.5.2",
+     "indicator": "Ability to develop strategies of living in peace with others in school",
+     "levels": {
+      "EE": "Learner develops strategies of living in peace with others in school citing with examples",
+      "ME": "Learner develops strategies of living in peace with others in school",
+      "AE": "Learner develops some strategies of living in peace with others in school",
+      "BE": "Learner has challenges developing strategies of living in peace with others in school"
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.5.3",
+     "indicator": "Ability to explain effects of the seven forms of child abuse in the community",
+     "levels": {
+      "EE": "Learner explains effects of the seven forms of child abuse in the community with examples",
+      "ME": "Learner explains effects of the seven forms of child abuse in the community",
+      "AE": "Learner explains effects of 4-6 forms of child abuse in the community",
+      "BE": "Learner explains effects of less than 4 forms of child abuse in the community"
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G4.RUBRIC.6",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Citizenship and Governance in Kenya STRAND 1.0: NATURAL AND BUILT ENVIRONMENTS",
+   "covers": [
+    "SOCI.G4.CITIZE.DEMOCRACY_IN_SCHOOL",
+    "SOCI.G4.CITIZE.CHILDREN_S_GOVERNMENT_IN",
+    "SOCI.G4.CITIZE.COMMUNITY_LEADERSHIP",
+    "SOCI.G4.CITIZE.THE_COUNTY_GOVERNMENTS_I"
+   ],
+   "page": 55,
+   "indicators": [
+    {
+     "code": "SOCI.G4.RUBRIC.6.1",
+     "indicator": "Ability to identify democratic processes in school",
+     "levels": {
+      "EE": "Learner identifies democratic processes in school with examples",
+      "ME": "Learner identifies democratic processes in school",
+      "AE": "Learner identifies some democratic processes in school",
+      "BE": "Learner has challenges identifying democratic processes in school"
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.6.2",
+     "indicator": "Ability to describe the functions of the Children’s Government in school",
+     "levels": {
+      "EE": "Learner describes the functions of the Children’s Government in school with examples",
+      "ME": "Learner describes the functions of the Children’s Government in school",
+      "AE": "Learner describes some functions of the Children’s Government in school",
+      "BE": "Learner has challenges describing the functions of the Children’s Government in school"
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.6.3",
+     "indicator": "Ability to demonstrate qualities of good leadership in the community.",
+     "levels": {
+      "EE": "Learner demonstrates qualities of good leadership in the community with examples",
+      "ME": "Learner demonstrates qualities of good leadership in the community",
+      "AE": "Learner demonstrates some qualities of good leadership in the community",
+      "BE": "Learner has challenges demonstrating qualities of good leadership in the community"
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G4.RUBRIC.6.4",
+     "indicator": "Ability to explain the roles of a member of county assembly",
+     "levels": {
+      "EE": "Learner explains the roles of a member of county assembly with examples",
+      "ME": "Learner explains the roles of a member of county assembly",
+      "AE": "Learner explains some roles of a member of county assembly",
+      "BE": "Learner has challenges explaining the roles of a member of county assembly"
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

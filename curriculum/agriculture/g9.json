@@ -66,7 +66,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.1.1",
+    "AGRI.G9.RUBRIC.1.2",
+    "AGRI.G9.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD",
@@ -119,7 +124,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.1.1",
+    "AGRI.G9.RUBRIC.1.2",
+    "AGRI.G9.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G9.CONSER.INTEGRATED_FARMING",
@@ -173,7 +183,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.1.1",
+    "AGRI.G9.RUBRIC.1.2",
+    "AGRI.G9.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G9.FOOD_P.ORGANIC_GARDENING",
@@ -228,7 +243,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.2.1",
+    "AGRI.G9.RUBRIC.2.2",
+    "AGRI.G9.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE",
@@ -289,7 +309,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.2.1",
+    "AGRI.G9.RUBRIC.2.2",
+    "AGRI.G9.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT",
@@ -349,7 +374,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.2.1",
+    "AGRI.G9.RUBRIC.2.2",
+    "AGRI.G9.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_",
@@ -402,7 +432,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.3.1",
+    "AGRI.G9.RUBRIC.3.2",
+    "AGRI.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN",
@@ -456,7 +491,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.3.1",
+    "AGRI.G9.RUBRIC.3.2",
+    "AGRI.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS",
@@ -517,7 +557,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.4.1",
+    "AGRI.G9.RUBRIC.4.2",
+    "AGRI.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER",
@@ -570,7 +615,208 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G9.RUBRIC.4.1",
+    "AGRI.G9.RUBRIC.4.2",
+    "AGRI.G9.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "AGRI.G9.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Conservation of Resources",
+   "covers": [
+    "AGRI.G9.CONSER.CONSERVING_ANIMAL_FEED_H",
+    "AGRI.G9.CONSER.CONSERVING_LEFTOVER_FOOD",
+    "AGRI.G9.CONSER.INTEGRATED_FARMING"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "AGRI.G9.RUBRIC.1.1",
+     "indicator": "Ability to describe various ways of conserving resources in the environment. (conserving hay, reusing leftover food, using integrated farming).",
+     "levels": {
+      "EE": "The learner describes three ways of conserving resources in the environment.",
+      "ME": "The learner describes two ways of conserving resources in the environment.",
+      "AE": "The learner describes one way of conserving resources in the environment.",
+      "BE": "The learner partially describes a way of conserving resources in the environment."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.1.2",
+     "indicator": "Ability to apply various ways of conserving resources in the environment. (conserving hay, reusing leftover food, using integrated farming).",
+     "levels": {
+      "EE": "The learner applies three ways of conserving resources in the environment.",
+      "ME": "The learner applies two ways of conserving resources in the environment.",
+      "AE": "The learner applies one way of conserving resources in the environment.",
+      "BE": "The learner partially applies one way of conserving resources in the environment."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.1.3",
+     "indicator": "Ability to exhibit collaboration skills in the conservation of resources in the environment: (is punctual, reliable, supports others, positively works with others and contributes to group decision making).",
+     "levels": {
+      "EE": "The learner exhibits five collaboration skills in carrying out the conservation of resources in the environment.",
+      "ME": "The learner exhibits four collaboration skills in carrying out the conservation of resources in the environment.",
+      "AE": "The learner exhibits two to three collaboration skills in carrying out the conservation of resources in the environment.",
+      "BE": "The learner exhibits less than two collaboration skills in carrying out the conservation of resources in the environment."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G9.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Food Production Processes",
+   "covers": [
+    "AGRI.G9.FOOD_P.ORGANIC_GARDENING",
+    "AGRI.G9.FOOD_P.STORAGE_OF_CROP_PRODUCE",
+    "AGRI.G9.FOOD_P.COOKING_USING_FLOUR_MIXT"
+   ],
+   "page": 24,
+   "indicators": [
+    {
+     "code": "AGRI.G9.RUBRIC.2.1",
+     "indicator": "Ability to describe food production processes at the household level: (organic gardening, storage of crop produce and cooking using flour mixtures).",
+     "levels": {
+      "EE": "The learner describes three food production processes at the household level.",
+      "ME": "The learner describes two food production processes at the household level.",
+      "AE": "The learner describes one food production process at the household level.",
+      "BE": "The learner partially describes food production processes at the household level."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.2.2",
+     "indicator": "Ability to carry out food production processes at the household level: (organic gardening, storage of crop produce and cooking using flour mixtures).",
+     "levels": {
+      "EE": "The learner carries out three food production processes at the household level.",
+      "ME": "The learner carries out two food production processes at the household level.",
+      "AE": "The learner carries out one food production process at the household level.",
+      "BE": "The learner partially carries out one food production process at the household level."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.2.3",
+     "indicator": "Ability to portray unity while carrying out food production processes. (sharing of available resources, appreciating efforts of others in tasks, respecting other people's opinions, and embracing team spirit).",
+     "levels": {
+      "EE": "The learner portrays four indicators of unity in carrying out food production processes at the household level.",
+      "ME": "The learner portrays three indicators of unity in carrying out food production processes at the household level.",
+      "AE": "The learner portrays two indicators of unity in carrying out food production processes at the household level.",
+      "BE": "The learner portrays less than two indicators of unity in carrying out food production processes at the household level."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G9.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Hygiene Practises",
+   "covers": [
+    "AGRI.G9.HYGIEN.CLEANING_WASTE_DISPOSAL_",
+    "AGRI.G9.HYGIEN.DISINFECTING_CLOTHING_AN"
+   ],
+   "page": 28,
+   "indicators": [
+    {
+     "code": "AGRI.G9.RUBRIC.3.1",
+     "indicator": "Ability to explain hygiene practises at the household level.",
+     "levels": {
+      "EE": "The learner can explain cleaning waste disposal activities and disinfecting household articles at the household level with elaborate details.",
+      "ME": "The learner can explain cleaning waste disposal activities and disinfecting household articles at the household level.",
+      "AE": "The learner can explain either cleaning waste disposal activities or disinfecting household articles at the household level.",
+      "BE": "The learner can explain cleaning waste disposal activities or disinfecting household articles at the household level with details that require clarification."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.3.2",
+     "indicator": "Ability to carry out hygiene practises at the household level.",
+     "levels": {
+      "EE": "The learner carries out cleaning waste disposal activities and disinfecting household articles with observable attention to detail.",
+      "ME": "The learner carries out cleaning waste disposal activities and disinfecting household articles at the household level.",
+      "AE": "The learner carries out either cleaning waste disposal activities or disinfecting household articles at the household level.",
+      "BE": "The learners carry out cleaning waste disposal activities and disinfecting household articles at the household level both with observable areas for corrections."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.3.3",
+     "indicator": "Ability to portray responsibility when carrying out hygiene practises. (engaging in assigned roles, observing safety, proactively solving problems when carrying out hygiene practises and offering leadership).",
+     "levels": {
+      "EE": "The learner portrays four indicators of responsibility when carrying out hygiene practises.",
+      "ME": "The learner portrays three indicators of responsibility when carrying out hygiene practises.",
+      "AE": "The learner portrays two indicators of responsibility when carrying out hygiene practises.",
+      "BE": "The learner portrays less than two indicators of responsibility when carrying out hygiene practises."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G9.RUBRIC.4",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Production Techniques",
+   "covers": [
+    "AGRI.G9.PRODUC.GRAFTING_IN_PLANTS",
+    "AGRI.G9.PRODUC.HOMEMADE_SUN_DRYER"
+   ],
+   "page": 32,
+   "indicators": [
+    {
+     "code": "AGRI.G9.RUBRIC.4.1",
+     "indicator": "Ability to describe production techniques at the household level. (grafting, construction of homemade sun dryer).",
+     "levels": {
+      "EE": "The learner can describe grafting in plants and the construction of a homemade sun dryer with elaborate details.",
+      "ME": "The learner can describe grafting in plants and the construction of a homemade sun dryer.",
+      "AE": "The learner can describe either grafting in plants or the construction of a homemade sun dryer.",
+      "BE": "The learner can partially describe either grafting in plants or the construction of a homemade sun dryer."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.4.2",
+     "indicator": "Ability to carry out production techniques at the household level. (grafting, construction of homemade sun dryer).",
+     "levels": {
+      "EE": "The learner can identify requirements, assemble the requirements, conceptualise the plan of work, carry out the task, and produce functional output.",
+      "ME": "The learner can identify requirements, assemble the requirements, conceptualise the plan of work, carry out the task, and produce output.",
+      "AE": "The learner can identify requirements, assemble the requirements, and conceptualise the plan of work.",
+      "BE": "The learner can identify requirements and assemble the requirements."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G9.RUBRIC.4.3",
+     "indicator": "Ability to apply critical thinking and problem-solving skills in production techniques at the household level. (finds applicable information, explores possible options, seeks help when needed, completes task).",
+     "levels": {
+      "EE": "The learner applies four skills of critical thinking and problem-solving in production techniques at the household level.",
+      "ME": "The learner applies three skills of critical thinking and problem-solving in production techniques at the household level.",
+      "AE": "The learner applies two skills of critical thinking and problem-solving in production techniques at the household level.",
+      "BE": "The learner applies less than two skills of critical thinking and problem-solving in production techniques at the household level."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

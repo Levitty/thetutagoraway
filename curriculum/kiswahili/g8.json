@@ -66,7 +66,8 @@
      "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.c",
      "letter": "c",
      "text": "kutumia vipengele vifaavyo katika kusikiliza na kujibu mahojiano ipasavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.1"
     },
     {
      "code": "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.d",
@@ -76,7 +77,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
@@ -151,7 +158,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T1_VIAKIFISHI",
@@ -212,7 +226,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T1_VIWAKILISHI",
@@ -257,13 +276,15 @@
      "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.a",
      "letter": "a",
      "text": "kutambua viwakilishi vya nafsi, vionyeshi/viashiria na vya idadi katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.b",
      "letter": "b",
      "text": "kutumia viwakilishi vya nafsi, vionyeshi/viashiria na vya idadi ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T1_VIWAKILISHI.c",
@@ -273,7 +294,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA",
@@ -328,17 +360,25 @@
      "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.c",
      "letter": "c",
      "text": "kutumia maneno yenye sauti /g/ na /gh/ ipasavyo katika matini ili kuyatofautisha kimatamshi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA.d",
      "letter": "d",
      "text": "kuchangamkia matamshi bora ya sauti /g/ na /gh/ katika mazungumzo ya kawaida",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA",
@@ -407,7 +447,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI",
@@ -452,29 +499,38 @@
      "code": "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.a",
      "letter": "a",
      "text": "kueleza umuhimu wa barua ya kirafiki ya kutoa shukrani",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.b",
      "letter": "b",
      "text": "kutambua vipengele vya kimuundo vya barua ya kirafiki ya kutoa shukrani",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.c",
      "letter": "c",
      "text": "kuandika barua ya kirafiki ya kutoa shukrani kwa kuzingatia ujumbe, lugha na muundo ipasavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI.d",
      "letter": "d",
      "text": "kukuza mazoea ya kuandika barua ya kirafiki ya kutoa shukrani katika maisha ya kila siku",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T2_VIWAKILISHI",
@@ -520,13 +576,15 @@
      "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.a",
      "letter": "a",
      "text": "kutambua viwakilishi vya sifa, vya pekee na viulizi katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.b",
      "letter": "b",
      "text": "kutumia viwakilishi vya sifa, vya pekee na viulizi ifaavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T2_VIWAKILISHI.c",
@@ -536,7 +594,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T3_HADITHI",
@@ -592,7 +661,8 @@
      "code": "KISW.G8.KUSIKI.T3_HADITHI.c",
      "letter": "c",
      "text": "kujadili ujumbe na lugha katika mighani",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.4"
     },
     {
      "code": "KISW.G8.KUSIKI.T3_HADITHI.d",
@@ -608,7 +678,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA",
@@ -666,7 +742,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T3_INSHA_ZA_KUBUNI",
@@ -714,17 +797,24 @@
      "code": "KISW.G8.KUANDI.T3_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kuandika insha ya masimulizi inayoendeleza wazo moja kuu katika kila aya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T3_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kufurahia kuandika insha za masimulizi katika maisha ya kila siku akizingatia ujumbe uliotegemezwa kwenye wazo moja kuu",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T3_VIWAKILISHI",
@@ -785,7 +875,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T4_HADITHI",
@@ -849,11 +950,18 @@
      "code": "KISW.G8.KUSIKI.T4_HADITHI.d",
      "letter": "d",
      "text": "kufurahia uchambuzi na uwasilishaji wa visasili ili kujenga umahiri katika fasihi simulizi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA",
@@ -896,41 +1004,54 @@
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.a",
      "letter": "a",
      "text": "kutambua vipengele vya kusoma kwa ufasaha ili kuvibainisha",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.b",
      "letter": "b",
      "text": "kusoma kifungu kwa kuzingatia matamshi bora",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.c",
      "letter": "c",
      "text": "kusoma kifungu kwa kasi ifaayo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.d",
      "letter": "d",
      "text": "kusoma kifungu kwa kutumia sauti ipasavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.e",
      "letter": "e",
      "text": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA.f",
      "letter": "f",
      "text": "kuchangamkia kusoma kifungu kwa kuzingatia vipengele vya usomaji",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T4_INSHA_ZA_KUBUNI",
@@ -995,17 +1116,24 @@
      "code": "KISW.G8.KUANDI.T4_INSHA_ZA_KUBUNI.d",
      "letter": "d",
      "text": "kuandika insha ya masimulizi akizingatia mbinu za lugha, wahusika wanaobainika na mandhari ifaavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T4_INSHA_ZA_KUBUNI.e",
      "letter": "e",
      "text": "kufurahia kuandika insha ya masimulizi akizingatia lugha, wahusika na mandhari ifaavyo ili kukuza ubunifu",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI",
@@ -1051,29 +1179,44 @@
      "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.a",
      "letter": "a",
      "text": "kueleza maana ya hali ya mazoea na timilifu",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.b",
      "letter": "b",
      "text": "kubainisha vitenzi vilivyo katika hali ya mazoea na timilifu katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.c",
      "letter": "c",
      "text": "kutumia hali ya mazoea na timilifu ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI.d",
      "letter": "d",
      "text": "kufurahia kutumia hali ya mazoea na timilifu ipasavyo ili kufanikisha mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO",
@@ -1146,7 +1289,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
@@ -1199,11 +1348,19 @@
      "code": "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c",
      "letter": "c",
      "text": "kuchangamkia kusoma kwa ufahamu ili kukuza uelewa wa habari",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T5_INSHA_YA_MAELEKEZO",
@@ -1268,7 +1425,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI",
@@ -1312,29 +1474,44 @@
      "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.a",
      "letter": "a",
      "text": "kueleza maana ya wakati uliopita hali timilifu na wakati ujao hali timilifu ili kuzipambanua",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.b",
      "letter": "b",
      "text": "kutambua viambishi vya wakati uliopita hali timilifu na wakati ujao hali timilifu katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.c",
      "letter": "c",
      "text": "kutumia wakati uliopita hali timilifu na wakati ujao hali timilifu ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     },
     {
      "code": "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI.d",
      "letter": "d",
      "text": "kuchangamkia kutumia wakati uliopita hali timilifu na wakati ujao hali timilifu ipasavyo ili kufanikisha mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS",
@@ -1374,13 +1551,15 @@
      "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a",
      "letter": "a",
      "text": "kutambua ujumbe katika matini ya kusikiliza",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b",
      "letter": "b",
      "text": "kueleza uhusiano kati ya ujumbe wa matini na maisha ya kila siku",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c",
@@ -1392,11 +1571,18 @@
      "code": "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.d",
      "letter": "d",
      "text": "kujenga mazoea ya kuhusisha ujumbe katika matini na hali ya maisha ya kila siku",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT",
@@ -1450,13 +1636,15 @@
      "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.b",
      "letter": "b",
      "text": "kutambua maudhui na dhamira katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.c",
      "letter": "c",
      "text": "kujadili maudhui na dhamira katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT.d",
@@ -1466,7 +1654,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI",
@@ -1517,29 +1712,38 @@
      "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kubainisha aina za insha ya mdokezo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kujadili vipengele vya insha ya mdokezo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.d",
      "letter": "d",
      "text": "kuandika insha ya mdokezo kwa kuzingatia vipengele vya uandishi husika",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI.e",
      "letter": "e",
      "text": "kufurahia kuandika insha za mdokezo ili kukuza ubunifu",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T6_VIVUMISHI",
@@ -1584,13 +1788,15 @@
      "code": "KISW.G8.SARUFI.T6_VIVUMISHI.a",
      "letter": "a",
      "text": "kutambua vivumishi vya sifa na viashiria/vionyeshi katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T6_VIVUMISHI.b",
      "letter": "b",
      "text": "kutumia vivumishi vya sifa na viashiria/vionyeshi ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T6_VIVUMISHI.c",
@@ -1600,7 +1806,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T7_USIKILIZAJI_HUSISHI",
@@ -1663,7 +1880,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T7_",
@@ -1712,13 +1935,15 @@
      "code": "KISW.G8.KUSOMA.T7_.b",
      "letter": "b",
      "text": "kujadili vipengele vya ufupisho wa kifungu",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "KISW.G8.RUBRIC.2.5"
     },
     {
      "code": "KISW.G8.KUSOMA.T7_.c",
      "letter": "c",
      "text": "kufupisha kifungu akizingatia vipengele vya ufupisho",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "KISW.G8.RUBRIC.2.5"
     },
     {
      "code": "KISW.G8.KUSOMA.T7_.d",
@@ -1728,7 +1953,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI",
@@ -1770,29 +2002,38 @@
      "code": "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI.a",
      "letter": "a",
      "text": "kutambua tamathali mbalimbali za lugha katika insha ya maelezo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kueleza jinsi tamathali mbalimbali za lugha zinavyochangia kujenga picha dhahiri katika insha ya maelezo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kuandika insha ya maelezo akitumia tamathali mbalimbali za lugha ili kujenga picha dhahiri",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI.d",
      "letter": "d",
      "text": "kufurahia kuandika insha za maelezo akitumia tamathali mbalimbali za lugha ili kujenga picha dhahiri",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T7_VIVUMISHI",
@@ -1836,13 +2077,15 @@
      "code": "KISW.G8.SARUFI.T7_VIVUMISHI.a",
      "letter": "a",
      "text": "kutambua vivumishi vimilikishi na vya idadi katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T7_VIVUMISHI.b",
      "letter": "b",
      "text": "kutumia vivumishi vimilikishi na vya idadi ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T7_VIVUMISHI.c",
@@ -1852,7 +2095,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_",
@@ -1892,29 +2146,39 @@
      "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.a",
      "letter": "a",
      "text": "kueleza maana ya uzungumzaji wa papo kwa hapo ili kuupambanua",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.b",
      "letter": "b",
      "text": "kutambua vipengele vya kuzingatia katika uzungumzaji wa papo kwa hapo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.c",
      "letter": "c",
      "text": "kutoa uzungumzaji wa papo kwa hapo kwa kuzingatia vipengele vifaavyo vya uzungumzaji",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_.d",
      "letter": "d",
      "text": "kuchangamkia kutoa uzungumzaji wa papo kwa hapo ili kufanikisha mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT",
@@ -1963,7 +2227,8 @@
      "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.a",
      "letter": "a",
      "text": "kutambua mandhari na ploti katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.b",
@@ -1975,17 +2240,26 @@
      "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.c",
      "letter": "c",
      "text": "kujadili mandhari na ploti ya tamthilia aliyosoma",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT.d",
      "letter": "d",
      "text": "kuchangamkia nafasi ya mandhari na ploti katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T8_VIAKIFISHI",
@@ -2046,7 +2320,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_",
@@ -2093,7 +2372,8 @@
      "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.a",
      "letter": "a",
      "text": "kutambua viambishi vya upatanisho wa kisarufi vya ngeli ya I-ZI na I-I katika sentensi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     },
     {
      "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.b",
@@ -2105,17 +2385,30 @@
      "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.c",
      "letter": "c",
      "text": "kutumia nomino za ngeli ya I-ZI na I-I katika matini kwa kuzingatia upatanisho ufaao wa kisarufi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     },
     {
      "code": "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_.d",
      "letter": "d",
      "text": "kuchangamkia kutumia nomino za ngeli ya I-ZI na I-I ipasavyo katika sentensi na vifungu ili kuimarisha mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA",
@@ -2170,17 +2463,25 @@
      "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.c",
      "letter": "c",
      "text": "kutumia maneno yenye sauti /ch/ na /sh/ ipasavyo katika matini ili kuyatofautisha kimatamshi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA.d",
      "letter": "d",
      "text": "kuchangamkia matamshi bora ya sauti /ch/ na /sh/katika mazungumzo ya kawaida ili kufanikisha mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
@@ -2234,7 +2535,8 @@
      "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c",
      "letter": "c",
      "text": "kueleza maana ya msamiati na vifungu vya maneno katika kifungu cha ufahamu cha kushawishi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.1"
     },
     {
      "code": "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d",
@@ -2250,7 +2552,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI",
@@ -2296,19 +2605,22 @@
      "code": "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI.a",
      "letter": "a",
      "text": "kutambua vipengele vinavyozingatiwa kujenga wazo katika insha ya masimulizi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kujadili vipengele vinavyojenga wazo katika aya kuhusu insha ya masimulizi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kuandika insha ya masimulizi akikuza wazo katika aya ipasavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI.d",
@@ -2318,7 +2630,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_",
@@ -2366,7 +2683,8 @@
      "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.a",
      "letter": "a",
      "text": "kutambua viambishi vya upatanisho wa kisarufi wa ngeli ya U-U na U-YA katika sentensi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     },
     {
      "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.b",
@@ -2378,17 +2696,30 @@
      "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.c",
      "letter": "c",
      "text": "kutumia nomino za ngeli ya U-U na U-YA katika matini kwa kuzingatia upatanisho ufaao wa kisarufi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     },
     {
      "code": "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_.d",
      "letter": "d",
      "text": "kuchangamkia kutumia nomino katika ngeli ya U-U na U-YA ipasavyo ili kuimarisha umilisi wa lugha",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T10_HADITHI",
@@ -2441,7 +2772,8 @@
      "code": "KISW.G8.KUSIKI.T10_HADITHI.b",
      "letter": "b",
      "text": "kueleza ujumbe katika hurafa na hekaya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.4"
     },
     {
      "code": "KISW.G8.KUSIKI.T10_HADITHI.c",
@@ -2459,11 +2791,18 @@
      "code": "KISW.G8.KUSIKI.T10_HADITHI.e",
      "letter": "e",
      "text": "kufurahia hurafa na hekaya kama vipera vya fasihi simulizi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA",
@@ -2531,7 +2870,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB",
@@ -2573,19 +2919,22 @@
      "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.a",
      "letter": "a",
      "text": "kutambua vipengele vya kimuundo vya barua rasmi ya kuomba msaada",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.b",
      "letter": "b",
      "text": "kutambua ujumbe katika barua rasmi ya kuomba msaada",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.c",
      "letter": "c",
      "text": "kuandika barua rasmi ya kuomba msaada kwa kuzingatia ujumbe, muundo na lugha ifaayo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB.d",
@@ -2595,7 +2944,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_",
@@ -2645,23 +2999,37 @@
      "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.b",
      "letter": "b",
      "text": "kutambua vinyume vya vitenzi na vielezi katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.c",
      "letter": "c",
      "text": "kutumia vinyume vya vitenzi na vielezi ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     },
     {
      "code": "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_.d",
      "letter": "d",
      "text": "kuchangamkia kutumia vinyume vya vitenzi na vielezi katika mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM",
@@ -2704,19 +3072,22 @@
      "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.a",
      "letter": "a",
      "text": "kutambua umuhimu wa kuzungumza kwa kutumia vidokezo vya hoja",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.b",
      "letter": "b",
      "text": "kutambua miktadha katika jamii ambapo kuzungumza kwa kutumia vidokezo vya hoja hufanywa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.c",
      "letter": "c",
      "text": "kujadili vipengele vya kuzingatia katika kuzungumza kwa kutumia vidokezo vya hoja",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.3"
     },
     {
      "code": "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM.d",
@@ -2732,7 +3103,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T11_KUSOMA_KWA_MAPANA",
@@ -2789,7 +3166,8 @@
      "code": "KISW.G8.KUSOMA.T11_KUSOMA_KWA_MAPANA.c",
      "letter": "c",
      "text": "kutambua maana za msamiati na matumizi mengine ya lugha katika matini ya kujichagulia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.4"
     },
     {
      "code": "KISW.G8.KUSOMA.T11_KUSOMA_KWA_MAPANA.d",
@@ -2799,7 +3177,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI",
@@ -2842,23 +3227,31 @@
      "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.a",
      "letter": "a",
      "text": "kujadili vipengele vya insha ya maelezo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kuandika insha ya maelezo ipasavyo kwa kuzingatia vipengele vyake",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kufurahia kuandika insha za maelezo katika maisha ya kila siku",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN",
@@ -2903,23 +3296,37 @@
      "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.a",
      "letter": "a",
      "text": "kutambua kauli ya kutendeka, kutendewa na kutendatenda katika vitenzi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.5"
     },
     {
      "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.b",
      "letter": "b",
      "text": "kutumia vitenzi katika kauli ya kutendeka, kutendewa na kutendatenda ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.5"
     },
     {
      "code": "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN.c",
      "letter": "c",
      "text": "kuchangamkia kutumia vitenzi katika kauli ya kutendeka, kutendewa na kutendatenda ipasavyo ili kuimarisha mawasiliano. masuala mtambuko mbalimbali",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "KISW.G8.RUBRIC.4.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN",
@@ -2961,19 +3368,22 @@
      "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a",
      "letter": "a",
      "text": "kueleza habari katika matini ya kusikiliza",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b",
      "letter": "b",
      "text": "kudondoa habari muhimu katika matini aliyosikiliza kwa kufuata mpangilio ufaao",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.c",
      "letter": "c",
      "text": "kukadiria maana ya msamiati mahususi na vifungu katika matini ya kusikiliza",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.2"
     },
     {
      "code": "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.d",
@@ -2983,7 +3393,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA",
@@ -3025,31 +3441,36 @@
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.a",
      "letter": "a",
      "text": "kueleza vipengele vya kusoma kwa ufasaha ili kuvibainisha",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.b",
      "letter": "b",
      "text": "kusoma kifungu kwa kuzingatia matamshi bora",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.c",
      "letter": "c",
      "text": "kusoma kifungu kwa kasi ifaayo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.d",
      "letter": "d",
      "text": "kusoma kifungu kwa kutumia sauti ifaayo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.e",
      "letter": "e",
      "text": "kusoma kifungu kwa kuambatanisha ishara zifaazo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.3"
     },
     {
      "code": "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA.f",
@@ -3059,7 +3480,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU",
@@ -3114,13 +3542,15 @@
      "code": "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU.c",
      "letter": "c",
      "text": "kujadili ujumbe, lugha na muundo wa hotuba ya kutoa ufafanuzi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU.d",
      "letter": "d",
      "text": "kuandika hotuba ya kutoa ufafanuzi kwa kuzingatia vipengele vyake",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU.e",
@@ -3130,7 +3560,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI",
@@ -3173,29 +3608,44 @@
      "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.a",
      "letter": "a",
      "text": "kueleza maana ya sentensi changamano ili kuipambanua",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.6"
     },
     {
      "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.b",
      "letter": "b",
      "text": "kutambua sentensi changamano katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.6"
     },
     {
      "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.c",
      "letter": "c",
      "text": "kutumia sentensi changamano ipasavyo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.6"
     },
     {
      "code": "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI.d",
      "letter": "d",
      "text": "kuonea fahari matumizi ya sentensi changamano katika mawasiliano ya kila siku",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.6"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T13_HADITHI",
@@ -3262,7 +3712,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT",
@@ -3305,23 +3761,33 @@
      "code": "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT.a",
      "letter": "a",
      "text": "kutambua mbinu za lugha katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT.b",
      "letter": "b",
      "text": "kueleza umuhimu wa mbinu za lugha zilizotumiwa katika tamthilia",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.2"
     },
     {
      "code": "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT.c",
      "letter": "c",
      "text": "kufurahia kuchanganua matumizi ya mbinu za lugha katika fasihi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI",
@@ -3367,19 +3833,22 @@
      "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.a",
      "letter": "a",
      "text": "kutambua vipengele vya insha ya maelezo kuhusu mahali",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.b",
      "letter": "b",
      "text": "kujadili vipengele vya insha ya maelezo kuhusu mahali",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.c",
      "letter": "c",
      "text": "kuandika insha ya maelezo inayodhihirisha sifa za mahali",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.2"
     },
     {
      "code": "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI.d",
@@ -3389,7 +3858,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN",
@@ -3439,23 +3913,37 @@
      "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.b",
      "letter": "b",
      "text": "kutambua ukanushaji kwa kuzingatia hali ya mazoea na timilifu katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.7"
     },
     {
      "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.c",
      "letter": "c",
      "text": "kukanusha sentensi kwa kuzingatia hali ya mazoea na timilifu",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.7"
     },
     {
      "code": "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN.d",
      "letter": "d",
      "text": "kuchangamkia kukanusha sentensi katika hali ya mazoea na timilifu ili kukuza mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.7"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T14_HADITHI",
@@ -3517,11 +4005,18 @@
      "code": "KISW.G8.KUSIKI.T14_HADITHI.d",
      "letter": "d",
      "text": "kuonea fahari uchanganuzi wa lugha katika hadithi kama utungo wa fasihi simulizi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU",
@@ -3586,7 +4081,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO",
@@ -3646,7 +4148,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO",
@@ -3689,29 +4196,44 @@
      "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.a",
      "letter": "a",
      "text": "kutambua nomino katika hali ya udogo katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.8"
     },
     {
      "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.b",
      "letter": "b",
      "text": "kubadilisha nomino za hali ya wastani kuwa katika hali ya udogo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.8"
     },
     {
      "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.c",
      "letter": "c",
      "text": "kutumia nomino katika hali ya udogo ipasavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.8"
     },
     {
      "code": "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO.d",
      "letter": "d",
      "text": "kuonea fahari kutumia nomino katika hali ya udogo katika sentensi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.8"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
   },
   {
    "code": "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI",
@@ -3782,7 +4304,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.1.1",
+    "KISW.G8.RUBRIC.1.2",
+    "KISW.G8.RUBRIC.1.3",
+    "KISW.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "KISW.G8.KUSOMA.T15_UFUPISHO",
@@ -3823,19 +4351,22 @@
      "code": "KISW.G8.KUSOMA.T15_UFUPISHO.a",
      "letter": "a",
      "text": "kueleza kwa usahihi ujumbe wa aya za matini kwa sentensi mojamoja",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.4"
     },
     {
      "code": "KISW.G8.KUSOMA.T15_UFUPISHO.b",
      "letter": "b",
      "text": "kueleza kwa usahihi ujumbe wa aya zote za matini kwa aya moja",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.4"
     },
     {
      "code": "KISW.G8.KUSOMA.T15_UFUPISHO.c",
      "letter": "c",
      "text": "kuandika ufupisho unaozingatia mtazamo wa matini ya kufupishwa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.2.5"
     },
     {
      "code": "KISW.G8.KUSOMA.T15_UFUPISHO.d",
@@ -3845,7 +4376,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.2.1",
+    "KISW.G8.RUBRIC.2.2",
+    "KISW.G8.RUBRIC.2.3",
+    "KISW.G8.RUBRIC.2.4",
+    "KISW.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI",
@@ -3886,35 +4424,45 @@
      "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.a",
      "letter": "a",
      "text": "kutambua ujumbe unaoafiki baruapepe ya kiofisi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.b",
      "letter": "b",
      "text": "kutambua vipengele vya kimuundo vya baruapepe ya kiofisi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.c",
      "letter": "c",
      "text": "kutumia lugha inayofaa katika uandishi wa baruapepe ya kiofisi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.d",
      "letter": "d",
      "text": "kuandika baruapepe ya kiofisi kwa kuzingatia ujumbe, lugha na muundo ufaao",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     },
     {
      "code": "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI.e",
      "letter": "e",
      "text": "kujenga mazoea ya kuwasiliana kwa kuandika baruapepe ya kiofisi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.3.1",
+    "KISW.G8.RUBRIC.3.2",
+    "KISW.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM",
@@ -3956,29 +4504,398 @@
      "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.a",
      "letter": "a",
      "text": "kutambua usemi halisi na usemi wa taarifa katika matini",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.9"
     },
     {
      "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.b",
      "letter": "b",
      "text": "kujadili kanuni za kubadilisha usemi halisi kuwa usemi wa taarifa kwa kuzingatia kanuni za kubadilisha usemi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.9"
     },
     {
      "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.c",
      "letter": "c",
      "text": "kutumia usemi halisi na usemi wa taarifa ifaavyo",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.9"
     },
     {
      "code": "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM.d",
      "letter": "d",
      "text": "kuchangamkia matumizi ya usemi halisi na usemi wa taarifa katika mawasiliano",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "KISW.G8.RUBRIC.4.9"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "KISW.G8.RUBRIC.4.1",
+    "KISW.G8.RUBRIC.4.2",
+    "KISW.G8.RUBRIC.4.3",
+    "KISW.G8.RUBRIC.4.4",
+    "KISW.G8.RUBRIC.4.5",
+    "KISW.G8.RUBRIC.4.6",
+    "KISW.G8.RUBRIC.4.7",
+    "KISW.G8.RUBRIC.4.8",
+    "KISW.G8.RUBRIC.4.9"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "KISW.G8.RUBRIC.1",
+   "heading": "Mwongozo wa viwango na vigezo vya kutathmini: Kusikiliza na Kuzungumza",
+   "strand": "Kusikiliza na Kuzungumza",
+   "covers": [
+    "KISW.G8.KUSIKI.T1_KUSIKILIZA_NA_KUJIBU",
+    "KISW.G8.KUSIKI.T2_KUSIKILIZA_KWA_KINA",
+    "KISW.G8.KUSIKI.T3_HADITHI",
+    "KISW.G8.KUSIKI.T4_HADITHI",
+    "KISW.G8.KUSIKI.T5_KUSIKILIZA_MAAGIZO",
+    "KISW.G8.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS",
+    "KISW.G8.KUSIKI.T7_USIKILIZAJI_HUSISHI",
+    "KISW.G8.KUSIKI.T8_UZUNGUMZAJI_WA_PAPO_",
+    "KISW.G8.KUSIKI.T9_KUSIKILIZA_KWA_KINA",
+    "KISW.G8.KUSIKI.T10_HADITHI",
+    "KISW.G8.KUSIKI.T11_KUZUNGUMZA_KWA_KUTUM",
+    "KISW.G8.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN",
+    "KISW.G8.KUSIKI.T13_HADITHI",
+    "KISW.G8.KUSIKI.T14_HADITHI",
+    "KISW.G8.KUSIKI.T15_USIKILIZAJI_HUSISHI"
+   ],
+   "page": 143,
+   "indicators": [
+    {
+     "code": "KISW.G8.RUBRIC.1.1",
+     "indicator": "Kuweza kusikiliza na kujibu ipasavyo. (Mahojiano, maagizo, usikilizaji husishi, kusikiliza kwa makini)",
+     "levels": {
+      "EE": "Anasikiliza na kujibu ipasavyo akizingatia aina kusikiliza na kujibu kwa wepesi.",
+      "ME": "Anasikiliza na kujibu ipasavyo akizingatia aina kusikiliza na kujibu.",
+      "AE": "Anasikiliza na kujibu ipasavyo akizingatia baadhi ya aina za kusikiliza na kujibu.",
+      "BE": "Anasikiliza na kujibu ipasavyo akizingatia baadhi ya aina za kusikiliza na kujibu kwa kuelekezwa."
+     },
+     "page": 143,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.1.2",
+     "indicator": "Kuweza kusikiliza na kufasiri ujumbe. (Kutambua ujumbe, kuuhusisha ujumbe katika matini na maisha ya kila siku) Kusikiliza kwa kina. (Matamshi ya sauti /ch/ na /sh/)",
+     "levels": {
+      "EE": "Anasikiliza na kufasiri ujumbe na kuuhusisha na maisha ya kila siku kwa utondoti. Anasikiliza na kutambua sauti lengwa na kuzitamka kwa ufasaha.",
+      "ME": "Anasikiliza na kufasiri ujumbe na kuuhusisha na maisha ya kila siku. Anasikiliza na kutambua sauti lengwa na kuzitamka.",
+      "AE": "Anasikiliza na kufasiri ujumbe na kuuhusisha na maisha ya kila siku kwa kiasi. Anasikiliza na kutambua baadhi ya sauti lengwa na kuzitamka.",
+      "BE": "Anasikiliza na kufasiri ujumbe na kuuhusisha na maisha ya kila siku kwa kiasi akielekezwa. Anasikiliza na kutambua baadhi ya sauti lengwa na kuzitamka akiongozwa."
+     },
+     "page": 143,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.1.3",
+     "indicator": "Kuweza kuzungumza na kujieleza kwa ufasaha. (Uzungumzaji wa papo kwa hapo, uzungumzaji wa kutumia vidokezo)",
+     "levels": {
+      "EE": "Anazungumza na kujieleza kwa ufasaha akizingatia aina mbalimbali za uzungumzaji kwa ubunifu.",
+      "ME": "Anazungumza na kujieleza kwa ufasaha akizingatia aina mbalimbali za uzungumzaji.",
+      "AE": "Anazungumza na kujieleza kwa ufasaha akizingatia baadhi ya aina za uzungumzaji.",
+      "BE": "Anazungumza na kujieleza kwa ufasaha akizingatia baadhi ya aina za uzungumzaji akielekezwa."
+     },
+     "page": 144,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.1.4",
+     "indicator": "Kuweza kuwasilisha ujumbe na fani katika tungo za fasihi. (Hadithi: mighani, visasili, hurafa, hekaya)",
+     "levels": {
+      "EE": "Anawasilisha ujumbe na fani katika tungo kwa ubunifu.",
+      "ME": "Anawasilisha ujumbe na fani katika tungo fasihi.",
+      "AE": "Anawasilisha ujumbe na fani katika baadhi ya tungo za fasihi.",
+      "BE": "Anawasilisha ujumbe na fani katika baadhi ya tungo za fasihi kwa kusaidiwa."
+     },
+     "page": 144,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "KISW.G8.RUBRIC.2",
+   "heading": "Mwongozo wa viwango na vigezo vya kutathmini: Kusoma",
+   "strand": "Kusoma",
+   "covers": [
+    "KISW.G8.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+    "KISW.G8.KUSOMA.T2_KUSOMA_KWA_MAPANA",
+    "KISW.G8.KUSOMA.T3_KUSOMA_KWA_KINA",
+    "KISW.G8.KUSOMA.T4_KUSOMA_KWA_UFASAHA",
+    "KISW.G8.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+    "KISW.G8.KUSOMA.T6_KUSOMA_KWA_KINA_TAMT",
+    "KISW.G8.KUSOMA.T7_",
+    "KISW.G8.KUSOMA.T8_KUSOMA_KWA_KINA_TAMT",
+    "KISW.G8.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+    "KISW.G8.KUSOMA.T10_KUSOMA_KWA_KINA",
+    "KISW.G8.KUSOMA.T11_KUSOMA_KWA_MAPANA",
+    "KISW.G8.KUSOMA.T12_KUSOMA_KWA_UFASAHA",
+    "KISW.G8.KUSOMA.T13_KUSOMA_KWA_KINA_TAMT",
+    "KISW.G8.KUSOMA.T14_KUSOMA_KWA_UFAHAMU",
+    "KISW.G8.KUSOMA.T15_UFUPISHO"
+   ],
+   "page": 145,
+   "indicators": [
+    {
+     "code": "KISW.G8.RUBRIC.2.1",
+     "indicator": "Kuweza kusoma kwa ufahamu – Vifungu simulizi, mjadala, shawishi. (ujumbe na msamiati)",
+     "levels": {
+      "EE": "aina mbalimbali na kutambua ujumbe na msamiati kwa utendeti.",
+      "ME": "aina mbalimbali na kutambua ujumbe na msamiati.",
+      "AE": "vifungu na kutambua ujumbe na msamiati.",
+      "BE": "vifungu na kutambua ujumbe na msamiati kwa kiasi."
+     },
+     "page": 145,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.2.2",
+     "indicator": "Kuweza kusoma kwa kina. (Tamthilia: maudhui, dhamira, mandhari, ploti, wahusika, mbinu za lugha)",
+     "levels": {
+      "EE": "Anasoma tamthilia na kutambua maudhui, dhamira, mandhari, ploti, wahusika na mbinu za lugha kwa kina.",
+      "ME": "Anasoma tamthilia na kutambua maudhui, dhamira, mandhari, ploti, wahusika na mbinu za lugha.",
+      "AE": "Anasoma tamthilia na kutambua baadhi ya yafuatayo; maudhui, dhamira, mandhari, ploti, wahusika na mbinu za lugha.",
+      "BE": "Anasoma tamthilia na kutambua baadhi ya yafuatayo; maudhui, dhamira, mandhari, ploti, wahusika na mbinu za lugha kwa kusaidiwa."
+     },
+     "page": 145,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.2.3",
+     "indicator": "Kuweza kusoma kwa ufasaha. (matamshi bora, kiwango kifaacho cha sauti, kasi ifaayo, ishara zifaazo)",
+     "levels": {
+      "EE": "Anasoma kwa kuzingatia vipengele vya kusoma kwa ufasaha kwa kina.",
+      "ME": "Anasoma kwa kuzingatia vipengele vya kusoma kwa ufasaha.",
+      "AE": "Anasoma kwa kuzingatia baadhi ya vipengele vya kusoma kwa ufasaha.",
+      "BE": "Anasoma kwa kuzingatia baadhi ya vipengele vya kusoma kwa ufasaha kwa kuelekezwa."
+     },
+     "page": 145,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.2.4",
+     "indicator": "Kuweza kusoma kwa mapana. (Kutambua na kuchagua matini ya kusoma, kutambua ujumbe, msamiati na matumizi ya lugha)",
+     "levels": {
+      "EE": "Anasoma matini ya kujichagulia na kutambua vipengele vinavyozingatiwa kwa mapana. Anatambua vipengele",
+      "ME": "Anasoma matini ya kujichagulia na kutambua vipengele vinavyozingatiwa. Anatambua vipengele",
+      "AE": "Anasoma matini ya kujichagulia na kutambua baadhi ya vipengele vinavyozingatiwa. Anatambua baadhi ya",
+      "BE": "Anasoma matini ya kujichagulia na kutambua baadhi ya vipengele vinavyozingatiwa kwa kusaidiwa. Anatambua baadhi ya"
+     },
+     "page": 146,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.2.5",
+     "indicator": "Kuweza kutambua vipengele vya ufupisho na kufupisha matini.",
+     "levels": {
+      "EE": "vya ufupisho na kufupisha matini kwa wepesi.",
+      "ME": "vya ufupisho na kufupisha matini.",
+      "AE": "vipengele vya ufupisho na kufupisha matini.",
+      "BE": "vipengele vya ufupisho na kufupisha matini kwa kuongozwa."
+     },
+     "page": 146,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "KISW.G8.RUBRIC.3",
+   "heading": "Mwongozo wa viwango na vigezo vya kutathmini: Kuandika",
+   "strand": "Kuandika",
+   "covers": [
+    "KISW.G8.KUANDI.T1_VIAKIFISHI",
+    "KISW.G8.KUANDI.T2_BARUA_YA_KIRAFIKI",
+    "KISW.G8.KUANDI.T3_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T4_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T5_INSHA_YA_MAELEKEZO",
+    "KISW.G8.KUANDI.T6_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T7_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T8_VIAKIFISHI",
+    "KISW.G8.KUANDI.T9_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T10_BARUA_RASMI_YA_KUOMB",
+    "KISW.G8.KUANDI.T11_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T12_INSHA_ZA_KIUAMILIFU",
+    "KISW.G8.KUANDI.T13_INSHA_ZA_KUBUNI",
+    "KISW.G8.KUANDI.T14_INSHA_ZA_MAELEKEZO",
+    "KISW.G8.KUANDI.T15_BARUAPEPE_YA_KIOFISI"
+   ],
+   "page": 147,
+   "indicators": [
+    {
+     "code": "KISW.G8.RUBRIC.3.1",
+     "indicator": "Kuweza kutumia viakifishi ya hisi, ritifaa, mtajo, mshazari)",
+     "levels": {
+      "EE": "kuakifisha kikamilifu na kwa wepesi.",
+      "ME": "kuakifisha kikamilifu.",
+      "AE": "alama za kuakifisha kikamilifu.",
+      "BE": "kuakifisha kwa kusaidiwa."
+     },
+     "page": 147,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.3.2",
+     "indicator": "Kuweza kuandika aina mbalimbali za insha za kubuni. (Masimulizi, maelezo, mdokezo) kwa kuzingatia vipengele vifuatavyo: muundo, ujumbe, mtindo na kanuni zifaazo za uandishi.",
+     "levels": {
+      "EE": "Anaandika aina kwa kuzingatia vipengele vifaavyo vya uandishi kwa utondoti.",
+      "ME": "Anaandika aina kwa kuzingatia vipengele vifaavyo vya uandishi.",
+      "AE": "Anaandika aina kwa kuzingatia baadhi ya vipengele vifaavyo vya uandishi.",
+      "BE": "Anaandika aina mbalimbali za insha kwa kuzingatia baadhi ya vipengele vifaavyo vya uandishi kwa kuongozwa."
+     },
+     "page": 147,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.3.3",
+     "indicator": "Kuweza kuandika aina mbalimbali za insha za kiuamilifu. (Maelekezo, barua ya kirafiki ya kutoa shukrani, hotuba, barua ya kuomba msamaha, baruapepe ya kiofisi) kwa kuzingatia vipengele vifuatavyo: muundo, ujumbe, mtindo na kanuni zifaazo za uandishi.",
+     "levels": {
+      "EE": "Anaandika aina za kiuamilifu kwa kuzingatia vipengele vifaavyo vya uandishi kwa utondoti.",
+      "ME": "Anaandika aina za kiuamilifu kwa kuzingatia vipengele vifaavyo vya uandishi.",
+      "AE": "Anaandika baadhi ya insha za kiuamilifu kwa kuzingatia baadhi ya vipengele vifaavyo vya uandishi.",
+      "BE": "Anaandika baadhi ya insha za kiuamilifu kwa kuzingatia baadhi ya vipengele vifaavyo vya uandishi kwa kuongozwa."
+     },
+     "page": 148,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "KISW.G8.RUBRIC.4",
+   "heading": "Mwongozo wa viwango na vigezo vya kutathmini: Sarufi",
+   "strand": "Sarufi",
+   "covers": [
+    "KISW.G8.SARUFI.T1_VIWAKILISHI",
+    "KISW.G8.SARUFI.T2_VIWAKILISHI",
+    "KISW.G8.SARUFI.T3_VIWAKILISHI",
+    "KISW.G8.SARUFI.T4_NYAKATI_NA_HALI",
+    "KISW.G8.SARUFI.T5_NYAKATI_NA_HALI",
+    "KISW.G8.SARUFI.T6_VIVUMISHI",
+    "KISW.G8.SARUFI.T7_VIVUMISHI",
+    "KISW.G8.SARUFI.T8_NGELI_NA_UPATANISHO_",
+    "KISW.G8.SARUFI.T9_NGELI_NA_UPATANISHO_",
+    "KISW.G8.SARUFI.T10_VINYUME_VYA_VITENZI_",
+    "KISW.G8.SARUFI.T11_MNYAMBULIKO_WA_VITEN",
+    "KISW.G8.SARUFI.T12_AINA_ZA_SENTENSI",
+    "KISW.G8.SARUFI.T13_UKANUSHAJI_KWA_KUZIN",
+    "KISW.G8.SARUFI.T14_UDOGO_WA_NOMINO",
+    "KISW.G8.SARUFI.T15_USEMI_HALISI_NA_USEM"
+   ],
+   "page": 149,
+   "indicators": [
+    {
+     "code": "KISW.G8.RUBRIC.4.1",
+     "indicator": "Kuweza kutambua na kutumia aina maneno katika lugha ya Kiswahili. (Aina mbalimbali za viwakilishi na vivumishi)",
+     "levels": {
+      "EE": "Anatambua na kutumia aina mbalimbali za maneno katika lugha ya Kiswahili kwa uketo.",
+      "ME": "Anatambua na kutumia aina mbalimbali za maneno katika lugha ya Kiswahili.",
+      "AE": "Anatambua na kutumia baadhi ya aina za maneno katika lugha ya Kiswahili.",
+      "BE": "Anatambua na kutumia baadhi ya aina za maneno katika lugha ya Kiswahili kwa kuelekezwa."
+     },
+     "page": 149,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.2",
+     "indicator": "Kuweza kutambua na kutumia viambishi vya nyakati na hali katika vitenzi. (Hali ya mazoea, timilifu, wakati uliopita hali timilifu, wakati ujao hali timilifu)",
+     "levels": {
+      "EE": "Anatambua na kutumia viambishi vya nyakati na hali katika vitenzi kwa uketo.",
+      "ME": "Anatambua na kutumia viambishi vya nyakati na hali katika vitenzi.",
+      "AE": "Anatambua na kutumia baadhi ya viambishi vya nyakati na hali katika vitenzi.",
+      "BE": "Anatambua na kutumia baadhi ya viambishi vya nyakati na hali katika vitenzi kwa kuelekezwa."
+     },
+     "page": 149,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.3",
+     "indicator": "Kuweza kutambua viambishi vya ngeli, ngeli za nomino na kutumia upatanisho wa kisarufi ipasavyo. (I – ZI, I – I, U – U na U – YA)",
+     "levels": {
+      "EE": "vya ngeli, ngeli za nomino na kutumia upatanisho wa kisarufi ipasavyo na kwa kina. Anatambua vinyume vya",
+      "ME": "vya ngeli, ngeli za nomino na kutumia upatanisho wa kisarufi ipasavyo. Anatambua vinyume",
+      "AE": "viambishi vya ngeli, ngeli za nomino na kutumia upatanisho wa kisarufi ipasavyo. Anatambua vinyume",
+      "BE": "viambishi vya ngeli, ngeli za nomino na kutumia kwa kiasi upatanisho wa kisarufi ipasavyo. Anatambua vinyume"
+     },
+     "page": 150,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.4",
+     "indicator": "Kuweza kutambua vinyume vya vitenzi na vielezi na kuvitumia katika matini.",
+     "levels": {
+      "EE": "vitenzi na vielezi na kuvitumia katika matini kwa wepesi.",
+      "ME": "vya vitenzi na vielezi na kuvitumia katika matini.",
+      "AE": "vya baadhi ya vitenzi na vielezi na kuvitumia katika matini.",
+      "BE": "vya baadhi ya vitenzi na vielezi na kuvitumia katika matini kwa kusaidiwa."
+     },
+     "page": 150,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.5",
+     "indicator": "Kuweza kutambua na kutumia vitenzi katika kauli (Kutenda, kutendwa na kutendatenda)",
+     "levels": {
+      "EE": "Anatambua na kutumia vitenzi katika kauli",
+      "ME": "Anatambua na kutumia vitenzi katika kauli",
+      "AE": "Anatambua na kutumia vitenzi katika baadhi ya kauli.",
+      "BE": "Anatambua na kutumia vitenzi katika baadhi ya kauli kwa kusaidiwa."
+     },
+     "page": 150,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.6",
+     "indicator": "Kuweza kutambua na kutumia sentensi changamano.",
+     "levels": {
+      "EE": "Anatambua na kutumia sentensi changamano katika matini kwa uketo.",
+      "ME": "Anatambua na kutumia sentensi changamano katika matini.",
+      "AE": "Anatambua na kutumia baadhi ya sentensi changamano katika matini.",
+      "BE": "Anatambua na kutumia baadhi ya sentensi changamano katika matini kwa kuelekezwa."
+     },
+     "page": 151,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.7",
+     "indicator": "Kuweza kutambua maneno yaliyokanushwa, viambishi vya ukanushaji na kukanusha maneno kwa kuzingatia hali ya mazoea na timilifu.",
+     "levels": {
+      "EE": "Anatambua maneno yaliyokanushwa, viambishi vya ukanushaji na kukanusha kwa kuzingatia hali ya mazoea na timilifu ipasavyo na kwa wepesi.",
+      "ME": "Anatambua maneno yaliyokanushwa, viambishi vya ukanushaji na kukanusha kwa kuzingatia hali ya mazoea na timilifu ipasavyo.",
+      "AE": "Anatambua maneno yaliyokanushwa, viambishi vya ukanushaji na kukanusha kwa kiasi kwa kuzingatia hali ya mazoea na timilifu ipasavyo.",
+      "BE": "Anatambua maneno yaliyokanushwa, viambishi vya ukanushaji na kukanusha kwa kiasi kwa kuzingatia hali ya mazoea na timilifu kwa kusaidiwa."
+     },
+     "page": 151,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.8",
+     "indicator": "Kuweza kutambua na kutumia nomino katika hali ya ukubwa na udogo.",
+     "levels": {
+      "EE": "Anatambua na kutumia nomino katika hali ya ukubwa na udogo kwa ufasaha.",
+      "ME": "Anatambua na kutumia nomino katika hali ya ukubwa na udogo.",
+      "AE": "Anatambua na kutumia baadhi ya nomino katika hali ya ukubwa na udogo.",
+      "BE": "Anatambua na kutumia baadhi ya nomino katika hali ya ukubwa na udogo akielekezwa."
+     },
+     "page": 151,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "KISW.G8.RUBRIC.4.9",
+     "indicator": "Kuweza kutumia usemi halisi na usemi wa taarifa.",
+     "levels": {
+      "EE": "Anatumia usemi halisi na usemi wa taarifa katika matini kikamilifu kwa wepesi.",
+      "ME": "Anatumia usemi halisi na usemi wa taarifa katika matini kikamilifu",
+      "AE": "Anatumia kwa kiasi usemi halisi na usemi wa taarifa katika matini kikamilifu.",
+      "BE": "Anatumia kwa kiasi usemi halisi na usemi wa taarifa katika matini kwa kuongozwa."
+     },
+     "page": 151,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

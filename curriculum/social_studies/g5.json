@@ -59,19 +59,22 @@
      "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a",
      "letter": "a",
      "text": "identify key elements of a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.b",
      "letter": "b",
      "text": "illustrate key elements of a map on a sketch",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c",
      "letter": "c",
      "text": "interpret features in a map using key elements",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.d",
@@ -81,7 +84,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.1.1",
+    "SOCI.G5.RUBRIC.1.2",
+    "SOCI.G5.RUBRIC.1.3",
+    "SOCI.G5.RUBRIC.1.4",
+    "SOCI.G5.RUBRIC.1.5",
+    "SOCI.G5.RUBRIC.1.6"
+   ]
   },
   {
    "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI",
@@ -129,17 +140,27 @@
      "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b",
      "letter": "b",
      "text": "locate the position of Kenya in relation to her neighbours using a compass direction",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.3"
     },
     {
      "code": "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.c",
      "letter": "c",
      "text": "value good relations between Kenya and her neighbours",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.1.1",
+    "SOCI.G5.RUBRIC.1.2",
+    "SOCI.G5.RUBRIC.1.3",
+    "SOCI.G5.RUBRIC.1.4",
+    "SOCI.G5.RUBRIC.1.5",
+    "SOCI.G5.RUBRIC.1.6"
+   ]
   },
   {
    "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I",
@@ -183,23 +204,34 @@
      "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a",
      "letter": "a",
      "text": "identify main physical features in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b",
      "letter": "b",
      "text": "show main physical features in Kenya on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.c",
      "letter": "c",
      "text": "value physical features found in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.1.1",
+    "SOCI.G5.RUBRIC.1.2",
+    "SOCI.G5.RUBRIC.1.3",
+    "SOCI.G5.RUBRIC.1.4",
+    "SOCI.G5.RUBRIC.1.5",
+    "SOCI.G5.RUBRIC.1.6"
+   ]
   },
   {
    "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
@@ -246,13 +278,15 @@
      "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b",
      "letter": "b",
      "text": "show main climatic regions in Kenya on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.5"
     },
     {
      "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c",
      "letter": "c",
      "text": "describe characteristics of the main climatic regions in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.d",
@@ -262,7 +296,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.1.1",
+    "SOCI.G5.RUBRIC.1.2",
+    "SOCI.G5.RUBRIC.1.3",
+    "SOCI.G5.RUBRIC.1.4",
+    "SOCI.G5.RUBRIC.1.5",
+    "SOCI.G5.RUBRIC.1.6"
+   ]
   },
   {
    "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS",
@@ -309,29 +351,41 @@
      "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a",
      "letter": "a",
      "text": "identify main historic built environments in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.6"
     },
     {
      "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.b",
      "letter": "b",
      "text": "show main historic built environments in Kenya on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.6"
     },
     {
      "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c",
      "letter": "c",
      "text": "apply strategies to conserve historic built environments for preservation of cultural heritage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.6"
     },
     {
      "code": "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.d",
      "letter": "d",
      "text": "appreciate the need for conserving historic built environments in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.1.6"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.1.1",
+    "SOCI.G5.RUBRIC.1.2",
+    "SOCI.G5.RUBRIC.1.3",
+    "SOCI.G5.RUBRIC.1.4",
+    "SOCI.G5.RUBRIC.1.5",
+    "SOCI.G5.RUBRIC.1.6"
+   ]
   },
   {
    "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA",
@@ -376,29 +430,39 @@
      "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a",
      "letter": "a",
      "text": "identify main language groups in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b",
      "letter": "b",
      "text": "explain benefits of interdependence of language groups in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.c",
      "letter": "c",
      "text": "show the interdependence of language groups in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.d",
      "letter": "d",
      "text": "appreciate the interdependence of language groups",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.2.1",
+    "SOCI.G5.RUBRIC.2.2",
+    "SOCI.G5.RUBRIC.2.3",
+    "SOCI.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_",
@@ -437,13 +501,15 @@
      "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a",
      "letter": "a",
      "text": "explain the effects of population density in different regions in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.3"
     },
     {
      "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b",
      "letter": "b",
      "text": "show areas of high and low population density in Kenya on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.3"
     },
     {
      "code": "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.c",
@@ -453,7 +519,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.2.1",
+    "SOCI.G5.RUBRIC.2.2",
+    "SOCI.G5.RUBRIC.2.3",
+    "SOCI.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC",
@@ -495,29 +567,39 @@
      "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a",
      "letter": "a",
      "text": "identify methods of instruction used in African traditional education",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b",
      "letter": "b",
      "text": "explain the importance of African traditional education in promoting values",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.c",
      "letter": "c",
      "text": "apply African traditional education in promoting values",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.d",
      "letter": "d",
      "text": "appreciate the role of African traditional education in promoting values",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.2.1",
+    "SOCI.G5.RUBRIC.2.2",
+    "SOCI.G5.RUBRIC.2.3",
+    "SOCI.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION",
@@ -569,7 +651,8 @@
      "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c",
      "letter": "c",
      "text": "illustrate administrative structure of a school",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G5.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.d",
@@ -579,7 +662,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.2.1",
+    "SOCI.G5.RUBRIC.2.2",
+    "SOCI.G5.RUBRIC.2.3",
+    "SOCI.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA",
@@ -627,7 +716,8 @@
      "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a",
      "letter": "a",
      "text": "identify resources found in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b",
@@ -649,7 +739,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.MINING_IN_KENYA",
@@ -698,29 +799,44 @@
      "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.a",
      "letter": "a",
      "text": "identify major minerals found in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.b",
      "letter": "b",
      "text": "use the map of Kenya to locate major minerals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.c",
      "letter": "c",
      "text": "examine the importance of minerals in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G5.RESOUR.MINING_IN_KENYA.d",
      "letter": "d",
      "text": "acknowledge the contribution of mining to the economy of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA",
@@ -765,19 +881,22 @@
      "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.a",
      "letter": "a",
      "text": "identify main inland fishing grounds in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.6"
     },
     {
      "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.b",
      "letter": "b",
      "text": "locate main inland fishing grounds in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.6"
     },
     {
      "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.c",
      "letter": "c",
      "text": "explain contribution of fishing to the economy of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G5.RESOUR.FISHING_IN_KENYA.d",
@@ -787,7 +906,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_",
@@ -842,7 +972,8 @@
      "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.b",
      "letter": "b",
      "text": "locate main game reserves and national parks in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.7"
     },
     {
      "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c",
@@ -854,11 +985,23 @@
      "code": "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.d",
      "letter": "d",
      "text": "acknowledge the contribution of wildlife and tourism to the economy of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
@@ -916,13 +1059,15 @@
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c",
      "letter": "c",
      "text": "explore ways of maintaining road safety in society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.4"
     },
     {
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.d",
      "letter": "d",
      "text": "apply safety precautions in using means of transport",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.8"
     },
     {
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.e",
@@ -932,7 +1077,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA",
@@ -983,29 +1139,44 @@
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a",
      "letter": "a",
      "text": "outline main early forms of communication to facilitate social interactions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.5"
     },
     {
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b",
      "letter": "b",
      "text": "explore modern means of communication in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.9"
     },
     {
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.c",
      "letter": "c",
      "text": "illustrate modern means of communication used in their community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.9"
     },
     {
      "code": "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.d",
      "letter": "d",
      "text": "recognise the role of modern means of communication in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.3.9"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.3.1",
+    "SOCI.G5.RUBRIC.3.2",
+    "SOCI.G5.RUBRIC.3.3",
+    "SOCI.G5.RUBRIC.3.4",
+    "SOCI.G5.RUBRIC.3.5",
+    "SOCI.G5.RUBRIC.3.6",
+    "SOCI.G5.RUBRIC.3.7",
+    "SOCI.G5.RUBRIC.3.8",
+    "SOCI.G5.RUBRIC.3.9"
+   ]
   },
   {
    "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K",
@@ -1049,13 +1220,15 @@
      "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a",
      "letter": "a",
      "text": "outline leadership qualities of selected traditional leaders in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b",
      "letter": "b",
      "text": "illustrate contributions of selected traditional leaders in the Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.c",
@@ -1065,7 +1238,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.4.1",
+    "SOCI.G5.RUBRIC.4.2",
+    "SOCI.G5.RUBRIC.4.3",
+    "SOCI.G5.RUBRIC.4.4",
+    "SOCI.G5.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
@@ -1109,29 +1289,40 @@
      "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a",
      "letter": "a",
      "text": "describe early forms of government among selected communities in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b",
      "letter": "b",
      "text": "compare early forms of government of the Maasai and Ameru",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c",
      "letter": "c",
      "text": "apply best practices from early forms of government among selected communities in Kenya to modern governance",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.d",
      "letter": "d",
      "text": "appreciate the importance of early forms of governance in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.4.1",
+    "SOCI.G5.RUBRIC.4.2",
+    "SOCI.G5.RUBRIC.4.3",
+    "SOCI.G5.RUBRIC.4.4",
+    "SOCI.G5.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
@@ -1179,7 +1370,8 @@
      "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b",
      "letter": "b",
      "text": "explain requirements for dual citizenship in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.4.3"
     },
     {
      "code": "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c",
@@ -1195,7 +1387,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.4.1",
+    "SOCI.G5.RUBRIC.4.2",
+    "SOCI.G5.RUBRIC.4.3",
+    "SOCI.G5.RUBRIC.4.4",
+    "SOCI.G5.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G5.POLITI.NATIONAL_GOVERNMENT",
@@ -1254,7 +1453,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.4.1",
+    "SOCI.G5.RUBRIC.4.2",
+    "SOCI.G5.RUBRIC.4.3",
+    "SOCI.G5.RUBRIC.4.4",
+    "SOCI.G5.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA",
@@ -1316,13 +1522,15 @@
      "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.c",
      "letter": "c",
      "text": "illustrate ways of overcoming challenges of national unity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.5.1"
     },
     {
      "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.d",
      "letter": "d",
      "text": "develop national awareness to enhance social cohesion among diverse communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G5.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.e",
@@ -1332,7 +1540,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.5.1",
+    "SOCI.G5.RUBRIC.5.2",
+    "SOCI.G5.RUBRIC.5.3",
+    "SOCI.G5.RUBRIC.5.4"
+   ]
   },
   {
    "code": "SOCI.G5.GOVERN.HUMAN_RIGHTS",
@@ -1402,7 +1616,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.5.1",
+    "SOCI.G5.RUBRIC.5.2",
+    "SOCI.G5.RUBRIC.5.3",
+    "SOCI.G5.RUBRIC.5.4"
+   ]
   },
   {
    "code": "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY",
@@ -1468,7 +1688,423 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G5.RUBRIC.5.1",
+    "SOCI.G5.RUBRIC.5.2",
+    "SOCI.G5.RUBRIC.5.3",
+    "SOCI.G5.RUBRIC.5.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SOCI.G5.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Natural and the Built Environments",
+   "covers": [
+    "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP",
+    "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI",
+    "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I",
+    "SOCI.G5.NATURA.WEATHER_AND_CLIMATE",
+    "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS"
+   ],
+   "page": 24,
+   "indicators": [
+    {
+     "code": "SOCI.G5.RUBRIC.1.1",
+     "indicator": "Ability to describe characteristics of main climatic regions in Kenya.",
+     "levels": {
+      "EE": "Learner describes characteristics of main climatic regions in Kenya in detail and provides relevant examples.",
+      "ME": "Learner describes characteristics of main climatic regions in Kenya.",
+      "AE": "Learner describes characteristics of main climatic regions in Kenya omitting minor details.",
+      "BE": "Learner describes characteristics of main climatic regions in Kenya omitting major details."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.1.2",
+     "indicator": "Ability to illustrate key elements of a map on a sketch.",
+     "levels": {
+      "EE": "Learner illustrates key elements of a map on a sketch with examples.",
+      "ME": "Learner illustrates key elements of a map on a sketch.",
+      "AE": "Leaner illustrates –some key elements of a map on a sketch.",
+      "BE": "Learner can hardly illustrate key elements of a map on a sketch."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.1.3",
+     "indicator": "Ability to locate the position of Kenya in relation to her neighbours using a compass direction.",
+     "levels": {
+      "EE": "Learner locates the position of Kenya in relation to her neighbours using a compass direction with detailed descriptions.",
+      "ME": "Learner locates the position of Kenya in relation to her neighbours using a compass direction.",
+      "AE": "Learner needs help to locate the position of Kenya in relation to her neighbours using a compass direction.",
+      "BE": "Learner can hardly locate the position of Kenya in relation to her neighbours using a compass direction even with help."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.1.4",
+     "indicator": "Ability to locate the main physical features in Kenya on a map.",
+     "levels": {
+      "EE": "Learner locates the main physical features in Kenya on a map with detailed descriptions.",
+      "ME": "Learner locates the main physical features in Kenya on a map.",
+      "AE": "Learner locates some of the main physical features in Kenya on a map.",
+      "BE": "Learner can hardly locate the main physical features in Kenya on a map."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.1.5",
+     "indicator": "Ability to show main climatic regions in Kenya on a map.",
+     "levels": {
+      "EE": "Learner shows the main climatic regions in Kenya on a map and provides direction.",
+      "ME": "Learner shows the main climatic regions in Kenya on a map.",
+      "AE": "Learner needs help to show the main climatic regions in Kenya on a map.",
+      "BE": "Learner can hardly show the main climatic regions in Kenya on a map."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.1.6",
+     "indicator": "Ability to show the main historic built environments in Kenya on a map.",
+     "levels": {
+      "EE": "Learner shows the main historic built environments in Kenya on a map with detailed descriptions.",
+      "ME": "Learner shows the main historic built environments in Kenya on a map.",
+      "AE": "Learner shows the main historic built environments in Kenya on a map with prompts.",
+      "BE": "Learner can hardly show the main historic built environments in Kenya on a map even with prompts."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "People and Social Organisation",
+   "covers": [
+    "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA",
+    "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_",
+    "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC",
+    "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION"
+   ],
+   "page": 34,
+   "indicators": [
+    {
+     "code": "SOCI.G5.RUBRIC.2.1",
+     "indicator": "Ability to explain the benefits of interdependence of language groups in Kenya.",
+     "levels": {
+      "EE": "Learner explains benefits of interdependence of language groups in Kenya and provides relevant examples.",
+      "ME": "Learner explains benefits of interdependence of language groups in Kenya.",
+      "AE": "Learner explains some benefits of interdependence of language groups in Kenya.",
+      "BE": "Learner has challenges explaining benefits of interdependence of language groups in Kenya."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.2.2",
+     "indicator": "Ability to identify methods of instruction used in African traditional education.",
+     "levels": {
+      "EE": "Learner identifies methods of instruction used in African traditional education with supportive details and examples.",
+      "ME": "Learner identifies methods of instruction used in African traditional education.",
+      "AE": "Learner identifies some of the methods of instruction used in African traditional education.",
+      "BE": "Learner has challenges identifying methods of instruction used in African traditional education."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.2.3",
+     "indicator": "Ability to show areas of high and low population density in Kenya on a map.",
+     "levels": {
+      "EE": "Learner shows areas of high and low population density in Kenya on a map and provides justifications.",
+      "ME": "Learner shows areas of high and low population density in Kenya on a map.",
+      "AE": "Learner shows areas of high and low population density in Kenya on a map with minor errors.",
+      "BE": "Learner shows areas of high and low population density in Kenya on a map with major errors."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.2.4",
+     "indicator": "Ability to illustrate the administrative structure of a school.",
+     "levels": {
+      "EE": "Learner illustrates the administrative structure of a school with detailed description.",
+      "ME": "Learner illustrates the administrative structure of a school.",
+      "AE": "Learner illustrates the administrative structure of a school leaving out minor details.",
+      "BE": "Learner illustrates the administrative structure of the school leaving out major details."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Resources and Economic Activities in Eastern Africa",
+   "covers": [
+    "SOCI.G5.RESOUR.RESOURCES_IN_KENYA",
+    "SOCI.G5.RESOUR.MINING_IN_KENYA",
+    "SOCI.G5.RESOUR.FISHING_IN_KENYA",
+    "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+    "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT",
+    "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA"
+   ],
+   "page": 50,
+   "indicators": [
+    {
+     "code": "SOCI.G5.RUBRIC.3.1",
+     "indicator": "Ability to identify resources found in Kenya.",
+     "levels": {
+      "EE": "Learner identifies resources found in Kenya with details.",
+      "ME": "Learner identifies resources found in Kenya.",
+      "AE": "Learner identifies some resources found in Kenya.",
+      "BE": "Learner has difficulty identifying resources found in Kenya."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.2",
+     "indicator": "Ability to examine the importance of minerals in Kenya",
+     "levels": {
+      "EE": "Learner examines the importance of minerals in Kenya with details.",
+      "ME": "Learner examines the importance of minerals in Kenya.",
+      "AE": "Learner examines the importance of some minerals in Kenya.",
+      "BE": "Learner has difficulty examining the importance of minerals in Kenya."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.3",
+     "indicator": "Ability to explain the contribution of fishing to the economy of Kenya.",
+     "levels": {
+      "EE": "Learner explains the contribution of fishing to the economy of Kenya in detail.",
+      "ME": "Learner explains the contribution of fishing to the economy of Kenya.",
+      "AE": "Learner explains the contribution of fishing to the economy of Kenya with help.",
+      "BE": "Learner has challenges explaining the contribution of fishing to the economy of Kenya even with help."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.4",
+     "indicator": "Ability to explore ways of maintaining road safety in society.",
+     "levels": {
+      "EE": "Learner explores ways of maintaining road safety in society in detail, providing relevant examples.",
+      "ME": "Learner explores ways of maintaining road safety in society.",
+      "AE": "Learner explores some ways of maintaining road safety in society.",
+      "BE": "Learner has difficulty exploring ways of maintaining road safety in society."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.5",
+     "indicator": "Ability to outline the main early forms of communication to facilitate social interactions.",
+     "levels": {
+      "EE": "Learner outlines the main early forms of communication to facilitate social interactions in varied contexts.",
+      "ME": "Learner outlines the main early forms of communication to facilitate social interactions.",
+      "AE": "Learner outlines some of the main early forms of communication to facilitate social interactions.",
+      "BE": "Learner has difficulty outlining the main early forms of communication to facilitate social interactions."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.6",
+     "indicator": "Ability to locate the main inland fishing grounds in Kenya.",
+     "levels": {
+      "EE": "Learner locates the main inland fishing grounds in Kenya with details.",
+      "ME": "Learner locates the main inland fishing grounds in Kenya.",
+      "AE": "Learner locates some of the main inland fishing grounds in Kenya.",
+      "BE": "Learner has difficulty locating the main inland fishing grounds in Kenya."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.7",
+     "indicator": "Ability to locate game reserves and national parks in Kenya.",
+     "levels": {
+      "EE": "Learner locates the main game reserves and national parks in Kenya and provides direction.",
+      "ME": "Learner locates the main game reserves and national parks in Kenya.",
+      "AE": "Learner locates some of the main game reserves and national parks in Kenya.",
+      "BE": "Learner has difficulty locating the main game reserves and national parks in Kenya."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.8",
+     "indicator": "Ability to illustrate and apply safety precautions in using means of transport.",
+     "levels": {
+      "EE": "Learner illustrates and applies safety precautions in using means of transport in varied contexts.",
+      "ME": "Learner illustrates and applies safety precautions in using means of transport.",
+      "AE": "Learner illustrates and applies some safety precautions in using means of transport.",
+      "BE": "Learner has difficulty illustrating and applying safety precautions in using means of transport."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.3.9",
+     "indicator": "Ability to illustrate the modern means of communication used in their community.",
+     "levels": {
+      "EE": "Learner illustrates modern means of communication used in their community in detail.",
+      "ME": "Learner illustrates modern means of communication used in their community.",
+      "AE": "Learner illustrates some modern means of communication used in their community.",
+      "BE": "Learner has difficulty illustrating modern means of communication used in their community."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G5.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Political Systems",
+   "covers": [
+    "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K",
+    "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E",
+    "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA",
+    "SOCI.G5.POLITI.NATIONAL_GOVERNMENT"
+   ],
+   "page": 61,
+   "indicators": [
+    {
+     "code": "SOCI.G5.RUBRIC.4.1",
+     "indicator": "Ability to illustrate contributions of selected traditional leaders in Kenya.",
+     "levels": {
+      "EE": "Learner illustrates the contributions of selected traditional leaders in Kenya in detail.",
+      "ME": "Learner illustrates contributions of selected traditional leaders in Kenya.",
+      "AE": "Learner illustrates some of the contributions of selected traditional leaders in Kenya.",
+      "BE": "Learner has challenges illustrating contributions of selected traditional leaders in Kenya."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.4.2",
+     "indicator": "Ability to compare early forms of government of the Ameru and the Maasai.",
+     "levels": {
+      "EE": "Learner compares early forms of government of the Ameru and the Maasai giving details.",
+      "ME": "Learner compares early forms of government of the Ameru and the Maasai",
+      "AE": "Learner compares some early forms of government of the Ameru and the Maasai.",
+      "BE": "Learner has challenges comparing early forms of government of the Ameru and the Maasai."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.4.3",
+     "indicator": "Ability to explain the requirements for dual citizenship in Kenya.",
+     "levels": {
+      "EE": "Learner explains the requirements for dual citizenship in Kenya under different contexts.",
+      "ME": "Learner explains the requirements for dual citizenship in Kenya.",
+      "AE": "Learner explains some of the requirements for dual citizenship in Kenya.",
+      "BE": "Learner has challenges explaining the requirements for dual citizenship in Kenya."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.4.4",
+     "indicator": "Ability to explain the importance of human rights in society.",
+     "levels": {
+      "EE": "Learner explains the importance of human rights in society in detail and provides examples.",
+      "ME": "Learner explains the importance of human rights in society.",
+      "AE": "Learner explains the importance of human rights in society leaving out some details.",
+      "BE": "Learner has challenges explaining the importance of human rights in society."
+     },
+     "page": 62,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.4.5",
+     "indicator": "Ability to identify types of democracy in Kenya.",
+     "levels": {
+      "EE": "Learner identifies types of democracy in Kenya citing examples.",
+      "ME": "Learner identifies types of democracy in Kenya.",
+      "AE": "Learner identifies some types of democracy in Kenya.",
+      "BE": "Learner has challenges identifying types of democracy in Kenya."
+     },
+     "page": 62,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G5.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Governance",
+   "covers": [
+    "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA",
+    "SOCI.G5.GOVERN.HUMAN_RIGHTS",
+    "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY"
+   ],
+   "page": 70,
+   "indicators": [
+    {
+     "code": "SOCI.G5.RUBRIC.5.1",
+     "indicator": "Ability to illustrate ways of overcoming challenges of national unity.",
+     "levels": {
+      "EE": "Illustrates ways of overcoming challenges of national unity, giving examples",
+      "ME": "Illustrates ways of overcoming challenges of national unity",
+      "AE": "Illustrates some ways of overcoming challenges of national unity",
+      "BE": "Has difficulty illustrating ways of overcoming challenges of national unity"
+     },
+     "page": 70,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.5.2",
+     "indicator": "Ability to develop national awareness to enhance social cohesion among diverse communities.",
+     "levels": {
+      "EE": "Develops national awareness to enhance social cohesion among diverse communities, giving details",
+      "ME": "Develops national awareness to enhance social cohesion among diverse communities",
+      "AE": "Develops national awareness to enhance social cohesion among diverse communities omitting some points",
+      "BE": "Has difficulty developing national awareness to enhance social cohesion among diverse communities"
+     },
+     "page": 70,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.5.3",
+     "indicator": "Ability to draw national symbols using locally available materials.",
+     "levels": {
+      "EE": "Learner draws national symbols using locally available materials with clarity",
+      "ME": "Learner draws national symbols using locally available materials.",
+      "AE": "Learner draws some national symbols using locally available materials.",
+      "BE": "Has difficulty drawing national symbols using locally available materials."
+     },
+     "page": 71,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G5.RUBRIC.5.4",
+     "indicator": "Ability to illustrate the three arms of the National Government in Kenya.",
+     "levels": {
+      "EE": "Learner illustrates the three arms of the National Government in Kenya and gives examples.",
+      "ME": "Learner illustrates the three arms of the National Government in Kenya.",
+      "AE": "Learner illustrates two arms of the National Government in Kenya.",
+      "BE": "Learner illustrates less than two arms of the National Government in Kenya."
+     },
+     "page": 71,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

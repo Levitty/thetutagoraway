@@ -54,19 +54,22 @@
      "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.a",
      "letter": "a",
      "text": "analyse the importance of learning Christian Religious Education",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.1.1"
     },
     {
      "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.b",
      "letter": "b",
      "text": "discuss how Christian Religious Education promotes sound moral and religious values",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.1.1"
     },
     {
      "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.c",
      "letter": "c",
      "text": "compile five values needed to foster responsible living",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.1.2"
     },
     {
      "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.d",
@@ -78,11 +81,16 @@
      "code": "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C.e",
      "letter": "e",
      "text": "appreciate the learning of Christian Religious Education by living responsibly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.1.1",
+    "CRE.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION",
@@ -127,19 +135,22 @@
      "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.a",
      "letter": "a",
      "text": "narrate the biblical accounts of creation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G7.RUBRIC.2.1"
     },
     {
      "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.b",
      "letter": "b",
      "text": "discuss the similarities and differences between the two accounts of creation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G7.RUBRIC.2.1"
     },
     {
      "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.c",
      "letter": "c",
      "text": "identify five attributes of God from the creation accounts",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G7.RUBRIC.2.1"
     },
     {
      "code": "CRE.G7.CREATI.ACCOUNTS_OF_CREATION.d",
@@ -149,7 +160,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.2.1",
+    "CRE.G7.RUBRIC.2.2"
+   ]
   },
   {
    "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO",
@@ -192,19 +207,22 @@
      "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.a",
      "letter": "a",
      "text": "explain the biblical responsibilities given to human beings over creation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.b",
      "letter": "b",
      "text": "discuss ways they can protect animals, fish, and birds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.c",
      "letter": "c",
      "text": "practise good stewardship by taking care of animals, fish, and birds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO.d",
@@ -214,7 +232,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.2.1",
+    "CRE.G7.RUBRIC.2.2"
+   ]
   },
   {
    "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN",
@@ -259,7 +281,8 @@
      "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.a",
      "letter": "a",
      "text": "describe the biblical responsibilities given to human beings over plants",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN.b",
@@ -287,7 +310,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.2.1",
+    "CRE.G7.RUBRIC.2.2"
+   ]
   },
   {
    "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES",
@@ -331,19 +358,22 @@
      "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.a",
      "letter": "a",
      "text": "explain ways in which human beings use and misuse natural resources",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.b",
      "letter": "b",
      "text": "explore the effects of misusing natural resources",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.c",
      "letter": "c",
      "text": "discuss Biblical teachings on good use of natural resources",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.2.2"
     },
     {
      "code": "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES.d",
@@ -353,7 +383,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.2.1",
+    "CRE.G7.RUBRIC.2.2"
+   ]
   },
   {
    "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE",
@@ -397,7 +431,8 @@
      "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.a",
      "letter": "a",
      "text": "explain the importance of the Bible in the society today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.3.1"
     },
     {
      "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.b",
@@ -409,17 +444,24 @@
      "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.c",
      "letter": "c",
      "text": "analyse how God’s Word inspires different services among Christians today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.3.2"
     },
     {
      "code": "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE.d",
      "letter": "d",
      "text": "appreciate the Bible as the inspired Word of God",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.3.1",
+    "CRE.G7.RUBRIC.3.2",
+    "CRE.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE",
@@ -466,7 +508,8 @@
      "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.b",
      "letter": "b",
      "text": "categorize the books in the Old and New Testament",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.3.3"
     },
     {
      "code": "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE.c",
@@ -476,7 +519,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.3.1",
+    "CRE.G7.RUBRIC.3.2",
+    "CRE.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G7.THE_BI.BIBLE_TRANSLATION",
@@ -545,7 +593,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.3.1",
+    "CRE.G7.RUBRIC.3.2",
+    "CRE.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL",
@@ -623,7 +676,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.3.1",
+    "CRE.G7.RUBRIC.3.2",
+    "CRE.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES",
@@ -666,23 +724,32 @@
      "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.a",
      "letter": "a",
      "text": "outline the Old Testament prophecies about the Messiah",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.1"
     },
     {
      "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.b",
      "letter": "b",
      "text": "elaborate the fulfilment of the Old Testament prophecies about the Messiah",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.1"
     },
     {
      "code": "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES.c",
      "letter": "c",
      "text": "value the fulfillment of the Old Testament prophecies",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.5.1",
+    "CRE.G7.RUBRIC.5.2",
+    "CRE.G7.RUBRIC.5.3",
+    "CRE.G7.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST",
@@ -728,13 +795,15 @@
      "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.a",
      "letter": "a",
      "text": "elaborate the annunciation and birth of John the Baptist",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.2"
     },
     {
      "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.b",
      "letter": "b",
      "text": "relate the birth of John the Baptist to the coming of the Messiah",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.2"
     },
     {
      "code": "CRE.G7.THE_EA.JOHN_THE_BAPTIST.c",
@@ -762,7 +831,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.5.1",
+    "CRE.G7.RUBRIC.5.2",
+    "CRE.G7.RUBRIC.5.3",
+    "CRE.G7.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_",
@@ -809,7 +884,8 @@
      "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.a",
      "letter": "a",
      "text": "elaborate the annunciation and birth of Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.2"
     },
     {
      "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.b",
@@ -833,7 +909,8 @@
      "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.e",
      "letter": "e",
      "text": "identify values learnt from the birth and childhood of Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.5.2"
     },
     {
      "code": "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_.f",
@@ -843,7 +920,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.5.1",
+    "CRE.G7.RUBRIC.5.2",
+    "CRE.G7.RUBRIC.5.3",
+    "CRE.G7.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI",
@@ -903,13 +986,15 @@
      "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.c",
      "letter": "c",
      "text": "explain teachings on prayer and fasting from the scriptures provided",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.7.2"
     },
     {
      "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.d",
      "letter": "d",
      "text": "practise the teachings of Jesus Christ on prayer and fasting",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.7.2"
     },
     {
      "code": "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI.e",
@@ -925,7 +1010,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.7.1",
+    "CRE.G7.RUBRIC.7.2",
+    "CRE.G7.RUBRIC.7.3"
+   ]
   },
   {
    "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED",
@@ -966,7 +1056,8 @@
      "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.a",
      "letter": "a",
      "text": "appraise the contribution of the Church towards education and health",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.7.3"
     },
     {
      "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.b",
@@ -984,11 +1075,17 @@
      "code": "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED.d",
      "letter": "d",
      "text": "appreciate the contribution of the Church in education and health",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.7.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.7.1",
+    "CRE.G7.RUBRIC.7.2",
+    "CRE.G7.RUBRIC.7.3"
+   ]
   },
   {
    "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY",
@@ -1037,7 +1134,8 @@
      "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.a",
      "letter": "a",
      "text": "explain the meaning of human sexuality for holistic development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.9.1"
     },
     {
      "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.b",
@@ -1049,13 +1147,15 @@
      "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.c",
      "letter": "c",
      "text": "discuss the circumstances that lead to unhealthy relationships",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.9.2"
     },
     {
      "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.d",
      "letter": "d",
      "text": "outline the consequences of engaging in sex before marriage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.9.3"
     },
     {
      "code": "CRE.G7.CHRIST.HUMAN_SEXUALITY.e",
@@ -1071,7 +1171,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.9.1",
+    "CRE.G7.RUBRIC.9.2",
+    "CRE.G7.RUBRIC.9.3",
+    "CRE.G7.RUBRIC.9.4"
+   ]
   },
   {
    "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F",
@@ -1126,7 +1232,8 @@
      "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.c",
      "letter": "c",
      "text": "identify values needed to maintain stability in families",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G7.RUBRIC.9.4"
     },
     {
      "code": "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F.d",
@@ -1136,7 +1243,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.9.1",
+    "CRE.G7.RUBRIC.9.2",
+    "CRE.G7.RUBRIC.9.3",
+    "CRE.G7.RUBRIC.9.4"
+   ]
   },
   {
    "code": "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
@@ -1216,7 +1329,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.9.1",
+    "CRE.G7.RUBRIC.9.2",
+    "CRE.G7.RUBRIC.9.3",
+    "CRE.G7.RUBRIC.9.4"
+   ]
   },
   {
    "code": "CRE.G7.CHRIST.GAMBLING",
@@ -1296,7 +1415,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.9.1",
+    "CRE.G7.RUBRIC.9.2",
+    "CRE.G7.RUBRIC.9.3",
+    "CRE.G7.RUBRIC.9.4"
+   ]
   },
   {
    "code": "CRE.G7.CHRIST.SOCIAL_MEDIA",
@@ -1379,7 +1504,310 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G7.RUBRIC.9.1",
+    "CRE.G7.RUBRIC.9.2",
+    "CRE.G7.RUBRIC.9.3",
+    "CRE.G7.RUBRIC.9.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G7.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Overview of Christian Religious Education",
+   "covers": [
+    "CRE.G7.OVERVI.IMPORTANCE_OF_STUDYING_C"
+   ],
+   "page": 16,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.1.1",
+     "indicator": "Ability to analyse the importance of learning Christian Religious Education.",
+     "levels": {
+      "EE": "Analyses the importance of learning Christian Religious Education in details.",
+      "ME": "Analyses the importance of learning Christian Religious Education.",
+      "AE": "Analyses the importance of learning Christian Religious Education but omits some details.",
+      "BE": "Analyses the importance of Christian Religious Education but omits major details."
+     },
+     "page": 16,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.1.2",
+     "indicator": "Ability to compile five values needed to foster responsible living.",
+     "levels": {
+      "EE": "Compiles five values needed to foster responsible living and encourages peers to do so.",
+      "ME": "Compiles five values needed to foster responsible living.",
+      "AE": "Compiles four to three values needed to foster responsible living.",
+      "BE": "Compiles two to one value needed to foster responsible living."
+     },
+     "page": 16,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G7.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G7.CREATI.ACCOUNTS_OF_CREATION",
+    "CRE.G7.CREATI.STEWARDSHIP_OVER_CREATIO",
+    "CRE.G7.CREATI.RESPONSIBILITY_OVER_PLAN",
+    "CRE.G7.CREATI.USE_OF_NATURAL_RESOURCES"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.2.1",
+     "indicator": "Ability to narrate the biblical accounts of creation. Ability to discuss the similarities and differences in the two biblical accounts of creation. Ability to identify five attributes of God from the biblical accounts of creation.",
+     "levels": {
+      "EE": "Narrates the biblical accounts of creation in details and cites relevant examples. Discusses the similarities and differences in the two accounts of creation in details. Identifies five attributes of God from the biblical accounts of creation using illustrations.",
+      "ME": "Narrates the biblical accounts of creation. Discusses the similarities and differences in the two accounts of creation. Identifies five attributes of God from the biblical accounts of creation.",
+      "AE": "Narrates the biblical accounts of creation but omits some details. Discusses similarities and differences in the two accounts of creation but leaves out minor details. Identifies four to three attributes of God from the biblical accounts of creation.",
+      "BE": "Narrates the biblical but omits major details. Discusses similarities and differences in the two accounts of creation but leaves out major details. Identifies two to one attributes of God from the biblical accounts of creation."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.2.2",
+     "indicator": "Ability to explain the biblical teachings on responsibilities over animals, fish, and birds. Ability to explain seven ways in which human beings use and misuse natural resources.",
+     "levels": {
+      "EE": "Explains the biblical teachings on responsibilities over animals, fish, and birds in details. Explains seven ways in which human beings use and misuse natural resources and cites relevant examples.",
+      "ME": "Explains the biblical teachings on responsibilities over animals, fish, and birds. Explains seven ways in which human beings use and misuse natural resources.",
+      "AE": "Explains the biblical teachings on responsibilities over animals, fish, and birds but leaves out minor details. Explains six to four ways in which human beings use and misuse natural resources.",
+      "BE": "Explains biblical teachings on responsibilities over animals, fish, and birds but leaves out major details. Explains three to one way in which human beings use and misuse natural resources."
+     },
+     "page": 27,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G7.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Bible",
+   "covers": [
+    "CRE.G7.THE_BI.FUNCTIONS_OF_THE_BIBLE",
+    "CRE.G7.THE_BI.DIVISIONS_OF_THE_BIBLE",
+    "CRE.G7.THE_BI.BIBLE_TRANSLATION",
+    "CRE.G7.THE_BI.LEADERSHIP_IN_ISRAEL"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.3.1",
+     "indicator": "Ability to explain the importance of the Bible in the society today.",
+     "levels": {
+      "EE": "Explains the importance of the Bible in the society today in details.",
+      "ME": "Explains the importance of the Bible in the society today.",
+      "AE": "Explains the importance of the Bible in the society today but omits minor details.",
+      "BE": "Explains the importance of the Bible in the society today but omits major details."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.3.2",
+     "indicator": "Ability to analyse how God’s word inspires different services among Christians today.",
+     "levels": {
+      "EE": "Analyses how God’s word inspires different services among Christians today and cites relevant examples.",
+      "ME": "Analyses how God’s word inspires different services among Christians today.",
+      "AE": "Partly analyses how God’s word inspires different services among Christians today.",
+      "BE": "Attempts to analyse how God’s word inspires different services among Christians today."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.3.3",
+     "indicator": "Ability to categorise the books of the Old and New Testament.",
+     "levels": {
+      "EE": "Categorises the books of the Old and New Testament in details.",
+      "ME": "Categorises the books of the Old and New Testament.",
+      "AE": "Categorises the books of the Old and New Testament but leaves out some information.",
+      "BE": "Categorises books of the Old and New Testament but leaves out major information."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G7.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Early Life of Jesus Christ",
+   "covers": [
+    "CRE.G7.THE_EA.PROPHECIES_ABOUT_THE_MES",
+    "CRE.G7.THE_EA.JOHN_THE_BAPTIST",
+    "CRE.G7.THE_EA.THE_BIRTH_AND_CHILDHOOD_"
+   ],
+   "page": 45,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.5.1",
+     "indicator": "Ability to describe the Old Testament prophecies about the Messiah.",
+     "levels": {
+      "EE": "Describes the Old Testament prophecies about the Messiah in details.",
+      "ME": "Describes the Old Testament prophecies about the Messiah.",
+      "AE": "Describes the Old Testament prophecies about the Messiah but omits minor details.",
+      "BE": "Describes the Old Testament prophecies about the Messiah but omits major details."
+     },
+     "page": 45,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.5.2",
+     "indicator": "Ability to relate the birth of John the Baptist to the coming of Jesus Christ.",
+     "levels": {
+      "EE": "Relates the birth of John the Baptist to the coming of Jesus Christ exhaustively.",
+      "ME": "Relates the birth of John the Baptist to the coming of Jesus Christ.",
+      "AE": "Relates the birth of John the Baptist to the coming of Jesus Christ but leaves out some information.",
+      "BE": "Relates the birth of John the Baptist to the coming of Jesus Christ but leaves out a lot of information."
+     },
+     "page": 45,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.5.3",
+     "indicator": "Ability to utilise the values acquired to form harmonious relationships.",
+     "levels": {
+      "EE": "Constantly utilises values acquired to form harmonious relationships.",
+      "ME": "Utilises the values acquired to form harmonious relationships.",
+      "AE": "Sometimes utilises the values acquired to form harmonious relationships.",
+      "BE": "Utilises the values acquired to form harmonious relationships but with consistent guidance."
+     },
+     "page": 45,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.5.4",
+     "indicator": "Ability to elaborate the events that took place during the",
+     "levels": {
+      "EE": "Elaborates the events that took place during the annunciation and",
+      "ME": "Elaborates the events that took place during",
+      "AE": "Elaborates the events that took place during the annunciation and birth of",
+      "BE": "Elaborates the events that took place during the annunciation and"
+     },
+     "page": 45,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G7.RUBRIC.7",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The church in Action",
+   "covers": [
+    "CRE.G7.THE_CH.SELECTED_FORMS_OF_WORSHI",
+    "CRE.G7.THE_CH.ROLE_OF_THE_CHURCH_IN_ED"
+   ],
+   "page": 51,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.7.1",
+     "indicator": "Ability to explain teachings on selected forms of worship.",
+     "levels": {
+      "EE": "Explains teachings on selected forms of worship and gives relevant biblical examples.",
+      "ME": "Explains teachings on selected forms of worship.",
+      "AE": "Explains teachings on selected forms of worship but leaves out some information.",
+      "BE": "Explains Biblical teachings on selected forms of worship but leaves out major information."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.7.2",
+     "indicator": "Ability to describe how they practise the teachings of Jesus Christ on prayer and fasting.",
+     "levels": {
+      "EE": "Describes how they practise the teachings of Jesus Christ on prayer and fasting in details.",
+      "ME": "Describes how they practise the teachings of Jesus Christ on prayer and fasting.",
+      "AE": "Describes how they practise the teachings of Jesus Christ on prayer and fasting but omits minor details.",
+      "BE": "Describes ways they practise the teachings of Jesus Christ on prayer and fasting but omits major details."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.7.3",
+     "indicator": "Ability to discuss the contribution of the church towards education and health in Kenya.",
+     "levels": {
+      "EE": "Discusses the contribution of the church towards education and health in Kenya in details.",
+      "ME": "Discusses the contribution of the church towards education and health in Kenya.",
+      "AE": "Discusses the contribution of the church towards education and health in Kenya but leaves out minor details.",
+      "BE": "Discusses the contribution of the church towards education and health in Kenya but leaves out major details."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G7.RUBRIC.9",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Christian Living Today",
+   "covers": [
+    "CRE.G7.CHRIST.HUMAN_SEXUALITY",
+    "CRE.G7.CHRIST.CHRISTIAN_MARRIAGE_AND_F",
+    "CRE.G7.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+    "CRE.G7.CHRIST.GAMBLING",
+    "CRE.G7.CHRIST.SOCIAL_MEDIA"
+   ],
+   "page": 65,
+   "indicators": [
+    {
+     "code": "CRE.G7.RUBRIC.9.1",
+     "indicator": "Ability to explain the meaning of human sexuality for holistic development.",
+     "levels": {
+      "EE": "Explains the meaning of human sexuality with relevant examples.",
+      "ME": "Explains the meaning of human sexuality.",
+      "AE": "Partially explains the meaning of human sexuality.",
+      "BE": "Explains the meaning of human sexuality when prompted."
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.9.2",
+     "indicator": "Ability to discuss the circumstances that lead to unhealthy relationships.",
+     "levels": {
+      "EE": "Discusses the circumstances that lead to unhealthy relationships in details.",
+      "ME": "Discusses the circumstances that lead to unhealthy relationships.",
+      "AE": "Discusses the circumstances that lead to unhealthy relationships but omits minor details.",
+      "BE": "Discusses circumstances that lead to unhealthy relationships but omits major details."
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.9.3",
+     "indicator": "Ability to explore eight consequences of engaging in sex before marriage.",
+     "levels": {
+      "EE": "Explores eight consequences of engaging in sex before marriage and uses digital devices to research.",
+      "ME": "Explores eight consequences of engaging in sex before marriage.",
+      "AE": "Explores seven to four consequences of engaging in sex before marriage.",
+      "BE": "Explores three to one consequence of engaging in sex before marriage."
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G7.RUBRIC.9.4",
+     "indicator": "Ability to identify six values needed to contribute towards stable families.",
+     "levels": {
+      "EE": "Identifies six values needed to contribute towards stable families and cites relevant examples",
+      "ME": "Identifies six values needed to contribute towards stable families.",
+      "AE": "Identifies five to three values needed to contribute towards stable families.",
+      "BE": "Identifies two to one value needed to contribute towards stable families."
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

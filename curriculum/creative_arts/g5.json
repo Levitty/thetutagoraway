@@ -63,41 +63,50 @@
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.a",
      "letter": "a",
      "text": "identify indigenous wind musical instruments from Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.b",
      "letter": "b",
      "text": "explain the role of the parts of a wind instrument in sound production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.c",
      "letter": "c",
      "text": "make a wind instrument using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.d",
      "letter": "d",
      "text": "care for an indigenous Kenyan musical wind instrument",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.e",
      "letter": "e",
      "text": "draw a wind instrument using crayon etching technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS.f",
      "letter": "f",
      "text": "value indigenous wind musical instruments from Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.CREATI.FOOTBALL",
@@ -153,29 +162,36 @@
      "code": "CREA.G5.CREATI.FOOTBALL.a",
      "letter": "a",
      "text": "execute the skills of kicking, stopping and dribbling in football",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.FOOTBALL.b",
      "letter": "b",
      "text": "prepare papier mâché for casting cones",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.FOOTBALL.c",
      "letter": "c",
      "text": "cast marking cones using papier mâché for a Football game",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.FOOTBALL.d",
      "letter": "d",
      "text": "appreciate playing Football game on a field marked using cones for enjoyment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.CREATI.RHYTHM",
@@ -228,47 +244,57 @@
      "code": "CREA.G5.CREATI.RHYTHM.a",
      "letter": "a",
      "text": "interpret rhythmic patterns involving minim, crotchet, a pair of quavers and their rests",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.b",
      "letter": "b",
      "text": "create rhythms using music note symbols and their rests",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.c",
      "letter": "c",
      "text": "make a calligraphy pen for writing",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.d",
      "letter": "d",
      "text": "write in calligraphy French rhythm names of a rhythmic pattern",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.e",
      "letter": "e",
      "text": "aurally identify rhythm in two-beat patterns",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.f",
      "letter": "f",
      "text": "compose simple rhythms in two-beat patterns",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.RHYTHM.g",
      "letter": "g",
      "text": "enjoy creating rhythms using music notes and their rests",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC",
@@ -318,35 +344,43 @@
      "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.a",
      "letter": "a",
      "text": "identify primary and secondary colours on the colour wheel",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.b",
      "letter": "b",
      "text": "paint a scenery composition using the wash technique",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.c",
      "letter": "c",
      "text": "prepare materials for making a mosaic picture",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.d",
      "letter": "d",
      "text": "create a mosaic picture to apply the characteristics",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.PAINTING_AND_MOSAIC.e",
      "letter": "e",
      "text": "appreciate painting and mosaic as picture making techniques",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.CREATI.MELODY",
@@ -399,35 +433,43 @@
      "code": "CREA.G5.CREATI.MELODY.a",
      "letter": "a",
      "text": "sing the sol-fa syllables d r m f s for pitch discrimination",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.MELODY.b",
      "letter": "b",
      "text": "interpret the hand signs of the sol-fa syllables d r m f s",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.MELODY.c",
      "letter": "c",
      "text": "compose short melodies based on the sol-fa syllables d r m f s",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.MELODY.d",
      "letter": "d",
      "text": "make a decorated melody card for creativity",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.MELODY.e",
      "letter": "e",
      "text": "appreciate melodies created by self and others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.CREATI.ROUNDERS",
@@ -475,35 +517,43 @@
      "code": "CREA.G5.CREATI.ROUNDERS.a",
      "letter": "a",
      "text": "identify the features of a rounders bat for familiarisation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.ROUNDERS.b",
      "letter": "b",
      "text": "identify materials and tools used in carving",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.ROUNDERS.c",
      "letter": "c",
      "text": "carve a bat for playing the Rounders game",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.ROUNDERS.d",
      "letter": "d",
      "text": "execute batting and fielding skills in a Rounders game for skills acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     },
     {
      "code": "CREA.G5.CREATI.ROUNDERS.e",
      "letter": "e",
      "text": "value the safety of self and others when playing the game of Rounders",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.ATHLETICS",
@@ -552,35 +602,43 @@
      "code": "CREA.G5.PERFOR.ATHLETICS.a",
      "letter": "a",
      "text": "improvise batons for relay racing",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.ATHLETICS.b",
      "letter": "b",
      "text": "make ropes using plaiting technique for relay racing",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.ATHLETICS.c",
      "letter": "c",
      "text": "perform the skill of visual baton change in a relay race",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.ATHLETICS.d",
      "letter": "d",
      "text": "execute nonvisual baton change in a relay race",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.ATHLETICS.e",
      "letter": "e",
      "text": "appraise self and peers’ performance in a relay race",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.FABRIC_DECORATION",
@@ -628,29 +686,36 @@
      "code": "CREA.G5.PERFOR.FABRIC_DECORATION.a",
      "letter": "a",
      "text": "identify techniques used to decorate a fabric",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.FABRIC_DECORATION.b",
      "letter": "b",
      "text": "decorate a fabric using the tie and dye technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.FABRIC_DECORATION.c",
      "letter": "c",
      "text": "decorate a fabric using appliqué for expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.FABRIC_DECORATION.d",
      "letter": "d",
      "text": "value tie and dye and appliqué techniques for decorating a fabric",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE",
@@ -697,41 +762,50 @@
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.a",
      "letter": "a",
      "text": "discuss the background of a Kenyan folk dance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.b",
      "letter": "b",
      "text": "describe components of a Kenyan folk dance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.c",
      "letter": "c",
      "text": "discuss the roles of folk dance in the community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.d",
      "letter": "d",
      "text": "make an ornament using available materials to enhance performance of a Kenyan folk dance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.e",
      "letter": "e",
      "text": "perform in a folk dance from a Kenyan indigenous community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.KENYAN_FOLK_DANCE.f",
      "letter": "f",
      "text": "acknowledge the role of folk dance in the society",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.PUPPETRY",
@@ -773,23 +847,29 @@
      "code": "CREA.G5.PERFOR.PUPPETRY.a",
      "letter": "a",
      "text": "identify a glove puppet for familiarisation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.PUPPETRY.b",
      "letter": "b",
      "text": "make a glove puppet using recyclable materials",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.PUPPETRY.c",
      "letter": "c",
      "text": "perform a puppet show while singing topical songs for enjoyment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.DESCANT_RECORDER",
@@ -835,29 +915,36 @@
      "code": "CREA.G5.PERFOR.DESCANT_RECORDER.a",
      "letter": "a",
      "text": "play notes B A G C1 D1 on the descant recorder",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.DESCANT_RECORDER.b",
      "letter": "b",
      "text": "play a melody built on the notes G A B C’ D’ on the descant recorder applying appropriate techniques",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.DESCANT_RECORDER.c",
      "letter": "c",
      "text": "create a random repeat pattern based on the notes B A G C1 D 1 using a stencil",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.DESCANT_RECORDER.d",
      "letter": "d",
      "text": "enjoy playing melodies using the descant recorder",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.PERFOR.SWIMMING",
@@ -906,53 +993,64 @@
      "code": "CREA.G5.PERFOR.SWIMMING.a_",
      "letter": "a",
      "text": "describe the Front crawl technique in swimming",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.b_",
      "letter": "b",
      "text": "perform the Front crawl technique for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.c_",
      "letter": "c",
      "text": "apply the front crawl technique in swimming for enjoyment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.d_",
      "letter": "d",
      "text": "appreciates own and others' efforts in performing the Front crawl technique",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.a_2",
      "letter": "a",
      "text": "identify types of indigenous counting games played in Kenya",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.b_2",
      "letter": "b",
      "text": "perform different indigenous counting games for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.c_2",
      "letter": "c",
      "text": "perform indigenous counting games to a musical rhythm",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     },
     {
      "code": "CREA.G5.PERFOR.SWIMMING.d_2",
      "letter": "d",
      "text": "appreciate the role played by counting games for fitness and health",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART",
@@ -998,35 +1096,124 @@
      "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
      "letter": "a",
      "text": "showcase artworks in a school gallery for critique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.3.1"
     },
     {
      "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
      "letter": "b",
      "text": "discuss a Kenyan folk dance using appropriate terminologies",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.3.1"
     },
     {
      "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
      "letter": "c",
      "text": "discuss the East African Community Anthem to foster patriotism",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.3.1"
     },
     {
      "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.d",
      "letter": "d",
      "text": "participate in ball games and athletics",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.3.1"
     },
     {
      "code": "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART.e",
      "letter": "e",
      "text": "value appreciation of Creative Arts works drawn from various cultural backgrounds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G5.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G5.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G5.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Creating and Executing",
+   "covers": [
+    "CREA.G5.CREATI.WIND_MUSICAL_INSTRUMENTS",
+    "CREA.G5.CREATI.FOOTBALL",
+    "CREA.G5.CREATI.RHYTHM",
+    "CREA.G5.CREATI.PAINTING_AND_MOSAIC",
+    "CREA.G5.CREATI.MELODY",
+    "CREA.G5.CREATI.ROUNDERS"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "CREA.G5.RUBRIC.1.1",
+     "indicator": "Ability to create/make and execute; - wind instruments using locally available materials - a drawing using crayons etching - marking cones using papier mâché - stopping skills - kicking skills - dribbling skills - rhythms using note values and rests - calligraphy pen for writing - paint a scenery composition - short melodies using d r m f s - hand signs of the sol-fa syllables d r m f s - a bat for playing Rounders - batting skills - fielding skills",
+     "levels": {
+      "EE": "Create and/or execute 14 items in Creative Arts correctly and skilfully.",
+      "ME": "Create and/or execute 14items in Creative Arts correctly.",
+      "AE": "Create and/or execute 13- 7items in Creative Arts correctly.",
+      "BE": "Create and/or execute 6 -1 items in Creative Arts correctly."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Performing and Displaying",
+   "covers": [
+    "CREA.G5.PERFOR.ATHLETICS",
+    "CREA.G5.PERFOR.FABRIC_DECORATION",
+    "CREA.G5.PERFOR.KENYAN_FOLK_DANCE",
+    "CREA.G5.PERFOR.PUPPETRY",
+    "CREA.G5.PERFOR.DESCANT_RECORDER",
+    "CREA.G5.PERFOR.SWIMMING"
+   ],
+   "page": 45,
+   "indicators": [
+    {
+     "code": "CREA.G5.RUBRIC.2.1",
+     "indicator": "Ability to perform and/or display: − batons for relay racing, − baton change in a relay race, − a glove puppet, − a folk dance from a Kenyan indigenous community, − decorated fabric using tie and dye, − decorated fabric using applique, − melody built on notes of B A G C1 D recorder, − random repeat pattern based on B A G C − Front crawl/indigenous counting games.",
+     "levels": {
+      "EE": "Perform and/or display 9 items in Creative Arts correctly and skilfully. 1 on a descant 1 D 1",
+      "ME": "Perform and/or display 9 items in Creative Arts correctly.",
+      "AE": "Perform and/or display 8-4 items in Creative Arts.",
+      "BE": "Perform and/or display 3-1 items in Creative Arts."
+     },
+     "page": 45,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Appreciation in Creative Arts",
+   "covers": [
+    "CREA.G5.APPREC.ANALYSIS_OF_CREATIVE_ART"
+   ],
+   "page": 49,
+   "indicators": [
+    {
+     "code": "CREA.G5.RUBRIC.3.1",
+     "indicator": "Ability to appreciate and/or discuss: − showcase artworks in a school gallery, − a Kenyan folk dance − the East African Community Anthem − participate in a game.",
+     "levels": {
+      "EE": "Appreciates and/or discusses 3 items of Creative Arts elaborately.",
+      "ME": "Appreciate and/or discusses 3 items of Creative Arts.",
+      "AE": "Appreciate and/ or discusses 2 items of Creative Arts.",
+      "BE": "Appreciate and/ or discusses 1 item of Creative Arts."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

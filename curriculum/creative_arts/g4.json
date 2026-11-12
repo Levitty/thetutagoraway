@@ -65,47 +65,57 @@
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.a",
      "letter": "a",
      "text": "identify indigenous percussion musical instruments from different Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.b",
      "letter": "b",
      "text": "classify indigenous Kenyan percussion musical instruments, as melodic or non-melodic",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.c",
      "letter": "c",
      "text": "discuss the function(s) of parts of a percussion musical instrument",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.d",
      "letter": "d",
      "text": "improvise rhythmic patterns using indigenous percussion musical instruments",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.e",
      "letter": "e",
      "text": "make charcoal sticks for drawing",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.f",
      "letter": "f",
      "text": "create tonal value on a drawing of a percussion instrument using the smudging technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.g",
      "letter": "g",
      "text": "appreciate indigenous percussion instruments from Kenyan communities and pictures drawn",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G4.CREATI.NETBALL",
@@ -152,29 +162,36 @@
      "code": "CREA.G4.CREATI.NETBALL.a",
      "letter": "a",
      "text": "discuss the skills of passing and catching in Netball",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.NETBALL.b",
      "letter": "b",
      "text": "make a ball using macramé technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.NETBALL.c",
      "letter": "c",
      "text": "perform the skills of passing, and catching in Netball",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.NETBALL.d",
      "letter": "d",
      "text": "appreciate Netball as a team game for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE",
@@ -222,29 +239,36 @@
      "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.a",
      "letter": "a",
      "text": "classify colours into primary and secondary for painting",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.b",
      "letter": "b",
      "text": "paint a picture for colour value application",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.c",
      "letter": "c",
      "text": "create a montage composition for expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.d",
      "letter": "d",
      "text": "appreciate painting and montage as methods of making pictures",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G4.CREATI.RHYTHM",
@@ -296,35 +320,43 @@
      "code": "CREA.G4.CREATI.RHYTHM.a",
      "letter": "a",
      "text": "interpret rhythmic patterns involving the crotchet, pair of quaver and their rests",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.RHYTHM.b",
      "letter": "b",
      "text": "write the French rhythm taa and ta-te, names using free hand lettering",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.RHYTHM.c",
      "letter": "c",
      "text": "describe the qualities of a good rhythmic pattern",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.RHYTHM.d",
      "letter": "d",
      "text": "compose a rhythmic pattern involving a crochet, a pair of quavers and their rests",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.RHYTHM.e",
      "letter": "e",
      "text": "enjoy creating rhythmic patterns",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G4.CREATI.MELODY",
@@ -372,41 +404,50 @@
      "code": "CREA.G4.CREATI.MELODY.a",
      "letter": "a",
      "text": "identify sol-fa syllables d r m in a simple melody",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.MELODY.b",
      "letter": "b",
      "text": "interpret hand signs for the sol-fa syllables d r m for pitch discrimination",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.MELODY.c",
      "letter": "c",
      "text": "state the qualities of a good melody as a foundation to composition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.MELODY.d",
      "letter": "d",
      "text": "create short melodies using the sol-fa syllables d, r and m",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.MELODY.e",
      "letter": "e",
      "text": "model clay slabs with sol-fa syllables using coil and slab techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     },
     {
      "code": "CREA.G4.CREATI.MELODY.f",
      "letter": "f",
      "text": "enjoy creating short melodies and modelling using clay",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.ATHLETICS",
@@ -456,29 +497,36 @@
      "code": "CREA.G4.PERFOR.ATHLETICS.a",
      "letter": "a",
      "text": "discuss the sprint starts and sprinting techniques in athletics",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.ATHLETICS.b",
      "letter": "b",
      "text": "perform the sprint starts and sprinting techniques for skill development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.ATHLETICS.c",
      "letter": "c",
      "text": "paint the Kenyan flag for an athletic event",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.ATHLETICS.d",
      "letter": "d",
      "text": "recognise the value of flying the Kenyan flag during an athletics event",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.GYMNASTICS",
@@ -523,29 +571,36 @@
      "code": "CREA.G4.PERFOR.GYMNASTICS.a",
      "letter": "a",
      "text": "explain a crab balance and a side roll in gymnastics",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.GYMNASTICS.b",
      "letter": "b",
      "text": "perform the crab balance for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.GYMNASTICS.c",
      "letter": "c",
      "text": "execute the side roll for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.GYMNASTICS.d",
      "letter": "d",
      "text": "appreciate performing gymnastics skills for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.SONGS",
@@ -593,35 +648,43 @@
      "code": "CREA.G4.PERFOR.SONGS.a",
      "letter": "a",
      "text": "sing different types of songs applying performance techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.b",
      "letter": "b",
      "text": "perform the East African Community Anthem in unison",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.c",
      "letter": "c",
      "text": "identify types of folk songs performed by indigenous Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.d",
      "letter": "d",
      "text": "perform an indigenous Kenyan folk song applying performance techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SONGS.e",
      "letter": "e",
      "text": "value performing indigenous songs from different Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.PHOTOGRAPHY",
@@ -665,29 +728,36 @@
      "code": "CREA.G4.PERFOR.PHOTOGRAPHY.a",
      "letter": "a",
      "text": "identify digital devices for photography",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.PHOTOGRAPHY.b",
      "letter": "b",
      "text": "discuss elements of photography for familiarisation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.PHOTOGRAPHY.c",
      "letter": "c",
      "text": "take photographs using digital devices",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.PHOTOGRAPHY.d",
      "letter": "d",
      "text": "enjoy taking photographs using digital devices",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.DESCANT_RECORDER",
@@ -732,35 +802,43 @@
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.a",
      "letter": "a",
      "text": "identify the parts of a descant recorder for familiarisation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.b",
      "letter": "b",
      "text": "care for a descant recorder for longevity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.c",
      "letter": "c",
      "text": "play notes B A and G on a descant recorder using appropriate playing techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.d",
      "letter": "d",
      "text": "play simple melodies based on notes B A and G on the descant recorder",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.DESCANT_RECORDER.e",
      "letter": "e",
      "text": "enjoy playing melodies using the descant recorder",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.PERFOR.SWIMMING",
@@ -817,59 +895,71 @@
      "code": "CREA.G4.PERFOR.SWIMMING.a_",
      "letter": "a",
      "text": "recognise ways of water entry in the swimming pool",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.b_",
      "letter": "b",
      "text": "play water games in the swimming pool for fun",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.c_",
      "letter": "c",
      "text": "float in water for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.d_",
      "letter": "d",
      "text": "glide in water for water confidence",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.e",
      "letter": "e",
      "text": "appreciate safety in and out of the swimming pool while playing water games",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.a_2",
      "letter": "a",
      "text": "identify types of indigenous animal games played in Kenya",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.b_2",
      "letter": "b",
      "text": "perform different indigenous animal games for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.c_2",
      "letter": "c",
      "text": "perform indigenous animal games to a musical rhythm for enjoyment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     },
     {
      "code": "CREA.G4.PERFOR.SWIMMING.d_2",
      "letter": "d",
      "text": "appreciate the role played by animal games for fitness and health",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART",
@@ -920,41 +1010,130 @@
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
      "letter": "a",
      "text": "explain the concept of appreciation in Creative Arts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
      "letter": "b",
      "text": "make a portfolio for presenting creative art works",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
      "letter": "c",
      "text": "analyse the Kenya National Anthem to foster patriotism",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.d",
      "letter": "d",
      "text": "describe a Kenyan folk song performance using appropriate terminologies",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.e",
      "letter": "e",
      "text": "participate in games and sports within the school for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     },
     {
      "code": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.f",
      "letter": "f",
      "text": "value appreciation of Creative Arts works drawn from various cultural backgrounds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G4.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G4.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Creating and Executing",
+   "covers": [
+    "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR",
+    "CREA.G4.CREATI.NETBALL",
+    "CREA.G4.CREATI.PAINTING_AND_MONTAGE",
+    "CREA.G4.CREATI.RHYTHM",
+    "CREA.G4.CREATI.MELODY"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "CREA.G4.RUBRIC.1.1",
+     "indicator": "Ability to create and/or execute: − a rhythmic pattern using an indigenous percussion musical instrument, − a drawing using smudge technique, − passing skills in Netball − catching skills in Netball − a montage on ball games − a painting using colour value − a rhythmic pattern using French rhythm names and music note symbols and rests, − model clay slabs with sol-fa syllables − short melodies using the sol-fa syllables d r m",
+     "levels": {
+      "EE": "Creates and/or executes the 9 items of Creative Arts correctly and aesthetically.",
+      "ME": "Creates and/or executes the 9 items of Creative Arts correctly.",
+      "AE": "Creates and/or executes the 5-8 items of Creative Arts correctly.",
+      "BE": "Creates and/or executes the 4 and below items of Creative Arts correctly."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G4.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Performing and Displaying",
+   "covers": [
+    "CREA.G4.PERFOR.ATHLETICS",
+    "CREA.G4.PERFOR.GYMNASTICS",
+    "CREA.G4.PERFOR.SONGS",
+    "CREA.G4.PERFOR.PHOTOGRAPHY",
+    "CREA.G4.PERFOR.DESCANT_RECORDER",
+    "CREA.G4.PERFOR.SWIMMING"
+   ],
+   "page": 42,
+   "indicators": [
+    {
+     "code": "CREA.G4.RUBRIC.2.1",
+     "indicator": "Ability to perform and/or display: - medium starts - elongated starts - sprinting techniques - crab balance - side roll - notes B, A and G on the descant recorder - simple melodies based on B A and G on the descant recorder - photographs with proper lighting and center of interest - different types of songs - water entry, gliding and floating/ or animal games (identifying and performing).",
+     "levels": {
+      "EE": "Performs and/or displays the 10 items of Creative Arts skilfully.",
+      "ME": "Performs and/or displays the 10 items of Creative Arts correctly.",
+      "AE": "Performs and/or displays 6-9 items of Creative Arts.",
+      "BE": "Performs and/or displays 5 or less items of Creative Arts."
+     },
+     "page": 42,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G4.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Appreciation in Creative Arts",
+   "covers": [
+    "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART"
+   ],
+   "page": 46,
+   "indicators": [
+    {
+     "code": "CREA.G4.RUBRIC.3.1",
+     "indicator": "Ability to display /critique/participate in or analyse/ − drawings, − painting, − photographs, − Kenya national Anthem, − Kenyan folk songs − netball, − athletics, − gymnastics, − swimming/animal games",
+     "levels": {
+      "EE": "Displays/ critiques/participates in or analyses the 9 items in Creative Arts in detail and/ or skilfully",
+      "ME": "Displays/ critiques/participates in or analyses the 9 items in Creative Arts correctly",
+      "AE": "Displays/ critiques/participates in or analyses the 4-6 items in Creative Arts",
+      "BE": "Displays/ critiques/participates in or analyses at least 1- 3 item in Creative Arts"
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

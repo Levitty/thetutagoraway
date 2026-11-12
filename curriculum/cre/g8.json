@@ -70,13 +70,15 @@
      "code": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.c",
      "letter": "c",
      "text": "analyse the causes of sin today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.1.1"
     },
     {
      "code": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.d",
      "letter": "d",
      "text": "identify moral values and life skills needed to overcome temptations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.1.2"
     },
     {
      "code": "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_.e",
@@ -86,7 +88,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.1.1",
+    "CRE.G8.RUBRIC.1.2",
+    "CRE.G8.RUBRIC.1.3",
+    "CRE.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO",
@@ -128,7 +136,8 @@
      "code": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.a",
      "letter": "a",
      "text": "describe how God demonstrated love to humankind after the fall of man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.1.3"
     },
     {
      "code": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.b",
@@ -146,7 +155,8 @@
      "code": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.d",
      "letter": "d",
      "text": "take part in sharing the love of God with others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.1.4"
     },
     {
      "code": "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO.e",
@@ -156,7 +166,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.1.1",
+    "CRE.G8.RUBRIC.1.2",
+    "CRE.G8.RUBRIC.1.3",
+    "CRE.G8.RUBRIC.1.4"
+   ]
   },
   {
    "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES",
@@ -203,13 +219,15 @@
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.a",
      "letter": "a",
      "text": "describe the background to the call of Abraham",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.1"
     },
     {
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.b",
      "letter": "b",
      "text": "examine ways Abraham demonstrated faith in God",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.2"
     },
     {
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.c",
@@ -221,23 +239,37 @@
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.d",
      "letter": "d",
      "text": "elaborate the promises made by God to Abraham",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.4"
     },
     {
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.e",
      "letter": "e",
      "text": "explain the importance of God’s promises to Christians today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.5"
     },
     {
      "code": "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES.f",
      "letter": "f",
      "text": "apply God’s promises in their daily lives",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.2.1",
+    "CRE.G8.RUBRIC.2.2",
+    "CRE.G8.RUBRIC.2.3",
+    "CRE.G8.RUBRIC.2.4",
+    "CRE.G8.RUBRIC.2.5",
+    "CRE.G8.RUBRIC.2.6",
+    "CRE.G8.RUBRIC.2.7",
+    "CRE.G8.RUBRIC.2.8",
+    "CRE.G8.RUBRIC.2.9"
+   ]
   },
   {
    "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT",
@@ -289,13 +321,15 @@
      "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.b",
      "letter": "b",
      "text": "elaborate the covenant made by God to Abraham",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.4"
     },
     {
      "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.c",
      "letter": "c",
      "text": "explain the importance of God’s covenant with Abraham",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.8"
     },
     {
      "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.d",
@@ -307,7 +341,8 @@
      "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.e",
      "letter": "e",
      "text": "evaluate characteristics of ungodly covenants today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.7"
     },
     {
      "code": "CRE.G8.THE_BI.ABRAHAMIC_COVENANT.f",
@@ -323,7 +358,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.2.1",
+    "CRE.G8.RUBRIC.2.2",
+    "CRE.G8.RUBRIC.2.3",
+    "CRE.G8.RUBRIC.2.4",
+    "CRE.G8.RUBRIC.2.5",
+    "CRE.G8.RUBRIC.2.6",
+    "CRE.G8.RUBRIC.2.7",
+    "CRE.G8.RUBRIC.2.8",
+    "CRE.G8.RUBRIC.2.9"
+   ]
   },
   {
    "code": "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU",
@@ -377,13 +423,15 @@
      "code": "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.c",
      "letter": "c",
      "text": "evaluate King Saul’s failures and the consequences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.9"
     },
     {
      "code": "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.d",
      "letter": "d",
      "text": "deduce lessons learnt from the failures of King Saul",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.2.9"
     },
     {
      "code": "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU.e",
@@ -393,7 +441,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.2.1",
+    "CRE.G8.RUBRIC.2.2",
+    "CRE.G8.RUBRIC.2.3",
+    "CRE.G8.RUBRIC.2.4",
+    "CRE.G8.RUBRIC.2.5",
+    "CRE.G8.RUBRIC.2.6",
+    "CRE.G8.RUBRIC.2.7",
+    "CRE.G8.RUBRIC.2.8",
+    "CRE.G8.RUBRIC.2.9"
+   ]
   },
   {
    "code": "CRE.G8.THE_LI.HEALING_OF_BLIND_BARTIMA",
@@ -457,7 +516,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.3.1",
+    "CRE.G8.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G8.THE_LI.CALMING_THE_STORM",
@@ -506,7 +569,8 @@
      "code": "CRE.G8.THE_LI.CALMING_THE_STORM.b",
      "letter": "b",
      "text": "outline lessons learnt from the miracle of calming the storm",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.3.2"
     },
     {
      "code": "CRE.G8.THE_LI.CALMING_THE_STORM.c",
@@ -528,7 +592,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.3.1",
+    "CRE.G8.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC",
@@ -590,7 +658,8 @@
      "code": "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC.d",
      "letter": "d",
      "text": "apply lessons learnt from the miracle in daily life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.3.2"
     },
     {
      "code": "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC.e",
@@ -600,7 +669,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.3.1",
+    "CRE.G8.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER",
@@ -654,7 +727,8 @@
      "code": "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER.c",
      "letter": "c",
      "text": "demonstrate love by praying for all people",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.4.2"
     },
     {
      "code": "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER.d",
@@ -670,7 +744,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.4.1",
+    "CRE.G8.RUBRIC.4.2",
+    "CRE.G8.RUBRIC.4.3",
+    "CRE.G8.RUBRIC.4.4"
+   ]
   },
   {
    "code": "CRE.G8.TEACHI.THE_LOST_SHEEP",
@@ -714,23 +794,32 @@
      "code": "CRE.G8.TEACHI.THE_LOST_SHEEP.a",
      "letter": "a",
      "text": "describe the parable of the lost sheep",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.4.3"
     },
     {
      "code": "CRE.G8.TEACHI.THE_LOST_SHEEP.b",
      "letter": "b",
      "text": "take part in reaching out to the lost through evangelism",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.4.4"
     },
     {
      "code": "CRE.G8.TEACHI.THE_LOST_SHEEP.c",
      "letter": "c",
      "text": "exemplify God’s love by serving all people",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.4.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.4.1",
+    "CRE.G8.RUBRIC.4.2",
+    "CRE.G8.RUBRIC.4.3",
+    "CRE.G8.RUBRIC.4.4"
+   ]
   },
   {
    "code": "CRE.G8.THE_CH.THE_HOLY_SPIRIT",
@@ -776,19 +865,22 @@
      "code": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.a",
      "letter": "a",
      "text": "describe the outpouring of the Holy Spirit on the day of Pentecost",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.5.1"
     },
     {
      "code": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.b",
      "letter": "b",
      "text": "analyse ways Christians exemplify the fruit of the Holy Spirit",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.5.2"
     },
     {
      "code": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.c",
      "letter": "c",
      "text": "take part in church activities to foster responsibility",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.5.4"
     },
     {
      "code": "CRE.G8.THE_CH.THE_HOLY_SPIRIT.d",
@@ -804,7 +896,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.5.1",
+    "CRE.G8.RUBRIC.5.2",
+    "CRE.G8.RUBRIC.5.3",
+    "CRE.G8.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G8.THE_CH.ACTS_OF_COMPASSION",
@@ -886,7 +984,8 @@
      "code": "CRE.G8.THE_CH.ACTS_OF_COMPASSION.f",
      "letter": "f",
      "text": "take part in a community service activity in the school neighbourhood",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.5.4"
     },
     {
      "code": "CRE.G8.THE_CH.ACTS_OF_COMPASSION.g",
@@ -896,7 +995,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.5.1",
+    "CRE.G8.RUBRIC.5.2",
+    "CRE.G8.RUBRIC.5.3",
+    "CRE.G8.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS",
@@ -954,13 +1059,15 @@
      "code": "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.c",
      "letter": "c",
      "text": "outline causes of conflicts in families today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.1"
     },
     {
      "code": "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.d",
      "letter": "d",
      "text": "propose solutions to conflicts facing families today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.1"
     },
     {
      "code": "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS.e",
@@ -982,7 +1089,21 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI",
@@ -1038,19 +1159,22 @@
      "code": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.b",
      "letter": "b",
      "text": "evaluate causes of teenage pregnancies today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.2"
     },
     {
      "code": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.c",
      "letter": "c",
      "text": "examine the consequences of engaging in irresponsible sexual behaviour",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.3"
     },
     {
      "code": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.d",
      "letter": "d",
      "text": "discuss values and life skills needed to avoid irresponsible sexual behaviour",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.3"
     },
     {
      "code": "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI.e",
@@ -1066,7 +1190,21 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE",
@@ -1126,7 +1264,8 @@
      "code": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.c",
      "letter": "c",
      "text": "discuss how the right to life is violated today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.4"
     },
     {
      "code": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.d",
@@ -1144,7 +1283,8 @@
      "code": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.f",
      "letter": "f",
      "text": "analyse the consequences of violating the right to life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.5"
     },
     {
      "code": "CRE.G8.CHRIST.SACREDNESS_OF_LIFE.g",
@@ -1154,7 +1294,21 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.BULLYING",
@@ -1201,7 +1355,8 @@
      "code": "CRE.G8.CHRIST.BULLYING.a",
      "letter": "a",
      "text": "identify causes of bullying at school and in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.6"
     },
     {
      "code": "CRE.G8.CHRIST.BULLYING.b",
@@ -1219,11 +1374,26 @@
      "code": "CRE.G8.CHRIST.BULLYING.d",
      "letter": "d",
      "text": "model the value of love in their interaction with others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.7"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A",
@@ -1272,7 +1442,8 @@
      "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.a",
      "letter": "a",
      "text": "identify their God-given talents, gifts and abilities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.11"
     },
     {
      "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.b",
@@ -1302,7 +1473,8 @@
      "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.f",
      "letter": "f",
      "text": "originate an income-generating enterprise to enhance financial literacy skills",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.12"
     },
     {
      "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.g",
@@ -1314,11 +1486,26 @@
      "code": "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A.h",
      "letter": "h",
      "text": "utilize their God given talents, gifts and abilities to serve others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.11"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
   },
   {
    "code": "CRE.G8.CHRIST.LEISURE",
@@ -1368,19 +1555,22 @@
      "code": "CRE.G8.CHRIST.LEISURE.b",
      "letter": "b",
      "text": "identify reasons for misuse of leisure among youths",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.8"
     },
     {
      "code": "CRE.G8.CHRIST.LEISURE.c",
      "letter": "c",
      "text": "analyse the consequences of misusing leisure",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.9"
     },
     {
      "code": "CRE.G8.CHRIST.LEISURE.d",
      "letter": "d",
      "text": "examine ways of using leisure time constructively",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.10"
     },
     {
      "code": "CRE.G8.CHRIST.LEISURE.e",
@@ -1398,11 +1588,526 @@
      "code": "CRE.G8.CHRIST.LEISURE.g",
      "letter": "g",
      "text": "value leisure time and use it constructively",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G8.RUBRIC.6.10"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G8.RUBRIC.6.1",
+    "CRE.G8.RUBRIC.6.2",
+    "CRE.G8.RUBRIC.6.3",
+    "CRE.G8.RUBRIC.6.4",
+    "CRE.G8.RUBRIC.6.5",
+    "CRE.G8.RUBRIC.6.6",
+    "CRE.G8.RUBRIC.6.7",
+    "CRE.G8.RUBRIC.6.8",
+    "CRE.G8.RUBRIC.6.9",
+    "CRE.G8.RUBRIC.6.10",
+    "CRE.G8.RUBRIC.6.11",
+    "CRE.G8.RUBRIC.6.12"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G8.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G8.CREATI.ORIGIN_AND_CONSEQUENCES_",
+    "CRE.G8.CREATI.GOD_S_PLAN_FOR_REDEMPTIO"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.1.1",
+     "indicator": "Ability to analyse causes of sin today.",
+     "levels": {
+      "EE": "Learner analyses causes of sin today exhaustively.",
+      "ME": "Learner analyse the causes of sin today.",
+      "AE": "Learner analyses causes of sin today but leaves out some information.",
+      "BE": "Learner analyses causes of sin today but leaves out major information."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.1.2",
+     "indicator": "Ability to discuss moral values and life skills needed to overcome temptations.",
+     "levels": {
+      "EE": "Learner discusses moral values and life skills needed to overcome temptations in details.",
+      "ME": "Learner discusses moral values and life skills needed to overcome temptations.",
+      "AE": "Learner discusses moral values and life skills needed to overcome temptations but omits minor details.",
+      "BE": "Learner discusses moral values and life skills needed to overcome temptations but leaves omits major details."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.1.3",
+     "indicator": "Ability to describe how God demonstrated His love to humankind after the fall.",
+     "levels": {
+      "EE": "Learner describes how God demonstrated His love to humankind after the fall exhaustively.",
+      "ME": "Learner describes how God demonstrated His love to humankind after the fall.",
+      "AE": "Learner describes how God demonstrated His love to humankind after the fall but leaves out some information.",
+      "BE": "Learner describes how God demonstrated His love to humankind after the fall but leaves out a lot of information."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.1.4",
+     "indicator": "Ability to take part in sharing the love of God with others.",
+     "levels": {
+      "EE": "Learner constantly takes part in sharing the love of God with others.",
+      "ME": "Learner takes part in sharing the love of God with others.",
+      "AE": "Learner sometimes takes part in sharing the love of God with others.",
+      "BE": "Learner takes part in sharing the love of God with others but with consistent guidance."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G8.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Bible",
+   "covers": [
+    "CRE.G8.THE_BI.FAITH_AND_GOD_S_PROMISES",
+    "CRE.G8.THE_BI.ABRAHAMIC_COVENANT",
+    "CRE.G8.THE_BI.LEADERSHIP_IN_ISRAEL_SAU"
+   ],
+   "page": 25,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.2.1",
+     "indicator": "Ability to describe the background to the call of Abraham.",
+     "levels": {
+      "EE": "Learner describes the background to the call of Abraham in details.",
+      "ME": "Learner describes the background to the call of Abraham.",
+      "AE": "Learner describes the background to the call of Abraham but omits minor details.",
+      "BE": "Learner describes the background to the call of Abraham but omits major details."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.2",
+     "indicator": "Ability to examine eight ways that Abraham demonstrated faith in God.",
+     "levels": {
+      "EE": "Learner examines eight ways that Abraham demonstrated faith in God and cites relevant examples.",
+      "ME": "Learner examines eight ways that Abraham demonstrated faith in God.",
+      "AE": "Learner examines seven to four ways that Abraham demonstrated faith in God.",
+      "BE": "Learner examines three to one way that Abraham demonstrated faith in God."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.3",
+     "indicator": "Ability to apply faith in different situations.",
+     "levels": {
+      "EE": "Learner Constantly applies faith in different situations.",
+      "ME": "Learner applies faith in different situations.",
+      "AE": "Learner sometimes applies faith in different situations.",
+      "BE": "Learner applies faith in different situations with consistent guidance."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.4",
+     "indicator": "Ability to elaborate six promises made by God to Abraham.",
+     "levels": {
+      "EE": "Learner elaborates six promises made by God to Abraham using illustrations.",
+      "ME": "Learner elaborates six promises made by God to Abraham.",
+      "AE": "Learner elaborates five to three promises made by God to Abraham.",
+      "BE": "Learner elaborates two to one promise made by God to Abraham."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.5",
+     "indicator": "Ability to apply God’s promises in daily life.",
+     "levels": {
+      "EE": "Learner applies God’s promises in daily life and shares real life experiences.",
+      "ME": "Learner applies God’s promises in daily life.",
+      "AE": "Learner makes effort to apply God’s promises in daily life.",
+      "BE": "Learner applies God’s promises in daily life with consistent guidance."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.6",
+     "indicator": "Ability to identify six covenants in modern life and their importance.",
+     "levels": {
+      "EE": "Learner identifies six covenants in modern life and their importance and cites relevant examples.",
+      "ME": "Learner identifies six covenants in modern life and their importance.",
+      "AE": "Learner identifies five to three covenants in modern life and their importance.",
+      "BE": "Learner identifies two to one covenant in modern life and their importance."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.7",
+     "indicator": "Ability to evaluate six characteristics of ungodly covenants.",
+     "levels": {
+      "EE": "Learner evaluates six characteristics of ungodly covenants using illustrations.",
+      "ME": "Learner evaluates six characteristics of ungodly covenants.",
+      "AE": "Learner evaluates five to three characteristics of ungodly covenants.",
+      "BE": "Learner evaluates two to one characteristic of ungodly covenants."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.8",
+     "indicator": "Ability to discuss the importance of God’s covenant with Abraham.",
+     "levels": {
+      "EE": "Learner discusses the importance of God’s covenant with Abraham in details.",
+      "ME": "Learner discusses the importance of God’s covenant with Abraham.",
+      "AE": "Learner discusses the importance of God’s covenant with Abraham but omits some details.",
+      "BE": "Learner discusses the importance of God’s covenant with Abraham but omits major details."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.2.9",
+     "indicator": "Ability to deduce five lessons learnt from the failures of King Saul.",
+     "levels": {
+      "EE": "Learner deduces five lessons learnt from the failures of King Saul and cites relevant examples.",
+      "ME": "Learner deduces five lessons learnt from the failures of King Saul.",
+      "AE": "Learner deduces four to three lessons learnt from the failures of King Saul.",
+      "BE": "Learner deduces two to one lesson learnt from the failures of King Saul."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G8.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Life and Ministry of Jesus Selected Miracles of Jesus Christ",
+   "covers": [
+    "CRE.G8.THE_LI.HEALING_OF_BLIND_BARTIMA",
+    "CRE.G8.THE_LI.CALMING_THE_STORM",
+    "CRE.G8.THE_LI.HEALING_OF_THE_PARALYTIC"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.3.1",
+     "indicator": "Ability to describe the three miracles performed by Jesus Christ.",
+     "levels": {
+      "EE": "Learner describes three miracles performed by Jesus Christ illustratively.",
+      "ME": "Learner describes three miracles performed by Jesus Christ.",
+      "AE": "Learner describes two miracles performed by Jesus Christ.",
+      "BE": "Learner describes only one miracles performed by Jesus Christ."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.3.2",
+     "indicator": "Ability to apply lessons learnt from the miracles of Jesus Christ in daily life.",
+     "levels": {
+      "EE": "Learner applies lessons learnt from the miracles of Jesus Christ in daily life and share real life experiences.",
+      "ME": "Learner applies lessons learnt from the miracles of Jesus Christ in daily life.",
+      "AE": "Learner makes some effort to apply lessons learnt from the miracles of Jesus Christ in daily life.",
+      "BE": "Learner applies lessons learnt from the miracles of Jesus Christ daily life when prompted."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G8.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Teachings of Jesus Christ",
+   "covers": [
+    "CRE.G8.TEACHI.TEACHINGS_ON_PRAYER",
+    "CRE.G8.TEACHI.THE_LOST_SHEEP"
+   ],
+   "page": 38,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.4.1",
+     "indicator": "Ability to discuss the importance of prayer.",
+     "levels": {
+      "EE": "Learner discusses the importance of prayer in details.",
+      "ME": "Learner discusses the importance of prayer.",
+      "AE": "Learner discusses the importance of prayer leaving minor details.",
+      "BE": "Learner discusses the importance of prayer leaving major details."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.4.2",
+     "indicator": "Ability to demonstrate love by praying for all people as taught by Jesus Christ.",
+     "levels": {
+      "EE": "Learner constantly demonstrates love by praying for all people as taught by Jesus Christ.",
+      "ME": "Learner demonstrates love by praying for all people as taught by Jesus Christ",
+      "AE": "Learner demonstrates love by praying for friends only.",
+      "BE": "Learner demonstrates love by praying for friends only when prompted."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.4.3",
+     "indicator": "Ability to describe the parable of the lost sheep.",
+     "levels": {
+      "EE": "Learner describes the parable of the lost sheep in details.",
+      "ME": "Learner describes the parable of the lost sheep.",
+      "AE": "Learner describes the parable of the lost sheep but leaves out minor details.",
+      "BE": "Learner describes the parable of the lost sheep but omits major details."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.4.4",
+     "indicator": "Ability to take part in reaching out to the lost through mission work.",
+     "levels": {
+      "EE": "Learner constantly takes part in reaching out to the lost through mission work.",
+      "ME": "Learner takes part in reaching out to the lost through mission work.",
+      "AE": "Learner sometimes takes part in reaching out to the lost through mission work.",
+      "BE": "Learner takes part in reaching out to the lost through mission work when prompted."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G8.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Church",
+   "covers": [
+    "CRE.G8.THE_CH.THE_HOLY_SPIRIT",
+    "CRE.G8.THE_CH.ACTS_OF_COMPASSION"
+   ],
+   "page": 44,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.5.1",
+     "indicator": "Ability to describe the outpouring of the Holy Spirit on the day of Pentecost",
+     "levels": {
+      "EE": "Learner describes the outpouring of the Holy Spirit on the day of Pentecost in details.",
+      "ME": "Learner describes the outpouring of the Holy Spirit on the day of Pentecost.",
+      "AE": "Learner describes the outpouring of the Holy Spirit on the day of Pentecost but omits minor details.",
+      "BE": "Learner describes the outpouring of the Holy Spirit on the day of Pentecost but omits major details."
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.5.2",
+     "indicator": "Ability to analyses six ways Christians exemplify the fruit of the Holy Spirit.",
+     "levels": {
+      "EE": "Learner analyses six ways Christians exemplify the fruit of the Holy Spirit and uses illustrations.",
+      "ME": "Learner analyses six ways Christians exemplify the fruit of the Holy Spirit.",
+      "AE": "Learner analyses five to three ways Christians exemplify the fruit of the Holy Spirit.",
+      "BE": "Learner analyse two to one way Christians exemplify the fruit of the Holy Spirit."
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.5.3",
+     "indicator": "Ability to describe six roles played by the church in caring for the needy.",
+     "levels": {
+      "EE": "Learner describes six roles played by the church in caring for the needy and cites relevant examples.",
+      "ME": "Learner describes six roles played by the church in caring for the needy.",
+      "AE": "Learner describes five to three roles played by the church in caring for the needy.",
+      "BE": "Learner describes two to one role played by the church in caring for the needy."
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.5.4",
+     "indicator": "Ability to take part in a community service activity in the school neighbourhood.",
+     "levels": {
+      "EE": "Learner constantly takes part in several community service activities in the school neighbourhood.",
+      "ME": "Learner takes part in a community service activity in the school neighbourhood.",
+      "AE": "Learner sometimes takes part in a community service activity in the school neighbourhood.",
+      "BE": "Learner attempts to take part in a community service activity in the school neighbourhood."
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G8.RUBRIC.6",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Christian Living Today",
+   "covers": [
+    "CRE.G8.CHRIST.FAMILY_RELATIONSHIPS",
+    "CRE.G8.CHRIST.HUMAN_SEXUALITY_RESPONSI",
+    "CRE.G8.CHRIST.SACREDNESS_OF_LIFE",
+    "CRE.G8.CHRIST.BULLYING",
+    "CRE.G8.CHRIST.WORK_TALENTS_GIFTS_AND_A",
+    "CRE.G8.CHRIST.LEISURE"
+   ],
+   "page": 59,
+   "indicators": [
+    {
+     "code": "CRE.G8.RUBRIC.6.1",
+     "indicator": "Ability to identify six causes of conflicts in families today.",
+     "levels": {
+      "EE": "Learner identifies six causes of conflicts in families today and cites relevant examples.",
+      "ME": "Learner identifies six causes of conflicts in families today.",
+      "AE": "Learner identifies five to three causes of conflicts in families today.",
+      "BE": "Learner identifies two to one cause of conflict in families today."
+     },
+     "page": 59,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.2",
+     "indicator": "Ability to evaluate causes of teenage pregnancy today.",
+     "levels": {
+      "EE": "Learner evaluates causes of teenage pregnancy today in details.",
+      "ME": "Learner evaluates causes of teenage pregnancy today.",
+      "AE": "Learner evaluates causes of teenage pregnancy today but omits minor details.",
+      "BE": "Learner evaluates causes of teenage pregnancies today but omits major details."
+     },
+     "page": 59,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.3",
+     "indicator": "Ability to examine eight consequences of engaging in irresponsible sexual behaviour.",
+     "levels": {
+      "EE": "Learner examines eight consequences of engaging in irresponsible sexual behaviour and cites relevant examples.",
+      "ME": "Learner examines eight consequences of engaging in irresponsible sexual behaviour.",
+      "AE": "Learner examines seven to four consequences of engaging in irresponsible sexual behaviour.",
+      "BE": "Learner examines three to one consequence of engaging in irresponsible sexual behaviour."
+     },
+     "page": 59,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.4",
+     "indicator": "Ability to discuss how the right to life is violated today.",
+     "levels": {
+      "EE": "Learner discusses how the right to life is violated today in details.",
+      "ME": "Learner discusses how the right to life is violated today.",
+      "AE": "Learner discusses how the right to life is violated today but omits minor information.",
+      "BE": "Learner briefly discusses how the right to life is violated today but omits major information."
+     },
+     "page": 59,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.5",
+     "indicator": "Ability to analyse eight consequences of violating the right to life.",
+     "levels": {
+      "EE": "Learner analyses eight consequences of violating the right to life using relevant examples.",
+      "ME": "Learner analyses eight consequences of violating the right to life.",
+      "AE": "Learner analyses seven to four consequences of violating the right to life.",
+      "BE": "Learner analyses three to one consequence of violating the right to life."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.6",
+     "indicator": "Ability to identify six causes of bullying at school and in the community.",
+     "levels": {
+      "EE": "Learner identifies six causes of bullying at school and in the community using illustrations.",
+      "ME": "Learner identifies six causes of bullying at school and in the community.",
+      "AE": "Learner identifies five to three causes of bullying at school and in the community.",
+      "BE": "Learner identifies two to one cause of bullying at school and in the community."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.7",
+     "indicator": "Ability to model the value of love in their interaction with others.",
+     "levels": {
+      "EE": "Learner constantly models the value of love in their interaction with others.",
+      "ME": "Learner models the value of love in their interaction with others.",
+      "AE": "Learner sometimes models the value of love in their interaction with others.",
+      "BE": "Learner models the value of love in their interaction with others but with consistent guidance."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.8",
+     "indicator": "Ability to identify reasons that lead to misuse of leisure among youths.",
+     "levels": {
+      "EE": "Learner identifies reasons that lead to misuse of leisure among youths in details.",
+      "ME": "Learner identifies reasons that lead to misuse of leisure among youths.",
+      "AE": "Learner identifies reasons that lead to misuse of leisure among youths but omits some information.",
+      "BE": "Learner identifies reasons which lead to misuse of leisure among youths but omits a lot of information."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.9",
+     "indicator": "Ability to analyse eight consequences of misusing leisure time.",
+     "levels": {
+      "EE": "Learner analyses eight consequences of misusing leisure and guides peers on proper use of leisure.",
+      "ME": "Learner analyses eight consequences of misusing leisure time.",
+      "AE": "Learner analyses eight to four consequences of misusing leisure.",
+      "BE": "Learner analyses three to one consequence of misusing leisure time."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.10",
+     "indicator": "Ability to examine ways of using leisure time constructively.",
+     "levels": {
+      "EE": "Learner examines ways of using leisure time constructively in details.",
+      "ME": "Learner examines ways of using leisure time constructively.",
+      "AE": "Learner examines ways of using leisure time constructively but omits minor details.",
+      "BE": "Learner examines ways of using leisure time constructively but omits major details."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.11",
+     "indicator": "Ability to identify their God-given talents, gifts and abilities.",
+     "levels": {
+      "EE": "Learner identifies their God-given talents, gifts and abilities with ease.",
+      "ME": "Learner identifies their God-given talents, gifts and abilities.",
+      "AE": "Learner identifies some of their God-given talents, gifts and abilities.",
+      "BE": "Learner identifies their God-given talents, gifts and abilities with guidance."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G8.RUBRIC.6.12",
+     "indicator": "Ability to originate an income-generating enterprise.",
+     "levels": {
+      "EE": "Learner originates several income-generating enterprises and saves money.",
+      "ME": "Learner originates an income-generating enterprise.",
+      "AE": "Learner makes effort to originate an income-generating enterprise.",
+      "BE": "Learner originates an income-generating enterprise with assistance."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

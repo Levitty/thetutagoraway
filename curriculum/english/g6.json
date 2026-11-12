@@ -84,7 +84,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING",
@@ -132,7 +137,8 @@
      "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.b",
      "letter": "b",
      "text": "read a variety of materials independently for information and pleasure",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G6.RUBRIC.2.3"
     },
     {
      "code": "ENGL.G6.READIN.T1_EXTENSIVE_READING.c",
@@ -148,7 +154,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T1_WORD_CLASSES",
@@ -267,7 +278,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI",
@@ -331,7 +346,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T2_INTENSIVE_READING",
@@ -404,7 +424,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T2_WORD_CLASSES",
@@ -535,7 +560,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -601,7 +630,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T3_INTENSIVE_READING",
@@ -665,7 +699,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT",
@@ -796,7 +835,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO",
@@ -871,7 +914,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T4_INTENSIVE_READING",
@@ -937,7 +985,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T4_WORD_CLASSES",
@@ -1061,7 +1114,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO",
@@ -1107,7 +1164,8 @@
      "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.a",
      "letter": "a",
      "text": "listen for specific information and the main idea for self-expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.b",
@@ -1129,7 +1187,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T5_EXTENSIVE_READING",
@@ -1188,7 +1251,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T5_ADJECTIVES",
@@ -1297,7 +1365,8 @@
      "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.b",
      "letter": "b",
      "text": "organise ideas coherently, clearly, and logically for writing fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.4.2"
     },
     {
      "code": "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.c",
@@ -1313,7 +1382,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
@@ -1382,7 +1455,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T6_INTENSIVE_READING",
@@ -1451,7 +1529,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS",
@@ -1574,7 +1657,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN",
@@ -1649,7 +1736,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T7_EXTENSIVE_READING",
@@ -1710,7 +1802,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T7_TENSE",
@@ -1830,7 +1927,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO",
@@ -1899,7 +2000,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T8_FLUENCY",
@@ -1951,13 +2057,15 @@
      "code": "ENGL.G6.READIN.T8_FLUENCY.b",
      "letter": "b",
      "text": "read a text at a reasonable speed for fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G6.READIN.T8_FLUENCY.c",
      "letter": "c",
      "text": "read a text accurately and with expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G6.READIN.T8_FLUENCY.d",
@@ -1967,7 +2075,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS",
@@ -2098,7 +2211,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP",
@@ -2169,7 +2286,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI",
@@ -2224,7 +2346,8 @@
      "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.b",
      "letter": "b",
      "text": "create mental images from viewed, heard or read text for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.c",
@@ -2240,7 +2363,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T9_ADVERBS",
@@ -2360,7 +2488,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO",
@@ -2430,7 +2562,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T10_INTENSIVE_READING",
@@ -2494,7 +2631,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T10_CONJUNCTIONS",
@@ -2616,7 +2758,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO",
@@ -2680,7 +2826,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T11_INTENSIVE_READING_DI",
@@ -2745,7 +2896,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T11_INTERROGATIVES",
@@ -2860,7 +3016,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO",
@@ -2904,13 +3064,15 @@
      "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.a",
      "letter": "a",
      "text": "listen for specific details such as sounds words and expressions for effective oral communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.1.4"
     },
     {
      "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.b",
      "letter": "b",
      "text": "make oral presentations such as speeches accurately, with minimal hesitations and with expressions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G6.RUBRIC.1.4"
     },
     {
      "code": "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.c",
@@ -2926,7 +3088,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T12_INTENSIVE_READING",
@@ -2991,7 +3158,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T12_QUESTION_TAGS",
@@ -3115,7 +3287,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
   },
   {
    "code": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN",
@@ -3180,7 +3356,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.1.1",
+    "ENGL.G6.RUBRIC.1.2",
+    "ENGL.G6.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G6.READIN.T13_EXTENSIVE_READING",
@@ -3239,7 +3420,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.2.1",
+    "ENGL.G6.RUBRIC.2.2",
+    "ENGL.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G6.LANGUA.T13_WORD_CLASSES",
@@ -3363,7 +3549,178 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G6.RUBRIC.4.1",
+    "ENGL.G6.RUBRIC.4.2"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENGL.G6.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI",
+    "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI",
+    "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN",
+    "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP",
+    "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN"
+   ],
+   "page": 131,
+   "indicators": [
+    {
+     "code": "ENGL.G6.RUBRIC.1.1",
+     "indicator": "Ability to listen actively to a variety of oral texts to gain information.",
+     "levels": {
+      "EE": "Maintains meaningful eye-contact, sits upright, nods, takes notes, responds to oral questions correctly for information in a variety of contexts .",
+      "ME": "Maintains eye contact, sits upright, nods and takes notes for information in varied contexts.",
+      "AE": "Either maintains eye contact or sits upright or takes notes for information.",
+      "BE": "Yawns, looks out, has to be prompted while listening for information."
+     },
+     "page": 131,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.RUBRIC.1.2",
+     "indicator": "Ability to listen and participate actively in conversations in various settings for self-expression and",
+     "levels": {
+      "EE": "Participates actively in conversations, observes proper turn-taking skills, nods, maintains",
+      "ME": "Participates actively in conversations in various settings for self-expression and effective",
+      "AE": "Participates passively in conversations.",
+      "BE": "Yawns, doses and interrupts conversations."
+     },
+     "page": 131,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.RUBRIC.1.4",
+     "indicator": "Ability to speak accurately with expression and at the right speed, with minimum hesitation for fluency for effective communication.",
+     "levels": {
+      "EE": "Speaks accurately with expression and at the right speed without hesitation in varied contexts for effective communication.",
+      "ME": "Speaks accurately with expression and at the right speed, with minimum hesitation for fluency.",
+      "AE": "Speaks accurately with expression but at slow speed and with hesitation.",
+      "BE": "Speaks inaccurately without expression and at a slow speed with many hesitations."
+     },
+     "page": 132,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G6.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading",
+   "strand": "Reading",
+   "covers": [
+    "ENGL.G6.READIN.T1_EXTENSIVE_READING",
+    "ENGL.G6.READIN.T2_INTENSIVE_READING",
+    "ENGL.G6.READIN.T3_INTENSIVE_READING",
+    "ENGL.G6.READIN.T4_INTENSIVE_READING",
+    "ENGL.G6.READIN.T5_EXTENSIVE_READING",
+    "ENGL.G6.READIN.T6_INTENSIVE_READING",
+    "ENGL.G6.READIN.T7_EXTENSIVE_READING",
+    "ENGL.G6.READIN.T8_FLUENCY",
+    "ENGL.G6.READIN.T9_INTENSIVE_READING_FI",
+    "ENGL.G6.READIN.T10_INTENSIVE_READING",
+    "ENGL.G6.READIN.T11_INTENSIVE_READING_DI",
+    "ENGL.G6.READIN.T12_INTENSIVE_READING",
+    "ENGL.G6.READIN.T13_EXTENSIVE_READING"
+   ],
+   "page": 132,
+   "indicators": [
+    {
+     "code": "ENGL.G6.RUBRIC.2.1",
+     "indicator": "Ability to read about 400 words fluently and accurately, at the right speed and with expression for effective communication.",
+     "levels": {
+      "EE": "Reads more than 350 words in varied texts fluently, accurately and expressively for effective communication.",
+      "ME": "Reads about 300 words fluently and accurately at the right speed and with expression for effective communication.",
+      "AE": "Reads about 800 words fluently and accurately at the right speed and with expression for effective communication.",
+      "BE": "Reads about 200 words fluently and accurately but at slow speed without expression."
+     },
+     "page": 132,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.RUBRIC.2.2",
+     "indicator": "Ability to read the text for inferential comprehension and meaning.",
+     "levels": {
+      "EE": "Reads a variety of texts for inferential meaning and relates to real life experiences.",
+      "ME": "Reads the text for inferential comprehension and meaning.",
+      "AE": "Reads the text for comprehension and meaning but fails to locate inferential meaning.",
+      "BE": "Reads the text for comprehension only."
+     },
+     "page": 132,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.RUBRIC.2.3",
+     "indicator": "Ability to select and read relevant materials of between 1000-1250 words for information and pleasure.",
+     "levels": {
+      "EE": "Selects and reads a variety of relevant materials of more than 1300 words for information and pleasure",
+      "ME": "Selects and reads relevant materials of between 1000-1250 words for information and pleasure.",
+      "AE": "Selects and reads relevant materials of below 1000 words for information and pleasure",
+      "BE": "Selects and reads relevant material of below 500 words and reads for information and pleasure."
+     },
+     "page": 133,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G6.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "ENGL.G6.WRITIN.T1_GUIDED_WRITING",
+    "ENGL.G6.WRITIN.T2_CREATIVE_WRITING",
+    "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING",
+    "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING",
+    "ENGL.G6.WRITIN.T5_CREATIVE_WRITING",
+    "ENGL.G6.WRITIN.T6_CREATIVE_WRITING",
+    "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING",
+    "ENGL.G6.WRITIN.T8_CREATIVE_WRITING",
+    "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING",
+    "ENGL.G6.WRITIN.T10_CREATIVE_WRITING",
+    "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING",
+    "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING",
+    "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING"
+   ],
+   "page": 134,
+   "indicators": [
+    {
+     "code": "ENGL.G6.RUBRIC.4.1",
+     "indicator": "Ability to write a variety of writings using the correct formats for effective communication",
+     "levels": {
+      "EE": "Writes a variety of writings using correct formats and uses appropriate language for varied writing tasks for effective communication",
+      "ME": "Writes a variety of writings using the correct formats for effective communication.",
+      "AE": "Writes a number of writings using correct formats for effective communication.",
+      "BE": "Writes all the writings using wrong formats."
+     },
+     "page": 134,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G6.RUBRIC.4.2",
+     "indicator": "Ability to plan and write compositions, coherently, clearly and logically for effective communication.",
+     "levels": {
+      "EE": "Plans and writes a variety of compositions coherently, clearly and logically with apt expressions and idioms for effective communication",
+      "ME": "Plans and writes compositions coherently, clearly and logically for effective communication",
+      "AE": "Plans and writes compositions with some illogical and unclear parts",
+      "BE": "Plans but writes compositions that are incoherent, lacks clarity and many illogical parts."
+     },
+     "page": 134,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

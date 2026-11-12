@@ -53,7 +53,8 @@
      "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.a",
      "letter": "a",
      "text": "identify the countries of Eastern Africa on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.b",
@@ -75,7 +76,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.1.1",
+    "SOCI.G6.RUBRIC.1.2",
+    "SOCI.G6.RUBRIC.1.3",
+    "SOCI.G6.RUBRIC.1.4",
+    "SOCI.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I",
@@ -116,19 +124,22 @@
      "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.a",
      "letter": "a",
      "text": "identify the main physical features in Eastern Africa on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.b",
      "letter": "b",
      "text": "describe the formation of the main physical features of Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.c",
      "letter": "c",
      "text": "draw a map of Eastern Africa and label the main physical features",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.d",
@@ -138,7 +149,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.1.1",
+    "SOCI.G6.RUBRIC.1.2",
+    "SOCI.G6.RUBRIC.1.3",
+    "SOCI.G6.RUBRIC.1.4",
+    "SOCI.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST",
@@ -177,29 +195,40 @@
      "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.a",
      "letter": "a",
      "text": "identify the main climatic regions in Eastern Africa on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.b",
      "letter": "b",
      "text": "describe characteristics of the main climatic regions in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.c",
      "letter": "c",
      "text": "explain ways in which climate influences human activities in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.d",
      "letter": "d",
      "text": "acknowledge the main climatic regions in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.1.1",
+    "SOCI.G6.RUBRIC.1.2",
+    "SOCI.G6.RUBRIC.1.3",
+    "SOCI.G6.RUBRIC.1.4",
+    "SOCI.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF",
@@ -238,19 +267,22 @@
      "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.a",
      "letter": "a",
      "text": "identify the main types of vegetation in Eastern Africa on a map",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.b",
      "letter": "b",
      "text": "draw a map of Eastern Africa and label the main types of vegetation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.c",
      "letter": "c",
      "text": "describe the characteristics of the main types of vegetation in Eastern Africa",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.1.4"
     },
     {
      "code": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.d",
@@ -266,7 +298,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.1.1",
+    "SOCI.G6.RUBRIC.1.2",
+    "SOCI.G6.RUBRIC.1.3",
+    "SOCI.G6.RUBRIC.1.4",
+    "SOCI.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME",
@@ -318,7 +357,8 @@
      "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.c",
      "letter": "c",
      "text": "demonstrate ways of conserving historic built environments in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.1.5"
     },
     {
      "code": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.d",
@@ -328,7 +368,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.1.1",
+    "SOCI.G6.RUBRIC.1.2",
+    "SOCI.G6.RUBRIC.1.3",
+    "SOCI.G6.RUBRIC.1.4",
+    "SOCI.G6.RUBRIC.1.5"
+   ]
   },
   {
    "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE",
@@ -367,7 +414,8 @@
      "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.a",
      "letter": "a",
      "text": "describe the classification of communities in Eastern Africa according to language groups",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     },
     {
      "code": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.b",
@@ -395,7 +443,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_",
@@ -434,13 +495,15 @@
      "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.a",
      "letter": "a",
      "text": "explain factors influencing population distribution in Eastern Africa",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.b",
      "letter": "b",
      "text": "locate areas of high and low population density in Eastern Africa on a map",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.2.8"
     },
     {
      "code": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.c",
@@ -456,7 +519,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN",
@@ -517,7 +593,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY",
@@ -582,7 +671,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.BEEF_FARMING",
@@ -628,7 +730,8 @@
      "code": "SOCI.G6.RESOUR.BEEF_FARMING.b",
      "letter": "b",
      "text": "locate on a map areas where beef farming is practised in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.8"
     },
     {
      "code": "SOCI.G6.RESOUR.BEEF_FARMING.c",
@@ -650,7 +753,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC",
@@ -696,7 +812,8 @@
      "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.b",
      "letter": "b",
      "text": "describe methods of marine fishing in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.3"
     },
     {
      "code": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.c",
@@ -718,7 +835,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_",
@@ -758,25 +888,29 @@
      "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.a",
      "letter": "a",
      "text": "explain factors that promote tourism in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.b",
      "letter": "b",
      "text": "locate game reserves and national parks in Eastern Africa on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.8"
     },
     {
      "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.c",
      "letter": "c",
      "text": "explain challenges facing tourism in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.d",
      "letter": "d",
      "text": "state possible solutions to challenges facing tourism in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.e",
@@ -786,7 +920,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR",
@@ -837,13 +984,15 @@
      "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.a",
      "letter": "a",
      "text": "identify the main transport networks in Eastern Africa on a map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.10"
     },
     {
      "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.b",
      "letter": "b",
      "text": "draw a map of Eastern Africa showing the main transport networks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.10"
     },
     {
      "code": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.c",
@@ -865,7 +1014,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER",
@@ -904,35 +1066,53 @@
      "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.a",
      "letter": "a",
      "text": "identify modes of communication in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     },
     {
      "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.b",
      "letter": "b",
      "text": "explain challenges facing communication networks in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     },
     {
      "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.c",
      "letter": "c",
      "text": "state possible solutions to challenges facing communication networks in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     },
     {
      "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.d",
      "letter": "d",
      "text": "demonstrate how different modes of communication are used in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     },
     {
      "code": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.e",
      "letter": "e",
      "text": "appreciate the role of communication networks in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.11"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA",
@@ -993,17 +1173,32 @@
      "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.d",
      "letter": "d",
      "text": "state the possible solutions to problems associated with mining",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.6"
     },
     {
      "code": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.e",
      "letter": "e",
      "text": "desire to conserve areas affected by mining activities in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.2.8"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.2.1",
+    "SOCI.G6.RUBRIC.2.2",
+    "SOCI.G6.RUBRIC.2.3",
+    "SOCI.G6.RUBRIC.2.4",
+    "SOCI.G6.RUBRIC.2.5",
+    "SOCI.G6.RUBRIC.2.6",
+    "SOCI.G6.RUBRIC.2.7",
+    "SOCI.G6.RUBRIC.2.8",
+    "SOCI.G6.RUBRIC.2.9",
+    "SOCI.G6.RUBRIC.2.10",
+    "SOCI.G6.RUBRIC.2.11"
+   ]
   },
   {
    "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV",
@@ -1042,13 +1237,15 @@
      "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.a",
      "letter": "a",
      "text": "describe traditional forms of government of the Buganda and the Nyamwezi in Eastern Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.b",
      "letter": "b",
      "text": "compare traditional forms of government of the Buganda and the Nyamwezi",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.c",
@@ -1058,7 +1255,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.3.1",
+    "SOCI.G6.RUBRIC.3.2",
+    "SOCI.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS",
@@ -1098,25 +1300,29 @@
      "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.a",
      "letter": "a",
      "text": "explain the objectives of East African Community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.b",
      "letter": "b",
      "text": "describe the benefits of the East African Community to member states",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.c",
      "letter": "c",
      "text": "identify the challenges facing the East African Community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.e",
      "letter": "e",
      "text": "formulate possible solutions to challenges facing the East African Community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.3.2"
     },
     {
      "code": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.f",
@@ -1126,7 +1332,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.3.1",
+    "SOCI.G6.RUBRIC.3.2",
+    "SOCI.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G6.POLITI.CITIZENSHIP",
@@ -1167,7 +1378,8 @@
      "code": "SOCI.G6.POLITI.CITIZENSHIP.a",
      "letter": "a",
      "text": "describe the rights and responsibilities of a Kenyan citizen",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "SOCI.G6.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G6.POLITI.CITIZENSHIP.b",
@@ -1189,7 +1401,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.3.1",
+    "SOCI.G6.RUBRIC.3.2",
+    "SOCI.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G6.POLITI.HUMAN_RIGHTS",
@@ -1251,7 +1468,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.3.1",
+    "SOCI.G6.RUBRIC.3.2",
+    "SOCI.G6.RUBRIC.3.3"
+   ]
   },
   {
    "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL",
@@ -1292,7 +1514,8 @@
      "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.a",
      "letter": "a",
      "text": "explain the causes of conflicts in society today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.b",
@@ -1314,7 +1537,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.4.1",
+    "SOCI.G6.RUBRIC.4.2",
+    "SOCI.G6.RUBRIC.4.3",
+    "SOCI.G6.RUBRIC.4.4",
+    "SOCI.G6.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E",
@@ -1353,13 +1583,15 @@
      "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.a",
      "letter": "a",
      "text": "identify sources of revenue for National Government in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.b",
      "letter": "b",
      "text": "explain ways in which the national and county governments in Kenya spend their revenue",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.c",
@@ -1369,7 +1601,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.4.1",
+    "SOCI.G6.RUBRIC.4.2",
+    "SOCI.G6.RUBRIC.4.3",
+    "SOCI.G6.RUBRIC.4.4",
+    "SOCI.G6.RUBRIC.4.5"
+   ]
   },
   {
    "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS",
@@ -1408,13 +1647,15 @@
      "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.a",
      "letter": "a",
      "text": "identify key words in the preamble of the Constitution of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.4.4"
     },
     {
      "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.b",
      "letter": "b",
      "text": "explain the meaning of key words in the preamble",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G6.RUBRIC.4.4"
     },
     {
      "code": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.c",
@@ -1424,7 +1665,366 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G6.RUBRIC.4.1",
+    "SOCI.G6.RUBRIC.4.2",
+    "SOCI.G6.RUBRIC.4.3",
+    "SOCI.G6.RUBRIC.4.4",
+    "SOCI.G6.RUBRIC.4.5"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SOCI.G6.RUBRIC.1",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Natural and the Built Environments",
+   "covers": [
+    "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU",
+    "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I",
+    "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST",
+    "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF",
+    "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME"
+   ],
+   "page": 24,
+   "indicators": [
+    {
+     "code": "SOCI.G6.RUBRIC.1.1",
+     "indicator": "Ability to describe the importance of the main physical features of Eastern Africa region",
+     "levels": {
+      "EE": "Learner describes the importance of the main physical features of Eastern Africa region with details.",
+      "ME": "Learner describes the importance of the main physical features of Eastern Africa region",
+      "AE": "Learner describes the importance of some of the main physical features of Eastern Africa region.",
+      "BE": "Learner has challenges describing the importance of the main physical features of Eastern Africa region."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.1.2",
+     "indicator": "Ability to describe characteristics of the main climatic regions in Eastern Africa.",
+     "levels": {
+      "EE": "Learner describes characteristics of the main climatic regions in Eastern Africa with examples.",
+      "ME": "Learner describes characteristics of the main climatic regions in Eastern Africa.",
+      "AE": "Learner describes some characteristics of the main climatic regions in Eastern Africa.",
+      "BE": "Learner has challenges describing characteristics of the main climatic regions in Eastern Africa."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.1.3",
+     "indicator": "Ability to describe the importance of the main historic built environments in Eastern Africa.",
+     "levels": {
+      "EE": "Learner describes the importance of the main historic built environments in Eastern Africa with examples.",
+      "ME": "Learner describes the importance of the main historic built environments in Eastern Africa.",
+      "AE": "Learner describes the importance of some of the main historic built environments in Eastern Africa.",
+      "BE": "Learner has challenges describing the importance of the main historic built environments in Eastern Africa."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.1.4",
+     "indicator": "Ability to draw a map of Eastern Africa and label the main types of vegetation.",
+     "levels": {
+      "EE": "Learner draws a map of Eastern Africa and labels the main types of vegetation creatively.",
+      "ME": "Learner draws a map of Eastern Africa and labels the main types of vegetation.",
+      "AE": "Learner draws a map of Eastern Africa and labels some of the main types of vegetation.",
+      "BE": "Learner has challenges drawing a map of Eastern Africa and labelling the main types of vegetation."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.1.5",
+     "indicator": "Ability to develop ways of conserving historic built environments in Eastern Africa.",
+     "levels": {
+      "EE": "Learner develops ways of conserving historic built environments in Eastern Africa citing examples.",
+      "ME": "Learner develops ways of conserving historic built environments in Eastern Africa.",
+      "AE": "Learner develops some ways of conserving historic built environments in Eastern Africa.",
+      "BE": "Learner has challenges developing ways of conserving historic built environments in Eastern Africa."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G6.RUBRIC.2",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "People and Social Organisation",
+   "covers": [
+    "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE",
+    "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_",
+    "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN",
+    "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY",
+    "SOCI.G6.RESOUR.BEEF_FARMING",
+    "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC",
+    "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_",
+    "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR",
+    "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER",
+    "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA"
+   ],
+   "page": 48,
+   "indicators": [
+    {
+     "code": "SOCI.G6.RUBRIC.2.1",
+     "indicator": "Ability to explain the challenges facing beef farming in Eastern Africa.",
+     "levels": {
+      "EE": "Learner explains the challenges facing beef farming in Eastern with details.",
+      "ME": "Learner explains the challenges facing beef farming in Eastern Africa.",
+      "AE": "Learner explains some of the challenges facing beef farming in Eastern Africa.",
+      "BE": "Learner has challenges explaining the challenges facing beef farming in Eastern Africa."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.2",
+     "indicator": "Ability to describe the methods of extracting minerals in Eastern Africa.",
+     "levels": {
+      "EE": "Learner describes the methods of extracting minerals in Eastern Africa correctly and systematically.",
+      "ME": "Learner describes the methods of extracting minerals in Eastern Africa correctly.",
+      "AE": "Learner describes some of the methods of extracting minerals in Eastern Africa correctly.",
+      "BE": "Learner has challenges describing the methods of extracting minerals in Eastern Africa."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.3",
+     "indicator": "Ability to describe methods of marine fishing in Eastern Africa.",
+     "levels": {
+      "EE": "Learner describes methods of marine fishing in Eastern Africa with details.",
+      "ME": "Learner describes methods of marine fishing in Eastern Africa.",
+      "AE": "Learner describes some methods of marine fishing in Eastern Africa.",
+      "BE": "Learner has challenges describing methods of marine fishing in Eastern Africa."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.4",
+     "indicator": "Ability to explain factors that promote tourism in Eastern Africa.",
+     "levels": {
+      "EE": "Learner explains factors that promote tourism in Eastern Africa in detail.",
+      "ME": "Learner explains factors that promote tourism in Eastern Africa",
+      "AE": "Learner explains some factors that promote tourism in Eastern Africa.",
+      "BE": "Learner has challenges explaining factors that promote tourism in Eastern Africa."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.5",
+     "indicator": "Ability to describe the methods of extracting minerals in Eastern Africa.",
+     "levels": {
+      "EE": "Learner describes the methods of extracting minerals in Eastern Africa with details.",
+      "ME": "Learner describes the methods of extracting minerals in Eastern Africa.",
+      "AE": "Learner describes some of the methods of extracting minerals in Eastern Africa.",
+      "BE": "Learner has challenges describing the methods of extracting minerals in Eastern Africa."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.6",
+     "indicator": "Ability to state the possible solutions to problems associated with mining,",
+     "levels": {
+      "EE": "Learner states the possible solutions to problems associated with mining with examples.",
+      "ME": "Learner states the possible solutions to problems associated with mining.",
+      "AE": "Learner states some of the possible solutions to problems associated with mining.",
+      "BE": "Learner has challenges stating the possible solutions to problems associated with mining."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.7",
+     "indicator": "Ability to state the possible solutions to challenges facing transport networks in Eastern Africa.",
+     "levels": {
+      "EE": "Learner states possible solutions to challenges facing transport networks in Eastern Africa with examples.",
+      "ME": "Learner states possible solutions to challenges facing transport networks in Eastern Africa.",
+      "AE": "Learner states some possible solutions to challenges facing transport networks in Eastern Africa.",
+      "BE": "Learner has challenges stating possible solutions to challenges facing transport networks in Eastern Africa."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.8",
+     "indicator": "Ability to locate on a map the areas where beef farming is practised in Eastern Africa.",
+     "levels": {
+      "EE": "Learner locates on a map the areas where beef farming is practised in Eastern Africa and shows others.",
+      "ME": "Learner locates on a map area where beef farming is practised in Eastern Africa.",
+      "AE": "Learner locates on a map some of the areas where beef farming is practised in Eastern Africa.",
+      "BE": "Learner has challenges locating on a map the areas where beef farming is practised in Eastern Africa."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.9",
+     "indicator": "Ability to design possible solutions to challenges facing fishing in Eastern Africa.",
+     "levels": {
+      "EE": "Learner designs possible solutions to challenges facing fishing in Eastern Africa with examples.",
+      "ME": "Learner designs possible solutions to challenges facing fishing in Eastern Africa",
+      "AE": "Learner designs some possible solutions to challenges facing fishing in Eastern Africa.",
+      "BE": "Learner has challenges designing possible solutions to challenges facing fishing in Eastern Africa."
+     },
+     "page": 50,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.10",
+     "indicator": "Ability to draw a map of Eastern Africa showing the main transport networks.",
+     "levels": {
+      "EE": "Learner draws a map of Eastern Africa showing the main transport networks creatively.",
+      "ME": "Learner draws a map of Eastern Africa showing the main transport networks.",
+      "AE": "Learner draws a map of Eastern Africa showing some of the main transport networks.",
+      "BE": "Learner has challenges drawing a map of Eastern Africa showing the main transport networks."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.2.11",
+     "indicator": "Ability to demonstrate how different modes of communication are used in Eastern Africa.",
+     "levels": {
+      "EE": "Learner demonstrates how different modes of communication are used in Eastern Africa with details.",
+      "ME": "Learner demonstrates how different modes of communication are used in Eastern Africa.",
+      "AE": "Learner demonstrates how some of the different modes of communication are used in Eastern Africa.",
+      "BE": "Learner has challenges demonstrating how different modes of communication are used in Eastern Africa."
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G6.RUBRIC.3",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Political Systems",
+   "covers": [
+    "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV",
+    "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS",
+    "SOCI.G6.POLITI.CITIZENSHIP",
+    "SOCI.G6.POLITI.HUMAN_RIGHTS"
+   ],
+   "page": 60,
+   "indicators": [
+    {
+     "code": "SOCI.G6.RUBRIC.3.1",
+     "indicator": "Ability to compare traditional forms of government of the Buganda and the Nyamwezi.",
+     "levels": {
+      "EE": "Compares traditional forms of government of the Buganda and the Nyamwezi with examples.",
+      "ME": "Compares traditional forms of government of the Buganda and the Nyamwezi.",
+      "AE": "Compares some traditional forms of government of the Buganda and the Nyamwezi.",
+      "BE": "Has difficulty comparing the traditional forms of government of the Buganda and the Nyamwezi."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.3.2",
+     "indicator": "Ability to describe the benefits of the East African Community to member states.",
+     "levels": {
+      "EE": "Describes the benefits of the East African Community to member states with details.",
+      "ME": "Describes the benefits of the East African Community to member states.",
+      "AE": "Describes some of the benefits of the East African Community to member states.",
+      "BE": "Has challenges describing the benefits of East African Community to member states."
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.3.3",
+     "indicator": "Ability to describe the rights and responsibilities of a Kenyan citizen.",
+     "levels": {
+      "EE": "Describes the rights and responsibilities of a Kenyan citizen with examples.",
+      "ME": "Describes the rights and responsibilities of a Kenyan citizen.",
+      "AE": "Describes some of the rights and responsibilities of a Kenyan citizen.",
+      "BE": "Has challenges describing the rights and responsibilities of a Kenyan citizen."
+     },
+     "page": 61,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G6.RUBRIC.4",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Governance",
+   "covers": [
+    "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL",
+    "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E",
+    "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS"
+   ],
+   "page": 68,
+   "indicators": [
+    {
+     "code": "SOCI.G6.RUBRIC.4.1",
+     "indicator": "Ability to describe the rights and responsibilities of a Kenyan citizen.",
+     "levels": {
+      "EE": "Describes the rights and responsibilities of a Kenyan citizen with examples.",
+      "ME": "Describes the rights and responsibilities of a Kenyan citizen.",
+      "AE": "Describes some of the rights and responsibilities of a Kenyan citizen.",
+      "BE": "Has challenges describing the rights and responsibilities of a Kenyan citizen."
+     },
+     "page": 68,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.4.2",
+     "indicator": "Ability to explain the causes of conflicts in society.",
+     "levels": {
+      "EE": "Explains the causes of conflicts in society with examples.",
+      "ME": "Explains the causes of conflicts in society.",
+      "AE": "Explains some of the causes of conflicts in society.",
+      "BE": "Has challenges explaining the causes of conflicts in society."
+     },
+     "page": 68,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.4.3",
+     "indicator": "Ability to describe ways in which human rights are upheld in society.",
+     "levels": {
+      "EE": "Describes ways in which human rights are upheld in society with details.",
+      "ME": "Describes ways in which human rights are upheld in society.",
+      "AE": "Describes some ways in which human rights are upheld in society.",
+      "BE": "Has challenges describing ways in which human rights are upheld in society."
+     },
+     "page": 68,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.4.4",
+     "indicator": "Ability to explain the meaning of key words of the preamble of the Constitution of Kenya.",
+     "levels": {
+      "EE": "Explains the meaning of key words in the preamble of the Constitution of Kenya with examples.",
+      "ME": "Explains the meaning of key words in the preamble of the Constitution of Kenya.",
+      "AE": "Explains the meaning of some key words in the preamble of the Constitution of Kenya.",
+      "BE": "Has challenges explaining the meaning of key words in the preamble of the Constitution of Kenya."
+     },
+     "page": 69,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G6.RUBRIC.4.5",
+     "indicator": "Ability to identify sources of revenue for National Government in Kenya.",
+     "levels": {
+      "EE": "Identifies sources of revenue for the National Government in Kenya with examples.",
+      "ME": "Identifies sources of revenue for the National Government in Kenya.",
+      "AE": "Identifies some sources of revenue for the National Government in Kenya.",
+      "BE": "Has challenges identifying sources of revenue for the National Government in Kenya."
+     },
+     "page": 69,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

@@ -56,23 +56,30 @@
      "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.a",
      "letter": "a",
      "text": "describe the roles of Creative Arts and Sports in society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.1.1"
     },
     {
      "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.b",
      "letter": "b",
      "text": "make a storyboard highlighting the roles of Creative Arts and Sports in society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.1.1"
     },
     {
      "code": "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A.c",
      "letter": "c",
      "text": "appreciate the role played by Creative Arts and Sports in society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.1.1",
+    "CREA.G8.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A",
@@ -128,7 +135,8 @@
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.b",
      "letter": "b",
      "text": "perform activities that enhance endurance and agility in physical fitness",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.1.2"
     },
     {
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.c",
@@ -140,29 +148,37 @@
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.d",
      "letter": "d",
      "text": "name pitches on the bass staff",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.1.2"
     },
     {
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.e",
      "letter": "e",
      "text": "group music notes in 3 4 time",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.1.2"
     },
     {
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.f",
      "letter": "f",
      "text": "construct the scale of G major on a staff",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.1.2"
     },
     {
      "code": "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A.g",
      "letter": "g",
      "text": "appreciate the basic elements of Creative Arts and Sports",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.1.1",
+    "CREA.G8.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING",
@@ -227,7 +243,8 @@
      "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.d",
      "letter": "d",
      "text": "paint a still life composition to express dominance",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.2"
     },
     {
      "code": "CREA.G8.CREATI.DRAWING_AND_PAINTING.e",
@@ -237,7 +254,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.RHYTHM",
@@ -297,7 +319,8 @@
      "code": "CREA.G8.CREATI.RHYTHM.c",
      "letter": "c",
      "text": "perform four-bar rhythmic patterns in 3 time, 4",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.RHYTHM.d",
@@ -307,7 +330,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN",
@@ -360,7 +388,8 @@
      "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.b",
      "letter": "b",
      "text": "perform middle distance races for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.c",
@@ -378,11 +407,17 @@
      "code": "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN.e",
      "letter": "e",
      "text": "acknowledge own and others' effort in middle distance running and montage for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.MELODY",
@@ -447,7 +482,8 @@
      "code": "CREA.G8.CREATI.MELODY.d",
      "letter": "d",
      "text": "perform simple pieces of music in G major",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.MELODY.e",
@@ -457,7 +493,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.NETBALL",
@@ -517,13 +558,15 @@
      "code": "CREA.G8.CREATI.NETBALL.c",
      "letter": "c",
      "text": "execute dodging and marking in Netball for skill development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.NETBALL.d",
      "letter": "d",
      "text": "perform footwork skills in a Netball game situation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.NETBALL.e",
@@ -533,7 +576,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.FABRIC_DECORATION",
@@ -609,7 +657,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.DESCANT_RECORDER",
@@ -653,29 +706,38 @@
      "code": "CREA.G8.CREATI.DESCANT_RECORDER.a",
      "letter": "a",
      "text": "explain techniques of playing a descant recorder",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     },
     {
      "code": "CREA.G8.CREATI.DESCANT_RECORDER.b",
      "letter": "b",
      "text": "interpret performance directions on given pieces of music",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.DESCANT_RECORDER.c",
      "letter": "c",
      "text": "perform simple melodies in G Major on a descant recorder",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     },
     {
      "code": "CREA.G8.CREATI.DESCANT_RECORDER.d",
      "letter": "d",
      "text": "value playing music on the descant recorder or any other Western solo instrument",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.VERSE",
@@ -746,7 +808,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.VOLLEYBALL",
@@ -791,7 +858,8 @@
      "code": "CREA.G8.CREATI.VOLLEYBALL.a",
      "letter": "a",
      "text": "identify the overarm serve in Volleyball game",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.VOLLEYBALL.b",
@@ -813,7 +881,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE",
@@ -859,23 +932,31 @@
      "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.a",
      "letter": "a",
      "text": "classify folk dances from Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     },
     {
      "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.b",
      "letter": "b",
      "text": "perform a folk dance from a Kenyan community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     },
     {
      "code": "CREA.G8.CREATI.KENYAN_FOLK_DANCE.c",
      "letter": "c",
      "text": "appreciate different cultures through performing folk dances from diverse Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_",
@@ -935,7 +1016,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.SWIMMING",
@@ -988,13 +1074,15 @@
      "code": "CREA.G8.CREATI.SWIMMING.b",
      "letter": "b",
      "text": "perform water treading skill in swimming",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.SWIMMING.c",
      "letter": "c",
      "text": "perform the inverted breaststroke technique in swimming for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.SWIMMING.d",
@@ -1006,11 +1094,17 @@
      "code": "CREA.G8.CREATI.SWIMMING.e",
      "letter": "e",
      "text": "acknowledge own and others’ efforts while performing water treading and inverted breaststroke skills in swimming",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES",
@@ -1058,13 +1152,15 @@
      "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.b",
      "letter": "b",
      "text": "perform different indigenous tagging games for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.c",
      "letter": "c",
      "text": "perform indigenous tagging games using musical rhythm for coordination",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G8.RUBRIC.2.3"
     },
     {
      "code": "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES.d",
@@ -1074,7 +1170,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.2.1",
+    "CREA.G8.RUBRIC.2.2",
+    "CREA.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART",
@@ -1145,7 +1246,156 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G8.RUBRIC.3.1",
+    "CREA.G8.RUBRIC.3.2",
+    "CREA.G8.RUBRIC.3.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G8.RUBRIC.1",
+   "heading": "Assessment Rubric for Foundations of Creative Arts and Sports",
+   "strand": "Foundations of Creative Arts and Sports",
+   "covers": [
+    "CREA.G8.FOUNDA.ROLES_OF_CREATIVE_ARTS_A",
+    "CREA.G8.FOUNDA.COMPONENTS_OF_CREATIVE_A"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "CREA.G8.RUBRIC.1.1",
+     "indicator": "Ability to explain the roles of Creative Arts and Sports; Social: (cohesion, identity, culture preservation, health, citizenship, patriotism, entertainment), Economic: poverty eradication and creating employment",
+     "levels": {
+      "EE": "Explains the 9 roles of Creative Arts and Sports in detail.",
+      "ME": "Explains the 9 roles of Creative Arts and Sports.",
+      "AE": "Explains 4-8 roles of Creative Arts and Sports.",
+      "BE": "Explains less than 4 roles of Creative Arts and Sports."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G8.RUBRIC.1.2",
+     "indicator": "Ability to execute components of Creative Arts and Sports: (Elements and principles of Visual Arts (dominance, proportion), components of fitness (endurance and agility) elements of Music (naming pitches on the bass staff, grouping music notes in time, constructing the scale of G major on a staff)",
+     "levels": {
+      "EE": "Executes the 12 components of Creative Arts and Sports skilfully and with ease.",
+      "ME": "Executes the 12 components of Creative Arts and Sports accurately and/or correctly.",
+      "AE": "Executes 5-11 components of Creative Arts and Sports with minor flaws and/or inconsistencies",
+      "BE": "Executes less than 5 components of Creative Arts and Sports with flaws and/or inconsistencies"
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G8.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric for Creating and Performing Strand",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "covers": [
+    "CREA.G8.CREATI.DRAWING_AND_PAINTING",
+    "CREA.G8.CREATI.RHYTHM",
+    "CREA.G8.CREATI.MIDDLE_DISTANCE_RACES_AN",
+    "CREA.G8.CREATI.MELODY",
+    "CREA.G8.CREATI.NETBALL",
+    "CREA.G8.CREATI.FABRIC_DECORATION",
+    "CREA.G8.CREATI.DESCANT_RECORDER",
+    "CREA.G8.CREATI.VERSE",
+    "CREA.G8.CREATI.VOLLEYBALL",
+    "CREA.G8.CREATI.KENYAN_FOLK_DANCE",
+    "CREA.G8.CREATI.INDIGENOUS_KENYAN_CRAFT_",
+    "CREA.G8.CREATI.SWIMMING",
+    "CREA.G8.CREATI.KENYAN_INDIGENOUS_GAMES"
+   ],
+   "page": 48,
+   "indicators": [
+    {
+     "code": "CREA.G8.RUBRIC.2.1",
+     "indicator": "Ability to describe creating and performing skills in Creative Arts and Sports. (simple triple) time, characteristics of photomontage, variation techniques in melody, netball passess, techniques of playing descant recorder, differentiating volleyball serves, format of a play script, body, classification of dances from Kenyan communities.",
+     "levels": {
+      "EE": "Describes 8 aspects of creating and performing in Creative Arts and Sports accurately with examples.",
+      "ME": "Describes 8 aspects of creating and performing in Creative Arts and Sports accurately.",
+      "AE": "Describes 4-7 aspects of creating and performing in Creative Arts and Sports leaving out minor details.",
+      "BE": "Describes 4 or less aspects of creating and performing in Creative Arts and Sports leaving out major details."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G8.RUBRIC.2.2",
+     "indicator": "Ability to create items in Creative Arts and Sports: Compose rhythms, montage, compose melody, logo,, create a verse, devising a folk dance, body makeup. Paint a still life composition, draw a still life composition, make a graduation strip, decorate a fabric ,weave a mat/tray.",
+     "levels": {
+      "EE": "Creates the 9 items in Creative Arts and Sports creatively and/or imaginatively.",
+      "ME": "Creates the 9 items in Creative Arts and Sports correctly and/or accurately.",
+      "AE": "Creates 5-8 items in Creative Arts and Sports with minor flaws and/ or inconsistencies.",
+      "BE": "Creates 4 or less items in Creative Arts and Sports with flaws and/ or inconsistencies."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G8.RUBRIC.2.3",
+     "indicator": "Ability to perform specific forms of Creative Arts and Sports: rhythmic pattern in 3-4 pattern, middle distance running skills, simple pieces of music in G major, chest passes and overhead pass in Netball, dodging and marking, footwork, solo piece in G major, overarm and jump serve in Volleyball, volley perform a verse, folkdance, tagging/swimming",
+     "levels": {
+      "EE": "Performs the 13 items in Creative Arts and Sports with ease and/ or with precision.",
+      "ME": "Performs the 13 items in Creative Arts and Sports accurately and correctly.",
+      "AE": "Performs 6-12 items in Creative Arts and Sports with minor flaws and/ or inconsistencies.",
+      "BE": "Performs 6 or less items in Creative Arts and Sports with flaws and/ or inconsistencies."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G8.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric for Appreciation in Creative Arts and Sports",
+   "strand": "Appreciation in Creative Arts and Sports",
+   "covers": [
+    "CREA.G8.APPREC.ANALYSIS_OF_CREATIVE_ART"
+   ],
+   "page": 52,
+   "indicators": [
+    {
+     "code": "CREA.G8.RUBRIC.3.1",
+     "indicator": "Ability to examine the criteria for evaluating Creative Arts and Sports.",
+     "levels": {
+      "EE": "Examines the criteria for evaluating Creative Arts and Sports in depth.",
+      "ME": "Examines the criteria for evaluating Creative Arts and Sports correctly.",
+      "AE": "Examines the criteria for evaluating Creative Arts and Sports with minor omissions.",
+      "BE": "Examines the criteria for evaluating Creative Arts and Sports with many omissions."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G8.RUBRIC.3.2",
+     "indicator": "Ability to examine the criteria for evaluating Creative Arts and Sports,",
+     "levels": {
+      "EE": "Examines the criteria for evaluating Creative Arts and Sports, community in depth.",
+      "ME": "Examines the criteria for evaluating Creative Arts and Sports, community.",
+      "AE": "Examines the criteria for evaluating Creative Arts and Sports, community while missing out on minor details.",
+      "BE": "Examines the criteria for evaluating Creative Arts and Sports, community while missing out on major details."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G8.RUBRIC.3.3",
+     "indicator": "Ability to analyse creative arts and sports items: -Netball game - a folk dance - a 3D visual artwork - a verse performance",
+     "levels": {
+      "EE": "Analyses the 4 items in Creative Arts and Sports critically.",
+      "ME": "Analyses the 4 items in Creative Arts and Sports.",
+      "AE": "Analyses 2-3 items in Creative Arts and Sports.",
+      "BE": "Analyses less than 2 items in Creative Arts and Sports."
+     },
+     "page": 52,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

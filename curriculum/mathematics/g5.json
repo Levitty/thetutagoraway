@@ -54,25 +54,29 @@
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.a",
      "letter": "a",
      "text": "use place value and total value of digits up to hundreds of thousands in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.1"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.b",
      "letter": "b",
      "text": "read and write numbers up to tens of thousands in words in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.2"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.c",
      "letter": "c",
      "text": "order numbers up to tens of thousands in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.3"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.d",
      "letter": "d",
      "text": "round off numbers up to tens of thousands to the nearest hundred and thousand in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.3"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.e",
@@ -84,13 +88,15 @@
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.f",
      "letter": "f",
      "text": "determine Highest Common Factor (HCF) and Greatest Common Divisor (GCD) in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.4"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.g",
      "letter": "g",
      "text": "determine Least Common Multiple (LCM) in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.4"
     },
     {
      "code": "MATH.G5.NUMBER.WHOLE_NUMBERS.h",
@@ -1363,6 +1369,12 @@
      "help": "Have the child test the answer: does each bell actually ring at that time?",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.1",
+    "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.2",
+    "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.3",
+    "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.4"
    ]
   },
   {
@@ -1393,31 +1405,36 @@
      "code": "MATH.G5.NUMBER.ADDITION.a",
      "letter": "a",
      "text": "add up to three 6-digit numbers without regrouping up to a sum not exceeding 1,000,000 in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
     },
     {
      "code": "MATH.G5.NUMBER.ADDITION.b",
      "letter": "b",
      "text": "add up to two 6-digit numbers with double regrouping with the sum not exceeding 1,000, 000 in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
     },
     {
      "code": "MATH.G5.NUMBER.ADDITION.c",
      "letter": "c",
      "text": "estimate sum by rounding off the addends to the nearest hundred and thousand in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
     },
     {
      "code": "MATH.G5.NUMBER.ADDITION.d",
      "letter": "d",
      "text": "create patterns involving the addition of numbers up to a sum of 1,000,000 in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
     },
     {
      "code": "MATH.G5.NUMBER.ADDITION.e",
      "letter": "e",
      "text": "appreciate use of the addition of whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
     }
    ],
    "skills": [
@@ -2078,6 +2095,9 @@
      "help": "Require a 'check row' under every created pattern showing the difference between each pair of terms.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.ADDITION.1"
    ]
   },
   {
@@ -2114,13 +2134,15 @@
      "code": "MATH.G5.NUMBER.SUBTRACTION.a",
      "letter": "a",
      "text": "subtract up to two 6-digit numbers without regrouping in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.2"
     },
     {
      "code": "MATH.G5.NUMBER.SUBTRACTION.b",
      "letter": "b",
      "text": "subtract of up to two 6-digit numbers with regrouping in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.2"
     },
     {
      "code": "MATH.G5.NUMBER.SUBTRACTION.c",
@@ -2132,13 +2154,15 @@
      "code": "MATH.G5.NUMBER.SUBTRACTION.d",
      "letter": "d",
      "text": "perform combined operations involving addition and subtraction in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.1"
     },
     {
      "code": "MATH.G5.NUMBER.SUBTRACTION.e",
      "letter": "e",
      "text": "create patterns involving subtraction from up to 1,000,000 in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.1"
     },
     {
      "code": "MATH.G5.NUMBER.SUBTRACTION.f",
@@ -2870,6 +2894,10 @@
      "help": "Have the child check each new term by subtracting it from the previous one and confirming the result equals the rule.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.1",
+    "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.2"
    ]
   },
   {
@@ -2903,25 +2931,29 @@
      "code": "MATH.G5.NUMBER.MULTIPLICATION.a",
      "letter": "a",
      "text": "multiply up to a 3-digit number by up to a 2-digit number in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1"
     },
     {
      "code": "MATH.G5.NUMBER.MULTIPLICATION.b",
      "letter": "b",
      "text": "estimate product by rounding off numbers to the nearest ten in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1"
     },
     {
      "code": "MATH.G5.NUMBER.MULTIPLICATION.c",
      "letter": "c",
      "text": "make patterns involving multiplication of numbers with product not exceeding 1000 in in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1"
     },
     {
      "code": "MATH.G5.NUMBER.MULTIPLICATION.d",
      "letter": "d",
      "text": "appreciate use of multiplication in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1"
     }
    ],
    "skills": [
@@ -3484,6 +3516,9 @@
      "help": "Ask learners to annotate each arrow between terms with the operation used, so any change of rule becomes visible.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1"
    ]
   },
   {
@@ -3520,7 +3555,8 @@
      "code": "MATH.G5.NUMBER.DIVISION.a",
      "letter": "a",
      "text": "divide up to a 3-digit number by up to a 2-digit number where the dividend is greater than the divisor in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DIVISION.1"
     },
     {
      "code": "MATH.G5.NUMBER.DIVISION.b",
@@ -3532,7 +3568,8 @@
      "code": "MATH.G5.NUMBER.DIVISION.c",
      "letter": "c",
      "text": "divide up to 3-digit number by 1000 in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DIVISION.1"
     },
     {
      "code": "MATH.G5.NUMBER.DIVISION.d",
@@ -3544,13 +3581,15 @@
      "code": "MATH.G5.NUMBER.DIVISION.e",
      "letter": "e",
      "text": "perform combined operations involving addition, subtraction, multiplication and division of whole numbers in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DIVISION.2"
     },
     {
      "code": "MATH.G5.NUMBER.DIVISION.f",
      "letter": "f",
      "text": "appreciate use of division of whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DIVISION.2"
     }
    ],
    "skills": [
@@ -4287,6 +4326,10 @@
      "help": "Have the child act out the story step by step with counters, writing each step as it happens before combining them into one expression.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.DIVISION.1",
+    "MATH.G5.RUBRIC.NUMBER.DIVISION.2"
    ]
   },
   {
@@ -4336,7 +4379,8 @@
      "code": "MATH.G5.NUMBER.FRACTIONS.c",
      "letter": "c",
      "text": "order fractions with denominators not exceeding 12 in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.FRACTIONS.2"
     },
     {
      "code": "MATH.G5.NUMBER.FRACTIONS.d",
@@ -5111,6 +5155,11 @@
      "help": "Rename first, then compare: 1/2 is 4/8, which is more than 3/8.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.FRACTIONS.1",
+    "MATH.G5.RUBRIC.NUMBER.FRACTIONS.2",
+    "MATH.G5.RUBRIC.NUMBER.FRACTIONS.3"
    ]
   },
   {
@@ -5151,19 +5200,22 @@
      "code": "MATH.G5.NUMBER.DECIMALS.b",
      "letter": "b",
      "text": "order decimals up to thousandths in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DECIMALS.1"
     },
     {
      "code": "MATH.G5.NUMBER.DECIMALS.c",
      "letter": "c",
      "text": "add decimals up to thousandths in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DECIMALS.2"
     },
     {
      "code": "MATH.G5.NUMBER.DECIMALS.d",
      "letter": "d",
      "text": "subtract decimals up to thousandths in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.DECIMALS.2"
     },
     {
      "code": "MATH.G5.NUMBER.DECIMALS.e",
@@ -5850,6 +5902,10 @@
      "help": "Always start with an estimate, e.g. 4.6 kg is more than 4000 g, so the answer must be in the thousands.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.DECIMALS.1",
+    "MATH.G5.RUBRIC.NUMBER.DECIMALS.2"
    ]
   },
   {
@@ -5881,19 +5937,22 @@
      "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.a",
      "letter": "a",
      "text": "form simple equations with one unknown involving real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS.1"
     },
     {
      "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.b",
      "letter": "b",
      "text": "solve simple equations with one unknown involving real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS.1"
     },
     {
      "code": "MATH.G5.NUMBER.SIMPLE_EQUATIONS.c",
      "letter": "c",
      "text": "appreciate use of equations in solving problems in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS.1"
     }
    ],
    "skills": [
@@ -6505,6 +6564,9 @@
      "help": "Revisit Grade 4 simplifying with objects: 2 pens and 6 shillings cannot become 8 pens.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS.1"
    ]
   },
   {
@@ -6544,55 +6606,64 @@
      "code": "MATH.G5.MEASUR.LENGTH.a",
      "letter": "a",
      "text": "identify the kilometre (km) as a unit of measuring length in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.b",
      "letter": "b",
      "text": "estimate distance in kilometres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.c",
      "letter": "c",
      "text": "identify the relationship between the kilometre (km) and the metre (m) in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.d",
      "letter": "d",
      "text": "convert kilometres to metres and metres to kilometres in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.e",
      "letter": "e",
      "text": "add metres and kilometres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.f",
      "letter": "f",
      "text": "subtract metres and kilometres in real life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.g",
      "letter": "g",
      "text": "multiply metres and kilometres by whole numbers in real life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.h",
      "letter": "h",
      "text": "divide metres and kilometres by whole numbers in real life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     },
     {
      "code": "MATH.G5.MEASUR.LENGTH.i",
      "letter": "i",
      "text": "appreciate the use of kilometres and metres in measuring length in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
     }
    ],
    "skills": [
@@ -7257,6 +7328,9 @@
      "help": "Offer the 'convert everything to metres first' method (7 200 m ÷ 4) as a check.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.LENGTH.1"
    ]
   },
   {
@@ -7289,19 +7363,22 @@
      "code": "MATH.G5.MEASUR.AREA.a",
      "letter": "a",
      "text": "identify the square centimetre (cm²) as a unit of measuring area in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.AREA.1"
     },
     {
      "code": "MATH.G5.MEASUR.AREA.b",
      "letter": "b",
      "text": "work out area of rectangles and squares in square centimetres (cm²) in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.AREA.1"
     },
     {
      "code": "MATH.G5.MEASUR.AREA.c",
      "letter": "c",
      "text": "appreciate the use of cm² in working out area in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.AREA.1"
     }
    ],
    "skills": [
@@ -7744,6 +7821,9 @@
      "help": "Write '8 × ? = 48' and find the missing number on a multiplication chart, then say 'a side is a length, so cm'.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.AREA.1"
    ]
   },
   {
@@ -7782,37 +7862,43 @@
      "code": "MATH.G5.MEASUR.VOLUME.a",
      "letter": "a",
      "text": "identify the cubic centimetre (cm³) as a unit of measuring volume in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     },
     {
      "code": "MATH.G5.MEASUR.VOLUME.b",
      "letter": "b",
      "text": "derive the formula for the volume of cuboid as v= l x w x h practically",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     },
     {
      "code": "MATH.G5.MEASUR.VOLUME.c",
      "letter": "c",
      "text": "work out volume of cuboids in cubic centimetres (cm³) using the formula",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     },
     {
      "code": "MATH.G5.MEASUR.VOLUME.d",
      "letter": "d",
      "text": "derive the formula for the volume of cube as v= s x s x s practically",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     },
     {
      "code": "MATH.G5.MEASUR.VOLUME.e",
      "letter": "e",
      "text": "work out volume of cubes in cubic centimetres (cm³) using the formula",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     },
     {
      "code": "MATH.G5.MEASUR.VOLUME.f",
      "letter": "f",
      "text": "appreciate use of cubic centimetres in measuring volume in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
     }
    ],
    "skills": [
@@ -8332,6 +8418,9 @@
      "help": "Link it to layers: 4 × 4 = 16 cubes in one layer, and there are 4 layers, so 16 × 4 = 64.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.VOLUME.1"
    ]
   },
   {
@@ -8369,19 +8458,22 @@
      "code": "MATH.G5.MEASUR.CAPACITY.a",
      "letter": "a",
      "text": "identify the millilitre as a unit of measuring capacity in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.1"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.b",
      "letter": "b",
      "text": "measure capacity in millilitres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.1"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.c",
      "letter": "c",
      "text": "estimate and measure capacity in millilitres in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.1"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.d",
@@ -8393,37 +8485,43 @@
      "code": "MATH.G5.MEASUR.CAPACITY.e",
      "letter": "e",
      "text": "convert litres to millilitres and millilitres to litres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.2"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.f",
      "letter": "f",
      "text": "add litres and millilitres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.3"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.g",
      "letter": "g",
      "text": "subtract litres and millilitres in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.3"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.h",
      "letter": "h",
      "text": "multiply litres and millilitres by whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.3"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.i",
      "letter": "i",
      "text": "divide litres and millilitres by whole numbers in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.3"
     },
     {
      "code": "MATH.G5.MEASUR.CAPACITY.j",
      "letter": "j",
      "text": "appreciate use of litres and millilitres in measuring capacity in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.CAPACITY.1"
     }
    ],
    "skills": [
@@ -9293,6 +9391,11 @@
      "help": "Model sharing with real containers so pupils see the 300 ml must also be shared.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.CAPACITY.1",
+    "MATH.G5.RUBRIC.MEASUR.CAPACITY.2",
+    "MATH.G5.RUBRIC.MEASUR.CAPACITY.3"
    ]
   },
   {
@@ -9343,7 +9446,8 @@
      "code": "MATH.G5.MEASUR.MASS.c",
      "letter": "c",
      "text": "estimate and measure mass in grammes in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.MASS.1"
     },
     {
      "code": "MATH.G5.MEASUR.MASS.d",
@@ -9373,13 +9477,15 @@
      "code": "MATH.G5.MEASUR.MASS.h",
      "letter": "h",
      "text": "multiply grammes and kilogramme by whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.MASS.2"
     },
     {
      "code": "MATH.G5.MEASUR.MASS.i",
      "letter": "i",
      "text": "divide grammes and kilogrammes by whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.MASS.2"
     },
     {
      "code": "MATH.G5.MEASUR.MASS.j",
@@ -10296,6 +10402,10 @@
      "help": "Ask 'should each child get more or less than the whole 2 kg?' and convert to 2000 g before dividing.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.MASS.1",
+    "MATH.G5.RUBRIC.MEASUR.MASS.2"
    ]
   },
   {
@@ -10333,55 +10443,64 @@
      "code": "MATH.G5.MEASUR.TIME.a",
      "letter": "a",
      "text": "identify the second as a unit of measuring time from a clock",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.b",
      "letter": "b",
      "text": "use digital or analogues clocks to read time in seconds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.c",
      "letter": "c",
      "text": "identify the relationship between the minute and the second in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.d",
      "letter": "d",
      "text": "convert minutes to seconds and seconds to minutes in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.e",
      "letter": "e",
      "text": "add minutes and seconds with conversion in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.f",
      "letter": "f",
      "text": "subtract minutes and seconds with conversion in real life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.g",
      "letter": "g",
      "text": "multiply minutes and seconds by whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.h",
      "letter": "h",
      "text": "divide minutes and seconds by whole numbers in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     },
     {
      "code": "MATH.G5.MEASUR.TIME.i",
      "letter": "i",
      "text": "appreciate use of minutes and seconds as units of measuring time in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.MEASUR.TIME.1"
     }
    ],
    "skills": [
@@ -11186,6 +11305,9 @@
      "help": "Show the method of converting to seconds first (400 s ÷ 2 = 200 s = 3 min 20 s) so that the duration is seen as one amount.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.MEASUR.TIME.1"
    ]
   },
   {
@@ -11972,43 +12094,50 @@
      "code": "MATH.G5.GEOMET.LINES.a",
      "letter": "a",
      "text": "identify horizontal and vertical lines in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.b",
      "letter": "b",
      "text": "draw horizontal and vertical lines in different salutations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.c",
      "letter": "c",
      "text": "identify perpendicular lines in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.d",
      "letter": "d",
      "text": "draw perpendicular lines in different salutations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.e",
      "letter": "e",
      "text": "identify parallel lines in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.f",
      "letter": "f",
      "text": "draw parallel lines in different salutations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     },
     {
      "code": "MATH.G5.GEOMET.LINES.g",
      "letter": "g",
      "text": "appreciate use of various types of lines in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.LINES.1"
     }
    ],
    "skills": [
@@ -12509,6 +12638,9 @@
      "help": "Use the sliding set-square method so the new line copies the direction of the given line exactly.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.GEOMET.LINES.1"
    ]
   },
   {
@@ -12550,19 +12682,22 @@
      "code": "MATH.G5.GEOMET.ANGLES.b",
      "letter": "b",
      "text": "read angles from protractor in both directions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.ANGLES.1"
     },
     {
      "code": "MATH.G5.GEOMET.ANGLES.c",
      "letter": "c",
      "text": "use protractor to measure angles in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.ANGLES.1"
     },
     {
      "code": "MATH.G5.GEOMET.ANGLES.d",
      "letter": "d",
      "text": "measure angles in degrees in different situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.ANGLES.2"
     },
     {
      "code": "MATH.G5.GEOMET.ANGLES.e",
@@ -13080,6 +13215,10 @@
      "help": "Open the classroom door slowly and ask children to say when it has made a right angle, then show the two 'arms' (frame and door).",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.GEOMET.ANGLES.1",
+    "MATH.G5.RUBRIC.GEOMET.ANGLES.2"
    ]
   },
   {
@@ -13111,19 +13250,22 @@
      "code": "MATH.G5.GEOMET.3_D_OBJECTS.a",
      "letter": "a",
      "text": "describe 3-D objects in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS.1"
     },
     {
      "code": "MATH.G5.GEOMET.3_D_OBJECTS.b",
      "letter": "b",
      "text": "describe 2-D shapes in 3-D objects in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS.1"
     },
     {
      "code": "MATH.G5.GEOMET.3_D_OBJECTS.c",
      "letter": "c",
      "text": "appreciate the use of 3-D objects in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS.1"
     }
    ],
    "skills": [
@@ -13486,6 +13628,9 @@
      "help": "Let the child lay a ruler against the curved side to see it does not lie flat, unlike the circular ends.",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS.1"
    ]
   },
   {
@@ -13528,25 +13673,29 @@
      "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.b",
      "letter": "b",
      "text": "draw a table to record data from real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.1"
     },
     {
      "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.c",
      "letter": "c",
      "text": "draw tally marks of the collected data",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.1"
     },
     {
      "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.d",
      "letter": "d",
      "text": "prepare a frequency table to represent data",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.2"
     },
     {
      "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.e",
      "letter": "e",
      "text": "interpret data represented by frequency tables",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.2"
     },
     {
      "code": "MATH.G5.DATA_H.DATA_REPRESENTATION.f",
@@ -14222,6 +14371,582 @@
      "reveals": "Ask for the answer and a reason; a reason that does not mention a number from the table shows the error.",
      "help": "Require every decision to be backed by a number from the table: 'I choose ___ because ___ learners chose it.'",
      "status": "draft"
+    }
+   ],
+   "rubric_indicators": [
+    "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.1",
+    "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.2"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS",
+   "heading": "Suggested Assessment Rubric: Whole Numbers",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.WHOLE_NUMBERS"
+   ],
+   "page": 28,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.1",
+     "indicator": "Ability to use place value and total value of digits up to hundreds of thousands.",
+     "levels": {
+      "EE": "The learner uses place value and total value of digits up to hundreds of thousands correctly and systematically.",
+      "ME": "The learner uses place value and total value of digits up to hundreds of thousands correctly.",
+      "AE": "The learner uses place value or total value of digits up to hundreds of thousands correctly.",
+      "BE": "The learner uses place value or total value of digits less than hundreds of thousands partially correct."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.2",
+     "indicator": "Ability to read and write numbers up to tens of thousands in symbols and in words.",
+     "levels": {
+      "EE": "The learner reads and writes numbers up to tens of thousands in symbols and in words correctly and proficiently.",
+      "ME": "The learner reads and writes numbers up to tens of thousands in symbols and in words accurately.",
+      "AE": "The learner reads or writes numbers up to tens of thousands in symbols and in words accurately.",
+      "BE": "The learner reads or writes numbers up to tens of thousands in symbols or in words partially correct."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.3",
+     "indicator": "Ability to order and round off numbers up to tens of thousands.",
+     "levels": {
+      "EE": "The learner orders and rounds off numbers up to 10, 000 systematically and correctly.",
+      "ME": "The learner orders and rounds off numbers up to 10, 000 correctly.",
+      "AE": "The learner orders or rounds off numbers up to less than 10, 000 correctly.",
+      "BE": "The learner orders or rounds off numbers up to less than 10, 000 partially correct.."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.WHOLE_NUMBERS.4",
+     "indicator": "Ability to apply Least Common Multiple (LCM), Highest Common Factor (HCF), Greatest Common Divisor (GCD) and divisibility tests of 2, 5 and 10.",
+     "levels": {
+      "EE": "The learner applies LCM, HCF, GCD and divisibility tests of 2, 5 and 10 correctly and systematically.",
+      "ME": "The learner applies LCM, HCF/GCD and divisibility tests of 2, 5 and 10 correctly.",
+      "AE": "The learner applies at least three of the following: LCM, HCF, GCD or divisibility tests of 2, 5 and 10 correctly.",
+      "BE": "The learner applies one of the following: LCM, HCF, GCD or divisibility tests of 2, 5 and 10 correctly."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.ADDITION",
+   "heading": "Suggested Assessment Rubric: Addition",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.ADDITION"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.ADDITION.1",
+     "indicator": "Ability to add up to 6-digit numbers without regrouping and with double regrouping up to a sum of 1,000 000.",
+     "levels": {
+      "EE": "The learner adds up to 6-digit numbers without regrouping and with double regrouping up to a sum of 1,000 000 correctly and systematically.",
+      "ME": "The learner adds up to 6-digit numbers without regrouping and with double regrouping up to a sum of 1,000 000 correctly.",
+      "AE": "The learner adds up to 6 - digit numbers without regrouping or with double regrouping up to a sum of 1,000 000 correctly.",
+      "BE": "The learner adds up to 6-digit numbers without regrouping or with double regrouping up to a sum less than 1,000 000 correctly."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION",
+   "heading": "Suggested Assessment Rubric: Subtraction",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.SUBTRACTION"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.1",
+     "indicator": "Ability to create patterns involving addition, subtraction and multiplication.",
+     "levels": {
+      "EE": "The learner creates patterns involving addition, subtraction and multiplication accurately and creatively.",
+      "ME": "The learner creates patterns involving addition, subtraction and multiplication accurately.",
+      "AE": "The learner creates patterns involving any two of the following: addition, subtraction or multiplication accurately.",
+      "BE": "The learner creates patterns involving any one of the following: addition, subtraction or multiplication accurately."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.SUBTRACTION.2",
+     "indicator": "Ability to subtract up to 6-digit numbers without regrouping and with regrouping.",
+     "levels": {
+      "EE": "The learner subtracts up to 6-digit numbers without regrouping and with regrouping correctly and systematically.",
+      "ME": "The learner subtracts up to 6-digit numbers without regrouping and with regrouping correctly.",
+      "AE": "The learner subtracts up to 6-digit numbers without regrouping or with regrouping correctly.",
+      "BE": "The learner subtracts up to 6-digit numbers without regrouping correctly."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION",
+   "heading": "Suggested Assessment Rubric: Multiplication",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.MULTIPLICATION"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.MULTIPLICATION.1",
+     "indicator": "Ability to Multiply up to a 3-digit number by a 2-digit number.",
+     "levels": {
+      "EE": "The learner multiplies a 3-digit number by a 2-digit number and a single digit; 2 - digit by 2 - digit and a single digit number correctly and systematically.",
+      "ME": "The learner multiplies a 3-digit number by a 2-digit number and a single digit; 2 - digit by 2 - digit and a single digit number correctly.",
+      "AE": "The learner multiplies a 3-digit number by a 2-digit number or a single digit; 2-digit by 2-digit or a single digit number correctly.",
+      "BE": "The learner multiplies a 2-digit number by a 2-digit number or a single digit number correctly."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.DIVISION",
+   "heading": "Suggested Assessment Rubric: Division",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.DIVISION"
+   ],
+   "page": 30,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.DIVISION.1",
+     "indicator": "Ability to divide up to a 3-digit number by up to a 2-digit number where the dividend is greater than the divisor.",
+     "levels": {
+      "EE": "The learner divides a 3-digit number by a 2-digit number and a single digit; 2-digit by a 2-digit and a single digit number where the dividend is greater than the divisor correctly and systematically.",
+      "ME": "The learner divides a 3-digit number by a 2-digit number and a single digit; 2-digit by a 2-digit and a single digit number where the dividend is greater than the divisor correctly.",
+      "AE": "The learner divides a 3-digit number by a 2-digit number or a single digit; 2-digit by 2-digit or a single digit number where the dividend is greater than the divisor correctly.",
+      "BE": "The learner divides a 2-digit number by a 2-digit number or a single digit number where the dividend is greater than the divisor correctly."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.DIVISION.2",
+     "indicator": "Ability to perform combined operations involving addition, subtraction, multiplication and division of whole numbers.",
+     "levels": {
+      "EE": "The learner performs combined operations involving addition, subtraction, multiplication and division of whole numbers correctly and systematically.",
+      "ME": "The learner performs combined operations involving addition, subtraction, multiplication and division of whole numbers correctly.",
+      "AE": "The learner performs combined operations involving addition, subtraction, multiplication or division of whole numbers correctly.",
+      "BE": "The learner performs combined operations involving one of the following: addition, subtraction, multiplication and division of whole numbers correctly."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.FRACTIONS",
+   "heading": "Suggested Assessment Rubric: Fractions",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.FRACTIONS"
+   ],
+   "page": 30,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.FRACTIONS.1",
+     "indicator": "Ability to use and compare fractions to make decisions.",
+     "levels": {
+      "EE": "The learner uses and compares fractions to make decisions accurately and systematically.",
+      "ME": "The learner uses and compares fractions to make decisions accurately.",
+      "AE": "The learner uses or compares fractions to make decisions accurately.",
+      "BE": "The learner uses fractions accurately."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.FRACTIONS.2",
+     "indicator": "Ability to simplify and order fractions with denominators not exceeding 12.",
+     "levels": {
+      "EE": "The learner simplifies and orders fractions with denominators not exceeding 12 accurately and systematically.",
+      "ME": "The learner simplifies and orders fractions with denominators not exceeding 12 accurately.",
+      "AE": "The learner simplifies or orders fractions with denominators not exceeding 12 accurately.",
+      "BE": "The learner simplifies fractions with denominators not exceeding 12 accurately."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.FRACTIONS.3",
+     "indicator": "Ability to add and subtract fractions.",
+     "levels": {
+      "EE": "The learner adds and subtracts fractions correctly and systematically.",
+      "ME": "The learner adds and subtracts fractions correctly.",
+      "AE": "The learner adds or subtracts fractions correctly.",
+      "BE": "The learner adds fractions correctly."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.DECIMALS",
+   "heading": "Suggested Assessment Rubric: Decimals",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.DECIMALS"
+   ],
+   "page": 31,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.DECIMALS.1",
+     "indicator": "Ability to identify and order decimals up to thousandths.",
+     "levels": {
+      "EE": "The learner identifies and orders decimals up to thousandths accurately and systematically.",
+      "ME": "The learner identifies and orders decimals up to thousandths accurately.",
+      "AE": "The learner identifies and orders decimals up to hundredths accurately.",
+      "BE": "The learner identifies and orders decimals up to tenths accurately."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.DECIMALS.2",
+     "indicator": "Ability to add and subtract decimals up to thousandths.",
+     "levels": {
+      "EE": "The learner adds and subtracts decimals up to thousandths correctly and systematically.",
+      "ME": "The learner adds and subtracts decimals up to thousandths correctly.",
+      "AE": "The learner adds and subtracts decimals up to hundredths correctly.",
+      "BE": "The learner adds and subtracts decimals up to tenths correctly."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS",
+   "heading": "Suggested Assessment Rubric: Simple Equations",
+   "strand": "Numbers",
+   "covers": [
+    "MATH.G5.NUMBER.SIMPLE_EQUATIONS"
+   ],
+   "page": 31,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.NUMBER.SIMPLE_EQUATIONS.1",
+     "indicator": "Ability to form and solve simple equations with one unknown involving real life situations.",
+     "levels": {
+      "EE": "The learner forms and solves simple equations with one unknown involving real life situations accurately and systematically.",
+      "ME": "The learner forms and solves simple equations with one unknown involving real life situations accurately.",
+      "AE": "The learner forms or solves simple equations with one unknown involving real life situations accurately.",
+      "BE": "The learner forms simple equations with one unknown involving real life situations accurately."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.LENGTH",
+   "heading": "Suggested Assessment Rubric: Length",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.LENGTH"
+   ],
+   "page": 46,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.LENGTH.1",
+     "indicator": "Ability to add, subtract, multiply and divide metres and kilometres by whole numbers.",
+     "levels": {
+      "EE": "The learner adds, subtracts, multiplies and divides metres and kilometres, by whole numbers accurately and systematically.",
+      "ME": "The learner adds, subtracts, multiplies and divides metres and kilometres by whole numbers accurately.",
+      "AE": "The learner adds, subtracts, multiplies or divides metres or kilometres by whole numbers accurately.",
+      "BE": "The learner adds or subtracts metres or kilometres by whole numbers accurately."
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.AREA",
+   "heading": "Suggested Assessment Rubric: Area",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.AREA"
+   ],
+   "page": 46,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.AREA.1",
+     "indicator": "Ability to work out area of rectangles and squares in square centimetres (cm² )",
+     "levels": {
+      "EE": "The learner works out area of rectangles and squares in square centimeters systematically and accurately.",
+      "ME": "The learner works out area of rectangles and squares in square centimeters accurately.",
+      "AE": "The learner works out area of rectangles or squares in square centimeters accurately.",
+      "BE": "The learner works out area of rectangles or squares partially correctly."
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.VOLUME",
+   "heading": "Suggested Assessment Rubric: Volume",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.VOLUME"
+   ],
+   "page": 46,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.VOLUME.1",
+     "indicator": "Ability to work out volume of cuboids and cubes in cubic centimetres (cm³).",
+     "levels": {
+      "EE": "The learner works out volume of cuboids and cubes accurately and systematically.",
+      "ME": "The learner works out volume of cuboids and cubes accurately.",
+      "AE": "The learner works out volume of cuboids or cubes accurately.",
+      "BE": "The learner works out volume of cuboids or cubes partially accurately."
+     },
+     "page": 46,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.CAPACITY",
+   "heading": "Suggested Assessment Rubric: Capacity",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.CAPACITY"
+   ],
+   "page": 47,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.CAPACITY.1",
+     "indicator": "Ability to estimate and measure capacity in multiples of 5 millilitres.",
+     "levels": {
+      "EE": "The learner estimates and measures capacity in multiples of 5 milliliters accurately and systematically.",
+      "ME": "The learner estimates and measures capacity in multiples of 5 milliliters accurately.",
+      "AE": "The learner estimates or measures capacity in multiples of 5 milliliters accurately.",
+      "BE": "The learner estimates capacity in multiples of 5 milliliters accurately."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.CAPACITY.2",
+     "indicator": "Ability to convert litres to millilitres and millilitres to litres.",
+     "levels": {
+      "EE": "The learner converts litres to millilitres and millilitres to litres systematically and accurately.",
+      "ME": "The learner converts litres to millilitres and millilitres to litres accurately.",
+      "AE": "The learner converts litres to millilitres or millilitres to litres accurately.",
+      "BE": "The learner converts litres to millilitres accurately."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.CAPACITY.3",
+     "indicator": "Ability to add, subtract, multiply and divide litres and millilitres, by whole numbers.",
+     "levels": {
+      "EE": "The learner adds, subtracts, multiplies and divides litres and millilitres by whole numbers systematically and accurately.",
+      "ME": "The learner adds, subtracts, multiplies and divides litres and millilitres by whole numbers accurately.",
+      "AE": "The learner adds, subtracts, multiplies or divides litres or millilitres by whole numbers accurately.",
+      "BE": "The learner adds or subtracts litres or millilitres accurately."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.MASS",
+   "heading": "Suggested Assessment Rubric: Mass",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.MASS"
+   ],
+   "page": 47,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.MASS.1",
+     "indicator": "Ability estimate and measure mass in grams.",
+     "levels": {
+      "EE": "The learner estimates and measures mass in grams systematically and accurately.",
+      "ME": "The learner estimates and measures mass in grams accurately.",
+      "AE": "The learner estimates or measures mass in grams accurately.",
+      "BE": "The learner estimates mass in grams accurately."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.MASS.2",
+     "indicator": "Ability to add, subtract, multiply and divide grams and kilograms by whole numbers.",
+     "levels": {
+      "EE": "The learner adds, subtracts, multiplies and divides grams and kilograms by whole numbers systematically and accurately.",
+      "ME": "The learner adds, subtracts, multiplies and divides grams and kilograms by whole numbers accurately.",
+      "AE": "The learner adds, subtracts, multiplies and divides grams or kilograms by whole numbers accurately.",
+      "BE": "The learner adds or subtracts grams and kilograms accurately."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.MEASUR.TIME",
+   "heading": "Suggested Assessment Rubric: Time",
+   "strand": "Measurement",
+   "covers": [
+    "MATH.G5.MEASUR.TIME"
+   ],
+   "page": 48,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.MEASUR.TIME.1",
+     "indicator": "Ability to add, subtract, multiply and divide minutes and seconds by whole numbers.",
+     "levels": {
+      "EE": "The learner adds, subtracts, multiplies and divides minutes and seconds by whole numbers systematically accurately.",
+      "ME": "The learner adds, subtracts, multiplies and divides minutes and seconds by whole numbers accurately.",
+      "AE": "The learner adds, subtracts, multiplies or divides minutes or seconds by whole numbers accurately.",
+      "BE": "The learner adds minutes and seconds accurately."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.GEOMET.LINES",
+   "heading": "Suggested Assessment Rubric: Lines",
+   "strand": "Geometry",
+   "covers": [
+    "MATH.G5.GEOMET.LINES"
+   ],
+   "page": 54,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.GEOMET.LINES.1",
+     "indicator": "Ability to draw horizontal, vertical, perpendicular and parallel lines.",
+     "levels": {
+      "EE": "The learner draws horizontal, vertical, perpendicular and parallel lines accurately and systematically.",
+      "ME": "The learner draws horizontal, vertical, perpendicular and parallel lines accurately.",
+      "AE": "The learner draws horizontal, vertical, perpendicular or parallel lines accurately.",
+      "BE": "The learner draws any two of horizontal, vertical, perpendicular or parallel lines accurately."
+     },
+     "page": 54,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.GEOMET.ANGLES",
+   "heading": "Suggested Assessment Rubric: Angles",
+   "strand": "Geometry",
+   "covers": [
+    "MATH.G5.GEOMET.ANGLES"
+   ],
+   "page": 54,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.GEOMET.ANGLES.1",
+     "indicator": "Ability to read and use a protractor as a tool for measuring angles.",
+     "levels": {
+      "EE": "The learner reads and uses protractor as a tool for measuring angles accurately and systematically.",
+      "ME": "The learner reads and uses protractor as a tool for measuring angles accurately.",
+      "AE": "The learner reads or uses protractor as a tool for measuring angles accurately.",
+      "BE": "The learner reads a protractor as a tool for measuring angles accurately."
+     },
+     "page": 54,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.GEOMET.ANGLES.2",
+     "indicator": "Ability to identify the degree and measure angles in degrees.",
+     "levels": {
+      "EE": "The learner identifies the degree and measures angles in degrees accurately and systematically.",
+      "ME": "The learner identifies the degree and measures angles in degrees accurately.",
+      "AE": "The learner identifies the degree or measures angles in degrees accurately.",
+      "BE": "The learner identifies the degree or measure angles in degrees partially accurately."
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS",
+   "heading": "Suggested Assessment Rubric: Three-Dimension (3-D) Objects",
+   "strand": "Geometry",
+   "covers": [
+    "MATH.G5.GEOMET.3_D_OBJECTS"
+   ],
+   "page": 55,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.GEOMET.3_D_OBJECTS.1",
+     "indicator": "Ability to describe 2-D shapes in 3-D objects in the environment.",
+     "levels": {
+      "EE": "The learner describes 2-D shapes in 3-D objects accurately and systematically.",
+      "ME": "The learner describes 2-D shapes in 3-D objects accurately.",
+      "AE": "The learner describes most 2-D shapes in 3-D objects accurately.",
+      "BE": "The learner describes few 2-D shapes in 3-D objects partially accurately."
+     },
+     "page": 55,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION",
+   "heading": "Suggested Assessment Rubric: Data Representation",
+   "strand": "Data Handling",
+   "covers": [
+    "MATH.G5.DATA_H.DATA_REPRESENTATION"
+   ],
+   "page": 58,
+   "indicators": [
+    {
+     "code": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.1",
+     "indicator": "Ability to collect data, draw tally marks and record data in a table.",
+     "levels": {
+      "EE": "The learner collects data, draws tally marks and records data in a table accurately and systematically.",
+      "ME": "The learner collects data, draws tally marks and records data in a table accurately.",
+      "AE": "The learner collects data, draws tally marks or records data in a table accurately.",
+      "BE": "The learner collects data or draws tally marks data in a table accurately."
+     },
+     "page": 58,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "MATH.G5.RUBRIC.DATA_H.DATA_REPRESENTATION.2",
+     "indicator": "Ability to draw frequency tables, represent and interpret data.",
+     "levels": {
+      "EE": "The learner draws frequency tables, represents and interprets data accurately and systematically.",
+      "ME": "The learner draws frequency tables, represents and interprets data accurately.",
+      "AE": "The learner draws frequency tables, represents or interprets data accurately",
+      "BE": "The learner draws frequency tables or represents data accurately."
+     },
+     "page": 58,
+     "status": "kicd_verified"
     }
    ]
   }

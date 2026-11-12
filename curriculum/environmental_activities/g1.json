@@ -64,23 +64,29 @@
      "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.a",
      "letter": "a",
      "text": "identify materials used to clean different parts of the body",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.b",
      "letter": "b",
      "text": "wash face, teeth, hands, feet, and hair using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.CLEANING_MY_BODY.c",
      "letter": "c",
      "text": "appreciate the importance of a clean body for personal hygiene",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G1.SOCIAL.OUR_HOME",
@@ -123,29 +129,36 @@
      "code": "ENVI.G1.SOCIAL.OUR_HOME.a",
      "letter": "a",
      "text": "identify materials used to clean a home environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_HOME.b",
      "letter": "b",
      "text": "state common accidents at home for personal and others’ safety",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_HOME.c",
      "letter": "c",
      "text": "carry out activities to ensure cleanliness in the home",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_HOME.d",
      "letter": "d",
      "text": "reflect on the importance of living in a clean home environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS",
@@ -192,35 +205,43 @@
      "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.a",
      "letter": "a",
      "text": "identify basic needs in the family",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.b",
      "letter": "b",
      "text": "classify items and structures as basic needs in the family",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.c",
      "letter": "c",
      "text": "categorise food from plants and animals eaten at home",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.d",
      "letter": "d",
      "text": "select suitable food for a healthy body",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.FAMILY_NEEDS.e",
      "letter": "e",
      "text": "appreciate different needs in the family",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G1.SOCIAL.OUR_SCHOOL",
@@ -262,29 +283,36 @@
      "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.a",
      "letter": "a",
      "text": "identify the main physical features between home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.b",
      "letter": "b",
      "text": "draw main physical features between home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.c",
      "letter": "c",
      "text": "apply personal safety on the way to school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_SCHOOL.d",
      "letter": "d",
      "text": "acknowledge the significance of identifying places using key features",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G1.SOCIAL.OUR_MARKET",
@@ -326,29 +354,36 @@
      "code": "ENVI.G1.SOCIAL.OUR_MARKET.a",
      "letter": "a",
      "text": "identify roles of people found in a market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_MARKET.b",
      "letter": "b",
      "text": "list food items found in a market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_MARKET.c",
      "letter": "c",
      "text": "categorise food items found in a market into fruits and vegetables",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G1.SOCIAL.OUR_MARKET.d",
      "letter": "d",
      "text": "appreciate activities that are carried out in a market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY",
@@ -391,29 +426,36 @@
      "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.a",
      "letter": "a",
      "text": "describe the appearance of the sky during the day and at night",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.b",
      "letter": "b",
      "text": "identify weather conditions in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.c",
      "letter": "c",
      "text": "record different weather conditions in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.WEATHER_AND_THE_SKY.d",
      "letter": "d",
      "text": "appreciate differences in weather conditions at different times of the day",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G1.NATURA.SOIL",
@@ -454,29 +496,36 @@
      "code": "ENVI.G1.NATURA.SOIL.a",
      "letter": "a",
      "text": "identify ways of playing with soil for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOIL.b",
      "letter": "b",
      "text": "play with soil for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOIL.c",
      "letter": "c",
      "text": "model objects using soil at school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOIL.d",
      "letter": "d",
      "text": "develop curiosity in playing with soil for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G1.NATURA.SOUND",
@@ -523,29 +572,36 @@
      "code": "ENVI.G1.NATURA.SOUND.a",
      "letter": "a",
      "text": "identify sounds in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOUND.b",
      "letter": "b",
      "text": "create sounds from objects for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOUND.c",
      "letter": "c",
      "text": "discriminate sounds that alert on danger for an appropriate response",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G1.NATURA.SOUND.d",
      "letter": "d",
      "text": "acknowledge sounds that alert us to dangers",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G1.RESOUR.WATER",
@@ -589,29 +645,36 @@
      "code": "ENVI.G1.RESOUR.WATER.a",
      "letter": "a",
      "text": "identify sources of water in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.WATER.b",
      "letter": "b",
      "text": "record uses of water at home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.WATER.c",
      "letter": "c",
      "text": "conserve water at home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.WATER.d",
      "letter": "d",
      "text": "acknowledge different sources of water in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G1.RESOUR.PLANTS",
@@ -658,29 +721,36 @@
      "code": "ENVI.G1.RESOUR.PLANTS.a",
      "letter": "a",
      "text": "identify parts of a plant found in the school garden or compound",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.PLANTS.b",
      "letter": "b",
      "text": "draw different parts of a plant found at school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.PLANTS.c",
      "letter": "c",
      "text": "carry out activities that conserve plants in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.PLANTS.d",
      "letter": "d",
      "text": "advocate for the conservation of plants in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G1.RESOUR.ANIMALS",
@@ -725,29 +795,115 @@
      "code": "ENVI.G1.RESOUR.ANIMALS.a",
      "letter": "a",
      "text": "identify domestic animals in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.ANIMALS.b",
      "letter": "b",
      "text": "list domestic animals used as food in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.ANIMALS.c",
      "letter": "c",
      "text": "carry out basic care activities for small domestic animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G1.RESOUR.ANIMALS.d",
      "letter": "d",
      "text": "acknowledge the diversity of animals in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G1.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G1.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENVI.G1.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "SOCIAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G1.SOCIAL.CLEANING_MY_BODY",
+    "ENVI.G1.SOCIAL.OUR_HOME",
+    "ENVI.G1.SOCIAL.FAMILY_NEEDS",
+    "ENVI.G1.SOCIAL.OUR_SCHOOL",
+    "ENVI.G1.SOCIAL.OUR_MARKET"
+   ],
+   "page": 15,
+   "indicators": [
+    {
+     "code": "ENVI.G1.RUBRIC.1.1",
+     "indicator": "Ability to practise proper hygiene using locally available materials. Ability to practise good healthy habits at home and school. Ability to identify safety precautions at home and school.",
+     "levels": {
+      "EE": "Practises proper hygiene using locally available materials most frequently. Practises good healthy habits at home and school most frequently. Identifies safety precautions at home and school with in-depth details.",
+      "ME": "Practises proper hygiene using locally available materials. Practises good healthy habits at home and school. Identifies safety precautions at home and school.",
+      "AE": "Practises proper hygiene using locally available materials occasionally. Practises good healthy habits at home and school occasionally. Identifies safety precautions at home and school with minimal details.",
+      "BE": "Rarely practises proper hygiene using locally available materials. Rarely practises good healthy habits at home and school. Identifies safety precautions at home and school without details."
+     },
+     "page": 15,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G1.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "NATURAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G1.NATURA.WEATHER_AND_THE_SKY",
+    "ENVI.G1.NATURA.SOIL",
+    "ENVI.G1.NATURA.SOUND"
+   ],
+   "page": 21,
+   "indicators": [
+    {
+     "code": "ENVI.G1.RUBRIC.2.1",
+     "indicator": "Ability to observe safety precautions in the immediate environment. Ability to identify ways of playing with soil and sounds. Ability to record weather conditions in the locality.",
+     "levels": {
+      "EE": "Observes safety precautions in the immediate environment most keenly. Identifies ways of playing with soil and sounds with in-depth details. Records weather conditions in the locality most precisely.",
+      "ME": "Observes safety precautions in the immediate environment keenly. Identifies ways of playing with soil and sounds. Records weather conditions in the locality precisely.",
+      "AE": "Observes safety precautions in the immediate environment less keenly. Identifies ways of playing with soil and sounds with minimal details. Records weather conditions in the locality less precisely.",
+      "BE": "Observes safety precautions in the immediate environment with prompts. Identifies a way of playing with soil and sounds without details. Records weather conditions in the locality imprecisely."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G1.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "covers": [
+    "ENVI.G1.RESOUR.WATER",
+    "ENVI.G1.RESOUR.PLANTS",
+    "ENVI.G1.RESOUR.ANIMALS"
+   ],
+   "page": 28,
+   "indicators": [
+    {
+     "code": "ENVI.G1.RUBRIC.3.1",
+     "indicator": "Ability to record the uses of water at home and school. Ability to conserve water and plants in the immediate environment. Ability to care for domestic animals in the immediate environment. Suggested Resources, Assessment Methods and Non-Formal Activities Suggested Learning Resources Suggested Assessment Methods ● Approved curriculum support materials ● Resources from the local environment (home and school) ● Stationery ● Digital devices ● Manilla Papers ● Drawing materials ● Clay soil ● Water ● Plastic bottles ● Pictures or picture cut-outs /Newspaper cuttings/Photographs ● Flashcards ● Charts Non-formal Activities that support learning ● Games and sports ● Clubs and societies ● Other school events",
+     "levels": {
+      "EE": "Records the uses of water at home and school most precisely. Very often takes utmost care to conserve water and plants in the immediate environment. Cares for domestic animals in the immediate environment most frequently.",
+      "ME": "Records the uses of water at home and school. Conserves water and plants in the immediate environment. Cares for domestic animals in the immediate environment.",
+      "AE": "Records the uses of water at home and school less precisely. Sometimes conserves water and plants in the immediate environment. Cares for domestic animals in the immediate environment occasionally. ● Observation ● Aural questions ● Oral question ● Written tests ● Self-assessment ● Peer assessment ● Projects",
+      "BE": "Records the uses of water at home and school imprecisely. Rarely conserves water and plants in the immediate environment. Rarely cares for domestic animals in the immediate environment."
+     },
+     "page": 28,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

@@ -78,7 +78,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T1_EXTENSIVE_READING",
@@ -137,7 +142,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI",
@@ -259,7 +269,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
@@ -319,7 +334,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T2_INTENSIVE_READING",
@@ -384,7 +404,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS",
@@ -502,11 +527,17 @@
      "code": "ENGL.G4.WRITIN.T2_CREATIVE_WRITING.c",
      "letter": "c",
      "text": "realise the importance of creativity in writing for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -574,7 +605,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO",
@@ -634,11 +670,17 @@
      "code": "ENGL.G4.READIN.T3_INTENSIVE_READING_CO.c",
      "letter": "c",
      "text": "recommend intensive reading in their day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN",
@@ -759,7 +801,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
@@ -821,7 +868,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI",
@@ -882,7 +934,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN",
@@ -1012,7 +1069,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
@@ -1080,7 +1142,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING",
@@ -1130,7 +1197,8 @@
      "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.b",
      "letter": "b",
      "text": "read a variety of familiar materials independently to build reading speed and fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G4.READIN.T5_EXTENSIVE_READING.c",
@@ -1146,7 +1214,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI",
@@ -1274,11 +1347,17 @@
      "code": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.d",
      "letter": "d",
      "text": "realise the role of creativity in writing for different purposes",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
@@ -1345,7 +1424,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T6_INTENSIVE_READING",
@@ -1393,7 +1477,8 @@
      "code": "ENGL.G4.READIN.T6_INTENSIVE_READING.b",
      "letter": "b",
      "text": "apply appropriate intensive reading skills to obtain specific factual and inferential information for lifelong learning",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G4.READIN.T6_INTENSIVE_READING.c",
@@ -1403,7 +1488,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE",
@@ -1520,7 +1610,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
@@ -1591,7 +1686,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN",
@@ -1651,7 +1751,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS",
@@ -1775,7 +1880,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO",
@@ -1843,7 +1953,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T8_READING_FLUENCY",
@@ -1901,7 +2016,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T8_WORD_CLASSES",
@@ -2025,11 +2145,17 @@
      "code": "ENGL.G4.WRITIN.T8_CREATIVE_WRITING.d",
      "letter": "d",
      "text": "promote the role of creativity in writing for different purposes",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO",
@@ -2090,7 +2216,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T9_INTENSIVE_READING",
@@ -2149,7 +2280,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS",
@@ -2271,7 +2407,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
@@ -2325,7 +2466,8 @@
      "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.b",
      "letter": "b",
      "text": "interact with a speaker actively during an oral presentation, speech or narration for listening fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.c",
@@ -2347,7 +2489,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T10_INTENSIVE_READING",
@@ -2407,7 +2554,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI",
@@ -2533,11 +2685,17 @@
      "code": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.d",
      "letter": "d",
      "text": "promote the role of creativity in descriptive writing for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
@@ -2600,7 +2758,8 @@
      "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.d",
      "letter": "d",
      "text": "interpret nonverbal cues correctly for listening fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.e",
@@ -2610,7 +2769,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T11_INTENSIVE_READING",
@@ -2670,7 +2834,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS",
@@ -2796,7 +2965,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO",
@@ -2862,7 +3036,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING",
@@ -2927,11 +3106,17 @@
      "code": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.d",
      "letter": "d",
      "text": "adopt intensive reading in day-to-day communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.2.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS",
@@ -3050,7 +3235,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO",
@@ -3094,7 +3284,8 @@
      "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.a",
      "letter": "a",
      "text": "listen intensively for specific sounds, words, phrases or sentences for fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.b",
@@ -3118,11 +3309,17 @@
      "code": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.e",
      "letter": "e",
      "text": "promote the skill of listening intensively to a variety of texts for information and enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G4.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.1.2",
+    "ENGL.G4.RUBRIC.1.3",
+    "ENGL.G4.RUBRIC.1.4"
+   ]
   },
   {
    "code": "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN",
@@ -3183,7 +3380,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.2.1",
+    "ENGL.G4.RUBRIC.2.2",
+    "ENGL.G4.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI",
@@ -3304,7 +3506,191 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G4.RUBRIC.4.1",
+    "ENGL.G4.RUBRIC.4.2",
+    "ENGL.G4.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENGL.G4.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "ENGL.G4.LISTEN.T1_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T9_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO"
+   ],
+   "page": 117,
+   "indicators": [
+    {
+     "code": "ENGL.G4.RUBRIC.1.2",
+     "indicator": "Intensive listening",
+     "levels": {
+      "EE": "Ability to listen actively to a variety of oral texts to gain information.",
+      "ME": "Maintains Maintains eye meaningful eye-contact, sits contact, sits upright, nods and upright, nods, takes takes notes for notes, responds to information in oral questions varied contexts correctly for information in a variety of contexts",
+      "AE": "Either maintains eye contact or sits upright or takes notes for information",
+      "BE": "Yawns, looks out, has to be prompted while listening for information"
+     },
+     "page": 117,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.1.3",
+     "indicator": "Interactive Listening",
+     "levels": {
+      "EE": "Ability to listen and participate actively in conversations in various settings for self-expression and effective communication",
+      "ME": "Participates Participates actively in actively in conversations, conversations in observes proper various settings for turn-taking skills, self-expression and nods, maintains effective meaningful eye communication contact in a variety of settings for effective communication.",
+      "AE": "Participates passively in conversations",
+      "BE": "Shows limited interest interest in conversations. Yawns, doses and interrupts conversations"
+     },
+     "page": 117,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.1.4",
+     "indicator": "Speaking Fluency (Pronunciation, word stress, intonation)",
+     "levels": {
+      "EE": "Ability to speak accurately with expression and at the right speed, with minimum hesitation for fluency in communication",
+      "ME": "Speaks accurately Speaks accurately with expression and with expression and at the right speed at the right speed, without hesitation with minimum in varied contexts hesitation for for effective fluency. communication.",
+      "AE": "Speaks accurately with expression but at slow speed and with hesitation",
+      "BE": "Speaks inaccurately with minimal expression and at a slow speed with many hesitations."
+     },
+     "page": 118,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G4.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading",
+   "strand": "Reading",
+   "covers": [
+    "ENGL.G4.READIN.T1_EXTENSIVE_READING",
+    "ENGL.G4.READIN.T2_INTENSIVE_READING",
+    "ENGL.G4.READIN.T3_INTENSIVE_READING_CO",
+    "ENGL.G4.READIN.T4_INTENSIVE_READING_VI",
+    "ENGL.G4.READIN.T5_EXTENSIVE_READING",
+    "ENGL.G4.READIN.T6_INTENSIVE_READING",
+    "ENGL.G4.READIN.T7_EXTENSIVE_READING_IN",
+    "ENGL.G4.READIN.T8_READING_FLUENCY",
+    "ENGL.G4.READIN.T9_INTENSIVE_READING",
+    "ENGL.G4.READIN.T10_INTENSIVE_READING",
+    "ENGL.G4.READIN.T11_INTENSIVE_READING",
+    "ENGL.G4.READIN.T12_1_INTENSIVE_READING",
+    "ENGL.G4.READIN.T13_EXTENSIVE_READING_IN"
+   ],
+   "page": 118,
+   "indicators": [
+    {
+     "code": "ENGL.G4.RUBRIC.2.1",
+     "indicator": "Reading Fluency (speed, accuracy)",
+     "levels": {
+      "EE": "Ability to read about 300 words fluently and accurately, at the right speed and with expression for effective communication",
+      "ME": "Reads more than Reads about 300 350 words using words fluently and varied texts accurately at the fluently, accurately right speed and and expressively with expression for for effective effective communication. communication.",
+      "AE": "Reads about 200 words fluently and accurately at the right speed and with expression for effective communication.",
+      "BE": "Reads about 100 words fluently and accurately but at slow speed and with minimal expression."
+     },
+     "page": 118,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.2.2",
+     "indicator": "Intensive Reading",
+     "levels": {
+      "EE": "Ability to read grade-appropriate visuals, print and digital texts for comprehension and information.",
+      "ME": "Reads grade-appropriate visuals, Reads grade-appropriate visuals, print and digital print and digital texts and varied texts for texts for comprehension and comprehension and information. information.",
+      "AE": "Reads either grade-appropriate visuals or print or digital texts for comprehension and information.",
+      "BE": "Reads either grade –appropriate visuals or print or digital texts with minimal comprehension and information"
+     },
+     "page": 118,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.2.3",
+     "indicator": "Extensive Reading",
+     "levels": {
+      "EE": "Ability to read a variety of grade-appropriate visual, digital and print texts for lifelong learning.",
+      "ME": "Reads and analyses Reads a variety of a variety of grade grade-appropriate appropriate visual, visual digital and digital and print print texts for texts for lifelong lifelong learning. learning.",
+      "AE": "Reads either grade-appropriate visuals or digital or print texts for lifelong learning",
+      "BE": "Reads either grade-appropriate visuals or digital or print texts but fails to use it for lifelong learning."
+     },
+     "page": 119,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G4.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING",
+    "ENGL.G4.WRITIN.T2_CREATIVE_WRITING",
+    "ENGL.G4.WRITIN.T3_MECHANICS_OF_WRITING",
+    "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING",
+    "ENGL.G4.WRITIN.T5_CREATIVE_WRITING",
+    "ENGL.G4.WRITIN.T6_CREATIVE_WRITING",
+    "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING",
+    "ENGL.G4.WRITIN.T8_CREATIVE_WRITING",
+    "ENGL.G4.WRITIN.T9_PUNCTUATION",
+    "ENGL.G4.WRITIN.T10_CREATIVE_WRITING",
+    "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING",
+    "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION",
+    "ENGL.G4.WRITIN.T13_SPELLING"
+   ],
+   "page": 120,
+   "indicators": [
+    {
+     "code": "ENGL.G4.RUBRIC.4.1",
+     "indicator": "Mechanics of Writing (punctuation, paragraphing, spelling)",
+     "levels": {
+      "EE": "Ability to use punctuation, paragraphing and spelling correctly for effective communication",
+      "ME": "Uses punctuation, paragraphing and spelling correctly in varied types of writing for effective communication",
+      "AE": "Uses punctuation, Uses either paragraphing and punctuation, spelling correctly paragraphing or for effective spelling correctly. communication",
+      "BE": "Uses faulty paragraphing, poor punctuation and spelling when writing."
+     },
+     "page": 120,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.4.2",
+     "indicator": "Functional Writing",
+     "levels": {
+      "EE": "Ability to write a variety of writings using the correct formats for effective communication",
+      "ME": "Writes a variety of writings using correct formats and uses appropriate language for varied writing tasks for effective communication",
+      "AE": "Writes a variety Writes a number of of writings using writings using the the correct correct formats for formats for effective effective communication. communication.",
+      "BE": "Writes all the writings using wrong formats."
+     },
+     "page": 120,
+     "status": "kicd_read"
+    },
+    {
+     "code": "ENGL.G4.RUBRIC.4.3",
+     "indicator": "Creative Writing",
+     "levels": {
+      "EE": "Ability to write creative works clearly and expressively for effective communication.",
+      "ME": "Writes a variety creative works clearly, expressively and convincingly for effective communication",
+      "AE": "Writes creative Writes a few of the works clearly and creative works expressively for clearly but lack effective expressive ability. communication",
+      "BE": "Writes all the creative works without clarity and expressive ability due to limited language ability."
+     },
+     "page": 120,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

@@ -71,7 +71,8 @@
      "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.c",
      "letter": "c",
      "text": "conduct a debate while adhering to conventions of polite language",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.1"
     },
     {
      "code": "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE.d",
@@ -81,7 +82,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_",
@@ -141,11 +149,23 @@
      "code": "ENGL.G9.READIN.T1_INDEPENDENT_READING_.d",
      "letter": "d",
      "text": "recommend to peers suitable fiction and non-fiction materials to read",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.6"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU",
@@ -195,7 +215,8 @@
      "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.b",
      "letter": "b",
      "text": "use gender neutral words and phrases in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.3.3"
     },
     {
      "code": "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU.c",
@@ -205,7 +226,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S",
@@ -265,7 +291,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN",
@@ -333,7 +370,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
@@ -398,7 +440,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_SI",
@@ -456,7 +505,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER",
@@ -515,7 +575,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T2_INTENSIVE_READING_PL",
@@ -573,7 +638,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING",
@@ -628,7 +704,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
@@ -672,13 +753,15 @@
      "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.a",
      "letter": "a",
      "text": "identify the main idea and specific details from an argumentative text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.4"
     },
     {
      "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.b",
      "letter": "b",
      "text": "listen for the main idea and specific information (details) in an argumentative text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.4"
     },
     {
      "code": "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS.c",
@@ -688,7 +771,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
@@ -733,13 +823,15 @@
      "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.a",
      "letter": "a",
      "text": "infer the meaning of words, phrases and sentences from the context",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.b",
      "letter": "b",
      "text": "make connections between events in a text and real life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.3"
     },
     {
      "code": "ENGL.G9.READIN.T3_READING_FOR_INFORMAT.c",
@@ -749,7 +841,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES",
@@ -808,7 +911,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T3_POEMS_STRUCTURE",
@@ -872,7 +980,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG",
@@ -929,7 +1048,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING",
@@ -987,7 +1111,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T4_INTENSIVE_READING",
@@ -1041,13 +1172,15 @@
      "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.c",
      "letter": "c",
      "text": "answer direct and inferential questions for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.3"
     },
     {
      "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.d",
      "letter": "d",
      "text": "infer the meaning of new words and phrases using contextual clues",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G9.READIN.T4_INTENSIVE_READING.e",
@@ -1063,7 +1196,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER",
@@ -1123,7 +1267,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_",
@@ -1190,7 +1339,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI",
@@ -1258,7 +1418,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T5_PRONUNCIATION",
@@ -1320,7 +1485,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_",
@@ -1388,7 +1560,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES",
@@ -1438,7 +1621,8 @@
      "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.b",
      "letter": "b",
      "text": "use the correct order of adjectives in oral and written texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.3.3"
     },
     {
      "code": "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES.c",
@@ -1448,7 +1632,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA",
@@ -1509,7 +1698,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO",
@@ -1570,7 +1770,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL",
@@ -1620,7 +1825,8 @@
      "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.b",
      "letter": "b",
      "text": "use verbal and non-verbal cues during negotiations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.1"
     },
     {
      "code": "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL.c",
@@ -1630,7 +1836,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T6_READING_FLUENCY",
@@ -1695,7 +1908,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB",
@@ -1755,7 +1979,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T6_INTENSIVE_READING_PL",
@@ -1821,7 +2050,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING",
@@ -1880,7 +2120,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS",
@@ -1939,7 +2184,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN",
@@ -1984,7 +2236,8 @@
      "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.a",
      "letter": "a",
      "text": "distinguish between reading for interpretation and reading for evaluation of information",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.b",
@@ -1996,7 +2249,8 @@
      "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.c",
      "letter": "c",
      "text": "summarise information in a reading text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_IN.d",
@@ -2006,7 +2260,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN",
@@ -2066,7 +2331,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T7_INTENSIVE_READING_PL",
@@ -2127,7 +2397,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
@@ -2172,7 +2453,8 @@
      "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.b",
      "letter": "b",
      "text": "create a composition, story or poem following the steps of the writing process",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.4.3"
     },
     {
      "code": "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS.c",
@@ -2182,7 +2464,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T8_ORAL_POETRY",
@@ -2234,7 +2521,8 @@
      "code": "ENGL.G9.LISTEN.T8_ORAL_POETRY.b",
      "letter": "b",
      "text": "perform an oral poem using performance techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G9.LISTEN.T8_ORAL_POETRY.c",
@@ -2244,7 +2532,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T8_READING_FOR_INTERPRE",
@@ -2300,7 +2595,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS",
@@ -2359,7 +2665,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T8_POETRY_CHARACTERS",
@@ -2420,7 +2731,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING",
@@ -2475,7 +2797,8 @@
      "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.c",
      "letter": "c",
      "text": "assess a composition against a predesigned criteria",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.4.3"
     },
     {
      "code": "ENGL.G9.WRITIN.T8_ASSESSING_WRITING.d",
@@ -2485,7 +2808,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE",
@@ -2546,7 +2874,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR",
@@ -2602,7 +2937,8 @@
      "code": "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.b",
      "letter": "b",
      "text": "read a text for information and enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR.c",
@@ -2612,7 +2948,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA",
@@ -2671,7 +3018,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA",
@@ -2730,7 +3082,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO",
@@ -2792,7 +3155,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES",
@@ -2849,7 +3217,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T10_NOTE_MAKING",
@@ -2907,7 +3282,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS",
@@ -2955,7 +3341,8 @@
      "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.b",
      "letter": "b",
      "text": "use numerals and ordinals as determiners in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.3.3"
     },
     {
      "code": "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS.c",
@@ -2965,7 +3352,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T10_PLAY_PROJECT",
@@ -3009,13 +3401,15 @@
      "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.a",
      "letter": "a",
      "text": "identify simple props and costumes that create mood and atmosphere",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.5"
     },
     {
      "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.b",
      "letter": "b",
      "text": "present dramatised parts of a play to an audience",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.5"
     },
     {
      "code": "ENGL.G9.READIN.T10_PLAY_PROJECT.c",
@@ -3025,7 +3419,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC",
@@ -3083,7 +3488,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_",
@@ -3141,7 +3551,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI",
@@ -3183,13 +3600,15 @@
      "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.a",
      "letter": "a",
      "text": "distinguish between fiction and non-fiction reading materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.6"
     },
     {
      "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.b",
      "letter": "b",
      "text": "select and read grade appropriate fiction materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.7"
     },
     {
      "code": "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI.c",
@@ -3205,7 +3624,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS",
@@ -3264,7 +3694,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL",
@@ -3322,7 +3757,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING",
@@ -3377,7 +3823,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND",
@@ -3418,13 +3869,15 @@
      "code": "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.a",
      "letter": "a",
      "text": "identify words and expressions used to describe their feelings towards a poem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.b",
      "letter": "b",
      "text": "express their feelings towards the subject matter of a poem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND.c",
@@ -3434,7 +3887,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO",
@@ -3482,7 +3942,8 @@
      "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.b",
      "letter": "b",
      "text": "infer information and meaning of words and expressions from a passage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G9.READIN.T12_INTENSIVE_READING_CO.c",
@@ -3498,7 +3959,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS",
@@ -3557,7 +4029,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
@@ -3616,7 +4093,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_",
@@ -3675,7 +4163,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_",
@@ -3734,7 +4227,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T13_INTENSIVE_READING_VI",
@@ -3792,7 +4292,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE",
@@ -3850,7 +4361,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL",
@@ -3908,7 +4424,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI",
@@ -3967,7 +4494,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN",
@@ -4031,7 +4563,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT",
@@ -4096,7 +4635,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND",
@@ -4157,7 +4707,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T14_INTENSIVE_READING_PL",
@@ -4232,7 +4787,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_",
@@ -4276,7 +4842,8 @@
      "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.a",
      "letter": "a",
      "text": "use the correct writing process to write a composition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.4.3"
     },
     {
      "code": "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_.b",
@@ -4304,7 +4871,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO",
@@ -4353,7 +4925,8 @@
      "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.b",
      "letter": "b",
      "text": "analyse a recorded grade appropriate oral news report",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G9.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO.c",
@@ -4369,7 +4942,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.1.1",
+    "ENGL.G9.RUBRIC.1.2",
+    "ENGL.G9.RUBRIC.1.3",
+    "ENGL.G9.RUBRIC.1.4",
+    "ENGL.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T15_READING_FLUENCY",
@@ -4443,7 +5023,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI",
@@ -4498,7 +5089,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.3.1",
+    "ENGL.G9.RUBRIC.3.2",
+    "ENGL.G9.RUBRIC.3.3"
+   ]
   },
   {
    "code": "ENGL.G9.READIN.T15_INTENSIVE_READING_PO",
@@ -4554,7 +5150,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.2.1",
+    "ENGL.G9.RUBRIC.2.2",
+    "ENGL.G9.RUBRIC.2.3",
+    "ENGL.G9.RUBRIC.2.4",
+    "ENGL.G9.RUBRIC.2.5",
+    "ENGL.G9.RUBRIC.2.6",
+    "ENGL.G9.RUBRIC.2.7",
+    "ENGL.G9.RUBRIC.2.8",
+    "ENGL.G9.RUBRIC.2.9"
+   ]
   },
   {
    "code": "ENGL.G9.WRITIN.T15_EMAILS",
@@ -4610,7 +5217,369 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G9.RUBRIC.4.1",
+    "ENGL.G9.RUBRIC.4.2",
+    "ENGL.G9.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENGL.G9.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "ENGL.G9.LISTEN.T1_POLITE_LANGUAGE",
+    "ENGL.G9.LISTEN.T2_ORAL_LITERATURE_SHOR",
+    "ENGL.G9.LISTEN.T3_LISTENING_COMPREHENS",
+    "ENGL.G9.LISTEN.T4_SELECTIVE_LISTENING",
+    "ENGL.G9.LISTEN.T5_PRONUNCIATION",
+    "ENGL.G9.LISTEN.T6_CONVERSATIONAL_SKILL",
+    "ENGL.G9.LISTEN.T7_LISTENING_COMPREHENS",
+    "ENGL.G9.LISTEN.T8_ORAL_POETRY",
+    "ENGL.G9.LISTEN.T9_DIPHTHONGS_AND_SENTE",
+    "ENGL.G9.LISTEN.T10_IMPROMPTU_SPEECHES",
+    "ENGL.G9.LISTEN.T11_CONVERSATION_SKILLS_",
+    "ENGL.G9.LISTEN.T12_LISTENING_TO_RESPOND",
+    "ENGL.G9.LISTEN.T13_EXTENSIVE_LISTENING_",
+    "ENGL.G9.LISTEN.T14_INTONATION_IN_SENTEN",
+    "ENGL.G9.LISTEN.T15_ORAL_REPORTS_NEWS_RO"
+   ],
+   "page": 160,
+   "indicators": [
+    {
+     "code": "ENGL.G9.RUBRIC.1.1",
+     "indicator": "Ability to use polite language during conversations and use verbal and non-verbal cues during negotiations.",
+     "levels": {
+      "EE": "uses polite language during conversations and easily uses verbal and non- verbal cues during negotiations.",
+      "ME": "The learner always uses polite language during conversations uses verbal and non-verbal cues during negotiations.",
+      "AE": "The learner uses polite language during most conversations and uses verbal and non- verbal cues during negotiations. The learner listens",
+      "BE": "The learner uses polite language during some conversations and rarely uses verbal and non- verbal cues during negotiations."
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.1.2",
+     "indicator": "Ability to listen to oral poetry and use oral performance techniques appropriately.",
+     "levels": {
+      "EE": "The learner listens to oral poetry and uses varied oral performance techniques appropriately.",
+      "ME": "The learner listens to oral poetry and uses most oral narrative performance techniques appropriately.",
+      "AE": "to oral poetry and uses some oral narrative performance techniques appropriately.",
+      "BE": "The learner listens to oral poetry but uses few oral narrative performance techniques approprately."
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.1.3",
+     "indicator": "Ability to deliver speeches, oral reports and express appropriate feelings towards subject matter of poems.",
+     "levels": {
+      "EE": "The learner fluently delivers speeches, oral reports and effortlessly expresses appropriate feelings towards subject matter of poems .",
+      "ME": "The learner fluently delivers speeches, oral reports and expresses appropriate feelings towards subject matter of poems.",
+      "AE": "The learner delivers speeches, oral reports and with some inconsistencies expresses appropriate",
+      "BE": "The learner delivers speeches, oral reports with many inconsistencies and rarely expresses"
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.1.4",
+     "indicator": "Ability to listen for main idea, general idea, specific details and information from texts and take notes.",
+     "levels": {
+      "EE": "The learner listens for main idea, general idea, specific details and information from texts and take notes with ease and precision.",
+      "ME": "The learner listens for main idea, general idea, specific details and information from texts and take notes with ease.",
+      "AE": "The learner listens for main idea, general idea, specific details and information from texts and take notes with some inconsistencies.",
+      "BE": "The learner listens for main idea, general idea, specific details and information from texts and take notes with many inconsistencies."
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.1.5",
+     "indicator": "Ability to articulate given sounds, and apply stress and intonation appropriately in given texts.",
+     "levels": {
+      "EE": "The learner articulates all the target consonant and vowel sounds correctly and applies stress and intonation with ease.",
+      "ME": "The learner articulates most the target consonant and vowel sounds correctly and uses stress and intonation.",
+      "AE": "The learner articulates some of the target consonant and vowel sounds correctly and applies stress and intonation in some contexts.",
+      "BE": "The learner articulates a few of the target consonant and vowel sounds correctly and finds it difficulty to apply stress and intonation."
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G9.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading 1",
+   "strand": "Reading 1",
+   "covers": [
+    "ENGL.G9.READIN.T1_INDEPENDENT_READING_",
+    "ENGL.G9.READIN.T1_PLAY_STRUCTURE_AND_S",
+    "ENGL.G9.READIN.T2_INTENSIVE_READING_SI",
+    "ENGL.G9.READIN.T2_INTENSIVE_READING_PL",
+    "ENGL.G9.READIN.T3_READING_FOR_INFORMAT",
+    "ENGL.G9.READIN.T3_POEMS_STRUCTURE",
+    "ENGL.G9.READIN.T4_INTENSIVE_READING",
+    "ENGL.G9.READIN.T4_PLAY_IDENTIFICATION_",
+    "ENGL.G9.READIN.T5_REFERENCE_MATERIALS_",
+    "ENGL.G9.READIN.T5_PLAY_STYLE_CLASS_REA",
+    "ENGL.G9.READIN.T6_READING_FLUENCY",
+    "ENGL.G9.READIN.T6_INTENSIVE_READING_PL",
+    "ENGL.G9.READIN.T7_INTENSIVE_READING_IN",
+    "ENGL.G9.READIN.T7_INTENSIVE_READING_PL",
+    "ENGL.G9.READIN.T8_READING_FOR_INTERPRE",
+    "ENGL.G9.READIN.T8_POETRY_CHARACTERS",
+    "ENGL.G9.READIN.T9_EXTENSIVE_READING_GR",
+    "ENGL.G9.READIN.T9_PLAY_STYLE_CLASS_REA",
+    "ENGL.G9.READIN.T10_NOTE_MAKING",
+    "ENGL.G9.READIN.T10_PLAY_PROJECT",
+    "ENGL.G9.READIN.T11_EXTENSIVE_READING_FI",
+    "ENGL.G9.READIN.T11_GRADE_APPROPRIATE_PL",
+    "ENGL.G9.READIN.T12_INTENSIVE_READING_CO",
+    "ENGL.G9.READIN.T12_PLAY_CHARACTERISATIO",
+    "ENGL.G9.READIN.T13_INTENSIVE_READING_VI",
+    "ENGL.G9.READIN.T13_GRADE_APPROPRIATE_PL",
+    "ENGL.G9.READIN.T14_SUMMARISING_ARGUMENT",
+    "ENGL.G9.READIN.T14_INTENSIVE_READING_PL",
+    "ENGL.G9.READIN.T15_READING_FLUENCY",
+    "ENGL.G9.READIN.T15_INTENSIVE_READING_PO"
+   ],
+   "page": 162,
+   "indicators": [
+    {
+     "code": "ENGL.G9.RUBRIC.2.1",
+     "indicator": "Ability to distinguish between reading for meaning, information and infer meanings of words and phrases and use contextual clues.",
+     "levels": {
+      "EE": "The learner effortlessly distinguishes between reading for meaning, information and infers meanings of all the words and phrases and use contextual clues with ease.",
+      "ME": "The learner distinguishes between reading for meaning, information and infers meanings of all words and phrases and uses most contextual clues.",
+      "AE": "The learner partially distinguishes between reading for meaning, information and infer meanings of some words and phrases and uses some contextual clues.",
+      "BE": "The learner rarely distinguishes between reading for meaning, information and infer meanings of few words and phrases and struggles to use some contextual clues."
+     },
+     "page": 162,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.2",
+     "indicator": "Ability to read a text, interpret it, make notes and summarise information.",
+     "levels": {
+      "EE": "The learner reads and correctly interprets a text, makes notes with precision and summarises information with ease.",
+      "ME": "The learner reads and correctly interprets a text, makes notes and summarises information with ease.",
+      "AE": "The learner reads and struggles to interpret a text, makes some notes and summarises information with help.",
+      "BE": "The learner reads and is unable to interpret a text, barely makes notes and does not summarise information even with help."
+     },
+     "page": 162,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.3",
+     "indicator": "Ability to make connection between texts and real life, summarise events and answer direct and inferential questions from poems.",
+     "levels": {
+      "EE": "The learner effortlessly makes all connections between texts and real life and provides examples, summarises events and answers all direct and inferential questions from poems.",
+      "ME": "The learner makes most connections between texts and real life, summarises events and answers all direct and inferential questions from poems.",
+      "AE": "The learner makes some connections between texts and real life, summarises events and answers some direct and inferential questions from poems.",
+      "BE": "The learner makes few connections between texts and real life, struggles to summarise events and answers few direct and inferential questions from poems."
+     },
+     "page": 163,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.4",
+     "indicator": "Ability to create mental images from texts. features of short forms of oral literature, explain their functions and perform them appropriately.",
+     "levels": {
+      "EE": "The learner creates a variety of mental images from texts with ease. The learner identifies all features of short forms of oral literature, concisely explains their functions and creatively performs them with ease.",
+      "ME": "The learner creates mental images from texts with ease. The learner identifies all features of short forms of oral literature, explains their functions and performs them with ease.",
+      "AE": "The learner creates mental images from texts. The learner identifies most features of short forms of oral literature, explains some their functions and performs them with some difficulty.",
+      "BE": "The learner creates mental images from texts. The learner identifies some features of short forms of oral literature, explains some their functions and performs them with a lot of difficulties."
+     },
+     "page": 163,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.5",
+     "indicator": "Ability to identify simple props and costumes that create the mood and present a dramatized part of a play to the audience.",
+     "levels": {
+      "EE": "The learner easily identifies simple props and costumes that create mood, and creatively presents a dramatized part of a play to the audience.",
+      "ME": "The learner identifies simple props and costumes that create mood, and presents a dramatized part of a play to the audience.",
+      "AE": "simple props and costumes with assistance, and attempts to dramatize part of a play to the audience but with some difficulty.",
+      "BE": "The learner is unable to identify simple props and costumes and has difficulty dramatizing part of the play to the audience."
+     },
+     "page": 165,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.6",
+     "indicator": "Ability to identify and read fictional and non- fictional texts for independent reading and information.",
+     "levels": {
+      "EE": "The learner excellently identifies and reads a variety of non- fictional texts independent reading and records experiences from the reading sessions for tracking progress.",
+      "ME": "The learner identifies and reads a variety of fictional and non-fictional texts for independent reading and information.",
+      "AE": "The learner identifies some texts for independent reading with assistance.",
+      "BE": "The learner makes an attempt to identify some texts for independent reading even with assistance."
+     },
+     "page": 165,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.7",
+     "indicator": "Ability to keep a portfolio of the fiction materials they have read.",
+     "levels": {
+      "EE": "The learner keeps a detailed portfolio of a variety of texts.",
+      "ME": "The learner keeps a portfolio of a variety of texts.",
+      "AE": "The learner keeps a simple portfolio of a few texts.",
+      "BE": "The learner keeps a scanty portfolio of one text."
+     },
+     "page": 165,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.8",
+     "indicator": "Ability to identify main points, make notes and writes a summary.",
+     "levels": {
+      "EE": "The learner accurately identifies all the main points, makes notes and writes a summary with ease.",
+      "ME": "The learner identifies all the main points, makes notes and writes a summary.",
+      "AE": "The learner identifies some main points, makes notes and writes a summary in exhaustively.",
+      "BE": "The learner identifies few main points, make shoddy notes and write a sketchy summary."
+     },
+     "page": 166,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.2.9",
+     "indicator": "Ability to skim, scan and apply fluency strategies while reading.",
+     "levels": {
+      "EE": "The learner aptly and easily skims and scans a text and applies all fluency strategies while reading.",
+      "ME": "The learner applies skimming and scanning with ease and applies all fluency strategies while reading.",
+      "AE": "The learner applies skimming and scanning with some struggles and some fluency strategies while reading.",
+      "BE": "The learner struggles to skim and scan and applies few fluency strategies while reading."
+     },
+     "page": 166,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G9.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric: Grammar",
+   "strand": "Grammar",
+   "covers": [
+    "ENGL.G9.GRAMMA.T1_GENDER_NEUTRAL_LANGU",
+    "ENGL.G9.GRAMMA.T2_NOUNS_AND_QUANTIFIER",
+    "ENGL.G9.GRAMMA.T3_MODAL_AUXILIARIES",
+    "ENGL.G9.GRAMMA.T4_PRESENT_AND_PAST_PER",
+    "ENGL.G9.GRAMMA.T5_ORDER_OF_ADJECTIVES",
+    "ENGL.G9.GRAMMA.T6_COMPARISON_OF_ADVERB",
+    "ENGL.G9.GRAMMA.T7_RELATIVE_PRONOUNS_IN",
+    "ENGL.G9.GRAMMA.T8_COMPLEX_PREPOSITIONS",
+    "ENGL.G9.GRAMMA.T9_CONJUNCTIONS_CORRELA",
+    "ENGL.G9.GRAMMA.T10_DETERMINERS_NUMERALS",
+    "ENGL.G9.GRAMMA.T11_WORD_CLASSES_NOUNS",
+    "ENGL.G9.GRAMMA.T12_PHRASAL_VERBS",
+    "ENGL.G9.GRAMMA.T13_SENTENCES_COMPLEX_SE",
+    "ENGL.G9.GRAMMA.T14_SENTENCES_DIRECT_AND",
+    "ENGL.G9.GRAMMA.T15_SENTENCES_1_IMPERATI"
+   ],
+   "page": 167,
+   "indicators": [
+    {
+     "code": "ENGL.G9.RUBRIC.3.1",
+     "indicator": "Ability to use different parts of speech in sentences.",
+     "levels": {
+      "EE": "The learner uses all the different parts of speech accurately and in a variety of sentences.",
+      "ME": "The learner uses all the different parts of speech and in sentences.",
+      "AE": "The learner uses most parts of speech and in sentences.",
+      "BE": "The learner uses few parts of speech and in sentences."
+     },
+     "page": 167,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.3.2",
+     "indicator": "Ability to construct different types of sentences.",
+     "levels": {
+      "EE": "The learner creatively constructs all the different types of sentences with ease.",
+      "ME": "The learner creatively all the constructs different types of sentences.",
+      "AE": "The learner constructs most of the different types of sentences.",
+      "BE": "The learner constructs some types of sentences with assistance."
+     },
+     "page": 167,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.3.3",
+     "indicator": "Ability to use gender neutral language, correct order of adjectives, numerals and ordinals in sentences.",
+     "levels": {
+      "EE": "The learner always uses gender neutral language, correct order of adjectives, numerals and ordinals with ease in sentences.",
+      "ME": "The learner always uses gender neutral language, correct order of adjectives, numerals and ordinals in sentences.",
+      "AE": "The learner most of the times uses gender neutral language, correct order of adjectives, numerals and ordinals in sentences.",
+      "BE": "The learner rarely uses gender neutral language, correct order of adjectives, numerals and ordinals in sentences."
+     },
+     "page": 167,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G9.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "ENGL.G9.WRITIN.T1_LEGIBILITY_AND_NEATN",
+    "ENGL.G9.WRITIN.T2_MECHANICS_OF_WRITING",
+    "ENGL.G9.WRITIN.T3_STRUCTURE_OF_A_PARAG",
+    "ENGL.G9.WRITIN.T4_NARRATIVE_AND_DESCRI",
+    "ENGL.G9.WRITIN.T5_LETTER_OF_APPLICATIO",
+    "ENGL.G9.WRITIN.T6_MECHANICS_OF_WRITING",
+    "ENGL.G9.WRITIN.T7_THE_WRITING_PROCESS",
+    "ENGL.G9.WRITIN.T8_ASSESSING_WRITING",
+    "ENGL.G9.WRITIN.T9_NARRATIVE_COMPOSITIO",
+    "ENGL.G9.WRITIN.T10_FILLING_FORMS_APPLIC",
+    "ENGL.G9.WRITIN.T11_MECHANICS_OF_WRITING",
+    "ENGL.G9.WRITIN.T12_THE_WRITING_PROCESS_",
+    "ENGL.G9.WRITIN.T13_CREATIVE_WRITING_IDI",
+    "ENGL.G9.WRITIN.T14_DESCRIPTIVE_WRITING_",
+    "ENGL.G9.WRITIN.T15_EMAILS"
+   ],
+   "page": 168,
+   "indicators": [
+    {
+     "code": "ENGL.G9.RUBRIC.4.1",
+     "indicator": "Ability to write a well-developed paragraph.",
+     "levels": {
+      "EE": "The learner writes a well- developed Paragraph effortlessly and consistently.",
+      "ME": "The learner writes a well- developed Paragraph consistently.",
+      "AE": "The learner writes a paragraph but leaves out some details.",
+      "BE": "The learner writes a paragraph but it lacks most details."
+     },
+     "page": 168,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.4.2",
+     "indicator": "Ability to write different documents using correct format. composition using correct punctuation, handwriting and specified idioms.",
+     "levels": {
+      "EE": "The learner writes different documents using correct format with ease and uses correct tone and vocabulary. The learner writes a composition in neat and legible handwriting, correctly spells words, punctuates it and creatively uses specified idioms with ease.",
+      "ME": "The learner writes different documents using correct format with ease. The learner writes a composition in neat and legible handwriting, correctly spells words, punctuates it and creatively uses specified idioms.",
+      "AE": "The learner writes some documents using correct format but struggles with tone and vocabulary. The learner writes a composition in neat and legible handwriting, has some spelling errors, struggles to punctuate it, and uses some specified idioms.",
+      "BE": "The learner barely writes any documents using correct format, and vocabulary. The learner writes a composition illegible handwriting, has little command of punctuation is unable to use specified idioms."
+     },
+     "page": 168,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G9.RUBRIC.4.3",
+     "indicator": "Ability to apply the writing process in writing and assess a composition using predestined criteria.",
+     "levels": {
+      "EE": "The learner aptly and meticulously applies the writing process and accurately assesses a composition using predestined criteria.",
+      "ME": "The learner applies the writing process and accurately assesses a composition using predestined criteria.",
+      "AE": "The learner applies the writing process with assistance and struggles to assess a composition but leaves out some aspects of the predestined criteria.",
+      "BE": "The learner barely applies the writing process and assesses composition leaving out many aspects of the predestined criteria."
+     },
+     "page": 169,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

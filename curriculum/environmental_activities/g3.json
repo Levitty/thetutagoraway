@@ -55,23 +55,29 @@
      "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.a",
      "letter": "a",
      "text": "identify locally available things used as bedding",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.b",
      "letter": "b",
      "text": "carry out hygiene practises in sleeping areas for a healthy environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT.c",
      "letter": "c",
      "text": "advocate for the importance of observing hygiene in sleeping areas",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N",
@@ -115,29 +121,36 @@
      "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.a",
      "letter": "a",
      "text": "describe how people express feelings in real-life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.b",
      "letter": "b",
      "text": "describe ways in which emotional needs are met in real-life situations",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.c",
      "letter": "c",
      "text": "label emotions expressed by self and others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N.d",
      "letter": "d",
      "text": "appreciate the importance of meeting emotional needs in character formation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT",
@@ -185,29 +198,36 @@
      "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.a",
      "letter": "a",
      "text": "identify common food items found in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.b",
      "letter": "b",
      "text": "classify food items into three food groups",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.c",
      "letter": "c",
      "text": "observe table manners during meals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT.d",
      "letter": "d",
      "text": "embrace good eating habits to promote good health",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY",
@@ -252,29 +272,36 @@
      "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.a",
      "letter": "a",
      "text": "identify ways of keeping safe in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.b",
      "letter": "b",
      "text": "classify places in the community as safe and unsafe",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.c",
      "letter": "c",
      "text": "observe basic road signs for personal safety",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.OUR_COMMUNITY.d",
      "letter": "d",
      "text": "acknowledge the importance of keeping safe in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS",
@@ -314,29 +341,36 @@
      "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.a",
      "letter": "a",
      "text": "identify cultural events carried out in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.b",
      "letter": "b",
      "text": "recognise cultural events that promote social well-being in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.c",
      "letter": "c",
      "text": "classify cultural events that support the community's social well-being and environmental care",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G3.SOCIAL.CULTURAL_EVENTS.d",
      "letter": "d",
      "text": "embrace cultural events in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G3.NATURA.WEATHER",
@@ -380,29 +414,36 @@
      "code": "ENVI.G3.NATURA.WEATHER.a",
      "letter": "a",
      "text": "describe unfavourable weather conditions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.WEATHER.b",
      "letter": "b",
      "text": "explain the dangers of unfavourable weather conditions on people",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.WEATHER.c",
      "letter": "c",
      "text": "respond appropriately to unfavourable weather conditions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.WEATHER.d",
      "letter": "d",
      "text": "appreciate the importance of keeping safe during unfavourable weather conditions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G3.NATURA.SOIL",
@@ -444,23 +485,29 @@
      "code": "ENVI.G3.NATURA.SOIL.a",
      "letter": "a",
      "text": "list characteristics of different types of soil",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.SOIL.b",
      "letter": "b",
      "text": "carry out basic soil conservation activities in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.SOIL.c",
      "letter": "c",
      "text": "embrace soil conservation activities in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G3.NATURA.HEAT",
@@ -503,29 +550,36 @@
      "code": "ENVI.G3.NATURA.HEAT.a",
      "letter": "a",
      "text": "list sources of heat in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.HEAT.b",
      "letter": "b",
      "text": "identify uses of heat in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.HEAT.c",
      "letter": "c",
      "text": "carry out activities to conserve heat in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G3.NATURA.HEAT.d",
      "letter": "d",
      "text": "appreciate the importance of different sources of heat in daily life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "ENVI.G3.RESOUR.WATER",
@@ -568,29 +622,36 @@
      "code": "ENVI.G3.RESOUR.WATER.a",
      "letter": "a",
      "text": "name ways in which water can be contaminated in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WATER.b",
      "letter": "b",
      "text": "carry out activities to make water clean and safe",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WATER.c",
      "letter": "c",
      "text": "conserve water at home and school as a scarce resource",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WATER.d",
      "letter": "d",
      "text": "value the importance of clean and safe water for healthy living",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G3.RESOUR.PLANTS",
@@ -636,29 +697,36 @@
      "code": "ENVI.G3.RESOUR.PLANTS.a",
      "letter": "a",
      "text": "identify safety measures to observe when handling plants",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.PLANTS.b",
      "letter": "b",
      "text": "classify plants in the environment into edible and non-edible",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.PLANTS.c",
      "letter": "c",
      "text": "make a kitchen garden using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.PLANTS.d",
      "letter": "d",
      "text": "appreciate plants as sources of food in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G3.RESOUR.ANIMALS",
@@ -698,29 +766,36 @@
      "code": "ENVI.G3.RESOUR.ANIMALS.a",
      "letter": "a",
      "text": "explain the importance of domestic animals to human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.ANIMALS.b",
      "letter": "b",
      "text": "determine ways of caring for domestic animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.ANIMALS.c",
      "letter": "c",
      "text": "engage in activities that care for domestic animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.ANIMALS.d",
      "letter": "d",
      "text": "reflect on the value of domestic animals to human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G3.RESOUR.WASTE_MATERIALS",
@@ -762,29 +837,116 @@
      "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.a",
      "letter": "a",
      "text": "identify waste materials that can be used to generate income",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.b",
      "letter": "b",
      "text": "describe ways in which waste materials can generate income",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.c",
      "letter": "c",
      "text": "carry out activities to manage waste materials in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G3.RESOUR.WASTE_MATERIALS.d",
      "letter": "d",
      "text": "value the use of different waste materials to make money in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G3.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENVI.G3.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "SOCIAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G3.SOCIAL.OUR_LIVING_ENVIRONMENT",
+    "ENVI.G3.SOCIAL.FAMILY_NEEDS_EMOTIONAL_N",
+    "ENVI.G3.SOCIAL.FOOD_IN_OUR_ENVIRONMENT",
+    "ENVI.G3.SOCIAL.OUR_COMMUNITY",
+    "ENVI.G3.SOCIAL.CULTURAL_EVENTS"
+   ],
+   "page": 17,
+   "indicators": [
+    {
+     "code": "ENVI.G3.RUBRIC.1.1",
+     "indicator": "Ability to practise proper sanitation in the sleeping area for a healthy environment. Ability to describe ways in which emotional needs are met in real-life situations. Ability to practise good healthy habits during meals. Ability to observe safety precautions in the immediate environment. Ability to classify cultural activities that promote environmental care and social well-being.",
+     "levels": {
+      "EE": "Very often practises proper sanitation in the sleeping area for a healthy environment. Describes ways in which emotional needs are met in real-life situations with in-depth details. Very often practises good healthy habits during meals. Observes safety precautions in the immediate environment most keenly. Classifies cultural activities that promote environmental care and social well-being with in-depth details.",
+      "ME": "Practises proper sanitation in the sleeping area for a healthy environment. Describes ways in which emotional needs are met in real-life situations. Practises good healthy habits during meals. Observes safety precautions in the immediate environment. Classifies cultures that promote environmental care and social well-being social cohesion.",
+      "AE": "Practises proper sanitation in the sleeping area for a healthy environment less often. Describes ways in which emotional needs are met in real-life situations with fewer details. Practises good healthy habits during meals less often. Observes safety precautions in the immediate environment less keenly. Classifies cultural activities that promote environmental care and social well-being with fewer details.",
+      "BE": "Rarely practises proper sanitation in the sleeping area for a healthy environment. Describes ways in which emotional needs are met in real-life situations without details. Rarely practises good healthy habits during meals. Observes safety precautions in the immediate environment with prompts. Classifies cultural activities that promote environmental care and social well-being without details."
+     },
+     "page": 17,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G3.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "NATURAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G3.NATURA.WEATHER",
+    "ENVI.G3.NATURA.SOIL",
+    "ENVI.G3.NATURA.HEAT"
+   ],
+   "page": 23,
+   "indicators": [
+    {
+     "code": "ENVI.G3.RUBRIC.2.1",
+     "indicator": "Ability to respond appropriately to unfavourable weather conditions in the locality. Ability to carry out basic soil conservation activities in the environment. Ability to carry out activities of conserving heat in the environment.",
+     "levels": {
+      "EE": "Very often responds appropriately to unfavourable weather conditions in the locality. Carries out basic soil conservation activities in the environment most keenly. Very often carries out activities of conserving heat in the environment.",
+      "ME": "Responds appropriately to unfavourable weather conditions in the locality. Carries out basic soil conservation activities in the environment. Carries out activities of conserving heat in the environment.",
+      "AE": "Less often responds appropriately to unfavourable weather conditions in the locality. Carries out basic soil conservation activities in the environment less keenly. Carries out activities of conserving heat in the environment less often.",
+      "BE": "Rarely responds appropriately to unfavourable weather conditions in the locality. Carries out basic soil conservation activities in the environment with prompts. Rarely carries out activities of conserving heat in the environment."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G3.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "covers": [
+    "ENVI.G3.RESOUR.WATER",
+    "ENVI.G3.RESOUR.PLANTS",
+    "ENVI.G3.RESOUR.ANIMALS",
+    "ENVI.G3.RESOUR.WASTE_MATERIALS"
+   ],
+   "page": 31,
+   "indicators": [
+    {
+     "code": "ENVI.G3.RUBRIC.3.1",
+     "indicator": "Ability to classify plants in the environment into edible and non-edible. Ability to observe safety measures when making a kitchen garden. Ability to conserve water at home and school as a scarce resource. Ability to carry out activities for caring domestic animals. Ability to describe ways in which waste materials can generate income. Ability to carry out activities to manage waste in the environment.",
+     "levels": {
+      "EE": "Classifies plants in the environment into edible and non-edible with in-depth details. Observes safety measures when making a kitchen garden most keenly. Very often conserves water at home and school as a scarce resource. Very often carries out activities for caring for domestic animals. Describes ways in which waste materials can generate income with in-depth details. Carries out activities to manage waste in the environment most frequently.",
+      "ME": "Classifies plants in the environment into edible and non-edible. Observes safety measures when making a kitchen garden. Conserves water at home and school as a scarce resource. Carries out activities for caring domestic for animals. Describes ways in which waste materials can generate income. Carries out activities to manage waste in the environment.",
+      "AE": "Classifies plants in the environment into edible and non-edible with minimal details. Observes safety measures when making a kitchen garden less keenly. Less often conserves water at home and school as a scarce resource. Less often carries out activities for caring for domestic animals. Describes ways in which waste materials can generate income with minimal details. Carries out activities to manage waste in the environment less frequently.",
+      "BE": "Classifies plants in the environment into edible and non-edible without details. Observes safety measures when making a kitchen garden with prompts. Rarely conserves water at home and school as a scarce resource. Rarely carries out activities for caring for domestic animals. Describes ways in which waste materials can generate income without details. Rarely carries out activities to manage waste in the environment."
+     },
+     "page": 31,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

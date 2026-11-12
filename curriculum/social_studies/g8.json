@@ -69,7 +69,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.1.1",
+    "SOCI.G8.RUBRIC.1.2"
+   ]
   },
   {
    "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT",
@@ -110,19 +114,22 @@
      "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.a",
      "letter": "a",
      "text": "explain the contribution of self-esteem on their holistic development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.1.1"
     },
     {
      "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.b",
      "letter": "b",
      "text": "determine effects of unhealthy self-esteem in day-to-day social lives",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.c",
      "letter": "c",
      "text": "assess their self-esteem in social interactions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.1.2"
     },
     {
      "code": "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT.d",
@@ -132,7 +139,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.1.1",
+    "SOCI.G8.RUBRIC.1.2"
+   ]
   },
   {
    "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI",
@@ -175,31 +186,36 @@
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.a",
      "letter": "a",
      "text": "identify a problem/gap in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.2.1"
     },
     {
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.b",
      "letter": "b",
      "text": "design solution(s) to the identified problem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.2.2"
     },
     {
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.c",
      "letter": "c",
      "text": "plan to implement the solution to the identified problem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.d",
      "letter": "d",
      "text": "implement plan for solving the identified problem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.2.4"
     },
     {
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.e",
      "letter": "e",
      "text": "report/account on the concluded project",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.2.5"
     },
     {
      "code": "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI.f",
@@ -209,7 +225,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.2.1",
+    "SOCI.G8.RUBRIC.2.2",
+    "SOCI.G8.RUBRIC.2.3",
+    "SOCI.G8.RUBRIC.2.4",
+    "SOCI.G8.RUBRIC.2.5"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_",
@@ -252,7 +275,8 @@
      "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.a",
      "letter": "a",
      "text": "explore scientific theory about human origin",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.b",
@@ -264,7 +288,8 @@
      "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.c",
      "letter": "c",
      "text": "draw conclusions on origin of humanity based on the scientific theory",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.1"
     },
     {
      "code": "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_.d",
@@ -286,7 +311,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION",
@@ -328,23 +366,39 @@
      "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.a",
      "letter": "a",
      "text": "describe Swahili civilisation along the East African coast",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.3"
     },
     {
      "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.b",
      "letter": "b",
      "text": "show how best practices from early civilisations have contributed to the modern world",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.8"
     },
     {
      "code": "SOCI.G8.PEOPLE.EARLY_CIVILISATION.c",
      "letter": "c",
      "text": "appreciate best practices of early civilisation to the development of the modern world",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.8"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD",
@@ -385,35 +439,53 @@
      "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.a",
      "letter": "a",
      "text": "identify factors that led to development of Trans-Saharan slave Trade in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.4"
     },
     {
      "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.b",
      "letter": "b",
      "text": "describe organisation of Trans-Saharan slave trade in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.4"
     },
     {
      "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.c",
      "letter": "c",
      "text": "outline effects of Trans-Saharan slave trade in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.4"
     },
     {
      "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.d",
      "letter": "d",
      "text": "demonstrate assertiveness in promotion of social justice",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.9"
     },
     {
      "code": "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD.e",
      "letter": "e",
      "text": "desire to promote social justice in a society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.9"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR",
@@ -463,7 +535,8 @@
      "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.b",
      "letter": "b",
      "text": "examine types and effects of migration in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.5"
     },
     {
      "code": "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR.c",
@@ -485,7 +558,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO",
@@ -525,13 +611,15 @@
      "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.a",
      "letter": "a",
      "text": "explore social cultural diversities in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.6"
     },
     {
      "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.b",
      "letter": "b",
      "text": "explain ways of building a healthy self-esteem in diverse social cultural society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.6"
     },
     {
      "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.c",
@@ -543,17 +631,32 @@
      "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.d",
      "letter": "d",
      "text": "manage peer pressure in a culturally diverse environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.10"
     },
     {
      "code": "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO.e",
      "letter": "e",
      "text": "appreciate social cultural diversities in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.6"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU",
@@ -598,7 +701,8 @@
      "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.a",
      "letter": "a",
      "text": "identify situations that lead to conflicts in the family",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.3.7"
     },
     {
      "code": "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU.b",
@@ -632,7 +736,20 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.3.1",
+    "SOCI.G8.RUBRIC.3.2",
+    "SOCI.G8.RUBRIC.3.3",
+    "SOCI.G8.RUBRIC.3.4",
+    "SOCI.G8.RUBRIC.3.5",
+    "SOCI.G8.RUBRIC.3.6",
+    "SOCI.G8.RUBRIC.3.7",
+    "SOCI.G8.RUBRIC.3.8",
+    "SOCI.G8.RUBRIC.3.9",
+    "SOCI.G8.RUBRIC.3.10",
+    "SOCI.G8.RUBRIC.3.11"
+   ]
   },
   {
    "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE",
@@ -687,7 +804,8 @@
      "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.c",
      "letter": "c",
      "text": "describe the different methods of representing physical features on topographical maps",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.6"
     },
     {
      "code": "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE.d",
@@ -703,7 +821,17 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.4.1",
+    "SOCI.G8.RUBRIC.4.2",
+    "SOCI.G8.RUBRIC.4.3",
+    "SOCI.G8.RUBRIC.4.4",
+    "SOCI.G8.RUBRIC.4.5",
+    "SOCI.G8.RUBRIC.4.6",
+    "SOCI.G8.RUBRIC.4.7",
+    "SOCI.G8.RUBRIC.4.8"
+   ]
   },
   {
    "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE",
@@ -752,19 +880,22 @@
      "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.a",
      "letter": "a",
      "text": "examine factors influencing climate in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.1"
     },
     {
      "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.b",
      "letter": "b",
      "text": "illustrate distribution and characteristics of major climatic regions of Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.7"
     },
     {
      "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.c",
      "letter": "c",
      "text": "explore positive ways of managing disaster-related stress",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.5"
     },
     {
      "code": "SOCI.G8.NATURA.WEATHER_AND_CLIMATE.d",
@@ -780,7 +911,17 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.4.1",
+    "SOCI.G8.RUBRIC.4.2",
+    "SOCI.G8.RUBRIC.4.3",
+    "SOCI.G8.RUBRIC.4.4",
+    "SOCI.G8.RUBRIC.4.5",
+    "SOCI.G8.RUBRIC.4.6",
+    "SOCI.G8.RUBRIC.4.7",
+    "SOCI.G8.RUBRIC.4.8"
+   ]
   },
   {
    "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA",
@@ -824,13 +965,15 @@
      "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.a",
      "letter": "a",
      "text": "explain factors influencing vegetation distribution in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.2"
     },
     {
      "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.b",
      "letter": "b",
      "text": "describe the characteristics of major vegetation regions of Africa on the map",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.7"
     },
     {
      "code": "SOCI.G8.NATURA.VEGETATION_IN_AFRICA.c",
@@ -858,7 +1001,17 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.4.1",
+    "SOCI.G8.RUBRIC.4.2",
+    "SOCI.G8.RUBRIC.4.3",
+    "SOCI.G8.RUBRIC.4.4",
+    "SOCI.G8.RUBRIC.4.5",
+    "SOCI.G8.RUBRIC.4.6",
+    "SOCI.G8.RUBRIC.4.7",
+    "SOCI.G8.RUBRIC.4.8"
+   ]
   },
   {
    "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON",
@@ -909,19 +1062,22 @@
      "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.a",
      "letter": "a",
      "text": "locate selected historical sites and monuments in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.8"
     },
     {
      "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.b",
      "letter": "b",
      "text": "examine the importance of historical sites and monuments for the preservation of cultural heritage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.3"
     },
     {
      "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.c",
      "letter": "c",
      "text": "explore ways of conserving historical sites and monuments in Africa",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.8"
     },
     {
      "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.d",
@@ -933,11 +1089,22 @@
      "code": "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON.e",
      "letter": "e",
      "text": "desire to conserve historical sites and monuments in the locality in promoting cultural heritage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.4.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.4.1",
+    "SOCI.G8.RUBRIC.4.2",
+    "SOCI.G8.RUBRIC.4.3",
+    "SOCI.G8.RUBRIC.4.4",
+    "SOCI.G8.RUBRIC.4.5",
+    "SOCI.G8.RUBRIC.4.6",
+    "SOCI.G8.RUBRIC.4.7",
+    "SOCI.G8.RUBRIC.4.8"
+   ]
   },
   {
    "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY",
@@ -978,35 +1145,50 @@
      "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.a",
      "letter": "a",
      "text": "explore components of the Constitution of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.1"
     },
     {
      "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.b",
      "letter": "b",
      "text": "illustrate roles of the three arms of government of Kenya in reference to the relevant chapters in the Constitution",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.7"
     },
     {
      "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.c",
      "letter": "c",
      "text": "examine guiding principles of leadership and integrity in the Constitution of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.d",
      "letter": "d",
      "text": "apply assertiveness in upholding principles of leadership and integrity in daily interactions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.2"
     },
     {
      "code": "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY.e",
      "letter": "e",
      "text": "exhibit good leadership intended in chapter six of the Constitution of Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.5.1",
+    "SOCI.G8.RUBRIC.5.2",
+    "SOCI.G8.RUBRIC.5.3",
+    "SOCI.G8.RUBRIC.5.4",
+    "SOCI.G8.RUBRIC.5.5",
+    "SOCI.G8.RUBRIC.5.6",
+    "SOCI.G8.RUBRIC.5.7",
+    "SOCI.G8.RUBRIC.5.8"
+   ]
   },
   {
    "code": "SOCI.G8.POLITI.HUMAN_RIGHTS",
@@ -1047,35 +1229,50 @@
      "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.a",
      "letter": "a",
      "text": "explore how human rights can be respected and protected in the community",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.3"
     },
     {
      "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.b",
      "letter": "b",
      "text": "describe the process of effective communication on human rights issues",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.4"
     },
     {
      "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.c",
      "letter": "c",
      "text": "outline Children’s Rights in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.8"
     },
     {
      "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.d",
      "letter": "d",
      "text": "demonstrate ways in which children are protected against violation of their Rights in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.8"
     },
     {
      "code": "SOCI.G8.POLITI.HUMAN_RIGHTS.e",
      "letter": "e",
      "text": "recognise responsibility of the society in protecting human rights",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.5.1",
+    "SOCI.G8.RUBRIC.5.2",
+    "SOCI.G8.RUBRIC.5.3",
+    "SOCI.G8.RUBRIC.5.4",
+    "SOCI.G8.RUBRIC.5.5",
+    "SOCI.G8.RUBRIC.5.6",
+    "SOCI.G8.RUBRIC.5.7",
+    "SOCI.G8.RUBRIC.5.8"
+   ]
   },
   {
    "code": "SOCI.G8.POLITI.CITIZENSHIP",
@@ -1121,13 +1318,15 @@
      "code": "SOCI.G8.POLITI.CITIZENSHIP.a",
      "letter": "a",
      "text": "describe qualities of a global citizen in an interconnected society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.5"
     },
     {
      "code": "SOCI.G8.POLITI.CITIZENSHIP.b",
      "letter": "b",
      "text": "explore ways in which Nobel Prize nominees responded to injustice situations in the society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SOCI.G8.RUBRIC.5.6"
     },
     {
      "code": "SOCI.G8.POLITI.CITIZENSHIP.c",
@@ -1149,7 +1348,493 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "SOCI.G8.RUBRIC.5.1",
+    "SOCI.G8.RUBRIC.5.2",
+    "SOCI.G8.RUBRIC.5.3",
+    "SOCI.G8.RUBRIC.5.4",
+    "SOCI.G8.RUBRIC.5.5",
+    "SOCI.G8.RUBRIC.5.6",
+    "SOCI.G8.RUBRIC.5.7",
+    "SOCI.G8.RUBRIC.5.8"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SOCI.G8.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Social Studies and Personal Management",
+   "covers": [
+    "SOCI.G8.SOCIAL.SELF_IMPROVEMENT",
+    "SOCI.G8.SOCIAL.SELF_ESTEEM_ASSESSMENT"
+   ],
+   "page": 17,
+   "indicators": [
+    {
+     "code": "SOCI.G8.RUBRIC.1.1",
+     "indicator": "Ability to explain the contribution of self-esteem on their holistic",
+     "levels": {
+      "EE": "Explains the contribution of self-esteem on their holistic",
+      "ME": "Explains the contribution of self-esteem on their holistic",
+      "AE": "Explains the contribution of self-esteem on their holistic",
+      "BE": "Explains the contribution of self-esteem on their holistic"
+     },
+     "page": 17,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.1.2",
+     "indicator": "development. Ability to determine effects of unhealthy self-esteem in day-to-day social lives, Ability to determine effects of unhealthy self-esteem in day-to-day lives. Ability to assess their self-esteem in social interactions,",
+     "levels": {
+      "EE": "development citing all contexts. Determines effects of unhealthy self-esteem in day-to-day social lives citing major examples. Determines effects of unhealthy self-esteem in day-to-day lives giving major incidences. Assesses their self-esteem in social interactions different scenarios",
+      "ME": "development citing most contexts. Determines effects of unhealthy self-esteem in day-to-day social lives citing good examples. Determines effects of unhealthy self-esteem in day-to-day lives giving most incidences. Assesses their self-esteem in social interactions with scenarios",
+      "AE": "development omitting few contexts. Determines effects of unhealthy self-esteem in day-to-day social lives leaving out some examples. Determines effects of unhealthy self-esteem in day-to-day lives leaving out minor incidences. Assesses their self-esteem in social interactions omits some scenarios",
+      "BE": "development leaving out most contexts. Determines effects of unhealthy self-esteem in day-to-day social lives leaving out major examples. Determines effects of unhealthy self-esteem in day-to-day lives leaving out most incidences. Assesses their self-esteem in social interactions major scenarios."
+     },
+     "page": 17,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G8.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Community Service Learning",
+   "covers": [
+    "SOCI.G8.COMMUN.COMMUNITY_SERVICE_LEARNI"
+   ],
+   "page": 20,
+   "indicators": [
+    {
+     "code": "SOCI.G8.RUBRIC.2.1",
+     "indicator": "Ability to identify a problem/gap in the community.",
+     "levels": {
+      "EE": "Learner identifies a problem/gap in the community in detail.",
+      "ME": "Learner identifies a problem/gap in the community.",
+      "AE": "Learner identifies a problem/gap in the community with some details.",
+      "BE": "Learner identifies a problem/gap in the community with no details."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.2.2",
+     "indicator": "Ability to propose solution(s) to the identified problem.",
+     "levels": {
+      "EE": "Learner proposes solution(s) to the identified problem in varied contexts.",
+      "ME": "Learner proposes solution(s) to the identified problem.",
+      "AE": "Learner proposes solution(s) to the identified problem in a few contexts.",
+      "BE": "Learner proposes solution(s) to the identified problem in limited contexts."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.2.3",
+     "indicator": "Ability to design a plan to solve the identified problem.",
+     "levels": {
+      "EE": "Learner designs a plan to solve the identified problem with rich details.",
+      "ME": "Learner designs a plan to solve the identified problem.",
+      "AE": "Learner designs a plan to solve the identified problem but leaves out minor details.",
+      "BE": "Learner designs a plan to solve the identified problem but leaves out major details."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.2.4",
+     "indicator": "Ability to implement the plan for solving the identified problem.",
+     "levels": {
+      "EE": "Learner implements a plan for solving the identified problem following all the steps and makes reviews.",
+      "ME": "Learner implements a plan for solving the identified problem.",
+      "AE": "Learner implements a plan for solving the identified problem but leaves out minor steps.",
+      "BE": "Learner implements a plan for solving the identified problem but leaves out most of the steps."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.2.5",
+     "indicator": "Ability to report/ account on the concluded project.",
+     "levels": {
+      "EE": "Learner reports/ accounts on the concluded project in detail.",
+      "ME": "Learner reports/ accounts on the concluded project.",
+      "AE": "Learner reports /accounts on the concluded project but leaves out minor details.",
+      "BE": "Learner reports/ accounts on the concluded project but leaves out major details."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G8.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "People and Relationships",
+   "covers": [
+    "SOCI.G8.PEOPLE.SCIENTIFIC_THEORY_ABOUT_",
+    "SOCI.G8.PEOPLE.EARLY_CIVILISATION",
+    "SOCI.G8.PEOPLE.TRANS_SAHARAN_SLAVE_TRAD",
+    "SOCI.G8.PEOPLE.POPULATION_GROWTH_IN_AFR",
+    "SOCI.G8.PEOPLE.DIVERSITY_AND_INTERPERSO",
+    "SOCI.G8.PEOPLE.PEACEFUL_CONFLICT_RESOLU"
+   ],
+   "page": 34,
+   "indicators": [
+    {
+     "code": "SOCI.G8.RUBRIC.3.1",
+     "indicator": "Ability to explore scientific theory about human origin on formation of personal identity.",
+     "levels": {
+      "EE": "Learner explores scientific theory about human origin on formation of personal identity in detail and cites relevant examples.",
+      "ME": "Learner explores scientific theory about human origin on formation of personal identity.",
+      "AE": "Learner explores scientific theory about human origin on formation of personal identity leaving out minor details.",
+      "BE": "Learner explores scientific theory about human origin on formation of personal identity leaving out major details."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.2",
+     "indicator": "Ability to describe peaceful ways of resolving conflicts in the family.",
+     "levels": {
+      "EE": "Learner describes peaceful ways of resolving conflicts in the family in detail using relevant examples.",
+      "ME": "Learner describes peaceful ways of resolving conflicts in the family.",
+      "AE": "Learner describes peaceful ways of resolving conflicts in the family omitting minor details.",
+      "BE": "Learner describes peaceful ways of resolving conflicts in the family omitting major details."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.3",
+     "indicator": "Ability to describe the Swahili civilisation along the East African coast.",
+     "levels": {
+      "EE": "Learner describes the Swahili civilisation along the East African coast in detail with concrete examples.",
+      "ME": "Learner describes the Swahili civilisation along the East African coast.",
+      "AE": "Learner describes the Swahili civilisation along the East African coast leaving out a few details.",
+      "BE": "Learner describes the Swahili civilisation along the East African coast leaving out many details."
+     },
+     "page": 34,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.4",
+     "indicator": "Ability to outline effects of Trans-Saharan slave trade in Africa.",
+     "levels": {
+      "EE": "Learner outlines effects of Trans-Saharan slave trade in Africa with a smooth flow of ideas and cites relevant examples.",
+      "ME": "Learner outlines effects of Trans-Saharan slave trade in Africa.",
+      "AE": "Learner outlines effects of Trans-Saharan slave trade in Africa but mixes up minor ideas.",
+      "BE": "Learner outlines some effects of Trans-Saharan slave trade in Africa omitting major details but mixes up major ideas."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.5",
+     "indicator": "Ability to examine types and effects of migration in Africa.",
+     "levels": {
+      "EE": "Learner examines types and effects of migration in Africa in detail and provides relevant illustrations.",
+      "ME": "Learner examines types and effects of migration in Africa.",
+      "AE": "Learner examines types and effects of migration in Africa omitting a few details.",
+      "BE": "Learner examines types and effects of migration in Africa omitting many details."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.6",
+     "indicator": "Ability to explain ways of building a healthy self-esteem in social cultural diversity and inclusion.",
+     "levels": {
+      "EE": "Learner explains ways of building a healthy self-esteem in social cultural diversity and inclusion in detail.",
+      "ME": "Learner explains ways of building a healthy self-esteem in social cultural diversity and inclusion.",
+      "AE": "Learner explains ways of building a healthy self-esteem in social cultural diversity and inclusion leaving out minor details.",
+      "BE": "Learner explains ways of building a healthy self-esteem in social cultural diversity and inclusion leaving out major details."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.7",
+     "indicator": "Ability to identify situations that may lead to conflicts in family.",
+     "levels": {
+      "EE": "Learner identifies situations that may lead to conflicts in the family with smooth flow of ideas and provides concrete examples.",
+      "ME": "Learner identifies situations that may lead to conflicts in the family.",
+      "AE": "Learner identifies situations that may lead to conflicts in the family with minor mix up of ideas.",
+      "BE": "Learner identifies situations that may lead to conflicts in the family with major mix up of ideas."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.8",
+     "indicator": "Ability to show how best practices from early civilisations have contributed to the modern world.",
+     "levels": {
+      "EE": "Learner shows how best practices from early civilisations have contributed to the modern world in detail.",
+      "ME": "Learner shows how best practices from early civilisations have contributed to the modern world.",
+      "AE": "Learner shows how best practices from early civilisations have contributed to the modern world while omitting minor details.",
+      "BE": "Learner shows how best practices from early civilisations have contributed to the modern world while omitting major details."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.9",
+     "indicator": "Ability to demonstrate assertiveness in promotion of social justice in the society.",
+     "levels": {
+      "EE": "Learner demonstrates assertiveness in promotion of social justice in society in varied contexts.",
+      "ME": "Learner demonstrates assertiveness to promotion of social justice in society.",
+      "AE": "Learner demonstrates assertiveness in promotion of social justice in society in somewhat varied contexts.",
+      "BE": "Learner demonstrates assertiveness in promotion of social justice in society in limited contexts."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.10",
+     "indicator": "Ability to manage peer pressure in a culturally diverse environment.",
+     "levels": {
+      "EE": "Learner manages peer pressure in a culturally diverse environment discernibly.",
+      "ME": "Learner manages peer pressure in a culturally diverse environment.",
+      "AE": "Learner manages peer pressure in a culturally diverse environment in a somewhat discernible manner.",
+      "BE": "Learner manages peer pressure in a culturally diverse environment in an indiscernible manner."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.3.11",
+     "indicator": "Ability to apply peaceful ways of resolving conflicts in the family.",
+     "levels": {
+      "EE": "Learner applies peaceful ways of resolving conflicts in the family always.",
+      "ME": "Learner applies peaceful ways of resolving conflicts in the family.",
+      "AE": "Learner applies peaceful ways of resolving conflicts in the family on many occasions.",
+      "BE": "Learner applies peaceful ways of resolving conflicts in the family on very few occasions."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G8.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Natural and Historic Built Environments",
+   "covers": [
+    "SOCI.G8.NATURA.MAP_READING_AND_INTERPRE",
+    "SOCI.G8.NATURA.WEATHER_AND_CLIMATE",
+    "SOCI.G8.NATURA.VEGETATION_IN_AFRICA",
+    "SOCI.G8.NATURA.HISTORICAL_SITES_AND_MON"
+   ],
+   "page": 47,
+   "indicators": [
+    {
+     "code": "SOCI.G8.RUBRIC.4.1",
+     "indicator": "Ability to examine factors influencing weather and climate in Africa.",
+     "levels": {
+      "EE": "Learner examines factors influencing climate in Africa in depth.",
+      "ME": "Learner examines factors influencing weather and climate in Africa.",
+      "AE": "Learner examines factors influencing weather and climate in Africa while omitting minor details.",
+      "BE": "Learner examines factors influencing weather and climate in Africa while omitting major details."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.2",
+     "indicator": "Ability to explain factors influencing vegetation distribution in Africa.",
+     "levels": {
+      "EE": "Learner explains the factors influencing vegetation distribution in Africa with much detail.",
+      "ME": "Learner explains the factors influencing vegetation distribution in Africa.",
+      "AE": "Learner explains factors influencing vegetation distribution in Africa leaving out minor details.",
+      "BE": "Learner explains factors influencing vegetation distribution in Africa leaving out major details."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.3",
+     "indicator": "Ability to examine the importance of historical sites and monuments for the preservation of cultural heritage.",
+     "levels": {
+      "EE": "Learner examines the importance of historical sites and monuments for the preservation of cultural heritage with smooth flow of ideas and coherence.",
+      "ME": "Learner examines the importance of historical sites and monuments for the preservation of cultural heritage.",
+      "AE": "Learner examines the importance of historical sites and monuments for the preservation of cultural heritage but mixes up minor ideas.",
+      "BE": "Learner examines the importance of historical sites and monuments for the preservation of cultural heritage but mixes up major ideas."
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.4",
+     "indicator": "Ability to explore positive ways of",
+     "levels": {
+      "EE": "Learner explores positive ways of managing disaster-related stress",
+      "ME": "Learner explores positive ways of",
+      "AE": "Learner explores positive ways of",
+      "BE": "Learner explores some positive ways of disaster-related stress"
+     },
+     "page": 47,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.5",
+     "indicator": "managing disaster-related stress.",
+     "levels": {
+      "EE": "without errors in varied contexts.",
+      "ME": "managing disaster-related stress.",
+      "AE": "disaster-related stress with many errors.",
+      "BE": "with major errors that distort meaning."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.6",
+     "indicator": "Ability to describe the different methods of representing physical features on topographic maps.",
+     "levels": {
+      "EE": "Learner describes the different methods of representing physical features on topographic maps with many relevant examples.",
+      "ME": "Learner describes the different methods of representing physical features on topographic maps.",
+      "AE": "Learner describes the different methods of representing physical features on topographic maps with a few relevant examples.",
+      "BE": "Learner describes the different methods of representing physical features on topographic maps with no relevant examples."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.7",
+     "indicator": "Ability to illustrate the distribution and characteristics of climatic regions of Africa.",
+     "levels": {
+      "EE": "Learner illustrates the distribution and characteristics of climatic regions of Africa in detail and with relevant examples.",
+      "ME": "Learner illustrates the distribution and characteristics of climatic regions of Africa.",
+      "AE": "Learner illustrates the distribution and characteristics of climatic regions of Africa with minor irrelevant details.",
+      "BE": "Learner illustrates the distribution and characteristics of climatic regions of Africa with major irrelevant details."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.4.8",
+     "indicator": "Ability to locate selected historical sites and monuments in Africa.",
+     "levels": {
+      "EE": "Learner locates selected historical sites and monuments in Africa giving detailed descriptions.",
+      "ME": "Learner locates selected historical sites and monuments in Africa.",
+      "AE": "Learner locates 4 - 6 selected historical sites and monuments in Africa.",
+      "BE": "Learner locates less than 3 selected historical sites and monuments in Africa."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SOCI.G8.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Political Developments and Governance",
+   "covers": [
+    "SOCI.G8.POLITI.THE_CONSTITUTION_OF_KENY",
+    "SOCI.G8.POLITI.HUMAN_RIGHTS",
+    "SOCI.G8.POLITI.CITIZENSHIP"
+   ],
+   "page": 56,
+   "indicators": [
+    {
+     "code": "SOCI.G8.RUBRIC.5.1",
+     "indicator": "Ability to explore components of the Constitution of Kenya.",
+     "levels": {
+      "EE": "Learner explores components of the Constitution of Kenya in detail.",
+      "ME": "Learner explores components of the Constitution of Kenya.",
+      "AE": "Learner explores components of the Constitution of Kenya omitting minor details.",
+      "BE": "Learner explores components of the Constitution of Kenya omitting major details."
+     },
+     "page": 56,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.2",
+     "indicator": "Ability to examine guiding principles of leadership and integrity in the Constitution of Kenya.",
+     "levels": {
+      "EE": "Learner examines guiding principles of leadership and integrity in the Constitution of Kenya with smooth flow of ideas and coherence.",
+      "ME": "Learner examines guiding principles of leadership and integrity in the Constitution of Kenya.",
+      "AE": "Learner examines guiding principles of leadership and integrity in the Constitution of Kenya but mixes up minor ideas.",
+      "BE": "Learner examines guiding principles of leadership and integrity in the Constitution of Kenya but mixes up major ideas."
+     },
+     "page": 56,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.3",
+     "indicator": "Ability to explore how human rights can be respected and protected in the community.",
+     "levels": {
+      "EE": "Learner explores how human rights can be respected and protected in the community in detail and varied contexts.",
+      "ME": "Learner explores how human rights can be respected and protected in the community.",
+      "AE": "Learner explores how human rights can be respected and protected in the community while omitting minor details.",
+      "BE": "Learner explores how human rights can be respected and protected in the community while omitting major details."
+     },
+     "page": 56,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.4",
+     "indicator": "Ability to describe the process of effective communication on human rights issues.",
+     "levels": {
+      "EE": "Learner describes the process of effective communication on human rights issues in depth.",
+      "ME": "Learner describes the process of effective communication on human rights issues.",
+      "AE": "Learner describes the process of effective communication on human rights issues but leaves out minor details.",
+      "BE": "Learner describes the process of effective communication on human rights issues but leaves out major details."
+     },
+     "page": 57,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.5",
+     "indicator": "Ability to describe qualities and responsibilities of a global citizen in an interconnected society.",
+     "levels": {
+      "EE": "Learner describes qualities and responsibilities of a global citizen in an interconnected society with consistency and provides relevant examples.",
+      "ME": "Learner describes qualities and responsibilities of a global citizen in an interconnected society.",
+      "AE": "Learner describes qualities and responsibilities of a global citizen in an interconnected society with minor inconsistencies.",
+      "BE": "Learner describes some qualities and responsibilities of a global citizen in an interconnected society with major inconsistencies."
+     },
+     "page": 57,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.6",
+     "indicator": "Ability to explore ways in which Nobel Prize nominees responded to injustice situations in society.",
+     "levels": {
+      "EE": "Learner explores ways in which Nobel Prize nominees responded to injustice situations in the society in detail.",
+      "ME": "Learner explores ways in which Nobel Prize nominees responded to injustice situations in society.",
+      "AE": "Learner explores ways in which Nobel Prize nominees responded to injustice situations in society leaving out minor details.",
+      "BE": "Learner explores ways in which Nobel Prize nominees responded to injustice situations in society leaving out major details."
+     },
+     "page": 57,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.7",
+     "indicator": "Ability to illustrate roles of the three arms of the Government of Kenya.",
+     "levels": {
+      "EE": "Learner illustrates roles of the three arms of the Government of Kenya, citing examples from the Constitution.",
+      "ME": "Learner illustrates roles of the three arms of the Government of Kenya.",
+      "AE": "Learner illustrates roles of only two arms of the Government of Kenya.",
+      "BE": "Learner illustrates roles of only one arm of the Government of Kenya."
+     },
+     "page": 58,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SOCI.G8.RUBRIC.5.8",
+     "indicator": "Ability to demonstrate ways in which children are protected against violation of their rights in Kenya.",
+     "levels": {
+      "EE": "Learner demonstrates ways in which children are protected against violation of their rights in Kenya with smooth flow of ideas and cites relevant examples.",
+      "ME": "Learner demonstrates ways in which children are protected against violation of their rights in Kenya.",
+      "AE": "Learner demonstrates ways in which children are protected against violation of their rights in Kenya but mixes up a few ideas.",
+      "BE": "Learner demonstrates some ways in which children are protected against violation of their rights in Kenya but mixes up many ideas."
+     },
+     "page": 58,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

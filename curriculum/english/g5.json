@@ -69,7 +69,8 @@
      "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.c",
      "letter": "c",
      "text": "listen for the main idea and specific details for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.d",
@@ -81,7 +82,8 @@
      "code": "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS.e",
      "letter": "e",
      "text": "adopt attentive listening for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.1.2"
     }
    ],
    "skills": [
@@ -138,6 +140,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
    ]
   },
   {
@@ -181,13 +188,15 @@
      "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.a",
      "letter": "a",
      "text": "select relevant reference materials: dictionaries, junior encyclopaedias, and, subject-specific encyclopaedias on a variety of subjects",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.b",
      "letter": "b",
      "text": "spell words correctly for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G5.READIN.T1_EXTENSIVE_READING.c",
@@ -289,6 +298,10 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
    ]
   },
   {
@@ -333,19 +346,22 @@
      "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.a",
      "letter": "a",
      "text": "identify demonstrative determiners: this, these, that, those, in a variety of texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.b",
      "letter": "b",
      "text": "use demonstrative determiners: this, these, that, those correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA.c",
      "letter": "c",
      "text": "promote the use of the correct demonstrative determiner to use during communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -436,6 +452,9 @@
      "source": "common learner error; widespread in speech",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -494,7 +513,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO",
@@ -551,7 +575,8 @@
      "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.c",
      "letter": "c",
      "text": "listen for the main idea and specific details for effective communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G5.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO.d",
@@ -567,7 +592,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T2_INTENSIVE_READING",
@@ -1129,6 +1159,10 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
    ]
   },
   {
@@ -1170,19 +1204,22 @@
      "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.a",
      "letter": "a",
      "text": "identify collective nouns and reflexive pronouns in texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.b",
      "letter": "b",
      "text": "use collective nouns and reflexive pronouns in sentences correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV.c",
      "letter": "c",
      "text": "adopt the use of collective and reflexive pronouns during communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -1365,6 +1402,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -1424,7 +1464,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO",
@@ -1569,6 +1614,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
    ]
   },
   {
@@ -1634,11 +1684,16 @@
      "code": "ENGL.G5.READIN.T3_INTENSIVE_READING_NA.e",
      "letter": "e",
      "text": "relate events in a reading text to real life experiences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN",
@@ -1683,19 +1738,22 @@
      "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.a",
      "letter": "a",
      "text": "identify sentences featuring the target language patterns: use of too...to/for and use of Must/Should with an Adverb/Adverbial",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.b",
      "letter": "b",
      "text": "use the language patterns in sentences correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN.c",
      "letter": "c",
      "text": "promote the use sentence patterns correctly for clarity of communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -1877,6 +1935,9 @@
      "source": "to confirm by a Kenyan English teacher: strength of must and should",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -1935,7 +1996,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
@@ -2061,6 +2127,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
    ]
   },
   {
@@ -2135,7 +2206,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV",
@@ -2179,19 +2254,22 @@
      "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.a",
      "letter": "a",
      "text": "identify possessive forms in print or digital texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.b",
      "letter": "b",
      "text": "use possessive forms correctly in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV.c",
      "letter": "c",
      "text": "advocate the correct use of possessive forms among peers",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -2282,6 +2360,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -2332,7 +2413,8 @@
      "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.b",
      "letter": "b",
      "text": "write a friendly letter using the correct format for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.4.2"
     },
     {
      "code": "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F.c",
@@ -2342,7 +2424,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS",
@@ -2394,7 +2481,8 @@
      "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.b",
      "letter": "b",
      "text": "listen for the main idea and specific details for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS.c",
@@ -2410,7 +2498,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
@@ -2454,7 +2547,8 @@
      "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.a",
      "letter": "a",
      "text": "select relevant reading materials from a collection of books",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI.b",
@@ -2553,6 +2647,10 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
    ]
   },
   {
@@ -2598,25 +2696,29 @@
      "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.a",
      "letter": "a",
      "text": "identify comparative and superlative forms of adjectives in a text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.b",
      "letter": "b",
      "text": "order adjectives in terms of size, shape and age appropriately",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.c",
      "letter": "c",
      "text": "use the comparative and superlative forms of adjectives accurately",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE.d",
      "letter": "d",
      "text": "advocate the importance of using adjectives correctly in communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -2805,6 +2907,9 @@
      "source": "to confirm by a Kenyan English teacher: order taught with size, shape and age",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -2870,7 +2975,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO",
@@ -2946,7 +3056,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T6_INTENSIVE_READING_CO",
@@ -3010,7 +3125,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE",
@@ -3052,19 +3171,22 @@
      "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.a",
      "letter": "a",
      "text": "identify quantifying determiners: few/ a few, little/ a little, a lot of/ lots of, each, all, enough, most, least in a variety of texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.b",
      "letter": "b",
      "text": "use quantifying determiners few/ a few, little/ a little, a lot of/ lots of, each, all, enough, most, least appropriately in a variety of contexts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE.c",
      "letter": "c",
      "text": "judge the appropriateness of quantifying determiners in oral and written texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -3265,6 +3387,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -3324,7 +3449,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO",
@@ -3393,11 +3523,17 @@
      "code": "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO.e",
      "letter": "e",
      "text": "challenge others to listen interactively for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI",
@@ -3441,13 +3577,15 @@
      "code": "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.a",
      "letter": "a",
      "text": "select relevant reading materials from a collection of books",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.b",
      "letter": "b",
      "text": "read a variety of materials for information and pleasure",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI.c",
@@ -3457,7 +3595,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US",
@@ -3502,19 +3644,22 @@
      "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.a",
      "letter": "a",
      "text": "identify words that indicate future time using will and shall in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.b",
      "letter": "b",
      "text": "use will and shall to express future time correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US.c",
      "letter": "c",
      "text": "collaborate with others to determine the correctness and appropriateness of the tense used in own or provided texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -3621,6 +3766,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -3678,7 +3826,8 @@
      "code": "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING.c",
      "letter": "c",
      "text": "advocate the use of correct punctuation in written communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.4.1"
     }
    ],
    "skills": [
@@ -3905,6 +4054,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
    ]
   },
   {
@@ -4051,6 +4205,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
    ]
   },
   {
@@ -4103,17 +4262,23 @@
      "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.b",
      "letter": "b",
      "text": "read a text accurately, with expression and at the right speed for fluency",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G5.READIN.T8_FLUENCY_IN_READING.c",
      "letter": "c",
      "text": "recommend to peers and parents to read accurately, at the right speed and without hesitation",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T8_SENTENCES",
@@ -4160,19 +4325,22 @@
      "code": "ENGL.G5.GRAMMA.T8_SENTENCES.a",
      "letter": "a",
      "text": "identify questions tags and double imperatives from a text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T8_SENTENCES.b",
      "letter": "b",
      "text": "use question tags and double imperatives correctly in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T8_SENTENCES.c",
      "letter": "c",
      "text": "advocate the correct use of double imperatives and question tags in communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -4278,6 +4446,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -4417,6 +4588,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
    ]
   },
   {
@@ -4476,7 +4652,8 @@
      "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.c",
      "letter": "c",
      "text": "speak accurately, at the right speed and with expression on a given topic",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO.d",
@@ -4492,7 +4669,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T9_INTENSIVE_READING_DE",
@@ -4731,6 +4913,10 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
    ]
   },
   {
@@ -4777,25 +4963,29 @@
      "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.a",
      "letter": "a",
      "text": "identify adverbs of manner, time, place and frequency in a text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.b",
      "letter": "b",
      "text": "use adverbs correctly in oral and written contexts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.c",
      "letter": "c",
      "text": "use the modals could and would and the phrase how many...could/would in sentences correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS.d",
      "letter": "d",
      "text": "judge the appropriateness of adverbs used in oral and written texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -5003,6 +5193,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -5257,6 +5450,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
    ]
   },
   {
@@ -5377,6 +5575,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
    ]
   },
   {
@@ -5422,7 +5625,8 @@
      "code": "ENGL.G5.READIN.T10_INTENSIVE_READING.a",
      "letter": "a",
      "text": "relate the ideas in a text to their experiences for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G5.READIN.T10_INTENSIVE_READING.b",
@@ -5444,7 +5648,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI",
@@ -5486,19 +5694,22 @@
      "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.a",
      "letter": "a",
      "text": "identify conjunctions: but, or, yet, because, since and also, in texts for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.b",
      "letter": "b",
      "text": "use conjunctions but, or, yet, because, since and also, correctly in communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI.c",
      "letter": "c",
      "text": "judge the correctness and appropriateness of conjunctions in oral and written texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -5622,6 +5833,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -5686,7 +5900,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO",
@@ -5752,7 +5971,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T11_INTENSIVE_READING",
@@ -5797,7 +6021,8 @@
      "code": "ENGL.G5.READIN.T11_INTENSIVE_READING.a",
      "letter": "a",
      "text": "relate ideas in the text to personal experiences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     },
     {
      "code": "ENGL.G5.READIN.T11_INTENSIVE_READING.b",
@@ -5819,7 +6044,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE",
@@ -5860,19 +6089,22 @@
      "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.a",
      "letter": "a",
      "text": "identify interrogatives: how, what, when, why, who in sentences correctly",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.b",
      "letter": "b",
      "text": "use interrogatives how much more..., when/who/why/what else accurately in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE.c",
      "letter": "c",
      "text": "adopt the use of interrogatives used in oral and written texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -5995,6 +6227,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -6041,7 +6276,8 @@
      "code": "ENGL.G5.WRITIN.T11_SPELLING.a",
      "letter": "a",
      "text": "spell selected words correctly for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.4.1"
     },
     {
      "code": "ENGL.G5.WRITIN.T11_SPELLING.b",
@@ -6053,7 +6289,8 @@
      "code": "ENGL.G5.WRITIN.T11_SPELLING.c",
      "letter": "c",
      "text": "advocate for the use of correct spelling of words in written communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.4.1"
     }
    ],
    "skills": [
@@ -6196,6 +6433,11 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
    ]
   },
   {
@@ -6240,7 +6482,8 @@
      "code": "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.a",
      "letter": "a",
      "text": "pronounce words with selected sounds /f/ and /v / accurately for effective communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G5.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.b",
@@ -6252,17 +6495,24 @@
      "code": "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.c",
      "letter": "c",
      "text": "speak accurately, without hesitation and with expression",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G5.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO.d",
      "letter": "d",
      "text": "challenge others to speak accurately, at the right speed and to display appropriate expressions during oral presentations",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G5.RUBRIC.1.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T12_INTENSIVE_READING",
@@ -6325,11 +6575,16 @@
      "code": "ENGL.G5.READIN.T12_INTENSIVE_READING.d",
      "letter": "d",
      "text": "relate events and characters in the reading text to personal experiences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS",
@@ -6372,19 +6627,22 @@
      "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.a",
      "letter": "a",
      "text": "identify nouns which occur as same in both singular and plural from given sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.b",
      "letter": "b",
      "text": "use nouns which occur as same in both singular and plural to make sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS.c",
      "letter": "c",
      "text": "collaborate with others to determine the correctness and appropriateness of nouns used in various texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -6475,6 +6733,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -6538,7 +6799,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO",
@@ -6607,7 +6873,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.1.1",
+    "ENGL.G5.RUBRIC.1.2",
+    "ENGL.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "ENGL.G5.READIN.T13_EXTENSIVE_READING",
@@ -6659,7 +6930,8 @@
      "code": "ENGL.G5.READIN.T13_EXTENSIVE_READING.b",
      "letter": "b",
      "text": "read a variety of materials independently for information and pleasure",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.2.2"
     },
     {
      "code": "ENGL.G5.READIN.T13_EXTENSIVE_READING.c",
@@ -6675,7 +6947,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.2.1",
+    "ENGL.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI",
@@ -6722,19 +6998,22 @@
      "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.a",
      "letter": "a",
      "text": "identify prepositions of time, in, on, at; place in, on, at and direction into, towards, to, through in sentences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.b",
      "letter": "b",
      "text": "use prepositions of time, place and direction appropriately for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     },
     {
      "code": "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI.c",
      "letter": "c",
      "text": "appreciate the accuracy, appropriateness and correctness of prepositions used in varied texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G5.RUBRIC.3.1"
     }
    ],
    "skills": [
@@ -6910,6 +7189,9 @@
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.3.1"
    ]
   },
   {
@@ -7081,6 +7363,213 @@
      "feedback": "Do not spell this word by sound alone. Look for the double letters.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
+    }
+   ],
+   "rubric_indicators": [
+    "ENGL.G5.RUBRIC.4.1",
+    "ENGL.G5.RUBRIC.4.2",
+    "ENGL.G5.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENGL.G5.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "ENGL.G5.LISTEN.T1_LISTENING_COMPREHENS",
+    "ENGL.G5.LISTEN.T2_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T3_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T4_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T5_LISTENING_COMPREHENS",
+    "ENGL.G5.LISTEN.T6_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T7_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T8_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T9_SPEAKING_FLUENCY_PRO",
+    "ENGL.G5.LISTEN.T10_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T11_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T12_PRONUNCIATION_AND_VO",
+    "ENGL.G5.LISTEN.T13_PRONUNCIATION_AND_VO"
+   ],
+   "page": 121,
+   "indicators": [
+    {
+     "code": "ENGL.G5.RUBRIC.1.1",
+     "indicator": "Ability to listen actively to a variety of oral texts to gain information.",
+     "levels": {
+      "EE": "Maintains meaningful eye-contact, sits upright, nods, takes notes, responds to oral questions correctly for information in a variety of contexts.",
+      "ME": "Maintains eye contact, sits upright, nods and takes notes for information in varied contexts.",
+      "AE": "Either maintains eye contact or sits upright or takes notes for information.",
+      "BE": "Yawns, looks out, has to be prompted while listening for information."
+     },
+     "page": 121,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G5.RUBRIC.1.2",
+     "indicator": "Ability to listen and participate actively in conversations in various settings for self-expression and effective communication.",
+     "levels": {
+      "EE": "Participates actively in conversations, observes proper turn-taking skills, nods, maintains meaningful eye contact in a variety of settings for effective communication.",
+      "ME": "Participates actively in conversations in various settings for self-expression and effective communication.",
+      "AE": "Participates passively in conversations.",
+      "BE": "Shows outright disinterest in conversations. Yawns, doses and interrupts conversations."
+     },
+     "page": 121,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G5.RUBRIC.1.3",
+     "indicator": "Ability to speak accurately with expression and at the right speed, with minimum hesitation for fluency for effective communication.",
+     "levels": {
+      "EE": "Speaks accurately with expression and at the right speed without hesitation in varied contexts for effective communication.",
+      "ME": "Speaks accurately with expression and at the right speed, with minimum hesitation for fluency.",
+      "AE": "Speaks accurately with expression but at slow speed and with hesitation.",
+      "BE": "Speaks inaccurately without expression and at a slow speed with many hesitations."
+     },
+     "page": 122,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading",
+   "strand": "Reading",
+   "covers": [
+    "ENGL.G5.READIN.T1_EXTENSIVE_READING",
+    "ENGL.G5.READIN.T2_INTENSIVE_READING",
+    "ENGL.G5.READIN.T3_INTENSIVE_READING_NA",
+    "ENGL.G5.READIN.T4_INTENSIVE_READING_CO",
+    "ENGL.G5.READIN.T5_EXTENSIVE_READING_FI",
+    "ENGL.G5.READIN.T6_INTENSIVE_READING_CO",
+    "ENGL.G5.READIN.T7_EXTENSIVE_READING_FI",
+    "ENGL.G5.READIN.T8_FLUENCY_IN_READING",
+    "ENGL.G5.READIN.T9_INTENSIVE_READING_DE",
+    "ENGL.G5.READIN.T10_INTENSIVE_READING",
+    "ENGL.G5.READIN.T11_INTENSIVE_READING",
+    "ENGL.G5.READIN.T12_INTENSIVE_READING",
+    "ENGL.G5.READIN.T13_EXTENSIVE_READING"
+   ],
+   "page": 122,
+   "indicators": [
+    {
+     "code": "ENGL.G5.RUBRIC.2.1",
+     "indicator": "Ability to read about 400 words fluently and accurately, at the right speed and with expression for effective communication. Ability to read the text and relate the ideas to real life experiences.",
+     "levels": {
+      "EE": "Reads more than 350 words in varied texts fluently, accurately and expressively for effective communication. Reads a variety of texts and relates the ideas to immediate contexts and real life experiences.",
+      "ME": "Reads about 300 words fluently and accurately at the right speed and with expression for effective communication. Reads the text and relates the ideas to real life experiences.",
+      "AE": "Reads about 800 words fluently and accurately at the right speed and with expression for effective communication. Reads the text and comprehends main idea but fails to relate to real life experiences.",
+      "BE": "Reads about 200 words fluently and accurately but at slow speed without expression. Reads the text but fails to grasp the main idea and relate to real life experiences."
+     },
+     "page": 122,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G5.RUBRIC.2.2",
+     "indicator": "Ability to select and read relevant materials of between 1000-1250 words for information and pleasure.",
+     "levels": {
+      "EE": "Selects and reads a variety of relevant materials of more than 1300 words for information and pleasure.",
+      "ME": "Selects and reads relevant materials of between 1000-1250 words for information and pleasure.",
+      "AE": "Selects and reads relevant materials of below 1000 words for information and pleasure.",
+      "BE": "Selects and reads relevant material of below 500 words and reads for information and pleasure."
+     },
+     "page": 123,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric: Grammar in Use",
+   "strand": "Grammar in Use",
+   "covers": [
+    "ENGL.G5.GRAMMA.T1_WORD_CLASS_DEMONSTRA",
+    "ENGL.G5.GRAMMA.T2_WORD_CLASS_COLLECTIV",
+    "ENGL.G5.GRAMMA.T3_LANGUAGE_PATTERN",
+    "ENGL.G5.GRAMMA.T4_WORD_CLASS_POSSESSIV",
+    "ENGL.G5.GRAMMA.T5_WORD_CLASS_ADJECTIVE",
+    "ENGL.G5.GRAMMA.T6_WORD_CLASS_DETERMINE",
+    "ENGL.G5.GRAMMA.T7_TENSE_FUTURE_TIME_US",
+    "ENGL.G5.GRAMMA.T8_SENTENCES",
+    "ENGL.G5.GRAMMA.T9_WORD_CLASS_ADVERBS",
+    "ENGL.G5.GRAMMA.T10_WORD_CLASS_CONJUNCTI",
+    "ENGL.G5.GRAMMA.T11_USE_OF_INTERROGATIVE",
+    "ENGL.G5.GRAMMA.T12_WORD_CLASS_NOUNS",
+    "ENGL.G5.GRAMMA.T13_WORD_CLASS_PREPOSITI"
+   ],
+   "page": 123,
+   "indicators": [
+    {
+     "code": "ENGL.G5.RUBRIC.3.1",
+     "indicator": "Ability to use grammatical forms to communicate ideas, opinions, and emotions appropriately in different settings for effective communication.",
+     "levels": {
+      "EE": "Uses grammatical forms to communicate ideas, opinions, and emotions appropriately at all times in different settings and contexts for effective communication.",
+      "ME": "Uses grammatical forms to communicate ideas, opinions, and emotions appropriately in different settings for effective communication.",
+      "AE": "Uses grammatical forms to communicate ideas, but not opinions and emotions.",
+      "BE": "Fails to use correct grammatical forms to communicate, ideas, opinions and emotions."
+     },
+     "page": 123,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENGL.G5.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "ENGL.G5.WRITIN.T1_FUNCTIONAL_WRITING_F",
+    "ENGL.G5.WRITIN.T2_CREATIVE_WRITING_OPE",
+    "ENGL.G5.WRITIN.T3_MECHANICS_OF_WRITING",
+    "ENGL.G5.WRITIN.T4_FUNCTIONAL_WRITING_F",
+    "ENGL.G5.WRITIN.T5_CREATIVE_WRITING_NAR",
+    "ENGL.G5.WRITIN.T6_CREATIVE_WRITING_PIC",
+    "ENGL.G5.WRITIN.T7_MECHANICS_OF_WRITING",
+    "ENGL.G5.WRITIN.T8_CREATIVE_WRITING",
+    "ENGL.G5.WRITIN.T9_MECHANICS_OF_WRITING",
+    "ENGL.G5.WRITIN.T10_CREATIVE_WRITING_DES",
+    "ENGL.G5.WRITIN.T11_SPELLING",
+    "ENGL.G5.WRITIN.T12_FUNCTIONAL_WRITING_D",
+    "ENGL.G5.WRITIN.T13_SPELLING"
+   ],
+   "page": 124,
+   "indicators": [
+    {
+     "code": "ENGL.G5.RUBRIC.4.1",
+     "indicator": "Ability to use punctuation, paragraphing and spelling correctly for effective communication.",
+     "levels": {
+      "EE": "Uses punctuation, paragraphing and spelling correctly for varied types of writing for effective communication.",
+      "ME": "Uses punctuation, paragraphing and spelling correctly for effective communication.",
+      "AE": "Uses either punctuation, paragraphing or spelling correctly.",
+      "BE": "Uses faulty paragraphing, poor punctuation and spelling when writing."
+     },
+     "page": 124,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G5.RUBRIC.4.2",
+     "indicator": "Ability to write a variety of writings using the correct formats for effective communication.",
+     "levels": {
+      "EE": "Writes a variety of writings using correct formats and uses appropriate language for varied writing tasks for effective communication.",
+      "ME": "Writes a variety of writings using the correct formats for effective communication.",
+      "AE": "Writes a number of writings using correct formats for effective communication.",
+      "BE": "Writes all the writings using wrong formats."
+     },
+     "page": 124,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G5.RUBRIC.4.3",
+     "indicator": "Ability to write creative works clearly and expressively for effective communication.",
+     "levels": {
+      "EE": "Writes a variety creative works clearly, expressively, pleasantly and convincingly for effective communication.",
+      "ME": "Writes creative works clearly and expressively for effective communication.",
+      "AE": "Writes a few of the creative works clearly but lacks expressive ability.",
+      "BE": "Writes all the creative works without clarity and expressiveness due to limited language ability."
+     },
+     "page": 124,
+     "status": "kicd_verified"
     }
    ]
   }

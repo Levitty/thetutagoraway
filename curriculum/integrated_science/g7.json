@@ -71,7 +71,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.1.1",
+    "INTE.G7.RUBRIC.1.2",
+    "INTE.G7.RUBRIC.1.3",
+    "INTE.G7.RUBRIC.1.4"
+   ]
   },
   {
    "code": "INTE.G7.SCIENT.LABORATORY_SAFETY",
@@ -117,19 +123,22 @@
      "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.a",
      "letter": "a",
      "text": "identify common hazards and their symbols in the laboratory",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.1.1"
     },
     {
      "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.b",
      "letter": "b",
      "text": "explain the causes of common accidents in the laboratory",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.1.2"
     },
     {
      "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.c",
      "letter": "c",
      "text": "describe First Aid measures for common laboratory accidents",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.1.2"
     },
     {
      "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.d",
@@ -139,7 +148,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.1.1",
+    "INTE.G7.RUBRIC.1.2",
+    "INTE.G7.RUBRIC.1.3",
+    "INTE.G7.RUBRIC.1.4"
+   ]
   },
   {
    "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND",
@@ -190,13 +205,15 @@
      "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.b",
      "letter": "b",
      "text": "use and care for apparatus and instruments in the laboratory",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.1.3"
     },
     {
      "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.c",
      "letter": "c",
      "text": "use the SI units for basic and derived quantities in science",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.1.4"
     },
     {
      "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.d",
@@ -206,7 +223,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.1.1",
+    "INTE.G7.RUBRIC.1.2",
+    "INTE.G7.RUBRIC.1.3",
+    "INTE.G7.RUBRIC.1.4"
+   ]
   },
   {
    "code": "INTE.G7.MIXTUR.MIXTURES",
@@ -250,23 +273,31 @@
      "code": "INTE.G7.MIXTUR.MIXTURES.a",
      "letter": "a",
      "text": "separate homogeneous mixtures using appropriate methods",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.2.1"
     },
     {
      "code": "INTE.G7.MIXTUR.MIXTURES.b",
      "letter": "b",
      "text": "outline applications of separating homogeneous mixtures in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.2.1"
     },
     {
      "code": "INTE.G7.MIXTUR.MIXTURES.c",
      "letter": "c",
      "text": "appreciate the use of different methods of separating mixtures in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.2.1",
+    "INTE.G7.RUBRIC.2.2",
+    "INTE.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO",
@@ -313,7 +344,8 @@
      "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.a",
      "letter": "a",
      "text": "identify acids and bases using a litmus paper",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.2.2"
     },
     {
      "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.b",
@@ -331,7 +363,8 @@
      "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.d",
      "letter": "d",
      "text": "outline applications of acids, bases, and indicators in real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.2.3"
     },
     {
      "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.e",
@@ -341,7 +374,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.2.1",
+    "INTE.G7.RUBRIC.2.2",
+    "INTE.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE",
@@ -387,13 +425,15 @@
      "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.a",
      "letter": "a",
      "text": "identify parts of the male and female reproductive systems",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.1"
     },
     {
      "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.b",
      "letter": "b",
      "text": "describe functions of parts of the male and female reproductive system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.1"
     },
     {
      "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.c",
@@ -405,7 +445,8 @@
      "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.d",
      "letter": "d",
      "text": "develop a plan to manage developmental challenges during adolescence",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.2"
     },
     {
      "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.e",
@@ -415,7 +456,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.3.1",
+    "INTE.G7.RUBRIC.3.2",
+    "INTE.G7.RUBRIC.3.3",
+    "INTE.G7.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM",
@@ -471,7 +518,8 @@
      "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.b",
      "letter": "b",
      "text": "identify functions of parts of the urinary system in human",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.3"
     },
     {
      "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.c",
@@ -483,17 +531,25 @@
      "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.d",
      "letter": "d",
      "text": "develop and maintain a daily log of activities that promote skin and kidney health in human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.4"
     },
     {
      "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.e",
      "letter": "e",
      "text": "appreciate the need for a healthy lifestyle to promote kidney and skin health",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.3.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.3.1",
+    "INTE.G7.RUBRIC.3.2",
+    "INTE.G7.RUBRIC.3.3",
+    "INTE.G7.RUBRIC.3.4"
+   ]
   },
   {
    "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY",
@@ -543,7 +599,8 @@
      "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.a",
      "letter": "a",
      "text": "identify sources of electricity in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.4.1"
     },
     {
      "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b",
@@ -555,13 +612,15 @@
      "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.c",
      "letter": "c",
      "text": "identify common electrical appliances used in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.4.2"
     },
     {
      "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.d",
      "letter": "d",
      "text": "identify safety measures observed when handling electrical appliances",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G7.RUBRIC.4.3"
     },
     {
      "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.e",
@@ -571,7 +630,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.4.1",
+    "INTE.G7.RUBRIC.4.2",
+    "INTE.G7.RUBRIC.4.3",
+    "INTE.G7.RUBRIC.4.4"
+   ]
   },
   {
    "code": "INTE.G7.FORCE_.MAGNETISM",
@@ -637,7 +702,244 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G7.RUBRIC.4.1",
+    "INTE.G7.RUBRIC.4.2",
+    "INTE.G7.RUBRIC.4.3",
+    "INTE.G7.RUBRIC.4.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "INTE.G7.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Scientific Investigation",
+   "covers": [
+    "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT",
+    "INTE.G7.SCIENT.LABORATORY_SAFETY",
+    "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "INTE.G7.RUBRIC.1.1",
+     "indicator": "Ability to identify common hazards and their symbols in the laboratory.",
+     "levels": {
+      "EE": "The learner identifies common hazards and their symbols in the laboratory exhaustively.",
+      "ME": "The learner identifies common hazards and their symbols in the laboratory satisfactorily.",
+      "AE": "The learner identifies most of the common hazards and their symbols in the laboratory correctly.",
+      "BE": "The learner identifies a few common hazards and their symbols in the laboratory correctly"
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.1.2",
+     "indicator": "Ability to describe First Aid measures for common laboratory accidents.",
+     "levels": {
+      "EE": "The learner describes all First Aid measures for common laboratory accidents systematically and comprehensibly.",
+      "ME": "The learner describes all First Aid measures for common laboratory accidents systematically.",
+      "AE": "The learner describes most First Aid measures for common laboratory accidents systematically.",
+      "BE": "The learner describes a few First Aid measures for common laboratory accidents systematically."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.1.3",
+     "indicator": "Ability to use and care for apparatus and instruments in the laboratory.",
+     "levels": {
+      "EE": "The learner uses and cares for all apparatus and instruments in the laboratory innovatively.",
+      "ME": "The learner uses and cares for all apparatus and instruments in the laboratory.",
+      "AE": "The learner uses and cares for most of the apparatus and instruments in the laboratory.",
+      "BE": "The learner uses but care cares for a few apparatus or instruments in the laboratory."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.1.4",
+     "indicator": "Ability to use the SI units for basic and derived quantities.",
+     "levels": {
+      "EE": "The learner uses all the SI units for basic and derived quantities correctly giving examples.",
+      "ME": "The learner uses all the SI units for basic and derived quantities correctly.",
+      "AE": "The learner uses most of the SI units for basic and derived quantities correctly.",
+      "BE": "The learner uses a few of the SI units for basic and derived quantities."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G7.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Mixtures, Elements and Compounds",
+   "covers": [
+    "INTE.G7.MIXTUR.MIXTURES",
+    "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO"
+   ],
+   "page": 24,
+   "indicators": [
+    {
+     "code": "INTE.G7.RUBRIC.2.1",
+     "indicator": "Ability to separate homogeneous mixtures using appropriate methods.",
+     "levels": {
+      "EE": "The learner consistently separates all the homogeneous mixtures using appropriate methods.",
+      "ME": "The learner separates all of the homogeneous mixtures using appropriate methods.",
+      "AE": "The learner separates most of the homogeneous mixtures using appropriate methods.",
+      "BE": "The learner separates a few homogeneous mixtures using inappropriate methods."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.2.2",
+     "indicator": "Ability to identify acids and bases using litmus paper.",
+     "levels": {
+      "EE": "The learner correctly and exhaustively identifies any substances as acids or bases.",
+      "ME": "The learner correctly identifies all of the provided substances as acids or bases.",
+      "AE": "The learner correctly identifies most of the provided substances as acids or bases.",
+      "BE": "The learner correctly identifies a few of the provided substances as acids or bases."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.2.3",
+     "indicator": "Ability to outline applications of acids and bases in real life.",
+     "levels": {
+      "EE": "The learner outlines all the applications of acids and bases exhaustively.",
+      "ME": "The learner outlines the applications of acids and bases.",
+      "AE": "The learner outlines most of the applications of acids and bases.",
+      "BE": "The learner outlines a few applications of either acids or bases."
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G7.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Living things and the Environment",
+   "covers": [
+    "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE",
+    "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "INTE.G7.RUBRIC.3.1",
+     "indicator": "Ability to describe functions of parts of the male and female reproductive system.",
+     "levels": {
+      "EE": "The learner describes all functions of parts of the male and female reproductive system comprehensively.",
+      "ME": "The learner describes all functions of parts of the male and female reproductive system.",
+      "AE": "The learner describes most of the functions of parts of the male and female reproductive system.",
+      "BE": "The learner describes a few functions of parts of the male or female reproductive system."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.3.2",
+     "indicator": "Ability to develop a plan to manage developmental challenges during adolescence.",
+     "levels": {
+      "EE": "The learner fully develops an innovative plan to manage developmental challenges during adolescence systematically.",
+      "ME": "The learner fully develops a plan to manage developmental challenges during adolescence.",
+      "AE": "The learner partially develops a simple plan to manage developmental challenges during adolescence.",
+      "BE": "The learner develops a sketchy plan to manage developmental challenges during adolescence partially"
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.3.3",
+     "indicator": "Ability to identify parts of the excretory system and their functions.",
+     "levels": {
+      "EE": "The learner identifies all parts of the excretory system and their functions exhaustively.",
+      "ME": "The learner identifies all parts of the excretory system and their functions satisfactorily.",
+      "AE": "The learner identifies most parts of the excretory system and their functions.",
+      "BE": "The learner identifies a few parts of the excretory system and their functions."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.3.4",
+     "indicator": "Ability to develop and maintain a daily log of activities that promote skin and kidney health",
+     "levels": {
+      "EE": "The learner comprehensively develops and maintains a purposeful daily log of activities that promote skin and kidney health.",
+      "ME": "The learner satisfactorily develops and maintains a daily log of activities that promote skin and kidney health.",
+      "AE": "The learner partially develops and maintains a simple daily log of activities that promote skin and kidney health.",
+      "BE": "The learner partially develops and maintains a daily log of activities that promote skin or kidney health leaving out some key parts."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G7.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Force and Energy",
+   "covers": [
+    "INTE.G7.FORCE_.ELECTRICAL_ENERGY",
+    "INTE.G7.FORCE_.MAGNETISM"
+   ],
+   "page": 35,
+   "indicators": [
+    {
+     "code": "INTE.G7.RUBRIC.4.1",
+     "indicator": "Ability to identify sources of electricity in the environment.",
+     "levels": {
+      "EE": "The learner identifies all the sources of electricity in the environment exhaustively.",
+      "ME": "The learner identifies all the common sources of electricity in the environment.",
+      "AE": "The learner identifies most of the sources of electricity in the environment.",
+      "BE": "The learner identifies a few sources of electricity in the environment."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.4.2",
+     "indicator": "Ability to identify common electrical appliances used in day-to-day life.",
+     "levels": {
+      "EE": "The learner exhaustively identifies common electrical appliances used in day-to-day life.",
+      "ME": "The learner identifies all common electrical appliances used in day-to-day life.",
+      "AE": "The learner identifies most of the common electrical appliances used in day-to-day life.",
+      "BE": "The learner identifies a few common electrical appliances used in day-to-day life."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.4.3",
+     "indicator": "Ability to identify safety measures observed when handling electrical appliances.",
+     "levels": {
+      "EE": "The learner identifies all safety measures observed when handling electrical appliances correctly and exhaustively.",
+      "ME": "The learner identifies all safety measures observed when handling electrical appliances correctly.",
+      "AE": "The learner identifies most of the safety measures observed when handling electrical appliances correctly.",
+      "BE": "The learner identifies a few safety measures observed when handling electrical appliances."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G7.RUBRIC.4.4",
+     "indicator": "Ability to identify the uses of magnets in day-to-day life.",
+     "levels": {
+      "EE": "The learner correctly identifies all the uses of magnets in day-to-day life exhaustively.",
+      "ME": "The learner identifies all uses of magnets in day-to-day life correctly.",
+      "AE": "The learner identifies most uses of magnets in day-to-day life correctly.",
+      "BE": "The learner identifies a few uses of magnets in day-to-day life correctly."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

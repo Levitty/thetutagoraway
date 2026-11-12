@@ -59,7 +59,8 @@
      "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.a",
      "letter": "a",
      "text": "describe the structure of the atom",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.1"
     },
     {
      "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.b",
@@ -77,17 +78,26 @@
      "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.d",
      "letter": "d",
      "text": "classify elements into metals and non-metals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.2"
     },
     {
      "code": "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM.e",
      "letter": "e",
      "text": "show interest in classifying elements into metals and non-metals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.1.1",
+    "INTE.G9.RUBRIC.1.2",
+    "INTE.G9.RUBRIC.1.3",
+    "INTE.G9.RUBRIC.1.4",
+    "INTE.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS",
@@ -146,13 +156,15 @@
      "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.c",
      "letter": "c",
      "text": "identify the uses of metals and alloys in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.3"
     },
     {
      "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.d",
      "letter": "d",
      "text": "explain the effects of rusting of metals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.4"
     },
     {
      "code": "INTE.G9.MIXTUR.METALS_AND_ALLOYS.e",
@@ -162,7 +174,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.1.1",
+    "INTE.G9.RUBRIC.1.2",
+    "INTE.G9.RUBRIC.1.3",
+    "INTE.G9.RUBRIC.1.4",
+    "INTE.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INTE.G9.MIXTUR.WATER_HARDNESS",
@@ -216,29 +235,40 @@
      "code": "INTE.G9.MIXTUR.WATER_HARDNESS.b",
      "letter": "b",
      "text": "distinguish between hard and soft water in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.5"
     },
     {
      "code": "INTE.G9.MIXTUR.WATER_HARDNESS.c",
      "letter": "c",
      "text": "apply methods of softening hard water in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.5"
     },
     {
      "code": "INTE.G9.MIXTUR.WATER_HARDNESS.d",
      "letter": "d",
      "text": "outline the advantages and disadvantages of hard and soft water",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.5"
     },
     {
      "code": "INTE.G9.MIXTUR.WATER_HARDNESS.e",
      "letter": "e",
      "text": "appreciate the applications of soft and hard water in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.1.5"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.1.1",
+    "INTE.G9.RUBRIC.1.2",
+    "INTE.G9.RUBRIC.1.3",
+    "INTE.G9.RUBRIC.1.4",
+    "INTE.G9.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS",
@@ -304,7 +334,8 @@
      "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.d",
      "letter": "d",
      "text": "investigate the conditions necessary for photosynthesis",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.2.1"
     },
     {
      "code": "INTE.G9.LIVING.NUTRITION_IN_PLANTS.e",
@@ -314,7 +345,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.2.1",
+    "INTE.G9.RUBRIC.2.2",
+    "INTE.G9.RUBRIC.2.3",
+    "INTE.G9.RUBRIC.2.4",
+    "INTE.G9.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS",
@@ -379,7 +417,8 @@
      "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.d",
      "letter": "d",
      "text": "describe the process of digestion in human beings",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.2.2"
     },
     {
      "code": "INTE.G9.LIVING.NUTRITION_IN_ANIMALS.e",
@@ -389,7 +428,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.2.1",
+    "INTE.G9.RUBRIC.2.2",
+    "INTE.G9.RUBRIC.2.3",
+    "INTE.G9.RUBRIC.2.4",
+    "INTE.G9.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS",
@@ -461,13 +507,15 @@
      "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.d",
      "letter": "d",
      "text": "explain fertilisation and fruit formation in flowering plants",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.2.3"
     },
     {
      "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.e",
      "letter": "e",
      "text": "categorise fruits and seeds based on their mode of dispersal",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.2.4"
     },
     {
      "code": "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS.f",
@@ -477,7 +525,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.2.1",
+    "INTE.G9.RUBRIC.2.2",
+    "INTE.G9.RUBRIC.2.3",
+    "INTE.G9.RUBRIC.2.4",
+    "INTE.G9.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L",
@@ -532,7 +587,8 @@
      "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.b",
      "letter": "b",
      "text": "construct food chains and food webs in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.2.5"
     },
     {
      "code": "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L.c",
@@ -548,7 +604,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.2.1",
+    "INTE.G9.RUBRIC.2.2",
+    "INTE.G9.RUBRIC.2.3",
+    "INTE.G9.RUBRIC.2.4",
+    "INTE.G9.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INTE.G9.FORCE_.CURVED_MIRRORS",
@@ -600,13 +663,15 @@
      "code": "INTE.G9.FORCE_.CURVED_MIRRORS.b",
      "letter": "b",
      "text": "draw ray diagrams to locate images formed by concave and convex mirrors",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INTE.G9.RUBRIC.3.1"
     },
     {
      "code": "INTE.G9.FORCE_.CURVED_MIRRORS.c",
      "letter": "c",
      "text": "describe the characteristics of images formed by concave and convex mirrors",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INTE.G9.RUBRIC.3.2"
     },
     {
      "code": "INTE.G9.FORCE_.CURVED_MIRRORS.d",
@@ -622,7 +687,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.3.1",
+    "INTE.G9.RUBRIC.3.2",
+    "INTE.G9.RUBRIC.3.3",
+    "INTE.G9.RUBRIC.3.4",
+    "INTE.G9.RUBRIC.3.5",
+    "INTE.G9.RUBRIC.3.6",
+    "INTE.G9.RUBRIC.3.7"
+   ]
   },
   {
    "code": "INTE.G9.FORCE_.WAVES",
@@ -671,7 +745,8 @@
      "code": "INTE.G9.FORCE_.WAVES.a",
      "letter": "a",
      "text": "describe the generation of waves in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.3.4"
     },
     {
      "code": "INTE.G9.FORCE_.WAVES.b",
@@ -683,29 +758,287 @@
      "code": "INTE.G9.FORCE_.WAVES.c",
      "letter": "c",
      "text": "describe basic characteristics of waves in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.3.5"
     },
     {
      "code": "INTE.G9.FORCE_.WAVES.d",
      "letter": "d",
      "text": "describe remote sensing in relation to waves",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.3.6"
     },
     {
      "code": "INTE.G9.FORCE_.WAVES.e",
      "letter": "e",
      "text": "describe applications of waves in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.3.7"
     },
     {
      "code": "INTE.G9.FORCE_.WAVES.f",
      "letter": "f",
      "text": "appreciate the applications of waves in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INTE.G9.RUBRIC.3.7"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INTE.G9.RUBRIC.3.1",
+    "INTE.G9.RUBRIC.3.2",
+    "INTE.G9.RUBRIC.3.3",
+    "INTE.G9.RUBRIC.3.4",
+    "INTE.G9.RUBRIC.3.5",
+    "INTE.G9.RUBRIC.3.6",
+    "INTE.G9.RUBRIC.3.7"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "INTE.G9.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Mixtures, Elements and Compounds",
+   "covers": [
+    "INTE.G9.MIXTUR.STRUCTURE_OF_THE_ATOM",
+    "INTE.G9.MIXTUR.METALS_AND_ALLOYS",
+    "INTE.G9.MIXTUR.WATER_HARDNESS"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "INTE.G9.RUBRIC.1.1",
+     "indicator": "Ability to describe the structure of the atom.",
+     "levels": {
+      "EE": "The learner describes the structure of the atom comprehensively.",
+      "ME": "The learner describes the structure of the atom adequately.",
+      "AE": "The learner partially describes the structure of the atom.",
+      "BE": "The learner partially describes the structure of the atom, with a prompt."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.1.2",
+     "indicator": "Ability to classify elements into metals and non-metals.",
+     "levels": {
+      "EE": "The learner classifies all elements into metals and nonmetals comprehensively.",
+      "ME": "The learner classifies all the elements into metals and nonmetals.",
+      "AE": "The learner classifies most of the elements into metals and nonmetals.",
+      "BE": "The learner classifies a few elements into metals and nonmetals."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.1.3",
+     "indicator": "Ability to outline the uses of metals and alloys.",
+     "levels": {
+      "EE": "The learner outlines the uses of all metals and alloys exhaustively.",
+      "ME": "The learner outlines the uses of all common metals and alloys.",
+      "AE": "The learner outlines the uses of most of the metals and alloys.",
+      "BE": "The learner outlines the uses of a few metals and alloys."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.1.4",
+     "indicator": "Ability to explain the effect of rusting on metals.",
+     "levels": {
+      "EE": "The learner explains the effect of rusting on metals in detail comprehensively.",
+      "ME": "The learner explains the effect of rusting on metals sufficiently.",
+      "AE": "The learner explains the effect of rusting on metals partially.",
+      "BE": "The learner explains the effect of rusting on metals partially leaving some key points."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.1.5",
+     "indicator": "Ability to outline the advantages and disadvantages of hard and soft water. Ability to apply different methods to soften temporary hard water.",
+     "levels": {
+      "EE": "The learner outlines the advantages and disadvantages of hard and soft water exhaustively. Applies all appropriate methods to soften temporary hard water innovatively.",
+      "ME": "The learner outlines the advantages and disadvantages of hard and soft water Applies all appropriate methods to soften temporary hard water.",
+      "AE": "The learner outlines most of the advantages and disadvantages of hard and soft water. Applies the least appropriate method to soften temporary hard water.",
+      "BE": "The learner outlines a few advantages and disadvantages of hard and soft water. Applies less than two methods to soften temporary hard water."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G9.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Living Things and the Environment",
+   "covers": [
+    "INTE.G9.LIVING.NUTRITION_IN_PLANTS",
+    "INTE.G9.LIVING.NUTRITION_IN_ANIMALS",
+    "INTE.G9.LIVING.REPRODUCTION_IN_PLANTS",
+    "INTE.G9.LIVING.THE_INTERDEPENDENCE_OF_L"
+   ],
+   "page": 30,
+   "indicators": [
+    {
+     "code": "INTE.G9.RUBRIC.2.1",
+     "indicator": "Investigating the conditions necessary for photosynthesis.",
+     "levels": {
+      "EE": "The learner investigates all the conditions necessary for photosynthesis comprehensively.",
+      "ME": "The learner investigates all the conditions necessary for photosynthesis.",
+      "AE": "The learner investigates most of the conditions necessary for photosynthesis.",
+      "BE": "The learner investigates a few conditions necessary for photosynthesis."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.2.2",
+     "indicator": "Describing the process of digestion in human beings.",
+     "levels": {
+      "EE": "The learner describes the process of digestion in human beings comprehensively.",
+      "ME": "The learner describes the process of digestion in human beings correctly.",
+      "AE": "The learner partially describes the process of digestion in human beings simplistically.",
+      "BE": "The learner partially describes the process of digestion in human beings leaving out some key points."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.2.3",
+     "indicator": "Explaining pollination, fertilisation, and fruit formation in flowering plants.",
+     "levels": {
+      "EE": "The learner explains all the concepts of pollination, fertilisation, and fruit formation in flowering plants.",
+      "ME": "The learner explains all the concepts of pollination, fertilisation, and fruit formation in flowering plants.",
+      "AE": "The learner explains at least two concepts among pollination, fertilisation, and fruit formation in flowering plants.",
+      "BE": "The learner explains one concept among pollination, fertilisation, and fruit formation in flowering plants."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.2.4",
+     "indicator": "Categorising fruits and seeds based on their mode of dispersal.",
+     "levels": {
+      "EE": "The learner categorises fruits and seeds based on their mode of dispersal and other modes.",
+      "ME": "The learner categorises fruits and seeds based on their mode of dispersal.",
+      "AE": "The learner categorises fruits and seeds based on their mode of dispersal partially.",
+      "BE": "The learner partially categorises fruits and seeds without considering their mode of dispersal."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.2.5",
+     "indicator": "Constructing food chains and food webs in the environment.",
+     "levels": {
+      "EE": "The learner constructs food chains and food webs in the environment correctly and systematically.",
+      "ME": "The learner constructs food chains and food webs in the environment correctly.",
+      "AE": "The learner partially constructs food chains and food webs in the environment correctly.",
+      "BE": "The learner constructs food chains and food webs in the environment without considering the appropriate order."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INTE.G9.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Force and Energy",
+   "covers": [
+    "INTE.G9.FORCE_.CURVED_MIRRORS",
+    "INTE.G9.FORCE_.WAVES"
+   ],
+   "page": 35,
+   "indicators": [
+    {
+     "code": "INTE.G9.RUBRIC.3.1",
+     "indicator": "Drawing ray diagrams to locate images formed by concave and convex mirrors.",
+     "levels": {
+      "EE": "The learner draws ray diagrams to locate all images formed by concave and convex mirrors correctly and systematically.",
+      "ME": "The learner draws ray diagrams to locate all images formed by concave and convex mirrors.",
+      "AE": "The learner draws ray diagrams to locate most of the images formed by concave and convex mirrors.",
+      "BE": "The learner draws ray diagrams to locate a few images formed by concave and convex mirrors."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.2",
+     "indicator": "Describing the characteristics of images formed by concave and convex mirrors.",
+     "levels": {
+      "EE": "The learner describes all the characteristics of images formed by concave and convex mirrors comprehensively.",
+      "ME": "The learner describes all the characteristics of images formed by concave and convex mirrors.",
+      "AE": "The learner describes most of the characteristics of images formed by concave and convex mirrors.",
+      "BE": "The learner describes a few characteristics of images formed by concave and convex mirrors."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.3",
+     "indicator": "Explaining the uses of concave and convex mirrors in day-to-day life.",
+     "levels": {
+      "EE": "The learner explains the uses of concave and convex mirrors in day-to-day life extensively.",
+      "ME": "The learner explains the uses of concave and convex mirrors in day-to-day life sufficiently.",
+      "AE": "The learner explains most of the uses of concave and convex mirrors in day-to-day life.",
+      "BE": "The learner explains a few uses of concave and convex mirrors in day-to-day life."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.4",
+     "indicator": "Describing generation of waves in nature.",
+     "levels": {
+      "EE": "The learner describes the generation of waves in nature comprehensively.",
+      "ME": "The learner describes the generation of waves in nature correctly.",
+      "AE": "The learner partially describes the generation of waves in nature partially.",
+      "BE": "The learner partially describes the generation of waves in nature partially leaving out some key points."
+     },
+     "page": 35,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.5",
+     "indicator": "Ability to describe the basic characteristics of waves in nature.",
+     "levels": {
+      "EE": "The learner describes the basic characteristics of waves in nature comprehensively.",
+      "ME": "The learner describes the basic characteristics of waves in nature sufficiently",
+      "AE": "The learner describes the basic characteristics of waves in nature partially.",
+      "BE": "The learner describes the basic characteristics of waves in nature omitting some key points partially leaving out some key details."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.6",
+     "indicator": "Ability to describe remote sensing in relation to waves.",
+     "levels": {
+      "EE": "The learner describes remote sensing in relation to waves correctly and comprehensively.",
+      "ME": "The learner describes remote sensing in relation to waves correctly.",
+      "AE": "The learner describes remote sensing in relation to waves partially.",
+      "BE": "The learner describes remote sensing in relation to waves partially with prompt."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INTE.G9.RUBRIC.3.7",
+     "indicator": "Ability to describe the applications of waves in day-to-day life.",
+     "levels": {
+      "EE": "The learner describes the applications of waves in day-to-day life exhaustively.",
+      "ME": "The learner describes the applications of waves in day-to-day life sufficiently.",
+      "AE": "The learner describes most of the applications of waves in day-to-day life.",
+      "BE": "The learner describes a few applications of waves in day-to-day life."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

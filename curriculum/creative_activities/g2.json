@@ -54,29 +54,36 @@
      "code": "CREA.G2.CREATI.HOPPING.a",
      "letter": "a",
      "text": "identify different directions of hopping for space awareness",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.HOPPING.b",
      "letter": "b",
      "text": "perform hopping in different directions for agility",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.HOPPING.c",
      "letter": "c",
      "text": "make pattern formations while hopping in different directions for coordination",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.HOPPING.d",
      "letter": "d",
      "text": "appreciate hopping in different directions for fitness",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING",
@@ -124,35 +131,43 @@
      "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.a",
      "letter": "a",
      "text": "identify texture on surfaces",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.b",
      "letter": "b",
      "text": "create texture on paper by rubbing on surfaces",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.c",
      "letter": "c",
      "text": "apply texture on drawn shapes",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.d",
      "letter": "d",
      "text": "paint regular shapes using a brush",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.DRAWING_AND_PAINTING.e",
      "letter": "e",
      "text": "enjoy drawing and painting for creativity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN",
@@ -199,41 +214,50 @@
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
      "letter": "a",
      "text": "identify different ways of creating rhythms in music",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
      "letter": "b",
      "text": "imitate repetitive rhythmic sounds for rhythm awareness",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
      "letter": "c",
      "text": "recite/clap rhythmic patterns of simple words to develop a sense of rhythm",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.d",
      "letter": "d",
      "text": "create rhythmic patterns based on simple words",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.e",
      "letter": "e",
      "text": "create simple shape patterns by printing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN.f",
      "letter": "f",
      "text": "appreciate rhythmic improvisation as a way of developing rhythm skills",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.CREATI.TURNING",
@@ -274,23 +298,29 @@
      "code": "CREA.G2.CREATI.TURNING.a",
      "letter": "a",
      "text": "identify the different directions of turning body in movement",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.TURNING.b",
      "letter": "b",
      "text": "perform turning body in different directions for coordination",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.TURNING.c",
      "letter": "c",
      "text": "appreciate turning activities as a basic skill for body movement during play",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.CREATI.MOSAIC",
@@ -335,29 +365,36 @@
      "code": "CREA.G2.CREATI.MOSAIC.a",
      "letter": "a",
      "text": "identify a mosaic picture",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MOSAIC.b",
      "letter": "b",
      "text": "identify materials and tools used in making a mosaic",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MOSAIC.c",
      "letter": "c",
      "text": "make a mosaic for self-expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MOSAIC.d",
      "letter": "d",
      "text": "appreciate mosaic for aesthetic awareness",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.CREATI.MELODY",
@@ -402,35 +439,43 @@
      "code": "CREA.G2.CREATI.MELODY.a",
      "letter": "a",
      "text": "identify melodic variations in simple tunes for aural discrimination",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MELODY.b",
      "letter": "b",
      "text": "use basic shapes to represent melodic variations in a simple song",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MELODY.c",
      "letter": "c",
      "text": "improvise new words to existing tunes for self-expression",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MELODY.d",
      "letter": "d",
      "text": "enjoy improvising text to familiar tunes",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     },
     {
      "code": "CREA.G2.CREATI.MELODY.e",
      "letter": "e",
      "text": "value melodic variation in creating a melody",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST",
@@ -478,35 +523,43 @@
      "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.a",
      "letter": "a",
      "text": "identify singing games in Western style",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.b",
      "letter": "b",
      "text": "sing appropriate game songs in Western style",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.c",
      "letter": "c",
      "text": "use props in performing a singing game in Western style",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.d",
      "letter": "d",
      "text": "perform singing games in Western style observing performance aspects",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST.e",
      "letter": "e",
      "text": "enjoy performing singing games in Western style",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.KICKING",
@@ -549,23 +602,29 @@
      "code": "CREA.G2.PERFOR.KICKING.a",
      "letter": "a",
      "text": "identify parts of the leg used when kicking a ball",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.KICKING.b",
      "letter": "b",
      "text": "perform kicking a ball in different directions for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.KICKING.c",
      "letter": "c",
      "text": "appreciate kicking the ball in different directions as a fundamental skill in games",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_",
@@ -611,23 +670,29 @@
      "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.a",
      "letter": "a",
      "text": "identify different materials for plaiting a bracelet",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.b",
      "letter": "b",
      "text": "make a single strand bracelet using the plaiting technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_.c",
      "letter": "c",
      "text": "value plaiting technique and ornament making",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC",
@@ -678,35 +743,43 @@
      "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.a",
      "letter": "a",
      "text": "identify different directions the body moves when performing an egg roll in gymnastics",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.b",
      "letter": "b",
      "text": "identify body parts used to perform a swan balance in gymnastics",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.c",
      "letter": "c",
      "text": "improvise markers for use during performance of the egg roll and swan balance",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.d",
      "letter": "d",
      "text": "perform the egg roll and swan balance in gymnastics for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC.e",
      "letter": "e",
      "text": "appreciate performing the egg roll and swan balance for fun",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS",
@@ -751,29 +824,36 @@
      "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.a",
      "letter": "a",
      "text": "identify wind musical instruments from indigenous Kenyan communities",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.b",
      "letter": "b",
      "text": "improvise a wind instrument using locally available materials",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.c",
      "letter": "c",
      "text": "produce sound on an improvised musical wind instrument",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS.d",
      "letter": "d",
      "text": "enjoy playing an improvised musical wind instrument",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI",
@@ -815,23 +895,29 @@
      "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.a",
      "letter": "a",
      "text": "identify items made by coil method",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.b",
      "letter": "b",
      "text": "model items using the coil method",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.MODELLING_COILING_TECHNI.c",
      "letter": "c",
      "text": "appreciate modelling using the coiling technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.PERFOR.SONGS",
@@ -879,29 +965,36 @@
      "code": "CREA.G2.PERFOR.SONGS.a",
      "letter": "a",
      "text": "identify a topical song for knowledge acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SONGS.b",
      "letter": "b",
      "text": "describe the message of a given topical song",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SONGS.c",
      "letter": "c",
      "text": "perform a topical song applying performance techniques",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     },
     {
      "code": "CREA.G2.PERFOR.SONGS.d",
      "letter": "d",
      "text": "appreciate the importance of performing topical songs",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST",
@@ -947,35 +1040,43 @@
      "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.a",
      "letter": "a",
      "text": "identify the participants in a Western style singing game performance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.b",
      "letter": "b",
      "text": "identify costumes used in a Western style singing game performance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.c",
      "letter": "c",
      "text": "identify props used in a Western style singing game",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.d",
      "letter": "d",
      "text": "describe the message in a singing game",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST.e",
      "letter": "e",
      "text": "appreciate the aspects in the performances of a singing game in Western style",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS",
@@ -1015,29 +1116,119 @@
      "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.a",
      "letter": "a",
      "text": "recognise different water points in the school environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.b",
      "letter": "b",
      "text": "perform singing games on water safety around water points in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.c",
      "letter": "c",
      "text": "narrate ways of applying water safety precautions in the school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     },
     {
      "code": "CREA.G2.APPREC.WATER_SAFETY_AWARENESS.d",
      "letter": "d",
      "text": "appreciate water safety at school for life skills",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G2.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G2.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G2.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "CREATING AND EXECUTING",
+   "covers": [
+    "CREA.G2.CREATI.HOPPING",
+    "CREA.G2.CREATI.DRAWING_AND_PAINTING",
+    "CREA.G2.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+    "CREA.G2.CREATI.TURNING",
+    "CREA.G2.CREATI.MOSAIC",
+    "CREA.G2.CREATI.MELODY"
+   ],
+   "page": 17,
+   "indicators": [
+    {
+     "code": "CREA.G2.RUBRIC.1.1",
+     "indicator": "Ability to create and execute: - skill of hopping - draw and paint (texture) - create rhythmic patterns - turn in different directions - create a mosaic - new words to existing tune",
+     "levels": {
+      "EE": "Creates and executes the 6 skills in Creative Activities skilfully.",
+      "ME": "Creates and executes the 6 skills in Creative Activities accurately",
+      "AE": "Creates and executes 5- 4 skills in Creative Activities.",
+      "BE": "Creates and executes 3-2 skills in Creative Activities."
+     },
+     "page": 17,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G2.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Performing and Displaying",
+   "covers": [
+    "CREA.G2.PERFOR.SINGING_GAMES_WESTERN_ST",
+    "CREA.G2.PERFOR.KICKING",
+    "CREA.G2.PERFOR.PLAITED_ORNAMENT_SINGLE_",
+    "CREA.G2.PERFOR.EGG_ROLL_AND_SWAN_BALANC",
+    "CREA.G2.PERFOR.WIND_MUSICAL_INSTRUMENTS",
+    "CREA.G2.PERFOR.MODELLING_COILING_TECHNI",
+    "CREA.G2.PERFOR.SONGS"
+   ],
+   "page": 32,
+   "indicators": [
+    {
+     "code": "CREA.G2.RUBRIC.2.1",
+     "indicator": "Ability to perform and/or display - singing games in Western style, - using props in a singing game - kick a ball in different directions - make a single strand bracelet - an egg roll - a swan balance - an improvised wind instrument - produce sound on a wind instrument - model simple forms - topical songs",
+     "levels": {
+      "EE": "Performs and/or displays the 10 items in Creative Activities skilfully",
+      "ME": "Performs and/or displays the 10 items in Creative Activities",
+      "AE": "Performs and/or displays the 6-9 items in Creative Activities.",
+      "BE": "Performs and/or displays 1-5 items in Creative Activities."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G2.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Appreciation",
+   "covers": [
+    "CREA.G2.APPREC.SINGING_GAMES_WESTERN_ST",
+    "CREA.G2.APPREC.WATER_SAFETY_AWARENESS"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "CREA.G2.RUBRIC.3.1",
+     "indicator": "Ability to identify and/or explain - participants in a singing game - costumes in a singing game - games in a singing game - props in a singing game - message in a singing game - water points in school - water safety precautions in school.",
+     "levels": {
+      "EE": "Identifies and/or explains the 7 items in appreciating Creative activities elaborately.",
+      "ME": "Identifies and/or explains the 7 items in appreciating Creative activities accurately",
+      "AE": "Identifies and/or explains the 4-6 items in appreciating Creative Activities.",
+      "BE": "Identifies and/or explains the 1-3 items in appreciating Creative Activities."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }
