@@ -13,7 +13,7 @@ import { familiesFor } from '../../src/ai-tutor/content/families/index.js';
 import { drawFamily, isOn } from '../../src/ai-tutor/content/families/core.js';
 import { SKILL_TAGS } from '../../src/ai-tutor/curriculum/skillTags.js';
 import { OUTCOMES, TESTABLE_OUTCOMES } from '../../src/ai-tutor/curriculum/outcomes.js';
-import { textOf, formText, classify, clusterForms, senseFlags } from './content_measures.mjs';
+import { textOf, formText, classify, clusterForms, senseFlags, structureOf } from './content_measures.mjs';
 
 // A fault being fixed on another branch: reported, not failed, until that branch merges.
 export const KNOWN_FAULTS = {};
@@ -28,7 +28,7 @@ export function measureSkill(id, draws = 60) {
   // hire purchase (Grade 8 Money) in a Grade 9 Money skill.
   const revision = Object.values(OUTCOMES).filter(o => o.grade === tag.grade - 1 && outcomes.some(x => x.substrand === o.substrand) && !o.hands);
   const kps = kpCount(id);
-  const m = { id, grade: tag.grade ?? SKILLS[id].grade, n: 0, questions: [], formTexts: [], story: 0, kenyan: 0, multi: 0, stepMarked: 0, reasoning: 0, picture: 0, choice: 0, offTopic: 0, offTopicExample: null, keyFails: [], choiceFails: [], flags: {}, optionTotal: 0, optionPlace: 0, promisedHit: {} };
+  const m = { id, grade: tag.grade ?? SKILLS[id].grade, n: 0, questions: [], formTexts: [], structKeys: new Set(), story: 0, kenyan: 0, multi: 0, stepMarked: 0, reasoning: 0, picture: 0, choice: 0, offTopic: 0, offTopicExample: null, keyFails: [], choiceFails: [], flags: {}, optionTotal: 0, optionPlace: 0, promisedHit: {} };
   const warn = console.warn; console.warn = () => {};
   for (let i = 0; i < draws; i++) {
     let p;
@@ -41,6 +41,7 @@ export function measureSkill(id, draws = 60) {
     const t = textOf(p);
     m.questions.push(t);
     m.formTexts.push(formText(p));
+    m.structKeys.add(structureOf(p).key);
     const c = classify(p);
     for (const k of ['story', 'kenyan', 'multi', 'stepMarked', 'reasoning', 'picture', 'choice']) if (c[k]) m[k]++;
     if (outcomes.length) {
@@ -66,10 +67,15 @@ export function measureSkill(id, draws = 60) {
   }
   console.warn = warn;
   // Every switched-on family counts once, so a form is not missed by the dice.
-  for (const f of familiesFor(id).filter(isOn)) { try { m.formTexts.push(formText(drawFamily(f).p)); } catch { /* family_checks reports it */ } }
+  for (const f of familiesFor(id).filter(isOn)) { try { const fp = drawFamily(f).p; m.formTexts.push(formText(fp)); m.structKeys.add(structureOf(fp).key); } catch { /* family_checks reports it */ } }
   const forms = clusterForms(m.formTexts);
   delete m.formTexts;
-  m.forms = forms.length;
+  // A form counts only if it is different in structure too: rewording alone, or
+  // new numbers, never raise it. The smaller of the two readings is the variety.
+  m.textForms = forms.length;
+  m.structuralForms = m.structKeys.size;
+  m.forms = Math.min(forms.length, m.structKeys.size);
+  delete m.structKeys;
   m.formExamples = forms.map(f => f.example);
   m.distinct = new Set(m.questions).size;
   m.outcomes = tag.outcomes || [];

@@ -88,3 +88,47 @@ export function senseFlags(p) {
   if (/undefined|NaN|Infinity|\[object Object\]/.test(textOf(p))) flags.push('broken text');
   return flags;
 }
+
+// ---- STRUCTURE: what makes two questions different in kind -------------------
+// New numbers, new names and new wording around the same thing are one question.
+// A different one has a different representation (table, graph, picture, bare
+// symbols), a different way of answering (typed, chosen, in parts, spot the
+// mistake), a different thing asked (a value, a comparison, a missing part, a
+// reason), a different context (bare, story, Kenyan story), a different
+// operation, or a different misconception it is built to catch.
+const ASKS = [
+  ['reason', /\bwhy\b|explain|\breason\b|which (reason|statement)|who is (right|correct)|is (he|she|it|this|that) (right|correct)|mistake/i],
+  ['judge', /\btrue or false\b|^(is|are|does|do|can|could)\b|\b(always|sometimes|never)\b|\bcorrect\b/i],
+  ['fill', /missing|complete|fill|\?\s*[=+×÷−-]|[=+×÷−-]\s*\?|__|blank/i],
+  ['compare', /bigger|smaller|larger|greater|less than|more than|longer|shorter|heavier|lighter|order|arrange|compare|which is/i],
+  ['select', /^which\b|which (of|one)|\bchoose\b|\bpick\b/i],
+  ['count', /how many|how much|how long|how far|how old|how heavy/i],
+  ['convert', /convert|change .* to|express .* as|write .* as|in (words|figures|symbols|standard form)/i],
+  ['estimate', /estimate|round|nearest|approximate/i],
+  ['compute', /work out|calculate|find|evaluate|simplify|solve|what is|=\s*\?|\?\s*$/i],
+];
+const OPS = [['add', /\+|\badd\b|\bsum\b|altogether|\btotal\b|in all|\bmore\b|together/i], ['sub', /[−-]\s*\d|\bsubtract|\bdifference\b|left|take away|\bchange\b|\bless\b/i], ['mul', /×|\bmultipl|\btimes\b|\bproduct\b|\beach\b|\brows? of\b/i], ['div', /÷|\bdivide|\bshare|\bgroups?\b|\bper\b|\bquotient\b|\bremainder\b/i]];
+export function structureOf(p) {
+  const q = String(p.question || '');
+  const m = p.model || p.visual || null;
+  const representation = m ? (m.type || m.kind || 'picture') : (p.picture ? 'picture' : 'text');
+  const response = p.parts ? 'parts' : p.shownSteps ? 'spot' : (p.mc || p.choices) ? 'choose' : 'type';
+  const ask = (ASKS.find(([, re]) => re.test(q.trim())) || ['other'])[0];
+  const c = classify(p);
+  const context = c.kenyan && c.story ? 'kenyan-story' : c.story ? 'story' : 'bare';
+  const ops = OPS.filter(([, re]) => re.test(q)).map(([k]) => k).join('+') || 'none';
+  const target = p.mis ? [].concat(p.mis).sort().join('+') : '';
+  return { representation, response, ask, context, ops, target, key: [representation, response, ask, context, ops, target].join('|') };
+}
+// The structural variety of a set of draws: how many different kinds, and along
+// which dimensions they differ. This is what the gate counts as variety.
+export function structuralVariety(problems) {
+  const keys = new Map();
+  const dims = { representation: new Set(), response: new Set(), ask: new Set(), context: new Set(), ops: new Set(), target: new Set() };
+  for (const p of problems) {
+    const s = structureOf(p);
+    keys.set(s.key, (keys.get(s.key) || 0) + 1);
+    for (const d of Object.keys(dims)) if (s[d]) dims[d].add(s[d]);
+  }
+  return { kinds: keys.size, keys: [...keys.keys()], counts: Object.fromEntries(keys), dims: Object.fromEntries(Object.entries(dims).map(([k, v]) => [k, v.size])) };
+}

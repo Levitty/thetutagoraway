@@ -18,6 +18,8 @@
     "audit:dupes": "node scripts/audit-rung-dupes.mjs",
     "test": "node --test tests/*.test.mjs",
     "test:content": "node engine/scripts/quality_gate.mjs",
+    "coverage:outcomes": "node scripts/coverage-outcomes.mjs",
+    "review:precheck": "node scripts/review-precheck.mjs",
     "audit:drift": "node scripts/function-drift.mjs",
     "build:rocket-fn": "node scripts/build-rocket-guide-fn.mjs",
     "build:voice-tutor-fn": "node scripts/build-voice-tutor-fn.mjs",

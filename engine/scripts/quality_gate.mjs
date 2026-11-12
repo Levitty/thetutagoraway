@@ -14,6 +14,11 @@
 // sense checks. Families (content/families) must pass family_checks.mjs reviewed
 // or not. See the "Range" section at the bottom.
 //
+// Since 12 Nov 2026 a form must also differ in STRUCTURE (content_measures.mjs,
+// structureOf): representation, way of answering, thing asked, context, operation
+// or the misconception targeted. Rewording and new numbers never raise it; the
+// variety a skill earns is the smaller of the text reading and the structural one.
+//
 // A tutor that teaches WRONG answers is worse than none — so the gate doesn't
 // trust the stated answer. For equations it substitutes the solution back; for
 // algebraic identities (expand/simplify/factorise) it evaluates the original
