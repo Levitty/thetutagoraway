@@ -5,7 +5,8 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText } from '../src/voice-tutor/commands.js';
+import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText, doingOf, ANSWER_CLASSES, DOINGS } from '../src/voice-tutor/commands.js';
+import { REPLY_FORM } from '../src/voice-tutor/prompt.js';
 import { parseMath, layoutMath, mathToText } from '../src/voice-tutor/mathExpr.js';
 import { emptyBoard, applyStep, boardSummary } from '../src/voice-tutor/board.js';
 
@@ -21,7 +22,8 @@ const onBoard = [
   { id: 'nl', cmd: 'number_line', from: 0, to: 1, divisions: 4, marks: [{ value: 0.75, label: '3/4', style: 'dot' }], jumps: [], slot: 'bottom_left' },
 ];
 
-// One good example of each of the 20 commands (figure: rendering engine phase 2; note_interest and note_what_helped: the learner profile).
+// One good example of each of the 21 commands (figure: rendering engine phase 2; note_interest and note_what_helped: the learner
+// profile; assess: the conversation engine, 12 Nov 2026).
 const GOOD = {
   say: { cmd: 'say', text: 'Here is a chapati cut into four equal pieces.' },
   write_text: { cmd: 'write_text', id: 't1', text: 'Mama cuts a cake.', slot: 'bottom_right', size: 'm', colour: 'green', on: 'chapati', delay_ms: 200 },
@@ -41,12 +43,13 @@ const GOOD = {
   record_diagnosis: { cmd: 'record_diagnosis', skill: EQ, misconception: ADD, confidence: 'high', evidence: 'Wrote 4 for 1/3 = ?/6 and 6 for 2/4 = ?/8.', next: 'reteach' },
   note_interest: { cmd: 'note_interest', interest: 'football' },
   note_what_helped: { cmd: 'note_what_helped', move: 'drawing it', helped: true },
-  pause_for_child: { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 },
+  assess: { cmd: 'assess', class: 'misconception', misconception: ADD, evidence: 'said 4 sixths: added 3 to top and bottom', ask: 'q1' },
+  pause_for_child: { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30, doing: 'answer' },
   end_session: { cmd: 'end_session', summary: 'Worked on equivalent fractions.' },
 };
 
-test('the list has exactly the 20 approved commands, and each one passes when right', () => {
-  assert.equal(COMMANDS.length, 20);
+test('the list has exactly the 21 approved commands, and each one passes when right', () => {
+  assert.equal(COMMANDS.length, 21);
   assert.deepEqual(Object.keys(GOOD).sort(), [...COMMANDS].sort());
   for (const s of Object.values(GOOD)) ok(s, { board: onBoard, allowedMis: [ADD], skills: [EQ] });
 });
@@ -195,4 +198,37 @@ test('the board: clear wipes tutor ink only, after a snapshot; the child\'s ink 
   assert.equal(b.ask.expected, undefined);
   assert.equal(b.ask.wrong, undefined);
   assert.deepEqual(boardSummary(applyStep(emptyBoard(), GOOD.shape, 1)).map((x) => x.id), ['s9']);
+});
+
+// ---------------------------------------------------------------- the conversation engine (12 Nov 2026)
+test('assess: the answer\'s class, checked; a misconception code only with class misconception, and only an allowed one', () => {
+  const opts = { allowedMis: [ADD], skills: [EQ] };
+  assert.deepEqual(ANSWER_CLASSES, ['understood', 'right_unexplained', 'partly_right', 'misconception', 'missing_prerequisite', 'guess_or_no_attempt']);
+  for (const c of ANSWER_CLASSES.filter((x) => x !== 'misconception')) assert.equal(ok({ cmd: 'assess', class: c, evidence: 'said two quarters' }, opts).class, c);
+  assert.equal(ok({ cmd: 'assess', class: 'misconception', misconception: ADD, evidence: 'added 3 to both' }, opts).misconception, ADD);
+  no({ cmd: 'assess', class: 'clever', evidence: 'x' }, opts, /class must be one of/);
+  no({ cmd: 'assess', class: 'misconception', evidence: 'x' }, opts, /needs its code/);
+  no({ cmd: 'assess', class: 'misconception', misconception: `${EQ}.M_MADE_UP`, evidence: 'x' }, opts, /not on the allowed list/);
+  no({ cmd: 'assess', class: 'understood', misconception: ADD, evidence: 'x' }, opts, /only with class misconception/);
+  no({ cmd: 'assess', class: 'understood', evidence: 'x'.repeat(161) }, opts, /longer than 160/);
+  no({ cmd: 'assess', class: 'understood', evidence: 'x', ask: 'Q 1' }, opts, /bad ask id/);
+  no({ cmd: 'assess', class: 'understood', evidence: 'x', confidence: 'high' }, opts, /extra field/);
+  // One a turn, and it is silent: a turn that only assesses and hands back is a nod, never "says nothing" twice.
+  const v = validateTurn({ steps: [{ cmd: 'assess', class: 'understood', evidence: 'a' }, { cmd: 'assess', class: 'understood', evidence: 'b' }, GOOD.say, GOOD.pause_for_child] }, opts);
+  assert.match(v.dropped[0].reason, /one assessment a turn/);
+});
+
+test('pause_for_child carries what the child is now doing; left out, it is read from the turn', () => {
+  assert.deepEqual(DOINGS, ['answer', 'task', 'talk']);
+  for (const d of DOINGS) assert.equal(ok({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: d }).doing, d);
+  no({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'sleep' }, {}, /doing must be one of/);
+  const read = (steps) => validateTurn({ steps: [...steps, { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30 }] }).steps.at(-1).doing;
+  assert.equal(read([GOOD.say, GOOD.ask]), 'answer');
+  assert.equal(read([{ cmd: 'say', text: 'What do you notice?' }]), 'answer');
+  assert.equal(read([{ cmd: 'say', text: 'Shade the sixths to match.' }, GOOD.figure]), 'task');
+  assert.equal(read([{ cmd: 'say', text: 'Tell me about your day.' }]), 'talk');
+  assert.equal(doingOf([]), 'talk');
+  // The reply form the model reads lists it, from the same schema.
+  assert.match(REPLY_FORM, /- pause_for_child: expect: [a-z|]+, max_wait_s: integer, doing\?: answer\|task\|talk/);
+  assert.match(REPLY_FORM, /- assess: class: understood\|right_unexplained\|partly_right\|misconception\|missing_prerequisite\|guess_or_no_attempt, misconception\?: string, evidence: string, ask\?: string/);
 });

@@ -48,7 +48,8 @@ New columns (one migration, idempotent):
   - A backfill turns the sittings already answered into rows.
 - **School exams:** Tuta sends question marks for questions tagged to an outcome or sub-strand through a new signed door action (`evidence`). Each one gives one row with marks and max_marks, `item_ref` `exam:<question id>`.
   - Tuta keeps its own copy for its pages; HOREB's log is the learner record.
-- **Live tutor:** each answer the server marks gives one row, `source: 'tutor'`, `independent: false` while the tutor is guiding.
+- **Live tutor:** each answer the server marks gives one row, `source: 'tutor'`, written at the end of the turn with the answer's class (src/voice-tutor/orchestrator.js, 12 Nov 2026). `independent: true` only when the answer was judged **understood** (right, with the child's own reason); every other class, including a right answer with no reason yet, is `independent: false`. When the reason comes on a later turn and is judged understood, the same row is updated to `independent: true` (no second row).
+  - The class is the tutor model's `assess`, held to the seal: where the seal marks the answer wrong it can never be understood.
   - A visual goal met gives a `visual` row, weak evidence.
 
 ## 2. The five states: `src/learner/mastery.js`, pure

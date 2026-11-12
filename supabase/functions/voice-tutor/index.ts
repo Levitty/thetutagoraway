@@ -690,6 +690,9 @@ var EXPECTS = ["typed", "spoken", "drawn", "any"];
 var CONFIDENCE = ["low", "med", "high"];
 var NEXT = ["probe", "reteach", "move_on"];
 var MOVES = ["drawing it", "counting together", "a real-life example", "smaller steps", "saying it aloud", "writing it down", "a picture on the board", "a story", "repeating it", "a quick game"];
+var DOINGS = ["answer", "task", "talk"];
+var ANSWER_CLASSES = ["understood", "right_unexplained", "partly_right", "misconception", "missing_prerequisite", "guess_or_no_attempt"];
+var PLAYBOOK_MOVES = ["Open the lesson", "Show then hand over", "Predict then show", "Count with the child", "Wait and nudge", "Smaller-question hint", "Revoice and build", "Press for reasoning", "Name what was right", "Diagnose the wrong answer", "Check for understanding", "Celebrate the strategy", "Stretch the quick child", "Recover a lost child", "Bring back an off-topic child", "Close the lesson"];
 var HIGHLIGHT_STYLES = ["circle", "box", "glow"];
 var SHAPE_KINDS = ["circle", "rectangle", "square", "triangle"];
 var SLOTS = ["top", "middle", "bottom", "top_left", "top_right", "middle_left", "middle_right", "bottom_left", "bottom_right"];
@@ -697,7 +700,7 @@ var ROWS = ["top", "middle", "bottom"];
 var cellsOf = (slot) => ROWS.includes(slot) ? [`${slot}_left`, `${slot}_right`] : [slot];
 var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points", "figure"];
 var MARKS = ["highlight", "underline", "point"];
-var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "pause_for_child", "end_session"];
+var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "assess", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
 var PACES = ["slow"];
 var FIELDS = {
@@ -717,7 +720,8 @@ var FIELDS = {
   ask: ["id", "prompt", "form", "choices", "expected", "accepts", "wrong", "skill", "bank"],
   set_phase: ["phase"],
   record_diagnosis: ["skill", "misconception", "confidence", "evidence", "next", "snapshot"],
-  pause_for_child: ["expect", "max_wait_s"],
+  pause_for_child: ["expect", "max_wait_s", "doing"],
+  assess: ["class", "misconception", "evidence", "ask"],
   note_interest: ["interest"],
   note_what_helped: ["move", "helped"],
   end_session: ["summary"]
@@ -741,6 +745,7 @@ var REQUIRED = {
   record_diagnosis: ["skill", "misconception", "confidence", "evidence", "next"],
   note_interest: ["interest"],
   note_what_helped: ["move", "helped"],
+  assess: ["class", "evidence"],
   pause_for_child: ["expect", "max_wait_s"],
   end_session: ["summary"]
 };
@@ -752,6 +757,7 @@ var LIMITS = {
   choice: 40,
   expected: 40,
   evidence: 240,
+  assess: 160,
   summary: 300,
   interest: 24,
   label: 12,
@@ -1052,6 +1058,19 @@ function checkStep(s, ctx, notes) {
       out.expect = optEnum("expect", EXPECTS);
       need(isInt(s.max_wait_s) && inRange(s.max_wait_s, LIMITS.wait), "pause_for_child: max_wait_s must be 5 to 60");
       out.max_wait_s = s.max_wait_s;
+      if (s.doing != null) out.doing = optEnum("doing", DOINGS);
+      break;
+    case "assess":
+      out.class = optEnum("class", ANSWER_CLASSES);
+      if (out.class === "misconception") {
+        need(s.misconception != null, "assess: a misconception needs its code");
+        out.misconception = misOf(s.misconception, ctx, "assess");
+      } else need(s.misconception == null, "assess: a misconception code only with class misconception");
+      out.evidence = str(s.evidence, LIMITS.assess, "assess evidence", notes);
+      if (s.ask != null) {
+        need(typeof s.ask === "string" && ID_RE.test(s.ask), "assess: bad ask id");
+        out.ask = s.ask;
+      }
       break;
     case "end_session":
       out.summary = str(s.summary, LIMITS.summary, "summary", notes);
@@ -1155,6 +1174,11 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
         ctx.ids.clear();
       }
       if (out.cmd === "ask" && steps2.some((x) => x.cmd === "ask")) bad("one question a turn");
+      if (out.cmd === "assess" && steps2.some((x) => x.cmd === "assess")) bad("one assessment a turn");
+      if (out.cmd === "pause_for_child" && !out.doing) {
+        out.doing = doingOf(steps2);
+        notes.push(`pause_for_child: doing not given, read as ${out.doing}`);
+      }
       if (out.cmd === "pause_for_child" || out.cmd === "end_session") closed = true;
       steps2.push(out);
     } catch (e) {
@@ -1163,6 +1187,12 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
     }
   });
   return { steps: steps2, dropped, notes };
+}
+function doingOf(steps2 = []) {
+  if (steps2.some((x) => x.cmd === "figure" && x.controls?.length || x.cmd === "ask" && x.form === "draw")) return "task";
+  if (steps2.some((x) => x.cmd === "ask")) return "answer";
+  const says = steps2.filter((x) => x.cmd === "say");
+  return says.length && /\?\s*$/.test(says[says.length - 1].text) ? "answer" : "talk";
 }
 var MAX_SPOKEN_WORDS = 45;
 var spokenWords = (steps2) => steps2.filter((s) => s.cmd === "say").reduce((n, s) => n + s.text.split(/\s+/).filter(Boolean).length, 0);
@@ -1196,7 +1226,8 @@ var STEP_SCHEMAS = [
   C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ["skill", "misconception", "confidence", "evidence", "next"]),
   C("note_interest", { interest: T }, ["interest"]),
   C("note_what_helped", { move: E(MOVES), helped: B }, ["move", "helped"]),
-  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I }, ["expect", "max_wait_s"]),
+  C("assess", { class: E(ANSWER_CLASSES), misconception: T, evidence: T, ask: T }, ["class", "evidence"]),
+  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I, doing: E(DOINGS) }, ["expect", "max_wait_s"]),
   C("end_session", { summary: T }, ["summary"])
 ];
 var TURN_SCHEMA = S({ steps: { type: "array", items: { anyOf: STEP_SCHEMAS } } }, ["steps"]);
@@ -5071,7 +5102,7 @@ var CHILD_LISTEN = Object.freeze({
 var NUMBER_WORDS = new Set("zero nought none one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred half halves quarter quarters third thirds fifth fifths sixth sixths eighth eighths tenth tenths whole yes no yeah yep nope ok okay maybe".split(" "));
 var ASK_AGAIN = Object.freeze([
   "Sorry, I did not catch that. Say it again for me, nice and slowly.",
-  "I still could not hear you well. Tap Talk and try once more, or type your answer if you like."
+  "I still could not hear you well. Say it once more, or type your answer if you like."
 ]);
 var PACE_MIN = -2;
 var PACE_MAX = 1;
@@ -5117,7 +5148,8 @@ var DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
 // src/voice-tutor/session.js
 var DEFAULT_SETTINGS = Object.freeze({
   model: "claude-sonnet-5-5",
-  effort: "low",
+  // Medium from 12 Nov 2026 (the conversation engine: the model judges reasoning now). VOICE_TUTOR_EFFORT overrides it.
+  effort: "medium",
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,
@@ -5202,9 +5234,9 @@ var SMALL = {
 var TENS = { twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
 var SCALES = { hundred: 100, thousand: 1e3, million: 1e6 };
 var isNumberWord = (w) => w in SMALL || w in TENS || w in SCALES;
-var runValue = (words5) => {
+var runValue = (words6) => {
   let total = 0, current = 0, counted = false;
-  for (const w of words5) {
+  for (const w of words6) {
     if (w in SMALL) {
       current += SMALL[w];
       counted = true;
@@ -5863,7 +5895,7 @@ You are a one-to-one maths tutor for a child of about ten in Kenya. You are not 
 - The child should do at least half the talking over a lesson. If you spoke three turns in a row, stop and ask.
 - Every turn does one thing: opens, shows, asks, reacts, or repairs. Do not do all five.
 - Draw while you speak, then stop drawing and ask. The board shows the idea; the question makes the child use it.
-- After every question, stay silent. Do not fill the gap.
+- After every question, stay silent. Do not fill the gap. The app waits for the child and tells you when a nudge is due.
 - Say the child's name sometimes, not every turn.
 - Use the child's words and numbers from their last answer in your next line.
 - Short plain words. No "denominator" or "numerator" until the child has used the idea; say "bottom number" and "top number" first.
@@ -5908,8 +5940,8 @@ Sounds like:
 Never: count for the child and give the total yourself.
 
 ### 5. Wait and nudge
-When: the child has not answered after a question.
-Do: wait five seconds in silence. At five, say a short, kind nudge that does not give the answer. At ten, use Smaller-question hint. Do not repeat the same question louder or longer.
+When: the child has not answered after a question. The app does the waiting and asks you for the nudge, with the reason.
+Do: every hand-over says what the child is now doing (answer, task or talk). When they are answering, the app waits about six seconds in silence, then asks you for a short, kind nudge that does not give the answer; at about fifteen seconds, for a Smaller-question hint; after that it waits quietly and keeps listening. When they are doing a task on the board, it stays quiet while they work, shows you the board when they stop writing, and only after about forty-five seconds with nothing asks you for one check-in. Free talk waits longer still. A child thinking aloud ("umm", "so...") is never interrupted. Do not repeat the same question louder or longer.
 Sounds like:
 - (five seconds of quiet)
 - "Take your time. Look at the bar."
@@ -6203,6 +6235,19 @@ TAKING TURNS (the child talks as much as you):
 - Never draw again what is already on the board (the context lists it). Point at it, highlight it or build on it. Clear the board only when you move to a new idea.
 - If the child comments on you or the board ("you drew badly", "I can't see", "too fast"), answer that first, honestly and briefly, and fix it (clear and draw it bigger, slow down), then carry on.
 - Never stack questions, never explain the next thing before the child has answered this one.
+- The microphone stays open for the whole lesson: the child may speak at any time, even over you, and you stop and listen. A child thinking aloud ("umm", "so...") is still thinking; the app waits for them.
+
+HANDING OVER (pause_for_child), and silence:
+- Every pause_for_child says what the child is now doing, in doing: answer (answering your question), task (doing something on the board: shading, drawing, writing, placing), or talk (free talk, an opinion). Always give it: the app handles silence by it.
+- The app waits for the child. If they stay silent, it asks you for a short probe, and the context says why ("silent for 7 s after your question", "working on the task for 45 s"). A probe is one or two short sentences: a kind nudge, or a smaller question, never the answer and never a new topic; then hand back with the same doing. During a task the app shows you the board when they stop writing; do not rush them.
+
+THE LESSON PLAN IS RUN BY THE APP:
+- Each turn the context gives the lesson state (stage, what the child is doing, the question and attempts, what has been tried, hints, the last answers) and the allowed moves for this turn with the reason. Choose one of the allowed moves, carry it in your words and drawing, and tag that say with it in "move". Moves listed as alongside may also be used (for example Revoice and build before the main move).
+- When the allowed moves say change the approach, use a different picture than before (the context names what was tried). When they say press for reasoning, ask how the child knew before you praise or move on. Move to a later part (set_phase) only as far as the context allows.
+
+JUDGING THE CHILD'S ANSWER (assess, silent):
+- Whenever the child has just answered (in words, on the board or with a figure), first emit assess: class is one of ${ANSWER_CLASSES.join(", ")}; misconception (the full code from the list below) only with class misconception; evidence quotes the child's own words or work in a short phrase; ask is the question's id if it was one of yours.
+- understood means right AND with a reason in the child's own words or drawing. A bare right answer is right_unexplained. Right with a shaky or wrong reason is partly_right. missing_prerequisite means an earlier skill is not there (for example they cannot yet make equal parts). guess_or_no_attempt is a guess, "I don't know", or no real try. The app marks right and wrong itself from the sealed question; you judge the reasoning. Never mention assess to the child.
 
 THE LESSON (15 to 20 minutes; the context tells you the time used):
 1. warmup: after the hello, one quick question on the weakest prerequisite named in the context (or the target's foundation if none).
@@ -6243,7 +6288,7 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
 - ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
-- pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
+- pause_for_child ends every turn (expect: spoken when you want them to say it, drawn for the board, any otherwise; max_wait_s 5 to 60; doing as above), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
 
 FIGURES (figure): Grade 5 maths figures the board draws stroke by stroke and the child can handle. Fill in type, params (an object with that type's settings; anything left out takes its default), controls (what the child may do; leave it out for a figure that is only shown) and goal (an object; the app marks it, never you). A figure takes about 5 to 12 seconds to draw: give it two sentences.
@@ -6277,7 +6322,7 @@ THE CHILD'S WORK ON THE BOARD:
 - Never ask the child to write names, places, phone numbers or anything personal on the board.
 
 Example of a teaching turn (shape only): the bar is drawn slowly with its own sentences, HOREB counts the first two parts with the child, and the child says the total.
-{"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
+{"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"answer"}]}
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}
@@ -6293,7 +6338,7 @@ ${EXEMPLARS}
 REPLY FORM. Reply with only one JSON object, {"steps":[...]}, and nothing before or after it: no prose, no markdown fences. Each step is an object with "cmd" and that command's fields, exactly as named here ("?" means it may be left out; a|b means one of these values; [..] is a list):
 ${REPLY_FORM}`;
 var pct = (x) => x == null ? "no attempts" : `${Math.round(x * 100)}% right`;
-function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null }) {
+function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || "not started"}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -6306,6 +6351,8 @@ function turnContext({ target, prerequisite, profile = [], learner = [], hasMode
     lines.push(marked.correct ? `The child answered your question ${marked.ask} with "${marked.answer}": right.` : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : " No misconception in the library matches this answer."} Diagnose before you teach.`);
   }
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
+  lines.push(...lesson);
+  if (probe) lines.push(PROBE_LINES[probe.kind](probe.silent_s), `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before.`);
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
@@ -6319,7 +6366,15 @@ function turnContext({ target, prerequisite, profile = [], learner = [], hasMode
 ${lines.join("\n")}
 </context>`;
 }
-function buildRequest({ model, effort = "low", lib, history = [], message = "", context = "", names = [], image = null }) {
+var MAX_PROBE_WORDS = 22;
+var PROBE_LINES = {
+  answer_nudge: (s) => `The child has been silent for ${s} s after your question. Nudge kindly, without giving the answer.`,
+  answer_smaller: (s) => `The child has been silent for ${s} s, even after a nudge. Ask a smaller, easier question about the same thing (point at the board), without giving the answer.`,
+  task_checkin: (s) => `The child has been working on the task on the board for ${s} s, with no word and no stroke for a long while. Check in gently ("Tell me when you are done" or "Do you want a hint?"); do not do it for them.`,
+  talk_nudge: (s) => `The child has been quiet for ${s} s. Invite them gently to say what they think; any answer is welcome.`,
+  talk_again: (s) => `The child has been quiet for ${s} s, after one invitation. Offer an easier way in (a choice of two, or point at the board).`
+};
+function buildRequest({ model, effort = "medium", lib, history = [], message = "", context = "", names = [], image = null, probe = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES).map((h) => h.who === "child" ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || "")).slice(0, 400)}`).join("\n");
   const now = [
@@ -6327,7 +6382,7 @@ function buildRequest({ model, effort = "low", lib, history = [], message = "", 
     transcript ? `<transcript>
 ${transcript}
 </transcript>` : "<transcript>(the lesson is starting)</transcript>",
-    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : image ? "<child>(no words: the picture of the board shows their work)</child>" : "<child>(nothing yet: the child has just opened the lesson. This is turn 1: the hello. Greet them, say what you will learn today and write it at the top of the board, then ask one friendly question. No maths problem yet.)</child>"
+    message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>` : image ? "<child>(no words: the picture of the board shows their work)</child>" : probe ? `<child>(no words: silent for ${probe.silent_s} s. The app asks you for a short probe; the context says why.)</child>` : "<child>(nothing yet: the child has just opened the lesson. This is turn 1: the hello. Greet them, say what you will learn today and write it at the top of the board, then ask one friendly question. No maths problem yet.)</child>"
   ].join("\n");
   const content = image ? [{ type: "image", source: { type: "base64", media_type: image.media, data: image.data } }, { type: "text", text: now }] : [{ type: "text", text: now }];
   const messages = [{ role: "user", content }];
@@ -7983,14 +8038,14 @@ var FAMILIES = [
     },
     make: ({ t, h, p }) => {
       const ones = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine"], teens = ["ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"], tens = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-      const words5 = t < 20 ? teens[t - 10] : `${tens[Math.floor(t / 10)]}-${ones[t % 10]}`;
+      const words6 = t < 20 ? teens[t - 10] : `${tens[Math.floor(t / 10)]}-${ones[t % 10]}`;
       const n = t * 1e3 + h * 100;
       return {
-        question: `A notice says ${p.name}'s school raised ${words5} thousand, ${ones[h]} hundred shillings in words. Write the amount in figures.`,
+        question: `A notice says ${p.name}'s school raised ${words6} thousand, ${ones[h]} hundred shillings in words. Write the amount in figures.`,
         answer: n,
         wrong: [[t * 100 + h * 10, "Thousands come first and fill the thousands place, so the number needs more digits."], [t * 1e3 + h, `"${ones[h]} hundred" means ${h} hundreds, not ${h} ones.`], [t * 1e4 + h * 100, "Check the thousands: count the places again."]],
         hints: ["Write the thousands first.", "Then put the hundreds, with zeros in the empty places."],
-        steps: [`${words5} thousand = ${commas(t * 1e3)}.`, `${ones[h]} hundred = ${h * 100}.`, `Together: ${commas(n)}.`]
+        steps: [`${words6} thousand = ${commas(t * 1e3)}.`, `${ones[h]} hundred = ${h * 100}.`, `Together: ${commas(n)}.`]
       };
     },
     check: ({ t, h }, a) => a % 100 === 0 && Math.floor(a / 1e3) === t && a % 1e3 / 100 === h
@@ -33183,7 +33238,7 @@ var FAMILIES22 = [
       return n === 4 ? null : { n, kind, p: person() };
     },
     make: ({ n, kind, p }) => {
-      const ext = 360 / n, int = 180 - ext;
+      const ext = 360 / n, int2 = 180 - ext;
       if (kind === "ext") return {
         question: `${p.name} cuts tiles in the shape of a regular polygon. Each exterior angle of a tile is ${ext}\xB0. How many sides does a tile have?`,
         answer: n,
@@ -33192,11 +33247,11 @@ var FAMILIES22 = [
         steps: ["Exterior angles of a polygon add up to 360\xB0.", `Number of sides = 360 \xF7 ${ext} = ${n}.`]
       };
       return {
-        question: `${p.name} cuts tiles in the shape of a regular polygon. Each interior angle of a tile is ${int}\xB0. How many sides does a tile have?`,
+        question: `${p.name} cuts tiles in the shape of a regular polygon. Each interior angle of a tile is ${int2}\xB0. How many sides does a tile have?`,
         answer: n,
-        wrong: [[round(360 / int, 1), "You divided a full turn by the interior angle. Find the exterior angle first."], [ext, "That is the exterior angle. The question asks for the number of sides."], [round(180 / ext, 1), "The exterior angles add up to a full turn, not a half turn."]],
+        wrong: [[round(360 / int2, 1), "You divided a full turn by the interior angle. Find the exterior angle first."], [ext, "That is the exterior angle. The question asks for the number of sides."], [round(180 / ext, 1), "The exterior angles add up to a full turn, not a half turn."]],
         hints: ["The interior angle and the exterior angle at a corner lie on a straight line.", "Find the exterior angle, then see how many fit in a full turn."],
-        steps: [`Exterior angle = 180 \u2212 ${int} = ${ext}\xB0.`, `Exterior angles add up to 360\xB0, so sides = 360 \xF7 ${ext} = ${n}.`]
+        steps: [`Exterior angle = 180 \u2212 ${int2} = ${ext}\xB0.`, `Exterior angles add up to 360\xB0, so sides = 360 \xF7 ${ext} = ${n}.`]
       };
     },
     check: ({ n, kind }, a) => kind === "ext" ? a * (360 / n) === 360 : a * (180 - (180 - 360 / n)) === 360
@@ -33209,7 +33264,7 @@ var FAMILIES22 = [
     form: "why",
     draw: () => ({ n: pick([5, 6]), p: person(), k: randInt(0, 3) }),
     make: ({ n, p, k }) => {
-      const shape = n === 5 ? "pentagon" : "hexagon", ext = 360 / n, int = 180 - ext;
+      const shape = n === 5 ? "pentagon" : "hexagon", ext = 360 / n, int2 = 180 - ext;
       return {
         question: `${p.name} says each interior angle of a regular ${shape} is ${ext}\xB0, because 360 \xF7 ${n} = ${ext}. Why is that wrong?`,
         options: rot4([
@@ -33219,7 +33274,7 @@ var FAMILIES22 = [
           { text: `The sum of the interior angles must be divided by ${n - 2}`, right: false, why: "The sum is found from the number of triangles, and then shared among the corners, one angle for each corner." }
         ], k),
         hints: ["What do the exterior angles of a polygon add up to?", "How is an interior angle related to the exterior angle at the same corner?"],
-        steps: [`360 \xF7 ${n} = ${ext}\xB0 is the exterior angle at each corner.`, `The interior angle lies on a straight line with it: 180 \u2212 ${ext} = ${int}\xB0.`]
+        steps: [`360 \xF7 ${n} = ${ext}\xB0 is the exterior angle at each corner.`, `The interior angle lies on a straight line with it: 180 \u2212 ${ext} = ${int2}\xB0.`]
       };
     }
   }),
@@ -34724,7 +34779,7 @@ var listenCost = (seconds, p = PRICES3) => Math.max(0, seconds) / 60 * p.sttUsdP
 var spokenChars = (steps2) => (steps2 || []).filter((s) => s.cmd === "say").reduce((n, s) => n + String(s.text).length, 0);
 
 // src/learner/evidence.js
-function tutorEvidence({ userId, childId = null, sid, marked, now }) {
+function tutorEvidence({ userId, childId = null, sid, marked, now, independent = false }) {
   if (!userId || !sid || !marked?.skill || marked.ask == null) return null;
   return {
     source: "tutor",
@@ -34736,7 +34791,7 @@ function tutorEvidence({ userId, childId = null, sid, marked, now }) {
     cskill: marked.skill,
     correct: !!marked.correct,
     misconception: marked.misconception || null,
-    independent: false,
+    independent: !!(independent && marked.correct),
     marks: marked.correct ? 1 : 0,
     max_marks: 1,
     item_ref: `tutor:${sid}:${marked.ask}`,
@@ -35171,6 +35226,18 @@ function rememberEvidence({ sid, userId, childId = null, row }) {
   if (row.item_ref && hit.data.rows.some((r) => r.item_ref === row.item_ref)) return;
   hit.data.rows.push({ ...row, created_at: row.client_ts });
 }
+async function upgradeEvidence(db, { sid, userId, childId = null, itemRef }) {
+  if (!itemRef || typeof db.upgradeEvidence !== "function") return false;
+  try {
+    await db.upgradeEvidence({ userId, childId, itemRef });
+    const hit = cache.get(keyOf2(sid, userId, childId));
+    for (const r of hit?.data.rows || []) if (r.item_ref === itemRef && r.correct) r.independent = true;
+    return true;
+  } catch (e) {
+    console.error("voice-tutor: evidence upgrade", String(e?.message || e).slice(0, 200));
+    return false;
+  }
+}
 async function saveLearned({ db, sid, user, child, learned, now = Date.now() }) {
   if (!learned || !learned.interests.length && !learned.helps.length) return null;
   if (typeof db.saveProfile !== "function") return null;
@@ -35222,17 +35289,257 @@ async function finishLesson({ db, user, child, sid, target, summary = "", lib = 
   return out;
 }
 
+// src/voice-tutor/silence.js
+var SILENCE = Object.freeze({
+  answer: { firstMs: 6e3, secondTotalMs: 15e3, secondQuietMs: 6e3 },
+  talk: { firstMs: 12e3, secondTotalMs: 3e4, secondQuietMs: 1e4 },
+  task: { checkinMs: 45e3 }
+});
+var PROBE_KINDS = ["answer_nudge", "answer_smaller", "task_checkin", "talk_nudge", "talk_again"];
+var cleanProbe = (raw) => raw && typeof raw === "object" && PROBE_KINDS.includes(raw.kind) ? { kind: raw.kind, silent_s: Math.max(0, Math.min(600, Math.round(Number(raw.silent_s) || 0))) } : null;
+
+// src/voice-tutor/orchestrator.js
+var CLOSE_BEFORE_MIN = 3;
+var MAX_CLASSES = 6;
+var MAX_TRIED = 6;
+var ID_RE2 = /^[a-z][a-z0-9_]{0,23}$/;
+var SKILL_RE = /^[A-Z0-9_.]{3,120}$/;
+var REPS = ["bar", "circle", "grid", "shape", "number line", "story"];
+var ALWAYS_WITH = ["Revoice and build", "Name what was right", "Celebrate the strategy", "Bring back an off-topic child"];
+var STAGE_MOVES = {
+  warmup: ["Revoice and build", "Predict then show", "Count with the child", "Smaller-question hint"],
+  teach: ["Show then hand over", "Predict then show", "Count with the child", "Revoice and build"],
+  guided: ["Show then hand over", "Count with the child", "Smaller-question hint", "Predict then show", "Check for understanding"],
+  independent: ["Check for understanding", "Stretch the quick child", "Show then hand over"],
+  wrapup: ["Close the lesson"]
+};
+var PROBE_MOVES = {
+  answer_nudge: ["Wait and nudge"],
+  answer_smaller: ["Smaller-question hint", "Recover a lost child"],
+  task_checkin: ["Wait and nudge"],
+  talk_nudge: ["Wait and nudge", "Revoice and build"],
+  talk_again: ["Smaller-question hint", "Wait and nudge"]
+};
+var WRONG = ["partly_right", "misconception", "missing_prerequisite", "guess_or_no_attempt"];
+var newLesson = () => ({
+  v: 1,
+  stage: null,
+  doing: null,
+  question: null,
+  tried: [],
+  rep: null,
+  sameFails: 0,
+  hints: 0,
+  classes: [],
+  streak: 0,
+  answers: 0,
+  pending: null,
+  prereq: false,
+  turns: 0,
+  probes: 0,
+  min: 0
+});
+var int = (v, lo, hi, d = 0) => Number.isInteger(v) && v >= lo && v <= hi ? v : d;
+function cleanLesson(raw) {
+  const s = newLesson();
+  if (!raw || typeof raw !== "object" || raw.v !== 1) return s;
+  if (PHASES.includes(raw.stage)) s.stage = raw.stage;
+  if (DOINGS.includes(raw.doing)) s.doing = raw.doing;
+  const q = raw.question;
+  if (q && typeof q === "object" && ID_RE2.test(String(q.id))) s.question = { id: q.id, skill: SKILL_RE.test(String(q.skill)) ? q.skill : null, attempts: int(q.attempts, 0, 50) };
+  if (Array.isArray(raw.tried)) s.tried = [...new Set(raw.tried.filter((x) => REPS.includes(x)))].slice(-MAX_TRIED);
+  if (REPS.includes(raw.rep)) s.rep = raw.rep;
+  s.sameFails = int(raw.sameFails, 0, 20);
+  s.hints = int(raw.hints, 0, 50);
+  if (Array.isArray(raw.classes)) s.classes = raw.classes.filter((c) => ANSWER_CLASSES.includes(c)).slice(-MAX_CLASSES);
+  s.streak = int(raw.streak, 0, 50);
+  s.answers = int(raw.answers, 0, 200);
+  const p = raw.pending;
+  if (p && typeof p === "object" && ID_RE2.test(String(p.ask))) s.pending = { ask: p.ask, skill: SKILL_RE.test(String(p.skill)) ? p.skill : null };
+  s.prereq = raw.prereq === true;
+  s.turns = int(raw.turns, 0, 500);
+  s.probes = int(raw.probes, 0, 500);
+  s.min = Number.isFinite(raw.min) && raw.min >= 0 && raw.min < 600 ? Math.round(raw.min * 10) / 10 : 0;
+  return s;
+}
+var words5 = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9'\s/]/g, " ").split(/\s+/).filter(Boolean);
+var REASON = /\b(because|cause|coz|since|so|that'?s why|if|each|both|times|multipl\w*|divid\w*|doubl\w*|half|halves|same|equal|split|cut|shared?|more|less|bigger|smaller|top|bottom|numerator|denominator)\b/i;
+var gaveReason = (text) => words5(text).length >= 4 && REASON.test(String(text));
+var LOST = /\b(i (do ?n[o']?t|dont) know|idk|no idea|not sure|i'?m (lost|confused)|confus\w*|sijui|sielewi|sijaelewa|i give up)\b/i;
+var soundsLost = (text) => LOST.test(String(text || ""));
+function prelimClass({ marked = null, message = "" } = {}) {
+  if (!marked) return null;
+  if (marked.correct) return gaveReason(message) ? "understood" : "right_unexplained";
+  return marked.misconception ? "misconception" : "partly_right";
+}
+function finalClass({ assessment = null, marked = null, message = "" } = {}) {
+  const prelim = prelimClass({ marked, message });
+  if (!assessment) return prelim ? { class: prelim, misconception: prelim === "misconception" ? marked.misconception : null, evidence: "", source: "code", note: null } : null;
+  let cls = assessment.class;
+  let mis = assessment.misconception || null;
+  let note = null;
+  if (marked && !marked.correct && (cls === "understood" || cls === "right_unexplained")) {
+    const to = marked.misconception ? "misconception" : "partly_right";
+    note = `assess said ${cls}, but the seal marked the answer wrong: read as ${to}`;
+    cls = to;
+    mis = to === "misconception" ? marked.misconception : null;
+  } else if (marked && marked.correct && (cls === "misconception" || cls === "missing_prerequisite")) {
+    note = `assess said ${cls}, but the seal marked the answer right: read as partly_right (right answer, shaky reason)`;
+    cls = "partly_right";
+    mis = null;
+  }
+  if (cls === "misconception" && !mis) mis = marked?.misconception || null;
+  return { class: cls, misconception: cls === "misconception" ? mis : null, evidence: assessment.evidence || "", ask: assessment.ask || null, source: "model", note };
+}
+var isIndependent = (cls) => cls === "understood";
+var nextStage = (stage) => stage == null ? "warmup" : PHASES[Math.min(PHASES.length - 1, PHASES.indexOf(stage) + 1)];
+function stageAllowed(s, { understoodNow = false, closing = false } = {}) {
+  if (closing) return "wrapup";
+  const st = s.stage;
+  if (st == null) return "warmup";
+  if (st === "wrapup") return "wrapup";
+  if (st === "warmup" || st === "teach") return s.answers >= 1 || understoodNow ? nextStage(st) : st;
+  return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
+}
+function decide(s, ctx = {}) {
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null } = ctx;
+  const prelim = prelimClass({ marked, message });
+  const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing }), avoid: extra.avoid ?? null, prelim });
+  if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
+  if (closing || s.stage === "wrapup") return out("close", ["Close the lesson"], closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : "the lesson is in its wrap-up", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
+  if (probe && PROBE_KINDS.includes(probe.kind)) {
+    const why = {
+      answer_nudge: "the child is silent after your question: one short kind nudge, no answer, no new question",
+      answer_smaller: "still silent after a nudge: make the question smaller and easier, no answer",
+      task_checkin: 'the child has been on the board task a long while: one gentle check-in ("tell me when you are done"), do not do it for them',
+      talk_nudge: "the child is quiet: one gentle line inviting them to say what they think",
+      talk_again: "still quiet: offer a smaller, easier way in"
+    }[probe.kind];
+    return out("probe", PROBE_MOVES[probe.kind], why, { with: [] });
+  }
+  if (soundsLost(message) && !marked) return out("lost", ["Recover a lost child", "Smaller-question hint"], "the child says they do not know: lower the question, go back to the last thing they got right");
+  if (marked && WRONG.includes(prelim)) {
+    if (s.rep && s.sameFails + 1 >= 2) {
+      const left = REPS.filter((r) => r !== "story" && !s.tried.includes(r));
+      return out(
+        "change",
+        ["Smaller-question hint", "Show then hand over", "Predict then show", "Recover a lost child"],
+        `a second wrong answer in a row with the ${s.rep}: change the approach. Do not use the ${s.rep} again for this idea; try ${left.length ? `a ${left.slice(0, 2).join(" or a ")}` : "a story with a real thing"}${s.tried.length ? ` (tried so far: ${s.tried.join(", ")})` : ""}`,
+        { avoid: s.rep }
+      );
+    }
+    return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()}: find the thinking behind it before you teach` : "a wrong answer with no library match: ask how they got it before you teach");
+  }
+  if (marked && prelim === "right_unexplained") return out("press", ["Press for reasoning"], "right, but no reason yet: ask how they knew. It does not count as understood until they give a reason");
+  if (marked && prelim === "understood") {
+    if (s.streak >= 1) return out("move-on", ["Check for understanding", "Stretch the quick child", "Show then hand over"], `understood, and the fresh check too: you may move on to ${nextStage(s.stage)}`);
+    return out("fresh-check", ["Check for understanding"], "understood, with a reason: check it once on a fresh example before moving on");
+  }
+  if (s.pending && message) return out("reason", ["Name what was right", "Press for reasoning", "Check for understanding"], "the child is giving the reason for their right answer: judge it (assess); if it holds, name it and check on a fresh example", { with: ["Revoice and build", "Celebrate the strategy"] });
+  if (s.classes[s.classes.length - 1] === "missing_prerequisite" && prerequisite) return out("prerequisite", ["Smaller-question hint", "Show then hand over", "Count with the child"], `the last answer showed a missing earlier skill: go back to ${prerequisite} with a smaller, earlier step, then return`);
+  const st = s.stage || "warmup";
+  return out("stage", STAGE_MOVES[st], `the ${st} part of the lesson`);
+}
+function repsOf(steps2 = []) {
+  const out = [];
+  for (const x of steps2) {
+    if (x.cmd === "fraction_bar") out.push("bar");
+    else if (x.cmd === "shape") out.push(x.kind === "circle" ? "circle" : "shape");
+    else if (x.cmd === "number_line") out.push("number line");
+    else if (x.cmd === "figure" && x.type === "fraction") out.push(["bar", "circle", "grid"].includes(x.params?.shape) ? x.params.shape : "bar");
+    else if (x.cmd === "figure" && x.type === "numberline") out.push("number line");
+  }
+  return [...new Set(out)];
+}
+var norm6 = (m) => String(m || "").trim().toLowerCase();
+function judgeTurn(decision, steps2 = []) {
+  const notes = [];
+  if (!decision) return notes;
+  const allowed = new Set([...decision.moves, ...decision.with].map(norm6));
+  const main = new Set(decision.moves.map(norm6));
+  const tags = steps2.filter((x) => x.cmd === "say" && x.move).map((x) => x.move);
+  for (const t of tags) {
+    if (!PLAYBOOK_MOVES.some((m) => norm6(m) === norm6(t))) notes.push(`move "${t}" is not a playbook move`);
+    else if (!allowed.has(norm6(t))) notes.push(`move "${t}" was not allowed this turn (${decision.rule}: ${decision.moves.join(", ")})`);
+  }
+  if (steps2.some((x) => x.cmd === "say") && !tags.some((t) => main.has(norm6(t)))) notes.push(`no say was tagged with an allowed move (${decision.moves.join(", ")})`);
+  for (const p of steps2.filter((x) => x.cmd === "set_phase")) {
+    if (PHASES.indexOf(p.phase) > PHASES.indexOf(decision.stageMax)) notes.push(`set_phase ${p.phase} is ahead of what the lesson allows (${decision.stageMax})`);
+  }
+  if (decision.avoid && repsOf(steps2).includes(decision.avoid)) notes.push(`the ${decision.avoid} was used again after two wrong answers with it`);
+  return notes;
+}
+function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0 } = {}) {
+  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes] };
+  s.turns += 1;
+  if (probe) s.probes += 1;
+  s.min = Math.round(Math.max(0, elapsedMin) * 10) / 10;
+  if (marked && s.question && marked.ask === s.question.id) s.question = { ...s.question, attempts: s.question.attempts + 1 };
+  const cls = judged?.class || null;
+  if (cls) {
+    s.classes = [...s.classes, cls].slice(-MAX_CLASSES);
+    s.answers += 1;
+    if (cls === "understood") {
+      s.streak += 1;
+      s.sameFails = 0;
+      s.prereq = false;
+      if (s.pending && (!marked || marked.ask === s.pending.ask || !judged.ask || judged.ask === s.pending.ask)) s.pending = null;
+    } else if (cls === "right_unexplained") {
+      if (marked) s.pending = { ask: marked.ask, skill: marked.skill || null };
+    } else if (WRONG.includes(cls)) {
+      s.streak = 0;
+      if (marked && !marked.correct) s.sameFails += 1;
+      if (cls === "missing_prerequisite") s.prereq = true;
+    }
+  }
+  const ask3 = steps2.find((x) => x.cmd === "ask");
+  if (ask3) {
+    s.question = { id: ask3.id, skill: ask3.skill || null, attempts: 0 };
+    s.hints = 0;
+  }
+  s.hints += steps2.filter((x) => x.cmd === "say" && norm6(x.move) === norm6("Smaller-question hint")).length;
+  const phase = [...steps2].reverse().find((x) => x.cmd === "set_phase")?.phase;
+  if (phase && phase !== s.stage) {
+    s.stage = phase;
+    s.streak = 0;
+    s.answers = 0;
+    s.tried = [];
+    s.sameFails = 0;
+  }
+  const reps = repsOf(steps2);
+  if (reps.length) {
+    if (s.rep && !reps.includes(s.rep)) s.sameFails = 0;
+    s.rep = reps[reps.length - 1];
+    s.tried = [.../* @__PURE__ */ new Set([...s.tried, ...reps])].slice(-MAX_TRIED);
+  }
+  if (cls === "understood") s.tried = s.rep ? [s.rep] : [];
+  const hand = [...steps2].reverse().find((x) => x.cmd === "pause_for_child");
+  if (hand?.doing) s.doing = hand.doing;
+  return s;
+}
+function lessonLines(s, d) {
+  const lines = [];
+  lines.push(`Lesson state: stage ${s.stage || "not started"}; the child is now ${s.doing ? { answer: "answering a question", task: "doing a task on the board", talk: "talking freely" }[s.doing] : "starting"}${s.question ? `; question ${s.question.id}, ${s.question.attempts} attempt${s.question.attempts === 1 ? "" : "s"} so far` : ""}; hints given ${s.hints}${s.tried.length ? `; tried on this idea: ${s.tried.join(", ")}` : ""}${s.classes.length ? `; last answers: ${s.classes.slice(-3).join(", ")}` : ""}${s.pending ? `; question ${s.pending.ask} was right but has no reason yet` : ""}.`);
+  if (d) {
+    lines.push(`Allowed moves this turn: ${d.moves.join(", ")}${d.with.length ? ` (and alongside: ${d.with.join(", ")})` : ""}. Why: ${d.reason}.`);
+    lines.push(`Tag the say that carries your move with "move": one of the allowed moves. The furthest stage allowed after this turn: ${d.stageMax}.`);
+  }
+  return lines;
+}
+
 // src/voice-tutor/tutorTurn.js
 var reply = (status, body) => ({ status, body });
 var say = (text) => ({ cmd: "say", text });
-var handBack = { cmd: "pause_for_child", expect: "typed", max_wait_s: 30 };
+var handBack = { cmd: "pause_for_child", expect: "any", max_wait_s: 30, doing: "answer" };
+var handBackAs = (doing = null, steps2 = []) => ({ ...handBack, doing: doing || doingOf(steps2) });
 var OFF_REPLY = "The live tutor is switched off.";
 var ADULTS_ONLY = "The live tutor is for adult test accounts only until parent consent is built (milestone 5).";
 var DISCLOSURE = "Hello. I am HOREB, an AI tutor. I am a computer program, not a person.";
-var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please type your answer for me."), { cmd: "pause_for_child", expect: "typed", max_wait_s: 30 }];
+var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please type your answer for me."), handBack];
 var TURN_ESTIMATE_USD = 0.02;
 var VOICE_TURN_CHARS_ESTIMATE = 250;
-var MAX_AUDIO_S = 90;
+var MAX_AUDIO_S = 300;
 var FALLBACK_TURN = [say("Sorry, I lost my words for a moment."), say("Can you say that again?"), handBack];
 var RECOVER_TURN = [say("Let me stop there."), say("Tell me what you think the next step is."), handBack];
 var WIND_DOWN = [
@@ -35286,17 +35593,24 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       const r = markItem(q.item, String(body.answer.response ?? "").slice(0, 60));
       marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? "").slice(0, 60) };
       if (!r.correct) open = q.item;
-      try {
-        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now });
+    }
+  }
+  const lesson0 = cleanLesson(body?.lesson);
+  const recordJudged = async (judged) => {
+    try {
+      if (marked) {
+        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now, independent: isIndependent(judged?.class) });
         if (row) {
           await db.recordEvidence(row);
           rememberEvidence({ sid, userId: user.id, childId: child?.id || null, row });
         }
-      } catch (e) {
-        console.error("voice-tutor: evidence", String(e?.message || e).slice(0, 200));
+      } else if (judged?.class === "understood" && lesson0.pending) {
+        await upgradeEvidence(db, { sid, userId: user.id, childId: child?.id || null, itemRef: `tutor:${sid}:${lesson0.pending.ask}` });
       }
+    } catch (e) {
+      console.error("voice-tutor: evidence", String(e?.message || e).slice(0, 200));
     }
-  }
+  };
   const progress = concern ? { skills: {} } : await db.getProgress(childKey) || { skills: {} };
   const learnerData = concern ? { rows: [], profile: null, notes: [] } : await readLearner(db, { sid, userId: user.id, childId: child?.id || null, now });
   const nowMs = now;
@@ -35314,15 +35628,36 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const voice = body?.voice === true;
   const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
   const listenUsd = listenCost(audioS);
+  const probe = !message && !body?.snapshot ? cleanProbe(body?.probe) : null;
+  const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null });
+  const closeTurn = async ({ steps: steps2, assessment = null, hidden = [] }) => {
+    const judged = concern ? null : finalClass({ assessment, marked, message });
+    await recordJudged(judged);
+    const lesson = concern ? lesson0 : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin });
+    const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
+    const tester = {
+      rule: decision?.rule || null,
+      moves: decision?.moves || [],
+      with: decision?.with || [],
+      reason: decision?.reason || null,
+      stageMax: decision?.stageMax || null,
+      judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
+      kept: judgeTurn(decision, steps2),
+      probe
+    };
+    return { lesson, tester };
+  };
   const meta = () => ({ type: "meta", target: pick2.target, prerequisite: pick2.prerequisite, marked, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
   const authored = (steps2, guard, spent2) => ({ status: 200, go: async (emit) => {
     emit(meta());
     const v = validateTurn({ steps: steps2 }, vopts);
     for (const st of v.steps) emit({ type: "step", step: await sealAsk(st, []) });
     const voiceUsd = await meterVoice(v.steps);
+    const closed = await closeTurn({ steps: v.steps, hidden: [open].filter(Boolean) });
     const ending = v.steps.find((x) => x.cmd === "end_session");
     if (ending && !concern) await finishLesson({ db, user, child, sid, target: pick2.target, summary: ending.summary, lib, now });
-    emit({ type: "end", guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent2 ? addSpent(spent2, voiceUsd.usd) : null, voice: voiceUsd, model: null });
+    emit({ type: "end", guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent2 ? addSpent(spent2, voiceUsd.usd) : null, voice: voiceUsd, model: null, ...closed });
   } });
   const meterVoice = async (steps2) => {
     const chars = voice ? spokenChars(steps2) : 0;
@@ -35383,7 +35718,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     ...pick2,
     learner: learnerCtx,
     hasModel: skillsModel.hasEvidence,
-    elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60,
+    elapsedMin,
     turnIndex,
     phase: body?.phase || null,
     board,
@@ -35393,11 +35728,13 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     bankLines: bankLines(bank),
     picture,
     figures,
-    pace: cleanPace(body?.pace)
+    pace: cleanPace(body?.pace),
+    lesson: lessonLines(lesson0, decision),
+    probe
   });
   const PRIVATE_LINE = "(the child said something private; HOREB answered with care)";
   const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : []).map((h) => h.who === "child" && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== "none") ? { ...h, text: PRIVATE_LINE } : h);
-  const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
+  const request = buildRequest({ model: settings.model, effort: probe ? "low" : settings.effort, lib, history, message, context, names, image, probe });
   const nod = !!image && image.reason === "idle" && !message;
   return { status: 200, go: async (emit) => {
     emit(meta());
@@ -35411,7 +35748,12 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     let saidAny = false;
     const learned = { interests: [], helps: [] };
     let ending = null;
+    let assessment = null;
     const send = async (st) => {
+      if (st.cmd === "assess") {
+        assessment = st;
+        return;
+      }
       if (st.cmd === "note_interest") {
         learned.interests.push(st.interest);
         return;
@@ -35463,10 +35805,10 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       }
       if (st.cmd === "say") {
         if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
-        if (spokenWords([...sent, st]) > (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) {
-          guard.push("too-long");
+        if (spokenWords([...sent, st]) > (probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) {
+          guard.push(probe ? "too-long-probe" : "too-long");
           closed = true;
-          await send(handBack);
+          await send(handBackAs(probe ? lesson0.doing : null, sent));
           return;
         }
         saidAny = true;
@@ -35505,14 +35847,15 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     if (!closed && !saidAny && !(nod && sent.length === 0)) await stop("invalid-turn");
     if (!closed) {
       closed = true;
-      await send(handBack);
+      await send(handBackAs(probe ? lesson0.doing : null, sent));
     }
     const cost = costOf(settings.model, usage);
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
     await saveLearned({ db, sid, user, child, learned, now });
+    const done = await closeTurn({ steps: sent, assessment, hidden });
     if (ending) await finishLesson({ db, user, child, sid, target: pick2.target, summary: ending.summary, lib, now });
-    emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model });
+    emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
 }
 var addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
@@ -35560,7 +35903,7 @@ function itemFor(s, bank = []) {
 }
 
 // src/ai/safeguarding.js
-var norm6 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'\s]+/g, " ").replace(/\s+/g, " ").trim();
+var norm7 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'\s]+/g, " ").replace(/\s+/g, " ").trim();
 var SEVERITY = /\b(blood|bleeding|bruise\w*|swollen|swelling|scar\w*|burn\w*|broke\w*|fracture\w*|could ?n[o']?t walk|cannot walk|can ?t walk|could ?n[o']?t sit|hospital|stitches|unconscious|passed out)\b|\b(every ?day|everyday|every night|all the time|again and again|always beats?)\b|\b(afraid|scared|scaring|fear|terrified) (to|of) (go|going|return\w*) (back )?home\b|\bdo ?n[o']?t want to go home\b|\bsiogopi\b|\bninaogopa kwenda nyumbani\b/;
 var SAFEGUARDING_RULES = [
   // ---- crisis: self-harm and suicide ------------------------------------
@@ -35693,7 +36036,7 @@ var excerptFor = (text, re, width = 70) => {
 };
 var TIER_RANK = { none: 0, concern: 1, crisis: 2 };
 var screen = (raw) => {
-  const text = norm6(raw);
+  const text = norm7(raw);
   if (!text) return { tier: "none", categories: [], hits: [] };
   const hits = [];
   for (const rule of SAFEGUARDING_RULES) {
@@ -41194,6 +41537,13 @@ var dbFor = (admin) => ({
   async recordEvidence(row) {
     const { error } = await admin.from("response_events").insert(row);
     if (error && error.code !== "23505") console.error("response_events insert", error);
+  },
+  // A right answer whose reason came later (the orchestrator judged it understood): its row becomes independent evidence.
+  async upgradeEvidence({ userId, childId, itemRef }) {
+    let q = admin.from("response_events").update({ independent: true }).eq("student_id", userId).eq("item_ref", itemRef).eq("source", "tutor").eq("correct", true);
+    q = childId ? q.eq("learner_id", childId) : q.is("learner_id", null);
+    const { error } = await q;
+    if (error) console.error("response_events upgrade", error);
   },
   // The learner model for the tutor, in one read: this child's fraction evidence (newest 500), the profile, the notes of the last 90 days.
   async getLearner({ userId, childId, since }) {

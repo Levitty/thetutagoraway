@@ -18,7 +18,7 @@
 //          VOICE_TUTOR_ALLOWLIST=a@x.com,b@y.com       (adult test accounts)
 //          ANTHROPIC_API_KEY=sk-ant-...                (without it: authored lines only)
 //          VOICE_TUTOR_MODEL=claude-sonnet-5-5         (optional; default)
-//          VOICE_TUTOR_EFFORT=low                      (optional: low | medium | high)
+//          VOICE_TUTOR_EFFORT=medium                   (optional: low | medium | high; medium by default from 12 Nov 2026)
 //          VOICE_TUTOR_SESSION_CAP_USD=1.5  VOICE_TUTOR_DAY_CAP_USD=3   (optional; defaults)
 //          VOICE_TUTOR_MAX_SNAPSHOTS=30                (optional; pictures of the child's work a session)
 // A picture of the child's work arrives with a turn and goes to the model; it is never stored.
@@ -118,6 +118,13 @@ const dbFor = (admin) => ({
   async recordEvidence(row) {
     const { error } = await admin.from("response_events").insert(row);
     if (error && error.code !== "23505") console.error("response_events insert", error);
+  },
+  // A right answer whose reason came later (the orchestrator judged it understood): its row becomes independent evidence.
+  async upgradeEvidence({ userId, childId, itemRef }) {
+    let q = admin.from("response_events").update({ independent: true }).eq("student_id", userId).eq("item_ref", itemRef).eq("source", "tutor").eq("correct", true);
+    q = childId ? q.eq("learner_id", childId) : q.is("learner_id", null);
+    const { error } = await q;
+    if (error) console.error("response_events upgrade", error);
   },
   // The learner model for the tutor, in one read: this child's fraction evidence (newest 500), the profile, the notes of the last 90 days.
   async getLearner({ userId, childId, since }) {

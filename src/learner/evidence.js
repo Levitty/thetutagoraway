@@ -45,21 +45,24 @@ export function homeworkEvidence({ homework, sitting, answer }) {
 
 /**
  * One answer the live tutor marked from its seal, as a row, or null when the question had no curriculum skill.
- * independent is false: the tutor is guiding while the child answers.
+ * independent is false while the tutor is guiding. It is true only when the answer was judged 'understood'
+ * (right, with the child's own reason: src/voice-tutor/orchestrator.js finalClass). A right answer with no
+ * reason is written not independent, and made independent later if the reason comes (upgradeEvidence).
  * @param {object} a
  * @param {string} a.userId     the parent's auth id (student_id)
  * @param {string|null} a.childId   the child on that account, null when the account holder answered
  * @param {string} a.sid        the tutor session id
  * @param {object} a.marked     { ask, skill, correct, misconception, answer } from the turn
  * @param {number} a.now        ms
+ * @param {boolean} [a.independent]  judged understood
  */
-export function tutorEvidence({ userId, childId = null, sid, marked, now }) {
+export function tutorEvidence({ userId, childId = null, sid, marked, now, independent = false }) {
   if (!userId || !sid || !marked?.skill || marked.ask == null) return null;
   return {
     source: 'tutor', student_id: userId, ...(childId ? { learner_id: childId } : {}),
     ...(/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i.test(sid) ? { session_id: sid } : {}),
     subject: 'math', skill_id: marked.skill, cskill: marked.skill,
-    correct: !!marked.correct, misconception: marked.misconception || null, independent: false, marks: marked.correct ? 1 : 0, max_marks: 1,
+    correct: !!marked.correct, misconception: marked.misconception || null, independent: !!(independent && marked.correct), marks: marked.correct ? 1 : 0, max_marks: 1,
     item_ref: `tutor:${sid}:${marked.ask}`,
     submitted_value: marked.answer ? String(marked.answer).slice(0, 500) : null,
     client_ts: new Date(now ?? Date.now()).toISOString(), hints_used: 0, attempt_no: 1,

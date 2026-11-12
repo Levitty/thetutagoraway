@@ -163,6 +163,15 @@ export const STREAM_CHARS_PER_S = 300;
 export const FIRST_STEP_MS = 60;
 const IN_PAGE = typeof window !== 'undefined';   // node tests run it without the pauses
 
+// What the scripted tutor says when the child is silent (the live tutor writes its own, for the moment).
+const PROBE_SAY = {
+  answer_nudge: 'Take your time. Have a look at the board.',
+  answer_smaller: 'Let us make it smaller. Look at the first part only. What do you see?',
+  task_checkin: 'Tell me when you are done, or ask me for a hint.',
+  talk_nudge: 'What do you think? Any idea is fine.',
+  talk_again: 'Is it more or less than a half? Just tell me.',
+};
+
 /**
  * A scripted tutor with the same shape as the remote one: turn(request, onEvent) ->
  * { steps, dropped, notes, marked, target, prerequisite, cost_usd, spent }.
@@ -200,10 +209,16 @@ export function createMockTutor() {
     evidence.push(m);
     return m;
   };
-  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [], figures = [] } = {}) => {
+  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [], figures = [], probe = null } = {}) => {
       inkAt = cells;
       snapshots = Math.max(snapshots, Number(taken) || 0);
       const meta = { target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 } };
+      // The child has been silent (silence.js): a short scripted nudge; the lesson does not move on.
+      if (probe && !message && !snapshot) {
+        const line = PROBE_SAY[probe.kind] || PROBE_SAY.answer_nudge;
+        const v = validateTurn({ steps: [say(line), { ...pause(), doing: probe.kind === 'task_checkin' ? 'task' : probe.kind.startsWith('talk') ? 'talk' : 'answer' }] }, { board, snapshots });
+        return { steps: v.steps, dropped: v.dropped, notes: v.notes, marked: null, ...meta, guard: ['scripted', 'probe'] };
+      }
       // Spoken over (typed over, in milestone 1): go back over the same beat; the lesson does not move on.
       if (heard != null && last) return { ...respond(last.key, last.arg, board, true), marked: null, ...meta, guard: ['scripted', 'interrupted'] };
       // A picture of the child's work: what the stub "sees".

@@ -21,7 +21,8 @@ import { DEFAULT_TUTOR_VOICE, CHILD_SPEECH, classifyChild, nextPace, newPace } f
 // (VOICE_TUTOR_SESSION_CAP_USD / VOICE_TUTOR_DAY_CAP_USD); these mirror them.
 export const DEFAULT_SETTINGS = Object.freeze({
   model: 'claude-sonnet-5-5',
-  effort: 'low',
+  // Medium from 12 Nov 2026 (the conversation engine: the model judges reasoning now). VOICE_TUTOR_EFFORT overrides it.
+  effort: 'medium',
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,
@@ -77,6 +78,9 @@ export const newSession = ({ id, mode = 'mock', child = null, target = null, pre
   snapshots: 0, looking: false,
   // How HOREB follows this child's pace (childVoice.js): level, quiet turns, repeat, reason.
   pace: newPace(), unclear: 0, thinkMs: null,
+  // What the child is doing since the last hand-over (answer | task | talk), and each turn as the tester sees it:
+  // its guards (why a turn was stopped), the answer's class, the allowed moves and the reason.
+  doing: null, log: [],
 });
 
 export const QUICK_MS = 8000;
@@ -126,6 +130,7 @@ export function sessionReducer(s, ev) {
         diagnoses: [...s.diagnoses, ...diagnoses],
         dropped: [...s.dropped, ...(ev.dropped || []).map((d) => ({ ...d, turn: s.turns }))].slice(-100),
         cost: ev.spent ? { sessionUsd: ev.spent.session ?? s.cost.sessionUsd, dayUsd: ev.spent.day ?? s.cost.dayUsd } : s.cost,
+        log: [...s.log, { turn: s.turns, guard: (ev.guard || []).map(String), tester: ev.tester || null, probe: ev.probe || null }].slice(-40),
       };
     }
     case 'lesson':
@@ -136,7 +141,10 @@ export function sessionReducer(s, ev) {
     case 'interrupted':
       return { ...s, interruptions: s.interruptions + 1, pace: nextPace(s.pace, 'interrupt') };
     case 'handed_over':
-      return s.status === 'ended' ? s : { ...s, status: 'listening' };
+      return s.status === 'ended' ? s : { ...s, status: 'listening', doing: ev.doing || s.doing };
+    case 'floor':
+      // The child spoke over HOREB: it has stopped, and it is the child's turn to talk.
+      return s.status === 'speaking' ? { ...s, status: 'listening' } : s;
     case 'marked':
       // A right answer within 8 s of the hand-over is a quick one (a little brisker next); a wrong one steadies a brisk pace.
       return { ...s, evidence: [...s.evidence, evidenceOf(ev)], pace: nextPace(s.pace, ev.correct ? (s.thinkMs != null && s.thinkMs <= QUICK_MS ? 'quick' : 'none') : 'wrong') };

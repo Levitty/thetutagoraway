@@ -6,8 +6,12 @@
 // own ink, undo). "Check my work", or about 4 seconds without writing, sends a
 // picture of the board (never the camera) to the tutor with the next turn.
 // Voice (milestone 3): HOREB speaks and the board moves on the voice's own word
-// times; the child taps Talk to speak (tapping over HOREB stops it at once).
-// Typing always stays, and is said plainly when the microphone or voice fails.
+// times. The conversation engine (12 Nov 2026): the microphone stays open for the
+// whole lesson (one listening session), so the child just talks, at any time; a real
+// voice over HOREB stops it at once. The microphone button only mutes and unmutes.
+// When the child is silent, the wait follows what they are doing (silence.js) and
+// HOREB is asked for a short probe written for the moment. Typing and the board are
+// the other ways in, and typing is said plainly when the microphone or voice fails.
 //
 // Test only: behind VITE_VOICE_TUTOR=1 and an allowlist stub (the admin list,
 // or VITE_VOICE_TUTOR_ALLOWLIST). Adult test accounts only until consent
@@ -33,6 +37,7 @@ import { validateTurn, PHASES, cellsOf, DRAWN, MARKS } from './commands.js';
 import { buildTimeline, createPlayer, advance, updateTimeline } from './timeline.js';
 import { sessionReducer, newSession, mascotState, DEFAULT_SETTINGS } from './session.js';
 import { paceFor, assessTranscript, askAgainLine, fixMathsWords, TUTOR_VOICES, isTutorVoice } from './childVoice.js';
+import { newWait, handOver, activity, probed, nextProbe } from './silence.js';
 import { providersFor, checkProviders } from './providers/index.js';
 import { simulatedTts } from './providers/mockVoice.js';
 import { voiceReducer, initialVoice, bargeIn, canListen, canSpeak } from './providers/voice.js';
@@ -78,6 +83,8 @@ function useWakeLock(on) {
 }
 
 const MASCOT_LABEL = { listening: 'Listening', thinking: 'Thinking', speaking: 'Speaking' };
+// The child's turn starts listening this long after HOREB's last word (its echo in the room).
+const ECHO_TAIL_MS = 350;
 
 export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, childId: lockedChildId = '' }) {
   useHorebLook();
@@ -107,7 +114,6 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
   const askRef = useRef(null);
   const [input, setInput] = useState('');
   const [tester, setTester] = useState(false);
-  const [nudge, setNudge] = useState(false);
   const player = useRef(null);
   const turnSteps = useRef([]);
   const saidK = useRef(new Set());
@@ -136,8 +142,16 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
   // speech in progress, seconds of speech sent since the last turn, and the delays measured.
   const [voiceOn, setVoiceOn] = useState(q.get('voice') !== 'off');
   const [voice, vdispatch] = useReducer(voiceReducer, null, () => initialVoice('voice'));
-  const listenRef = useRef(null);
+  const listenRef = useRef(null);     // the lesson's one listening session (providers: stt.open)
+  const [muted, setMuted] = useState(false);
+  const [aside, setAside] = useState(false);   // HOREB is saying a line outside a turn ("Sorry, I did not catch that"): not listened to
+  const heardRef = useRef(null);      // what the child heard of HOREB before speaking over it, for the next turn
+  const waitRef = useRef(newWait());  // the silence after HOREB's hand-over (silence.js)
+  const lessonRef = useRef(null);     // the lesson state the server keeps moving (orchestrator.js), sent back each turn
+  const voiceRef = useRef(null);
+  voiceRef.current = voice;
   const audioIn = useRef(0);
+  const sentBase = useRef(0);
   const turnNo = useRef(0);
   const delays = useRef({});
   const offsets = useRef([]);
@@ -219,7 +233,13 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
         if (done && pl.turn.end && t - pl.startedAt >= pl.timeline.duration) {
           player.current = null;
           setLive(null);
-          if (!boardRef.current.ended) { handedAt.current = clock(); dispatch({ type: 'handed_over' }); }
+          if (!boardRef.current.ended) {
+            // What the child is doing now decides how their silence is handled (silence.js).
+            const doing = [...pl.turn.steps].reverse().find((x) => x.cmd === 'pause_for_child')?.doing || 'answer';
+            handedAt.current = clock();
+            waitRef.current = handOver(waitRef.current, { doing, probe: !!pl.turn.probe, now: clock() });
+            dispatch({ type: 'handed_over', doing });
+          }
         }
       }
       setNow(t);
@@ -295,15 +315,17 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     });
   };
 
-  const request = useCallback(async ({ message = '', heard = null, snapshot = null }) => {
+  const request = useCallback(async ({ message = '', heard = null, snapshot = null, probe = null }) => {
     const s = sessionRef.current;
     const mine = ++turnNo.current;
     if (!delays.current.childDone) delays.current.childDone = clock();
-    const audioS = Math.round(audioIn.current * 10) / 10;
-    audioIn.current = 0;
+    // Live listening reports every second it sent (the microphone is open all lesson); practice counts the child's speech.
+    const sentS = providers.current?.stt?.stats?.sentS;
+    let audioS;
+    if (sentS != null) { audioS = Math.round((sentS - sentBase.current) * 10) / 10; sentBase.current = sentS; } else { audioS = Math.round(audioIn.current * 10) / 10; audioIn.current = 0; }
     const open = askRef.current;
-    setAsk(null);
-    setNudge(false);
+    // A probe leaves the question open: the child's answer to it is still marked.
+    if (!probe) setAsk(null);
     const boardNow = boardSummary(boardRef.current);
     const inkNow = inkCells(boardRef.current.childInk, boardHRef.current);
     const body = {
@@ -322,10 +344,14 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       voice: !!providers.current.tts.hasAudio && !silentVoice.current && mode === 'remote', audio_in_s: audioS,
       // How HOREB is following this child's pace, for the tutor's context (src/voice-tutor/childVoice.js).
       pace: { level: s.pace.level, repeat: s.pace.repeat, reason: s.pace.reason },
+      // The lesson state (orchestrator.js): the server checks it, decides the allowed moves, and sends it back moved on.
+      lesson: lessonRef.current,
+      // The child has been silent: a short turn, with the reason (silence.js).
+      probe,
     };
     dispatch({ type: 'request' });
     delays.current.sent = clock();
-    const T = { mine, raw: [], steps: [], dropped: [], said: 0, reported: 0, player: null, stopped: false, end: null, boardAtStart: boardNow, inkAtStart: inkNow };
+    const T = { mine, raw: [], steps: [], dropped: [], said: 0, reported: 0, player: null, stopped: false, end: null, boardAtStart: boardNow, inkAtStart: inkNow, probe: !!probe };
     turnRef.current = T;
     openVoice(T);
     const onEvent = (ev) => {
@@ -348,7 +374,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
         T.stream.end();
         // A turn with nothing to say (a nod after an idle picture): play it at once, silently.
         if (!T.said) firstSound(T, providers.current.tts.clock());
-        dispatch({ type: 'turn_more', steps: T.steps.slice(T.reported), dropped: [...(ev.dropped || []), ...T.dropped], spent: ev.spent });
+        if (ev.lesson) lessonRef.current = ev.lesson;
+        dispatch({ type: 'turn_more', steps: T.steps.slice(T.reported), dropped: [...(ev.dropped || []), ...T.dropped], spent: ev.spent, guard: ev.guard, tester: ev.tester, probe: probe?.kind || null });
         T.reported = T.steps.length;
         // A silent nod stays silent: no stage direction is ever shown to the child (12 Nov 2026).
       }
@@ -383,6 +410,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       if (!providers.current.stt) vdispatch({ type: 'fail', kind: 'no-listening' });
     }
     setVoiceName(providers.current.tts.voiceName || providers.current.tts.name);
+    // One listening session for the whole lesson: opened here (inside the Start tap), its mode follows the lesson.
+    if (voiceOn && providers.current.stt) listenRef.current = providers.current.stt.open(listenHandlers());
     request({});
   };
 
@@ -412,66 +441,72 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     }
     return heard;
   };
-  const send = (text) => {
+  // The child says something (typed, or heard): over the tutor, or while its turn is still arriving, that turn stops,
+  // and what the child heard of it goes with their words.
+  const childSays = (text) => {
     const msg = String(text ?? '').trim();
-    if (!msg || session.status === 'ended' || session.status === 'thinking' || !providers.current) return;
-    const heard = stopTutor();
+    if (!msg || sessionRef.current.status === 'ended' || !providers.current) return;
+    const heard = stopTutor() ?? heardRef.current;
+    heardRef.current = null;
+    waitRef.current = activity(waitRef.current, clock());
     dispatch({ type: 'child_said', text: msg, at: clock(), thinkMs: handedAt.current != null ? clock() - handedAt.current : undefined });
     setInput('');
     delays.current = { childDone: clock() };
     request({ message: msg, heard });
   };
+  const send = (text) => childSays(text);
 
-  // ---------------------------------------------------------------- talking
-  // Press to talk: a tap starts listening (and stops HOREB at once if it is speaking);
-  // end of speech, or a second tap, ends it. In the self-playing demo the words typed in
-  // the box are "spoken" (partials, then the final words), so barge-in can be tried free.
-  const talk = (spokenText = null) => {
-    const p = providers.current;
-    if (!p?.stt || !canListen(voice) || session.status === 'ended') return;
-    if (listenRef.current) { listenRef.current.stop(); return; }
-    const fake = p.stt.name === 'typed-as-speech';
-    const text = (spokenText ?? input).trim();
-    if (fake && !text) { setSnapNote('Type what you would say, then press Talk.'); return; }
-    const heard = stopTutor();
-    vdispatch({ type: 'listen' });
-    const sess = p.stt.start({
-      onSpeech: () => {},
-      onPartial: (t) => { setPauseNote(false); vdispatch({ type: 'partial', text: t }); },
-      onPause: () => setPauseNote(true),
-      pace: () => sessionRef.current.pace,
-      onFinal: (said, seconds) => {
-        listenRef.current = null;
-        setPauseNote(false);
-        audioIn.current += Number(seconds) || 0;
-        vdispatch({ type: 'heard' });
-        if (!said) {
-          // Hands-free: the microphone stays open a little longer before giving up (a child should not have to keep tapping).
-          // On the child's turn the microphone never gives up by itself (owner, 12 Nov 2026: "it needs to constantly be listening").
-          if (sessionRef.current.status === 'listening') { autoTries.current += 1; setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 200); return; }
-          setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return;
-        }
-        autoTries.current = 0;
-        // Not worth marking (a hum, one stray letter, a word made up from silence): ask again kindly, mark nothing, send nothing.
-        const q = fake ? { ok: true } : assessTranscript(said, seconds);
-        if (!q.ok) {
-          const line = askAgainLine(unclearAgain.current); unclearAgain.current += 1;
-          dispatch({ type: 'unclear' }); setSnapNote(line);
-          try { const st = providers.current.tts.open(voiceOptions()); st.add(line); } catch { /* the line is on the screen */ }
-          return;
-        }
-        unclearAgain.current = 0;
-        const t = fixMathsWords(said);
-        dispatch({ type: 'child_said', text: t, at: clock(), thinkMs: handedAt.current != null ? clock() - handedAt.current : undefined });
-        delays.current = { childDone: clock() };
-        request({ message: t, heard });
-      },
-      onError: (kind, detail) => { listenRef.current = null; listenError.current = `${kind}${detail ? `: ${String(detail).slice(0, 160)}` : ''}`; vdispatch({ type: 'fail', kind }); },
-    });
-    listenRef.current = sess;
-    if (fake) { setInput(''); sess.say(text); }
-  };
-  useEffect(() => () => { listenRef.current?.cancel?.(); providers.current?.tts?.close?.(); providers.current?.stt?.close?.(); }, []);
+  // ---------------------------------------------------------------- listening, all lesson
+  // The listener hears whole thoughts (thinking aloud is held: childVoice.js utteranceGate) and says when the child
+  // starts speaking over HOREB. The handlers are made once, at Start; they reach the page through `pageRef`.
+  const pageRef = useRef({});
+  pageRef.current = { childSays, stopTutor: () => stopTutor() };
+  const listenHandlers = () => ({
+    pace: () => sessionRef.current.pace,
+    onSpeech: () => { setPauseNote(false); waitRef.current = activity(waitRef.current, clock()); vdispatch({ type: 'listen' }); },
+    onPartial: (t) => { setPauseNote(false); waitRef.current = activity(waitRef.current, clock()); vdispatch({ type: 'partial', text: t }); },
+    onPause: () => setPauseNote(true),
+    onBargeIn: () => {
+      // A real voice over HOREB: it stops at once and listens.
+      heardRef.current = pageRef.current.stopTutor() ?? heardRef.current;
+      dispatch({ type: 'floor' });
+      vdispatch({ type: 'listen' });
+    },
+    onNoise: () => { setPauseNote(false); vdispatch({ type: 'heard' }); },
+    onUtterance: (said, seconds) => {
+      setPauseNote(false);
+      audioIn.current += Number(seconds) || 0;
+      vdispatch({ type: 'heard' });
+      const fake = providers.current?.stt?.name === 'typed-as-speech';
+      // Not worth marking (a hum, one stray letter, a word made up from silence): ask again kindly, mark nothing, send nothing.
+      const q = fake ? { ok: true } : assessTranscript(said, seconds);
+      if (!q.ok) {
+        const line = askAgainLine(unclearAgain.current); unclearAgain.current += 1;
+        dispatch({ type: 'unclear' }); setSnapNote(line);
+        // Not listened to while it is said (its own words would come back as the child's).
+        setAside(true); setTimeout(() => setAside(false), 900 + line.split(' ').length * 420);
+        try { const st = providers.current.tts.open(voiceOptions()); st.add(line); } catch { /* the line is on the screen */ }
+        return;
+      }
+      unclearAgain.current = 0;
+      pageRef.current.childSays(fixMathsWords(said));
+    },
+    onError: (kind, detail) => { listenError.current = `${kind}${detail ? `: ${String(detail).slice(0, 160)}` : ''}`; vdispatch({ type: 'fail', kind }); },
+  });
+  // The listener's mode follows the lesson: HOREB speaking is watched for a real voice over it (barge-in); the child's
+  // turn, and HOREB thinking, are listened to; muted, ended or no voice: nothing. The child's turn starts a moment after
+  // HOREB's last word, past its echo.
+  useEffect(() => {
+    const L = listenRef.current;
+    if (!L) return undefined;
+    const st = session.status;
+    const want = muted || st === 'ended' || voice.mode !== 'voice' ? 'off' : st === 'speaking' || aside ? 'tutor' : 'child';
+    if (want === 'off' && voice.listening) vdispatch({ type: 'stopped' });
+    if (want === 'child' && L.mode === 'tutor') { const id = setTimeout(() => L.setMode('child'), ECHO_TAIL_MS); return () => clearTimeout(id); }
+    L.setMode(want);
+    return undefined;
+  }, [session.status, session.turns, voice.mode, muted, aside]);
+  useEffect(() => () => { listenRef.current?.close?.(); providers.current?.tts?.close?.(); providers.current?.stt?.close?.(); }, []);
 
   // ---------------------------------------------------------------- the child's ink
   const onInk = useCallback((actions) => {
@@ -479,6 +514,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     let ink = boardRef.current.childInk;
     for (const a of actions) ink = inkReducer(ink, { ...a, t });
     if (ink === boardRef.current.childInk) return;
+    // Writing is the child doing something: the silence starts again (silence.js).
+    waitRef.current = activity(waitRef.current, t);
     boardRef.current = { ...boardRef.current, childInk: ink };
     setBoard(boardRef.current);
   }, []);
@@ -515,32 +552,21 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     return () => clearInterval(id);
   }, [takePicture]);
 
-  // The child speaks over HOREB: no tap needed. While HOREB speaks (live voice), the microphone is watched; if the child's voice
-  // holds for about a quarter of a second, HOREB stops (talk() stops the voice, keeps what was heard) and listens.
+  // Silence on the child's turn, by what they are doing (silence.js): answering, a nudge at about 6 s and a smaller
+  // question at about 15 s; a board task, quiet while they work (the idle picture above when they stop writing) and one
+  // check-in at about 45 s; free talk, the same but later. Never while they are speaking or writing. Each probe is a short
+  // turn the model writes for the moment, with the reason.
   useEffect(() => {
-    const p = providers.current;
-    if (session.status !== 'speaking' || voice.mode !== 'voice' || !p?.stt?.watch || listenRef.current) return undefined;
-    const w = p.stt.watch({ onSpeech: () => { if (!listenRef.current) talk(); } });
-    return () => w.stop();
-  }, [session.status, session.turns, voice.mode]);
-
-  // Hands-free (owner, 12 Nov 2026: "if I have to click on and off when speaking that's not manageable for a child"):
-  // when HOREB hands over, the microphone opens by itself; the child just speaks. Talk stays as a way to stop or retry.
-  const autoTries = useRef(0);
-  useEffect(() => {
-    const p = providers.current;
-    if (session.status !== 'listening' || listenRef.current || !p?.stt || p.stt.name === 'typed-as-speech' || !canListen(voice) || voice.mode !== 'voice') return undefined;
-    autoTries.current = 0;
-    const id = setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 350); // past the echo of HOREB's last word
-    return () => clearTimeout(id);
-  }, [session.status, session.turns, voice.mode]);
-
-  // Silence: after 15 s on the child's turn, a gentle line under the box (no model call).
-  useEffect(() => {
-    if (session.status !== 'listening') return undefined;
-    const id = setTimeout(() => setNudge(true), 15000);
-    return () => clearTimeout(id);
-  }, [session.status, session.turns]);
+    const id = setInterval(() => {
+      const s = sessionRef.current;
+      if (s.status !== 'listening' || !providers.current || voiceRef.current?.listening || writing(boardRef.current.childInk)) return;
+      const p = nextProbe(waitRef.current, clock());
+      if (!p) return;
+      waitRef.current = probed(waitRef.current);
+      request({ probe: { kind: p.kind, silent_s: p.silent_s } });
+    }, 500);
+    return () => clearInterval(id);
+  }, [request]);
 
   // The demo plays itself: once the tutor hands over, the demo child types an
   // answer, or writes one on the board stroke by stroke and then presses Check
@@ -557,7 +583,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     let t = 1100;
     if (item.type === 'speak') {
       [...item.text].forEach((_, i) => at(t + i * 45, () => setInput(item.text.slice(0, i + 1))));
-      at(t + item.text.length * 45 + 300, () => { demoK.current += 1; talk(item.text); });
+      at(t + item.text.length * 45 + 300, () => { demoK.current += 1; setInput(''); listenRef.current?.say?.(item.text); });
     } else if (item.type === 'text') {
       [...item.text].forEach((_, i) => at(t + i * 55, () => setInput(item.text.slice(0, i + 1))));
       at(t + item.text.length * 55 + 450, () => { demoK.current += 1; send(item.text); });
@@ -584,7 +610,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
     if (!demo || session.status !== 'speaking') return undefined;
     const item = DEMO_SCRIPT[demoK.current];
     if (!item?.during) return undefined;
-    const id = setTimeout(() => { demoK.current += 1; talk(item.text); }, item.after || 3000);
+    const id = setTimeout(() => { demoK.current += 1; listenRef.current?.say?.(item.text); }, item.after || 3000);
     return () => clearTimeout(id);
   }, [demo, session.status, session.turns]);
 
@@ -607,12 +633,12 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
   const ended = session.status === 'ended';
   const canTalk = !!(started && providers.current?.stt && canListen(voice));
   const bubble = tutorBubble(live, session.transcript);
-  const mine = childBubble({ transcript: session.transcript, ask, listening: voice.listening, partial: voice.partial, status: session.status, canTalk });
+  const mine = childBubble({ transcript: session.transcript, ask, listening: voice.listening, partial: voice.partial, status: session.status, canTalk: canTalk && !muted });
   const part = partLabel(session.phase);
   const stateWord = voice.listening ? 'Listening to you' : session.looking ? 'Looking at your board' : ended ? 'Finished' : MASCOT_LABEL[mascot];
   // The pen tools come out when the child chooses to write (or has written); Type when they choose to type, or when talking is not possible.
   const inkShown = started && !ended && (writeOpen || hasInk(board.childInk));
-  const typing = started && !ended && (typeOpen || !canTalk);
+  const typing = started && !ended && (typeOpen || !canTalk || muted);
   const botSize = kind === 'table' ? 150 : kind === 'side' ? 44 : 56;
   const at = PHASES.indexOf(session.phase);
   const dots = <span className="vt-dots" aria-hidden="true">{PHASES.map((p, i) => <i key={p} className={i <= at ? 'on' : undefined} />)}</span>;
@@ -688,7 +714,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
                     <input type="checkbox" checked={voiceOn} onChange={(e) => setVoiceOn(e.target.checked)} className="w-4 h-4" />
                     Voice: HOREB speaks, and you can talk
                   </label>
-                  <p className="text-xs text-slate-500 mt-0.5">{mode === 'remote' ? 'Uses the microphone when you tap Talk. Headphones help on a phone.' : 'Practice uses this browser\'s own voice and listening, free. Tap Talk to answer out loud.'}</p>
+                  <p className="text-xs text-slate-500 mt-0.5">{mode === 'remote' ? 'The microphone stays on for the whole lesson, so you can just talk, even over HOREB. Headphones help on a phone.' : 'Practice uses this browser\'s own voice and listening, free. Just talk to answer out loud.'}</p>
                   <button type="button" onClick={start} className="mt-4 w-full rounded-full bg-amber-400 py-2.5 font-extrabold">Start the lesson</button>
                 </div>
               </div>
@@ -697,7 +723,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
           {kind !== 'table' ? <div className="vt-corner">{dots}{part ? <span>{part}</span> : null}{testerBits}</div> : null}
         </section>
 
-        {/* The child's side: their own bubble, then Talk; Write and Type are the other ways. */}
+        {/* The child's side: their own bubble, then the microphone (on all lesson; the button only mutes); Write and Type are the other ways. */}
         <section className="vt-child">
           {mine ? (
             <div className={`vt-mine vt-mine-${mine.kind}`}>
@@ -717,19 +743,22 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
             </div>
           ) : null}
           {pauseNote && voice.listening ? <div className="vt-nudge">Take your time. HOREB is waiting.</div> : null}
-          {nudge && session.status === 'listening' ? <div className="vt-nudge">Take your time, or tell HOREB if you would like it another way.</div> : null}
           {canTalk && !ended ? (
-            <button type="button" onClick={() => talk()} disabled={session.status === 'thinking'} aria-pressed={voice.listening} className={`vt-talk ${voice.listening ? 'vt-talk-on' : ''}`}>
-              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><path d="M12 19v3" /></svg>
-              {voice.listening ? 'Done' : 'Talk'}
+            <button type="button" onClick={() => setMuted((m) => !m)} aria-pressed={!muted} aria-label={muted ? 'Turn the microphone on' : 'Mute the microphone'}
+              className={`vt-talk ${muted ? 'vt-talk-off' : voice.listening ? 'vt-talk-on' : ''}`}>
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                {muted ? <><path d="m2 2 20 20" /><path d="M18.89 13.23A7 7 0 0 0 19 12v-2" /><path d="M5 10v2a7 7 0 0 0 12 5" /><path d="M15 9.34V5a3 3 0 0 0-5.68-1.33" /><path d="M9 9v3a3 3 0 0 0 5.12 2.12" /><path d="M12 19v3" /></>
+                  : <><path d="M12 2a3 3 0 0 0-3 3v7a3 3 0 0 0 6 0V5a3 3 0 0 0-3-3Z" /><path d="M19 10v2a7 7 0 0 1-14 0v-2" /><path d="M12 19v3" /></>}
+              </svg>
+              {muted ? 'Microphone off' : 'Microphone on'}
             </button>
           ) : null}
           {typing ? (
             <form className="vt-type" onSubmit={(e) => { e.preventDefault(); send(input); }}>
-              <input value={input} onChange={(e) => setInput(e.target.value)} disabled={session.status === 'ended'} autoFocus={typeOpen}
+              <input value={input} onChange={(e) => { setInput(e.target.value); waitRef.current = activity(waitRef.current, clock()); }} disabled={session.status === 'ended'} autoFocus={typeOpen}
                 placeholder={ask ? 'Type your answer' : session.status === 'speaking' ? 'Type to stop HOREB' : 'Type to HOREB'}
                 maxLength={300} inputMode="text" autoComplete="off" aria-label="Type to HOREB" />
-              <button type="submit" disabled={!input.trim() || session.status === 'thinking'} className={canTalk ? 'vt-send' : 'vt-send vt-send-main'}>Send</button>
+              <button type="submit" disabled={!input.trim()} className={canTalk && !muted ? 'vt-send' : 'vt-send vt-send-main'}>Send</button>
             </form>
           ) : null}
           {inkShown ? (
@@ -755,7 +784,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       </main>
 
       {tester ? (
-        <TesterPanel moves={movesLog.current} voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.${voiceError.current ? ` Last voice error: ${voiceError.current}.` : ''}${listenError.current ? ` Last listening error: ${listenError.current}.` : ''}${providers.current.stt?.stats ? ` Last listen: audio ${providers.current.stt.stats.ctx || '?'}, ${providers.current.stt.stats.frames} sound frames, loudest ${providers.current.stt.stats.loudest.toFixed(3)} (speech starts at 0.020), service ${providers.current.stt.stats.socket}, ${providers.current.stt.stats.heard} final words${providers.current.stt.stats.said ? ` "${providers.current.stt.stats.said}"` : ''}.` : ''}` : ''} onClose={() => setTester(false)}
+        <TesterPanel lesson={lessonRef.current} moves={movesLog.current} voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.${voiceError.current ? ` Last voice error: ${voiceError.current}.` : ''}${listenError.current ? ` Last listening error: ${listenError.current}.` : ''}${providers.current.stt?.stats ? ` Last listen: audio ${providers.current.stt.stats.ctx || '?'}, ${providers.current.stt.stats.frames} sound frames, loudest ${providers.current.stt.stats.loudest.toFixed(3)} (speech starts at 0.020), service ${providers.current.stt.stats.socket}, ${providers.current.stt.stats.heard} final words${providers.current.stt.stats.said ? ` "${providers.current.stt.stats.said}"` : ''}.` : ''}` : ''} onClose={() => setTester(false)}
           onFail={started ? (kind) => {
             // As a real failure: the sound stops, the turn finishes in words on the board, the next turns are silent.
             if (kind === 'speak-failed') { providers.current.tts.stop(); providers.current.tts = simulatedTts(); }
@@ -794,7 +823,7 @@ function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck,
   );
 }
 
-function TesterPanel({ moves = [], voiceId = null, onVoice = null, session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
+function TesterPanel({ lesson = null, moves = [], voiceId = null, onVoice = null, session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
@@ -806,6 +835,20 @@ function TesterPanel({ moves = [], voiceId = null, onVoice = null, session, boar
       <p>Spent: US${session.cost.sessionUsd.toFixed(3)} this session, US${session.cost.dayUsd.toFixed(3)} today (caps US$1.50 and US$3).</p>
       <h3 className="font-extrabold mt-3">Teaching moves, in order</h3>
       <p>{moves.length ? moves.join(' \u2192 ') : 'None named yet.'}</p>
+      <h3 className="font-extrabold mt-3">Lesson state (kept by the server's orchestrator)</h3>
+      {lesson ? (
+        <p className="text-[12px]">Stage {lesson.stage || 'not started'}; the child is {lesson.doing || 'starting'}{lesson.question ? `; question ${lesson.question.id}, ${lesson.question.attempts} attempt(s)` : ''}; hints {lesson.hints}; tried {lesson.tried.length ? lesson.tried.join(', ') : 'nothing yet'}; wrong in a row with the same picture {lesson.sameFails}; understood in a row {lesson.streak}{lesson.pending ? `; ${lesson.pending.ask} right, reason not given yet` : ''}; probes {lesson.probes}.</p>
+      ) : <p className="text-slate-500">None yet.</p>}
+      <h3 className="font-extrabold mt-3">Each turn: why it went as it did</h3>
+      {session.log.length ? session.log.map((l, k) => (
+        <div key={k} className="mt-1 rounded-lg p-2 text-[12px]" style={{ background: '#F4F2FA' }}>
+          <div className="font-bold">Turn {l.turn}{l.probe ? `, a silence probe (${l.probe.replace('_', ' ')})` : ''}</div>
+          <div className={l.guard.some((g) => !['scripted', 'probe'].includes(g)) ? 'text-red-700' : undefined}>Guards: {l.guard.length ? l.guard.map((g) => (GUARD_WORDS[g.split(':')[0]] ? `${g.split(':')[0]} (${GUARD_WORDS[g.split(':')[0]]}${g.includes(':') ? `:${g.slice(g.indexOf(':') + 1)}` : ''})` : g)).join('; ') : 'none, the turn played as written'}.</div>
+          {l.tester?.judged ? <div>Answer judged: <b>{l.tester.judged.class.replace(/_/g, ' ')}</b>{l.tester.judged.misconception ? `, ${l.tester.judged.misconception.split('.').pop()}` : ''} (by the {l.tester.judged.source === 'model' ? 'model, held to the seal' : 'code: the model did not assess'}){l.tester.judged.evidence ? `: "${l.tester.judged.evidence}"` : ''}{l.tester.judged.note ? `. ${l.tester.judged.note}` : ''}.</div> : null}
+          {l.tester?.rule ? <div>Allowed moves ({l.tester.rule}): {l.tester.moves.join(', ')}. Why: {l.tester.reason}.</div> : null}
+          {l.tester?.kept?.length ? <div className="text-amber-800">Off the plan: {l.tester.kept.join('; ')}.</div> : null}
+        </div>
+      )) : <p className="text-slate-500">No turns yet.</p>}
       <h3 className="font-extrabold mt-3">Everything said (the child sees only the current sentence)</h3>
       {session.transcript.length ? session.transcript.map((h, k) => (
         <p key={k} className={h.who === 'child' ? 'text-[#0E7C86]' : undefined}><b>{h.who === 'child' ? 'Child' : 'HOREB'}:</b> {h.text}</p>
@@ -862,6 +905,28 @@ function TesterPanel({ moves = [], voiceId = null, onVoice = null, session, boar
   );
 }
 
+// Why a turn was stopped or replaced, in plain words, so a fallback is never unexplained (tutorTurn.js guards).
+const GUARD_WORDS = {
+  'answer-leak': 'a sentence would have given the answer away, so the turn stopped there',
+  'unsafe-reply': 'a sentence tripped the safeguarding rules and was not spoken',
+  'invalid-turn': 'the model gave nothing usable, so an authored line was used',
+  'model-error': 'the model call failed',
+  refusal: 'the model refused',
+  'too-long': 'the turn ran past the word limit and was cut',
+  'too-long-probe': 'the probe ran past its word limit and was cut',
+  offline: 'no model key on the server, so an authored line was used',
+  'session-cap': 'the session spending cap was reached',
+  'day-cap': 'the day spending cap was reached',
+  'turn-cap': 'the turn limit was reached',
+  safeguarding: 'the child said something that needs care: an authored reply, no model',
+  'safeguarding-crisis': 'the child may be at risk: an authored reply, and the lesson ended',
+  personal: 'the child shared a personal detail: an authored reply, no model',
+  rules: 'the child tried to change the rules: an authored reply, no model',
+  'server-error': 'the server failed during the turn',
+  interrupted: 'the scripted tutor went back over the same part',
+  unclear: 'the scripted tutor could not read the picture',
+};
+
 const CSS = `
 .vt-root { position: fixed; inset: 0; overflow: hidden; background: #EDE8FA; color: #1D1D27; }
 .vt-table { height: 100%; display: grid; gap: 20px; padding: 20px; }
@@ -912,6 +977,7 @@ const CSS = `
 .vt-talk { height: 72px; border-radius: 999px; border: 0; background: #FBBF24; color: #1D1D27; font: inherit; font-size: 21px; font-weight: 800; display: flex; align-items: center; justify-content: center; gap: 10px; cursor: pointer; }
 .vt-talk:disabled { opacity: .45; }
 .vt-talk-on { background: #5B32C8; color: #fff; animation: vt-glow 1.2s ease-in-out infinite; }
+.vt-talk-off { background: #E4E0EE; color: #4B4F5B; }
 .vt-others { display: flex; gap: 10px; }
 .vt-others button { flex: 1; height: 48px; border-radius: 999px; border: 1.5px solid #CFC6EA; background: transparent; color: #1D1D27; font: inherit; font-size: 15px; font-weight: 700; display: flex; align-items: center; justify-content: center; gap: 7px; cursor: pointer; }
 .vt-type { display: flex; gap: 8px; }

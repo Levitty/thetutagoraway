@@ -18,8 +18,10 @@
 //            stream.failed / stream.stop()
 //          stop()                                     silence at once (barge-in)
 //          browser-voice (practice) | cartesia (live) | simulated (silent, where neither works)
-//   stt    start({ onSpeech, onPartial, onFinal, onError }) -> { stop(), cancel() }
-//          browser-listening (practice) | cartesia-ink (live) | typed-as-speech (the demo) | none
+//   stt    open({ onSpeech, onPartial, onPause, onUtterance, onNoise, onBargeIn, onError, pace })
+//            -> { setMode('child'|'tutor'|'off'), close() }   one listening session for the whole lesson
+//          cartesia-ink (live, continuous itself) | browser-listening (practice) and typed-as-speech
+//          (the demo, which also has say(text)), both made continuous by listener.js | none
 //
 // Keys never reach the page: live mode asks voice-tutor-token for one short-lived
 // Cartesia token (speaking and listening), behind the same switch, allowlist and caps.
@@ -30,11 +32,12 @@ import { cartesiaTts } from './cartesia.js';
 import { cartesiaStt } from './cartesiaStt.js';
 import { webSpeechTts, webSpeechStt, hasWebSpeechStt } from './webSpeech.js';
 import { readTurnStream } from './turnStream.js';
+import { loopListener } from './listener.js';
 
 export const INTERFACE = {
   tutor: ['turn'],
   tts: ['clock', 'unlock', 'open', 'stop'],
-  stt: ['start'],
+  stt: ['open'],
 };
 
 /** Every provider has the whole interface (a missing method is a bug, found at once). */
@@ -96,7 +99,7 @@ export function providersFor(mode, { supabase = null, voice = true, sessionId = 
     return {
       tutor: createMockTutor(),
       tts: voice ? webSpeechTts({ quiet }) : simulatedTts(),
-      stt: demo ? fakeStt() : (voice && hasWebSpeechStt() ? webSpeechStt() : null),
+      stt: demo ? loopListener(fakeStt()) : (voice && hasWebSpeechStt() ? loopListener(webSpeechStt()) : null),
     };
   }
   const getToken = tokenGetter(supabase, sessionId, childId);

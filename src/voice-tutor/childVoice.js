@@ -8,6 +8,7 @@
 //   LISTENING   CHILD_LISTEN          Ink settings for a ten-year-old thinking aloud (Kenyan English)
 //               endSilenceMs()        how long a quiet stretch must last before the child's turn ends
 //               assessTranscript()    is what came back worth marking? If not, ask again kindly
+//               utteranceGate()       thinking aloud ("umm", "so...", half a sentence) never ends the turn
 //               fixMathsWords()       maths words a Kenyan child's speech is often heard wrongly as
 //   SPEAKING    CHILD_SPEECH          Sonic speed, emotion and the gap between sentences
 //               paceFor()             the pace state (explained below) -> speed, emotion, gap, word limit
@@ -82,10 +83,60 @@ export function assessTranscript(text, seconds = 0) {
   return { ok: true, reason: null };
 }
 
+/**
+ * Thinking aloud never ends the child's turn (12 Nov 2026). When the listener has heard the end of an
+ * utterance, what was said decides:
+ *   'send'  a finished answer or remark: it goes to the tutor
+ *   'hold'  only fillers ("umm", "so...") or an unfinished sentence ("it is three and"): the page keeps
+ *           listening; what follows is joined on. If nothing follows within HOLD_MS, an unfinished
+ *           sentence is sent as it is, and fillers alone are dropped (nothing is marked)
+ *   'drop'  nothing at all
+ */
+export const HOLD_MS = 4000;
+export function utteranceDecision(text) {
+  const raw = String(text || '').trim();
+  const w = words(raw);
+  if (!w.length) return 'drop';
+  if (w.every((x) => FILLERS.has(x))) return 'hold';
+  if (/(\.\.\.|…)$/.test(raw) || UNFINISHED_END.test(raw)) return 'hold';
+  return 'send';
+}
+const joinSaid = (a, b) => [a, b].map((x) => String(x || '').trim()).filter(Boolean).join(' ');
+
+/**
+ * The gate between the listener and the page: utterances in, whole thoughts out.
+ * h: { onSend(text, seconds), onDrop(text), holdMs, schedule(fn, ms) -> id, cancel(id) }
+ * Returns { final(text, seconds), speech(), held(), clear() }.
+ */
+export function utteranceGate(h = {}) {
+  const schedule = h.schedule || ((fn, ms) => setTimeout(fn, ms));
+  const cancel = h.cancel || ((id) => clearTimeout(id));
+  const holdMs = h.holdMs ?? HOLD_MS;
+  let carry = ''; let secs = 0; let timer = null;
+  const stopTimer = () => { if (timer != null) cancel(timer); timer = null; };
+  const out = (send) => { const t = carry; const s = secs; carry = ''; secs = 0; stopTimer(); if (send) h.onSend?.(t, s); else h.onDrop?.(t); };
+  const expire = () => { timer = null; if (!carry) return; out(utteranceDecision(carry) === 'hold' && words(carry).every((x) => FILLERS.has(x)) ? false : true); };
+  return {
+    final(text, seconds = 0) {
+      stopTimer();
+      carry = joinSaid(carry, text); secs += Number(seconds) || 0;
+      const d = utteranceDecision(carry);
+      if (d === 'drop') { carry = ''; secs = 0; return 'drop'; }
+      if (d === 'send') { out(true); return 'send'; }
+      timer = schedule(expire, holdMs);
+      return 'hold';
+    },
+    /** The child is speaking again: the held words wait for what comes next. */
+    speech() { stopTimer(); },
+    held: () => carry,
+    clear() { carry = ''; secs = 0; stopTimer(); },
+  };
+}
+
 /** What HOREB says when it could not make out the child. The second time it offers another way. */
 export const ASK_AGAIN = Object.freeze([
   'Sorry, I did not catch that. Say it again for me, nice and slowly.',
-  'I still could not hear you well. Tap Talk and try once more, or type your answer if you like.',
+  'I still could not hear you well. Say it once more, or type your answer if you like.',
 ]);
 export const askAgainLine = (times = 0) => ASK_AGAIN[Math.min(Math.max(times, 0), ASK_AGAIN.length - 1)];
 
@@ -220,4 +271,4 @@ export const DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
 export const isTutorVoice = (id) => TUTOR_VOICES.some((v) => v.id === id);
 export const voiceLabel = (id) => TUTOR_VOICES.find((v) => v.id === id)?.name || 'custom voice';
 
-export default { cleanPace, CHILD_LISTEN, CHILD_SPEECH, MATHS_KEYTERMS, TUTOR_VOICES, assessTranscript, askAgainLine, fixMathsWords, classifyChild, nextPace, newPace, paceFor, paceContext, endSilenceMs };
+export default { cleanPace, utteranceGate, utteranceDecision, CHILD_LISTEN, CHILD_SPEECH, MATHS_KEYTERMS, TUTOR_VOICES, assessTranscript, askAgainLine, fixMathsWords, classifyChild, nextPace, newPace, paceFor, paceContext, endSilenceMs };

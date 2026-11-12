@@ -9,6 +9,7 @@
 //                             session notes), cached for the lesson, so a turn adds no read
 //                             after the first; today's HOREB progress is the fallback
 //   rememberEvidence(...)     the answer marked this turn goes in the cached rows too
+//   upgradeEvidence(...)      a right answer whose reason came later becomes independent evidence
 //   saveLearned(...)          the tutor's silent note_interest / note_what_helped, merged and saved
 //   finishLesson(...)         at end_session: the lesson's note (kept 90 days), the report to
 //                             the parent (stored for the app, emailed if allowed)
@@ -53,6 +54,20 @@ export function rememberEvidence({ sid, userId, childId = null, row }) {
   if (!hit || !row) return;
   if (row.item_ref && hit.data.rows.some((r) => r.item_ref === row.item_ref)) return;
   hit.data.rows.push({ ...row, created_at: row.client_ts });
+}
+
+/**
+ * A right answer whose reason came later (the orchestrator's 'understood'): its row becomes independent
+ * evidence, in the log and in the cached rows. Never fails the turn.
+ */
+export async function upgradeEvidence(db, { sid, userId, childId = null, itemRef }) {
+  if (!itemRef || typeof db.upgradeEvidence !== 'function') return false;
+  try {
+    await db.upgradeEvidence({ userId, childId, itemRef });
+    const hit = cache.get(keyOf(sid, userId, childId));
+    for (const r of hit?.data.rows || []) if (r.item_ref === itemRef && r.correct) r.independent = true;
+    return true;
+  } catch (e) { console.error('voice-tutor: evidence upgrade', String(e?.message || e).slice(0, 200)); return false; }
 }
 
 /**
@@ -114,4 +129,4 @@ export async function finishLesson({ db, user, child, sid, target, summary = '',
   return out;
 }
 
-export default { readLearner, rememberEvidence, saveLearned, finishLesson, clearLearnerCache };
+export default { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLesson, clearLearnerCache };

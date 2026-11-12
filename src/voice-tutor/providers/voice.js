@@ -110,6 +110,13 @@ export function speechEnd({ speak = 0.02, quiet = 0.012, silenceMs = 800, pauseM
       } else { quietFor = 0; nudged = false; }
       return null;
     },
+    /**
+     * The speech service heard words: that is the child's voice too, however quiet the microphone
+     * (12 Nov 2026: a voice under the loudness gate was never heard). Starts or extends the speech;
+     * the end still needs `silenceMs` of quiet frames after it. Returns 'speech' when it started.
+     */
+    heard() { quietFor = 0; nudged = false; if (talking) return null; talking = true; return 'speech'; },
+    reset() { talking = false; quietFor = 0; nudged = false; },
     get talking() { return talking; },
   };
 }

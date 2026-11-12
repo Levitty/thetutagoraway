@@ -422,12 +422,14 @@ var EXPECTS = ["typed", "spoken", "drawn", "any"];
 var CONFIDENCE = ["low", "med", "high"];
 var NEXT = ["probe", "reteach", "move_on"];
 var MOVES = ["drawing it", "counting together", "a real-life example", "smaller steps", "saying it aloud", "writing it down", "a picture on the board", "a story", "repeating it", "a quick game"];
+var DOINGS = ["answer", "task", "talk"];
+var ANSWER_CLASSES = ["understood", "right_unexplained", "partly_right", "misconception", "missing_prerequisite", "guess_or_no_attempt"];
 var HIGHLIGHT_STYLES = ["circle", "box", "glow"];
 var SHAPE_KINDS = ["circle", "rectangle", "square", "triangle"];
 var SLOTS = ["top", "middle", "bottom", "top_left", "top_right", "middle_left", "middle_right", "bottom_left", "bottom_right"];
 var DRAWN = ["write_text", "write_math", "fraction_bar", "number_line", "shape", "plot_points", "figure"];
 var MARKS = ["highlight", "underline", "point"];
-var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "pause_for_child", "end_session"];
+var COMMANDS = ["say", ...DRAWN, ...MARKS, "erase", "clear", "ask", "set_phase", "record_diagnosis", "note_interest", "note_what_helped", "assess", "pause_for_child", "end_session"];
 var TIMED = [...DRAWN, ...MARKS, "erase", "clear"];
 var PACES = ["slow"];
 var S = (props, required) => ({ type: "object", properties: props, required, additionalProperties: false });
@@ -441,7 +443,7 @@ var drawn = { ...timing, pace: E(PACES) };
 var shadedSchema = { anyOf: [I, { type: "array", items: I }] };
 var C = (cmd, props, required) => S({ cmd: { type: "string", const: cmd }, ...props }, ["cmd", ...required]);
 var STEP_SCHEMAS = [
-  C("say", { text: T }, ["text"]),
+  C("say", { text: T, move: T }, ["text"]),
   C("write_text", { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "text", "slot"]),
   C("write_math", { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ["id", "expr", "slot"]),
   C("fraction_bar", { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ["parts", "shaded"]), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ["id", "parts", "shaded", "slot"]),
@@ -460,7 +462,8 @@ var STEP_SCHEMAS = [
   C("record_diagnosis", { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ["skill", "misconception", "confidence", "evidence", "next"]),
   C("note_interest", { interest: T }, ["interest"]),
   C("note_what_helped", { move: E(MOVES), helped: B }, ["move", "helped"]),
-  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I }, ["expect", "max_wait_s"]),
+  C("assess", { class: E(ANSWER_CLASSES), misconception: T, evidence: T, ask: T }, ["class", "evidence"]),
+  C("pause_for_child", { expect: E(EXPECTS), max_wait_s: I, doing: E(DOINGS) }, ["expect", "max_wait_s"]),
   C("end_session", { summary: T }, ["summary"])
 ];
 var TURN_SCHEMA = S({ steps: { type: "array", items: { anyOf: STEP_SCHEMAS } } }, ["steps"]);
@@ -514,7 +517,7 @@ var CHILD_LISTEN = Object.freeze({
 var NUMBER_WORDS = new Set("zero nought none one two three four five six seven eight nine ten eleven twelve twenty thirty forty fifty hundred half halves quarter quarters third thirds fifth fifths sixth sixths eighth eighths tenth tenths whole yes no yeah yep nope ok okay maybe".split(" "));
 var ASK_AGAIN = Object.freeze([
   "Sorry, I did not catch that. Say it again for me, nice and slowly.",
-  "I still could not hear you well. Tap Talk and try once more, or type your answer if you like."
+  "I still could not hear you well. Say it once more, or type your answer if you like."
 ]);
 var CHILD_SPEECH = Object.freeze({
   // Sonic speed is a multiplier (docs: 0.6 to 1.5, default 1). A ten-year-old learning a new idea
@@ -545,7 +548,8 @@ var DEFAULT_TUTOR_VOICE = TUTOR_VOICES[0].id;
 // src/voice-tutor/session.js
 var DEFAULT_SETTINGS = Object.freeze({
   model: "claude-sonnet-5-5",
-  effort: "low",
+  // Medium from 12 Nov 2026 (the conversation engine: the model judges reasoning now). VOICE_TUTOR_EFFORT overrides it.
+  effort: "medium",
   sessionCapUsd: 1.5,
   dayCapUsd: 3,
   sessionMinutes: 20,

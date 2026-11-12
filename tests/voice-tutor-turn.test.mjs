@@ -357,3 +357,94 @@ test('no key: a picture gets an honest authored line', async () => {
   const r = await turn({ db: world(), callModel: null, body: { snapshot: PIC() } });
   assert.match(r.body.steps.map((s) => s.text).join(' '), /cannot look at pictures just now/);
 });
+
+// ---------------------------------------------------------------- the conversation engine (12 Nov 2026)
+const HAND = { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer' };
+const sealQ1 = () => seal({ session: SID, child: 'u-parent', ask: 'q1', skill: EQ, item: { kind: 'typed', cskill: EQ, question: '1/3 = ?/6', answer: '2', accepts: ['2'], wrong: [{ value: '4', mis: `${EQ}.M_EQUIV_ADDITIVE` }] } }, SECRET, 1_800_000_000_000);
+const worldUp = () => { const w = world(); w.upgrades = []; w.upgradeEvidence = async (x) => { w.upgrades.push(x); }; return w; };
+
+test('assess is silent: never a step for the child; its class goes to the tester, held to the seal', async () => {
+  const db = world();
+  const callModel = model(reply([{ cmd: 'assess', class: 'understood', evidence: 'said four sixths', ask: 'q1' }, { cmd: 'say', text: 'Tell me how you got four.', move: 'Diagnose the wrong answer' }, HAND]));
+  const r = await turn({ db, callModel, body: { message: '4', answer: { seal: await sealQ1(), response: '4' } } });
+  assert.ok(!r.body.steps.some((s) => s.cmd === 'assess'), 'never sent as a step');
+  assert.deepEqual([r.body.tester.judged.class, r.body.tester.judged.source], ['misconception', 'model'], 'the seal says wrong: never understood');
+  assert.match(r.body.tester.judged.note, /seal marked the answer wrong/);
+  assert.deepEqual([r.body.tester.rule, r.body.tester.moves], ['diagnose', ['Diagnose the wrong answer']]);
+  assert.deepEqual(r.body.tester.kept, [], 'the turn kept to the allowed move');
+  assert.equal(db.evidence.length, 1);
+  assert.equal(db.evidence[0].independent, false);
+  // The allowed moves and the reason are in the context the model read.
+  const text = callModel.calls[0].messages[0].content[0].text;
+  assert.match(text, /Allowed moves this turn: Diagnose the wrong answer/);
+  assert.match(text, /Why: a wrong answer the library reads as M_EQUIV_ADDITIVE/);
+  // The lesson state comes back moved on.
+  assert.equal(r.body.lesson.v, 1);
+  assert.deepEqual(r.body.lesson.classes, ['misconception']);
+  assert.equal(r.body.lesson.doing, 'answer');
+});
+
+test('only an understood answer is independent evidence; a reason given later upgrades the row', async () => {
+  // Right with a reason: independent.
+  const a = world();
+  await turn({ db: a, callModel: model(reply([{ cmd: 'assess', class: 'understood', evidence: 'both doubled' }, { cmd: 'say', text: 'Yes. Try a new one.', move: 'Check for understanding' }, HAND])), body: { message: '2 because both doubled', answer: { seal: await sealQ1(), response: '2' } } });
+  assert.equal(a.evidence[0].independent, true);
+  // Right with no reason: not independent, and the lesson waits for the reason.
+  const b = worldUp();
+  const r1 = await turn({ db: b, callModel: model(reply([{ cmd: 'assess', class: 'right_unexplained', evidence: 'said 2' }, { cmd: 'say', text: 'How did you know?', move: 'Press for reasoning' }, HAND])), body: { message: '2', answer: { seal: await sealQ1(), response: '2' } } });
+  assert.equal(r1.body.tester.rule, 'press');
+  assert.equal(b.evidence[0].independent, false);
+  assert.deepEqual(r1.body.lesson.pending, { ask: 'q1', skill: EQ });
+  // The reason, next turn: the same row becomes independent.
+  const r2 = await turn({ db: b, callModel: model(reply([{ cmd: 'assess', class: 'understood', evidence: 'cut each third in two', ask: 'q1' }, { cmd: 'say', text: 'Yes, each third became two sixths.', move: 'Name what was right' }, HAND])), body: { turn_index: 2, message: 'because each third is cut into two', lesson: r1.body.lesson } });
+  assert.equal(r2.body.tester.rule, 'reason');
+  assert.deepEqual(b.upgrades, [{ userId: 'u-parent', childId: null, itemRef: `tutor:${SID}:q1` }]);
+  assert.equal(r2.body.lesson.pending, null);
+  assert.equal(b.evidence.length, 1, 'no second row');
+  // With no model (an authored turn), the code's own class is used: a bare right answer is not independent.
+  const c = world();
+  await turn({ db: c, callModel: null, body: { message: '2', answer: { seal: await sealQ1(), response: '2' } } });
+  assert.equal(c.evidence[0].independent, false);
+});
+
+test('a move outside the allowed set is noted for the tester, and the turn still plays', async () => {
+  const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'Great! Now a harder one.', move: 'Stretch the quick child' }, HAND])), body: { message: '2', answer: { seal: await sealQ1(), response: '2' } } });
+  assert.equal(r.body.steps[0].text, 'Great! Now a harder one.');
+  assert.match(r.body.tester.kept.join(' '), /"Stretch the quick child" was not allowed this turn \(press/);
+});
+
+test('a silence probe: the reason in the context, low effort, a short turn, the same cached prompt', async () => {
+  const lesson = { ...JSON.parse(JSON.stringify((await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'What is one third in sixths?' }, HAND])) })).body.lesson)) };
+  const callModel = model(reply([{ cmd: 'say', text: 'Take your time. Look at the bar.', move: 'Wait and nudge' }, HAND]));
+  const r = await turn({ db: world(), callModel, body: { turn_index: 2, probe: { kind: 'answer_nudge', silent_s: 7 }, lesson } });
+  const req = callModel.calls[0];
+  assert.equal(req.output_config.effort, 'low', 'a probe is cheap');
+  const text = req.messages[0].content[0].text;
+  assert.match(text, /silent for 7 s after your question\. Nudge kindly, without giving the answer/);
+  assert.match(text, /This is a probe: at most 22 words/);
+  assert.match(text, /<child>\(no words: silent for 7 s/);
+  assert.deepEqual(r.body.tester.probe, { kind: 'answer_nudge', silent_s: 7 });
+  assert.deepEqual(r.body.tester.moves, ['Wait and nudge']);
+  assert.equal(r.body.lesson.probes, 1);
+  // A normal turn uses medium effort, and the system prompt is the same bytes either way (cached).
+  const normal = model(reply([{ cmd: 'say', text: 'Good.' }, HAND]));
+  await turn({ db: world(), callModel: normal, body: { message: 'hello' } });
+  assert.equal(normal.calls[0].output_config.effort, 'medium');
+  assert.equal(normal.calls[0].system[0].text, req.system[0].text);
+  // A probe that rambles is cut short.
+  const long = reply([{ cmd: 'say', text: 'Take your time, there is no hurry at all today, my friend.' }, { cmd: 'say', text: 'Look at the bar and count the parts again slowly with me now.' }, HAND]);
+  const r2 = await turn({ db: world(), callModel: model(long), body: { turn_index: 2, probe: { kind: 'answer_nudge', silent_s: 7 }, lesson } });
+  assert.ok(r2.body.guard.includes('too-long-probe'));
+  assert.equal(r2.body.steps.at(-1).cmd, 'pause_for_child');
+  // A probe with words from the child is not a probe.
+  const c3 = model(reply([{ cmd: 'say', text: 'Yes.' }, HAND]));
+  const r3 = await turn({ db: world(), callModel: c3, body: { message: 'two', probe: { kind: 'answer_nudge', silent_s: 7 } } });
+  assert.equal(r3.body.tester.probe, null);
+});
+
+test('the guard reasons of every turn reach the tester view with the turn', async () => {
+  const r = await turn({ db: world(), callModel: model({ stop_reason: 'end_turn', content: [{ type: 'text', text: 'not json' }] }) });
+  assert.ok(r.body.guard.includes('invalid-turn'));
+  assert.ok(r.body.tester, 'the tester payload comes with every end');
+  assert.equal(r.body.steps.at(-1).doing, 'answer', 'the authored hand-back says what the child is doing');
+});

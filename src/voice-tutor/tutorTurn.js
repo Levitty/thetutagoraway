@@ -30,20 +30,30 @@
 //      that runs past MAX_SPOKEN_WORDS is cut and handed back to the child;
 //   8. questions sealed, every token and second metered, the end sent.
 //
+// THE CONVERSATION ENGINE (12 Nov 2026, CONVERSATION_ENGINE_PLAN.md steps 1 to 3):
+//   - the lesson state comes from the page (orchestrator.js cleanLesson), the code decides
+//     the allowed moves and why (decide), they go in the context, the turn is checked
+//     against them (judgeTurn, notes only) and the new state goes back in 'end';
+//   - a silence probe (silence.js) is a short turn asked for by the page with its reason;
+//   - the model judges the child's answer with the silent `assess`, held to the seal
+//     (finalClass); the evidence row is written at the END of the turn with that class:
+//     only 'understood' is independent, and a reason that comes later upgrades the row.
+//   The tester view gets the class, the rule and the moves in 'end' (tester); the child never sees them.
+//
 // prepareTurn() does 1 to 5 and either refuses (a status and an error) or
 // returns go(emit), which streams the turn as events:
 //   { type:'meta', target, prerequisite, marked, picture }
 //   { type:'step', step }            in order, each already checked and sealed
-//   { type:'end', guard, dropped, notes, cost_usd, spent, voice, model }
+//   { type:'end', guard, dropped, notes, cost_usd, spent, voice, model, lesson, tester }
 // There is one path: authored replies (guards, caps, no key) stream the same way.
 // runTutorTurn() collects the events, for the tests.
 // ============================================================================
-import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText } from './commands.js';
+import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText, doingOf } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
 import { screenChild, screenAll, careTurn, checkTurnText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
 import { stepParser } from './streamSteps.js';
-import { buildRequest, turnContext } from './prompt.js';
+import { buildRequest, turnContext, MAX_PROBE_WORDS } from './prompt.js';
 import { probeBank, bankLines, markItem } from './probes.js';
 import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
@@ -51,23 +61,29 @@ import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
 import { speechCost, listenCost, spokenChars } from './providers/voice.js';
 import { tutorEvidence } from '../learner/evidence.js';
 import { readSkills, openMisconceptions, learnerLines } from '../learner/model.js';
-import { readLearner, rememberEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
+import { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
 import { FRACTION_SKILLS, skillName } from './fractions.js';
 import { cleanPace } from './childVoice.js';
+import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines } from './orchestrator.js';
+import { cleanProbe } from './silence.js';
 
 const reply = (status, body) => ({ status, body });
 const say = (text) => ({ cmd: 'say', text });
-const handBack = { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 };
+// Every authored hand-back ends on a question to the child: they are answering.
+const handBack = { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer' };
+// A hand-back the code adds (the model did not): what the child is doing is read from the turn, or kept (after a probe).
+const handBackAs = (doing = null, steps = []) => ({ ...handBack, doing: doing || doingOf(steps) });
 
 export const OFF_REPLY = 'The live tutor is switched off.';
 export const ADULTS_ONLY = 'The live tutor is for adult test accounts only until parent consent is built (milestone 5).';
 export const DISCLOSURE = 'Hello. I am HOREB, an AI tutor. I am a computer program, not a person.';
-export const NO_PICTURE_TURN = [say('I cannot look at pictures just now.'), say('Please type your answer for me.'), { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }];
+export const NO_PICTURE_TURN = [say('I cannot look at pictures just now.'), say('Please type your answer for me.'), handBack];
 // A rough price for one turn before it is made, so a picture is never sent past a cap.
 export const TURN_ESTIMATE_USD = 0.02;
 // With voice: the tutor's words (about 250 characters a turn) are spoken, and the child's speech heard.
 export const VOICE_TURN_CHARS_ESTIMATE = 250;
-export const MAX_AUDIO_S = 90;
+// The microphone stays open for the whole lesson (12 Nov 2026): the seconds sent since the last turn can be long.
+export const MAX_AUDIO_S = 300;
 // When a turn has to be stopped. It must make sense after anything (12 Nov 2026: the old line asked for "the first step" in the middle of a greeting).
 export const FALLBACK_TURN = [say('Sorry, I lost my words for a moment.'), say('Can you say that again?'), handBack];
 // When a sentence fails its check mid-turn: what has been said stays said, and the tutor turns it back to the child.
@@ -137,13 +153,22 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       const r = markItem(q.item, String(body.answer.response ?? '').slice(0, 60));
       marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? '').slice(0, 60) };
       if (!r.correct) open = q.item;
-      // One row in the learner's evidence log per marked answer. Never allowed to fail the turn.
-      try {
-        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now });
-        if (row) { await db.recordEvidence(row); rememberEvidence({ sid, userId: user.id, childId: child?.id || null, row }); }
-      } catch (e) { console.error('voice-tutor: evidence', String(e?.message || e).slice(0, 200)); }
     }
   }
+  // One row in the learner's evidence log per marked answer, written at the end of the turn with the answer's
+  // class (only 'understood' is independent). A right answer whose reason came this turn upgrades its earlier row.
+  // Never allowed to fail the turn.
+  const lesson0 = cleanLesson(body?.lesson);
+  const recordJudged = async (judged) => {
+    try {
+      if (marked) {
+        const row = tutorEvidence({ userId: user.id, childId: child?.id || null, sid, marked, now, independent: isIndependent(judged?.class) });
+        if (row) { await db.recordEvidence(row); rememberEvidence({ sid, userId: user.id, childId: child?.id || null, row }); }
+      } else if (judged?.class === 'understood' && lesson0.pending) {
+        await upgradeEvidence(db, { sid, userId: user.id, childId: child?.id || null, itemRef: `tutor:${sid}:${lesson0.pending.ask}` });
+      }
+    } catch (e) { console.error('voice-tutor: evidence', String(e?.message || e).slice(0, 200)); }
+  };
 
   // Where the lesson is.
   // A flagged message gets only the authored care turn below: no model, no further reads.
@@ -172,6 +197,25 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const voice = body?.voice === true;
   const audioS = Math.max(0, Math.min(MAX_AUDIO_S, Number(body?.audio_in_s) || 0));
   const listenUsd = listenCost(audioS);
+  // A silence probe: only when the child sent nothing (no words, no picture).
+  const probe = !message && !body?.snapshot ? cleanProbe(body?.probe) : null;
+  const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
+  // The orchestrator's decision for this turn (none for a care turn: that is never a teaching turn).
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, prerequisite: pick.prerequisite ? skillName(pick.prerequisite) : null });
+  // The end of every turn: the answer judged and recorded, the lesson state moved on, what the tester sees.
+  const closeTurn = async ({ steps, assessment = null, hidden = [] }) => {
+    const judged = concern ? null : finalClass({ assessment, marked, message });
+    await recordJudged(judged);
+    const lesson = concern ? lesson0 : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin });
+    // The model's evidence is the child's own words; checked again so no hidden answer rides in it.
+    const evidence = judged?.evidence && checkTurnText([{ cmd: 'say', text: judged.evidence }], hidden).ok ? judged.evidence : '';
+    const tester = {
+      rule: decision?.rule || null, moves: decision?.moves || [], with: decision?.with || [], reason: decision?.reason || null, stageMax: decision?.stageMax || null,
+      judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
+      kept: judgeTurn(decision, steps), probe,
+    };
+    return { lesson, tester };
+  };
   const meta = () => ({ type: 'meta', target: pick.target, prerequisite: pick.prerequisite, marked, picture: picture && { id: picture.id, used: !!picture.attached, reason: picture.reason, why: picture.why || null } });
   // An authored turn (guards, caps, no key), streamed the same way as the model's.
   const authored = (steps, guard, spent) => ({ status: 200, go: async (emit) => {
@@ -179,9 +223,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const v = validateTurn({ steps }, vopts);
     for (const st of v.steps) emit({ type: 'step', step: await sealAsk(st, []) });
     const voiceUsd = await meterVoice(v.steps);
+    const closed = await closeTurn({ steps: v.steps, hidden: [open].filter(Boolean) });
     const ending = v.steps.find((x) => x.cmd === 'end_session');
     if (ending && !concern) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
-    emit({ type: 'end', guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent ? addSpent(spent, voiceUsd.usd) : null, voice: voiceUsd, model: null });
+    emit({ type: 'end', guard, dropped: v.dropped, notes: v.notes, cost_usd: voiceUsd.usd, spent: spent ? addSpent(spent, voiceUsd.usd) : null, voice: voiceUsd, model: null, ...closed });
   } });
   // The voice's price for what was actually sent: the spoken characters and the child's speech.
   const meterVoice = async (steps) => {
@@ -240,15 +285,17 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const openMis = openMisconceptions(learnerData.rows, skills, { now: nowMs });
   const learnerCtx = learnerLines({ pick, model: skillsModel, open: openMis, profile: learnerData.profile, notes: learnerData.notes, nameOf: skillName, lib, order: FRACTION_SKILLS });
   const context = turnContext({
-    ...pick, learner: learnerCtx, hasModel: skillsModel.hasEvidence, elapsedMin: Math.max(0, Number(body?.elapsed_s) || 0) / 60, turnIndex, phase: body?.phase || null,
+    ...pick, learner: learnerCtx, hasModel: skillsModel.hasEvidence, elapsedMin, turnIndex, phase: body?.phase || null,
     board, marked, heard: typeof body?.heard === 'string' ? body.heard.slice(0, 400) : null, wantsAnswer: screen.wantsAnswer,
     bankLines: bankLines(bank), picture, figures, pace: cleanPace(body?.pace),
+    lesson: lessonLines(lesson0, decision), probe,
   });
   // Earlier lines the child said that a guard would have stopped are never re-sent to the model.
   const PRIVATE_LINE = '(the child said something private; HOREB answered with care)';
   const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === 'string') : [])
     .map((h) => (h.who === 'child' && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== 'none') ? { ...h, text: PRIVATE_LINE } : h));
-  const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image });
+  // A probe is kept cheap: low effort (outside the cached prompt, so the cache still holds).
+  const request = buildRequest({ model: settings.model, effort: probe ? 'low' : settings.effort, lib, history, message, context, names, image, probe });
   // A picture taken because the child paused may get only a nod.
   const nod = !!image && image.reason === 'idle' && !message;
 
@@ -262,7 +309,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     let saidAny = false;
     const learned = { interests: [], helps: [] }; // the silent notes of this turn: saved, never sent to the browser
     let ending = null;
+    let assessment = null;    // the model's judgement of the child's answer (assess): kept here, never sent as a step
     const send = async (st) => {
+      if (st.cmd === 'assess') { assessment = st; return; }
       if (st.cmd === 'note_interest') { learned.interests.push(st.interest); return; }
       if (st.cmd === 'note_what_helped') { learned.helps.push({ move: st.move, helped: st.helped }); return; }
       if (st.cmd === 'end_session') ending = st;
@@ -295,7 +344,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         // Turn 1: the child is told it is an AI before anything else.
         if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
         // Short turns: past the limit the tutor stops talking and waits.
-        if (spokenWords([...sent, st]) > (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) { guard.push('too-long'); closed = true; await send(handBack); return; }
+        if (spokenWords([...sent, st]) > (probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) { guard.push(probe ? 'too-long-probe' : 'too-long'); closed = true; await send(handBackAs(probe ? lesson0.doing : null, sent)); return; }
         saidAny = true;
       }
       // Handing back having said nothing is not a turn (except a nod after an idle picture).
@@ -322,14 +371,15 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     if (stopReason === 'refusal') await stop('refusal');
     // Nothing usable said: an authored line. Said something but did not hand back: hand back.
     if (!closed && !saidAny && !(nod && sent.length === 0)) await stop('invalid-turn');
-    if (!closed) { closed = true; await send(handBack); }
+    if (!closed) { closed = true; await send(handBackAs(probe ? lesson0.doing : null, sent)); }
     const cost = costOf(settings.model, usage);
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
     // What the tutor learned about the child, and, at the end of the lesson, the note and the report. Never fails the turn.
     await saveLearned({ db, sid, user, child, learned, now });
+    const done = await closeTurn({ steps: sent, assessment, hidden });
     if (ending) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
-    emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model });
+    emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
 }
 

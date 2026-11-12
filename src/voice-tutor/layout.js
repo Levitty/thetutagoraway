@@ -1,7 +1,7 @@
 // ============================================================================
 // THE LESSON SCREEN'S ARRANGEMENT ("Across the table", chosen 12 Nov 2026):
 // HOREB on one side with what it is saying in its bubble, the board between,
-// the child on the other side with their own bubble and Talk. On an upright
+// the child on the other side with their own bubble and the microphone. On an upright
 // phone the three stack (HOREB, the board, the child); on a phone on its side
 // the board sits left and HOREB above the child on the right.
 //
@@ -26,7 +26,7 @@ const clampH = (v) => Math.max(MIN_H, Math.min(MAX_HEIGHT, Math.round(v)));
 export const SIDE_W = (w) => (w >= 1200 ? 290 : 250);   // HOREB's side and the child's side on a laptop
 const GAP = 20;
 const STACK_TOP = 104;      // HOREB's row on an upright phone
-const STACK_BOTTOM = 196;   // the child's row: their bubble, Talk, Write and Type
+const STACK_BOTTOM = 196;   // the child's row: their bubble, the microphone, Write and Type
 
 /**
  * Which arrangement fits the window, and the board's height in board units.
@@ -81,11 +81,11 @@ export function tutorBubble(live, transcript = []) {
 
 /**
  * The child's bubble, on their side of the table.
- *   heard: their words while they speak (Talk is on)
+ *   heard: their words while they speak (the microphone is on all lesson)
  *   said:  the last thing they said or showed (kept while HOREB answers it)
  *   hint:  how to answer, only when it is their turn
  * While HOREB speaks and the child has said nothing yet, the bubble is empty:
- * the Talk button already says how to stop it.
+ * the microphone button already shows it is on.
  */
 export function childBubble({ transcript = [], ask = null, listening = false, partial = '', status = 'ready', canTalk = true }) {
   if (listening) return { kind: 'heard', text: partial || 'Listening...' };

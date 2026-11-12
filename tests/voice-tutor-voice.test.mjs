@@ -205,8 +205,8 @@ test('when the microphone or the voice fails, the lesson carries on in text and 
   assert.equal(canSpeak(v), false);
   assert.equal(voiceReducer(initialVoice(), { type: 'fail', kind: 'offline' }).mode, 'typed');
   assert.equal(voiceReducer(v, { type: 'retry' }).mode, 'voice');
-  // Cartesia listening with no microphone in this "browser": an error, never a hang.
-  const err = await new Promise((resolve) => cartesiaStt({ getToken: async () => ({ token: 't', version: 'v' }) }).start({ onError: resolve, onFinal: () => resolve('final?') }));
+  // Cartesia listening (one session for the lesson) with no microphone in this "browser": an error, never a hang.
+  const err = await new Promise((resolve) => cartesiaStt({ getToken: async () => ({ token: 't', version: 'v' }) }).open({ onError: resolve, onUtterance: () => resolve('final?') }));
   assert.ok(['mic-missing', 'listen-failed', 'mic-denied'].includes(err));
   // Cartesia that cannot get a token: the stream fails before any sound, so the page falls back to the silent voice.
   globalThis.window = { AudioContext: class { constructor() { this.currentTime = 0; } resume() {} } };
@@ -251,10 +251,10 @@ test('the voice is priced into the cost log: the tutor\'s spoken characters and 
   assert.ok(Math.abs(v.cost_usd - (speechCost(chars) + listenCost(6))) < 1e-12);
   assert.ok(Math.abs(r.body.voice.usd - v.cost_usd) < 1e-12);
   assert.ok(r.body.cost_usd > v.cost_usd, 'model and voice together');
-  // Listening is bounded: the page cannot claim an hour of speech.
+  // Listening is bounded: the page cannot claim an hour of speech (the microphone is open all lesson, so up to 300 s a turn).
   const db2 = world();
   await turn(db2, { voice: true, audio_in_s: 3600 });
-  assert.equal(db2.usage.find((u) => u.model === 'voice').audio_in_s, 90);
+  assert.equal(db2.usage.find((u) => u.model === 'voice').audio_in_s, 300);
   // No voice: nothing extra.
   const db3 = world();
   await turn(db3, { voice: false });

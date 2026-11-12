@@ -8,7 +8,7 @@
 // sends exactly this and tests/voice-tutor-turn.test.mjs checks it.
 // ============================================================================
 import { PLAYBOOK, EXEMPLARS } from './playbook.js';
-import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES } from './commands.js';
+import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES, ANSWER_CLASSES } from './commands.js';
 import { FRACTION_SKILLS, skillName, shortName } from './fractions.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
 import { fenceTeamText, scrubNames } from './guard.js';
@@ -52,6 +52,19 @@ TAKING TURNS (the child talks as much as you):
 - Never draw again what is already on the board (the context lists it). Point at it, highlight it or build on it. Clear the board only when you move to a new idea.
 - If the child comments on you or the board ("you drew badly", "I can't see", "too fast"), answer that first, honestly and briefly, and fix it (clear and draw it bigger, slow down), then carry on.
 - Never stack questions, never explain the next thing before the child has answered this one.
+- The microphone stays open for the whole lesson: the child may speak at any time, even over you, and you stop and listen. A child thinking aloud ("umm", "so...") is still thinking; the app waits for them.
+
+HANDING OVER (pause_for_child), and silence:
+- Every pause_for_child says what the child is now doing, in doing: answer (answering your question), task (doing something on the board: shading, drawing, writing, placing), or talk (free talk, an opinion). Always give it: the app handles silence by it.
+- The app waits for the child. If they stay silent, it asks you for a short probe, and the context says why ("silent for 7 s after your question", "working on the task for 45 s"). A probe is one or two short sentences: a kind nudge, or a smaller question, never the answer and never a new topic; then hand back with the same doing. During a task the app shows you the board when they stop writing; do not rush them.
+
+THE LESSON PLAN IS RUN BY THE APP:
+- Each turn the context gives the lesson state (stage, what the child is doing, the question and attempts, what has been tried, hints, the last answers) and the allowed moves for this turn with the reason. Choose one of the allowed moves, carry it in your words and drawing, and tag that say with it in "move". Moves listed as alongside may also be used (for example Revoice and build before the main move).
+- When the allowed moves say change the approach, use a different picture than before (the context names what was tried). When they say press for reasoning, ask how the child knew before you praise or move on. Move to a later part (set_phase) only as far as the context allows.
+
+JUDGING THE CHILD'S ANSWER (assess, silent):
+- Whenever the child has just answered (in words, on the board or with a figure), first emit assess: class is one of ${ANSWER_CLASSES.join(', ')}; misconception (the full code from the list below) only with class misconception; evidence quotes the child's own words or work in a short phrase; ask is the question's id if it was one of yours.
+- understood means right AND with a reason in the child's own words or drawing. A bare right answer is right_unexplained. Right with a shaky or wrong reason is partly_right. missing_prerequisite means an earlier skill is not there (for example they cannot yet make equal parts). guess_or_no_attempt is a guess, "I don't know", or no real try. The app marks right and wrong itself from the sealed question; you judge the reasoning. Never mention assess to the child.
 
 THE LESSON (15 to 20 minutes; the context tells you the time used):
 1. warmup: after the hello, one quick question on the weakest prerequisite named in the context (or the target's foundation if none).
@@ -92,7 +105,7 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
 - ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
-- pause_for_child ends every turn (expect typed while there is no voice; max_wait_s 5 to 60), except the last, which ends with end_session.
+- pause_for_child ends every turn (expect: spoken when you want them to say it, drawn for the board, any otherwise; max_wait_s 5 to 60; doing as above), except the last, which ends with end_session.
 - Phases: ${PHASES.join(', ')}.
 
 FIGURES (figure): Grade 5 maths figures the board draws stroke by stroke and the child can handle. Fill in type, params (an object with that type's settings; anything left out takes its default), controls (what the child may do; leave it out for a figure that is only shown) and goal (an object; the app marks it, never you). A figure takes about 5 to 12 seconds to draw: give it two sentences.
@@ -126,7 +139,7 @@ THE CHILD'S WORK ON THE BOARD:
 - Never ask the child to write names, places, phone numbers or anything personal on the board.
 
 Example of a teaching turn (shape only): the bar is drawn slowly with its own sentences, HOREB counts the first two parts with the child, and the child says the total.
-{"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"typed","max_wait_s":30}]}
+{"steps":[{"cmd":"say","text":"Here is a bar of bread, cut into four equal pieces. Some of the pieces are eaten."},{"cmd":"fraction_bar","id":"bar1","parts":4,"shaded":3,"label":false,"slot":"top","colour":"ink","pace":"slow","on":"bread"},{"cmd":"say","text":"Count the eaten pieces with me. One. Two."},{"cmd":"highlight","target":"bar1","part":1,"style":"circle","on":"One"},{"cmd":"highlight","target":"bar1","part":2,"style":"circle","on":"Two"},{"cmd":"say","text":"Carry on counting. How many quarters were eaten?"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"answer"}]}
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}
@@ -145,7 +158,7 @@ ${REPLY_FORM}`;
 const pct = (x) => (x == null ? 'no attempts' : `${Math.round(x * 100)}% right`);
 
 /** The volatile part of a turn: who, where in the lesson, what just happened. */
-export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null }) {
+export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || 'not started'}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
@@ -160,6 +173,8 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
       : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : ' No misconception in the library matches this answer.'} Diagnose before you teach.`);
   }
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
+  lines.push(...lesson);
+  if (probe) lines.push(PROBE_LINES[probe.kind](probe.silent_s), `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before.`);
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === 'check' ? 'the child pressed "Check my work"' : 'the child stopped writing for a few seconds'}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
@@ -172,11 +187,21 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
   return `<context>\n${lines.join('\n')}\n</context>`;
 }
 
+// Why the app asked for a probe, in the words the model reads (silence.js PROBE_KINDS).
+export const MAX_PROBE_WORDS = 22;
+const PROBE_LINES = {
+  answer_nudge: (s) => `The child has been silent for ${s} s after your question. Nudge kindly, without giving the answer.`,
+  answer_smaller: (s) => `The child has been silent for ${s} s, even after a nudge. Ask a smaller, easier question about the same thing (point at the board), without giving the answer.`,
+  task_checkin: (s) => `The child has been working on the task on the board for ${s} s, with no word and no stroke for a long while. Check in gently ("Tell me when you are done" or "Do you want a hint?"); do not do it for them.`,
+  talk_nudge: (s) => `The child has been quiet for ${s} s. Invite them gently to say what they think; any answer is welcome.`,
+  talk_again: (s) => `The child has been quiet for ${s} s, after one invitation. Offer an easier way in (a choice of two, or point at the board).`,
+};
+
 /**
  * history: [{ who:'tutor'|'child', text }] from the browser (the transcript).
  * names: [{ name, as }] scrubbed from everything sent.
  */
-export function buildRequest({ model, effort = 'low', lib, history = [], message = '', context = '', names = [], image = null }) {
+export function buildRequest({ model, effort = 'medium', lib, history = [], message = '', context = '', names = [], image = null, probe = null }) {
   const scrub = (s) => scrubNames(s, names);
   const transcript = history.slice(-HISTORY_LINES)
     .map((h) => (h.who === 'child' ? `Child: ${fenceTeamText(scrub(h.text)).slice(0, 300)}` : `HOREB: ${scrub(String(h.text || '')).slice(0, 400)}`)).join('\n');
@@ -185,6 +210,7 @@ export function buildRequest({ model, effort = 'low', lib, history = [], message
     transcript ? `<transcript>\n${transcript}\n</transcript>` : '<transcript>(the lesson is starting)</transcript>',
     message ? `<child>${fenceTeamText(scrub(message)).slice(0, 300)}</child>`
       : image ? '<child>(no words: the picture of the board shows their work)</child>'
+        : probe ? `<child>(no words: silent for ${probe.silent_s} s. The app asks you for a short probe; the context says why.)</child>`
         : '<child>(nothing yet: the child has just opened the lesson. This is turn 1: the hello. Greet them, say what you will learn today and write it at the top of the board, then ask one friendly question. No maths problem yet.)</child>',
   ].join('\n');
   // The picture (only the latest; earlier ones are never re-sent) goes before the words.

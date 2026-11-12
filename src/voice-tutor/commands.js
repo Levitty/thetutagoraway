@@ -2,7 +2,7 @@
 // THE BOARD COMMAND LIST (HOREB live tutor, milestone 1, approved 10 Nov 2026).
 //
 // The model never writes code, HTML or coordinates. Each turn it fills in one
-// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 20
+// fixed form: an ordered list of at most MAX_STEPS steps, each one of the 21
 // commands below. This file is the rule every step must clear before it is
 // drawn, on the server (before the reply leaves) and again in the browser
 // (before anything is rendered). A step that fails is dropped and logged,
@@ -31,6 +31,15 @@ export const CONFIDENCE = ['low', 'med', 'high'];
 export const NEXT = ['probe', 'reteach', 'move_on'];
 // What helped a child learn (note_what_helped). A fixed list: the child never writes it, the model only picks.
 export const MOVES = ['drawing it', 'counting together', 'a real-life example', 'smaller steps', 'saying it aloud', 'writing it down', 'a picture on the board', 'a story', 'repeating it', 'a quick game'];
+// What the child is doing once HOREB hands over (pause_for_child `doing`, 12 Nov 2026): silence is handled by it (silence.js).
+//   answer  answering a question    task  doing something on the board (shade, draw, write, place)    talk  free talk, an opinion
+export const DOINGS = ['answer', 'task', 'talk'];
+// How the child's answer is judged (the silent `assess`, step 3 of the conversation engine). Only 'understood' counts as
+// independent evidence; right_unexplained waits for a reason (the orchestrator asks for it first).
+export const ANSWER_CLASSES = ['understood', 'right_unexplained', 'partly_right', 'misconception', 'missing_prerequisite', 'guess_or_no_attempt'];
+// The sixteen teaching moves of docs/tutor-training/PLAYBOOK.md, by name. A say carries one as `move`; the orchestrator
+// (orchestrator.js) says which are allowed each turn.
+export const PLAYBOOK_MOVES = ['Open the lesson', 'Show then hand over', 'Predict then show', 'Count with the child', 'Wait and nudge', 'Smaller-question hint', 'Revoice and build', 'Press for reasoning', 'Name what was right', 'Diagnose the wrong answer', 'Check for understanding', 'Celebrate the strategy', 'Stretch the quick child', 'Recover a lost child', 'Bring back an off-topic child', 'Close the lesson'];
 export const HIGHLIGHT_STYLES = ['circle', 'box', 'glow'];
 export const SHAPE_KINDS = ['circle', 'rectangle', 'square', 'triangle'];
 
@@ -46,8 +55,8 @@ export const DRAWN = ['write_text', 'write_math', 'fraction_bar', 'number_line',
 export const MARKS = ['highlight', 'underline', 'point'];
 // Steps that are never seen or heard: applied when the turn arrives, never
 // dropped by an interruption.
-export const SILENT = ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'];
-export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'pause_for_child', 'end_session'];
+export const SILENT = ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'assess'];
+export const COMMANDS = ['say', ...DRAWN, ...MARKS, 'erase', 'clear', 'ask', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'assess', 'pause_for_child', 'end_session'];
 // Steps that may carry a word anchor (`on`) and a delay.
 export const TIMED = [...DRAWN, ...MARKS, 'erase', 'clear'];
 // A drawn step may be drawn slowly (`pace: 'slow'`, about 1.6 times slower): for the key idea of a lesson.
@@ -70,7 +79,8 @@ const FIELDS = {
   ask: ['id', 'prompt', 'form', 'choices', 'expected', 'accepts', 'wrong', 'skill', 'bank'],
   set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next', 'snapshot'],
-  pause_for_child: ['expect', 'max_wait_s'],
+  pause_for_child: ['expect', 'max_wait_s', 'doing'],
+  assess: ['class', 'misconception', 'evidence', 'ask'],
   note_interest: ['interest'], note_what_helped: ['move', 'helped'],
   end_session: ['summary'],
 };
@@ -82,12 +92,12 @@ const REQUIRED = {
   highlight: ['target'], underline: ['target'], point: ['target'], erase: ['targets'], clear: [],
   ask: ['id', 'prompt', 'form'], set_phase: ['phase'],
   record_diagnosis: ['skill', 'misconception', 'confidence', 'evidence', 'next'],
-  note_interest: ['interest'], note_what_helped: ['move', 'helped'],
+  note_interest: ['interest'], note_what_helped: ['move', 'helped'], assess: ['class', 'evidence'],
   pause_for_child: ['expect', 'max_wait_s'], end_session: ['summary'],
 };
 export const LIMITS = {
   say: 220, write_text: 60, write_math: 80, ask_prompt: 140, choice: 40, expected: 40,
-  evidence: 240, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
+  evidence: 240, assess: 160, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
   parts: [1, 12], shape_parts: [2, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
   axis_steps: 20, points: 12, choices: 4, wrong: 4, accepts: 4, delay: [-300, 1500], wait: [5, 60], targets: 8,
 };
@@ -368,6 +378,18 @@ function checkStep(s, ctx, notes) {
       out.expect = optEnum('expect', EXPECTS);
       need(isInt(s.max_wait_s) && inRange(s.max_wait_s, LIMITS.wait), 'pause_for_child: max_wait_s must be 5 to 60');
       out.max_wait_s = s.max_wait_s;
+      // What the child is now doing; left out, validateTurn reads it from the turn (doingOf).
+      if (s.doing != null) out.doing = optEnum('doing', DOINGS);
+      break;
+    case 'assess':
+      // The tutor's judgement of the child's answer: silent, never sent to the child (tutorTurn.js keeps it).
+      out.class = optEnum('class', ANSWER_CLASSES);
+      if (out.class === 'misconception') {
+        need(s.misconception != null, 'assess: a misconception needs its code');
+        out.misconception = misOf(s.misconception, ctx, 'assess');
+      } else need(s.misconception == null, 'assess: a misconception code only with class misconception');
+      out.evidence = str(s.evidence, LIMITS.assess, 'assess evidence', notes);
+      if (s.ask != null) { need(typeof s.ask === 'string' && ID_RE.test(s.ask), 'assess: bad ask id'); out.ask = s.ask; }
       break;
     case 'end_session':
       out.summary = str(s.summary, LIMITS.summary, 'summary', notes);
@@ -485,6 +507,8 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
       if (out.cmd === 'erase') for (const t of out.targets) { const it = items.get(t); if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c); items.delete(t); ctx.ids.delete(t); }
       if (out.cmd === 'clear') { items.clear(); used.clear(); ctx.ids.clear(); }
       if (out.cmd === 'ask' && steps.some((x) => x.cmd === 'ask')) bad('one question a turn');
+      if (out.cmd === 'assess' && steps.some((x) => x.cmd === 'assess')) bad('one assessment a turn');
+      if (out.cmd === 'pause_for_child' && !out.doing) { out.doing = doingOf(steps); notes.push(`pause_for_child: doing not given, read as ${out.doing}`); }
       if (out.cmd === 'pause_for_child' || out.cmd === 'end_session') closed = true;
       steps.push(out);
     } catch (e) {
@@ -493,6 +517,17 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
     }
   });
   return { steps, dropped, notes };
+}
+
+/**
+ * What the child is doing after a turn that did not say: a figure they may handle, or a question to draw, is a task;
+ * a question (an ask, or a sentence ending in a question mark) is answering; anything else is talk.
+ */
+export function doingOf(steps = []) {
+  if (steps.some((x) => (x.cmd === 'figure' && x.controls?.length) || (x.cmd === 'ask' && x.form === 'draw'))) return 'task';
+  if (steps.some((x) => x.cmd === 'ask')) return 'answer';
+  const says = steps.filter((x) => x.cmd === 'say');
+  return says.length && /\?\s*$/.test(says[says.length - 1].text) ? 'answer' : 'talk';
 }
 
 /**
@@ -506,7 +541,7 @@ export const spokenWords = (steps) => steps.filter((s) => s.cmd === 'say').reduc
 export const turnProblems = (steps, { nod = false, maxWords = null } = {}) => {
   const out = [];
   if (maxWords && spokenWords(steps) > maxWords) out.push(`the turn says ${spokenWords(steps)} words: say at most ${maxWords}, then wait for the child`);
-  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || ['set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped'].includes(s.cmd));
+  const isNod = nod && steps.length >= 1 && steps.every((s) => s.cmd === 'pause_for_child' || SILENT.includes(s.cmd));
   if (!isNod && !steps.some((s) => s.cmd === 'say')) out.push('the turn says nothing');
   const last = steps[steps.length - 1];
   if (!last || !['pause_for_child', 'end_session'].includes(last.cmd)) out.push('the turn does not end with pause_for_child or end_session');
@@ -546,7 +581,8 @@ export const STEP_SCHEMAS = [
   C('record_diagnosis', { skill: T, misconception: T, confidence: E(CONFIDENCE), evidence: T, next: E(NEXT), snapshot: T }, ['skill', 'misconception', 'confidence', 'evidence', 'next']),
   C('note_interest', { interest: T }, ['interest']),
   C('note_what_helped', { move: E(MOVES), helped: B }, ['move', 'helped']),
-  C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I }, ['expect', 'max_wait_s']),
+  C('assess', { class: E(ANSWER_CLASSES), misconception: T, evidence: T, ask: T }, ['class', 'evidence']),
+  C('pause_for_child', { expect: E(EXPECTS), max_wait_s: I, doing: E(DOINGS) }, ['expect', 'max_wait_s']),
   C('end_session', { summary: T }, ['summary']),
 ];
 export const TURN_SCHEMA = S({ steps: { type: 'array', items: { anyOf: STEP_SCHEMAS } } }, ['steps']);
