@@ -4,9 +4,11 @@ export const SUBJECT_IDS = [
   'math',
   'science',
   'english',
+  'cre',
 ];
 export const SUBJECT_PREFIXES = {
   MATH: 'math',
   SCIE: 'science',
   ENGL: 'english',
+  CRES: 'cre',
 };
