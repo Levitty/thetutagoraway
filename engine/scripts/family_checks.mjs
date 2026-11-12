@@ -12,10 +12,11 @@ import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
 import { SKILLS_G5, SUBSTRANDS, OUTCOMES_G5, horebOf } from '../../src/ai-tutor/content/curriculumMap.g5.js';
+import { SKILLS_G4, OUTCOMES_G4, horebOf4 } from '../../src/ai-tutor/content/curriculumMap.g4.js';
 import { SKILLS_G6, OUTCOMES_G6, horebOf6 } from '../../src/ai-tutor/content/curriculumMap.g6.js';
-// Maths: Grade 5 and Grade 6 curriculum maps side by side (codes carry the grade, so they never clash).
-const SKILLS_M = { ...SKILLS_G5, ...SKILLS_G6 }, OUTCOMES_M = { ...OUTCOMES_G5, ...OUTCOMES_G6 };
-const horebOfM = (c) => (SKILLS_G6[c] ? horebOf6(c) : horebOf(c));
+// Maths: Grade 4, 5 and 6 curriculum maps side by side (codes carry the grade, so they never clash).
+const SKILLS_M = { ...SKILLS_G4, ...SKILLS_G5, ...SKILLS_G6 }, OUTCOMES_M = { ...OUTCOMES_G4, ...OUTCOMES_G5, ...OUTCOMES_G6 };
+const horebOfM = (c) => (SKILLS_G6[c] ? horebOf6(c) : SKILLS_G4[c] ? horebOf4(c) : horebOf(c));
 const gradeOfCskill = (c) => Number(/^MATH\.G(\d)\./.exec(String(c || ''))?.[1] || 5);
 import { entryOfFamily, entryOfCskill } from '../../src/ai-tutor/content/subjects/registry.js';   // every subject beyond Maths: its map, outcomes and name come from its registry entry
 import { readFileSync } from 'node:fs';

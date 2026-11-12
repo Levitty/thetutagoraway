@@ -34,7 +34,7 @@ export const FAMILIES = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
-  fam({ id: 'g4.num.figures-notice', skill: 'G4_NUMBER_WORDS', outcome: 'G4.WHOLE.b', rung: 1, form: 'word',
+  fam({ id: 'g4.num.figures-notice', skill: 'G4_NUMBER_WORDS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.b', misMapped: false, reveals: ['M_SYM_JOIN_PARTS'], rung: 1, form: 'word',
     draw: () => ({ t: randInt(1, 9), tu: randInt(1, 99) }),
     make: ({ t, tu }) => {
       const n = t * 1000 + tu;
@@ -46,7 +46,7 @@ export const FAMILIES = [
     },
     check: ({ t, tu }, a) => a % 1000 === tu && Math.floor(a / 1000) === t && words(a) === words(t * 1000 + tu) }),
 
-  fam({ id: 'g4.num.words-pick', skill: 'G4_NUMBER_WORDS', outcome: 'G4.WHOLE.c', rung: 1, form: 'direct',
+  fam({ id: 'g4.num.words-pick', skill: 'G4_NUMBER_WORDS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.b', misMapped: false, reveals: ['M_WORDS_HUNDRED_DROPPED'], rung: 1, form: 'direct',
     draw: () => ({ t: randInt(1, 9), tu: randInt(11, 99), k: randInt(0, 3) }),
     make: ({ t, tu, k }) => {
       const n = t * 1000 + tu, n2 = t * 1000 + tu * 10, n3 = t * 100 + tu, n4 = t * 1000 + 100 + tu;
@@ -56,7 +56,7 @@ export const FAMILIES = [
         steps: [`The thousands part is ${ONES[t]} thousand.`, `There are no hundreds. The tens and ones make ${w99(tu)}.`, `In words: ${words(n)}.`] };
     } }),
 
-  fam({ id: 'g4.place.chart-total', skill: 'G4_PLACE_VALUE', outcome: 'G4.WHOLE.a', rung: 1, form: 'table',
+  fam({ id: 'g4.place.chart-total', skill: 'G4_PLACE_VALUE', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.a', misMapped: false, reveals: ['M_TV_FACE_VALUE'], rung: 1, form: 'table',
     draw: () => {
       const ds = []; while (ds.length < 4) { const x = randInt(1, 9); if (!ds.includes(x)) ds.push(x); }
       const col = randInt(0, 2), place = [1000, 100, 10][col], n = ds[0] * 1000 + ds[1] * 100 + ds[2] * 10 + ds[3], dg = ds[col];
@@ -71,7 +71,7 @@ export const FAMILIES = [
       steps: [`The digit in that column is ${dg}.`, `${dg} × ${commas(place)} = ${commas(dg * place)}.`] }),
     check: ({ n, place }, a) => Math.floor((n % (place * 10)) / place) * place === a }),
 
-  fam({ id: 'g4.order.third-smallest', skill: 'G4_ORDER_ROUND', outcome: 'G4.WHOLE.d', rung: 2, form: 'table',
+  fam({ id: 'g4.order.third-smallest', skill: 'G4_ORDER_ROUND', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.d', misMapped: false, reveals: ['M_ORDER_DIRECTION'], rung: 2, form: 'table',
     draw: () => {
       const names = ['Amani', 'Tumaini', 'Upendo', 'Baraka', 'Jamii', 'Mwangaza'];
       const vals = Array.from({ length: 4 }, () => randInt(21, 98) * 10 + randInt(0, 9));
@@ -89,7 +89,7 @@ export const FAMILIES = [
       steps: [`In order: ${s.join(', ')}.`, `The third number is ${s[2]}.`] }),
     check: ({ vals, s }, a) => vals.filter(v => v < a).length === 2 && vals.includes(a) && s.indexOf(a) === 2 }),
 
-  fam({ id: 'g4.round.spot-ones', skill: 'G4_ORDER_ROUND', outcome: 'G4.WHOLE.e', rung: 2, form: 'spot',
+  fam({ id: 'g4.round.spot-ones', skill: 'G4_ORDER_ROUND', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.e', misMapped: false, reveals: ['M_ROUND_DROP_ONES'], rung: 2, form: 'spot',
     draw: () => {
       const n = randInt(11, 99) * 10 + randInt(1, 9), u = n % 10;
       const kind = u >= 5 ? pick(['rule', 'write']) : 'rule';
@@ -113,7 +113,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.factors.not-a-factor', skill: 'G4_FACTORS_MULTIPLES', outcome: 'G4.WHOLE.f', rung: 2, form: 'word',
+  fam({ id: 'g4.factors.not-a-factor', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.f', misMapped: false, reveals: [], rung: 2, form: 'word',
     draw: () => {
       const n = pick([24, 30, 36, 40, 42, 48]);
       const fs = []; for (let i = 2; i <= 12; i++) if (n % i === 0) fs.push(i);
@@ -128,7 +128,7 @@ export const FAMILIES = [
         steps: [`Test each number. Divide ${n} by it.`, `${n} ÷ ${x} leaves a remainder, so ${x} is not a factor.`] };
     } }),
 
-  fam({ id: 'g4.multiples.why-multiple', skill: 'G4_FACTORS_MULTIPLES', outcome: 'G4.WHOLE.g', rung: 2, form: 'why',
+  fam({ id: 'g4.multiples.why-multiple', skill: 'G4_FACTORS_MULTIPLES', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.g', misMapped: false, reveals: ['M_MULTIPLE_NOT_CHECKED'], rung: 2, form: 'why',
     draw: () => {
       const m = pick([3, 4, 5, 6, 7, 8, 9]), k = randInt(4, 12), n = m * k;
       return n % 2 === 0 && n <= 100 ? { m, k, n, r: randInt(0, 3), p: person() } : null;
@@ -145,7 +145,7 @@ export const FAMILIES = [
         steps: [`Counting in ${m}s reaches ${n}.`, `${m} × ${k} = ${n}, so ${n} is a multiple of ${m}.`] };
     } }),
 
-  fam({ id: 'g4.oddeven.pattern-why', skill: 'G4_ODD_EVEN', outcome: 'G4.WHOLE.i', rung: 2, form: 'why',
+  fam({ id: 'g4.oddeven.pattern-why', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', misMapped: false, reveals: ['M_PATTERN_WRONG_PARITY'], rung: 2, form: 'why',
     draw: () => ({ s: randInt(1, 9), d: pick([3, 5, 7, 9]), r: randInt(0, 3) }),
     make: ({ s, d, r }) => {
       const t = [0, 1, 2, 3, 4].map(i => s + i * d).join(', ');
@@ -160,7 +160,7 @@ export const FAMILIES = [
         steps: [`${d} is an odd number, and we add it each time.`, 'Odd + odd = even. Even + odd = odd.', 'So the numbers swap between odd and even.'] };
     } }),
 
-  fam({ id: 'g4.oddeven.house-numbers', skill: 'G4_ODD_EVEN', outcome: 'G4.WHOLE.i', rung: 2, form: 'word',
+  fam({ id: 'g4.oddeven.house-numbers', skill: 'G4_ODD_EVEN', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.i', misMapped: false, reveals: ['M_PATTERN_HOUSES_ONE_SIDE'], rung: 2, form: 'word',
     draw: () => { const o = pick([1, 3, 5, 7, 9, 11]), n = randInt(7, 9); return uniq(2 * n, o + 2 * n, o + n - 1, o + 2 * (n - 1)) ? { o, n } : null; },
     make: ({ o, n }) => ({
       question: `The odd house numbers on one side of a road follow a pattern: ${o}, ${o + 2}, ${o + 4}, ${o + 6}. What is the number of the ${['', '', '', '', '', '', '', '7th', '8th', '9th'][n]} house on that side?`,
@@ -170,7 +170,7 @@ export const FAMILIES = [
       steps: ['The numbers go up by 2 each time.', `For the ${n}th house we add 2 a total of ${n - 1} times to ${o}.`, `${o} + ${2 * (n - 1)} = ${o + 2 * (n - 1)}.`] }),
     check: ({ o, n }, a) => a % 2 === 1 && (a - o) / 2 === n - 1 }),
 
-  fam({ id: 'g4.roman.minute-hand', skill: 'G4_ROMAN_NUMERALS', outcome: 'G4.WHOLE.j', rung: 2, form: 'word',
+  fam({ id: 'g4.roman.minute-hand', skill: 'G4_ROMAN_NUMERALS', cskill: 'MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X', outcome: 'MATH.G4.NUMBER.WHOLE_NUMBERS.j', misMapped: false, reveals: [], rung: 2, form: 'word',
     draw: () => ({ n: pick([2, 3, 4, 7, 8, 9]), p: person() }),
     make: ({ n, p }) => ({
       question: `${p.name}'s watch shows Roman numerals on its face. The minute hand points to ${ROMAN[n]}. How many minutes past the hour is it?`,
@@ -183,7 +183,7 @@ export const FAMILIES = [
   // ======================================================================
   // ADDITION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.add.estimate-sales', skill: 'G4_ADD', outcome: 'G4.ADD.c', rung: 2, form: 'word',
+  fam({ id: 'g4.add.estimate-sales', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', misMapped: false, reveals: ['M_EST_ROUND_WRONG'], rung: 2, form: 'word',
     draw: () => {
       const pk = () => { let v; do { v = randInt(12, 99) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       const a = pk(), b = pk(), est = r10(a) + r10(b), ex = a + b;
@@ -197,7 +197,7 @@ export const FAMILIES = [
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} + ${r10(b)} = ${est}.`] }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a + b)) <= 10 }),
 
-  fam({ id: 'g4.add.estimate-water', skill: 'G4_ADD', outcome: 'G4.ADD.c', rung: 2, form: 'table',
+  fam({ id: 'g4.add.estimate-water', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', misMapped: false, reveals: ['M_EST_ROUND_WRONG'], rung: 2, form: 'table',
     draw: () => {
       const v = Array.from({ length: 3 }, () => { let x; do { x = randInt(100, 330) * 10 + randInt(1, 9); } while (x % 10 === 5); return x; });
       const est = sum(v.map(r10));
@@ -212,7 +212,7 @@ export const FAMILIES = [
       steps: [`The rounded numbers are ${v.map(r10).join(', ')}.`, `${v.map(r10).join(' + ')} = ${commas(est)}.`] }),
     check: ({ v }, a) => a % 10 === 0 && Math.abs(a - sum(v)) <= 15 }),
 
-  fam({ id: 'g4.add.pattern-savings', skill: 'G4_ADD', outcome: 'G4.ADD.d', rung: 2, form: 'word',
+  fam({ id: 'g4.add.pattern-savings', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ADD_PATTERNS', outcome: 'MATH.G4.NUMBER.ADDITION.d', misMapped: false, reveals: ['M_PAT_ADD_ONE_STEP_ONLY'], rung: 2, form: 'word',
     draw: () => { const s = randInt(5, 50) * 10, d = pick([20, 30, 40, 50, 60]), n = pick([5, 6]); return uniq(s + (n - 1) * d, s + n * d, s + (n - 2) * d, d * n) ? { s, d, n, p: person() } : null; },
     make: ({ s, d, n, p }) => ({
       question: `${p.name} saves money each week. The amounts follow a pattern: ${sh(s)}, ${sh(s + d)}, ${sh(s + 2 * d)}. The pattern goes on. How much does ${p.she} save in week ${n}?`,
@@ -222,7 +222,7 @@ export const FAMILIES = [
       steps: [`Each week ${p.she} saves ${sh(d)} more.`, `Week ${n} adds ${sh(d)} a total of ${n - 1} times to ${sh(s)}.`, `${s} + ${(n - 1) * d} = ${s + (n - 1) * d}.`] }),
     check: ({ s, d, n }, a) => (a - s) / d === n - 1 }),
 
-  fam({ id: 'g4.add.pattern-missing', skill: 'G4_ADD', outcome: 'G4.ADD.d', rung: 2, form: 'table',
+  fam({ id: 'g4.add.pattern-missing', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ADD_PATTERNS', outcome: 'MATH.G4.NUMBER.ADDITION.d', misMapped: false, reveals: ['M_PAT_MISSING_NOT_CHECKED'], rung: 2, form: 'table',
     draw: () => { const a = randInt(10, 80) * 10, d = pick([30, 40, 50, 60, 70, 80]); return uniq(a + d, a + 2 * d, d, 2 * a + 2 * d) ? { a, d, p: person() } : null; },
     make: ({ a, d }) => ({
       question: 'A farmer plants the same number of extra trees each month. The table shows the pattern. How many trees go in the empty box?',
@@ -236,7 +236,7 @@ export const FAMILIES = [
   // ======================================================================
   // SUBTRACTION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.sub.estimate-stock', skill: 'G4_SUB', outcome: 'G4.SUB.c', rung: 2, form: 'word',
+  fam({ id: 'g4.sub.estimate-stock', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', misMapped: false, reveals: ['M_EST_DIFF_ROUND_DOWN'], rung: 2, form: 'word',
     draw: () => {
       const pk = () => { let v; do { v = randInt(12, 99) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       let a = pk(), b = pk(); if (a < b) [a, b] = [b, a];
@@ -244,14 +244,14 @@ export const FAMILIES = [
       return a - b >= 60 && uniq(est, a - b, f10(a) - f10(b), r10(a) + r10(b)) ? { a, b, est, what: pick(['litres of cooking oil', 'kg of rice', 'bottles of soda', 'litres of milk']) } : null;
     },
     make: ({ a, b, est, what }) => ({
-      question: `A shop has ${a} ${what}. The shop sells ${b} litres in a week. Round each number to the nearest ten. Estimate how many ${what} are left.`,
+      question: `A shop has ${a} ${what}. The shop sells ${b} of them in a week. Round each number to the nearest ten. Estimate how many ${what} are left.`,
       answer: est,
       wrong: [[a - b, 'That is the exact answer. An estimate rounds each number first.'], [f10(a) - f10(b), 'You rounded both numbers down. Look at the ones digit of each one.'], [r10(a) + r10(b), 'The shop sells some, so there are fewer left. Take away.']],
       hints: ['Round each number to the nearest ten.', 'Then take the smaller rounded number from the bigger one.'],
       steps: [`${a} is about ${r10(a)}. ${b} is about ${r10(b)}.`, `${r10(a)} − ${r10(b)} = ${est}.`] }),
     check: ({ a, b }, v) => v % 10 === 0 && Math.abs(v - (a - b)) <= 10 && v + r10(b) === r10(a) }),
 
-  fam({ id: 'g4.sub.estimate-steps', skill: 'G4_SUB', outcome: 'G4.SUB.c', rung: 2, form: 'steps',
+  fam({ id: 'g4.sub.estimate-steps', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN', outcome: 'MATH.G4.NUMBER.SUBTRACTION.c', misMapped: false, reveals: ['M_EST_EXACT_REQUIRED'], rung: 2, form: 'steps',
     draw: () => {
       const pk = () => { let v; do { v = randInt(150, 480) * 10 + randInt(1, 9); } while (v % 10 === 5); return v; };
       let a = pk(), b = pk(); if (a < b) [a, b] = [b, a];
@@ -270,7 +270,7 @@ export const FAMILIES = [
       steps: [`${commas(a)} is about ${commas(r10(a))}. ${commas(b)} is about ${commas(r10(b))}.`, `Estimate: ${commas(r10(a))} − ${commas(r10(b))} = ${commas(r10(a) - r10(b))}.`, `Exact: ${commas(a)} − ${commas(b)} = ${commas(a - b)}.`] }),
     check: ({ a, b }, v) => v[0] + 0 === r10(a) && v[1] === r10(b) && v[2] === v[0] - v[1] && v[3] + b === a && Math.abs(v[2] - v[3]) <= 10 }),
 
-  fam({ id: 'g4.sub.pattern-next', skill: 'G4_SUB', outcome: 'G4.SUB.d', rung: 1, form: 'direct',
+  fam({ id: 'g4.sub.pattern-next', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', misMapped: false, reveals: ['M_SUBPAT_ADDS'], rung: 1, form: 'direct',
     draw: () => { const d = pick([20, 30, 40, 50, 60, 70, 80]), s = randInt(30, 150) * 10 + 0; return s - 5 * d > 0 ? { s, d } : null; },
     make: ({ s, d }) => {
       const seq = [0, 1, 2, 3].map(i => commas(s - i * d)).join(', ');
@@ -282,7 +282,7 @@ export const FAMILIES = [
     },
     check: ({ s, d }, a) => (s - a) / d === 4 }),
 
-  fam({ id: 'g4.sub.pattern-tank', skill: 'G4_SUB', outcome: 'G4.SUB.d', rung: 2, form: 'word',
+  fam({ id: 'g4.sub.pattern-tank', skill: 'G4_SUB', cskill: 'MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS', outcome: 'MATH.G4.NUMBER.SUBTRACTION.d', misMapped: false, reveals: ['M_SUBPAT_STEP_NOT_CONSTANT'], rung: 2, form: 'word',
     draw: () => { const d = pick([50, 60, 75, 80, 90]), n = pick([4, 5, 6]), s = pick([10, 12, 15]) * 100; return s - n * d > 0 && uniq(s - n * d, s - (n - 1) * d, s + n * d, n * d) ? { s, d, n } : null; },
     make: ({ s, d, n }) => ({
       question: `A water tank has ${commas(s)} litres. Each day ${d} litres are used. The amount left each day follows a pattern. How many litres are left after ${n} days?`,
@@ -295,7 +295,7 @@ export const FAMILIES = [
   // ======================================================================
   // MULTIPLICATION: estimate, patterns
   // ======================================================================
-  fam({ id: 'g4.mul.estimate-boxes', skill: 'G4_MULTIPLY', outcome: 'G4.MUL.c', rung: 2, form: 'word',
+  fam({ id: 'g4.mul.estimate-boxes', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: ['M_EST_PROD_ROUND_ONE'], rung: 2, form: 'word',
     draw: () => {
       let n; do { n = randInt(23, 88); } while (n % 5 === 0);
       const k = randInt(3, 9), u = n % 10, est = r10(n) * k, other = (u < 5 ? r10(n) + 10 : r10(n) - 10) * k;
@@ -309,7 +309,7 @@ export const FAMILIES = [
       steps: [`${n} is about ${r10(n)}.`, `${r10(n)} × ${k} = ${est}.`] }),
     check: ({ n, k }, a) => a % k === 0 && a / k === r10(n) }),
 
-  fam({ id: 'g4.mul.estimate-why', skill: 'G4_MULTIPLY', outcome: 'G4.MUL.c', rung: 2, form: 'why',
+  fam({ id: 'g4.mul.estimate-why', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.c', misMapped: false, reveals: [], rung: 2, form: 'why',
     draw: () => { let n; do { n = randInt(23, 88); } while (n % 5 === 0); return { n, k: randInt(3, 9), r: randInt(0, 3), p: person() }; },
     make: ({ n, k, r, p }) => {
       const e = r10(n), up = e > n, more = up ? 'more' : 'less', big = up ? 'bigger' : 'smaller';
@@ -324,7 +324,7 @@ export const FAMILIES = [
         steps: [`${n} became ${e}. That is ${big}.`, `A ${big} number multiplied by ${k} gives a ${big} product.`] };
     } }),
 
-  fam({ id: 'g4.mul.pattern-seedlings', skill: 'G4_MULTIPLY', outcome: 'G4.MUL.d', rung: 2, form: 'word',
+  fam({ id: 'g4.mul.pattern-seedlings', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', misMapped: false, reveals: ['M_MULPAT_ADD_STEP'], rung: 2, form: 'word',
     draw: () => { const a = pick([2, 3, 4, 5]), m = pick([2, 3]); return uniq(a * m ** 3, a * m * m + a * m, a * m * m + a, a * m ** 4) ? { a, m, p: person() } : null; },
     make: ({ a, m, p }) => ({
       question: `${p.name} plants seedlings. In week 1 there are ${a}. In week 2 there are ${a * m}. In week 3 there are ${a * m * m}. This pattern goes on. How many seedlings are there in week 4?`,
@@ -334,7 +334,7 @@ export const FAMILIES = [
       steps: [`${a} × ${m} = ${a * m}, and ${a * m} × ${m} = ${a * m * m}. The number is multiplied by ${m} each week.`, `Week 4: ${a * m * m} × ${m} = ${a * m ** 3}.`] }),
     check: ({ a, m }, v) => v / m / m / m === a }),
 
-  fam({ id: 'g4.mul.pattern-table', skill: 'G4_MULTIPLY', outcome: 'G4.MUL.d', rung: 2, form: 'table',
+  fam({ id: 'g4.mul.pattern-table', skill: 'G4_MULTIPLY', cskill: 'MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS', outcome: 'MATH.G4.NUMBER.MULTIPLICATION.d', misMapped: false, reveals: ['M_MULPAT_SKIP_TABLE'], rung: 2, form: 'table',
     draw: () => {
       const c = pick([{ u: 4, head: 'Chairs', what: 'Legs', thing: 'chairs', e: 'legs' }, { u: 7, head: 'Weeks', what: 'Days', thing: 'weeks', e: 'days' }, { u: 6, head: 'Trays', what: 'Eggs', thing: 'trays of eggs', e: 'eggs' }, { u: 5, head: 'Packets', what: 'Biscuits', thing: 'packets', e: 'biscuits' }]);
       const k = randInt(7, 9);
@@ -352,7 +352,7 @@ export const FAMILIES = [
   // ======================================================================
   // DIVISION: relating multiplication and division
   // ======================================================================
-  fam({ id: 'g4.div.related-facts', skill: 'G4_DIVIDE', outcome: 'G4.DIV.b', rung: 1, form: 'steps',
+  fam({ id: 'g4.div.related-facts', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_RELATE_WRONG_FACT'], rung: 1, form: 'steps',
     draw: () => { const a = randInt(4, 9), b = randInt(6, 9); return a !== b ? { a, b, p: person() } : null; },
     make: ({ a, b, p }) => ({
       question: `${p.name} packs eggs. ${p.She} fills ${a} trays with ${b} eggs in each tray. Answer the parts. They use related facts.`,
@@ -364,7 +364,7 @@ export const FAMILIES = [
       steps: [`${a} × ${b} = ${a * b}.`, `The related divisions are ${a * b} ÷ ${a} = ${b} and ${a * b} ÷ ${b} = ${a}.`] }),
     check: ({ a, b }, v) => v[0] === a * b && v[1] * a === v[0] && v[2] * b === v[0] }),
 
-  fam({ id: 'g4.div.spot-check', skill: 'G4_DIVIDE', outcome: 'G4.DIV.b', rung: 2, form: 'spot',
+  fam({ id: 'g4.div.spot-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: [], rung: 2, form: 'spot',
     draw: () => { const d = randInt(3, 9), q = randInt(11, 19); return { d, q, n: d * q, kind: pick(['div', 'times', 'end']), off: pick([-1, 1]), slip: pick([-10, 10, 1, -1]), p: person() }; },
     make: ({ d, q, n, kind, off, slip, p }) => {
       const q2 = kind === 'div' ? q + off : q, prod = kind === 'times' ? q * d + slip : q2 * d;
@@ -382,7 +382,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.div.why-check', skill: 'G4_DIVIDE', outcome: 'G4.DIV.b', rung: 2, form: 'why',
+  fam({ id: 'g4.div.why-check', skill: 'G4_DIVIDE', cskill: 'MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE', outcome: 'MATH.G4.NUMBER.DIVISION.b', misMapped: false, reveals: ['M_RELATE_CHECK_ADDS'], rung: 2, form: 'why',
     draw: () => { const d = randInt(3, 9), q = randInt(11, 19); return { d, q, n: d * q, r: randInt(0, 3), p: person() }; },
     make: ({ d, q, n, r, p }) => {
       const opts = [
@@ -399,7 +399,7 @@ export const FAMILIES = [
   // ======================================================================
   // FRACTIONS: numerator and denominator, types, improper and mixed
   // ======================================================================
-  fam({ id: 'g4.frac.denominator-chapati', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.a', rung: 1, form: 'word',
+  fam({ id: 'g4.frac.denominator-chapati', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.NUM_DEN', outcome: 'MATH.G4.NUMBER.FRACTIONS.a', misMapped: false, reveals: ['M_FRAC_TWO_NUMBERS_SEPARATE'], rung: 1, form: 'word',
     draw: () => { const d = pick([4, 5, 6, 8, 10]), n = randInt(2, d - 2); return { d, n, p: person(), k: randInt(0, 3) }; },
     make: ({ d, n, p, k }) => {
       const opts = [
@@ -413,7 +413,7 @@ export const FAMILIES = [
         steps: [`The denominator is ${d}, the bottom number.`, `It tells how many equal pieces make the whole chapati.`] };
     } }),
 
-  fam({ id: 'g4.frac.type-pick', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.c', rung: 1, form: 'direct',
+  fam({ id: 'g4.frac.type-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS', outcome: 'MATH.G4.NUMBER.FRACTIONS.c', misMapped: false, reveals: ['M_TYPE_MIXED_AS_PROPER'], rung: 1, form: 'direct',
     draw: () => {
       const T = pick(['proper', 'improper', 'mixed']);
       const mk = (t) => { const d = randInt(3, 9); return t === 'proper' ? `${randInt(1, d - 1)}/${d}` : t === 'improper' ? `${randInt(d + 1, 2 * d - 1)}/${d}` : `${randInt(1, 4)} ${randInt(1, d - 1)}/${d}`; };
@@ -432,7 +432,7 @@ export const FAMILIES = [
         steps: [`Name the type of each choice.`, `${texts[0]} is ${name[T]}.`] };
     } }),
 
-  fam({ id: 'g4.frac.type-why', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.c', rung: 2, form: 'why',
+  fam({ id: 'g4.frac.type-why', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS', outcome: 'MATH.G4.NUMBER.FRACTIONS.c', misMapped: false, reveals: ['M_TYPE_IMPROPER_NOT_FRACTION'], rung: 2, form: 'why',
     draw: () => { const d = randInt(3, 9); return { d, n: randInt(d + 1, 2 * d - 1), r: randInt(0, 3) }; },
     make: ({ d, n, r }) => {
       const opts = [
@@ -446,7 +446,7 @@ export const FAMILIES = [
         steps: [`The top number ${n} is bigger than the bottom number ${d}.`, `So ${n}/${d} is more than 1 whole. It is an improper fraction.`] };
     } }),
 
-  fam({ id: 'g4.frac.type-table', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.c', rung: 2, form: 'table',
+  fam({ id: 'g4.frac.type-table', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS', outcome: 'MATH.G4.NUMBER.FRACTIONS.c', misMapped: false, reveals: [], rung: 2, form: 'table',
     draw: () => {
       const counts = [1, 2, 3].sort(() => Math.random() - 0.5), types = ['proper', 'improper', 'mixed'];
       const list = []; types.forEach((t, i) => { for (let j = 0; j < counts[i]; j++) list.push(t); });
@@ -466,7 +466,7 @@ export const FAMILIES = [
     },
     check: ({ texts, ask }, a) => texts.filter(x => (ask === 2 ? x.includes(' ') : ask === 1 ? !x.includes(' ') && Number(x.split('/')[0]) > Number(x.split('/')[1]) : !x.includes(' ') && Number(x.split('/')[0]) < Number(x.split('/')[1]))).length === a }),
 
-  fam({ id: 'g4.frac.improper-to-mixed-pick', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.d', rung: 2, form: 'word',
+  fam({ id: 'g4.frac.improper-to-mixed-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_MIX_REMAINDER_AS_WHOLE', 'M_MIX_REMAINDER_OVER_QUOTIENT'], rung: 2, form: 'word',
     draw: () => { const d = randInt(3, 8), q = randInt(1, 4), r = randInt(1, d - 1); return q !== r ? { d, q, r, n: q * d + r, p: person(), k: randInt(0, 3) } : null; },
     make: ({ d, q, r, n, p, k }) => {
       const opts = [
@@ -480,7 +480,7 @@ export const FAMILIES = [
         steps: [`${n} ÷ ${d} = ${q} with ${r} left over.`, `So ${n}/${d} = ${q} ${r}/${d}.`] };
     } }),
 
-  fam({ id: 'g4.frac.improper-to-mixed-steps', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.d', rung: 2, form: 'steps',
+  fam({ id: 'g4.frac.improper-to-mixed-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_MIX_REMAINDER_AS_WHOLE'], rung: 2, form: 'steps',
     draw: () => { const d = randInt(3, 9), q = randInt(2, 4), r = randInt(1, d - 1); return { d, q, r, n: q * d + r, p: person() }; },
     make: ({ d, q, r, n, p }) => ({
       question: `${p.name} pours ${n}/${d} litres of juice. ${p.She} wants to write it as a mixed number. Answer the parts.`,
@@ -492,7 +492,7 @@ export const FAMILIES = [
       steps: [`${n} ÷ ${d} = ${q} with ${r} left over.`, `So ${n}/${d} = ${q} ${r}/${d}.`, `Check: ${q} × ${d} + ${r} = ${n}.`] }),
     check: ({ d, n }, v) => v[0] * d + v[1] === n && v[1] < d && v[2] === n }),
 
-  fam({ id: 'g4.frac.improper-to-mixed-spot', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.d', rung: 2, form: 'spot',
+  fam({ id: 'g4.frac.improper-to-mixed-spot', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED', outcome: 'MATH.G4.NUMBER.FRACTIONS.d', misMapped: false, reveals: ['M_MIX_REMAINDER_OVER_QUOTIENT'], rung: 2, form: 'spot',
     draw: () => { const d = randInt(4, 9), q = randInt(2, 4), r = randInt(1, d - 1); return { d, q, r, n: q * d + r, kind: pick(['rem', 'write']), p: person(), off: r === 1 ? 1 : pick([1, -1]) }; },
     make: ({ d, q, r, n, kind, p, off }) => {
       const rs = kind === 'rem' ? r + off : r, den = kind === 'write' ? n : d;
@@ -510,7 +510,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.frac.mixed-to-improper-pick', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.e', rung: 2, form: 'word',
+  fam({ id: 'g4.frac.mixed-to-improper-pick', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', misMapped: false, reveals: ['M_IMP_ADDS_WHOLE', 'M_IMP_WHOLE_TIMES_NUMERATOR'], rung: 2, form: 'word',
     draw: () => { const d = randInt(3, 8), w = randInt(2, 4), n = randInt(1, d - 1); return uniq(w * d + n, w + n, w * n + d, w * d) && w + n !== d ? { d, w, n, p: person(), k: randInt(0, 3) } : null; },
     make: ({ d, w, n, p, k }) => {
       const opts = [
@@ -524,7 +524,7 @@ export const FAMILIES = [
         steps: [`${w} × ${d} = ${w * d} parts in the whole cakes.`, `${w * d} + ${n} = ${w * d + n} parts, so ${w * d + n}/${d}.`] };
     } }),
 
-  fam({ id: 'g4.frac.mixed-to-improper-steps', skill: 'G4_FRACTIONS', outcome: 'G4.FRAC.e', rung: 2, form: 'steps',
+  fam({ id: 'g4.frac.mixed-to-improper-steps', skill: 'G4_FRACTIONS', cskill: 'MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER', outcome: 'MATH.G4.NUMBER.FRACTIONS.e', misMapped: false, reveals: ['M_IMP_WHOLE_TIMES_NUMERATOR'], rung: 2, form: 'steps',
     draw: () => ({ d: randInt(3, 8), w: randInt(2, 5), n: 0, p: person() }),
     make: ({ d, w, p }) => {
       const n = randInt(1, d - 1);
@@ -542,7 +542,7 @@ export const FAMILIES = [
   // ======================================================================
   // DECIMALS: order, place value
   // ======================================================================
-  fam({ id: 'g4.dec.largest-ribbon', skill: 'G4_DECIMALS', outcome: 'G4.DEC.d', rung: 2, form: 'table',
+  fam({ id: 'g4.dec.largest-ribbon', skill: 'G4_DECIMALS', cskill: 'MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS', outcome: 'MATH.G4.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_DEC_LONGER_IS_LARGER'], rung: 2, form: 'table',
     draw: () => {
       const t = randInt(4, 9), hv = [];
       while (hv.length < 3) { const x = randInt(11, t * 10 - 1); if (x % 10 !== 0 && !hv.includes(x)) hv.push(x); }
@@ -560,7 +560,7 @@ export const FAMILIES = [
     },
     check: ({ t, hv }, a) => hv.every(h => h / 100 < a) && Math.round(a * 10) === t }),
 
-  fam({ id: 'g4.dec.why-bigger', skill: 'G4_DECIMALS', outcome: 'G4.DEC.d', rung: 2, form: 'why',
+  fam({ id: 'g4.dec.why-bigger', skill: 'G4_DECIMALS', cskill: 'MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS', outcome: 'MATH.G4.NUMBER.DECIMALS.d', misMapped: false, reveals: ['M_DEC_DIGITS_AFTER_POINT_AS_WHOLE'], rung: 2, form: 'why',
     draw: () => { const t = randInt(4, 9); let h; do { h = randInt(11, t * 10 - 1); } while (h % 10 === 0); return { t, h, r: randInt(0, 3), p: person() }; },
     make: ({ t, h, r, p }) => {
       const a = `0.${String(h).padStart(2, '0')}`, b = `0.${t}`;
@@ -575,7 +575,7 @@ export const FAMILIES = [
         steps: [`${b} = ${t} tenths. ${a} = ${Math.floor(h / 10)} tenths and ${h % 10} hundredths.`, `${t} tenths is more than ${Math.floor(h / 10)} tenths, so ${b} is bigger.`] };
     } }),
 
-  fam({ id: 'g4.dec.place-chart', skill: 'G4_DECIMALS', outcome: 'G4.DEC.c', rung: 1, form: 'table',
+  fam({ id: 'g4.dec.place-chart', skill: 'G4_DECIMALS', cskill: 'MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE', outcome: 'MATH.G4.NUMBER.DECIMALS.c', misMapped: false, reveals: ['M_DEC_VALUE_OF_DIGIT'], rung: 1, form: 'table',
     draw: () => {
       const ds = []; while (ds.length < 3) { const x = randInt(1, 9); if (!ds.includes(x)) ds.push(x); }
       const col = pick([1, 2]), dg = ds[col];
@@ -595,7 +595,7 @@ export const FAMILIES = [
   // ======================================================================
   // LETTERS: simplify, expressions, what a letter stands for
   // ======================================================================
-  fam({ id: 'g4.letters.spot-simplify', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.c', rung: 2, form: 'spot',
+  fam({ id: 'g4.letters.spot-simplify', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.c', misMapped: false, reveals: ['M_SIM_SUBTRACT_WRONG'], rung: 2, form: 'spot',
     draw: () => { const a = randInt(3, 8), b = randInt(2, 7), c = randInt(2, 5); return a + b - c >= 3 ? { a, b, c, v: pick(['x', 'y', 'n', 'k']), kind: pick(['add', 'sub', 'drop']), p: person() } : null; },
     make: ({ a, b, c, v, kind, p }) => {
       const s1 = kind === 'add' ? a + b + 1 : a + b, s2 = kind === 'sub' ? s1 - c + 1 : s1 - c;
@@ -613,7 +613,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.letters.why-same-thing', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.c', rung: 2, form: 'why',
+  fam({ id: 'g4.letters.why-same-thing', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.c', misMapped: false, reveals: ['M_SIM_ADD_UNLIKE'], rung: 2, form: 'why',
     draw: () => { const [v, w] = [...['x', 'y', 'n', 'p', 'k']].sort(() => Math.random() - 0.5); return { a: randInt(2, 8), b: randInt(2, 8), v, w, r: randInt(0, 3) }; },
     make: ({ a, b, v, w, r }) => {
       const opts = [
@@ -627,7 +627,7 @@ export const FAMILIES = [
         steps: [`${a}${v} + ${b}${v} = ${a + b}${v}, because both are lots of ${v}.`, `${a}${v} and ${b}${w} are lots of different things, so they stay as they are.`] };
     } }),
 
-  fam({ id: 'g4.letters.form-boxes', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.b', rung: 2, form: 'table',
+  fam({ id: 'g4.letters.form-boxes', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.b', misMapped: false, reveals: ['M_EXP_WRONG_OPERATION'], rung: 2, form: 'table',
     draw: () => ({ k: randInt(4, 12), v: pick(['n', 'b', 't']), r: randInt(0, 3), what: pick([['box', 'boxes', 'pens'], ['packet', 'packets', 'biscuits'], ['bag', 'bags', 'oranges']]) }),
     make: ({ k, v, r, what }) => {
       const opts = [
@@ -643,7 +643,7 @@ export const FAMILIES = [
         steps: [`One ${what[0]} has ${k}. The table goes up by ${k} each time.`, `${v} ${what[1]} have ${v} × ${k}, written ${k}${v}.`] };
     } }),
 
-  fam({ id: 'g4.letters.price-p', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.a', rung: 2, form: 'word',
+  fam({ id: 'g4.letters.price-p', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.a', misMapped: false, reveals: ['M_LET_LETTER_IS_OBJECT'], rung: 2, form: 'word',
     draw: () => { const k = randInt(3, 8), pp = price('pencil'), rub = price('rubber'); return uniq(k * pp + rub, Number(`${k}${pp}`) + rub, k + pp + rub, pp + rub) ? { k, pp, rub, p: person() } : null; },
     make: ({ k, pp, rub, p }) => ({
       question: `${p.name} buys ${k} pencils and 1 rubber. The cost is ${k}p + ${rub} shillings. The letter p stands for the price of one pencil. A pencil costs ${sh(pp)}. How much does ${p.name} pay in all?`,
@@ -656,7 +656,7 @@ export const FAMILIES = [
   // ======================================================================
   // LENGTH, AREA, VOLUME
   // ======================================================================
-  fam({ id: 'g4.length.compare-cloth', skill: 'G4_LENGTH', outcome: 'G4.LENGTH.d', rung: 2, form: 'table',
+  fam({ id: 'g4.length.compare-cloth', skill: 'G4_LENGTH', cskill: 'MATH.G4.MEASUR.LENGTH.CONVERT_M_CM', outcome: 'MATH.G4.MEASUR.LENGTH.d', misMapped: false, reveals: ['M_CONV_WRONG_FACTOR'], rung: 2, form: 'table',
     draw: () => {
       const L = Array.from({ length: 3 }, () => randInt(12, 48) * 10 + randInt(1, 9)).filter(x => x % 100 !== 0);
       if (L.length < 3 || !uniq(...L)) return null;
@@ -672,7 +672,7 @@ export const FAMILIES = [
         steps: L.map((x, i) => `Piece ${'ABC'[i]} is ${x} cm.`).concat([`The longest is Piece ${'ABC'[best]}.`]) };
     } }),
 
-  fam({ id: 'g4.perimeter.fence-posts', skill: 'G5_PERIMETER_INTRO', outcome: 'G4.LENGTH.e', rung: 3, form: 'word',
+  fam({ id: 'g4.perimeter.fence-posts', skill: 'G5_PERIMETER_INTRO', cskill: 'MATH.G4.MEASUR.LENGTH.PERIMETER', outcome: 'MATH.G4.MEASUR.LENGTH.e', misMapped: false, reveals: [], rung: 3, form: 'word',
     draw: () => { const g = pick([2, 4, 5]), l = randInt(10, 30), w = randInt(6, 20); return (l + w) % g === 0 ? { g, l, w, p: person() } : null; },
     make: ({ g, l, w, p }) => ({
       question: `A school garden is ${l} m long and ${w} m wide. ${p.name} puts a fence all the way round it. The fence posts are ${g} m apart. How many posts does ${p.she} need?`,
@@ -682,7 +682,7 @@ export const FAMILIES = [
       steps: [`Distance round: ${l} + ${w} + ${l} + ${w} = ${2 * (l + w)} m.`, `${2 * (l + w)} ÷ ${g} = ${(2 * (l + w)) / g} posts.`] }),
     check: ({ g, l, w }, a) => a * g === 2 * l + 2 * w }),
 
-  fam({ id: 'g4.area.rows-missing', skill: 'G4_AREA', outcome: 'G4.AREA.c', rung: 2, form: 'word',
+  fam({ id: 'g4.area.rows-missing', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', misMapped: false, reveals: ['M_AREA_MISSING_ROW_ADDS'], rung: 2, form: 'word',
     draw: () => { const r = randInt(4, 9), c = randInt(5, 12); return uniq(c, r * c, r + c, r * c - r) ? { r, c, p: person() } : null; },
     make: ({ r, c, p }) => ({
       question: `${p.name} covers a floor with ${r * c} square tiles. The area of the floor is ${r * c} tiles. The tiles are in ${r} equal rows. How many tiles are in each row?`,
@@ -692,7 +692,7 @@ export const FAMILIES = [
       steps: [`rows × tiles in each row = ${r * c}.`, `${r * c} ÷ ${r} = ${c} tiles in each row.`] }),
     check: ({ r }, a) => a * r === r * a && a >= 5 && (a * r) % r === 0 }),
 
-  fam({ id: 'g4.area.rooms-table', skill: 'G4_AREA', outcome: 'G4.AREA.b', rung: 2, form: 'table',
+  fam({ id: 'g4.area.rooms-table', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_COUNT', outcome: 'MATH.G4.MEASUR.AREA.b', misMapped: false, reveals: [], rung: 2, form: 'table',
     draw: () => {
       const rows = Array.from({ length: 3 }, () => randInt(3, 9)), cols = Array.from({ length: 3 }, () => randInt(4, 12)), a = rows.map((r, i) => r * cols[i]);
       const best = a.indexOf(Math.max(...a));
@@ -706,7 +706,7 @@ export const FAMILIES = [
         steps: rows.map((r, i) => `Room ${'ABC'[i]}: ${r} × ${cols[i]} = ${a[i]}.`).concat([`The greatest area is Room ${'ABC'[best]}.`]) };
     } }),
 
-  fam({ id: 'g4.area.why-multiply', skill: 'G4_AREA', outcome: 'G4.AREA.c', rung: 2, form: 'why',
+  fam({ id: 'g4.area.why-multiply', skill: 'G4_AREA', cskill: 'MATH.G4.MEASUR.AREA.AREA_ROWS_COLS', outcome: 'MATH.G4.MEASUR.AREA.c', misMapped: false, reveals: ['M_AREA_ADDS_ROWS_COLS'], rung: 2, form: 'why',
     draw: () => ({ r: randInt(3, 8), c: randInt(4, 9), k: randInt(0, 3) }),
     make: ({ r, c, k }) => {
       const opts = [
@@ -720,7 +720,7 @@ export const FAMILIES = [
         steps: [`One row has ${c} squares. There are ${r} rows.`, `${r} groups of ${c} is ${r} × ${c} = ${r * c} squares.`] };
     } }),
 
-  fam({ id: 'g4.vol.tower-layers', skill: 'G4_VOLUME', outcome: 'G4.VOL.a', rung: 2, form: 'word',
+  fam({ id: 'g4.vol.tower-layers', skill: 'G4_VOLUME', cskill: 'MATH.G4.MEASUR.VOLUME.STACK_CUBES', outcome: 'MATH.G4.MEASUR.VOLUME.a', misMapped: false, reveals: ['M_VOL_ONE_LAYER_ONLY'], rung: 2, form: 'word',
     draw: () => { const a = randInt(2, 5), b = randInt(2, 6), c = randInt(2, 6); return uniq(a * b * c, a + b + c, a * b, a * b + c) ? { a, b, c, p: person() } : null; },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} builds a tower from cubes. Each layer has ${a} rows of ${b} cubes. There are ${c} layers. How many cubes are in the tower?`,
@@ -730,7 +730,7 @@ export const FAMILIES = [
       steps: [`One layer: ${a} × ${b} = ${a * b} cubes.`, `${c} layers: ${a * b} × ${c} = ${a * b * c} cubes.`] }),
     check: ({ a, b, c }, v) => v % c === 0 && v / c === a * b }),
 
-  fam({ id: 'g4.vol.boxes-table', skill: 'G4_VOLUME', outcome: 'G4.VOL.b', rung: 2, form: 'table',
+  fam({ id: 'g4.vol.boxes-table', skill: 'G4_VOLUME', cskill: 'MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID', outcome: 'MATH.G4.MEASUR.VOLUME.b', misMapped: false, reveals: ['M_VOL_ADDS_DIMENSIONS'], rung: 2, form: 'table',
     draw: () => {
       const L = [0, 1, 2].map(() => [randInt(2, 6), randInt(2, 6), randInt(2, 6)]), v = L.map(([a, b, c]) => a * b * c), best = v.indexOf(Math.max(...v)), sums = L.map(x => x[0] + x[1] + x[2]);
       return uniq(...v) && sums.some((x, i) => i !== best && x >= sums[best]) ? { L, v, best, k: randInt(0, 2) } : null;
@@ -746,7 +746,7 @@ export const FAMILIES = [
   // ======================================================================
   // MONEY: cents, shopping lists
   // ======================================================================
-  fam({ id: 'g4.money.cents-purse', skill: 'G4_MONEY', outcome: 'G4.MONEY.a', rung: 1, form: 'word',
+  fam({ id: 'g4.money.cents-purse', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', misMapped: false, reveals: ['M_MONEY_CENTS_AS_DECIMAL_WHOLE'], rung: 1, form: 'word',
     draw: () => { const a = randInt(2, 9), b = pick([20, 25, 50, 75]); return { a, b, p: person() }; },
     make: ({ a, b, p }) => ({
       question: `${p.name} has ${sh(a)} and ${b} cents in a purse. How many cents is that in all?`,
@@ -756,7 +756,7 @@ export const FAMILIES = [
       steps: [`${a} shillings = ${a} × 100 = ${100 * a} cents.`, `${100 * a} + ${b} = ${100 * a + b} cents.`] }),
     check: ({ a, b }, v) => v % 100 === b && Math.floor(v / 100) === a }),
 
-  fam({ id: 'g4.money.cents-to-shillings', skill: 'G4_MONEY', outcome: 'G4.MONEY.a', rung: 2, form: 'steps',
+  fam({ id: 'g4.money.cents-to-shillings', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', misMapped: false, reveals: ['M_MONEY_DIRECTION'], rung: 2, form: 'steps',
     draw: () => { const w = randInt(3, 9), r = pick([25, 50, 75]), s = randInt(1, w - 1); return { w, r, s, c: 100 * w + r, p: person() }; },
     make: ({ w, r, s, c, p }) => ({
       question: `${p.name} has ${commas(c)} cents. ${p.She} wants to change it to shillings. Answer the parts.`,
@@ -768,7 +768,7 @@ export const FAMILIES = [
       steps: [`${c} ÷ 100 = ${w} with ${r} left over.`, `So ${c} cents = ${sh(w)} and ${r} cents.`, `${c} − ${100 * s} = ${c - 100 * s} cents.`] }),
     check: ({ c, s }, v) => v[0] * 100 + v[1] === c && v[2] === c - s * 100 }),
 
-  fam({ id: 'g4.money.list-table-total', skill: 'G4_MONEY', outcome: 'G4.MONEY.c', rung: 2, form: 'table',
+  fam({ id: 'g4.money.list-table-total', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.TOTAL_COST', outcome: 'MATH.G4.MEASUR.MONEY.c', misMapped: false, reveals: ['M_COST_ONE_ITEM_ONLY'], rung: 2, form: 'table',
     draw: () => {
       const ITEMS = [['kg of rice', 'Rice (1 kg)'], ['kg of sugar', 'Sugar (1 kg)'], ['loaf of bread', 'Bread (1 loaf)'], ['litre of milk', 'Milk (1 litre)'], ['exercise book', 'Exercise book'], ['pencil', 'Pencil'], ['egg', 'Egg'], ['kg of beans', 'Beans (1 kg)']];
       const its = [...ITEMS].sort(() => Math.random() - 0.5).slice(0, 3), q = its.map(() => randInt(2, 6)), pr = its.map(([k]) => price(k)), cost = q.map((n, i) => n * pr[i]), total = sum(cost);
@@ -783,7 +783,7 @@ export const FAMILIES = [
       steps: its.map(([, l], i) => `${l}: ${q[i]} × ${pr[i]} = ${cost[i]}.`).concat([`Total: ${cost.join(' + ')} = ${commas(total)}.`]) }),
     check: ({ q, pr, total }, a) => q.reduce((t, n, i) => t + pr[i] * n, 0) === a && a === total }),
 
-  fam({ id: 'g4.money.list-three-items', skill: 'G4_MONEY', outcome: 'G4.MONEY.b', rung: 3, form: 'table',
+  fam({ id: 'g4.money.list-three-items', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHOPPING_LIST', outcome: 'MATH.G4.MEASUR.MONEY.b', misMapped: false, reveals: ['M_LIST_OVER_BUDGET'], rung: 3, form: 'table',
     draw: () => {
       const ITEMS = [['kg of rice', 'Rice', 'Rice (1 kg)'], ['kg of sugar', 'Sugar', 'Sugar (1 kg)'], ['loaf of bread', 'Bread', 'Bread (1 loaf)'], ['litre of milk', 'Milk', 'Milk (1 litre)'], ['kg of beans', 'Beans', 'Beans (1 kg)'], ['kg of maize flour', 'Maize flour', 'Maize flour (1 kg)']];
       const its = [...ITEMS].sort(() => Math.random() - 0.5).slice(0, 4), pr = its.map(([k]) => price(k)), skip = randInt(0, 3), tot = sum(pr);
@@ -801,7 +801,7 @@ export const FAMILIES = [
   // ======================================================================
   // ANGLES AND SYMMETRY
   // ======================================================================
-  fam({ id: 'g4.angles.turn-kind', skill: 'G4_ANGLES', outcome: 'G4.ANGLES.a', rung: 2, form: 'word',
+  fam({ id: 'g4.angles.turn-kind', skill: 'G4_ANGLES', cskill: 'MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE', outcome: 'MATH.G4.GEOMET.ANGLES.c', misMapped: false, reveals: ['M_TURN_QUARTER_AS_STRAIGHT'], rung: 2, form: 'word',
     draw: () => ({ obj: pick(['door', 'window', 'gate', 'box lid', 'book cover']), kind: pick(['acute', 'right', 'obtuse']), k: randInt(0, 2) }),
     make: ({ obj, kind, k }) => {
       const how = { acute: 'a little, less than a quarter turn', right: 'a quarter turn', obtuse: 'more than a quarter turn, but less than a half turn' }[kind];
@@ -812,7 +812,7 @@ export const FAMILIES = [
         steps: [`The turn is ${how}.`, `So it makes ${kind === 'acute' ? 'an acute' : kind === 'right' ? 'a right' : 'an obtuse'} angle.`] };
     } }),
 
-  fam({ id: 'g4.angles.clock-hands', skill: 'G4_ANGLES', outcome: 'G4.ANGLES.a', rung: 2, form: 'word',
+  fam({ id: 'g4.angles.clock-hands', skill: 'G4_ANGLES', cskill: 'MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE', outcome: 'MATH.G4.GEOMET.ANGLES.c', misMapped: false, reveals: ['M_TURN_HOUR_HAND_RIGHT_ANGLE'], rung: 2, form: 'word',
     draw: () => ({ h: pick([1, 2, 3, 4, 8, 9, 10, 11]), k: randInt(0, 2) }),
     make: ({ h, k }) => {
       const deg = Math.min(h * 30, 360 - h * 30), kind = deg < 90 ? 'acute' : deg === 90 ? 'right' : 'obtuse';
@@ -823,7 +823,7 @@ export const FAMILIES = [
         steps: [`The hands are ${Math.min(h, 12 - h)} numbers apart.`, `A quarter turn is 3 numbers, so it is ${kind === 'acute' ? 'smaller than a quarter turn: an acute angle' : kind === 'right' ? 'a quarter turn: a right angle' : 'bigger than a quarter turn: an obtuse angle'}.`] };
     } }),
 
-  fam({ id: 'g4.symmetry.count-lines', skill: 'G4_PLANE_FIGURES', outcome: 'G4.PLANE.c', rung: 1, form: 'direct',
+  fam({ id: 'g4.symmetry.count-lines', skill: 'G4_PLANE_FIGURES', cskill: 'MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY', outcome: 'MATH.G4.GEOMET.PLANE_FIGURES.c', misMapped: false, reveals: ['M_SYM_DIAGONAL_RECTANGLE'], rung: 1, form: 'direct',
     draw: () => ({ sh: pick([['a square', 4, 4], ['a rectangle that is not a square', 2, 4], ['an equilateral triangle', 3, 3], ['a regular hexagon', 6, 6], ['a regular pentagon', 5, 5]]), k: randInt(0, 3), p: person() }),
     make: ({ sh: [name, lines, sides], k, p }) => {
       const ws = [...new Set([sides, 1, 2, 3, 4, 6, 0])].filter(x => x !== lines).slice(0, 3);
@@ -833,7 +833,7 @@ export const FAMILIES = [
         steps: ['Find every fold line where the two halves match.', `${cap(name)} has ${lines} lines of symmetry.`] };
     } }),
 
-  fam({ id: 'g4.symmetry.letters', skill: 'G4_PLANE_FIGURES', outcome: 'G4.PLANE.c', rung: 1, form: 'direct',
+  fam({ id: 'g4.symmetry.letters', skill: 'G4_PLANE_FIGURES', cskill: 'MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY', outcome: 'MATH.G4.GEOMET.PLANE_FIGURES.c', misMapped: false, reveals: [], rung: 1, form: 'direct',
     draw: () => {
       const G = { none: ['F', 'G', 'J', 'L', 'P', 'R'], one: ['A', 'B', 'C', 'D', 'E', 'K', 'M', 'T', 'U', 'V', 'W', 'Y'], two: ['H', 'I', 'O', 'X'] };
       const T = pick(['none', 'one', 'two']), others = ['none', 'one', 'two'].filter(t => t !== T);
@@ -851,7 +851,7 @@ export const FAMILIES = [
         steps: [`Try folding each letter.`, `The capital letter ${right} has ${say[T]}.`] };
     } }),
 
-  fam({ id: 'g4.add.spot-estimate', skill: 'G4_ADD', outcome: 'G4.ADD.c', rung: 2, form: 'spot',
+  fam({ id: 'g4.add.spot-estimate', skill: 'G4_ADD', cskill: 'MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN', outcome: 'MATH.G4.NUMBER.ADDITION.c', misMapped: false, reveals: ['M_EST_ROUND_WRONG'], rung: 2, form: 'spot',
     draw: () => {
       const kind = pick(['a', 'b', 'sum']), pk = (hi) => { let v; do { v = randInt(12, 99) * 10 + (hi ? randInt(6, 9) : pick([1, 2, 3, 4, 6, 7, 8, 9])); } while (v % 10 === 5); return v; };
       return { a: pk(kind === 'a'), b: pk(kind === 'b'), kind, slip: pick([-10, 10, -100]), p: person() };
@@ -872,7 +872,7 @@ export const FAMILIES = [
       };
     } }),
 
-  fam({ id: 'g4.money.spot-cents', skill: 'G4_MONEY', outcome: 'G4.MONEY.a', rung: 2, form: 'spot',
+  fam({ id: 'g4.money.spot-cents', skill: 'G4_MONEY', cskill: 'MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS', outcome: 'MATH.G4.MEASUR.MONEY.a', misMapped: false, reveals: ['M_MONEY_10_CENTS_SHILLING'], rung: 2, form: 'spot',
     draw: () => ({ a: randInt(2, 9), b: pick([20, 25, 50, 75]), kind: pick(['rule', 'add']), p: person() }),
     make: ({ a, b, kind, p }) => {
       const per = kind === 'rule' ? 10 : 100, x = a * per, t = kind === 'add' ? x + b + 10 : x + b;

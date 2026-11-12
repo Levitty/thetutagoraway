@@ -12,7 +12,7 @@ import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';
 
 const source = JSON.parse(readFileSync(new URL('../curriculum/mathematics/g5.json', import.meta.url), 'utf8'));
 const misLib = JSON.parse(readFileSync(new URL('../engine/data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'));
-const mine = FAMILIES.filter(f => f.cskill && /^MATH\.G5\./.test(f.cskill) && f.subject !== 'science');   // Grade 5 Maths only: Grade 5 Science has its own test (science-g5.test.mjs), Grade 6 Maths has tests/maths-g6.test.mjs
+const mine = FAMILIES.filter(f => f.cskill && /^MATH\.G5\./.test(f.cskill) && f.subject !== 'science');   // Grade 5 Maths only: Grade 5 Science has its own test (science-g5.test.mjs), Grade 6 Maths has tests/maths-g6.test.mjs, Grade 4 Maths tests/maths-g4.test.mjs
 
 test('the in-app map is generated from the file HOREB owns, whole', () => {
   assert.equal(Object.keys(SUBSTRANDS).length, source.sub_strands.length);

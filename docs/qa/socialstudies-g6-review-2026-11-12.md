@@ -213,26 +213,26 @@ Read the question, the right answer and what a child is told after a wrong one. 
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES`, outcome `a`, form direct, rung 1.
 
-**Q:** Atieno is colouring a map of Eastern Africa. Which of these countries should she colour?
-Options: Tunisia | **South Sudan** | Algeria | Egypt
-- If a child answers "Tunisia": South Sudan lies north of Uganda and Kenya and is part of Eastern Africa. Egypt is in North Africa. Burundi is in Eastern Africa.
-- If a child answers "Algeria": South Sudan lies north of Uganda and Kenya and is part of Eastern Africa. Egypt is in North Africa. Burundi is in Eastern Africa.
+**Q:** Which of these countries is found on the Horn of Africa in the east?
+Options: Botswana | Namibia | **Somalia** | Zimbabwe
+- If a child answers "Botswana": Somalia, Ethiopia, Djibouti and Eritrea make up the Horn of Africa. Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.
+- If a child answers "Namibia": Somalia, Ethiopia, Djibouti and Eritrea make up the Horn of Africa. Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.
 
 ### socialstudies6.ps.cty.list
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES`, outcome `a`, form word, rung 2.
 
-**Q:** Njoki lists the countries of Eastern Africa. Which one does not belong in her list?
-Options: Uganda | **Egypt** | Eritrea | Kenya
-- If a child answers "Uganda": Egypt is in North Africa. Uganda, Eritrea and Kenya are in Eastern Africa. Egypt is in North Africa. Burundi is in Eastern Africa.
-- If a child answers "Eritrea": Egypt is in North Africa. Uganda, Eritrea and Kenya are in Eastern Africa. Egypt is in North Africa. Burundi is in Eastern Africa.
+**Q:** Amina draws a map of Eastern Africa. Which set of countries should she colour?
+Options: Uganda, Rwanda, Zambia, Malawi | Uganda, Rwanda, Angola, Namibia | Uganda, Burundi, Botswana, Zimbabwe | **Uganda, Rwanda, Burundi, South Sudan**
+- If a child answers "Uganda, Rwanda, Zambia, Malawi": All four of Uganda, Rwanda, Burundi and South Sudan are in Eastern Africa. Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.
+- If a child answers "Uganda, Rwanda, Angola, Namibia": All four of Uganda, Rwanda, Burundi and South Sudan are in Eastern Africa. Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.
 
 ### socialstudies6.ps.cty.spot
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES`, outcome `a`, form spot, rung 3.
 
-**Q:** Kiprop says Egypt is in Eastern Africa. Which step has the mistake?
-Steps: Step 1: Kiprop knows Egypt is in Africa. / **Step 2: He says it is in the east because it touches the Red Sea.** / Step 3: He writes Egypt on the list.
+**Q:** Wekesa says Zambia is in Eastern Africa. Which step has the mistake?
+Steps: Step 1: Wekesa knows Zambia is near Tanzania. / **Step 2: He decides every neighbour of Tanzania is in Eastern Africa.** / Step 3: He writes Zambia on his list.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -240,26 +240,26 @@ Steps: Step 1: Kiprop knows Egypt is in Africa. / **Step 2: He says it is in the
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE`, outcome `b`, form table, rung 1.
 
-**Q:** Look at the areas. Which country is the largest?
-Options: **Ethiopia** | Rwanda | Uganda | Kenya
-- If a child answers "Rwanda": Ethiopia has the greatest area, about 1,104,000 square kilometres. Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.
-- If a child answers "Uganda": Ethiopia has the greatest area, about 1,104,000 square kilometres. Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.
+**Q:** Which country is smaller than Uganda?
+Options: Tanzania | Kenya | Somalia | **Rwanda**
+- If a child answers "Tanzania": Rwanda has about 26,000 square kilometres. Uganda has about 242,000. Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.
+- If a child answers "Kenya": Rwanda has about 26,000 square kilometres. Uganda has about 242,000. Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.
 
 ### socialstudies6.ps.pos.coast
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE`, outcome `b`, form word, rung 2.
 
 **Q:** Which one of these countries is NOT landlocked?
-Options: South Sudan | Burundi | **Somalia** | Rwanda
-- If a child answers "South Sudan": Somalia has the longest coast in Africa. Burundi, South Sudan and Rwanda have none. Uganda is landlocked. It has lakes but no sea coast. Kenya has a coast on the Indian Ocean.
+Options: **Somalia** | Burundi | Rwanda | South Sudan
 - If a child answers "Burundi": Somalia has the longest coast in Africa. Burundi, South Sudan and Rwanda have none. Uganda is landlocked. It has lakes but no sea coast. Kenya has a coast on the Indian Ocean.
+- If a child answers "Rwanda": Somalia has the longest coast in Africa. Burundi, South Sudan and Rwanda have none. Uganda is landlocked. It has lakes but no sea coast. Kenya has a coast on the Indian Ocean.
 
 ### socialstudies6.ps.pos.spot
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE`, outcome `b`, form spot, rung 3.
 
-**Q:** Njeri says Rwanda is bigger than Tanzania because it has more people on a square kilometre. Which step has the mistake?
-Steps: Step 1: Njeri knows Rwanda is crowded. / **Step 2: She says crowded means large in area.** / Step 3: She writes that Rwanda is bigger.
+**Q:** Chebet says Somalia is to the west of Kenya. Which step has the mistake?
+Steps: Step 1: Chebet finds Kenya on the map. / **Step 2: She puts Somalia on the left side.** / Step 3: She writes that Somalia is west.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -268,7 +268,7 @@ Steps: Step 1: Njeri knows Rwanda is crowded. / **Step 2: She says crowded means
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING`, outcome `c`, form direct, rung 1.
 
 **Q:** Which lines on a map run from east to west?
-Options: Rivers | **Latitudes** | Longitudes | Boundaries
+Options: **Latitudes** | Rivers | Longitudes | Boundaries
 - If a child answers "Rivers": Latitudes run east to west. They are also called parallels. Latitudes run east to west. Longitudes run from the North Pole to the South Pole.
 - If a child answers "Longitudes": Latitudes run east to west. They are also called parallels. Latitudes run east to west. Longitudes run from the North Pole to the South Pole.
 
@@ -277,7 +277,7 @@ Options: Rivers | **Latitudes** | Longitudes | Boundaries
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING`, outcome `c`, form word, rung 2.
 
 **Q:** Which statement is true?
-Options: **The equator is a line of latitude** | The Prime Meridian is a line of latitude | The equator is the Prime Meridian | The equator is a line of longitude
+Options: The Prime Meridian is a line of latitude | The equator is the Prime Meridian | **The equator is a line of latitude** | The equator is a line of longitude
 - If a child answers "The Prime Meridian is a line of latitude": The equator is a latitude. The Prime Meridian is a longitude. The equator is 0 degrees latitude. The Prime Meridian is 0 degrees longitude.
 - If a child answers "The equator is the Prime Meridian": The equator is a latitude. The Prime Meridian is a longitude. The equator is 0 degrees latitude. The Prime Meridian is 0 degrees longitude.
 
@@ -285,8 +285,8 @@ Options: **The equator is a line of latitude** | The Prime Meridian is a line of
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING`, outcome `c`, form spot, rung 3.
 
-**Q:** Brian says the equator is 0 degrees longitude. Which step has the mistake?
-Steps: Step 1: Brian knows the equator is 0 degrees. / **Step 2: He says it measures east and west.** / Step 3: He writes 0 degrees longitude.
+**Q:** Zawadi says lines of latitude meet at the poles. Which step has the mistake?
+Steps: Step 1: Zawadi looks at a globe. / **Step 2: She sees lines meeting at the poles and calls them latitudes.** / Step 3: She writes that latitudes meet at the poles.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -295,7 +295,7 @@ Steps: Step 1: Brian knows the equator is 0 degrees. / **Step 2: He says it meas
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE`, outcome `c`, form table, rung 1.
 
 **Q:** Look at the table. Which town is south of the equator?
-Options: Mogadishu | Lodwar | **Nairobi** | Addis Ababa
+Options: **Nairobi** | Mogadishu | Lodwar | Addis Ababa
 - If a child answers "Mogadishu": The letter S means south. Nairobi is at 1 degree S. The letter S means south. Nairobi lies a little south of the equator.
 - If a child answers "Lodwar": The letter S means south. Nairobi is at 1 degree S. The letter S means south. Nairobi lies a little south of the equator.
 
@@ -303,10 +303,10 @@ Options: Mogadishu | Lodwar | **Nairobi** | Addis Ababa
 
 Skill `NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE`, outcome `c`, form table, rung 2.
 
-**Q:** A place is at 4 N, 36 E. Which number is its latitude?
-Options: 36 E | 4 E | **4 N** | 36 N
-- If a child answers "36 E": We give latitude first. So 4 N is the latitude and 36 E is the longitude. We give latitude first and longitude second, so 4 N is the latitude.
-- If a child answers "4 E": We give latitude first. So 4 N is the latitude and 36 E is the longitude. We give latitude first and longitude second, so 4 N is the latitude.
+**Q:** Dar es Salaam is at 7 S, 39 E. Which is its longitude?
+Options: 39 S | 7 S | 7 E | **39 E**
+- If a child answers "39 S": Longitude is given second, so 39 E is the longitude. We give latitude first and longitude second, so 4 N is the latitude.
+- If a child answers "7 S": Longitude is given second, so 39 E is the longitude. We give latitude first and longitude second, so 4 N is the latitude.
 
 ### socialstudies6.ll.loc.spot
 
@@ -322,18 +322,18 @@ Steps: Step 1: Oscar reads 32 E. / **Step 2: He thinks Africa is in the west.** 
 Skill `NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES`, outcome `a`, form direct, rung 1.
 
 **Q:** What kind of feature is the Rwenzori?
-Options: A lake | A plain | A river | **A mountain range**
+Options: A lake | A river | A plain | **A mountain range**
 - If a child answers "A lake": The Rwenzori Mountains lie on the border of Uganda and the DR Congo. Lake Tanganyika is a lake: water with land all round it.
-- If a child answers "A plain": The Rwenzori Mountains lie on the border of Uganda and the DR Congo. Lake Tanganyika is a lake: water with land all round it.
+- If a child answers "A river": The Rwenzori Mountains lie on the border of Uganda and the DR Congo. Lake Tanganyika is a lake: water with land all round it.
 
 ### socialstudies6.pf.ft.where
 
 Skill `NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES`, outcome `a`, form word, rung 2.
 
-**Q:** Which country has the Rwenzori Mountains?
-Options: Somalia | Kenya | Tanzania | **Uganda**
-- If a child answers "Somalia": The Rwenzori Mountains are on the western border of Uganda. Kilimanjaro stands in Tanzania. It can be seen from Kenya.
-- If a child answers "Kenya": The Rwenzori Mountains are on the western border of Uganda. Kilimanjaro stands in Tanzania. It can be seen from Kenya.
+**Q:** Which is the odd one out?
+Options: Mount Elgon | Mount Kilimanjaro | Mount Kenya | **Lake Turkana**
+- If a child answers "Mount Elgon": Lake Turkana is a lake. The other three are mountains. Lake Tanganyika is a lake: water with land all round it.
+- If a child answers "Mount Kilimanjaro": Lake Turkana is a lake. The other three are mountains. Lake Tanganyika is a lake: water with land all round it.
 
 ### socialstudies6.pf.ft.spot
 
@@ -348,19 +348,19 @@ Steps: Step 1: Odhiambo saw Kilimanjaro from Amboseli. / **Step 2: He decides th
 
 Skill `NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION`, outcome `b`, form direct, rung 1.
 
-**Q:** Which of these is a block mountain?
-Options: Mount Kenya | Mount Elgon | **The Rwenzori** | Mount Kilimanjaro
-- If a child answers "Mount Kenya": The Rwenzori are block mountains. The other three are volcanic. The Rwenzori are block mountains. They were pushed up between faults. They are not volcanoes.
-- If a child answers "Mount Elgon": The Rwenzori are block mountains. The other three are volcanic. The Rwenzori are block mountains. They were pushed up between faults. They are not volcanoes.
+**Q:** What is a fault?
+Options: A lake shore | A mountain top | A river bed | **A crack in the earth's crust**
+- If a child answers "A lake shore": A fault is a crack in the crust along which the land moves. The Rift Valley formed when the land between faults dropped. A river did not cut it out.
+- If a child answers "A mountain top": A fault is a crack in the crust along which the land moves. The Rift Valley formed when the land between faults dropped. A river did not cut it out.
 
 ### socialstudies6.pf.form.lake
 
 Skill `NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION`, outcome `b`, form word, rung 2.
 
-**Q:** Which lake lies in a shallow bowl made by the land sagging between two arms of the Rift?
-Options: **Lake Victoria** | Lake Tanganyika | Lake Turkana | Lake Naivasha
-- If a child answers "Lake Tanganyika": Lake Victoria formed in a shallow bowl made by the land sagging, between the two arms of the Rift Valley. Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.
-- If a child answers "Lake Turkana": Lake Victoria formed in a shallow bowl made by the land sagging, between the two arms of the Rift Valley. Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.
+**Q:** Which feature is a rift valley lake?
+Options: The Serengeti | **Lake Turkana** | Mount Kenya | Lake Victoria
+- If a child answers "The Serengeti": Lake Turkana lies in the floor of the Rift Valley. Lake Victoria does not. Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.
+- If a child answers "Mount Kenya": Lake Turkana lies in the floor of the Rift Valley. Lake Victoria does not. Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.
 
 ### socialstudies6.pf.form.spot
 
@@ -375,26 +375,26 @@ Steps: Step 1: Hamisi knows Turkana is in the Rift. / **Step 2: He puts Victoria
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which climatic region covers much of Tanzania and lower Kenya, with wet and dry seasons?
-Options: Arid | Equatorial | **Tropical** | Highland
-- If a child answers "Arid": The tropical or savanna climate has a wet and a dry season. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
-- If a child answers "Equatorial": The tropical or savanna climate has a wet and a dry season. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
+**Q:** Which climatic region is found in northern Kenya and Somalia?
+Options: Tropical | **Arid** | Highland | Equatorial
+- If a child answers "Tropical": Northern Kenya and Somalia are very hot and dry, so they are arid. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
+- If a child answers "Highland": Northern Kenya and Somalia are very hot and dry, so they are arid. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
 
 ### socialstudies6.cr.reg.table
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS`, outcome `a`, form table, rung 2.
 
-**Q:** Addis Ababa lies 2,300 metres above sea level. Which region fits?
-Options: **Highland** | Tropical | Equatorial | Arid
-- If a child answers "Tropical": It lies on the high plateau, so the climate is highland. The highland climate is found on high land such as Mount Kenya, Kilimanjaro and the Ethiopian Highlands.
-- If a child answers "Equatorial": It lies on the high plateau, so the climate is highland. The highland climate is found on high land such as Mount Kenya, Kilimanjaro and the Ethiopian Highlands.
+**Q:** Kisumu is on the shore of Lake Victoria and gets rain most months. Which region fits?
+Options: Highland | Semi-arid | **Equatorial** | Arid
+- If a child answers "Highland": Rain most months and warmth make it equatorial. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
+- If a child answers "Semi-arid": Rain most months and warmth make it equatorial. Northern Kenya is arid: very hot and very dry. The equatorial region is wet.
 
 ### socialstudies6.cr.reg.spot
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS`, outcome `a`, form spot, rung 3.
 
-**Q:** Violet says Mount Kilimanjaro has an arid climate. Which step has the mistake?
-Steps: Step 1: Violet knows the base of the mountain can be dry. / **Step 2: She says the whole mountain is arid.** / Step 3: She writes arid.
+**Q:** Sarah says the highland region is along the coast. Which step has the mistake?
+Steps: Step 1: Sarah thinks of cool breezes at the coast. / **Step 2: She says cool places are on the coast.** / Step 3: She writes the coast is highland.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -403,52 +403,52 @@ Steps: Step 1: Violet knows the base of the mountain can be dry. / **Step 2: She
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS`, outcome `b`, form direct, rung 1.
 
 **Q:** Which description fits the semi-arid region?
-Options: Cool with rain in every month | Hot with rain in every month | Snowy and cold all the year | **Hot with little and unreliable rain**
-- If a child answers "Cool with rain in every month": Semi-arid places have little and unreliable rain. The arid region is very hot and very dry.
+Options: Hot with rain in every month | Snowy and cold all the year | **Hot with little and unreliable rain** | Cool with rain in every month
 - If a child answers "Hot with rain in every month": Semi-arid places have little and unreliable rain. The arid region is very hot and very dry.
+- If a child answers "Snowy and cold all the year": Semi-arid places have little and unreliable rain. The arid region is very hot and very dry.
 
 ### socialstudies6.cr.tr.why
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS`, outcome `b`, form word, rung 2.
 
-**Q:** There is snow on Mount Kilimanjaro even though Tanzania is hot. Why?
-Options: Tanzania gets snow every winter season | **The summit is very high, so it is very cold** | The summit is nearer to the hot sun | The sea freezes round the summit
-- If a child answers "Tanzania gets snow every winter season": Very high places are cold, so snow can lie on the summit. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
-- If a child answers "The summit is nearer to the hot sun": Very high places are cold, so snow can lie on the summit. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
+**Q:** Why is the top of Mount Kenya cold although it is on the equator?
+Options: It has no clouds | **Air gets colder as you go higher** | It is far from the sea | It is nearer the sun so it is hot
+- If a child answers "It has no clouds": Temperature falls as height increases, even on the equator. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
+- If a child answers "It is far from the sea": Temperature falls as height increases, even on the equator. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
 
 ### socialstudies6.cr.tr.table
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS`, outcome `b`, form table, rung 2.
 
-**Q:** Which town is cool and wet?
-Options: Garissa | **Nyeri** | Wajir | Mombasa
-- If a child answers "Garissa": Nyeri is cool and gets 1,100 mm of rain. The arid region is very hot and very dry.
-- If a child answers "Wajir": Nyeri is cool and gets 1,100 mm of rain. The arid region is very hot and very dry.
+**Q:** Which town is most likely in the highland region?
+Options: Wajir | Mombasa | Garissa | **Nyeri**
+- If a child answers "Wajir": Nyeri is cool and has good rain, as highland places have. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
+- If a child answers "Mombasa": Nyeri is cool and has good rain, as highland places have. The higher you go, the colder it gets. That is why there is snow on Mount Kenya.
 
 ### socialstudies6.cr.inf.act
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE`, outcome `c`, form direct, rung 1.
 
-**Q:** Why is tea grown in the cool, wet highlands?
-Options: **It needs cool weather and plenty of rain** | It can be grown in any kind of climate | It needs hot and very dry weather to grow | It grows best in the hot dry desert
-- If a child answers "It can be grown in any kind of climate": Tea does best in cool weather with plenty of rain, as in the highlands. Tea needs cool weather and plenty of rain, so it grows in the highlands.
-- If a child answers "It needs hot and very dry weather to grow": Tea does best in cool weather with plenty of rain, as in the highlands. Tea needs cool weather and plenty of rain, so it grows in the highlands.
+**Q:** Why do many tourists visit the Maasai Mara in the dry months?
+Options: The whole land is covered with deep snow in those months | The heavy rain makes all the roads very easy to use | The animals all leave the park and go far away then | **Animals gather at the rivers and the grass is short**
+- If a child answers "The whole land is covered with deep snow in those months": In dry weather animals come to the water and are easy to see. Tea needs cool weather and plenty of rain, so it grows in the highlands.
+- If a child answers "The heavy rain makes all the roads very easy to use": In dry weather animals come to the water and are easy to see. Tea needs cool weather and plenty of rain, so it grows in the highlands.
 
 ### socialstudies6.cr.inf.story
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE`, outcome `c`, form word, rung 2.
 
 **Q:** Why do people in hot, humid areas build houses with big windows and wear light clothes?
-Options: To keep warm | **To keep cool** | To collect rain | To grow crops
+Options: To grow crops | To keep warm | To collect rain | **To keep cool**
+- If a child answers "To grow crops": Light clothing and ventilation help people stay cool in the heat. Tea needs cool weather and plenty of rain, so it grows in the highlands.
 - If a child answers "To keep warm": Light clothing and ventilation help people stay cool in the heat. Tea needs cool weather and plenty of rain, so it grows in the highlands.
-- If a child answers "To collect rain": Light clothing and ventilation help people stay cool in the heat. Tea needs cool weather and plenty of rain, so it grows in the highlands.
 
 ### socialstudies6.cr.inf.spot
 
 Skill `NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE`, outcome `c`, form spot, rung 3.
 
-**Q:** Janet says heavy rain causes drought. Which step has the mistake?
-Steps: Step 1: Janet watches a long rainy season. / **Step 2: She says too much rain makes the land dry.** / Step 3: She writes drought.
+**Q:** Hillary says farmers in a dry area should grow rice without irrigation. Which step has the mistake?
+Steps: Step 1: Hillary knows rice is a good crop. / **Step 2: He says rice grows in any weather.** / Step 3: He writes rice for the dry area.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -457,18 +457,18 @@ Steps: Step 1: Janet watches a long rainy season. / **Step 2: She says too much 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which vegetation is found in northern Kenya and Somalia?
-Options: **Desert and semi-desert scrub** | Dense tropical rain forest | Moorland with bare rock | Mangrove swamp forest
-- If a child answers "Dense tropical rain forest": Dry land has thorny bushes and scattered grass. Rain forest needs rain all year. It grows where it is hot and wet.
+Options: Mangrove swamp forest | **Desert and semi-desert scrub** | Moorland with bare rock | Dense tropical rain forest
+- If a child answers "Mangrove swamp forest": Dry land has thorny bushes and scattered grass. Rain forest needs rain all year. It grows where it is hot and wet.
 - If a child answers "Moorland with bare rock": Dry land has thorny bushes and scattered grass. Rain forest needs rain all year. It grows where it is hot and wet.
 
 ### socialstudies6.vg.ty.place
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES`, outcome `a`, form word, rung 2.
 
-**Q:** Where is much of the tropical rain forest in Uganda found?
-Options: **In the west and south, where rain is heavy** | In the hot desert of the north | In the dry north-east of the country | On the coast near the sea
-- If a child answers "In the hot desert of the north": Western Uganda has heavy rain, which suits forest. Rain forest needs rain all year. It grows where it is hot and wet.
-- If a child answers "In the dry north-east of the country": Western Uganda has heavy rain, which suits forest. Rain forest needs rain all year. It grows where it is hot and wet.
+**Q:** Which is the odd one out?
+Options: Savanna | Rain forest | Desert scrub | **Mangrove**
+- If a child answers "Savanna": Mangrove is a coastal swamp forest. The others are land vegetation by climate. Mangroves grow in salt water along the coast, for example near Lamu and Mombasa.
+- If a child answers "Rain forest": Mangrove is a coastal swamp forest. The others are land vegetation by climate. Mangroves grow in salt water along the coast, for example near Lamu and Mombasa.
 
 ### socialstudies6.vg.ty.spot
 
@@ -483,26 +483,26 @@ Steps: Step 1: Fred knows grass grows at the coast. / **Step 2: He decides savan
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS`, outcome `c`, form direct, rung 1.
 
-**Q:** Which description fits mangroves?
-Options: Tall grass that dries in summer | Long roots deep in dry sand | **Stilt and breathing roots in salt water** | Bamboo stems with thin leaves
-- If a child answers "Tall grass that dries in summer": Mangroves have stilt roots and breathing roots that stand out of the salty mud. Desert plants have thorns, small leaves and long roots to save and find water.
-- If a child answers "Long roots deep in dry sand": Mangroves have stilt roots and breathing roots that stand out of the salty mud. Desert plants have thorns, small leaves and long roots to save and find water.
+**Q:** How does vegetation change as you climb a high mountain?
+Options: It stays the same all the way up | **Forest, then bamboo, then moorland, then bare rock** | Bare rock, then moorland, then bamboo, then forest | Desert, then savanna, then rain forest, then bare rock
+- If a child answers "It stays the same all the way up": Vegetation changes with height as it gets colder. Vegetation changes with height. Forest is at the bottom and bare rock at the top.
+- If a child answers "Bare rock, then moorland, then bamboo, then forest": Vegetation changes with height as it gets colder. Vegetation changes with height. Forest is at the bottom and bare rock at the top.
 
 ### socialstudies6.vg.tr.why
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS`, outcome `c`, form word, rung 2.
 
-**Q:** Why do mangroves have roots that stand above the mud?
-Options: To catch the snow falling from the clouds above | To find deep water below the hot desert sand | **To breathe air and stay upright in soft, salty mud** | To store water in the roots for the dry days
-- If a child answers "To catch the snow falling from the clouds above": The roots take in air and hold the tree in the mud. Desert plants have thorns, small leaves and long roots to save and find water.
-- If a child answers "To find deep water below the hot desert sand": The roots take in air and hold the tree in the mud. Desert plants have thorns, small leaves and long roots to save and find water.
+**Q:** Why do cactus-like plants in dry places store water in their stems?
+Options: They live in the sea and need salt | They need to lose water fast to stay cool | They grow where it rains every day | **Rain is rare, so they save water for dry days**
+- If a child answers "They live in the sea and need salt": Storing water helps them live through long dry spells. Desert plants have thorns, small leaves and long roots to save and find water.
+- If a child answers "They need to lose water fast to stay cool": Storing water helps them live through long dry spells. Desert plants have thorns, small leaves and long roots to save and find water.
 
 ### socialstudies6.vg.tr.spot
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS`, outcome `c`, form spot, rung 3.
 
-**Q:** Cynthia says desert plants have broad leaves. Which step has the mistake?
-Steps: Step 1: Cynthia thinks of garden plants. / **Step 2: She says all plants have broad leaves.** / Step 3: She writes that desert plants have broad leaves.
+**Q:** Isaac says savanna is thick forest. Which step has the mistake?
+Steps: Step 1: Isaac has seen the Mara on a film. / **Step 2: He says it has trees close together.** / Step 3: He writes thick forest.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -510,26 +510,26 @@ Steps: Step 1: Cynthia thinks of garden plants. / **Step 2: She says all plants 
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE`, outcome `d`, form direct, rung 1.
 
-**Q:** Which action conserves vegetation?
-Options: **Planting trees where trees were cut** | Cutting trees for charcoal to sell | Burning the bush to clear it | Letting too many animals graze
-- If a child answers "Cutting trees for charcoal to sell": Planting trees puts back what was cut and holds the soil. Planting trees conserves vegetation. Uncontrolled fires destroy plants and soil.
-- If a child answers "Burning the bush to clear it": Planting trees puts back what was cut and holds the soil. Planting trees conserves vegetation. Uncontrolled fires destroy plants and soil.
+**Q:** What is afforestation?
+Options: **Planting trees where there were none** | Grazing animals in the forest | Cutting trees to clear land | Burning dry grass on the plain
+- If a child answers "Grazing animals in the forest": Afforestation means planting trees in a place that had none. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
+- If a child answers "Cutting trees to clear land": Afforestation means planting trees in a place that had none. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
 
 ### socialstudies6.vg.con.story
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE`, outcome `d`, form word, rung 2.
 
-**Q:** Why do forest guards protect a forest?
-Options: **Trees give rain, shelter, timber and homes for animals** | Forests take up land that could be used for farms | Trees give nothing useful to people or animals | They want to sell all of the wood for money
-- If a child answers "Forests take up land that could be used for farms": Forests give many things and need protection. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
-- If a child answers "Trees give nothing useful to people or animals": Forests give many things and need protection. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
+**Q:** A farmer cuts a tree. What should he do to conserve vegetation?
+Options: Cut the next tree as well | **Plant new trees to replace it** | Do nothing about it | Burn the stump and leave it
+- If a child answers "Cut the next tree as well": Replanting puts back what was cut. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
+- If a child answers "Do nothing about it": Replanting puts back what was cut. When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.
 
 ### socialstudies6.vg.con.spot
 
 Skill `NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE`, outcome `d`, form spot, rung 3.
 
-**Q:** Roseline says cutting forest for charcoal does not harm the land. Which step has the mistake?
-Steps: Step 1: Roseline sees families earn money from charcoal. / **Step 2: She says the land is not harmed.** / Step 3: She writes it is fine.
+**Q:** Agnes says burning dry grass before the rains helps vegetation. Which step has the mistake?
+Steps: Step 1: Agnes sees green shoots after a burn. / **Step 2: She says fire has no cost.** / Step 3: She writes burn the grass.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -537,19 +537,19 @@ Steps: Step 1: Roseline sees families earn money from charcoal. / **Step 2: She 
 
 Skill `NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which site is in Zanzibar, Tanzania?
-Options: Kasubi Tombs | Fort Jesus | **Stone Town** | Gedi Ruins
-- If a child answers "Kasubi Tombs": Stone Town is the old part of Zanzibar City. The Lalibela churches are in Ethiopia. They were carved out of rock.
-- If a child answers "Fort Jesus": Stone Town is the old part of Zanzibar City. The Lalibela churches are in Ethiopia. They were carved out of rock.
+**Q:** Which is a historic built environment?
+Options: Lake Victoria | The Serengeti | **Fort Jesus in Mombasa** | Mount Kenya
+- If a child answers "Lake Victoria": Fort Jesus was built by people. The other three are natural. Fort Jesus was built by people. Mount Kenya is natural.
+- If a child answers "The Serengeti": Fort Jesus was built by people. The other three are natural. Fort Jesus was built by people. Mount Kenya is natural.
 
 ### socialstudies6.hb.si.where
 
 Skill `NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES`, outcome `a`, form word, rung 2.
 
-**Q:** Which of these sites is in Tanzania?
-Options: Fort Jesus | Gedi Ruins | **Kilwa Kisiwani** | Lalibela
-- If a child answers "Fort Jesus": Kilwa Kisiwani is an island with ruins in southern Tanzania. The Lalibela churches are in Ethiopia. They were carved out of rock.
-- If a child answers "Gedi Ruins": Kilwa Kisiwani is an island with ruins in southern Tanzania. The Lalibela churches are in Ethiopia. They were carved out of rock.
+**Q:** Which Kenyan site is a ruined Swahili town in a forest near Malindi?
+Options: Fort Jesus | **Gedi Ruins** | Lalibela | Stone Town
+- If a child answers "Fort Jesus": The Gedi Ruins are the remains of an old Swahili town near Malindi. The Lalibela churches are in Ethiopia. They were carved out of rock.
+- If a child answers "Lalibela": The Gedi Ruins are the remains of an old Swahili town near Malindi. The Lalibela churches are in Ethiopia. They were carved out of rock.
 
 ### socialstudies6.hb.si.spot
 
@@ -564,26 +564,26 @@ Steps: Step 1: Rehema knows Fort Jesus is old. / **Step 2: She says all old fort
 
 Skill `NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE`, outcome `b`, form direct, rung 1.
 
-**Q:** What does a museum do for learners?
-Options: Keeps most people out of town | Sells new cars to learners | **Shows real objects from our past** | Teaches only maths to the class
-- If a child answers "Keeps most people out of town": A museum keeps and shows objects that help us learn about the past. Old buildings tell our history and bring tourists and income.
-- If a child answers "Sells new cars to learners": A museum keeps and shows objects that help us learn about the past. Old buildings tell our history and bring tourists and income.
+**Q:** How does a historic site help a country's economy?
+Options: It takes away jobs | It costs money and gives nothing back | It stops trade | **Tourists pay to visit it and it gives jobs**
+- If a child answers "It takes away jobs": Visitors pay fees and spend on hotels and guides. Old buildings tell our history and bring tourists and income.
+- If a child answers "It costs money and gives nothing back": Visitors pay fees and spend on hotels and guides. Old buildings tell our history and bring tourists and income.
 
 ### socialstudies6.hb.va.act
 
 Skill `NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE`, outcome `c`, form word, rung 2.
 
-**Q:** A wall at an old fort is cracking. What should the museum staff do?
-Options: Paint over the cracks with bright new paint | **Repair it carefully using the same materials** | Pull the whole wall down at once to be safe | Leave it alone until it falls down by itself
-- If a child answers "Paint over the cracks with bright new paint": Careful repair keeps the site as it was. Old buildings tell our history and bring tourists and income.
-- If a child answers "Pull the whole wall down at once to be safe": Careful repair keeps the site as it was. Old buildings tell our history and bring tourists and income.
+**Q:** Why should the government make laws to protect historic sites?
+Options: So that they are forgotten by children | **So that people cannot damage or sell them** | So that they can be pulled down soon | So that nobody is allowed to visit
+- If a child answers "So that they are forgotten by children": Laws stop damage, theft and illegal building. Old buildings tell our history and bring tourists and income.
+- If a child answers "So that they can be pulled down soon": Laws stop damage, theft and illegal building. Old buildings tell our history and bring tourists and income.
 
 ### socialstudies6.hb.va.spot
 
 Skill `NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE`, outcome `b`, form spot, rung 3.
 
-**Q:** Hassan says climbing on old walls is safe because they are strong. Which step has the mistake?
-Steps: Step 1: Hassan sees thick walls. / **Step 2: He says old walls cannot break.** / Step 3: He climbs up.
+**Q:** Janet says historic sites do not help the economy. Which step has the mistake?
+Steps: Step 1: Janet counts the entry fee. / **Step 2: She says tourists spend nothing in the area.** / Step 3: She writes no help.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -592,18 +592,18 @@ Steps: Step 1: Hassan sees thick walls. / **Step 2: He says old walls cannot bre
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY`, outcome `a`, form direct, rung 1.
 
 **Q:** Which language group do the Nyamwezi belong to?
-Options: Nilotic | Semitic | **Bantu** | Cushitic
+Options: Cushitic | **Bantu** | Nilotic | Semitic
+- If a child answers "Cushitic": The Nyamwezi of Tanzania belong to the Bantu group. The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.
 - If a child answers "Nilotic": The Nyamwezi of Tanzania belong to the Bantu group. The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.
-- If a child answers "Semitic": The Nyamwezi of Tanzania belong to the Bantu group. The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.
 
 ### socialstudies6.lg.cl.list
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY`, outcome `a`, form word, rung 2.
 
-**Q:** Which list has only Nilotic communities?
-Options: **Luo, Acholi, Turkana** | Acholi, Baganda, Dinka | Luo, Kikuyu, Turkana | Luo, Somali, Maasai
-- If a child answers "Acholi, Baganda, Dinka": The Luo, Acholi and Turkana are all Nilotic. The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.
-- If a child answers "Luo, Kikuyu, Turkana": The Luo, Acholi and Turkana are all Nilotic. The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.
+**Q:** Which list has only Cushitic communities?
+Options: Somali, Luo, Afar | Oromo, Kikuyu, Afar | Somali, Maasai, Oromo | **Somali, Oromo, Afar**
+- If a child answers "Somali, Luo, Afar": The Somali, Oromo and Afar are all Cushitic. The Somali belong to the Cushitic group, together with the Oromo and the Afar.
+- If a child answers "Oromo, Kikuyu, Afar": The Somali, Oromo and Afar are all Cushitic. The Somali belong to the Cushitic group, together with the Oromo and the Afar.
 
 ### socialstudies6.lg.cl.spot
 
@@ -618,26 +618,26 @@ Steps: Step 1: Hussein knows the Somali herd camels. / **Step 2: He thinks all h
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES`, outcome `b`, form direct, rung 1.
 
-**Q:** Which of these is a reason why people migrated long ago?
-Options: **Escape from war and disease** | Wish to win a race | Wish to see foreign films | Wish to buy new clothes
-- If a child answers "Wish to win a race": War, famine and disease have forced people to move. People moved to find pasture, water and fertile land, and to escape drought, wars and disease.
-- If a child answers "Wish to see foreign films": War, famine and disease have forced people to move. People moved to find pasture, water and fertile land, and to escape drought, wars and disease.
+**Q:** Why did many groups move to new lands?
+Options: To avoid learning any new languages | To visit their relatives once every year | To go on a holiday just for fun | **To look for pasture, water and fertile land**
+- If a child answers "To avoid learning any new languages": People moved to find food, water and pasture, and to escape drought and war. People moved to find pasture, water and fertile land, and to escape drought, wars and disease.
+- If a child answers "To visit their relatives once every year": People moved to find food, water and pasture, and to escape drought and war. People moved to find pasture, water and fertile land, and to escape drought, wars and disease.
 
 ### socialstudies6.lg.rr.origin
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES`, outcome `c`, form table, rung 2.
 
-**Q:** Which way did the Cushites move into Kenya?
-Options: West, from Uganda | North, from Tanzania | **South, from Ethiopia** | East, from the ocean
-- If a child answers "West, from Uganda": The Cushites came from Ethiopia in the north and moved south. The Cushites came from the Horn of Africa in the north and moved south.
-- If a child answers "North, from Tanzania": The Cushites came from Ethiopia in the north and moved south. The Cushites came from the Horn of Africa in the north and moved south.
+**Q:** Where did the Bantu come from?
+Options: The Nile in South Sudan | **The Congo Basin** | The Ethiopian highlands | The Indian Ocean
+- If a child answers "The Nile in South Sudan": The Bantu came from the Congo Basin and moved east and south. The Bantu came from the Congo Basin. The Cushites came from Ethiopia and the Nilotes from South Sudan.
+- If a child answers "The Ethiopian highlands": The Bantu came from the Congo Basin and moved east and south. The Bantu came from the Congo Basin. The Cushites came from Ethiopia and the Nilotes from South Sudan.
 
 ### socialstudies6.lg.rr.spot
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES`, outcome `b`, form spot, rung 3.
 
-**Q:** Mwanaisha says the Nilotes came from the Congo Basin. Which step has the mistake?
-Steps: Step 1: Mwanaisha knows the Bantu came from the Congo. / **Step 2: She says all groups came from there.** / Step 3: She writes Congo Basin.
+**Q:** Kevin says herders move when the grass is plentiful. Which step has the mistake?
+Steps: Step 1: Kevin knows herders move often. / **Step 2: He says they move when food is plentiful.** / Step 3: He writes plentiful.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -645,53 +645,53 @@ Steps: Step 1: Mwanaisha knows the Bantu came from the Congo. / **Step 2: She sa
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS`, outcome `d`, form direct, rung 1.
 
-**Q:** Which is an effect of groups settling near each other?
-Options: They all became exactly the same | They never met one another again | They stopped speaking to each other | **They traded and some families intermarried**
-- If a child answers "They all became exactly the same": Neighbours traded, married and shared ideas, but each group kept its own identity. They traded, learned from each other and some intermarried. They did not all become the same.
-- If a child answers "They never met one another again": Neighbours traded, married and shared ideas, but each group kept its own identity. They traded, learned from each other and some intermarried. They did not all become the same.
+**Q:** Which is a good effect of migration and settlement?
+Options: Land disputes between two groups | Wars over cattle and water holes | Families lost their homes and herds | **New skills such as iron working spread**
+- If a child answers "Land disputes between two groups": Groups shared skills such as iron working and new crops. Settlement could cause quarrels over land and pasture, as well as bring trade and mixing.
+- If a child answers "Wars over cattle and water holes": Groups shared skills such as iron working and new crops. Settlement could cause quarrels over land and pasture, as well as bring trade and mixing.
 
 ### socialstudies6.lg.ef.story
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS`, outcome `d`, form word, rung 2.
 
-**Q:** A Kalenjin man marries a Luhya woman. What effect of settlement is this?
-Options: A famine | **Intermarriage** | A quarrel over land | A drought
-- If a child answers "A famine": People of different groups married and mixed. They traded, learned from each other and some intermarried. They did not all become the same.
-- If a child answers "A quarrel over land": People of different groups married and mixed. They traded, learned from each other and some intermarried. They did not all become the same.
+**Q:** Some Maasai learn Swahili to trade with coastal people. Which effect is this?
+Options: All groups became one | Trade stopped | **Languages and customs spread** | The Maasai language disappeared
+- If a child answers "All groups became one": People learned each other's languages to trade. They traded, learned from each other and some intermarried. They did not all become the same.
+- If a child answers "Trade stopped": People learned each other's languages to trade. They traded, learned from each other and some intermarried. They did not all become the same.
 
 ### socialstudies6.pd.fa.which
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which factor attracts many people to a town?
-Options: Long droughts | Empty land and silence | Poor roads | **Jobs and industries**
-- If a child answers "Long droughts": People move to places with jobs and industries. Few live in deserts because it is too dry to grow food or find water.
-- If a child answers "Empty land and silence": People move to places with jobs and industries. Few live in deserts because it is too dry to grow food or find water.
+**Q:** Which factor keeps people away from an area?
+Options: Large markets | Peace and good roads | Fertile soil and rain | **Insecurity and war**
+- If a child answers "Large markets": People leave unsafe areas. Few live in deserts because it is too dry to grow food or find water.
+- If a child answers "Peace and good roads": People leave unsafe areas. Few live in deserts because it is too dry to grow food or find water.
 
 ### socialstudies6.pd.fa.story
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** A highland area has deep soil, good rain and a railway. Many people live there. Which factor is NOT part of the reason?
-Options: Good rain | A railway | Deep soil | **A hot, dry desert**
-- If a child answers "Good rain": Soil, rain and transport attract people. A desert does not. Few live in deserts because it is too dry to grow food or find water.
-- If a child answers "A railway": Soil, rain and transport attract people. A desert does not. Few live in deserts because it is too dry to grow food or find water.
+**Q:** Which area would you expect to be thinly populated?
+Options: A busy port city | A large town with industries | A plain with rich soil and rain | **A swamp with tsetse flies**
+- If a child answers "A busy port city": Tsetse flies carry disease and keep people and cattle away. People crowd where land is gentle, soil is fertile and rain is reliable.
+- If a child answers "A large town with industries": Tsetse flies carry disease and keep people and cattle away. People crowd where land is gentle, soil is fertile and rain is reliable.
 
 ### socialstudies6.pd.ar.table
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS`, outcome `b`, form table, rung 1.
 
-**Q:** Density is the number of people for what?
-Options: Each town | **Each square kilometre of land** | The whole country | Each family
-- If a child answers "Each town": Density is the number of people for each square kilometre. Density is the number of people for each square kilometre.
-- If a child answers "The whole country": Density is the number of people for each square kilometre. Density is the number of people for each square kilometre.
+**Q:** Which country is the smallest in area but one of the most crowded?
+Options: South Sudan | **Rwanda** | Ethiopia | Somalia
+- If a child answers "South Sudan": Rwanda is small, with many people on its land. Rwanda is small but has many people on its land, so its density is high.
+- If a child answers "Ethiopia": Rwanda is small, with many people on its land. Rwanda is small but has many people on its land, so its density is high.
 
 ### socialstudies6.pd.ar.where
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS`, outcome `b`, form word, rung 2.
 
 **Q:** Which area of Eastern Africa is densely populated?
-Options: **The Lake Victoria basin** | Northern Kenya | The swamps of South Sudan | The Danakil desert
+Options: Northern Kenya | **The Lake Victoria basin** | The swamps of South Sudan | The Danakil desert
 - If a child answers "Northern Kenya": Fertile land and rain near the lake support many people. Rwanda is small but has many people on its land, so its density is high.
 - If a child answers "The swamps of South Sudan": Fertile land and rain near the lake support many people. Rwanda is small but has many people on its land, so its density is high.
 
@@ -708,26 +708,26 @@ Steps: Step 1: Salim sees a large area on the map. / **Step 2: He says a large a
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS`, outcome `c`, form direct, rung 1.
 
-**Q:** Which is an effect of high population density on the environment?
-Options: **Forests are cut for farms and fuel** | Forests grow back on their own | Rivers become cleaner | Soil becomes richer each year
-- If a child answers "Forests grow back on their own": More people need land and fuel, so forests shrink. In crowded areas, farms are divided into smaller plots and land becomes short.
-- If a child answers "Rivers become cleaner": More people need land and fuel, so forests shrink. In crowded areas, farms are divided into smaller plots and land becomes short.
+**Q:** Which is an effect of high population density?
+Options: Plenty of free land for all families | **Unemployment and a shortage of jobs** | Fewer people living in the big towns | Cheap and empty land for everybody
+- If a child answers "Plenty of free land for all families": With many people, jobs and land become short. In crowded areas, farms are divided into smaller plots and land becomes short.
+- If a child answers "Fewer people living in the big towns": With many people, jobs and land become short. In crowded areas, farms are divided into smaller plots and land becomes short.
 
 ### socialstudies6.pd.ef.story
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS`, outcome `c`, form word, rung 2.
 
-**Q:** Why are many people in a crowded town living in slums?
-Options: There is too much empty space to use | Houses are free for all to take | Nobody wants to live in a house | **There are too few houses for the people**
-- If a child answers "There is too much empty space to use": Housing is short when many people crowd into a town. In crowded areas, farms are divided into smaller plots and land becomes short.
-- If a child answers "Houses are free for all to take": Housing is short when many people crowd into a town. In crowded areas, farms are divided into smaller plots and land becomes short.
+**Q:** Why does a crowded town have more traffic jams and pollution?
+Options: Very few people use the roads | The roads are far too wide | There are no cars in the town | **Many people and vehicles use the same space**
+- If a child answers "Very few people use the roads": Crowding increases traffic and pollution. Crowding puts pressure on schools and hospitals because there are too many people to serve.
+- If a child answers "The roads are far too wide": Crowding increases traffic and pollution. Crowding puts pressure on schools and hospitals because there are too many people to serve.
 
 ### socialstudies6.pd.ef.spot
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS`, outcome `c`, form spot, rung 3.
 
-**Q:** Stephen says unemployment falls when a town gets more crowded. Which step has the mistake?
-Steps: Step 1: Stephen sees many people moving to town. / **Step 2: He says jobs grow as fast as people.** / Step 3: He writes unemployment falls.
+**Q:** Francis says a crowded area has too few learners for its schools. Which step has the mistake?
+Steps: Step 1: Francis sees a school in a crowded town. / **Step 2: He says crowded means empty classrooms.** / Step 3: He writes too few learners.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -735,37 +735,37 @@ Steps: Step 1: Stephen sees many people moving to town. / **Step 2: He says jobs
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE`, outcome `a`, form direct, rung 1.
 
-**Q:** What was a main duty of the warrior age-set?
-Options: Teaching small children their letters | Looking after the sick at home | Keeping the shops of the village | **Defending the community and its cattle**
-- If a child answers "Teaching small children their letters": Warriors guarded the community, the herds and the land. Warriors defended the community and its cattle.
-- If a child answers "Looking after the sick at home": Warriors guarded the community, the herds and the land. Warriors defended the community and its cattle.
+**Q:** What is an age-group?
+Options: People who belong to one single clan | **People of about the same age with the same roles** | People who were initiated all together | People who share one single home
+- If a child answers "People who belong to one single clan": An age-group is people at the same stage of life, such as youth or elders. An age-set is people initiated together. They stay a group for life.
+- If a child answers "People who were initiated all together": An age-group is people at the same stage of life, such as youth or elders. An age-set is people initiated together. They stay a group for life.
 
 ### socialstudies6.cs.ag.story
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE`, outcome `a`, form word, rung 2.
 
-**Q:** A group of boys were circumcised in the same season and became warriors together. What are they?
-Options: **An age-set** | An age-group only | A school class | A clan
-- If a child answers "An age-group only": Those initiated together form an age-set. An age-set is people initiated together. They stay a group for life.
-- If a child answers "A school class": Those initiated together form an age-set. An age-set is people initiated together. They stay a group for life.
+**Q:** Which person is in the same age-set as Kamau?
+Options: Someone born in the same month as Kamau | **Someone initiated in the same year as Kamau** | Someone with the same name as Kamau | Someone from the same school as Kamau
+- If a child answers "Someone born in the same month as Kamau": An age-set is formed by initiation together. An age-set is people initiated together. They stay a group for life.
+- If a child answers "Someone with the same name as Kamau": An age-set is formed by initiation together. An age-set is people initiated together. They stay a group for life.
 
 ### socialstudies6.cs.cl.which
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN`, outcome `b`, form direct, rung 1.
 
-**Q:** Who could a person marry in a clan system?
-Options: Only a cousin | Someone from the same clan | Only a neighbour | **Someone from a different clan**
-- If a child answers "Only a cousin": Clan members are like family, so people marry outside the clan. People marry outside their own clan because members are like family.
-- If a child answers "Someone from the same clan": Clan members are like family, so people marry outside the clan. People marry outside their own clan because members are like family.
+**Q:** Which is a function of a clan?
+Options: Collecting taxes for the state | **Settling disputes through the elders** | Running a school bus | Printing money
+- If a child answers "Collecting taxes for the state": Clan elders settled disputes and kept order. A clan is many families who trace descent from one ancestor.
+- If a child answers "Running a school bus": Clan elders settled disputes and kept order. A clan is many families who trace descent from one ancestor.
 
 ### socialstudies6.cs.cl.story
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN`, outcome `b`, form word, rung 2.
 
 **Q:** A clan story tells how the first ancestor settled the land. Which function does the story serve?
-Options: Collecting fines | Guiding marriage | Defending cattle | **Passing on history and customs**
+Options: **Passing on history and customs** | Collecting fines | Defending cattle | Guiding marriage
 - If a child answers "Collecting fines": Clan stories pass on history and customs. A clan is many families who trace descent from one ancestor.
-- If a child answers "Guiding marriage": Clan stories pass on history and customs. A clan is many families who trace descent from one ancestor.
+- If a child answers "Defending cattle": Clan stories pass on history and customs. A clan is many families who trace descent from one ancestor.
 
 ### socialstudies6.cs.cl.spot
 
@@ -780,26 +780,26 @@ Steps: Step 1: Duncan sees a modern court. / **Step 2: He says only courts settl
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE`, outcome `c`, form direct, rung 1.
 
-**Q:** Which is a good aspect of African traditional culture?
-Options: Fear of every stranger | Shouting at children | **Folktales, songs and proverbs** | Refusing medicine
-- If a child answers "Fear of every stranger": Stories, songs and proverbs teach values. Good customs such as respect for elders and community work should be preserved.
-- If a child answers "Shouting at children": Stories, songs and proverbs teach values. Good customs such as respect for elders and community work should be preserved.
+**Q:** Which should be preserved?
+Options: **Hospitality to visitors** | Refusing to share | Hatred of strangers | Harm to children
+- If a child answers "Refusing to share": Welcoming visitors is a good tradition. Good customs such as respect for elders and community work should be preserved.
+- If a child answers "Hatred of strangers": Welcoming visitors is a good tradition. Good customs such as respect for elders and community work should be preserved.
 
 ### socialstudies6.cs.pr.story
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE`, outcome `c`, form word, rung 2.
 
-**Q:** Why should families keep eating millet porridge and local vegetables?
-Options: They are the only food that exists | **They are healthy and part of our heritage** | They are cheap and very old | They are free for everyone to take
-- If a child answers "They are the only food that exists": Traditional foods are healthy and part of our heritage. Good customs such as respect for elders and community work should be preserved.
-- If a child answers "They are cheap and very old": Traditional foods are healthy and part of our heritage. Good customs such as respect for elders and community work should be preserved.
+**Q:** A village elder says a girl should leave school to be married. What should the learners say?
+Options: Every custom of the past should be kept | Girls must obey whatever the elders say | Elders are always right in every matter | **Girls have a right to learn**
+- If a child answers "Every custom of the past should be kept": Practices that harm children are not to be kept. Customs that harm people, such as early marriage of girls, should not be kept.
+- If a child answers "Girls must obey whatever the elders say": Practices that harm children are not to be kept. Customs that harm people, such as early marriage of girls, should not be kept.
 
 ### socialstudies6.cs.pr.spot
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE`, outcome `c`, form spot, rung 3.
 
-**Q:** Hellen says all traditional culture is old-fashioned and should be dropped. Which step has the mistake?
-Steps: Step 1: Hellen sees new things in town. / **Step 2: She says old means bad.** / Step 3: She writes drop it all.
+**Q:** Beth says folktales should be dropped because they are old. Which step has the mistake?
+Steps: Step 1: Beth likes new films. / **Step 2: She says old stories teach nothing.** / Step 3: She writes drop folktales.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -807,116 +807,116 @@ Steps: Step 1: Hellen sees new things in town. / **Step 2: She says old means ba
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is an example of the school working with the community?
-Options: A teacher plans a test | **Parents help to build a classroom** | Teachers mark books alone | The head teacher reads a report alone
-- If a child answers "A teacher plans a test": Collaboration means the school and community work together. Collaboration needs the community to take part, as when parents help build a classroom.
-- If a child answers "Teachers mark books alone": Collaboration means the school and community work together. Collaboration needs the community to take part, as when parents help build a classroom.
+**Q:** Which is a way the school helps the community?
+Options: Selling the school field for cash | Closing the gate to everyone | Giving nothing back to anyone | **Letting people use its hall and field**
+- If a child answers "Selling the school field for cash": Schools lend halls and fields for community events. A school gives the community its field, hall and learners who serve.
+- If a child answers "Closing the gate to everyone": Schools lend halls and fields for community events. A school gives the community its field, hall and learners who serve.
 
 ### socialstudies6.sc.wa.story
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS`, outcome `a`, form word, rung 2.
 
-**Q:** A chief and parents donate a plot for a new school kitchen. Which way is this?
-Options: The parents run the school alone | The school gives land away | **The community gives land to the school** | The chief teaches
-- If a child answers "The parents run the school alone": Land donation is a way the community supports the school. A school gives the community its field, hall and learners who serve.
-- If a child answers "The school gives land away": Land donation is a way the community supports the school. A school gives the community its field, hall and learners who serve.
+**Q:** A school field is used for a polling station during elections. What does this show?
+Options: Nobody uses it | **The school helps the community** | The community harms the school | The school is closed
+- If a child answers "Nobody uses it": Schools serve the community, for example as polling stations. A school gives the community its field, hall and learners who serve.
+- If a child answers "The community harms the school": Schools serve the community, for example as polling stations. A school gives the community its field, hall and learners who serve.
 
 ### socialstudies6.sc.be.which
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS`, outcome `b`, form direct, rung 1.
 
 **Q:** Which strategy keeps collaboration going?
-Options: **Holding open days and regular meetings** | Hiding the school plans from parents | Never inviting parents to the school | Locking the gate against visitors
+Options: Hiding the school plans from parents | Locking the gate against visitors | Never inviting parents to the school | **Holding open days and regular meetings**
 - If a child answers "Hiding the school plans from parents": Open days and meetings keep communication alive. Open days and regular meetings keep the school and community working together.
-- If a child answers "Never inviting parents to the school": Open days and meetings keep communication alive. Open days and regular meetings keep the school and community working together.
+- If a child answers "Locking the gate against visitors": Open days and meetings keep communication alive. Open days and regular meetings keep the school and community working together.
 
 ### socialstudies6.sc.be.story
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS`, outcome `c`, form word, rung 2.
 
-**Q:** Parents rarely visit the school and the school wants more support. Which strategy should it use?
-Options: Close the gate to every visitor | Move the school far from the village | Stop sending any reports to homes | **Hold an open day and share progress reports**
-- If a child answers "Close the gate to every visitor": Open days and reports bring parents in. Open days and regular meetings keep the school and community working together.
-- If a child answers "Move the school far from the village": Open days and reports bring parents in. Open days and regular meetings keep the school and community working together.
+**Q:** A school has no fence and goats enter. The community builds a fence. What benefit does the school gain?
+Options: **A safe, protected compound** | Less land for the learners to use | A much smaller school compound | More goats on the school field
+- If a child answers "Less land for the learners to use": A fence protects the school. Both gain. The school gets help and the community gets better learners and shared facilities.
+- If a child answers "A much smaller school compound": A fence protects the school. Both gain. The school gets help and the community gets better learners and shared facilities.
 
 ### socialstudies6.bf.fa.which
 
 Skill `RESOUR.BEEF_FARMING.BF_FACTORS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which cattle breed is a beef breed that does well in dry areas of Kenya?
-Options: The Ayrshire | The Jersey | The Friesian | **The Boran**
-- If a child answers "The Ayrshire": The Boran is a beef breed suited to dry areas. The others are dairy breeds. Beef ranching needs large grassland and enough water.
-- If a child answers "The Jersey": The Boran is a beef breed suited to dry areas. The others are dairy breeds. Beef ranching needs large grassland and enough water.
+**Q:** Which problem makes beef farming harder in a swampy area?
+Options: Too many cold rooms | Too much good grass to eat | **Tsetse flies that spread cattle disease** | Too many buyers of meat
+- If a child answers "Too many cold rooms": Tsetse flies carry the disease nagana, which kills cattle. Vets control diseases that can kill cattle and stop sales.
+- If a child answers "Too much good grass to eat": Tsetse flies carry the disease nagana, which kills cattle. Vets control diseases that can kill cattle and stop sales.
 
 ### socialstudies6.bf.fa.story
 
 Skill `RESOUR.BEEF_FARMING.BF_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** Rono has 500 acres of dry grassland. Which activity suits it best?
-Options: Growing flowers under cover | **Ranching beef cattle** | Growing tea for export | Growing wet rice crops
-- If a child answers "Growing flowers under cover": Dry grassland suits ranching, not crops that need heavy rain. Beef ranching needs large grassland and enough water.
-- If a child answers "Growing tea for export": Dry grassland suits ranching, not crops that need heavy rain. Beef ranching needs large grassland and enough water.
+**Q:** A ranch in Laikipia has wide grassland and boreholes. Why is it good for beef farming?
+Options: **Cattle have grass and water all year** | Crops can grow in the heavy rain | The land is too small for the herd | The cattle can swim in lakes
+- If a child answers "Crops can grow in the heavy rain": Grass and water keep beef cattle healthy. Beef ranching needs large grassland and enough water.
+- If a child answers "The land is too small for the herd": Grass and water keep beef cattle healthy. Beef ranching needs large grassland and enough water.
 
 ### socialstudies6.bf.pl.which
 
 Skill `RESOUR.BEEF_FARMING.BF_PLACES`, outcome `b`, form table, rung 1.
 
-**Q:** Look at the table. Which area is a beef ranching area?
-Options: Kericho tea area | Nairobi city centre | **Laikipia** | Kakamega forest
-- If a child answers "Kericho tea area": Laikipia has wide grassland and many large ranches. Laikipia and Kajiado are large grassland areas used for ranching.
-- If a child answers "Nairobi city centre": Laikipia has wide grassland and many large ranches. Laikipia and Kajiado are large grassland areas used for ranching.
+**Q:** Which region of Ethiopia is known for its cattle herds?
+Options: The Addis Ababa city streets | **The Borana lowlands in the south** | The Lalibela hills | The Danakil desert
+- If a child answers "The Addis Ababa city streets": The Borana lowlands are famous for cattle herding. Laikipia and Kajiado are large grassland areas used for ranching.
+- If a child answers "The Lalibela hills": The Borana lowlands are famous for cattle herding. Laikipia and Kajiado are large grassland areas used for ranching.
 
 ### socialstudies6.bf.pl.why
 
 Skill `RESOUR.BEEF_FARMING.BF_PLACES`, outcome `b`, form word, rung 2.
 
 **Q:** Which part of Tanzania has many cattle herds?
-Options: The Dar es Salaam harbour | The Kilimanjaro snow cap | The Zanzibar beaches | **The Arusha and Shinyanga areas**
+Options: The Dar es Salaam harbour | The Zanzibar beaches | The Kilimanjaro snow cap | **The Arusha and Shinyanga areas**
 - If a child answers "The Dar es Salaam harbour": Arusha and Shinyanga are important cattle areas. Laikipia and Kajiado are large grassland areas used for ranching.
-- If a child answers "The Kilimanjaro snow cap": Arusha and Shinyanga are important cattle areas. Laikipia and Kajiado are large grassland areas used for ranching.
+- If a child answers "The Zanzibar beaches": Arusha and Shinyanga are important cattle areas. Laikipia and Kajiado are large grassland areas used for ranching.
 
 ### socialstudies6.bf.ec.which
 
 Skill `RESOUR.BEEF_FARMING.BF_ECONOMY`, outcome `c`, form direct, rung 1.
 
-**Q:** Who earns a living from the beef industry?
-Options: **Herders, vets, butchers and factory workers** | Nobody, because it is only for food | Only the owners of the big land | Only the cooks who work at home
-- If a child answers "Nobody, because it is only for food": Many people earn a living from beef, from the ranch to the shop. Many people earn a living from beef: herders, vets, butchers and factory workers.
-- If a child answers "Only the owners of the big land": Many people earn a living from beef, from the ranch to the shop. Many people earn a living from beef: herders, vets, butchers and factory workers.
+**Q:** What does a country earn from selling beef and live animals abroad?
+Options: **Foreign exchange** | Rainfall for crops | Timber for houses | Fish for the market
+- If a child answers "Rainfall for crops": Exports bring in foreign money, called foreign exchange. Hides and skins are made into leather goods such as shoes and bags.
+- If a child answers "Timber for houses": Exports bring in foreign money, called foreign exchange. Hides and skins are made into leather goods such as shoes and bags.
 
 ### socialstudies6.bf.ec.story
 
 Skill `RESOUR.BEEF_FARMING.BF_ECONOMY`, outcome `c`, form word, rung 2.
 
-**Q:** Cow dung from the ranch is spread on the farms nearby. Which contribution is this?
-Options: Milk for sale in the town | Meat for sale at the market | Hides for use at the leather works | **Manure that makes the soil richer**
-- If a child answers "Milk for sale in the town": Manure improves the soil. Hides and skins are made into leather goods such as shoes and bags.
-- If a child answers "Meat for sale at the market": Manure improves the soil. Hides and skins are made into leather goods such as shoes and bags.
+**Q:** A tannery buys hides from ranchers and makes shoes. Which contribution of beef farming is this?
+Options: Meat for food and nothing else | Fuel for the lorries on roads | **Raw materials for industry** | Manure for farms nearby
+- If a child answers "Meat for food and nothing else": Hides are raw materials for the leather industry. Hides and skins are made into leather goods such as shoes and bags.
+- If a child answers "Fuel for the lorries on roads": Hides are raw materials for the leather industry. Hides and skins are made into leather goods such as shoes and bags.
 
 ### socialstudies6.bf.pr.pair
 
 Skill `RESOUR.BEEF_FARMING.BF_PROBLEMS`, outcome `d`, form direct, rung 1.
 
-**Q:** What helps cattle during a long drought?
-Options: Moving the market closer to farms | **Water pans, boreholes and hay** | Sending the vets away for good | Dipping them often in the dip
-- If a child answers "Moving the market closer to farms": Water and fodder keep cattle alive in a drought. Water pans, boreholes and hay help in a drought. Dips control ticks.
-- If a child answers "Sending the vets away for good": Water and fodder keep cattle alive in a drought. Water pans, boreholes and hay help in a drought. Dips control ticks.
+**Q:** What helps farmers who cannot reach the meat market?
+Options: Bigger grazing areas for all cattle | More dips on every large ranch | **Better roads and marketing cooperatives** | Fewer vets to call in the area
+- If a child answers "Bigger grazing areas for all cattle": Roads and cooperatives help sell animals at better prices. Water pans, boreholes and hay help in a drought. Dips control ticks.
+- If a child answers "More dips on every large ranch": Roads and cooperatives help sell animals at better prices. Water pans, boreholes and hay help in a drought. Dips control ticks.
 
 ### socialstudies6.bf.pr.problem
 
 Skill `RESOUR.BEEF_FARMING.BF_PROBLEMS`, outcome `d`, form word, rung 2.
 
-**Q:** Raiders took 200 cattle from a village. Which action will help stop this?
-Options: More dips to wash the cattle | More vets to treat the cattle | More hay to feed the cattle | **Strong security and peace talks**
-- If a child answers "More dips to wash the cattle": Security and peace talks reduce raids. Water pans, boreholes and hay help in a drought. Dips control ticks.
-- If a child answers "More vets to treat the cattle": Security and peace talks reduce raids. Water pans, boreholes and hay help in a drought. Dips control ticks.
+**Q:** Why is keeping more and more cattle on the same land not a good solution to hunger?
+Options: It brings more rain to the land | Cattle grow thinner on more grass | It makes cattle healthier and fatter | **The grass is used up and the land is spoilt**
+- If a child answers "It brings more rain to the land": Overgrazing spoils the land. Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.
+- If a child answers "Cattle grow thinner on more grass": Overgrazing spoils the land. Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.
 
 ### socialstudies6.bf.pr.spot
 
 Skill `RESOUR.BEEF_FARMING.BF_PROBLEMS`, outcome `d`, form spot, rung 3.
 
-**Q:** Peter says better roads will stop cattle rustling. Which step has the mistake?
-Steps: Step 1: Peter knows rustling is a problem. / **Step 2: He says roads will catch the thieves.** / Step 3: He writes roads.
+**Q:** Linet says burning the grass will cure overgrazing. Which step has the mistake?
+Steps: Step 1: Linet sees dry grass. / **Step 2: She says fire will make better grass at once.** / Step 3: She writes burn it.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -924,62 +924,62 @@ Steps: Step 1: Peter knows rustling is a problem. / **Step 2: He says roads will
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is a marine fishing ground?
-Options: Lake Albert | Lake Turkana | Lake Victoria | **The Indian Ocean coast**
-- If a child answers "Lake Albert": Marine fishing happens in the sea, such as the Indian Ocean. Marine means from the sea. The Indian Ocean coast is a marine ground.
-- If a child answers "Lake Turkana": Marine fishing happens in the sea, such as the Indian Ocean. Marine means from the sea. The Indian Ocean coast is a marine ground.
+**Q:** Which is an inland fishing ground?
+Options: The Indian Ocean | **Lake Victoria** | The Red Sea | The Atlantic Ocean
+- If a child answers "The Indian Ocean": Inland means on land, in lakes and rivers. Marine means from the sea. The Indian Ocean coast is a marine ground.
+- If a child answers "The Red Sea": Inland means on land, in lakes and rivers. Marine means from the sea. The Indian Ocean coast is a marine ground.
 
 ### socialstudies6.fi.gr.table
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS`, outcome `a`, form table, rung 2.
 
-**Q:** Which water body does Djibouti use for marine fishing?
-Options: Lake Turkana | Lake Tanganyika | Lake Victoria | **The Red Sea and Gulf of Aden**
-- If a child answers "Lake Turkana": Djibouti lies on the Gulf of Aden and the Red Sea. Marine means from the sea. The Indian Ocean coast is a marine ground.
-- If a child answers "Lake Tanganyika": Djibouti lies on the Gulf of Aden and the Red Sea. Marine means from the sea. The Indian Ocean coast is a marine ground.
+**Q:** Which fish comes from Lake Turkana?
+Options: Sardines from the sea | Lobster from the reef | **Nile perch and tilapia** | Tuna and prawns
+- If a child answers "Sardines from the sea": Nile perch and tilapia live in Lake Turkana. Nile perch and tilapia come from lakes. Tuna and prawns come from the sea.
+- If a child answers "Lobster from the reef": Nile perch and tilapia live in Lake Turkana. Nile perch and tilapia come from lakes. Tuna and prawns come from the sea.
 
 ### socialstudies6.fi.me.which
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which is a traditional method of fishing?
-Options: A ship with a freezer | A large trawler with an engine | **Using hooks and lines from a dhow** | A purse seine with a power block
-- If a child answers "A ship with a freezer": Hooks and lines from small boats are traditional. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
-- If a child answers "A large trawler with an engine": Hooks and lines from small boats are traditional. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
+**Q:** What is a gill net?
+Options: **A net that traps fish by their gills** | A large net dragged on the sea bed | A cage trap on the shore | A line with many hooks
+- If a child answers "A large net dragged on the sea bed": Fish swim in and their gills catch in the mesh. Trawling is dragging a large net behind a boat along the sea bed.
+- If a child answers "A cage trap on the shore": Fish swim in and their gills catch in the mesh. Trawling is dragging a large net behind a boat along the sea bed.
 
 ### socialstudies6.fi.me.story
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS`, outcome `b`, form word, rung 2.
 
-**Q:** Which of these gives the biggest catch at one time?
-Options: A hook and line from the shore | A spear from a canoe | **A trawler with a large net** | A basket trap by the reef
-- If a child answers "A hook and line from the shore": Large nets and engines bring large catches. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
-- If a child answers "A spear from a canoe": Large nets and engines bring large catches. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
+**Q:** A fisherman sits on a dhow with one hook and line. Which method is this?
+Options: Trawling, a modern method | **Hand lining, a traditional method** | Purse seining, a modern method | Drift netting at sea
+- If a child answers "Trawling, a modern method": A single hook and line is simple and traditional. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
+- If a child answers "Purse seining, a modern method": A single hook and line is simple and traditional. Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.
 
 ### socialstudies6.fi.pr.pair
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS`, outcome `c`, form direct, rung 1.
 
-**Q:** What helps stop overfishing?
-Options: Catching all the fish you can | Using smaller and smaller nets | Fishing only at night | **Fishing seasons and net-size rules**
-- If a child answers "Catching all the fish you can": Rules protect young fish so stocks can recover. Overfishing makes fish stocks fall. Seasons and mesh rules protect them.
-- If a child answers "Using smaller and smaller nets": Rules protect young fish so stocks can recover. Overfishing makes fish stocks fall. Seasons and mesh rules protect them.
+**Q:** What helps fish keep fresh before sale?
+Options: Net-size rules for the lake fishermen | **Cold rooms and processing plants** | Sea patrols from the navy base | Licences for all the fishing boats
+- If a child answers "Net-size rules for the lake fishermen": Cold rooms stop fish spoiling. Cold rooms stop fish spoiling. Sea patrols deal with piracy.
+- If a child answers "Sea patrols from the navy base": Cold rooms stop fish spoiling. Cold rooms stop fish spoiling. Sea patrols deal with piracy.
 
 ### socialstudies6.fi.pr.story
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS`, outcome `d`, form word, rung 2.
 
-**Q:** Catches of fish in a lake fall every year because people use very fine nets. What is this problem?
-Options: **Overfishing** | Water hyacinth | Pollution of the sea | Piracy
-- If a child answers "Water hyacinth": Taking too many fish, including young ones, is overfishing. Overfishing makes fish stocks fall. Seasons and mesh rules protect them.
-- If a child answers "Pollution of the sea": Taking too many fish, including young ones, is overfishing. Overfishing makes fish stocks fall. Seasons and mesh rules protect them.
+**Q:** Fish are thrown away because they rot before reaching the market. Which solution fits?
+Options: Loans for new boat engines | Net-size rules for the lake | Sea patrols along the coast | **Cold rooms and fast transport**
+- If a child answers "Loans for new boat engines": Cooling and quick transport keep fish fresh. Cold rooms stop fish spoiling. Sea patrols deal with piracy.
+- If a child answers "Net-size rules for the lake": Cooling and quick transport keep fish fresh. Cold rooms stop fish spoiling. Sea patrols deal with piracy.
 
 ### socialstudies6.fi.pr.spot
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS`, outcome `c`, form spot, rung 3.
 
-**Q:** Mwajuma says sea patrols keep fish fresh. Which step has the mistake?
-Steps: Step 1: Mwajuma knows patrols help fishermen. / **Step 2: She says patrols preserve the catch.** / Step 3: She writes patrols.
+**Q:** Rehema says cold rooms stop pirates. Which step has the mistake?
+Steps: Step 1: Rehema knows pirates attack boats. / **Step 2: She says a cold room guards the sea.** / Step 3: She writes cold rooms.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -996,53 +996,53 @@ Options: Make travel harder | Take no part in tourism | Keep visitors away from 
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** A park has wonderful animals but no road to it. What is the effect?
-Options: Hotels fill up | **Few tourists can reach it** | More tourists reach it | It gets famous at once
-- If a child answers "Hotels fill up": Poor roads make access hard. Airports and hotels bring visitors in and give them a place to stay.
-- If a child answers "More tourists reach it": Poor roads make access hard. Airports and hotels bring visitors in and give them a place to stay.
+**Q:** Visitors cancel trips to a country after fighting breaks out. What factor is at work?
+Options: **Insecurity** | Good roads | Many hotels | Fine weather
+- If a child answers "Good roads": Insecurity keeps tourists away. Insecurity frightens tourists away and income falls.
+- If a child answers "Many hotels": Insecurity keeps tourists away. Insecurity frightens tourists away and income falls.
 
 ### socialstudies6.wt.pa.where
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS`, outcome `b`, form direct, rung 1.
 
-**Q:** In which country is the Serengeti National Park?
-Options: Kenya | Rwanda | Uganda | **Tanzania**
-- If a child answers "Kenya": The Serengeti is in northern Tanzania. The Serengeti is in Tanzania. The Maasai Mara is in Kenya.
-- If a child answers "Rwanda": The Serengeti is in northern Tanzania. The Serengeti is in Tanzania. The Maasai Mara is in Kenya.
+**Q:** Where can mountain gorillas be seen?
+Options: The Serengeti in Tanzania | Amboseli in Kenya | **Bwindi in Uganda and the Volcanoes Park in Rwanda** | The Maasai Mara in Kenya
+- If a child answers "The Serengeti in Tanzania": Mountain gorillas live in forests in the mountains. Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.
+- If a child answers "Amboseli in Kenya": Mountain gorillas live in forests in the mountains. Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.
 
 ### socialstudies6.wt.pa.table
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS`, outcome `b`, form table, rung 2.
 
 **Q:** Which country has the Volcanoes National Park?
-Options: **Rwanda** | Somalia | Kenya | Tanzania
-- If a child answers "Somalia": The Volcanoes National Park is in north-west Rwanda. Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.
+Options: Kenya | Tanzania | Somalia | **Rwanda**
 - If a child answers "Kenya": The Volcanoes National Park is in north-west Rwanda. Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.
+- If a child answers "Tanzania": The Volcanoes National Park is in north-west Rwanda. Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.
 
 ### socialstudies6.wt.pr.pair
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS`, outcome `c`, form direct, rung 1.
 
-**Q:** What helps to stop poaching?
-Options: Opening more hotels near the park | **Anti-poaching patrols and strong laws** | Advertising the park on television | Building more roads to the parks
-- If a child answers "Opening more hotels near the park": Patrols and laws protect wildlife. Patrols and strong laws help to stop poaching.
-- If a child answers "Advertising the park on television": Patrols and laws protect wildlife. Patrols and strong laws help to stop poaching.
+**Q:** What helps when elephants raid farms near a park?
+Options: More airports built in the towns | **Fences and payment for crop damage** | More advertisements shown abroad | More hotels built inside the park
+- If a child answers "More airports built in the towns": Fences and compensation reduce conflict. Patrols and strong laws help to stop poaching.
+- If a child answers "More advertisements shown abroad": Fences and compensation reduce conflict. Patrols and strong laws help to stop poaching.
 
 ### socialstudies6.wt.pr.story
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS`, outcome `d`, form word, rung 2.
 
-**Q:** A terror attack frightens tourists away. Which solution fits?
-Options: Anti-poaching rangers in the park only | More fences round the farms only | Lower prices at the hotels only | **Better security and honest news about safety**
-- If a child answers "Anti-poaching rangers in the park only": Security restores trust. Patrols and strong laws help to stop poaching.
-- If a child answers "More fences round the farms only": Security restores trust. Patrols and strong laws help to stop poaching.
+**Q:** Rhinos are being killed for their horns in a reserve. Which solution fits?
+Options: A new advertising poster for visitors | A new hotel built beside the gate | **More rangers and tougher laws** | A wider road leading to the park
+- If a child answers "A new advertising poster for visitors": Rangers and strong laws protect rhinos. Patrols and strong laws help to stop poaching.
+- If a child answers "A new hotel built beside the gate": Rangers and strong laws protect rhinos. Patrols and strong laws help to stop poaching.
 
 ### socialstudies6.wt.pr.spot
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS`, outcome `c`, form spot, rung 3.
 
-**Q:** Brenda says advertising will stop human-wildlife conflict. Which step has the mistake?
-Steps: Step 1: Brenda knows animals raid farms. / **Step 2: She says posters will stop elephants.** / Step 3: She writes advertising.
+**Q:** Isaac says insecurity brings more tourists. Which step has the mistake?
+Steps: Step 1: Isaac sees armed guards at a hotel. / **Step 2: He says guards attract visitors.** / Step 3: He writes more tourists.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1050,26 +1050,26 @@ Steps: Step 1: Brenda knows animals raid farms. / **Step 2: She says posters wil
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which pipeline carries oil products from Mombasa to western Kenya?
-Options: The Great Rift | The Nile pipeline | **The Kenya Pipeline** | The TAZARA line
-- If a child answers "The Great Rift": The Kenya Pipeline carries fuel from Mombasa to Nairobi, Eldoret and Kisumu. Railways carry heavy goods cheaply. Air is for light, urgent goods.
-- If a child answers "The Nile pipeline": The Kenya Pipeline carries fuel from Mombasa to Nairobi, Eldoret and Kisumu. Railways carry heavy goods cheaply. Air is for light, urgent goods.
+**Q:** In which country is the port of Dar es Salaam?
+Options: **Tanzania** | Kenya | Somalia | Uganda
+- If a child answers "Kenya": Dar es Salaam is the main port of Tanzania. Mombasa is the main port of Kenya. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
+- If a child answers "Somalia": Dar es Salaam is the main port of Tanzania. Mombasa is the main port of Kenya. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
 
 ### socialstudies6.tr.nw.table
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS`, outcome `a`, form table, rung 2.
 
-**Q:** Which road is the Northern Corridor?
-Options: **Mombasa to Nairobi to Kampala** | Mombasa to Dar es Salaam by the coast | Dar es Salaam to Dodoma to Kigoma | Addis Ababa to Djibouti
-- If a child answers "Mombasa to Dar es Salaam by the coast": The Northern Corridor runs from Mombasa through Nairobi to Kampala and on to Kigali. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
-- If a child answers "Dar es Salaam to Dodoma to Kigoma": The Northern Corridor runs from Mombasa through Nairobi to Kampala and on to Kigali. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
+**Q:** Which airport is the main one in Uganda?
+Options: **Entebbe** | Jomo Kenyatta | Bole | Julius Nyerere
+- If a child answers "Jomo Kenyatta": Entebbe International Airport serves Kampala. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
+- If a child answers "Bole": Entebbe International Airport serves Kampala. Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.
 
 ### socialstudies6.tr.nw.spot
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS`, outcome `a`, form spot, rung 3.
 
-**Q:** Janet says Ethiopia ships goods through its own sea port. Which step has the mistake?
-Steps: Step 1: Janet knows Ethiopia trades overseas. / **Step 2: She says it has a coast of its own.** / Step 3: She writes its own port.
+**Q:** Aisha says Dar es Salaam is a port in Kenya. Which step has the mistake?
+Steps: Step 1: Aisha knows Dar es Salaam is a big port. / **Step 2: She puts it in her own country.** / Step 3: She writes Kenya.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1077,116 +1077,116 @@ Steps: Step 1: Janet knows Ethiopia trades overseas. / **Step 2: She says it has
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS`, outcome `c`, form direct, rung 1.
 
-**Q:** What helps with traffic jams in big towns like Nairobi?
-Options: **Bypasses and a good commuter railway** | More cars in the narrow town streets | Fewer roads for all the town traffic | Closing every railway line in the area
-- If a child answers "More cars in the narrow town streets": Bypasses and railways take traffic out of the centre. Speed limits and driver training reduce road crashes.
-- If a child answers "Fewer roads for all the town traffic": Bypasses and railways take traffic out of the centre. Speed limits and driver training reduce road crashes.
+**Q:** What helps to reduce road crashes?
+Options: Higher speeds for all the cars on the road | Fewer signs and no police along the roads | **Speed limits, good roads and driver training** | Narrow roads with no lines or lights at all
+- If a child answers "Higher speeds for all the cars on the road": Safe speeds, safe roads and trained drivers reduce crashes. Speed limits and driver training reduce road crashes.
+- If a child answers "Fewer signs and no police along the roads": Safe speeds, safe roads and trained drivers reduce crashes. Speed limits and driver training reduce road crashes.
 
 ### socialstudies6.tr.pr.story
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS`, outcome `d`, form word, rung 2.
 
 **Q:** Rain has washed away a bridge on a main road. What should the roads authority do?
-Options: **Repair the bridge and keep it in good order** | Let people use the broken bridge as it is | Raise the price of petrol along the road | Remove all the other bridges as well
-- If a child answers "Let people use the broken bridge as it is": Roads and bridges need maintenance. Speed limits and driver training reduce road crashes.
+Options: Raise the price of petrol along the road | Remove all the other bridges as well | **Repair the bridge and keep it in good order** | Let people use the broken bridge as it is
 - If a child answers "Raise the price of petrol along the road": Roads and bridges need maintenance. Speed limits and driver training reduce road crashes.
+- If a child answers "Remove all the other bridges as well": Roads and bridges need maintenance. Speed limits and driver training reduce road crashes.
 
 ### socialstudies6.cm.mo.which
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which of these carries written news printed on paper?
-Options: A television channel in the home | A radio station on a hill | A drum in the village square | **A newspaper**
-- If a child answers "A television channel in the home": Newspapers carry printed news. Radio reaches many people at once. A letter reaches one.
-- If a child answers "A radio station on a hill": Newspapers carry printed news. Radio reaches many people at once. A letter reaches one.
+**Q:** Which mode lets two people talk to each other even when far apart?
+Options: A television news bulletin | A radio programme from a station | A newspaper printed every morning | **A mobile phone call**
+- If a child answers "A television news bulletin": A phone call is two-way. Radio and newspapers are one-way. Radio reaches many people at once. A letter reaches one.
+- If a child answers "A radio programme from a station": A phone call is two-way. Radio and newspapers are one-way. Radio reaches many people at once. A letter reaches one.
 
 ### socialstudies6.cm.mo.story
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES`, outcome `a`, form word, rung 2.
 
-**Q:** A shopkeeper sends money to a farmer by mobile phone using M-Pesa. Which mode is this?
-Options: A drum beaten in the village | **A mobile phone** | A horn blown in the market | A newspaper advertisement
-- If a child answers "A drum beaten in the village": Mobile phones also carry money. The drum is traditional. The mobile phone is modern.
-- If a child answers "A horn blown in the market": Mobile phones also carry money. The drum is traditional. The mobile phone is modern.
+**Q:** A village chief sends a runner to carry news to the next village. Which mode is this?
+Options: A modern means, the radio | **A traditional means, the messenger** | A modern means, the telephone | A modern means, the e-mail
+- If a child answers "A modern means, the radio": Messengers are a traditional means of communication. The drum is traditional. The mobile phone is modern.
+- If a child answers "A modern means, the telephone": Messengers are a traditional means of communication. The drum is traditional. The mobile phone is modern.
 
 ### socialstudies6.cm.pr.pair
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS`, outcome `b`, form direct, rung 1.
 
-**Q:** What helps with weak phone signal in remote villages?
-Options: Making the airtime very expensive | Taking down the masts that are already there | Stopping all the radio programmes | **Building more masts and towers in the area**
-- If a child answers "Making the airtime very expensive": More masts bring signal to remote places. Laws and guards protect masts and cables. Training helps with skills.
-- If a child answers "Taking down the masts that are already there": More masts bring signal to remote places. Laws and guards protect masts and cables. Training helps with skills.
+**Q:** What helps people who have no electricity to charge phones?
+Options: Banning phones in the whole village | Cutting the cables to the next town | Closing all the mobile phone shops | **Solar charging points in the villages**
+- If a child answers "Banning phones in the whole village": Solar power can charge phones where there is no grid. Phones, radios and the internet need power, so no electricity limits communication.
+- If a child answers "Cutting the cables to the next town": Solar power can charge phones where there is no grid. Phones, radios and the internet need power, so no electricity limits communication.
 
 ### socialstudies6.cm.pr.story
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS`, outcome `c`, form word, rung 2.
 
-**Q:** Thieves cut cables on a road at night. What would help?
-Options: Lower taxes on all the new phones | A training course on how to use the internet | **Guards, laws and watch groups along the cables** | More solar panels at each school
-- If a child answers "Lower taxes on all the new phones": Protecting equipment stops the loss. Laws and guards protect masts and cables. Training helps with skills.
-- If a child answers "A training course on how to use the internet": Protecting equipment stops the loss. Laws and guards protect masts and cables. Training helps with skills.
+**Q:** False news spreads on the phone and causes fear. What helps most?
+Options: Lower airtime prices charged to every single person | More electricity supplied to all of the homes | More masts to spread messages even faster | **Laws against false news and teaching how to check news**
+- If a child answers "Lower airtime prices charged to every single person": Laws and digital skills reduce the harm. Laws and guards protect masts and cables. Training helps with skills.
+- If a child answers "More electricity supplied to all of the homes": Laws and digital skills reduce the harm. Laws and guards protect masts and cables. Training helps with skills.
 
 ### socialstudies6.mn.mi.which
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is a mineral?
-Options: Tea | Coffee | Timber | **Limestone**
-- If a child answers "Tea": Limestone is dug from the ground. Coffee, timber and tea are grown. Limestone is a mineral dug from the ground. Coffee is a crop.
-- If a child answers "Coffee": Limestone is dug from the ground. Coffee, timber and tea are grown. Limestone is a mineral dug from the ground. Coffee is a crop.
+**Q:** Where is soda ash mined in Kenya?
+Options: Lake Naivasha | Lake Victoria | **Lake Magadi** | Lake Turkana
+- If a child answers "Lake Naivasha": Soda ash is taken from Lake Magadi in the Rift Valley. Soda ash is mined at Lake Magadi in Kenya.
+- If a child answers "Lake Victoria": Soda ash is taken from Lake Magadi in the Rift Valley. Soda ash is mined at Lake Magadi in Kenya.
 
 ### socialstudies6.mn.mi.table
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS`, outcome `a`, form table, rung 2.
 
-**Q:** Which mineral is used to make glass and soap and comes from Lake Magadi?
-Options: Limestone | **Soda ash** | Gold | Tanzanite
-- If a child answers "Limestone": Soda ash is used in glass, soap and detergents. Soda ash is mined at Lake Magadi in Kenya.
-- If a child answers "Gold": Soda ash is used in glass, soap and detergents. Soda ash is mined at Lake Magadi in Kenya.
+**Q:** Which country mines copper at Kilembe?
+Options: **Uganda** | Tanzania | Somalia | Kenya
+- If a child answers "Tanzania": Kilembe in western Uganda has copper. Soda ash is mined at Lake Magadi in Kenya.
+- If a child answers "Somalia": Kilembe in western Uganda has copper. Soda ash is mined at Lake Magadi in Kenya.
 
 ### socialstudies6.mn.me.which
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS`, outcome `b`, form direct, rung 1.
 
-**Q:** What is panning?
-Options: Blasting rock with strong explosives | **Washing gravel in water to find mineral bits** | Digging a deep shaft under the ground | Drilling a hole into an oil field
-- If a child answers "Blasting rock with strong explosives": In panning, heavy mineral bits settle in the pan. Panning washes gravel in water so the heavy mineral bits settle.
-- If a child answers "Digging a deep shaft under the ground": In panning, heavy mineral bits settle in the pan. Panning washes gravel in water so the heavy mineral bits settle.
+**Q:** Which method uses shafts and tunnels under the ground?
+Options: Panning | Open-cast mining | **Underground mining** | Quarrying
+- If a child answers "Panning": Deep minerals such as gold may be reached by shafts. Limestone is quarried from an open pit near the surface.
+- If a child answers "Open-cast mining": Deep minerals such as gold may be reached by shafts. Limestone is quarried from an open pit near the surface.
 
 ### socialstudies6.mn.me.story
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS`, outcome `b`, form word, rung 2.
 
-**Q:** A machine sucks salty liquid from the lake bed and sends it to a plant. Which mineral does it make?
-Options: **Soda ash** | Diamonds | Limestone | Gold
-- If a child answers "Diamonds": At Lake Magadi brine is pumped and dried to make soda ash. Limestone is quarried from an open pit near the surface.
-- If a child answers "Limestone": At Lake Magadi brine is pumped and dried to make soda ash. Limestone is quarried from an open pit near the surface.
+**Q:** A company digs a huge pit to take out limestone for cement. Which method is it?
+Options: Panning in a river | **Quarrying, or open-cast mining** | Pumping from a lake | Underground mining with shafts
+- If a child answers "Panning in a river": Digging from the surface is open-cast. Limestone is quarried from an open pit near the surface.
+- If a child answers "Pumping from a lake": Digging from the surface is open-cast. Limestone is quarried from an open pit near the surface.
 
 ### socialstudies6.mn.ef.which
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS`, outcome `c`, form direct, rung 1.
 
-**Q:** What harm can chemicals such as mercury do in gold mining?
-Options: Do no harm to any life | **Poison the water and the fish** | Help the plants to grow faster | Make the water cleaner for all
-- If a child answers "Do no harm to any life": Chemicals pollute water. Open-cast mining leaves holes and bare land unless it is repaired.
-- If a child answers "Help the plants to grow faster": Chemicals pollute water. Open-cast mining leaves holes and bare land unless it is repaired.
+**Q:** Which is a good effect of mining?
+Options: **Jobs and income for people and the country** | No change at all to the land | More farmland for all the people | Cleaner air and rivers for all
+- If a child answers "No change at all to the land": Mining provides jobs and money, though it must be done with care. Open-cast mining leaves holes and bare land unless it is repaired.
+- If a child answers "More farmland for all the people": Mining provides jobs and money, though it must be done with care. Open-cast mining leaves holes and bare land unless it is repaired.
 
 ### socialstudies6.mn.ef.story
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS`, outcome `d`, form word, rung 2.
 
-**Q:** The government says miners must plant trees after they finish. Why?
-Options: To make the pits deeper | **To repair the land they have damaged** | To hide the minerals from others | To make the soil poorer
-- If a child answers "To make the pits deeper": Planting helps the land to recover. Refilling pits and planting trees repairs mined land, as at Haller Park.
-- If a child answers "To hide the minerals from others": Planting helps the land to recover. Refilling pits and planting trees repairs mined land, as at Haller Park.
+**Q:** A quarry has left deep holes in a field where cattle used to graze. What should the company do?
+Options: Leave the holes open to fill with rain | **Refill the pits and replant the land** | Fence off the field and forget it | Dig more pits in the same field
+- If a child answers "Leave the holes open to fill with rain": Reclaiming land makes it useful again. Refilling pits and planting trees repairs mined land, as at Haller Park.
+- If a child answers "Fence off the field and forget it": Reclaiming land makes it useful again. Refilling pits and planting trees repairs mined land, as at Haller Park.
 
 ### socialstudies6.mn.ef.spot
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS`, outcome `c`, form spot, rung 3.
 
-**Q:** Sylvia says the best repair for a mine is to leave the pit open. Which step has the mistake?
-Steps: Step 1: Sylvia sees a finished pit. / **Step 2: She says an open pit repairs itself.** / Step 3: She writes leave it open.
+**Q:** Irene says Haller Park shows that quarries can never be repaired. Which step has the mistake?
+Steps: Step 1: Irene hears Haller Park was a quarry. / **Step 2: She says quarries stay as holes for ever.** / Step 3: She writes never repaired.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1194,62 +1194,62 @@ Steps: Step 1: Sylvia sees a finished pit. / **Step 2: She says an open pit repa
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA`, outcome `a`, form direct, rung 1.
 
-**Q:** What was the Lukiiko in Buganda?
-Options: **The council that advised the Kabaka** | The market of the capital | The royal palace on the hill | The army of the kingdom
-- If a child answers "The market of the capital": The Lukiiko was the council of chiefs. The Katikkiro was the chief minister who helped the Kabaka rule.
-- If a child answers "The royal palace on the hill": The Lukiiko was the council of chiefs. The Katikkiro was the chief minister who helped the Kabaka rule.
+**Q:** Who was the Katikkiro in Buganda?
+Options: The army leader at the border | The village priest of the kingdom | The chief of a small clan | **The chief minister who helped the Kabaka**
+- If a child answers "The army leader at the border": The Katikkiro was the Kabaka's chief minister. The Katikkiro was the chief minister who helped the Kabaka rule.
+- If a child answers "The village priest of the kingdom": The Katikkiro was the Kabaka's chief minister. The Katikkiro was the chief minister who helped the Kabaka rule.
 
 ### socialstudies6.tg.bu.story
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA`, outcome `a`, form word, rung 2.
 
-**Q:** Who was at the head of the chiefs and the Lukiiko in Buganda?
-Options: A trader | **The Kabaka** | A village elder | The Ntemi
-- If a child answers "A trader": The Kabaka was head of all. The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.
-- If a child answers "A village elder": The Kabaka was head of all. The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.
+**Q:** A saza chief of Buganda does his work badly. What can the Kabaka do?
+Options: Ask the people to vote him out | **Remove him and appoint another** | Leave him there for life | Nothing, because the post is inherited
+- If a child answers "Ask the people to vote him out": The Kabaka appointed chiefs and could remove them. The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.
+- If a child answers "Leave him there for life": The Kabaka appointed chiefs and could remove them. The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.
 
 ### socialstudies6.tg.ny.which
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI`, outcome `a`, form direct, rung 1.
 
-**Q:** What was a duty of the Ntemi?
-Options: Collecting taxes for the Kabaka | Choosing all the other chiefs | Ruling all of Tanzania alone | **Judging cases and leading his people**
-- If a child answers "Collecting taxes for the Kabaka": The Ntemi led and judged his people. The Nyamwezi had many small chiefdoms, each under a Ntemi.
-- If a child answers "Choosing all the other chiefs": The Ntemi led and judged his people. The Nyamwezi had many small chiefdoms, each under a Ntemi.
+**Q:** How did a person become a Ntemi?
+Options: **By inheriting the position** | By appointment by the Kabaka | By winning a race | By a vote of all the people
+- If a child answers "By appointment by the Kabaka": The Ntemi inherited his position. A Ntemi inherited the position and was advised by elders.
+- If a child answers "By winning a race": The Ntemi inherited his position. A Ntemi inherited the position and was advised by elders.
 
 ### socialstudies6.tg.ny.story
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI`, outcome `a`, form word, rung 2.
 
-**Q:** Why were Nyamwezi chiefdoms small?
-Options: They were all part of Buganda | One king ruled all of them | **Each Ntemi ruled only his own area** | They had no rulers
-- If a child answers "They were all part of Buganda": Power was spread among many chiefs. The Nyamwezi had many small chiefdoms, each under a Ntemi.
-- If a child answers "One king ruled all of them": Power was spread among many chiefs. The Nyamwezi had many small chiefdoms, each under a Ntemi.
+**Q:** Two men quarrel over land in a Nyamwezi chiefdom. Who settles the case?
+Options: The Kabaka in his palace | The Lukiiko in the capital | A foreign trader | **The Ntemi with his council of elders**
+- If a child answers "The Kabaka in his palace": The Ntemi and elders judged cases. The Nyamwezi had many small chiefdoms, each under a Ntemi.
+- If a child answers "The Lukiiko in the capital": The Ntemi and elders judged cases. The Nyamwezi had many small chiefdoms, each under a Ntemi.
 
 ### socialstudies6.tg.co.which
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE`, outcome `b`, form direct, rung 1.
 
-**Q:** Which statement is true of Buganda but NOT of the Nyamwezi?
-Options: The ruler was also the judge of cases | A Ntemi ruled over each small chiefdom | A council of elders advised the ruler | **The Kabaka appointed chiefs over areas**
-- If a child answers "The ruler was also the judge of cases": The Kabaka appointed his chiefs. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
-- If a child answers "A Ntemi ruled over each small chiefdom": The Kabaka appointed his chiefs. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
+**Q:** How did Buganda differ from the Nyamwezi?
+Options: **Buganda was one large centralised kingdom** | It was just the same in every way | It had no ruler and no council at all | It had many small independent chiefdoms
+- If a child answers "It was just the same in every way": The Nyamwezi had many small chiefdoms. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
+- If a child answers "It had no ruler and no council at all": The Nyamwezi had many small chiefdoms. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
 
 ### socialstudies6.tg.co.table
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE`, outcome `b`, form table, rung 2.
 
 **Q:** Look at the table. Which feature is true of the Nyamwezi only?
-Options: One large kingdom | A Katikkiro | **Many small chiefdoms** | A Lukiiko
-- If a child answers "One large kingdom": The Nyamwezi had many small chiefdoms. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
+Options: **Many small chiefdoms** | A Katikkiro | One large kingdom | A Lukiiko
 - If a child answers "A Katikkiro": The Nyamwezi had many small chiefdoms. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
+- If a child answers "One large kingdom": The Nyamwezi had many small chiefdoms. Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.
 
 ### socialstudies6.tg.co.spot
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE`, outcome `b`, form spot, rung 3.
 
-**Q:** Tom says the Kabaka and Ntemi were the same title. Which step has the mistake?
-Steps: Step 1: Tom knows both led their people. / **Step 2: He says both names mean the same ruler.** / Step 3: He writes the same title.
+**Q:** Prisca says the Nyamwezi had no council to advise the Ntemi. Which step has the mistake?
+Steps: Step 1: Prisca knows Buganda had a Lukiiko. / **Step 2: She says only Buganda had advisers.** / Step 3: She writes no council.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1258,97 +1258,97 @@ Steps: Step 1: Tom knows both led their people. / **Step 2: He says both names m
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES`, outcome `a`, form direct, rung 1.
 
 **Q:** What is the main aim of the East African Community?
-Options: **To make member countries work together in trade and other fields** | To end all trade between neighbouring countries | To make each country charge duties on partners | To make all the countries one single school
-- If a child answers "To end all trade between neighbouring countries": The EAC links its members in trade, politics and social life. In a customs union members trade without duty and share a tariff on goods from outside.
+Options: **To make member countries work together in trade and other fields** | To make all the countries one single school | To make each country charge duties on partners | To end all trade between neighbouring countries
+- If a child answers "To make all the countries one single school": The EAC links its members in trade, politics and social life. In a customs union members trade without duty and share a tariff on goods from outside.
 - If a child answers "To make each country charge duties on partners": The EAC links its members in trade, politics and social life. In a customs union members trade without duty and share a tariff on goods from outside.
 
 ### socialstudies6.rc.ob.story
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES`, outcome `a`, form word, rung 2.
 
-**Q:** Learners are asked: where would a meeting of the EAC Secretariat be held?
-Options: Dar es Salaam | Nairobi | **Arusha** | Kampala
-- If a child answers "Dar es Salaam": The EAC Secretariat is in Arusha. The EAC headquarters is in Arusha, Tanzania.
-- If a child answers "Nairobi": The EAC Secretariat is in Arusha. The EAC headquarters is in Arusha, Tanzania.
+**Q:** A Tanzanian teacher takes a job in Rwanda with no special permit. Which aim is this?
+Options: The customs union | The political federation | **The common market, with free movement of workers** | The EAC headquarters
+- If a child answers "The customs union": The common market allows free movement of people. In a customs union members trade without duty and share a tariff on goods from outside.
+- If a child answers "The political federation": The common market allows free movement of people. In a customs union members trade without duty and share a tariff on goods from outside.
 
 ### socialstudies6.rc.be.which
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS`, outcome `b`, form direct, rung 1.
 
-**Q:** Which is a benefit of the EAC?
-Options: Every country builds only its own roads | Closed borders make trade easier | **Shared roads, railways and ports help trade** | Goods stay in the port for months
-- If a child answers "Every country builds only its own roads": Shared transport links lower costs. The common market allows free movement of people, goods and services.
-- If a child answers "Closed borders make trade easier": Shared transport links lower costs. The common market allows free movement of people, goods and services.
+**Q:** How does the EAC help security?
+Options: **Partners share information to fight crime together** | Only the largest country has an army | Partners keep all the police at home | Each country hides its problems from others
+- If a child answers "Only the largest country has an army": Shared work against crime and terror helps all. A common market gives all members a larger market.
+- If a child answers "Partners keep all the police at home": Shared work against crime and terror helps all. A common market gives all members a larger market.
 
 ### socialstudies6.rc.be.story
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS`, outcome `b`, form word, rung 2.
 
-**Q:** A trader from Tanzania opens a shop in Nairobi. What does the common market do for him?
-Options: Makes him pay duty twice over | Stops him from leaving Tanzania | **Lets him set up business more easily in a partner country** | Closes the shop on the first day
-- If a child answers "Makes him pay duty twice over": The common market helps people do business across borders. The common market allows free movement of people, goods and services.
-- If a child answers "Stops him from leaving Tanzania": The common market helps people do business across borders. The common market allows free movement of people, goods and services.
+**Q:** A Kenyan farmer sells vegetables in Kampala without paying duty. Which benefit is this?
+Options: A ban on his goods | A tax added to his goods | **A larger market for his goods** | A smaller market for his goods
+- If a child answers "A ban on his goods": The EAC gives farmers a bigger market. A common market gives all members a larger market.
+- If a child answers "A tax added to his goods": The EAC gives farmers a bigger market. A common market gives all members a larger market.
 
 ### socialstudies6.rc.pr.pair
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS`, outcome `c`, form direct, rung 1.
 
 **Q:** How should disputes between partner states be settled?
-Options: By force and threats at the border | By closing the border for ever | By ignoring the other country | **By talks and the EAC Court of Justice**
-- If a child answers "By force and threats at the border": Peaceful means such as talks and the court settle disputes. Disputes should be settled by talks and the EAC Court of Justice.
+Options: By ignoring the other country | By closing the border for ever | **By talks and the EAC Court of Justice** | By force and threats at the border
+- If a child answers "By ignoring the other country": Peaceful means such as talks and the court settle disputes. Disputes should be settled by talks and the EAC Court of Justice.
 - If a child answers "By closing the border for ever": Peaceful means such as talks and the court settle disputes. Disputes should be settled by talks and the EAC Court of Justice.
 
 ### socialstudies6.rc.pr.story
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS`, outcome `e`, form word, rung 2.
 
-**Q:** A partner delays paying its share to the community. What helps?
-Options: Closing the community headquarters | Taking the money by force | **Meetings of leaders to agree on payment rules** | Ignoring the missing payment for years
-- If a child answers "Closing the community headquarters": Agreeing rules and talking help. One-stop border posts reduce delays at borders.
-- If a child answers "Taking the money by force": Agreeing rules and talking help. One-stop border posts reduce delays at borders.
+**Q:** Why do partners need to trust each other?
+Options: Trust makes them close the borders | Trust makes them fight over the borders | Trust stops them from trading at all | **Trust helps them keep promises and share benefits**
+- If a child answers "Trust makes them close the borders": The community depends on trust. Disputes should be settled by talks and the EAC Court of Justice.
+- If a child answers "Trust makes them fight over the borders": The community depends on trust. Disputes should be settled by talks and the EAC Court of Justice.
 
 ### socialstudies6.cz.rr.which
 
 Skill `POLITI.CITIZENSHIP.CZ_RIGHTS_RESP`, outcome `a`, form direct, rung 1.
 
-**Q:** At what age can a Kenyan citizen vote?
-Options: 16 years | 21 years | **18 years** | 14 years
-- If a child answers "16 years": A Kenyan citizen can vote at 18. A Kenyan citizen can vote at 18.
-- If a child answers "21 years": A Kenyan citizen can vote at 18. A Kenyan citizen can vote at 18.
+**Q:** Which is a right of a Kenyan citizen?
+Options: Protecting public property | Paying taxes on time | Obeying the law | **Moving freely in the country**
+- If a child answers "Protecting public property": Free movement is a right. The others are responsibilities. Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.
+- If a child answers "Paying taxes on time": Free movement is a right. The others are responsibilities. Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.
 
 ### socialstudies6.cz.rr.story
 
 Skill `POLITI.CITIZENSHIP.CZ_RIGHTS_RESP`, outcome `a`, form word, rung 2.
 
 **Q:** Omar pays his taxes on his small shop. What is this?
-Options: **The responsibility of a citizen** | A gift made to the government | A right to receive free goods | A reward for his hard work
-- If a child answers "A gift made to the government": Paying taxes is a duty. Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.
+Options: A reward for his hard work | A right to receive free goods | A gift made to the government | **The responsibility of a citizen**
+- If a child answers "A reward for his hard work": Paying taxes is a duty. Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.
 - If a child answers "A right to receive free goods": Paying taxes is a duty. Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.
 
 ### socialstudies6.cz.qu.which
 
 Skill `POLITI.CITIZENSHIP.CZ_QUALITIES`, outcome `b`, form direct, rung 1.
 
-**Q:** What is patriotism?
-Options: Only singing the national anthem aloud | Only wearing national colours to events | Only waving the flag on holidays | **Love and loyalty for the country shown in actions**
-- If a child answers "Only singing the national anthem aloud": Patriotism shows in what a person does for the country. Patriotism is love and loyalty shown in what a person does for the country.
-- If a child answers "Only wearing national colours to events": Patriotism shows in what a person does for the country. Patriotism is love and loyalty shown in what a person does for the country.
+**Q:** Which quality is shown by people of different tribes who respect each other?
+Options: Pride in one tribe alone | Hatred and suspicion | **Tolerance and love of peace** | Fear of other communities
+- If a child answers "Pride in one tribe alone": Tolerance holds the nation together. Patriotism is love and loyalty shown in what a person does for the country.
+- If a child answers "Hatred and suspicion": Tolerance holds the nation together. Patriotism is love and loyalty shown in what a person does for the country.
 
 ### socialstudies6.cz.qu.story
 
 Skill `POLITI.CITIZENSHIP.CZ_QUALITIES`, outcome `c`, form word, rung 2.
 
-**Q:** Learners plant trees on Tree Planting Day to help Kenya. Which quality do they show?
-Options: **Patriotism, shown in an action** | Only making a long speech | Only wearing a school uniform | Only singing loudly on the day
-- If a child answers "Only making a long speech": Patriotism is shown by actions that help the country. Patriotism is love and loyalty shown in what a person does for the country.
-- If a child answers "Only wearing a school uniform": Patriotism is shown by actions that help the country. Patriotism is love and loyalty shown in what a person does for the country.
+**Q:** Which learner is acting as a good citizen?
+Options: One who breaks the school fence down | One who drops litter everywhere | One who hides away from all duties | **One who helps clean the school compound**
+- If a child answers "One who breaks the school fence down": Helping keep the compound clean shows responsibility. A good citizen is honest. Refusing a bribe and reporting it protects the country.
+- If a child answers "One who drops litter everywhere": Helping keep the compound clean shows responsibility. A good citizen is honest. Refusing a bribe and reporting it protects the country.
 
 ### socialstudies6.cz.qu.spot
 
 Skill `POLITI.CITIZENSHIP.CZ_QUALITIES`, outcome `b`, form spot, rung 3.
 
-**Q:** Elijah says a patriot has no need to obey the law. Which step has the mistake?
-Steps: Step 1: Elijah loves his country. / **Step 2: He says love means freedom from laws.** / Step 3: He writes no need.
+**Q:** Beatrice says it is smart to give a gift to jump a queue. Which step has the mistake?
+Steps: Step 1: Beatrice sees a long queue. / **Step 2: She says a hidden gift is fair.** / Step 3: She writes give the gift.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1356,44 +1356,44 @@ Steps: Step 1: Elijah loves his country. / **Step 2: He says love means freedom 
 
 Skill `POLITI.HUMAN_RIGHTS.HR_CATEGORIES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which category is the right to education in?
-Options: **Social rights** | Criminal rights | Political rights | Economic rights
-- If a child answers "Criminal rights": Education, health and housing are social rights. Education, health and housing are social rights.
-- If a child answers "Political rights": Education, health and housing are social rights. Education, health and housing are social rights.
+**Q:** Which category is the right to vote in?
+Options: **Political rights** | Economic rights | Social rights | Cultural rights
+- If a child answers "Economic rights": Voting and standing for election are political rights. The right to vote is a political right.
+- If a child answers "Social rights": Voting and standing for election are political rights. The right to vote is a political right.
 
 ### socialstudies6.hr.ca.story
 
 Skill `POLITI.HUMAN_RIGHTS.HR_CATEGORIES`, outcome `a`, form word, rung 2.
 
-**Q:** A child goes to school each day. Which category of rights is this?
-Options: Economic rights | **Social rights** | Voting rights | Political rights
-- If a child answers "Economic rights": Education is a social right. Education, health and housing are social rights.
-- If a child answers "Voting rights": Education is a social right. Education, health and housing are social rights.
+**Q:** Njeri starts a small shop and earns a living. Which category of rights is she using?
+Options: Religious rights | **Economic rights** | Social rights | Political rights
+- If a child answers "Religious rights": Running a business is an economic right. The right to vote is a political right.
+- If a child answers "Social rights": Running a business is an economic right. The right to vote is a political right.
 
 ### socialstudies6.hr.up.which
 
 Skill `POLITI.HUMAN_RIGHTS.HR_UPHOLD`, outcome `b`, form direct, rung 1.
 
-**Q:** Who helps to uphold human rights in Kenya?
-Options: **The courts, the Commission and every citizen** | Only the teachers who work at a school | Only the police force and the army | Only the head of state and his office
-- If a child answers "Only the teachers who work at a school": Many bodies and all citizens uphold human rights. Courts, commissions, schools and every citizen who respects others uphold rights.
-- If a child answers "Only the police force and the army": Many bodies and all citizens uphold human rights. Courts, commissions, schools and every citizen who respects others uphold rights.
+**Q:** Which document in Kenya protects our rights?
+Options: **The Constitution and its Bill of Rights** | The weather report for the week | The price list of the local market | The timetable of the school week
+- If a child answers "The weather report for the week": The Bill of Rights is in the Constitution. Courts, commissions, schools and every citizen who respects others uphold rights.
+- If a child answers "The price list of the local market": The Bill of Rights is in the Constitution. Courts, commissions, schools and every citizen who respects others uphold rights.
 
 ### socialstudies6.hr.up.story
 
 Skill `POLITI.HUMAN_RIGHTS.HR_UPHOLD`, outcome `c`, form word, rung 2.
 
-**Q:** A boy is stopped from going to school because he is poor. Which action upholds his rights?
-Options: Laugh at him and walk away | **Report it so he can be helped to go to school** | Tell him to work instead of school | Leave him at home as it is not our concern
-- If a child answers "Laugh at him and walk away": Education is a right, so we report such cases. Courts, commissions, schools and every citizen who respects others uphold rights.
-- If a child answers "Tell him to work instead of school": Education is a right, so we report such cases. Courts, commissions, schools and every citizen who respects others uphold rights.
+**Q:** Learners respect a new classmate who uses a wheelchair. Which action is this?
+Options: Pushing him out of the class for ever | Keeping him out of all of the games | **Respecting the rights and dignity of others** | Laughing at the way that he moves about
+- If a child answers "Pushing him out of the class for ever": Respect upholds the rights of every person. Courts, commissions, schools and every citizen who respects others uphold rights.
+- If a child answers "Keeping him out of all of the games": Respect upholds the rights of every person. Courts, commissions, schools and every citizen who respects others uphold rights.
 
 ### socialstudies6.hr.up.spot
 
 Skill `POLITI.HUMAN_RIGHTS.HR_UPHOLD`, outcome `b`, form spot, rung 3.
 
-**Q:** Gloria says Human Rights Day is on 25 December. Which step has the mistake?
-Steps: Step 1: Gloria remembers a December date. / **Step 2: She says the big December day is Human Rights Day.** / Step 3: She writes 25 December.
+**Q:** Wilfred says a citizen has no part in protecting rights. Which step has the mistake?
+Steps: Step 1: Wilfred sees officials at work. / **Step 2: He says officials are the only ones to act.** / Step 3: He writes no part.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1401,27 +1401,27 @@ Steps: Step 1: Gloria remembers a December date. / **Step 2: She says the big De
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is a cause of conflict in a school?
-Options: Working together on a project | Respecting other children | **Bullying and rumours** | Sharing books and games
-- If a child answers "Working together on a project": Bullying and rumours cause quarrels. Competition for land and water is a common cause of conflict.
-- If a child answers "Respecting other children": Bullying and rumours cause quarrels. Competition for land and water is a common cause of conflict.
+**Q:** How should a quarrel between two friends be settled?
+Options: By fighting until one gives up | By staying angry for many days | **By talking and listening to each other** | By calling other children to fight
+- If a child answers "By fighting until one gives up": Talking settles quarrels without harm. Quarrels should be settled by talking and listening.
+- If a child answers "By staying angry for many days": Talking settles quarrels without harm. Quarrels should be settled by talking and listening.
 
 ### socialstudies6.pc.ca.story
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES`, outcome `a`, form word, rung 2.
 
-**Q:** Two herding communities both want the same river in a dry season. What caused the conflict?
-Options: Plenty of water for both groups | **Competition for water and pasture** | A new bus route | A new school in the area
-- If a child answers "Plenty of water for both groups": Scarce water and pasture cause conflicts. Competition for land and water is a common cause of conflict.
-- If a child answers "A new bus route": Scarce water and pasture cause conflicts. Competition for land and water is a common cause of conflict.
+**Q:** A rumour that a boy stole a pen makes his friends turn on him. What caused the conflict?
+Options: A fair game in the playground | **A rumour that was not checked** | A kind word from the teacher | A lesson on respect
+- If a child answers "A fair game in the playground": Rumours start conflicts. Competition for land and water is a common cause of conflict.
+- If a child answers "A kind word from the teacher": Rumours start conflicts. Competition for land and water is a common cause of conflict.
 
 ### socialstudies6.pc.me.which
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS`, outcome `b`, form direct, rung 1.
 
 **Q:** What is negotiation?
-Options: A third person decides for them | **The two sides bargain to reach an agreement** | One side wins by force | The two sides stop talking to each other
-- If a child answers "A third person decides for them": In negotiation the two sides talk directly. In arbitration a third person decides. In mediation a third person helps them agree.
+Options: The two sides stop talking to each other | One side wins by force | **The two sides bargain to reach an agreement** | A third person decides for them
+- If a child answers "The two sides stop talking to each other": In negotiation the two sides talk directly. In arbitration a third person decides. In mediation a third person helps them agree.
 - If a child answers "One side wins by force": In negotiation the two sides talk directly. In arbitration a third person decides. In mediation a third person helps them agree.
 
 ### socialstudies6.pc.me.story
@@ -1429,16 +1429,16 @@ Options: A third person decides for them | **The two sides bargain to reach an a
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS`, outcome `b`, form word, rung 2.
 
 **Q:** Two traders ask a respected elder to decide who is right and promise to obey. Which method is this?
-Options: **Arbitration** | Negotiation | A fight | Mediation
-- If a child answers "Negotiation": The elder decides and both obey, which is arbitration. In arbitration a third person decides. In mediation a third person helps them agree.
+Options: A fight | Negotiation | **Arbitration** | Mediation
 - If a child answers "A fight": The elder decides and both obey, which is arbitration. In arbitration a third person decides. In mediation a third person helps them agree.
+- If a child answers "Negotiation": The elder decides and both obey, which is arbitration. In arbitration a third person decides. In mediation a third person helps them agree.
 
 ### socialstudies6.pc.me.spot
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS`, outcome `b`, form spot, rung 3.
 
-**Q:** Hussein says elders have no part in settling disputes. Which step has the mistake?
-Steps: Step 1: Hussein sees a modern court. / **Step 2: He says only the courts can settle disputes.** / Step 3: He writes no part.
+**Q:** Mercy says in mediation the third person decides. Which step has the mistake?
+Steps: Step 1: Mercy knows a third person is involved. / **Step 2: She says the third person gives the final answer.** / Step 3: She writes the third person decides.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1446,98 +1446,98 @@ Steps: Step 1: Hussein sees a modern court. / **Step 2: He says only the courts 
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE`, outcome `c`, form direct, rung 1.
 
-**Q:** Which action promotes peace?
-Options: Taking revenge on those who hurt you | Refusing to speak to others | **Forgiving others and talking about problems** | Fighting back at once
-- If a child answers "Taking revenge on those who hurt you": Forgiveness and talk keep peace. Forgiving and talking promote peace. Revenge brings more conflict.
-- If a child answers "Refusing to speak to others": Forgiveness and talk keep peace. Forgiving and talking promote peace. Revenge brings more conflict.
+**Q:** Which activity helps two communities to live in peace?
+Options: **Sports and cultural events between them** | Calling each other bad names often | Closing the road that links them | Raids on each other's herds of cattle
+- If a child answers "Calling each other bad names often": Shared events build friendship. Forgiving and talking promote peace. Revenge brings more conflict.
+- If a child answers "Closing the road that links them": Shared events build friendship. Forgiving and talking promote peace. Revenge brings more conflict.
 
 ### socialstudies6.pc.pr.story
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE`, outcome `c`, form word, rung 2.
 
-**Q:** A community sets up a peace committee of elders and youth. What does it do?
-Options: Plans raids on the rival groups | Closes all of the roads at night | **Settles disputes before they become fights** | Makes the quarrels last much longer
-- If a child answers "Plans raids on the rival groups": Peace committees settle trouble early. Forgiving and talking promote peace. Revenge brings more conflict.
-- If a child answers "Closes all of the roads at night": Peace committees settle trouble early. Forgiving and talking promote peace. Revenge brings more conflict.
+**Q:** Learners from two schools play a football match and share lunch. What does this promote?
+Options: **Friendship and peace between the schools** | Revenge for the old lost matches | Hatred between the two schools | Fear of the learners at the other school
+- If a child answers "Revenge for the old lost matches": Sport builds friendship. Forgiving and talking promote peace. Revenge brings more conflict.
+- If a child answers "Hatred between the two schools": Sport builds friendship. Forgiving and talking promote peace. Revenge brings more conflict.
 
 ### socialstudies6.gr.so.which
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES`, outcome `a`, form direct, rung 1.
 
-**Q:** Who collects national taxes in Kenya?
-Options: The Kenya Police Service | The Teachers Service Commission | **The Kenya Revenue Authority** | The county assembly
-- If a child answers "The Kenya Police Service": The Kenya Revenue Authority, or KRA, collects national taxes. The Kenya Revenue Authority collects national taxes.
-- If a child answers "The Teachers Service Commission": The Kenya Revenue Authority, or KRA, collects national taxes. The Kenya Revenue Authority collects national taxes.
+**Q:** Which is a tax?
+Options: A gift from a friend | **Income tax on salaries** | A loan from a bank | A school fee paid to a school
+- If a child answers "A gift from a friend": Income tax is a tax. A loan must be repaid. Income tax is a tax. A loan is borrowed money that must be repaid.
+- If a child answers "A loan from a bank": Income tax is a tax. A loan must be repaid. Income tax is a tax. A loan is borrowed money that must be repaid.
 
 ### socialstudies6.gr.so.story
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES`, outcome `a`, form word, rung 2.
 
-**Q:** A shop adds 16 percent to the price of goods and sends it to the government. What is this?
-Options: A fine for late goods | **Value added tax, or VAT** | A loan to the shop | A gift to customers
-- If a child answers "A fine for late goods": VAT is added to the price of goods and services. Income tax is a tax. A loan is borrowed money that must be repaid.
-- If a child answers "A loan to the shop": VAT is added to the price of goods and services. Income tax is a tax. A loan is borrowed money that must be repaid.
+**Q:** A driver pays a fine for breaking a traffic rule. Where does the money go?
+Options: To the school nearby | **To the government as revenue** | To the driver of the other car | To the local church
+- If a child answers "To the school nearby": Fines are a source of revenue. The Kenya Revenue Authority collects national taxes.
+- If a child answers "To the driver of the other car": Fines are a source of revenue. The Kenya Revenue Authority collects national taxes.
 
 ### socialstudies6.gr.sp.which
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING`, outcome `b`, form direct, rung 1.
 
-**Q:** What does the national government spend on?
-Options: **Defence, national roads and national referral hospitals** | Local dispensaries and ECDE centres | County markets and county water points | Only village footpaths
-- If a child answers "Local dispensaries and ECDE centres": Defence and national roads are national. The national government pays teachers. Counties run county health services and county roads.
-- If a child answers "County markets and county water points": Defence and national roads are national. The national government pays teachers. Counties run county health services and county roads.
+**Q:** What is tax money used for?
+Options: Given back to those who paid it | Burnt at the end of the year | **Roads, schools, hospitals and security** | Kept only by officials for themselves
+- If a child answers "Given back to those who paid it": Tax money pays for public services. Tax money pays for roads, schools, hospitals and security.
+- If a child answers "Burnt at the end of the year": Tax money pays for public services. Tax money pays for roads, schools, hospitals and security.
 
 ### socialstudies6.gr.sp.story
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING`, outcome `b`, form word, rung 2.
 
-**Q:** A county repairs a rural road and builds a market. What is this?
-Options: National spending on passports | Spending on the army | National spending on defence | **County spending on roads and markets**
-- If a child answers "National spending on passports": Counties handle county roads and markets. The national government pays teachers. Counties run county health services and county roads.
-- If a child answers "Spending on the army": Counties handle county roads and markets. The national government pays teachers. Counties run county health services and county roads.
+**Q:** Tax money builds a new class for a primary school and pays the teachers. What does it show?
+Options: Taxes are given to private shops | Taxes are kept by officials | Taxes are thrown away | **Taxes are spent on education**
+- If a child answers "Taxes are given to private shops": Education is paid for by taxes. Tax money pays for roads, schools, hospitals and security.
+- If a child answers "Taxes are kept by officials": Education is paid for by taxes. Tax money pays for roads, schools, hospitals and security.
 
 ### socialstudies6.pr.kw.which
 
 Skill `GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which of these is a key word in the preamble?
-Options: Cement | Tractor | Football | **Democracy**
-- If a child answers "Cement": Democracy is one of the values named in the preamble. The preamble is the opening statement. Pre means before.
-- If a child answers "Tractor": Democracy is one of the values named in the preamble. The preamble is the opening statement. Pre means before.
+**Q:** In the preamble, who holds the sovereign power?
+Options: The Parliament of Kenya | The President of Kenya | The Chief Justice of Kenya | **The people of Kenya**
+- If a child answers "The Parliament of Kenya": The preamble begins: We, the people of Kenya. In the preamble, the people of Kenya hold sovereign power.
+- If a child answers "The President of Kenya": The preamble begins: We, the people of Kenya. In the preamble, the people of Kenya hold sovereign power.
 
 ### socialstudies6.pr.kw.story
 
 Skill `GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS`, outcome `a`, form word, rung 2.
 
-**Q:** A learner looks for the opening statement of the Constitution. What is it called?
-Options: The schedule | The amendment | **The preamble** | The chapter
-- If a child answers "The schedule": The preamble is the opening statement. The preamble is the opening statement. Pre means before.
-- If a child answers "The amendment": The preamble is the opening statement. The preamble is the opening statement. Pre means before.
+**Q:** Which word in the preamble means the power of the people to rule themselves?
+Options: Aspirations | Diversity | Heritage | **Sovereign**
+- If a child answers "Aspirations": Sovereign means holding the supreme power. In the preamble, the people of Kenya hold sovereign power.
+- If a child answers "Diversity": Sovereign means holding the supreme power. In the preamble, the people of Kenya hold sovereign power.
 
 ### socialstudies6.pr.me.which
 
 Skill `GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING`, outcome `b`, form direct, rung 1.
 
-**Q:** What does indivisible mean?
-Options: **Cannot be divided** | Taken apart each year | Divided into counties | Shared by a few people
-- If a child answers "Taken apart each year": Kenya is one indivisible nation. Indivisible means cannot be divided. Kenya is one nation.
-- If a child answers "Divided into counties": Kenya is one indivisible nation. Indivisible means cannot be divided. Kenya is one nation.
+**Q:** What does the rule of law mean?
+Options: **Everyone, even leaders, must obey the law** | Only ordinary people obey the law | Leaders can break any law they wish | Laws apply only in the capital
+- If a child answers "Only ordinary people obey the law": No one is above the law. Indivisible means cannot be divided. Kenya is one nation.
+- If a child answers "Leaders can break any law they wish": No one is above the law. Indivisible means cannot be divided. Kenya is one nation.
 
 ### socialstudies6.pr.me.story
 
 Skill `GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING`, outcome `b`, form word, rung 2.
 
-**Q:** A teacher says the president must obey the law like everyone else. Which idea is this?
-Options: Rule by the oldest | Rule by one man alone | Rule by the strongest | **The rule of law**
-- If a child answers "Rule by the oldest": Everyone is equal before the law. Indivisible means cannot be divided. Kenya is one nation.
-- If a child answers "Rule by one man alone": Everyone is equal before the law. Indivisible means cannot be divided. Kenya is one nation.
+**Q:** A child asks why we learn the preamble. What is the best answer?
+Options: It lists all the school fees paid | It gives the budget of the year | **It states the aims and values of the Constitution** | It lists the names of all counties
+- If a child answers "It lists all the school fees paid": The preamble sums up the spirit of the Constitution. The preamble is the opening statement. Pre means before.
+- If a child answers "It gives the budget of the year": The preamble sums up the spirit of the Constitution. The preamble is the opening statement. Pre means before.
 
 ### socialstudies6.pr.me.spot
 
 Skill `GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING`, outcome `b`, form spot, rung 3.
 
-**Q:** Duncan says the preamble is the last part of the Constitution. Which step has the mistake?
-Steps: Step 1: Duncan has a copy of the Constitution. / **Step 2: He says the opening statement is at the back.** / Step 3: He writes the end.
+**Q:** Allan says indivisible means divided into counties. Which step has the mistake?
+Steps: Step 1: Allan knows Kenya has counties. / **Step 2: He says in means into.** / Step 3: He writes divided into counties.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1545,8 +1545,8 @@ Steps: Step 1: Duncan has a copy of the Constitution. / **Step 2: He says the op
 
 Skill `PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS`, outcome `d`, form spot, rung 3.
 
-**Q:** Lilian says after settling together all groups became the same. Which step has the mistake?
-Steps: Step 1: Lilian thinks about mixing of groups. / **Step 2: She says mixing makes every custom alike.** / Step 3: Lilian writes the answer.
+**Q:** Grace says the Kikuyu and the Maasai now speak one language. Which step has the mistake?
+Steps: Step 1: Grace thinks about languages. / **Step 2: She says living near each other joins languages.** / Step 3: Grace writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1554,8 +1554,8 @@ Steps: Step 1: Lilian thinks about mixing of groups. / **Step 2: She says mixing
 
 Skill `PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS`, outcome `a`, form spot, rung 3.
 
-**Q:** Brian says people crowd on steep rocky mountain tops. Which step has the mistake?
-Steps: Step 1: Brian thinks about mountains. / **Step 2: He says cool weather matters more than farmland.** / Step 3: Brian writes the answer.
+**Q:** Zawadi says a swamp with tsetse flies attracts many people. Which step has the mistake?
+Steps: Step 1: Zawadi thinks about swamps. / **Step 2: She says disease does not keep people away.** / Step 3: Zawadi writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1563,8 +1563,8 @@ Steps: Step 1: Brian thinks about mountains. / **Step 2: He says cool weather ma
 
 Skill `PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE`, outcome `a`, form spot, rung 3.
 
-**Q:** Esther says the warrior age-set looked after the sick at home. Which step has the mistake?
-Steps: Step 1: Esther thinks about warriors. / **Step 2: She says warriors stayed to nurse patients.** / Step 3: Esther writes the answer.
+**Q:** Gladys says the main duty of warriors was teaching small children letters. Which step has the mistake?
+Steps: Step 1: Gladys thinks about duties. / **Step 2: She says warriors ran the classes.** / Step 3: Gladys writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1572,8 +1572,8 @@ Steps: Step 1: Esther thinks about warriors. / **Step 2: She says warriors staye
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS`, outcome `a`, form spot, rung 3.
 
-**Q:** Gilbert says teachers marking books alone is the school working with the community. Which step has the mistake?
-Steps: Step 1: Gilbert thinks about collaboration. / **Step 2: He says any school task involves the community.** / Step 3: Gilbert writes the answer.
+**Q:** Abdi says a head teacher signing forms is a way of working with the community. Which step has the mistake?
+Steps: Step 1: Abdi thinks about working together. / **Step 2: He says paperwork brings the community in.** / Step 3: Abdi writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1581,8 +1581,8 @@ Steps: Step 1: Gilbert thinks about collaboration. / **Step 2: He says any schoo
 
 Skill `PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS`, outcome `b`, form spot, rung 3.
 
-**Q:** Mark says the community gains nothing from a school field it can use. Which step has the mistake?
-Steps: Step 1: Mark thinks about benefits. / **Step 2: He says a shared field has no value.** / Step 3: Mark writes the answer.
+**Q:** Janet says hiding the school budget is a good strategy to sustain support. Which step has the mistake?
+Steps: Step 1: Janet thinks about strategies. / **Step 2: She says parents should not know.** / Step 3: Janet writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1590,8 +1590,8 @@ Steps: Step 1: Mark thinks about benefits. / **Step 2: He says a shared field ha
 
 Skill `RESOUR.BEEF_FARMING.BF_FACTORS`, outcome `a`, form spot, rung 3.
 
-**Q:** Linet says tsetse flies are no problem for cattle. Which step has the mistake?
-Steps: Step 1: Linet thinks about diseases. / **Step 2: She says the flies do not harm animals.** / Step 3: Linet writes the answer.
+**Q:** Peter says a ranch is best sited on a wet crop-growing slope. Which step has the mistake?
+Steps: Step 1: Peter thinks about ranches. / **Step 2: He says crop land is best for ranching.** / Step 3: Peter writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1608,8 +1608,8 @@ Steps: Step 1: Brenda thinks about Somali herds. / **Step 2: She says dry land g
 
 Skill `RESOUR.BEEF_FARMING.BF_ECONOMY`, outcome `c`, form spot, rung 3.
 
-**Q:** Sylvia says beef farming gives no jobs. Which step has the mistake?
-Steps: Step 1: Sylvia thinks about jobs. / **Step 2: She says only the owner works.** / Step 3: Sylvia writes the answer.
+**Q:** Moses says hides and skins are thrown away. Which step has the mistake?
+Steps: Step 1: Moses thinks about hides. / **Step 2: He says only meat is used.** / Step 3: Moses writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1617,8 +1617,8 @@ Steps: Step 1: Sylvia thinks about jobs. / **Step 2: She says only the owner wor
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS`, outcome `a`, form spot, rung 3.
 
-**Q:** Hamza says the Indian Ocean is an inland fishing ground. Which step has the mistake?
-Steps: Step 1: Hamza thinks about inland. / **Step 2: He says the ocean is on land.** / Step 3: Hamza writes the answer.
+**Q:** Kassim says Lake Turkana is a marine fishing ground. Which step has the mistake?
+Steps: Step 1: Kassim thinks about marine. / **Step 2: He says a very large lake is marine.** / Step 3: Kassim writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1626,8 +1626,8 @@ Steps: Step 1: Hamza thinks about inland. / **Step 2: He says the ocean is on la
 
 Skill `RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS`, outcome `b`, form spot, rung 3.
 
-**Q:** Kelvin says a basket trap from a canoe is a modern method. Which step has the mistake?
-Steps: Step 1: Kelvin thinks about modern fishing. / **Step 2: He says all small boats are modern.** / Step 3: Kelvin writes the answer.
+**Q:** Janet says trawling means spearing fish from a canoe. Which step has the mistake?
+Steps: Step 1: Janet thinks about trawlers. / **Step 2: She says spears and trawls are the same.** / Step 3: Janet writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1635,8 +1635,8 @@ Steps: Step 1: Kelvin thinks about modern fishing. / **Step 2: He says all small
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS`, outcome `a`, form spot, rung 3.
 
-**Q:** Victor says tourists do not need roads, airports or hotels. Which step has the mistake?
-Steps: Step 1: Victor thinks about tourism. / **Step 2: He says visitors reach parks without them.** / Step 3: Victor writes the answer.
+**Q:** Isaac says a park with no hotels will still fill with visitors. Which step has the mistake?
+Steps: Step 1: Isaac thinks about hotels. / **Step 2: He says visitors will sleep anywhere.** / Step 3: Isaac writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1644,8 +1644,8 @@ Steps: Step 1: Victor thinks about tourism. / **Step 2: He says visitors reach p
 
 Skill `RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS`, outcome `b`, form spot, rung 3.
 
-**Q:** Atieno says Amboseli is the park of the mountain gorillas. Which step has the mistake?
-Steps: Step 1: Atieno thinks about gorilla parks. / **Step 2: She says the park with elephants has gorillas.** / Step 3: Atieno writes the answer.
+**Q:** Baraka says Queen Elizabeth National Park is in Kenya. Which step has the mistake?
+Steps: Step 1: Baraka thinks about Queen Elizabeth. / **Step 2: He says famous parks are all Kenyan.** / Step 3: Baraka writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1653,8 +1653,8 @@ Steps: Step 1: Atieno thinks about gorilla parks. / **Step 2: She says the park 
 
 Skill `RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS`, outcome `c`, form spot, rung 3.
 
-**Q:** Mercy says a one-stop border post makes lorries wait longer. Which step has the mistake?
-Steps: Step 1: Mercy thinks about border delays. / **Step 2: She says one stop means more checks.** / Step 3: Mercy writes the answer.
+**Q:** Wendy says adding more checks at the border speeds trade. Which step has the mistake?
+Steps: Step 1: Wendy thinks about delays. / **Step 2: She says more checks make it faster.** / Step 3: Wendy writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1662,8 +1662,8 @@ Steps: Step 1: Mercy thinks about border delays. / **Step 2: She says one stop m
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES`, outcome `a`, form spot, rung 3.
 
-**Q:** Janet says a phone call reaches the whole country at once. Which step has the mistake?
-Steps: Step 1: Janet thinks about phone calls. / **Step 2: She says a call is mass media.** / Step 3: Janet writes the answer.
+**Q:** Grace says a letter reaches many people at once. Which step has the mistake?
+Steps: Step 1: Grace thinks about letters. / **Step 2: She says a letter is mass communication.** / Step 3: Grace writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1671,8 +1671,8 @@ Steps: Step 1: Janet thinks about phone calls. / **Step 2: She says a call is ma
 
 Skill `RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS`, outcome `b`, form spot, rung 3.
 
-**Q:** Leonard says lowering the price of data stops cable theft. Which step has the mistake?
-Steps: Step 1: Leonard thinks about solutions. / **Step 2: He says cheap data guards cables.** / Step 3: Leonard writes the answer.
+**Q:** Hillary says villages with no electricity can use phones without charging. Which step has the mistake?
+Steps: Step 1: Hillary thinks about charging. / **Step 2: He says phones never run down.** / Step 3: Hillary writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1680,8 +1680,8 @@ Steps: Step 1: Leonard thinks about solutions. / **Step 2: He says cheap data gu
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS`, outcome `a`, form spot, rung 3.
 
-**Q:** Zachary says coffee is a mineral. Which step has the mistake?
-Steps: Step 1: Zachary thinks about minerals. / **Step 2: He says any export is a mineral.** / Step 3: Zachary writes the answer.
+**Q:** Vincent says soda ash is mined at Lake Naivasha. Which step has the mistake?
+Steps: Step 1: Vincent thinks about soda ash. / **Step 2: He says all Rift lakes give soda ash.** / Step 3: Vincent writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1689,8 +1689,8 @@ Steps: Step 1: Zachary thinks about minerals. / **Step 2: He says any export is 
 
 Skill `RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS`, outcome `b`, form spot, rung 3.
 
-**Q:** Moses says a quarry is a deep underground tunnel. Which step has the mistake?
-Steps: Step 1: Moses thinks about quarrying. / **Step 2: He says every mine is underground.** / Step 3: Moses writes the answer.
+**Q:** Sylvia says panning means blasting rock with explosives. Which step has the mistake?
+Steps: Step 1: Sylvia thinks about panning. / **Step 2: She says panning is a loud method.** / Step 3: Sylvia writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1698,8 +1698,8 @@ Steps: Step 1: Moses thinks about quarrying. / **Step 2: He says every mine is u
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA`, outcome `a`, form spot, rung 3.
 
-**Q:** Prisca says the Katikkiro was the village priest. Which step has the mistake?
-Steps: Step 1: Prisca thinks about the Katikkiro. / **Step 2: She says the title belongs to a priest.** / Step 3: Prisca writes the answer.
+**Q:** Fred says the king of Buganda was called the Katikkiro. Which step has the mistake?
+Steps: Step 1: Fred thinks about the king. / **Step 2: He says the chief minister was the king.** / Step 3: Fred writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1707,8 +1707,8 @@ Steps: Step 1: Prisca thinks about the Katikkiro. / **Step 2: She says the title
 
 Skill `POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI`, outcome `a`, form spot, rung 3.
 
-**Q:** Hassan says a Ntemi was chosen by the Kabaka. Which step has the mistake?
-Steps: Step 1: Hassan thinks about choosing a Ntemi. / **Step 2: He says Buganda chose Nyamwezi chiefs.** / Step 3: Hassan writes the answer.
+**Q:** Kelvin says a Ntemi was voted into office by all the people. Which step has the mistake?
+Steps: Step 1: Kelvin thinks about a Ntemi. / **Step 2: He says every Ntemi was elected.** / Step 3: Kelvin writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1716,8 +1716,8 @@ Steps: Step 1: Hassan thinks about choosing a Ntemi. / **Step 2: He says Buganda
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES`, outcome `a`, form spot, rung 3.
 
-**Q:** Hassan says the EAC Secretariat sits in Kampala. Which step has the mistake?
-Steps: Step 1: Hassan thinks about the Secretariat. / **Step 2: He says the Secretariat is in Uganda.** / Step 3: Hassan writes the answer.
+**Q:** Lilian says in a customs union each country taxes its partners' goods. Which step has the mistake?
+Steps: Step 1: Lilian thinks about a customs union. / **Step 2: She says partners charge each other duty.** / Step 3: Lilian writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1725,8 +1725,8 @@ Steps: Step 1: Hassan thinks about the Secretariat. / **Step 2: He says the Secr
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS`, outcome `b`, form spot, rung 3.
 
-**Q:** Janet says a Kenyan cannot do business in Tanzania in the common market. Which step has the mistake?
-Steps: Step 1: Janet thinks about travel. / **Step 2: She says business stops at the border.** / Step 3: Janet writes the answer.
+**Q:** Hassan says only one member gains from shared roads. Which step has the mistake?
+Steps: Step 1: Hassan thinks about trade. / **Step 2: He says shared roads help one country only.** / Step 3: Hassan writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1734,8 +1734,8 @@ Steps: Step 1: Janet thinks about travel. / **Step 2: She says business stops at
 
 Skill `POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS`, outcome `c`, form spot, rung 3.
 
-**Q:** Henry says singing the anthem at the gate cuts border delays. Which step has the mistake?
-Steps: Step 1: Henry thinks about border delays. / **Step 2: He says songs speed up lorries.** / Step 3: Henry writes the answer.
+**Q:** Prisca says a dispute between partner states should be settled by force. Which step has the mistake?
+Steps: Step 1: Prisca thinks about disputes. / **Step 2: She says soldiers should decide.** / Step 3: Prisca writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1752,8 +1752,8 @@ Steps: Step 1: Beth thinks about voting age. / **Step 2: She says only adults ov
 
 Skill `POLITI.HUMAN_RIGHTS.HR_CATEGORIES`, outcome `a`, form spot, rung 3.
 
-**Q:** Wilfred says standing for election is an economic right. Which step has the mistake?
-Steps: Step 1: Wilfred thinks about standing for office. / **Step 2: He says candidates earn money.** / Step 3: Wilfred writes the answer.
+**Q:** Hellen says the right to education is a political right. Which step has the mistake?
+Steps: Step 1: Hellen thinks about school. / **Step 2: She says school is about politics.** / Step 3: Hellen writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1761,8 +1761,8 @@ Steps: Step 1: Wilfred thinks about standing for office. / **Step 2: He says can
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES`, outcome `a`, form spot, rung 3.
 
-**Q:** Dorcas says a fight ends a quarrel for ever. Which step has the mistake?
-Steps: Step 1: Dorcas thinks about quarrels. / **Step 2: She says violence ends all trouble.** / Step 3: Dorcas writes the answer.
+**Q:** Joseph says unfair sharing of resources has nothing to do with conflict. Which step has the mistake?
+Steps: Step 1: Joseph thinks about unfairness. / **Step 2: He says people do not mind unfairness.** / Step 3: Joseph writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1770,8 +1770,8 @@ Steps: Step 1: Dorcas thinks about quarrels. / **Step 2: She says violence ends 
 
 Skill `GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE`, outcome `c`, form spot, rung 3.
 
-**Q:** Stephen says attacking those who hurt you shows love for peace. Which step has the mistake?
-Steps: Step 1: Stephen thinks about revenge. / **Step 2: He says strength proves peace.** / Step 3: Stephen writes the answer.
+**Q:** Wilson says paying back a wrong with a wrong keeps peace. Which step has the mistake?
+Steps: Step 1: Wilson thinks about hurt. / **Step 2: He says an eye for an eye is peace.** / Step 3: Wilson writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1779,8 +1779,8 @@ Steps: Step 1: Stephen thinks about revenge. / **Step 2: He says strength proves
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES`, outcome `a`, form spot, rung 3.
 
-**Q:** Rachel says the police collect national taxes. Which step has the mistake?
-Steps: Step 1: Rachel thinks about collecting tax. / **Step 2: She says the police take tax from shops.** / Step 3: Rachel writes the answer.
+**Q:** Elijah says a gift from a friend is a tax. Which step has the mistake?
+Steps: Step 1: Elijah thinks about tax. / **Step 2: He says money from anywhere is tax.** / Step 3: Elijah writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1788,8 +1788,8 @@ Steps: Step 1: Rachel thinks about collecting tax. / **Step 2: She says the poli
 
 Skill `GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING`, outcome `b`, form spot, rung 3.
 
-**Q:** Stephen says the national government builds every village dispensary. Which step has the mistake?
-Steps: Step 1: Stephen thinks about dispensaries. / **Step 2: He says county clinics are national.** / Step 3: Stephen writes the answer.
+**Q:** Brenda says tax money is kept by officials and not spent on services. Which step has the mistake?
+Steps: Step 1: Brenda thinks about taxes. / **Step 2: She says tax pays nothing.** / Step 3: Brenda writes the answer.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 

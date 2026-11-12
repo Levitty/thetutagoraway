@@ -1,0 +1,3432 @@
+{
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_GIVES_TOTAL_VALUE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+  "error": "Gives what the digit is worth when asked for its place.",
+  "example": {
+   "question": "In 45,362 what is the place value of 5?",
+   "wrong_answer": "5,000",
+   "correct_answer": "thousands"
+  },
+  "cause": "The terms place value and total value are used as the same thing.",
+  "reveals": "Put the total value among the options as a distractor.",
+  "help": "A place value chart with column names. Read the column name first, then say what the digit is worth.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_COUNT_FROM_LEFT": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+  "error": "Counts the places from the left, so names the wrong place when numbers have different digit counts.",
+  "example": {
+   "question": "In 8,205 which place is the digit 2 in?",
+   "wrong_answer": "tens",
+   "correct_answer": "hundreds"
+  },
+  "cause": "Starts naming places at the first digit instead of at the ones.",
+  "reveals": "Four-digit and five-digit numbers asked in the same session.",
+  "help": "Always put the ones at the right end of the chart and name the columns from there.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_ZERO_IS_NOT_A_PLACE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
+  "error": "Skips a zero when naming places, so the digits after it are named one place too high.",
+  "example": {
+   "question": "In 30,407 which place is the 4 in?",
+   "wrong_answer": "thousands",
+   "correct_answer": "hundreds"
+  },
+  "cause": "Treats zero as nothing instead of a place holder.",
+  "reveals": "Numbers with a zero inside and a question about the digit after it.",
+  "help": "Build 30,407 with place value cards: the zero card is a place too.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_FACE_VALUE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
+  "error": "Gives only the digit when asked what it is worth.",
+  "example": {
+   "question": "What is the total value of 7 in 27,540?",
+   "wrong_answer": "7",
+   "correct_answer": "7,000"
+  },
+  "cause": "Digit and total value are not told apart.",
+  "reveals": "A total value question with the digit among the options.",
+  "help": "Write the digit, then write a zero for every place to its right.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_WRONG_ZEROS": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
+  "error": "Writes one zero too many or too few after the digit.",
+  "example": {
+   "question": "Total value of 3 in 83,214?",
+   "wrong_answer": "30,000",
+   "correct_answer": "3,000"
+  },
+  "cause": "Counts digits in the number instead of the places to the right of the digit.",
+  "reveals": "Ten times and one tenth of the answer as options.",
+  "help": "Count the digits to the right of the 3, then write that many zeros.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_COMPOSE_DROPS_ZEROS": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
+  "error": "Writes a number from its total values by joining the non-zero digits and leaves out the empty places.",
+  "example": {
+   "question": "Write 40,000 + 600 + 8 as one number.",
+   "wrong_answer": "468",
+   "correct_answer": "40,608"
+  },
+  "cause": "Zero is not treated as a place holder.",
+  "reveals": "Total values with one or two empty places.",
+  "help": "Fill a five-column chart; write 0 in each empty column.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_JOIN_PARTS": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
+  "error": "Joins the parts as they are said and leaves out the zeros, so the number is too small.",
+  "example": {
+   "question": "Write four thousand and six in symbols.",
+   "wrong_answer": "46",
+   "correct_answer": "4,006"
+  },
+  "cause": "Writes each part with no place holder zero.",
+  "reveals": "A number with an empty hundreds or tens place.",
+  "help": "Write thousands, hundreds, tens and ones as four columns and fill every one.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_REVERSE_DIGITS": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
+  "error": "Writes the digits in the order they are heard for the teens, as in fourteen written 41.",
+  "example": {
+   "question": "Write one thousand and fourteen in symbols.",
+   "wrong_answer": "1,041",
+   "correct_answer": "1,014"
+  },
+  "cause": "The ones of a teen word is heard first, so it is written first.",
+  "reveals": "A number that ends in a teen.",
+  "help": "Say the teen aloud and write the ten first: fourteen is 10 and 4.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_PARTS_WRITTEN_IN_FULL": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
+  "error": "Writes each part in full with its zeros and joins them.",
+  "example": {
+   "question": "Write two thousand, three hundred and fifty in symbols.",
+   "wrong_answer": "2000300 50",
+   "correct_answer": "2,350"
+  },
+  "cause": "Writes 2,000 then 300 then 50 side by side, as the parts are said.",
+  "reveals": "A number said in parts with a hundreds part and a tens part.",
+  "help": "Check the answer has four digits: thousands, hundreds, tens and ones.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_HUNDRED_DROPPED": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
+  "error": "Leaves out the word hundred, or the hundreds digit, when writing a number in words.",
+  "example": {
+   "question": "Write 405 in words.",
+   "wrong_answer": "forty-five",
+   "correct_answer": "four hundred and five"
+  },
+  "cause": "Reads the digits in pairs and treats zero as nothing.",
+  "reveals": "A number with a zero in the tens place.",
+  "help": "Cover the last two digits and say the hundreds first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_TY": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
+  "error": "Mixes up -teen and -ty words, writing fourteen for forty or thirty for thirteen.",
+  "example": {
+   "question": "Write 340 in words.",
+   "wrong_answer": "three hundred and fourteen",
+   "correct_answer": "three hundred and forty"
+  },
+  "cause": "The words sound alike and the stress is on a different syllable.",
+  "reveals": "Word choices with a teen and its -ty partner.",
+  "help": "Say the word slowly: -teen is stressed, -ty is not. Link fourteen with 14 and forty with 40.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_FORTY": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
+  "error": "Writes forty as fourty and ninety as ninty.",
+  "example": {
+   "question": "Choose the correct spelling of 49.",
+   "wrong_answer": "fourty-nine",
+   "correct_answer": "forty-nine"
+  },
+  "cause": "Spells forty like four.",
+  "reveals": "Options that differ only in spelling.",
+  "help": "Show that forty has no u, unlike four and fourteen.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_FIRST_DIGIT_ONLY": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
+  "error": "Orders numbers by their last digit or by the first digit only, ignoring how many digits there are.",
+  "example": {
+   "question": "Which is the largest of 98, 214 and 105?",
+   "wrong_answer": "98",
+   "correct_answer": "214"
+  },
+  "cause": "Compares one digit instead of counting the digits first.",
+  "reveals": "A two-digit number with a bigger first digit than a three-digit number.",
+  "help": "Count the digits first: more digits means a bigger number. Then compare the hundreds.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_DIRECTION": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
+  "error": "Gives the order from largest to smallest when asked for smallest to largest, or the reverse.",
+  "example": {
+   "question": "Smallest to largest: 305, 350, 53",
+   "wrong_answer": "350, 305, 53",
+   "correct_answer": "53, 305, 350"
+  },
+  "cause": "Does not read the direction words.",
+  "reveals": "The reversed list as an option.",
+  "help": "Underline the direction words and write the first number you choose.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_ZERO_TENS": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
+  "error": "Treats a number with a zero in the tens place as smaller than one with a tens digit, whatever the hundreds are.",
+  "example": {
+   "question": "Which is larger, 508 or 499?",
+   "wrong_answer": "499",
+   "correct_answer": "508"
+  },
+  "cause": "Reads the tens digit before the hundreds digit.",
+  "reveals": "508 against 499 style pairs.",
+  "help": "Compare from the left: hundreds first. Stop as soon as the digits differ.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_DROP_ONES": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
+  "error": "Drops the ones digit and never rounds up.",
+  "example": {
+   "question": "Round 468 to the nearest ten.",
+   "wrong_answer": "460",
+   "correct_answer": "470"
+  },
+  "cause": "Thinks rounding means cutting off the last digit.",
+  "reveals": "Numbers whose ones digit is 5 or more.",
+  "help": "Mark the two tens either side on a number line and see which is nearer.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_NO_CARRY": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
+  "error": "Rounds a number ending in 95 to 99 up to a ten but forgets to carry into the hundreds.",
+  "example": {
+   "question": "Round 396 to the nearest ten.",
+   "wrong_answer": "3100",
+   "correct_answer": "400"
+  },
+  "cause": "Writes 9 + 1 = 10 in the tens place without carrying.",
+  "reveals": "Numbers just below a hundred, such as 397.",
+  "help": "Count up to the next ten on the number line: 396, 397, 398, 399, 400.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_WRONG_PLACE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
+  "error": "Rounds to the nearest hundred when asked for the nearest ten.",
+  "example": {
+   "question": "Round 463 to the nearest ten.",
+   "wrong_answer": "500",
+   "correct_answer": "460"
+  },
+  "cause": "Does not read which place to round to.",
+  "reveals": "A number whose nearest hundred is a close option.",
+  "help": "Underline the place you are rounding to, then look at the digit next to it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_ONLY_ITSELF": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
+  "error": "Lists only the number itself or only the pairs that start with 2, leaving out 1 and the number.",
+  "example": {
+   "question": "List the factors of 12.",
+   "wrong_answer": "2, 3, 4, 6",
+   "correct_answer": "1, 2, 3, 4, 6, 12"
+  },
+  "cause": "Does not know that 1 and the number are always factors.",
+  "reveals": "A list question where 1 and the number are the missing ones.",
+  "help": "Write the factors in pairs: 1 x 12, 2 x 6, 3 x 4.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MULTIPLE_SWAP": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
+  "error": "Gives multiples when asked for factors.",
+  "example": {
+   "question": "List the factors of 6.",
+   "wrong_answer": "6, 12, 18, 24",
+   "correct_answer": "1, 2, 3, 6"
+  },
+  "cause": "Factor and multiple are not told apart.",
+  "reveals": "A list of multiples among the options.",
+  "help": "A factor divides into the number; a multiple is in its times table.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MISSED_PAIR": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
+  "error": "Stops the list early and misses a factor pair.",
+  "example": {
+   "question": "List the factors of 36.",
+   "wrong_answer": "1, 2, 3, 4, 6, 9, 36",
+   "correct_answer": "1, 2, 3, 4, 6, 9, 12, 18, 36"
+  },
+  "cause": "Stops once the halfway number is passed.",
+  "reveals": "Numbers up to 50 with several pairs.",
+  "help": "Test every number from 1 up to the number; stop when the pairs meet.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_FACTOR_SWAP": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
+  "error": "Gives factors when asked for multiples.",
+  "example": {
+   "question": "Write the first four multiples of 5.",
+   "wrong_answer": "1, 5",
+   "correct_answer": "5, 10, 15, 20"
+  },
+  "cause": "Confuses the two words.",
+  "reveals": "Factors among the options.",
+  "help": "Multiples are the numbers you say when you count in fives.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_STARTS_AT_ZERO_OR_ONE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
+  "error": "Starts the list at the number plus one, so the number itself is left out, or counts in ones.",
+  "example": {
+   "question": "First three multiples of 7.",
+   "wrong_answer": "8, 9, 10",
+   "correct_answer": "7, 14, 21"
+  },
+  "cause": "Counts on from the number instead of adding the number each time.",
+  "reveals": "A list question for multiples of 7 or 9.",
+  "help": "Skip count: say 7, then add 7 each time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_NOT_CHECKED": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
+  "error": "Calls a number a multiple because it is bigger than the number.",
+  "example": {
+   "question": "Is 25 a multiple of 4?",
+   "wrong_answer": "Yes, it is bigger than 4",
+   "correct_answer": "No, 4 x 6 = 24 and 4 x 7 = 28"
+  },
+  "cause": "Thinks any larger number is a multiple.",
+  "reveals": "A yes or no question with a close number.",
+  "help": "Skip count in fours and see whether 25 is said.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_ODD_TENS_DIGIT": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+  "error": "Decides even or odd from the tens digit instead of the ones digit.",
+  "example": {
+   "question": "Is 47 even or odd?",
+   "wrong_answer": "even",
+   "correct_answer": "odd"
+  },
+  "cause": "Looks at the first digit because it is read first.",
+  "reveals": "Numbers whose tens and ones digits differ in kind, such as 47 and 52.",
+  "help": "Only the digit in the ones place matters.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_ZERO_NOT_EVEN": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+  "error": "Says a number ending in zero is odd or neither.",
+  "example": {
+   "question": "Is 30 even or odd?",
+   "wrong_answer": "odd",
+   "correct_answer": "even"
+  },
+  "cause": "Treats zero as nothing, not as an even digit.",
+  "reveals": "Multiples of ten in a list.",
+  "help": "Share 30 into two equal groups: nothing is left over.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_MEANS_BIG": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
+  "error": "Thinks even means a large number, or odd means a strange number, and does not use the test.",
+  "example": {
+   "question": "Which is odd: 40, 66, 73 or 88?",
+   "wrong_answer": "40",
+   "correct_answer": "73"
+  },
+  "cause": "Even and odd are guessed from how a number looks.",
+  "reveals": "A list of numbers with a single odd one.",
+  "help": "Share each number into two equal groups and see what is left.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_ADD_ONE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
+  "error": "Continues an even-number pattern by adding 1, so odd numbers appear.",
+  "example": {
+   "question": "Next in 12, 14, 16, ?",
+   "wrong_answer": "17",
+   "correct_answer": "18"
+  },
+  "cause": "Sees the numbers as a count, not a step of 2.",
+  "reveals": "Even patterns written without a rule.",
+  "help": "Say the difference between two numbers next to each other and use it again.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_WRONG_PARITY": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
+  "error": "Gives a missing term of the wrong kind, an even number in an odd pattern.",
+  "example": {
+   "question": "Missing term in 31, 33, ?, 37.",
+   "wrong_answer": "34",
+   "correct_answer": "35"
+  },
+  "cause": "Does not check the step between terms.",
+  "reveals": "A missing term with a close even number as an option.",
+  "help": "Check that the step from term to term is the same each time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_HOUSES_ONE_SIDE": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
+  "error": "Counts all house numbers in a street as consecutive, not one side evens and the other odds.",
+  "example": {
+   "question": "Houses on the left side of a road are 2, 4, 6. What is the next house?",
+   "wrong_answer": "7",
+   "correct_answer": "8"
+  },
+  "cause": "Does not connect the pattern to the real street.",
+  "reveals": "A story about one side of a road.",
+  "help": "Read the first three numbers and say what is the same about them.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IV_AS_6": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
+  "error": "Reads IV as 6 (I after V) or as 6 because both letters are present.",
+  "example": {
+   "question": "What number is IV?",
+   "wrong_answer": "6",
+   "correct_answer": "4"
+  },
+  "cause": "Adds the letters from left to right.",
+  "reveals": "IV and IX read as numbers.",
+  "help": "A smaller numeral before a larger one is taken away: 5 take away 1.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IIII_FOR_4": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
+  "error": "Writes four as IIII, because three is III.",
+  "example": {
+   "question": "Write 4 in Roman numerals.",
+   "wrong_answer": "IIII",
+   "correct_answer": "IV"
+  },
+  "cause": "Continues the pattern of adding I.",
+  "reveals": "A number to Roman choice question with IIII.",
+  "help": "Use V for five and take one away.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_X_AS_5": {
+  "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
+  "error": "Mixes the symbols V and X.",
+  "example": {
+   "question": "Write 10 in Roman numerals.",
+   "wrong_answer": "V",
+   "correct_answer": "X"
+  },
+  "cause": "The two symbols are learned together and swapped.",
+  "reveals": "A matching question with V and X.",
+  "help": "Roman clock face: V is at the 5 and X is at the 10.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_NO_CARRY": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+  "error": "Writes the full two-digit total in one column and does not carry.",
+  "example": {
+   "question": "2,468 + 1,359",
+   "wrong_answer": "371117",
+   "correct_answer": "3,827"
+  },
+  "cause": "Writes 8 + 9 = 17 in the ones column.",
+  "reveals": "A column addition where one place total is above 9.",
+  "help": "Write only the ones digit and carry the ten to the tens column; use place value blocks.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_CARRY_FORGOTTEN": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+  "error": "Carries the ten but does not add it in the next column.",
+  "example": {
+   "question": "3,846 + 2,175",
+   "wrong_answer": "5,911",
+   "correct_answer": "6,021"
+  },
+  "cause": "Writes the carry above the column then forgets it.",
+  "reveals": "A carry above the tens column.",
+  "help": "Say the carry out loud as you add it: 4 plus 7 plus 1 carried.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_COLUMNS_MISALIGNED": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
+  "error": "Lines up the numbers from the left, so ones are added to tens.",
+  "example": {
+   "question": "3,456 + 78",
+   "wrong_answer": "4,236",
+   "correct_answer": "3,534"
+  },
+  "cause": "Aligns from the left, as in writing words.",
+  "reveals": "Numbers with a different count of digits.",
+  "help": "Always put the ones at the right edge and rule the columns.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_CARRY_ONLY_ONCE": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP",
+  "error": "Carries once and forgets the carry from the tens column.",
+  "example": {
+   "question": "2,785 + 1,468",
+   "wrong_answer": "4,153",
+   "correct_answer": "4,253"
+  },
+  "cause": "Carries out of the ones and then stops carrying.",
+  "reveals": "Two carrying columns in the same sum.",
+  "help": "Carry after each column, write one digit under the line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_THOUSANDS_DROPPED": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP",
+  "error": "Forgets that a carry out of the hundreds makes a thousand and writes only three digits in the answer.",
+  "example": {
+   "question": "5,678 + 4,837",
+   "wrong_answer": "515",
+   "correct_answer": "10,515"
+  },
+  "cause": "Stops when the columns end.",
+  "reveals": "A sum with a carry past the thousands that reaches 10,000.",
+  "help": "Write the carry as the next digit on the left.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_ROUND_ONLY_ONE": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
+  "error": "Rounds one number and adds the other as it is.",
+  "example": {
+   "question": "Estimate 347 + 582.",
+   "wrong_answer": "932",
+   "correct_answer": "930"
+  },
+  "cause": "Does not see that both numbers are rounded.",
+  "reveals": "An estimate asked for with two close numbers.",
+  "help": "Round both numbers first, then add.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_ROUND_WRONG": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
+  "error": "Rounds down every number to the ten below.",
+  "example": {
+   "question": "Estimate 68 + 47.",
+   "wrong_answer": "100",
+   "correct_answer": "120"
+  },
+  "cause": "Thinks rounding is cutting the ones off.",
+  "reveals": "Numbers with ones digits of 5 and more.",
+  "help": "Mark each number on a number line between two tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN.M_EST_EXACT_REQUIRED": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN",
+  "error": "Works out the exact sum when asked to estimate and calls it the estimate.",
+  "example": {
+   "question": "Estimate 348 + 267 by rounding to the nearest ten.",
+   "wrong_answer": "615",
+   "correct_answer": "620"
+  },
+  "cause": "Does not see the difference between estimating and working out.",
+  "reveals": "An estimate that differs from the exact answer.",
+  "help": "Ask: what are the rounded numbers? Write them first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_ADD_ONE_STEP_ONLY": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS",
+  "error": "Uses the difference between the first two terms only and gets later terms wrong when the step changes.",
+  "example": {
+   "question": "Next term: 1,200, 1,500, 1,800, ?",
+   "wrong_answer": "1,900",
+   "correct_answer": "2,100"
+  },
+  "cause": "Applies the last digit change and not the whole step.",
+  "reveals": "A pattern with a step of 300 or 250.",
+  "help": "Subtract term from term to find the step, then use it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_RULE_AS_TERM": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS",
+  "error": "Gives the next term when asked for the rule, or the rule when asked for the term.",
+  "example": {
+   "question": "What is the rule for 2,000, 2,500, 3,000?",
+   "wrong_answer": "3,500",
+   "correct_answer": "add 500"
+  },
+  "cause": "Does not read the question word.",
+  "reveals": "A question that asks for the rule.",
+  "help": "Underline what is asked: the rule or the number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS.M_PAT_MISSING_NOT_CHECKED": {
+  "skill": "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS",
+  "error": "Finds a missing term by guessing and does not check the step on both sides.",
+  "example": {
+   "question": "Missing term: 3,100, ?, 3,700, 4,000",
+   "wrong_answer": "3,500",
+   "correct_answer": "3,400"
+  },
+  "cause": "Does not use the step between known terms.",
+  "reveals": "A pattern with the gap in the middle.",
+  "help": "Find the step from the two known terms either side.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_ZERO_RESULT_DROPPED": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
+  "error": "Leaves out a zero in the answer when a column has nothing left.",
+  "example": {
+   "question": "5,420 - 2,310",
+   "wrong_answer": "311",
+   "correct_answer": "3,110"
+  },
+  "cause": "Does not write 0 for a place with nothing left.",
+  "reveals": "A subtraction with a zero in the answer.",
+  "help": "Check the answer has four digits.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_ADDS": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
+  "error": "Adds when the story says how many are left.",
+  "example": {
+   "question": "A farmer had 4,800 eggs and sold 2,300. How many are left?",
+   "wrong_answer": "7,100",
+   "correct_answer": "2,500"
+  },
+  "cause": "Looks at the numbers, not at what is asked.",
+  "reveals": "A take-away story with an operation word like left.",
+  "help": "Draw the whole and the part that went away.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_COLUMNS_MISALIGNED": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
+  "error": "Lines the numbers up from the left.",
+  "example": {
+   "question": "4,567 - 123",
+   "wrong_answer": "3,337",
+   "correct_answer": "4,444"
+  },
+  "cause": "Starts the subtraction from the left side of the page.",
+  "reveals": "Numbers with different digit counts.",
+  "help": "Rule the columns and write the ones at the right edge.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_SMALLER_FROM_LARGER": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+  "error": "Takes the smaller digit from the larger in each column instead of regrouping.",
+  "example": {
+   "question": "6,304 - 2,578",
+   "wrong_answer": "4,274",
+   "correct_answer": "3,726"
+  },
+  "cause": "Does not know to borrow from the next place.",
+  "reveals": "A subtraction where each column needs regrouping.",
+  "help": "Use place value blocks: you cannot take 8 from 4, so exchange a ten.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_BORROW_NOT_REDUCED": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+  "error": "Adds ten to the ones but does not reduce the next digit by one.",
+  "example": {
+   "question": "4,230 - 1,845",
+   "wrong_answer": "3,495",
+   "correct_answer": "2,385"
+  },
+  "cause": "Borrows but forgets to cross out the digit lent.",
+  "reveals": "A regrouping subtraction that shows a lent digit.",
+  "help": "Cross out the digit and write the new number above it.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_ZERO_REGROUP": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
+  "error": "Cannot regroup across a zero and writes 0 - 1 = 1 or 9 out of order.",
+  "example": {
+   "question": "4,005 - 1,278",
+   "wrong_answer": "3,273",
+   "correct_answer": "2,727"
+  },
+  "cause": "Does not know to go to the next non-zero digit.",
+  "reveals": "A minuend with a zero in the tens and hundreds place.",
+  "help": "Exchange one thousand for ten hundreds, one hundred for ten tens, then a ten for ten ones.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ROUND_DOWN": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
+  "error": "Rounds both numbers down, so the estimate is far from the answer.",
+  "example": {
+   "question": "Estimate 483 - 197.",
+   "wrong_answer": "290",
+   "correct_answer": "280"
+  },
+  "cause": "Treats rounding as cutting.",
+  "reveals": "Numbers with ones digits of 5 and more.",
+  "help": "Mark each on a number line.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ADDS": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
+  "error": "Adds the rounded numbers instead of subtracting.",
+  "example": {
+   "question": "Estimate 612 - 289.",
+   "wrong_answer": "900",
+   "correct_answer": "320"
+  },
+  "cause": "Does not look at the operation sign.",
+  "reveals": "A difference estimate with options that are sums.",
+  "help": "Say the operation word before the numbers.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_EXACT_REQUIRED": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
+  "error": "Gives the exact difference as the estimate.",
+  "example": {
+   "question": "Estimate 543 - 198 by rounding to the nearest ten.",
+   "wrong_answer": "345",
+   "correct_answer": "340"
+  },
+  "cause": "Estimate and work out are not told apart.",
+  "reveals": "An estimate that differs from the exact answer.",
+  "help": "Write the rounded numbers first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_ADDS": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
+  "error": "Continues a decreasing pattern by adding.",
+  "example": {
+   "question": "Next: 9,000, 8,500, 8,000, ?",
+   "wrong_answer": "8,500",
+   "correct_answer": "7,500"
+  },
+  "cause": "Reads the pattern as a count up.",
+  "reveals": "A decreasing pattern with a rule hidden.",
+  "help": "Is each number smaller or larger than the one before?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_STEP_NOT_CONSTANT": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
+  "error": "Subtracts a different amount each time because only the last two digits are compared.",
+  "example": {
+   "question": "Next: 5,600, 5,300, 5,000, ?",
+   "wrong_answer": "4,800",
+   "correct_answer": "4,700"
+  },
+  "cause": "Looks at digits, not at the whole step.",
+  "reveals": "A step of 300 across a thousand.",
+  "help": "Find the step by taking one term from the next, then use it on the last term.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS.M_SUBPAT_RULE_AS_TERM": {
+  "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS",
+  "error": "Gives the next term when asked for the rule.",
+  "example": {
+   "question": "What is the rule for 6,000, 5,800, 5,600?",
+   "wrong_answer": "5,400",
+   "correct_answer": "subtract 200"
+  },
+  "cause": "Does not read the question.",
+  "reveals": "A rule question.",
+  "help": "Underline what is asked.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_FORGOTTEN": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+  "error": "Multiplies by the tens digit and does not write the zero.",
+  "example": {
+   "question": "What is 24 x 30?",
+   "wrong_answer": "72",
+   "correct_answer": "720"
+  },
+  "cause": "Treats 30 as 3.",
+  "reveals": "A product with 30, 40, 50 or 60.",
+  "help": "Place value blocks: 30 groups are 3 tens groups.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_TWICE": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+  "error": "Writes two zeros when both numbers have a zero, or one for the number and one for the ten.",
+  "example": {
+   "question": "What is 20 x 30?",
+   "wrong_answer": "6,000",
+   "correct_answer": "600"
+  },
+  "cause": "Counts zeros in each number and adds them all.",
+  "reveals": "A product of two multiples of ten.",
+  "help": "2 tens times 3 tens is 6 hundreds.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ADDS": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
+  "error": "Adds the tens digit instead of multiplying.",
+  "example": {
+   "question": "What is 7 x 60?",
+   "wrong_answer": "67",
+   "correct_answer": "420"
+  },
+  "cause": "Reads the multiplication sign as an addition.",
+  "reveals": "A story with equal groups where the answer is smaller.",
+  "help": "Draw 7 groups of 60 or repeated addition.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ONES_ONLY": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+  "error": "Multiplies ones by ones and tens by tens only.",
+  "example": {
+   "question": "What is 21 x 32?",
+   "wrong_answer": "602",
+   "correct_answer": "672"
+  },
+  "cause": "Multiplies the digits in the same column and skips the cross products.",
+  "reveals": "A grid or array with four parts.",
+  "help": "Partition 32 into 30 and 2, then multiply 21 by each.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_SECOND_ROW_ZERO": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+  "error": "Does not write the zero when starting the second row of the written method.",
+  "example": {
+   "question": "What is 12 x 23?",
+   "wrong_answer": "60",
+   "correct_answer": "276"
+  },
+  "cause": "Multiplies by the tens digit as if it were ones.",
+  "reveals": "A written method with two rows.",
+  "help": "In the second row the 2 is two tens: put a zero in the ones place first.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ADDS_PARTS": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
+  "error": "Adds the partial products wrongly.",
+  "example": {
+   "question": "What is 21 x 14?",
+   "wrong_answer": "194",
+   "correct_answer": "294"
+  },
+  "cause": "Adds columns incorrectly or leaves out a part.",
+  "reveals": "A partition with three or four parts.",
+  "help": "Write the parts under each other and add in columns.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_FORGOTTEN": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
+  "error": "Forgets the carried digit when adding it to the next product.",
+  "example": {
+   "question": "What is 36 x 24?",
+   "wrong_answer": "744",
+   "correct_answer": "864"
+  },
+  "cause": "Writes the carry then drops it.",
+  "reveals": "A working with a carry written above the column.",
+  "help": "Say the carry out loud: 6 x 4 = 24, write 4, carry 2.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_ADDED_BEFORE": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
+  "error": "Adds the carry to the next digit before multiplying instead of after.",
+  "example": {
+   "question": "What is 28 x 3?",
+   "wrong_answer": "124",
+   "correct_answer": "84"
+  },
+  "cause": "Does not follow the order: multiply, then add the carry.",
+  "reveals": "A single carry multiplication.",
+  "help": "Multiply first, then add the carry.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_PARTIAL_PRODUCTS_SWAPPED": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
+  "error": "Does not shift the second row, so the tens product is added as if it were ones.",
+  "example": {
+   "question": "What is 45 x 23?",
+   "wrong_answer": "225",
+   "correct_answer": "1,035"
+  },
+  "cause": "Does not shift the second row.",
+  "reveals": "A written method with the second row not shifted.",
+  "help": "Draw the grid: 40 and 5 across, 20 and 3 down.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ADDS_ZEROS": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
+  "error": "Rounds correctly but writes the wrong number of zeros in the estimate.",
+  "example": {
+   "question": "Estimate 38 x 21.",
+   "wrong_answer": "8,000",
+   "correct_answer": "800"
+  },
+  "cause": "Counts zeros of both rounded numbers incorrectly.",
+  "reveals": "Rounded numbers with a zero in each.",
+  "help": "Multiply 4 by 2, then write two zeros for the two tens.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_EXACT_REQUIRED": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
+  "error": "Works out the exact product and calls it the estimate.",
+  "example": {
+   "question": "Estimate 19 x 31 by rounding to the nearest ten.",
+   "wrong_answer": "589",
+   "correct_answer": "600"
+  },
+  "cause": "Does not see the difference between estimate and exact.",
+  "reveals": "An estimate that differs from the exact answer.",
+  "help": "Write the rounded numbers first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ROUND_ONE": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
+  "error": "Rounds only one number.",
+  "example": {
+   "question": "Estimate 28 x 12.",
+   "wrong_answer": "360",
+   "correct_answer": "300"
+  },
+  "cause": "Thinks one rounded number is enough.",
+  "reveals": "A two-number estimate.",
+  "help": "Round both numbers.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_ADD_STEP": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "error": "Uses adding the last step as the rule for a multiplication pattern.",
+  "example": {
+   "question": "Next: 3, 6, 12, 24, ?",
+   "wrong_answer": "27",
+   "correct_answer": "48"
+  },
+  "cause": "Sees the first step as the rule.",
+  "reveals": "A doubling pattern.",
+  "help": "Find what each term is multiplied by to give the next.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_SKIP_TABLE": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "error": "Skips a term in a times-table pattern.",
+  "example": {
+   "question": "Next: 8, 16, 24, ?",
+   "wrong_answer": "40",
+   "correct_answer": "32"
+  },
+  "cause": "Loses count of the table.",
+  "reveals": "A table pattern with a gap.",
+  "help": "Say the table from the start.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS.M_MULPAT_RULE_AS_TERM": {
+  "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS",
+  "error": "Gives the next term when asked for the rule.",
+  "example": {
+   "question": "What is the rule for 5, 10, 20, 40?",
+   "wrong_answer": "80",
+   "correct_answer": "multiply by 2"
+  },
+  "cause": "Does not read what is asked.",
+  "reveals": "A rule question.",
+  "help": "Underline what is asked.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_LARGER_BY_SMALLER": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+  "error": "Divides the larger digit by the smaller one, whichever way round.",
+  "example": {
+   "question": "What is 72 divided by 6?",
+   "wrong_answer": "13",
+   "correct_answer": "12"
+  },
+  "cause": "Does 6 divided by 2 for the ones because it divides exactly.",
+  "reveals": "A dividend whose ones digit is not a multiple of the divisor.",
+  "help": "Share the tens first, then exchange what is left for ones.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_ZERO_DROPPED": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+  "error": "Leaves out the zero in the answer when a place gets nothing.",
+  "example": {
+   "question": "What is 60 divided by 3?",
+   "wrong_answer": "2",
+   "correct_answer": "20"
+  },
+  "cause": "Does not write 0 when 3 does not go into the ones.",
+  "reveals": "A dividend like 60 or 80.",
+  "help": "Check by multiplying 2 x 3.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_SUBTRACT": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
+  "error": "Subtracts instead of dividing.",
+  "example": {
+   "question": "Share 36 oranges among 4 children equally.",
+   "wrong_answer": "32",
+   "correct_answer": "9"
+  },
+  "cause": "Reads share as take away.",
+  "reveals": "A sharing story.",
+  "help": "Draw 4 groups and put one orange at a time.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_TOO_BIG": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
+  "error": "Writes a remainder as big as or bigger than the divisor.",
+  "example": {
+   "question": "47 divided by 5",
+   "wrong_answer": "8 remainder 7",
+   "correct_answer": "9 remainder 2"
+  },
+  "cause": "Stops dividing too early.",
+  "reveals": "A remainder bigger than the divisor as an option.",
+  "help": "After dividing, the remainder must be smaller than what you divide by.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_IGNORED": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
+  "error": "Gives the quotient only and drops the remainder.",
+  "example": {
+   "question": "23 divided by 4",
+   "wrong_answer": "5",
+   "correct_answer": "5 remainder 3"
+  },
+  "cause": "Thinks the remainder is not part of the answer.",
+  "reveals": "A division that does not go exactly.",
+  "help": "Multiply the quotient by the divisor: does it get back to 23?",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_AS_ANSWER": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
+  "error": "Gives the remainder alone as the answer.",
+  "example": {
+   "question": "How many full packets of 6 can be made from 40 eggs?",
+   "wrong_answer": "4",
+   "correct_answer": "6"
+  },
+  "cause": "Reads the leftover as the answer.",
+  "reveals": "A story that asks how many full groups.",
+  "help": "Ask what the question needs: groups or leftovers.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_STORY_REMAINDER_DOWN": {
+  "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
+  "error": "Rounds down when the story needs one more (a bus for the leftover children).",
+  "example": {
+   "question": "47 children go on a trip in buses of 10. How many buses are needed?",
+   "wrong_answer": "4",
+   "correct_answer": "5"
+  },
+  "cause": "Ignores the leftover children.",
+  "reveals": "A story where the remainder needs one more.",
+  "help": "Ask what happens to the leftover children.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_WRONG_FACT": {
+  "skill": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
+  "error": "Writes a division fact with the wrong numbers as the related fact.",
+  "example": {
+   "question": "6 x 7 = 42. Which division fact goes with it?",
+   "wrong_answer": "6 divided by 42",
+   "correct_answer": "42 divided by 7"
+  },
+  "cause": "Divides in any order.",
+  "reveals": "A choice of related facts.",
+  "help": "The biggest number is the one you divide.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_CHECK_ADDS": {
+  "skill": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
+  "error": "Checks a division by adding the quotient and the divisor.",
+  "example": {
+   "question": "How can you check 56 divided by 7 = 8?",
+   "wrong_answer": "7 + 8",
+   "correct_answer": "8 x 7"
+  },
+  "cause": "Does not know the inverse.",
+  "reveals": "A check-by-working question.",
+  "help": "Multiplication undoes division.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_MISSING_ADDS": {
+  "skill": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
+  "error": "Finds a missing number in a multiplication by subtracting.",
+  "example": {
+   "question": "? x 6 = 54. What is ?",
+   "wrong_answer": "48",
+   "correct_answer": "9"
+  },
+  "cause": "Treats the unknown as a part of an addition.",
+  "reveals": "A missing factor.",
+  "help": "Use the related division: 54 divided by 6.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_SWAP_NUM_DEN": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+  "error": "Mixes up the numerator and the denominator.",
+  "example": {
+   "question": "In 3/8, what is the denominator?",
+   "wrong_answer": "3",
+   "correct_answer": "8"
+  },
+  "cause": "Both words are new and sound alike.",
+  "reveals": "A name-the-part question.",
+  "help": "The denominator is down; it names the parts. The numerator is up; it numbers the parts taken.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_TWO_NUMBERS_SEPARATE": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+  "error": "Treats a fraction as two whole numbers with no link.",
+  "example": {
+   "question": "What does the 8 in 3/8 tell you?",
+   "wrong_answer": "8 things are shaded",
+   "correct_answer": "the whole is cut into 8 equal parts"
+  },
+  "cause": "Reads the fraction as 3 and 8.",
+  "reveals": "A question about meaning.",
+  "help": "Cut and shade a paper strip and say it in words.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_PARTS_NOT_EQUAL": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
+  "error": "Counts the parts without checking that they are equal.",
+  "example": {
+   "question": "A bar is cut into 4 pieces of different sizes, one shaded. What fraction is shaded?",
+   "wrong_answer": "1/4",
+   "correct_answer": "not a quarter: the parts are not equal"
+  },
+  "cause": "Counts the pieces and ignores their size.",
+  "reveals": "A picture with unequal parts.",
+  "help": "Fold a strip: equal parts match when put on top of each other.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_SHADED_OVER_UNSHADED": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+  "error": "Writes shaded over unshaded instead of shaded over all parts.",
+  "example": {
+   "question": "5 of 8 parts are shaded. What fraction is shaded?",
+   "wrong_answer": "5/3",
+   "correct_answer": "5/8"
+  },
+  "cause": "Compares the two groups instead of using the whole.",
+  "reveals": "A picture with shaded and unshaded parts.",
+  "help": "The bottom number is all the parts, shaded and not.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_COUNT_CUTS": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+  "error": "Counts the cuts instead of the parts, so the denominator is one less.",
+  "example": {
+   "question": "A chapati is cut with 3 cuts into equal parts. How many parts?",
+   "wrong_answer": "3",
+   "correct_answer": "4"
+  },
+  "cause": "Counts the lines in the picture.",
+  "reveals": "A drawing showing cut lines.",
+  "help": "Count the pieces, not the lines.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_WRONG_NUMBER_OF_PARTS": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
+  "error": "Uses the number of parts shaded as the denominator.",
+  "example": {
+   "question": "A pizza has 12 equal slices; 3 are eaten. What fraction is eaten?",
+   "wrong_answer": "3/3",
+   "correct_answer": "3/12"
+  },
+  "cause": "Does not say the total number.",
+  "reveals": "A story with a larger whole.",
+  "help": "Say the total number of parts first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_GROUP_PART_OVER_OTHER": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+  "error": "Writes the number with the property over the number without it.",
+  "example": {
+   "question": "3 of 8 goats are black. What fraction are black?",
+   "wrong_answer": "3/5",
+   "correct_answer": "3/8"
+  },
+  "cause": "Makes the fraction from the two groups.",
+  "reveals": "A group story with two kinds.",
+  "help": "The whole is the group of 8, all the goats.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_DIVIDES_WRONG": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+  "error": "Divides by the numerator instead of the denominator when finding a fraction of a group.",
+  "example": {
+   "question": "What is 1/4 of 12?",
+   "wrong_answer": "12 divided by 1 = 12",
+   "correct_answer": "3"
+  },
+  "cause": "Divides by the top number.",
+  "reveals": "A fraction-of-a-number question.",
+  "help": "Share the group into as many equal sets as the denominator says.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_ONE_PART_ONLY": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
+  "error": "Finds one part and stops, though the numerator is more than one.",
+  "example": {
+   "question": "What is 3/4 of 12?",
+   "wrong_answer": "3",
+   "correct_answer": "9"
+  },
+  "cause": "Stops after dividing by 4.",
+  "reveals": "A numerator greater than one.",
+  "help": "One part is 12 divided by 4. How many parts do you take?",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_IMPROPER_NOT_FRACTION": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
+  "error": "Says an improper fraction is not a real fraction.",
+  "example": {
+   "question": "Is 7/4 a fraction?",
+   "wrong_answer": "No, the top is bigger",
+   "correct_answer": "Yes, it is an improper fraction"
+  },
+  "cause": "Thinks fractions are always less than one.",
+  "reveals": "A question with an improper fraction among the fractions.",
+  "help": "Draw 7 quarters: it is more than a whole.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_MIXED_AS_PROPER": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
+  "error": "Calls a mixed fraction a proper fraction because it has a fraction part.",
+  "example": {
+   "question": "What kind of fraction is 2 1/3?",
+   "wrong_answer": "proper",
+   "correct_answer": "mixed"
+  },
+  "cause": "Sees the 1/3 and stops.",
+  "reveals": "A mixed fraction among the options.",
+  "help": "A mixed fraction has a whole number part.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_EQUAL_IS_PROPER": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
+  "error": "Calls a fraction with numerator equal to the denominator a proper fraction.",
+  "example": {
+   "question": "What kind of fraction is 5/5?",
+   "wrong_answer": "proper",
+   "correct_answer": "improper"
+  },
+  "cause": "Does not know that 5/5 is one whole.",
+  "reveals": "A fraction like 6/6.",
+  "help": "A proper fraction is less than one whole.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_REMAINDER_AS_WHOLE": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
+  "error": "Gives the remainder as the whole number part.",
+  "example": {
+   "question": "Change 11/4 to a mixed fraction.",
+   "wrong_answer": "3 2/4",
+   "correct_answer": "2 3/4"
+  },
+  "cause": "Divides but mixes up the quotient and remainder.",
+  "reveals": "An improper fraction with remainder bigger than the quotient.",
+  "help": "The quotient is how many whole ones; the remainder is the parts left.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_REMAINDER_OVER_QUOTIENT": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
+  "error": "Writes the remainder over the whole-number part instead of the denominator.",
+  "example": {
+   "question": "Change 17/5 to a mixed fraction.",
+   "wrong_answer": "3 2/3",
+   "correct_answer": "3 2/5"
+  },
+  "cause": "Uses the wrong number for the denominator.",
+  "reveals": "A mixed fraction with the wrong denominator.",
+  "help": "The parts are still fifths.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED.M_MIX_NO_REMAINDER_LEFT_OUT": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED",
+  "error": "Does not write the fraction part when the division is exact.",
+  "example": {
+   "question": "Change 12/4 to a whole number or mixed.",
+   "wrong_answer": "3 0/4",
+   "correct_answer": "3"
+  },
+  "cause": "Keeps a zero fraction.",
+  "reveals": "An improper fraction that divides exactly.",
+  "help": "12 quarters make exactly 3 wholes.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_ADDS_WHOLE": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
+  "error": "Adds the whole number to the numerator.",
+  "example": {
+   "question": "Change 2 3/5 to an improper fraction.",
+   "wrong_answer": "5/5",
+   "correct_answer": "13/5"
+  },
+  "cause": "Adds the whole number and the numerator and keeps the denominator.",
+  "reveals": "A mixed fraction with a numerator different from the whole.",
+  "help": "Each whole is 5 fifths; two wholes are 10 fifths.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_WHOLE_TIMES_NUMERATOR": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
+  "error": "Multiplies the whole number by the numerator and not by the denominator.",
+  "example": {
+   "question": "Change 3 2/5 to an improper fraction.",
+   "wrong_answer": "11/5",
+   "correct_answer": "17/5"
+  },
+  "cause": "Multiplies the wrong two numbers.",
+  "reveals": "A mixed fraction with unequal numerator and denominator.",
+  "help": "Each whole has as many parts as the denominator says.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER.M_IMP_DENOMINATOR_CHANGED": {
+  "skill": "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER",
+  "error": "Changes the denominator when converting.",
+  "example": {
+   "question": "Change 1 2/3 to an improper fraction.",
+   "wrong_answer": "5/5",
+   "correct_answer": "5/3"
+  },
+  "cause": "Uses the total as the new denominator.",
+  "reveals": "A conversion with a small denominator.",
+  "help": "The parts stay thirds.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_TENTH_AS_TEN": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
+  "error": "Reads a tenth as ten.",
+  "example": {
+   "question": "What is one tenth of 1 whole?",
+   "wrong_answer": "10",
+   "correct_answer": "0.1"
+  },
+  "cause": "Hears ten.",
+  "reveals": "A fraction/decimal choice.",
+  "help": "A tenth is 1 of 10 equal parts.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_HUNDREDTH_SAME_AS_TENTH": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
+  "error": "Does not tell a hundredth from a tenth on a hundred square.",
+  "example": {
+   "question": "One column of a hundred square is shaded. What fraction is shaded?",
+   "wrong_answer": "1/100",
+   "correct_answer": "1/10"
+  },
+  "cause": "Sees one strip and says one part.",
+  "reveals": "A hundred square with one column or a single square shaded.",
+  "help": "Count the small squares: 100 in all.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_PARTS_NOT_EQUAL": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
+  "error": "Names tenths without checking the parts are equal.",
+  "example": {
+   "question": "A strip is cut into 10 pieces of different sizes. What is each piece?",
+   "wrong_answer": "a tenth",
+   "correct_answer": "not a tenth"
+  },
+  "cause": "Counts pieces only.",
+  "reveals": "Unequal strip.",
+  "help": "Check that the parts match.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_FRACTION_AS_TWO_WHOLES": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
+  "error": "Writes 3/10 as 3.10 or 3.1.",
+  "example": {
+   "question": "Write 3/10 as a decimal.",
+   "wrong_answer": "3.10",
+   "correct_answer": "0.3"
+  },
+  "cause": "Puts the numerator before the point.",
+  "reveals": "A fraction less than 1.",
+  "help": "A tenth is to the right of the ones.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_HUNDREDTH_ONE_DIGIT": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
+  "error": "Writes 7/100 as 0.7.",
+  "example": {
+   "question": "Write 7/100 as a decimal.",
+   "wrong_answer": "0.7",
+   "correct_answer": "0.07"
+  },
+  "cause": "Puts the digit in the tenths place.",
+  "reveals": "A hundredths fraction with a single digit.",
+  "help": "Hundredths need two places after the point.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_READ_AS_WHOLE": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
+  "error": "Reads 0.37 as nought point thirty-seven.",
+  "example": {
+   "question": "How do you read 0.37?",
+   "wrong_answer": "nought point thirty-seven",
+   "correct_answer": "nought point three seven"
+  },
+  "cause": "Treats the digits after the point as a whole number.",
+  "reveals": "A read-aloud or word choice.",
+  "help": "Say each digit after the point on its own.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_PLACE_NAME_AS_WHOLE": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
+  "error": "Names the places after the point as tens, hundreds.",
+  "example": {
+   "question": "In 4.65 which place is the 6 in?",
+   "wrong_answer": "tens",
+   "correct_answer": "tenths"
+  },
+  "cause": "Mirrors the whole-number names.",
+  "reveals": "A place name choice.",
+  "help": "Places to the right of the point end in -ths.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_VALUE_OF_DIGIT": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
+  "error": "Gives the digit as its value.",
+  "example": {
+   "question": "What is the value of 6 in 4.65?",
+   "wrong_answer": "6",
+   "correct_answer": "0.6"
+  },
+  "cause": "Does not use place.",
+  "reveals": "A value question.",
+  "help": "The 6 is in the tenths place, six tenths.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_ZERO_PLACE_HOLDER": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
+  "error": "Drops the zero in a number like 5.07 or misplaces the 7.",
+  "example": {
+   "question": "Which place is the 7 in 5.07?",
+   "wrong_answer": "tenths",
+   "correct_answer": "hundredths"
+  },
+  "cause": "Ignores the zero.",
+  "reveals": "A decimal with a zero in the tenths place.",
+  "help": "The zero holds the tenths place.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_LONGER_IS_LARGER": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
+  "error": "Thinks the decimal with more digits is larger.",
+  "example": {
+   "question": "Which is larger, 0.6 or 0.58?",
+   "wrong_answer": "0.58",
+   "correct_answer": "0.6"
+  },
+  "cause": "Applies the whole-number rule: more digits is bigger.",
+  "reveals": "A pair like 0.6 and 0.58 or 0.3 and 0.25.",
+  "help": "Write both with two decimal places: 0.60 and 0.58.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_DIGITS_AFTER_POINT_AS_WHOLE": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
+  "error": "Reads the digits after the point as a whole number and compares those.",
+  "example": {
+   "question": "Which is larger, 0.5 or 0.29?",
+   "wrong_answer": "0.29",
+   "correct_answer": "0.5"
+  },
+  "cause": "Reads 0.29 as 29 and 0.5 as 5, so 29 is bigger than 5.",
+  "reveals": "A pair like 0.5 and 0.29 where the longer one has the smaller tenths digit.",
+  "help": "Compare tenths first: 5 tenths against 2 tenths.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_ORDER_DIRECTION": {
+  "skill": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
+  "error": "Gives the order from largest to smallest when asked for smallest to largest.",
+  "example": {
+   "question": "Order smallest to largest: 0.4, 0.04, 0.44.",
+   "wrong_answer": "0.44, 0.4, 0.04",
+   "correct_answer": "0.04, 0.4, 0.44"
+  },
+  "cause": "Does not read the direction.",
+  "reveals": "The reversed list as an option.",
+  "help": "Underline the direction words.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IS_ITS_ALPHABET_POSITION": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+  "error": "Thinks a letter always has a fixed value from its place in the alphabet.",
+  "example": {
+   "question": "What is a + 2 if a = 5?",
+   "wrong_answer": "3",
+   "correct_answer": "7"
+  },
+  "cause": "Learned a = 1, b = 2.",
+  "reveals": "A question with a given value of a letter.",
+  "help": "The letter stands for the number the story or the question says.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IS_OBJECT": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+  "error": "Reads the letter as the name of an object, such as b for bananas rather than the number of bananas.",
+  "example": {
+   "question": "b stands for bananas. What does 3b mean?",
+   "wrong_answer": "3 bananas",
+   "correct_answer": "3 times the number of bananas"
+  },
+  "cause": "Reads the letter as a label, as in 3b meaning 3 bananas.",
+  "reveals": "A letter used for a number of objects.",
+  "help": "b is the number of bananas in one bunch.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_DIFFERENT_LETTERS_DIFFERENT_NUMBERS": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
+  "error": "Says different letters must stand for different numbers, or the same letter for different numbers.",
+  "example": {
+   "question": "If x = 4, what is y + y if y = 4?",
+   "wrong_answer": "x and y must be different",
+   "correct_answer": "8"
+  },
+  "cause": "Thinks each letter is unique in value.",
+  "reveals": "A question where two letters have the same value.",
+  "help": "Letters are labels for the number given.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_NOT_NUMBER_WORD": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+  "error": "Writes the number and the letter together without a sign, as 5b, for 5 + b.",
+  "example": {
+   "question": "Ann has 5 books and gets b more. Write the total.",
+   "wrong_answer": "5b",
+   "correct_answer": "5 + b"
+  },
+  "cause": "Puts the letter beside the number.",
+  "reveals": "A story of a total.",
+  "help": "5b means 5 times b. Use + for more.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_WRONG_OPERATION": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+  "error": "Uses the wrong sign for the story.",
+  "example": {
+   "question": "A bag has m mangoes. Write the mangoes in 3 bags.",
+   "wrong_answer": "m + 3",
+   "correct_answer": "3 x m"
+  },
+  "cause": "Always adds.",
+  "reveals": "A story with equal groups.",
+  "help": "Draw 3 bags and write m for each.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_ORDER_OF_SUBTRACTION": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
+  "error": "Writes the numbers in the order they appear in the story, reversing a subtraction.",
+  "example": {
+   "question": "Tom had t shillings and spent 20. Write what is left.",
+   "wrong_answer": "20 - t",
+   "correct_answer": "t - 20"
+  },
+  "cause": "Follows the story word by word.",
+  "reveals": "A spend story.",
+  "help": "Start with what Tom had.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_ADD_UNLIKE": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
+  "error": "Adds unlike terms as if they were the same.",
+  "example": {
+   "question": "Simplify 3a + 2b.",
+   "wrong_answer": "5ab",
+   "correct_answer": "3a + 2b"
+  },
+  "cause": "Thinks all terms can combine.",
+  "reveals": "An expression with two different letters.",
+  "help": "Apples and bananas cannot be added into one kind.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_LETTER_DROPPED": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
+  "error": "Adds the numbers and drops the letter.",
+  "example": {
+   "question": "Simplify 3a + 2a.",
+   "wrong_answer": "5",
+   "correct_answer": "5a"
+  },
+  "cause": "Does not see that the letter stays.",
+  "reveals": "Like terms.",
+  "help": "It is 3 of a and 2 of a: 5 of a.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_LETTER_SQUARED": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
+  "error": "Adds the numbers and doubles the letter (3a + 2a = 5aa or 5a2).",
+  "example": {
+   "question": "Simplify 4b + 3b.",
+   "wrong_answer": "7bb",
+   "correct_answer": "7b"
+  },
+  "cause": "Writes the letter for each term.",
+  "reveals": "Like terms.",
+  "help": "The letter shows what is counted and stays one.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS.M_SIM_SUBTRACT_WRONG": {
+  "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS",
+  "error": "Subtracts the numbers the wrong way round or adds them.",
+  "example": {
+   "question": "Simplify 7b - 3b.",
+   "wrong_answer": "10b",
+   "correct_answer": "4b"
+  },
+  "cause": "Does not follow the sign.",
+  "reveals": "A subtraction of like terms.",
+  "help": "You had 7 and took away 3.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_WRONG_UNIT": {
+  "skill": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+  "error": "Chooses a metre for a short length such as a pencil, or a centimetre for the length of a room.",
+  "example": {
+   "question": "Which unit would you use for the length of a pencil?",
+   "wrong_answer": "metres",
+   "correct_answer": "centimetres"
+  },
+  "cause": "Has no sense of how long each unit is.",
+  "reveals": "A pick-the-unit question with a short and a long object.",
+  "help": "Put a metre rule next to the pencil and look.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_CM_AS_M_SIZE": {
+  "skill": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
+  "error": "Thinks a centimetre is about as long as a finger, or a hand.",
+  "example": {
+   "question": "About how long is 1 cm?",
+   "wrong_answer": "the length of a hand",
+   "correct_answer": "the width of a fingernail"
+  },
+  "cause": "Has not handled a ruler.",
+  "reveals": "A size choice.",
+  "help": "Mark 1 cm on paper and compare with a fingernail.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_NOT_FROM_ZERO": {
+  "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+  "error": "Reads the number at the right end of the object, though the object starts at 2 not 0.",
+  "example": {
+   "question": "A pencil lies from 2 cm to 9 cm on a ruler. How long is it?",
+   "wrong_answer": "9 cm",
+   "correct_answer": "7 cm"
+  },
+  "cause": "Does not see the zero line.",
+  "reveals": "A picture of an object that starts at 2 or 3 on the ruler.",
+  "help": "Count the cm gaps, not the numbers.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_COUNTS_MARKS": {
+  "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+  "error": "Counts the marks instead of the gaps between them.",
+  "example": {
+   "question": "A line goes from the 0 mark to the 6 mark on a ruler. How long is it?",
+   "wrong_answer": "7 cm",
+   "correct_answer": "6 cm"
+  },
+  "cause": "Counts the starting mark.",
+  "reveals": "A ruler picture with the marks drawn.",
+  "help": "Count the spaces between marks.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_DIFFERENCE_AS_END": {
+  "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
+  "error": "Gives the end reading when asked how much longer one object is than another.",
+  "example": {
+   "question": "A rope is 9 cm and a string is 4 cm. How much longer is the rope?",
+   "wrong_answer": "9 cm",
+   "correct_answer": "5 cm"
+  },
+  "cause": "Does not subtract.",
+  "reveals": "A compare question.",
+  "help": "Draw the two lines under each other.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_10_NOT_100": {
+  "skill": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+  "error": "Says there are 10 centimetres in a metre.",
+  "example": {
+   "question": "How many centimetres in 1 metre?",
+   "wrong_answer": "10",
+   "correct_answer": "100"
+  },
+  "cause": "Mixes up with millimetres in a centimetre or tens place value.",
+  "reveals": "A fact question.",
+  "help": "Look at a metre ruler: count tens, ten of them make 100.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_HALF_METRE_WRONG": {
+  "skill": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+  "error": "Says half a metre is 5 cm or 25 cm.",
+  "example": {
+   "question": "Half a metre is how many centimetres?",
+   "wrong_answer": "25 cm",
+   "correct_answer": "50 cm"
+  },
+  "cause": "Halves 10 or mixes with a quarter.",
+  "reveals": "A half and a quarter of a metre in one question.",
+  "help": "Half of 100 is 50.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_ADD_DIGITS": {
+  "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+  "error": "Joins the digits of the metres and the centimetres without a place holder zero.",
+  "example": {
+   "question": "Write 3 m 4 cm in centimetres.",
+   "wrong_answer": "34 cm",
+   "correct_answer": "304 cm"
+  },
+  "cause": "Does not keep the place for the tens of cm.",
+  "reveals": "A length with a single digit of cm.",
+  "help": "Metres are hundreds of cm: 3 m is 300 cm, then add 4.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_WRONG_FACTOR": {
+  "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+  "error": "Multiplies by 10 instead of 100, or by 1,000.",
+  "example": {
+   "question": "Change 6 m to centimetres.",
+   "wrong_answer": "60 cm",
+   "correct_answer": "600 cm"
+  },
+  "cause": "Has no fixed fact for the number of centimetres in a metre.",
+  "reveals": "A metres to centimetres conversion.",
+  "help": "One metre is 100 cm, so 6 m is 6 x 100.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_DIRECTION": {
+  "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
+  "error": "Divides when changing to the smaller unit or multiplies when changing to the larger.",
+  "example": {
+   "question": "Change 400 cm to metres.",
+   "wrong_answer": "40000 m",
+   "correct_answer": "4 m"
+  },
+  "cause": "Does not see that a smaller unit gives a bigger number.",
+  "reveals": "A cm to m conversion.",
+  "help": "A metre is bigger than a centimetre, so there are fewer metres.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_TWO_SIDES_ONLY": {
+  "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
+  "error": "Adds only the length and the width of a rectangle.",
+  "example": {
+   "question": "A rectangle is 8 cm long and 5 cm wide. What is its perimeter?",
+   "wrong_answer": "13 cm",
+   "correct_answer": "26 cm"
+  },
+  "cause": "Confuses perimeter with half the perimeter.",
+  "reveals": "A rectangle perimeter question.",
+  "help": "Walk round the rectangle: count every side.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_AREA_NOT_PERIMETER": {
+  "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
+  "error": "Multiplies the length and the width, giving the area.",
+  "example": {
+   "question": "A plot is 12 m long and 7 m wide. How long is the fence round it?",
+   "wrong_answer": "84 m",
+   "correct_answer": "38 m"
+  },
+  "cause": "Does not tell perimeter from area.",
+  "reveals": "A fencing story.",
+  "help": "Ask: do I go around the edge or cover the inside?",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_SQUARE_ONE_SIDE": {
+  "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
+  "error": "Gives one side as the perimeter of a square.",
+  "example": {
+   "question": "A square has a side of 6 cm. What is its perimeter?",
+   "wrong_answer": "6 cm",
+   "correct_answer": "24 cm"
+  },
+  "cause": "Does not see that there are four equal sides.",
+  "reveals": "A square with one side given.",
+  "help": "Mark each side with a tick as you add.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_NO_REGROUP": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+  "error": "Writes more than 99 cm in the centimetre column.",
+  "example": {
+   "question": "2 m 70 cm + 1 m 50 cm",
+   "wrong_answer": "3 m 120 cm",
+   "correct_answer": "4 m 20 cm"
+  },
+  "cause": "Does not change 100 cm into 1 m.",
+  "reveals": "Lengths whose cm add to more than 100.",
+  "help": "100 cm is 1 m: move it to the metre column.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_ADDS_ACROSS": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
+  "error": "Adds metres to centimetres.",
+  "example": {
+   "question": "1 m 20 cm + 2 m 30 cm",
+   "wrong_answer": "53 m",
+   "correct_answer": "3 m 50 cm"
+  },
+  "cause": "Ignores the unit labels.",
+  "reveals": "A sum with units.",
+  "help": "Add like units only: metres with metres.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_SMALLER_FROM_LARGER": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB",
+  "error": "Takes the smaller number of centimetres from the larger regardless of order.",
+  "example": {
+   "question": "5 m 20 cm - 2 m 70 cm",
+   "wrong_answer": "3 m 50 cm",
+   "correct_answer": "2 m 50 cm"
+  },
+  "cause": "Subtracts 20 from 70 and 2 from 5.",
+  "reveals": "Lengths where the cm to subtract is bigger.",
+  "help": "Change 1 m to 100 cm first.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_BORROW_100_NOT_10": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB",
+  "error": "Borrows 10 centimetres instead of 100.",
+  "example": {
+   "question": "4 m 30 cm - 1 m 60 cm",
+   "wrong_answer": "2 m 80 cm",
+   "correct_answer": "2 m 70 cm"
+  },
+  "cause": "Uses the tens borrow as in numbers.",
+  "reveals": "A regrouping with metres.",
+  "help": "One metre is 100 cm: so 130 - 60.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_NO_REGROUP": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT",
+  "error": "Leaves more than 99 cm in the centimetre column after multiplying.",
+  "example": {
+   "question": "2 m 60 cm x 4",
+   "wrong_answer": "8 m 240 cm",
+   "correct_answer": "10 m 40 cm"
+  },
+  "cause": "Multiplies metres and cm separately and does not regroup.",
+  "reveals": "A cm part that goes over 100.",
+  "help": "4 x 60 cm is 240 cm, which is 2 m 40 cm: change the extra 100 cm into metres.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_ONLY_METRES": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT",
+  "error": "Multiplies the metres and keeps the centimetres unchanged.",
+  "example": {
+   "question": "2 m 30 cm x 3",
+   "wrong_answer": "6 m 30 cm",
+   "correct_answer": "6 m 90 cm"
+  },
+  "cause": "Does not multiply both parts.",
+  "reveals": "A length with a cm part.",
+  "help": "Multiply the cm too.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_METRES_ONLY": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV",
+  "error": "Divides the metres and leaves the centimetres whole.",
+  "example": {
+   "question": "4 m 80 cm divided by 4",
+   "wrong_answer": "1 m 80 cm",
+   "correct_answer": "1 m 20 cm"
+  },
+  "cause": "Divides one part only.",
+  "reveals": "A length with cm.",
+  "help": "Change to cm: 480 cm divided by 4.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_REMAINDER_METRES_LOST": {
+  "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV",
+  "error": "Loses the remainder of metres when dividing, as in 5 m divided by 2 giving 2 m.",
+  "example": {
+   "question": "5 m divided by 2",
+   "wrong_answer": "2 m",
+   "correct_answer": "2 m 50 cm"
+  },
+  "cause": "Stops at the whole number of metres.",
+  "reveals": "An odd number of metres.",
+  "help": "Change 5 m to 500 cm first.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_LONGER_IS_LARGER": {
+  "skill": "MATH.G4.MEASUR.AREA.COMPARE_AREA",
+  "error": "Says the longer shape has the larger area.",
+  "example": {
+   "question": "Shape A is a long thin strip of 10 squares. Shape B is a 3 by 4 rectangle of 12 squares. Which is larger?",
+   "wrong_answer": "A",
+   "correct_answer": "B"
+  },
+  "cause": "Compares one length instead of the whole surface.",
+  "reveals": "A long, thin shape against a compact one.",
+  "help": "Cover each one with squares and count.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_COUNTS_EDGES": {
+  "skill": "MATH.G4.MEASUR.AREA.COMPARE_AREA",
+  "error": "Compares the edges of two shapes instead of the surface.",
+  "example": {
+   "question": "Shape A has a longer edge than shape B but fewer squares. Which has the larger area?",
+   "wrong_answer": "A",
+   "correct_answer": "B"
+  },
+  "cause": "Mixes area with perimeter.",
+  "reveals": "Two shapes with the same perimeter and different areas.",
+  "help": "Area is how much surface is covered.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_EDGE_ONLY": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
+  "error": "Counts only the squares along the border.",
+  "example": {
+   "question": "A 4 by 3 rectangle on a grid. How many squares cover it?",
+   "wrong_answer": "10",
+   "correct_answer": "12"
+  },
+  "cause": "Counts the outside squares only.",
+  "reveals": "A rectangle at least 3 by 3.",
+  "help": "Count row by row.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_TWICE": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
+  "error": "Counts a square twice or misses one.",
+  "example": {
+   "question": "A 3 by 5 rectangle. How many squares?",
+   "wrong_answer": "16",
+   "correct_answer": "15"
+  },
+  "cause": "Loses track of what has been counted.",
+  "reveals": "A grid with no marks.",
+  "help": "Mark each square as it is counted.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_UNIT_LENGTH": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
+  "error": "Gives the answer as a length, in cm, not in squares.",
+  "example": {
+   "question": "Area of a rectangle covered by 12 unit squares?",
+   "wrong_answer": "12 cm",
+   "correct_answer": "12 squares"
+  },
+  "cause": "Treats area as another length.",
+  "reveals": "An answer in units of area.",
+  "help": "Area is how many squares cover the surface.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_ADDS_ROWS_COLS": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
+  "error": "Adds the rows and columns.",
+  "example": {
+   "question": "A rectangle has 4 rows of 6 squares. What is its area?",
+   "wrong_answer": "10",
+   "correct_answer": "24"
+  },
+  "cause": "Adds the two numbers given.",
+  "reveals": "A rows and columns question.",
+  "help": "Draw 4 rows of 6.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_PERIMETER_NOT_AREA": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
+  "error": "Gives the perimeter when asked for the area.",
+  "example": {
+   "question": "A rectangle has 5 rows of 4 squares. What is its area?",
+   "wrong_answer": "18",
+   "correct_answer": "20"
+  },
+  "cause": "Adds all four sides.",
+  "reveals": "A rows and columns question where 2(r + c) differs from r x c.",
+  "help": "Cover the inside with squares and count.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_MISSING_ROW_ADDS": {
+  "skill": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
+  "error": "Subtracts to find a missing number of rows.",
+  "example": {
+   "question": "A rectangle has an area of 24 squares and 6 columns. How many rows?",
+   "wrong_answer": "18",
+   "correct_answer": "4"
+  },
+  "cause": "Treats the unknown as subtraction.",
+  "reveals": "A missing row or column.",
+  "help": "Rows times columns is the area, so divide.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_CUBE_CUBOID_SWAP": {
+  "skill": "MATH.G4.MEASUR.VOLUME.STACK_CUBES",
+  "error": "Calls a box with a square face and a longer length a cube.",
+  "example": {
+   "question": "A matchbox is a cube or a cuboid?",
+   "wrong_answer": "cube",
+   "correct_answer": "cuboid"
+  },
+  "cause": "Only the square faces are noticed.",
+  "reveals": "A cuboid with some square faces.",
+  "help": "In a cube all edges are the same length.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.STACK_CUBES.M_VOL_COUNT_VISIBLE_ONLY": {
+  "skill": "MATH.G4.MEASUR.VOLUME.STACK_CUBES",
+  "error": "Counts only the blocks that can be seen in the picture.",
+  "example": {
+   "question": "A picture shows 2 layers of 3 by 2 blocks. How many blocks in all?",
+   "wrong_answer": "8",
+   "correct_answer": "12"
+  },
+  "cause": "Counts the blocks on the top and sides only.",
+  "reveals": "A picture with hidden blocks.",
+  "help": "Count one layer and multiply by the number of layers.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ADDS_DIMENSIONS": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
+  "error": "Adds the length, width and height.",
+  "example": {
+   "question": "A cuboid is 4 blocks long, 3 wide and 2 high. How many blocks?",
+   "wrong_answer": "9",
+   "correct_answer": "24"
+  },
+  "cause": "Adds the three numbers.",
+  "reveals": "A cuboid with the three numbers given.",
+  "help": "One layer first, then layers.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ONE_LAYER_ONLY": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
+  "error": "Gives the number of blocks in the top layer as the volume.",
+  "example": {
+   "question": "A cuboid is made of 3 layers, each 2 by 5 blocks. How many blocks?",
+   "wrong_answer": "10",
+   "correct_answer": "30"
+  },
+  "cause": "Stops after one layer.",
+  "reveals": "A multi-layer pile.",
+  "help": "Count how many layers there are.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_SURFACE_NOT_VOLUME": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
+  "error": "Counts the faces of the cuboid instead of the blocks inside.",
+  "example": {
+   "question": "A cuboid is made of 12 blocks. What is its volume in blocks?",
+   "wrong_answer": "6",
+   "correct_answer": "12"
+  },
+  "cause": "Counts faces.",
+  "reveals": "A volume question about a solid.",
+  "help": "Volume is how many blocks fill it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SIDE_ONLY": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
+  "error": "Gives the side of the cube as the volume.",
+  "example": {
+   "question": "A cube is 3 blocks long. How many blocks does it hold?",
+   "wrong_answer": "3",
+   "correct_answer": "27"
+  },
+  "cause": "Reads the side as the amount.",
+  "reveals": "A cube with the side given.",
+  "help": "Layers: 3 by 3 in each layer, and 3 layers.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SQUARES_SIDE": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
+  "error": "Multiplies the side by itself only, giving the area of a face.",
+  "example": {
+   "question": "A cube is 4 blocks long. How many blocks does it hold?",
+   "wrong_answer": "16",
+   "correct_answer": "64"
+  },
+  "cause": "Stops after the first layer.",
+  "reveals": "A cube.",
+  "help": "There are as many layers as the side.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_TIMES_THREE": {
+  "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
+  "error": "Multiplies the side by three.",
+  "example": {
+   "question": "A cube has a side of 5 blocks. How many blocks?",
+   "wrong_answer": "15",
+   "correct_answer": "125"
+  },
+  "cause": "Reads the three as the number of dimensions.",
+  "reveals": "A cube.",
+  "help": "Layer, then layers.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_MASS_CONFUSED": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
+  "error": "Gives the mass unit (kg) for a liquid.",
+  "example": {
+   "question": "Which unit measures how much water a jerrycan holds?",
+   "wrong_answer": "kilograms",
+   "correct_answer": "litres"
+  },
+  "cause": "Does not tell what is being measured.",
+  "reveals": "A unit choice for a liquid.",
+  "help": "Capacity is how much a container holds.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_READS_JUG_TOP": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
+  "error": "Reads the top of the jug as the amount in it.",
+  "example": {
+   "question": "A jug is marked up to 5 litres. The water is at the 3 mark. How much water is in it?",
+   "wrong_answer": "5 litres",
+   "correct_answer": "3 litres"
+  },
+  "cause": "Reads the full capacity.",
+  "reveals": "A part-filled jug.",
+  "help": "Read where the water is.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_BIGGER_CONTAINER_MORE": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
+  "error": "Says the taller container always holds more.",
+  "example": {
+   "question": "A tall thin bottle and a short wide jug. Which holds more?",
+   "wrong_answer": "the tall one",
+   "correct_answer": "cannot tell from height alone"
+  },
+  "cause": "Compares height only.",
+  "reveals": "A tall thin container and a wide one.",
+  "help": "Pour one into the other.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_LITRE_THREE": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
+  "error": "Says three half litres make a litre.",
+  "example": {
+   "question": "How many half litres make 1 litre?",
+   "wrong_answer": "3",
+   "correct_answer": "2"
+  },
+  "cause": "Mixes up with thirds.",
+  "reveals": "A fact question.",
+  "help": "Fill a litre with two halves.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_QUARTER_TWO": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
+  "error": "Says two quarter litres make a litre.",
+  "example": {
+   "question": "How many quarter litres make 1 litre?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes up half and quarter.",
+  "reveals": "A fact question.",
+  "help": "A quarter is one of four equal parts.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_AS_5": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
+  "error": "Reads half a litre as 5 millilitres or as 5 litres.",
+  "example": {
+   "question": "Half a litre is the same as?",
+   "wrong_answer": "5 litres",
+   "correct_answer": "2 quarter litres"
+  },
+  "cause": "Confuses 1/2 with 5.",
+  "reveals": "A choice with 5.",
+  "help": "Half of 1 litre is a part of a litre, not a whole.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_OMIT_UNIT": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD",
+  "error": "Adds the numbers and gives the answer without litres or with the wrong unit.",
+  "example": {
+   "question": "A tank has 12 litres and 8 litres is added. How much is in it?",
+   "wrong_answer": "20",
+   "correct_answer": "20 litres"
+  },
+  "cause": "Does not write the unit.",
+  "reveals": "A story with a unit.",
+  "help": "Say the unit of the answer before writing.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_SUBTRACTS": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD",
+  "error": "Subtracts when the story asks for the total.",
+  "example": {
+   "question": "Two jerrycans hold 10 litres and 6 litres. How much altogether?",
+   "wrong_answer": "4 litres",
+   "correct_answer": "16 litres"
+  },
+  "cause": "Reads altogether as the difference.",
+  "reveals": "A total question.",
+  "help": "Altogether means join.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ADDS": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB",
+  "error": "Adds when the story asks how much is left.",
+  "example": {
+   "question": "A drum holds 20 litres. 7 litres are used. How much is left?",
+   "wrong_answer": "27 litres",
+   "correct_answer": "13 litres"
+  },
+  "cause": "Looks at the numbers, not the story.",
+  "reveals": "A used-up story.",
+  "help": "Left means take away.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ORDER": {
+  "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB",
+  "error": "Subtracts the larger from the smaller or in the wrong order.",
+  "example": {
+   "question": "How much more water fills a 15 litre tank holding 9 litres?",
+   "wrong_answer": "24 litres",
+   "correct_answer": "6 litres"
+  },
+  "cause": "Does not see the whole.",
+  "reveals": "A fill-up story.",
+  "help": "The whole is the full tank.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_LARGER_IS_HEAVIER": {
+  "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
+  "error": "Says the larger object is always the heavier.",
+  "example": {
+   "question": "A big sponge and a small stone. Which is heavier?",
+   "wrong_answer": "the sponge",
+   "correct_answer": "cannot tell by size alone"
+  },
+  "cause": "Judges mass by size.",
+  "reveals": "A big light object and a small heavy one.",
+  "help": "Balance them.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_CAPACITY_UNIT": {
+  "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
+  "error": "Gives litres as the unit of mass.",
+  "example": {
+   "question": "Which unit measures the mass of a bag of sugar?",
+   "wrong_answer": "litres",
+   "correct_answer": "kilograms"
+  },
+  "cause": "Does not know which unit goes with what.",
+  "reveals": "A unit choice.",
+  "help": "Mass is how heavy; capacity is how much it holds.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_SCALE_READ_END": {
+  "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
+  "error": "Reads the end of the scale instead of the pointer.",
+  "example": {
+   "question": "The pointer is at 3 kg on a 5 kg scale. What is the mass?",
+   "wrong_answer": "5 kg",
+   "correct_answer": "3 kg"
+  },
+  "cause": "Reads the largest mark.",
+  "reveals": "A scale picture.",
+  "help": "Read where the pointer is.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_KG_AS_500": {
+  "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
+  "error": "Says a half kilogram is 5 kg or 50 kg.",
+  "example": {
+   "question": "Half a kilogram is?",
+   "wrong_answer": "5 kg",
+   "correct_answer": "the mass of two quarter kilograms"
+  },
+  "cause": "Does not use fractions of a kilogram.",
+  "reveals": "A half-kilogram question.",
+  "help": "Two half kilograms balance one kilogram.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_QUARTER_TWO": {
+  "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
+  "error": "Says two quarter kilograms make a kilogram.",
+  "example": {
+   "question": "How many quarter kilograms make 1 kilogram?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "Mixes half and quarter.",
+  "reveals": "A fact question.",
+  "help": "A quarter is one of four equal parts.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_LARGER_THAN_KG": {
+  "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
+  "error": "Thinks a half kilogram is more than a kilogram because 2 is more than 1.",
+  "example": {
+   "question": "Which is heavier, 1/2 kg or 1 kg?",
+   "wrong_answer": "1/2 kg",
+   "correct_answer": "1 kg"
+  },
+  "cause": "Reads the 2 as the amount.",
+  "reveals": "A comparison.",
+  "help": "A half is one of two equal parts of a kilogram.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_OMIT_UNIT": {
+  "skill": "MATH.G4.MEASUR.MASS.MASS_ADD",
+  "error": "Adds the numbers and writes the answer without the unit.",
+  "example": {
+   "question": "A sack of 12 kg and a bag of 8 kg. Total mass?",
+   "wrong_answer": "20",
+   "correct_answer": "20 kg"
+  },
+  "cause": "Does not write the unit.",
+  "reveals": "A story with a unit.",
+  "help": "Say the unit before writing.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_SUBTRACTS": {
+  "skill": "MATH.G4.MEASUR.MASS.MASS_ADD",
+  "error": "Subtracts when asked for the total.",
+  "example": {
+   "question": "Two bags of 15 kg and 9 kg. Total?",
+   "wrong_answer": "6 kg",
+   "correct_answer": "24 kg"
+  },
+  "cause": "Reads altogether as the difference.",
+  "reveals": "A total question.",
+  "help": "Altogether means join.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_ADDS": {
+  "skill": "MATH.G4.MEASUR.MASS.MASS_SUB",
+  "error": "Adds when asked for the mass left.",
+  "example": {
+   "question": "A sack of 50 kg has 18 kg sold. How much is left?",
+   "wrong_answer": "68 kg",
+   "correct_answer": "32 kg"
+  },
+  "cause": "Looks at the numbers, not the story.",
+  "reveals": "A sold story.",
+  "help": "Left means take away.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_CONTAINER": {
+  "skill": "MATH.G4.MEASUR.MASS.MASS_SUB",
+  "error": "Includes the mass of the container when asked for the contents.",
+  "example": {
+   "question": "A full box is 20 kg and the empty box is 3 kg. Mass of contents?",
+   "wrong_answer": "20 kg",
+   "correct_answer": "17 kg"
+  },
+  "cause": "Does not see the two parts.",
+  "reveals": "A container and contents story.",
+  "help": "The contents are the whole minus the box.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_HANDS_SWAPPED": {
+  "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+  "error": "Swaps the hour hand and the minute hand.",
+  "example": {
+   "question": "The short hand points to 3 and the long hand to 12. What time is it?",
+   "wrong_answer": "12 o'clock",
+   "correct_answer": "3 o'clock"
+  },
+  "cause": "Reads the long hand as the hour.",
+  "reveals": "A clock with different hand positions.",
+  "help": "The short hand is the hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_PAST_TO_SWAP": {
+  "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+  "error": "Says past when it is to the hour, or the reverse.",
+  "example": {
+   "question": "The minute hand points to 8 at 4 o'clock. What time is it?",
+   "wrong_answer": "20 past 4",
+   "correct_answer": "20 to 5"
+  },
+  "cause": "Does not see which half of the clock the hand is in.",
+  "reveals": "A clock in the second half of the hour.",
+  "help": "After the half hour count to the next hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_MIDNIGHT_NOON": {
+  "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
+  "error": "Mixes up noon and midnight with a.m. and p.m.",
+  "example": {
+   "question": "Is 12 noon a.m. or p.m.?",
+   "wrong_answer": "a.m.",
+   "correct_answer": "p.m."
+  },
+  "cause": "Sees 12 and thinks it begins the day.",
+  "reveals": "Noon and midnight.",
+  "help": "A.m. is before noon; p.m. is after noon.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_AMPM_WRONG": {
+  "skill": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME",
+  "error": "Chooses the wrong half of the day for an everyday event.",
+  "example": {
+   "question": "School starts at 8:00. Is that a.m. or p.m.?",
+   "wrong_answer": "p.m.",
+   "correct_answer": "a.m."
+  },
+  "cause": "Does not link the time to the event.",
+  "reveals": "An event with a clear time of day.",
+  "help": "Think of the sun: is it morning?",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_SHADOW_DIRECTION": {
+  "skill": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME",
+  "error": "Thinks shadows are longest at noon.",
+  "example": {
+   "question": "When are shadows shortest?",
+   "wrong_answer": "in the morning",
+   "correct_answer": "at noon"
+  },
+  "cause": "Does not know that the sun is highest at noon.",
+  "reveals": "A shadow question.",
+  "help": "Observe a shadow stick at 9:00, 12:00 and 3:00.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_100_MINUTES": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
+  "error": "Uses 100 as the number of minutes in an hour.",
+  "example": {
+   "question": "How many minutes are there in 2 hours?",
+   "wrong_answer": "200",
+   "correct_answer": "120"
+  },
+  "cause": "Treats time like a decimal system.",
+  "reveals": "An hours to minutes conversion.",
+  "help": "Look at a clock face: 60 minutes make one hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_REMAINDER_AS_DECIMAL": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
+  "error": "Takes out one hour but leaves all the minutes in the minutes part.",
+  "example": {
+   "question": "Change 90 minutes to hours and minutes.",
+   "wrong_answer": "1 hour 90 minutes",
+   "correct_answer": "1 hour 30 minutes"
+  },
+  "cause": "Divides but keeps the leftover as minutes without the hour.",
+  "reveals": "A minutes amount over 60.",
+  "help": "Take out 60, the rest is minutes.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_DIVIDES_TO_MULTIPLY": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
+  "error": "Divides when changing hours to minutes.",
+  "example": {
+   "question": "Change 3 hours to minutes.",
+   "wrong_answer": "20 minutes",
+   "correct_answer": "180 minutes"
+  },
+  "cause": "Does not see that minutes are smaller.",
+  "reveals": "An hours to minutes conversion.",
+  "help": "A smaller unit means more of them.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_10_HOURS_DAY": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
+  "error": "Uses 12 or 10 hours in a day.",
+  "example": {
+   "question": "How many hours in 2 days?",
+   "wrong_answer": "24",
+   "correct_answer": "48"
+  },
+  "cause": "Does not know 24 hours in a day.",
+  "reveals": "A days to hours conversion.",
+  "help": "One day is 24 hours.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_WEEK_NOT_7": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
+  "error": "Uses 10 or 5 as the number of days in a week.",
+  "example": {
+   "question": "How many days are there in 3 weeks?",
+   "wrong_answer": "15",
+   "correct_answer": "21"
+  },
+  "cause": "Counts school days.",
+  "reveals": "A weeks to days conversion.",
+  "help": "A week has 7 days.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_DAYS_TO_WEEKS_REMAINDER": {
+  "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
+  "error": "Writes 17 days as 2 weeks 17 days or ignores the leftover days.",
+  "example": {
+   "question": "Change 17 days to weeks and days.",
+   "wrong_answer": "2 weeks",
+   "correct_answer": "2 weeks 3 days"
+  },
+  "cause": "Stops after dividing.",
+  "reveals": "A days amount with a remainder.",
+  "help": "Weeks first, then the days left.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_END_TIME": {
+  "skill": "MATH.G4.MEASUR.TIME.RECORD_DURATION",
+  "error": "Gives the finish time as the duration.",
+  "example": {
+   "question": "A lesson starts at 9:00 and ends at 10:30. How long is it?",
+   "wrong_answer": "10:30",
+   "correct_answer": "1 hour 30 minutes"
+  },
+  "cause": "Reads the question as when it ends.",
+  "reveals": "A start and end.",
+  "help": "Duration is how long, not when.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_WRONG_UNITS": {
+  "skill": "MATH.G4.MEASUR.TIME.RECORD_DURATION",
+  "error": "Writes a duration such as 1 hour 30 minutes as 1.30 hours.",
+  "example": {
+   "question": "Write 1 hour 30 minutes in minutes.",
+   "wrong_answer": "130",
+   "correct_answer": "90"
+  },
+  "cause": "Treats the minutes as digits after a point.",
+  "reveals": "A hour-minute duration.",
+  "help": "1 hour is 60 minutes, then add 30.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_SUBTRACT_AS_DECIMAL": {
+  "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
+  "error": "Subtracts the hours and minutes like decimals.",
+  "example": {
+   "question": "From 8:45 to 10:15 is how long?",
+   "wrong_answer": "1 hour 70 minutes",
+   "correct_answer": "1 hour 30 minutes"
+  },
+  "cause": "Does not regroup in sixties.",
+  "reveals": "A duration across an hour.",
+  "help": "Count up to the next hour, then the rest.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_ADD_MINUTES_OVER_60": {
+  "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
+  "error": "Leaves more than 59 minutes in the minutes part.",
+  "example": {
+   "question": "A film starts at 5:40 and lasts 50 minutes. When does it end?",
+   "wrong_answer": "5:90",
+   "correct_answer": "6:30"
+  },
+  "cause": "Does not carry into hours.",
+  "reveals": "A time to which minutes are added.",
+  "help": "60 minutes make 1 hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_NOON_AMPM": {
+  "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
+  "error": "Gives the wrong a.m./p.m. when a time goes across noon.",
+  "example": {
+   "question": "A lesson starts at 11:30 a.m. and lasts 1 hour. When does it end?",
+   "wrong_answer": "12:30 a.m.",
+   "correct_answer": "12:30 p.m."
+  },
+  "cause": "Does not change a.m. at noon.",
+  "reveals": "A duration across noon.",
+  "help": "A.m. changes to p.m. at 12.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_BASE_10": {
+  "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
+  "error": "Reads the digits after the colon as a decimal fraction of an hour.",
+  "example": {
+   "question": "A digital clock shows 7:45. How many minutes past 7 is that?",
+   "wrong_answer": "45 hundredths of an hour",
+   "correct_answer": "45 minutes"
+  },
+  "cause": "Treats the minutes as hundredths.",
+  "reveals": "A digital reading.",
+  "help": "The number after the colon is the minutes.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_ANALOGUE_SWAP": {
+  "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
+  "error": "Writes 3:45 as quarter past 3 because of 45.",
+  "example": {
+   "question": "What time is 3:45 on an analogue clock?",
+   "wrong_answer": "quarter past 3",
+   "correct_answer": "quarter to 4"
+  },
+  "cause": "Links 45 to a quarter without thinking about which.",
+  "reveals": "A 45 minutes reading.",
+  "help": "45 minutes past the hour is 15 to the next hour.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_24H_AS_AM": {
+  "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
+  "error": "Reads 13:00 as 3:00 or reads the 24-hour clock as a.m.",
+  "example": {
+   "question": "What time is 15:00 on a 12-hour clock?",
+   "wrong_answer": "3:00 a.m.",
+   "correct_answer": "3:00 p.m."
+  },
+  "cause": "Does not know how to subtract 12.",
+  "reveals": "A 24-hour time.",
+  "help": "Subtract 12 from the hours in the afternoon.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_10_CENTS_SHILLING": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
+  "error": "Uses 10 cents in a shilling.",
+  "example": {
+   "question": "How many cents in 5 shillings?",
+   "wrong_answer": "50",
+   "correct_answer": "500"
+  },
+  "cause": "Treats money as place value in tens.",
+  "reveals": "A shillings to cents conversion.",
+  "help": "100 cents make one shilling.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_CENTS_AS_DECIMAL_WHOLE": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
+  "error": "Writes 3 shillings 5 cents as 35 cents.",
+  "example": {
+   "question": "Write 3 shillings 5 cents in cents.",
+   "wrong_answer": "35",
+   "correct_answer": "305"
+  },
+  "cause": "Joins the digits and drops the zero place.",
+  "reveals": "An amount with single-digit cents.",
+  "help": "Three shillings is 300 cents, then add 5.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_DIRECTION": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
+  "error": "Multiplies when changing cents to shillings.",
+  "example": {
+   "question": "Change 400 cents to shillings.",
+   "wrong_answer": "40,000",
+   "correct_answer": "4"
+  },
+  "cause": "Does not see that shillings are bigger.",
+  "reveals": "A cents to shillings conversion.",
+  "help": "A bigger unit gives a smaller number.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_OVER_BUDGET": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST",
+  "error": "Chooses three items that cost more than the money available.",
+  "example": {
+   "question": "You have sh 100. Which three items can you buy: bread sh 60, milk sh 55, sugar sh 30?",
+   "wrong_answer": "bread, milk and sugar",
+   "correct_answer": "bread and sugar"
+  },
+  "cause": "Does not add the prices.",
+  "reveals": "A budget with a close total.",
+  "help": "Add up before choosing.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_OMITS_QUANTITY": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST",
+  "error": "Writes only the price of one item and not the cost for the quantity.",
+  "example": {
+   "question": "3 loaves at sh 55 each. What is the cost on the list?",
+   "wrong_answer": "sh 55",
+   "correct_answer": "sh 165"
+  },
+  "cause": "Does not multiply by the amount.",
+  "reveals": "A list with quantities.",
+  "help": "Price of one times how many.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_UNITS_MIXED": {
+  "skill": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST",
+  "error": "Mixes shillings and cents in the list total without converting.",
+  "example": {
+   "question": "Sugar sh 3 and salt 50 cents. Total?",
+   "wrong_answer": "53",
+   "correct_answer": "sh 3.50"
+  },
+  "cause": "Adds 3 and 50.",
+  "reveals": "A list with shillings and cents.",
+  "help": "Change to the same unit.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_ADDS_QUANTITY": {
+  "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
+  "error": "Adds the quantity to the price instead of multiplying.",
+  "example": {
+   "question": "4 pencils at sh 15 each. Total?",
+   "wrong_answer": "sh 19",
+   "correct_answer": "sh 60"
+  },
+  "cause": "Uses addition.",
+  "reveals": "A total with quantity and price.",
+  "help": "Four times the price of one.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_CHANGE_ADDS": {
+  "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
+  "error": "Adds the amount paid to the cost instead of finding the change.",
+  "example": {
+   "question": "Bread sh 55. Paid with sh 100. Change?",
+   "wrong_answer": "sh 155",
+   "correct_answer": "sh 45"
+  },
+  "cause": "Reads change as an amount to add.",
+  "reveals": "A change question.",
+  "help": "Change is what is given back.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_ONE_ITEM_ONLY": {
+  "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
+  "error": "Totals only some of the items on the list.",
+  "example": {
+   "question": "Rice sh 120, beans sh 90, oil sh 150. Total?",
+   "wrong_answer": "sh 210",
+   "correct_answer": "sh 360"
+  },
+  "cause": "Stops adding early.",
+  "reveals": "A list of three items.",
+  "help": "Tick each item as you add.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_CLOCKWISE_AS_LEFT": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+  "error": "Thinks clockwise is turning to the left.",
+  "example": {
+   "question": "A wheel turns the way the hands of a clock turn. Which way is it?",
+   "wrong_answer": "anticlockwise",
+   "correct_answer": "clockwise"
+  },
+  "cause": "Mixes left and right with the two words.",
+  "reveals": "A turn drawn from above.",
+  "help": "Hold a clock face and watch the top hand go to the right.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_VIEWED_FROM_BEHIND": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+  "error": "Reverses the direction when the turn is seen from behind or below.",
+  "example": {
+   "question": "A tap is turned the way a clock turns when seen from above. Seen from below which way is it?",
+   "wrong_answer": "the same",
+   "correct_answer": "opposite"
+  },
+  "cause": "Does not see that the direction depends on the viewpoint.",
+  "reveals": "A turn viewed from the other side.",
+  "help": "Turn a paper clock over.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_ANTI_MEANING": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
+  "error": "Does not know that anti-clockwise is the opposite of clockwise.",
+  "example": {
+   "question": "Which turn is the opposite of clockwise?",
+   "wrong_answer": "quarter turn",
+   "correct_answer": "anticlockwise"
+  },
+  "cause": "Does not know the word.",
+  "reveals": "A word choice.",
+  "help": "Anti means against.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_QUARTER_AS_HALF": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+  "error": "Thinks a quarter turn is half way round.",
+  "example": {
+   "question": "How much of a full turn is a quarter turn?",
+   "wrong_answer": "half",
+   "correct_answer": "one quarter"
+  },
+  "cause": "Mixes up the fractions.",
+  "reveals": "A fraction of a turn.",
+  "help": "Four quarter turns make a full turn.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FACING_WRONG": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+  "error": "Names the wrong direction after a quarter turn.",
+  "example": {
+   "question": "You face north and turn a quarter turn clockwise. Which way are you facing?",
+   "wrong_answer": "west",
+   "correct_answer": "east"
+  },
+  "cause": "Mixes left and right.",
+  "reveals": "A direction change after a turn.",
+  "help": "Clockwise from north is east.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FULL_AS_NO_TURN": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+  "error": "Says a full turn does not change anything and so is not a turn.",
+  "example": {
+   "question": "You face east and make a full turn. Which way are you facing?",
+   "wrong_answer": "a full turn is not a turn",
+   "correct_answer": "east"
+  },
+  "cause": "Thinks nothing changed.",
+  "reveals": "A full turn question.",
+  "help": "You came back to where you started.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_HALF_AS_RIGHT": {
+  "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
+  "error": "Says a half turn faces the right.",
+  "example": {
+   "question": "You face north and make a half turn. Which way do you face?",
+   "wrong_answer": "east",
+   "correct_answer": "south"
+  },
+  "cause": "Mixes right with half.",
+  "reveals": "A half turn.",
+  "help": "A half turn faces you the opposite way.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_ARM_LENGTH": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+  "error": "Thinks an angle with longer arms is bigger.",
+  "example": {
+   "question": "Two angles have the same opening. One has longer arms. Which is bigger?",
+   "wrong_answer": "the one with longer arms",
+   "correct_answer": "they are the same size"
+  },
+  "cause": "Compares the length of the lines.",
+  "reveals": "Two angles with different arm lengths.",
+  "help": "Trace the angles onto paper and put one over the other.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_IS_THE_LINE": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+  "error": "Says the angle is the line, not the opening.",
+  "example": {
+   "question": "What is an angle?",
+   "wrong_answer": "a straight line",
+   "correct_answer": "the opening between two lines at a point"
+  },
+  "cause": "Does not see the space.",
+  "reveals": "A definition choice.",
+  "help": "Open two sticks joined at one end.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_COUNT_SIDES": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
+  "error": "Counts the sides and not the corners when asked for the angles.",
+  "example": {
+   "question": "How many angles has a triangle?",
+   "wrong_answer": "6",
+   "correct_answer": "3"
+  },
+  "cause": "Counts every line twice or mixes with sides.",
+  "reveals": "A shape question.",
+  "help": "Count each corner once.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_CURVED_HAS_ANGLE": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
+  "error": "Says a circle has angles at its edge.",
+  "example": {
+   "question": "How many corners has a circle?",
+   "wrong_answer": "4",
+   "correct_answer": "0"
+  },
+  "cause": "Treats a curved edge as having corners.",
+  "reveals": "A shape with no corners.",
+  "help": "Run a finger round the circle.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_RECTANGLE_ANGLES": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
+  "error": "Says a rectangle has two angles (its long sides) or six.",
+  "example": {
+   "question": "How many angles has a rectangle?",
+   "wrong_answer": "2",
+   "correct_answer": "4"
+  },
+  "cause": "Counts the lengths.",
+  "reveals": "A shape question.",
+  "help": "Count the corners one by one.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_SQUARE_CORNER_ONLY_SQUARES": {
+  "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
+  "error": "Thinks only a square has square corners.",
+  "example": {
+   "question": "Which has a right angle: a square or a rectangle?",
+   "wrong_answer": "only a square",
+   "correct_answer": "both"
+  },
+  "cause": "Links right angle only with a square.",
+  "reveals": "A rectangle among the options.",
+  "help": "Fit the corner of a paper.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_QUARTER_AS_STRAIGHT": {
+  "skill": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE",
+  "error": "Says a quarter turn makes a straight line.",
+  "example": {
+   "question": "What angle does a quarter turn make?",
+   "wrong_answer": "a straight line",
+   "correct_answer": "a right angle"
+  },
+  "cause": "Mixes quarter with half.",
+  "reveals": "A quarter turn question.",
+  "help": "Fold a paper twice.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_ANGLE_SMALLER_TURN": {
+  "skill": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE",
+  "error": "Says a bigger turn gives a smaller angle.",
+  "example": {
+   "question": "Which turn makes the bigger angle, a quarter turn or a half turn?",
+   "wrong_answer": "quarter turn",
+   "correct_answer": "half turn"
+  },
+  "cause": "Reads quarter as larger than half.",
+  "reveals": "A comparison.",
+  "help": "Turn your arm: the further you turn, the bigger the angle.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE.M_TURN_HOUR_HAND_RIGHT_ANGLE": {
+  "skill": "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE",
+  "error": "Says the hands of a clock make a right angle at 4 o'clock.",
+  "example": {
+   "question": "At which time do the hands make a right angle?",
+   "wrong_answer": "4 o'clock",
+   "correct_answer": "3 o'clock"
+  },
+  "cause": "Cannot tell a right angle from other angles.",
+  "reveals": "A clock time with a bigger angle.",
+  "help": "Fit a square corner on the clock face.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_ORIENTATION": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+  "error": "Calls a square turned on its corner a diamond or a different shape.",
+  "example": {
+   "question": "A square is turned so it stands on a corner. What shape is it?",
+   "wrong_answer": "diamond",
+   "correct_answer": "square"
+  },
+  "cause": "Judges shape by how it sits on the page.",
+  "reveals": "A turned square.",
+  "help": "Count the sides and check they are equal.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_OVAL_CIRCLE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+  "error": "Calls an oval a circle.",
+  "example": {
+   "question": "What shape is an egg?",
+   "wrong_answer": "circle",
+   "correct_answer": "oval"
+  },
+  "cause": "Does not tell round from egg shaped.",
+  "reveals": "An oval and a circle.",
+  "help": "A circle is the same width all the way round.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_TRIANGLE_NEEDS_EQUAL_SIDES": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
+  "error": "Thinks a triangle must have three equal sides, and a long thin triangle is not one.",
+  "example": {
+   "question": "Is a triangle with sides 3 cm, 4 cm and 5 cm a triangle?",
+   "wrong_answer": "No, the sides are not equal",
+   "correct_answer": "Yes, it has three straight sides"
+  },
+  "cause": "Pictures only the equal-sided triangle.",
+  "reveals": "A triangle with unequal sides.",
+  "help": "Any shape with three straight sides is a triangle.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_DIAGONAL_RECTANGLE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY",
+  "error": "Counts the diagonals of a rectangle as lines of symmetry.",
+  "example": {
+   "question": "How many lines of symmetry has a rectangle?",
+   "wrong_answer": "4",
+   "correct_answer": "2"
+  },
+  "cause": "Transfers from the square.",
+  "reveals": "A rectangle.",
+  "help": "Fold along a diagonal: the halves do not match.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_ANY_LINE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY",
+  "error": "Says any line through a shape is a line of symmetry.",
+  "example": {
+   "question": "Is a line cutting a rectangle into two parts a line of symmetry?",
+   "wrong_answer": "yes, it makes two parts",
+   "correct_answer": "only if the halves fit exactly"
+  },
+  "cause": "Thinks any cut makes two matching halves.",
+  "reveals": "A diagonal fold.",
+  "help": "Fold along it and see if the edges meet.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY.M_SYM_COUNT_CIRCLE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY",
+  "error": "Says a circle has no lines of symmetry or just one.",
+  "example": {
+   "question": "How many lines of symmetry has a circle?",
+   "wrong_answer": "1",
+   "correct_answer": "many"
+  },
+  "cause": "Does not see that every line through the centre works.",
+  "reveals": "A circle.",
+  "help": "Fold a paper circle in different ways.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_UNEQUAL_SQUARE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES",
+  "error": "Draws a square with sides of different lengths.",
+  "example": {
+   "question": "Draw a square with sides of 5 cm. A child draws one side 5 cm and the other 4 cm. What did she draw?",
+   "wrong_answer": "a square",
+   "correct_answer": "a rectangle"
+  },
+  "cause": "Does not measure every side.",
+  "reveals": "A drawing check in class.",
+  "help": "Measure all four sides with a ruler.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES.M_DRAW_OPEN_SHAPE": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES",
+  "error": "Leaves a gap where the lines should meet, so the shape is not closed.",
+  "example": {
+   "question": "A triangle is drawn with two of the corners not joined. Is it a triangle?",
+   "wrong_answer": "yes",
+   "correct_answer": "no, the lines must meet"
+  },
+  "cause": "Does not join the ends.",
+  "reveals": "A drawing check in class.",
+  "help": "Join each corner without lifting the pencil.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_REPEAT_BROKEN": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS",
+  "error": "Continues a shape pattern without repeating the whole set of shapes.",
+  "example": {
+   "question": "The pattern is square, triangle, square, triangle. What comes next?",
+   "wrong_answer": "triangle",
+   "correct_answer": "square"
+  },
+  "cause": "Repeats the last shape.",
+  "reveals": "A pattern that repeats two shapes.",
+  "help": "Say the repeating part aloud.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS.M_SPAT_COLOUR_ONLY": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS",
+  "error": "Looks at the colour only and ignores the shape.",
+  "example": {
+   "question": "Red square, blue triangle, red square, ?",
+   "wrong_answer": "red triangle",
+   "correct_answer": "blue triangle"
+  },
+  "cause": "Matches the colour pattern but not the shape.",
+  "reveals": "A pattern with both colour and shape.",
+  "help": "Say the colour and the shape together.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_RECT_ALL_SIDES_EQUAL": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES",
+  "error": "Says the four sides of a rectangle are all equal.",
+  "example": {
+   "question": "Which sides of a rectangle are equal?",
+   "wrong_answer": "all four",
+   "correct_answer": "opposite sides"
+  },
+  "cause": "Transfers from the square.",
+  "reveals": "A rectangle.",
+  "help": "Measure the sides of a rectangle.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_SQUARE_NOT_RECT": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES",
+  "error": "Says a square is not a rectangle.",
+  "example": {
+   "question": "Is a square a rectangle?",
+   "wrong_answer": "No",
+   "correct_answer": "Yes, it is a rectangle with equal sides"
+  },
+  "cause": "Learns the shapes as different groups.",
+  "reveals": "A property question.",
+  "help": "A rectangle has four square corners and so does a square.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_COUNT_SIDES_CORNERS": {
+  "skill": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES",
+  "error": "Gives the wrong number of sides or corners for a triangle.",
+  "example": {
+   "question": "How many corners has a triangle?",
+   "wrong_answer": "4",
+   "correct_answer": "3"
+  },
+  "cause": "Mixes up with the square.",
+  "reveals": "A shape property.",
+  "help": "Trace the sides and count.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_COUNTS_TWICE": {
+  "skill": "MATH.G4.DATA_H.DATA.COLLECT_DATA",
+  "error": "Counts the same learner twice when collecting data.",
+  "example": {
+   "question": "A child counts learners as they walk past. Why might the count be wrong?",
+   "wrong_answer": "the count is always right",
+   "correct_answer": "someone was counted twice"
+  },
+  "cause": "Does not mark each one counted.",
+  "reveals": "A collection check in class.",
+  "help": "Make one tally mark for each learner only.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_TOO_MANY_ITEMS": {
+  "skill": "MATH.G4.DATA_H.DATA.COLLECT_DATA",
+  "error": "Collects too many kinds of items to record in a small table.",
+  "example": {
+   "question": "The class collects data on at most 10 items. A child lists 15 kinds of fruit. What should she do?",
+   "wrong_answer": "record all 15",
+   "correct_answer": "choose at most 10"
+  },
+  "cause": "Does not keep to the number agreed.",
+  "reveals": "A collection check in class.",
+  "help": "Decide the items before collecting.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_TALLY_ONES": {
+  "skill": "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+  "error": "Writes a tally in ones, with no groups of five.",
+  "example": {
+   "question": "How do you show 7 with tally marks?",
+   "wrong_answer": "IIIIIII",
+   "correct_answer": "IIII with a line across, then II"
+  },
+  "cause": "Does not know the groups of five.",
+  "reveals": "A tally question.",
+  "help": "Draw four lines and cross them.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_WRONG_TOOL": {
+  "skill": "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
+  "error": "Chooses a calculator or a ruler to collect a count.",
+  "example": {
+   "question": "What can you use to record the number of learners in each class?",
+   "wrong_answer": "a ruler",
+   "correct_answer": "a table"
+  },
+  "cause": "Does not know the tools of data.",
+  "reveals": "A choice of tools.",
+  "help": "Name what you write on.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_TALLY_COUNTS_BARS": {
+  "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
+  "error": "Counts the groups of five tally marks as five lines or counts a crossed bundle as 4.",
+  "example": {
+   "question": "A tally shows IIII crossed and II. How many?",
+   "wrong_answer": "6",
+   "correct_answer": "7"
+  },
+  "cause": "Does not count the crossing line.",
+  "reveals": "A tally of five.",
+  "help": "A crossed bundle is five.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_ITEM_LEFT_OUT": {
+  "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
+  "error": "Leaves an item out of the table or writes it twice.",
+  "example": {
+   "question": "A table lists 3 kinds of fruit from a survey of 4 kinds. What is wrong?",
+   "wrong_answer": "nothing",
+   "correct_answer": "one kind is missing"
+  },
+  "cause": "Does not check against the data.",
+  "reveals": "A table with a missing row.",
+  "help": "Tick each item as you write it.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_HEADINGS_MISSING": {
+  "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
+  "error": "Writes numbers in a table with no headings.",
+  "example": {
+   "question": "Which table is complete?",
+   "wrong_answer": "one with only numbers",
+   "correct_answer": "one with headings and numbers"
+  },
+  "cause": "Does not see why headings matter.",
+  "reveals": "A table with and one without headings.",
+  "help": "A heading tells what the number counts.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_MOST_AS_LAST_ROW": {
+  "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
+  "error": "Gives the last row as the most.",
+  "example": {
+   "question": "A table shows mangoes 8, oranges 12, bananas 5. Which is most?",
+   "wrong_answer": "bananas",
+   "correct_answer": "oranges"
+  },
+  "cause": "Reads the list order as the size.",
+  "reveals": "A table where the most is in the middle.",
+  "help": "Compare the numbers, not the order.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_ADDS_FOR_DIFFERENCE": {
+  "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
+  "error": "Adds when asked how many more.",
+  "example": {
+   "question": "Oranges 12 and mangoes 8. How many more oranges than mangoes?",
+   "wrong_answer": "20",
+   "correct_answer": "4"
+  },
+  "cause": "Reads more as join.",
+  "reveals": "A how many more question.",
+  "help": "Find the difference.",
+  "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
+  "status": "draft"
+ },
+ "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_NAME_NOT_NUMBER": {
+  "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
+  "error": "Gives the name of the item when asked for the number.",
+  "example": {
+   "question": "How many learners like football? (Football 14)",
+   "wrong_answer": "football",
+   "correct_answer": "14"
+  },
+  "cause": "Does not read what is asked.",
+  "reveals": "A number question.",
+  "help": "Underline how many.",
+  "source": "to confirm by a teacher",
+  "status": "draft"
+ }
+}

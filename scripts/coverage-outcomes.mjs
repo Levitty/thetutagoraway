@@ -24,6 +24,7 @@ const { generateProblem } = await import(resolve(root, 'src/ai-tutor/problemGene
 const { FAMILIES } = await import(resolve(root, 'src/ai-tutor/content/families/index.js'));
 const { drawFamily, setFamilyMode, isOn } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
 const { SKILLS_G5 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g5.js'));
+const { SKILLS_G4 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g4.js'));
 const { SKILLS_G6 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.g6.js'));
 const { SUBJECT_ORDER, entriesOf } = await import(resolve(root, 'src/ai-tutor/content/subjects/registry.js'));   // subjects beyond Maths: one section each
 
@@ -93,6 +94,13 @@ for (const [id, tag] of Object.entries(SKILL_TAGS)) {
 console.warn = quiet; setFamilyMode('reviewed');
 // Grades 5 and 6: the curriculum maps' skills name their outcomes directly, and carry a misconception library.
 for (const [cs, k] of [...Object.entries(SKILLS_G5), ...Object.entries(SKILLS_G6)]) for (const code of k.outcomes || []) {
+  const t = find(code); if (!t) continue;
+  if ((k.mis || []).length) t.lib++;
+  for (const hid of k.horeb || []) if (SKILLS[hid]) { t.s += t.ids.has(hid) ? 0 : 1; t.ids.add(hid); const info = skillInfo(hid); if (info.mis) t.m++; if (info.worked) t.w++; }
+}
+
+// Grade 4 has a map of its own (curriculum/mathematics/g4.json): same join, same library column.
+for (const [cs, k] of Object.entries(SKILLS_G4)) for (const code of k.outcomes || []) {
   const t = find(code); if (!t) continue;
   if ((k.mis || []).length) t.lib++;
   for (const hid of k.horeb || []) if (SKILLS[hid]) { t.s += t.ids.has(hid) ? 0 : 1; t.ids.add(hid); const info = skillInfo(hid); if (info.mis) t.m++; if (info.worked) t.w++; }
@@ -179,11 +187,11 @@ P('| Grade | No family | No generator skill | No misconception feedback | No wor
 P('|---|---|---|---|---|');
 for (const r of rows) P(`| ${r.grade} | ${r.noFamily} | ${r.noSkill} | ${r.noMis} | ${r.noWorked} |`);
 P();
-P(`Grade 5 only: ${rows[4].lib} of ${rows[4].outcomes} outcomes also have an entry in the curriculum map's misconception library (draft, unreviewed). No other grade has a library.`);
+P(`Grades with a library: Grade 4 has ${rows[3].lib} of ${rows[3].outcomes} outcomes with an entry in the curriculum map's misconception library, Grade 5 has ${rows[4].lib} of ${rows[4].outcomes} (draft, unreviewed). Other grades have none.`);
 P();
 P('## Outcomes by grade');
 P();
-P('Columns: F family, S generator skill, M misconception feedback, W worked example, L library entry (Grade 5). `.` means none. Outcomes with none of F, S, M, W are listed first.');
+P('Columns: F family, S generator skill, M misconception feedback, W worked example, L library entry (Grades 4 and 5). `.` means none. Outcomes with none of F, S, M, W are listed first.');
 for (let g = 1; g <= 9; g++) {
   const L = [...detail[g]].sort((a, b) => (!a.f && !a.s && !a.m && !a.w ? 0 : 1) - (!b.f && !b.s && !b.m && !b.w ? 0 : 1) || a.code.localeCompare(b.code));
   P();
