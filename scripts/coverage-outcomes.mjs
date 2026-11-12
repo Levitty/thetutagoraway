@@ -43,7 +43,7 @@ for (let g = 1; g <= 9; g++) {
   for (const s of j.sub_strands) for (const o of s.outcomes || []) list.push({ code: o.code, text: o.text, sub: s.sub_strand, strand: s.strand, f: 0, s: 0, m: 0, w: 0, lib: 0, ids: new Set() });
   grades[g] = { list, byCode: new Map(list.map(o => [o.code, o])), subs: j.sub_strands };
 }
-const subOf = (code) => code.replace(/\.[a-z]+$/, '');
+const subOf = (code) => code.replace(/\.[a-z0-9]+$/, '');
 const looseSubs = { f: new Set(), s: new Set() };
 const find = (code) => { const g = Number(code.match(/\.G(\d)\./)?.[1]); return grades[g]?.byCode.get(code); };
 
@@ -57,10 +57,11 @@ const famFacts = (f) => {
 };
 for (const f of FAMILIES) {
   const code = f.outcome.startsWith('MATH.') ? f.outcome : official(f.outcome);
+  if (code && LOOSE(f.outcome)) { looseSubs.f.add(subOf(code)); continue; }
   const target = code && find(code);
   if (!target) continue;
-  if (LOOSE(f.outcome)) { looseSubs.f.add(subOf(code)); continue; }
   target.f++;
+  target.w++;   // every family served carries a separate worked example (serveFamily in core.js)
   if (famFacts(f)) target.m++;
 }
 const skillFacts = {};
@@ -78,9 +79,10 @@ for (const [id, tag] of Object.entries(SKILL_TAGS)) {
   if (!SKILLS[id] || !tag.outcomes || tag.grade > 9) continue;
   const info = skillInfo(id);
   for (const hid of tag.outcomes) {
-    const code = official(hid); const target = code && find(code);
+    const code = official(hid);
+    if (code && LOOSE(hid)) { looseSubs.s.add(subOf(code)); continue; }
+    const target = code && find(code);
     if (!target) continue;
-    if (LOOSE(hid)) { looseSubs.s.add(subOf(code)); continue; }
     target.s++; target.ids.add(id);
     if (info.mis) target.m++;
     if (info.worked) target.w++;

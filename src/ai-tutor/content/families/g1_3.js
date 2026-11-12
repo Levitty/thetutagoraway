@@ -19,7 +19,7 @@ const opts = (items, rightText, why) => items.map(t => ({ text: t, right: t === 
 
 export const FAMILIES = [
   // ================================================================ GRADE 1
-  fam({ id: 'g1.add.got-more', skill: 'G1_ADD', outcome: 'G1.ADD.a', rung: 1, form: 'word',
+  fam({ id: 'g1.add.got-more', skill: 'G1_ADD', outcome: 'G1.ADD.0', rung: 1, form: 'word',
     draw: () => { const a = randInt(3, 12), b = randInt(2, 20 - a); return distinct(a, b, Math.abs(a - b), a + b - 1) && a + b <= 20 ? { a, b, p: person(), item: pick(['mangoes', 'books', 'stickers', 'marbles', 'oranges']) } : null; },
     make: ({ a, b, p, item }) => ({
       question: `There are ${a} birds on a tree. ${b} more birds fly in. How many birds are on the tree now?`,
@@ -29,7 +29,7 @@ export const FAMILIES = [
       steps: [`There are ${a} birds. ${b} more come.`, `${a} + ${b} = ${a + b}.`] }),
     check: ({ a, b }, ans) => ans - b === a }),
 
-  fam({ id: 'g1.add.how-many-more', skill: 'G1_ADD', outcome: 'G1.ADD.a', rung: 1, form: 'word',
+  fam({ id: 'g1.add.how-many-more', skill: 'G1_ADD', outcome: 'G1.ADD.0', rung: 1, form: 'word',
     draw: () => { const t = randInt(8, 20), a = randInt(3, t - 3); return distinct(t - a, t - a + 1, a, t + a) ? { t, a, p: person() } : null; },
     make: ({ t, a, p }) => ({
       question: `${p.name} has ${a} stickers. ${p.She} wants ${t}. How many more stickers does ${p.she} need?`,
@@ -39,7 +39,7 @@ export const FAMILIES = [
       steps: [`Count on from ${a} to ${t}.`, `${a} + ${t - a} = ${t}, so ${t - a} more.`] }),
     check: ({ t, a }, ans) => a + ans === t }),
 
-  fam({ id: 'g1.sub.gave-away', skill: 'G1_SUB', outcome: 'G1.SUB.a', rung: 1, form: 'word',
+  fam({ id: 'g1.sub.gave-away', skill: 'G1_SUB', outcome: 'G1.SUB.0', rung: 1, form: 'word',
     draw: () => { const a = randInt(6, 20), b = randInt(2, a - 2); return distinct(a, b, a - b, a - b + 1, a + b) ? { a, b, p: person(), item: pick(['sweets', 'mandazi', 'pencils', 'bananas', 'balls']) } : null; },
     make: ({ a, b, p, item }) => ({
       question: `${p.name} has ${a} ${item}. ${p.She} gives ${b} to a friend. How many ${item} are left?`,
@@ -49,7 +49,7 @@ export const FAMILIES = [
       steps: [`${p.name} starts with ${a} and gives away ${b}.`, `${a} − ${b} = ${a - b}.`] }),
     check: ({ a, b }, ans) => ans + b === a }),
 
-  fam({ id: 'g1.sub.how-many-ate', skill: 'G1_SUB', outcome: 'G1.SUB.a', rung: 2, form: 'word',
+  fam({ id: 'g1.sub.how-many-ate', skill: 'G1_SUB', outcome: 'G1.SUB.0', rung: 2, form: 'word',
     draw: () => { const a = randInt(8, 20), left = randInt(2, a - 3); return distinct(a, left, a - left, a + left, a - left + 1) ? { a, left, p: person() } : null; },
     make: ({ a, left, p }) => ({
       question: `${p.name} buys ${a} mandazi and eats some. ${left} mandazi are left. How many did ${p.she} eat?`,
@@ -59,7 +59,7 @@ export const FAMILIES = [
       steps: [`${p.name} started with ${a} and has ${left} left.`, `${a} − ${left} = ${a - left} eaten.`] }),
     check: ({ a, left }, ans) => left + ans === a }),
 
-  fam({ id: 'g1.counting.ten-more', skill: 'G1_COUNTING', outcome: 'G1.WHOLE.a', rung: 1, form: 'direct',
+  fam({ id: 'g1.counting.ten-more', skill: 'G1_COUNTING', outcome: 'G1.WHOLE.0', rung: 1, form: 'direct',
     draw: () => ({ n: randInt(11, 40) }),
     make: ({ n }) => ({ story: false, question: `${person().name} counts in tens, starting at ${n}. What number comes next?`,
       answer: n + 10,
@@ -68,7 +68,7 @@ export const FAMILIES = [
       steps: [`${n} has ${Math.floor(n / 10)} tens and ${n % 10} ones.`, `One more ten gives ${Math.floor(n / 10) + 1} tens and ${n % 10} ones: ${n + 10}.`] }),
     check: ({ n }, ans) => ans - n === 10 }),
 
-  fam({ id: 'g1.prenumber.skip-gap', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.a', rung: 1, form: 'direct',
+  fam({ id: 'g1.prenumber.skip-gap', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.0', rung: 1, form: 'direct',
     draw: () => { const s = pick([2, 5, 10]); const a = s === 2 ? pick([2, 4, 6, 8]) : s === 5 ? pick([5, 10, 15]) : pick([10, 20]); return { s, a }; },
     make: ({ s, a }) => ({ story: false,
       question: `Count in ${s}s: ${a}, ${a + s}, __, ${a + 3 * s}, ${a + 4 * s}. Which number fills the gap?`,
@@ -78,7 +78,7 @@ export const FAMILIES = [
       steps: [`The numbers go up by ${s} each time.`, `${a + s} + ${s} = ${a + 2 * s}.`] }),
     check: ({ s, a }, ans) => ans - (a + s) === s && a + 3 * s - ans === s }),
 
-  fam({ id: 'g1.prenumber.bead-pattern', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.a', rung: 1, form: 'word',
+  fam({ id: 'g1.prenumber.bead-pattern', skill: 'G1_PRENUMBER', outcome: 'G1.PRENUMBER.0', rung: 1, form: 'word',
     draw: () => {
       const cols = shuffle(['red', 'blue', 'green', 'yellow']);
       const unit = pick([[0, 1], [0, 0, 1], [0, 1, 1], [0, 1, 2]]).map(i => cols[i]);
@@ -96,7 +96,7 @@ export const FAMILIES = [
         steps: [`The pattern repeats: ${unit.join(', ')}.`, `After ${shown[n - 1]} comes ${next}.`] };
     } }),
 
-  fam({ id: 'g1.length.longest-of-three', skill: 'G1_LENGTH', outcome: 'G1.LENGTH.a', rung: 1, form: 'word',
+  fam({ id: 'g1.length.longest-of-three', skill: 'G1_LENGTH', outcome: 'G1.LENGTH.0', rung: 1, form: 'word',
     draw: () => { const all = [['pencil', 15], ['ruler', 30], ['rubber', 5], ['exercise book', 22], ['spoon', 18], ['shoe', 20]]; const three = shuffle(all).slice(0, 3); return { three, longest: Math.random() < 0.5 }; },
     make: ({ three, longest }) => {
       const vals = three.map(t => t[1]);
@@ -108,7 +108,7 @@ export const FAMILIES = [
         steps: [`The lengths are ${vals.join(', ')} cm.`, `The ${longest ? 'biggest' : 'smallest'} is ${target} cm: the ${rightName}.`] };
     } }),
 
-  fam({ id: 'g1.mass.lightest-chain', skill: 'G1_MASS', outcome: 'G1.MASS.a', rung: 2, form: 'word',
+  fam({ id: 'g1.mass.lightest-chain', skill: 'G1_MASS', outcome: 'G1.MASS.0', rung: 2, form: 'word',
     draw: () => { const t = pick([['cow', 'goat', 'hen'], ['goat', 'hen', 'egg'], ['lorry', 'bicycle', 'shoe'], ['donkey', 'dog', 'rabbit']]); return { t, heavy: Math.random() < 0.5, order: Math.random() < 0.5 }; },
     make: ({ t, heavy, order }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? 'an' : 'a') + ' ' + n;
@@ -121,7 +121,7 @@ export const FAMILIES = [
         steps: [`In order: ${t[0]}, ${t[1]}, ${t[2]} (heavy to light).`, `The ${heavy ? 'heaviest' : 'lightest'} is the ${right}.`] };
     } }),
 
-  fam({ id: 'g1.cap.holds-more', skill: 'G1_CAPACITY', outcome: 'G1.CAP.a', rung: 1, form: 'word',
+  fam({ id: 'g1.cap.holds-more', skill: 'G1_CAPACITY', outcome: 'G1.CAP.0', rung: 1, form: 'word',
     draw: () => { const pr = pick([['jug', 'bottle'], ['pot', 'mug'], ['basin', 'bowl'], ['kettle', 'teapot']]); const a = randInt(2, 12), b = Math.random() < 0.2 ? a : randInt(2, 12); return { pr, a, b, more: Math.random() < 0.5 }; },
     make: ({ pr, a, b, more }) => {
       const right = a === b ? 'same' : (more ? (a > b ? pr[0] : pr[1]) : (a < b ? pr[0] : pr[1]));
@@ -131,7 +131,7 @@ export const FAMILIES = [
         steps: [`The ${pr[0]} holds ${a} cups and the ${pr[1]} holds ${b} cups.`, a === b ? 'The numbers are the same.' : `${a > b ? a : b} is bigger than ${a > b ? b : a}, so the answer is the ${right}.`] };
     } }),
 
-  fam({ id: 'g1.time.days-ahead', skill: 'G1_TIME', outcome: 'G1.TIME.a', rung: 1, form: 'word',
+  fam({ id: 'g1.time.days-ahead', skill: 'G1_TIME', outcome: 'G1.TIME.0', rung: 1, form: 'word',
     draw: () => ({ i: randInt(0, 6), k: randInt(2, 4) }),
     make: ({ i, k }) => {
       const right = DAYS[(i + k) % 7];
@@ -141,7 +141,7 @@ export const FAMILIES = [
         steps: [`Count on from ${DAYS[i]}: ${Array.from({ length: k }, (_, j) => DAYS[(i + j + 1) % 7]).join(', ')}.`, `So it will be ${right}.`] };
     } }),
 
-  fam({ id: 'g1.time.hours-to-wait', skill: 'G1_TIME', outcome: 'G1.TIME.a', rung: 1, form: 'word',
+  fam({ id: 'g1.time.hours-to-wait', skill: 'G1_TIME', outcome: 'G1.TIME.0', rung: 1, form: 'word',
     draw: () => { const now = randInt(2, 8), k = randInt(1, 4); return distinct(k, k + 1, now + k, now) && now !== k + 1 ? { now, k, p: person() } : null; },
     make: ({ now, k, p }) => ({
       question: `Break is at ${now + k} o'clock. It is ${now} o'clock now. How many hours until break, ${p.name}?`,
@@ -151,7 +151,7 @@ export const FAMILIES = [
       steps: [`Count on from ${now} o'clock to ${now + k} o'clock.`, `That is ${k} hours.`] }),
     check: ({ now, k }, ans) => now + ans === now + k && ans > 0 }),
 
-  fam({ id: 'g1.money.mixed-coins', skill: 'G1_MONEY', outcome: 'G1.MONEY.a', rung: 2, form: 'word',
+  fam({ id: 'g1.money.mixed-coins', skill: 'G1_MONEY', outcome: 'G1.MONEY.0', rung: 2, form: 'word',
     draw: () => ({ a: randInt(1, 3), b: randInt(1, 4), p: person() }),
     make: ({ a, b, p }) => ({
       question: `${p.name} pays with ${a} ten-shilling coin${a > 1 ? 's' : ''} and ${b} five-shilling coin${b > 1 ? 's' : ''}. How many shillings is that?`,
@@ -161,7 +161,7 @@ export const FAMILIES = [
       steps: [`${a} coin${a > 1 ? 's' : ''} of 10 shillings make ${10 * a} shillings.`, `Then count on ${b} fives: ${10 * a + 5 * b} shillings.`] }),
     check: ({ a, b }, ans) => (ans - 5 * b) / 10 === a }),
 
-  fam({ id: 'g1.lines.curved-edge', skill: 'G1_LINES', outcome: 'G1.LINES.a', rung: 1, form: 'direct',
+  fam({ id: 'g1.lines.curved-edge', skill: 'G1_LINES', outcome: 'G1.LINES.0', rung: 1, form: 'direct',
     draw: () => {
       const ask = Math.random() < 0.5; // true: which is curved
       const curved = shuffle(['plate', 'wheel', 'coin', 'bangle']), straight = shuffle(['ruler', 'book', 'window', 'table top']);
@@ -173,7 +173,7 @@ export const FAMILIES = [
       hints: ['Think of the edge. Does it bend, or go straight?', 'A wheel and a coin are round.'],
       steps: [`A curved edge bends round, like a wheel. A straight edge does not bend, like a ruler.`, `The ${right} has the ${ask ? 'curved' : 'straight'} edge.`] }) }),
 
-  fam({ id: 'g1.shapes.which-shape', skill: 'G1_SHAPES', outcome: 'G1.SHAPES.a', rung: 1, form: 'direct',
+  fam({ id: 'g1.shapes.which-shape', skill: 'G1_SHAPES', outcome: 'G1.SHAPES.0', rung: 1, form: 'direct',
     draw: () => {
       const q = pick([{ t: 'has no corners', r: 'circle' }, { t: 'has 3 sides', r: 'triangle' }, { t: 'has 4 sides that are all equal', r: 'square' }, { t: 'has 4 sides, 2 long and 2 short', r: 'rectangle' }, { t: 'has 3 corners', r: 'triangle' }]);
       const others = shuffle(['circle', 'triangle', 'square', 'rectangle'].filter(s => s !== q.r)).slice(0, 2);
@@ -185,7 +185,7 @@ export const FAMILIES = [
       steps: [`Think about each shape: a circle has no corners, a triangle has 3 sides, a square has 4 equal sides.`, `The answer is the ${q.r}.`] }) }),
 
   // ================================================================ GRADE 2
-  fam({ id: 'g2.add.make-100', skill: 'G2_ADD', outcome: 'G2.ADD.a', rung: 2, form: 'word',
+  fam({ id: 'g2.add.make-100', skill: 'G2_ADD', outcome: 'G2.ADD.0', rung: 2, form: 'word',
     draw: () => { const a = pick([35, 40, 45, 55, 60, 65, 70, 75, 85, 90, 95]); return { a, p: person() }; },
     make: ({ a, p }) => ({
       question: `${p.name} has ${sh(a)}. ${p.She} needs ${sh(100)} for a book. How much more does ${p.she} need?`,
@@ -195,7 +195,7 @@ export const FAMILIES = [
       steps: [`Count on from ${a} to 100.`, `${a} + ${100 - a} = 100, so ${sh(100 - a)} more.`] }),
     check: ({ a }, ans) => a + ans === 100 }),
 
-  fam({ id: 'g2.sub.how-many-fewer', skill: 'G2_SUB', outcome: 'G2.SUB.a', rung: 2, form: 'word',
+  fam({ id: 'g2.sub.how-many-fewer', skill: 'G2_SUB', outcome: 'G2.SUB.0', rung: 2, form: 'word',
     draw: () => { const a = randInt(45, 99), b = randInt(15, a - 12); return a % 10 < b % 10 && distinct(a - b, a + b, a - b + 10, a - b - 10) ? { a, b } : null; },
     make: ({ a, b }) => ({
       question: `One shop has ${a} mangoes. Another shop has ${b} mangoes. How many fewer mangoes does the second shop have?`,
@@ -205,7 +205,7 @@ export const FAMILIES = [
       steps: [`The shops have ${a} and ${b} mangoes.`, `${a} − ${b} = ${a - b} fewer.`] }),
     check: ({ a, b }, ans) => b + ans === a }),
 
-  fam({ id: 'g2.counting.skip-gap', skill: 'G2_COUNTING', outcome: 'G2.WHOLE.a', rung: 1, form: 'direct',
+  fam({ id: 'g2.counting.skip-gap', skill: 'G2_COUNTING', outcome: 'G2.WHOLE.0', rung: 1, form: 'direct',
     draw: () => { const s = pick([5, 10]), back = Math.random() < 0.5, d = back ? -s : s; const a = back ? randInt(5, 9) * s + (s === 5 ? 0 : 0) : randInt(1, 6) * s; return a + 4 * d >= 0 && a + 4 * d <= 100 && a <= 100 ? { s, d, a } : null; },
     make: ({ s, d, a }) => ({ story: false,
       question: `Count ${d < 0 ? 'back' : 'on'} in ${s}s: ${a}, ${a + d}, __, ${a + 3 * d}, ${a + 4 * d}. What is the missing number?`,
@@ -215,7 +215,7 @@ export const FAMILIES = [
       steps: [`The numbers go ${d < 0 ? 'down' : 'up'} by ${s} each time.`, `${a + d} ${d < 0 ? '−' : '+'} ${s} = ${a + 2 * d}.`] }),
     check: ({ s, d, a }, ans) => Math.abs(ans - (a + d)) === s && Math.abs(a + 3 * d - ans) === s }),
 
-  fam({ id: 'g2.place.tens-and-ones', skill: 'G2_PLACE_VALUE', outcome: 'G2.WHOLE.a', rung: 1, form: 'direct',
+  fam({ id: 'g2.place.tens-and-ones', skill: 'G2_PLACE_VALUE', outcome: 'G2.WHOLE.0', rung: 1, form: 'direct',
     draw: () => { const t = randInt(2, 9), o = randInt(1, 9); return t !== o ? { t, o } : null; },
     make: ({ t, o }) => ({ story: false, question: `What number is ${t} tens and ${o} ones?`,
       answer: 10 * t + o,
@@ -224,7 +224,7 @@ export const FAMILIES = [
       steps: [`${t} tens is ${10 * t}.`, `${10 * t} + ${o} = ${10 * t + o}.`] }),
     check: ({ t, o }, ans) => Math.floor(ans / 10) === t && ans % 10 === o }),
 
-  fam({ id: 'g2.mul.rows', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.a', rung: 1, form: 'word',
+  fam({ id: 'g2.mul.rows', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.0', rung: 1, form: 'word',
     draw: () => { const r = randInt(2, 5), c = pick([2, 3, 5, 10]); return distinct(r * c, r + c, r * c - c, r * c + c) ? { r, c } : null; },
     make: ({ r, c }) => ({
       question: `A farmer plants ${r} rows of maize. Each row has ${c} plants. How many plants are there?`,
@@ -234,7 +234,7 @@ export const FAMILIES = [
       steps: [`${r} rows with ${c} plants each.`, `${Array(r).fill(c).join(' + ')} = ${r * c}.`] }),
     check: ({ r, c }, ans) => ans / c === r }),
 
-  fam({ id: 'g2.mul.legs', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.a', rung: 1, form: 'word',
+  fam({ id: 'g2.mul.legs', skill: 'G2_MULTIPLY_INTRO', outcome: 'G2.MUL.0', rung: 1, form: 'word',
     draw: () => { const an = pick([['hens', 2], ['goats', 4], ['cows', 4], ['ducks', 2]]); const n = randInt(3, 6); return distinct(n * an[1], n + an[1], n, n * an[1] + an[1]) ? { an, n } : null; },
     make: ({ an: [name, legs], n }) => ({
       question: `Each of the ${n} ${name} on the farm has ${legs} legs. How many legs are there altogether?`,
@@ -244,7 +244,7 @@ export const FAMILIES = [
       steps: [`${n} animals with ${legs} legs each.`, `${Array(n).fill(legs).join(' + ')} = ${n * legs}.`] }),
     check: ({ an, n }, ans) => ans / n === an[1] }),
 
-  fam({ id: 'g2.div.benches', skill: 'G2_DIVISION_INTRO', outcome: 'G2.DIV.a', rung: 1, form: 'word',
+  fam({ id: 'g2.div.benches', skill: 'G2_DIVISION_INTRO', outcome: 'G2.DIV.0', rung: 1, form: 'word',
     draw: () => { const per = pick([2, 3, 4, 5]), k = randInt(3, 8); const tot = per * k; return distinct(k, tot - per, per, k + 1) ? { per, k, tot } : null; },
     make: ({ per, k, tot }) => ({
       question: `${tot} learners sit ${per} to a bench. How many benches do they need?`,
@@ -254,7 +254,7 @@ export const FAMILIES = [
       steps: [`Each bench takes ${per} learners.`, `${per} × ${k} = ${tot}, so ${k} benches.`] }),
     check: ({ per, tot }, ans) => ans * per === tot }),
 
-  fam({ id: 'g2.frac.half-of', skill: 'G2_FRACTIONS', outcome: 'G2.FRAC.a', rung: 1, form: 'word',
+  fam({ id: 'g2.frac.half-of', skill: 'G2_FRACTIONS', outcome: 'G2.FRAC.0', rung: 1, form: 'word',
     draw: () => { const n = pick([8, 10, 12, 14, 16, 18, 20]); return distinct(n / 2, n, n - 2, n / 2 + 1) ? { n, a: person(), b: person() } : null; },
     make: ({ n, a, b }) => ({
       question: `${a.name} has ${n} mangoes. ${a.She} gives half of them to ${b.name}. How many mangoes does ${b.name} get?`,
@@ -264,14 +264,14 @@ export const FAMILIES = [
       steps: [`Half means two equal groups of the ${n} mangoes.`, `${n} ÷ 2 = ${n / 2}.`] }),
     check: ({ n }, ans) => ans * 2 === n }),
 
-  fam({ id: 'g2.length.which-unit', skill: 'G2_LENGTH', outcome: 'G2.LENGTH.a', rung: 1, form: 'direct',
+  fam({ id: 'g2.length.which-unit', skill: 'G2_LENGTH', outcome: 'G2.LENGTH.0', rung: 1, form: 'direct',
     draw: () => { const it = pick([['a pencil', 'centimetres'], ['an exercise book', 'centimetres'], ['a rubber', 'centimetres'], ['a classroom', 'metres'], ['a football pitch', 'metres'], ['a school gate', 'metres']]); return { it }; },
     make: ({ it }) => ({ story: false, question: `Which unit is best for the length of ${it[0]}?`,
       options: opts(['centimetres', 'metres', 'kilometres'], it[1], (t) => (t === 'kilometres' ? 'A kilometre is for long roads between places. This is much shorter.' : t === 'metres' ? 'A metre is as long as a big step. This is much smaller than that.' : 'A centimetre is very small. This is much longer than that.')),
       hints: ['Think how long it is. Is it as small as your finger, or as big as a room?', 'Small things use centimetres. Bigger things use metres.'],
       steps: [`${it[0][0].toUpperCase() + it[0].slice(1)} is ${it[1] === 'metres' ? 'big, so we count in metres' : 'small, so we count in centimetres'}.`, `The best unit is ${it[1]}.`] }) }),
 
-  fam({ id: 'g2.cap.buckets-fill', skill: 'G2_CAPACITY', outcome: 'G2.CAP.a', rung: 1, form: 'word',
+  fam({ id: 'g2.cap.buckets-fill', skill: 'G2_CAPACITY', outcome: 'G2.CAP.0', rung: 1, form: 'word',
     draw: () => { const j = pick([2, 5, 10]), k = randInt(3, 6); return { j, k, tot: j * k }; },
     make: ({ j, k, tot }) => ({
       question: `A bucket holds ${j} litres. A drum holds ${tot} litres. How many full buckets fill the drum?`,
@@ -281,7 +281,7 @@ export const FAMILIES = [
       steps: [`Count in ${j}s up to ${tot}.`, `${j} × ${k} = ${tot}, so ${k} buckets.`] }),
     check: ({ j, tot }, ans) => ans * j === tot }),
 
-  fam({ id: 'g2.time.weeks-days', skill: 'G2_TIME', outcome: 'G2.TIME.a', rung: 2, form: 'word',
+  fam({ id: 'g2.time.weeks-days', skill: 'G2_TIME', outcome: 'G2.TIME.0', rung: 2, form: 'word',
     draw: () => ({ w: randInt(2, 4), p: person() }),
     make: ({ w, p }) => ({
       question: `${p.name}'s holiday is ${w} weeks long. How many days is that?`,
@@ -291,7 +291,7 @@ export const FAMILIES = [
       steps: [`One week is 7 days.`, `${Array(w).fill(7).join(' + ')} = ${7 * w} days.`] }),
     check: ({ w }, ans) => ans / 7 === w }),
 
-  fam({ id: 'g2.money.two-things', skill: 'G2_MONEY', outcome: 'G2.MONEY.a', rung: 1, form: 'word',
+  fam({ id: 'g2.money.two-things', skill: 'G2_MONEY', outcome: 'G2.MONEY.0', rung: 1, form: 'word',
     draw: () => { const items = shuffle(['pencil', 'pen', 'rubber', 'ruler', 'exercise book', 'chapati', 'mango']).slice(0, 2); const pa = price(items[0]), pb = price(items[1]); const s = pa + pb; return s <= 100 && distinct(s, Math.abs(pa - pb), s + 10, s - 10, pa, pb) ? { items, pa, pb } : null; },
     make: ({ items, pa, pb }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? 'an ' : 'a ') + n;
@@ -304,7 +304,7 @@ export const FAMILIES = [
     },
     check: ({ pa, pb }, ans) => ans - pb === pa }),
 
-  fam({ id: 'g2.shapes.tile-pattern', skill: 'G2_SHAPES', outcome: 'G2.SHAPES.a', rung: 2, form: 'word',
+  fam({ id: 'g2.shapes.tile-pattern', skill: 'G2_SHAPES', outcome: 'G2.SHAPES.0', rung: 2, form: 'word',
     draw: () => {
       const sh3 = shuffle(['circle', 'square', 'triangle', 'rectangle']);
       const unit = pick([[0, 1, 2], [0, 0, 1], [0, 1, 1]]).map(i => sh3[i]);
@@ -322,7 +322,7 @@ export const FAMILIES = [
     } }),
 
   // ================================================================ GRADE 3
-  fam({ id: 'g3.count.build-number', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.a', rung: 1, form: 'direct',
+  fam({ id: 'g3.count.build-number', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.0', rung: 1, form: 'direct',
     draw: () => { const h = randInt(1, 9), t = randInt(1, 9), o = randInt(1, 9); const n = 100 * h + 10 * t + o; const w = [h + t + o, 100 * o + 10 * t + h, 100 * h + o]; return distinct(n, ...w) ? { h, t, o } : null; },
     make: ({ h, t, o }) => ({ story: false, question: `Write ${h} hundreds, ${t} tens and ${o} ones as a number.`,
       answer: 100 * h + 10 * t + o,
@@ -331,7 +331,7 @@ export const FAMILIES = [
       steps: [`${h} hundreds is ${100 * h}, ${t} tens is ${10 * t}, ${o} ones is ${o}.`, `${100 * h} + ${10 * t} + ${o} = ${100 * h + 10 * t + o}.`] }),
     check: ({ h, t, o }, ans) => Math.floor(ans / 100) === h && Math.floor(ans / 10) % 10 === t && ans % 10 === o }),
 
-  fam({ id: 'g3.count.greatest-of-three', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.a', rung: 1, form: 'direct',
+  fam({ id: 'g3.count.greatest-of-three', skill: 'G3_COUNTING', outcome: 'G3.WHOLE.0', rung: 1, form: 'direct',
     draw: () => { const dg = shuffle([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 3); const perms = shuffle([[0, 1, 2], [0, 2, 1], [1, 0, 2], [1, 2, 0], [2, 0, 1], [2, 1, 0]]).slice(0, 3); return { nums: perms.map(p => 100 * dg[p[0]] + 10 * dg[p[1]] + dg[p[2]]), big: Math.random() < 0.5 }; },
     make: ({ nums, big }) => {
       const t = big ? Math.max(...nums) : Math.min(...nums);
@@ -341,7 +341,7 @@ export const FAMILIES = [
         steps: [`Compare the hundreds digits: ${nums.map(n => Math.floor(n / 100)).join(', ')}.`, `The ${big ? 'greatest' : 'smallest'} is ${t}.`] };
     } }),
 
-  fam({ id: 'g3.add.two-days', skill: 'G3_ADD', outcome: 'G3.ADD.a', rung: 1, form: 'word',
+  fam({ id: 'g3.add.two-days', skill: 'G3_ADD', outcome: 'G3.ADD.0', rung: 1, form: 'word',
     draw: () => { const a = randInt(120, 480), b = randInt(110, 400); return a % 10 + b % 10 >= 10 && distinct(a + b, a + b - 10, Math.abs(a - b), a + b + 10) ? { a, b, item: pick(['loaves of bread', 'eggs', 'mandazi', 'exercise books']) } : null; },
     make: ({ a, b, item }) => ({
       question: `A shop sells ${a} ${item} on Monday and ${b} on Tuesday. How many is that altogether?`,
@@ -351,7 +351,7 @@ export const FAMILIES = [
       steps: [`Add Monday and Tuesday: ${a} + ${b}.`, `${a} + ${b} = ${a + b}.`] }),
     check: ({ a, b }, ans) => ans - a === b }),
 
-  fam({ id: 'g3.sub.trip', skill: 'G3_SUB', outcome: 'G3.SUB.a', rung: 1, form: 'word',
+  fam({ id: 'g3.sub.trip', skill: 'G3_SUB', outcome: 'G3.SUB.0', rung: 1, form: 'word',
     draw: () => { const a = randInt(300, 900), b = randInt(110, a - 120); const dig = (n) => [Math.floor(n / 100), Math.floor(n / 10) % 10, n % 10]; const [x, y] = [dig(a), dig(b)]; const slip = 100 * Math.abs(x[0] - y[0]) + 10 * Math.abs(x[1] - y[1]) + Math.abs(x[2] - y[2]); return a % 10 < b % 10 && distinct(a - b, slip, a + b, a - b - 10) ? { a, b, slip } : null; },
     make: ({ a, b, slip }) => ({
       question: `A school has ${a} learners. ${b} learners go on a trip. How many learners stay at school?`,
@@ -361,7 +361,7 @@ export const FAMILIES = [
       steps: [`Take the trip learners from all learners: ${a} − ${b}.`, `${a} − ${b} = ${a - b}.`] }),
     check: ({ a, b }, ans) => ans + b === a }),
 
-  fam({ id: 'g3.mul.shelves', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.a', rung: 1, form: 'word',
+  fam({ id: 'g3.mul.shelves', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.0', rung: 1, form: 'word',
     draw: () => { const r = randInt(3, 9), c = randInt(3, 9); return r !== c && distinct(r * c, r + c, r * c - c, r * c + r) ? { r, c } : null; },
     make: ({ r, c }) => ({
       question: `A shop has ${r} shelves. Each shelf holds ${c} tins. How many tins is that?`,
@@ -371,7 +371,7 @@ export const FAMILIES = [
       steps: [`${r} shelves with ${c} tins each.`, `${r} × ${c} = ${r * c}.`] }),
     check: ({ r, c }, ans) => ans / c === r }),
 
-  fam({ id: 'g3.mul.buy-many', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.a', rung: 2, form: 'word',
+  fam({ id: 'g3.mul.buy-many', skill: 'G3_MULTIPLY', outcome: 'G3.MUL.0', rung: 2, form: 'word',
     draw: () => { const pr = price('mandazi'), n = randInt(3, 9); return distinct(pr * n, pr + n, pr * n - pr, pr * n + pr) ? { pr, n, p: person() } : null; },
     make: ({ pr, n, p }) => ({
       question: `A mandazi costs ${sh(pr)}. ${p.name} buys ${n} mandazi. How much does ${p.she} pay?`,
@@ -381,7 +381,7 @@ export const FAMILIES = [
       steps: [`${n} mandazi at ${sh(pr)} each.`, `${n} × ${pr} = ${pr * n}, so ${sh(pr * n)}.`] }),
     check: ({ pr, n }, ans) => ans / n === pr }),
 
-  fam({ id: 'g3.div.rope-pieces', skill: 'G3_DIVIDE', outcome: 'G3.DIV.a', rung: 1, form: 'word',
+  fam({ id: 'g3.div.rope-pieces', skill: 'G3_DIVIDE', outcome: 'G3.DIV.0', rung: 1, form: 'word',
     draw: () => { const s = randInt(3, 9), k = randInt(3, 9); return s !== k && distinct(k, s, k + 1, s * k - s) ? { s, k, tot: s * k } : null; },
     make: ({ s, k, tot }) => ({
       question: `A rope is ${tot} metres long. It is cut into pieces of ${s} metres each. How many pieces are there?`,
@@ -391,14 +391,14 @@ export const FAMILIES = [
       steps: [`Find how many ${s}s are in ${tot}.`, `${tot} ÷ ${s} = ${k}.`] }),
     check: ({ s, tot }, ans) => ans * s === tot }),
 
-  fam({ id: 'g3.frac.biggest-piece', skill: 'G3_FRACTIONS', outcome: 'G3.FRAC.a', rung: 2, form: 'direct',
+  fam({ id: 'g3.frac.biggest-piece', skill: 'G3_FRACTIONS', outcome: 'G3.FRAC.0', rung: 2, form: 'direct',
     draw: () => ({ big: Math.random() < 0.5, food: pick(['chapatis', 'cakes', 'watermelons', 'pizzas']) }),
     make: ({ big, food }) => ({ question: `Mama cuts 3 same-size ${food}. One into halves, one into quarters, one into eighths. Which pieces are ${big ? 'the biggest' : 'the smallest'}?`,
       options: opts(['halves', 'quarters', 'eighths'], big ? 'halves' : 'eighths', big ? 'More equal pieces make each piece smaller. Which cut makes the fewest pieces?' : 'Fewer equal pieces make each piece bigger. Which cut makes the most pieces?'),
       hints: ['Cutting into more equal pieces makes each piece smaller.', 'Halves is 2 pieces, quarters is 4 pieces, eighths is 8 pieces.'],
       steps: ['Halves make 2 pieces, quarters 4 pieces and eighths 8 pieces.', big ? 'The fewest pieces are the biggest: halves.' : 'The most pieces are the smallest: eighths.'] }) }),
 
-  fam({ id: 'g3.length.cut-rope', skill: 'G3_LENGTH', outcome: 'G3.LENGTH.a', rung: 2, form: 'word',
+  fam({ id: 'g3.length.cut-rope', skill: 'G3_LENGTH', outcome: 'G3.LENGTH.0', rung: 2, form: 'word',
     draw: () => { const m = randInt(1, 3), c = pick([10, 20, 30, 40, 60, 70, 80, 90, 25, 35, 45]); return distinct(100 * m - c, 100 * m + c, 1000 * m - c, c) ? { m, c, p: person() } : null; },
     make: ({ m, c, p }) => ({
       question: `A rope is ${m} metre${m > 1 ? 's' : ''} long. ${p.name} cuts off ${c} centimetres. How many centimetres are left?`,
@@ -408,7 +408,7 @@ export const FAMILIES = [
       steps: [`${m} m = ${100 * m} cm.`, `${100 * m} − ${c} = ${100 * m - c} cm.`] }),
     check: ({ m, c }, ans) => ans + c === 100 * m }),
 
-  fam({ id: 'g3.cap.pour-buckets', skill: 'G3_CAPACITY', outcome: 'G3.CAP.a', rung: 2, form: 'word',
+  fam({ id: 'g3.cap.pour-buckets', skill: 'G3_CAPACITY', outcome: 'G3.CAP.0', rung: 2, form: 'word',
     draw: () => { const b = pick([4, 5, 6, 8, 10]), n = randInt(3, 9); return distinct(b * n, b + n, b * n - b, b * n + b) ? { b, n, p: person() } : null; },
     make: ({ b, n, p }) => ({
       question: `A bucket holds ${b} litres. ${p.name} pours ${n} full buckets into a tank. How many litres are in the tank?`,
@@ -418,7 +418,7 @@ export const FAMILIES = [
       steps: [`${n} buckets with ${b} litres each.`, `${n} × ${b} = ${b * n} litres.`] }),
     check: ({ b, n }, ans) => ans / b === n }),
 
-  fam({ id: 'g3.time.weeks-and-days', skill: 'G3_TIME', outcome: 'G3.TIME.a', rung: 2, form: 'word',
+  fam({ id: 'g3.time.weeks-and-days', skill: 'G3_TIME', outcome: 'G3.TIME.0', rung: 2, form: 'word',
     draw: () => { const w = randInt(2, 5), d = randInt(1, 6); return distinct(7 * w + d, w + d, 7 * w, 7 * (w + d)) ? { w, d } : null; },
     make: ({ w, d }) => ({
       question: `A holiday lasts ${w} weeks and ${d} day${d > 1 ? 's' : ''}. How many days is that?`,
@@ -428,7 +428,7 @@ export const FAMILIES = [
       steps: [`${w} weeks = ${w} × 7 = ${7 * w} days.`, `${7 * w} + ${d} = ${7 * w + d} days.`] }),
     check: ({ w, d }, ans) => ans - d === 7 * w }),
 
-  fam({ id: 'g3.money.bread-and-milk', skill: 'G3_MONEY', outcome: 'G3.MONEY.a', rung: 2, form: 'word',
+  fam({ id: 'g3.money.bread-and-milk', skill: 'G3_MONEY', outcome: 'G3.MONEY.0', rung: 2, form: 'word',
     draw: () => { const x = price('loaf of bread'), y = price('litre of milk'); const t = x + y; return t < 200 && distinct(200 - t, t, 200 - x, 200 - y) ? { x, y, p: person() } : null; },
     make: ({ x, y, p }) => ({
       question: `${p.name} buys bread for ${sh(x)} and milk for ${sh(y)}. ${p.She} pays with ${sh(200)}. How much change does ${p.she} get?`,
@@ -438,7 +438,7 @@ export const FAMILIES = [
       steps: [`Cost: ${x} + ${y} = ${x + y}.`, `Change: ${200} − ${x + y} = ${200 - x - y}, so ${sh(200 - x - y)}.`] }),
     check: ({ x, y }, ans) => ans + x + y === 200 }),
 
-  fam({ id: 'g3.position.turn', skill: 'G3_POSITION', outcome: 'G3.POSITION.a', rung: 1, form: 'word',
+  fam({ id: 'g3.position.turn', skill: 'G3_POSITION', outcome: 'G3.POSITION.0', rung: 1, form: 'word',
     draw: () => ({ f: randInt(0, 3), right: Math.random() < 0.5, p: person() }),
     make: ({ f, right, p }) => {
       const D = ['north', 'east', 'south', 'west'];
@@ -449,7 +449,7 @@ export const FAMILIES = [
         steps: [`Facing ${D[f]}, a ${right ? 'right' : 'left'} turn is a quarter turn.`, `${p.She} now faces ${ans}.`] };
     } }),
 
-  fam({ id: 'g3.shapes.name-by-count', skill: 'G3_SHAPES', outcome: 'G3.SHAPES.a', rung: 1, form: 'direct',
+  fam({ id: 'g3.shapes.name-by-count', skill: 'G3_SHAPES', outcome: 'G3.SHAPES.0', rung: 1, form: 'direct',
     draw: () => ({ n: pick([5, 6, 8]), what: pick(['sides', 'corners']) }),
     make: ({ n, what }) => { const N = { 5: 'pentagon', 6: 'hexagon', 8: 'octagon' }; return { story: false, question: `A shape has ${n} ${what}. What is it called?`,
       options: opts(['pentagon', 'hexagon', 'octagon'], N[n], 'Count again. A pentagon has 5 sides, a hexagon 6 and an octagon 8.'),

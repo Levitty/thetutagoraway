@@ -222,6 +222,8 @@ sub(5, D, 'Data representation', 'DATA', [
 // ---------------------------------------------------------------- Grade 6
 sub(6, N, 'Whole numbers', 'WHOLE', [
   ['a', 'Place value to millions', /place value|total value|value of the|digit|million/i],
+  ['b', 'Numbers up to millions in symbols', /million|thousand|in (figures|symbols)|\d{1,3},\d{3}/i],
+  ['d', 'Order numbers up to 100,000', /order|smallest|largest|<|ascending|descending/i],
   ['c', 'Read and write numbers in words', /in words|words|in figures/i],
   ['e', 'Round off', /round|nearest/i],
   ['f', 'Squares of whole numbers', /square|²|\^2/i],
@@ -238,6 +240,9 @@ sub(6, N, 'Division', 'DIV', [
   ['c', 'Combined operations', /\d\s*[+−×÷-]\s*\d\s*[+−×÷-]\s*\d|BODMAS/i],
 ]);
 sub(6, N, 'Fractions', 'FRAC', [
+  ['b', 'Subtract fractions using LCM', /\d\/\d|fraction/i],
+  ['d', 'Subtract mixed numbers', /\d+ \d+\/\d+|mixed/i],
+  ['h', 'Percentage to fraction', /per ?cent|%/i],
   ['a', 'Add and subtract fractions', /\d\/\d|fraction/i],
   ['c', 'Add and subtract mixed numbers', /\d \d\/\d|mixed/i],
   ['e', 'Reciprocals of fractions', /reciprocal/i],
@@ -245,16 +250,26 @@ sub(6, N, 'Fractions', 'FRAC', [
   ['g', 'A fraction as a percentage, and a percentage as a fraction', /per ?cent|%/i],
 ]);
 sub(6, N, 'Decimals', 'DEC', [
+  ['a', 'Decimals up to ten-thousandths', /decimal|tenths|thousandths|\d\.\d/i],
+  ['d', 'Decimals and percentages', /per ?cent|%|decimal/i],
+  ['f', 'Subtract decimals to 4 places', /\d\.\d{2,4}|subtract|left|cut/i],
   ['b', 'Round decimals to 3 places', /round|decimal place|nearest/i],
   ['c', 'Decimals to fractions and percentages', /\d\.\d.*(fraction|%|per ?cent)|(fraction|%|per ?cent).*\d\.\d|decimal/i],
   ['e', 'Add and subtract to 4 decimal places', /\d\.\d/],
 ]);
 sub(6, N, 'Inequalities', 'INEQ', [
+  ['b', 'Simplify inequalities in one unknown', /[≤≥<>]|inequalit/i],
   ['a', 'Form simple inequalities in one unknown', /inequality|at least|at most|more than|less than|≤|≥/i],
   ['c', 'Simplify and solve simple inequalities', /solve|[a-z]\s*[<>≤≥]|[<>≤≥]\s*\d/i],
 ]);
 sub(6, M, 'Length', 'LENGTH', [
   ['a', 'Millimetres and centimetres', /\bmm\b|millimet|\bcm\b/i],
+  ['b', 'Millimetres and centimetres: the relationship', /\bmm\b|millimet|\bcm\b/i],
+  ['c', 'Convert cm and mm to mm', /\bmm\b|millimet|\bcm\b/i],
+  ['e', 'Subtract cm and mm', /\bmm\b|millimet|\bcm\b/i],
+  ['f', 'Multiply cm and mm by whole numbers', /\bmm\b|millimet|\bcm\b/i],
+  ['g', 'Divide cm and mm by whole numbers', /\bmm\b|millimet|\bcm\b/i],
+  ['i', 'Circumference and diameter', /circumference|diameter|round|edge/i],
   ['d', 'Operations on cm and mm; unit conversions', /\bmm\b|\bcm\b|\bm\b|\bkm\b|convert|change/i],
   ['h', 'Circumference and its link to diameter', /circumference|diameter|around .*(circle|round)/i],
 ]);
@@ -263,16 +278,32 @@ sub(6, M, 'Area', 'AREA', [
   ['b', 'Area of combined shapes', /combined|composite|L-shaped|shape made|area/i],
   ['c', 'Area of a circle by counting squares', /circle.*squares?|counting squares|squares?.*circle/i],
 ]);
-sub(6, M, 'Capacity', 'CAP', [['a', 'Litres, millilitres and cm³', /litres?|\bml\b|cm³|capacity/i]]);
+sub(6, M, 'Capacity', 'CAP', [
+  ['a', 'Litres, millilitres and cm³', /litres?|\bml\b|cm³|capacity/i],
+  ['b', 'Convert litres to millilitres', /litres?|\bml\b|millilitres?/i],
+  ['c', 'Convert millilitres to litres', /litres?|\bml\b|millilitres?/i],
+]);
 sub(6, M, 'Mass', 'MASS', [
   ['a', 'The tonne as a unit; items measured in tonnes', /tonnes?|lorry|truck/i],
+  ['b', 'Items measured in tonnes', /tonnes?/i],
+  ['c', 'The kilogram and the tonne', /tonnes?|\bkg\b/i],
+  ['d', 'Estimate mass in tonnes', /tonnes?|\bkg\b/i],
+  ['f', 'Add tonnes and kilograms', /tonnes?|\bkg\b/i],
+  ['g', 'Subtract tonnes and kilograms', /tonnes?|\bkg\b/i],
+  ['h', 'Multiply tonnes and kilograms', /tonnes?|\bkg\b/i],
+  ['i', 'Divide tonnes and kilograms', /tonnes?|\bkg\b/i],
   ['e', 'Kilograms and tonnes, all four operations', /tonnes?|\bkg\b/i],
 ]);
 sub(6, M, 'Time', 'TIME', [
+  ['a', 'Time in a.m. and p.m.', /a\.?m\.?|p\.?m\.?/i],
+  ['b', 'Write time in a.m. and p.m.', /a\.?m\.?|p\.?m\.?/i],
+  ['d', 'Convert between 12-hour and 24-hour time', /24|a\.?m\.?|p\.?m\.?|hours?|\d{2}:\d{2}/i],
   ['c', 'a.m. and p.m., and the 24-hour clock', /24|a\.?m\.?|p\.?m\.?|hours?|\d{2}:?\d{2}/i],
   ['e', 'Travel timetables', /timetable|departs?|arrives?|leaves|bus|train|matatu|journey/i],
 ]);
 sub(6, M, 'Money', 'MONEY', [
+  ['b', 'Buying and selling prices', /buy|buys|bought|sell|sells|sold|price|profit/i],
+  ['d', 'Loss from sales', /loss|lose|lost|bought|buys|sold|sells/i],
   ['a', 'Prepare a simple budget', /budget/i],
   ['c', 'Profit and loss', /profit|loss|buying price|selling price|sells?/i],
   ['e', 'Types of taxes', /\btax|VAT|duty|PAYE/i],
@@ -282,6 +313,7 @@ sub(6, G, 'Lines', 'LINES', [
   ['b', 'Bisect lines, construct perpendiculars by hand', /bisect|construct/i, 'hands'],
 ]);
 sub(6, G, 'Angles', 'ANGLES', [
+  ['c', 'Angles on a straight line sum to 180°', /straight|angle|°/i],
   ['a', 'Angles on a straight line and at a point', /straight line|at a point|angles?|°/i],
   ['b', 'Measure angles with a protractor', /protractor|measure|degrees?|°/i],
   ['d', 'Angle sum of rectangles and triangles', /triangle|rectangle|sum|°/i],
@@ -289,11 +321,15 @@ sub(6, G, 'Angles', 'ANGLES', [
 ]);
 sub(6, G, '3-D objects', '3D', [
   ['a', 'Vertices, faces and edges of solids; plane figures in 3-D', /vertices|faces?|edges?|net|cube|cuboid|cylinder|cone|pyramid|prism/i],
+  ['b', 'Faces and edges of cylinders', /cylinder|faces?|edges?|corners?/i],
+  ['c', 'Plane figures in 3-D objects', /faces?|plane|circle|square|triangle|rectangle|solid/i],
 ]);
 sub(6, D, 'Bar graphs', 'DATA', [
   ['a', 'Frequency tables', /frequency|tally|table/i],
   ['c', 'Pictographs and bar graphs from data', /graph|pictograph|chart|bar|how many|most|least|table|survey|data/i],
-  ['b', 'Draw graphs', /draw/i, 'hands'],
+  ['b', 'Pictographs from data', /pictograph|symbol/i],
+  ['d', 'Bar graphs from data', /bar graph|squares?|bars?|table/i],
+  ['e', 'Interpret bar graphs', /bar graph|bar/i],
 ]);
 
 // ---------------------------------------------------------------- Grade 7
@@ -412,6 +448,7 @@ sub(7, DP, 'Data handling', 'DATA', [
 
 // ---------------------------------------------------------------- Grade 8
 sub(8, N, 'Integers', 'INTEGERS', [
+  ['c', 'Add and subtract integers on the number line', /number line|floor|[−-]\d/i],
   ['a', 'Integers and the number line', /integer|number line|negative|−\d|-\d|below|floor|debt|above/i],
   ['b', 'Operations on integers', /[−-]\d|\(−?-?\d|integer|×|÷|\+/i],
 ]);
@@ -420,15 +457,25 @@ sub(8, N, 'Fractions', 'FRAC', [
   ['b', 'Fractions in real life', /\d\/\d.*(of|shamba|land|money|tank|class|bag|sold|spent|left)|(of|shamba|land|money|tank|class|bag|sold|spent|left).*\d\/\d/i],
 ]);
 sub(8, N, 'Decimals', 'DEC', [
+  ['c', 'Recurring decimals to fractions', /recurring|repeat|\.\.\./i],
+  ['e', 'Significant figures', /significant/i],
+  ['f', 'Standard form of a number', /standard form|× ?10|10[⁰¹²³⁴⁵⁶⁷⁸⁹⁻]/i],
+  ['g', 'Combined operations on decimals', /\d\.\d|work out/i],
+  ['h', 'Apply decimals in real life', /\d\.\d|sh /i],
   ['a', 'Convert decimals and fractions, recurring decimals', /recurring|repeating|\.\.\.|decimal|\d\.\d/i],
   ['b', 'Combined operations on decimals', /\d\.\d/],
   ['d', 'Standard form', /standard form|× ?10|scientific/i],
 ]);
 sub(8, N, 'Squares and square roots', 'SQUARES', [
+  ['c', 'Squares and square roots with a calculator', /square|²|calculator|√|root/i],
   ['a', 'Squares from tables', /square|²|tables?/i],
   ['b', 'Square roots from tables', /square root|√|tables?/i],
 ]);
 sub(8, N, 'Rates, ratio, proportions and percentages', 'RATES', [
+  ['b', 'Work out rates', /\brate\b|per (hour|day|kg|kilogram|litre|minute|person|km)/i],
+  ['d', 'Compare ratios', /ratio|:/i],
+  ['h', 'Percentage change', /per ?cent|%|increase|decrease/i],
+  ['i', 'Identify direct and inverse proportion', /proportion|relationship|double/i],
   ['a', 'Rates in real life', /\brate\b|per (hour|day|kg|litre|minute|person|km)|an hour|a day|a kg/i],
   ['c', 'Ratios: forming, comparing', /ratio|\d:\d/i],
   ['e', 'Divide a quantity in a given ratio', /share|divide|ratio|\d:\d/i],
@@ -442,6 +489,7 @@ sub(8, A, 'Algebraic expressions', 'EXPR', [
   ['c', 'Substitute values', /substitut|when [a-z] =|evaluate|expand|\(/i],
 ]);
 sub(8, A, 'Linear equations', 'EQUATIONS', [
+  ['c', 'Solve by elimination', /eliminat|solve|equations?|x \+ y/i],
   ['a', 'Form two equations in two unknowns', /two equations|form|let .*and/i],
   ['b', 'Solve by substitution and elimination', /solve|[a-z] =|equation|substitut|eliminat|[a-z]\s*[+−-]\s*\d?[a-z]\s*=/i],
   ['d', 'Apply in real life', /\b(cost|costs|altogether|together|sum|total)\b/i],
@@ -473,6 +521,8 @@ sub(8, G, 'Geometrical constructions', 'CONSTRUCT', [
   ['f', 'Circumscribed and inscribed circles', /circumscrib|inscribe|circumcentre|incentre|touch(es|ing) .*sides|through all three corners|passes? through .*vertices/i],
 ]);
 sub(8, G, 'Coordinates and graphs', 'GRAPHS', [
+  ['c', 'Plot points on the Cartesian plane', /point|coordinate|origin|\(-?\d|\(−?\d|plane/i],
+  ['h', 'Apply simultaneous equations in real life', /meet|charge|equal|graph/i],
   ['b', 'Identify and plot points', /\(-?\d+, ?-?\d+\)|point|coordinate|plot|axis/i],
   ['d', 'Table of values for a linear equation', /table of values|complete the table|table|find y when/i],
   ['e', 'A suitable scale', /\bscale\b/i],
@@ -480,6 +530,12 @@ sub(8, G, 'Coordinates and graphs', 'GRAPHS', [
   ['g', 'Solve simultaneous equations by graph', /(meet|cross|intersect)|simultaneous/i],
 ]);
 sub(8, G, 'Scale drawing', 'SCALE', [
+  ['a', 'Represent a length to a given scale', /\bscale\b|plan|1 ?cm/i],
+  ['c', 'Convert scale length to actual length', /\bscale\b|map|1 ?cm/i],
+  ['e', 'Write a linear scale in statement form', /\bscale\b|represents|map/i],
+  ['f', 'Interpret a linear scale in ratio form', /scale|1 ?:/i],
+  ['g', 'Write a linear scale in ratio form', /scale|ratio|1 ?:/i],
+  ['h', 'Convert statement form and ratio form', /scale|ratio|1 ?:|represents/i],
   ['b', 'Actual length and scale length', /\bscale\b|on the (map|plan|drawing)|represents|1 ?cm/i],
   ['d', 'Scales in statement and ratio form', /1 ?:|ratio form|statement|represents/i],
   ['i', 'Make a scale drawing', /make a scale drawing/i, 'hands'],
@@ -492,10 +548,16 @@ sub(8, G, 'Common solids', 'SOLIDS', [
   ['d', 'Distance between points on a surface', /shortest|distance|ant|along the (surface|faces?)/i],
 ]);
 sub(8, DP, 'Data presentation and interpretation', 'DATA', [
+  ['d', 'Interpret line graphs', /line graph|graph|price/i],
+  ['f', 'Mean of discrete data', /mean|average/i],
+  ['g', 'Median of discrete data', /median/i],
   ['b', 'Bar graphs and line graphs', /bar|line graph|graph/i],
   ['e', 'Mode, mean and median', /mode|mean|median|average|range/i],
 ]);
 sub(8, DP, 'Probability', 'PROB', [
+  ['c', 'Write experimental probabilities', /experiment|times|tries/i],
+  ['e', 'Probability as a decimal or percentage', /probab|decimal|percentage/i],
+  ['g', 'Recognise events by chance', /chance|sure|happens/i],
   ['a', 'Events involving chance', /chance|likely|certain|impossible|probab/i],
   ['b', 'Experimental probability', /experiment|tossed .*times|\d+ times|trials?|relative frequency/i],
   ['d', 'Probability as a fraction, decimal, percentage; combined events', /probab|chance/i],
@@ -621,14 +683,63 @@ sub(9, DP, 'Probability', 'PROB', [
 ]);
 
 // ---------------------------------------------------------------- Grades 1 to 3
-// Sub-strand level only. Grade 1 was not read; Grades 2 and 3 were read at
-// sub-strand level. One broad outcome each, so a skill has something to point at.
+// The design's own outcomes (curriculum/mathematics/g1.json to g3.json), attitude and "play games
+// on a device" outcomes left out as everywhere else: [letter, text, 1 if hands-on]. The text is
+// the design's. The signal is /./ because no one has written a pattern for these yet.
+const OFFICIAL_G1_3 = {
+  'MATH.G1.NUMBER.PRE_NUMBER_ACTIVITIES': [["a", "sort objects according to similar attributes in different situations", 1], ["b", "match objects with similar attributes in the environment", 1], ["c", "order objects according to given criteria in different situations", 1], ["d", "create patterns of different sizes and shapes using real objects", 1]],
+  'MATH.G1.NUMBER.WHOLE_NUMBERS': [["a", "count numbers forward up to 50", 0], ["b", "count numbers backward from 30", 0], ["c", "represent numbers 1 to 30 using concrete objects", 1], ["d", "read and write numbers 1 to 50 in symbols", 0], ["e", "read and write numbers 1 to 10 in words", 0], ["f", "identify missing numbers in number patterns up to 20", 0]],
+  'MATH.G1.NUMBER.ADDITION': [["a", "model addition as putting objects together", 1], ["b", "use ' +' and ' =' signs in writing addition statements", 0], ["c", "add 2 single-digit numbers in different situations", 0], ["d", "add 3 single-digit numbers in different contexts", 0], ["e", "add a 2-digit number to a 1-digit number without regrouping with sum not exceeding 50", 0], ["f", "work out missing numbers in patterns involving the addition of whole numbers up to 50", 0]],
+  'MATH.G1.NUMBER.SUBTRACTION': [["a", "model subtraction as 'taking away' using concrete objects", 1], ["b", "use the ' - ' and '='signs in writing subtraction sentences", 0], ["c", "subtract single digit numbers", 0], ["d", "subtract a 1-digit number from a 2-digit number without regrouping", 0], ["e", "work out missing numbers in patterns involving subtraction of whole numbers up to 50", 0]],
+  'MATH.G1.MEASUR.LENGTH': [["a", "collect objects of different lengths from the immediate environment", 1], ["b", "compare the length of objects using longer than, shorter than, and same as", 0], ["c", "measure length using arbitrary units", 1]],
+  'MATH.G1.MEASUR.MASS': [["a", "collect objects with different masses from the immediate environment", 1], ["b", "compare the mass of two objects using heavier than, lighter than, or same as", 0], ["c", "measure mass using arbitrary units", 1]],
+  'MATH.G1.MEASUR.CAPACITY': [["a", "collect containers of different capacities from the immediate environment", 1], ["b", "compare the capacity of two containers using more than, less than, and same as", 0], ["c", "measure capacity using arbitrary units", 1]],
+  'MATH.G1.MEASUR.TIME': [["a", "identify days of the week", 0], ["b", "relate days of the week to various activities", 0], ["c", "identify months of the year", 0]],
+  'MATH.G1.MEASUR.MONEY': [["a", "identify Kenyan currency coins", 0], ["b", "identify the sh.50 Kenyan currency note", 0], ["c", "count Kenyan currency coins one at a time", 0], ["d", "use money to buy up to 2 items without balance", 0]],
+  'MATH.G1.GEOMET.LINES': [["a", "identify straight lines in different situations", 0], ["b", "draw straight lines on different surfaces", 1], ["c", "identify curved lines in different situations", 0], ["d", "draw curved lines on different surfaces", 1], ["e", "recognise straight and curved lines from real objects in the environment", 0]],
+  'MATH.G1.GEOMET.SHAPES': [["a", "identify rectangles, triangles, and circles in objects from the environment", 0], ["b", "make patterns involving rectangles, triangles, circles, and ovals", 1]],
+  'MATH.G2.NUMBER.NUMBER_CONCEPT': [["a", "identify numbers 1 to 100 in symbols in different situations", 0], ["b", "represent numbers 1 to 100 using concrete objects from the environment", 1]],
+  'MATH.G2.NUMBER.WHOLE_NUMBERS': [["a", "count numbers forward up to 100 in different situations", 0], ["b", "count numbers backward from number 50", 0], ["c", "read and write numbers 1 to 100 in symbols in different situations", 0], ["d", "identify the place value of numbers in ones and tens", 0], ["e", "read and write numbers 1 to 20 in words", 0], ["f", "work out missing numbers in number patterns up to 100", 0]],
+  'MATH.G2.NUMBER.ADDITION': [["a", "add a 2 digit number to a 1 digit number without and with regrouping with sum not exceeding 100", 0], ["b", "add a 2 digit number to a 2 digit number without and with regrouping, with sum not exceeding 100", 0], ["c", "add two multiples of 10 whose sum does not exceed 100", 0], ["d", "work out missing numbers in patterns involving addition of whole numbers up to 100", 0]],
+  'MATH.G2.NUMBER.SUBTRACTION': [["a", "subtract a 1 digit number from a 2 digit number without regrouping", 0], ["b", "subtract a 2 digit number from a 2 digit number without and with regrouping", 0], ["c", "subtract a lower multiple of from a higher multiple of 10", 0], ["d", "work out missing numbers in patterns involving subtraction up to 100", 0]],
+  'MATH.G2.NUMBER.MULTIPLICATION': [["a", "represent multiplication as repeated addition using numbers 1, 2, 3, by 2 and 3", 0], ["b", "write repeated addition sentences as multiplication using ‘ ' sign", 0], ["c", "multiply 1 digit numbers by 1, 2, 3, 4 and 5", 0], ["d", "multiply 1 digit numbers by 10", 0]],
+  'MATH.G2.NUMBER.DIVISION': [["a", "represent division as equal sharing up to number 20 by 2", 0], ["b", "represent division as equal grouping of numbers up to 25 by 3", 0], ["c", "use ' ' sign in writing division statements", 0], ["d", "divide numbers up to 25 by 4 and 5 without a remainder", 0]],
+  'MATH.G2.NUMBER.FRACTIONS': [["a", "identify a as part of a whole in different situations", 0], ["b", "identify a as part of a whole in different situations", 0], ["c", "use fractions in day-to-day activities", 0]],
+  'MATH.G2.MEASUR.LENGTH': [["a", "measure length using fixed units", 1], ["b", "identify the metre as a unit of measuring length", 0], ["c", "measure length in metres", 0]],
+  'MATH.G2.MEASUR.MASS': [["a", "measure mass using fixed units", 1], ["b", "identify the kilogram as a unit of measuring mass", 0], ["c", "measure mass of different objects in kilograms", 0]],
+  'MATH.G2.MEASUR.CAPACITY': [["a", "measure capacity using fixed units", 1], ["b", "identify the litre as a unit of measuring capacity", 0], ["c", "measure capacity in litres", 0]],
+  'MATH.G2.MEASUR.TIME': [["a", "relate the months of the year to special occasions", 0], ["b", "recite the number of days in each month of the year", 1], ["c", "read the calendar in terms of day and date", 0], ["d", "measure time using arbitrary units", 1], ["e", "identify the minute and hour hand in clock face", 0], ["f", "read time by the hour from the clock face", 0], ["g", "write time by the hour shown by an analogue and digital clock", 0]],
+  'MATH.G2.MEASUR.MONEY': [["a", "identify Kenyan currency coins and notes up to sh.100", 0], ["b", "count the number of sh. 10 and sh. 20 coins in different situations", 0], ["c", "count the number of sh. 50 and sh. 100 notes in different situations", 0], ["d", "add two denominations of money with a sum not exceeding sh. 100", 0], ["e", "use money to buy up to 3 items without balance", 0]],
+  'MATH.G2.GEOMET.LINES': [["a", "model straight lines in different ways", 1], ["b", "draw straight lines in different ways", 1], ["c", "model curved lines in different ways", 1], ["d", "draw curved lines in different situations", 1]],
+  'MATH.G2.GEOMET.SHAPES': [["a", "identify different shapes in the environment", 0], ["b", "draw shapes in different ways", 1], ["c", "draw patterns involving different shapes", 1]],
+  'MATH.G3.NUMBER.NUMBER_CONCEPT': [["a", "order objects according size", 1], ["b", "identify position of objects from 1 st to 20 th", 0], ["c", "write the position of objects in numbers symbols and in words", 0]],
+  'MATH.G3.NUMBER.WHOLE_NUMBERS': [["a", "count numbers forward up to 1000 starting from any point", 0], ["b", "count numbers backward in multiples of 100 from 1000", 0], ["c", "identify the place value of numbers up to hundreds", 0], ["d", "read numbers 1 to 1000 in symbols", 0], ["e", "read and write numbers 1 to 100 in words", 0], ["f", "identify missing numbers in number patterns up to 1000", 0]],
+  'MATH.G3.NUMBER.ADDITION': [["a", "add a 3 digit number to up to a 2 digit number without regrouping with sum not exceeding 1000", 0], ["b", "add a 3 digit number to up to a 2 digit number with single regrouping with sum not exceeding 1000", 0], ["c", "add two 3 digit numbers without regrouping", 0], ["d", "add two 3 digit numbers with single regrouping with sum not exceeding 1000", 0], ["e", "create number patterns involving addition up to 1000", 1]],
+  'MATH.G3.NUMBER.SUBTRACTION': [["a", "subtract a 2-digit number from a 3 digit number without regrouping", 0], ["b", "Subtract a 2 digit number from a three digit number with single regrouping", 0], ["c", "subtract a 3 digit number from a 3 digit number with single regrouping", 0], ["d", "subtract up to 3 digit numbers involving missing numbers with single regrouping", 0], ["e", "work out missing numbers in number patterns involving subtraction up to 1000", 0]],
+  'MATH.G3.NUMBER.MULTIPLICATION': [["a", "model multiplication as repeated addition using numbers 1,2,3,4 and 5 by 4 and 5", 1], ["b", "multiply a single digit number by a single digit number", 0], ["c", "multiply single digit numbers by 10", 0]],
+  'MATH.G3.NUMBER.DIVISION': [["a", "represent division of numbers up to 50 by 4 and 5 as repeated subtraction", 0], ["b", "divide a 2 digit number by a single digit number without a remainder", 0], ["c", "divide a 2 digit number by 10 without a remainder", 0]],
+  'MATH.G3.NUMBER.FRACTIONS': [["a", "identify , and as part of a whole", 0], ["b", "identify , and as part of a group", 0]],
+  'MATH.G3.MEASUR.LENGTH': [["a", "measure length in metres", 0], ["b", "add length in metres", 0], ["c", "subtract length in metres", 0], ["d", "estimate length up to 10 metres", 0]],
+  'MATH.G3.MEASUR.MASS': [["a", "measure mass in kilograms", 0], ["b", "add mass in kilograms", 0], ["c", "subtract mass in kilograms", 0], ["d", "estimate mass up to 5 kilograms", 0]],
+  'MATH.G3.MEASUR.CAPACITY': [["a", "measure capacity in litres", 0], ["b", "add capacity in litres", 0], ["c", "subtract capacity in litres", 0], ["d", "estimate capacity up to 5 litres", 0]],
+  'MATH.G3.MEASUR.TIME': [["a", "identify the minute as a unit of measuring time", 0], ["b", "read and tell time using ‘past' and ‘to' the hour using the clock face", 0], ["c", "read and tell time using the digital clock or analogue clock", 0], ["d", "write time using ‘past' and ‘to' the hour", 0], ["e", "estimate time in hours", 0], ["f", "add time involving hours and minutes without conversion in real life situations", 0], ["g", "subtract time involving hours and minutes without conversion in real life situations", 0]],
+  'MATH.G3.MEASUR.MONEY': [["a", "identify Kenyan currency notes up to sh.1000", 0], ["b", "count money in different denominations up to sh.1000", 0], ["c", "add money involving different denominations up to a sh.1000", 0], ["d", "subtract money involving different denominations up to a sh.1000", 0], ["e", "represent the same amount of money in different denominations", 0], ["f", "convert money into different denominations", 0], ["g", "use money to buy up to 3 items involving balance", 0]],
+  'MATH.G3.GEOMET.POSITION_AND_DIRECTION': [["a", "move along a straight line from a point", 1], ["b", "identify the right and left side from a point", 0], ["c", "turn to the right from a point", 0], ["d", "turn to the left from a point", 0]],
+  'MATH.G3.GEOMET.SHAPES': [["a", "identify the shapes in a combined shape made of two different shapes", 0], ["b", "draw a combined shape made of 2 shapes", 1], ["c", "model a combined shape made of two shapes", 1]],
+};
+// Each sub-strand also keeps one broad '0' outcome (the sub-strand as a whole), which the
+// first families and every unmapped skill point at.
 for (const [grade, status, list] of [
   [1, 'unverified', [[N,'Pre-number activities','PRENUMBER'],[N,'Whole numbers','WHOLE'],[N,'Addition','ADD'],[N,'Subtraction','SUB'],[M,'Length','LENGTH'],[M,'Mass','MASS'],[M,'Capacity','CAP'],[M,'Time','TIME'],[M,'Money','MONEY'],[G,'Lines','LINES'],[G,'Shapes','SHAPES']]],
   [2, 'sub-strand', [[N,'Whole numbers','WHOLE'],[N,'Addition','ADD'],[N,'Subtraction','SUB'],[N,'Multiplication','MUL'],[N,'Division','DIV'],[N,'Fractions','FRAC'],[M,'Length','LENGTH'],[M,'Mass','MASS'],[M,'Capacity','CAP'],[M,'Time','TIME'],[M,'Money','MONEY'],[G,'Lines','LINES'],[G,'Shapes','SHAPES']]],
   [3, 'sub-strand', [[N,'Whole numbers','WHOLE'],[N,'Addition','ADD'],[N,'Subtraction','SUB'],[N,'Multiplication','MUL'],[N,'Division','DIV'],[N,'Fractions','FRAC'],[M,'Length','LENGTH'],[M,'Mass','MASS'],[M,'Capacity','CAP'],[M,'Time','TIME'],[M,'Money','MONEY'],[G,'Position and direction','POSITION'],[G,'Shapes','SHAPES']]],
 ]) {
-  for (const [strand, name, key] of list) sub(grade, strand, name, key, [['a', `${name}, as the design's sub-strand`, /./]], status);
+  for (const [strand, name, key] of list) {
+    // '0' is the broad sub-strand tag the first Grade 1 to 3 families carry. The design's own outcomes
+    // follow, with their own letters, so a skill can be tagged to the outcome it clearly tests.
+    const official = OFFICIAL_G1_3[substrandCode(grade, strand, name)] || [];
+    sub(grade, strand, name, key, [['0', `${name}, as the design's sub-strand`, /./], ...official.map(([letter, text, hands]) => [letter, text, /./, hands ? 'hands' : undefined])], status);
+  }
 }
 
 // ---------------------------------------------------------------- flat views

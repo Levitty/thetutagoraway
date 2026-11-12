@@ -53,6 +53,24 @@ export const PROMISED = {
   G9_CONSTRUCTION: ['G8.CONSTRUCT.c'],
 };
 
+// Grades 1 to 3: the design's own outcomes, tagged by hand where the skill's questions clearly test the
+// outcome (read from curriculum/mathematics/g1.json to g3.json, 12 Nov 2026). Everything else stays at the
+// sub-strand ('0') and is listed in docs/qa/new-families-2026-11-12.md.
+export const OFFICIAL_G1_3 = {
+  G1_COUNTING: ['G1.WHOLE.a'], G1_ADD: ['G1.ADD.c'], G1_SUB: ['G1.SUB.c'],
+  G1_LENGTH: ['G1.LENGTH.b'], G1_MASS: ['G1.MASS.b'], G1_CAPACITY: ['G1.CAP.b'],
+  G1_TIME: ['G1.TIME.a'], G1_MONEY: ['G1.MONEY.c'],
+  G1_LINES: ['G1.LINES.a', 'G1.LINES.c', 'G1.LINES.e'], G1_SHAPES: ['G1.SHAPES.a'],
+  G2_COUNTING: ['G2.WHOLE.a'], G2_PLACE_VALUE: ['G2.WHOLE.d'],
+  G2_ADD: ['G2.ADD.a', 'G2.ADD.b'], G2_SUB: ['G2.SUB.a', 'G2.SUB.b'],
+  G2_MULTIPLY_INTRO: ['G2.MUL.a'], G2_DIVISION_INTRO: ['G2.DIV.a'],
+  G2_FRACTIONS: ['G2.FRAC.a', 'G2.FRAC.b'], G2_SHAPES: ['G2.SHAPES.a'], G2_TIME: ['G2.TIME.f'],
+  G3_COUNTING: ['G3.WHOLE.c'], G3_ADD: ['G3.ADD.c', 'G3.ADD.d'], G3_SUB: ['G3.SUB.c'],
+  G3_MULTIPLY: ['G3.MUL.b'], G3_DIVIDE: ['G3.DIV.b'], G3_FRACTIONS: ['G3.FRAC.a', 'G3.FRAC.b'],
+  G3_MASS: ['G3.MASS.c'], G3_CAPACITY: ['G3.CAP.c'], G3_TIME: ['G3.TIME.c'],
+  G3_POSITION: ['G3.POSITION.b', 'G3.POSITION.c', 'G3.POSITION.d'],
+};
+
 const SENIOR_NOTE = 'No KICD design could be read for Grades 10 to 12 (the official links returned 404). These skills follow a traditional syllabus and are not matched to Core or Essential Mathematics.';
 const OUT_NOTE = 'Not in the KICD Grade 4 to 9 designs. May belong to Grade 10 Core (reported topics include quadratics, reflection, rotation, vectors); not verified.';
 
@@ -85,12 +103,14 @@ for (const [id, s] of Object.entries(SKILLS)) {
   if (!sub) { unmatched.push(`${id} ${grade} ${c?.substrand}`); tags[id] = { grade, status: 'unmatched' }; continue; }
   const texts = [];
   for (let i = 0; i < 60; i++) { try { texts.push(textOf(generateProblem(id, { kp: i % 6 }))); } catch { /* the gate reports it */ } }
-  const hit = sub.outcomes.filter(([letter, , signal, hands]) => !hands && texts.filter(t => signal.test(t)).length >= 6)
+  // Grades 1 to 3 have one broad outcome per sub-strand ('0') found by signal; the design's own outcomes are tagged by hand.
+  const hit = sub.outcomes.filter(([letter, , signal, hands]) => !hands && (sub.grade > 3 || letter === '0') && texts.filter(t => signal.test(t)).length >= 6)
     .map(([letter]) => `G${sub.grade}.${sub.key}.${letter}`);
-  const fromFamilies = FAMILIES.filter(f => f.skill === id).map(f => f.outcome);
-  const outcomes = [...new Set([...hit, ...(PROMISED[id] || []), ...fromFamilies])];
+  const fromFamilies = FAMILIES.filter(f => f.skill === id).map(f => f.outcome).filter(o => OUTCOMES[o]);   // Grade 5 curriculum-map families carry the official code, not HOREB's
+  const outcomes = [...new Set([...hit, ...(PROMISED[id] || []), ...(OFFICIAL_G1_3[id] || []), ...fromFamilies])];
   tags[id] = { grade: sub.grade, substrand: sub.key, status: sub.status, outcomes };
 }
+for (const k of Object.keys(OFFICIAL_G1_3)) for (const o of OFFICIAL_G1_3[k]) if (!OUTCOMES[o] || OUTCOMES[o].hands) throw new Error(`${k}: unknown or hands-on outcome ${o}`);
 for (const k of Object.keys(PROMISED)) for (const o of PROMISED[k]) if (!OUTCOMES[o]) throw new Error(`${k}: unknown outcome ${o}`);
 if (unmatched.length) console.log('UNMATCHED:\n  ' + unmatched.join('\n  '));
 
