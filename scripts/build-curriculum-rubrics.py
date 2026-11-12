@@ -22,7 +22,9 @@ import json, re, sys, pathlib
 
 SKIP = {'ire', 'hre'}
 LV = (('exceeds', 'EE'), ('meets', 'ME'), ('approaches', 'AE'), ('below', 'BE'))
-DST = pathlib.Path(__file__).resolve().parent.parent / 'curriculum'
+import os
+# CURRICULUM_DIR: another copy of the maps to add the same rubrics to (Tuta's read copy, ontology/curriculum, which can lag this one)
+DST = pathlib.Path(os.environ.get('CURRICULUM_DIR') or pathlib.Path(__file__).resolve().parent.parent / 'curriculum')
 STOP = set('the a an and or of to in on for with by at from as is are be can that this these those it its into their they them his her use using various variety different situations real life learner learners ability able appreciate state outline describe explain identify discuss demonstrate determine give list name show make apply carry out examine analyse assess evaluate recommend establish create design develop importance ways possible solutions challenges facing main day daily should would also about how what why when which where more other some any each both such than then there here very well good using used uses kuweza kutambua kueleza kutumia kuelezea kutaja kujadili'.split())
 
 def clean(t): return re.sub(r'\s+', ' ', str(t or '')).strip()
