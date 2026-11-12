@@ -13,3 +13,8 @@ Generated from this file:
 Question families carry `cskill` (a skill code here) and `outcome` (its official outcome code).
 
 Science and Technology Grade 5 (12 Nov 2026) is the first subject after Maths with skills, prerequisites and misconceptions: `science/g5.json` (33 skills, 48 prerequisites, 104 misconceptions, all proposed or draft). `node scripts/build-curriculum-map-science.mjs` writes `src/ai-tutor/content/curriculumMap.science.g5.js` and `engine/data/curriculum/science.g5.*.json`. Its question families (`sci_g5_*.js`, 84, all `reviewed: false`) carry `subject: 'science'`, `cskill` and `outcome`; their `skill` is their `cskill`, because science skills are not in the practice engine yet. Review document: `docs/qa/science-g5-2026-11-12.md`.
+
+
+## Adding a subject-grade
+
+A new subject-grade is wired through the subject registry (`src/ai-tutor/content/subjects/`), by adding files only. See `docs/adding-a-subject.md`.

@@ -4487,11 +4487,18 @@ async function learnerHome(p, deps) {
   return ok({ linked: true, home: buildHome(door.name, await store.homeSittings(door.id, c.ref), deps.now()) });
 }
 
+// src/learner/subjects.generated.js
+var SUBJECT_PREFIXES = {
+  MATH: "math",
+  SCIE: "science",
+  ENGL: "english"
+};
+
 // src/learner/subject.js
-var PREFIX = { MATH: "math", SCIE: "science", ENGL: "english" };
-var subjectOfCskill = (code) => PREFIX[String(code || "").split(".")[0]] || null;
+var subjectOfCskill = (code) => SUBJECT_PREFIXES[String(code || "").split(".")[0]] || null;
 
 // src/learner/evidence.js
+var OUTCOME_PREFIX = new RegExp(`^(${Object.keys(SUBJECT_PREFIXES).filter((k) => k !== "MATH").join("|")})\\.`);
 function homeworkEvidence({ homework, sitting, answer }) {
   const item = (sitting?.items || [])[Number(answer?.n) - 1];
   if (!item?.cskill || !homework?.door_id || !sitting?.learner_ref) return null;

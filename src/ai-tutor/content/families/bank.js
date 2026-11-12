@@ -1,3 +1,4 @@
+import { bankFamilies } from '../subjects/registry.js';
 // Every grade's families, in one list. Each file exports FAMILIES, an array.
 import { FAMILIES as GAPS } from './gaps.js';
 import { FAMILIES as G1_3 } from './g1_3.js';
@@ -15,11 +16,6 @@ import { FAMILIES as G5C_GEOMDATA } from './g5c_geomdata.js';
 
 // Grade 5 Mathematics written from the curriculum map (cskill on every one): see g5c_lib.js.
 export const G5_CURRICULUM = [...G5C_WHOLE, ...G5C_ADDSUB, ...G5C_MULDIV, ...G5C_FRACDEC, ...G5C_EQ, ...G5C_UNITS, ...G5C_MEAS, ...G5C_MONEY, ...G5C_GEOMDATA];
-// Grade 5 Science and Technology, written offline from the curriculum map (curriculum/science/g5.json): see sci_lib.js.
-import { FAMILIES as SCI_LIVING } from './sci_g5_living.js';
-import { FAMILIES as SCI_MATTER } from './sci_g5_matter.js';
-import { FAMILIES as SCI_FORCE } from './sci_g5_force.js';
-export const SCIENCE_G5 = [...SCI_LIVING, ...SCI_MATTER, ...SCI_FORCE];
 import { FAMILIES as G6 } from './g6.js';
 import { FAMILIES as G6_COV } from './g6_cov.js';
 import { FAMILIES as G8_COV } from './g8_cov.js';
@@ -32,4 +28,5 @@ import { FAMILIES as G7_NUM_ALG } from './g7_num_alg.js';
 import { FAMILIES as G7_MEASURE } from './g7_measure.js';
 import { FAMILIES as G7_GEO_DATA } from './g7_geo_data.js';
 
-export const GRADE_FAMILIES = [...SCIENCE_G5, ...G9_NUM_ALG, ...G9_MEASURE, ...G9_GEO_DATA, ...G8_NUM_ALG, ...G8_MEASURE_GEO, ...G7_NUM_ALG, ...G7_MEASURE, ...G7_GEO_DATA, ...G6, ...G6_COV, ...G8_COV, ...G5_CURRICULUM, ...G5, ...G4, ...G1_3, ...GAPS];
+// Subject-grades in the registry (subjects/registry.js) that ask to be in the bank (Science Grade 5 today) come first.
+export const GRADE_FAMILIES = [...bankFamilies(), ...G9_NUM_ALG, ...G9_MEASURE, ...G9_GEO_DATA, ...G8_NUM_ALG, ...G8_MEASURE_GEO, ...G7_NUM_ALG, ...G7_MEASURE, ...G7_GEO_DATA, ...G6, ...G6_COV, ...G8_COV, ...G5_CURRICULUM, ...G5, ...G4, ...G1_3, ...GAPS];

@@ -1,0 +1,5 @@
+# Generated subject-registry joins: one line per subject-grade, so two builders adding different subjects merge without a conflict.
+# After any merge run: npm run registry   (tests/registry.test.mjs fails if they are stale).
+src/ai-tutor/content/subjects/index.generated.js merge=union
+src/ai-tutor/content/subjects/strip.generated.js merge=union
+src/learner/subjects.generated.js merge=union
