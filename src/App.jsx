@@ -6412,6 +6412,11 @@ function AppInner() {
         {showPaywall && <PaywallModal user={auth.user} subscription={auth.subscription} onClose={() => setShowPaywall(false)} onUnlocked={auth.refetchSubscription} />}
       </>);
     }
+    // The live tutor is for the child, so their space opens it too (12 Nov 2026: tutagora.com/voice-tutor opened
+    // Mutua's home instead, because this space let only practice and writing through).
+    if (page === 'voice-tutor' && ROUTES.has('voice-tutor')) {
+      return <VoiceTutor user={auth.user} isAdmin={isAdmin} childId={studentMode.learnerId || ''} onNavigate={(to) => (to === 'voice-tutor' ? null : backToSpace())} />;
+    }
     if (page === 'writing' && !onTablet) {
       return <Writing userId={auth.user.id} studentName={studentMode.name} isNative={IS_NATIVE} lockedLearner={learner} onBack={backToSpace} onSignIn={() => {}} />;
     }

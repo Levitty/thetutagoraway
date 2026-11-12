@@ -79,7 +79,7 @@ function useWakeLock(on) {
 
 const MASCOT_LABEL = { listening: 'Listening', thinking: 'Thinking', speaking: 'Speaking' };
 
-export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) {
+export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, childId: lockedChildId = '' }) {
   useHorebLook();
   const { kind, boardH } = useLessonShape();
   const boardHRef = useRef(boardH);
@@ -92,7 +92,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null }) 
   const canMock = allowed || ENV.DEV === true;
   const [mode, setMode] = useState(q.get('mode') === 'live' && allowed ? 'remote' : 'mock');
   const [children, setChildren] = useState([]);
-  const [childId, setChildId] = useState('');
+  // Opened from a child's space, the lesson is that child's (their learner record and report).
+  const [childId, setChildId] = useState(lockedChildId || '');
   const [skill, setSkill] = useState('');
   const [session, rawDispatch] = useReducer(sessionReducer, null, () => newSession({ id: uid() }));
   // The pace follows what the child just said, and the very next request needs it: sessionRef is advanced here, at once,
