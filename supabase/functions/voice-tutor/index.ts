@@ -815,7 +815,57 @@ var shadedOf = (v, parts) => {
   need(new Set(v).size === v.length, "shaded: a part is listed twice");
   return [...v];
 };
-function checkStep(s, ctx, notes) {
+var ALIASES = {
+  say: { text: ["say", "sentence", "words", "speech", "line", "content"] },
+  ask: { prompt: ["question", "text"], expected: ["answer"] },
+  assess: { class: ["assess", "judgement", "judgment", "answer_class"] }
+};
+function repairStep(s, notes = []) {
+  if (!s || typeof s !== "object" || Array.isArray(s)) return s;
+  let x = s;
+  if (x.cmd == null) {
+    const keys = Object.keys(x);
+    if (typeof x.say === "string" && keys.every((k) => ["say", "move"].includes(k))) {
+      x = { cmd: "say", text: x.say, ...x.move != null ? { move: x.move } : {} };
+      notes.push("a step with no cmd read as a say");
+    } else if (typeof x.text === "string" && keys.every((k) => ["text", "move"].includes(k))) {
+      x = { cmd: "say", ...x };
+      notes.push("a step with no cmd read as a say");
+    } else return s;
+  }
+  const al = ALIASES[x.cmd];
+  if (al) {
+    for (const [field, names] of Object.entries(al)) {
+      for (const n of names) {
+        if (!(n in x) || n === field) continue;
+        if (n === "text" && x.cmd === "ask" && x.prompt != null) continue;
+        if (x[field] == null) {
+          const { [n]: v, ...rest } = x;
+          x = { ...rest, [field]: v };
+          notes.push(`${x.cmd}: field "${n}" read as ${field}`);
+        } else if (x[n] === x[field]) {
+          const { [n]: _v, ...rest } = x;
+          x = rest;
+          notes.push(`${x.cmd}: field "${n}" repeated ${field}, left out`);
+        }
+      }
+    }
+    if (x.cmd === "assess" && x.class != null && !ANSWER_CLASSES.includes(x.class)) return s;
+  }
+  if (x.cmd === "pause_for_child") {
+    if (x.expect == null) {
+      x = { ...x, expect: "any" };
+      notes.push("pause_for_child: expect not given, read as any");
+    }
+    if (x.max_wait_s == null) {
+      x = { ...x, max_wait_s: 30 };
+      notes.push("pause_for_child: max_wait_s not given, read as 30");
+    }
+  }
+  return x;
+}
+function checkStep(s0, ctx, notes) {
+  const s = repairStep(s0, notes);
   need(s && typeof s === "object" && !Array.isArray(s), "not an object");
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
@@ -858,7 +908,10 @@ function checkStep(s, ctx, notes) {
     case "say":
       out.text = str(s.text, LIMITS.say, "say", notes);
       if (s.move != null) out.move = String(s.move).replace(/[^A-Za-z -]/g, "").slice(0, 40);
-      need(out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 3, "say: more than three sentences");
+      {
+        const n = out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length;
+        if (n > 3) notes.push(`say: ${n} sentences (more than three)`);
+      }
       break;
     case "write_text":
       out.id = newId();
@@ -1139,7 +1192,27 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
   const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
   const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
   const steps2 = [];
+  const touched = /* @__PURE__ */ new Set();
   let closed = false;
+  const makeRoom = (wanted) => {
+    const free = () => items.size < MAX_BOARD_ITEMS && resolveSlot(used, wanted, soft);
+    const gone = [];
+    const drop = (id) => {
+      const it = items.get(id);
+      if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c);
+      items.delete(id);
+      ctx.ids.delete(id);
+      gone.push(id);
+    };
+    const want = new Set(cellsOf(wanted));
+    const holders = [...items.values()].filter((it) => it.slot && cellsOf(it.slot).some((c) => want.has(c)));
+    if (holders.length && holders.every((it) => !touched.has(it.id))) for (const it of holders) drop(it.id);
+    for (const it of [...items.values()]) {
+      if (free()) break;
+      if (!touched.has(it.id)) drop(it.id);
+    }
+    return free() ? gone : null;
+  };
   list2.forEach((s, index) => {
     const cmd = s && typeof s === "object" ? String(s.cmd ?? "").slice(0, 30) : null;
     if (index >= MAX_STEPS) {
@@ -1153,15 +1226,33 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
     try {
       const out = checkStep(s, ctx, notes);
       if (DRAWN.includes(out.cmd)) {
-        if (items.size >= MAX_BOARD_ITEMS) bad("the board is full (30 items): clear first");
-        const slot = resolveSlot(used, out.slot, soft);
-        if (!slot) bad("no free slot on the board: erase or clear first");
+        let slot = items.size < MAX_BOARD_ITEMS ? resolveSlot(used, out.slot, soft) : null;
+        if (!slot) {
+          const keep = { items: new Map(items), used: new Set(used), ids: new Set(ctx.ids) };
+          const gone = makeRoom(out.slot);
+          if (!gone) {
+            items.clear();
+            for (const [k, v] of keep.items) items.set(k, v);
+            used.clear();
+            for (const c of keep.used) used.add(c);
+            ctx.ids.clear();
+            for (const k of keep.ids) ctx.ids.add(k);
+            bad("no free slot on the board: everything on it is in use this turn; erase or clear first");
+          }
+          slot = resolveSlot(used, out.slot, soft);
+          if (gone.length) {
+            steps2.push({ cmd: "erase", targets: gone, ...out.on ? { on: out.on } : {}, ...out.delay_ms != null ? { delay_ms: out.delay_ms } : {} });
+            notes.push(`${out.id}: the board was full, so ${gone.join(", ")} ${gone.length === 1 ? "was" : "were"} erased to make room`);
+          }
+        }
         if (slot !== out.slot) notes.push(`${out.id}: moved from ${out.slot} to ${slot}`);
         out.slot = slot;
         for (const c of cellsOf(slot)) used.add(c);
         items.set(out.id, out);
         ctx.ids.add(out.id);
+        touched.add(out.id);
       }
+      if (MARKS.includes(out.cmd)) touched.add(out.target);
       if (out.cmd === "erase") for (const t of out.targets) {
         const it = items.get(t);
         if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c);
@@ -1187,6 +1278,62 @@ function validateTurn(raw, { board = [], allowedMis = null, skills = null, publi
     }
   });
   return { steps: steps2, dropped, notes };
+}
+var shadedText = (shaded, parts) => {
+  const n = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
+  if (!n) return "none shaded";
+  if (Array.isArray(shaded)) return `${n} shaded (part${n === 1 ? "" : "s"} ${shaded.join(", ")})`;
+  return n === parts ? "all shaded" : `${n} shaded`;
+};
+function describeItem(b) {
+  const at = b.slot ? ` at ${b.slot}` : "";
+  switch (b.cmd) {
+    case "write_text":
+      return `${b.id}: the words "${b.text}"${at}`;
+    case "write_math":
+      return `${b.id}: the maths ${b.expr}${at}`;
+    case "fraction_bar":
+      return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? "" : "s"}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ""}`;
+    case "shape":
+      return `${b.id}: a ${b.kind || "shape"}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+    case "number_line":
+      return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? "" : "s"} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(", ")}` : ""}`;
+    case "plot_points":
+      return `${b.id}: a graph${at} with ${(b.points || []).length} points`;
+    case "figure": {
+      const p = b.params || {};
+      const ctl = b.controls?.length ? ` (the child may: ${b.controls.join(", ")})` : "";
+      if (b.type === "fraction") {
+        const n = p.shape === "grid" ? (p.rows || 0) * (p.cols || 0) : p.parts;
+        const sec = p.second ? `; a second ${p.shape || "bar"} beside it, ${p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0)} parts, ${shadedText(p.second.shaded, p.second.parts)}` : "";
+        return `${b.id}: a fraction ${p.shape || "bar"}${at}, ${n} equal parts, ${shadedText(p.shaded, n)}${sec}${ctl}`;
+      }
+      if (b.type === "numberline") return `${b.id}: a number line${at} from ${p.from} to ${p.to}, ${p.divisions} steps${p.marker != null ? `, marker at ${p.marker}` : ""}${ctl}`;
+      return `${b.id}: a ${b.type} figure${at}${ctl}`;
+    }
+    default:
+      return `${b.id}: ${b.cmd}${at}`;
+  }
+}
+function freeSlots(board = [], inkCells = []) {
+  const used = new Set(board.flatMap((b) => b.slot ? cellsOf(b.slot) : []));
+  const ink = new Set(inkCells);
+  const out = [];
+  for (const r of ROWS) {
+    const halves = cellsOf(r).filter((c) => !used.has(c) && !ink.has(c));
+    if (halves.length === 2) out.push(r);
+    else out.push(...halves);
+  }
+  return out;
+}
+function boardLines(board = [], inkCells = []) {
+  const ink = (Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c));
+  const free = freeSlots(board, ink);
+  return [
+    `Board now (what the child sees): ${board.length ? board.map(describeItem).join("; ") : "empty"}.`,
+    ...ink.length ? [`The child has written in: ${ink.join(", ")} (keep clear).`] : [],
+    free.length ? `Free slots: ${free.join(", ")}.` : "Free slots: none. A new drawing erases the oldest items you have not used this turn (whatever is in the slot you ask for first); erase or clear first to choose."
+  ];
 }
 function doingOf(steps2 = []) {
   if (steps2.some((x) => x.cmd === "figure" && x.controls?.length || x.cmd === "ask" && x.form === "draw")) return "task";
@@ -5104,6 +5251,18 @@ var ASK_AGAIN = Object.freeze([
   "Sorry, I did not catch that. Say it again for me, nice and slowly.",
   "I still could not hear you well. Say it once more, or type your answer if you like."
 ]);
+var FIXES = [
+  [/\b(numer[a-z]{0,2}tor|new ?merator|humerator|numerater|numeriter)s?\b/gi, "numerator"],
+  [/\b(denom[a-z]{0,2}nator|de ?nominator|the nominator|denominater|denominate or|denomonator)s?\b/gi, "denominator"],
+  [/\b(quater|quatre|kwarter|quarta)s?\b/gi, "quarter"],
+  [/\b(equal valent|equivalence|equivelent|equivalant)\b/gi, "equivalent"],
+  [/\b(nort|noat|nougat)\b/gi, "nought"],
+  // "one half" heard as "won have", "one harf" (12 Nov 2026, test set scenario 27); "eights" for "eighths".
+  [/\b(won|wan|one) (have|harf|haf|hulf)\b/gi, "one half"],
+  [/\b(two|three|four|five|six|seven) (eights|aits)\b/gi, "$1 eighths"],
+  [/\b(two|three|four|five) (forths|fourth's)\b/gi, "$1 fourths"]
+];
+var fixMathsWords = (text) => FIXES.reduce((t, [re, to]) => t.replace(re, to), String(text || ""));
 var PACE_MIN = -2;
 var PACE_MAX = 1;
 var CHILD_SPEECH = Object.freeze({
@@ -5589,9 +5748,963 @@ var scrubNames = (text, names = []) => {
 };
 var fenceTeamText = (text) => String(text ?? "").replace(/[<>]/g, " ").slice(0, 1200);
 
+// src/ai-tutor/algebraEquivalence.js
+var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
+function canonicalise(raw) {
+  let s = String(raw ?? "").trim().toLowerCase();
+  s = s.replace(/[−–—]/g, "-");
+  s = s.replace(/⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + (m[0] === "\u207B" ? "-" : "") + [...m.replace("\u207B", "")].map((c) => SUP.indexOf(c)).join(""));
+  s = s.replace(/\*\*/g, "^");
+  s = s.replace(/[×·∙⋅]/g, "*").replace(/÷/g, "/");
+  s = s.replace(/(squareroot(of)?|sqrt)/g, "\u221A").replace(/\bpi\b|(?<=\d)pi\b/g, "\u03C0");
+  s = s.replace(/\s+/g, "");
+  return s;
+}
+function parse(src) {
+  let i = 0;
+  const peek = () => src[i];
+  const fail = () => {
+    throw new Error("parse");
+  };
+  function sum3() {
+    const terms = [{ sign: 1, e: term() }];
+    while (peek() === "+" || peek() === "-") {
+      const sign = src[i++] === "-" ? -1 : 1;
+      terms.push({ sign, e: term() });
+    }
+    return terms.length === 1 && terms[0].sign === 1 ? terms[0].e : { t: "sum", terms };
+  }
+  function term() {
+    const fs = [{ op: "*", e: unary() }];
+    for (; ; ) {
+      const c = peek();
+      if (c === "*" || c === "/") {
+        i++;
+        fs.push({ op: c, e: unary() });
+        continue;
+      }
+      if (c != null && /[a-z(π√]/.test(c)) {
+        fs.push({ op: "*", e: unary() });
+        continue;
+      }
+      if (c != null && /[\d.]/.test(c)) fail();
+      break;
+    }
+    return fs.length === 1 ? fs[0].e : { t: "prod", fs };
+  }
+  function unary() {
+    if (peek() === "-") {
+      i++;
+      return { t: "neg", e: unary() };
+    }
+    if (peek() === "+") {
+      i++;
+      return unary();
+    }
+    return power();
+  }
+  function power() {
+    const base = atom();
+    if (peek() === "^") {
+      i++;
+      return { t: "pow", a: base, n: unary() };
+    }
+    return base;
+  }
+  function atom() {
+    const c = peek();
+    if (c == null) fail();
+    if (/[\d.]/.test(c)) {
+      const m = src.slice(i).match(/^\d*\.?\d+/);
+      if (!m) fail();
+      i += m[0].length;
+      return { t: "num", k: parseFloat(m[0]) };
+    }
+    if (c === "\u03C0") {
+      i++;
+      return { t: "num", k: Math.PI };
+    }
+    if (c === "\u221A") {
+      i++;
+      return { t: "sqrt", e: atom() };
+    }
+    if (/[a-z]/.test(c)) {
+      i++;
+      return { t: "var", name: c };
+    }
+    if (c === "(") {
+      i++;
+      const e = sum3();
+      if (peek() !== ")") fail();
+      i++;
+      return { t: "br", e };
+    }
+    return fail();
+  }
+  const tree = sum3();
+  if (i !== src.length) fail();
+  return tree;
+}
+function evaluate(e, env) {
+  switch (e.t) {
+    case "num":
+      return e.k;
+    case "var":
+      return env[e.name];
+    case "br":
+      return evaluate(e.e, env);
+    case "neg":
+      return -evaluate(e.e, env);
+    case "sqrt":
+      return Math.sqrt(evaluate(e.e, env));
+    case "pow":
+      return Math.pow(evaluate(e.a, env), evaluate(e.n, env));
+    case "sum":
+      return e.terms.reduce((s, t) => s + t.sign * evaluate(t.e, env), 0);
+    case "prod":
+      return e.fs.reduce((p, f) => f.op === "/" ? p / evaluate(f.e, env) : p * evaluate(f.e, env), 1);
+    default:
+      return NaN;
+  }
+}
+var varsOf = (e, out = /* @__PURE__ */ new Set()) => {
+  if (!e || typeof e !== "object") return out;
+  if (e.t === "var") out.add(e.name);
+  for (const v of Object.values(e)) {
+    if (Array.isArray(v)) v.forEach((x) => varsOf(x.e ?? x, out));
+    else if (v && typeof v === "object") varsOf(v, out);
+  }
+  return out;
+};
+var ALGEBRA_CHARS = /^[a-z0-9.+\-*/^()√π]+$/;
+function parseAlgebra(raw) {
+  const s = canonicalise(raw);
+  if (!s || !ALGEBRA_CHARS.test(s) || !/[a-z]/.test(s)) return null;
+  if (/[a-z]{4,}/.test(s)) return null;
+  if (/^[a-z]{3}$/.test(s)) return null;
+  try {
+    return parse(s);
+  } catch {
+    return null;
+  }
+}
+var SAMPLES = [1.37, 2.71, 0.53, 3.19, 1.91, 4.43, 0.87];
+function sameValue(a, b) {
+  const names = [.../* @__PURE__ */ new Set([...varsOf(a), ...varsOf(b)])].sort();
+  let compared = 0;
+  for (let k = 0; k < SAMPLES.length; k++) {
+    const env = {};
+    names.forEach((n, j) => {
+      env[n] = SAMPLES[(k + 3 * j) % SAMPLES.length] + j * 0.11;
+    });
+    const x = evaluate(a, env), y = evaluate(b, env);
+    if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
+    if (Math.abs(x - y) > 1e-9 * Math.max(1, Math.abs(x), Math.abs(y))) return false;
+    compared++;
+  }
+  return compared >= 4;
+}
+var strip = (e) => e.t === "br" ? strip(e.e) : e;
+var hasBrackets = (s) => /[()]/.test(s);
+var topTerms = (e) => {
+  e = strip(e);
+  return e.t === "sum" ? e.terms.length : 1;
+};
+var isProduct = (e) => {
+  e = strip(e);
+  if (e.t === "neg") return isProduct(e.e);
+  return e.t === "prod" && e.fs.some((f) => strip(f.e).t === "sum" || f.e.t === "br") || e.t === "pow" && strip(e.a).t === "sum";
+};
+var likeKey = (t) => {
+  const pows = {};
+  const walk2 = (e, p) => {
+    e = strip(e);
+    if (e.t === "var") pows[e.name] = (pows[e.name] || 0) + p;
+    else if (e.t === "neg") walk2(e.e, p);
+    else if (e.t === "prod") e.fs.forEach((f) => walk2(f.e, f.op === "/" ? -p : p));
+    else if (e.t === "pow" && strip(e.n).t === "num") walk2(e.a, p * strip(e.n).k);
+    else if (e.t !== "num") pows["?" + JSON.stringify(e)] = 1;
+  };
+  walk2(t, 1);
+  return Object.keys(pows).filter((n) => pows[n]).sort().map((n) => n + pows[n]).join("");
+};
+var repeatsLikeTerm = (e) => {
+  e = strip(e);
+  if (e.t !== "sum") return false;
+  const keys = e.terms.map((t) => likeKey(t.e));
+  return new Set(keys).size < keys.length;
+};
+var uncollected = (e) => {
+  e = strip(e);
+  if (e.t === "prod") {
+    const bases = e.fs.map((f) => {
+      const g = strip(f.e);
+      return g.t === "pow" ? strip(g.a) : g;
+    });
+    if (bases.filter((b) => b.t === "num").length > 1) return true;
+    const names = bases.filter((b) => b.t === "var").map((b) => b.name);
+    if (new Set(names).size < names.length) return true;
+  }
+  for (const v of Object.values(e)) {
+    if (Array.isArray(v) && v.some((x) => uncollected(x.e ?? x))) return true;
+    if (v && typeof v === "object" && !Array.isArray(v) && v.t && uncollected(v)) return true;
+  }
+  return false;
+};
+var size = (e) => {
+  if (!e || typeof e !== "object") return 0;
+  let n = e.t ? 1 : 0;
+  for (const v of Object.values(e)) {
+    if (Array.isArray(v)) v.forEach((x) => {
+      n += size(x.e ?? x);
+    });
+    else if (v && typeof v === "object") n += size(v);
+  }
+  return n;
+};
+function wantedForm(question) {
+  const q = String(question ?? "").toLowerCase();
+  if (/\bexpand\b|\bremove the brackets\b|\bmultiply out\b/.test(q)) return "expanded";
+  if (/\bfactori[sz]e\b|\bfactor\b/.test(q)) return "factorised";
+  if (/\bsimplify\b|\bsimplest\b|\bcollect\b/.test(q)) return "simplified";
+  return null;
+}
+function formOk(userRaw, user, keyRaw, key, wanted) {
+  const u = canonicalise(userRaw), k = canonicalise(keyRaw);
+  if (topTerms(user) > topTerms(key)) return false;
+  if (repeatsLikeTerm(user) && !repeatsLikeTerm(key)) return false;
+  if (uncollected(user) && !uncollected(key)) return false;
+  if (size(user) > size(key) + 1) return false;
+  if (!hasBrackets(k) && hasBrackets(u)) return false;
+  if (isProduct(key) && !isProduct(user)) return false;
+  if (wanted === "expanded" && hasBrackets(u)) return false;
+  if (wanted === "factorised" && !isProduct(user)) return false;
+  if (wanted === "simplified" && repeatsLikeTerm(user)) return false;
+  return true;
+}
+function algebraicallyEqual(userRaw, keyRaw, question) {
+  const us = String(userRaw ?? "").split("="), ks = String(keyRaw ?? "").split("=");
+  if (us.length !== ks.length || us.length > 2) return false;
+  const wanted = wantedForm(question);
+  return us.every((u, i) => {
+    const kRaw = ks[i];
+    const key = parseAlgebra(kRaw);
+    if (!key) {
+      return us.length > 1 && canonicalise(u) === canonicalise(kRaw);
+    }
+    const user = parseAlgebra(u);
+    if (!user) return false;
+    return sameValue(user, key) && formOk(u, user, kRaw, key, wanted);
+  });
+}
+
+// src/ai-tutor/answerCheck.js
+function normalizeMath(str2) {
+  let s = str2.toString().trim().toLowerCase();
+  s = s.replace(/[−–—]/g, "-");
+  s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + [...m].map((c) => "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079".indexOf(c)).join(""));
+  s = s.replace(/\*\*/g, "^");
+  s = s.replace(/^(ksh|kes|sh|shs)\.?\s+/, "");
+  s = s.replace(/\/[=-]\s*$/, "");
+  s = s.replace(/\bremainder\b/g, "r");
+  s = s.replace(/\.\s*$/, "");
+  s = s.replace(/^(-?\d+)\s+(\d+\/\d+)$/, "$1+$2");
+  s = s.replace(/\s+/g, "");
+  s = s.replace(/cuberoot(of)?/g, "\u221B");
+  s = s.replace(/(squareroot(of)?|sqrt|root)/g, "\u221A");
+  s = s.replace(/√\((\d+)\)/g, "\u221A$1");
+  s = s.replace(/(^|\d)pi(?![a-z])/g, "$1\u03C0");
+  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, "$1$2");
+  s = s.replace(/\(([a-z])\)/g, "$1");
+  s = s.replace(/(\d)[*×·]([a-z])/g, "$1$2");
+  s = s.replace(/(\d)[*×·]\(/g, "$1(");
+  return s;
+}
+var COMPOUND_UNITS = [
+  { family: "time", big: /^(h|hr|hrs|hour|hours)$/, small: /^(min|mins|minute|minutes)$/, per: 60 },
+  { family: "mass", big: /^(kg|kgs|kilogram|kilograms|kilogramme|kilogrammes)$/, small: /^(g|gm|gms|gram|grams|gramme|grammes)$/, per: 1e3 },
+  { family: "length", big: /^(m|metre|metres|meter|meters)$/, small: /^(cm|cms|centimetre|centimetres|centimeter|centimeters)$/, per: 100 },
+  { family: "capacity", big: /^(l|ltr|ltrs|litre|litres|liter|liters)$/, small: /^(ml|mls|millilitre|millilitres|milliliter|milliliters)$/, per: 1e3 }
+];
+function compoundValue(raw) {
+  const m = raw.toString().trim().toLowerCase().replace(/\.$/, "").match(/^(\d+)\s*([a-z]+)\.?\s*(?:,|and|&)?\s*(\d+)\s*([a-z]+)\.?$/);
+  if (!m) return null;
+  const big = Number(m[1]), small = Number(m[3]);
+  const u = COMPOUND_UNITS.find((f) => f.big.test(m[2]) && f.small.test(m[4]));
+  if (!u || small >= u.per) return null;
+  return { family: u.family, small: big * u.per + small };
+}
+var UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%|m|l|g)+$/;
+var KEY_UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%)+$/;
+var CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs?|minutes?|mins?|seconds?|secs?|years?|yrs?|days?|weeks?|months?|km\/h|kmh|kph|m\/s|litres?|liters?|millilit(re|er)s?|kilograms?|grams?|kilomet(re|er)s?|centimet(re|er)s?|millimet(re|er)s?|met(re|er)s?|sq\.?(cm|m|km|mm|units?)|square(cm|m|km|mm|units?|centimet(re|er)s?|met(re|er)s?)|(cm|m|km|mm)sq|cubic(cm|m)|cc|people|pupils|children|students|marks|goats|cows|books|pencils|sweets|apples|oranges|mangoes|eggs|items|pieces|boxes|bags|trees|cars|buses|days)$/;
+var LENGTH_NAMES = { mm: "mm|millimet(?:re|er)s?", cm: "cms?|centimet(?:re|er)s?", m: "m|mtrs?|met(?:re|er)s?", km: "kms?|kilomet(?:re|er)s?" };
+var SIMPLE_UNITS = [
+  ["capacity", "ml", /^(ml|mls|millilit(re|er)s?)$/],
+  ["capacity", "l", /^(l|ltrs?|lit(re|er)s?)$/],
+  ["mass", "mg", /^(mg|milligrams?)$/],
+  ["mass", "g", /^(g|gms?|grams?|grammes?)$/],
+  ["mass", "kg", /^(kgs?|kilos?|kilograms?|kilogrammes?)$/],
+  ["mass", "t", /^(t|tonnes?|tons?)$/],
+  ["time", "s", /^(s|secs?|seconds?)$/],
+  ["time", "min", /^(mins?|minutes?)$/],
+  ["time", "h", /^(h|hrs?|hours?)$/],
+  ["time", "day", /^days?$/],
+  ["time", "week", /^(wks?|weeks?)$/],
+  ["time", "month", /^months?$/],
+  ["time", "year", /^(yrs?|years?)$/],
+  ["money", "sh", /^(ksh|kes|shs?|shillings?|bob)$/],
+  ["angle", "deg", /^(°|degs?|degrees?)$/],
+  ["percent", "%", /^(%|percent|percentage|percents)$/],
+  ["area", "ha", /^(ha|hectares?)$/],
+  ["area", "acre", /^acres?$/]
+];
+function readUnit(raw) {
+  const w = String(raw ?? "").toLowerCase().replace(/²/g, "2").replace(/³/g, "3").replace(/\^/g, "").replace(/[\s.]+/g, "").replace(/\bper\b|(?<=[a-z])per(?=[a-z])/g, "/").replace(/\/[=-]$/, "sh");
+  if (!w) return null;
+  if (w === "sh") return { family: "money", unit: "sh" };
+  if (w === "cc") return { family: "volume", unit: "cm3" };
+  for (const [family2, unit, re] of SIMPLE_UNITS) if (re.test(w)) return { family: family2, unit };
+  for (const [unit, names] of Object.entries(LENGTH_NAMES)) {
+    if (new RegExp(`^(${names})$`).test(w)) return { family: "length", unit };
+    if (new RegExp(`^((sq|square|squared)(${names})|(${names})(sq|square|squared|2))$`).test(w)) return { family: "area", unit: `${unit}2` };
+    if (new RegExp(`^((cu|cubic|cubed)(${names})|(${names})(cu|cubic|cubed|3))$`).test(w)) return { family: "volume", unit: `${unit}3` };
+  }
+  if (/^(m\/s2|ms-?2)$/.test(w)) return { family: "acceleration", unit: "m/s2" };
+  const rate2 = w.match(/^([^/]+)\/([^/]+)$/);
+  if (rate2) {
+    const top = readUnit(rate2[1]), under = readUnit(rate2[2]);
+    if (top && under) {
+      const family2 = top.family === "length" && under.family === "time" ? "speed" : top.family === "mass" && under.family === "volume" ? "density" : "rate";
+      return { family: family2, unit: `${top.unit}/${under.unit}` };
+    }
+  }
+  if (/^(kmh|kph|kmph)$/.test(w)) return { family: "speed", unit: "km/h" };
+  if (w === "mps") return { family: "speed", unit: "m/s" };
+  return null;
+}
+function mathValue(raw, child = false) {
+  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, "-");
+  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, "$1$2");
+  if (/\d\s*,\s*\d/.test(s)) return null;
+  s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, "");
+  s = s.replace(/\/[=-]$/, "");
+  s = s.replace(/^[a-z]\s*=\s*/, "");
+  s = s.replace(/\.$/, "");
+  s = s.replace(/\bremainder\b/, "r");
+  if (child) s = s.replace(/^\(\s*([+-]?)\s*(\d*\.?\d+)\s*\)$/, (_, sign, n) => (sign === "-" ? "-" : "") + n);
+  if (child) s = s.replace(/^\+\s*(?=\d)/, "");
+  const mixed2 = s.match(/^(-?\d+)\s+(\d+)\/(\d+)$/);
+  if (mixed2) {
+    const whole = parseInt(mixed2[1]);
+    const num4 = parseInt(mixed2[2]) / parseInt(mixed2[3]);
+    return whole < 0 ? whole - num4 : whole + num4;
+  }
+  s = s.replace(/\s+/g, "").replace(/^=+/, "");
+  const frac2 = s.match(/^(-?\d+)\/(-?\d+)$/);
+  if (frac2) {
+    const d = parseInt(frac2[2]);
+    return d === 0 ? null : parseInt(frac2[1]) / d;
+  }
+  if (child) {
+    const tail = s.match(/^(-?\d*\.?\d+)([^\d.].*)$/);
+    if (tail && readUnit(tail[2])) return parseFloat(tail[1]);
+  }
+  if (child) s = s.replace(CHILD_UNIT_WORDS, "").replace(/\/[=-]$/, "");
+  const pct3 = s.match(/^(-?\d*\.?\d+)%$/);
+  if (pct3) return parseFloat(pct3[1]);
+  const stripped = s.replace(child ? UNIT_SUFFIX : KEY_UNIT_SUFFIX, "");
+  if (/^-?\d*\.?\d+$/.test(stripped)) return parseFloat(stripped);
+  return null;
+}
+function decimalsOf(raw) {
+  const m = raw.toString().match(/\.(\d+)/);
+  return m ? m[1].length : 0;
+}
+function numbersMatch(userVal, acceptRaw, acceptVal) {
+  const dec2 = decimalsOf(acceptRaw);
+  if (dec2 === 0) return Math.abs(userVal - acceptVal) < 0.01;
+  const tol = 0.5 * Math.pow(10, -dec2) + 1e-9;
+  return Math.abs(userVal - acceptVal) <= tol;
+}
+var NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12 };
+var hourOf = (w) => /^\d+$/.test(w) ? Number(w) : NUM_WORDS[w];
+function timeValue(raw) {
+  let t = raw.toString().trim().toLowerCase().replace(/\s+/g, " ").replace(/\.$/, "");
+  t = t.replace(/\b(a\.?\s?m\.?|p\.?\s?m\.?|hrs|hours|h)$/, "").trim();
+  let m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})$/);
+  if (m && Number(m[2]) < 60 && Number(m[1]) <= 24) return Number(m[1]) % 12 * 60 + Number(m[2]);
+  m = t.match(/^(\d{1,2}|[a-z]+)\s*(o'?clock|o clock|oclock)?$/);
+  if (m && m[2] && hourOf(m[1]) != null) return hourOf(m[1]) % 12 * 60;
+  m = t.match(/^half past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[1]) != null) return hourOf(m[1]) % 12 * 60 + 30;
+  m = t.match(/^(a )?quarter past (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return hourOf(m[2]) % 12 * 60 + 15;
+  m = t.match(/^(a )?quarter to (\d{1,2}|[a-z]+)$/);
+  if (m && hourOf(m[2]) != null) return (hourOf(m[2]) + 11) % 12 * 60 + 45;
+  return null;
+}
+var isClockKey = (a) => /^\d{1,2}:\d{2}$/.test(String(a).trim());
+var MERIDIEM = /^(\d{1,2})\s*[:.]\s*(\d{2})\s*([ap])\.?\s*m\.?$/;
+var meridiemTime = (raw) => {
+  const t = String(raw ?? "").trim().toLowerCase().replace(/\s+/g, " ");
+  let m = t.match(MERIDIEM);
+  if (m) {
+    const h = Number(m[1]), mi = Number(m[2]);
+    if (h < 1 || h > 12 || mi > 59) return null;
+    return { h: h % 12 + (m[3] === "p" ? 12 : 0), mi, meridiem: true };
+  }
+  m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})\s*(hrs|h|hours)?$/);
+  if (m) {
+    const h = Number(m[1]), mi = Number(m[2]);
+    if (mi <= 59 && (h === 0 || h >= 13 && h <= 23)) return { h, mi, meridiem: false };
+  }
+  return null;
+};
+var isMeridiemKey = (a) => meridiemTime(a)?.meridiem === true;
+var COMPASS = { n: "north", s: "south", e: "east", w: "west", ne: "north east", nw: "north west", se: "south east", sw: "south west" };
+var SHORT_NAMES = [
+  "monday",
+  "tuesday",
+  "wednesday",
+  "thursday",
+  "friday",
+  "saturday",
+  "sunday",
+  "january",
+  "february",
+  "march",
+  "april",
+  "may",
+  "june",
+  "july",
+  "august",
+  "september",
+  "october",
+  "november",
+  "december"
+];
+var expandShort = (w) => {
+  const x = w.toLowerCase().replace(/[.\s-]/g, "");
+  if (COMPASS[x]) return COMPASS[x].replace(" ", "");
+  if (x.length >= 3) {
+    const hit = SHORT_NAMES.filter((n) => n.startsWith(x));
+    if (hit.length === 1) return hit[0];
+  }
+  return x;
+};
+function exactValue(problem) {
+  const v = problem?.verify?.value;
+  if (typeof v === "number" && Number.isFinite(v)) return v;
+  const q = String(problem?.question || "").replace(/[−–]/g, "-").replace(/\s*=\s*\??\s*$/, "").trim();
+  let m = q.match(/^(-?\d+(?:\.\d+)?)\s*([+\-×x*÷/])\s*(-?\d+(?:\.\d+)?)$/);
+  if (m) {
+    const a = +m[1], b = +m[3], op = m[2];
+    const r = op === "+" ? a + b : op === "-" ? a - b : op === "\xF7" || op === "/" ? b ? a / b : NaN : a * b;
+    return Number.isFinite(r) ? r : null;
+  }
+  m = q.match(/write (\d+)\/(\d+) as a decimal/i);
+  if (m && +m[2]) return +m[1] / +m[2];
+  return null;
+}
+var unitAfterNumber = (raw) => {
+  const t = String(raw ?? "").trim().replace(/[−–—]/g, "-").replace(/\.$/, "");
+  if (/^(ksh|kes|shs?)\b\.?\s*-?\d/i.test(t)) return readUnit("sh");
+  const m = t.match(/^\(?[+-]?\s*(?:\d[\d,]*)?(?:\.\d+)?(?:\s+\d+\/\d+|\/\d+)?\)?\s*([^\d\s.,/(][^]*|\/[=-])$/);
+  return m ? readUnit(m[1]) : null;
+};
+var sameUnit = (a, b) => a.unit === b.unit || a.unit === "ml" && b.unit === "cm3" || a.unit === "cm3" && b.unit === "ml";
+var ASK_WORDS = [
+  ["area", /\barea\b/i],
+  ["volume", /\bvolume\b/i],
+  ["capacity", /\bcapacity\b/i],
+  ["length", /\b(perimeter|circumference|length|width|breadth|height|distance|radius|diameter|how far|how tall|how wide|how high|lower bound|upper bound)\b/i],
+  ["mass", /\b(mass|weight|how heavy)\b/i],
+  ["speed", /\b(speed|velocity)\b/i],
+  ["density", /\bdensity\b/i],
+  ["angle", /\b(angle|bearing)\b/i],
+  ["time", /\b(time|how long (?:does|did|will|would))\b/i],
+  ["money", /\b(cost|price|profit|loss|commission|interest|discount)\b/i]
+];
+var ASK_VERB = /\b(find|calculate|work out|determine|what|which|state|give)\b/i;
+function askedKind(sentence) {
+  const verb = sentence.match(ASK_VERB);
+  const hits = ASK_WORDS.flatMap(([family2, re]) => {
+    const m = (verb ? sentence.slice(verb.index) : sentence).match(re);
+    return m ? [{ family: family2, at: m.index, bound: /bound/i.test(m[0]) }] : [];
+  });
+  if (!hits.length) return null;
+  if (hits.some((h) => h.bound)) return null;
+  if (verb) return hits.sort((a, b) => a.at - b.at)[0].family;
+  return hits.length === 1 ? hits[0].family : null;
+}
+function unitsInText(text) {
+  const out = [];
+  const add = (w) => {
+    const u = readUnit(w);
+    if (u) out.push(u);
+  };
+  for (const m of text.matchAll(/(?:square|sq\.?|cubic)\s+[a-z]+|\b[a-z]{2,}(?:[²³]|\^[23])?(?:\s*(?:\/|per)\s*[a-z]+(?:[²³]|\^[23])?)?/gi)) add(m[0]);
+  for (const m of text.matchAll(/\d\s*(m|g|l|h|s|t)(?:[²³]|\^[23])?(?:\/[a-z]+(?:[²³]|\^[23])?)?(?![a-z0-9])/g)) add(m[0].replace(/^\d\s*/, ""));
+  if (/\d\s*°/.test(text)) add("\xB0");
+  if (/\b(ksh|kes)\.?\s*\d/i.test(text)) add("sh");
+  return out;
+}
+var isAlgebraText = (t) => /\d[a-z]\s*[-+=×]|[-+=]\s*\d*[a-z]\b|\b[a-z]\s*=/.test(t);
+var GEOMETRY = { length: 1, area: 2, volume: 3 };
+function unitsOfKind(family2, units) {
+  const same = units.filter((u) => u.family === family2);
+  const power = GEOMETRY[family2];
+  if (power > 1) {
+    for (const u of units) if (u.family === "length") same.push({ family: family2, unit: `${u.unit}${power}` });
+  }
+  return same;
+}
+function askedUnit(problem) {
+  const instruction = String(problem?.instruction || "");
+  const question = String(problem?.question || "");
+  const text = `${instruction} ${question}`.trim();
+  if (isAlgebraText(text)) return null;
+  const said = [];
+  const pushSaid = (w, original) => {
+    if (original.length === 1 && original !== original.toLowerCase()) return;
+    const u = readUnit(w);
+    if (u) said.push(u);
+  };
+  for (const m of text.matchAll(/how many\s+((?:square\s+|cubic\s+)?([a-z]+(?:\s*(?:\/|per\b)\s*[a-z]+)?))/gi)) pushSaid(m[1], m[2]);
+  if (!said.length) {
+    for (const m of text.matchAll(/\b(?:in|into|to)\s+(?:the\s+unit\s+)?((?:square\s+|sq\.?\s+|cubic\s+)?([a-z]+(?:[²³23]|\^[23])?(?:\s*(?:\/|per\b)\s*[a-z]+(?:[²³23]|\^[23])?)?))(?![a-z])/gi)) pushSaid(m[1], m[2]);
+    for (const m of text.matchAll(/\(\s*((?:square\s+|cubic\s+)?([a-z]+(?:[²³])?(?:\/[a-z]+[²³]?)?))\s*\)\s*\??\s*$/gi)) pushSaid(m[1], m[2]);
+  }
+  if (said.length) return { units: said };
+  const units = unitsInText(text);
+  const sentences = question.replace(/(\s*\([^()]*\))+\s*$/, "").split(/(?<=[.?!])\s+/).filter(Boolean);
+  const kind = askedKind(sentences[sentences.length - 1] || "") || askedKind(instruction);
+  if (kind) return { family: kind, units: unitsOfKind(kind, units) };
+  const groups = new Set(units.filter((u) => u.family !== "percent").map((u) => GEOMETRY[u.family] ? "geometry" : u.family));
+  if (groups.size !== 1) return null;
+  const only = [...groups][0];
+  if (!["geometry", "mass", "capacity"].includes(only)) return null;
+  return only === "geometry" ? { group: "geometry", units } : { family: only, units: units.filter((u) => u.family === only) };
+}
+function unitConflict(userAnswer, problem) {
+  const given = unitAfterNumber(userAnswer);
+  if (!given) return false;
+  const asked = askedUnit(problem);
+  if (!asked) return false;
+  if (given.family === "percent" && !asked.family) return false;
+  if (asked.group === "geometry") {
+    if (!GEOMETRY[given.family]) return true;
+    const samePower = asked.units.filter((u) => u.family === given.family);
+    return samePower.length > 0 && !samePower.some((u) => sameUnit(u, given));
+  }
+  if (asked.family) {
+    if (given.family === "percent") return false;
+    const liquid = /* @__PURE__ */ new Set(["volume", "capacity"]);
+    if (asked.family !== given.family) return !(liquid.has(asked.family) && liquid.has(given.family));
+    return asked.units.length > 0 && !asked.units.some((u) => sameUnit(u, given));
+  }
+  return !asked.units.some((u) => sameUnit(u, given));
+}
+function checkAnswerMatch(userAnswer, problem) {
+  const normalizedUser = normalizeMath(userAnswer);
+  const accepts2 = problem.accepts || [problem.answer];
+  if (accepts2.some((a) => normalizedUser === normalizeMath(a))) return true;
+  const wordy = (t) => t.toString().trim().toLowerCase().replace(/[-_]/g, " ").replace(/[.!]+$/, "").replace(/^(it is|it's|its|they are|they're|this is|the answer is|answer:?)\s+/, "").replace(/^(a|an|the)\s+/, "").replace(/\s+(lines?|angles?|angled|triangles?|shapes?|polygons?)$/, "").replace(/\s+/g, "");
+  if (/^[a-z][a-z\s'-]*$/i.test(userAnswer.toString().trim())) {
+    const w = wordy(userAnswer);
+    if (w && accepts2.some((a) => /^[a-z][a-z\s'-]*$/i.test(String(a).trim()) && wordy(a) === w)) return true;
+  }
+  if (accepts2.some(isClockKey)) {
+    const tv2 = timeValue(userAnswer);
+    if (tv2 != null && accepts2.some((a) => isClockKey(a) && timeValue(a) === tv2)) return true;
+  }
+  if (accepts2.some(isMeridiemKey)) {
+    const u = meridiemTime(userAnswer);
+    if (u && accepts2.some((a) => {
+      const k = meridiemTime(a);
+      return k?.meridiem && k.h === u.h && k.mi === u.mi;
+    })) return true;
+  }
+  if (/^[a-z][a-z.\s-]{0,10}$/i.test(userAnswer.toString().trim())) {
+    const u = expandShort(userAnswer.toString().trim());
+    if (accepts2.some((a) => /^[a-z][a-z\s-]*$/i.test(String(a).trim()) && expandShort(String(a).trim()) === u && u.length > 2)) return true;
+  }
+  const numList = (t) => {
+    const x = t.toString().toLowerCase().replace(/[−–—]/g, "-").replace(/°|degrees?/g, "").replace(/(^|[\s,])[a-zθ]\s*=\s*/g, "$1").replace(/\s+(and|or|&)\s+/g, ",").replace(/;/g, ",");
+    if (!/^[\s\d.,-]+$/.test(x)) return null;
+    const parts = x.split(",").map((v) => v.trim()).filter(Boolean);
+    if (parts.length < 2 || parts.some((v) => !/^-?\d*\.?\d+$/.test(v))) return null;
+    return parts.map(Number).sort((a, b) => a - b);
+  };
+  const userList = numList(userAnswer);
+  const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
+  if (userList && accepts2.some((a) => {
+    if (!isSet(a)) return false;
+    const k = numList(a);
+    return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9);
+  })) return true;
+  const named = (t) => {
+    const s = t.toString().toLowerCase().replace(/[−–—]/g, "-");
+    const NV = /([a-z])\s*=\s*(-?\d+(?:\.\d+)?(?:\/\d+)?)/g;
+    const found = [...s.matchAll(NV)];
+    if (found.length < 2 || s.replace(NV, "").replace(/\b(and|&)\b|[\s,;&]/g, "")) return null;
+    const out = {};
+    for (const [, k, v] of found) {
+      if (k in out) return null;
+      out[k] = v.includes("/") ? Number(v.split("/")[0]) / Number(v.split("/")[1]) : Number(v);
+    }
+    return out;
+  };
+  const sameNamed = (u, k) => Object.keys(u).length === Object.keys(k).length && Object.keys(k).every((x) => x in u && Math.abs(u[x] - k[x]) < 1e-9);
+  const keyPairs = accepts2.map((a) => named(a)).filter(Boolean);
+  if (keyPairs.length) {
+    const u = named(userAnswer);
+    if (u && keyPairs.some((k) => sameNamed(u, k))) return true;
+    const bare = userAnswer.toString().trim().replace(/[−–—]/g, "-").replace(/\s+(and|&)\s+/gi, ",");
+    if (/^-?\d+(\.\d+)?(\s*[,;\s]\s*-?\d+(\.\d+)?)+$/.test(bare)) {
+      const vals = bare.split(/\s*[,;\s]\s*/).map(Number);
+      if (keyPairs.some((k) => {
+        const ks = Object.keys(k).sort();
+        return ks.length === vals.length && ks.every((x, i) => Math.abs(k[x] - vals[i]) < 1e-9);
+      })) return true;
+    }
+  }
+  const sumKey = (s) => {
+    if (!/[a-z]/.test(s)) return null;
+    if (/[()]/.test(s)) return null;
+    if (/\^-/.test(s)) return null;
+    if (/\de[-+]?\d/.test(s)) return null;
+    const terms = s.replace(/-/g, "+-").split("+").filter(Boolean);
+    if (terms.length < 2 || terms.some((t) => t === "-")) return null;
+    return terms.sort().join("|");
+  };
+  const sidesKey = (s) => {
+    const parts = s.split("=");
+    if (parts.length < 2) {
+      const k = sumKey(s);
+      return k && `|${k}`;
+    }
+    const keys = parts.map((p) => sumKey(p) ?? p);
+    return keys.some((k, i) => k !== parts[i]) ? keys.join("=") : null;
+  };
+  const userKey = sidesKey(normalizedUser);
+  if (userKey && accepts2.some((a) => sidesKey(normalizeMath(a)) === userKey)) return true;
+  const cu = compoundValue(userAnswer);
+  if (cu && accepts2.some((a) => {
+    const k = compoundValue(a);
+    return k && k.family === cu.family && k.small === cu.small;
+  })) return true;
+  if (accepts2.some((a) => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
+  if (/simplest form|simplify|lowest terms/i.test(`${problem.instruction || ""} ${problem.question || ""}`)) {
+    const f = userAnswer.toString().trim().replace(/[−–—]/g, "-").match(/^(?:-?\d+\s+)?(-?\d+)\s*\/\s*(\d+)$/);
+    const gcd7 = (m, n) => n ? gcd7(n, m % n) : Math.abs(m);
+    if (f && gcd7(Number(f[1]), Number(f[2])) > 1) return false;
+  }
+  const userVal = mathValue(userAnswer, true);
+  const givenUnit = unitAfterNumber(userAnswer);
+  const keyUnits = accepts2.map(unitAfterNumber);
+  const keyHasUnit = keyUnits.some(Boolean);
+  const unitFits = (i) => !givenUnit || !keyHasUnit || (keyUnits[i] ? sameUnit(givenUnit, keyUnits[i]) : keyUnits.some((u) => u && sameUnit(givenUnit, u)));
+  if (userVal != null && (keyHasUnit || !unitConflict(userAnswer, problem))) {
+    const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
+    const exact = exactValue(problem);
+    const wholeKey = /^-?\d+$/.test(String(problem.answer ?? "").trim());
+    if (accepts2.some((a, i) => {
+      if (!unitFits(i)) return false;
+      if (wholeKey && /^\s*-?\d+\s*\/\s*\d+\s*$/.test(String(a))) return false;
+      const aVal = mathValue(a) ?? (keyUnits[i] ? mathValue(a, true) : null);
+      if (aVal == null) return false;
+      if (!typedDecimal) return Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
+      if (exact != null && Math.abs(exact - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal))) return Math.abs(userVal - exact) <= 1e-9 * Math.max(1, Math.abs(exact));
+      return numbersMatch(userVal, a, aVal);
+    })) return true;
+  }
+  const coordUser = normalizedUser.replace(/[()]/g, "");
+  if (accepts2.some((a) => /,/.test(String(a)) && normalizeMath(a).replace(/[()]/g, "") === coordUser)) return true;
+  return false;
+}
+
+// src/school/homeworkSitting.js
+var norm2 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
+function markItem(it, response) {
+  const raw = String(response ?? "").trim();
+  if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
+  if (it.kind === "choice") {
+    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm2(x.text) === norm2(raw));
+    if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
+    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
+  }
+  const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
+  if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
+  const w = (it.wrong || []).find((x) => x.mis && (norm2(x.value) === norm2(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
+  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
+}
+
+// src/voice-tutor/spokenAnswer.js
+var UNITS = { zero: 0, one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12, thirteen: 13, fourteen: 14, fifteen: 15, sixteen: 16, seventeen: 17, eighteen: 18, nineteen: 19 };
+var TENS2 = { twenty: 20, thirty: 30, forty: 40, fifty: 50, sixty: 60, seventy: 70, eighty: 80, ninety: 90 };
+var SW = { moja: 1, mbili: 2, tatu: 3, nne: 4, tano: 5, sita: 6, saba: 7, nane: 8, tisa: 9, kumi: 10 };
+var DEN = {
+  half: 2,
+  halves: 2,
+  third: 3,
+  thirds: 3,
+  quarter: 4,
+  quarters: 4,
+  fourth: 4,
+  fourths: 4,
+  fifth: 5,
+  fifths: 5,
+  sixth: 6,
+  sixths: 6,
+  seventh: 7,
+  sevenths: 7,
+  eighth: 8,
+  eighths: 8,
+  ninth: 9,
+  ninths: 9,
+  tenth: 10,
+  tenths: 10,
+  eleventh: 11,
+  elevenths: 11,
+  twelfth: 12,
+  twelfths: 12,
+  hundredth: 100,
+  hundredths: 100
+};
+var SINGLE = /* @__PURE__ */ new Set(["half", "third", "quarter", "fourth", "fifth", "sixth", "seventh", "eighth", "ninth", "tenth", "eleventh", "twelfth"]);
+var SW_DEN = { nusu: 2, robo: 4, theluthi: 3 };
+var NEGATE = /* @__PURE__ */ new Set(["not", "isnt", "isn't", "arent", "aren't", "never", "nor"]);
+var FILLERS = /* @__PURE__ */ new Set(["um", "umm", "ummm", "uh", "uhh", "uhm", "hmm", "hmmm", "mm", "mmm", "er", "erm", "ah", "ahh", "eh", "ehh", "so", "like", "well", "wait", "oh", "aaa", "eee", "mmh", "let", "me", "think"]);
+var LOST = /\b(i (do ?n[o']?t|dont) know|idk|no idea|not sure|i'?m (lost|confused)|confus\w*|sijui|sielewi|sijaelewa|i give up)\b/i;
+var AGAIN = /\b(again|repeat|didn'?t hear|did not hear|can'?t hear|cannot hear|can'?t see|cannot see|did not see|didn'?t see|what did you say|sorry\?)\b/i;
+var QUESTION_START = /^(why|how|what|which|where|when|who|can (you|i|we)|could (you|i|we)|do (you|i|we)|does|did you|is it|is that|is this|are they|are these|so is|but why|but how)\b/i;
+var STOP = /\b(i (want|wanna|would like) to (stop|go|play|leave|rest|finish)|can (we|i) (stop|go|play|leave|rest|finish)|let'?s stop|stop (now|please|the lesson)|i'?m (so )?(bored|tired)|i am (so )?(bored|tired)|this is (so )?boring|(so|too|very) boring|boring|no more (maths|math|fractions)|i do ?n[o']?t want to (do|learn|play) (this|maths|math|fractions|any ?more)|i (do ?n[o']?t|dont) want to any ?more|enough (now|for today)|nimechoka(?! na maisha)|nataka kucheza|nataka kuacha|tuache)\b/i;
+var YES = /* @__PURE__ */ new Set(["yes", "yeah", "yep", "yup", "ndiyo", "ndio", "sure", "correct", "right", "true", "aha", "uhuh"]);
+var NO = /* @__PURE__ */ new Set(["no", "nope", "hapana", "false", "wrong", "la"]);
+var COMPARE = ["same", "equal", "equivalent", "bigger", "smaller", "more", "less", "longer", "shorter", "larger", "greater"];
+var SYNONYM = { same: ["equal", "equivalent", "same amount", "same size"], equal: ["same", "equivalent"], bigger: ["larger", "greater"], larger: ["bigger", "greater"], smaller: ["less", "littler"], more: ["bigger", "larger", "greater"], less: ["smaller", "fewer"] };
+var numberWords = (w) => w in UNITS || w in TENS2 || w in SW || w === "hundred";
+var tokensOf = (text) => fixMathsWords(String(text || "")).toLowerCase().replace(/[’`´]/g, "'").replace(/(\d)\s*\/\s*(\d)/g, "$1/$2").replace(/[^a-z0-9/' ]+/g, " ").split(/\s+/).filter(Boolean).map((t) => t.replace(/^'+|'+$/g, "")).filter(Boolean);
+function numberAt(t, i) {
+  const w = t[i];
+  if (w == null) return null;
+  if (/^\d+$/.test(w)) return { n: Number(w), end: i + 1 };
+  if (w in SW) return { n: SW[w], end: i + 1 };
+  if (!(w in UNITS || w in TENS2)) return null;
+  let n = 0;
+  let j = i;
+  if (t[j] in TENS2) {
+    n += TENS2[t[j]];
+    j += 1;
+    if (t[j] in UNITS && UNITS[t[j]] < 10) {
+      n += UNITS[t[j]];
+      j += 1;
+    }
+  } else {
+    n += UNITS[t[j]];
+    j += 1;
+  }
+  if (t[j] === "hundred") {
+    n *= 100;
+    j += 1;
+    if (t[j] === "and") j += 1;
+    const r = numberAt(t, j);
+    if (r && r.n < 100) {
+      n += r.n;
+      j = r.end;
+    }
+  }
+  return { n, end: j };
+}
+function readAnswer(text) {
+  const raw = String(text || "");
+  const t = tokensOf(raw);
+  const found = [];
+  const add = (value, kind, from, to) => found.push({ value, kind, words: t.slice(from, to).join(" "), negated: NEGATE.has(t[from - 1]) || NEGATE.has(t[from - 2]) && t[from - 1] === "the" });
+  for (let i = 0; i < t.length; ) {
+    const w = t[i];
+    const frac2 = /^(\d+)\/(\d+)$/.exec(w);
+    if (frac2) {
+      add(`${Number(frac2[1])}/${Number(frac2[2])}`, "fraction", i, i + 1);
+      i += 1;
+      continue;
+    }
+    if (w in SW_DEN) {
+      const after = numberAt(t, i + 1);
+      if (after && t[i + 1] in SW) {
+        add(`${after.n}/${SW_DEN[w]}`, "fraction", i, after.end);
+        i = after.end;
+        continue;
+      }
+      add(`1/${SW_DEN[w]}`, "fraction", i, i + 1);
+      i += 1;
+      continue;
+    }
+    if ((w === "a" || w === "an") && SINGLE.has(t[i + 1])) {
+      add(`1/${DEN[t[i + 1]]}`, "fraction", i, i + 2);
+      i += 2;
+      continue;
+    }
+    if (SINGLE.has(w)) {
+      add(`1/${DEN[w]}`, "fraction", i, i + 1);
+      i += 1;
+      continue;
+    }
+    const num4 = numberAt(t, i);
+    if (!num4) {
+      i += 1;
+      continue;
+    }
+    const j = num4.end;
+    if (t[j] in DEN) {
+      add(`${num4.n}/${DEN[t[j]]}`, "fraction", i, j + 1);
+      add(String(num4.n), "count", i, j + 1);
+      i = j + 1;
+      continue;
+    }
+    if (t[j] === "over") {
+      const d = numberAt(t, j + 1);
+      if (d) {
+        add(`${num4.n}/${d.n}`, "fraction", i, d.end);
+        i = d.end;
+        continue;
+      }
+    }
+    let k = j;
+    while (k < j + 2 && t[k] && !numberWords(t[k]) && !/^\d/.test(t[k]) && !(t[k] === "out" && t[k + 1] === "of")) k += 1;
+    if (t[k] === "out" && t[k + 1] === "of") {
+      const d = numberAt(t, k + 2);
+      if (d) {
+        add(`${num4.n}/${d.n}`, "fraction", i, d.end);
+        add(String(num4.n), "count", i, j);
+        i = d.end;
+        continue;
+      }
+    }
+    const noun = /^(pieces?|parts?|bits?|slices?|shares?|halves|quarters)$/.test(t[j] || "") ? 1 : 0;
+    add(String(num4.n), "number", i, j + noun);
+    i = j + noun;
+  }
+  const trimmed = raw.trim();
+  const question = /\?/.test(trimmed) || QUESTION_START.test(trimmed);
+  const choiceOr = question && /\bor\b/i.test(trimmed);
+  const filler = t.length > 0 && t.every((w) => FILLERS.has(w));
+  const firstYes = t.findIndex((w) => YES.has(w));
+  const firstNo = t.findIndex((w, k) => NO.has(w) || w === "think" && t[k - 1] && /^(don'?t|dont|not)$/.test(t[k - 1]) || NEGATE.has(w));
+  return {
+    found,
+    question,
+    choiceOr,
+    filler,
+    tokens: t,
+    lost: LOST.test(raw),
+    again: AGAIN.test(raw),
+    stop: wantsToStop(raw),
+    yes: firstYes >= 0 && (firstNo < 0 || firstYes < firstNo),
+    no: firstNo >= 0 && (firstYes < 0 || firstNo < firstYes)
+  };
+}
+var wordsOf = (s) => String(s || "").toLowerCase().replace(/[^a-z' ]+/g, " ").split(/\s+/).filter(Boolean).filter((w) => !["a", "an", "the", "it", "is", "its", "it's", "they", "are", "one"].includes(w));
+var isWordAnswer = (a) => /^[a-z][a-z\s'-]*$/i.test(String(a || "").trim()) && !readAnswer(a).found.length;
+var isYesNo = (a) => /^(yes|no)$/i.test(String(a || "").trim());
+var hasPhrase = (t, want) => {
+  if (!want.length) return false;
+  for (let i = 0; i + want.length <= t.length; i += 1) {
+    if (want.every((w, k) => t[i + k] === w) && !NEGATE.has(t[i - 1]) && !(t[i - 1] === "the" && NEGATE.has(t[i - 2]))) return true;
+  }
+  return false;
+};
+function canonAnswer(answer) {
+  const a = String(answer ?? "").trim();
+  if (!a) return "";
+  const r = readAnswer(a);
+  const vals = r.found.filter((f) => f.kind !== "count");
+  if (vals.length === 1) return vals[0].value;
+  return wordsOf(a).join(" ") || a.toLowerCase();
+}
+function markSpoken(item, text) {
+  const raw = String(text ?? "").trim().slice(0, 200);
+  const r = readAnswer(raw);
+  const none = (why) => ({ correct: false, mis: null, attempt: false, said: null, why });
+  if (!raw || r.filler) return none("filler");
+  const exact = markItem(item, raw);
+  if (exact.correct) return { correct: true, mis: null, attempt: true, said: speakAnswer(raw) || null, why: "exact" };
+  const answers = [item.answer, ...item.accepts || []].filter((x) => x != null && String(x).trim() !== "");
+  const keyForms = [...new Set(answers.flatMap((a) => [String(a), canonAnswer(a)]).filter(Boolean))];
+  const keyed = { ...item, accepts: [.../* @__PURE__ */ new Set([...item.accepts || [], ...keyForms])] };
+  const tryForm = (form) => item.kind === "choice" ? markItem(item, form) : markItem(keyed, form);
+  const live = r.found.filter((f) => !f.negated);
+  const ok = (said, why) => ({ correct: true, mis: null, attempt: true, said, why });
+  if (!r.choiceOr) {
+    if (item.kind === "choice") {
+      const hits = item.options.filter((o) => hasPhrase(wordsOf(raw), wordsOf(o.text)) || live.some((f) => checkAnswerMatch(f.value, { answer: o.text, accepts: [o.text] })));
+      if (hits.length === 1) return hits[0].right ? ok(hits[0].text, "choice") : { correct: false, mis: hits[0].mis || null, attempt: true, said: null, why: "choice" };
+    } else {
+      for (const f of live) if (tryForm(f.value).correct) return ok(f.words, f.kind);
+      const t = wordsOf(raw);
+      for (const a of answers) {
+        if (!isWordAnswer(a) || isYesNo(a)) continue;
+        const want = wordsOf(a);
+        if (want.length && want.length <= 4 && (hasPhrase(t, want) || want.length === 1 && (SYNONYM[want[0]] || []).some((s) => hasPhrase(t, wordsOf(s))))) return ok(String(a).trim().toLowerCase(), "words");
+      }
+      const key = String(item.answer || "").trim().toLowerCase();
+      const q = String(item.question || "").toLowerCase();
+      const yesNoQ = /^(is|are|does|do|can|will|would|was|were)\b/.test(q.trim());
+      const keyInQ = isWordAnswer(key) && wordsOf(key).length && hasPhrase(wordsOf(q), wordsOf(key));
+      const affirms = r.yes || !r.no && COMPARE.some((c) => hasPhrase(t, [c]) && q.includes(c));
+      if (key === "yes" && affirms) return ok("yes", "yes");
+      if (key === "no" && r.no) return ok("no", "no");
+      if (yesNoQ && keyInQ && affirms) return ok(key, "yes");
+      if (key === "yes" && r.no || key === "no" && r.yes || yesNoQ && keyInQ && r.no) return { correct: false, mis: null, attempt: true, said: null, why: "yes/no" };
+    }
+  }
+  if (r.question || r.lost || r.again) return none(r.lost ? "lost" : r.again ? "again" : "question");
+  const numericKey = answers.some((a) => readAnswer(a).found.length || /\d/.test(String(a)));
+  if (item.kind !== "choice" && numericKey && !live.length) return none("no answer in it");
+  for (const f of live) {
+    const m = tryForm(f.value);
+    if (m.mis) return { correct: false, mis: m.mis, attempt: true, said: null, why: "wrong" };
+  }
+  return { correct: false, mis: exact.mis || null, attempt: true, said: null, why: "wrong" };
+}
+function childMove(text) {
+  const r = readAnswer(text);
+  if (!String(text || "").trim()) return null;
+  if (r.stop) return "stop";
+  if (r.filler) return "filler";
+  if (r.lost) return "lost";
+  if (r.question || r.again) return "question";
+  return null;
+}
+var soundsLost = (text) => LOST.test(String(text || ""));
+var wantsToStop = (text) => STOP.test(String(text || "")) && !/\b(game|guess|guessing)\b/i.test(String(text || ""));
+var CARRY_ON = /\b(yes|yeah|yep|ok|okay|ready|carry on|continue|go on|let'?s (go|continue|carry on)|i am fine|i'?m fine|i'?m ok(ay)?|i want to (carry on|continue|learn)|ndiyo|sawa|tuendelee)\b/i;
+var wantsToCarryOn = (text) => CARRY_ON.test(String(text || "")) && !wantsToStop(text);
+var UNIT_WORDS = Object.keys(UNITS);
+var DEN_WORDS = { 2: ["half", "halves"], 3: ["third", "thirds"], 4: ["quarter", "quarters"], 5: ["fifth", "fifths"], 6: ["sixth", "sixths"], 7: ["seventh", "sevenths"], 8: ["eighth", "eighths"], 9: ["ninth", "ninths"], 10: ["tenth", "tenths"], 11: ["eleventh", "elevenths"], 12: ["twelfth", "twelfths"] };
+var numberInWords = (n) => n >= 0 && n < 20 ? UNIT_WORDS[n] : n < 100 && n % 10 === 0 ? Object.keys(TENS2)[n / 10 - 2] : String(n);
+function inWords(value) {
+  const m = /^(\d+)\/(\d+)$/.exec(String(value));
+  if (m) {
+    const n = Number(m[1]);
+    const d = Number(m[2]);
+    const dw = DEN_WORDS[d];
+    return dw && n <= 19 ? `${numberInWords(n)} ${dw[n === 1 ? 0 : 1]}` : null;
+  }
+  return /^\d+$/.test(String(value)) && Number(value) < 100 ? numberInWords(Number(value)) : null;
+}
+function speakAnswer(said) {
+  const s = String(said || "").trim();
+  if (!s || /^(yes|no)$/i.test(s)) return null;
+  if (/^[a-z][a-z '-]{0,38}$/i.test(s)) return s.toLowerCase();
+  const f = readAnswer(s).found.find((x) => x.kind !== "count");
+  return f ? inWords(f.value) || null : null;
+}
+
 // src/voice-tutor/guard.js
 var MAX_CHILD_CHARS = 300;
-var norm2 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'@.\s]+/g, " ").replace(/\s+/g, " ").trim();
+var norm3 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'@.\s]+/g, " ").replace(/\s+/g, " ").trim();
 var PERSONAL = /\b(my|our) (phone|phone number|number is|mobile|address|house is|home is|estate is|school is called|password|pin|mpesa pin|email)\b|\bi live (in|at|near)\b|\bmy (mum|mom|dad|mother|father)'?s? (phone|number|name is)\b|\b[\w.]+@[\w-]+\.\w+\b/;
 var PHONE = /(?:\+?254|\b0)[\s-]?[17]\d{2}[\s-]?\d{3}[\s-]?\d{3}\b/;
 var INJECTION = /\b(ignore|forget|disregard) (all |your |the |previous |these )*(rules|instructions|prompt|system)\b|\b(act as|pretend to be|pretend you are|from now on you are|you are now) (a |an |my )?(?!tutor\b|maths tutor\b)\w+|\bsystem prompt\b|\bdeveloper mode\b|\bjailbreak\b/;
@@ -5599,7 +6712,7 @@ var PERSONAL_REPLY = "Thank you. You do not need to tell me things like that, so
 var RULES_REPLY = "I am your maths tutor, and I keep to the same rules all the time. Let us carry on with our fractions.";
 var ANSWER_REPLY = "I will not tell you the answer, because you can work it out. Let us take one small step together.";
 function screenChild(raw) {
-  const t = norm2(raw);
+  const t = norm3(raw);
   const wantsAnswer = asksForAnswer(raw) || /\b(what is|whats|what's|tell me) the answer\b/.test(t);
   if (PERSONAL.test(t) || PHONE.test(String(raw))) return { ok: false, kind: "personal", reply: PERSONAL_REPLY, wantsAnswer };
   if (INJECTION.test(t)) return { ok: false, kind: "rules", reply: RULES_REPLY, wantsAnswer };
@@ -5614,12 +6727,58 @@ var visibleText = (steps2) => steps2.flatMap((s, i) => {
   if (s.cmd === "ask") return [{ i, cmd: s.cmd, text: s.prompt }];
   return [];
 });
+var NUM_WORDS2 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen"];
+var NUM2 = `(?:\\d+|${NUM_WORDS2.join("|")})`;
+var HOW_MANY = /\bhow many\s+(?:(?:equal|small|smaller|big|bigger|little|more|shaded|white|coloured|colored|whole|new)\s+)*([a-z]+)/i;
+var nounRe = (noun) => {
+  const n = noun.toLowerCase();
+  if (/^(half|halves)$/.test(n)) return "half|halves";
+  return `${n.replace(/s$/, "")}s?`;
+};
+var numValue = (w) => /^\d+$/.test(w) ? Number(w) : NUM_WORDS2.indexOf(w.toLowerCase());
+var sentencesOf = (t) => String(t || "").split(/(?<=[.!?])\s+/).filter(Boolean);
+function answerInQuestion(text, { found = [], child = "" } = {}) {
+  const sents = sentencesOf(text);
+  const theirs = /* @__PURE__ */ new Set([...found.filter((f) => /^\d+$/.test(f)).map(Number), ...(String(child).toLowerCase().match(new RegExp(`\\b${NUM2}\\b`, "g")) || []).map(numValue)]);
+  for (let i = 0; i < sents.length; i += 1) {
+    if (!/\?\s*$/.test(sents[i])) continue;
+    const m = HOW_MANY.exec(sents[i]);
+    if (!m) continue;
+    if (new RegExp(`\\b${NUM2}\\b`, "i").test(sents[i].slice(m.index + m[0].length))) continue;
+    const before = `${sents.slice(0, i).join(" ")} ${sents[i].slice(0, m.index)}`;
+    const re = new RegExp(`\\b(${NUM2})\\s+(?:[a-z]+\\s+){0,2}?(?:${nounRe(m[1])})\\b`, "gi");
+    for (const hit of before.matchAll(re)) {
+      if (theirs.has(numValue(hit[1]))) continue;
+      return `"${hit[0]}" is said before "${sents[i].trim()}"`;
+    }
+  }
+  return null;
+}
+var smallCount = (h, text) => {
+  const n = Number(String(h.answer).trim());
+  if (!Number.isInteger(n) || n < 0 || n > 16) return null;
+  const m = HOW_MANY.exec(String(h.question || ""));
+  if (!m) return null;
+  const re = new RegExp(`\\b(${n}|${NUM_WORDS2[n]})\\s+(?:[a-z]+\\s+){0,2}?(?:${nounRe(m[1])})\\b`, "i");
+  const hit = re.exec(String(text || ""));
+  return hit ? `says the count (${hit[0]})` : null;
+};
+var spokenFraction = (h, text, question) => {
+  const want = canonAnswer(h.answer);
+  if (!/^\d+\/\d+$/.test(want)) return null;
+  if (readAnswer(question).found.some((f) => f.kind === "fraction" && f.value === want)) return null;
+  const hit = readAnswer(text).found.find((f) => f.kind === "fraction" && f.value === want && !f.negated && f.words.split(" ").length >= 2);
+  return hit ? `says the answer in words (${hit.words})` : null;
+};
 function checkTurnText(steps2, hidden = []) {
   const reasons = [];
+  const texts = visibleText(steps2);
+  const choices = texts.flatMap((v) => sentencesOf(v.text)).filter((x) => /\?\s*$/.test(x) && /\bor\b/i.test(x)).join(" ");
   for (const h of hidden) {
     if (!h || h.answer == null || String(h.answer).trim() === "") continue;
-    for (const v of visibleText(steps2)) {
-      const why = leaksAnswer({ answer: String(h.answer), accepts: h.accepts || [], question: h.question || "", reply: v.text });
+    for (const v of texts) {
+      const question = `${h.question || ""} ${choices}`.trim();
+      const why = leaksAnswer({ answer: String(h.answer), accepts: h.accepts || [], question, reply: v.text }) || smallCount(h, v.text) || spokenFraction(h, v.text, question);
       if (why) reasons.push(`step ${v.i} (${v.cmd}) ${why}`);
     }
   }
@@ -5733,7 +6892,7 @@ var WELFARE_RULES = [
 ];
 var RANK = { none: 0, concern: 1, crisis: 2 };
 function screenWelfare(raw) {
-  const text = norm2(raw);
+  const text = norm3(raw);
   const hits = [];
   if (text) for (const r of WELFARE_RULES) {
     const m = r.any.exec(text);
@@ -5798,7 +6957,7 @@ function careTurn(hit) {
 }
 
 // src/voice-tutor/streamSteps.js
-function repairStep(raw) {
+function repairStep2(raw) {
   let t = "";
   let inStr = false;
   let esc2 = false;
@@ -5867,7 +7026,7 @@ function stepParser() {
             try {
               out.push(JSON.parse(raw));
             } catch {
-              out.push(repairStep(raw));
+              out.push(repairStep2(raw));
             }
             start = -1;
           }
@@ -5900,6 +7059,13 @@ You are a one-to-one maths tutor for a child of about ten in Kenya. You are not 
 - Use the child's words and numbers from their last answer in your next line.
 - Short plain words. No "denominator" or "numerator" until the child has used the idea; say "bottom number" and "top number" first.
 - Praise is one short phrase about what the child did, then move on.
+- Never put the answer inside your own question, or just before it. The child only echoes it.
+  - Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?"
+  - Good: "Now I cut each half again. How many pieces are there now?"
+- After a right answer, the next turn starts by naming it in the child's own words ("Yes, one half."). Never ask the same question again; a fresh check is a new question.
+- After a wrong answer, the next turn is one question about how they got it. No re-teaching until you have heard their thinking.
+- A question back from the child is not a wrong answer. Answer it, then hand your question back.
+- A bored or tired child who wants to stop: never repeat the lesson. Offer a quick game or a short, kind close.
 
 ## The moves
 
@@ -5976,7 +7142,7 @@ Sounds like:
 Never: ask "why" in a tone that sounds like you doubt them. Never ask "why" after every single answer.
 
 ### 9. Name what was right
-When: any answer, especially a wrong one that has a good part.
+When: any answer, especially a wrong one that has a good part. Always the first thing after a right answer.
 Do: say the exact thing that was right, as a fact about the work. Then, if needed, say what to look at next.
 Sounds like:
 - "You split into equal parts. That part is right."
@@ -5986,7 +7152,7 @@ Never: say only "great job", "good", "wrong" or "no". Never say "you are clever"
 
 ### 10. Diagnose the wrong answer
 When: the answer is wrong. Do not correct first. Find the thinking behind it.
-Do: ask one question that shows how they got it. Think of the likely misconception first (see the Fractions section). Then repair with a picture, using a case where their rule fails.
+Do: ask one question that shows how they got it, and nothing else in that turn: no explaining, no new picture, no new question to answer. Think of the likely misconception first (see the Fractions section). Then repair with a picture, using a case where their rule fails.
 Sounds like:
 - "Tell me how you got 1/8."
 - "Let's test your idea. Cut one loaf in 8. Who gets more?"
@@ -6231,6 +7397,10 @@ HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns 
 TAKING TURNS (the child talks as much as you):
 - Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
 - Start from what the child just said: repeat or build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
+- After a right answer, your first sentence says yes and names it in the child's own words ("Yes, one half."). Never ask that question again: a fresh check is a new question.
+- After a wrong answer, your turn is one question about how they got it ("How did you get three?"). No explaining, no new picture and no new question until you have heard their thinking.
+- Never put the answer inside your own question, or just before it. Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?" Good: "Now I cut each half again. How many pieces are there now?"
+- A question back from the child ("why?", "can I see it again?") is not a wrong answer: answer it, then hand your question back. If the child is bored or wants to stop, never carry on with the same task: offer a quick game or a short close.
 - Never ask the child to imagine something you could draw. Draw it, then ask about it.
 - Never draw again what is already on the board (the context lists it). Point at it, highlight it or build on it. Clear the board only when you move to a new idea.
 - If the child comments on you or the board ("you drew badly", "I can't see", "too fast"), answer that first, honestly and briefly, and fix it (clear and draw it bigger, slow down), then carry on.
@@ -6279,7 +7449,7 @@ HOW YOU TALK:
 - Plain text. No emojis, no markdown.
 
 THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app draws them itself; you never write code, markup or coordinates.
-- say: one to three short sentences (220 characters at most). Every drawing step belongs to the say before it.
+- say: one to three short sentences (220 characters at most). The words go in "text": {"cmd":"say","text":"..."}, never {"cmd":"say","say":"..."}. Every drawing step belongs to the say before it.
 - Drawing steps take "on": a word or two copied exactly from the say before them. The stroke starts as that word is spoken. delay_ms (-300 to 1500) shifts it. No "on" means: after that sentence ends.
 - The board draws like a teacher, stroke by stroke: a shaded bar or shape takes about 4 to 8 seconds, a line of maths 1 to 3, a mark under a second. A drawing is hurried to finish before the next drawing step's word, so give each drawing its own sentence or two: anchor the next drawing or mark in a later sentence, never a word or two later.
 - pace "slow" on a drawing step draws it about 1.6 times slower. Use it for the key idea of the lesson (the cut that makes the equal parts, the step that changes the fraction), once or twice a lesson, and give it a long sentence.
@@ -6287,7 +7457,8 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - Slots: ${SLOTS.join(", ")}. top, middle and bottom are full width; the others are half. Colours: ${COLOURS.join(", ")}.
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
-- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
+- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected. Write expected as the answer's core: a number (4), a fraction (1/2) or one or two words (same, yes, the top one); never a sentence. The app hears spoken answers ("one half", "nusu", "two quarters") itself.
+- The context says what each board item really shows (its parts, which are shaded, its words) and which slots are free. Ask only about what is really there: never ask about shaded parts when none are shaded. When no slot is free, a new drawing erases the oldest items you have not used this turn (whatever is in the slot you name first); erase or clear yourself to choose.
 - pause_for_child ends every turn (expect: spoken when you want them to say it, drawn for the board, any otherwise; max_wait_s 5 to 60; doing as above), except the last, which ends with end_session.
 - Phases: ${PHASES.join(", ")}.
 
@@ -6338,21 +7509,30 @@ ${EXEMPLARS}
 REPLY FORM. Reply with only one JSON object, {"steps":[...]}, and nothing before or after it: no prose, no markdown fences. Each step is an object with "cmd" and that command's fields, exactly as named here ("?" means it may be left out; a|b means one of these values; [..] is a list):
 ${REPLY_FORM}`;
 var pct = (x) => x == null ? "no attempts" : `${Math.round(x * 100)}% right`;
-function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null }) {
+function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = "", elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines: bankLines2 = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null, inkCells = [], doing = null, unanswered = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || "not started"}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
     `Weakest prerequisite: ${prerequisite ? `${prerequisite} (${skillName(prerequisite)})` : "none"}.`,
     ...hasModel ? [] : [`What HOREB knows (practice so far): ${profile.map((p) => `${shortName(p.skill)} ${p.held ? "held" : "not held"} (${pct(p.accuracy)}, ${p.attempts} tries)`).join("; ")}.`],
     ...learner,
-    `Board now: ${board.length ? board.map((b) => `${b.id} ${b.cmd === "figure" ? `figure ${b.type}` : b.cmd} at ${b.slot}${b.parts ? `, ${b.parts} parts` : ""}${b.cmd === "figure" && b.controls?.length ? ` (the child may: ${b.controls.join(", ")})` : ""}`).join("; ") : "empty"}.`
+    // What each item really shows and the free slots (12 Nov 2026: the tutor asked about shaded parts on an unshaded chapati).
+    ...boardLines(board, inkCells)
   ];
+  if (unanswered) lines.push(`The child has not answered your question yet ("${unanswered.ask}"): what they said is ${unanswered.why === "question" || unanswered.why === "again" ? "a question back" : unanswered.why === "lost" ? '"I do not know"' : unanswered.why === "filler" ? "thinking aloud" : "not an answer to it"}, not a wrong answer. The question is still open and its answer still hidden.`);
   if (marked) {
-    lines.push(marked.correct ? `The child answered your question ${marked.ask} with "${marked.answer}": right.` : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : " No misconception in the library matches this answer."} Diagnose before you teach.`);
+    lines.push(marked.correct ? `The child answered your question ${marked.ask} with "${marked.answer}": right.${marked.said ? ` In their words: "${marked.said}".` : ""}` : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : " No misconception in the library matches this answer."} Diagnose before you teach.`);
   }
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
   lines.push(...lesson);
-  if (probe) lines.push(PROBE_LINES[probe.kind](probe.silent_s), `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before.`);
+  if (probe) {
+    const d = DOINGS_OK.includes(doing) ? doing : "answer";
+    lines.push(
+      PROBE_LINES[probe.kind](probe.silent_s),
+      `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before (${d}).`,
+      `Reply with exactly this shape (the words go in "text"): {"steps":[{"cmd":"say","text":"Take your time. Look at the bar.","move":"Wait and nudge"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"${d}"}]}`
+    );
+  }
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
@@ -6367,6 +7547,7 @@ ${lines.join("\n")}
 </context>`;
 }
 var MAX_PROBE_WORDS = 22;
+var DOINGS_OK = ["answer", "task", "talk"];
 var PROBE_LINES = {
   answer_nudge: (s) => `The child has been silent for ${s} s after your question. Nudge kindly, without giving the answer.`,
   answer_smaller: (s) => `The child has been silent for ${s} s, even after a nudge. Ask a smaller, easier question about the same thing (point at the board), without giving the answer.`,
@@ -8931,8 +10112,8 @@ var f10 = (n) => Math.floor(n / 10) * 10;
 var sum = (a) => a.reduce((x, y) => x + y, 0);
 var cap = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 var ONES = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-var TENS2 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-var w99 = (n) => n < 20 ? ONES[n] : TENS2[Math.floor(n / 10)] + (n % 10 ? `-${ONES[n % 10]}` : "");
+var TENS3 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+var w99 = (n) => n < 20 ? ONES[n] : TENS3[Math.floor(n / 10)] + (n % 10 ? `-${ONES[n % 10]}` : "");
 var words = (n) => {
   const t = Math.floor(n / 1e3), h = Math.floor(n % 1e3 / 100), u = n % 100, s = [];
   if (t) s.push(`${ONES[t]} thousand`);
@@ -16586,7 +17767,7 @@ var FAMILIES9 = [
 var M2 = "MEASUR.";
 var comp = (b, s, big, small) => b && s ? `${b} ${big} ${s} ${small}` : b ? `${b} ${big}` : `${s} ${small}`;
 var plain = (b, s, f) => b * f + s;
-var norm3 = (t, f) => [Math.floor(t / f), t % f];
+var norm4 = (t, f) => [Math.floor(t / f), t % f];
 var SETS = {
   length: {
     key: "LENGTH",
@@ -16980,7 +18161,7 @@ function build(name) {
     gen: () => {
       const [b1, s1, b2, s2] = subDraw(), t = plain(b1, s1, f) - plain(b2, s2, f);
       if (s2 <= s1 || t <= 0) return null;
-      const [rb, rs] = norm3(t, f), p = person();
+      const [rb, rs] = norm4(t, f), p = person();
       const sm = [b1 - b2, s2 - s1], e100 = [b1 - b2 - 1, s1 + 100 - s2], nr = [b1 - b2, s1 + f - s2];
       return {
         question: C2.sub(p, fmt2(b1, s1), fmt2(b2, s2)),
@@ -17001,7 +18182,7 @@ function build(name) {
     gen: () => {
       const [b1, s1, b2, s2] = subDraw(), t = plain(b1, s1, f) - plain(b2, s2, f);
       if (s2 <= s1 || t <= 0) return null;
-      const [rb, rs] = norm3(t, f);
+      const [rb, rs] = norm4(t, f);
       const options = mc(fmt2(rb, rs), [[fmt2(b1 - b2, s2 - s1), "Exchange when the top is smaller. Do not take the smaller from the larger.", mis.subSm], [fmt2(b1 - b2 - 1, s1 + 100 - s2), `1 ${big} is ${f} ${small}.`, mis.sub100], [fmt2(b1 - b2, s1 + f - s2), `The ${big} must go down by 1 after the exchange.`, mis.subNoRed]]);
       return {
         question: `Which is the difference when ${fmt2(b2, s2)} is taken from ${fmt2(b1, s1)}?`,
@@ -17020,7 +18201,7 @@ function build(name) {
     gen: () => {
       const [b1, s1, b2, s2] = subDraw(), t = plain(b1, s1, f) - plain(b2, s2, f);
       if (s2 <= s1 || t <= 0) return null;
-      const [rb, rs] = norm3(t, f), p = person();
+      const [rb, rs] = norm4(t, f), p = person();
       return {
         question: `${p.name} works out ${fmt2(b1, s1)} \u2212 ${fmt2(b2, s2)}. Which step has the mistake?`,
         working: [{ text: `Step 1: ${s1} ${small} is less than ${s2} ${small}, so exchange 1 ${big} for ${f} ${small}.`, ok: true }, { text: `Step 2: ${s1} + ${f} \u2212 ${s2} = ${s1 + f - s2} ${small}. Keep ${b1} ${big}.`, ok: false }, { text: `Step 3: ${b1} \u2212 ${b2} = ${b1 - b2} ${big}. Answer ${fmt2(b1 - b2, s1 + f - s2)}.`, ok: true }],
@@ -17109,7 +18290,7 @@ function build(name) {
       if (s === null || s >= f) return null;
       const t = plain(b, s, f);
       if (t % n !== 0 || b % n === 0) return null;
-      const [rb, rs] = norm3(t / n, f), rem = b % n, p = person();
+      const [rb, rs] = norm4(t / n, f), rem = b % n, p = person();
       return {
         question: C2.div(p, fmt2(b, s), n),
         answer: fmt2(rb, rs),
@@ -17131,7 +18312,7 @@ function build(name) {
       if (s === null || s >= f) return null;
       const t = plain(b, s, f);
       if (t % n !== 0 || b % n === 0) return null;
-      const [rb, rs] = norm3(t / n, f), rem = b % n;
+      const [rb, rs] = norm4(t / n, f), rem = b % n;
       const options = mc(fmt2(rb, rs), [[fmt2(Math.floor(b / n), s / n), "The leftover must be carried on, not dropped.", mis.divIgn], [fmt2(Math.floor(b / n), (rem * (f === 60 ? 10 : 100) + s) / n), `A leftover ${big} is ${f} ${small}.`, mis.div100], [fmt2(Math.floor(b / n), s), "Divide the smaller unit too.", mis.divOne]]);
       return {
         question: `Which is ${fmt2(b, s)} divided by ${n}?`,
@@ -17152,7 +18333,7 @@ function build(name) {
       if (s === null || s >= f) return null;
       const t = plain(b, s, f);
       if (t % n !== 0 || b % n === 0) return null;
-      const [rb, rs] = norm3(t / n, f), rem = b % n, p = person();
+      const [rb, rs] = norm4(t / n, f), rem = b % n, p = person();
       return {
         question: `${p.name} divides ${fmt2(b, s)} by ${n}. Which step has the mistake?`,
         working: [{ text: `Step 1: ${b} \xF7 ${n} = ${Math.floor(b / n)} remainder ${rem}.`, ok: true }, { text: `Step 2: Ignore the remainder and divide the ${small}: ${s} \xF7 ${n} = ${s / n}.`, ok: false }, { text: `Step 3: ${fmt2(Math.floor(b / n), s / n)}.`, ok: true }],
@@ -20275,7 +21456,7 @@ var noCarry = (A2, B2) => {
   return Number(a.map((x, i) => (x + b[i]) % 10).join(""));
 };
 var ONES2 = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-var TENS3 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+var TENS4 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
 var below10002 = (n) => {
   const s = [];
   if (n >= 100) {
@@ -20283,7 +21464,7 @@ var below10002 = (n) => {
     n %= 100;
     if (n) s.push("and");
   }
-  if (n >= 20) s.push(TENS3[Math.floor(n / 10)] + (n % 10 ? `-${ONES2[n % 10]}` : ""));
+  if (n >= 20) s.push(TENS4[Math.floor(n / 10)] + (n % 10 ? `-${ONES2[n % 10]}` : ""));
   else if (n > 0) s.push(ONES2[n]);
   return s.join(" ");
 };
@@ -29428,8 +30609,8 @@ var circ2 = (closed) => closed ? "a closed circle" : "an open circle";
 var digitsOf3 = (n) => String(n).split("").map(Number);
 var digitSum = (n) => digitsOf3(n).reduce((s, x) => s + x, 0);
 var ONES3 = ["zero", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
-var TENS4 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
-var below1002 = (r) => r < 20 ? ONES3[r] : TENS4[Math.floor(r / 10)] + (r % 10 ? "-" + ONES3[r % 10] : "");
+var TENS5 = ["", "", "twenty", "thirty", "forty", "fifty", "sixty", "seventy", "eighty", "ninety"];
+var below1002 = (r) => r < 20 ? ONES3[r] : TENS5[Math.floor(r / 10)] + (r % 10 ? "-" + ONES3[r % 10] : "");
 var below10003 = (n) => {
   const h = Math.floor(n / 100), r = n % 100;
   const out = [];
@@ -33897,698 +35078,6 @@ for (const f of FAMILIES23) {
   BY_SKILL.get(f.skill).push(f);
 }
 
-// src/ai-tutor/algebraEquivalence.js
-var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
-function canonicalise(raw) {
-  let s = String(raw ?? "").trim().toLowerCase();
-  s = s.replace(/[−–—]/g, "-");
-  s = s.replace(/⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + (m[0] === "\u207B" ? "-" : "") + [...m.replace("\u207B", "")].map((c) => SUP.indexOf(c)).join(""));
-  s = s.replace(/\*\*/g, "^");
-  s = s.replace(/[×·∙⋅]/g, "*").replace(/÷/g, "/");
-  s = s.replace(/(squareroot(of)?|sqrt)/g, "\u221A").replace(/\bpi\b|(?<=\d)pi\b/g, "\u03C0");
-  s = s.replace(/\s+/g, "");
-  return s;
-}
-function parse(src) {
-  let i = 0;
-  const peek = () => src[i];
-  const fail = () => {
-    throw new Error("parse");
-  };
-  function sum3() {
-    const terms = [{ sign: 1, e: term() }];
-    while (peek() === "+" || peek() === "-") {
-      const sign = src[i++] === "-" ? -1 : 1;
-      terms.push({ sign, e: term() });
-    }
-    return terms.length === 1 && terms[0].sign === 1 ? terms[0].e : { t: "sum", terms };
-  }
-  function term() {
-    const fs = [{ op: "*", e: unary() }];
-    for (; ; ) {
-      const c = peek();
-      if (c === "*" || c === "/") {
-        i++;
-        fs.push({ op: c, e: unary() });
-        continue;
-      }
-      if (c != null && /[a-z(π√]/.test(c)) {
-        fs.push({ op: "*", e: unary() });
-        continue;
-      }
-      if (c != null && /[\d.]/.test(c)) fail();
-      break;
-    }
-    return fs.length === 1 ? fs[0].e : { t: "prod", fs };
-  }
-  function unary() {
-    if (peek() === "-") {
-      i++;
-      return { t: "neg", e: unary() };
-    }
-    if (peek() === "+") {
-      i++;
-      return unary();
-    }
-    return power();
-  }
-  function power() {
-    const base = atom();
-    if (peek() === "^") {
-      i++;
-      return { t: "pow", a: base, n: unary() };
-    }
-    return base;
-  }
-  function atom() {
-    const c = peek();
-    if (c == null) fail();
-    if (/[\d.]/.test(c)) {
-      const m = src.slice(i).match(/^\d*\.?\d+/);
-      if (!m) fail();
-      i += m[0].length;
-      return { t: "num", k: parseFloat(m[0]) };
-    }
-    if (c === "\u03C0") {
-      i++;
-      return { t: "num", k: Math.PI };
-    }
-    if (c === "\u221A") {
-      i++;
-      return { t: "sqrt", e: atom() };
-    }
-    if (/[a-z]/.test(c)) {
-      i++;
-      return { t: "var", name: c };
-    }
-    if (c === "(") {
-      i++;
-      const e = sum3();
-      if (peek() !== ")") fail();
-      i++;
-      return { t: "br", e };
-    }
-    return fail();
-  }
-  const tree = sum3();
-  if (i !== src.length) fail();
-  return tree;
-}
-function evaluate(e, env) {
-  switch (e.t) {
-    case "num":
-      return e.k;
-    case "var":
-      return env[e.name];
-    case "br":
-      return evaluate(e.e, env);
-    case "neg":
-      return -evaluate(e.e, env);
-    case "sqrt":
-      return Math.sqrt(evaluate(e.e, env));
-    case "pow":
-      return Math.pow(evaluate(e.a, env), evaluate(e.n, env));
-    case "sum":
-      return e.terms.reduce((s, t) => s + t.sign * evaluate(t.e, env), 0);
-    case "prod":
-      return e.fs.reduce((p, f) => f.op === "/" ? p / evaluate(f.e, env) : p * evaluate(f.e, env), 1);
-    default:
-      return NaN;
-  }
-}
-var varsOf = (e, out = /* @__PURE__ */ new Set()) => {
-  if (!e || typeof e !== "object") return out;
-  if (e.t === "var") out.add(e.name);
-  for (const v of Object.values(e)) {
-    if (Array.isArray(v)) v.forEach((x) => varsOf(x.e ?? x, out));
-    else if (v && typeof v === "object") varsOf(v, out);
-  }
-  return out;
-};
-var ALGEBRA_CHARS = /^[a-z0-9.+\-*/^()√π]+$/;
-function parseAlgebra(raw) {
-  const s = canonicalise(raw);
-  if (!s || !ALGEBRA_CHARS.test(s) || !/[a-z]/.test(s)) return null;
-  if (/[a-z]{4,}/.test(s)) return null;
-  if (/^[a-z]{3}$/.test(s)) return null;
-  try {
-    return parse(s);
-  } catch {
-    return null;
-  }
-}
-var SAMPLES = [1.37, 2.71, 0.53, 3.19, 1.91, 4.43, 0.87];
-function sameValue(a, b) {
-  const names = [.../* @__PURE__ */ new Set([...varsOf(a), ...varsOf(b)])].sort();
-  let compared = 0;
-  for (let k = 0; k < SAMPLES.length; k++) {
-    const env = {};
-    names.forEach((n, j) => {
-      env[n] = SAMPLES[(k + 3 * j) % SAMPLES.length] + j * 0.11;
-    });
-    const x = evaluate(a, env), y = evaluate(b, env);
-    if (!Number.isFinite(x) || !Number.isFinite(y)) continue;
-    if (Math.abs(x - y) > 1e-9 * Math.max(1, Math.abs(x), Math.abs(y))) return false;
-    compared++;
-  }
-  return compared >= 4;
-}
-var strip = (e) => e.t === "br" ? strip(e.e) : e;
-var hasBrackets = (s) => /[()]/.test(s);
-var topTerms = (e) => {
-  e = strip(e);
-  return e.t === "sum" ? e.terms.length : 1;
-};
-var isProduct = (e) => {
-  e = strip(e);
-  if (e.t === "neg") return isProduct(e.e);
-  return e.t === "prod" && e.fs.some((f) => strip(f.e).t === "sum" || f.e.t === "br") || e.t === "pow" && strip(e.a).t === "sum";
-};
-var likeKey = (t) => {
-  const pows = {};
-  const walk2 = (e, p) => {
-    e = strip(e);
-    if (e.t === "var") pows[e.name] = (pows[e.name] || 0) + p;
-    else if (e.t === "neg") walk2(e.e, p);
-    else if (e.t === "prod") e.fs.forEach((f) => walk2(f.e, f.op === "/" ? -p : p));
-    else if (e.t === "pow" && strip(e.n).t === "num") walk2(e.a, p * strip(e.n).k);
-    else if (e.t !== "num") pows["?" + JSON.stringify(e)] = 1;
-  };
-  walk2(t, 1);
-  return Object.keys(pows).filter((n) => pows[n]).sort().map((n) => n + pows[n]).join("");
-};
-var repeatsLikeTerm = (e) => {
-  e = strip(e);
-  if (e.t !== "sum") return false;
-  const keys = e.terms.map((t) => likeKey(t.e));
-  return new Set(keys).size < keys.length;
-};
-var uncollected = (e) => {
-  e = strip(e);
-  if (e.t === "prod") {
-    const bases = e.fs.map((f) => {
-      const g = strip(f.e);
-      return g.t === "pow" ? strip(g.a) : g;
-    });
-    if (bases.filter((b) => b.t === "num").length > 1) return true;
-    const names = bases.filter((b) => b.t === "var").map((b) => b.name);
-    if (new Set(names).size < names.length) return true;
-  }
-  for (const v of Object.values(e)) {
-    if (Array.isArray(v) && v.some((x) => uncollected(x.e ?? x))) return true;
-    if (v && typeof v === "object" && !Array.isArray(v) && v.t && uncollected(v)) return true;
-  }
-  return false;
-};
-var size = (e) => {
-  if (!e || typeof e !== "object") return 0;
-  let n = e.t ? 1 : 0;
-  for (const v of Object.values(e)) {
-    if (Array.isArray(v)) v.forEach((x) => {
-      n += size(x.e ?? x);
-    });
-    else if (v && typeof v === "object") n += size(v);
-  }
-  return n;
-};
-function wantedForm(question) {
-  const q = String(question ?? "").toLowerCase();
-  if (/\bexpand\b|\bremove the brackets\b|\bmultiply out\b/.test(q)) return "expanded";
-  if (/\bfactori[sz]e\b|\bfactor\b/.test(q)) return "factorised";
-  if (/\bsimplify\b|\bsimplest\b|\bcollect\b/.test(q)) return "simplified";
-  return null;
-}
-function formOk(userRaw, user, keyRaw, key, wanted) {
-  const u = canonicalise(userRaw), k = canonicalise(keyRaw);
-  if (topTerms(user) > topTerms(key)) return false;
-  if (repeatsLikeTerm(user) && !repeatsLikeTerm(key)) return false;
-  if (uncollected(user) && !uncollected(key)) return false;
-  if (size(user) > size(key) + 1) return false;
-  if (!hasBrackets(k) && hasBrackets(u)) return false;
-  if (isProduct(key) && !isProduct(user)) return false;
-  if (wanted === "expanded" && hasBrackets(u)) return false;
-  if (wanted === "factorised" && !isProduct(user)) return false;
-  if (wanted === "simplified" && repeatsLikeTerm(user)) return false;
-  return true;
-}
-function algebraicallyEqual(userRaw, keyRaw, question) {
-  const us = String(userRaw ?? "").split("="), ks = String(keyRaw ?? "").split("=");
-  if (us.length !== ks.length || us.length > 2) return false;
-  const wanted = wantedForm(question);
-  return us.every((u, i) => {
-    const kRaw = ks[i];
-    const key = parseAlgebra(kRaw);
-    if (!key) {
-      return us.length > 1 && canonicalise(u) === canonicalise(kRaw);
-    }
-    const user = parseAlgebra(u);
-    if (!user) return false;
-    return sameValue(user, key) && formOk(u, user, kRaw, key, wanted);
-  });
-}
-
-// src/ai-tutor/answerCheck.js
-function normalizeMath(str2) {
-  let s = str2.toString().trim().toLowerCase();
-  s = s.replace(/[−–—]/g, "-");
-  s = s.replace(/[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + [...m].map((c) => "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079".indexOf(c)).join(""));
-  s = s.replace(/\*\*/g, "^");
-  s = s.replace(/^(ksh|kes|sh|shs)\.?\s+/, "");
-  s = s.replace(/\/[=-]\s*$/, "");
-  s = s.replace(/\bremainder\b/g, "r");
-  s = s.replace(/\.\s*$/, "");
-  s = s.replace(/^(-?\d+)\s+(\d+\/\d+)$/, "$1+$2");
-  s = s.replace(/\s+/g, "");
-  s = s.replace(/cuberoot(of)?/g, "\u221B");
-  s = s.replace(/(squareroot(of)?|sqrt|root)/g, "\u221A");
-  s = s.replace(/√\((\d+)\)/g, "\u221A$1");
-  s = s.replace(/(^|\d)pi(?![a-z])/g, "$1\u03C0");
-  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, "$1$2");
-  s = s.replace(/\(([a-z])\)/g, "$1");
-  s = s.replace(/(\d)[*×·]([a-z])/g, "$1$2");
-  s = s.replace(/(\d)[*×·]\(/g, "$1(");
-  return s;
-}
-var COMPOUND_UNITS = [
-  { family: "time", big: /^(h|hr|hrs|hour|hours)$/, small: /^(min|mins|minute|minutes)$/, per: 60 },
-  { family: "mass", big: /^(kg|kgs|kilogram|kilograms|kilogramme|kilogrammes)$/, small: /^(g|gm|gms|gram|grams|gramme|grammes)$/, per: 1e3 },
-  { family: "length", big: /^(m|metre|metres|meter|meters)$/, small: /^(cm|cms|centimetre|centimetres|centimeter|centimeters)$/, per: 100 },
-  { family: "capacity", big: /^(l|ltr|ltrs|litre|litres|liter|liters)$/, small: /^(ml|mls|millilitre|millilitres|milliliter|milliliters)$/, per: 1e3 }
-];
-function compoundValue(raw) {
-  const m = raw.toString().trim().toLowerCase().replace(/\.$/, "").match(/^(\d+)\s*([a-z]+)\.?\s*(?:,|and|&)?\s*(\d+)\s*([a-z]+)\.?$/);
-  if (!m) return null;
-  const big = Number(m[1]), small = Number(m[3]);
-  const u = COMPOUND_UNITS.find((f) => f.big.test(m[2]) && f.small.test(m[4]));
-  if (!u || small >= u.per) return null;
-  return { family: u.family, small: big * u.per + small };
-}
-var UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%|m|l|g)+$/;
-var KEY_UNIT_SUFFIX = /(cm²|cm³|m²|m³|cm2|cm3|m2|m3|cm|mm|km|kg|ml|°|deg|degrees|units?|sq|squareunits?|%)+$/;
-var CHILD_UNIT_WORDS = /(percent(age)?|per cent|shillings?|shs?|bob|hours?|hrs?|minutes?|mins?|seconds?|secs?|years?|yrs?|days?|weeks?|months?|km\/h|kmh|kph|m\/s|litres?|liters?|millilit(re|er)s?|kilograms?|grams?|kilomet(re|er)s?|centimet(re|er)s?|millimet(re|er)s?|met(re|er)s?|sq\.?(cm|m|km|mm|units?)|square(cm|m|km|mm|units?|centimet(re|er)s?|met(re|er)s?)|(cm|m|km|mm)sq|cubic(cm|m)|cc|people|pupils|children|students|marks|goats|cows|books|pencils|sweets|apples|oranges|mangoes|eggs|items|pieces|boxes|bags|trees|cars|buses|days)$/;
-var LENGTH_NAMES = { mm: "mm|millimet(?:re|er)s?", cm: "cms?|centimet(?:re|er)s?", m: "m|mtrs?|met(?:re|er)s?", km: "kms?|kilomet(?:re|er)s?" };
-var SIMPLE_UNITS = [
-  ["capacity", "ml", /^(ml|mls|millilit(re|er)s?)$/],
-  ["capacity", "l", /^(l|ltrs?|lit(re|er)s?)$/],
-  ["mass", "mg", /^(mg|milligrams?)$/],
-  ["mass", "g", /^(g|gms?|grams?|grammes?)$/],
-  ["mass", "kg", /^(kgs?|kilos?|kilograms?|kilogrammes?)$/],
-  ["mass", "t", /^(t|tonnes?|tons?)$/],
-  ["time", "s", /^(s|secs?|seconds?)$/],
-  ["time", "min", /^(mins?|minutes?)$/],
-  ["time", "h", /^(h|hrs?|hours?)$/],
-  ["time", "day", /^days?$/],
-  ["time", "week", /^(wks?|weeks?)$/],
-  ["time", "month", /^months?$/],
-  ["time", "year", /^(yrs?|years?)$/],
-  ["money", "sh", /^(ksh|kes|shs?|shillings?|bob)$/],
-  ["angle", "deg", /^(°|degs?|degrees?)$/],
-  ["percent", "%", /^(%|percent|percentage|percents)$/],
-  ["area", "ha", /^(ha|hectares?)$/],
-  ["area", "acre", /^acres?$/]
-];
-function readUnit(raw) {
-  const w = String(raw ?? "").toLowerCase().replace(/²/g, "2").replace(/³/g, "3").replace(/\^/g, "").replace(/[\s.]+/g, "").replace(/\bper\b|(?<=[a-z])per(?=[a-z])/g, "/").replace(/\/[=-]$/, "sh");
-  if (!w) return null;
-  if (w === "sh") return { family: "money", unit: "sh" };
-  if (w === "cc") return { family: "volume", unit: "cm3" };
-  for (const [family2, unit, re] of SIMPLE_UNITS) if (re.test(w)) return { family: family2, unit };
-  for (const [unit, names] of Object.entries(LENGTH_NAMES)) {
-    if (new RegExp(`^(${names})$`).test(w)) return { family: "length", unit };
-    if (new RegExp(`^((sq|square|squared)(${names})|(${names})(sq|square|squared|2))$`).test(w)) return { family: "area", unit: `${unit}2` };
-    if (new RegExp(`^((cu|cubic|cubed)(${names})|(${names})(cu|cubic|cubed|3))$`).test(w)) return { family: "volume", unit: `${unit}3` };
-  }
-  if (/^(m\/s2|ms-?2)$/.test(w)) return { family: "acceleration", unit: "m/s2" };
-  const rate2 = w.match(/^([^/]+)\/([^/]+)$/);
-  if (rate2) {
-    const top = readUnit(rate2[1]), under = readUnit(rate2[2]);
-    if (top && under) {
-      const family2 = top.family === "length" && under.family === "time" ? "speed" : top.family === "mass" && under.family === "volume" ? "density" : "rate";
-      return { family: family2, unit: `${top.unit}/${under.unit}` };
-    }
-  }
-  if (/^(kmh|kph|kmph)$/.test(w)) return { family: "speed", unit: "km/h" };
-  if (w === "mps") return { family: "speed", unit: "m/s" };
-  return null;
-}
-function mathValue(raw, child = false) {
-  let s = raw.toString().trim().toLowerCase().replace(/[−–—]/g, "-");
-  while (/(\d),(\d{3})(?!\d)/.test(s)) s = s.replace(/(\d),(\d{3})(?!\d)/, "$1$2");
-  if (/\d\s*,\s*\d/.test(s)) return null;
-  s = s.replace(/^(ksh|kes|sh|shs)\.?\s*/, "");
-  s = s.replace(/\/[=-]$/, "");
-  s = s.replace(/^[a-z]\s*=\s*/, "");
-  s = s.replace(/\.$/, "");
-  s = s.replace(/\bremainder\b/, "r");
-  if (child) s = s.replace(/^\(\s*([+-]?)\s*(\d*\.?\d+)\s*\)$/, (_, sign, n) => (sign === "-" ? "-" : "") + n);
-  if (child) s = s.replace(/^\+\s*(?=\d)/, "");
-  const mixed2 = s.match(/^(-?\d+)\s+(\d+)\/(\d+)$/);
-  if (mixed2) {
-    const whole = parseInt(mixed2[1]);
-    const num4 = parseInt(mixed2[2]) / parseInt(mixed2[3]);
-    return whole < 0 ? whole - num4 : whole + num4;
-  }
-  s = s.replace(/\s+/g, "").replace(/^=+/, "");
-  const frac2 = s.match(/^(-?\d+)\/(-?\d+)$/);
-  if (frac2) {
-    const d = parseInt(frac2[2]);
-    return d === 0 ? null : parseInt(frac2[1]) / d;
-  }
-  if (child) {
-    const tail = s.match(/^(-?\d*\.?\d+)([^\d.].*)$/);
-    if (tail && readUnit(tail[2])) return parseFloat(tail[1]);
-  }
-  if (child) s = s.replace(CHILD_UNIT_WORDS, "").replace(/\/[=-]$/, "");
-  const pct3 = s.match(/^(-?\d*\.?\d+)%$/);
-  if (pct3) return parseFloat(pct3[1]);
-  const stripped = s.replace(child ? UNIT_SUFFIX : KEY_UNIT_SUFFIX, "");
-  if (/^-?\d*\.?\d+$/.test(stripped)) return parseFloat(stripped);
-  return null;
-}
-function decimalsOf(raw) {
-  const m = raw.toString().match(/\.(\d+)/);
-  return m ? m[1].length : 0;
-}
-function numbersMatch(userVal, acceptRaw, acceptVal) {
-  const dec2 = decimalsOf(acceptRaw);
-  if (dec2 === 0) return Math.abs(userVal - acceptVal) < 0.01;
-  const tol = 0.5 * Math.pow(10, -dec2) + 1e-9;
-  return Math.abs(userVal - acceptVal) <= tol;
-}
-var NUM_WORDS = { one: 1, two: 2, three: 3, four: 4, five: 5, six: 6, seven: 7, eight: 8, nine: 9, ten: 10, eleven: 11, twelve: 12 };
-var hourOf = (w) => /^\d+$/.test(w) ? Number(w) : NUM_WORDS[w];
-function timeValue(raw) {
-  let t = raw.toString().trim().toLowerCase().replace(/\s+/g, " ").replace(/\.$/, "");
-  t = t.replace(/\b(a\.?\s?m\.?|p\.?\s?m\.?|hrs|hours|h)$/, "").trim();
-  let m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})$/);
-  if (m && Number(m[2]) < 60 && Number(m[1]) <= 24) return Number(m[1]) % 12 * 60 + Number(m[2]);
-  m = t.match(/^(\d{1,2}|[a-z]+)\s*(o'?clock|o clock|oclock)?$/);
-  if (m && m[2] && hourOf(m[1]) != null) return hourOf(m[1]) % 12 * 60;
-  m = t.match(/^half past (\d{1,2}|[a-z]+)$/);
-  if (m && hourOf(m[1]) != null) return hourOf(m[1]) % 12 * 60 + 30;
-  m = t.match(/^(a )?quarter past (\d{1,2}|[a-z]+)$/);
-  if (m && hourOf(m[2]) != null) return hourOf(m[2]) % 12 * 60 + 15;
-  m = t.match(/^(a )?quarter to (\d{1,2}|[a-z]+)$/);
-  if (m && hourOf(m[2]) != null) return (hourOf(m[2]) + 11) % 12 * 60 + 45;
-  return null;
-}
-var isClockKey = (a) => /^\d{1,2}:\d{2}$/.test(String(a).trim());
-var MERIDIEM = /^(\d{1,2})\s*[:.]\s*(\d{2})\s*([ap])\.?\s*m\.?$/;
-var meridiemTime = (raw) => {
-  const t = String(raw ?? "").trim().toLowerCase().replace(/\s+/g, " ");
-  let m = t.match(MERIDIEM);
-  if (m) {
-    const h = Number(m[1]), mi = Number(m[2]);
-    if (h < 1 || h > 12 || mi > 59) return null;
-    return { h: h % 12 + (m[3] === "p" ? 12 : 0), mi, meridiem: true };
-  }
-  m = t.match(/^(\d{1,2})\s*[:.]\s*(\d{2})\s*(hrs|h|hours)?$/);
-  if (m) {
-    const h = Number(m[1]), mi = Number(m[2]);
-    if (mi <= 59 && (h === 0 || h >= 13 && h <= 23)) return { h, mi, meridiem: false };
-  }
-  return null;
-};
-var isMeridiemKey = (a) => meridiemTime(a)?.meridiem === true;
-var COMPASS = { n: "north", s: "south", e: "east", w: "west", ne: "north east", nw: "north west", se: "south east", sw: "south west" };
-var SHORT_NAMES = [
-  "monday",
-  "tuesday",
-  "wednesday",
-  "thursday",
-  "friday",
-  "saturday",
-  "sunday",
-  "january",
-  "february",
-  "march",
-  "april",
-  "may",
-  "june",
-  "july",
-  "august",
-  "september",
-  "october",
-  "november",
-  "december"
-];
-var expandShort = (w) => {
-  const x = w.toLowerCase().replace(/[.\s-]/g, "");
-  if (COMPASS[x]) return COMPASS[x].replace(" ", "");
-  if (x.length >= 3) {
-    const hit = SHORT_NAMES.filter((n) => n.startsWith(x));
-    if (hit.length === 1) return hit[0];
-  }
-  return x;
-};
-function exactValue(problem) {
-  const v = problem?.verify?.value;
-  if (typeof v === "number" && Number.isFinite(v)) return v;
-  const q = String(problem?.question || "").replace(/[−–]/g, "-").replace(/\s*=\s*\??\s*$/, "").trim();
-  let m = q.match(/^(-?\d+(?:\.\d+)?)\s*([+\-×x*÷/])\s*(-?\d+(?:\.\d+)?)$/);
-  if (m) {
-    const a = +m[1], b = +m[3], op = m[2];
-    const r = op === "+" ? a + b : op === "-" ? a - b : op === "\xF7" || op === "/" ? b ? a / b : NaN : a * b;
-    return Number.isFinite(r) ? r : null;
-  }
-  m = q.match(/write (\d+)\/(\d+) as a decimal/i);
-  if (m && +m[2]) return +m[1] / +m[2];
-  return null;
-}
-var unitAfterNumber = (raw) => {
-  const t = String(raw ?? "").trim().replace(/[−–—]/g, "-").replace(/\.$/, "");
-  if (/^(ksh|kes|shs?)\b\.?\s*-?\d/i.test(t)) return readUnit("sh");
-  const m = t.match(/^\(?[+-]?\s*(?:\d[\d,]*)?(?:\.\d+)?(?:\s+\d+\/\d+|\/\d+)?\)?\s*([^\d\s.,/(][^]*|\/[=-])$/);
-  return m ? readUnit(m[1]) : null;
-};
-var sameUnit = (a, b) => a.unit === b.unit || a.unit === "ml" && b.unit === "cm3" || a.unit === "cm3" && b.unit === "ml";
-var ASK_WORDS = [
-  ["area", /\barea\b/i],
-  ["volume", /\bvolume\b/i],
-  ["capacity", /\bcapacity\b/i],
-  ["length", /\b(perimeter|circumference|length|width|breadth|height|distance|radius|diameter|how far|how tall|how wide|how high|lower bound|upper bound)\b/i],
-  ["mass", /\b(mass|weight|how heavy)\b/i],
-  ["speed", /\b(speed|velocity)\b/i],
-  ["density", /\bdensity\b/i],
-  ["angle", /\b(angle|bearing)\b/i],
-  ["time", /\b(time|how long (?:does|did|will|would))\b/i],
-  ["money", /\b(cost|price|profit|loss|commission|interest|discount)\b/i]
-];
-var ASK_VERB = /\b(find|calculate|work out|determine|what|which|state|give)\b/i;
-function askedKind(sentence) {
-  const verb = sentence.match(ASK_VERB);
-  const hits = ASK_WORDS.flatMap(([family2, re]) => {
-    const m = (verb ? sentence.slice(verb.index) : sentence).match(re);
-    return m ? [{ family: family2, at: m.index, bound: /bound/i.test(m[0]) }] : [];
-  });
-  if (!hits.length) return null;
-  if (hits.some((h) => h.bound)) return null;
-  if (verb) return hits.sort((a, b) => a.at - b.at)[0].family;
-  return hits.length === 1 ? hits[0].family : null;
-}
-function unitsInText(text) {
-  const out = [];
-  const add = (w) => {
-    const u = readUnit(w);
-    if (u) out.push(u);
-  };
-  for (const m of text.matchAll(/(?:square|sq\.?|cubic)\s+[a-z]+|\b[a-z]{2,}(?:[²³]|\^[23])?(?:\s*(?:\/|per)\s*[a-z]+(?:[²³]|\^[23])?)?/gi)) add(m[0]);
-  for (const m of text.matchAll(/\d\s*(m|g|l|h|s|t)(?:[²³]|\^[23])?(?:\/[a-z]+(?:[²³]|\^[23])?)?(?![a-z0-9])/g)) add(m[0].replace(/^\d\s*/, ""));
-  if (/\d\s*°/.test(text)) add("\xB0");
-  if (/\b(ksh|kes)\.?\s*\d/i.test(text)) add("sh");
-  return out;
-}
-var isAlgebraText = (t) => /\d[a-z]\s*[-+=×]|[-+=]\s*\d*[a-z]\b|\b[a-z]\s*=/.test(t);
-var GEOMETRY = { length: 1, area: 2, volume: 3 };
-function unitsOfKind(family2, units) {
-  const same = units.filter((u) => u.family === family2);
-  const power = GEOMETRY[family2];
-  if (power > 1) {
-    for (const u of units) if (u.family === "length") same.push({ family: family2, unit: `${u.unit}${power}` });
-  }
-  return same;
-}
-function askedUnit(problem) {
-  const instruction = String(problem?.instruction || "");
-  const question = String(problem?.question || "");
-  const text = `${instruction} ${question}`.trim();
-  if (isAlgebraText(text)) return null;
-  const said = [];
-  const pushSaid = (w, original) => {
-    if (original.length === 1 && original !== original.toLowerCase()) return;
-    const u = readUnit(w);
-    if (u) said.push(u);
-  };
-  for (const m of text.matchAll(/how many\s+((?:square\s+|cubic\s+)?([a-z]+(?:\s*(?:\/|per\b)\s*[a-z]+)?))/gi)) pushSaid(m[1], m[2]);
-  if (!said.length) {
-    for (const m of text.matchAll(/\b(?:in|into|to)\s+(?:the\s+unit\s+)?((?:square\s+|sq\.?\s+|cubic\s+)?([a-z]+(?:[²³23]|\^[23])?(?:\s*(?:\/|per\b)\s*[a-z]+(?:[²³23]|\^[23])?)?))(?![a-z])/gi)) pushSaid(m[1], m[2]);
-    for (const m of text.matchAll(/\(\s*((?:square\s+|cubic\s+)?([a-z]+(?:[²³])?(?:\/[a-z]+[²³]?)?))\s*\)\s*\??\s*$/gi)) pushSaid(m[1], m[2]);
-  }
-  if (said.length) return { units: said };
-  const units = unitsInText(text);
-  const sentences = question.replace(/(\s*\([^()]*\))+\s*$/, "").split(/(?<=[.?!])\s+/).filter(Boolean);
-  const kind = askedKind(sentences[sentences.length - 1] || "") || askedKind(instruction);
-  if (kind) return { family: kind, units: unitsOfKind(kind, units) };
-  const groups = new Set(units.filter((u) => u.family !== "percent").map((u) => GEOMETRY[u.family] ? "geometry" : u.family));
-  if (groups.size !== 1) return null;
-  const only = [...groups][0];
-  if (!["geometry", "mass", "capacity"].includes(only)) return null;
-  return only === "geometry" ? { group: "geometry", units } : { family: only, units: units.filter((u) => u.family === only) };
-}
-function unitConflict(userAnswer, problem) {
-  const given = unitAfterNumber(userAnswer);
-  if (!given) return false;
-  const asked = askedUnit(problem);
-  if (!asked) return false;
-  if (given.family === "percent" && !asked.family) return false;
-  if (asked.group === "geometry") {
-    if (!GEOMETRY[given.family]) return true;
-    const samePower = asked.units.filter((u) => u.family === given.family);
-    return samePower.length > 0 && !samePower.some((u) => sameUnit(u, given));
-  }
-  if (asked.family) {
-    if (given.family === "percent") return false;
-    const liquid = /* @__PURE__ */ new Set(["volume", "capacity"]);
-    if (asked.family !== given.family) return !(liquid.has(asked.family) && liquid.has(given.family));
-    return asked.units.length > 0 && !asked.units.some((u) => sameUnit(u, given));
-  }
-  return !asked.units.some((u) => sameUnit(u, given));
-}
-function checkAnswerMatch(userAnswer, problem) {
-  const normalizedUser = normalizeMath(userAnswer);
-  const accepts2 = problem.accepts || [problem.answer];
-  if (accepts2.some((a) => normalizedUser === normalizeMath(a))) return true;
-  const wordy = (t) => t.toString().trim().toLowerCase().replace(/[-_]/g, " ").replace(/[.!]+$/, "").replace(/^(it is|it's|its|they are|they're|this is|the answer is|answer:?)\s+/, "").replace(/^(a|an|the)\s+/, "").replace(/\s+(lines?|angles?|angled|triangles?|shapes?|polygons?)$/, "").replace(/\s+/g, "");
-  if (/^[a-z][a-z\s'-]*$/i.test(userAnswer.toString().trim())) {
-    const w = wordy(userAnswer);
-    if (w && accepts2.some((a) => /^[a-z][a-z\s'-]*$/i.test(String(a).trim()) && wordy(a) === w)) return true;
-  }
-  if (accepts2.some(isClockKey)) {
-    const tv2 = timeValue(userAnswer);
-    if (tv2 != null && accepts2.some((a) => isClockKey(a) && timeValue(a) === tv2)) return true;
-  }
-  if (accepts2.some(isMeridiemKey)) {
-    const u = meridiemTime(userAnswer);
-    if (u && accepts2.some((a) => {
-      const k = meridiemTime(a);
-      return k?.meridiem && k.h === u.h && k.mi === u.mi;
-    })) return true;
-  }
-  if (/^[a-z][a-z.\s-]{0,10}$/i.test(userAnswer.toString().trim())) {
-    const u = expandShort(userAnswer.toString().trim());
-    if (accepts2.some((a) => /^[a-z][a-z\s-]*$/i.test(String(a).trim()) && expandShort(String(a).trim()) === u && u.length > 2)) return true;
-  }
-  const numList = (t) => {
-    const x = t.toString().toLowerCase().replace(/[−–—]/g, "-").replace(/°|degrees?/g, "").replace(/(^|[\s,])[a-zθ]\s*=\s*/g, "$1").replace(/\s+(and|or|&)\s+/g, ",").replace(/;/g, ",");
-    if (!/^[\s\d.,-]+$/.test(x)) return null;
-    const parts = x.split(",").map((v) => v.trim()).filter(Boolean);
-    if (parts.length < 2 || parts.some((v) => !/^-?\d*\.?\d+$/.test(v))) return null;
-    return parts.map(Number).sort((a, b) => a - b);
-  };
-  const userList = numList(userAnswer);
-  const isSet = (a) => /\s(and|or)\s|°/.test(String(a));
-  if (userList && accepts2.some((a) => {
-    if (!isSet(a)) return false;
-    const k = numList(a);
-    return k && k.length === userList.length && k.every((v, i) => Math.abs(v - userList[i]) < 1e-9);
-  })) return true;
-  const named = (t) => {
-    const s = t.toString().toLowerCase().replace(/[−–—]/g, "-");
-    const NV = /([a-z])\s*=\s*(-?\d+(?:\.\d+)?(?:\/\d+)?)/g;
-    const found = [...s.matchAll(NV)];
-    if (found.length < 2 || s.replace(NV, "").replace(/\b(and|&)\b|[\s,;&]/g, "")) return null;
-    const out = {};
-    for (const [, k, v] of found) {
-      if (k in out) return null;
-      out[k] = v.includes("/") ? Number(v.split("/")[0]) / Number(v.split("/")[1]) : Number(v);
-    }
-    return out;
-  };
-  const sameNamed = (u, k) => Object.keys(u).length === Object.keys(k).length && Object.keys(k).every((x) => x in u && Math.abs(u[x] - k[x]) < 1e-9);
-  const keyPairs = accepts2.map((a) => named(a)).filter(Boolean);
-  if (keyPairs.length) {
-    const u = named(userAnswer);
-    if (u && keyPairs.some((k) => sameNamed(u, k))) return true;
-    const bare = userAnswer.toString().trim().replace(/[−–—]/g, "-").replace(/\s+(and|&)\s+/gi, ",");
-    if (/^-?\d+(\.\d+)?(\s*[,;\s]\s*-?\d+(\.\d+)?)+$/.test(bare)) {
-      const vals = bare.split(/\s*[,;\s]\s*/).map(Number);
-      if (keyPairs.some((k) => {
-        const ks = Object.keys(k).sort();
-        return ks.length === vals.length && ks.every((x, i) => Math.abs(k[x] - vals[i]) < 1e-9);
-      })) return true;
-    }
-  }
-  const sumKey = (s) => {
-    if (!/[a-z]/.test(s)) return null;
-    if (/[()]/.test(s)) return null;
-    if (/\^-/.test(s)) return null;
-    if (/\de[-+]?\d/.test(s)) return null;
-    const terms = s.replace(/-/g, "+-").split("+").filter(Boolean);
-    if (terms.length < 2 || terms.some((t) => t === "-")) return null;
-    return terms.sort().join("|");
-  };
-  const sidesKey = (s) => {
-    const parts = s.split("=");
-    if (parts.length < 2) {
-      const k = sumKey(s);
-      return k && `|${k}`;
-    }
-    const keys = parts.map((p) => sumKey(p) ?? p);
-    return keys.some((k, i) => k !== parts[i]) ? keys.join("=") : null;
-  };
-  const userKey = sidesKey(normalizedUser);
-  if (userKey && accepts2.some((a) => sidesKey(normalizeMath(a)) === userKey)) return true;
-  const cu = compoundValue(userAnswer);
-  if (cu && accepts2.some((a) => {
-    const k = compoundValue(a);
-    return k && k.family === cu.family && k.small === cu.small;
-  })) return true;
-  if (accepts2.some((a) => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
-  if (/simplest form|simplify|lowest terms/i.test(`${problem.instruction || ""} ${problem.question || ""}`)) {
-    const f = userAnswer.toString().trim().replace(/[−–—]/g, "-").match(/^(?:-?\d+\s+)?(-?\d+)\s*\/\s*(\d+)$/);
-    const gcd7 = (m, n) => n ? gcd7(n, m % n) : Math.abs(m);
-    if (f && gcd7(Number(f[1]), Number(f[2])) > 1) return false;
-  }
-  const userVal = mathValue(userAnswer, true);
-  const givenUnit = unitAfterNumber(userAnswer);
-  const keyUnits = accepts2.map(unitAfterNumber);
-  const keyHasUnit = keyUnits.some(Boolean);
-  const unitFits = (i) => !givenUnit || !keyHasUnit || (keyUnits[i] ? sameUnit(givenUnit, keyUnits[i]) : keyUnits.some((u) => u && sameUnit(givenUnit, u)));
-  if (userVal != null && (keyHasUnit || !unitConflict(userAnswer, problem))) {
-    const typedDecimal = /\d*\.\d/.test(userAnswer.toString());
-    const exact = exactValue(problem);
-    const wholeKey = /^-?\d+$/.test(String(problem.answer ?? "").trim());
-    if (accepts2.some((a, i) => {
-      if (!unitFits(i)) return false;
-      if (wholeKey && /^\s*-?\d+\s*\/\s*\d+\s*$/.test(String(a))) return false;
-      const aVal = mathValue(a) ?? (keyUnits[i] ? mathValue(a, true) : null);
-      if (aVal == null) return false;
-      if (!typedDecimal) return Math.abs(userVal - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal));
-      if (exact != null && Math.abs(exact - aVal) <= 1e-9 * Math.max(1, Math.abs(aVal))) return Math.abs(userVal - exact) <= 1e-9 * Math.max(1, Math.abs(exact));
-      return numbersMatch(userVal, a, aVal);
-    })) return true;
-  }
-  const coordUser = normalizedUser.replace(/[()]/g, "");
-  if (accepts2.some((a) => /,/.test(String(a)) && normalizeMath(a).replace(/[()]/g, "") === coordUser)) return true;
-  return false;
-}
-
-// src/school/homeworkSitting.js
-var norm4 = (t) => String(t ?? "").trim().replace(/\s+/g, " ").toLowerCase();
-function markItem(it, response) {
-  const raw = String(response ?? "").trim();
-  if (raw === "") return { correct: false, chosen: "", mis: null, blank: true };
-  if (it.kind === "choice") {
-    const o = it.options.find((x) => x.key === raw.toUpperCase()) || it.options.find((x) => norm4(x.text) === norm4(raw));
-    if (!o) return { correct: false, chosen: raw.slice(0, 40), mis: null };
-    return { correct: !!o.right, chosen: o.key, mis: o.right ? null : o.mis || null };
-  }
-  const correct = checkAnswerMatch(raw, { answer: it.answer, accepts: it.accepts });
-  if (correct) return { correct: true, chosen: raw.slice(0, 60), mis: null };
-  const w = (it.wrong || []).find((x) => x.mis && (norm4(x.value) === norm4(raw) || checkAnswerMatch(raw, { answer: x.value, accepts: [x.value] })));
-  return { correct: false, chosen: raw.slice(0, 60), mis: w?.mis || null };
-}
-
 // src/school/homework.js
 var LETTERS3 = "ABCDEFGH";
 var seedOf = (text) => {
@@ -35337,8 +35826,16 @@ var newLesson = () => ({
   prereq: false,
   turns: 0,
   probes: 0,
-  min: 0
+  min: 0,
+  found: [],
+  care: null,
+  stops: 0,
+  diagnosing: false,
+  seal: null
 });
+var MAX_FOUND = 8;
+var CARE2 = ["paused", "ended"];
+var SEAL_RE = /^[A-Za-z0-9_-]{8,40}\.[A-Za-z0-9_-]{16,5000}$/;
 var int = (v, lo, hi, d = 0) => Number.isInteger(v) && v >= lo && v <= hi ? v : d;
 function cleanLesson(raw) {
   const s = newLesson();
@@ -35360,13 +35857,17 @@ function cleanLesson(raw) {
   s.turns = int(raw.turns, 0, 500);
   s.probes = int(raw.probes, 0, 500);
   s.min = Number.isFinite(raw.min) && raw.min >= 0 && raw.min < 600 ? Math.round(raw.min * 10) / 10 : 0;
+  if (Array.isArray(raw.found)) s.found = [...new Set(raw.found.filter((x) => typeof x === "string" && x.length > 0 && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
+  if (CARE2.includes(raw.care)) s.care = raw.care;
+  s.stops = int(raw.stops, 0, 20);
+  s.diagnosing = raw.diagnosing === true;
+  if (typeof raw.seal === "string" && SEAL_RE.test(raw.seal)) s.seal = raw.seal;
   return s;
 }
 var words5 = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9'\s/]/g, " ").split(/\s+/).filter(Boolean);
 var REASON = /\b(because|cause|coz|since|so|that'?s why|if|each|both|times|multipl\w*|divid\w*|doubl\w*|half|halves|same|equal|split|cut|shared?|more|less|bigger|smaller|top|bottom|numerator|denominator)\b/i;
 var gaveReason = (text) => words5(text).length >= 4 && REASON.test(String(text));
-var LOST = /\b(i (do ?n[o']?t|dont) know|idk|no idea|not sure|i'?m (lost|confused)|confus\w*|sijui|sielewi|sijaelewa|i give up)\b/i;
-var soundsLost = (text) => LOST.test(String(text || ""));
+var ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through)\b/i;
 function prelimClass({ marked = null, message = "" } = {}) {
   if (!marked) return null;
   if (marked.correct) return gaveReason(message) ? "understood" : "right_unexplained";
@@ -35402,12 +35903,23 @@ function stageAllowed(s, { understoodNow = false, closing = false } = {}) {
   return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
 }
 function decide(s, ctx = {}) {
-  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null } = ctx;
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing }), avoid: extra.avoid ?? null, prelim });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
+  if (s.care === "paused") {
+    if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
+    if (wantsToCarryOn(message)) return out("care-return", ["Recover a lost child"], "a moment ago the child said something private and HOREB answered with care; now they want to carry on. First check kindly, in one short sentence, that they are okay. Then go back gently to the last thing they got right, with one easy question. Never mention or ask about what they said", { with: ["Revoice and build", "Name what was right"], stageMax: s.stage || "warmup" });
+    if (childMove(message) === "stop") return out("close", ["Close the lesson"], "the child does not want to carry on after a care reply: close kindly in two short sentences, say a grown-up they trust can help, then end_session. No maths", { with: [], stageMax: "wrapup" });
+    return out("care", ["Revoice and build"], "the child said something private a moment ago and HOREB answered with care. Stay in the care frame: one or two kind sentences, no maths. Never ask them to repeat or explain what happened. Ask if they want to carry on with our fractions or stop for today", { with: [], stageMax: s.stage || "warmup" });
+  }
   if (closing || s.stage === "wrapup") return out("close", ["Close the lesson"], closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : "the lesson is in its wrap-up", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
+  const move = marked ? null : childMove(message);
+  if (move === "stop" || marked && childMove(message) === "stop") {
+    if (s.stops >= 1) return out("stop", ["Close the lesson"], "the child has asked to stop again: close the lesson now, kindly, in two short sentences (one thing they did well today), then end_session", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
+    return out("bored", ["Close the lesson", "Predict then show"], "the child says they are bored or want to stop. Do not carry on with the same task and never repeat the lesson. Say you hear them in a few words, then offer one choice: a quick two-minute game (for example: guess how many pieces before I cut the chapati) or stopping for today. If they choose to stop, close the lesson", { with: ["Revoice and build", "Name what was right"], stageMax: "wrapup" });
+  }
   if (probe && PROBE_KINDS.includes(probe.kind)) {
     const why = {
       answer_nudge: "the child is silent after your question: one short kind nudge, no answer, no new question",
@@ -35418,7 +35930,9 @@ function decide(s, ctx = {}) {
     }[probe.kind];
     return out("probe", PROBE_MOVES[probe.kind], why, { with: [] });
   }
-  if (soundsLost(message) && !marked) return out("lost", ["Recover a lost child", "Smaller-question hint"], "the child says they do not know: lower the question, go back to the last thing they got right");
+  if (move === "lost" || soundsLost(message) && !marked) return out("lost", ["Recover a lost child", "Smaller-question hint"], "the child says they do not know: lower the question, go back to the last thing they got right");
+  if (move === "filler") return out("thinking", ["Wait and nudge"], 'the child is still thinking aloud ("umm"): one short line such as "Take your time", no new question and no answer, then hand back with the same doing', { with: [] });
+  if (move === "question") return out("question", ["Revoice and build", "Smaller-question hint", "Show then hand over"], "the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them", { with: ["Name what was right"] });
   if (marked && WRONG.includes(prelim)) {
     if (s.rep && s.sameFails + 1 >= 2) {
       const left = REPS.filter((r) => r !== "story" && !s.tried.includes(r));
@@ -35429,12 +35943,15 @@ function decide(s, ctx = {}) {
         { avoid: s.rep }
       );
     }
-    return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()}: find the thinking behind it before you teach` : "a wrong answer with no library match: ask how they got it before you teach");
+    const how = `ask ONE question about how they got "${String(marked.answer || "").slice(0, 40)}" (for example "How did you get that?" or "Tell me how you counted"), and nothing else: no explaining, no new picture, no new question to answer, no hint, until you have heard their thinking`;
+    return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()} (keep that to yourself): ${how}` : `a wrong answer with no library match: ${how}`, { with: ["Revoice and build", "Name what was right"], must: ["Diagnose the wrong answer"] });
   }
-  if (marked && prelim === "right_unexplained") return out("press", ["Press for reasoning"], "right, but no reason yet: ask how they knew. It does not count as understood until they give a reason");
+  if (s.diagnosing && message && !marked) return out("reteach", ["Show then hand over", "Predict then show", "Count with the child", "Smaller-question hint"], "the child has told you how they got their wrong answer: use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them", { with: ["Revoice and build", "Name what was right"] });
+  const right = marked?.correct ? { must: ["Name what was right"], quote: marked.said || marked.answer || null, answered: { ask: marked.ask, prompt: question?.question || null } } : {};
+  if (marked && prelim === "right_unexplained") return out("press", ["Name what was right", "Press for reasoning"], "right, but no reason yet: first say yes and name what was right in the child's own words, then ask how they knew. It does not count as understood until they give a reason", right);
   if (marked && prelim === "understood") {
-    if (s.streak >= 1) return out("move-on", ["Check for understanding", "Stretch the quick child", "Show then hand over"], `understood, and the fresh check too: you may move on to ${nextStage(s.stage)}`);
-    return out("fresh-check", ["Check for understanding"], "understood, with a reason: check it once on a fresh example before moving on");
+    if (s.streak >= 1) return out("move-on", ["Name what was right", "Check for understanding", "Stretch the quick child", "Show then hand over"], `understood, and the fresh check too: name what was right, then you may move on to ${nextStage(s.stage)}`, right);
+    return out("fresh-check", ["Name what was right", "Check for understanding"], "understood, with a reason: name what was right in the child's own words, then check it once on a fresh example (a new question, not the same one) before moving on", right);
   }
   if (s.pending && message) return out("reason", ["Name what was right", "Press for reasoning", "Check for understanding"], "the child is giving the reason for their right answer: judge it (assess); if it holds, name it and check on a fresh example", { with: ["Revoice and build", "Celebrate the strategy"] });
   if (s.classes[s.classes.length - 1] === "missing_prerequisite" && prerequisite) return out("prerequisite", ["Smaller-question hint", "Show then hand over", "Count with the child"], `the last answer showed a missing earlier skill: go back to ${prerequisite} with a smaller, earlier step, then return`);
@@ -35468,11 +35985,24 @@ function judgeTurn(decision, steps2 = []) {
     if (PHASES.indexOf(p.phase) > PHASES.indexOf(decision.stageMax)) notes.push(`set_phase ${p.phase} is ahead of what the lesson allows (${decision.stageMax})`);
   }
   if (decision.avoid && repsOf(steps2).includes(decision.avoid)) notes.push(`the ${decision.avoid} was used again after two wrong answers with it`);
+  for (const m of decision.must || []) {
+    if (!tags.some((t) => norm6(t) === norm6(m))) notes.push(`"${m}" was required this turn and no say carried it`);
+  }
+  if (decision.rule === "diagnose") {
+    const says = steps2.filter((x) => x.cmd === "say");
+    if (!says.some((x) => ASKS_HOW.test(x.text))) notes.push("the diagnose turn did not ask how the child got their answer");
+    if (steps2.some((x) => x.cmd === "ask" || DRAWN.includes(x.cmd) && x.cmd !== "write_text")) notes.push("the diagnose turn taught (a new picture or question) before hearing how the child got their answer");
+  }
   return notes;
 }
-function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0 } = {}) {
-  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes] };
+function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, marked = null, probe = null, elapsedMin = 0, keepSeal = null } = {}) {
+  const s = { ...s0, tried: [...s0.tried], classes: [...s0.classes], found: [...s0.found || []] };
   s.turns += 1;
+  if (marked?.correct && marked.canon) s.found = [.../* @__PURE__ */ new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
+  if (decision?.rule === "care-return") s.care = null;
+  if (decision?.rule === "bored") s.stops += 1;
+  if (!probe) s.diagnosing = decision?.rule === "diagnose";
+  s.seal = keepSeal || null;
   if (probe) s.probes += 1;
   s.min = Math.round(Math.max(0, elapsedMin) * 10) / 10;
   if (marked && s.question && marked.ask === s.question.id) s.question = { ...s.question, attempts: s.question.attempts + 1 };
@@ -35521,8 +36051,10 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
 function lessonLines(s, d) {
   const lines = [];
   lines.push(`Lesson state: stage ${s.stage || "not started"}; the child is now ${s.doing ? { answer: "answering a question", task: "doing a task on the board", talk: "talking freely" }[s.doing] : "starting"}${s.question ? `; question ${s.question.id}, ${s.question.attempts} attempt${s.question.attempts === 1 ? "" : "s"} so far` : ""}; hints given ${s.hints}${s.tried.length ? `; tried on this idea: ${s.tried.join(", ")}` : ""}${s.classes.length ? `; last answers: ${s.classes.slice(-3).join(", ")}` : ""}${s.pending ? `; question ${s.pending.ask} was right but has no reason yet` : ""}.`);
+  if (s.found?.length) lines.push(`Answers the child has already found (you may say them back now): ${s.found.join(", ")}.`);
   if (d) {
     lines.push(`Allowed moves this turn: ${d.moves.join(", ")}${d.with.length ? ` (and alongside: ${d.with.join(", ")})` : ""}. Why: ${d.reason}.`);
+    if (d.must?.includes("Name what was right")) lines.push(`Your first say is Name what was right: yes, and the child's own words${d.quote ? ` ("${String(d.quote).slice(0, 60)}")` : ""}, tagged "Name what was right".${d.answered ? ` The child has answered question ${d.answered.ask}: never ask it again; a fresh check is a new question.` : ""}`);
     lines.push(`Tag the say that carries your move with "move": one of the allowed moves. The furthest stage allowed after this turn: ${d.stageMax}.`);
   }
   return lines;
@@ -35540,8 +36072,52 @@ var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please t
 var TURN_ESTIMATE_USD = 0.02;
 var VOICE_TURN_CHARS_ESTIMATE = 250;
 var MAX_AUDIO_S = 300;
-var FALLBACK_TURN = [say("Sorry, I lost my words for a moment."), say("Can you say that again?"), handBack];
-var RECOVER_TURN = [say("Let me stop there."), say("Tell me what you think the next step is."), handBack];
+var LESSON_TITLE_LINE = "Today we will find fractions that are the same amount.";
+var ENDED_TURN = [say("Our lesson has stopped for today."), say("Please go and find a grown-up you trust now."), { cmd: "end_session", summary: "The lesson stopped early." }];
+var CARE_WAIT = [say("I am here, and there is no hurry."), say("Say when you want to carry on, or we can stop for today."), { cmd: "pause_for_child", expect: "any", max_wait_s: 60, doing: "talk" }];
+function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, saidAny = false, doing = null } = {}) {
+  const yes = marked?.correct && !saidAny ? [marked.said ? `Yes, ${marked.said}.` : "Yes, that is right."] : [];
+  const again = openPrompt && /\?\s*$/.test(openPrompt) ? openPrompt : null;
+  if (probe) {
+    const k = probe.kind;
+    if (k === "task_checkin") return { lines: ["Take your time.", "Tell me when you are done."], doing: doing || "task" };
+    if (k === "answer_smaller" || k === "talk_again") return { lines: ["Take your time.", "Look at the board. What do you notice?"], doing: doing || "answer" };
+    return { lines: ["Take your time. A guess is fine."], doing: doing || "answer" };
+  }
+  switch (rule) {
+    case "open":
+      return { lines: [...saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE], "Have you ever shared a chapati with someone?"], doing: "answer" };
+    case "care-wait":
+    case "care":
+      return { lines: ["Thank you. I am listening.", "Do you want to carry on with our fractions, or stop for today?"], doing: "talk" };
+    case "care-return":
+      return { lines: ["I am glad you are here.", "Let us carry on gently. Look at the board. What do you see?"], doing: "answer" };
+    case "stop":
+      return { lines: ["Thank you for working with me today. You did some good thinking."], doing: "talk", end: { cmd: "end_session", summary: "The child asked to stop, and the lesson closed early." } };
+    case "bored":
+      return { lines: ["I hear you.", "Shall we play a quick guessing game, or stop for today?"], doing: "talk" };
+    case "close":
+      return { lines: ["We did some good thinking today.", "What is one thing you will remember?"], doing: "talk" };
+    case "press":
+      return { lines: [...yes, "How did you know?"], doing: "answer" };
+    case "fresh-check":
+    case "move-on":
+    case "reason":
+      return { lines: [...yes, "Can you show me that on the board?"], doing: "task" };
+    case "diagnose":
+    case "change":
+      return { lines: [...saidAny ? [] : ["Thank you for telling me."], "How did you get that?"], doing: "answer" };
+    case "thinking":
+      return { lines: ["Take your time."], doing: doing || "answer" };
+    case "lost":
+      return { lines: ["That is okay. Let us take a smaller step.", "Look at the board. What do you see?"], doing: "answer" };
+    case "question":
+      return again ? { lines: ["That is a good question. Let us take it slowly.", again], doing: "answer" } : { lines: ["That is a good question.", "Look at the board with me. What do you notice?"], doing: "answer" };
+    default:
+      return again ? { lines: [...yes, saidAny ? again : `Let me ask you again. ${again}`], doing: "answer" } : { lines: [...yes, "What do you think?"], doing: "answer" };
+  }
+}
+var recoverSteps = (r) => [...r.lines.map(say), r.end || { ...handBack, doing: r.doing }];
 var WIND_DOWN = [
   { cmd: "set_phase", phase: "wrapup" },
   say("We have done a lot of good thinking today."),
@@ -35566,7 +36142,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const turnIndex = Math.max(0, Number(body?.turn_index) || 0);
   const answerText = String(body?.answer?.response ?? "").slice(0, MAX_CHILD_CHARS);
   let concern = null;
-  for (const text of [message, answerText]) {
+  for (const text of [.../* @__PURE__ */ new Set([message, answerText])]) {
     if (!text) continue;
     const hit = screenAll(text, safeguard);
     if (hit.tier === "none") continue;
@@ -35585,17 +36161,27 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       excerpt: (hit.hits || []).map((h) => h.excerpt).join(" | ").slice(0, 1e3)
     });
   }
+  const lesson0 = cleanLesson(body?.lesson);
   let marked = null;
   let open = null;
-  if (body?.answer?.seal && !concern) {
-    const q = await unseal(body.answer.seal, secret, { session: sid, child: childKey, now });
+  let question = null;
+  let unanswered = null;
+  const sealToken = body?.answer?.seal || message && lesson0.seal || null;
+  const response = String((body?.answer?.seal ? body.answer.response : message) ?? "").slice(0, MAX_CHILD_CHARS);
+  if (sealToken && !concern) {
+    const q = await unseal(sealToken, secret, { session: sid, child: childKey, now });
     if (q) {
-      const r = markItem(q.item, String(body.answer.response ?? "").slice(0, 60));
-      marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: String(body.answer.response ?? "").slice(0, 60) };
-      if (!r.correct) open = q.item;
+      question = q.item;
+      const r = markSpoken(q.item, response);
+      if (r.attempt) {
+        marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null };
+        if (!r.correct) open = q.item;
+      } else {
+        open = q.item;
+        unanswered = { seal: sealToken, why: r.why };
+      }
     }
   }
-  const lesson0 = cleanLesson(body?.lesson);
   const recordJudged = async (judged) => {
     try {
       if (marked) {
@@ -35630,11 +36216,16 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const listenUsd = listenCost(audioS);
   const probe = !message && !body?.snapshot ? cleanProbe(body?.probe) : null;
   const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null });
-  const closeTurn = async ({ steps: steps2, assessment = null, hidden = [] }) => {
+  let careEnds = false;
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null });
+  const found = /* @__PURE__ */ new Set([...lesson0.found, ...marked?.canon ? [marked.canon] : []]);
+  const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
+  const closeTurn = async ({ steps: steps2, assessment = null, hidden = [], codeNotes = [] }) => {
     const judged = concern ? null : finalClass({ assessment, marked, message });
     await recordJudged(judged);
-    const lesson = concern ? lesson0 : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin });
+    const asks = steps2.some((x) => x.cmd === "ask");
+    const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
+    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal });
     const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
     const tester = {
       rule: decision?.rule || null,
@@ -35643,8 +36234,9 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       reason: decision?.reason || null,
       stageMax: decision?.stageMax || null,
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
-      kept: judgeTurn(decision, steps2),
-      probe
+      kept: [...judgeTurn(decision, steps2), ...codeNotes],
+      probe,
+      unanswered: unanswered ? unanswered.why : null
     };
     return { lesson, tester };
   };
@@ -35682,8 +36274,11 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   };
   if (concern) {
     const care = careTurn(concern);
+    careEnds = care.ends;
     return authored(care.steps, [care.ends ? "safeguarding-crisis" : "safeguarding"], null);
   }
+  if (lesson0.care === "ended") return authored(ENDED_TURN, ["lesson-ended"], null);
+  if (decision?.authored) return authored(CARE_WAIT, [decision.rule], null);
   const screen2 = message ? screenChild(message) : { ok: true, wantsAnswer: false };
   if (!screen2.ok) return authored([say(screen2.reply), handBack], [screen2.kind], null);
   let spent;
@@ -35709,7 +36304,9 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
   const cap2 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
   if (!cap2.ok) return authored(WIND_DOWN, [cap2.reason], spent);
-  if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, ["offline"], spent);
+  const openPrompt = open?.question || null;
+  const recoverFor = (saidAny) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null }));
+  if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ["offline"], spent);
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: "the child" }] : [];
   const openMis = openMisconceptions(learnerData.rows, skills, { now: nowMs });
@@ -35730,22 +36327,28 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     figures,
     pace: cleanPace(body?.pace),
     lesson: lessonLines(lesson0, decision),
-    probe
+    probe,
+    inkCells: inkCellsIn,
+    doing: lesson0.doing,
+    unanswered: unanswered && question ? { ask: question.question, why: unanswered.why } : null
   });
   const PRIVATE_LINE = "(the child said something private; HOREB answered with care)";
   const history = (Array.isArray(body?.history) ? body.history.slice(-40).filter((h) => h && typeof h.text === "string") : []).map((h) => h.who === "child" && (!screenChild(h.text).ok || screenAll(h.text, safeguard).tier !== "none") ? { ...h, text: PRIVATE_LINE } : h);
-  const request = buildRequest({ model: settings.model, effort: probe ? "low" : settings.effort, lib, history, message, context, names, image, probe });
+  const request = buildRequest({ model: settings.model, effort: settings.effort, lib, history, message, context, names, image, probe });
   const nod = !!image && image.reason === "idle" && !message;
   return { status: 200, go: async (emit) => {
     emit(meta());
     const sent = [];
     const raws = [];
+    let validated = 0;
     const dropped = [];
     const notes = [];
     const guard = [];
-    const hidden = [open].filter(Boolean);
+    const codeNotes = [];
+    const hidden = [open].filter(hiddenOk);
     let closed = false;
     let saidAny = false;
+    let acked = !(decision?.must || []).includes("Name what was right");
     const learned = { interests: [], helps: [] };
     let ending = null;
     let assessment = null;
@@ -35763,32 +36366,70 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         return;
       }
       if (st.cmd === "end_session") ending = st;
+      if (st.cmd === "say") saidAny = true;
       const pub = await sealAsk(st, bank);
       sent.push(st);
       emit({ type: "step", step: pub });
     };
+    const speak = async (st) => {
+      if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
+      await send(st);
+    };
+    const lastSay = () => [...sent].reverse().find((x) => x.cmd === "say");
+    const asked = () => /\?\s*$/.test(lastSay()?.text || "");
+    const doingNow = () => probe ? lesson0.doing : null;
     const stop = async (why) => {
       if (closed) return;
-      closed = true;
       guard.push(why);
-      for (const st of screen2.wantsAnswer && !saidAny ? [say(ANSWER_REPLY), handBack] : saidAny ? RECOVER_TURN : FALLBACK_TURN) await send(st);
-    };
-    const visible = (steps2) => steps2.filter((x) => ["say", "write_text", "write_math", "ask"].includes(x.cmd));
-    const handle = async (raw) => {
-      if (closed) return;
-      raws.push(raw && !raw.__bad ? raw : { cmd: "__bad" });
-      const v = validateTurn({ steps: raws }, vopts);
-      const bad2 = v.dropped.find((d) => d.index === raws.length - 1);
-      if (bad2) {
-        dropped.push(raw?.__bad ? { ...bad2, reason: `not readable: ${String(raw.__bad).slice(0, 140)}` } : bad2);
-        raws.pop();
+      if (screen2.wantsAnswer && !saidAny) {
+        closed = true;
+        for (const st of [say(ANSWER_REPLY), handBack]) await send(st);
         return;
       }
-      const st = v.steps[v.steps.length - 1];
-      notes.splice(0, notes.length, ...v.notes);
+      if (saidAny && asked()) {
+        closed = true;
+        await send(handBackAs(doingNow() || "answer", sent));
+        return;
+      }
+      const steps2 = recoverFor(saidAny);
+      closed = true;
+      for (const st of steps2) await (st.cmd === "say" ? speak(st) : send(st));
+    };
+    const finish = async () => {
+      if (closed) return;
+      if (!probe && !asked() && doingOf(sent) !== "task") {
+        const ask3 = sent.find((x) => x.cmd === "ask");
+        if (ask3 && /\?\s*$/.test(ask3.prompt)) await speak(say(ask3.prompt));
+        else if (!nod || saidAny) {
+          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny });
+          for (const l of r.lines) await speak(say(l));
+        }
+      }
+      closed = true;
+      await send(handBackAs(doingNow(), sent));
+    };
+    const visible = (steps2) => steps2.filter((x) => ["say", "write_text", "write_math", "ask"].includes(x.cmd));
+    const drop = (st, reason, tag = null) => {
+      dropped.push({ index: raws.length - 1, cmd: st.cmd, reason });
+      if (tag) guard.push(tag);
+    };
+    const samePrompt = (a, b) => !!a && !!b && String(a).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim() === String(b).toLowerCase().replace(/[^a-z0-9]+/g, " ").trim();
+    const acknowledges = (st) => st.move === "Name what was right" || /^(yes|yeah|right|correct|exactly|well done|good|great|nice|brilliant|perfect|that'?s right|that is right|you got it|you are right)\b/i.test(st.text) || !!marked?.said && st.text.toLowerCase().split(/\s+/).slice(0, 5).join(" ").replace(/[^a-z' ]/g, "").includes(marked.said.toLowerCase());
+    const step2 = async (st) => {
+      if (closed) return;
       if (st.cmd === "ask") {
+        if (decision?.answered && samePrompt(st.prompt, decision.answered.prompt)) {
+          drop(st, "asks again the question the child has just answered right", "re-ask");
+          return;
+        }
         const it = itemFor(st, bank);
-        if (it) hidden.push(it);
+        if (hiddenOk(it)) {
+          if (!checkTurnText(visible(sent), [it]).ok) {
+            drop(st, "its answer was already said in this turn, so it is not asked", "answer-before-ask");
+            return;
+          }
+          hidden.push(it);
+        }
       }
       if (visible([st]).length) {
         const leak = checkTurnText(visible([...sent, st]), hidden);
@@ -35803,22 +36444,58 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
           return;
         }
       }
-      if (st.cmd === "say") {
-        if (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text)) await send(say(DISCLOSURE));
-        if (spokenWords([...sent, st]) > (probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS)) {
-          guard.push(probe ? "too-long-probe" : "too-long");
-          closed = true;
-          await send(handBackAs(probe ? lesson0.doing : null, sent));
+      if (st.cmd === "say" || st.cmd === "write_text") {
+        const aiq = answerInQuestion(visibleText(visible([...sent, st])).map((x) => x.text).join(" "), { found: [...found], child: message });
+        if (aiq && !answerInQuestion(visibleText(visible(sent)).map((x) => x.text).join(" "), { found: [...found], child: message })) {
+          drop(st, `gives the answer inside its own question: ${aiq}`, "answer-in-question");
           return;
         }
-        saidAny = true;
       }
-      if (st.cmd === "pause_for_child" && !saidAny && !nod) {
-        await stop("invalid-turn");
+      if (st.cmd === "say") {
+        if (!acked) {
+          acked = true;
+          if (!acknowledges(st)) {
+            await speak({ cmd: "say", text: cleanText(marked?.said ? `Yes, ${marked.said}.` : "Yes, that is right.").text.slice(0, LIMITS.say), move: "Name what was right" });
+            codeNotes.push("the code named what was right first: the model's first sentence did not");
+          }
+        }
+        const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS;
+        if (spokenWords([...sent, st]) + (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text) ? spokenWords([say(DISCLOSURE)]) : 0) > limit) {
+          guard.push(probe ? "too-long-probe" : "too-long");
+          const q = st.text.split(/(?<=[.!?])\s+/).filter(Boolean).at(-1);
+          if (!probe && /\?\s*$/.test(q) && q !== st.text && spokenWords([...sent, say(q)]) <= limit + 12) await speak({ ...st, text: q });
+          await finish();
+          return;
+        }
+        await speak(st);
         return;
+      }
+      if (st.cmd === "pause_for_child" && !(nod && !saidAny)) {
+        const ask3 = sent.find((x) => x.cmd === "ask");
+        const sayable = ask3 && /\?\s*$/.test(ask3.prompt);
+        if (!saidAny && !sayable) {
+          await stop("invalid-turn");
+          return;
+        }
+        if (sayable && !asked()) await speak(say(ask3.prompt));
       }
       await send(st);
       if (st.cmd === "pause_for_child" || st.cmd === "end_session") closed = true;
+    };
+    const handle = async (raw) => {
+      if (closed) return;
+      raws.push(raw && !raw.__bad ? raw : { cmd: "__bad" });
+      const v = validateTurn({ steps: raws }, vopts);
+      const bad2 = v.dropped.find((d) => d.index === raws.length - 1);
+      if (bad2) {
+        dropped.push(raw?.__bad ? { ...bad2, reason: `not readable: ${String(raw.__bad).slice(0, 140)}` } : bad2);
+        raws.pop();
+        return;
+      }
+      notes.splice(0, notes.length, ...v.notes);
+      const fresh = v.steps.slice(validated);
+      validated = v.steps.length;
+      for (const st of fresh) await step2(st);
     };
     let usage = {};
     let stopReason = null;
@@ -35845,15 +36522,12 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     }
     if (stopReason === "refusal") await stop("refusal");
     if (!closed && !saidAny && !(nod && sent.length === 0)) await stop("invalid-turn");
-    if (!closed) {
-      closed = true;
-      await send(handBackAs(probe ? lesson0.doing : null, sent));
-    }
+    await finish();
     const cost = costOf(settings.model, usage);
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
     await saveLearned({ db, sid, user, child, learned, now });
-    const done = await closeTurn({ steps: sent, assessment, hidden });
+    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes });
     if (ending) await finishLesson({ db, user, child, sid, target: pick2.target, summary: ending.summary, lib, now });
     emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };

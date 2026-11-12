@@ -5,7 +5,7 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText, doingOf, ANSWER_CLASSES, DOINGS } from '../src/voice-tutor/commands.js';
+import { validateTurn, turnProblems, COMMANDS, TURN_SCHEMA, MAX_BOARD_ITEMS, resolveSlot, cleanText, doingOf, ANSWER_CLASSES, DOINGS, repairStep, boardLines, describeItem, freeSlots } from '../src/voice-tutor/commands.js';
 import { REPLY_FORM } from '../src/voice-tutor/prompt.js';
 import { parseMath, layoutMath, mathToText } from '../src/voice-tutor/mathExpr.js';
 import { emptyBoard, applyStep, boardSummary } from '../src/voice-tutor/board.js';
@@ -74,7 +74,32 @@ test('unknown commands, extra fields and wrong types are dropped', () => {
   no(null, {}, /not an object/);
   no({ cmd: 'write_text', id: 'Bad Id!', text: 'Hi', slot: 'top' }, {}, /bad id/);
   no({ cmd: 'say', text: 'x' + 'a'.repeat(220) }, {}, /longer than 220/);
-  no({ cmd: 'say', text: 'One. Two. Three. Four.' }, {}, /three sentences/);
+  // Sentences are not counted to drop a say (the turn's word limit keeps turns short): a counting line is kept, and noted.
+  const counted = validateTurn({ steps: [{ cmd: 'say', text: 'One. Two. Three. Four.' }] });
+  assert.equal(counted.steps[0].text, 'One. Two. Three. Four.');
+  assert.match(counted.notes.join(' '), /4 sentences/);
+});
+
+test('an obvious slip in a step\'s shape is mended, and noted; anything unclear is still dropped', () => {
+  // The first test-set run (12 Nov 2026): 70 sentences written as {"cmd":"say","say":"..."}, 10 steps with no cmd.
+  for (const alias of ['say', 'sentence', 'words']) {
+    const v = validateTurn({ steps: [{ cmd: 'say', [alias]: 'Take your time.', move: 'Wait and nudge' }] });
+    assert.deepEqual(v.steps, [{ cmd: 'say', text: 'Take your time.', move: 'Wait and nudge' }], alias);
+    assert.match(v.notes.join(' '), new RegExp(`"${alias}" read as text`));
+  }
+  assert.deepEqual(validateTurn({ steps: [{ say: 'Look at the bar.' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.' }]);
+  assert.deepEqual(validateTurn({ steps: [{ text: 'Look at the bar.', move: 'Revoice and build' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.', move: 'Revoice and build' }]);
+  // The same words twice: the alias is left out. Different words: not a slip, dropped as before.
+  assert.equal(validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: 'Hi.' }] }).steps[0].text, 'Hi.');
+  no({ cmd: 'say', text: 'Hi.', say: 'Something else.' }, {}, /extra field say/);
+  // A question's prompt and answer, a judgement's class, a hand-back's defaults.
+  assert.deepEqual(repairStep({ cmd: 'ask', id: 'q', question: 'How many?', form: 'number', answer: '4' }), { cmd: 'ask', id: 'q', form: 'number', prompt: 'How many?', expected: '4' });
+  assert.equal(ok({ cmd: 'assess', assess: 'understood', evidence: 'said four' }).class, 'understood');
+  no({ cmd: 'assess', assess: 'clever', evidence: 'x' }, {}, /extra field assess/);
+  assert.deepEqual(ok({ cmd: 'pause_for_child', doing: 'answer' }), { cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer' });
+  // Never mended: a step with no cmd that is not plainly a say, or an unknown command.
+  no({ shaded: 2, parts: 4 }, {}, /unknown command/);
+  no({ cmd: 'speak', text: 'Hi.' }, {}, /unknown command/);
 });
 
 test('values out of range are dropped', () => {
@@ -151,9 +176,50 @@ test('slots stop overlap: a taken slot moves to a free one, a full board refuses
   const full = validateTurn({ steps: ['a', 'b', 'c', 'd', 'e', 'f', 'g'].map((id) => ({ cmd: 'write_text', id, text: id, slot: 'top_left' })) });
   assert.equal(full.steps.length, 6);
   assert.match(full.dropped[0].reason, /no free slot/);
-  // 30 items at most, whatever the slots.
+  // 30 items at most, whatever the slots: the oldest goes to make room.
   const many = Array.from({ length: MAX_BOARD_ITEMS }, (_, k) => ({ id: `i${k}`, cmd: 'write_text', text: 'x' }));
-  no({ cmd: 'write_text', id: 'z', text: 'z', slot: 'top' }, { board: many }, /board is full/);
+  assert.deepEqual(validateTurn({ steps: [{ cmd: 'write_text', id: 'z', text: 'z', slot: 'top' }] }, { board: many }).steps.map((x) => x.targets || x.id), [['i0'], 'z']);
+});
+
+test('a full board makes room: the slot asked for first, then the oldest, never what this turn uses', () => {
+  // The first test-set run (12 Nov 2026): 19 drawings dropped for "no free slot" while the words pointed at them.
+  const full = [
+    { id: 'title', cmd: 'write_text', text: 'Today: same amount', slot: 'top' },
+    { id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' },
+    { id: 'bar1', cmd: 'fraction_bar', parts: 4, shaded: 2, slot: 'bottom' },
+  ];
+  // The item in the wanted slot is replaced, with the erase as a step before the drawing, on the same word.
+  const v = validateTurn({ steps: [{ cmd: 'say', text: 'Now I cut each half again.' }, { cmd: 'shape', id: 'chap2', kind: 'circle', parts: 4, shaded: 0, slot: 'middle', on: 'cut' }] }, { board: full });
+  assert.deepEqual(v.dropped, []);
+  assert.deepEqual(v.steps.slice(1), [{ cmd: 'erase', targets: ['chap1'], on: 'cut' }, { ...v.steps[2], id: 'chap2', slot: 'middle' }]);
+  assert.match(v.notes.join(' '), /chap2: the board was full, so chap1 was erased to make room/);
+  // An item this turn pointed at is kept; the oldest unused one goes instead.
+  const w = validateTurn({ steps: [{ cmd: 'point', target: 'chap1' }, { cmd: 'fraction_bar', id: 'b2', parts: 8, shaded: 0, slot: 'middle' }] }, { board: full });
+  assert.deepEqual(w.steps[1], { cmd: 'erase', targets: ['title'] });
+  assert.equal(w.steps[2].slot, 'top');
+  // Everything in use this turn: dropped, as before, and the board is left as it was.
+  const x = validateTurn({ steps: [{ cmd: 'point', target: 'title' }, { cmd: 'point', target: 'chap1' }, { cmd: 'point', target: 'bar1' }, { cmd: 'write_text', id: 'n', text: 'n', slot: 'top' }, { cmd: 'highlight', target: 'bar1' }] }, { board: full });
+  assert.match(x.dropped[0].reason, /no free slot/);
+  assert.deepEqual(x.steps.map((s) => s.cmd), ['point', 'point', 'point', 'highlight']);
+  // The page's own board takes the erase and then the drawing.
+  let b = emptyBoard();
+  for (const it of full) b = applyStep(b, { ...it }, 1);
+  for (const st of v.steps) b = applyStep(b, st, 2);
+  assert.deepEqual(b.order, ['title', 'bar1', 'chap2']);
+  assert.deepEqual(b.log, []);
+});
+
+test('the tutor is told what each board item really shows, and which slots are free', () => {
+  assert.equal(describeItem({ id: 'chap1', cmd: 'shape', kind: 'circle', parts: 2, shaded: 0, slot: 'middle' }), 'chap1: a circle at middle, 2 equal parts, none shaded');
+  assert.equal(describeItem({ id: 'b', cmd: 'fraction_bar', parts: 8, shaded: [1, 2, 3, 4], slot: 'bottom', second_bar: { parts: 2, shaded: 1 } }), 'b: a bar at bottom, 8 equal parts, 4 shaded (parts 1, 2, 3, 4); under it a second bar, 2 parts, 1 shaded');
+  assert.equal(describeItem({ id: 't', cmd: 'write_text', text: 'Today: halves', slot: 'top' }), 't: the words "Today: halves" at top');
+  assert.equal(describeItem({ id: 'f', cmd: 'figure', type: 'fraction', params: { shape: 'bar', parts: 3, shaded: 1, second: { parts: 6, shaded: 0 } }, controls: ['shade_second'], slot: 'middle' }), 'f: a fraction bar at middle, 3 equal parts, 1 shaded; a second bar beside it, 6 parts, none shaded (the child may: shade_second)');
+  assert.deepEqual(freeSlots([{ id: 'a', cmd: 'write_text', slot: 'top' }, { id: 'b', cmd: 'shape', slot: 'middle_left' }]), ['middle_right', 'bottom']);
+  assert.deepEqual(freeSlots([], ['bottom_left']), ['top', 'middle', 'bottom_right']);
+  const lines = boardLines([{ id: 'a', cmd: 'write_text', text: 'x', slot: 'top' }, { id: 'b', cmd: 'shape', kind: 'circle', parts: 4, shaded: 0, slot: 'middle' }, { id: 'c', cmd: 'shape', kind: 'circle', parts: 2, shaded: 1, slot: 'bottom' }]);
+  assert.match(lines[0], /^Board now \(what the child sees\): a: the words "x" at top; b: a circle at middle, 4 equal parts, none shaded; c: a circle at bottom, 2 equal parts, 1 shaded\.$/);
+  assert.match(lines.at(-1), /Free slots: none\. A new drawing erases the oldest items/);
+  assert.deepEqual(boardLines([]), ['Board now (what the child sees): empty.', 'Free slots: top, middle, bottom.']);
 });
 
 test('a turn: at most 12 steps, one question, and nothing after it is handed to the child', () => {

@@ -81,7 +81,7 @@ test('a right answer with no reason must be pressed for its reason before it cou
   assert.equal(gaveReason('2'), false);
   assert.equal(gaveReason('two because each half is cut into two'), true);
   const d = decide(at(), { turnIndex: 5, marked: right(), message: '2' });
-  assert.deepEqual([d.rule, d.moves, d.prelim], ['press', ['Press for reasoning'], 'right_unexplained']);
+  assert.deepEqual([d.rule, d.moves, d.prelim, d.must], ['press', ['Name what was right', 'Press for reasoning'], 'right_unexplained', ['Name what was right']]);
   const s = updateLesson(at(), { decision: d, steps: [say('How did you know?', 'Press for reasoning')], judged: finalClass({ marked: right(), message: '2' }), marked: right() });
   assert.deepEqual(s.pending, { ask: 'q1', skill: EQ });
   assert.equal(s.streak, 0, 'not understood yet');
@@ -96,7 +96,7 @@ test('a right answer with no reason must be pressed for its reason before it cou
 test('understood, then a fresh check, allows the next stage; not before', () => {
   const said = 'two because each half is cut into two';
   const d1 = decide(at(), { turnIndex: 5, marked: right(), message: said });
-  assert.deepEqual([d1.rule, d1.moves, d1.stageMax], ['fresh-check', ['Check for understanding'], 'guided']);
+  assert.deepEqual([d1.rule, d1.moves, d1.stageMax], ['fresh-check', ['Name what was right', 'Check for understanding'], 'guided']);
   assert.match(judgeTurn(d1, [say('Now on your own.'), { cmd: 'set_phase', phase: 'independent' }]).join(' '), /ahead of what the lesson allows/);
   const s1 = updateLesson(at(), { decision: d1, steps: [say('Here is a new one.', 'Check for understanding'), { cmd: 'ask', id: 'q2', prompt: '1/3 = ?/6', form: 'number' }], judged: finalClass({ marked: right(), message: said }), marked: right() });
   assert.equal(s1.streak, 1);
@@ -104,7 +104,7 @@ test('understood, then a fresh check, allows the next stage; not before', () => 
   const d2 = decide(s1, { turnIndex: 6, marked: right('q2'), message: said });
   assert.equal(d2.rule, 'move-on');
   assert.equal(d2.stageMax, 'independent');
-  assert.deepEqual(judgeTurn(d2, [say('You are ready.', 'Check for understanding'), { cmd: 'set_phase', phase: 'independent' }]), []);
+  assert.deepEqual(judgeTurn(d2, [say('Yes, two sixths.', 'Name what was right'), say('You are ready.', 'Check for understanding'), { cmd: 'set_phase', phase: 'independent' }]), []);
   // Warm-up and teach move on once the child has answered at all.
   assert.equal(stageAllowed({ ...newLesson(), stage: 'warmup', answers: 0 }), 'warmup');
   assert.equal(stageAllowed({ ...newLesson(), stage: 'warmup', answers: 1 }), 'teach');
@@ -123,10 +123,11 @@ test('a missing earlier skill sends the lesson back to the prerequisite; "I don\
 
 test('the turn is checked against the decision: notes only, and they name what was off', () => {
   const d = decide(at(), { turnIndex: 5, marked: right(), message: '2' });
-  assert.deepEqual(judgeTurn(d, [say('Yes! How did you know?', 'Press for reasoning'), { cmd: 'pause_for_child' }]), []);
-  assert.deepEqual(judgeTurn(d, [say('Good, that is right.', 'Name what was right'), say('How did you know?', 'Press for reasoning')]), [], 'a move alongside is fine');
+  // After a right answer, Name what was right is required: a turn that skips it is noted.
+  assert.deepEqual(judgeTurn(d, [say('Yes! How did you know?', 'Press for reasoning'), { cmd: 'pause_for_child' }]), ['"Name what was right" was required this turn and no say carried it']);
+  assert.deepEqual(judgeTurn(d, [say('Yes, two.', 'Name what was right'), say('How did you know?', 'Press for reasoning')]), []);
   const off = judgeTurn(d, [say('Next one.', 'Stretch the quick child')]);
-  assert.match(off.join(' '), /"Stretch the quick child" was not allowed this turn \(press: Press for reasoning\)/);
+  assert.match(off.join(' '), /"Stretch the quick child" was not allowed this turn \(press: Name what was right, Press for reasoning\)/);
   assert.match(off.join(' '), /no say was tagged with an allowed move/);
   assert.match(judgeTurn(d, [say('Hmm.', 'Dance')]).join(' '), /not a playbook move/);
   assert.deepEqual(judgeTurn(null, [say('x')]), []);
@@ -186,4 +187,83 @@ test('updateLesson: stage, question, hints and what the child is doing move with
   assert.deepEqual([s2.question.id, s2.hints, s2.probes, s2.doing], ['q1', 1, 1, 'answer']);
   const s3 = updateLesson(s2, { steps: [say('Look again.', 'Smaller-question hint')], judged: finalClass({ marked: wrong() }), marked: wrong() });
   assert.deepEqual([s3.question.attempts, s3.hints, s3.classes], [1, 2, ['misconception']]);
+});
+
+// ---------------------------------------------------------------- the first test-set run (12 Nov 2026)
+test('after a right answer: name it in the child\'s words, and never ask that question again', () => {
+  const marked = { ...right(), said: 'two sixths' };
+  const d = decide(at(), { turnIndex: 5, marked, message: 'two sixths', question: { question: 'One third is how many sixths?' } });
+  assert.deepEqual([d.must, d.quote, d.answered], [['Name what was right'], 'two sixths', { ask: 'q1', prompt: 'One third is how many sixths?' }]);
+  const lines = lessonLines(at({ found: ['2/6'] }), d).join('\n');
+  assert.match(lines, /Answers the child has already found \(you may say them back now\): 2\/6/);
+  assert.match(lines, /Your first say is Name what was right: yes, and the child's own words \("two sixths"\)/);
+  assert.match(lines, /answered question q1: never ask it again/);
+  // The answer the child found is remembered (no longer hidden), at most eight.
+  const s = updateLesson(at({ found: ['1/2'] }), { decision: d, steps: [], marked: { ...marked, canon: '2/6' } });
+  assert.deepEqual(s.found, ['1/2', '2/6']);
+  assert.equal(updateLesson(at(), { marked: { ...wrong(), canon: '4' } }).found.length, 0, 'a wrong answer is not found');
+});
+
+test('a wrong answer: Diagnose is one question about how they got it, before any teaching; skipping it is noted', () => {
+  const d = decide(at(), { turnIndex: 5, marked: wrong() });
+  assert.deepEqual([d.rule, d.moves, d.with, d.must], ['diagnose', ['Diagnose the wrong answer'], ['Revoice and build', 'Name what was right'], ['Diagnose the wrong answer']]);
+  assert.match(d.reason, /ask ONE question about how they got "4".*no explaining, no new picture, no new question/);
+  assert.deepEqual(judgeTurn(d, [say('Four, you said. How did you get four?', 'Diagnose the wrong answer')]), []);
+  const told = judgeTurn(d, [say('Not quite. Look, it is two.', 'Diagnose the wrong answer'), bar, { cmd: 'ask', id: 'q2', prompt: 'How many?', form: 'number' }]);
+  assert.match(told.join(' '), /did not ask how the child got their answer/);
+  assert.match(told.join(' '), /taught \(a new picture or question\) before hearing/);
+  // The child explains: the next turn reteaches that one idea (and the flag clears).
+  const s = updateLesson(at(), { decision: d, steps: [say('How did you get four?', 'Diagnose the wrong answer')], judged: finalClass({ marked: wrong() }), marked: wrong() });
+  assert.equal(s.diagnosing, true);
+  const r = decide(s, { turnIndex: 6, message: 'I added three to the top and the bottom' });
+  assert.equal(r.rule, 'reteach');
+  assert.equal(updateLesson(s, { decision: r, steps: [] }).diagnosing, false);
+});
+
+test('a question back, "umm" and "I don\'t know" are not wrong answers: each has its own rule', () => {
+  assert.equal(decide(at(), { turnIndex: 5, message: 'Wait, why do you cut it again?' }).rule, 'question');
+  assert.match(decide(at(), { turnIndex: 5, message: 'why?' }).reason, /not an answer, and not wrong.*hand your question back/);
+  const t = decide(at(), { turnIndex: 5, message: 'umm...' });
+  assert.deepEqual([t.rule, t.moves, t.with], ['thinking', ['Wait and nudge'], []]);
+  assert.equal(decide(at(), { turnIndex: 5, message: 'sijui' }).rule, 'lost');
+});
+
+test('a bored child who wants to stop: a short close or a quick change, never the lesson again; the second time, close', () => {
+  const d = decide(at(), { turnIndex: 6, message: 'This is boring. I want to stop.' });
+  assert.equal(d.rule, 'bored');
+  assert.deepEqual(d.moves, ['Close the lesson', 'Predict then show']);
+  assert.equal(d.stageMax, 'wrapup');
+  assert.match(d.reason, /never repeat the lesson.*quick two-minute game.*stopping for today/);
+  const s = updateLesson(at(), { decision: d, steps: [] });
+  assert.equal(s.stops, 1);
+  const d2 = decide(s, { turnIndex: 7, message: 'can we stop now' });
+  assert.deepEqual([d2.rule, d2.moves], ['stop', ['Close the lesson']]);
+  assert.equal(decide(at(), { turnIndex: 6, message: 'nimechoka, nataka kucheza' }).rule, 'bored');
+  // Even with an answer in it, a wish to stop is heard.
+  assert.equal(decide(at(), { turnIndex: 6, marked: wrong(), message: 'four. i am bored' }).rule, 'bored');
+});
+
+test('after a care reply the lesson waits: no model for a silence, a kind check when the child carries on', () => {
+  const s = at({ care: 'paused' });
+  const p = decide(s, { turnIndex: 6, probe: { kind: 'talk_nudge' } });
+  assert.deepEqual([p.rule, p.authored], ['care-wait', true]);
+  const c = decide(s, { turnIndex: 6, message: 'ok, I want to carry on' });
+  assert.equal(c.rule, 'care-return');
+  assert.match(c.reason, /check kindly.*that they are okay.*Never mention or ask about what they said/);
+  assert.equal(updateLesson(s, { decision: c, steps: [] }).care, null, 'back in the lesson');
+  const k = decide(s, { turnIndex: 6, message: 'he does it a lot' });
+  assert.equal(k.rule, 'care');
+  assert.match(k.reason, /no maths\. Never ask them to repeat or explain what happened/);
+  assert.equal(updateLesson(s, { decision: k, steps: [] }).care, 'paused', 'still in the care frame');
+  assert.equal(decide(s, { turnIndex: 6, message: 'I want to stop' }).rule, 'close');
+});
+
+test('the new lesson fields are cleaned like the rest', () => {
+  const sealed = `${'a'.repeat(16)}.${'b'.repeat(100)}`;
+  const c = cleanLesson({ v: 1, found: ['1/2', '4', '<b>', 'x'.repeat(41), '1/2'], care: 'paused', stops: 2, diagnosing: true, seal: sealed });
+  assert.deepEqual([c.found, c.care, c.stops, c.diagnosing, c.seal], [['1/2', '4'], 'paused', 2, true, sealed]);
+  const d = cleanLesson({ v: 1, care: 'party', stops: -1, diagnosing: 'yes', seal: 'not a seal' });
+  assert.deepEqual([d.care, d.stops, d.diagnosing, d.seal], [null, 0, false, null]);
+  assert.equal(updateLesson(at({ seal: sealed }), { steps: [] }).seal, null, 'a kept seal lasts one turn unless kept again');
+  assert.equal(updateLesson(at(), { steps: [], keepSeal: sealed }).seal, sealed);
 });

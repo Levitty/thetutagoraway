@@ -907,9 +907,14 @@ function TesterPanel({ lesson = null, moves = [], voiceId = null, onVoice = null
 
 // Why a turn was stopped or replaced, in plain words, so a fallback is never unexplained (tutorTurn.js guards).
 const GUARD_WORDS = {
-  'answer-leak': 'a sentence would have given the answer away, so the turn stopped there',
+  'answer-leak': 'a sentence would have given the answer away, so the turn stopped there and carried on in context',
+  'answer-in-question': 'a sentence gave the answer inside its own question, so it was not said; the turn went on',
+  'answer-before-ask': 'the answer to a question was already said this turn, so the question was not asked',
+  're-ask': 'the model asked again a question the child had just answered right, so it was not asked',
   'unsafe-reply': 'a sentence tripped the safeguarding rules and was not spoken',
-  'invalid-turn': 'the model gave nothing usable, so an authored line was used',
+  'invalid-turn': 'the model gave nothing usable, so an authored line in context was used',
+  'care-wait': 'the child was quiet after a care reply: an authored line, no model',
+  'lesson-ended': 'the lesson had ended after a safeguarding concern: no model',
   'model-error': 'the model call failed',
   refusal: 'the model refused',
   'too-long': 'the turn ran past the word limit and was cut',

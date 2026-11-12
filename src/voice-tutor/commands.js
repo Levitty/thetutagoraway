@@ -7,6 +7,16 @@
 // drawn, on the server (before the reply leaves) and again in the browser
 // (before anything is rendered). A step that fails is dropped and logged,
 // never executed, and never "repaired" into something the model did not say.
+// The one exception is the step's SHAPE, where the model's meaning is plain
+// (12 Nov 2026: 70 sentences were lost to {"cmd":"say","say":"..."}):
+// repairStep() reads an obvious field alias as the field (say, sentence, words
+// for text; a step with no cmd that is only a say), and notes it. Nothing a
+// child hears or sees is changed.
+//
+// A full board makes room (12 Nov 2026: 19 drawings were dropped for "no free
+// slot" while the tutor's words pointed at them): the oldest items this turn
+// has not used are erased first, starting with whatever holds the slot asked
+// for, and the erase goes out as a step before the drawing.
 //
 //   validateTurn(raw, { board, allowedMis, hidden })  -> { steps, dropped, notes }
 //   TURN_SCHEMA                                        the JSON schema the model fills
@@ -143,8 +153,49 @@ const shadedOf = (v, parts) => {
   return [...v];
 };
 
+// ---------------------------------------------------------------- the shape, repaired
+// The names the model reaches for instead of a field, where the meaning is not in doubt.
+const ALIASES = {
+  say: { text: ['say', 'sentence', 'words', 'speech', 'line', 'content'] },
+  ask: { prompt: ['question', 'text'], expected: ['answer'] },
+  assess: { class: ['assess', 'judgement', 'judgment', 'answer_class'] },
+};
+/**
+ * A step with an obvious slip in its shape, mended: an alias read as its field (only when the field is missing,
+ * or the alias says the same), a step with no cmd that is plainly a say, a hand-back with its defaults left out.
+ * Anything else is returned as it was, for checkStep to judge. Notes say what was mended.
+ */
+export function repairStep(s, notes = []) {
+  if (!s || typeof s !== 'object' || Array.isArray(s)) return s;
+  let x = s;
+  if (x.cmd == null) {
+    const keys = Object.keys(x);
+    if (typeof x.say === 'string' && keys.every((k) => ['say', 'move'].includes(k))) { x = { cmd: 'say', text: x.say, ...(x.move != null ? { move: x.move } : {}) }; notes.push('a step with no cmd read as a say'); }
+    else if (typeof x.text === 'string' && keys.every((k) => ['text', 'move'].includes(k))) { x = { cmd: 'say', ...x }; notes.push('a step with no cmd read as a say'); }
+    else return s;
+  }
+  const al = ALIASES[x.cmd];
+  if (al) {
+    for (const [field, names] of Object.entries(al)) {
+      for (const n of names) {
+        if (!(n in x) || n === field) continue;
+        if (n === 'text' && x.cmd === 'ask' && x.prompt != null) continue;
+        if (x[field] == null) { const { [n]: v, ...rest } = x; x = { ...rest, [field]: v }; notes.push(`${x.cmd}: field "${n}" read as ${field}`); }
+        else if (x[n] === x[field]) { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" repeated ${field}, left out`); }
+      }
+    }
+    if (x.cmd === 'assess' && x.class != null && !ANSWER_CLASSES.includes(x.class)) return s;
+  }
+  if (x.cmd === 'pause_for_child') {
+    if (x.expect == null) { x = { ...x, expect: 'any' }; notes.push('pause_for_child: expect not given, read as any'); }
+    if (x.max_wait_s == null) { x = { ...x, max_wait_s: 30 }; notes.push('pause_for_child: max_wait_s not given, read as 30'); }
+  }
+  return x;
+}
+
 // ---------------------------------------------------------------- one step
-function checkStep(s, ctx, notes) {
+function checkStep(s0, ctx, notes) {
+  const s = repairStep(s0, notes);
   need(s && typeof s === 'object' && !Array.isArray(s), 'not an object');
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
@@ -190,7 +241,9 @@ function checkStep(s, ctx, notes) {
       out.text = str(s.text, LIMITS.say, 'say', notes);
       // The teaching move this sentence makes (docs/tutor-training/PLAYBOOK.md), for the tester view; never spoken.
       if (s.move != null) out.move = String(s.move).replace(/[^A-Za-z -]/g, '').slice(0, 40);
-      need(out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 3, 'say: more than three sentences');
+      // Short turns are held by the turn's word limit (MAX_SPOKEN_WORDS, tutorTurn.js), not by counting sentences here:
+      // "One. Two. Three. Four." is four sentences and six words (12 Nov 2026: 61 sentences were lost to this rule).
+      { const n = out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length; if (n > 3) notes.push(`say: ${n} sentences (more than three)`); }
       break;
     case 'write_text':
       out.id = newId(); out.text = str(s.text, LIMITS.write_text, 'write_text', notes);
@@ -488,7 +541,20 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
   const ctx = { ids: new Set(items.keys()), items, allowedMis: allowedMis ? new Set(allowedMis) : null, skills: skills ? new Set(skills) : null, publicAsk, snapshots };
   const soft = new Set((Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c) && !ROWS.includes(c)));
   const steps = [];
+  const touched = new Set(); // ids this turn drew or pointed at: never erased to make room
   let closed = false;
+  // Room for a new drawing on a full board: the items holding the wanted slot first (if this turn has not used
+  // them), then the oldest. Returns the ids erased, or null if no room can be made.
+  const makeRoom = (wanted) => {
+    const free = () => items.size < MAX_BOARD_ITEMS && resolveSlot(used, wanted, soft);
+    const gone = [];
+    const drop = (id) => { const it = items.get(id); if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c); items.delete(id); ctx.ids.delete(id); gone.push(id); };
+    const want = new Set(cellsOf(wanted));
+    const holders = [...items.values()].filter((it) => it.slot && cellsOf(it.slot).some((c) => want.has(c)));
+    if (holders.length && holders.every((it) => !touched.has(it.id))) for (const it of holders) drop(it.id);
+    for (const it of [...items.values()]) { if (free()) break; if (!touched.has(it.id)) drop(it.id); }
+    return free() ? gone : null;
+  };
   list.forEach((s, index) => {
     const cmd = s && typeof s === 'object' ? String(s.cmd ?? '').slice(0, 30) : null;
     if (index >= MAX_STEPS) { dropped.push({ index, cmd, reason: `more than ${MAX_STEPS} steps` }); return; }
@@ -496,14 +562,28 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
     try {
       const out = checkStep(s, ctx, notes);
       if (DRAWN.includes(out.cmd)) {
-        if (items.size >= MAX_BOARD_ITEMS) bad('the board is full (30 items): clear first');
-        const slot = resolveSlot(used, out.slot, soft);
-        if (!slot) bad('no free slot on the board: erase or clear first');
+        let slot = items.size < MAX_BOARD_ITEMS ? resolveSlot(used, out.slot, soft) : null;
+        if (!slot) {
+          const keep = { items: new Map(items), used: new Set(used), ids: new Set(ctx.ids) };
+          const gone = makeRoom(out.slot);
+          if (!gone) {
+            items.clear(); for (const [k, v] of keep.items) items.set(k, v);
+            used.clear(); for (const c of keep.used) used.add(c);
+            ctx.ids.clear(); for (const k of keep.ids) ctx.ids.add(k);
+            bad('no free slot on the board: everything on it is in use this turn; erase or clear first');
+          }
+          slot = resolveSlot(used, out.slot, soft);
+          if (gone.length) {
+            steps.push({ cmd: 'erase', targets: gone, ...(out.on ? { on: out.on } : {}), ...(out.delay_ms != null ? { delay_ms: out.delay_ms } : {}) });
+            notes.push(`${out.id}: the board was full, so ${gone.join(', ')} ${gone.length === 1 ? 'was' : 'were'} erased to make room`);
+          }
+        }
         if (slot !== out.slot) notes.push(`${out.id}: moved from ${out.slot} to ${slot}`);
         out.slot = slot;
         for (const c of cellsOf(slot)) used.add(c);
-        items.set(out.id, out); ctx.ids.add(out.id);
+        items.set(out.id, out); ctx.ids.add(out.id); touched.add(out.id);
       }
+      if (MARKS.includes(out.cmd)) touched.add(out.target);
       if (out.cmd === 'erase') for (const t of out.targets) { const it = items.get(t); if (it?.slot) for (const c of cellsOf(it.slot)) used.delete(c); items.delete(t); ctx.ids.delete(t); }
       if (out.cmd === 'clear') { items.clear(); used.clear(); ctx.ids.clear(); }
       if (out.cmd === 'ask' && steps.some((x) => x.cmd === 'ask')) bad('one question a turn');
@@ -517,6 +597,59 @@ export function validateTurn(raw, { board = [], allowedMis = null, skills = null
     }
   });
   return { steps, dropped, notes };
+}
+
+// ---------------------------------------------------------------- the board, in words
+const shadedText = (shaded, parts) => {
+  const n = Array.isArray(shaded) ? shaded.length : Number(shaded) || 0;
+  if (!n) return 'none shaded';
+  if (Array.isArray(shaded)) return `${n} shaded (part${n === 1 ? '' : 's'} ${shaded.join(', ')})`;
+  return n === parts ? 'all shaded' : `${n} shaded`;
+};
+/** What one board item really shows, for the tutor's context (12 Nov 2026: it asked about shaded parts when none were shaded). */
+export function describeItem(b) {
+  const at = b.slot ? ` at ${b.slot}` : '';
+  switch (b.cmd) {
+    case 'write_text': return `${b.id}: the words "${b.text}"${at}`;
+    case 'write_math': return `${b.id}: the maths ${b.expr}${at}`;
+    case 'fraction_bar': return `${b.id}: a bar${at}, ${b.parts} equal part${b.parts === 1 ? '' : 's'}, ${shadedText(b.shaded, b.parts)}${b.second_bar ? `; under it a second bar, ${b.second_bar.parts} parts, ${shadedText(b.second_bar.shaded, b.second_bar.parts)}` : ''}`;
+    case 'shape': return `${b.id}: a ${b.kind || 'shape'}${at}, ${b.parts} equal parts, ${shadedText(b.shaded, b.parts)}`;
+    case 'number_line': return `${b.id}: a number line${at} from ${b.from} to ${b.to}, ${b.divisions} step${b.divisions === 1 ? '' : 's'} to each whole${(b.marks || []).length ? `, marks at ${b.marks.map((m) => m.label || m.value).join(', ')}` : ''}`;
+    case 'plot_points': return `${b.id}: a graph${at} with ${(b.points || []).length} points`;
+    case 'figure': {
+      const p = b.params || {};
+      const ctl = b.controls?.length ? ` (the child may: ${b.controls.join(', ')})` : '';
+      if (b.type === 'fraction') {
+        const n = p.shape === 'grid' ? (p.rows || 0) * (p.cols || 0) : p.parts;
+        const sec = p.second ? `; a second ${p.shape || 'bar'} beside it, ${p.second.parts ?? (p.second.rows || 0) * (p.second.cols || 0)} parts, ${shadedText(p.second.shaded, p.second.parts)}` : '';
+        return `${b.id}: a fraction ${p.shape || 'bar'}${at}, ${n} equal parts, ${shadedText(p.shaded, n)}${sec}${ctl}`;
+      }
+      if (b.type === 'numberline') return `${b.id}: a number line${at} from ${p.from} to ${p.to}, ${p.divisions} steps${p.marker != null ? `, marker at ${p.marker}` : ''}${ctl}`;
+      return `${b.id}: a ${b.type} figure${at}${ctl}`;
+    }
+    default: return `${b.id}: ${b.cmd}${at}`;
+  }
+}
+/** The slots nothing is in yet: a whole row by its name when both halves are free, else the free half. */
+export function freeSlots(board = [], inkCells = []) {
+  const used = new Set(board.flatMap((b) => (b.slot ? cellsOf(b.slot) : [])));
+  const ink = new Set(inkCells);
+  const out = [];
+  for (const r of ROWS) {
+    const halves = cellsOf(r).filter((c) => !used.has(c) && !ink.has(c));
+    if (halves.length === 2) out.push(r); else out.push(...halves);
+  }
+  return out;
+}
+/** The board for the tutor's context: what each item shows, the child's writing, and the free slots. */
+export function boardLines(board = [], inkCells = []) {
+  const ink = (Array.isArray(inkCells) ? inkCells : []).filter((c) => SLOTS.includes(c));
+  const free = freeSlots(board, ink);
+  return [
+    `Board now (what the child sees): ${board.length ? board.map(describeItem).join('; ') : 'empty'}.`,
+    ...(ink.length ? [`The child has written in: ${ink.join(', ')} (keep clear).`] : []),
+    free.length ? `Free slots: ${free.join(', ')}.` : 'Free slots: none. A new drawing erases the oldest items you have not used this turn (whatever is in the slot you ask for first); erase or clear first to choose.',
+  ];
 }
 
 /**
@@ -587,4 +720,4 @@ export const STEP_SCHEMAS = [
 ];
 export const TURN_SCHEMA = S({ steps: { type: 'array', items: { anyOf: STEP_SCHEMAS } } }, ['steps']);
 
-export default { validateTurn, turnProblems, resolveSlot, cleanText, partsOf, TURN_SCHEMA, COMMANDS, LIMITS };
+export default { validateTurn, turnProblems, resolveSlot, repairStep, boardLines, describeItem, freeSlots, cleanText, partsOf, TURN_SCHEMA, COMMANDS, LIMITS };

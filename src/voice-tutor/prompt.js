@@ -8,7 +8,7 @@
 // sends exactly this and tests/voice-tutor-turn.test.mjs checks it.
 // ============================================================================
 import { PLAYBOOK, EXEMPLARS } from './playbook.js';
-import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES, ANSWER_CLASSES } from './commands.js';
+import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES, ANSWER_CLASSES, boardLines } from './commands.js';
 import { FRACTION_SKILLS, skillName, shortName } from './fractions.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
 import { fenceTeamText, scrubNames } from './guard.js';
@@ -48,6 +48,10 @@ HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns 
 TAKING TURNS (the child talks as much as you):
 - Every turn: at most two short sentences from you, then one question to the child, then pause_for_child. About 30 words at most.
 - Start from what the child just said: repeat or build on their words before anything new. If they answered, say exactly what was right or ask why they think so.
+- After a right answer, your first sentence says yes and names it in the child's own words ("Yes, one half."). Never ask that question again: a fresh check is a new question.
+- After a wrong answer, your turn is one question about how they got it ("How did you get three?"). No explaining, no new picture and no new question until you have heard their thinking.
+- Never put the answer inside your own question, or just before it. Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?" Good: "Now I cut each half again. How many pieces are there now?"
+- A question back from the child ("why?", "can I see it again?") is not a wrong answer: answer it, then hand your question back. If the child is bored or wants to stop, never carry on with the same task: offer a quick game or a short close.
 - Never ask the child to imagine something you could draw. Draw it, then ask about it.
 - Never draw again what is already on the board (the context lists it). Point at it, highlight it or build on it. Clear the board only when you move to a new idea.
 - If the child comments on you or the board ("you drew badly", "I can't see", "too fast"), answer that first, honestly and briefly, and fix it (clear and draw it bigger, slow down), then carry on.
@@ -96,7 +100,7 @@ HOW YOU TALK:
 - Plain text. No emojis, no markdown.
 
 THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app draws them itself; you never write code, markup or coordinates.
-- say: one to three short sentences (220 characters at most). Every drawing step belongs to the say before it.
+- say: one to three short sentences (220 characters at most). The words go in "text": {"cmd":"say","text":"..."}, never {"cmd":"say","say":"..."}. Every drawing step belongs to the say before it.
 - Drawing steps take "on": a word or two copied exactly from the say before them. The stroke starts as that word is spoken. delay_ms (-300 to 1500) shifts it. No "on" means: after that sentence ends.
 - The board draws like a teacher, stroke by stroke: a shaded bar or shape takes about 4 to 8 seconds, a line of maths 1 to 3, a mark under a second. A drawing is hurried to finish before the next drawing step's word, so give each drawing its own sentence or two: anchor the next drawing or mark in a later sentence, never a word or two later.
 - pace "slow" on a drawing step draws it about 1.6 times slower. Use it for the key idea of the lesson (the cut that makes the equal parts, the step that changes the fraction), once or twice a lesson, and give it a long sentence.
@@ -104,7 +108,8 @@ THE BOARD. Each turn you fill in one form: a list of at most 12 steps. The app d
 - Slots: ${SLOTS.join(', ')}. top, middle and bottom are full width; the others are half. Colours: ${COLOURS.join(', ')}.
 - One colour per scene (a scene is your drawing between two clears): ink, plus one colour. The first colour you use in a scene is its colour, and the board draws every other colour in that scene, and every mark, in it. So pick one and keep to it; to count shaded parts with rings, shade them in ink so the rings stand out.
 - highlight (circle, box or glow, optionally one part), underline (text or maths), point (the teacher's finger; optionally one part) need an id already on the board. erase removes items; clear wipes your ink (never the child's). The board holds 30 items at most; clear between ideas.
-- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected.
+- ask: one question a turn. Give expected (the right answer) and, for your own questions, the wrong answers you expect with their misconception codes, or set bank to a probe bank id and the app uses that question's answers. The child never sees expected. Write expected as the answer's core: a number (4), a fraction (1/2) or one or two words (same, yes, the top one); never a sentence. The app hears spoken answers ("one half", "nusu", "two quarters") itself.
+- The context says what each board item really shows (its parts, which are shaded, its words) and which slots are free. Ask only about what is really there: never ask about shaded parts when none are shaded. When no slot is free, a new drawing erases the oldest items you have not used this turn (whatever is in the slot you name first); erase or clear yourself to choose.
 - pause_for_child ends every turn (expect: spoken when you want them to say it, drawn for the board, any otherwise; max_wait_s 5 to 60; doing as above), except the last, which ends with end_session.
 - Phases: ${PHASES.join(', ')}.
 
@@ -158,23 +163,29 @@ ${REPLY_FORM}`;
 const pct = (x) => (x == null ? 'no attempts' : `${Math.round(x * 100)}% right`);
 
 /** The volatile part of a turn: who, where in the lesson, what just happened. */
-export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null }) {
+export function turnContext({ target, prerequisite, profile = [], learner = [], hasModel = false, reason = '', elapsedMin = 0, turnIndex = 0, phase = null, board = [], marked = null, heard = null, wantsAnswer = false, bank = [], bankLines = [], capNote = null, picture = null, figures = [], pace = null, unclearNote = null, lesson = [], probe = null, inkCells = [], doing = null, unanswered = null }) {
   const lines = [
     `Turn ${turnIndex + 1}. Time used: ${Math.round(elapsedMin)} of about 20 minutes. Part of the lesson so far: ${phase || 'not started'}.`,
     `Target skill: ${target} (${skillName(target)}), ${reason}.`,
     `Weakest prerequisite: ${prerequisite ? `${prerequisite} (${skillName(prerequisite)})` : 'none'}.`,
     ...(hasModel ? [] : [`What HOREB knows (practice so far): ${profile.map((p) => `${shortName(p.skill)} ${p.held ? 'held' : 'not held'} (${pct(p.accuracy)}, ${p.attempts} tries)`).join('; ')}.`]),
     ...learner,
-    `Board now: ${board.length ? board.map((b) => `${b.id} ${b.cmd === 'figure' ? `figure ${b.type}` : b.cmd} at ${b.slot}${b.parts ? `, ${b.parts} parts` : ''}${b.cmd === 'figure' && b.controls?.length ? ` (the child may: ${b.controls.join(', ')})` : ''}`).join('; ') : 'empty'}.`,
+    // What each item really shows and the free slots (12 Nov 2026: the tutor asked about shaded parts on an unshaded chapati).
+    ...boardLines(board, inkCells),
   ];
+  if (unanswered) lines.push(`The child has not answered your question yet ("${unanswered.ask}"): what they said is ${unanswered.why === 'question' || unanswered.why === 'again' ? 'a question back' : unanswered.why === 'lost' ? '"I do not know"' : unanswered.why === 'filler' ? 'thinking aloud' : 'not an answer to it'}, not a wrong answer. The question is still open and its answer still hidden.`);
   if (marked) {
     lines.push(marked.correct
-      ? `The child answered your question ${marked.ask} with "${marked.answer}": right.`
+      ? `The child answered your question ${marked.ask} with "${marked.answer}": right.${marked.said ? ` In their words: "${marked.said}".` : ''}`
       : `The child answered your question ${marked.ask} with "${marked.answer}": not right.${marked.misconception ? ` The library reads this answer as ${marked.misconception}.` : ' No misconception in the library matches this answer.'} Diagnose before you teach.`);
   }
   for (const f of figures) lines.push(`What the child did with ${f.id}: ${f.note}`);
   lines.push(...lesson);
-  if (probe) lines.push(PROBE_LINES[probe.kind](probe.silent_s), `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before.`);
+  if (probe) {
+    const d = DOINGS_OK.includes(doing) ? doing : 'answer';
+    lines.push(PROBE_LINES[probe.kind](probe.silent_s), `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before (${d}).`,
+      `Reply with exactly this shape (the words go in "text"): {"steps":[{"cmd":"say","text":"Take your time. Look at the bar.","move":"Wait and nudge"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"${d}"}]}`);
+  }
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === 'check' ? 'the child pressed "Check my work"' : 'the child stopped writing for a few seconds'}. Read only the teal ink.`);
   else if (picture?.note) lines.push(picture.note);
   if (heard != null) lines.push(`The child spoke over you. They heard only: "${heard}". Begin your first sentence by acknowledging what they said ("Yes, go on" or "Good question") and answer it, briefly. Do not repeat what you were saying, and keep this turn shorter than usual.`);
@@ -189,6 +200,7 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
 
 // Why the app asked for a probe, in the words the model reads (silence.js PROBE_KINDS).
 export const MAX_PROBE_WORDS = 22;
+const DOINGS_OK = ['answer', 'task', 'talk'];
 const PROBE_LINES = {
   answer_nudge: (s) => `The child has been silent for ${s} s after your question. Nudge kindly, without giving the answer.`,
   answer_smaller: (s) => `The child has been silent for ${s} s, even after a nudge. Ask a smaller, easier question about the same thing (point at the board), without giving the answer.`,

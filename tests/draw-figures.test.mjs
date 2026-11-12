@@ -170,7 +170,7 @@ test('the board keeps the child\'s play apart from the tutor\'s ink, and the not
   assert.equal(playFigure(b, 'nothing', 'shade', 1), b);
   const ctx = turnContext({ target: 'X', board: boardSummary(b), figures: notes });
   assert.match(ctx, /What the child did with match: The child shaded part 1/);
-  assert.match(ctx, /match figure fraction at middle \(the child may: shade_second\)/);
+  assert.match(ctx, /match: a fraction bar at middle, 3 equal parts, 1 shaded; a second bar beside it, 6 parts, none shaded \(the child may: shade_second\)/);
   b = applyStep(b, { cmd: 'clear', scope: 'tutor' }, 9);
   assert.deepEqual(b.play, {});
 });

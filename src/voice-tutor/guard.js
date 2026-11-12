@@ -18,6 +18,7 @@
 import { leaksAnswer } from '../ai/replyGuard.js';
 import { asksForAnswer } from '../rocket/guard.js';
 import { parseMath, mathToText } from './mathExpr.js';
+import { readAnswer, canonAnswer } from './spokenAnswer.js';
 
 export { scrubNames, fenceTeamText } from '../rocket/guard.js';
 
@@ -52,17 +53,79 @@ export const visibleText = (steps) => steps.flatMap((s, i) => {
   return [];
 });
 
+// A count said before the question that asks for it: "into four equal pieces. How many pieces are there now?"
+// (12 Nov 2026: the shared guard skips one-character answers, so "4" was never caught.)
+const NUM_WORDS = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine', 'ten', 'eleven', 'twelve', 'thirteen', 'fourteen', 'fifteen', 'sixteen'];
+const NUM = `(?:\\d+|${NUM_WORDS.join('|')})`;
+const HOW_MANY = /\bhow many\s+(?:(?:equal|small|smaller|big|bigger|little|more|shaded|white|coloured|colored|whole|new)\s+)*([a-z]+)/i;
+const nounRe = (noun) => {
+  const n = noun.toLowerCase();
+  if (/^(half|halves)$/.test(n)) return 'half|halves';
+  return `${n.replace(/s$/, '')}s?`;
+};
+const numValue = (w) => (/^\d+$/.test(w) ? Number(w) : NUM_WORDS.indexOf(w.toLowerCase()));
+const sentencesOf = (t) => String(t || '').split(/(?<=[.!?])\s+/).filter(Boolean);
+
+/**
+ * A "how many <things>?" question whose count is said earlier in the same turn ("four equal pieces"). Counts the child
+ * has already found (`found`, as digits) or said this turn (`child`) are theirs to hear back, not a leak.
+ * @returns {string|null} the reason
+ */
+export function answerInQuestion(text, { found = [], child = '' } = {}) {
+  const sents = sentencesOf(text);
+  const theirs = new Set([...found.filter((f) => /^\d+$/.test(f)).map(Number), ...(String(child).toLowerCase().match(new RegExp(`\\b${NUM}\\b`, 'g')) || []).map(numValue)]);
+  for (let i = 0; i < sents.length; i += 1) {
+    if (!/\?\s*$/.test(sents[i])) continue;
+    const m = HOW_MANY.exec(sents[i]);
+    if (!m) continue;
+    // A question with its own numbers ("How many halves are in two wholes?") asks for something worked out, not a count.
+    if (new RegExp(`\\b${NUM}\\b`, 'i').test(sents[i].slice(m.index + m[0].length))) continue;
+    const before = `${sents.slice(0, i).join(' ')} ${sents[i].slice(0, m.index)}`;
+    const re = new RegExp(`\\b(${NUM})\\s+(?:[a-z]+\\s+){0,2}?(?:${nounRe(m[1])})\\b`, 'gi');
+    for (const hit of before.matchAll(re)) {
+      if (theirs.has(numValue(hit[1]))) continue;
+      return `"${hit[0]}" is said before "${sents[i].trim()}"`;
+    }
+  }
+  return null;
+}
+
+/** A small whole-number answer (2 to 16) said as a count of the thing its question asks about ("four pieces" for "How many pieces?"). */
+const smallCount = (h, text) => {
+  const n = Number(String(h.answer).trim());
+  if (!Number.isInteger(n) || n < 0 || n > 16) return null;
+  const m = HOW_MANY.exec(String(h.question || ''));
+  if (!m) return null;
+  const re = new RegExp(`\\b(${n}|${NUM_WORDS[n]})\\s+(?:[a-z]+\\s+){0,2}?(?:${nounRe(m[1])})\\b`, 'i');
+  const hit = re.exec(String(text || ''));
+  return hit ? `says the count (${hit[0]})` : null;
+};
+
+/** A fraction answer said in words ("one half", "two quarters"; not a bare "half"), which the shared guard cannot see. */
+const spokenFraction = (h, text, question) => {
+  const want = canonAnswer(h.answer);
+  if (!/^\d+\/\d+$/.test(want)) return null;
+  if (readAnswer(question).found.some((f) => f.kind === 'fraction' && f.value === want)) return null;
+  const hit = readAnswer(text).found.find((f) => f.kind === 'fraction' && f.value === want && !f.negated && f.words.split(' ').length >= 2);
+  return hit ? `says the answer in words (${hit.words})` : null;
+};
+
 /**
  * `hidden` is [{ answer, accepts, question }]: the answers the child has not
- * found yet (the open question, and any asked in this turn).
+ * found yet (the open question, and any asked in this turn). A question in the
+ * turn that offers the answer as one of its choices ("more, less, or the same?")
+ * is not a leak: the choices are the question.
  * @returns {{ ok:boolean, reasons:string[] }}
  */
 export function checkTurnText(steps, hidden = []) {
   const reasons = [];
+  const texts = visibleText(steps);
+  const choices = texts.flatMap((v) => sentencesOf(v.text)).filter((x) => /\?\s*$/.test(x) && /\bor\b/i.test(x)).join(' ');
   for (const h of hidden) {
     if (!h || h.answer == null || String(h.answer).trim() === '') continue;
-    for (const v of visibleText(steps)) {
-      const why = leaksAnswer({ answer: String(h.answer), accepts: h.accepts || [], question: h.question || '', reply: v.text });
+    for (const v of texts) {
+      const question = `${h.question || ''} ${choices}`.trim();
+      const why = leaksAnswer({ answer: String(h.answer), accepts: h.accepts || [], question, reply: v.text }) || smallCount(h, v.text) || spokenFraction(h, v.text, question);
       if (why) reasons.push(`step ${v.i} (${v.cmd}) ${why}`);
     }
   }
@@ -194,4 +257,4 @@ export function careTurn(hit) {
   return { steps: [...says, end], ends: crisis, kind: key };
 }
 
-export default { screenChild, screenWelfare, screenAll, careTurn, checkTurnText, visibleText, PERSONAL_REPLY, RULES_REPLY, ANSWER_REPLY };
+export default { screenChild, screenWelfare, screenAll, careTurn, checkTurnText, answerInQuestion, visibleText, PERSONAL_REPLY, RULES_REPLY, ANSWER_REPLY };

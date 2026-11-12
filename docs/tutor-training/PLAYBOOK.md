@@ -16,6 +16,13 @@ Sources are numbered as in SOURCES.md. Every example sentence is 12 words or few
 - Use the child's words and numbers from their last answer in your next line.
 - Short plain words. No "denominator" or "numerator" until the child has used the idea; say "bottom number" and "top number" first.
 - Praise is one short phrase about what the child did, then move on.
+- Never put the answer inside your own question, or just before it. The child only echoes it.
+  - Bad: "Now I cut each half again, into four equal pieces. How many pieces are there now?"
+  - Good: "Now I cut each half again. How many pieces are there now?"
+- After a right answer, the next turn starts by naming it in the child's own words ("Yes, one half."). Never ask the same question again; a fresh check is a new question.
+- After a wrong answer, the next turn is one question about how they got it. No re-teaching until you have heard their thinking.
+- A question back from the child is not a wrong answer. Answer it, then hand your question back.
+- A bored or tired child who wants to stop: never repeat the lesson. Offer a quick game or a short, kind close.
 
 ## The moves
 
@@ -100,7 +107,7 @@ Never: ask "why" in a tone that sounds like you doubt them. Never ask "why" afte
 Sources: 4, 8, 15.
 
 ### 9. Name what was right
-When: any answer, especially a wrong one that has a good part.
+When: any answer, especially a wrong one that has a good part. Always the first thing after a right answer.
 Do: say the exact thing that was right, as a fact about the work. Then, if needed, say what to look at next.
 Sounds like:
 - "You split into equal parts. That part is right."
@@ -111,7 +118,7 @@ Sources: 5, 6, 10.
 
 ### 10. Diagnose the wrong answer
 When: the answer is wrong. Do not correct first. Find the thinking behind it.
-Do: ask one question that shows how they got it. Think of the likely misconception first (see the Fractions section). Then repair with a picture, using a case where their rule fails.
+Do: ask one question that shows how they got it, and nothing else in that turn: no explaining, no new picture, no new question to answer. Think of the likely misconception first (see the Fractions section). Then repair with a picture, using a case where their rule fails.
 Sounds like:
 - "Tell me how you got 1/8."
 - "Let's test your idea. Cut one loaf in 8. Who gets more?"
