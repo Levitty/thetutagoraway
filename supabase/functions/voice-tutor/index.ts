@@ -6368,7 +6368,7 @@ var commas = (v) => {
   return i.replace(/\B(?=(\d{3})+(?!\d))/g, ",") + (d ? `.${d}` : "");
 };
 var round = (v, dp3 = 0) => num2(Math.round((v + Number.EPSILON * Math.sign(v)) * 10 ** dp3) / 10 ** dp3);
-var wrongList = (wrong, answer, negativesFair) => (wrong || []).filter(([when]) => negativesFair || typeof when !== "number" || when >= 0).map(([when, feedback, mis]) => ({ when: typeof when === "number" ? fmtNum(round(when, 3)) : String(when), feedback, ...mis ? { mis } : {} })).filter((m) => m.when !== String(answer));
+var wrongList = (wrong, answer, negativesFair) => (wrong || []).filter(([when]) => negativesFair || typeof when !== "number" || when >= 0).map(([when, feedback2, mis]) => ({ when: typeof when === "number" ? fmtNum(round(when, 3)) : String(when), feedback: feedback2, ...mis ? { mis } : {} })).filter((m) => m.when !== String(answer));
 var SINGULAR = { tonnes: "tonne", kilograms: "kilogram", kilometres: "kilometre", metres: "metre", litres: "litre", hours: "hour", minutes: "minute", seconds: "second", days: "day", weeks: "week", months: "month", years: "year", packets: "packet", bags: "bag", bottles: "bottle", tickets: "ticket", boxes: "box", cubes: "cube", pieces: "piece", learners: "learner", mangoes: "mango", oranges: "orange", eggs: "egg", sweets: "sweet", books: "book", pens: "pen", pencils: "pencil", children: "child", people: "person", rows: "row", columns: "column", sides: "side", cows: "cow", goats: "goat", hens: "hen", parts: "part", layers: "layer", trees: "tree", sacks: "sack", tins: "tin", workers: "worker", shillings: "shilling" };
 var ONE_PLURAL = new RegExp(`(^|[^\\d.,/])1 (${Object.keys(SINGULAR).join("|")})\\b`, "g");
 var polish = (t) => t.replace(ONE_PLURAL, (_, b, w) => `${b}1 ${SINGULAR[w]}`).replace(/\b([Aa]) (open|oval|octagon|exercise|orange|egg|hour|empty|old|acre|apple|8|11|18|8\d)\b/g, "$1n $2");
@@ -8002,21 +8002,21 @@ var FAMILIES = [
     rung: 2,
     form: "table",
     draw: () => {
-      const P = pick([1e4, 2e4, 4e4, 5e4]), R = pick([5, 10, 20]);
-      return { P, R };
+      const P2 = pick([1e4, 2e4, 4e4, 5e4]), R = pick([5, 10, 20]);
+      return { P: P2, R };
     },
-    make: ({ P, R }) => {
-      const A1 = P * (1 + R / 100), A2 = A1 * (1 + R / 100);
+    make: ({ P: P2, R }) => {
+      const A1 = P2 * (1 + R / 100), A2 = A1 * (1 + R / 100);
       return {
         question: `Read this SACCO table. Each year adds ${R}% to what is there at the start: compound interest. What goes in the empty box, in shillings?`,
-        model: { type: "table", data: { head: ["Year", "Start (sh)", "End (sh)"], rows: [{ cells: ["1", commas(P), commas(A1)] }, { cells: ["2", commas(A1), "?"] }] } },
+        model: { type: "table", data: { head: ["Year", "Start (sh)", "End (sh)"], rows: [{ cells: ["1", commas(P2), commas(A1)] }, { cells: ["2", commas(A1), "?"] }] } },
         answer: A2,
-        wrong: [[P + 2 * (P * R) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`], [A2 - P, "That is only the interest. The table asks for the whole amount at the end of the year."], [A1 * R / 100, "That is the interest in year 2. Add it to the amount at the start of the year."]],
+        wrong: [[P2 + 2 * (P2 * R) / 100, `That is simple interest. Year 2's interest is worked on the new amount.`], [A2 - P2, "That is only the interest. The table asks for the whole amount at the end of the year."], [A1 * R / 100, "That is the interest in year 2. Add it to the amount at the start of the year."]],
         hints: ["Read the amount at the start of year 2.", `Add ${R}% of that amount.`],
         steps: [`Start of year 2: ${sh(A1)}.`, `Interest: ${R}% of ${commas(A1)} = ${sh(A1 * R / 100)}.`, `End of year 2: ${sh(A2)}.`]
       };
     },
-    check: ({ P, R }, a) => Math.abs(a / (1 + R / 100) ** 2 - P) < 1e-6
+    check: ({ P: P2, R }, a) => Math.abs(a / (1 + R / 100) ** 2 - P2) < 1e-6
   })
 ];
 
@@ -10333,19 +10333,19 @@ var FAMILIES4 = [
     form: "steps",
     draw: () => {
       const a = randInt(6, 12) * 100, b = randInt(2, 6) * 100, c = randInt(1, 4) * 50, save = pick([200, 250, 300, 350, 400]);
-      const total = a + b + c, P = total + save, m = randInt(3, 8), X = save * m;
-      return distinct2(total, save, m, a + b, P) ? { a, b, c, save, total, P, m, X, p: person() } : null;
+      const total = a + b + c, P2 = total + save, m = randInt(3, 8), X = save * m;
+      return distinct2(total, save, m, a + b, P2) ? { a, b, c, save, total, P: P2, m, X, p: person() } : null;
     },
-    make: ({ a, b, c, save, total, P, m, X, p }) => ({
-      question: `${p.name} earns ${sh(P)} a month at a kiosk. ${p.Her} budget is: food ${sh(a)}, bus fares ${sh(b)} and airtime ${sh(c)}. ${p.She} saves the rest.`,
+    make: ({ a, b, c, save, total, P: P2, m, X, p }) => ({
+      question: `${p.name} earns ${sh(P2)} a month at a kiosk. ${p.Her} budget is: food ${sh(a)}, bus fares ${sh(b)} and airtime ${sh(c)}. ${p.She} saves the rest.`,
       parts: [
-        { prompt: "How much does the budget spend on the three items?", answer: total, unit: "sh", hint: "Add the three items.", wrong: [[a + b, "Airtime is also in the budget."], [P, "That is the money coming in, not the spending."]] },
-        { prompt: "How much is left to save each month?", answer: save, unit: "sh", hint: "Take the spending from the money coming in.", wrong: [[P + total, "Spending takes money away, so subtract."], [total, "That is the spending. How much is left?"]] },
+        { prompt: "How much does the budget spend on the three items?", answer: total, unit: "sh", hint: "Add the three items.", wrong: [[a + b, "Airtime is also in the budget."], [P2, "That is the money coming in, not the spending."]] },
+        { prompt: "How much is left to save each month?", answer: save, unit: "sh", hint: "Take the spending from the money coming in.", wrong: [[P2 + total, "Spending takes money away, so subtract."], [total, "That is the spending. How much is left?"]] },
         { prompt: `${p.She} wants to save ${sh(X)}. How many months will it take?`, answer: m, unit: "months", hint: "How many monthly savings make the whole amount?", wrong: [[X - save, "Taking away one saving is not enough. How many savings make the amount?"], [X + save, "Share the amount by the monthly saving."]] }
       ],
-      steps: [`Spending: ${a} + ${b} + ${c} = ${sh(total)}.`, `Savings: ${P} \u2212 ${total} = ${sh(save)} a month.`, `Months: ${X} \xF7 ${save} = ${m}.`]
+      steps: [`Spending: ${a} + ${b} + ${c} = ${sh(total)}.`, `Savings: ${P2} \u2212 ${total} = ${sh(save)} a month.`, `Months: ${X} \xF7 ${save} = ${m}.`]
     }),
-    check: ({ P, X }, v) => v[0] + v[1] === P && v[1] * v[2] === X
+    check: ({ P: P2, X }, v) => v[0] + v[1] === P2 && v[1] * v[2] === X
   }),
   fam4({
     id: "g5.money.budget-spot",
@@ -10356,21 +10356,21 @@ var FAMILIES4 = [
     rung: 3,
     form: "spot",
     draw: () => {
-      const a = randInt(5, 10) * 100, b = randInt(2, 5) * 100, c = randInt(1, 4) * 100, P = a + b + c + randInt(2, 5) * 100;
-      return { a, b, c, P, k: randInt(0, 2), p: person(), months: randInt(3, 6) };
+      const a = randInt(5, 10) * 100, b = randInt(2, 5) * 100, c = randInt(1, 4) * 100, P2 = a + b + c + randInt(2, 5) * 100;
+      return { a, b, c, P: P2, k: randInt(0, 2), p: person(), months: randInt(3, 6) };
     },
-    make: ({ a, b, c, P, k, p, months }) => {
-      const t1 = k === 0 ? a + b : a + b + c, t2 = k === 1 ? P + t1 : P - t1, t3 = k === 2 ? t2 + months : t2 * months;
+    make: ({ a, b, c, P: P2, k, p, months }) => {
+      const t1 = k === 0 ? a + b : a + b + c, t2 = k === 1 ? P2 + t1 : P2 - t1, t3 = k === 2 ? t2 + months : t2 * months;
       return {
-        question: `${p.name} has ${sh(P)} a month. The budget has food ${sh(a)}, rent share ${sh(b)} and clothes ${sh(c)}. ${p.She} works out how much ${p.she} can save in ${months} months. Which step has the mistake?`,
+        question: `${p.name} has ${sh(P2)} a month. The budget has food ${sh(a)}, rent share ${sh(b)} and clothes ${sh(c)}. ${p.She} works out how much ${p.she} can save in ${months} months. Which step has the mistake?`,
         working: [
           { text: `Spending: ${a} + ${b} + ${c} = ${commas(t1)}`, ok: t1 === a + b + c },
-          { text: `Left each month: ${commas(P)} \u2212 ${commas(t1)} = ${commas(t2)}`, ok: t2 === P - t1 },
+          { text: `Left each month: ${commas(P2)} \u2212 ${commas(t1)} = ${commas(t2)}`, ok: t2 === P2 - t1 },
           { text: `Saved in ${months} months: ${commas(t2)} \xD7 ${months} = ${commas(t3)}`, ok: t3 === t2 * months }
         ],
         fix: k === 0 ? "The spending leaves out the clothes. All three items are in the budget." : k === 1 ? "What is left is the money coming in minus the spending. Here the two were added." : `Saving the same amount for ${months} months means multiplying, not adding.`,
         hints: ["Check each step against the one before it.", "Does each step use the right sign: add for spending, subtract for what is left?"],
-        steps: [`Spending: ${a} + ${b} + ${c} = ${a + b + c}.`, `Left: ${P} \u2212 ${a + b + c} = ${P - a - b - c}.`, `In ${months} months: ${P - a - b - c} \xD7 ${months} = ${(P - a - b - c) * months}.`]
+        steps: [`Spending: ${a} + ${b} + ${c} = ${a + b + c}.`, `Left: ${P2} \u2212 ${a + b + c} = ${P2 - a - b - c}.`, `In ${months} months: ${P2 - a - b - c} \xD7 ${months} = ${(P2 - a - b - c) * months}.`]
       };
     }
   }),
@@ -10482,19 +10482,19 @@ var FAMILIES4 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const S4 = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
-      const end = S4 + d1 - w1 + d2 - w2;
-      return end > 0 && distinct2(end, S4 + d1 + w1 + d2 + w2, S4 + d1 - w1, S4 + d1 + d2, S4 + d1 + d2 - w1) ? { S: S4, d1, w1, d2, w2, end, p: person() } : null;
+      const S5 = randInt(8, 30) * 100, d1 = randInt(2, 8) * 100, w1 = randInt(2, 8) * 100, d2 = randInt(1, 6) * 100, w2 = randInt(1, 5) * 100;
+      const end = S5 + d1 - w1 + d2 - w2;
+      return end > 0 && distinct2(end, S5 + d1 + w1 + d2 + w2, S5 + d1 - w1, S5 + d1 + d2, S5 + d1 + d2 - w1) ? { S: S5, d1, w1, d2, w2, end, p: person() } : null;
     },
-    make: ({ S: S4, d1, w1, d2, w2, end, p }) => ({
+    make: ({ S: S5, d1, w1, d2, w2, end, p }) => ({
       question: `The table shows what happened in ${p.name}'s bank account in one week. A deposit puts money in. A withdrawal takes money out. How much is in the account at the end of Saturday?`,
-      model: { type: "table", data: { head: ["Day", "What happened", "Amount"], rows: [{ cells: ["Monday", "Opening balance", sh(S4)] }, { cells: ["Tuesday", "Deposit", sh(d1)] }, { cells: ["Wednesday", "Withdrawal", sh(w1)] }, { cells: ["Friday", "Deposit", sh(d2)] }, { cells: ["Saturday", "Withdrawal", sh(w2)] }] } },
+      model: { type: "table", data: { head: ["Day", "What happened", "Amount"], rows: [{ cells: ["Monday", "Opening balance", sh(S5)] }, { cells: ["Tuesday", "Deposit", sh(d1)] }, { cells: ["Wednesday", "Withdrawal", sh(w1)] }, { cells: ["Friday", "Deposit", sh(d2)] }, { cells: ["Saturday", "Withdrawal", sh(w2)] }] } },
       answer: end,
-      wrong: [[S4 + d1 + w1 + d2 + w2, "A withdrawal takes money out, so subtract it."], [S4 + d1 - w1, "Two more things happened on Friday and Saturday."], [S4 + d1 + d2, "A withdrawal takes money out. Do not leave the withdrawals out."], [S4 + d1 + d2 - w1, "There is one more withdrawal, on Saturday."]],
+      wrong: [[S5 + d1 + w1 + d2 + w2, "A withdrawal takes money out, so subtract it."], [S5 + d1 - w1, "Two more things happened on Friday and Saturday."], [S5 + d1 + d2, "A withdrawal takes money out. Do not leave the withdrawals out."], [S5 + d1 + d2 - w1, "There is one more withdrawal, on Saturday."]],
       hints: ["Start with the opening balance.", "Add each deposit and take away each withdrawal in order."],
-      steps: [`Start: ${sh(S4)}. Tuesday: ${S4} + ${d1} = ${S4 + d1}.`, `Wednesday: ${S4 + d1} \u2212 ${w1} = ${S4 + d1 - w1}. Friday: + ${d2} = ${S4 + d1 - w1 + d2}.`, `Saturday: \u2212 ${w2} = ${sh(end)}.`]
+      steps: [`Start: ${sh(S5)}. Tuesday: ${S5} + ${d1} = ${S5 + d1}.`, `Wednesday: ${S5 + d1} \u2212 ${w1} = ${S5 + d1 - w1}. Friday: + ${d2} = ${S5 + d1 - w1 + d2}.`, `Saturday: \u2212 ${w2} = ${sh(end)}.`]
     }),
-    check: ({ S: S4, d1, w1, d2, w2 }, a) => a + w1 + w2 === S4 + d1 + d2
+    check: ({ S: S5, d1, w1, d2, w2 }, a) => a + w1 + w2 === S5 + d1 + d2
   }),
   fam4({
     id: "g5.money.save-goal-steps",
@@ -11607,12 +11607,12 @@ var FAMILIES4 = [
       return { n, k, p: person() };
     },
     make: ({ n, k, p }) => {
-      const H = Math.floor(n / 100) % 10, T5 = Math.floor(n / 10) % 10, O = n % 10;
+      const H2 = Math.floor(n / 100) % 10, T5 = Math.floor(n / 10) % 10, O = n % 10;
       const shownD = k === 0 ? O : T5, up = k === 1 ? false : shownD >= 5, res = up ? fl(n, 100) + 100 : fl(n, 100);
       return {
         question: `${p.name} rounds ${commas(n)} to the nearest hundred. Which step has the mistake?`,
         working: [
-          { text: `The hundreds digit is ${H}.`, ok: true },
+          { text: `The hundreds digit is ${H2}.`, ok: true },
           { text: `The digit next to it, on the right, is ${shownD}.`, ok: shownD === T5 },
           { text: `${shownD} is ${up ? "5 or more, so round up" : "less than 5, so round down"}.`, ok: up === shownD >= 5 },
           { text: `${commas(n)} rounds to ${commas(res)}.`, ok: true }
@@ -16665,16 +16665,16 @@ var CTX = {
   time: { add: (p, a, b) => `${p.name} sweeps the classroom for ${a} and then the verandah for ${b}. What is the total time spent sweeping?`, sub: (p, a, b) => `${p.name} ran a race in ${a} and a friend ran it in ${b}. How much longer did ${p.she} take?`, mul: (p, a, n) => `One batch of mandazi fries in ${a}. How long do ${n} batches take, one after another?`, div: (p, a, n) => `A lesson of ${a} is shared equally among ${n} groups for reading. How long does each group read?`, conv: (p) => `${p.name} times an activity with a stopwatch.`, parts: "songs", ex: "a song" }
 };
 function build(name) {
-  const S4 = SETS[name], C2 = CTX[name], { big, small, f } = S4, sk = (k) => `${M2}${S4.key}.${S4.sk[k]}`, mis = S4.mis;
-  const fmt2 = (b, s) => comp(b, s, big, small), W2 = `${name.slice(0, 3)}`;
+  const S5 = SETS[name], C2 = CTX[name], { big, small, f } = S5, sk = (k) => `${M2}${S5.key}.${S5.sk[k]}`, mis = S5.mis;
+  const fmt2 = (b, s) => comp(b, s, big, small), W3 = `${name.slice(0, 3)}`;
   const acc = (b, s) => [`${plain(b, s, f)} ${small}`];
   const out = [];
-  const F3 = (o) => out.push(fam5(o));
+  const F4 = (o) => out.push(fam5(o));
   const rnd1 = () => randInt(1, f === 60 ? 9 : 9);
   const smallPart = () => f === 60 ? randInt(5, 55) : randInt(1, 9) * 50 + (Math.random() < 0.4 ? randInt(1, 9) * 5 : 0) * 1;
   const any = (n) => Array.from({ length: n }, () => 0);
-  F3({
-    id: `g5c.${W2}.rel.parts`,
+  F4({
+    id: `g5c.${W3}.rel.parts`,
     cs: sk("rel"),
     form: "word",
     rung: 1,
@@ -16690,8 +16690,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.rel.compare`,
+  F4({
+    id: `g5c.${W3}.rel.compare`,
     cs: sk("rel"),
     form: "why",
     rung: 2,
@@ -16707,8 +16707,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.rel.half`,
+  F4({
+    id: `g5c.${W3}.rel.half`,
     cs: sk("rel"),
     form: "direct",
     rung: 3,
@@ -16725,8 +16725,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.k2s.word`,
+  F4({
+    id: `g5c.${W3}.k2s.word`,
     cs: sk("k2s"),
     form: "word",
     rung: 1,
@@ -16745,8 +16745,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.k2s.options`,
+  F4({
+    id: `g5c.${W3}.k2s.options`,
     cs: sk("k2s"),
     form: "direct",
     rung: 2,
@@ -16763,8 +16763,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.k2s.spot`,
+  F4({
+    id: `g5c.${W3}.k2s.spot`,
     cs: sk("k2s"),
     form: "spot",
     rung: 3,
@@ -16780,8 +16780,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.s2k.word`,
+  F4({
+    id: `g5c.${W3}.s2k.word`,
     cs: sk("s2k"),
     form: "word",
     rung: 2,
@@ -16803,8 +16803,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.s2k.options`,
+  F4({
+    id: `g5c.${W3}.s2k.options`,
     cs: sk("s2k"),
     form: "direct",
     rung: 2,
@@ -16820,8 +16820,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.s2k.spot`,
+  F4({
+    id: `g5c.${W3}.s2k.spot`,
     cs: sk("s2k"),
     form: "spot",
     rung: 3,
@@ -16853,8 +16853,8 @@ function build(name) {
     }
     return [b1, s1, b2, s2];
   };
-  F3({
-    id: `g5c.${W2}.add.word`,
+  F4({
+    id: `g5c.${W3}.add.word`,
     cs: sk("add"),
     form: "word",
     rung: 2,
@@ -16874,8 +16874,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.add.options`,
+  F4({
+    id: `g5c.${W3}.add.options`,
     cs: sk("add"),
     form: "direct",
     rung: 2,
@@ -16893,8 +16893,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.add.spot`,
+  F4({
+    id: `g5c.${W3}.add.spot`,
     cs: sk("add"),
     form: "spot",
     rung: 3,
@@ -16917,8 +16917,8 @@ function build(name) {
     const b1 = randInt(3, 9), b2 = randInt(1, b1 - 1), s1 = f === 60 ? randInt(5, 30) : randInt(1, 4) * 100 + (Math.random() < 0.3 ? 50 : 0), s2 = f === 60 ? randInt(s1 + 5, 55) : randInt(s1 / 100 + 1, 9) * 100 + 0;
     return [b1, s1, b2, s2];
   };
-  F3({
-    id: `g5c.${W2}.sub.word`,
+  F4({
+    id: `g5c.${W3}.sub.word`,
     cs: sk("sub"),
     form: "word",
     rung: 2,
@@ -16938,8 +16938,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.sub.options`,
+  F4({
+    id: `g5c.${W3}.sub.options`,
     cs: sk("sub"),
     form: "direct",
     rung: 2,
@@ -16957,8 +16957,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.sub.spot`,
+  F4({
+    id: `g5c.${W3}.sub.spot`,
     cs: sk("sub"),
     form: "spot",
     rung: 3,
@@ -16980,8 +16980,8 @@ function build(name) {
     const b = randInt(1, 5), s = f === 60 ? randInt(15, 55) : randInt(3, 9) * 100 + pick([0, 50]), n = randInt(2, 6);
     return [b, s, n];
   };
-  F3({
-    id: `g5c.${W2}.mul.word`,
+  F4({
+    id: `g5c.${W3}.mul.word`,
     cs: sk("mul"),
     form: "word",
     rung: 2,
@@ -17001,8 +17001,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.mul.options`,
+  F4({
+    id: `g5c.${W3}.mul.options`,
     cs: sk("mul"),
     form: "direct",
     rung: 2,
@@ -17020,8 +17020,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.mul.spot`,
+  F4({
+    id: `g5c.${W3}.mul.spot`,
     cs: sk("mul"),
     form: "spot",
     rung: 3,
@@ -17044,8 +17044,8 @@ function build(name) {
     const s = n * qs % f === n * qs ? n * qs : null;
     return [b, s, n];
   };
-  F3({
-    id: `g5c.${W2}.div.word`,
+  F4({
+    id: `g5c.${W3}.div.word`,
     cs: sk("div"),
     form: "word",
     rung: 3,
@@ -17066,8 +17066,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.div.options`,
+  F4({
+    id: `g5c.${W3}.div.options`,
     cs: sk("div"),
     form: "direct",
     rung: 3,
@@ -17087,8 +17087,8 @@ function build(name) {
       };
     }
   });
-  F3({
-    id: `g5c.${W2}.div.check`,
+  F4({
+    id: `g5c.${W3}.div.check`,
     cs: sk("div"),
     form: "spot",
     rung: 3,
@@ -18016,8 +18016,8 @@ var FAMILIES11 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const A2 = shuffle2(["the top of a postage stamp", "the cover of an exercise book", "the screen of a phone"]), B2 = shuffle2(["the length of a pencil", "the height of a door", "the mass of a mango", "the water in a cup"]);
-      const options = mc(A2[0], B2.slice(0, 3).map((b) => [b, b.includes("mass") ? "Mass is measured in grammes, not cm\xB2." : b.includes("water") ? "Water in a cup is capacity, measured in ml." : "A length is measured in cm or m, not cm\xB2.", "M_CM2_FOR_LENGTH"]));
+      const A2 = shuffle2(["the top of a postage stamp", "the cover of an exercise book", "the screen of a phone"]), B3 = shuffle2(["the length of a pencil", "the height of a door", "the mass of a mango", "the water in a cup"]);
+      const options = mc(A2[0], B3.slice(0, 3).map((b) => [b, b.includes("mass") ? "Mass is measured in grammes, not cm\xB2." : b.includes("water") ? "Water in a cup is capacity, measured in ml." : "A length is measured in cm or m, not cm\xB2.", "M_CM2_FOR_LENGTH"]));
       return {
         question: `${person().name} wants to measure something in square centimetres. Which would ${"they"} measure in cm\xB2?`,
         options,
@@ -20182,10 +20182,2218 @@ var FAMILIES13 = [
   })
 ];
 
+// src/ai-tutor/content/curriculumMap.science.g5.js
+var OUTCOMES_SCI_G5 = {
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS"
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES"
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES"
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES"
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST"
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST"
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST"
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST"
+  },
+  "SCIE.G5.MATTER.MIXTURES.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.MATTER.MIXTURES"
+  },
+  "SCIE.G5.MATTER.MIXTURES.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.MATTER.MIXTURES"
+  },
+  "SCIE.G5.MATTER.MIXTURES.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.MATTER.MIXTURES"
+  },
+  "SCIE.G5.MATTER.MIXTURES.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.MATTER.MIXTURES"
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION"
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION"
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION"
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION"
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.e": {
+    "letter": "e",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION"
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING"
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING"
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING"
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING"
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY"
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY"
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY"
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY"
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.a": {
+    "letter": "a",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.b": {
+    "letter": "b",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.c": {
+    "letter": "c",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.d": {
+    "letter": "d",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER"
+  }
+};
+var SKILLS_SCI_G5 = {
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT": {
+    "name": "Classify plants as flowering or non-flowering",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "outcome": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_FL_SMALL_FLOWER_NOT_FLOWER",
+      "M_FL_ALL_TREES_FLOWER",
+      "M_FL_ALL_PLANTS_FLOWER",
+      "M_FL_NOT_FLOWERING_NOW"
+    ]
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES": {
+    "name": "Name the main parts of a flower",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "outcome": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b"
+    ],
+    "pre": [],
+    "mis": [
+      "M_PN_PETAL_SEPAL",
+      "M_PN_STAMEN_PISTIL",
+      "M_PN_STIGMA_ANTHER"
+    ]
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS": {
+    "name": "Describe the functions of the parts of a flower",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "outcome": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES"
+    ],
+    "mis": [
+      "M_PF_PETAL_SEPAL_JOBS",
+      "M_PF_POLLEN_IS_SEED",
+      "M_PF_OVARY_MAKES_POLLEN"
+    ]
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED": {
+    "name": "Explain how a flower becomes a fruit with seeds",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "outcome": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS"
+    ],
+    "mis": [
+      "M_FS_FRUIT_NOT_FROM_FLOWER",
+      "M_FS_POLLINATION_DISPERSAL",
+      "M_FS_BEES_NOT_NEEDED"
+    ]
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS": {
+    "name": "Outline the importance of flowers in nature",
+    "sub": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "outcome": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c",
+    "outcomes": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED"
+    ],
+    "mis": [
+      "M_IM_ONLY_DECORATION",
+      "M_IM_INSECTS_HARM",
+      "M_IM_FOOD_NOT_FROM_FLOWERS"
+    ]
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS": {
+    "name": "Describe the general characteristics of vertebrates",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES",
+    "outcome": "SCIE.G5.LIVING.VERTEBRATES.a",
+    "outcomes": [
+      "SCIE.G5.LIVING.VERTEBRATES.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_VC_SIZE_DECIDES",
+      "M_VC_NEEDS_LEGS",
+      "M_VC_SHELL_IS_BACKBONE"
+    ]
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS": {
+    "name": "Classify vertebrates into mammals, birds, reptiles, fish and amphibians",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES",
+    "outcome": "SCIE.G5.LIVING.VERTEBRATES.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.VERTEBRATES.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS"
+    ],
+    "mis": [
+      "M_VG_BAT_BIRD",
+      "M_VG_WATER_IS_FISH",
+      "M_VG_REPTILE_AMPHIBIAN",
+      "M_VG_NOFLY_NOT_BIRD",
+      "M_VG_EGGS_ARE_BIRDS"
+    ]
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES": {
+    "name": "Match body features to the groups of vertebrates",
+    "sub": "SCIE.G5.LIVING.VERTEBRATES",
+    "outcome": "SCIE.G5.LIVING.VERTEBRATES.a",
+    "outcomes": [
+      "SCIE.G5.LIVING.VERTEBRATES.a",
+      "SCIE.G5.LIVING.VERTEBRATES.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+      "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS"
+    ],
+    "mis": [
+      "M_VF_SCALES_FISH_ONLY",
+      "M_VF_WINGS_MEAN_BIRD",
+      "M_VF_AMPHIBIAN_WATER_ONLY"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS": {
+    "name": "Identify the main parts of the breathing system",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+    "outcome": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_BP_TRACHEA_FOOD",
+      "M_BP_DIAPHRAGM_PLACE",
+      "M_BP_LUNGS_LOCATION"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS": {
+    "name": "Describe the functions of the parts of the breathing system",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+    "outcome": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
+    ],
+    "mis": [
+      "M_BF_AIR_TO_STOMACH",
+      "M_BF_LUNGS_PUSH_SELF",
+      "M_BF_NO_OXYGEN_OUT",
+      "M_BF_NOSE_ONLY_SMELL"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT": {
+    "name": "Explain what happens in the body when we breathe in and out",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+    "outcome": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS"
+    ],
+    "mis": [
+      "M_BI_RIBS_IN",
+      "M_BI_AIR_PUSHES_CHEST"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS": {
+    "name": "Recognise the symptoms of common breathing conditions",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+    "outcome": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS"
+    ],
+    "mis": [
+      "M_BS_ASTHMA_CATCHING",
+      "M_BS_ALLERGY_IS_INFECTION",
+      "M_BS_ALL_SAME"
+    ]
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION": {
+    "name": "Outline how to prevent common breathing conditions",
+    "sub": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
+    "outcome": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c",
+    "outcomes": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c"
+    ],
+    "pre": [
+      "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS"
+    ],
+    "mis": [
+      "M_BV_COLD_WEATHER",
+      "M_BV_ANTIBIOTICS",
+      "M_BV_HANDS_NO_MATTER",
+      "M_BV_SMOKE_HARMLESS"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING": {
+    "name": "Explain what a mixture is",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.a",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_MM_CANNOT_BE_UNMIXED",
+      "M_MM_NATURAL_NOT_MIXTURE",
+      "M_MM_EQUAL_PARTS"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS": {
+    "name": "Classify mixtures as homogeneous or heterogeneous",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.a",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.a"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING"
+    ],
+    "mis": [
+      "M_MH_DISSOLVED_GONE",
+      "M_MH_CLEAR_IS_PURE",
+      "M_MH_STIRRED_IS_HOMO"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES": {
+    "name": "Give examples of solid-solid, solid-liquid and liquid-liquid mixtures",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.a",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.a"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING"
+    ],
+    "mis": [
+      "M_MT_LOOKS_LIQUID",
+      "M_MT_THICK_IS_SOLID"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE": {
+    "name": "Choose the right method to separate a heterogeneous mixture",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.b",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.b"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS"
+    ],
+    "mis": [
+      "M_MS_FILTER_FOR_ALL",
+      "M_MS_MAGNET_ANY_METAL",
+      "M_MS_FUNNEL_SOLIDS"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE": {
+    "name": "Explain why each separating method works",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.b",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.b"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+    ],
+    "mis": [
+      "M_MP_FILTER_REMOVES_DISSOLVED",
+      "M_MP_WINNOW_REVERSED",
+      "M_MP_SIEVE_REVERSED"
+    ]
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES": {
+    "name": "Outline how separating mixtures is used in daily life",
+    "sub": "SCIE.G5.MATTER.MIXTURES",
+    "outcome": "SCIE.G5.MATTER.MIXTURES.c",
+    "outcomes": [
+      "SCIE.G5.MATTER.MIXTURES.c"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE"
+    ],
+    "mis": [
+      "M_MU_ONLY_LAB",
+      "M_MU_FILTER_IS_SAFE"
+    ]
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY": {
+    "name": "Identify pollutants in water sources",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION",
+    "outcome": "SCIE.G5.MATTER.WATER_POLLUTION.a",
+    "outcomes": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_WP_ONLY_VISIBLE",
+      "M_WP_ONLY_FACTORIES",
+      "M_WP_HELPFUL_THINGS_SAFE"
+    ]
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS": {
+    "name": "Outline the effects of water pollution",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION",
+    "outcome": "SCIE.G5.MATTER.WATER_POLLUTION.b",
+    "outcomes": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.b"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY"
+    ],
+    "mis": [
+      "M_WE_ONLY_PEOPLE",
+      "M_WE_UPSTREAM_ONLY",
+      "M_WE_BAD_TASTE_ONLY"
+    ]
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION": {
+    "name": "Identify ways of reducing water pollution",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION",
+    "outcome": "SCIE.G5.MATTER.WATER_POLLUTION.c",
+    "outcomes": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.c"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY"
+    ],
+    "mis": [
+      "M_WR_RIVER_WASHES_AWAY",
+      "M_WR_LATRINE_NEAR_WELL",
+      "M_WR_WASH_IN_RIVER"
+    ]
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE": {
+    "name": "Choose an appropriate method of water treatment",
+    "sub": "SCIE.G5.MATTER.WATER_POLLUTION",
+    "outcome": "SCIE.G5.MATTER.WATER_POLLUTION.d",
+    "outcomes": [
+      "SCIE.G5.MATTER.WATER_POLLUTION.d"
+    ],
+    "pre": [
+      "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+      "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS"
+    ],
+    "mis": [
+      "M_WT_FILTER_MAKES_SAFE",
+      "M_WT_BOIL_REMOVES_ALL",
+      "M_WT_SOLAR_MUDDY",
+      "M_WT_MORE_CHLORINE"
+    ]
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK": {
+    "name": "Classify objects as floating or sinking in water",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+    "outcome": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a",
+    "outcomes": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_FA_HEAVY_SINKS",
+      "M_FA_MATERIAL_ALWAYS",
+      "M_FA_DEEP_WATER"
+    ]
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS": {
+    "name": "Identify the factors that affect floating and sinking",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+    "outcome": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b",
+    "outcomes": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK"
+    ],
+    "mis": [
+      "M_FF_SHAPE_NO_EFFECT",
+      "M_FF_WEIGHT_ONLY",
+      "M_FF_SIZE_ONLY",
+      "M_FF_LOAD_NO_EFFECT"
+    ]
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS": {
+    "name": "Explain how floating and sinking are used in daily life",
+    "sub": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+    "outcome": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c",
+    "outcomes": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS"
+    ],
+    "mis": [
+      "M_FU_STEEL_LIGHT",
+      "M_FU_FLOAT_NO_WEIGHT"
+    ]
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES": {
+    "name": "Identify sources of sound and what makes sound",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY",
+    "outcome": "SCIE.G5.FORCE_.SOUND_ENERGY.a",
+    "outcomes": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_SS_NO_VIBRATION",
+      "M_SS_AIR_SILENT",
+      "M_SS_HIT_ONLY"
+    ]
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL": {
+    "name": "Describe how sound moves in nature",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY",
+    "outcome": "SCIE.G5.FORCE_.SOUND_ENERGY.b",
+    "outcomes": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.b"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES"
+    ],
+    "mis": [
+      "M_ST_ONLY_AIR",
+      "M_ST_IN_SPACE",
+      "M_ST_FASTER_IN_AIR",
+      "M_ST_LOUD_FASTER"
+    ]
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS": {
+    "name": "Describe the effects of loud sound in daily life",
+    "sub": "SCIE.G5.FORCE_.SOUND_ENERGY",
+    "outcome": "SCIE.G5.FORCE_.SOUND_ENERGY.c",
+    "outcomes": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.c"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES"
+    ],
+    "mis": [
+      "M_SL_ONLY_EARS",
+      "M_SL_GETS_USED",
+      "M_SL_MUSIC_SAFE"
+    ]
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES": {
+    "name": "Name the modes of heat transfer: conduction, convection and radiation",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+    "outcome": "SCIE.G5.FORCE_.HEAT_TRANSFER.a",
+    "outcomes": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.a"
+    ],
+    "pre": [],
+    "mis": [
+      "M_HM_HEAT_RISES",
+      "M_HM_COLD_TRAVELS",
+      "M_HM_SUN_NEEDS_AIR",
+      "M_HM_CONVECTION_SOLID"
+    ]
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS": {
+    "name": "Classify materials as good or poor conductors of heat",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+    "outcome": "SCIE.G5.FORCE_.HEAT_TRANSFER.b",
+    "outcomes": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.b"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES"
+    ],
+    "mis": [
+      "M_HC_METAL_COLDER",
+      "M_HC_WOOL_MAKES_HEAT",
+      "M_HC_CONDUCTOR_KEEPS_HEAT"
+    ]
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES": {
+    "name": "Explain the uses of heat transfer in daily life",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+    "outcome": "SCIE.G5.FORCE_.HEAT_TRANSFER.c",
+    "outcomes": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.c"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS"
+    ],
+    "mis": [
+      "M_HU_COLOUR_NO_EFFECT",
+      "M_HU_VENT_LOW",
+      "M_HU_COOKING_ONLY"
+    ]
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY": {
+    "name": "Know the safety precautions when handling heat",
+    "sub": "SCIE.G5.FORCE_.HEAT_TRANSFER",
+    "outcome": "SCIE.G5.FORCE_.HEAT_TRANSFER.d",
+    "outcomes": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.d"
+    ],
+    "pre": [
+      "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS"
+    ],
+    "mis": [
+      "M_HS_WET_CLOTH",
+      "M_HS_OFF_FIRE_COOL",
+      "M_HS_METAL_HANDLE_OK"
+    ]
+  }
+};
+var MIS_FEEDBACK = {
+  "M_FL_SMALL_FLOWER_NOT_FLOWER": "Many flowers are small and not bright. Maize has flowers too: the tassel at the top and the silk on the cob. A plant that makes seeds inside fruits or grains is a flowering plant.",
+  "M_FL_ALL_TREES_FLOWER": "Cypress and pine are trees, but they make cones, not flowers and fruits. That makes them non-flowering plants.",
+  "M_FL_ALL_PLANTS_FLOWER": "Ferns and mosses never make flowers. They make tiny spores instead. They are non-flowering plants.",
+  "M_FL_NOT_FLOWERING_NOW": "Look at the whole life of the plant. Kale and beans make flowers when they are old enough, even if you do not see any today. They are flowering plants.",
+  "M_PN_PETAL_SEPAL": "Petals are the coloured parts. The green parts at the bottom that covered the flower when it was a bud are the sepals.",
+  "M_PN_STAMEN_PISTIL": "The stamens are the thin stalks that carry the pollen on top. The pistil is the part in the middle that has the ovary at its base.",
+  "M_PN_STIGMA_ANTHER": "The anther is the top of the stamen and holds the pollen. The stigma is the sticky top of the pistil, where pollen lands.",
+  "M_PF_PETAL_SEPAL_JOBS": "Sepals are the tough green parts that wrap the bud. Petals are bright to attract insects and birds.",
+  "M_PF_POLLEN_IS_SEED": "Pollen is a fine dust made on the anther. Seeds grow later inside the ovary. Pollen is not a seed.",
+  "M_PF_OVARY_MAKES_POLLEN": "The ovary is at the base of the pistil and holds the ovules that become seeds. The anther makes pollen.",
+  "M_FS_FRUIT_NOT_FROM_FLOWER": "Look at what grows where the flower was. The petals fall off and the ovary at the base swells to become the fruit.",
+  "M_FS_POLLINATION_DISPERSAL": "Pollination is carrying pollen from an anther to a stigma. Carrying seeds away to new places is another job, called seed dispersal.",
+  "M_FS_BEES_NOT_NEEDED": "Many flowers, such as pumpkin and passion fruit, need pollen to be carried to them. With no bees, fewer flowers are pollinated and fewer fruits grow.",
+  "M_IM_ONLY_DECORATION": "Flowers are much more than decoration. They make the fruits and seeds we eat, they feed bees, and they bring in money for farmers.",
+  "M_IM_INSECTS_HARM": "Bees carry pollen from flower to flower, so the plant can make seeds. They help, and they also give us honey.",
+  "M_IM_FOOD_NOT_FROM_FLOWERS": "Fruits and grains grow from flowers. Mangoes, beans, tomatoes and maize all started as flowers.",
+  "M_VC_SIZE_DECIDES": "Size does not matter. A mouse is small but it has a backbone, so it is a vertebrate.",
+  "M_VC_NEEDS_LEGS": "Legs are not needed. A snake has a long backbone, so it is a vertebrate.",
+  "M_VC_SHELL_IS_BACKBONE": "A crab has a hard shell on the outside, but no backbone inside. It is an invertebrate.",
+  "M_VG_BAT_BIRD": "Flying does not make a bird. A bat has fur and feeds its young on milk, so it is a mammal.",
+  "M_VG_WATER_IS_FISH": "Living in water does not make a fish. A dolphin breathes air and feeds its young on milk, so it is a mammal.",
+  "M_VG_REPTILE_AMPHIBIAN": "A chameleon has dry scales and lays its eggs on land. That makes it a reptile.",
+  "M_VG_NOFLY_NOT_BIRD": "An ostrich cannot fly, but it has feathers, wings and a beak, and it lays eggs. It is a bird.",
+  "M_VG_EGGS_ARE_BIRDS": "Birds lay eggs, but so do reptiles, fish and amphibians. A crocodile has dry scales, so it is a reptile.",
+  "M_VF_SCALES_FISH_ONLY": "Fish have wet scales and live in water. Reptiles such as snakes and crocodiles have dry scales and lay their eggs on land.",
+  "M_VF_WINGS_MEAN_BIRD": "Bats and insects have wings, but only birds have feathers. Feathers are found in birds and no other group.",
+  "M_VF_AMPHIBIAN_WATER_ONLY": "Amphibians live part of their life in water and part on land. Tadpoles live in water; adult frogs can live on land.",
+  "M_BP_TRACHEA_FOOD": "There are two pipes in the neck. The windpipe, or trachea, carries air to the lungs. The food pipe carries food to the stomach.",
+  "M_BP_DIAPHRAGM_PLACE": "The diaphragm is a sheet of muscle under the lungs. It is the part that moves when you breathe.",
+  "M_BP_LUNGS_LOCATION": "There are two lungs, high in the chest and protected by the ribs. The stomach is lower, in the belly.",
+  "M_BF_AIR_TO_STOMACH": "Air goes to the lungs, not to the stomach. The stomach is for food. Your belly only moves because the diaphragm moves.",
+  "M_BF_LUNGS_PUSH_SELF": "The lungs have no muscles. The diaphragm and the muscles between the ribs move, and that makes the lungs fill and empty.",
+  "M_BF_NO_OXYGEN_OUT": "Breathed-out air has less oxygen than the air we breathe in, but it still has some. It also has more carbon dioxide.",
+  "M_BF_NOSE_ONLY_SMELL": "The nose also cleans and warms the air. The hairs and sticky mucus trap dust and germs before the air reaches the lungs.",
+  "M_BI_RIBS_IN": "When you breathe in, the ribs move up and out and the diaphragm moves down. The chest gets bigger and air comes in.",
+  "M_BI_AIR_PUSHES_CHEST": "The muscles move first. The chest gets bigger, and then air flows in to fill the space. The air does not push the chest out.",
+  "M_BS_ASTHMA_CATCHING": "Asthma is not an infection. A child with asthma cannot pass it on. Dust, smoke or cold air can start an asthma attack.",
+  "M_BS_ALLERGY_IS_INFECTION": "Sneezing that starts with dust or pollen and stops without it is an allergy, not a cold. An allergy cannot be caught from another person.",
+  "M_BS_ALL_SAME": "Colds and COVID-19 are caused by viruses and spread between people. Asthma and allergy do not spread.",
+  "M_BV_COLD_WEATHER": "A cold is caused by a virus that spreads from person to person. Cold weather does not cause it.",
+  "M_BV_ANTIBIOTICS": "Antibiotics do not kill viruses, and a cold is caused by a virus. Rest and water help. Go to a clinic if the cough is bad or does not go away.",
+  "M_BV_HANDS_NO_MATTER": "Hands pick up virus from surfaces and then touch the nose, eyes and mouth. Washing them helps to stop it.",
+  "M_BV_SMOKE_HARMLESS": "Smoke irritates the nose and lungs. It can bring on coughs and asthma. A chimney or an open door lets it out.",
+  "M_MM_CANNOT_BE_UNMIXED": "In a mixture each substance stays the same and can be separated again. Salty water dries and leaves the salt behind.",
+  "M_MM_NATURAL_NOT_MIXTURE": "Mixtures can be natural. Air is a mixture of gases, and soil holds sand, clay and bits of plants.",
+  "M_MM_EQUAL_PARTS": "The parts of a mixture can be in any amounts. One spoon of sand in a bucket of water is still a mixture.",
+  "M_MH_DISSOLVED_GONE": "You cannot see the salt, but it is still there. Salty water is a mixture, and it looks the same all through, so it is homogeneous.",
+  "M_MH_CLEAR_IS_PURE": "Clear does not mean pure. Sweet or salty water is clear, but it holds sugar or salt too. It is a mixture.",
+  "M_MH_STIRRED_IS_HOMO": "Stirred muddy water looks even for a short time, but the soil settles at the bottom. Different parts can be seen, so it is heterogeneous.",
+  "M_MT_LOOKS_LIQUID": "Look at the parts before they were mixed. Salt is a solid and water is a liquid, so this is a solid-liquid mixture.",
+  "M_MT_THICK_IS_SOLID": "Oil is thick but it flows and takes the shape of its container, so it is a liquid. Oil and water make a liquid-liquid mixture.",
+  "M_MS_FILTER_FOR_ALL": "Filtering is for solids mixed in a liquid. Stones in rice are both solids, so you pick them out or use a sieve.",
+  "M_MS_MAGNET_ANY_METAL": "A magnet picks up iron and steel, not every metal. Aluminium and copper are not picked up.",
+  "M_MS_FUNNEL_SOLIDS": "A separating funnel is for two liquids that do not mix, such as oil and water. The lower liquid is let out through the tap.",
+  "M_MP_FILTER_REMOVES_DISSOLVED": "Dissolved salt is in tiny pieces that pass through the paper with the water. Filtering only keeps back bits too big to pass through, such as soil.",
+  "M_MP_WINNOW_REVERSED": "The wind blows away the lighter chaff. The heavier grain falls straight down into the basin.",
+  "M_MP_SIEVE_REVERSED": "The holes of a sieve let small pieces fall through. Pieces too big for the holes stay on top.",
+  "M_MU_ONLY_LAB": "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain.",
+  "M_MU_FILTER_IS_SAFE": "Filtering takes out the bits you can see, but germs and dissolved things are still there. The water must also be boiled or treated.",
+  "M_WP_ONLY_VISIBLE": "Germs and many chemicals cannot be seen. Clear water can still be polluted.",
+  "M_WP_ONLY_FACTORIES": "Homes, shambas and schools pollute water too: soap, rubbish, dung, fertiliser and latrines near the water.",
+  "M_WP_HELPFUL_THINGS_SAFE": "Useful things pollute water when they get into it in the wrong place. Fertiliser and soap washed into a river harm the living things there.",
+  "M_WE_ONLY_PEOPLE": "Pollution harms plants and animals as well as people. Fish can die when the water is polluted.",
+  "M_WE_UPSTREAM_ONLY": "A river carries pollution with the water. People and animals far downstream can be harmed.",
+  "M_WE_BAD_TASTE_ONLY": "Germs have no taste or smell. Water can look and taste fine and still make you ill.",
+  "M_WR_RIVER_WASHES_AWAY": "A river does not make waste disappear. It carries it away to other places, where it still harms.",
+  "M_WR_LATRINE_NEAR_WELL": "Waste from a latrine can seep through the soil into wells and rivers. It must be dug far from them.",
+  "M_WR_WASH_IN_RIVER": "Soap and dirt harm fish and make the water unsafe for others. Wash at home and pour the used water on the ground.",
+  "M_WT_FILTER_MAKES_SAFE": "Filtering removes bits you can see. It does not kill germs. The water must be boiled or treated as well.",
+  "M_WT_BOIL_REMOVES_ALL": "Boiling kills germs. It does not take out chemicals, soap or oil.",
+  "M_WT_SOLAR_MUDDY": "Sunlight must reach the germs. Muddy water blocks the light, so it must be settled and filtered first.",
+  "M_WT_MORE_CHLORINE": "Use exactly the amount on the packet. Too much chlorine gives a bad taste and can make you ill.",
+  "M_FA_HEAVY_SINKS": "Weight alone does not decide. A heavy log floats and a small stone sinks. What matters is how heavy the object is for its size.",
+  "M_FA_MATERIAL_ALWAYS": "The material alone does not decide. A metal ship floats because of its shape, and a piece of ebony wood sinks. Test each object.",
+  "M_FA_DEEP_WATER": "The amount of water does not change the result. A stone that sinks in a bucket sinks in a lake.",
+  "M_FF_SHAPE_NO_EFFECT": "The same clay can float or sink depending on its shape. A bowl pushes aside more water, so it can float.",
+  "M_FF_WEIGHT_ONLY": "For objects of the same size, the heavier one is more likely to sink. Weight and size must be thought about together.",
+  "M_FF_SIZE_ONLY": "Size alone does not decide. Big and small pieces of the same wood both float, because the wood is light for its size.",
+  "M_FF_LOAD_NO_EFFECT": "Each added load makes the boat float lower. With too much load water comes over the side and it sinks.",
+  "M_FU_STEEL_LIGHT": "Steel is heavier than water. A ship floats because it is shaped like a big hollow bowl that pushes aside a lot of water.",
+  "M_FU_FLOAT_NO_WEIGHT": "A floating object still has weight. It floats because the water pushes it up.",
+  "M_SS_NO_VIBRATION": "Every sound is made by something vibrating. The drum skin moves quickly to and fro, and the rice on it jumps.",
+  "M_SS_AIR_SILENT": "In a flute or whistle the air inside the pipe vibrates. The vibrating air makes the sound.",
+  "M_SS_HIT_ONLY": "Sound can come from plucking, blowing, rubbing or banging. What matters is that something vibrates.",
+  "M_ST_ONLY_AIR": "Sound can travel through solids, liquids and gases. It can even go through wood and water.",
+  "M_ST_IN_SPACE": "Sound needs something to travel through, such as air, water or a solid. Space is empty, so sound cannot travel there.",
+  "M_ST_FASTER_IN_AIR": "Sound travels fastest through solids such as steel, slower through water and slowest through air.",
+  "M_ST_LOUD_FASTER": "Loudness does not change speed. The sound from a loud drum and a quiet drum take the same time to arrive.",
+  "M_SL_ONLY_EARS": "Very loud sound can damage hearing for good. It can also cause headaches, stress and poor sleep.",
+  "M_SL_GETS_USED": "Feeling used to a noise does not stop the damage. Loud noise can still harm hearing, so ear protection is needed.",
+  "M_SL_MUSIC_SAFE": "It is the loudness, not the kind of sound, that harms. Very loud music can damage hearing as well.",
+  "M_HM_HEAT_RISES": "Hot air rises, but heat is not limited to going up. In a solid, heat spreads along it from the hot end to the colder parts.",
+  "M_HM_COLD_TRAVELS": "There is no flow of cold. Heat always moves from a warmer thing to a colder thing, so the hand loses heat to the drink.",
+  "M_HM_SUN_NEEDS_AIR": "Radiation is heat that travels without anything to carry it. That is how the Sun's heat crosses empty space.",
+  "M_HM_CONVECTION_SOLID": "Convection happens only in liquids and gases that can flow. Heat moves along a solid by conduction.",
+  "M_HC_METAL_COLDER": "Both are at the temperature of the room. Metal feels colder because it takes heat away from your hand faster.",
+  "M_HC_WOOL_MAKES_HEAT": "A blanket is a poor conductor. It keeps your own heat in, but it makes no heat. A blanket around a thermometer does not make it warmer.",
+  "M_HC_CONDUCTOR_KEEPS_HEAT": "A good conductor carries heat quickly, so a metal handle gets hot too. A poor conductor such as wood keeps the heat from your hand.",
+  "M_HU_COLOUR_NO_EFFECT": "Dark surfaces take in more of the sun's radiation and get hotter. Light surfaces reflect more and stay cooler.",
+  "M_HU_VENT_LOW": "Hot air is lighter and rises, so smoke and hot air can leave through a high vent. This is convection.",
+  "M_HU_COOKING_ONLY": "Heat moves everywhere: when we cook, dry clothes in the sun and keep tea hot in a flask.",
+  "M_HS_WET_CLOTH": "A wet cloth conducts heat to your hand and makes steam, which burns. Use a thick dry cloth.",
+  "M_HS_OFF_FIRE_COOL": "Metal can stay very hot for a long time even when there is no flame or steam. Do not touch it.",
+  "M_HS_METAL_HANDLE_OK": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle."
+};
+
+// src/ai-tutor/content/families/sci_signed.js
+var SIGNED2 = [];
+
+// src/ai-tutor/content/families/sci_lib.js
+var shuffle3 = (a) => {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+};
+var tbl2 = (head, rows) => ({ type: "table", data: { head, rows: rows.map((cells) => ({ cells })) } });
+var feedback = (code, own, why) => {
+  if (own) return own;
+  const f = MIS_FEEDBACK[code];
+  if (!f) throw new Error(`science family: no misconception ${code}`);
+  return why ? `${why} ${f}` : f;
+};
+var wrongs3 = (w) => w.length > 3 ? shuffle3(w).slice(0, 3) : w;
+var hintsOf = (opt, c) => [opt.h?.[0], opt.h?.[1]].filter(Boolean);
+var choose = (cases, opt = {}) => () => {
+  const [q, r, w, why, extra = {}] = pick(cases);
+  const wrong = wrongs3(w).map(([text, mis, own]) => ({ text: String(text), right: false, why: feedback(mis, own, why), mis }));
+  const texts = [String(r), ...wrong.map((x) => x.text)];
+  if (new Set(texts).size !== texts.length) return null;
+  const options = shuffle3([{ text: String(r), right: true }, ...wrong]);
+  return {
+    question: q,
+    options,
+    instruction: extra.i || opt.instruction || "Choose the best answer.",
+    fixedOrder: !!extra.fixed,
+    hints: hintsOf(opt),
+    steps: [opt.s1 || "Read the question and think about what it is asking.", why],
+    ...extra.t ? { model: tbl2(extra.t.head, extra.t.rows) } : {}
+  };
+};
+var typed = (cases, opt = {}) => () => {
+  const [q, a, ok = [], w, why, extra = {}] = pick(cases);
+  const wrong = wrongs3(w).map(([text, mis, own]) => [String(text), feedback(mis, own, why), mis]);
+  if ((/* @__PURE__ */ new Set([a, ...wrong.map((x) => x[0])])).size !== wrong.length + 1) return null;
+  const the = String(a).replace(/^(the|a|an) /i, "");
+  return {
+    question: q,
+    answer: a,
+    accepts: [.../* @__PURE__ */ new Set([the, `the ${the}`, ...ok])],
+    wrong,
+    instruction: extra.i || opt.instruction || "Type your answer.",
+    hints: hintsOf(opt),
+    steps: [opt.s1 || "Read the question and think about what it is asking.", why],
+    ...extra.t ? { model: tbl2(extra.t.head, extra.t.rows) } : {}
+  };
+};
+var spot3 = (cases, opt = {}) => () => {
+  const [q, steps2, fix, mis] = pick(cases);
+  feedback(mis);
+  return { question: q, working: steps2.map(([text, ok]) => ({ text, ok })), fix, mis, hints: hintsOf(opt), steps: [opt.s1 || "Check each step against what you know."], topicDone: true };
+};
+var sfam = (d) => {
+  const { cs, gen, id, form, rung: rung2, oc, ...rest } = d;
+  const code = `SCIE.G5.${cs}`;
+  const ck = SKILLS_SCI_G5[code];
+  if (!ck) throw new Error(`${id}: no science skill ${code}`);
+  const outcome = oc ? ck.outcomes.find((o) => o.endsWith(`.${oc}`)) : ck.outcome;
+  if (!outcome || !OUTCOMES_SCI_G5[outcome]) throw new Error(`${id}: outcome ${oc} not on ${cs}`);
+  const draw = () => gen();
+  return family({ reviewed: SIGNED2.includes(id), subject: "science", ...rest, id, form, rung: rung2, skill: code, cskill: code, outcome, draw, make: (x) => x, check: () => true });
+};
+
+// src/ai-tutor/content/families/sci_g5_living.js
+var P = "LIVING.CLASSIFICATION_OF_PLANTS.";
+var V = "LIVING.VERTEBRATES.";
+var B2 = "LIVING.THE_HUMAN_BREATHING_SYST.";
+var FAMILIES14 = [
+  // ---------------------------------------------------------------- FLOWERING_OR_NOT
+  sfam({
+    id: "sci5.plants.fl.which",
+    cs: `${P}FLOWERING_OR_NOT`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which plant from the shamba is a flowering plant?", "Maize", [["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Moss", "M_FL_ALL_PLANTS_FLOWER"], ["Cypress tree", "M_FL_ALL_TREES_FLOWER"]], "Maize makes flowers (the tassel and the silk) and then grains, so it is a flowering plant."],
+      ["Which tree or plant below is a flowering plant?", "Mango tree", [["Pine tree", "M_FL_ALL_TREES_FLOWER"], ["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Moss", "M_FL_ALL_PLANTS_FLOWER"]], "A mango tree makes flowers and then fruits with a seed inside, so it is a flowering plant."],
+      ["One of these plants makes flowers, pods and seeds. Which one is it?", "Beans", [["Cypress tree", "M_FL_ALL_TREES_FLOWER"], ["Fern", "M_FL_ALL_PLANTS_FLOWER"], ["Pine tree", "M_FL_ALL_TREES_FLOWER"]], "Bean plants make flowers, then pods with seeds, so they are flowering plants."],
+      ["Which of these plants never makes flowers?", "Fern", [["Maize", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Grass", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Kale", "M_FL_NOT_FLOWERING_NOW"]], "A fern makes spores, not flowers, so it is a non-flowering plant."],
+      ["Which of these trees is a non-flowering plant?", "Pine tree", [["Mango tree", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Acacia tree", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Jacaranda tree", "M_FL_NOT_FLOWERING_NOW"]], "A pine makes cones, not flowers, so it is a non-flowering plant."],
+      ["Which green plant growing on a damp rock or wall is a non-flowering plant?", "Moss", [["Sunflower", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Banana plant", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Tomato plant", "M_FL_NOT_FLOWERING_NOW"]], "Moss never makes flowers. It is a non-flowering plant."]
+    ], { h: ["Think about which plants make flowers and then seeds in fruits, pods or grains.", "Ferns, mosses, pines and cypress trees never make flowers."], s1: "A flowering plant makes flowers, then fruits or grains with seeds." })
+  }),
+  sfam({
+    id: "sci5.plants.fl.list",
+    cs: `${P}FLOWERING_OR_NOT`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["Amani plans a school garden. He wants only flowering plants. Which list should he use?", "Beans, tomato, sukuma wiki", [["Beans, tomato, fern", "M_FL_ALL_PLANTS_FLOWER"], ["Beans, cypress, sukuma wiki", "M_FL_ALL_TREES_FLOWER"], ["Moss, tomato, sukuma wiki", "M_FL_ALL_PLANTS_FLOWER"]], "Beans, tomato and sukuma wiki all make flowers when they grow. Ferns, mosses and cypress trees do not."],
+      ["A teacher asks the class to bring flowering plants from home. Whose list is right?", "Mango, maize, bean plant", [["Pine, maize, bean plant", "M_FL_ALL_TREES_FLOWER"], ["Mango, fern, bean plant", "M_FL_ALL_PLANTS_FLOWER"], ["Mango, maize, moss", "M_FL_ALL_PLANTS_FLOWER"]], "Mango, maize and beans all make flowers and seeds. Pine, ferns and mosses do not."],
+      ["Njeri looks for non-flowering plants near a stream. Which list is correct?", "Fern, moss, pine", [["Fern, moss, mango", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Fern, grass, pine", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Maize, moss, pine", "M_FL_SMALL_FLOWER_NOT_FLOWER"]], "Ferns, mosses and pines have no flowers. Mango, grass and maize all make small flowers."],
+      ["Which list has only non-flowering plants, from a walk on a Kenyan hillside?", "Cypress, fern, moss", [["Cypress, fern, kale", "M_FL_NOT_FLOWERING_NOW"], ["Cypress, grass, moss", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Bean plant, fern, moss", "M_FL_NOT_FLOWERING_NOW"]], "Cypress, ferns and mosses never make flowers. Kale, grass and beans do, even when you do not see them."],
+      ["The farmer picks flowering plants for his shamba. Which list is right?", "Maize, banana, sunflower", [["Maize, banana, pine", "M_FL_ALL_TREES_FLOWER"], ["Maize, fern, sunflower", "M_FL_ALL_PLANTS_FLOWER"], ["Moss, banana, sunflower", "M_FL_ALL_PLANTS_FLOWER"]], "Maize, banana and sunflower all make flowers. Pine, fern and moss do not."]
+    ], { h: ["Cross out any plant in a list that never makes flowers.", "Ferns, mosses, pines and cypress make spores or cones, not flowers."], s1: "Check every plant in a list, not only the first one." })
+  }),
+  sfam({
+    id: "sci5.plants.fl.table",
+    cs: `${P}FLOWERING_OR_NOT`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "Look at what a class saw on a school walk. Which plant is a flowering plant?",
+        "Plant C",
+        [["Plant A", "M_FL_ALL_PLANTS_FLOWER"], ["Plant B", "M_FL_ALL_TREES_FLOWER"], ["Plant D", "M_FL_ALL_PLANTS_FLOWER"]],
+        "Plant C makes seeds in pods. Seeds in pods, fruits or grains mean a flowering plant. Plants A, B and D have no seeds in fruits.",
+        { t: { head: ["Plant", "What the class saw"], rows: [["Plant A", "Green leaves, tiny spore cases under them"], ["Plant B", "Tall tree with woody cones"], ["Plant C", "Green plant with seeds in pods"], ["Plant D", "Flat green mat on a wet rock"]] } }
+      ],
+      [
+        "A learner records what she saw. Which plant is a non-flowering plant?",
+        "Plant B",
+        [["Plant A", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Plant C", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Plant D", "M_FL_NOT_FLOWERING_NOW"]],
+        "Plant B makes cones and no flowers or fruits. The others make seeds in grains or fruits, so they flower.",
+        { t: { head: ["Plant", "What she saw"], rows: [["Plant A", "Grass with small green flower heads"], ["Plant B", "Tree with cones, no fruits"], ["Plant C", "Maize with a tassel and silk"], ["Plant D", "Young bean plant, no flowers yet"]] } }
+      ],
+      [
+        "The table shows plants in Wanjiru's shamba. Which plant is a flowering plant even though it has no flower now?",
+        "Plant D",
+        [["Plant A", "M_FL_NOT_FLOWERING_NOW"], ["Plant B", "M_FL_ALL_PLANTS_FLOWER"], ["Plant C", "M_FL_NOT_FLOWERING_NOW"]],
+        "Plant D is a young bean plant. It will flower later. The fern and the moss never will.",
+        { t: { head: ["Plant", "What Wanjiru saw"], rows: [["Plant A", "Fern with spore cases"], ["Plant B", "Moss on a stone"], ["Plant C", "Cypress with cones"], ["Plant D", "Young bean plant, leaves only"]] } }
+      ],
+      [
+        "Read the table of plants by the roadside. Which one has flowers although they are small and green?",
+        "Plant A",
+        [["Plant B", "M_FL_ALL_PLANTS_FLOWER"], ["Plant C", "M_FL_ALL_TREES_FLOWER"], ["Plant D", "M_FL_ALL_PLANTS_FLOWER"]],
+        "The grass in Plant A has small flowers that make seeds. Ferns, pines and mosses have no flowers.",
+        { t: { head: ["Plant", "What was seen"], rows: [["Plant A", "Grass with seed heads"], ["Plant B", "Fern with brown dots"], ["Plant C", "Pine tree with cones"], ["Plant D", "Moss on a wall"]] } }
+      ],
+      [
+        "The table lists plants seen near a dam. Which plant makes no flowers at all?",
+        "Plant C",
+        [["Plant A", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Plant B", "M_FL_SMALL_FLOWER_NOT_FLOWER"], ["Plant D", "M_FL_NOT_FLOWERING_NOW"]],
+        "Plant C is a fern, which makes spores. The maize, the mango tree and the kale all make flowers.",
+        { t: { head: ["Plant", "What was seen"], rows: [["Plant A", "Maize, tall with tassels"], ["Plant B", "Mango tree with small flowers"], ["Plant C", "Fern with spores"], ["Plant D", "Kale, cut last week"]] } }
+      ]
+    ], { h: ["Look at each row. Does the plant make flowers, fruits, pods or grains?", "Plants with cones or spores are non-flowering."], s1: "Read each row of the table." })
+  }),
+  sfam({
+    id: "sci5.plants.fl.nowflower-spot",
+    cs: `${P}FLOWERING_OR_NOT`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Amina says a kale plant in her shamba is a non-flowering plant. Which step has the mistake?", [["Step 1: Amina looks at the kale this week and sees no flowers.", true], ["Step 2: She decides that a plant with no flowers this week never makes flowers.", false], ["Step 3: She writes that kale is a non-flowering plant.", true]], "A flowering plant may not have flowers this week. Kale makes flowers when it is left to grow, so it is a flowering plant.", "M_FL_NOT_FLOWERING_NOW"],
+      ["Baraka says that maize is non-flowering. Which step has the mistake?", [["Step 1: Baraka looks for big, bright petals on a maize plant.", true], ["Step 2: He finds none and decides that maize has no flowers.", false], ["Step 3: He writes that maize is non-flowering.", true]], "Maize has small flowers: the tassel and the silk. Flowers do not have to be bright, so maize is a flowering plant.", "M_FL_SMALL_FLOWER_NOT_FLOWER"],
+      ["Chebet says every tree is a flowering plant. Which step has the mistake?", [["Step 1: Chebet sees a cypress tree and knows it has seeds.", true], ["Step 2: She decides all trees with seeds make flowers.", false], ["Step 3: She writes that cypress is a flowering plant.", true]], "A cypress makes its seeds in cones, not in flowers and fruits. So it is a non-flowering plant.", "M_FL_ALL_TREES_FLOWER"],
+      ["Otieno says that ferns make hidden flowers. Which step has the mistake?", [["Step 1: Otieno sees spore cases on the underside of a fern leaf.", true], ["Step 2: He decides every green plant makes flowers.", false], ["Step 3: He writes that ferns are flowering plants.", true]], "Ferns make spores, never flowers. Not every green plant flowers.", "M_FL_ALL_PLANTS_FLOWER"]
+    ], { h: ["Which step says something that is not true?", "Think about what makes a plant a flowering plant."], s1: "A flowering plant makes flowers and seeds at some time in its life." })
+  }),
+  // ---------------------------------------------------------------- FLOWER_PART_NAMES
+  sfam({
+    id: "sci5.plants.pn.name",
+    cs: `${P}FLOWER_PART_NAMES`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which part of a flower is the small green part at the bottom that covered the bud?", "Sepal", [["Petal", "M_PN_PETAL_SEPAL"], ["Stamen", "M_PN_STAMEN_PISTIL"], ["Stigma", "M_PN_STIGMA_ANTHER"]], "The sepals are green and sit below the petals. They covered the flower when it was a bud."],
+      ["Which part of a flower is bright and coloured?", "Petal", [["Sepal", "M_PN_PETAL_SEPAL"], ["Anther", "M_PN_STIGMA_ANTHER"], ["Ovary", "M_PN_STAMEN_PISTIL"]], "Petals are the bright, coloured parts of a flower."],
+      ["Which part has a thin stalk with a small knob full of pollen on top?", "Stamen", [["Pistil", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"], ["Petal", "M_PN_PETAL_SEPAL"]], "The stamen has a thin stalk and an anther on top that holds the pollen."],
+      ["Which part stands in the middle of the flower and has an ovary at its base?", "Pistil", [["Stamen", "M_PN_STAMEN_PISTIL"], ["Petal", "M_PN_PETAL_SEPAL"], ["Sepal", "M_PN_PETAL_SEPAL"]], "The pistil is in the middle of the flower. Its base is the ovary."],
+      ["Which part at the top of the pistil is sticky and catches pollen?", "Stigma", [["Anther", "M_PN_STIGMA_ANTHER"], ["Sepal", "M_PN_PETAL_SEPAL"], ["Stamen", "M_PN_STAMEN_PISTIL"]], "The stigma is sticky, so pollen that lands on it stays there."],
+      ["Which part at the top of the stamen holds the pollen?", "Anther", [["Stigma", "M_PN_STIGMA_ANTHER"], ["Ovary", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"]], "The anther sits on top of the stamen and holds the pollen."]
+    ], { h: ["Think about where the part is in the flower and what it looks like.", "Picture a hibiscus or a bean flower you have looked at closely."], s1: "Picture the flower and find the part by its place and look." })
+  }),
+  sfam({
+    id: "sci5.plants.pn.typed",
+    cs: `${P}FLOWER_PART_NAMES`,
+    form: "word",
+    rung: 2,
+    gen: typed([
+      ["In science class Juma takes a hibiscus flower apart on his desk. The bright, coloured parts on the outside are the petals. Underneath he finds small green parts that covered the bud. What are these green parts called?", "sepals", ["sepal"], [["petals", "M_PN_PETAL_SEPAL"], ["stamens", "M_PN_STAMEN_PISTIL"], ["stigmas", "M_PN_STIGMA_ANTHER"]], "The green parts below the petals are the sepals. They covered the bud."],
+      ["Wafula looks at a bean flower with a hand lens. He sees thin stalks with yellow dust on top. These are the stamens. He also sees a part in the middle that has an ovary at its base. What is this middle part called?", "pistil", ["carpel"], [["stamen", "M_PN_STAMEN_PISTIL"], ["petal", "M_PN_PETAL_SEPAL"], ["anther", "M_PN_STIGMA_ANTHER"]], "The pistil is in the middle. Its base is the ovary, which holds the ovules."],
+      ["A learner touches the very top of a stamen and gets yellow powder on her finger. The powder is pollen. What is the knob at the top of the stamen called?", "anther", ["the anther"], [["stigma", "M_PN_STIGMA_ANTHER"], ["sepal", "M_PN_PETAL_SEPAL"], ["ovary", "M_PN_STAMEN_PISTIL"]], "The part on top of the stamen that holds the pollen is the anther."],
+      ["Nekesa watches a bee visit a pumpkin flower. Yellow powder from the bee's legs sticks to a gluey knob at the top of the pistil. What is this gluey knob called?", "stigma", ["the stigma"], [["anther", "M_PN_STIGMA_ANTHER"], ["petal", "M_PN_PETAL_SEPAL"], ["stamen", "M_PN_STAMEN_PISTIL"]], "The sticky top of the pistil that catches pollen is the stigma."],
+      ["Amani pulls off the outside parts of a flower to see what is under them. They are soft, bright and coloured, and they fall off first. What are they called?", "petals", ["petal"], [["sepals", "M_PN_PETAL_SEPAL"], ["stamens", "M_PN_STAMEN_PISTIL"], ["anthers", "M_PN_STIGMA_ANTHER"]], "The bright, coloured parts of a flower are the petals."]
+    ], { h: ["Think about the part's place in the flower and its colour or shape.", "The words to choose from are petal, sepal, stamen, pistil, anther and stigma."], s1: "Picture the flower and find the part by its place." })
+  }),
+  sfam({
+    id: "sci5.plants.pn.table",
+    cs: `${P}FLOWER_PART_NAMES`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "A learner describes the parts of a flower in a table. Which part is described in row 2?",
+        "Stamen",
+        [["Pistil", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"], ["Stigma", "M_PN_STIGMA_ANTHER"]],
+        "A thin stalk with an anther on top is a stamen.",
+        { t: { head: ["Row", "What the part looks like"], rows: [["1", "Bright and coloured, on the outside"], ["2", "Thin stalk with a knob of pollen on top"], ["3", "Green, below the petals"]] } }
+      ],
+      [
+        "The table describes three parts of a flower. Which part is described in row 3?",
+        "Sepal",
+        [["Petal", "M_PN_PETAL_SEPAL"], ["Anther", "M_PN_STIGMA_ANTHER"], ["Pistil", "M_PN_STAMEN_PISTIL"]],
+        "The green part below the petals that covered the bud is the sepal.",
+        { t: { head: ["Row", "What the part looks like"], rows: [["1", "Thin stalk with pollen on top"], ["2", "Bright and coloured"], ["3", "Green, covered the bud"]] } }
+      ],
+      [
+        "In this table, which part is described in row 1?",
+        "Pistil",
+        [["Stamen", "M_PN_STAMEN_PISTIL"], ["Petal", "M_PN_PETAL_SEPAL"], ["Anther", "M_PN_STIGMA_ANTHER"]],
+        "The part in the middle of the flower with an ovary at its base is the pistil.",
+        { t: { head: ["Row", "What the part looks like"], rows: [["1", "In the middle, with an ovary at its base"], ["2", "Green, below the petals"], ["3", "Bright and coloured"]] } }
+      ],
+      [
+        "Look at the table. Which part is described in row 2?",
+        "Stigma",
+        [["Anther", "M_PN_STIGMA_ANTHER"], ["Stamen", "M_PN_STAMEN_PISTIL"], ["Sepal", "M_PN_PETAL_SEPAL"]],
+        "The sticky top of the pistil that catches pollen is the stigma.",
+        { t: { head: ["Row", "What the part looks like"], rows: [["1", "Bright and coloured"], ["2", "Sticky top of the pistil"], ["3", "Green, below the petals"]] } }
+      ],
+      [
+        "This table describes parts of a bean flower. Which part is described in row 3?",
+        "Anther",
+        [["Stigma", "M_PN_STIGMA_ANTHER"], ["Ovary", "M_PN_STAMEN_PISTIL"], ["Petal", "M_PN_PETAL_SEPAL"]],
+        "The knob of pollen on top of the stamen is the anther.",
+        { t: { head: ["Row", "What the part looks like"], rows: [["1", "Green, below the petals"], ["2", "Bright and coloured"], ["3", "Knob of pollen on top of a stalk"]] } }
+      ]
+    ], { h: ["Read the description in the row and think where that part is in a flower.", "Petals are coloured; sepals are green; stamens have pollen; the pistil is in the middle."], s1: "Read the description in the row." })
+  }),
+  // ---------------------------------------------------------------- FLOWER_PART_FUNCTIONS
+  sfam({
+    id: "sci5.plants.pf.job",
+    cs: `${P}FLOWER_PART_FUNCTIONS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which part of a flower attracts bees and other insects?", "Petals", [["Sepals", "M_PF_PETAL_SEPAL_JOBS"], ["Ovary", "M_PF_OVARY_MAKES_POLLEN"], ["Stigma", "M_PF_POLLEN_IS_SEED"]], "Bright, scented petals attract insects, which carry pollen from flower to flower."],
+      ["Which part of a flower protects the bud before it opens?", "Sepals", [["Petals", "M_PF_PETAL_SEPAL_JOBS"], ["Anthers", "M_PF_POLLEN_IS_SEED"], ["Ovary", "M_PF_OVARY_MAKES_POLLEN"]], "The tough green sepals wrap the young bud and protect it."],
+      ["Which part of a flower makes the pollen?", "Anther", [["Ovary", "M_PF_OVARY_MAKES_POLLEN"], ["Petal", "M_PF_PETAL_SEPAL_JOBS"], ["Stigma", "M_PF_POLLEN_IS_SEED"]], "Pollen is made in the anther, at the top of the stamen."],
+      ["Which part of a flower catches pollen?", "Stigma", [["Anther", "M_PF_POLLEN_IS_SEED"], ["Sepal", "M_PF_PETAL_SEPAL_JOBS"], ["Petal", "M_PF_PETAL_SEPAL_JOBS"]], "The stigma is sticky, so pollen that lands on it stays."],
+      ["Which part of a flower holds the ovules that become seeds?", "Ovary", [["Anther", "M_PF_OVARY_MAKES_POLLEN"], ["Petal", "M_PF_PETAL_SEPAL_JOBS"], ["Sepal", "M_PF_PETAL_SEPAL_JOBS"]], "The ovary holds the ovules. After pollen reaches them, they grow into seeds."]
+    ], { h: ["Think about what each part of a flower does for the plant.", "Pollen is made in one part and caught by another."], s1: "Match the job to the part of the flower that does it." })
+  }),
+  sfam({
+    id: "sci5.plants.pf.typed",
+    cs: `${P}FLOWER_PART_FUNCTIONS`,
+    form: "word",
+    rung: 2,
+    gen: typed([
+      ["Wanjiru sees a bee land on a bright pumpkin flower in her mother's garden. The bee had flown past the green leaves without stopping. Which part of the flower made the bee come?", "petals", ["petal", "the petals"], [["sepals", "M_PF_PETAL_SEPAL_JOBS"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["stigma", "M_PF_POLLEN_IS_SEED"]], "Bright petals attract bees and other insects."],
+      ["Yellow dust rubs off on a bee's legs as it climbs into a flower. Which part of the flower made this dust?", "anther", ["the anther", "anthers", "stamen"], [["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["petal", "M_PF_PETAL_SEPAL_JOBS"], ["sepal", "M_PF_PETAL_SEPAL_JOBS"]], "The dust is pollen, and it is made in the anther."],
+      ["A bean flower is still a tight green bud on the plant. Which parts wrap it round to keep the young flower safe?", "sepals", ["sepal", "the sepals"], [["petals", "M_PF_PETAL_SEPAL_JOBS"], ["anthers", "M_PF_POLLEN_IS_SEED"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"]], "Green sepals wrap the bud and protect it."],
+      ["Weeks after a mango flower has been pollinated, a young mango hangs on the branch. Which part of the flower grew into the fruit?", "ovary", ["the ovary"], [["petal", "M_PF_PETAL_SEPAL_JOBS"], ["anther", "M_PF_OVARY_MAKES_POLLEN"], ["sepal", "M_PF_PETAL_SEPAL_JOBS"]], "The ovary holds the ovules. It grows into the fruit and the ovules into seeds."],
+      ["A bee arrives with pollen on its legs and brushes against the top of a pistil. The pollen stays there. Which part of the flower catches the pollen?", "stigma", ["the stigma"], [["anther", "M_PF_POLLEN_IS_SEED"], ["ovary", "M_PF_OVARY_MAKES_POLLEN"], ["petal", "M_PF_PETAL_SEPAL_JOBS"]], "Pollen sticks to the stigma. Then it can reach the ovules."]
+    ], { h: ["Think about the job the story describes.", "Petals, sepals, anthers, stigma and ovary all have one job each."], s1: "Find the part whose job matches the story." })
+  }),
+  sfam({
+    id: "sci5.plants.pf.removed",
+    cs: `${P}FLOWER_PART_FUNCTIONS`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["A child pulls all the petals off a pumpkin flower. What is most likely to happen?", "Fewer bees will visit it, so it may not be pollinated", [["Nothing changes, because petals have no job", "M_PF_PETAL_SEPAL_JOBS"], ["The flower cannot make any pollen", "M_PF_POLLEN_IS_SEED"], ["The ovary will stop growing seeds at once", "M_PF_OVARY_MAKES_POLLEN"]], "Petals attract insects. Without them fewer insects visit, so less pollen is carried to the stigma."],
+      ["A caterpillar eats the sepals of a young bean bud. What is the danger?", "The bud has lost its cover and may be damaged", [["The flower will make less pollen at once", "M_PF_POLLEN_IS_SEED"], ["The flower will lose its bright colour", "M_PF_PETAL_SEPAL_JOBS"], ["Bees will no longer find it", "M_PF_PETAL_SEPAL_JOBS"]], "Sepals wrap and protect the bud. Without them the young flower can be damaged."],
+      ["Someone cuts off all the anthers of a flower. What can the flower no longer make?", "Pollen", [["Petals", "M_PF_PETAL_SEPAL_JOBS"], ["Ovules", "M_PF_OVARY_MAKES_POLLEN"], ["Sepals", "M_PF_PETAL_SEPAL_JOBS"]], "Anthers make pollen. Without them the flower makes none."],
+      ["The stigma of a flower is covered with wax. What cannot happen?", "Pollen cannot stick to the stigma", [["The petals cannot open", "M_PF_PETAL_SEPAL_JOBS"], ["The anthers cannot make pollen", "M_PF_POLLEN_IS_SEED"], ["The ovary cannot hold ovules", "M_PF_OVARY_MAKES_POLLEN"]], "The stigma catches the pollen. With wax on it, pollen cannot stick."],
+      ["The ovary of a flower is eaten by an insect. What can the flower no longer do?", "Make seeds and a fruit", [["Make pollen", "M_PF_OVARY_MAKES_POLLEN"], ["Attract insects", "M_PF_PETAL_SEPAL_JOBS"], ["Protect the bud", "M_PF_PETAL_SEPAL_JOBS"]], "The ovary holds the ovules and grows into the fruit. Without it no seeds or fruit can form."]
+    ], { h: ["Think about what job the removed part was doing.", "Ask what the flower needs that part for."], s1: "Name the part and its job, then think what is lost." })
+  }),
+  // ---------------------------------------------------------------- FLOWER_TO_SEED
+  sfam({
+    id: "sci5.plants.fs.order",
+    cs: `${P}FLOWER_TO_SEED`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["Which list shows what happens in a pumpkin flower in the right order?", "Bee brings pollen, seeds start to grow, ovary swells into the fruit", [["Ovary swells into the fruit, bee brings pollen, then seeds grow", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Seeds blow away, bee brings pollen, then the fruit grows", "M_FS_POLLINATION_DISPERSAL"], ["Fruit grows from the root, bee brings pollen to the stem", "M_FS_FRUIT_NOT_FROM_FLOWER"]], "Pollen must reach the stigma first. Only then do the ovules grow into seeds and the ovary into the fruit."],
+      ["Wafula watches a tomato flower. Which list shows the right order of what happens?", "Pollen reaches the stigma, petals fall off, ovary swells into a tomato", [["Ovary swells into a tomato, then pollen reaches the stigma", "M_FS_BEES_NOT_NEEDED"], ["Tomato grows on the root, then the flower opens up", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Pollen blows away to a new field, then the tomato grows", "M_FS_POLLINATION_DISPERSAL"]], "The flower is pollinated first. The petals then fall and the ovary swells into the fruit."],
+      ["Which list shows the right order for a mango flower becoming a mango?", "Insects bring pollen, flower is pollinated, ovary grows into the mango", [["Mango grows from the roots, then insects bring pollen to it", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Mango grows with no pollen at all, then insects visit it", "M_FS_BEES_NOT_NEEDED"], ["Insects carry the seeds away, then the mango grows up", "M_FS_POLLINATION_DISPERSAL"]], "Insects bring pollen first. After pollination the ovary grows into the fruit."],
+      ["Which list shows the steps that make a bean pod, in order?", "Pollen lands on the stigma, ovules become seeds, ovary becomes the pod", [["Pod grows from the stem, then pollen lands on the stigma", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Seeds are carried away, then pollen lands on the stigma", "M_FS_POLLINATION_DISPERSAL"], ["Pod forms with no pollen, then the seeds appear in it", "M_FS_BEES_NOT_NEEDED"]], "A bean pod is the grown ovary. It forms after pollen has reached the stigma."],
+      ["Which list shows the correct order for a passion fruit flower?", "Bee brings pollen, seeds grow inside, ovary swells into a fruit", [["Fruit grows from the root, then a bee brings pollen to it", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Bee takes the seeds to a new place, then the flower opens", "M_FS_POLLINATION_DISPERSAL"], ["Fruit swells with no pollen at all, then seeds grow in it", "M_FS_BEES_NOT_NEEDED"]], "Pollination comes first, then the seeds, and the ovary grows into the fruit."]
+    ], { h: ["Think about what has to happen before seeds can start to grow.", "Pollen must reach the stigma before the ovary can grow into a fruit."], s1: "Start with the step that must happen first: pollen arriving." })
+  }),
+  sfam({
+    id: "sci5.plants.fs.effect",
+    cs: `${P}FLOWER_TO_SEED`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["A farmer sprays a pesticide that kills all the bees near his pumpkin flowers. What is likely to happen to the pumpkins?", "Fewer fruits will grow", [["They will still grow just as many fruits", "M_FS_BEES_NOT_NEEDED"], ["The fruits will grow from the roots instead", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["The bees will carry the seeds away instead", "M_FS_POLLINATION_DISPERSAL"]], "Pumpkin flowers need insects to carry pollen. With no bees fewer flowers are pollinated, so fewer fruits grow."],
+      ["A net bag covers a passion fruit flower so that no insects reach it. What happens to that flower?", "It is not pollinated, so it makes no fruit", [["It grows a fruit as usual", "M_FS_BEES_NOT_NEEDED"], ["It grows a fruit on a root", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["It carries its seeds away on its own", "M_FS_POLLINATION_DISPERSAL"]], "With the net, no pollen reaches the stigma. Without pollination, no fruit grows."],
+      ["After a flower on a mango tree is pollinated, what happens to its ovary?", "It grows into the fruit", [["It falls off with the petals", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["It is carried away by the wind", "M_FS_POLLINATION_DISPERSAL"], ["It stays the same size", "M_FS_BEES_NOT_NEEDED"]], "After pollination the ovary swells and grows into the fruit, with the seeds inside."],
+      ["A bee moves from one bean flower to another with yellow dust on its legs. What is the bee doing for the plant?", "Carrying pollen so seeds can grow", [["Carrying seeds to new fields", "M_FS_POLLINATION_DISPERSAL"], ["Making the fruit grow from the root", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["Doing nothing the plant needs", "M_FS_BEES_NOT_NEEDED"]], "The yellow dust is pollen. Carrying it to the stigma is pollination, which starts the seeds growing."],
+      ["Where does a tomato fruit grow from on the tomato plant?", "From the flower, after pollination", [["From the root, under the soil", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["From the leaves, in the sunshine", "M_FS_FRUIT_NOT_FROM_FLOWER"], ["From seeds carried in by bees", "M_FS_POLLINATION_DISPERSAL"]], "The tomato is the ovary of the flower, grown big after pollination."]
+    ], { h: ["Think about what has to reach the flower before a fruit can grow.", "Fruits grow from flowers, not from roots."], s1: "Ask what the flower needs before its ovary can become a fruit." })
+  }),
+  // ---------------------------------------------------------------- IMPORTANCE_OF_FLOWERS
+  sfam({
+    id: "sci5.plants.im.pick",
+    cs: `${P}IMPORTANCE_OF_FLOWERS`,
+    form: "word",
+    rung: 1,
+    gen: choose([
+      ["Wanjiru says flowers are only for decoration. What can you tell her?", "Flowers make the fruits and seeds that we eat and plant", [["She is right, flowers are only for looking at", "M_IM_ONLY_DECORATION"], ["Flowers are important only for their smell", "M_IM_ONLY_DECORATION"], ["Flowers are only for bees to harm the plant", "M_IM_INSECTS_HARM"]], "Flowers make fruits and seeds. They also feed bees and bring in money for farmers."],
+      ["Which of these is a true reason flowers are important to bees?", "Flowers give bees nectar and pollen to eat", [["Flowers have nothing a bee can use", "M_IM_INSECTS_HARM"], ["Bees only visit flowers to harm them", "M_IM_INSECTS_HARM"], ["Flowers are only there to look nice to bees", "M_IM_ONLY_DECORATION"]], "Bees collect nectar and pollen from flowers to feed on, and they make honey from nectar."],
+      ["Which food began as a flower?", "Mango", [["Cassava", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Sweet potato", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Carrot", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "A mango is the grown ovary of a mango flower. Cassava, sweet potato and carrot are roots."],
+      ["Many farmers near Naivasha grow flowers to sell. Which importance of flowers is this?", "Flowers bring people money and jobs", [["Flowers are only used for decoration at home", "M_IM_ONLY_DECORATION"], ["Flowers harm insects", "M_IM_INSECTS_HARM"], ["Flowers are not important to people", "M_IM_ONLY_DECORATION"]], "Cut flowers are sold at home and abroad. They give people jobs and income."],
+      ["Which food came from a flower?", "Beans", [["Onion bulbs", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Arrowroot", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["Cassava roots", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Beans are seeds from the pods that grow from bean flowers."]
+    ], { h: ["Think about what flowers do for the plant, for bees and for people.", "Many of the foods we eat are fruits or seeds."], s1: "Think of one thing that flowers give to plants, animals or people." })
+  }),
+  sfam({
+    id: "sci5.plants.im.effect",
+    cs: `${P}IMPORTANCE_OF_FLOWERS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["A village sprays a pesticide that kills all insects. What may happen to the flowers and fruits?", "Fewer flowers are pollinated, so fewer fruits grow", [["Nothing, since insects do not matter to flowers", "M_IM_INSECTS_HARM"], ["More fruits grow, because insects harm flowers", "M_IM_INSECTS_HARM"], ["The fruits grow from the roots instead", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Many flowers need insects to carry pollen. Without insects fewer flowers are pollinated, so fewer fruits grow."],
+      ["A school garden has no flowers at all for a year. What would the school lose?", "Fruits and seeds, and food for bees", [["Only some decoration", "M_IM_ONLY_DECORATION"], ["Nothing that matters", "M_IM_ONLY_DECORATION"], ["Only a few insects that harm plants", "M_IM_INSECTS_HARM"]], "Flowers become fruits and seeds, and they feed bees. A garden with no flowers makes no fruit and few seeds."],
+      ["Without flowers, which of these foods would be hard to get?", "Maize grain, beans and mangoes", [["Only the decoration at weddings", "M_IM_ONLY_DECORATION"], ["Cassava roots and sweet potato roots only", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["No foods at all", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Maize grains, beans and mangoes all come from flowers."],
+      ["Honey is made by bees. How do flowers help make honey?", "Flowers give bees the nectar to make it", [["They do not, bees make honey from leaves", "M_IM_FOOD_NOT_FROM_FLOWERS"], ["They only look nice to bees", "M_IM_ONLY_DECORATION"], ["They harm bees, so bees make honey faster", "M_IM_INSECTS_HARM"]], "Bees collect nectar from flowers and turn it into honey."],
+      ["A farmer keeps bees next to his bean field. What happens to the beans?", "The bees help the flowers make more pods", [["The bees harm the plants, so there are fewer pods", "M_IM_INSECTS_HARM"], ["Nothing changes, since bees and flowers are unrelated", "M_IM_INSECTS_HARM"], ["The bees make the pods grow from the roots", "M_IM_FOOD_NOT_FROM_FLOWERS"]], "Bees carry pollen between bean flowers, so more flowers are pollinated and make pods."]
+    ], { h: ["Think about what flowers give to plants, animals and people.", "Fruits, seeds and honey all depend on flowers."], s1: "Ask what the flowers do that would be lost." })
+  }),
+  // ---------------------------------------------------------------- VERTEBRATE_CHARACTERISTICS
+  sfam({
+    id: "sci5.vert.vc.which",
+    cs: `${V}VERTEBRATE_CHARACTERISTICS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which small animal below has a backbone?", "Mouse", [["Butterfly", "M_VC_SIZE_DECIDES"], ["Termite", "M_VC_SIZE_DECIDES"], ["Earthworm", "M_VC_SIZE_DECIDES"]], "A mouse is small but it has a backbone. Butterflies, termites and earthworms have none."],
+      ["Which of these animals is a vertebrate?", "Snake", [["Crab", "M_VC_SHELL_IS_BACKBONE"], ["Snail", "M_VC_SHELL_IS_BACKBONE"], ["Beetle", "M_VC_SHELL_IS_BACKBONE"]], "A snake has a long backbone. Crabs, snails and beetles have hard outsides but no backbone."],
+      ["Which of these animals is an invertebrate?", "Crab", [["Fish", "M_VC_NEEDS_LEGS"], ["Snake", "M_VC_NEEDS_LEGS"], ["Frog", "M_VC_SIZE_DECIDES"]], "A crab has no backbone. Fish, snakes and frogs all have backbones."],
+      ["Which animal below has no backbone at all?", "Earthworm", [["Chameleon", "M_VC_SIZE_DECIDES"], ["Tilapia", "M_VC_NEEDS_LEGS"], ["Hen", "M_VC_SIZE_DECIDES"]], "An earthworm has no backbone. A chameleon, tilapia and hen all have one."],
+      ["Which animal that lives in the lake is a vertebrate?", "Tilapia", [["Snail", "M_VC_SHELL_IS_BACKBONE"], ["Water beetle", "M_VC_SHELL_IS_BACKBONE"], ["Mosquito larva", "M_VC_SIZE_DECIDES"]], "Tilapia is a fish with a backbone, though it has no legs."]
+    ], { h: ["Vertebrates have a backbone inside the body.", "Size, legs and a hard outside do not tell you whether an animal has a backbone."], s1: "Ask: does the animal have a backbone?" })
+  }),
+  sfam({
+    id: "sci5.vert.vc.why",
+    cs: `${V}VERTEBRATE_CHARACTERISTICS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Wambui says a snake cannot be a vertebrate because it has no legs. What can you tell her?", "A snake has a backbone, and legs are not needed", [["She is right, a vertebrate needs legs", "M_VC_NEEDS_LEGS"], ["A snake is a vertebrate because it is long", "M_VC_SIZE_DECIDES"], ["A snake is an invertebrate with a hard skin", "M_VC_SHELL_IS_BACKBONE"]], "What makes an animal a vertebrate is a backbone. A snake has a long one."],
+      ["Kiprono says a crab is a vertebrate because it has a hard shell. What is wrong with this?", "The shell is outside; a crab has no backbone inside", [["Nothing, a hard shell is like a backbone", "M_VC_SHELL_IS_BACKBONE"], ["A crab is too small to be a vertebrate", "M_VC_SIZE_DECIDES"], ["A crab has legs, so it must be an invertebrate", "M_VC_NEEDS_LEGS"]], "A crab's hard shell is on the outside. It has no backbone inside, so it is an invertebrate."],
+      ["Mutua says a gecko is too small to be a vertebrate. What can you tell him?", "Size does not matter; a gecko has a backbone", [["He is right, only big animals are vertebrates", "M_VC_SIZE_DECIDES"], ["A gecko has legs, so it is an invertebrate", "M_VC_NEEDS_LEGS"], ["A gecko has a hard shell, so it is a vertebrate", "M_VC_SHELL_IS_BACKBONE"]], "A gecko is small, but it has a backbone. Size does not decide."],
+      ["Akinyi says a fish cannot be a vertebrate because it has no legs. What can you tell her?", "A fish has a backbone; legs are not needed", [["She is right, a vertebrate needs four legs", "M_VC_NEEDS_LEGS"], ["A fish is a vertebrate because it is big", "M_VC_SIZE_DECIDES"], ["A fish has a hard shell, so it is a vertebrate", "M_VC_SHELL_IS_BACKBONE"]], "A fish has a backbone, so it is a vertebrate. It has fins instead of legs."],
+      ["Omondi says a beetle is a vertebrate because it has a hard cover. What is wrong with this?", "The cover is outside; a beetle has no backbone", [["Nothing, a hard cover means a backbone", "M_VC_SHELL_IS_BACKBONE"], ["A beetle is too small to have a backbone", "M_VC_SIZE_DECIDES"], ["A beetle has legs, so it is an invertebrate", "M_VC_NEEDS_LEGS"]], "A beetle's hard cover is outside. It has no backbone inside, so it is an invertebrate."]
+    ], { h: ["Think about what all vertebrates have in common inside their bodies.", "Look at the reason given. Is it about a backbone?"], s1: "Check the reason against the one thing that makes a vertebrate: a backbone." })
+  }),
+  sfam({
+    id: "sci5.vert.vc.table",
+    cs: `${V}VERTEBRATE_CHARACTERISTICS`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "A class sorted animals in a table. Which animal is a vertebrate?",
+        "Animal B",
+        [["Animal A", "M_VC_SHELL_IS_BACKBONE"], ["Animal C", "M_VC_SIZE_DECIDES"], ["Animal D", "M_VC_SIZE_DECIDES"]],
+        "Animal B has a backbone. The others have no backbone, though one has a hard shell.",
+        { t: { head: ["Animal", "What the class found"], rows: [["Animal A", "Hard shell, no backbone"], ["Animal B", "Small, no legs, has a backbone"], ["Animal C", "Soft body, no bones"], ["Animal D", "Six legs, no backbone"]] } }
+      ],
+      [
+        "Read the table. Which animal is an invertebrate?",
+        "Animal C",
+        [["Animal A", "M_VC_NEEDS_LEGS"], ["Animal B", "M_VC_NEEDS_LEGS"], ["Animal D", "M_VC_SIZE_DECIDES"]],
+        "Animal C has no backbone. Animals A, B and D all have backbones, with or without legs.",
+        { t: { head: ["Animal", "What the class found"], rows: [["Animal A", "Long body, no legs, has a backbone"], ["Animal B", "Smooth skin, four legs, has a backbone"], ["Animal C", "Big, eight arms, no backbone"], ["Animal D", "Tiny, four legs, has a backbone"]] } }
+      ],
+      [
+        "The table shows animals near a river. Which one is a vertebrate?",
+        "Animal D",
+        [["Animal A", "M_VC_SHELL_IS_BACKBONE"], ["Animal B", "M_VC_SHELL_IS_BACKBONE"], ["Animal C", "M_VC_SIZE_DECIDES"]],
+        "Animal D has a backbone, so it is a vertebrate.",
+        { t: { head: ["Animal", "What the class found"], rows: [["Animal A", "Hard shell, ten legs, no backbone"], ["Animal B", "Soft body in a shell, no backbone"], ["Animal C", "Thin body, no bones"], ["Animal D", "Scales and fins, has a backbone"]] } }
+      ],
+      [
+        "Which animal in this table is an invertebrate?",
+        "Animal A",
+        [["Animal B", "M_VC_SIZE_DECIDES"], ["Animal C", "M_VC_NEEDS_LEGS"], ["Animal D", "M_VC_SIZE_DECIDES"]],
+        "Animal A has no backbone, so it is an invertebrate.",
+        { t: { head: ["Animal", "What the class found"], rows: [["Animal A", "Large, hard body, no backbone"], ["Animal B", "Small, feathers, has a backbone"], ["Animal C", "Long, no legs, has a backbone"], ["Animal D", "Tiny, hops, has a backbone"]] } }
+      ],
+      [
+        "The class listed animals from the school compound. Which animal is a vertebrate?",
+        "Animal C",
+        [["Animal A", "M_VC_SIZE_DECIDES"], ["Animal B", "M_VC_SHELL_IS_BACKBONE"], ["Animal D", "M_VC_SIZE_DECIDES"]],
+        "Animal C has a backbone. The others have none.",
+        { t: { head: ["Animal", "What the class found"], rows: [["Animal A", "Tiny, six legs, no backbone"], ["Animal B", "Hard cover, six legs, no backbone"], ["Animal C", "Small, whiskers, has a backbone"], ["Animal D", "Long and soft, no backbone"]] } }
+      ]
+    ], { h: ["Read the last words of each row: does the animal have a backbone?", "Ignore the size, the legs and the hard cover."], s1: 'Look for "has a backbone" in each row.' })
+  }),
+  // ---------------------------------------------------------------- VERTEBRATE_GROUPS
+  sfam({
+    id: "sci5.vert.vg.group",
+    cs: `${V}VERTEBRATE_GROUPS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["To which group does a bat belong?", "Mammals", [["Birds", "M_VG_BAT_BIRD"], ["Reptiles", "M_VG_BAT_BIRD"], ["Amphibians", "M_VG_BAT_BIRD"]], "A bat has fur and feeds its young on milk, so it is a mammal. It flies, but it has no feathers."],
+      ["To which group does a dolphin belong?", "Mammals", [["Fish", "M_VG_WATER_IS_FISH"], ["Reptiles", "M_VG_WATER_IS_FISH"], ["Amphibians", "M_VG_WATER_IS_FISH"]], "A dolphin breathes air and feeds its young on milk, so it is a mammal. It lives in water but is not a fish."],
+      ["To which group does a chameleon belong?", "Reptiles", [["Amphibians", "M_VG_REPTILE_AMPHIBIAN"], ["Mammals", "M_VG_REPTILE_AMPHIBIAN"], ["Fish", "M_VG_WATER_IS_FISH"]], "A chameleon has dry scales and lays eggs on land, so it is a reptile."],
+      ["To which group does an ostrich belong?", "Birds", [["Mammals", "M_VG_NOFLY_NOT_BIRD"], ["Reptiles", "M_VG_NOFLY_NOT_BIRD"], ["Amphibians", "M_VG_NOFLY_NOT_BIRD"]], "An ostrich cannot fly, but it has feathers and wings and lays eggs, so it is a bird."],
+      ["To which group does a crocodile belong?", "Reptiles", [["Fish", "M_VG_WATER_IS_FISH"], ["Birds", "M_VG_EGGS_ARE_BIRDS"], ["Amphibians", "M_VG_REPTILE_AMPHIBIAN"]], "A crocodile has dry scales and lays eggs on land. It spends time in water but is a reptile."],
+      ["To which group does a frog belong?", "Amphibians", [["Reptiles", "M_VG_REPTILE_AMPHIBIAN"], ["Fish", "M_VG_WATER_IS_FISH"], ["Birds", "M_VG_EGGS_ARE_BIRDS"]], "A frog has moist skin and starts life in water as a tadpole, so it is an amphibian."]
+    ], { h: ["Think about the animal's body covering and how its young are born or fed.", "Where the animal lives or whether it flies does not decide its group."], s1: "Look at the body covering and how the young are born." })
+  }),
+  sfam({
+    id: "sci5.vert.vg.list",
+    cs: `${V}VERTEBRATE_GROUPS`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["Achieng makes a chart of mammals. Which list has only mammals?", "Cow, bat, goat", [["Cow, bat, hen", "M_VG_EGGS_ARE_BIRDS"], ["Cow, dolphin, tilapia", "M_VG_WATER_IS_FISH"], ["Cow, goat, crocodile", "M_VG_WATER_IS_FISH"]], "A cow, a bat and a goat all have fur and feed their young on milk. A hen is a bird, a tilapia is a fish and a crocodile is a reptile."],
+      ["A teacher asks for a list of birds. Which list has only birds?", "Ostrich, flamingo, hen", [["Ostrich, bat, hen", "M_VG_BAT_BIRD"], ["Ostrich, flamingo, crocodile", "M_VG_EGGS_ARE_BIRDS"], ["Bat, flamingo, hen", "M_VG_BAT_BIRD"]], "Ostriches, flamingos and hens have feathers and lay eggs. A bat has fur and a crocodile has dry scales."],
+      ["Which list has only reptiles?", "Snake, chameleon, tortoise", [["Snake, frog, tortoise", "M_VG_REPTILE_AMPHIBIAN"], ["Snake, chameleon, tilapia", "M_VG_WATER_IS_FISH"], ["Snake, chameleon, hen", "M_VG_EGGS_ARE_BIRDS"]], "Snakes, chameleons and tortoises all have dry scales or plates. A frog is an amphibian, tilapia is a fish and a hen is a bird."],
+      ["Which list has only fish?", "Tilapia, shark, Nile perch", [["Tilapia, dolphin, Nile perch", "M_VG_WATER_IS_FISH"], ["Tilapia, shark, crocodile", "M_VG_WATER_IS_FISH"], ["Tilapia, frog, Nile perch", "M_VG_WATER_IS_FISH"]], "Tilapia, sharks and Nile perch breathe with gills. A dolphin is a mammal, a crocodile a reptile and a frog an amphibian."],
+      ["Which list has only amphibians?", "Frog, toad, newt", [["Frog, toad, lizard", "M_VG_REPTILE_AMPHIBIAN"], ["Frog, chameleon, newt", "M_VG_REPTILE_AMPHIBIAN"], ["Frog, toad, tilapia", "M_VG_WATER_IS_FISH"]], "Frogs, toads and newts have moist skin and start life in water. A lizard and a chameleon are reptiles and tilapia is a fish."]
+    ], { h: ["Check every animal in a list, not only the first one.", "One animal in each wrong list belongs to another group."], s1: "Cross out any animal whose body covering or young do not fit the group." })
+  }),
+  sfam({
+    id: "sci5.vert.vg.table",
+    cs: `${V}VERTEBRATE_GROUPS`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "The table shows what a learner found about four animals. Which animal is a mammal?",
+        "Animal B",
+        [["Animal A", "M_VG_BAT_BIRD"], ["Animal C", "M_VG_WATER_IS_FISH"], ["Animal D", "M_VG_EGGS_ARE_BIRDS"]],
+        "Animal B has fur and feeds its young on milk, so it is a mammal.",
+        { t: { head: ["Animal", "Skin or covering", "Young"], rows: [["Animal A", "Feathers", "Hatch from hard eggs"], ["Animal B", "Fur", "Born alive, drink milk"], ["Animal C", "Wet scales and fins", "Hatch from soft eggs"], ["Animal D", "Dry scales", "Hatch from eggs on land"]] } }
+      ],
+      [
+        "Which animal in the table is a bird?",
+        "Animal C",
+        [["Animal A", "M_VG_BAT_BIRD"], ["Animal B", "M_VG_EGGS_ARE_BIRDS"], ["Animal D", "M_VG_NOFLY_NOT_BIRD"]],
+        "Animal C has feathers and lays hard-shelled eggs. It cannot fly, but it is still a bird.",
+        { t: { head: ["Animal", "Skin or covering", "Other facts"], rows: [["Animal A", "Fur", "Can fly, feeds young on milk"], ["Animal B", "Dry scales", "Lays eggs on land"], ["Animal C", "Feathers", "Cannot fly, lays hard eggs"], ["Animal D", "Moist skin", "Young live in water"]] } }
+      ],
+      [
+        "Which animal in the table is a reptile?",
+        "Animal D",
+        [["Animal A", "M_VG_REPTILE_AMPHIBIAN"], ["Animal B", "M_VG_WATER_IS_FISH"], ["Animal C", "M_VG_EGGS_ARE_BIRDS"]],
+        "Animal D has dry scales and lays eggs on land, so it is a reptile.",
+        { t: { head: ["Animal", "Skin or covering", "Other facts"], rows: [["Animal A", "Moist skin", "Young live in water first"], ["Animal B", "Fur", "Lives in the sea, breathes air"], ["Animal C", "Wet scales", "Has gills"], ["Animal D", "Dry scales", "Lays eggs on land"]] } }
+      ],
+      [
+        "Which animal in the table is a fish?",
+        "Animal A",
+        [["Animal B", "M_VG_WATER_IS_FISH"], ["Animal C", "M_VG_WATER_IS_FISH"], ["Animal D", "M_VG_REPTILE_AMPHIBIAN"]],
+        "Animal A has wet scales, fins and gills, so it is a fish.",
+        { t: { head: ["Animal", "Skin or covering", "Other facts"], rows: [["Animal A", "Wet scales and fins", "Breathes with gills"], ["Animal B", "Smooth skin", "Lives in the sea, breathes air"], ["Animal C", "Dry scales", "Lives in water, lays eggs on land"], ["Animal D", "Moist skin", "Young live in water"]] } }
+      ],
+      [
+        "Which animal in the table is an amphibian?",
+        "Animal B",
+        [["Animal A", "M_VG_REPTILE_AMPHIBIAN"], ["Animal C", "M_VG_WATER_IS_FISH"], ["Animal D", "M_VG_REPTILE_AMPHIBIAN"]],
+        "Animal B has moist skin and its young live in water, so it is an amphibian.",
+        { t: { head: ["Animal", "Skin or covering", "Other facts"], rows: [["Animal A", "Dry scales", "Lays eggs on land"], ["Animal B", "Moist skin", "Young live in water first"], ["Animal C", "Wet scales", "Has gills"], ["Animal D", "Dry scales", "Changes colour"]] } }
+      ]
+    ], { h: ["Read the covering of the animal first, then how its young are born.", "Fur and milk: mammal. Feathers: bird. Dry scales: reptile. Wet scales and gills: fish. Moist skin: amphibian."], s1: "Match the covering and the young to a group." })
+  }),
+  sfam({
+    id: "sci5.vert.vg.spot",
+    cs: `${V}VERTEBRATE_GROUPS`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says a bat is a bird. Which step has the mistake?", [["Step 1: Hassan sees that a bat has wings and flies.", true], ["Step 2: He decides that every animal that flies is a bird.", false], ["Step 3: He writes that a bat is a bird.", true]], "Flying does not make a bird. A bat has fur and feeds its young on milk, so it is a mammal.", "M_VG_BAT_BIRD"],
+      ["Karimi says a dolphin is a fish. Which step has the mistake?", [["Step 1: Karimi sees that a dolphin lives in the sea.", true], ["Step 2: He decides that every animal in water is a fish.", false], ["Step 3: He writes that a dolphin is a fish.", true]], "Living in water does not make a fish. A dolphin breathes air and feeds its young on milk, so it is a mammal.", "M_VG_WATER_IS_FISH"],
+      ["Zawadi says an ostrich is not a bird. Which step has the mistake?", [["Step 1: Zawadi sees that an ostrich has feathers and lays eggs.", true], ["Step 2: She decides that an animal that cannot fly is not a bird.", false], ["Step 3: She writes that an ostrich is not a bird.", true]], "A bird has feathers and lays hard eggs. Many birds, such as the ostrich, cannot fly, but they are still birds.", "M_VG_NOFLY_NOT_BIRD"],
+      ["Mwende says a crocodile is a bird. Which step has the mistake?", [["Step 1: Mwende knows that a crocodile lays eggs.", true], ["Step 2: She decides that every animal that lays eggs is a bird.", false], ["Step 3: She writes that a crocodile is a bird.", true]], "Reptiles, fish and amphibians lay eggs too. A crocodile has dry scales, so it is a reptile.", "M_VG_EGGS_ARE_BIRDS"]
+    ], { h: ["Which step gives a reason that is not true for every animal?", "Think about the body covering and how the young are fed."], s1: "A group is decided by body covering and young, not by habitat or flying." })
+  }),
+  // ---------------------------------------------------------------- VERTEBRATE_FEATURES
+  sfam({
+    id: "sci5.vert.vf.feature",
+    cs: `${V}VERTEBRATE_FEATURES`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which group of vertebrates has dry scales and lays eggs on land?", "Reptiles", [["Fish", "M_VF_SCALES_FISH_ONLY"], ["Amphibians", "M_VF_SCALES_FISH_ONLY"], ["Birds", "M_VF_SCALES_FISH_ONLY"]], "Reptiles such as snakes and crocodiles have dry scales and lay eggs on land."],
+      ["Which feature is found in all birds and in no other group?", "Feathers", [["Wings", "M_VF_WINGS_MEAN_BIRD"], ["A beak", "M_VF_WINGS_MEAN_BIRD"], ["The ability to fly", "M_VF_WINGS_MEAN_BIRD"]], "Bats and insects have wings too, and some birds cannot fly. Only birds have feathers."],
+      ["What does it mean to say a frog is an amphibian?", "It lives part of its life in water and part on land", [["It lives all its life in water", "M_VF_AMPHIBIAN_WATER_ONLY"], ["It lives only on land and eats insects", "M_VF_AMPHIBIAN_WATER_ONLY"], ["It has dry scales and lays eggs on land", "M_VF_SCALES_FISH_ONLY"]], "Amphibian means living two lives. A frog starts as a tadpole in water and the adult can live on land."],
+      ["Which group of vertebrates breathes with gills and has wet scales and fins?", "Fish", [["Reptiles", "M_VF_SCALES_FISH_ONLY"], ["Amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"], ["Mammals", "M_VF_AMPHIBIAN_WATER_ONLY"]], "Fish breathe through gills and move with fins. Their scales are wet."],
+      ["Which group has fur or hair and feeds its young on milk?", "Mammals", [["Birds", "M_VF_WINGS_MEAN_BIRD"], ["Reptiles", "M_VF_SCALES_FISH_ONLY"], ["Amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"]], "Mammals such as cows and goats have hair and feed their young on milk."]
+    ], { h: ["Think about the body covering and what the young drink or hatch from.", "Each group has its own set of features."], s1: "Match the feature to the group it belongs to." })
+  }),
+  sfam({
+    id: "sci5.vert.vf.typed",
+    cs: `${V}VERTEBRATE_FEATURES`,
+    form: "word",
+    rung: 2,
+    gen: typed([
+      ["Kamau looks at a snake and a crocodile on a school trip to the park. Both have dry scales and both lay their eggs on the land. What is this group of vertebrates called?", "reptiles", ["reptile"], [["fish", "M_VF_SCALES_FISH_ONLY"], ["amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"], ["mammals", "M_VF_SCALES_FISH_ONLY"]], "Animals with dry scales that lay eggs on land are reptiles."],
+      ["A hen, an ostrich and a flamingo have something that no other group of animals has. They cannot all fly, but all of them are covered in it. What is it?", "feathers", ["feather"], [["wings", "M_VF_WINGS_MEAN_BIRD"], ["a beak", "M_VF_WINGS_MEAN_BIRD"], ["legs", "M_VF_WINGS_MEAN_BIRD"]], "Only birds have feathers. Bats and insects have wings, and many animals have legs."],
+      ["Nyambura finds a tadpole in a pond near her home. When it grows it will be able to live on land and in water. What group of vertebrates does a frog belong to?", "amphibians", ["amphibian"], [["fish", "M_VF_AMPHIBIAN_WATER_ONLY"], ["reptiles", "M_VF_SCALES_FISH_ONLY"], ["mammals", "M_VF_AMPHIBIAN_WATER_ONLY"]], "A frog lives part of its life in water and part on land. That is an amphibian."],
+      ["At the fish market Otieno sees tilapia with wet scales, fins on the sides and red gills under the cover. What group of vertebrates is tilapia?", "fish", ["a fish"], [["amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"], ["reptiles", "M_VF_SCALES_FISH_ONLY"], ["mammals", "M_VF_AMPHIBIAN_WATER_ONLY"]], "Fish have gills and fins and live in water all their lives."],
+      ["A young goat on the farm has hair and drinks its mother's milk each morning. What group of vertebrates does a goat belong to?", "mammals", ["mammal"], [["birds", "M_VF_WINGS_MEAN_BIRD"], ["reptiles", "M_VF_SCALES_FISH_ONLY"], ["amphibians", "M_VF_AMPHIBIAN_WATER_ONLY"]], "Animals with hair that feed their young on milk are mammals."]
+    ], { h: ["Think about the body covering and how the young start life.", "The five groups are mammals, birds, reptiles, fish and amphibians."], s1: "Put the features together and name the group." })
+  }),
+  // ---------------------------------------------------------------- BREATHING_PARTS
+  sfam({
+    id: "sci5.breath.bp.name",
+    cs: `${B2}BREATHING_PARTS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which part carries air from the nose down to the lungs?", "Windpipe (trachea)", [["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["Stomach", "M_BP_LUNGS_LOCATION"]], "The windpipe, or trachea, carries air from the nose to the lungs."],
+      ["Which part is the sheet of muscle under the lungs?", "Diaphragm", [["Windpipe (trachea)", "M_BP_DIAPHRAGM_PLACE"], ["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"], ["Ribs", "M_BP_DIAPHRAGM_PLACE"]], "The diaphragm is a sheet of muscle under the lungs. It moves when we breathe."],
+      ["Where are the lungs?", "In the chest, inside the ribs", [["In the belly, next to the stomach", "M_BP_LUNGS_LOCATION"], ["In the neck, above the windpipe", "M_BP_LUNGS_LOCATION"], ["Under the diaphragm", "M_BP_DIAPHRAGM_PLACE"]], "There are two lungs in the upper chest. The ribs protect them."],
+      ["Which pipe in the neck is for food, not for air?", "Food pipe (gullet)", [["Windpipe (trachea)", "M_BP_TRACHEA_FOOD"], ["Nose pipe", "M_BP_TRACHEA_FOOD"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"]], "The food pipe carries food to the stomach. The windpipe carries air to the lungs."],
+      ["Which part of the breathing system is on the face and lets air in?", "Nose", [["Lungs", "M_BP_LUNGS_LOCATION"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["Food pipe (gullet)", "M_BP_TRACHEA_FOOD"]], "Air goes in through the nose and passes to the windpipe."]
+    ], { h: ["Picture the body and where each part is.", "The windpipe is not the same as the food pipe."], s1: "Picture the breathing system from the nose to the diaphragm." })
+  }),
+  sfam({
+    id: "sci5.breath.bp.order",
+    cs: `${B2}BREATHING_PARTS`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["Wanjiru breathes in deeply while the class is quiet. Which list shows the parts the air reaches, in order?", "Nose, windpipe, lungs", [["Nose, food pipe, stomach", "M_BP_TRACHEA_FOOD"], ["Nose, lungs, windpipe", "M_BP_LUNGS_LOCATION"], ["Nose, diaphragm, lungs", "M_BP_DIAPHRAGM_PLACE"]], "Air passes from the nose to the windpipe and then to the lungs."],
+      ["A teacher draws the breathing system on the board. She asks which part comes just after the windpipe. What is the answer?", "The lungs", [["The stomach", "M_BP_TRACHEA_FOOD"], ["The diaphragm", "M_BP_DIAPHRAGM_PLACE"], ["The food pipe", "M_BP_TRACHEA_FOOD"]], "The windpipe leads straight into the lungs."],
+      ["Which part of the body lies under the lungs and helps us to breathe by moving up and down?", "The diaphragm", [["The stomach", "M_BP_LUNGS_LOCATION"], ["The windpipe", "M_BP_DIAPHRAGM_PLACE"], ["The nose", "M_BP_DIAPHRAGM_PLACE"]], "The diaphragm lies under the lungs and moves as we breathe."],
+      ["Juma puts his hand flat on his upper chest and breathes in slowly. What is moving under his hand?", "The ribs and the lungs", [["The stomach and the food pipe", "M_BP_LUNGS_LOCATION"], ["The windpipe and the nose", "M_BP_TRACHEA_FOOD"], ["Only the belly and the diaphragm", "M_BP_LUNGS_LOCATION"]], "The lungs are in the upper chest, behind the ribs, and they move as we breathe."],
+      ["A learner lists the parts of the body that are in the neck and chest. Which part on her list does not belong to the breathing system?", "Food pipe (gullet)", [["Windpipe (trachea)", "M_BP_TRACHEA_FOOD"], ["Lungs", "M_BP_LUNGS_LOCATION"], ["Diaphragm", "M_BP_DIAPHRAGM_PLACE"]], "The food pipe is part of the digestive system. It carries food to the stomach."]
+    ], { h: ["Follow the air from the nose to the end of its journey.", "Food goes down the food pipe, air goes down the windpipe."], s1: "Follow a breath of air through the body." })
+  }),
+  // ---------------------------------------------------------------- BREATHING_FUNCTIONS
+  sfam({
+    id: "sci5.breath.bf.job",
+    cs: `${B2}BREATHING_FUNCTIONS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Where does the air go after the windpipe?", "To the lungs", [["To the stomach", "M_BF_AIR_TO_STOMACH"], ["Back to the nose", "M_BF_AIR_TO_STOMACH"], ["Into the food pipe", "M_BF_AIR_TO_STOMACH"]], "The windpipe leads to the lungs. The stomach is for food."],
+      ["What do the hairs and mucus in the nose do?", "They trap dust and germs", [["They are only for smelling", "M_BF_NOSE_ONLY_SMELL"], ["They make air for the lungs", "M_BF_NOSE_ONLY_SMELL"], ["They help us taste food", "M_BF_NOSE_ONLY_SMELL"]], "The hairs and the sticky mucus catch dust and germs before the air reaches the lungs."],
+      ["What happens to the oxygen in the air that reaches the lungs?", "It passes into the blood", [["It goes into the stomach", "M_BF_AIR_TO_STOMACH"], ["It stays in the lungs for ever", "M_BF_NO_OXYGEN_OUT"], ["It goes back out with no change", "M_BF_NO_OXYGEN_OUT"]], "The lungs pass oxygen from the air into the blood, which carries it round the body."],
+      ["Which gas leaves the blood in the lungs to be breathed out?", "Carbon dioxide", [["Oxygen only", "M_BF_NO_OXYGEN_OUT"], ["Nothing leaves the blood", "M_BF_AIR_TO_STOMACH"], ["Water vapour only", "M_BF_NO_OXYGEN_OUT"]], "The blood brings carbon dioxide to the lungs, and we breathe it out."],
+      ["Which part moves to help the lungs fill with air?", "The diaphragm", [["The windpipe", "M_BF_LUNGS_PUSH_SELF"], ["The lungs pull themselves", "M_BF_LUNGS_PUSH_SELF"], ["The nose", "M_BF_NOSE_ONLY_SMELL"]], "The lungs have no muscles. The diaphragm and the rib muscles move and the lungs follow."]
+    ], { h: ["Think about the job of each part of the breathing system.", "The lungs do not have muscles of their own."], s1: "Match the job to the part." })
+  }),
+  sfam({
+    id: "sci5.breath.bf.true",
+    cs: `${B2}BREATHING_FUNCTIONS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Which statement about the air we breathe out is true?", "It has less oxygen and more carbon dioxide", [["It has no oxygen in it at all", "M_BF_NO_OXYGEN_OUT"], ["It is exactly the same as the air we breathe in", "M_BF_NO_OXYGEN_OUT"], ["It has only carbon dioxide and nothing else", "M_BF_NO_OXYGEN_OUT"]], "Breathed-out air still has some oxygen, but less than before. It has more carbon dioxide."],
+      ["Amani says air goes to the stomach when we breathe in. What can you tell him?", "Air goes to the lungs, not the stomach", [["He is right, air fills the stomach first", "M_BF_AIR_TO_STOMACH"], ["Air goes to the stomach and then to the lungs", "M_BF_AIR_TO_STOMACH"], ["Air goes to the diaphragm only", "M_BF_LUNGS_PUSH_SELF"]], "The windpipe leads to the lungs. The stomach is joined to the food pipe."],
+      ["Which statement about the lungs is true?", "Diaphragm and rib muscles make them change size", [["They have strong muscles that move them", "M_BF_LUNGS_PUSH_SELF"], ["The stomach moves them in and out", "M_BF_AIR_TO_STOMACH"], ["They never change in size at all", "M_BF_LUNGS_PUSH_SELF"]], "The lungs have no muscles. They change in size when the diaphragm and the muscles between the ribs move."],
+      ["Why is it better to breathe through the nose than through the mouth?", "The nose cleans and warms the air", [["The nose is only there for smelling", "M_BF_NOSE_ONLY_SMELL"], ["The nose sends the air to the stomach", "M_BF_AIR_TO_STOMACH"], ["The mouth cannot take in any air", "M_BF_NOSE_ONLY_SMELL"]], "Hairs and mucus in the nose trap dust and germs, and the nose warms the air."],
+      ["Wafula says our lungs are like balloons that blow up by themselves. What is wrong with this?", "Muscles around them make them change size", [["Nothing, the lungs blow up by themselves", "M_BF_LUNGS_PUSH_SELF"], ["The stomach blows the lungs up", "M_BF_AIR_TO_STOMACH"], ["The nose pushes air in with force", "M_BF_NOSE_ONLY_SMELL"]], "The lungs have no muscles of their own. The diaphragm and rib muscles pull them bigger."]
+    ], { h: ["Think about what each part of the system really does.", "Breathed-out air still has some oxygen."], s1: "Check each statement against the job of the part it names." })
+  }),
+  // ---------------------------------------------------------------- BREATHING_MOVEMENT
+  sfam({
+    id: "sci5.breath.bi.chest",
+    cs: `${B2}BREATHING_MOVEMENT`,
+    form: "direct",
+    rung: 2,
+    gen: choose([
+      ["What happens to the chest when you breathe in?", "It gets bigger as the ribs move up and out", [["It gets smaller as the ribs move in", "M_BI_RIBS_IN"], ["It stays the same size", "M_BI_RIBS_IN"], ["It is pushed out by the air", "M_BI_AIR_PUSHES_CHEST"]], "The ribs move up and out and the diaphragm moves down, so the chest gets bigger."],
+      ["What does the diaphragm do when you breathe in?", "It moves down", [["It moves up", "M_BI_RIBS_IN"], ["It stays still", "M_BI_AIR_PUSHES_CHEST"], ["It pushes air out", "M_BI_RIBS_IN"]], "The diaphragm moves down, so there is more space in the chest for air."],
+      ["What happens to the chest when you breathe out?", "It gets smaller as the ribs move down and in", [["It gets bigger as the ribs move out", "M_BI_RIBS_IN"], ["It stays the same size", "M_BI_RIBS_IN"], ["It fills up with more air", "M_BI_AIR_PUSHES_CHEST"]], "The ribs move down and in and the diaphragm moves up, so the chest gets smaller and air is pushed out."],
+      ["Mutua puts his hands on his ribs and takes a deep breath in. What does he feel?", "The ribs move up and out", [["The ribs move down and in", "M_BI_RIBS_IN"], ["The ribs stay still", "M_BI_RIBS_IN"], ["The ribs are pushed out by the air", "M_BI_AIR_PUSHES_CHEST"]], "When we breathe in, the muscles between the ribs lift the ribs up and out."],
+      ["What makes the air come into the lungs when you breathe in?", "The chest gets bigger, so air flows into the space", [["The air pushes the chest out first", "M_BI_AIR_PUSHES_CHEST"], ["The chest gets smaller and squeezes air in", "M_BI_RIBS_IN"], ["The stomach pulls the air in", "M_BI_AIR_PUSHES_CHEST"]], "The muscles make the chest bigger first. Air flows into the new space."]
+    ], { h: ["Think about what the diaphragm and the ribs do when you breathe in.", "The space in the chest has to get bigger for air to come in."], s1: "Feel your chest and belly as you breathe in and out." })
+  }),
+  sfam({
+    id: "sci5.breath.bi.cause",
+    cs: `${B2}BREATHING_MOVEMENT`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["Wanjiru takes a deep breath in. Which is the first thing that happens inside her body?", "Her diaphragm and rib muscles move and her chest gets bigger", [["Air rushes in and pushes her chest out", "M_BI_AIR_PUSHES_CHEST"], ["Her chest gets smaller", "M_BI_RIBS_IN"], ["Her lungs squeeze themselves flat", "M_BI_AIR_PUSHES_CHEST"]], "The muscles move first. Air then flows in to fill the bigger space."],
+      ["Mutua notices that his chest rises each time he breathes in. Why does it rise?", "The muscles lift the ribs and the chest space grows", [["The air pushes the ribs up from inside", "M_BI_AIR_PUSHES_CHEST"], ["The lungs squeeze the ribs up", "M_BI_AIR_PUSHES_CHEST"], ["The ribs move in towards the middle", "M_BI_RIBS_IN"]], "The rib muscles do the lifting. The air only fills the space they make."],
+      ["During a race, Baraka breathes out hard at the finish line. Which action pushes the air out of his lungs?", "His chest gets smaller and pushes the air out", [["His chest gets bigger and lets the air out", "M_BI_RIBS_IN"], ["The air jumps out of the lungs by itself", "M_BI_AIR_PUSHES_CHEST"], ["His ribs move up and out", "M_BI_RIBS_IN"]], "When the chest gets smaller the lungs are squeezed and air is pushed out."],
+      ["A class makes a bell jar model with a balloon inside and a rubber sheet at the bottom. Pulling the sheet down makes the balloon fill. What does the rubber sheet stand for?", "The diaphragm", [["The stomach", "M_BI_AIR_PUSHES_CHEST"], ["The nose", "M_BI_AIR_PUSHES_CHEST"], ["The windpipe", "M_BI_RIBS_IN"]], "The rubber sheet is the diaphragm. Pulling it down makes more space, and air flows in."],
+      ["Chebet knows her diaphragm moves down when she breathes in. What does that do inside her chest?", "It makes more space, so air flows in", [["It makes less space, so air flows in", "M_BI_RIBS_IN"], ["The air pushes the diaphragm down", "M_BI_AIR_PUSHES_CHEST"], ["Nothing happens to the space", "M_BI_RIBS_IN"]], "More space means lower pressure inside, so air flows in from outside."]
+    ], { h: ["Think about which comes first: the chest changing or the air arriving.", "Muscles move first, then air follows."], s1: "Put the events in order: muscles, space, air." })
+  }),
+  sfam({
+    id: "sci5.breath.bi.spot",
+    cs: `${B2}BREATHING_MOVEMENT`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Baraka explains breathing in. Which step has the mistake?", [["Step 1: The diaphragm moves down.", true], ["Step 2: The ribs move in, so the chest gets smaller.", false], ["Step 3: Air flows into the lungs.", true]], "When we breathe in, the ribs move up and out, so the chest gets bigger. A smaller chest cannot take more air.", "M_BI_RIBS_IN"],
+      ["Chebet explains why the chest rises. Which step has the mistake?", [["Step 1: Chebet breathes in.", true], ["Step 2: Air rushes in and pushes the ribs out.", false], ["Step 3: The chest is bigger than before.", true]], "The muscles move first and make the chest bigger. Air flows in after that. The air does not push the ribs.", "M_BI_AIR_PUSHES_CHEST"],
+      ["Otieno explains breathing out. Which step has the mistake?", [["Step 1: The diaphragm moves up.", true], ["Step 2: The ribs move up and out.", false], ["Step 3: Air is pushed out of the lungs.", true]], "When we breathe out, the ribs move down and in. The chest gets smaller and air is pushed out.", "M_BI_RIBS_IN"],
+      ["Wambui tells the class what the diaphragm does. Which step has the mistake?", [["Step 1: Wambui puts a hand on her belly and breathes in.", true], ["Step 2: She says the air makes the diaphragm move down.", false], ["Step 3: She says the chest gets bigger.", true]], "The muscles of the diaphragm move down first, and the chest gets bigger. The air follows. The air does not push the diaphragm.", "M_BI_AIR_PUSHES_CHEST"],
+      ["Nekesa describes a deep breath out. Which step has the mistake?", [["Step 1: The diaphragm relaxes and moves up.", true], ["Step 2: The chest gets bigger as the ribs move out.", false], ["Step 3: Air leaves the lungs through the windpipe.", true]], "When we breathe out the chest gets smaller as the ribs move down and in. This pushes the air out.", "M_BI_RIBS_IN"]
+    ], { h: ["Which step says the chest does something it does not do?", "Picture your ribs when you breathe in and out."], s1: "Breathing in: chest bigger. Breathing out: chest smaller." })
+  }),
+  // ---------------------------------------------------------------- BREATHING_ILLNESS_SYMPTOMS
+  sfam({
+    id: "sci5.breath.bs.match",
+    cs: `${B2}BREATHING_ILLNESS_SYMPTOMS`,
+    form: "word",
+    rung: 1,
+    gen: choose([
+      ["Wambui sneezes and has itchy eyes every time she sweeps the dusty classroom. What is the most likely cause?", "An allergy to the dust", [["A cold caught from another child", "M_BS_ALLERGY_IS_INFECTION"], ["Asthma caught from a classmate", "M_BS_ASTHMA_CATCHING"], ["The same illness as any cough", "M_BS_ALL_SAME"]], "Sneezing that starts with dust and stops without it points to an allergy. An allergy is not caught from others."],
+      ["A child breathes with a whistling sound and finds it hard to catch his breath after running. Which condition is most likely?", "Asthma", [["A common cold caught from a friend", "M_BS_ALL_SAME"], ["An allergy caught from a friend", "M_BS_ALLERGY_IS_INFECTION"], ["A cough that every child gets", "M_BS_ALL_SAME"]], "Wheezing and short breath are signs of asthma."],
+      ["Njeri has a runny nose, a sore throat and sneezing for two days. Which condition is most likely?", "A common cold", [["Asthma", "M_BS_ASTHMA_CATCHING"], ["An allergy to dust", "M_BS_ALLERGY_IS_INFECTION"], ["A broken rib", "M_BS_ALL_SAME"]], "A runny nose, sore throat and sneezing are the usual signs of a common cold."],
+      ["Which symptoms can be signs of COVID-19?", "Fever, dry cough and feeling very tired", [["Sneezing only after sweeping dust", "M_BS_ALLERGY_IS_INFECTION"], ["Wheezing only when running", "M_BS_ASTHMA_CATCHING"], ["Itchy eyes in the pollen season", "M_BS_ALLERGY_IS_INFECTION"]], "Fever, a dry cough and tiredness are common signs. A health worker should check a child with these."],
+      ["Mutua coughs and wheezes when the family cooks in a smoky room, and he is fine outside. What can this be?", "A sign of asthma set off by smoke", [["A cold caught from the cooking fire", "M_BS_ALL_SAME"], ["An allergy that spreads to others", "M_BS_ALLERGY_IS_INFECTION"], ["Asthma that he caught from his mother", "M_BS_ASTHMA_CATCHING"]], "Smoke can bring on asthma. The signs go away when he is out of the smoke."]
+    ], { h: ["Think about when the symptoms start and what they look like.", "Colds spread between people. Asthma and allergies do not."], s1: "Match the pattern of the symptoms to the condition." })
+  }),
+  sfam({
+    id: "sci5.breath.bs.spread",
+    cs: `${B2}BREATHING_ILLNESS_SYMPTOMS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Which of these can spread from one person to another?", "A common cold", [["Asthma", "M_BS_ASTHMA_CATCHING"], ["Allergy to dust", "M_BS_ALLERGY_IS_INFECTION"], ["Allergy to pollen", "M_BS_ALLERGY_IS_INFECTION"]], "A cold is caused by a virus that spreads. Asthma and allergies do not spread."],
+      ["A child has asthma. Is it safe to sit next to her at school?", "Yes, asthma cannot be caught from another person", [["No, she may pass asthma on", "M_BS_ASTHMA_CATCHING"], ["No, asthma is a cold in the chest", "M_BS_ALL_SAME"], ["Only if she coughs near you", "M_BS_ASTHMA_CATCHING"]], "Asthma is not an infection, so it cannot be passed on."],
+      ["Which condition cannot be caught from another person?", "Allergy to dust", [["Common cold", "M_BS_ALL_SAME"], ["COVID-19", "M_BS_ALL_SAME"], ["A cough from a chest infection", "M_BS_ALL_SAME"]], "An allergy is the body reacting to something such as dust. It does not spread."],
+      ["Why can a common cold go round the whole class?", "It is caused by a virus that passes from person to person", [["It is an allergy that spreads", "M_BS_ALLERGY_IS_INFECTION"], ["It is asthma that spreads", "M_BS_ASTHMA_CATCHING"], ["All breathing problems spread", "M_BS_ALL_SAME"]], "A cold virus passes from person to person by coughs, sneezes and touch."],
+      ["Which of these is not the same kind of illness as the others?", "Asthma", [["A common cold", "M_BS_ALL_SAME"], ["COVID-19", "M_BS_ALL_SAME"], ["Flu", "M_BS_ALL_SAME"]], "Colds, flu and COVID-19 are caused by viruses and spread. Asthma does not spread."]
+    ], { h: ["Think about which conditions are caused by germs and which are not.", "Asthma and allergies are not caused by germs."], s1: "Sort the conditions into those that spread and those that do not." })
+  }),
+  // ---------------------------------------------------------------- BREATHING_ILLNESS_PREVENTION
+  sfam({
+    id: "sci5.breath.bv.best",
+    cs: `${B2}BREATHING_ILLNESS_PREVENTION`,
+    form: "word",
+    rung: 1,
+    gen: choose([
+      ["Juma has a cold. What should he do to stop it spreading to his friends?", "Cover his mouth and nose when he coughs or sneezes", [["Sit in the sun so the cold goes away", "M_BV_COLD_WEATHER"], ["Take antibiotics to kill the virus", "M_BV_ANTIBIOTICS"], ["Nothing, since colds only come from the weather", "M_BV_COLD_WEATHER"]], "Covering the mouth and nose keeps the virus from spreading in the air."],
+      ["Why does washing hands help to stop a cold spreading?", "Germs on the hands can reach the nose and mouth", [["It does not help, since colds are only in the nose", "M_BV_HANDS_NO_MATTER"], ["It warms the body", "M_BV_COLD_WEATHER"], ["It kills the cold virus inside the body", "M_BV_ANTIBIOTICS"]], "Hands pick up virus from surfaces. Washing them removes it before it reaches the face."],
+      ["Why is it better to cook outdoors or in a kitchen with a chimney?", "Smoke can harm the lungs and make coughing worse", [["Smoke does not harm the lungs, so it makes no difference", "M_BV_SMOKE_HARMLESS"], ["Smoke only makes food taste better", "M_BV_SMOKE_HARMLESS"], ["Smoke keeps the cold away", "M_BV_COLD_WEATHER"]], "Smoke irritates the nose and lungs and can start coughing and asthma."],
+      ["Which of these is the best way to keep from catching a cold?", "Stay away from people who are coughing, and wash hands", [["Stay out of the rain and the cold wind", "M_BV_COLD_WEATHER"], ["Take antibiotics every day", "M_BV_ANTIBIOTICS"], ["Breathe in smoke to toughen the lungs", "M_BV_SMOKE_HARMLESS"]], "Colds are caused by a virus. Keeping away from the virus and washing hands cut the chance of catching it."],
+      ["Wanjiru has a bad cough that does not go away. What should she do?", "Tell an adult and visit a clinic", [["Take antibiotics from last time", "M_BV_ANTIBIOTICS"], ["Wait, since cold weather caused it", "M_BV_COLD_WEATHER"], ["Cook in a smoky room to clear it", "M_BV_SMOKE_HARMLESS"]], "A cough that lasts needs a health worker. Only they can say what medicine is right."]
+    ], { h: ["Think about how the germs get from one person to the next.", "Weather and antibiotics are not the answer for a cold."], s1: "Choose the action that stops germs or smoke reaching the lungs." })
+  }),
+  sfam({
+    id: "sci5.breath.bv.cause",
+    cs: `${B2}BREATHING_ILLNESS_PREVENTION`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["What causes a common cold?", "A virus that passes between people", [["Cold weather and rain on the body", "M_BV_COLD_WEATHER"], ["Drinking cold water from the tap", "M_BV_COLD_WEATHER"], ["Walking without shoes on the floor", "M_BV_COLD_WEATHER"]], "A cold is caused by a virus. Cold weather can make people stay close indoors, but it does not cause the cold."],
+      ["Juma has a cold. Which of these helps him get better?", "Rest and drinking water", [["Antibiotics, which kill the cold virus", "M_BV_ANTIBIOTICS"], ["Standing in the cold wind outside", "M_BV_COLD_WEATHER"], ["Breathing in smoke from a fire", "M_BV_SMOKE_HARMLESS"]], "Antibiotics do not kill viruses. Rest and water help the body fight the virus."],
+      ["A family cooks on a three-stone fire in a closed room. Which problem is most likely?", "Smoke may cause coughing and asthma attacks", [["None, smoke is harmless to the lungs", "M_BV_SMOKE_HARMLESS"], ["Colds, since smoke is cold air", "M_BV_COLD_WEATHER"], ["Colds, from the wood in the fire", "M_BV_COLD_WEATHER"]], "Smoke irritates the nose and lungs. It can bring on coughs and asthma attacks."],
+      ["Why should a child cover her mouth and nose when she sneezes?", "A sneeze sends germs that others can breathe in", [["Sneezing is harmless to other people", "M_BV_HANDS_NO_MATTER"], ["Sneezing is caused by cold weather", "M_BV_COLD_WEATHER"], ["Sneezing only matters in the rain", "M_BV_COLD_WEATHER"]], "A sneeze can carry germs a long way. Covering stops them from reaching other people."],
+      ["A teacher says antibiotics will cure the whole class's colds. What is wrong with this?", "Colds are caused by viruses, which antibiotics do not kill", [["Nothing, antibiotics cure every illness", "M_BV_ANTIBIOTICS"], ["Colds come from weather, so medicine cannot help", "M_BV_COLD_WEATHER"], ["Antibiotics make the smoke go away", "M_BV_SMOKE_HARMLESS"]], "Antibiotics work on bacteria, not viruses. A cold is caused by a virus."]
+    ], { h: ["Think about what really causes the illness.", "Viruses cause colds. Smoke harms the lungs."], s1: "Find the real cause, then decide what stops it." })
+  })
+];
+
+// src/ai-tutor/content/families/sci_g5_matter.js
+var M4 = "MATTER.MIXTURES.";
+var W2 = "MATTER.WATER_POLLUTION.";
+var FAMILIES15 = [
+  // ---------------------------------------------------------------- MIXTURE_MEANING
+  sfam({
+    id: "sci5.mix.mm.meaning",
+    cs: `${M4}MIXTURE_MEANING`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which sentence best tells what a mixture is?", "Two or more substances put together that can be separated again", [["A new substance made from the parts, which cannot be separated again", "M_MM_CANNOT_BE_UNMIXED"], ["Substances mixed in exactly equal amounts, like a recipe", "M_MM_EQUAL_PARTS"], ["Something that people mix on purpose in a kitchen or workshop", "M_MM_NATURAL_NOT_MIXTURE"]], "In a mixture the substances are only put together. Each keeps its own properties and can be separated."],
+      ["Is air a mixture?", "Yes, it is made of several gases", [["No, air is one single substance", "M_MM_NATURAL_NOT_MIXTURE"], ["No, only things made by people are mixtures", "M_MM_NATURAL_NOT_MIXTURE"], ["No, a mixture needs a liquid in it", "M_MM_NATURAL_NOT_MIXTURE"]], "Air holds nitrogen, oxygen and other gases. They are not joined, so air is a mixture."],
+      ["Is soil a mixture?", "Yes, it holds sand, clay and bits of plants", [["No, soil is only one substance, called earth", "M_MM_NATURAL_NOT_MIXTURE"], ["No, soil was not mixed on purpose by anybody", "M_MM_NATURAL_NOT_MIXTURE"], ["No, the parts of soil are never in equal amounts", "M_MM_EQUAL_PARTS"]], "Soil has sand, clay, water and bits of dead plants. It is a natural mixture."],
+      ["Salt is stirred into water and seems to disappear. What is true about the salt?", "It is still there and can be got back", [["It has gone for ever, into the water", "M_MM_CANNOT_BE_UNMIXED"], ["It has changed into more water", "M_MM_CANNOT_BE_UNMIXED"], ["It is destroyed by the water for good", "M_MM_CANNOT_BE_UNMIXED"]], "The salt is still in the water. If the water dries up, the salt is left behind."],
+      ["One spoon of sand is put in a bucket of water. Is it a mixture?", "Yes, the amounts can be different", [["No, the amounts are not equal", "M_MM_EQUAL_PARTS"], ["No, sand is too small to mix", "M_MM_EQUAL_PARTS"], ["No, a mixture needs two liquids", "M_MM_EQUAL_PARTS"]], "A mixture can have any amounts of its parts. A little sand in a lot of water is still a mixture."]
+    ], { h: ["Think about whether each substance is still there, and can be got back.", "A mixture can be natural and the amounts can be different."], s1: "In a mixture, the substances are only put together." })
+  }),
+  sfam({
+    id: "sci5.mix.mm.back",
+    cs: `${M4}MIXTURE_MEANING`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["In the school kitchen the cook mixes salt into a pot of cold water and stirs. The salt seems to vanish. A learner says it can never be got back. What can you tell her?", "Boil the water away and the salt is left", [["She is right, mixing destroys the salt", "M_MM_CANNOT_BE_UNMIXED"], ["The salt becomes part of the water for good", "M_MM_CANNOT_BE_UNMIXED"], ["Only cooking can bring the salt back", "M_MM_CANNOT_BE_UNMIXED"]], "The salt is still in the water. When the water is boiled away, the salt is left in the pot."],
+      ["Wafula pours sand into a jar of water, shakes it, and leaves it on the shelf overnight. Next day the sand is at the bottom. What does this show?", "The sand and water were only mixed, not joined", [["The sand has turned into mud for good", "M_MM_CANNOT_BE_UNMIXED"], ["The sand was never really in the water", "M_MM_CANNOT_BE_UNMIXED"], ["The water is now one new substance", "M_MM_CANNOT_BE_UNMIXED"]], "The parts of a mixture keep their own properties, so the sand settles and can be separated."],
+      ["Njeri says the air in the classroom is not a mixture because nobody mixed it. Which reply is correct?", "Air is a natural mixture of gases", [["She is right, only people can make mixtures", "M_MM_NATURAL_NOT_MIXTURE"], ["Air is one substance called oxygen", "M_MM_NATURAL_NOT_MIXTURE"], ["A mixture must have a liquid in it", "M_MM_NATURAL_NOT_MIXTURE"]], "Air holds oxygen, nitrogen and other gases, and they are not joined. It is a natural mixture."],
+      ["A farmer finds that the water in the river after heavy rain is brown. He says it is only water with a new colour. What is a better explanation?", "It is a mixture of water and bits of soil", [["It is one new substance called brown water", "M_MM_NATURAL_NOT_MIXTURE"], ["The rain turned into mud", "M_MM_CANNOT_BE_UNMIXED"], ["It is not a mixture, since nobody stirred it", "M_MM_NATURAL_NOT_MIXTURE"]], "Rain washes soil into the river. The brown water is a natural mixture of water and soil."],
+      ["Chebet puts a handful of maize and a handful of beans in a basin. A friend says it is not a mixture because there is more maize. What is right?", "It is a mixture, the amounts do not have to be equal", [["She is right, a mixture needs equal amounts", "M_MM_EQUAL_PARTS"], ["It is not a mixture because maize and beans are different", "M_MM_EQUAL_PARTS"], ["It is a new food made from both", "M_MM_CANNOT_BE_UNMIXED"]], "Any amounts of maize and beans make a mixture. They can be picked apart again."]
+    ], { h: ["Think about whether each substance is changed or only put with the other.", "Ask whether you could get each part back."], s1: "Decide whether the parts are only put together." })
+  }),
+  // ---------------------------------------------------------------- HOMOGENEOUS_OR_HETEROGENEOUS
+  sfam({
+    id: "sci5.mix.mh.type",
+    cs: `${M4}HOMOGENEOUS_OR_HETEROGENEOUS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Salt is dissolved in clear water. What kind of mixture is this?", "Homogeneous: it looks the same all through", [["Heterogeneous: the salt can be seen", "M_MH_DISSOLVED_GONE"], ["Not a mixture: the salt has disappeared", "M_MH_DISSOLVED_GONE"], ["Not a mixture: clear water is pure", "M_MH_CLEAR_IS_PURE"]], "Dissolved salt is spread evenly through the water, so the mixture looks the same all through."],
+      ["Sand is stirred into water. What kind of mixture is this?", "Heterogeneous: the sand settles and can be seen", [["Homogeneous: it looked the same when stirred", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: sand is in every part", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: sand and water are alike", "M_MH_DISSOLVED_GONE"]], "Sand does not dissolve. It settles, and you can see the sand and the water separately."],
+      ["Maize and beans are mixed in a sack. What kind of mixture is this?", "Heterogeneous: both can be seen", [["Homogeneous: they are in the same sack", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: shaking made them look alike", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: both are foods", "M_MH_DISSOLVED_GONE"]], "You can see maize and beans as separate parts, so the mixture is heterogeneous."],
+      ["Sugar is dissolved in a cup of clear tea with no leaves. What kind of mixture is this?", "Homogeneous: it looks the same all through", [["Heterogeneous: sugar and tea are different", "M_MH_DISSOLVED_GONE"], ["Not a mixture: the sugar has gone", "M_MH_DISSOLVED_GONE"], ["Not a mixture: tea is one liquid", "M_MH_CLEAR_IS_PURE"]], "Dissolved sugar is spread evenly through the tea. You cannot see separate parts."],
+      ["Cooking oil is poured onto water. What kind of mixture is this?", "Heterogeneous: the oil floats in a layer", [["Homogeneous: both are liquids", "M_MH_STIRRED_IS_HOMO"], ["Homogeneous: it looks the same after stirring", "M_MH_STIRRED_IS_HOMO"], ["Not a mixture: oil and water are both clear", "M_MH_CLEAR_IS_PURE"]], "Oil does not mix evenly with water. It forms a separate layer that you can see."]
+    ], { h: ["Ask: can I see different parts, or does it look the same all through?", "Dissolved things are still there, even when you cannot see them."], s1: "Look at whether different parts can be seen." })
+  }),
+  sfam({
+    id: "sci5.mix.mh.list",
+    cs: `${M4}HOMOGENEOUS_OR_HETEROGENEOUS`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A teacher asks the class to find mixtures where different parts can be seen. Which list is correct?", "Soil and water, maize and beans, sand and gravel", [["Soil and water, salt in water, sand and gravel", "M_MH_DISSOLVED_GONE"], ["Sugar in tea, maize and beans, sand and gravel", "M_MH_CLEAR_IS_PURE"], ["Soil and water, maize and beans, salty water", "M_MH_DISSOLVED_GONE"]], "Soil and water, maize and beans, and sand and gravel all show separate parts. Salt, sugar and salty water look the same all through."],
+      ["Which list has only mixtures that look the same all through?", "Salt in water, sugar in tea, air", [["Salt in water, sugar in tea, sand in water", "M_MH_STIRRED_IS_HOMO"], ["Salt in water, oil in water, air", "M_MH_STIRRED_IS_HOMO"], ["Maize and beans, sugar in tea, air", "M_MH_STIRRED_IS_HOMO"]], "Salt in water, sugar in tea and air look the same all through. Sand in water and oil in water show different parts."],
+      ["In a school kitchen the cook stirs one cup of muddy water and one cup of sugar water. Which statement is right?", "The muddy water is heterogeneous, the sugar water is homogeneous", [["Both are homogeneous, because both were stirred", "M_MH_STIRRED_IS_HOMO"], ["Both are heterogeneous, because both have two parts", "M_MH_DISSOLVED_GONE"], ["The sugar water is not a mixture at all", "M_MH_CLEAR_IS_PURE"]], "The mud settles and shows separate parts. The sugar is dissolved and looks the same all through."],
+      ["Which list has only heterogeneous mixtures?", "Oil and water, soil in water, rice and stones", [["Oil and water, salt in water, rice and stones", "M_MH_DISSOLVED_GONE"], ["Sugar in tea, soil in water, rice and stones", "M_MH_CLEAR_IS_PURE"], ["Oil and water, soil in water, salty water", "M_MH_DISSOLVED_GONE"]], "In oil and water, soil in water and rice and stones, parts can be seen. Salty water and sugar tea look the same all through."],
+      ["A learner makes four drinks. Which one is a heterogeneous mixture?", "Orange juice with bits of fruit pulp floating in it", [["Sugar dissolved in clear water", "M_MH_DISSOLVED_GONE"], ["Salt dissolved in clear water", "M_MH_DISSOLVED_GONE"], ["Clear tea with sugar and no leaves", "M_MH_CLEAR_IS_PURE"]], "You can see the pulp as a separate part. The clear drinks look the same all through."]
+    ], { h: ["Check each item in the list: can you see different parts?", "Dissolved sugar and salt look the same all through."], s1: "Check every item in each list." })
+  }),
+  sfam({
+    id: "sci5.mix.mh.table",
+    cs: `${M4}HOMOGENEOUS_OR_HETEROGENEOUS`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "The table shows what a class saw in four mixtures. Which one is homogeneous?",
+        "Mixture B",
+        [["Mixture A", "M_MH_STIRRED_IS_HOMO"], ["Mixture C", "M_MH_STIRRED_IS_HOMO"], ["Mixture D", "M_MH_STIRRED_IS_HOMO"]],
+        "Mixture B looks the same all through, so it is homogeneous.",
+        { t: { head: ["Mixture", "What the class saw"], rows: [["Mixture A", "Brown water with soil settling at the bottom"], ["Mixture B", "Clear liquid, the same all through, tastes salty"], ["Mixture C", "Oil in a layer above water"], ["Mixture D", "Stones and sand in a pile"]] } }
+      ],
+      [
+        "Read the table. Which mixture is heterogeneous?",
+        "Mixture C",
+        [["Mixture A", "M_MH_DISSOLVED_GONE"], ["Mixture B", "M_MH_CLEAR_IS_PURE"], ["Mixture D", "M_MH_DISSOLVED_GONE"]],
+        "Mixture C shows two layers, so different parts can be seen.",
+        { t: { head: ["Mixture", "What the class saw"], rows: [["Mixture A", "Clear sugar water, tastes sweet"], ["Mixture B", "Clear salty water"], ["Mixture C", "Water with a layer of oil on top"], ["Mixture D", "Clear tea with sugar, no leaves"]] } }
+      ],
+      [
+        "A learner records four mixtures. Which one is homogeneous?",
+        "Mixture D",
+        [["Mixture A", "M_MH_STIRRED_IS_HOMO"], ["Mixture B", "M_MH_STIRRED_IS_HOMO"], ["Mixture C", "M_MH_STIRRED_IS_HOMO"]],
+        "Mixture D looks the same all through, so it is homogeneous.",
+        { t: { head: ["Mixture", "What she saw"], rows: [["Mixture A", "Muddy water, soil settles after ten minutes"], ["Mixture B", "Maize and beans in a basin"], ["Mixture C", "Sand and iron nails in a tin"], ["Mixture D", "Clear water with dissolved sugar"]] } }
+      ],
+      [
+        "The table shows four mixtures from home. Which mixture is heterogeneous?",
+        "Mixture A",
+        [["Mixture B", "M_MH_DISSOLVED_GONE"], ["Mixture C", "M_MH_CLEAR_IS_PURE"], ["Mixture D", "M_MH_DISSOLVED_GONE"]],
+        "Mixture A has stones you can see in the rice, so it is heterogeneous.",
+        { t: { head: ["Mixture", "What was seen"], rows: [["Mixture A", "Rice with small stones in it"], ["Mixture B", "Salt dissolved in water"], ["Mixture C", "Clear sugar water"], ["Mixture D", "Clear tea with dissolved sugar"]] } }
+      ],
+      [
+        "Four mixtures are described in a table. Which one is homogeneous?",
+        "Mixture B",
+        [["Mixture A", "M_MH_STIRRED_IS_HOMO"], ["Mixture C", "M_MH_STIRRED_IS_HOMO"], ["Mixture D", "M_MH_STIRRED_IS_HOMO"]],
+        "Mixture B has the salt dissolved evenly. It looks the same all through.",
+        { t: { head: ["Mixture", "What was seen"], rows: [["Mixture A", "Sand and water, sand sinks"], ["Mixture B", "Salt dissolved in water, looks clear"], ["Mixture C", "Oil and water in two layers"], ["Mixture D", "Soil and water in a jar"]] } }
+      ]
+    ], { h: ["Read the words about what was seen: are there separate parts?", "Dissolved things look the same all through."], s1: "Look for whether separate parts are described." })
+  }),
+  sfam({
+    id: "sci5.mix.mh.spot",
+    cs: `${M4}HOMOGENEOUS_OR_HETEROGENEOUS`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says salty water is not a mixture. Which step has the mistake?", [["Step 1: Hassan stirs salt into clear water.", true], ["Step 2: He cannot see the salt, so he decides it has gone.", false], ["Step 3: He writes that salty water is only water.", true]], "The salt is still there, but you cannot see it. Salty water is a mixture, and it looks the same all through, so it is homogeneous.", "M_MH_DISSOLVED_GONE"],
+      ["Karimi says muddy water is homogeneous. Which step has the mistake?", [["Step 1: Karimi stirs soil into water.", true], ["Step 2: It looks even brown, so he decides it will stay that way.", false], ["Step 3: He writes that muddy water is homogeneous.", true]], "Stirred muddy water looks even for a short time, but the soil settles. Different parts can be seen, so it is heterogeneous.", "M_MH_STIRRED_IS_HOMO"],
+      ["Zawadi says sugar water is pure water. Which step has the mistake?", [["Step 1: Zawadi dissolves sugar in a glass of clear water.", true], ["Step 2: The water is clear, so she decides it is pure.", false], ["Step 3: She writes that it is pure water.", true]], "Clear does not mean pure. Sugar water tastes sweet because it holds sugar. It is a mixture.", "M_MH_CLEAR_IS_PURE"],
+      ["Mwende says oil and water make a homogeneous mixture. Which step has the mistake?", [["Step 1: Mwende pours oil onto water and shakes the bottle.", true], ["Step 2: It looks even for a moment, so she decides it is homogeneous.", false], ["Step 3: She writes that oil and water are homogeneous.", true]], "After a short time the oil floats in a layer on top. Different parts can be seen, so it is heterogeneous.", "M_MH_STIRRED_IS_HOMO"]
+    ], { h: ["Which step gives a reason that is not true?", "Think about what stays when the mixture is left to stand."], s1: "A homogeneous mixture stays the same all through when left to stand." })
+  }),
+  // ---------------------------------------------------------------- MIXTURE_TYPES
+  sfam({
+    id: "sci5.mix.mt.type",
+    cs: `${M4}MIXTURE_TYPES`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Salt is dissolved in water. What type of mixture is this?", "Solid-liquid", [["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-solid", "M_MT_LOOKS_LIQUID"], ["Liquid-gas", "M_MT_LOOKS_LIQUID"]], "Salt is a solid and water is a liquid, so it is a solid-liquid mixture."],
+      ["Cooking oil and water are mixed. What type of mixture is this?", "Liquid-liquid", [["Solid-liquid", "M_MT_THICK_IS_SOLID"], ["Solid-solid", "M_MT_THICK_IS_SOLID"], ["Gas-liquid", "M_MT_THICK_IS_SOLID"]], "Oil flows, so it is a liquid. Oil and water make a liquid-liquid mixture."],
+      ["Maize and beans are mixed in a sack. What type of mixture is this?", "Solid-solid", [["Solid-liquid", "M_MT_LOOKS_LIQUID"], ["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-gas", "M_MT_LOOKS_LIQUID"]], "Maize and beans are both solids, so this is a solid-solid mixture."],
+      ["Honey is stirred into hot water. What type of mixture is this?", "Liquid-liquid", [["Solid-liquid", "M_MT_THICK_IS_SOLID"], ["Solid-solid", "M_MT_THICK_IS_SOLID"], ["Liquid-gas", "M_MT_THICK_IS_SOLID"]], "Honey is thick but it flows, so it is a liquid. It makes a liquid-liquid mixture with water."],
+      ["Soil is mixed with water. What type of mixture is this?", "Solid-liquid", [["Liquid-liquid", "M_MT_LOOKS_LIQUID"], ["Solid-solid", "M_MT_LOOKS_LIQUID"], ["Gas-liquid", "M_MT_LOOKS_LIQUID"]], "Soil is a solid and water is a liquid. The mixture is solid-liquid."]
+    ], { h: ["Name the state of each part before they were mixed.", "A thick liquid, such as oil or honey, still flows."], s1: "Name the state of each part: solid, liquid or gas." })
+  }),
+  sfam({
+    id: "sci5.mix.mt.sort",
+    cs: `${M4}MIXTURE_TYPES`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A teacher asks for solid-liquid mixtures. Which list has only solid-liquid mixtures?", "Sand in water, salt in water, tea leaves in tea", [["Sand in water, oil in water, tea leaves in tea", "M_MT_THICK_IS_SOLID"], ["Sand in water, salt in water, maize and beans", "M_MT_LOOKS_LIQUID"], ["Milk in water, salt in water, tea leaves in tea", "M_MT_LOOKS_LIQUID"]], "In each of these a solid is mixed with a liquid. Oil, milk and water are liquids, and maize and beans are solids."],
+      ["Which list has only liquid-liquid mixtures?", "Oil and water, milk and water, vinegar and water", [["Oil and water, salt and water, vinegar and water", "M_MT_LOOKS_LIQUID"], ["Oil and water, milk and water, soil and water", "M_MT_THICK_IS_SOLID"], ["Maize and water, milk and water, vinegar and water", "M_MT_THICK_IS_SOLID"]], "Oil, milk, vinegar and water are all liquids. Salt, soil and maize are solids."],
+      ["Which list has only solid-solid mixtures?", "Maize and beans, sand and gravel, rice and stones", [["Maize and beans, sand and water, rice and stones", "M_MT_LOOKS_LIQUID"], ["Maize and beans, sand and gravel, honey and sand", "M_MT_THICK_IS_SOLID"], ["Salt in water, sand and gravel, rice and stones", "M_MT_LOOKS_LIQUID"]], "Each of these has two solids. Water and honey are liquids."],
+      ["Wanjiru sorts the mixtures in her kitchen. Where does she put sugar dissolved in tea?", "Solid-liquid", [["Liquid-liquid, because tea looks like a liquid after mixing", "M_MT_LOOKS_LIQUID"], ["Solid-solid, because sugar is a solid", "M_MT_LOOKS_LIQUID"], ["Liquid-gas, because tea gives off steam", "M_MT_LOOKS_LIQUID"]], "Sugar is a solid and tea is a liquid. The type depends on the parts before they were mixed."],
+      ["A farmer mixes a litre of cooking oil into a bucket of water. Under which heading does it belong?", "Liquid-liquid", [["Solid-liquid, because oil is thick", "M_MT_THICK_IS_SOLID"], ["Solid-solid, because both look smooth", "M_MT_THICK_IS_SOLID"], ["Liquid-gas, because oil has a smell", "M_MT_THICK_IS_SOLID"]], "Oil is a thick liquid. Oil and water make a liquid-liquid mixture."]
+    ], { h: ["Decide whether each part is a solid, a liquid or a gas.", "The type depends on what the parts were before mixing."], s1: "List the state of each part in every mixture." })
+  }),
+  // ---------------------------------------------------------------- SEPARATION_METHOD_CHOICE
+  sfam({
+    id: "sci5.mix.ms.method",
+    cs: `${M4}SEPARATION_METHOD_CHOICE`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which method separates stones from rice?", "Picking", [["Filtering", "M_MS_FILTER_FOR_ALL"], ["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "Stones in rice are easy to see and to pick out by hand. Filtering is for solids in a liquid."],
+      ["Which method separates soil from muddy water?", "Filtering", [["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"], ["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Picking with the hand", "M_MS_FILTER_FOR_ALL"]], "Filter paper or cloth lets the water through and keeps the soil back."],
+      ["Which method separates cooking oil from water?", "Using a separating funnel", [["Filtering", "M_MS_FILTER_FOR_ALL"], ["Sieving", "M_MS_FILTER_FOR_ALL"], ["Winnowing", "M_MS_FILTER_FOR_ALL"]], "Oil floats on water. A separating funnel lets the water run out of the tap first."],
+      ["Which method takes iron nails out of sand?", "Using a magnet", [["Filtering", "M_MS_FILTER_FOR_ALL"], ["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"], ["Decanting", "M_MS_FILTER_FOR_ALL"]], "A magnet attracts iron. It pulls the nails out and leaves the sand."],
+      ["Which method separates chaff from maize grain after harvest?", "Winnowing", [["Using a magnet", "M_MS_MAGNET_ANY_METAL"], ["Filtering", "M_MS_FILTER_FOR_ALL"], ["Using a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "Wind blows the light chaff away and the heavier grain falls."]
+    ], { h: ["Think about how the parts of the mixture are different: size, weight, iron or liquid.", "Filtering is for a solid mixed in a liquid."], s1: "Find what is different about the parts and choose the method that uses it." })
+  }),
+  sfam({
+    id: "sci5.mix.ms.story",
+    cs: `${M4}SEPARATION_METHOD_CHOICE`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A jua kali worker has a box with iron nails and aluminium bits mixed together. He wants only the nails. What can a magnet do?", "Pick out the iron nails and leave the aluminium", [["Pick out both the nails and the aluminium", "M_MS_MAGNET_ANY_METAL"], ["Pick out only the aluminium", "M_MS_MAGNET_ANY_METAL"], ["Pick out nothing, since metals are not magnetic", "M_MS_MAGNET_ANY_METAL"]], "A magnet picks up iron and steel. It does not pick up aluminium."],
+      ["After a class experiment, a learner has a jar with cooking oil floating on water. Which tool should she use to separate them?", "A separating funnel", [["A piece of filter paper", "M_MS_FILTER_FOR_ALL"], ["A sieve with big holes", "M_MS_FILTER_FOR_ALL"], ["A magnet", "M_MS_MAGNET_ANY_METAL"]], "The two liquids do not mix. A separating funnel lets the lower liquid run out first."],
+      ["A mother wants to take out the big husks from a basin of maize flour before cooking ugali. What should she use?", "A sieve", [["A separating funnel", "M_MS_FUNNEL_SOLIDS"], ["A magnet", "M_MS_MAGNET_ANY_METAL"], ["Filter paper and water", "M_MS_FILTER_FOR_ALL"]], "The fine flour falls through the holes of a sieve and the big husks stay on it."],
+      ["Mutua has a bucket of dirty water with soil in it. He has a clean cloth. What should he do first to take out the soil?", "Pour the water through the cloth", [["Use a magnet over the bucket", "M_MS_MAGNET_ANY_METAL"], ["Open the tap of a separating funnel", "M_MS_FUNNEL_SOLIDS"], ["Pick the soil out by hand", "M_MS_FILTER_FOR_ALL"]], "Filtering through a cloth lets the water through and holds the soil back."],
+      ["At harvest a family tosses maize from a basin into the wind. What are they separating, and how?", "Chaff from grain, by winnowing", [["Iron from grain, with a magnet", "M_MS_MAGNET_ANY_METAL"], ["Water from grain, by filtering", "M_MS_FILTER_FOR_ALL"], ["Oil from grain, with a separating funnel", "M_MS_FUNNEL_SOLIDS"]], "The light chaff blows away and the heavier grain falls back into the basin."]
+    ], { h: ["Think about what is different about the parts of the mixture.", "A magnet picks up only iron and steel."], s1: "Match the difference between the parts to a method." })
+  }),
+  sfam({
+    id: "sci5.mix.ms.why",
+    cs: `${M4}SEPARATION_METHOD_CHOICE`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["Why will a sieve not separate salt dissolved in water?", "Dissolved salt is in tiny pieces that pass through", [["Salt is much too big to fit through the holes", "M_MS_FILTER_FOR_ALL"], ["A sieve only works on liquids and not on solids", "M_MS_FILTER_FOR_ALL"], ["Salt is magnetic so it sticks to the sieve", "M_MS_MAGNET_ANY_METAL"]], "Dissolved salt is broken into tiny pieces that go through any sieve or filter."],
+      ["Why is a magnet no use for separating sand and salt?", "Neither of them is attracted by a magnet", [["A magnet only works on liquids and not on solids", "M_MS_MAGNET_ANY_METAL"], ["Sand and salt are both kinds of metal", "M_MS_MAGNET_ANY_METAL"], ["A magnet always works, but it takes a long time", "M_MS_MAGNET_ANY_METAL"]], "A magnet attracts only iron, steel and a few other metals. Sand and salt are not metals."],
+      ["Why is a separating funnel the wrong tool for sand in water?", "It is for liquids that do not mix, not for solids", [["It only works on solids that are dissolved in water", "M_MS_FUNNEL_SOLIDS"], ["The sand would be pulled out through the tap by the water", "M_MS_FUNNEL_SOLIDS"], ["It works on any mixture that has a liquid in it", "M_MS_FUNNEL_SOLIDS"]], "A separating funnel separates two liquids that do not mix, such as oil and water."],
+      ["Why does picking not work for separating muddy water?", "The soil is too fine and spread through the water", [["Water cannot be picked up by hand like stones can be", "M_MS_FILTER_FOR_ALL"], ["Picking works but only if you use a magnet or a sieve", "M_MS_MAGNET_ANY_METAL"], ["Filtering cannot work at all on muddy water or soil", "M_MS_FILTER_FOR_ALL"]], "Soil bits in muddy water are too small to pick out. Filtering holds them back."],
+      ["Why is filtering not the best way to take stones out of rice?", "Filtering is for solids in a liquid; here both are solids", [["Rice would be caught in the filter and wasted by it", "M_MS_FILTER_FOR_ALL"], ["Stones dissolve in water and cannot be seen", "M_MS_FILTER_FOR_ALL"], ["A filter works only on oil and other liquids", "M_MS_FUNNEL_SOLIDS"]], "Stones in rice can be picked out or sieved. Filtering needs a liquid to carry the small bits through."]
+    ], { h: ["Think about what the method uses: size, weight, magnetism or a liquid.", "Check whether the method fits the parts of the mixture."], s1: "State what the method needs, then check the mixture." })
+  }),
+  // ---------------------------------------------------------------- SEPARATION_PRINCIPLE
+  sfam({
+    id: "sci5.mix.mp.what",
+    cs: `${M4}SEPARATION_PRINCIPLE`,
+    form: "direct",
+    rung: 2,
+    gen: choose([
+      ["Salty water is poured through filter paper. What comes through the paper?", "Water with the salt still dissolved in it", [["Only pure water", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Only salt", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Nothing at all", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved salt is in tiny pieces that go through the paper with the water."],
+      ["When grain is winnowed, what does the wind blow away?", "The lighter chaff", [["The heavier grain", "M_MP_WINNOW_REVERSED"], ["Both equally", "M_MP_WINNOW_REVERSED"], ["Neither one", "M_MP_WINNOW_REVERSED"]], "The wind blows away the light chaff. The heavier grain falls straight down."],
+      ["Maize flour with husks is passed through a sieve. What stays on top?", "The big husks", [["The fine flour", "M_MP_SIEVE_REVERSED"], ["Both stay on top", "M_MP_SIEVE_REVERSED"], ["Nothing stays on top", "M_MP_SIEVE_REVERSED"]], "The holes let the fine flour fall through. The big husks cannot fit through."],
+      ["Muddy water is filtered through a cloth. What stays on the cloth?", "Bits of soil that are too big to pass", [["The water", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Dissolved salts", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Nothing at all", "M_MP_FILTER_REMOVES_DISSOLVED"]], "The cloth lets the water through and holds back the bits of soil that are too big."],
+      ["Sugar is dissolved in water and the mixture is filtered. Where is the sugar afterwards?", "In the water that has gone through", [["Left on the filter paper", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Gone for ever", "M_MP_FILTER_REMOVES_DISSOLVED"], ["At the bottom of the funnel only", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved sugar goes through the filter with the water."]
+    ], { h: ["Think about the size or the weight of the pieces.", "Dissolved things are in tiny pieces."], s1: "Think about what is different about the pieces." })
+  }),
+  sfam({
+    id: "sci5.mix.mp.cause",
+    cs: `${M4}SEPARATION_PRINCIPLE`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["A family winnows maize on a windy day. Why does the chaff blow away but the grain does not?", "The chaff is lighter than the grain", [["The chaff is heavier than the grain", "M_MP_WINNOW_REVERSED"], ["The grain is lighter than the chaff", "M_MP_WINNOW_REVERSED"], ["The wind chooses what to blow", "M_MP_WINNOW_REVERSED"]], "Light things are blown away by the wind. The heavier grain falls down."],
+      ["Wanjiru sieves flour and finds husks left on the sieve. Why did the husks stay on it?", "The husks are bigger than the holes", [["The husks are smaller than the holes", "M_MP_SIEVE_REVERSED"], ["The husks are lighter than the flour", "M_MP_SIEVE_REVERSED"], ["The holes catch small things", "M_MP_SIEVE_REVERSED"]], "A sieve lets pieces smaller than its holes go through. Bigger pieces stay on top."],
+      ["A learner filters salty water and tastes it. It is still salty. Why?", "Dissolved salt is in tiny pieces that go through the paper", [["The filter was dirty", "M_MP_FILTER_REMOVES_DISSOLVED"], ["The salt was too big for the paper to catch", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Filter paper adds salt to the water", "M_MP_FILTER_REMOVES_DISSOLVED"]], "Dissolved salt is much smaller than the holes in filter paper. It goes through with the water."],
+      ["Muddy water stands in a bucket for an hour. The soil sinks to the bottom. How can the water above be separated from the soil?", "Pour the water off gently", [["Use a magnet over the bucket", "M_MP_FILTER_REMOVES_DISSOLVED"], ["Pour it through a sieve for flour", "M_MP_SIEVE_REVERSED"], ["Winnow the bucket in the wind", "M_MP_WINNOW_REVERSED"]], "This is decanting. The soil has settled, so the water above can be poured off."],
+      ["Which statement explains why a magnet can separate iron nails from sand?", "The magnet attracts iron but not sand", [["The magnet attracts everything but sand is too heavy", "M_MP_WINNOW_REVERSED"], ["The magnet pushes the sand away", "M_MP_SIEVE_REVERSED"], ["The magnet makes the nails dissolve", "M_MP_FILTER_REMOVES_DISSOLVED"]], "A magnet only attracts iron and steel. The sand is not attracted, so it stays behind."]
+    ], { h: ["Think about size, weight or magnetism: which property is different?", "Dissolved things pass through a filter."], s1: "Name the property that the method uses." })
+  }),
+  sfam({
+    id: "sci5.mix.mp.spot",
+    cs: `${M4}SEPARATION_PRINCIPLE`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan explains why filtering will separate salt from salty water. Which step has the mistake?", [["Step 1: Hassan pours salty water into filter paper.", true], ["Step 2: He says the paper holds the salt back.", false], ["Step 3: He says only pure water drips through.", true]], "Dissolved salt is in tiny pieces that go through the paper with the water. Filtering cannot take out dissolved things.", "M_MP_FILTER_REMOVES_DISSOLVED"],
+      ["Karimi explains winnowing. Which step has the mistake?", [["Step 1: Karimi tosses grain and chaff into the wind.", true], ["Step 2: He says the wind blows the heavy grain away.", false], ["Step 3: He says the chaff is left in the basin.", true]], "The wind blows away the light chaff. The heavy grain falls back into the basin.", "M_MP_WINNOW_REVERSED"],
+      ["Zawadi explains sieving flour. Which step has the mistake?", [["Step 1: Zawadi shakes flour with husks in a sieve.", true], ["Step 2: She says the big husks fall through the holes.", false], ["Step 3: She says the fine flour stays on top.", true]], "Small pieces fall through the holes. The big husks stay on top.", "M_MP_SIEVE_REVERSED"],
+      ["Mwende explains how to get clean water. Which step has the mistake?", [["Step 1: Mwende filters sugar water through a cloth.", true], ["Step 2: She says the sugar is caught on the cloth.", false], ["Step 3: She says the water is now only water.", true]], "Dissolved sugar goes through the cloth with the water. The water is still sweet.", "M_MP_FILTER_REMOVES_DISSOLVED"]
+    ], { h: ["Which step says something that is not true about the method?", "Think about which pieces are small enough to go through."], s1: "Check each step against what the method really does." })
+  }),
+  // ---------------------------------------------------------------- SEPARATION_USES
+  sfam({
+    id: "sci5.mix.mu.use",
+    cs: `${M4}SEPARATION_USES`,
+    form: "word",
+    rung: 1,
+    gen: choose([
+      ["A grandmother strains tea through a small sieve into the cups. Which method is she using?", "Sieving or filtering, to hold back the tea leaves", [["Winnowing, to blow the leaves out of the cup", "M_MU_ONLY_LAB"], ["A magnet, to pick the tea leaves out of the cup", "M_MU_ONLY_LAB"], ["A separating funnel, to separate two liquids", "M_MU_ONLY_LAB"]], "The strainer lets the liquid through and holds the tea leaves back."],
+      ["Where do people separate mixtures?", "At home, on farms and at work as well as in labs", [["Only in a science laboratory with special tools", "M_MU_ONLY_LAB"], ["Only in big factories that make food or goods", "M_MU_ONLY_LAB"], ["Only in schools, by teachers and learners", "M_MU_ONLY_LAB"]], "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain."],
+      ["A scrap metal dealer at a jua kali workshop wants to take iron out of a heap of mixed waste. What can help?", "A strong magnet, which picks up iron", [["A sieve, which keeps small pieces", "M_MU_ONLY_LAB"], ["A funnel, which pours liquids", "M_MU_ONLY_LAB"], ["Winnowing, which blows light things away", "M_MU_ONLY_LAB"]], "A magnet picks up iron and steel from a heap of mixed waste."],
+      ["A builder wants fine sand for plastering and has a heap of sand and small stones. Which job does he need to do?", "Sieve the heap and keep what falls through", [["Filter the heap with paper and some water", "M_MU_FILTER_IS_SAFE"], ["Use a magnet to pull the sand out of the heap", "M_MU_ONLY_LAB"], ["Pour the heap through a funnel into a bottle", "M_MU_ONLY_LAB"]], "A sieve lets fine sand fall through and holds back the stones."],
+      ["A family pours muddy rainwater through a clean cloth before using it for washing. Which statement is correct?", "It holds back soil but does not make water safe", [["The water is now safe to drink right away", "M_MU_FILTER_IS_SAFE"], ["The cloth takes out all the germs in the water", "M_MU_FILTER_IS_SAFE"], ["This only works in a laboratory with special cloth", "M_MU_ONLY_LAB"]], "The cloth takes out the bits of soil you can see. Germs and dissolved things pass through."]
+    ], { h: ["Think about the job and what is different about the parts.", "Filtering does not make water safe to drink."], s1: "Match the job to the method that fits it." })
+  }),
+  sfam({
+    id: "sci5.mix.mu.odd",
+    cs: `${M4}SEPARATION_USES`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Which of these is not an example of separating a mixture?", "Stirring sugar into tea", [["Straining tea leaves from tea", "M_MU_ONLY_LAB"], ["Picking stones from beans", "M_MU_ONLY_LAB"], ["Sieving flour to take out husks", "M_MU_ONLY_LAB"]], "Stirring sugar into tea makes a mixture. The other three take the parts of a mixture apart."],
+      ["Which job is an example of separating a mixture in a Kenyan home?", "Picking stones out of rice before cooking", [["Adding salt to the ugali", "M_MU_ONLY_LAB"], ["Mixing flour and water for chapati", "M_MU_ONLY_LAB"], ["Boiling milk for tea", "M_MU_ONLY_LAB"]], "Picking stones out of rice takes apart a mixture. The other jobs make mixtures or heat food."],
+      ["Where is winnowing done?", "On a farm after harvest, in the wind", [["Only in a laboratory with a machine", "M_MU_ONLY_LAB"], ["Only in a river", "M_MU_ONLY_LAB"], ["Only in a school kitchen", "M_MU_ONLY_LAB"]], "Farmers winnow grain after harvest, using the wind to blow away the chaff."],
+      ["A mechanic collects iron nails from a heap of dirt in his workshop. What does he use?", "A magnet", [["A funnel and a cup of water", "M_MU_ONLY_LAB"], ["A sieve with very fine holes only", "M_MU_ONLY_LAB"], ["Filter paper", "M_MU_FILTER_IS_SAFE"]], "A magnet picks up the iron nails and leaves the dirt behind."],
+      ["A school gets drinking water from a stream and filters it through cloth. Why must it also be boiled?", "Germs pass through the cloth and boiling kills them", [["The cloth removes the germs so boiling is not needed", "M_MU_FILTER_IS_SAFE"], ["Boiling only makes the water hot", "M_MU_FILTER_IS_SAFE"], ["Filtering only works in a laboratory", "M_MU_ONLY_LAB"]], "Germs are too small to be held back by cloth. Boiling kills them."]
+    ], { h: ["Think about which action takes a mixture apart.", "Filtering takes out soil but not germs."], s1: "Ask whether the action takes the parts of a mixture apart." })
+  }),
+  // ---------------------------------------------------------------- POLLUTANT_IDENTIFY
+  sfam({
+    id: "sci5.water.wp.which",
+    cs: `${W2}POLLUTANT_IDENTIFY`,
+    form: "word",
+    rung: 1,
+    gen: choose([
+      ["Wanjiru and her mother wash clothes at the river bank. Which thing from this job pollutes the water?", "Soap and dirty washing water", [["Rain falling into the river", "M_WP_HELPFUL_THINGS_SAFE"], ["Clean water from a spring", "M_WP_ONLY_VISIBLE"], ["Fish swimming in the river", "M_WP_ONLY_FACTORIES"]], "Soap and dirty water can harm fish and make water unsafe to use."],
+      ["A garage in town pours used engine oil into a drain that goes to a stream. What is the oil in the stream?", "A water pollutant", [["Clean rainwater that is clear", "M_WP_ONLY_VISIBLE"], ["Fresh spring water for fish", "M_WP_ONLY_VISIBLE"], ["A river stone that is smooth", "M_WP_ONLY_FACTORIES"]], "Oil floats on water and harms animals and plants."],
+      ["After heavy rain, extra fertiliser from a maize shamba is washed into a pond. What is the fertiliser in the pond?", "A water pollutant", [["Clear water from a borehole", "M_WP_ONLY_VISIBLE"], ["Sand at the pond bed", "M_WP_HELPFUL_THINGS_SAFE"], ["Air bubbles in the pond", "M_WP_ONLY_VISIBLE"]], "Fertiliser helps crops, but in a pond it can make algae grow and harm fish."],
+      ["Children throw plastic bags into a drain near the market. Where may the bags end up, and what do they do?", "In the river, where they block water and harm animals", [["In the sky, where they do no harm", "M_WP_ONLY_VISIBLE"], ["In the soil, where they become food", "M_WP_HELPFUL_THINGS_SAFE"], ["In the river, where they clean the water", "M_WP_HELPFUL_THINGS_SAFE"]], "Plastic does not rot. It blocks drains and harms animals in the water."],
+      ["A latrine has been dug right at the bank of a stream. What can happen to the stream water?", "Waste can seep into it and spread germs", [["Nothing, since the latrine is a pit", "M_WP_ONLY_FACTORIES"], ["It stays clean, since waste sinks", "M_WP_ONLY_VISIBLE"], ["It becomes cleaner as the waste feeds fish", "M_WP_HELPFUL_THINGS_SAFE"]], "Waste from a latrine near water carries germs into the water."]
+    ], { h: ["Think about what harms the living things in the water.", "Clean rain and spring water are not pollutants."], s1: "Pick the thing that makes water unsafe or harms living things." })
+  }),
+  sfam({
+    id: "sci5.water.wp.who",
+    cs: `${W2}POLLUTANT_IDENTIFY`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["The water in a stream looks clear. Does that mean it is not polluted?", "No, germs and chemicals cannot be seen", [["Yes, clear water cannot be polluted", "M_WP_ONLY_VISIBLE"], ["Yes, pollution always has a colour", "M_WP_ONLY_VISIBLE"], ["Yes, it is clear so it is safe to drink", "M_WP_ONLY_VISIBLE"]], "Many germs and chemicals cannot be seen. Clear water can still be polluted."],
+      ["Which of these can pollute a river?", "Factory pipes, bank washing and latrines", [["Only a factory pipe pouring out waste", "M_WP_ONLY_FACTORIES"], ["Only oil leaking from big ships at sea", "M_WP_ONLY_FACTORIES"], ["Nothing, rivers always clean themselves", "M_WP_ONLY_FACTORIES"]], "Homes, shambas and schools pollute water too, not only factories."],
+      ["A farmer says fertiliser cannot pollute water because it helps plants grow. What is wrong with this?", "Rain can wash it into a river and harm fish", [["Nothing, helpful things cannot harm anyone", "M_WP_HELPFUL_THINGS_SAFE"], ["Fertiliser is only harmful when it is dry", "M_WP_HELPFUL_THINGS_SAFE"], ["Fertiliser makes rivers cleaner for fish", "M_WP_HELPFUL_THINGS_SAFE"]], "Useful things can pollute when they get into water in the wrong place."],
+      ["Wambui says soap cannot pollute because it makes things clean. What can you tell her?", "Soap in a river can harm fish and water plants", [["She is right, soap is always clean and safe", "M_WP_HELPFUL_THINGS_SAFE"], ["Soap only harms people who drink the water", "M_WP_HELPFUL_THINGS_SAFE"], ["Soap makes the river clearer and cleaner for fish", "M_WP_HELPFUL_THINGS_SAFE"]], "Soap cleans clothes, but it harms living things in the water."],
+      ["Which statement is true about water pollution?", "Homes, farms and schools can all pollute water", [["Only big companies and mines pollute water", "M_WP_ONLY_FACTORIES"], ["Only things you can see in the water pollute it", "M_WP_ONLY_VISIBLE"], ["Useful things like soap never pollute water", "M_WP_HELPFUL_THINGS_SAFE"]], "Waste from homes, shambas and schools can all reach rivers and wells."]
+    ], { h: ["Think about who and what can put waste into water.", "Looks, size of the polluter and usefulness do not decide."], s1: "Check the reason: is it about what harms living things?" })
+  }),
+  // ---------------------------------------------------------------- POLLUTION_EFFECTS
+  sfam({
+    id: "sci5.water.we.effect",
+    cs: `${W2}POLLUTION_EFFECTS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Oil spills into a river. What happens to the fish?", "Many fish may die or fall ill", [["Nothing, pollution only harms people", "M_WE_ONLY_PEOPLE"], ["The fish grow faster", "M_WE_ONLY_PEOPLE"], ["The fish drink the oil and are cleaned", "M_WE_ONLY_PEOPLE"]], "Oil covers the water and harms fish and other animals."],
+      ["A factory dumps waste into a river. Who may be harmed?", "People and animals living further down the river", [["Only the people who live next to the factory", "M_WE_UPSTREAM_ONLY"], ["Nobody, since the river is so big and wide", "M_WE_UPSTREAM_ONLY"], ["Only the people who work inside the factory", "M_WE_UPSTREAM_ONLY"]], "A river carries pollution with the water, so people far downstream can be harmed."],
+      ["Which illness can be caused by drinking polluted water?", "Diarrhoea, cholera or typhoid", [["A broken bone in the leg", "M_WE_ONLY_PEOPLE"], ["A sunburn from the sun", "M_WE_BAD_TASTE_ONLY"], ["A sprained ankle from a fall", "M_WE_BAD_TASTE_ONLY"]], "Germs in polluted water cause diarrhoea, cholera and typhoid."],
+      ["Water from a stream smells and tastes fine. Is it safe to drink?", "Not necessarily; it can still hold germs", [["Yes, it has no smell or taste at all", "M_WE_BAD_TASTE_ONLY"], ["Yes, since pollution always smells bad", "M_WE_BAD_TASTE_ONLY"], ["Yes, because germs can be tasted in water", "M_WE_BAD_TASTE_ONLY"]], "Germs have no taste or smell. Water can look and taste fine and still make you ill."],
+      ["Too much fertiliser washes into a pond and the water turns green with algae. What can happen to the fish?", "Many fish may die for lack of oxygen", [["The fish eat the algae and grow bigger", "M_WE_ONLY_PEOPLE"], ["Nothing, pollution only harms people", "M_WE_ONLY_PEOPLE"], ["The fish move to the green water", "M_WE_ONLY_PEOPLE"]], "Too much algae uses up the oxygen in the water, so fish cannot breathe."]
+    ], { h: ["Think about who is harmed: people, animals and plants, near and far.", "Pollution travels with moving water."], s1: "Think of all the living things that use the water." })
+  }),
+  sfam({
+    id: "sci5.water.we.story",
+    cs: `${W2}POLLUTION_EFFECTS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["A village gets its water from a river. Last week a mine upstream let waste into it. Today many children in the village have stomach pains. What is the most likely reason?", "The polluted river water made them ill", [["The children ate too much sugar", "M_WE_BAD_TASTE_ONLY"], ["The river water is only harmful where the mine is", "M_WE_UPSTREAM_ONLY"], ["Pollution only harms animals, not children", "M_WE_ONLY_PEOPLE"]], "A river carries waste downstream, and polluted water can make people ill far away."],
+      ["Near a lake, a hotel pours dirty water into the shallows. After some weeks many dead fish float near the shore. What does this show?", "Pollution harms animals as well as people", [["The fish died because they were too old", "M_WE_ONLY_PEOPLE"], ["Pollution harms only people, so the fish died for another reason", "M_WE_ONLY_PEOPLE"], ["The dirty water cannot reach the fish", "M_WE_UPSTREAM_ONLY"]], "Fish live in the water. When it is polluted, they can die."],
+      ["A family collects water from a stream. It looks and tastes fine, but one week the baby gets diarrhoea. What may have happened?", "The water held germs that cannot be seen or tasted", [["The water was clear, so it cannot be to blame", "M_WE_BAD_TASTE_ONLY"], ["The baby drank too little water", "M_WE_BAD_TASTE_ONLY"], ["Only factory waste can cause diarrhoea", "M_WE_ONLY_PEOPLE"]], "Germs from waste can be in clear water. They cause diarrhoea and cholera."],
+      ["The maize leaves near a stream turn yellow after the stream is polluted with strong chemicals. Why?", "The polluted water harmed the plants", [["Pollution only harms animals", "M_WE_ONLY_PEOPLE"], ["The plants were too close to people", "M_WE_ONLY_PEOPLE"], ["The chemicals only harm the fish", "M_WE_ONLY_PEOPLE"]], "Polluted water can harm plants that take it up through their roots."],
+      ["A town spends a large sum of money treating river water before it is safe to drink. Which effect of pollution is this?", "It costs money to make polluted water safe", [["Pollution has no effect on people", "M_WE_ONLY_PEOPLE"], ["Pollution makes water cheaper", "M_WE_BAD_TASTE_ONLY"], ["Pollution only matters near factories", "M_WE_UPSTREAM_ONLY"]], "Treating polluted water takes chemicals and machines, which cost money."]
+    ], { h: ["Think about who uses the water: people, animals and plants.", "Germs have no smell or taste."], s1: "Name who is harmed and how the pollution reached them." })
+  }),
+  // ---------------------------------------------------------------- POLLUTION_PREVENTION
+  sfam({
+    id: "sci5.water.wr.action",
+    cs: `${W2}POLLUTION_PREVENTION`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which action helps to keep a river clean?", "Throwing rubbish in a pit, far from the water", [["Throwing rubbish into the river", "M_WR_RIVER_WASHES_AWAY"], ["Washing clothes in the river", "M_WR_WASH_IN_RIVER"], ["Digging a latrine next to the river", "M_WR_LATRINE_NEAR_WELL"]], "Rubbish in a pit stays away from the water."],
+      ["Where is the best place to dig a latrine?", "Far from the well and the river", [["Next to the well, so it is easy to reach", "M_WR_LATRINE_NEAR_WELL"], ["Beside the river, so waste is carried away", "M_WR_RIVER_WASHES_AWAY"], ["Under the tree next to the well", "M_WR_LATRINE_NEAR_WELL"]], "Waste from a latrine can seep through the soil into wells and rivers."],
+      ["Where should a family wash clothes to keep a stream clean?", "Away from the stream, pouring used water on the ground", [["In the stream, because soap washes away", "M_WR_WASH_IN_RIVER"], ["At the edge of the stream, with a little soap", "M_WR_WASH_IN_RIVER"], ["In the stream, if the water is big", "M_WR_RIVER_WASHES_AWAY"]], "Soap and dirt harm fish and make the water unsafe for others."],
+      ["What is a good way to protect the bank of a river?", "Plant trees and grass along it", [["Cut down the trees along the bank", "M_WR_RIVER_WASHES_AWAY"], ["Wash cars on the bank", "M_WR_WASH_IN_RIVER"], ["Build a latrine on the bank", "M_WR_LATRINE_NEAR_WELL"]], "Roots hold the soil and plants along a bank filter the water that runs into the river."],
+      ["A farmer uses too much pesticide on his shamba near a stream. What should he do to protect the stream?", "Use less pesticide and keep it away from the water", [["Pour the extra into the stream", "M_WR_RIVER_WASHES_AWAY"], ["Use more, since rain washes it away", "M_WR_RIVER_WASHES_AWAY"], ["Wash the sprayer in the stream", "M_WR_WASH_IN_RIVER"]], "Pesticides can reach the stream and harm fish. Using less, and keeping it away from the water, helps."]
+    ], { h: ["Think about keeping waste and chemicals away from the water.", "A big river does not make waste disappear."], s1: "Choose the action that keeps waste away from the water." })
+  }),
+  sfam({
+    id: "sci5.water.wr.why",
+    cs: `${W2}POLLUTION_PREVENTION`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ['Kamau says, "The river is big, so one bag of rubbish does no harm." What is wrong with this?', "The waste spreads and harms others downstream", [["Nothing, a big river washes it all away", "M_WR_RIVER_WASHES_AWAY"], ["Nothing, rubbish dissolves in a big river", "M_WR_RIVER_WASHES_AWAY"], ["Nothing, only factories pollute rivers", "M_WR_RIVER_WASHES_AWAY"]], "A river carries waste away to other places, where it still harms."],
+      ["Why should a latrine be dug far from a well?", "Waste can seep through the soil into the well", [["Latrines smell too much near wells", "M_WR_LATRINE_NEAR_WELL"], ["Wells make latrines fill up faster", "M_WR_LATRINE_NEAR_WELL"], ["There is no reason, it is only a custom", "M_WR_LATRINE_NEAR_WELL"]], "Germs from a latrine can travel through the soil to the well water."],
+      ["Why is it better to wash clothes at home and pour the used water on the ground?", "Soap and dirt stay out of the stream", [["The stream is too cold for washing", "M_WR_WASH_IN_RIVER"], ["Soap does no harm in a river", "M_WR_WASH_IN_RIVER"], ["Stream water is too dirty for washing", "M_WR_WASH_IN_RIVER"]], "Soap and dirt harm fish and make the stream unsafe for others to use."],
+      ["Why do trees and grass planted along a river bank help the river?", "They hold soil and stop mud washing in", [["They make the river water warmer", "M_WR_RIVER_WASHES_AWAY"], ["They carry the rubbish far away", "M_WR_RIVER_WASHES_AWAY"], ["They give the river extra water", "M_WR_RIVER_WASHES_AWAY"]], "Roots hold the soil, so less mud and waste run into the water."],
+      ["A school wants to protect its stream. Which plan is best?", "Use bins, keep latrines far off, plant grass", [["Wash the school uniforms in the stream every week", "M_WR_WASH_IN_RIVER"], ["Throw the bin waste into the stream", "M_WR_RIVER_WASHES_AWAY"], ["Dig the new latrine next to the stream", "M_WR_LATRINE_NEAR_WELL"]], "Keeping waste and chemicals away from the water, and planting the bank, protects the stream."]
+    ], { h: ["Think about where the waste goes after it leaves you.", "A big river carries waste, it does not remove it."], s1: "Follow the waste to find where it ends up." })
+  }),
+  // ---------------------------------------------------------------- WATER_TREATMENT_CHOICE
+  sfam({
+    id: "sci5.water.wt.method",
+    cs: `${W2}WATER_TREATMENT_CHOICE`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which method kills germs in water?", "Boiling", [["Filtering through cloth", "M_WT_FILTER_MAKES_SAFE"], ["Letting it stand for a minute", "M_WT_FILTER_MAKES_SAFE"], ["Pouring it into a clean bucket", "M_WT_FILTER_MAKES_SAFE"]], "Boiling for at least one minute kills germs. Filtering only takes out solid bits."],
+      ["Water is muddy. Which should be done first?", "Let it settle, then filter it", [["Put it in the sun in a bucket", "M_WT_SOLAR_MUDDY"], ["Add three tablets of chlorine", "M_WT_MORE_CHLORINE"], ["Boil it and drink it at once", "M_WT_BOIL_REMOVES_ALL"]], "Mud makes it hard to kill germs. Settle and filter first, then boil or treat it."],
+      ["Water has soap and oil in it. Will boiling make it safe to drink?", "No, boiling does not remove soap or oil", [["Yes, boiling removes everything harmful", "M_WT_BOIL_REMOVES_ALL"], ["Yes, boiling turns soap into water", "M_WT_BOIL_REMOVES_ALL"], ["Yes, as long as it boils for an hour", "M_WT_BOIL_REMOVES_ALL"]], "Boiling does not take out chemicals. Water with soap and oil should not be drunk."],
+      ["Which water is suitable for solar treatment in a clear plastic bottle?", "Water that is clear after it has been filtered", [["Muddy water straight from the river bank", "M_WT_SOLAR_MUDDY"], ["Water with soil and leaves floating in it", "M_WT_SOLAR_MUDDY"], ["Water left in a closed black bucket", "M_WT_SOLAR_MUDDY"]], "Sunlight must reach the germs, so the water must be clear and in a clear bottle."],
+      ["A mother adds more water treatment tablets than the packet says. Why is this wrong?", "Too much chlorine tastes bad and harms people", [["More tablets always make it much safer", "M_WT_MORE_CHLORINE"], ["It does not matter how many she adds", "M_WT_MORE_CHLORINE"], ["The tablets only work if she uses more", "M_WT_MORE_CHLORINE"]], "Use exactly the amount on the packet."]
+    ], { h: ["Think about what each method does: it removes bits, kills germs, or both.", "Boiling does not remove chemicals."], s1: "Match the method to the problem in the water." })
+  }),
+  sfam({
+    id: "sci5.water.wt.order",
+    cs: `${W2}WATER_TREATMENT_CHOICE`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A family takes water from a muddy stream. Which list shows what they should do, in order?", "Let it settle, filter it, then boil it", [["Boil it, then filter it, then let it settle", "M_WT_BOIL_REMOVES_ALL"], ["Filter it, then drink it", "M_WT_FILTER_MAKES_SAFE"], ["Add more chlorine than needed, then drink it", "M_WT_MORE_CHLORINE"]], "First take out the soil, then kill the germs by boiling."],
+      ["A school wants to use the sun to treat its drinking water. Which list shows what they should do?", "Filter the water, pour it in a clear bottle and leave it in the sun", [["Pour muddy water in a clear bottle and leave it in the sun", "M_WT_SOLAR_MUDDY"], ["Pour muddy water in a black bucket in the sun", "M_WT_SOLAR_MUDDY"], ["Filter it and then drink it at once", "M_WT_FILTER_MAKES_SAFE"]], "Clear water in a clear bottle lets sunlight kill the germs."],
+      ["A health worker treats stream water with chlorine tablets. Which list shows the right steps?", "Filter out the dirt, add the tablets as the packet says, wait before drinking", [["Add the tablets to muddy water and drink it at once", "M_WT_SOLAR_MUDDY"], ["Add three times the amount on the packet", "M_WT_MORE_CHLORINE"], ["Boil it with soap to clean it", "M_WT_BOIL_REMOVES_ALL"]], "Clear water, the right amount of chlorine, and time to work make the water safe."],
+      ["A mother has clear well water that she is not sure about. What is the simplest safe step?", "Boil it before drinking", [["Filter it through cloth and drink it", "M_WT_FILTER_MAKES_SAFE"], ["Leave it to stand overnight", "M_WT_FILTER_MAKES_SAFE"], ["Add soap to clean it", "M_WT_BOIL_REMOVES_ALL"]], "Clear water can still have germs. Boiling kills them."],
+      ["A family has dirty rainwater with soap in it from the roof tank. What is right?", "Do not drink it, even after boiling; use it for washing", [["Boil it and drink it, since boiling removes soap", "M_WT_BOIL_REMOVES_ALL"], ["Filter it with cloth and drink it", "M_WT_FILTER_MAKES_SAFE"], ["Add extra chlorine and drink it", "M_WT_MORE_CHLORINE"]], "Boiling and filtering do not take out soap. Do not drink water with soap in it."]
+    ], { h: ["Think about what has to be done first: settle and filter, then kill germs.", "Each method does one job."], s1: "Put the jobs in order: remove dirt first, then kill germs." })
+  }),
+  sfam({
+    id: "sci5.water.wt.spot",
+    cs: `${W2}WATER_TREATMENT_CHOICE`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says filtered stream water is safe to drink. Which step has the mistake?", [["Step 1: Hassan pours stream water through a clean cloth.", true], ["Step 2: The water looks clear, so he decides it is safe.", false], ["Step 3: He drinks it.", true]], "Clear water can still hold germs. It must also be boiled or treated before drinking.", "M_WT_FILTER_MAKES_SAFE"],
+      ["Karimi says boiling will make soapy water safe to drink. Which step has the mistake?", [["Step 1: Karimi boils water that has soap in it.", true], ["Step 2: He decides boiling removes everything harmful.", false], ["Step 3: He drinks the water.", true]], "Boiling kills germs, but it does not remove soap or chemicals. The water is not safe to drink.", "M_WT_BOIL_REMOVES_ALL"],
+      ["Zawadi wants to treat muddy water in the sun. Which step has the mistake?", [["Step 1: Zawadi fills a clear bottle with muddy river water.", true], ["Step 2: She leaves it in the sun for six hours without filtering.", false], ["Step 3: She decides the water is safe.", true]], "The mud blocks the sunlight, so germs are not killed. The water must be settled and filtered first.", "M_WT_SOLAR_MUDDY"],
+      ["Mwende treats her water with chlorine tablets. Which step has the mistake?", [["Step 1: Mwende reads the packet and finds the amount for a bucket.", true], ["Step 2: She puts in three times that amount to be safe.", false], ["Step 3: She waits before using the water.", true]], "More chlorine does not make water safer. It tastes bad and can harm people. Use the amount on the packet.", "M_WT_MORE_CHLORINE"]
+    ], { h: ["Which step gives a reason that is not true?", "Think about what each method really does."], s1: "Each method does one job. Check the step against its job." })
+  })
+];
+
+// src/ai-tutor/content/families/sci_g5_force.js
+var F2 = "FORCE_.FLOATING_AND_SINKING.";
+var S4 = "FORCE_.SOUND_ENERGY.";
+var H = "FORCE_.HEAT_TRANSFER.";
+var FAMILIES16 = [
+  // ---------------------------------------------------------------- FLOAT_OR_SINK
+  sfam({
+    id: "sci5.float.fa.will",
+    cs: `${F2}FLOAT_OR_SINK`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["A big wooden log is much heavier than a small stone. Which one sinks in water?", "The small stone", [["The big log, because it is heavier", "M_FA_HEAVY_SINKS"], ["Both sink, since both are solid", "M_FA_HEAVY_SINKS"], ["Neither sinks, since water holds up everything", "M_FA_HEAVY_SINKS"]], "Weight alone does not decide. The log is light for its size, so it floats. The small stone is heavy for its size, so it sinks."],
+      ["Will an iron nail float or sink in water?", "It sinks", [["It floats, because it is so small and light", "M_FA_HEAVY_SINKS"], ["It floats, because it is made of metal", "M_FA_MATERIAL_ALWAYS"], ["It floats if the water is deep enough", "M_FA_DEEP_WATER"]], "An iron nail is heavy for its size, so it sinks."],
+      ["Which of these will float on water?", "A dry piece of wood", [["A coin", "M_FA_HEAVY_SINKS"], ["A house key", "M_FA_MATERIAL_ALWAYS"], ["A small stone", "M_FA_HEAVY_SINKS"]], "Dry wood is light for its size, so it floats. Coins, keys and stones sink."],
+      ["A stone sinks in a bucket of water. What happens if it is dropped in a deep lake?", "It sinks, the same as in the bucket", [["It floats, because the lake is deeper", "M_FA_DEEP_WATER"], ["It floats, because there is more water", "M_FA_DEEP_WATER"], ["It floats for a while and then sinks", "M_FA_DEEP_WATER"]], "The amount of water does not change the result. A stone that sinks in a bucket sinks in a lake."],
+      ["Will an empty plastic bottle with its cap on float or sink?", "It floats", [["It sinks, because plastic is heavy", "M_FA_MATERIAL_ALWAYS"], ["It sinks, because it is a solid", "M_FA_HEAVY_SINKS"], ["It floats only in a deep lake", "M_FA_DEEP_WATER"]], "The bottle holds a lot of air, so it is light for its size and floats."]
+    ], { h: ["Think about whether the object is heavy or light for its size.", "The depth of the water does not change what floats."], s1: "Ask how heavy the object is for its size." })
+  }),
+  sfam({
+    id: "sci5.float.fa.table",
+    cs: `${F2}FLOAT_OR_SINK`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "A class tested objects in a bucket of water. Which object sank although it was the smallest?",
+        "The iron nail",
+        [["The big plastic bottle", "M_FA_HEAVY_SINKS"], ["The wooden ruler", "M_FA_MATERIAL_ALWAYS"], ["The big log", "M_FA_HEAVY_SINKS"]],
+        "The iron nail is small, but it is heavy for its size, so it sank.",
+        { t: { head: ["Object", "Size", "What happened"], rows: [["Iron nail", "Smallest", "Sank"], ["Wooden ruler", "Small", "Floated"], ["Plastic bottle (empty)", "Big", "Floated"], ["Wooden log", "Biggest", "Floated"]] } }
+      ],
+      [
+        "Read the table of results. Which object floated although it was the heaviest?",
+        "The wooden log",
+        [["The stone", "M_FA_HEAVY_SINKS"], ["The coin", "M_FA_HEAVY_SINKS"], ["The key", "M_FA_MATERIAL_ALWAYS"]],
+        "The log is the heaviest, but it is light for its size, so it floated.",
+        { t: { head: ["Object", "Mass", "What happened"], rows: [["Wooden log", "5 kg", "Floated"], ["Stone", "300 g", "Sank"], ["Coin", "10 g", "Sank"], ["Key", "20 g", "Sank"]] } }
+      ],
+      [
+        "A learner tested four objects in a basin. Which statement about the results is true?",
+        "Both objects made of metal behaved differently",
+        [["All the metal objects sank", "M_FA_MATERIAL_ALWAYS"], ["All the heavy objects sank", "M_FA_HEAVY_SINKS"], ["All the objects that float are small", "M_FA_HEAVY_SINKS"]],
+        "The metal tin lid floated and the metal nail sank. The material alone does not decide.",
+        { t: { head: ["Object", "Made of", "What happened"], rows: [["Nail", "Iron", "Sank"], ["Flat tin lid", "Metal", "Floated"], ["Spoon", "Steel", "Sank"], ["Cork", "Cork", "Floated"]] } }
+      ],
+      [
+        "The table shows what happened to four objects in a jug and in a bucket of water. What does it show about water depth?",
+        "The results were the same in both",
+        [["The objects floated better in the bucket", "M_FA_DEEP_WATER"], ["The objects sank more in the bucket", "M_FA_DEEP_WATER"], ["The depth changed what floated", "M_FA_DEEP_WATER"]],
+        "Each object did the same in the jug and in the bucket. The amount of water makes no difference.",
+        { t: { head: ["Object", "In the jug", "In the bucket"], rows: [["Stone", "Sank", "Sank"], ["Cork", "Floated", "Floated"], ["Coin", "Sank", "Sank"], ["Wood", "Floated", "Floated"]] } }
+      ],
+      [
+        "A learner tests four things. Which sank although it is lighter than the log?",
+        "The stone",
+        [["The plastic bottle", "M_FA_HEAVY_SINKS"], ["The cork", "M_FA_HEAVY_SINKS"], ["The log", "M_FA_HEAVY_SINKS"]],
+        "The stone is lighter than the log but heavy for its size, so it sank.",
+        { t: { head: ["Object", "Mass", "What happened"], rows: [["Log", "4 kg", "Floated"], ["Stone", "500 g", "Sank"], ["Cork", "10 g", "Floated"], ["Plastic bottle", "30 g", "Floated"]] } }
+      ]
+    ], { h: ["Compare what happened with the mass and the material.", "Heavy things can float and light things can sink."], s1: "Read each row of the table." })
+  }),
+  sfam({
+    id: "sci5.float.fa.list",
+    cs: `${F2}FLOAT_OR_SINK`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A teacher puts objects in water. Which list has only objects that float?", "Cork, dry wood, empty bottle", [["Cork, coin, empty bottle", "M_FA_HEAVY_SINKS"], ["Cork, dry wood, steel spoon", "M_FA_MATERIAL_ALWAYS"], ["Stone, dry wood, empty bottle", "M_FA_HEAVY_SINKS"]], "Cork, dry wood and an empty bottle are light for their size. Coins, spoons and stones are not."],
+      ["Which list has only objects that sink?", "Stone, coin, iron nail", [["Stone, coin, cork", "M_FA_HEAVY_SINKS"], ["Stone, wooden log, iron nail", "M_FA_HEAVY_SINKS"], ["Leaf, coin, iron nail", "M_FA_HEAVY_SINKS"]], "A stone, a coin and an iron nail are heavy for their size. A cork, a log and a leaf float."],
+      ["A fisherman tests three things for his net. Which one floats?", "A piece of dry wood", [["A metal key", "M_FA_MATERIAL_ALWAYS"], ["A steel bolt", "M_FA_MATERIAL_ALWAYS"], ["A wet stone", "M_FA_HEAVY_SINKS"]], "Dry wood floats. The key, the bolt and the stone sink."],
+      ["Which is true about a large log and a small pebble in water?", "The log floats and the pebble sinks", [["Both sink, because both are solid", "M_FA_HEAVY_SINKS"], ["Both float, because water is deep", "M_FA_DEEP_WATER"], ["The log sinks and the pebble floats", "M_FA_HEAVY_SINKS"]], "The log is light for its size, so it floats. The pebble is heavy for its size, so it sinks."],
+      ["A learner says metal objects always sink. Which object disproves her?", "A flat tin lid placed gently on the water", [["An iron nail", "M_FA_MATERIAL_ALWAYS"], ["A steel bolt", "M_FA_MATERIAL_ALWAYS"], ["A brass key", "M_FA_MATERIAL_ALWAYS"]], "A flat tin lid can float. Material alone does not decide whether something floats."]
+    ], { h: ["Check each object in the list.", "Think whether each is light or heavy for its size."], s1: "Check each object, not only the first one." })
+  }),
+  // ---------------------------------------------------------------- FLOAT_FACTORS
+  sfam({
+    id: "sci5.float.ff.change",
+    cs: `${F2}FLOAT_FACTORS`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A ball of clay sinks. The same clay is made into a bowl shape. What happens?", "It can float, because the bowl pushes aside more water", [["It still sinks, because it is the same clay", "M_FF_SHAPE_NO_EFFECT"], ["It sinks faster, since a bowl is lighter than a ball", "M_FF_SHAPE_NO_EFFECT"], ["It floats only if the bucket is made deeper", "M_FF_SHAPE_NO_EFFECT"]], "The same clay can float or sink depending on its shape. A bowl pushes aside more water."],
+      ["Two blocks are the same size. Block A is heavier than block B. Which is more likely to sink?", "Block A, which is heavier for its size", [["Both of them float in just the same way", "M_FF_WEIGHT_ONLY"], ["Block B, which is the lighter of the two", "M_FF_WEIGHT_ONLY"], ["Neither, since only size decides the result", "M_FF_SIZE_ONLY"]], "For objects of the same size, the heavier one is more likely to sink."],
+      ["A small piece of dry wood floats. Will a much bigger piece of the same wood float?", "Yes, it floats as well", [["No, it is too big", "M_FF_SIZE_ONLY"], ["No, it is too heavy", "M_FF_WEIGHT_ONLY"], ["Only in a deep lake", "M_FF_SIZE_ONLY"]], "Size alone does not decide. Big and small pieces of the same wood both float."],
+      ["A foil square sinks when screwed into a ball. What can be done to make the same foil float?", "Fold it into a boat shape with sides", [["Press it into a smaller and tighter ball", "M_FF_SHAPE_NO_EFFECT"], ["Make it heavier by adding some stones", "M_FF_WEIGHT_ONLY"], ["Put it in a deeper bucket of water", "M_FF_SHAPE_NO_EFFECT"]], "A boat shape pushes aside more water, so the same foil can float."],
+      ["Many people climb into a small canoe on Lake Victoria. What happens?", "It floats lower and can sink if overloaded", [["Nothing changes, it floats just as high", "M_FF_LOAD_NO_EFFECT"], ["It floats higher, since the people are lighter than water", "M_FF_LOAD_NO_EFFECT"], ["It floats the same, only it goes faster", "M_FF_LOAD_NO_EFFECT"]], "Each extra load makes the canoe float lower. With too much load water comes in and it sinks."]
+    ], { h: ["Think about the shape, the weight and the size together.", "More load makes a boat sit lower in the water."], s1: "Name what changed: shape, weight, size or load." })
+  }),
+  sfam({
+    id: "sci5.float.ff.table",
+    cs: `${F2}FLOAT_FACTORS`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "A class changed one thing about the same lump of clay each time. What did they change?",
+        "The shape",
+        [["The weight", "M_FF_WEIGHT_ONLY"], ["The size of the water bucket", "M_FF_SIZE_ONLY"], ["The kind of clay", "M_FF_WEIGHT_ONLY"]],
+        "The mass of clay was the same each time. Only the shape changed, and with it the result.",
+        { t: { head: ["Try", "Mass of clay", "Shape", "Result"], rows: [["1", "100 g", "Ball", "Sank"], ["2", "100 g", "Flat dish", "Floated"], ["3", "100 g", "Bowl", "Floated"]] } }
+      ],
+      [
+        "Read the table. Two blocks of the same size were tested. What does it show?",
+        "The heavier block sank",
+        [["The lighter block sank", "M_FF_WEIGHT_ONLY"], ["Both blocks floated", "M_FF_WEIGHT_ONLY"], ["Size decided the result", "M_FF_SIZE_ONLY"]],
+        "Both blocks are the same size. The heavier one sank.",
+        { t: { head: ["Block", "Size", "Mass", "Result"], rows: [["A", "10 cm cube", "800 g", "Sank"], ["B", "10 cm cube", "300 g", "Floated"]] } }
+      ],
+      [
+        "A learner adds one stone at a time to a floating plastic tub. What does the table show?",
+        "The tub sits lower as more stones are added",
+        [["The tub sits higher as more stones are added", "M_FF_LOAD_NO_EFFECT"], ["The tub stays at the same height", "M_FF_LOAD_NO_EFFECT"], ["The stones float on top of the tub", "M_FF_LOAD_NO_EFFECT"]],
+        "Each stone makes the tub sink a little lower, until it finally sinks.",
+        { t: { head: ["Stones added", "Height of tub above water"], rows: [["0", "8 cm"], ["2", "6 cm"], ["4", "4 cm"], ["6", "0 cm, sank"]] } }
+      ],
+      [
+        "The table shows two pieces of the same wood. What does it show about size?",
+        "The big and small pieces both floated",
+        [["Only the small piece floated", "M_FF_SIZE_ONLY"], ["Only the big piece floated", "M_FF_SIZE_ONLY"], ["Neither piece floated", "M_FF_SIZE_ONLY"]],
+        "Both pieces of the same wood floated. Size alone does not decide.",
+        { t: { head: ["Piece", "Size", "Result"], rows: [["Small piece of wood", "5 cm long", "Floated"], ["Big piece of wood", "60 cm long", "Floated"]] } }
+      ],
+      [
+        "The class made a foil boat and a foil ball from the same sheet. What does the table show?",
+        "Shape changed the result",
+        [["The weight changed the result", "M_FF_WEIGHT_ONLY"], ["Shape made no difference", "M_FF_SHAPE_NO_EFFECT"], ["The water depth changed the result", "M_FF_SHAPE_NO_EFFECT"]],
+        "The sheet had the same mass each time, but the boat floated and the ball sank.",
+        { t: { head: ["Foil shape", "Mass", "Result"], rows: [["Open boat", "5 g", "Floated"], ["Tight ball", "5 g", "Sank"]] } }
+      ]
+    ], { h: ["Find which column stays the same and which column changes.", "Shape, weight, size and load all matter."], s1: "Look for what changed between the rows." })
+  }),
+  sfam({
+    id: "sci5.float.ff.spot",
+    cs: `${F2}FLOAT_FACTORS`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says a clay bowl will sink because a clay ball sank. Which step has the mistake?", [["Step 1: Hassan drops a ball of clay in water and it sinks.", true], ["Step 2: He decides that shape makes no difference.", false], ["Step 3: He says the clay bowl will sink too.", true]], "Shape matters. A bowl shape pushes aside more water, so the same clay can float.", "M_FF_SHAPE_NO_EFFECT"],
+      ["Karimi says the heavier of two same-size blocks floats better. Which step has the mistake?", [["Step 1: Karimi has two blocks of the same size.", true], ["Step 2: He says the heavier block is more likely to float.", false], ["Step 3: He tests both.", true]], "For the same size, the heavier block is more likely to sink, not float.", "M_FF_WEIGHT_ONLY"],
+      ["Zawadi says the boat will float as high as ever with ten people in it. Which step has the mistake?", [["Step 1: Zawadi has a small boat with one person.", true], ["Step 2: She says adding people does not change how high it floats.", false], ["Step 3: She says ten people can get in.", true]], "More load makes a boat sit lower. With ten people it may sink.", "M_FF_LOAD_NO_EFFECT"],
+      ["Mwende says a big piece of wood will sink because it is big. Which step has the mistake?", [["Step 1: Mwende sees a small piece of wood float.", true], ["Step 2: She says a big piece of the same wood will be too big to float.", false], ["Step 3: She says it will sink.", true]], "Size alone does not decide. A big piece of wood floats too, because the wood is light for its size.", "M_FF_SIZE_ONLY"]
+    ], { h: ["Which step says something that is not true?", "Think about shape, weight, size and load together."], s1: "Check each step against what changes the way things float." })
+  }),
+  // ---------------------------------------------------------------- FLOAT_APPLICATIONS
+  sfam({
+    id: "sci5.float.fu.why",
+    cs: `${F2}FLOAT_APPLICATIONS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Why does a huge steel ship float?", "Its shape pushes aside a lot of water", [["Steel is lighter than the sea water", "M_FU_STEEL_LIGHT"], ["The ship has no weight at all in water", "M_FU_FLOAT_NO_WEIGHT"], ["The sea is very deep and very wide", "M_FU_STEEL_LIGHT"]], "A ship is like a big hollow bowl. It pushes aside a lot of water, so it floats even though steel is heavy."],
+      ["Why does a life jacket keep a swimmer up?", "It is light for its size, so it floats", [["It is heavier than water and pushes down", "M_FU_FLOAT_NO_WEIGHT"], ["It has no weight at all, so it rises", "M_FU_FLOAT_NO_WEIGHT"], ["It pulls the swimmer up with a rope", "M_FU_STEEL_LIGHT"]], "A life jacket is made of light foam. It is light for its size, so it floats and lifts the swimmer."],
+      ["A floating log is lifted onto a scale. What does the scale show?", "The weight of the log", [["Nothing, since floating things weigh nothing", "M_FU_FLOAT_NO_WEIGHT"], ["Less than the log weighs in water", "M_FU_FLOAT_NO_WEIGHT"], ["The weight of the water under it", "M_FU_FLOAT_NO_WEIGHT"]], "A floating log still has weight. It floats because it is light for its size."],
+      ["Fishermen tie floats to the top of a net. Why?", "The floats hold the top of the net up", [["The floats make the whole net much heavier", "M_FU_FLOAT_NO_WEIGHT"], ["The floats weigh nothing, so they rise", "M_FU_FLOAT_NO_WEIGHT"], ["The floats pull the net into deep water", "M_FU_STEEL_LIGHT"]], "Floats are light for their size, so they keep the top of the net up, while sinkers pull the bottom down."],
+      ["The water tank at a school has a ball float that rises with the water. What is its job?", "To shut the tap when the tank is full", [["To keep the water in the tank cold", "M_FU_FLOAT_NO_WEIGHT"], ["To make the water in the tank heavy", "M_FU_FLOAT_NO_WEIGHT"], ["To let all the water out at once", "M_FU_STEEL_LIGHT"]], "The float rises with the water. At the top it closes the tap, so the tank does not overflow."]
+    ], { h: ["Think about shape and about being light for its size.", "A floating object still has weight."], s1: "Link the use to the shape or lightness for its size." })
+  }),
+  sfam({
+    id: "sci5.float.fu.match",
+    cs: `${F2}FLOAT_APPLICATIONS`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A fisherman on Lake Naivasha ties a plastic bottle to the end of a net. What is the bottle for?", "It is a float that shows where the net is", [["It is a sinker that holds the net down", "M_FU_FLOAT_NO_WEIGHT"], ["It is a weight to keep the boat still", "M_FU_FLOAT_NO_WEIGHT"], ["It is a gift for the fish", "M_FU_STEEL_LIGHT"]], "An empty plastic bottle floats. It shows the fisherman where the net lies."],
+      ["Which object helps a person who cannot swim to stay safe near water?", "A life jacket of light foam", [["A heavy bag full of stones", "M_FU_FLOAT_NO_WEIGHT"], ["A heavy metal belt with weights", "M_FU_STEEL_LIGHT"], ["A long coil of wet rope", "M_FU_FLOAT_NO_WEIGHT"]], "A foam life jacket is light for its size and floats."],
+      ["Which object is a sinker for a fishing line?", "A small weight of lead or iron", [["A cork from a bottle", "M_FU_FLOAT_NO_WEIGHT"], ["A plastic bottle full of air", "M_FU_FLOAT_NO_WEIGHT"], ["A piece of light foam", "M_FU_FLOAT_NO_WEIGHT"]], "A sinker is heavy for its size, so it pulls the line down."],
+      ["A dhow carries heavy bags of cement across the water. How does it stay afloat?", "Its hull pushes aside enough water", [["The cement bags weigh nothing at all in water", "M_FU_FLOAT_NO_WEIGHT"], ["The wood is always lighter than water", "M_FU_STEEL_LIGHT"], ["The load pushes it up", "M_FU_FLOAT_NO_WEIGHT"]], "The hull pushes aside a lot of water, which holds up the boat and its load."],
+      ["A swimming learner holds a float board. What does the board do?", "It floats and helps to hold her up", [["It weighs nothing, so it pulls her up", "M_FU_FLOAT_NO_WEIGHT"], ["It is heavy, so it keeps her steady", "M_FU_STEEL_LIGHT"], ["It sinks to give her something to stand on", "M_FU_STEEL_LIGHT"]], "A float board is light for its size, so it floats and helps hold up a swimmer."]
+    ], { h: ["Think about whether the object should float or sink to do its job.", "Floats are light for their size, sinkers are heavy for their size."], s1: "Say whether the object floats or sinks and why that helps." })
+  }),
+  // ---------------------------------------------------------------- SOUND_SOURCES
+  sfam({
+    id: "sci5.sound.ss.what",
+    cs: `${S4}SOUND_SOURCES`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["What happens to the skin of a drum when it makes a sound?", "It vibrates, moving quickly to and fro", [["It stays still; the sound is inside", "M_SS_NO_VIBRATION"], ["It gets hot and glows", "M_SS_NO_VIBRATION"], ["It stretches and stays stretched", "M_SS_NO_VIBRATION"]], "Every sound is made by something vibrating. The drum skin moves quickly to and fro."],
+      ["What vibrates to make the sound in a flute?", "The air inside the flute", [["Only the metal or wood of the flute", "M_SS_AIR_SILENT"], ["Nothing, the flute makes sound by itself", "M_SS_NO_VIBRATION"], ["The player's fingers on the holes", "M_SS_AIR_SILENT"]], "In a flute or whistle the air inside the pipe vibrates."],
+      ["Which action can make a sound from a guitar string?", "Plucking it with a finger", [["Only hitting it with a stick", "M_SS_HIT_ONLY"], ["Only blowing on it", "M_SS_HIT_ONLY"], ["Nothing, strings cannot make sound", "M_SS_NO_VIBRATION"]], "Plucking makes the string vibrate. Sound can come from plucking, blowing, rubbing or banging."],
+      ["A learner holds her fingers on her throat and hums. What does she feel?", "A tiny shaking in her throat", [["Nothing, the sound is in her mouth", "M_SS_NO_VIBRATION"], ["Warm air only", "M_SS_NO_VIBRATION"], ["A cold breeze", "M_SS_NO_VIBRATION"]], "Her voice box vibrates. That vibration makes the sound she hums."],
+      ["A ruler is held over the edge of a desk and twanged. What makes the sound?", "The ruler vibrating up and down", [["The desk making the sound by itself", "M_SS_NO_VIBRATION"], ["The ruler standing still", "M_SS_NO_VIBRATION"], ["The air staying still around it", "M_SS_NO_VIBRATION"]], "The ruler moves quickly up and down. This vibration makes the sound."]
+    ], { h: ["Think about what moves quickly to and fro.", "All sounds come from something vibrating."], s1: "Find the part that vibrates." })
+  }),
+  sfam({
+    id: "sci5.sound.ss.instrument",
+    cs: `${S4}SOUND_SOURCES`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["At a cultural day a boy plays a nyatiti, a string instrument. What vibrates to make its sound?", "The strings", [["The wooden bowl only", "M_SS_NO_VIBRATION"], ["Nothing, the sound is already inside", "M_SS_NO_VIBRATION"], ["The player's hand only", "M_SS_HIT_ONLY"]], "Plucked strings vibrate quickly to make the sound."],
+      ["A girl blows across the top of an empty bottle and hears a note. What vibrates?", "The air inside the bottle", [["The glass of the bottle only", "M_SS_AIR_SILENT"], ["Nothing vibrates", "M_SS_NO_VIBRATION"], ["Her lips only", "M_SS_AIR_SILENT"]], "The air inside the bottle vibrates and makes the sound."],
+      ["A teacher sprinkles rice on a drum and taps it. The rice jumps. What does this show?", "The drum skin is vibrating", [["The drum skin is not moving", "M_SS_NO_VIBRATION"], ["The rice makes the sound", "M_SS_NO_VIBRATION"], ["Sound only comes from hitting", "M_SS_HIT_ONLY"]], "The rice jumps because the drum skin moves quickly to and fro."],
+      ["On a school trip Njeri hears bees buzzing. What makes the sound?", "The bees' wings vibrating quickly", [["Nothing vibrates; the sound is just there", "M_SS_NO_VIBRATION"], ["The flowers they sit on", "M_SS_NO_VIBRATION"], ["The wind alone", "M_SS_AIR_SILENT"]], "Wings beating very fast make the air vibrate. This is the buzzing sound."],
+      ["Which statement about sound is true?", "Plucking, blowing and banging can all make sound", [["Only banging can make sound", "M_SS_HIT_ONLY"], ["Sound can be made without anything vibrating", "M_SS_NO_VIBRATION"], ["Only living things can make sound", "M_SS_HIT_ONLY"]], "All sounds come from something vibrating. Plucking, blowing and banging can each cause it."]
+    ], { h: ["Think about what moves quickly to and fro in the story.", "Strings, air and skins can all vibrate."], s1: "Name what vibrates in each instrument." })
+  }),
+  // ---------------------------------------------------------------- SOUND_TRAVEL
+  sfam({
+    id: "sci5.sound.st.through",
+    cs: `${S4}SOUND_TRAVEL`,
+    form: "direct",
+    rung: 2,
+    gen: choose([
+      ["Through which material does sound travel fastest?", "Steel", [["Air", "M_ST_FASTER_IN_AIR"], ["Water vapour in the air", "M_ST_FASTER_IN_AIR"], ["A cloud", "M_ST_FASTER_IN_AIR"]], "Sound travels fastest through solids, slower through liquids and slowest through gases such as air."],
+      ["Can sound travel through space between stars?", "No, space has no air or other material", [["Yes, sound travels everywhere", "M_ST_IN_SPACE"], ["Yes, but only loud sounds", "M_ST_LOUD_FASTER"], ["Yes, if there is a bright light", "M_ST_IN_SPACE"]], "Sound needs something to travel through. Space is empty."],
+      ["A swimmer under water hears a boat engine. What does this show?", "Sound can travel through water", [["Sound travels only through air", "M_ST_ONLY_AIR"], ["Sound travels only through solids", "M_ST_ONLY_AIR"], ["The swimmer imagined the sound", "M_ST_ONLY_AIR"]], "Sound travels through water as well as air and solids."],
+      ["Which travels faster, the sound of thunder or the flash of lightning?", "The flash of lightning", [["The sound of thunder", "M_ST_FASTER_IN_AIR"], ["They travel at the same speed", "M_ST_LOUD_FASTER"], ["It depends on how loud the thunder is", "M_ST_LOUD_FASTER"]], "Light travels much faster than sound. We see the flash first and hear the thunder later."],
+      ["Two drums are played at the same distance, one very loud and one very quiet. Which sound arrives first?", "Both arrive at the same time", [["The louder one", "M_ST_LOUD_FASTER"], ["The quieter one", "M_ST_LOUD_FASTER"], ["The one that is played first", "M_ST_LOUD_FASTER"]], "Loudness does not change the speed of sound."]
+    ], { h: ["Think about what sound needs to travel through, and in which material it is fastest.", "Loudness does not change speed."], s1: "Remember: sound needs a material to travel through." })
+  }),
+  sfam({
+    id: "sci5.sound.st.story",
+    cs: `${S4}SOUND_TRAVEL`,
+    form: "why",
+    rung: 3,
+    gen: choose([
+      ["A learner puts an ear against a wooden desk while a friend taps the other end. She hears the tap clearly. Why?", "Sound travels through the wood", [["Sound travels only through air", "M_ST_ONLY_AIR"], ["The tap is louder in the air", "M_ST_ONLY_AIR"], ["She imagined it", "M_ST_ONLY_AIR"]], "Sound travels through solids such as wood, often better than through air."],
+      ["An astronaut outside a spacecraft shouts to another astronaut far away. Why can he not be heard?", "There is no air or other material to carry sound", [["He is too far away to be loud", "M_ST_LOUD_FASTER"], ["Sound is too slow in space", "M_ST_FASTER_IN_AIR"], ["Sound only travels through light", "M_ST_IN_SPACE"]], "Sound needs a material to travel through. Space is empty, so sound cannot travel in it."],
+      ["A bell rings inside a glass jar. When the air is pumped out, the sound fades. Why?", "Sound cannot travel well without air", [["Sound travels faster without air", "M_ST_IN_SPACE"], ["The bell stops moving for no reason", "M_ST_IN_SPACE"], ["Sound only comes from heat", "M_ST_IN_SPACE"]], "With the air removed, there is less to carry the sound to the glass and out."],
+      ["Wanjiru shouts across a valley and hears her shout again a moment later. What has happened?", "The sound bounced back from a hill", [["The sound travelled faster the second time", "M_ST_LOUD_FASTER"], ["A new sound was made by the hill", "M_ST_LOUD_FASTER"], ["The sound stood still in the air", "M_ST_ONLY_AIR"]], "An echo is sound bouncing off a hard surface and coming back."],
+      ["In a storm Juma sees lightning and then hears thunder four seconds later. Why the delay?", "Light travels much faster than sound", [["The thunder was quiet at first", "M_ST_LOUD_FASTER"], ["Sound is faster than light", "M_ST_FASTER_IN_AIR"], ["The thunder started after the lightning", "M_ST_FASTER_IN_AIR"]], "Thunder and lightning start together. The light reaches us first because it travels much faster."]
+    ], { h: ["Think about what sound needs and how fast it goes.", "Light is much faster than sound."], s1: "Link the story to what sound needs in order to travel." })
+  }),
+  sfam({
+    id: "sci5.sound.st.spot",
+    cs: `${S4}SOUND_TRAVEL`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says sound cannot go through water. Which step has the mistake?", [["Step 1: Hassan hears the radio in the room.", true], ["Step 2: He decides sound travels only through air.", false], ["Step 3: He says swimmers cannot hear under water.", true]], "Sound travels through water too. Swimmers can hear boats and other swimmers under water.", "M_ST_ONLY_AIR"],
+      ["Karimi says the loudest drum is heard first. Which step has the mistake?", [["Step 1: Karimi stands far from two drums.", true], ["Step 2: He says the louder sound travels faster.", false], ["Step 3: He says he hears the loud one first.", true]], "Loudness does not change speed. Both sounds arrive at the same time.", "M_ST_LOUD_FASTER"],
+      ["Zawadi says a film shows explosions in space with sound. Which step has the mistake?", [["Step 1: Zawadi sees a spaceship explode on the screen.", true], ["Step 2: She says the sound would travel through space.", false], ["Step 3: She says an astronaut would hear it.", true]], "Space is empty, so there is nothing to carry sound. There would be no sound.", "M_ST_IN_SPACE"],
+      ["Mwende says sound moves fastest through air. Which step has the mistake?", [["Step 1: Mwende lists air, water and steel.", true], ["Step 2: She says light things such as air let sound go fastest.", false], ["Step 3: She says steel is the slowest.", true]], "Sound goes fastest through solids such as steel and slowest through air.", "M_ST_FASTER_IN_AIR"]
+    ], { h: ["Which step is not true about how sound travels?", "Sound needs a material and is fastest in solids."], s1: "Check each step against what sound needs." })
+  }),
+  // ---------------------------------------------------------------- SOUND_EFFECTS
+  sfam({
+    id: "sci5.sound.se.effect",
+    cs: `${S4}SOUND_EFFECTS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which problems can very loud noise cause?", "Damage to hearing, headaches and poor sleep", [["Only ringing in the ears for a moment", "M_SL_ONLY_EARS"], ["Nothing, the ears get used to it", "M_SL_GETS_USED"], ["Nothing, if it is music", "M_SL_MUSIC_SAFE"]], "Very loud sound can damage hearing for good. It can also cause headaches and poor sleep."],
+      ["A boda boda rider says he is used to loud engines. What is true?", "His hearing may still be getting damaged", [["His ears have become strong, so no harm is done", "M_SL_GETS_USED"], ["Only new riders are harmed by loud noise", "M_SL_GETS_USED"], ["The noise only harms people who dislike it", "M_SL_MUSIC_SAFE"]], "Feeling used to a noise does not stop the damage."],
+      ["A matatu plays music at full volume. What is true for the passengers?", "It can harm their hearing, as any very loud sound can", [["It cannot harm them, because music is pleasant", "M_SL_MUSIC_SAFE"], ["It only harms people who dislike music", "M_SL_MUSIC_SAFE"], ["It only makes their ears ring for a minute", "M_SL_ONLY_EARS"]], "It is the loudness, not the kind of sound, that harms."],
+      ["What can a worker near a loud machine do to protect his hearing?", "Wear ear protection", [["Get used to the noise", "M_SL_GETS_USED"], ["Listen to loud music as well", "M_SL_MUSIC_SAFE"], ["Do nothing, only the ears ring for a while", "M_SL_ONLY_EARS"]], "Ear protection cuts the amount of sound reaching the ear and protects it."],
+      ["Which is a good way to treat a neighbour who plays very loud music at night?", "Ask politely for the music to be turned down", [["Say nothing, since the ears get used to it", "M_SL_GETS_USED"], ["Play louder music, since music is harmless", "M_SL_MUSIC_SAFE"], ["Cover only one ear", "M_SL_ONLY_EARS"]], "Loud noise at night harms sleep and health. Asking politely can fix it."]
+    ], { h: ["Think about the effects on hearing, sleep and health.", "Being used to a noise does not remove the harm."], s1: "Think of all the effects very loud sound has on the body." })
+  }),
+  sfam({
+    id: "sci5.sound.se.story",
+    cs: `${S4}SOUND_EFFECTS`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["A school beside a busy road finds that the children cannot hear the teacher in class. What is the best way to deal with it?", "Put classrooms away from the road or plant trees", [["Tell the children to get used to it", "M_SL_GETS_USED"], ["Play loud music in class", "M_SL_MUSIC_SAFE"], ["Do nothing, since noise only affects the ears", "M_SL_ONLY_EARS"]], "Noise makes learning hard and can harm hearing. Moving classrooms or planting trees reduces it."],
+      ["A miller works every day next to a loud grinding machine. After some years he cannot hear well. Why?", "The loud noise damaged his hearing over time", [["His ears got used to it, so they cannot be damaged", "M_SL_GETS_USED"], ["Only music can damage hearing", "M_SL_MUSIC_SAFE"], ["Noise only rings the ears for a moment", "M_SL_ONLY_EARS"]], "Loud noise day after day damages the tiny parts of the ear. The damage can be permanent."],
+      ["A child listens to music through earphones at full volume for hours. What can happen?", "Her hearing can be damaged", [["Nothing, because music is pleasant", "M_SL_MUSIC_SAFE"], ["Nothing, since earphones are small", "M_SL_MUSIC_SAFE"], ["Her ears will ring for a minute only", "M_SL_ONLY_EARS"]], "Very loud sound can harm hearing even if it is music in earphones."],
+      ["Farmers use loud noise to scare birds from a field. Which effect of loud sound is this?", "It frightens animals", [["It makes the birds want to stay", "M_SL_MUSIC_SAFE"], ["It has no effect on animals", "M_SL_ONLY_EARS"], ["It makes the birds used to it at once", "M_SL_GETS_USED"]], "Loud sound can frighten animals. Over time, birds may get used to it."],
+      ["A family lives next to a night club that plays loud music until late. What can happen to the children?", "They sleep badly and find it hard to learn", [["Nothing, since the music is pleasant", "M_SL_MUSIC_SAFE"], ["Nothing, since they will get used to it", "M_SL_GETS_USED"], ["Only their ears will ring for a moment", "M_SL_ONLY_EARS"]], "Loud noise at night harms sleep and learning."]
+    ], { h: ["Think about hearing, sleep and learning.", "Being used to noise does not stop the harm."], s1: "Name the effect of the loud sound in the story." })
+  }),
+  // ---------------------------------------------------------------- HEAT_MODES
+  sfam({
+    id: "sci5.heat.hm.mode",
+    cs: `${H}HEAT_MODES`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["A metal spoon is left in hot tea. Which mode moves heat along the spoon?", "Conduction", [["Convection", "M_HM_CONVECTION_SOLID"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Evaporation", "M_HM_CONVECTION_SOLID"]], "Heat moves along a solid by conduction."],
+      ["Water in a pan is heated from below. Which mode carries the heat through the water?", "Convection", [["Conduction", "M_HM_HEAT_RISES"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Insulation", "M_HM_HEAT_RISES"]], "Hot water rises and cooler water sinks. This movement carries heat through the water: convection."],
+      ["Which mode of heat transfer lets the Sun warm the Earth?", "Radiation", [["Conduction through the air", "M_HM_SUN_NEEDS_AIR"], ["Convection through space", "M_HM_SUN_NEEDS_AIR"], ["Conduction through clouds", "M_HM_SUN_NEEDS_AIR"]], "Radiation is heat that travels without anything to carry it, so it can cross empty space."],
+      ["A hand held next to a fire (not touching it) feels warm. Which mode is this?", "Radiation", [["Conduction", "M_HM_HEAT_RISES"], ["Convection", "M_HM_HEAT_RISES"], ["Cold flowing from the air", "M_HM_COLD_TRAVELS"]], "Heat from the fire travels through the air to the hand as radiation."],
+      ["A cold drink is held in a warm hand. What is moving?", "Heat moves from the hand into the drink", [["Cold moves from the drink into the hand", "M_HM_COLD_TRAVELS"], ["Heat moves from the drink to the hand", "M_HM_COLD_TRAVELS"], ["Nothing moves", "M_HM_COLD_TRAVELS"]], "Heat always moves from a warmer place to a colder place. There is no flow of cold."]
+    ], { h: ["Think about whether the heat moves through a solid, a liquid or gas, or through space.", "Heat moves from hot to cold."], s1: "Decide what the heat is travelling through." })
+  }),
+  sfam({
+    id: "sci5.heat.hm.example",
+    cs: `${H}HEAT_MODES`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A mother cooks githeri on a jiko. The sufuria gets hot where it touches the fire. Which mode of heat transfer is this?", "Conduction", [["Convection", "M_HM_CONVECTION_SOLID"], ["Radiation", "M_HM_HEAT_RISES"], ["None, heat is only made by the fire", "M_HM_COLD_TRAVELS"]], "The heat passes from the fire to the metal that touches it by conduction."],
+      ["Smoke from a cooking fire rises up and out through a hole in the roof. Which mode carries the heat away with it?", "Convection", [["Conduction", "M_HM_HEAT_RISES"], ["Radiation", "M_HM_SUN_NEEDS_AIR"], ["Cold air rising", "M_HM_COLD_TRAVELS"]], "Hot air and smoke rise and carry heat with them. This is convection."],
+      ["A hot afternoon sun warms the iron sheets of a roof. Which mode brings the heat from the Sun?", "Radiation", [["Conduction through the air", "M_HM_SUN_NEEDS_AIR"], ["Convection through space", "M_HM_SUN_NEEDS_AIR"], ["Cold going out", "M_HM_COLD_TRAVELS"]], "The Sun's heat crosses empty space as radiation."],
+      ["A learner holds a metal rod with one end in a flame. Soon the other end is hot. Which mode of heat transfer is this?", "Conduction", [["Convection, since the heat rises", "M_HM_HEAT_RISES"], ["Radiation, since the flame glows", "M_HM_SUN_NEEDS_AIR"], ["Convection, as the rod is moving", "M_HM_CONVECTION_SOLID"]], "Heat moves along a solid by conduction. A solid does not flow, so it is not convection."],
+      ["A learner holds a lit candle sideways under a metal rod. Which statement about heat is right?", "Heat can spread along the rod, not only upwards", [["Heat can only move upwards", "M_HM_HEAT_RISES"], ["Cold moves from the rod into the flame", "M_HM_COLD_TRAVELS"], ["The rod makes its own heat", "M_HM_COLD_TRAVELS"]], "Hot air rises, but heat in a solid spreads along it in every direction."]
+    ], { h: ["Think about whether it is a solid, a moving liquid or gas, or heat crossing space.", "Heat moves from hot to cold, in every direction."], s1: "Name what the heat travels through, then the mode." })
+  }),
+  sfam({
+    id: "sci5.heat.hm.spot",
+    cs: `${H}HEAT_MODES`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan explains how the Sun's heat reaches the Earth. Which step has the mistake?", [["Step 1: Hassan knows there is empty space between the Sun and the Earth.", true], ["Step 2: He says heat travels there by conduction through the air.", false], ["Step 3: He says the Earth is warmed by the Sun.", true]], "Space has no air to carry heat. The Sun's heat crosses it as radiation.", "M_HM_SUN_NEEDS_AIR"],
+      ["Karimi explains why ice feels cold. Which step has the mistake?", [["Step 1: Karimi holds an ice cube in his hand.", true], ["Step 2: He says cold moves from the ice into his hand.", false], ["Step 3: He says his hand feels cold.", true]], "Heat moves from his warm hand into the ice. There is no flow of cold.", "M_HM_COLD_TRAVELS"],
+      ["Zawadi explains why a metal spoon in hot tea gets hot. Which step has the mistake?", [["Step 1: Zawadi puts a metal spoon in hot tea.", true], ["Step 2: She says convection moves heat along the solid spoon.", false], ["Step 3: She says the handle gets warm.", true]], "Convection needs a liquid or gas that can flow. Heat moves along a solid spoon by conduction.", "M_HM_CONVECTION_SOLID"],
+      ["Mwende explains why a candle flame warms her hand held sideways. Which step has the mistake?", [["Step 1: Mwende holds her hand at the side of the flame.", true], ["Step 2: She says heat can only go upwards, so her hand would not feel it.", false], ["Step 3: She says her hand does feel warm.", true]], "Heat spreads in every direction. Only hot air rises, so her hand beside the flame still feels the heat.", "M_HM_HEAT_RISES"]
+    ], { h: ["Which step says something that is not true about heat?", "Think about what each mode needs."], s1: "Check each step against the three modes of heat transfer." })
+  }),
+  // ---------------------------------------------------------------- HEAT_CONDUCTORS
+  sfam({
+    id: "sci5.heat.hc.which",
+    cs: `${H}HEAT_CONDUCTORS`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Which of these materials is a good conductor of heat?", "Aluminium", [["Wood", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Plastic", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Wool", "M_HC_WOOL_MAKES_HEAT"]], "Metals such as aluminium are good conductors of heat."],
+      ["Which material makes a good handle for a hot sufuria?", "Wood", [["Iron", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Aluminium", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Copper", "M_HC_CONDUCTOR_KEEPS_HEAT"]], "Wood is a poor conductor, so the heat does not pass quickly to the hand."],
+      ["A learner touches an iron gate and a wooden door on a cool morning, and the gate feels colder. What is true about their temperatures?", "They are both at the same temperature", [["The gate is colder, because it feels colder", "M_HC_METAL_COLDER"], ["The door is colder, because it feels warmer", "M_HC_METAL_COLDER"], ["The gate is colder, because metal is always cold", "M_HC_METAL_COLDER"]], "Metal feels colder because it takes heat away from the hand faster."],
+      ["A cold child is wrapped in a woollen blanket. Where does the warmth come from?", "The child's own body, kept in by the blanket", [["The blanket makes heat", "M_HC_WOOL_MAKES_HEAT"], ["The wool takes in heat from the air", "M_HC_WOOL_MAKES_HEAT"], ["The blanket makes cold go away", "M_HC_WOOL_MAKES_HEAT"]], "A blanket is a poor conductor. It keeps the body's own heat in, but it makes no heat."],
+      ["Which of these is a poor conductor of heat?", "Plastic", [["Copper wire", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Iron nail", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["Steel spoon", "M_HC_CONDUCTOR_KEEPS_HEAT"]], "Plastic is a poor conductor, also called an insulator."]
+    ], { h: ["Metals are good conductors; wood, plastic and wool are poor conductors.", "Feeling cold is not the same as being cold."], s1: "Metals carry heat well. Wood, plastic and wool do not." })
+  }),
+  sfam({
+    id: "sci5.heat.hc.table",
+    cs: `${H}HEAT_CONDUCTORS`,
+    form: "table",
+    rung: 2,
+    gen: choose([
+      [
+        "A class put one end of each rod in hot water and timed how long the other end took to feel warm. Which rod is the poorest conductor?",
+        "The wooden rod",
+        [["The iron rod", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The copper rod", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The aluminium rod", "M_HC_CONDUCTOR_KEEPS_HEAT"]],
+        "The wooden rod took the longest to warm. A poor conductor is slow to carry heat.",
+        { t: { head: ["Rod", "Time for far end to feel warm"], rows: [["Copper", "10 seconds"], ["Aluminium", "15 seconds"], ["Iron", "30 seconds"], ["Wood", "4 minutes"]] } }
+      ],
+      [
+        "The table shows four spoons put into hot water. Which spoon is the best conductor?",
+        "The aluminium spoon",
+        [["The plastic spoon", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The wooden spoon", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The clay spoon", "M_HC_CONDUCTOR_KEEPS_HEAT"]],
+        "The aluminium spoon handle got warm fastest, so it is the best conductor.",
+        { t: { head: ["Spoon", "Handle after 1 minute"], rows: [["Aluminium", "Hot"], ["Wood", "Cool"], ["Plastic", "Cool"], ["Clay", "Slightly warm"]] } }
+      ],
+      [
+        "Four objects were left in a room all night. What does the table show about their temperatures?",
+        "They were all at the same temperature",
+        [["The metal was colder than the wood", "M_HC_METAL_COLDER"], ["The wood was warmer than the plastic", "M_HC_METAL_COLDER"], ["The wool was warmer than the others", "M_HC_WOOL_MAKES_HEAT"]],
+        "All the objects were at room temperature. Metal only feels colder because it takes heat from the hand faster.",
+        { t: { head: ["Object", "Thermometer reading", "How it feels"], rows: [["Iron key", "24 degrees", "Cold"], ["Wooden block", "24 degrees", "Not so cold"], ["Plastic cup", "24 degrees", "Not so cold"], ["Wool cloth", "24 degrees", "Warm"]] } }
+      ],
+      [
+        "A learner wraps a warm bottle in wool and another in nothing. What does the table show?",
+        "Wool kept the bottle warm by holding in its heat",
+        [["Wool made heat for the bottle", "M_HC_WOOL_MAKES_HEAT"], ["Wool made the bottle colder", "M_HC_WOOL_MAKES_HEAT"], ["Wool made no difference", "M_HC_WOOL_MAKES_HEAT"]],
+        "The bottle in wool lost heat slowly. Wool holds in heat but does not make it.",
+        { t: { head: ["Bottle", "Start", "After 30 minutes"], rows: [["In wool", "60 degrees", "52 degrees"], ["In nothing", "60 degrees", "38 degrees"]] } }
+      ],
+      [
+        "A learner tests which handle stays cool on a hot pan. Which handle should she choose?",
+        "The wooden handle",
+        [["The iron handle", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The copper handle", "M_HC_CONDUCTOR_KEEPS_HEAT"], ["The aluminium handle", "M_HC_CONDUCTOR_KEEPS_HEAT"]],
+        "The wooden handle stayed coolest because wood is a poor conductor.",
+        { t: { head: ["Handle", "After 2 minutes on a hot pan"], rows: [["Iron", "Too hot to hold"], ["Copper", "Too hot to hold"], ["Aluminium", "Very hot"], ["Wood", "Warm, safe to hold"]] } }
+      ]
+    ], { h: ["Read which materials warmed fast and which warmed slowly.", "Fast to warm means a good conductor."], s1: "Compare the readings in the table." })
+  }),
+  sfam({
+    id: "sci5.heat.hc.spot",
+    cs: `${H}HEAT_CONDUCTORS`,
+    form: "spot",
+    rung: 3,
+    gen: spot3([
+      ["Hassan says a metal spoon is colder than a wooden spoon in the same room. Which step has the mistake?", [["Step 1: Hassan touches both spoons and the metal one feels colder.", true], ["Step 2: He decides the metal spoon is colder in temperature.", false], ["Step 3: He tells the class.", true]], "Both spoons are at room temperature. Metal feels colder because it takes heat from the hand faster.", "M_HC_METAL_COLDER"],
+      ["Karimi says a woollen jumper makes heat. Which step has the mistake?", [["Step 1: Karimi puts a jumper on and feels warm.", true], ["Step 2: He decides the wool makes heat of its own.", false], ["Step 3: He says everyone should wear wool.", true]], "Wool makes no heat. It is a poor conductor that keeps your own heat in.", "M_HC_WOOL_MAKES_HEAT"],
+      ["Zawadi chooses a pot handle. Which step has the mistake?", [["Step 1: Zawadi has a choice of a wooden or an iron handle.", true], ["Step 2: She says iron is better because a good conductor keeps heat in.", false], ["Step 3: She picks the iron handle.", true]], "A good conductor carries heat fast, so an iron handle gets hot. A wooden handle stays cooler.", "M_HC_CONDUCTOR_KEEPS_HEAT"],
+      ["Mwende puts a thermometer inside a woollen blanket and then reads it. Which step has the mistake?", [["Step 1: Mwende leaves the thermometer in the blanket for ten minutes.", true], ["Step 2: She expects the reading to go up because wool makes heat.", false], ["Step 3: She finds the reading is the same as the room.", true]], "Wool does not make heat. A thermometer in a blanket shows the room temperature, not more.", "M_HC_WOOL_MAKES_HEAT"],
+      ["Nekesa compares a metal door handle and a wooden door in the cold morning. Which step has the mistake?", [["Step 1: Nekesa touches the metal handle and the wooden door.", true], ["Step 2: She finds the handle feels colder and says it is at a lower temperature.", false], ["Step 3: She measures both with a thermometer.", true]], "Both have the same temperature. Metal feels colder because it carries heat away from the hand quickly.", "M_HC_METAL_COLDER"]
+    ], { h: ["Which step says something that is not true about conductors?", "Feeling cold is not the same as being cold."], s1: "Check the step against how conductors and insulators work." })
+  }),
+  // ---------------------------------------------------------------- HEAT_USES
+  sfam({
+    id: "sci5.heat.hu.why",
+    cs: `${H}HEAT_USES`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Why is a vent put near the roof of a hot kitchen?", "Hot air and smoke rise and go out through it", [["Heat goes down, so the vent has to catch it", "M_HU_VENT_LOW"], ["Cold air rises through it", "M_HU_VENT_LOW"], ["It keeps the floor warm", "M_HU_VENT_LOW"]], "Hot air is lighter and rises, so smoke and hot air leave through a high vent. This is convection."],
+      ["Two iron roofs, one painted white and one black, stand in the sun. Which gets hotter?", "The black roof", [["They get equally hot", "M_HU_COLOUR_NO_EFFECT"], ["The white roof", "M_HU_COLOUR_NO_EFFECT"], ["Neither, since roofs do not take in heat", "M_HU_COLOUR_NO_EFFECT"]], "Dark surfaces take in more of the Sun's radiation. Light surfaces reflect more."],
+      ["Which of these uses heat transfer?", "Cooking, drying clothes in the sun and a flask of hot tea", [["Only cooking", "M_HU_COOKING_ONLY"], ["Only the Sun warming the roof", "M_HU_COOKING_ONLY"], ["None of them", "M_HU_COOKING_ONLY"]], "Heat moves in cooking, in drying and in a flask. It moves everywhere we use heat."],
+      ["A cook uses a wooden spoon to stir a hot pot. Why?", "Wood is a poor conductor, so the handle stays cool", [["Wood makes the food hotter", "M_HU_COOKING_ONLY"], ["Wood is the best conductor of heat", "M_HU_COOKING_ONLY"], ["Wood keeps the heat inside the spoon", "M_HU_COOKING_ONLY"]], "Heat does not pass quickly along wood, so the cook's hand stays safe."],
+      ["Why do people in a hot place often paint their houses white?", "White walls reflect more of the Sun's heat", [["White walls make their own cold", "M_HU_COLOUR_NO_EFFECT"], ["Colour does not change how hot walls get", "M_HU_COLOUR_NO_EFFECT"], ["White walls take in more heat", "M_HU_COLOUR_NO_EFFECT"]], "Light colours reflect radiation, so the walls and rooms stay cooler."]
+    ], { h: ["Think about convection, conduction and radiation.", "Colour changes how much radiation a surface takes in."], s1: "Name the mode of heat transfer that the story uses." })
+  }),
+  sfam({
+    id: "sci5.heat.hu.match",
+    cs: `${H}HEAT_USES`,
+    form: "word",
+    rung: 2,
+    gen: choose([
+      ["A family dries maize cobs on a mat in the sun. Which mode of heat transfer helps?", "Radiation from the Sun", [["Conduction through the air", "M_HU_COOKING_ONLY"], ["Convection through space", "M_HU_COOKING_ONLY"], ["Cold air passing through the maize", "M_HU_COOKING_ONLY"]], "The Sun's heat reaches the maize as radiation and dries it."],
+      ["A thermos flask keeps tea hot for hours. What is true about the flask?", "It slows down the loss of heat from the tea", [["It makes heat inside", "M_HU_COOKING_ONLY"], ["It lets cold in", "M_HU_COOKING_ONLY"], ["Heat transfer does not happen in a flask", "M_HU_COOKING_ONLY"]], "A flask is a poor conductor, so the heat leaves the tea slowly."],
+      ["Why are sufurias made of metal?", "Metal is a good conductor, so food heats quickly", [["Metal keeps heat out of the food", "M_HU_COOKING_ONLY"], ["Metal is a poor conductor, so it stays cool", "M_HU_COOKING_ONLY"], ["Metal cannot get hot", "M_HU_COOKING_ONLY"]], "The metal quickly carries heat from the fire to the food."],
+      ["A house in a hot area has a roof ceiling made of a poor conductor. What is the reason?", "It slows the heat coming in from the hot roof", [["It makes the house colder than outside", "M_HU_COLOUR_NO_EFFECT"], ["It makes the roof hotter", "M_HU_COLOUR_NO_EFFECT"], ["It has no effect on heat", "M_HU_COLOUR_NO_EFFECT"]], "A poor conductor slows the heat so the room under it stays cooler."],
+      ["A builder puts vents high on the walls of a hot room. What does this let happen?", "Hot air can rise and leave the room", [["Cold air rises out of the room", "M_HU_VENT_LOW"], ["Heat sinks and gets trapped", "M_HU_VENT_LOW"], ["Heat stops moving", "M_HU_VENT_LOW"]], "Hot air rises, so it can leave through high vents. This is convection."]
+    ], { h: ["Think about the mode: conduction, convection or radiation.", "Poor conductors slow heat; good conductors carry it quickly."], s1: "Name the mode and the material." })
+  }),
+  // ---------------------------------------------------------------- HEAT_SAFETY
+  sfam({
+    id: "sci5.heat.hs.safe",
+    cs: `${H}HEAT_SAFETY`,
+    form: "direct",
+    rung: 1,
+    gen: choose([
+      ["Wanjiru needs to lift a hot sufuria. Which cloth is safest to use?", "A thick, dry cloth", [["A wet cloth", "M_HS_WET_CLOTH"], ["A wet towel, folded", "M_HS_WET_CLOTH"], ["A thin, wet cloth", "M_HS_WET_CLOTH"]], "A wet cloth conducts heat and makes steam, which burns. A thick dry cloth is safe."],
+      ["A sufuria has just been taken off the jiko. There is no flame or steam. Is it safe to touch?", "No, it can stay hot for a long time", [["Yes, there is no flame or steam", "M_HS_OFF_FIRE_COOL"], ["Yes, it is off the fire", "M_HS_OFF_FIRE_COOL"], ["Yes, metal cools at once", "M_HS_OFF_FIRE_COOL"]], "Metal can stay very hot without a flame or steam. Do not touch it."],
+      ["A pan has a metal handle. What is the danger when it is on the fire?", "The handle gets hot, as metal carries heat", [["None, since metal is strong and very safe", "M_HS_METAL_HANDLE_OK"], ["None, because metal never gets hot at all", "M_HS_METAL_HANDLE_OK"], ["The handle melts at once on the fire", "M_HS_METAL_HANDLE_OK"]], "Metal is a good conductor, so the handle becomes hot too."],
+      ["What is the safest place for a charcoal jiko?", "In an open place, away from children", [["In a closed bedroom, at night", "M_HS_OFF_FIRE_COOL"], ["Close to the bed, to keep warm", "M_HS_OFF_FIRE_COOL"], ["Where small children play", "M_HS_OFF_FIRE_COOL"]], "A jiko makes heat and smoke. It needs fresh air and must be kept away from children."],
+      ["How should a child be kept safe when a pot of hot water is on the floor?", "Keep the child away and turn the handle in", [["Let the child touch it to learn", "M_HS_OFF_FIRE_COOL"], ["Pour cold water on the pot at once", "M_HS_WET_CLOTH"], ["Hold the handle with a wet cloth", "M_HS_WET_CLOTH"]], "Hot water can scald. Keep children away and keep handles turned inwards."]
+    ], { h: ["Think about what makes handles and cloths get hot.", "A pot can stay hot with no flame or steam."], s1: "Choose the action that keeps heat away from the hands." })
+  }),
+  sfam({
+    id: "sci5.heat.hs.why",
+    cs: `${H}HEAT_SAFETY`,
+    form: "why",
+    rung: 2,
+    gen: choose([
+      ["Why is a wet cloth a dangerous way to lift a hot pot?", "It carries heat quickly and makes steam", [["A wet cloth is thicker and safer", "M_HS_WET_CLOTH"], ["Water cools every hot thing at once", "M_HS_WET_CLOTH"], ["A wet cloth has no effect on heat", "M_HS_WET_CLOTH"]], "Water in the cloth carries heat to the hand fast, and it can make burning steam."],
+      ["Why should you not touch a pot just after taking it off the fire?", "It can stay hot, even with no flame", [["It is cool as soon as the flame is out", "M_HS_OFF_FIRE_COOL"], ["Only pots with steam are hot", "M_HS_OFF_FIRE_COOL"], ["Metal pots are cool when off the fire", "M_HS_OFF_FIRE_COOL"]], "Heat stays in the metal long after the flame has gone."],
+      ["Why do some pans have wooden or plastic handles?", "They are poor conductors, so stay cooler", [["Metal handles are always much safer", "M_HS_METAL_HANDLE_OK"], ["They make the whole pan heat faster", "M_HS_METAL_HANDLE_OK"], ["They are strong, heavy and very safe", "M_HS_METAL_HANDLE_OK"]], "Heat passes slowly along wood and plastic. The handle stays cooler."],
+      ["Wafula says it is safe to carry a pan by its metal handle because metal is strong. What is wrong?", "Metal carries heat, so it can burn", [["Nothing, strong things cannot burn the hand", "M_HS_METAL_HANDLE_OK"], ["The handle is cool, being far from the pot", "M_HS_METAL_HANDLE_OK"], ["Metal handles never get hot at all", "M_HS_METAL_HANDLE_OK"]], "Strong is not the same as safe. Metal is a good conductor, so it gets hot."],
+      ["A mother says the jiko is safe to leave near children once the charcoal stops glowing. What is wrong?", "The jiko can stay hot enough to burn", [["Nothing, since the charcoal is not glowing", "M_HS_OFF_FIRE_COOL"], ["A jiko cools at once when the glow stops", "M_HS_OFF_FIRE_COOL"], ["A jiko cannot burn a child once the smoke stops", "M_HS_OFF_FIRE_COOL"]], "A jiko stays hot long after it stops glowing. Keep children away from it."]
+    ], { h: ["Think about which materials carry heat quickly.", "A pot stays hot after the fire has gone."], s1: "Link the safe choice to how heat moves." })
+  })
+];
+
 // src/ai-tutor/content/families/g6.js
 var fam6 = (def) => family({ reviewed: false, ...def });
 var uniq2 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
-var shuffle3 = (a) => {
+var shuffle4 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = randInt(0, i);
@@ -20215,8 +22423,8 @@ var simpPart = (n, d) => {
 };
 var T4 = (n) => (n / 1e4).toFixed(4);
 var digitsOf2 = (n) => String(n).padStart(7, "0").split("").map(Number);
-var noCarry = (A2, B2) => {
-  const a = digitsOf2(A2), b = digitsOf2(B2);
+var noCarry = (A2, B3) => {
+  const a = digitsOf2(A2), b = digitsOf2(B3);
   return Number(a.map((x, i) => (x + b[i]) % 10).join(""));
 };
 var ONES2 = ["", "one", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten", "eleven", "twelve", "thirteen", "fourteen", "fifteen", "sixteen", "seventeen", "eighteen", "nineteen"];
@@ -20240,7 +22448,7 @@ var words3 = (n) => {
   return s.join(" ");
 };
 var TOWNS3 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega"];
-var FAMILIES14 = [
+var FAMILIES17 = [
   // =========================================================== WHOLE NUMBERS
   fam6({
     id: "g6.place.two-digits",
@@ -20249,21 +22457,21 @@ var FAMILIES14 = [
     rung: 2,
     form: "steps",
     draw: () => {
-      const ds = shuffle3([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 7);
+      const ds = shuffle4([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 7);
       const i = randInt(0, 4), j = randInt(i + 1, 5);
       return { ds, i, j, N: Number(ds.join("")) };
     },
     make: ({ ds, i, j, N: N2 }) => {
-      const A2 = ds[i], B2 = ds[j], ea = 6 - i, eb = 6 - j, va = A2 * 10 ** ea, vb = B2 * 10 ** eb;
+      const A2 = ds[i], B3 = ds[j], ea = 6 - i, eb = 6 - j, va = A2 * 10 ** ea, vb = B3 * 10 ** eb;
       return {
         question: `A county has ${commas(N2)} people. Use place value to answer.`,
         parts: [
           { prompt: `What is the value of the digit ${A2}?`, answer: va, hint: "Say which place the digit is in: ones, tens, hundreds, thousands...", wrong: [[A2, "That is the digit itself. Its value depends on the place it sits in."], [A2 * 10 ** (ea - 1), "Count the places again from the ones place on the right."], [A2 * 10 ** (ea + 1), "Count the places again from the ones place on the right."]] },
-          { prompt: `What is the value of the digit ${B2}?`, answer: vb, hint: "Do the same for this digit.", wrong: [[B2, "That is the digit itself. Its value depends on the place it sits in."], [B2 * 10 ** (eb + 1), "Count the places again from the ones place on the right."]] },
-          { prompt: `What is the difference between the value of ${A2} and the value of ${B2}?`, answer: va - vb, unit: "people", hint: "Take the smaller value from the bigger value.", wrong: [[va + vb, "The question asks for the difference, not the total."], [A2 - B2, "Use the values of the digits, not the digits themselves."]] }
+          { prompt: `What is the value of the digit ${B3}?`, answer: vb, hint: "Do the same for this digit.", wrong: [[B3, "That is the digit itself. Its value depends on the place it sits in."], [B3 * 10 ** (eb + 1), "Count the places again from the ones place on the right."]] },
+          { prompt: `What is the difference between the value of ${A2} and the value of ${B3}?`, answer: va - vb, unit: "people", hint: "Take the smaller value from the bigger value.", wrong: [[va + vb, "The question asks for the difference, not the total."], [A2 - B3, "Use the values of the digits, not the digits themselves."]] }
         ],
         hints: ["Each digit is worth its number times its place.", "The digit in the thousands place is worth thousands."],
-        steps: [`${A2} is in the ${commas(10 ** ea)}s place, so it is worth ${commas(va)}.`, `${B2} is in the ${commas(10 ** eb)}s place, so it is worth ${commas(vb)}.`, `${commas(va)} \u2212 ${commas(vb)} = ${commas(va - vb)}.`]
+        steps: [`${A2} is in the ${commas(10 ** ea)}s place, so it is worth ${commas(va)}.`, `${B3} is in the ${commas(10 ** eb)}s place, so it is worth ${commas(vb)}.`, `${commas(va)} \u2212 ${commas(vb)} = ${commas(va - vb)}.`]
       };
     },
     check: ({ ds, i, j }, v) => v[0] - v[1] === v[2] && String(v[0]).length === 7 - i && String(v[1]).length === 7 - j && String(v[0])[0] === String(ds[i])
@@ -20275,18 +22483,18 @@ var FAMILIES14 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const M4 = randInt(1, 9), T5 = randInt(1, 999), U2 = randInt(1, 99);
-      const N2 = M4 * 1e6 + T5 * 1e3 + U2;
-      return T5 === U2 ? null : { M: M4, T: T5, U: U2, N: N2, p: person() };
+      const M5 = randInt(1, 9), T5 = randInt(1, 999), U2 = randInt(1, 99);
+      const N2 = M5 * 1e6 + T5 * 1e3 + U2;
+      return T5 === U2 ? null : { M: M5, T: T5, U: U2, N: N2, p: person() };
     },
-    make: ({ M: M4, T: T5, U: U2, N: N2, p }) => ({
+    make: ({ M: M5, T: T5, U: U2, N: N2, p }) => ({
       question: `${p.name}'s SACCO reports its savings as "${words3(N2)} shillings". Write the amount in figures.`,
       answer: N2,
-      wrong: [[Number(`${M4}${T5}${U2}`), "Each group of three digits needs all three places. A group with fewer digits needs zeros to fill the places."], [M4 * 1e6 + T5 * 1e3, "The last part of the amount has been left out."], [M4 * 1e6 + U2 * 1e3 + T5, "The thousands and the ones have changed places. Match each number to its word."]],
+      wrong: [[Number(`${M5}${T5}${U2}`), "Each group of three digits needs all three places. A group with fewer digits needs zeros to fill the places."], [M5 * 1e6 + T5 * 1e3, "The last part of the amount has been left out."], [M5 * 1e6 + U2 * 1e3 + T5, "The thousands and the ones have changed places. Match each number to its word."]],
       hints: ["Write the millions, then the thousands, then the rest, as three groups.", "Each group after the millions has three digits. Fill empty places with zero."],
-      steps: [`${M4} million is ${commas(M4 * 1e6)}.`, `${T5} thousand is ${commas(T5 * 1e3)}, and the rest is ${U2}.`, `Together: ${commas(N2)}.`]
+      steps: [`${M5} million is ${commas(M5 * 1e6)}.`, `${T5} thousand is ${commas(T5 * 1e3)}, and the rest is ${U2}.`, `Together: ${commas(N2)}.`]
     }),
-    check: ({ M: M4, T: T5, U: U2 }, a) => Math.floor(a / 1e6) === M4 && Math.floor(a / 1e3) % 1e3 === T5 && a % 1e3 === U2
+    check: ({ M: M5, T: T5, U: U2 }, a) => Math.floor(a / 1e6) === M5 && Math.floor(a / 1e3) % 1e3 === T5 && a % 1e3 === U2
   }),
   fam6({
     id: "g6.place.figures-to-words",
@@ -20295,8 +22503,8 @@ var FAMILIES14 = [
     rung: 2,
     form: "direct",
     draw: () => {
-      const M4 = randInt(1, 9), T5 = randInt(1, 999), U2 = randInt(1, 99), N2 = M4 * 1e6 + T5 * 1e3 + U2;
-      const sw = M4 * 1e6 + U2 * 1e3 + T5, cc = Number(`${M4}${T5}${U2}`), zs = M4 * 1e6 + T5 * 1e3 + U2 * 10;
+      const M5 = randInt(1, 9), T5 = randInt(1, 999), U2 = randInt(1, 99), N2 = M5 * 1e6 + T5 * 1e3 + U2;
+      const sw = M5 * 1e6 + U2 * 1e3 + T5, cc = Number(`${M5}${T5}${U2}`), zs = M5 * 1e6 + T5 * 1e3 + U2 * 10;
       return uniq2(N2, sw, cc, zs) ? { N: N2, sw, cc, zs, k: randInt(0, 3) } : null;
     },
     make: ({ N: N2, sw, cc, zs, k }) => ({
@@ -20767,8 +22975,8 @@ var FAMILIES14 = [
     draw: () => {
       const w1 = randInt(1, 5), w2 = randInt(1, 5), a = randInt(1, 3), b = randInt(1, 3);
       if (a + b < 5) return null;
-      const r = a + b - 4, W2 = w1 + w2;
-      const right = `${W2 + 1} ${simp2(r, 4)}`, ws = [`${W2} ${simp2(r, 4)}`, `${W2} ${fr2(a + b, 4)}`, `${W2} ${fr2(simpPart(a, 4)[0] + simpPart(b, 4)[0], simpPart(a, 4)[1] + simpPart(b, 4)[1])}`];
+      const r = a + b - 4, W3 = w1 + w2;
+      const right = `${W3 + 1} ${simp2(r, 4)}`, ws = [`${W3} ${simp2(r, 4)}`, `${W3} ${fr2(a + b, 4)}`, `${W3} ${fr2(simpPart(a, 4)[0] + simpPart(b, 4)[0], simpPart(a, 4)[1] + simpPart(b, 4)[1])}`];
       return uniq2(right, ...ws) ? { w1, w2, a, b, right, ws, p: person(), k: randInt(0, 3), thing: pick([["cloth", "m"], ["rope", "m"], ["beans", "kg"]]) } : null;
     },
     make: ({ w1, w2, a, b, right, ws, p, k, thing }) => ({
@@ -20979,8 +23187,8 @@ var FAMILIES14 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const subs = shuffle3(["Maths", "English", "Science", "Kiswahili"]).slice(0, 3);
-      const outs = shuffle3([20, 25, 40, 50]).slice(0, 3);
+      const subs = shuffle4(["Maths", "English", "Science", "Kiswahili"]).slice(0, 3);
+      const outs = shuffle4([20, 25, 40, 50]).slice(0, 3);
       const marks = outs.map((o) => randInt(Math.ceil(o * 0.4), o - 1));
       const pcts = marks.map((m, i) => m * 100 / outs[i]);
       if (!pcts.every(Number.isInteger) || !uniq2(...pcts)) return null;
@@ -21085,7 +23293,7 @@ var FAMILIES14 = [
     form: "table",
     draw: () => {
       const L2 = [[1, 2], [1, 4], [3, 4], [1, 5], [2, 5], [3, 5], [4, 5], [1, 10], [3, 10], [7, 10], [1, 20], [3, 20], [7, 20], [9, 20], [1, 25], [3, 25]];
-      const rows = shuffle3(L2).slice(0, 3), kind = pick(["dec", "pct"]);
+      const rows = shuffle4(L2).slice(0, 3), kind = pick(["dec", "pct"]);
       const [n, d] = rows[2], v = n / d, pct3 = n * 100 / d;
       const ws = kind === "dec" ? [pct3, round(1 - v, 2), round(d / n, 2)] : [v, 100 - pct3, n];
       return uniq2(kind === "dec" ? v : pct3, ...ws) ? { rows, kind, ws } : null;
@@ -21113,17 +23321,17 @@ var FAMILIES14 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const A2 = randInt(11e3, 59999), B2 = randInt(11e3, 59999);
-      if (A2 % 10 === 0 || B2 % 10 === 0) return null;
-      const S4 = A2 + B2, nc = noCarry(A2, B2), df = Math.abs(A2 - B2), rd = (Math.round(A2 / 100) + Math.round(B2 / 100)) / 100;
-      const t = [T4(S4), T4(nc), T4(df), rd.toFixed(2)];
-      return uniq2(S4, nc, df, rd * 1e4) && nc !== S4 ? { A: A2, B: B2, t, k: randInt(0, 3), p: person() } : null;
+      const A2 = randInt(11e3, 59999), B3 = randInt(11e3, 59999);
+      if (A2 % 10 === 0 || B3 % 10 === 0) return null;
+      const S5 = A2 + B3, nc = noCarry(A2, B3), df = Math.abs(A2 - B3), rd = (Math.round(A2 / 100) + Math.round(B3 / 100)) / 100;
+      const t = [T4(S5), T4(nc), T4(df), rd.toFixed(2)];
+      return uniq2(S5, nc, df, rd * 1e4) && nc !== S5 ? { A: A2, B: B3, t, k: randInt(0, 3), p: person() } : null;
     },
-    make: ({ A: A2, B: B2, t, k, p }) => ({
-      question: `In a science class, ${p.name} weighs two packets of seeds. They have masses ${T4(A2)} kg and ${T4(B2)} kg. What is the total mass?`,
+    make: ({ A: A2, B: B3, t, k, p }) => ({
+      question: `In a science class, ${p.name} weighs two packets of seeds. They have masses ${T4(A2)} kg and ${T4(B3)} kg. What is the total mass?`,
       options: optionsOf(`${t[0]} kg`, [[`${t[1]} kg`, "A carry was lost somewhere. Add each column from the right, carrying when a column is 10 or more."], [`${t[2]} kg`, "That subtracts. The question asks for both packets together."], [`${t[3]} kg`, "The numbers were rounded before adding. Add the full 4 decimal places."]], k),
       hints: ["Line up the decimal points, one under the other.", "Add from the right, and carry when a column is 10 or more."],
-      steps: [`${T4(A2)} + ${T4(B2)}, with the decimal points lined up.`, `Total: ${t[0]} kg.`]
+      steps: [`${T4(A2)} + ${T4(B3)}, with the decimal points lined up.`, `Total: ${t[0]} kg.`]
     })
   }),
   fam6({
@@ -21222,7 +23430,7 @@ var FAMILIES14 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const items = shuffle3(["Rent", "Food", "Transport", "School fees", "Water and power"]).slice(0, 4);
+      const items = shuffle4(["Rent", "Food", "Transport", "School fees", "Water and power"]).slice(0, 4);
       const planned = items.map(() => randInt(4, 18) * 500), delta = items.map(() => pick([-500, 0, 500, 1e3, 1500]));
       const tp = planned.reduce((x, y) => x + y, 0), net = delta.reduce((x, y) => x + y, 0);
       if (net <= 0) return null;
@@ -21309,21 +23517,21 @@ var FAMILIES14 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const W2 = randInt(10, 16), H = randInt(7, 10), w = randInt(3, W2 - 5), h = randInt(2, H - 4), rate2 = pick([300, 400, 500, 600, 800]);
-      return { W: W2, H, w, h, rate: rate2, p: person() };
+      const W3 = randInt(10, 16), H2 = randInt(7, 10), w = randInt(3, W3 - 5), h = randInt(2, H2 - 4), rate2 = pick([300, 400, 500, 600, 800]);
+      return { W: W3, H: H2, w, h, rate: rate2, p: person() };
     },
-    make: ({ W: W2, H, w, h, rate: rate2, p }) => ({
-      question: `The floor of a hall is a rectangle ${W2} m by ${H} m, with a corner ${w} m by ${h} m left out. The floor that is left is L-shaped. ${p.name} will cover it with tiles at ${sh(rate2)} for each square metre.`,
+    make: ({ W: W3, H: H2, w, h, rate: rate2, p }) => ({
+      question: `The floor of a hall is a rectangle ${W3} m by ${H2} m, with a corner ${w} m by ${h} m left out. The floor that is left is L-shaped. ${p.name} will cover it with tiles at ${sh(rate2)} for each square metre.`,
       parts: [
-        { prompt: `What is the area of the full rectangle ${W2} m by ${H} m?`, answer: W2 * H, unit: "m\xB2", hint: "Length \xD7 width.", wrong: [[2 * (W2 + H), "That is the distance around. Area is length times width."]] },
+        { prompt: `What is the area of the full rectangle ${W3} m by ${H2} m?`, answer: W3 * H2, unit: "m\xB2", hint: "Length \xD7 width.", wrong: [[2 * (W3 + H2), "That is the distance around. Area is length times width."]] },
         { prompt: `What is the area of the corner ${w} m by ${h} m that is left out?`, answer: w * h, unit: "m\xB2", hint: "Length \xD7 width again.", wrong: [[2 * (w + h), "That is the distance around. Area is length times width."]] },
-        { prompt: "What is the area of the L-shaped floor?", answer: W2 * H - w * h, unit: "m\xB2", hint: "Take the corner from the full rectangle.", wrong: [[W2 * H + w * h, "The corner is left out, so take it away."]] },
-        { prompt: "What is the cost of the tiles?", answer: (W2 * H - w * h) * rate2, unit: "sh", hint: "Area \xD7 cost for each square metre.", wrong: [[W2 * H * rate2, "The corner needs no tiles. Use the area of the L-shape."]] }
+        { prompt: "What is the area of the L-shaped floor?", answer: W3 * H2 - w * h, unit: "m\xB2", hint: "Take the corner from the full rectangle.", wrong: [[W3 * H2 + w * h, "The corner is left out, so take it away."]] },
+        { prompt: "What is the cost of the tiles?", answer: (W3 * H2 - w * h) * rate2, unit: "sh", hint: "Area \xD7 cost for each square metre.", wrong: [[W3 * H2 * rate2, "The corner needs no tiles. Use the area of the L-shape."]] }
       ],
       hints: ["Think of the L-shape as a big rectangle with a piece taken out.", "Find each area, subtract, then multiply by the cost."],
-      steps: [`Full: ${W2} \xD7 ${H} = ${W2 * H} m\xB2. Corner: ${w} \xD7 ${h} = ${w * h} m\xB2.`, `L-shape: ${W2 * H} \u2212 ${w * h} = ${W2 * H - w * h} m\xB2.`, `Cost: ${W2 * H - w * h} \xD7 ${rate2} = ${sh((W2 * H - w * h) * rate2)}.`]
+      steps: [`Full: ${W3} \xD7 ${H2} = ${W3 * H2} m\xB2. Corner: ${w} \xD7 ${h} = ${w * h} m\xB2.`, `L-shape: ${W3 * H2} \u2212 ${w * h} = ${W3 * H2 - w * h} m\xB2.`, `Cost: ${W3 * H2 - w * h} \xD7 ${rate2} = ${sh((W3 * H2 - w * h) * rate2)}.`]
     }),
-    check: ({ W: W2, H, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W2 * H && v[1] === w * h
+    check: ({ W: W3, H: H2, w, h, rate: rate2 }, v) => v[2] + v[1] === v[0] && v[3] === v[2] * rate2 && v[0] === W3 * H2 && v[1] === w * h
   }),
   fam6({
     id: "g6.area.circle-count",
@@ -21421,7 +23629,7 @@ var FAMILIES14 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const ks = shuffle3([1, 2, 3, 4, 5, 6, 7]).slice(0, 4), names = shuffle3(["Cup", "Tin", "Bucket", "Drum", "Basin", "Pot"]).slice(0, 4);
+      const ks = shuffle4([1, 2, 3, 4, 5, 6, 7]).slice(0, 4), names = shuffle4(["Cup", "Tin", "Bucket", "Drum", "Basin", "Pot"]).slice(0, 4);
       const [a, b, c, u] = ks;
       return u >= 2 ? { ks: [a, b, c], u, names, ans: 22 * u } : null;
     },
@@ -21509,7 +23717,7 @@ var FAMILIES14 = [
     form: "direct",
     draw: () => {
       const big = pick(["A lorry full of sand", "A ship carrying cargo", "A wagon full of cement", "A truck full of stones"]);
-      const small = shuffle3(["A sack of maize", "A goat", "A bag of sugar", "A bicycle", "A school bag full of books"]).slice(0, 3);
+      const small = shuffle4(["A sack of maize", "A goat", "A bag of sugar", "A bicycle", "A school bag full of books"]).slice(0, 3);
       return { big, small, k: randInt(0, 3), p: person() };
     },
     make: ({ big, small, k, p }) => ({
@@ -21555,7 +23763,7 @@ var FAMILIES14 = [
     draw: () => {
       const [a, b, km] = pick([["Nairobi", "Nakuru", 160], ["Nairobi", "Nyeri", 150], ["Nakuru", "Eldoret", 155], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50]]);
       const base = randInt(6, 9) * 60, g = pick([30, 45, 60]);
-      const dep = [0, 1, 2, 3].map((i) => base + i * g), dur = shuffle3([km - 20, km - 10, km, km + 15]);
+      const dep = [0, 1, 2, 3].map((i) => base + i * g), dur = shuffle4([km - 20, km - 10, km, km + 15]);
       const best = dur.indexOf(Math.min(...dur));
       return { a, b, dep, dur, best, k: 0 };
     },
@@ -21652,7 +23860,7 @@ var FAMILIES14 = [
 ];
 
 // src/ai-tutor/content/families/cov.js
-var shuffle4 = (a) => {
+var shuffle5 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -21671,7 +23879,7 @@ var cap2 = (s) => s.charAt(0).toUpperCase() + s.slice(1);
 var mc2 = (right, wrongs) => {
   const texts = [String(right), ...wrongs.map((w) => String(w[0]))];
   if (new Set(texts).size !== texts.length) return null;
-  return shuffle4([{ text: String(right), right: true }, ...wrongs.map(([text, why]) => ({ text: String(text), right: false, why }))]);
+  return shuffle5([{ text: String(right), right: true }, ...wrongs.map(([text, why]) => ({ text: String(text), right: false, why }))]);
 };
 var mcFixed = (right, wrongs, order) => {
   const o = mc2(right, wrongs);
@@ -21715,7 +23923,7 @@ var sup = (n) => String(n).split("").map((c) => SUP[c]).join("");
 // src/ai-tutor/content/families/g6_cov.js
 var T42 = (n) => (n / 1e4).toFixed(4);
 var TOWNS4 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
-var FAMILIES15 = [
+var FAMILIES18 = [
   // ================================================================ WHOLE NUMBERS
   cov({
     id: "g6c.whole.symbols-from-parts",
@@ -21724,17 +23932,17 @@ var FAMILIES15 = [
     form: "direct",
     rung: 2,
     gen: () => {
-      const M4 = randInt(1, 9), T5 = randInt(1, 99) * (Math.random() < 0.5 ? 1 : 10) + (Math.random() < 0.5 ? 0 : 100 * randInt(1, 9)), U2 = randInt(1, 99);
+      const M5 = randInt(1, 9), T5 = randInt(1, 99) * (Math.random() < 0.5 ? 1 : 10) + (Math.random() < 0.5 ? 0 : 100 * randInt(1, 9)), U2 = randInt(1, 99);
       if (T5 > 999 || T5 % 100 === 0) return null;
-      const N2 = M4 * 1e6 + T5 * 1e3 + U2, cat = Number(`${M4}${T5}${U2}`), tenfold = N2 * 10, swap = M4 * 1e6 + U2 * 1e3 + T5;
+      const N2 = M5 * 1e6 + T5 * 1e3 + U2, cat = Number(`${M5}${T5}${U2}`), tenfold = N2 * 10, swap = M5 * 1e6 + U2 * 1e3 + T5;
       if (!distinct4(N2, cat, tenfold, swap)) return null;
       const options = mc2(commas(N2), [[commas(cat), "Each group of three digits after the millions needs all three places. A group with fewer digits is filled with zeros."], [commas(tenfold), "There is one place too many. Count the groups of three digits again."], [commas(swap), "The thousands and the last group have changed places. Read the amount in order."]]);
       return {
-        question: `A school in ${pick(TOWNS4)} paid ${M4} million, ${T5} thousand and ${U2} shillings for a new classroom block. Which number in symbols shows the amount?`,
+        question: `A school in ${pick(TOWNS4)} paid ${M5} million, ${T5} thousand and ${U2} shillings for a new classroom block. Which number in symbols shows the amount?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Write the millions first, then the thousands, then the last three digits.", "After the millions, every group has three digits. Use zeros to fill empty places."],
-        steps: [`${M4} million is ${commas(M4 * 1e6)}.`, `${T5} thousand is ${commas(T5 * 1e3)} and the last part is ${U2}.`, `Together: ${commas(N2)}.`]
+        steps: [`${M5} million is ${commas(M5 * 1e6)}.`, `${T5} thousand is ${commas(T5 * 1e3)} and the last part is ${U2}.`, `Together: ${commas(N2)}.`]
       };
     }
   }),
@@ -21756,7 +23964,7 @@ var FAMILIES15 = [
       const options = mc2(show(asc), [[show(lex), "This puts the numbers in order by their first digit only. A number with more digits is bigger."], [show(desc), "This is from largest to smallest. The question asks for smallest to largest."], [show(swapped), "Two neighbours are the wrong way round. Compare each pair."]]);
       const p = person();
       return {
-        question: `${p.name} wrote down the number of people who came to four ${pick(["matches", "church services", "market days", "concerts"])}: ${shuffle4(nums).map(commas).join(", ")}. Which list puts them in order, from smallest to largest?`,
+        question: `${p.name} wrote down the number of people who came to four ${pick(["matches", "church services", "market days", "concerts"])}: ${shuffle5(nums).map(commas).join(", ")}. Which list puts them in order, from smallest to largest?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["First count the digits of each number. More digits means a bigger number.", "For numbers with the same number of digits, compare place by place from the left."],
@@ -21772,12 +23980,12 @@ var FAMILIES15 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const ds = shuffle4([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 4), W2 = randInt(0, 9), i = randInt(0, 3);
+      const ds = shuffle5([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 4), W3 = randInt(0, 9), i = randInt(0, 3);
       const names = ["tenths", "hundredths", "thousandths", "ten-thousandths"];
       const ord2 = ["first", "second", "third", "fourth"];
       const options = mcFixed(names[i], names.filter((_, j) => j !== i).map((n) => [n, `The ${n} place is the ${ord2[names.indexOf(n)]} place after the point. Count the places to the digit ${ds[i]} again.`]), names);
       return {
-        question: `A pharmacist's scale shows ${W2}.${ds.join("")} g. In which place is the digit ${ds[i]}?`,
+        question: `A pharmacist's scale shows ${W3}.${ds.join("")} g. In which place is the digit ${ds[i]}?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Start at the decimal point. The first place after it is tenths.", "Count the places to the right until you reach the digit."],
@@ -21851,20 +24059,20 @@ var FAMILIES15 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const A2 = randInt(2e4, 99999), B2 = randInt(1e4, A2 - 5e3), R = A2 - B2;
+      const A2 = randInt(2e4, 99999), B3 = randInt(1e4, A2 - 5e3), R = A2 - B3;
       const dig = (n) => String(n).padStart(5, "0").split("").map(Number);
-      const a = dig(A2), b = dig(B2);
+      const a = dig(A2), b = dig(B3);
       const columnwise = Number(a.map((x, i) => Math.abs(x - b[i])).join(""));
       if (columnwise === R) return null;
-      const w = [[T42(columnwise), "You took the smaller digit from the bigger one in each column. When the top digit is smaller, regroup from the next place."], [T42(A2 + B2), "You added. The question asks how much heavier, so subtract."], [T42(Math.max(R - 1e3, 0)), "Check the regrouping. Taking a tenth for the next place on the right means ten of that place, not a hundred."], [T42(Math.round(R / 10) * 10), "The answer has been rounded. Keep all four places."]];
+      const w = [[T42(columnwise), "You took the smaller digit from the bigger one in each column. When the top digit is smaller, regroup from the next place."], [T42(A2 + B3), "You added. The question asks how much heavier, so subtract."], [T42(Math.max(R - 1e3, 0)), "Check the regrouping. Taking a tenth for the next place on the right means ten of that place, not a hundred."], [T42(Math.round(R / 10) * 10), "The answer has been rounded. Keep all four places."]];
       const p = person();
       return {
-        question: `A scientist weighs two samples of soil. The first has a mass of ${T42(A2)} kg and the second ${T42(B2)} kg. How many kilograms heavier is the first sample than the second?`,
+        question: `A scientist weighs two samples of soil. The first has a mass of ${T42(A2)} kg and the second ${T42(B3)} kg. How many kilograms heavier is the first sample than the second?`,
         answer: T42(R),
         wrong: w,
         hints: ["Line up the decimal points. Write zeros so each number has four places.", "Start with the ten-thousandths on the right. Regroup when the top digit is smaller."],
-        steps: [`${T42(A2)} \u2212 ${T42(B2)}, with the decimal points lined up.`, `The answer is ${T42(R)} m.`],
-        chk: (a2) => Math.round(Number(a2) * 1e4) + B2 === A2
+        steps: [`${T42(A2)} \u2212 ${T42(B3)}, with the decimal points lined up.`, `The answer is ${T42(R)} m.`],
+        chk: (a2) => Math.round(Number(a2) * 1e4) + B3 === A2
       };
     }
   }),
@@ -21993,7 +24201,7 @@ var FAMILIES15 = [
     rung: 1,
     gen: () => {
       const mm = pick(["the thickness of a one-shilling coin", "the thickness of a page of an exercise book", "the thickness of a thin mobile phone", "the width of a grain of rice", "the thickness of a ruler", "the length of an ant"]);
-      const others = shuffle4([["the length of a classroom", "metres (m), because a classroom is several metres long"], ["the distance from Kisumu to Kakamega", "kilometres (km), because the road is many kilometres long"], ["the height of a mango tree", "metres (m), because a tree is several metres tall"], ["the length of a football pitch", "metres (m), because a pitch is many metres long"], ["the distance from Nairobi to Thika", "kilometres (km), because towns are far apart"]]).slice(0, 3);
+      const others = shuffle5([["the length of a classroom", "metres (m), because a classroom is several metres long"], ["the distance from Kisumu to Kakamega", "kilometres (km), because the road is many kilometres long"], ["the height of a mango tree", "metres (m), because a tree is several metres tall"], ["the length of a football pitch", "metres (m), because a pitch is many metres long"], ["the distance from Nairobi to Thika", "kilometres (km), because towns are far apart"]]).slice(0, 3);
       const options = mc2(cap2(mm), others.map(([t, u]) => [cap2(t), `That is best measured in ${u}. It is much bigger than a millimetre.`]));
       return {
         question: `${person().name} is learning about units. A millimetre (mm) is a very small unit. Which of these is best measured in millimetres?`,
@@ -22048,16 +24256,16 @@ var FAMILIES15 = [
     rung: 3,
     gen: () => {
       const c1 = randInt(10, 30), c2 = randInt(2, c1 - 3), m1 = randInt(0, 6), m2 = randInt(m1 + 1, 9);
-      const A2 = 10 * c1 + m1, B2 = 10 * c2 + m2, R = A2 - B2;
-      const w = [[10 * (c1 - c2) + (m2 - m1), "In the millimetre column the top number is smaller, so you cannot take the smaller from the bigger the other way round. Regroup one centimetre."], [10 * (c1 - c2 - 1) + (m1 + 100 - m2), "One centimetre is 10 mm, not 100 mm, when you regroup."], [A2 + B2, "You added. The question asks how much ribbon is left."], [10 * (c1 - c2), "You left out the millimetres."]];
+      const A2 = 10 * c1 + m1, B3 = 10 * c2 + m2, R = A2 - B3;
+      const w = [[10 * (c1 - c2) + (m2 - m1), "In the millimetre column the top number is smaller, so you cannot take the smaller from the bigger the other way round. Regroup one centimetre."], [10 * (c1 - c2 - 1) + (m1 + 100 - m2), "One centimetre is 10 mm, not 100 mm, when you regroup."], [A2 + B3, "You added. The question asks how much ribbon is left."], [10 * (c1 - c2), "You left out the millimetres."]];
       const p = person();
       return {
         question: `${p.name} has a ribbon ${c1} cm ${m1} mm long. ${p.She} cuts off ${c2} cm ${m2} mm. How many millimetres of ribbon are left?`,
         answer: R,
         wrong: w,
         hints: ["Change each length to millimetres only before you subtract.", "1 cm = 10 mm."],
-        steps: [`${c1} cm ${m1} mm = ${A2} mm.`, `${c2} cm ${m2} mm = ${B2} mm.`, `${A2} \u2212 ${B2} = ${R} mm.`],
-        chk: (a) => a + B2 === A2
+        steps: [`${c1} cm ${m1} mm = ${A2} mm.`, `${c2} cm ${m2} mm = ${B3} mm.`, `${A2} \u2212 ${B3} = ${R} mm.`],
+        chk: (a) => a + B3 === A2
       };
     }
   }),
@@ -22168,7 +24376,7 @@ var FAMILIES15 = [
     rung: 1,
     gen: () => {
       const t = pick(["a lorry full of sand", "a container loaded at Mombasa port", "an adult elephant", "a loaded bus", "a train wagon full of maize"]);
-      const l = shuffle4([["a bag of sugar", "kilograms"], ["a chicken", "kilograms"], ["a school bag", "kilograms"], ["a mango", "grams"], ["a loaf of bread", "grams"], ["a cooking-oil bottle", "kilograms"]]).slice(0, 3);
+      const l = shuffle5([["a bag of sugar", "kilograms"], ["a chicken", "kilograms"], ["a school bag", "kilograms"], ["a mango", "grams"], ["a loaf of bread", "grams"], ["a cooking-oil bottle", "kilograms"]]).slice(0, 3);
       const options = mc2(cap2(t), l.map(([x, u]) => [cap2(x), `This is light enough to be measured in ${u}. A tonne is 1,000 kilograms.`]));
       return {
         question: `${person().name} is learning about units. A tonne is a very large unit of mass. Which of these is best measured in tonnes?`,
@@ -22245,16 +24453,16 @@ var FAMILIES15 = [
     rung: 3,
     gen: () => {
       const t1 = randInt(5, 12), t2 = randInt(1, t1 - 3), k1 = randInt(1, 4) * 100, k2 = randInt(k1 / 100 + 1, 9) * 100;
-      const A2 = t1 * 1e3 + k1, B2 = t2 * 1e3 + k2, R = A2 - B2;
-      const w = [[(t1 - t2) * 1e3 + (k2 - k1), "In the kilogram column the top number is smaller. Regroup one tonne, do not take the smaller from the bigger the other way round."], [(t1 - t2 - 1) * 1e3 + k1 + 100 - k2, "One tonne is 1,000 kg, not 100 kg, when you regroup."], [A2 + B2, "You added. The question asks how much cement is left."], [(t1 - t2) * 1e3, "You left out the kilograms."]];
+      const A2 = t1 * 1e3 + k1, B3 = t2 * 1e3 + k2, R = A2 - B3;
+      const w = [[(t1 - t2) * 1e3 + (k2 - k1), "In the kilogram column the top number is smaller. Regroup one tonne, do not take the smaller from the bigger the other way round."], [(t1 - t2 - 1) * 1e3 + k1 + 100 - k2, "One tonne is 1,000 kg, not 100 kg, when you regroup."], [A2 + B3, "You added. The question asks how much cement is left."], [(t1 - t2) * 1e3, "You left out the kilograms."]];
       const p = person();
       return {
         question: `A hardware shop in ${pick(TOWNS4)} receives ${t1} tonnes ${k1} kg of cement. ${p.name} sells ${t2} tonnes ${k2} kg of it. How many kilograms of cement are left?`,
         answer: R,
         wrong: w,
         hints: ["Change both masses to kilograms first.", "Then take the smaller from the bigger."],
-        steps: [`${t1} t ${k1} kg = ${commas(A2)} kg.`, `${t2} t ${k2} kg = ${commas(B2)} kg.`, `${commas(A2)} \u2212 ${commas(B2)} = ${commas(R)} kg.`],
-        chk: (a) => a + B2 === A2
+        steps: [`${t1} t ${k1} kg = ${commas(A2)} kg.`, `${t2} t ${k2} kg = ${commas(B3)} kg.`, `${commas(A2)} \u2212 ${commas(B3)} = ${commas(R)} kg.`],
+        chk: (a) => a + B3 === A2
       };
     }
   }),
@@ -22462,16 +24670,16 @@ var FAMILIES15 = [
     form: "word",
     rung: 3,
     gen: () => {
-      const H = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, "0"), h = H - 12;
+      const H2 = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, "0"), h = H2 - 12;
       const right = `${h}:${mm} p.m.`;
-      const options = mc2(right, [[`${h}:${mm} a.m.`, "Hours from 13 to 23 are after noon, so they are p.m."], [`${H - 10}:${mm} p.m.`, "You took 10 away. Take 12 away from the hour to change from the 24-hour clock."], [`${H}:${mm} p.m.`, "On the 12-hour clock the hour cannot be more than 12. Take 12 away."]]);
+      const options = mc2(right, [[`${h}:${mm} a.m.`, "Hours from 13 to 23 are after noon, so they are p.m."], [`${H2 - 10}:${mm} p.m.`, "You took 10 away. Take 12 away from the hour to change from the 24-hour clock."], [`${H2}:${mm} p.m.`, "On the 12-hour clock the hour cannot be more than 12. Take 12 away."]]);
       const p = person();
       return {
-        question: `${p.name}'s train ticket says: Departs ${H}${mm} h. How would ${p.she} write this time on a 12-hour clock?`,
+        question: `${p.name}'s train ticket says: Departs ${H2}${mm} h. How would ${p.she} write this time on a 12-hour clock?`,
         options,
         instruction: "Choose the best answer.",
         hints: ["Hours from 13 to 23 are in the afternoon or evening.", "Take 12 away from the hour and write p.m."],
-        steps: [`${H} \u2212 12 = ${h}.`, `${H}${mm} h is ${right}.`]
+        steps: [`${H2} \u2212 12 = ${h}.`, `${H2}${mm} h is ${right}.`]
       };
     }
   }),
@@ -22692,7 +24900,7 @@ var FAMILIES15 = [
 // src/ai-tutor/content/families/g8_cov.js
 var TOWNS5 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
 var sgn = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
-var FAMILIES16 = [
+var FAMILIES19 = [
   // ================================================================ INTEGERS
   cov({
     id: "g8c.int.number-line-lift",
@@ -23043,16 +25251,16 @@ var FAMILIES16 = [
     form: "steps",
     rung: 3,
     gen: () => {
-      const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S4 = big + small, p = person();
+      const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S5 = big + small, p = person();
       const goods = pick(["maize", "beans", "rice", "sugar"]), other = pick(["flour", "salt"]);
-      const w1 = [[round(S4 / 2, 2), "You divided the sum by 2, as if both sacks were equal. They differ."], [S4 - diff, "You took the difference from the sum but did not divide by 2."]];
-      const w2 = [[diff, "This is the difference between the sacks. Find the mass of the lighter sack itself."], [round((S4 + diff) / 2, 2), "You added the difference. To find the lighter sack, take it away from the bigger sack."]];
+      const w1 = [[round(S5 / 2, 2), "You divided the sum by 2, as if both sacks were equal. They differ."], [S5 - diff, "You took the difference from the sum but did not divide by 2."]];
+      const w2 = [[diff, "This is the difference between the sacks. Find the mass of the lighter sack itself."], [round((S5 + diff) / 2, 2), "You added the difference. To find the lighter sack, take it away from the bigger sack."]];
       return {
-        question: `A sack of ${goods} and a sack of ${other} together have a mass of ${S4} kg. The sack of ${goods} is ${diff} kg heavier than the sack of ${other}. Let x be the mass of the ${goods} and y the mass of the ${other}, so x + y = ${S4} and x \u2212 y = ${diff}. Solve by elimination.`,
+        question: `A sack of ${goods} and a sack of ${other} together have a mass of ${S5} kg. The sack of ${goods} is ${diff} kg heavier than the sack of ${other}. Let x be the mass of the ${goods} and y the mass of the ${other}, so x + y = ${S5} and x \u2212 y = ${diff}. Solve by elimination.`,
         parts: [{ prompt: `What is the mass of the sack of ${goods}, in kg?`, answer: big, wrong: w1, hint: "Add the two equations. The y terms cancel." }, { prompt: `What is the mass of the sack of ${other}, in kg?`, answer: small, wrong: w2, hint: "Put your first answer into x + y and find y." }],
         hints: ["The y terms have opposite signs, so add the two equations.", "Find x first, then y."],
-        steps: [`Add the equations: 2x = ${S4 + diff}, so x = ${big}.`, `${big} + y = ${S4}, so y = ${small}.`],
-        chk: (v) => v[0] + v[1] === S4 && v[0] - v[1] === diff
+        steps: [`Add the equations: 2x = ${S5 + diff}, so x = ${big}.`, `${big} + y = ${S5}, so y = ${small}.`],
+        chk: (v) => v[0] + v[1] === S5 && v[0] - v[1] === diff
       };
     }
   }),
@@ -23093,7 +25301,7 @@ var FAMILIES16 = [
       for (let k = f + 1; k < 6; k++) ys[k] = ys[k - 1] + 10 * randInt(1, 3);
       const falls = ys.slice(1).map((y, k) => y < ys[k]);
       if (falls.filter(Boolean).length !== 1 || Math.min(...ys) < 10) return null;
-      const idx = shuffle4([0, 1, 2, 3, 4]).slice(0, 4).sort((a, b) => a - b);
+      const idx = shuffle5([0, 1, 2, 3, 4]).slice(0, 4).sort((a, b) => a - b);
       if (!idx.includes(falls.indexOf(true))) idx[0] = falls.indexOf(true);
       const set = [...new Set(idx)].sort((a, b) => a - b);
       if (set.length < 4) return null;
@@ -23278,7 +25486,7 @@ var FAMILIES16 = [
     gen: () => {
       const chance = ["A fair coin is tossed and lands on heads", "A die is rolled and shows a six", "The first customer at a kiosk buys a mandazi", "A learner picked from the class by lots is left-handed", "The next car to pass the school gate is white", "A raffle ticket drawn at a harambee wins the prize"];
       const sure = ["The sun rises tomorrow morning", "Saturday comes after Friday", "A full 5-litre jerrican holds 5 litres of water", "A learner who is 12 years old will be 13 on her next birthday", "Water in a closed bottle stays in the bottle until it is poured out"];
-      const right = pick(chance), wrongs = shuffle4(sure).slice(0, 3);
+      const right = pick(chance), wrongs = shuffle5(sure).slice(0, 3);
       const options = mc2(right, wrongs.map((w) => [w, "We know what will happen here, so no chance is involved."]));
       return {
         question: `${person().name} is learning about chance. Which of these events happens by chance, so that no one can be sure of the result?`,
@@ -23384,7 +25592,7 @@ var FAMILIES16 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const s = pick([2, 5, 10, 20, 25]), L2 = randInt(11, 79) / 2, real = L2 * s, [a, b] = shuffle4(["Nakuru", "Naivasha", "Gilgil", "Nyahururu", "Eldoret", "Kitale", "Kisumu", "Kericho"]).slice(0, 2);
+      const s = pick([2, 5, 10, 20, 25]), L2 = randInt(11, 79) / 2, real = L2 * s, [a, b] = shuffle5(["Nakuru", "Naivasha", "Gilgil", "Nyahururu", "Eldoret", "Kitale", "Kisumu", "Kericho"]).slice(0, 2);
       if (real % 0.5 !== 0) return null;
       return {
         question: `${a} and ${b} are ${L2} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`,
@@ -23406,7 +25614,7 @@ var FAMILIES16 = [
       const s = pick([2, 5, 10, 20, 25, 50]), k = randInt(3, 9), real = s * k;
       const right = `1 cm represents ${s} km`;
       const options = mc2(right, [[`1 cm represents ${real} km`, "You used the whole real distance. Divide it by the map distance to get what 1 cm stands for."], [`${k} cm represents ${s} km`, "The statement must be for 1 cm. Divide to find it."], [`1 cm represents ${k} km`, "You used the map distance. Divide the real distance by the map distance."]]);
-      const [a, b] = shuffle4(["Thika", "Nyeri", "Embu", "Meru", "Machakos", "Kajiado"]).slice(0, 2);
+      const [a, b] = shuffle5(["Thika", "Nyeri", "Embu", "Meru", "Machakos", "Kajiado"]).slice(0, 2);
       return {
         question: `The road from ${a} to ${b} measures ${k} cm on a map and ${real} km on the ground. Which sentence gives the scale of the map?`,
         options,
@@ -23593,14 +25801,14 @@ var INTEGERS = [
     form: "spot",
     draw: () => ({ x: randInt(2, 9), y: randInt(2, 8), z: randInt(2, 6), type: pick(["product", "rewrite", "arith"]), who: person() }),
     make: ({ x, y, z, type, who }) => {
-      const P = type === "product" ? y * z : -y * z;
-      const Q2 = type === "rewrite" ? P : -P;
-      const V = type === "arith" ? Q2 - x : x + Q2;
-      const s2 = `${x} \u2212 (${fm(P)}) = ${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)}`;
+      const P2 = type === "product" ? y * z : -y * z;
+      const Q2 = type === "rewrite" ? P2 : -P2;
+      const V2 = type === "arith" ? Q2 - x : x + Q2;
+      const s2 = `${x} \u2212 (${fm(P2)}) = ${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)}`;
       const working = [
-        { text: `(\u2212${y}) \xD7 ${z} = ${fm(P)}`, ok: P === -y * z },
-        { text: s2, ok: Q2 === -P },
-        { text: `${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)} = ${fm(V)}`, ok: V === x + Q2 }
+        { text: `(\u2212${y}) \xD7 ${z} = ${fm(P2)}`, ok: P2 === -y * z },
+        { text: s2, ok: Q2 === -P2 },
+        { text: `${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)} = ${fm(V2)}`, ok: V2 === x + Q2 }
       ];
       const fix = { product: "A negative number times a positive number is negative, so the product in Step 1 is negative.", rewrite: "Subtracting a negative number is the same as adding its positive. The sign in Step 2 should change to plus.", arith: `In Step 3 the sum ${x} ${Q2 < 0 ? "\u2212" : "+"} ${Math.abs(Q2)} was worked out the wrong way round.` }[type];
       return {
@@ -23982,14 +26190,14 @@ var CUBES = [
       const e = pick([6, 8, 9, 12, 15, 20]);
       return { e, V: e ** 3, who: person() };
     },
-    make: ({ e, V, who }) => ({
-      question: `${who.name} has a box in the shape of a cube. It holds ${commas(V)} cm\xB3 of rice. What is the length of one edge, in cm?`,
+    make: ({ e, V: V2, who }) => ({
+      question: `${who.name} has a box in the shape of a cube. It holds ${commas(V2)} cm\xB3 of rice. What is the length of one edge, in cm?`,
       answer: e,
-      wrong: [[round(V / 3, 0), "Dividing the volume by 3 does not give the edge. Find the number that multiplies by itself three times."], [round(Math.sqrt(V), 1), "A square root is for area. Volume needs a cube root."], [round(V / 6, 0), "Dividing by 6 is for faces. Find the number that multiplied three times gives the volume."]],
+      wrong: [[round(V2 / 3, 0), "Dividing the volume by 3 does not give the edge. Find the number that multiplies by itself three times."], [round(Math.sqrt(V2), 1), "A square root is for area. Volume needs a cube root."], [round(V2 / 6, 0), "Dividing by 6 is for faces. Find the number that multiplied three times gives the volume."]],
       hints: ["Volume of a cube = edge \xD7 edge \xD7 edge.", "Which number multiplied by itself three times gives the volume? Use prime factors if needed."],
-      steps: [`edge \xD7 edge \xD7 edge = ${commas(V)}.`, `The edge is the cube root of ${commas(V)}, which is ${e} cm.`]
+      steps: [`edge \xD7 edge \xD7 edge = ${commas(V2)}.`, `The edge is the cube root of ${commas(V2)}, which is ${e} cm.`]
     }),
-    check: ({ V }, a) => a * a * a === V
+    check: ({ V: V2 }, a) => a * a * a === V2
   })
 ];
 var INDICES = [
@@ -24346,8 +26554,8 @@ var PROPORTION = [
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
       if (q === r || s <= r || gcd5(p, q) !== 1 || gcd5(r, s) !== 1) return null;
-      const L2 = lcm3(q, r), A2 = p * L2 / q, B2 = L2, C2 = s * L2 / r, k = randInt(2, 5), N2 = A2 * k, hens = C2 * k;
-      const w1 = round(N2 * s / p, 1), w2 = round(N2 * s / r, 1), w3 = B2 * k;
+      const L2 = lcm3(q, r), A2 = p * L2 / q, B3 = L2, C2 = s * L2 / r, k = randInt(2, 5), N2 = A2 * k, hens = C2 * k;
+      const w1 = round(N2 * s / p, 1), w2 = round(N2 * s / r, 1), w3 = B3 * k;
       return uniq3(hens, w1, w2, w3) && N2 <= 90 && hens <= 200 ? { p, q, r, s, N: N2, hens, w1, w2, w3 } : null;
     },
     make: ({ p, q, r, s, N: N2, hens, w1, w2, w3 }) => ({
@@ -24441,20 +26649,20 @@ var PROPORTION = [
     rung: 2,
     form: "table",
     draw: () => {
-      const P = pick([24, 36, 48, 60]), divs = [2, 3, 4, 5, 6, 8, 9, 10, 12, 15].filter((d) => P % d === 0), pool2 = divs.sort(() => Math.random() - 0.5), rows = pool2.slice(0, 4).sort((a, b) => a - b), w = pool2[4];
+      const P2 = pick([24, 36, 48, 60]), divs = [2, 3, 4, 5, 6, 8, 9, 10, 12, 15].filter((d) => P2 % d === 0), pool2 = divs.sort(() => Math.random() - 0.5), rows = pool2.slice(0, 4).sort((a, b) => a - b), w = pool2[4];
       if (w == null || rows.length < 4) return null;
-      const ans = P / w, w1 = round(P / rows[0] * w / rows[0], 1), w2 = P / rows[3], w3 = P;
-      return uniq3(ans, w1, w2, w3) ? { P, rows, w, ans, w1, w2, w3 } : null;
+      const ans = P2 / w, w1 = round(P2 / rows[0] * w / rows[0], 1), w2 = P2 / rows[3], w3 = P2;
+      return uniq3(ans, w1, w2, w3) ? { P: P2, rows, w, ans, w1, w2, w3 } : null;
     },
-    make: ({ P, rows, w, ans, w1, w2, w3 }) => ({
+    make: ({ P: P2, rows, w, ans, w1, w2, w3 }) => ({
       question: `The table shows how many days different numbers of workers take to build the same wall. All the workers work at the same rate. How many days will ${w} workers take?`,
-      model: { type: "table", data: { head: ["Workers", "Days"], rows: rows.map((r) => ({ label: String(r), value: String(P / r) })) } },
+      model: { type: "table", data: { head: ["Workers", "Days"], rows: rows.map((r) => ({ label: String(r), value: String(P2 / r) })) } },
       answer: ans,
       wrong: [[w1, "More workers will finish the wall in fewer days, not more."], [w2, "That is the number of days for a different number of workers in the table. Check the workers."], [w3, "That is the number of worker-days. Divide it by the number of workers."]],
       hints: ["Multiply the workers by the days in one row of the table. Is it the same in the other rows?", "That product is the total work. Divide it by the new number of workers."],
-      steps: [`${rows[0]} \xD7 ${P / rows[0]} = ${P}, and ${rows[1]} \xD7 ${P / rows[1]} = ${P}. The work is ${P} worker-days.`, `${P} \xF7 ${w} = ${ans} days.`]
+      steps: [`${rows[0]} \xD7 ${P2 / rows[0]} = ${P2}, and ${rows[1]} \xD7 ${P2 / rows[1]} = ${P2}. The work is ${P2} worker-days.`, `${P2} \xF7 ${w} = ${ans} days.`]
     }),
-    check: ({ P, w }, a) => a * w === P
+    check: ({ P: P2, w }, a) => a * w === P2
   }),
   fam7({
     id: "g9.var.table-type",
@@ -24585,18 +26793,18 @@ var MATRICES = [
         const v = randInt(40, 95);
         if (!vals.includes(v)) vals.push(v);
       }
-      const M4 = [vals.slice(0, 3), vals.slice(3, 6), vals.slice(6, 9)], r = randInt(0, 2), c = randInt(0, 2);
-      return r !== c ? { names, M: M4, r, c } : null;
+      const M5 = [vals.slice(0, 3), vals.slice(3, 6), vals.slice(6, 9)], r = randInt(0, 2), c = randInt(0, 2);
+      return r !== c ? { names, M: M5, r, c } : null;
     },
-    make: ({ names, M: M4, r, c }) => ({
+    make: ({ names, M: M5, r, c }) => ({
       question: `The table shows the marks of three learners in three subjects. The marks are written as a matrix with one row for each learner and one column for each subject, in the same order as the table. What is the element in row ${r + 1} and column ${c + 1} of the matrix?`,
-      model: { type: "table", data: { head: ["Learner", "Maths", "English", "Science"], rows: names.map((n, i) => ({ cells: [n.name, ...M4[i].map(String)] })) } },
-      answer: M4[r][c],
-      wrong: [[M4[c][r], "You swapped the row and the column. The row number comes first."], [M4[r][(c + 1) % 3], "That is in the right row but the wrong column. Count the columns from the left."], [M4[(r + 1) % 3][c], "That is in the right column but the wrong row. Count the rows from the top."]],
+      model: { type: "table", data: { head: ["Learner", "Maths", "English", "Science"], rows: names.map((n, i) => ({ cells: [n.name, ...M5[i].map(String)] })) } },
+      answer: M5[r][c],
+      wrong: [[M5[c][r], "You swapped the row and the column. The row number comes first."], [M5[r][(c + 1) % 3], "That is in the right row but the wrong column. Count the columns from the left."], [M5[(r + 1) % 3][c], "That is in the right column but the wrong row. Count the rows from the top."]],
       hints: ["Row 1 is the first learner. Column 1 is the first subject.", "Go to the row, then across to the column."],
-      steps: [`Row ${r + 1} is ${names[r].name}. Column ${c + 1} is ${["Maths", "English", "Science"][c]}.`, `The mark is ${M4[r][c]}.`]
+      steps: [`Row ${r + 1} is ${names[r].name}. Column ${c + 1} is ${["Maths", "English", "Science"][c]}.`, `The mark is ${M5[r][c]}.`]
     }),
-    check: ({ M: M4, r, c }, a) => M4.flat().indexOf(a) === r * 3 + c
+    check: ({ M: M5, r, c }, a) => M5.flat().indexOf(a) === r * 3 + c
   }),
   fam7({
     id: "g9.mat.add-why",
@@ -24680,24 +26888,24 @@ var MATRICES = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const A2 = [[randInt(2, 9), randInt(2, 9)], [randInt(2, 9), randInt(2, 9)]], B2 = [[randInt(1, 6), randInt(1, 6)], [randInt(1, 6), randInt(1, 6)]];
+      const A2 = [[randInt(2, 9), randInt(2, 9)], [randInt(2, 9), randInt(2, 9)]], B3 = [[randInt(1, 6), randInt(1, 6)], [randInt(1, 6), randInt(1, 6)]];
       const i = randInt(0, 3), type = pick(["neg", "reverse"]), [r, c] = [Math.floor(i / 2), i % 2];
-      if (type === "neg") B2[r][c] = -randInt(1, 6);
-      if (type === "reverse" && A2[r][c] === B2[r][c]) return null;
-      return { A: A2, B: B2, r, c, type, who: person() };
+      if (type === "neg") B3[r][c] = -randInt(1, 6);
+      if (type === "reverse" && A2[r][c] === B3[r][c]) return null;
+      return { A: A2, B: B3, r, c, type, who: person() };
     },
-    make: ({ A: A2, B: B2, r, c, type, who }) => {
+    make: ({ A: A2, B: B3, r, c, type, who }) => {
       const labs = [["Row 1, column 1", "Row 1, column 2"], ["Row 2, column 1", "Row 2, column 2"]];
       const working = [];
       for (let i = 0; i < 2; i++) for (let j = 0; j < 2; j++) {
-        const bad2 = i === r && j === c, a = A2[i][j], b = B2[i][j], right = a - b;
+        const bad2 = i === r && j === c, a = A2[i][j], b = B3[i][j], right = a - b;
         const v = bad2 ? type === "neg" ? a - Math.abs(b) : b - a : right;
         working.push({ text: `${labs[i][j]}: ${a} \u2212 ${br(b)} = ${fm(v)}`, ok: v === right });
       }
       const fix = type === "neg" ? "Subtracting a negative number is the same as adding. The step with the negative number was worked out as a plain subtraction." : "In subtraction the order matters. The element of the second matrix is taken away from the element of the first.";
-      const R = A2.map((row, i) => row.map((x, j) => x - B2[i][j]));
+      const R = A2.map((row, i) => row.map((x, j) => x - B3[i][j]));
       return {
-        question: `${who.name} worked out ${mat(A2)} \u2212 ${mat(B2)} one element at a time. One step is wrong. Which one?`,
+        question: `${who.name} worked out ${mat(A2)} \u2212 ${mat(B3)} one element at a time. One step is wrong. Which one?`,
         working,
         fix,
         steps: [`The answer is ${mat(R)}.`, "Subtract each element of the second matrix from the matching element of the first."]
@@ -24711,20 +26919,20 @@ var MATRICES = [
     rung: 3,
     form: "direct",
     draw: () => {
-      const X = randInt(2, 9), Y2 = randInt(2, 9), p = randInt(1, 6), q = randInt(1, 6), B2 = [[randInt(1, 7), randInt(1, 7)], [randInt(1, 7), randInt(1, 7)]];
-      const C2 = [[X + B2[0][0], p + B2[0][1]], [q + B2[1][0], Y2 + B2[1][1]]];
-      const ans = X + Y2, w1 = C2[0][0] + B2[0][0] + C2[1][1] + B2[1][1], w2 = C2[0][0] + C2[1][1], w3 = X * Y2;
-      return X !== Y2 && uniq3(ans, w1, w2, w3) ? { X, Y: Y2, p, q, B: B2, C: C2, ans, w1, w2, w3 } : null;
+      const X = randInt(2, 9), Y2 = randInt(2, 9), p = randInt(1, 6), q = randInt(1, 6), B3 = [[randInt(1, 7), randInt(1, 7)], [randInt(1, 7), randInt(1, 7)]];
+      const C2 = [[X + B3[0][0], p + B3[0][1]], [q + B3[1][0], Y2 + B3[1][1]]];
+      const ans = X + Y2, w1 = C2[0][0] + B3[0][0] + C2[1][1] + B3[1][1], w2 = C2[0][0] + C2[1][1], w3 = X * Y2;
+      return X !== Y2 && uniq3(ans, w1, w2, w3) ? { X, Y: Y2, p, q, B: B3, C: C2, ans, w1, w2, w3 } : null;
     },
-    make: ({ X, Y: Y2, p, q, B: B2, C: C2, ans, w1, w2, w3 }) => ({
-      question: `Find the value of x + y.   [x ${p}; ${q} y] + ${mat(B2)} = ${mat(C2)}`,
+    make: ({ X, Y: Y2, p, q, B: B3, C: C2, ans, w1, w2, w3 }) => ({
+      question: `Find the value of x + y.   [x ${p}; ${q} y] + ${mat(B3)} = ${mat(C2)}`,
       story: false,
       answer: ans,
       wrong: [[w1, "You added when you should have taken away. Subtract the element of the known matrix."], [w2, "Those are the elements of the answer matrix. x and y are in the first matrix, before the addition."], [w3, "The question asks for x + y, not x \xD7 y."]],
       hints: ["Add the matching elements. Which ones contain x and y?", "Write an equation for the top-left elements, and another for the bottom-right elements."],
-      steps: [`Top left: x + ${B2[0][0]} = ${C2[0][0]}, so x = ${X}.`, `Bottom right: y + ${B2[1][1]} = ${C2[1][1]}, so y = ${Y2}. Then x + y = ${ans}.`]
+      steps: [`Top left: x + ${B3[0][0]} = ${C2[0][0]}, so x = ${X}.`, `Bottom right: y + ${B3[1][1]} = ${C2[1][1]}, so y = ${Y2}. Then x + y = ${ans}.`]
     }),
-    check: ({ B: B2, C: C2 }, a) => a + B2[0][0] + B2[1][1] === C2[0][0] + C2[1][1]
+    check: ({ B: B3, C: C2 }, a) => a + B3[0][0] + B3[1][1] === C2[0][0] + C2[1][1]
   })
 ];
 var eq = (m, c) => `y = ${m === 1 ? "" : m === -1 ? "\u2212" : fm(m)}x${c === 0 ? "" : c < 0 ? ` \u2212 ${-c}` : ` + ${c}`}`;
@@ -24983,17 +27191,17 @@ var LINES = [
     rung: 2,
     form: "word",
     draw: () => {
-      const B2 = pick([3, 4, 5, 6]), x0 = randInt(4, 15), A2 = B2 * x0;
-      return uniq3(x0, A2, B2, A2 * B2) ? { A: A2, B: B2, x0 } : null;
+      const B3 = pick([3, 4, 5, 6]), x0 = randInt(4, 15), A2 = B3 * x0;
+      return uniq3(x0, A2, B3, A2 * B3) ? { A: A2, B: B3, x0 } : null;
     },
-    make: ({ A: A2, B: B2, x0 }) => ({
-      question: `The depth y cm of water in a drum after x minutes is given by y = ${A2} \u2212 ${B2}x. The graph of this line meets the x-axis when the drum is empty. After how many minutes does the line meet the x-axis?`,
+    make: ({ A: A2, B: B3, x0 }) => ({
+      question: `The depth y cm of water in a drum after x minutes is given by y = ${A2} \u2212 ${B3}x. The graph of this line meets the x-axis when the drum is empty. After how many minutes does the line meet the x-axis?`,
       answer: x0,
-      wrong: [[A2, `That is where the line meets the y-axis, at the start. On the x-axis, y = 0.`], [B2, "That is the gradient size: the cm lost each minute."], [round(A2 * B2, 0), "Set y = 0 and divide. Do not multiply."]],
-      hints: ["On the x-axis, the depth y is 0.", `Solve 0 = ${A2} \u2212 ${B2}x.`],
-      steps: [`Put y = 0: 0 = ${A2} \u2212 ${B2}x.`, `${B2}x = ${A2}, so x = ${A2} \xF7 ${B2} = ${x0} minutes.`]
+      wrong: [[A2, `That is where the line meets the y-axis, at the start. On the x-axis, y = 0.`], [B3, "That is the gradient size: the cm lost each minute."], [round(A2 * B3, 0), "Set y = 0 and divide. Do not multiply."]],
+      hints: ["On the x-axis, the depth y is 0.", `Solve 0 = ${A2} \u2212 ${B3}x.`],
+      steps: [`Put y = 0: 0 = ${A2} \u2212 ${B3}x.`, `${B3}x = ${A2}, so x = ${A2} \xF7 ${B3} = ${x0} minutes.`]
     }),
-    check: ({ A: A2, B: B2 }, a) => A2 - B2 * a === 0
+    check: ({ A: A2, B: B3 }, a) => A2 - B3 * a === 0
   }),
   fam7({
     id: "g9.line.why-intercept",
@@ -25172,18 +27380,18 @@ var INEQ = [
     rung: 2,
     form: "word",
     draw: () => {
-      const item = pick(["exercise book", "loaf of bread", "kg of rice", "litre of milk"]), p = price(item), n = randInt(8, 15), r = 5 * randInt(1, Math.max(1, Math.floor(p / 5) - 1)), B2 = p * n + r;
+      const item = pick(["exercise book", "loaf of bread", "kg of rice", "litre of milk"]), p = price(item), n = randInt(8, 15), r = 5 * randInt(1, Math.max(1, Math.floor(p / 5) - 1)), B3 = p * n + r;
       if (r >= p) return null;
-      return uniq3(n, n + 1, B2 - p, round(B2 / p, 1)) ? { item, p, n, B: B2, who: person() } : null;
+      return uniq3(n, n + 1, B3 - p, round(B3 / p, 1)) ? { item, p, n, B: B3, who: person() } : null;
     },
-    make: ({ item, p, n, B: B2, who }) => ({
-      question: `${who.name} has ${sh(B2)} to spend. Each ${item} costs ${sh(p)}. What is the maximum number of ${item === "exercise book" ? "exercise books" : item === "loaf of bread" ? "loaves" : item === "kg of rice" ? "kg of rice" : "litres of milk"} ${who.she} can buy?`,
+    make: ({ item, p, n, B: B3, who }) => ({
+      question: `${who.name} has ${sh(B3)} to spend. Each ${item} costs ${sh(p)}. What is the maximum number of ${item === "exercise book" ? "exercise books" : item === "loaf of bread" ? "loaves" : item === "kg of rice" ? "kg of rice" : "litres of milk"} ${who.she} can buy?`,
       answer: n,
-      wrong: [[n + 1, `That would cost more than ${sh(B2)}. You cannot round up when there is a budget.`], [B2 - p, "Take the number of items from the amount of money, not the money left. Divide the budget by the price."], [round(B2 / p, 1), "You can only buy a whole number of items. Take the whole number part."]],
-      hints: [`Write an inequality: ${p} \xD7 n \u2264 ${B2}.`, "Divide, then think about whether n can be a fraction."],
-      steps: [`${p}n \u2264 ${commas(B2)}, so n \u2264 ${commas(B2)} \xF7 ${p} = ${round(B2 / p, 2)}.`, `n must be a whole number, so the maximum is ${n}.`]
+      wrong: [[n + 1, `That would cost more than ${sh(B3)}. You cannot round up when there is a budget.`], [B3 - p, "Take the number of items from the amount of money, not the money left. Divide the budget by the price."], [round(B3 / p, 1), "You can only buy a whole number of items. Take the whole number part."]],
+      hints: [`Write an inequality: ${p} \xD7 n \u2264 ${B3}.`, "Divide, then think about whether n can be a fraction."],
+      steps: [`${p}n \u2264 ${commas(B3)}, so n \u2264 ${commas(B3)} \xF7 ${p} = ${round(B3 / p, 2)}.`, `n must be a whole number, so the maximum is ${n}.`]
     }),
-    check: ({ p, B: B2 }, a) => p * a <= B2 && p * (a + 1) > B2
+    check: ({ p, B: B3 }, a) => p * a <= B3 && p * (a + 1) > B3
   }),
   fam7({
     id: "g9.ineq.at-least-tickets",
@@ -25213,25 +27421,25 @@ var INEQ = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const W2 = pick([1200, 1500, 2e3]), b = pick([150, 200, 300]), w = pick([50, 60, 70, 80]);
-      return (W2 - b) % w !== 0 ? { W: W2, b, w } : null;
+      const W3 = pick([1200, 1500, 2e3]), b = pick([150, 200, 300]), w = pick([50, 60, 70, 80]);
+      return (W3 - b) % w !== 0 ? { W: W3, b, w } : null;
     },
-    make: ({ W: W2, b, w }) => {
-      const room = W2 - b, n = Math.floor(room / w);
+    make: ({ W: W3, b, w }) => {
+      const room = W3 - b, n = Math.floor(room / w);
       return {
-        question: `A pickup can carry at most ${commas(W2)} kg altogether. The driver and tools have a mass of ${b} kg. Each sack of maize has a mass of ${w} kg.`,
+        question: `A pickup can carry at most ${commas(W3)} kg altogether. The driver and tools have a mass of ${b} kg. Each sack of maize has a mass of ${w} kg.`,
         parts: [
-          { prompt: "What is the greatest mass of sacks the pickup can carry, in kg?", answer: room, unit: "kg", hint: "Take the mass of the driver and tools from the most the pickup can carry.", wrong: [[W2, "The driver and tools also count towards the load."]] },
+          { prompt: "What is the greatest mass of sacks the pickup can carry, in kg?", answer: room, unit: "kg", hint: "Take the mass of the driver and tools from the most the pickup can carry.", wrong: [[W3, "The driver and tools also count towards the load."]] },
           { prompt: "What is the greatest number of whole sacks it can carry?", answer: n, hint: `Divide by ${w}. You cannot carry part of a sack.`, wrong: [[n + 1, "That many sacks would be over the limit. Take the whole number part."]] },
           { prompt: "How many kg of spare room are left?", answer: room - n * w, unit: "kg", hint: "Take the mass of the sacks from the greatest mass of sacks.", wrong: [[w, "The spare room is what is left after the sacks are loaded."]] }
         ],
-        steps: [`Greatest mass of sacks: ${commas(W2)} \u2212 ${b} = ${commas(room)} kg.`, `${commas(room)} \xF7 ${w} = ${round(room / w, 2)}, so ${n} whole sacks.`, `Spare room: ${commas(room)} \u2212 ${n} \xD7 ${w} = ${room - n * w} kg.`]
+        steps: [`Greatest mass of sacks: ${commas(W3)} \u2212 ${b} = ${commas(room)} kg.`, `${commas(room)} \xF7 ${w} = ${round(room / w, 2)}, so ${n} whole sacks.`, `Spare room: ${commas(room)} \u2212 ${n} \xD7 ${w} = ${room - n * w} kg.`]
       };
     },
-    check: ({ W: W2, b, w }, v) => v[0] + b === W2 && v[1] * w <= v[0] && (v[1] + 1) * w > v[0] && v[2] + v[1] * w === v[0]
+    check: ({ W: W3, b, w }, v) => v[0] + b === W3 && v[1] * w <= v[0] && (v[1] + 1) * w > v[0] && v[2] + v[1] * w === v[0]
   })
 ];
-var FAMILIES17 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
+var FAMILIES20 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
 
 // src/ai-tutor/content/families/g9_measure.js
 var fam8 = (def) => family({ reviewed: false, ...def });
@@ -25249,7 +27457,7 @@ var clock = (min) => `${Math.floor(min / 60)}:${String(Math.round(min) % 60).pad
 var clock24 = (min) => `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(Math.round(min) % 60).padStart(2, "0")}`;
 var ROADS = [["Nairobi", "Nakuru", 160], ["Nairobi", "Thika", 45], ["Nairobi", "Machakos", 60], ["Nairobi", "Nyeri", 150], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50], ["Nakuru", "Eldoret", 155], ["Eldoret", "Kitale", 70], ["Nairobi", "Meru", 225], ["Nakuru", "Kisumu", 185]];
 var TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
-var FAMILIES18 = [
+var FAMILIES21 = [
   // ======================================================== AREA: pentagon, hexagon
   fam8({
     id: "g9.area.hexagon-slab",
@@ -25763,17 +27971,17 @@ var FAMILIES18 = [
     form: "steps",
     draw: () => ({ h: pick([18, 24, 30]), who: person() }),
     make: ({ h, who }) => {
-      const H = 2 * h, big = round(PI * 14 * 14 * H / 3, 2), small = round(PI * 7 * 7 * h / 3, 2), bucket = round(big - small, 2);
+      const H2 = 2 * h, big = round(PI * 14 * 14 * H2 / 3, 2), small = round(PI * 7 * 7 * h / 3, 2), bucket = round(big - small, 2);
       return {
-        question: `${who.name}'s bucket is a cone with its pointed end cut off. The cone it was cut from has a radius of 14 cm at the top and a height of ${H} cm. The piece cut off is a small cone with a radius of 7 cm and a height of ${h} cm. Use \u03C0 = 22/7.`,
+        question: `${who.name}'s bucket is a cone with its pointed end cut off. The cone it was cut from has a radius of 14 cm at the top and a height of ${H2} cm. The piece cut off is a small cone with a radius of 7 cm and a height of ${h} cm. Use \u03C0 = 22/7.`,
         parts: [
-          { prompt: "Volume of the whole cone, in cm\xB3:", answer: big, unit: "cm\xB3", hint: "Volume of a cone = \u2153 \xD7 \u03C0 \xD7 r \xD7 r \xD7 height.", wrong: [[round(PI * 14 * 14 * H, 2), "A cone has one third of the volume of a cylinder."], [round(PI * 7 * 7 * H / 3, 2), "Use the radius of the big cone, 14 cm."]] },
-          { prompt: "Volume of the small cone that was cut off, in cm\xB3:", answer: small, unit: "cm\xB3", hint: "Use its own radius and its own height.", wrong: [[round(PI * 7 * 7 * H / 3, 2), "The small cone is only as tall as the piece cut off."], [round(PI * 14 * 14 * h / 3, 2), "The small cone has a radius of 7 cm."]] },
+          { prompt: "Volume of the whole cone, in cm\xB3:", answer: big, unit: "cm\xB3", hint: "Volume of a cone = \u2153 \xD7 \u03C0 \xD7 r \xD7 r \xD7 height.", wrong: [[round(PI * 14 * 14 * H2, 2), "A cone has one third of the volume of a cylinder."], [round(PI * 7 * 7 * H2 / 3, 2), "Use the radius of the big cone, 14 cm."]] },
+          { prompt: "Volume of the small cone that was cut off, in cm\xB3:", answer: small, unit: "cm\xB3", hint: "Use its own radius and its own height.", wrong: [[round(PI * 7 * 7 * H2 / 3, 2), "The small cone is only as tall as the piece cut off."], [round(PI * 14 * 14 * h / 3, 2), "The small cone has a radius of 7 cm."]] },
           { prompt: "Volume of the bucket, in cm\xB3:", answer: bucket, unit: "cm\xB3", hint: "Take the small cone away from the whole cone.", wrong: [[round(big + small, 2), "The small cone was cut away, so take it away."], [big, "The cut-off piece is not part of the bucket."]] },
           { prompt: "How many litres does the bucket hold? (1 litre = 1,000 cm\xB3)", answer: bucket / 1e3, unit: "litres", hint: "Divide by 1,000.", wrong: [[bucket / 100, "There are 1,000 cm\xB3 in a litre."], [bucket * 1e3, "Divide, because a litre is bigger than a cm\xB3."]] }
         ],
         hints: ["Bucket = whole cone minus the cut-off cone."],
-        steps: [`Whole cone: \u2153 \xD7 22/7 \xD7 14 \xD7 14 \xD7 ${H} = ${T3(big)} cm\xB3.`, `Small cone: \u2153 \xD7 22/7 \xD7 7 \xD7 7 \xD7 ${h} = ${T3(small)} cm\xB3.`, `Bucket: ${T3(big)} \u2212 ${T3(small)} = ${T3(bucket)} cm\xB3.`, `Litres: ${T3(bucket)} \xF7 1,000 = ${T3(bucket / 1e3)}.`]
+        steps: [`Whole cone: \u2153 \xD7 22/7 \xD7 14 \xD7 14 \xD7 ${H2} = ${T3(big)} cm\xB3.`, `Small cone: \u2153 \xD7 22/7 \xD7 7 \xD7 7 \xD7 ${h} = ${T3(small)} cm\xB3.`, `Bucket: ${T3(big)} \u2212 ${T3(small)} = ${T3(bucket)} cm\xB3.`, `Litres: ${T3(bucket)} \xF7 1,000 = ${T3(bucket / 1e3)}.`]
       };
     },
     check: ({ h }, v) => Math.abs(v[0] - v[1] * 8) < 0.01 && Math.abs(v[2] - (v[0] - v[1])) < 0.01 && Math.abs(v[3] * 1e3 - v[2]) < 0.01 && Math.abs(v[1] - 22 / 7 / 3 * 49 * h) < 0.01
@@ -26567,18 +28775,18 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const item = pick(["television", "radio", "mobile phone", "solar panel", "sewing machine"]), n = pick([4, 5, 8, 10]), rt = pick([10, 25, 35]);
-      const V = price(item) * n;
-      const D3 = V * rt / 100;
-      return Number.isInteger(D3) ? { item, n, rt, V, D: D3, who: person() } : null;
+      const V2 = price(item) * n;
+      const D3 = V2 * rt / 100;
+      return Number.isInteger(D3) ? { item, n, rt, V: V2, D: D3, who: person() } : null;
     },
-    make: ({ item, n, rt, V, D: D3, who }) => ({
-      question: `${who.name} imports ${n} ${item}s. The customs value of the whole load is ${sh(V)}. The customs officer charges import duty of ${sh(D3)}. What percentage of the customs value is the duty?`,
+    make: ({ item, n, rt, V: V2, D: D3, who }) => ({
+      question: `${who.name} imports ${n} ${item}s. The customs value of the whole load is ${sh(V2)}. The customs officer charges import duty of ${sh(D3)}. What percentage of the customs value is the duty?`,
       answer: rt,
-      wrong: [[round(D3 / (V + D3) * 100, 1), "The duty is a percentage of the customs value, which is the value before the duty is added."], [round(D3 / n, 1), "That is the duty on one item, in shillings. The question asks for a percentage."], [round(V / D3, 1), "That divides the wrong way round. Percentage = duty \xF7 value \xD7 100."], [round(D3 / 100, 1), "Divide the duty by the customs value, then multiply by 100."]],
+      wrong: [[round(D3 / (V2 + D3) * 100, 1), "The duty is a percentage of the customs value, which is the value before the duty is added."], [round(D3 / n, 1), "That is the duty on one item, in shillings. The question asks for a percentage."], [round(V2 / D3, 1), "That divides the wrong way round. Percentage = duty \xF7 value \xD7 100."], [round(D3 / 100, 1), "Divide the duty by the customs value, then multiply by 100."]],
       hints: ["Percentage = duty \xF7 customs value \xD7 100.", "The customs value is the amount before duty."],
-      steps: [`Duty \xF7 value = ${commas(D3)} \xF7 ${commas(V)}.`, `\xD7 100 = ${rt}%.`]
+      steps: [`Duty \xF7 value = ${commas(D3)} \xF7 ${commas(V2)}.`, `\xD7 100 = ${rt}%.`]
     }),
-    check: ({ V, D: D3 }, a) => Math.abs(V * a / 100 - D3) < 0.01
+    check: ({ V: V2, D: D3 }, a) => Math.abs(V2 * a / 100 - D3) < 0.01
   }),
   fam8({
     id: "g9.money.duty-shipment",
@@ -26609,22 +28817,22 @@ var FAMILIES18 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const V = pick([2e4, 4e4, 5e4, 6e4, 8e4]), du = pick([10, 25]), ex = pick([10, 20]);
-      const D3 = V * du / 100, E2 = (V + D3) * ex / 100, Vt = (V + D3 + E2) * 16 / 100;
-      return [D3, E2, Vt].every(Number.isInteger) ? { V, du, ex, D: D3, E: E2, Vt, who: person() } : null;
+      const V2 = pick([2e4, 4e4, 5e4, 6e4, 8e4]), du = pick([10, 25]), ex = pick([10, 20]);
+      const D3 = V2 * du / 100, E2 = (V2 + D3) * ex / 100, Vt = (V2 + D3 + E2) * 16 / 100;
+      return [D3, E2, Vt].every(Number.isInteger) ? { V: V2, du, ex, D: D3, E: E2, Vt, who: person() } : null;
     },
-    make: ({ V, du, ex, D: D3, E: E2, Vt, who }) => ({
-      question: `${who.name} imports a machine. Its customs value is ${sh(V)}. Import duty is ${du}% of the customs value. Excise duty is ${ex}% of the customs value plus the import duty. VAT is 16% of the total after the excise duty has been added.`,
+    make: ({ V: V2, du, ex, D: D3, E: E2, Vt, who }) => ({
+      question: `${who.name} imports a machine. Its customs value is ${sh(V2)}. Import duty is ${du}% of the customs value. Excise duty is ${ex}% of the customs value plus the import duty. VAT is 16% of the total after the excise duty has been added.`,
       parts: [
-        { prompt: "Import duty, in shillings:", answer: D3, unit: "sh", hint: `${du}% of the customs value.`, wrong: [[V + D3, "That is the value with the duty added. The duty alone is the percentage."]] },
-        { prompt: "Excise duty, in shillings:", answer: E2, unit: "sh", hint: `${ex}% of the value plus the import duty.`, wrong: [[V * ex / 100, "Excise is charged on the customs value plus the import duty, not on the customs value alone."]] },
-        { prompt: "VAT, in shillings:", answer: Vt, unit: "sh", hint: "16% of the value plus both duties.", wrong: [[(V + D3) * 16 / 100, "VAT is charged after the excise duty has been added too."], [V * 16 / 100, "VAT is charged on the value plus both duties."]] },
-        { prompt: "Total cost to the importer, in shillings:", answer: V + D3 + E2 + Vt, unit: "sh", hint: "Add the customs value and all three taxes.", wrong: [[V + D3 + E2, "VAT must be added as well."]] }
+        { prompt: "Import duty, in shillings:", answer: D3, unit: "sh", hint: `${du}% of the customs value.`, wrong: [[V2 + D3, "That is the value with the duty added. The duty alone is the percentage."]] },
+        { prompt: "Excise duty, in shillings:", answer: E2, unit: "sh", hint: `${ex}% of the value plus the import duty.`, wrong: [[V2 * ex / 100, "Excise is charged on the customs value plus the import duty, not on the customs value alone."]] },
+        { prompt: "VAT, in shillings:", answer: Vt, unit: "sh", hint: "16% of the value plus both duties.", wrong: [[(V2 + D3) * 16 / 100, "VAT is charged after the excise duty has been added too."], [V2 * 16 / 100, "VAT is charged on the value plus both duties."]] },
+        { prompt: "Total cost to the importer, in shillings:", answer: V2 + D3 + E2 + Vt, unit: "sh", hint: "Add the customs value and all three taxes.", wrong: [[V2 + D3 + E2, "VAT must be added as well."]] }
       ],
       hints: ["Each tax is worked out on a bigger amount than the one before."],
-      steps: [`Duty: ${du}% of ${commas(V)} = ${commas(D3)}.`, `Excise: ${ex}% of ${commas(V + D3)} = ${commas(E2)}.`, `VAT: 16% of ${commas(V + D3 + E2)} = ${commas(Vt)}.`, `Total: ${commas(V + D3 + E2 + Vt)}.`]
+      steps: [`Duty: ${du}% of ${commas(V2)} = ${commas(D3)}.`, `Excise: ${ex}% of ${commas(V2 + D3)} = ${commas(E2)}.`, `VAT: 16% of ${commas(V2 + D3 + E2)} = ${commas(Vt)}.`, `Total: ${commas(V2 + D3 + E2 + Vt)}.`]
     }),
-    check: ({ V, du, ex }, v) => v[0] * 100 === V * du && v[1] * 100 === (V + v[0]) * ex && v[2] * 100 === (V + v[0] + v[1]) * 16 && v[3] === V + v[0] + v[1] + v[2]
+    check: ({ V: V2, du, ex }, v) => v[0] * 100 === V2 * du && v[1] * 100 === (V2 + v[0]) * ex && v[2] * 100 === (V2 + v[0] + v[1]) * 16 && v[3] === V2 + v[0] + v[1] + v[2]
   }),
   fam8({
     id: "g9.money.excise-per-litre",
@@ -26652,17 +28860,17 @@ var FAMILIES18 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const F3 = pick([500, 800, 1e3, 1200, 2e3, 2500]), r = pick([10, 20, 25]);
-      return { F: F3, r, P: F3 + F3 * r / 100, what: pick(["box of tea", "carton of juice", "pack of biscuits"]) };
+      const F4 = pick([500, 800, 1e3, 1200, 2e3, 2500]), r = pick([10, 20, 25]);
+      return { F: F4, r, P: F4 + F4 * r / 100, what: pick(["box of tea", "carton of juice", "pack of biscuits"]) };
     },
-    make: ({ F: F3, r, P, what }) => ({
-      question: `A ${what} is sold for ${sh(P)} after excise duty of ${r}% of the factory price has been added. What was the factory price of the ${what}, before the excise duty?`,
-      answer: F3,
-      wrong: [[round(P * (1 - r / 100), 2), `The duty is ${r}% of the factory price, which is less than the selling price. Taking the same percentage off the selling price takes off too much.`], [round(P - r, 2), "The duty is a percentage, not a number of shillings."], [round(P / (r / 100), 2), "The price is 100% plus the duty rate. Divide by that, as a decimal."], [round(P * (1 + r / 100), 2), "The duty was already added. You need to go back to the price before it."]],
+    make: ({ F: F4, r, P: P2, what }) => ({
+      question: `A ${what} is sold for ${sh(P2)} after excise duty of ${r}% of the factory price has been added. What was the factory price of the ${what}, before the excise duty?`,
+      answer: F4,
+      wrong: [[round(P2 * (1 - r / 100), 2), `The duty is ${r}% of the factory price, which is less than the selling price. Taking the same percentage off the selling price takes off too much.`], [round(P2 - r, 2), "The duty is a percentage, not a number of shillings."], [round(P2 / (r / 100), 2), "The price is 100% plus the duty rate. Divide by that, as a decimal."], [round(P2 * (1 + r / 100), 2), "The duty was already added. You need to go back to the price before it."]],
       hints: ["The selling price is the factory price plus the duty, so it is more than 100% of the factory price.", `Selling price = factory price \xD7 ${1 + r / 100}.`],
-      steps: [`Selling price = ${100 + r}% of the factory price.`, `Factory price = ${commas(P)} \xF7 ${1 + r / 100} = ${sh(F3)}.`]
+      steps: [`Selling price = ${100 + r}% of the factory price.`, `Factory price = ${commas(P2)} \xF7 ${1 + r / 100} = ${sh(F4)}.`]
     }),
-    check: ({ r, P }, a) => Math.abs(a * (1 + r / 100) - P) < 0.01
+    check: ({ r, P: P2 }, a) => Math.abs(a * (1 + r / 100) - P2) < 0.01
   }),
   fam8({
     id: "g9.money.layered-tax-spot",
@@ -26671,22 +28879,22 @@ var FAMILIES18 = [
     rung: 3,
     form: "spot",
     draw: () => {
-      const V = pick([2e4, 4e4, 5e4, 8e4]), du = pick([10, 25]), ex = pick([10, 20]), kind = pick(["excise", "vat"]);
-      const D3 = V * du / 100, E2 = (V + D3) * ex / 100;
-      return Number.isInteger(E2) && Number.isInteger((V + D3 + E2) * 16 / 100) && Number.isInteger(V * ex / 100) ? { V, du, ex, kind, D: D3, who: person() } : null;
+      const V2 = pick([2e4, 4e4, 5e4, 8e4]), du = pick([10, 25]), ex = pick([10, 20]), kind = pick(["excise", "vat"]);
+      const D3 = V2 * du / 100, E2 = (V2 + D3) * ex / 100;
+      return Number.isInteger(E2) && Number.isInteger((V2 + D3 + E2) * 16 / 100) && Number.isInteger(V2 * ex / 100) ? { V: V2, du, ex, kind, D: D3, who: person() } : null;
     },
-    make: ({ V, du, ex, kind, D: D3, who }) => {
-      const E2 = kind === "excise" ? V * ex / 100 : (V + D3) * ex / 100, Vt = kind === "vat" ? V * 16 / 100 : (V + D3 + E2) * 16 / 100, tot = V + D3 + E2 + Vt;
+    make: ({ V: V2, du, ex, kind, D: D3, who }) => {
+      const E2 = kind === "excise" ? V2 * ex / 100 : (V2 + D3) * ex / 100, Vt = kind === "vat" ? V2 * 16 / 100 : (V2 + D3 + E2) * 16 / 100, tot = V2 + D3 + E2 + Vt;
       return {
-        question: `${who.name} works out the taxes on an imported machine with a customs value of ${sh(V)}. The rules: import duty is ${du}% of the customs value. Excise duty is ${ex}% of the customs value plus the import duty. VAT is 16% of everything so far, with the excise duty included. Which step has the mistake?`,
+        question: `${who.name} works out the taxes on an imported machine with a customs value of ${sh(V2)}. The rules: import duty is ${du}% of the customs value. Excise duty is ${ex}% of the customs value plus the import duty. VAT is 16% of everything so far, with the excise duty included. Which step has the mistake?`,
         working: [
-          { text: `Import duty = ${du}% of ${commas(V)} = ${commas(D3)}`, ok: D3 === V * du / 100 },
-          { text: kind === "excise" ? `Excise duty = ${ex}% of ${commas(V)} = ${commas(E2)}` : `Excise duty = ${ex}% of ${commas(V + D3)} = ${commas(E2)}`, ok: E2 === (V + D3) * ex / 100 },
-          { text: kind === "vat" ? `VAT = 16% of ${commas(V)} = ${commas(Vt)}` : `VAT = 16% of ${commas(V + D3 + E2)} = ${commas(Vt)}`, ok: Vt === (V + D3 + E2) * 16 / 100 },
-          { text: `Total = ${commas(V)} + ${commas(D3)} + ${commas(E2)} + ${commas(Vt)} = ${commas(tot)}`, ok: tot === V + D3 + E2 + Vt }
+          { text: `Import duty = ${du}% of ${commas(V2)} = ${commas(D3)}`, ok: D3 === V2 * du / 100 },
+          { text: kind === "excise" ? `Excise duty = ${ex}% of ${commas(V2)} = ${commas(E2)}` : `Excise duty = ${ex}% of ${commas(V2 + D3)} = ${commas(E2)}`, ok: E2 === (V2 + D3) * ex / 100 },
+          { text: kind === "vat" ? `VAT = 16% of ${commas(V2)} = ${commas(Vt)}` : `VAT = 16% of ${commas(V2 + D3 + E2)} = ${commas(Vt)}`, ok: Vt === (V2 + D3 + E2) * 16 / 100 },
+          { text: `Total = ${commas(V2)} + ${commas(D3)} + ${commas(E2)} + ${commas(Vt)} = ${commas(tot)}`, ok: tot === V2 + D3 + E2 + Vt }
         ],
         fix: kind === "excise" ? "Excise duty is worked out on the customs value plus the import duty, not on the customs value alone." : "VAT is worked out on the customs value plus the import duty and the excise duty, not on the customs value alone.",
-        steps: [`Duty: ${commas(D3)}. Excise is on ${commas(V + D3)}.`, `VAT is on the value with both duties added.`]
+        steps: [`Duty: ${commas(D3)}. Excise is on ${commas(V2 + D3)}.`, `VAT is on the value with both duties added.`]
       };
     }
   }),
@@ -26698,17 +28906,17 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const item = pick(["radio", "mobile phone", "solar panel", "bicycle", "television"]);
-      const F3 = price(item);
-      return { item, F: F3, P: round(F3 * 1.16, 2) };
+      const F4 = price(item);
+      return { item, F: F4, P: round(F4 * 1.16, 2) };
     },
-    make: ({ item, F: F3, P }) => ({
-      question: `The label on a ${item} says ${sh(P)}, with a note: "16% VAT included". What would the ${item} cost without the VAT?`,
-      answer: F3,
-      wrong: [[round(P * 0.84, 2), "The 16% is of the price before VAT, which is smaller than the selling price. Taking 16% off the selling price takes off too much."], [round(P - 16, 2), "VAT is a percentage, not 16 shillings."], [round(P * 0.16, 2), "That is 16% of the selling price, which is not the VAT either. The selling price is 116% of the original."], [round(P / 1.6, 2), "The selling price is 116% of the original price. Divide by 1.16."]],
+    make: ({ item, F: F4, P: P2 }) => ({
+      question: `The label on a ${item} says ${sh(P2)}, with a note: "16% VAT included". What would the ${item} cost without the VAT?`,
+      answer: F4,
+      wrong: [[round(P2 * 0.84, 2), "The 16% is of the price before VAT, which is smaller than the selling price. Taking 16% off the selling price takes off too much."], [round(P2 - 16, 2), "VAT is a percentage, not 16 shillings."], [round(P2 * 0.16, 2), "That is 16% of the selling price, which is not the VAT either. The selling price is 116% of the original."], [round(P2 / 1.6, 2), "The selling price is 116% of the original price. Divide by 1.16."]],
       hints: ["The price with VAT is 116% of the price before VAT.", "Divide by 1.16 to go back."],
-      steps: [`Price with VAT = 116% of the price before VAT.`, `${commas(P)} \xF7 1.16 = ${sh(F3)}.`]
+      steps: [`Price with VAT = 116% of the price before VAT.`, `${commas(P2)} \xF7 1.16 = ${sh(F4)}.`]
     }),
-    check: ({ P }, a) => Math.abs(a * 1.16 - P) < 0.01
+    check: ({ P: P2 }, a) => Math.abs(a * 1.16 - P2) < 0.01
   }),
   fam8({
     id: "g9.money.vat-receipt",
@@ -26739,21 +28947,21 @@ var FAMILIES18 = [
     rung: 3,
     form: "why",
     draw: () => {
-      const F3 = pick([1e3, 2e3, 2500, 5e3, 8e3]);
-      return { F: F3, P: round(F3 * 1.16, 2), who: person() };
+      const F4 = pick([1e3, 2e3, 2500, 5e3, 8e3]);
+      return { F: F4, P: round(F4 * 1.16, 2), who: person() };
     },
-    make: ({ F: F3, P, who }) => {
-      const wrongVat = round(P * 0.16, 2), vat = round(F3 * 0.16, 2);
+    make: ({ F: F4, P: P2, who }) => {
+      const wrongVat = round(P2 * 0.16, 2), vat = round(F4 * 0.16, 2);
       return {
-        question: `A phone costs ${sh(P)} with VAT of 16% included. ${who.name} says the VAT in the price is 16% of ${commas(P)}, which is ${sh(wrongVat)}. Why is this wrong?`,
+        question: `A phone costs ${sh(P2)} with VAT of 16% included. ${who.name} says the VAT in the price is 16% of ${commas(P2)}, which is ${sh(wrongVat)}. Why is this wrong?`,
         options: [
           { text: `The 16% is worked out on the price before VAT, so the VAT is ${sh(vat)}`, right: true },
           { text: `The VAT is 16 shillings for each phone`, right: false, why: "VAT is a percentage of a price, not a fixed amount in shillings." },
           { text: `The VAT should be worked out on the price with VAT, but ${who.name} did the sum wrongly`, right: false, why: "The sum is right. The mistake is which price the percentage is taken from." },
-          { text: `The VAT is found by taking 16% off, so the VAT is ${sh(round(P * 0.84, 2))}`, right: false, why: "Taking 16% off the price gives a smaller price, not the VAT. VAT is a share of the price before VAT." }
+          { text: `The VAT is found by taking 16% off, so the VAT is ${sh(round(P2 * 0.84, 2))}`, right: false, why: "Taking 16% off the price gives a smaller price, not the VAT. VAT is a share of the price before VAT." }
         ],
         hints: ["VAT is added to the price before VAT.", "The price with VAT is 116% of the price before it."],
-        steps: [`The price with VAT is 116% of the price before VAT: ${commas(P)} \xF7 1.16 = ${commas(F3)}.`, `VAT = 16% of ${commas(F3)} = ${sh(vat)}.`]
+        steps: [`The price with VAT is 116% of the price before VAT: ${commas(P2)} \xF7 1.16 = ${commas(F4)}.`, `VAT = 16% of ${commas(F4)} = ${sh(vat)}.`]
       };
     }
   }),
@@ -26907,7 +29115,7 @@ var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
 var near2 = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
-var FAMILIES19 = [
+var FAMILIES22 = [
   // =========================== COORDINATES AND GRAPHS ===========================
   fam9({
     id: "g9.graphs.parallel-table-pick",
@@ -27464,17 +29672,17 @@ var FAMILIES19 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const k = pick([2, 4, 5]), V = pick([5, 8, 10, 20]);
-      return { k, V };
+      const k = pick([2, 4, 5]), V2 = pick([5, 8, 10, 20]);
+      return { k, V: V2 };
     },
-    make: ({ k, V }) => ({
-      question: `A farmer's water tank holds ${V} litres. A similar tank is built with a linear scale factor of ${k}. How many litres does the new tank hold?`,
-      answer: V * k * k * k,
-      wrong: [[V * k, "That multiplies by the scale factor once. Volume depends on length, width and height."], [V * k * k, "That is the area factor. Volume has one more length to multiply."], [V * 3 * k, "Volume is multiplied by the scale factor three times, not by 3 times the scale factor."]],
+    make: ({ k, V: V2 }) => ({
+      question: `A farmer's water tank holds ${V2} litres. A similar tank is built with a linear scale factor of ${k}. How many litres does the new tank hold?`,
+      answer: V2 * k * k * k,
+      wrong: [[V2 * k, "That multiplies by the scale factor once. Volume depends on length, width and height."], [V2 * k * k, "That is the area factor. Volume has one more length to multiply."], [V2 * 3 * k, "Volume is multiplied by the scale factor three times, not by 3 times the scale factor."]],
       hints: ["Volume depends on three lengths: length, width and height.", "The volume scale factor is the linear scale factor cubed."],
-      steps: [`Volume scale factor = ${k} \xD7 ${k} \xD7 ${k} = ${k * k * k}.`, `New volume = ${V} \xD7 ${k * k * k} = ${V * k * k * k} litres.`]
+      steps: [`Volume scale factor = ${k} \xD7 ${k} \xD7 ${k} = ${k * k * k}.`, `New volume = ${V2} \xD7 ${k * k * k} = ${V2 * k * k * k} litres.`]
     }),
-    check: ({ k, V }, a) => a / V === k ** 3
+    check: ({ k, V: V2 }, a) => a / V2 === k ** 3
   }),
   fam9({
     id: "g9.scalefactor.paint-tins",
@@ -27483,15 +29691,15 @@ var FAMILIES19 = [
     rung: 3,
     form: "steps",
     draw: () => ({ k: pick([2, 3, 4]), V: pick([1, 2, 3, 5]), A: pick([60, 80, 100, 150]) }),
-    make: ({ k, V, A: A2 }) => ({
-      question: `Two paint tins are similar. The small tin holds ${V} litres and the large tin holds ${V * k ** 3} litres. The label on the small tin has an area of ${A2} cm\xB2.`,
+    make: ({ k, V: V2, A: A2 }) => ({
+      question: `Two paint tins are similar. The small tin holds ${V2} litres and the large tin holds ${V2 * k ** 3} litres. The label on the small tin has an area of ${A2} cm\xB2.`,
       parts: [
         { prompt: "How many times as much paint does the large tin hold?", answer: k ** 3, hint: "Divide the large volume by the small volume.", wrong: [[k, "That is the scale factor of lengths. Here you compare volumes."]] },
         { prompt: "Find the linear scale factor from the small tin to the large tin.", answer: k, hint: "The volume factor is the linear scale factor cubed. Which number cubed gives it?", wrong: [[round(k ** 3 / 3, 2), "Volume does not go up by 3 times the linear factor. Find the cube root of the volume factor."]] },
         { prompt: "Find the area scale factor.", answer: k * k, hint: "Area factor = linear factor squared.", wrong: [[k, "That is the linear factor. Area uses the square of it."], [k ** 3, "That is the volume factor. Area uses the square of the linear factor."]] },
         { prompt: "Find the area of the label on the large tin, in cm\xB2.", answer: A2 * k * k, unit: "cm\xB2", hint: "Multiply the small label area by the area scale factor.", wrong: [[A2 * k, "Area is multiplied by the area scale factor, not the linear factor."], [A2 * k ** 3, "That uses the volume factor. A label is flat: use the area factor."]] }
       ],
-      steps: [`Volume factor = ${V * k ** 3} \xF7 ${V} = ${k ** 3}.`, `Linear factor = cube root of ${k ** 3} = ${k}.`, `Area factor = ${k} \xD7 ${k} = ${k * k}, so the label is ${A2} \xD7 ${k * k} = ${A2 * k * k} cm\xB2.`]
+      steps: [`Volume factor = ${V2 * k ** 3} \xF7 ${V2} = ${k ** 3}.`, `Linear factor = cube root of ${k ** 3} = ${k}.`, `Area factor = ${k} \xD7 ${k} = ${k * k}, so the label is ${A2} \xD7 ${k * k} = ${A2 * k * k} cm\xB2.`]
     }),
     check: ({ k, A: A2 }, v) => v[1] ** 3 === v[0] && v[2] === v[1] * v[1] && v[3] === A2 * v[2]
   }),
@@ -27526,21 +29734,21 @@ var FAMILIES19 = [
     form: "table",
     draw: () => {
       const [l, w, h] = pick([[10, 15, 20], [5, 8, 10], [10, 10, 25], [4, 6, 10], [8, 10, 20]]), k = pick([2, 3]), ask3 = pick(["area", "volume"]);
-      const SA = 2 * (l * w + l * h + w * h), V = l * w * h;
-      return { l, w, h, k, ask: ask3, SA, V };
+      const SA = 2 * (l * w + l * h + w * h), V2 = l * w * h;
+      return { l, w, h, k, ask: ask3, SA, V: V2 };
     },
-    make: ({ h, k, ask: ask3, SA, V }) => {
-      const big = ask3 === "area" ? SA * k * k : V * k ** 3;
+    make: ({ h, k, ask: ask3, SA, V: V2 }) => {
+      const big = ask3 === "area" ? SA * k * k : V2 * k ** 3;
       return {
         question: `The table gives measurements of two similar cartons. Use the scale factor to find the missing ${ask3 === "area" ? "surface area" : "volume"} of the large carton, in ${ask3 === "area" ? "cm\xB2" : "cm\xB3"}.`,
-        model: { type: "table", data: { head: ["Measure", "Small carton", "Large carton"], rows: [{ cells: ["Height (cm)", `${h}`, `${h * k}`] }, { cells: ["Surface area (cm\xB2)", commas(SA), ask3 === "area" ? "?" : commas(SA * k * k)] }, { cells: ["Volume (cm\xB3)", commas(V), ask3 === "volume" ? "?" : commas(V * k ** 3)] }] } },
+        model: { type: "table", data: { head: ["Measure", "Small carton", "Large carton"], rows: [{ cells: ["Height (cm)", `${h}`, `${h * k}`] }, { cells: ["Surface area (cm\xB2)", commas(SA), ask3 === "area" ? "?" : commas(SA * k * k)] }, { cells: ["Volume (cm\xB3)", commas(V2), ask3 === "volume" ? "?" : commas(V2 * k ** 3)] }] } },
         answer: big,
-        wrong: ask3 === "area" ? [[SA * k, "The surface area is not multiplied by the linear scale factor. Area needs the factor squared."], [SA * k ** 3, "That is the volume factor. Surface area is flat."], [SA + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]] : [[V * k, "Volume is not multiplied by the linear scale factor alone. It needs the factor cubed."], [V * k * k, "That is the area factor. Volume has one more length."], [V + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]],
+        wrong: ask3 === "area" ? [[SA * k, "The surface area is not multiplied by the linear scale factor. Area needs the factor squared."], [SA * k ** 3, "That is the volume factor. Surface area is flat."], [SA + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]] : [[V2 * k, "Volume is not multiplied by the linear scale factor alone. It needs the factor cubed."], [V2 * k * k, "That is the area factor. Volume has one more length."], [V2 + (h * k - h), "The large carton is found by multiplying, not by adding the extra height."]],
         hints: ["Find the linear scale factor from the two heights.", ask3 === "area" ? "Surface area is multiplied by the scale factor squared." : "Volume is multiplied by the scale factor cubed."],
-        steps: [`Linear scale factor = ${h * k} \xF7 ${h} = ${k}.`, ask3 === "area" ? `Area factor = ${k * k}. Missing area = ${commas(SA)} \xD7 ${k * k} = ${commas(big)} cm\xB2.` : `Volume factor = ${k ** 3}. Missing volume = ${commas(V)} \xD7 ${k ** 3} = ${commas(big)} cm\xB3.`]
+        steps: [`Linear scale factor = ${h * k} \xF7 ${h} = ${k}.`, ask3 === "area" ? `Area factor = ${k * k}. Missing area = ${commas(SA)} \xD7 ${k * k} = ${commas(big)} cm\xB2.` : `Volume factor = ${k ** 3}. Missing volume = ${commas(V2)} \xD7 ${k ** 3} = ${commas(big)} cm\xB3.`]
       };
     },
-    check: ({ h, k, ask: ask3, SA, V }, a) => ask3 === "area" ? a / SA === (k * h / h) ** 2 : a / V === (k * h / h) ** 3
+    check: ({ h, k, ask: ask3, SA, V: V2 }, a) => ask3 === "area" ? a / SA === (k * h / h) ** 2 : a / V2 === (k * h / h) ** 3
   }),
   // =========================== TRIGONOMETRY ===========================
   fam9({
@@ -27555,10 +29763,10 @@ var FAMILIES19 = [
       return { opp: legs[0], adj: legs[1], hyp: z * m, r: pick(["sin", "cos", "tan"]), k: randInt(0, 3), ang: pick(["A", "B"]) };
     },
     make: ({ opp, adj, hyp, r, k, ang }) => {
-      const F3 = { o: `${opp}/${hyp}`, a: `${adj}/${hyp}`, t: `${opp}/${adj}`, oi: `${hyp}/${opp}`, ai: `${hyp}/${adj}`, ti: `${adj}/${opp}` };
+      const F4 = { o: `${opp}/${hyp}`, a: `${adj}/${hyp}`, t: `${opp}/${adj}`, oi: `${hyp}/${opp}`, ai: `${hyp}/${adj}`, ti: `${adj}/${opp}` };
       const set = { sin: [["o", true], ["oi", "flip"], ["a", "cosine"], ["t", "tangent"]], cos: [["a", true], ["ai", "flip"], ["o", "sine"], ["t", "tangent"]], tan: [["t", true], ["ti", "flip"], ["o", "sine"], ["a", "cosine"]] }[r];
       const full = { sin: "opposite \xF7 hypotenuse", cos: "adjacent \xF7 hypotenuse", tan: "opposite \xF7 adjacent" }[r];
-      const opts2 = set.map(([key, kind]) => ({ text: F3[key], right: kind === true, why: kind === true ? void 0 : kind === "flip" ? "That is the right fraction upside down. Check which side goes on top." : `That fraction is the ratio for ${kind}, not for ${r === "sin" ? "sine" : r === "cos" ? "cosine" : "tangent"}.` }));
+      const opts2 = set.map(([key, kind]) => ({ text: F4[key], right: kind === true, why: kind === true ? void 0 : kind === "flip" ? "That is the right fraction upside down. Check which side goes on top." : `That fraction is the ratio for ${kind}, not for ${r === "sin" ? "sine" : r === "cos" ? "cosine" : "tangent"}.` }));
       const BC = ang === "A" ? opp : adj, AC = ang === "A" ? adj : opp;
       return {
         question: `Triangle ABC has a right angle at C. AB = ${hyp} cm, BC = ${BC} cm and AC = ${AC} cm. Which fraction is equal to ${r} ${ang}?`,
@@ -27566,7 +29774,7 @@ var FAMILIES19 = [
         options: turn(opts2, k),
         fixedOrder: true,
         hints: ["Remember SOH CAH TOA.", `Which side is opposite angle ${ang}, which is next to it, and which is the hypotenuse?`],
-        steps: [`Opposite angle ${ang}: ${opp} cm. Next to angle ${ang}: ${adj} cm. Hypotenuse: ${hyp} cm.`, `${r} ${ang} = ${full} = ${F3[set[0][0]]}.`]
+        steps: [`Opposite angle ${ang}: ${opp} cm. Next to angle ${ang}: ${adj} cm. Hypotenuse: ${hyp} cm.`, `${r} ${ang} = ${full} = ${F4[set[0][0]]}.`]
       };
     }
   }),
@@ -27577,24 +29785,24 @@ var FAMILIES19 = [
     rung: 2,
     form: "spot",
     draw: () => ({ A: pick([20, 25, 35, 40, 55, 65]), H: pick([12, 15, 20, 25, 30, 40]), side: pick(["opposite", "adjacent"]), kind: pick(["ratio", "op", "val"]), p: person() }),
-    make: ({ A: A2, H, side, kind, p }) => {
+    make: ({ A: A2, H: H2, side, kind, p }) => {
       const tr = side === "opposite" ? "sin" : "cos", other = side === "opposite" ? "cos" : "sin";
       const val = (r) => TRIG[r](A2);
       const usedR = kind === "ratio" ? other : tr, op = kind === "op" ? "\xF7" : "\xD7";
       const valUsed = kind === "val" ? val(other) : val(usedR);
-      const res = op === "\xD7" ? round(H * valUsed, 2) : round(H / valUsed, 2);
+      const res = op === "\xD7" ? round(H2 * valUsed, 2) : round(H2 / valUsed, 2);
       const working = [
-        { text: `x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle, and ${H} cm is the hypotenuse.`, ok: true },
-        { text: `Use ${usedR}: ${usedR} ${A2}\xB0 = x \xF7 ${H}.`, ok: usedR === tr },
-        { text: `So x = ${H} ${op} ${usedR} ${A2}\xB0.`, ok: op === "\xD7" },
-        { text: `x = ${H} ${op} ${valUsed} = ${res} cm.`, ok: valUsed === val(usedR) }
+        { text: `x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle, and ${H2} cm is the hypotenuse.`, ok: true },
+        { text: `Use ${usedR}: ${usedR} ${A2}\xB0 = x \xF7 ${H2}.`, ok: usedR === tr },
+        { text: `So x = ${H2} ${op} ${usedR} ${A2}\xB0.`, ok: op === "\xD7" },
+        { text: `x = ${H2} ${op} ${valUsed} = ${res} cm.`, ok: valUsed === val(usedR) }
       ];
-      const fixes = { ratio: `The side x is ${side === "opposite" ? "opposite" : "next to"} the angle and the other side given is the hypotenuse. That pair needs ${tr}, not ${other}.`, op: `From ${tr} ${A2}\xB0 = x \xF7 ${H}, multiply both sides by ${H}. Do not divide.`, val: `${usedR} ${A2}\xB0 is ${val(usedR)}. The number used in the last step belongs to ${other}.` };
+      const fixes = { ratio: `The side x is ${side === "opposite" ? "opposite" : "next to"} the angle and the other side given is the hypotenuse. That pair needs ${tr}, not ${other}.`, op: `From ${tr} ${A2}\xB0 = x \xF7 ${H2}, multiply both sides by ${H2}. Do not divide.`, val: `${usedR} ${A2}\xB0 is ${val(usedR)}. The number used in the last step belongs to ${other}.` };
       return {
-        question: `${p.name} finds the side x of a right-angled triangle. The hypotenuse is ${H} cm and x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle. The table gives sin ${A2}\xB0 = ${val("sin")} and cos ${A2}\xB0 = ${val("cos")}. Which step has the mistake?`,
+        question: `${p.name} finds the side x of a right-angled triangle. The hypotenuse is ${H2} cm and x is the side ${side === "opposite" ? "opposite" : "next to"} the ${A2}\xB0 angle. The table gives sin ${A2}\xB0 = ${val("sin")} and cos ${A2}\xB0 = ${val("cos")}. Which step has the mistake?`,
         working,
         fix: fixes[kind],
-        steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H} \xD7 ${tr} ${A2}\xB0 = ${H} \xD7 ${val(tr)} = ${round(H * val(tr), 2)} cm.`]
+        steps: [`x is ${side} the angle, with the hypotenuse known: use ${tr}.`, `x = ${H2} \xD7 ${tr} ${A2}\xB0 = ${H2} \xD7 ${val(tr)} = ${round(H2 * val(tr), 2)} cm.`]
       };
     }
   }),
@@ -27893,16 +30101,16 @@ var FAMILIES19 = [
       if (j < 0 || r === f[j] || !Number.isInteger(med * 10) || !allDistinct(med, 10 * j, 10 * j + 5, n / 2)) return null;
       return { f, n, j, F: cum, fj: f[j], lo: 10 * j, med };
     },
-    make: ({ f, n, j, F: F3, fj, lo, med }) => ({
+    make: ({ f, n, j, F: F4, fj, lo, med }) => ({
       question: "The table shows the marks of learners in a test. A mark on a class boundary goes in the higher class. Estimate the median mark.",
       model: { type: "table", data: { head: ["Marks", "Learners"], rows: f.map((v, i) => ({ label: `${10 * i} to under ${10 * i + 10}`, value: String(v) })) } },
       parts: [
         { prompt: "How many learners are there in all?", answer: n, hint: "Add the frequencies.", wrong: [[5, "That is the number of classes. Add the number of learners in each class."]] },
         { prompt: "The median is the mark of the middle learner. Which place is that, counting from the lowest mark?", answer: n / 2, hint: "Half of the number of learners.", wrong: [[n, "That is all of the learners. The middle is half way."]] },
-        { prompt: "How many learners are in the classes below the median class?", answer: F3, hint: "Add the frequencies from the lowest class until you pass the middle place.", wrong: [[F3 + fj, "That includes the median class itself. Stop before it."]] },
+        { prompt: "How many learners are in the classes below the median class?", answer: F4, hint: "Add the frequencies from the lowest class until you pass the middle place.", wrong: [[F4 + fj, "That includes the median class itself. Stop before it."]] },
         { prompt: "Estimate the median mark, to 1 decimal place.", answer: med, hint: "Start from the lower limit of the median class, then move along it in proportion: (middle place \u2212 learners below) \xF7 learners in the class \xD7 10.", wrong: [[lo, "That is the lower limit of the median class. The median lies partway along the class."], [lo + 5, "The median is not always the midpoint of its class. Move along in proportion."]] }
       ],
-      steps: [`n = ${n}, so the middle place is ${n} \xF7 2 = ${n / 2}.`, `${F3} learners are below ${lo}, and the median class has ${fj}.`, `Median = ${lo} + (${n / 2} \u2212 ${F3}) \xF7 ${fj} \xD7 10 = ${med}.`]
+      steps: [`n = ${n}, so the middle place is ${n} \xF7 2 = ${n / 2}.`, `${F4} learners are below ${lo}, and the median class has ${fj}.`, `Median = ${lo} + (${n / 2} \u2212 ${F4}) \xF7 ${fj} \xD7 10 = ${med}.`]
     }),
     check: ({ lo, fj }, v) => v[0] === 2 * v[1] && Math.abs(v[3] - (lo + (v[1] - v[2]) * 10 / fj)) < 1e-6
   }),
@@ -28167,18 +30375,18 @@ var FAMILIES19 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const F3 = pick([200, 300, 400, 500]), r = pick([40, 50, 60, 80]), u = randInt(8, 30), B2 = F3 + r * u;
-      if (!allDistinct(u, round(B2 / r, 2), round((B2 + F3) / r, 2), B2 - F3)) return null;
-      return { F: F3, r, u, B: B2, p: person() };
+      const F4 = pick([200, 300, 400, 500]), r = pick([40, 50, 60, 80]), u = randInt(8, 30), B3 = F4 + r * u;
+      if (!allDistinct(u, round(B3 / r, 2), round((B3 + F4) / r, 2), B3 - F4)) return null;
+      return { F: F4, r, u, B: B3, p: person() };
     },
-    make: ({ F: F3, r, u, B: B2, p }) => ({
-      question: `A water company charges a fixed amount of ${sh(F3)} a month, plus ${sh(r)} for each unit of water used. ${p.name}'s bill for one month is ${sh(B2)}. How many units did ${p.she} use?`,
+    make: ({ F: F4, r, u, B: B3, p }) => ({
+      question: `A water company charges a fixed amount of ${sh(F4)} a month, plus ${sh(r)} for each unit of water used. ${p.name}'s bill for one month is ${sh(B3)}. How many units did ${p.she} use?`,
       answer: u,
-      wrong: [[round(B2 / r, 2), "The fixed amount is paid first. Take it away before you divide by the charge for each unit."], [round((B2 + F3) / r, 2), "The fixed amount is part of the bill, so take it away from the bill. Do not add it."], [B2 - F3, "That is the money paid for the units, not the number of units. Divide it by the charge for each unit."]],
+      wrong: [[round(B3 / r, 2), "The fixed amount is paid first. Take it away before you divide by the charge for each unit."], [round((B3 + F4) / r, 2), "The fixed amount is part of the bill, so take it away from the bill. Do not add it."], [B3 - F4, "That is the money paid for the units, not the number of units. Divide it by the charge for each unit."]],
       hints: ["The bill is the fixed amount plus the charge for the units.", "Take away the fixed amount first."],
-      steps: [`Money paid for the units = ${B2} \u2212 ${F3} = ${B2 - F3}.`, `Units = ${B2 - F3} \xF7 ${r} = ${u}.`]
+      steps: [`Money paid for the units = ${B3} \u2212 ${F4} = ${B3 - F4}.`, `Units = ${B3 - F4} \xF7 ${r} = ${u}.`]
     }),
-    check: ({ F: F3, r, B: B2 }, a) => F3 + r * a === B2
+    check: ({ F: F4, r, B: B3 }, a) => F4 + r * a === B3
   }),
   fam9({
     id: "g9.prob.seeds-expected",
@@ -28212,7 +30420,7 @@ var simp3 = (n, d) => {
   return [n / g, d / g];
 };
 var signed = (c) => c < 0 ? `\u2212 ${-c}` : `+ ${c}`;
-var FAMILIES20 = [
+var FAMILIES23 = [
   // ======================================================== INTEGERS
   fam10({
     id: "g8.int.lift-floors",
@@ -28550,21 +30758,21 @@ var FAMILIES20 = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const B2 = randInt(11, 39), C2 = randInt(11, 39);
-      if (B2 % 10 === 0 || C2 % 10 === 0) return null;
-      return { a: randInt(21, 99) / 10, B: B2, C: C2, p: person() };
+      const B3 = randInt(11, 39), C2 = randInt(11, 39);
+      if (B3 % 10 === 0 || C2 % 10 === 0) return null;
+      return { a: randInt(21, 99) / 10, B: B3, C: C2, p: person() };
     },
-    make: ({ a, B: B2, C: C2, p }) => {
-      const b = B2 / 10, c = C2 / 10, right = round(b * c, 2), shown = round(B2 * C2 / 10, 1);
+    make: ({ a, B: B3, C: C2, p }) => {
+      const b = B3 / 10, c = C2 / 10, right = round(b * c, 2), shown = round(B3 * C2 / 10, 1);
       return {
         question: `${p.name} works out ${a} + ${b} \xD7 ${c}. Which step has the mistake?`,
         working: [
-          { text: `Multiply first. Ignore the points: ${B2} \xD7 ${C2} = ${B2 * C2}.`, ok: true },
+          { text: `Multiply first. Ignore the points: ${B3} \xD7 ${C2} = ${B3 * C2}.`, ok: true },
           { text: `So ${b} \xD7 ${c} = ${shown}.`, ok: shown === right },
           { text: `Then add: ${a} + ${shown} = ${round(a + shown, 2)}.`, ok: true },
           { text: `Answer: ${round(a + shown, 2)}.`, ok: true }
         ],
-        fix: `${b} has 1 decimal place and ${c} has 1, so the answer needs 2 decimal places, not 1. The point goes 2 places from the right in ${B2 * C2}.`,
+        fix: `${b} has 1 decimal place and ${c} has 1, so the answer needs 2 decimal places, not 1. The point goes 2 places from the right in ${B3 * C2}.`,
         steps: ["Multiply before you add.", "Count the decimal places in both numbers and put that many in the answer."]
       };
     }
@@ -29090,20 +31298,20 @@ var FAMILIES20 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const P = pick([60, 120, 240]);
-      const ds = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20].filter((x) => P % x === 0 && P / x <= 60);
+      const P2 = pick([60, 120, 240]);
+      const ds = [1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20].filter((x) => P2 % x === 0 && P2 / x <= 60);
       const ws = ds.sort(() => Math.random() - 0.5).slice(0, 4).sort((a, b) => a - b);
       const bad2 = randInt(0, 3), off = pick([1, 2, 3, -1]);
-      const days = ws.map((w) => P / w);
+      const days = ws.map((w) => P2 / w);
       days[bad2] += off;
-      return days[bad2] > 0 && new Set(days).size === 4 && new Set(ws).size === 4 ? { P, ws, days, bad: bad2 } : null;
+      return days[bad2] > 0 && new Set(days).size === 4 && new Set(ws).size === 4 ? { P: P2, ws, days, bad: bad2 } : null;
     },
-    make: ({ P, ws, days, bad: bad2 }) => ({
+    make: ({ P: P2, ws, days, bad: bad2 }) => ({
       question: "The table shows the days that different numbers of workers need to build a wall. The days are in inverse proportion to the workers. One row is wrong. For how many workers is the row wrong?",
       model: { type: "table", data: { head: ["Workers", "Days"], rows: ws.map((w, i) => ({ label: `${w}`, value: `${days[i]}` })) } },
       options: ws.map((w, i) => ({ text: `${w} workers`, right: i === bad2, why: "In this row, workers \xD7 days gives the same total as the other rows. Check the other rows." })),
       hints: ["In inverse proportion, workers \xD7 days is always the same number.", "Multiply workers by days in each row."],
-      steps: ws.map((w, i) => `${w} \xD7 ${days[i]} = ${w * days[i]}.`).concat([`Three rows give ${P}. The row for ${ws[bad2]} workers does not.`])
+      steps: ws.map((w, i) => `${w} \xD7 ${days[i]} = ${w * days[i]}.`).concat([`Three rows give ${P2}. The row for ${ws[bad2]} workers does not.`])
     })
   }),
   // ======================================================== ALGEBRAIC EXPRESSIONS
@@ -29159,16 +31367,16 @@ var FAMILIES20 = [
       return gcd6(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
     },
     make: ({ g, h, p, q, p0 }) => {
-      const A2 = g * p, B2 = g * q;
+      const A2 = g * p, B3 = g * q;
       return {
-        question: `${p0.name} factorises ${A2}x + ${B2} completely. Which step has the mistake?`,
+        question: `${p0.name} factorises ${A2}x + ${B3} completely. Which step has the mistake?`,
         working: [
-          { text: `The numbers are ${A2} and ${B2}. Their highest common factor is ${h}.`, ok: h === gcd6(A2, B2) },
+          { text: `The numbers are ${A2} and ${B3}. Their highest common factor is ${h}.`, ok: h === gcd6(A2, B3) },
           { text: `${A2}x \xF7 ${h} = ${A2 / h}x.`, ok: true },
-          { text: `${B2} \xF7 ${h} = ${B2 / h}.`, ok: true },
-          { text: `So ${A2}x + ${B2} = ${h}(${A2 / h}x + ${B2 / h}).`, ok: true }
+          { text: `${B3} \xF7 ${h} = ${B3 / h}.`, ok: true },
+          { text: `So ${A2}x + ${B3} = ${h}(${A2 / h}x + ${B3 / h}).`, ok: true }
         ],
-        fix: `The highest common factor of ${A2} and ${B2} is ${g}, not ${h}. With ${h}, the bracket still has a common factor, so it is not fully factorised.`,
+        fix: `The highest common factor of ${A2} and ${B3} is ${g}, not ${h}. With ${h}, the bracket still has a common factor, so it is not fully factorised.`,
         steps: [`Find the highest common factor of the numbers.`, "Divide each term by it."]
       };
     }
@@ -29331,15 +31539,15 @@ var FAMILIES20 = [
     rung: 3,
     form: "spot",
     draw: () => ({ S: randInt(14, 40) * 2, d: randInt(2, 6) * 2, p: person() }),
-    make: ({ S: S4, d, p }) => {
+    make: ({ S: S5, d, p }) => {
       const sign = "\u2212";
       return {
-        question: `Two bags of maize weigh ${S4} kg together. The big bag is ${d} kg heavier than the small bag. ${p.name} forms two equations and solves them. Which step has the mistake?`,
+        question: `Two bags of maize weigh ${S5} kg together. The big bag is ${d} kg heavier than the small bag. ${p.name} forms two equations and solves them. Which step has the mistake?`,
         working: [
           { text: "Let x be the mass of the big bag and y the mass of the small bag.", ok: true },
-          { text: `Together: x + y = ${S4}.`, ok: true },
+          { text: `Together: x + y = ${S5}.`, ok: true },
           { text: `The big bag is heavier: x = y ${sign} ${d}.`, ok: sign === "+" },
-          { text: `Substitute: (y ${sign} ${d}) + y = ${S4}, so 2y = ${S4 + d}.`, ok: true }
+          { text: `Substitute: (y ${sign} ${d}) + y = ${S5}, so 2y = ${S5 + d}.`, ok: true }
         ],
         fix: `If the big bag is ${d} kg heavier, you add ${d} to the small bag: x = y + ${d}.`,
         steps: ["Write what is the same in both statements.", "A heavier bag is the lighter one plus the difference."]
@@ -29420,17 +31628,17 @@ var FAMILIES20 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const x = randInt(4, 14), y = randInt(4, 14), N2 = x + y, V = 5 * x + 10 * y;
-      return distinct6(y, x, V / 10, N2 / 2) ? { x, y, N: N2, V, p: person() } : null;
+      const x = randInt(4, 14), y = randInt(4, 14), N2 = x + y, V2 = 5 * x + 10 * y;
+      return distinct6(y, x, V2 / 10, N2 / 2) ? { x, y, N: N2, V: V2, p: person() } : null;
     },
-    make: ({ x, y, N: N2, V, p }) => ({
-      question: `${p.name}'s purse holds ${N2} coins. Some are sh 5 coins and the rest are sh 10 coins. The coins are worth sh ${V} altogether. How many sh 10 coins are in the purse?`,
+    make: ({ x, y, N: N2, V: V2, p }) => ({
+      question: `${p.name}'s purse holds ${N2} coins. Some are sh 5 coins and the rest are sh 10 coins. The coins are worth sh ${V2} altogether. How many sh 10 coins are in the purse?`,
       answer: y,
-      wrong: [[x, "That is the number of sh 5 coins. The question asks about the sh 10 coins."], [V / 10, "That would be right only if every coin were sh 10. Some are sh 5."], [N2 / 2, "The two kinds of coin are not equal in number. Use the total value."]],
+      wrong: [[x, "That is the number of sh 5 coins. The question asks about the sh 10 coins."], [V2 / 10, "That would be right only if every coin were sh 10. Some are sh 5."], [N2 / 2, "The two kinds of coin are not equal in number. Use the total value."]],
       hints: ["Let one letter stand for the sh 5 coins and another for the sh 10 coins.", "One equation counts the coins. The other adds up the money."],
-      steps: [`Let f be the sh 5 coins and t the sh 10 coins: f + t = ${N2} and 5f + 10t = ${V}.`, `Multiply the first by 5: 5f + 5t = ${5 * N2}. Subtract from the second: 5t = ${V - 5 * N2}.`, `t = ${(V - 5 * N2) / 5}.`]
+      steps: [`Let f be the sh 5 coins and t the sh 10 coins: f + t = ${N2} and 5f + 10t = ${V2}.`, `Multiply the first by 5: 5f + 5t = ${5 * N2}. Subtract from the second: 5t = ${V2 - 5 * N2}.`, `t = ${(V2 - 5 * N2) / 5}.`]
     }),
-    check: ({ N: N2, V }, a) => 5 * (N2 - a) + 10 * a === V
+    check: ({ N: N2, V: V2 }, a) => 5 * (N2 - a) + 10 * a === V2
   }),
   fam10({
     id: "g8.eq.hens-goats-steps",
@@ -29485,7 +31693,7 @@ var uniq4 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.leng
 var near3 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI2 * r;
 var nice = (v) => Number.isInteger(v * 2);
-var FAMILIES21 = [
+var FAMILIES24 = [
   // ================================================================ CIRCLES
   fam11({
     id: "g8.circ.wheel-distance",
@@ -29670,18 +31878,18 @@ var FAMILIES21 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const k = randInt(1, 6), r = 7 * k, P = 36 * k;
-      const w = [round(7 * P / 22, 1), round(7 * P / 29, 1), round(7 * P / 58, 1)];
-      return uniq4(r, ...w) ? { r, P, w, p: person() } : null;
+      const k = randInt(1, 6), r = 7 * k, P2 = 36 * k;
+      const w = [round(7 * P2 / 22, 1), round(7 * P2 / 29, 1), round(7 * P2 / 58, 1)];
+      return uniq4(r, ...w) ? { r, P: P2, w, p: person() } : null;
     },
-    make: ({ r, P, w, p }) => ({
-      question: `${p.name}'s plot is a half circle. Its perimeter is ${P} m. This is the curved edge plus the straight edge across the diameter. Find the radius of the plot, in metres. (Use \u03C0 = 22/7)`,
+    make: ({ r, P: P2, w, p }) => ({
+      question: `${p.name}'s plot is a half circle. Its perimeter is ${P2} m. This is the curved edge plus the straight edge across the diameter. Find the radius of the plot, in metres. (Use \u03C0 = 22/7)`,
       answer: r,
       wrong: [[w[0], "You used the curved edge only. The straight edge is part of the perimeter too."], [w[1], "The straight edge is a diameter, which is 2 radii, not 1."], [w[2], "The curved edge of a half circle is half of 2\u03C0r, which is \u03C0r."]],
       hints: ["Write the perimeter in terms of r: the curved edge plus the diameter.", "Curved edge = \u03C0 \xD7 r. Diameter = 2 \xD7 r. Together they make (\u03C0 + 2) \xD7 r."],
-      steps: [`Perimeter = 22/7 \xD7 r + 2r = 36/7 \xD7 r.`, `So ${P} = 36/7 \xD7 r.`, `r = ${P} \xD7 7 \xF7 36 = ${r} m.`]
+      steps: [`Perimeter = 22/7 \xD7 r + 2r = 36/7 \xD7 r.`, `So ${P2} = 36/7 \xD7 r.`, `r = ${P2} \xD7 7 \xF7 36 = ${r} m.`]
     }),
-    check: ({ r, P }, a) => near3(a * (22 / 7 + 2), P)
+    check: ({ r, P: P2 }, a) => near3(a * (22 / 7 + 2), P2)
   }),
   // ================================================================ AREA
   fam11({
@@ -29991,18 +32199,18 @@ var FAMILIES21 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const F3 = randInt(18, 60), P = 2 * randInt(4, 12);
-      return { F: F3, P, p: person() };
+      const F4 = randInt(18, 60), P2 = 2 * randInt(4, 12);
+      return { F: F4, P: P2, p: person() };
     },
-    make: ({ F: F3, P, p }) => ({
+    make: ({ F: F4, P: P2, p }) => ({
       question: `${p.name} traces the outline of a leaf on a grid. The leaf has an irregular shape. Each square of the grid is 1 cm\xB2. The table shows how many squares were counted. A part square is counted as half a square. Estimate the area of the leaf, in cm\xB2.`,
-      model: { type: "table", data: { head: ["Squares", "Number"], rows: [{ label: "Whole squares", value: String(F3) }, { label: "Part squares", value: String(P) }] } },
-      answer: F3 + P / 2,
-      wrong: [[F3 + P, "A part square is only part of a square. Count each as half."], [F3, "The part squares cover some of the leaf too. Add half of them."], [P / 2, "That is the part squares only. Add the whole squares as well."]],
+      model: { type: "table", data: { head: ["Squares", "Number"], rows: [{ label: "Whole squares", value: String(F4) }, { label: "Part squares", value: String(P2) }] } },
+      answer: F4 + P2 / 2,
+      wrong: [[F4 + P2, "A part square is only part of a square. Count each as half."], [F4, "The part squares cover some of the leaf too. Add half of them."], [P2 / 2, "That is the part squares only. Add the whole squares as well."]],
       hints: ["Whole squares count as one each. Part squares count as one half each.", "Add the two amounts together."],
-      steps: [`Part squares as half: ${P} \xF7 2 = ${P / 2}.`, `Area: ${F3} + ${P / 2} = ${F3 + P / 2} cm\xB2.`]
+      steps: [`Part squares as half: ${P2} \xF7 2 = ${P2 / 2}.`, `Area: ${F4} + ${P2 / 2} = ${F4 + P2 / 2} cm\xB2.`]
     }),
-    check: ({ F: F3, P }, a) => 2 * a === 2 * F3 + P
+    check: ({ F: F4, P: P2 }, a) => 2 * a === 2 * F4 + P2
   }),
   fam11({
     id: "g8.grid.scaled-plot",
@@ -30011,19 +32219,19 @@ var FAMILIES21 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const side = pick([2, 5, 10]), F3 = randInt(15, 50), P = 2 * randInt(4, 10);
-      return { side, F: F3, P };
+      const side = pick([2, 5, 10]), F4 = randInt(15, 50), P2 = 2 * randInt(4, 10);
+      return { side, F: F4, P: P2 };
     },
-    make: ({ side, F: F3, P }) => ({
-      question: `The outline of an irregular plot of land is drawn on a square grid. Each square of the grid stands for ${side} m by ${side} m. The outline covers ${F3} whole squares and ${P} part squares. Count the part squares as half squares.`,
+    make: ({ side, F: F4, P: P2 }) => ({
+      question: `The outline of an irregular plot of land is drawn on a square grid. Each square of the grid stands for ${side} m by ${side} m. The outline covers ${F4} whole squares and ${P2} part squares. Count the part squares as half squares.`,
       parts: [
         { prompt: "How many m\xB2 does one square stand for?", answer: side * side, unit: "m\xB2", hint: "Area of a square = side \xD7 side.", wrong: [[side * 4, "That is the distance round one square. Area is side \xD7 side."], [side, "Multiply the side by itself to get the area."]] },
-        { prompt: "How many whole squares is the plot, if part squares count as half?", answer: F3 + P / 2, hint: "Add half of the part squares to the whole squares.", wrong: [[F3 + P, "Count each part square as half."], [F3, "Add half of the part squares."]] },
-        { prompt: "What is the estimated area of the plot, in m\xB2?", answer: (F3 + P / 2) * side * side, unit: "m\xB2", hint: "Multiply the number of squares by the area of one square.", wrong: [[(F3 + P / 2) * side, "Each square stands for an area of side \xD7 side, not just the side."]] }
+        { prompt: "How many whole squares is the plot, if part squares count as half?", answer: F4 + P2 / 2, hint: "Add half of the part squares to the whole squares.", wrong: [[F4 + P2, "Count each part square as half."], [F4, "Add half of the part squares."]] },
+        { prompt: "What is the estimated area of the plot, in m\xB2?", answer: (F4 + P2 / 2) * side * side, unit: "m\xB2", hint: "Multiply the number of squares by the area of one square.", wrong: [[(F4 + P2 / 2) * side, "Each square stands for an area of side \xD7 side, not just the side."]] }
       ],
-      steps: [`One square: ${side} \xD7 ${side} = ${side * side} m\xB2.`, `Squares: ${F3} + ${P} \xF7 2 = ${F3 + P / 2}.`, `Area: ${F3 + P / 2} \xD7 ${side * side} = ${(F3 + P / 2) * side * side} m\xB2.`]
+      steps: [`One square: ${side} \xD7 ${side} = ${side * side} m\xB2.`, `Squares: ${F4} + ${P2} \xF7 2 = ${F4 + P2 / 2}.`, `Area: ${F4 + P2 / 2} \xD7 ${side * side} = ${(F4 + P2 / 2) * side * side} m\xB2.`]
     }),
-    check: ({ side, F: F3, P }, v) => v[0] === side * side && 2 * v[1] === 2 * F3 + P && v[2] === v[1] * v[0]
+    check: ({ side, F: F4, P: P2 }, v) => v[0] === side * side && 2 * v[1] === 2 * F4 + P2 && v[2] === v[1] * v[0]
   }),
   fam11({
     id: "g8.grid.compare-fields",
@@ -30034,7 +32242,7 @@ var FAMILIES21 = [
     draw: () => {
       for (let t = 0; t < 3e3; t++) {
         const fs = [0, 1, 2].map(() => [randInt(12, 40), 2 * randInt(2, 14)]);
-        const est = fs.map(([F3, P]) => F3 + P / 2), tch = fs.map(([F3, P]) => F3 + P), whole = fs.map(([F3]) => F3);
+        const est = fs.map(([F4, P2]) => F4 + P2 / 2), tch = fs.map(([F4, P2]) => F4 + P2), whole = fs.map(([F4]) => F4);
         const i = est.indexOf(Math.max(...est));
         if (new Set(est).size === 3 && tch.indexOf(Math.max(...tch)) !== i && whole.indexOf(Math.max(...whole)) !== i) return { fs, est, i };
       }
@@ -30060,20 +32268,20 @@ var FAMILIES21 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const r = pick([5, 10, 20]), P = r === 5 ? pick([4e3, 8e3, 12e3, 16e3, 2e4]) : pick([5e3, 1e4, 2e4, 25e3, 4e4]);
-      const A2 = P * (100 + r) * (100 + r) / 1e4;
+      const r = pick([5, 10, 20]), P2 = r === 5 ? pick([4e3, 8e3, 12e3, 16e3, 2e4]) : pick([5e3, 1e4, 2e4, 25e3, 4e4]);
+      const A2 = P2 * (100 + r) * (100 + r) / 1e4;
       if (!Number.isInteger(A2)) return null;
-      const simple = P * (100 + 2 * r) / 100, one = P * (100 + r) / 100;
-      return uniq4(A2, simple, one, A2 - P) ? { r, P, A: A2, simple, one, p: person() } : null;
+      const simple = P2 * (100 + 2 * r) / 100, one = P2 * (100 + r) / 100;
+      return uniq4(A2, simple, one, A2 - P2) ? { r, P: P2, A: A2, simple, one, p: person() } : null;
     },
-    make: ({ r, P, A: A2, simple, one, p }) => ({
-      question: `${p.name} puts ${sh(P)} into a SACCO account. The SACCO pays compound interest of ${r}% a year. ${p.She} takes nothing out. How much is in the account after 2 years?`,
+    make: ({ r, P: P2, A: A2, simple, one, p }) => ({
+      question: `${p.name} puts ${sh(P2)} into a SACCO account. The SACCO pays compound interest of ${r}% a year. ${p.She} takes nothing out. How much is in the account after 2 years?`,
       answer: A2,
-      wrong: [[simple, "That is simple interest: the same interest each year on the first amount. Compound interest in year 2 is worked out on the new amount."], [one, "That is the amount after 1 year only. The money stays in for 2 years."], [A2 - P, "That is only the interest earned. The question asks for all the money in the account."]],
+      wrong: [[simple, "That is simple interest: the same interest each year on the first amount. Compound interest in year 2 is worked out on the new amount."], [one, "That is the amount after 1 year only. The money stays in for 2 years."], [A2 - P2, "That is only the interest earned. The question asks for all the money in the account."]],
       hints: ["After year 1, the interest is added to the money. Year 2 starts with the bigger amount.", "Find the amount after year 1. Then find the interest on that amount."],
-      steps: [`Year 1: ${P} \xD7 ${(100 + r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 + r) / 100} = ${A2}.`, `The account holds ${sh(A2)}.`]
+      steps: [`Year 1: ${P2} \xD7 ${(100 + r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 + r) / 100} = ${A2}.`, `The account holds ${sh(A2)}.`]
     }),
-    check: ({ r, P }, a) => near3(a * 100 * 100 / ((100 + r) * (100 + r)), P)
+    check: ({ r, P: P2 }, a) => near3(a * 100 * 100 / ((100 + r) * (100 + r)), P2)
   }),
   fam11({
     id: "g8.money.compound-steps",
@@ -30082,21 +32290,21 @@ var FAMILIES21 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const r = pick([5, 10, 20]), P = r === 5 ? pick([4e3, 8e3, 16e3]) : pick([5e3, 1e4, 2e4]);
-      const A1 = P * (100 + r) / 100, I2 = A1 * r / 100, A2 = A1 + I2;
-      return [A1, I2, A2].every(Number.isInteger) ? { r, P, A1, I2, A2 } : null;
+      const r = pick([5, 10, 20]), P2 = r === 5 ? pick([4e3, 8e3, 16e3]) : pick([5e3, 1e4, 2e4]);
+      const A1 = P2 * (100 + r) / 100, I2 = A1 * r / 100, A2 = A1 + I2;
+      return [A1, I2, A2].every(Number.isInteger) ? { r, P: P2, A1, I2, A2 } : null;
     },
-    make: ({ r, P, A1, I2, A2 }) => ({
-      question: `A chama invests ${sh(P)} for 2 years. It earns compound interest of ${r}% a year, and the interest is added to the money at the end of each year.`,
+    make: ({ r, P: P2, A1, I2, A2 }) => ({
+      question: `A chama invests ${sh(P2)} for 2 years. It earns compound interest of ${r}% a year, and the interest is added to the money at the end of each year.`,
       parts: [
-        { prompt: "How much money is there at the end of year 1, in shillings?", answer: A1, unit: "sh", hint: "Add the first year's interest to the money put in.", wrong: [[P * r / 100, "That is the interest only. The money put in stays in the account."]] },
-        { prompt: "How much interest is earned in year 2, in shillings?", answer: I2, unit: "sh", hint: "Year 2 interest is worked out on the money at the end of year 1.", wrong: [[P * r / 100, "That is the interest on the first amount. In year 2 the money is bigger."]] },
-        { prompt: "How much money is there at the end of year 2, in shillings?", answer: A2, unit: "sh", hint: "Add the year 2 interest to the money at the end of year 1.", wrong: [[P + 2 * (P * r / 100), "That is simple interest. Year 2 earned more than year 1."]] },
-        { prompt: "How much compound interest was earned altogether, in shillings?", answer: A2 - P, unit: "sh", hint: "Compare the final amount with the amount first put in.", wrong: [[A2, "That is all the money. Take away what was put in."]] }
+        { prompt: "How much money is there at the end of year 1, in shillings?", answer: A1, unit: "sh", hint: "Add the first year's interest to the money put in.", wrong: [[P2 * r / 100, "That is the interest only. The money put in stays in the account."]] },
+        { prompt: "How much interest is earned in year 2, in shillings?", answer: I2, unit: "sh", hint: "Year 2 interest is worked out on the money at the end of year 1.", wrong: [[P2 * r / 100, "That is the interest on the first amount. In year 2 the money is bigger."]] },
+        { prompt: "How much money is there at the end of year 2, in shillings?", answer: A2, unit: "sh", hint: "Add the year 2 interest to the money at the end of year 1.", wrong: [[P2 + 2 * (P2 * r / 100), "That is simple interest. Year 2 earned more than year 1."]] },
+        { prompt: "How much compound interest was earned altogether, in shillings?", answer: A2 - P2, unit: "sh", hint: "Compare the final amount with the amount first put in.", wrong: [[A2, "That is all the money. Take away what was put in."]] }
       ],
-      steps: [`Year 1: ${P} \xD7 ${(100 + r) / 100} = ${A1}.`, `Year 2 interest: ${r}% of ${A1} = ${I2}.`, `End of year 2: ${A1} + ${I2} = ${A2}.`, `Interest altogether: ${A2} \u2212 ${P} = ${A2 - P}.`]
+      steps: [`Year 1: ${P2} \xD7 ${(100 + r) / 100} = ${A1}.`, `Year 2 interest: ${r}% of ${A1} = ${I2}.`, `End of year 2: ${A1} + ${I2} = ${A2}.`, `Interest altogether: ${A2} \u2212 ${P2} = ${A2 - P2}.`]
     }),
-    check: ({ r, P }, v) => v[0] === P + P * r / 100 && v[1] === v[0] * r / 100 && v[2] === v[0] + v[1] && v[3] + P === v[2]
+    check: ({ r, P: P2 }, v) => v[0] === P2 + P2 * r / 100 && v[1] === v[0] * r / 100 && v[2] === v[0] + v[1] && v[3] + P2 === v[2]
   }),
   fam11({
     id: "g8.money.compound-why",
@@ -30105,11 +32313,11 @@ var FAMILIES21 = [
     rung: 3,
     form: "why",
     draw: () => {
-      const P = pick([1e4, 2e4, 3e4, 5e4]), [a, b] = twoPeople();
-      return { P, a, b, simple: P * 1.3, comp: P * 1.331 };
+      const P2 = pick([1e4, 2e4, 3e4, 5e4]), [a, b] = twoPeople();
+      return { P: P2, a, b, simple: P2 * 1.3, comp: P2 * 1.331 };
     },
-    make: ({ P, a, b, simple, comp: comp2 }) => ({
-      question: `${a.name} and ${b.name} each save ${sh(P)} for 3 years at 10% a year. ${a.name}'s account pays simple interest and ends with ${sh(simple)}. ${b.name}'s account pays compound interest and ends with ${sh(comp2)}. Why does ${b.name} end with more?`,
+    make: ({ P: P2, a, b, simple, comp: comp2 }) => ({
+      question: `${a.name} and ${b.name} each save ${sh(P2)} for 3 years at 10% a year. ${a.name}'s account pays simple interest and ends with ${sh(simple)}. ${b.name}'s account pays compound interest and ends with ${sh(comp2)}. Why does ${b.name} end with more?`,
       options: [
         { text: `Each year's interest is added and earns interest too`, right: true },
         { text: `${b.Her} account has a higher rate than ${a.her} account`, right: false, why: "Both accounts pay 10% a year. The rate is the same. It is the way the interest is worked out that differs." },
@@ -30117,7 +32325,7 @@ var FAMILIES21 = [
         { text: `Compound interest is paid each month, not each year`, right: false, why: "Here the interest is paid once a year in both accounts. The difference is what the interest is worked out on." }
       ],
       hints: ["Both accounts have the same rate and the same time. What is different about how the interest is worked out?", "Look at what the interest in year 2 is calculated on."],
-      steps: [`Simple interest: 10% of ${sh(P)} each year, always the same.`, `Compound interest: year 2 interest is 10% of the larger amount from year 1.`, "The interest earns interest, so the compound account grows faster."]
+      steps: [`Simple interest: 10% of ${sh(P2)} each year, always the same.`, `Compound interest: year 2 interest is 10% of the larger amount from year 1.`, "The interest earns interest, so the compound account grows faster."]
     })
   }),
   fam11({
@@ -30127,19 +32335,19 @@ var FAMILIES21 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const P = price("motorcycle"), r = pick([10, 20]), V = P * (100 - r) * (100 - r) / 1e4;
-      if (!Number.isInteger(V)) return null;
-      const simple = P * (100 - 2 * r) / 100, one = P * (100 - r) / 100;
-      return uniq4(V, simple, one, P - V) ? { P, r, V, simple, one, p: person() } : null;
+      const P2 = price("motorcycle"), r = pick([10, 20]), V2 = P2 * (100 - r) * (100 - r) / 1e4;
+      if (!Number.isInteger(V2)) return null;
+      const simple = P2 * (100 - 2 * r) / 100, one = P2 * (100 - r) / 100;
+      return uniq4(V2, simple, one, P2 - V2) ? { P: P2, r, V: V2, simple, one, p: person() } : null;
     },
-    make: ({ P, r, V, simple, one, p }) => ({
-      question: `${p.name} buys a boda boda motorcycle for ${sh(P)}. The motorcycle loses ${r}% of its value each year. What is its value after 2 years?`,
-      answer: V,
-      wrong: [[simple, `Taking ${r}% of the first price twice is not right. The second ${r}% is taken from the smaller value after year 1.`], [one, "That is the value after 1 year. The question asks about 2 years."], [P - V, "That is how much value has been lost. The question asks for what is left."]],
+    make: ({ P: P2, r, V: V2, simple, one, p }) => ({
+      question: `${p.name} buys a boda boda motorcycle for ${sh(P2)}. The motorcycle loses ${r}% of its value each year. What is its value after 2 years?`,
+      answer: V2,
+      wrong: [[simple, `Taking ${r}% of the first price twice is not right. The second ${r}% is taken from the smaller value after year 1.`], [one, "That is the value after 1 year. The question asks about 2 years."], [P2 - V2, "That is how much value has been lost. The question asks for what is left."]],
       hints: ["Find the value after year 1. Year 2 starts from that smaller value.", `Each year the motorcycle keeps ${100 - r}% of its value.`],
-      steps: [`Year 1: ${P} \xD7 ${(100 - r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 - r) / 100} = ${V}.`]
+      steps: [`Year 1: ${P2} \xD7 ${(100 - r) / 100} = ${one}.`, `Year 2: ${one} \xD7 ${(100 - r) / 100} = ${V2}.`]
     }),
-    check: ({ P, r }, a) => near3(a * 1e4 / ((100 - r) * (100 - r)), P)
+    check: ({ P: P2, r }, a) => near3(a * 1e4 / ((100 - r) * (100 - r)), P2)
   }),
   fam11({
     id: "g8.money.depreciate-table",
@@ -30148,21 +32356,21 @@ var FAMILIES21 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const P = pick([4e4, 5e4, 6e4, 64e3, 8e4]), r = pick([10, 20, 25]), k = (100 - r) / 100;
-      const V1 = P * k, V2 = V1 * k, V3 = V2 * k;
+      const P2 = pick([4e4, 5e4, 6e4, 64e3, 8e4]), r = pick([10, 20, 25]), k = (100 - r) / 100;
+      const V1 = P2 * k, V2 = V1 * k, V3 = V2 * k;
       if (![V1, V2, V3].every(Number.isInteger)) return null;
-      const w = [P - 3 * (P - V1), 2 * V2 - V1, V2 - r / 100 * P];
-      return uniq4(V3, ...w) && w.every((x) => x > 0) ? { P, r, V1, V2, V3, w } : null;
+      const w = [P2 - 3 * (P2 - V1), 2 * V2 - V1, V2 - r / 100 * P2];
+      return uniq4(V3, ...w) && w.every((x) => x > 0) ? { P: P2, r, V1, V2, V3, w } : null;
     },
-    make: ({ P, V1, V2, V3, w }) => ({
+    make: ({ P: P2, V1, V2, V3, w }) => ({
       question: "The table shows the value of a fridge as it gets older. The value falls by the same per cent each year. What is its value after 3 years, in shillings?",
-      model: { type: "table", data: { head: ["Age of the fridge", "Value (sh)"], rows: [{ label: "New", value: commas(P) }, { label: "After 1 year", value: commas(V1) }, { label: "After 2 years", value: commas(V2) }, { label: "After 3 years", value: "?" }] } },
+      model: { type: "table", data: { head: ["Age of the fridge", "Value (sh)"], rows: [{ label: "New", value: commas(P2) }, { label: "After 1 year", value: commas(V1) }, { label: "After 2 years", value: commas(V2) }, { label: "After 3 years", value: "?" }] } },
       answer: V3,
       wrong: [[w[0], "The value does not fall by the same amount each year. It falls by the same per cent, so the fall gets smaller."], [w[1], "Each year's fall is a per cent of that year's value. The fall is smaller in year 3 than in year 2."], [w[2], "The per cent is taken from the value at the start of year 3, not from the price when new."]],
       hints: ["First find the per cent by which the value falls: compare year 1 with new.", "Then take that per cent off the value after 2 years."],
-      steps: [`${V1} \xF7 ${P} = ${V1 / P}, so the fridge keeps ${V1 / P * 100}% of its value each year.`, `After 3 years: ${V2} \xD7 ${V1 / P} = ${V3}.`]
+      steps: [`${V1} \xF7 ${P2} = ${V1 / P2}, so the fridge keeps ${V1 / P2 * 100}% of its value each year.`, `After 3 years: ${V2} \xD7 ${V1 / P2} = ${V3}.`]
     }),
-    check: ({ P, V1, V3 }, a) => near3(a * P * P, V1 * V1 * V1) && V3 > 0
+    check: ({ P: P2, V1, V3 }, a) => near3(a * P2 * P2, V1 * V1 * V1) && V3 > 0
   }),
   fam11({
     id: "g8.money.depreciate-why",
@@ -30171,11 +32379,11 @@ var FAMILIES21 = [
     rung: 3,
     form: "why",
     draw: () => {
-      const r = pick([10, 20, 30]), P = 1e4, V2 = P * (100 - r) * (100 - r) / 1e4;
-      return { r, P, V2, tot: 2 * r, real: 2 * r - r * r / 100, wrongUp: 2 * r + r * r / 100, p: person() };
+      const r = pick([10, 20, 30]), P2 = 1e4, V2 = P2 * (100 - r) * (100 - r) / 1e4;
+      return { r, P: P2, V2, tot: 2 * r, real: 2 * r - r * r / 100, wrongUp: 2 * r + r * r / 100, p: person() };
     },
-    make: ({ r, P, V2, tot, real, wrongUp, p }) => ({
-      question: `A phone costs ${sh(P)} new. It loses ${r}% of its value in year 1 and another ${r}% of its value in year 2. ${p.name} says it has lost ${tot}% of its price altogether. Why is that wrong?`,
+    make: ({ r, P: P2, V2, tot, real, wrongUp, p }) => ({
+      question: `A phone costs ${sh(P2)} new. It loses ${r}% of its value in year 1 and another ${r}% of its value in year 2. ${p.name} says it has lost ${tot}% of its price altogether. Why is that wrong?`,
       options: [
         { text: `The second ${r}% is taken from a smaller value, so the loss is ${real}%`, right: true },
         { text: `The loss should be ${wrongUp}%, because the second ${r}% is taken from a bigger value`, right: false, why: "After a fall, the value is smaller, not bigger. The second year's loss is taken from the smaller value." },
@@ -30183,7 +32391,7 @@ var FAMILIES21 = [
         { text: `Per cent changes can never be added`, right: false, why: "They can be added when they are all taken from the same starting value. Here the starting value changes." }
       ],
       hints: [`Work out the value after year 1, then the value after year 2, in shillings.`, "Compare the total loss in shillings with the price when new."],
-      steps: [`Year 1: ${P} \u2212 ${r}% = ${P * (100 - r) / 100}.`, `Year 2: ${P * (100 - r) / 100} \u2212 ${r}% = ${V2}.`, `Loss: ${P - V2} out of ${P} is ${real}%, not ${tot}%.`]
+      steps: [`Year 1: ${P2} \u2212 ${r}% = ${P2 * (100 - r) / 100}.`, `Year 2: ${P2 * (100 - r) / 100} \u2212 ${r}% = ${V2}.`, `Loss: ${P2 - V2} out of ${P2} is ${real}%, not ${tot}%.`]
     })
   }),
   fam11({
@@ -30368,17 +32576,17 @@ var FAMILIES21 = [
     rung: 2,
     form: "steps",
     draw: () => ({ x0: randInt(1, 3), y0: randInt(1, 3), W: randInt(4, 8), H: randInt(3, 6) }),
-    make: ({ x0, y0, W: W2, H }) => ({
-      question: `A rectangular plot ABCD is drawn on a grid. The corner A is at (${x0}, ${y0}), B is at (${x0 + W2}, ${y0}) and C is at (${x0 + W2}, ${y0 + H}). Each unit on the grid is 1 m. D is the fourth corner.`,
+    make: ({ x0, y0, W: W3, H: H2 }) => ({
+      question: `A rectangular plot ABCD is drawn on a grid. The corner A is at (${x0}, ${y0}), B is at (${x0 + W3}, ${y0}) and C is at (${x0 + W3}, ${y0 + H2}). Each unit on the grid is 1 m. D is the fourth corner.`,
       parts: [
-        { prompt: "What is the first number (across) of the point D?", answer: x0, hint: "D is straight above A, so it is the same distance across.", wrong: [[x0 + W2, "That is the first number of B and C. D is above A."]] },
-        { prompt: "What is the second number (up) of the point D?", answer: y0 + H, hint: "D is level with C, so it is the same height.", wrong: [[y0, "That is the height of A and B. D is level with C."]] },
-        { prompt: "What is the perimeter of the plot, in metres?", answer: 2 * (W2 + H), unit: "m", hint: "Find the length AB and the length BC from the coordinates.", wrong: [[W2 + H, "The perimeter goes all the way round: both pairs of sides."]] },
-        { prompt: "What is the area of the plot, in m\xB2?", answer: W2 * H, unit: "m\xB2", hint: "Area = length \xD7 width.", wrong: [[2 * (W2 + H), "That is the perimeter. Area is length \xD7 width."]] }
+        { prompt: "What is the first number (across) of the point D?", answer: x0, hint: "D is straight above A, so it is the same distance across.", wrong: [[x0 + W3, "That is the first number of B and C. D is above A."]] },
+        { prompt: "What is the second number (up) of the point D?", answer: y0 + H2, hint: "D is level with C, so it is the same height.", wrong: [[y0, "That is the height of A and B. D is level with C."]] },
+        { prompt: "What is the perimeter of the plot, in metres?", answer: 2 * (W3 + H2), unit: "m", hint: "Find the length AB and the length BC from the coordinates.", wrong: [[W3 + H2, "The perimeter goes all the way round: both pairs of sides."]] },
+        { prompt: "What is the area of the plot, in m\xB2?", answer: W3 * H2, unit: "m\xB2", hint: "Area = length \xD7 width.", wrong: [[2 * (W3 + H2), "That is the perimeter. Area is length \xD7 width."]] }
       ],
-      steps: [`D is above A, so across is ${x0}.`, `D is level with C, so up is ${y0 + H}.`, `AB = ${W2} m and BC = ${H} m. Perimeter = 2 \xD7 (${W2} + ${H}) = ${2 * (W2 + H)} m.`, `Area = ${W2} \xD7 ${H} = ${W2 * H} m\xB2.`]
+      steps: [`D is above A, so across is ${x0}.`, `D is level with C, so up is ${y0 + H2}.`, `AB = ${W3} m and BC = ${H2} m. Perimeter = 2 \xD7 (${W3} + ${H2}) = ${2 * (W3 + H2)} m.`, `Area = ${W3} \xD7 ${H2} = ${W3 * H2} m\xB2.`]
     }),
-    check: ({ x0, y0, W: W2, H }, v) => v[0] === x0 && v[1] === y0 + H && v[2] === 2 * W2 + 2 * H && v[3] * 2 === 2 * W2 * H
+    check: ({ x0, y0, W: W3, H: H2 }, v) => v[0] === x0 && v[1] === y0 + H2 && v[2] === 2 * W3 + 2 * H2 && v[3] * 2 === 2 * W3 * H2
   }),
   fam11({
     id: "g8.graphs.table-pattern",
@@ -30430,19 +32638,19 @@ var FAMILIES21 = [
     rung: 2,
     form: "why",
     draw: () => {
-      const s = pick([2, 5, 10]), V = s === 2 ? pick([30, 36, 40]) : s === 5 ? pick([60, 70, 80]) : pick([120, 150, 180]);
-      return { s, V, p: person() };
+      const s = pick([2, 5, 10]), V2 = s === 2 ? pick([30, 36, 40]) : s === 5 ? pick([60, 70, 80]) : pick([120, 150, 180]);
+      return { s, V: V2, p: person() };
     },
-    make: ({ s, V, p }) => ({
-      question: `${p.name} wants to graph values up to ${V}. The vertical axis has 10 big squares. ${p.She} chooses a scale of 1 big square to ${s} units. Why is this scale not suitable?`,
+    make: ({ s, V: V2, p }) => ({
+      question: `${p.name} wants to graph values up to ${V2}. The vertical axis has 10 big squares. ${p.She} chooses a scale of 1 big square to ${s} units. Why is this scale not suitable?`,
       options: [
-        { text: `The axis reaches only ${10 * s}, so ${V} will not fit`, right: true },
+        { text: `The axis reaches only ${10 * s}, so ${V2} will not fit`, right: true },
         { text: `${s} is too small a number to use as a scale`, right: false, why: "The size of the number does not matter by itself. What matters is whether the largest value fits on the axis." },
         { text: "A scale must always be 1 big square to 1 unit", right: false, why: "Scales are chosen to fit the data. 1 big square to 1 unit would only fit tiny values." },
-        { text: `A scale must always be bigger than ${V} units`, right: false, why: "A scale is how many units one square stands for. It is never as large as the biggest value." }
+        { text: `A scale must always be bigger than ${V2} units`, right: false, why: "A scale is how many units one square stands for. It is never as large as the biggest value." }
       ],
       hints: ["Find how far the axis reaches: the number of big squares times the units in each.", "Compare that with the largest value to be shown."],
-      steps: [`The axis reaches 10 \xD7 ${s} = ${10 * s}.`, `${V} is bigger than ${10 * s}, so the largest value is off the graph.`]
+      steps: [`The axis reaches 10 \xD7 ${s} = ${10 * s}.`, `${V2} is bigger than ${10 * s}, so the largest value is off the graph.`]
     })
   }),
   fam11({
@@ -30452,17 +32660,17 @@ var FAMILIES21 = [
     rung: 1,
     form: "word",
     draw: () => {
-      const L2 = pick([8, 10, 12, 20]), s = pick([2, 5, 10, 20, 50]), V = L2 * s;
-      return uniq4(s, V - L2, L2 / V) ? { L: L2, s, V, what: pick(["the kilograms of maize sold", "the number of learners present", "the litres of water used"]), p: person() } : null;
+      const L2 = pick([8, 10, 12, 20]), s = pick([2, 5, 10, 20, 50]), V2 = L2 * s;
+      return uniq4(s, V2 - L2, L2 / V2) ? { L: L2, s, V: V2, what: pick(["the kilograms of maize sold", "the number of learners present", "the litres of water used"]), p: person() } : null;
     },
-    make: ({ L: L2, s, V, what, p }) => ({
-      question: `${p.name} draws a graph of ${what}. The vertical axis is ${L2} cm long and runs from 0 to ${V}. What scale does ${p.she} use? Give the number of units that 1 cm stands for.`,
+    make: ({ L: L2, s, V: V2, what, p }) => ({
+      question: `${p.name} draws a graph of ${what}. The vertical axis is ${L2} cm long and runs from 0 to ${V2}. What scale does ${p.she} use? Give the number of units that 1 cm stands for.`,
       answer: s,
-      wrong: [[V - L2, "Do not take away. The scale says how many units each centimetre stands for."], [round(L2 / V, 2), "You divided the wrong way round. Divide the units by the centimetres."], [V, "That is the whole axis in units. Share it between the centimetres."]],
+      wrong: [[V2 - L2, "Do not take away. The scale says how many units each centimetre stands for."], [round(L2 / V2, 2), "You divided the wrong way round. Divide the units by the centimetres."], [V2, "That is the whole axis in units. Share it between the centimetres."]],
       hints: ["How many units does the whole axis show? How many cm is the axis?", "Share the units equally between the centimetres."],
-      steps: [`The axis shows ${V} units over ${L2} cm.`, `${V} \xF7 ${L2} = ${s} units for each cm.`]
+      steps: [`The axis shows ${V2} units over ${L2} cm.`, `${V2} \xF7 ${L2} = ${s} units for each cm.`]
     }),
-    check: ({ L: L2, V }, a) => a * L2 === V
+    check: ({ L: L2, V: V2 }, a) => a * L2 === V2
   }),
   fam11({
     id: "g8.graphs.scale-choose",
@@ -30472,13 +32680,13 @@ var FAMILIES21 = [
     form: "table",
     draw: () => {
       const NICE = [1, 2, 5, 10, 20, 50, 100], i = pick([2, 3, 4]), r = NICE[i], prev = NICE[i - 1];
-      const M4 = r * 10 - 5 * pick([0, 1, 2]) * (r >= 10 ? 1 : 0);
-      if (!(M4 > prev * 10 && M4 <= r * 10)) return null;
-      const others = [0.3, 0.5, 0.7, 0.9].map((f) => Math.round(M4 * f / 5) * 5 || 5).slice(0, 3);
-      const vals = [...others, M4].sort(() => Math.random() - 0.5);
-      return { r, prev, nx: NICE[i + 1], nx2: NICE[i + 2], M: M4, vals };
+      const M5 = r * 10 - 5 * pick([0, 1, 2]) * (r >= 10 ? 1 : 0);
+      if (!(M5 > prev * 10 && M5 <= r * 10)) return null;
+      const others = [0.3, 0.5, 0.7, 0.9].map((f) => Math.round(M5 * f / 5) * 5 || 5).slice(0, 3);
+      const vals = [...others, M5].sort(() => Math.random() - 0.5);
+      return { r, prev, nx: NICE[i + 1], nx2: NICE[i + 2], M: M5, vals };
     },
-    make: ({ r, prev, nx, nx2, M: M4, vals }) => ({
+    make: ({ r, prev, nx, nx2, M: M5, vals }) => ({
       question: "The table shows the rainfall measured in four months. The vertical axis of a graph has 10 big squares. What is the smallest scale, in mm for each big square, that lets every value fit?",
       model: { type: "table", data: { head: ["Month", "Rainfall (mm)"], rows: vals.map((v, j) => ({ label: ["March", "April", "May", "June"][j], value: String(v) })) } },
       options: [
@@ -30489,7 +32697,7 @@ var FAMILIES21 = [
       ],
       story: true,
       hints: ["Find the largest value in the table.", "The axis reaches 10 times the scale. It must reach at least the largest value."],
-      steps: [`The largest value is ${M4} mm.`, `10 squares of ${prev} mm reach ${10 * prev}, which is too small.`, `10 squares of ${r} mm reach ${10 * r}, which fits.`]
+      steps: [`The largest value is ${M5} mm.`, `10 squares of ${prev} mm reach ${10 * prev}, which is too small.`, `10 squares of ${r} mm reach ${10 * r}, which fits.`]
     })
   }),
   fam11({
@@ -30504,13 +32712,13 @@ var FAMILIES21 = [
       return uniq4(x0, y0, x0 + 2, x0 - 2) ? { m1, m2, a, b, x0, y0 } : null;
     },
     make: ({ m1, m2, a, b, x0, y0 }) => {
-      const xs = [0, 2, 4, 6, 8], A2 = xs.map((x) => ({ x, y: a + m1 * x })), B2 = xs.map((x) => ({ x, y: b + m2 * x }));
-      const top = Math.max(...A2.map((q) => q.y), ...B2.map((q) => q.y)), step2 = [100, 200, 250, 500, 1e3].find((s) => top / s <= 6);
+      const xs = [0, 2, 4, 6, 8], A2 = xs.map((x) => ({ x, y: a + m1 * x })), B3 = xs.map((x) => ({ x, y: b + m2 * x }));
+      const top = Math.max(...A2.map((q) => q.y), ...B3.map((q) => q.y)), step2 = [100, 200, 250, 500, 1e3].find((s) => top / s <= 6);
       const yTicks = [];
       for (let v = 0; v <= Math.ceil(top / step2) * step2; v += step2) yTicks.push(v);
       return {
         question: "Two halls can be hired for a harambee. The graph shows the cost in shillings of each hall for different numbers of hours. The two lines meet at one point. For how many hours is the cost of the two halls the same?",
-        model: { type: "line-graph", data: { lines: [A2, B2], xTicks: xs, yTicks, xLabel: "Hours of hire", yLabel: "Cost (sh)" } },
+        model: { type: "line-graph", data: { lines: [A2, B3], xTicks: xs, yTicks, xLabel: "Hours of hire", yLabel: "Cost (sh)" } },
         answer: x0,
         wrong: [[y0, "That is the cost where the lines meet, read up the side. The question asks for the hours, read along the bottom."], [x0 + 2, "At that time the lines have already crossed and one hall is dearer. Read where they meet."], [x0 - 2, "The lines have not yet met at that time. Read along from where they cross."]],
         hints: ["The cost is the same where the two lines meet.", "From the meeting point, go straight down to the axis along the bottom."],
@@ -30723,17 +32931,17 @@ var FAMILIES21 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const [F3, V] = pick([[8, 12], [7, 10], [6, 6], [7, 7], [5, 6], [5, 5]]), E2 = F3 + V - 2;
-      return uniq4(E2, F3 + V, F3 + V + 2, V - F3 + 2) ? { F: F3, V, E: E2 } : null;
+      const [F4, V2] = pick([[8, 12], [7, 10], [6, 6], [7, 7], [5, 6], [5, 5]]), E2 = F4 + V2 - 2;
+      return uniq4(E2, F4 + V2, F4 + V2 + 2, V2 - F4 + 2) ? { F: F4, V: V2, E: E2 } : null;
     },
-    make: ({ F: F3, V, E: E2 }) => ({
-      question: `A model solid has ${F3} faces and ${V} vertices. For a solid like this, faces + vertices \u2212 edges = 2. How many edges does the solid have?`,
+    make: ({ F: F4, V: V2, E: E2 }) => ({
+      question: `A model solid has ${F4} faces and ${V2} vertices. For a solid like this, faces + vertices \u2212 edges = 2. How many edges does the solid have?`,
       answer: E2,
-      wrong: [[F3 + V, 'The rule has "\u2212 edges" in it. Put the numbers in and find the number of edges that makes the rule true.'], [F3 + V + 2, "Check the rule: faces + vertices is 2 MORE than the edges, so the edges are fewer."], [V - F3 + 2, "Be careful when you rearrange. Faces and vertices are both added."]],
+      wrong: [[F4 + V2, 'The rule has "\u2212 edges" in it. Put the numbers in and find the number of edges that makes the rule true.'], [F4 + V2 + 2, "Check the rule: faces + vertices is 2 MORE than the edges, so the edges are fewer."], [V2 - F4 + 2, "Be careful when you rearrange. Faces and vertices are both added."]],
       hints: ["Put the number of faces and vertices into the rule.", "Faces + vertices is 2 more than the number of edges."],
-      steps: [`${F3} + ${V} \u2212 edges = 2.`, `${F3 + V} \u2212 edges = 2, so edges = ${F3 + V} \u2212 2 = ${E2}.`]
+      steps: [`${F4} + ${V2} \u2212 edges = 2.`, `${F4 + V2} \u2212 edges = 2, so edges = ${F4 + V2} \u2212 2 = ${E2}.`]
     }),
-    check: ({ F: F3, V }, e) => F3 + V - e === 2
+    check: ({ F: F4, V: V2 }, e) => F4 + V2 - e === 2
   }),
   fam11({
     id: "g8.solids.cylinder-net",
@@ -30804,17 +33012,17 @@ var FAMILIES21 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const L2 = pick([30, 40, 50]), W2 = pick([20, 30]), x = pick([2, 3, 4, 5]);
-      return uniq4((L2 - 2 * x) * (W2 - 2 * x) * x, L2 * W2 * x, (L2 - x) * (W2 - x) * x, (L2 - 2 * x) * (W2 - 2 * x)) ? { L: L2, W: W2, x, p: person() } : null;
+      const L2 = pick([30, 40, 50]), W3 = pick([20, 30]), x = pick([2, 3, 4, 5]);
+      return uniq4((L2 - 2 * x) * (W3 - 2 * x) * x, L2 * W3 * x, (L2 - x) * (W3 - x) * x, (L2 - 2 * x) * (W3 - 2 * x)) ? { L: L2, W: W3, x, p: person() } : null;
     },
-    make: ({ L: L2, W: W2, x, p }) => ({
-      question: `${p.name} makes a tray from a flat sheet of card ${L2} cm long and ${W2} cm wide. ${p.She} cuts a square of side ${x} cm from each corner, then folds up the sides. What is the volume of the tray, in cm\xB3?`,
-      answer: (L2 - 2 * x) * (W2 - 2 * x) * x,
-      wrong: [[L2 * W2 * x, "The base of the tray is smaller than the sheet, because the corners were cut away."], [(L2 - x) * (W2 - x) * x, "A square is cut from both ends of the length, so take away 2 \xD7 the side, not 1 \xD7."], [(L2 - 2 * x) * (W2 - 2 * x), "That is the area of the base. Volume also needs the height."]],
+    make: ({ L: L2, W: W3, x, p }) => ({
+      question: `${p.name} makes a tray from a flat sheet of card ${L2} cm long and ${W3} cm wide. ${p.She} cuts a square of side ${x} cm from each corner, then folds up the sides. What is the volume of the tray, in cm\xB3?`,
+      answer: (L2 - 2 * x) * (W3 - 2 * x) * x,
+      wrong: [[L2 * W3 * x, "The base of the tray is smaller than the sheet, because the corners were cut away."], [(L2 - x) * (W3 - x) * x, "A square is cut from both ends of the length, so take away 2 \xD7 the side, not 1 \xD7."], [(L2 - 2 * x) * (W3 - 2 * x), "That is the area of the base. Volume also needs the height."]],
       hints: ["After cutting the corners and folding, the height of the tray is the side of the cut-out square.", "The length and the width of the base each lose a square at both ends."],
-      steps: [`Base length: ${L2} \u2212 2 \xD7 ${x} = ${L2 - 2 * x} cm.`, `Base width: ${W2} \u2212 2 \xD7 ${x} = ${W2 - 2 * x} cm.`, `Volume: ${L2 - 2 * x} \xD7 ${W2 - 2 * x} \xD7 ${x} = ${(L2 - 2 * x) * (W2 - 2 * x) * x} cm\xB3.`]
+      steps: [`Base length: ${L2} \u2212 2 \xD7 ${x} = ${L2 - 2 * x} cm.`, `Base width: ${W3} \u2212 2 \xD7 ${x} = ${W3 - 2 * x} cm.`, `Volume: ${L2 - 2 * x} \xD7 ${W3 - 2 * x} \xD7 ${x} = ${(L2 - 2 * x) * (W3 - 2 * x) * x} cm\xB3.`]
     }),
-    check: ({ L: L2, W: W2, x }, a) => a / x / (L2 - 2 * x) === W2 - 2 * x
+    check: ({ L: L2, W: W3, x }, a) => a / x / (L2 - 2 * x) === W3 - 2 * x
   }),
   fam11({
     id: "g8.solids.double-edge-why",
@@ -30948,8 +33156,8 @@ var FAMILIES21 = [
     rung: 2,
     form: "why",
     draw: () => {
-      const S4 = [["the number of learners in each of Grades 4 to 8", "bar"], ["how many learners chose each of four school clubs", "bar"], ["the maize harvest of five farmers", "bar"], ["the temperature of a school every hour of the day", "line"], ["the price of a kilogram of maize in each month of the year", "line"], ["the height of a seedling at the end of each week", "line"]];
-      const [what, kind] = pick(S4);
+      const S5 = [["the number of learners in each of Grades 4 to 8", "bar"], ["how many learners chose each of four school clubs", "bar"], ["the maize harvest of five farmers", "bar"], ["the temperature of a school every hour of the day", "line"], ["the price of a kilogram of maize in each month of the year", "line"], ["the height of a seedling at the end of each week", "line"]];
+      const [what, kind] = pick(S5);
       return { what, kind, p: person() };
     },
     make: ({ what, kind, p }) => ({
@@ -31080,7 +33288,7 @@ var FAMILIES21 = [
     rung: 3,
     form: "why",
     draw: () => {
-      const S4 = [
+      const S5 = [
         ["A shoe seller wants to know which size to stock the most of.", "mode"],
         ["A tailor wants to know which school uniform size is bought most often, to sew more of it.", "mode"],
         ["A duka owner records the flavour of soda bought each day and wants to know which to order the most of.", "mode"],
@@ -31091,7 +33299,7 @@ var FAMILIES21 = [
         ["Most houses in a village rent for about sh 3,000, but one big house rents for sh 60,000. A teacher wants one value that shows a typical rent.", "median"],
         ["Four learners walk about 2 km to school, and one walks 15 km. A teacher wants one value that shows a typical walk.", "median"]
       ];
-      const [what, right] = pick(S4);
+      const [what, right] = pick(S5);
       return { what, right };
     },
     make: ({ what, right }) => {
@@ -31196,7 +33404,7 @@ var FAMILIES21 = [
 
 // src/ai-tutor/content/families/g7_num_alg.js
 var fam12 = (def) => family({ reviewed: false, ...def });
-var shuffle5 = (a) => {
+var shuffle6 = (a) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -31248,7 +33456,7 @@ var mixed = (n, d) => {
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
   return `${a}/${b}`;
 };
-var FAMILIES22 = [
+var FAMILIES25 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
@@ -31262,19 +33470,19 @@ var FAMILIES22 = [
       const L2 = randInt(7, 9);
       const ds = Array.from({ length: L2 }, () => randInt(1, 9));
       const j = randInt(L2 - 3, L2 - 1), k = randInt(2, 4);
-      const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
-      return new Set(ds).size >= 5 && distinct7(A2 + B2, ds[j] + ds[k], A2 + ds[k], ds[j] + B2) ? { ds, L: L2, j, k } : null;
+      const A2 = ds[j] * 10 ** j, B3 = ds[k] * 10 ** k;
+      return new Set(ds).size >= 5 && distinct7(A2 + B3, ds[j] + ds[k], A2 + ds[k], ds[j] + B3) ? { ds, L: L2, j, k } : null;
     },
     make: ({ ds, L: L2, j, k }) => {
-      const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
+      const A2 = ds[j] * 10 ** j, B3 = ds[k] * 10 ** k;
       return {
         question: `The table shows a number, with one digit in each row. Look at the digit in the ${PLACES2[j]} place and the digit in the ${PLACES2[k]} place. Work out what each digit is worth in this number, then add the two values. What is the total value of the two digits together?`,
         story: false,
         model: { type: "table", data: { head: ["Place", "Digit"], rows: Array.from({ length: L2 }, (_, i) => ({ label: PLACES2[L2 - 1 - i], value: String(ds[L2 - 1 - i]) })) } },
-        answer: A2 + B2,
-        wrong: [[ds[j] + ds[k], "That adds the digits only. Total value also depends on the place each digit sits in."], [A2 + ds[k], `The digit in the ${PLACES2[k]} place is also worth more than itself.`], [ds[j] + B2, `The digit in the ${PLACES2[j]} place is also worth more than itself.`]],
+        answer: A2 + B3,
+        wrong: [[ds[j] + ds[k], "That adds the digits only. Total value also depends on the place each digit sits in."], [A2 + ds[k], `The digit in the ${PLACES2[k]} place is also worth more than itself.`], [ds[j] + B3, `The digit in the ${PLACES2[j]} place is also worth more than itself.`]],
         hints: ["Find each row in the table and read its digit.", "Total value = the digit \xD7 the value of its place. Do this for both places, then add."],
-        steps: [`${PLACES2[j]}: the digit is ${ds[j]}, total value ${commas(A2)}.`, `${PLACES2[k]}: the digit is ${ds[k]}, total value ${commas(B2)}.`, `Sum: ${commas(A2)} + ${commas(B2)} = ${commas(A2 + B2)}.`]
+        steps: [`${PLACES2[j]}: the digit is ${ds[j]}, total value ${commas(A2)}.`, `${PLACES2[k]}: the digit is ${ds[k]}, total value ${commas(B3)}.`, `Sum: ${commas(A2)} + ${commas(B3)} = ${commas(A2 + B3)}.`]
       };
     },
     check: ({ ds, j, k }, a) => String(a).length === j + 1 && Number(String(ds[j]) + "0".repeat(j)) + Number(String(ds[k]) + "0".repeat(k)) === a
@@ -31286,18 +33494,18 @@ var FAMILIES22 = [
     rung: 2,
     form: "spot",
     draw: () => ({ A: randInt(101, 899), B: randInt(11, 99), bug: pick([1, 2]), p: person() }),
-    make: ({ A: A2, B: B2, bug, p }) => {
-      const sa = bug === 1 ? A2 * 100 : A2 * 1e3, sb = bug === 2 ? B2 * 10 : B2, tot = sa + sb;
+    make: ({ A: A2, B: B3, bug, p }) => {
+      const sa = bug === 1 ? A2 * 100 : A2 * 1e3, sb = bug === 2 ? B3 * 10 : B3, tot = sa + sb;
       return {
-        question: `${p.name} reads a number written in words: "${words4(A2)} thousand and ${words4(B2)}". ${p.She} writes it in figures. Which step has the mistake?`,
+        question: `${p.name} reads a number written in words: "${words4(A2)} thousand and ${words4(B3)}". ${p.She} writes it in figures. Which step has the mistake?`,
         working: [
           { text: `${words4(A2)} thousand is ${commas(sa)}.`, ok: sa === A2 * 1e3 },
-          { text: `${words4(B2)} is ${sb}.`, ok: sb === B2 },
+          { text: `${words4(B3)} is ${sb}.`, ok: sb === B3 },
           { text: `Add the two parts: ${commas(sa)} + ${sb} = ${commas(tot)}.`, ok: tot === sa + sb },
           { text: `So the number is ${commas(tot)}.`, ok: true }
         ],
-        fix: bug === 1 ? `${words4(A2)} thousand means ${A2} \xD7 1,000, so it is ${commas(A2 * 1e3)}. One zero was missing.` : `${words4(B2)} is ${B2}. The ${B2} belongs in the units, not shifted to the next place.`,
-        steps: [`${words4(A2)} thousand = ${commas(A2 * 1e3)}.`, `${words4(B2)} = ${B2}.`, `${commas(A2 * 1e3)} + ${B2} = ${commas(A2 * 1e3 + B2)}.`]
+        fix: bug === 1 ? `${words4(A2)} thousand means ${A2} \xD7 1,000, so it is ${commas(A2 * 1e3)}. One zero was missing.` : `${words4(B3)} is ${B3}. The ${B3} belongs in the units, not shifted to the next place.`,
+        steps: [`${words4(A2)} thousand = ${commas(A2 * 1e3)}.`, `${words4(B3)} = ${B3}.`, `${commas(A2 * 1e3)} + ${B3} = ${commas(A2 * 1e3 + B3)}.`]
       };
     }
   }),
@@ -31320,11 +33528,11 @@ var FAMILIES22 = [
       }
       const n = Number(ds.join(""));
       const set = [...new Set(alt.map((a) => words4(a)))].filter((w) => w !== words4(n));
-      return set.length >= 3 ? { n, wrongs: shuffle5(set).slice(0, 3), p: person() } : null;
+      return set.length >= 3 ? { n, wrongs: shuffle6(set).slice(0, 3), p: person() } : null;
     },
     make: ({ n, wrongs, p }) => ({
       question: `${p.name} sells a plot of land for ${sh(n)}. Which of these shows the amount in words?`,
-      options: shuffle5([{ text: words4(n), right: true }, ...wrongs.map((w) => ({ text: w, right: false, why: "Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place." }))]),
+      options: shuffle6([{ text: words4(n), right: true }, ...wrongs.map((w) => ({ text: w, right: false, why: "Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place." }))]),
       hints: ["Split the number into groups of three digits, from the right.", "Say the millions group, then the thousands group, then the last group."],
       steps: [`Groups: ${commas(n).split(",").join(" | ")}.`, `In words: ${words4(n)}.`]
     })
@@ -31389,17 +33597,17 @@ var FAMILIES22 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const f = pick([60, 70, 80, 100]), k = pick([20, 25, 30, 35, 40]), F3 = pick([600, 800, 1e3, 1200]), P = pick([100, 150, 200]);
-      return f * k - F3 - P >= 200 ? { f, k, F: F3, P } : null;
+      const f = pick([60, 70, 80, 100]), k = pick([20, 25, 30, 35, 40]), F4 = pick([600, 800, 1e3, 1200]), P2 = pick([100, 150, 200]);
+      return f * k - F4 - P2 >= 200 ? { f, k, F: F4, P: P2 } : null;
     },
-    make: ({ f, k, F: F3, P }) => ({
-      question: `A matatu charges ${sh(f)} from each passenger. On one trip it carries ${k} passengers. The driver pays ${sh(F3)} for fuel and ${sh(P)} for parking. How much money is left from the fares? Answer in shillings.`,
-      answer: f * k - (F3 + P),
-      wrong: [[f * k - F3, "The driver also pays for parking. Take that away as well."], [f * k - F3 + P, "Both payments come out of the fares. Neither one is added back."], [f * k, "That is all the money collected. Take away what the driver pays."]],
+    make: ({ f, k, F: F4, P: P2 }) => ({
+      question: `A matatu charges ${sh(f)} from each passenger. On one trip it carries ${k} passengers. The driver pays ${sh(F4)} for fuel and ${sh(P2)} for parking. How much money is left from the fares? Answer in shillings.`,
+      answer: f * k - (F4 + P2),
+      wrong: [[f * k - F4, "The driver also pays for parking. Take that away as well."], [f * k - F4 + P2, "Both payments come out of the fares. Neither one is added back."], [f * k, "That is all the money collected. Take away what the driver pays."]],
       hints: ["First find all the money the passengers pay.", "Then take away the fuel and the parking."],
-      steps: [`Fares: ${f} \xD7 ${k} = ${commas(f * k)}.`, `Costs: ${F3} + ${P} = ${commas(F3 + P)}.`, `Left: ${commas(f * k)} \u2212 ${commas(F3 + P)} = ${commas(f * k - F3 - P)}.`]
+      steps: [`Fares: ${f} \xD7 ${k} = ${commas(f * k)}.`, `Costs: ${F4} + ${P2} = ${commas(F4 + P2)}.`, `Left: ${commas(f * k)} \u2212 ${commas(F4 + P2)} = ${commas(f * k - F4 - P2)}.`]
     }),
-    check: ({ f, k, F: F3, P }, a) => a + F3 + P === f * k
+    check: ({ f, k, F: F4, P: P2 }, a) => a + F4 + P2 === f * k
   }),
   fam12({
     id: "g7.whole.mangoes-spot",
@@ -31501,16 +33709,16 @@ var FAMILIES22 = [
       const k = randInt(12, 20);
       return { ...s, k, S: s.f + (k - 1) * s.d, p: person() };
     },
-    make: ({ n, f, d, k, S: S4, p }) => ({
+    make: ({ n, f, d, k, S: S5, p }) => ({
       question: `${p.name} joins matchsticks to make a row of ${n}s. The first ${n} uses ${f} sticks. Each new ${n} shares a side with the one before, so it adds ${d} sticks. Use this rule to answer.`,
       parts: [
         { prompt: `How many sticks make a row of 4 ${n}s?`, answer: f + 3 * d, hint: `Start with ${f} and add ${d} three times.`, wrong: [[4 * f, `The ${n}s share sides, so they do not each need ${f} sticks.`], [f + 4 * d, "The first shape is already in place. Only 3 more are added."], [f + 3, "Each new shape adds more than 1 stick."]] },
         { prompt: `How many sticks make a row of 10 ${n}s?`, answer: f + 9 * d, hint: "The rule is added once for each shape after the first.", wrong: [[10 * f, "Shapes in the row share sides. Use the rule."], [f + 10 * d, "The first shape is not an addition. Count the added shapes again."], [10 * d, "The first shape uses more sticks than a new one adds."]] },
-        { prompt: `${p.name} has ${S4} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S4 / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, "Do not forget the first shape."], [Math.floor(S4 / d), "The first shape uses a different number of sticks from the new ones."]] }
+        { prompt: `${p.name} has ${S5} sticks and uses them all. How many ${n}s are in the row?`, answer: k, hint: `Take off the first ${n}, then see how many lots of ${d} fit.`, wrong: [[Math.floor(S5 / f), `That would give each ${n} its own sticks. They share sides.`], [k - 1, "Do not forget the first shape."], [Math.floor(S5 / d), "The first shape uses a different number of sticks from the new ones."]] }
       ],
-      steps: [`4 shapes: ${f} + 3 \xD7 ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 \xD7 ${d} = ${f + 9 * d}.`, `${S4} \u2212 ${f} = ${S4 - f}, and ${S4 - f} \xF7 ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`]
+      steps: [`4 shapes: ${f} + 3 \xD7 ${d} = ${f + 3 * d}.`, `10 shapes: ${f} + 9 \xD7 ${d} = ${f + 9 * d}.`, `${S5} \u2212 ${f} = ${S5 - f}, and ${S5 - f} \xF7 ${d} = ${k - 1} added shapes. With the first one: ${k} shapes.`]
     }),
-    check: ({ f, d, k, S: S4 }, v) => v[0] === f + 3 * d && v[1] === f + 9 * d && v[2] === k && f + (v[2] - 1) * d === S4
+    check: ({ f, d, k, S: S5 }, v) => v[0] === f + 3 * d && v[1] === f + 9 * d && v[2] === k && f + (v[2] - 1) * d === S5
   }),
   // ======================================================================
   // FACTORS
@@ -31524,13 +33732,13 @@ var FAMILIES22 = [
     draw: () => {
       const N2 = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter((k) => N2 % k === 0), no = ks.filter((k) => N2 % k !== 0);
       if (yes.length < 1 || no.length < 3) return null;
-      return { N: N2, r: pick(yes), ws: shuffle5(no).slice(0, 3), p: person() };
+      return { N: N2, r: pick(yes), ws: shuffle6(no).slice(0, 3), p: person() };
     },
     make: ({ N: N2, r, ws, p }) => {
       const reason = (k) => ({ 2: "its last digit is not even", 3: `its digits add up to ${digitSum(N2)}, which is not a multiple of 3`, 4: `its last two digits make ${N2 % 100}, which does not divide by 4`, 5: "its last digit is not 0 or 5", 6: "it must divide by both 2 and 3, and it fails one of them", 7: `dividing leaves a remainder of ${N2 % 7}`, 8: `its last three digits make ${N2 % 1e3}, which does not divide by 8`, 9: `its digits add up to ${digitSum(N2)}, which is not a multiple of 9`, 10: "its last digit is not 0", 11: "the difference between the sums of its alternate digits is not 0 or a multiple of 11" })[k];
       return {
         question: `${p.name} has ${commas(N2)} books. ${p.She} packs them into equal bundles with none left over. Which of these numbers is ${commas(N2)} divisible by? It must divide exactly.`,
-        options: shuffle5([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N2)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
+        options: shuffle6([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N2)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
         hints: ["Use the divisibility test for each number in turn.", "Only one of the numbers passes its test."],
         steps: [`Test each number with its divisibility rule.`, `${commas(N2)} \xF7 ${r} = ${commas(N2 / r)} with nothing left, so ${r} divides exactly.`]
       };
@@ -31666,7 +33874,7 @@ var FAMILIES22 = [
       if (!distinct7(u, v, w) || gcd7(gcd7(u, v), w) !== 1) return null;
       const nums = [g * u, g * v, g * w];
       const gab = gcd7(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
-      return distinct7(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle5(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
+      return distinct7(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle6(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
     },
     make: ({ g, nums, gab, mn, per, items, p }) => ({
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`,
@@ -31730,7 +33938,7 @@ var FAMILIES22 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const v = shuffle5([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L2 = lcm4(lcm4(v[0], v[1]), v[2]);
+      const v = shuffle6([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L2 = lcm4(lcm4(v[0], v[1]), v[2]);
       const L22 = lcm4(v[0], v[1]);
       return L2 <= 180 && L2 !== L22 && distinct7(L2, L22, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L: L2, L2: L22 } : null;
     },
@@ -31755,7 +33963,7 @@ var FAMILIES22 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const ds = shuffle5([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
+      const ds = shuffle6([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
         const a = randInt(1, d - 1);
         return { a, d };
       });
@@ -31773,7 +33981,7 @@ var FAMILIES22 = [
       const best = fs.reduce((m, f, i) => f.a / f.d > fs[m].a / fs[m].d ? i : m, 0);
       return {
         question: `${ps[0].name}, ${ps[1].name} and ${ps[2].name} each read a book of the same length. ${ps[0].name} has read ${fs[0].a}/${fs[0].d} of ${ps[0].her} book, ${ps[1].name} has read ${fs[1].a}/${fs[1].d} and ${ps[2].name} has read ${fs[2].a}/${fs[2].d}. Compare the fractions. Who has read the most?`,
-        options: shuffle5(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? void 0 : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
+        options: shuffle6(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? void 0 : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
         hints: ["Fractions with different denominators cannot be compared directly.", "Write all three with a common denominator."],
         steps: [`A common denominator is ${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}.`, `The fractions are ${fs.map((f) => `${f.a * lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d) / f.d}/${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}`).join(", ")}.`, `The biggest is ${ps[best].name}'s.`]
       };
@@ -31790,18 +33998,18 @@ var FAMILIES22 = [
       return { n, swap: Math.random() < 0.5 };
     },
     make: ({ n, swap }) => {
-      const A2 = `${n - 1}/${n}`, B2 = `${n}/${n + 1}`, first2 = swap ? B2 : A2, second = swap ? A2 : B2;
+      const A2 = `${n - 1}/${n}`, B3 = `${n}/${n + 1}`, first2 = swap ? B3 : A2, second = swap ? A2 : B3;
       return {
         question: `Which is greater: ${first2} or ${second}? Choose the best reason.`,
         story: false,
-        options: shuffle5([
-          { text: `${B2} is greater, because less is missing from a whole`, right: true },
+        options: shuffle6([
+          { text: `${B3} is greater, because less is missing from a whole`, right: true },
           { text: `${A2} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.` },
-          { text: `${B2} is greater, because its denominator is bigger`, right: false, why: "A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing." },
+          { text: `${B3} is greater, because its denominator is bigger`, right: false, why: "A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing." },
           { text: "They are equal, because each is one piece short of a whole", right: false, why: `The missing pieces are not the same size: ${n + 1}ths are smaller than ${n}ths.` }
         ]),
         hints: ["Each fraction is one piece short of a whole. Compare the missing pieces.", "Which missing piece is smaller?"],
-        steps: [`${A2} = 1 \u2212 1/${n} and ${B2} = 1 \u2212 1/${n + 1}.`, `1/${n + 1} is smaller than 1/${n}, so less is missing from ${B2}.`, `So ${B2} is greater.`]
+        steps: [`${A2} = 1 \u2212 1/${n} and ${B3} = 1 \u2212 1/${n + 1}.`, `1/${n + 1} is smaller than 1/${n}, so less is missing from ${B3}.`, `So ${B3} is greater.`]
       };
     }
   }),
@@ -31839,7 +34047,7 @@ var FAMILIES22 = [
       return {
         question: `${p.name} finds the reciprocal of ${w} ${a}/${b} and writes ${w} ${b}/${a}. Why is this not the reciprocal?`,
         story: false,
-        options: shuffle5([
+        options: shuffle6([
           { text: `${w} ${a}/${b} must first be written as ${n}/${b}. Its reciprocal is ${b}/${n}`, right: true },
           { text: "A mixed number does not have a reciprocal", right: false, why: "Every number except 0 has a reciprocal, including mixed numbers." },
           { text: `The whole number ${w} stays the same in a reciprocal`, right: false, why: "The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is." },
@@ -31862,7 +34070,7 @@ var FAMILIES22 = [
     },
     make: ({ a, b, L: L2, p, item }) => ({
       question: `${p.name} has ${L2} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === "litres" ? "litre" : "kg"}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
-      options: shuffle5([
+      options: shuffle6([
         { text: `${L2} \xF7 ${a}/${b}`, right: true },
         { text: `${L2} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L2}, not how many lots of ${a}/${b} fit into ${L2}.` },
         { text: `${a}/${b} \xF7 ${L2}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one." },
@@ -31886,7 +34094,7 @@ var FAMILIES22 = [
     },
     make: ({ a, b, k, right, w, p }) => ({
       question: `A water tank is ${a}/${b} full. ${p.name} divides the water equally among ${k} drums. What fraction of the whole tank is in each drum?`,
-      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
+      options: shuffle6([{ text: right, right: true }, { text: w[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
       hints: ["Sharing equally into drums is dividing the fraction by the number of drums.", "Dividing a fraction by a whole number is the same as multiplying by one over that number."],
       steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd7(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
@@ -31928,7 +34136,7 @@ var FAMILIES22 = [
     },
     make: ({ dir, shown, right, w, p }) => ({
       question: `A tank at ${p.name}'s school is ${dir === 1 ? "filling" : "emptying"}. The part of the tank that is ${dir === 1 ? "full" : "still full"} after each hour follows a pattern: ${shown.join(", ")}. What comes next in the sequence, after the fifth hour?`,
-      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown." }, { text: w[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see." }, { text: w[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time." }]),
+      options: shuffle6([{ text: right, right: true }, { text: w[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown." }, { text: w[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see." }, { text: w[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time." }]),
       hints: ["Write the terms with the same denominator and find the gap between them.", "Use the same gap once more."],
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? "to" : "taking it from"} ${shown[3]} gives ${right}.`]
     })
@@ -31961,7 +34169,7 @@ var FAMILIES22 = [
     make: ({ r }) => ({
       question: `Look at the pattern of fractions: 1, 1/${r}, 1/${r * r}, 1/${r ** 3}, ... Which rule makes each term from the one before it?`,
       story: false,
-      options: shuffle5([
+      options: shuffle6([
         { text: `Divide by ${r} each time`, right: true },
         { text: `Multiply by ${r} each time`, right: false, why: "Multiplying by a whole number makes terms bigger. These terms are getting smaller." },
         { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.` },
@@ -31982,7 +34190,7 @@ var FAMILIES22 = [
     form: "table",
     draw: () => {
       const ds = [randInt(1, 9), randInt(0, 9), randInt(1, 9), randInt(0, 9), randInt(1, 9)];
-      const order = shuffle5([0, 1, 2, 3, 4]);
+      const order = shuffle6([0, 1, 2, 3, 4]);
       const naive = order.map((i) => ds[i]);
       const val = ds[0] * 10 + ds[1] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1e3;
       return distinct7(...ds.filter((_, i) => i !== 1 && i !== 3)) && ds[0] !== ds[1] && ds[2] !== ds[3] && order.join("") !== "01234" ? { ds, order, val: round(val, 3) } : null;
@@ -32169,7 +34377,7 @@ var FAMILIES22 = [
     make: ({ n, d, right, w }) => ({
       question: `Which fraction is the square of ${n}/${d}?`,
       story: false,
-      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
+      options: shuffle6([{ text: right, right: true }, { text: w[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
       hints: ["The square of a number is the number times itself.", "Multiply the numerators, and multiply the denominators."],
       steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd7(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
@@ -32204,7 +34412,7 @@ var FAMILIES22 = [
     },
     make: ({ k, A: A2, p }) => ({
       question: `${p.name} has a square plot with an area of ${A2} square metres. Between which two whole numbers does the square root \u221A${A2}, the length of one side in metres, lie?`,
-      options: shuffle5([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A2}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A2}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A2 / 2)} and ${Math.floor(A2 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test." }]),
+      options: shuffle6([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A2}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A2}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A2 / 2)} and ${Math.floor(A2 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test." }]),
       hints: ["Find two square numbers, one just below and one just above the area.", "The square roots of those two square numbers are the whole numbers you need."],
       steps: [`${k}\xB2 = ${k * k} and ${k + 1}\xB2 = ${(k + 1) ** 2}.`, `${A2} is between ${k * k} and ${(k + 1) ** 2}, so \u221A${A2} is between ${k} and ${k + 1}.`]
     })
@@ -32222,7 +34430,7 @@ var FAMILIES22 = [
     make: ({ a, b, c, p }) => ({
       question: `${p.name} writes \u221A(${a * a} + ${b * b}) = \u221A${a * a} + \u221A${b * b} = ${a} + ${b} = ${a + b}. Why is this wrong?`,
       story: false,
-      options: shuffle5([
+      options: shuffle6([
         { text: "A square root of a sum is not the sum of the roots", right: true },
         { text: `\u221A${a * a} is not ${a}, so the first step is wrong`, right: false, why: `${a} \xD7 ${a} = ${a * a}, so \u221A${a * a} = ${a}. That part is right.` },
         { text: `\u221A${c * c} must be found by halving ${c * c}, which gives ${c * c / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c * c}?` },
@@ -32239,7 +34447,7 @@ var FAMILIES22 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const ss = shuffle5([8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20]).slice(0, 4);
+      const ss = shuffle6([8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20]).slice(0, 4);
       const mx = Math.max(...ss), mn = Math.min(...ss);
       return distinct7(mx - mn, mx * mx - mn * mn, Math.round(Math.sqrt(mx * mx - mn * mn))) ? { ss, mx, mn } : null;
     },
@@ -32274,7 +34482,7 @@ var FAMILIES22 = [
         question: "A water vendor charges to deliver jerricans of water to a home. The table shows some charges. Which expression gives the charge in shillings for n jerricans?",
         story: false,
         model: { type: "table", data: { head: ["Jerricans", "Charge (sh)"], rows: [1, 2, 3].map((n) => ({ label: String(n), value: String(r * n + b) })) } },
-        options: shuffle5(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
+        options: shuffle6(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
         hints: ["Look at how much the charge goes up for each extra jerrican.", "Then see what is charged even for 0 jerricans, or test each expression with n = 1 and n = 2."],
         steps: [`Each extra jerrican adds ${r} shillings.`, `For n = 1 the charge is ${r + b}, which is ${r} + ${b}.`, `So the expression is ${r}n + ${b}.`]
       };
@@ -32289,7 +34497,7 @@ var FAMILIES22 = [
     draw: () => ({ j: randInt(2, 6), m: pick([2, 3, 4]), p: person() }),
     make: ({ j, m, p }) => ({
       question: `${p.name} is x years old. ${p.Her} brother is ${j} years younger than ${p.herObj}. ${p.Her} mother is ${m} times as old as ${p.name}. Write an expression for the total of the three ages, in years.`,
-      options: shuffle5([
+      options: shuffle6([
         { text: `${m + 2}x \u2212 ${j}`, right: true },
         { text: `${m + 2}x + ${j}`, right: false, why: "The brother is younger, so his age is x take away a number, not plus." },
         { text: `${m + 1}x \u2212 ${j}`, right: false, why: "One age is missing from the total. Count the three people." },
@@ -32361,7 +34569,7 @@ var FAMILIES22 = [
     },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} buys ${a} exercise books and a geometry set. Each exercise book costs x shillings. The geometry set costs ${sh(b)}. The total is ${sh(c)}. Let x be the price of one exercise book. Which equation fits the story?`,
-      options: shuffle5([
+      options: shuffle6([
         { text: `${a}x + ${b} = ${c}`, right: true },
         { text: `${a}(x + ${b}) = ${c}`, right: false, why: "This adds the price of the geometry set to every exercise book. The geometry set is bought once." },
         { text: `x + ${a} + ${b} = ${c}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.` },
@@ -32381,18 +34589,18 @@ var FAMILIES22 = [
       const n0 = randInt(5, 30);
       return { n0, S: 3 * n0 + 3, bug: pick(["divide", "move"]), p: person() };
     },
-    make: ({ n0, S: S4, bug, p }) => {
-      const k2 = 3, r3 = bug === "move" ? S4 + 3 : S4 - k2, n4 = bug === "divide" ? r3 * 3 : r3 / 3;
+    make: ({ n0, S: S5, bug, p }) => {
+      const k2 = 3, r3 = bug === "move" ? S5 + 3 : S5 - k2, n4 = bug === "divide" ? r3 * 3 : r3 / 3;
       return {
-        question: `The sum of three consecutive whole numbers is ${S4}. ${p.name} takes n as the smallest number, forms an equation and solves it. Here is ${p.her} working. Which step has the mistake?`,
+        question: `The sum of three consecutive whole numbers is ${S5}. ${p.name} takes n as the smallest number, forms an equation and solves it. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: "The numbers are n, n + 1 and n + 2.", ok: true },
           { text: "Add them: n + (n + 1) + (n + 2) = 3n + 3.", ok: true },
-          { text: `So 3n + 3 = ${S4}. Take 3 from both sides: 3n = ${S4} ${bug === "move" ? "+" : "\u2212"} 3 = ${r3}.`, ok: r3 === S4 - 3 },
+          { text: `So 3n + 3 = ${S5}. Take 3 from both sides: 3n = ${S5} ${bug === "move" ? "+" : "\u2212"} 3 = ${r3}.`, ok: r3 === S5 - 3 },
           { text: `Divide both sides by 3: n = ${r3} ${bug === "divide" ? "\xD7" : "\xF7"} 3 = ${n4}.`, ok: n4 === r3 / 3 }
         ],
-        fix: bug === "divide" ? `3n means 3 times n, so undo it by dividing: ${r3} \xF7 3, not ${r3} \xD7 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S4} \u2212 3, not ${S4} + 3.`,
-        steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S4}.`, `3n = ${S4 - 3}, so n = ${n0}.`]
+        fix: bug === "divide" ? `3n means 3 times n, so undo it by dividing: ${r3} \xF7 3, not ${r3} \xD7 3.` : `To remove +3 from the left, take 3 away from both sides: 3n = ${S5} \u2212 3, not ${S5} + 3.`,
+        steps: [`n + (n + 1) + (n + 2) = 3n + 3 = ${S5}.`, `3n = ${S5 - 3}, so n = ${n0}.`]
       };
     }
   }),
@@ -32449,17 +34657,17 @@ var FAMILIES22 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S4 = (m + 1) * x + 2 * t;
-      return distinct7(m * x, x, round(m * S4 / (m + 1), 2), m * x + t) ? { x, m, t, S: S4, p: person() } : null;
+      const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S5 = (m + 1) * x + 2 * t;
+      return distinct7(m * x, x, round(m * S5 / (m + 1), 2), m * x + t) ? { x, m, t, S: S5, p: person() } : null;
     },
-    make: ({ x, m, t, S: S4, p }) => ({
-      question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S4} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
+    make: ({ x, m, t, S: S5, p }) => ({
+      question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S5} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
       answer: m * x,
-      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round(m * S4 / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S4}.`], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
-      hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S4}.`],
-      steps: [`Now: ${p.name} is x, the mother is ${m}x. In ${t} years: x + ${t} and ${m}x + ${t}.`, `(x + ${t}) + (${m}x + ${t}) = ${S4}, so ${m + 1}x + ${2 * t} = ${S4}.`, `${m + 1}x = ${S4 - 2 * t}, x = ${x}. The mother is ${m} \xD7 ${x} = ${m * x}.`]
+      wrong: [[x, `That is ${p.name}'s age. The question asks for the age of the mother.`], [round(m * S5 / (m + 1), 2), `In ${t} years, both of them are ${t} years older, so the sum now is not ${S5}.`], [m * x + t, `That is the mother's age in ${t} years. The question asks for her age now.`]],
+      hints: [`Let ${p.name}'s age now be x. What is the mother's age now? What will each be in ${t} years?`, `Their ages in ${t} years add up to ${S5}.`],
+      steps: [`Now: ${p.name} is x, the mother is ${m}x. In ${t} years: x + ${t} and ${m}x + ${t}.`, `(x + ${t}) + (${m}x + ${t}) = ${S5}, so ${m + 1}x + ${2 * t} = ${S5}.`, `${m + 1}x = ${S5 - 2 * t}, x = ${x}. The mother is ${m} \xD7 ${x} = ${m * x}.`]
     }),
-    check: ({ m, t, S: S4 }, a) => a + t + (a / m + t) === S4
+    check: ({ m, t, S: S5 }, a) => a + t + (a / m + t) === S5
   }),
   fam12({
     id: "g7.eq.parking-table",
@@ -32537,14 +34745,14 @@ var FAMILIES22 = [
         const k = v + off;
         cands.push({ op, k, ok: op === "<" ? v < k : op === ">" ? v > k : op === "\u2264" ? v <= k : v >= k });
       }
-      const yes = shuffle5(cands.filter((c) => c.ok)), no = shuffle5(cands.filter((c) => !c.ok));
+      const yes = shuffle6(cands.filter((c) => c.ok)), no = shuffle6(cands.filter((c) => !c.ok));
       const pickOpts = [yes[0]];
       for (const c of no) if (pickOpts.length < 4 && !pickOpts.some((o) => o.op === c.op && o.k === c.k)) pickOpts.push(c);
       return { v, opts: pickOpts, p: person() };
     },
     make: ({ v, opts: opts2, p }) => ({
       question: `${p.name} is ${v} years old. Let a be ${p.her} age in years. Which of these inequalities is true for ${p.herObj}?`,
-      options: shuffle5(opts2.map((o) => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? void 0 : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false.` }))),
+      options: shuffle6(opts2.map((o) => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? void 0 : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false.` }))),
       hints: [`Put a = ${v} into each inequality in turn.`, "Exactly one of them is a true statement."],
       steps: [`Test each one with a = ${v}.`, `Only a ${opts2[0].op} ${opts2[0].k} is true: ${v} ${opts2[0].op} ${opts2[0].k}.`]
     })
@@ -32558,7 +34766,7 @@ var FAMILIES22 = [
     draw: () => ({ L: pick([1e3, 1200, 1500, 2e3]), c: pick([200, 300, 400, 500]), s: pick([50, 90, 100]), p: person() }),
     make: ({ L: L2, c, s, p }) => ({
       question: `A pick-up can carry at most ${commas(L2)} kg. It already carries ${c} kg of cement. ${p.name} loads n sacks of maize of ${s} kg each. Which inequality shows that the load is allowed?`,
-      options: shuffle5([
+      options: shuffle6([
         { text: `${c} + ${s}n \u2264 ${commas(L2)}`, right: true },
         { text: `${c} + ${s}n < ${commas(L2)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".' },
         { text: `${c} + ${s}n \u2265 ${commas(L2)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".' },
@@ -32600,17 +34808,17 @@ var FAMILIES22 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const B2 = pick([500, 600, 700, 800, 1e3]), g = pick([100, 120, 150, 200]), e = pick([30, 40, 60, 70, 80]), n = Math.floor((B2 - g) / e);
-      return (B2 - g) % e !== 0 && n >= 3 && distinct7(n, n + 1, Math.floor(B2 / e), round((B2 - g) / e, 2)) ? { B: B2, g, e, n, p: person() } : null;
+      const B3 = pick([500, 600, 700, 800, 1e3]), g = pick([100, 120, 150, 200]), e = pick([30, 40, 60, 70, 80]), n = Math.floor((B3 - g) / e);
+      return (B3 - g) % e !== 0 && n >= 3 && distinct7(n, n + 1, Math.floor(B3 / e), round((B3 - g) / e, 2)) ? { B: B3, g, e, n, p: person() } : null;
     },
-    make: ({ B: B2, g, e, n, p }) => ({
-      question: `${p.name} has ${sh(B2)}. ${p.She} buys a school bag for ${sh(g)} and then some exercise books at ${sh(e)} each. Form an inequality for n, the number of books, and solve it. What is the greatest number of books ${p.she} can buy?`,
+    make: ({ B: B3, g, e, n, p }) => ({
+      question: `${p.name} has ${sh(B3)}. ${p.She} buys a school bag for ${sh(g)} and then some exercise books at ${sh(e)} each. Form an inequality for n, the number of books, and solve it. What is the greatest number of books ${p.she} can buy?`,
       answer: n,
-      wrong: [[round((B2 - g) / e, 2), "A number of books must be a whole number. Think about how many whole books fit."], [n + 1, `That many books would cost more than the money left.`], [Math.floor(B2 / e), "The bag has to be paid for first."]],
+      wrong: [[round((B3 - g) / e, 2), "A number of books must be a whole number. Think about how many whole books fit."], [n + 1, `That many books would cost more than the money left.`], [Math.floor(B3 / e), "The bag has to be paid for first."]],
       hints: ["The money spent must be at most the money she has.", "Write bag + books \u2264 money, solve for n, then think about whole books."],
-      steps: [`${g} + ${e}n \u2264 ${B2}.`, `${e}n \u2264 ${B2 - g}, so n \u2264 ${round((B2 - g) / e, 2)}.`, `Whole books only: the greatest is ${n}.`]
+      steps: [`${g} + ${e}n \u2264 ${B3}.`, `${e}n \u2264 ${B3 - g}, so n \u2264 ${round((B3 - g) / e, 2)}.`, `Whole books only: the greatest is ${n}.`]
     }),
-    check: ({ B: B2, g, e }, a) => g + e * a <= B2 && g + e * (a + 1) > B2
+    check: ({ B: B3, g, e }, a) => g + e * a <= B3 && g + e * (a + 1) > B3
   }),
   fam12({
     id: "g7.ineq.circle-why",
@@ -32624,7 +34832,7 @@ var FAMILIES22 = [
       return {
         question: `${p.name} draws ${x} ${sym} ${vt} on a number line. ${p.She} puts ${circ2(drawn2 === "closed")} at ${vt}. Why is the circle wrong?`,
         story: false,
-        options: shuffle5([
+        options: shuffle6([
           { text: `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must be ${needed}`, right: true },
           { text: `A circle on a number line is always ${drawn2}`, right: false, why: "Both kinds of circle are used. Which one to draw depends on the sign." },
           { text: `The circle should be at ${v === 0 ? "1" : "0"}, not at ${vt}`, right: false, why: `The circle goes at the number in the inequality, which is ${vt}.` },
@@ -32647,7 +34855,7 @@ var FAMILIES22 = [
       const combos = [[true, true], [true, false], [false, true], [false, false]];
       return {
         question: `Which number line shows ${x} ${sym} ${vt}? Each line has a circle at ${vt}; each line is shaded in one direction.`,
-        options: shuffle5(combos.map(([c, r]) => ({ text: `${c ? "A closed" : "An open"} circle at ${vt}, shaded to the ${r ? "right" : "left"}`, right: c === closed && r === right, why: c === closed && r === right ? void 0 : c !== closed ? `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must not be ${c ? "closed" : "open"}.` : `${r ? "Shading to the right" : "Shading to the left"} shows ${r ? "bigger" : "smaller"} numbers than ${vt}, which does not fit ${sym}.` }))),
+        options: shuffle6(combos.map(([c, r]) => ({ text: `${c ? "A closed" : "An open"} circle at ${vt}, shaded to the ${r ? "right" : "left"}`, right: c === closed && r === right, why: c === closed && r === right ? void 0 : c !== closed ? `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must not be ${c ? "closed" : "open"}.` : `${r ? "Shading to the right" : "Shading to the left"} shows ${r ? "bigger" : "smaller"} numbers than ${vt}, which does not fit ${sym}.` }))),
         hints: ["Does the number itself belong to the answers? That decides the circle.", "Are the answers bigger or smaller than the number? That decides the direction."],
         steps: [`${sym} ${closed ? "includes" : "does not include"} ${vt}: a ${closed ? "closed" : "open"} circle.`, `The answers are ${right ? "bigger" : "smaller"} than ${vt}: shade to the ${right ? "right" : "left"}.`]
       };
@@ -32663,11 +34871,11 @@ var FAMILIES22 = [
     make: ({ closed, right, v }) => {
       const ok = (t2) => right ? closed ? t2 >= v : t2 > v : closed ? t2 <= v : t2 < v;
       const tS = right ? [v + 1, v + 2, v + 3] : [v - 1, v - 2, v - 3], fS = right ? [v - 1, v - 2, v - 3] : [v + 1, v + 2, v + 3];
-      const vals = closed ? [v, ...shuffle5(fS).slice(0, 3)] : [shuffle5(tS)[0], v, ...shuffle5(fS).slice(0, 2)];
+      const vals = closed ? [v, ...shuffle6(fS).slice(0, 3)] : [shuffle6(tS)[0], v, ...shuffle6(fS).slice(0, 2)];
       const t = (n) => n < 0 ? `\u2212${-n}` : String(n);
       return {
         question: `Mwende shades a number line. The shading starts at ${circ2(closed)} at ${t(v)}. It runs to the ${right ? "right" : "left"}. Which of these numbers lies under the shading?`,
-        options: shuffle5(vals.map((n) => ({ text: t(n), right: ok(n), why: ok(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
+        options: shuffle6(vals.map((n) => ({ text: t(n), right: ok(n), why: ok(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
         hints: ["Which side of the circle is shaded?", "Is the number at the circle included? Look at whether the circle is open or closed."],
         steps: [`The shaded part is the numbers ${right ? "greater" : "less"} than ${t(v)}${closed ? `, and ${t(v)} itself` : ""}.`, "Only one of the four numbers is in that part."]
       };
@@ -32687,7 +34895,7 @@ var FAMILIES22 = [
       const LS = (b) => b ? "\u2264" : "<", txt = (a, b) => `${lo} ${LS(a)} a ${LS(b)} ${hi}`;
       return {
         question: `A swimming class is for children who are ${li ? "at least" : "older than"} ${lo} years old and ${hi_i ? "at most" : "younger than"} ${hi} years old. Which compound inequality shows the ages a that can join?`,
-        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `At the lower end, ${lo} years old ${li ? "can" : "cannot"} join, but this inequality ${a ? "allows" : "does not allow"} it.` : `At the upper end, ${hi} years old ${hi_i ? "can" : "cannot"} join, but this inequality ${b ? "allows" : "does not allow"} it.` }))),
+        options: shuffle6([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `At the lower end, ${lo} years old ${li ? "can" : "cannot"} join, but this inequality ${a ? "allows" : "does not allow"} it.` : `At the upper end, ${hi} years old ${hi_i ? "can" : "cannot"} join, but this inequality ${b ? "allows" : "does not allow"} it.` }))),
         hints: ["Look at each end separately: is the number itself allowed?", '"At least" and "at most" use \u2264. "Older than" and "younger than" use <.'],
         steps: [`Lower end: "${li ? "at least" : "older than"} ${lo}" gives ${LS(li)}.`, `Upper end: "${hi_i ? "at most" : "younger than"} ${hi}" gives ${LS(hi_i)}.`, `Together: ${txt(li, hi_i)}.`]
       };
@@ -32707,7 +34915,7 @@ var FAMILIES22 = [
       const t = (n) => n < 0 ? `\u2212${-n}` : String(n), LS = (b) => b ? "\u2264" : "<", txt = (a, b) => `${t(lo)} ${LS(a)} ${x} ${LS(b)} ${t(hi)}`;
       return {
         question: `On a number line, ${circ2(li)} is at ${t(lo)}; ${circ2(hi_i)} is at ${t(hi)}. The line between the two circles is shaded. Which inequality does it show?`,
-        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `The circle at ${t(lo)} is ${li ? "closed" : "open"}, so ${t(lo)} ${li ? "is" : "is not"} included. This inequality ${a ? "includes" : "leaves out"} it.` : `The circle at ${t(hi)} is ${hi_i ? "closed" : "open"}, so ${t(hi)} ${hi_i ? "is" : "is not"} included. This inequality ${b ? "includes" : "leaves out"} it.` }))),
+        options: shuffle6([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `The circle at ${t(lo)} is ${li ? "closed" : "open"}, so ${t(lo)} ${li ? "is" : "is not"} included. This inequality ${a ? "includes" : "leaves out"} it.` : `The circle at ${t(hi)} is ${hi_i ? "closed" : "open"}, so ${t(hi)} ${hi_i ? "is" : "is not"} included. This inequality ${b ? "includes" : "leaves out"} it.` }))),
         hints: ["A closed circle means the end number is included (\u2264). An open circle means it is not (<).", "The smaller number goes on the left of x, and the bigger number on the right."],
         steps: [`Left end: ${circ2(li)} at ${t(lo)}, so ${LS(li)}.`, `Right end: ${circ2(hi_i)} at ${t(hi)}, so ${LS(hi_i)}.`, `The inequality is ${txt(li, hi_i)}.`]
       };
@@ -32729,7 +34937,7 @@ var FAMILIES22 = [
       const vals = kind === "C" ? [lo, hi, lo + 2, hi + 1] : [lo, hi, lo - 1, hi + 1];
       return {
         question: `A clinic fridge must keep its temperature t, in \xB0C, so that ${lo} ${LS(li)} t ${LS(hi_i)} ${hi}. Which of these readings is allowed?`,
-        options: shuffle5(vals.map((t) => ({ text: `${t} \xB0C`, right: ok(t), why: ok(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
+        options: shuffle6(vals.map((t) => ({ text: `${t} \xB0C`, right: ok(t), why: ok(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
         hints: ["Test each reading in both parts of the inequality.", "Be careful with the readings that sit exactly on an end value."],
         steps: [`The allowed readings are bigger than ${lo}${li ? " or equal to it" : ""}, and smaller than ${hi}${hi_i ? " or equal to it" : ""}.`, "Check each option against both ends. Only one passes."]
       };
@@ -32754,7 +34962,7 @@ var FAMILIES22 = [
       };
       return {
         question: `${p.name} lists the whole numbers x that satisfy the compound inequality ${t(lo)} ${LS(li)} x ${LS(hi_i)} ${t(hi)}. Which list is correct?`,
-        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list2(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : `This list ${a ? "includes" : "leaves out"} ${t(lo)} and ${b ? "includes" : "leaves out"} ${t(hi)}. Check what each sign says about the end numbers.` }))),
+        options: shuffle6([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list2(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : `This list ${a ? "includes" : "leaves out"} ${t(lo)} and ${b ? "includes" : "leaves out"} ${t(hi)}. Check what each sign says about the end numbers.` }))),
         hints: ["List the whole numbers from the left end to the right end.", "< leaves the end number out. \u2264 keeps it in."],
         steps: [`Whole numbers from ${t(lo)} to ${t(hi)}: ${list2(true, true)}.`, `${LS(li)} ${li ? "keeps" : "removes"} ${t(lo)}, and ${LS(hi_i)} ${hi_i ? "keeps" : "removes"} ${t(hi)}.`]
       };
@@ -32767,9 +34975,9 @@ var FAMILIES22 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const A2 = randInt(9, 13), k = randInt(2, 4), names = shuffle5(["Ferris wheel", "Train", "Boat", "Bumper cars"]), fl3 = () => Math.random() < 0.5;
+      const A2 = randInt(9, 13), k = randInt(2, 4), names = shuffle6(["Ferris wheel", "Train", "Boat", "Bumper cars"]), fl3 = () => Math.random() < 0.5;
       const specs = [{ lo: A2, hi: A2 + k, li: true, hi_i: fl3() }, { lo: A2 - k, hi: A2, li: fl3(), hi_i: false }, { lo: A2 - randInt(1, 3), hi: A2 + randInt(1, 3), li: fl3(), hi_i: fl3() }, { lo: A2 + 1, hi: A2 + 1 + k, li: fl3(), hi_i: fl3() }];
-      const rows = shuffle5(specs).map((r, i) => ({ ...r, n: names[i] }));
+      const rows = shuffle6(specs).map((r, i) => ({ ...r, n: names[i] }));
       const cnt = (f) => rows.filter(f).length, ans = cnt((r) => (r.li ? A2 >= r.lo : A2 > r.lo) && (r.hi_i ? A2 <= r.hi : A2 < r.hi)), bothIn = cnt((r) => A2 >= r.lo && A2 <= r.hi), bothOut = cnt((r) => A2 > r.lo && A2 < r.hi);
       return distinct7(ans, bothIn, bothOut, 4) ? { A: A2, rows, ans, bothIn, bothOut, p: person() } : null;
     },
@@ -32795,16 +35003,16 @@ var FAMILIES22 = [
       return { a, c: a * u, lo: a * (u + t), hi: a * (u + h), t, h, bug: pick(["subtract", "list"]), p: person() };
     },
     make: ({ a, c, lo, hi, t, h, bug, p }) => {
-      const slo = bug === "subtract" ? lo : lo - c, shi = hi - c, L2 = slo / a, H = shi / a;
+      const slo = bug === "subtract" ? lo : lo - c, shi = hi - c, L2 = slo / a, H2 = shi / a;
       const ints = [];
-      for (let k = Math.floor(L2); k <= H; k++) if (k > L2 && k <= H) ints.push(k);
+      for (let k = Math.floor(L2); k <= H2; k++) if (k > L2 && k <= H2) ints.push(k);
       const shown = bug === "list" ? [t, ...Array.from({ length: h - t }, (_, i) => t + 1 + i)] : ints;
       const trueInts = Array.from({ length: h - t }, (_, i) => t + 1 + i);
       return {
         question: `${p.name} solves the compound inequality ${lo} < ${a}x + ${c} \u2264 ${hi} and lists the whole numbers that fit. Here is ${p.her} working. Which step has the mistake?`,
         working: [
           { text: `Take away ${c} from all three parts: ${slo} < ${a}x \u2264 ${shi}.`, ok: slo === lo - c },
-          { text: `Divide all three parts by ${a}: ${L2} < x \u2264 ${H}.`, ok: L2 === slo / a && H === shi / a },
+          { text: `Divide all three parts by ${a}: ${L2} < x \u2264 ${H2}.`, ok: L2 === slo / a && H2 === shi / a },
           { text: `The whole numbers are ${shown.join(", ")}.`, ok: shown.join() === ints.join() },
           { text: `So there are ${shown.length} whole numbers.`, ok: true }
         ],
@@ -32826,7 +35034,7 @@ var FAMILIES22 = [
     make: ({ lo, hi, p }) => ({
       question: `${p.name} wants to write "x is less than ${lo} or greater than ${hi}". ${p.She} writes ${hi} < x < ${lo}. Why is this wrong?`,
       story: false,
-      options: shuffle5([
+      options: shuffle6([
         { text: `No number is both greater than ${hi} and less than ${lo}`, right: true },
         { text: `${hi} < x < ${lo} is correct: it means x is outside the two numbers`, right: false, why: `A chain like ${hi} < x < ${lo} says x is between the two numbers, both at once.` },
         { text: "An inequality can only ever have one sign in it", right: false, why: "A compound inequality can have two signs, for example 2 < x < 5." },
@@ -32842,7 +35050,7 @@ var FAMILIES22 = [
 // src/ai-tutor/content/families/g7_measure.js
 var fam13 = (def) => family({ reviewed: false, ...def });
 var uniq5 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
-var shuffle6 = (a) => {
+var shuffle7 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = randInt(0, i);
@@ -32863,8 +35071,8 @@ var isRight = (x, y, z) => {
   return s[0] * s[0] + s[1] * s[1] === s[2] * s[2];
 };
 var LETTERS2 = "ABCDEFGHJKLMNPQRSTUVWXYZ";
-var F2 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
-var FAMILIES23 = [
+var F3 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
+var FAMILIES26 = [
   // =========================================================== PYTHAGORAS
   fam13({
     id: "g7.pyth.name-hypotenuse",
@@ -32873,7 +35081,7 @@ var FAMILIES23 = [
     rung: 1,
     form: "direct",
     draw: () => {
-      const l = shuffle6(LETTERS2.split("")).slice(0, 3);
+      const l = shuffle7(LETTERS2.split("")).slice(0, 3);
       return { p: l[0], q: l[1], r: l[2] };
     },
     make: ({ p, q, r }) => ({
@@ -32891,14 +35099,14 @@ var FAMILIES23 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const t = triple(), good = shuffle6([t.a, t.b, t.c]);
+      const t = triple(), good = shuffle7([t.a, t.b, t.c]);
       const rows = [good];
       while (rows.length < 4) {
         const u = triple();
-        const bad2 = shuffle6([u.a, u.b, u.c + pick([-2, -1, 1, 2, 3])]);
+        const bad2 = shuffle7([u.a, u.b, u.c + pick([-2, -1, 1, 2, 3])]);
         if (!isRight(...bad2) && bad2.every((x) => x > 0) && !rows.some((r) => r.join() === bad2.join())) rows.push(bad2);
       }
-      const order = shuffle6(rows);
+      const order = shuffle7(rows);
       return { rows: order, ans: order.indexOf(rows[0]) };
     },
     make: ({ rows, ans }) => ({
@@ -33040,18 +35248,18 @@ var FAMILIES23 = [
       return { ...sc, v: pick([2, 3, 4, 5, 6, 7, 8, 9, 2.5, 3.5, 4.5]) };
     },
     make: ({ f, t, say: say2, to, v, raw }) => {
-      const r = F2[f] / F2[t], val = raw ? v * 10 : v, ans = round(val * r, 4);
+      const r = F3[f] / F3[t], val = raw ? v * 10 : v, ans = round(val * r, 4);
       const w = [round(val / r, 4), round(ans * 10, 4), round(ans / 10, 4)];
       if (!uniq5(ans, ...w)) return { question: "x", answer: ans, wrong: [], hints: [], steps: [] };
       return {
         question: `${say2(v)} Change this length to ${to}.`,
         answer: ans,
-        wrong: [[w[0], `A ${F2[f] > F2[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`], [w[1], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."], [w[2], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."]],
-        hints: [`Which is bigger, a ${f} or a ${t}?`, `Find how many ${F2[f] > F2[t] ? t : f} make one ${F2[f] > F2[t] ? f : t}. Then multiply or divide.`],
+        wrong: [[w[0], `A ${F3[f] > F3[t] ? t : f} is the smaller unit, so there are more of them. Check whether to multiply or divide.`], [w[1], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."], [w[2], "Check how many of the smaller unit fit in the larger one. The size of the step is wrong."]],
+        hints: [`Which is bigger, a ${f} or a ${t}?`, `Find how many ${F3[f] > F3[t] ? t : f} make one ${F3[f] > F3[t] ? f : t}. Then multiply or divide.`],
         steps: [`1 ${f} = ${commas(round(r, 4))} ${t}.`, `${commas(val)} ${f} = ${commas(val)} \xD7 ${commas(round(r, 4))} = ${commas(ans)} ${t}.`]
       };
     },
-    check: ({ f, t, v, raw }, a) => Math.abs(a * F2[t] - (raw ? v * 10 : v) * F2[f]) < 1e-9
+    check: ({ f, t, v, raw }, a) => Math.abs(a * F3[t] - (raw ? v * 10 : v) * F3[f]) < 1e-9
   }),
   fam13({
     id: "g7.length.table-compare",
@@ -33062,7 +35270,7 @@ var FAMILIES23 = [
     draw: () => {
       const ua = pick(["Dm", "Hm"]), ub = pick(["dm", "cm"]);
       const va = randInt(3, 9), vb = ub === "dm" ? randInt(2, 90) * 10 : randInt(2, 90) * 100;
-      const ma = va * F2[ua], mb = round(vb * F2[ub], 3);
+      const ma = va * F3[ua], mb = round(vb * F3[ub], 3);
       const wa = [Math.abs(va - vb), Math.abs(ma * 10 - mb), Math.abs(ma - mb * 10)];
       return ma !== mb && uniq5(Math.abs(ma - mb), ...wa) ? { ua, ub, va, vb, ma, mb, wa } : null;
     },
@@ -33072,7 +35280,7 @@ var FAMILIES23 = [
       answer: round(Math.abs(ma - mb), 3),
       wrong: [[wa[0], "The two lengths are in different units. Change both to metres before you subtract."], [round(wa[1], 3), `Read the table again for ${ua}. How many metres is one ${ua}?`], [round(wa[2], 3), `Read the table again for ${ub}. How many metres is one ${ub}?`]],
       hints: ["Change both lengths to metres first.", "Use the table for the number of metres in one of each unit."],
-      steps: [`${va} ${ua} = ${va} \xD7 ${F2[ua]} = ${commas(ma)} m.`, `${commas(vb)} ${ub} = ${commas(vb)} \xD7 ${F2[ub]} = ${commas(mb)} m.`, `Difference = ${commas(Math.max(ma, mb))} \u2212 ${commas(Math.min(ma, mb))} = ${commas(round(Math.abs(ma - mb), 3))} m.`]
+      steps: [`${va} ${ua} = ${va} \xD7 ${F3[ua]} = ${commas(ma)} m.`, `${commas(vb)} ${ub} = ${commas(vb)} \xD7 ${F3[ub]} = ${commas(mb)} m.`, `Difference = ${commas(Math.max(ma, mb))} \u2212 ${commas(Math.min(ma, mb))} = ${commas(round(Math.abs(ma - mb), 3))} m.`]
     }),
     check: ({ ma, mb }, a) => Math.abs(Math.min(ma, mb) + a - Math.max(ma, mb)) < 1e-9
   }),
@@ -33289,7 +35497,7 @@ var FAMILIES23 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const all = shuffle6([7, 14, 21, 28, 35, 42, 49, 56, 63, 70]);
+      const all = shuffle7([7, 14, 21, 28, 35, 42, 49, 56, 63, 70]);
       return { ds: all.slice(0, 4).sort((x, y) => x - y), target: all[4], thing: pick(["water tank", "round table", "drum", "circular pond"]) };
     },
     make: ({ ds, target, thing }) => ({
@@ -33518,20 +35726,20 @@ var FAMILIES23 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const L2 = randInt(3, 8), W2 = randInt(3, 6), t = pick([20, 25, 50]);
-      const n = L2 * W2 * 1e4 / (t * t);
-      const w2 = L2 * W2 * 100 / (t * t);
-      const w3 = L2 * 100 / t + W2 * 100 / t;
-      return Number.isInteger(n) && Number.isInteger(w2) && L2 !== W2 && uniq5(n, w2, w3, L2 * W2) ? { L: L2, W: W2, t, n, w2, w3, p: person() } : null;
+      const L2 = randInt(3, 8), W3 = randInt(3, 6), t = pick([20, 25, 50]);
+      const n = L2 * W3 * 1e4 / (t * t);
+      const w2 = L2 * W3 * 100 / (t * t);
+      const w3 = L2 * 100 / t + W3 * 100 / t;
+      return Number.isInteger(n) && Number.isInteger(w2) && L2 !== W3 && uniq5(n, w2, w3, L2 * W3) ? { L: L2, W: W3, t, n, w2, w3, p: person() } : null;
     },
-    make: ({ L: L2, W: W2, t, n, w2, w3, p }) => ({
-      question: `The floor of a room is a rectangle ${L2} m long and ${W2} m wide. ${p.name} covers it with square tiles. Each tile has sides of ${t} cm. How many tiles does ${p.she} need?`,
+    make: ({ L: L2, W: W3, t, n, w2, w3, p }) => ({
+      question: `The floor of a room is a rectangle ${L2} m long and ${W3} m wide. ${p.name} covers it with square tiles. Each tile has sides of ${t} cm. How many tiles does ${p.she} need?`,
       answer: n,
-      wrong: [[w2, "One square metre is 100 cm \xD7 100 cm, which is 10,000 cm\xB2, not 100 cm\xB2."], [w3, "That counts the tiles along two sides. Count how many cover the whole floor."], [L2 * W2, "That is the area of the floor in m\xB2. Compare it with the area of one tile."]],
+      wrong: [[w2, "One square metre is 100 cm \xD7 100 cm, which is 10,000 cm\xB2, not 100 cm\xB2."], [w3, "That counts the tiles along two sides. Count how many cover the whole floor."], [L2 * W3, "That is the area of the floor in m\xB2. Compare it with the area of one tile."]],
       hints: ["Use one unit for both areas, for example cm\xB2.", "Floor area \xF7 area of one tile."],
-      steps: [`Floor: ${L2 * 100} cm \xD7 ${W2 * 100} cm = ${commas(L2 * W2 * 1e4)} cm\xB2.`, `One tile: ${t} \xD7 ${t} = ${t * t} cm\xB2.`, `Tiles = ${commas(L2 * W2 * 1e4)} \xF7 ${t * t} = ${n}.`]
+      steps: [`Floor: ${L2 * 100} cm \xD7 ${W3 * 100} cm = ${commas(L2 * W3 * 1e4)} cm\xB2.`, `One tile: ${t} \xD7 ${t} = ${t * t} cm\xB2.`, `Tiles = ${commas(L2 * W3 * 1e4)} \xF7 ${t * t} = ${n}.`]
     }),
-    check: ({ L: L2, W: W2, t }, a) => a * t * t === L2 * 100 * W2 * 100
+    check: ({ L: L2, W: W3, t }, a) => a * t * t === L2 * 100 * W3 * 100
   }),
   fam13({
     id: "g7.area.circle-diameter",
@@ -33806,14 +36014,14 @@ var FAMILIES23 = [
       const r = pick([7, 14]), h = randInt(5, 30);
       return { r, h, V: 22 * r * r * h / 7, p: person() };
     },
-    make: ({ r, h, V, p }) => ({
-      question: `A cylinder-shaped tin has a base radius of ${r} cm. It holds ${commas(V)} cm\xB3 of oil. Take \u03C0 = 22/7. How tall is the tin, in cm?`,
+    make: ({ r, h, V: V2, p }) => ({
+      question: `A cylinder-shaped tin has a base radius of ${r} cm. It holds ${commas(V2)} cm\xB3 of oil. Take \u03C0 = 22/7. How tall is the tin, in cm?`,
       answer: h,
-      wrong: [[V / (22 * r / 7), "The base area uses r \xD7 r, not just r."], [round(V / (22 * r * 2 / 7), 2), "The base area is \u03C0 r\xB2. The distance round, 2\u03C0r, is not used."], [round(V / (22 / 7), 2), "Divide by the whole base area, which uses \u03C0 \xD7 r \xD7 r."]],
+      wrong: [[V2 / (22 * r / 7), "The base area uses r \xD7 r, not just r."], [round(V2 / (22 * r * 2 / 7), 2), "The base area is \u03C0 r\xB2. The distance round, 2\u03C0r, is not used."], [round(V2 / (22 / 7), 2), "Divide by the whole base area, which uses \u03C0 \xD7 r \xD7 r."]],
       hints: ["Volume = base area \xD7 height, so height = volume \xF7 base area.", "Find the area of the circular base first."],
-      steps: [`Base area = 22/7 \xD7 ${r} \xD7 ${r} = ${22 * r * r / 7} cm\xB2.`, `Height = ${commas(V)} \xF7 ${22 * r * r / 7} = ${h} cm.`]
+      steps: [`Base area = 22/7 \xD7 ${r} \xD7 ${r} = ${22 * r * r / 7} cm\xB2.`, `Height = ${commas(V2)} \xF7 ${22 * r * r / 7} = ${h} cm.`]
     }),
-    check: ({ r, V }, a) => a * 22 * r * r === V * 7
+    check: ({ r, V: V2 }, a) => a * 22 * r * r === V2 * 7
   }),
   fam13({
     id: "g7.vol.tank-litres",
@@ -33823,15 +36031,15 @@ var FAMILIES23 = [
     form: "word",
     draw: () => {
       const l = pick([1, 1.5, 2, 2.5, 3, 4]), w = pick([1, 1.5, 2]), h = pick([1, 1.5, 2]);
-      const V = round(l * w * h, 3);
-      return V >= 1.5 && uniq5(V * 1e3, V * 100, V, V * 1e6) ? { l, w, h, V, p: person() } : null;
+      const V2 = round(l * w * h, 3);
+      return V2 >= 1.5 && uniq5(V2 * 1e3, V2 * 100, V2, V2 * 1e6) ? { l, w, h, V: V2, p: person() } : null;
     },
-    make: ({ l, w, h, V, p }) => ({
+    make: ({ l, w, h, V: V2, p }) => ({
       question: `Rainwater fills a cuboid tank at ${p.name}'s school. The base is ${l} m by ${w} m and the water is ${h} m deep. How many litres of water are in the tank? (1 m\xB3 holds 1,000 litres)`,
-      answer: round(V * 1e3, 3),
-      wrong: [[round(V * 100, 3), "One cubic metre holds 1,000 litres, not 100."], [V, "That is the volume in m\xB3. Change it to litres."], [round(V * 1e6, 3), "That is the volume in cm\xB3. The question asks for litres."]],
+      answer: round(V2 * 1e3, 3),
+      wrong: [[round(V2 * 100, 3), "One cubic metre holds 1,000 litres, not 100."], [V2, "That is the volume in m\xB3. Change it to litres."], [round(V2 * 1e6, 3), "That is the volume in cm\xB3. The question asks for litres."]],
       hints: ["Find the volume in m\xB3 first.", "Then multiply by the number of litres in 1 m\xB3."],
-      steps: [`Volume = ${l} \xD7 ${w} \xD7 ${h} = ${V} m\xB3.`, `Litres = ${V} \xD7 1,000 = ${commas(round(V * 1e3, 3))}.`]
+      steps: [`Volume = ${l} \xD7 ${w} \xD7 ${h} = ${V2} m\xB3.`, `Litres = ${V2} \xD7 1,000 = ${commas(round(V2 * 1e3, 3))}.`]
     }),
     check: ({ l, w, h }, a) => Math.abs(a / 1e3 - l * w * h) < 1e-9
   }),
@@ -33865,18 +36073,18 @@ var FAMILIES23 = [
       const u = [randInt(2, 6) * 5, randInt(5, 12) * 5, randInt(2, 6) * 5, randInt(2, 6) * 5];
       const t = u.reduce((a, b) => a + b, 0);
       const days = pick([5, 10, 15, 20, 25, 30]);
-      const V = t * days / 1e3;
-      return Number.isInteger(V * 10) && V >= 0.5 ? { u, t, days, V, p: person() } : null;
+      const V2 = t * days / 1e3;
+      return Number.isInteger(V2 * 10) && V2 >= 0.5 ? { u, t, days, V: V2, p: person() } : null;
     },
-    make: ({ u, t, days, V, p }) => ({
-      question: `The table shows how much water ${p.name}'s family uses in one day. They have a tank that holds ${V} m\xB3 when full. For how many days can the family use the water in a full tank? (1 m\xB3 = 1,000 litres)`,
+    make: ({ u, t, days, V: V2, p }) => ({
+      question: `The table shows how much water ${p.name}'s family uses in one day. They have a tank that holds ${V2} m\xB3 when full. For how many days can the family use the water in a full tank? (1 m\xB3 = 1,000 litres)`,
       model: { type: "table", data: { head: ["Use", "Litres a day"], rows: ["Cooking and drinking", "Washing clothes", "Bathing", "Cleaning"].map((label, i) => ({ label, value: String(u[i]) })) } },
       answer: days,
-      wrong: [[round(V / t, 6), "The tank is in m\xB3 and the table is in litres. Change to litres first."], [round(V * 100 / t, 3), "1 m\xB3 holds 1,000 litres, not 100."], [round(V * 1e3 / u[0], 3), "Add up all four uses in the table, not just the first one."]],
-      hints: ["Add the four amounts to find the litres used in one day.", `Change ${V} m\xB3 to litres, then divide by the daily use.`],
-      steps: [`One day: ${u.join(" + ")} = ${t} litres.`, `${V} m\xB3 = ${commas(V * 1e3)} litres.`, `Days = ${commas(V * 1e3)} \xF7 ${t} = ${days}.`]
+      wrong: [[round(V2 / t, 6), "The tank is in m\xB3 and the table is in litres. Change to litres first."], [round(V2 * 100 / t, 3), "1 m\xB3 holds 1,000 litres, not 100."], [round(V2 * 1e3 / u[0], 3), "Add up all four uses in the table, not just the first one."]],
+      hints: ["Add the four amounts to find the litres used in one day.", `Change ${V2} m\xB3 to litres, then divide by the daily use.`],
+      steps: [`One day: ${u.join(" + ")} = ${t} litres.`, `${V2} m\xB3 = ${commas(V2 * 1e3)} litres.`, `Days = ${commas(V2 * 1e3)} \xF7 ${t} = ${days}.`]
     }),
-    check: ({ t, V }, a) => a * t === Math.round(V * 1e3)
+    check: ({ t, V: V2 }, a) => a * t === Math.round(V2 * 1e3)
   }),
   fam13({
     id: "g7.vol.cups-from-can",
@@ -34409,18 +36617,18 @@ var FAMILIES23 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const M4 = pick([500, 800, 1e3, 1200, 1500, 2e3, 2500, 4e3]), d = pick([10, 20, 25, 40]);
-      const S4 = M4 * (100 - d) / 100;
-      return Number.isInteger(S4) && uniq5(M4, S4 * (100 + d) / 100, S4 + d, S4 * 100 / d) ? { M: M4, d, S: S4, p: person(), item: pick(["jacket", "pair of shoes", "school bag"]) } : null;
+      const M5 = pick([500, 800, 1e3, 1200, 1500, 2e3, 2500, 4e3]), d = pick([10, 20, 25, 40]);
+      const S5 = M5 * (100 - d) / 100;
+      return Number.isInteger(S5) && uniq5(M5, S5 * (100 + d) / 100, S5 + d, S5 * 100 / d) ? { M: M5, d, S: S5, p: person(), item: pick(["jacket", "pair of shoes", "school bag"]) } : null;
     },
-    make: ({ M: M4, d, S: S4, p, item }) => ({
-      question: `A shop gives ${d}% discount on a ${item}. ${p.name} pays ${sh(S4)} after the discount. What was the price marked on the ${item} before the discount?`,
-      answer: M4,
-      wrong: [[round(S4 * (100 + d) / 100, 2), `The discount was taken off the marked price, so ${sh(S4)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S4)} gives the wrong base.`], [S4 + d, "The discount is a percentage, not an amount of shillings."], [round(S4 * 100 / d, 2), `${sh(S4)} is ${100 - d}% of the marked price, not ${d}%.`]],
+    make: ({ M: M5, d, S: S5, p, item }) => ({
+      question: `A shop gives ${d}% discount on a ${item}. ${p.name} pays ${sh(S5)} after the discount. What was the price marked on the ${item} before the discount?`,
+      answer: M5,
+      wrong: [[round(S5 * (100 + d) / 100, 2), `The discount was taken off the marked price, so ${sh(S5)} is only ${100 - d}% of it. Adding ${d}% to ${sh(S5)} gives the wrong base.`], [S5 + d, "The discount is a percentage, not an amount of shillings."], [round(S5 * 100 / d, 2), `${sh(S5)} is ${100 - d}% of the marked price, not ${d}%.`]],
       hints: [`After a ${d}% discount, ${p.name} pays what percentage of the marked price?`, "Find 1% of the marked price, then 100%."],
-      steps: [`Paid = 100% \u2212 ${d}% = ${100 - d}% of the marked price.`, `${100 - d}% is ${sh(S4)}, so 1% is ${sh(round(S4 / (100 - d), 4))} and 100% is ${sh(M4)}.`]
+      steps: [`Paid = 100% \u2212 ${d}% = ${100 - d}% of the marked price.`, `${100 - d}% is ${sh(S5)}, so 1% is ${sh(round(S5 / (100 - d), 4))} and 100% is ${sh(M5)}.`]
     }),
-    check: ({ d, S: S4 }, a) => a * (100 - d) / 100 === S4
+    check: ({ d, S: S5 }, a) => a * (100 - d) / 100 === S5
   }),
   fam13({
     id: "g7.money.why-two-discounts",
@@ -34451,18 +36659,18 @@ var FAMILIES23 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const b = pick([15e3, 18e3, 2e4, 25e3]), r = pick([2, 3, 4, 5]), T5 = pick([5e4, 1e5, 2e5]), S4 = T5 + pick([5e4, 1e5, 15e4]);
-      const c = r * (S4 - T5) / 100;
-      return uniq5(b + c, b + r * S4 / 100, c, b + r * T5 / 100) ? { b, r, T: T5, S: S4, c, p: person() } : null;
+      const b = pick([15e3, 18e3, 2e4, 25e3]), r = pick([2, 3, 4, 5]), T5 = pick([5e4, 1e5, 2e5]), S5 = T5 + pick([5e4, 1e5, 15e4]);
+      const c = r * (S5 - T5) / 100;
+      return uniq5(b + c, b + r * S5 / 100, c, b + r * T5 / 100) ? { b, r, T: T5, S: S5, c, p: person() } : null;
     },
-    make: ({ b, r, T: T5, S: S4, c, p }) => ({
-      question: `${p.name} sells phones. ${p.She} is paid a basic salary of ${sh(b)} a month. ${p.She} also earns ${r}% commission on the value of sales above ${sh(T5)}. This month ${p.she} sells goods worth ${sh(S4)}. How much is ${p.her} pay for the month?`,
+    make: ({ b, r, T: T5, S: S5, c, p }) => ({
+      question: `${p.name} sells phones. ${p.She} is paid a basic salary of ${sh(b)} a month. ${p.She} also earns ${r}% commission on the value of sales above ${sh(T5)}. This month ${p.she} sells goods worth ${sh(S5)}. How much is ${p.her} pay for the month?`,
       answer: b + c,
-      wrong: [[b + r * S4 / 100, `The commission is only on the sales above ${sh(T5)}.`], [c, "That is the commission only. Add the basic salary."], [b + r * T5 / 100, "Use the part of the sales above the target, not the target itself."]],
+      wrong: [[b + r * S5 / 100, `The commission is only on the sales above ${sh(T5)}.`], [c, "That is the commission only. Add the basic salary."], [b + r * T5 / 100, "Use the part of the sales above the target, not the target itself."]],
       hints: ["How much of the sales is above the target?", "Work out the commission on that part only, then add the basic salary."],
-      steps: [`Sales above target: ${sh(S4)} \u2212 ${sh(T5)} = ${sh(S4 - T5)}.`, `Commission: ${r}% of ${sh(S4 - T5)} = ${sh(c)}. Pay = ${sh(b)} + ${sh(c)} = ${sh(b + c)}.`]
+      steps: [`Sales above target: ${sh(S5)} \u2212 ${sh(T5)} = ${sh(S5 - T5)}.`, `Commission: ${r}% of ${sh(S5 - T5)} = ${sh(c)}. Pay = ${sh(b)} + ${sh(c)} = ${sh(b + c)}.`]
     }),
-    check: ({ b, r, T: T5, S: S4 }, a) => (a - b) * 100 / r === S4 - T5
+    check: ({ b, r, T: T5, S: S5 }, a) => (a - b) * 100 / r === S5 - T5
   }),
   fam13({
     id: "g7.money.spot-commission-decimal",
@@ -34471,21 +36679,21 @@ var FAMILIES23 = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const r = pick([3, 4, 5, 6, 8]), S4 = pick([12e4, 24e4, 3e5, 45e4]);
-      return { r, S: S4, p: person() };
+      const r = pick([3, 4, 5, 6, 8]), S5 = pick([12e4, 24e4, 3e5, 45e4]);
+      return { r, S: S5, p: person() };
     },
-    make: ({ r, S: S4, p }) => {
+    make: ({ r, S: S5, p }) => {
       const bad2 = r / 10, good = r / 100;
       return {
-        question: `A land agent earns ${r}% commission on sales of ${sh(S4)}. ${p.name} works out the commission. Which step has the mistake?`,
+        question: `A land agent earns ${r}% commission on sales of ${sh(S5)}. ${p.name} works out the commission. Which step has the mistake?`,
         working: [
           { text: "Commission = rate \xD7 value of sales", ok: true },
           { text: `${r}% as a decimal = ${bad2}`, ok: bad2 === good },
-          { text: `${bad2} \xD7 ${commas(S4)} = ${commas(bad2 * S4)}`, ok: round(bad2 * S4, 2) === round(bad2 * S4, 2) },
-          { text: `The agent earns ${sh(bad2 * S4)}.`, ok: true }
+          { text: `${bad2} \xD7 ${commas(S5)} = ${commas(bad2 * S5)}`, ok: round(bad2 * S5, 2) === round(bad2 * S5, 2) },
+          { text: `The agent earns ${sh(bad2 * S5)}.`, ok: true }
         ],
         fix: `${r}% means ${r} out of 100, so the decimal is ${r} \xF7 100.`,
-        steps: [`${r}% = ${r} \xF7 100 = ${good}.`, `${good} \xD7 ${commas(S4)} = ${sh(round(good * S4, 2))}.`]
+        steps: [`${r}% = ${r} \xF7 100 = ${good}.`, `${good} \xD7 ${commas(S5)} = ${sh(round(good * S5, 2))}.`]
       };
     }
   }),
@@ -34516,18 +36724,18 @@ var FAMILIES23 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const a = pick([30, 35, 40, 45]), b = a + pick([10, 15, 20]), c = b + pick([10, 15, 20]), n = randInt(22, 32), F3 = pick([100, 150, 200]);
-      return { a, b, c, n, F: F3, p: person() };
+      const a = pick([30, 35, 40, 45]), b = a + pick([10, 15, 20]), c = b + pick([10, 15, 20]), n = randInt(22, 32), F4 = pick([100, 150, 200]);
+      return { a, b, c, n, F: F4, p: person() };
     },
-    make: ({ a, b, c, n, F: F3, p }) => ({
-      question: `In this question, a water company charges in bands, as the table shows. ${p.name}'s family uses ${n} units in a month, and pays a fixed charge of ${sh(F3)} as well. What is the water bill, in shillings?`,
+    make: ({ a, b, c, n, F: F4, p }) => ({
+      question: `In this question, a water company charges in bands, as the table shows. ${p.name}'s family uses ${n} units in a month, and pays a fixed charge of ${sh(F4)} as well. What is the water bill, in shillings?`,
       model: { type: "table", data: { head: ["Units used", "Charge for each unit (sh)"], rows: [{ label: "First 10 units", value: String(a) }, { label: "Next 10 units", value: String(b) }, { label: "Every unit after 20", value: String(c) }] } },
-      answer: 10 * a + 10 * b + (n - 20) * c + F3,
-      wrong: [[n * c + F3, "Each band has its own charge. Only the units above 20 cost the top rate."], [n * a + F3, "Only the first 10 units cost the lowest rate."], [10 * a + 10 * b + (n - 20) * c, "Add the fixed charge as well."]],
+      answer: 10 * a + 10 * b + (n - 20) * c + F4,
+      wrong: [[n * c + F4, "Each band has its own charge. Only the units above 20 cost the top rate."], [n * a + F4, "Only the first 10 units cost the lowest rate."], [10 * a + 10 * b + (n - 20) * c, "Add the fixed charge as well."]],
       hints: ["Split the units into the three bands of the table.", "Work out the cost of each band, then add all three and the fixed charge."],
-      steps: [`First 10: 10 \xD7 ${a} = ${10 * a}. Next 10: 10 \xD7 ${b} = ${10 * b}. After 20: ${n - 20} \xD7 ${c} = ${(n - 20) * c}.`, `Bill = ${10 * a} + ${10 * b} + ${(n - 20) * c} + ${F3} = ${sh(10 * a + 10 * b + (n - 20) * c + F3)}.`]
+      steps: [`First 10: 10 \xD7 ${a} = ${10 * a}. Next 10: 10 \xD7 ${b} = ${10 * b}. After 20: ${n - 20} \xD7 ${c} = ${(n - 20) * c}.`, `Bill = ${10 * a} + ${10 * b} + ${(n - 20) * c} + ${F4} = ${sh(10 * a + 10 * b + (n - 20) * c + F4)}.`]
     }),
-    check: ({ a, b, c, n, F: F3 }, v) => v - F3 - 10 * a - 10 * b === (n - 20) * c
+    check: ({ a, b, c, n, F: F4 }, v) => v - F4 - 10 * a - 10 * b === (n - 20) * c
   }),
   fam13({
     id: "g7.money.shop-bill-change",
@@ -34559,18 +36767,18 @@ var FAMILIES23 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const S4 = pick([500, 1e3, 1500, 2e3]), C2 = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]);
-      const n = (S4 - C2) / u;
-      return Number.isInteger(n) && uniq5(n, S4 / u, S4 - C2, C2 / u) ? { S: S4, C: C2, u, n, p: person() } : null;
+      const S5 = pick([500, 1e3, 1500, 2e3]), C2 = pick([50, 100, 150, 200]), u = pick([20, 25, 30, 35, 40]);
+      const n = (S5 - C2) / u;
+      return Number.isInteger(n) && uniq5(n, S5 / u, S5 - C2, C2 / u) ? { S: S5, C: C2, u, n, p: person() } : null;
     },
-    make: ({ S: S4, C: C2, u, n, p }) => ({
-      question: `${p.name} buys KPLC tokens for ${sh(S4)}. In this question, ${sh(C2)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
+    make: ({ S: S5, C: C2, u, n, p }) => ({
+      question: `${p.name} buys KPLC tokens for ${sh(S5)}. In this question, ${sh(C2)} goes on charges first, and the rest buys units at ${sh(u)} a unit. How many units does ${p.she} get?`,
       answer: n,
-      wrong: [[round(S4 / u, 2), `The charges of ${sh(C2)} are taken first. Only the rest buys units.`], [S4 - C2, "That is the money left for units. Divide it by the price of one unit."], [round(C2 / u, 2), "The units are bought with the money left after the charges, not with the charges."]],
+      wrong: [[round(S5 / u, 2), `The charges of ${sh(C2)} are taken first. Only the rest buys units.`], [S5 - C2, "That is the money left for units. Divide it by the price of one unit."], [round(C2 / u, 2), "The units are bought with the money left after the charges, not with the charges."]],
       hints: ["How much money is left after the charges?", "Divide that money by the price of one unit."],
-      steps: [`Money for units = ${sh(S4)} \u2212 ${sh(C2)} = ${sh(S4 - C2)}.`, `Units = ${S4 - C2} \xF7 ${u} = ${n}.`]
+      steps: [`Money for units = ${sh(S5)} \u2212 ${sh(C2)} = ${sh(S5 - C2)}.`, `Units = ${S5 - C2} \xF7 ${u} = ${n}.`]
     }),
-    check: ({ S: S4, C: C2, u }, a) => a * u + C2 === S4
+    check: ({ S: S5, C: C2, u }, a) => a * u + C2 === S5
   }),
   fam13({
     id: "g7.money.parcels-table",
@@ -34581,7 +36789,7 @@ var FAMILIES23 = [
     draw: () => {
       const ch = [pick([100, 120, 150]), pick([180, 200, 220]), pick([300, 350, 400]), pick([550, 600, 650])];
       const bandsMass = [[200, 300, 400], [600, 700, 800, 900], [1200, 1500, 1800], [2500, 3e3, 4e3]];
-      const bi = shuffle6([0, 1, 2, 3]).slice(0, 3).sort((x, y) => x - y);
+      const bi = shuffle7([0, 1, 2, 3]).slice(0, 3).sort((x, y) => x - y);
       const ms = bi.map((i) => pick(bandsMass[i]));
       const band = (m) => m <= 500 ? 0 : m <= 1e3 ? 1 : m <= 2e3 ? 2 : 3;
       const tot = ms.reduce((a, b) => a + b, 0);
@@ -34609,17 +36817,17 @@ var FAMILIES23 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const F3 = pick([60, 80, 100]), E2 = pick([20, 30, 40]), k = randInt(4, 12);
-      return uniq5(F3 + E2 * (k - 1), k * E2, k * F3, F3 + E2 * k) ? { F: F3, E: E2, k, p: person() } : null;
+      const F4 = pick([60, 80, 100]), E2 = pick([20, 30, 40]), k = randInt(4, 12);
+      return uniq5(F4 + E2 * (k - 1), k * E2, k * F4, F4 + E2 * k) ? { F: F4, E: E2, k, p: person() } : null;
     },
-    make: ({ F: F3, E: E2, k, p }) => ({
-      question: `In this question, a courier's postal charges are these. A parcel costs ${sh(F3)} for the first 100 g, and ${sh(E2)} for each extra 100 g. ${p.name} posts a parcel of ${k * 100} g. What does the postage cost, in shillings?`,
-      answer: F3 + E2 * (k - 1),
-      wrong: [[k * E2, "The first 100 g has its own charge. Add it."], [k * F3, "Only the first 100 g costs that much. The rest costs less per 100 g."], [F3 + E2 * k, "The first 100 g is not an extra part. Count one fewer extra part."]],
+    make: ({ F: F4, E: E2, k, p }) => ({
+      question: `In this question, a courier's postal charges are these. A parcel costs ${sh(F4)} for the first 100 g, and ${sh(E2)} for each extra 100 g. ${p.name} posts a parcel of ${k * 100} g. What does the postage cost, in shillings?`,
+      answer: F4 + E2 * (k - 1),
+      wrong: [[k * E2, "The first 100 g has its own charge. Add it."], [k * F4, "Only the first 100 g costs that much. The rest costs less per 100 g."], [F4 + E2 * k, "The first 100 g is not an extra part. Count one fewer extra part."]],
       hints: [`How many 100 g parts are there in ${k * 100} g?`, "The first part is charged at the first price. All the others are charged at the extra price."],
-      steps: [`${k * 100} g is ${k} lots of 100 g. The first costs ${sh(F3)}, and ${k - 1} are extra.`, `Postage = ${F3} + ${k - 1} \xD7 ${E2} = ${sh(F3 + E2 * (k - 1))}.`]
+      steps: [`${k * 100} g is ${k} lots of 100 g. The first costs ${sh(F4)}, and ${k - 1} are extra.`, `Postage = ${F4} + ${k - 1} \xD7 ${E2} = ${sh(F4 + E2 * (k - 1))}.`]
     }),
-    check: ({ F: F3, E: E2, k }, a) => (a - F3) / E2 === k - 1
+    check: ({ F: F4, E: E2, k }, a) => (a - F4) / E2 === k - 1
   }),
   fam13({
     id: "g7.money.mobile-two-sends",
@@ -34653,20 +36861,20 @@ var FAMILIES23 = [
     form: "table",
     draw: () => {
       const ch = [pick([10, 11]), pick([25, 27, 29]), pick([30, 32, 34]), pick([40, 43, 45]), pick([55, 60, 65])];
-      const W2 = pick([80, 300, 700, 1200, 2e3]);
+      const W3 = pick([80, 300, 700, 1200, 2e3]);
       const band = (x) => x <= 100 ? 0 : x <= 500 ? 1 : x <= 1e3 ? 2 : x <= 1500 ? 3 : 4;
-      const B2 = Math.ceil((W2 + ch[band(W2)] + 100) / 500) * 500 + pick([0, 500, 1e3]);
-      return { ch, W: W2, B: B2, c: ch[band(W2)], p: person() };
+      const B3 = Math.ceil((W3 + ch[band(W3)] + 100) / 500) * 500 + pick([0, 500, 1e3]);
+      return { ch, W: W3, B: B3, c: ch[band(W3)], p: person() };
     },
-    make: ({ ch, W: W2, B: B2, c, p }) => ({
-      question: `${p.name} has ${sh(B2)} in a mobile money account and takes out ${sh(W2)} cash from an agent. The agent's charge is in the table, which is only an example and not a real price list. The charge is also taken from the account. How much money stays in the account, in shillings?`,
+    make: ({ ch, W: W3, B: B3, c, p }) => ({
+      question: `${p.name} has ${sh(B3)} in a mobile money account and takes out ${sh(W3)} cash from an agent. The agent's charge is in the table, which is only an example and not a real price list. The charge is also taken from the account. How much money stays in the account, in shillings?`,
       model: { type: "table", data: { head: ["Amount withdrawn (sh)", "Charge (sh)"], rows: [{ label: "1 to 100", value: String(ch[0]) }, { label: "101 to 500", value: String(ch[1]) }, { label: "501 to 1,000", value: String(ch[2]) }, { label: "1,001 to 1,500", value: String(ch[3]) }, { label: "1,501 to 2,500", value: String(ch[4]) }] } },
-      answer: B2 - W2 - c,
-      wrong: [[B2 - W2, "The charge also comes out of the account. Find it in the table."], [B2 - c, "The money withdrawn also leaves the account."], [W2 - c, "Start from what was in the account, not from the amount withdrawn."]],
-      hints: [`Which row of the table does ${sh(W2)} fall in?`, "Take the money withdrawn and the charge away from the amount in the account."],
-      steps: [`The charge for ${sh(W2)} is ${sh(c)}.`, `Left = ${sh(B2)} \u2212 ${sh(W2)} \u2212 ${sh(c)} = ${sh(B2 - W2 - c)}.`]
+      answer: B3 - W3 - c,
+      wrong: [[B3 - W3, "The charge also comes out of the account. Find it in the table."], [B3 - c, "The money withdrawn also leaves the account."], [W3 - c, "Start from what was in the account, not from the amount withdrawn."]],
+      hints: [`Which row of the table does ${sh(W3)} fall in?`, "Take the money withdrawn and the charge away from the amount in the account."],
+      steps: [`The charge for ${sh(W3)} is ${sh(c)}.`, `Left = ${sh(B3)} \u2212 ${sh(W3)} \u2212 ${sh(c)} = ${sh(B3 - W3 - c)}.`]
     }),
-    check: ({ B: B2, W: W2, c }, a) => a + W2 + c === B2
+    check: ({ B: B3, W: W3, c }, a) => a + W3 + c === B3
   })
 ];
 
@@ -34678,7 +36886,7 @@ var rot4 = (arr, k) => {
 };
 var uniq6 = (...v) => new Set(v).size === v.length;
 var sum2 = (a) => a.reduce((s, x) => s + x, 0);
-var shuffle7 = (a) => {
+var shuffle8 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = randInt(0, i);
@@ -34696,7 +36904,7 @@ var freqModel = (c, fs) => ({ type: "table", data: { head: [c.h, "Frequency"], r
 var tally = (f) => [...Array(Math.floor(f / 5)).fill("||||/"), "|".repeat(f % 5)].filter(Boolean).join(" ");
 var SCALES2 = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3];
 var THINGS = [{ t: "kilograms of maize", u: "kg" }, { t: "litres of milk", u: "litres" }, { t: "mangoes", u: "mangoes" }, { t: "exercise books", u: "books" }];
-var FAMILIES24 = [
+var FAMILIES27 = [
   // ================================================================ ANGLES
   fam14({
     id: "g7.angles.point-cake",
@@ -34730,19 +36938,19 @@ var FAMILIES24 = [
       const x = pick([20, 25, 30, 35]), p = pick([10, 15, 20]);
       const q = 180 - 5 * x - p;
       if (q < 10 || q > 70) return null;
-      const A2 = 3 * x + p, B2 = 2 * x + q;
-      return uniq6(A2, B2, x, (180 - p - q) / 3) && A2 !== B2 ? { x, p, q, A: A2, B: B2 } : null;
+      const A2 = 3 * x + p, B3 = 2 * x + q;
+      return uniq6(A2, B3, x, (180 - p - q) / 3) && A2 !== B3 ? { x, p, q, A: A2, B: B3 } : null;
     },
-    make: ({ x, p, q, A: A2, B: B2 }) => ({
+    make: ({ x, p, q, A: A2, B: B3 }) => ({
       question: `Two angles on a straight line are (3x + ${p})\xB0 and (2x + ${q})\xB0. What is the size of the larger angle, in degrees?`,
-      answer: Math.max(A2, B2),
-      wrong: [[Math.min(A2, B2), "That is the smaller angle. Compare both angles once you know x."], [x, "That is the value of x. Put it back into the angles."], [(180 - p - q) / 3, "There are 5 lots of x altogether (3x and 2x), not 3."]],
+      answer: Math.max(A2, B3),
+      wrong: [[Math.min(A2, B3), "That is the smaller angle. Compare both angles once you know x."], [x, "That is the value of x. Put it back into the angles."], [(180 - p - q) / 3, "There are 5 lots of x altogether (3x and 2x), not 3."]],
       hints: ["Angles on a straight line add up to a fixed total. Write an equation.", "Collect the x terms and the plain numbers, solve for x, then work out both angles."],
-      steps: [`3x + ${p} + 2x + ${q} = 180, so 5x + ${p + q} = 180.`, `5x = ${180 - p - q}, so x = ${x}.`, `The angles are ${A2}\xB0 and ${B2}\xB0. The larger is ${Math.max(A2, B2)}\xB0.`]
+      steps: [`3x + ${p} + 2x + ${q} = 180, so 5x + ${p + q} = 180.`, `5x = ${180 - p - q}, so x = ${x}.`, `The angles are ${A2}\xB0 and ${B3}\xB0. The larger is ${Math.max(A2, B3)}\xB0.`]
     }),
     check: ({ p, q }, v) => {
-      const A2 = (v - p) / 3, B2 = (v - q) / 2;
-      return [A2, B2].some((t) => Number.isInteger(t) && 3 * t + p + 2 * t + q === 180);
+      const A2 = (v - p) / 3, B22 = (v - q) / 2;
+      return [A2, B22].some((t) => Number.isInteger(t) && 3 * t + p + 2 * t + q === 180);
     }
   }),
   fam14({
@@ -34993,24 +37201,24 @@ var FAMILIES24 = [
       const row = (n) => ({ cells: [name[n], String(n), String(n - 2), String((n - 2) * 180)] });
       const hidden = { cells: [type === "sum" ? name[target] : "?", type === "sum" ? String(target) : "?", "?", "?"] };
       const rows = known === 5 ? [row(3), row(4), row(5), hidden] : [row(3), row(4), hidden, row(6)];
-      const S4 = (target - 2) * 180;
+      const S5 = (target - 2) * 180;
       const common = { model: { type: "table", data: { head: ["Shape", "Sides", "Triangles", "Angle sum \xB0"], rows } } };
       return type === "sum" ? {
         ...common,
         story: false,
         question: `The table shows how the angle sum of a polygon grows. Use it to find the sum of the interior angles of the ${name[target].toLowerCase()}, in degrees.`,
-        answer: S4,
+        answer: S5,
         wrong: [[target * 180, "The polygon splits into 2 fewer triangles than it has sides."], [(target - 1) * 180, "Look at the pattern in the table: how many fewer triangles than sides?"], [(target - 3) * 180, "Count the triangles again. The table shows the pattern."]],
         hints: ["Look at how the number of triangles changes with the number of sides.", "Each triangle has an angle sum of 180\xB0."],
-        steps: [`The number of triangles is 2 fewer than the number of sides: ${target} \u2212 2 = ${target - 2}.`, `${target - 2} \xD7 180 = ${S4}\xB0.`]
+        steps: [`The number of triangles is 2 fewer than the number of sides: ${target} \u2212 2 = ${target - 2}.`, `${target - 2} \xD7 180 = ${S5}\xB0.`]
       } : {
         ...common,
         story: false,
-        question: `The table shows how the angle sum of a polygon grows. The interior angles of one more polygon add up to ${S4}\xB0. How many sides does it have?`,
+        question: `The table shows how the angle sum of a polygon grows. The interior angles of one more polygon add up to ${S5}\xB0. How many sides does it have?`,
         answer: target,
-        wrong: [[S4 / 180, "That is the number of triangles. The polygon has 2 more sides than triangles."], [S4 / 180 + 1, "Look at the table: sides are always 2 more than triangles."], [S4 / 90, "Divide the sum by 180\xB0 to count triangles, then use the table pattern."]],
+        wrong: [[S5 / 180, "That is the number of triangles. The polygon has 2 more sides than triangles."], [S5 / 180 + 1, "Look at the table: sides are always 2 more than triangles."], [S5 / 90, "Divide the sum by 180\xB0 to count triangles, then use the table pattern."]],
         hints: ["How many triangles of 180\xB0 fit in the sum?", "In the table, how many more sides than triangles are there?"],
-        steps: [`${S4} \xF7 180 = ${S4 / 180} triangles.`, `Sides = triangles + 2 = ${target}.`]
+        steps: [`${S5} \xF7 180 = ${S5 / 180} triangles.`, `Sides = triangles + 2 = ${target}.`]
       };
     },
     check: ({ type }, a) => type === "sum" ? a % 180 === 0 && a / 180 + 2 >= 5 : (a - 2) * 180 >= 540
@@ -35133,19 +37341,19 @@ var FAMILIES24 = [
     form: "why",
     draw: () => ({ step: randInt(0, 3), k: randInt(0, 3) }),
     make: ({ step: step2, k }) => {
-      const S4 = [
+      const S5 = [
         { do: "put the compass point on the corner of the angle and draw one arc across both arms", why: "So that the two marks on the arms are the same distance from the corner" },
         { do: "keep the compasses at the same width when you draw the two arcs that cross inside the angle", why: "So that the crossing point is the same distance from each of the two marks on the arms" },
         { do: "join the corner to the point where the two arcs cross", why: "That point is equally far from both arms, so the line splits the angle into two equal angles" },
         { do: "open the compasses wider than half the gap between the two marks before drawing the crossing arcs", why: "Otherwise the two arcs would be too short to meet" }
       ];
-      const opts2 = S4.map((s, i) => ({ text: s.why, right: i === step2, why: i === step2 ? void 0 : "That is a good reason, but for a different step of the method. Check which step the question asks about." }));
+      const opts2 = S5.map((s, i) => ({ text: s.why, right: i === step2, why: i === step2 ? void 0 : "That is a good reason, but for a different step of the method. Check which step the question asks about." }));
       return {
-        question: `When you bisect an angle with a ruler and compasses, you ${S4[step2].do}. Why?`,
+        question: `When you bisect an angle with a ruler and compasses, you ${S5[step2].do}. Why?`,
         story: false,
         options: rot4(opts2, k),
         hints: ["Think about what the compasses measure: a distance.", "Which of the reasons is about that exact step?"],
-        steps: [`The step: ${S4[step2].do}.`, `${S4[step2].why}.`]
+        steps: [`The step: ${S5[step2].do}.`, `${S5[step2].why}.`]
       };
     }
   }),
@@ -35224,25 +37432,25 @@ var FAMILIES24 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const fruits = shuffle7(["Mango", "Banana", "Orange", "Pawpaw"]);
+      const fruits = shuffle8(["Mango", "Banana", "Orange", "Pawpaw"]);
       const fs = fruits.map(() => randInt(3, 14));
-      const A2 = 0, B2 = randInt(1, 3);
+      const A2 = 0, B3 = randInt(1, 3);
       const g = (f) => Math.floor(f / 5) * 4 + f % 5;
-      const ans = fs[A2] + fs[B2];
-      return uniq6(ans, fs[A2], sum2(fs), g(fs[A2]) + g(fs[B2])) && (fs[A2] >= 5 || fs[B2] >= 5) ? { fruits, fs, A: A2, B: B2 } : null;
+      const ans = fs[A2] + fs[B3];
+      return uniq6(ans, fs[A2], sum2(fs), g(fs[A2]) + g(fs[B3])) && (fs[A2] >= 5 || fs[B3] >= 5) ? { fruits, fs, A: A2, B: B3 } : null;
     },
-    make: ({ fruits, fs, A: A2, B: B2 }) => {
+    make: ({ fruits, fs, A: A2, B: B3 }) => {
       const g = (f) => Math.floor(f / 5) * 4 + f % 5;
       return {
-        question: `Learners chose a fruit for break. The tally chart shows their choices. A group ||||/ means 5. How many learners chose ${fruits[A2].toLowerCase()} or ${fruits[B2].toLowerCase()}?`,
+        question: `Learners chose a fruit for break. The tally chart shows their choices. A group ||||/ means 5. How many learners chose ${fruits[A2].toLowerCase()} or ${fruits[B3].toLowerCase()}?`,
         model: { type: "table", data: { head: ["Fruit", "Tally"], rows: fruits.map((n, i) => ({ label: n, value: tally(fs[i]) })) } },
-        answer: fs[A2] + fs[B2],
-        wrong: [[fs[A2], `That is only one of the two fruits.`], [sum2(fs), "That counts every fruit. The question asks about two of them."], [g(fs[A2]) + g(fs[B2]), "A group ||||/ is 5 in all, four strokes and the one across them. Count the one across too."]],
+        answer: fs[A2] + fs[B3],
+        wrong: [[fs[A2], `That is only one of the two fruits.`], [sum2(fs), "That counts every fruit. The question asks about two of them."], [g(fs[A2]) + g(fs[B3]), "A group ||||/ is 5 in all, four strokes and the one across them. Count the one across too."]],
         hints: ["Count each tally in fives, then the loose strokes.", "Find the frequency of each fruit asked about, then add the two frequencies."],
-        steps: [`${fruits[A2]}: ${fs[A2]}. ${fruits[B2]}: ${fs[B2]}.`, `Together: ${fs[A2]} + ${fs[B2]} = ${fs[A2] + fs[B2]}.`]
+        steps: [`${fruits[A2]}: ${fs[A2]}. ${fruits[B3]}: ${fs[B3]}.`, `Together: ${fs[A2]} + ${fs[B3]} = ${fs[A2] + fs[B3]}.`]
       };
     },
-    check: ({ fs, A: A2, B: B2 }, a) => a - fs[B2] === fs[A2] && a + sum2(fs.filter((_, i) => i !== A2 && i !== B2)) === sum2(fs)
+    check: ({ fs, A: A2, B: B3 }, a) => a - fs[B3] === fs[A2] && a + sum2(fs.filter((_, i) => i !== A2 && i !== B3)) === sum2(fs)
   }),
   fam14({
     id: "g7.data.freq-percent",
@@ -35253,7 +37461,7 @@ var FAMILIES24 = [
     draw: () => {
       const c = pick(FREQ_CTX);
       const total = pick([20, 25, 40, 50]);
-      const cuts = shuffle7(Array.from({ length: total - 1 }, (_, i) => i + 1)).slice(0, 4).sort((a, b) => a - b);
+      const cuts = shuffle8(Array.from({ length: total - 1 }, (_, i) => i + 1)).slice(0, 4).sort((a, b) => a - b);
       const fs = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], cuts[3] - cuts[2], total - cuts[3]];
       const k = c.lo + pick([2, 3]);
       const count = sum2(fs.filter((_, i) => c.lo + i >= k));
@@ -35317,22 +37525,22 @@ var FAMILIES24 = [
     rung: 3,
     form: "word",
     draw: () => {
-      const H = pick([10, 12]), idx = randInt(1, 7), s = SCALES2[idx];
-      const M4 = s * randInt(Math.floor(H / 2) + 1, H);
+      const H2 = pick([10, 12]), idx = randInt(1, 7), s = SCALES2[idx];
+      const M5 = s * randInt(Math.floor(H2 / 2) + 1, H2);
       const opts2 = [SCALES2[idx - 1], s, SCALES2[idx + 1], SCALES2[idx + 2]];
-      const fits = opts2.filter((x) => M4 / x <= H);
+      const fits = opts2.filter((x) => M5 / x <= H2);
       const best = Math.min(...fits);
-      return best === s ? { H, M: M4, opts: opts2, s, t: pick(THINGS), p: person(), k: randInt(0, 3) } : null;
+      return best === s ? { H: H2, M: M5, opts: opts2, s, t: pick(THINGS), p: person(), k: randInt(0, 3) } : null;
     },
-    make: ({ H, M: M4, opts: opts2, s, t, p, k }) => ({
-      question: `${p.name} draws a bar graph of the ${t.t} sold by four shops. The vertical axis is ${H} squares tall. The tallest bar shows ${commas(M4)} ${t.u}. Which scale makes the tallest bar as tall as possible and still fit on the axis?`,
+    make: ({ H: H2, M: M5, opts: opts2, s, t, p, k }) => ({
+      question: `${p.name} draws a bar graph of the ${t.t} sold by four shops. The vertical axis is ${H2} squares tall. The tallest bar shows ${commas(M5)} ${t.u}. Which scale makes the tallest bar as tall as possible and still fit on the axis?`,
       options: rot4(opts2.map((x) => ({
         text: `1 square stands for ${commas(x)} ${t.u}`,
         right: x === s,
-        why: x === s ? void 0 : M4 / x > H ? `The tallest bar would need ${round(M4 / x, 1)} squares, but the axis has only ${H}. It would go off the paper.` : `It fits, but the tallest bar would be only ${round(M4 / x, 1)} squares tall. A bigger bar uses the paper better.`
+        why: x === s ? void 0 : M5 / x > H2 ? `The tallest bar would need ${round(M5 / x, 1)} squares, but the axis has only ${H2}. It would go off the paper.` : `It fits, but the tallest bar would be only ${round(M5 / x, 1)} squares tall. A bigger bar uses the paper better.`
       })), k),
       hints: ["For each scale, divide the tallest value by the size of one square.", "The bar must fit on the axis, so the number of squares cannot be more than its height."],
-      steps: opts2.map((x) => `1 square = ${commas(x)}: the tallest bar needs ${commas(round(M4 / x, 1))} squares.`).concat([`The smallest scale that still fits is ${commas(s)} ${t.u} to a square.`])
+      steps: opts2.map((x) => `1 square = ${commas(x)}: the tallest bar needs ${commas(round(M5 / x, 1))} squares.`).concat([`The smallest scale that still fits is ${commas(s)} ${t.u} to a square.`])
     })
   }),
   fam14({
@@ -35343,7 +37551,7 @@ var FAMILIES24 = [
     form: "graph",
     draw: () => {
       const each = pick([10, 20, 50]);
-      const labels = shuffle7(["Walk", "Bus", "Bicycle", "Boda boda", "Car"]).slice(0, 4);
+      const labels = shuffle8(["Walk", "Bus", "Bicycle", "Boda boda", "Car"]).slice(0, 4);
       const u = labels.map(() => randInt(2, 17) / 2);
       if (new Set(u).size < 4) return null;
       const a = 0, b = 1;
@@ -35426,8 +37634,8 @@ var FAMILIES24 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const names = shuffle7(["Walk", "Bus", "Bicycle", "Boda boda"]);
-      const cuts = shuffle7(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
+      const names = shuffle8(["Walk", "Bus", "Bicycle", "Boda boda"]);
+      const cuts = shuffle8(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
       const units = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], 20 - cuts[2]];
       if (units.some((x) => x < 2 || x > 9)) return null;
       const T5 = pick([120, 200, 240]), m = randInt(0, 3);
@@ -35459,8 +37667,8 @@ var FAMILIES24 = [
     rung: 2,
     form: "graph",
     draw: () => {
-      const names = shuffle7(["Football", "Netball", "Drama", "Music", "Athletics"]).slice(0, 4);
-      const cuts = shuffle7(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
+      const names = shuffle8(["Football", "Netball", "Drama", "Music", "Athletics"]).slice(0, 4);
+      const cuts = shuffle8(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
       const units = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], 20 - cuts[2]];
       if (units.some((x) => x < 2 || x > 9)) return null;
       const q = randInt(0, 3), pct3 = units[q] * 5, deg = units[q] * 18;
@@ -35675,12 +37883,13 @@ var FAMILIES24 = [
 
 // src/ai-tutor/content/families/bank.js
 var G5_CURRICULUM = [...FAMILIES5, ...FAMILIES6, ...FAMILIES7, ...FAMILIES8, ...FAMILIES9, ...FAMILIES10, ...FAMILIES11, ...FAMILIES12, ...FAMILIES13];
-var GRADE_FAMILIES = [...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23, ...FAMILIES24, ...FAMILIES14, ...FAMILIES15, ...FAMILIES16, ...G5_CURRICULUM, ...FAMILIES4, ...FAMILIES3, ...FAMILIES2, ...FAMILIES];
+var SCIENCE_G5 = [...FAMILIES14, ...FAMILIES15, ...FAMILIES16];
+var GRADE_FAMILIES = [...SCIENCE_G5, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23, ...FAMILIES24, ...FAMILIES25, ...FAMILIES26, ...FAMILIES27, ...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...G5_CURRICULUM, ...FAMILIES4, ...FAMILIES3, ...FAMILIES2, ...FAMILIES];
 
 // src/ai-tutor/content/families/index.js
-var FAMILIES25 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
+var FAMILIES28 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
 var BY_SKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES25) {
+for (const f of FAMILIES28) {
   if (!BY_SKILL.has(f.skill)) BY_SKILL.set(f.skill, []);
   BY_SKILL.get(f.skill).push(f);
 }
@@ -36660,7 +38869,7 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES25) if (usable(f)) {
+for (const f of FAMILIES28) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }

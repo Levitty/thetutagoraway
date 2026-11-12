@@ -38,6 +38,10 @@ const { auditUniqueAnswers, reportUniqueAnswers } = await import(resolve(root, '
 const { measureAll, summarise, gradeTable, rangeFailures } = await import(resolve(root, 'engine/scripts/range_report.mjs'));
 const { setFamilyMode } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
 const { checkFamily, checkForms, baseFormsOf, FAMILIES } = await import(resolve(root, 'engine/scripts/family_checks.mjs'));
+const { drawFamily } = await import(resolve(root, 'src/ai-tutor/content/families/core.js'));
+const { clusterForms, formText, structureOf } = await import(resolve(root, 'engine/scripts/content_measures.mjs'));
+const { SKILLS_SCI_G5, OUTCOMES_SCI_G5 } = await import(resolve(root, 'src/ai-tutor/content/curriculumMap.science.g5.js'));
+const { readFileSync } = await import('node:fs');
 
 const args = process.argv.slice(2);
 const VERBOSE = args.includes('--verbose');
@@ -317,6 +321,38 @@ show('Reported, not failing, in what children get today', childFails.soft);
 show('Failures with every family on', bankFails.hard);
 show('Families failing their checks', familyFails);
 
+// ---- Grade 5 Science and Technology: every skill needs families of different structure -------------
+// The Maths range measures skills in the practice engine; a science skill has no generator, so it is measured here from
+// its families alone (reviewed or not): at least 2 families, at least 2 different structures, at least 4 different
+// questions drawn, and every misconception in the library revealed by some wrong answer. Fewer than 3 forms is reported only.
+setFamilyMode('all');
+const sciFams = FAMILIES.filter(f => f.subject === 'science');
+const sciMis = JSON.parse(readFileSync(resolve(root, 'engine/data/curriculum/science.g5.misconceptions.json'), 'utf8'));
+const sciFails = [], sciSoft = [], sciRows = [], revealed = new Set();
+for (const [code, k] of Object.entries(SKILLS_SCI_G5)) {
+  const fams = sciFams.filter(f => f.cskill === code);
+  const texts = [], keys = new Set(), qs = new Set(), forms = new Set(fams.map(f => f.form));
+  for (const f of fams) for (let i = 0; i < 30; i++) {
+    const { p } = drawFamily(f);
+    texts.push(formText(p)); keys.add(structureOf(p).key); qs.add(p.question + JSON.stringify(p.model || ''));
+    for (const m of [...(p.misconceptions || []), ...[].concat(p.mis || []).map(x => ({ mis: x }))]) for (const c of [].concat(m.mis || [])) revealed.add(`${code}|${c}`);
+  }
+  const textForms = clusterForms(texts).length;
+  const row = { code, outcomes: k.outcomes.length, families: fams.length, forms: forms.size, textForms, structures: keys.size, questions: qs.size };
+  sciRows.push(row);
+  if (fams.length < 2) sciFails.push(`${code}: ${fams.length} famil${fams.length === 1 ? 'y' : 'ies'}, needs at least 2`);
+  if (fams.length >= 2 && Math.min(textForms, keys.size) < 2) sciFails.push(`${code}: families do not differ in structure (${textForms} text forms, ${keys.size} structures)`);
+  if (qs.size < 4 * Math.max(1, fams.length)) sciFails.push(`${code}: only ${qs.size} different questions from ${fams.length} families`);
+  if (forms.size < 3) sciSoft.push(`${code}: ${forms.size} question form(s), 3 or more wanted`);
+}
+for (const [full, m] of Object.entries(sciMis)) if (!revealed.has(`${m.skill}|${full.slice(m.skill.length + 1)}`)) sciSoft.push(`${full.replace('SCIE.G5.', '')}: no wrong answer reveals this misconception`);
+for (const f of sciFams) if (f.reviewed === true) sciSoft.push(`${f.id}: signed off (reviewed) , confirm in sci_signed.js`);
+setFamilyMode('reviewed');
+console.log(`\n--- Grade 5 Science and Technology (${sciFams.length} families, ${Object.keys(SKILLS_SCI_G5).length} skills, ${Object.keys(OUTCOMES_SCI_G5).length} outcomes) ---`);
+console.log('  skills with 2+ families: ' + sciRows.filter(r => r.families >= 2).length + '/' + sciRows.length + ', 3+ forms: ' + sciRows.filter(r => r.forms >= 3).length + ', median structures: ' + [...sciRows.map(r => r.structures)].sort((a, b) => a - b)[sciRows.length >> 1]);
+show('Science failures', sciFails);
+show('Science reported, not failing', sciSoft);
+
 if (JSON_OUT) {
   const { writeFileSync } = await import('node:fs');
   const lean = (v) => Object.fromEntries(Object.entries(v).map(([id, m]) => [id, { ...m, questions: undefined }]));
@@ -326,7 +362,7 @@ if (REPORT_ONLY) { console.log('\nReport mode: nothing fails.'); process.exit(0)
 
 // Exit non-zero on anything a child could meet, or anything a family gets wrong.
 const authoredFails = authored.filter(r => r.score < 85);
-const rangeBad = childFails.hard.length + bankFails.hard.length + familyFails.length;
+const rangeBad = childFails.hard.length + bankFails.hard.length + familyFails.length + sciFails.length;
 if (hintAudit.leaking.length) {
   console.log(`\n${hintAudit.leaking.length} skill(s) leak an answer through a hint.`);
   process.exit(1);

@@ -12,6 +12,7 @@ import { checkAnswerMatch } from '../../src/ai-tutor/answerCheck.js';
 import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerators.js';
 import { buildChoices } from '../../src/ai-tutor/choices.js';
 import { SKILLS_G5, SUBSTRANDS, OUTCOMES_G5, horebOf } from '../../src/ai-tutor/content/curriculumMap.g5.js';
+import { SKILLS_SCI_G5, OUTCOMES_SCI_G5 } from '../../src/ai-tutor/content/curriculumMap.science.g5.js';
 import { readFileSync } from 'node:fs';
 import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
 
@@ -22,9 +23,10 @@ export const FAMILY_DRAWS = 200;
 // must be one of its own skill's, or of another skill in the same sub-strand.
 const MIS = JSON.parse(readFileSync(new URL('../data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'));
 const misCodesFor = (cskill) => {
-  const sub = SKILLS_G5[cskill]?.sub;
-  const own = new Set((SKILLS_G5[cskill]?.mis || []));
-  const near = new Set(Object.entries(SKILLS_G5).filter(([, k]) => k.sub === sub).flatMap(([c, k]) => k.mis));
+  const map = SKILLS_SCI_G5[cskill] ? SKILLS_SCI_G5 : SKILLS_G5;   // Science skills have their own map
+  const sub = map[cskill]?.sub;
+  const own = new Set((map[cskill]?.mis || []));
+  const near = new Set(Object.entries(map).filter(([, k]) => k.sub === sub).flatMap(([c, k]) => k.mis));
   return { own, near };
 };
 export const misTally = { wrong: 0, tied: 0 };
@@ -41,10 +43,21 @@ const hasAnswerAlone = (answer, text, question) => {
 export function checkFamily(def, draws = FAMILY_DRAWS) {
   const out = [];
   const fail = (msg) => { if (out.length < 8) out.push(`${def.id}: ${msg}`); };
-  const official = OUTCOMES_G5[def.outcome];
-  const ck = SKILLS_G5[def.cskill];
-  let o = OUTCOMES[def.outcome];
-  if (official) {
+  const science = def.subject === 'science';
+  const official = science ? OUTCOMES_SCI_G5[def.outcome] : OUTCOMES_G5[def.outcome];
+  const ck = science ? SKILLS_SCI_G5[def.cskill] : SKILLS_G5[def.cskill];
+  let o = science ? null : OUTCOMES[def.outcome];
+  if (science) {
+    // Grade 5 Science and Technology: the skill is the cskill (science skills are not in the practice engine's SKILLS yet),
+    // and the outcome must be one of the skill's official outcomes. No regex signal, as for Grade 5 Maths.
+    o = { id: def.outcome, grade: 5, text: official?.letter, signal: /[\s\S]*/, hands: false };
+    if (!official) fail(`outcome ${def.outcome} is not a Grade 5 Science outcome`);
+    if (!ck) fail(`cskill ${def.cskill} is not in the Grade 5 Science map`);
+    else {
+      if (!ck.outcomes.includes(def.outcome)) fail(`outcome ${def.outcome} is not an outcome of ${def.cskill}`);
+      if (def.skill !== def.cskill) fail(`a science family's skill must be its cskill, not ${def.skill}`);
+    }
+  } else if (official) {
     // The design's own outcome code, with the curriculum skill it belongs to.
     // No regex signal here: HOREB's old signals were written for its own outcome list and miss honest
     // word problems (a ribbon-cutting question never says HCF). The cskill-to-outcome-to-skill chain
@@ -56,10 +69,10 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
       if (!horebOf(def.cskill).includes(def.skill)) fail(`HOREB skill ${def.skill} is not mapped to ${def.cskill}`);
     }
   } else if (def.cskill) fail(`cskill ${def.cskill} needs the official outcome code, not ${def.outcome}`);
-  if (!SKILLS[def.skill]) fail(`unknown skill ${def.skill}`);
+  if (!science && !SKILLS[def.skill]) fail(`unknown skill ${def.skill}`);
   if (!o) fail(`unknown outcome ${def.outcome}`);
   if (o?.hands) fail(`outcome ${def.outcome} is hands-on: a typed or tapped answer cannot test it`);
-  const tag = SKILL_TAGS[def.skill];
+  const tag = science ? null : SKILL_TAGS[def.skill];
   if (o && tag && o.grade !== tag.grade) fail(`outcome is Grade ${o.grade}, the skill is CBC Grade ${tag.grade}`);
   // Every wrong answer names the library misconception it reveals.
   // misMapped: false marks an older family retagged to a curriculum skill whose wrong answers carry
@@ -172,6 +185,7 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
 export function baseFormsOf(ids) {
   const out = {};
   for (const id of ids) {
+    if (!SKILLS[id]) continue;   // a science skill has no generator of its own: nothing to repeat
     const seen = new Set();
     for (let i = 0; i < 40; i++) { const p = generateProblem(id, { noFamilies: true, kp: i % 4 }); if (p && !p.placeholder) seen.add(p.question); }
     out[id] = [...seen];

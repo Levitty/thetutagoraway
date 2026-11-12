@@ -18,7 +18,9 @@
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { homedir } from 'node:os';
 import { join } from 'node:path';
-import { FAMILIES } from '../src/ai-tutor/content/families/index.js';
+import { FAMILIES as ALL_FAMILIES } from '../src/ai-tutor/content/families/index.js';
+// Grade 5 Science families are reviewed from docs/qa/science-g5-2026-11-12.md, not from this Maths pack.
+const FAMILIES = ALL_FAMILIES.filter(f => f.subject !== 'science');
 import { drawFamily } from '../src/ai-tutor/content/families/core.js';
 import { OUTCOMES } from '../src/ai-tutor/curriculum/outcomes.js';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';

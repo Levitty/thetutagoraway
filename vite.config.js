@@ -19,7 +19,7 @@ const reviewedFamiliesOnly = {
   apply: 'build',
   enforce: 'pre',
   transform(code, id) {
-    if (!/content\/families\/g[0-9a-z_]+\.js$/.test(id.split('?')[0]) && !id.split('?')[0].endsWith('content/families/gaps.js')) return null;
+    if (!/content\/families\/(g[0-9a-z_]+|sci_g5_[a-z]+)\.js$/.test(id.split('?')[0]) && !id.split('?')[0].endsWith('content/families/gaps.js')) return null;
     return /reviewed:\s*true/.test(code) ? null : { code: 'export const FAMILIES = [];', map: null };
   },
 };

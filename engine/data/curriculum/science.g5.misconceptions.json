@@ -1,0 +1,1562 @@
+{
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_SMALL_FLOWER_NOT_FLOWER": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+  "error": "Thinks a plant with no big, bright flowers (maize, grass, kale, mango) does not flower.",
+  "example": {
+   "question": "Is a maize plant a flowering plant or a non-flowering plant?",
+   "wrong_answer": "Non-flowering plant",
+   "correct_answer": "Flowering plant"
+  },
+  "cause": "The child counts only showy petals as flowers. The flowers of maize (the tassel and the silk), grasses and many trees are small and green or yellow.",
+  "reveals": "Use crops and grasses, never roses or hibiscus, and offer the answer \"non-flowering\".",
+  "help": "Look closely at a maize tassel and a young cob with the class and call both flowers. Anything that makes seeds inside a fruit or grain belongs to the flowering plants.",
+  "feedback": "Many flowers are small and not bright. Maize has flowers too: the tassel at the top and the silk on the cob. A plant that makes seeds inside fruits or grains is a flowering plant.",
+  "source": "Plant-concept research reports that children restrict 'flower' to showy flowers (Bell and Barker 1982; Tunnicliffe and Reiss 1999). Cited from memory: verify the references.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_ALL_TREES_FLOWER": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+  "error": "Thinks every tree is a flowering plant, including cypress and pine, which make cones.",
+  "example": {
+   "question": "Is a cypress tree a flowering or a non-flowering plant?",
+   "wrong_answer": "Flowering plant",
+   "correct_answer": "Non-flowering plant"
+  },
+  "cause": "The child sorts by size or by being a plant with seeds, and has not met cones as a different way of making seeds.",
+  "reveals": "Offer cypress or pine next to mango and ask for flowering or non-flowering.",
+  "help": "Show a cypress cone. Cones hold seeds but they are not flowers and there is no fruit. Compare with a mango flower and fruit.",
+  "feedback": "Cypress and pine are trees, but they make cones, not flowers and fruits. That makes them non-flowering plants.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_ALL_PLANTS_FLOWER": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+  "error": "Thinks every plant has flowers, so ferns and mosses must flower too.",
+  "example": {
+   "question": "Does a fern make flowers?",
+   "wrong_answer": "Yes, but very small ones",
+   "correct_answer": "No"
+  },
+  "cause": "The child assumes all green plants flower, because the plants at home and at school all do.",
+  "reveals": "Ask about ferns or mosses and offer \"yes, hidden flowers\".",
+  "help": "Look at the underside of a fern frond for the spore cases, and at moss capsules. These plants never make flowers.",
+  "feedback": "Ferns and mosses never make flowers. They make tiny spores instead. They are non-flowering plants.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT.M_FL_NOT_FLOWERING_NOW": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT",
+  "error": "Decides by what the plant looks like today: a bean or kale plant with no flower this week is \"non-flowering\".",
+  "example": {
+   "question": "A kale plant in a shamba has no flowers this week. Is kale a non-flowering plant?",
+   "wrong_answer": "Yes, because it has no flowers now",
+   "correct_answer": "No, kale makes flowers when it is left to grow"
+  },
+  "cause": "The child classifies by the moment of looking, not by what the plant can do over its whole life.",
+  "reveals": "Describe a flowering plant that has not flowered yet, such as a bean seedling or kale cut every week.",
+  "help": "Follow one bean plant through weeks: seedling, flower, pod. A plant is flowering if it makes flowers at some time in its life.",
+  "feedback": "Look at the whole life of the plant. Kale and beans make flowers when they are old enough, even if you do not see any today. They are flowering plants.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge: children judge living-thing and plant status by what is visible at the time. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_PETAL_SEPAL": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+  "error": "Mixes up petals and sepals, calling the small green parts below the flower the petals.",
+  "example": {
+   "question": "Which part is the small green leaf-like part at the base of a flower?",
+   "wrong_answer": "Petal",
+   "correct_answer": "Sepal"
+  },
+  "cause": "The child names the part by the word they know best (petal) and has not looked at the green ring under the coloured petals.",
+  "reveals": "Describe the green part by position and colour and offer petal as a distractor.",
+  "help": "Take a bean or hibiscus flower apart. Petals are coloured and on the inside. Sepals are green and underneath, and they covered the bud.",
+  "feedback": "Petals are the coloured parts. The green parts at the bottom that covered the flower when it was a bud are the sepals.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_STAMEN_PISTIL": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+  "error": "Swaps the stamen and the pistil.",
+  "example": {
+   "question": "Which part of a flower is the stamen?",
+   "wrong_answer": "The part in the middle with the ovary at its base",
+   "correct_answer": "The part with a thin stalk and a small pollen-holding top"
+  },
+  "cause": "The words sound alike and both stand in the middle of the flower.",
+  "reveals": "Ask for the part with pollen, and offer the pistil.",
+  "help": "Say the rhyme: STamen has the pollen (Sticks up with an anther), PIStil has the Pip (seed) place. Draw both from a real flower.",
+  "feedback": "The stamens are the thin stalks that carry the pollen on top. The pistil is the part in the middle that has the ovary at its base.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES.M_PN_STIGMA_ANTHER": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES",
+  "error": "Thinks the stigma is the top of the stamen, or that the anther is part of the pistil.",
+  "example": {
+   "question": "Which part of a flower is sticky and catches pollen?",
+   "wrong_answer": "Anther",
+   "correct_answer": "Stigma"
+  },
+  "cause": "The child knows both are small knobs at the top of a thin part and mixes them up.",
+  "reveals": "Ask which part holds pollen and which part catches pollen, with both names as options.",
+  "help": "Pollen is made on the anther (A for \"at the stamen\") and lands on the sticky stigma (S for \"sticky\").",
+  "feedback": "The anther is the top of the stamen and holds the pollen. The stigma is the sticky top of the pistil, where pollen lands.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_PETAL_SEPAL_JOBS": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+  "error": "Gives the sepals the job of attracting insects and the petals the job of protecting the bud.",
+  "example": {
+   "question": "Which part of a flower protects the bud before it opens?",
+   "wrong_answer": "Petals",
+   "correct_answer": "Sepals"
+  },
+  "cause": "The child has swapped the two names or has assumed the bigger, brighter part does the protecting.",
+  "reveals": "Ask for the protecting part and offer petals first.",
+  "help": "Show a bud: the green sepals wrap it. Then show an open flower: the bright petals are the sign for insects.",
+  "feedback": "Sepals are the tough green parts that wrap the bud. Petals are bright to attract insects and birds.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_POLLEN_IS_SEED": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+  "error": "Thinks pollen is a seed, or that the stamen makes the seeds.",
+  "example": {
+   "question": "Which part of a flower makes pollen?",
+   "wrong_answer": "Ovary",
+   "correct_answer": "Anther"
+  },
+  "cause": "The child links a flower with seeds and has not separated pollen (made on the anther) from seeds (made in the ovary after pollen arrives).",
+  "reveals": "Ask what the stamen makes and offer \"seeds\".",
+  "help": "Rub an anther on paper to see the yellow pollen. Then cut open a young bean pod: the seeds grow in the ovary. They are different things.",
+  "feedback": "Pollen is a fine dust made on the anther. Seeds grow later inside the ovary. Pollen is not a seed.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS.M_PF_OVARY_MAKES_POLLEN": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS",
+  "error": "Gives the ovary the job of making pollen, or gives the anther the job of holding the seeds.",
+  "example": {
+   "question": "Which part of a flower holds the ovules that later become seeds?",
+   "wrong_answer": "Anther",
+   "correct_answer": "Ovary"
+  },
+  "cause": "The child knows the flower makes both pollen and seeds but has not tied each to its own part.",
+  "reveals": "Offer the anther as the part that holds ovules.",
+  "help": "Make a two-column chart: anther - makes pollen; ovary - holds ovules, later the seeds.",
+  "feedback": "The ovary is at the base of the pistil and holds the ovules that become seeds. The anther makes pollen.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_FRUIT_NOT_FROM_FLOWER": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+  "error": "Thinks fruits grow straight from the stem or roots, not from the flower.",
+  "example": {
+   "question": "From which part of a pumpkin plant does the pumpkin fruit grow?",
+   "wrong_answer": "The root",
+   "correct_answer": "The flower (its ovary)"
+  },
+  "cause": "The child sees fruit hanging from the plant and has never watched the flower wither and the fruit swell in its place.",
+  "reveals": "Ask where a fruit comes from and offer root or stem.",
+  "help": "Watch a tomato or pumpkin flower for two weeks: the petals drop and the base of the flower swells into the fruit.",
+  "feedback": "Look at what grows where the flower was. The petals fall off and the ovary at the base swells to become the fruit.",
+  "source": "Children often do not link fruits with flowers (Driver et al. 1994 on plant reproduction). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_POLLINATION_DISPERSAL": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+  "error": "Mixes up pollination (carrying pollen to a stigma) with carrying seeds away to new places.",
+  "example": {
+   "question": "A bee moves from one pumpkin flower to another with yellow dust on its legs. What is happening?",
+   "wrong_answer": "Seeds are being carried to a new place",
+   "correct_answer": "Pollen is being carried to a stigma"
+  },
+  "cause": "The child knows animals and wind help plants spread and uses one idea for both jobs.",
+  "reveals": "Describe pollen movement and offer seed dispersal.",
+  "help": "Two charts: pollination is before the seed (pollen to stigma). Dispersal is after (seed to new ground).",
+  "feedback": "Pollination is carrying pollen from an anther to a stigma. Carrying seeds away to new places is another job, called seed dispersal.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED.M_FS_BEES_NOT_NEEDED": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED",
+  "error": "Thinks flowers make fruits whether or not pollen ever reaches them, so bees and the wind do not matter.",
+  "example": {
+   "question": "A farmer sprays a pesticide that kills all the bees near his pumpkin flowers. What is likely to happen to the pumpkins?",
+   "wrong_answer": "They will still grow just as many fruits",
+   "correct_answer": "Fewer fruits will grow"
+  },
+  "cause": "The child thinks the plant fills the fruit on its own and does not link pollen arriving with seeds starting to grow.",
+  "reveals": "Give a scenario with no pollinators and offer \"no change\".",
+  "help": "Compare a flower covered with a net bag (no visitors) and an open one over two weeks.",
+  "feedback": "Many flowers, such as pumpkin and passion fruit, need pollen to be carried to them. With no bees, fewer flowers are pollinated and fewer fruits grow.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_ONLY_DECORATION": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS",
+  "error": "Thinks flowers are only for decoration and smell.",
+  "example": {
+   "question": "Why are flowers important in nature, apart from looking beautiful?",
+   "wrong_answer": "They are only there to look and smell nice",
+   "correct_answer": "They make fruits and seeds and feed bees and other insects"
+  },
+  "cause": "The child knows flowers from bouquets and gardens and has not thought about what they do for the plant.",
+  "reveals": "Ask for the importance of flowers and offer \"to look nice\" as an answer.",
+  "help": "List everything on the lunch plate that began as a flower: maize, beans, mango, tomato.",
+  "feedback": "Flowers are much more than decoration. They make the fruits and seeds we eat, they feed bees, and they bring in money for farmers.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_INSECTS_HARM": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS",
+  "error": "Thinks insects on flowers harm the plant and should be killed.",
+  "example": {
+   "question": "Bees visit the flowers on Wanjiru's bean plants. What should she think about the bees?",
+   "wrong_answer": "They help the plant make seeds, so she should leave them",
+   "correct_answer": "They are harming the plant, so she should kill them"
+  },
+  "cause": "The child knows some insects eat crops and lumps all insects together.",
+  "reveals": "Offer \"kill the insects\" as a distractor.",
+  "help": "Show a bee carrying pollen. Separate insects that eat leaves from those that carry pollen.",
+  "feedback": "Bees carry pollen from flower to flower, so the plant can make seeds. They help, and they also give us honey.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS.M_IM_FOOD_NOT_FROM_FLOWERS": {
+  "skill": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS",
+  "error": "Does not link everyday foods (mango, beans, tomato, maize grain) with flowers.",
+  "example": {
+   "question": "Which food came from a flower?",
+   "wrong_answer": "Cassava roots",
+   "correct_answer": "Mangoes"
+  },
+  "cause": "The child thinks of flowers as separate from food plants.",
+  "reveals": "Ask which food came from a flower and offer a root.",
+  "help": "Trace a mango back to the mango flower in a season of the year.",
+  "feedback": "Fruits and grains grow from flowers. Mangoes, beans, tomatoes and maize all started as flowers.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_SIZE_DECIDES": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+  "error": "Thinks big animals are vertebrates and small animals are not (or the other way round).",
+  "example": {
+   "question": "Is a small mouse a vertebrate or an invertebrate?",
+   "wrong_answer": "Invertebrate, because it is small",
+   "correct_answer": "Vertebrate, because it has a backbone"
+  },
+  "cause": "The child uses size, which is easy to see, in place of the backbone, which is hidden.",
+  "reveals": "Use a very small vertebrate (mouse, gecko) and a big invertebrate (crab, octopus).",
+  "help": "Feel your own backbone, then compare with the thin skeleton of a small fish.",
+  "feedback": "Size does not matter. A mouse is small but it has a backbone, so it is a vertebrate.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge: children classify animals by obvious features such as size. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_NEEDS_LEGS": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+  "error": "Thinks an animal with no legs (snake, fish) cannot be a vertebrate.",
+  "example": {
+   "question": "A snake has no legs. Is a snake a vertebrate?",
+   "wrong_answer": "No, because it has no legs",
+   "correct_answer": "Yes, because it has a backbone"
+  },
+  "cause": "The child links \"animal with bones\" with legs to stand on.",
+  "reveals": "Use a snake or a fish and offer legs as the reason.",
+  "help": "Look at a snake skeleton picture: a long backbone with many bones.",
+  "feedback": "Legs are not needed. A snake has a long backbone, so it is a vertebrate.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS.M_VC_SHELL_IS_BACKBONE": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS",
+  "error": "Thinks a hard shell or hard outside (crab, beetle, snail) means the animal has a backbone.",
+  "example": {
+   "question": "A crab has a hard shell. Is a crab a vertebrate?",
+   "wrong_answer": "Yes, because its shell is hard like a bone",
+   "correct_answer": "No, because it has no backbone"
+  },
+  "cause": "The child has seen hard parts on the animal and takes them for bones.",
+  "reveals": "Use crab, beetle or snail with \"hard shell\" as the offered reason.",
+  "help": "Compare the inside skeleton of a fish with the outside shell of a crab.",
+  "feedback": "A crab has a hard shell on the outside, but no backbone inside. It is an invertebrate.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_BAT_BIRD": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+  "error": "Thinks a bat is a bird because it flies.",
+  "example": {
+   "question": "To which group does a bat belong?",
+   "wrong_answer": "Birds",
+   "correct_answer": "Mammals"
+  },
+  "cause": "The child groups by how the animal moves, not by body covering and how the young are fed.",
+  "reveals": "Offer the bat with birds in the options.",
+  "help": "A bat has fur and feeds its young on milk. No feathers. Birds have feathers and lay eggs.",
+  "feedback": "Flying does not make a bird. A bat has fur and feeds its young on milk, so it is a mammal.",
+  "source": "Children group animals by where they live or how they move (Braund 1991; Kattmann 2001). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_WATER_IS_FISH": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+  "error": "Thinks any animal that lives in water is a fish (dolphin, crocodile, hippo, frog).",
+  "example": {
+   "question": "To which group does a dolphin belong?",
+   "wrong_answer": "Fish",
+   "correct_answer": "Mammals"
+  },
+  "cause": "The child groups by habitat, not by body features.",
+  "reveals": "Offer dolphin or crocodile with fish in the options.",
+  "help": "Fish have gills and scales. A dolphin breathes air with lungs and feeds its young on milk.",
+  "feedback": "Living in water does not make a fish. A dolphin breathes air and feeds its young on milk, so it is a mammal.",
+  "source": "Braund 1991; Kattmann 2001: habitat-based grouping. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_REPTILE_AMPHIBIAN": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+  "error": "Mixes up reptiles and amphibians (thinking chameleons and lizards are amphibians, or frogs are reptiles).",
+  "example": {
+   "question": "To which group does a chameleon belong?",
+   "wrong_answer": "Amphibians",
+   "correct_answer": "Reptiles"
+  },
+  "cause": "The child knows both groups are cold to the touch and lay eggs and has not looked at the skin.",
+  "reveals": "Offer chameleon or frog with the other group.",
+  "help": "Reptiles have dry scales and lay eggs on land. Amphibians have moist skin and start life in water.",
+  "feedback": "A chameleon has dry scales and lays its eggs on land. That makes it a reptile.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_NOFLY_NOT_BIRD": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+  "error": "Thinks a bird that cannot fly (an ostrich) is not a bird.",
+  "example": {
+   "question": "To which group does an ostrich belong?",
+   "wrong_answer": "Mammals, because it cannot fly",
+   "correct_answer": "Birds"
+  },
+  "cause": "The child uses flying to define a bird, not feathers and eggs with hard shells.",
+  "reveals": "Offer ostrich and \"cannot fly\".",
+  "help": "List what an ostrich has: feathers, wings, a beak, hard-shelled eggs.",
+  "feedback": "An ostrich cannot fly, but it has feathers, wings and a beak, and it lays eggs. It is a bird.",
+  "source": "Braund 1991: a bird must fly. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS.M_VG_EGGS_ARE_BIRDS": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS",
+  "error": "Thinks any animal that lays eggs is a bird.",
+  "example": {
+   "question": "A crocodile lays eggs. Is it a bird?",
+   "wrong_answer": "Yes, because birds lay eggs",
+   "correct_answer": "No, it is a reptile"
+  },
+  "cause": "The child has learned that birds lay eggs and does not know that other groups do too.",
+  "reveals": "Use crocodile, tortoise or tilapia with the reason \"lays eggs\".",
+  "help": "Make a chart of which groups lay eggs: birds, reptiles, fish, amphibians.",
+  "feedback": "Birds lay eggs, but so do reptiles, fish and amphibians. A crocodile has dry scales, so it is a reptile.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_SCALES_FISH_ONLY": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+  "error": "Thinks only fish have scales, so snakes and crocodiles do not.",
+  "example": {
+   "question": "Which group of vertebrates has dry scales and lays eggs on land?",
+   "wrong_answer": "Fish",
+   "correct_answer": "Reptiles"
+  },
+  "cause": "The child links scales with fish because fish scales are the ones seen at the market.",
+  "reveals": "Ask for the group with dry scales and offer fish.",
+  "help": "Look at a snake skin or a chameleon and feel the dry scales. Compare with wet fish scales.",
+  "feedback": "Fish have wet scales and live in water. Reptiles such as snakes and crocodiles have dry scales and lay their eggs on land.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_WINGS_MEAN_BIRD": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+  "error": "Thinks any animal with wings is a bird.",
+  "example": {
+   "question": "Which feature do all birds have, and no other group of vertebrates?",
+   "wrong_answer": "Wings",
+   "correct_answer": "Feathers"
+  },
+  "cause": "The child uses wings, the most noticeable feature, and forgets that bats and insects have wings too.",
+  "reveals": "Ask for the feature found only in birds and offer wings.",
+  "help": "List flying animals: a bat has wings but fur; a butterfly has wings but no backbone. Only birds have feathers.",
+  "feedback": "Bats and insects have wings, but only birds have feathers. Feathers are found in birds and no other group.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES.M_VF_AMPHIBIAN_WATER_ONLY": {
+  "skill": "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES",
+  "error": "Thinks amphibians live only in water, or that the word means \"lives in water\".",
+  "example": {
+   "question": "What does it mean when we say a frog is an amphibian?",
+   "wrong_answer": "It lives only in water",
+   "correct_answer": "It spends part of its life in water and part on land"
+  },
+  "cause": "The child connects frogs with ponds and does not know the young live in water and adults can live on land.",
+  "reveals": "Ask the meaning of amphibian and offer \"lives only in water\".",
+  "help": "Follow the life of a frog: eggs and tadpole in water, adult hops on land.",
+  "feedback": "Amphibians live part of their life in water and part on land. Tadpoles live in water; adult frogs can live on land.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_TRACHEA_FOOD": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+  "error": "Thinks air goes down the same pipe as food, or mixes the windpipe with the food pipe.",
+  "example": {
+   "question": "Which pipe carries air from the nose to the lungs?",
+   "wrong_answer": "The food pipe (gullet)",
+   "correct_answer": "The windpipe (trachea)"
+  },
+  "cause": "The child knows there is one pipe down the neck and does not know there are two.",
+  "reveals": "Offer the food pipe as a distractor.",
+  "help": "Feel the ridged windpipe at the front of the neck. The food pipe is behind it and goes to the stomach.",
+  "feedback": "There are two pipes in the neck. The windpipe, or trachea, carries air to the lungs. The food pipe carries food to the stomach.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_DIAPHRAGM_PLACE": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+  "error": "Does not know where the diaphragm is (puts it in the neck, or thinks it is part of the lungs).",
+  "example": {
+   "question": "Which part of the breathing system is the sheet of muscle under the lungs?",
+   "wrong_answer": "The trachea",
+   "correct_answer": "The diaphragm"
+  },
+  "cause": "The word is new and is not seen or felt from outside.",
+  "reveals": "Describe the diaphragm by position and offer the other names.",
+  "help": "Draw the body with the diaphragm as a dome under the lungs. Feel your belly rise and fall as you breathe.",
+  "feedback": "The diaphragm is a sheet of muscle under the lungs. It is the part that moves when you breathe.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS.M_BP_LUNGS_LOCATION": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS",
+  "error": "Thinks the lungs are low in the belly, or that there is just one.",
+  "example": {
+   "question": "Where are the lungs?",
+   "wrong_answer": "In the belly, next to the stomach",
+   "correct_answer": "In the chest, inside the ribs"
+  },
+  "cause": "Children draw the body from outside and place the lungs low or in the middle (Mintzes 1984 reports young children's body-organ drawings).",
+  "reveals": "Ask for the position of the lungs and offer the belly.",
+  "help": "Put hands on the upper chest and feel the ribs moving. The lungs are behind them.",
+  "feedback": "There are two lungs, high in the chest and protected by the ribs. The stomach is lower, in the belly.",
+  "source": "Mintzes (1984), Naive theories in biology: children's concepts of the human body, School Science and Mathematics. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_AIR_TO_STOMACH": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+  "error": "Thinks the air we breathe goes to the stomach.",
+  "example": {
+   "question": "Where does the air go after the windpipe?",
+   "wrong_answer": "To the stomach",
+   "correct_answer": "To the lungs"
+  },
+  "cause": "The child has not separated the two pipes and the idea that \"air goes down\" ends in the belly.",
+  "reveals": "Ask where air goes after the trachea and offer the stomach.",
+  "help": "Breathe in with the hands on the chest, then on the belly: the chest and the diaphragm move, the stomach does not take in the air.",
+  "feedback": "Air goes to the lungs, not to the stomach. The stomach is for food. Your belly only moves because the diaphragm moves.",
+  "source": "Mann and Treagust (1998), pencil-and-paper instrument on breathing, gas exchange and respiration, Australian Science Teachers Journal. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_LUNGS_PUSH_SELF": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+  "error": "Thinks the lungs have muscles and fill and empty themselves like balloons.",
+  "example": {
+   "question": "What helps the lungs fill with air when you breathe in?",
+   "wrong_answer": "The lungs pull the air in by themselves",
+   "correct_answer": "The diaphragm and the muscles between the ribs"
+  },
+  "cause": "The child treats the lungs as the only moving part, like a balloon that inflates itself.",
+  "reveals": "Ask what makes air come in and offer the lungs themselves.",
+  "help": "Use a bottle with a balloon inside and a balloon sheet at the bottom to model the diaphragm.",
+  "feedback": "The lungs have no muscles. The diaphragm and the muscles between the ribs move, and that makes the lungs fill and empty.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_NO_OXYGEN_OUT": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+  "error": "Thinks we breathe in only oxygen and breathe out only carbon dioxide.",
+  "example": {
+   "question": "Which statement about the air we breathe out is true?",
+   "wrong_answer": "It has no oxygen in it at all",
+   "correct_answer": "It still has some oxygen, and more carbon dioxide than the air we breathe in"
+  },
+  "cause": "The child has heard \"oxygen in, carbon dioxide out\" and takes it as the whole story.",
+  "reveals": "Ask what is in breathed-out air and offer \"no oxygen\".",
+  "help": "Remind the class that mouth-to-mouth breathing works because breathed-out air has oxygen left.",
+  "feedback": "Breathed-out air has less oxygen than the air we breathe in, but it still has some. It also has more carbon dioxide.",
+  "source": "Mann and Treagust (1998). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS.M_BF_NOSE_ONLY_SMELL": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+  "error": "Thinks the nose is only for smelling.",
+  "example": {
+   "question": "Besides smelling, what do the hairs and mucus in the nose do?",
+   "wrong_answer": "Nothing, the nose is only for smelling",
+   "correct_answer": "They trap dust and germs from the air we breathe in"
+  },
+  "cause": "The child knows the nose as a sense organ and not as a part of the breathing system.",
+  "reveals": "Ask what else the nose does and offer \"nothing\".",
+  "help": "Look at a tissue after a dusty day: the dust has been trapped in the nose.",
+  "feedback": "The nose also cleans and warms the air. The hairs and sticky mucus trap dust and germs before the air reaches the lungs.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_RIBS_IN": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+  "error": "Thinks the chest gets smaller or the ribs move in when we breathe in.",
+  "example": {
+   "question": "What happens to the chest when you breathe in?",
+   "wrong_answer": "It gets smaller as the ribs move in",
+   "correct_answer": "It gets bigger as the ribs move up and out"
+  },
+  "cause": "The child thinks of \"squeezing\" the air in, not of making space for it.",
+  "reveals": "Ask what the chest does when breathing in and offer \"it gets smaller\".",
+  "help": "Put both hands on the ribs and take a deep breath: feel them move out and up.",
+  "feedback": "When you breathe in, the ribs move up and out and the diaphragm moves down. The chest gets bigger and air comes in.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT.M_BI_AIR_PUSHES_CHEST": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT",
+  "error": "Thinks the air fills the chest and pushes the ribs out, so the air does the work.",
+  "example": {
+   "question": "What is the first thing that happens when you breathe in?",
+   "wrong_answer": "Air rushes in and pushes the chest out",
+   "correct_answer": "The diaphragm and rib muscles move and the chest gets bigger"
+  },
+  "cause": "The child reverses cause and effect: air arrives first, the chest follows.",
+  "reveals": "Ask what comes first and offer \"air comes in\".",
+  "help": "Use a bell-jar model: pulling the rubber sheet down makes the balloon fill. The air follows the space.",
+  "feedback": "The muscles move first. The chest gets bigger, and then air flows in to fill the space. The air does not push the chest out.",
+  "source": "Mann and Treagust (1998). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ASTHMA_CATCHING": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+  "error": "Thinks asthma can be caught from another person.",
+  "example": {
+   "question": "Can a child catch asthma from a classmate who has it?",
+   "wrong_answer": "Yes, it spreads like a cold",
+   "correct_answer": "No, asthma does not spread from person to person"
+  },
+  "cause": "The child treats every illness of the chest or throat as catching.",
+  "reveals": "Ask whether asthma spreads and offer \"yes\".",
+  "help": "Compare asthma (airways narrow, not an infection) with a cold (a virus that spreads).",
+  "feedback": "Asthma is not an infection. A child with asthma cannot pass it on. Dust, smoke or cold air can start an asthma attack.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ALLERGY_IS_INFECTION": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+  "error": "Thinks sneezing and itchy eyes from dust or pollen are a cold caught from someone.",
+  "example": {
+   "question": "Wambui sneezes and has itchy eyes every time she sweeps the dusty classroom. What is the most likely cause?",
+   "wrong_answer": "She has caught a cold from another child",
+   "correct_answer": "She has an allergy to the dust"
+  },
+  "cause": "The child links sneezing with colds only.",
+  "reveals": "Give the sneezing story with dust and offer \"caught a cold\".",
+  "help": "Ask when the sneezing starts and stops: if it begins with dust and ends when the dust is gone, it points to an allergy.",
+  "feedback": "Sneezing that starts with dust or pollen and stops without it is an allergy, not a cold. An allergy cannot be caught from another person.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS.M_BS_ALL_SAME": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS",
+  "error": "Thinks all coughs and colds are the same illness with the same cause.",
+  "example": {
+   "question": "Which of these can spread from one person to another?",
+   "wrong_answer": "Asthma",
+   "correct_answer": "A common cold"
+  },
+  "cause": "The child treats every breathing problem as \"a cough\".",
+  "reveals": "Ask which can spread and put asthma or allergy next to the cold.",
+  "help": "List causes: cold and COVID-19 by viruses, asthma and allergy by sensitive airways.",
+  "feedback": "Colds and COVID-19 are caused by viruses and spread between people. Asthma and allergy do not spread.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_COLD_WEATHER": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+  "error": "Thinks a cold is caused by cold weather, rain or a cold drink.",
+  "example": {
+   "question": "What causes a common cold?",
+   "wrong_answer": "Cold weather and getting wet in the rain",
+   "correct_answer": "A virus that spreads from one person to another"
+  },
+  "cause": "Colds are more common in the cold season and the child links the two as cause and effect.",
+  "reveals": "Ask for the cause of a cold and offer cold weather.",
+  "help": "Show how the cold spreads when someone coughs without covering. Weather can help the virus spread but does not cause it.",
+  "feedback": "A cold is caused by a virus that spreads from person to person. Cold weather does not cause it.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge (children's ideas about illness and germs). Cited from memory; to confirm by a teacher.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_ANTIBIOTICS": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+  "error": "Thinks medicine called antibiotics cures a cold or COVID-19.",
+  "example": {
+   "question": "Juma has a cold. What helps him get better?",
+   "wrong_answer": "Taking antibiotics, which kill the cold virus",
+   "correct_answer": "Rest and drinking water; antibiotics do not kill viruses"
+  },
+  "cause": "The child has heard that clinics give medicine for coughs and thinks one medicine fits all illnesses.",
+  "reveals": "Ask what cures a cold and offer antibiotics.",
+  "help": "Separate viruses (colds, COVID-19) from bacteria (some chest infections). Only a health worker decides on medicine.",
+  "feedback": "Antibiotics do not kill viruses, and a cold is caused by a virus. Rest and water help. Go to a clinic if the cough is bad or does not go away.",
+  "source": "To confirm by a teacher or health worker before use with children.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_HANDS_NO_MATTER": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+  "error": "Thinks washing hands does not matter for illnesses of the breathing system.",
+  "example": {
+   "question": "Why does washing hands help to stop a cold spreading?",
+   "wrong_answer": "It does not help, because colds are only in the nose",
+   "correct_answer": "Germs on the hands can reach the nose and mouth"
+  },
+  "cause": "The child connects handwashing with stomach illnesses only.",
+  "reveals": "Ask why wash hands to stop a cold and offer \"it does not help\".",
+  "help": "Show glitter on the hands to see how it reaches the face.",
+  "feedback": "Hands pick up virus from surfaces and then touch the nose, eyes and mouth. Washing them helps to stop it.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION.M_BV_SMOKE_HARMLESS": {
+  "skill": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION",
+  "error": "Thinks smoke from a cooking fire in a closed room is harmless.",
+  "example": {
+   "question": "Why is it better to cook outdoors or in a kitchen with a chimney?",
+   "wrong_answer": "Smoke does not harm the lungs, so it makes no difference",
+   "correct_answer": "Smoke can harm the lungs and make coughing and asthma worse"
+  },
+  "cause": "Smoke from cooking is part of everyday life and the child has never linked it to illness.",
+  "reveals": "Ask about smoke in the kitchen and offer \"no difference\".",
+  "help": "Ask the class how their eyes and chest feel in a smoky kitchen.",
+  "feedback": "Smoke irritates the nose and lungs. It can bring on coughs and asthma. A chimney or an open door lets it out.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_CANNOT_BE_UNMIXED": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+  "error": "Thinks that once substances are mixed they change into something new and cannot be got back.",
+  "example": {
+   "question": "Salt is stirred into water and seems to disappear. Can the salt be got back?",
+   "wrong_answer": "No, the salt has gone for ever",
+   "correct_answer": "Yes, the salt is still there and can be got back"
+  },
+  "cause": "The child confuses mixing with cooking or burning, where new substances do form.",
+  "reveals": "Use dissolving or sand and water and ask whether the parts are still there.",
+  "help": "Leave salty water in the sun in a plate. The salt reappears as the water dries.",
+  "feedback": "In a mixture each substance stays the same and can be separated again. Salty water dries and leaves the salt behind.",
+  "source": "Prieto, Blanco and Rodriguez (1989), International Journal of Science Education; Longden, Black and Solomon (1991), International Journal of Science Education (children on dissolving). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_NATURAL_NOT_MIXTURE": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+  "error": "Thinks a mixture must be made on purpose, so air, soil and muddy water are single things.",
+  "example": {
+   "question": "Is air a mixture?",
+   "wrong_answer": "No, air is one substance",
+   "correct_answer": "Yes, it is made of several gases"
+  },
+  "cause": "The child links the word mixture with kitchen or classroom mixing.",
+  "reveals": "Ask about air or soil and offer \"one substance\".",
+  "help": "Look at soil in water: sand, clay and bits of plants settle in layers.",
+  "feedback": "Mixtures can be natural. Air is a mixture of gases, and soil holds sand, clay and bits of plants.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING.M_MM_EQUAL_PARTS": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING",
+  "error": "Thinks the parts of a mixture must be in equal amounts.",
+  "example": {
+   "question": "Wafula puts one spoon of sand in a bucket of water. Is it a mixture?",
+   "wrong_answer": "No, the parts are not equal",
+   "correct_answer": "Yes, the parts can be in any amounts"
+  },
+  "cause": "The child mixes up mixtures with recipes that need fixed amounts.",
+  "reveals": "Use very different amounts and offer \"not a mixture\".",
+  "help": "Make three sand-and-water mixtures of different amounts and compare.",
+  "feedback": "The parts of a mixture can be in any amounts. One spoon of sand in a bucket of water is still a mixture.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_DISSOLVED_GONE": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+  "error": "Thinks dissolved salt or sugar has disappeared, so salty water is only water, not a mixture.",
+  "example": {
+   "question": "Is salt dissolved in water a mixture?",
+   "wrong_answer": "No, the salt has disappeared so it is only water",
+   "correct_answer": "Yes, it is a homogeneous mixture of salt and water"
+  },
+  "cause": "The child cannot see the salt, so thinks it is gone.",
+  "reveals": "Use a clear salt solution and offer \"only water\".",
+  "help": "Taste the water, or let it dry to show the salt.",
+  "feedback": "You cannot see the salt, but it is still there. Salty water is a mixture, and it looks the same all through, so it is homogeneous.",
+  "source": "Prieto, Blanco and Rodriguez (1989), International Journal of Science Education; Longden, Black and Solomon (1991), International Journal of Science Education (children on dissolving). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_CLEAR_IS_PURE": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+  "error": "Thinks a clear liquid must be pure, one substance only.",
+  "example": {
+   "question": "Sugar is dissolved in clear water. Is the water pure?",
+   "wrong_answer": "Yes, because it is clear",
+   "correct_answer": "No, it is a mixture of sugar and water"
+  },
+  "cause": "Clear and clean are used as the same word.",
+  "reveals": "Offer \"yes, it is clear\" as a reason.",
+  "help": "Taste the sugar water: clear but sweet.",
+  "feedback": "Clear does not mean pure. Sweet or salty water is clear, but it holds sugar or salt too. It is a mixture.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS.M_MH_STIRRED_IS_HOMO": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+  "error": "Thinks stirring makes any mixture the same all through (soil in water, oil in water).",
+  "example": {
+   "question": "Muddy water is stirred well. Is it homogeneous?",
+   "wrong_answer": "Yes, because it has been stirred it looks the same all through",
+   "correct_answer": "No, the soil settles and different parts can be seen"
+  },
+  "cause": "The child sees an even brown for a short time and calls it uniform.",
+  "reveals": "Use a freshly stirred sand or soil mixture.",
+  "help": "Stir soil in water and leave it for ten minutes. Layers form.",
+  "feedback": "Stirred muddy water looks even for a short time, but the soil settles at the bottom. Different parts can be seen, so it is heterogeneous.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_LOOKS_LIQUID": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+  "error": "Calls salt dissolved in water a liquid-liquid mixture because it looks like liquid.",
+  "example": {
+   "question": "Salt is dissolved in water. What type of mixture is this?",
+   "wrong_answer": "Liquid-liquid",
+   "correct_answer": "Solid-liquid"
+  },
+  "cause": "The child classifies by how the mixture looks after mixing, not by the states of the parts before.",
+  "reveals": "Use dissolving examples and offer liquid-liquid.",
+  "help": "Name the state of each part before they were mixed: salt (solid), water (liquid).",
+  "feedback": "Look at the parts before they were mixed. Salt is a solid and water is a liquid, so this is a solid-liquid mixture.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES.M_MT_THICK_IS_SOLID": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+  "error": "Thinks a thick liquid (cooking oil, honey) is a solid.",
+  "example": {
+   "question": "Cooking oil is mixed with water. What type of mixture is this?",
+   "wrong_answer": "Solid-liquid, because oil is thick",
+   "correct_answer": "Liquid-liquid"
+  },
+  "cause": "The child equates thick with solid.",
+  "reveals": "Use oil, honey or milk and offer solid-liquid.",
+  "help": "Pour oil: it flows and takes the shape of its container, so it is a liquid.",
+  "feedback": "Oil is thick but it flows and takes the shape of its container, so it is a liquid. Oil and water make a liquid-liquid mixture.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_FILTER_FOR_ALL": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+  "error": "Thinks filtering separates any mixture, including dissolved salt or stones from rice.",
+  "example": {
+   "question": "Which method separates stones from rice?",
+   "wrong_answer": "Filtering",
+   "correct_answer": "Picking"
+  },
+  "cause": "Filtering is the best-known method and the child uses it for everything.",
+  "reveals": "Offer filtering for a dry solid-solid mixture.",
+  "help": "Filter paper only works when one part is a liquid with solid bits in it. Try salt water on filter paper and taste the water.",
+  "feedback": "Filtering is for solids mixed in a liquid. Stones in rice are both solids, so you pick them out or use a sieve.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_MAGNET_ANY_METAL": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+  "error": "Thinks a magnet picks up every metal (aluminium, copper, brass).",
+  "example": {
+   "question": "A jua kali worker has iron nails and aluminium bits mixed in a box. What can a magnet pick out?",
+   "wrong_answer": "Both the nails and the aluminium bits",
+   "correct_answer": "Only the iron nails"
+  },
+  "cause": "The child has learned \"magnets pick up metals\" and has not tested different metals.",
+  "reveals": "Mix an iron item with aluminium or copper and ask what the magnet takes.",
+  "help": "Test an iron nail, an aluminium sufuria piece and a copper wire with a magnet.",
+  "feedback": "A magnet picks up iron and steel, not every metal. Aluminium and copper are not picked up.",
+  "source": "Common test of children's ideas about magnets (D94). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE.M_MS_FUNNEL_SOLIDS": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+  "error": "Thinks a separating funnel separates a solid from a liquid.",
+  "example": {
+   "question": "Which mixture is separated with a separating funnel?",
+   "wrong_answer": "Sand and water",
+   "correct_answer": "Cooking oil and water"
+  },
+  "cause": "The child knows the funnel is for liquids and does not know it needs two liquids that do not mix.",
+  "reveals": "Offer sand and water for a funnel.",
+  "help": "Pour oil and water in a funnel and open the tap: the water comes first. Try sand and water and see that it is not suited.",
+  "feedback": "A separating funnel is for two liquids that do not mix, such as oil and water. The lower liquid is let out through the tap.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_FILTER_REMOVES_DISSOLVED": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+  "error": "Thinks filtering removes dissolved salt or sugar from water.",
+  "example": {
+   "question": "Salty water is poured through filter paper. What is in the water that comes through?",
+   "wrong_answer": "Only water, the filter keeps the salt back",
+   "correct_answer": "Water and the dissolved salt"
+  },
+  "cause": "The child thinks the paper catches everything that is not water.",
+  "reveals": "Ask what drips through filter paper after salt solution and offer \"only water\".",
+  "help": "Filter salty water and taste it. It is still salty. Boil it down to see the salt.",
+  "feedback": "Dissolved salt is in tiny pieces that pass through the paper with the water. Filtering only keeps back bits too big to pass through, such as soil.",
+  "source": "Prieto, Blanco and Rodriguez (1989), International Journal of Science Education; Longden, Black and Solomon (1991), International Journal of Science Education (children on dissolving). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_WINNOW_REVERSED": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+  "error": "Thinks that in winnowing the wind blows the heavy grain away and the light chaff stays.",
+  "example": {
+   "question": "When grain is winnowed, what does the wind blow away?",
+   "wrong_answer": "The heavier grain",
+   "correct_answer": "The lighter chaff"
+  },
+  "cause": "The child has seen the activity but not tied the result to weight.",
+  "reveals": "Ask what the wind blows away and offer the grain.",
+  "help": "Drop a coin and a feather in front of a fan to see which one is blown away.",
+  "feedback": "The wind blows away the lighter chaff. The heavier grain falls straight down into the basin.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE.M_MP_SIEVE_REVERSED": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+  "error": "Thinks the small pieces stay on the sieve and the big ones fall through.",
+  "example": {
+   "question": "Maize flour with husks is passed through a sieve. What stays on the sieve?",
+   "wrong_answer": "The fine flour",
+   "correct_answer": "The big husks"
+  },
+  "cause": "The child thinks of the sieve as a net that catches little things.",
+  "reveals": "Ask what stays in the sieve and offer the fine flour.",
+  "help": "Sieve sand and small stones and look at what remains.",
+  "feedback": "The holes of a sieve let small pieces fall through. Pieces too big for the holes stay on top.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_ONLY_LAB": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+  "error": "Thinks separating mixtures is only done in a science laboratory.",
+  "example": {
+   "question": "Where do people separate mixtures?",
+   "wrong_answer": "Only in a science laboratory",
+   "correct_answer": "At home, in the shamba and at work as well as in a laboratory"
+  },
+  "cause": "The child connects science words with the lab.",
+  "reveals": "Ask where mixtures are separated and offer \"only in a laboratory\".",
+  "help": "List the actions a family does in a day: sieve flour, pick stones from beans, strain tea.",
+  "feedback": "People separate mixtures every day: sieving flour, picking stones from beans, straining tea, winnowing grain.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES.M_MU_FILTER_IS_SAFE": {
+  "skill": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+  "error": "Thinks filtering muddy water makes it safe to drink.",
+  "example": {
+   "question": "Muddy water is filtered through a clean cloth. Is the water now safe to drink?",
+   "wrong_answer": "Yes, because it looks clean",
+   "correct_answer": "No, germs and dissolved things can still be in it"
+  },
+  "cause": "The child thinks that clear means safe.",
+  "reveals": "Ask whether filtered water is safe and offer \"yes\".",
+  "help": "Remember: germs are too small to be caught by a cloth. The water must also be boiled or treated.",
+  "feedback": "Filtering takes out the bits you can see, but germs and dissolved things are still there. The water must also be boiled or treated.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_ONLY_VISIBLE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+  "error": "Thinks water is polluted only if dirt can be seen, so clear water is clean.",
+  "example": {
+   "question": "The water in a stream looks clear. Does that mean it is not polluted?",
+   "wrong_answer": "Yes, clear water cannot be polluted",
+   "correct_answer": "No, germs and chemicals cannot be seen"
+  },
+  "cause": "The child uses looks as the test for clean water.",
+  "reveals": "Offer \"clear water is clean\" as an answer.",
+  "help": "Dissolve soap or salt in a glass of water: it is clear but not clean to drink.",
+  "feedback": "Germs and many chemicals cannot be seen. Clear water can still be polluted.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_ONLY_FACTORIES": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+  "error": "Thinks only factories pollute water.",
+  "example": {
+   "question": "Which of these can pollute a river?",
+   "wrong_answer": "Only a factory pipe",
+   "correct_answer": "A factory pipe, washing at the river and a latrine near the bank"
+  },
+  "cause": "The child links pollution with big machines and smoke.",
+  "reveals": "Offer \"only factories\" and list home sources.",
+  "help": "Make a map of the school stream and list every source of waste along it.",
+  "feedback": "Homes, shambas and schools pollute water too: soap, rubbish, dung, fertiliser and latrines near the water.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY.M_WP_HELPFUL_THINGS_SAFE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY",
+  "error": "Thinks useful things such as soap and fertiliser cannot pollute water.",
+  "example": {
+   "question": "Fertiliser helps maize grow. Can it pollute a river?",
+   "wrong_answer": "No, it helps plants so it cannot harm water",
+   "correct_answer": "Yes, rain can wash it into the river and it harms living things there"
+  },
+  "cause": "The child links useful with harmless.",
+  "reveals": "Use fertiliser, soap or pesticide and offer \"cannot pollute\".",
+  "help": "Look at a pond green with algae after too much fertiliser washed into it.",
+  "feedback": "Useful things pollute water when they get into it in the wrong place. Fertiliser and soap washed into a river harm the living things there.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_ONLY_PEOPLE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+  "error": "Thinks polluted water harms only people, not animals and plants.",
+  "example": {
+   "question": "Oil spills into a river. What happens to the fish?",
+   "wrong_answer": "Nothing, pollution only harms people",
+   "correct_answer": "Many fish may die or fall ill"
+  },
+  "cause": "The child thinks of dirty water as a danger to drinkers.",
+  "reveals": "Ask about fish or crops and offer \"nothing\".",
+  "help": "Look at pictures of an oil spill near a shore.",
+  "feedback": "Pollution harms plants and animals as well as people. Fish can die when the water is polluted.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_UPSTREAM_ONLY": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+  "error": "Thinks pollution harms only the place where it was dumped, not people downstream.",
+  "example": {
+   "question": "A factory dumps waste into a river. Who may be harmed?",
+   "wrong_answer": "Only people next to the factory",
+   "correct_answer": "People and animals living further down the river"
+  },
+  "cause": "The child pictures pollution as staying put.",
+  "reveals": "Ask who is harmed and offer \"only the place where it was dumped\".",
+  "help": "Put food colouring in a gutter model and watch it travel.",
+  "feedback": "A river carries pollution with the water. People and animals far downstream can be harmed.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS.M_WE_BAD_TASTE_ONLY": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS",
+  "error": "Thinks polluted water is only a problem if it smells or tastes bad.",
+  "example": {
+   "question": "Water from a stream has no smell and no bad taste. Is it safe to drink?",
+   "wrong_answer": "Yes, it has no smell or taste",
+   "correct_answer": "Not necessarily, it can have germs that cause diarrhoea"
+  },
+  "cause": "The child uses smell and taste as the test.",
+  "reveals": "Offer \"smells fine, so safe\".",
+  "help": "Remember that cholera germs have no smell.",
+  "feedback": "Germs have no taste or smell. Water can look and taste fine and still make you ill.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_RIVER_WASHES_AWAY": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+  "error": "Thinks a big river washes waste away, so a little rubbish does not matter.",
+  "example": {
+   "question": "Kamau says \"The river is big, so one bag of rubbish does no harm.\" What is wrong with this?",
+   "wrong_answer": "Nothing, a big river washes it away",
+   "correct_answer": "The waste does not disappear; it spreads and harms people and animals downstream"
+  },
+  "cause": "The child thinks that carrying away is the same as making harmless.",
+  "reveals": "Offer \"the river is big\" as an answer.",
+  "help": "Show a bucket of coloured water poured into a larger bucket: the colour only spreads.",
+  "feedback": "A river does not make waste disappear. It carries it away to other places, where it still harms.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_LATRINE_NEAR_WELL": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+  "error": "Thinks a latrine close to a well or river is fine.",
+  "example": {
+   "question": "Where is the best place to dig a latrine?",
+   "wrong_answer": "Next to the well, so it is easy to reach",
+   "correct_answer": "Far from the well and the river"
+  },
+  "cause": "The child thinks of convenience, not of how water moves through the soil.",
+  "reveals": "Offer a place close to the water.",
+  "help": "Pour coloured water through soil near a model well.",
+  "feedback": "Waste from a latrine can seep through the soil into wells and rivers. It must be dug far from them.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION.M_WR_WASH_IN_RIVER": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION",
+  "error": "Thinks washing clothes or cars in the river is harmless.",
+  "example": {
+   "question": "Where should a family wash clothes to keep a stream clean?",
+   "wrong_answer": "In the stream, because the soap washes away",
+   "correct_answer": "Away from the stream, pouring the used water on the ground"
+  },
+  "cause": "The child sees the river as the easiest place for the job.",
+  "reveals": "Offer washing in the stream.",
+  "help": "Ask what is in used wash water: soap, oil and dirt.",
+  "feedback": "Soap and dirt harm fish and make the water unsafe for others. Wash at home and pour the used water on the ground.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_FILTER_MAKES_SAFE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+  "error": "Thinks filtering water makes it safe to drink.",
+  "example": {
+   "question": "A family filters stream water through cloth. What must they still do before drinking it?",
+   "wrong_answer": "Nothing, filtering makes it safe",
+   "correct_answer": "Boil it or treat it to kill germs"
+  },
+  "cause": "The child thinks that clear means safe and that filters kill germs.",
+  "reveals": "Ask what to do after filtering and offer \"nothing\".",
+  "help": "Compare the water under a microscope picture: germs are far smaller than the holes in cloth.",
+  "feedback": "Filtering removes bits you can see. It does not kill germs. The water must be boiled or treated as well.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_BOIL_REMOVES_ALL": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+  "error": "Thinks boiling removes dirt and chemicals from water.",
+  "example": {
+   "question": "Water polluted with soap and oil is boiled. Is it now safe to drink?",
+   "wrong_answer": "Yes, boiling removes everything harmful",
+   "correct_answer": "No, boiling kills germs but does not remove soap or oil"
+  },
+  "cause": "The child sees boiling as the cure for all water problems.",
+  "reveals": "Offer boiling for a chemical problem.",
+  "help": "Boil salty water: it is still salty.",
+  "feedback": "Boiling kills germs. It does not take out chemicals, soap or oil.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_SOLAR_MUDDY": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+  "error": "Thinks muddy water can be treated in the sun in a bucket without filtering.",
+  "example": {
+   "question": "Which water is suitable for solar treatment in a clear plastic bottle?",
+   "wrong_answer": "Muddy water straight from the river",
+   "correct_answer": "Water that has been left to settle and filtered until it is clear"
+  },
+  "cause": "The child does not know that mud blocks the sun's rays and shields germs.",
+  "reveals": "Offer muddy water for solar treatment.",
+  "help": "Place two bottles in the sun: one clear and one muddy.",
+  "feedback": "Sunlight must reach the germs. Muddy water blocks the light, so it must be settled and filtered first.",
+  "source": "Solar disinfection guidance (SODIS) commonly requires clear water. To confirm by a teacher.",
+  "status": "draft"
+ },
+ "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE.M_WT_MORE_CHLORINE": {
+  "skill": "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE",
+  "error": "Thinks more chlorine makes the water safer.",
+  "example": {
+   "question": "A mother adds three times the amount of water treatment tablet shown on the packet. What is the problem?",
+   "wrong_answer": "None, more chlorine makes it safer",
+   "correct_answer": "Too much chlorine makes the water taste bad and can harm people; the packet amount should be used"
+  },
+  "cause": "The child believes more of a cleaning thing is always better.",
+  "reveals": "Offer \"more is safer\".",
+  "help": "Read the packet instructions together.",
+  "feedback": "Use exactly the amount on the packet. Too much chlorine gives a bad taste and can make you ill.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_HEAVY_SINKS": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+  "error": "Thinks heavy things sink and light things float.",
+  "example": {
+   "question": "A big wooden log is much heavier than a small stone. Which one sinks?",
+   "wrong_answer": "The log, because it is heavier",
+   "correct_answer": "The stone, even though it is lighter"
+  },
+  "cause": "The child uses weight alone, the quality that is easy to feel in the hand.",
+  "reveals": "Pair a heavy floater (log) with a light sinker (small stone or nail).",
+  "help": "Drop a big log and a small stone in water. Repeat with a coin and a leaf.",
+  "feedback": "Weight alone does not decide. A heavy log floats and a small stone sinks. What matters is how heavy the object is for its size.",
+  "source": "Kohn (1993), Preschoolers' reasoning about density: will it float?, Child Development; Hsin and Wu (2011), Journal of Science Education and Technology; Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_MATERIAL_ALWAYS": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+  "error": "Thinks a material always floats or always sinks: all metal sinks, all wood floats.",
+  "example": {
+   "question": "A steel ship is made of metal. Does it float or sink?",
+   "wrong_answer": "It sinks, because all metal sinks",
+   "correct_answer": "It floats"
+  },
+  "cause": "The child has learned a rule from a few objects and applies it to every object of that material.",
+  "reveals": "Use a metal that floats (a tin bowl, a ship) or a wood that sinks (ebony).",
+  "help": "Float a tin lid on its flat side, then push it under so it fills with water.",
+  "feedback": "The material alone does not decide. A metal ship floats because of its shape, and a piece of ebony wood sinks. Test each object.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK.M_FA_DEEP_WATER": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK",
+  "error": "Thinks an object that sinks in a basin would float in a lake because there is more water.",
+  "example": {
+   "question": "A stone sinks in a bucket of water. What happens if it is dropped in a deep lake?",
+   "wrong_answer": "It floats, because the lake is deeper",
+   "correct_answer": "It sinks, the same as in the bucket"
+  },
+  "cause": "The child thinks that more water holds things up more.",
+  "reveals": "Offer \"floats in deep water\".",
+  "help": "Drop the stone in a shallow dish and in a bucket. The result is the same.",
+  "feedback": "The amount of water does not change the result. A stone that sinks in a bucket sinks in a lake.",
+  "source": "Hsin and Wu (2011) report children citing the depth of water. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_SHAPE_NO_EFFECT": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+  "error": "Thinks shape makes no difference: a ball of clay sinks, so a bowl of the same clay sinks too.",
+  "example": {
+   "question": "A ball of clay sinks. The same clay is made into a bowl shape. What happens?",
+   "wrong_answer": "It still sinks, because it is the same clay",
+   "correct_answer": "It can float, because the bowl shape pushes aside more water"
+  },
+  "cause": "The child thinks of the material and mass only.",
+  "reveals": "Use a same-material pair with two shapes and offer \"no change\".",
+  "help": "Float a foil boat and then crumple the same foil into a ball.",
+  "feedback": "The same clay can float or sink depending on its shape. A bowl pushes aside more water, so it can float.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_WEIGHT_ONLY": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+  "error": "Thinks only weight decides, so a heavier object always sinks.",
+  "example": {
+   "question": "Two blocks have the same size. Block A is heavier than block B. Which is more likely to sink?",
+   "wrong_answer": "Both float the same way",
+   "correct_answer": "Block A, which is heavier for its size"
+  },
+  "cause": "The child ignores size when it is the same, or ignores weight when it is not.",
+  "reveals": "Use a same-size pair and offer \"same result\".",
+  "help": "Compare two cups of the same size filled with sand and with cotton.",
+  "feedback": "For objects of the same size, the heavier one is more likely to sink. Weight and size must be thought about together.",
+  "source": "Kohn (1993); Hsin and Wu (2011). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_SIZE_ONLY": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+  "error": "Thinks bigger pieces of the same material sink and smaller ones float (or the other way round).",
+  "example": {
+   "question": "A small piece of dry wood floats. Will a much bigger piece of the same wood float?",
+   "wrong_answer": "No, it is too big",
+   "correct_answer": "Yes, it floats too"
+  },
+  "cause": "The child uses size alone.",
+  "reveals": "Compare big and small pieces of one material.",
+  "help": "Float a splinter and a log of the same wood.",
+  "feedback": "Size alone does not decide. Big and small pieces of the same wood both float, because the wood is light for its size.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS.M_FF_LOAD_NO_EFFECT": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS",
+  "error": "Thinks adding a load to a floating object makes no difference.",
+  "example": {
+   "question": "More and more people climb into a small canoe on Lake Victoria. What happens?",
+   "wrong_answer": "Nothing changes, it floats just as high",
+   "correct_answer": "It floats lower and lower and can sink"
+  },
+  "cause": "The child has no idea of the push of water having a limit.",
+  "reveals": "Use a canoe or a boat with passengers.",
+  "help": "Add stones one by one to a floating plastic tub and watch it sink lower.",
+  "feedback": "Each added load makes the boat float lower. With too much load water comes over the side and it sinks.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_STEEL_LIGHT": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+  "error": "Thinks a steel ship floats because steel is lighter than water.",
+  "example": {
+   "question": "Why does a huge steel ship float?",
+   "wrong_answer": "Because steel is lighter than water",
+   "correct_answer": "Because its shape pushes aside a lot of water"
+  },
+  "cause": "The child thinks floating means the material is light.",
+  "reveals": "Ask why the ship floats and offer \"steel is light\".",
+  "help": "A steel nail sinks. Shape the same steel into a bowl and it floats.",
+  "feedback": "Steel is heavier than water. A ship floats because it is shaped like a big hollow bowl that pushes aside a lot of water.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS.M_FU_FLOAT_NO_WEIGHT": {
+  "skill": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS",
+  "error": "Thinks floating things weigh nothing.",
+  "example": {
+   "question": "A floating log is lifted out of the water onto a scale. What does the scale show?",
+   "wrong_answer": "Nothing, because floating things have no weight",
+   "correct_answer": "Its weight, as the log is heavy"
+  },
+  "cause": "The child thinks \"not sinking\" means \"not heavy\".",
+  "reveals": "Ask about the weight of a floating thing.",
+  "help": "Weigh a block of wood that floats.",
+  "feedback": "A floating object still has weight. It floats because the water pushes it up.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_NO_VIBRATION": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+  "error": "Thinks sound is made without anything moving, or that the sound is \"in\" the object.",
+  "example": {
+   "question": "What happens to the skin of a drum when it makes a sound?",
+   "wrong_answer": "It stays still; the sound is inside the drum",
+   "correct_answer": "It vibrates, moving quickly to and fro"
+  },
+  "cause": "The child cannot see the vibration and thinks nothing moves.",
+  "reveals": "Ask what the drum skin does and offer \"stays still\".",
+  "help": "Put rice grains on a drum and hit it: they jump. Hold a ruler off the edge of a desk and twang it.",
+  "feedback": "Every sound is made by something vibrating. The drum skin moves quickly to and fro, and the rice on it jumps.",
+  "source": "Eshach and Schwartz (2006), Sound stuff? Naive materialism in middle-school students' conceptions of sound, International Journal of Science Education. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_AIR_SILENT": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+  "error": "Thinks that in a flute or whistle the air is not part of the sound, only the instrument.",
+  "example": {
+   "question": "What vibrates to make the sound in a flute?",
+   "wrong_answer": "The metal or wood of the flute only",
+   "correct_answer": "The air inside the flute"
+  },
+  "cause": "The child sees the instrument as the object that moves.",
+  "reveals": "Ask what vibrates in a flute and offer the flute itself.",
+  "help": "Blow across the top of a bottle and change the water level.",
+  "feedback": "In a flute or whistle the air inside the pipe vibrates. The vibrating air makes the sound.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES.M_SS_HIT_ONLY": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+  "error": "Thinks sound is only made by hitting or banging things.",
+  "example": {
+   "question": "Which action can make a sound from a string?",
+   "wrong_answer": "Only hitting it with a stick",
+   "correct_answer": "Plucking it with a finger"
+  },
+  "cause": "The child has met drums and bells mostly.",
+  "reveals": "Offer hitting as the only way.",
+  "help": "Pluck a stretched rubber band, then blow across a bottle: sound without banging.",
+  "feedback": "Sound can come from plucking, blowing, rubbing or banging. What matters is that something vibrates.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_ONLY_AIR": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL",
+  "error": "Thinks sound travels only through air, not through water or solids.",
+  "example": {
+   "question": "A learner puts an ear to a wooden desk while a friend taps the other end. What happens?",
+   "wrong_answer": "She hears nothing, because sound only travels through air",
+   "correct_answer": "She hears the tap clearly, because sound travels through the wood"
+  },
+  "cause": "The child associates sound with the air they live in.",
+  "reveals": "Use a solid or water and offer \"only air\".",
+  "help": "Tap a desk and listen with the ear on it. Swimmers hear sounds under water.",
+  "feedback": "Sound can travel through solids, liquids and gases. It can even go through wood and water.",
+  "source": "Eshach and Schwartz (2006); Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_IN_SPACE": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL",
+  "error": "Thinks sound travels through space.",
+  "example": {
+   "question": "An astronaut outside a spacecraft shouts. Can another astronaut far away hear it?",
+   "wrong_answer": "Yes, sound travels everywhere",
+   "correct_answer": "No, there is no air or other material in space to carry the sound"
+  },
+  "cause": "Films show explosions in space with sound.",
+  "reveals": "Ask whether space can carry sound and offer \"yes\".",
+  "help": "Ring a bell in a jar with the air pumped out (video). It goes quiet.",
+  "feedback": "Sound needs something to travel through, such as air, water or a solid. Space is empty, so sound cannot travel there.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_FASTER_IN_AIR": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL",
+  "error": "Thinks sound travels faster through air than through solids or water.",
+  "example": {
+   "question": "Through which material does sound travel fastest?",
+   "wrong_answer": "Air",
+   "correct_answer": "Steel"
+  },
+  "cause": "The child thinks that lighter materials let things travel faster.",
+  "reveals": "Offer air as the fastest.",
+  "help": "Listen to a train through a rail and through the air.",
+  "feedback": "Sound travels fastest through solids such as steel, slower through water and slowest through air.",
+  "source": "Eshach and Schwartz (2006) report this reversal. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL.M_ST_LOUD_FASTER": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL",
+  "error": "Thinks a louder sound travels faster than a quiet one.",
+  "example": {
+   "question": "Two drums are played, one very loud and one very quiet, at the same distance. Which sound arrives first?",
+   "wrong_answer": "The louder one",
+   "correct_answer": "They arrive at the same time"
+  },
+  "cause": "The child links loud with strong and strong with quick.",
+  "reveals": "Offer \"the louder one\".",
+  "help": "Watch a band at a distance: loud and quiet notes of the same beat arrive together.",
+  "feedback": "Loudness does not change speed. The sound from a loud drum and a quiet drum take the same time to arrive.",
+  "source": "Wittmann, Steinberg and Redish (1999) on students' ideas about wave speed. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_ONLY_EARS": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+  "error": "Thinks loud sound affects only the ears, and only for a short time.",
+  "example": {
+   "question": "Which problems can very loud noise cause?",
+   "wrong_answer": "It only makes the ears ring for a moment",
+   "correct_answer": "Damage to hearing, headaches and poor sleep"
+  },
+  "cause": "The child has felt ringing ears after a loud noise and thinks that is all.",
+  "reveals": "Ask what loud noise can cause and offer the short ringing.",
+  "help": "Ask the class how they feel after a long day in a very noisy place.",
+  "feedback": "Very loud sound can damage hearing for good. It can also cause headaches, stress and poor sleep.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_GETS_USED": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+  "error": "Thinks that being used to a loud noise means it no longer harms.",
+  "example": {
+   "question": "A boda boda rider has driven near loud engines for years and says he is now used to the noise. What is true?",
+   "wrong_answer": "Because he is used to it, the noise cannot harm his hearing",
+   "correct_answer": "His hearing can still be getting damaged even if the noise no longer bothers him"
+  },
+  "cause": "The child thinks that feeling no discomfort means no harm.",
+  "reveals": "Offer \"used to it, so no harm\".",
+  "help": "Explain that the tiny hair cells in the ear are not renewed once damaged.",
+  "feedback": "Feeling used to a noise does not stop the damage. Loud noise can still harm hearing, so ear protection is needed.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS.M_SL_MUSIC_SAFE": {
+  "skill": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS",
+  "error": "Thinks loud music cannot harm hearing because it is pleasant.",
+  "example": {
+   "question": "A matatu plays music at full volume every day. What is true for the passengers?",
+   "wrong_answer": "It cannot harm them, because music is pleasant",
+   "correct_answer": "It can harm their hearing, because any very loud sound can"
+  },
+  "cause": "The child thinks that \"noise\" means only unpleasant sounds.",
+  "reveals": "Offer \"music cannot harm\".",
+  "help": "Ask what happens to the ears at a very loud concert.",
+  "feedback": "It is the loudness, not the kind of sound, that harms. Very loud music can damage hearing as well.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_HEAT_RISES": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+  "error": "Thinks heat itself rises, so heat can only go upwards.",
+  "example": {
+   "question": "A hot metal rod is held sideways. In which direction does the heat spread?",
+   "wrong_answer": "Only upwards, because heat rises",
+   "correct_answer": "Along the rod, away from the hot end, in every direction"
+  },
+  "cause": "The child has heard \"heat rises\" and turns it into a rule about all heat.",
+  "reveals": "Use a sideways or downward situation and offer \"up only\".",
+  "help": "Hold a lit candle under, beside and over your hand and feel the warmth in all of them.",
+  "feedback": "Hot air rises, but heat is not limited to going up. In a solid, heat spreads along it from the hot end to the colder parts.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge; Erickson (1979), Children's conceptions of heat and temperature, Science Education. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_COLD_TRAVELS": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+  "error": "Thinks cold flows from ice or a cold object into a warm one.",
+  "example": {
+   "question": "A cold drink is held in a warm hand. What is moving?",
+   "wrong_answer": "Cold moves from the drink into the hand",
+   "correct_answer": "Heat moves from the hand into the drink"
+  },
+  "cause": "The child feels the cold and thinks something cold is arriving.",
+  "reveals": "Offer \"cold flows into the hand\".",
+  "help": "Put a thermometer in the hand and then on the bottle.",
+  "feedback": "There is no flow of cold. Heat always moves from a warmer thing to a colder thing, so the hand loses heat to the drink.",
+  "source": "Erickson (1979); Wiser and Carey (1983). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_SUN_NEEDS_AIR": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+  "error": "Thinks the sun's heat reaches us by conduction through air, or needs air to travel.",
+  "example": {
+   "question": "Space between the Sun and the Earth is empty. How does the Sun's heat reach us?",
+   "wrong_answer": "By conduction through the air",
+   "correct_answer": "By radiation, which needs nothing to carry it"
+  },
+  "cause": "The child pictures heat as needing something to travel through, like sound.",
+  "reveals": "Ask how the sun's heat arrives and offer conduction.",
+  "help": "Hold a hand near a lit lamp and feel the warmth without touching.",
+  "feedback": "Radiation is heat that travels without anything to carry it. That is how the Sun's heat crosses empty space.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES.M_HM_CONVECTION_SOLID": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES",
+  "error": "Thinks convection can happen in solids, such as along a metal spoon.",
+  "example": {
+   "question": "Which mode moves heat along a metal spoon placed in hot tea?",
+   "wrong_answer": "Convection",
+   "correct_answer": "Conduction"
+  },
+  "cause": "The child has memorised the names and cannot tell which fits which material.",
+  "reveals": "Offer convection for a solid.",
+  "help": "Convection needs a fluid that can move. A spoon cannot move its particles around.",
+  "feedback": "Convection happens only in liquids and gases that can flow. Heat moves along a solid by conduction.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_METAL_COLDER": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+  "error": "Thinks metal is colder than wood or plastic because it feels colder.",
+  "example": {
+   "question": "A metal spoon and a wooden spoon have been in the same room all night. Which one is colder?",
+   "wrong_answer": "The metal spoon, because it feels colder",
+   "correct_answer": "Neither, they are the same temperature"
+  },
+  "cause": "The child uses the feeling in the hand as the temperature.",
+  "reveals": "Use two things left in the same room and offer \"metal is colder\".",
+  "help": "Measure both with a thermometer: the reading is the same.",
+  "feedback": "Both are at the temperature of the room. Metal feels colder because it takes heat away from your hand faster.",
+  "source": "Erickson (1979); Wiser and Carey (1983); Harrison, Grayson and Treagust (1999). Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_WOOL_MAKES_HEAT": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+  "error": "Thinks wool and blankets make heat of their own.",
+  "example": {
+   "question": "A cold child is wrapped in a woollen blanket. Where does the warmth come from?",
+   "wrong_answer": "The blanket makes heat",
+   "correct_answer": "The child's own body, kept in by the blanket"
+  },
+  "cause": "The child feels warmth and credits the thing wrapped around.",
+  "reveals": "Put a thermometer in a blanket alone and offer \"the blanket makes heat\".",
+  "help": "Wrap a thermometer in a blanket: the temperature does not rise. Wrap a warm bottle and watch it stay warm.",
+  "feedback": "A blanket is a poor conductor. It keeps your own heat in, but it makes no heat. A blanket around a thermometer does not make it warmer.",
+  "source": "Driver, Squires, Rushworth and Wood-Robinson (1994), Making Sense of Secondary Science, Routledge. Cited from memory.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS.M_HC_CONDUCTOR_KEEPS_HEAT": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+  "error": "Thinks a good conductor of heat keeps heat in for a long time.",
+  "example": {
+   "question": "Which pot handle is better for a hot sufuria?",
+   "wrong_answer": "Metal, because metal holds heat in",
+   "correct_answer": "Wood, because it does not carry heat to the hand"
+  },
+  "cause": "The child mixes up carrying heat (conducting) with keeping heat in.",
+  "reveals": "Ask which handle is safe and offer metal.",
+  "help": "Put a metal and a wooden spoon in hot water and feel the handles after a minute.",
+  "feedback": "A good conductor carries heat quickly, so a metal handle gets hot too. A poor conductor such as wood keeps the heat from your hand.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_COLOUR_NO_EFFECT": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+  "error": "Thinks the colour of a surface makes no difference to how hot it gets in the sun.",
+  "example": {
+   "question": "Two iron sheet roofs, one painted white and one painted black, stand in the sun. Which gets hotter?",
+   "wrong_answer": "Both the same, colour makes no difference",
+   "correct_answer": "The black one, as dark surfaces take in more of the sun's heat"
+  },
+  "cause": "The child has not compared surfaces in the sun.",
+  "reveals": "Offer \"the same\".",
+  "help": "Put a white and a black tin in the sun with thermometers.",
+  "feedback": "Dark surfaces take in more of the sun's radiation and get hotter. Light surfaces reflect more and stay cooler.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_VENT_LOW": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+  "error": "Thinks air vents for a hot room or kitchen are best low on the wall, because heat goes down.",
+  "example": {
+   "question": "Why is a vent put near the roof of a hot kitchen?",
+   "wrong_answer": "Heat goes downwards, so the vent has to catch it",
+   "correct_answer": "Hot air and smoke rise, so they go out through the vent at the top"
+  },
+  "cause": "The child has not met convection in air.",
+  "reveals": "Offer a vent near the floor as correct.",
+  "help": "Hold a candle flame near the top and bottom of a doorway and see the smoke go.",
+  "feedback": "Hot air is lighter and rises, so smoke and hot air can leave through a high vent. This is convection.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES.M_HU_COOKING_ONLY": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+  "error": "Thinks heat transfer matters only when cooking.",
+  "example": {
+   "question": "Which of these uses heat transfer?",
+   "wrong_answer": "Only cooking uses it",
+   "correct_answer": "Cooking, drying clothes in the sun and a flask that keeps tea hot all use it"
+  },
+  "cause": "The child thinks of heat in the kitchen only.",
+  "reveals": "Offer \"only cooking\".",
+  "help": "List the places in a day where heat moves: sun on the roof, tea cooling, wearing a jumper.",
+  "feedback": "Heat moves everywhere: when we cook, dry clothes in the sun and keep tea hot in a flask.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_WET_CLOTH": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+  "error": "Thinks a wet cloth is the safest thing to hold a hot sufuria with.",
+  "example": {
+   "question": "Wanjiru needs to lift a hot sufuria. Which cloth is safest to use?",
+   "wrong_answer": "A wet cloth, because water cools it",
+   "correct_answer": "A dry, thick cloth"
+  },
+  "cause": "The child thinks water always cools things.",
+  "reveals": "Offer a wet cloth.",
+  "help": "A wet cloth conducts heat and steam burns. Compare a dry and a wet cloth on a warm tin.",
+  "feedback": "A wet cloth conducts heat to your hand and makes steam, which burns. Use a thick dry cloth.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_OFF_FIRE_COOL": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+  "error": "Thinks a pot that is no longer on the fire, or has no flame or steam, is safe to touch.",
+  "example": {
+   "question": "A sufuria has just been taken off the jiko. There is no flame or steam. Is it safe to touch?",
+   "wrong_answer": "Yes, there is no flame or steam so it is cool",
+   "correct_answer": "No, it can stay hot for a long time"
+  },
+  "cause": "The child uses flame or steam as the sign of heat.",
+  "reveals": "Offer \"no flame so cool\".",
+  "help": "Hold a hand near, not on, the pot and feel the heat.",
+  "feedback": "Metal can stay very hot for a long time even when there is no flame or steam. Do not touch it.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY.M_HS_METAL_HANDLE_OK": {
+  "skill": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+  "error": "Thinks a metal handle on a hot pan is safe because metal is strong.",
+  "example": {
+   "question": "A sufuria has a metal handle. What is the danger when it is on the fire?",
+   "wrong_answer": "None, metal is strong and safe",
+   "correct_answer": "The handle gets hot because metal carries heat to it"
+  },
+  "cause": "The child mixes up strong with safe.",
+  "reveals": "Offer \"none\".",
+  "help": "Put a metal and a wooden spoon in hot water and feel both handles.",
+  "feedback": "Metal is a good conductor, so the handle becomes hot too. Always use a dry cloth to hold a metal handle.",
+  "source": "To confirm by a teacher: common in classrooms, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

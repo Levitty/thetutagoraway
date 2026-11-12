@@ -1,0 +1,335 @@
+{
+ "outcomes": {
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.a": "classify plants into flowering and non-flowering",
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b": "describe functions of parts of a flower",
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c": "outline the importance of flowers in nature",
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.d": "appreciate the importance of flowers in nature",
+  "SCIE.G5.LIVING.VERTEBRATES.a": "describe general characteristics of vertebrates",
+  "SCIE.G5.LIVING.VERTEBRATES.b": "classify vertebrates into their main groups",
+  "SCIE.G5.LIVING.VERTEBRATES.c": "appreciate the importance of vertebrates in the environment",
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a": "identify the main parts of the human breathing system",
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b": "describe the functions of parts of the human breathing system",
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c": "coutline the symptoms and prevention measures for common conditions and diseases of the breathing system",
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.d": "appreciate the need for maintaining a healthy breathing system",
+  "SCIE.G5.MATTER.MIXTURES.a": "classify mixtures as homogeneous or heterogeneous",
+  "SCIE.G5.MATTER.MIXTURES.b": "apply appropriate methods to separate heterogeneous mixtures",
+  "SCIE.G5.MATTER.MIXTURES.c": "outline the applications of separating mixtures in day-to-day life",
+  "SCIE.G5.MATTER.MIXTURES.d": "appreciate different methods of separating mixtures in day-to-day life",
+  "SCIE.G5.MATTER.WATER_POLLUTION.a": "identify water pollutants in the water sources",
+  "SCIE.G5.MATTER.WATER_POLLUTION.b": "outline the effects of water pollution in day-to-day life",
+  "SCIE.G5.MATTER.WATER_POLLUTION.c": "identify methods of reducing water pollution in the water sources",
+  "SCIE.G5.MATTER.WATER_POLLUTION.d": "apply appropriate methods of water treatment",
+  "SCIE.G5.MATTER.WATER_POLLUTION.e": "advocate for safe water sources in the locality",
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a": "classify objects as floating or sinking in water",
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b": "identify factors that affect floating and sinking of objects in water",
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c": "explain applications of floating and sinking in day-to-day life",
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.d": "appreciate the use of floaters as life savers",
+  "SCIE.G5.FORCE_.SOUND_ENERGY.a": "identify sources of sound in nature",
+  "SCIE.G5.FORCE_.SOUND_ENERGY.b": "demonstrate the movement of sound in nature",
+  "SCIE.G5.FORCE_.SOUND_ENERGY.c": "describe effects of loud sound in day-to-day life",
+  "SCIE.G5.FORCE_.SOUND_ENERGY.d": "appreciate the role of sound in day-to-day life",
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.a": "demonstrate the modes of heat transfer in nature",
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.b": "classify conductors of heat into good or poor conductors",
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.c": "explain the uses of heat transfer in day-to-day life",
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.d": "acknowledge safety precautions when handling heat"
+ },
+ "skills": {
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWERING_OR_NOT": {
+   "forms": [
+    "sort a named plant into flowering or non-flowering",
+    "pick the list that holds only flowering plants",
+    "read a table of plant observations and decide",
+    "say why a plant with no flower this week is still flowering"
+   ],
+   "mastery": "Given a plant the child knows in Kenya (maize, beans, kale, mango, tomato, banana, grass, cypress, pine, fern, moss), says whether it is a flowering or a non-flowering plant and gives the reason: flowering plants make flowers, fruits and seeds; non-flowering plants (ferns, mosses, cypress and pine) make spores or cones instead. The child does not judge by whether the plant is flowering this week or by whether the flower is showy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_NAMES": {
+   "forms": [
+    "name the part from where it is and what it looks like",
+    "match a part to its position in a flower described in words",
+    "which part is not in this flower description",
+    "complete a short label list"
+   ],
+   "mastery": "Given a labelled or described flower, the child names the petals (the bright or coloured parts), the sepals (the small green parts below the petals that covered the bud), the stamens (each with an anther on a thin stalk), and the pistil (stigma at the top, style, and ovary at the base). The child can tell the stamens from the pistil. Proposed: anther, filament, stigma, style and ovary are used as extra names; a teacher confirms how far Grade 5 goes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_PART_FUNCTIONS": {
+   "forms": [
+    "match a part to its job",
+    "which part does this job",
+    "cause and effect: what is lost if a part is removed",
+    "short typed answer: the part that makes pollen"
+   ],
+   "mastery": "The child says what each part does: petals attract insects, birds and bees; sepals protect the flower while it is still a bud; the anther makes pollen; the stigma catches pollen; the ovary holds the ovules that become seeds. Given a job, the child names the part; given a part, the child gives its job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.FLOWER_TO_SEED": {
+   "forms": [
+    "put the steps in order",
+    "cause and effect: what happens if bees cannot reach the flowers",
+    "which part becomes the fruit",
+    "tell pollination apart from carrying seeds away"
+   ],
+   "mastery": "The child puts the steps in order: insects, wind or birds carry pollen from the anther to the stigma (pollination); after that the ovules grow into seeds and the ovary grows into the fruit. The child knows that fruits such as tomatoes, mangoes and pumpkins come from flowers, and that with no pollen arriving a flower usually makes no fruit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.IMPORTANCE_OF_FLOWERS": {
+   "forms": [
+    "pick the importance that is true",
+    "which statement is not an importance of flowers",
+    "cause and effect: what is lost if there were no flowers",
+    "sort uses into food, income, home and nature"
+   ],
+   "mastery": "The child gives at least three importances of flowers and links each to a real example: flowers become fruits and seeds (food for people and animals, new plants); flowers feed bees and other insects with nectar and pollen (and bees give honey); flowers are sold for income (cut flowers from Naivasha), used for decoration, and some give medicine or tea. The child does not say flowers are only for decoration. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_CHARACTERISTICS": {
+   "forms": [
+    "pick the animal that is a vertebrate",
+    "why is a snake a vertebrate",
+    "sort animals into vertebrates and invertebrates",
+    "say what all vertebrates have in common"
+   ],
+   "mastery": "The child says that vertebrates are animals with a backbone and an inside skeleton, and tells vertebrates from invertebrates in the environment (cow, goat, fish, snake, frog, hen are vertebrates; butterfly, termite, earthworm, crab, snail are invertebrates). The child does not decide by size, legs or a hard outside. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_GROUPS": {
+   "forms": [
+    "which group does this animal belong to",
+    "pick the list that holds only one group",
+    "odd one out in a list of animals",
+    "read a table of features and name the group"
+   ],
+   "mastery": "Given a vertebrate from Kenya (cow, goat, lion, bat, dolphin, hen, flamingo, ostrich, tilapia, shark, crocodile, snake, chameleon, tortoise, frog), the child names its group using its body features, not where it lives or whether it flies. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.VERTEBRATES.VERTEBRATE_FEATURES": {
+   "forms": [
+    "which feature belongs to this group",
+    "which feature is found in all birds and no other group",
+    "table of features: name the group",
+    "which animal has this set of features"
+   ],
+   "mastery": "The child matches features to groups: mammals have hair or fur and feed young on milk; birds have feathers, wings and lay hard-shelled eggs; reptiles have dry scales and lay eggs on land; fish have wet scales, fins and gills; amphibians have moist smooth skin and live part of life in water and part on land. Structural features only, as the design says. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_PARTS": {
+   "forms": [
+    "name the part from where it is",
+    "which part is under the lungs",
+    "which part is not part of the breathing system",
+    "put the parts in the order air reaches them"
+   ],
+   "mastery": "The child names the nose, the windpipe (trachea), the lungs and the diaphragm, says where each is (nose on the face, trachea in the neck and chest, lungs in the upper chest inside the ribs, diaphragm under the lungs), and does not mix the windpipe with the food pipe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS": {
+   "forms": [
+    "match the part to its job",
+    "cause and effect: what the nose hairs do",
+    "what happens in the lungs",
+    "which statement about breathing is true"
+   ],
+   "mastery": "The child says what each part does: the nose has hairs and mucus that trap dust and germs, and warms the air; the trachea carries air to the lungs; the lungs take oxygen from the air into the blood and let carbon dioxide out; the diaphragm moves to help the lungs fill and empty. The child knows that air does not go to the stomach, and that breathed-out air still has oxygen in it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_MOVEMENT": {
+   "forms": [
+    "what happens to the chest when we breathe in",
+    "put the steps of breathing in in order",
+    "cause and effect: what makes the air come in",
+    "what you can feel with your hands on your chest"
+   ],
+   "mastery": "The child says that when we breathe in the diaphragm moves down and the ribs move up and out, the space in the chest gets bigger and air flows in; when we breathe out the diaphragm relaxes and moves up, the ribs move down and in, and air is pushed out. The child can say why the chest rises, and that air flows in because the space got bigger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_SYMPTOMS": {
+   "forms": [
+    "match a symptom to a condition",
+    "which condition can spread from person to person",
+    "read a short story of a child and name the likely condition",
+    "which condition cannot be caught from another person"
+   ],
+   "mastery": "The child matches symptoms to conditions: sneezing, runny nose and sore throat for a common cold; a cough that may bring up phlegm for a cough or chest infection; fever, dry cough and tiredness (and sometimes loss of taste) for COVID-19; sneezing and itchy eyes after dust or pollen for an allergy; wheezing and short breath for asthma. The child knows asthma and allergy do not spread from one person to another. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_ILLNESS_PREVENTION": {
+   "forms": [
+    "pick the best way to stop a cold spreading",
+    "cause and effect: why smoke in a closed kitchen is a problem",
+    "which action does not help",
+    "what a child with asthma should avoid"
+   ],
+   "mastery": "The child gives sensible ways to prevent breathing illness: cover the mouth and nose when coughing or sneezing, wash hands often, keep away from people who are sick, wear a mask in crowded or sick places when asked, keep rooms ventilated, keep dust and smoke away (cook outdoors or with a chimney), and avoid what triggers an allergy or asthma. The child knows a cold comes from a virus, not from cold weather, and that antibiotics do not cure it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.MIXTURE_MEANING": {
+   "forms": [
+    "pick the best meaning of a mixture",
+    "is this a mixture",
+    "can the parts be got back",
+    "which of these is not a mixture"
+   ],
+   "mastery": "The child says a mixture is two or more substances put together that are not joined chemically, so each keeps its own properties and can be separated again (sand and water, maize and beans, salt in water). The child knows that natural things such as air, soil and muddy river water are mixtures, and that the parts need not be in equal amounts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS": {
+   "forms": [
+    "sort a mixture into homogeneous or heterogeneous",
+    "pick the list that holds only heterogeneous mixtures",
+    "table of what can be seen: decide the type",
+    "why salty water is a mixture although it looks clear"
+   ],
+   "mastery": "The child says a mixture is homogeneous if it looks the same all through (salt or sugar dissolved in water, sweet tea without leaves, air) and heterogeneous if different parts can be seen (soil and water, sand and stones, maize and beans, oil and water). The child knows dissolved salt is still there, and that stirring does not make soil in water the same all through. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES": {
+   "forms": [
+    "what type is this mixture",
+    "pick the example of a liquid-liquid mixture",
+    "sort examples into the three types",
+    "name the states of the two parts"
+   ],
+   "mastery": "The child names the states of the parts of a mixture and gives examples of each type: solid-solid (maize and beans, sand and gravel), solid-liquid (sand and water, salt in water, tea leaves in tea) and liquid-liquid (oil and water, milk and water, vinegar and water). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE": {
+   "forms": [
+    "which method separates this mixture",
+    "match a mixture to a method",
+    "cause and effect: why a sieve will not separate salt from water",
+    "put the parts of the mixture and the method side by side in a table"
+   ],
+   "mastery": "Given a mixture from home or shamba, the child chooses the right method: winnowing (chaff from grain), picking (stones from rice or beans), sieving (bigger bits from flour or sand from stones), a magnet (iron nails or filings from sand), filtering (soil from muddy water), decanting (water from soil that has settled) or a separating funnel (oil from water). The child can say why the other methods do not suit. The hands-on part of the outcome needs a practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE": {
+   "forms": [
+    "what property does the method use",
+    "cause and effect: why the chaff is blown away",
+    "will filtering remove this",
+    "which part stays on the sieve"
+   ],
+   "mastery": "The child gives the property each method uses: sieving uses the size of the pieces (small pieces fall through, big ones stay); winnowing uses weight (the wind blows the light chaff away and the heavier grain falls); filtering lets liquid through and keeps solid bits back but dissolved things go through too; decanting works when the solid has settled; a magnet works for iron. The child knows filtering does not remove dissolved salt or sugar. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES": {
+   "forms": [
+    "which job uses this method",
+    "which of these is not an example of separating a mixture",
+    "match the job to the method",
+    "why a tea strainer is used"
+   ],
+   "mastery": "The child gives everyday uses of separating methods in Kenya: winnowing at harvest, sieving flour and sand for building, picking stones from rice and beans, filtering tea or water, a magnet picking iron from scrap at jua kali workshops, decanting settled water. The child knows these are done at home and at work, not only in a laboratory, and that filtering alone does not make water safe to drink. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTANT_IDENTIFY": {
+   "forms": [
+    "which of these pollutes a river",
+    "sort things into pollutants and not pollutants",
+    "where does this pollutant come from",
+    "which source is a polluter that is not a factory"
+   ],
+   "mastery": "The child names common water pollutants and where they come from: sewage and waste from latrines and drains, plastic and rubbish, oil and petrol from garages and boats, soap and detergent from washing, fertiliser and pesticide washed from shambas, waste from factories, and animal dung. The child knows water can be polluted even when it looks clear, and that households and farms pollute too, not only factories. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_EFFECTS": {
+   "forms": [
+    "pick the effect that is true",
+    "cause and effect: what happens to the fish",
+    "who is harmed downstream",
+    "which is not an effect of polluted water"
+   ],
+   "mastery": "The child gives effects on people (diarrhoea, cholera, typhoid and other water-borne diseases, bad taste and smell, costs of treating water), on animals (fish and other animals die or get ill) and on plants (crops and water plants die), and says pollution travels downstream and harms people far from where it was dumped. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.POLLUTION_PREVENTION": {
+   "forms": [
+    "which action helps keep a river clean",
+    "which action pollutes",
+    "cause and effect: where to dig a latrine",
+    "what to do with dirty washing water"
+   ],
+   "mastery": "The child gives ways of reducing pollution at a water source: do not dump rubbish or waste in water, wash clothes and cars away from the river and pour the dirty water on the ground, dig latrines far from wells and rivers, use fewer chemicals on the shamba, plant trees and grass along the river banks, and report spills. Dilution by a big river is not a solution. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.MATTER.WATER_POLLUTION.WATER_TREATMENT_CHOICE": {
+   "forms": [
+    "which method fits this problem",
+    "put the steps of treating muddy water in order",
+    "cause and effect: why filter before adding chlorine",
+    "which method does not make this water safe"
+   ],
+   "mastery": "Given a water problem, the child chooses the method and the right order: let it settle and filter muddy water first; boil to kill germs; add chlorine or water-treatment tablets in the correct amount; or leave clear water in a clear plastic bottle in strong sun for about six hours (solar treatment). The child knows each method does one job: boiling does not remove chemicals or dirt, filtering does not kill germs, and muddy water must be filtered before solar or chemical treatment. The practical part needs a hands-on lesson. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_OR_SINK": {
+   "forms": [
+    "will this object float or sink",
+    "pick the list that holds only floating objects",
+    "read a table of results and decide",
+    "which one of these will sink"
+   ],
+   "mastery": "Given an everyday object (cork, dry wood, a leaf, an empty plastic bottle, a coin, a stone, a nail, a key, a sponge, a bar of soap, an unpeeled orange), the child says whether it floats or sinks in water and does not decide by weight alone, size alone or the material name alone. A big log floats; a small stone sinks. The practical part (testing objects) needs a hands-on lesson. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_FACTORS": {
+   "forms": [
+    "what changed so the object floats",
+    "read a table: which factor is different",
+    "cause and effect: what happens when too many people get into a canoe",
+    "which change makes a floating object sink"
+   ],
+   "mastery": "The child says that shape, weight and size together decide whether an object floats: a ball of clay sinks, but the same clay made into a bowl floats because it pushes aside more water; a heavy object floats if it is big and light for its size; adding a load to a floating object makes it float lower, and too much load makes it sink. Given a results table of objects of the same size, the child reads which factor is changed. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.FLOATING_AND_SINKING.FLOAT_APPLICATIONS": {
+   "forms": [
+    "why does a life jacket keep you up",
+    "why does a steel ship float",
+    "which object is a float and which a sinker",
+    "match the object to its use"
+   ],
+   "mastery": "The child explains uses of floating and sinking: life jackets and floats keep people up because they are light for their size; ships and boats are shaped to push aside a lot of water; fishing nets use floats and sinkers; a water tank float valve rises with the water level; swimmers use floats. The child knows a floating thing still has weight. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES": {
+   "forms": [
+    "what is vibrating in this instrument",
+    "which of these makes a sound without being hit",
+    "pick the true statement about sound",
+    "what we can feel on the throat when we hum"
+   ],
+   "mastery": "The child names sources of sound in nature and daily life (drum, guitar or nyatiti string, flute and whistle, voice, bees, thunder, a hit tin) and says all sounds are made by something vibrating (moving quickly to and fro): a drum skin, a string, the air in a pipe or the voice box. The child knows that plucking, blowing and banging can all make sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_TRAVEL": {
+   "forms": [
+    "through which material does sound travel fastest",
+    "can sound travel in space",
+    "why thunder comes after lightning",
+    "cause and effect: why you can hear someone through a closed wooden door"
+   ],
+   "mastery": "The child says that sound travels as vibrations through solids, liquids and gases, in all directions from the source; that it needs something to travel through, so there is no sound in space; that it travels faster through solids and water than through air; that loudness does not change its speed; and that an echo is sound bouncing back. Lightning is seen before thunder is heard because light travels much faster than sound. The demonstration part needs a hands-on lesson. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_EFFECTS": {
+   "forms": [
+    "which is an effect of very loud sound",
+    "what protects hearing",
+    "cause and effect: a worker near a loud machine",
+    "which of these is not a good way to protect hearing"
+   ],
+   "mastery": "The child describes effects of loud sound: damage to hearing (even loss of hearing), headaches, stress and poor sleep, difficulty learning, and fright for animals; and ways to protect hearing (ear protection for workers, keeping music and matatu speakers low, moving away from the noise). The child knows that being used to a noise does not make it harmless and that loud music can harm too. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_MODES": {
+   "forms": [
+    "which mode is this example",
+    "how does the sun's heat reach the Earth",
+    "why smoke goes up",
+    "put the way heat moves along a metal rod in order"
+   ],
+   "mastery": "The child matches each mode to an example: conduction (heat moving along a solid or from one solid to another that touches it, such as a spoon in hot tea or a sufuria on a jiko); convection (heat carried by moving hot liquid or air, such as boiling water or smoke going up); radiation (heat travelling without anything to carry it, such as the sun warming the Earth or a fire warming you at a distance). The child knows heat moves from a hotter place to a colder place, and that it is hot air, not heat, that rises. The demonstration part needs a hands-on lesson. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS": {
+   "forms": [
+    "good or poor conductor",
+    "pick the list that holds only good conductors",
+    "table of how fast an object heated: which is a poor conductor",
+    "why a metal chair feels colder than a wooden one"
+   ],
+   "mastery": "The child says which materials are good conductors (metals such as aluminium, iron, copper) and which are poor conductors, also called insulators (wood, plastic, cloth, wool, air, clay), and why a metal object feels colder than a wooden one at the same temperature (it takes heat away from the hand faster). The child knows wool and blankets keep us warm by holding in body heat, not by making heat. The practical part needs a hands-on lesson. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES": {
+   "forms": [
+    "which mode explains this use",
+    "why is the vent near the roof",
+    "which colour keeps a room cooler",
+    "match the use to the material"
+   ],
+   "mastery": "The child explains uses of heat transfer at home and at work: metal sufurias and wooden spoons (mwiko) for cooking; iron sheet roofs and ceilings; vents high in a room or a kitchen so hot air and smoke go out by convection; drying clothes and maize in the sun (radiation); white or light-coloured surfaces stay cooler than dark ones in the sun; a flask or a thick wall keeps heat in or out. Each use is named with its mode. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY": {
+   "forms": [
+    "which is the safest way to lift a hot sufuria",
+    "which action is unsafe",
+    "cause and effect: why a wet cloth is dangerous",
+    "what to do when a pot is just off the fire"
+   ],
+   "mastery": "The child chooses safe ways of handling hot things: use a dry cloth or pot holder, hold wooden or plastic handles, keep children away from fire and hot water, turn pan handles inwards, never touch a pot that has just come off the fire even if no flame shows, and keep the jiko in a ventilated place. The attitude half of outcome d (acknowledging) is shown by behaviour and cannot be tested by typing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
