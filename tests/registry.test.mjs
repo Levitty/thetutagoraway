@@ -19,12 +19,12 @@ test('the generated registry files are up to date with the entry files', () => {
 });
 
 test('Science Grade 5 and English Grade 5 are the registry entries they were, with the same families', () => {
-  assert.deepEqual(SUBJECT_GRADES.map(e => `${e.subject}_g${e.grade}`).sort(), ['english_g5', 'science_g5']);
+  assert.deepEqual(SUBJECT_GRADES.map(e => `${e.subject}_g${e.grade}`).sort().filter(k => ['english_g5', 'science_g5'].includes(k)), ['english_g5', 'science_g5']);   // later subject-grades add entries: this one is about these two
   assert.equal(entryFor('science', 5).families.length, 84);
   assert.equal(entryFor('english', 5).families.length, 114);
-  assert.deepEqual(SUBJECT_ORDER, ['science', 'english']);
-  assert.deepEqual(SUBJECT_IDS, ['math', 'science', 'english']);
-  assert.deepEqual(SUBJECT_PREFIXES, { MATH: 'math', SCIE: 'science', ENGL: 'english' });
+  assert.deepEqual(SUBJECT_ORDER.slice(0, 2), ['science', 'english']);
+  assert.deepEqual(SUBJECT_IDS.slice(0, 3), ['math', 'science', 'english']);
+  assert.deepEqual({ MATH: SUBJECT_PREFIXES.MATH, SCIE: SUBJECT_PREFIXES.SCIE, ENGL: SUBJECT_PREFIXES.ENGL }, { MATH: 'math', SCIE: 'science', ENGL: 'english' });
   assert.equal(subjectOfCskill('SCIE.G5.X.Y.Z'), 'science');
   assert.equal(subjectOfCskill('ENGL.G5.X.Y.Z'), 'english');
 });
@@ -35,7 +35,7 @@ test('the bank holds the science families (as before) and not the English ones; 
   assert.deepEqual(GRADE_FAMILIES.slice(0, sci.length), sci);   // first in the grade bank, as SCIENCE_G5 was
   assert.equal(FAMILIES.filter(f => f.subject === 'science').length, 84);
   assert.equal(FAMILIES.filter(f => f.subject === 'english').length, 0);
-  assert.deepEqual(familiesOutsideBank(), entryFor('english', 5).families);
+  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), entryFor('english', 5).families);
   assert.deepEqual(ENGLISH_FAMILIES, entryFor('english', 5).families);
 });
 
@@ -69,7 +69,7 @@ test('no registry family is on for children while no signed list has an id (the 
 });
 
 test('the practice engine reads its subjects from the registry', () => {
-  assert.deepEqual(Object.keys(SUBJECT_DEFS), ['science', 'english']);
+  assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
   assert.equal(SUBJECT_DEFS.science.description, 'Grade 5 Science and Technology from the CBC design');
   assert.equal(Object.keys(subjectDef('science').map).length, 33);
   assert.equal(Object.keys(subjectDef('english').map).length, 41);

@@ -4492,7 +4492,9 @@ var SUBJECT_PREFIXES = {
   MATH: "math",
   SCIE: "science",
   ENGL: "english",
-  CRES: "cre"
+  KISW: "kiswahili",
+  CRES: "cre",
+  SOCI: "socialstudies"
 };
 
 // src/learner/subject.js

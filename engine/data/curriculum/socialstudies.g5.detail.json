@@ -1,0 +1,524 @@
+{
+ "outcomes": {
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.a": "identify key elements of a map",
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.b": "illustrate key elements of a map on a sketch",
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.c": "interpret features in a map using key elements",
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.d": "appreciate the use of maps in daily life",
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.a": "identify countries that neighbour Kenya",
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.b": "locate the position of Kenya in relation to her neighbours using a compass direction",
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.c": "value good relations between Kenya and her neighbours",
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.a": "identify main physical features in Kenya",
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.b": "show main physical features in Kenya on a map",
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.c": "value physical features found in Kenya",
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.a": "identify elements of weather in the environment",
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.b": "show main climatic regions in Kenya on a map",
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.c": "describe characteristics of the main climatic regions in Kenya",
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.d": "acknowledge different weather and climatic conditions in planning for day- to- day activities",
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.a": "identify main historic built environments in Kenya",
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.b": "show main historic built environments in Kenya on a map",
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.c": "apply strategies to conserve historic built environments for preservation of cultural heritage",
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.d": "appreciate the need for conserving historic built environments in Kenya",
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.a": "identify main language groups in Kenya",
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.b": "explain benefits of interdependence of language groups in Kenya",
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.c": "show the interdependence of language groups in Kenya",
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.d": "appreciate the interdependence of language groups",
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.a": "explain the effects of population density in different regions in Kenya",
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.b": "show areas of high and low population density in Kenya on a map",
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.c": "acknowledge the impact of population distribution in Kenya",
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.a": "identify methods of instruction used in African traditional education",
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.b": "explain the importance of African traditional education in promoting values",
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.c": "apply African traditional education in promoting values",
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.d": "appreciate the role of African traditional education in promoting values",
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.a": "identify administrative leaders in a school",
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.b": "state duties of administrative leaders in a school",
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.c": "illustrate administrative structure of a school",
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.d": "appreciate work done by administrative leaders in school",
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.a": "identify resources found in Kenya",
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.b": "explain the benefits of using available resources prudently",
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.c": "illustrate ways in which available resources can be used sustainably",
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.d": "appreciate the resources available in society",
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.a": "identify major minerals found in Kenya",
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.b": "use the map of Kenya to locate major minerals",
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.c": "examine the importance of minerals in Kenya",
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.d": "acknowledge the contribution of mining to the economy of Kenya",
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.a": "identify main inland fishing grounds in Kenya",
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.b": "locate main inland fishing grounds in Kenya",
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.c": "explain contribution of fishing to the economy of Kenya",
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.d": "recognise fishing as an economic activity",
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.a": "identify main tourist attractions in Kenya",
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.b": "locate main game reserves and national parks in Kenya",
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.c": "explain contributions of wildlife and tourism to the economy",
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.d": "acknowledge the contribution of wildlife and tourism to the economy of Kenya",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.a": "outline main means of early transport to facilitate movement of goods and services",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.b": "identify modern means of transport in Kenya",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.c": "explore ways of maintaining road safety in society",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.d": "apply safety precautions in using means of transport",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.e": "appreciate the role of modern means of transport in national development",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.a": "outline main early forms of communication to facilitate social interactions",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.b": "explore modern means of communication in Kenya",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.c": "illustrate modern means of communication used in their community",
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.d": "recognise the role of modern means of communication in Kenya",
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.a": "outline leadership qualities of selected traditional leaders in Kenya",
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.b": "illustrate contributions of selected traditional leaders in the Kenya",
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.c": "recognise the role of traditional leaders in the community",
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.a": "describe early forms of government among selected communities in Kenya",
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.b": "compare early forms of government of the Maasai and Ameru",
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.c": "apply best practices from early forms of government among selected communities in Kenya to modern governance",
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.d": "appreciate the importance of early forms of governance in Kenya",
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.a": "state how one becomes a citizen in Kenya",
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.b": "explain requirements for dual citizenship in Kenya",
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.c": "demonstrate good citizenship for personal and social well-being",
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.d": "appreciate being a good citizen in the community",
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.a": "describe the three arms of the National Government in Kenya",
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.b": "illustrate the three arms of National Government in Kenya",
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.c": "desire to participate in national governance in the country",
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.a": "identify national symbols in Kenya",
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.b": "explain factors which promote national unity in Kenya",
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.c": "illustrate ways of overcoming challenges of national unity",
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.d": "develop national awareness to enhance social cohesion among diverse communities",
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.e": "embrace a sense of nationhood and patriotism for harmonious living",
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.a": "identify basic human rights in Kenya",
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.b": "explain the importance of human rights in society",
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.c": "create awareness on the importance of respecting human rights in society",
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.d": "apply ways to protect human rights in society",
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.e": "appreciate the importance of respecting human rights in society",
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.a": "identify types of democracy in Kenya",
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.b": "explain benefits of democracy in society",
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.c": "practise democracy in governance in the community",
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.d": "desire to promote democracy in society"
+ },
+ "skills": {
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_ELEMENTS": {
+   "forms": [
+    "name the element from its job",
+    "say what a described element tells the reader",
+    "pick the element that answers a map question",
+    "find the wrong statement about a map element"
+   ],
+   "mastery": "Given a short description, the child names the title (what the map is about), the frame (the border), the scale (how far a distance on the map is on the ground), the compass (direction) and the key (what each symbol means), and does not swap scale and key or title and frame. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.ELEMENTS_OF_A_MAP.MAP_READING": {
+   "forms": [
+    "read what a symbol means from a described key",
+    "use a scale to find a ground distance",
+    "give a direction from a described map",
+    "read a small table of map facts"
+   ],
+   "mastery": "Given a map described in words or a small table, the child reads a symbol from the key, turns a map distance into a ground distance with the scale, and gives a direction. Map questions are in words or a small described table. The child does not guess a symbol from how it looks and does not read 1 cm as 1 km without the scale. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOURS": {
+   "forms": [
+    "pick the country that borders Kenya",
+    "pick the list of all five neighbours",
+    "say which country does not border Kenya",
+    "spot the false step in a learner's list"
+   ],
+   "mastery": "The child names Ethiopia, South Sudan, Uganda, Tanzania and Somalia as the five countries that share a land border with Kenya, knows the Indian Ocean is water and not a neighbouring country, and does not add countries that are only near, such as Rwanda, Burundi, Zambia or the DR Congo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.LOCATION_POSITION_AND_SI.NEIGHBOUR_DIRECTIONS": {
+   "forms": [
+    "say which direction a neighbour lies from Kenya",
+    "name the neighbour in a given direction",
+    "give the direction from a neighbour back to Kenya",
+    "read a small table of directions"
+   ],
+   "mastery": "The child places Ethiopia to the north, South Sudan to the north-west, Somalia to the east and north-east, Uganda to the west, Tanzania to the south and south-west, and the Indian Ocean to the south-east, and can turn the direction round (Kenya is east of Uganda). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_NAMES": {
+   "forms": [
+    "say what kind of feature it is (mountain, lake, river, valley, ocean)",
+    "name the feature from a short description",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names and classifies Mount Kenya (highest mountain in Kenya), Mount Elgon, the Aberdare Range, the Great Rift Valley, Lake Victoria, Lake Turkana, Lake Naivasha, the Tana and Athi rivers and the Indian Ocean coast, and knows Mount Kilimanjaro is in Tanzania. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.MAIN_PHYSICAL_FEATURES_I.FEATURE_WHERE": {
+   "forms": [
+    "pick the part of Kenya where a feature lies",
+    "name the feature at a described place",
+    "use a neighbour or the equator to place a feature",
+    "read a small table of places"
+   ],
+   "mastery": "Given a described map or table, the child places Lake Victoria in the west, Lake Turkana in the north-west, Mount Kenya in the central highlands on the equator, the Indian Ocean on the south-east coast, Mount Elgon on the Uganda border and the Rift Valley running north to south through the country. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.WEATHER_ELEMENTS": {
+   "forms": [
+    "pick the instrument for an element",
+    "say whether a statement is about weather or climate",
+    "choose the element a reading describes",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names temperature, rainfall, wind, humidity, cloud cover and sunshine as elements of weather, matches the thermometer, rain gauge, wind vane and sunshine recorder to what each measures, and knows weather is the condition of one day or place while climate is the usual pattern over many years. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_PLACES": {
+   "forms": [
+    "name the region of a described place",
+    "pick the place with a given climate",
+    "read a small table of towns and climates",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child places the hot, dry arid and semi-arid regions in the north and east (Turkana, Marsabit, Wajir, Mandera), the hot humid region along the coast (Mombasa, Kilifi), the cool highland region around Mount Kenya and the Rift highlands (Nyeri, Kericho), and the warm, wet region around Lake Victoria and Kakamega. Map questions are in words or a small described table. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.WEATHER_AND_CLIMATE.CLIMATE_REGION_TRAITS": {
+   "forms": [
+    "say which description fits a region",
+    "say which crop or activity fits a region",
+    "explain why a highland town is cool",
+    "read a small table of temperature and rainfall"
+   ],
+   "mastery": "The child describes the arid north as hot with very little rain, the coast as hot and humid with plenty of rain, the highlands as cool with reliable rain, and Lake Victoria as warm with rain through most of the year, and explains that high places are cooler even near the equator. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.HISTORIC_SITES": {
+   "forms": [
+    "name the site from a description",
+    "say where a site is",
+    "say whether a place is built or natural",
+    "read a small table of sites"
+   ],
+   "mastery": "The child names Fort Jesus (Mombasa, built by the Portuguese), Lamu Old Town, the Gedi Ruins (near Malindi), Thimlich Ohinga (stone enclosure in Migori) and the Nairobi National Museum, says where each is, and knows a mountain or lake is natural, not built. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.NATURA.THE_BUILT_ENVIRONMENTS.CONSERVATION": {
+   "forms": [
+    "pick the action that conserves a site",
+    "say why a visitor action harms a site",
+    "say who should look after a site",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks actions that keep a site for later generations (repair with care, no writing or climbing on old walls, guides and visitor rules, teaching others, reporting damage) and rejects harming actions (taking stones, pulling down for new building, writing names). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.GROUP_SORT": {
+   "forms": [
+    "pick the group a community belongs to",
+    "pick the list that belongs to one group",
+    "read a small table and sort a community",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the Kikuyu, Luhya, Kamba, Meru, Kisii and Mijikenda in the Bantu group; the Luo, Kalenjin, Maasai, Samburu and Turkana in the Nilotic group; and the Somali, Borana, Rendille and Gabra in the Cushitic group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.LANGUAGE_GROUPS_IN_KENYA.INTERDEPENDENCE": {
+   "forms": [
+    "say what two communities exchange",
+    "say a benefit of depending on each other",
+    "say why no community can live alone",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives true examples of exchange (herders trade milk, meat and hides for grain and vegetables; fishing communities trade fish for farm produce; Kiswahili and markets link communities) and explains that people share skills, goods and ideas, so no group lives alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_AREAS": {
+   "forms": [
+    "say which area is crowded and which is thinly settled",
+    "pick the reason for high or low density",
+    "work out which area is denser from people and area",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says density means people per square kilometre, that it is high in the central highlands, around Lake Victoria, the coast and Nairobi (good rain, fertile soil, jobs) and low in the dry north and east (little rain, poor soil), and does not mistake a big area for a high density. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.POPULATION_DISTRIBUTION_.DENSITY_EFFECTS": {
+   "forms": [
+    "pick an effect of crowding",
+    "pick an effect of thin settlement",
+    "say which area an effect belongs to",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives effects of high density (small farms, pressure on land, water and housing, crowded schools and roads, easy markets and services) and of low density (few schools, clinics and roads, long distances, plenty of land for herding), and does not say one is all good or all bad. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_METHODS": {
+   "forms": [
+    "name the method from a story of a child learning",
+    "say what a method teaches",
+    "pick the method used in a described scene",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the methods: storytelling, proverbs, riddles, songs and dances, observation and imitation, learning by doing (apprenticeship), initiation and role play, and knows the elders, parents and community were the teachers. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.AFRICAN_TRADITIONAL_EDUC.ATE_VALUES": {
+   "forms": [
+    "say which value a practice teaches",
+    "say why traditional education still matters",
+    "pick a way to practise a value today",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links practices to values (respect for elders, honesty, hard work, sharing, courage, responsibility), explains that traditional education prepared children for adult life in the community, and applies a value in school or at home. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_LEADERS": {
+   "forms": [
+    "say who does a duty",
+    "say what a leader does",
+    "pick the leader to see for a problem",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the headteacher (runs the whole school), the deputy headteacher (helps the head and acts when the head is away), senior teachers and heads of department (guide a subject or section), class teachers (look after a class and the register), the Board of Management (oversees development and discipline in a public school) and prefects (help keep order), and states a duty for each. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.PEOPLE.SCHOOL_ADMINISTRATION.ADMIN_STRUCTURE": {
+   "forms": [
+    "say who is above whom",
+    "say who reports to whom",
+    "finish a described chart",
+    "read a small table of ranks"
+   ],
+   "mastery": "The child puts the headteacher at the top of the school staff, then the deputy headteacher, senior teachers or heads of department, class and subject teachers, and learners with their prefects, and says who reports to whom. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.RESOURCE_TYPES": {
+   "forms": [
+    "say whether something is a natural resource",
+    "pick the resources a place has",
+    "sort resources into natural and made by people",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names land, soil, water, minerals, forests, wildlife, fish, sunshine and wind as natural resources of Kenya, and does not count money or buildings as natural resources. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.RESOURCES_IN_KENYA.PRUDENT_USE": {
+   "forms": [
+    "pick the prudent action",
+    "say what sustainable means with an example",
+    "say what happens if a resource is used up",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child says using resources prudently means using them carefully so they last, and gives sustainable actions (plant trees to replace those cut, mend leaking taps, fish with proper nets, reuse and recycle, rotate crops), and knows that even forests and fish can finish if over-used. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_PLACES": {
+   "forms": [
+    "name the mineral mined at a place",
+    "name the place where a mineral is mined",
+    "say whether something is a mineral",
+    "read a small table of minerals"
+   ],
+   "mastery": "The child links soda ash to Lake Magadi, fluorspar to the Kerio Valley, titanium to Kwale, gemstones to Taita Taveta, limestone (for cement) to the coast and Athi River, gold to Kakamega and Migori, and says the oil found in Turkana is a mineral resource too. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.MINING_IN_KENYA.MINERAL_IMPORTANCE": {
+   "forms": [
+    "say what a mineral is used for",
+    "say how mining helps the country",
+    "say a problem mining can cause",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives the uses of minerals (limestone for cement, soda ash for glass and soap, fluorspar for steel and chemicals, gemstones for jewellery), the gains from mining (jobs, money from sales, raw materials for industries, government income) and the harm mining can do if not controlled (damaged land, dust, unsafe pits). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_GROUNDS": {
+   "forms": [
+    "pick the inland fishing ground",
+    "say where a lake lies",
+    "say whether a water body is inland or the sea",
+    "read a small table of lakes"
+   ],
+   "mastery": "The child names Lake Victoria (the main inland fishing ground, in the west), Lake Turkana (north-west), Lake Naivasha, Lake Baringo and dams on the Tana River, knows the Indian Ocean is the sea and not inland, and knows Lake Magadi is a soda lake. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.FISHING_IN_KENYA.FISHING_ECONOMY": {
+   "forms": [
+    "pick a way fishing helps",
+    "say who earns from fishing",
+    "say why fishing should be controlled",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says fishing gives food and protein, jobs for fishers, traders and processors, money from selling fish at home and abroad (Nile perch fillets), and knows fish stocks must be protected from over-fishing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.ATTRACTIONS_PLACES": {
+   "forms": [
+    "name the park from what it is known for",
+    "say where a park lies",
+    "pick the animal seen in a park",
+    "read a small table of parks"
+   ],
+   "mastery": "The child links the Maasai Mara to the wildebeest migration (Narok), Amboseli to elephants and views of Mount Kilimanjaro (Kajiado), Tsavo to Kenya's largest park and red elephants (south-east), Lake Nakuru to flamingos and rhinos, Samburu to the Grevy's zebra (Isiolo), and the coast to beaches and marine parks. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.WILDLIFE_AND_TOURISM_IN_.TOURISM_ECONOMY": {
+   "forms": [
+    "pick a benefit of tourism",
+    "say who earns from a park",
+    "say why wildlife must be protected",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says tourists bring foreign money, jobs (guides, drivers, hotel and craft workers) and income for local communities and park upkeep, so poaching and destroying wildlife homes harms the whole country. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.EARLY_TRANSPORT": {
+   "forms": [
+    "pick the early means of transport",
+    "say what an early means carried",
+    "sort early and modern means",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names head and back loads carried by people, donkeys, camels and oxen, canoes and dhows, and trading caravans as early means, and sorts them from lorries, trains and aeroplanes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.MODERN_TRANSPORT": {
+   "forms": [
+    "pick the best means for a job",
+    "name the means from a description",
+    "say where a means runs",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks road (matatus, buses, lorries), railway (the Standard Gauge Railway from Mombasa to Naivasha, built after the old railway from Mombasa to Kisumu), air (JKIA, Kisumu, Eldoret), water (ferries, lake steamers, the port of Mombasa) and pipeline (oil, fuel) for the right job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_TRANSPORT.ROAD_SAFETY": {
+   "forms": [
+    "pick the safe action",
+    "say why an action is unsafe",
+    "pick the safe place to cross",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks safe actions: cross at a zebra crossing or footbridge after looking both ways, wear a seat belt or helmet on every trip, wait for a bus at the stop, keep off the road when playing, and says why unsafe actions put people in danger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.EARLY_COMMUNICATION": {
+   "forms": [
+    "pick the early form of communication",
+    "say what a form was used for",
+    "sort early and modern forms",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names drums, horns, smoke signals, whistles, ululation and messengers or runners as early forms, says each carried news or warnings over a distance, and knows they were slower and reached fewer people than modern forms. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.RESOUR.DEVELOPMENT_OF_COMMUNICA.MODERN_COMMUNICATION": {
+   "forms": [
+    "pick the best means for a job",
+    "say what a means can do that another cannot",
+    "say why a means helps a community",
+    "say a risk and how to stay safe"
+   ],
+   "mastery": "The child names mobile phones, radio, television, newspapers, the post office and the internet, picks the right one for a job (radio for news to villages without electricity, post for parcels, phone for a quick call), and knows not everything online is true. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_FACTS": {
+   "forms": [
+    "name the leader from a description",
+    "say which community a leader led",
+    "say what a leader did",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links Mekatilili wa Menza to the Giriama and resistance to forced labour, Koitalel Arap Samoei to the Nandi and resistance to the railway, Nabongo Mumia to the Wanga kingdom and welcoming the British, Waiyaki wa Hinga to the Agikuyu of Dagoretti, and Lenana to the Maasai as a laibon. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.TRADITIONAL_LEADERS_IN_K.LEADER_QUALITIES": {
+   "forms": [
+    "pick the quality shown by an action",
+    "say why a leader was respected",
+    "say a role elders still play today",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names qualities shown (bravery, wisdom, honesty, fairness, unity) from what a leader did, and says elders still settle disputes, guide ceremonies and teach values in many communities. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.EARLY_FORMS": {
+   "forms": [
+    "say how a community was governed",
+    "pick the leader or council",
+    "say who made decisions",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says Kenyan communities had governments before colonial rule: councils of elders (Kikuyu Kiama, Meru Njuri Ncheke), age-sets, spiritual leaders (the Maasai laibon, the Meru Mugwe), clan heads, and kings among the Wanga, and does not say they had no rulers or that all had kings. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.MAASAI_AMERU": {
+   "forms": [
+    "say what the two have in common",
+    "say how they differ",
+    "match a title to its community",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says both ruled through councils of elders and age-sets with no king; the Maasai had a laibon for spiritual guidance and warriors (morans) for defence; the Ameru had the Njuri Ncheke council of elders, who judged cases, and the Mugwe as spiritual leader. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.EARLY_FORMS_OF_GOVERNM_E.LESSONS": {
+   "forms": [
+    "pick the practice worth keeping",
+    "say how it is used today",
+    "say what to leave behind",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks practices that still serve (consulting elders, settling quarrels by talk, leaders serving the community, young people given duties by age) and links each to today (mediation, public participation, community policing, youth service). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.HOW_CITIZEN": {
+   "forms": [
+    "say whether a person is a citizen",
+    "pick the ways to become a citizen",
+    "say what registration needs",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a person is a citizen by birth (born in Kenya, or born abroad when at least one parent is a Kenyan citizen) or by registration (for example after marrying a Kenyan citizen or living lawfully in Kenya for seven years), and that the ID card or passport is a document, not what makes a citizen. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.DUAL": {
+   "forms": [
+    "say what dual citizenship means",
+    "say whether a Kenyan may hold two",
+    "say what a citizen by birth keeps",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says dual citizenship means being a citizen of Kenya and of another country at the same time, that the 2010 Constitution allows it, and that a Kenyan citizen by birth does not lose Kenyan citizenship by taking another nationality. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.CITIZENSHIP_IN_KENYA.GOOD_CITIZEN": {
+   "forms": [
+    "pick the action of a good citizen",
+    "say why a duty matters",
+    "say what a good citizen does when a law is broken",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks actions of a good citizen (obey the law, respect others, keep the environment clean, take part in community work, vote when eligible, report wrongdoing to the right people) and knows citizens have duties as well as rights. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_DUTIES": {
+   "forms": [
+    "say which arm does a job",
+    "say what an arm does",
+    "say what would happen without an arm",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the Executive (the President, Deputy President and Cabinet) runs the country and carries out the laws, the Legislature (Parliament: the National Assembly and the Senate) makes laws, and the Judiciary (the courts) explains the law and settles disputes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.POLITI.NATIONAL_GOVERNMENT.ARMS_MEMBERS": {
+   "forms": [
+    "match a person to an arm",
+    "match a body to an arm",
+    "pick the one that does not belong",
+    "read a small table of titles"
+   ],
+   "mastery": "The child puts the President, Deputy President and Cabinet secretaries in the Executive, members of the National Assembly and Senators in the Legislature, and judges, magistrates and the Chief Justice in the Judiciary, and knows county governors belong to the county level. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.SYMBOLS": {
+   "forms": [
+    "name the symbol from a description",
+    "say what a flag colour stands for",
+    "pick what is not a national symbol",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the national flag, coat of arms, national anthem and public seal as national symbols and gives the flag colours: black for the people, red for the blood shed in the struggle for freedom, green for the land and its wealth, white for peace and honesty. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.NATIONAL_UNITY_IN_KENYA.UNITY_FACTORS": {
+   "forms": [
+    "pick what promotes unity",
+    "pick a challenge to unity",
+    "pick the best way to overcome a challenge",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child gives what promotes unity (national symbols and holidays, Kiswahili and English, sports, schools that mix communities, intermarriage, the motto Harambee), the challenges (tribalism, unfair sharing, corruption) and ways to overcome them (dialogue, fairness, respecting all communities). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.BASIC_RIGHTS": {
+   "forms": [
+    "say whether something is a right",
+    "pick the right that is being denied",
+    "sort rights from wants",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names rights such as life, education, health, a name and nationality, protection from abuse, play and rest, and does not call a want (a phone, sweets, a toy) a right. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.HUMAN_RIGHTS.RIGHTS_RESPONSIBILITY": {
+   "forms": [
+    "say what responsibility goes with a right",
+    "say why rights matter",
+    "say who to tell when rights are denied",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says each right comes with a duty to respect the same right in others, that rights protect dignity and fairness, and that a child whose rights are denied tells a trusted adult, the teacher, the children's office or Childline 116. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.TYPES": {
+   "forms": [
+    "say whether a scene is direct or representative",
+    "pick an example of each type",
+    "say what makes a type",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says in direct democracy everyone decides for themselves (a class vote with a show of hands), in representative democracy people elect leaders to decide for them (voting for a Member of Parliament or a class monitor), and does not call rule by one person democracy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G5.GOVERN.DEMOCRACY_IN_SOCIETY.BENEFITS_PRACTICE": {
+   "forms": [
+    "pick a benefit of democracy",
+    "pick the fair way to run an election",
+    "say what happens after a vote",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child gives benefits (everyone's voice counts, leaders answer to the people, peaceful change, fair decisions) and the fair way to vote (free choice, secret ballot, same rule for all, accepting the result while the minority is still respected). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
