@@ -26,6 +26,9 @@
 //   seal         the open question's seal, kept when the child did not answer it (a question back, "umm")
 //   asked        the question ids used this lesson: a reused id is renamed (its evidence row would be overwritten)
 //   level        the numbers the child is on (the biggest denominator of the problem: 2 halves, 4 quarters, ...); 0 before
+//   changedFails wrong answers since the representation was changed on this idea (two pictures tried or more): after two,
+//                one worked example is allowed (READING_12NOV.md change 2, the "never tell" exit; MathDial)
+//   examples     worked examples given on this idea (one is allowed; reset when the child understands)
 //   wins         successes at that level: understood 1, a bare right answer a half, a hedged one 0; a helped one half that
 //                (PLAN_TO_FOUR.md step 2: one more success at the same level before moving up, habits.js nextLevel)
 //
@@ -40,6 +43,8 @@
 //   "umm" (thinking aloud)              Wait and nudge: one short line, no new question
 //   an answer said as a question        an answer (tentative): say it back, then ask how sure they are, how they know
 //   a question back                     answer it, then hand the question back (it is not a wrong answer)
+//   a wrong answer, second on a changed  the "never tell" exit: ONE worked example, on a different question, with the picture,
+//     representation                     then a similar one handed back (the open answer is still never said)
 //   a wrong answer, second in a row     change the approach: not the same representation again
 //     with the same representation
 //   a wrong answer, with how they got it reteach from their way (asking how again is not diagnosing)
@@ -60,11 +65,12 @@
 import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN } from './commands.js';
 import { PROBE_KINDS } from './silence.js';
 import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
-import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter } from './habits.js';
+import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor } from './habits.js';
 import { fenceTeamText } from './guard.js';
 
 export { soundsLost };
 
+export const WORKED_EXAMPLE_AFTER = 2; // wrong answers on a changed representation before one worked example is allowed
 export const CLOSE_BEFORE_MIN = 3;          // minutes before the end when the lesson closes
 const MAX_CLASSES = 6;
 const MAX_TRIED = 6;
@@ -98,7 +104,7 @@ const WRONG = ['partly_right', 'misconception', 'missing_prerequisite', 'guess_o
 export const newLesson = () => ({
   v: 1, stage: null, doing: null, question: null, tried: [], rep: null, sameFails: 0, hints: 0,
   classes: [], streak: 0, answers: 0, pending: null, prereq: false, turns: 0, probes: 0, min: 0,
-  found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0,
+  found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0, changedFails: 0, examples: 0,
 });
 const MAX_FOUND = 8;
 const MAX_ASKED = 24;
@@ -135,6 +141,8 @@ export function cleanLesson(raw) {
   if (Array.isArray(raw.asked)) s.asked = [...new Set(raw.asked.filter((x) => typeof x === 'string' && ID_RE.test(x)))].slice(-MAX_ASKED);
   s.level = int(raw.level, 0, 24);
   s.wins = Number.isFinite(raw.wins) && raw.wins >= 0 && raw.wins <= 10 ? Math.round(raw.wins * 4) / 4 : 0;
+  s.changedFails = int(raw.changedFails, 0, 20);
+  s.examples = int(raw.examples, 0, 5);
   return s;
 }
 
@@ -236,6 +244,12 @@ export function decide(s, ctx = {}) {
   if (move === 'tentative') return out('tentative', ['Revoice and build', 'Press for reasoning', 'Name what was right'], 'the child gave an answer, said as a question ("maybe four?"): it is an answer, not a question to you. Say back what they said in a few words; if it is right, say so; then ask how sure they are, or how they know. Do not answer it for them', { with: ['Celebrate the strategy'] });
   if (move === 'question') return out('question', ['Revoice and build', 'Smaller-question hint', 'Show then hand over'], 'the child asked you a question (it is not an answer, and not wrong): answer it first, briefly and honestly, without giving the answer to your own question; then hand your question back to them', { with: ['Name what was right'] });
   if (marked && WRONG.includes(prelim)) {
+    // The "never tell" exit (READING_12NOV.md change 2): two failed attempts on a changed representation. One worked example
+    // is allowed, on a different question, then the child tries a similar one; it is not a giveaway.
+    if (s.tried.length >= 2 && s.changedFails + 1 >= WORKED_EXAMPLE_AFTER && (s.examples || 0) < 1) {
+      return out('example', ['Show then hand over', 'Count with the child'],
+        `the child has been wrong ${WORKED_EXAMPLE_AFTER} times on a picture you changed (tried so far: ${s.tried.join(', ')}). The "never tell" rule has an exit now: show ONE worked example, on a DIFFERENT question with different numbers (never the open question's own answer), with a picture, working it aloud one step at a time and naming each step. Then hand a similar new question back to them. Do not say you are giving the answer; say you will show how one goes`, { with: ['Revoice and build', 'Name what was right'], avoid: null });
+    }
     if (s.rep && s.sameFails + 1 >= 2) {
       const left = REPS.filter((r) => r !== 'story' && !s.tried.includes(r));
       return out('change', ['Smaller-question hint', 'Show then hand over', 'Predict then show', 'Recover a lost child'],
@@ -329,6 +343,7 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   if (marked?.correct && marked.canon) s.found = [...new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
   if (decision?.rule === 'care-return') s.care = null;
   if (decision?.rule === 'bored') s.stops += 1;
+  if (decision?.rule === 'example') s.examples = (s.examples || 0) + 1;
   if (!probe) s.diagnosing = decision?.rule === 'diagnose';
   s.seal = keepSeal || null;
   if (probe) s.probes += 1;
@@ -340,16 +355,18 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
     s.classes = [...s.classes, cls].slice(-MAX_CLASSES);
     s.answers += 1;
     if (cls === 'understood') {
-      s.streak += 1; s.sameFails = 0; s.prereq = false;
+      s.streak += 1; s.sameFails = 0; s.prereq = false; s.changedFails = 0; s.examples = 0;
       if (s.pending && (!marked || marked.ask === s.pending.ask || !judged.ask || judged.ask === s.pending.ask)) s.pending = null;
     } else if (cls === 'right_unexplained') {
       if (marked) s.pending = { ask: marked.ask, skill: marked.skill || null };
     } else if (WRONG.includes(cls)) {
       s.streak = 0;
-      if (marked && !marked.correct) s.sameFails += 1;
+      if (marked && !marked.correct) { s.sameFails += 1; if (s.tried.length >= 2) s.changedFails = Math.min(20, (s.changedFails || 0) + 1); }
       if (cls === 'missing_prerequisite') s.prereq = true;
     }
   }
+  // The worked example answers the failures so far (this turn's wrong answer included): the count starts again.
+  if (decision?.rule === 'example') s.changedFails = 0;
   // What this turn did: a new question, a new stage, a new representation, the hints.
   const ask = steps.find((x) => x.cmd === 'ask');
   if (ask) { s.question = { id: ask.id, skill: ask.skill || null, attempts: 0 }; s.hints = 0; s.asked = [...new Set([...(s.asked || []), ask.id])].slice(-MAX_ASKED); }
@@ -370,7 +387,7 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   }
   if (!phase && s.stage == null && steps.length) phase = 'warmup';
   if (['stop', 'close'].includes(decision?.rule) || steps.some((x) => x.cmd === 'end_session')) phase = 'wrapup';
-  if (phase && phase !== s.stage) { s.stage = phase; s.streak = 0; s.answers = 0; s.tried = []; s.sameFails = 0; }
+  if (phase && phase !== s.stage) { s.stage = phase; s.streak = 0; s.answers = 0; s.tried = []; s.sameFails = 0; s.changedFails = 0; s.examples = 0; }
   const reps = repsOf(steps);
   if (reps.length) {
     // A different picture is a change of approach: the count of wrong answers with the old one starts again.
@@ -480,7 +497,14 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
   }
   const code = String(skill || '').split('.').pop();
   const theirs = (history || []).filter((h) => h?.who === 'child').map((h) => h.text).join(' ') + ` ${message}`;
-  if (RULES[code] && !d.rule.match(/^(close|stop|open)$/) && !/\b(same amount|the same|times|multipl\w*|divide\w*|smaller pieces)\b/i.test(theirs)) never.push(`the rule the child should say themselves: ${RULES[code]}`);
+  // After the "never tell" exit the worked example shows the steps; the open answer stays hidden either way.
+  const showing = d.rule === 'example';
+  if (RULES[code] && !showing && !d.rule.match(/^(close|stop|open)$/) && !/\b(same amount|the same|times|multipl\w*|divide\w*|smaller pieces)\b/i.test(theirs)) never.push(`the rule the child should say themselves: ${RULES[code]}`);
+  // The key steps between the question and its answer (READING_12NOV.md change 1: SafeTutors counts them as disclosure).
+  if (!showing && !d.rule.match(/^(close|stop|open)$/)) {
+    const steps = keyStepsFor(skill).filter((k) => !k.said.test(theirs));
+    if (steps.length) never.push(`the key steps the child should find (saying one for them is telling): ${steps.map((k) => k.say).join('; ')}`);
+  }
   if (never.length) L.push(`- Must not say (nor show on the board, nor put in a label or a question): ${never.join('; ')}.`);
   // 3. Answer first.
   if (cr.asks || cr.why || cr.distress) L.push(`- Answer first: your first sentence answers ${cr.distress ? 'how the child feels (name it small, make the next step easier)' : 'their question'}, in 15 words or fewer, before anything else. Then hand the thinking back.`);

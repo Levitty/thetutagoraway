@@ -83,6 +83,9 @@ const DEFAULT_SHAKY = [
 //              behaviour on every turn and does not insert its own acknowledgements and "I don't know"s
 //   repairKinds how many different kinds of picture the tutor must show before the misconception lets go (default 1)
 //   maxWords   hard word cap for this child (default 12)
+//   persist    turns the wrong idea is held after it first shows, whatever the tutor draws (default 2)
+//   tires      { from, to }: the child tires from child turn `from` to `to` (shorter replies, says so; scenario 41)
+//   noImprove  true: the wrong idea is never let go (the non-improving child, READING_12NOV.md change 4)
 const M = (misc, extra = {}) => ({ misc, errorRate: 0.27, behaviour: false, repairKinds: 1, ...extra });
 export const SHEETS = {
   1: M('EQUIV_BOTTOM_ONLY'),
@@ -115,6 +118,19 @@ export const SHEETS = {
   28: M('SIMPLIFY_SMALLER', { behaviour: true }),
   29: M('BIGGER_BOTTOM'),
   30: M('BIGGER_BOTTOM', { maxWords: 12 }),
+  // 31 to 41 (READING_12NOV.md change 3). 34 to 40 are scripted: the sheet only matters for the turns the model plays.
+  31: M('ADD_TOPS_BOTTOMS', { behaviour: true, errorRate: 0.5, persist: 4 }),
+  32: M('ADD_TOPS_BOTTOMS', { behaviour: true, errorRate: 0.6, persist: 5, repairKinds: 2 }),
+  33: M('EQUIV_BOTTOM_ONLY', { behaviour: true }),
+  34: M('BIGGER_BOTTOM'),
+  35: M('BIGGER_BOTTOM'),
+  36: M('BIGGER_BOTTOM'),
+  37: M('BIGGER_BOTTOM'),
+  38: M('EQUIV_ADD'),
+  39: M('BIGGER_BOTTOM'),
+  40: M('EQUIV_BOTTOM_ONLY'),
+  // 41: the child tires; the harness lets the model play the tiredness on every turn, and shortens the cap as it goes (see child.mjs fatigue)
+  41: M('BIGGER_BOTTOM', { behaviour: true, maxWords: 10, errorRate: 0.3, tires: { from: 12, to: 30 } }),
 };
 
 export const DEFAULT_SHEET = M('BIGGER_BOTTOM');

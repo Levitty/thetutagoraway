@@ -331,3 +331,44 @@ test('a wrong answer the child has already explained is retaught from their way,
   assert.match(d.reason, /already said how they got it/);
   assert.equal(decide(at(), { turnIndex: 8, marked: wrong(), message: 'four' }).rule, 'diagnose');
 });
+
+// ---------------------------------------------------------------- the "never tell" exit (READING_12NOV.md change 2)
+test('the never-tell exit: after two failed attempts on a changed picture, ONE worked example is allowed, then back to the child', () => {
+  // wrong with the bar, then wrong with the bar again: change; a number line is drawn; then two wrong answers on it.
+  let s = at({ rep: 'bar', tried: ['bar'] });
+  const step = (state, steps, m, ask) => {
+    const d = decide(state, { turnIndex: 6, marked: m });
+    return { d, s: updateLesson(state, { decision: d, steps, judged: finalClass({ marked: m }), marked: m }) };
+  };
+  let r = step(s, [say('How did you get four?', 'Diagnose the wrong answer'), bar], wrong('q1'));
+  assert.equal(r.d.rule, 'diagnose'); assert.equal(r.s.changedFails, 0, 'one picture only: nothing changed yet');
+  r = step(r.s, [say('Here is a number line.', 'Show then hand over'), line], wrong('q2'));
+  assert.equal(r.d.rule, 'change');
+  assert.deepEqual(r.s.tried, ['bar', 'number line']);
+  r = step(r.s, [say('Where is one half?', 'Smaller-question hint')], wrong('q3'));
+  assert.notEqual(r.d.rule, 'example', 'the first failure on the changed picture is not enough');
+  assert.equal(r.s.changedFails, 1);
+  r = step(r.s, [say('Watch me work a different one. Take two thirds and one third on this bar.', 'Show then hand over')], wrong('q4'));
+  assert.equal(r.d.rule, 'example');
+  assert.deepEqual(r.d.moves, ['Show then hand over', 'Count with the child']);
+  assert.match(r.d.reason, /ONE worked example, on a DIFFERENT question/);
+  assert.match(r.d.reason, /never the open question's own answer/);
+  assert.equal(r.s.examples, 1);
+  assert.equal(r.s.changedFails, 0, 'the count starts again after the example');
+  // One example, not a habit: while it is used up the rules go on as before; understanding clears it.
+  const again = decide({ ...r.s, changedFails: 1 }, { turnIndex: 8, marked: wrong('q5') });
+  assert.notEqual(again.rule, 'example');
+  const learned = updateLesson(r.s, { decision: decide(r.s, { turnIndex: 8, marked: right('q6'), message: 'two because each half is cut into two' }), steps: [say('Yes.', 'Name what was right')], judged: finalClass({ marked: right('q6'), message: 'two because each half is cut into two' }), marked: right('q6') });
+  assert.equal(learned.examples, 0);
+  assert.equal(learned.changedFails, 0);
+  // The turn that plays the example is a legal teaching turn.
+  assert.deepEqual(judgeTurn(r.d, [say('Watch how this one goes.', 'Show then hand over'), bar]), []);
+});
+
+test('the lesson state keeps the exit counters, checked on the way in', () => {
+  const s = cleanLesson({ v: 1, changedFails: 1, examples: 1 });
+  assert.equal(s.changedFails, 1); assert.equal(s.examples, 1);
+  const bad = cleanLesson({ v: 1, changedFails: 99, examples: -2 });
+  assert.equal(bad.changedFails, 0); assert.equal(bad.examples, 0);
+  assert.equal(newLesson().changedFails, 0);
+});

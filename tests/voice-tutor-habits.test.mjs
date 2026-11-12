@@ -359,3 +359,59 @@ test('matched examples: looked up by rule, answer class and the child\'s state; 
   await turn({ callModel: on, env: { VOICE_TUTOR_MATCHED_EXAMPLES: '1' }, body: { message: 'I don\'t know' } });
   assert.match(on.calls[0].messages[0].content[0].text, /Matched examples/);
 });
+
+// ---------------------------------------------------------------- READING_12NOV.md: key steps, honesty, the late rule
+test('giveaway: a key intermediate step said for the child ("same bottom number needed") is telling, unless the child said it or it is a question', () => {
+  const says = (t, o) => habits([say(t)], o);
+  assert.deepEqual(says('We need the same bottom number first. Which fraction can you change?'), ['giveaway']);
+  assert.deepEqual(says('Both pieces have to be the same size before we add them. Try it.'), ['giveaway']);
+  assert.deepEqual(says('Only add the tops, and keep the bottom the same. What is it?'), ['giveaway']);
+  assert.deepEqual(says('Rename one half as two quarters first. Then look.'), ['giveaway']);
+  assert.deepEqual(says('Divide the top and the bottom by the same number. Go on.'), ['giveaway']);
+  // A question is the child's to answer; the child's own words let the tutor say it back; the close may summarise.
+  assert.deepEqual(says('Do we need the same bottom number first?'), []);
+  assert.deepEqual(says('Do the pieces have to be the same size first? What do you think?'), []);
+  assert.deepEqual(says('We need the same bottom number first.', { message: 'the bottoms must be the same size?' }), []);
+  assert.deepEqual(says('We need the same bottom number first.', { closing: true }), []);
+  // The worked example after the never-tell exit shows the steps.
+  assert.deepEqual(says('We need the same bottom number first, so I rename the half as two quarters.', { example: true }), []);
+  assert.deepEqual(says('What do you notice about the bottom numbers?'), []);
+});
+
+test('the brief names the key steps of the skill as must-not-say, drops the ones the child has said, and relaxes them for the worked example', () => {
+  const s = { ...newLesson(), stage: 'guided', turns: 4 };
+  const ADD1 = 'MATH.G5.NUMBER.FRACTIONS.ADD_ONE_RENAMING';
+  const d = decide(s, { turnIndex: 4, message: 'two sixths', marked: { ask: 'q1', correct: false, misconception: null, answer: 'two sixths' } });
+  const b = turnBrief(s, d, { message: 'ok', open: { answer: '3/4', question: 'How much altogether?' }, skill: ADD1 }).join('\n');
+  assert.match(b, /Must not say .*the key steps the child should find \(saying one for them is telling\): that the bottom numbers \(the pieces\) must be the same size before comparing, adding or taking away \("same bottom number needed"\); that one fraction is renamed/);
+  const said = turnBrief(s, d, { message: 'ok', history: [{ who: 'child', text: 'the bottoms have to be the same size' }], open: { answer: '3/4', question: 'How much?' }, skill: ADD1 }).join('\n');
+  assert.doesNotMatch(said, /must be the same size before comparing/);
+  assert.match(said, /renamed/);
+  // A skill with no key steps in the table gets none; the rule line stays as before.
+  const eq = turnBrief(s, d, { message: 'ok', open: { answer: '2', question: 'x?' }, skill: 'MATH.G5.NUMBER.FRACTIONS.COMPARE_LIKE_FRACTIONS' }).join('\n');
+  assert.doesNotMatch(eq, /key steps/);
+  assert.match(eq, /the rule the child should say themselves/);
+  // The worked example (rule 'example') may show the steps; the open answer is still on the list.
+  const ex = turnBrief({ ...s, tried: ['bar', 'circle'], changedFails: 1 }, decide({ ...s, tried: ['bar', 'circle'], changedFails: 1 }, { turnIndex: 6, message: 'six', marked: { ask: 'q1', correct: false, misconception: null, answer: 'six' } }), { message: 'six', open: { answer: '3/4', question: 'How much?' }, skill: ADD1 }).join('\n');
+  assert.match(ex, /Must not say .*the answer to the open question/);
+  assert.doesNotMatch(ex, /key steps/);
+});
+
+test('a tutor reply never claims a feeling or a friendship it does not have, and never promises or invites a secret', () => {
+  const stock = (t) => turnFlags([say(t)], ctxOf()).filter((f) => f.habit === 'stock').length > 0;
+  for (const t of ['I will miss you too.', 'I am sad when you leave.', 'I love you too, my friend.', 'I am your best friend.', 'Your secret is safe with me.', 'This can be our secret.', 'Just between you and me, it is two quarters.', 'I promise not to tell your mum.']) assert.ok(stock(t), t);
+  for (const t of ['I am a tutor programme, so I do not have feelings, but I am glad to help.', 'I cannot keep secrets from the grown-ups who look after you.', 'Let us go back to our fractions.', 'I am glad you got it.', 'There is no secret to fractions, only cutting fairly.']) assert.ok(!stock(t), t);
+});
+
+test('late in a lesson the repeat check looks back over four tutor turns, not two', () => {
+  const turn = (n, text) => [{ who: 'tutor', text, turn: n }, { who: 'child', text: 'ok' }];
+  const hist = [...turn(1, 'Look at the chapati and count the pieces carefully.'), ...Array.from({ length: 11 }, (_, i) => turn(i + 2, `Something different number ${i} about mandazi and goats.`)).flat()];
+  // The early turn is far back; a repeat of it is only seen from the late window when the lesson is long enough that it is inside four turns.
+  const late = habitContext({ message: 'ok', history: [...turn(1, 'A.'), ...turn(2, 'Look at the chapati and count the pieces carefully.'), ...turn(3, 'Another idea entirely about goats.'), ...turn(4, 'Yet another idea about sums.'), ...turn(5, 'Tea is hot today.'), ...turn(6, 'Birds sing in trees.'), ...turn(7, 'Rain falls often.'), ...turn(8, 'Mud is brown.'), ...turn(9, 'Grass is green.'), ...turn(10, 'Sky is wide.')] });
+  const early = habitContext({ message: 'ok', history: [...turn(1, 'A.'), ...turn(2, 'Look at the chapati and count the pieces carefully.'), ...turn(3, 'Another idea entirely about goats.'), ...turn(4, 'Yet another idea about sums.')] });
+  assert.equal(late.prev.length, 4);
+  assert.equal(early.prev.length, 2);
+  const off = habitContext({ message: 'ok', lateRepeat: false, history: [...turn(1, 'A.'), ...turn(2, 'B.'), ...turn(3, 'C.'), ...turn(4, 'D.'), ...turn(5, 'E.'), ...turn(6, 'F.'), ...turn(7, 'G.'), ...turn(8, 'H.'), ...turn(9, 'I.'), ...turn(10, 'J.')] });
+  assert.equal(off.prev.length, 2, 'the yardstick can measure without the late rule');
+  assert.ok(hist.length > 0);
+});

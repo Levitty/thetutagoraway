@@ -4,7 +4,7 @@
 // (it obeys the decision, but is sometimes wordy and sometimes writes full sentences), then checks that what comes
 // out matches the targets: error rate, length, messy share, tidy sentences, mishearing, script leaks.
 //   node scripts/evals/realism-report.mjs [--seed 7] [--lessons 40] [--json]
-import { createChild, wordsOf, leaksScript, rngFrom, CHILD_MODEL, CHILD_FALLBACK } from './child.mjs';
+import { createChild, wordsOf, leaksScript, rngFrom, CHILD_MODEL, CHILD_FALLBACK, moveMix, mixDistance, MOVE_KINDS, NON_IMPROVING_TURNS } from './child.mjs';
 import { SCENARIOS } from './scenarios.mjs';
 import { costOf } from '../../src/rocket/guide.js';
 
@@ -52,6 +52,7 @@ export function fakeModel(rng) {
 
 // ---- run
 const rows = [];
+const allStats = [];
 let leakProbe = 0; let tidy = 0;
 const chars = { sys: 0, user: 0, out: 0 };
 for (let i = 0; i < LESSONS; i += 1) {
@@ -69,6 +70,7 @@ for (let i = 0; i < LESSONS; i += 1) {
     for (const r of calls) { if ((sc.expect && (r.system + r.user).includes(sc.expect)) || (sc.limit && (r.system + r.user).includes(sc.limit))) leakProbe += 1; }
     calls.length = 0;
   }
+  allStats.push({ sc: sc.n, stats: child.stats });
 }
 
 const spoken = rows.filter((r) => r.speech);
@@ -99,6 +101,7 @@ const out = {
   error_rate_default_target_scenarios: pct(plainClaims.filter((r) => r.meta.wrong).length, plainClaims.length),
   error_rate_typical_child: pct(typClaims.filter((r) => r.meta.wrong).length, typClaims.length),
   error_rate_said: pct(withAns.length - saidRight.length, withAns.length),
+  error_rate_said_default: pct(withAns.filter((r) => [1, 2, 3, 30].includes(r.sc)).length - saidRight.filter((r) => [1, 2, 3, 30].includes(r.sc)).length, withAns.filter((r) => [1, 2, 3, 30].includes(r.sc)).length),
   decision_matches_speech: pct(matchPlumbing, withAns.length),
   short_1_to_6: pct(spoken.filter((r) => r.words <= 6).length, spoken.length),
   over_12_words: spoken.filter((r) => r.words > 12).length,
@@ -120,9 +123,42 @@ const out = {
   out.leak_guard_caught = `${caught} of ${parrot.length}`;
   checks_extra.push(['leak guard strips parroted brief text (scenario 22)', caught >= 4]);
 }
+// ---- the move mix, per scenario group and overall, in the shape to set against real answers (child.mjs moveMix / mixDistance)
+{
+  const total = allStats.reduce((a, x) => ({
+    turns: a.turns + x.stats.turns, claims: a.claims + x.stats.claims, wrong: a.wrong + x.stats.wrong, words: a.words + x.stats.words, spoken: a.spoken + x.stats.spoken, hedged: a.hedged + x.stats.hedged,
+    byKind: Object.fromEntries(MOVE_KINDS.map((k) => [k, (a.byKind[k] || 0) + (x.stats.byKind[k] || 0)])),
+  }), { turns: 0, claims: 0, wrong: 0, words: 0, spoken: 0, hedged: 0, byKind: {} });
+  out.move_mix = moveMix(total);
+  const typicalStats = allStats.filter((x) => x.sc === 30).reduce((a, x) => ({ turns: a.turns + x.stats.turns, claims: a.claims + x.stats.claims, wrong: a.wrong + x.stats.wrong, words: a.words + x.stats.words, spoken: a.spoken + x.stats.spoken, hedged: a.hedged + x.stats.hedged, byKind: Object.fromEntries(MOVE_KINDS.map((k) => [k, (a.byKind[k] || 0) + (x.stats.byKind[k] || 0)])) }), { turns: 0, claims: 0, wrong: 0, words: 0, spoken: 0, hedged: 0, byKind: {} });
+  out.move_mix_typical_child = moveMix(typicalStats);
+  // Two halves of the same run set against each other: the distance a real sample would be measured at (sampling noise only).
+  const half = (f) => allStats.filter(f).reduce((a, x) => ({ turns: a.turns + x.stats.turns, claims: a.claims + x.stats.claims, wrong: a.wrong + x.stats.wrong, words: a.words + x.stats.words, spoken: a.spoken + x.stats.spoken, hedged: a.hedged + x.stats.hedged, byKind: Object.fromEntries(MOVE_KINDS.map((k) => [k, (a.byKind[k] || 0) + (x.stats.byKind[k] || 0)])) }), { turns: 0, claims: 0, wrong: 0, words: 0, spoken: 0, hedged: 0, byKind: {} });
+  out.move_mix_noise_floor = mixDistance(moveMix(half((x, i) => i % 2 === 0)), moveMix(half((x, i) => i % 2 === 1)));
+}
+// ---- the non-improving child (READING_12NOV.md change 4): the wrong idea is held for four turns, or never, whatever the tutor draws
+{
+  const sc9 = SCENARIOS.find((s) => s.n === 9);
+  const PICS = [{ cmd: 'fraction_bar' }, { cmd: 'number_line' }, { cmd: 'shape', kind: 'circle' }];
+  // Turns from the wrong idea first showing to the child letting it go (12 if it never does within the 12 turns).
+  const holdFor = async (opt, turns = 12) => {
+    let first = null; let repairedAt = null;
+    const ch = createChild({ sc: sc9, seed: 21, nonImproving: opt, callModel: async () => ({ text: 'two sixths', cost: 0 }) });
+    for (let t = 0; t < turns; t += 1) {
+      const c = await ch.act({ dialogue: '', boardText: 'a bar', tutorText: 'Which is bigger, one quarter or one eighth? Look at the bar.', steps: PICS, answer: 'one quarter', doing: 'answer' });
+      if (c.meta.via === 'misconception' && first == null) first = t;
+      if (c.meta.via === 'repaired' && repairedAt == null) repairedAt = t;
+    }
+    return first == null ? 0 : (repairedAt == null ? turns - first : repairedAt - first);
+  };
+  const heldDefault = await holdFor(null); const heldFour = await holdFor(true); const heldNever = await holdFor('never');
+  out.non_improving = { held_default: heldDefault, held_four_turn_option: heldFour, held_never_option: heldNever };
+  checks_extra.push([`the non-improving child holds its wrong idea at least ${NON_IMPROVING_TURNS} turns past its first (default ${heldDefault}, option ${heldFour}, never ${heldNever})`, heldFour >= NON_IMPROVING_TURNS && heldFour > heldDefault && heldNever >= 10]);
+}
 // ---- checks against the targets
 const checks = [
-  ['error rate 22-32% across scenarios with the default target (1, 2, 3, 30)', out.error_rate_default_target_scenarios >= 22 && out.error_rate_default_target_scenarios <= 32],
+  ['wrong-answer rate 25-30% across scenarios with the default target (1, 2, 3, 30; humans& Persimmon)', out.error_rate_default_target_scenarios >= 25 && out.error_rate_default_target_scenarios <= 30],
+  ['wrong-answer rate as SAID (the words, not the decision) 24-31% in the same scenarios', out.error_rate_said_default >= 24 && out.error_rate_said_default <= 31],
   ['typical child (scenario 30) error rate 20-34%', out.error_rate_typical_child >= 20 && out.error_rate_typical_child <= 34],
   ['what the child says matches the decision >= 95%', out.decision_matches_speech >= 95],
   ['1 to 6 words on at least 85% of turns', out.short_1_to_6 >= 85],
@@ -145,6 +181,9 @@ console.log(`  words: ${Object.entries(out.length_distribution).map(([k, v]) => 
 console.log(`Messy turns (trail off, filler, idk, ignores, other question): ${out.messy_share}%   tidy sentences (8+ words): ${out.tidy_sentences_8plus}%`);
 console.log(`Moves: ${Object.entries(out.by_kind).map(([k, v]) => `${k} ${pct(v, n)}%`).join(', ')}`);
 console.log(`Mishearing: ${out.mishearing_of_turns}% of spoken turns changed (${out.mishearing_where_a_word_could_change}% of those with a number or fraction word, outside scenario 27)`);
+const mm = out.move_mix;
+console.log(`Move mix (for validation against real answers): ${MOVE_KINDS.map((k) => `${k} ${(100 * mm.kinds[k]).toFixed(1)}%`).join(', ')}; wrong ${(100 * mm.wrongRate).toFixed(1)}% of ${mm.claims} claims; hedged ${(100 * mm.hedgeRate).toFixed(1)}%; mean ${mm.meanWords} words. Two halves of this run differ by ${out.move_mix_noise_floor.moveMix} (move mix), ${out.move_mix_noise_floor.wrongRate} (wrong rate): the sampling noise a real sample must beat.`);
+console.log(`Non-improving child: turns from the wrong idea first showing to the child letting it go (capped at the 12 played), default ${out.non_improving.held_default}, four-turn option ${out.non_improving.held_four_turn_option}, never option ${out.non_improving.held_never_option}`);
 console.log(`Script leaks: ${out.script_leaks}; scenario expectation or limit found in a prompt sent to the model: ${out.expectation_sent_to_model}`);
 const old = { in: Math.round(chars.sys / n / 4 * 0 + 520 + chars.user / n / 4), out: 25 };
 const perNewIn = Math.round(chars.sys / n / 4 + chars.user / n / 4);

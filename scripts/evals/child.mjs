@@ -7,6 +7,8 @@
 import { sheetFor } from './child-sheets.mjs';
 
 export const DEFAULT_ERROR_RATE = 0.27;
+/** Turns the wrong idea is held for when the non-improving option is on without a number (READING_12NOV.md: four turns). */
+export const NON_IMPROVING_TURNS = 4;
 // Cheaper and differently trained than the tutor (Sonnet) and the judge (Opus): less sameness. Falls back to Sonnet at low
 // effort if Haiku is not served to this key.
 export const CHILD_MODEL = 'claude-haiku-5-5';
@@ -100,6 +102,30 @@ const VISUAL = { fraction_bar: 'bar', number_line: 'line', shape: 'shape', figur
 export const visualKinds = (steps = []) => steps.filter((s) => VISUAL[s.cmd]).map((s) => (s.cmd === 'shape' ? `shape:${s.kind || ''}` : s.cmd === 'figure' ? `figure:${s.type || ''}` : VISUAL[s.cmd]))
   .concat(steps.some((s) => s.cmd === 'say' && /\b(story|imagine|chapati|mandazi|matatu|shamba|sukuma|loaf|cake|shillings)\b/i.test(s.text || '')) ? ['story'] : []);
 
+// ---------- the move mix, ready to be set against real answers (humans& Persimmon validated its learner on move mix, affect and error
+// rate distances; the real data is the teacher's sheet, see blind-test.mjs). All shares are of the child's turns, so two mixes
+// (pretend and real) are comparable by total variation distance, 0 (the same) to 1 (nothing in common).
+export const MOVE_KINDS = ['answer', 'idk', 'ignore', 'different', 'ack', 'free'];
+/** The child's move mix from its stats (child.stats): shares, error rate on claims, hedge rate and mean words. */
+export function moveMix(stats) {
+  const n = Math.max(1, stats.turns || 0);
+  const kinds = Object.fromEntries(MOVE_KINDS.map((k) => [k, Math.round(1000 * ((stats.byKind || {})[k] || 0) / n) / 1000]));
+  const spoken = Math.max(1, stats.spoken || 0);
+  return {
+    turns: stats.turns || 0, kinds,
+    wrongRate: stats.claims ? Math.round(1000 * stats.wrong / stats.claims) / 1000 : null,
+    claims: stats.claims || 0,
+    hedgeRate: Math.round(1000 * (stats.hedged || 0) / spoken) / 1000,
+    meanWords: Math.round(10 * (stats.words || 0) / spoken) / 10,
+  };
+}
+/** Total variation distance between two move mixes' kinds, and the gaps in error, hedge and length. Both from moveMix(). */
+export function mixDistance(a, b) {
+  const tv = MOVE_KINDS.reduce((t, k) => t + Math.abs((a.kinds[k] || 0) - (b.kinds[k] || 0)), 0) / 2;
+  const gap = (x, y) => (x == null || y == null ? null : Math.round(1000 * Math.abs(x - y)) / 1000);
+  return { moveMix: Math.round(1000 * tv) / 1000, wrongRate: gap(a.wrongRate, b.wrongRate), hedgeRate: gap(a.hedgeRate, b.hedgeRate), meanWords: a.meanWords != null && b.meanWords != null ? Math.round(10 * Math.abs(a.meanWords - b.meanWords)) / 10 : null };
+}
+
 export const personaSystem = (sc, sheet) => `You are role-playing Wanjiru, a Kenyan Grade 5 pupil of about ten years old, in a live one-to-one voice maths lesson with an AI tutor called HOREB. What you say is spoken aloud. You are an ordinary child, not a clever one: you do not use correct maths words unless HOREB just said them, you do not explain neatly, and you are not always sure. You never mention that you are playing a role.
 
 WHAT YOU KNOW:
@@ -124,20 +150,26 @@ Reply with ONLY what you say. Special forms, only when they fit:
  * @param {{sc:object, rng?:Function, seed?:number, callModel:Function, errorRate?:number, models?:string[]}} o
  *   callModel({ model, system, user, maxTokens }) -> { text, cost }
  */
-export function createChild({ sc, rng, seed = 1, callModel, errorRate, models = [CHILD_MODEL, CHILD_FALLBACK] }) {
+export function createChild({ sc, rng, seed = 1, callModel, errorRate, models = [CHILD_MODEL, CHILD_FALLBACK], nonImproving = null }) {
   const R = rng || rngFrom((seed * 1009 + (sc.n || 0)) >>> 0);
   const sheet = sheetFor(sc);
   const target = errorRate ?? sheet.errorRate ?? DEFAULT_ERROR_RATE;
+  // The NON-IMPROVING child (READING_12NOV.md change 4; TutorMoments: the oracle pretend child learns too easily). The wrong idea
+  // is held for at least `persist` turns after it first shows (default 2), however many pictures the tutor has drawn; with
+  // `forever` it is never let go, so the tutor's persistence, its change of representation and its "never tell" exit are what get
+  // tested. Set per sheet (`persist`, `noImprove`) or for a whole run (`nonImproving`: true = four turns, a number = that many,
+  // 'never' = never).
+  const persistTurns = nonImproving === 'never' || sheet.noImprove ? Infinity : nonImproving === true ? NON_IMPROVING_TURNS : Number.isFinite(Number(nonImproving)) && Number(nonImproving) > 0 ? Number(nonImproving) : (sheet.persist || 2);
   const system = personaSystem(sc, sheet);
   const st = { claims: 0, wrong: 0, firstMisAt: null, kinds: new Set(), turnsSince: 0, repaired: false, justRepaired: false, modelIdx: 0, turns: 0, cost: 0 };
-  const stats = { turns: 0, claims: 0, wrong: 0, byKind: {}, misheard: 0, trailed: 0, filler: 0, truncated: 0, leaks: 0 };
+  const stats = { turns: 0, claims: 0, wrong: 0, byKind: {}, byVia: {}, misheard: 0, trailed: 0, filler: 0, truncated: 0, leaks: 0, words: 0, spoken: 0, hedged: 0, persist: Number.isFinite(persistTurns) ? persistTurns : 'never' };
 
   const triggered = (text) => !!sheet.mis.triggers.test(text || '');
   const shaky = (text) => /\b(eighth|sixth|equivalent|add|plus|compare|simplif|bigger|smaller)/i.test(text || '');
 
   // The decision: is this answer right or wrong, and why.
   function decideClaim(ctx) {
-    if (st.firstMisAt != null && !st.repaired && st.turnsSince >= 2 && st.kinds.size >= (sheet.repairKinds || 1)) { st.repaired = true; st.justRepaired = true; }
+    if (st.firstMisAt != null && !st.repaired && st.turnsSince >= persistTurns && st.kinds.size >= (sheet.repairKinds || 1)) { st.repaired = true; st.justRepaired = true; }
     let wrong; let via = null;
     if (!st.repaired && triggered(ctx.tutorText)) { wrong = true; via = 'misconception'; }
     else if (st.repaired && triggered(ctx.tutorText)) { wrong = false; via = 'repaired'; }
@@ -210,14 +242,18 @@ export function createChild({ sc, rng, seed = 1, callModel, errorRate, models = 
      * @param {{dialogue:string, boardText:string, tutorText:string, steps?:object[], answer?:string|null, doing?:string|null, note?:string}} ctx
      * @returns {{speech:string, shade:number[]|null, write:string|null, silent:boolean, meta:object}}
      */
-    async act(ctx) {
+    async act(ctx0) {
+      let ctx = ctx0;
       stats.turns += 1; st.turns += 1;
       // the pictures the tutor has shown since the wrong idea first came out count towards repairing it
       if (st.firstMisAt != null) { st.turnsSince += 1; for (const k of visualKinds(ctx.steps)) st.kinds.add(k); }
+      // A tiring child (scenario 41): from turn `from` to turn `to` the replies shrink and the child says so.
+      const tired = sheet.tires ? clamp((st.turns - sheet.tires.from) / Math.max(1, sheet.tires.to - sheet.tires.from), 0, 1) : 0;
+      if (tired > 0.3) ctx = { ...ctx, note: `${ctx.note ? `${ctx.note}\n` : ''}You are getting ${tired > 0.6 ? 'very ' : ''}tired after a long lesson: slow, short, a yawn or "ehh" sometimes${tired > 0.6 ? ', and you say you are tired or want to stop soon' : ''}.` };
       const p = plan(ctx);
-      const len = drawLength(R);
+      const len = tired > 0.6 ? Math.min(drawLength(R), 2) : tired > 0.3 ? Math.min(drawLength(R), 3) : drawLength(R);
       const meta = { kind: p.kind, claim: p.claim && p.kind === 'answer', wrong: p.decision?.wrong ?? null, via: p.decision?.via ?? null };
-      if (meta.claim) { stats.claims += 1; if (meta.wrong) stats.wrong += 1; }
+      if (meta.claim) { stats.claims += 1; if (meta.wrong) stats.wrong += 1; stats.byVia[meta.via || 'right'] = (stats.byVia[meta.via || 'right'] || 0) + 1; }
       stats.byKind[p.kind] = (stats.byKind[p.kind] || 0) + 1;
       let parsed;
       if (p.kind === 'idk') parsed = { speech: pick(R, IDK), shade: null, write: null, silent: false };
@@ -237,6 +273,7 @@ export function createChild({ sc, rng, seed = 1, callModel, errorRate, models = 
       speech = rough.text;
       if (rough.flags.trailed) stats.trailed += 1; if (rough.flags.filler) stats.filler += 1; if (rough.flags.truncated) stats.truncated += 1;
       meta.flags = rough.flags; meta.len = wordsOf(speech).length;
+      if (speech) { stats.spoken += 1; stats.words += meta.len; if (/\b(maybe|i think|i guess|not sure|is it)\b|\?$/i.test(speech)) stats.hedged += 1; }
       return { speech, shade: parsed.shade, write: parsed.write ? parsed.write.slice(0, 40) : null, silent: parsed.silent && !speech, meta };
     },
     /** Applied to what reaches the tutor: scenario 27 always, every other scenario for a share of turns. */

@@ -1,10 +1,11 @@
 #!/usr/bin/env node
-// The tutor test set (step 4 of CONVERSATION_ENGINE_PLAN.md): 30 situations played through the real tutor code
+// The tutor test set (step 4 of CONVERSATION_ENGINE_PLAN.md): 41 situations played through the real tutor code
 // with the real model, a pretend child and a judge. Spends real money against a HARD CAP shared by all runs.
 //   npm run eval:tutor -- --scenarios 30 --max-turns 12
 //   npm run eval:tutor -- --scenarios all --cap 10
 // Options: --scenarios all | 1,2,3   --max-turns N (default 12; scenario 30 gets 24)   --cap USD (total across all runs, default 10)
 //          --concurrency N (default 3)   --judge MODEL   --no-judge   --no-patterns
+//          --non-improving [N|never]   the pretend child holds its wrong idea for N turns (default 4) past its first, or never lets go
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { Budget, tutorModel, RUNS_DIR, CapReached } from './api.mjs';
 import { SCENARIOS, ALL_ORDER } from './scenarios.mjs';
@@ -20,7 +21,9 @@ const maxOpt = opt('max-turns', null);
 const which = String(opt('scenarios', 'all'));
 const list = which === 'all' ? ALL_ORDER : which.split(',').map(Number).filter((n) => SCENARIOS.some((s) => s.n === n));
 const judgeModel = String(opt('judge', JUDGE_MODEL));
-const maxTurnsFor = (sc) => (maxOpt ? Number(maxOpt) : sc.n === 30 ? 24 : 12);
+const maxTurnsFor = (sc) => (maxOpt ? Number(maxOpt) : sc.maxTurns || (sc.n === 30 ? 24 : 12));
+const nonOpt = opt('non-improving', null);
+const nonImproving = nonOpt == null ? null : nonOpt === true ? true : nonOpt === 'never' ? 'never' : Number(nonOpt) || true;
 
 const d = new Date(); const p2 = (n) => String(n).padStart(2, '0');
 const runName = `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}-${p2(d.getHours())}${p2(d.getMinutes())}`;
@@ -55,7 +58,7 @@ async function runOne(n) {
   if (budget.remaining < estimateScenario() + 0.1) { notes.push(`Scenario ${n} not run: the remaining budget (US$${budget.remaining.toFixed(2)}) would not cover it.`); stopAll = true; return; }
   const t = Date.now();
   let result;
-  try { result = await playLesson({ sc, maxTurns: maxTurnsFor(sc), budget, callModel, onLog: (m) => console.log(`  [${n}] ${m}`) }); } catch (e) {
+  try { result = await playLesson({ sc, maxTurns: maxTurnsFor(sc), budget, callModel, nonImproving, onLog: (m) => console.log(`  [${n}] ${m}`) }); } catch (e) {
     console.error(`  [${n}] FAILED: ${String(e.message).slice(0, 300)}`);
     notes.push(`Scenario ${n} crashed in the harness or the tutor code: ${String(e.stack || e.message).slice(0, 500).replace(/\n/g, ' | ')}`);
     if (e instanceof CapReached) stopAll = true;
@@ -88,5 +91,5 @@ if (!opt('no-patterns', false) && rows.filter((r) => r.score && !r.score.error).
   try { patternsText = await patterns(budget, rows, rows.some((r) => r.score?.model === JUDGE_FALLBACK) ? JUDGE_FALLBACK : judgeModel); } catch (e) { notes.push(`Patterns not written: ${String(e.message).slice(0, 120)}`); }
 }
 writeScores();
-writeFileSync(`${dir}/SUMMARY.md`, summaryOf({ runName, rows, budget, extra: notes, patternsText, args: { maxTurnsLabel: maxOpt || '12 (scenario 30: 24)' } }));
+writeFileSync(`${dir}/SUMMARY.md`, summaryOf({ runName, rows, budget, extra: notes, patternsText, args: { maxTurnsLabel: maxOpt || '12 (per scenario: 30 gets 24, 31 to 33 get 14, 34 to 40 get 6 to 10, 41 gets 40)' } }));
 console.log(`\nspent this run US$${budget.run.toFixed(3)}; all runs US$${budget.spent.toFixed(3)} of cap US$${cap}\nresults: ${dir}`);

@@ -17,6 +17,7 @@ import { readFileSync, readdirSync, existsSync, writeFileSync, statSync } from '
 import { join, resolve, basename } from 'node:path';
 import { HABITS, HABIT_NAMES, turnFlags, habitContext, habitsOf, nextLevel, readChild } from '../../src/voice-tutor/habits.js';
 import { canonAnswer } from '../../src/voice-tutor/spokenAnswer.js';
+import { matchedDrift, driftByBand, driftByThirds, lessonStats, runStats, statsReport, shareByThirds } from './conversation-stats.mjs';
 // Not imported from api.mjs: that reads the API key, and this script never needs one.
 export const RUNS_DIR = '/Users/mutualevity/Desktop/Tutagora/Build/voice-tutor/evals/runs';
 
@@ -36,7 +37,8 @@ export function parseTranscript(md) {
     for (const raw of lines.slice(1)) {
       const l = raw.trim();
       let m;
-      if ((m = /^Child: "(.*)"/.exec(l))) t.child = m[1].replace(/" \(.*$/, '').replace(/"$/, '');
+      // A garbled turn reads: Child (what they meant: "..."; what the microphone gave HOREB): "..."
+      if ((m = /^Child(?: \(what they meant:.*?\))?: "(.*)"/.exec(l))) t.child = m[1].replace(/" \(.*$/, '').replace(/"$/, '');
       else if ((m = /^Marked by the app from the sealed answer: (right|wrong)/.exec(l))) t.marked = { correct: m[1] === 'right', tentative: /tentative|unsure/.test(l) };
       else if ((m = /^HOREB(?: \{move: ([^}]*)\})?: (.*)$/.exec(l))) t.steps.push({ cmd: 'say', text: m[2], ...(m[1] ? { move: m[1] } : {}) });
       else if ((m = /^\[hand over: child is now (\w+)/.exec(l))) t.steps.push({ cmd: 'pause_for_child', doing: m[1] });
@@ -54,7 +56,9 @@ export function parseTranscript(md) {
 }
 
 /** The lesson replayed: each turn with the facts the checks read, and its flags. */
-export function scoreTranscript(tr) {
+// `strict`: the live gate's late-lesson rule (the repeat check over four turns after the tenth). The counts and the drift
+// are measured WITHOUT it, so they stay comparable with the baseline and a rise late is not made by the rule meant to cure it.
+export function scoreTranscript(tr, { strict = false } = {}) {
   const history = []; let board = []; let open = null; const found = [];
   let L = { level: 0, wins: 0, stage: 'warmup' }; let helped = false;
   const turns = [];
@@ -66,7 +70,7 @@ export function scoreTranscript(tr) {
     if (PHASES.includes(stageNow)) L = { ...L, stage: stageNow };
     const closing = ['close', 'stop'].includes(t.rule) || L.stage === 'wrapup';
     const hidden = open && !(t.marked?.correct) ? [{ answer: open.answer, accepts: [], question: open.question }] : [];
-    const ctx = habitContext({ message: t.child || '', marked: t.marked, cls: t.cls, history, hidden, found: [...found], board, level: L, closing, exempt });
+    const ctx = habitContext({ message: t.child || '', marked: t.marked, cls: t.cls, history, hidden, found: [...found], board, level: L, closing, exempt, example: t.rule === 'example', lateRepeat: strict });
     const flags = turnFlags(t.steps, ctx);
     turns.push({ n: t.n, kind: t.kind, child: t.child, rule: t.rule, exempt, flags, habits: habitsOf(flags), text: t.steps.filter((x) => x.cmd === 'say').map((x) => x.text).join(' ') });
     // The facts after the turn.
@@ -112,7 +116,19 @@ export function scoreRun(dir) {
       judge = { worst: worst.length, flagged: flagged.length, given: scores.filter((s) => s.score?.answer_given_away).map((s) => s.scenario) };
     } catch { judge = null; }
   }
-  return { run: basename(dir), scenarios, tutorTurns: counted.length, flaggedTurns: counted.filter((t) => t.habits.length).length, total, judge };
+  const parsed = files.map((f) => parseTranscript(readFileSync(join(dir, f), 'utf8')));
+  const strictScenarios = parsed.map((p) => scoreTranscript(p, { strict: true }));
+  const strictCounted = strictScenarios.flatMap((s) => s.turns.filter((t) => !t.exempt));
+  const lessons = parsed.map(lessonStats);
+  return {
+    run: basename(dir), scenarios, tutorTurns: counted.length, flaggedTurns: counted.filter((t) => t.habits.length).length, total, judge,
+    keySteps: counted.filter((t) => t.flags.some((f) => /key step/.test(f.reason))).length,
+    honesty: counted.filter((t) => t.flags.some((f) => /claims a feeling|promises or invites a secret/.test(f.reason))).length,
+    lateRule: { repeat: strictCounted.filter((t) => t.habits.includes('repeat')).length, any: strictCounted.filter((t) => t.habits.length).length },
+    bands: driftByBand(scenarios, HABITS), matched: matchedDrift(scenarios), lessons, stats: runStats(lessons),
+    // The long lessons, by thirds (scenario 41 and any other of 20 or more tutor turns).
+    thirds: scenarios.filter((s) => s.turns.length >= 20).map((s) => ({ scenario: s.scenario, title: s.title, habits: driftByThirds(s), talk: shareByThirds(parsed.find((p) => p.scenario === s.scenario)) })),
+  };
 }
 
 /**
@@ -147,6 +163,12 @@ export function report(runs, { spot = 0 } = {}) {
     if (r.judge) L.push(`${r.run}: the judge's worst turns flagged by a check: ${r.judge.flagged} of ${r.judge.worst}. The judge said an answer was given away in ${r.judge.given.length} scenarios; the giveaway check flags ${r.total.giveaway.scenarios.length} (${r.total.giveaway.scenarios.filter((s) => r.judge.given.includes(s)).length} of the judge's).`);
   }
   L.push('');
+  for (const r of runs) L.push(`${r.run}: of the giveaway turns, ${r.keySteps} are a key intermediate step said for the child (the new check, for example "same bottom number needed"); ${r.honesty} tutor turns claim a feeling or promise a secret.`, '');
+  L.push(...statsReport(runs, HABITS, HABIT_NAMES));
+  for (const r of runs) L.push(`${r.run}: with the live gate's late-lesson rule (the repeat check over the last four tutor turns after turn 10, not two) the yardstick would flag ${r.lateRule.repeat} repeat turns instead of ${r.total.repeat.turns}, and ${r.lateRule.any} turns in all instead of ${r.flaggedTurns}.`, '');
+  for (const r of runs) {
+    for (const t of r.thirds) L.push(`Scenario ${t.scenario} (${t.title}) by thirds of the lesson: habits flagged ${t.habits.map((x) => `${x.flagged} of ${x.turns} (${x.rate}%)`).join(' | ')}; child share of words ${t.talk.map((x) => `${x.sharePct}%`).join(' | ')}; tutor words a turn ${t.talk.map((x) => x.tutorWordsPerTurn).join(' | ')}.`, '');
+  }
   for (const r of runs) {
     L.push(`## ${r.run}: by scenario`, '', `| # | Scenario | ${HABITS.join(' | ')} |`, `|---|---|${HABITS.map(() => '---').join('|')}|`);
     for (const s of r.scenarios) L.push(`| ${s.scenario} | ${s.title} | ${HABITS.map((h) => s.turns.filter((t) => !t.exempt && t.habits.includes(h)).length || '').join(' | ')} |`);
@@ -174,7 +196,7 @@ if (isMain) {
   const dirs = (names.length ? names : BASELINE_RUNS).map((n) => (existsSync(n) && statSync(n).isDirectory() ? resolve(n) : join(RUNS_DIR, n)));
   const runs = dirs.map(scoreRun);
   if (flag('--json')) {
-    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge })), null, 2));
+    console.log(JSON.stringify(runs.map((r) => ({ run: r.run, tutorTurns: r.tutorTurns, flaggedTurns: r.flaggedTurns, total: r.total, judge: r.judge, keySteps: r.keySteps, honesty: r.honesty, lateRule: r.lateRule, bands: r.bands, matched: r.matched, stats: r.stats, thirds: r.thirds })), null, 2));
   } else {
     const text = report(runs, { spot });
     console.log(text);

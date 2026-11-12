@@ -64,7 +64,7 @@ export { parseChild, garble, CHILD_MODEL } from './child.mjs';
  * Plays one scenario. Returns { turns, ended, stopReason, concerns, usage, ... } for the transcript and the judge.
  * @param {object} o { sc, maxTurns, budget, callModel, onLog, seed, errorRate }
  */
-export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {}, seed = Number(process.env.EVAL_CHILD_SEED) || (Date.now() % 100000), errorRate }) {
+export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {}, seed = Number(process.env.EVAL_CHILD_SEED) || (Date.now() % 100000), errorRate, nonImproving = null, childCall = null }) {
   const sid = randomUUID();
   const db = fakeDb();
   const t0 = Date.now();
@@ -80,14 +80,18 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   let childCost = 0;
   // The child model: Haiku (cheap, and not the tutor's or the judge's model), Sonnet at low effort if Haiku is not served.
   const child = createChild({
-    sc, seed, errorRate,
-    callModel: async ({ model, system, user, maxTokens }) => askModel(budget, 'child', { model, system, user, maxTokens, effort: model === CHILD_FALLBACK ? 'low' : null }),
+    sc, seed, errorRate, nonImproving,
+    // `childCall`: a stand-in for the child's model (tests run whole lessons offline with it)
+    callModel: childCall || (async ({ model, system, user, maxTokens }) => askModel(budget, 'child', { model, system, user, maxTokens, effort: model === CHILD_FALLBACK ? 'low' : null })),
   });
   const counted = async (req, o) => { modelCalls += 1; return callModel(req, o); };
   const log = [];                      // one entry per tutor turn
   const dispatch = (ev) => { session = sessionReducer(session, ev); };
   const result = { sid, scenario: sc.n, turns: log, ended: null, stopReason: null, probesDuringWork: null, notes: [] };
   let capHit = false;
+  // The lesson's time limit: the app's 20 minutes, longer only for the scenario that needs 35 to 40 turns (scenario 41).
+  const settings = sc.minutes ? { ...SETTINGS, sessionMinutes: sc.minutes } : SETTINGS;
+  let injected = null; let injectNote = '';
 
   const speechMs = (steps) => steps.reduce((ms, s) => ms + (s.cmd === 'say' ? 600 + 380 * s.text.split(/\s+/).length : ['write_text', 'write_math', 'fraction_bar', 'number_line', 'shape', 'figure', 'plot_points'].includes(s.cmd) ? 2500 : 300), 0);
 
@@ -109,7 +113,7 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
     dispatch({ type: 'request' });
     const started = Date.now();
     const calls0 = modelCalls;
-    const t = await prepareTurn({ user: USER, body, db, callModel: counted, safeguard: screen, settings: SETTINGS, lib: LIB, secret: SECRET, now: t0 + clock });
+    const t = await prepareTurn({ user: USER, body, db, callModel: counted, safeguard: screen, settings,  lib: LIB, secret: SECRET, now: t0 + clock });
     if (!t.go) throw new Error(`turn refused: ${t.status} ${t.body?.error || ''}`);
     const events = []; let firstStepMs = null;
     await t.go((ev) => { events.push(ev); if (ev.type === 'step' && firstStepMs == null) firstStepMs = Date.now() - started; });
@@ -151,6 +155,21 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
     for (const st of steps) {
       board = applyStep(board, st, clock, BOARD_H);
       if (st.cmd === 'ask') openAsk = st;
+    }
+    // Scenario 33: after the named turn the harness puts a WRONG label on the board (the tutor is actually wrong there).
+    if (sc.inject && !injected && log.length + 1 >= sc.inject.afterTurn) {
+      const fig = [...board.order].reverse().map((id) => board.items[id]).find((it) => ['fraction_bar', 'shape'].includes(it.cmd) && Number(it.parts) >= 2 && Number(it.parts) <= 12);
+      if (fig) {
+        const wrong = `${Number(fig.parts) + 1} equal parts`;
+        for (const slot of ['bottom_right', 'bottom_left', 'middle_right', 'bottom', 'middle_left', 'top_right']) {
+          const next = applyStep(board, { cmd: 'write_text', id: 'zlabel', text: wrong, slot, colour: fig.colour || 'ink' }, clock, BOARD_H);
+          if (next.items.zlabel) { board = next; injected = { turn: log.length + 1, text: wrong, truth: `${fig.parts} equal parts`, on: fig.id }; break; }
+        }
+        if (injected) {
+          injectNote = `A label on the board now says "${wrong}" but the picture ${fig.id} has ${fig.parts} parts, so the label is wrong. You notice, and say so plainly in a few words, in this reply.`;
+          entry.injected = injected; result.injected = injected;
+        }
+      }
     }
     dispatch({ type: 'turn', steps, dropped: end.dropped, spent: end.spent, target: meta.target, prerequisite: meta.prerequisite });
     for (const st of steps) if (st.cmd === 'say') dispatch({ type: 'said', text: st.text, at: clock });
@@ -242,9 +261,11 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
         note = `You have been working on HOREB's board task for ${sc.task.seconds} seconds and have just stopped. Now do the task as your behaviour says (use SHADE: or WRITE: if it fits) and say what you did.`;
       }
       // Scripted reply (scenario 29).
-      if (sc.fixed && childReplies + 1 === sc.fixed.turn) { await childSays(sc.fixed.text, { clean: true }); if (exchange > maxTurns - 1) break; continue; }
+      const scripted = [].concat(sc.fixed || []).find((f) => f.turn === childReplies + 1);
+      if (scripted) { await childSays(scripted.text, { clean: true, write: scripted.write || null }); continue; }
       const heard = last.interrupted ? last.heardOfTutor : null;
       if (heard) note = `You are speaking over HOREB, who was in the middle of saying: "${heard} ...". Say your interruption now, as your behaviour says.`;
+      if (injectNote && !note) { note = injectNote; injectNote = ''; }
       let c = await childActs(note, heard ? 1 : think);
       if (c.silent && !heard && consecutiveSilent < 1) {
         consecutiveSilent += 1;
