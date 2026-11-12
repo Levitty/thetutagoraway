@@ -53,6 +53,32 @@ export function supabaseStore(admin) {
       }
       return out;
     },
+    // Everything the log holds for these school learners, by reference (class_rechecks, recheckDoor.js): school rows by
+    // door and reference, practice rows where the learner is linked to a HOREB child. Evidence columns only.
+    async learnerEvidence(doorId, refs) {
+      const COLS = 'source, skill_id, cskill, outcome_code, substrand_code, correct, marks, max_marks, independent, hints_used, difficulty, item_ref, client_ts, created_at';
+      const out = {};
+      for (let i = 0; i < refs.length; i += 50) {
+        const part = refs.slice(i, i + 50);
+        const { data, error } = await admin.from('response_events').select(`learner_ref, ${COLS}`).eq('door_id', doorId).in('learner_ref', part).limit(20000);
+        if (error) throw new Error('Not read');
+        for (const r of data || []) { const { learner_ref, ...row } = r; (out[learner_ref] ||= []).push(row); }
+        const { data: links, error: le } = await admin.from('school_learner_links').select('learner_ref, parent_id, child_id').eq('door_id', doorId).in('learner_ref', part);
+        if (le) throw new Error('Not read');
+        const byPair = new Map((links || []).map(l => [`${l.parent_id}|${l.child_id}`, l.learner_ref]));
+        const parents = [...new Set((links || []).map(l => l.parent_id))], kids = [...new Set((links || []).map(l => l.child_id))];
+        if (parents.length) {
+          const { data: rows, error: pe } = await admin.from('response_events').select(`student_id, learner_id, ${COLS}`)
+            .in('student_id', parents).in('learner_id', kids).eq('source', 'practice').limit(20000);
+          if (pe) throw new Error('Not read');
+          for (const r of rows || []) {
+            const ref = byPair.get(`${r.student_id}|${r.learner_id}`); if (!ref) continue;
+            const { student_id, learner_id, ...row } = r; (out[ref] ||= []).push(row);
+          }
+        }
+      }
+      return out;
+    },
     async insertEvidence(rows) {
       for (let i = 0; i < rows.length; i += 200) {
         const { error } = await admin.from('response_events').insert(rows.slice(i, i + 200));
@@ -95,11 +121,11 @@ export function supabaseStore(admin) {
 }
 
 export function memoryStore(doors = [], links = []) {
-  const homework = []; const sittings = []; const tries = []; const evidence = [];
+  const homework = []; const sittings = []; const tries = []; const evidence = []; const practice = [];
   let n = 0;
   const id = () => `00000000-0000-4000-8000-${String(++n).padStart(12, '0')}`;
   return {
-    homework, sittings, tries, links,
+    homework, sittings, tries, links, practice,
     async getHomework(doorId, ref) { return homework.find(h => h.door_id === doorId && h.homework_ref === ref) || null; },
     async saveHomework(row) { const h = { id: id(), ...row }; homework.push(h); return h; },
     async sittingsOf(homeworkId) { return sittings.filter(s => s.homework_id === homeworkId).map(s => ({ ...s })).sort((a, b) => a.learner_ref.localeCompare(b.learner_ref)); },
@@ -119,6 +145,12 @@ export function memoryStore(doors = [], links = []) {
     async examEvidence(doorId, itemRefs) { return evidence.filter(e => e.source === 'school_exam' && e.door_id === doorId && itemRefs.includes(e.item_ref)); },
     async insertEvidence(rows) { let k = 0; for (const r of rows) evidence.push({ id: `ev-${evidence.length + (++k)}`, ...r }); },
     async updateEvidence(evId, patch) { const e = evidence.find(x => x.id === evId); if (e) Object.assign(e, patch); },
+    async learnerEvidence(doorId, refs) {
+      const out = {};
+      for (const e of evidence) if (e.door_id === doorId && refs.includes(e.learner_ref)) (out[e.learner_ref] ||= []).push({ ...e });
+      for (const l of links) if (l.door_id === doorId && refs.includes(l.learner_ref)) for (const e of practice) if (e.student_id === l.parent_id && e.learner_id === l.child_id) (out[l.learner_ref] ||= []).push({ ...e });
+      return out;
+    },
     async homeDoor(code) { const d = doors.find(x => x.code === code); return d && d.active !== false ? d : null; },
     async homeSittings(doorId, ref) {
       return sittings.filter(s => s.learner_ref === ref).map(s => ({ sitting: { ...s }, homework: homework.find(h => h.id === s.homework_id) }))

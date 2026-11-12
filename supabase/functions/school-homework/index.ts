@@ -4616,6 +4616,36 @@ function supabaseStore(admin) {
       }
       return out;
     },
+    // Everything the log holds for these school learners, by reference (class_rechecks, recheckDoor.js): school rows by
+    // door and reference, practice rows where the learner is linked to a HOREB child. Evidence columns only.
+    async learnerEvidence(doorId, refs) {
+      const COLS = "source, skill_id, cskill, outcome_code, substrand_code, correct, marks, max_marks, independent, hints_used, difficulty, item_ref, client_ts, created_at";
+      const out = {};
+      for (let i = 0; i < refs.length; i += 50) {
+        const part = refs.slice(i, i + 50);
+        const { data, error } = await admin.from("response_events").select(`learner_ref, ${COLS}`).eq("door_id", doorId).in("learner_ref", part).limit(2e4);
+        if (error) throw new Error("Not read");
+        for (const r of data || []) {
+          const { learner_ref, ...row } = r;
+          (out[learner_ref] ||= []).push(row);
+        }
+        const { data: links, error: le } = await admin.from("school_learner_links").select("learner_ref, parent_id, child_id").eq("door_id", doorId).in("learner_ref", part);
+        if (le) throw new Error("Not read");
+        const byPair = new Map((links || []).map((l) => [`${l.parent_id}|${l.child_id}`, l.learner_ref]));
+        const parents = [...new Set((links || []).map((l) => l.parent_id))], kids = [...new Set((links || []).map((l) => l.child_id))];
+        if (parents.length) {
+          const { data: rows, error: pe } = await admin.from("response_events").select(`student_id, learner_id, ${COLS}`).in("student_id", parents).in("learner_id", kids).eq("source", "practice").limit(2e4);
+          if (pe) throw new Error("Not read");
+          for (const r of rows || []) {
+            const ref = byPair.get(`${r.student_id}|${r.learner_id}`);
+            if (!ref) continue;
+            const { student_id, learner_id, ...row } = r;
+            (out[ref] ||= []).push(row);
+          }
+        }
+      }
+      return out;
+    },
     async insertEvidence(rows) {
       for (let i = 0; i < rows.length; i += 200) {
         const { error } = await admin.from("response_events").insert(rows.slice(i, i + 200));
