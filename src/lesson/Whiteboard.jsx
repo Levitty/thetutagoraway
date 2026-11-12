@@ -10,24 +10,17 @@
 // broadcast); nothing is stored until the notes are saved.
 import React, { forwardRef, useCallback, useEffect, useImperativeHandle, useRef, useState } from 'react';
 import { supabase } from '../supabase';
+import { PenBar } from './room/PenBar.jsx';
+import { BoardIcon } from './room/Icon.jsx';
+import { PAPER, DOTS as LINE, WELL, C } from './room/colours.js';
 
-const PAPER = '#fffdf8', LINE = '#ece4d8', INK = '#121117', INK2 = '#3f3f4a';
+const INK = C.ink, INK2 = C.ink2;
 export const PENS = ['#121117', '#e5484d', '#3b5bdb', '#30a46c', '#f08c00'];
 const PEN_W = 0.0072;    // line width as a share of the page size
 const ERASER_W = 0.05;
 const PHOTO_PAD = 0.025; // photo inset as a share of the page size
 const TOP = 60, SIDE = 12;
 const CHUNK = 24000;     // live messages have a size limit; big things go in pieces
-
-const P = {
-  undo: 'M9 14L4 9l5-5M4 9h10.5a5.5 5.5 0 0 1 0 11H11',
-  eraser: 'M7 21h10M5.5 13.5l7-7a2 2 0 0 1 2.8 0l3.2 3.2a2 2 0 0 1 0 2.8L12 19H8.5l-3-3a1.8 1.8 0 0 1 0-2.5zM9 10l5 5',
-  trash: 'M4 7h16M10 11v6M14 11v6M6 7l1 13h10l1-13M9 7V4h6v3',
-  left: 'M15 18l-6-6 6-6', right: 'M9 18l6-6-6-6', plus: 'M12 5v14M5 12h14', close: 'M6 6l12 12M18 6L6 18',
-};
-const I = ({ d, s = 18 }) => (
-  <svg width={s} height={s} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true"><path d={d} /></svg>
-);
 
 const newId = (who) => `${String(who || 'x').slice(0, 6)}-${Date.now().toString(36)}-${Math.random().toString(36).slice(2, 7)}`;
 
@@ -298,19 +291,9 @@ export const Whiteboard = forwardRef(function Whiteboard({ channelName, userId, 
   const photo = photos.current[page];
   const mine = undoStack.current.length > 0;
   return (
-    <div ref={wrapRef} className="absolute inset-0" style={{ background: '#f4efe7' }}>
+    <div ref={wrapRef} className="absolute inset-0" style={{ background: WELL }}>
       {/* Toolbar: pens, eraser, undo, clear page. */}
-      <div className="absolute top-3 left-3 z-[2] flex items-center gap-1.5 p-1.5 rounded-full bg-white shadow-sm" style={{ border: `1.5px solid ${LINE}` }}>
-        {PENS.map(p => (
-          <button key={p} type="button" aria-label="Pen colour" onClick={() => { setColor(p); setTool('pen'); }} className="w-7 h-7 rounded-full"
-            style={{ background: p, boxShadow: tool === 'pen' && color === p ? `0 0 0 2.5px #fff, 0 0 0 4.5px ${p}` : 'none' }} />
-        ))}
-        <span className="w-px h-5 mx-0.5" style={{ background: LINE }} />
-        <button type="button" aria-label="Eraser" aria-pressed={tool === 'eraser'} onClick={() => setTool('eraser')}
-          className="w-8 h-8 rounded-full flex items-center justify-center" style={{ background: tool === 'eraser' ? INK : 'transparent', color: tool === 'eraser' ? '#fff' : INK2 }}><I d={P.eraser} /></button>
-        <button type="button" aria-label="Undo" onClick={undo} disabled={!mine} className="w-8 h-8 rounded-full flex items-center justify-center disabled:opacity-30" style={{ color: INK2 }}><I d={P.undo} /></button>
-        <button type="button" aria-label="Clear this page" onClick={clearPage} className="w-8 h-8 rounded-full flex items-center justify-center" style={{ color: '#c4302b' }}><I d={P.trash} /></button>
-      </div>
+      <PenBar pens={PENS} color={color} tool={tool} onPen={(p) => { setColor(p); setTool('pen'); }} onEraser={() => setTool('eraser')} onUndo={undo} canUndo={mine} onClear={clearPage} />
 
       {/* The page: the same square on every screen. */}
       {size > 0 && (
@@ -324,7 +307,7 @@ export const Whiteboard = forwardRef(function Whiteboard({ channelName, userId, 
             onPointerDown={down} onPointerMove={move} onPointerUp={up} onPointerCancel={up} onPointerLeave={(e) => { if (e.pointerType === 'mouse') up(); }} />
           {photo && (
             <button type="button" onClick={() => removePhoto()} className="absolute top-2 right-2 h-8 pl-2 pr-3 rounded-full bg-white/95 text-[13px] font-bold flex items-center gap-1 shadow-sm" style={{ border: `1.5px solid ${LINE}`, color: INK2 }}>
-              <I d={P.close} s={15} />Remove photo
+              <BoardIcon name="close" s={15} />Remove photo
             </button>
           )}
         </div>
@@ -332,10 +315,10 @@ export const Whiteboard = forwardRef(function Whiteboard({ channelName, userId, 
 
       {/* Pages. */}
       <div className="absolute left-3 bottom-3 z-[2] flex items-center gap-1 p-1 rounded-full bg-white shadow-sm" style={{ border: `1.5px solid ${LINE}` }}>
-        <button type="button" aria-label="Previous page" disabled={page === 0} onClick={() => goTo(page - 1)} className="w-8 h-8 rounded-full flex items-center justify-center disabled:opacity-30" style={{ color: INK }}><I d={P.left} /></button>
+        <button type="button" aria-label="Previous page" disabled={page === 0} onClick={() => goTo(page - 1)} className="w-8 h-8 rounded-full flex items-center justify-center disabled:opacity-30" style={{ color: INK }}><BoardIcon name="left" /></button>
         <span className="text-[13px] font-bold px-1 tabular-nums" style={{ color: INK2 }}><span className="hidden sm:inline">Page </span>{page + 1}<span className="hidden sm:inline"> of </span><span className="sm:hidden"> / </span>{count}</span>
-        <button type="button" aria-label="Next page" disabled={page >= count - 1} onClick={() => goTo(page + 1)} className="w-8 h-8 rounded-full flex items-center justify-center disabled:opacity-30" style={{ color: INK }}><I d={P.right} /></button>
-        <button type="button" onClick={newPage} aria-label="New page" className="h-8 px-2 sm:pl-2 sm:pr-3 rounded-full text-[13px] font-bold flex items-center gap-1" style={{ background: INK, color: '#fff' }}><I d={P.plus} s={15} /><span className="hidden sm:inline">New page</span></button>
+        <button type="button" aria-label="Next page" disabled={page >= count - 1} onClick={() => goTo(page + 1)} className="w-8 h-8 rounded-full flex items-center justify-center disabled:opacity-30" style={{ color: INK }}><BoardIcon name="right" /></button>
+        <button type="button" onClick={newPage} aria-label="New page" className="h-8 px-2 sm:pl-2 sm:pr-3 rounded-full text-[13px] font-bold flex items-center gap-1" style={{ background: INK, color: '#fff' }}><BoardIcon name="plus" s={15} /><span className="hidden sm:inline">New page</span></button>
       </div>
     </div>
   );
