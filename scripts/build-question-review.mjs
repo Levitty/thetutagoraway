@@ -77,7 +77,7 @@ const drawHtml = (p, i, f) => `<div class="d"><b>Draw ${i + 1}.</b> ${e(p.questi
 const CSS = `body{font:13px/1.45 Georgia,serif;color:#000;margin:18mm 14mm;max-width:190mm}h1{font:bold 20px Arial,sans-serif;margin:0 0 4px}h2{font:bold 14px Arial,sans-serif;margin:18px 0 6px;border-bottom:1.5px solid #000;padding-bottom:2px}p.n{margin:0 0 10px;color:#333}.f{border:1px solid #000;padding:8px 10px;margin:0 0 10px;break-inside:avoid}.h{font:bold 11px Arial,sans-serif;margin-bottom:4px}.o{font:11px Arial,sans-serif;color:#333;margin-bottom:6px}.d{margin:0 0 7px}.a{font-style:italic}.m{font:11px Arial,sans-serif;margin:3px 0}table.t{border-collapse:collapse;margin:4px 0;font:11px Arial,sans-serif}table.t td,table.t th{border:1px solid #666;padding:2px 7px;text-align:left}ol,ul{margin:3px 0 3px 18px;padding:0}.tick{font:12px Arial,sans-serif;margin-top:6px}.line{display:inline-block;border-bottom:1px solid #000;width:58%;height:12px}a{color:#000}@media print{body{margin:10mm}a{text-decoration:none}}`;
 const page = (title, intro, body) => `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${e(title)}</title><style>${CSS}</style></head><body><h1>${e(title)}</h1><p class="n">${intro}</p>${body}</body></html>`;
 
-const entries = FAMILIES.filter(f => !G5 || (f.cskill && !f.core)).map(f => {
+const entries = FAMILIES.filter(f => !G5 || (f.cskill && !f.core && /^MATH\.G5\./.test(f.cskill))).map(f => {
   const o = outcomeOf(f);
   const draws = [0, 1, 2].map(() => drawFamily(f).p);
   return { f, o, draws, grade: o.grade, strand: STRAND(o.strand), sub: o.substrand };

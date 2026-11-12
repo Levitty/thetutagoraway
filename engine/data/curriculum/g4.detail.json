@@ -1,0 +1,890 @@
+{
+ "outcomes": {
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.a": "use place value and total value of digits up to tens of thousands in daily in daily life situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.b": "read and write numbers up to 10,000 in symbols in real life situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.c": "read and write numbers up to 1,000 in words in day to day activities",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.d": "order numbers up to 1,000 in different situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.e": "round off numbers up to 1,000 to the nearest ten in different situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.f": "identify factors of numbers up to 50 in different contexts",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.g": "identify multiples of numbers up to 100 in different situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.h": "use even and odd numbers up to 100 in different situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.i": "make patterns involving even and odd numbers in real life situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.j": "represent Hindu Arabic numerals using Roman numerals up to ‘X’ in different situations",
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.k": "appreciate use of whole numbers in real life situations",
+  "MATH.G4.NUMBER.ADDITION.a": "add up to two 4-digit numbers with single regrouping up to a sum of 10,000 in different situations",
+  "MATH.G4.NUMBER.ADDITION.b": "add up to two 4-digit numbers with double regrouping up to a sum of 10,000 in real life situations",
+  "MATH.G4.NUMBER.ADDITION.c": "estimate sum by rounding off numbers to the nearest ten in different situations",
+  "MATH.G4.NUMBER.ADDITION.d": "create patterns involving addition up to a sum of 10,000 in real life situations",
+  "MATH.G4.NUMBER.ADDITION.e": "appreciate application of addition of numbers in real life situations",
+  "MATH.G4.NUMBER.SUBTRACTION.a": "subtract up to 4-digit numbers without regrouping in real life situations",
+  "MATH.G4.NUMBER.SUBTRACTION.b": "subtract up to 4-digit numbers with regrouping in real life situations",
+  "MATH.G4.NUMBER.SUBTRACTION.c": "estimate difference by rounding off numbers to the nearest ten in different contexts",
+  "MATH.G4.NUMBER.SUBTRACTION.d": "create patterns involving subtraction from up to 10,000",
+  "MATH.G4.NUMBER.SUBTRACTION.e": "appreciate application of subtraction of numbers in real life situations",
+  "MATH.G4.NUMBER.MULTIPLICATION.a": "multiply up to a two-digit number by multiples of 10 in different situations",
+  "MATH.G4.NUMBER.MULTIPLICATION.b": "multiply up to a two-digit number by two-digit number with and without regrouping",
+  "MATH.G4.NUMBER.MULTIPLICATION.c": "estimate products by rounding off numbers to the nearest 10 with product not exceeding 1,000",
+  "MATH.G4.NUMBER.MULTIPLICATION.d": "create patterns involving multiplication with product not exceeding 100",
+  "MATH.G4.NUMBER.MULTIPLICATION.e": "appreciate application of multiplication of numbers in real life situation",
+  "MATH.G4.NUMBER.DIVISION.a": "divide up to a two-digit number by a one-digit number with and without remainder",
+  "MATH.G4.NUMBER.DIVISION.b": "relate multiplication of numbers to division of same numbers in different situations",
+  "MATH.G4.NUMBER.DIVISION.c": "use digital resources to learn division of numbers",
+  "MATH.G4.NUMBER.DIVISION.d": "appreciate the use of division in day to day life",
+  "MATH.G4.NUMBER.FRACTIONS.a": "identify the numerator and denominator in a fraction in different situations",
+  "MATH.G4.NUMBER.FRACTIONS.b": "represent a fraction with denominators not exceeding 12 as part of a whole and as part of a group",
+  "MATH.G4.NUMBER.FRACTIONS.c": "identify different types of fractions in real life situations",
+  "MATH.G4.NUMBER.FRACTIONS.d": "convert improper fractions to mixed fractions in different situations",
+  "MATH.G4.NUMBER.FRACTIONS.e": "convert mixed fractions to improper fractions in different contexts",
+  "MATH.G4.NUMBER.FRACTIONS.f": "use digital devices and other resources for learning more on fractions",
+  "MATH.G4.NUMBER.FRACTIONS.g": "appreciate application of fractions in real life situations",
+  "MATH.G4.NUMBER.DECIMALS.a": "identify a tenth and a hundredth in real life situations",
+  "MATH.G4.NUMBER.DECIMALS.b": "represent decimals using decimal notation in given situations",
+  "MATH.G4.NUMBER.DECIMALS.c": "identify place value of decimals up to hundredths in real life",
+  "MATH.G4.NUMBER.DECIMALS.d": "order decimals up to hundredths in different contexts",
+  "MATH.G4.NUMBER.DECIMALS.e": "use digital devices or other resources for learning about decimals different situation",
+  "MATH.G4.NUMBER.DECIMALS.f": "appreciate use of decimals in real life situations",
+  "MATH.G4.NUMBER.USE_OF_LETTERS.a": "represent information using letters in real life situations",
+  "MATH.G4.NUMBER.USE_OF_LETTERS.b": "form simple expressions to represent real life situations",
+  "MATH.G4.NUMBER.USE_OF_LETTERS.c": "simplify expressions representing real life situations",
+  "MATH.G4.NUMBER.USE_OF_LETTERS.d": "appreciate the use of expressions",
+  "MATH.G4.MEASUR.LENGTH.a": "identify the centimetre as a unit of measuring length in real life situations",
+  "MATH.G4.MEASUR.LENGTH.b": "measure length in centimetres in real life situations",
+  "MATH.G4.MEASUR.LENGTH.c": "establish the relationship between metres and centimetres practically",
+  "MATH.G4.MEASUR.LENGTH.d": "convert metres to centimetres and centimetres to metres in real life situation",
+  "MATH.G4.MEASUR.LENGTH.e": "work out perimeter of plane figures in different contexts",
+  "MATH.G4.MEASUR.LENGTH.f": "work out addition involving length in metres and centimetres in real life situations",
+  "MATH.G4.MEASUR.LENGTH.g": "work out subtraction involving length in metres and centimetres in real life situations",
+  "MATH.G4.MEASUR.LENGTH.h": "carryout multiplication involving metres and centimetres in real life situations",
+  "MATH.G4.MEASUR.LENGTH.i": "carryout division involving metres and centimetres in real life situations",
+  "MATH.G4.MEASUR.LENGTH.j": "appreciate use of metres and centimetres in measuring distance in real life",
+  "MATH.G4.MEASUR.AREA.a": "compare the area of given surfaces by direct manipulation",
+  "MATH.G4.MEASUR.AREA.b": "calculate area of squares and rectangles by counting unit squares",
+  "MATH.G4.MEASUR.AREA.c": "calculate area of squares and rectangles as a product of number of rows and columns",
+  "MATH.G4.MEASUR.AREA.d": "appreciate use of rows and columns in calculating area of squares and rectangles in real life situations",
+  "MATH.G4.MEASUR.VOLUME.a": "pile objects into stacks of cubes and cuboids in real life situations",
+  "MATH.G4.MEASUR.VOLUME.b": "work out volume of cuboids by piling blocks to form a cuboid",
+  "MATH.G4.MEASUR.VOLUME.c": "calculate the volume of cubes by piling blocks to form a cubes",
+  "MATH.G4.MEASUR.VOLUME.d": "appreciate use of pilling method in working out volume in real life",
+  "MATH.G4.MEASUR.CAPACITY.a": "measure capacity in litres in real life situations",
+  "MATH.G4.MEASUR.CAPACITY.b": "measure capacity in litres and litres in real life situations",
+  "MATH.G4.MEASUR.CAPACITY.c": "work out addition and subtraction of capacity in litres in real life situations",
+  "MATH.G4.MEASUR.CAPACITY.d": "appreciate use of the litre as a unit of measuring capacity in real life situations",
+  "MATH.G4.MEASUR.MASS.a": "use a kilogram mass to measure masses of different objects practically",
+  "MATH.G4.MEASUR.MASS.b": "use ½ kg and ¼ kg masses to measure masses of different objects practically",
+  "MATH.G4.MEASUR.MASS.c": "add mass involving kilograms in real life situations",
+  "MATH.G4.MEASUR.MASS.d": "subtract mass involving kilograms in real life situations",
+  "MATH.G4.MEASUR.MASS.e": "appreciate kilogram as a unit of measuring mass",
+  "MATH.G4.MEASUR.TIME.a": "read and tell time in a.m. and p.m. in real life situations",
+  "MATH.G4.MEASUR.TIME.b": "estimate time using a.m. and p.m. in real life situations",
+  "MATH.G4.MEASUR.TIME.c": "convert units of time in real life situations",
+  "MATH.G4.MEASUR.TIME.d": "record time durations in hours and minutes in real life situations",
+  "MATH.G4.MEASUR.TIME.e": "work out time duration in real life situations",
+  "MATH.G4.MEASUR.TIME.f": "use digital clock to tell and record time of different activities",
+  "MATH.G4.MEASUR.TIME.g": "appreciate time in day to day activities",
+  "MATH.G4.MEASUR.MONEY.a": "convert shillings into cents and cents into shillings in different contexts",
+  "MATH.G4.MEASUR.MONEY.b": "prepare a shopping list of three items in real life situation",
+  "MATH.G4.MEASUR.MONEY.c": "work out total cost of items in the shopping list for value not more ten thousand shillings",
+  "MATH.G4.MEASUR.MONEY.d": "appreciate the use of money in real life situation",
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.a": "identify a clockwise and an anti-clockwise turn in the environment",
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.b": "demonstrate a clockwise and an anti-clockwise turn in the environment",
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.c": "identify quarter, half and full turns direction in the environment",
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.d": "demonstrate a quarter turn, half turn and full turn direction in the environment",
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.e": "appreciate use of position and direction in real life situations",
+  "MATH.G4.GEOMET.ANGLES.a": "identify an angle at a point in lines",
+  "MATH.G4.GEOMET.ANGLES.b": "identify angles from the objects in the environment",
+  "MATH.G4.GEOMET.ANGLES.c": "relate a turn to angles in real life situations",
+  "MATH.G4.GEOMET.ANGLES.d": "appreciate use of angles in real life situations",
+  "MATH.G4.GEOMET.PLANE_FIGURES.a": "identify rectangles, squares, triangles, circles and ovals from objects in the environment",
+  "MATH.G4.GEOMET.PLANE_FIGURES.b": "draw the shapes of rectangles, squares, triangles, circles and ovals from objects in the environment",
+  "MATH.G4.GEOMET.PLANE_FIGURES.c": "identify lines of symmetry of different shapes",
+  "MATH.G4.GEOMET.PLANE_FIGURES.d": "make patterns using squares, rectangles and triangles",
+  "MATH.G4.GEOMET.PLANE_FIGURES.e": "identify properties of plane figures in different situations",
+  "MATH.G4.GEOMET.PLANE_FIGURES.f": "appreciate using shapes in real life situations",
+  "MATH.G4.DATA_H.DATA.a": "identify materials for data collection and recording in real life situations",
+  "MATH.G4.DATA_H.DATA.b": "collect data of at most 10 items within the school environment",
+  "MATH.G4.DATA_H.DATA.c": "draw a table for recording data",
+  "MATH.G4.DATA_H.DATA.d": "record data in the table",
+  "MATH.G4.DATA_H.DATA.e": "interpret the raw data from the table",
+  "MATH.G4.DATA_H.DATA.f": "appreciate use of tables in representing data in real life situations"
+ },
+ "skills": {
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH": {
+   "forms": [
+    "name the place of an underlined digit",
+    "which digit is in the given place",
+    "read a place value chart or abacus",
+    "build a number from place clues"
+   ],
+   "mastery": "Given any whole number up to 99,999, the child names the place of any digit (ones, tens, hundreds, thousands, ten thousands), including digits beside zeros, and says which digit is in a named place. The child can show the number on a place value chart."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH": {
+   "forms": [
+    "total value of an underlined digit",
+    "write as a sum of total values",
+    "number from given total values, including empty places",
+    "difference between the place value and the total value of a digit"
+   ],
+   "mastery": "For numbers up to 99,999 the child gives the total value of any digit (the 6 in 36,420 is worth 6,000), writes a number as the sum of the total values of its digits, and rebuilds a number from total values, including when a place is empty. Proposed: the learning experiences stop at ten thousand for total value; this skill goes to 99,999 because outcome a does."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000": {
+   "forms": [
+    "write from a spoken or described number",
+    "read a number from a chart or price tag",
+    "spot the wrongly written number",
+    "fill in the missing digit from place clues"
+   ],
+   "mastery": "Given a number said or described in parts (four thousand, two hundred and six) the child writes it in symbols with every place filled, using zero as a place holder, and reads a written number aloud correctly. Numbers up to 10,000."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000": {
+   "forms": [
+    "figures to words",
+    "words to figures",
+    "choose the correct spelling",
+    "a cheque or receipt amount in words"
+   ],
+   "mastery": "The child writes a number up to 1,000 in words (British spelling, a hyphen in twenty-one to ninety-nine, and between the hundreds and the tens) and writes a number given in words as figures."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000": {
+   "forms": [
+    "order a list ascending or descending",
+    "which is the largest or smallest",
+    "the number between two numbers",
+    "order prices or distances in a story"
+   ],
+   "mastery": "The child orders three to five numbers up to 1,000 from smallest to largest and from largest to smallest, comparing the hundreds first and then the tens, and uses the words smaller than and larger than correctly."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000": {
+   "forms": [
+    "round a number to the nearest ten",
+    "which two tens is it between",
+    "choose the number that rounds to a given ten",
+    "round a price or distance in a story"
+   ],
+   "mastery": "The child rounds any whole number up to 1,000 to the nearest 10: looks at the ones digit, rounds 5 up, and carries into the hundreds when needed (for example 396 rounds to 400)."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50": {
+   "forms": [
+    "list the factors of a number",
+    "is this number a factor of that",
+    "which number is not a factor",
+    "factors in a sharing story"
+   ],
+   "mastery": "The child lists all the factors of a number up to 50 in pairs, decides whether a given number is a factor, and knows that 1 and the number itself are always factors."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100": {
+   "forms": [
+    "list the multiples up to 100",
+    "is this a multiple of that number",
+    "the next multiple",
+    "multiples in a story (every 4 days)"
+   ],
+   "mastery": "The child lists the multiples of a number up to 100 (by skip counting or by multiplying), decides whether a number is a multiple of another, and does not confuse a multiple with a factor."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100": {
+   "forms": [
+    "even or odd",
+    "the even number among these",
+    "odd number between two numbers",
+    "sharing into two equal groups"
+   ],
+   "mastery": "The child says whether a number up to 100 is even or odd from its ones digit, knows that even numbers share into two equal groups with none left over, and does not call a number odd or even because of its tens digit."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS": {
+   "forms": [
+    "next number in the pattern",
+    "missing number in the pattern",
+    "state the rule",
+    "house numbers on one side of a street"
+   ],
+   "mastery": "The child continues and completes a number pattern made of even numbers or odd numbers, gives the rule (add 2, for example), and finds a missing term. Numbers up to 100."
+  },
+  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X": {
+   "forms": [
+    "Roman numeral to number",
+    "number to Roman numeral",
+    "what comes next on a clock face",
+    "choose the correct Roman numeral"
+   ],
+   "mastery": "The child writes the numbers 1 to 10 in Roman numerals (I, II, III, IV, V, VI, VII, VIII, IX, X) and reads a Roman numeral as an ordinary number, including IV and IX where a smaller numeral comes before a larger one."
+  },
+  "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP": {
+   "forms": [
+    "add in columns",
+    "find the sum in a story",
+    "missing digit in an addition",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child adds two numbers of up to 4 digits with a sum up to 10,000 where one place needs regrouping, by the written column method, and solves a story that needs this."
+  },
+  "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP": {
+   "forms": [
+    "add in columns",
+    "find the total in a story",
+    "missing digit",
+    "spot the wrong carry"
+   ],
+   "mastery": "The child adds two numbers of up to 4 digits with a sum up to 10,000 where two places need regrouping (a carry in the ones and again in the tens, for example), and checks the answer by estimating."
+  },
+  "MATH.G4.NUMBER.ADDITION.ESTIMATE_SUM_TEN": {
+   "forms": [
+    "estimate a sum",
+    "is the exact answer sensible",
+    "choose the best estimate",
+    "estimate a total in a story"
+   ],
+   "mastery": "The child rounds each number to the nearest ten, adds the rounded numbers, and says whether an exact answer is sensible. Numbers up to 4 digits."
+  },
+  "MATH.G4.NUMBER.ADDITION.ADD_PATTERNS": {
+   "forms": [
+    "next term",
+    "missing term",
+    "state the rule",
+    "a saving that grows each week"
+   ],
+   "mastery": "The child continues and completes a pattern made by adding the same number each time, states the rule, and finds a missing term. Terms up to 10,000."
+  },
+  "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP": {
+   "forms": [
+    "subtract in columns",
+    "find the difference in a story",
+    "missing number in a subtraction",
+    "check by adding"
+   ],
+   "mastery": "The child subtracts a number of up to 4 digits from another by the column method when no place needs regrouping, and solves a story that needs it."
+  },
+  "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP": {
+   "forms": [
+    "subtract in columns",
+    "find what is left in a story",
+    "missing digit",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child subtracts a number of up to 4 digits from another when at least one place needs regrouping, including across a zero (for example 4,005 minus 1,278), and checks by adding the answer to the number taken away."
+  },
+  "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN": {
+   "forms": [
+    "estimate a difference",
+    "is the exact answer sensible",
+    "choose the best estimate",
+    "estimate what is left in a story"
+   ],
+   "mastery": "The child rounds both numbers to the nearest ten, subtracts the rounded numbers and says whether an exact answer is sensible."
+  },
+  "MATH.G4.NUMBER.SUBTRACTION.SUB_PATTERNS": {
+   "forms": [
+    "next term",
+    "missing term",
+    "state the rule",
+    "a tank that empties by the same amount"
+   ],
+   "mastery": "The child continues and completes a pattern made by subtracting the same number each time, states the rule, and finds a missing term. Terms up to 10,000."
+  },
+  "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS": {
+   "forms": [
+    "work out the product",
+    "a story with equal groups of ten, twenty and so on",
+    "missing factor",
+    "why is a zero written"
+   ],
+   "mastery": "The child multiplies a number up to two digits by a multiple of 10 (for example 24 x 30, 7 x 60) by multiplying by the tens digit and writing a zero, and explains why the zero is written."
+  },
+  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP": {
+   "forms": [
+    "work out the product",
+    "a story with rows and columns",
+    "missing digit",
+    "an array or grid"
+   ],
+   "mastery": "The child multiplies two 2-digit numbers when no partial product needs regrouping (for example 21 x 32), by partitioning or by the written method."
+  },
+  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP": {
+   "forms": [
+    "work out the product",
+    "a story that needs it",
+    "spot the step that went wrong",
+    "missing digit"
+   ],
+   "mastery": "The child multiplies two 2-digit numbers when a partial product needs regrouping (for example 36 x 24), by partitioning (30 and 6) or by the written method, and checks by estimating."
+  },
+  "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN": {
+   "forms": [
+    "estimate a product",
+    "is the exact answer sensible",
+    "choose the best estimate",
+    "estimate a cost or total in a story"
+   ],
+   "mastery": "The child rounds both numbers to the nearest ten, multiplies the rounded numbers (product not above 1,000), and says whether an exact answer is sensible."
+  },
+  "MATH.G4.NUMBER.MULTIPLICATION.MULT_PATTERNS": {
+   "forms": [
+    "next term",
+    "missing term",
+    "state the rule",
+    "a pattern in a multiplication table"
+   ],
+   "mastery": "The child continues and completes a pattern made by multiplying (the times table of a number, or doubling), states the rule, and finds a missing term. Products up to 100."
+  },
+  "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER": {
+   "forms": [
+    "work out the quotient",
+    "share equally in a story",
+    "missing number in a division",
+    "check by multiplying"
+   ],
+   "mastery": "The child divides a number of up to two digits by a one-digit number when the division is exact (for example 84 divided by 4), by the written method or by sharing, and solves a sharing story."
+  },
+  "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER": {
+   "forms": [
+    "quotient and remainder",
+    "a story where the remainder matters",
+    "is the remainder possible",
+    "check by multiplying and adding"
+   ],
+   "mastery": "The child divides a number of up to two digits by a one-digit number when a remainder is left (for example 47 divided by 5 is 9 remainder 2), writes the remainder, checks it is smaller than the divisor, and decides what the remainder means in a story."
+  },
+  "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE": {
+   "forms": [
+    "write the related fact",
+    "check a division by multiplying",
+    "missing number using the inverse",
+    "spot the wrong related fact"
+   ],
+   "mastery": "The child writes the related multiplication and division facts for the same three numbers (for example 6 x 7 = 42, 42 divided by 7 = 6), uses one to check the other, and finds a missing number using the inverse operation."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.NUM_DEN": {
+   "forms": [
+    "name the numerator or denominator",
+    "what does the bottom number tell",
+    "write the fraction for a description",
+    "choose the fraction for a shaded picture"
+   ],
+   "mastery": "The child names the numerator and the denominator of a fraction and says what each tells: the denominator the number of equal parts in the whole, the numerator the number of parts taken."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE": {
+   "forms": [
+    "what fraction is shaded",
+    "shade a given fraction",
+    "are the parts equal",
+    "a chapati or cake cut into equal pieces"
+   ],
+   "mastery": "The child writes the fraction of a whole shape, strip or object that is shaded or taken (denominators up to 12), and shades a given fraction. The parts must be equal."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP": {
+   "forms": [
+    "what fraction of the group",
+    "how many in a fraction of the group",
+    "draw or circle a fraction of a group",
+    "a story about learners or goats"
+   ],
+   "mastery": "The child writes the fraction of a group of objects that have a property (3 of 8 mangoes are ripe is three eighths), finds the number in a fraction of a group (one third of 12), and uses a group of objects as the whole."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS": {
+   "forms": [
+    "name the type",
+    "which of these is improper",
+    "sort fractions into types",
+    "is a fraction bigger than one whole"
+   ],
+   "mastery": "The child tells a proper fraction (numerator smaller than the denominator), an improper fraction (numerator at least as big as the denominator) and a mixed fraction (a whole number and a fraction) apart, and says what each means."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.IMPROPER_TO_MIXED": {
+   "forms": [
+    "change to a mixed fraction",
+    "shaded circles and pictures",
+    "spot the step that went wrong",
+    "a story about whole and part loaves"
+   ],
+   "mastery": "The child changes an improper fraction with a denominator up to 12 to a mixed fraction (divide the numerator by the denominator, write the whole number and the remainder over the denominator), and shows it with a picture."
+  },
+  "MATH.G4.NUMBER.FRACTIONS.MIXED_TO_IMPROPER": {
+   "forms": [
+    "change to an improper fraction",
+    "pictures of whole and part shapes",
+    "spot the step that went wrong",
+    "a story about whole and part bottles"
+   ],
+   "mastery": "The child changes a mixed fraction with a denominator up to 12 to an improper fraction (whole number times the denominator, plus the numerator, over the denominator), and shows it with a picture."
+  },
+  "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH": {
+   "forms": [
+    "what fraction is shaded on the hundred square",
+    "a tenth or a hundredth",
+    "how many tenths in one whole",
+    "a story about a metre or a shilling"
+   ],
+   "mastery": "The child says that a tenth is one of ten equal parts of a whole and a hundredth is one of one hundred equal parts, links 1/10 to 0.1 and 1/100 to 0.01, and shows them on a ten-strip or a hundred square."
+  },
+  "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION": {
+   "forms": [
+    "fraction to decimal",
+    "decimal to fraction",
+    "write a decimal from a picture",
+    "read a decimal in words"
+   ],
+   "mastery": "The child writes tenths and hundredths as decimals and as fractions (3/10 is 0.3, 7/100 is 0.07, 3/10 and 7/100 is 0.37), and reads a decimal aloud (nought point three seven)."
+  },
+  "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE": {
+   "forms": [
+    "name the place of a digit",
+    "value of a digit",
+    "build a decimal from place clues",
+    "fill a place value chart"
+   ],
+   "mastery": "The child names the place of each digit in a decimal up to hundredths (ones, tenths, hundredths) and gives the value of a digit (in 4.65 the 6 is six tenths, 0.6), including a zero as a place holder (5.07)."
+  },
+  "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS": {
+   "forms": [
+    "order a list",
+    "which is larger",
+    "a number between two decimals",
+    "order prices or lengths in a story"
+   ],
+   "mastery": "The child orders decimals with up to two decimal places from smallest to largest and largest to smallest by comparing the whole part first and then each decimal place from the left, including decimals with different numbers of digits (0.6 and 0.58)."
+  },
+  "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT": {
+   "forms": [
+    "what does the letter stand for",
+    "choose a letter for the unknown",
+    "the same letter means the same amount",
+    "read a statement with a letter"
+   ],
+   "mastery": "The child uses a letter to stand for a number or an amount that is not known or can change (p for the price of a pencil, b for the number of books), and says what a letter stands for in a story."
+  },
+  "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS": {
+   "forms": [
+    "write the expression for a story",
+    "choose the expression that fits",
+    "match a story to an expression",
+    "what does the expression tell"
+   ],
+   "mastery": "The child writes an expression for a story using one letter (5 books and b more books is 5 + b, 3 bags with m mangoes in each is 3 x m), with addition, subtraction and multiplication of a letter by a number."
+  },
+  "MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS": {
+   "forms": [
+    "collect like terms",
+    "which expression is the same",
+    "spot the mistake",
+    "simplify in a story"
+   ],
+   "mastery": "The child simplifies an expression by collecting like terms (3a + 2a is 5a, 7b - 3b is 4b), keeps unlike terms apart (3a + 2b stays as it is), and explains why with a story or objects."
+  },
+  "MATH.G4.MEASUR.LENGTH.CM_UNIT": {
+   "forms": [
+    "which unit for this object",
+    "about how long is a centimetre",
+    "is it cm or m",
+    "choose the sensible length for a pencil"
+   ],
+   "mastery": "The child says that a centimetre is a unit for measuring short lengths, chooses the sensible unit (cm or m) for an object, and knows about how long 1 cm is (the width of a small fingernail)."
+  },
+  "MATH.G4.MEASUR.LENGTH.MEASURE_CM": {
+   "forms": [
+    "read the length from a ruler picture",
+    "object that does not start at zero",
+    "how much longer is one than the other",
+    "choose the correct measurement"
+   ],
+   "mastery": "The child reads the length of an object laid against a ruler or tape measure in centimetres, starting from zero, and says what is wrong when an object does not start at zero. Measuring with a real ruler is done in class.",
+   "hands_on": "Measuring real objects with a ruler or tape belongs to class; the typed skill reads a ruler picture."
+  },
+  "MATH.G4.MEASUR.LENGTH.M_CM_RELATION": {
+   "forms": [
+    "how many cm in a metre",
+    "half a metre in cm",
+    "which is longer",
+    "a metre rule marked in tens"
+   ],
+   "mastery": "The child states that 1 metre is 100 centimetres, that half a metre is 50 cm and a quarter of a metre is 25 cm, and uses this to compare lengths in different units.",
+   "hands_on": "The design asks the learner to find the relationship practically by measuring a metre stick; the skill is the fact itself."
+  },
+  "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM": {
+   "forms": [
+    "change metres to centimetres",
+    "change centimetres to metres and centimetres",
+    "which is longer",
+    "a length in a story"
+   ],
+   "mastery": "The child changes metres to centimetres by multiplying by 100 and centimetres to metres by dividing by 100, and writes mixed lengths such as 3 m 40 cm as 340 cm and 275 cm as 2 m 75 cm. Whole numbers only."
+  },
+  "MATH.G4.MEASUR.LENGTH.PERIMETER": {
+   "forms": [
+    "perimeter of a rectangle or square",
+    "perimeter of a triangle",
+    "missing side from the perimeter",
+    "fencing a plot in a story"
+   ],
+   "mastery": "The child finds the perimeter of squares, rectangles and triangles by adding the lengths of all the sides, uses the equal sides of a square or rectangle, and gives the unit. Outcome e is read, not verified: no formula is asked for."
+  },
+  "MATH.G4.MEASUR.LENGTH.LENGTH_ADD": {
+   "forms": [
+    "add two lengths",
+    "total length in a story",
+    "missing length",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child adds lengths given in metres and centimetres, adding the metres and the centimetres separately and regrouping 100 cm into 1 m where needed (2 m 70 cm + 1 m 50 cm = 4 m 20 cm)."
+  },
+  "MATH.G4.MEASUR.LENGTH.LENGTH_SUB": {
+   "forms": [
+    "subtract two lengths",
+    "length left in a story",
+    "how much longer",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child subtracts one length from another in metres and centimetres, regrouping 1 m as 100 cm where needed (5 m 20 cm - 2 m 70 cm = 2 m 50 cm)."
+  },
+  "MATH.G4.MEASUR.LENGTH.LENGTH_MULT": {
+   "forms": [
+    "multiply a length",
+    "cloth or rope in equal pieces",
+    "cost of several equal lengths",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child multiplies a length in metres and centimetres by a whole number (3 m 20 cm x 4 = 12 m 80 cm), regrouping centimetres into metres, and finds the length of equal pieces joined together."
+  },
+  "MATH.G4.MEASUR.LENGTH.LENGTH_DIV": {
+   "forms": [
+    "divide a length",
+    "cutting a rope into equal pieces",
+    "how long is each part",
+    "spot the step that went wrong"
+   ],
+   "mastery": "The child divides a length in metres and centimetres by a one-digit number (4 m 80 cm divided by 4 = 1 m 20 cm), changing to centimetres first where needed, and finds the length of each equal piece."
+  },
+  "MATH.G4.MEASUR.AREA.COMPARE_AREA": {
+   "forms": [
+    "which has the larger area (count squares)",
+    "which covers more",
+    "order three shapes by area",
+    "is longer always larger"
+   ],
+   "mastery": "The child says which of two surfaces has the greater area by covering both with the same unit squares and counting, and knows that a longer shape does not always have a bigger area. Direct comparison by placing one surface on another is done in class.",
+   "hands_on": "Placing one surface on another is done with real surfaces in class."
+  },
+  "MATH.G4.MEASUR.AREA.AREA_COUNT": {
+   "forms": [
+    "count the unit squares",
+    "area of a shape on a grid",
+    "which shape has the area of 12 squares",
+    "tiles covering a floor"
+   ],
+   "mastery": "The child finds the area of a rectangle or a square drawn on a grid by counting the unit squares that cover it, and counts squares in a covered surface correctly with none counted twice and none missed."
+  },
+  "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS": {
+   "forms": [
+    "rows times columns",
+    "missing rows or columns",
+    "tiles on a floor",
+    "which array matches"
+   ],
+   "mastery": "The child finds the area of a rectangle or square as the number of rows times the number of columns of unit squares, and finds a missing number of rows or columns when the area is given."
+  },
+  "MATH.G4.MEASUR.VOLUME.STACK_CUBES": {
+   "forms": [
+    "cube or cuboid",
+    "how many layers",
+    "how many blocks in a layer",
+    "a pile of boxes in a shop"
+   ],
+   "mastery": "The child says which objects are cubes and which are cuboids, builds a pile of blocks in layers, and counts the layers and the blocks in each layer. Piling real blocks is done in class.",
+   "hands_on": "Piling real blocks or objects is done in class."
+  },
+  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID": {
+   "forms": [
+    "cubes in a cuboid",
+    "cubes in one layer times layers",
+    "a stack of boxes",
+    "the missing number of layers"
+   ],
+   "mastery": "The child counts the unit cubes in a cuboid by finding the number in one layer and multiplying by the number of layers, and finds how many layers a given volume needs."
+  },
+  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE": {
+   "forms": [
+    "cubes in a cube",
+    "side of the cube from the layers",
+    "is it a cube",
+    "a cube of sugar in a box"
+   ],
+   "mastery": "The child counts the blocks in a cube by finding the number in one layer (side times side) and the number of layers (the side), and says that the three numbers are equal in a cube."
+  },
+  "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE": {
+   "forms": [
+    "how many litres does it hold",
+    "read the jug",
+    "which holds more",
+    "a water drum in a story"
+   ],
+   "mastery": "The child says that capacity is how much a container holds, reads the capacity from a litre jug, finds how many litres a container holds by counting litre measures, and chooses a sensible capacity for a container. Whole litres."
+  },
+  "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE": {
+   "forms": [
+    "how many half litres in a litre",
+    "how many quarters in a litre",
+    "read a jug marked in quarters",
+    "milk packets in a story"
+   ],
+   "mastery": "The child knows that two half litres make one litre and four quarter litres make one litre, reads a jug marked in halves and quarters, and finds how many half-litre or quarter-litre containers fill a bigger one. Capacity of containers measured with litres, half litres and quarter litres."
+  },
+  "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD": {
+   "forms": [
+    "total capacity",
+    "water in two containers",
+    "a tank filled in turns",
+    "missing amount"
+   ],
+   "mastery": "The child adds capacities in litres (and halves and quarters of a litre where they join to whole litres) in a story, and gives the answer with the unit."
+  },
+  "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB": {
+   "forms": [
+    "how much is left",
+    "how much more is needed to fill it",
+    "difference between two containers",
+    "missing amount"
+   ],
+   "mastery": "The child subtracts capacities in litres in a story (what is left in a container after some is used), and gives the answer with the unit."
+  },
+  "MATH.G4.MEASUR.MASS.KG_MEASURE": {
+   "forms": [
+    "read the scale",
+    "how many kilograms balance",
+    "which is heavier",
+    "a bag of sugar or maize flour in a story"
+   ],
+   "mastery": "The child reads the mass from a scale picture or a balance with kilogram masses, chooses a sensible mass for an object, and tells mass from capacity and length."
+  },
+  "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG": {
+   "forms": [
+    "how many half kilograms in a kilogram",
+    "quarter kilograms in a kilogram",
+    "read a scale marked in quarters",
+    "flour packets in a story"
+   ],
+   "mastery": "The child knows that two half kilograms make a kilogram and four quarter kilograms make a kilogram, reads a scale marked in halves and quarters, and finds the mass of objects using a kilogram, a half and a quarter kilogram mass."
+  },
+  "MATH.G4.MEASUR.MASS.MASS_ADD": {
+   "forms": [
+    "total mass",
+    "bags of rice altogether",
+    "total mass with halves",
+    "missing mass"
+   ],
+   "mastery": "The child adds masses in kilograms (including half and quarter kilograms) in a story and gives the answer with the unit."
+  },
+  "MATH.G4.MEASUR.MASS.MASS_SUB": {
+   "forms": [
+    "mass left",
+    "how much heavier",
+    "mass of the empty container",
+    "missing mass"
+   ],
+   "mastery": "The child subtracts masses in kilograms in a story (the mass left after some is sold or used) and gives the answer with the unit."
+  },
+  "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM": {
+   "forms": [
+    "read the clock",
+    "write the time with a.m. or p.m.",
+    "which part of the day",
+    "a bus or school timetable"
+   ],
+   "mastery": "The child reads an analogue or digital clock to the nearest five minutes, says the time with past and to the hour, and writes it with a.m. (midnight to noon) or p.m. (noon to midnight), including 12 o'clock noon and midnight."
+  },
+  "MATH.G4.MEASUR.TIME.ESTIMATE_TIME": {
+   "forms": [
+    "which time suits this event",
+    "a.m. or p.m. for this event",
+    "about what time is it from the shadow",
+    "put the day in order"
+   ],
+   "mastery": "The child chooses a sensible time of day for an everyday event (getting up, school, supper), says whether it is a.m. or p.m., and estimates the time from a shadow or the position of the sun. The shadow activity is done in class.",
+   "hands_on": "Using a shadow to estimate the time is done outdoors in class."
+  },
+  "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES": {
+   "forms": [
+    "hours to minutes",
+    "minutes to hours and minutes",
+    "a film or lesson in minutes",
+    "which is longer"
+   ],
+   "mastery": "The child changes hours to minutes (multiply by 60) and minutes to hours and minutes (divide by 60), including half and quarter hours."
+  },
+  "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS": {
+   "forms": [
+    "days to hours",
+    "hours to days",
+    "weeks to days",
+    "days to weeks and days"
+   ],
+   "mastery": "The child changes hours to days and days to hours (24 hours in a day) and days to weeks and weeks to days (7 days in a week), including a remainder of days."
+  },
+  "MATH.G4.MEASUR.TIME.RECORD_DURATION": {
+   "forms": [
+    "write the duration in hours and minutes",
+    "duration of a lesson from the clock",
+    "duration of an event in a table",
+    "order events by length"
+   ],
+   "mastery": "The child writes how long an event lasted in hours and minutes (2 hours 15 minutes), reading start and end on a clock, and says it in the correct units."
+  },
+  "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION": {
+   "forms": [
+    "how long between two times",
+    "finishing time from start and duration",
+    "start time from finish and duration",
+    "across noon or midnight"
+   ],
+   "mastery": "The child works out how long between two times (9:30 a.m. to 11:45 a.m.), the finishing time from a start time and a duration, and the start time from the finish and the duration, by adding or subtracting hours and minutes across the hour."
+  },
+  "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK": {
+   "forms": [
+    "digital to analogue",
+    "analogue to digital",
+    "say the time in words",
+    "a bus board in 24 hours"
+   ],
+   "mastery": "The child reads a digital clock (7:45), says it in words, writes the time shown by an analogue clock in digital form and the reverse, and knows a 24-hour display where it shows 13:00 or more."
+  },
+  "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS": {
+   "forms": [
+    "shillings to cents",
+    "cents to shillings and cents",
+    "which is more",
+    "a price in cents in a story"
+   ],
+   "mastery": "The child changes shillings to cents (multiply by 100) and cents to shillings and cents (divide by 100), and writes an amount such as 3 shillings 50 cents as 350 cents and as sh 3.50."
+  },
+  "MATH.G4.MEASUR.MONEY.SHOPPING_LIST": {
+   "forms": [
+    "pick three items within a budget",
+    "complete a shopping list table",
+    "price of several of one item",
+    "which item to leave out"
+   ],
+   "mastery": "The child writes a shopping list of three items with the amount and price of each and a total, and chooses the items from given prices to stay within a budget."
+  },
+  "MATH.G4.MEASUR.MONEY.TOTAL_COST": {
+   "forms": [
+    "total cost of the list",
+    "change from a note",
+    "which is cheaper",
+    "missing price from the total"
+   ],
+   "mastery": "The child works out the total cost of a shopping list of up to three items (amount times price for each, then added) up to 10,000 shillings, and the change from a note."
+  },
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI": {
+   "forms": [
+    "clockwise or anticlockwise from a picture",
+    "which way does a clock hand turn",
+    "a wheel turning in a story",
+    "the direction that is opposite"
+   ],
+   "mastery": "The child tells a clockwise turn (the way the hands of a clock move) from an anticlockwise turn, says the direction of a turn in a picture or story (a door handle, a wheel, a screw), and chooses the direction of a given turn.",
+   "hands_on": "Outcome b (demonstrate a turn) is done with the body in class."
+  },
+  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS": {
+   "forms": [
+    "which turn is it",
+    "what is facing after the turn",
+    "the turn from one direction to another",
+    "a clock hand turning for 15, 30, 60 minutes"
+   ],
+   "mastery": "The child names a quarter turn, a half turn and a full turn, says what is facing after a turn from a given direction (N, E, S, W), and chooses the turn that takes one direction to another.",
+   "hands_on": "Outcome d (demonstrate the turns) is done with the body in class."
+  },
+  "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT": {
+   "forms": [
+    "where is the angle",
+    "which angle is bigger",
+    "name the arms and the corner",
+    "do two lines make an angle"
+   ],
+   "mastery": "The child says that an angle is made where two lines meet at a point, names the arms and the vertex (corner), and picks the angle (not the length of the arms) that is bigger or smaller by how far apart the arms are opened."
+  },
+  "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS": {
+   "forms": [
+    "where is the angle in this object",
+    "how many corners",
+    "which object has a right angle",
+    "which has more corners"
+   ],
+   "mastery": "The child finds angles in objects such as the corner of a book, a door, a clock and the opening of scissors, and counts the angles (corners) in a shape or solid."
+  },
+  "MATH.G4.GEOMET.ANGLES.TURN_TO_ANGLE": {
+   "forms": [
+    "which turn makes a right angle",
+    "half turn is a straight line",
+    "bigger turn means bigger angle",
+    "clock hands at 3 o'clock"
+   ],
+   "mastery": "The child says that a quarter turn makes a right angle (a square corner), a half turn a straight line and a full turn goes back to the start, and that a bigger turn makes a bigger angle."
+  },
+  "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES": {
+   "forms": [
+    "name the shape",
+    "which shape is this object",
+    "which is not a triangle",
+    "circle or oval"
+   ],
+   "mastery": "The child names a rectangle, a square, a triangle, a circle and an oval from a picture or an object (a book cover, a plate, an egg), and says why a square is also a rectangle with equal sides where the teacher introduces it."
+  },
+  "MATH.G4.GEOMET.PLANE_FIGURES.DRAW_FIGURES": {
+   "forms": [],
+   "mastery": "The child draws each shape with a ruler or round an object, with the right number of sides and equal sides where they should be equal. Done on paper with the teacher.",
+   "hands_on": "Drawing is done on paper in class; a typed answer cannot test it."
+  },
+  "MATH.G4.GEOMET.PLANE_FIGURES.LINES_SYMMETRY": {
+   "forms": [
+    "is this a line of symmetry",
+    "how many lines of symmetry",
+    "complete the other half",
+    "letters with symmetry"
+   ],
+   "mastery": "The child finds the lines of symmetry of a shape by folding, so that one half sits exactly on the other, says how many a square (4), a rectangle (2), an isosceles triangle (1), an equilateral triangle (3) and a circle (many) have, and tells a fold that is not a line of symmetry."
+  },
+  "MATH.G4.GEOMET.PLANE_FIGURES.SHAPE_PATTERNS": {
+   "forms": [],
+   "mastery": "The child continues and describes a pattern made with squares, rectangles and triangles (a repeating colour or shape), and makes one with paper cut-outs. Done with cut-outs in class.",
+   "hands_on": "Patterns are made with cut-outs in class; a typed answer cannot test it."
+  },
+  "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES": {
+   "forms": [
+    "how many sides",
+    "which sides are equal",
+    "which shape has 4 equal sides and 4 square corners",
+    "true or false statement"
+   ],
+   "mastery": "The child says how many sides and corners a rectangle, square and triangle have, which sides are equal (a square has 4 equal sides, a rectangle has opposite sides equal) and which corners are square. Outcome e is read, not verified."
+  },
+  "MATH.G4.DATA_H.DATA.DATA_MATERIALS": {
+   "forms": [
+    "which is used to collect data",
+    "how would you record this",
+    "tally for a count",
+    "which is not a way to record data"
+   ],
+   "mastery": "The child names what is used to collect and record data (tally marks, a table, a notebook, counters) and chooses a way to collect a given kind of data (a question for favourite fruits, tally marks for a count)."
+  },
+  "MATH.G4.DATA_H.DATA.COLLECT_DATA": {
+   "forms": [],
+   "mastery": "The child collects data about at most 10 items in the school (the number of learners by class, favourite foods) by counting or asking. Done at school.",
+   "hands_on": "Collecting data is done at school; a typed answer cannot test it."
+  },
+  "MATH.G4.DATA_H.DATA.TABLE_RECORD": {
+   "forms": [
+    "complete the table from the tally",
+    "which table fits this data",
+    "tally marks to numbers",
+    "spot the error in a table"
+   ],
+   "mastery": "The child sets out a table with a heading for the item and a heading for the number, writes the data in rows without leaving one out or writing one twice, and uses tally marks in groups of five."
+  },
+  "MATH.G4.DATA_H.DATA.INTERPRET_TABLE": {
+   "forms": [
+    "read one value",
+    "which is most or least",
+    "how many more or fewer",
+    "total of all"
+   ],
+   "mastery": "The child reads a table to answer how many in a group, which is most and least, how many more or fewer, and the total, and says one thing the table tells."
+  }
+ }
+}

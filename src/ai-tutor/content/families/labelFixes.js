@@ -354,7 +354,7 @@ export const CORE_FAMILIES = [
     check: ({ w, weeks }, a) => a * w === w * weeks }),
 
   // ---- G4_LETTERS: keep "find the letter", add forming and simplifying
-  fx({ id: 'g4.letters.form-add', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.b', rung: 1, form: 'word',
+  fx({ id: 'g4.letters.form-add', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.b', misMapped: false, reveals: ['M_EXP_WRONG_OPERATION'], rung: 1, form: 'word',
     draw: () => { const add = randInt(2, 12), letter = pick(['x', 'y', 'm', 'k']), thing = pick(['mangoes', 'oranges', 'eggs', 'books']); return { add, letter, thing, p: person(), k: randInt(0, 3) }; },
     make: ({ add, letter, thing, p, k }) => {
       const opts = [{ text: `${letter} + ${add}`, right: true }, { text: `${letter} − ${add}`, right: false, why: 'Adding more makes the number bigger, so use +.' }, { text: `${add}${letter}`, right: false, why: `${add}${letter} means ${add} lots of ${letter}. Here ${add} more are put in.` }, { text: `${letter}`, right: false, why: `That leaves out the ${add} that were added.` }];
@@ -362,7 +362,7 @@ export const CORE_FAMILIES = [
         hints: [`${letter} stands for the number of ${thing} at first.`, 'More were added. Which sign shows adding?'],
         steps: [`The bag starts with ${letter} ${thing}.`, `${add} more makes ${letter} + ${add}.`] };
     } }),
-  fx({ id: 'g4.letters.simplify', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.c', rung: 2, form: 'direct',
+  fx({ id: 'g4.letters.simplify', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.SIMPLIFY_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.c', misMapped: false, reveals: ['M_SIM_LETTER_DROPPED'], rung: 2, form: 'direct',
     draw: () => { const a = randInt(2, 7), b = randInt(2, 7), c = randInt(1, Math.min(a + b - 1, 5)); return { a, b, c, v: pick(['p', 'x', 'y', 'n']) }; },
     make: ({ a, b, c, v }) => {
       const r = a + b - c, ans = r === 1 ? v : `${r}${v}`;
@@ -372,7 +372,7 @@ export const CORE_FAMILIES = [
         steps: [`${a}${v} + ${b}${v} = ${a + b}${v}.`, `${a + b}${v} − ${c}${v} = ${ans}.`] };
     },
     check: ({ a, b, c, v }, ans) => (String(ans) === (a + b - c === 1 ? v : `${a + b - c}${v}`)) }),
-  fx({ id: 'g4.letters.together', skill: 'G4_LETTERS', outcome: 'G4.LETTERS.b', rung: 3, form: 'word',
+  fx({ id: 'g4.letters.together', skill: 'G4_LETTERS', cskill: 'MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS', outcome: 'MATH.G4.NUMBER.USE_OF_LETTERS.b', misMapped: false, reveals: ['M_EXP_WRONG_OPERATION'], rung: 3, form: 'word',
     draw: () => { const [t] = [pick(['y', 'n', 'k'])]; return { t, p: person(), q: person() }; },
     make: ({ t, p, q }) => {
       if (p.name === q.name) q = { name: p.name === 'Juma' ? 'Amina' : 'Juma' };
