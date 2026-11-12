@@ -148,6 +148,10 @@ const FIXES = [
   [/\b(quater|quatre|kwarter|quarta)s?\b/gi, 'quarter'],
   [/\b(equal valent|equivalence|equivelent|equivalant)\b/gi, 'equivalent'],
   [/\b(nort|noat|nougat)\b/gi, 'nought'],
+  // "one half" heard as "won have", "one harf" (12 Nov 2026, test set scenario 27); "eights" for "eighths".
+  [/\b(won|wan|one) (have|harf|haf|hulf)\b/gi, 'one half'],
+  [/\b(two|three|four|five|six|seven) (eights|aits)\b/gi, '$1 eighths'],
+  [/\b(two|three|four|five) (forths|fourth's)\b/gi, '$1 fourths'],
 ];
 export const fixMathsWords = (text) => FIXES.reduce((t, [re, to]) => t.replace(re, to), String(text || ''));
 

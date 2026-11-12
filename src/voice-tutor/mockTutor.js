@@ -3,8 +3,8 @@
 // model and no cost, so the board and its timing can be tried for free.
 //
 // It speaks the same command list as the model and goes through the same
-// validator (commands.js) and the same marking (markItem, the homework
-// marker), so what is tried here is what the real tutor drives. It follows the
+// validator (commands.js) and the same marking (markSpoken, the spoken-answer
+// reading over the homework marker), so what is tried here is what the real tutor drives. It follows the
 // approved session shape: it says it is an AI, warm-up on the prerequisite,
 // teach, guided practice, independent problem, wrap-up. It uses the teaching
 // moves the board supports (phase 1 of the rendering engine): it counts parts
@@ -22,7 +22,7 @@
 // the picture as its evidence, as the real tutor does.
 // ============================================================================
 import { validateTurn } from './commands.js';
-import { markItem } from '../school/homeworkSitting.js';
+import { markSpoken } from './spokenAnswer.js';
 import { EXAMPLES } from './examples.js';
 
 const EQ = 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS';
@@ -204,7 +204,8 @@ export function createMockTutor() {
     const id = String(answer.seal).replace(/^mock:/, '');
     const it = hidden[id];
     if (!it) return null;
-    const r = markItem(it, answer.response);
+    const r = markSpoken(it, answer.response);
+    if (!r.attempt) return null; // a question back or "umm": not an answer, so not marked (as the server does)
     const m = { ask: id, skill: EQ, correct: r.correct, misconception: r.mis && r.mis !== 'other' ? r.mis : null, answer: String(answer.response ?? ''), ...(pic ? { snapshot: pic.id, seen: pic.seen } : {}) };
     evidence.push(m);
     return m;
