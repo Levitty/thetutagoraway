@@ -1,0 +1,588 @@
+{
+ "outcomes": {
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.a": "select words with the target sound /ɪə/ from an oral narrative",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.b": "use vocabulary related to the theme in sentences correctly",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.c": "use proverbs, fixed phrases, idioms, and metaphors with straightforward meanings in oral communication",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.d": "listen for the main idea and specific details from an oral text",
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.e": "value the importance of listening attentively",
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.a": "select appropriate reading materials in collaboration with peers",
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.b": "read a variety of materials independently for information and pleasure",
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.c": "use reference materials to find the required information",
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.d": "judge the suitability of sample extensive reading materials",
+  "ENGL.G6.LANGUA.T1_WORD_CLASSES.a": "identify determiners some, enough, each, and a lot of, in texts",
+  "ENGL.G6.LANGUA.T1_WORD_CLASSES.b": "use determiners some, enough, each, and a lot of, in sentences correctly",
+  "ENGL.G6.LANGUA.T1_WORD_CLASSES.c": "collaborate with peers to judge the correct use of determiners in sentences",
+  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.a": "record specific details on forms to convey information",
+  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.b": "design a form to provide the required information",
+  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.c": "advocate the importance of filling forms correctly",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.a": "identify proverbs from a text for effective communication",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.b": "listen for the main idea and specific details from a text",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.c": "use words and expressions such as similes, metaphors and proverbs containing selected sounds correctly",
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.d": "value the importance of attentive listening in communication",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.a": "identify characters and events in a text for comprehension",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.b": "predict events in a text accurately",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.c": "answer factual and inferential questions correctly for comprehension",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.d": "create mental images from the events in poems and stories",
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.e": "judge the characters or events in a story in collaboration with peers",
+  "ENGL.G6.LANGUA.T2_WORD_CLASSES.a": "identify concrete and abstract nouns from a text",
+  "ENGL.G6.LANGUA.T2_WORD_CLASSES.b": "use concrete and abstract nouns correctly in a variety of contexts",
+  "ENGL.G6.LANGUA.T2_WORD_CLASSES.c": "appreciate the role of concrete and abstract nouns in communication",
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.a": "identify topics and possible ideas for open-ended compositions",
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.b": "organise ideas in a paragraph logically",
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.c": "create an open-ended composition on a variety of themes",
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.d": "judge a narrative composition for correctness of language and relevance of topic",
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.a": "pronounce words with target sounds correctly",
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.b": "use polite words and phrases in a variety of contexts",
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.c": "use a variety of similes, proverbs, idioms and fixed phrases in oral communication",
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.d": "collaborate with peers to judge whether words or phrases have been used politely in a text",
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.a": "identify new words in a text for comprehension",
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.b": "answer direct and inferential questions for comprehension",
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.c": "infer the meaning of words, similes, proverbs, metaphors and idioms with straight forward meanings using contextual clues",
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.d": "advocate the need to read intensively for lifelong learning",
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.a": "identify correlative conjunctions in an oral or written text",
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.b": "use correlative conjunctions correctly in oral and written communication",
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.c": "use the pattern show... nominal... how/where/who in sentences",
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.d": "acknowledge the importance of using well-formed sentences in communication",
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.a": "identify numerals, common abbreviations and acronyms from a text",
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.b": "compose a story incorporating acronyms, abbreviations and numerals",
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.c": "use similes, proverbs, metaphors and idioms with straight forward meanings in a composition",
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.d": "judge correctness of abbreviations, numerals and acronyms used in a text",
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.a": "select words with the target sound /ʊə/ from a text",
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.b": "use appropriate words, similes and proverbs with straight forward meanings in day-to-day communication",
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.c": "distinguish nouns, verbs and adjectives by stressing syllables correctly",
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.d": "apply stress on content words and helping verbs for speech clarity",
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.e": "advocate the correct use of stress in oral communication",
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.a": "predict events from visuals",
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.b": "create images from viewed, read or heard texts",
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.c": "answer direct and inferential questions correctly for comprehension",
+  "ENGL.G6.READIN.T4_INTENSIVE_READING.d": "assess the relevance of visuals in a text",
+  "ENGL.G6.LANGUA.T4_WORD_CLASSES.a": "identify relative and indefinite pronouns in a text",
+  "ENGL.G6.LANGUA.T4_WORD_CLASSES.b": "use relative and indefinite pronouns correctly in oral and written texts",
+  "ENGL.G6.LANGUA.T4_WORD_CLASSES.c": "judge the correctness of sentences featuring relative and indefinite pronouns from various texts",
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.a": "identify the key features of a formal letter",
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.b": "create a formal invitation letter using the correct format",
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.c": "judge a formal letter for correctness of language and relevance",
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.a": "listen for specific information and the main idea for self-expression",
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.b": "respond to oral questions based on the theme",
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.c": "use expressions such as similes, metaphors and proverbs in oral communication",
+  "ENGL.G6.LISTEN.T5_PRONUNCIATION_AND_VO.d": "advocate the importance of listening comprehension",
+  "ENGL.G6.READIN.T5_EXTENSIVE_READING.a": "select appropriate reading materials from varied texts",
+  "ENGL.G6.READIN.T5_EXTENSIVE_READING.b": "read a variety of texts for enjoyment and general understanding",
+  "ENGL.G6.READIN.T5_EXTENSIVE_READING.c": "assess a text for appropriateness and relevance",
+  "ENGL.G6.LANGUA.T5_ADJECTIVES.a": "identify simple, comparative and superlative forms of adjectives in print and digital texts correctly",
+  "ENGL.G6.LANGUA.T5_ADJECTIVES.b": "use simple, comparative and superlative forms of adjectives in oral and written texts",
+  "ENGL.G6.LANGUA.T5_ADJECTIVES.c": "acknowledge the importance of using adjectives correctly in communication",
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.a": "plan a narrative composition collaboratively",
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.b": "organise ideas coherently, clearly, and logically for writing fluency",
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.c": "create a narrative composition on a variety of topics",
+  "ENGL.G6.WRITIN.T5_CREATIVE_WRITING.d": "judge a narrative composition for correctness of language, relevance of the topic and organisation of ideas",
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.a": "identify words and phrases with the sounds /f/, /v/ and /əʊ/",
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.b": "use vocabulary related to the theme in sentences correctly",
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.c": "apply stress and intonation in questions, statements, and exclamatory sentences",
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.d": "value the importance of stress and intonation in sentences",
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.a": "make connections between events in the text and prior experiences",
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.b": "use contextual clues to infer the meaning of vocabulary such as words, proverbs, fixed phrases, similes, and phrasal verbs",
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.c": "respond to a reading text for comprehension",
+  "ENGL.G6.READIN.T6_INTENSIVE_READING.d": "acknowledge the role of reading comprehension in lifelong learning",
+  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.a": "recognise phrasal quantifiers in oral and written contexts",
+  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.b": "use phrasal quantifiers with countable and uncountable nouns correctly",
+  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.c": "judge the correctness of phrasal quantifiers in sentences",
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.a": "plan a composition in preparation for writing",
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.b": "use appropriate words and expressions such as similes, metaphors, fixed phrases, phrasal verbs and idioms in written communication",
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.c": "create a pictorial composition from visuals",
+  "ENGL.G6.WRITIN.T6_CREATIVE_WRITING.d": "judge a pictorial composition for relevance of topic, correctness of language, and creativity",
+  "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.a": "articulate sounds correctly for communication clarity",
+  "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.b": "seek clarification during a two-way conversation to express different moods in oral contexts",
+  "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.c": "interrupt appropriately during a conversation",
+  "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.d": "use appropriate words and expressions such as similes, metaphors, proverbs among others",
+  "ENGL.G6.LISTEN.T7_PRONUNCIATION_AND_IN.e": "advocate the importance of interactive listening",
+  "ENGL.G6.READIN.T7_EXTENSIVE_READING.a": "select appropriate reading texts from a library",
+  "ENGL.G6.READIN.T7_EXTENSIVE_READING.b": "read a variety of texts for general information and enjoyment",
+  "ENGL.G6.READIN.T7_EXTENSIVE_READING.c": "acknowledge the importance of reading widely for lifelong learning",
+  "ENGL.G6.LANGUA.T7_TENSE.a": "identify sentences featuring future continuous tense in print and digital texts",
+  "ENGL.G6.LANGUA.T7_TENSE.b": "use future continuous tense in oral and written contexts correctly",
+  "ENGL.G6.LANGUA.T7_TENSE.c": "assess sentences for correctness and appropriateness of tense",
+  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.a": "identify the comma and double quotation marks in a text",
+  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.b": "use the comma and the double quotation marks correctly in oral and written texts",
+  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.c": "collaborate with peers to determine the correct use of the comma and the double quotation marks",
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.a": "explain the difference between riddles and proverbs",
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.b": "pronounce sounds, words, and phrases related to the theme accurately",
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.c": "use words and expressions such as idioms, fixed phrases, phrasal verbs and proverbs in varied contexts",
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.d": "acknowledge the importance of proverbs, riddles, and idioms in communication",
+  "ENGL.G6.READIN.T8_FLUENCY.a": "select a reading text from a collection of materials or the library",
+  "ENGL.G6.READIN.T8_FLUENCY.b": "read a text at a reasonable speed for fluency",
+  "ENGL.G6.READIN.T8_FLUENCY.c": "read a text accurately and with expression",
+  "ENGL.G6.READIN.T8_FLUENCY.d": "acknowledge the importance of reading fluency in lifelong learning",
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.a": "distinguish the active and passive voice in a sample text correctly",
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.b": "contrast the use of some given words in sentences",
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.c": "use active and passive voice correctly",
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.d": "assess sentences for correctness on the use of active and passive voice",
+  "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.a": "plan a narrative composition in preparation for writing",
+  "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.b": "use proverbs, phrasal verbs and idiomatic expressions in writing",
+  "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.c": "create a narrative composition based on a given theme for self-expression",
+  "ENGL.G6.WRITIN.T8_CREATIVE_WRITING.d": "judge a narrative composition for creativity, organisation of ideas, relevance of topic, and correctness",
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.a": "identify words, phrases and sentences with the target sounds",
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.b": "use words and expressions such as idioms, proverbs and similes related to the theme in sentences correctly",
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.c": "make an oral presentation related to the theme fluently",
+  "ENGL.G6.LISTEN.T9_PRONUNCIATION_AND_SP.d": "acknowledge the importance of fluency in oral communication",
+  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.a": "make connections between events in the text and real life experiences",
+  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.b": "create mental images from viewed, heard or read text for comprehension",
+  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.c": "respond to texts correctly for comprehension",
+  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.d": "acknowledge the importance of reading comprehension in lifelong learning",
+  "ENGL.G6.LANGUA.T9_ADVERBS.a": "identify adverbs in oral and written texts",
+  "ENGL.G6.LANGUA.T9_ADVERBS.b": "use adverbs to express different meanings correctly",
+  "ENGL.G6.LANGUA.T9_ADVERBS.c": "judge the appropriateness of adverbs used in oral and written texts",
+  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.a": "identify grade appropriate hyphenated words from a written text",
+  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.b": "use grade appropriate hyphenated words correctly for clarity of meaning",
+  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.c": "judge sentences for correctness of language, and use of the hyphen",
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.a": "identify words with the sound /h/ in an oral text",
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.b": "use turn taking and polite interruption during a conversation",
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.c": "express appropriate moods during a conversation",
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.d": "advocate the importance of polite interruption",
+  "ENGL.G6.LISTEN.T10_PRONUNCIATION_AND_VO.e": "and turn taking in oral communication",
+  "ENGL.G6.READIN.T10_INTENSIVE_READING.a": "make connections between events in a text and real life experiences",
+  "ENGL.G6.READIN.T10_INTENSIVE_READING.b": "respond to a text correctly for comprehension",
+  "ENGL.G6.READIN.T10_INTENSIVE_READING.c": "use contextual clues to infer the meaning of unfamiliar words and expressions such as proverbs, similes among others",
+  "ENGL.G6.READIN.T10_INTENSIVE_READING.d": "acknowledge the role of reading comprehension in lifelong learning",
+  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.a": "identify conjunctions in a text",
+  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.b": "use conjunctions correctly in varied contexts",
+  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.c": "judge the appropriateness of conjunctions used in sentences",
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.a": "use appropriate adjectives to describe a person, object or a place",
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.b": "plan a descriptive composition in preparation for writing",
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.c": "create a descriptive composition on a variety of topics",
+  "ENGL.G6.WRITIN.T10_CREATIVE_WRITING.d": "judge a descriptive composition for correctness of language, relevance to the topic, creativity and organisation of ideas",
+  "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.a": "select sounds, words and phrases from a text for listening fluency",
+  "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.b": "use words and expressions such as proverbs, phrasal verbs, among others in sentences",
+  "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.c": "listen for specific details and main idea from audio recordings, internet, radio or television programmes",
+  "ENGL.G6.LISTEN.T11_PRONUNCIATION_AND_VO.d": "appreciate the importance of effective listening in communication",
+  "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.a": "identify words, phrases and proverbs from a digital text",
+  "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.b": "create mental images from viewed, heard or read text",
+  "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.c": "answer direct and inferential questions correctly for comprehension",
+  "ENGL.G6.READIN.T11_INTENSIVE_READING_DI.d": "acknowledge the role of reading comprehension in lifelong learning",
+  "ENGL.G6.LANGUA.T11_INTERROGATIVES.a": "identify interrogatives in print or digital texts",
+  "ENGL.G6.LANGUA.T11_INTERROGATIVES.b": "use interrogatives correctly to express different meanings",
+  "ENGL.G6.LANGUA.T11_INTERROGATIVES.c": "assess the appropriateness of interrogatives used in print and digital texts",
+  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.a": "identify synonyms and antonyms correctly for writing fluency",
+  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.b": "use synonyms and antonyms correctly in sentences",
+  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.c": "advocate the use of a rich vocabulary in writing",
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.a": "listen for specific details such as sounds words and expressions for effective oral communication",
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.b": "make oral presentations such as speeches accurately, with minimal hesitations and with expressions",
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.c": "use non-verbal cues appropriately to enhance fluency",
+  "ENGL.G6.LISTEN.T12_PRONUNCIATION_AND_VO.d": "judge the appropriateness of non-verbal cues in a conversation or video recordings",
+  "ENGL.G6.READIN.T12_INTENSIVE_READING.a": "identify words, phrases, and proverbs used in a song or poem",
+  "ENGL.G6.READIN.T12_INTENSIVE_READING.b": "uses stress and rhythm correctly while reading lines and words in a poem or song",
+  "ENGL.G6.READIN.T12_INTENSIVE_READING.c": "respond to a reading text for comprehension",
+  "ENGL.G6.READIN.T12_INTENSIVE_READING.d": "advocate the importance of correct stress and rhythm in communication",
+  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.a": "identify question tags from a print or digital text for information",
+  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.b": "form question tags from verbs to be, verbs to have, verbs to do and modals",
+  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.c": "use question tags correctly in oral and written texts",
+  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.d": "appreciate the importance of well-formed sentences in communication",
+  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.a": "identify all the components of a personal journal",
+  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.b": "use the correct format to create a personal journal",
+  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.c": "judge the correctness, relevance to the topic and the format of a personal journal",
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.a": "identify specific sounds, words, phrases, and sentences from a text",
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.b": "listen to a short text and rewrite it accurately",
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.c": "use expressions such as similes, proverbs, fixed phrases idioms and metaphors in oral contexts correctly",
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.d": "advocate the need for attentive listening during oral comprehension",
+  "ENGL.G6.READIN.T13_EXTENSIVE_READING.a": "select appropriate reading texts from print or digital collections",
+  "ENGL.G6.READIN.T13_EXTENSIVE_READING.b": "read a variety of print or digital texts for enjoyment and general understanding",
+  "ENGL.G6.READIN.T13_EXTENSIVE_READING.c": "appreciate the importance of extensive reading in lifelong learning",
+  "ENGL.G6.LANGUA.T13_WORD_CLASSES.a": "identify prepositions correctly in oral and written texts",
+  "ENGL.G6.LANGUA.T13_WORD_CLASSES.b": "use prepositions correctly in varied texts",
+  "ENGL.G6.LANGUA.T13_WORD_CLASSES.c": "judge the appropriateness of prepositions used in various texts",
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.a": "recognise affixes used to change the form and meaning of words",
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.b": "form new words using prefixes and suffixes",
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.c": "spell words correctly for writing fluency",
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.d": "determine the correctness and appropriateness of affixes used in various texts"
+ },
+ "skills": {
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Gives the meaning of idioms and fixed phrases (work like a dog, dog tired, burst into tears, a piece of cake, under the weather), completes them with the right word, and does not read them word for word, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the right word from the theme (employ, exploit, labour, wages, trafficking, abuse, rescue, protect) to complete a sentence, and does not mix a person with an action, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA": {
+   "forms": [
+    "choose the main idea",
+    "choose the best title",
+    "find the specific detail"
+   ],
+   "mastery": "Chooses the sentence or title that covers the whole text, tells it from a detail, and finds a specific detail asked for, in 8 of 10 new texts."
+  },
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS": {
+   "forms": [
+    "choose the correct book",
+    "put words in alphabetical order",
+    "decide from guide words"
+   ],
+   "mastery": "Chooses the right reference for a need, puts words in alphabetical order beyond the first letter, and decides from guide words whether a word is on a page, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT": {
+   "forms": [
+    "choose the book for a purpose",
+    "judge the relevance of a text"
+   ],
+   "mastery": "Chooses the book or text that fits a reader's purpose, level and interest (information, enjoyment, a topic), and does not choose by the cover, the length or the title alone, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses some, enough, each or a lot of to fit the noun and the verb (each takes a singular noun and verb, a lot of takes plural or uncountable, some in an offer or a statement), and does not write each of the boys are or a lots of, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS": {
+   "forms": [
+    "choose the entry for a field",
+    "choose the field a form needs"
+   ],
+   "mastery": "Puts each detail in the field it belongs to (surname, date of birth, signature), follows the form's own instruction (block letters, tick one, write N/A), and says which fields a form needs for its purpose, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE": {
+   "forms": [
+    "choose the meaning",
+    "finish the proverb",
+    "choose the situation"
+   ],
+   "mastery": "Matches a proverb to its meaning, finishes it with the right word and picks the situation it fits, and does not read it word for word, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR": {
+   "forms": [
+    "simile or metaphor",
+    "fill the gap",
+    "choose the correct word"
+   ],
+   "mastery": "Says that a simile compares with like or as and a metaphor says one thing is another, completes familiar similes (as hungry as a wolf), and does not write as ... like, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS": {
+   "forms": [
+    "short comprehension: choose",
+    "short comprehension: type",
+    "put the events in order"
+   ],
+   "mastery": "Names the characters and the places in a short story, and puts four of its events in the order they happened, in 8 of 10 new passages."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT": {
+   "forms": [
+    "choose the best prediction",
+    "choose the clue that supports it"
+   ],
+   "mastery": "Uses clues in the story to choose the most likely next event and says which clue supports it, in 8 of 10 new passages."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS": {
+   "forms": [
+    "short comprehension: choose",
+    "true, false or not stated",
+    "short comprehension: type"
+   ],
+   "mastery": "Finds an answer that is stated in the text, tells true from false and not stated, and does not pick a detail that sits near the answer, in 8 of 10 new passages."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS": {
+   "forms": [
+    "short comprehension: choose",
+    "stated or worked out"
+   ],
+   "mastery": "Works out what the text does not say outright (why a character acts, how they feel) and does not give an answer the text contradicts or merely repeats, in 8 of 10 new passages."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY": {
+   "forms": [
+    "choose the line that paints a picture",
+    "choose what the picture shows"
+   ],
+   "mastery": "Picks the words of a poem or story that make a picture, and says what the writer wants the reader to see, hear or feel, and does not pick the line that only gives a fact, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE": {
+   "forms": [
+    "choose the trait",
+    "choose the evidence"
+   ],
+   "mastery": "Chooses the trait that the character's words and actions support (kind, selfish, brave, honest), and says which line is the evidence, and does not judge from the name or one word, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT": {
+   "forms": [
+    "pick the abstract noun",
+    "pick the concrete noun",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Names nouns we can see or touch as concrete (mango, river) and nouns for ideas, feelings and qualities as abstract (honesty, hunger, bravery), and writes the noun form (honesty, not honest) in a gap, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER": {
+   "forms": [
+    "choose the topic sentence",
+    "find the sentence that does not belong",
+    "put the sentences in order"
+   ],
+   "mastery": "Chooses the sentence that opens a paragraph, puts supporting sentences in a logical order and finds the sentence that does not belong, in 8 of 10 new paragraphs."
+  },
+  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK": {
+   "forms": [
+    "choose the polite expression",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the polite way to answer a call, to take a message, to interrupt (Excuse me, may I add something?) and to ask for clarification (Could you say that again, please?), and spots a rude or blunt turn, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES": {
+   "forms": [
+    "short comprehension: choose",
+    "choose the clue words"
+   ],
+   "mastery": "Uses the words around an unfamiliar word, proverb or simile to choose its meaning and says which words gave the clue, in 8 of 10 new passages."
+  },
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Pairs the two halves correctly (both with and, either with or, neither with nor, not only with but also), keeps the verb singular or plural to match, and writes no extra not after neither, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the question word, then the subject, then the verb (Show me where the library is), without turning the verb round as in a question, in 8 of 10 new sentences."
+  },
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS": {
+   "forms": [
+    "choose the short form",
+    "choose the full form",
+    "tell an acronym from an abbreviation"
+   ],
+   "mastery": "Writes and reads the short form of common titles and words (Mr, Dr, etc.), expands Kenyan acronyms (KNEC, KWS, KRA), and tells an abbreviation from an acronym (an acronym is said as a word, like UNICEF), in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS": {
+   "forms": [
+    "choose the correct spelling",
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Spells numbers in words (forty, fourteen, ninety, eighth), writes ordinals with the right ending (1st, 2nd, 3rd, 4th), and does not begin a sentence with a figure, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the right word (ambulance, paramedic, firefighter, siren, evacuate, first aid, emergency, rescue) for a rescue situation, and does not mix the person, the vehicle and the action, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses who for a person, which for a thing or animal, whose for belonging, and does not add a second pronoun (the boy who he won), in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses some-, any-, no- or every- with -one, -body or -thing to fit the sentence, uses a singular verb with them, and does not write a double negative (did not see nobody) or noone, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER": {
+   "forms": [
+    "choose the part or its place",
+    "choose the formal wording"
+   ],
+   "mastery": "Tells where each part goes (address, date, greeting, subject line, closing, signature), matches the closing to the greeting (Dear Sir with Yours faithfully), and picks the polite formal wording, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES": {
+   "forms": [
+    "pick the form",
+    "fill the gap",
+    "spot the mistake",
+    "choose the correct word"
+   ],
+   "mastery": "Tells the three forms apart and writes as ... as with the simple form, than with the comparative and the with the superlative, and does not write as taller as or the tallest than, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS": {
+   "forms": [
+    "pick the word with the same sound",
+    "find the odd one out"
+   ],
+   "mastery": "Picks the word with the same vowel sound as near (/ɪə/), tour (/ʊə/) or go (/əʊ/), or the word that starts with /f/, /v/ or an /h/ that is said (hour and honest start without it), in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Uses a number of and a good many with countable nouns, a great deal of and an amount of with uncountable nouns, and a piece, bottle, loaf or bar of for single items of an uncountable thing, with of every time, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Writes will be + verb-ing for an action that will be going on at a stated time (This time tomorrow we will be travelling), and does not write will travelling, will been or a present continuous, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Puts the comma between items in a list, after an opening word or phrase, round extra information and before or after spoken words, and does not put one between subject and verb or use it to join two sentences, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Puts double quotation marks round the exact words spoken, closes them after the punctuation, keeps the capital letter at the start of the speech and the small letter after said in split speech, and does not use them for reported speech, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS": {
+   "forms": [
+    "riddle or proverb",
+    "answer the riddle"
+   ],
+   "mastery": "Says that a riddle asks a puzzle with a hidden answer and a proverb gives advice or a truth, and answers a simple riddle by what it describes, not by the words in it, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE": {
+   "forms": [
+    "choose the meaning",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the phrasal verb and its particle for a meaning (give up, set off, break down, run out of, put up with, cope with, agree with, look after), and does not use the wrong preposition, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE": {
+   "forms": [
+    "pick the passive sentence",
+    "fill the gap",
+    "spot the mistake",
+    "choose the passive of a sentence"
+   ],
+   "mastery": "Says whether the subject does the action (active) or receives it (passive), writes be + the past participle (The window was broken), matches be to the number, and does not leave out be or use the past tense in place of the participle, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses between each of these pairs from who is giving, who is receiving and which way the thing moves, and does not use one word for both as in Kiswahili, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION": {
+   "forms": [
+    "choose the fact",
+    "choose the opinion",
+    "story or information"
+   ],
+   "mastery": "Says that a fact can be checked and an opinion says what someone thinks or feels (best, beautiful, should), and tells whether a short text is a made-up story or information, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE": {
+   "forms": [
+    "say what the adverb tells us",
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Tells what an adverb shows, uses well (not good), hard and hardly with their right meanings, puts the adverb of frequency before the main verb (always goes), and does not use an adjective after a verb of action, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS": {
+   "forms": [
+    "choose the correct sentence",
+    "spot the mistake"
+   ],
+   "mastery": "Writes the hyphen in compound words (well-known, mother-in-law), in numbers from twenty-one to ninety-nine and in a compound before a noun (a ten-year-old boy, but ten years old), and does not write ten-years-old, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the conjunction that fits the meaning (contrast, condition, purpose, time), uses only one joining word (Although ... but ... is wrong), and does not write unless ... not, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the question word that fits the answer given (whose for owner, which for a choice from a set, how often for frequency, how long for time, how far for distance), in 8 of 10 new questions."
+  },
+  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses a word with the same meaning (synonym) or the opposite meaning (antonym) in a sentence, and does not give a related word, the same word or the wrong kind of pair, in 8 of 10 new items."
+  },
+  "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES": {
+   "forms": [
+    "choose the rhyming words",
+    "choose the repeated line"
+   ],
+   "mastery": "Finds the words that rhyme by sound (not by spelling), the line that repeats and the words a poem stresses, in 8 of 10 new poems."
+  },
+  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Adds the right tag to a statement: the same helper verb with the opposite sign and a pronoun (is/isn't, has/hasn't, does/doesn't, can/can't, will/won't), and writes aren't I after I am, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL": {
+   "forms": [
+    "choose the part a journal has",
+    "choose the journal entry"
+   ],
+   "mastery": "Names what a journal entry has (date, \"I\", the day's events in order, feelings) and what it does not (a greeting and a closing as in a letter, \"Yours sincerely\"), and tells a journal entry from a letter or a news report, in 8 of 10 new items."
+  },
+  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the right word (profit, loss, import, export, customer, retailer, wholesaler, wages, budget) for a trading situation, and does not swap the opposite pairs, in 8 of 10 new items."
+  },
+  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses between and among, since and for, during and for, by and with, and the preposition a word takes (interested in, afraid of, different from), and does not write interested on or afraid from, in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES": {
+   "forms": [
+    "choose the word part",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Chooses the prefix (un-, dis-, mis-, re-, in-, im-) or suffix (-ful, -less, -ness, -ment, -able) that makes the meaning wanted, and keeps the spelling right (happy to happiness, care to careful), in 8 of 10 new items."
+  },
+  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES": {
+   "forms": [
+    "choose the correct word",
+    "fill the gap",
+    "spot the mistake"
+   ],
+   "mastery": "Spells words that often go wrong (receive, believe, separate, necessary, government, environment, tomorrow, library, February) from the sound, the rule or the picture of the word, in 8 of 10 new words."
+  }
+ }
+}

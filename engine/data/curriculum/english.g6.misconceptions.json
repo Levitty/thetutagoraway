@@ -1,0 +1,3197 @@
+{
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_LITERAL": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "error": "Reads an idiom word for word.",
+  "example": {
+   "question": "What does \"dog tired\" mean?",
+   "wrong_answer": "tired like a dog",
+   "correct_answer": "very, very tired"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"tired like a dog\" next to the right answer in a new sentence and ask again.",
+  "help": "An idiom's meaning is not the sum of its words.",
+  "feedback": "An idiom means something different from its words. Dog tired means extremely tired.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WORD_CHANGED": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "error": "Changes a word of the idiom (work like a cat).",
+  "example": {
+   "question": "He had to work like a ___ all day.",
+   "wrong_answer": "cat",
+   "correct_answer": "dog"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"cat\" next to the right answer in a new sentence and ask again.",
+  "help": "An idiom is fixed. Change one word and it is lost.",
+  "feedback": "An idiom is a fixed phrase. You cannot change its words: work like a dog.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_OPPOSITE": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "error": "Takes the opposite meaning of an idiom.",
+  "example": {
+   "question": "What does \"a piece of cake\" mean?",
+   "wrong_answer": "very difficult",
+   "correct_answer": "very easy"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"very difficult\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask what the picture suggests: cake is easy to eat.",
+  "feedback": "A piece of cake means very easy.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WRONG_SITUATION": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
+  "error": "Uses an idiom in a situation it does not fit.",
+  "example": {
+   "question": "When would you say \"burst into tears\"?",
+   "wrong_answer": "when you are very happy",
+   "correct_answer": "when you suddenly cry"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"when you are very happy\" next to the right answer in a new sentence and ask again.",
+  "help": "Match the idiom to the feeling or the event.",
+  "feedback": "Burst into tears means to begin to cry suddenly.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_PERSON_ACTION": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
+  "error": "Uses a word for the person where the action is needed (employer for employ).",
+  "example": {
+   "question": "It is against the law to ___ young children to work.",
+   "wrong_answer": "employer",
+   "correct_answer": "employ"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"employer\" next to the right answer in a new sentence and ask again.",
+  "help": "Employ is the action. The employer is the person who does it.",
+  "feedback": "An employer is a person. Employ is the action. Choose the word for the action here.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_EXPLOIT_HELP": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
+  "error": "Takes a harsh word for a kind one (exploit for protect).",
+  "example": {
+   "question": "The law is there to ___ children from harm.",
+   "wrong_answer": "exploit",
+   "correct_answer": "protect"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"exploit\" next to the right answer in a new sentence and ask again.",
+  "help": "Exploit means to use someone unfairly. Protect means to keep safe.",
+  "feedback": "To exploit is to use someone unfairly. To protect is to keep them safe.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_WAGES_FEES": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
+  "error": "Mixes wages (pay for work) with fees (pay for a service).",
+  "example": {
+   "question": "The boy was paid very low ___ for a full day of hard work.",
+   "wrong_answer": "fees",
+   "correct_answer": "wages"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"fees\" next to the right answer in a new sentence and ask again.",
+  "help": "Wages: money paid for work. Fees: money you pay for school or a service.",
+  "feedback": "Wages are money paid for work. Fees are money you pay for school or a service.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_DETAIL": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
+  "error": "Picks a detail as the main idea.",
+  "example": {
+   "question": "What is the main idea?",
+   "wrong_answer": "a detail",
+   "correct_answer": "what the whole passage is about"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a detail\" next to the right answer in a new sentence and ask again.",
+  "help": "The main idea covers all of the passage.",
+  "feedback": "The main idea covers the whole text. A detail is only one part.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_TOO_BROAD": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
+  "error": "Picks an idea that is wider than the passage.",
+  "example": {
+   "question": "What is the main idea?",
+   "wrong_answer": "a very general statement",
+   "correct_answer": "what the passage is about"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a very general statement\" next to the right answer in a new sentence and ask again.",
+  "help": "The main idea fits this passage, not every passage.",
+  "feedback": "The main idea must fit this passage. A very general statement is too wide.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_NOT_IN_TEXT": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
+  "error": "Picks an idea that is not in the passage.",
+  "example": {
+   "question": "What is the main idea?",
+   "wrong_answer": "something not in the text",
+   "correct_answer": "what the passage says"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"something not in the text\" next to the right answer in a new sentence and ask again.",
+  "help": "Check the idea against the text.",
+  "feedback": "The main idea must be in the passage. Check each answer against it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M_MAIN_DETAIL_FOR_ASKED": {
+  "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
+  "error": "Gives the main idea when a specific detail is asked, or the reverse.",
+  "example": {
+   "question": "What time did the bus leave?",
+   "wrong_answer": "it left late",
+   "correct_answer": "at half past six"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"it left late\" next to the right answer in a new sentence and ask again.",
+  "help": "A detail question asks for one fact, like a time or a name.",
+  "feedback": "A specific detail question wants the exact fact, such as a time, name or place.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_WRONG_BOOK": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Chooses the wrong reference book.",
+  "example": {
+   "question": "Which book helps you find a country on the map?",
+   "wrong_answer": "dictionary",
+   "correct_answer": "atlas"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"dictionary\" next to the right answer in a new sentence and ask again.",
+  "help": "Dictionary: words. Atlas: maps. Encyclopaedia: facts.",
+  "feedback": "A dictionary gives word meanings, an atlas has maps, an encyclopaedia gives facts on many topics.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ALPHA_FIRST": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Orders words by first letter only.",
+  "example": {
+   "question": "Put in alphabetical order: bread, brave, brick.",
+   "wrong_answer": "bread, brave, brick",
+   "correct_answer": "brave, bread, brick"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"bread, brave, brick\" next to the right answer in a new sentence and ask again.",
+  "help": "When the first letters match, look at the next letter.",
+  "feedback": "When the first letters are the same, look at the second, third and so on.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M6_REF_GUIDE_WORDS": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Misreads guide words.",
+  "example": {
+   "question": "Guide words are \"farm\" and \"feast\". Which word is on the page?",
+   "wrong_answer": "fence",
+   "correct_answer": "fast"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"fence\" next to the right answer in a new sentence and ask again.",
+  "help": "The word must come after the first guide and before the last.",
+  "feedback": "A word is on the page only if it falls between the two guide words in alphabetical order.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_INDEX_CONTENTS": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Uses the contents page when the index is needed or the reverse.",
+  "example": {
+   "question": "Which part of a book lists the page for one small topic?",
+   "wrong_answer": "contents",
+   "correct_answer": "index"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"contents\" next to the right answer in a new sentence and ask again.",
+  "help": "Contents: chapters in order. Index: every topic in A to Z.",
+  "feedback": "The contents lists the chapters in order. The index lists small topics A to Z with page numbers.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_WRONG_GENRE": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+  "error": "Chooses a story to find facts or a fact book for enjoyment.",
+  "example": {
+   "question": "Which book would help you learn how bees make honey?",
+   "wrong_answer": "a story about a bee",
+   "correct_answer": "an information book about bees"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a story about a bee\" next to the right answer in a new sentence and ask again.",
+  "help": "Information: facts. Story: enjoyment.",
+  "feedback": "Use an information book to learn facts. A story is for enjoyment.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_COVER_ONLY": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+  "error": "Judges a book by its cover or its size.",
+  "example": {
+   "question": "What is the best way to judge if a book suits you?",
+   "wrong_answer": "look at the cover only",
+   "correct_answer": "read the blurb and a page"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"look at the cover only\" next to the right answer in a new sentence and ask again.",
+  "help": "The blurb and a page show the topic and the level.",
+  "feedback": "The cover can mislead. Read the blurb and a page to see the topic and the level.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_TOO_HARD": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+  "error": "Chooses a text far too hard or far too easy.",
+  "example": {
+   "question": "Which text is right for a learner in Grade 6?",
+   "wrong_answer": "a text with many unknown words on every line",
+   "correct_answer": "a text with a few new words"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a text with many unknown words on every line\" next to the right answer in a new sentence and ask again.",
+  "help": "A good book has a few new words, not every line.",
+  "feedback": "A text is right if you understand most of it and meet only a few new words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_OFF_TOPIC": {
+  "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
+  "error": "Chooses a text on a different topic.",
+  "example": {
+   "question": "Which text is relevant for a project on Lake Victoria?",
+   "wrong_answer": "a text about the desert",
+   "correct_answer": "a text about Lake Victoria"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a text about the desert\" next to the right answer in a new sentence and ask again.",
+  "help": "Check the topic first.",
+  "feedback": "A relevant text is about the same topic as your need.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_EACH_PLURAL": {
+  "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
+  "error": "Uses each with a plural noun or a plural verb.",
+  "example": {
+   "question": "Each of the girls ___ a bottle.",
+   "wrong_answer": "have",
+   "correct_answer": "has"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"have\" next to the right answer in a new sentence and ask again.",
+  "help": "Each means one at a time: one girl, one bottle, so the verb is singular.",
+  "feedback": "Each points to one person or thing at a time, so the verb is singular: each girl has.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_LOTS_FORM": {
+  "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
+  "error": "Writes a lots of or a lot off.",
+  "example": {
+   "question": "We saw ___ goats at the market.",
+   "wrong_answer": "a lots of",
+   "correct_answer": "a lot of"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a lots of\" next to the right answer in a new sentence and ask again.",
+  "help": "Say the whole phrase: a lot of. Lots of has no a in front.",
+  "feedback": "The phrase is a lot of (one lot) or lots of. A lots of is not used.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_ENOUGH_AFTER": {
+  "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
+  "error": "Puts enough in the wrong place (enough big, instead of big enough).",
+  "example": {
+   "question": "The room is ___ for all of us.",
+   "wrong_answer": "enough big",
+   "correct_answer": "big enough"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"enough big\" next to the right answer in a new sentence and ask again.",
+  "help": "After an adjective, enough comes last: big enough. Before a noun it comes first: enough chairs.",
+  "feedback": "Enough comes AFTER an adjective (big enough) and BEFORE a noun (enough chairs).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_SOME_ANY": {
+  "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
+  "error": "Uses some where a question or a refusal needs any, or any in a plain statement.",
+  "example": {
+   "question": "There is not ___ milk left.",
+   "wrong_answer": "some",
+   "correct_answer": "any"
+  },
+  "cause": "Learns that some means a few and uses it in every sentence.",
+  "reveals": "Offer \"some\" next to the right answer in a new sentence and ask again.",
+  "help": "Some is for plain statements and offers. In a negative sentence use any.",
+  "feedback": "In a sentence with not, use any, not some: There is not any milk.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SURNAME": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Puts the first name in the surname space or the other way round.",
+  "example": {
+   "question": "Wanjiru Kamau Mwangi is filling in a form. Her surname is Mwangi. What goes in the box \"Surname\"?",
+   "wrong_answer": "Wanjiru",
+   "correct_answer": "Mwangi"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Wanjiru\" next to the right answer in a new sentence and ask again.",
+  "help": "The surname is the family name, the name shared with the family.",
+  "feedback": "The surname is the family name. The form asks for it in its own box, apart from the first name.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_DATE_TODAY": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Writes today's date in the date of birth box.",
+  "example": {
+   "question": "Which goes in the box \"Date of birth\"?",
+   "wrong_answer": "the date today",
+   "correct_answer": "the day you were born"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the date today\" next to the right answer in a new sentence and ask again.",
+  "help": "Date of birth is the day you were born.",
+  "feedback": "Date of birth is the day you were born, not the day you fill in the form.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SKIP": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Leaves a box empty instead of writing N/A or none.",
+  "example": {
+   "question": "The box \"Allergies\" does not apply to Peter. What should he write?",
+   "wrong_answer": "leave it empty",
+   "correct_answer": "N/A or none"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"leave it empty\" next to the right answer in a new sentence and ask again.",
+  "help": "An empty box looks as if you forgot. Write none or N/A.",
+  "feedback": "Do not leave a box empty. If it does not apply, write N/A or none so the reader knows you saw it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_BLOCK": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Writes in small letters when the form asks for block letters.",
+  "example": {
+   "question": "The form says \"Write in BLOCK LETTERS\". Which way is right?",
+   "wrong_answer": "amina odhiambo",
+   "correct_answer": "AMINA ODHIAMBO"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"amina odhiambo\" next to the right answer in a new sentence and ask again.",
+  "help": "Block letters are all capital letters.",
+  "feedback": "Block letters are capital letters, printed clearly, so every box can be read.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_WRONG_FIELD": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Plans a form with a field that has nothing to do with its purpose, or leaves out the one it needs.",
+  "example": {
+   "question": "A school wants someone to call in an emergency. Which field must the form have?",
+   "wrong_answer": "Favourite colour",
+   "correct_answer": "Parent or guardian phone number"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Favourite colour\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask: what will the reader do with this information? Keep only what the purpose needs.",
+  "feedback": "A form asks only for what its purpose needs. Think about what the reader will do with each answer.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SIGN_PRINT": {
+  "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
+  "error": "Prints the name in the signature space.",
+  "example": {
+   "question": "What do you put in the box \"Signature\"?",
+   "wrong_answer": "your name in print",
+   "correct_answer": "your own handwritten signature"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"your name in print\" next to the right answer in a new sentence and ask again.",
+  "help": "A signature is your own handwriting of your name.",
+  "feedback": "A signature is your name written in your own style, by hand, not printed.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_LITERAL": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+  "error": "Reads a proverb word for word.",
+  "example": {
+   "question": "What does \"A stitch in time saves nine\" mean?",
+   "wrong_answer": "Sewing is useful.",
+   "correct_answer": "Fix a small problem early so it does not grow."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Sewing is useful.\" next to the right answer in a new sentence and ask again.",
+  "help": "A proverb gives advice by a picture. Ask: what is the lesson?",
+  "feedback": "A proverb uses a picture to teach a lesson. Read what it teaches, not the words one by one.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_OPPOSITE": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+  "error": "Takes the opposite lesson from a proverb.",
+  "example": {
+   "question": "What does \"Haste makes waste\" mean?",
+   "wrong_answer": "Hurry and you will get more done.",
+   "correct_answer": "Hurrying leads to mistakes and loss."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Hurry and you will get more done.\" next to the right answer in a new sentence and ask again.",
+  "help": "Waste is a bad result: the proverb warns.",
+  "feedback": "Haste makes waste warns that hurrying spoils the work.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_MIXED": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+  "error": "Mixes two proverbs of a similar kind.",
+  "example": {
+   "question": "Which proverb tells us to keep what we already have?",
+   "wrong_answer": "Too many cooks spoil the broth.",
+   "correct_answer": "A bird in the hand is worth two in the bush."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Too many cooks spoil the broth.\" next to the right answer in a new sentence and ask again.",
+  "help": "Match the lesson of each proverb, not only one word.",
+  "feedback": "Each proverb has its own lesson. A bird in the hand is about keeping what you have.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_WORD": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
+  "error": "Finishes a proverb with the wrong word.",
+  "example": {
+   "question": "Where there is a will, there is a ___.",
+   "wrong_answer": "door",
+   "correct_answer": "way"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"door\" next to the right answer in a new sentence and ask again.",
+  "help": "Proverbs are fixed. Say it in full to remember it.",
+  "feedback": "A proverb is fixed. It cannot be changed: Where there is a will, there is a way.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_METAPHOR_AS_SIMILE": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+  "error": "Calls a metaphor a simile.",
+  "example": {
+   "question": "Which sentence has a metaphor?",
+   "wrong_answer": "He ran like the wind.",
+   "correct_answer": "The thief was a hyena."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"He ran like the wind.\" next to the right answer in a new sentence and ask again.",
+  "help": "A simile uses like or as. A metaphor says one thing IS another.",
+  "feedback": "A simile compares with like or as. A metaphor says one thing is another, with no like or as.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_AS_LIKE": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+  "error": "Writes as ... like instead of as ... as.",
+  "example": {
+   "question": "He was as hungry ___ a wolf.",
+   "wrong_answer": "like",
+   "correct_answer": "as"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"like\" next to the right answer in a new sentence and ask again.",
+  "help": "The pattern is as ... as, or just like.",
+  "feedback": "A simile uses as ... as (as hungry as) or like by itself. Do not write as hungry like.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_WRONG_ANIMAL": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+  "error": "Uses the wrong animal or thing in a familiar simile.",
+  "example": {
+   "question": "As greedy as a ___.",
+   "wrong_answer": "giraffe",
+   "correct_answer": "hyena"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"giraffe\" next to the right answer in a new sentence and ask again.",
+  "help": "Similes are fixed: greedy as a hyena, brave as a lion.",
+  "feedback": "Common similes are fixed. Greedy goes with hyena, brave with lion.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_PLAIN": {
+  "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
+  "error": "Calls a plain statement a simile.",
+  "example": {
+   "question": "Which sentence has a simile?",
+   "wrong_answer": "My dog is big.",
+   "correct_answer": "My dog is as big as a calf."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"My dog is big.\" next to the right answer in a new sentence and ask again.",
+  "help": "A simile compares two different things.",
+  "feedback": "A simile compares two different things using like or as. A plain statement does not compare.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MINOR_FOR_MAIN": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+  "error": "Names a minor character for the main one.",
+  "example": {
+   "question": "Who is the story mostly about?",
+   "wrong_answer": "the shopkeeper",
+   "correct_answer": "Wanjiru"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the shopkeeper\" next to the right answer in a new sentence and ask again.",
+  "help": "The main character is in most of the events.",
+  "feedback": "The main character is the one most of the story is about.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_WRONG_PLACE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+  "error": "Names the wrong place.",
+  "example": {
+   "question": "Where did the story happen?",
+   "wrong_answer": "at the bus stop",
+   "correct_answer": "at the market"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"at the bus stop\" next to the right answer in a new sentence and ask again.",
+  "help": "Find the sentence that tells where.",
+  "feedback": "The place is where the events happen. Read the first lines again.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_REVERSED": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+  "error": "Reverses the order of events.",
+  "example": {
+   "question": "Put the events in order.",
+   "wrong_answer": "D, C, B, A",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"D, C, B, A\" next to the right answer in a new sentence and ask again.",
+  "help": "Find the event that happens first.",
+  "feedback": "Find the first event, then the next, using words such as then and after.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_SWAPPED": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+  "error": "Swaps two events that are next to each other.",
+  "example": {
+   "question": "Put the events in order.",
+   "wrong_answer": "A, C, B, D",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"A, C, B, D\" next to the right answer in a new sentence and ask again.",
+  "help": "Check each pair: which happened first?",
+  "feedback": "Check each pair of events. Words like before and after show which came first.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MIXES_CHARACTER_PLACE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
+  "error": "Gives a place when a character is asked, or the other way round.",
+  "example": {
+   "question": "Who helped the boy?",
+   "wrong_answer": "the village",
+   "correct_answer": "his aunt"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the village\" next to the right answer in a new sentence and ask again.",
+  "help": "A character is a person or animal; a place is where.",
+  "feedback": "A character is a person or animal that acts. A place is where the story happens.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_NO_CLUE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
+  "error": "Predicts something with no clue in the passage.",
+  "example": {
+   "question": "What will probably happen next?",
+   "wrong_answer": "a lion will arrive",
+   "correct_answer": "the children will keep working"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a lion will arrive\" next to the right answer in a new sentence and ask again.",
+  "help": "A prediction needs a clue from the passage.",
+  "feedback": "A good prediction follows from a clue in the passage.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_CONTRADICTS": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
+  "error": "Predicts something that goes against the passage.",
+  "example": {
+   "question": "What will probably happen next?",
+   "wrong_answer": "she will give up",
+   "correct_answer": "she will try again"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"she will give up\" next to the right answer in a new sentence and ask again.",
+  "help": "The prediction must agree with what the passage shows about the character.",
+  "feedback": "A prediction must agree with the clues. This one goes against them.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_ALREADY_HAPPENED": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
+  "error": "Gives something that has already happened as a prediction.",
+  "example": {
+   "question": "What will probably happen next?",
+   "wrong_answer": "she carried the bag",
+   "correct_answer": "she will set off"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"she carried the bag\" next to the right answer in a new sentence and ask again.",
+  "help": "A prediction is about what comes after the passage.",
+  "feedback": "A prediction is about what happens next, not what was already told.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NEARBY_DETAIL": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Picks a detail that is close to the answer but is not the answer.",
+  "example": {
+   "question": "What did she carry?",
+   "wrong_answer": "a basket",
+   "correct_answer": "a bucket"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a basket\" next to the right answer in a new sentence and ask again.",
+  "help": "Read the exact sentence the question points to.",
+  "feedback": "Read the exact sentence the question points to. A detail nearby is not always the answer.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_OUTSIDE_KNOWLEDGE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Answers from what he or she knows, not from the passage.",
+  "example": {
+   "question": "What did they use to make it?",
+   "wrong_answer": "grass",
+   "correct_answer": "old rags"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"grass\" next to the right answer in a new sentence and ask again.",
+  "help": "The answer is in the passage.",
+  "feedback": "The answer must come from the passage, not from what you already know.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_MISSES_STATED": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says the passage does not say something that it does say.",
+  "example": {
+   "question": "Is it true, false or not stated?",
+   "wrong_answer": "Not stated",
+   "correct_answer": "True"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Not stated\" next to the right answer in a new sentence and ask again.",
+  "help": "Search the passage again for the sentence.",
+  "feedback": "Look again. The passage does say it, in the sentence on that point.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_TRUE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says true when the passage says something different.",
+  "example": {
+   "question": "Is it true, false or not stated?",
+   "wrong_answer": "True",
+   "correct_answer": "False"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"True\" next to the right answer in a new sentence and ask again.",
+  "help": "Compare your statement with the sentence in the passage word by word.",
+  "feedback": "The passage says something different, so the statement is false.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_NOT_STATED": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says not stated when the passage says the opposite.",
+  "example": {
+   "question": "Is it true, false or not stated?",
+   "wrong_answer": "Not stated",
+   "correct_answer": "False"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Not stated\" next to the right answer in a new sentence and ask again.",
+  "help": "If the passage says the opposite, the statement is false.",
+  "feedback": "The passage does say something about this, and it is different, so the statement is false.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NOT_STATED_AS_TRUE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says true for something that sounds likely but is not written.",
+  "example": {
+   "question": "Is it true, false or not stated?",
+   "wrong_answer": "True",
+   "correct_answer": "Not stated"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"True\" next to the right answer in a new sentence and ask again.",
+  "help": "Find the line. If you cannot, it is not stated.",
+  "feedback": "If you cannot find the line, it is not stated, even if it sounds likely.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_CONTRADICTS": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Gives an answer that the passage goes against.",
+  "example": {
+   "question": "Why did she smile?",
+   "wrong_answer": "She was angry.",
+   "correct_answer": "She was pleased."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She was angry.\" next to the right answer in a new sentence and ask again.",
+  "help": "Check each answer against the passage.",
+  "feedback": "An answer must agree with the passage. This one goes against it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_OVERREACH": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Gives an answer that goes too far beyond the clues.",
+  "example": {
+   "question": "What can you tell about her?",
+   "wrong_answer": "She is the richest woman in town.",
+   "correct_answer": "She is kind."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She is the richest woman in town.\" next to the right answer in a new sentence and ask again.",
+  "help": "Stay with what the clues show.",
+  "feedback": "An inference must stay close to the clues. This one goes too far.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_REPEATS_TEXT": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Copies a sentence from the passage as the inference.",
+  "example": {
+   "question": "Why did he feel sad?",
+   "wrong_answer": "The ball burst.",
+   "correct_answer": "He loved the game and could not play."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The ball burst.\" next to the right answer in a new sentence and ask again.",
+  "help": "An inference explains; it does not repeat.",
+  "feedback": "An inference says why. Copying a sentence only repeats what the passage said.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_FACT_LINE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+  "error": "Chooses the line that only gives a fact, not the one that paints a picture.",
+  "example": {
+   "question": "Which line paints the clearest picture?",
+   "wrong_answer": "The market opens at six.",
+   "correct_answer": "Heaps of red tomatoes glowed in the early sun."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The market opens at six.\" next to the right answer in a new sentence and ask again.",
+  "help": "Look for colours, sounds and movement.",
+  "feedback": "A line that paints a picture uses colours, sounds, smells or movement, not only a fact.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_WRONG_PICTURE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+  "error": "Picks a picture the words do not show.",
+  "example": {
+   "question": "What picture does the poet want you to see?",
+   "wrong_answer": "a quiet night",
+   "correct_answer": "a busy market"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a quiet night\" next to the right answer in a new sentence and ask again.",
+  "help": "Read the key words again: what do they show?",
+  "feedback": "The words of the poem show the picture. Check each answer against the words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_ONE_WORD": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
+  "error": "Chooses a picture from one word, ignoring the rest.",
+  "example": {
+   "question": "What picture does the poet want you to see?",
+   "wrong_answer": "a river",
+   "correct_answer": "rain on a roof"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a river\" next to the right answer in a new sentence and ask again.",
+  "help": "Use all the words, not one word.",
+  "feedback": "Use all the words in the line together to see the picture.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_NAME_ONLY": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+  "error": "Judges a character from one word or the name.",
+  "example": {
+   "question": "Which word best describes her?",
+   "wrong_answer": "selfish",
+   "correct_answer": "generous"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"selfish\" next to the right answer in a new sentence and ask again.",
+  "help": "Look at what she does and says.",
+  "feedback": "What a character says and does shows what they are like.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_OPPOSITE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+  "error": "Chooses the opposite trait.",
+  "example": {
+   "question": "Which word best describes him?",
+   "wrong_answer": "lazy",
+   "correct_answer": "hardworking"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"lazy\" next to the right answer in a new sentence and ask again.",
+  "help": "Check the actions: do they show effort or none?",
+  "feedback": "The actions in the story show the trait. This trait is the opposite.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_WRONG_EVIDENCE": {
+  "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
+  "error": "Picks a line that does not show the trait as evidence.",
+  "example": {
+   "question": "Which line shows that she is kind?",
+   "wrong_answer": "She lived in a village.",
+   "correct_answer": "She gave her lunch to a hungry boy."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She lived in a village.\" next to the right answer in a new sentence and ask again.",
+  "help": "Evidence is what the character does or says.",
+  "feedback": "Evidence for a trait is something the character does or says that shows it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_FEELING_CONCRETE": {
+  "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+  "error": "Thinks a feeling or an idea is concrete because it is real.",
+  "example": {
+   "question": "Which noun is abstract: river, kindness, table, dog.",
+   "wrong_answer": "river",
+   "correct_answer": "kindness"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"river\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask: can I touch it, see it or hear it? Kindness is only in our minds.",
+  "feedback": "A concrete noun is something you can see or touch. Kindness, fear and freedom are ideas, so they are abstract.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_PLACE_ABSTRACT": {
+  "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+  "error": "Thinks a place or a group is abstract.",
+  "example": {
+   "question": "Which noun is concrete: freedom, market, honesty, courage.",
+   "wrong_answer": "freedom",
+   "correct_answer": "market"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"freedom\" next to the right answer in a new sentence and ask again.",
+  "help": "A market is a place you can walk to, so it is concrete.",
+  "feedback": "Places, people, animals and things are concrete nouns because we can see or touch them.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_ADJECTIVE_FORM": {
+  "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+  "error": "Uses the adjective where the abstract noun is needed (honest for honesty).",
+  "example": {
+   "question": "The headteacher praised her ___.",
+   "wrong_answer": "honest",
+   "correct_answer": "honesty"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"honest\" next to the right answer in a new sentence and ask again.",
+  "help": "After her, a noun is needed. The noun for honest is honesty.",
+  "feedback": "After her or his, a noun is needed. The noun for the quality honest is honesty.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_SENSE_ABSTRACT": {
+  "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
+  "error": "Thinks a sound, a smell or a time word is concrete.",
+  "example": {
+   "question": "Which noun is abstract: bell, music, drum, radio.",
+   "wrong_answer": "bell",
+   "correct_answer": "music"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"bell\" next to the right answer in a new sentence and ask again.",
+  "help": "You can hear music but you cannot hold it; the bell and radio are things.",
+  "feedback": "Things you can hold are concrete. Things like music, time and hunger cannot be held, so they are abstract.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_DETAIL_OPENS": {
+  "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Opens a paragraph with a small detail instead of the main idea.",
+  "example": {
+   "question": "Which sentence is the best topic sentence?",
+   "wrong_answer": "The bus was blue.",
+   "correct_answer": "Our school trip to Nakuru taught us many things."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The bus was blue.\" next to the right answer in a new sentence and ask again.",
+  "help": "The topic sentence tells what the whole paragraph is about.",
+  "feedback": "The topic sentence gives the main idea. Details come after it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_OFF_TOPIC": {
+  "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Keeps a sentence that does not belong to the paragraph's idea.",
+  "example": {
+   "question": "Which sentence does not belong in the paragraph?",
+   "wrong_answer": "the sentence about football",
+   "correct_answer": "the sentence about football"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the sentence about football\" next to the right answer in a new sentence and ask again.",
+  "help": "Check each sentence: does it help the main idea?",
+  "feedback": "Every sentence must help the main idea. A sentence about something else does not belong.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_ORDER": {
+  "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Puts the sentences in the order they come to mind, not the logical order.",
+  "example": {
+   "question": "Put these sentences in order.",
+   "wrong_answer": "C, A, B, D",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"C, A, B, D\" next to the right answer in a new sentence and ask again.",
+  "help": "Look for first, next, then, finally and for the sentence that sums up.",
+  "feedback": "Look for time words (first, then, finally) and for an ending sentence. The order should follow what happened.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_CONCLUSION": {
+  "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Ends with a new idea instead of a closing sentence.",
+  "example": {
+   "question": "Which sentence best ends the paragraph?",
+   "wrong_answer": "Next week we start a new project.",
+   "correct_answer": "So the trip was a day we will remember."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Next week we start a new project.\" next to the right answer in a new sentence and ask again.",
+  "help": "The last sentence sums up the paragraph; it does not open a new topic.",
+  "feedback": "The closing sentence wraps up the paragraph. A new topic belongs in a new paragraph.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_BLUNT": {
+  "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+  "error": "Interrupts or asks in a blunt way (What? Shut up!).",
+  "example": {
+   "question": "Your friend is speaking and you want to add something. What do you say?",
+   "wrong_answer": "Stop! Now it is my turn.",
+   "correct_answer": "Excuse me, may I add something?"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Stop! Now it is my turn.\" next to the right answer in a new sentence and ask again.",
+  "help": "Say excuse me, wait for a pause, and ask.",
+  "feedback": "A polite interruption begins with Excuse me and asks permission.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_PHONE_START": {
+  "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+  "error": "Answers the telephone without a greeting or a name.",
+  "example": {
+   "question": "You answer your home telephone. What is the best way to begin?",
+   "wrong_answer": "Who is this?",
+   "correct_answer": "Hello, this is Amina speaking. How may I help you?"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Who is this?\" next to the right answer in a new sentence and ask again.",
+  "help": "Greet, say who you are and offer help.",
+  "feedback": "On the telephone say hello, say who is speaking and ask how you can help.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_CLARIFY": {
+  "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+  "error": "Asks for clarification in a rude way (What?).",
+  "example": {
+   "question": "You did not hear what the teacher said. What do you say?",
+   "wrong_answer": "What? Say it again.",
+   "correct_answer": "I beg your pardon. Could you say that again, please?"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"What? Say it again.\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask politely: pardon, could you repeat that, please.",
+  "feedback": "To ask someone to repeat, say Pardon or Could you say that again, please.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_MESSAGE": {
+  "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
+  "error": "Does not offer to take a message when the person is not in.",
+  "example": {
+   "question": "The caller asks for your mother, who is out. What is the polite reply?",
+   "wrong_answer": "She is not here. Bye.",
+   "correct_answer": "She is out at the moment. May I take a message?"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She is not here. Bye.\" next to the right answer in a new sentence and ask again.",
+  "help": "Say where the person is and offer to take a message.",
+  "feedback": "If the person is out, say so and ask, May I take a message?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_COMMON_MEANING": {
+  "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks the usual meaning of a word instead of the one that fits.",
+  "example": {
+   "question": "In the passage, what does \"ran\" mean?",
+   "wrong_answer": "moved fast on foot",
+   "correct_answer": "worked or managed"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"moved fast on foot\" next to the right answer in a new sentence and ask again.",
+  "help": "Try each meaning in the sentence.",
+  "feedback": "Many words have more than one meaning. Try each one in the sentence.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_LOOKS_LIKE": {
+  "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Chooses a meaning because the word looks like another word.",
+  "example": {
+   "question": "In the passage, what does the word mean?",
+   "wrong_answer": "a word it looks like",
+   "correct_answer": "the meaning from the clues"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a word it looks like\" next to the right answer in a new sentence and ask again.",
+  "help": "Use the clues, not how the word looks.",
+  "feedback": "A word can look like another word and mean something different. Use the clues around it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_OPPOSITE": {
+  "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks the opposite meaning.",
+  "example": {
+   "question": "In the passage, what does the word mean?",
+   "wrong_answer": "the opposite",
+   "correct_answer": "the right meaning"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the opposite\" next to the right answer in a new sentence and ask again.",
+  "help": "See if the sentence says but or because.",
+  "feedback": "Look at words like but and because. They show whether the word is like or unlike its neighbours.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_WRONG_CLUE": {
+  "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks words that do not explain the word as the clue.",
+  "example": {
+   "question": "Which words in the passage help you with the word?",
+   "wrong_answer": "the title",
+   "correct_answer": "the sentence that explains it"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the title\" next to the right answer in a new sentence and ask again.",
+  "help": "A clue is close to the word and explains it.",
+  "feedback": "A clue is a group of words that explains the hard word, usually in the same or the next sentence.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_OR": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+  "error": "Writes neither ... or instead of neither ... nor.",
+  "example": {
+   "question": "Neither Atieno ___ Juma knew the answer.",
+   "wrong_answer": "or",
+   "correct_answer": "nor"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"or\" next to the right answer in a new sentence and ask again.",
+  "help": "Neither always goes with nor, either with or.",
+  "feedback": "Neither goes with nor: neither ... nor. Either goes with or.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_BOTH_OR": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+  "error": "Writes both ... or, or both ... nor.",
+  "example": {
+   "question": "Both Mary ___ Peter passed the test.",
+   "wrong_answer": "or",
+   "correct_answer": "and"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"or\" next to the right answer in a new sentence and ask again.",
+  "help": "Both means the two together, so and joins them.",
+  "feedback": "Both ... and joins two things together. Or is for a choice.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_EITHER_NOR": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+  "error": "Writes either ... nor, or either ... and.",
+  "example": {
+   "question": "You may either walk ___ take a matatu.",
+   "wrong_answer": "nor",
+   "correct_answer": "or"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"nor\" next to the right answer in a new sentence and ask again.",
+  "help": "Either is a choice, so it goes with or.",
+  "feedback": "Either gives a choice between two, so it goes with or.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NOT_ONLY_AND": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+  "error": "Writes not only ... and, not only ... also, leaving out but.",
+  "example": {
+   "question": "He is not only clever ___ also hardworking.",
+   "wrong_answer": "and",
+   "correct_answer": "but"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"and\" next to the right answer in a new sentence and ask again.",
+  "help": "The pair is not only ... but also.",
+  "feedback": "The pair is not only ... but also. Not only ... and is not used.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_NOT": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
+  "error": "Adds not to a neither ... nor sentence (a double negative).",
+  "example": {
+   "question": "Neither Ouma nor Wanjiru ___ late.",
+   "wrong_answer": "was not",
+   "correct_answer": "was"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"was not\" next to the right answer in a new sentence and ask again.",
+  "help": "Neither and nor already say no. Do not add not.",
+  "feedback": "Neither ... nor already means no. Adding not makes a double negative.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_INVERSION": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
+  "error": "Turns the verb round after the question word (Show me where is the library).",
+  "example": {
+   "question": "Show me where ___.",
+   "wrong_answer": "is the library",
+   "correct_answer": "the library is"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"is the library\" next to the right answer in a new sentence and ask again.",
+  "help": "It is not a question, so the order stays: subject, then verb.",
+  "feedback": "Inside a sentence the order is not a question order. Say: Show me where the library is.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_DO_SUPPORT": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
+  "error": "Adds do or does after the question word (Tell me how does it work).",
+  "example": {
+   "question": "Tell me how ___.",
+   "wrong_answer": "does it work",
+   "correct_answer": "it works"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"does it work\" next to the right answer in a new sentence and ask again.",
+  "help": "Leave out do and does here; the verb takes its normal ending.",
+  "feedback": "After show me or tell me, do not add do or does. Say: Tell me how it works.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_WORD_MISSING": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
+  "error": "Leaves out the question word (Show me the shop is).",
+  "example": {
+   "question": "Please show me ___ the shop is.",
+   "wrong_answer": "that",
+   "correct_answer": "where"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"that\" next to the right answer in a new sentence and ask again.",
+  "help": "The question word tells what you want to know: where, how or who.",
+  "feedback": "You need a question word (where, how, who) to say what you want shown.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_QMARK": {
+  "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
+  "error": "Ends the sentence with a question mark although it is a request or a statement.",
+  "example": {
+   "question": "Tell me who won the race.",
+   "wrong_answer": "Tell me who won the race?",
+   "correct_answer": "Tell me who won the race."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Tell me who won the race?\" next to the right answer in a new sentence and ask again.",
+  "help": "A question mark is only for a real question. This sentence tells.",
+  "feedback": "This sentence asks for something but it is not a question, so it ends with a full stop.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ACRONYM_ANY": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
+  "error": "Calls every short form an acronym.",
+  "example": {
+   "question": "Which of these is an acronym: Mr, Dr, UNICEF, etc.",
+   "wrong_answer": "Mr",
+   "correct_answer": "UNICEF"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Mr\" next to the right answer in a new sentence and ask again.",
+  "help": "An acronym is said as a word. An abbreviation is a short form said letter by letter or in full.",
+  "feedback": "An acronym is read as a word, like UNICEF. Mr and Dr are abbreviations of longer words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_WRONG_EXPAND": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
+  "error": "Expands an acronym with the wrong words.",
+  "example": {
+   "question": "What does KNEC stand for?",
+   "wrong_answer": "Kenya National Education Centre",
+   "correct_answer": "Kenya National Examinations Council"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Kenya National Education Centre\" next to the right answer in a new sentence and ask again.",
+  "help": "Each letter is the first letter of a word in the name.",
+  "feedback": "Each letter stands for a word in the full name. KNEC is the Kenya National Examinations Council.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ETC_EG": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
+  "error": "Mixes etc., e.g. and i.e.",
+  "example": {
+   "question": "Which short form means \"for example\"?",
+   "wrong_answer": "etc.",
+   "correct_answer": "e.g."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"etc.\" next to the right answer in a new sentence and ask again.",
+  "help": "Etc. means and so on; e.g. means for example; i.e. means that is.",
+  "feedback": "E.g. means for example. Etc. means and so on. I.e. means that is.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_SHORT_FORM": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
+  "error": "Writes the wrong short form of a title or word.",
+  "example": {
+   "question": "The short form of Doctor is ___.",
+   "wrong_answer": "Dc.",
+   "correct_answer": "Dr"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Dc.\" next to the right answer in a new sentence and ask again.",
+  "help": "Keep the first and last letters or the first letters of the word.",
+  "feedback": "The short form of Doctor is Dr; of Mister is Mr; of Mistress is Mrs.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_FOURTY": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
+  "error": "Writes fourty for forty, or forteen and ninty.",
+  "example": {
+   "question": "Which is the correct spelling of 40?",
+   "wrong_answer": "fourty",
+   "correct_answer": "forty"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"fourty\" next to the right answer in a new sentence and ask again.",
+  "help": "Four loses its u in forty, but fourteen keeps it.",
+  "feedback": "Forty has no u. Fourteen has one: forty, fourteen.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_START_FIGURE": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
+  "error": "Begins a sentence with a figure.",
+  "example": {
+   "question": "Which sentence begins correctly?",
+   "wrong_answer": "25 learners were absent.",
+   "correct_answer": "Twenty-five learners were absent."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"25 learners were absent.\" next to the right answer in a new sentence and ask again.",
+  "help": "A sentence should not begin with a figure. Spell the number out.",
+  "feedback": "A sentence does not begin with a figure. Write the number in words: Twenty-five.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_ORDINAL_END": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
+  "error": "Writes the wrong ending of an ordinal (2th, 3th, 1th).",
+  "example": {
+   "question": "The correct way to write second as a figure is ___.",
+   "wrong_answer": "2th",
+   "correct_answer": "2nd"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"2th\" next to the right answer in a new sentence and ask again.",
+  "help": "The endings are 1st, 2nd, 3rd, then th for 4th onward.",
+  "feedback": "Only 1st, 2nd and 3rd have special endings. From 4th the ending is th.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_EIGHTH": {
+  "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
+  "error": "Spells eighth or ninth wrongly (eigth, nineth).",
+  "example": {
+   "question": "Which is the correct spelling of 8th in words?",
+   "wrong_answer": "eigth",
+   "correct_answer": "eighth"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"eigth\" next to the right answer in a new sentence and ask again.",
+  "help": "Eight keeps its t: eighth. Nine loses its e: ninth.",
+  "feedback": "Eighth has two h-sounds from eight + th. Ninth drops the e of nine.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_VEHICLE_PERSON": {
+  "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
+  "error": "Mixes the vehicle and the person (ambulance and paramedic).",
+  "example": {
+   "question": "The ___ gave first aid to the injured man.",
+   "wrong_answer": "ambulance",
+   "correct_answer": "paramedic"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"ambulance\" next to the right answer in a new sentence and ask again.",
+  "help": "The ambulance is the vehicle; the paramedic is the trained person.",
+  "feedback": "An ambulance is the vehicle. A paramedic is the trained person who treats the patient.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_EVACUATE": {
+  "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
+  "error": "Thinks evacuate means to rescue a person from fire, not to move people out of a place.",
+  "example": {
+   "question": "Everyone had to ___ the building when the alarm rang.",
+   "wrong_answer": "rescue",
+   "correct_answer": "evacuate"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"rescue\" next to the right answer in a new sentence and ask again.",
+  "help": "Evacuate: leave a dangerous place. Rescue: save someone in danger.",
+  "feedback": "Evacuate means to leave a dangerous place. Rescue means to save someone from danger.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_SIREN_ALARM": {
+  "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
+  "error": "Uses the wrong word for a warning sound or sign.",
+  "example": {
+   "question": "We heard the ___ of the fire engine from far away.",
+   "wrong_answer": "alarm",
+   "correct_answer": "siren"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"alarm\" next to the right answer in a new sentence and ask again.",
+  "help": "A siren is the loud warning sound of a vehicle. An alarm warns in a building.",
+  "feedback": "A siren is the loud sound of an emergency vehicle. An alarm warns people in a building.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHICH_PERSON": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+  "error": "Uses which for a person (the girl which won).",
+  "example": {
+   "question": "The girl ___ won the race is my cousin.",
+   "wrong_answer": "which",
+   "correct_answer": "who"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"which\" next to the right answer in a new sentence and ask again.",
+  "help": "Who is for people, which is for things and animals.",
+  "feedback": "Use who for people. Which is for things and animals.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHO_THING": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+  "error": "Uses who for a thing (the book who).",
+  "example": {
+   "question": "This is the book ___ I bought yesterday.",
+   "wrong_answer": "who",
+   "correct_answer": "which"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"who\" next to the right answer in a new sentence and ask again.",
+  "help": "A book is a thing, so which.",
+  "feedback": "Use which for things. Who is only for people.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOSE_WHO": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+  "error": "Uses who where whose (belonging) is needed.",
+  "example": {
+   "question": "The boy ___ bag was stolen cried.",
+   "wrong_answer": "who",
+   "correct_answer": "whose"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"who\" next to the right answer in a new sentence and ask again.",
+  "help": "The bag belongs to the boy. Belonging is whose.",
+  "feedback": "When the word shows who something belongs to, use whose.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_DOUBLE": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+  "error": "Adds a second pronoun (the boy who he won).",
+  "example": {
+   "question": "The teacher ___ taught us Maths is kind.",
+   "wrong_answer": "who she",
+   "correct_answer": "who"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"who she\" next to the right answer in a new sentence and ask again.",
+  "help": "The word who already does the work of he or she.",
+  "feedback": "Who already stands for the person. Do not add he, she or they after it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOM_WHO": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
+  "error": "Uses who for the object of a verb or after a preposition where whom is needed.",
+  "example": {
+   "question": "To ___ did you give the letter?",
+   "wrong_answer": "who",
+   "correct_answer": "whom"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"who\" next to the right answer in a new sentence and ask again.",
+  "help": "After to, with, for, use whom. Whom is for the one who receives.",
+  "feedback": "After a word like to, with or for, the formal word is whom.",
+  "source": "to confirm by a Kenyan English teacher: whom is dropping out of speech",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_ANY_STATEMENT": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+  "error": "Uses any- in a plain statement (I saw anybody).",
+  "example": {
+   "question": "I saw ___ at the gate.",
+   "wrong_answer": "anybody",
+   "correct_answer": "somebody"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"anybody\" next to the right answer in a new sentence and ask again.",
+  "help": "In a plain positive sentence use some-. Any- is for questions and negatives.",
+  "feedback": "In a plain positive sentence use somebody or someone. Anybody is for questions and negatives.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_DOUBLE_NEG": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+  "error": "Writes a double negative (I did not see nobody).",
+  "example": {
+   "question": "I did not meet ___ on the road.",
+   "wrong_answer": "nobody",
+   "correct_answer": "anybody"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"nobody\" next to the right answer in a new sentence and ask again.",
+  "help": "One negative is enough. After not, use any-.",
+  "feedback": "Do not use not and nobody together. After not use anybody or anyone.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_PLURAL_VERB": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+  "error": "Uses a plural verb after everyone or everybody.",
+  "example": {
+   "question": "Everyone ___ here.",
+   "wrong_answer": "are",
+   "correct_answer": "is"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"are\" next to the right answer in a new sentence and ask again.",
+  "help": "Everyone sounds like many, but the word is singular.",
+  "feedback": "Everyone, everybody and nobody are singular, so they take is and has.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_NOONE": {
+  "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
+  "error": "Writes noone or no-one as one word.",
+  "example": {
+   "question": "There was ___ in the hall.",
+   "wrong_answer": "noone",
+   "correct_answer": "no one"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"noone\" next to the right answer in a new sentence and ask again.",
+  "help": "No one is two words. Nobody is one word.",
+  "feedback": "Write no one as two words, or use the one word nobody.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_CLOSING": {
+  "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+  "error": "Closes Dear Sir with Yours sincerely, or Dear Mr Otieno with Yours faithfully.",
+  "example": {
+   "question": "A letter begins \"Dear Sir\". How should it end?",
+   "wrong_answer": "Yours sincerely",
+   "correct_answer": "Yours faithfully"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Yours sincerely\" next to the right answer in a new sentence and ask again.",
+  "help": "Dear Sir or Madam goes with faithfully. A named person goes with sincerely.",
+  "feedback": "Dear Sir or Madam ends with Yours faithfully. Dear Mr Otieno (a name) ends with Yours sincerely.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_INFORMAL": {
+  "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+  "error": "Uses friendly language in a formal letter.",
+  "example": {
+   "question": "Which line is right for a formal invitation?",
+   "wrong_answer": "Hi! Come to our party, it will be fun.",
+   "correct_answer": "You are kindly invited to our school open day."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Hi! Come to our party, it will be fun.\" next to the right answer in a new sentence and ask again.",
+  "help": "A formal letter is polite and plain, with no slang or short forms.",
+  "feedback": "A formal letter uses polite, full sentences. No slang and no short forms like it'll.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_ADDRESS": {
+  "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+  "error": "Puts the writer's address in the wrong place.",
+  "example": {
+   "question": "Where does the writer's address go in a formal letter?",
+   "wrong_answer": "at the bottom",
+   "correct_answer": "at the top right"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"at the bottom\" next to the right answer in a new sentence and ask again.",
+  "help": "The sender's address begins the letter, at the top right.",
+  "feedback": "The writer's address goes at the top right. The receiver's address goes under it on the left.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_NO_SUBJECT": {
+  "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+  "error": "Leaves out the subject line.",
+  "example": {
+   "question": "Which part tells the reader what the letter is about?",
+   "wrong_answer": "the closing",
+   "correct_answer": "the subject line"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the closing\" next to the right answer in a new sentence and ask again.",
+  "help": "The subject heading comes under the greeting.",
+  "feedback": "The subject line sits below the greeting and tells the reader the topic in a few words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_SIGNATURE": {
+  "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
+  "error": "Writes the name but no signature or forgets the position.",
+  "example": {
+   "question": "Where does the signature go?",
+   "wrong_answer": "above the greeting",
+   "correct_answer": "under the closing"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"above the greeting\" next to the right answer in a new sentence and ask again.",
+  "help": "Greeting, body, closing, then signature and name.",
+  "feedback": "The signature goes under the closing, with the full name printed under it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_AS_COMPARATIVE": {
+  "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+  "error": "Uses the comparative inside as ... as (as taller as).",
+  "example": {
+   "question": "Kamau is as ___ as his brother.",
+   "wrong_answer": "taller",
+   "correct_answer": "tall"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"taller\" next to the right answer in a new sentence and ask again.",
+  "help": "Between as ... as use the plain adjective.",
+  "feedback": "In as ... as, use the plain form: as tall as, not as taller as.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_SUPER_THAN": {
+  "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+  "error": "Uses than with a superlative (the tallest than).",
+  "example": {
+   "question": "Wanjiru is the tallest girl ___ the class.",
+   "wrong_answer": "than",
+   "correct_answer": "in"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"than\" next to the right answer in a new sentence and ask again.",
+  "help": "Than goes with a comparative (taller than). With the tallest use in or of.",
+  "feedback": "Than goes with the comparative. After the tallest use in or of: the tallest in the class.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THE_MISSING": {
+  "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+  "error": "Leaves out the before a superlative.",
+  "example": {
+   "question": "Otieno is ___ fastest runner in Grade 6.",
+   "wrong_answer": "(nothing)",
+   "correct_answer": "the"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"(nothing)\" next to the right answer in a new sentence and ask again.",
+  "help": "A superlative picks one from a group and needs the.",
+  "feedback": "A superlative needs the before it: the fastest, the most careful.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THAN_MISSING": {
+  "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+  "error": "Leaves out than after a comparative (Juma is taller Peter).",
+  "example": {
+   "question": "Juma is taller ___ Peter.",
+   "wrong_answer": "from",
+   "correct_answer": "than"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"from\" next to the right answer in a new sentence and ask again.",
+  "help": "After a comparative the word is than.",
+  "feedback": "After a comparative adjective use than, not from or that.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_ONE_OF_SINGULAR": {
+  "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
+  "error": "Writes one of the tallest girl instead of girls.",
+  "example": {
+   "question": "She is one of the tallest ___ in the school.",
+   "wrong_answer": "girl",
+   "correct_answer": "girls"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"girl\" next to the right answer in a new sentence and ask again.",
+  "help": "One of the ... needs a plural noun: there are many tallest girls and she is one.",
+  "feedback": "After one of the + superlative, use a plural noun: one of the tallest girls.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SPELL_NOT_SOUND": {
+  "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "error": "Chooses by spelling and not by sound (bear for near).",
+  "example": {
+   "question": "Which word has the same vowel sound as \"near\"?",
+   "wrong_answer": "bear",
+   "correct_answer": "beer"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"bear\" next to the right answer in a new sentence and ask again.",
+  "help": "Say both words aloud. Do they sound alike?",
+  "feedback": "Spelling can mislead. Say the words aloud: near and beer share the vowel sound, bear does not.",
+  "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_F_V": {
+  "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "error": "Mixes /f/ and /v/ (fan and van).",
+  "example": {
+   "question": "Which word starts with the sound /v/?",
+   "wrong_answer": "fan",
+   "correct_answer": "van"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"fan\" next to the right answer in a new sentence and ask again.",
+  "help": "For /v/ the upper teeth touch the lower lip and the voice hums; for /f/ it does not.",
+  "feedback": "For /v/ the voice hums with your teeth on your lip. For /f/ there is only air.",
+  "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SILENT_H": {
+  "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "error": "Says the h in hour and honest, or drops it in house.",
+  "example": {
+   "question": "Which word does NOT start with the sound /h/?",
+   "wrong_answer": "house",
+   "correct_answer": "hour"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"house\" next to the right answer in a new sentence and ask again.",
+  "help": "In hour, honest and heir the h is silent.",
+  "feedback": "In hour, honest and heir the h is silent, so they start with a vowel sound. In house and hand it is said.",
+  "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_TOUR_MORE": {
+  "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
+  "error": "Treats /ʊə/ and /ɔː/ as one sound (tour, more).",
+  "example": {
+   "question": "Which word has the same vowel sound as \"tour\"?",
+   "wrong_answer": "more",
+   "correct_answer": "poor"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"more\" next to the right answer in a new sentence and ask again.",
+  "help": "Tour, poor and pure share one sound. More, door and floor share another.",
+  "feedback": "Tour, poor and pure share the sound /ʊə/. More, door and floor share a different sound.",
+  "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_NUMBER_UNCOUNT": {
+  "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+  "error": "Uses a number of with an uncountable noun (a number of water).",
+  "example": {
+   "question": "A number of ___ were late.",
+   "wrong_answer": "water",
+   "correct_answer": "learners"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"water\" next to the right answer in a new sentence and ask again.",
+  "help": "A number of needs things we can count.",
+  "feedback": "A number of goes with countable nouns, such as learners or books, not with water or sugar.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_AMOUNT_COUNT": {
+  "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+  "error": "Uses a great deal of or an amount of with countable nouns.",
+  "example": {
+   "question": "We used a great deal of ___ for the cake.",
+   "wrong_answer": "eggs",
+   "correct_answer": "flour"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"eggs\" next to the right answer in a new sentence and ask again.",
+  "help": "A great deal of is for things we cannot count one by one.",
+  "feedback": "A great deal of and an amount of go with uncountable nouns such as flour, water and advice.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_PIECE_PLURAL": {
+  "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+  "error": "Adds -s to the uncountable noun (a piece of advices).",
+  "example": {
+   "question": "He gave me a piece of ___.",
+   "wrong_answer": "advices",
+   "correct_answer": "advice"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"advices\" next to the right answer in a new sentence and ask again.",
+  "help": "Advice, news and furniture never take -s. Count them with a piece of.",
+  "feedback": "Advice, news, information and furniture have no plural. Say a piece of advice.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_OF_MISSING": {
+  "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+  "error": "Leaves out of (a loaf bread).",
+  "example": {
+   "question": "Mama bought a loaf ___ bread.",
+   "wrong_answer": "(nothing)",
+   "correct_answer": "of"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"(nothing)\" next to the right answer in a new sentence and ask again.",
+  "help": "The pattern is a loaf OF bread, a bar OF soap.",
+  "feedback": "These phrases need of: a loaf of bread, a bar of soap, a bottle of milk.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_WRONG_UNIT": {
+  "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
+  "error": "Uses the wrong unit word (a loaf of soap, a bar of milk).",
+  "example": {
+   "question": "I bought a bar of ___.",
+   "wrong_answer": "milk",
+   "correct_answer": "soap"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"milk\" next to the right answer in a new sentence and ask again.",
+  "help": "Each thing has its own unit: loaf of bread, bar of soap, bottle of milk, piece of chalk.",
+  "feedback": "Each thing has its own unit word. A bar belongs to soap or chocolate, not to milk.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_BE": {
+  "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
+  "error": "Leaves out be (will travelling).",
+  "example": {
+   "question": "This time tomorrow we ___ travelling to Kisumu.",
+   "wrong_answer": "will",
+   "correct_answer": "will be"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"will\" next to the right answer in a new sentence and ask again.",
+  "help": "The future continuous is will + be + verb-ing.",
+  "feedback": "The future continuous needs be: will be travelling. Will travelling is not complete.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_WILL_BEEN": {
+  "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
+  "error": "Writes will been or will being.",
+  "example": {
+   "question": "At six o'clock I ___ cooking supper.",
+   "wrong_answer": "will been",
+   "correct_answer": "will be"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"will been\" next to the right answer in a new sentence and ask again.",
+  "help": "After will, the verb be stays in its plain form: will be.",
+  "feedback": "After will use the plain form be, not been or being: will be cooking.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_PRESENT": {
+  "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
+  "error": "Uses the present continuous for a future time (is travelling tomorrow at noon).",
+  "example": {
+   "question": "At noon tomorrow Mama ___ working in the shamba.",
+   "wrong_answer": "is",
+   "correct_answer": "will be"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"is\" next to the right answer in a new sentence and ask again.",
+  "help": "A future time word asks for will be.",
+  "feedback": "When the time is in the future, use will be + verb-ing, not is or are.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_ING": {
+  "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
+  "error": "Writes will be with the plain verb (will be travel).",
+  "example": {
+   "question": "Tomorrow at ten the pupils ___ writing a test.",
+   "wrong_answer": "will write",
+   "correct_answer": "will be"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"will write\" next to the right answer in a new sentence and ask again.",
+  "help": "The pattern is will be + verb-ing, a continuing action.",
+  "feedback": "The future continuous ends in -ing: will be writing. Will be write is not correct.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SUBJECT_VERB": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+  "error": "Puts a comma between a subject and its verb.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "The boy in the blue shirt, is my cousin.",
+   "correct_answer": "The boy in the blue shirt is my cousin."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"The boy in the blue shirt, is my cousin.\" next to the right answer in a new sentence and ask again.",
+  "help": "Read it: a comma does not come between who and what they do.",
+  "feedback": "Do not put a comma between a subject and its verb.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_LIST_MISSING": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+  "error": "Leaves out the commas in a list.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "Mama bought rice beans maize and sugar.",
+   "correct_answer": "Mama bought rice, beans, maize and sugar."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Mama bought rice beans maize and sugar.\" next to the right answer in a new sentence and ask again.",
+  "help": "Put a comma after every item except the last two joined by and.",
+  "feedback": "In a list, put a comma between the items. And stands before the last one.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_OPENING_MISSING": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+  "error": "Leaves out the comma after an opening word or phrase.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "After lunch we played football.",
+   "correct_answer": "After lunch, we played football."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"After lunch we played football.\" next to the right answer in a new sentence and ask again.",
+  "help": "A phrase at the start of the sentence is followed by a comma.",
+  "feedback": "When a sentence opens with a word or phrase such as After lunch, put a comma after it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_SPLICE": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+  "error": "Joins two full sentences with only a comma.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "It was raining, we stayed at home.",
+   "correct_answer": "It was raining, so we stayed at home."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"It was raining, we stayed at home.\" next to the right answer in a new sentence and ask again.",
+  "help": "Two sentences need a full stop or a joining word as well as the comma.",
+  "feedback": "A comma alone cannot join two sentences. Add a joining word such as so, or use a full stop.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SPEECH_MISSING": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
+  "error": "Leaves out the comma that separates the speaker from the words.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "Mama said \"Come and eat.\"",
+   "correct_answer": "Mama said, \"Come and eat.\""
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Mama said \"Come and eat.\"\" next to the right answer in a new sentence and ask again.",
+  "help": "A comma goes between said and the opening quotation mark.",
+  "feedback": "Put a comma between the speaker and the spoken words: Mama said, \"Come and eat.\"",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_MISSING": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+  "error": "Writes direct speech with no quotation marks.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "Mama said, Come and eat.",
+   "correct_answer": "Mama said, \"Come and eat.\""
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Mama said, Come and eat.\" next to the right answer in a new sentence and ask again.",
+  "help": "The exact words spoken go inside double quotation marks.",
+  "feedback": "Put double quotation marks round the exact words someone says.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_PUNCT_OUTSIDE": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+  "error": "Puts the full stop or question mark outside the closing marks.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "Juma asked, \"Where is my bag?\".",
+   "correct_answer": "Juma asked, \"Where is my bag?\""
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Juma asked, \"Where is my bag?\".\" next to the right answer in a new sentence and ask again.",
+  "help": "The mark that ends the speech goes inside the quotation marks.",
+  "feedback": "The question mark, full stop or exclamation mark goes inside the closing quotation marks.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_CAPITAL_SPLIT": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+  "error": "Starts the second part of split speech with a capital letter.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "\"I am tired,\" said Amina, \"But I will finish.\"",
+   "correct_answer": "\"I am tired,\" said Amina, \"but I will finish.\""
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"\"I am tired,\" said Amina, \"But I will finish.\"\" next to the right answer in a new sentence and ask again.",
+  "help": "It is one sentence cut in two. The second part has a small letter.",
+  "feedback": "In split speech the second part is a small letter because the sentence goes on.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_REPORTED": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+  "error": "Puts quotation marks round reported speech.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "She said that \"she was tired.\"",
+   "correct_answer": "She said that she was tired."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She said that \"she was tired.\"\" next to the right answer in a new sentence and ask again.",
+  "help": "Quotation marks are for the exact words only. Reported speech is not exact.",
+  "feedback": "Reported speech does not use quotation marks. Use them only for the exact words spoken.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_SINGLE": {
+  "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
+  "error": "Uses single quotation marks where the design asks for double.",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "Mama said, 'Come and eat.'",
+   "correct_answer": "Mama said, \"Come and eat.\""
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Mama said, 'Come and eat.'\" next to the right answer in a new sentence and ask again.",
+  "help": "In your school use double quotation marks for speech.",
+  "feedback": "In Kenyan school English the usual marks for speech are double quotation marks.",
+  "source": "to confirm by a Kenyan English teacher: single marks are also correct British style",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_PROVERB_AS_RIDDLE": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+  "error": "Calls a proverb a riddle.",
+  "example": {
+   "question": "Which of these is a riddle?",
+   "wrong_answer": "Slow and steady wins the race.",
+   "correct_answer": "What has a neck but no head?"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Slow and steady wins the race.\" next to the right answer in a new sentence and ask again.",
+  "help": "A riddle asks a question and waits for an answer.",
+  "feedback": "A riddle is a puzzle with an answer to find. A proverb gives advice and has no answer to find.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_RIDDLE_AS_PROVERB": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+  "error": "Calls a riddle a proverb.",
+  "example": {
+   "question": "Which of these is a proverb?",
+   "wrong_answer": "What runs but never walks?",
+   "correct_answer": "Honesty is the best policy."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"What runs but never walks?\" next to the right answer in a new sentence and ask again.",
+  "help": "A proverb tells us what to do or what is true.",
+  "feedback": "A proverb teaches a lesson. A riddle asks something that you must guess.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_LITERAL": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+  "error": "Answers a riddle from the words and not the description.",
+  "example": {
+   "question": "I have a neck but no head. What am I?",
+   "wrong_answer": "a giraffe",
+   "correct_answer": "a bottle"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a giraffe\" next to the right answer in a new sentence and ask again.",
+  "help": "Think: what has a neck but no head and a mouth?",
+  "feedback": "A riddle describes an object in a puzzling way. Match all the clues, not the first word.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_NO_ANSWER": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
+  "error": "Thinks a riddle is just a story with no answer.",
+  "example": {
+   "question": "What is special about a riddle?",
+   "wrong_answer": "It tells a long story.",
+   "correct_answer": "It has a hidden answer to guess."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"It tells a long story.\" next to the right answer in a new sentence and ask again.",
+  "help": "Riddles end with a puzzle: the listener answers.",
+  "feedback": "A riddle always has an answer to find. It is not a story.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_LITERAL": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
+  "error": "Reads a phrasal verb word for word.",
+  "example": {
+   "question": "What does \"put up with\" mean?",
+   "wrong_answer": "put something on top",
+   "correct_answer": "bear patiently"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"put something on top\" next to the right answer in a new sentence and ask again.",
+  "help": "The particle changes the verb's meaning.",
+  "feedback": "A phrasal verb has its own meaning. Put up with means to bear something patiently.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PARTICLE": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
+  "error": "Uses the wrong particle (give in for give up).",
+  "example": {
+   "question": "He did not ___ trying until he passed.",
+   "wrong_answer": "give in",
+   "correct_answer": "give up"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"give in\" next to the right answer in a new sentence and ask again.",
+  "help": "Give up: stop trying. Give in: say yes after refusing.",
+  "feedback": "Each particle makes a new meaning. Give up means stop trying; give in means agree after refusing.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PREP": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
+  "error": "Uses the wrong preposition after the phrasal verb (agree to, cope in).",
+  "example": {
+   "question": "I agree ___ you.",
+   "wrong_answer": "to",
+   "correct_answer": "with"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"to\" next to the right answer in a new sentence and ask again.",
+  "help": "Agree with a person. Cope with a problem.",
+  "feedback": "Say agree WITH a person and cope WITH a problem.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_SAME_MEANING": {
+  "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
+  "error": "Thinks break down and break up mean the same.",
+  "example": {
+   "question": "The old matatu ___ on the way to Nairobi.",
+   "wrong_answer": "broke up",
+   "correct_answer": "broke down"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"broke up\" next to the right answer in a new sentence and ask again.",
+  "help": "Broke down: stopped working. Broke up: split apart or ended.",
+  "feedback": "Break down means stop working. Break up means to come apart or to end.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_NO_BE": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+  "error": "Leaves out be in a passive sentence (The window broken by the wind).",
+  "example": {
+   "question": "The window ___ by the wind.",
+   "wrong_answer": "broken",
+   "correct_answer": "was broken"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"broken\" next to the right answer in a new sentence and ask again.",
+  "help": "A passive needs be + the past participle.",
+  "feedback": "A passive sentence needs a form of be before the past participle: was broken, is written.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_PAST_FORM": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+  "error": "Uses the simple past instead of the past participle (was wrote, was ate).",
+  "example": {
+   "question": "The letter was ___ by Mary.",
+   "wrong_answer": "wrote",
+   "correct_answer": "written"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"wrote\" next to the right answer in a new sentence and ask again.",
+  "help": "After was or were use the participle: written, eaten, broken, taken.",
+  "feedback": "After was or were use the past participle: was written, was eaten, was taken.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_AGREEMENT": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+  "error": "Does not match was or were to the subject (The books was returned).",
+  "example": {
+   "question": "The books ___ returned on Friday.",
+   "wrong_answer": "was",
+   "correct_answer": "were"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"was\" next to the right answer in a new sentence and ask again.",
+  "help": "The subject is plural, so use were.",
+  "feedback": "The be-word must match the subject: the book was returned, the books were returned.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_ACTIVE_AS_PASSIVE": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+  "error": "Calls an active sentence passive because it is in the past.",
+  "example": {
+   "question": "Which sentence is passive?",
+   "wrong_answer": "Wanjiku cooked the rice.",
+   "correct_answer": "The rice was cooked by Wanjiku."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Wanjiku cooked the rice.\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask: does the subject do the action or receive it?",
+  "feedback": "In a passive sentence the subject RECEIVES the action. In Wanjiku cooked the rice, Wanjiku does it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_DOER_SUBJECT": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
+  "error": "Turns the sentence round but keeps the doer as the subject.",
+  "example": {
+   "question": "Passive of: Baraka kicked the ball.",
+   "wrong_answer": "Baraka was kicked by the ball.",
+   "correct_answer": "The ball was kicked by Baraka."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Baraka was kicked by the ball.\" next to the right answer in a new sentence and ask again.",
+  "help": "The thing acted on moves to the front.",
+  "feedback": "In the passive, the thing that receives the action goes first: The ball was kicked by Baraka.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SAY_TELL": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses say and tell for each other (She said me; He told that).",
+  "example": {
+   "question": "The teacher ___ us a story.",
+   "wrong_answer": "said",
+   "correct_answer": "told"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"said\" next to the right answer in a new sentence and ask again.",
+  "help": "Tell takes a person straight after it (tell us). Say does not.",
+  "feedback": "Tell is followed by the person (told us). Say is followed by the words (said that).",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BORROW_LEND": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses borrow and lend for each other.",
+  "example": {
+   "question": "Please ___ me your pen.",
+   "wrong_answer": "borrow",
+   "correct_answer": "lend"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"borrow\" next to the right answer in a new sentence and ask again.",
+  "help": "Lend: you give it for a short time. Borrow: you take it for a short time.",
+  "feedback": "You borrow FROM someone and you lend TO someone. Please lend me your pen.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BRING_TAKE": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses bring and take for each other.",
+  "example": {
+   "question": "Please ___ this letter to the headteacher's office.",
+   "wrong_answer": "bring",
+   "correct_answer": "take"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"bring\" next to the right answer in a new sentence and ask again.",
+  "help": "Bring: towards the speaker. Take: away from the speaker.",
+  "feedback": "Bring means to carry it toward the speaker. Take means to carry it away from the speaker.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_LEARN_TEACH": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses learn and teach for each other.",
+  "example": {
+   "question": "Mr Kimani will ___ us fractions.",
+   "wrong_answer": "learn",
+   "correct_answer": "teach"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"learn\" next to the right answer in a new sentence and ask again.",
+  "help": "The teacher teaches. The pupil learns.",
+  "feedback": "The teacher TEACHES and the pupil LEARNS.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_HEAR_LISTEN": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses hear and listen for each other.",
+  "example": {
+   "question": "Please ___ carefully to the story.",
+   "wrong_answer": "hear",
+   "correct_answer": "listen"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"hear\" next to the right answer in a new sentence and ask again.",
+  "help": "Listen: you try to hear. Hear: it reaches your ears.",
+  "feedback": "You hear without trying, but you LISTEN on purpose. Listen is followed by to.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SEE_LOOK": {
+  "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
+  "error": "Uses see, look and watch for each other.",
+  "example": {
+   "question": "___ at the bird on the roof.",
+   "wrong_answer": "See",
+   "correct_answer": "Look"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"See\" next to the right answer in a new sentence and ask again.",
+  "help": "Look is on purpose, and it takes at. See is what your eyes find.",
+  "feedback": "Look is on purpose and takes at (look at). See is what your eyes find. Watch is to look at something that moves.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_OPINION_AS_FACT": {
+  "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
+  "error": "Takes an opinion as a fact.",
+  "example": {
+   "question": "Which is a fact?",
+   "wrong_answer": "Githeri is the best food.",
+   "correct_answer": "Githeri is made from maize and beans."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Githeri is the best food.\" next to the right answer in a new sentence and ask again.",
+  "help": "A fact can be checked. Words like best, nicest and should show an opinion.",
+  "feedback": "An opinion says what someone thinks. Words like best and nicest show an opinion. A fact can be checked.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_FACT_AS_OPINION": {
+  "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
+  "error": "Takes a fact as an opinion.",
+  "example": {
+   "question": "Which is an opinion?",
+   "wrong_answer": "Nairobi is the capital of Kenya.",
+   "correct_answer": "Nairobi is the most exciting city."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Nairobi is the capital of Kenya.\" next to the right answer in a new sentence and ask again.",
+  "help": "Can you check it? Then it is a fact.",
+  "feedback": "A fact can be checked. Nairobi is the capital is a fact; the most exciting is a feeling.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_STORY_INFO": {
+  "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
+  "error": "Calls a made-up story information.",
+  "example": {
+   "question": "Is this text a story or information?",
+   "wrong_answer": "information",
+   "correct_answer": "a story"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"information\" next to the right answer in a new sentence and ask again.",
+  "help": "A story has made-up characters and events.",
+  "feedback": "A story is made up, with characters and events. Information gives facts.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_ADJ_FOR_ADV": {
+  "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+  "error": "Uses an adjective after an action verb (He runs quick).",
+  "example": {
+   "question": "The boy runs ___.",
+   "wrong_answer": "quick",
+   "correct_answer": "quickly"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"quick\" next to the right answer in a new sentence and ask again.",
+  "help": "How does he run? An -ly word tells how.",
+  "feedback": "A word that tells HOW something is done is an adverb, usually ending in -ly: quickly, slowly.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_GOOD_WELL": {
+  "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+  "error": "Writes good where well is needed (She sings good).",
+  "example": {
+   "question": "Wanjiru sings very ___.",
+   "wrong_answer": "good",
+   "correct_answer": "well"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"good\" next to the right answer in a new sentence and ask again.",
+  "help": "Good describes a noun (a good song). Well describes a verb (sings well).",
+  "feedback": "Good is an adjective. Well is the adverb of good: a good singer, sings well.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_HARD_HARDLY": {
+  "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+  "error": "Thinks hardly means with great effort.",
+  "example": {
+   "question": "He worked ___ and passed the exam.",
+   "wrong_answer": "hardly",
+   "correct_answer": "hard"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"hardly\" next to the right answer in a new sentence and ask again.",
+  "help": "Hard means with effort. Hardly means almost not at all.",
+  "feedback": "Hard means with much effort. Hardly means almost not: He hardly slept means he slept very little.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_POSITION": {
+  "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+  "error": "Puts a frequency adverb in the wrong place (He goes always).",
+  "example": {
+   "question": "Juma ___ walks to school.",
+   "wrong_answer": "walks always",
+   "correct_answer": "always walks"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"walks always\" next to the right answer in a new sentence and ask again.",
+  "help": "Always, never, often and usually go before the main verb.",
+  "feedback": "Frequency adverbs such as always, never and often come before the main verb: he always walks.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M_ADV_KIND_MIXED": {
+  "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
+  "error": "Names the wrong kind of adverb (calls yesterday an adverb of place).",
+  "example": {
+   "question": "What does the adverb \"yesterday\" tell us?",
+   "wrong_answer": "place",
+   "correct_answer": "time"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"place\" next to the right answer in a new sentence and ask again.",
+  "help": "Ask: how, when, where or how often?",
+  "feedback": "Yesterday tells WHEN, so it is an adverb of time. Where tells place; how tells manner; how often tells frequency.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_MISSING": {
+  "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
+  "error": "Leaves out the hyphen in a compound before a noun (a well known singer).",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "She is a well known singer.",
+   "correct_answer": "She is a well-known singer."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"She is a well known singer.\" next to the right answer in a new sentence and ask again.",
+  "help": "Two words that work as one describing word before a noun take a hyphen.",
+  "feedback": "A compound that describes the noun after it takes a hyphen: a well-known singer.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_NUMBER": {
+  "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
+  "error": "Writes twenty one or twentyone.",
+  "example": {
+   "question": "Which is correct?",
+   "wrong_answer": "twenty one",
+   "correct_answer": "twenty-one"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"twenty one\" next to the right answer in a new sentence and ask again.",
+  "help": "The numbers 21 to 99 in words take a hyphen.",
+  "feedback": "Numbers from twenty-one to ninety-nine are hyphenated when written in words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_PLURAL_COMPOUND": {
+  "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
+  "error": "Makes the number plural inside a compound (a ten-years-old boy).",
+  "example": {
+   "question": "Which sentence is correct?",
+   "wrong_answer": "He is a ten-years-old boy.",
+   "correct_answer": "He is a ten-year-old boy."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"He is a ten-years-old boy.\" next to the right answer in a new sentence and ask again.",
+  "help": "In a compound before a noun, the unit stays singular.",
+  "feedback": "Before a noun, the unit is singular: a ten-year-old boy. Without the hyphen: he is ten years old.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_RELATIVE": {
+  "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
+  "error": "Writes mother in law or motherinlaw for mother-in-law.",
+  "example": {
+   "question": "Which is correct?",
+   "wrong_answer": "mother in law",
+   "correct_answer": "mother-in-law"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"mother in law\" next to the right answer in a new sentence and ask again.",
+  "help": "Words for relations by marriage are hyphenated.",
+  "feedback": "Words such as mother-in-law and sister-in-law are written with hyphens.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_ALTHOUGH_BUT": {
+  "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+  "error": "Uses although and but in the same sentence.",
+  "example": {
+   "question": "___ it rained, we played outside.",
+   "wrong_answer": "Although",
+   "correct_answer": "Although"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Although\" next to the right answer in a new sentence and ask again.",
+  "help": "Use one joining word only: although OR but.",
+  "feedback": "Do not use although and but together. Although it rained, we played. Or: It rained but we played.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_UNLESS_NOT": {
+  "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+  "error": "Writes unless not.",
+  "example": {
+   "question": "You will not pass ___ you study.",
+   "wrong_answer": "unless not",
+   "correct_answer": "unless"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"unless not\" next to the right answer in a new sentence and ask again.",
+  "help": "Unless already means if not.",
+  "feedback": "Unless means if not, so do not add not: You will fail unless you study.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHILE_UNTIL": {
+  "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+  "error": "Uses while or until where the meaning needs the other.",
+  "example": {
+   "question": "Wait here ___ I come back.",
+   "wrong_answer": "while",
+   "correct_answer": "until"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"while\" next to the right answer in a new sentence and ask again.",
+  "help": "Until: up to the time that. While: at the same time as.",
+  "feedback": "Until means up to the time that something happens. While means at the same time as.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_SO_THAT_MEANING": {
+  "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+  "error": "Uses so that for a reason that already happened.",
+  "example": {
+   "question": "We left early ___ we could catch the bus.",
+   "wrong_answer": "because",
+   "correct_answer": "so that"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"because\" next to the right answer in a new sentence and ask again.",
+  "help": "So that tells the purpose: what you want to happen next.",
+  "feedback": "So that gives the purpose: the aim you want. Because gives the reason for something that has happened.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHEREAS": {
+  "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
+  "error": "Uses because or so where a contrast is meant (whereas).",
+  "example": {
+   "question": "Kamau likes tea, ___ his sister prefers milk.",
+   "wrong_answer": "because",
+   "correct_answer": "whereas"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"because\" next to the right answer in a new sentence and ask again.",
+  "help": "Two different things side by side: whereas.",
+  "feedback": "Whereas and while show two things that are different. Because shows a reason.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHO_WHOSE": {
+  "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+  "error": "Uses who where whose (belonging) is asked.",
+  "example": {
+   "question": "___ bag is this?",
+   "wrong_answer": "Who",
+   "correct_answer": "Whose"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Who\" next to the right answer in a new sentence and ask again.",
+  "help": "The answer is an owner: Wanjiru's. That is whose.",
+  "feedback": "Ask whose when you want to know who owns something.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHAT_WHICH": {
+  "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+  "error": "Uses what where which is needed for a choice from a small set.",
+  "example": {
+   "question": "___ of these two books is yours?",
+   "wrong_answer": "What",
+   "correct_answer": "Which"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"What\" next to the right answer in a new sentence and ask again.",
+  "help": "Which is for a choice from a small number you can see.",
+  "feedback": "Use which when the choice is from a small set; use what when anything is possible.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWMUCH_MANY": {
+  "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+  "error": "Uses how much for things you can count, or how many for things you cannot.",
+  "example": {
+   "question": "How ___ eggs did you buy?",
+   "wrong_answer": "much",
+   "correct_answer": "many"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"much\" next to the right answer in a new sentence and ask again.",
+  "help": "Count them? how many. Cannot count them? how much.",
+  "feedback": "How many is for things you can count (eggs). How much is for things you cannot (milk, money).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWLONG_HOWFAR": {
+  "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+  "error": "Mixes how long (time) with how far (distance).",
+  "example": {
+   "question": "___ is it from Nakuru to Naivasha?",
+   "wrong_answer": "How long",
+   "correct_answer": "How far"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"How long\" next to the right answer in a new sentence and ask again.",
+  "help": "Distance is how far. How long can be time.",
+  "feedback": "How far asks about distance. How long asks about time or length.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHEN_HOWOFTEN": {
+  "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
+  "error": "Uses when where how often is asked.",
+  "example": {
+   "question": "___ do you go to the library? Twice a week.",
+   "wrong_answer": "When",
+   "correct_answer": "How often"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"When\" next to the right answer in a new sentence and ask again.",
+  "help": "Twice a week tells how many times. That is how often.",
+  "feedback": "How often asks how many times. When asks at what time.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_SYN_FOR_ANT": {
+  "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
+  "error": "Gives a word with the same meaning when the opposite is asked.",
+  "example": {
+   "question": "The old man was weak but his son was ___.",
+   "wrong_answer": "feeble",
+   "correct_answer": "strong"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"feeble\" next to the right answer in a new sentence and ask again.",
+  "help": "Antonym means opposite. Ask: is it the same meaning or the opposite?",
+  "feedback": "An antonym is a word with the OPPOSITE meaning. Feeble means weak, not the opposite of weak.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_ANT_FOR_SYN": {
+  "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
+  "error": "Gives an opposite when a word with the same meaning is asked.",
+  "example": {
+   "question": "Wafula was delighted with his gift. He was very ___.",
+   "wrong_answer": "sad",
+   "correct_answer": "happy"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"sad\" next to the right answer in a new sentence and ask again.",
+  "help": "Synonym means same meaning. Delighted means very pleased.",
+  "feedback": "A synonym has the SAME meaning. Delighted means very pleased, so happy is the synonym.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_RELATED_NOT_PAIR": {
+  "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
+  "error": "Gives a related word that is neither the same nor the opposite.",
+  "example": {
+   "question": "The road was wide but the path was ___.",
+   "wrong_answer": "long",
+   "correct_answer": "narrow"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"long\" next to the right answer in a new sentence and ask again.",
+  "help": "Think of the exact opposite of wide, not any word about roads.",
+  "feedback": "Choose the word that is the exact opposite. Long is about something else; the opposite of wide is narrow.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_REPEAT": {
+  "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
+  "error": "Repeats the same word as the answer.",
+  "example": {
+   "question": "The soup was hot, but the juice was ___.",
+   "wrong_answer": "hot",
+   "correct_answer": "cold"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"hot\" next to the right answer in a new sentence and ask again.",
+  "help": "The answer must be a different word.",
+  "feedback": "An antonym is a different word with the opposite meaning, not the same word again.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_SPELL_RHYME": {
+  "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
+  "error": "Chooses words that end with the same letters but do not sound alike (cough, rough).",
+  "example": {
+   "question": "Which two words rhyme?",
+   "wrong_answer": "cough and rough",
+   "correct_answer": "rough and tough"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"cough and rough\" next to the right answer in a new sentence and ask again.",
+  "help": "Rhyme is sound, not spelling. Say the words aloud.",
+  "feedback": "Rhyming words sound alike at the end. Cough and rough end with the same letters but do not rhyme.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_REPEAT_RHYME": {
+  "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
+  "error": "Takes repetition for rhyme.",
+  "example": {
+   "question": "Which line repeats in the poem?",
+   "wrong_answer": "the first line",
+   "correct_answer": "the line that appears again"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the first line\" next to the right answer in a new sentence and ask again.",
+  "help": "Repeated lines are the same words again, not just similar sounds.",
+  "feedback": "A repeated line is the same line again. Rhyme is a similar sound at the ends.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_FIRST_WORD": {
+  "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
+  "error": "Looks only at the first word of each line.",
+  "example": {
+   "question": "Which words rhyme?",
+   "wrong_answer": "the first words of lines",
+   "correct_answer": "the last words of lines"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the first words of lines\" next to the right answer in a new sentence and ask again.",
+  "help": "Rhymes are usually at the end of lines.",
+  "feedback": "Rhyming words are usually the last words of the lines.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_SAME_SIGN": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Uses a tag with the same sign as the statement (She is tall, is she?).",
+  "example": {
+   "question": "Wafula is a good singer, ___?",
+   "wrong_answer": "is he",
+   "correct_answer": "isn't he"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"is he\" next to the right answer in a new sentence and ask again.",
+  "help": "A positive statement takes a negative tag.",
+  "feedback": "The tag has the opposite sign: a positive statement takes a negative tag.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_ALWAYS_ISNTIT": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Uses isn't it for every sentence.",
+  "example": {
+   "question": "You can swim, ___?",
+   "wrong_answer": "isn't it",
+   "correct_answer": "can't you"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"isn't it\" next to the right answer in a new sentence and ask again.",
+  "help": "Use the helper verb of the statement and a pronoun.",
+  "feedback": "Isn't it is not for every sentence. Use the helper verb in the statement: can, can't you.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_DO_FORM": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Does not use do, does or did for a statement with no helper verb.",
+  "example": {
+   "question": "Otieno plays football, ___?",
+   "wrong_answer": "isn't he",
+   "correct_answer": "doesn't he"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"isn't he\" next to the right answer in a new sentence and ask again.",
+  "help": "No helper verb? Bring in do, does or did.",
+  "feedback": "When the sentence has only a plain verb, the tag uses do, does or did.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_AM": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Writes amn't I or am not I after I am.",
+  "example": {
+   "question": "I am late, ___?",
+   "wrong_answer": "amn't I",
+   "correct_answer": "aren't I"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"amn't I\" next to the right answer in a new sentence and ask again.",
+  "help": "After I am, the tag is aren't I.",
+  "feedback": "After I am the tag is aren't I. Amn't I is not used.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NO_PRONOUN": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Uses the noun again in the tag instead of a pronoun.",
+  "example": {
+   "question": "The girls are ready, ___?",
+   "wrong_answer": "aren't the girls",
+   "correct_answer": "aren't they"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"aren't the girls\" next to the right answer in a new sentence and ask again.",
+  "help": "The tag always has a pronoun: he, she, it, they.",
+  "feedback": "A question tag uses a pronoun (they), not the noun again.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NEG_NEG": {
+  "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
+  "error": "Gives a negative tag to a negative statement.",
+  "example": {
+   "question": "You do not like beans, ___?",
+   "wrong_answer": "don't you",
+   "correct_answer": "do you"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"don't you\" next to the right answer in a new sentence and ask again.",
+  "help": "A negative statement takes a positive tag.",
+  "feedback": "When the statement says not, the tag is positive: You do not like beans, do you?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_THIRD_PERSON": {
+  "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
+  "error": "Writes a journal in the third person (he, she) as if it were a story.",
+  "example": {
+   "question": "Which line could be from a journal?",
+   "wrong_answer": "Otieno went to the market.",
+   "correct_answer": "Today I went to the market."
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"Otieno went to the market.\" next to the right answer in a new sentence and ask again.",
+  "help": "A journal is your own record, so you write I.",
+  "feedback": "A journal is written by you about your own day, so it uses I and my.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_NO_DATE": {
+  "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
+  "error": "Forgets the date at the top of an entry.",
+  "example": {
+   "question": "What should every journal entry begin with?",
+   "wrong_answer": "a greeting",
+   "correct_answer": "the date"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"a greeting\" next to the right answer in a new sentence and ask again.",
+  "help": "Each entry is for one day, so the date comes first.",
+  "feedback": "A journal entry begins with the date, because the entry belongs to that day.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_LETTER_FORM": {
+  "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
+  "error": "Adds a greeting and a closing like a letter.",
+  "example": {
+   "question": "Which is not a part of a journal entry?",
+   "wrong_answer": "the date",
+   "correct_answer": "Yours sincerely"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"the date\" next to the right answer in a new sentence and ask again.",
+  "help": "A journal is not sent to anyone, so it has no closing.",
+  "feedback": "A journal is private and is not sent, so it has no greeting and no Yours sincerely.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_FACTS_ONLY": {
+  "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
+  "error": "Lists only facts and leaves out feelings.",
+  "example": {
+   "question": "What makes a journal different from a timetable?",
+   "wrong_answer": "it lists the times",
+   "correct_answer": "it tells what you felt"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"it lists the times\" next to the right answer in a new sentence and ask again.",
+  "help": "A journal is personal: it says how you felt.",
+  "feedback": "A journal says what happened and also how you felt about it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_PROFIT_LOSS": {
+  "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
+  "error": "Swaps profit and loss.",
+  "example": {
+   "question": "Wanjiku sold the tomatoes for less than she paid. She made a ___.",
+   "wrong_answer": "profit",
+   "correct_answer": "loss"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"profit\" next to the right answer in a new sentence and ask again.",
+  "help": "Profit: you get back more. Loss: you get back less.",
+  "feedback": "Profit is the extra money you gain. Loss is money you lose when you sell for less than you paid.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_IMPORT_EXPORT": {
+  "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
+  "error": "Swaps import and export.",
+  "example": {
+   "question": "Kenya sends tea to other countries. Tea is an ___.",
+   "wrong_answer": "import",
+   "correct_answer": "export"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"import\" next to the right answer in a new sentence and ask again.",
+  "help": "Export: out of the country. Import: into the country.",
+  "feedback": "Exports leave the country. Imports come into the country.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_RETAIL_WHOLESALE": {
+  "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
+  "error": "Swaps retailer and wholesaler.",
+  "example": {
+   "question": "A ___ sells goods in small amounts to shoppers.",
+   "wrong_answer": "wholesaler",
+   "correct_answer": "retailer"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"wholesaler\" next to the right answer in a new sentence and ask again.",
+  "help": "Retailer: sells to the public in small amounts. Wholesaler: sells large amounts to shops.",
+  "feedback": "A retailer sells small amounts to shoppers. A wholesaler sells large amounts to shops.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BETWEEN_AMONG": {
+  "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+  "error": "Uses between for three or more, or among for two.",
+  "example": {
+   "question": "The sweets were shared ___ the five children.",
+   "wrong_answer": "between",
+   "correct_answer": "among"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"between\" next to the right answer in a new sentence and ask again.",
+  "help": "Between: two. Among: three or more.",
+  "feedback": "Use between for two and among for more than two.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_SINCE_FOR": {
+  "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+  "error": "Uses for with a starting point or since with a length of time.",
+  "example": {
+   "question": "We have lived here ___ 2019.",
+   "wrong_answer": "for",
+   "correct_answer": "since"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"for\" next to the right answer in a new sentence and ask again.",
+  "help": "Since goes with a point in time; for goes with a length of time.",
+  "feedback": "Use since with the time it began (since 2019) and for with how long (for five years).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DEPENDENT": {
+  "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+  "error": "Uses the wrong preposition after a word (interested on, afraid from).",
+  "example": {
+   "question": "Otieno is interested ___ football.",
+   "wrong_answer": "on",
+   "correct_answer": "in"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"on\" next to the right answer in a new sentence and ask again.",
+  "help": "Some words take one fixed preposition: interested in, afraid of, different from.",
+  "feedback": "Learn the pair: interested IN, afraid OF, different FROM, good AT.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BY_WITH": {
+  "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+  "error": "Uses with for the doer or by for the tool.",
+  "example": {
+   "question": "The meat was cut ___ a knife.",
+   "wrong_answer": "by",
+   "correct_answer": "with"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"by\" next to the right answer in a new sentence and ask again.",
+  "help": "By tells who did it. With tells what was used.",
+  "feedback": "By names the doer (by Mama). With names the tool (with a knife).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DURING_FOR": {
+  "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
+  "error": "Uses during for how long, or for for a named event.",
+  "example": {
+   "question": "It rained ___ the night.",
+   "wrong_answer": "for",
+   "correct_answer": "during"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"for\" next to the right answer in a new sentence and ask again.",
+  "help": "During goes with an event or a period (during the night). For goes with a number (for two hours).",
+  "feedback": "During goes with a period such as the night or the holiday. For goes with an amount of time such as two hours.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_WRONG_PREFIX": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+  "error": "Uses the wrong prefix for the word (dishappy, unpossible).",
+  "example": {
+   "question": "___happy",
+   "wrong_answer": "dis",
+   "correct_answer": "un"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"dis\" next to the right answer in a new sentence and ask again.",
+  "help": "Each prefix goes with certain words. Say the word out loud: unhappy.",
+  "feedback": "Each word takes its own prefix: unhappy, disagree, impossible, invisible. Learn the pairs.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_DOUBLE_LETTER": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+  "error": "Drops or adds a letter where the prefix meets the word (dissapear, mispell).",
+  "example": {
+   "question": "dis___appear",
+   "wrong_answer": "dis",
+   "correct_answer": "dis"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"dis\" next to the right answer in a new sentence and ask again.",
+  "help": "Keep every letter of both parts: dis + appear = disappear; mis + spell = misspell.",
+  "feedback": "Keep every letter of the prefix and the word: dis + appear = disappear, mis + spell = misspell.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_FULL": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+  "error": "Spells the suffix -ful with two l (carefull).",
+  "example": {
+   "question": "care___",
+   "wrong_answer": "full",
+   "correct_answer": "ful"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"full\" next to the right answer in a new sentence and ask again.",
+  "help": "The word full is not the suffix; the suffix has one l.",
+  "feedback": "The suffix is -ful with one l: careful, helpful.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_Y_TO_I": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
+  "error": "Does not change y to i before a suffix (happyness).",
+  "example": {
+   "question": "happy + ness = ___",
+   "wrong_answer": "happyness",
+   "correct_answer": "happiness"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"happyness\" next to the right answer in a new sentence and ask again.",
+  "help": "When a word ends in consonant + y, change the y to i before the suffix.",
+  "feedback": "When a word ends in a consonant and y, change y to i before adding -ness or -ment: happiness.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_IE_EI": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+  "error": "Mixes ie and ei (recieve, beleive).",
+  "example": {
+   "question": "We ___ the parcel on Friday.",
+   "wrong_answer": "recieved",
+   "correct_answer": "received"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"recieved\" next to the right answer in a new sentence and ask again.",
+  "help": "I before E except after C: receive, but believe.",
+  "feedback": "I before e, except after c: believe, but receive.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_VOWEL": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+  "error": "Spells a vowel by sound (seperate, definately).",
+  "example": {
+   "question": "The twins sit at ___ desks.",
+   "wrong_answer": "seperate",
+   "correct_answer": "separate"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"seperate\" next to the right answer in a new sentence and ask again.",
+  "help": "Find the word hidden inside it: sep-A-rate, like a rat.",
+  "feedback": "Spell the vowel from the word, not from the sound: separate has an a in the middle.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SILENT": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+  "error": "Leaves out a letter that is not said (goverment, enviroment).",
+  "example": {
+   "question": "We must protect the ___.",
+   "wrong_answer": "enviroment",
+   "correct_answer": "environment"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"enviroment\" next to the right answer in a new sentence and ask again.",
+  "help": "Say the word slowly, with every letter: environ-ment, govern-ment.",
+  "feedback": "Some letters are not said clearly. Say it slowly: govern-ment, environ-ment.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_DOUBLE": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+  "error": "Doubles or fails to double a letter (neccessary, tommorow, begining).",
+  "example": {
+   "question": "It is ___ to wash your hands before eating.",
+   "wrong_answer": "neccessary",
+   "correct_answer": "necessary"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"neccessary\" next to the right answer in a new sentence and ask again.",
+  "help": "One c, one s... n-e-c-e-ss-a-r-y: one collar, two sleeves.",
+  "feedback": "Necessary has one c and two s. Tomorrow has one m and two r.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SOUND": {
+  "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
+  "error": "Spells the way it is said and loses a letter (libary, Febuary).",
+  "example": {
+   "question": "Our school ___ has many books.",
+   "wrong_answer": "libary",
+   "correct_answer": "library"
+  },
+  "cause": "Common error of Kenyan learners of English.",
+  "reveals": "Offer \"libary\" next to the right answer in a new sentence and ask again.",
+  "help": "Say the r in the middle: lib-r-ary.",
+  "feedback": "The word is library, with an r after b, and February with an r after b too.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ }
+}
