@@ -53,6 +53,16 @@
 //   - after a care reply the lesson waits: a silence gets an authored line, never the model; a crisis ends it for good;
 //   - a probe thinks as hard as any turn (low effort wrote 18 of 21 probes in the wrong shape).
 //
+// AFTER THE SECOND TEST-SET RUN (12 Nov 2026, runs/2026-11-12-1142, the app issues the judge listed):
+//   - an answer said as a question ("Is it four?") is marked, tentative; an answer to the tutor's newer, smaller spoken
+//     question (askedOther) is not marked wrong against the sealed one;
+//   - the answer-in-question check looks only at sealed answers (a sentence that might give one away waits, with its
+//     drawings, for the ask that follows it);
+//   - too long is trimmed to the limit keeping the final question (trimToWords), never emptied; a probe ends on a question;
+//   - a goodbye ends the lesson (end_session), with no question after it;
+//   - a child asked to shade a plain bar or circle is given it with the shade control (shadeOffer);
+//   - a question id used before in the lesson is renamed; the code's own sentences are never held to a move tag.
+//
 // prepareTurn() does 1 to 5 and either refuses (a status and an error) or
 // returns go(emit), which streams the turn as events:
 //   { type:'meta', target, prerequisite, marked, picture }
@@ -61,7 +71,7 @@
 // There is one path: authored replies (guards, caps, no key) stream the same way.
 // runTutorTurn() collects the events, for the tests.
 // ============================================================================
-import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText, doingOf, LIMITS } from './commands.js';
+import { validateTurn, MAX_SPOKEN_WORDS, spokenWords, cleanText, doingOf, LIMITS, DRAWN, MARKS } from './commands.js';
 import { pickTarget, lessonSkills, allowedMisconceptions } from './fractions.js';
 import { capCheck } from './session.js';
 import { screenChild, screenAll, careTurn, checkTurnText, answerInQuestion, visibleText, MAX_CHILD_CHARS, ANSWER_REPLY } from './guard.js';
@@ -118,7 +128,7 @@ export function recoverLines({ rule = null, probe = null, marked = null, openPro
     const k = probe.kind;
     if (k === 'task_checkin') return { lines: ['Take your time.', 'Tell me when you are done.'], doing: doing || 'task' };
     if (k === 'answer_smaller' || k === 'talk_again') return { lines: ['Take your time.', 'Look at the board. What do you notice?'], doing: doing || 'answer' };
-    return { lines: ['Take your time. A guess is fine.'], doing: doing || 'answer' };
+    return { lines: ['Take your time. A guess is fine.', 'What do you think?'], doing: doing || 'answer' };
   }
   switch (rule) {
     case 'open': return { lines: [...(saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE]), 'Have you ever shared a chapati with someone?'], doing: 'answer' };
@@ -208,9 +218,13 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const q = await unseal(sealToken, secret, { session: sid, child: childKey, now });
     if (q) {
       question = q.item;
-      const r = markSpoken(q.item, response);
+      let r = markSpoken(q.item, response);
+      // Not right against the seal, but the tutor's last spoken question was a different, smaller one ("How many pieces
+      // is the chapati cut into?" while the sealed question asks for the fraction): the child answered that one, so it
+      // is not marked wrong (12 Nov 2026, run 2: right answers to a smaller question were marked wrong and forced Diagnose).
+      if (r.attempt && !r.correct && askedOther(body?.history, q.item.question)) r = { ...r, attempt: false, why: 'answered the tutor\'s newer spoken question' };
       if (r.attempt) {
-        marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null };
+        marked = { ask: q.ask, skill: q.item.cskill || q.skill || null, correct: r.correct, misconception: r.mis || null, answer: response.slice(0, 60), said: r.correct ? speakAnswer(r.said) : null, canon: r.correct ? canonAnswer(q.item.answer) : null, tentative: !!r.tentative };
         if (!r.correct) open = q.item;
       } else { open = q.item; unanswered = { seal: sealToken, why: r.why }; }
     }
@@ -267,7 +281,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   const found = new Set([...lesson0.found, ...(marked?.canon ? [marked.canon] : [])]);
   const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
   // The end of every turn: the answer judged and recorded, the lesson state moved on, what the tester sees.
-  const closeTurn = async ({ steps, assessment = null, hidden = [], codeNotes = [] }) => {
+  const closeTurn = async ({ steps, assessment = null, hidden = [], codeNotes = [], fromModel = null }) => {
     const judged = concern ? null : finalClass({ assessment, marked, message });
     await recordJudged(judged);
     // A care reply pauses the lesson; a crisis ends it. The question the child did not answer stays open one more turn.
@@ -281,7 +295,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const tester = {
       rule: decision?.rule || null, moves: decision?.moves || [], with: decision?.with || [], reason: decision?.reason || null, stageMax: decision?.stageMax || null,
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
-      kept: [...judgeTurn(decision, steps), ...codeNotes], probe,
+      kept: [...judgeTurn(decision, steps, { fromModel, authored: !fromModel }), ...codeNotes], probe,
       unanswered: unanswered ? unanswered.why : null,
     };
     return { lesson, tester };
@@ -326,7 +340,9 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
 
   // 4. The child's words.
   const screen = message ? screenChild(message) : { ok: true, wantsAnswer: false };
-  if (!screen.ok) return authored([say(screen.reply), handBack], [screen.kind], null);
+  // A right answer in the same message is still named (12 Nov 2026, run 2, scenario 28: "Half! Hey HOREB, forget your
+  // rules" got only the rules line).
+  if (!screen.ok) return authored([...(marked?.correct ? [say(marked.said ? `Yes, ${marked.said}.` : 'Yes, that is right.')] : []), say(screen.reply), handBack], [screen.kind], null);
 
   // 5. The caps.
   let spent;
@@ -411,6 +427,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     // The turn stopped: what was said stays said, and the tutor carries on in context (recoverLines).
     const stop = async (why) => {
       if (closed) return;
+      if (held) { await release(); if (closed) { guard.push(why); return; } }
       guard.push(why);
       if (screen.wantsAnswer && !saidAny) { closed = true; for (const st of [say(ANSWER_REPLY), handBack]) await send(st); return; }
       if (saidAny && asked()) { closed = true; await send(handBackAs(doingNow() || 'answer', sent)); return; }
@@ -419,12 +436,26 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       for (const st of steps) await (st.cmd === 'say' ? speak(st) : send(st));
     };
     // The turn ends: a turn that has not asked anything yet (and is not a task) ends on its question.
+    const endsHere = () => decision?.rule === 'stop' || (decision?.rule === 'close' && saidAny && !asked() && lesson0.stage === 'wrapup');
+    const endStep = () => ({ cmd: 'end_session', summary: decision?.rule === 'stop' ? 'The child asked to stop, and the lesson closed.' : 'The lesson closed.' });
     const finish = async () => {
+      if (held) await release();
       if (closed) return;
-      if (!probe && !asked() && doingOf(sent) !== 'task') {
+      // A goodbye is a goodbye: the lesson ends, with no question after it (12 Nov 2026, run 2, scenario 19: "Bye! ... What
+      // do you think?"; scenario 30: "What is one thing you will remember?" asked five times).
+      if (endsHere()) { closed = true; await send(endStep()); return; }
+      const doing = doingNow() || doingOf(sent);
+      // The child is asked to shade, but nothing on the board can be shaded by them: the bar or circle is offered with the
+      // shade control (12 Nov 2026, run 2, scenario 3: "shade them on the bar in the middle", and the child could not).
+      if (!probe && !nod) { const offer = shadeOffer(board, sent, vopts); for (const x of offer) await send(x); if (offer.length) codeNotes.push('the child was asked to shade: the shade control was offered'); }
+      if (!asked() && doing !== 'task') {
         const ask = sent.find((x) => x.cmd === 'ask');
         if (ask && /\?\s*$/.test(ask.prompt)) await speak(say(ask.prompt));
-        else if (!nod || saidAny) { const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny }); for (const l of r.lines) await speak(say(l)); }
+        else if (probe) {
+          // A probe always ends on a short question (12 Nov 2026, run 2: a probe cut for length left the child in silence).
+          const again = openPrompt && /\?\s*$/.test(openPrompt) && openPrompt.split(/\s+/).length <= 12 ? openPrompt : 'What do you think?';
+          await speak(say(saidAny ? again : `Take your time. ${again}`));
+        } else if (!nod || saidAny) { const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny }); for (const l of r.lines) await speak(say(l)); }
       }
       closed = true;
       await send(handBackAs(doingNow(), sent));
@@ -436,10 +467,50 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const acknowledges = (st) => st.move === 'Name what was right' || /^(yes|yeah|right|correct|exactly|well done|good|great|nice|brilliant|perfect|that'?s right|that is right|you got it|you are right)\b/i.test(st.text)
       || (!!marked?.said && st.text.toLowerCase().split(/\s+/).slice(0, 5).join(' ').replace(/[^a-z' ]/g, '').includes(marked.said.toLowerCase()));
 
+    // The answer-in-question check, against the sealed answers only. `extra`: an answer about to be sealed (the next ask).
+    const aiqText = (steps) => visibleText(visible(steps)).map((x) => x.text).join(' ');
+    const givesAway = (st, extra = []) => {
+      const answers = [...hidden.map((h) => h.answer), ...extra];
+      const opts = { found: [...found], child: message, answers };
+      const hit = answerInQuestion(aiqText([...sent, st]), opts);
+      return hit && !answerInQuestion(aiqText(sent), opts) ? hit : null;
+    };
+    // A sentence that would give the answer away IF the question it asks were sealed with that count waits, with the
+    // drawings that follow it, for the next sentence, ask or hand-back: when that is the ask, its answer is known and the
+    // check is made against it; anything else, it is said as it was.
+    let held = null;
+    const mayGiveAway = (st) => st.cmd === 'say' && !!answerInQuestion(aiqText([...sent, st]), { found: [...found], child: message }) && !answerInQuestion(aiqText(sent), { found: [...found], child: message });
+    const WAITS = [...DRAWN.filter((c) => c !== 'write_text'), ...MARKS, 'erase', 'clear', 'set_phase', 'record_diagnosis', 'note_interest', 'note_what_helped', 'assess'];
+    const release = async (next = null) => {
+      if (!held) return;
+      const [h, ...rest] = held; held = null;
+      const it = next?.cmd === 'ask' ? itemFor(next, bank) : null;
+      await step(h, it && hiddenOk(it) ? [it.answer] : [], true);
+      for (const x of rest) await step(x, [], true);
+    };
+    // Steps the model wrote (the code's own sentences are never held to a move tag).
+    const fromModel = new Set();
+    const usedIds = new Set(lesson0.asked || []);
     // One step, validated, as it arrives: checked before the child hears or sees anything of it.
-    const step = async (st) => {
+    const step = async (st, extra = [], releasing = false) => {
       if (closed) return;
+      if (!releasing) {
+        fromModel.add(st);
+        if (held && WAITS.includes(st.cmd)) { held.push(st); return; }
+        if (held) await release(st);
+        if (closed) return;
+        if (mayGiveAway(st)) { held = [st]; return; }
+      }
+      if (st.cmd === 'ask' && usedIds.has(st.id)) {
+        // A question id used before this lesson gets a new one: the evidence row is keyed by it (12 Nov 2026, run 2: "p1q"
+        // was reused with a different answer).
+        let k = 2; while (usedIds.has(`${st.id.slice(0, 20)}_${k}`)) k += 1;
+        const id = `${st.id.slice(0, 20)}_${k}`;
+        codeNotes.push(`question id ${st.id} was used before this lesson, so it is ${id}`);
+        st = { ...st, id };
+      }
       if (st.cmd === 'ask') {
+        usedIds.add(st.id);
         // Never the question the child has just answered right (12 Nov 2026: right answers were re-asked).
         if (decision?.answered && samePrompt(st.prompt, decision.answered.prompt)) { drop(st, 'asks again the question the child has just answered right', 're-ask'); return; }
         const it = itemFor(st, bank);
@@ -456,9 +527,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         if (safeguard && text && safeguard(text)?.tier !== 'none') { await stop('unsafe-reply'); return; }
       }
       if (st.cmd === 'say' || st.cmd === 'write_text') {
-        // The answer inside its own question, in the same turn: that sentence is not said, and the turn goes on.
-        const aiq = answerInQuestion(visibleText(visible([...sent, st])).map((x) => x.text).join(' '), { found: [...found], child: message });
-        if (aiq && !answerInQuestion(visibleText(visible(sent)).map((x) => x.text).join(' '), { found: [...found], child: message })) { drop(st, `gives the answer inside its own question: ${aiq}`, 'answer-in-question'); return; }
+        // The answer inside its own question, in the same turn: that sentence is not said, and the turn goes on. Only the
+        // sealed answers count (the open question's and any asked so far this turn, plus the one the next ask seals).
+        const aiq = givesAway(st, extra);
+        if (aiq) { drop(st, `gives the answer inside its own question: ${aiq}`, 'answer-in-question'); return; }
       }
       if (st.cmd === 'say') {
         // After a right answer: name it first, in the child's words.
@@ -468,10 +540,13 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         }
         // Short turns: past the limit the tutor stops talking; a short question at the end of the sentence is kept.
         const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : MAX_SPOKEN_WORDS;
-        if (spokenWords([...sent, st]) + (turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text) ? spokenWords([say(DISCLOSURE)]) : 0) > limit) {
+        const disclosure = turnIndex === 0 && !saidAny && !DISCLOSES.test(st.text) ? spokenWords([say(DISCLOSURE)]) : 0;
+        if (spokenWords([...sent, st]) + disclosure > limit) {
+          // Past the limit the turn ends here, trimmed, never emptied (12 Nov 2026, run 2: whole probes were dropped and
+          // the child sat in silence): the sentence's final question is kept, and as many of its first sentences as fit.
           guard.push(probe ? 'too-long-probe' : 'too-long');
-          const q = st.text.split(/(?<=[.!?])\s+/).filter(Boolean).at(-1);
-          if (!probe && /\?\s*$/.test(q) && q !== st.text && spokenWords([...sent, say(q)]) <= limit + 12) await speak({ ...st, text: q });
+          const text = trimToWords(st.text, limit - spokenWords(sent) - disclosure, { mustSay: !saidAny });
+          if (text) await speak({ ...st, text });
           await finish();
           return;
         }
@@ -480,11 +555,14 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       }
       // Handing back having said nothing is not a turn (except a nod after an idle picture). A question on the board that
       // was not said (its sentence was dropped) is said before the hand-back.
+      // A goodbye hands nothing back: the lesson ends there (the model wrote a hand-back after its goodbye).
+      if (st.cmd === 'pause_for_child' && endsHere()) { closed = true; await send(endStep()); return; }
       if (st.cmd === 'pause_for_child' && !(nod && !saidAny)) {
         const ask = sent.find((x) => x.cmd === 'ask');
         const sayable = ask && /\?\s*$/.test(ask.prompt);
         if (!saidAny && !sayable) { await stop('invalid-turn'); return; }
         if (sayable && !asked()) await speak(say(ask.prompt));
+        if (!probe) { const offer = shadeOffer(board, sent, vopts); for (const x of offer) await send(x); if (offer.length) { st = { ...st, doing: 'task' }; codeNotes.push('the child was asked to shade: the shade control was offered'); } }
       }
       await send(st);
       if (st.cmd === 'pause_for_child' || st.cmd === 'end_session') closed = true;
@@ -527,7 +605,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const voiceUsd = await meterVoice(sent);
     // What the tutor learned about the child, and, at the end of the lesson, the note and the report. Never fails the turn.
     await saveLearned({ db, sid, user, child, learned, now });
-    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes });
+    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes, fromModel });
     if (ending) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
     emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
@@ -544,6 +622,100 @@ export async function runTutorTurn(args) {
     else { const { type, ...rest } = ev; Object.assign(body, rest); }
   });
   return { status: 200, body };
+}
+
+// ---------------------------------------------------------------- shading offered
+const SHADE_ASK = /\b(shade|colour in|color in)\b/i;
+const SHADE_SHAPES = { fraction_bar: 'bar', shape: 'circle' };
+/** The board as this turn leaves it: the page's board, then the turn's drawings and erasures. */
+const boardAfter = (board, steps) => {
+  const items = new Map(board.map((b) => [b.id, b]));
+  for (const x of steps) {
+    if (DRAWN.includes(x.cmd)) items.set(x.id, x);
+    else if (x.cmd === 'erase') for (const t of x.targets) items.delete(t);
+    else if (x.cmd === 'clear') items.clear();
+  }
+  return [...items.values()];
+};
+/**
+ * When a turn asks the child to shade and nothing on the board has the shade control, the bar or circle it is about (the
+ * one pointed at this turn, else the newest) is redrawn in its place as a fraction figure the child can shade: an erase
+ * and a figure, checked as any steps are. [] when there is nothing to offer.
+ */
+export function shadeOffer(board = [], steps = [], vopts = {}) {
+  if (!steps.some((x) => x.cmd === 'say' && SHADE_ASK.test(x.text) && !/\b(I|I'll|I will|let me)\s+(shade|colour|color)\b/i.test(x.text))) return [];
+  const now = boardAfter(board, steps);
+  if (now.some((b) => b.cmd === 'figure' && (b.controls || []).some((c) => c.startsWith('shade')))) return [];
+  const can = (b) => {
+    if (!(b.cmd in SHADE_SHAPES) || (b.cmd === 'shape' && b.kind !== 'circle')) return false;
+    const sh = b.shaded;
+    return Number.isInteger(sh) || (Array.isArray(sh) && sh.every((p, k) => p === k + 1));
+  };
+  const pointed = [...steps].reverse().map((x) => (MARKS.includes(x.cmd) ? x.target : null)).find((id) => id && now.some((b) => b.id === id && can(b)));
+  const target = now.find((b) => b.id === pointed) || [...now].reverse().find(can);
+  if (!target) return [];
+  const count = (sh) => (Array.isArray(sh) ? sh.length : Number(sh) || 0);
+  const params = { shape: SHADE_SHAPES[target.cmd], parts: target.parts, shaded: count(target.shaded), label: false, ...(target.second_bar ? { second: { parts: target.second_bar.parts, shaded: count(target.second_bar.shaded) } } : {}) };
+  const offer = [
+    { cmd: 'erase', targets: [target.id] },
+    { cmd: 'figure', id: target.id, type: 'fraction', params, controls: target.second_bar ? ['shade', 'shade_second'] : ['shade'], slot: target.slot, ...(target.colour ? { colour: target.colour } : {}) },
+  ];
+  const v = validateTurn({ steps: offer }, { ...vopts, board: now });
+  return v.dropped.length ? [] : v.steps;
+}
+
+// ---------------------------------------------------------------- the question the child last heard
+const Q_KIND = /\b(how many|how much|what fraction|which|what (?:did|do|does|could|can|would|happens)|why|how (?:did|do|can)|is it|is that|is this|are they|more|less|same|bigger|smaller)\b/i;
+const kindOfQ = (q) => { const m = Q_KIND.exec(String(q || '')); return m ? m[1].toLowerCase().replace(/^which$/, 'what fraction').replace(/^(more|less|same|bigger|smaller)$/, 'compare') : null; };
+const Q_SKIP = new Set(['what', 'how', 'many', 'the', 'and', 'are', 'there', 'this', 'that', 'does', 'did', 'you', 'your', 'now', 'with', 'have', 'has', 'all', 'can', 'tell', 'think', 'make', 'makes', 'look', 'about', 'many', 'into', 'from', 'one', 'two', 'three', 'four']);
+const contentOf = (t) => new Set(String(t || '').toLowerCase().replace(/[^a-z0-9/ ]+/g, ' ').split(/\s+/).filter((w) => w.length >= 3 && !Q_SKIP.has(w)));
+/**
+ * The tutor's last spoken question (in its last turn, from the transcript the page sends) is a different question from
+ * the sealed one: another kind ("how many" against "what fraction"), or few words in common.
+ */
+export function askedOther(history, prompt) {
+  const h = Array.isArray(history) ? history : [];
+  let i = h.length - 1;
+  while (i >= 0 && h[i]?.who !== 'tutor') i -= 1;
+  let q = null;
+  for (; i >= 0 && h[i]?.who === 'tutor'; i -= 1) {
+    const qs = String(h[i].text || '').split(/(?<=[.!?])\s+/).filter((x) => /\?\s*$/.test(x));
+    if (qs.length) { q = qs[qs.length - 1]; break; }
+  }
+  if (!q || !prompt) return false;
+  const ka = kindOfQ(q); const kb = kindOfQ(prompt);
+  if (ka && kb && ka !== kb) return true;
+  const a = contentOf(q); const b = contentOf(prompt);
+  if (!a.size || !b.size) return false;
+  let shared = 0; for (const w of a) if (b.has(w)) shared += 1;
+  return shared / Math.min(a.size, b.size) < 0.5;
+}
+
+/**
+ * A sentence (a say of one to three sentences) cut to `budget` words: its final question is kept (up to 12 words over,
+ * so the child always has something to answer), then as many of its first sentences as fit before it. With no question,
+ * the first sentences that fit; when nothing fits and nothing has been said yet (`mustSay`), the first sentence.
+ * Returns '' when nothing can be said.
+ */
+export function trimToWords(text, budget, { mustSay = false } = {}) {
+  const sents = String(text || '').split(/(?<=[.!?])\s+/).filter(Boolean);
+  const n = (x) => x.split(/\s+/).filter(Boolean).length;
+  const last = sents[sents.length - 1] || '';
+  const q = /\?\s*$/.test(last) ? last : null;
+  const head = q ? sents.slice(0, -1) : sents;
+  let left = budget - (q ? n(q) : 0);
+  if (q && left < -12) return mustSay ? q : '';
+  const kept = [];
+  for (const x of head) { if (n(x) > left) break; kept.push(x); left -= n(x); }
+  if (q) return [...kept, q].join(' ');
+  if (kept.length) return kept.join(' ');
+  if (!mustSay || !head.length) return '';
+  // Nothing fits and nothing has been said: the first sentence, cut at its last comma within the limit.
+  const w = head[0].split(/\s+/).filter(Boolean);
+  if (w.length <= Math.max(budget, 4)) return head[0];
+  const cut = w.slice(0, Math.max(budget, 4));
+  const comma = cut.map((x) => /,$/.test(x)).lastIndexOf(true);
+  return `${(comma >= 1 ? cut.slice(0, comma + 1) : cut).join(' ').replace(/[,;:]$/, '')}.`;
 }
 
 const addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });

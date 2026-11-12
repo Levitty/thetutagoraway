@@ -173,7 +173,8 @@ export function turnContext({ target, prerequisite, profile = [], learner = [], 
     // What each item really shows and the free slots (12 Nov 2026: the tutor asked about shaded parts on an unshaded chapati).
     ...boardLines(board, inkCells),
   ];
-  if (unanswered) lines.push(`The child has not answered your question yet ("${unanswered.ask}"): what they said is ${unanswered.why === 'question' || unanswered.why === 'again' ? 'a question back' : unanswered.why === 'lost' ? '"I do not know"' : unanswered.why === 'filler' ? 'thinking aloud' : 'not an answer to it'}, not a wrong answer. The question is still open and its answer still hidden.`);
+  if (marked?.tentative) lines.push('The child said their answer as a question or unsure ("maybe ...?"): it is still their answer, and it is marked below.');
+  if (unanswered) lines.push(`The child has not answered your question yet ("${unanswered.ask}"): what they said is ${unanswered.why === 'question' || unanswered.why === 'again' ? 'a question back' : unanswered.why === 'lost' ? '"I do not know"' : unanswered.why === 'filler' ? 'thinking aloud' : /newer spoken question/.test(unanswered.why) ? 'their answer to the smaller question you asked since (judge it against that question)' : 'not an answer to it'}, not a wrong answer. The question is still open and its answer still hidden.`);
   if (marked) {
     lines.push(marked.correct
       ? `The child answered your question ${marked.ask} with "${marked.answer}": right.${marked.said ? ` In their words: "${marked.said}".` : ''}`

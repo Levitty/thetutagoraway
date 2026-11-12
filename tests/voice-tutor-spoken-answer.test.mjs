@@ -4,7 +4,7 @@
 // ============================================================================
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
-import { readAnswer, markSpoken, canonAnswer, childMove, wantsToStop, wantsToCarryOn, speakAnswer, inWords } from '../src/voice-tutor/spokenAnswer.js';
+import { readAnswer, markSpoken, canonAnswer, childMove, wantsToStop, wantsToCarryOn, speakAnswer, inWords, isTentative, reasonWords, namesIn } from '../src/voice-tutor/spokenAnswer.js';
 import { fixMathsWords } from '../src/voice-tutor/childVoice.js';
 
 const EQ = 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS';
@@ -62,7 +62,7 @@ test('word answers, and yes or no', () => {
 });
 
 test('a question back, a filler, "I don\'t know" or "say it again" is not an answer: never marked wrong', () => {
-  for (const said of ['umm...', 'Umm, let me think', 'hmm', 'is it three?', 'Wait, why do you cut each piece again?', 'But nothing is shaded on the board. How can I tell if it is the same?', 'Can I see it again?', 'I did not hear a question', "I don't know", 'sijui', 'A half? Or is it a whole?', 'Is it two or four?']) noTry('4', said, 'How many pieces are there now?');
+  for (const said of ['umm...', 'Umm, let me think', 'hmm', 'Wait, why do you cut each piece again?', 'But nothing is shaded on the board. How can I tell if it is the same?', 'Can I see it again?', 'I did not hear a question', "I don't know", 'sijui', 'A half? Or is it a whole?', 'Is it two or four?']) noTry('4', said, 'How many pieces are there now?');
   noTry('the same', 'Is it bigger or the same?');
   noTry('1/2', '');
   // A statement with no number in it, for a number answer: not answered yet. With a number: an answer.
@@ -96,4 +96,65 @@ test('reading the words: what was said back, one form for an answer, what a mess
   assert.equal(wantsToCarryOn('ok, I want to carry on'), true);
   assert.equal(wantsToCarryOn('I want to stop'), false);
   assert.equal(fixMathsWords('won have'), 'one half');
+});
+
+// ---------------------------------------------------------------- the second test-set run (2026-11-12-1142)
+test('an answer said as a question is an answer, marked tentative ("Is it two quarters?", "Maybe one half?")', () => {
+  for (const said of ['Is it four?', 'umm... so... maybe four pieces?', 'I think four?', "Four? I'm not sure.", 'Hmm, is it four? Because half of eight is four.']) {
+    const r = mark('4', said, 'How many pieces are there now?');
+    assert.deepEqual([r.correct, r.attempt, r.tentative], [true, true, true], said);
+  }
+  const w = mark('4', 'is it three?', 'How many pieces are there now?');
+  assert.deepEqual([w.correct, w.attempt, w.tentative], [false, true, true], 'a tentative wrong answer is marked wrong, never skipped');
+  assert.equal(mark('4', 'Four pieces!', 'How many pieces?').tentative, false);
+  for (const t of ['Is it two quarters?', 'Maybe one half?', 'I think it is the same?', 'umm... so... it is... one half?', 'Two pieces. Is that the same as one half?']) {
+    assert.equal(isTentative(t), true, t); assert.equal(childMove(t), 'tentative', t);
+  }
+  for (const t of ['Why do we cut it again?', 'Is it two or four?', 'How can I tell if it is the same?', 'Because the two pieces fill half of the circle. Is that right?', 'Can I see it again?']) {
+    assert.equal(isTentative(t), false, t); assert.notEqual(childMove(t), 'tentative', t);
+  }
+  assert.equal(childMove('why?'), 'question');
+});
+
+test('comparison and place answers must be the sealed one ("less" is not "the same", "top" is not "bottom")', () => {
+  wrong('same', 'Less, because the second one has more pieces.', 'Is the shaded part the same amount, more, or less?');
+  right('same', 'The same, because the second one has more pieces but smaller.', 'Is the shaded part the same amount, more, or less?');
+  wrong('smaller', 'Smaller? Hmm, no, maybe bigger, because five is more than two.', 'Is one fifth bigger or smaller than one half?');
+  right('bigger', 'Smaller? Hmm, no, maybe bigger, because five is more than two.', 'Is one fifth bigger or smaller than one half?');
+  const pos = item('bottom', 'Which shaded piece is bigger, the top one or the bottom one?', { accepts: ['bottom', 'the bottom one'] });
+  assert.equal(markSpoken(pos, 'The top one is bigger. The half piece looks bigger than the quarter piece.').correct, false);
+  assert.equal(markSpoken(pos, 'The bottom one is bigger than the top one.').correct, true);
+  assert.equal(markSpoken(pos, 'The bottom one.').correct, true);
+  // A correct paraphrase naming the right one counts.
+  const ch = { kind: 'choice', cskill: EQ, question: 'Who ate more, or is it the same?', answer: 'They ate the same amount', options: [{ key: 'A', text: 'They ate the same amount', right: true }, { key: 'B', text: 'Amina ate more', right: false }, { key: 'C', text: 'Juma ate more', right: false }] };
+  assert.equal(markSpoken(ch, 'They ate the same, because two times two is four and three times two is six.').correct, true);
+});
+
+test('naming the person names their fraction ("Barasa gets more"), and the reason is not the answer', () => {
+  assert.deepEqual(namesIn('Barasa gets one half of the soap. Asha gets one fifth of the same bar. Who gets the bigger piece?'), { barasa: '1/2', asha: '1/5' });
+  const soap = { kind: 'choice', cskill: EQ, question: 'Barasa gets one half of the soap. Asha gets one fifth of the same bar. Who gets the bigger piece?', answer: '1/2 of the bar of soap', options: [{ key: 'A', text: 'They are the same size', right: false }, { key: 'B', text: '1/5 of the bar of soap', right: false }, { key: 'C', text: '1/2 of the bar of soap', right: true }] };
+  assert.equal(markSpoken(soap, 'I think Barasa gets more, because a half is bigger than a fifth.').correct, true);
+  assert.equal(markSpoken(soap, 'Asha gets the bigger piece, because five is more than two.').correct, false);
+  const cake = { kind: 'choice', cskill: EQ, question: 'Wafula gets 1/6 of a cake and Achieng gets 1/9 of the same cake. Who gets the bigger piece?', answer: '1/6 of the cake', options: [{ key: 'A', text: '1/6 of the cake', right: true }, { key: 'B', text: '1/9 of the cake', right: false }] };
+  assert.equal(markSpoken(cake, 'Wafula gets the bigger piece, because the cake cut into nine pieces gets smaller pieces.').correct, true);
+});
+
+test('"this one", "the top one" are not the number one; "two shaded, four in all" is two quarters', () => {
+  noTry('8', "This one sounds hard. I can't do it, I will get it wrong.", 'How many equal pieces are in the whole chapati?');
+  assert.equal(childMove("This one sounds hard. I can't do it."), 'lost');
+  assert.deepEqual(readAnswer('the top one is bigger').found, []);
+  assert.deepEqual(readAnswer('the one half').found.filter((f) => f.kind === 'fraction').map((f) => f.value), ['1/2']);
+  right('2/4', 'Mbili shaded, na pieces ni four in all.', 'What fraction is shaded?');
+  assert.equal(fixMathsWords('for pieces'), 'four pieces');
+  assert.equal(fixMathsWords('too pieces'), 'two pieces');
+  assert.equal(fixMathsWords('Fower pieces'), 'four pieces');
+  assert.equal(fixMathsWords('I waited for my brother'), 'I waited for my brother');
+  right('4', 'for pieces', 'How many equal pieces are there now?');
+});
+
+test('a reason is the words beyond the answer: "one half?" has none, "because they fit in the half" has one', () => {
+  assert.deepEqual(reasonWords('umm... so... it is... one half?'), []);
+  assert.deepEqual(reasonWords('umm... so... maybe it is the same amount?'), []);
+  assert.ok(reasonWords('because the two small pieces fit into one big half?').length >= 4);
+  for (const t of ['bye HOREB, I am going to play now!', 'Bye!', 'I am really going now']) assert.equal(wantsToStop(t), true, t);
 });

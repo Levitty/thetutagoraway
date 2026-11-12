@@ -267,3 +267,67 @@ test('the new lesson fields are cleaned like the rest', () => {
   assert.equal(updateLesson(at({ seal: sealed }), { steps: [] }).seal, null, 'a kept seal lasts one turn unless kept again');
   assert.equal(updateLesson(at(), { steps: [], keepSeal: sealed }).seal, sealed);
 });
+
+// ---------------------------------------------------------------- the second test-set run (2026-11-12-1142)
+test('good moves are allowed in every stage; only stage moves are held to the stage; a tag on any say counts', () => {
+  const warm = decide(at({ stage: 'warmup' }), { turnIndex: 3, message: 'yes I shared one' });
+  assert.equal(warm.rule, 'stage');
+  assert.deepEqual(judgeTurn(warm, [say('You shared it.'), say('How do you know they were the same?', 'Press for reasoning')]), [], 'Press for reasoning in the warm-up, on the second say');
+  assert.deepEqual(judgeTurn(warm, [say('Yes, two pieces.', 'Name what was right')]), []);
+  assert.deepEqual(judgeTurn(warm, [say('Take your time.', 'Wait and nudge')]), []);
+  assert.match(judgeTurn(warm, [say('Now a harder one.', 'Stretch the quick child')]).join(' '), /not allowed this turn/);
+  // The code's own sentences, and authored turns, are never held to a tag.
+  const code = say('Yes, four pieces.');
+  assert.deepEqual(judgeTurn(warm, [code, { cmd: 'pause_for_child' }], { fromModel: new Set() }), []);
+  assert.deepEqual(judgeTurn(warm, [say('I am here.')], { authored: true }), []);
+  // A care turn needs no tag; it is not a teaching turn, so the general moves are not added there.
+  const care = decide(at({ care: 'paused' }), { turnIndex: 6, message: 'ok' });
+  assert.deepEqual(judgeTurn(care, [say('I am glad you are here.')]), []);
+  assert.match(judgeTurn(care, [say('How did you know?', 'Press for reasoning')]).join(' '), /not allowed/);
+});
+
+test('an answer said as a question is an answer: pressed for its reason and how sure the child is', () => {
+  const d = decide(at({ stage: 'warmup' }), { turnIndex: 3, message: 'umm... so... maybe four pieces?' });
+  assert.equal(d.rule, 'tentative');
+  assert.ok(d.moves.includes('Press for reasoning'));
+  const p = decide(at(), { turnIndex: 3, marked: { ...right(), tentative: true }, message: 'umm... so... it is... one half?' });
+  assert.equal(p.rule, 'press');
+  assert.match(p.reason, /how sure they are/);
+  assert.equal(gaveReason('umm... so... it is... one half?'), false, 'fillers and the answer are not a reason');
+  assert.equal(gaveReason('umm... so... maybe it is the same amount?'), false);
+  assert.equal(gaveReason('umm... because... the two small pieces... fit into one big half?'), true);
+  assert.equal(decide(at({ pending: { ask: 'q1', skill: EQ } }), { turnIndex: 5, message: 'umm... because... the two small pieces fit into one big half?' }).rule, 'reason', 'a reason said as a question is a reason');
+});
+
+test('the lesson moves on by itself when the child has earned it, never past what is allowed, and closes on a goodbye', () => {
+  const s0 = { ...newLesson(), stage: 'warmup', turns: 2 };
+  const d = decide(s0, { turnIndex: 2, marked: right(), message: '2' });
+  const s1 = updateLesson(s0, { decision: d, steps: [say('Yes, two.', 'Name what was right')], judged: finalClass({ marked: right(), message: '2' }), marked: right() });
+  assert.equal(s1.stage, 'teach', 'out of the warm-up after a right answer');
+  const d2 = decide(s1, { turnIndex: 3, marked: right('q2'), message: '2' });
+  const s2 = updateLesson(s1, { decision: d2, steps: [say('Yes.', 'Name what was right')], judged: finalClass({ marked: right('q2'), message: '2' }), marked: right('q2') });
+  assert.equal(s2.stage, 'teach', 'the teach part needs an answer understood');
+  const said = 'two because each half is cut into two';
+  const d3 = decide(s2, { turnIndex: 4, marked: right('q3'), message: said });
+  const s3 = updateLesson(s2, { decision: d3, steps: [say('Yes.', 'Name what was right')], judged: finalClass({ marked: right('q3'), message: said }), marked: right('q3') });
+  assert.equal(s3.stage, 'guided');
+  // The model's set_phase is held to what is allowed.
+  const s4 = updateLesson(s3, { decision: decide(s3, { turnIndex: 5, message: 'ok' }), steps: [{ cmd: 'set_phase', phase: 'wrapup' }, say('Done.')] });
+  assert.equal(s4.stage, 'guided');
+  // A lesson whose first turn set no phase is in the warm-up.
+  assert.equal(updateLesson(newLesson(), { decision: decide(newLesson(), { turnIndex: 0 }), steps: [say('Hello.', 'Open the lesson')] }).stage, 'warmup');
+  // Asked to stop twice: the wrap-up; a goodbye in the wrap-up is let go.
+  const stop = decide(at({ stops: 1 }), { turnIndex: 6, message: 'I want to stop' });
+  assert.equal(updateLesson(at({ stops: 1 }), { decision: stop, steps: [say('Well done today.', 'Close the lesson')] }).stage, 'wrapup');
+  assert.equal(decide(at({ stage: 'wrapup' }), { turnIndex: 7, message: 'Bye HOREB, I am going to play now!' }).rule, 'stop');
+  // The question ids of the lesson are kept, so a reused one can be renamed.
+  const s5 = updateLesson(s0, { steps: [{ cmd: 'ask', id: 'p1q', prompt: 'x?', form: 'number' }] });
+  assert.deepEqual(cleanLesson(JSON.parse(JSON.stringify(s5))).asked, ['p1q']);
+});
+
+test('a wrong answer the child has already explained is retaught from their way, not diagnosed again', () => {
+  const d = decide(at(), { turnIndex: 8, marked: wrong(), message: 'Um, I added the bottoms. Six plus twelve is eighteen. And one plus one is two.' });
+  assert.equal(d.rule, 'reteach');
+  assert.match(d.reason, /already said how they got it/);
+  assert.equal(decide(at(), { turnIndex: 8, marked: wrong(), message: 'four' }).rule, 'diagnose');
+});

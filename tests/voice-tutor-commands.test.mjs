@@ -89,9 +89,19 @@ test('an obvious slip in a step\'s shape is mended, and noted; anything unclear 
   }
   assert.deepEqual(validateTurn({ steps: [{ say: 'Look at the bar.' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.' }]);
   assert.deepEqual(validateTurn({ steps: [{ text: 'Look at the bar.', move: 'Revoice and build' }] }).steps, [{ cmd: 'say', text: 'Look at the bar.', move: 'Revoice and build' }]);
-  // The same words twice: the alias is left out. Different words: not a slip, dropped as before.
+  // The same words twice, or an empty one: the alias is left out. Different words: "text" is kept and the alias left out
+  // (12 Nov 2026, run 2: 42 says were dropped as "extra field say").
   assert.equal(validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: 'Hi.' }] }).steps[0].text, 'Hi.');
-  no({ cmd: 'say', text: 'Hi.', say: 'Something else.' }, {}, /extra field say/);
+  assert.equal(validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: '' }] }).steps[0].text, 'Hi.');
+  const both = validateTurn({ steps: [{ cmd: 'say', text: 'Hi.', say: 'Something else.' }] });
+  assert.deepEqual(both.steps, [{ cmd: 'say', text: 'Hi.' }]);
+  assert.match(both.notes.join(' '), /said something else; text kept/);
+  // Harmless extras (a say on a silent step, an id or a timing on a say, a note): left out, the step kept.
+  assert.deepEqual(ok({ cmd: 'assess', class: 'understood', evidence: 'said four', say: 'Well done.' }), { cmd: 'assess', class: 'understood', evidence: 'said four' });
+  assert.deepEqual(ok({ cmd: 'say', text: 'Look.', id: 's1', on: 'x', delay_ms: 20, note: 'calm' }), { cmd: 'say', text: 'Look.' });
+  assert.equal(ok({ cmd: 'pause_for_child', expect: 'any', max_wait_s: 30, doing: 'answer', text: 'What do you think?' }).doing, 'answer');
+  // Timing that a drawing command does not take is still not harmless.
+  no({ cmd: 'clear', pace: 'slow' }, {}, /extra field pace/);
   // A question's prompt and answer, a judgement's class, a hand-back's defaults.
   assert.deepEqual(repairStep({ cmd: 'ask', id: 'q', question: 'How many?', form: 'number', answer: '4' }), { cmd: 'ask', id: 'q', form: 'number', prompt: 'How many?', expected: '4' });
   assert.equal(ok({ cmd: 'assess', assess: 'understood', evidence: 'said four' }).class, 'understood');
@@ -107,7 +117,9 @@ test('values out of range are dropped', () => {
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: 5, slot: 'top' }, {}, /count out of range/);
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: [0, 2], slot: 'top' }, {}, /part out of range/);
   no({ cmd: 'fraction_bar', id: 'b', parts: 4, shaded: [2, 2], slot: 'top' }, {}, /twice/);
-  no({ cmd: 'shape', id: 's', kind: 'circle', parts: 1, shaded: 0, slot: 'top' }, {}, /2 to 12/);
+  // A whole is one part (12 Nov 2026, run 2: "Here is a chapati" with no chapati, 11 times).
+  assert.equal(ok({ cmd: 'shape', id: 's', kind: 'circle', parts: 1, shaded: 0, slot: 'top' }).parts, 1);
+  no({ cmd: 'shape', id: 's', kind: 'circle', parts: 0, shaded: 0, slot: 'top' }, {}, /1 to 12/);
   no({ cmd: 'number_line', id: 'n', from: 0, to: 13, divisions: 2, slot: 'top' }, {}, /0 to 12/);
   no({ cmd: 'number_line', id: 'n', from: 3, to: 1, divisions: 2, slot: 'top' }, {}, /from < to/);
   no({ cmd: 'number_line', id: 'n', from: 0, to: 12, divisions: 12, slot: 'top' }, {}, /too many ticks/);
@@ -117,7 +129,14 @@ test('values out of range are dropped', () => {
   no({ cmd: 'plot_points', id: 'p', x_axis: { from: 0, to: 5 }, y_axis: { from: 0, to: 5 }, points: Array(13).fill({ x: 1, y: 1 }), slot: 'top' }, {}, /1 to 12 points/);
   no({ cmd: 'pause_for_child', expect: 'typed', max_wait_s: 90 }, {}, /5 to 60/);
   no({ ...GOOD.write_text, delay_ms: 5000 }, {}, /delay_ms/);
-  no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'], expected: 'a' }, {}, /2 to 4/);
+  // Too many or too few choices, with the answer given: asked as a word or number answer, so the seal still has it
+  // (12 Nov 2026, run 2). With no answer it is still dropped.
+  assert.deepEqual(['form', 'choices', 'expected'].map((k) => ok({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'], expected: 'a' })[k]), ['word', undefined, 'a']);
+  assert.equal(ok({ cmd: 'ask', id: 'q', prompt: 'Which?', form: 'choice', choices: ['3/4'], expected: '3/4' }).form, 'fraction');
+  no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b', 'c', 'd', 'e'] }, {}, /2 to 4/);
+  // More accepted forms than the limit: the first eight are kept.
+  const many = ok({ cmd: 'ask', id: 'q', prompt: 'How many?', form: 'number', expected: '4', accepts: ['4', 'four', 'four pieces', '4 pieces', 'four parts', '4 parts', 'four equal pieces', 'nne', 'four quarters'] });
+  assert.equal(many.accepts.length, 8);
   no({ cmd: 'ask', id: 'q', prompt: 'Pick', form: 'choice', choices: ['a', 'b'], expected: 'c' }, {}, /not one of the choices/);
 });
 
@@ -276,7 +295,11 @@ test('assess: the answer\'s class, checked; a misconception code only with class
   no({ cmd: 'assess', class: 'misconception', evidence: 'x' }, opts, /needs its code/);
   no({ cmd: 'assess', class: 'misconception', misconception: `${EQ}.M_MADE_UP`, evidence: 'x' }, opts, /not on the allowed list/);
   no({ cmd: 'assess', class: 'understood', misconception: ADD, evidence: 'x' }, opts, /only with class misconception/);
-  no({ cmd: 'assess', class: 'understood', evidence: 'x'.repeat(161) }, opts, /longer than 160/);
+  // Silent text too long is cut, never the step (12 Nov 2026, run 2: 12 end_session steps dropped for a long summary).
+  assert.equal(ok({ cmd: 'assess', class: 'understood', evidence: 'x '.repeat(100) }, opts).evidence.length <= 160, true);
+  const end = validateTurn({ steps: [{ cmd: 'end_session', summary: `${'The child shaded halves well. '.repeat(14)}` }] });
+  assert.equal(end.steps.length, 1); assert.ok(end.steps[0].summary.length <= 300); assert.match(end.steps[0].summary, /\.$/);
+  assert.match(end.notes.join(' '), /summary: longer than 300, cut/);
   no({ cmd: 'assess', class: 'understood', evidence: 'x', ask: 'Q 1' }, opts, /bad ask id/);
   no({ cmd: 'assess', class: 'understood', evidence: 'x', confidence: 'high' }, opts, /extra field/);
   // One a turn, and it is silent: a turn that only assesses and hands back is a nod, never "says nothing" twice.

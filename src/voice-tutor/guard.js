@@ -69,9 +69,15 @@ const sentencesOf = (t) => String(t || '').split(/(?<=[.!?])\s+/).filter(Boolean
 /**
  * A "how many <things>?" question whose count is said earlier in the same turn ("four equal pieces"). Counts the child
  * has already found (`found`, as digits) or said this turn (`child`) are theirs to hear back, not a leak.
+ * `answers`: the sealed answers of the questions open now (the open one, and any asked in this turn), in any form
+ * ("4", "four", "4 pieces"). Only a count equal to one of them is a give-away (12 Nov 2026, run 2: "twelve equal
+ * pieces" stopped a question whose answer was 6, "two equal pieces" one whose answer was 4). With no sealed answers
+ * nothing is. `answers: null` keeps the old reading (any count), for a caller that cannot know the answer.
  * @returns {string|null} the reason
  */
-export function answerInQuestion(text, { found = [], child = '' } = {}) {
+export function answerInQuestion(text, { found = [], child = '', answers = null } = {}) {
+  const sealed = answers == null ? null : new Set(answers.map((a) => countOf(a)).filter((n) => n != null));
+  if (sealed && !sealed.size) return null;
   const sents = sentencesOf(text);
   const theirs = new Set([...found.filter((f) => /^\d+$/.test(f)).map(Number), ...(String(child).toLowerCase().match(new RegExp(`\\b${NUM}\\b`, 'g')) || []).map(numValue)]);
   for (let i = 0; i < sents.length; i += 1) {
@@ -84,11 +90,21 @@ export function answerInQuestion(text, { found = [], child = '' } = {}) {
     const re = new RegExp(`\\b(${NUM})\\s+(?:[a-z]+\\s+){0,2}?(?:${nounRe(m[1])})\\b`, 'gi');
     for (const hit of before.matchAll(re)) {
       if (theirs.has(numValue(hit[1]))) continue;
+      if (sealed && !sealed.has(numValue(hit[1]))) continue;
       return `"${hit[0]}" is said before "${sents[i].trim()}"`;
     }
   }
   return null;
 }
+
+/** A sealed answer as a whole count ("4", "four", "4 pieces"), or null (a fraction, a word answer). */
+const countOf = (a) => {
+  const t = String(a ?? '').trim().toLowerCase();
+  const m = /^(\d+|[a-z]+)(\s+[a-z]+)?$/.exec(t);
+  if (!m) return null;
+  const n = /^\d+$/.test(m[1]) ? Number(m[1]) : NUM_WORDS.indexOf(m[1]);
+  return Number.isInteger(n) && n >= 0 ? n : null;
+};
 
 /** A small whole-number answer (2 to 16) said as a count of the thing its question asks about ("four pieces" for "How many pieces?"). */
 const smallCount = (h, text) => {

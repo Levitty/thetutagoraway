@@ -108,8 +108,8 @@ const REQUIRED = {
 export const LIMITS = {
   say: 220, write_text: 60, write_math: 80, ask_prompt: 140, choice: 40, expected: 40,
   evidence: 240, assess: 160, summary: 300, interest: 24, label: 12, axis_name: 16, anchor: 40,
-  parts: [1, 12], shape_parts: [2, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
-  axis_steps: 20, points: 12, choices: 4, wrong: 4, accepts: 4, delay: [-300, 1500], wait: [5, 60], targets: 8,
+  parts: [1, 12], shape_parts: [1, 12], line: [0, 12], divisions: [1, 12], marks: 8, jumps: 4,
+  axis_steps: 20, points: 12, choices: 4, wrong: 6, accepts: 8, delay: [-300, 1500], wait: [5, 60], targets: 8,
 };
 
 // ---------------------------------------------------------------- strings
@@ -144,6 +144,22 @@ const str = (v, max, name, notes) => {
   return text;
 };
 
+// Silent text (never heard or seen by the child): too long is cut at a sentence or a word, and noted.
+const clip = (v, max, name, notes) => {
+  need(typeof v === 'string', `${name}: not text`);
+  const { text, removed } = cleanText(v);
+  need(text.length > 0, `${name}: empty`);
+  if (removed) notes.push(`${name}: ${removed} character(s) removed`);
+  if (text.length <= max) return text;
+  notes.push(`${name}: longer than ${max}, cut`);
+  const head = text.slice(0, max);
+  const stop = Math.max(head.lastIndexOf('. '), head.lastIndexOf('! '), head.lastIndexOf('? '));
+  if (stop > max / 2) return head.slice(0, stop + 1);
+  const sp = head.lastIndexOf(' ');
+  return (sp > max / 2 ? head.slice(0, sp) : head).replace(/[,;:\s]+$/, '');
+};
+const readsAsNumber = (v) => /^\s*\d+(\s*\/\s*\d+)?\s*$/.test(String(v));
+
 // A shaded value is a count (0..parts) or a list of distinct part numbers (1..parts).
 const shadedOf = (v, parts) => {
   if (isInt(v)) { need(v >= 0 && v <= parts, 'shaded: count out of range'); return v; }
@@ -154,6 +170,13 @@ const shadedOf = (v, parts) => {
 };
 
 // ---------------------------------------------------------------- the shape, repaired
+/** The fields a command may carry. */
+const fieldsOf = (cmd) => new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : []), ...(DRAWN.includes(cmd) ? ['pace'] : [])]);
+// Extra fields that change nothing a child hears or sees when left out (12 Nov 2026, run 2: "assess: extra field say",
+// a say with an "id" or an "on"). Only where the command does not have the field itself.
+export const HARMLESS = ['say', 'sentence', 'words', 'speech', 'line', 'content', 'move', 'note', 'notes', 'comment', 'reason', 'why', 'thought', 'thinking', 'tone', 'emotion', 'explanation', 'id', 'on', 'delay_ms', 'pace', 'text'];
+// Timing on a say is harmless (a say is timed by its words); on a drawing command it is checked as before.
+const SAY_ONLY = ['on', 'delay_ms', 'pace'];
 // The names the model reaches for instead of a field, where the meaning is not in doubt.
 const ALIASES = {
   say: { text: ['say', 'sentence', 'words', 'speech', 'line', 'content'] },
@@ -181,10 +204,22 @@ export function repairStep(s, notes = []) {
         if (!(n in x) || n === field) continue;
         if (n === 'text' && x.cmd === 'ask' && x.prompt != null) continue;
         if (x[field] == null) { const { [n]: v, ...rest } = x; x = { ...rest, [field]: v }; notes.push(`${x.cmd}: field "${n}" read as ${field}`); }
-        else if (x[n] === x[field]) { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" repeated ${field}, left out`); }
+        else if (x[n] === x[field] || x[n] == null || (typeof x[n] === 'string' && x[n].trim() === '')) { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" repeated ${field}, left out`); }
+        // Both, saying different things (12 Nov 2026, run 2: 42 says dropped as "extra field say"): the field wins.
+        else if (n !== 'text' || x.cmd === 'say') { const { [n]: _v, ...rest } = x; x = rest; notes.push(`${x.cmd}: field "${n}" beside ${field} said something else; ${field} kept`); }
       }
     }
     if (x.cmd === 'assess' && x.class != null && !ANSWER_CLASSES.includes(x.class)) return s;
+  }
+  // Harmless extra fields the model adds (its own words for a silent step, a note to itself, a timing on a say): left out
+  // and noted, never a reason to lose the step. Anything else extra still drops it.
+  if (COMMANDS.includes(x.cmd)) {
+    const allowed = fieldsOf(x.cmd);
+    const extra = Object.keys(x).filter((k) => !allowed.has(k) && HARMLESS.includes(k) && (x.cmd === 'say' || !SAY_ONLY.includes(k)));
+    if (extra.length) {
+      x = Object.fromEntries(Object.entries(x).filter(([k]) => !extra.includes(k)));
+      notes.push(`${x.cmd}: harmless extra field${extra.length === 1 ? '' : 's'} ${extra.join(', ')} left out`);
+    }
   }
   if (x.cmd === 'pause_for_child') {
     if (x.expect == null) { x = { ...x, expect: 'any' }; notes.push('pause_for_child: expect not given, read as any'); }
@@ -199,7 +234,7 @@ function checkStep(s0, ctx, notes) {
   need(s && typeof s === 'object' && !Array.isArray(s), 'not an object');
   const cmd = s.cmd;
   need(COMMANDS.includes(cmd), `unknown command ${String(cmd).slice(0, 30)}`);
-  const allowed = new Set(['cmd', ...FIELDS[cmd], ...(TIMED.includes(cmd) ? ['on', 'delay_ms'] : []), ...(DRAWN.includes(cmd) ? ['pace'] : [])]);
+  const allowed = fieldsOf(cmd);
   for (const k of Object.keys(s)) need(allowed.has(k), `${cmd}: extra field ${k.slice(0, 30)}`);
   for (const k of REQUIRED[cmd]) need(s[k] !== undefined && s[k] !== null, `${cmd}: missing ${k}`);
   const out = { cmd };
@@ -300,7 +335,8 @@ function checkStep(s0, ctx, notes) {
     }
     case 'shape':
       out.id = newId(); out.kind = optEnum('kind', SHAPE_KINDS);
-      need(isInt(s.parts) && inRange(s.parts, LIMITS.shape_parts), 'shape: parts must be 2 to 12');
+      // A whole (one part) is a shape too: "here is one chapati" (12 Nov 2026, run 2: 11 shapes dropped for parts 1).
+      need(isInt(s.parts) && inRange(s.parts, LIMITS.shape_parts), 'shape: parts must be 1 to 12');
       out.parts = s.parts; out.shaded = shadedOf(s.shaded, s.parts);
       out.label = optBool('label', true); out.slot = optEnum('slot', SLOTS); out.colour = optEnum('colour', COLOURS, 'orange');
       break;
@@ -373,10 +409,16 @@ function checkStep(s0, ctx, notes) {
       out.id = s.id;
       out.prompt = str(s.prompt, LIMITS.ask_prompt, 'ask prompt', notes);
       out.form = optEnum('form', ASK_FORMS);
+      // A choice question with too few or too many choices but its answer given is asked as a word answer: the seal
+      // still knows the answer (12 Nov 2026, run 2: a question lost for "a choice needs 2 to 4 choices").
+      if (out.form === 'choice' && !(Array.isArray(s.choices) && s.choices.length >= 2 && s.choices.length <= LIMITS.choices) && s.expected != null && String(s.expected).trim()) {
+        out.form = readsAsNumber(s.expected) ? (/\//.test(String(s.expected)) ? 'fraction' : 'number') : 'word';
+        notes.push(`ask: a choice with ${Array.isArray(s.choices) ? s.choices.length : 'no'} choices asked as ${out.form}`);
+      }
       if (out.form === 'choice') {
         need(Array.isArray(s.choices) && s.choices.length >= 2 && s.choices.length <= LIMITS.choices, 'ask: a choice needs 2 to 4 choices');
         out.choices = s.choices.map((c) => str(c, LIMITS.choice, 'choice', notes));
-      } else need(s.choices === undefined || s.choices === null, 'ask: choices only on a choice question');
+      } else if (s.choices != null && s.form !== 'choice') bad('ask: choices only on a choice question');
       if (s.bank !== undefined && s.bank !== null) {
         need(typeof s.bank === 'string' && /^p[0-9]{1,2}$/.test(s.bank), 'ask: bad bank id');
         out.bank = s.bank;
@@ -387,12 +429,15 @@ function checkStep(s0, ctx, notes) {
       if (out.form !== 'draw' && !ctx.publicAsk) need(out.expected || out.bank, 'ask: expected answer missing');
       if (out.form === 'choice' && out.expected) need(out.choices.some((c) => c.toLowerCase() === out.expected.toLowerCase()), 'ask: the expected answer is not one of the choices');
       if (s.accepts != null) {
-        need(Array.isArray(s.accepts) && s.accepts.length <= LIMITS.accepts, 'ask: at most 4 accepts');
-        out.accepts = s.accepts.map((a) => str(String(a), LIMITS.expected, 'accepts', notes));
+        // More ways of saying the answer only help the marking: the first LIMITS.accepts are kept (12 Nov 2026, run 2).
+        need(Array.isArray(s.accepts), 'ask: accepts is not a list');
+        if (s.accepts.length > LIMITS.accepts) notes.push(`ask: ${s.accepts.length} accepts, the first ${LIMITS.accepts} kept`);
+        out.accepts = s.accepts.slice(0, LIMITS.accepts).map((a) => str(String(a), LIMITS.expected, 'accepts', notes));
       }
       if (s.wrong != null) {
-        need(Array.isArray(s.wrong) && s.wrong.length <= LIMITS.wrong, 'ask: at most 4 wrong answers');
-        out.wrong = s.wrong.map((w) => {
+        need(Array.isArray(s.wrong), 'ask: wrong is not a list');
+        if (s.wrong.length > LIMITS.wrong) notes.push(`ask: ${s.wrong.length} wrong answers, the first ${LIMITS.wrong} kept`);
+        out.wrong = s.wrong.slice(0, LIMITS.wrong).map((w) => {
           need(w && typeof w === 'object', 'wrong: not an object');
           for (const k of Object.keys(w)) need(['answer', 'misconception'].includes(k), `wrong: extra field ${k.slice(0, 20)}`);
           const mis = misOf(w.misconception, ctx, 'wrong');
@@ -409,7 +454,7 @@ function checkStep(s0, ctx, notes) {
       out.skill = skillOf(s.skill, ctx);
       out.misconception = misOf(s.misconception, ctx, 'record_diagnosis', out.skill);
       out.confidence = optEnum('confidence', CONFIDENCE);
-      out.evidence = str(s.evidence, LIMITS.evidence, 'evidence', notes);
+      out.evidence = clip(s.evidence, LIMITS.evidence, 'evidence', notes);
       out.next = optEnum('next', NEXT);
       // The picture of the child's work this diagnosis rests on (milestone 2): one the
       // page really took this session (ctx.snapshots is how many), never one made up.
@@ -441,11 +486,13 @@ function checkStep(s0, ctx, notes) {
         need(s.misconception != null, 'assess: a misconception needs its code');
         out.misconception = misOf(s.misconception, ctx, 'assess');
       } else need(s.misconception == null, 'assess: a misconception code only with class misconception');
-      out.evidence = str(s.evidence, LIMITS.assess, 'assess evidence', notes);
+      out.evidence = clip(s.evidence, LIMITS.assess, 'assess evidence', notes);
       if (s.ask != null) { need(typeof s.ask === 'string' && ID_RE.test(s.ask), 'assess: bad ask id'); out.ask = s.ask; }
       break;
     case 'end_session':
-      out.summary = str(s.summary, LIMITS.summary, 'summary', notes);
+      // A long summary is cut, never the end of the lesson (12 Nov 2026, run 2: 12 end_session steps were dropped for
+      // "longer than 300" and the lesson never ended).
+      out.summary = clip(s.summary, LIMITS.summary, 'summary', notes);
       break;
     default: bad('unknown command');
   }

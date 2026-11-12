@@ -152,6 +152,12 @@ const FIXES = [
   [/\b(won|wan|one) (have|harf|haf|hulf)\b/gi, 'one half'],
   [/\b(two|three|four|five|six|seven) (eights|aits)\b/gi, '$1 eighths'],
   [/\b(two|three|four|five) (forths|fourth's)\b/gi, '$1 fourths'],
+  // A count heard as its sound-alike, only before what is counted (12 Nov 2026, run 2, scenario 27: "for pieces", "too
+  // pieces", "Fower pieces"): "for" and "to" are words a child says, so never on their own.
+  [/\b(?:for|fore|fower|foor|fowa)\s+(pieces?|parts?|equal|small|slices?|quarters|halves|eighths|sixths)\b/gi, 'four $1'],
+  [/\b(?:too|tu)\s+(pieces?|parts?|equal|small|slices?|quarters|halves|eighths|sixths)\b/gi, 'two $1'],
+  [/\bfower\b/gi, 'four'],
+  [/\b(?:won|wan)\s+(pieces?|parts?|slices?)\b/gi, 'one $1'],
 ];
 export const fixMathsWords = (text) => FIXES.reduce((t, [re, to]) => t.replace(re, to), String(text || ''));
 
