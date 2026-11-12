@@ -2460,7 +2460,7 @@ var FAMILIES = [
     Q("Jamila sees an elephant near the school late at dusk. What should she do?", "Stay inside and tell the teachers", ["Run out into the compound to chase it|REPEL_CLOSE", "Throw stones and shout at it|REPEL_CLOSE", "Walk close and take a photo of it|REPEL_CLOSE"], "Elephants can be dangerous when startled."),
     Q("The school wants to protect its sorghum from birds. Which is the best choice?", "A scarecrow, shiny strips and a rota of scarers", ["Put poison on all the ripening sorghum heads|REPEL_KILL", "Cut down all the trees around the school|REPEL_KILL", "Do nothing and wait for the birds to leave|REPEL_ONE"], "Several safe measures together work best."),
     Q("A farmer's son says the best way to deal with pests is to kill all of them. What should his teacher say?", "We repel and live with wildlife", ["He is right, we should kill them|REPEL_KILL", "Only the biggest ones should be killed|REPEL_KILL", "Put poison in their drinking water|REPEL_KILL"], "Wild animals are protected, and many help the farmer.")
-  ], { h: ["Which way scares the animal without harming it or you?", "A scarecrow scares birds, but bees and chilli work with elephants."], s1: "Pick the safe way that suits the animal." }))
+  ], { h: ["Which way scares the animal without harming it or you?", "A scarecrow scares birds, but bees and chilli work with elephants."], s1: "Pick the safe way that suits the animal." }), "b")
 ];
 
 // src/ai-tutor/content/families/agriculture_g5_b.js
@@ -2818,7 +2818,7 @@ var FAMILIES4 = [
     Q("Njeri pulls the thread tight and the seam puckers. What should she do?", "Pull it firm but not too tight", ["Pull it even tighter|SEAM_TIGHT", "Leave it loose, baggy and untidy|SEAM_TIGHT", "Add many more knots to it|SEAM_TIGHT"], "Too tight puckers the cloth."),
     Q("Which plan repairs a gaping seam properly?", "Matching thread, back stitch, overlap, secure the end", ["Any thread, running stitch, no overlap, no knot|SEAM_RUN", "Wool, long stitches, no overlap, no knot|SEAM_START", "Thick string pulled very tight and knotted|SEAM_TIGHT"], "This plan makes a strong, neat repair."),
     Q("Atieno has finished sewing. What should she do with the loose thread?", "Fasten it and trim the end", ["Leave it long and loose|SEAM_START", "Pull it hard until it snaps|SEAM_TIGHT", "Tie it to a button|SEAM_START"], "Secure and trim.")
-  ], { h: ["Which part of the repair was done wrongly?", "Back stitch, overlap the ends, secure, firm but not tight."], s1: "Find what made the repair weak." })),
+  ], { h: ["Which part of the repair was done wrongly?", "Back stitch, overlap the ends, secure, firm but not tight."], s1: "Find what made the repair weak." }), "c"),
   fam("re.sr.spot", `${RE}SEAM_REPAIR`, "spot", 3, spot([
     S("Mwangi explains how he mended a gaping seam. Which step has the mistake?", ["Step 1: I chose thread that matched the cloth.", "!Step 2: I used running stitch to hold the seam.", "Step 3: I fastened the thread at the end."], "Use back stitch for a gaping seam, since it is strong.", "SEAM_RUN"),
     S("Fatuma describes her repair. Which step has the mistake?", ["Step 1: I turned the garment inside out.", "!Step 2: I started exactly at the gap with no knot.", "Step 3: I sewed with back stitch."], "Start a little before the gap on the sound seam and secure the thread.", "SEAM_START"),
