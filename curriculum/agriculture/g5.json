@@ -65,7 +65,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.1.1",
+    "AGRI.G5.RUBRIC.1.2",
+    "AGRI.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G5.CONSER.WATER_CONSERVATION",
@@ -119,7 +124,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.1.1",
+    "AGRI.G5.RUBRIC.1.2",
+    "AGRI.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS",
@@ -172,7 +182,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.1.1",
+    "AGRI.G5.RUBRIC.1.2",
+    "AGRI.G5.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
@@ -232,7 +247,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.2.1",
+    "AGRI.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
@@ -269,7 +288,8 @@
      "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a",
      "letter": "a",
      "text": "identify uses of various domestic animals in food production processes",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     },
     {
      "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b",
@@ -281,11 +301,16 @@
      "code": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c",
      "letter": "c",
      "text": "appreciate the importance of domestic animals in food production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.2.1",
+    "AGRI.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
@@ -322,23 +347,30 @@
      "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a",
      "letter": "a",
      "text": "describe methods of preserving cereals and pulses in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     },
     {
      "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b",
      "letter": "b",
      "text": "preserve cereals and pulses for food security",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     },
     {
      "code": "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.c",
      "letter": "c",
      "text": "appreciate the importance of preserving cereals and pulses for food security",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.2.1",
+    "AGRI.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
@@ -398,7 +430,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.2.1",
+    "AGRI.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "AGRI.G5.FOOD_P.COOKING_FOOD",
@@ -450,11 +486,16 @@
      "code": "AGRI.G5.FOOD_P.COOKING_FOOD.c",
      "letter": "c",
      "text": "embrace dry fat frying and deep frying in food production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.2.1",
+    "AGRI.G5.RUBRIC.2.2"
+   ]
   },
   {
    "code": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
@@ -510,7 +551,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.3.1",
+    "AGRI.G5.RUBRIC.3.2",
+    "AGRI.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G5.HYGIEN.HOME_HYGIENE",
@@ -563,7 +609,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.3.1",
+    "AGRI.G5.RUBRIC.3.2",
+    "AGRI.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM",
@@ -616,7 +667,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.3.1",
+    "AGRI.G5.RUBRIC.3.2",
+    "AGRI.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
@@ -676,7 +732,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.4.1",
+    "AGRI.G5.RUBRIC.4.2",
+    "AGRI.G5.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_",
@@ -732,7 +793,199 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G5.RUBRIC.4.1",
+    "AGRI.G5.RUBRIC.4.2",
+    "AGRI.G5.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "AGRI.G5.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Conservation of Resources",
+   "covers": [
+    "AGRI.G5.CONSER.SOIL_CONSERVATION",
+    "AGRI.G5.CONSER.WATER_CONSERVATION",
+    "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS"
+   ],
+   "page": 16,
+   "indicators": [
+    {
+     "code": "AGRI.G5.RUBRIC.1.1",
+     "indicator": "Ability to describe conservation of resources in the environment: (soil, water and wild animals).",
+     "levels": {
+      "EE": "The learner describes conservation measures of three resources in the environment.",
+      "ME": "The learner describes conservation measures of two resources in the environment.",
+      "AE": "The learner describes conservation measures of one resource in the environment.",
+      "BE": "The learner makes a partial description of a resource in the environment."
+     },
+     "page": 16,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.1.2",
+     "indicator": "Ability to conserve resources in the environment: (soil, water and wild animals).",
+     "levels": {
+      "EE": "The learner conserves three resources in the environment.",
+      "ME": "The learner conserves two resources in the environment.",
+      "AE": "The learner conserves one resource in the environment.",
+      "BE": "The learner partially conserves a resource in the environment."
+     },
+     "page": 16,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.1.3",
+     "indicator": "Ability to show critical thinking and problem solving in conservation of resources: (seeks information, finds help when needed, explores possible solutions, completes task).",
+     "levels": {
+      "EE": "The learner shows four indicators of critical thinking and problem solving in conservation of resources.",
+      "ME": "The learner shows three indicators of critical thinking and problem solving in conservation of resources.",
+      "AE": "The learner shows two indicators of critical thinking and problem solving in conservation of resources.",
+      "BE": "The learner shows less than two indicators of critical thinking and problem solving in conservation of resources."
+     },
+     "page": 16,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Food Production Processes",
+   "covers": [
+    "AGRI.G5.FOOD_P.GROWING_VEGETABLES",
+    "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS",
+    "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_",
+    "AGRI.G5.FOOD_P.FOOD_NUTRIENTS",
+    "AGRI.G5.FOOD_P.COOKING_FOOD"
+   ],
+   "page": 22,
+   "indicators": [
+    {
+     "code": "AGRI.G5.RUBRIC.2.1",
+     "indicator": "Ability to describe food production processes: (growing vegetables, use of domestic animals, preservation of cereals and pulses, cooking by frying). Ability to apply food production processes at household level. (growing vegetables, use of domestic animals, preservation of cereals and pulses, cooking by frying).",
+     "levels": {
+      "EE": "The learner describes four food production processes. Applies four food production processes at household level.",
+      "ME": "The learner describes three food production processes. Applies three food production processes at household level.",
+      "AE": "The learner describes two food production processes. Applies two food production processes at household level.",
+      "BE": "The learner describes less than two food production processes. Applies less than two food production processes at household level."
+     },
+     "page": 22,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.2.2",
+     "indicator": "Ability to upholds integrity in carrying out activities of food production processes: (commitment to tasks, is honest, has prudence in use of resources and accountable).",
+     "levels": {
+      "EE": "The learner upholds four indicators of integrity in carrying out activities of production processes.",
+      "ME": "The learner upholds three indicators of integrity in carrying out activities of production processes.",
+      "AE": "The learner upholds two indicators of integrity in carrying out activities of production processes.",
+      "BE": "The learner upholds less than two indicators of integrity in carrying out activities of production processes."
+     },
+     "page": 22,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Hygiene Practices",
+   "covers": [
+    "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES",
+    "AGRI.G5.HYGIEN.HOME_HYGIENE",
+    "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "AGRI.G5.RUBRIC.3.1",
+     "indicator": "Ability to describe hygiene practices as a daily health habit: (good grooming, home hygiene, laundering items).",
+     "levels": {
+      "EE": "The learner describes three hygiene practices observed as daily health habit.",
+      "ME": "The learner describes two hygiene practices observed as daily health habit.",
+      "AE": "The learner describes one hygiene practice observed as daily health habit.",
+      "BE": "The learner gives partial description of hygiene practices observed as daily health habit."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.3.2",
+     "indicator": "Ability to carry out hygiene practices as a daily health habit. (good grooming, home hygiene, laundering items).",
+     "levels": {
+      "EE": "The learner carries out three hygiene practices observed as daily health habit. (good grooming, home hygiene, laundering items) as daily health with specific attention to details.",
+      "ME": "The learner carries out two hygiene practices observed as daily health habit.",
+      "AE": "The learner carries out one hygiene practice observed as daily health habit.",
+      "BE": "The learner partially carries out a hygiene practice observed as daily health habit."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.3.3",
+     "indicator": "Ability to exhibit responsibility in hygiene practices: (care for self, own property and others, observes safety and is self-directed).",
+     "levels": {
+      "EE": "The learner exhibits four aspects of responsibility in hygiene practices.",
+      "ME": "The learner exhibits three aspects of responsibility in hygiene practices.",
+      "AE": "The learner exhibits two aspects of responsibility in hygiene practices.",
+      "BE": "The learner exhibits less than two aspects of responsibility in hygiene practices."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G5.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Production Techniques",
+   "covers": [
+    "AGRI.G5.PRODUC.REPAIRING_GARMENTS",
+    "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "AGRI.G5.RUBRIC.4.1",
+     "indicator": "Ability to explain various techniques in production processes: (repair of garments, construction of vertical, and construction of horizontal gardens).",
+     "levels": {
+      "EE": "The learner explains three production techniques.",
+      "ME": "The learner explains two production techniques.",
+      "AE": "The learner explains one production technique.",
+      "BE": "The learner gives partial explanation of a production technique."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.4.2",
+     "indicator": "Ability to apply various techniques in production processes: (repair of garments, construction of vertical, and construction of horizontal gardens).",
+     "levels": {
+      "EE": "The learner applies three techniques in various production processes.",
+      "ME": "The learner applies two techniques in various production processes.",
+      "AE": "The learner applies one technique in various production processes.",
+      "BE": "The learner partially applies a technique in a production process."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G5.RUBRIC.4.3",
+     "indicator": "Ability to exhibit creativity and imagination in carrying out various production techniques: (Generates new ideas, combines different concepts, uses creativity in work contexts, actualises imagined ideas).",
+     "levels": {
+      "EE": "The learner exhibits four indicators of creativity and imagination in various production techniques.",
+      "ME": "The learner exhibits three indicators of creativity and imagination in various production techniques.",
+      "AE": "The learner exhibits two indicators of creativity and imagination in various production techniques.",
+      "BE": "The learner exhibits less than two indicators of creativity and imagination in various production techniques."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

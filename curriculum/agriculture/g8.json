@@ -65,7 +65,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.1.1",
+    "AGRI.G8.RUBRIC.1.2",
+    "AGRI.G8.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO",
@@ -118,7 +123,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.1.1",
+    "AGRI.G8.RUBRIC.1.2",
+    "AGRI.G8.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR",
@@ -171,7 +181,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
@@ -230,7 +245,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO",
@@ -287,7 +307,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR",
@@ -351,7 +376,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC",
@@ -414,7 +444,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA",
@@ -474,7 +509,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.2.1",
+    "AGRI.G8.RUBRIC.2.2",
+    "AGRI.G8.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN",
@@ -511,13 +551,15 @@
      "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.a",
      "letter": "a",
      "text": "explain the routine cleaning practices of a kitchen",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G8.RUBRIC.3.1"
     },
     {
      "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.b",
      "letter": "b",
      "text": "carry out cleaning of a kitchen to maintain hygiene",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G8.RUBRIC.3.2"
     },
     {
      "code": "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN.c",
@@ -527,7 +569,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.3.1",
+    "AGRI.G8.RUBRIC.3.2",
+    "AGRI.G8.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI",
@@ -587,7 +634,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.4.1",
+    "AGRI.G8.RUBRIC.4.2",
+    "AGRI.G8.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_",
@@ -641,7 +693,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.4.1",
+    "AGRI.G8.RUBRIC.4.2",
+    "AGRI.G8.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES",
@@ -694,7 +751,210 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G8.RUBRIC.4.1",
+    "AGRI.G8.RUBRIC.4.2",
+    "AGRI.G8.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "AGRI.G8.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Conservation of Resources",
+   "covers": [
+    "AGRI.G8.CONSER.SOIL_CONSERVATION_MEASUR",
+    "AGRI.G8.CONSER.WATER_HARVESTING_AND_STO"
+   ],
+   "page": 15,
+   "indicators": [
+    {
+     "code": "AGRI.G8.RUBRIC.1.1",
+     "indicator": "Ability to describe conservation measures of environmental resources: (soil erosion control by cultural methods; and water conservation through harvesting and storage).",
+     "levels": {
+      "EE": "The learner can describe conservation measures with clearly referenced details.",
+      "ME": "The learner can describe conservation measures with clear details.",
+      "AE": "The learner can describe conservation measures with some few unclear details.",
+      "BE": "The learner can describe conservation measures with a lot of unclear details."
+     },
+     "page": 15,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.1.2",
+     "indicator": "Ability to carry out conservation measures on environmental resources: (soil erosion control by cultural methods; and water conservation through harvesting and storage).",
+     "levels": {
+      "EE": "The learner can identify sites that require conservation, determine applicable measures, assemble requirements, carry out a sustainable conservation activity.",
+      "ME": "The learner can identify sites that require conservation, determine applicable measures, assemble requirements, carry out the conservation activity.",
+      "AE": "The learner can identify sites that require conservation, determine applicable measures, assemble requirements for the activity.",
+      "BE": "The learner can identify sites that require conservation and determine applicable conservation measures."
+     },
+     "page": 15,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.1.3",
+     "indicator": "Ability to exhibit responsibility in conserving soil and water resources: (dependable in areas of strength, proactively solves problems in tasks, participates actively in assigned tasks, observes safety precautions).",
+     "levels": {
+      "EE": "The learner exhibits four indicators of responsibility in the conservation of environmental resources.",
+      "ME": "The learner exhibits three indicators of responsibility in the conservation of environmental resources.",
+      "AE": "The learner exhibits two indicators of responsibility in the conservation of environmental resources.",
+      "BE": "The learner exhibits less than two indicators of responsibility in the conservation of environmental resources."
+     },
+     "page": 15,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G8.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Food Production Processes",
+   "covers": [
+    "AGRI.G8.FOOD_P.KITCHEN_AND_BACKYARD_GAR",
+    "AGRI.G8.FOOD_P.POULTRY_REARING_IN_A_FOL",
+    "AGRI.G8.FOOD_P.CROP_PEST_AND_DISEASE_CO",
+    "AGRI.G8.FOOD_P.PREPARATION_OF_ANIMAL_PR",
+    "AGRI.G8.FOOD_P.PRESERVING_ANIMAL_PRODUC",
+    "AGRI.G8.FOOD_P.COOKING_PREPARING_A_BALA"
+   ],
+   "page": 23,
+   "indicators": [
+    {
+     "code": "AGRI.G8.RUBRIC.2.1",
+     "indicator": "Ability to explain the aspects of food production processes: (kitchen and backyard gardening, rearing poultry in a fold, pest and disease control in vegetables, preparation of fish and poultry, preserving milk and meat, and cooking a balanced meal).",
+     "levels": {
+      "EE": "The learner can explain eight food production processes.",
+      "ME": "The learner can explain six to seven food production processes.",
+      "AE": "The learner can explain three to five food production processes.",
+      "BE": "The learner can explain less than three food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.2.2",
+     "indicator": "Ability to carry out various food production processes: (kitchen and backyard gardening, rearing poultry in a fold, pest and disease control in vegetables, preparation of fish and poultry, preserving milk and meat, and cooking a balanced meal).",
+     "levels": {
+      "EE": "The learner can carry out eight food production processes.",
+      "ME": "The learner can carry out six to seven food production processes.",
+      "AE": "The learner can carry out three to five food production processes.",
+      "BE": "The learner can carry out less than three food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.2.3",
+     "indicator": "Ability to exhibit integrity in carrying out the various food production processes: (adherence to ethical procedures, use of resources prudently, is honest and accountable in allocated tasks).",
+     "levels": {
+      "EE": "The learner exhibits four indicators of integrity in carrying out food production processes.",
+      "ME": "The learner exhibits three indicators of integrity in carrying out food production processes.",
+      "AE": "The learner exhibits two indicators of integrity in carrying out food production processes.",
+      "BE": "The learner exhibits less than two indicators of integrity in carrying out food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G8.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Hygiene Practices",
+   "covers": [
+    "AGRI.G8.HYGIEN.CLEANING_THE_KITCHEN"
+   ],
+   "page": 25,
+   "indicators": [
+    {
+     "code": "AGRI.G8.RUBRIC.3.1",
+     "indicator": "Ability to explain routine cleaning practices of a kitchen.",
+     "levels": {
+      "EE": "The learner explains routine cleaning practices of a kitchen with elaborate details.",
+      "ME": "The learner explains routine cleaning practices of a kitchen.",
+      "AE": "The learner explains routine cleaning practices of a kitchen with some details that require clarity.",
+      "BE": "The learner explains routine cleaning practices of a kitchen with some details that require clarity and correction for accuracy."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.3.2",
+     "indicator": "Ability to carry out routine cleaning of kitchen to maintain hygiene: (daily, weekly and special).",
+     "levels": {
+      "EE": "The learner can carry out three routine cleaning procedures of the kitchen to maintain hygiene.",
+      "ME": "The learner can carry out two routine cleaning procedures of the kitchen to maintain hygiene.",
+      "AE": "The learner can carry out one routine cleaning procedure of the kitchen to maintain hygiene.",
+      "BE": "The learner can partially carry out a routine cleaning procedure of the kitchen to maintain hygiene."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.3.3",
+     "indicator": "Ability to shows responsibility while cleaning the kitchen: (engages in assigned roles, cares for kitchen surfaces, observes safety, and offers leadership in cleaning).",
+     "levels": {
+      "EE": "The learner shows four aspects of responsibility while cleaning the kitchen.",
+      "ME": "The learner shows three aspects of responsibility while cleaning the kitchen.",
+      "AE": "The learner shows two aspects of responsibility while cleaning the kitchen.",
+      "BE": "The learner shows less than two aspects of responsibility while cleaning the kitchen."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G8.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Production Techniques",
+   "covers": [
+    "AGRI.G8.PRODUC.SEWING_SKILLS_CONSTRUCTI",
+    "AGRI.G8.PRODUC.CONSTRUCTING_INNOVATIVE_",
+    "AGRI.G8.PRODUC.ICT_SUPPORT_SERVICES"
+   ],
+   "page": 30,
+   "indicators": [
+    {
+     "code": "AGRI.G8.RUBRIC.4.1",
+     "indicator": "Ability to describe various production techniques at household level. (construction of household items using seams, constructing animal waterer, and using ICT support services).",
+     "levels": {
+      "EE": "The learner can describe three production techniques.",
+      "ME": "The learner can describe two production techniques.",
+      "AE": "The learner can describe one production technique.",
+      "BE": "The learner can partially describe a production technique."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.4.2",
+     "indicator": "Ability to carry out various production techniques at household level. (construction of household items using seams, constructing animal waterer, and using ICT support services).",
+     "levels": {
+      "EE": "The learner can carry out three production techniques.",
+      "ME": "The learner can carry out two production techniques.",
+      "AE": "The learner can carry out one production technique.",
+      "BE": "The learner can partially carry out a production technique."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G8.RUBRIC.4.3",
+     "indicator": "Ability to exhibits integrity in the use of production techniques: (prudent use of resources, adherence to ethical procedures, is accountable in the allocated task and self-disciplined).",
+     "levels": {
+      "EE": "The learner exhibits four indicators of integrity in the use of production techniques.",
+      "ME": "The learner exhibits three indicators of integrity in the use of production techniques.",
+      "AE": "The learner exhibits two indicators of integrity in the use of production techniques.",
+      "BE": "The learner exhibits one indicator of integrity in the use of production techniques."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

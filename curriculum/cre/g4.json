@@ -130,17 +130,23 @@
      "code": "CRE.G4.CREATI.SELF_AWARENESS.c__",
      "letter": "c",
      "text": "make right choices guided by the word of God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.1.1"
     },
     {
      "code": "CRE.G4.CREATI.SELF_AWARENESS.d__",
      "letter": "d",
      "text": "portray responsibility by making right choices. Ϯ",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.1.1",
+    "CRE.G4.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS",
@@ -238,7 +244,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.1.1",
+    "CRE.G4.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD",
@@ -284,7 +294,8 @@
      "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.b",
      "letter": "b",
      "text": "list three attributes of God and revere Him",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.1.2"
     },
     {
      "code": "CRE.G4.CREATI.ATTRIBUTES_OF_GOD.c",
@@ -294,7 +305,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.1.1",
+    "CRE.G4.RUBRIC.1.2"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD",
@@ -339,29 +354,36 @@
      "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.a",
      "letter": "a",
      "text": "handle the Holy Bible with respect as the inspired word of God",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.b",
      "letter": "b",
      "text": "identify the books in the Old and New Testament",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.c",
      "letter": "c",
      "text": "role play naming some books in the Bible",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD.d",
      "letter": "d",
      "text": "recite Isaiah 49:16 and desire to read the Holy Bible always. By the end of the sub-strand",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC",
@@ -403,29 +425,36 @@
      "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.a",
      "letter": "a",
      "text": "retell the story of Zacchaeus",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.b",
      "letter": "b",
      "text": "recount how Zacchaeus changed his behaviour positively",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.c",
      "letter": "c",
      "text": "demonstrate integrity when using money",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC.d",
      "letter": "d",
      "text": "discuss why it is important to repent sins in order to be like Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY",
@@ -467,29 +496,36 @@
      "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.a",
      "letter": "a",
      "text": "retell the story of Balaam and his donkey",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.b",
      "letter": "b",
      "text": "apply the story in their lives by obeying God’s instructions",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.c",
      "letter": "c",
      "text": "acquire the value of love by speaking good things about others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BALAAM_S_DONKEY.d",
      "letter": "d",
      "text": "acknowledge God’s greatness by revering Him",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION",
@@ -529,23 +565,29 @@
      "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.a",
      "letter": "a",
      "text": "retell the story of Samson; Judges 14: 5- 9",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.b",
      "letter": "b",
      "text": "acknowledge God’s power in his or her life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.SAMSON_KILLS_A_LION.c",
      "letter": "c",
      "text": "trust in God to cope with the challenges of life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS",
@@ -598,41 +640,50 @@
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a",
      "letter": "a",
      "text": "retell the story of Joseph",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.a_",
      "letter": "a",
      "text": "retell the story of Joseph interpreting a dream, interpreting a dream",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b",
      "letter": "b",
      "text": "apply lessons learnt by",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.b_",
      "letter": "b",
      "text": "apply lessons learnt by depending on God’s depending on God’s wisdom, wisdom",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c",
      "letter": "c",
      "text": "recognise that, ‘the fear of",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS.c_",
      "letter": "c",
      "text": "recognise that, ‘the fear of God is the beginning of God is the beginning of wisdom.’ wisdom.’",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_",
@@ -687,65 +738,78 @@
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a",
      "letter": "a",
      "text": "recount the call of Abraham, By the end of the sub-strand, the",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b",
      "letter": "b",
      "text": "obey God’s instructions in his learner should be able to",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.a_",
      "letter": "a",
      "text": "recount the call of Abraham, or her day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c",
      "letter": "c",
      "text": "mention his or her name for",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.b_",
      "letter": "b",
      "text": "obey God’s instructions in his self-identity, or her day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d",
      "letter": "d",
      "text": "discuss Abram’s change of",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.c_",
      "letter": "c",
      "text": "mention his or her name for name to Abraham, self-identity",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e",
      "letter": "e",
      "text": "appreciate God’s blessings in",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.d_",
      "letter": "d",
      "text": "discuss Abram’s change of his or her life. name to Abraham",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     },
     {
      "code": "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_.e_",
      "letter": "e",
      "text": "appreciate God’s blessings in his or her life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.THE_ANNUNCIATION",
@@ -785,29 +849,36 @@
      "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.a",
      "letter": "a",
      "text": "narrate the annunciation of the Birth of Jesus Christ",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.b",
      "letter": "b",
      "text": "acknowledge the uniqueness of the birth of Jesus Christ",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.c",
      "letter": "c",
      "text": "recite Luke 1:37 and trust in God’s power",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.THE_ANNUNCIATION.d",
      "letter": "d",
      "text": "emulate Mary the mother of Jesus and lead a holy life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS",
@@ -848,23 +919,29 @@
      "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.a",
      "letter": "a",
      "text": "retell the Birth of John the Baptist",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.b",
      "letter": "b",
      "text": "discuss how John the Baptist prepared the way for the Messiah",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS.c",
      "letter": "c",
      "text": "appreciate the need to live a righteous life by turning away from sins. ϭε",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA",
@@ -911,41 +988,50 @@
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a",
      "letter": "a",
      "text": "retell the healing of blind Bartimaeus, able to",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b",
      "letter": "b",
      "text": "recognise the healing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.a_",
      "letter": "a",
      "text": "retell the healing of power of Jesus Christ in blind Bartimaeus, their lives",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.b_",
      "letter": "b",
      "text": "recognise the healing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c",
      "letter": "c",
      "text": "appreciate Jesus’ power power of Jesus Christ in over sickness and their lives, disease",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA.c_",
      "letter": "c",
      "text": "appreciate Jesus’ power",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH",
@@ -999,47 +1085,57 @@
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b",
      "letter": "b",
      "text": "outline ways of strand, the learner should showing gratitude to be able to: God in day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.a",
      "letter": "a",
      "text": "narrate the story of the",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c",
      "letter": "c",
      "text": "express gratitude to 10 lepers, those who show them",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.b_",
      "letter": "b",
      "text": "outline ways of kindness, showing gratitude to",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d",
      "letter": "d",
      "text": "appreciate the miracle God in day-to-day life, by having faith in God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.c_",
      "letter": "c",
      "text": "express gratitude to those who are kind tp them",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH.d_",
      "letter": "d",
      "text": "appreciate the miracle by having faith in God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S",
@@ -1090,53 +1186,64 @@
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a",
      "letter": "a",
      "text": "retell the story of raising the widow’s be able to: son",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.a_",
      "letter": "a",
      "text": "retell the story of",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b",
      "letter": "b",
      "text": "recognise God’s raising the widow’s power over life and death, son",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.b_",
      "letter": "b",
      "text": "recognise God’s",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c",
      "letter": "c",
      "text": "apply lessons learnt power over life and by showing death, compassion to others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.c_",
      "letter": "c",
      "text": "apply lessons learnt",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d",
      "letter": "d",
      "text": "pray to God when by showing faced with compassion to others, challenges",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S.d_",
      "letter": "d",
      "text": "pray to God when faced with",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.FORGIVENESS",
@@ -1175,23 +1282,29 @@
      "code": "CRE.G4.THE_LI.FORGIVENESS.a",
      "letter": "a",
      "text": "outline the importance of forgiving others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.FORGIVENESS.b",
      "letter": "b",
      "text": "resist vengeance as outlined in Mathew 5:39",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.FORGIVENESS.c",
      "letter": "c",
      "text": "appreciate forgiveness by not repaying evil for evil",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY",
@@ -1230,23 +1343,29 @@
      "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.a",
      "letter": "a",
      "text": "state the importance of helping the needy",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.b",
      "letter": "b",
      "text": "demonstrate kindness by sharing with those in need",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.HELPING_THE_NEEDY.c",
      "letter": "c",
      "text": "recite Mathew 5:42 and help those in need promptly. Ϯς",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN",
@@ -1287,29 +1406,36 @@
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.a",
      "letter": "a",
      "text": "retell the parable of the lost coin",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.b",
      "letter": "b",
      "text": "list lessons learnt from the parable of the lost coin",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.c",
      "letter": "c",
      "text": "recognise God’s love for the sinner and the need to live a righteous life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN.d",
      "letter": "d",
      "text": "appreciate God’s love and lead upright lives",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S",
@@ -1352,29 +1478,36 @@
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.a",
      "letter": "a",
      "text": "retell the parable of the mustard seed as guided by the Bible text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.b",
      "letter": "b",
      "text": "describe how the kingdom of God grows from a small beginning",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.c",
      "letter": "c",
      "text": "explain how they contribute to the growth of the kingdom of God",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S.d",
      "letter": "d",
      "text": "appreciate the growth of God’s kingdom by evangelising to others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH",
@@ -1416,29 +1549,36 @@
      "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.a",
      "letter": "a",
      "text": "retell the story of Nicodemus’ encounter with Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.b",
      "letter": "b",
      "text": "acknowledge that repentance of sins draws us close to Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.c",
      "letter": "c",
      "text": "discuss the importance of baptism to Christians today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     },
     {
      "code": "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH.d",
      "letter": "d",
      "text": "recite John 3:16 and believe in Jesus Christ to inherit eternal life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.TRUST",
@@ -1486,29 +1626,36 @@
      "code": "CRE.G4.CHRIST.TRUST.a",
      "letter": "a",
      "text": "emulate Joseph by resisting sexual temptations as young people",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUST.b",
      "letter": "b",
      "text": "exercise assertiveness in the face of temptations/tempting situations",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUST.c",
      "letter": "c",
      "text": "identify people he/she can trust for own safety",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUST.d",
      "letter": "d",
      "text": "recite Psalm 125:1 and trust in God always",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES",
@@ -1557,41 +1704,50 @@
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a",
      "letter": "a",
      "text": "state the importance of able to: telling the truth",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.a_",
      "letter": "a",
      "text": "state the importance of",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b",
      "letter": "b",
      "text": "resist lying as cited in telling the truth, Proverbs 12:19",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.b_",
      "letter": "b",
      "text": "resist lying as cited in",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.c",
      "letter": "c",
      "text": "desire to always speak Proverbs 12:19, the truth according to",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES.c_",
      "letter": "c",
      "text": "desire to always speak Ephesians 4:25. the truth according to",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE",
@@ -1642,65 +1798,78 @@
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a",
      "letter": "a",
      "text": "read Exodus 20:12 and state learner should be able to: the benefit of honouring",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.a_",
      "letter": "a",
      "text": "read Exodus 20:12 and state parents, the benefit of honouring",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b",
      "letter": "b",
      "text": "obey parents and teachers to parents, promote harmonious co-existence",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.b_",
      "letter": "b",
      "text": "obey parents and teachers to promote harmonious co-existence",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.c",
      "letter": "c",
      "text": "practise responsibility by obeying school rules",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.c_",
      "letter": "c",
      "text": "practise responsibility by",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d",
      "letter": "d",
      "text": "outline the results of obeying school rules, disobedience",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.d_",
      "letter": "d",
      "text": "outline the results of",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.e",
      "letter": "e",
      "text": "desire to exercise obedience disobedience, in day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE.e_",
      "letter": "e",
      "text": "desire to exercise obedience in day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.LOVE_LOVE",
@@ -1749,41 +1918,50 @@
      "code": "CRE.G4.CHRIST.LOVE_LOVE.a",
      "letter": "a",
      "text": "recognise that God loves children; should be able to: Matthew 19:13-15",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.LOVE_LOVE.a_",
      "letter": "a",
      "text": "recognise that God loves children",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.LOVE_LOVE.b",
      "letter": "b",
      "text": "demonstrate love by showing kindness Matthew 19:13-15, to others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.LOVE_LOVE.b_",
      "letter": "b",
      "text": "demonstrate love by showing kindness",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.LOVE_LOVE.c",
      "letter": "c",
      "text": "appreciate God’s love by obeying His to others, teachings",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.LOVE_LOVE.c_",
      "letter": "c",
      "text": "appreciate God’s love by obeying His teachings",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_",
@@ -1821,23 +1999,29 @@
      "code": "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.a",
      "letter": "a",
      "text": "identify personal items and how they care for them",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.b",
      "letter": "b",
      "text": "identify school properties and how they care for them",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_.c",
      "letter": "c",
      "text": "acquire responsibility by taking care of personal and school properties",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.CHRIST.HOLINESS",
@@ -1875,29 +2059,36 @@
      "code": "CRE.G4.CHRIST.HOLINESS.a",
      "letter": "a",
      "text": "describe ways of glorifying God with their bodies",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.HOLINESS.b",
      "letter": "b",
      "text": "acquire the value of holiness by keeping away from situations that lead to sin",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.HOLINESS.c",
      "letter": "c",
      "text": "recite 1Corinthians 6:19 on the body as the temple of the Holy Spirit",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     },
     {
      "code": "CRE.G4.CHRIST.HOLINESS.d",
      "letter": "d",
      "text": "desire to lead holy lives free from sin",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G4.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.HOUSE_OF_GOD",
@@ -1937,23 +2128,29 @@
      "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.a",
      "letter": "a",
      "text": "outline lessons learnt from Matthew 21:12- 14",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.b",
      "letter": "b",
      "text": "participate in church activities to grow spiritually",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.HOUSE_OF_GOD.c",
      "letter": "c",
      "text": "appreciate the church as a house of worship",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH",
@@ -1995,23 +2192,29 @@
      "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.a",
      "letter": "a",
      "text": "name the disciples of Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.b",
      "letter": "b",
      "text": "describe how the early church was started",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.THE_EARLY_CHURCH.c",
      "letter": "c",
      "text": "desire to turn away from sins according to Acts 2:38",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH",
@@ -2054,35 +2257,43 @@
      "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.a",
      "letter": "a",
      "text": "name the city where believers were first called Christians",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.b",
      "letter": "b",
      "text": "retell how Stephen was stoned for standing firm in his faith",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.c",
      "letter": "c",
      "text": "list three lessons learnt from the stoning of Stephen",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.d",
      "letter": "d",
      "text": "explain why they should not join ungodly groups",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH.e",
      "letter": "e",
      "text": "utilise the virtue of assertiveness and stand firm in faith",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER",
@@ -2122,23 +2333,29 @@
      "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.a",
      "letter": "a",
      "text": "recite the Lord’s prayer",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.b",
      "letter": "b",
      "text": "pray for parents, guardians and friends",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.THE_LORD_S_PRAYER.c",
      "letter": "c",
      "text": "say a prayer to God every day to grow spiritually",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT",
@@ -2178,23 +2395,29 @@
      "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.a",
      "letter": "a",
      "text": "list the fruit of the Holy Spirit; Galatians 5:22- 23",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.b",
      "letter": "b",
      "text": "describe how they apply the fruit of the Holy Spirit in their lives",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT.c",
      "letter": "c",
      "text": "desire to be led by the Holy Spirit in their daily activities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.THE_CH.SELF_CONTROL",
@@ -2235,29 +2458,36 @@
      "code": "CRE.G4.THE_CH.SELF_CONTROL.a",
      "letter": "a",
      "text": "ractice self-control as guided in Galatians 5:23- 25",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.SELF_CONTROL.b",
      "letter": "b",
      "text": "make right decisions that are guided by the Holy Spirit",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.SELF_CONTROL.c",
      "letter": "c",
      "text": "demonstrate self-control by avoiding behaviour that defiles the body",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     },
     {
      "code": "CRE.G4.THE_CH.SELF_CONTROL.d",
      "letter": "d",
      "text": "live Godly lives guided by the Holy Spirit",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.5.1"
+   ]
   },
   {
    "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA",
@@ -2295,29 +2525,214 @@
      "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.a",
      "letter": "a",
      "text": "list digital devices used at home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.6.1"
     },
     {
      "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.b",
      "letter": "b",
      "text": "discuss appropriate ways of using social media",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.6.1"
     },
     {
      "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.c",
      "letter": "c",
      "text": "apply the value of integrity when using social media",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.6.1"
     },
     {
      "code": "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA.d",
      "letter": "d",
      "text": "desire to do the right thing always even when no one is watching",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G4.RUBRIC.6.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G4.RUBRIC.6.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G4.RUBRIC.1",
+   "heading": "Assessment Rubrics",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G4.CREATI.SELF_AWARENESS",
+    "CRE.G4.CREATI.MY_FAMILY_FAMILY_MEMBERS",
+    "CRE.G4.CREATI.ATTRIBUTES_OF_GOD"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.1.1",
+     "indicator": "Ability to make right choices in day-to-day life",
+     "levels": {
+      "EE": "Makes right choices in day-to-day life and encourages peers to do so",
+      "ME": "Makes right choices in day-to-day life",
+      "AE": "Makes right choices in day-to-day life with prompts",
+      "BE": "Has challenges making right choices in day-to-day life even with prompts"
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G4.RUBRIC.1.2",
+     "indicator": "Ability to list three attributes of God",
+     "levels": {
+      "EE": "Lists three attributes of God illustratively",
+      "ME": "Lists three attributes of God",
+      "AE": "Lists two attributes of God",
+      "BE": "Lists only one attribute of God"
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G4.RUBRIC.2",
+   "heading": "Assessment Rubrics",
+   "strand": "The Holy Bible",
+   "covers": [
+    "CRE.G4.THE_HO.THE_INSPIRED_WORD_OF_GOD",
+    "CRE.G4.THE_HO.ZACCHAEUS_THE_TAX_COLLEC",
+    "CRE.G4.THE_HO.BALAAM_S_DONKEY",
+    "CRE.G4.THE_HO.SAMSON_KILLS_A_LION",
+    "CRE.G4.THE_HO.JOSEPH_JOSEPH_INTERPRETS",
+    "CRE.G4.THE_HO.BIBLE_STRAND_QUESTION_S_"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.2.1",
+     "indicator": "Ability to retell Bible stories Ability to list lessons learnt from the Bible stories Ability to apply lessons learnt from the Bible stories in daily life",
+     "levels": {
+      "EE": "Retells Bible stories in details. Lists lessons learnt from the Bible stories and cites relevant examples Consistently applies lessons learnt from the Bible stories in daily life",
+      "ME": "Retells Bible stories Retells Bible stories Lists lessons learnt from the Bible stories Applies lessons learnt from the Bible stories in daily life",
+      "AE": "when prompted Lists lessons learnt from the Bible stories when prompted Sometimes applies lessons learnt from the Bible stories in daily life",
+      "BE": "Struggles to retell Bible stories even when prompted Struggles to list lessons learnt from the Bible stories even when prompted Struggles to apply lessons learnt from the Bible stories in daily life"
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G4.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Life Of Jesus Christ",
+   "covers": [
+    "CRE.G4.THE_LI.THE_ANNUNCIATION",
+    "CRE.G4.THE_LI.BIRTH_OF_JOHN_THE_BAPTIS",
+    "CRE.G4.THE_LI.HEALING_OF_BLIND_BARTIMA",
+    "CRE.G4.THE_LI.HEALING_BY_THE_END_OF_TH",
+    "CRE.G4.THE_LI.JESUS_RAISES_A_WIDOW_S_S",
+    "CRE.G4.THE_LI.FORGIVENESS",
+    "CRE.G4.THE_LI.HELPING_THE_NEEDY",
+    "CRE.G4.THE_LI.PARABLE_OF_THE_LOST_COIN",
+    "CRE.G4.THE_LI.PARABLE_OF_THE_MUSTARD_S",
+    "CRE.G4.THE_LI.NICODEMUS_ENCOUNTER_WITH"
+   ],
+   "page": 45,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.3.1",
+     "indicator": "Ability to retell the annunciation of the birth of Jesus Christ Ability to retell the birth of John the Baptist Ability to retell three miracles performed by Jesus Christ Ability to list lessons learnt from the miracles of Jesus Christ Ability to apply lessons learnt from the teachings of Jesus Christ in daily life",
+     "levels": {
+      "EE": "Retells the annunciation of the birth of Jesus Christ in details Retells the birth of John the Baptist and cites relevant examples Retells three miracles performed by Jesus Christ illustratively Lists lessons learnt from the miracles of Jesus Christ in details Consistently applies lessons learnt from the teachings of Jesus Christ in daily life",
+      "ME": "Retells the annunciation of the birth of Jesus Christ Retells the birth of John the Baptist Retells three miracles performed by Jesus Christ Lists lessons learnt from the miracles of Jesus Christ Applies lessons learnt from the teachings of Jesus Christ in daily life",
+      "AE": "Retells the annunciation of the birth of Jesus Christ with prompts Retells the birth of John the Baptist with prompts Retells two miracles performed by Jesus Christ Lists some lessons learnt from the Miracles of Jesus Christ Applies lessons learnt from the teachings of Jesus Christ in daily life with guidance",
+      "BE": "Struggles to retell the annunciation of the birth of Jesus Christ even with prompts Struggles to retell the birth of John the Baptist with prompts Retells only one miracle performed by Jesus Christ Struggles to list lessons learnt from the Miracles of Jesus Christ Struggles to apply lessons learnt from the teachings of Jesus Christ eve with guidance"
+     },
+     "page": 45,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G4.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Christian Values",
+   "covers": [
+    "CRE.G4.CHRIST.TRUST",
+    "CRE.G4.CHRIST.TRUTHFULNESS_TRUTHFULNES",
+    "CRE.G4.CHRIST.OBEDIENCE_OBEDIENCE",
+    "CRE.G4.CHRIST.LOVE_LOVE",
+    "CRE.G4.CHRIST.RESPONSIBILITY_PERSONAL_",
+    "CRE.G4.CHRIST.HOLINESS"
+   ],
+   "page": 54,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.4.1",
+     "indicator": "Ability to explain how Christian values enhance harmonious co-existence Ability to apply acquired Christian values in day-to- day life",
+     "levels": {
+      "EE": "Explains how Christian values enhance harmonious co-existence in details Consistently applies acquired Christian values in day-to-day life",
+      "ME": "Explains how Christian values enhance harmonious co-existence Applies acquired Christian values in day-to-day life",
+      "AE": "Explains how some Christian values enhance harmonious co-existence Sometimes applies acquired Christian values in day-to-day life",
+      "BE": "Struggles to explain how Christian values enhance harmonious co-existence Applies acquired Christian values in day-to-day life with consistent guidance"
+     },
+     "page": 54,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G4.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Church",
+   "covers": [
+    "CRE.G4.THE_CH.HOUSE_OF_GOD",
+    "CRE.G4.THE_CH.THE_EARLY_CHURCH",
+    "CRE.G4.THE_CH.STANDING_FIRM_IN_FAITH",
+    "CRE.G4.THE_CH.THE_LORD_S_PRAYER",
+    "CRE.G4.THE_CH.FRUIT_OF_THE_HOLY_SPIRIT",
+    "CRE.G4.THE_CH.SELF_CONTROL"
+   ],
+   "page": 64,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.5.1",
+     "indicator": "Ability to participate in church activities Ability to list the 12 disciples of Jesus Christ Ability to recite the Lord’s Prayer and pray for others Ability to utilise the fruit of the Holy Spirit in making right decisions",
+     "levels": {
+      "EE": "Consistently participates in church activities Lists the 12 disciples of Jesus Christ illustratively Consistently recites the Lord’s Prayer and prays for others Consistently utilises the fruit of the Holy Spirit in making right decisions",
+      "ME": "Participates in church activities Lists the 12 disciples of Jesus Christ Recites the Lord’s Prayer and prays for others Utilises the fruit of the Holy Spirit in making right decisions",
+      "AE": "Participates in Church activities when prompted Lists between 5 and 11 disciples of Jesus Christ Recites the Lord’s Prayer and prays for others when prompted Utilises the fruit of the Holy Spirit in making right decisions when prompted",
+      "BE": "Has challenges participating in church activities even when prompted Lists between 1 and 4 disciples of Jesus Christ Has challenges reciting the Lord’s Prayer and praying for others even when prompted Has challenges utilising the fruit of the Holy Spirit in making right decisions even when prompted"
+     },
+     "page": 64,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G4.RUBRIC.6",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Morality And Social Media",
+   "covers": [
+    "CRE.G4.MORALI.USE_OF_SOCIAL_MEDIA"
+   ],
+   "page": 66,
+   "indicators": [
+    {
+     "code": "CRE.G4.RUBRIC.6.1",
+     "indicator": "Ability to use social media responsibly ASSESSMENT OF COMMUNITY SERVICE LEARNING AT UPPER PRIMARY (GRADE 4-6) At this level, the goal of the CSL activity is to provide linkages between concepts learnt in the various learning activities and the real-life experiences. Learners begin to make connections between what they learn and the relevance to their daily life. CSL is hosted in the Social Studies learning area. The implementation is a collaborative effort where the class teacher coordinates and works with other subject teachers to design and implement the integrated CSL activity. Though they are teacher-guided, the learners should progressively be given more autonomy to identify problems and come up with solutions. The safety of the learners should also be taken into account when selecting the CSL activity. The following steps for the integrated CSL activity should be staggered across the school terms: Steps in carrying out the integrated CSL activity 1. Preparation • Map out the targeted core competencies, values and specific learning area skills for the CSL activity • Identify resources required for the activity (locally available materials) • Stagger the activities across the term (set dates and time for the activities) • Communicate to learners, parents/caregivers/guardians, school administration, teachers and other relevant stakeholders in the school community • Identify and develop assessment tools 2. Implementation of the CSL Activity 2. Implementation of the CSL Activity • Assign roles to learners. • Assign roles to learners. • Ensure every learner actively participates in the activity • Ensure every learner actively participates in the activity • Observe learners as they carry out the CSL activity and record feedback • Observe learners as they carry out the CSL activity and record feedback • Use an appropriate assessment tool to assess both the process and the product (assess learner’s work from the beginning • Use an appropriate assessment tool to assess both the process and the product (assess learner’s work from the beginning to the end product) to the end product) • Assess the targeted core competencies, values and learning area skills. • Assess the targeted core competencies, values and learning area skills. 3. Reflection on the CSL Activity 3. Reflection on the CSL Activity Conduct a self-evaluation session with learners on the integrated CSL activity undertaken by discussing the following: Conduct a self-evaluation session with learners on the integrated CSL activity undertaken by discussing the following: • what went well and why • what went well and why • what did not go well and why • what did not go well and why • what can be done differently next time • what can be done differently next time • what they have learnt. • what they have learnt. There will be one integrated CSL activity that will be conducted annually. The thematic areas for the integrated CSL activity There will be one integrated CSL activity that will be conducted annually. The thematic areas for the integrated CSL activity 2. Implementation of the CSL Activity 3. Reflection on the CSL Activity • Assign roles to learners. • Ensure every learner actively participates in the activity • Observe learners as they carry out the CSL activity and record feedback • Use an appropriate assessment tool to assess both the process and the product (assess learner’s work from the beginning • Assess the targeted core competencies, values and learning area skills. Conduct a self-evaluation session with learners on the integrated CSL activity undertaken by discussing the following: • what went well and why • what did not go well and why • what can be done differently next time • what they have learnt. to the end product) will be derived from the broader categories of the PCIs and concepts from the various learning areas. Teachers are expected to There will be one integrated CSL activity that will be conducted annually. The thematic areas for the integrated CSL activity vary the themes yearly to allow learners to address different PCIs within their contexts. There should be a linkage between the will be derived from the broader categories of the PCIs and concepts from the various learning areas. Teachers are expected to skills from the learning areas and the themes. vary the themes yearly to allow learners to address different PCIs within their contexts. There should be a linkage between the skills from the learning areas and the themes. The integrated CSL activity will take a Whole School Approach (WSA) where the entire school community is involved (learners, parents/caregivers/guardians, school administration, teachers). Parents/caregivers/guardians are key stakeholders in the The integrated CSL activity will take a Whole School Approach (WSA) where the entire school community is involved planning and execution of the CSL activity. Although the teacher takes the lead role in the planning and integration of the CSL (learners, parents/caregivers/guardians, school administration, teachers). Parents/caregivers/guardians are key stakeholders in the activity, learners will be expected to participate actively in the whole process. planning and execution of the CSL activity. Although the teacher takes the lead role in the planning and integration of the CSL The CSL activity provides an opportunity for the development of core competencies and the nurturing of various values. The activity, learners will be expected to participate actively in the whole process. teacher is expected to vary the core competencies and values emphasised in the activity yearly. The CSL activity provides an opportunity for the development of core competencies and the nurturing of various values. The teacher is expected to vary the core competencies and values emphasised in the activity yearly. Assessment of the CSL Activity Assessment of the integrated CSL activity will focus on 3 components namely: skills from various learning areas applied in Assessment of the CSL Activity carrying out the activity, and core competencies and values demonstrated. Assessment should focus on both the process and end Assessment of the integrated CSL activity will focus on 3 components namely: skills from various learning areas applied in product of the CSL activity. The teacher will assess learners in groups using various tools such as an observation schedule, carrying out the activity, and core competencies and values demonstrated. Assessment should focus on both the process and end checklist or rating scale or any other appropriate tool. product of the CSL activity. The teacher will assess learners in groups using various tools such as an observation schedule, checklist or rating scale or any other appropriate tool. APPENDIX 1: SUGGESTED ASSESSMENT METHODS, LEARNING RESOURCES AND NON-FORMAL APPENDIX 1: SUGGESTED ASSESSMENT METHODS, LEARNING RESOURCES AND NON-FORMAL",
+     "levels": {
+      "EE": "Uses social media responsibly and encourages peers to do so",
+      "ME": "Uses social media responsibly ρϳ ρϳ ρϳ",
+      "AE": "Uses social media responsibly with guidance",
+      "BE": "Has challenges using social media responsibly even with guidance"
+     },
+     "page": 66,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

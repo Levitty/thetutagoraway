@@ -56,29 +56,36 @@
      "code": "CRE.G6.CREATI.MY_PURPOSE.a",
      "letter": "a",
      "text": "discuss how they use their God-given talents and abilities",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MY_PURPOSE.b",
      "letter": "b",
      "text": "explain biblical teachings on the use of talents and abilities",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MY_PURPOSE.c",
      "letter": "c",
      "text": "identify values required to nurture talents and abilities",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MY_PURPOSE.d",
      "letter": "d",
      "text": "utilise God-given talents and abilities to serve others. By the end of the sub-strand, the learner should be",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY",
@@ -122,29 +129,36 @@
      "code": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.a",
      "letter": "a",
      "text": "explain the biblical teachings on marriage and family",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.b",
      "letter": "b",
      "text": "discuss the negative results of early marriage",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.c",
      "letter": "c",
      "text": "identify values needed to avoid early marriage",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.MARRIAGE_AND_FAMILY.d",
      "letter": "d",
      "text": "desire to uphold Christian values to avoid early marriage. By the end of the sub strand",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G6.CREATI.LEISURE",
@@ -187,35 +201,43 @@
      "code": "CRE.G6.CREATI.LEISURE.a",
      "letter": "a",
      "text": "describe the biblical teaching on God’s rest",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.LEISURE.b",
      "letter": "b",
      "text": "explain biblical teachings on good use of leisure",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.LEISURE.c",
      "letter": "c",
      "text": "describe how youths misuse leisure time today",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.LEISURE.d",
      "letter": "d",
      "text": "identify values needed for appropriate use of leisure time",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     },
     {
      "code": "CRE.G6.CREATI.LEISURE.e",
      "letter": "e",
      "text": "desire to use leisure time responsibly",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD",
@@ -262,7 +284,8 @@
      "code": "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.b",
      "letter": "b",
      "text": "name three authors who wrote the Bible",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.2.1"
     },
     {
      "code": "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD.c",
@@ -284,7 +307,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.2.1",
+    "CRE.G6.RUBRIC.2.2",
+    "CRE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS",
@@ -349,7 +377,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.2.1",
+    "CRE.G6.RUBRIC.2.2",
+    "CRE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF",
@@ -410,7 +443,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.2.1",
+    "CRE.G6.RUBRIC.2.2",
+    "CRE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA",
@@ -464,7 +502,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.2.1",
+    "CRE.G6.RUBRIC.2.2",
+    "CRE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL",
@@ -528,7 +571,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.2.1",
+    "CRE.G6.RUBRIC.2.2",
+    "CRE.G6.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES",
@@ -570,7 +618,8 @@
      "code": "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES.a",
      "letter": "a",
      "text": "retell the call of the first disciples as guided by the scriptures",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.3.1"
     },
     {
      "code": "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES.b",
@@ -586,7 +635,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS",
@@ -644,7 +697,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST",
@@ -701,7 +758,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.MIRACLE_OF_HEALING",
@@ -763,7 +824,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE",
@@ -819,7 +884,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.THE_HIDDEN_TREASURE",
@@ -880,7 +949,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS",
@@ -936,7 +1009,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.3.1",
+    "CRE.G6.RUBRIC.3.2"
+   ]
   },
   {
    "code": "CRE.G6.THE_CH.APOSTLES_CREED",
@@ -977,35 +1054,43 @@
      "code": "CRE.G6.THE_CH.APOSTLES_CREED.a",
      "letter": "a",
      "text": "recite the Apostles’ creed to affirm their faith in Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.APOSTLES_CREED.b",
      "letter": "b",
      "text": "outline the teachings outlined in the Apostle’s Creed",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.APOSTLES_CREED.c",
      "letter": "c",
      "text": "discuss the importance of the Apostles’ Creed to Christians today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.APOSTLES_CREED.d",
      "letter": "d",
      "text": "list the three persons of the Holy Trinity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.APOSTLES_CREED.e",
      "letter": "e",
      "text": "recognise the value of the Holy Trinity in their lives",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A",
@@ -1045,29 +1130,36 @@
      "code": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.a",
      "letter": "a",
      "text": "describe the suffering faced by the Apostles according to 2 Corinthians 6:3-7",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.b",
      "letter": "b",
      "text": "identify values/virtues in the life of Apostle Paul",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.c",
      "letter": "c",
      "text": "apply values from the life of Apostle Paul in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A.d",
      "letter": "d",
      "text": "stand firm in the Christian faith in the face of persecution",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G6.THE_CH.CHURCH_UNITY",
@@ -1110,29 +1202,36 @@
      "code": "CRE.G6.THE_CH.CHURCH_UNITY.a",
      "letter": "a",
      "text": "explain the meaning of Church unity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.CHURCH_UNITY.b",
      "letter": "b",
      "text": "explain the biblical teachings on Church unity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.CHURCH_UNITY.c",
      "letter": "c",
      "text": "describe ways in which Church unity fosters harmonious living",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     },
     {
      "code": "CRE.G6.THE_CH.CHURCH_UNITY.d",
      "letter": "d",
      "text": "desire to live harmoniously with each other",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.4.1"
+   ]
   },
   {
    "code": "CRE.G6.CHRIST.FRIENDSHIP_FORMATION",
@@ -1189,7 +1288,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.5.1",
+    "CRE.G6.RUBRIC.5.2"
+   ]
   },
   {
    "code": "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON",
@@ -1237,13 +1340,15 @@
      "code": "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.b",
      "letter": "b",
      "text": "outline the causes of irresponsible sexual behaviour among the youth",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.5.1"
     },
     {
      "code": "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.c",
      "letter": "c",
      "text": "identify values and life skills required to avoid irresponsible sexual behaviour",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G6.RUBRIC.5.1"
     },
     {
      "code": "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON.d",
@@ -1253,7 +1358,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.5.1",
+    "CRE.G6.RUBRIC.5.2"
+   ]
   },
   {
    "code": "CRE.G6.CHRIST.SANCTITY_OF_LIFE",
@@ -1295,13 +1404,15 @@
      "code": "CRE.G6.CHRIST.SANCTITY_OF_LIFE.a",
      "letter": "a",
      "text": "identify practices that violate the right to life in society today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.5.1"
     },
     {
      "code": "CRE.G6.CHRIST.SANCTITY_OF_LIFE.b",
      "letter": "b",
      "text": "outline the effects of violating the right to life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.5.2"
     },
     {
      "code": "CRE.G6.CHRIST.SANCTITY_OF_LIFE.c",
@@ -1323,7 +1434,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.5.1",
+    "CRE.G6.RUBRIC.5.2"
+   ]
   },
   {
    "code": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
@@ -1365,13 +1480,15 @@
      "code": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.a",
      "letter": "a",
      "text": "explain Christian teachings on the dangers of alcohol, drugs and substance abuse",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.5.2"
     },
     {
      "code": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
      "letter": "b",
      "text": "outline strategies used by Christians to prevent alcohol, drugs and substance abuse",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.5.2"
     },
     {
      "code": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
@@ -1383,11 +1500,198 @@
      "code": "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d",
      "letter": "d",
      "text": "utilise Christian values and life skills to avoid alcohol, drugs and substance abuse",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G6.RUBRIC.5.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G6.RUBRIC.5.1",
+    "CRE.G6.RUBRIC.5.2"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G6.RUBRIC.1",
+   "heading": "ASSESSMENT RUBRIC",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G6.CREATI.MY_PURPOSE",
+    "CRE.G6.CREATI.MARRIAGE_AND_FAMILY",
+    "CRE.G6.CREATI.LEISURE"
+   ],
+   "page": 20,
+   "indicators": [
+    {
+     "code": "CRE.G6.RUBRIC.1.1",
+     "indicator": "Ability to explain the teachings of the Bible on the use of talents/abilities Ability to discuss reasons for discouraging early marriage in society today Ability to explain biblical teachings on good use of leisure",
+     "levels": {
+      "EE": "Explains the teachings of the Bible on the use of talents and abilities and cites relevant examples Discusses reasons for discouraging early marriage in society today in details Explains biblical teachings on good use of leisure citing relevant examples",
+      "ME": "Explains the teachings of the Bible on the use of talents and abilities Discusses reasons for discouraging early marriage in society today Explains biblical teachings on good use of leisure",
+      "AE": "Explains the teachings of the Bible on the use of talents and abilities with assistance Discusses some reasons for discouraging early marriage in the society today Explains biblical teachings on good use of leisure when prompted",
+      "BE": "Has challenges explaining the teachings of the Bible on the use oftalents and abilities even with assistance Has challenges discussing reasons for discouraging early marriage in the society today Has challenges explaining biblical teachings on good use of leisure even when prompted"
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G6.RUBRIC.2",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "The Bible",
+   "covers": [
+    "CRE.G6.THE_BI.INSPIRED_WORD_OF_GOD",
+    "CRE.G6.THE_BI.THE_TEN_COMMANDMENTS",
+    "CRE.G6.THE_BI.BIBLE_STORIES_SAMSON_DEF",
+    "CRE.G6.THE_BI.FAITH_IN_GOD_ELISHA",
+    "CRE.G6.THE_BI.JACOB_WRESTLES_AN_ANGEL"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "CRE.G6.RUBRIC.2.1",
+     "indicator": "Ability to name three authors who wrote the Bible. Ability to list the Ten Commandments and their importance.",
+     "levels": {
+      "EE": "Identifies more than three authors who wrote the Bible. Lists the Ten Commandments and their importance, giving details.",
+      "ME": "Identifies three authors who wrote the Bible. Lists the Ten Commandments and their importance.",
+      "AE": "Identifies two authors who wrote the Bible. Lists the Ten Commandments and their importance with assistance.",
+      "BE": "Identifies one author who wrote the Bible. Has challenges listing the Ten Commandments and their importance even with assistance."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G6.RUBRIC.2.2",
+     "indicator": "Ability to outline lessons learnt from the Bible stories.",
+     "levels": {
+      "EE": "Outlines lessons learnt from the Bible stories, giving details.",
+      "ME": "Outlines lessons learnt from the Bible stories.",
+      "AE": "Outlines lessons learnt from the Bible stories with assistance.",
+      "BE": "Has challenges outlining lessons learnt from the Bible stories even with assistance."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G6.RUBRIC.2.3",
+     "indicator": "Ability to identify values learnt from the Bible stories.",
+     "levels": {
+      "EE": "Identifies values learnt from the Bible stories, giving details.",
+      "ME": "Identifies values learnt from the Bible stories.",
+      "AE": "Identifies values learnt from the Bible stories when prompted.",
+      "BE": "Has challenges identifying values learnt from the Bible stories even when prompted."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G6.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "The Life of Jesus Christ",
+   "covers": [
+    "CRE.G6.THE_LI.THE_CALL_OF_DISCIPLES",
+    "CRE.G6.THE_LI.THE_TEMPTATIONS_OF_JESUS",
+    "CRE.G6.THE_LI.MIRACLES_OF_JESUS_CHRIST",
+    "CRE.G6.THE_LI.MIRACLE_OF_HEALING",
+    "CRE.G6.THE_LI.RAISING_LAZARUS_FROM_THE",
+    "CRE.G6.THE_LI.THE_HIDDEN_TREASURE",
+    "CRE.G6.THE_LI.THE_RICH_MAN_AND_LAZARUS"
+   ],
+   "page": 44,
+   "indicators": [
+    {
+     "code": "CRE.G6.RUBRIC.3.1",
+     "indicator": "Ability to describe the call of the first disciples",
+     "levels": {
+      "EE": "Describes the call of the first disciples in details",
+      "ME": "Describes the call of the first disciples",
+      "AE": "Describes the call of the first disciples with guidance",
+      "BE": "Has difficulty describing the call of the first disciples even with guidance"
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G6.RUBRIC.3.2",
+     "indicator": "Ability to outline lessons learnt from the Bible stories Ability to apply lessons learnt from the Bible stories in day-to-day life",
+     "levels": {
+      "EE": "Outlines lessons learnt from the Bible stories and cites relevant examples Consistently applies lessons learnt from the Bible stories in day-to-day life",
+      "ME": "Outlines lessons learnt from the Bible stories Applies lessons learnt from the Bible stories in day-to-day life",
+      "AE": "Outlines lessons learnt from the Bible stories with guidance Applies lessons learnt from the Bible stories in day-to-day life when prompted",
+      "BE": "Has difficulty outlining lessons learnt from the Bible stories even with guidance Has difficulty applying lessons learnt from the Bible stories in day-to-day life even when prompted"
+     },
+     "page": 44,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G6.RUBRIC.4",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "The Church",
+   "covers": [
+    "CRE.G6.THE_CH.APOSTLES_CREED",
+    "CRE.G6.THE_CH.STANDING_FIRM_IN_FAITH_A",
+    "CRE.G6.THE_CH.CHURCH_UNITY"
+   ],
+   "page": 51,
+   "indicators": [
+    {
+     "code": "CRE.G6.RUBRIC.4.1",
+     "indicator": "Ability to outline the teachings in the Apostles’ Creed Ability to identify the values from the teachings of Apostle Paul Ability to describe ways in which Church unity fosters peaceful co-existence",
+     "levels": {
+      "EE": "With appropriate examples, outlines the teachings in the Apostles’ Creed Exhaustively identifies values from the teachings of Apostle Paul Describes ways in which Church unity fosters peaceful co-existence using illustrations",
+      "ME": "Outlines the teachings in the Apostles’ Creed Identifies values from the teachings of Apostle Paul Describes ways in which Church unity fosters peaceful co-existence",
+      "AE": "Outlines the teachings in the Apostles’ creed with guidance Identifies values from the teachings of Apostle Paul with guidance Describes ways in which Church unity fosters peaceful co-existence when prompted",
+      "BE": "Has challenges outlining the teachings in the Apostles’ Creed even with guidance Has challenges identifying values from the teachings of Apostle Paul even with guidance Has challenges describing ways in which Church unity fosters peaceful co-existence when prompted"
+     },
+     "page": 51,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G6.RUBRIC.5",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Christian Living Today",
+   "covers": [
+    "CRE.G6.CHRIST.FRIENDSHIP_FORMATION",
+    "CRE.G6.CHRIST.HUMAN_SEXUALITY_7_LESSON",
+    "CRE.G6.CHRIST.SANCTITY_OF_LIFE",
+    "CRE.G6.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA"
+   ],
+   "page": 60,
+   "indicators": [
+    {
+     "code": "CRE.G6.RUBRIC.5.1",
+     "indicator": "Ability to outline the causes of irresponsible sexual behaviour among the youth Ability to discuss appropriate skills required to overcome irresponsible sexual behaviour Ability to identify practices that violate the right to life",
+     "levels": {
+      "EE": "Outlines the causes of irresponsible sexual behaviour among the youth and cites relevant examples Discusses appropriate skills required to overcome irresponsible sexual behavior and cites relevant examples With appropriate examples, identifies practices that violate the right to life",
+      "ME": "Outlines the causes of irresponsible sexual behaviour among the youth Discusses appropriate skills required to overcome irresponsible sexual behaviour Identifies practices that violate the right to life",
+      "AE": "Outlines the causes of irresponsible sexual behaviour among the youth when prompted Discusses appropriate skills required to overcome irresponsible sexual behaviour with guidance Identifies some practices that violate the right to life",
+      "BE": "Has challenges outlining the causes of irresponsible sexual behaviour among the youth even when prompted Has challenges discussing appropriate skills required to overcome irresponsible sexual behaviour even with guidance Has challenges identifying practices that violate right to life"
+     },
+     "page": 60,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G6.RUBRIC.5.2",
+     "indicator": "Ability to outline the effects of violation of the right to life Ability to explain Christian teachings on the dangers of alcohol, drugs and substance abuse CSL AT UPPER PRIMARY (GRADE 4-6) At this level, the goal of the CSL activity is to provide linkages between concepts learnt in the various learning activities and the real-life experiences. Learners begin to make connections between what they learn and the relevance to their daily life. CSL is hosted in the Social Studies learning area. The implementation is a collaborative effort where the class teacher coordinates and works with other subject teachers to design and implement the integrated CSL activity. Though they are teacher-guided, the learners should progressively be given more autonomy to identify problems and come up with solutions. The safety of the learners should also be taken into account when selecting the CSL activity. The following steps for the integrated CSL activity should be staggered across the school terms: Steps in carrying out the integrated CSL activity 1. Preparation • Map out the targeted core competencies, values and specific learning areas skills for the CSL activity • Identify resources required for the activity (locally available materials) • Stagger the activities across the term (set dates and time for the activities) • Communicate to learners, parents/caregivers/guardians, school administration, teachers and other relevant stakeholders in the school community • Identify and develop assessment tools 2. Implementation of the CSL Activity • Assign roles to learners. • Ensure every learner actively participates in the activity • Observe learners as they carry out the CSL activity and record feedback • Use an appropriate assessment tool to assess both the process and the product (asess learner’s work from the beginning to the end product) • Assess the targeted core competencies, values and subject skills. 3. Reflection on the CSL Activity Conduct a self-evaluation session with learners on the integrated CSL activity undertaken by discussing the following: • what went well and why • what did not go well and why • what can be done differently next time • what they have learnt. There will be one integrated CSL activity that will be conducted annually. The thematic areas for the integrated CSL activity will be derived from the broader categories of the PCIs and concepts from the various learning areas. Teachers are expected to vary the themes yearly to allow learners to address different PCIs within their contexts. There should be a linkage between the skills from the learning areas and the themes. The integrated CSL activity will take a Whole School Approach (WSA) where the entire school community is involved (learners, parents/caregivers/guardians, school administration, teachers). Parents/caregivers/guardians are key stakeholders in the planning and execution of the CSL activity. Although the teacher takes the lead role in the planning and integration of the CSL activity, learners will be expected to participate actively in the whole process. The CSL activity provides an opportunity for the development of core competencies and the nurturing of various values. The teacher is expected to vary the core competencies and values emphasised in the activity yearly. Assessment of the CSL Activity Assessment of the integrated CSL activity will focus on 3 components namely: skills from various learning areas applied in carrying out the activity, and core competencies and values demonstrated. Assessment should focus on both the process and end product of the CSL activity. The teacher will assess learners in groups using various tools such as an observation schedule, checklist or rating scale or any other appropriate tool.",
+     "levels": {
+      "EE": "Outlines the effects of violation of the right to life in details Explains Christian teachings on the dangers of alcohol, drugs and substance abuse and cites relevant examples",
+      "ME": "Outlines the effects of violation of the right to life Explains Christian teachings on the dangers of alcohol, drugs and substance abuse",
+      "AE": "Outlines some of the effects of violation of the right to life Explains Christian teachings on the dangers of alcohol, drugs and substance abuse with guidance",
+      "BE": "Has challenges outlining the effects of violation of the right to life Has challenges explaining Christian teachings on the dangers of alcohol, drugs and substance abuse even with guidance"
+     },
+     "page": 61,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

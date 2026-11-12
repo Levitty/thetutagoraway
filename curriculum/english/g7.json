@@ -71,7 +71,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN",
@@ -113,7 +141,8 @@
      "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.a",
      "letter": "a",
      "text": "identify a variety of texts for independent reading",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN.b",
@@ -129,7 +158,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS",
@@ -189,7 +246,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T1_INTENSIVE_READING_TR",
@@ -246,7 +331,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI",
@@ -304,7 +417,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O",
@@ -343,23 +484,54 @@
      "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.a",
      "letter": "a",
      "text": "outline the oral narrative performance techniques for effective delivery",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.b",
      "letter": "b",
      "text": "use oral narrative techniques during the performance",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.2"
     },
     {
      "code": "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O.c",
      "letter": "c",
      "text": "appreciate the importance of performance techniques in the successful delivery of oral material",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_SI",
@@ -414,7 +586,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS",
@@ -473,7 +673,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T2_INTENSIVE_READING_CL",
@@ -531,7 +759,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING",
@@ -589,7 +845,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA",
@@ -635,7 +919,8 @@
      "code": "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA.b",
      "letter": "b",
      "text": "pick out specific information from varied descriptive texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.4"
     },
     {
      "code": "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA.c",
@@ -645,7 +930,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T3_READING_INFORMATION_",
@@ -685,23 +998,54 @@
      "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.a",
      "letter": "a",
      "text": "distinguish between reading for information and reading for meaning",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.b",
      "letter": "b",
      "text": "infer the meaning of words and phrases from varied texts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.READIN.T3_READING_INFORMATION_.c",
      "letter": "c",
      "text": "appreciate the importance of reading for information and meaning",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE",
@@ -760,7 +1104,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T3_INTENSIVE_READING_PO",
@@ -825,7 +1197,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA",
@@ -879,7 +1279,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS",
@@ -917,7 +1345,8 @@
      "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.a",
      "letter": "a",
      "text": "distinguish between specific and general information from a listening text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.b",
@@ -939,7 +1368,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T4_INTENSIVE_READING",
@@ -995,7 +1452,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE",
@@ -1060,7 +1545,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL",
@@ -1118,11 +1631,40 @@
      "code": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.d",
      "letter": "d",
      "text": "appreciate the role of characters in the class reader",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.14"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E",
@@ -1177,7 +1719,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS",
@@ -1232,7 +1802,8 @@
      "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.c",
      "letter": "c",
      "text": "distinguish the meaning of words on the basis of stress",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS.d",
@@ -1242,7 +1813,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM",
@@ -1307,7 +1906,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE",
@@ -1365,7 +1992,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T5_INTENSIVE_READING_OR",
@@ -1433,7 +2088,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F",
@@ -1490,7 +2173,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS",
@@ -1558,7 +2269,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T6_READING_FLUENCY",
@@ -1609,7 +2348,8 @@
      "code": "ENGL.G7.READIN.T6_READING_FLUENCY.b",
      "letter": "b",
      "text": "read a text at the right speed, accurately and with expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.17"
     },
     {
      "code": "ENGL.G7.READIN.T6_READING_FLUENCY.c",
@@ -1619,7 +2359,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS",
@@ -1676,7 +2444,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG",
@@ -1726,7 +2522,8 @@
      "code": "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.b",
      "letter": "b",
      "text": "use appropriate techniques when performing lullabies, pick out key messages communicated in lullabies",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.15"
     },
     {
      "code": "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG.c",
@@ -1736,7 +2533,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO",
@@ -1794,7 +2619,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS",
@@ -1837,13 +2690,15 @@
      "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.a",
      "letter": "a",
      "text": "identify clues that signal details from a listening text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.5"
     },
     {
      "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.b",
      "letter": "b",
      "text": "take detailed notes on a listening text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.5"
     },
     {
      "code": "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS.c",
@@ -1853,7 +2708,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_",
@@ -1903,7 +2786,8 @@
      "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.b",
      "letter": "b",
      "text": "interpret visuals for information",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.18"
     },
     {
      "code": "ENGL.G7.READIN.T7_INDEPENDENT_READING_.c",
@@ -1913,7 +2797,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS",
@@ -1970,7 +2882,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_",
@@ -2022,11 +2962,40 @@
      "code": "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_.c",
      "letter": "c",
      "text": "appreciate the place of minor characters in the class reader",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.14"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT",
@@ -2084,7 +3053,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS",
@@ -2148,7 +3145,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T8_INTENSIVE_READING",
@@ -2193,19 +3218,22 @@
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.a",
      "letter": "a",
      "text": "distinguish main ideas from supporting details from poems",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.9"
     },
     {
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.b",
      "letter": "b",
      "text": "use contextual clues to infer the meaning of words and phrases in a text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.c",
      "letter": "c",
      "text": "make connections between events in a poem and real life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.10"
     },
     {
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.d",
@@ -2217,7 +3245,8 @@
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.e",
      "letter": "e",
      "text": "answer direct and inferential questions from poems",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.10"
     },
     {
      "code": "ENGL.G7.READIN.T8_INTENSIVE_READING.f",
@@ -2227,7 +3256,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS",
@@ -2288,7 +3345,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T8_INTENSIVE_READING_PO",
@@ -2346,7 +3431,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_",
@@ -2403,7 +3516,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON",
@@ -2471,7 +3612,8 @@
      "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.d",
      "letter": "d",
      "text": "distinguish the meaning of words based on stress",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON.e",
@@ -2481,7 +3623,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI",
@@ -2523,13 +3693,15 @@
      "code": "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.a",
      "letter": "a",
      "text": "select a variety of fictional texts for extensive reading",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.b",
      "letter": "b",
      "text": "read fictional texts for information and enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI.c",
@@ -2539,7 +3711,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T9_CONJUNCTIONS",
@@ -2596,7 +3796,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL",
@@ -2655,7 +3883,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR",
@@ -2711,7 +3967,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D",
@@ -2765,11 +4049,40 @@
      "code": "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D.c",
      "letter": "c",
      "text": "appreciate the importance of good oral presentation skills when delivering a speech",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA",
@@ -2827,7 +4140,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T10_DETERMINERS",
@@ -2886,7 +4227,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR",
@@ -2958,7 +4327,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P",
@@ -3022,7 +4419,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T11_INTERVIEWS",
@@ -3092,7 +4517,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO",
@@ -3133,19 +4586,22 @@
      "code": "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.a",
      "letter": "a",
      "text": "identify print or electronic non-fiction materials that are interesting to read",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.b",
      "letter": "b",
      "text": "read a variety of grade-appropriate non-fiction materials independently for lifelong learning",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.c",
      "letter": "c",
      "text": "recommend to peers suitable non-fiction materials to read for information",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.16"
     },
     {
      "code": "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO.d",
@@ -3155,7 +4611,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI",
@@ -3213,7 +4697,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI",
@@ -3268,7 +4780,8 @@
      "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.c",
      "letter": "c",
      "text": "relate the lessons learnt in the dilemma narrative to real life experiences",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.12"
     },
     {
      "code": "ENGL.G7.READIN.T11_INTENSIVE_READING_DI.d",
@@ -3278,7 +4791,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY",
@@ -3335,7 +4876,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN",
@@ -3375,13 +4944,15 @@
      "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.a",
      "letter": "a",
      "text": "list ways of expressing views/opinions in different contexts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.b",
      "letter": "b",
      "text": "use different expressions that indicate own views/opinions in a given text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.3"
     },
     {
      "code": "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN.c",
@@ -3391,7 +4962,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T12_INTENSIVE_READING_CO",
@@ -3440,7 +5039,8 @@
      "code": "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.b",
      "letter": "b",
      "text": "use contextual clues to infer the meaning of words in a text",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.READIN.T12_INTENSIVE_READING_CO.c",
@@ -3456,7 +5056,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS",
@@ -3511,7 +5139,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID",
@@ -3574,7 +5230,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_",
@@ -3634,7 +5318,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS",
@@ -3698,7 +5410,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO",
@@ -3759,7 +5499,8 @@
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.d",
      "letter": "d",
      "text": "deduce the meaning of words from context",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.8"
     },
     {
      "code": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.e",
@@ -3775,7 +5516,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN",
@@ -3834,7 +5603,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI",
@@ -3904,7 +5701,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR",
@@ -3954,7 +5779,8 @@
      "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.b",
      "letter": "b",
      "text": "create well-written narrative compositions using the specified idioms",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.25"
     },
     {
      "code": "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR.c",
@@ -3964,7 +5790,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND",
@@ -4028,7 +5882,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T14_STUDY_SKILLS_SUMMARI",
@@ -4087,7 +5969,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME",
@@ -4143,7 +6053,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T14_FEATURES_OF_STYLE",
@@ -4199,7 +6137,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_",
@@ -4255,7 +6221,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS",
@@ -4310,11 +6304,40 @@
      "code": "ENGL.G7.LISTEN.T15_ORAL_REPORTS.c",
      "letter": "c",
      "text": "enjoy delivering and listening to oral reports in various contexts",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENGL.G7.RUBRIC.1.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T15_READING_FLUENCY",
@@ -4355,13 +6378,15 @@
      "code": "ENGL.G7.READIN.T15_READING_FLUENCY.a",
      "letter": "a",
      "text": "recognise the use of fluency strategies in the reading process",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G7.RUBRIC.1.20"
     },
     {
      "code": "ENGL.G7.READIN.T15_READING_FLUENCY.b",
      "letter": "b",
      "text": "apply fluency strategies while reading",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "ENGL.G7.RUBRIC.1.20"
     },
     {
      "code": "ENGL.G7.READIN.T15_READING_FLUENCY.c",
@@ -4371,7 +6396,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA",
@@ -4431,7 +6484,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.READIN.T15_POETRY",
@@ -4489,7 +6570,35 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
   },
   {
    "code": "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N",
@@ -4547,7 +6656,434 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENGL.G7.RUBRIC.1.1",
+    "ENGL.G7.RUBRIC.1.2",
+    "ENGL.G7.RUBRIC.1.3",
+    "ENGL.G7.RUBRIC.1.4",
+    "ENGL.G7.RUBRIC.1.5",
+    "ENGL.G7.RUBRIC.1.6",
+    "ENGL.G7.RUBRIC.1.7",
+    "ENGL.G7.RUBRIC.1.8",
+    "ENGL.G7.RUBRIC.1.9",
+    "ENGL.G7.RUBRIC.1.10",
+    "ENGL.G7.RUBRIC.1.11",
+    "ENGL.G7.RUBRIC.1.12",
+    "ENGL.G7.RUBRIC.1.13",
+    "ENGL.G7.RUBRIC.1.14",
+    "ENGL.G7.RUBRIC.1.15",
+    "ENGL.G7.RUBRIC.1.16",
+    "ENGL.G7.RUBRIC.1.17",
+    "ENGL.G7.RUBRIC.1.18",
+    "ENGL.G7.RUBRIC.1.19",
+    "ENGL.G7.RUBRIC.1.20",
+    "ENGL.G7.RUBRIC.1.21",
+    "ENGL.G7.RUBRIC.1.22",
+    "ENGL.G7.RUBRIC.1.23",
+    "ENGL.G7.RUBRIC.1.24",
+    "ENGL.G7.RUBRIC.1.25",
+    "ENGL.G7.RUBRIC.1.26"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENGL.G7.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric (whole design)",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "ENGL.G7.LISTEN.T1_CONVERSATIONAL_SKILL",
+    "ENGL.G7.READIN.T1_EXTENSIVE_READING_IN",
+    "ENGL.G7.GRAMMA.T1_WORD_CLASSES_NOUNS",
+    "ENGL.G7.READIN.T1_INTENSIVE_READING_TR",
+    "ENGL.G7.WRITIN.T1_HANDWRITING_LEGIBILI",
+    "ENGL.G7.LISTEN.T2_ORAL_PRESENTATIONS_O",
+    "ENGL.G7.READIN.T2_INTENSIVE_READING_SI",
+    "ENGL.G7.GRAMMA.T2_WORD_CLASSES_NOUNS",
+    "ENGL.G7.READIN.T2_INTENSIVE_READING_CL",
+    "ENGL.G7.WRITIN.T2_MECHANICS_OF_WRITING",
+    "ENGL.G7.LISTEN.T3_LISTENING_FOR_THE_MA",
+    "ENGL.G7.READIN.T3_READING_INFORMATION_",
+    "ENGL.G7.GRAMMA.T3_VERBS_AND_TENSE",
+    "ENGL.G7.READIN.T3_INTENSIVE_READING_PO",
+    "ENGL.G7.WRITIN.T3_WRITING_NARRATIVE_PA",
+    "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS",
+    "ENGL.G7.READIN.T4_INTENSIVE_READING",
+    "ENGL.G7.GRAMMA.T4_VERBS_AND_TENSE",
+    "ENGL.G7.READIN.T4_INTENSIVE_READING_CL",
+    "ENGL.G7.WRITIN.T4_PARAGRAPHING_USING_E",
+    "ENGL.G7.LISTEN.T5_PRONUNCIATION_SOUNDS",
+    "ENGL.G7.READIN.T5_SYNONYMS_AND_ANTONYM",
+    "ENGL.G7.GRAMMA.T5_COMPARATIVE_AND_SUPE",
+    "ENGL.G7.READIN.T5_INTENSIVE_READING_OR",
+    "ENGL.G7.WRITIN.T5_FUNCTIONAL_WRITING_F",
+    "ENGL.G7.LISTEN.T6_CONVERSATION_SKILLS",
+    "ENGL.G7.READIN.T6_READING_FLUENCY",
+    "ENGL.G7.GRAMMA.T6_WORD_CLASSES_ADVERBS",
+    "ENGL.G7.READIN.T6_ORAL_LITERATURE_SONG",
+    "ENGL.G7.WRITIN.T6_COMMONLY_MISSPELT_WO",
+    "ENGL.G7.LISTEN.T7_LISTENING_COMPREHENS",
+    "ENGL.G7.READIN.T7_INDEPENDENT_READING_",
+    "ENGL.G7.GRAMMA.T7_PERSONAL_AND_POSSESS",
+    "ENGL.G7.READIN.T7_CHARACTERS_IN_CLASS_",
+    "ENGL.G7.WRITIN.T7_COMPOSITION_THE_WRIT",
+    "ENGL.G7.LISTEN.T8_LISTENING_COMPREHENS",
+    "ENGL.G7.READIN.T8_INTENSIVE_READING",
+    "ENGL.G7.GRAMMA.T8_SIMPLE_PREPOSITIONS",
+    "ENGL.G7.READIN.T8_INTENSIVE_READING_PO",
+    "ENGL.G7.WRITIN.T8_COMPOSITION_WRITING_",
+    "ENGL.G7.LISTEN.T9_PRONUNCIATION_CONSON",
+    "ENGL.G7.READIN.T9_GRADE_APPROPRIATE_FI",
+    "ENGL.G7.GRAMMA.T9_CONJUNCTIONS",
+    "ENGL.G7.READIN.T9_INTENSIVE_READING_CL",
+    "ENGL.G7.WRITIN.T9_CREATIVE_WRITING_NAR",
+    "ENGL.G7.LISTEN.T10_ORAL_PRESENTATIONS_D",
+    "ENGL.G7.READIN.T10_STUDY_SKILLS_NOTE_MA",
+    "ENGL.G7.GRAMMA.T10_DETERMINERS",
+    "ENGL.G7.READIN.T10_CHARACTERS_AND_THEIR",
+    "ENGL.G7.WRITIN.T10_FUNCTIONAL_WRITING_P",
+    "ENGL.G7.LISTEN.T11_INTERVIEWS",
+    "ENGL.G7.READIN.T11_EXTENSIVE_READING_NO",
+    "ENGL.G7.GRAMMA.T11_FORMATION_OF_ADJECTI",
+    "ENGL.G7.READIN.T11_INTENSIVE_READING_DI",
+    "ENGL.G7.WRITIN.T11_SPELLING_ANTONYMS_SY",
+    "ENGL.G7.LISTEN.T12_LISTENING_VIEWS_OPIN",
+    "ENGL.G7.READIN.T12_INTENSIVE_READING_CO",
+    "ENGL.G7.GRAMMA.T12_PHRASAL_VERBS",
+    "ENGL.G7.READIN.T12_CLASS_READER_MAIN_ID",
+    "ENGL.G7.WRITIN.T12_THE_WRITING_PROCESS_",
+    "ENGL.G7.LISTEN.T13_LISTENING_COMPREHENS",
+    "ENGL.G7.READIN.T13_INTENSIVE_READING_CO",
+    "ENGL.G7.GRAMMA.T13_SENTENCES_SIMPLE_SEN",
+    "ENGL.G7.READIN.T13_ORAL_LITERATURE_PRAI",
+    "ENGL.G7.WRITIN.T13_CREATIVE_WRITING_NAR",
+    "ENGL.G7.LISTEN.T14_CONSONANT_SOUNDS_AND",
+    "ENGL.G7.READIN.T14_STUDY_SKILLS_SUMMARI",
+    "ENGL.G7.GRAMMA.T14_SUBJECT_VERB_AGREEME",
+    "ENGL.G7.READIN.T14_FEATURES_OF_STYLE",
+    "ENGL.G7.WRITIN.T14_DESCRIPTIVE_WRITING_",
+    "ENGL.G7.LISTEN.T15_ORAL_REPORTS",
+    "ENGL.G7.READIN.T15_READING_FLUENCY",
+    "ENGL.G7.GRAMMA.T15_AFFIRMATIVE_AND_NEGA",
+    "ENGL.G7.READIN.T15_POETRY",
+    "ENGL.G7.WRITIN.T15_FUNCTIONAL_WRITING_N"
+   ],
+   "page": 157,
+   "indicators": [
+    {
+     "code": "ENGL.G7.RUBRIC.1.1",
+     "indicator": "Ability to use polite language during conversations",
+     "levels": {
+      "EE": "Always applies polite language with ease during conversations",
+      "ME": "Always applies polite language during conversations",
+      "AE": "Applies polite language during most conversations",
+      "BE": "Applies polite language during some conversations"
+     },
+     "page": 157,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.2",
+     "indicator": "Ability to use oral narrative performance techniques during their performance",
+     "levels": {
+      "EE": "Uses all oral narrative performance techniques during their performance with a lot of creativity",
+      "ME": "Uses most oral narrative performance techniques during their performance",
+      "AE": "Uses some oral narrative performance techniques during their performance",
+      "BE": "Uses few oral narrative performance techniques during their performance"
+     },
+     "page": 157,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.3",
+     "indicator": "Ability to deliver speeches, oral reports and express views and opinions",
+     "levels": {
+      "EE": "Fluently delivers speeches, oral reports and confidently expresses views and opinions with ease",
+      "ME": "Fluently delivers speeches, oral reports and confidently expresses views and opinions",
+      "AE": "Delivers speeches, oral reports with some inconsistencies and needs help to express views and opinions",
+      "BE": "Delivers speeches, oral reports with many inconsistencies and rarely expresses views and opinions"
+     },
+     "page": 157,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.4",
+     "indicator": "Ability to pick out specific details from texts",
+     "levels": {
+      "EE": "Picks out specific information from a listening text with ease",
+      "ME": "Picks specific information from a listening text",
+      "AE": "Picks out some specific information from a listening text",
+      "BE": "Finds it difficult to pick out specific information from a listening text"
+     },
+     "page": 157,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.5",
+     "indicator": "Ability to identify clues that signal details and take notes from a listening text",
+     "levels": {
+      "EE": "Identifies all the clues that signal details from a listening text and takes detailed notes of all the details",
+      "ME": "Identifies clues that signal details from a listening text and takes notes of all details",
+      "AE": "Identifies some clues that signal details from a listening text and takes notes of some details",
+      "BE": "Struggles to identify some clues that signal details from a text and takes notes of some details from the text with assistance."
+     },
+     "page": 157,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.6",
+     "indicator": "Ability to analyse characters, events, moral lessons from narratives",
+     "levels": {
+      "EE": "Effortlessly analyses all the characters, events, and moral lessons from narratives and provides varied illustrations",
+      "ME": "Analyses all the characters, events and moral lessons from narratives",
+      "AE": "Analyses most of the characters, events and moral lessons from narratives",
+      "BE": "Analyses some of the characters, events and moral lessons from narratives"
+     },
+     "page": 158,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.7",
+     "indicator": "Ability to articulate given sounds, and apply stress and intonation appropriately in given texts",
+     "levels": {
+      "EE": "Articulates all the target consonant and vowel sounds correctly and applies stress and intonation with ease",
+      "ME": "Articulates most the target consonant and vowel sounds correctly and uses stress and intonation",
+      "AE": "Articulates some of the target consonant and vowel sounds correctly and applies stress and intonation in some contexts",
+      "BE": "Articulates a few of the target consonant and vowel sounds correctly and finds it difficult to apply stress and intonation."
+     },
+     "page": 158,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.8",
+     "indicator": "Ability to distinguish between reading for meaning, information and infer meanings of words and phrases and use contextual clues",
+     "levels": {
+      "EE": "Effortlessly distinguishes between reading for meaning, information and infers meanings of all the words and phrases and use contextual clues with ease",
+      "ME": "Distinguishes between reading for meaning, information and infers meanings of all words and phrases and uses most contextual clues",
+      "AE": "Partially distinguishes between reading for meaning, information and infer meanings of some words and phrases and uses some contextual clues",
+      "BE": "Rarely distinguishes between reading for meaning, information and infer meanings of few words and phrases and struggles to use some contextual clues"
+     },
+     "page": 158,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.9",
+     "indicator": "Ability to distinguish between main ideas from supporting ideas",
+     "levels": {
+      "EE": "Distinguishes between main ideas from supporting ideas with ease and provides illustrations",
+      "ME": "Distinguishes between main ideas from supporting ideas with ease",
+      "AE": "Distinguishes between main ideas from supporting ideas with ease with prompts",
+      "BE": "Has difficulty distinguishing between main ideas from supporting ideas even with prompts"
+     },
+     "page": 158,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.10",
+     "indicator": "Ability to make connection between texts and real life, summarise events and answer direct and inferential questions from poems",
+     "levels": {
+      "EE": "Effortlessly makes all connections between texts and real life and provides examples, summarises events and answers all direct and inferential questions from poems",
+      "ME": "Makes most connections between texts and real life, summarises events and answers all direct and inferential questions from poems",
+      "AE": "Make some connections between texts and real life, summarises events and answers some direct and inferential questions from poems",
+      "BE": "Makes few connections between texts and real life, struggles to summarise events and answers few direct and inferential questions from poems"
+     },
+     "page": 159,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.11",
+     "indicator": "Ability to create mental images from texts",
+     "levels": {
+      "EE": "Creates a variety of mental images from texts with ease",
+      "ME": "Creates mental images from texts with ease",
+      "AE": "Creates mental images from texts",
+      "BE": "Creates mental images from texts"
+     },
+     "page": 159,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.12",
+     "indicator": "Ability to analyse characters, derive moral lessons and relate different narratives to real life.",
+     "levels": {
+      "EE": "Analyses all characters, aptly derives moral lessons and relates different narratives to real life with ease",
+      "ME": "Analyses all characters, derives moral lessons and relates different narratives to real life",
+      "AE": "Analyses most characters, derives moral lessons and has difficulty relating different narratives to real life",
+      "BE": "Analyses a few characters, struggles to derive moral lessons and has difficulty relating different narratives to real life."
+     },
+     "page": 159,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.13",
+     "indicator": "Ability to recite, analyse the structure, characters and subject matter of poems",
+     "levels": {
+      "EE": "Eloquently recites poems and exhaustively analyses the structure, characters and subject matter of poems with ease",
+      "ME": "Recites poems and analyses the structure, characters and subject matter of poems with ease",
+      "AE": "Recites poems and scantily analyses the structure, characters and subject matter of poems",
+      "BE": "Incoherently recites poems and barely analyses the structure, characters and subject matter of poems"
+     },
+     "page": 159,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.14",
+     "indicator": "Ability to preview, Conclusively previews Satisfactorily previews Scantily previews the Barely previews the analyse characters and their traits, explain the sequence of events, discuss subject matter and style in a class reader",
+     "levels": {
+      "EE": "the class reader, analyses all the characters and their traits with ease, explains the sequence of events with ease and exhaustively discusses subject matter and style",
+      "ME": "the class reader, analyses all the characters and their traits, explains the sequence of events and discusses subject matter and style",
+      "AE": "class reader, analyses some e characters and their traits, explains the sequence of events with difficulty and struggles to discuss subject matter and style",
+      "BE": "class reader, analyses few characters and their traits, has difficulty explaining the sequence of events and discussing subject matter and style"
+     },
+     "page": 159,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.15",
+     "indicator": "Ability to pick specific messages from songs and use appropriate performance techniques",
+     "levels": {
+      "EE": "Articulately picks all specific messages from songs and creatively uses appropriate performance techniques with ease",
+      "ME": "Picks all specific messages from songs and creatively uses appropriate performance techniques",
+      "AE": "Picks most specific messages from songs and uses appropriate performance techniques.",
+      "BE": "Picks some specific messages from songs and lacks creativity when using performance techniques"
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.16",
+     "indicator": "Ability to identify and read fictional and non-fictional texts for independent reading and information",
+     "levels": {
+      "EE": "Excellently identifies and reads a variety of non- fictional texts independent reading and records experiences from the reading sessions for tracking progress",
+      "ME": "Identifies and reads a variety of fictional and non- fictional texts for independent reading and information",
+      "AE": "Identifies some texts for independent reading with assistance",
+      "BE": "Makes an attempt to identify some texts for independent reading even with assistance"
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.17",
+     "indicator": "Ability to read a text expressively- at the right speed, accurately and with expression.",
+     "levels": {
+      "EE": "Eloquently and fluently reads a text at the right speed, with expression and accurately",
+      "ME": "Fluently reads a text at the right speed, with expression and accurately",
+      "AE": "Reads a text at a slow speed, and lacks expression and accuracy",
+      "BE": "Struggles to read a text at a slow speed, and lacks expression and has many pronunciation errors"
+     },
+     "page": 160,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.18",
+     "indicator": "Ability to interpret visuals for information",
+     "levels": {
+      "EE": "Easily interprets visuals for information with exceptional insight",
+      "ME": "Easily interprets visuals for information",
+      "AE": "Interprets some visuals for information",
+      "BE": "Interprets some visuals for information with support"
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.19",
+     "indicator": "Ability to identify main points, make notes and write a summary",
+     "levels": {
+      "EE": "Accurately identifies all the main points, makes notes and writes a summary with ease",
+      "ME": "Identifies all the main points, makes notes and writes a summary",
+      "AE": "Identifies some main points, makes notes and writes a summary in exhaustively",
+      "BE": "Identifies few main points, make shoddy notes and write a sketchy summary"
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.20",
+     "indicator": "Ability to apply fluency strategies while reading",
+     "levels": {
+      "EE": "Aptly and easily applies all fluency strategies while reading",
+      "ME": "Applies all fluency strategies while reading",
+      "AE": "Applies some fluency strategies while reading",
+      "BE": "Applies few fluency strategies while reading"
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.21",
+     "indicator": "Ability to use different parts of speech in sentences",
+     "levels": {
+      "EE": "Uses all the different parts of speech accurately and in a variety of sentences",
+      "ME": "Uses all the different parts of speech and in sentences",
+      "AE": "Uses most parts of speech and in sentences",
+      "BE": "Uses few parts of speech and in sentences"
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.22",
+     "indicator": "Ability to construct different types of sentences",
+     "levels": {
+      "EE": "Creatively constructs all the different types of sentences with ease",
+      "ME": "Creatively all the constructs different types of sentences",
+      "AE": "Constructs most of the different types of sentences",
+      "BE": "Constructs some types of sentences with assistance"
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.23",
+     "indicator": "Ability to write a well-developed paragraph",
+     "levels": {
+      "EE": "Writes a well-developed paragraph effortlessly and consistently",
+      "ME": "Writes a well-developed Paragraph consistently",
+      "AE": "Writes a Paragraph but leaves out some details.",
+      "BE": "Writes a paragraph but it lacks most details."
+     },
+     "page": 161,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.24",
+     "indicator": "Ability to write different documents using correct format",
+     "levels": {
+      "EE": "Writes different documents using correct format with ease and uses correct tone and vocabulary",
+      "ME": "Writes different documents using correct format with ease",
+      "AE": "Writes some documents using correct format but struggles with tone and vocabulary",
+      "BE": "Barely writes any documents using correct format, and vocabulary"
+     },
+     "page": 162,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.25",
+     "indicator": "Ability to a write composition using correct punctuation, handwriting and specified idioms.",
+     "levels": {
+      "EE": "Writes a composition in neat and legible handwriting, correctly spells words, punctuates it and creatively uses specified idioms with ease",
+      "ME": "Writes a composition in neat and legible handwriting, correctly spells words, punctuates it and creatively uses specified idioms",
+      "AE": "Writes a composition in neat and legible handwriting, has some spelling errors, struggles to punctuate it, and uses some specified idioms",
+      "BE": "Writes a composition illegible handwriting, has little command of punctuation is unable to use specified idioms"
+     },
+     "page": 162,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENGL.G7.RUBRIC.1.26",
+     "indicator": "Ability to apply the writing process in writing and assess appropriately.",
+     "levels": {
+      "EE": "Aptly and meticulously applies the writing process and accurately assesses own composition",
+      "ME": "Meticulously applies the writing process and accurately assesses own composition",
+      "AE": "Applies the writing process with assistance and assesses own composition but leaves some errors",
+      "BE": "Barely applies the writing process and assesses own composition but leaves many errors"
+     },
+     "page": 162,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

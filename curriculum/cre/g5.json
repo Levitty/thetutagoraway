@@ -60,29 +60,36 @@
      "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.a",
      "letter": "a",
      "text": "identify God’s purpose for his or her life to live meaningfully",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.b",
      "letter": "b",
      "text": "narrate the parable of the talents",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.c",
      "letter": "c",
      "text": "apply lessons learnt from the parable in their day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A.d",
      "letter": "d",
      "text": "participate in different activities to nurture their talents, gifts and abilities. Specific Learning Outcomes Suggested Learning Experiences Suggested",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G5.CREATI.WORK",
@@ -127,41 +134,50 @@
      "code": "CRE.G5.CREATI.WORK.a",
      "letter": "a",
      "text": "identify three responsibilities given to human beings by God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.WORK.b",
      "letter": "b",
      "text": "demonstrate good stewardship by taking care of God’s creation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.WORK.c",
      "letter": "c",
      "text": "outline their roles at home, school and church",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.WORK.d",
      "letter": "d",
      "text": "explain the causes of child labour today",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.WORK.e",
      "letter": "e",
      "text": "explain the effects of child labour for protection of self and others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.WORK.f",
      "letter": "f",
      "text": "desire to engage in age-appropriate tasks/chores",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G5.CREATI.THE_FALL_OF_MAN",
@@ -201,23 +217,29 @@
      "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.a",
      "letter": "a",
      "text": "describe the fall of man according to Genesis 3:1-11",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.b",
      "letter": "b",
      "text": "outline five lessons learnt from the fall of man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.THE_FALL_OF_MAN.c",
      "letter": "c",
      "text": "desire to be obedient in day-to- day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G5.CREATI.FAMILY_UNITY",
@@ -260,29 +282,36 @@
      "code": "CRE.G5.CREATI.FAMILY_UNITY.a",
      "letter": "a",
      "text": "describe the importance of family unity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.FAMILY_UNITY.b",
      "letter": "b",
      "text": "identify challenges faced by families today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.FAMILY_UNITY.c",
      "letter": "c",
      "text": "outline ways he/she can contribute to a happy family",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     },
     {
      "code": "CRE.G5.CREATI.FAMILY_UNITY.d",
      "letter": "d",
      "text": "take part in doing simple chores at home",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE",
@@ -340,7 +369,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_",
@@ -394,17 +429,25 @@
      "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.c",
      "letter": "c",
      "text": "discuss why Christians should stand firm in their faith",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.1"
     },
     {
      "code": "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_.d",
      "letter": "d",
      "text": "desire to stand firm in their Christian faith",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU",
@@ -446,19 +489,22 @@
      "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.a",
      "letter": "a",
      "text": "narrate the story of King Solomon",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.2"
     },
     {
      "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.b",
      "letter": "b",
      "text": "outline lessons learnt from the story of King Solomon",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.2"
     },
     {
      "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.c",
      "letter": "c",
      "text": "apply lessons learnt from the story of King Solomon in daily life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.2"
     },
     {
      "code": "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU.d",
@@ -468,7 +514,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS",
@@ -516,7 +568,8 @@
      "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.b",
      "letter": "b",
      "text": "explain five ways of showing respect to the elderly",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.2.2"
     },
     {
      "code": "CRE.G5.THE_BI.NOAH_AND_HIS_SONS.c",
@@ -526,7 +579,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL",
@@ -581,7 +640,8 @@
      "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.c",
      "letter": "c",
      "text": "list five benefits of humility as guided by the story",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.3"
     },
     {
      "code": "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL.d",
@@ -591,7 +651,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST",
@@ -642,7 +708,8 @@
      "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.b",
      "letter": "b",
      "text": "distinguish between true and false gods",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.4"
     },
     {
      "code": "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST.c",
@@ -658,7 +725,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES",
@@ -699,7 +772,8 @@
      "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.a",
      "letter": "a",
      "text": "narrate the story of Moses according to the scriptures",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.2.4"
     },
     {
      "code": "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES.b",
@@ -715,7 +789,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_BI.THE_CALL_OF_MOSES",
@@ -780,7 +860,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.2.1",
+    "CRE.G5.RUBRIC.2.2",
+    "CRE.G5.RUBRIC.2.3",
+    "CRE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST",
@@ -822,29 +908,38 @@
      "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.a",
      "letter": "a",
      "text": "explain the teachings of John the Baptist",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.1"
     },
     {
      "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.b",
      "letter": "b",
      "text": "outline four lessons learnt from the teachings of John the Baptist",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.1"
     },
     {
      "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.c",
      "letter": "c",
      "text": "practise the values learnt from the teachings of John the Baptist",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.1"
     },
     {
      "code": "CRE.G5.THE_LI.JOHN_THE_BAPTIST.d",
      "letter": "d",
      "text": "desire to be a God-fearing Christian as exemplified by John the Baptist",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR",
@@ -885,7 +980,8 @@
      "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.a",
      "letter": "a",
      "text": "outline the events that took place during the baptism of Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.2"
     },
     {
      "code": "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR.b",
@@ -901,7 +997,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.CALMING_THE_STORM",
@@ -945,13 +1046,15 @@
      "code": "CRE.G5.THE_LI.CALMING_THE_STORM.a",
      "letter": "a",
      "text": "narrate the miracle of calming the storm",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.3.2"
     },
     {
      "code": "CRE.G5.THE_LI.CALMING_THE_STORM.b",
      "letter": "b",
      "text": "discuss lessons learnt from the miracle of calming the storm",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.3.2"
     },
     {
      "code": "CRE.G5.THE_LI.CALMING_THE_STORM.c",
@@ -967,7 +1070,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN",
@@ -1010,7 +1118,8 @@
      "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.a",
      "letter": "a",
      "text": "list f o u r ways of helping the needy in today’s society",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.2"
     },
     {
      "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.b",
@@ -1022,7 +1131,8 @@
      "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.c",
      "letter": "c",
      "text": "outline lessons learnt from the feeding of the four thousand",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.1"
     },
     {
      "code": "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN.d",
@@ -1032,7 +1142,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA",
@@ -1073,13 +1188,15 @@
      "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.a",
      "letter": "a",
      "text": "describe the healing of the paralysed man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.b",
      "letter": "b",
      "text": "outline lessons learnt from the healing of the paralysed man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA.c",
@@ -1089,7 +1206,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE",
@@ -1129,23 +1251,31 @@
      "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.a",
      "letter": "a",
      "text": "narrate the parable of the lost sheep",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.b",
      "letter": "b",
      "text": "outline five lessons learnt from the parable of the lost sheep",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE.c",
      "letter": "c",
      "text": "reach out to the lost as taught by Jesus Christ",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT",
@@ -1202,7 +1332,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN",
@@ -1245,19 +1380,22 @@
      "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.a",
      "letter": "a",
      "text": "retell the story of the rich young man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.b",
      "letter": "b",
      "text": "outline lessons learnt from the story of the rich young man",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.c",
      "letter": "c",
      "text": "apply lessons learnt from the story in their day-to-day lives",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN.d",
@@ -1267,7 +1405,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT",
@@ -1316,23 +1459,31 @@
      "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.b",
      "letter": "b",
      "text": "outline lessons learnt from the story of a friend at midnight",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.c",
      "letter": "c",
      "text": "apply lessons learnt from the parable in day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     },
     {
      "code": "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT.d",
      "letter": "d",
      "text": "desire to be persistent in prayers. Specific Learning Outcomes Suggested Learning Experiences Suggested",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.3.1",
+    "CRE.G5.RUBRIC.3.2",
+    "CRE.G5.RUBRIC.3.3"
+   ]
   },
   {
    "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH",
@@ -1376,13 +1527,15 @@
      "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.b",
      "letter": "b",
      "text": "list activities which promoted unity in the early Church",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.4.1"
     },
     {
      "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.c",
      "letter": "c",
      "text": "identify five values needed by Christians to promote Church unity",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.4.1"
     },
     {
      "code": "CRE.G5.THE_CH.THE_EARLY_CHURCH.d",
@@ -1392,7 +1545,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.4.1",
+    "CRE.G5.RUBRIC.4.2"
+   ]
   },
   {
    "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER",
@@ -1440,7 +1597,8 @@
      "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.b",
      "letter": "b",
      "text": "explain the significance of the Lord’s Supper to Christians today",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.4.2"
     },
     {
      "code": "CRE.G5.THE_CH.THE_LORD_S_SUPPER.c",
@@ -1456,7 +1614,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.4.1",
+    "CRE.G5.RUBRIC.4.2"
+   ]
   },
   {
    "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT",
@@ -1502,13 +1664,15 @@
      "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.b",
      "letter": "b",
      "text": "outline the fruit of the Holy Spirit from the scriptures provided",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.4.2"
     },
     {
      "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.c",
      "letter": "c",
      "text": "explain how the fruit of the Holy Spirit promotes harmony among Christians",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.4.2"
     },
     {
      "code": "CRE.G5.THE_CH.THE_HOLY_SPIRIT.d",
@@ -1518,7 +1682,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.4.1",
+    "CRE.G5.RUBRIC.4.2"
+   ]
   },
   {
    "code": "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU",
@@ -1576,7 +1744,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.4.1",
+    "CRE.G5.RUBRIC.4.2"
+   ]
   },
   {
    "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION",
@@ -1617,7 +1789,8 @@
      "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.a",
      "letter": "a",
      "text": "identify five qualities/values to consider in choosing good friends",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.5.1"
     },
     {
      "code": "CRE.G5.CHRIST.FRIENDSHIP_FORMATION.b",
@@ -1633,7 +1806,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.5.1",
+    "CRE.G5.RUBRIC.5.2",
+    "CRE.G5.RUBRIC.5.3"
+   ]
   },
   {
    "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY",
@@ -1693,19 +1871,22 @@
      "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.c",
      "letter": "c",
      "text": "distinguish between healthy and unhealthy boy-girl relationships",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.d",
      "letter": "d",
      "text": "explain the consequences of engaging in unhealthy boy-girl relationships",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.e",
      "letter": "e",
      "text": "discuss how to overcome unhealthy boy-girl relationships",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.HUMAN_SEXUALITY.f",
@@ -1715,7 +1896,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.5.1",
+    "CRE.G5.RUBRIC.5.2",
+    "CRE.G5.RUBRIC.5.3"
+   ]
   },
   {
    "code": "CRE.G5.CHRIST.SANCTITY_OF_LIFE",
@@ -1782,7 +1968,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.5.1",
+    "CRE.G5.RUBRIC.5.2",
+    "CRE.G5.RUBRIC.5.3"
+   ]
   },
   {
    "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
@@ -1833,29 +2024,38 @@
      "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.b",
      "letter": "b",
      "text": "state why young people engage in alcohol, drugs and substance abuse",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.c",
      "letter": "c",
      "text": "outline the effects of alcohol, drugs and substance abuse",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.d",
      "letter": "d",
      "text": "identify five values needed to avoid alcohol, drugs and substance abuse",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     },
     {
      "code": "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA.e",
      "letter": "e",
      "text": "avoid alcohol, drugs and substance abuse",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G5.RUBRIC.5.2"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.5.1",
+    "CRE.G5.RUBRIC.5.2",
+    "CRE.G5.RUBRIC.5.3"
+   ]
   },
   {
    "code": "CRE.G5.CHRIST.SOCIAL_MEDIA",
@@ -1909,7 +2109,8 @@
      "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.c",
      "letter": "c",
      "text": "discuss safety measures to observe when using social media",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CRE.G5.RUBRIC.5.3"
     },
     {
      "code": "CRE.G5.CHRIST.SOCIAL_MEDIA.d",
@@ -1919,7 +2120,250 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G5.RUBRIC.5.1",
+    "CRE.G5.RUBRIC.5.2",
+    "CRE.G5.RUBRIC.5.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G5.RUBRIC.1",
+   "heading": "Assessment Rubric",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G5.CREATI.MY_PURPOSE_TALENTS_AND_A",
+    "CRE.G5.CREATI.WORK",
+    "CRE.G5.CREATI.THE_FALL_OF_MAN",
+    "CRE.G5.CREATI.FAMILY_UNITY"
+   ],
+   "page": 20,
+   "indicators": [
+    {
+     "code": "CRE.G5.RUBRIC.1.1",
+     "indicator": "Ability to use God-given talents and abilities responsibly Ability to identify three responsibilities given to human beings by God Ability to explain five lessons learnt from the fall of man",
+     "levels": {
+      "EE": "Uses God-given talents and abilities responsibly and encourages others to do the same Identifies three responsibilities given to human beings by God and cites relevant Bible texts Explains five lessons learnt from the fall of man and cites relevant Bible texts",
+      "ME": "Uses God-given talents and abilities responsibly Identifiesthree responsibilities given to human beings by God Explains five lessons learnt from the fall of man",
+      "AE": "Uses God-given talents and abilities responsibly with prompting Identifies two responsibilities given to human beings by God Explains three to four lessons learnt from the fall of man",
+      "BE": "Has difficulty using God-given talents and abilities responsibly even with prompting Identifies one responsibility given to human beings by God Explains one to two lessons learnt from the fall of man"
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "The Bible",
+   "covers": [
+    "CRE.G5.THE_BI.THE_BIBLE_AS_A_GUIDE",
+    "CRE.G5.THE_BI.BIBLE_STORIES_PETER_AND_",
+    "CRE.G5.THE_BI.KING_SOLOMON_THE_WISE_RU",
+    "CRE.G5.THE_BI.NOAH_AND_HIS_SONS",
+    "CRE.G5.THE_BI.A_HAND_WRITES_ON_THE_WAL",
+    "CRE.G5.THE_BI.MOUNT_CARMEL_CONTEST",
+    "CRE.G5.THE_BI.THE_BIRTH_OF_MOSES",
+    "CRE.G5.THE_BI.THE_CALL_OF_MOSES"
+   ],
+   "page": 37,
+   "indicators": [
+    {
+     "code": "CRE.G5.RUBRIC.2.1",
+     "indicator": "Ability to identify the benefits of using the Bible as a daily guide Ability to discuss why Christians should stand firm in their faith",
+     "levels": {
+      "EE": "Outlines the benefits of using the Bible as a daily guide and gives relevant examples Discusses why Christians should stand firm in their faith in details",
+      "ME": "Outlines the benefits of using the Bible as a daily guide Discusses why Christians should stand firm in their faith",
+      "AE": "Outlines s o m e benefits of using the Bible as a daily guide when prompted Discusses why Christians should stand firm in their faith with guidance",
+      "BE": "Has challenges outlining t h e benefits of using the Bible as a daily guide even when prompted Has challenges discussing why Christians should stand firm in their faith even with guidance"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.2.2",
+     "indicator": "Ability to narrate the story of King Solomon Ability to explain five ways of showing respect to the elderly",
+     "levels": {
+      "EE": "Narrates the story of King Solomon in details Explains five ways of showing respect to the elderly and cites relevant examples",
+      "ME": "Narrates the story of King Solomon Explains five ways of showing respect to the elderly",
+      "AE": "Narrates the story of King Solomon with guidance Explains three to four ways of showing respect to the elderly",
+      "BE": "Has challenges narrating the story of King Solomon even with guidance Explains one to two ways of showing respect to the elderly"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.2.3",
+     "indicator": "Ability to list five benefits of humility as guided by the story",
+     "levels": {
+      "EE": "Lists five benefits of humility as guided by the story citing relevant Bible texts",
+      "ME": "Lists five benefits of humility as guided by the story",
+      "AE": "Lists three to four benefits of humility as guided by the story",
+      "BE": "Lists one to two benefits of humility as guided by the story"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.2.4",
+     "indicator": "Ability to distinguish between true and false gods Ability to narrate the story of Moses according to the scriptures",
+     "levels": {
+      "EE": "Distinguishes between true and false gods and cites relevant Bible texts in details Narrates the story of Moses according to the scriptures in details",
+      "ME": "Distinguishes between true and false gods Narrates the story of Moses according to the scriptures",
+      "AE": "Distinguishes between true and false gods with guidance Narrates the story of Moses according to the scriptures with guidance",
+      "BE": "Has challenges distinguishing between true and false gods even with guidance Has challenges narrating the story of Moses according to the scriptures even with guidance"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "The Life of Jesus Christ",
+   "covers": [
+    "CRE.G5.THE_LI.JOHN_THE_BAPTIST",
+    "CRE.G5.THE_LI.THE_BAPTISM_OF_JESUS_CHR",
+    "CRE.G5.THE_LI.CALMING_THE_STORM",
+    "CRE.G5.THE_LI.FEEDING_THE_FOUR_THOUSAN",
+    "CRE.G5.THE_LI.HEALING_THE_PARALYSED_MA",
+    "CRE.G5.THE_LI.PARABLE_OF_THE_LOST_SHEE",
+    "CRE.G5.THE_LI.SERMON_ON_THE_MOUNT",
+    "CRE.G5.THE_LI.THE_RICH_YOUNG_MAN",
+    "CRE.G5.THE_LI.A_FRIEND_AT_MIDNIGHT"
+   ],
+   "page": 56,
+   "indicators": [
+    {
+     "code": "CRE.G5.RUBRIC.3.1",
+     "indicator": "Ability to outline four lessons learnt from the teachings of John the Baptist",
+     "levels": {
+      "EE": "Outlines four lessons learnt from the teachings of John the Baptist citing relevant examples",
+      "ME": "Outlines four lessons learnt from the teachings of John the Baptist",
+      "AE": "Outlines two to three lessons learnt from the teachings of John the Baptist",
+      "BE": "Outlines one lesson learnt from the teachings of John the Baptist"
+     },
+     "page": 56,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.3.2",
+     "indicator": "Ability to outline the events that took place during the baptism of Jesus Christ Ability to relate the miracle of calming the storm to God’s power over nature Ability to list f o u r ways of helping the needy in society",
+     "levels": {
+      "EE": "Outlines the events that took place during the baptism of Jesus Christ sequentially Relates the miracle of calming the storm to God’s power over nature and cites relevant Bible texts Lists f o u r ways of helping the needy in society citing relevant examples",
+      "ME": "Outlines the events that took place during the baptism of Jesus Christ Relates the miracle of calming the storm to God’s power over nature Lists f o u r ways of helping the needy in the society",
+      "AE": "Outlines the events that took place during the baptism of Jesus Christ when prompted Relates the miracle of calming the storm to God’s power over nature when prompted Lists t w o t o t h r e e ways of helping the needy in the society",
+      "BE": "Struggles to outline the events that took place during the baptism of Jesus Christ even when prompted Struggles to relate the miracle of calming the storm to God’s power over nature even when prompted List o n e w a y of helping the needy in the society"
+     },
+     "page": 56,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.3.3",
+     "indicator": "Ability to discuss lessons learnt from the healing of the paralysed man Ability to explain f i v e lessons learnt from the parable of the lost sheep Ability to explain the relevance of the teachings of Jesus Christ in the story of the rich young man Ability to explain the importance of persistence in prayer",
+     "levels": {
+      "EE": "Discusses lessons learnt from the healing of the paralysed man in details Explains five lessons learnt from the parable of the lost sheep and cites relevant Bible texts Explains the relevance of the teachings of Jesus Christ in the story of the rich young man in details Explains the importance of persistence in prayer citing relevant Bible texts",
+      "ME": "Discusses lessons learnt from the healing of the paralysed man Explains five lessons learnt from the parable of the lost sheep Explains the relevance of the teachings of Jesus Christ in the story of the rich young man Explains the importance of persistence in prayer",
+      "AE": "Discusses some lessons learnt from the healing of the paralysed Explains t h r e e t o f o u r lessons learnt from the parable of the lost sheep Explains the relevance of some of the teachings of Jesus Christ in the story of the rich young man Explains the importance of persistence in prayer when prompted",
+      "BE": "Struggles to discuss lessons learnt from the healing of the paralysed man Explains one to two lessons learnt from the parable of the lost sheep Struggles to explain the relevance of the teachings of Jesus Christ in the story of the rich young man Struggles to explain the importance of persistence in prayer even when prompted"
+     },
+     "page": 57,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G5.RUBRIC.4",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "The Church",
+   "covers": [
+    "CRE.G5.THE_CH.THE_EARLY_CHURCH",
+    "CRE.G5.THE_CH.THE_LORD_S_SUPPER",
+    "CRE.G5.THE_CH.THE_HOLY_SPIRIT",
+    "CRE.G5.THE_CH.PETER_S_MIRACULOUS_RESCU"
+   ],
+   "page": 65,
+   "indicators": [
+    {
+     "code": "CRE.G5.RUBRIC.4.1",
+     "indicator": "Ability to identify five values needed by Christians to promote Church unity",
+     "levels": {
+      "EE": "Identifies five values needed by Christians to promote Church unity citing relevant examples",
+      "ME": "Identifies five values needed by Christians to promote Church unity",
+      "AE": "Identifies three to four values needed by Christians to promote Church unity",
+      "BE": "Identifies one to two values needed by Christians to promote Church unity"
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.4.2",
+     "indicator": "Ability to explain t h e significance of the Lord’s Supper to Christians today Ability to identify how the fruit of the Holy Spirit has helped in promoting God’s work",
+     "levels": {
+      "EE": "Explains t h e significance of the Lord’s Supper to Christians today and cites relevant Bible texts Identifies how the fruit of the Holy Spirit has helped in promoting God’s work and uses relevant illustrations",
+      "ME": "Explains t h e significance of the Lord’s Supper to Christians today Identifies how the fruit of the Holy Spirit has helped in promoting God’s work",
+      "AE": "Explains the significance of the Lord’s Supper to Christians today with guidance Identifies how the fruit of the Holy Spirit has helped in promoting God’s work when prompted",
+      "BE": "Has challenges explaining te significance of the Lord’s Supper to Christians today even with guidance Has challenges identifying h o w the fruit of the Holy Spirit has helped in promoting God’s work even when prompted"
+     },
+     "page": 65,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G5.RUBRIC.5",
+   "heading": "Suggested Assessment Rubrics",
+   "strand": "Christian Living",
+   "covers": [
+    "CRE.G5.CHRIST.FRIENDSHIP_FORMATION",
+    "CRE.G5.CHRIST.HUMAN_SEXUALITY",
+    "CRE.G5.CHRIST.SANCTITY_OF_LIFE",
+    "CRE.G5.CHRIST.ALCOHOL_DRUGS_AND_SUBSTA",
+    "CRE.G5.CHRIST.SOCIAL_MEDIA"
+   ],
+   "page": 77,
+   "indicators": [
+    {
+     "code": "CRE.G5.RUBRIC.5.1",
+     "indicator": "Ability to identify five qualities to consider in choosing a good friend",
+     "levels": {
+      "EE": "Identifies five qualities to consider in choosing a good friend citing relevant examples",
+      "ME": "Identifies five qualities to consider in choosing a good friend",
+      "AE": "Identifies three to four qualities to consider in choosing a good friend",
+      "BE": "Identifies one to two qualities to consider in choosing a good friend"
+     },
+     "page": 77,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.5.2",
+     "indicator": "Ability to distinguish between healthy and unhealthy boy-girl relationships Ability to identify five values needed to avoid alcohol, drugs and substance abuse",
+     "levels": {
+      "EE": "Distinguishes between healthy and unhealthy boy-girl relationships and uses illustrations Identifies more than five values needed to avoid alcohol, drugs and substance abuse citing relevant examples",
+      "ME": "Distinguishes between healthy and unhealthy boy-girl relationships Identifies five values needed to avoid alcohol, drugs and substance abuse",
+      "AE": "Distinguishes between healthy and unhealthy boy-girl relationships with guidance Identifies three to four values needed to avoid alcohol, drugs and substance abuse",
+      "BE": "Has difficulty distinguishing between healthy and unhealthy boy-girl relationships even with guidance Identifies one to two values needed to avoid alcohol, drugs and substance abuse"
+     },
+     "page": 77,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G5.RUBRIC.5.3",
+     "indicator": "Ability to list social media sites COMMUNITY SERVICE LEARNING AT UPPER PRIMARY (GRADE 4-6) At this level, the goal of the CSL activity is to provide linkages between concepts learnt in the various learning activities and the real-life experiences. Learners begin to make connections between what they learn and the relevance to their daily life. CSL is hosted in the Social Studies learning area. The implementation is a collaborative effort where the class teacher coordinates and works with other subject teachers to design and implement the integrated CSL activity. Though they are teacher-guided, the learners should progressively be given more autonomy to identify problems and come up with solutions. The safety of the learners should also be taken into account when selecting the CSL activity. The following steps for the integrated CSL activity should be staggered across the school terms: Steps in carrying out the integrated CSL activity 1. Preparation ● Map out the targeted core competencies, values and specific learning area skills for the CSL activity ● Identify resources required for the activity (locally available materials) ● Stagger the activities across the term (set dates and time for the activities) ● Communicate to learners, parents/caregivers/guardians, school administration, teachers and other relevant stakeholders in the school community ● Identify and develop assessment tools 2. Implementation of the CSL Activity ● Assign roles to learners. ● Ensure every learner actively participates in the activity ● Observe learners as they carry out the CSL activity and record feedback ● Use an appropriate assessment tool to assess both the process and the product (assess learner’s work from the beginning to the end product) ● Assess the targeted core competencies, values and subject skills. 3. Reflection on the CSL Activity Conduct a self-evaluation session with learners on the integrated CSL activity undertaken by discussing the following: ● what went well and why ● what did not go well and why ● what can be done differently next time ● what they have learnt. There will be one integrated CSL activity that will be conducted annually. The thematic areas for the integrated CSL activity will be derived from the broader categories of the PCIs and concepts from the various learning areas. Teachers are expected to vary the themes yearly to allow learners to address different PCIs within their contexts. There should be a linkage between the skills from the learning areas and the themes. The integrated CSL activity will take a Whole School Approach (WSA) where the entire school community is involved (learners, parents/caregivers/guardians, school administration, teachers). Parents/caregivers/guardians are key stakeholders in the planning and execution of the CSL activity. Although the teacher takes the lead role in the planning and integration of the CSL activity, learners will be expected to participate actively in the whole process. The CSL activity provides an opportunity for the development of core competencies and the nurturing of various values. The teacher is expected to vary the core competencies and values emphasised in the activity yearly. Assessment of the CSL Activity Assessment of the integrated CSL activity will focus on 3 components namely: skills from various learning areas applied in carrying out the activity, and core competencies and values demonstrated. Assessment should focus on both the process and end product of the CSL activity. The teacher will assess learners in groups using various tools such as an observation schedule, checklist or rating scale or any other appropriate tool.",
+     "levels": {
+      "EE": "Exhaustively lists social media sites",
+      "ME": "Lists social media sites",
+      "AE": "Lists some social media sites",
+      "BE": "Has difficulty listing social media sites"
+     },
+     "page": 77,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }

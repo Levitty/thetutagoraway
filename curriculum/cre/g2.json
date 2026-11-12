@@ -56,13 +56,15 @@
      "code": "CRE.G2.CREATI.SELF_AWARENESS.a",
      "letter": "a",
      "text": "state what they like about themselves",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.1"
     },
     {
      "code": "CRE.G2.CREATI.SELF_AWARENESS.b",
      "letter": "b",
      "text": "list five different chores they do at home",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.2"
     },
     {
      "code": "CRE.G2.CREATI.SELF_AWARENESS.c",
@@ -72,7 +74,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.1.1",
+    "CRE.G2.RUBRIC.1.2",
+    "CRE.G2.RUBRIC.1.3",
+    "CRE.G2.RUBRIC.1.4",
+    "CRE.G2.RUBRIC.1.5",
+    "CRE.G2.RUBRIC.1.6"
+   ]
   },
   {
    "code": "CRE.G2.CREATI.MY_FAMILY",
@@ -113,19 +123,22 @@
      "code": "CRE.G2.CREATI.MY_FAMILY.a",
      "letter": "a",
      "text": "name family members to promote a sense of belonging",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.3"
     },
     {
      "code": "CRE.G2.CREATI.MY_FAMILY.b",
      "letter": "b",
      "text": "state items shared at home to foster family unity",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.4"
     },
     {
      "code": "CRE.G2.CREATI.MY_FAMILY.c",
      "letter": "c",
      "text": "identify four items that should not be shared at home for healthy living",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.4"
     },
     {
      "code": "CRE.G2.CREATI.MY_FAMILY.d",
@@ -135,7 +148,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.1.1",
+    "CRE.G2.RUBRIC.1.2",
+    "CRE.G2.RUBRIC.1.3",
+    "CRE.G2.RUBRIC.1.4",
+    "CRE.G2.RUBRIC.1.5",
+    "CRE.G2.RUBRIC.1.6"
+   ]
   },
   {
    "code": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_",
@@ -182,13 +203,15 @@
      "code": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.a",
      "letter": "a",
      "text": "recognise God as the creator of the sky, sun, moon, and stars",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.5"
     },
     {
      "code": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.b",
      "letter": "b",
      "text": "draw the sun, moon, and stars to appreciate God’s creation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.1.6"
     },
     {
      "code": "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_.c",
@@ -228,7 +251,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.1.1",
+    "CRE.G2.RUBRIC.1.2",
+    "CRE.G2.RUBRIC.1.3",
+    "CRE.G2.RUBRIC.1.4",
+    "CRE.G2.RUBRIC.1.5",
+    "CRE.G2.RUBRIC.1.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE",
@@ -267,23 +298,34 @@
      "code": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.a",
      "letter": "a",
      "text": "state the number of books in the Old Testament",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.2.2"
     },
     {
      "code": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.b",
      "letter": "b",
      "text": "identify the first two books in the Old Testament",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.2.3"
     },
     {
      "code": "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE.c",
      "letter": "c",
      "text": "appreciate the Bible as the word of God by reading it always",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.2.1",
+    "CRE.G2.RUBRIC.2.2",
+    "CRE.G2.RUBRIC.2.3",
+    "CRE.G2.RUBRIC.2.4",
+    "CRE.G2.RUBRIC.2.5",
+    "CRE.G2.RUBRIC.2.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_",
@@ -326,7 +368,8 @@
      "code": "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.a",
      "letter": "a",
      "text": "retell the call of Samuel as guided by the scriptures",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.2.4"
     },
     {
      "code": "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_.b",
@@ -342,7 +385,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.2.1",
+    "CRE.G2.RUBRIC.2.2",
+    "CRE.G2.RUBRIC.2.3",
+    "CRE.G2.RUBRIC.2.4",
+    "CRE.G2.RUBRIC.2.5",
+    "CRE.G2.RUBRIC.2.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH",
@@ -386,7 +437,8 @@
      "code": "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.a",
      "letter": "a",
      "text": "retell the story of Daniel as guided by the Bible text",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.2.4"
     },
     {
      "code": "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH.b",
@@ -408,7 +460,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.2.1",
+    "CRE.G2.RUBRIC.2.2",
+    "CRE.G2.RUBRIC.2.3",
+    "CRE.G2.RUBRIC.2.4",
+    "CRE.G2.RUBRIC.2.5",
+    "CRE.G2.RUBRIC.2.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO",
@@ -464,7 +524,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.2.1",
+    "CRE.G2.RUBRIC.2.2",
+    "CRE.G2.RUBRIC.2.3",
+    "CRE.G2.RUBRIC.2.4",
+    "CRE.G2.RUBRIC.2.5",
+    "CRE.G2.RUBRIC.2.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS",
@@ -505,13 +573,15 @@
      "code": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.a",
      "letter": "a",
      "text": "relate the joy of the shepherds as guided by the scriptures",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.1"
     },
     {
      "code": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.b",
      "letter": "b",
      "text": "describe the dedication of baby Jesus",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.2"
     },
     {
      "code": "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS.c",
@@ -521,7 +591,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN",
@@ -563,13 +641,15 @@
      "code": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.a",
      "letter": "a",
      "text": "list three gifts given to baby Jesus by the wise men",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.3"
     },
     {
      "code": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.b",
      "letter": "b",
      "text": "demonstrate assertiveness by refusing gifts from strangers",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.4"
     },
     {
      "code": "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN.c",
@@ -579,7 +659,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM",
@@ -626,7 +714,8 @@
      "code": "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.b",
      "letter": "b",
      "text": "list lessons learnt from the miracle of calming the storm",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.6"
     },
     {
      "code": "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM.c",
@@ -636,7 +725,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH",
@@ -684,7 +781,8 @@
      "code": "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.b",
      "letter": "b",
      "text": "mention three lessons learnt from the miraculous catch of fish",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.3.6"
     },
     {
      "code": "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH.c",
@@ -694,7 +792,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W",
@@ -750,7 +856,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.THE_EA.EASTER",
@@ -807,7 +921,15 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.3.1",
+    "CRE.G2.RUBRIC.3.2",
+    "CRE.G2.RUBRIC.3.3",
+    "CRE.G2.RUBRIC.3.4",
+    "CRE.G2.RUBRIC.3.5",
+    "CRE.G2.RUBRIC.3.6"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.SHARING",
@@ -848,13 +970,15 @@
      "code": "CRE.G2.CHRIST.SHARING.a",
      "letter": "a",
      "text": "identify five items shared at school",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.1"
     },
     {
      "code": "CRE.G2.CHRIST.SHARING.b",
      "letter": "b",
      "text": "demonstrate kindness by sharing items with others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.2"
     },
     {
      "code": "CRE.G2.CHRIST.SHARING.c",
@@ -864,7 +988,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.OBEDIENCE",
@@ -904,13 +1039,15 @@
      "code": "CRE.G2.CHRIST.OBEDIENCE.a",
      "letter": "a",
      "text": "list five ways they obey teachers and the children’s government",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.3"
     },
     {
      "code": "CRE.G2.CHRIST.OBEDIENCE.b",
      "letter": "b",
      "text": "discuss reasons for obeying teachers and the children’s government",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.3"
     },
     {
      "code": "CRE.G2.CHRIST.OBEDIENCE.c",
@@ -920,7 +1057,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.HONESTY",
@@ -963,13 +1111,15 @@
      "code": "CRE.G2.CHRIST.HONESTY.a",
      "letter": "a",
      "text": "tell reasons for telling the truth in their interaction with others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.4"
     },
     {
      "code": "CRE.G2.CHRIST.HONESTY.b",
      "letter": "b",
      "text": "demonstrate responsibility by completing their homework on time",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.8"
     },
     {
      "code": "CRE.G2.CHRIST.HONESTY.c",
@@ -985,7 +1135,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.THANKFULNESS",
@@ -1041,7 +1202,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.FORGIVENESS",
@@ -1080,7 +1252,8 @@
      "code": "CRE.G2.CHRIST.FORGIVENESS.a",
      "letter": "a",
      "text": "practise forgiveness to foster harmonious living",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.4.7"
     },
     {
      "code": "CRE.G2.CHRIST.FORGIVENESS.b",
@@ -1096,7 +1269,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.RESPONSIBILITY",
@@ -1153,7 +1337,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.CHRIST.WORK",
@@ -1207,7 +1402,18 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.4.1",
+    "CRE.G2.RUBRIC.4.2",
+    "CRE.G2.RUBRIC.4.3",
+    "CRE.G2.RUBRIC.4.4",
+    "CRE.G2.RUBRIC.4.5",
+    "CRE.G2.RUBRIC.4.6",
+    "CRE.G2.RUBRIC.4.7",
+    "CRE.G2.RUBRIC.4.8",
+    "CRE.G2.RUBRIC.4.9"
+   ]
   },
   {
    "code": "CRE.G2.THE_CH.PRAYER",
@@ -1246,13 +1452,15 @@
      "code": "CRE.G2.THE_CH.PRAYER.a",
      "letter": "a",
      "text": "recite the first four lines of the Lord’s prayer",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.5.1"
     },
     {
      "code": "CRE.G2.THE_CH.PRAYER.b",
      "letter": "b",
      "text": "retell the story of a friend at midnight",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.5.2"
     },
     {
      "code": "CRE.G2.THE_CH.PRAYER.c",
@@ -1262,7 +1470,13 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.5.1",
+    "CRE.G2.RUBRIC.5.2",
+    "CRE.G2.RUBRIC.5.3",
+    "CRE.G2.RUBRIC.5.4"
+   ]
   },
   {
    "code": "CRE.G2.THE_CH.THE_HOLY_SPIRIT",
@@ -1303,13 +1517,15 @@
      "code": "CRE.G2.THE_CH.THE_HOLY_SPIRIT.a",
      "letter": "a",
      "text": "state the promise Jesus gave to His disciples",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.5.3"
     },
     {
      "code": "CRE.G2.THE_CH.THE_HOLY_SPIRIT.b",
      "letter": "b",
      "text": "mention three roles of the Holy Spirit in the life of a Christian",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G2.RUBRIC.5.4"
     },
     {
      "code": "CRE.G2.THE_CH.THE_HOLY_SPIRIT.c",
@@ -1319,7 +1535,459 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G2.RUBRIC.5.1",
+    "CRE.G2.RUBRIC.5.2",
+    "CRE.G2.RUBRIC.5.3",
+    "CRE.G2.RUBRIC.5.4"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G2.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G2.CREATI.SELF_AWARENESS",
+    "CRE.G2.CREATI.MY_FAMILY",
+    "CRE.G2.CREATI.CREATION_OF_THE_SKY_SUN_"
+   ],
+   "page": 11,
+   "indicators": [
+    {
+     "code": "CRE.G2.RUBRIC.1.1",
+     "indicator": "Ability to state what they like about themselves.",
+     "levels": {
+      "EE": "Learner states what they like about themselves with ease.",
+      "ME": "Learner states what they like about themselves.",
+      "AE": "Learner makes efforts to state what they like about themselves.",
+      "BE": "Learner states what they like about themselves with prompts."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.1.2",
+     "indicator": "Ability to list five chores they do at home.",
+     "levels": {
+      "EE": "Learner lists five chores they do at home citing relevant examples.",
+      "ME": "Learner lists five chores they do at home.",
+      "AE": "Learner lists four to three chores they do at home.",
+      "BE": "Learner lists two to one chore they do at home."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.1.3",
+     "indicator": "Ability to name family members to promote a sense of belonging.",
+     "levels": {
+      "EE": "Learner exhaustively names family members to promote a sense of belonging.",
+      "ME": "Learner names family members to promote a sense of belonging.",
+      "AE": "Learner names some family members to promote a sense of belonging.",
+      "BE": "Learner names family members to promote a sense of belonging with prompts."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.1.4",
+     "indicator": "Ability to identify four items that should not be shared at home for healthy living.",
+     "levels": {
+      "EE": "Learner identifies four items that should not be shared at home for healthy living and cites relevant examples.",
+      "ME": "Learner identifies four items that should not be shared at home for healthy living.",
+      "AE": "Learner identifies three to two items that should not be shared at home for healthy living.",
+      "BE": "Learner identifies one item that should not be shared at home for healthy living."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.1.5",
+     "indicator": "Ability to recognise God as the creator of the sky, sun, moon, and stars and reveres Him.",
+     "levels": {
+      "EE": "Learner recognises God as the creator of the sky, sun, moon and stars, reveres Him and encourages peers to do so.",
+      "ME": "Learner recognises God as the creator of the sky, sun, moon and, stars and reveres Him.",
+      "AE": "Learner makes efforts to recognise God as the creator of the sky, sun, moon, and stars and reveres Him.",
+      "BE": "Learner with support recognises God as the creator of the sky, sun, moon, and stars and reveres Him."
+     },
+     "page": 12,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.1.6",
+     "indicator": "Ability to draw the sun, moon, and stars to appreciate God’s creation.",
+     "levels": {
+      "EE": "Learner skilfully draws the sun, moon, and stars to appreciate God’s creation.",
+      "ME": "Learner draws the sun, moon, and stars to appreciate God’s creation.",
+      "AE": "Learner attempt to draw the sun, moon, and stars to appreciate God’s creation.",
+      "BE": "Learner with assistance draws the sun, moon, and stars to appreciate God’s creation."
+     },
+     "page": 12,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G2.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "The Holy Bible",
+   "covers": [
+    "CRE.G2.THE_HO.DIVISIONS_OF_THE_BIBLE",
+    "CRE.G2.THE_HO.BIBLE_STORY_THE_CALL_OF_",
+    "CRE.G2.THE_HO.BIBLE_STORY_DANIEL_IN_TH",
+    "CRE.G2.THE_HO.THE_BIBLE_STORY_THE_WIDO"
+   ],
+   "page": 20,
+   "indicators": [
+    {
+     "code": "CRE.G2.RUBRIC.2.1",
+     "indicator": "Ability to list the importance of reading the Bible.",
+     "levels": {
+      "EE": "Learner lists the importance of reading the Bible and cites relevant examples.",
+      "ME": "Learner identifies the importance of reading the Bible.",
+      "AE": "Learner identifies some importance of reading the Bible.",
+      "BE": "Learner identifies the importance of reading the Bible with constant guidance."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.2.2",
+     "indicator": "Ability to state the number of books in the Old Testament.",
+     "levels": {
+      "EE": "Learner with ease states the number of books in the Old Testament.",
+      "ME": "Learner states the number of books in the Old Testament.",
+      "AE": "Learner partially states the number of books in the Old Testament.",
+      "BE": "Learner states the number of books in the Old Testament with constant assistance."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.2.3",
+     "indicator": "Ability to identify the first two books in the Old Testament.",
+     "levels": {
+      "EE": "Learner explicitly identifies the first two books in the Old Testament.",
+      "ME": "Learner identifies the first two books in the Old Testament.",
+      "AE": "Learner identifies the first book in the Old Testament.",
+      "BE": "Learner identifies the first book in the Old Testament with assistance."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.2.4",
+     "indicator": "Ability to retell the Bible stories as guided by the scriptures.",
+     "levels": {
+      "EE": "Learner retells the Bible stories as guided by the scriptures in details.",
+      "ME": "Learner retells the Bible stories as guided by the scriptures.",
+      "AE": "Learner retells the Bible stories as guided by the scriptures but omits minor details.",
+      "BE": "Learner retells the Bible stories as guided by the scriptures but omits major details."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.2.5",
+     "indicator": "Ability to list lessons learnt from the Bible stories.",
+     "levels": {
+      "EE": "Learner lists lessons learnt from the Bible stories in details.",
+      "ME": "Learner lists lessons learnt from the Bible stories.",
+      "AE": "Learner lists lessons learnt from the Bible stories but omits minor information.",
+      "BE": "Learner lists lessons learnt from the Bible stories but omits major information."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.2.6",
+     "indicator": "Ability to apply lessons learnt from the Bible stories.",
+     "levels": {
+      "EE": "Learner applies lessons learnt from the Bible stories in day-to-day life and encourages peers to do so.",
+      "ME": "Learner applies lessons learnt from the Bible stories in day-to-day life.",
+      "AE": "Learner makes an effort to apply lessons learnt from the Bible stories in day-to-day life.",
+      "BE": "Learner applies lessons learnt from the Bible stories in day-to-day life when prompted."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G2.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "The Early Life of Jesus Christ",
+   "covers": [
+    "CRE.G2.THE_EA.THE_BIRTH_OF_JESUS_CHRIS",
+    "CRE.G2.THE_EA.KINDNESS_OF_THE_WISE_MEN",
+    "CRE.G2.THE_EA.JESUS_CALMS_THE_STORM",
+    "CRE.G2.THE_EA.MIRACULOUS_CATCH_OF_FISH",
+    "CRE.G2.THE_EA.HEALING_THE_MAN_WITH_A_W",
+    "CRE.G2.THE_EA.EASTER"
+   ],
+   "page": 28,
+   "indicators": [
+    {
+     "code": "CRE.G2.RUBRIC.3.1",
+     "indicator": "Ability to relate the joy of the shepherds as guided by the scriptures.",
+     "levels": {
+      "EE": "Learner illustratively relates the joy of the shepherds as guided by the scriptures.",
+      "ME": "Learner relates the joy of the shepherds as guided by the scriptures.",
+      "AE": "Learner partly relates the joy of the shepherds as guided by the scriptures.",
+      "BE": "Learner relates the joy of the shepherds as guided by the scriptures when prompted."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.3.2",
+     "indicator": "Ability to describe the dedication of baby Jesus.",
+     "levels": {
+      "EE": "Learner describes the dedication of baby Jesus in details.",
+      "ME": "Learner describes the dedication of baby Jesus.",
+      "AE": "Learner describes the dedication of baby Jesus but omits minor details.",
+      "BE": "Learner describes the dedication of baby Jesus but omits major details."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.3.3",
+     "indicator": "Ability to list three gifts given to baby Jesus by the wise men.",
+     "levels": {
+      "EE": "Learner lists three gifts given to baby Jesus by the wise men using illustrations.",
+      "ME": "Learner lists three gifts given to baby Jesus by the wise men",
+      "AE": "Learner lists two of the gifts given to baby Jesus by the wise men.",
+      "BE": "Learner lists only one gift given to baby Jesus by the wise men."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.3.4",
+     "indicator": "Ability to demonstrate assertiveness by refusing gifts from strangers.",
+     "levels": {
+      "EE": "Learner constantly demonstrates assertiveness by refusing gifts from strangers.",
+      "ME": "Learner demonstrates assertiveness by refusing gifts from strangers.",
+      "AE": "Learner sometimes demonstrates assertiveness by refusing gifts from strangers.",
+      "BE": "Learner demonstrates assertiveness by refusing gifts from strangers but requires consistent support."
+     },
+     "page": 28,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.3.5",
+     "indicator": "Ability to narrate the miracles performed by Jesus Christ.",
+     "levels": {
+      "EE": "Learner narrates the miracles performed by Jesus Christ in details",
+      "ME": "Learner narrates the miracles performed by Jesus Christ",
+      "AE": "Learner narrates the miracles performed by Jesus Christ but omits minor details",
+      "BE": "Learner narrates the miracles performed by Jesus Christ but omits major details."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.3.6",
+     "indicator": "Ability to list lessons learnt from the miracles of Jesus Christ.",
+     "levels": {
+      "EE": "Learner lists lessons learnt from the miracles of Jesus Christ in details.",
+      "ME": "Learner lists lessons learnt from the miracles of Jesus Christ.",
+      "AE": "Learner lists some lessons learnt from the miracles of Jesus Christ.",
+      "BE": "Learner lists some lessons learnt from the miracles of Jesus Christ but with guidance."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G2.RUBRIC.4",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Christian Values",
+   "covers": [
+    "CRE.G2.CHRIST.SHARING",
+    "CRE.G2.CHRIST.OBEDIENCE",
+    "CRE.G2.CHRIST.HONESTY",
+    "CRE.G2.CHRIST.THANKFULNESS",
+    "CRE.G2.CHRIST.FORGIVENESS",
+    "CRE.G2.CHRIST.RESPONSIBILITY",
+    "CRE.G2.CHRIST.WORK"
+   ],
+   "page": 37,
+   "indicators": [
+    {
+     "code": "CRE.G2.RUBRIC.4.1",
+     "indicator": "Ability to identify five items shared at school.",
+     "levels": {
+      "EE": "Learner illustratively identifies five items shared at school.",
+      "ME": "Learner identifies five items shared at school.",
+      "AE": "Learner identifies three to four items shared at school.",
+      "BE": "Learner identifies one to two items shared at school."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.2",
+     "indicator": "Ability to demonstrate kindness by sharing items with others.",
+     "levels": {
+      "EE": "Learner constantly demonstrates kindness by sharing items with others.",
+      "ME": "Learner demonstrates kindness by sharing items with others.",
+      "AE": "Learner sometimes demonstrates kindness by sharing items with others.",
+      "BE": "Learner demonstrates kindness by sharing items with others when prompted."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.3",
+     "indicator": "Ability to list five ways they obey teachers and the children’s government.",
+     "levels": {
+      "EE": "Learner lists five ways they obey teachers and the children’s government and cites relevant examples.",
+      "ME": "Learner lists five ways they obey teachers and the children’s government.",
+      "AE": "Learner lists three to four ways they obey teachers and the children’s government.",
+      "BE": "Learner lists one to two ways they obey teachers and the children’s government."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.4",
+     "indicator": "Ability to mention reasons for telling the truth in their interaction with others.",
+     "levels": {
+      "EE": "Learner citing relevant examples, mentions reasons for telling the truth in their interaction with others.",
+      "ME": "Learner mentions reasons for telling the truth in their interaction with others.",
+      "AE": "Learner makes an effort to mention reasons for telling the truth in their interaction with others.",
+      "BE": "Learner mentions reasons for telling the truth in their interaction with others with constant guidance."
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.5",
+     "indicator": "Ability to take part in doing simple chores at home, school, and in Church.",
+     "levels": {
+      "EE": "Learner constantly takes part in doing simple chores at home, school, and in Church.",
+      "ME": "Learner takes part in doing simple chores at home, school, and in Church.",
+      "AE": "Learner sometimes takes part in doing simple chores at home, school, and in Church.",
+      "BE": "Learner with consistent guidance takes part in doing simple chores at home, school, and in Church."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.6",
+     "indicator": "Ability to demonstrate thankfulness in day-to-day life.",
+     "levels": {
+      "EE": "Learner demonstrates thankfulness in day-to-day life and encourages peers to do so.",
+      "ME": "Learner demonstrates thankfulness in day-to-day life.",
+      "AE": "Learner sometimes demonstrates thankfulness in day-to-day life.",
+      "BE": "Learner demonstrates thankfulness in day-to-day life only with prompts."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.7",
+     "indicator": "Ability to practise forgiveness to foster harmonious living.",
+     "levels": {
+      "EE": "Learner constantly practises forgiveness to foster harmonious living.",
+      "ME": "Learner practises forgiveness to foster harmonious living.",
+      "AE": "Learner sometimes practises forgiveness to foster harmonious living.",
+      "BE": "Learner practises forgiveness to foster harmonious living when prompted."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.8",
+     "indicator": "Ability to demonstrate responsibility by completing their homework on time.",
+     "levels": {
+      "EE": "Learner constantly demonstrates responsibility by completing their homework on time.",
+      "ME": "Learner demonstrates responsibility by completing their homework on time.",
+      "AE": "Learner sometimes demonstrates responsibility by completing their homework on time.",
+      "BE": "Learner demonstrates responsibility by completing their homework on time with support."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.4.9",
+     "indicator": "Ability to take part in doing simple chores at home, school, and in Church.",
+     "levels": {
+      "EE": "Learner constantly takes part in doing simple chores at home, school, and in Church.",
+      "ME": "Learner takes part in doing simple chores at home, school, and in Church.",
+      "AE": "Learner sometimes takes part in doing simple chores at home, school, and in Church.",
+      "BE": "Learner takes part in doing simple chores at home, school, and in Church with prompts."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G2.RUBRIC.5",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "The Church",
+   "covers": [
+    "CRE.G2.THE_CH.PRAYER",
+    "CRE.G2.THE_CH.THE_HOLY_SPIRIT"
+   ],
+   "page": 41,
+   "indicators": [
+    {
+     "code": "CRE.G2.RUBRIC.5.1",
+     "indicator": "Ability to recite the first four lines of the Lord’s prayer.",
+     "levels": {
+      "EE": "Learner recites the first four lines of the Lord’s prayer with ease.",
+      "ME": "Learner recites the first four lines of the Lord’s prayer.",
+      "AE": "Learner recites two to three lines of the Lord’s prayer.",
+      "BE": "Learner recites only the first line of the Lord’s prayer."
+     },
+     "page": 41,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.5.2",
+     "indicator": "Ability to retell the story of a friend at midnight.",
+     "levels": {
+      "EE": "Learner retells the story of a friend at midnight in details.",
+      "ME": "Learner retells the story of a friend at midnight.",
+      "AE": "Learner retells the story of a friend at midnight but omits minor details.",
+      "BE": "Learner retells the story of a friend at midnight but omits major details."
+     },
+     "page": 41,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.5.3",
+     "indicator": "Ability to state the promise given to the disciples by Jesus Christ.",
+     "levels": {
+      "EE": "Learner states the promise given to the disciples by Jesus Christ with ease.",
+      "ME": "Learner states the promise given to the disciples by Jesus Christ.",
+      "AE": "Learner makes an effort to state the promise given to the disciples by Jesus Christ.",
+      "BE": "Learner states the promise given to the disciples by Jesus Christ with prompts."
+     },
+     "page": 41,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G2.RUBRIC.5.4",
+     "indicator": "Ability to mention three roles of the Holy Spirit in the life of a Christian.",
+     "levels": {
+      "EE": "Learner mentions three roles of the Holy Spirit in the life of a Christian with ease.",
+      "ME": "Learner mentions three roles of the Holy Spirit in the life of a Christian.",
+      "AE": "Learner mentions two roles of the Holy Spirit in the life of a Christian.",
+      "BE": "Learner mentions one role of the Holy Spirit in the life of a Christian."
+     },
+     "page": 41,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

@@ -19,14 +19,12 @@ test('the generated registry files are up to date with the entry files', () => {
 });
 
 test('Science Grade 5 and English Grade 5 are the registry entries they were, with the same families', () => {
-  // Other builders add subject-grades beside these two: the two stay as they were, the list may grow.
-  const names = SUBJECT_GRADES.map(e => `${e.subject}_g${e.grade}`);
-  for (const n of ['english_g5', 'science_g5']) assert.ok(names.includes(n), `${n} is a registry entry`);
+  assert.deepEqual(SUBJECT_GRADES.map(e => `${e.subject}_g${e.grade}`).sort().filter(k => ['english_g5', 'science_g5'].includes(k)), ['english_g5', 'science_g5']);   // later subject-grades add entries: this one is about these two
   assert.equal(entryFor('science', 5).families.length, 84);
   assert.equal(entryFor('english', 5).families.length, 114);
   assert.deepEqual(SUBJECT_ORDER.slice(0, 2), ['science', 'english']);
   assert.deepEqual(SUBJECT_IDS.slice(0, 3), ['math', 'science', 'english']);
-  for (const [k, v] of Object.entries({ MATH: 'math', SCIE: 'science', ENGL: 'english' })) assert.equal(SUBJECT_PREFIXES[k], v);
+  assert.deepEqual({ MATH: SUBJECT_PREFIXES.MATH, SCIE: SUBJECT_PREFIXES.SCIE, ENGL: SUBJECT_PREFIXES.ENGL }, { MATH: 'math', SCIE: 'science', ENGL: 'english' });
   assert.equal(subjectOfCskill('SCIE.G5.X.Y.Z'), 'science');
   assert.equal(subjectOfCskill('ENGL.G5.X.Y.Z'), 'english');
 });
@@ -37,9 +35,7 @@ test('the bank holds the science families (as before) and not the English ones; 
   assert.deepEqual(GRADE_FAMILIES.slice(0, sci.length), sci);   // first in the grade bank, as SCIENCE_G5 was
   assert.equal(FAMILIES.filter(f => f.subject === 'science').length, 84);
   assert.equal(FAMILIES.filter(f => f.subject === 'english').length, 0);
-  const outside = familiesOutsideBank();   // every family of an entry that is not in the bank: English, and any subject-grade added since
-  for (const f of entryFor('english', 5).families) assert.ok(outside.includes(f), `${f.id} is outside the bank`);
-  assert.ok(!outside.some(f => f.subject === 'science'));
+  assert.deepEqual(familiesOutsideBank().filter(f => f.subject === 'english'), entryFor('english', 5).families);
   assert.deepEqual(ENGLISH_FAMILIES, entryFor('english', 5).families);
 });
 

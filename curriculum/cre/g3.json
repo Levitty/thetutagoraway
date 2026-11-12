@@ -61,13 +61,15 @@
      "code": "CRE.G3.CREATI.SELF_AWARENESS.b",
      "letter": "b",
      "text": "describe how they cope with happy or sad feelings",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.1"
     },
     {
      "code": "CRE.G3.CREATI.SELF_AWARENESS.c",
      "letter": "c",
      "text": "make the right choices guided by the word of God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.2"
     },
     {
      "code": "CRE.G3.CREATI.SELF_AWARENESS.d",
@@ -77,7 +79,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.1.1",
+    "CRE.G3.RUBRIC.1.2",
+    "CRE.G3.RUBRIC.1.3",
+    "CRE.G3.RUBRIC.1.4",
+    "CRE.G3.RUBRIC.1.5"
+   ]
   },
   {
    "code": "CRE.G3.CREATI.MY_FAMILY",
@@ -115,7 +124,8 @@
      "code": "CRE.G3.CREATI.MY_FAMILY.a",
      "letter": "a",
      "text": "name family members in the nuclear and extended family",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.3"
     },
     {
      "code": "CRE.G3.CREATI.MY_FAMILY.b",
@@ -131,7 +141,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.1.1",
+    "CRE.G3.RUBRIC.1.2",
+    "CRE.G3.RUBRIC.1.3",
+    "CRE.G3.RUBRIC.1.4",
+    "CRE.G3.RUBRIC.1.5"
+   ]
   },
   {
    "code": "CRE.G3.CREATI.ADAM_AND_EVE",
@@ -171,19 +188,22 @@
      "code": "CRE.G3.CREATI.ADAM_AND_EVE.a",
      "letter": "a",
      "text": "recognise God as the creator of Adam and Eve",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.4"
     },
     {
      "code": "CRE.G3.CREATI.ADAM_AND_EVE.b",
      "letter": "b",
      "text": "describe how Adam and Eve disobeyed God",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.4"
     },
     {
      "code": "CRE.G3.CREATI.ADAM_AND_EVE.c",
      "letter": "c",
      "text": "state four results of Adam’s disobedience",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.1.5"
     },
     {
      "code": "CRE.G3.CREATI.ADAM_AND_EVE.d",
@@ -193,7 +213,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.1.1",
+    "CRE.G3.RUBRIC.1.2",
+    "CRE.G3.RUBRIC.1.3",
+    "CRE.G3.RUBRIC.1.4",
+    "CRE.G3.RUBRIC.1.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF",
@@ -242,13 +269,15 @@
      "code": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.b",
      "letter": "b",
      "text": "state the number of books in the New Testament",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.2.1"
     },
     {
      "code": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.c",
      "letter": "c",
      "text": "name the four Gospel books in the New Testament",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.2.2"
     },
     {
      "code": "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF.d",
@@ -258,7 +287,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH",
@@ -316,7 +352,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH",
@@ -373,7 +416,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE",
@@ -428,7 +478,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE",
@@ -485,7 +542,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T",
@@ -543,7 +607,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.2.1",
+    "CRE.G3.RUBRIC.2.2",
+    "CRE.G3.RUBRIC.2.3",
+    "CRE.G3.RUBRIC.2.4",
+    "CRE.G3.RUBRIC.2.5"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS",
@@ -585,7 +656,8 @@
      "code": "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.a",
      "letter": "a",
      "text": "retell the story of the wise men",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.1"
     },
     {
      "code": "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS.b",
@@ -601,7 +673,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN",
@@ -641,13 +722,15 @@
      "code": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.a",
      "letter": "a",
      "text": "narrate the story of the Good Samaritan",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.2"
     },
     {
      "code": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.b",
      "letter": "b",
      "text": "list four lessons learnt from the story of the Good Samaritan",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.3"
     },
     {
      "code": "CRE.G3.THE_LI.THE_GOOD_SAMARITAN.c",
@@ -657,7 +740,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE",
@@ -708,7 +800,8 @@
      "code": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.b",
      "letter": "b",
      "text": "state lessons learnt from the miracle of five loaves and two fish",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.5"
     },
     {
      "code": "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE.c",
@@ -718,7 +811,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA",
@@ -763,7 +865,8 @@
      "code": "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.b",
      "letter": "b",
      "text": "list lessons learnt from the miracle",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.5"
     },
     {
      "code": "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA.c",
@@ -773,7 +876,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT",
@@ -828,7 +940,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.THE_LI.EASTER",
@@ -875,7 +996,8 @@
      "code": "CRE.G3.THE_LI.EASTER.b",
      "letter": "b",
      "text": "identify the events that take place during Easter celebrations",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CRE.G3.RUBRIC.3.7"
     },
     {
      "code": "CRE.G3.THE_LI.EASTER.c",
@@ -885,7 +1007,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CRE.G3.RUBRIC.3.1",
+    "CRE.G3.RUBRIC.3.2",
+    "CRE.G3.RUBRIC.3.3",
+    "CRE.G3.RUBRIC.3.4",
+    "CRE.G3.RUBRIC.3.5",
+    "CRE.G3.RUBRIC.3.6",
+    "CRE.G3.RUBRIC.3.7"
+   ]
   },
   {
    "code": "CRE.G3.CHRIST.HONESTY",
@@ -1303,6 +1434,257 @@
    ],
    "skills": [],
    "misconceptions": []
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CRE.G3.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Creation",
+   "covers": [
+    "CRE.G3.CREATI.SELF_AWARENESS",
+    "CRE.G3.CREATI.MY_FAMILY",
+    "CRE.G3.CREATI.ADAM_AND_EVE"
+   ],
+   "page": 11,
+   "indicators": [
+    {
+     "code": "CRE.G3.RUBRIC.1.1",
+     "indicator": "Ability to describe how they cope with happy or sad feelings.",
+     "levels": {
+      "EE": "Learner describes how they cope with happy or sad feelings in details.",
+      "ME": "Learner describes how they cope with happy or sad feelings.",
+      "AE": "Learner describes how they cope with happy or sad feelings but omit minor details.",
+      "BE": "Learner describes how they cope with happy or sad feelings but omit major details."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.1.2",
+     "indicator": "Ability to make the right choices guided by the word of God.",
+     "levels": {
+      "EE": "Learner makes the right choices guided by the word of God and encourages peers to do so.",
+      "ME": "Learner makes the right choices guided by the word of God.",
+      "AE": "Learner attempts to make the right choices guided by the word of God.",
+      "BE": "Learner makes the right choices guided by the word of God with consistent guidance."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.1.3",
+     "indicator": "Ability to name family members in the nuclear and extended family.",
+     "levels": {
+      "EE": "Learner names family members in the nuclear and extended family exhaustively.",
+      "ME": "Learner names family members in the nuclear and extended family.",
+      "AE": "Learner names some family members in the nuclear and extended family.",
+      "BE": "Learner names family members in the nuclear and extended family with assistance."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.1.4",
+     "indicator": "Ability to recognise God as the creator of Adam and Eve.",
+     "levels": {
+      "EE": "Learner constantly recognises God as the creator of Adam and Eve.",
+      "ME": "Learner recognises God as the creator of Adam and Eve.",
+      "AE": "Learner makes effort to recognise God as the creator of Adam and Eve.",
+      "BE": "Learner with prompts recognises God as the creator of Adam and Eve."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.1.5",
+     "indicator": "Ability to state four results of Adam’s disobedience.",
+     "levels": {
+      "EE": "Learner states four results of Adam’s disobedience and cites relevant examples.",
+      "ME": "Learner states four results of Adam’s disobedience.",
+      "AE": "Learner states three results of Adam’s disobedience.",
+      "BE": "Learner states one to two results of Adam’s disobedience."
+     },
+     "page": 11,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G3.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "The Bible",
+   "covers": [
+    "CRE.G3.THE_BI.THE_BIBLE_AS_THE_WORD_OF",
+    "CRE.G3.THE_BI.BIBLE_STORY_MOSES_AND_TH",
+    "CRE.G3.THE_BI.BIBLE_STORY_THE_BIG_FISH",
+    "CRE.G3.THE_BI.BIBLE_STORY_NAAMAN_IS_HE",
+    "CRE.G3.THE_BI.BIBLE_STORY_THE_THREE_HE",
+    "CRE.G3.THE_BI.BIBLE_STORY_ELISHA_AND_T"
+   ],
+   "page": 21,
+   "indicators": [
+    {
+     "code": "CRE.G3.RUBRIC.2.1",
+     "indicator": "Ability to state the number of books in the New Testament.",
+     "levels": {
+      "EE": "Learner states the number of books in the New Testament with ease.",
+      "ME": "Learner states the number of books in the New Testament.",
+      "AE": "Learner makes an effort to state the number of books in the New Testament.",
+      "BE": "Learner with assistance states the number of books in the New Testament."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.2.2",
+     "indicator": "Ability to name the four Gospel books in the New Testament.",
+     "levels": {
+      "EE": "Learner sequentially names the four Gospel books in the New Testament.",
+      "ME": "Learner names the four Gospel books in the New Testament.",
+      "AE": "Learner names three Gospel books in the New Testament.",
+      "BE": "Learner names one to two Gospel books in the New Testament."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.2.3",
+     "indicator": "Ability to retell Bible stories as guided by the scriptures.",
+     "levels": {
+      "EE": "Learner retells Bible stories in details as guided by the scriptures.",
+      "ME": "Learner retells Bible stories as guided by the scriptures.",
+      "AE": "Learner retells Bible stories as guided by the scriptures but omits minor details.",
+      "BE": "Learner retells Bible stories as guided by the scriptures but omits major details."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.2.4",
+     "indicator": "Ability to outline the moral lessons learnt from the Bible stories.",
+     "levels": {
+      "EE": "Learner outlines moral lessons learnt from the Bible stories in details.",
+      "ME": "Learner outlines moral lessons learnt from the Bible stories.",
+      "AE": "Learner outlines moral lessons learnt from the Bible stories but omits minor details.",
+      "BE": "Learner outlines moral lessons learnt from the Bible stories but omits major details."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.2.5",
+     "indicator": "Ability to apply moral lessons learnt from the Bible stories in daily life.",
+     "levels": {
+      "EE": "Learner applies moral lessons learnt from the Bible stories in daily life and encourages peers to do so.",
+      "ME": "Learner applies moral lessons learnt from the Bible stories in daily life.",
+      "AE": "Learner makes an effort to apply moral lessons learnt from the Bible stories in daily life.",
+      "BE": "Learner applies moral lessons learnt from the Bible stories in daily life with guidance."
+     },
+     "page": 21,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CRE.G3.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "The Life of Jesus Christ",
+   "covers": [
+    "CRE.G3.THE_LI.THE_BIRTH_OF_JESUS_CHRIS",
+    "CRE.G3.THE_LI.THE_GOOD_SAMARITAN",
+    "CRE.G3.THE_LI.THE_LITTLE_BOY_WITH_FIVE",
+    "CRE.G3.THE_LI.JESUS_CHRIST_WALKS_ON_WA",
+    "CRE.G3.THE_LI.RAISING_OF_JAIRUS_DAUGHT",
+    "CRE.G3.THE_LI.EASTER"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "CRE.G3.RUBRIC.3.1",
+     "indicator": "Ability to retell the story of the wise men.",
+     "levels": {
+      "EE": "Learner retells the story of the wise men in details.",
+      "ME": "Learner retells the story of the wise men.",
+      "AE": "Learner retells the story of the wise men but omits minor details.",
+      "BE": "Learner retells the story of the wise men but omits major details."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.2",
+     "indicator": "Ability to narrate the story of the good Samaritan.",
+     "levels": {
+      "EE": "Learner illustratively narrates the story of the good Samaritan.",
+      "ME": "Learner narrates the story of the good Samaritan.",
+      "AE": "Learner partly narrates the story of the good Samaritan.",
+      "BE": "Learner makes an effort to narrate the story of the good Samaritan."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.3",
+     "indicator": "Ability to list four lessons learnt from the story of the good Samaritan.",
+     "levels": {
+      "EE": "Learner lists four lessons learnt from the story of the good Samaritan and cites relevant examples.",
+      "ME": "Learner lists four lessons learnt from the story of the good Samaritan.",
+      "AE": "Learner lists three lessons learnt from the story of the good Samaritan.",
+      "BE": "Learner lists one to two lessons learnt from the story of the good Samaritan."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.4",
+     "indicator": "Ability to retell the miracles of Jesus Christ.",
+     "levels": {
+      "EE": "Learner retells the miracles of Jesus Christ in details.",
+      "ME": "Learner retells the miracles of Jesus Christ.",
+      "AE": "Learner retells the miracle of Jesus Christ but omits minor details.",
+      "BE": "Learner retells the miracle of Jesus Christ but omits major details."
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.5",
+     "indicator": "Ability to state lessons learnt from the miracles of Jesus Christ.",
+     "levels": {
+      "EE": "Learner states lessons learnt from the miracles of Jesus Christ and cites relevant examples.",
+      "ME": "Learner states lessons learnt from the miracles of Jesus Christ.",
+      "AE": "Learner states some lessons learnt from the miracles of Jesus Christ.",
+      "BE": "Learner attempts to state some lessons learnt from the miracles of Jesus Christ."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.6",
+     "indicator": "Ability to mention the importance of Easter in the life of a Christian.",
+     "levels": {
+      "EE": "Learner mentions the importance of Easter in the life of a Christian illustratively.",
+      "ME": "Learner mentions the importance of Easter in the life of a Christian.",
+      "AE": "Learner partially mentions the importance of Easter in the life of a Christian.",
+      "BE": "Learner mentions the importance of Easter in the life of a Christian with support."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CRE.G3.RUBRIC.3.7",
+     "indicator": "Ability to identify the events that take place during Easter celebrations.",
+     "levels": {
+      "EE": "Learner sequentially identifies the events that take place during Easter celebrations.",
+      "ME": "Learner identifies the events that take place during Easter celebrations.",
+      "AE": "Learner identifies events that take place during Easter celebrations but leaves out a few steps.",
+      "BE": "Learner identifies the events that take place during Easter celebrations but leaves out many steps."
+     },
+     "page": 30,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

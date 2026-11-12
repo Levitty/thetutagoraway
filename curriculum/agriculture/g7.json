@@ -56,7 +56,8 @@
      "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.b",
      "letter": "b",
      "text": "control soil pollution in the home environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G7.RUBRIC.1.1"
     },
     {
      "code": "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI.c",
@@ -66,7 +67,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.1.1",
+    "AGRI.G7.RUBRIC.1.2",
+    "AGRI.G7.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN",
@@ -110,7 +116,8 @@
      "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.b",
      "letter": "b",
      "text": "construct water retention structures to conserve surface runoff",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G7.RUBRIC.1.1"
     },
     {
      "code": "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN.c",
@@ -120,7 +127,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.1.1",
+    "AGRI.G7.RUBRIC.1.2",
+    "AGRI.G7.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT",
@@ -173,7 +185,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.1.1",
+    "AGRI.G7.RUBRIC.1.2",
+    "AGRI.G7.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G7.CONSER.GROWING_TREES",
@@ -210,13 +227,15 @@
      "code": "AGRI.G7.CONSER.GROWING_TREES.a",
      "letter": "a",
      "text": "explain the importance of trees in conserving the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G7.RUBRIC.1.1"
     },
     {
      "code": "AGRI.G7.CONSER.GROWING_TREES.b",
      "letter": "b",
      "text": "plant trees to conserve the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "AGRI.G7.RUBRIC.1.1"
     },
     {
      "code": "AGRI.G7.CONSER.GROWING_TREES.c",
@@ -226,7 +245,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.1.1",
+    "AGRI.G7.RUBRIC.1.2",
+    "AGRI.G7.RUBRIC.1.3"
+   ]
   },
   {
    "code": "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT",
@@ -282,7 +306,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.2.1",
+    "AGRI.G7.RUBRIC.2.2",
+    "AGRI.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT",
@@ -335,7 +364,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.2.1",
+    "AGRI.G7.RUBRIC.2.2",
+    "AGRI.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT",
@@ -391,7 +425,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.2.1",
+    "AGRI.G7.RUBRIC.2.2",
+    "AGRI.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G7.FOOD_P.COOKING_FOOD",
@@ -448,7 +487,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.2.1",
+    "AGRI.G7.RUBRIC.2.2",
+    "AGRI.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA",
@@ -501,7 +545,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.3.1",
+    "AGRI.G7.RUBRIC.3.2",
+    "AGRI.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I",
@@ -554,7 +603,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.3.1",
+    "AGRI.G7.RUBRIC.3.2",
+    "AGRI.G7.RUBRIC.3.3"
+   ]
   },
   {
    "code": "AGRI.G7.PRODUC.KNITTING_SKILLS",
@@ -607,7 +661,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.4.1",
+    "AGRI.G7.RUBRIC.4.2",
+    "AGRI.G7.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP",
@@ -660,7 +719,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.4.1",
+    "AGRI.G7.RUBRIC.4.2",
+    "AGRI.G7.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO",
@@ -714,7 +778,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.4.1",
+    "AGRI.G7.RUBRIC.4.2",
+    "AGRI.G7.RUBRIC.4.3"
+   ]
   },
   {
    "code": "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP",
@@ -767,7 +836,212 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "AGRI.G7.RUBRIC.4.1",
+    "AGRI.G7.RUBRIC.4.2",
+    "AGRI.G7.RUBRIC.4.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "AGRI.G7.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Conservation of Resources",
+   "covers": [
+    "AGRI.G7.CONSER.CONTROLLING_SOIL_POLLUTI",
+    "AGRI.G7.CONSER.CONSTRUCTING_WATER_RETEN",
+    "AGRI.G7.CONSER.CONSERVING_FOOD_NUTRIENT",
+    "AGRI.G7.CONSER.GROWING_TREES"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "AGRI.G7.RUBRIC.1.1",
+     "indicator": "Ability to describe ways of conserving resources in the environment: (controlling soil pollution, making water retention structures, conserving food nutrients, growing trees).",
+     "levels": {
+      "EE": "The learner describes four ways of conserving resources.",
+      "ME": "The learner describes three ways of conserving resources.",
+      "AE": "The learner describes two ways of conserving resources.",
+      "BE": "The learner describes less than two ways of conserving resources."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.1.2",
+     "indicator": "Ability to conserve resources in the environment: (soil, water, food nutrients, trees).",
+     "levels": {
+      "EE": "The learner conserves four resources in the environment.",
+      "ME": "The learner conserves three resources in the environment.",
+      "AE": "The learner conserves two resources in the environment.",
+      "BE": "The learner conserves less than two resources in the environment."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.1.3",
+     "indicator": "Ability to show responsibility in conserving resources in the environment: (caring for resources, observing safety, participating in assigned roles, offering leadership to others).",
+     "levels": {
+      "EE": "The learner shows four indicators of responsibility in conserving resources in the environment.",
+      "ME": "The learner shows three indicators of responsibility in conserving resources in the environment.",
+      "AE": "The learner shows two indicators of responsibility in conserving resources in the environment.",
+      "BE": "The learner shows less than two indicators of responsibility in conserving resources in the environment."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G7.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Food Production Processes",
+   "covers": [
+    "AGRI.G7.FOOD_P.CROP_ESTABLISHMENT",
+    "AGRI.G7.FOOD_P.SELECTED_CROP_MANAGEMENT",
+    "AGRI.G7.FOOD_P.PREPARING_ANIMAL_PRODUCT",
+    "AGRI.G7.FOOD_P.COOKING_FOOD"
+   ],
+   "page": 23,
+   "indicators": [
+    {
+     "code": "AGRI.G7.RUBRIC.2.1",
+     "indicator": "Ability to describe food production processes (preparation of sites, planting, management practises, preparing eggs, preparing honey, grilling, roasting, steaming).",
+     "levels": {
+      "EE": "The learner describes eight food production processes.",
+      "ME": "The learner describes six to seven food production processes.",
+      "AE": "The learner describes three to five food production processes.",
+      "BE": "The learner describes less than three food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.2.2",
+     "indicator": "Ability to carry out various food production processes: (preparation of sites, planting, management practises, preparing eggs, preparing honey, grilling, roasting, steaming).",
+     "levels": {
+      "EE": "The learner carries out eight food production processes.",
+      "ME": "The learner carries out six to seven food production processes.",
+      "AE": "The learner carries out three to five food production processes.",
+      "BE": "The learner carries out less than three food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.2.3",
+     "indicator": "Ability to exhibit integrity in the food production processes: (is self-disciplined, honest, uses prudent use of resources, and adherence to ethical procedures).",
+     "levels": {
+      "EE": "The learner shows four indicators of integrity in carrying out the food production processes.",
+      "ME": "The learner shows three indicators of integrity in carrying out the food production processes.",
+      "AE": "The learner shows two indicators of integrity in carrying out the food production processes.",
+      "BE": "The learner shows less than two indicators of integrity in carrying out the food production processes."
+     },
+     "page": 23,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G7.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Hygiene Practises",
+   "covers": [
+    "AGRI.G7.HYGIEN.HYGIENE_IN_REARING_ANIMA",
+    "AGRI.G7.HYGIEN.LAUNDRY_LOOSE_COLOURED_I"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "AGRI.G7.RUBRIC.3.1",
+     "indicator": "Ability to describe hygiene practises at the household level: (hygiene in rearing animals and laundering loose-coloured items).",
+     "levels": {
+      "EE": "The learner describes hygiene practises at the household level with elaborate details.",
+      "ME": "The learner describes hygiene practises.",
+      "AE": "The learner describes hygiene practises at the household level with some few details missing.",
+      "BE": "The learner describes hygiene practises at the household level with lots of missing details."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.3.2",
+     "indicator": "Ability to carry out hygiene practises at the household level: (hygiene in rearing animals and laundering loose-coloured items).",
+     "levels": {
+      "EE": "The learner can identify the required hygienic practise, required hygienic measures, can assemble require resources, and carry out the practise.",
+      "ME": "The learner can identify the required hygienic practise, required hygienic measures, and can assemble require resources.",
+      "AE": "The learner can identify the required hygienic practise and required hygienic measures.",
+      "BE": "The learner can identify the required hygienic practise."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.3.3",
+     "indicator": "Ability to exhibit unity in practising hygiene: (team spirit, collaboration with others, respects others and shares available resources).",
+     "levels": {
+      "EE": "The learner exhibits four indicators of unity in practising hygiene at the household level.",
+      "ME": "The learner exhibits three indicators of unity in practising hygiene at the household level.",
+      "AE": "The learner exhibits two indicators of unity in practising hygiene at the household level.",
+      "BE": "The learner exhibits less than two indicators of unity in practising hygiene at the household level."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "AGRI.G7.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Production Techniques",
+   "covers": [
+    "AGRI.G7.PRODUC.KNITTING_SKILLS",
+    "AGRI.G7.PRODUC.CONSTRUCTING_FRAMED_SUSP",
+    "AGRI.G7.PRODUC.ADDING_VALUE_TO_CROP_PRO",
+    "AGRI.G7.PRODUC.MAKING_HOMEMADE_SOAP"
+   ],
+   "page": 31,
+   "indicators": [
+    {
+     "code": "AGRI.G7.RUBRIC.4.1",
+     "indicator": "Ability to describe production techniques at the household level: (knitting, constructing framed gardens, value addition on crop produce, and making soap).",
+     "levels": {
+      "EE": "The learner describes four production techniques at the household level.",
+      "ME": "The learner describes three production techniques at the household level.",
+      "AE": "The learner describes two production techniques at the household level.",
+      "BE": "The learner describes less than two production techniques at the household level."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.4.2",
+     "indicator": "Ability to apply production techniques at the household level: (knitting, constructing framed gardens, value addition on crop produce, and making soap).",
+     "levels": {
+      "EE": "The learner applies four production techniques at the household level.",
+      "ME": "The learner applies three production techniques at the household level.",
+      "AE": "The learner applies two production techniques at the household level.",
+      "BE": "The learner applies less than two production techniques at the household level."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "AGRI.G7.RUBRIC.4.3",
+     "indicator": "Ability to portray integrity in production techniques: (is honest, uses resources prudently, adheres to ethical procedures, has a commitment to duty).",
+     "levels": {
+      "EE": "The learner portrays four indicators of integrity in production techniques.",
+      "ME": "The learner portrays three indicators of integrity in production techniques.",
+      "AE": "The learner portrays two indicators of integrity in production techniques.",
+      "BE": "The learner portrays less than two indicators of integrity in production techniques."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

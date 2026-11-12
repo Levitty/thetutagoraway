@@ -67,7 +67,7 @@ test('ONE RULE: an unsigned family is never served to a child, in Science or Eng
       for (const f of def.families()) assert.equal(sub.generate(f.cskill, { lesson: true, correctSoFar: 8 }), null, `${f.id} was served unsigned`);
       // Sign one family of each skill: only that one is ever drawn, and only that skill exists.
       const list = def.families();
-      const one = list.find(f => f.cskill && list.filter(x => x.cskill === f.cskill).length > 2);
+      const one = list.find(f => f.cskill && list.filter(x => x.cskill === f.cskill).length > 1);
       const live = makeSubject(def, { families: signed(list, [one.id]) });
       assert.deepEqual(Object.keys(live.skills), [one.cskill], id);
       for (let i = 0; i < 60; i++) {

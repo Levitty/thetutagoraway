@@ -56,29 +56,36 @@
      "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.a",
      "letter": "a",
      "text": "describe categories of Creative Arts and Sports",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.b",
      "letter": "b",
      "text": "outline the relationships among the categories of Creative Arts and Sports",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.c",
      "letter": "c",
      "text": "make a collage on the categories of the Creative Arts and Sports",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE.d",
      "letter": "d",
      "text": "appreciate the categories of Creative Arts and Sports",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A",
@@ -127,41 +134,50 @@
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.a",
      "letter": "a",
      "text": "describe elements of a story",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.b",
      "letter": "b",
      "text": "perform activities demonstrating the components of fitness",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.c",
      "letter": "c",
      "text": "write note values on a treble staff",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.d",
      "letter": "d",
      "text": "name pitches on treble staff",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.e",
      "letter": "e",
      "text": "group music notes in 2 time, 4",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     },
     {
      "code": "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A.f",
      "letter": "f",
      "text": "appreciate the components of Creative Arts and Sports",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.DRAWING_AND_PAINTING",
@@ -235,7 +251,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.RHYTHM",
@@ -283,7 +304,8 @@
      "code": "CREA.G7.CREATI.RHYTHM.a",
      "letter": "a",
      "text": "outline factors to consider in creating a rhythmic pattern in simple time",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.RHYTHM.b",
@@ -301,17 +323,24 @@
      "code": "CREA.G7.CREATI.RHYTHM.d",
      "letter": "d",
      "text": "sight read rhythmic patterns on monotone",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.RHYTHM.e",
      "letter": "e",
      "text": "appreciate rhythmic patterns created by self and others",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE",
@@ -380,7 +409,8 @@
      "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.d",
      "letter": "d",
      "text": "perform a javelin throw following the throwing phases",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE.e",
@@ -390,7 +420,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.MELODY",
@@ -445,7 +480,8 @@
      "code": "CREA.G7.CREATI.MELODY.c",
      "letter": "c",
      "text": "perform created pieces of music in C major",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.MELODY.d",
@@ -455,7 +491,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.HANDBALL",
@@ -503,19 +544,22 @@
      "code": "CREA.G7.CREATI.HANDBALL.a",
      "letter": "a",
      "text": "describe passing, dribbling and jump shot in Handball game",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.HANDBALL.b",
      "letter": "b",
      "text": "perform the passing skills in Handball",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.HANDBALL.c",
      "letter": "c",
      "text": "execute dribbling in Handball for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.HANDBALL.d",
@@ -531,7 +575,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.DESCANT_RECORDER",
@@ -580,29 +629,38 @@
      "code": "CREA.G7.CREATI.DESCANT_RECORDER.b",
      "letter": "b",
      "text": "sight read simple melodies on descant recorder from staff notation",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.DESCANT_RECORDER.c",
      "letter": "c",
      "text": "play a piece in C major on a descant recorder",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.DESCANT_RECORDER.d",
      "letter": "d",
      "text": "perform simple melodies on a descant recorder observing performance directions",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.DESCANT_RECORDER.e",
      "letter": "e",
      "text": "appreciate playing music in C major on the descant recorder",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI",
@@ -690,7 +748,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.FOOTBALL",
@@ -746,19 +809,22 @@
      "code": "CREA.G7.CREATI.FOOTBALL.a",
      "letter": "a",
      "text": "execute trapping skill in football",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.FOOTBALL.b",
      "letter": "b",
      "text": "perform dribbling skill in football",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.FOOTBALL.c",
      "letter": "c",
      "text": "execute shooting skill in football",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.FOOTBALL.d",
@@ -780,7 +846,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.KENYAN_FOLK_SONGS",
@@ -839,7 +910,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT",
@@ -913,7 +989,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.SWIMMING",
@@ -979,7 +1060,8 @@
      "code": "CREA.G7.CREATI.SWIMMING.d",
      "letter": "d",
      "text": "perform backstroke skill in swimming for skill development",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.SWIMMING.e",
@@ -989,7 +1071,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES",
@@ -1037,13 +1124,15 @@
      "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.b",
      "letter": "b",
      "text": "perform different indigenous rope games for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.c",
      "letter": "c",
      "text": "perform indigenous rope skipping to a musical rhythm for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G7.RUBRIC.2.3"
     },
     {
      "code": "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES.d",
@@ -1053,7 +1142,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.2.1",
+    "CREA.G7.RUBRIC.2.2",
+    "CREA.G7.RUBRIC.2.3"
+   ]
   },
   {
    "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART",
@@ -1101,35 +1195,150 @@
      "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.a",
      "letter": "a",
      "text": "examine the spirit of sports values for clean sports",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.3.1"
     },
     {
      "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.b",
      "letter": "b",
      "text": "analyse a folk song from a Kenyan community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.3.1"
     },
     {
      "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.c",
      "letter": "c",
      "text": "analyse a storytelling performance",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.3.1"
     },
     {
      "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.d",
      "letter": "d",
      "text": "make portfolio for showcase",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.3.1"
     },
     {
      "code": "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART.e",
      "letter": "e",
      "text": "appreciate the role of analysis in Creative Arts and Sports",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G7.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G7.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G7.RUBRIC.1",
+   "heading": "Assessment Rubric for Foundations of Creative Arts and Sport",
+   "strand": "Foundations of Creative Arts and Sports",
+   "covers": [
+    "CREA.G7.FOUNDA.INTRODUCTION_TO_CREATIVE",
+    "CREA.G7.FOUNDA.COMPONENTS_OF_CREATIVE_A"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "CREA.G7.RUBRIC.1.1",
+     "indicator": "Ability to describe the categories of Creative Arts and Sports (Visual Arts , Music and dance, Drama and film Physical Education and Sports ) Ability to execute components of Creative Arts and Sports (Elements of a story, Components of fitness and Elements of Music (writing note values on a treble staff, naming pitches on treble staff, grouping music notes in simple time -) Ability to make a collage on the categories of the Creative Arts and Sports",
+     "levels": {
+      "EE": "Describes the 4 categories of Creative Arts and Sports in detail. Executes the 5 components of Creative Arts and Sports with precision. Creatively makes a collage on all the 4 categories of the Creative Arts and Sports",
+      "ME": "Describes the 4 categories of Creative Arts and Sports. Executes the 5 components of Creative Arts and Sports accurately. Makes a collage on all the 4 categories of the Creative Arts and Sports.",
+      "AE": "Describes 2-3 categories of Creative Arts and Sports. Executes the 2-3 components of Creative Arts and Sports with minor errors Makes a collage on the 2-3 categories of the Creative Arts and Sports.",
+      "BE": "Describes less than 2 categories of Creative Arts and Sports. Executes less than 2 components of Creative Arts and Sports with errors. Makes a collage on than 2 categories of the Creative Arts and Sports."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G7.RUBRIC.2",
+   "heading": "Assessment Rubric for Strand 2.0 Creating and Performing in Creative Arts and Sports",
+   "strand": "Creating and Performing in Creative Arts and Sports OPTIONAL (Do One) Either Swimming Or Kenyan Indigenous Games",
+   "covers": [
+    "CREA.G7.CREATI.DRAWING_AND_PAINTING",
+    "CREA.G7.CREATI.RHYTHM",
+    "CREA.G7.CREATI.JAVELIN_AND_SCULPTURE",
+    "CREA.G7.CREATI.MELODY",
+    "CREA.G7.CREATI.HANDBALL",
+    "CREA.G7.CREATI.DESCANT_RECORDER",
+    "CREA.G7.CREATI.STORYTELLING_AND_ANIMATI",
+    "CREA.G7.CREATI.FOOTBALL",
+    "CREA.G7.CREATI.KENYAN_FOLK_SONGS",
+    "CREA.G7.CREATI.INDIGENOUS_KENYAN_CRAFT",
+    "CREA.G7.CREATI.SWIMMING",
+    "CREA.G7.CREATI.KENYAN_INDIGENOUS_GAMES"
+   ],
+   "page": 48,
+   "indicators": [
+    {
+     "code": "CREA.G7.RUBRIC.2.1",
+     "indicator": "Ability to describe creating and performing skills in Creative Arts and Sports.",
+     "levels": {
+      "EE": "Describes all aspects of creating and performing in Creative Arts and Sports accurately citing relevant illustrations.",
+      "ME": "Describes aspects of creating and performing in Creative Arts and Sports accurately.",
+      "AE": "Describes aspects of creating and performing in Creative Arts and Sports leaving out minor details.",
+      "BE": "Describes aspects of creating and performing in Creative Arts and Sports leaving out major details."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.RUBRIC.2.2",
+     "indicator": "Ability to create items in Creative Arts and Sports: ✓ Compose rhythms ✓ Carve a javelin ✓ Compose melody ✓ Draw a pictorial composition ✓ Paint a landscape composition ✓ Create a short story ✓ Create a flip book animation ✓ Improvising materials for folk songs. ✓ Beaded jewellery",
+     "levels": {
+      "EE": "Creates the 11 items in Creative Arts and Sports skilfully and/ or creatively.",
+      "ME": "Creates the 11 items in Creative Arts and Sports accurately and/ or correctly",
+      "AE": "Creates 6-10 items in Creative Arts and Sports with minor errors and/or inconsistencies.",
+      "BE": "Creates 5 or less items in Creative Arts and Sports with errors and/or inconsistencies."
+     },
+     "page": 48,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "CREA.G7.RUBRIC.2.3",
+     "indicator": "Ability to perform specific forms of Creative Arts and Sports: ✓ Sight read rhythmic patterns ✓ Execute a javelin throw ✓ Perform simple pieces of music in C major ✓ Passing skills in Handball ✓ Shooting in handball ✓ Dribbling in handball ✓ Perform a descant recorder piece in C major ✓ Trapping in in football ✓ Dribbling in football ✓ Perform a story ✓ Perform a folk song ✓ Rope games or swimming",
+     "levels": {
+      "EE": "Performs the 12 items in Creative Arts and Sports creatively skilfully or/ and with precision.",
+      "ME": "Performs the 12 items in Creative Arts and Sports correctly and/ or accurately.",
+      "AE": "Performs 7-11 items in Creative Arts and Sports with minor flaws and/or inconsistencies.",
+      "BE": "Performs 6 or less items in Creative Arts and Sports with flaws and/or inconsistencies."
+     },
+     "page": 49,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G7.RUBRIC.3",
+   "heading": "Assessment Rubric for Strand 3.0 Appreciation in Creative Arts and Sports",
+   "strand": "Appreciation in Creative Arts and Sports",
+   "covers": [
+    "CREA.G7.APPREC.ANALYSIS_OF_CREATIVE_ART"
+   ],
+   "page": 53,
+   "indicators": [
+    {
+     "code": "CREA.G7.RUBRIC.3.1",
+     "indicator": "Ability to examine the criteria for evaluating Creative Arts and Sports. Ability to analyse performances or pieces in Creative Arts and Sports (folk song, football game, sports values, storytelling, )",
+     "levels": {
+      "EE": "Examines the criteria for evaluating Creative Arts and Sports in depth. Analyses all performances or pieces in Creative Arts and Sports critically.",
+      "ME": "Examines the criteria for evaluating Creative Arts and Sports correctly. Analyses all performances or pieces in Creative Arts and Sports.",
+      "AE": "Examines the criteria for evaluating Creative Arts and Sports with minor omissions. Analyses 2 to 3 performances or pieces in Creative Arts and Sports.",
+      "BE": "Examines the criteria for evaluating Creative Arts and Sports with many omissions. Analyses less than 2 performances or pieces in Creative Arts and Sports."
+     },
+     "page": 53,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

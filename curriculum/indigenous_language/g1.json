@@ -62,7 +62,8 @@
      "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC.b",
      "letter": "b",
      "text": "use formal and informal greetings at home appropriately",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.1.2"
     },
     {
      "code": "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC.c",
@@ -72,7 +73,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.1.1",
+    "INDI.G1.RUBRIC.1.2",
+    "INDI.G1.RUBRIC.1.3",
+    "INDI.G1.RUBRIC.1.4",
+    "INDI.G1.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INDI.G1.READIN.T1_PICTURE_READING",
@@ -134,7 +142,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.2.1",
+    "INDI.G1.RUBRIC.2.2",
+    "INDI.G1.RUBRIC.2.3",
+    "INDI.G1.RUBRIC.2.4",
+    "INDI.G1.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_",
@@ -179,23 +194,35 @@
      "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.a",
      "letter": "a",
      "text": "outline the letters of the language alphabet",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.3.3"
     },
     {
      "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.b",
      "letter": "b",
      "text": "copy names of things found at home in upper case and lower case",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.3.3"
     },
     {
      "code": "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_.c",
      "letter": "c",
      "text": "develop an interest in writing using letters of the language alphabet",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.3.3"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.3.1",
+    "INDI.G1.RUBRIC.3.2",
+    "INDI.G1.RUBRIC.3.3",
+    "INDI.G1.RUBRIC.3.4",
+    "INDI.G1.RUBRIC.3.5",
+    "INDI.G1.RUBRIC.3.6",
+    "INDI.G1.RUBRIC.3.7"
+   ]
   },
   {
    "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA",
@@ -241,23 +268,33 @@
      "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.a",
      "letter": "a",
      "text": "pronounce syllables in words accurately for communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.1.3"
     },
     {
      "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.b",
      "letter": "b",
      "text": "blend syllables to form simple words for accuracy",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.1.4"
     },
     {
      "code": "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA.c",
      "letter": "c",
      "text": "enjoy blending syllables to form words for effective communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.1.4"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.1.1",
+    "INDI.G1.RUBRIC.1.2",
+    "INDI.G1.RUBRIC.1.3",
+    "INDI.G1.RUBRIC.1.4",
+    "INDI.G1.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T",
@@ -303,13 +340,15 @@
      "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.a",
      "letter": "a",
      "text": "identify vowel and consonant letter sounds for accuracy",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.2.4"
     },
     {
      "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.b",
      "letter": "b",
      "text": "read words related to the school for comprehension",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.2.5"
     },
     {
      "code": "INDI.G1.READIN.T2_READING_LETTERS_OF_T.c",
@@ -319,7 +358,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.2.1",
+    "INDI.G1.RUBRIC.2.2",
+    "INDI.G1.RUBRIC.2.3",
+    "INDI.G1.RUBRIC.2.4",
+    "INDI.G1.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INDI.G1.WRITIN.T2_HANDWRITING",
@@ -373,7 +419,8 @@
      "code": "INDI.G1.WRITIN.T2_HANDWRITING.b",
      "letter": "b",
      "text": "re-write simple words related to school",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.3.5"
     },
     {
      "code": "INDI.G1.WRITIN.T2_HANDWRITING.c",
@@ -383,7 +430,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.3.1",
+    "INDI.G1.RUBRIC.3.2",
+    "INDI.G1.RUBRIC.3.3",
+    "INDI.G1.RUBRIC.3.4",
+    "INDI.G1.RUBRIC.3.5",
+    "INDI.G1.RUBRIC.3.6",
+    "INDI.G1.RUBRIC.3.7"
+   ]
   },
   {
    "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES",
@@ -433,7 +489,8 @@
      "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES.b",
      "letter": "b",
      "text": "use polite words in a conversation for communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.1.5"
     },
     {
      "code": "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES.c",
@@ -443,7 +500,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.1.1",
+    "INDI.G1.RUBRIC.1.2",
+    "INDI.G1.RUBRIC.1.3",
+    "INDI.G1.RUBRIC.1.4",
+    "INDI.G1.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INDI.G1.READIN.T3_READING_WORDS",
@@ -493,7 +557,8 @@
      "code": "INDI.G1.READIN.T3_READING_WORDS.b",
      "letter": "b",
      "text": "read words related to good manners",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.2.5"
     },
     {
      "code": "INDI.G1.READIN.T3_READING_WORDS.c",
@@ -503,7 +568,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.2.1",
+    "INDI.G1.RUBRIC.2.2",
+    "INDI.G1.RUBRIC.2.3",
+    "INDI.G1.RUBRIC.2.4",
+    "INDI.G1.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INDI.G1.WRITIN.T3_SPELLING",
@@ -545,13 +617,15 @@
      "code": "INDI.G1.WRITIN.T3_SPELLING.a",
      "letter": "a",
      "text": "write simple words related to good manners accurately",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.3.5"
     },
     {
      "code": "INDI.G1.WRITIN.T3_SPELLING.b",
      "letter": "b",
      "text": "use simple words related to good manners to make simple sentences",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.3.5"
     },
     {
      "code": "INDI.G1.WRITIN.T3_SPELLING.c",
@@ -561,7 +635,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.3.1",
+    "INDI.G1.RUBRIC.3.2",
+    "INDI.G1.RUBRIC.3.3",
+    "INDI.G1.RUBRIC.3.4",
+    "INDI.G1.RUBRIC.3.5",
+    "INDI.G1.RUBRIC.3.6",
+    "INDI.G1.RUBRIC.3.7"
+   ]
   },
   {
    "code": "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS",
@@ -622,7 +705,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.1.1",
+    "INDI.G1.RUBRIC.1.2",
+    "INDI.G1.RUBRIC.1.3",
+    "INDI.G1.RUBRIC.1.4",
+    "INDI.G1.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INDI.G1.READIN.T4_SIMPLE_SENTENCES",
@@ -684,7 +774,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.2.1",
+    "INDI.G1.RUBRIC.2.2",
+    "INDI.G1.RUBRIC.2.3",
+    "INDI.G1.RUBRIC.2.4",
+    "INDI.G1.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INDI.G1.WRITIN.T4_WRITING_WORDS",
@@ -735,7 +832,8 @@
      "code": "INDI.G1.WRITIN.T4_WRITING_WORDS.b",
      "letter": "b",
      "text": "write simple words related to personal hygiene for expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "INDI.G1.RUBRIC.3.5"
     },
     {
      "code": "INDI.G1.WRITIN.T4_WRITING_WORDS.c",
@@ -745,7 +843,16 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.3.1",
+    "INDI.G1.RUBRIC.3.2",
+    "INDI.G1.RUBRIC.3.3",
+    "INDI.G1.RUBRIC.3.4",
+    "INDI.G1.RUBRIC.3.5",
+    "INDI.G1.RUBRIC.3.6",
+    "INDI.G1.RUBRIC.3.7"
+   ]
   },
   {
    "code": "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM",
@@ -808,7 +915,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.1.1",
+    "INDI.G1.RUBRIC.1.2",
+    "INDI.G1.RUBRIC.1.3",
+    "INDI.G1.RUBRIC.1.4",
+    "INDI.G1.RUBRIC.1.5"
+   ]
   },
   {
    "code": "INDI.G1.READIN.T5_READING_FOR_INFORMAT",
@@ -869,7 +983,14 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.2.1",
+    "INDI.G1.RUBRIC.2.2",
+    "INDI.G1.RUBRIC.2.3",
+    "INDI.G1.RUBRIC.2.4",
+    "INDI.G1.RUBRIC.2.5"
+   ]
   },
   {
    "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION",
@@ -914,7 +1035,8 @@
      "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION.a",
      "letter": "a",
      "text": "order words to form clear sentences for effective communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "INDI.G1.RUBRIC.3.6"
     },
     {
      "code": "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION.b",
@@ -930,7 +1052,267 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "INDI.G1.RUBRIC.3.1",
+    "INDI.G1.RUBRIC.3.2",
+    "INDI.G1.RUBRIC.3.3",
+    "INDI.G1.RUBRIC.3.4",
+    "INDI.G1.RUBRIC.3.5",
+    "INDI.G1.RUBRIC.3.6",
+    "INDI.G1.RUBRIC.3.7"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "INDI.G1.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric: Listening and Speaking",
+   "strand": "Listening and Speaking",
+   "covers": [
+    "INDI.G1.LISTEN.T1_LISTENING_TO_INSTRUC",
+    "INDI.G1.LISTEN.T2_WORD_FORMATION_SYLLA",
+    "INDI.G1.LISTEN.T3_LISTENING_TO_STORIES",
+    "INDI.G1.LISTEN.T4_LISTENING_TO_SONGS",
+    "INDI.G1.LISTEN.T5_RESPONDING_TO_INFORM"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "INDI.G1.RUBRIC.1.1",
+     "indicator": "Ability to identify vocabulary related to the theme",
+     "levels": {
+      "EE": "Identifies vocabulary related to the theme with accurate examples",
+      "ME": "Identifies vocabulary related to the theme",
+      "AE": "Identifies most vocabulary related to the theme",
+      "BE": "Identifies a few vocabulary related to the theme"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.1.2",
+     "indicator": "Ability to use formal and informal greetings appropriately",
+     "levels": {
+      "EE": "Uses formal and informal greetings appropriately and creatively",
+      "ME": "Uses formal and informal greetings appropriately",
+      "AE": "Uses either formal or informal greetings",
+      "BE": "Uses formal and informal greetings with clues"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.1.3",
+     "indicator": "Ability to pronounce syllables and words accurately",
+     "levels": {
+      "EE": "Pronounces varied syllables and words accurately and with ease",
+      "ME": "Pronounces syllables and words accurately",
+      "AE": "Pronounces some syllables and words accurately",
+      "BE": "Pronounces syllables and words accurately with scaffolding"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.1.4",
+     "indicator": "Ability to blend syllables to form words",
+     "levels": {
+      "EE": "Blends a variety of syllables to form words with ease and precision",
+      "ME": "Blends syllables to form words",
+      "AE": "Blends some syllables to form some words",
+      "BE": "Blends syllables to form words with assistance"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.1.5",
+     "indicator": "Ability to use polite words in conversations",
+     "levels": {
+      "EE": "Uses a wide variety of polite words in a conversation creatively",
+      "ME": "Uses polite words in a conversation",
+      "AE": "Uses a limited variety of polite words in a conversation",
+      "BE": "Uses polite words in a conversation with clues"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INDI.G1.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric: Reading",
+   "strand": "Reading",
+   "covers": [
+    "INDI.G1.READIN.T1_PICTURE_READING",
+    "INDI.G1.READIN.T2_READING_LETTERS_OF_T",
+    "INDI.G1.READIN.T3_READING_WORDS",
+    "INDI.G1.READIN.T4_SIMPLE_SENTENCES",
+    "INDI.G1.READIN.T5_READING_FOR_INFORMAT"
+   ],
+   "page": 37,
+   "indicators": [
+    {
+     "code": "INDI.G1.RUBRIC.2.1",
+     "indicator": "Ability to pronounce words correctly to express different aspects of time",
+     "levels": {
+      "EE": "Pronounces words correctly and with precision to express different aspects of time",
+      "ME": "Pronounces words correctly to express different aspects of time",
+      "AE": "Pronounces most of the words correctly to express different aspects of time",
+      "BE": "Pronounces a few words correctly to express different aspects of time"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.2.2",
+     "indicator": "Ability to respond to instructions",
+     "levels": {
+      "EE": "Responds to instructions with precision",
+      "ME": "Responds to instructions",
+      "AE": "Partially responds to instructions",
+      "BE": "Responds to instructions when prompted"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.2.3",
+     "indicator": "Ability to describe pictures related to the theme",
+     "levels": {
+      "EE": "Describes elaborately and with ease pictures related to the theme",
+      "ME": "Describes pictures related to the theme",
+      "AE": "Describes most of the pictures related to the theme",
+      "BE": "Describes a few of the pictures related to the theme"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.2.4",
+     "indicator": "Ability to identify vowel and consonant sounds",
+     "levels": {
+      "EE": "Identifies vowel and consonant sounds in varied contexts",
+      "ME": "Identifies vowel and consonant sounds",
+      "AE": "Identifies some vowel and consonant sounds",
+      "BE": "Identifies vowel and consonant sounds with prompts"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.2.5",
+     "indicator": "Ability to read words and sentences related to the theme",
+     "levels": {
+      "EE": "Reads a variety of words and sentences related to the theme with the correct articulation and pronunciation",
+      "ME": "Reads words and sentences related to the theme",
+      "AE": "Reads some words and sentences related to the theme with correct pronunciation",
+      "BE": "Reads words and sentences related to the theme with scaffolding"
+     },
+     "page": 37,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "INDI.G1.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric: Writing",
+   "strand": "Writing",
+   "covers": [
+    "INDI.G1.WRITIN.T1_HANDWRITING_LETTERS_",
+    "INDI.G1.WRITIN.T2_HANDWRITING",
+    "INDI.G1.WRITIN.T3_SPELLING",
+    "INDI.G1.WRITIN.T4_WRITING_WORDS",
+    "INDI.G1.WRITIN.T5_CREATIVE_EXPRESSION"
+   ],
+   "page": 38,
+   "indicators": [
+    {
+     "code": "INDI.G1.RUBRIC.3.1",
+     "indicator": "Ability to identify the key message from a text",
+     "levels": {
+      "EE": "Identifies the key message from varied texts with accurate supporting details",
+      "ME": "Identifies the key message from a text",
+      "AE": "Makes attempts to identify the key message from a text",
+      "BE": "Identifies the key message from a text with guidance"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.2",
+     "indicator": "Ability to respond to questions on simple texts",
+     "levels": {
+      "EE": "Responds to questions from varied texts elaborately",
+      "ME": "Responds to questions from varied texts",
+      "AE": "Responds to most questions from varied texts",
+      "BE": "Responds to a few questions from varied texts"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.3",
+     "indicator": "Ability to write using lower and upper case letters of the language alphabet",
+     "levels": {
+      "EE": "Writes neatly and legibly using lower and upper case letters of the language alphabet meticulously",
+      "ME": "Writes using lower and upper case letters of the language alphabet",
+      "AE": "Writes using lower and upper case letters of the language alphabet with few errors",
+      "BE": "Writes using lower and upper case letters of the language alphabet with many errors"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.4",
+     "indicator": "Ability to write letters and words neatly and legibly",
+     "levels": {
+      "EE": "Writes a variety of letters and words neatly and legibly",
+      "ME": "Writes letters and words neatly and legibly",
+      "AE": "Makes attempts to write some letters and words neatly and legibly",
+      "BE": "Writes letters and words neatly and legibly with assistance"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.5",
+     "indicator": "Ability to re-write simple sentences neatly and legibly words and sentences accurately",
+     "levels": {
+      "EE": "Re-writes simple sentences neatly, legibly and with ease Writes a variety of words and sentences with ease and with correct spelling",
+      "ME": "Re-writes simple sentences neatly and legibly Writes words and sentences using the correct spelling",
+      "AE": "Re-writes most sentences neatly and legibly Writes some words and sentences using the correct spelling",
+      "BE": "Re-writes few simple sentences neatly and legibly Writes some words and sentences using the correct spelling with prompts"
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.6",
+     "indicator": "Ability to re-order words and sentences to form coherent texts",
+     "levels": {
+      "EE": "Re-orders words and sentences to form coherent texts in varied contexts",
+      "ME": "Re-orders words and sentences to form coherent texts",
+      "AE": "Re-orders some words and sentences to form coherent texts",
+      "BE": "Re-orders words and sentences to form coherent texts with scaffolding"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "INDI.G1.RUBRIC.3.7",
+     "indicator": "Ability to create picture stories to describe events related to the theme",
+     "levels": {
+      "EE": "Creates picture stories to describe events related to the theme creatively",
+      "ME": "Creates picture stories to describe events related to the theme",
+      "AE": "Partially creates picture stories to describe events related to the theme",
+      "BE": "Creates picture stories to describe events related to the theme with clues"
+     },
+     "page": 39,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

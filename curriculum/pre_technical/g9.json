@@ -53,29 +53,36 @@
      "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.a",
      "letter": "a",
      "text": "identify types of raised platforms used in performing tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.b",
      "letter": "b",
      "text": "describe risks associated with working on raised platforms",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c",
      "letter": "c",
      "text": "observe safety when working on raised platforms",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.d",
      "letter": "d",
      "text": "appreciate the need for observing safety while working on raised platforms",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.1.1"
+   ]
   },
   {
    "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
@@ -119,35 +126,43 @@
      "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.a",
      "letter": "a",
      "text": "identify hazardous substances found in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.b",
      "letter": "b",
      "text": "classify hazardous substances found in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c",
      "letter": "c",
      "text": "describe safe ways of handling hazardous substances in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d",
      "letter": "d",
      "text": "handle hazardous substances safely in the environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.e",
      "letter": "e",
      "text": "appreciate the importance of observing safety when handling hazardous substances",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.1.1"
+   ]
   },
   {
    "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR",
@@ -189,29 +204,36 @@
      "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a",
      "letter": "a",
      "text": "explain ways of nurturing talents and abilities for self-development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b",
      "letter": "b",
      "text": "relate talents and abilities to career pathways",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c",
      "letter": "c",
      "text": "analyse ethical and unethical practices related to the use of talents and abilities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d",
      "letter": "d",
      "text": "choose a career based on talents and abilities for self-development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.1.1"
+   ]
   },
   {
    "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
@@ -252,29 +274,36 @@
      "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.a",
      "letter": "a",
      "text": "explain the characteristics of oblique drawing in technical fields",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b",
      "letter": "b",
      "text": "sketch given drawings in oblique projection",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c",
      "letter": "c",
      "text": "draw shaped blocks in oblique projection",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.d",
      "letter": "d",
      "text": "appreciate the application of oblique projection in drawing",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.2.1"
+   ]
   },
   {
    "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING",
@@ -315,23 +344,29 @@
      "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.a",
      "letter": "a",
      "text": "explain the application areas of visual programming software in solving problems",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b",
      "letter": "b",
      "text": "create an application using visual programming software for solving problems in day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.c",
      "letter": "c",
      "text": "embrace the use of visual programming in the day-to-day life",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G9.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.2.1"
+   ]
   },
   {
    "code": "PRE_.G9.MATERI.WOOD",
@@ -379,7 +414,8 @@
      "code": "PRE_.G9.MATERI.WOOD.b",
      "letter": "b",
      "text": "describe the preparation of wood for use in the production of items",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G9.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G9.MATERI.WOOD.c",
@@ -395,7 +431,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.3.1",
+    "PRE_.G9.RUBRIC.3.2"
+   ]
   },
   {
    "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS",
@@ -447,7 +487,8 @@
      "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.c",
      "letter": "c",
      "text": "dispose waste materials using appropriate methods",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.3.2"
     },
     {
      "code": "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.d",
@@ -457,7 +498,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.3.1",
+    "PRE_.G9.RUBRIC.3.2"
+   ]
   },
   {
    "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS",
@@ -505,13 +550,15 @@
      "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.b",
      "letter": "b",
      "text": "select holding tools for performing given tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.c",
      "letter": "c",
      "text": "use holding tools to perform given tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G9.TOOLS_.HOLDING_TOOLS.d",
@@ -527,7 +574,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.4.1",
+    "PRE_.G9.RUBRIC.4.2"
+   ]
   },
   {
    "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS",
@@ -574,13 +625,15 @@
      "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.b",
      "letter": "b",
      "text": "select driving tools for performing given tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.c",
      "letter": "c",
      "text": "use driving tools to perform given tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G9.TOOLS_.DRIVING_TOOLS.d",
@@ -596,7 +649,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.4.1",
+    "PRE_.G9.RUBRIC.4.2"
+   ]
   },
   {
    "code": "PRE_.G9.TOOLS_.PROJECT",
@@ -647,13 +704,15 @@
      "code": "PRE_.G9.TOOLS_.PROJECT.b",
      "letter": "b",
      "text": "select an item that can be made to solve the identified problem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.2"
     },
     {
      "code": "PRE_.G9.TOOLS_.PROJECT.c",
      "letter": "c",
      "text": "make an item to solve the problem identified using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.4.2"
     },
     {
      "code": "PRE_.G9.TOOLS_.PROJECT.d",
@@ -663,7 +722,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.4.1",
+    "PRE_.G9.RUBRIC.4.2"
+   ]
   },
   {
    "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
@@ -703,19 +766,22 @@
      "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.a",
      "letter": "a",
      "text": "identify financial institutions available in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.b",
      "letter": "b",
      "text": "classify financial institutions in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c",
      "letter": "c",
      "text": "analyse services offered by financial institutions in Kenya",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d",
@@ -725,7 +791,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.5.1",
+    "PRE_.G9.RUBRIC.5.2",
+    "PRE_.G9.RUBRIC.5.3"
+   ]
   },
   {
    "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS",
@@ -766,13 +837,15 @@
      "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.a",
      "letter": "a",
      "text": "explain the reasons for government involvement in business",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.2"
     },
     {
      "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.b",
      "letter": "b",
      "text": "describe ways of government involvement in business",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.2"
     },
     {
      "code": "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.c",
@@ -794,7 +867,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.5.1",
+    "PRE_.G9.RUBRIC.5.2",
+    "PRE_.G9.RUBRIC.5.3"
+   ]
   },
   {
    "code": "PRE_.G9.ENTREP.BUSINESS_PLAN",
@@ -842,13 +920,15 @@
      "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.b",
      "letter": "b",
      "text": "describe the components of a business plan in financial management",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.3"
     },
     {
      "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.c",
      "letter": "c",
      "text": "fill in a business plan template for a given business project",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G9.RUBRIC.5.3"
     },
     {
      "code": "PRE_.G9.ENTREP.BUSINESS_PLAN.d",
@@ -858,7 +938,185 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G9.RUBRIC.5.1",
+    "PRE_.G9.RUBRIC.5.2",
+    "PRE_.G9.RUBRIC.5.3"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "PRE_.G9.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Foundations of Pre-Technical Studies",
+   "covers": [
+    "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR",
+    "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST",
+    "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "PRE_.G9.RUBRIC.1.1",
+     "indicator": "Ability to describe risks associated with working on raised platforms Ability to describe safe ways of handling hazardous substances in the environment Ability to relate talents and abilities to career pathways",
+     "levels": {
+      "EE": "Describes risks associated with working on more than five raised platforms Describes safe ways of handling hazardous substances in the environment citing examples Relates talents and abilities to career pathways with illustrations",
+      "ME": "Describes risks associated with working on five raised platforms Describes safe ways of handling hazardous substances in the environment Relates talents and abilities to career pathways",
+      "AE": "Describes risks associated with working on three to four raised platforms Describes some safe ways of handling hazardous substances in the environment Relates some talents and abilities to career pathways",
+      "BE": "Describes risks associated with working on two or less raised platforms With prompts describes safe ways of handling hazardous substances in the environment With prompts relates talents and abilities to career pathways"
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G9.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Communication in Pre-Technical Studies",
+   "covers": [
+    "PRE_.G9.COMMUN.OBLIQUE_PROJECTION",
+    "PRE_.G9.COMMUN.VISUAL_PROGRAMMING"
+   ],
+   "page": 24,
+   "indicators": [
+    {
+     "code": "PRE_.G9.RUBRIC.2.1",
+     "indicator": "Ability to explain the characteristics of oblique drawing in technical fields Ability to create an application using visual programming software for solving problems in day-to-day life",
+     "levels": {
+      "EE": "Explains the characteristics of oblique drawing in technical fields with illustrations Creates an application using visual programming software for solving problems in day-to-day life with enhanced user friendly features",
+      "ME": "Explains the characteristics of oblique drawing in technical fields Creates an application using visual programming software for solving problems in day-to-day life",
+      "AE": "Explains the characteristics of oblique drawing in technical fields leaving out few details Creates an application using visual programming software for solving problems in day-to-day life with basic features",
+      "BE": "Explains the characteristics of oblique drawing in technical fields leaving out many details Creates an application using visual programming software for solving problems in day-to-day life with simplistic features"
+     },
+     "page": 24,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G9.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Materials for Production",
+   "covers": [
+    "PRE_.G9.MATERI.WOOD",
+    "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS"
+   ],
+   "page": 29,
+   "indicators": [
+    {
+     "code": "PRE_.G9.RUBRIC.3.1",
+     "indicator": "Ability to describe the preparation of wood for use in production of items",
+     "levels": {
+      "EE": "Describes the preparation of wood for use in production of items in details",
+      "ME": "Describes the preparation of wood for use in production of items",
+      "AE": "Describes the preparation of wood for use in production of items leaving out a few details",
+      "BE": "Describes the preparation of wood for use in production of items leaving out many details"
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.RUBRIC.3.2",
+     "indicator": "Ability to dispose waste materials using appropriate methods (reduce, reuse, recycle, compost and burn)",
+     "levels": {
+      "EE": "Disposes waste materials using five appropriate methods",
+      "ME": "Disposes waste materials using four appropriate methods",
+      "AE": "Disposes waste materials using three appropriate methods",
+      "BE": "Disposes waste materials using less than two appropriate methods"
+     },
+     "page": 29,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G9.RUBRIC.4",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Tools and Production",
+   "covers": [
+    "PRE_.G9.TOOLS_.HOLDING_TOOLS",
+    "PRE_.G9.TOOLS_.DRIVING_TOOLS",
+    "PRE_.G9.TOOLS_.PROJECT"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "PRE_.G9.RUBRIC.4.1",
+     "indicator": "Ability to identify holding tools used in the locality Ability to use driving tools to perform given tasks",
+     "levels": {
+      "EE": "Identifies more than five holding tools used the locality Consistently uses driving tools to perform given tasks",
+      "ME": "Identifies five holding tools used in the locality Uses driving tools to perform given tasks",
+      "AE": "Identifies three to four holding tools used in the locality Sometimes uses driving tools to perform given tasks",
+      "BE": "Identifies two holding tools used in the locality Rarely uses driving tools to perform given tasks with assistance"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.RUBRIC.4.2",
+     "indicator": "Ability to make an item to solve the identified problem",
+     "levels": {
+      "EE": "Makes an aesthetically appealing item to solve the identified problem",
+      "ME": "Makes an item to solve the identified problem",
+      "AE": "Makes an item that partially solves the identified problem",
+      "BE": "Needs assistance to make an item to solve the identified problem"
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G9.RUBRIC.5",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Entrepreneurship",
+   "covers": [
+    "PRE_.G9.ENTREP.FINANCIAL_SERVICES",
+    "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS",
+    "PRE_.G9.ENTREP.BUSINESS_PLAN"
+   ],
+   "page": 43,
+   "indicators": [
+    {
+     "code": "PRE_.G9.RUBRIC.5.1",
+     "indicator": "Ability to identify financial institutions available in Kenya",
+     "levels": {
+      "EE": "Identifies four financial institutions available in Kenya",
+      "ME": "Identifies three financial institutions available in Kenya",
+      "AE": "Identifies two financial institutions available in Kenya",
+      "BE": "Identifies less than two financial institutions available in Kenya"
+     },
+     "page": 43,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.RUBRIC.5.2",
+     "indicator": "Ability to explain the reasons for government involvement in business in Kenya",
+     "levels": {
+      "EE": "Explains the reasons for government involvement in business in Kenya citing examples",
+      "ME": "Explains the reasons for government involvement in business in Kenya",
+      "AE": "Explains some of the reasons for government involvement in business in Kenya",
+      "BE": "With prompts explains of the reasons for government involvement in business in Kenya"
+     },
+     "page": 43,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G9.RUBRIC.5.3",
+     "indicator": "Ability to fill a business plan template (executive summary, business description, market/competitor analysis, product and services, marketing plan, financial projection)",
+     "levels": {
+      "EE": "Fills in six components of a business template giving specific details.",
+      "ME": "Fills in six components of a business template.",
+      "AE": "Fills in three to five components of a business template.",
+      "BE": "Fills in at most two components of a business template."
+     },
+     "page": 43,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

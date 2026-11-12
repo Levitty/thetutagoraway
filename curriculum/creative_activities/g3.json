@@ -54,23 +54,29 @@
      "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.a",
      "letter": "a",
      "text": "identify pushing and pulling in physical activities for space and body awareness",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.b",
      "letter": "b",
      "text": "perform pulling and pushing activities for flexibility",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.PUSHING_AND_PULLING.c",
      "letter": "c",
      "text": "enjoy pushing and pulling for strength and flexibility",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING",
@@ -115,35 +121,43 @@
      "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.a",
      "letter": "a",
      "text": "identify colour mixing for familiarity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.b",
      "letter": "b",
      "text": "mix colours using spraying and blowing techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.c",
      "letter": "c",
      "text": "draw a picture using regular and irregular shapes",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.d",
      "letter": "d",
      "text": "create a painting for self-expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.DRAWING_AND_PAINTING.e",
      "letter": "e",
      "text": "value drawing and painting for expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN",
@@ -191,35 +205,43 @@
      "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.a",
      "letter": "a",
      "text": "identify different sound durations in simple songs",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.b",
      "letter": "b",
      "text": "create a simple rhythmic pattern using long and short sounds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.c",
      "letter": "c",
      "text": "improvise rhythmic accompaniment to simple songs using long and short sounds",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.d",
      "letter": "d",
      "text": "make a random repeat pattern using found objects",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN.e",
      "letter": "e",
      "text": "appreciate creating rhythms and patterns",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.SKIPPING",
@@ -262,29 +284,36 @@
      "code": "CREA.G3.CREATI.SKIPPING.a",
      "letter": "a",
      "text": "identify different ways of skipping in different directions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.SKIPPING.b",
      "letter": "b",
      "text": "skip in different directions for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.SKIPPING.c",
      "letter": "c",
      "text": "make patterns while skipping in different ways",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.SKIPPING.d",
      "letter": "d",
      "text": "appreciate skipping in different directions for balance and strength",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.COLLAGE",
@@ -329,29 +358,36 @@
      "code": "CREA.G3.CREATI.COLLAGE.a",
      "letter": "a",
      "text": "identify a collage for familiarity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.COLLAGE.b",
      "letter": "b",
      "text": "prepare materials for making the collage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.COLLAGE.c",
      "letter": "c",
      "text": "create a collage for self-expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.COLLAGE.d",
      "letter": "d",
      "text": "appreciate using collage as an art of self-expression",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.MELODY",
@@ -395,29 +431,36 @@
      "code": "CREA.G3.CREATI.MELODY.a",
      "letter": "a",
      "text": "identify variations in a simple melodic pattern for aural skill development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.MELODY.b",
      "letter": "b",
      "text": "create melodic patterns using improvised percussions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.MELODY.c",
      "letter": "c",
      "text": "apply performance directions in performing simple songs",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.MELODY.d",
      "letter": "d",
      "text": "enjoy creating melodies using the variation technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.CREATI.WEAVING",
@@ -462,23 +505,29 @@
      "code": "CREA.G3.CREATI.WEAVING.a",
      "letter": "a",
      "text": "identify a plain paper weave for familiarity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.WEAVING.b",
      "letter": "b",
      "text": "create a plain paper weave to make",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     },
     {
      "code": "CREA.G3.CREATI.WEAVING.c",
      "letter": "c",
      "text": "enjoy making paper mat using weaving",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.1.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.ROUNDS",
@@ -522,29 +571,36 @@
      "code": "CREA.G3.PERFOR.ROUNDS.a",
      "letter": "a",
      "text": "aurally identify a round performance",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.ROUNDS.b",
      "letter": "b",
      "text": "sing own part in a round applying appropriate performance techniques",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.ROUNDS.c",
      "letter": "c",
      "text": "describe the message in a round",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.ROUNDS.d",
      "letter": "d",
      "text": "enjoy singing in a round",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.GALLOPING",
@@ -588,23 +644,29 @@
      "code": "CREA.G3.PERFOR.GALLOPING.a",
      "letter": "a",
      "text": "identify different directions of galloping for agility and coordination",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.GALLOPING.b",
      "letter": "b",
      "text": "perform galloping movement in different directions for skill acquisition",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.GALLOPING.c",
      "letter": "c",
      "text": "enjoy playing galloping games while moving in different directions",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE",
@@ -645,23 +707,29 @@
      "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.a",
      "letter": "a",
      "text": "identify toys made by assemblage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.b",
      "letter": "b",
      "text": "make toys using assemblage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE.c",
      "letter": "c",
      "text": "enjoy making and playing with the toys",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN",
@@ -709,35 +777,43 @@
      "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.a",
      "letter": "a",
      "text": "identify body parts used for performing forward roll and V-balance in gymnastics",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.b",
      "letter": "b",
      "text": "make markers for use during forward roll and V-balance performance in gymnastics",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.c",
      "letter": "c",
      "text": "perform forward roll for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.d",
      "letter": "d",
      "text": "perform V-balance for skill acquisition",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN.e",
      "letter": "e",
      "text": "enjoy performing forward roll and V-balance for flexibility and balance. 105 105",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN",
@@ -782,29 +858,36 @@
      "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.a",
      "letter": "a",
      "text": "identify Indigenous string musical instruments from Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.b",
      "letter": "b",
      "text": "improvise a string musical instrument using available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.c",
      "letter": "c",
      "text": "play an improvised string instrument for enjoyment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN.d",
      "letter": "d",
      "text": "value Indigenous string instruments from Kenyan communities",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M",
@@ -846,35 +929,43 @@
      "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.a",
      "letter": "a",
      "text": "identify modelled beads for familiarity",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.b",
      "letter": "b",
      "text": "model beads using the pellet technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.c",
      "letter": "c",
      "text": "decorate the beads by painting",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.d",
      "letter": "d",
      "text": "make an ornament using beads",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     },
     {
      "code": "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M.e",
      "letter": "e",
      "text": "appreciate making beads using the pellet technique",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.2.1"
+   ]
   },
   {
    "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE",
@@ -919,35 +1010,43 @@
      "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.a",
      "letter": "a",
      "text": "identify the text of the first stanza of the Kenya National Anthem in Kiswahili",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.b",
      "letter": "b",
      "text": "describe the message in the Kenya National anthem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.c",
      "letter": "c",
      "text": "identify occasions when the Kenya National Flag is raised",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.d",
      "letter": "d",
      "text": "sing the Kenya National Anthem observing the anthem’s etiquette",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE.e",
      "letter": "e",
      "text": "appreciate the performance of the Kenya National Anthem for patriotism. 112 112",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.3.1"
+   ]
   },
   {
    "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS",
@@ -986,29 +1085,119 @@
      "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.a",
      "letter": "a",
      "text": "identify different water points and water bodies in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.b",
      "letter": "b",
      "text": "explain water dangers arising from water points and water bodies in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.c",
      "letter": "c",
      "text": "narrate ways of observing safety around water points and water bodies in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     },
     {
      "code": "CREA.G3.APPREC.WATER_SAFETY_AWARENESS.d",
      "letter": "d",
      "text": "appreciate water safety in the locality for life skills",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "CREA.G3.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "CREA.G3.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "CREA.G3.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Creating and Executing",
+   "covers": [
+    "CREA.G3.CREATI.PUSHING_AND_PULLING",
+    "CREA.G3.CREATI.DRAWING_AND_PAINTING",
+    "CREA.G3.CREATI.RHYTHM_AND_PATTERN_MAKIN",
+    "CREA.G3.CREATI.SKIPPING",
+    "CREA.G3.CREATI.COLLAGE",
+    "CREA.G3.CREATI.MELODY",
+    "CREA.G3.CREATI.WEAVING"
+   ],
+   "page": 18,
+   "indicators": [
+    {
+     "code": "CREA.G3.RUBRIC.1.1",
+     "indicator": "Ability to create and/or execute: • pushing and pulling for flexibility • drawing a simple picture paint a simple picture • simple rhythmic pattern in music • random repeat pattern • Skipping in different directions • performance directions • melodic patterns using improvised percussions • a plain paper weave in two colours",
+     "levels": {
+      "EE": "Creates and/or executes the 8 items in Creative Activities correctly and aesthetically.",
+      "ME": "Creates and/or executes the 8 items in Creative Activities correctly.",
+      "AE": "Creates and/or executes the 5-7 items in Creative Activities.",
+      "BE": "Creates and/or executes the 2-4 items in Creative activities."
+     },
+     "page": 18,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G3.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Performing and Displaying",
+   "covers": [
+    "CREA.G3.PERFOR.ROUNDS",
+    "CREA.G3.PERFOR.GALLOPING",
+    "CREA.G3.PERFOR.SCULPTURE_TOY_ASSEMBLAGE",
+    "CREA.G3.PERFOR.FORWARD_ROLL_AND_V_BALAN",
+    "CREA.G3.PERFOR.STRING_MUSICAL_INSTRUMEN",
+    "CREA.G3.PERFOR.MODELLING_AND_ORNAMENT_M"
+   ],
+   "page": 31,
+   "indicators": [
+    {
+     "code": "CREA.G3.RUBRIC.2.1",
+     "indicator": "Ability to perform and/or display - own part in a round, - appropriate performance techniques in a round, - galloping in different directions, - makes toys - forward roll - V- balance - an improvised stringed instrument - ornament made using modelled beads",
+     "levels": {
+      "EE": "Performs and/or displays the 8 items in Creative Activities skilfully.",
+      "ME": "Performs and/or displays the 8 items in Creative activities correctly",
+      "AE": "Performs and/or displays the 4-7 items in Creative Activities.",
+      "BE": "Performs and/or displays the 1-3 items in Creative Activities."
+     },
+     "page": 31,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "CREA.G3.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Appreciation",
+   "covers": [
+    "CREA.G3.APPREC.THE_KENYA_NATIONAL_ANTHE",
+    "CREA.G3.APPREC.WATER_SAFETY_AWARENESS"
+   ],
+   "page": 36,
+   "indicators": [
+    {
+     "code": "CREA.G3.RUBRIC.3.1",
+     "indicator": "Ability to identify and/or explain - the message in the Kenya National Anthem - occasions when the Kenya National flag is hoisted - water dangers in the locality - ways of observing water safety. Ability to: - sing the Kenya National Anthem",
+     "levels": {
+      "EE": "Identifies and/or explains the 4 items in appreciating Creative Activities elaborately. Sings the Kenya National anthem with accuracy in pitch and rhythm observing the anthem etiquette expressively.",
+      "ME": "Identifies and/or explains the 4 items in appreciating Creative Activities accurately. Sings the Kenya National anthem with accuracy in pitch and rhythm observing the anthem etiquette. 116 116",
+      "AE": "Identifies and/or explains the 2-3 items in appreciating Creative Activities. Sings the Kenya National anthem with minor inaccuracies in pitch and rhythm observing the anthem etiquette.",
+      "BE": "Identifies and/or explains at least 1 item in appreciating Creative Activities. Sings the Kenya National anthem with many inaccuracies in pitch and rhythm observing the anthem etiquette."
+     },
+     "page": 36,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

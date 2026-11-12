@@ -50,23 +50,30 @@
      "code": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.a",
      "letter": "a",
      "text": "identify the components of Pre-Technical Studies as a learning area",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.b",
      "letter": "b",
      "text": "explain the role of Pre-Technical Studies in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.c",
      "letter": "c",
      "text": "embrace Pre-Technical Studies in career development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.1.1",
+    "PRE_.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_",
@@ -108,7 +115,8 @@
      "code": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.a",
      "letter": "a",
      "text": "identify potential safety threats in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.b",
@@ -120,17 +128,23 @@
      "code": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.c",
      "letter": "c",
      "text": "observe safety in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     },
     {
      "code": "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.d",
      "letter": "d",
      "text": "appreciate the importance of observing safety in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.1.1",
+    "PRE_.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS",
@@ -171,7 +185,8 @@
      "code": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.a",
      "letter": "a",
      "text": "explain the characteristics of a computer in a user environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.2"
     },
     {
      "code": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.b",
@@ -183,7 +198,8 @@
      "code": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c",
      "letter": "c",
      "text": "use a computer to perform tasks in a user environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.1.2"
     },
     {
      "code": "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.d",
@@ -193,7 +209,11 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.1.1",
+    "PRE_.G7.RUBRIC.1.2"
+   ]
   },
   {
    "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING",
@@ -236,41 +256,50 @@
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.a",
      "letter": "a",
      "text": "explain the importance of drawing as a means of communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.b",
      "letter": "b",
      "text": "distinguish between artistic and technical drawings used in technical fields",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c",
      "letter": "c",
      "text": "print numbers and letters of the alphabet as used in drawing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.d",
      "letter": "d",
      "text": "draw types of lines used in drawing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.e",
      "letter": "e",
      "text": "illustrate symbols and abbreviations used in drawing",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.f",
      "letter": "f",
      "text": "appreciate the role of drawing in communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.2.1"
+   ]
   },
   {
    "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
@@ -310,35 +339,43 @@
      "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.a",
      "letter": "a",
      "text": "Explain the principles of free-hand sketching",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b",
      "letter": "b",
      "text": "Identify techniques of free-hand sketching",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.c",
      "letter": "c",
      "text": "sketch lines using free-hand",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.d",
      "letter": "d",
      "text": "sketch 2D shapes using free hand",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.e",
      "letter": "e",
      "text": "appreciate the importance of free-hand sketching in communication",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.2.1"
+   ]
   },
   {
    "code": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI",
@@ -376,29 +413,36 @@
      "code": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a",
      "letter": "a",
      "text": "explain the importance of ICT tools in communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b",
      "letter": "b",
      "text": "describe the ICT tools used in communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.c",
      "letter": "c",
      "text": "use ICT tools to enhance communication",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     },
     {
      "code": "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.d",
      "letter": "d",
      "text": "acknowledge the role of communication in Pre-Technical Studies",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.2.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.2.1"
+   ]
   },
   {
    "code": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL",
@@ -439,29 +483,36 @@
      "code": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.a",
      "letter": "a",
      "text": "identify materials used in production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.b",
      "letter": "b",
      "text": "distinguish between metallic and non-metallic materials found in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.c",
      "letter": "c",
      "text": "describe sustainable ways of using materials in production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.d",
      "letter": "d",
      "text": "appreciate the importance of materials in production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.3.1"
+   ]
   },
   {
    "code": "PRE_.G7.MATERI.METALLIC_MATERIALS",
@@ -501,29 +552,36 @@
      "code": "PRE_.G7.MATERI.METALLIC_MATERIALS.a",
      "letter": "a",
      "text": "identify types of metallic materials used in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.METALLIC_MATERIALS.b",
      "letter": "b",
      "text": "describe the physical properties of metallic materials found in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.METALLIC_MATERIALS.c",
      "letter": "c",
      "text": "relate metallic materials to their use in the immediate environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.METALLIC_MATERIALS.d",
      "letter": "d",
      "text": "appreciate the use of metallic materials in production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.3.1"
+   ]
   },
   {
    "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS",
@@ -564,35 +622,43 @@
      "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.a",
      "letter": "a",
      "text": "identify non-metallic materials found in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.b",
      "letter": "b",
      "text": "categorise non-metallic materials as either synthetic or natural",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.c",
      "letter": "c",
      "text": "describe the physical properties of non-metallic materials found in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.d",
      "letter": "d",
      "text": "relate non-metallic materials to their uses in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     },
     {
      "code": "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.e",
      "letter": "e",
      "text": "appreciate the use of non-metallic materials in production",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.3.1"
+   ]
   },
   {
    "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU",
@@ -633,35 +699,43 @@
      "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.a",
      "letter": "a",
      "text": "identify measuring and marking out tools used to perform tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.b",
      "letter": "b",
      "text": "select measuring and marking out tools for a given task",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c",
      "letter": "c",
      "text": "use measuring and marking out tools to perform a given task",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.d",
      "letter": "d",
      "text": "care for measuring and marking out tools to minimise damage",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.e",
      "letter": "e",
      "text": "recognise the importance of measuring and marking out tools when performing tasks",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.4.1"
+   ]
   },
   {
    "code": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE",
@@ -700,23 +774,29 @@
      "code": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a",
      "letter": "a",
      "text": "classify computer hardware devices in a user environment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.b",
      "letter": "b",
      "text": "use computer hardware devices to carry out a given task",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     },
     {
      "code": "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.c",
      "letter": "c",
      "text": "value the importance of computer hardware devices in a user environment",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.4.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.4.1"
+   ]
   },
   {
    "code": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE",
@@ -760,29 +840,36 @@
      "code": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.a",
      "letter": "a",
      "text": "explain the importance of entrepreneurship in the community",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.b",
      "letter": "b",
      "text": "describe the qualities of an entrepreneur in business",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.c",
      "letter": "c",
      "text": "explore sources of business ideas for a business venture",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.d",
      "letter": "d",
      "text": "appreciate the role of entrepreneurship in a community. By the end of the sub",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.5.1"
+   ]
   },
   {
    "code": "PRE_.G7.ENTREP.UNIT",
@@ -821,23 +908,29 @@
      "code": "PRE_.G7.ENTREP.UNIT.a",
      "letter": "a",
      "text": "explain the factors considered when locating a production unit",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.UNIT.b",
      "letter": "b",
      "text": "analyse the factors determining the size of a production unit",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.UNIT.c",
      "letter": "c",
      "text": "value the importance of locating a production unit in a suitable area",
-     "status": "kicd_read"
+     "status": "kicd_read",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.5.1"
+   ]
   },
   {
    "code": "PRE_.G7.ENTREP.FINANCIAL_GOALS",
@@ -878,29 +971,174 @@
      "code": "PRE_.G7.ENTREP.FINANCIAL_GOALS.a",
      "letter": "a",
      "text": "explain the importance of setting goals in financial management",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.FINANCIAL_GOALS.b",
      "letter": "b",
      "text": "analyse the factors to consider when setting financial goals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.FINANCIAL_GOALS.c",
      "letter": "c",
      "text": "formulate financial goals for individual development",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     },
     {
      "code": "PRE_.G7.ENTREP.FINANCIAL_GOALS.d",
      "letter": "d",
      "text": "observe financial discipline in financial management",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "PRE_.G7.RUBRIC.5.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "PRE_.G7.RUBRIC.5.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "PRE_.G7.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Foundations of Pre -Technical Studies",
+   "covers": [
+    "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH",
+    "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_",
+    "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "PRE_.G7.RUBRIC.1.1",
+     "indicator": "Ability to explain the role of Pre-Technical Studies in day-to-day life. Ability to observe safety in the immediate environment.",
+     "levels": {
+      "EE": "Explains the role of Pre-Technical Studies in day-to-day life and adds unique details. Always observes safety in the immediate environment.",
+      "ME": "Explains the role of Pre-Technical Studies in day-to-day life. Often observes safety in the immediate environment.",
+      "AE": "Explains the role of Pre-Technical Studies in day-to-day life omitting a few details. Occasionally observes safety in the immediate environment.",
+      "BE": "Explains the role of Pre-Technical Studies in day-to-day life omitting many details. Rarely observes safety in the immediate environment."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "PRE_.G7.RUBRIC.1.2",
+     "indicator": "Ability to use a computer to perform tasks in a user environment.",
+     "levels": {
+      "EE": "Uses a computer to perform all tasks in a user environment.",
+      "ME": "Uses a computer to perform most of the tasks in a user environment.",
+      "AE": "Uses a computer to perform some of the tasks in a user environment.",
+      "BE": "Uses a computer to perform a few of the tasks in a user environment with assistance."
+     },
+     "page": 19,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G7.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Communication in Pre- Technical Studies",
+   "covers": [
+    "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING",
+    "PRE_.G7.COMMUN.FREE_HAND_SKETCHING",
+    "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "PRE_.G7.RUBRIC.2.1",
+     "indicator": "Ability to explain the importance of drawing as a means of communication. Ability to sketch 2D shapes using free hand. Ability to use ICT tools to enhance communication.",
+     "levels": {
+      "EE": "Explains the importance of drawing as a means of communication and adds more details. Sketches 2D shapes using free hand with unique and clear details. Uses more ICT tools than to enhance communication.",
+      "ME": "Explains the importance of drawing as a means of communication. Sketches 2D shapes using free hand. Uses ICT tools to enhance communication.",
+      "AE": "Explains the importance of drawing as a means of communication leaving out a few details. Sketches 2D shapes using free hand with a few unclear details. Uses some of the ICT tools to enhance communication.",
+      "BE": "Explains the importance of drawing as a means of communication leaving out many details. Sketches 2D shapes using free hand with many unclear details. Uses only a few of the ICT tools to enhance communication."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G7.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Materials for Production",
+   "covers": [
+    "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL",
+    "PRE_.G7.MATERI.METALLIC_MATERIALS",
+    "PRE_.G7.MATERI.NON_METALLIC_MATERIALS"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "PRE_.G7.RUBRIC.3.1",
+     "indicator": "Ability to identify materials used in production. Ability to describe the physical properties of metallic materials found in the immediate environment. Ability to relate non-metallic materials to their uses in the locality.",
+     "levels": {
+      "EE": "Identifies materials used in production and cites their applications. Describes the physical properties of metallic materials found in the immediate environment citing examples. Relates non-metallic materials to their uses in the locality and beyond locality.",
+      "ME": "Identifies materials used in production. Describes the physical properties of metallic materials found in the immediate environment. Relates non-metallic materials to their uses in the locality.",
+      "AE": "Identifies most materials used in production. Describes some of the physical properties of metallic materials found in the immediate environment. Relates some of the non-metallic materials to their uses in the locality.",
+      "BE": "Identifies a few materials used in production. Describes only a few of the physical properties of metallic materials found in the immediate environment. Relates a few of the non-metallic materials to their uses in the locality."
+     },
+     "page": 33,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G7.RUBRIC.4",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Tools and Production",
+   "covers": [
+    "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU",
+    "PRE_.G7.TOOLS_.COMPUTER_HARDWARE"
+   ],
+   "page": 38,
+   "indicators": [
+    {
+     "code": "PRE_.G7.RUBRIC.4.1",
+     "indicator": "Ability to identify measuring and marking out tools used to perform tasks. Ability to use measuring and marking out tools to perform a given task. Ability to use computer hardware devices to carry out a given task.",
+     "levels": {
+      "EE": "Identifies measuring and marking out tools used to perform tasks and improvises more tools. Uses measuring and marking out tools to perform a given task with high precision and no errors. Uses computer hardware devices to carry out a given task and innovates more.",
+      "ME": "Identifies measuring and marking out tools used to perform tasks. Uses measuring and marking out tools to perform a given task. Uses computer hardware devices to carry out a given task.",
+      "AE": "Identifies measuring and marking out tools used to perform tasks leaving out a few tools. Uses measuring and marking out tools to perform a given task with a few errors. Uses some of the computer hardware devices to carry out a given task.",
+      "BE": "Identifies measuring and marking out tools used to perform tasks leaving out many tools. Uses measuring and marking out tools to perform a given task with many errors. Uses only a few of the computer hardware devices to carry out a given task."
+     },
+     "page": 38,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "PRE_.G7.RUBRIC.5",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "Entrepreneurship",
+   "covers": [
+    "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE",
+    "PRE_.G7.ENTREP.UNIT",
+    "PRE_.G7.ENTREP.FINANCIAL_GOALS"
+   ],
+   "page": 45,
+   "indicators": [
+    {
+     "code": "PRE_.G7.RUBRIC.5.1",
+     "indicator": "Ability to describe the qualities of an entrepreneur in business. Ability to explore sources of generating business ideas for a business venture. Ability to analyse factors determining the size of a production unit.",
+     "levels": {
+      "EE": "Describes all the qualities of an entrepreneur. Explores all sources of generating business ideas for a business venture. Analyses all the factors determining the size of a production unit.",
+      "ME": "Describes most of the qualities of an entrepreneur. Explores most sources of generating business ideas for a business venture. Analyses most of the factors determining the size of a production unit.",
+      "AE": "Describes some qualities of an entrepreneur. Explores some of the sources of generating business ideas for a business venture. Analyses some of the factors determining the size of a production unit.",
+      "BE": "Describes a few qualities of an entrepreneur with assistance. Explores a few of the sources of generating business ideas for a business venture with guidance. Analyses a few of the factors determining the size of a production unit with prompt."
+     },
+     "page": 45,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

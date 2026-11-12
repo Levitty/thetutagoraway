@@ -62,7 +62,8 @@
      "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.b",
      "letter": "b",
      "text": "describe functions of parts of a flower",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.1.1"
     },
     {
      "code": "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS.c",
@@ -488,7 +489,13 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome d (\"appreciate the importance of flowers in nature\") is attitudinal: no question family; observe it in a nature walk or a flower portfolio. Outcomes a to c are tested by questions. Drawing and labelling a flower is a practical."
+   "authoring_notes": "Outcome d (\"appreciate the importance of flowers in nature\") is attitudinal: no question family; observe it in a nature walk or a flower portfolio. Outcomes a to c are tested by questions. Drawing and labelling a flower is a practical.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.1.1",
+    "SCIE.G5.RUBRIC.1.2",
+    "SCIE.G5.RUBRIC.1.3",
+    "SCIE.G5.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SCIE.G5.LIVING.VERTEBRATES",
@@ -535,7 +542,8 @@
      "code": "SCIE.G5.LIVING.VERTEBRATES.b",
      "letter": "b",
      "text": "classify vertebrates into their main groups",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.1.2"
     },
     {
      "code": "SCIE.G5.LIVING.VERTEBRATES.c",
@@ -826,7 +834,13 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome c (\"appreciate the importance of vertebrates in the environment\") is attitudinal: no question family; observe it in the portfolio or a school-compound observation. Safety with animals is taught, not tested by a typed question."
+   "authoring_notes": "Outcome c (\"appreciate the importance of vertebrates in the environment\") is attitudinal: no question family; observe it in the portfolio or a school-compound observation. Safety with animals is taught, not tested by a typed question.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.1.1",
+    "SCIE.G5.RUBRIC.1.2",
+    "SCIE.G5.RUBRIC.1.3",
+    "SCIE.G5.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST",
@@ -870,19 +884,22 @@
      "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.a",
      "letter": "a",
      "text": "identify the main parts of the human breathing system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.1.3"
     },
     {
      "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.b",
      "letter": "b",
      "text": "describe the functions of parts of the human breathing system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.1.3"
     },
     {
      "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.c",
      "letter": "c",
      "text": "coutline the symptoms and prevention measures for common conditions and diseases of the breathing system",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.1.4"
     },
     {
      "code": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.d",
@@ -1294,7 +1311,13 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome d (\"appreciate the need for maintaining a healthy breathing system\") is attitudinal: no question family. The KICD text reads \"coutline\" in outcome c; it is kept as printed in the outcome and read as \"outline\". Model-making of the lungs is a practical."
+   "authoring_notes": "Outcome d (\"appreciate the need for maintaining a healthy breathing system\") is attitudinal: no question family. The KICD text reads \"coutline\" in outcome c; it is kept as printed in the outcome and read as \"outline\". Model-making of the lungs is a practical.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.1.1",
+    "SCIE.G5.RUBRIC.1.2",
+    "SCIE.G5.RUBRIC.1.3",
+    "SCIE.G5.RUBRIC.1.4"
+   ]
   },
   {
    "code": "SCIE.G5.MATTER.MIXTURES",
@@ -1338,13 +1361,15 @@
      "code": "SCIE.G5.MATTER.MIXTURES.a",
      "letter": "a",
      "text": "classify mixtures as homogeneous or heterogeneous",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.1"
     },
     {
      "code": "SCIE.G5.MATTER.MIXTURES.b",
      "letter": "b",
      "text": "apply appropriate methods to separate heterogeneous mixtures",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.2"
     },
     {
      "code": "SCIE.G5.MATTER.MIXTURES.c",
@@ -1356,7 +1381,8 @@
      "code": "SCIE.G5.MATTER.MIXTURES.d",
      "letter": "d",
      "text": "appreciate different methods of separating mixtures in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.2"
     }
    ],
    "skills": [
@@ -1805,7 +1831,13 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome d (\"appreciate different methods of separating mixtures\") is attitudinal: no question family. Outcome b (\"apply ... methods\") has a hands-on half (carrying out the separation) that needs a practical; the questions test choosing the method and explaining why it works."
+   "authoring_notes": "Outcome d (\"appreciate different methods of separating mixtures\") is attitudinal: no question family. Outcome b (\"apply ... methods\") has a hands-on half (carrying out the separation) that needs a practical; the questions test choosing the method and explaining why it works.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.2.1",
+    "SCIE.G5.RUBRIC.2.2",
+    "SCIE.G5.RUBRIC.2.3",
+    "SCIE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SCIE.G5.MATTER.WATER_POLLUTION",
@@ -1852,7 +1884,8 @@
      "code": "SCIE.G5.MATTER.WATER_POLLUTION.a",
      "letter": "a",
      "text": "identify water pollutants in the water sources",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.3"
     },
     {
      "code": "SCIE.G5.MATTER.WATER_POLLUTION.b",
@@ -1864,13 +1897,15 @@
      "code": "SCIE.G5.MATTER.WATER_POLLUTION.c",
      "letter": "c",
      "text": "identify methods of reducing water pollution in the water sources",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.3"
     },
     {
      "code": "SCIE.G5.MATTER.WATER_POLLUTION.d",
      "letter": "d",
      "text": "apply appropriate methods of water treatment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.2.4"
     },
     {
      "code": "SCIE.G5.MATTER.WATER_POLLUTION.e",
@@ -2221,7 +2256,13 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome e (\"advocate for safe water sources in the locality\") is an attitude and action outcome: no question family; it needs a project (a campaign or a survey of the local water source). Outcome d (\"apply ... water treatment\") has a hands-on half (boiling, filtering, solar treatment) that needs a practical; the questions test choosing the method."
+   "authoring_notes": "Outcome e (\"advocate for safe water sources in the locality\") is an attitude and action outcome: no question family; it needs a project (a campaign or a survey of the local water source). Outcome d (\"apply ... water treatment\") has a hands-on half (boiling, filtering, solar treatment) that needs a practical; the questions test choosing the method.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.2.1",
+    "SCIE.G5.RUBRIC.2.2",
+    "SCIE.G5.RUBRIC.2.3",
+    "SCIE.G5.RUBRIC.2.4"
+   ]
   },
   {
    "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
@@ -2266,19 +2307,22 @@
      "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.a",
      "letter": "a",
      "text": "classify objects as floating or sinking in water",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.1"
     },
     {
      "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.b",
      "letter": "b",
      "text": "identify factors that affect floating and sinking of objects in water",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.1"
     },
     {
      "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.c",
      "letter": "c",
      "text": "explain applications of floating and sinking in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.2"
     },
     {
      "code": "SCIE.G5.FORCE_.FLOATING_AND_SINKING.d",
@@ -2542,7 +2586,14 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome d (\"appreciate the use of floaters as life savers\") is attitudinal: no question family. Outcomes a and b are practical investigations in the design; the questions test the results and reasoning, not the handling of the objects."
+   "authoring_notes": "Outcome d (\"appreciate the use of floaters as life savers\") is attitudinal: no question family. Outcomes a and b are practical investigations in the design; the questions test the results and reasoning, not the handling of the objects.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.3.1",
+    "SCIE.G5.RUBRIC.3.2",
+    "SCIE.G5.RUBRIC.3.3",
+    "SCIE.G5.RUBRIC.3.4",
+    "SCIE.G5.RUBRIC.3.5"
+   ]
   },
   {
    "code": "SCIE.G5.FORCE_.SOUND_ENERGY",
@@ -2589,7 +2640,8 @@
      "code": "SCIE.G5.FORCE_.SOUND_ENERGY.a",
      "letter": "a",
      "text": "identify sources of sound in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.3"
     },
     {
      "code": "SCIE.G5.FORCE_.SOUND_ENERGY.b",
@@ -2601,7 +2653,8 @@
      "code": "SCIE.G5.FORCE_.SOUND_ENERGY.c",
      "letter": "c",
      "text": "describe effects of loud sound in day-to-day life",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.4"
     },
     {
      "code": "SCIE.G5.FORCE_.SOUND_ENERGY.d",
@@ -2868,7 +2921,14 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome d (\"appreciate the role of sound in day-to-day life\") is attitudinal: no question family. Outcome b (\"demonstrate the movement of sound\") is a practical (string telephone, tapping a desk): the questions test the reasoning only."
+   "authoring_notes": "Outcome d (\"appreciate the role of sound in day-to-day life\") is attitudinal: no question family. Outcome b (\"demonstrate the movement of sound\") is a practical (string telephone, tapping a desk): the questions test the reasoning only.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.3.1",
+    "SCIE.G5.RUBRIC.3.2",
+    "SCIE.G5.RUBRIC.3.3",
+    "SCIE.G5.RUBRIC.3.4",
+    "SCIE.G5.RUBRIC.3.5"
+   ]
   },
   {
    "code": "SCIE.G5.FORCE_.HEAT_TRANSFER",
@@ -2915,7 +2975,8 @@
      "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.a",
      "letter": "a",
      "text": "demonstrate the modes of heat transfer in nature",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "SCIE.G5.RUBRIC.3.5"
     },
     {
      "code": "SCIE.G5.FORCE_.HEAT_TRANSFER.b",
@@ -3292,7 +3353,210 @@
      "status": "draft"
     }
    ],
-   "authoring_notes": "Outcome a (\"demonstrate the modes of heat transfer\") and b (classifying conductors) are practicals in the design; the questions test the reasoning. Outcome d (\"acknowledge safety precautions\") is half attitude: the knowledge half has a skill (HEAT_SAFETY); the acknowledging is seen in behaviour."
+   "authoring_notes": "Outcome a (\"demonstrate the modes of heat transfer\") and b (classifying conductors) are practicals in the design; the questions test the reasoning. Outcome d (\"acknowledge safety precautions\") is half attitude: the knowledge half has a skill (HEAT_SAFETY); the acknowledging is seen in behaviour.",
+   "rubric_indicators": [
+    "SCIE.G5.RUBRIC.3.1",
+    "SCIE.G5.RUBRIC.3.2",
+    "SCIE.G5.RUBRIC.3.3",
+    "SCIE.G5.RUBRIC.3.4",
+    "SCIE.G5.RUBRIC.3.5"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "SCIE.G5.RUBRIC.1",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Living Things and their Environment",
+   "covers": [
+    "SCIE.G5.LIVING.CLASSIFICATION_OF_PLANTS",
+    "SCIE.G5.LIVING.VERTEBRATES",
+    "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST"
+   ],
+   "page": 20,
+   "indicators": [
+    {
+     "code": "SCIE.G5.RUBRIC.1.1",
+     "indicator": "Ability to describe functions of parts of a flower.",
+     "levels": {
+      "EE": "The learner describes functions of all parts of a flower, giving illustration(s).",
+      "ME": "The learner describes functions of all parts of a flower.",
+      "AE": "The learner describes functions of most parts of a flower.",
+      "BE": "The learner describes functions of a few parts of a flower."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.1.2",
+     "indicator": "Ability to classify vertebrates into their main groups.",
+     "levels": {
+      "EE": "The learner classifies vertebrates into their main groups correctly, giving examples from the locality.",
+      "ME": "The learner classifies vertebrates into their main groups correctly.",
+      "AE": "The learner classifies most of the vertebrates into their main groups correctly.",
+      "BE": "The learner classifies a few vertebrates into their main groups."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.1.3",
+     "indicator": "Ability to describe the functions of main parts of the human breathing system.",
+     "levels": {
+      "EE": "The learner describes the functions of main parts of the human breathing system correctly and comprehensively",
+      "ME": "The learner describes the functions of main parts of the human breathing system correctly.",
+      "AE": "The learner describes the functions of main parts of the human breathing system partially.",
+      "BE": "The learner describes the functions of main parts of the human breathing system, with prompt."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.1.4",
+     "indicator": "Ability to outline the symptoms and prevention measures for common conditions and diseases of the breathing system.",
+     "levels": {
+      "EE": "The learner outlines all the symptoms and prevention measures for common conditions and diseases of the breathing system correctly and exhaustively.",
+      "ME": "The learner outlines all the symptoms and prevention measures for common conditions and diseases of the breathing system correctly.",
+      "AE": "The learner outlines most of the symptoms and prevention measures for common conditions and diseases of the breathing system correctly.",
+      "BE": "The learner outlines a few symptoms and prevention measures for common conditions and diseases of the breathing system correctly even with assistance."
+     },
+     "page": 20,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SCIE.G5.RUBRIC.2",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Matter",
+   "covers": [
+    "SCIE.G5.MATTER.MIXTURES",
+    "SCIE.G5.MATTER.WATER_POLLUTION"
+   ],
+   "page": 25,
+   "indicators": [
+    {
+     "code": "SCIE.G5.RUBRIC.2.1",
+     "indicator": "Ability to classify mixtures as homogeneous or heterogeneous.",
+     "levels": {
+      "EE": "The learner classifies mixtures as homogeneous or heterogeneous correctly, giving examples from the locality.",
+      "ME": "The learner classifies mixtures as homogeneous or heterogeneous correctly.",
+      "AE": "The learner classifies most of the mixtures as homogeneous or heterogeneous correctly.",
+      "BE": "The learner classifies a few mixtures as homogeneous or heterogeneous correctly."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.2.2",
+     "indicator": "Ability to apply appropriate methods of separating heterogeneous mixtures.",
+     "levels": {
+      "EE": "The learner applies all appropriate methods of separating heterogeneous mixtures correctly, giving illustration.",
+      "ME": "The learner applies all appropriate methods of separating heterogeneous mixtures correctly.",
+      "AE": "The learner applies most of the appropriate methods of separating heterogeneous mixtures correctly.",
+      "BE": "The learner applies a few appropriate methods of separating heterogeneous mixtures with prompt."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.2.3",
+     "indicator": "Ability to identify methods of reducing water pollution in the water sources.",
+     "levels": {
+      "EE": "The learner identifies all methods of reducing water pollution in water sources correctly, giving examples from the locality.",
+      "ME": "The learner identifies all methods of reducing water pollution in the water sources correctly.",
+      "AE": "The learner identifies most of the methods of reducing water pollution in water sources correctly.",
+      "BE": "The learner identifies a few methods of reducing water pollution in water sources correctly."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.2.4",
+     "indicator": "Ability to apply appropriate methods of water treatment.",
+     "levels": {
+      "EE": "The learner applies all appropriate methods of water treatment correctly and systematically.",
+      "ME": "The learner applies all appropriate methods of water treatment correctly.",
+      "AE": "The learner applies most of the appropriate methods of water treatment correctly.",
+      "BE": "The learner applies a few appropriate methods of water treatment correctly."
+     },
+     "page": 25,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "SCIE.G5.RUBRIC.3",
+   "heading": "Suggested Assessment Rubric",
+   "strand": "Force and Energy",
+   "covers": [
+    "SCIE.G5.FORCE_.FLOATING_AND_SINKING",
+    "SCIE.G5.FORCE_.SOUND_ENERGY",
+    "SCIE.G5.FORCE_.HEAT_TRANSFER"
+   ],
+   "page": 32,
+   "indicators": [
+    {
+     "code": "SCIE.G5.RUBRIC.3.1",
+     "indicator": "Ability to classify objects as floating or sinking in water.",
+     "levels": {
+      "EE": "The learner classifies all objects as floating or sinking in water correctly and consistently.",
+      "ME": "The learner classifies all objects as floating or sinking in water correctly.",
+      "AE": "The learner classifies most objects as floating and sinking in water correctly.",
+      "BE": "The classifies a few objects as floating and sinking in water correctly."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.3.2",
+     "indicator": "Ability to explain applications of floating and sinking",
+     "levels": {
+      "EE": "The learner explains all applications of floating and sinking correctly and comprehensively.",
+      "ME": "The learner explains all applications of floating and sinking correctly.",
+      "AE": "The learner explains most applications of floating and sinking correctly.",
+      "BE": "The learner explains a few applications of floating and sinking correctly."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.3.3",
+     "indicator": "Ability to identify sources of sound in nature.",
+     "levels": {
+      "EE": "The learner identifies all sources of sound correctly, giving examples from the locality.",
+      "ME": "The learner all identifies sources of sound correctly.",
+      "AE": "The learner identifies most sources of sound correctly.",
+      "BE": "The learner identifies a few sources of sound correctly."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.3.4",
+     "indicator": "Ability to describe effects of loud sound in day-to-day life.",
+     "levels": {
+      "EE": "The learner describes effects of loud sound correctly and comprehensively.",
+      "ME": "The learner describes effects of loud sound correctly.",
+      "AE": "The learner describes most effects of loud sound partially.",
+      "BE": "The learner describes effects of loud sound, with prompt."
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "SCIE.G5.RUBRIC.3.5",
+     "indicator": "Ability to demonstrate the modes of heat transfer in nature.",
+     "levels": {
+      "EE": "The learner demonstrates the three modes of heat transfer correctly and innovatively.",
+      "ME": "The learner demonstrates the three modes of heat transfer correctly.",
+      "AE": "The learner demonstrates two of the modes of heat transfer correctly.",
+      "BE": "The learner to demonstrates one of the modes of heat correctly"
+     },
+     "page": 32,
+     "status": "kicd_verified"
+    }
+   ]
   }
  ]
 }

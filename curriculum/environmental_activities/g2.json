@@ -59,29 +59,36 @@
      "code": "ENVI.G2.SOCIAL.OUR_HOME.a",
      "letter": "a",
      "text": "differentiate between personal and common items used at home",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_HOME.b",
      "letter": "b",
      "text": "identify materials used for cleaning personal and common items at home",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_HOME.c",
      "letter": "c",
      "text": "clean personal and common items using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_HOME.d",
      "letter": "d",
      "text": "advocate for a clean home environment for self and others’ well-being",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS",
@@ -128,35 +135,43 @@
      "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.a",
      "letter": "a",
      "text": "mention differences between family needs and wants",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.b",
      "letter": "b",
      "text": "identify places within the locality where family needs are met",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.c",
      "letter": "c",
      "text": "classify family needs and wants for financial literacy awareness",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.d",
      "letter": "d",
      "text": "prioritise family needs over family wants",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS.e",
      "letter": "e",
      "text": "appreciate family needs and wants within the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.SOCIAL.OUR_SCHOOL",
@@ -198,29 +213,36 @@
      "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.a",
      "letter": "a",
      "text": "name ways of keeping the school environment clean",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.b",
      "letter": "b",
      "text": "identify common accidents at school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.c",
      "letter": "c",
      "text": "clean the school environment for the well-being of self and others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_SCHOOL.d",
      "letter": "d",
      "text": "advocate for a clean and safe school environment",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG",
@@ -260,29 +282,36 @@
      "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.a",
      "letter": "a",
      "text": "identify the meaning of colours on the Kenya national flag",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.b",
      "letter": "b",
      "text": "name events in which Kenya’s national anthem is sung",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.c",
      "letter": "c",
      "text": "observe etiquette when raising and lowering the Kenya national flag",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG.d",
      "letter": "d",
      "text": "appreciate the importance of the national anthem",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB",
@@ -322,23 +351,29 @@
      "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.a",
      "letter": "a",
      "text": "outline Child Rights and Responsibilities at home and in the school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.b",
      "letter": "b",
      "text": "carry out the responsibilities of a child at home and in school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB.c",
      "letter": "c",
      "text": "appreciate Child Rights and Responsibilities for the attainment of social justice",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.SOCIAL.OUR_MARKET",
@@ -382,29 +417,36 @@
      "code": "ENVI.G2.SOCIAL.OUR_MARKET.a",
      "letter": "a",
      "text": "identify physical features on the way to a local market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_MARKET.b",
      "letter": "b",
      "text": "locate local market using physical features",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_MARKET.c",
      "letter": "c",
      "text": "identify activities that take place in a market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     },
     {
      "code": "ENVI.G2.SOCIAL.OUR_MARKET.d",
      "letter": "d",
      "text": "value things and people found in a market",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.1.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.1.1"
+   ]
   },
   {
    "code": "ENVI.G2.NATURA.WEATHER",
@@ -448,7 +490,8 @@
      "code": "ENVI.G2.NATURA.WEATHER.a",
      "letter": "a",
      "text": "identify weather conditions at different times of the day",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G2.NATURA.WEATHER.b",
@@ -460,7 +503,8 @@
      "code": "ENVI.G2.NATURA.WEATHER.c",
      "letter": "c",
      "text": "predict weather conditions at different times of the day",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.2.1"
     },
     {
      "code": "ENVI.G2.NATURA.WEATHER.d",
@@ -470,7 +514,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.2.1",
+    "ENVI.G2.RUBRIC.2.2",
+    "ENVI.G2.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENVI.G2.NATURA.SOIL",
@@ -512,13 +561,15 @@
      "code": "ENVI.G2.NATURA.SOIL.a",
      "letter": "a",
      "text": "identify types of soil found in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.2.2"
     },
     {
      "code": "ENVI.G2.NATURA.SOIL.b",
      "letter": "b",
      "text": "classify types of soil in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.2.2"
     },
     {
      "code": "ENVI.G2.NATURA.SOIL.c",
@@ -534,7 +585,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.2.1",
+    "ENVI.G2.RUBRIC.2.2",
+    "ENVI.G2.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENVI.G2.NATURA.LIGHT",
@@ -589,7 +645,8 @@
      "code": "ENVI.G2.NATURA.LIGHT.c",
      "letter": "c",
      "text": "describe a variety of ways of conserving light for a sustainable supply of light energy",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.2.3"
     },
     {
      "code": "ENVI.G2.NATURA.LIGHT.d",
@@ -599,7 +656,12 @@
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.2.1",
+    "ENVI.G2.RUBRIC.2.2",
+    "ENVI.G2.RUBRIC.2.3"
+   ]
   },
   {
    "code": "ENVI.G2.RESOUR.WATER",
@@ -640,29 +702,36 @@
      "code": "ENVI.G2.RESOUR.WATER.a",
      "letter": "a",
      "text": "identify ways of storing water at home and school",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.WATER.b",
      "letter": "b",
      "text": "conserve water at home and school for future use",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.WATER.c",
      "letter": "c",
      "text": "state the importance of keeping water safe for people and animal use",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.WATER.d",
      "letter": "d",
      "text": "appreciate safe water storage to prevent health risks to self and others",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G2.RESOUR.PLANTS",
@@ -702,23 +771,29 @@
      "code": "ENVI.G2.RESOUR.PLANTS.a",
      "letter": "a",
      "text": "identify ways of caring for plants using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.PLANTS.b",
      "letter": "b",
      "text": "perform plant-care activities using locally available materials",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.PLANTS.c",
      "letter": "c",
      "text": "advocate for plant protection for environmental sustainability",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.3.1"
+   ]
   },
   {
    "code": "ENVI.G2.RESOUR.ANIMALS",
@@ -762,29 +837,140 @@
      "code": "ENVI.G2.RESOUR.ANIMALS.a",
      "letter": "a",
      "text": "identify food items from animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.ANIMALS.b",
      "letter": "b",
      "text": "relate food items with respective animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.ANIMALS.c",
      "letter": "c",
      "text": "carry out activities of caring for animals in the locality",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     },
     {
      "code": "ENVI.G2.RESOUR.ANIMALS.d",
      "letter": "d",
      "text": "advocate for clean and secure animal shelters to reduce risks to the animals",
-     "status": "kicd_verified"
+     "status": "kicd_verified",
+     "indicator": "ENVI.G2.RUBRIC.3.1"
     }
    ],
    "skills": [],
-   "misconceptions": []
+   "misconceptions": [],
+   "rubric_indicators": [
+    "ENVI.G2.RUBRIC.3.1"
+   ]
+  }
+ ],
+ "rubrics": [
+  {
+   "code": "ENVI.G2.RUBRIC.1",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "SOCIAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G2.SOCIAL.OUR_HOME",
+    "ENVI.G2.SOCIAL.FAMILY_NEEDS_AND_WANTS",
+    "ENVI.G2.SOCIAL.OUR_SCHOOL",
+    "ENVI.G2.SOCIAL.OUR_NATIONAL_FLAG",
+    "ENVI.G2.SOCIAL.OUR_RIGHTS_AND_RESPONSIB",
+    "ENVI.G2.SOCIAL.OUR_MARKET"
+   ],
+   "page": 19,
+   "indicators": [
+    {
+     "code": "ENVI.G2.RUBRIC.1.1",
+     "indicator": "Ability to practise proper hygiene at home and school. Ability to practise good healthy habits at home and school. Ability to practise proper sanitation at home and school. Ability to observe etiquette when raising and lowering the Kenya national flag. Ability to carry out duties and responsibilities as a child. Ability to observe safety precautions in the immediate environment.",
+     "levels": {
+      "EE": "Practises proper hygiene at home and school most frequently. Practises good healthy habits at home and school most frequently. Practises proper sanitation at home and school most frequently. Observes etiquette when raising and lowering the Kenya national flag very keenly. Carries out duties and responsibilities as a child very keenly. Observes safety precautions in the immediate environment most keenly.",
+      "ME": "Practises proper hygiene at home and school. Practises good healthy habits at home and school. Practises proper sanitation at home and school. Observes etiquette when raising and lowering the Kenya national flag keenly. Carries out duties and responsibilities as a child keenly. Observes safety precautions in the immediate environment keenly.",
+      "AE": "Practises proper hygiene at home and school occasionally. Practises good healthy habits at home and school occasionally. Practises proper sanitation at home and school occasionally. Observes etiquette when raising and lowering the Kenya national flag less keenly. Carries out duties and responsibilities as a child less keenly. Observes safety precautions in the immediate environment less keenly.",
+      "BE": "Rarely practises proper hygiene at home and school. Rarely practises good healthy habits at home and school. Rarely practises proper sanitation at home and school. Observes etiquette when raising and lowering the Kenya national flag with prompts. Carries out duties and responsibilities as a child with prompts. Observes safety precautions in the immediate environment with prompts."
+     },
+     "page": 19,
+     "status": "kicd_read"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G2.RUBRIC.2",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "NATURAL ENVIRONMENT",
+   "covers": [
+    "ENVI.G2.NATURA.WEATHER",
+    "ENVI.G2.NATURA.SOIL",
+    "ENVI.G2.NATURA.LIGHT"
+   ],
+   "page": 26,
+   "indicators": [
+    {
+     "code": "ENVI.G2.RUBRIC.2.1",
+     "indicator": "Ability to predict weather conditions at different times of the day.",
+     "levels": {
+      "EE": "Predicts weather conditions at different times of the day most precisely.",
+      "ME": "Predicts weather conditions at different times of the day.",
+      "AE": "Predicts weather conditions at different times of the day less precisely.",
+      "BE": "Predicts weather conditions at different times of the day with prompts."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RUBRIC.2.2",
+     "indicator": "Ability to classify types of soil in the locality.",
+     "levels": {
+      "EE": "Classifies types of soil in the locality most precisely.",
+      "ME": "Classifies types of soil in the locality precisely.",
+      "AE": "Classifies types of soil in the locality less precisely.",
+      "BE": "Classifies types of soil in the locality with prompts."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    },
+    {
+     "code": "ENVI.G2.RUBRIC.2.3",
+     "indicator": "Ability to describe a variety of ways of conserving light.",
+     "levels": {
+      "EE": "Extensively describes a variety of ways of conserving light from various sources.",
+      "ME": "Describes a variety of ways of conserving light.",
+      "AE": "Describes a few ways of conserving light.",
+      "BE": "Describes a few ways of conserving light when given hints."
+     },
+     "page": 26,
+     "status": "kicd_verified"
+    }
+   ]
+  },
+  {
+   "code": "ENVI.G2.RUBRIC.3",
+   "heading": "SUGGESTED ASSESSMENT RUBRIC",
+   "strand": "RESOURCES IN OUR ENVIRONMENT",
+   "covers": [
+    "ENVI.G2.RESOUR.WATER",
+    "ENVI.G2.RESOUR.PLANTS",
+    "ENVI.G2.RESOUR.ANIMALS"
+   ],
+   "page": 33,
+   "indicators": [
+    {
+     "code": "ENVI.G2.RUBRIC.3.1",
+     "indicator": "Ability to describe the conservation of water for people and animal use. Ability to conserve water for people and animal use. Ability to carry out activities for caring for plants using locally available materials. Ability to identify animals as sources of food that people eat . Ability to carry out activities of caring for animals in the locality. Suggested Learning Resources, Assessment Methods, and Non-Formal Activities Suggested learning resources ● Approved curriculum support materials ● Resources from the local environment (home and school) ● Flashcards ● Pictures, newspapers, magazines, journals ● Digital devices ● Assorted farm equipment ● Assorted cleaning agents, tools, and equipment ● Resource persons Non-formal Activities that Support Learning ● School routine activities such as cleaning, flag raising, worship activities ● Games and sports ● Clubs and societies",
+     "levels": {
+      "EE": "Describes varied conservation methods of water for people and animal use with in-depth details. Very often conserves water for people and animal use using appropriate varied methods. Carries out watering, manuring, and mulching plants using locally available materials consistently. Identifies animals as sources of food that people eat with a lot of details. Most frequently carries out activities of caring for animals in the locality.",
+      "ME": "Describes conservation methods of water for human and animal use. Conserves water for people and animal use. Carries out watering, manuring, and mulching plants using locally available materials. Identifies animals as sources of food that people eat. Carries out activities of caring for animals in the locality. Suggested assessment methods ● Observation ● Written test ● Oral questions ● Aural questions ● Peer assessment ● Self-assessment",
+      "AE": "Describes conservation methods of water for people and animal use with minimal details. Occasionally conserves water for people and animal use. Carries out watering, manuring, or mulching plants using locally available materials inconsistently. Identifies animals as sources of food that people eat with minimal details. Occasionally carries out activities of caring for animals in the locality.",
+      "BE": "Describes conservation methods of water for people and animal use without details. Rarely conserves water for people and animal use with prompts. Carries out watering/manuring/mulc hing plants using locally available materials with prompts. Identifies animals as sources of food that people eat without details. Rarely carries out activities of caring for animals in the locality."
+     },
+     "page": 33,
+     "status": "kicd_read"
+    }
+   ]
   }
  ]
 }
