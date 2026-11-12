@@ -1,0 +1,263 @@
+{
+ "outcomes": {
+  "SCIE.G4.LIVING.PLANTS.a": "identify characteristics of plants as living things",
+  "SCIE.G4.LIVING.PLANTS.b": "describe functions of external parts of plants",
+  "SCIE.G4.LIVING.PLANTS.c": "appreciate the need to care for plants",
+  "SCIE.G4.LIVING.ANIMALS.a": "identify the characteristics of animals as living things",
+  "SCIE.G4.LIVING.ANIMALS.b": "distinguish vertebrates from invertebrates in the environment",
+  "SCIE.G4.LIVING.ANIMALS.c": "appreciate the need to care for animals",
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.a": "identify parts of the human digestive system",
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.b": "develop a plan of maintaining a healthy human digestive system",
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.c": "appreciate the importance of a healthy human digestive system",
+  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.a": "categorise substances in the environment into the three states of matter",
+  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.b": "describe the properties of the three states of matter",
+  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.c": "appreciate the importance of the different states of matter in day-to-day life",
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.a": "classify solid waste into decomposable and non-decomposable",
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.b": "describe the dangers of solid waste to the environment",
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.c": "apply appropriate methods to manage solid waste in the environment",
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.d": "appreciate the need for proper management of solid waste in the environment",
+  "SCIE.G4.MATTER.WATER_CONSERVATION.a": "explain the meaning of water conservation in the environment",
+  "SCIE.G4.MATTER.WATER_CONSERVATION.b": "describe methods of conserving water at home and school",
+  "SCIE.G4.MATTER.WATER_CONSERVATION.c": "outline the importance of conserving water at home and school",
+  "SCIE.G4.MATTER.WATER_CONSERVATION.d": "develop interest in conserving water at home and school",
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.a": "describe types of forces in nature",
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.b": "demonstrate the effects of force on objects in nature",
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.c": "describe the uses of force in daily life",
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.d": "appreciate the importance of force in day-to-day life",
+  "SCIE.G4.FORCE_.LIGHT.a": "identify the sources of light in nature",
+  "SCIE.G4.FORCE_.LIGHT.b": "describe ways of lighting a house in day- to-day life",
+  "SCIE.G4.FORCE_.LIGHT.c": "explain the uses of light in day-to-day life",
+  "SCIE.G4.FORCE_.LIGHT.d": "appreciate the applications of light in day-to-day life",
+  "SCIE.G4.FORCE_.HEAT.a": "identify sources of heat in nature",
+  "SCIE.G4.FORCE_.HEAT.b": "demonstrate uses of heat in day-to-day life",
+  "SCIE.G4.FORCE_.HEAT.c": "describe safety measures to observe when using heat",
+  "SCIE.G4.FORCE_.HEAT.d": "appreciate the importance of heat in day-to-day life"
+ },
+ "skills": {
+  "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS": {
+   "forms": [
+    "pick the sign that shows a plant is alive",
+    "say which statement about plants is true",
+    "decide from a short observation story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the five signs: plants grow, reproduce (make seeds or new plants), remove waste, respond to changes in their surroundings (a seedling bends to light, the touch-me-not leaf folds) and die. The child knows a plant is alive even though it does not walk, and does not say plants make no waste or never respond. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS": {
+   "forms": [
+    "say what a named part does",
+    "name the part that does a described job",
+    "decide from a short story about a plant",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the roots hold the plant in the soil and take in water and mineral salts, the stem holds the plant up and carries water and food to other parts, and the leaves make food using sunlight. The child does not say leaves take water from the soil or that the stem only holds the plant up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS": {
+   "forms": [
+    "pick the sign that shows an animal is alive",
+    "say which statement about animals is true",
+    "decide from a short observation story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the signs: animals move, feed, breathe, grow, reproduce (some give birth, some lay eggs), respond to what is around them, remove waste and die. The child counts insects, fish, birds and worms as animals, and does not say an animal that is resting is not alive. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT": {
+   "forms": [
+    "sort a named animal",
+    "pick the list that holds only vertebrates",
+    "read a small table of animals and decide",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "Given an animal from Kenya (cow, goat, hen, tilapia, snake, frog, lizard, mouse, butterfly, ant, spider, earthworm, snail, grasshopper, crab), the child says whether it is a vertebrate (has a backbone) or an invertebrate (has no backbone). The child does not use legs, size or a hard cover to decide. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE": {
+   "forms": [
+    "say what makes an animal a vertebrate",
+    "say why a named animal is or is not a vertebrate",
+    "pick the reason that is not a good rule",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an animal is a vertebrate because it has a backbone and an invertebrate because it has none. The child knows a small animal can be a vertebrate (a chick, a mouse, a small frog), a legless animal can be a vertebrate (a snake, a fish), and an animal with many legs can be an invertebrate (a spider, a centipede). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS": {
+   "forms": [
+    "name the part from its job",
+    "say what a named part does",
+    "pick the part that is not in the digestive system",
+    "find the false step in a learner's account"
+   ],
+   "mastery": "The child names the mouth (teeth chew food), the oesophagus or food pipe (carries food to the stomach), the stomach (churns food into a soft mixture), the small intestine (digested food goes into the blood), the large intestine (takes in water, leaving waste) and the anus (waste leaves). The child does not mix up the food pipe and the windpipe or say the stomach does all the work. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER": {
+   "forms": [
+    "pick the correct order",
+    "say which part comes next",
+    "say which part comes before a named part",
+    "find the false step in a learner's order"
+   ],
+   "mastery": "The child gives the path of food as mouth, oesophagus, stomach, small intestine, large intestine, anus. The child does not put the large intestine before the small intestine and does not think the small intestine is the short one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH": {
+   "forms": [
+    "pick the habit that protects the digestive system",
+    "pick the habit that harms it",
+    "decide what a learner in a story should do",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child chooses habits that protect the digestive system: wash hands with soap before eating and after the toilet, drink clean boiled or treated water, eat a balanced diet with fruits, vegetables and fibre, chew food well, and keep food covered. The child knows that sweets or soda do not replace water or meals, and that washing food alone is not enough. Writing a whole plan is a task for the teacher to mark: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT": {
+   "forms": [
+    "sort a named substance",
+    "pick the list that holds only solids (or only liquids or gases)",
+    "read a small table and decide",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "Given a substance from home (stone, wood, sand, sugar, salt, flour, soil, water, milk, cooking oil, tea, air, steam, the air in a tyre), the child says solid, liquid or gas. The child knows sand, sugar and flour are solids even though they pour, that air is a gas and is matter, and that a soft solid such as a sponge or ugali is still a solid. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES": {
+   "forms": [
+    "pick the property of a named state",
+    "say which state has a described property",
+    "decide from a short story (a balloon, a jug, a stone)",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a solid keeps its own shape and size, a liquid flows and takes the shape of its container but keeps its size, and a gas spreads to fill its container and has no shape or size of its own. The child knows a gas has weight and takes up room, and does not think a liquid changes in amount when poured into another container. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY": {
+   "forms": [
+    "sort a named piece of waste",
+    "pick the list that holds only decomposable waste",
+    "read a small table of waste and decide",
+    "find the false step in a learner's sorting"
+   ],
+   "mastery": "The child says waste that rots and breaks down into soil (banana peels, maize cobs, vegetable leaves, food left over, dry leaves) is decomposable, and waste that does not rot (plastic bags, plastic bottles, glass bottles, tins, rubber, polythene) is non-decomposable. The child does not say a rusting tin rots, or that a buried plastic bag disappears. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS": {
+   "forms": [
+    "pick a danger of a named kind of waste",
+    "say what may happen when waste is left in the open",
+    "decide from a short story about a heap of waste",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says heaps of waste breed flies, rats and mosquitoes that spread diseases, block drains and cause floods, are eaten by animals that can choke or die (polythene), smell, cut people (broken glass, tins) and make smoke when burnt that pollutes the air. The child does not say polythene is harmless to animals or that burning waste has no danger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE": {
+   "forms": [
+    "pick the best way to deal with a named waste",
+    "pick what to do with a full bin at school",
+    "decide from a short story about a school or home",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child chooses a fitting method: compost or bury decomposable waste, reuse a container or jar, recycle plastic, glass and tins, sort waste into separate bins, and take waste to the dump or collection point. The child does not burn or throw all waste in a river and does not put plastic in the compost pit. The doing (sorting waste, making compost) is practical work for the teacher to observe: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING": {
+   "forms": [
+    "pick the meaning of conserving water",
+    "say which action is conserving",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to conserve water is to use it wisely, not waste it, and protect its sources so it lasts. The child does not say conserving is storing as much as possible and never using it, or that rain will always fill the rivers again. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS": {
+   "forms": [
+    "pick a way of saving water",
+    "pick the action that wastes water",
+    "decide what a learner in a story should do",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child names ways: close taps well, mend leaking pipes, collect rainwater from the roof, reuse water (water used to wash vegetables goes to the garden), use a basin or a bucket instead of a running tap, and protect springs and rivers by planting trees. The child does not say a tap may run while one soaps or brushes. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE": {
+   "forms": [
+    "pick a reason for conserving water",
+    "say what may happen if water is wasted",
+    "decide from a short story about a dry season",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says water is needed by people, animals and plants, it is not always enough (dry seasons, drought), wasting it makes it costly and far to fetch, and saving it means there is enough for the people who come after us. The child does not say it is only about the water bill or that only people need it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES": {
+   "forms": [
+    "name the force in a described situation",
+    "say whether a force is a push or a pull",
+    "say what a named force does",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a force is a push or a pull, and names muscular force (from our body), gravity (pulls things to the ground), friction (rubbing that slows things), magnetic force (a magnet pulls iron and steel) and elastic force (a stretched rubber or spring pulls back). The child knows a magnet attracts only iron and steel things (not all metals), and that gravity acts on things that are not falling too. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS": {
+   "forms": [
+    "say the effect of a force in a described situation",
+    "pick the situation that shows a named effect",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a force can make a still object move, make a moving object stop, speed up, slow down or turn, and can change the shape of an object (squeezing clay, stretching a rubber band). The child does not say a force can only start a movement, or that a moving ball needs a push all the time to keep moving. Showing the effect with real objects is practical work: this skill is the knowledge for it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES": {
+   "forms": [
+    "pick a use of a named force",
+    "name the force used in a daily task",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names uses: muscular force to lift, dig, kick and carry, friction in brakes and in walking on a path without slipping, gravity bringing rain down and keeping things on the ground, magnets in a fridge door or in a toy, and elastic force in a catapult. The child does not say friction is only bad, or that gravity is only a problem. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES": {
+   "forms": [
+    "pick the source of light",
+    "sort sources into natural and made by people",
+    "pick the thing that is not a source of light",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names natural sources (the Sun, stars, lightning, fireflies) and sources made by people (a torch, an electric bulb, a candle, a paraffin lamp, a solar lamp), and knows the Moon, a mirror and a shiny roof only reflect light and give none of their own. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING": {
+   "forms": [
+    "pick a way of lighting a house by day or by night",
+    "pick the safe way to use a named light",
+    "decide from a short story about a home",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names ways: windows and clear roofing sheets in the day, electric bulbs, solar lamps, a paraffin lamp, a candle and a torch at night. The child knows light-coloured walls make a room brighter, a window lets in light as well as air, and that a lit candle or lamp must never be left alone near cloth or children. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.LIGHT.LIGHT_USES": {
+   "forms": [
+    "pick a use of light",
+    "say why light is needed in a described situation",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says light helps us see (light from a source bounces off things into our eyes), lets plants make their food, sends signals (traffic lights, a torch signal) and gives solar energy. The child does not say we see because light comes out of our eyes, or that plants take all their food from the soil. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES": {
+   "forms": [
+    "pick the source of heat",
+    "pick the thing that is not a source of heat",
+    "sort sources into natural and made by people",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the Sun, fire (firewood, charcoal), electricity (a cooker, an iron, a kettle), cooking gas, paraffin, friction (rubbing the hands) and hot springs and volcanoes (such as around Lake Bogoria) as sources of heat. The child does not call a cup of tea or a hot stone a source of heat, since they were only warmed by one. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.HEAT.HEAT_USES": {
+   "forms": [
+    "pick a use of heat",
+    "name the heat used in a daily task",
+    "decide from a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names uses: cooking, boiling drinking water to make it safe, drying clothes, grain and fish in the sun, warming a house, ironing, baking, and melting metal. The child knows boiling makes water safer and that clothes dry fastest where it is hot and windy, not in the shade. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY": {
+   "forms": [
+    "pick the safe way to handle a hot thing",
+    "pick what to do after a burn",
+    "decide what a learner in a story should do",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child chooses safe habits: a dry cloth or pot holder for a hot pot, matches and lit stoves kept away from young children, a stove put out and cooled before it is refilled, fire put out before leaving, and cool running water on a burn for several minutes. The child does not choose a wet cloth for a hot pot, refilling a lit stove, or butter or oil on a burn. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

@@ -13,10 +13,11 @@ import { tidyProblem, generateProblem } from '../../src/ai-tutor/problemGenerato
 import { buildChoices } from '../../src/ai-tutor/choices.js';
 import { SKILLS_G5, SUBSTRANDS, OUTCOMES_G5, horebOf } from '../../src/ai-tutor/content/curriculumMap.g5.js';
 import { SKILLS_G4, OUTCOMES_G4, horebOf4 } from '../../src/ai-tutor/content/curriculumMap.g4.js';
-// Maths: the Grade 4 and Grade 5 curriculum maps side by side (codes carry the grade, so they never clash).
-const SKILLS_M4 = { ...SKILLS_G5, ...SKILLS_G4 }, OUTCOMES_M4 = { ...OUTCOMES_G5, ...OUTCOMES_G4 };
-const horebOfM4 = (c) => (SKILLS_G4[c] ? horebOf4(c) : horebOf(c));
-const gradeOf4 = (c) => Number(/^MATH\.G(\d)\./.exec(String(c || ''))?.[1] || 5);
+import { SKILLS_G6, OUTCOMES_G6, horebOf6 } from '../../src/ai-tutor/content/curriculumMap.g6.js';
+// Maths: Grade 4, 5 and 6 curriculum maps side by side (codes carry the grade, so they never clash).
+const SKILLS_M = { ...SKILLS_G4, ...SKILLS_G5, ...SKILLS_G6 }, OUTCOMES_M = { ...OUTCOMES_G4, ...OUTCOMES_G5, ...OUTCOMES_G6 };
+const horebOfM = (c) => (SKILLS_G6[c] ? horebOf6(c) : SKILLS_G4[c] ? horebOf4(c) : horebOf(c));
+const gradeOfCskill = (c) => Number(/^MATH\.G(\d)\./.exec(String(c || ''))?.[1] || 5);
 import { entryOfFamily, entryOfCskill } from '../../src/ai-tutor/content/subjects/registry.js';   // every subject beyond Maths: its map, outcomes and name come from its registry entry
 import { readFileSync } from 'node:fs';
 import { textOf, formText, senseFlags, clusterForms, sameForm } from './content_measures.mjs';
@@ -28,7 +29,7 @@ export const FAMILY_DRAWS = 200;
 // must be one of its own skill's, or of another skill in the same sub-strand.
 const MIS = JSON.parse(readFileSync(new URL('../data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'));
 const misCodesFor = (cskill) => {
-  const map = entryOfCskill(cskill)?.map.skills[cskill] ? entryOfCskill(cskill).map.skills : SKILLS_M4;   // another subject's skills have their own map (registry)
+  const map = entryOfCskill(cskill)?.map.skills[cskill] ? entryOfCskill(cskill).map.skills : SKILLS_M;   // another subject's skills have their own map (registry)
   const sub = map[cskill]?.sub;
   const own = new Set((map[cskill]?.mis || []));
   const near = new Set(Object.entries(map).filter(([, k]) => k.sub === sub).flatMap(([c, k]) => k.mis));
@@ -53,8 +54,8 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
   const entry = science ? entryOfFamily(def) : null;
   const label = entry ? `Grade ${entry.grade} ${entry.name}` : `${def.subject}`;
   if (science && !entry) fail(`no subject registry entry for ${def.subject} (cskill ${def.cskill})`);
-  const official = science ? entry?.map.outcomes[def.outcome] : OUTCOMES_M4[def.outcome];
-  const ck = science ? entry?.map.skills[def.cskill] : SKILLS_M4[def.cskill];
+  const official = science ? entry?.map.outcomes[def.outcome] : OUTCOMES_M[def.outcome];
+  const ck = science ? entry?.map.skills[def.cskill] : SKILLS_M[def.cskill];
   let o = science ? null : OUTCOMES[def.outcome];
   if (science) {
     // Another subject (registry entry): the skill is the cskill (these skills are not in the practice engine's SKILLS yet),
@@ -71,11 +72,11 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
     // No regex signal here: HOREB's old signals were written for its own outcome list and miss honest
     // word problems (a ribbon-cutting question never says HCF). The cskill-to-outcome-to-skill chain
     // below is the tag, and the teacher's review is the judge of the content.
-    o = { id: def.outcome, grade: gradeOf4(def.cskill), text: official.letter, signal: /[\s\S]*/, hands: false };
-    if (!ck) fail(`cskill ${def.cskill} is not in the Grade ${gradeOf4(def.cskill)} curriculum map`);
+    o = { id: def.outcome, grade: gradeOfCskill(def.cskill), text: official.letter, signal: /[\s\S]*/, hands: false };
+    if (!ck) fail(`cskill ${def.cskill} is not in the Grade ${gradeOfCskill(def.cskill)} curriculum map`);
     else {
       if (!ck.outcomes.includes(def.outcome)) fail(`outcome ${def.outcome} is not an outcome of ${def.cskill}`);
-      if (!horebOfM4(def.cskill).includes(def.skill)) fail(`HOREB skill ${def.skill} is not mapped to ${def.cskill}`);
+      if (!horebOfM(def.cskill).includes(def.skill)) fail(`HOREB skill ${def.skill} is not mapped to ${def.cskill}`);
     }
   } else if (def.cskill) fail(`cskill ${def.cskill} needs the official outcome code, not ${def.outcome}`);
   if (!science && !SKILLS[def.skill]) fail(`unknown skill ${def.skill}`);

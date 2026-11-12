@@ -20,7 +20,8 @@ import { homedir } from 'node:os';
 import { join } from 'node:path';
 import { FAMILIES as ALL_FAMILIES } from '../src/ai-tutor/content/families/index.js';
 // Families of a registry subject (Science, ...) are reviewed from that subject's own review doc (its registry entry names it), not from this Maths pack.
-const FAMILIES = ALL_FAMILIES.filter(f => !f.subject || f.subject === 'math');
+// Maths Grade 6 families carry the Grade 6 curriculum map and are reviewed from docs/qa/maths-g6-<date>.md (scripts/build-maths-g6-doc.mjs).
+const FAMILIES = ALL_FAMILIES.filter(f => (!f.subject || f.subject === 'math') && !/^MATH\.G6\./.test(f.cskill || ''));
 import { drawFamily } from '../src/ai-tutor/content/families/core.js';
 import { OUTCOMES } from '../src/ai-tutor/curriculum/outcomes.js';
 import { SKILLS } from '../src/ai-tutor/knowledgeGraph.js';

@@ -70,8 +70,8 @@ test('no registry family is on for children while no signed list has an id (the 
 
 test('the practice engine reads its subjects from the registry', () => {
   assert.deepEqual(Object.keys(SUBJECT_DEFS).slice(0, 2), ['science', 'english']);
-  assert.equal(SUBJECT_DEFS.science.description, 'Grade 5 Science and Technology from the CBC design');
-  assert.equal(Object.keys(subjectDef('science').map).length, 33);
+  assert.equal(SUBJECT_DEFS.science.description, 'Science and Technology for Grades 4, 5 from the CBC design');   // Grade 4 joined Grade 5 on 12 Nov 2026
+  assert.equal(Object.keys(subjectDef('science').map).length, 58);   // 33 skills in Grade 5 and 25 in Grade 4
   assert.equal(Object.keys(subjectDef('english').map).length, 41);
 });
 

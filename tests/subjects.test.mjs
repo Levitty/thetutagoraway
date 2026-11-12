@@ -84,7 +84,7 @@ test('ONE RULE: an unsigned family is never served to a child, in Science or Eng
 test('a signed family turns on its subject for its grade only, with a graph the engine can run on', () => {
   withMode('reviewed', () => {
     const list = SUBJECT_DEFS.science.families();
-    const picked = list.filter(f => f.cskill && f.rung === 1).slice(0, 4);
+    const picked = list.filter(f => f.cskill && f.cskill.startsWith('SCIE.G5.') && f.rung === 1).slice(0, 4);   // Grade 4 Science (12 Nov 2026) has its own entry and is not signed
     const sci = makeSubject(SUBJECT_DEFS.science, { families: signed(list, picked.map(f => f.id)) });
     assert.ok(sci.skillCount >= 1);
     for (const s of Object.values(sci.skills)) {
