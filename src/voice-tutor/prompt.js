@@ -7,6 +7,7 @@
 // breakpoint. buildRequest() is the whole Messages API body; the edge function
 // sends exactly this and tests/voice-tutor-turn.test.mjs checks it.
 // ============================================================================
+import { PLAYBOOK, EXEMPLARS } from './playbook.js';
 import { TURN_SCHEMA, SLOTS, COLOURS, PHASES, MOVES } from './commands.js';
 import { FRACTION_SKILLS, skillName, shortName } from './fractions.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
@@ -129,6 +130,14 @@ Example of a teaching turn (shape only): the bar is drawn slowly with its own se
 
 GRADE 5 FRACTIONS: the skills, what each builds on, and the misconceptions you may name (use the full code):
 ${mapText(lib)}
+
+HOW TO TEACH: YOUR PLAYBOOK. This is how an excellent one-to-one tutor works. Follow it every turn. In what you say, fractions are words ("one half"); 1/2 in the playbook is how it is written on the board. Tag the say that carries your move with "move": the move's name from the playbook (for example "Revoice and build"); it is never spoken.
+
+${PLAYBOOK}
+
+EXAMPLE LESSONS (the shape of good turns; never copy them word for word, and never use a name that is not the child's):
+
+${EXEMPLARS}
 
 REPLY FORM. Reply with only one JSON object, {"steps":[...]}, and nothing before or after it: no prose, no markdown fences. Each step is an object with "cmd" and that command's fields, exactly as named here ("?" means it may be left out; a|b means one of these values; [..] is a list):
 ${REPLY_FORM}`;

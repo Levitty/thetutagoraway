@@ -141,6 +141,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
   const turnNo = useRef(0);
   const delays = useRef({});
   const offsets = useRef([]);
+  const movesLog = useRef([]);    // the teaching moves HOREB names, for the tester view
   const voiceError = useRef('');   // the last voice failure, for the tester view
   const listenError = useRef('');  // the last listening failure, for the tester view
   const silentVoice = useRef(false);   // the practice voice could not keep time: timed silent mode   // ms between a word being heard and its stroke starting (frame lag)
@@ -337,6 +338,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       if (ev.type === 'step') {
         if (!delays.current.firstStep) delays.current.firstStep = clock();
         T.raw.push(ev.step);
+        if (ev.step?.cmd === 'say' && ev.step.move) { movesLog.current = [...movesLog.current, ev.step.move].slice(-30); }
         publicSteps(T);
         feedVoice(T);
         if (T.player) turnSteps.current = T.steps;
@@ -752,7 +754,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
       </main>
 
       {tester ? (
-        <TesterPanel voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.${voiceError.current ? ` Last voice error: ${voiceError.current}.` : ''}${listenError.current ? ` Last listening error: ${listenError.current}.` : ''}${providers.current.stt?.stats ? ` Last listen: audio ${providers.current.stt.stats.ctx || '?'}, ${providers.current.stt.stats.frames} sound frames, loudest ${providers.current.stt.stats.loudest.toFixed(3)} (speech starts at 0.020), service ${providers.current.stt.stats.socket}, ${providers.current.stt.stats.heard} final words${providers.current.stt.stats.said ? ` "${providers.current.stt.stats.said}"` : ''}.` : ''}` : ''} onClose={() => setTester(false)}
+        <TesterPanel moves={movesLog.current} voiceId={voiceId} onVoice={chooseVoice} session={session} board={board} mode={mode} pics={pics} delays={delayLog} offsets={offsets.current} voice={voice} voiceName={providers.current ? `Voice: ${silentVoice.current ? 'none, silent (timed)' : voiceName}${providers.current.tts.timingMode ? `; word times ${providers.current.tts.timingMode === 'boundary' ? 'from the voice itself' : 'estimated from its pace'}` : ''}. Listening: ${providers.current.stt?.name || 'none (typing)'}.${voiceError.current ? ` Last voice error: ${voiceError.current}.` : ''}${listenError.current ? ` Last listening error: ${listenError.current}.` : ''}${providers.current.stt?.stats ? ` Last listen: audio ${providers.current.stt.stats.ctx || '?'}, ${providers.current.stt.stats.frames} sound frames, loudest ${providers.current.stt.stats.loudest.toFixed(3)} (speech starts at 0.020), service ${providers.current.stt.stats.socket}, ${providers.current.stt.stats.heard} final words${providers.current.stt.stats.said ? ` "${providers.current.stt.stats.said}"` : ''}.` : ''}` : ''} onClose={() => setTester(false)}
           onFail={started ? (kind) => {
             // As a real failure: the sound stops, the turn finishes in words on the board, the next turns are silent.
             if (kind === 'speak-failed') { providers.current.tts.stop(); providers.current.tts = simulatedTts(); }
@@ -791,7 +793,7 @@ function InkBar({ tool, setTool, canUndo, hasInk: any, onUndo, onClear, onCheck,
   );
 }
 
-function TesterPanel({ voiceId = null, onVoice = null, session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
+function TesterPanel({ moves = [], voiceId = null, onVoice = null, session, board, mode, pics = [], delays = [], offsets = [], voice = null, voiceName = '', onExample = null, onFail = null, onClose }) {
   return (
     <div className="fixed inset-x-2 bottom-2 top-12 sm:left-auto sm:w-[400px] z-50 bg-white rounded-2xl border border-slate-300 overflow-y-auto p-4 text-sm">
       <div className="flex items-center"><b className="text-base">Tester view</b><button type="button" className="ml-auto font-bold" onClick={onClose}>Close</button></div>
@@ -801,6 +803,8 @@ function TesterPanel({ voiceId = null, onVoice = null, session, board, mode, pic
       <p>Weakest prerequisite: {session.prerequisite ? skillName(session.prerequisite) : 'none'}</p>
       <p>Part: {session.phase || 'not started'}. Turns: {session.turns}. Interruptions: {session.interruptions}.</p>
       <p>Spent: US${session.cost.sessionUsd.toFixed(3)} this session, US${session.cost.dayUsd.toFixed(3)} today (caps US$1.50 and US$3).</p>
+      <h3 className="font-extrabold mt-3">Teaching moves, in order</h3>
+      <p>{moves.length ? moves.join(' \u2192 ') : 'None named yet.'}</p>
       <h3 className="font-extrabold mt-3">Everything said (the child sees only the current sentence)</h3>
       {session.transcript.length ? session.transcript.map((h, k) => (
         <p key={k} className={h.who === 'child' ? 'text-[#0E7C86]' : undefined}><b>{h.who === 'child' ? 'Child' : 'HOREB'}:</b> {h.text}</p>

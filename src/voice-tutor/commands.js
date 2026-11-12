@@ -54,7 +54,7 @@ export const TIMED = [...DRAWN, ...MARKS, 'erase', 'clear'];
 export const PACES = ['slow'];
 
 const FIELDS = {
-  say: ['text'],
+  say: ['text', 'move'],
   write_text: ['id', 'text', 'slot', 'size', 'colour'],
   write_math: ['id', 'expr', 'slot', 'size', 'colour'],
   fraction_bar: ['id', 'parts', 'shaded', 'second_bar', 'label', 'slot', 'colour'],
@@ -178,6 +178,8 @@ function checkStep(s, ctx, notes) {
   switch (cmd) {
     case 'say':
       out.text = str(s.text, LIMITS.say, 'say', notes);
+      // The teaching move this sentence makes (docs/tutor-training/PLAYBOOK.md), for the tester view; never spoken.
+      if (s.move != null) out.move = String(s.move).replace(/[^A-Za-z -]/g, '').slice(0, 40);
       need(out.text.split(/(?<=[.!?])\s+/).filter(Boolean).length <= 3, 'say: more than three sentences');
       break;
     case 'write_text':
@@ -525,7 +527,7 @@ const drawn = { ...timing, pace: E(PACES) };
 const shadedSchema = { anyOf: [I, { type: 'array', items: I }] };
 const C = (cmd, props, required) => S({ cmd: { type: 'string', const: cmd }, ...props }, ['cmd', ...required]);
 export const STEP_SCHEMAS = [
-  C('say', { text: T }, ['text']),
+  C('say', { text: T, move: T }, ['text']),
   C('write_text', { id: T, text: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ['id', 'text', 'slot']),
   C('write_math', { id: T, expr: T, slot: E(SLOTS), size: E(SIZES), colour: E(COLOURS), ...drawn }, ['id', 'expr', 'slot']),
   C('fraction_bar', { id: T, parts: I, shaded: shadedSchema, second_bar: S({ parts: I, shaded: shadedSchema }, ['parts', 'shaded']), label: B, slot: E(SLOTS), colour: E(COLOURS), ...drawn }, ['id', 'parts', 'shaded', 'slot']),
