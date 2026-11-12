@@ -3,15 +3,15 @@
  "subject_key": "agriculture",
  "grade": 4,
  "source": "KICD Agriculture, First Published 2017; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 12 Nov 2026), awaiting teacher review. Practical and attitude outcomes are listed in docs/qa/agriculture-g4-non-question-outcomes-2026-11-12.md",
  "totals": {
   "strands": 4,
   "sub_strands": 13,
   "outcomes": 39,
   "lessons": 120,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 28,
+  "prerequisites": 25,
+  "misconceptions": 85
  },
  "sub_strands": [
   {
@@ -65,8 +65,184 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+     "name": "Identify materials that can be used to make compost manure",
+     "outcomes": [
+      "AGRI.G4.CONSER.SOIL_CONSERVATION.a"
+     ],
+     "mastery": "The child picks vegetable and fruit peelings, leaves, grass, crop remains, ash in small amounts and animal dung, and keeps out plastic, polythene, tins, glass, batteries, cooked food, meat and bones (they do not rot, or they draw rats and flies). The child does not call shop fertiliser a compost material. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the material for compost",
+      "say why a material stays out",
+      "pick the better pile of waste",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+     "name": "Say how compost manure is made and when it is ready",
+     "outcomes": [
+      "AGRI.G4.CONSER.SOIL_CONSERVATION.b"
+     ],
+     "mastery": "The child mixes dry and fresh materials in layers with a little soil or dung, keeps the heap damp (not soaking) and covered, turns it now and then, and waits until it is dark, crumbly and smells like soil before using it on the garden. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "say what the heap needs",
+      "say when the manure is ready",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_ANY",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+     "error": "Thinks any waste can go on the compost heap (polythene, tins, glass).",
+     "example": {
+      "question": "Which of these should NOT go on a compost heap?",
+      "wrong_answer": "A polythene bag",
+      "correct_answer": "Banana peelings"
+     },
+     "cause": "The child thinks a compost heap is a general rubbish heap.",
+     "reveals": "Offer \"A polythene bag\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig up an old heap with a teacher. Ask what rotted and what did not.",
+     "feedback": "Polythene, tins and glass do not rot and spoil the manure. Only things that were once plants, and animal dung, go on the heap.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_MEAT",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+     "error": "Thinks cooked food, meat and bones are good for compost.",
+     "example": {
+      "question": "Why are meat bones and cooked food kept out of the compost heap?",
+      "wrong_answer": "They are the best food for a compost heap",
+      "correct_answer": "They draw rats and flies and smell"
+     },
+     "cause": "The child knows meat rots and so thinks it belongs.",
+     "reveals": "Offer \"They are the best food for a compost heap\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what comes to a heap with meat scraps in it, and whether the school garden needs those visitors.",
+     "feedback": "Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_FERT",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
+     "error": "Calls shop fertiliser a compost material.",
+     "example": {
+      "question": "Which of these is made by rotting plant remains and dung?",
+      "wrong_answer": "Fertiliser bought from the shop",
+      "correct_answer": "Compost manure"
+     },
+     "cause": "The child links manure, fertiliser and compost as one thing.",
+     "reveals": "Offer \"Fertiliser bought from the shop\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a bag of fertiliser and a handful of compost. Ask where each one comes from.",
+     "feedback": "Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_ONE",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+     "error": "Heaps one kind of material only (all dry sticks or all wet peelings).",
+     "example": {
+      "question": "What makes the best compost heap?",
+      "wrong_answer": "Dry and fresh materials mixed in layers",
+      "correct_answer": "Only wet peelings pressed into one heap"
+     },
+     "cause": "The child thinks more of one good thing is better.",
+     "reveals": "Offer \"Dry and fresh materials mixed in layers\" next to the right answer and ask the question again in a new context.",
+     "help": "Make two small heaps, one with one material and one with a mix. Compare them after a month.",
+     "feedback": "A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_DRY",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+     "error": "Leaves the heap dry and open, or soaks it with water.",
+     "example": {
+      "question": "What does a compost heap need while it rots?",
+      "wrong_answer": "To be kept dry and open to the sun",
+      "correct_answer": "To be kept damp and covered"
+     },
+     "cause": "The child thinks rotting happens by itself.",
+     "reveals": "Offer \"To be kept dry and open to the sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a damp covered heap and a dry open heap after a month. Then flood one and smell it.",
+     "feedback": "A heap rots best when it is damp, not soaking, and covered. Too dry and it stops rotting. Too wet and it goes smelly.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_EARLY",
+     "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
+     "error": "Uses the compost before it has rotted.",
+     "example": {
+      "question": "When is compost ready to put on the garden?",
+      "wrong_answer": "After one day, when the heap is made",
+      "correct_answer": "When it is dark, crumbly and smells like soil"
+     },
+     "cause": "The child thinks compost is ready as soon as it is made.",
+     "reveals": "Offer \"After one day, when the heap is made\" next to the right answer and ask the question again in a new context.",
+     "help": "Open a young heap and an old heap side by side. Ask which still looks like peelings.",
+     "feedback": "Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.1.1",
     "AGRI.G4.RUBRIC.1.2",
@@ -123,8 +299,180 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+     "name": "Describe drip irrigation and why it saves water",
+     "outcomes": [
+      "AGRI.G4.CONSER.WATER_CONSERVATION.a"
+     ],
+     "mastery": "The child says drip irrigation gives water slowly, drop by drop, to the soil at the roots of the plant (through a tube or a bottle with a tiny hole), so little is lost to evaporation, run-off or watering the bare ground, and it uses less water than a hosepipe or pouring from a bucket. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what drip irrigation is",
+      "say why it saves water",
+      "say where the water goes",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+     "name": "Say how a simple drip system is set up and kept working",
+     "outcomes": [
+      "AGRI.G4.CONSER.WATER_CONSERVATION.b"
+     ],
+     "mastery": "The child puts the water container higher than the bed, makes a tiny hole in a bottle or tube, puts the dripping end beside the plant roots, fills the container, and checks that the hole is not blocked by soil. A big hole would let all the water out at once. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the set-up steps in order",
+      "say where the water container goes",
+      "say why the drip stops",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_FAST",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+     "error": "Thinks drip irrigation pours water out quickly like a hosepipe.",
+     "example": {
+      "question": "How does drip irrigation give water to a plant?",
+      "wrong_answer": "It pours a lot of water out very fast",
+      "correct_answer": "It gives water slowly, drop by drop"
+     },
+     "cause": "The child thinks of a tap or hosepipe, not of a drip.",
+     "reveals": "Offer \"It pours a lot of water out very fast\" next to the right answer and ask the question again in a new context.",
+     "help": "Pierce a bottle with a pin hole and watch it. Ask how fast the water comes out.",
+     "feedback": "Drip irrigation gives water slowly, drop by drop, so the soil can soak it up.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_LEAVES",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+     "error": "Thinks the drip falls on the leaves of the plant.",
+     "example": {
+      "question": "Where does the water from a drip system go?",
+      "wrong_answer": "Onto the leaves of the plant",
+      "correct_answer": "Into the soil at the roots"
+     },
+     "cause": "The child thinks of rain falling on the plant.",
+     "reveals": "Offer \"Onto the leaves of the plant\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which part of the plant takes up water. Look at where a real drip tube ends.",
+     "feedback": "The roots take up water, so the drip goes into the soil beside the roots.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_WASTE",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
+     "error": "Thinks drip irrigation uses more water than a watering can.",
+     "example": {
+      "question": "Why does drip irrigation save water?",
+      "wrong_answer": "It uses more water so the plant grows faster",
+      "correct_answer": "Little water is lost and it goes to the roots"
+     },
+     "cause": "The child thinks slow means more.",
+     "reveals": "Offer \"It uses more water so the plant grows faster\" next to the right answer and ask the question again in a new context.",
+     "help": "Water one bed with a bucket and one by drip. Measure the water used.",
+     "feedback": "Drip irrigation puts a small amount of water only where it is needed, so little is wasted.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_LOW",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+     "error": "Puts the water container lower than the plants.",
+     "example": {
+      "question": "Where should the water container of a simple drip system be put?",
+      "wrong_answer": "Lower than the bed, on the ground",
+      "correct_answer": "Higher than the bed, on a stand"
+     },
+     "cause": "The child does not think about water running downhill.",
+     "reveals": "Offer \"Lower than the bed, on the ground\" next to the right answer and ask the question again in a new context.",
+     "help": "Raise and lower a bottle with a hole above a bed. Watch when the water flows.",
+     "feedback": "Water runs downhill. The container must stand higher than the bed so the water drips out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_BIGHOLE",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+     "error": "Makes a big hole so the water comes out faster.",
+     "example": {
+      "question": "How big should the hole in a drip bottle be?",
+      "wrong_answer": "Big, so all the water comes out at once",
+      "correct_answer": "Tiny, so the water comes out drop by drop"
+     },
+     "cause": "The child thinks speed helps the plant.",
+     "reveals": "Offer \"Big, so all the water comes out at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Make one tiny hole and one large hole in two bottles. Watch which waters a whole week.",
+     "feedback": "A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_FAR",
+     "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
+     "error": "Puts the drip far from the plant roots.",
+     "example": {
+      "question": "Where should the end of the drip tube be placed?",
+      "wrong_answer": "Far from the plant, in the middle of the path",
+      "correct_answer": "Next to the plant roots"
+     },
+     "cause": "The child does not link the drip to where the roots take water.",
+     "reveals": "Offer \"Far from the plant, in the middle of the path\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig up a small plant and show how close its roots are to the stem.",
+     "feedback": "The water must fall where the roots are, so the drip end is placed next to the plant.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.1.1",
     "AGRI.G4.RUBRIC.1.2",
@@ -181,8 +529,166 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+     "name": "Identify the fuels used at home and say what each is",
+     "outcomes": [
+      "AGRI.G4.CONSER.FUEL_CONSERVATION.a"
+     ],
+     "mastery": "The child names firewood, charcoal and dry cow dung or crop remains (solid), paraffin (liquid) and cooking gas or biogas (gas), and electricity and solar as other ways to cook or light, and does not name petrol or diesel as cooking fuels at home. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the fuel from a description",
+      "pick the fuel for a job",
+      "say whether a fuel is solid, liquid or gas",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+     "name": "Say how to save fuel when cooking",
+     "outcomes": [
+      "AGRI.G4.CONSER.FUEL_CONSERVATION.b"
+     ],
+     "mastery": "The child puts a lid on the pot, cuts food small, soaks hard foods such as beans before cooking, uses dry firewood, keeps the fire small once the pot boils, cooks several foods on one fire and uses an energy-saving jiko, and does not think a big flame cooks food faster. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the fuel-saving habit",
+      "say why a habit saves fuel",
+      "pick the cook who wastes fuel",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_PETROL",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+     "error": "Thinks petrol or diesel is used as a cooking fuel at home.",
+     "example": {
+      "question": "Which of these is a fuel used for cooking at home?",
+      "wrong_answer": "Petrol",
+      "correct_answer": "Cooking gas"
+     },
+     "cause": "The child knows petrol is a fuel and does not know it is for engines.",
+     "reveals": "Offer \"Petrol\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what burns in a jiko, a gas cooker and a car. Talk about why petrol is dangerous indoors.",
+     "feedback": "Petrol and diesel are fuels for engines. They are not used to cook at home because they catch fire too easily.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_ONE",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+     "error": "Thinks firewood is the only fuel at home.",
+     "example": {
+      "question": "Which list names only fuels used at home?",
+      "wrong_answer": "Firewood, charcoal, paraffin and gas",
+      "correct_answer": "Firewood only, every home uses the same"
+     },
+     "cause": "The child sees only the fuel used in their own home.",
+     "reveals": "Offer \"Firewood, charcoal, paraffin and gas\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask each learner which fuels their home uses and make one class list.",
+     "feedback": "Homes use many fuels: firewood, charcoal, paraffin, cooking gas, biogas, electricity and solar.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_STATE",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
+     "error": "Mixes up solid, liquid and gas fuels.",
+     "example": {
+      "question": "Which of these is a liquid fuel?",
+      "wrong_answer": "Charcoal",
+      "correct_answer": "Paraffin"
+     },
+     "cause": "The child links fuel names to the fire, not to the form of the fuel.",
+     "reveals": "Offer \"Charcoal\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour paraffin, hold charcoal and ask how each can be carried and stored.",
+     "feedback": "Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_OPENLID",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+     "error": "Cooks with the lid off the pot.",
+     "example": {
+      "question": "Which habit saves fuel when boiling beans?",
+      "wrong_answer": "Cooking with the lid off so you can watch",
+      "correct_answer": "Cooking with a lid on the pot"
+     },
+     "cause": "The child wants to watch the food and does not think the heat escapes.",
+     "reveals": "Offer \"Cooking with the lid off so you can watch\" next to the right answer and ask the question again in a new context.",
+     "help": "Boil two pots of water, one with a lid and one without, and time them.",
+     "feedback": "A lid keeps the heat in so the food cooks faster and uses less fuel.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_BIG",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+     "error": "Thinks a big flame cooks food faster and so is better.",
+     "example": {
+      "question": "The pot is boiling. What should the cook do to save fuel?",
+      "wrong_answer": "Add more wood so the flame is big",
+      "correct_answer": "Make the fire small to keep it simmering"
+     },
+     "cause": "The child thinks more fire means more cooking.",
+     "reveals": "Offer \"Add more wood so the flame is big\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask whether the water gets hotter than boiling when the flame is bigger.",
+     "feedback": "Once water boils it does not get hotter. A big flame only wastes fuel.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_WET",
+     "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
+     "error": "Thinks wet firewood is as good as dry firewood.",
+     "example": {
+      "question": "Which firewood saves the most fuel?",
+      "wrong_answer": "Wet, freshly cut wood",
+      "correct_answer": "Dry wood"
+     },
+     "cause": "The child thinks all wood burns the same.",
+     "reveals": "Offer \"Wet, freshly cut wood\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to light a dry stick and a wet one and compare smoke and heat.",
+     "feedback": "Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.1.1",
     "AGRI.G4.RUBRIC.1.2",
@@ -239,8 +745,168 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+     "name": "Name small wild animals that destroy crops and the damage they do",
+     "outcomes": [
+      "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.a"
+     ],
+     "mastery": "The child links weaver birds and quelea birds to ripening grain, rats and mice to stored and planted grain, moles to roots and tubers, hares and rabbits to young vegetables, squirrels and monkeys to maize cobs and fruit, and knows bees and butterflies do not harm crops (they help it). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the animal from the damage",
+      "say what the animal eats or digs up",
+      "say which small animal does not harm crops",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+     "name": "Say how a scarecrow is made and used",
+     "outcomes": [
+      "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.b"
+     ],
+     "mastery": "The child makes the frame from two sticks in a cross, dresses it in old clothes, adds a hat, shiny or noisy things (old tins, strips of cloth or plastic that flap), sets it in the middle of the crop where it can be seen, moves it often, and does not use poison or traps because a scarecrow only scares animals away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the material for a scarecrow",
+      "say why it must be moved",
+      "say how it scares the animals",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BIG",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+     "error": "Thinks only big animals harm crops.",
+     "example": {
+      "question": "Which of these small animals can harm a maize field?",
+      "wrong_answer": "None, only big animals harm crops",
+      "correct_answer": "Birds, rats and squirrels"
+     },
+     "cause": "The child thinks of elephants and baboons in the news.",
+     "reveals": "Offer \"None, only big animals harm crops\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk the school plot and look for signs: pecked grain, tunnels, gnawed cobs.",
+     "feedback": "Small animals such as birds, rats and squirrels also harm crops, because there are many of them.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BEE",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+     "error": "Thinks bees and butterflies harm crops.",
+     "example": {
+      "question": "Which small animal does NOT harm the crop?",
+      "wrong_answer": "A rat in the maize",
+      "correct_answer": "A bee on the bean flower"
+     },
+     "cause": "The child thinks every small animal on a crop is a pest.",
+     "reveals": "Offer \"A rat in the maize\" next to the right answer and ask the question again in a new context.",
+     "help": "Watch bees on a flowering crop. Ask what happens to the flower afterwards.",
+     "feedback": "Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_MATCH",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
+     "error": "Links an animal to the wrong damage (moles eating leaves, birds digging roots).",
+     "example": {
+      "question": "Which animal digs up roots and tubers under the ground?",
+      "wrong_answer": "A weaver bird",
+      "correct_answer": "A mole"
+     },
+     "cause": "The child knows the animal is a pest but not what it eats.",
+     "reveals": "Offer \"A weaver bird\" next to the right answer and ask the question again in a new context.",
+     "help": "Match pictures of the animals to pictures of the damage.",
+     "feedback": "Birds peck grain, rats gnaw grain and cobs, and moles tunnel under the ground and eat roots and tubers.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_FIXED",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+     "error": "Thinks a scarecrow can stay in one place all season.",
+     "example": {
+      "question": "Why is a scarecrow moved from place to place?",
+      "wrong_answer": "It does not need to be moved at all",
+      "correct_answer": "Animals get used to it if it never moves"
+     },
+     "cause": "The child thinks it scares by being there.",
+     "reveals": "Offer \"It does not need to be moved at all\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a bird does after a week of seeing the same scarecrow that never moves.",
+     "feedback": "Birds soon learn that a still scarecrow is harmless. Moving it and changing its clothes keeps them afraid.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_KILL",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+     "error": "Thinks a scarecrow, or poison and traps, should kill the animals.",
+     "example": {
+      "question": "What is a scarecrow made to do?",
+      "wrong_answer": "Kill the animals that come near",
+      "correct_answer": "Scare the animals away without hurting them"
+     },
+     "cause": "The child thinks protecting crops means killing pests.",
+     "reveals": "Offer \"Kill the animals that come near\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who also visits the plot, such as bees, and what poison would do to them.",
+     "feedback": "A scarecrow only scares animals away. Poison and traps can harm many other animals as well.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_HIDDEN",
+     "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
+     "error": "Hides the scarecrow at the edge of the crop.",
+     "example": {
+      "question": "Where is the best place to stand a scarecrow?",
+      "wrong_answer": "Hidden in the bush at the edge",
+      "correct_answer": "In the middle of the crop, where it can be seen"
+     },
+     "cause": "The child thinks it should be a surprise.",
+     "reveals": "Offer \"Hidden in the bush at the edge\" next to the right answer and ask the question again in a new context.",
+     "help": "Stand a scarecrow at the edge and in the middle and ask which one the bird can see from the sky.",
+     "feedback": "Birds must see the scarecrow from far. Put it high in the middle of the crop.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.1.1",
     "AGRI.G4.RUBRIC.1.2",
@@ -297,8 +963,176 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+     "name": "Identify crops grown by sowing tiny seeds straight into the plot",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.a"
+     ],
+     "mastery": "The child names carrot, spinach, amaranth (terere), coriander (dhania) and lettuce as crops whose tiny seeds are sown straight where they will grow, knows maize, beans and peas have large seeds, cabbage and tomato are usually started in a nursery and moved, and sweet potato grows from vine cuttings. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the crop sown directly",
+      "pick the crop with large seed",
+      "say how the crop is started",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+     "name": "Say how a seedbed is prepared and tiny seeds are sown",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.b"
+     ],
+     "mastery": "The child digs the soil, breaks the lumps and removes stones and weeds until it is fine like flour, makes a flat bed, sows tiny seeds very shallow in lines (mixed with dry sand so they spread thinly), covers them lightly, waters gently, and thins crowded seedlings so each has room. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "say how deep to sow",
+      "say what to do when seedlings are crowded",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_BIGSEED",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+     "error": "Thinks maize and beans have tiny seeds.",
+     "example": {
+      "question": "Which crop has a large seed, not a tiny one?",
+      "wrong_answer": "Carrot",
+      "correct_answer": "Maize"
+     },
+     "cause": "The child links \"seed\" to any crop sown from seed.",
+     "reveals": "Offer \"Carrot\" next to the right answer and ask the question again in a new context.",
+     "help": "Put a maize seed, a bean and a carrot seed in the hand and compare them.",
+     "feedback": "Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_NURSERY",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+     "error": "Thinks cabbage and tomato are sown straight in the plot like carrot.",
+     "example": {
+      "question": "Which crop is usually started in a nursery and moved later?",
+      "wrong_answer": "Carrot",
+      "correct_answer": "Cabbage"
+     },
+     "cause": "The child thinks all tiny seeds are treated the same.",
+     "reveals": "Offer \"Carrot\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask a farmer how he starts carrots and how he starts tomatoes.",
+     "feedback": "Carrots do not like being moved, so they are sown where they will grow. Cabbage and tomato are started in a nursery.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_CUTTING",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
+     "error": "Thinks crops grown from cuttings, such as sweet potato vines, are sown from tiny seeds.",
+     "example": {
+      "question": "How is a sweet potato crop usually planted?",
+      "wrong_answer": "By sowing tiny seeds",
+      "correct_answer": "By planting pieces of vine"
+     },
+     "cause": "The child thinks every crop starts from seed.",
+     "reveals": "Offer \"By sowing tiny seeds\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a sweet potato vine cutting next to a packet of carrot seed.",
+     "feedback": "Sweet potato is planted from vine cuttings, not seeds.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_COARSE",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+     "error": "Thinks lumps and stones in the seedbed do not matter.",
+     "example": {
+      "question": "How should the soil of a seedbed for tiny seeds be?",
+      "wrong_answer": "Rough, with lumps and stones",
+      "correct_answer": "Fine, like flour"
+     },
+     "cause": "The child thinks seeds will find their way.",
+     "reveals": "Offer \"Rough, with lumps and stones\" next to the right answer and ask the question again in a new context.",
+     "help": "Sow tiny seeds in a lumpy bed and a fine bed and compare how many come up.",
+     "feedback": "Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_DEEP",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+     "error": "Sows tiny seeds deep.",
+     "example": {
+      "question": "How deep are tiny seeds sown?",
+      "wrong_answer": "Deep, about as deep as a hand",
+      "correct_answer": "Very shallow, and covered lightly"
+     },
+     "cause": "The child thinks deep soil protects the seeds.",
+     "reveals": "Offer \"Deep, about as deep as a hand\" next to the right answer and ask the question again in a new context.",
+     "help": "Sow seeds at two depths and see which come up. A tiny seed has little food to push up.",
+     "feedback": "Tiny seeds have little stored food and cannot push up from deep soil. Sow them very shallow.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_THICK",
+     "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
+     "error": "Sows thickly and never thins the seedlings.",
+     "example": {
+      "question": "What should be done when carrot seedlings come up crowded?",
+      "wrong_answer": "Leave them all, more plants give more carrots",
+      "correct_answer": "Thin them so each has room"
+     },
+     "cause": "The child thinks more plants means more crop.",
+     "reveals": "Offer \"Leave them all, more plants give more carrots\" next to the right answer and ask the question again in a new context.",
+     "help": "Grow one thick row and one thinned row. Compare the carrots at harvest.",
+     "feedback": "Crowded plants fight for light, water and food. Thin them so each can grow big.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.2.1",
     "AGRI.G4.RUBRIC.2.2",
@@ -355,8 +1189,187 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+     "name": "Identify fruits that grow well where we live",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.GROWING_FRUITS.a"
+     ],
+     "mastery": "The child names mango, pawpaw, banana, orange, guava, avocado, passion fruit and pineapple as fruits grown in Kenya, knows mango, coconut and pineapple like the warm coast and lowlands while apple and plum like the cool highlands, and knows fruits grow on trees, bushes, vines and plants such as banana and pawpaw. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the fruit that suits a place",
+      "say which plant gives the fruit",
+      "pick the fruit that is not a fruit crop",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+     "name": "Say how to plant and look after a fruit seedling",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.GROWING_FRUITS.b"
+     ],
+     "mastery": "The child digs a hole, mixes the topsoil with manure, sets the seedling at the same depth it grew in the bag, firms the soil, waters it, puts a mulch of dry grass around (not touching the stem), gives space between plants, and keeps watering in the dry weather while it is young. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the planting steps in order",
+      "say what goes in the hole",
+      "say how to care for the young plant",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ANYWHERE",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+     "error": "Thinks any fruit grows well anywhere.",
+     "example": {
+      "question": "Which fruit does best at the hot coast?",
+      "wrong_answer": "Apple",
+      "correct_answer": "Mango"
+     },
+     "cause": "The child sees all fruits for sale in the market and does not know where they come from.",
+     "reveals": "Offer \"Apple\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which fruits grow near the school and which come from far.",
+     "feedback": "Mango likes the warm coast. Apples need the cool highlands.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_TREE",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+     "error": "Thinks fruits grow only on tall trees.",
+     "example": {
+      "question": "Which of these gives a fruit but is not a tall tree?",
+      "wrong_answer": "None, all fruits come from tall trees",
+      "correct_answer": "Banana and pawpaw plants"
+     },
+     "cause": "The child pictures a mango tree for every fruit.",
+     "reveals": "Offer \"None, all fruits come from tall trees\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a banana plant and a passion fruit vine and ask where the fruit hangs.",
+     "feedback": "Fruits grow on trees, bushes, vines and plants like banana and pawpaw.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ROOT",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
+     "error": "Calls a root crop a fruit.",
+     "example": {
+      "question": "Which of these is NOT a fruit crop?",
+      "wrong_answer": "Cassava",
+      "correct_answer": "Guava"
+     },
+     "cause": "The child thinks all sweet or eaten crops are fruits.",
+     "reveals": "Offer \"Cassava\" next to the right answer and ask the question again in a new context.",
+     "help": "Dig up a cassava plant and ask which part we eat.",
+     "feedback": "Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DEEP",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+     "error": "Plants the seedling deeper than it grew, or buries the stem.",
+     "example": {
+      "question": "How deep should a fruit seedling be planted?",
+      "wrong_answer": "Deep, with the stem buried",
+      "correct_answer": "At the same depth it grew in the bag"
+     },
+     "cause": "The child thinks deeper is safer.",
+     "reveals": "Offer \"Deep, with the stem buried\" next to the right answer and ask the question again in a new context.",
+     "help": "Show the soil mark on the stem of a seedling.",
+     "feedback": "Plant it at the depth it grew. A buried stem can rot.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_NOMANURE",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+     "error": "Plants in plain hard soil with no manure.",
+     "example": {
+      "question": "What is mixed with the topsoil in the planting hole?",
+      "wrong_answer": "Stones and sand only",
+      "correct_answer": "Manure or compost"
+     },
+     "cause": "The child thinks a hole is only a place to stand the plant.",
+     "reveals": "Offer \"Stones and sand only\" next to the right answer and ask the question again in a new context.",
+     "help": "Plant two seedlings, one with manure and one without, and compare after a month.",
+     "feedback": "Manure in the hole feeds the young plant and loosens the soil so the roots can spread.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_CROWD",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+     "error": "Plants seedlings close together to save space.",
+     "example": {
+      "question": "How far apart should mango seedlings be planted?",
+      "wrong_answer": "As close as possible to save space",
+      "correct_answer": "Far enough apart for each tree to grow wide"
+     },
+     "cause": "The child thinks of the small seedling and not the big tree.",
+     "reveals": "Offer \"As close as possible to save space\" next to the right answer and ask the question again in a new context.",
+     "help": "Show how wide a mature mango tree is.",
+     "feedback": "A fruit tree grows big. It needs room for its roots and branches.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DRYSTOP",
+     "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
+     "error": "Stops watering after the first day.",
+     "example": {
+      "question": "How is a young fruit seedling looked after in dry weather?",
+      "wrong_answer": "Water once on the day it is planted, then stop",
+      "correct_answer": "Water it regularly and keep a mulch around it"
+     },
+     "cause": "The child thinks planting finishes the job.",
+     "reveals": "Offer \"Water once on the day it is planted, then stop\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to a seedling that dries out for a week.",
+     "feedback": "A young seedling has short roots and dries quickly. It needs regular water and a mulch.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.2.1",
     "AGRI.G4.RUBRIC.2.2",
@@ -413,8 +1426,180 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+     "name": "Name the domestic animals kept in our communities and group them",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a"
+     ],
+     "mastery": "The child names cattle, goats, sheep, pigs, rabbits, donkeys and camels (livestock), chickens, ducks and turkeys (poultry) and bees (kept for honey) as domestic animals people keep and look after, and knows zebra, antelope and giraffe are wild. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the animal from a description",
+      "pick the domestic animal",
+      "group the animals",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "name": "Match domestic animals to the things they give us",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b"
+     ],
+     "mastery": "The child links cattle to milk, beef and hides, goats to milk and meat, sheep to wool and meat, chickens to eggs and meat, bees to honey, pigs to pork, donkeys and camels to carrying loads (camels give milk too), and oxen to ploughing, and knows one animal can give more than one thing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the product from the animal",
+      "name the animal from the product",
+      "say what work an animal does",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_WILD",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+     "error": "Calls a wild animal domestic because it is seen near homes.",
+     "example": {
+      "question": "Which of these is a domestic animal?",
+      "wrong_answer": "A zebra",
+      "correct_answer": "A goat"
+     },
+     "cause": "The child thinks any animal near people is domestic.",
+     "reveals": "Offer \"A zebra\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask who feeds, houses and looks after each animal.",
+     "feedback": "Domestic animals are kept and cared for by people. Zebras are wild.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_FOUR",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+     "error": "Thinks only four-legged animals are domestic animals (leaves out chickens and bees).",
+     "example": {
+      "question": "Which of these is a domestic animal kept for eggs?",
+      "wrong_answer": "None, birds are not domestic animals",
+      "correct_answer": "A chicken"
+     },
+     "cause": "The child pictures a cow or a goat as an animal.",
+     "reveals": "Offer \"None, birds are not domestic animals\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which birds the community keeps at home.",
+     "feedback": "Chickens, ducks and turkeys are domestic animals called poultry. Bees can be kept too.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_GROUP",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
+     "error": "Puts an animal in the wrong group (a goat in poultry, a duck in livestock).",
+     "example": {
+      "question": "Which of these is poultry?",
+      "wrong_answer": "A goat",
+      "correct_answer": "A duck"
+     },
+     "cause": "The child sorts by size and noise.",
+     "reveals": "Offer \"A goat\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which animals have feathers and lay eggs.",
+     "feedback": "Poultry are birds kept for eggs and meat, like chickens, ducks and turkeys. Goats are livestock.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_MIX",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "error": "Gives an animal the wrong product (eggs from cows, wool from goats).",
+     "example": {
+      "question": "Which animal gives us wool?",
+      "wrong_answer": "A goat",
+      "correct_answer": "A sheep"
+     },
+     "cause": "The child knows the product but not which animal gives it.",
+     "reveals": "Offer \"A goat\" next to the right answer and ask the question again in a new context.",
+     "help": "Show wool, milk, eggs and honey and ask where each comes from.",
+     "feedback": "Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_ONE",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "error": "Thinks an animal gives only one thing.",
+     "example": {
+      "question": "Which animal gives us milk, meat and hides?",
+      "wrong_answer": "None, an animal gives only one thing",
+      "correct_answer": "A cow"
+     },
+     "cause": "The child learns one animal with one use.",
+     "reveals": "Offer \"None, an animal gives only one thing\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a list of everything one cow gives the family.",
+     "feedback": "Many animals give more than one thing. A cow gives milk, meat and hides, and it can plough too.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_WORK",
+     "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
+     "error": "Thinks any animal can pull a plough or carry a load.",
+     "example": {
+      "question": "Which animal is used to carry loads?",
+      "wrong_answer": "A hen",
+      "correct_answer": "A donkey"
+     },
+     "cause": "The child thinks all animals can work.",
+     "reveals": "Offer \"A hen\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which animals in the village pull carts and which do not.",
+     "feedback": "Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.2.1",
     "AGRI.G4.RUBRIC.2.2",
@@ -471,8 +1656,263 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+     "name": "Explain why a balanced meal matters",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.BALANCED_MEAL.a"
+     ],
+     "mastery": "The child says a balanced meal has foods from the energy-giving, body-building and protective groups together (with water), that it helps the body to grow, work, play, heal and fight illness, that one food cannot do all this, and that a balanced meal does not need to be big or expensive. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a balanced meal is",
+      "say why we need one",
+      "say what happens without one",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+     "name": "Sort foods into energy-giving, body-building and protective foods",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.BALANCED_MEAL.b"
+     ],
+     "mastery": "The child puts ugali, rice, chapati, sweet potato, arrowroot and bread with energy-giving foods (cooking oil and butter give energy too), beans, ndengu, meat, fish, omena, eggs and milk with body-building foods, and sukuma wiki, spinach, managu, mango, oranges and carrots with protective foods. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the group of a food",
+      "pick the food from a group",
+      "pick the odd one out",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+     "name": "Pick the meal that has foods from all the groups",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.BALANCED_MEAL.b"
+     ],
+     "mastery": "The child picks the plate that has an energy food, a body-building food and a protective food (for example ugali, beans and sukuma wiki), spots the group a plate is missing, adds one food to fix it, and does not count a drink of soda or sweets as a food group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the balanced meal",
+      "say which group a meal is missing",
+      "fix a meal by adding one food",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_FILL",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+     "error": "Thinks a meal is good if it fills the stomach.",
+     "example": {
+      "question": "What makes a meal balanced?",
+      "wrong_answer": "It is big enough to fill the stomach",
+      "correct_answer": "It has foods from all the groups"
+     },
+     "cause": "The child links good food with being full.",
+     "reveals": "Offer \"It is big enough to fill the stomach\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a large plate of ugali alone with a smaller plate of ugali, beans and greens.",
+     "feedback": "A full stomach is not the same as a balanced meal. A balanced meal has foods from every group.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_ONE",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+     "error": "Thinks one food, such as ugali, gives the body everything.",
+     "example": {
+      "question": "Why can a child not live on ugali alone?",
+      "wrong_answer": "Ugali gives everything the body needs",
+      "correct_answer": "It does not give all the things the body needs"
+     },
+     "cause": "The child eats one staple most days.",
+     "reveals": "Offer \"Ugali gives everything the body needs\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens to a child who eats only one food for months.",
+     "feedback": "No single food has everything. The body needs a mix of foods.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_COST",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
+     "error": "Thinks a balanced meal needs expensive food.",
+     "example": {
+      "question": "Which family can eat a balanced meal?",
+      "wrong_answer": "Only a rich family that can buy meat",
+      "correct_answer": "Any family that mixes foods from all groups"
+     },
+     "cause": "The child links balance with money.",
+     "reveals": "Offer \"Only a rich family that can buy meat\" next to the right answer and ask the question again in a new context.",
+     "help": "Make a cheap balanced meal with ugali, ndengu and managu.",
+     "feedback": "Beans, greens and a staple make a balanced meal that costs little.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_UGALI",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+     "error": "Puts ugali or rice with the body-building foods because they fill you.",
+     "example": {
+      "question": "Ugali gives mainly what?",
+      "wrong_answer": "Body building",
+      "correct_answer": "Energy"
+     },
+     "cause": "The child thinks filling food builds the body.",
+     "reveals": "Offer \"Body building\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what a runner eats before a race and why.",
+     "feedback": "Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_MEAT",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+     "error": "Puts meat, eggs and beans with the energy foods.",
+     "example": {
+      "question": "Eggs, fish and beans help the body to do what mainly?",
+      "wrong_answer": "Give energy",
+      "correct_answer": "Build and repair the body"
+     },
+     "cause": "The child thinks all food that fills gives energy.",
+     "reveals": "Offer \"Give energy\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which foods a growing child or someone with a wound needs.",
+     "feedback": "Eggs, fish, meat and beans are body-building foods. They help the body grow and mend.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_FRUIT",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
+     "error": "Puts fruits and vegetables with the body-building foods.",
+     "example": {
+      "question": "Sukuma wiki and mangoes are which kind of food?",
+      "wrong_answer": "Body-building",
+      "correct_answer": "Protective"
+     },
+     "cause": "The child thinks anything that is good for you builds the body.",
+     "reveals": "Offer \"Body-building\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what protective means and which colours protect the body.",
+     "feedback": "Vegetables and fruits are protective foods. They help the body fight illness.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_ONE",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+     "error": "Picks a plate with only one group, such as ugali, rice and chapati.",
+     "example": {
+      "question": "Which plate is a balanced meal?",
+      "wrong_answer": "Ugali, rice and chapati",
+      "correct_answer": "Ugali, beans and sukuma wiki"
+     },
+     "cause": "The child counts the number of foods, not the groups.",
+     "reveals": "Offer \"Ugali, rice and chapati\" next to the right answer and ask the question again in a new context.",
+     "help": "Sort each food on the plate into a group. Count the groups.",
+     "feedback": "Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_NOVEG",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+     "error": "Leaves out vegetables or fruit and calls the meal balanced.",
+     "example": {
+      "question": "A child eats ugali and fish. What is missing?",
+      "wrong_answer": "Nothing is missing",
+      "correct_answer": "A protective food such as sukuma wiki"
+     },
+     "cause": "The child does not count vegetables as part of the meal.",
+     "reveals": "Offer \"Nothing is missing\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask which group each food is in and which group is empty.",
+     "feedback": "Ugali is energy and fish is body-building. Add vegetables or fruit for the protective group.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_SWEET",
+     "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
+     "error": "Thinks soda, sweets or biscuits complete a meal.",
+     "example": {
+      "question": "Which one makes a meal more balanced?",
+      "wrong_answer": "A bottle of soda",
+      "correct_answer": "A fruit"
+     },
+     "cause": "The child thinks anything extra is good.",
+     "reveals": "Offer \"A bottle of soda\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at what a soda gives: sugar and no body-building or protective foods.",
+     "feedback": "Soda and sweets give sugar only. A fruit or vegetable gives protective food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.2.1",
     "AGRI.G4.RUBRIC.2.2",
@@ -532,8 +1972,261 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+     "name": "Describe boiling, steaming, roasting and shallow frying",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.COOKING_FOOD.a"
+     ],
+     "mastery": "The child says boiling cooks food in bubbling water (githeri, rice, eggs), steaming cooks it in the steam above water without touching the water (sweet potato, some vegetables), roasting cooks it by dry heat over fire or in an oven (maize cobs, meat), and shallow frying cooks it in a little oil in a pan (eggs, chapati, fish). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the method from a description",
+      "pick the food for a method",
+      "say what the method uses",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+     "name": "Pick a cooking method for a food and say how to cook it well",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.COOKING_FOOD.b"
+     ],
+     "mastery": "The child boils beans, githeri and rice, steams soft foods such as sweet potato, roasts maize cobs, shallow fries eggs and chapati, cooks hard foods longer than soft ones, and does not overcook green vegetables because they lose colour and goodness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the method for the food",
+      "say how long hard and soft foods need",
+      "say why a habit keeps the goodness",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+     "name": "Say how to cook safely and keep the kitchen clean",
+     "outcomes": [
+      "AGRI.G4.FOOD_P.COOKING_FOOD.b"
+     ],
+     "mastery": "The child washes hands before cooking, asks a grown-up to help with the fire or stove, turns pot handles inwards, uses a cloth to hold a hot pot, never leaves a cooking fire alone, never uses water on an oil fire (a lid smothers it), and washes the pots and wipes the table after. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe action",
+      "say why an action is dangerous",
+      "put the steps of cooking in order",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+       "kind": "skill",
+       "reason": "Science and Technology Grade 4 teaches the idea this skill uses. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_STEAM",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+     "error": "Thinks steaming means the food sits in the water.",
+     "example": {
+      "question": "In steaming, where is the food?",
+      "wrong_answer": "Inside the boiling water",
+      "correct_answer": "Above the water, cooked by the steam"
+     },
+     "cause": "The child mixes boiling and steaming.",
+     "reveals": "Offer \"Inside the boiling water\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a steamer with the food on a rack above the water.",
+     "feedback": "In steaming the food stays above the water and the steam cooks it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_FRY",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+     "error": "Thinks shallow frying uses no oil, or uses a deep pot of oil.",
+     "example": {
+      "question": "What is used in shallow frying?",
+      "wrong_answer": "A pot full of oil to cover the food",
+      "correct_answer": "A little oil in a pan"
+     },
+     "cause": "The child mixes shallow and deep frying.",
+     "reveals": "Offer \"A pot full of oil to cover the food\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a frying pan with a spoonful of oil beside a pot full of oil.",
+     "feedback": "Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_ROAST",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
+     "error": "Thinks roasting is cooking in water.",
+     "example": {
+      "question": "How is a maize cob roasted?",
+      "wrong_answer": "In a pot of boiling water",
+      "correct_answer": "Over a fire or in an oven, with dry heat"
+     },
+     "cause": "The child links all cooking with a pot of water.",
+     "reveals": "Offer \"In a pot of boiling water\" next to the right answer and ask the question again in a new context.",
+     "help": "Roast a cob over a jiko and compare it with a boiled cob.",
+     "feedback": "Roasting cooks food by dry heat over a fire or in an oven. Boiling uses water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_FRYALL",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+     "error": "Thinks every food is best fried.",
+     "example": {
+      "question": "Which method suits dry beans best?",
+      "wrong_answer": "Shallow frying",
+      "correct_answer": "Boiling"
+     },
+     "cause": "The child likes fried food and thinks frying cooks everything.",
+     "reveals": "Offer \"Shallow frying\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to fry dry beans and ask why they stay hard.",
+     "feedback": "Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_OVER",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+     "error": "Cooks green vegetables for a long time.",
+     "example": {
+      "question": "How long should sukuma wiki be cooked?",
+      "wrong_answer": "For a very long time until it is soft and brown",
+      "correct_answer": "For a short time, until it is just soft and still green"
+     },
+     "cause": "The child thinks longer cooking makes food safer.",
+     "reveals": "Offer \"For a very long time until it is soft and brown\" next to the right answer and ask the question again in a new context.",
+     "help": "Cook greens for 3 minutes and for 30 minutes and compare colour and taste.",
+     "feedback": "Overcooked greens lose their colour and goodness. Cook them only until soft.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_SHORT",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
+     "error": "Thinks hard foods such as beans cook as fast as soft foods.",
+     "example": {
+      "question": "Which food needs the longest time to cook?",
+      "wrong_answer": "Spinach",
+      "correct_answer": "Dry beans"
+     },
+     "cause": "The child does not tell hard foods from soft foods.",
+     "reveals": "Offer \"Spinach\" next to the right answer and ask the question again in a new context.",
+     "help": "Put beans and spinach in two pots and see which is soft first.",
+     "feedback": "Hard foods like dry beans need hours. Soft foods like spinach need minutes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_HANDLE",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+     "error": "Leaves the pot handle sticking out over the edge of the stove.",
+     "example": {
+      "question": "How should the handle of a pot on the stove be turned?",
+      "wrong_answer": "Sticking out, so it is easy to reach",
+      "correct_answer": "Turned inwards, away from the edge"
+     },
+     "cause": "The child thinks of reaching, not of knocking.",
+     "reveals": "Offer \"Sticking out, so it is easy to reach\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what happens when a child passes and brushes the handle.",
+     "feedback": "A handle that sticks out can be knocked and the hot food spills. Turn it inwards.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_WATERFIRE",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+     "error": "Throws water on an oil fire.",
+     "example": {
+      "question": "The oil in a pan catches fire. What should be done?",
+      "wrong_answer": "Pour water on it",
+      "correct_answer": "Cover it with a lid and call a grown-up"
+     },
+     "cause": "The child thinks water puts out every fire.",
+     "reveals": "Offer \"Pour water on it\" next to the right answer and ask the question again in a new context.",
+     "help": "Talk about why water makes burning oil splash and spread.",
+     "feedback": "Water spreads burning oil. A lid shuts out the air and puts the fire out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_LEAVE",
+     "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
+     "error": "Leaves a pot or a fire alone while cooking.",
+     "example": {
+      "question": "The pot is on the fire. What should the cook do?",
+      "wrong_answer": "Go out and play, it will be fine",
+      "correct_answer": "Stay near and watch the pot"
+     },
+     "cause": "The child thinks cooking needs no watching.",
+     "reveals": "Offer \"Go out and play, it will be fine\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what can happen to a pot that boils dry or a fire that spreads.",
+     "feedback": "A cooking fire must never be left alone. A pot can boil dry or burn and the fire can spread.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.2.1",
     "AGRI.G4.RUBRIC.2.2",
@@ -593,8 +2286,163 @@
      "indicator": "AGRI.G4.RUBRIC.3.2"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+     "name": "Identify healthy practices that keep the body clean",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.a"
+     ],
+     "mastery": "The child names bathing every day, washing hands with soap, brushing teeth morning and night, keeping nails short and clean, combing and washing hair, wearing clean clothes and washing hands after using the toilet, and knows perfume does not take the place of washing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the healthy practice",
+      "say why a practice matters",
+      "pick the practice that does not clean",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+     "name": "Say when and how to wash hands properly",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.b"
+     ],
+     "mastery": "The child washes hands before eating or cooking and after using the toilet, playing outside or touching animals, wets the hands, rubs soap all over (palms, backs, between the fingers and under the nails) for about as long as it takes to sing a short song, rinses in clean running water and dries on a clean cloth or in the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the time to wash hands",
+      "put the steps in order",
+      "say why soap is needed",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_PERFUME",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+     "error": "Thinks perfume or oil takes the place of washing.",
+     "example": {
+      "question": "Which keeps the body clean?",
+      "wrong_answer": "Putting on perfume",
+      "correct_answer": "Bathing with soap and water"
+     },
+     "cause": "The child thinks smelling nice means clean.",
+     "reveals": "Offer \"Putting on perfume\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask whether perfume washes dirt and germs off the skin.",
+     "feedback": "Perfume only covers a smell. Soap and water take dirt and germs off the body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_RARE",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+     "error": "Thinks bathing or brushing teeth once a week is enough.",
+     "example": {
+      "question": "How often should teeth be brushed?",
+      "wrong_answer": "Once a week",
+      "correct_answer": "In the morning and at night"
+     },
+     "cause": "The child thinks cleaning is only for special days.",
+     "reveals": "Offer \"Once a week\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at how quickly a smooth tooth feels rough again.",
+     "feedback": "Teeth should be brushed in the morning and at night. The body should be bathed every day.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_HANDS",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+     "error": "Thinks hands that look clean are clean.",
+     "example": {
+      "question": "Why must hands that look clean still be washed before eating?",
+      "wrong_answer": "Hands that look clean cannot have germs",
+      "correct_answer": "Germs are too small to see"
+     },
+     "cause": "The child trusts the eye.",
+     "reveals": "Offer \"Hands that look clean cannot have germs\" next to the right answer and ask the question again in a new context.",
+     "help": "Rub clean-looking hands in glitter or powder and see how it spreads.",
+     "feedback": "Germs are too small to see. Wash hands with soap before eating even if they look clean.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_NOSOAP",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+     "error": "Thinks a rinse in water is enough.",
+     "example": {
+      "question": "What do we use to wash hands properly?",
+      "wrong_answer": "Water only",
+      "correct_answer": "Soap and clean water"
+     },
+     "cause": "The child thinks water removes everything.",
+     "reveals": "Offer \"Water only\" next to the right answer and ask the question again in a new context.",
+     "help": "Wash greasy hands with water only and then with soap.",
+     "feedback": "Soap lifts dirt and germs off the skin. Water alone does not.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_QUICK",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+     "error": "Dips the hands in and takes them out at once.",
+     "example": {
+      "question": "How long should hands be rubbed with soap?",
+      "wrong_answer": "One second, a quick dip is enough",
+      "correct_answer": "As long as it takes to sing a short song"
+     },
+     "cause": "The child thinks speed is cleanliness.",
+     "reveals": "Offer \"One second, a quick dip is enough\" next to the right answer and ask the question again in a new context.",
+     "help": "Count while rubbing with soap and talk about how long it takes to reach under the nails.",
+     "feedback": "Rub the soap on all parts of the hands for about as long as a short song, then rinse.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_BEFORE",
+     "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
+     "error": "Washes only after eating and not before.",
+     "example": {
+      "question": "When must hands be washed?",
+      "wrong_answer": "After eating only",
+      "correct_answer": "Before eating and after using the toilet"
+     },
+     "cause": "The child washes to remove food, not germs.",
+     "reveals": "Offer \"After eating only\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what is on hands before a meal after playing outside.",
+     "feedback": "Wash before eating or cooking, and after the toilet, playing outside or touching animals.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.3.1",
     "AGRI.G4.RUBRIC.3.2",
@@ -651,8 +2499,176 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+     "name": "Describe the ways of cleaning a home",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.a"
+     ],
+     "mastery": "The child says sweeping removes dry dirt from the floor, mopping cleans a floor with a wet cloth and water, dusting wipes dust from shelves and furniture with a dry or slightly damp cloth, washing cleans utensils and clothes with water and soap, and rubbish goes into a bin or pit and is not thrown about. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the method from a description",
+      "pick the method for the surface",
+      "say what the method removes",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+     "name": "Put cleaning jobs in the right order and pick the right tool",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.b"
+     ],
+     "mastery": "The child opens the windows, dusts high places first, sweeps the floor second and mops last, washes the cleanest utensils (cups, plates) first and greasy sufurias last, uses a broom for dry dirt and a mop for a wet clean, and washes the cloths after use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the cleaning jobs in order",
+      "pick the right tool",
+      "say which job is done first and why",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_MIX",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+     "error": "Mixes up the ways of cleaning (sweeping a wet floor, mopping dust).",
+     "example": {
+      "question": "Which method removes dry dirt from a floor?",
+      "wrong_answer": "Mopping",
+      "correct_answer": "Sweeping"
+     },
+     "cause": "The child thinks every floor job is mopping.",
+     "reveals": "Offer \"Mopping\" next to the right answer and ask the question again in a new context.",
+     "help": "Try to sweep a muddy floor and mop a dusty one.",
+     "feedback": "Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_DUST",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+     "error": "Thinks dusting means sweeping the yard.",
+     "example": {
+      "question": "What is dusting?",
+      "wrong_answer": "Sweeping the compound outside",
+      "correct_answer": "Wiping dust off shelves and furniture"
+     },
+     "cause": "The child links dust with the ground.",
+     "reveals": "Offer \"Sweeping the compound outside\" next to the right answer and ask the question again in a new context.",
+     "help": "Wipe a table with a cloth and look at the dust on it.",
+     "feedback": "Dusting wipes dust from shelves, tables and other furniture with a cloth.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_RUBBISH",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
+     "error": "Throws rubbish anywhere or burns plastic.",
+     "example": {
+      "question": "Where should rubbish from the house go?",
+      "wrong_answer": "Anywhere outside, the wind will take it",
+      "correct_answer": "Into a bin or a rubbish pit"
+     },
+     "cause": "The child thinks outside is for dirt.",
+     "reveals": "Offer \"Anywhere outside, the wind will take it\" next to the right answer and ask the question again in a new context.",
+     "help": "Walk round the school and look at where rubbish piles up and what it attracts.",
+     "feedback": "Rubbish goes into a bin or a pit. Loose rubbish attracts flies and rats and spreads sickness.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_FLOOR",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+     "error": "Sweeps the floor first and dusts the shelves after.",
+     "example": {
+      "question": "Which job comes first when cleaning a room?",
+      "wrong_answer": "Sweeping the floor",
+      "correct_answer": "Dusting the shelves"
+     },
+     "cause": "The child cleans from the dirtiest part.",
+     "reveals": "Offer \"Sweeping the floor\" next to the right answer and ask the question again in a new context.",
+     "help": "Dust a shelf over a swept floor and look at the floor again.",
+     "feedback": "Dust falls to the floor, so dust the shelves first and sweep the floor after.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_MOP",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+     "error": "Mops before sweeping.",
+     "example": {
+      "question": "What comes first, sweeping or mopping?",
+      "wrong_answer": "Mopping, then sweeping",
+      "correct_answer": "Sweeping, then mopping"
+     },
+     "cause": "The child thinks water does all the work.",
+     "reveals": "Offer \"Mopping, then sweeping\" next to the right answer and ask the question again in a new context.",
+     "help": "Mop a dusty floor and see the mud it makes.",
+     "feedback": "Sweep first to lift the dry dirt. Mop last so the floor comes out clean.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_GREASY",
+     "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
+     "error": "Washes the greasy sufuria first in the same water.",
+     "example": {
+      "question": "Which should be washed first?",
+      "wrong_answer": "The greasy sufuria",
+      "correct_answer": "The cups and plates"
+     },
+     "cause": "The child washes the dirtiest first.",
+     "reveals": "Offer \"The greasy sufuria\" next to the right answer and ask the question again in a new context.",
+     "help": "Wash a cup after a greasy pot in the same water and feel it.",
+     "feedback": "Wash the cleanest things first (cups, plates) and the greasy pots last, so the water stays clean longer.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.3.1",
     "AGRI.G4.RUBRIC.3.2",
@@ -709,8 +2725,163 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+     "name": "Identify protective clothing and what each piece protects",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.a"
+     ],
+     "mastery": "The child links gumboots to wet muddy ground and the feet, gloves to the hands, an apron or overall to clothes and skin, a face mask to the nose and mouth from dust and spray, a hat or head scarf to the head and hair, and goggles to the eyes, and knows sandals do not protect a farmer's feet. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the item from its job",
+      "pick the item for a job",
+      "say what the item protects",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+     "name": "Say how to clean and store protective clothing",
+     "outcomes": [
+      "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.b"
+     ],
+     "mastery": "The child shakes or rinses off the dirt, washes the item with soap and water (scrubbing boots and rubber gloves), rinses and dries it fully in the shade or sun, keeps it in a clean dry place, does not share a dirty mask or gloves, and knows clean protective clothing keeps germs and chemicals off the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the cleaning steps in order",
+      "say where to dry and keep them",
+      "say why they are cleaned",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_MATCH",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+     "error": "Matches the wrong protective item to the job (gloves for the eyes, a mask for the feet).",
+     "example": {
+      "question": "Which item protects the eyes?",
+      "wrong_answer": "Gloves",
+      "correct_answer": "Goggles"
+     },
+     "cause": "The child knows the items but not the body part each protects.",
+     "reveals": "Offer \"Gloves\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold each item up and say which body part it covers.",
+     "feedback": "Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_FASHION",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+     "error": "Thinks protective clothing is for looks.",
+     "example": {
+      "question": "Why does a farmer wear a face mask when spraying?",
+      "wrong_answer": "To look smart",
+      "correct_answer": "To keep the spray out of the nose and mouth"
+     },
+     "cause": "The child has seen the clothing but not its job.",
+     "reveals": "Offer \"To look smart\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what would happen to a farmer who breathes in the spray.",
+     "feedback": "Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_SANDALS",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
+     "error": "Thinks sandals protect the feet on the farm.",
+     "example": {
+      "question": "Which footwear protects a farmer in wet muddy ground?",
+      "wrong_answer": "Open sandals",
+      "correct_answer": "Gumboots"
+     },
+     "cause": "The child thinks any shoe will do.",
+     "reveals": "Offer \"Open sandals\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask what can cut or bite a bare foot in a shamba.",
+     "feedback": "Gumboots cover the whole foot and keep out water, mud, thorns and snakes.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_DIRTY",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+     "error": "Puts protective clothing away dirty.",
+     "example": {
+      "question": "What is done with a muddy apron after work?",
+      "wrong_answer": "Hang it away as it is",
+      "correct_answer": "Wash it with soap and water"
+     },
+     "cause": "The child thinks it will clean itself.",
+     "reveals": "Offer \"Hang it away as it is\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell a stored muddy apron after a week.",
+     "feedback": "Dirty protective clothing keeps germs and chemicals. Wash it after use.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_WET",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+     "error": "Stores gloves or boots while wet.",
+     "example": {
+      "question": "How should washed gloves be stored?",
+      "wrong_answer": "Packed away while still wet",
+      "correct_answer": "Dried fully, then kept in a clean dry place"
+     },
+     "cause": "The child is in a hurry to put things away.",
+     "reveals": "Offer \"Packed away while still wet\" next to the right answer and ask the question again in a new context.",
+     "help": "Pack away a damp cloth in a bag and smell it a week later.",
+     "feedback": "Wet items grow mould and smell. Dry them well before storing.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_SHARE",
+     "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
+     "error": "Shares a dirty mask or gloves with others.",
+     "example": {
+      "question": "Two children want to use the same dirty gloves. What is best?",
+      "wrong_answer": "Share them, gloves are gloves",
+      "correct_answer": "Wash them first, or each use a clean pair"
+     },
+     "cause": "The child thinks sharing is always kind.",
+     "reveals": "Offer \"Share them, gloves are gloves\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how germs and chemicals move from one hand to another.",
+     "feedback": "Dirty protective clothing can pass germs from one child to another. Clean it first.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.3.1",
     "AGRI.G4.RUBRIC.3.2",
@@ -768,8 +2939,168 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+     "name": "Identify even, uneven and diagonal tacking stitches",
+     "outcomes": [
+      "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.a"
+     ],
+     "mastery": "The child says even tacking has stitches and gaps of the same length, uneven tacking has long stitches on top and short gaps underneath, diagonal tacking makes slanting stitches to hold layers flat, and that all tacking is long, loose and temporary and is taken out later. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the stitch from a description",
+      "say what tacking is for",
+      "say which tacking is used for a job",
+      "find the false step in a learner's answer"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+     "name": "Say how tacking is done and when it is taken out",
+     "outcomes": [
+      "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.b"
+     ],
+     "mastery": "The child pins the pieces together, tacks with long loose stitches and a contrasting thread, makes the final stitching (by hand or on a machine) next to the tacking, and then pulls the tacking out, and uses diagonal tacking to hold thick or slippery layers flat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "put the steps in order",
+      "pick the tacking for a job",
+      "say when tacking comes out",
+      "find the false step in a learner's plan"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR",
+       "reason": "Grade 5 builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_PERM",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+     "error": "Thinks tacking is the final stitching and stays in the cloth.",
+     "example": {
+      "question": "What is tacking used for?",
+      "wrong_answer": "To join the cloth for good",
+      "correct_answer": "To hold the cloth together for a short time"
+     },
+     "cause": "The child sees a stitch and thinks it is the finished seam.",
+     "reveals": "Offer \"To join the cloth for good\" next to the right answer and ask the question again in a new context.",
+     "help": "Tack two pieces and sew them, then pull out the tacking.",
+     "feedback": "Tacking is temporary. It holds the cloth in place until the final stitching is done.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_NAME",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+     "error": "Mixes up even, uneven and diagonal tacking.",
+     "example": {
+      "question": "Which tacking has long stitches on top and short stitches underneath?",
+      "wrong_answer": "Even tacking",
+      "correct_answer": "Uneven tacking"
+     },
+     "cause": "The child does not look at the length of the stitches.",
+     "reveals": "Offer \"Even tacking\" next to the right answer and ask the question again in a new context.",
+     "help": "Make each tacking on a scrap and compare the top and the back.",
+     "feedback": "Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_SMALL",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
+     "error": "Thinks tacking stitches are tiny and strong.",
+     "example": {
+      "question": "What are tacking stitches like?",
+      "wrong_answer": "Tiny and tight",
+      "correct_answer": "Long and loose"
+     },
+     "cause": "The child thinks all stitches are made to last.",
+     "reveals": "Offer \"Tiny and tight\" next to the right answer and ask the question again in a new context.",
+     "help": "Pull out a tacking stitch and then a back stitch and compare.",
+     "feedback": "Tacking stitches are long and loose so they are quick to make and easy to take out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_KEEP",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+     "error": "Leaves the tacking in the finished garment.",
+     "example": {
+      "question": "What is done with the tacking when the sewing is finished?",
+      "wrong_answer": "It is left in the cloth",
+      "correct_answer": "It is pulled out"
+     },
+     "cause": "The child sees it as part of the stitching.",
+     "reveals": "Offer \"It is left in the cloth\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a garment with tacking left in and ask what it looks like.",
+     "feedback": "Tacking is only a guide. Pull it out when the final stitching is done.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_ORDER",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+     "error": "Sews the final seam first and tacks after.",
+     "example": {
+      "question": "What comes first, tacking or the final stitching?",
+      "wrong_answer": "Final stitching, then tacking",
+      "correct_answer": "Tacking, then final stitching"
+     },
+     "cause": "The child does not know tacking is a guide.",
+     "reveals": "Offer \"Final stitching, then tacking\" next to the right answer and ask the question again in a new context.",
+     "help": "Sew two slippery pieces without tacking and see them slide.",
+     "feedback": "Tack first to hold the cloth, then sew the final stitching beside it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_STRONG",
+     "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
+     "error": "Tacks with tiny strong stitches in matching thread.",
+     "example": {
+      "question": "How should tacking be sewn?",
+      "wrong_answer": "With tiny, strong stitches",
+      "correct_answer": "With long, loose stitches in a thread that shows"
+     },
+     "cause": "The child thinks every stitch must be neat and strong.",
+     "reveals": "Offer \"With tiny, strong stitches\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare how long it takes to unpick tiny stitches and long stitches.",
+     "feedback": "Long loose stitches in a thread that shows are easy to see and to pull out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "AGRI.G4.RUBRIC.4.1",
     "AGRI.G4.RUBRIC.4.2"

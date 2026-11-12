@@ -1,0 +1,297 @@
+{
+ "outcomes": {
+  "AGRI.G4.CONSER.SOIL_CONSERVATION.a": "identify suitable materials for making compost manure",
+  "AGRI.G4.CONSER.SOIL_CONSERVATION.b": "prepare compost manure for farming",
+  "AGRI.G4.CONSER.SOIL_CONSERVATION.c": "appreciate importance of compost manure in farming",
+  "AGRI.G4.CONSER.WATER_CONSERVATION.a": "describe drip irrigation as a way of conserving water",
+  "AGRI.G4.CONSER.WATER_CONSERVATION.b": "carry out drip irrigation to conserve water",
+  "AGRI.G4.CONSER.WATER_CONSERVATION.c": "appreciate use of drip irrigation to conserve water in farming",
+  "AGRI.G4.CONSER.FUEL_CONSERVATION.a": "identify types of fuels used at home",
+  "AGRI.G4.CONSER.FUEL_CONSERVATION.b": "conserve fuels during cooking",
+  "AGRI.G4.CONSER.FUEL_CONSERVATION.c": "appreciate the importance of conserving fuel to minimise wastage of resources",
+  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.a": "identify small wild animals that destroy crops",
+  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.b": "construct and use a scarecrow to scare off small wild animals from crops",
+  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.c": "appreciate the importance of living better with small wild animals",
+  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.a": "identify crops established through direct sowing of tiny seeds",
+  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.b": "sow tiny seeds in a finely prepared seedbed",
+  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.c": "adopt direct sowing in establishment of food crops",
+  "AGRI.G4.FOOD_P.GROWING_FRUITS.a": "identify fruits that can grow the locality",
+  "AGRI.G4.FOOD_P.GROWING_FRUITS.b": "grow a fruit crop suited in the locality",
+  "AGRI.G4.FOOD_P.GROWING_FRUITS.c": "appreciate the importance of consuming fruits for nutrition",
+  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a": "identify types of domestic animals in the community",
+  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b": "relate various domestic animals to their uses",
+  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c": "appreciate the importance of domestic animals for food production",
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.a": "explain importance of eating a balanced meal",
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.b": "select food from different food groups to make a balanced meal",
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.c": "appreciate the importance of eating a balanced meal",
+  "AGRI.G4.FOOD_P.COOKING_FOOD.a": "describe methods of cooking food",
+  "AGRI.G4.FOOD_P.COOKING_FOOD.b": "cook food using different methods",
+  "AGRI.G4.FOOD_P.COOKING_FOOD.c": "embrace boiling and shallow frying in food production",
+  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.a": "identify healthy practices that promote personal hygiene",
+  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.b": "apply healthy practices that promote personal hygiene",
+  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.c": "embrace healthy practices to promote personal hygiene in daily life",
+  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.a": "describe the various methods used for cleaning home environment",
+  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.b": "use appropriate methods to clean home environment",
+  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.c": "appreciate a clean environment in promoting domestic hygiene",
+  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.a": "identify personal protective equipment in day to day life",
+  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.b": "clean personal protective equipment for hygiene purposes",
+  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.c": "appreciate clean personal protective equipment in promoting hygiene",
+  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.a": "identify the types of tacking stitches in sewing",
+  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.b": "make an item using tacking stitches",
+  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.c": "appreciate the importance of tacking stitches"
+ },
+ "skills": {
+  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS": {
+   "forms": [
+    "pick the material for compost",
+    "say why a material stays out",
+    "pick the better pile of waste",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks vegetable and fruit peelings, leaves, grass, crop remains, ash in small amounts and animal dung, and keeps out plastic, polythene, tins, glass, batteries, cooked food, meat and bones (they do not rot, or they draw rats and flies). The child does not call shop fertiliser a compost material. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING": {
+   "forms": [
+    "put the steps in order",
+    "say what the heap needs",
+    "say when the manure is ready",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child mixes dry and fresh materials in layers with a little soil or dung, keeps the heap damp (not soaking) and covered, turns it now and then, and waits until it is dark, crumbly and smells like soil before using it on the garden. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING": {
+   "forms": [
+    "say what drip irrigation is",
+    "say why it saves water",
+    "say where the water goes",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says drip irrigation gives water slowly, drop by drop, to the soil at the roots of the plant (through a tube or a bottle with a tiny hole), so little is lost to evaporation, run-off or watering the bare ground, and it uses less water than a hosepipe or pouring from a bucket. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP": {
+   "forms": [
+    "put the set-up steps in order",
+    "say where the water container goes",
+    "say why the drip stops",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child puts the water container higher than the bed, makes a tiny hole in a bottle or tube, puts the dripping end beside the plant roots, fills the container, and checks that the hole is not blocked by soil. A big hole would let all the water out at once. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES": {
+   "forms": [
+    "name the fuel from a description",
+    "pick the fuel for a job",
+    "say whether a fuel is solid, liquid or gas",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names firewood, charcoal and dry cow dung or crop remains (solid), paraffin (liquid) and cooking gas or biogas (gas), and electricity and solar as other ways to cook or light, and does not name petrol or diesel as cooking fuels at home. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING": {
+   "forms": [
+    "pick the fuel-saving habit",
+    "say why a habit saves fuel",
+    "pick the cook who wastes fuel",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts a lid on the pot, cuts food small, soaks hard foods such as beans before cooking, uses dry firewood, keeps the fire small once the pot boils, cooks several foods on one fire and uses an energy-saving jiko, and does not think a big flame cooks food faster. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS": {
+   "forms": [
+    "name the animal from the damage",
+    "say what the animal eats or digs up",
+    "say which small animal does not harm crops",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links weaver birds and quelea birds to ripening grain, rats and mice to stored and planted grain, moles to roots and tubers, hares and rabbits to young vegetables, squirrels and monkeys to maize cobs and fruit, and knows bees and butterflies do not harm crops (they help it). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE": {
+   "forms": [
+    "pick the material for a scarecrow",
+    "say why it must be moved",
+    "say how it scares the animals",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child makes the frame from two sticks in a cross, dresses it in old clothes, adds a hat, shiny or noisy things (old tins, strips of cloth or plastic that flap), sets it in the middle of the crop where it can be seen, moves it often, and does not use poison or traps because a scarecrow only scares animals away. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS": {
+   "forms": [
+    "pick the crop sown directly",
+    "pick the crop with large seed",
+    "say how the crop is started",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names carrot, spinach, amaranth (terere), coriander (dhania) and lettuce as crops whose tiny seeds are sown straight where they will grow, knows maize, beans and peas have large seeds, cabbage and tomato are usually started in a nursery and moved, and sweet potato grows from vine cuttings. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING": {
+   "forms": [
+    "put the steps in order",
+    "say how deep to sow",
+    "say what to do when seedlings are crowded",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child digs the soil, breaks the lumps and removes stones and weeds until it is fine like flour, makes a flat bed, sows tiny seeds very shallow in lines (mixed with dry sand so they spread thinly), covers them lightly, waters gently, and thins crowded seedlings so each has room. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES": {
+   "forms": [
+    "pick the fruit that suits a place",
+    "say which plant gives the fruit",
+    "pick the fruit that is not a fruit crop",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names mango, pawpaw, banana, orange, guava, avocado, passion fruit and pineapple as fruits grown in Kenya, knows mango, coconut and pineapple like the warm coast and lowlands while apple and plum like the cool highlands, and knows fruits grow on trees, bushes, vines and plants such as banana and pawpaw. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING": {
+   "forms": [
+    "put the planting steps in order",
+    "say what goes in the hole",
+    "say how to care for the young plant",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child digs a hole, mixes the topsoil with manure, sets the seedling at the same depth it grew in the bag, firms the soil, waters it, puts a mulch of dry grass around (not touching the stem), gives space between plants, and keeps watering in the dry weather while it is young. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES": {
+   "forms": [
+    "name the animal from a description",
+    "pick the domestic animal",
+    "group the animals",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names cattle, goats, sheep, pigs, rabbits, donkeys and camels (livestock), chickens, ducks and turkeys (poultry) and bees (kept for honey) as domestic animals people keep and look after, and knows zebra, antelope and giraffe are wild. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES": {
+   "forms": [
+    "name the product from the animal",
+    "name the animal from the product",
+    "say what work an animal does",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links cattle to milk, beef and hides, goats to milk and meat, sheep to wool and meat, chickens to eggs and meat, bees to honey, pigs to pork, donkeys and camels to carrying loads (camels give milk too), and oxen to ploughing, and knows one animal can give more than one thing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE": {
+   "forms": [
+    "say what a balanced meal is",
+    "say why we need one",
+    "say what happens without one",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a balanced meal has foods from the energy-giving, body-building and protective groups together (with water), that it helps the body to grow, work, play, heal and fight illness, that one food cannot do all this, and that a balanced meal does not need to be big or expensive. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT": {
+   "forms": [
+    "name the group of a food",
+    "pick the food from a group",
+    "pick the odd one out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts ugali, rice, chapati, sweet potato, arrowroot and bread with energy-giving foods (cooking oil and butter give energy too), beans, ndengu, meat, fish, omena, eggs and milk with body-building foods, and sukuma wiki, spinach, managu, mango, oranges and carrots with protective foods. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK": {
+   "forms": [
+    "pick the balanced meal",
+    "say which group a meal is missing",
+    "fix a meal by adding one food",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks the plate that has an energy food, a body-building food and a protective food (for example ugali, beans and sukuma wiki), spots the group a plate is missing, adds one food to fix it, and does not count a drink of soda or sweets as a food group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS": {
+   "forms": [
+    "name the method from a description",
+    "pick the food for a method",
+    "say what the method uses",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says boiling cooks food in bubbling water (githeri, rice, eggs), steaming cooks it in the steam above water without touching the water (sweet potato, some vegetables), roasting cooks it by dry heat over fire or in an oven (maize cobs, meat), and shallow frying cooks it in a little oil in a pan (eggs, chapati, fish). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT": {
+   "forms": [
+    "pick the method for the food",
+    "say how long hard and soft foods need",
+    "say why a habit keeps the goodness",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child boils beans, githeri and rice, steams soft foods such as sweet potato, roasts maize cobs, shallow fries eggs and chapati, cooks hard foods longer than soft ones, and does not overcook green vegetables because they lose colour and goodness. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE": {
+   "forms": [
+    "pick the safe action",
+    "say why an action is dangerous",
+    "put the steps of cooking in order",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child washes hands before cooking, asks a grown-up to help with the fire or stove, turns pot handles inwards, uses a cloth to hold a hot pot, never leaves a cooking fire alone, never uses water on an oil fire (a lid smothers it), and washes the pots and wipes the table after. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES": {
+   "forms": [
+    "pick the healthy practice",
+    "say why a practice matters",
+    "pick the practice that does not clean",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names bathing every day, washing hands with soap, brushing teeth morning and night, keeping nails short and clean, combing and washing hair, wearing clean clothes and washing hands after using the toilet, and knows perfume does not take the place of washing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING": {
+   "forms": [
+    "pick the time to wash hands",
+    "put the steps in order",
+    "say why soap is needed",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child washes hands before eating or cooking and after using the toilet, playing outside or touching animals, wets the hands, rubs soap all over (palms, backs, between the fingers and under the nails) for about as long as it takes to sing a short song, rinses in clean running water and dries on a clean cloth or in the air. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS": {
+   "forms": [
+    "name the method from a description",
+    "pick the method for the surface",
+    "say what the method removes",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says sweeping removes dry dirt from the floor, mopping cleans a floor with a wet cloth and water, dusting wipes dust from shelves and furniture with a dry or slightly damp cloth, washing cleans utensils and clothes with water and soap, and rubbish goes into a bin or pit and is not thrown about. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER": {
+   "forms": [
+    "put the cleaning jobs in order",
+    "pick the right tool",
+    "say which job is done first and why",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child opens the windows, dusts high places first, sweeps the floor second and mops last, washes the cleanest utensils (cups, plates) first and greasy sufurias last, uses a broom for dry dirt and a mop for a wet clean, and washes the cloths after use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS": {
+   "forms": [
+    "name the item from its job",
+    "pick the item for a job",
+    "say what the item protects",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links gumboots to wet muddy ground and the feet, gloves to the hands, an apron or overall to clothes and skin, a face mask to the nose and mouth from dust and spray, a hat or head scarf to the head and hair, and goggles to the eyes, and knows sandals do not protect a farmer's feet. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE": {
+   "forms": [
+    "put the cleaning steps in order",
+    "say where to dry and keep them",
+    "say why they are cleaned",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child shakes or rinses off the dirt, washes the item with soap and water (scrubbing boots and rubber gloves), rinses and dries it fully in the shade or sun, keeps it in a clean dry place, does not share a dirty mask or gloves, and knows clean protective clothing keeps germs and chemicals off the body. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES": {
+   "forms": [
+    "name the stitch from a description",
+    "say what tacking is for",
+    "say which tacking is used for a job",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says even tacking has stitches and gaps of the same length, uneven tacking has long stitches on top and short gaps underneath, diagonal tacking makes slanting stitches to hold layers flat, and that all tacking is long, loose and temporary and is taken out later. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE": {
+   "forms": [
+    "put the steps in order",
+    "pick the tacking for a job",
+    "say when tacking comes out",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child pins the pieces together, tacks with long loose stitches and a contrasting thread, makes the final stitching (by hand or on a machine) next to the tacking, and then pulls the tacking out, and uses diagonal tacking to hold thick or slippery layers flat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
