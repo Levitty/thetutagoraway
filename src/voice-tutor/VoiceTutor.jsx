@@ -350,7 +350,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
         if (!T.said) firstSound(T, providers.current.tts.clock());
         dispatch({ type: 'turn_more', steps: T.steps.slice(T.reported), dropped: [...(ev.dropped || []), ...T.dropped], spent: ev.spent });
         T.reported = T.steps.length;
-        if (!T.steps.some((x) => x.cmd === 'say') && !T.steps.some((x) => x.cmd === 'end_session')) dispatch({ type: 'said', text: '(HOREB nods and lets you carry on)', at: clock() });
+        // A silent nod stays silent: no stage direction is ever shown to the child (12 Nov 2026).
       }
     };
     try {
@@ -447,7 +447,8 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
         vdispatch({ type: 'heard' });
         if (!said) {
           // Hands-free: the microphone stays open a little longer before giving up (a child should not have to keep tapping).
-          if (autoTries.current < 2 && sessionRef.current.status === 'listening') { autoTries.current += 1; setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 200); return; }
+          // On the child's turn the microphone never gives up by itself (owner, 12 Nov 2026: "it needs to constantly be listening").
+          if (sessionRef.current.status === 'listening') { autoTries.current += 1; setTimeout(() => { if (!listenRef.current && sessionRef.current.status === 'listening') talk(); }, 200); return; }
           setSnapNote('HOREB did not hear anything. Tap Talk and try again, or type.'); return;
         }
         autoTries.current = 0;
