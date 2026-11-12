@@ -13,8 +13,8 @@
 // HOREB is asked for a short probe written for the moment. Typing and the board are
 // the other ways in, and typing is said plainly when the microphone or voice fails.
 //
-// Test only: behind VITE_VOICE_TUTOR=1 and an allowlist stub (the admin list,
-// or VITE_VOICE_TUTOR_ALLOWLIST). Adult test accounts only until consent
+// Test only: behind VITE_VOICE_TUTOR=1; the live model answers only the server's VOICE_TUTOR_ALLOWLIST
+// (one list, 12 Nov 2026). Adult test accounts only until consent
 // (milestone 5); the server enforces the same.
 //
 //   /voice-tutor                  scripted tutor, no model, no cost
@@ -50,7 +50,6 @@ import { FRACTION_SKILLS, skillName } from './fractions.js';
 
 const ENV = import.meta.env || {};
 export const VOICE_TUTOR_ON = ENV.VITE_VOICE_TUTOR === '1';
-const ALLOWLIST = String(ENV.VITE_VOICE_TUTOR_ALLOWLIST || '').split(',').map((s) => s.trim().toLowerCase()).filter(Boolean);
 const clock = () => performance.now();
 const params = () => { try { return new URLSearchParams(window.location.search); } catch { return new URLSearchParams(); } };
 const uid = () => (crypto.randomUUID ? crypto.randomUUID() : `s${Date.now().toString(36)}${Math.random().toString(36).slice(2, 10)}`);
@@ -94,8 +93,10 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
   const q = useMemo(params, []);
   const demo = q.get('demo') === 'auto';
   const email = String(user?.email || '').toLowerCase();
-  // The server's VOICE_TUTOR_ALLOWLIST is the real gate; on a local test build any signed-in tester may try, and the server says no if not listed.
-  const allowed = !!user && (isAdmin || ENV.DEV === true || (email && ALLOWLIST.includes(email)));
+  // One list decides who may use the live tutor: the server's VOICE_TUTOR_ALLOWLIST (12 Nov 2026: a second list
+  // built into the page kept a listed tester out). Any signed-in adult sees the page and the free practice; the
+  // live model and voice answer only accounts on the server's list, and say so plainly to anyone else.
+  const allowed = !!user;
   const canMock = allowed || ENV.DEV === true;
   const [mode, setMode] = useState(q.get('mode') === 'live' && allowed ? 'remote' : 'mock');
   const [children, setChildren] = useState([]);
