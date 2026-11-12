@@ -28,6 +28,7 @@ export const ENGLISH_DRAWS = 120;
 const AMERICAN = /\b(color|colorful|meter|meters|liter|center|centers|favorite|gray|neighbor|neighbors|traveled|traveling|realize|organize|recognize|practice (the|a)\b|mom)\b/i;
 const EMOJI = /[\u{1F300}-\u{1FAFF}\u{2600}-\u{27BF}]/u;
 const FK_CAP = 7;
+const NO_FK_SUBJECTS = new Set(['kiswahili']);   // subjects whose words the English reading-level formula cannot read
 
 const codesNear = (cskill, skills) => {
   const sub = skills[cskill]?.sub;
@@ -78,7 +79,8 @@ export function checkEnglishFamily(def, draws = ENGLISH_DRAWS) {
     seen.add(`${q}|${(p.choices || []).slice().sort().join('/')}|${(p.shownSteps || []).join('/')}|${p.passage?.title || ''}`);
     if (p.passage) {
       const s = readingStats(p.passage.text);
-      if (s.fk > FK_CAP) fail(`passage "${p.passage.title}" reads at grade ${s.fk.toFixed(1)}, above ${FK_CAP}`);
+      // Flesch-Kincaid counts English syllables, so it means nothing for Kiswahili: sentence length and passage length still apply, a native speaker judges the level.
+      if (!NO_FK_SUBJECTS.has(entry.subject) && s.fk > FK_CAP) fail(`passage "${p.passage.title}" reads at grade ${s.fk.toFixed(1)}, above ${FK_CAP}`);
       if (s.longest > 22) fail(`passage "${p.passage.title}" has a sentence of ${s.longest} words`);
       if (p.passage.text.length > 1100) fail(`passage "${p.passage.title}" is too long for a phone`);
     }
