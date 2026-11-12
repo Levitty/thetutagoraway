@@ -2,6 +2,7 @@
 import agriculture_g5 from './agriculture_g5.js';
 import cre_g5 from './cre_g5.js';
 import creativearts_g5 from './creativearts_g5.js';
+import english_g4 from './english_g4.js';
 import english_g5 from './english_g5.js';
 import english_g6 from './english_g6.js';
 import kiswahili_g5 from './kiswahili_g5.js';
@@ -10,10 +11,12 @@ import science_g5 from './science_g5.js';
 import science_g6 from './science_g6.js';
 import socialstudies_g4 from './socialstudies_g4.js';
 import socialstudies_g5 from './socialstudies_g5.js';
+import socialstudies_g6 from './socialstudies_g6.js';
 export const ENTRIES = [
   agriculture_g5,
   cre_g5,
   creativearts_g5,
+  english_g4,
   english_g5,
   english_g6,
   kiswahili_g5,
@@ -22,4 +25,5 @@ export const ENTRIES = [
   science_g6,
   socialstudies_g4,
   socialstudies_g5,
+  socialstudies_g6,
 ];

@@ -3,7 +3,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { readFileSync } from 'node:fs';
-import { englishFailures, checkEnglishForms, ENGLISH_FAMILIES } from '../engine/scripts/english_checks.mjs';
+import { englishFailures, checkEnglishForms, checkTextForms, ENGLISH_FAMILIES } from '../engine/scripts/english_checks.mjs';
 import { SKILLS_E5, OUTCOMES_E5, MIS_FEEDBACK_E5 } from '../src/ai-tutor/content/curriculumMap.english.g5.js';
 import { isOn, setFamilyMode } from '../src/ai-tutor/content/families/core.js';
 import { FAMILIES } from '../src/ai-tutor/content/families/index.js';
@@ -46,11 +46,12 @@ test('every English skill has families in at least two different structures, and
   const bad = englishFailures(150);
   assert.deepEqual(bad, [], `\n${bad.slice(0, 40).join('\n')}\n`);
   assert.deepEqual(checkEnglishForms(), []);
+  assert.deepEqual(checkTextForms(ENGLISH_FAMILIES.filter(f => f.grade === 5), SKILLS_E5), []);   // every Grade 5 skill, since checkEnglishForms reads the first English entry (Grade 4)
 });
 
 test('English families stay off for children until a teacher signs them off, and stay out of the Maths bank', () => {
   setFamilyMode('reviewed');
-  for (const f of ENGLISH_FAMILIES) {
+  for (const f of ENGLISH_FAMILIES.filter(x => x.grade === 5)) {   // Grade 4 English (12 Nov 2026) has its own entry and test
     assert.ok(f.reviewed === SIGNED_ENGLISH.includes(f.id) && f.draft === !f.reviewed, `${f.id}: reviewed must follow the sign-off list`);
     assert.ok(isOn(f) === SIGNED_ENGLISH.includes(f.id), `${f.id} is on for children without a sign-off`);
     assert.ok(f.cskill.startsWith('ENGL.G5.'));

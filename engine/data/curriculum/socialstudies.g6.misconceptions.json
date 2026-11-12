@@ -1,0 +1,1967 @@
+{
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_ADD_NEIGHBOUR": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
+  "error": "Adds Zambia, Malawi or the DR Congo to Eastern Africa because they are near Kenya's neighbours.",
+  "example": {
+   "question": "Which country is in Eastern Africa?",
+   "wrong_answer": "Zambia",
+   "correct_answer": "Rwanda"
+  },
+  "cause": "The child counts every country that is close, not the countries of the region.",
+  "reveals": "Offer \"Zambia\" next to the right answer and ask the question again in a new context.",
+  "help": "List the ten countries of the region and ask the child to find the country in the list.",
+  "feedback": "Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_MISS_HORN": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
+  "error": "Leaves out Ethiopia, Somalia, Djibouti or Eritrea as if the region ended at Kenya's borders.",
+  "example": {
+   "question": "Which list has only countries of Eastern Africa?",
+   "wrong_answer": "Kenya, Uganda, Tanzania, Rwanda",
+   "correct_answer": "Kenya, Ethiopia, Somalia, Tanzania"
+  },
+  "cause": "The child knows the East African Community partners best.",
+  "reveals": "Offer \"Kenya, Uganda, Tanzania, Rwanda\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask for the countries on the Horn and ask whether they are east of Africa's middle.",
+  "feedback": "Ethiopia, Somalia, Djibouti and Eritrea are also in Eastern Africa. The region is bigger than the first countries a child learns.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_NORTH_AFRICA": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
+  "error": "Puts a North African or West African country (Egypt, Nigeria) in Eastern Africa.",
+  "example": {
+   "question": "Which one is NOT in Eastern Africa?",
+   "wrong_answer": "Burundi",
+   "correct_answer": "Egypt"
+  },
+  "cause": "The child places countries by their names, not the map.",
+  "reveals": "Offer \"Burundi\" next to the right answer and ask the question again in a new context.",
+  "help": "Use the compass: Egypt is on the Mediterranean in the north, far from the East coast.",
+  "feedback": "Egypt is in North Africa. Burundi is in Eastern Africa.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_SIZE_NAME": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
+  "error": "Thinks Kenya is the largest country of Eastern Africa.",
+  "example": {
+   "question": "Which country is the largest in Eastern Africa?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Ethiopia"
+  },
+  "cause": "The child judges by the country he or she lives in.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Give the areas in square kilometres and ask the child to compare the numbers.",
+  "feedback": "Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_LANDLOCKED": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
+  "error": "Says every Eastern African country has a sea coast, or that Uganda has a coast.",
+  "example": {
+   "question": "Which country has no sea coast?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Uganda"
+  },
+  "cause": "The child thinks a big lake is a coast.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which ocean Uganda touches. Then trace where its ships must go to reach the sea.",
+  "feedback": "Uganda is landlocked. It has lakes but no sea coast. Kenya has a coast on the Indian Ocean.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_DIRECTION_SWAP": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
+  "error": "Puts Tanzania north of Kenya or Somalia west of Kenya.",
+  "example": {
+   "question": "In which direction does Tanzania lie from Kenya?",
+   "wrong_answer": "North",
+   "correct_answer": "South"
+  },
+  "cause": "The child mixes the compass points.",
+  "reveals": "Offer \"North\" next to the right answer and ask the question again in a new context.",
+  "help": "Stand on Nairobi on a map and say which way Mombasa to Dar es Salaam runs.",
+  "feedback": "Tanzania lies to the south of Kenya. Uganda is west and Somalia is east.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_SWAP": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
+  "error": "Swaps latitudes and longitudes: says latitudes run from north to south.",
+  "example": {
+   "question": "Which lines run from east to west on a map?",
+   "wrong_answer": "Longitudes",
+   "correct_answer": "Latitudes"
+  },
+  "cause": "The child links the word long with the lines that look long from top to bottom.",
+  "reveals": "Offer \"Longitudes\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the equator and say it is a latitude; ask which way it runs.",
+  "feedback": "Latitudes run east to west. Longitudes run from the North Pole to the South Pole.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_ZERO_LINES": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
+  "error": "Says the equator is 0 degrees longitude or that the Prime Meridian is the equator.",
+  "example": {
+   "question": "Which line is 0 degrees latitude?",
+   "wrong_answer": "The Prime Meridian",
+   "correct_answer": "The equator"
+  },
+  "cause": "The child remembers that both lines are 0 and swaps their names.",
+  "reveals": "Offer \"The Prime Meridian\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: which line cuts the earth into north and south? Then give it its name.",
+  "feedback": "The equator is 0 degrees latitude. The Prime Meridian is 0 degrees longitude.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_MEASURES": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
+  "error": "Thinks latitude measures how far east or west a place is.",
+  "example": {
+   "question": "What does the latitude of a place tell you?",
+   "wrong_answer": "How far east or west it is",
+   "correct_answer": "How far north or south of the equator it is"
+  },
+  "cause": "The child has not tied a measure to each set of lines.",
+  "reveals": "Offer \"How far east or west it is\" next to the right answer and ask the question again in a new context.",
+  "help": "Move a finger up and down a latitude line number: the number says north or south.",
+  "feedback": "Latitude tells how far north or south of the equator a place is. Longitude tells how far east or west of the Prime Meridian.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_NORTH_SOUTH": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
+  "error": "Reads 1 degree S as north of the equator because Nairobi is in Kenya, where the equator crosses.",
+  "example": {
+   "question": "Nairobi is at about 1 degree S. Which side of the equator is it?",
+   "wrong_answer": "North of the equator",
+   "correct_answer": "South of the equator"
+  },
+  "cause": "The child ignores the letter after the number.",
+  "reveals": "Offer \"North of the equator\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what does S stand for? Mark the equator on a sketch and put 1 S below it.",
+  "feedback": "The letter S means south. Nairobi lies a little south of the equator.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_EAST_WEST": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
+  "error": "Says every place in Eastern Africa is west of the Prime Meridian.",
+  "example": {
+   "question": "Kampala is at about 32 degrees E. Which side of the Prime Meridian is it?",
+   "wrong_answer": "West",
+   "correct_answer": "East"
+  },
+  "cause": "The child thinks Africa is west because it is far from Asia.",
+  "reveals": "Offer \"West\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the E on the number and mark it on a sketch to the right of the 0 line.",
+  "feedback": "The letter E means east. All of Eastern Africa lies east of the Prime Meridian.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_ORDER": {
+  "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
+  "error": "Reads longitude before latitude when giving a position.",
+  "example": {
+   "question": "A place is written 4 N, 36 E. Which number is the latitude?",
+   "wrong_answer": "36",
+   "correct_answer": "4"
+  },
+  "cause": "The child reads the numbers in the order he or she likes.",
+  "reveals": "Offer \"36\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the rule: latitude first (up and down), longitude second (across).",
+  "feedback": "We give latitude first and longitude second, so 4 N is the latitude.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_KILI_COUNTRY": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
+  "error": "Puts Mount Kilimanjaro in Kenya because it is seen from Amboseli.",
+  "example": {
+   "question": "In which country is Mount Kilimanjaro?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Tanzania"
+  },
+  "cause": "The child has seen the mountain from the Kenyan side.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Find the peak on a map and say which side of the border its summit is.",
+  "feedback": "Kilimanjaro stands in Tanzania. It can be seen from Kenya.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_TYPE_MIX": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
+  "error": "Calls a lake a river, or a mountain a lake, because of the name or the water.",
+  "example": {
+   "question": "What kind of feature is Lake Tanganyika?",
+   "wrong_answer": "A river",
+   "correct_answer": "A lake"
+  },
+  "cause": "The child trusts the picture and not the word in the name.",
+  "reveals": "Offer \"A river\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether water has land all round it or runs in a line to the sea.",
+  "feedback": "Lake Tanganyika is a lake: water with land all round it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_VICTORIA_COUNTRY": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
+  "error": "Thinks Lake Victoria belongs to Kenya only.",
+  "example": {
+   "question": "Which countries share Lake Victoria?",
+   "wrong_answer": "Kenya only",
+   "correct_answer": "Kenya, Uganda and Tanzania"
+  },
+  "cause": "The child sees the Kenyan shore at Kisumu.",
+  "reveals": "Offer \"Kenya only\" next to the right answer and ask the question again in a new context.",
+  "help": "Colour the three shores on a sketch in three colours.",
+  "feedback": "Lake Victoria is shared by Kenya, Uganda and Tanzania. It is the largest lake in Africa.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_ALL_VOLCANIC": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
+  "error": "Says all mountains in Eastern Africa are volcanic, including the Rwenzori.",
+  "example": {
+   "question": "How were the Rwenzori Mountains formed?",
+   "wrong_answer": "By volcanic eruptions",
+   "correct_answer": "By land being pushed up between faults"
+  },
+  "cause": "The child knows Kilimanjaro and Mount Kenya and assumes the rest.",
+  "reveals": "Offer \"By volcanic eruptions\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw a block with two faults and push the middle up. Say block mountain.",
+  "feedback": "The Rwenzori are block mountains. They were pushed up between faults. They are not volcanoes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_RIFT_RIVER": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
+  "error": "Says a river carved the Great Rift Valley.",
+  "example": {
+   "question": "How was the Great Rift Valley formed?",
+   "wrong_answer": "A river cut it out over time",
+   "correct_answer": "The land between two faults dropped"
+  },
+  "cause": "The child sees valleys as made by rivers.",
+  "reveals": "Offer \"A river cut it out over time\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw a long block that slides down between two cracks.",
+  "feedback": "The Rift Valley formed when the land between faults dropped. A river did not cut it out.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_LAKE_VICTORIA_RIFT": {
+  "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
+  "error": "Says Lake Victoria lies inside the Rift Valley like Lake Turkana.",
+  "example": {
+   "question": "Which lake lies in a shallow bowl made by the land sagging between the two arms of the Rift?",
+   "wrong_answer": "Lake Turkana",
+   "correct_answer": "Lake Victoria"
+  },
+  "cause": "The child puts every lake in the Rift.",
+  "reveals": "Offer \"Lake Turkana\" next to the right answer and ask the question again in a new context.",
+  "help": "Mark both arms of the Rift on a sketch and ask where Victoria sits.",
+  "feedback": "Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_ARID_EQUATOR": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
+  "error": "Thinks places on the equator are always wet and hot, so puts northern Kenya in the equatorial region.",
+  "example": {
+   "question": "Which climate does northern Kenya have?",
+   "wrong_answer": "Equatorial",
+   "correct_answer": "Arid"
+  },
+  "cause": "The child says the equator crosses Kenya, so it is wet.",
+  "reveals": "Offer \"Equatorial\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a rain table of Kisumu and Lodwar.",
+  "feedback": "Northern Kenya is arid: very hot and very dry. The equatorial region is wet.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_HIGHLAND_PLACE": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
+  "error": "Puts the highland region at the coast or beside the lakes.",
+  "example": {
+   "question": "Where is the highland climate found?",
+   "wrong_answer": "Along the coast",
+   "correct_answer": "On Mount Kenya and the Ethiopian Highlands"
+  },
+  "cause": "The child links climate to the sea and not to height.",
+  "reveals": "Offer \"Along the coast\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to temperature as we climb.",
+  "feedback": "The highland climate is found on high land such as Mount Kenya, Kilimanjaro and the Ethiopian Highlands.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_COOL_WET": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+  "error": "Says the arid region is cool and wet, or the equatorial region is dry.",
+  "example": {
+   "question": "Which description fits the arid region?",
+   "wrong_answer": "Cool with plenty of rain",
+   "correct_answer": "Very hot with very little rain"
+  },
+  "cause": "The child swaps two descriptions.",
+  "reveals": "Offer \"Cool with plenty of rain\" next to the right answer and ask the question again in a new context.",
+  "help": "Use a two-line table: rain and heat for each region.",
+  "feedback": "The arid region is very hot and very dry.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_HEIGHT_HOT": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
+  "error": "Thinks high mountains near the equator are hotter than the plains.",
+  "example": {
+   "question": "Why is the top of Mount Kenya cold although it is on the equator?",
+   "wrong_answer": "It is nearer the sun so it is hot",
+   "correct_answer": "Air gets colder as height increases"
+  },
+  "cause": "The child thinks nearer the sun means hotter.",
+  "reveals": "Offer \"It is nearer the sun so it is hot\" next to the right answer and ask the question again in a new context.",
+  "help": "Use the fact that temperature falls with height; ask about the snow on Kilimanjaro.",
+  "feedback": "The higher you go, the colder it gets. That is why there is snow on Mount Kenya.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_FARM_ALL": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
+  "error": "Says the same crops can be grown anywhere whatever the climate.",
+  "example": {
+   "question": "Why is tea grown in the cool, wet highlands?",
+   "wrong_answer": "It can be grown anywhere",
+   "correct_answer": "It needs cool weather and plenty of rain"
+  },
+  "cause": "The child does not link crops to climate.",
+  "reveals": "Offer \"It can be grown anywhere\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to tea in the dry north.",
+  "feedback": "Tea needs cool weather and plenty of rain, so it grows in the highlands.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_DROUGHT_FLOOD": {
+  "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
+  "error": "Says drought causes floods, or heavy rain causes hunger by drought.",
+  "example": {
+   "question": "What does a long drought cause?",
+   "wrong_answer": "Floods",
+   "correct_answer": "Crop failure and hunger"
+  },
+  "cause": "The child confuses too little and too much rain.",
+  "reveals": "Offer \"Floods\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw rain cloud and no rain cloud and say what each does to farms.",
+  "feedback": "A drought is a long time without rain. It causes crop failure and hunger. Floods come from too much rain.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_SAVANNA_WHERE": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+  "error": "Puts savanna in the cold mountain tops or the coast.",
+  "example": {
+   "question": "Where is savanna grassland found?",
+   "wrong_answer": "The Serengeti and the Maasai Mara",
+   "correct_answer": "The top of Mount Kenya"
+  },
+  "cause": "The child ties grassland to nothing.",
+  "reveals": "Offer \"The Serengeti and the Maasai Mara\" next to the right answer and ask the question again in a new context.",
+  "help": "Connect grassland and wildlife: ask where zebra and wildebeest live.",
+  "feedback": "Savanna is found on the Serengeti and Maasai Mara plains.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_MANGROVE_PLACE": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+  "error": "Says mangroves grow in the desert or in cold mountains.",
+  "example": {
+   "question": "Where do mangrove forests grow?",
+   "wrong_answer": "In the desert",
+   "correct_answer": "On the salty coast"
+  },
+  "cause": "The child has no picture of a mangrove.",
+  "reveals": "Offer \"In the desert\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a picture of stilt roots in the sea water at the coast.",
+  "feedback": "Mangroves grow in salt water along the coast, for example near Lamu and Mombasa.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_RAINFOREST_DRY": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
+  "error": "Puts tropical rain forest in the dry north.",
+  "example": {
+   "question": "Which climate suits rain forest?",
+   "wrong_answer": "Dry and hot",
+   "correct_answer": "Hot and wet all year"
+  },
+  "cause": "The child does not link vegetation to rain.",
+  "reveals": "Offer \"Dry and hot\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which plants need the most water.",
+  "feedback": "Rain forest needs rain all year. It grows where it is hot and wet.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_DESERT_BROAD": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
+  "error": "Says desert plants have broad leaves and shallow roots.",
+  "example": {
+   "question": "Which description fits desert plants?",
+   "wrong_answer": "Broad leaves and shallow roots",
+   "correct_answer": "Thorns, small leaves and long roots"
+  },
+  "cause": "The child draws all plants like garden plants.",
+  "reveals": "Offer \"Broad leaves and shallow roots\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a plant would keep water in a hot, dry place.",
+  "feedback": "Desert plants have thorns, small leaves and long roots to save and find water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_SAVANNA_TREES": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
+  "error": "Says savanna is thick forest with tall trees close together.",
+  "example": {
+   "question": "Which description fits savanna?",
+   "wrong_answer": "Thick forest with tall trees close together",
+   "correct_answer": "Tall grass with scattered flat-topped trees"
+  },
+  "cause": "The child mixes savanna and rain forest.",
+  "reveals": "Offer \"Thick forest with tall trees close together\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the Mara plain with a few acacia trees.",
+  "feedback": "Savanna is tall grass with scattered flat-topped trees such as acacia.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_MOUNTAIN_SAME": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
+  "error": "Thinks the vegetation is the same from the bottom to the top of a mountain.",
+  "example": {
+   "question": "How does vegetation change as you climb Mount Kenya?",
+   "wrong_answer": "It stays the same",
+   "correct_answer": "It changes from forest to bamboo to moorland to bare rock"
+  },
+  "cause": "The child pictures one kind of plant per mountain.",
+  "reveals": "Offer \"It stays the same\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw the mountain in four bands.",
+  "feedback": "Vegetation changes with height. Forest is at the bottom and bare rock at the top.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_BURN_OK": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
+  "error": "Thinks burning bush helps vegetation grow back and is a good way of conserving it.",
+  "example": {
+   "question": "Which action conserves vegetation?",
+   "wrong_answer": "Burning the bush to clear it",
+   "correct_answer": "Planting trees where they were cut"
+  },
+  "cause": "The child sees new grass after a fire and thinks fire helps.",
+  "reveals": "Offer \"Burning the bush to clear it\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what burning does to soil, animals and young trees.",
+  "feedback": "Planting trees conserves vegetation. Uncontrolled fires destroy plants and soil.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_CUT_FOR_MONEY": {
+  "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
+  "error": "Thinks cutting forests for charcoal helps people so it does not harm vegetation.",
+  "example": {
+   "question": "What happens when a forest is cut for charcoal?",
+   "wrong_answer": "More rain falls",
+   "correct_answer": "The soil is exposed and may be washed away"
+  },
+  "cause": "The child sees only the money gained.",
+  "reveals": "Offer \"More rain falls\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what holds the soil when the trees are gone.",
+  "feedback": "When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_BUILT_NATURAL": {
+  "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
+  "error": "Calls a natural feature such as Mount Kenya a historic built environment.",
+  "example": {
+   "question": "Which one is a historic built environment?",
+   "wrong_answer": "Mount Kenya",
+   "correct_answer": "Fort Jesus"
+  },
+  "cause": "The child links any old place to history.",
+  "reveals": "Offer \"Mount Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: did people build it or was it made by nature?",
+  "feedback": "Fort Jesus was built by people. Mount Kenya is natural.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_COUNTRY": {
+  "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
+  "error": "Puts Lalibela in Kenya or Stone Town in Uganda.",
+  "example": {
+   "question": "In which country are the rock-hewn churches of Lalibela?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Ethiopia"
+  },
+  "cause": "The child places sites by region and not by country.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Match sites and countries on a small table and say each aloud.",
+  "feedback": "The Lalibela churches are in Ethiopia. They were carved out of rock.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_FORT_JESUS": {
+  "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
+  "error": "Says Fort Jesus was built by the British or the Arabs in modern times.",
+  "example": {
+   "question": "Who built Fort Jesus in Mombasa?",
+   "wrong_answer": "The British",
+   "correct_answer": "The Portuguese"
+  },
+  "cause": "The child links every old building with colonial rule.",
+  "reveals": "Offer \"The British\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask about the date: 1593 is before the British came.",
+  "feedback": "Fort Jesus was built by the Portuguese in the 1590s.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_NO_VALUE": {
+  "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
+  "error": "Thinks old buildings should be pulled down because they are useless.",
+  "example": {
+   "question": "Why do we conserve old buildings and museums?",
+   "wrong_answer": "They are useless and should be pulled down",
+   "correct_answer": "They teach us our history and bring tourists"
+  },
+  "cause": "The child values only new things.",
+  "reveals": "Offer \"They are useless and should be pulled down\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a visitor learns at Lamu Old Town.",
+  "feedback": "Old buildings tell our history and bring tourists and income.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_TOUCH_ALL": {
+  "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
+  "error": "Thinks writing names on or taking stones from a site shows love for it.",
+  "example": {
+   "question": "Which action conserves a historic site?",
+   "wrong_answer": "Writing your name on the old wall",
+   "correct_answer": "Following the rules and listening to the guide"
+  },
+  "cause": "The child wants to leave a mark.",
+  "reveals": "Offer \"Writing your name on the old wall\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens to a wall when a thousand visitors write on it.",
+  "feedback": "Following the rules protects the site. Writing on walls damages them for others.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_GROUP_SWAP": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+  "error": "Puts the Maasai or Luo in the Bantu group because they live near Bantu communities.",
+  "example": {
+   "question": "Which language group do the Luo belong to?",
+   "wrong_answer": "Bantu",
+   "correct_answer": "Nilotic"
+  },
+  "cause": "The child sorts by where people live, not by language.",
+  "reveals": "Offer \"Bantu\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the language families: Bantu, Nilotic, Cushitic, and name two for each.",
+  "feedback": "The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SOMALI": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+  "error": "Puts the Somali in the Nilotic or Bantu group.",
+  "example": {
+   "question": "Which language group do the Somali belong to?",
+   "wrong_answer": "Nilotic",
+   "correct_answer": "Cushitic"
+  },
+  "cause": "The child does not know the Cushitic group.",
+  "reveals": "Offer \"Nilotic\" next to the right answer and ask the question again in a new context.",
+  "help": "Link Cushitic with the Horn: Somali, Oromo, Afar.",
+  "feedback": "The Somali belong to the Cushitic group, together with the Oromo and the Afar.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SUBGROUP": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
+  "error": "Puts the Maasai among the Highland Nilotes and the Kalenjin among the Plain Nilotes.",
+  "example": {
+   "question": "Which sub-group of the Nilotes do the Maasai belong to?",
+   "wrong_answer": "Highland Nilotes",
+   "correct_answer": "Plain Nilotes"
+  },
+  "cause": "The child swaps two sub-groups that are both Nilotic.",
+  "reveals": "Offer \"Highland Nilotes\" next to the right answer and ask the question again in a new context.",
+  "help": "Say Plain Nilotes live on the plains and herd cattle, like the Maasai and the Turkana.",
+  "feedback": "The Maasai are Plain Nilotes. The Kalenjin are Highland Nilotes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_NO_REASON": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
+  "error": "Says people migrated only because they wanted to travel for fun.",
+  "example": {
+   "question": "Why did many groups move to new lands?",
+   "wrong_answer": "To travel for fun",
+   "correct_answer": "To look for pasture, water and fertile land"
+  },
+  "cause": "The child has not thought about need.",
+  "reveals": "Offer \"To travel for fun\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a herder does when the grass is gone.",
+  "feedback": "People moved to find pasture, water and fertile land, and to escape drought, wars and disease.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_BANTU_ORIGIN": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
+  "error": "Says the Bantu came from Ethiopia or South Sudan.",
+  "example": {
+   "question": "Where did the Bantu come from?",
+   "wrong_answer": "Ethiopia",
+   "correct_answer": "The Congo Basin"
+  },
+  "cause": "The child mixes the origins of the three groups.",
+  "reveals": "Offer \"Ethiopia\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each group with its homeland in a three-row table.",
+  "feedback": "The Bantu came from the Congo Basin. The Cushites came from Ethiopia and the Nilotes from South Sudan.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_CUSH_DIRECTION": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
+  "error": "Says the Cushites moved north from Kenya into Ethiopia.",
+  "example": {
+   "question": "Which way did the Cushites move into Kenya?",
+   "wrong_answer": "North",
+   "correct_answer": "South"
+  },
+  "cause": "The child reverses the direction of movement.",
+  "reveals": "Offer \"North\" next to the right answer and ask the question again in a new context.",
+  "help": "Find Ethiopia and Kenya on a map and say which is north.",
+  "feedback": "The Cushites came from the Horn of Africa in the north and moved south.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_NO_CONFLICT": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
+  "error": "Says migration and settlement never caused quarrels.",
+  "example": {
+   "question": "What problem could settlement cause?",
+   "wrong_answer": "No problems at all",
+   "correct_answer": "Quarrels over land and pasture"
+  },
+  "cause": "The child sees only the good effects.",
+  "reveals": "Offer \"No problems at all\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens when two herds need the same water.",
+  "feedback": "Settlement could cause quarrels over land and pasture, as well as bring trade and mixing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_ALL_SAME": {
+  "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
+  "error": "Says after settlement all communities became the same.",
+  "example": {
+   "question": "What happened when groups settled near each other?",
+   "wrong_answer": "They all became the same",
+   "correct_answer": "They traded and some intermarried"
+  },
+  "cause": "The child over-generalises mixing.",
+  "reveals": "Offer \"They all became the same\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether Kikuyu and Maasai speak the same language today.",
+  "feedback": "They traded, learned from each other and some intermarried. They did not all become the same.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_PEOPLE_DESERT": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
+  "error": "Says many people live in deserts because land is cheap there.",
+  "example": {
+   "question": "Why do few people live in a desert?",
+   "wrong_answer": "Land is too cheap",
+   "correct_answer": "It is too dry to farm or find water"
+  },
+  "cause": "The child looks at land price, not at survival.",
+  "reveals": "Offer \"Land is too cheap\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where a family would find water and food.",
+  "feedback": "Few live in deserts because it is too dry to grow food or find water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_MOUNTAIN_TOP": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
+  "error": "Says people crowd on mountain tops because it is cool.",
+  "example": {
+   "question": "Which place is more likely to be crowded?",
+   "wrong_answer": "A steep, rocky mountain top",
+   "correct_answer": "Gentle land with fertile soil and rain"
+  },
+  "cause": "The child likes cool places and ignores farming.",
+  "reveals": "Offer \"A steep, rocky mountain top\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where it is easier to build and grow crops.",
+  "feedback": "People crowd where land is gentle, soil is fertile and rain is reliable.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_DENSITY_TOTAL": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
+  "error": "Confuses density with total population: says the country with the most people has the highest density.",
+  "example": {
+   "question": "Density is the number of people for what?",
+   "wrong_answer": "The whole country",
+   "correct_answer": "Each square kilometre"
+  },
+  "cause": "The child thinks density is the same as population.",
+  "reveals": "Offer \"The whole country\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare two countries by people per square kilometre in a small table.",
+  "feedback": "Density is the number of people for each square kilometre.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_RWANDA_EMPTY": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
+  "error": "Thinks Rwanda and Burundi are thinly populated because they are small.",
+  "example": {
+   "question": "Which country has high population density?",
+   "wrong_answer": "Somalia",
+   "correct_answer": "Rwanda"
+  },
+  "cause": "The child thinks small means few people.",
+  "reveals": "Offer \"Somalia\" next to the right answer and ask the question again in a new context.",
+  "help": "Give people and area for a small and a large country and divide.",
+  "feedback": "Rwanda is small but has many people on its land, so its density is high.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_MORE_LAND": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
+  "error": "Says high density means there is plenty of land for everyone.",
+  "example": {
+   "question": "What happens to farms when families grow large in a crowded area?",
+   "wrong_answer": "Farms get bigger",
+   "correct_answer": "Farms are divided into smaller plots"
+  },
+  "cause": "The child does not follow the land per person.",
+  "reveals": "Offer \"Farms get bigger\" next to the right answer and ask the question again in a new context.",
+  "help": "Cut a paper farm among more and more children.",
+  "feedback": "In crowded areas, farms are divided into smaller plots and land becomes short.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_SERVICES": {
+  "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
+  "error": "Says crowding leaves schools and hospitals with too little work.",
+  "example": {
+   "question": "What pressure does a crowded area put on schools and hospitals?",
+   "wrong_answer": "They have too few learners and patients",
+   "correct_answer": "They have too many people to serve"
+  },
+  "cause": "The child confuses crowding with emptiness.",
+  "reveals": "Offer \"They have too few learners and patients\" next to the right answer and ask the question again in a new context.",
+  "help": "Count seats in a class of 90.",
+  "feedback": "Crowding puts pressure on schools and hospitals because there are too many people to serve.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_SET_GROUP": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
+  "error": "Thinks an age-set is any group of children of the same age, like a class.",
+  "example": {
+   "question": "What makes people an age-set?",
+   "wrong_answer": "They were born in the same month",
+   "correct_answer": "They were initiated together"
+  },
+  "cause": "The child confuses age-set and age-group.",
+  "reveals": "Offer \"They were born in the same month\" next to the right answer and ask the question again in a new context.",
+  "help": "Say age-group means the same stage of life; age-set means initiated together.",
+  "feedback": "An age-set is people initiated together. They stay a group for life.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_WARRIOR": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
+  "error": "Says the warrior age-set looked after the sick at home.",
+  "example": {
+   "question": "What was a main duty of the warrior age-set?",
+   "wrong_answer": "Looking after the sick at home",
+   "correct_answer": "Defending the community"
+  },
+  "cause": "The child gives the wrong duty.",
+  "reveals": "Offer \"Looking after the sick at home\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who guarded cattle and villages.",
+  "feedback": "Warriors defended the community and its cattle.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_MARRY_CLAN": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
+  "error": "Says clan members should marry within their own clan.",
+  "example": {
+   "question": "Who could a person marry in a clan system?",
+   "wrong_answer": "Someone from the same clan",
+   "correct_answer": "Someone from a different clan"
+  },
+  "cause": "The child mixes up marriage with membership.",
+  "reveals": "Offer \"Someone from the same clan\" next to the right answer and ask the question again in a new context.",
+  "help": "Say clan members are like brothers and sisters.",
+  "feedback": "People marry outside their own clan because members are like family.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_FAMILY": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
+  "error": "Thinks a clan is only one family.",
+  "example": {
+   "question": "What is a clan?",
+   "wrong_answer": "One family living in one home",
+   "correct_answer": "Many families with one ancestor"
+  },
+  "cause": "The child shrinks the clan to a household.",
+  "reveals": "Offer \"One family living in one home\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw one ancestor with many branches.",
+  "feedback": "A clan is many families who trace descent from one ancestor.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_GOOD": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
+  "error": "Thinks every traditional custom should be kept.",
+  "example": {
+   "question": "Which custom should NOT be preserved?",
+   "wrong_answer": "Respect for elders",
+   "correct_answer": "Marrying girls off early and keeping them from school"
+  },
+  "cause": "The child thinks tradition is always right.",
+  "reveals": "Offer \"Respect for elders\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which customs help people and which harm them.",
+  "feedback": "Customs that harm people, such as early marriage of girls, should not be kept.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_BAD": {
+  "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
+  "error": "Thinks all traditional culture is old-fashioned and should be dropped.",
+  "example": {
+   "question": "Which custom should be preserved?",
+   "wrong_answer": "None, they are all old-fashioned",
+   "correct_answer": "Respect for elders and community work"
+  },
+  "cause": "The child links old with bad.",
+  "reveals": "Offer \"None, they are all old-fashioned\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what proverbs and folktales teach.",
+  "feedback": "Good customs such as respect for elders and community work should be preserved.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_SCHOOL_ALONE": {
+  "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
+  "error": "Counts something the school does alone as collaboration with the community.",
+  "example": {
+   "question": "Which is an example of the school working with the community?",
+   "wrong_answer": "Teachers marking books alone",
+   "correct_answer": "Parents helping to build a classroom"
+  },
+  "cause": "The child does not see that two parties must work together.",
+  "reveals": "Offer \"Teachers marking books alone\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: who else took part?",
+  "feedback": "Collaboration needs the community to take part, as when parents help build a classroom.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_ONE_WAY": {
+  "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
+  "error": "Thinks only the community gives and the school gives nothing back.",
+  "example": {
+   "question": "What can a school give the community?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Its field, hall and educated learners"
+  },
+  "cause": "The child sees the school as a receiver.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who votes in the school hall.",
+  "feedback": "A school gives the community its field, hall and learners who serve.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_BENEFIT_ONLY_SCHOOL": {
+  "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
+  "error": "Says collaboration benefits only the school.",
+  "example": {
+   "question": "Who gains when the school and community collaborate?",
+   "wrong_answer": "Only the school",
+   "correct_answer": "Both the school and the community"
+  },
+  "cause": "The child sees one side.",
+  "reveals": "Offer \"Only the school\" next to the right answer and ask the question again in a new context.",
+  "help": "Name one gain for each.",
+  "feedback": "Both gain. The school gets help and the community gets better learners and shared facilities.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_STRATEGY_STOP": {
+  "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
+  "error": "Picks a strategy that ends collaboration (never meeting parents).",
+  "example": {
+   "question": "Which strategy keeps collaboration going?",
+   "wrong_answer": "Never inviting parents",
+   "correct_answer": "Holding open days and regular meetings"
+  },
+  "cause": "The child does not see what keeps a relationship alive.",
+  "reveals": "Offer \"Never inviting parents\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens if no one talks.",
+  "feedback": "Open days and regular meetings keep the school and community working together.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_RAIN_CROP": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
+  "error": "Says beef farming needs rich crop land with heavy rain.",
+  "example": {
+   "question": "Which area suits beef ranching best?",
+   "wrong_answer": "A small crop farm in a wet highland",
+   "correct_answer": "Large grassland with enough water"
+  },
+  "cause": "The child mixes crop farming with ranching.",
+  "reveals": "Offer \"A small crop farm in a wet highland\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what cattle eat and how much land they need.",
+  "feedback": "Beef ranching needs large grassland and enough water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_DISEASE_NO": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
+  "error": "Thinks disease does not affect beef farming.",
+  "example": {
+   "question": "Why are vets important for beef farmers?",
+   "wrong_answer": "They are not important",
+   "correct_answer": "They control diseases that kill cattle"
+  },
+  "cause": "The child ignores risks.",
+  "reveals": "Offer \"They are not important\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what foot-and-mouth does to a herd.",
+  "feedback": "Vets control diseases that can kill cattle and stop sales.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_BEEF_COAST": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
+  "error": "Puts the main beef areas in the cool, wet tea highlands.",
+  "example": {
+   "question": "Which area is known for beef ranching in Kenya?",
+   "wrong_answer": "The tea highlands of Kericho",
+   "correct_answer": "Laikipia and Kajiado"
+  },
+  "cause": "The child links Kenya to tea and not to ranches.",
+  "reveals": "Offer \"The tea highlands of Kericho\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which areas are dry grassland.",
+  "feedback": "Laikipia and Kajiado are large grassland areas used for ranching.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_SOMALIA": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
+  "error": "Says Somalia exports no animals because it is dry.",
+  "example": {
+   "question": "What does Somalia export from its dry lands?",
+   "wrong_answer": "Fruit",
+   "correct_answer": "Live animals"
+  },
+  "cause": "The child does not know pastoral economies.",
+  "reveals": "Offer \"Fruit\" next to the right answer and ask the question again in a new context.",
+  "help": "Say animals feed on thorny bush and walk long distances to the port.",
+  "feedback": "Somalia exports live animals such as camels and goats from its dry lands.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_MEAT_ONLY": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
+  "error": "Says beef farming gives only meat.",
+  "example": {
+   "question": "What is made from the hides and skins of cattle?",
+   "wrong_answer": "Cooking oil",
+   "correct_answer": "Leather goods"
+  },
+  "cause": "The child names one product.",
+  "reveals": "Offer \"Cooking oil\" next to the right answer and ask the question again in a new context.",
+  "help": "List a product from each part of the animal.",
+  "feedback": "Hides and skins are made into leather goods such as shoes and bags.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_NO_JOBS": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
+  "error": "Says beef farming gives no jobs.",
+  "example": {
+   "question": "Who earns a living from the beef industry?",
+   "wrong_answer": "Nobody, it is just for food",
+   "correct_answer": "Herders, vets, butchers and factory workers"
+  },
+  "cause": "The child sees cattle but not the chain.",
+  "reveals": "Offer \"Nobody, it is just for food\" next to the right answer and ask the question again in a new context.",
+  "help": "Name every person from ranch to shop.",
+  "feedback": "Many people earn a living from beef: herders, vets, butchers and factory workers.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_SOLUTION_SWAP": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
+  "error": "Matches drought with dips or foot-and-mouth with boreholes.",
+  "example": {
+   "question": "What helps cattle during a long drought?",
+   "wrong_answer": "Dipping them",
+   "correct_answer": "Water pans, boreholes and hay"
+  },
+  "cause": "The child pairs challenge and solution wrongly.",
+  "reveals": "Offer \"Dipping them\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the cattle lack: water and food, or cure for disease?",
+  "feedback": "Water pans, boreholes and hay help in a drought. Dips control ticks.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_GRAZE_MORE": {
+  "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
+  "error": "Thinks keeping more and more cattle solves overgrazing.",
+  "example": {
+   "question": "How can overgrazing be reduced?",
+   "wrong_answer": "Keep more cattle",
+   "correct_answer": "Rotate the grazing and keep fewer cattle"
+  },
+  "cause": "The child thinks more cattle means more money.",
+  "reveals": "Offer \"Keep more cattle\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a field eaten bare.",
+  "feedback": "Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_LAKE_SEA": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
+  "error": "Says Lake Victoria is a marine fishing ground.",
+  "example": {
+   "question": "Which is a marine fishing ground?",
+   "wrong_answer": "Lake Victoria",
+   "correct_answer": "The Indian Ocean coast"
+  },
+  "cause": "The child thinks any big water is the sea.",
+  "reveals": "Offer \"Lake Victoria\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether the water is salty or fresh.",
+  "feedback": "Marine means from the sea. The Indian Ocean coast is a marine ground.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_FISH_PLACE": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
+  "error": "Says Nile perch comes from the Indian Ocean.",
+  "example": {
+   "question": "Which fish comes from Lake Victoria?",
+   "wrong_answer": "Tuna",
+   "correct_answer": "Nile perch"
+  },
+  "cause": "The child mixes the fish and the water.",
+  "reveals": "Offer \"Tuna\" next to the right answer and ask the question again in a new context.",
+  "help": "Match fish and water in a small table.",
+  "feedback": "Nile perch and tilapia come from lakes. Tuna and prawns come from the sea.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAWL": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
+  "error": "Says trawling means fishing with a hook and line.",
+  "example": {
+   "question": "What is trawling?",
+   "wrong_answer": "Fishing with a hook and line",
+   "correct_answer": "Dragging a net behind a boat"
+  },
+  "cause": "The child mixes the names.",
+  "reveals": "Offer \"Fishing with a hook and line\" next to the right answer and ask the question again in a new context.",
+  "help": "Say trawl means to drag.",
+  "feedback": "Trawling is dragging a large net behind a boat along the sea bed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAD_MODERN": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
+  "error": "Says dug-out canoes with baskets are a modern method.",
+  "example": {
+   "question": "Which is a modern method of fishing?",
+   "wrong_answer": "A basket trap from a canoe",
+   "correct_answer": "A trawler with a cold room"
+  },
+  "cause": "The child cannot tell old from new.",
+  "reveals": "Offer \"A basket trap from a canoe\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which has an engine and a freezer.",
+  "feedback": "Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_OVER_OK": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
+  "error": "Says catching as many fish as possible is always good for fishing.",
+  "example": {
+   "question": "What does overfishing cause?",
+   "wrong_answer": "More fish every year",
+   "correct_answer": "Fish stocks fall"
+  },
+  "cause": "The child thinks more catching means more fish.",
+  "reveals": "Offer \"More fish every year\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens if you take all the eggs and young fish.",
+  "feedback": "Overfishing makes fish stocks fall. Seasons and mesh rules protect them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_SOLUTION_MIX": {
+  "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
+  "error": "Pairs piracy with cold rooms or poor storage with patrols.",
+  "example": {
+   "question": "What helps fish keep fresh before sale?",
+   "wrong_answer": "Sea patrols",
+   "correct_answer": "Cold rooms and processing plants"
+  },
+  "cause": "The child mixes challenge and answer.",
+  "reveals": "Offer \"Sea patrols\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what spoils fish: thieves or heat?",
+  "feedback": "Cold rooms stop fish spoiling. Sea patrols deal with piracy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_TOURIST_ROADS": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
+  "error": "Says tourism does not need roads, airports or hotels.",
+  "example": {
+   "question": "What do airports and hotels do for tourism?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Help visitors to arrive and stay"
+  },
+  "cause": "The child sees only the animals.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Follow a tourist from home to the park.",
+  "feedback": "Airports and hotels bring visitors in and give them a place to stay.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_INSECURITY": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
+  "error": "Says insecurity makes more tourists come.",
+  "example": {
+   "question": "What does insecurity do to tourism?",
+   "wrong_answer": "Brings more tourists",
+   "correct_answer": "Frightens tourists away"
+  },
+  "cause": "The child has not linked fear to travel.",
+  "reveals": "Offer \"Brings more tourists\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether a family would visit an unsafe place.",
+  "feedback": "Insecurity frightens tourists away and income falls.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_PARK_COUNTRY": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
+  "error": "Puts the Serengeti in Kenya or the Maasai Mara in Tanzania.",
+  "example": {
+   "question": "In which country is the Serengeti National Park?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Tanzania"
+  },
+  "cause": "The child knows the migration but not the border.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Say Serengeti is south of the border and Mara is north.",
+  "feedback": "The Serengeti is in Tanzania. The Maasai Mara is in Kenya.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_GORILLA": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
+  "error": "Says mountain gorillas are seen in the Maasai Mara.",
+  "example": {
+   "question": "Where can mountain gorillas be seen?",
+   "wrong_answer": "The Maasai Mara",
+   "correct_answer": "Bwindi in Uganda and Volcanoes in Rwanda"
+  },
+  "cause": "The child knows big wildlife only on the plains.",
+  "reveals": "Offer \"The Maasai Mara\" next to the right answer and ask the question again in a new context.",
+  "help": "Say gorillas live in forest on mountains.",
+  "feedback": "Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_POACH_OK": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
+  "error": "Says poaching helps tourism because it brings money to the poacher.",
+  "example": {
+   "question": "What does poaching do to tourism?",
+   "wrong_answer": "Helps it grow",
+   "correct_answer": "Kills the wildlife tourists come to see"
+  },
+  "cause": "The child sees only the poacher's gain.",
+  "reveals": "Offer \"Helps it grow\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what is left to see if animals are killed.",
+  "feedback": "Poaching kills the wildlife tourists come to see, so tourism suffers.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_SOLUTION_SWAP": {
+  "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
+  "error": "Pairs poaching with road building.",
+  "example": {
+   "question": "What helps to stop poaching?",
+   "wrong_answer": "Building roads",
+   "correct_answer": "Anti-poaching patrols and strong laws"
+  },
+  "cause": "The child mixes challenge and answer.",
+  "reveals": "Offer \"Building roads\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which answer stops a poacher.",
+  "feedback": "Patrols and strong laws help to stop poaching.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_PORT_COUNTRY": {
+  "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+  "error": "Puts Mombasa in Tanzania or Dar es Salaam in Kenya.",
+  "example": {
+   "question": "In which country is the port of Dar es Salaam?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Tanzania"
+  },
+  "cause": "The child mixes the two ports.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Match port and country in a small table.",
+  "feedback": "Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_MODE_LOAD": {
+  "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+  "error": "Says heavy goods are best sent by air.",
+  "example": {
+   "question": "Which mode suits bulky heavy goods over a long distance?",
+   "wrong_answer": "Air",
+   "correct_answer": "Railway"
+  },
+  "cause": "The child likes the fastest mode.",
+  "reveals": "Offer \"Air\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask about the cost of flying a lorry load.",
+  "feedback": "Railways carry heavy goods cheaply. Air is for light, urgent goods.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_LANDLOCKED_PORT": {
+  "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
+  "error": "Says landlocked Uganda has its own sea port.",
+  "example": {
+   "question": "Which port does Uganda use for most of its imports?",
+   "wrong_answer": "It has its own",
+   "correct_answer": "Mombasa"
+  },
+  "cause": "The child forgets Uganda is landlocked.",
+  "reveals": "Offer \"It has its own\" next to the right answer and ask the question again in a new context.",
+  "help": "Trace the road from Kampala to the sea.",
+  "feedback": "Uganda is landlocked and uses Mombasa and Dar es Salaam.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_BORDER": {
+  "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+  "error": "Says one-stop border posts make delays longer.",
+  "example": {
+   "question": "What does a one-stop border post do?",
+   "wrong_answer": "Makes lorries wait longer",
+   "correct_answer": "Lets officials of both countries check once"
+  },
+  "cause": "The child does not know what it does.",
+  "reveals": "Offer \"Makes lorries wait longer\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what one stop means.",
+  "feedback": "A one-stop border post lets both countries check lorries once, so crossing is faster.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_CRASH_SOLVE": {
+  "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
+  "error": "Thinks more speed fixes road crashes.",
+  "example": {
+   "question": "What helps reduce road crashes?",
+   "wrong_answer": "Higher speeds",
+   "correct_answer": "Speed limits and driver training"
+  },
+  "cause": "The child thinks faster is better.",
+  "reveals": "Offer \"Higher speeds\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what happens when a car hits at high speed.",
+  "feedback": "Speed limits and driver training reduce road crashes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_TRAD_MODERN": {
+  "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+  "error": "Calls drums a modern mode of communication.",
+  "example": {
+   "question": "Which is a traditional way of communicating?",
+   "wrong_answer": "The mobile phone",
+   "correct_answer": "The drum"
+  },
+  "cause": "The child mixes old and new.",
+  "reveals": "Offer \"The mobile phone\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which needs electricity.",
+  "feedback": "The drum is traditional. The mobile phone is modern.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_MASS": {
+  "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
+  "error": "Says a letter reaches many people at the same moment.",
+  "example": {
+   "question": "Which mode reaches many people at once?",
+   "wrong_answer": "A letter",
+   "correct_answer": "Radio"
+  },
+  "cause": "The child does not tell one-to-one and mass.",
+  "reveals": "Offer \"A letter\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who hears a radio in a village.",
+  "feedback": "Radio reaches many people at once. A letter reaches one.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_ELEC": {
+  "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
+  "error": "Says electricity has nothing to do with communication.",
+  "example": {
+   "question": "Why does lack of electricity harm communication?",
+   "wrong_answer": "It does not",
+   "correct_answer": "Phones, radio and the internet need power"
+  },
+  "cause": "The child ignores the power link.",
+  "reveals": "Offer \"It does not\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask how a phone is charged.",
+  "feedback": "Phones, radios and the internet need power, so no electricity limits communication.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_SOLUTION_SWAP": {
+  "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
+  "error": "Pairs vandalism with lack of training.",
+  "example": {
+   "question": "What helps to stop theft of masts and cables?",
+   "wrong_answer": "Training in digital skills",
+   "correct_answer": "Laws and guards"
+  },
+  "cause": "The child mixes challenge and answer.",
+  "reveals": "Offer \"Training in digital skills\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which action stops a thief.",
+  "feedback": "Laws and guards protect masts and cables. Training helps with skills.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_MINERAL_PLACE": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
+  "error": "Puts soda ash in Tanzania and gold only in Kenya.",
+  "example": {
+   "question": "Where is soda ash mined in Kenya?",
+   "wrong_answer": "Lake Naivasha",
+   "correct_answer": "Lake Magadi"
+  },
+  "cause": "The child mixes lake names.",
+  "reveals": "Offer \"Lake Naivasha\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which lake is salty and in the south of the Rift.",
+  "feedback": "Soda ash is mined at Lake Magadi in Kenya.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_TANZANITE": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
+  "error": "Says tanzanite is mined in Kenya or Uganda.",
+  "example": {
+   "question": "Which country mines tanzanite?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Tanzania"
+  },
+  "cause": "The child does not link the name to the country.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Say tanzanite takes its name from the country.",
+  "feedback": "Tanzanite is mined only in Tanzania.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_NOT_MINERAL": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
+  "error": "Counts a crop or timber as a mineral.",
+  "example": {
+   "question": "Which is a mineral?",
+   "wrong_answer": "Coffee",
+   "correct_answer": "Limestone"
+  },
+  "cause": "The child treats any resource as a mineral.",
+  "reveals": "Offer \"Coffee\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: dug from the ground or grown?",
+  "feedback": "Limestone is a mineral dug from the ground. Coffee is a crop.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_METHOD_SWAP": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
+  "error": "Says limestone is mined by going down a deep shaft.",
+  "example": {
+   "question": "How is limestone usually mined?",
+   "wrong_answer": "In deep underground shafts",
+   "correct_answer": "In an open pit or quarry"
+  },
+  "cause": "The child pictures every mine as a tunnel.",
+  "reveals": "Offer \"In deep underground shafts\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a quarry at the coast.",
+  "feedback": "Limestone is quarried from an open pit near the surface.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_PANNING": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
+  "error": "Says panning uses machines and blasting.",
+  "example": {
+   "question": "What is panning?",
+   "wrong_answer": "Blasting rock with explosives",
+   "correct_answer": "Washing gravel in water to find mineral bits"
+  },
+  "cause": "The child mixes the methods.",
+  "reveals": "Offer \"Blasting rock with explosives\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what a pan and water can do to find gold.",
+  "feedback": "Panning washes gravel in water so the heavy mineral bits settle.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_NO_HARM": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
+  "error": "Says mining never harms the land.",
+  "example": {
+   "question": "What does open-cast mining leave behind?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Large holes and bare land"
+  },
+  "cause": "The child sees the mineral and not the hole.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a quarry photograph.",
+  "feedback": "Open-cast mining leaves holes and bare land unless it is repaired.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_REPAIR": {
+  "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
+  "error": "Says the best repair for a mine is to leave the pit open.",
+  "example": {
+   "question": "How can a mined area be repaired?",
+   "wrong_answer": "Leave the pit open",
+   "correct_answer": "Refill it and plant trees"
+  },
+  "cause": "The child does not know reclamation.",
+  "reveals": "Offer \"Leave the pit open\" next to the right answer and ask the question again in a new context.",
+  "help": "Talk about Haller Park in Mombasa.",
+  "feedback": "Refilling pits and planting trees repairs mined land, as at Haller Park.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KABAKA": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
+  "error": "Says the ruler of Buganda was the Ntemi.",
+  "example": {
+   "question": "What was the ruler of Buganda called?",
+   "wrong_answer": "Ntemi",
+   "correct_answer": "Kabaka"
+  },
+  "cause": "The child mixes the two titles.",
+  "reveals": "Offer \"Ntemi\" next to the right answer and ask the question again in a new context.",
+  "help": "Match Buganda with Kabaka and Nyamwezi with Ntemi.",
+  "feedback": "The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KATIKKIRO": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
+  "error": "Says the Katikkiro was the chief of a village or a priest.",
+  "example": {
+   "question": "Who was the Katikkiro?",
+   "wrong_answer": "The village priest",
+   "correct_answer": "The chief minister"
+  },
+  "cause": "The child has not heard the word.",
+  "reveals": "Offer \"The village priest\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the Katikkiro was the Kabaka's main helper.",
+  "feedback": "The Katikkiro was the chief minister who helped the Kabaka rule.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_KING": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
+  "error": "Says the Nyamwezi had one large kingdom.",
+  "example": {
+   "question": "How was the Nyamwezi land organised?",
+   "wrong_answer": "One large kingdom under one king",
+   "correct_answer": "Many small chiefdoms each under a Ntemi"
+  },
+  "cause": "The child mixes it with Buganda.",
+  "reveals": "Offer \"One large kingdom under one king\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the chiefdoms on a sketch.",
+  "feedback": "The Nyamwezi had many small chiefdoms, each under a Ntemi.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_CHOSEN": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
+  "error": "Says a Ntemi was voted for by all the people.",
+  "example": {
+   "question": "How did a person become a Ntemi?",
+   "wrong_answer": "By a vote of all the people",
+   "correct_answer": "By inheriting the position"
+  },
+  "cause": "The child applies modern elections.",
+  "reveals": "Offer \"By a vote of all the people\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the position passed in the royal family.",
+  "feedback": "A Ntemi inherited the position and was advised by elders.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_SAME_ALL": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
+  "error": "Says the two systems were exactly the same.",
+  "example": {
+   "question": "How did the Buganda system differ from the Nyamwezi?",
+   "wrong_answer": "It did not differ",
+   "correct_answer": "Buganda was one big centralised kingdom"
+  },
+  "cause": "The child sees only the likeness.",
+  "reveals": "Offer \"It did not differ\" next to the right answer and ask the question again in a new context.",
+  "help": "Say how many rulers each system had.",
+  "feedback": "Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_NO_COUNCIL": {
+  "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
+  "error": "Says only one of the two had a council or advisers.",
+  "example": {
+   "question": "What did both have in common?",
+   "wrong_answer": "Neither had advisers",
+   "correct_answer": "A ruler who was advised by a council"
+  },
+  "cause": "The child thinks one system was simple.",
+  "reveals": "Offer \"Neither had advisers\" next to the right answer and ask the question again in a new context.",
+  "help": "Name the council in each: Lukiiko and council of elders.",
+  "feedback": "Both rulers were advised by a council: the Lukiiko in Buganda and elders among the Nyamwezi.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_HQ": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+  "error": "Puts the EAC headquarters in Nairobi or Kampala.",
+  "example": {
+   "question": "Where is the EAC headquarters?",
+   "wrong_answer": "Nairobi",
+   "correct_answer": "Arusha"
+  },
+  "cause": "The child names the biggest city.",
+  "reveals": "Offer \"Nairobi\" next to the right answer and ask the question again in a new context.",
+  "help": "Say Arusha is near Kilimanjaro in Tanzania.",
+  "feedback": "The EAC headquarters is in Arusha, Tanzania.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_CUSTOMS": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
+  "error": "Says a customs union means each country charges its own duty to its partners.",
+  "example": {
+   "question": "What does a customs union do?",
+   "wrong_answer": "Each country taxes goods from partners",
+   "correct_answer": "Partners trade without duty and share one outside tariff"
+  },
+  "cause": "The child does not know the word customs.",
+  "reveals": "Offer \"Each country taxes goods from partners\" next to the right answer and ask the question again in a new context.",
+  "help": "Say customs duty is a tax on goods that cross a border.",
+  "feedback": "In a customs union members trade without duty and share a tariff on goods from outside.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_BENEFIT_ONE": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
+  "error": "Says the EAC benefits only the biggest country.",
+  "example": {
+   "question": "Who gains from a common market?",
+   "wrong_answer": "Only the biggest country",
+   "correct_answer": "All member countries and their people"
+  },
+  "cause": "The child thinks size wins.",
+  "reveals": "Offer \"Only the biggest country\" next to the right answer and ask the question again in a new context.",
+  "help": "List a gain for a small and a large partner.",
+  "feedback": "A common market gives all members a larger market.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_NO_MOVE": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
+  "error": "Says people cannot move to work in another EAC country.",
+  "example": {
+   "question": "What does the common market allow?",
+   "wrong_answer": "No movement of workers",
+   "correct_answer": "Free movement of people, goods and services"
+  },
+  "cause": "The child does not know the common market.",
+  "reveals": "Offer \"No movement of workers\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the market includes labour as well as goods.",
+  "feedback": "The common market allows free movement of people, goods and services.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_PROBLEM_SOLUTION": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
+  "error": "Pairs border delays with a common anthem.",
+  "example": {
+   "question": "What helps to reduce delays at borders?",
+   "wrong_answer": "Singing the anthem",
+   "correct_answer": "One-stop border posts"
+  },
+  "cause": "The child mixes the answers.",
+  "reveals": "Offer \"Singing the anthem\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask which answer speeds lorries.",
+  "feedback": "One-stop border posts reduce delays at borders.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_WAR": {
+  "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
+  "error": "Says disputes between member countries should be settled by force.",
+  "example": {
+   "question": "How should disputes between partner states be settled?",
+   "wrong_answer": "By force",
+   "correct_answer": "By talks and the EAC Court of Justice"
+  },
+  "cause": "The child thinks force settles a dispute.",
+  "reveals": "Offer \"By force\" next to the right answer and ask the question again in a new context.",
+  "help": "Say the community is built on peace.",
+  "feedback": "Disputes should be settled by talks and the EAC Court of Justice.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_RIGHT_RESP": {
+  "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+  "error": "Calls a right a responsibility, or the reverse.",
+  "example": {
+   "question": "Which is a responsibility of a Kenyan citizen?",
+   "wrong_answer": "To vote when 18",
+   "correct_answer": "To pay taxes"
+  },
+  "cause": "The child thinks anything good a citizen does is a responsibility.",
+  "reveals": "Offer \"To vote when 18\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what the state gives and what the citizen gives.",
+  "feedback": "Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_VOTE_AGE": {
+  "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
+  "error": "Says a citizen can vote at 14 or 16.",
+  "example": {
+   "question": "At what age can a Kenyan citizen vote?",
+   "wrong_answer": "16",
+   "correct_answer": "18"
+  },
+  "cause": "The child does not know the age.",
+  "reveals": "Offer \"16\" next to the right answer and ask the question again in a new context.",
+  "help": "Link voting with the identity card at 18.",
+  "feedback": "A Kenyan citizen can vote at 18.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_PATRIOT": {
+  "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
+  "error": "Says patriotism is only singing the anthem or waving the flag.",
+  "example": {
+   "question": "What is patriotism?",
+   "wrong_answer": "Only singing the anthem",
+   "correct_answer": "Love and loyalty for the country shown in actions"
+  },
+  "cause": "The child sees only the ceremony.",
+  "reveals": "Offer \"Only singing the anthem\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask for an action that helps the country.",
+  "feedback": "Patriotism is love and loyalty shown in what a person does for the country.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_CORRUPT": {
+  "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
+  "error": "Thinks giving a bribe to get service quickly is good citizenship.",
+  "example": {
+   "question": "Which action shows a good citizen?",
+   "wrong_answer": "Paying a bribe for quick service",
+   "correct_answer": "Refusing to bribe and reporting it"
+  },
+  "cause": "The child wants the service fast.",
+  "reveals": "Offer \"Paying a bribe for quick service\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether honesty or speed matters most.",
+  "feedback": "A good citizen is honest. Refusing a bribe and reporting it protects the country.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_CAT_SWAP": {
+  "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
+  "error": "Puts the right to vote among the economic rights.",
+  "example": {
+   "question": "Which category is the right to vote in?",
+   "wrong_answer": "Economic",
+   "correct_answer": "Political"
+  },
+  "cause": "The child links money and voting.",
+  "reveals": "Offer \"Economic\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: is it about running the country or earning a living?",
+  "feedback": "The right to vote is a political right.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_EDU": {
+  "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
+  "error": "Puts the right to education among the political rights.",
+  "example": {
+   "question": "Which category is the right to education in?",
+   "wrong_answer": "Political",
+   "correct_answer": "Social"
+  },
+  "cause": "The child links school with the state.",
+  "reveals": "Offer \"Political\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask whether it is about people's welfare.",
+  "feedback": "Education, health and housing are social rights.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_ONLY_POLICE": {
+  "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
+  "error": "Says only the police uphold human rights.",
+  "example": {
+   "question": "Who helps to uphold human rights?",
+   "wrong_answer": "Only the police",
+   "correct_answer": "The courts, the Commission and every citizen"
+  },
+  "cause": "The child names one body.",
+  "reveals": "Offer \"Only the police\" next to the right answer and ask the question again in a new context.",
+  "help": "List five who help.",
+  "feedback": "Courts, commissions, schools and every citizen who respects others uphold rights.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_DAY": {
+  "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
+  "error": "Gives the wrong date for Human Rights Day.",
+  "example": {
+   "question": "When is Human Rights Day?",
+   "wrong_answer": "1 June",
+   "correct_answer": "10 December"
+  },
+  "cause": "The child mixes national days.",
+  "reveals": "Offer \"1 June\" next to the right answer and ask the question again in a new context.",
+  "help": "Say 10 December is the day in 1948.",
+  "feedback": "Human Rights Day is on 10 December.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_NO_CAUSE": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
+  "error": "Says conflicts have no cause and just happen.",
+  "example": {
+   "question": "Which is a cause of conflict?",
+   "wrong_answer": "None, conflicts just happen",
+   "correct_answer": "Competition for land and water"
+  },
+  "cause": "The child does not look for the reason.",
+  "reveals": "Offer \"None, conflicts just happen\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what two herders argue about at a dry well.",
+  "feedback": "Competition for land and water is a common cause of conflict.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_VIOLENCE_SOLVE": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
+  "error": "Says violence is the way to settle a quarrel.",
+  "example": {
+   "question": "How should a quarrel be settled?",
+   "wrong_answer": "By fighting",
+   "correct_answer": "By talking and listening"
+  },
+  "cause": "The child copies what he or she sees.",
+  "reveals": "Offer \"By fighting\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who wins after a fight.",
+  "feedback": "Quarrels should be settled by talking and listening.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_MED_ARB": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
+  "error": "Swaps mediation and arbitration.",
+  "example": {
+   "question": "In which method does a third person decide the answer?",
+   "wrong_answer": "Mediation",
+   "correct_answer": "Arbitration"
+  },
+  "cause": "The child mixes the two.",
+  "reveals": "Offer \"Mediation\" next to the right answer and ask the question again in a new context.",
+  "help": "Say a mediator helps and an arbitrator decides.",
+  "feedback": "In arbitration a third person decides. In mediation a third person helps them agree.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_COURT_ONLY": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
+  "error": "Says the only way to settle a dispute is in court.",
+  "example": {
+   "question": "Which is a peaceful way besides court?",
+   "wrong_answer": "None",
+   "correct_answer": "A council of elders"
+  },
+  "cause": "The child knows only courts.",
+  "reveals": "Offer \"None\" next to the right answer and ask the question again in a new context.",
+  "help": "Name Njuri Ncheke or Kaya elders.",
+  "feedback": "Councils of elders, such as the Njuri Ncheke of the Ameru, settle disputes peacefully.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_REVENGE": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
+  "error": "Thinks taking revenge promotes peace.",
+  "example": {
+   "question": "Which action promotes peace?",
+   "wrong_answer": "Taking revenge",
+   "correct_answer": "Forgiving and talking"
+  },
+  "cause": "The child wants justice by force.",
+  "reveals": "Offer \"Taking revenge\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask what revenge brings next.",
+  "feedback": "Forgiving and talking promote peace. Revenge brings more conflict.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_RUMOUR": {
+  "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
+  "error": "Thinks spreading rumours is harmless.",
+  "example": {
+   "question": "What does spreading rumours do?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Starts or increases conflict"
+  },
+  "cause": "The child thinks words cannot hurt.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Tell a short story of a rumour.",
+  "feedback": "Rumours can start or increase conflict.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_LOAN_TAX": {
+  "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+  "error": "Calls a loan a tax.",
+  "example": {
+   "question": "Which is a tax?",
+   "wrong_answer": "A loan from a bank",
+   "correct_answer": "Income tax on salaries"
+  },
+  "cause": "The child thinks all money for government is tax.",
+  "reveals": "Offer \"A loan from a bank\" next to the right answer and ask the question again in a new context.",
+  "help": "Say a tax is compulsory and a loan must be repaid.",
+  "feedback": "Income tax is a tax. A loan is borrowed money that must be repaid.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_COLLECTOR": {
+  "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
+  "error": "Says the county assembly or the police collects national taxes.",
+  "example": {
+   "question": "Who collects national taxes in Kenya?",
+   "wrong_answer": "The police",
+   "correct_answer": "The Kenya Revenue Authority"
+  },
+  "cause": "The child does not know the body.",
+  "reveals": "Offer \"The police\" next to the right answer and ask the question again in a new context.",
+  "help": "Say KRA stands for Kenya Revenue Authority.",
+  "feedback": "The Kenya Revenue Authority collects national taxes.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_LEVEL_SWAP": {
+  "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
+  "error": "Says county governments pay teachers and national referral hospitals.",
+  "example": {
+   "question": "Which level of government pays teachers?",
+   "wrong_answer": "The county government",
+   "correct_answer": "The national government"
+  },
+  "cause": "The child mixes the two levels.",
+  "reveals": "Offer \"The county government\" next to the right answer and ask the question again in a new context.",
+  "help": "Say teachers are paid by the Teachers Service Commission.",
+  "feedback": "The national government pays teachers. Counties run county health services and county roads.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_TAX_WASTE": {
+  "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
+  "error": "Says taxes are kept by officials and not spent on services.",
+  "example": {
+   "question": "What is tax money used for?",
+   "wrong_answer": "Kept by officials",
+   "correct_answer": "Roads, schools, hospitals and security"
+  },
+  "cause": "The child hears complaints and thinks all is lost.",
+  "reveals": "Offer \"Kept by officials\" next to the right answer and ask the question again in a new context.",
+  "help": "List what is built with taxes.",
+  "feedback": "Tax money pays for roads, schools, hospitals and security.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_WHAT": {
+  "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
+  "error": "Says the preamble is the last part of the Constitution.",
+  "example": {
+   "question": "Where in the Constitution is the preamble?",
+   "wrong_answer": "At the end",
+   "correct_answer": "At the beginning"
+  },
+  "cause": "The child does not know the word.",
+  "reveals": "Offer \"At the end\" next to the right answer and ask the question again in a new context.",
+  "help": "Say pre means before.",
+  "feedback": "The preamble is the opening statement. Pre means before.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_SOVEREIGN_WHO": {
+  "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
+  "error": "Says the President holds the sovereign power.",
+  "example": {
+   "question": "In the preamble, who holds sovereign power?",
+   "wrong_answer": "The President",
+   "correct_answer": "The people of Kenya"
+  },
+  "cause": "The child links power with the President.",
+  "reveals": "Offer \"The President\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the first words: We, the people of Kenya.",
+  "feedback": "In the preamble, the people of Kenya hold sovereign power.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_INDIVISIBLE": {
+  "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
+  "error": "Says indivisible means divided into counties.",
+  "example": {
+   "question": "What does indivisible mean?",
+   "wrong_answer": "Divided into counties",
+   "correct_answer": "Cannot be divided"
+  },
+  "cause": "The child mixes it with devolution.",
+  "reveals": "Offer \"Divided into counties\" next to the right answer and ask the question again in a new context.",
+  "help": "Say in means not.",
+  "feedback": "Indivisible means cannot be divided. Kenya is one nation.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_HERITAGE": {
+  "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
+  "error": "Says heritage means money kept in the bank.",
+  "example": {
+   "question": "What is heritage?",
+   "wrong_answer": "Money kept in a bank",
+   "correct_answer": "What we receive from the past and pass on"
+  },
+  "cause": "The child links the word with inheritance of money.",
+  "reveals": "Offer \"Money kept in a bank\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask about a rock painting or a forest.",
+  "feedback": "Heritage is what we receive from the past and pass to the future.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

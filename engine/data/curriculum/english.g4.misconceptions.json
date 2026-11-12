@@ -1,0 +1,3047 @@
+{
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_ALPHA_FIRST_LETTER": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
+  "error": "Orders words by the first letter only.",
+  "example": {
+   "question": "Order: bat, bag, ball",
+   "wrong_answer": "bat, bag, ball",
+   "correct_answer": "bag, ball, bat"
+  },
+  "cause": "Stops comparing after the first letter.",
+  "reveals": "A question like \"Order: bat, bag, ball\" with \"bat, bag, ball\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"bag, ball, bat\", not \"bat, bag, ball\".",
+  "feedback": "When the first letters match, look at the second letter, then the third.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_GUIDE_WORDS": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
+  "error": "Does not use the guide words to find the page.",
+  "example": {
+   "question": "Guide words \"cat\" and \"cow\": is \"cup\" on this page?",
+   "wrong_answer": "Yes",
+   "correct_answer": "No"
+  },
+  "cause": "Does not know guide words are the first and last words on the page.",
+  "reveals": "A question like \"Guide words \"cat\" and \"cow\": is \"cup\" on this page?\" with \"Yes\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"No\", not \"Yes\".",
+  "feedback": "Guide words show the first and last words on a page. A word is on the page only if it comes between them in alphabetical order.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE.M_DIC_WRONG_MEANING": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.DICTIONARY_USE",
+  "error": "Picks a meaning that fits another sense of the word.",
+  "example": {
+   "question": "sprint",
+   "wrong_answer": "a long walk",
+   "correct_answer": "a very fast run for a short distance"
+  },
+  "cause": "Chooses the first meaning that sounds familiar.",
+  "reveals": "A question like \"sprint\" with \"a long walk\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a very fast run for a short distance\", not \"a long walk\".",
+  "feedback": "Read all the meanings, then try each in the sentence to see which one fits.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_DICTIONARY_FOR_FACTS": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Uses a dictionary to find facts about a topic.",
+  "example": {
+   "question": "You want facts about elephants.",
+   "wrong_answer": "a dictionary",
+   "correct_answer": "a junior encyclopaedia"
+  },
+  "cause": "Thinks every reference book does the same job.",
+  "reveals": "A question like \"You want facts about elephants.\" with \"a dictionary\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a junior encyclopaedia\", not \"a dictionary\".",
+  "feedback": "A dictionary tells the meaning and spelling of words. A junior encyclopaedia gives facts about topics.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ATLAS_FOR_WORDS": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Uses an atlas to find the meaning of a word.",
+  "example": {
+   "question": "You want to find a map of Kenya.",
+   "wrong_answer": "a dictionary",
+   "correct_answer": "an atlas"
+  },
+  "cause": "Does not link the book to what it holds.",
+  "reveals": "A question like \"You want to find a map of Kenya.\" with \"a dictionary\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"an atlas\", not \"a dictionary\".",
+  "feedback": "An atlas is a book of maps. Use it to find places and countries.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_STORY_FOR_FACTS": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Uses a story book to look up information.",
+  "example": {
+   "question": "You want to know a bus time.",
+   "wrong_answer": "a story book",
+   "correct_answer": "a timetable"
+  },
+  "cause": "Thinks a book is good for any need.",
+  "reveals": "A question like \"You want to know a bus time.\" with \"a story book\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a timetable\", not \"a story book\".",
+  "feedback": "A timetable lists times. A story book tells an invented story and is not for looking things up.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_NEWSPAPER_OLD": {
+  "skill": "ENGL.G4.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
+  "error": "Uses a newspaper for facts that do not change.",
+  "example": {
+   "question": "You want today's news.",
+   "wrong_answer": "a dictionary",
+   "correct_answer": "a newspaper"
+  },
+  "cause": "Does not think about when the information is needed.",
+  "reveals": "A question like \"You want today's news.\" with \"a dictionary\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a newspaper\", not \"a dictionary\".",
+  "feedback": "A newspaper gives news of today. A dictionary or encyclopaedia gives facts that stay the same.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_BEFORE_VOWEL": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Writes a before a word that starts with a vowel sound.",
+  "example": {
+   "question": "She ate ___ orange.",
+   "wrong_answer": "a",
+   "correct_answer": "an"
+  },
+  "cause": "Learns \"a\" as the only small word and does not listen to the first sound of the next word.",
+  "reveals": "A question like \"She ate ___ orange.\" with \"a\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"a\".",
+  "feedback": "Before a vowel sound (a, e, i, o, u) use \"an\": an orange, an egg.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_AN_BEFORE_CONSONANT": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Writes an before a word that starts with a consonant sound.",
+  "example": {
+   "question": "I bought ___ book.",
+   "wrong_answer": "an",
+   "correct_answer": "a"
+  },
+  "cause": "Over-corrects after learning that \"an\" goes before vowels.",
+  "reveals": "A question like \"I bought ___ book.\" with \"an\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"an\".",
+  "feedback": "Before a consonant sound use \"a\": a book, a pen.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_SOUND_NOT_LETTER": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Chooses a or an by the first letter, not the first sound.",
+  "example": {
+   "question": "We waited for ___ hour.",
+   "wrong_answer": "a",
+   "correct_answer": "an"
+  },
+  "cause": "Looks at the letter h (or u) instead of listening to the sound.",
+  "reveals": "A question like \"We waited for ___ hour.\" with \"a\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"a\".",
+  "feedback": "Listen to the sound, not the letter. \"Hour\" starts with the sound \"ow\", so it takes \"an\". \"Uniform\" starts with the sound \"yoo\", so it takes \"a\".",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_FIRST_MENTION": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Uses the for something that has not been mentioned before.",
+  "example": {
+   "question": "Mama gave me ___ apple.",
+   "wrong_answer": "the",
+   "correct_answer": "an"
+  },
+  "cause": "Thinks the is the main article.",
+  "reveals": "A question like \"Mama gave me ___ apple.\" with \"the\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"an\", not \"the\".",
+  "feedback": "Use a or an the first time you speak about a thing. Use the when both people already know which one.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_A_FOR_KNOWN": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Uses a or an for something that is known or the only one.",
+  "example": {
+   "question": "We feel the heat of ___ sun.",
+   "wrong_answer": "a",
+   "correct_answer": "the"
+  },
+  "cause": "Does not see that there is only one of it.",
+  "reveals": "A question like \"We feel the heat of ___ sun.\" with \"a\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the\", not \"a\".",
+  "feedback": "Use the for something that is the only one (the sun, the moon) or that both people know about.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_OMITTED": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Leaves out the article before a singular noun.",
+  "example": {
+   "question": "Kamau has ___ new bicycle.",
+   "wrong_answer": "no article",
+   "correct_answer": "a"
+  },
+  "cause": "Kiswahili has no articles, so the small word is not heard as needed.",
+  "reveals": "A question like \"Kamau has ___ new bicycle.\" with \"no article\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"no article\".",
+  "feedback": "A singular thing you can count needs a, an or the before it: a new bicycle.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES.M_ART_THE_GENERAL": {
+  "skill": "ENGL.G4.LANGUA.T1_WORD_CLASSES_DETERMI.ARTICLES",
+  "error": "Uses the for things in general, or uses a with a plural.",
+  "example": {
+   "question": "___ lions are strong animals.",
+   "wrong_answer": "The",
+   "correct_answer": "no article (Lions are strong animals.)"
+  },
+  "cause": "Believes \"the\" is needed before every noun.",
+  "reveals": "A question like \"___ lions are strong animals.\" with \"The\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"no article (Lions are strong animals.)\", not \"The\".",
+  "feedback": "When you speak about a kind of thing in general, use no article: Lions are strong animals. Use \"the\" for one particular thing both people know.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_DETAIL_MIX": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+  "error": "Writes the wrong detail in a box.",
+  "example": {
+   "question": "Date of birth: ",
+   "wrong_answer": "Nairobi",
+   "correct_answer": "14th March 2016"
+  },
+  "cause": "Does not read what the box asks for.",
+  "reveals": "A question like \"Date of birth: \" with \"Nairobi\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"14th March 2016\", not \"Nairobi\".",
+  "feedback": "Read the name of the box first, then write only what it asks for.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_AGE_FOR_DOB": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+  "error": "Writes the age in the date of birth box.",
+  "example": {
+   "question": "Date of birth: ",
+   "wrong_answer": "9 years",
+   "correct_answer": "14th March 2016"
+  },
+  "cause": "Confuses age with date of birth.",
+  "reveals": "A question like \"Date of birth: \" with \"9 years\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"14th March 2016\", not \"9 years\".",
+  "feedback": "Date of birth needs the day, month and year you were born. Age is a number.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_CONTACT_FOR_ADDRESS": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+  "error": "Writes a phone number in the address box.",
+  "example": {
+   "question": "Home address: ",
+   "wrong_answer": "0712 345 678",
+   "correct_answer": "P.O. Box 12, Kisumu"
+  },
+  "cause": "Does not tell address from contact.",
+  "reveals": "A question like \"Home address: \" with \"0712 345 678\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"P.O. Box 12, Kisumu\", not \"0712 345 678\".",
+  "feedback": "An address says where you live or get letters. A phone number goes in the contact box.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION.M_FRM_NAME_PART": {
+  "skill": "ENGL.G4.WRITIN.T1_FUNCTIONAL_WRITING.FORM_INFORMATION",
+  "error": "Writes only one name in the full names box.",
+  "example": {
+   "question": "Full names: ",
+   "wrong_answer": "Wanjiru",
+   "correct_answer": "Wanjiru Kamau Njeri"
+  },
+  "cause": "Thinks the first name is enough.",
+  "reveals": "A question like \"Full names: \" with \"Wanjiru\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru Kamau Njeri\", not \"Wanjiru\".",
+  "feedback": "Full names means all of your names, in the order the form asks for.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NEARBY_DETAIL": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Picks a detail that sits near the answer in the text.",
+  "example": {
+   "question": "What was tied inside the bag?",
+   "wrong_answer": "sand",
+   "correct_answer": "rags"
+  },
+  "cause": "Reads fast and picks a nearby word.",
+  "reveals": "A question like \"What was tied inside the bag?\" with \"sand\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"rags\", not \"sand\".",
+  "feedback": "Find the sentence that answers the question and check that the words match what is asked.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_OUTSIDE_KNOWLEDGE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Answers from what he or she already knows.",
+  "example": {
+   "question": "How did they travel?",
+   "wrong_answer": "by bus",
+   "correct_answer": "by boda boda"
+  },
+  "cause": "Does not go back to the text.",
+  "reveals": "A question like \"How did they travel?\" with \"by bus\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"by boda boda\", not \"by bus\".",
+  "feedback": "Answer from the text, not from what you think is likely. Go back to the sentence.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_MISSES_STATED": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says not stated when the text does say it.",
+  "example": {
+   "question": "True, false or not stated: Achieng set tomatoes in heaps.",
+   "wrong_answer": "Not stated",
+   "correct_answer": "True"
+  },
+  "cause": "Does not find the sentence.",
+  "reveals": "A question like \"True, false or not stated: Achieng set tomatoes in heaps.\" with \"Not stated\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"True\", not \"Not stated\".",
+  "feedback": "Look again. When the text says it clearly, the answer is true.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_TRUE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says true when the text says something different.",
+  "example": {
+   "question": "The market was in Nakuru.",
+   "wrong_answer": "True",
+   "correct_answer": "False"
+  },
+  "cause": "Reads for the topic, not the exact detail.",
+  "reveals": "A question like \"The market was in Nakuru.\" with \"True\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"False\", not \"True\".",
+  "feedback": "The text says something different from the statement, so the statement is false.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_FALSE_AS_NOT_STATED": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says not stated when the text says something different.",
+  "example": {
+   "question": "The market was in Nakuru.",
+   "wrong_answer": "Not stated",
+   "correct_answer": "False"
+  },
+  "cause": "Does not tell going against the text from saying nothing.",
+  "reveals": "A question like \"The market was in Nakuru.\" with \"Not stated\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"False\", not \"Not stated\".",
+  "feedback": "If the text says the opposite, the answer is false. Not stated means the text says nothing about it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_NOT_STATED_AS_TRUE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Says true or false when the text does not say.",
+  "example": {
+   "question": "Kamau scored a goal.",
+   "wrong_answer": "True",
+   "correct_answer": "Not stated"
+  },
+  "cause": "Fills in what seems likely.",
+  "reveals": "A question like \"Kamau scored a goal.\" with \"True\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Not stated\", not \"True\".",
+  "feedback": "The text does not mention it, so the answer is not stated. Do not guess from what is likely.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M_FACT_WRONG_WHO": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
+  "error": "Picks the wrong person or place for who or where.",
+  "example": {
+   "question": "Who helped Kamau?",
+   "wrong_answer": "his teacher",
+   "correct_answer": "his grandmother"
+  },
+  "cause": "Picks the first name seen.",
+  "reveals": "A question like \"Who helped Kamau?\" with \"his teacher\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"his grandmother\", not \"his teacher\".",
+  "feedback": "Find the sentence about the helper and check who it names.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_REPEATS_TEXT": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Copies a sentence from the text as the answer.",
+  "example": {
+   "question": "Why did Mother nod proudly?",
+   "wrong_answer": "The woman wore a green dress.",
+   "correct_answer": "Achieng counted carefully and gave the right change."
+  },
+  "cause": "Does not see that the answer is not written.",
+  "reveals": "A question like \"Why did Mother nod proudly?\" with \"The woman wore a green dress.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Achieng counted carefully and gave the right change.\", not \"The woman wore a green dress.\".",
+  "feedback": "An inference is worked out from clues. A sentence copied from the text is not working anything out.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_CONTRADICTS": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Picks an answer that goes against the text.",
+  "example": {
+   "question": "Why was Kamau sad?",
+   "wrong_answer": "The school was closed.",
+   "correct_answer": "He loved football and the ball burst."
+  },
+  "cause": "Does not check the answer against the text.",
+  "reveals": "A question like \"Why was Kamau sad?\" with \"The school was closed.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"He loved football and the ball burst.\", not \"The school was closed.\".",
+  "feedback": "A good inference agrees with every clue in the text.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M_INFER_OVERREACH": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
+  "error": "Picks an answer that goes too far.",
+  "example": {
+   "question": "What can you tell about the grandmother?",
+   "wrong_answer": "She is the richest woman in town.",
+   "correct_answer": "She is kind and clever."
+  },
+  "cause": "Adds facts that the text does not support.",
+  "reveals": "A question like \"What can you tell about the grandmother?\" with \"She is the richest woman in town.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"She is kind and clever.\", not \"She is the richest woman in town.\".",
+  "feedback": "An inference is a small step from the clues. If the text gives no clue for it, it goes too far.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_LOOKS_LIKE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks a meaning that looks like the word.",
+  "example": {
+   "question": "burst",
+   "wrong_answer": "rolled away",
+   "correct_answer": "broke open"
+  },
+  "cause": "Guesses from the look of the word.",
+  "reveals": "A question like \"burst\" with \"rolled away\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"broke open\", not \"rolled away\".",
+  "feedback": "Read the sentences around the word to find its meaning.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_COMMON_MEANING": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks a common meaning that does not fit.",
+  "example": {
+   "question": "heaps",
+   "wrong_answer": "big baskets",
+   "correct_answer": "small piles"
+  },
+  "cause": "Uses a known meaning without testing it.",
+  "reveals": "A question like \"heaps\" with \"big baskets\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"small piles\", not \"big baskets\".",
+  "feedback": "Try the meaning in the sentence. If it does not fit, it is not the right one.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_OPPOSITE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks the opposite meaning.",
+  "example": {
+   "question": "ancient",
+   "wrong_answer": "very new",
+   "correct_answer": "very old"
+  },
+  "cause": "Does not read the clue.",
+  "reveals": "A question like \"ancient\" with \"very new\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"very old\", not \"very new\".",
+  "feedback": "Read for clue words. They tell you if the word means the same as or the opposite of something.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES.M_CTX_WRONG_CLUE": {
+  "skill": "ENGL.G4.READIN.T2_INTENSIVE_READING.CONTEXT_CLUES",
+  "error": "Picks a group of words that does not explain the word.",
+  "example": {
+   "question": "Which words help you?",
+   "wrong_answer": "in Nyeri",
+   "correct_answer": "the school had no money for a new one"
+  },
+  "cause": "Picks any phrase near the word.",
+  "reveals": "A question like \"Which words help you?\" with \"in Nyeri\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the school had no money for a new one\", not \"in Nyeri\".",
+  "feedback": "A clue is a group of words that tells more about the hard word, not just words near it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_NO_ES": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+  "error": "Adds only -s to a word that ends in s, x, ch or sh.",
+  "example": {
+   "question": "two ___ (box)",
+   "wrong_answer": "boxs",
+   "correct_answer": "boxes"
+  },
+  "cause": "Uses the plain -s rule for every word.",
+  "reveals": "A question like \"two ___ (box)\" with \"boxs\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"boxes\", not \"boxs\".",
+  "feedback": "After s, x, ch and sh we add -es so that the word can be said: box, boxes; church, churches.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_Y_TO_S": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+  "error": "Adds -s to a word that ends in a consonant and y.",
+  "example": {
+   "question": "three ___ (baby)",
+   "wrong_answer": "babys",
+   "correct_answer": "babies"
+  },
+  "cause": "Does not change y to i before the ending.",
+  "reveals": "A question like \"three ___ (baby)\" with \"babys\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"babies\", not \"babys\".",
+  "feedback": "When a word ends in a consonant and y, change the y to i and add -es: baby, babies.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_VOWEL_Y_IES": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+  "error": "Changes y to -ies after a vowel.",
+  "example": {
+   "question": "two ___ (monkey)",
+   "wrong_answer": "monkies",
+   "correct_answer": "monkeys"
+  },
+  "cause": "Over-corrects after learning baby, babies.",
+  "reveals": "A question like \"two ___ (monkey)\" with \"monkies\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"monkeys\", not \"monkies\".",
+  "feedback": "When a vowel comes before the y, just add -s: monkey, monkeys; day, days.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_F_NO_VES": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+  "error": "Adds -s to knife, leaf, wife and loaf.",
+  "example": {
+   "question": "two ___ (leaf)",
+   "wrong_answer": "leafs",
+   "correct_answer": "leaves"
+  },
+  "cause": "Does not know the f to v change.",
+  "reveals": "A question like \"two ___ (leaf)\" with \"leafs\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"leaves\", not \"leafs\".",
+  "feedback": "Some words ending in f or fe change to -ves: leaf, leaves; knife, knives; wife, wives.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR.M_PLR_SINGULAR_AFTER_NUMBER": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_REGULAR",
+  "error": "Keeps the noun singular after a number.",
+  "example": {
+   "question": "I have four ___.",
+   "wrong_answer": "book",
+   "correct_answer": "books"
+  },
+  "cause": "Kiswahili does not change the noun after a number in the same way.",
+  "reveals": "A question like \"I have four ___.\" with \"book\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"books\", not \"book\".",
+  "feedback": "After two, three, four or any number above one, the noun must be plural: four books.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_ADD_S": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
+  "error": "Adds -s to an irregular noun.",
+  "example": {
+   "question": "three ___ (child)",
+   "wrong_answer": "childs",
+   "correct_answer": "children"
+  },
+  "cause": "Uses the regular rule for every noun.",
+  "reveals": "A question like \"three ___ (child)\" with \"childs\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"children\", not \"childs\".",
+  "feedback": "A few nouns change in their own way. The plural of child is children, and of man is men.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_DOUBLE_PLURAL": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
+  "error": "Adds -s to a plural that is already plural.",
+  "example": {
+   "question": "Many ___ were playing. (child)",
+   "wrong_answer": "childrens",
+   "correct_answer": "children"
+  },
+  "cause": "Knows the word changes but adds -s from habit.",
+  "reveals": "A question like \"Many ___ were playing. (child)\" with \"childrens\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"children\", not \"childrens\".",
+  "feedback": "Children, men and women are already plural. Do not add -s.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_FOOT_TOOTH": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
+  "error": "Writes tooths, mouses or gooses.",
+  "example": {
+   "question": "two ___ (tooth)",
+   "wrong_answer": "tooths",
+   "correct_answer": "teeth"
+  },
+  "cause": "Does not know the vowel change.",
+  "reveals": "A question like \"two ___ (tooth)\" with \"tooths\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"teeth\", not \"tooths\".",
+  "feedback": "Some plurals change the vowels inside the word: tooth, teeth; mouse, mice; goose, geese.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR.M_PLI_SAME_FORM_S": {
+  "skill": "ENGL.G4.LANGUA.T2_WORD_CLASSES_NOUNS.PLURALS_IRREGULAR",
+  "error": "Adds -s to sheep or fish.",
+  "example": {
+   "question": "ten ___ (sheep)",
+   "wrong_answer": "sheeps",
+   "correct_answer": "sheep"
+  },
+  "cause": "Treats every animal word as regular.",
+  "reveals": "A question like \"ten ___ (sheep)\" with \"sheeps\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"sheep\", not \"sheeps\".",
+  "feedback": "Sheep stays sheep. We say one sheep and ten sheep. Fish is the same.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_DEMAND": {
+  "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+  "error": "Makes a request as a demand.",
+  "example": {
+   "question": "You want to borrow a pen. What do you say?",
+   "wrong_answer": "Give me your pen.",
+   "correct_answer": "May I please borrow your pen?"
+  },
+  "cause": "Says the shortest thing that gets the pen.",
+  "reveals": "A question like \"You want to borrow a pen. What do you say?\" with \"Give me your pen.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"May I please borrow your pen?\", not \"Give me your pen.\".",
+  "feedback": "A polite request starts with May I or Could you, and says please.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_THANKS": {
+  "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+  "error": "Does not say thank you.",
+  "example": {
+   "question": "Your friend helps you. What do you say?",
+   "wrong_answer": "Okay.",
+   "correct_answer": "Thank you for helping me."
+  },
+  "cause": "Does not see thanks as needed.",
+  "reveals": "A question like \"Your friend helps you. What do you say?\" with \"Okay.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Thank you for helping me.\", not \"Okay.\".",
+  "feedback": "When someone helps you, say thank you.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_RUDE_REFUSAL": {
+  "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+  "error": "Refuses in a rude way.",
+  "example": {
+   "question": "You cannot lend your book. What do you say?",
+   "wrong_answer": "No. Go away.",
+   "correct_answer": "I am sorry, I cannot lend it today."
+  },
+  "cause": "Does not know how to say no politely.",
+  "reveals": "A question like \"You cannot lend your book. What do you say?\" with \"No. Go away.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"I am sorry, I cannot lend it today.\", not \"No. Go away.\".",
+  "feedback": "You can say no in a polite way: begin with I am sorry.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS.M_POL_NO_SORRY": {
+  "skill": "ENGL.G4.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_WORDS",
+  "error": "Does not say sorry after a mistake.",
+  "example": {
+   "question": "You step on someone's foot. What do you say?",
+   "wrong_answer": "Move.",
+   "correct_answer": "Sorry, I did not see you."
+  },
+  "cause": "Does not see that sorry is needed.",
+  "reveals": "A question like \"You step on someone's foot. What do you say?\" with \"Move.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Sorry, I did not see you.\", not \"Move.\".",
+  "feedback": "When you hurt or bother someone, say sorry.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_VERB_FORM": {
+  "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
+  "error": "Puts to, -s or -ing after May I or Could you.",
+  "example": {
+   "question": "May I ___ in?",
+   "wrong_answer": "to come",
+   "correct_answer": "come"
+  },
+  "cause": "Thinks every verb needs \"to\" before it.",
+  "reveals": "A question like \"May I ___ in?\" with \"to come\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"come\", not \"to come\".",
+  "feedback": "After May I and Could you the verb stays plain: May I come in? Could you help me?",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_NO_PLEASE": {
+  "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
+  "error": "Makes a request as a command.",
+  "example": {
+   "question": "Which is polite? Give me water.",
+   "wrong_answer": "Give me water.",
+   "correct_answer": "Could you give me some water, please?"
+  },
+  "cause": "Uses the command that is quick and short.",
+  "reveals": "A question like \"Which is polite? Give me water.\" with \"Give me water.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Could you give me some water, please?\", not \"Give me water.\".",
+  "feedback": "A polite request uses May I or Could you, and the word please.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_WOULD_LIKE_FORM": {
+  "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
+  "error": "Writes Would you like with -ing or a wrong verb form.",
+  "example": {
+   "question": "___ you like some tea?",
+   "wrong_answer": "Do",
+   "correct_answer": "Would"
+  },
+  "cause": "Mixes Would you like with Do you want.",
+  "reveals": "A question like \"___ you like some tea?\" with \"Do\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Would\", not \"Do\".",
+  "feedback": "To offer something politely we say: Would you like some tea? The verb after like is to + the plain verb, or a noun.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN.M_PAT_ORDER": {
+  "skill": "ENGL.G4.LANGUA.T3_LANGUAGE_PATTERN.POLITE_PATTERN",
+  "error": "Puts the words of the request in the wrong order.",
+  "example": {
+   "question": "Could ___ help me?",
+   "wrong_answer": "help you",
+   "correct_answer": "you help"
+  },
+  "cause": "Does not move the helping word before the subject.",
+  "reveals": "A question like \"Could ___ help me?\" with \"help you\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"you help\", not \"help you\".",
+  "feedback": "In a request the helping word comes first: Could you help me? May I borrow your pen?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
+  "error": "Picks a first aid word that is near in meaning but wrong.",
+  "example": {
+   "question": "A ___ is a cloth wrapped round a cut.",
+   "wrong_answer": "bruise",
+   "correct_answer": "bandage"
+  },
+  "cause": "Mixes up words in the same topic.",
+  "reveals": "A question like \"A ___ is a cloth wrapped round a cut.\" with \"bruise\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"bandage\", not \"bruise\".",
+  "feedback": "Read the whole sentence and say what the gap must mean before choosing.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_WOUND_BRUISE": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
+  "error": "Mixes up wound and bruise.",
+  "example": {
+   "question": "A ___ is a dark mark on the skin where you were hit.",
+   "wrong_answer": "wound",
+   "correct_answer": "bruise"
+  },
+  "cause": "Treats the two words as the same.",
+  "reveals": "A question like \"A ___ is a dark mark on the skin where you were hit.\" with \"wound\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"bruise\", not \"wound\".",
+  "feedback": "A wound is a cut or a break in the skin. A bruise is a dark mark under the skin.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS.M_FA_SPRAIN_BREAK": {
+  "skill": "ENGL.G4.LISTEN.T4_PRONUNCIATION_AND_VO.FIRST_AID_WORDS",
+  "error": "Mixes up sprain and break.",
+  "example": {
+   "question": "When you twist your ankle, it may be a ___.",
+   "wrong_answer": "ambulance",
+   "correct_answer": "sprain"
+  },
+  "cause": "Does not know the words.",
+  "reveals": "A question like \"When you twist your ankle, it may be a ___.\" with \"ambulance\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"sprain\", not \"ambulance\".",
+  "feedback": "A sprain is a twisted joint. An ambulance is a vehicle that takes people to hospital.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_WRONG_ROW": {
+  "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
+  "error": "Reads the wrong row or column of a table.",
+  "example": {
+   "question": "What time does the bus to Kisumu leave?",
+   "wrong_answer": "10:30 am",
+   "correct_answer": "8:00 am"
+  },
+  "cause": "Looks at the nearest number instead of the row for Kisumu.",
+  "reveals": "A question like \"What time does the bus to Kisumu leave?\" with \"10:30 am\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"8:00 am\", not \"10:30 am\".",
+  "feedback": "Find the row for what you need, then read across to the right column.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_NEARBY_DETAIL": {
+  "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
+  "error": "Picks a nearby detail on the notice.",
+  "example": {
+   "question": "Which day is the clinic closed?",
+   "wrong_answer": "Saturday",
+   "correct_answer": "Sunday"
+  },
+  "cause": "Picks the line next to the answer.",
+  "reveals": "A question like \"Which day is the clinic closed?\" with \"Saturday\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Sunday\", not \"Saturday\".",
+  "feedback": "Go back to the line that answers the question and check the words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS.M_VIS_PURPOSE": {
+  "skill": "ENGL.G4.READIN.T4_INTENSIVE_READING_VI.VISUALS",
+  "error": "Says the wrong purpose for a visual.",
+  "example": {
+   "question": "What is the notice for?",
+   "wrong_answer": "to sell shoes",
+   "correct_answer": "to tell people the time of the meeting"
+  },
+  "cause": "Reads one word and guesses.",
+  "reveals": "A question like \"What is the notice for?\" with \"to sell shoes\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"to tell people the time of the meeting\", not \"to sell shoes\".",
+  "feedback": "Look at the title and the first line. They say what the notice is for.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_SUBJECT_AS_OBJECT": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
+  "error": "Uses I, he, we or they after a verb or a small word.",
+  "example": {
+   "question": "Mum gave the book to ___.",
+   "wrong_answer": "I",
+   "correct_answer": "me"
+  },
+  "cause": "Hears \"Him and I\" in speech and over-corrects.",
+  "reveals": "A question like \"Mum gave the book to ___.\" with \"I\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"me\", not \"I\".",
+  "feedback": "After a verb or a small word like to, for or with, use me, him, her, us or them.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_OBJECT_AS_SUBJECT": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
+  "error": "Uses me, him, us or them before the verb.",
+  "example": {
+   "question": "___ went to the market.",
+   "wrong_answer": "Me and Wanjiru",
+   "correct_answer": "Wanjiru and I"
+  },
+  "cause": "Uses the object form in a pair of names.",
+  "reveals": "A question like \"___ went to the market.\" with \"Me and Wanjiru\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru and I\", not \"Me and Wanjiru\".",
+  "feedback": "Before a verb, who does the action? Use I, he, she, we or they: Wanjiru and I went to the market.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_NOUN_AND_PRONOUN": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
+  "error": "Says the noun and then repeats it with a pronoun.",
+  "example": {
+   "question": "Wanjiru ___ is tall.",
+   "wrong_answer": "she",
+   "correct_answer": "no pronoun"
+  },
+  "cause": "Copies the pattern of speech where the name is said and then repeated.",
+  "reveals": "A question like \"Wanjiru ___ is tall.\" with \"she\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"no pronoun\", not \"she\".",
+  "feedback": "Do not say the name and the pronoun together. Wanjiru is tall, or She is tall.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS.M_PRO_GENDER": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.PERSONAL_PRONOUNS",
+  "error": "Says he for a girl, or she for a boy.",
+  "example": {
+   "question": "Akinyi is my sister. ___ is nine.",
+   "wrong_answer": "He",
+   "correct_answer": "She"
+  },
+  "cause": "Kiswahili has one word (yeye) for he and she.",
+  "reveals": "A question like \"Akinyi is my sister. ___ is nine.\" with \"He\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"She\", not \"He\".",
+  "feedback": "Use he for a boy or man and she for a girl or woman.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_DETERMINER_FOR_PRONOUN": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
+  "error": "Writes my, your or her when no noun follows.",
+  "example": {
+   "question": "That bag is ___.",
+   "wrong_answer": "my",
+   "correct_answer": "mine"
+  },
+  "cause": "Does not tell the two sets apart.",
+  "reveals": "A question like \"That bag is ___.\" with \"my\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"mine\", not \"my\".",
+  "feedback": "When no noun comes after, use mine, yours, hers, ours or theirs: That bag is mine.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_PRONOUN_BEFORE_NOUN": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
+  "error": "Writes mine, yours or hers before a noun.",
+  "example": {
+   "question": "This is ___ pencil.",
+   "wrong_answer": "mine",
+   "correct_answer": "my"
+  },
+  "cause": "Over-uses the form that stands alone.",
+  "reveals": "A question like \"This is ___ pencil.\" with \"mine\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"my\", not \"mine\".",
+  "feedback": "Before a noun use my, your, her, our or their: my pencil.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_APOSTROPHE": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
+  "error": "Writes your's, her's or our's.",
+  "example": {
+   "question": "The blue pen is ___.",
+   "wrong_answer": "your's",
+   "correct_answer": "yours"
+  },
+  "cause": "Thinks a belonging word needs an apostrophe, as in a name.",
+  "reveals": "A question like \"The blue pen is ___.\" with \"your's\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"yours\", not \"your's\".",
+  "feedback": "Words like yours, hers, ours and theirs never have an apostrophe.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS.M_POS_WRONG_PERSON": {
+  "skill": "ENGL.G4.LANGUA.T4_WORD_CLASSES_PRONOUN.POSSESSIVE_PRONOUNS",
+  "error": "Uses the possessive of another person.",
+  "example": {
+   "question": "Wafula, this book is not mine. It is ___.",
+   "wrong_answer": "his",
+   "correct_answer": "yours"
+  },
+  "cause": "Does not follow who is speaking and who is spoken to.",
+  "reveals": "A question like \"Wafula, this book is not mine. It is ___.\" with \"his\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"yours\", not \"his\".",
+  "feedback": "Ask who owns it. The person spoken to is you, so the word is yours.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_PART_MIX": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+  "error": "Mixes up the parts of a letter.",
+  "example": {
+   "question": "Which part says \"Dear Amina,\"?",
+   "wrong_answer": "closing",
+   "correct_answer": "greeting"
+  },
+  "cause": "Does not know the names of the parts.",
+  "reveals": "A question like \"Which part says \"Dear Amina,\"?\" with \"closing\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"greeting\", not \"closing\".",
+  "feedback": "The greeting comes first and starts with Dear. The closing comes at the end, for example Yours lovingly.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_ORDER": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+  "error": "Puts the parts of the letter in the wrong order.",
+  "example": {
+   "question": "Which comes first in a friendly letter?",
+   "wrong_answer": "the closing",
+   "correct_answer": "your address and the date"
+  },
+  "cause": "Does not know the usual order.",
+  "reveals": "A question like \"Which comes first in a friendly letter?\" with \"the closing\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"your address and the date\", not \"the closing\".",
+  "feedback": "A friendly letter goes: your address, the date, the greeting, the body, the closing, your name.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_NO_COMMA": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+  "error": "Leaves the comma out after the greeting or the closing.",
+  "example": {
+   "question": "Which is correct?",
+   "wrong_answer": "Dear Amina",
+   "correct_answer": "Dear Amina,"
+  },
+  "cause": "Writes the greeting as a plain word group.",
+  "reveals": "A question like \"Which is correct?\" with \"Dear Amina\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Dear Amina,\", not \"Dear Amina\".",
+  "feedback": "A comma follows the greeting (Dear Amina,) and the closing (Yours lovingly,).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS.M_LTR_RECEIVER_ADDRESS": {
+  "skill": "ENGL.G4.WRITIN.T4_FUNCTIONAL_WRITING.LETTER_PARTS",
+  "error": "Writes the receiver's address at the top of a friendly letter.",
+  "example": {
+   "question": "Whose address goes at the top?",
+   "wrong_answer": "the person getting the letter",
+   "correct_answer": "the writer"
+  },
+  "cause": "Copies the pattern of a formal letter.",
+  "reveals": "A question like \"Whose address goes at the top?\" with \"the person getting the letter\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the writer\", not \"the person getting the letter\".",
+  "feedback": "In a friendly letter, write your own address at the top. Do not write the receiver's address there.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
+  "error": "Picks a food word that is near in meaning but wrong.",
+  "example": {
+   "question": "Beans and meat give us ___.",
+   "wrong_answer": "carbohydrates",
+   "correct_answer": "protein"
+  },
+  "cause": "Mixes up the food groups.",
+  "reveals": "A question like \"Beans and meat give us ___.\" with \"carbohydrates\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"protein\", not \"carbohydrates\".",
+  "feedback": "Protein builds the body (beans, meat, eggs). Carbohydrates give energy (ugali, rice, bread).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_VITAMIN_FIBRE": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
+  "error": "Mixes up vitamins and fibre.",
+  "example": {
+   "question": "___ help us stay healthy and are found in fruits.",
+   "wrong_answer": "Fibre",
+   "correct_answer": "Vitamins"
+  },
+  "cause": "Treats all nutrients as one.",
+  "reveals": "A question like \"___ help us stay healthy and are found in fruits.\" with \"Fibre\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Vitamins\", not \"Fibre\".",
+  "feedback": "Vitamins keep the body healthy. Fibre helps food move through the body.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS.M_NUT_BALANCED": {
+  "skill": "ENGL.G4.LISTEN.T5_PRONUNCIATION_AND_VO.NUTRITION_WORDS",
+  "error": "Thinks a balanced diet is one food in a large amount.",
+  "example": {
+   "question": "A balanced diet has ___.",
+   "wrong_answer": "only ugali",
+   "correct_answer": "all the food groups in the right amounts"
+  },
+  "cause": "Does not know the meaning of balanced.",
+  "reveals": "A question like \"A balanced diet has ___.\" with \"only ugali\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"all the food groups in the right amounts\", not \"only ugali\".",
+  "feedback": "A balanced diet has food from all the food groups in the right amounts.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_NEAR_NUMBER": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
+  "error": "Picks another number from the text.",
+  "example": {
+   "question": "How much is a ticket?",
+   "wrong_answer": "60 shillings",
+   "correct_answer": "50 shillings"
+  },
+  "cause": "Does not look for the key word.",
+  "reveals": "A question like \"How much is a ticket?\" with \"60 shillings\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"50 shillings\", not \"60 shillings\".",
+  "feedback": "Scan for the key word in the question (ticket) and read only that line.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_WRONG_KEYWORD": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
+  "error": "Looks for the wrong key word.",
+  "example": {
+   "question": "When does the show start?",
+   "wrong_answer": "at 6 pm",
+   "correct_answer": "at 4 pm"
+  },
+  "cause": "Uses a word that is not the key word.",
+  "reveals": "A question like \"When does the show start?\" with \"at 6 pm\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"at 4 pm\", not \"at 6 pm\".",
+  "feedback": "Choose the key word that matches the question, then read the line.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL.M_SCAN_TOO_LONG": {
+  "skill": "ENGL.G4.READIN.T5_EXTENSIVE_READING.SCAN_FOR_DETAIL",
+  "error": "Reads the whole text to find one detail.",
+  "example": {
+   "question": "What is the name of the guide?",
+   "wrong_answer": "a long answer from the whole text",
+   "correct_answer": "Mr Otieno"
+  },
+  "cause": "Does not scan.",
+  "reveals": "A question like \"What is the name of the guide?\" with \"a long answer from the whole text\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Mr Otieno\", not \"a long answer from the whole text\".",
+  "feedback": "Look for a capital letter or a number. Skip the rest.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_NOUN_AS_ADJ": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+  "error": "Picks the noun as the describing word.",
+  "example": {
+   "question": "The red bus stopped.",
+   "wrong_answer": "bus",
+   "correct_answer": "red"
+  },
+  "cause": "Does not tell what the word does in the sentence.",
+  "reveals": "A question like \"The red bus stopped.\" with \"bus\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"red\", not \"bus\".",
+  "feedback": "An adjective describes a noun. Ask which word tells more about the bus: red.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_VERB_AS_ADJ": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+  "error": "Picks the verb as the describing word.",
+  "example": {
+   "question": "The tall girl ran home.",
+   "wrong_answer": "ran",
+   "correct_answer": "tall"
+  },
+  "cause": "Takes any word that adds meaning as a describing word.",
+  "reveals": "A question like \"The tall girl ran home.\" with \"ran\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"tall\", not \"ran\".",
+  "feedback": "A verb tells what someone does. An adjective tells what someone or something is like.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ADVERB_AS_ADJ": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+  "error": "Picks an adverb as the adjective.",
+  "example": {
+   "question": "The small boy walked slowly.",
+   "wrong_answer": "slowly",
+   "correct_answer": "small"
+  },
+  "cause": "Does not separate describing a noun from describing a verb.",
+  "reveals": "A question like \"The small boy walked slowly.\" with \"slowly\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"small\", not \"slowly\".",
+  "feedback": "Slowly tells how the boy walked, so it is an adverb. Small tells what the boy is like, so it is the adjective.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES.M_ADJ_ARTICLE_AS_ADJ": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVES",
+  "error": "Picks a, an or the as the adjective.",
+  "example": {
+   "question": "Mama bought a sweet mango.",
+   "wrong_answer": "a",
+   "correct_answer": "sweet"
+  },
+  "cause": "Thinks any small word before a noun describes it.",
+  "reveals": "A question like \"Mama bought a sweet mango.\" with \"a\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"sweet\", not \"a\".",
+  "feedback": "A, an and the point to a noun but do not describe it. Sweet describes the mango.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_SHAPE_BEFORE_SIZE": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
+  "error": "Puts the shape before the size.",
+  "example": {
+   "question": "She sat on a ___ stool.",
+   "wrong_answer": "round big",
+   "correct_answer": "big round"
+  },
+  "cause": "No fixed order is known.",
+  "reveals": "A question like \"She sat on a ___ stool.\" with \"round big\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"big round\", not \"round big\".",
+  "feedback": "Size comes first, then shape: a big round stool.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_AFTER_NOUN": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
+  "error": "Puts the adjective after the noun.",
+  "example": {
+   "question": "Amina has a ___.",
+   "wrong_answer": "ball big",
+   "correct_answer": "big ball"
+  },
+  "cause": "Kiswahili puts the adjective after the noun.",
+  "reveals": "A question like \"Amina has a ___.\" with \"ball big\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"big ball\", not \"ball big\".",
+  "feedback": "In English the describing word comes before the noun: a big ball.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER.M_ADO_NO_AND": {
+  "skill": "ENGL.G4.LANGUA.T5_WORD_CLASSES_ADJECTI.ADJECTIVE_ORDER",
+  "error": "Joins two adjectives with and or a comma.",
+  "example": {
+   "question": "a ___ table",
+   "wrong_answer": "big and round",
+   "correct_answer": "big round"
+  },
+  "cause": "Copies the way two things are joined in speech.",
+  "reveals": "A question like \"a ___ table\" with \"big and round\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"big round\", not \"big and round\".",
+  "feedback": "Two describing words before a noun need no and and no comma: a big round table.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PART_MIX": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+  "error": "Puts the end of the story at the beginning.",
+  "example": {
+   "question": "Which part tells how the story ends?",
+   "wrong_answer": "the beginning",
+   "correct_answer": "the end"
+  },
+  "cause": "Does not know what each part does.",
+  "reveals": "A question like \"Which part tells how the story ends?\" with \"the beginning\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the end\", not \"the beginning\".",
+  "feedback": "The beginning introduces people and place, the middle tells what happens, and the end tells how it finishes.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_SETTING_CHARACTER": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+  "error": "Mixes up setting and characters.",
+  "example": {
+   "question": "Which tells where and when a story happens?",
+   "wrong_answer": "the characters",
+   "correct_answer": "the setting"
+  },
+  "cause": "Uses the two words as if they meant the same.",
+  "reveals": "A question like \"Which tells where and when a story happens?\" with \"the characters\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the setting\", not \"the characters\".",
+  "feedback": "Characters are the people or animals in the story. The setting is where and when it happens.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_PROBLEM_END": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+  "error": "Places the problem at the end instead of the middle.",
+  "example": {
+   "question": "Where does the problem of a story usually come?",
+   "wrong_answer": "at the end",
+   "correct_answer": "in the middle"
+  },
+  "cause": "Thinks a story needs the problem last.",
+  "reveals": "A question like \"Where does the problem of a story usually come?\" with \"at the end\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"in the middle\", not \"at the end\".",
+  "feedback": "The problem usually starts in the middle. The end tells how it was solved.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS.M_NAR_TITLE": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.NARRATIVE_PARTS",
+  "error": "Thinks the title tells the whole story.",
+  "example": {
+   "question": "What does a title do?",
+   "wrong_answer": "tells the whole story",
+   "correct_answer": "gives a short name to the story"
+  },
+  "cause": "Does not know the purpose of a title.",
+  "reveals": "A question like \"What does a title do?\" with \"tells the whole story\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"gives a short name to the story\", not \"tells the whole story\".",
+  "feedback": "A title is a short name that hints at the story. It does not tell all of it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_REVERSED": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Puts the sentences in the reverse order.",
+  "example": {
+   "question": "Put the four sentences in order.",
+   "wrong_answer": "D C B A",
+   "correct_answer": "A B C D"
+  },
+  "cause": "Starts from the sentence that sounds like an ending.",
+  "reveals": "A question like \"Put the four sentences in order.\" with \"D C B A\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"A B C D\", not \"D C B A\".",
+  "feedback": "Start with the sentence that introduces the topic and read forward.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_ORDER_SWAPPED": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Swaps two neighbouring sentences.",
+  "example": {
+   "question": "Put the four sentences in order.",
+   "wrong_answer": "A C B D",
+   "correct_answer": "A B C D"
+  },
+  "cause": "Does not check the sequence words (first, then, next).",
+  "reveals": "A question like \"Put the four sentences in order.\" with \"A C B D\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"A B C D\", not \"A C B D\".",
+  "feedback": "Look at words like first, then, next and finally to see the order.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PAR_TOPIC_DETAIL": {
+  "skill": "ENGL.G4.WRITIN.T5_CREATIVE_WRITING.PARAGRAPH_ORDER",
+  "error": "Chooses a detail as the topic sentence.",
+  "example": {
+   "question": "Which is the topic sentence?",
+   "wrong_answer": "a detail",
+   "correct_answer": "the sentence that tells what the paragraph is about"
+  },
+  "cause": "Picks the first sentence the eye meets.",
+  "reveals": "A question like \"Which is the topic sentence?\" with \"a detail\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the sentence that tells what the paragraph is about\", not \"a detail\".",
+  "feedback": "The topic sentence names what the whole paragraph is about. The other sentences give details.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
+  "error": "Picks an internet word that is near in meaning but wrong.",
+  "example": {
+   "question": "The messages you receive are kept in your ___.",
+   "wrong_answer": "attachment",
+   "correct_answer": "inbox"
+  },
+  "cause": "Mixes up the parts of an email.",
+  "reveals": "A question like \"The messages you receive are kept in your ___.\" with \"attachment\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"inbox\", not \"attachment\".",
+  "feedback": "The inbox is where received emails are kept. An attachment is a file sent with an email.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_PASSWORD_SHARED": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
+  "error": "Thinks a password can be shared with friends.",
+  "example": {
+   "question": "A password should be shared with ___.",
+   "wrong_answer": "friends",
+   "correct_answer": "no one except a trusted adult"
+  },
+  "cause": "Does not know why a password is secret.",
+  "reveals": "A question like \"A password should be shared with ___.\" with \"friends\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"no one except a trusted adult\", not \"friends\".",
+  "feedback": "A password is secret. Share it with no one, except a trusted adult such as a parent.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS.M_NET_STRANGER": {
+  "skill": "ENGL.G4.LISTEN.T6_PRONUNCIATION_AND_VO.INTERNET_WORDS",
+  "error": "Replies to or trusts a stranger online.",
+  "example": {
+   "question": "A stranger online asks where you live. You should ___.",
+   "wrong_answer": "tell him",
+   "correct_answer": "not answer and tell an adult"
+  },
+  "cause": "Believes a friendly message is safe.",
+  "reveals": "A question like \"A stranger online asks where you live. You should ___.\" with \"tell him\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"not answer and tell an adult\", not \"tell him\".",
+  "feedback": "Never give personal information to a stranger online. Tell a trusted adult.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_COUNT": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
+  "error": "Uses much with things that can be counted.",
+  "example": {
+   "question": "There are not ___ chairs.",
+   "wrong_answer": "much",
+   "correct_answer": "many"
+  },
+  "cause": "Treats many and much as the same word.",
+  "reveals": "A question like \"There are not ___ chairs.\" with \"much\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"many\", not \"much\".",
+  "feedback": "Use many with things you can count (chairs, books). Use much with things you cannot count (water, sugar).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MANY_UNCOUNT": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
+  "error": "Uses many with things that cannot be counted.",
+  "example": {
+   "question": "There is not ___ water.",
+   "wrong_answer": "many",
+   "correct_answer": "much"
+  },
+  "cause": "Over-corrects after learning many.",
+  "reveals": "A question like \"There is not ___ water.\" with \"many\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"much\", not \"many\".",
+  "feedback": "You cannot count water one by one, so use much, not many.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_FEW_UNCOUNT": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
+  "error": "Uses few with something uncountable, or little with something countable.",
+  "example": {
+   "question": "We have ___ sugar left.",
+   "wrong_answer": "few",
+   "correct_answer": "little"
+  },
+  "cause": "Does not link few and little to what is counted.",
+  "reveals": "A question like \"We have ___ sugar left.\" with \"few\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"little\", not \"few\".",
+  "feedback": "Few goes with things you can count: few eggs. Little goes with things you cannot count: little sugar.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT.M_QUA_MUCH_IN_STATEMENT": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.COUNT_UNCOUNT",
+  "error": "Uses much in a plain positive statement.",
+  "example": {
+   "question": "She has ___ friends.",
+   "wrong_answer": "much",
+   "correct_answer": "many (or a lot of)"
+  },
+  "cause": "Does not know that much is mostly kept for questions and negatives.",
+  "reveals": "A question like \"She has ___ friends.\" with \"much\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"many (or a lot of)\", not \"much\".",
+  "feedback": "In a positive sentence we usually say a lot of or many: She has many friends.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ANY_STATEMENT": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
+  "error": "Uses any in a positive sentence.",
+  "example": {
+   "question": "I have ___ sugar.",
+   "wrong_answer": "any",
+   "correct_answer": "some"
+  },
+  "cause": "Does not tell positive from negative sentences.",
+  "reveals": "A question like \"I have ___ sugar.\" with \"any\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"some\", not \"any\".",
+  "feedback": "Use some in a positive sentence: I have some sugar. Use any in a question or after not: I do not have any sugar.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_SOME_NEGATIVE": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
+  "error": "Uses some after not.",
+  "example": {
+   "question": "I do not have ___ money.",
+   "wrong_answer": "some",
+   "correct_answer": "any"
+  },
+  "cause": "Keeps one word for all sentences.",
+  "reveals": "A question like \"I do not have ___ money.\" with \"some\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"any\", not \"some\".",
+  "feedback": "After not or in a question, use any: I do not have any money. Do you have any money?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_ENOUGH_AFTER": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
+  "error": "Puts enough after the noun.",
+  "example": {
+   "question": "We have ___ for everyone.",
+   "wrong_answer": "food enough",
+   "correct_answer": "enough food"
+  },
+  "cause": "Kiswahili puts \"enough\" (tosha) after the noun.",
+  "reveals": "A question like \"We have ___ for everyone.\" with \"food enough\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"enough food\", not \"food enough\".",
+  "feedback": "In English enough comes before the noun: enough food.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY.M_QSA_A_LOT_NOUN": {
+  "skill": "ENGL.G4.LANGUA.T6_WORD_CLASS_DETERMINE.SOME_ANY",
+  "error": "Writes a lot before the noun without of.",
+  "example": {
+   "question": "There are ___ mangoes.",
+   "wrong_answer": "a lot mangoes",
+   "correct_answer": "a lot of mangoes"
+  },
+  "cause": "Leaves out the small word of.",
+  "reveals": "A question like \"There are ___ mangoes.\" with \"a lot mangoes\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a lot of mangoes\", not \"a lot mangoes\".",
+  "feedback": "A lot needs of before the noun: a lot of mangoes.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_REVERSED": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+  "error": "Gives the pictures in reverse.",
+  "example": {
+   "question": "Which order tells the story?",
+   "wrong_answer": "D, C, B, A",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "Starts from the last event seen.",
+  "reveals": "A question like \"Which order tells the story?\" with \"D, C, B, A\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"A, B, C, D\", not \"D, C, B, A\".",
+  "feedback": "Find the picture that starts the story and then follow what happens next.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_ORDER_SWAPPED": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+  "error": "Swaps two neighbouring pictures.",
+  "example": {
+   "question": "Which order tells the story?",
+   "wrong_answer": "A, C, B, D",
+   "correct_answer": "A, B, C, D"
+  },
+  "cause": "Does not check what must happen before what.",
+  "reveals": "A question like \"Which order tells the story?\" with \"A, C, B, D\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"A, B, C, D\", not \"A, C, B, D\".",
+  "feedback": "Ask what has to happen first for the next picture to make sense.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_TENSE": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+  "error": "Tells the picture in the present tense when the story is in the past.",
+  "example": {
+   "question": "Which sentence tells the picture?",
+   "wrong_answer": "Wafula picks a mango.",
+   "correct_answer": "Wafula picked a mango."
+  },
+  "cause": "Writes what he sees now.",
+  "reveals": "A question like \"Which sentence tells the picture?\" with \"Wafula picks a mango.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Wafula picked a mango.\", not \"Wafula picks a mango.\".",
+  "feedback": "A story written after the event uses the past tense: Wafula picked a mango.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE.M_PIC_MISMATCH": {
+  "skill": "ENGL.G4.WRITIN.T6_CREATIVE_WRITING.PICTURE_SEQUENCE",
+  "error": "Picks a sentence that does not match the picture.",
+  "example": {
+   "question": "Which sentence tells the picture?",
+   "wrong_answer": "She sold the fruit.",
+   "correct_answer": "She picked the fruit."
+  },
+  "cause": "Describes a different picture.",
+  "reveals": "A question like \"Which sentence tells the picture?\" with \"She sold the fruit.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"She picked the fruit.\", not \"She sold the fruit.\".",
+  "feedback": "Look at what the person is doing in the picture and pick the sentence that says exactly that.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_BASE_FOR_PAST": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+  "error": "Uses the plain verb for something that happened already.",
+  "example": {
+   "question": "Yesterday I ___ to the market.",
+   "wrong_answer": "go",
+   "correct_answer": "went"
+  },
+  "cause": "Kiswahili shows the past in the verb start (nilienda), so the time word seems enough.",
+  "reveals": "A question like \"Yesterday I ___ to the market.\" with \"go\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"went\", not \"go\".",
+  "feedback": "When the time is past, the verb must show it: Yesterday I went to the market.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_ED_ON_IRREGULAR": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+  "error": "Adds -ed to an irregular verb.",
+  "example": {
+   "question": "She ___ rice for lunch. (eat)",
+   "wrong_answer": "eated",
+   "correct_answer": "ate"
+  },
+  "cause": "Uses the regular rule for every verb.",
+  "reveals": "A question like \"She ___ rice for lunch. (eat)\" with \"eated\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"ate\", not \"eated\".",
+  "feedback": "Some verbs change inside: go, went; eat, ate; see, saw. They do not take -ed.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_DID_PLUS_PAST": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+  "error": "Uses did with a past form.",
+  "example": {
+   "question": "Did you ___ the film?",
+   "wrong_answer": "saw",
+   "correct_answer": "see"
+  },
+  "cause": "Marks the past twice.",
+  "reveals": "A question like \"Did you ___ the film?\" with \"saw\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"see\", not \"saw\".",
+  "feedback": "After did the verb stays plain: Did you see the film?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST.M_SPA_PAST_FOR_HABIT": {
+  "skill": "ENGL.G4.LISTEN.T7_PRONUNCIATION_AND_VO.SIMPLE_PAST",
+  "error": "Uses the past form for a fact or a habit.",
+  "example": {
+   "question": "The sun ___ in the east.",
+   "wrong_answer": "rose",
+   "correct_answer": "rises"
+  },
+  "cause": "Thinks a story always needs the past.",
+  "reveals": "A question like \"The sun ___ in the east.\" with \"rose\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"rises\", not \"rose\".",
+  "feedback": "For a fact or something that always happens, use the present: The sun rises in the east.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_BE": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+  "error": "Leaves out am, is or are.",
+  "example": {
+   "question": "She ___ reading now.",
+   "wrong_answer": "reading",
+   "correct_answer": "is reading"
+  },
+  "cause": "Kiswahili says \"anasoma\" with no separate helping word.",
+  "reveals": "A question like \"She ___ reading now.\" with \"reading\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"is reading\", not \"reading\".",
+  "feedback": "An action happening now needs am, is or are before the -ing word: She is reading.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_WRONG_BE": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+  "error": "Uses the wrong form of be.",
+  "example": {
+   "question": "The children ___ playing.",
+   "wrong_answer": "is",
+   "correct_answer": "are"
+  },
+  "cause": "Does not match the helping word to the subject.",
+  "reveals": "A question like \"The children ___ playing.\" with \"is\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"are\", not \"is\".",
+  "feedback": "Use am with I, is with one person or thing, and are with you, we, they and plural nouns.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_NO_ING": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+  "error": "Writes the plain verb after is or are.",
+  "example": {
+   "question": "He is ___ now.",
+   "wrong_answer": "play",
+   "correct_answer": "playing"
+  },
+  "cause": "Forgets that the verb takes -ing after the helping word.",
+  "reveals": "A question like \"He is ___ now.\" with \"play\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"playing\", not \"play\".",
+  "feedback": "After am, is or are, the verb ends in -ing: He is playing.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE.M_PRP_ING_SPELLING": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PRESENT_PROGRESSIVE",
+  "error": "Spells the -ing form wrongly.",
+  "example": {
+   "question": "She is ___ a cake.",
+   "wrong_answer": "makeing",
+   "correct_answer": "making"
+  },
+  "cause": "Does not drop the silent e or double the last consonant.",
+  "reveals": "A question like \"She is ___ a cake.\" with \"makeing\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"making\", not \"makeing\".",
+  "feedback": "Drop the silent e before -ing (make, making). For short words with one vowel, double the last letter (run, running).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PRESENT_FOR_PAST": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
+  "error": "Uses is or are for an action that was going on in the past.",
+  "example": {
+   "question": "When I arrived, Mum ___ cooking.",
+   "wrong_answer": "is",
+   "correct_answer": "was"
+  },
+  "cause": "Does not follow the time words of the sentence.",
+  "reveals": "A question like \"When I arrived, Mum ___ cooking.\" with \"is\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"was\", not \"is\".",
+  "feedback": "For something that was going on in the past, use was or were: Mum was cooking.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_WAS_WERE": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
+  "error": "Mixes up was and were.",
+  "example": {
+   "question": "The boys ___ running.",
+   "wrong_answer": "was",
+   "correct_answer": "were"
+  },
+  "cause": "Does not match the helping word to the subject.",
+  "reveals": "A question like \"The boys ___ running.\" with \"was\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"were\", not \"was\".",
+  "feedback": "Use was with I and one person or thing. Use were with you, we, they and plural nouns.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_PAST_FORM": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
+  "error": "Writes was or were with the past form of the verb.",
+  "example": {
+   "question": "He was ___ his lunch.",
+   "wrong_answer": "ate",
+   "correct_answer": "eating"
+  },
+  "cause": "Thinks the verb must also show the past.",
+  "reveals": "A question like \"He was ___ his lunch.\" with \"ate\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"eating\", not \"ate\".",
+  "feedback": "After was or were, the verb ends in -ing: He was eating his lunch.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE.M_PAP_NO_ING": {
+  "skill": "ENGL.G4.LANGUA.T7_WORD_CLASSES_VERB_AS.PAST_PROGRESSIVE",
+  "error": "Writes the plain verb after was or were.",
+  "example": {
+   "question": "They were ___ football.",
+   "wrong_answer": "play",
+   "correct_answer": "playing"
+  },
+  "cause": "Forgets the -ing ending.",
+  "reveals": "A question like \"They were ___ football.\" with \"play\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"playing\", not \"play\".",
+  "feedback": "After was or were, the main verb takes -ing: They were playing football.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_CAPITAL_START": {
+  "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+  "error": "Does not start a sentence with a capital letter.",
+  "example": {
+   "question": "Which is right? we went to the lake.",
+   "wrong_answer": "we went to the lake.",
+   "correct_answer": "We went to the lake."
+  },
+  "cause": "Writes the way a message is typed quickly.",
+  "reveals": "A question like \"Which is right? we went to the lake.\" with \"we went to the lake.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"We went to the lake.\", not \"we went to the lake.\".",
+  "feedback": "Every sentence starts with a capital letter.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NO_FULL_STOP": {
+  "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+  "error": "Leaves out the full stop at the end of a statement.",
+  "example": {
+   "question": "Which is right? Mum is at work",
+   "wrong_answer": "Mum is at work",
+   "correct_answer": "Mum is at work."
+  },
+  "cause": "Does not see where a sentence ends.",
+  "reveals": "A question like \"Which is right? Mum is at work\" with \"Mum is at work\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Mum is at work.\", not \"Mum is at work\".",
+  "feedback": "A telling sentence ends with a full stop.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_CAPITAL_MID": {
+  "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+  "error": "Writes a capital letter in the middle of a sentence for an ordinary word.",
+  "example": {
+   "question": "Which is right? My Mother went to the Market.",
+   "wrong_answer": "My Mother went to the Market.",
+   "correct_answer": "My mother went to the market."
+  },
+  "cause": "Thinks important words need capitals.",
+  "reveals": "A question like \"Which is right? My Mother went to the Market.\" with \"My Mother went to the Market.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"My mother went to the market.\", not \"My Mother went to the Market.\".",
+  "feedback": "Only the first word of a sentence, names and I take a capital. Mother and market are ordinary words.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_NAME_LOWER": {
+  "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+  "error": "Writes the name of a person or place with a small letter.",
+  "example": {
+   "question": "Which is right? we live in nairobi.",
+   "wrong_answer": "We live in nairobi.",
+   "correct_answer": "We live in Nairobi."
+  },
+  "cause": "Does not see a name as special.",
+  "reveals": "A question like \"Which is right? we live in nairobi.\" with \"We live in nairobi.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"We live in Nairobi.\", not \"We live in nairobi.\".",
+  "feedback": "Names of people, places and days begin with a capital letter: Nairobi, Wanjiru, Monday.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS.M_PUN_I_LOWER": {
+  "skill": "ENGL.G4.WRITIN.T7_MECHANICS_OF_WRITING.CAPITALS_FULL_STOPS",
+  "error": "Writes I as a small letter.",
+  "example": {
+   "question": "Which is right? Today i played football.",
+   "wrong_answer": "Today i played football.",
+   "correct_answer": "Today I played football."
+  },
+  "cause": "Types i in a phone message.",
+  "reveals": "A question like \"Which is right? Today i played football.\" with \"Today i played football.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Today I played football.\", not \"Today i played football.\".",
+  "feedback": "The word I always takes a capital letter.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
+  "error": "Picks a farm word that is near in meaning but wrong.",
+  "example": {
+   "question": "We ___ the maize when it is ripe.",
+   "wrong_answer": "plant",
+   "correct_answer": "harvest"
+  },
+  "cause": "Mixes up the steps of farming.",
+  "reveals": "A question like \"We ___ the maize when it is ripe.\" with \"plant\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"harvest\", not \"plant\".",
+  "feedback": "Planting comes first. Harvesting is gathering the crop when it is ripe.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_LIVESTOCK_CROPS": {
+  "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
+  "error": "Mixes up livestock and crops.",
+  "example": {
+   "question": "Cows, goats and sheep are ___.",
+   "wrong_answer": "crops",
+   "correct_answer": "livestock"
+  },
+  "cause": "Treats all farm things as one group.",
+  "reveals": "A question like \"Cows, goats and sheep are ___.\" with \"crops\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"livestock\", not \"crops\".",
+  "feedback": "Livestock are farm animals. Crops are plants grown for food.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS.M_FRM_FERTILISER": {
+  "skill": "ENGL.G4.LISTEN.T8_PRONUNCIATION_AND_VO.FARM_WORDS",
+  "error": "Thinks fertiliser is a pest killer.",
+  "example": {
+   "question": "___ makes the soil richer so that crops grow well.",
+   "wrong_answer": "Pesticide",
+   "correct_answer": "Fertiliser"
+  },
+  "cause": "Does not know the two products.",
+  "reveals": "A question like \"___ makes the soil richer so that crops grow well.\" with \"Pesticide\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Fertiliser\", not \"Pesticide\".",
+  "feedback": "Fertiliser feeds the soil. Pesticide kills pests.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_NO_APOSTROPHE": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
+  "error": "Leaves out the apostrophe.",
+  "example": {
+   "question": "I ___ like fish. (do not)",
+   "wrong_answer": "dont",
+   "correct_answer": "don't"
+  },
+  "cause": "Does not know the apostrophe marks the missing letter.",
+  "reveals": "A question like \"I ___ like fish. (do not)\" with \"dont\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"don't\", not \"dont\".",
+  "feedback": "The apostrophe takes the place of the missing letter: do not becomes don't.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_PLACE": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
+  "error": "Puts the apostrophe in the wrong place.",
+  "example": {
+   "question": "She ___ at home. (is not)",
+   "wrong_answer": "is'nt",
+   "correct_answer": "isn't"
+  },
+  "cause": "Puts it between the two words instead of where the letter is missing.",
+  "reveals": "A question like \"She ___ at home. (is not)\" with \"is'nt\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"isn't\", not \"is'nt\".",
+  "feedback": "The apostrophe goes where the letter was left out: is not becomes isn't, with the mark in place of the o.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_ITS": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
+  "error": "Writes its for it is, or it's for belonging to it.",
+  "example": {
+   "question": "___ raining today. (it is)",
+   "wrong_answer": "Its",
+   "correct_answer": "It's"
+  },
+  "cause": "Mixes up the two words that sound the same.",
+  "reveals": "A question like \"___ raining today. (it is)\" with \"Its\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"It's\", not \"Its\".",
+  "feedback": "It's means it is. Its (no apostrophe) means belonging to it: The cat licked its paw.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS.M_CON_WRONG_FORM": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.CONTRACTIONS",
+  "error": "Makes a short form that does not exist.",
+  "example": {
+   "question": "We ___ go. (will not)",
+   "wrong_answer": "willn't",
+   "correct_answer": "won't"
+  },
+  "cause": "Adds n't to every helping word.",
+  "reveals": "A question like \"We ___ go. (will not)\" with \"willn't\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"won't\", not \"willn't\".",
+  "feedback": "A few short forms change: will not is won't, can not is can't.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DOUBLE": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
+  "error": "Uses two negative words together.",
+  "example": {
+   "question": "I do not have ___ pen.",
+   "wrong_answer": "no",
+   "correct_answer": "a"
+  },
+  "cause": "Copies speech where two negatives add emphasis.",
+  "reveals": "A question like \"I do not have ___ pen.\" with \"no\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"a\", not \"no\".",
+  "feedback": "In English one negative is enough: I do not have a pen, or I have no pen.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_NO_DO": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
+  "error": "Writes not before the verb with no helping word.",
+  "example": {
+   "question": "She ___ like milk.",
+   "wrong_answer": "not",
+   "correct_answer": "does not"
+  },
+  "cause": "Kiswahili puts a negative in the verb itself (hapendi).",
+  "reveals": "A question like \"She ___ like milk.\" with \"not\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"does not\", not \"not\".",
+  "feedback": "In English use do not or does not before the verb: She does not like milk.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_VERB_S": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
+  "error": "Keeps -s or -ed on the verb after does not or did not.",
+  "example": {
+   "question": "He does not ___ meat.",
+   "wrong_answer": "eats",
+   "correct_answer": "eat"
+  },
+  "cause": "Marks the verb twice.",
+  "reveals": "A question like \"He does not ___ meat.\" with \"eats\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"eat\", not \"eats\".",
+  "feedback": "After does not and did not, the verb stays plain: He does not eat meat.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS.M_NEG_DO_WITH_BE": {
+  "skill": "ENGL.G4.LANGUA.T8_WORD_CLASSES.NEGATIVE_STATEMENTS",
+  "error": "Uses do not with am, is or are.",
+  "example": {
+   "question": "I ___ tired.",
+   "wrong_answer": "do not",
+   "correct_answer": "am not"
+  },
+  "cause": "Uses do not for every negative.",
+  "reveals": "A question like \"I ___ tired.\" with \"do not\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"am not\", not \"do not\".",
+  "feedback": "With am, is and are, put not after the helping word: I am not tired.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_ADJ_FOR_ADV": {
+  "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
+  "error": "Uses an adjective after the verb where an adverb is needed.",
+  "example": {
+   "question": "She sings ___.",
+   "wrong_answer": "beautiful",
+   "correct_answer": "beautifully"
+  },
+  "cause": "Kiswahili uses the same word for both in many sentences.",
+  "reveals": "A question like \"She sings ___.\" with \"beautiful\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"beautifully\", not \"beautiful\".",
+  "feedback": "A word that tells how someone does something is an adverb. Many adverbs end in -ly: sings beautifully.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_KIND_MIX": {
+  "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
+  "error": "Gives the wrong kind to an adverb of time, place or manner.",
+  "example": {
+   "question": "Which kind of adverb is \"yesterday\"?",
+   "wrong_answer": "manner",
+   "correct_answer": "time"
+  },
+  "cause": "Does not ask the question the adverb answers.",
+  "reveals": "A question like \"Which kind of adverb is \"yesterday\"?\" with \"manner\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"time\", not \"manner\".",
+  "feedback": "Manner answers how, time answers when, place answers where. Yesterday tells when.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_GOOD_WELL": {
+  "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
+  "error": "Uses good where well is needed.",
+  "example": {
+   "question": "He plays football ___.",
+   "wrong_answer": "good",
+   "correct_answer": "well"
+  },
+  "cause": "Does not know that good is an adjective.",
+  "reveals": "A question like \"He plays football ___.\" with \"good\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"well\", not \"good\".",
+  "feedback": "Good describes a noun (a good player). Well tells how something is done (plays well).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS.M_ADV_FASTLY": {
+  "skill": "ENGL.G4.LANGUA.T9_WORD_CLASSES_ADVERBS.ADVERBS",
+  "error": "Adds -ly to fast, hard or late.",
+  "example": {
+   "question": "The bus goes ___.",
+   "wrong_answer": "fastly",
+   "correct_answer": "fast"
+  },
+  "cause": "Over-uses the -ly rule.",
+  "reveals": "A question like \"The bus goes ___.\" with \"fastly\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"fast\", not \"fastly\".",
+  "feedback": "Fast, hard and late are adverbs already. We say runs fast and works hard.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_NO_COMMA_LIST": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
+  "error": "Leaves out the commas in a list.",
+  "example": {
+   "question": "Which is right? Mama bought rice beans and maize.",
+   "wrong_answer": "Mama bought rice beans and maize.",
+   "correct_answer": "Mama bought rice, beans and maize."
+  },
+  "cause": "Reads the list as one run of words.",
+  "reveals": "A question like \"Which is right? Mama bought rice beans and maize.\" with \"Mama bought rice beans and maize.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Mama bought rice, beans and maize.\", not \"Mama bought rice beans and maize.\".",
+  "feedback": "In a list, put a comma between the items. Use and before the last one.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_AFTER_LAST": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
+  "error": "Puts a comma after the last item.",
+  "example": {
+   "question": "Which is right? I like mangoes, oranges, and bananas,",
+   "wrong_answer": "I like mangoes, oranges, bananas,",
+   "correct_answer": "I like mangoes, oranges and bananas."
+  },
+  "cause": "Thinks every item needs a comma after it.",
+  "reveals": "A question like \"Which is right? I like mangoes, oranges, and bananas,\" with \"I like mangoes, oranges, bananas,\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"I like mangoes, oranges and bananas.\", not \"I like mangoes, oranges, bananas,\".",
+  "feedback": "The last item has no comma after it. Put and before it and end with a full stop.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_SPLIT_SENTENCE": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
+  "error": "Puts a comma between who and what they do.",
+  "example": {
+   "question": "Which is right? Wafula, kicked the ball.",
+   "wrong_answer": "Wafula, kicked the ball.",
+   "correct_answer": "Wafula kicked the ball."
+  },
+  "cause": "Uses a comma as a breathing mark.",
+  "reveals": "A question like \"Which is right? Wafula, kicked the ball.\" with \"Wafula, kicked the ball.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Wafula kicked the ball.\", not \"Wafula, kicked the ball.\".",
+  "feedback": "Do not put a comma between a person and what the person did. A comma is not a pause mark.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS.M_COM_FULL_STOP_LIST": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.COMMAS",
+  "error": "Uses full stops between the items of a list.",
+  "example": {
+   "question": "Which is right? We saw lions. zebras. and giraffes.",
+   "wrong_answer": "We saw lions. zebras. and giraffes.",
+   "correct_answer": "We saw lions, zebras and giraffes."
+  },
+  "cause": "Does not know the comma has its own job in lists.",
+  "reveals": "A question like \"Which is right? We saw lions. zebras. and giraffes.\" with \"We saw lions. zebras. and giraffes.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"We saw lions, zebras and giraffes.\", not \"We saw lions. zebras. and giraffes.\".",
+  "feedback": "A full stop ends a whole sentence. Items in one list are separated by commas.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_FULL_STOP": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
+  "error": "Ends a question with a full stop.",
+  "example": {
+   "question": "Which is right? Where is the book.",
+   "wrong_answer": "Where is the book.",
+   "correct_answer": "Where is the book?"
+  },
+  "cause": "Reads the question aloud with a rising voice but writes the usual end mark.",
+  "reveals": "A question like \"Which is right? Where is the book.\" with \"Where is the book.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Where is the book?\", not \"Where is the book.\".",
+  "feedback": "A question ends with a question mark.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_STATEMENT": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
+  "error": "Ends a statement with a question mark because it has a question word in it.",
+  "example": {
+   "question": "Which is right? I do not know where he lives?",
+   "wrong_answer": "I do not know where he lives?",
+   "correct_answer": "I do not know where he lives."
+  },
+  "cause": "Sees the word where and thinks a question mark is needed.",
+  "reveals": "A question like \"Which is right? I do not know where he lives?\" with \"I do not know where he lives?\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"I do not know where he lives.\", not \"I do not know where he lives?\".",
+  "feedback": "A sentence that tells something ends with a full stop, even if it has a word like where in it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_COMMA": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
+  "error": "Ends a question with a comma.",
+  "example": {
+   "question": "Which is right? Are you hungry,",
+   "wrong_answer": "Are you hungry,",
+   "correct_answer": "Are you hungry?"
+  },
+  "cause": "Does not know a comma cannot end a sentence.",
+  "reveals": "A question like \"Which is right? Are you hungry,\" with \"Are you hungry,\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Are you hungry?\", not \"Are you hungry,\".",
+  "feedback": "A comma never ends a sentence. A question ends with a question mark.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS.M_QMK_NO_MARK": {
+  "skill": "ENGL.G4.WRITIN.T9_PUNCTUATION.QUESTION_MARKS",
+  "error": "Leaves the end mark out.",
+  "example": {
+   "question": "Which is right? What is your name",
+   "wrong_answer": "What is your name",
+   "correct_answer": "What is your name?"
+  },
+  "cause": "Forgets the mark in quick writing.",
+  "reveals": "A question like \"Which is right? What is your name\" with \"What is your name\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"What is your name?\", not \"What is your name\".",
+  "feedback": "Every sentence needs an end mark. A question needs a question mark.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
+  "error": "Picks a hygiene word that is near in meaning but wrong.",
+  "example": {
+   "question": "Washing your hands kills ___ that cause diseases.",
+   "wrong_answer": "rubbish",
+   "correct_answer": "germs"
+  },
+  "cause": "Mixes up words in the same topic.",
+  "reveals": "A question like \"Washing your hands kills ___ that cause diseases.\" with \"rubbish\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"germs\", not \"rubbish\".",
+  "feedback": "Germs are tiny living things that can cause disease. Rubbish is waste.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_DISINFECT": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
+  "error": "Thinks disinfect means to make something smell nice.",
+  "example": {
+   "question": "We ___ the toilet with a strong cleaner to kill germs.",
+   "wrong_answer": "perfume",
+   "correct_answer": "disinfect"
+  },
+  "cause": "Does not know the meaning.",
+  "reveals": "A question like \"We ___ the toilet with a strong cleaner to kill germs.\" with \"perfume\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"disinfect\", not \"perfume\".",
+  "feedback": "To disinfect is to kill germs on a surface.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS.M_HYG_LATRINE": {
+  "skill": "ENGL.G4.LISTEN.T10_PRONUNCIATION_AND_VO.HYGIENE_WORDS",
+  "error": "Mixes up latrine and drainage.",
+  "example": {
+   "question": "A ___ is a place to dispose of human waste.",
+   "wrong_answer": "drainage",
+   "correct_answer": "latrine"
+  },
+  "cause": "Does not know the words.",
+  "reveals": "A question like \"A ___ is a place to dispose of human waste.\" with \"drainage\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"latrine\", not \"drainage\".",
+  "feedback": "A latrine is for human waste. Drainage carries away dirty water.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BUT_FOR_AND": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Uses but where the two parts agree.",
+  "example": {
+   "question": "Ali likes tea ___ coffee.",
+   "wrong_answer": "but",
+   "correct_answer": "and"
+  },
+  "cause": "Thinks every joining word is but.",
+  "reveals": "A question like \"Ali likes tea ___ coffee.\" with \"but\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"and\", not \"but\".",
+  "feedback": "Use and to add one idea to another. Use but when the two ideas go against each other.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_BECAUSE_SO": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Swaps because and so.",
+  "example": {
+   "question": "It was raining, ___ we stayed inside.",
+   "wrong_answer": "because",
+   "correct_answer": "so"
+  },
+  "cause": "Mixes up a reason with a result.",
+  "reveals": "A question like \"It was raining, ___ we stayed inside.\" with \"because\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"so\", not \"because\".",
+  "feedback": "Because gives the reason. So gives the result. The rain is the reason; staying inside is the result.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_BUT": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Uses and where the two ideas go against each other.",
+  "example": {
+   "question": "I wanted to play, ___ I was tired.",
+   "wrong_answer": "and",
+   "correct_answer": "but"
+  },
+  "cause": "Uses and as the all-purpose joining word.",
+  "reveals": "A question like \"I wanted to play, ___ I was tired.\" with \"and\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"but\", not \"and\".",
+  "feedback": "When the second idea goes against the first, use but, not and.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_AND_FOR_OR": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Uses and where there is a choice.",
+  "example": {
+   "question": "Would you like tea ___ juice?",
+   "wrong_answer": "and",
+   "correct_answer": "or"
+  },
+  "cause": "Does not hear the choice.",
+  "reveals": "A question like \"Would you like tea ___ juice?\" with \"and\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"or\", not \"and\".",
+  "feedback": "To offer a choice use or. And joins two things that are both there.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_OR_FOR_AND": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Uses or where both things happen.",
+  "example": {
+   "question": "Mama bought rice ___ beans.",
+   "wrong_answer": "or",
+   "correct_answer": "and"
+  },
+  "cause": "Does not hear the choice in or.",
+  "reveals": "A question like \"Mama bought rice ___ beans.\" with \"or\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"and\", not \"or\".",
+  "feedback": "Or shows a choice between two things. And joins two things that are both there.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS.M_CNJ_DOUBLE": {
+  "skill": "ENGL.G4.LANGUA.T10_WORD_CLASS_CONJUNCTI.CONJUNCTIONS",
+  "error": "Uses two joining words for one link.",
+  "example": {
+   "question": "Although it was late, ___ we went on.",
+   "wrong_answer": "but",
+   "correct_answer": "no joining word"
+  },
+  "cause": "Copies the two-word pattern of speech.",
+  "reveals": "A question like \"Although it was late, ___ we went on.\" with \"but\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"no joining word\", not \"but\".",
+  "feedback": "One joining word is enough between two ideas. Use although or but, not both.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_TELLS_STORY": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+  "error": "Writes what happened instead of what the thing is like.",
+  "example": {
+   "question": "Which sentence is part of a description of a market?",
+   "wrong_answer": "Yesterday I went to the market and bought a hat.",
+   "correct_answer": "The market is noisy and smells of fresh fruit."
+  },
+  "cause": "Confuses a description with a story.",
+  "reveals": "A question like \"Which sentence is part of a description of a market?\" with \"Yesterday I went to the market and bought a hat.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"The market is noisy and smells of fresh fruit.\", not \"Yesterday I went to the market and bought a hat.\".",
+  "feedback": "A description tells what something looks, sounds, smells, feels or tastes like. A story tells what happened.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_ONE_SENSE": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+  "error": "Uses only what can be seen.",
+  "example": {
+   "question": "Which sentence uses a sense other than sight?",
+   "wrong_answer": "The market is big.",
+   "correct_answer": "The market smells of fresh fruit."
+  },
+  "cause": "Thinks describing means describing how it looks.",
+  "reveals": "A question like \"Which sentence uses a sense other than sight?\" with \"The market is big.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"The market smells of fresh fruit.\", not \"The market is big.\".",
+  "feedback": "Use all the senses: sight, hearing, smell, touch and taste.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS.M_DES_PART_MIX": {
+  "skill": "ENGL.G4.WRITIN.T10_CREATIVE_WRITING.DESCRIPTIVE_PARTS",
+  "error": "Mixes up the introduction and the conclusion.",
+  "example": {
+   "question": "Which part names what you will describe?",
+   "wrong_answer": "the conclusion",
+   "correct_answer": "the introduction"
+  },
+  "cause": "Does not know the parts.",
+  "reveals": "A question like \"Which part names what you will describe?\" with \"the conclusion\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the introduction\", not \"the conclusion\".",
+  "feedback": "The introduction says what you are going to describe. The conclusion ends with a feeling or a last thought.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
+  "error": "Picks a sports word that is near in meaning but wrong.",
+  "example": {
+   "question": "The ___ blows the whistle to start the match.",
+   "wrong_answer": "goalkeeper",
+   "correct_answer": "referee"
+  },
+  "cause": "Mixes up the people in a game.",
+  "reveals": "A question like \"The ___ blows the whistle to start the match.\" with \"goalkeeper\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"referee\", not \"goalkeeper\".",
+  "feedback": "The referee controls the game. The goalkeeper guards the goal.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_TROPHY_TOURNAMENT": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
+  "error": "Mixes up trophy and tournament.",
+  "example": {
+   "question": "Our team won the ___ at the end of the tournament.",
+   "wrong_answer": "tournament",
+   "correct_answer": "trophy"
+  },
+  "cause": "Does not know the two words.",
+  "reveals": "A question like \"Our team won the ___ at the end of the tournament.\" with \"tournament\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"trophy\", not \"tournament\".",
+  "feedback": "A tournament is a series of games. A trophy is the prize.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS.M_SPT_OPPONENT_TEAMMATE": {
+  "skill": "ENGL.G4.LISTEN.T11_PRONUNCIATION_AND_VO.SPORTS_WORDS",
+  "error": "Mixes up opponent and teammate.",
+  "example": {
+   "question": "The player on the other team is my ___.",
+   "wrong_answer": "teammate",
+   "correct_answer": "opponent"
+  },
+  "cause": "Does not know the words.",
+  "reveals": "A question like \"The player on the other team is my ___.\" with \"teammate\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"opponent\", not \"teammate\".",
+  "feedback": "An opponent plays against you. A teammate plays with you.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHO_FOR_WHAT": {
+  "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+  "error": "Uses who for a thing and what for a person.",
+  "example": {
+   "question": "___ is your teacher?",
+   "wrong_answer": "What",
+   "correct_answer": "Who"
+  },
+  "cause": "Does not link the question word to the kind of answer.",
+  "reveals": "A question like \"___ is your teacher?\" with \"What\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Who\", not \"What\".",
+  "feedback": "Who asks about a person. What asks about a thing.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHERE_FOR_WHEN": {
+  "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+  "error": "Uses where for a time and when for a place.",
+  "example": {
+   "question": "___ do we start? At nine o'clock.",
+   "wrong_answer": "Where",
+   "correct_answer": "When"
+  },
+  "cause": "Does not listen to the answer.",
+  "reveals": "A question like \"___ do we start? At nine o'clock.\" with \"Where\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"When\", not \"Where\".",
+  "feedback": "When asks about time. Where asks about a place. Why asks for a reason.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_NO_INVERSION": {
+  "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+  "error": "Keeps the statement order in a question.",
+  "example": {
+   "question": "Where ___ going?",
+   "wrong_answer": "you are",
+   "correct_answer": "are you"
+  },
+  "cause": "Kiswahili questions keep the same order with a question word.",
+  "reveals": "A question like \"Where ___ going?\" with \"you are\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"are you\", not \"you are\".",
+  "feedback": "In a question the helping word goes before the subject: Where are you going?",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_DO_EXTRA": {
+  "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+  "error": "Adds do to a question that already has is, are or can.",
+  "example": {
+   "question": "How ___ you?",
+   "wrong_answer": "do are",
+   "correct_answer": "are"
+  },
+  "cause": "Adds do to every question.",
+  "reveals": "A question like \"How ___ you?\" with \"do are\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"are\", not \"do are\".",
+  "feedback": "Use only one helping word. How are you? Where do you live?",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES.M_INT_WHOSE_WHOS": {
+  "skill": "ENGL.G4.LANGUA.T11_LANGUAGE_PATTERNS.INTERROGATIVES",
+  "error": "Writes who's for whose.",
+  "example": {
+   "question": "___ bag is this?",
+   "wrong_answer": "Who's",
+   "correct_answer": "Whose"
+  },
+  "cause": "Mixes up two words that sound the same.",
+  "reveals": "A question like \"___ bag is this?\" with \"Who's\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Whose\", not \"Who's\".",
+  "feedback": "Whose asks who owns something. Who's means who is.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_VOWEL_ORDER": {
+  "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
+  "error": "Swaps the vowels in ie and ei words.",
+  "example": {
+   "question": "Wanjiru is my best ___.",
+   "wrong_answer": "freind",
+   "correct_answer": "friend"
+  },
+  "cause": "Does not remember which vowel comes first.",
+  "reveals": "A question like \"Wanjiru is my best ___.\" with \"freind\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"friend\", not \"freind\".",
+  "feedback": "Check the word. Friend has ie, as in \"a friend to the end\". Learn it as a whole word.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_PHONETIC": {
+  "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
+  "error": "Spells the word as it sounds.",
+  "example": {
+   "question": "We stayed home ___ it rained.",
+   "wrong_answer": "becos",
+   "correct_answer": "because"
+  },
+  "cause": "Writes what the ear hears.",
+  "reveals": "A question like \"We stayed home ___ it rained.\" with \"becos\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"because\", not \"becos\".",
+  "feedback": "Many words are not spelt the way they sound. Learn the shape: because (be-cau-se).",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_DROPPED_LETTER": {
+  "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
+  "error": "Leaves out a letter that is not heard.",
+  "example": {
+   "question": "We have a ___ at school.",
+   "wrong_answer": "libary",
+   "correct_answer": "library"
+  },
+  "cause": "Does not say the middle letter.",
+  "reveals": "A question like \"We have a ___ at school.\" with \"libary\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"library\", not \"libary\".",
+  "feedback": "Say the word slowly in parts: li-brar-y. Do not leave out the r.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS.M_SPL_EXTRA_LETTER": {
+  "skill": "ENGL.G4.WRITIN.T11_MECHANICS_OF_WRITING.MISSPELT_WORDS",
+  "error": "Leaves out or changes letters in a long vowel group.",
+  "example": {
+   "question": "The flowers are ___.",
+   "wrong_answer": "beutiful",
+   "correct_answer": "beautiful"
+  },
+  "cause": "Mixes up the vowel group.",
+  "reveals": "A question like \"The flowers are ___.\" with \"beutiful\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"beautiful\", not \"beutiful\".",
+  "feedback": "Beautiful starts with beau, as in \"beautiful\". Look at the word again and copy its shape.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
+  "error": "Picks an environment word that is near in meaning but wrong.",
+  "example": {
+   "question": "To ___ plastic is to make it into something new.",
+   "wrong_answer": "litter",
+   "correct_answer": "recycle"
+  },
+  "cause": "Mixes up words in the same topic.",
+  "reveals": "A question like \"To ___ plastic is to make it into something new.\" with \"litter\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"recycle\", not \"litter\".",
+  "feedback": "To recycle is to make waste into something new. Litter is rubbish dropped in a public place.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_POLLUTION": {
+  "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
+  "error": "Thinks pollution is a kind of plant.",
+  "example": {
+   "question": "___ is the dirt that harms air, water or soil.",
+   "wrong_answer": "Compost",
+   "correct_answer": "Pollution"
+  },
+  "cause": "Does not know the word.",
+  "reveals": "A question like \"___ is the dirt that harms air, water or soil.\" with \"Compost\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Pollution\", not \"Compost\".",
+  "feedback": "Pollution is dirt or poison that harms the air, water or soil.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS.M_ENV_CONSERVE": {
+  "skill": "ENGL.G4.LISTEN.T12_PRONUNCIATION_AND_VO.ENVIRONMENT_WORDS",
+  "error": "Thinks conserve means to use up.",
+  "example": {
+   "question": "We should ___ water, not waste it.",
+   "wrong_answer": "pollute",
+   "correct_answer": "conserve"
+  },
+  "cause": "Does not know the word.",
+  "reveals": "A question like \"We should ___ water, not waste it.\" with \"pollute\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"conserve\", not \"pollute\".",
+  "feedback": "To conserve is to look after and use carefully.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_LITERAL": {
+  "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
+  "error": "Reads a proverb as only about its animals or things.",
+  "example": {
+   "question": "Haste makes waste means:",
+   "wrong_answer": "people who hurry waste water",
+   "correct_answer": "doing a thing too fast can spoil it"
+  },
+  "cause": "Takes the words at face value.",
+  "reveals": "A question like \"Haste makes waste means:\" with \"people who hurry waste water\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"doing a thing too fast can spoil it\", not \"people who hurry waste water\".",
+  "feedback": "A proverb is a short saying with a lesson. Ask what it teaches people.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_OPPOSITE": {
+  "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
+  "error": "Gives the opposite lesson.",
+  "example": {
+   "question": "Slow and steady wins the race means:",
+   "wrong_answer": "be fast to win",
+   "correct_answer": "keep going carefully and you will succeed"
+  },
+  "cause": "Does not read the whole proverb.",
+  "reveals": "A question like \"Slow and steady wins the race means:\" with \"be fast to win\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"keep going carefully and you will succeed\", not \"be fast to win\".",
+  "feedback": "Check the lesson against the proverb. The lesson of this one is patience.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_UNRELATED": {
+  "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
+  "error": "Picks a lesson that has nothing to do with the proverb.",
+  "example": {
+   "question": "A stitch in time saves nine means:",
+   "wrong_answer": "sewing is hard",
+   "correct_answer": "fix a small problem early to avoid a big one"
+  },
+  "cause": "Guesses from one word.",
+  "reveals": "A question like \"A stitch in time saves nine means:\" with \"sewing is hard\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"fix a small problem early to avoid a big one\", not \"sewing is hard\".",
+  "feedback": "The lesson must fit the idea of the whole proverb.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS.M_PRV_WRONG_WORD": {
+  "skill": "ENGL.G4.READIN.T12_1_INTENSIVE_READING.PROVERBS",
+  "error": "Finishes a proverb with a word that sounds right but is not.",
+  "example": {
+   "question": "Easy come, easy ___.",
+   "wrong_answer": "stay",
+   "correct_answer": "go"
+  },
+  "cause": "Remembers the idea and not the exact words.",
+  "reveals": "A question like \"Easy come, easy ___.\" with \"stay\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"go\", not \"stay\".",
+  "feedback": "A proverb always has the same words. Say the whole saying aloud.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_PAST_FORM": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+  "error": "Uses the simple past form after have or has.",
+  "example": {
+   "question": "I have ___ my lunch.",
+   "wrong_answer": "ate",
+   "correct_answer": "eaten"
+  },
+  "cause": "Does not know the past participle of irregular verbs.",
+  "reveals": "A question like \"I have ___ my lunch.\" with \"ate\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"eaten\", not \"ate\".",
+  "feedback": "After have or has use the past participle: have eaten, has gone, have seen.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_HAS_HAVE": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+  "error": "Mixes have and has.",
+  "example": {
+   "question": "She ___ finished her work.",
+   "wrong_answer": "have",
+   "correct_answer": "has"
+  },
+  "cause": "Does not match the helping word to the subject.",
+  "reveals": "A question like \"She ___ finished her work.\" with \"have\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"has\", not \"have\".",
+  "feedback": "Use has with he, she, it and one person or thing. Use have with I, you, we, they and plural nouns.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_BASE_VERB": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+  "error": "Uses the plain verb after have or has.",
+  "example": {
+   "question": "They have ___ home.",
+   "wrong_answer": "go",
+   "correct_answer": "gone"
+  },
+  "cause": "Leaves out the past participle ending.",
+  "reveals": "A question like \"They have ___ home.\" with \"go\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"gone\", not \"go\".",
+  "feedback": "After have or has the verb needs its past participle: gone, taken, written.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT.M_PPF_WITH_PAST_TIME": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PRESENT_PERFECT",
+  "error": "Uses have or has with yesterday, last week or an exact past time.",
+  "example": {
+   "question": "I ___ him yesterday.",
+   "wrong_answer": "have seen",
+   "correct_answer": "saw"
+  },
+  "cause": "Thinks have or has is simply a past marker.",
+  "reveals": "A question like \"I ___ him yesterday.\" with \"have seen\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"saw\", not \"have seen\".",
+  "feedback": "When the time is named (yesterday, last week), use the simple past: I saw him yesterday.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAD_MISSING": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
+  "error": "Uses the simple past for both events.",
+  "example": {
+   "question": "The bus ___ left before I arrived.",
+   "wrong_answer": "was",
+   "correct_answer": "had"
+  },
+  "cause": "Does not mark which event came first.",
+  "reveals": "A question like \"The bus ___ left before I arrived.\" with \"was\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"had\", not \"was\".",
+  "feedback": "The earlier of two past events takes had + participle: The bus had left before I arrived.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_HAVE_FOR_HAD": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
+  "error": "Uses have or has where had is needed.",
+  "example": {
+   "question": "When I got home, Mum ___ cooked.",
+   "wrong_answer": "has",
+   "correct_answer": "had"
+  },
+  "cause": "Does not move the helping word into the past.",
+  "reveals": "A question like \"When I got home, Mum ___ cooked.\" with \"has\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"had\", not \"has\".",
+  "feedback": "In a story about the past, use had, not have or has.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_BASE_VERB": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
+  "error": "Uses the plain verb after had.",
+  "example": {
+   "question": "She had ___ her homework.",
+   "wrong_answer": "finish",
+   "correct_answer": "finished"
+  },
+  "cause": "Forgets the past participle.",
+  "reveals": "A question like \"She had ___ her homework.\" with \"finish\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"finished\", not \"finish\".",
+  "feedback": "After had the verb is a participle: had finished, had gone.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT.M_PAF_WRONG_ORDER": {
+  "skill": "ENGL.G4.LANGUA.T12_WORD_CLASSES_VERB_AS.PAST_PERFECT",
+  "error": "Puts had on the event that happened second.",
+  "example": {
+   "question": "Which happened first? Wanjiru had left when I arrived.",
+   "wrong_answer": "I arrived",
+   "correct_answer": "Wanjiru left"
+  },
+  "cause": "Does not see that had marks the earlier event.",
+  "reveals": "A question like \"Which happened first? Wanjiru had left when I arrived.\" with \"I arrived\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Wanjiru left\", not \"I arrived\".",
+  "feedback": "The event with had happened first. Wanjiru had left, then I arrived.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_DATE": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+  "error": "Leaves the date out.",
+  "example": {
+   "question": "What does every diary entry start with?",
+   "wrong_answer": "a title",
+   "correct_answer": "the date"
+  },
+  "cause": "Thinks the diary is only for reading by the writer.",
+  "reveals": "A question like \"What does every diary entry start with?\" with \"a title\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"the date\", not \"a title\".",
+  "feedback": "A diary entry begins with the date, so you know when it happened.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_LETTER_FORMAT": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+  "error": "Writes the diary as a letter to a person.",
+  "example": {
+   "question": "Which is the best start of a diary entry?",
+   "wrong_answer": "Dear Mum, how are you?",
+   "correct_answer": "Monday, 4th March. Dear Diary,"
+  },
+  "cause": "Mixes up the friendly letter and the diary.",
+  "reveals": "A question like \"Which is the best start of a diary entry?\" with \"Dear Mum, how are you?\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"Monday, 4th March. Dear Diary,\", not \"Dear Mum, how are you?\".",
+  "feedback": "A diary is written to yourself. Begin with the date and Dear Diary, not Dear Mum.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_THIRD_PERSON": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+  "error": "Writes about himself or herself as he or she.",
+  "example": {
+   "question": "Which sentence is in the right voice?",
+   "wrong_answer": "Wanjiru woke up early.",
+   "correct_answer": "I woke up early."
+  },
+  "cause": "Writes as in a story told by someone else.",
+  "reveals": "A question like \"Which sentence is in the right voice?\" with \"Wanjiru woke up early.\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"I woke up early.\", not \"Wanjiru woke up early.\".",
+  "feedback": "A diary is about you, so write in the first person: I woke up early.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS.M_DIA_NO_FEELINGS": {
+  "skill": "ENGL.G4.WRITIN.T12_GUIDED_COMPOSITION.DIARY_PARTS",
+  "error": "Writes only a list of events, with no feelings.",
+  "example": {
+   "question": "What else does a diary entry have besides what happened?",
+   "wrong_answer": "a list of names",
+   "correct_answer": "how the writer felt"
+  },
+  "cause": "Thinks a diary is a record only.",
+  "reveals": "A question like \"What else does a diary entry have besides what happened?\" with \"a list of names\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"how the writer felt\", not \"a list of names\".",
+  "feedback": "A diary also tells how you felt: I was happy when we won.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_EARN_SAVE": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
+  "error": "Swaps earn and save.",
+  "example": {
+   "question": "Mama ___ money every month to buy a cow later.",
+   "wrong_answer": "earns",
+   "correct_answer": "saves"
+  },
+  "cause": "Does not tell getting money from keeping it.",
+  "reveals": "A question like \"Mama ___ money every month to buy a cow later.\" with \"earns\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"saves\", not \"earns\".",
+  "feedback": "To earn is to get money for work. To save is to keep money for later.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_BORROW_LEND": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
+  "error": "Swaps borrow and lend.",
+  "example": {
+   "question": "Can I ___ your pen? I will return it.",
+   "wrong_answer": "lend",
+   "correct_answer": "borrow"
+  },
+  "cause": "Does not tell who takes and who gives.",
+  "reveals": "A question like \"Can I ___ your pen? I will return it.\" with \"lend\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"borrow\", not \"lend\".",
+  "feedback": "You borrow when you take for a short time. You lend when you give for a short time.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_NEAR_MEANING": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
+  "error": "Picks a money word that is near in meaning but wrong.",
+  "example": {
+   "question": "A ___ helps a family plan how to spend its money.",
+   "wrong_answer": "price",
+   "correct_answer": "budget"
+  },
+  "cause": "Mixes up words in the same topic.",
+  "reveals": "A question like \"A ___ helps a family plan how to spend its money.\" with \"price\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"budget\", not \"price\".",
+  "feedback": "Read the whole sentence and say what the gap must mean before you choose.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS.M_MON_PRICE_CHANGE": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.MONEY_WORDS",
+  "error": "Mixes up price and change.",
+  "example": {
+   "question": "The ___ of the book is 80 shillings.",
+   "wrong_answer": "change",
+   "correct_answer": "price"
+  },
+  "cause": "Treats the money words as the same.",
+  "reveals": "A question like \"The ___ of the book is 80 shillings.\" with \"change\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"price\", not \"change\".",
+  "feedback": "The price is what something costs. Change is the money given back.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NEIGHBOUR": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
+  "error": "Picks the letter beside the silent one.",
+  "example": {
+   "question": "Which letter is silent in \"knife\"?",
+   "wrong_answer": "n",
+   "correct_answer": "k"
+  },
+  "cause": "Does not say the word slowly.",
+  "reveals": "A question like \"Which letter is silent in \"knife\"?\" with \"n\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"k\", not \"n\".",
+  "feedback": "Say the word aloud. In knife you hear n, but not k.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_NONE": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
+  "error": "Thinks every letter is sounded.",
+  "example": {
+   "question": "Which letter is silent in \"write\"?",
+   "wrong_answer": "none",
+   "correct_answer": "w"
+  },
+  "cause": "Does not know silent letters.",
+  "reveals": "A question like \"Which letter is silent in \"write\"?\" with \"none\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"w\", not \"none\".",
+  "feedback": "Some letters are written but not said. In write, the w is silent.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS.M_SIL_END_E": {
+  "skill": "ENGL.G4.LISTEN.T13_PRONUNCIATION_AND_VO.SILENT_LETTERS",
+  "error": "Thinks the silent letter is always the last letter.",
+  "example": {
+   "question": "Which letter is silent in \"lamb\"?",
+   "wrong_answer": "m",
+   "correct_answer": "b"
+  },
+  "cause": "Has learnt silent e at the end.",
+  "reveals": "A question like \"Which letter is silent in \"lamb\"?\" with \"m\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"b\", not \"m\".",
+  "feedback": "A silent letter can be anywhere. In lamb the b is silent.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_IN_ON": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
+  "error": "Mixes up in and on.",
+  "example": {
+   "question": "The cup is ___ the table.",
+   "wrong_answer": "in",
+   "correct_answer": "on"
+  },
+  "cause": "Does not picture the position.",
+  "reveals": "A question like \"The cup is ___ the table.\" with \"in\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"on\", not \"in\".",
+  "feedback": "On means touching the top of something. In means inside it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_BETWEEN_AMONG": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
+  "error": "Uses between for three or more things, or among for two.",
+  "example": {
+   "question": "The ball is ___ the two boys.",
+   "wrong_answer": "among",
+   "correct_answer": "between"
+  },
+  "cause": "Does not count the things.",
+  "reveals": "A question like \"The ball is ___ the two boys.\" with \"among\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"between\", not \"among\".",
+  "feedback": "Use between for two things and among for more than two.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_UNDER_OVER": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
+  "error": "Picks the opposite preposition.",
+  "example": {
+   "question": "The cat is ___ the bed (hiding below it).",
+   "wrong_answer": "on",
+   "correct_answer": "under"
+  },
+  "cause": "Does not picture where the thing is.",
+  "reveals": "A question like \"The cat is ___ the bed (hiding below it).\" with \"on\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"under\", not \"on\".",
+  "feedback": "Under means below something. Behind means at the back of it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION.M_PRE_FRONT_BEHIND": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_POSITION",
+  "error": "Mixes up in front of and behind.",
+  "example": {
+   "question": "Juma stood ___ Achieng at the end of the line.",
+   "wrong_answer": "in front of",
+   "correct_answer": "behind"
+  },
+  "cause": "Does not picture the line.",
+  "reveals": "A question like \"Juma stood ___ Achieng at the end of the line.\" with \"in front of\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"behind\", not \"in front of\".",
+  "feedback": "In front of means before it. Behind means after it, at the back.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_INTO": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
+  "error": "Uses to where into (going inside) is needed.",
+  "example": {
+   "question": "He ran ___ the room.",
+   "wrong_answer": "to",
+   "correct_answer": "into"
+  },
+  "cause": "Does not feel the idea of going inside.",
+  "reveals": "A question like \"He ran ___ the room.\" with \"to\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"into\", not \"to\".",
+  "feedback": "Into shows going from outside to inside a place. To shows going towards it.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_AT_FOR_TO": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
+  "error": "Uses at after go.",
+  "example": {
+   "question": "We go ___ school every day.",
+   "wrong_answer": "at",
+   "correct_answer": "to"
+  },
+  "cause": "Mixes the place and the movement words.",
+  "reveals": "A question like \"We go ___ school every day.\" with \"at\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"to\", not \"at\".",
+  "feedback": "After go use to: go to school. At tells where something is.",
+  "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_TO_HOME": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
+  "error": "Writes to before home.",
+  "example": {
+   "question": "I went ___ after school.",
+   "wrong_answer": "to home",
+   "correct_answer": "home"
+  },
+  "cause": "Copies the pattern \"go to school\".",
+  "reveals": "A question like \"I went ___ after school.\" with \"to home\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"home\", not \"to home\".",
+  "feedback": "Home needs no word before it after go: I went home.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION.M_PRD_THROUGH_ACROSS": {
+  "skill": "ENGL.G4.LANGUA.T13_WORD_CLASS_PREPOSITI.PREP_DIRECTION",
+  "error": "Mixes through and across.",
+  "example": {
+   "question": "The goat ran ___ the road to the other side.",
+   "wrong_answer": "through",
+   "correct_answer": "across"
+  },
+  "cause": "Does not picture the movement.",
+  "reveals": "A question like \"The goat ran ___ the road to the other side.\" with \"through\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"across\", not \"through\".",
+  "feedback": "Across means from one side of a flat place to the other. Through means passing in at one side and out at the other.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_SINGLE": {
+  "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
+  "error": "Writes one consonant where there are two.",
+  "example": {
+   "question": "Mama drinks ___ every morning.",
+   "wrong_answer": "cofee",
+   "correct_answer": "coffee"
+  },
+  "cause": "Does not hear the two letters.",
+  "reveals": "A question like \"Mama drinks ___ every morning.\" with \"cofee\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"coffee\", not \"cofee\".",
+  "feedback": "Some words have two of the same letter together: coffee, summer, letter.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_PHONETIC": {
+  "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
+  "error": "Spells the word as it sounds.",
+  "example": {
+   "question": "The ___ ran into its hole.",
+   "wrong_answer": "rabbet",
+   "correct_answer": "rabbit"
+  },
+  "cause": "Writes what the ear hears and picks a wrong vowel.",
+  "reveals": "A question like \"The ___ ran into its hole.\" with \"rabbet\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"rabbit\", not \"rabbet\".",
+  "feedback": "Say the word slowly and then check it. Rabbit has bb in the middle.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ },
+ "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS.M_DBL_EXTRA": {
+  "skill": "ENGL.G4.WRITIN.T13_SPELLING.DOUBLE_CONSONANTS",
+  "error": "Doubles a letter that is single.",
+  "example": {
+   "question": "I wrote a ___ to my aunt.",
+   "wrong_answer": "lettter",
+   "correct_answer": "letter"
+  },
+  "cause": "Over-corrects after learning double letters.",
+  "reveals": "A question like \"I wrote a ___ to my aunt.\" with \"lettter\" among the options.",
+  "help": "Have the child say both forms aloud and say why one fits: \"letter\", not \"lettter\".",
+  "feedback": "Only some letters are doubled. Check each word: letter has tt but not three t.",
+  "source": "common learner error; to confirm by a Kenyan English teacher",
+  "status": "draft"
+ }
+}
