@@ -25,7 +25,8 @@
     "redteam:rocket": "node scripts/rocket-redteam.mjs",
     "build:wa-sign-in-fn": "node scripts/build-wa-sign-in-fn.mjs",
     "build:review": "node scripts/build-question-review.mjs",
-    "horeb:try": "VITE_HOREB_ALL_FAMILIES=1 vite --open /qa/question-bank/index.html"
+    "horeb:try": "VITE_HOREB_ALL_FAMILIES=1 vite --open /qa/question-bank/index.html",
+    "eval:habits": "node scripts/evals/habits.mjs"
   },
   "dependencies": {
     "@capacitor/android": "^8.5.2",

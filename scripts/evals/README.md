@@ -48,3 +48,41 @@ ink and the idle/Check snapshots reach the tutor as plain text), word-level spee
 (scenario 27 uses a rule-based garbling). The pretend child is a model and is wordier and tidier than a real ten-year-old.
 
 `EVAL_RAW=/path/file` appends the raw model output of every tutor turn to that file (debugging only).
+
+## The free yardstick: habit counts (PLAN_TO_FOUR.md step 1, no model calls, US$0)
+
+    npm run eval:habits                       # runs 2026-11-12-1045 and 2026-11-12-1142 (the baseline)
+    npm run eval:habits -- 2026-11-12-1142    # one run (a folder under the runs folder, or a path)
+    npm run eval:habits -- --spot 10          # also list 10 flagged turns with the reason, for a person to judge
+    npm run eval:habits -- --write            # also save HABITS.md in each run's folder
+    npm run eval:habits -- --json
+
+`scripts/evals/habits.mjs` reads the saved markdown transcripts and replays each lesson's facts (the sealed answers still
+open, the answers found, the board, the level and its successes), then counts per tutor turn the habits the judge failed
+in run 2. The checks are `src/voice-tutor/habits.js`: the SAME functions the live turn gate runs (`tutorTurn.js`), so a
+count here is what the gate would have caught. Care turns are not counted. It never loads the API key.
+
+| Habit | what is counted |
+|---|---|
+| giveaway | the sealed answer or a form of it, or the count the board shows, said before the question that asks for it; a figure labelled with a fraction the child has not found; the equivalence or the rule said for the child (not in the close) |
+| repeat | a sentence nearly the same as the last question or a sentence of the last two tutor turns |
+| stock | a stock phrase; praise over 8 words, on an unsure or wrong answer, or reusing none of the child's words; the same first three words as one of the last four turns |
+| confirm_hedged | "yes" to an unsure or one-word answer that came with no reason, and no question about the reason in the turn |
+| level_jump | harder numbers after fewer than two successes at the level in the guided or independent part (a helped success counts half, an unsure one zero), or harder numbers with no picture for them |
+| unanswered | the child asked a question or "why", or sounded upset, and the first sentence (or the second, after a short acknowledgement) does not answer it |
+
+Baseline (12 Nov 2026), turns flagged (scenarios with at least one):
+
+| Habit | run 1 (2026-11-12-1045) | run 2 (2026-11-12-1142) |
+|---|---|---|
+| giveaway | 19 (14 of 30) | 22 (17 of 30) |
+| repeat | 44 (19 of 30) | 44 (14 of 30) |
+| stock | 107 (30 of 30) | 74 (23 of 30) |
+| confirm_hedged | 20 (10 of 30) | 36 (18 of 30) |
+| level_jump | 13 (9 of 30) | 27 (17 of 30) |
+| unanswered | 14 (6 of 30) | 12 (4 of 30) |
+| any habit | 173 of 392 turns | 161 of 394 turns |
+
+Run 1's stock and repeat counts are mostly the app's own stand-in line ("Sorry, I lost my words... Can you say that
+again?"), since removed. The judge's three worst turns per scenario that a check also flags: run 1 37 of 90, run 2 56 of
+90. A paid run (`eval:tutor`) happens only when these counts say the habits are gone, and only on the owner's word.
