@@ -51,7 +51,7 @@ const PAUSE = { ',': 160, ';': 200, ':': 200, '.': 320, '?': 320, '!': 320 };
 // estimate is only for callers without a board (the server, tests).
 // A mark is drawn in its own fixed time; erase and clear are a quick eraser pass.
 export const DRAW_MS = {
-  write_text: 1200, write_math: 1600, fraction_bar: 3000, number_line: 3000, shape: 3000, plot_points: 3000,
+  write_text: 1200, write_math: 1600, fraction_bar: 3000, number_line: 3000, shape: 3000, plot_points: 3000, figure: 6000,
   highlight: 600, underline: 450, point: 450, erase: 350, clear: 350,
 };
 export const drawMs = (step) => Math.round((DRAW_MS[step.cmd] || 0) * (DRAWN.includes(step.cmd) && step.pace === 'slow' ? 1.6 : 1));

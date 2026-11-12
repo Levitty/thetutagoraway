@@ -25,37 +25,38 @@ import { PALETTE } from '../voice-tutor/commands.js';
 import { sample, bboxOf } from './path.js';
 import { handwrite, handWidth, GLYPHS } from './glyphs.js';
 import { printWords, PRINT_WEIGHT } from './print.js';
+import { figureStrokes } from './figureDraw.js';
 import {
-  slotRect, barGeom, barPart, shapeGeom, shapePart, lineGeom, plotGeom, textGeom, mathGeom, targetBox,
+  rectOf, barGeom, barPart, shapeGeom, shapePart, lineGeom, plotGeom, textGeom, mathGeom, targetBox,
   shadedSet, countOf, CAP, BOARD_H,
 } from './geometry.js';
 
 // Pen B, the felt marker (study.html PENS.B).
 export const PEN = { width: 6.6, hatch: 15, ends: true };
-export const KINDS = ['line', 'write', 'hatch', 'jump', 'mark'];
+export const KINDS = ['line', 'write', 'hatch', 'jump', 'mark', 'place'];
 export const HIGHLIGHTER = '#FFC93C';
 const INK = PALETTE;
 
-const f1 = (v) => Math.round(v * 10) / 10;
-const P = (x, y) => `${f1(x)} ${f1(y)}`;
+export const f1 = (v) => Math.round(v * 10) / 10;
+export const P = (x, y) => `${f1(x)} ${f1(y)}`;
 
-function stroke(d, kind, { colour = INK.ink, width = PEN.width, phase = 0, unit = 0, ...rest } = {}) {
+export function stroke(d, kind, { colour = INK.ink, width = PEN.width, phase = 0, unit = 0, ...rest } = {}) {
   const sp = sample(d);
-  return { d, kind, colour, width, len: sp.len, sp, phase, unit: String(unit), cap: PEN.ends && kind !== 'hatch' && !rest.highlighter, ...rest };
+  return { d, kind, colour, width, len: sp.len, sp, phase, unit: String(unit), cap: PEN.ends && kind !== 'hatch' && kind !== 'place' && !rest.highlighter, ...rest };
 }
 
 // Handwriting is a little finer than a ruled line, and finer still when small.
-const writeWidth = (h) => Math.max(3, Math.min(PEN.width * 0.95, h * 0.14));
+export const writeWidth = (h) => Math.max(3, Math.min(PEN.width * 0.95, h * 0.14));
 
 /** Handwritten text from (x, top), `h` high, as write strokes; each letter is its own unit. */
-function handStrokes(text, x, top, h, { colour, phase, unit }) {
+export function handStrokes(text, x, top, h, { colour, phase, unit }) {
   const width = writeWidth(h);
   return handwrite(text, x, top, h).map((g) => stroke(g.d, 'write', { colour, width, phase, unit: `${unit}.${g.letter}` }));
 }
 
 export const PRINT_INK = 1.6;
 /** Figtree print, word by word. */
-function printStrokes(text, x, base, fs, { colour, phase, unit }) {
+export function printStrokes(text, x, base, fs, { colour, phase, unit }) {
   return printWords(text, x, fs).map((wd, k) => {
     const y = base - fs * 0.32;
     // Print is written a little quicker than handwriting: its time is that of 1.6 times the word's width.
@@ -64,7 +65,7 @@ function printStrokes(text, x, base, fs, { colour, phase, unit }) {
 }
 
 /** A label: handwriting when it can be, print otherwise. `cx` centres it; `top` is its top. */
-function label(text, cx, top, h, opts) {
+export function label(text, cx, top, h, opts) {
   if ([...text].every((c) => c === ' ' || GLYPHS[c])) {
     const w = handWidth(text, h);
     return handStrokes(text, cx - w / 2, top, h, opts);
@@ -76,7 +77,7 @@ function label(text, cx, top, h, opts) {
 }
 
 /** A stacked fraction, written as a teacher writes it: the top number, the bar, the bottom number. */
-function stackedFraction(n, d, cx, cy, h, opts) {
+export function stackedFraction(n, d, cx, cy, h, opts) {
   const gap = h * 0.32;
   const wn = handWidth(String(n), h); const wd = handWidth(String(d), h);
   const half = Math.max(wn, wd) / 2 + h * 0.22;
@@ -91,7 +92,7 @@ function stackedFraction(n, d, cx, cy, h, opts) {
 // Close parallel strokes, lower left to upper right, a hand's slightly uneven
 // spacing; each runs a little past the part and the clip keeps it inside.
 const GAPS = [13.5, 13, 14.2, 13.4, 13.9, 13.2, 14, 13.6];   // under the pen's width: no paper shows between strokes
-function hatchLines(box, { colour, phase, unit, clip }) {
+export function hatchLines(box, { colour, phase, unit, clip }) {
   const e = PEN.hatch * 0.6;
   const x0 = box.x - e; const y0 = box.y - e; const x1 = box.x + box.w + e; const y1 = box.y + box.h + e;
   const out = [];
@@ -109,7 +110,7 @@ function hatchLines(box, { colour, phase, unit, clip }) {
 
 // ---------------------------------------------------------------- items
 function fractionBar(item, H) {
-  const g = barGeom(item, slotRect(item.slot, H));
+  const g = barGeom(item, rectOf(item, H));
   const col = INK[item.colour] || INK.blue;
   const out = [];
   g.forEach((b, k) => {
@@ -127,15 +128,15 @@ function fractionBar(item, H) {
       out.push(...hatchLines(r, { colour: col, phase: 4 * k + 2, unit: `h${k}.${part}`, clip }));
     }
     if (item.label) {
-      const h = Math.max(16, Math.min(26, b.h * 0.4));
-      out.push(...stackedFraction(countOf(b.shaded), b.parts, b.labelX + 20, b.y + b.h / 2, h, { colour: INK.ink, phase: 4 * k + 3, unit: `l${k}` }));
+      const h = Math.max(16, Math.min(40, b.h * 0.4));
+      out.push(...stackedFraction(countOf(b.shaded), b.parts, b.labelX + h * 0.8, b.y + b.h / 2, h, { colour: INK.ink, phase: 4 * k + 3, unit: `l${k}` }));
     }
   });
   return out;
 }
 
 function shape(item, H) {
-  const g = shapeGeom(item, slotRect(item.slot, H));
+  const g = shapeGeom(item, rectOf(item, H));
   const col = INK[item.colour] || INK.orange;
   const n = item.parts;
   const out = [];
@@ -175,7 +176,7 @@ function shape(item, H) {
 }
 
 function numberLine(item, H) {
-  const g = lineGeom(item, slotRect(item.slot, H));
+  const g = lineGeom(item, rectOf(item, H));
   const out = [stroke(`M ${P(g.x0, g.y)} L ${P(g.x1, g.y)}`, 'line', { phase: 0, unit: 'line' })];
   const ticks = (item.to - item.from) * item.divisions;
   for (let k = 0; k <= ticks; k += 1) {
@@ -183,7 +184,7 @@ function numberLine(item, H) {
     const t = k % item.divisions === 0 ? 16 : 10;
     out.push(stroke(`M ${P(x, g.y - t)} L ${P(x, g.y + t)}`, 'line', { phase: 1, unit: `t${k}`, width: k % item.divisions === 0 ? PEN.width : PEN.width * 0.8 }));
   }
-  for (let v = item.from; v <= item.to; v += 1) out.push(...label(String(v), g.X(v), g.y + 30, 24, { colour: INK.ink, phase: 2, unit: `n${v}` }));
+  for (let v = item.from; v <= item.to; v += 1) out.push(...label(String(v), g.X(v), g.y + 30, g.lh, { colour: INK.ink, phase: 2, unit: `n${v}` }));
   item.jumps.forEach((j, k) => {
     const a = g.X(j.from); const b = g.X(j.to);
     const hgt = Math.min(70, Math.abs(b - a) * 0.5 + 18);
@@ -203,7 +204,7 @@ function numberLine(item, H) {
 }
 
 function plotPoints(item, H) {
-  const g = plotGeom(item, slotRect(item.slot, H));
+  const g = plotGeom(item, rectOf(item, H));
   const out = [
     stroke(`M ${P(g.x0, g.y0)} L ${P(g.x1, g.y0)}`, 'line', { phase: 0, unit: 'x' }),
     stroke(`M ${P(g.x0, g.y0)} L ${P(g.x0, g.y1)}`, 'line', { phase: 0, unit: 'y' }),
@@ -222,7 +223,7 @@ function plotPoints(item, H) {
 }
 
 function writeText(item, H) {
-  const g = textGeom(item, slotRect(item.slot, H));
+  const g = textGeom(item, rectOf(item, H));
   const colour = INK[item.colour] || INK.ink;
   if (g.hand) return handStrokes(item.text, g.x, g.base - g.fs * CAP, g.fs * CAP, { colour, phase: 0, unit: 'w' });
   return printStrokes(item.text, g.x, g.base, g.fs, { colour, phase: 0, unit: 'w' });
@@ -231,7 +232,7 @@ function writeText(item, H) {
 // write_math: the layout from mathExpr, written left to right; a fraction's top number, then its bar, then its bottom number.
 const MATH_CHAR = { '−': '−', '×': '×', '÷': '÷', '+': '+', '=': '=', '<': '<', '>': '>' };
 function writeMath(item, H) {
-  const g = mathGeom(item, slotRect(item.slot, H));
+  const g = mathGeom(item, rectOf(item, H));
   if (!g) return [];
   const colour = INK[item.colour] || INK.ink;
   const out = [];
@@ -280,7 +281,7 @@ function writeMath(item, H) {
   return out;
 }
 
-const DRAWERS = { fraction_bar: fractionBar, shape, number_line: numberLine, plot_points: plotPoints, write_text: writeText, write_math: writeMath };
+const DRAWERS = { figure: (item, H) => figureStrokes(item, H), fraction_bar: fractionBar, shape, number_line: numberLine, plot_points: plotPoints, write_text: writeText, write_math: writeMath };
 export const DRAWN_KINDS = Object.keys(DRAWERS);
 
 /** A drawn item's strokes, in the order they are drawn. */
@@ -291,7 +292,7 @@ export function itemStrokes(item, H = BOARD_H) {
 
 // ---------------------------------------------------------------- marks
 /** An ellipse drawn as one loop, from the upper left, clockwise, a little past where it began. */
-function loop(cx, cy, rx, ry, tilt = -4) {
+export function loop(cx, cy, rx, ry, tilt = -4) {
   const t = (tilt * Math.PI) / 180;
   const pts = [];
   const a0 = (-160 * Math.PI) / 180; const sweep = (382 * Math.PI) / 180;

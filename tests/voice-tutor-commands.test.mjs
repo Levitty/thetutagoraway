@@ -21,7 +21,7 @@ const onBoard = [
   { id: 'nl', cmd: 'number_line', from: 0, to: 1, divisions: 4, marks: [{ value: 0.75, label: '3/4', style: 'dot' }], jumps: [], slot: 'bottom_left' },
 ];
 
-// One good example of each of the 19 commands.
+// One good example of each of the 20 commands (figure: rendering engine phase 2; note_interest and note_what_helped: the learner profile).
 const GOOD = {
   say: { cmd: 'say', text: 'Here is a chapati cut into four equal pieces.' },
   write_text: { cmd: 'write_text', id: 't1', text: 'Mama cuts a cake.', slot: 'bottom_right', size: 'm', colour: 'green', on: 'chapati', delay_ms: 200 },
@@ -29,6 +29,7 @@ const GOOD = {
   fraction_bar: { cmd: 'fraction_bar', id: 'b9', parts: 6, shaded: [1, 3], second_bar: { parts: 3, shaded: 1 }, label: true, slot: 'bottom_right' },
   number_line: { cmd: 'number_line', id: 'n9', from: 0, to: 2, divisions: 4, marks: [{ value: 0.5, label: 'half', style: 'arrow' }], jumps: [{ from: 0, to: 0.5 }], slot: 'bottom_right' },
   shape: { cmd: 'shape', id: 's9', kind: 'circle', parts: 8, shaded: 3, label: true, slot: 'bottom_right' },
+  figure: { cmd: 'figure', id: 'f9', type: 'fraction', params: '{"parts":3,"shaded":1,"second":{"parts":6}}', controls: ['shade_second'], goal: '{"kind":"match"}', slot: 'bottom_right', on: 'chapati' },
   plot_points: { cmd: 'plot_points', id: 'p9', x_axis: { from: 0, to: 10, name: 'Day' }, y_axis: { from: 0, to: 20 }, points: [{ x: 1, y: 2 }, { x: 2, y: 4 }], connect: true, slot: 'bottom_right' },
   highlight: { cmd: 'highlight', target: 'bar1', part: 3, style: 'glow', on: 'three' },
   underline: { cmd: 'underline', target: 'm1', range: [0, 4] },
@@ -44,8 +45,8 @@ const GOOD = {
   end_session: { cmd: 'end_session', summary: 'Worked on equivalent fractions.' },
 };
 
-test('the list has exactly the 19 approved commands, and each one passes when right', () => {
-  assert.equal(COMMANDS.length, 19);
+test('the list has exactly the 20 approved commands, and each one passes when right', () => {
+  assert.equal(COMMANDS.length, 20);
   assert.deepEqual(Object.keys(GOOD).sort(), [...COMMANDS].sort());
   for (const s of Object.values(GOOD)) ok(s, { board: onBoard, allowedMis: [ADD], skills: [EQ] });
 });

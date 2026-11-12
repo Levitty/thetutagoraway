@@ -20,12 +20,21 @@
 // through ink.js, which can only add or remove the child's own strokes.
 // The pen tip and the eraser are marked data-noshot: pictures of the board
 // (capture.js) show the ink only.
+//
+// Phase 2 (12 Nov 2026): the board is COMPOSED (src/draw/compose.js): the slots
+// in use become frames on the sheet, so the main figure is big and centred;
+// drawn ink keeps its frame. FIGURES the child may handle get a play layer (what
+// the child has made of them, in their teal, never the tutor's ink) and, once
+// the figure is drawn and the lesson is on, a layer of tap and drag places
+// above everything (onPlay(id, control, value)).
 // ============================================================================
 import React, { forwardRef, memo, useLayoutEffect, useRef } from 'react';
 import { strokePath } from './ink.js';
 import { drawMs } from './timeline.js';
 import { PALETTE } from './commands.js';
 import { itemStrokes, markStrokes, strokesBox } from '../draw/strokes.js';
+import { playStrokes, figureHits, dragValue, stateOf } from '../draw/figureDraw.js';
+import { layoutBoard } from '../draw/compose.js';
 import { strokeTimes, progress, ease } from '../draw/timing.js';
 import { pointAt } from '../draw/path.js';
 import { PRINT_FONT } from '../draw/print.js';
@@ -82,6 +91,10 @@ const Ink = memo(function Ink({ entry }) {
         if (s.dash) {
           return <path key={k} d={s.d} fill="none" stroke={s.colour} strokeWidth={s.width} strokeLinecap="round" strokeDasharray={s.dash.join(' ')} mask={`url(#${u}-m${k})`} />;
         }
+        if (s.kind === 'place') {
+          // Laid on, not drawn: it appears whole, fading in as it is put down.
+          return <path key={k} ref={(n) => { entry.els[k] = n; }} d={s.d} fill={s.fill || 'none'} fillOpacity={s.fillOpacity} stroke={s.fill ? 'none' : s.colour} strokeWidth={s.width} strokeLinecap="round" strokeLinejoin="round" style={{ display: 'none' }} opacity={0} />;
+        }
         const [a, b] = [s.sp.pts[0], s.sp.pts[s.sp.pts.length - 1]];
         const r = s.width * 0.62;
         return (
@@ -124,6 +137,7 @@ function paint(entry, now, whole = false) {
     }
     const el = entry.els[k];
     if (!el) return;
+    if (s.kind === 'place') { show(el, p > 0); el.setAttribute('opacity', (s.opacity ?? 1) * p); return; }
     if (!s.dash) show(el, p > 0);
     if (p >= 1) el.setAttribute('stroke-dasharray', s.dash ? 'none' : 'none');
     else { el.setAttribute('stroke-dasharray', `${s.len} ${s.len + 1}`); el.setAttribute('stroke-dashoffset', s.len * (1 - p)); }
@@ -146,7 +160,7 @@ function placeTip(tip, nib, entries, now) {
     if (e.end < now - LIFT_GLIDE - 100 || e.start > now + ARRIVE + 100) continue;
     e.times.forEach((t, k) => {
       const s = e.strokes[k];
-      if (now > t.t0 && now < t.t1 && s.kind !== 'hatch' && t.t0 > onT0) { on = { s, t }; onT0 = t.t0; }
+      if (now > t.t0 && now < t.t1 && s.kind !== 'hatch' && s.kind !== 'place' && t.t0 > onT0) { on = { s, t }; onT0 = t.t0; }
       if (t.t1 <= now && t.t1 > lastT1) { last = s; lastT1 = t.t1; }
       if (t.t0 > now && t.t0 < nextT0) { next = s; nextT0 = t.t0; }
     });
@@ -222,7 +236,75 @@ function ChildInk({ ink }) {
  * drawTimes: Map drawKey -> ms, how long the timeline gave each drawing (a drawing is
  * squeezed to end before the next step's word); without it each draws at its own pace.
  */
-export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard', H = BOARD_H, inkOn = false, tool = 'pen', onInk = null, drawTimes = null }, ref) {
+/**
+ * The frames of the board's items (compose.js): drawn ink keeps the frame it was given for this
+ * height; anything else (a new item, or every item after the sheet changed shape) is laid out now.
+ * Returns Map id -> the item with its frame, made once per item and frame.
+ */
+const framed = new WeakMap();
+export function composedItems(board, H) {
+  const list = board.order.map((id) => board.items[id]);
+  const kept = (it) => it.rect && it.rectH === H;
+  const rects = list.every(kept) ? null : layoutBoard(list.map((it) => (kept(it) ? it : { ...it, rect: undefined })), H, { inkOf: (it) => strokesBox(itemStrokes(it, H), 6) || it.rect });
+  const out = new Map();
+  for (const it of list) {
+    const rect = rects ? rects.get(it.id) : it.rect;
+    const c = framed.get(it);
+    if (c && c.rect === rect) { out.set(it.id, c.item); continue; }
+    const item = rect === it.rect ? it : { ...it, rect };
+    framed.set(it, { rect, item });
+    out.set(it.id, item);
+  }
+  return out;
+}
+
+// ---------------------------------------------------------------- the child's figures
+// Where a child can tap or drag a figure: transparent places above the ink. A tap acts at once;
+// a drag acts as it moves (the figure's own rules snap it: to a tick, a degree, the fixed arm).
+function Hits({ item, state, H, onPlay }) {
+  const grab = useRef(null);
+  const at = (e) => {
+    const svg = e.currentTarget.ownerSVGElement;
+    const m = svg?.getScreenCTM();
+    if (!m) return null;
+    const pt = svg.createSVGPoint(); pt.x = e.clientX; pt.y = e.clientY;
+    const q = pt.matrixTransform(m.inverse());
+    return { x: q.x, y: q.y };
+  };
+  const st = stateOf(item, state);
+  return (
+    <g data-noshot="" data-hits={item.id}>
+      {figureHits(item, state, H).map((h) => (
+        <path key={h.key} d={h.d} fill="#000" fillOpacity={0.001} stroke="none" style={{ cursor: h.drag ? 'grab' : 'pointer', touchAction: 'none' }}
+          data-hit={h.key}
+          onPointerDown={(e) => {
+            e.stopPropagation(); e.preventDefault();
+            if (!h.drag) { onPlay(item.id, h.control, h.value); return; }
+            const pt = at(e);
+            if (!pt) return;
+            e.currentTarget.setPointerCapture?.(e.pointerId);
+            grab.current = { id: e.pointerId, control: h.control, pt, value: h.control === 'protractor' ? st.turn : null };
+            if (h.control !== 'protractor') onPlay(item.id, h.control, dragValue(item, h.control, pt, grab.current, H));
+          }}
+          onPointerMove={(e) => {
+            const g = grab.current;
+            if (!g || g.id !== e.pointerId) return;
+            e.stopPropagation();
+            const pt = at(e);
+            if (pt) onPlay(item.id, g.control, dragValue(item, g.control, pt, g, H));
+          }}
+          onPointerUp={(e) => { if (grab.current?.id === e.pointerId) grab.current = null; }}
+          onPointerCancel={() => { grab.current = null; }} />
+      ))}
+    </g>
+  );
+}
+
+/**
+ * onPlay(id, control, value): the child acted on a figure (playOn: the lesson is on and it is
+ * safe to let them). Without onPlay the figures are pictures only.
+ */
+export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard', H = BOARD_H, inkOn = false, tool = 'pen', onInk = null, drawTimes = null, onPlay = null, playOn = false }, ref) {
   const active = useRef(null);
   const toBoard = (svg, e) => {
     const m = svg.getScreenCTM();
@@ -267,13 +349,14 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
     cache.current.set(obj, { H, fit, accent, entry });
     return entry;
   };
+  const composed = composedItems(board, H);
   const items = board.order.map((id) => {
-    const item = board.items[id];
+    const item = composed.get(id);
     const mk = () => itemStrokes(item, H);
     return { obj: item, entry: entryFor(item, mk, item.pace) };
   });
   const markOf = (m) => {
-    const item = board.items[m.target];
+    const item = composed.get(m.target);
     if (!item) return null;
     const fit = drawTimes?.get(drawKey(m)) ?? drawMs(m);
     const c = cache.current.get(m);
@@ -284,6 +367,15 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
   };
   const marks = [...board.marks, ...(board.pointer ? [board.pointer] : [])].map(markOf).filter(Boolean);
   const live = [...items, ...marks];
+  // What the child has made of each figure they may handle, shown once the tutor has drawn it.
+  const plays = items.filter(({ obj, entry }) => obj.cmd === 'figure' && obj.controls?.length && t >= entry.end).map(({ obj }) => {
+    const st = board.play?.[obj.id]?.state || null;
+    const c = cache.current.get(obj);
+    if (c?.play && c.play.st === st && c.play.H === H) return { obj, entry: c.play.entry, st };
+    const entry = makeEntry(playStrokes(obj, st, H), -1e9, 0);
+    cache.current.set(obj, { ...(c || {}), play: { st, H, entry } });
+    return { obj, entry, st };
+  });
 
   // What left the board since the last frame is wiped.
   const seen = useRef(new Map());
@@ -303,6 +395,7 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
   const nibRef = useRef(null);
   useLayoutEffect(() => {
     for (const { entry } of live) paint(entry, t);
+    for (const { entry } of plays) paint(entry, t, true);
     for (const g of ghosts.current) { for (const e of g.entries) paint(e, t, true); wipe(g, t); }
     placeTip(tipRef.current, nibRef.current, live.map((x) => x.entry), t);
   });
@@ -323,6 +416,8 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
         {marks.map(({ entry }) => <Ink key={entry.uid} entry={entry} />)}
         {ghosts.current.map((g) => <Ghost key={g.uid} ghost={g} />)}
       </g>
+      {/* What the child has made of the figures: their teal, drawn whole. */}
+      <g data-layer="play">{plays.map(({ entry }) => <Ink key={entry.uid} entry={entry} />)}</g>
       {/* The pen tip: a small nib that rides the stroke. Never in a picture of the board. */}
       <g ref={tipRef} data-noshot="" opacity="0" pointerEvents="none">
         <circle r="11" cx="3" cy="4" fill="rgba(29,29,39,0.10)" />
@@ -331,6 +426,8 @@ export const Board = forwardRef(function Board({ board, now, label = 'Whiteboard
       </g>
       {/* The child's ink. No board command can reach this layer. */}
       <g data-layer="child"><ChildInk ink={board.childInk} /></g>
+      {/* Where the child can tap and drag the figures: above everything, while the lesson is on. */}
+      {playOn && onPlay ? plays.map(({ obj, st }) => <Hits key={`h${obj.id}`} item={obj} state={st} H={H} onPlay={onPlay} />) : null}
     </svg>
   );
 });

@@ -78,11 +78,12 @@ const BEATS = {
       { cmd: 'set_phase', phase: 'guided' },
       say('Your turn. Here is one third.'),
       { cmd: 'clear', on: 'Your turn', delay_ms: -200 },
-      { cmd: 'fraction_bar', id: 'third', parts: 3, shaded: 1, label: true, slot: 'top', colour: 'orange', on: 'one third' },
-      say('Under it, the same bar is cut into six equal pieces. These are sixths.'),
-      { cmd: 'fraction_bar', id: 'sixths', parts: 6, shaded: 0, label: false, slot: 'middle', colour: 'orange', on: 'sixths' },
-      say('One third is how many sixths? Look at the bars.'),
-      { cmd: 'write_math', id: 'g1m', expr: 'frac(1,3) = frac(?,6)', slot: 'bottom_left', size: 'l', on: 'Look' },
+      // A figure the child handles (rendering engine phase 2): one third, and under it the same bar
+      // in sixths for the child to shade. The app marks when the shading matches; HOREB never shades it.
+      { cmd: 'figure', id: 'match', type: 'fraction', params: JSON.stringify({ shape: 'bar', parts: 3, shaded: 1, second: { parts: 6, shaded: 0 }, label: true }), controls: ['shade_second'], goal: JSON.stringify({ kind: 'match' }), slot: 'middle', colour: 'orange', on: 'one third' },
+      say('Under it, the same bar is cut into six equal pieces. Tap the sixths to shade the same amount.'),
+      say('One third is how many sixths?'),
+      { cmd: 'write_math', id: 'g1m', expr: 'frac(1,3) = frac(?,6)', slot: 'bottom', size: 'l', on: 'how many' },
       { cmd: 'ask', id: 'g1', prompt: 'One third is how many sixths?', form: 'number', expected: '2' },
       pause(),
     ],
@@ -141,7 +142,12 @@ const BEATS = {
       say(right ? 'Yes, nine twelfths. You did that on your own.' : 'Let us look at that one again next time.'),
       { cmd: 'set_phase', phase: 'wrapup' },
       say('Today you learned that equivalent fractions are the same amount.'),
-      { cmd: 'write_text', id: 'learned', text: 'Multiply the top and bottom by the same number.', slot: 'bottom', size: 's', colour: 'orange', on: 'same amount' },
+      { cmd: 'clear', on: 'Today', delay_ms: -200 },
+      // A figure that is only shown: three quarters on the number line, three jumps of one quarter.
+      say('Look at the number line. We start at nought and make jumps of one quarter. One jump, two jumps, three jumps land on three quarters.'),
+      { cmd: 'figure', id: 'line34', type: 'numberline', params: JSON.stringify({ from: 0, to: 1, divisions: 4, label_as: 'fraction', jumps: [{ from: 0, to: 0.25 }, { from: 0.25, to: 0.5 }, { from: 0.5, to: 0.75 }], jump_label: false }), slot: 'middle', colour: 'orange', on: 'number line' },
+      say('Three quarters is the same place as nine twelfths. To find it, multiply the top and the bottom by the same number.'),
+      { cmd: 'write_text', id: 'learned', text: 'Multiply the top and bottom by the same number.', slot: 'bottom', size: 's', colour: 'orange', on: 'multiply' },
       say('Thank you for working with me. Goodbye for now.'),
       { cmd: 'end_session', summary: right ? 'Equivalent fractions: added to top and bottom at first, then multiplied correctly after reteaching, and solved 3/4 = 9/12 alone.' : 'Equivalent fractions: added to top and bottom; reteaching started, needs another session.' },
     ],
@@ -194,7 +200,7 @@ export function createMockTutor() {
     evidence.push(m);
     return m;
   };
-  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [] } = {}) => {
+  const compose = async ({ message = '', answer = null, board = [], heard = null, snapshot = null, snapshots_taken: taken = 0, ink_cells: cells = [], figures = [] } = {}) => {
       inkAt = cells;
       snapshots = Math.max(snapshots, Number(taken) || 0);
       const meta = { target: EQ, prerequisite: null, cost_usd: 0, spent: { session: 0, day: 0 } };
@@ -224,6 +230,11 @@ export function createMockTutor() {
         message = seen.answer;
       }
       const marked = mark(answer, pic);
+      // What the child did with the sixths (the page's own note, src/draw/observe.js): said first, in words.
+      const played = (figures || []).find((f) => f.id === 'match' && board.some((b) => b.id === 'match'));
+      const lead = played && !/not touched/.test(played.note)
+        ? say(/done/.test(played.note) && !/undone/.test(played.note) ? 'I saw you shade the sixths until they matched one third.' : 'I saw you shade some sixths. They do not match one third yet.')
+        : null;
       let out;
       switch (beat) {
         case 'open': out = respond('open', null, board); beat = 'teach'; break;
@@ -244,6 +255,7 @@ export function createMockTutor() {
         case 'i1': out = respond('wrapup', !!marked?.correct, board); beat = 'done'; break;
         default: out = { steps: [say('Our lesson is finished. Well done.'), { cmd: 'end_session', summary: 'Finished.' }], dropped: [], notes: [] };
       }
+      if (lead && beat !== 'g1' && out.steps.length) out = { ...out, steps: [lead, ...out.steps] };
       return { ...out, marked, ...meta, ...(snapshot ? { picture: { id: snapshot.id, used: true, reason: snapshot.reason } } : {}), guard: ['scripted'] };
   };
   return {

@@ -30,6 +30,7 @@ const ITEMS = {
   fraction_bar: { cmd: 'fraction_bar', id: 'b1', parts: 4, shaded: 2, label: true, slot: 'top', colour: 'blue' },
   shape: { cmd: 'shape', id: 's1', kind: 'circle', parts: 4, shaded: 1, label: true, slot: 'top_left', colour: 'orange' },
   number_line: { cmd: 'number_line', id: 'n1', from: 0, to: 1, divisions: 4, marks: [{ value: 0.75, label: '3/4', style: 'dot' }], jumps: [{ from: 0, to: 0.25 }, { from: 0.25, to: 0.5 }], slot: 'middle' },
+  figure: { cmd: 'figure', id: 'f1', type: 'fraction', params: { shape: 'bar', parts: 3, rows: 10, cols: 10, shaded: 1, second: { parts: 6, rows: 10, cols: 10, shaded: 2 }, label: true }, controls: [], goal: null, slot: 'middle', colour: 'orange' },
   plot_points: { cmd: 'plot_points', id: 'p1', x_axis: { from: 0, to: 5, name: 'Day' }, y_axis: { from: 0, to: 5, name: '' }, points: [{ x: 1, y: 1, label: '' }, { x: 2, y: 3, label: 'A' }], connect: true, slot: 'bottom' },
 };
 
