@@ -243,8 +243,8 @@ function checkGoal(type, raw, params, controls) {
   const may = [].concat(g.control || []);
   if (!may.some((c) => controls.includes(c))) refuse(`goal: ${raw.kind} needs the control ${may.join(" or ")}`);
   const { kind, ...rest } = raw;
-  const clean2 = checkParams({ type: `${type.type} goal`, params: g.params, rule: g.rule ? (x) => g.rule(x, params) : null }, rest);
-  return { kind, ...clean2 };
+  const clean3 = checkParams({ type: `${type.type} goal`, params: g.params, rule: g.rule ? (x) => g.rule(x, params) : null }, rest);
+  return { kind, ...clean3 };
 }
 var recordOf = (v, name, max = 1500) => {
   if (v === void 0 || v === null || v === "") return null;
@@ -6858,14 +6858,14 @@ var CORE_FAMILIES = [
     rung: 2,
     form: "word",
     draw: () => {
-      const cap2 = pick([14, 18, 25, 33, 41]);
-      return { cap: cap2, on: randInt(3, cap2 - 3) };
+      const cap3 = pick([14, 18, 25, 33, 41]);
+      return { cap: cap3, on: randInt(3, cap3 - 3) };
     },
-    make: ({ cap: cap2, on }) => ({
-      question: `A matatu can carry at most ${cap2} passengers. There are ${on} on board and p more get on. Which inequality fits?`,
-      options: [{ text: `${on} + p \u2264 ${cap2}`, right: true }, { text: `${on} + p \u2265 ${cap2}`, right: false, why: '"At most" means the total cannot go above the limit.' }, { text: `${on} + p > ${cap2}`, right: false, why: "Greater than the limit would be overloading." }, { text: `p \u2264 ${cap2}`, right: false, why: `There are already ${on} on board, so they count too.` }],
+    make: ({ cap: cap3, on }) => ({
+      question: `A matatu can carry at most ${cap3} passengers. There are ${on} on board and p more get on. Which inequality fits?`,
+      options: [{ text: `${on} + p \u2264 ${cap3}`, right: true }, { text: `${on} + p \u2265 ${cap3}`, right: false, why: '"At most" means the total cannot go above the limit.' }, { text: `${on} + p > ${cap3}`, right: false, why: "Greater than the limit would be overloading." }, { text: `p \u2264 ${cap3}`, right: false, why: `There are already ${on} on board, so they count too.` }],
       hints: ['"At most" means no more than.', "Passengers on board plus those getting on must stay within the limit."],
-      steps: [`Total passengers: ${on} + p.`, `"At most ${cap2}" means \u2264 ${cap2}.`, `So ${on} + p \u2264 ${cap2}.`]
+      steps: [`Total passengers: ${on} + p.`, `"At most ${cap3}" means \u2264 ${cap3}.`, `So ${on} + p \u2264 ${cap3}.`]
     })
   }),
   fx({
@@ -8038,7 +8038,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.add.got-more",
     skill: "G1_ADD",
-    outcome: "G1.ADD.a",
+    outcome: "G1.ADD.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8057,7 +8057,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.add.how-many-more",
     skill: "G1_ADD",
-    outcome: "G1.ADD.a",
+    outcome: "G1.ADD.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8076,7 +8076,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.sub.gave-away",
     skill: "G1_SUB",
-    outcome: "G1.SUB.a",
+    outcome: "G1.SUB.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8095,7 +8095,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.sub.how-many-ate",
     skill: "G1_SUB",
-    outcome: "G1.SUB.a",
+    outcome: "G1.SUB.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8114,7 +8114,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.counting.ten-more",
     skill: "G1_COUNTING",
-    outcome: "G1.WHOLE.a",
+    outcome: "G1.WHOLE.0",
     rung: 1,
     form: "direct",
     draw: () => ({ n: randInt(11, 40) }),
@@ -8131,7 +8131,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.prenumber.skip-gap",
     skill: "G1_PRENUMBER",
-    outcome: "G1.PRENUMBER.a",
+    outcome: "G1.PRENUMBER.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8152,7 +8152,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.prenumber.bead-pattern",
     skill: "G1_PRENUMBER",
-    outcome: "G1.PRENUMBER.a",
+    outcome: "G1.PRENUMBER.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8177,7 +8177,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.length.longest-of-three",
     skill: "G1_LENGTH",
-    outcome: "G1.LENGTH.a",
+    outcome: "G1.LENGTH.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8200,7 +8200,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.mass.lightest-chain",
     skill: "G1_MASS",
-    outcome: "G1.MASS.a",
+    outcome: "G1.MASS.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8210,10 +8210,10 @@ var FAMILIES2 = [
     make: ({ t, heavy, order }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? "an" : "a") + " " + n;
       const s1 = `${art(t[0])} is heavier than ${art(t[1])}.`, s2 = `${art(t[1])} is heavier than ${art(t[2])}.`;
-      const cap2 = (s) => s[0].toUpperCase() + s.slice(1);
+      const cap3 = (s) => s[0].toUpperCase() + s.slice(1);
       const right = heavy ? t[0] : t[2];
       return {
-        question: `${cap2(order ? s1 : s2)} ${cap2(order ? s2 : s1)} Which is the ${heavy ? "heaviest" : "lightest"}?`,
+        question: `${cap3(order ? s1 : s2)} ${cap3(order ? s2 : s1)} Which is the ${heavy ? "heaviest" : "lightest"}?`,
         options: opts(t, right, "Put the two sentences together in a line, from heavy to light."),
         hints: ["Put the things in a line from heavy to light.", `The ${heavy ? "heaviest" : "lightest"} is at one end of the line.`],
         steps: [`In order: ${t[0]}, ${t[1]}, ${t[2]} (heavy to light).`, `The ${heavy ? "heaviest" : "lightest"} is the ${right}.`]
@@ -8223,7 +8223,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.cap.holds-more",
     skill: "G1_CAPACITY",
-    outcome: "G1.CAP.a",
+    outcome: "G1.CAP.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8244,7 +8244,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.time.days-ahead",
     skill: "G1_TIME",
-    outcome: "G1.TIME.a",
+    outcome: "G1.TIME.0",
     rung: 1,
     form: "word",
     draw: () => ({ i: randInt(0, 6), k: randInt(2, 4) }),
@@ -8261,7 +8261,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.time.hours-to-wait",
     skill: "G1_TIME",
-    outcome: "G1.TIME.a",
+    outcome: "G1.TIME.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8280,7 +8280,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.money.mixed-coins",
     skill: "G1_MONEY",
-    outcome: "G1.MONEY.a",
+    outcome: "G1.MONEY.0",
     rung: 2,
     form: "word",
     draw: () => ({ a: randInt(1, 3), b: randInt(1, 4), p: person() }),
@@ -8296,7 +8296,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.lines.curved-edge",
     skill: "G1_LINES",
-    outcome: "G1.LINES.a",
+    outcome: "G1.LINES.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8315,7 +8315,7 @@ var FAMILIES2 = [
   fam2({
     id: "g1.shapes.which-shape",
     skill: "G1_SHAPES",
-    outcome: "G1.SHAPES.a",
+    outcome: "G1.SHAPES.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8335,7 +8335,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.add.make-100",
     skill: "G2_ADD",
-    outcome: "G2.ADD.a",
+    outcome: "G2.ADD.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8354,7 +8354,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.sub.how-many-fewer",
     skill: "G2_SUB",
-    outcome: "G2.SUB.a",
+    outcome: "G2.SUB.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8373,7 +8373,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.counting.skip-gap",
     skill: "G2_COUNTING",
-    outcome: "G2.WHOLE.a",
+    outcome: "G2.WHOLE.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8394,7 +8394,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.place.tens-and-ones",
     skill: "G2_PLACE_VALUE",
-    outcome: "G2.WHOLE.a",
+    outcome: "G2.WHOLE.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8414,7 +8414,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.mul.rows",
     skill: "G2_MULTIPLY_INTRO",
-    outcome: "G2.MUL.a",
+    outcome: "G2.MUL.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8433,7 +8433,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.mul.legs",
     skill: "G2_MULTIPLY_INTRO",
-    outcome: "G2.MUL.a",
+    outcome: "G2.MUL.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8453,7 +8453,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.div.benches",
     skill: "G2_DIVISION_INTRO",
-    outcome: "G2.DIV.a",
+    outcome: "G2.DIV.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8473,7 +8473,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.frac.half-of",
     skill: "G2_FRACTIONS",
-    outcome: "G2.FRAC.a",
+    outcome: "G2.FRAC.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8492,7 +8492,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.length.which-unit",
     skill: "G2_LENGTH",
-    outcome: "G2.LENGTH.a",
+    outcome: "G2.LENGTH.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8510,7 +8510,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.cap.buckets-fill",
     skill: "G2_CAPACITY",
-    outcome: "G2.CAP.a",
+    outcome: "G2.CAP.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8529,7 +8529,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.time.weeks-days",
     skill: "G2_TIME",
-    outcome: "G2.TIME.a",
+    outcome: "G2.TIME.0",
     rung: 2,
     form: "word",
     draw: () => ({ w: randInt(2, 4), p: person() }),
@@ -8545,7 +8545,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.money.two-things",
     skill: "G2_MONEY",
-    outcome: "G2.MONEY.a",
+    outcome: "G2.MONEY.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8556,9 +8556,9 @@ var FAMILIES2 = [
     },
     make: ({ items, pa, pb }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? "an " : "a ") + n;
-      const cap2 = (s) => s[0].toUpperCase() + s.slice(1);
+      const cap3 = (s) => s[0].toUpperCase() + s.slice(1);
       return {
-        question: `${cap2(art(items[0]))} costs ${sh(pa)}. ${cap2(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
+        question: `${cap3(art(items[0]))} costs ${sh(pa)}. ${cap3(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
         answer: pa + pb,
         wrong: [[Math.abs(pa - pb), "Together means put the prices together. Add, do not take away."], [pa + pb + 10, "Check the tens when you add the ones. One ten too many was carried."], [pa + pb - 10, "Check the ones when you add them. A ten was left out."]],
         hints: ["Together means add the two prices.", "Add the tens, then add the ones."],
@@ -8570,7 +8570,7 @@ var FAMILIES2 = [
   fam2({
     id: "g2.shapes.tile-pattern",
     skill: "G2_SHAPES",
-    outcome: "G2.SHAPES.a",
+    outcome: "G2.SHAPES.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8596,7 +8596,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.count.build-number",
     skill: "G3_COUNTING",
-    outcome: "G3.WHOLE.a",
+    outcome: "G3.WHOLE.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8618,7 +8618,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.count.greatest-of-three",
     skill: "G3_COUNTING",
-    outcome: "G3.WHOLE.a",
+    outcome: "G3.WHOLE.0",
     rung: 1,
     form: "direct",
     draw: () => {
@@ -8640,7 +8640,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.add.two-days",
     skill: "G3_ADD",
-    outcome: "G3.ADD.a",
+    outcome: "G3.ADD.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8659,7 +8659,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.sub.trip",
     skill: "G3_SUB",
-    outcome: "G3.SUB.a",
+    outcome: "G3.SUB.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8681,7 +8681,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.mul.shelves",
     skill: "G3_MULTIPLY",
-    outcome: "G3.MUL.a",
+    outcome: "G3.MUL.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8700,7 +8700,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.mul.buy-many",
     skill: "G3_MULTIPLY",
-    outcome: "G3.MUL.a",
+    outcome: "G3.MUL.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8719,7 +8719,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.div.rope-pieces",
     skill: "G3_DIVIDE",
-    outcome: "G3.DIV.a",
+    outcome: "G3.DIV.0",
     rung: 1,
     form: "word",
     draw: () => {
@@ -8738,7 +8738,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.frac.biggest-piece",
     skill: "G3_FRACTIONS",
-    outcome: "G3.FRAC.a",
+    outcome: "G3.FRAC.0",
     rung: 2,
     form: "direct",
     draw: () => ({ big: Math.random() < 0.5, food: pick(["chapatis", "cakes", "watermelons", "pizzas"]) }),
@@ -8752,7 +8752,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.length.cut-rope",
     skill: "G3_LENGTH",
-    outcome: "G3.LENGTH.a",
+    outcome: "G3.LENGTH.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8771,7 +8771,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.cap.pour-buckets",
     skill: "G3_CAPACITY",
-    outcome: "G3.CAP.a",
+    outcome: "G3.CAP.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8790,7 +8790,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.time.weeks-and-days",
     skill: "G3_TIME",
-    outcome: "G3.TIME.a",
+    outcome: "G3.TIME.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8809,7 +8809,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.money.bread-and-milk",
     skill: "G3_MONEY",
-    outcome: "G3.MONEY.a",
+    outcome: "G3.MONEY.0",
     rung: 2,
     form: "word",
     draw: () => {
@@ -8829,7 +8829,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.position.turn",
     skill: "G3_POSITION",
-    outcome: "G3.POSITION.a",
+    outcome: "G3.POSITION.0",
     rung: 1,
     form: "word",
     draw: () => ({ f: randInt(0, 3), right: Math.random() < 0.5, p: person() }),
@@ -8847,7 +8847,7 @@ var FAMILIES2 = [
   fam2({
     id: "g3.shapes.name-by-count",
     skill: "G3_SHAPES",
-    outcome: "G3.SHAPES.a",
+    outcome: "G3.SHAPES.0",
     rung: 1,
     form: "direct",
     draw: () => ({ n: pick([5, 6, 8]), what: pick(["sides", "corners"]) }),
@@ -14712,16 +14712,16 @@ var FAMILIES7 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const cap2 = randInt(12, 48), n = randInt(200, 700);
-      if (n % cap2 === 0) return null;
-      const q = Math.floor(n / cap2);
+      const cap3 = randInt(12, 48), n = randInt(200, 700);
+      if (n % cap3 === 0) return null;
+      const q = Math.floor(n / cap3);
       return {
-        question: `${n} pupils are going on a trip to the Nairobi National Park. Each matatu carries ${cap2} pupils. How many matatus are needed?`,
+        question: `${n} pupils are going on a trip to the Nairobi National Park. Each matatu carries ${cap3} pupils. How many matatus are needed?`,
         answer: q + 1,
-        wrong: [[q, "Some pupils would be left behind. They need one more matatu.", "M_REMAINDER_NOT_INTERPRETED"], [n % cap2, "That is the number of pupils left over, not the number of matatus.", "M_GIVES_QUOTIENT_NOT_REMAINDER"], [n * cap2, "Each matatu holds a number of pupils. Divide.", "M_KEYWORD_EACH_MEANS_MULTIPLY"], [q + 2, "Only one more matatu is needed for the leftover pupils.", "M_REMAINDER_NOT_INTERPRETED"]],
+        wrong: [[q, "Some pupils would be left behind. They need one more matatu.", "M_REMAINDER_NOT_INTERPRETED"], [n % cap3, "That is the number of pupils left over, not the number of matatus.", "M_GIVES_QUOTIENT_NOT_REMAINDER"], [n * cap3, "Each matatu holds a number of pupils. Divide.", "M_KEYWORD_EACH_MEANS_MULTIPLY"], [q + 2, "Only one more matatu is needed for the leftover pupils.", "M_REMAINDER_NOT_INTERPRETED"]],
         hints: ["Divide the pupils by what one matatu carries.", "What happens to the pupils left over?"],
-        steps: [`${n} \xF7 ${cap2} = ${q} remainder ${n % cap2}.`, `The ${n % cap2} left over need one more matatu: ${q + 1}.`],
-        chk: (v) => (v - 1) * cap2 < n && v * cap2 >= n
+        steps: [`${n} \xF7 ${cap3} = ${q} remainder ${n % cap3}.`, `The ${n % cap3} left over need one more matatu: ${q + 1}.`],
+        chk: (v) => (v - 1) * cap3 < n && v * cap3 >= n
       };
     }
   }),
@@ -17379,16 +17379,16 @@ var FAMILIES11 = [
     form: "steps",
     rung: 3,
     gen: () => {
-      const cap2 = pick([500, 750, 1e3, 1500]), size2 = pick([50, 100, 250, 125]), p = person();
-      if (cap2 % size2) return null;
+      const cap3 = pick([500, 750, 1e3, 1500]), size2 = pick([50, 100, 250, 125]), p = person();
+      if (cap3 % size2) return null;
       return {
-        question: `${p.name} wants to fill a ${cap2} ml bottle using a ${size2} ml cup.`,
+        question: `${p.name} wants to fill a ${cap3} ml bottle using a ${size2} ml cup.`,
         parts: [
-          { prompt: "How many cupfuls are needed?", answer: cap2 / size2, hint: "How many lots of the cup fit into the bottle?", wrong: [[cap2 * size2, "Dividing finds how many cups fit. Multiplying would give a much larger number.", "M_GIVES_NUMBER_OF_FILLS"], [cap2 - size2, "Take the number of cups that fit, do not subtract.", "M_GIVES_NUMBER_OF_FILLS"], [cap2 / size2 + 1, "Check by multiplying the cups by " + size2 + ".", "M_GIVES_NUMBER_OF_FILLS"]] },
-          { prompt: `With a cup of ${size2 * 2} ml instead, how many cupfuls are needed?`, answer: cap2 / (size2 * 2), hint: "A bigger cup needs fewer fills.", wrong: [[cap2 / size2 * 2, "A bigger cup needs fewer fills, not more.", "M_MORE_FILLS_BIGGER_CUP"], [cap2 / size2, "That was the number for the smaller cup.", "M_MORE_FILLS_BIGGER_CUP"], [cap2 / size2 / 2 + 1, "Check by multiplying.", "M_MORE_FILLS_BIGGER_CUP"]] }
+          { prompt: "How many cupfuls are needed?", answer: cap3 / size2, hint: "How many lots of the cup fit into the bottle?", wrong: [[cap3 * size2, "Dividing finds how many cups fit. Multiplying would give a much larger number.", "M_GIVES_NUMBER_OF_FILLS"], [cap3 - size2, "Take the number of cups that fit, do not subtract.", "M_GIVES_NUMBER_OF_FILLS"], [cap3 / size2 + 1, "Check by multiplying the cups by " + size2 + ".", "M_GIVES_NUMBER_OF_FILLS"]] },
+          { prompt: `With a cup of ${size2 * 2} ml instead, how many cupfuls are needed?`, answer: cap3 / (size2 * 2), hint: "A bigger cup needs fewer fills.", wrong: [[cap3 / size2 * 2, "A bigger cup needs fewer fills, not more.", "M_MORE_FILLS_BIGGER_CUP"], [cap3 / size2, "That was the number for the smaller cup.", "M_MORE_FILLS_BIGGER_CUP"], [cap3 / size2 / 2 + 1, "Check by multiplying.", "M_MORE_FILLS_BIGGER_CUP"]] }
         ],
-        steps: [`${cap2} \xF7 ${size2} = ${cap2 / size2}.`, `${cap2} \xF7 ${size2 * 2} = ${cap2 / (size2 * 2)}.`],
-        chk: (x, v) => v[0] * size2 === cap2 && v[1] * size2 * 2 === cap2
+        steps: [`${cap3} \xF7 ${size2} = ${cap3 / size2}.`, `${cap3} \xF7 ${size2 * 2} = ${cap3 / (size2 * 2)}.`],
+        chk: (x, v) => v[0] * size2 === cap3 && v[1] * size2 * 2 === cap3
       };
     }
   }),
@@ -21651,6 +21651,1849 @@ var FAMILIES14 = [
   })
 ];
 
+// src/ai-tutor/content/families/cov.js
+var shuffle4 = (a) => {
+  const b = [...a];
+  for (let i = b.length - 1; i > 0; i--) {
+    const j = Math.floor(Math.random() * (i + 1));
+    [b[i], b[j]] = [b[j], b[i]];
+  }
+  return b;
+};
+var distinct4 = (...v) => new Set(v.map((x) => typeof x === "number" ? round(x, 6) : x)).size === v.length;
+var gcd4 = (a, b) => b ? gcd4(b, a % b) : a;
+var lcm2 = (a, b) => a / gcd4(a, b) * b;
+var frac = (n, d) => {
+  const g = gcd4(Math.abs(n), d);
+  return `${n / g}/${d / g}`;
+};
+var cap2 = (s) => s.charAt(0).toUpperCase() + s.slice(1);
+var mc2 = (right, wrongs) => {
+  const texts = [String(right), ...wrongs.map((w) => String(w[0]))];
+  if (new Set(texts).size !== texts.length) return null;
+  return shuffle4([{ text: String(right), right: true }, ...wrongs.map(([text, why]) => ({ text: String(text), right: false, why }))]);
+};
+var mcFixed = (right, wrongs, order) => {
+  const o = mc2(right, wrongs);
+  return o && order ? order.map((t) => o.find((x) => x.text === String(t))) : o;
+};
+var clean2 = (wrong, answer, need2, neg2) => {
+  const seen = /* @__PURE__ */ new Set([typeof answer === "number" ? fmtNum(answer) : String(answer)]);
+  const out = [];
+  for (const w of wrong || []) {
+    const v = typeof w[0] === "number" ? fmtNum(round(w[0], 3)) : String(w[0]);
+    if (seen.has(v)) continue;
+    if (typeof w[0] === "number" && (!Number.isFinite(w[0]) || !neg2 && w[0] < 0)) continue;
+    seen.add(v);
+    out.push(w);
+  }
+  return out.length >= need2 ? out : null;
+};
+var cov = (d) => {
+  const { gen, ...rest } = d;
+  const draw = () => {
+    const x = gen();
+    if (!x) return null;
+    if (x.parts) {
+      for (const q of x.parts) {
+        q.wrong = clean2(q.wrong, q.answer, 2, d.allowNegative);
+        if (!q.wrong) return null;
+      }
+    } else if (x.options === null) return null;
+    else if (x.answer !== void 0 && !x.options && !x.working) {
+      if (typeof x.answer === "number" && !Number.isFinite(x.answer)) return null;
+      x.wrong = clean2(x.wrong, x.answer, 3, d.allowNegative || typeof x.answer !== "number");
+      if (!x.wrong) return null;
+    }
+    return x;
+  };
+  return family({ reviewed: false, draft: true, ...rest, draw, make: (x) => x, check: (x, a) => x.chk ? x.chk(a) : true });
+};
+var SUP = { 0: "\u2070", 1: "\xB9", 2: "\xB2", 3: "\xB3", 4: "\u2074", 5: "\u2075", 6: "\u2076", 7: "\u2077", 8: "\u2078", 9: "\u2079", "-": "\u207B" };
+var sup = (n) => String(n).split("").map((c) => SUP[c]).join("");
+
+// src/ai-tutor/content/families/g6_cov.js
+var T42 = (n) => (n / 1e4).toFixed(4);
+var TOWNS4 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
+var FAMILIES15 = [
+  // ================================================================ WHOLE NUMBERS
+  cov({
+    id: "g6c.whole.symbols-from-parts",
+    skill: "G6_PLACE_VALUE",
+    outcome: "G6.WHOLE.b",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const M4 = randInt(1, 9), T5 = randInt(1, 99) * (Math.random() < 0.5 ? 1 : 10) + (Math.random() < 0.5 ? 0 : 100 * randInt(1, 9)), U2 = randInt(1, 99);
+      if (T5 > 999 || T5 % 100 === 0) return null;
+      const N2 = M4 * 1e6 + T5 * 1e3 + U2, cat = Number(`${M4}${T5}${U2}`), tenfold = N2 * 10, swap = M4 * 1e6 + U2 * 1e3 + T5;
+      if (!distinct4(N2, cat, tenfold, swap)) return null;
+      const options = mc2(commas(N2), [[commas(cat), "Each group of three digits after the millions needs all three places. A group with fewer digits is filled with zeros."], [commas(tenfold), "There is one place too many. Count the groups of three digits again."], [commas(swap), "The thousands and the last group have changed places. Read the amount in order."]]);
+      return {
+        question: `A school in ${pick(TOWNS4)} paid ${M4} million, ${T5} thousand and ${U2} shillings for a new classroom block. Which number in symbols shows the amount?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Write the millions first, then the thousands, then the last three digits.", "After the millions, every group has three digits. Use zeros to fill empty places."],
+        steps: [`${M4} million is ${commas(M4 * 1e6)}.`, `${T5} thousand is ${commas(T5 * 1e3)} and the last part is ${U2}.`, `Together: ${commas(N2)}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.whole.order-list",
+    skill: "G6_PLACE_VALUE",
+    outcome: "G6.WHOLE.d",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const four = [randInt(5, 9) * 1e3 + randInt(0, 999), randInt(5, 9) * 1e3 + randInt(0, 999)], five = [randInt(10, 99) * 1e3 + randInt(0, 999), randInt(10, 99) * 1e3 + randInt(0, 999)];
+      const nums = [...four, ...five];
+      if (new Set(nums).size < 4) return null;
+      const asc = [...nums].sort((a, b) => a - b), lex = [...nums].sort((a, b) => String(a) < String(b) ? -1 : 1), desc = [...asc].reverse();
+      const swapped = [...asc];
+      const i = randInt(0, 2);
+      [swapped[i], swapped[i + 1]] = [swapped[i + 1], swapped[i]];
+      const show = (l) => l.map(commas).join(" < ");
+      const options = mc2(show(asc), [[show(lex), "This puts the numbers in order by their first digit only. A number with more digits is bigger."], [show(desc), "This is from largest to smallest. The question asks for smallest to largest."], [show(swapped), "Two neighbours are the wrong way round. Compare each pair."]]);
+      const p = person();
+      return {
+        question: `${p.name} wrote down the number of people who came to four ${pick(["matches", "church services", "market days", "concerts"])}: ${shuffle4(nums).map(commas).join(", ")}. Which list puts them in order, from smallest to largest?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["First count the digits of each number. More digits means a bigger number.", "For numbers with the same number of digits, compare place by place from the left."],
+        steps: [`Four-digit numbers are smaller than five-digit numbers.`, `Order: ${show(asc)}.`]
+      };
+    }
+  }),
+  // ================================================================ DECIMALS
+  cov({
+    id: "g6c.dec.name-the-place",
+    skill: "G6_FRACTIONS_DECIMALS",
+    outcome: "G6.DEC.a",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const ds = shuffle4([1, 2, 3, 4, 5, 6, 7, 8, 9]).slice(0, 4), W2 = randInt(0, 9), i = randInt(0, 3);
+      const names = ["tenths", "hundredths", "thousandths", "ten-thousandths"];
+      const ord2 = ["first", "second", "third", "fourth"];
+      const options = mcFixed(names[i], names.filter((_, j) => j !== i).map((n) => [n, `The ${n} place is the ${ord2[names.indexOf(n)]} place after the point. Count the places to the digit ${ds[i]} again.`]), names);
+      return {
+        question: `A pharmacist's scale shows ${W2}.${ds.join("")} g. In which place is the digit ${ds[i]}?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Start at the decimal point. The first place after it is tenths.", "Count the places to the right until you reach the digit."],
+        steps: ["The places after the point are tenths, hundredths, thousandths, ten-thousandths.", `The digit ${ds[i]} is in the ${ord2[i]} place, the ${names[i]} place.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.dec.write-ten-thousandths",
+    skill: "G6_FRACTIONS_DECIMALS",
+    outcome: "G6.DEC.a",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const n = randInt(2, 9), tot = n / 1e4, T5 = T42(n);
+      const options = mc2(T5, [[(n / 1e3).toFixed(3), "That is thousandths. A ten-thousandth is ten times smaller."], [(n / 100).toFixed(2), "That is hundredths. Count four places after the point."], [(n / 1e5).toFixed(5), "That is hundred-thousandths. Count only four places after the point."]]);
+      const p = person();
+      return {
+        question: `${p.name} reads ${n} ten-thousandths of a gram on a very fine scale. Which decimal shows this?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Ten-thousandths is the fourth place after the decimal point.", "Put the digit in the fourth place and fill the other places with zeros."],
+        steps: ["The fourth place after the point is the ten-thousandths place.", `${n} ten-thousandths is ${T5}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.dec.to-percent",
+    skill: "G6_FRACTIONS_DECIMALS",
+    outcome: "G6.DEC.d",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const v = randInt(3, 97) / 100;
+      if (Math.round(v * 100) % 10 === 0) return null;
+      const pc = Math.round(v * 100), p = person();
+      return {
+        question: `A water tank on ${p.name}'s shamba is ${v.toFixed(2)} full. What percentage of the tank is full? Give the number only.`,
+        answer: pc,
+        wrong: [[v * 10, "You moved the point one place. To change a decimal to a percentage, multiply by 100."], [v, "This is the same decimal. A percentage is out of 100, so multiply by 100."], [v * 1e3, "You moved the point three places. Multiply by 100, not 1000."], [pc / 100, "You divided by 100. To change a decimal to a percentage, multiply by 100."]],
+        hints: ["A percentage means out of 100.", "Multiply the decimal by 100."],
+        steps: [`${v.toFixed(2)} \xD7 100 = ${pc}.`, `So the tank is ${pc}% full.`],
+        chk: (a) => round(a / 100, 4) === v
+      };
+    }
+  }),
+  cov({
+    id: "g6c.dec.from-percent",
+    skill: "G6_FRACTIONS_DECIMALS",
+    outcome: "G6.DEC.d",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const pc = randInt(2, 98);
+      if (pc % 10 === 0) return null;
+      const d = pc / 100, p = person();
+      return {
+        question: `A shop in ${pick(TOWNS4)} takes ${pc}% off the price of ${p.name}'s school shoes. Write ${pc}% as a decimal.`,
+        answer: d,
+        wrong: [[pc / 10, "You divided by 10. A percentage is out of 100, so divide by 100."], [pc, "This is the percentage number itself. Divide by 100 to get the decimal."], [pc / 1e3, "You divided by 1,000. Divide by 100 only."], [round(1 - d, 2), "You found what is left after the discount. The question asks for the discount as a decimal."]],
+        hints: ["Per cent means out of 100.", "Divide the number by 100."],
+        steps: [`${pc}% = ${pc} \xF7 100.`, `${pc} \xF7 100 = ${d}.`],
+        chk: (a) => Math.round(a * 100) === pc
+      };
+    }
+  }),
+  cov({
+    id: "g6c.dec.subtract-four-places",
+    skill: "G6_FRACTIONS_DECIMALS",
+    outcome: "G6.DEC.f",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const A2 = randInt(2e4, 99999), B2 = randInt(1e4, A2 - 5e3), R = A2 - B2;
+      const dig = (n) => String(n).padStart(5, "0").split("").map(Number);
+      const a = dig(A2), b = dig(B2);
+      const columnwise = Number(a.map((x, i) => Math.abs(x - b[i])).join(""));
+      if (columnwise === R) return null;
+      const w = [[T42(columnwise), "You took the smaller digit from the bigger one in each column. When the top digit is smaller, regroup from the next place."], [T42(A2 + B2), "You added. The question asks how much heavier, so subtract."], [T42(Math.max(R - 1e3, 0)), "Check the regrouping. Taking a tenth for the next place on the right means ten of that place, not a hundred."], [T42(Math.round(R / 10) * 10), "The answer has been rounded. Keep all four places."]];
+      const p = person();
+      return {
+        question: `A scientist weighs two samples of soil. The first has a mass of ${T42(A2)} kg and the second ${T42(B2)} kg. How many kilograms heavier is the first sample than the second?`,
+        answer: T42(R),
+        wrong: w,
+        hints: ["Line up the decimal points. Write zeros so each number has four places.", "Start with the ten-thousandths on the right. Regroup when the top digit is smaller."],
+        steps: [`${T42(A2)} \u2212 ${T42(B2)}, with the decimal points lined up.`, `The answer is ${T42(R)} m.`],
+        chk: (a2) => Math.round(Number(a2) * 1e4) + B2 === A2
+      };
+    }
+  }),
+  // ================================================================ FRACTIONS
+  cov({
+    id: "g6c.frac.subtract-lcm",
+    skill: "G6_FRACTIONS_SUB",
+    outcome: "G6.FRAC.b",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const dens = [2, 3, 4, 5, 6, 8, 10, 12], b = pick(dens), d = pick(dens);
+      if (b === d || b % d === 0 || d % b === 0) return null;
+      const a = randInt(1, b - 1), c = randInt(1, d - 1), L2 = lcm2(b, d);
+      const top = a * L2 / b - c * L2 / d;
+      if (top <= 0 || gcd4(a, b) !== 1 || gcd4(c, d) !== 1) return null;
+      const right = frac(top, L2), p = person();
+      const w = [[frac(Math.abs(a - c), L2), "You found the common denominator but did not change the numerators to match."], [b > d && a > c && frac(a - c, b - d) !== "1/1" ? frac(a - c, b - d) : frac(c, b), "You took the numerators from each other and the denominators from each other. The denominator stays the same size."], [frac(Math.abs(a - c), b), "You kept the first denominator. Both fractions must be changed to the common denominator first."], [frac(a * L2 / b + c * L2 / d, L2), "You added. The question asks how much more, so subtract."]];
+      return {
+        question: `Maize grows on ${a}/${b} of ${p.name}'s shamba and beans grow on ${c}/${d} of it. What fraction more of the shamba is under maize than under beans? Give the answer in its simplest form.`,
+        answer: right,
+        wrong: w,
+        hints: [`Find a number that both ${b} and ${d} divide into. Use the smallest.`, "Change both fractions to that denominator, then subtract the numerators."],
+        steps: [`The LCM of ${b} and ${d} is ${L2}.`, `${a * L2 / b}/${L2} \u2212 ${c * L2 / d}/${L2} = ${top}/${L2}.`, `In simplest form: ${right}.`],
+        chk: (r) => {
+          const [n, m] = r.split("/").map(Number);
+          return n * b * d === (a * d - c * b) * m;
+        }
+      };
+    }
+  }),
+  cov({
+    id: "g6c.frac.subtract-mixed",
+    skill: "G6_MIXED_NUMBERS",
+    outcome: "G6.FRAC.d",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const pairs2 = [[2, 4], [3, 6], [4, 2], [6, 3], [5, 10], [4, 8]], [d1, d2] = pick(pairs2), L2 = lcm2(d1, d2);
+      const w1 = randInt(4, 9), w2 = randInt(1, w1 - 2), n1 = randInt(1, d1 - 1), n2 = randInt(1, d2 - 1);
+      const f1 = n1 * L2 / d1, f2 = n2 * L2 / d2;
+      if (f1 >= f2) return null;
+      const total = w1 * L2 + f1 - (w2 * L2 + f2), wh = Math.floor(total / L2), rem = total % L2;
+      const show = (w, n) => n === 0 ? `${w}` : `${w} ${frac(n, L2)}`;
+      const mixed2 = (w, n, d) => `${w} ${n}/${d}`;
+      const right = show(wh, rem);
+      const options = mc2(right, [[show(w1 - w2, f2 - f1), "You took the smaller fraction from the bigger one. The top fraction is smaller, so regroup one whole first."], [show(w1 - w2, L2 + f1 - f2), "You changed a whole into fractions but did not take one away from the whole numbers."], [show(w1 + w2 + Math.floor((f1 + f2) / L2), (f1 + f2) % L2), "You added. The question asks how much is left."]]);
+      const p = person();
+      return {
+        question: `${p.name} has ${mixed2(w1, n1, d1)} m of cloth and uses ${mixed2(w2, n2, d2)} m to make a dress. How many metres of cloth are left?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: [`Change both fractions to ${L2}ths first.`, "If the first fraction is smaller, take one whole from the whole number and add it to the fraction."],
+        steps: [`${w1} ${frac(f1, L2)} \u2212 ${w2} ${frac(f2, L2)}: ${f1}/${L2} is smaller than ${f2}/${L2}, so regroup.`, `${w1 - 1} and ${L2 + f1}/${L2}, then subtract: ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.frac.percent-to-fraction",
+    skill: "G6_PERCENTAGES_INTRO",
+    outcome: "G6.FRAC.h",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const pc = pick([4, 6, 8, 12, 15, 16, 24, 28, 35, 36, 45, 55, 60, 65, 72, 75, 85]);
+      const right = frac(pc, 100), p = person();
+      if (right.startsWith("1/")) return null;
+      const w = [[frac(1, pc), "Per cent means out of 100, not 1 out of the number."], [frac(pc, 10), "You wrote the amount out of 10. A percentage is out of 100."], [frac(100, pc), "You turned the fraction upside down. The percentage is the top number and 100 is the bottom."], [`${pc}/${pc + 100}`, "You added 100 to the bottom. Per cent means out of 100."]];
+      return {
+        question: `${p.name} scored ${pc}% in a maths test. Write ${pc}% as a fraction in its simplest form.`,
+        answer: right,
+        wrong: w,
+        hints: ["Per cent means out of 100, so write the number over 100.", "Divide the top and the bottom by the same number until they cannot be divided more."],
+        steps: [`${pc}% = ${pc}/100.`, `Divide the top and the bottom by ${gcd4(pc, 100)}: ${right}.`],
+        chk: (r) => {
+          const [n, m] = r.split("/").map(Number);
+          return n * 100 === pc * m;
+        }
+      };
+    }
+  }),
+  // ================================================================ INEQUALITIES
+  cov({
+    id: "g6c.ineq.simplify-add",
+    skill: "G6_INEQUALITIES",
+    outcome: "G6.INEQ.b",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const a = randInt(8, 30), b = a + randInt(5, 40), ops = [["\u2264", "at most", "\u2265"], ["\u2265", "at least", "\u2264"], ["<", "fewer than", ">"], [">", "more than", "<"]], [sym, words5, flip] = pick(ops), r = b - a;
+      const options = mc2(`n ${sym} ${r}`, [[`n ${flip} ${r}`, "The sign has been turned the wrong way. Read the words again: which way does the sign point?"], [`n ${sym} ${a + b}`, "You added the numbers. To get n alone, take away the number added to it."], [`n ${sym} ${b}`, `You ignored the ${a}. It must be taken from both sides.`]]);
+      return {
+        question: `A hall can hold ${words5} ${b} people. ${a} people are inside and n more are waiting outside, so n + ${a} ${sym} ${b}. Which inequality shows what n can be?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Take the same number away from both sides to get n alone.", "The sign stays the same when you add or subtract."],
+        steps: [`n + ${a} ${sym} ${b}.`, `Take ${a} from both sides: n ${sym} ${b} \u2212 ${a}.`, `n ${sym} ${r}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.ineq.simplify-multiply",
+    skill: "G6_INEQUALITIES",
+    outcome: "G6.INEQ.b",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const k = randInt(2, 9), r = randInt(3, 30), b = k * r, [sym, words5, flip] = pick([["\u2265", "at least", "\u2264"], ["\u2264", "at most", "\u2265"], [">", "more than", "<"], ["<", "less than", ">"]]);
+      const options = mc2(`n ${sym} ${r}`, [[`n ${flip} ${r}`, "The sign has been turned the wrong way. Read the words again."], [`n ${sym} ${b * k}`, "You multiplied. The number is multiplying n, so divide both sides by it."], [`n ${sym} ${b - k}`, "You took the number away. It is multiplying n, so divide both sides by it."]]);
+      const p = person();
+      return {
+        question: `${p.name} buys ${k} tickets for a school trip at n shillings each. The total is ${words5} ${commas(b)} shillings, so ${k}n ${sym} ${commas(b)}. Which inequality shows the price n of one ticket?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: [`${k}n means ${k} times n. Do the opposite to get n alone.`, "Divide both sides by the same positive number. The sign stays the same."],
+        steps: [`${k}n ${sym} ${commas(b)}.`, `Divide both sides by ${k}: n ${sym} ${commas(b)} \xF7 ${k}.`, `n ${sym} ${r}.`]
+      };
+    }
+  }),
+  // ================================================================ LENGTH (mm and cm)
+  cov({
+    id: "g6c.len.best-in-mm",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.a",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const mm = pick(["the thickness of a one-shilling coin", "the thickness of a page of an exercise book", "the thickness of a thin mobile phone", "the width of a grain of rice", "the thickness of a ruler", "the length of an ant"]);
+      const others = shuffle4([["the length of a classroom", "metres (m), because a classroom is several metres long"], ["the distance from Kisumu to Kakamega", "kilometres (km), because the road is many kilometres long"], ["the height of a mango tree", "metres (m), because a tree is several metres tall"], ["the length of a football pitch", "metres (m), because a pitch is many metres long"], ["the distance from Nairobi to Thika", "kilometres (km), because towns are far apart"]]).slice(0, 3);
+      const options = mc2(cap2(mm), others.map(([t, u]) => [cap2(t), `That is best measured in ${u}. It is much bigger than a millimetre.`]));
+      return {
+        question: `${person().name} is learning about units. A millimetre (mm) is a very small unit. Which of these is best measured in millimetres?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["A millimetre is about as thick as a coin.", "Pick the thing that is tiny. Big things are measured in metres or kilometres."],
+        steps: ["A millimetre is one thousandth of a metre, so it suits very small lengths.", `${cap2(mm)} is tiny, so it is measured in millimetres.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.ruler-marks",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.b",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const lo = randInt(1, 8), hi = randInt(lo + 2, 14), diff = hi - lo;
+      return {
+        question: `A ruler has a small mark every millimetre. How many millimetre spaces are between the ${lo} cm mark and the ${hi} cm mark?`,
+        answer: 10 * diff,
+        wrong: [[diff, "That is the number of centimetres. Each centimetre has more than one millimetre in it."], [100 * diff, "A centimetre holds ten of the small marks, not a hundred. Count them on a ruler."], [10 * hi, `You counted from 0 cm. The count starts at the ${lo} cm mark.`], [10 * lo, `You used the first mark only. Take ${lo} cm from ${hi} cm first.`]],
+        hints: ["Look at a ruler. How many small marks are in 1 cm?", "Find the number of centimetres between the marks, then multiply by the millimetres in each."],
+        steps: ["1 cm = 10 mm.", `${hi} cm \u2212 ${lo} cm = ${diff} cm.`, `${diff} \xD7 10 = ${10 * diff} mm.`],
+        chk: (a) => a / 10 + lo === hi
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.to-millimetres",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.c",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const c = randInt(2, 19), m = randInt(1, 9);
+      return {
+        question: `The label on a box of screws says each screw measures ${c} cm ${m} mm. Write this measurement using millimetres only.`,
+        answer: 10 * c + m,
+        wrong: [[100 * c + m, "There are 10 mm in 1 cm, not 100."], [c + m, "You added the numbers. Change the centimetres to millimetres first."], [10 * c, "You left out the extra millimetres."], [Number(`${c}${m}`) * 10, "The millimetres were changed too. Only the centimetres are multiplied by 10."]],
+        hints: ["1 cm is the same as 10 mm.", "Change the centimetres to millimetres, then add the millimetres."],
+        steps: [`${c} cm = ${c} \xD7 10 = ${10 * c} mm.`, `${10 * c} mm + ${m} mm = ${10 * c + m} mm.`],
+        chk: (a) => Math.floor(a / 10) === c && a % 10 === m
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.subtract-cm-mm",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.e",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const c1 = randInt(10, 30), c2 = randInt(2, c1 - 3), m1 = randInt(0, 6), m2 = randInt(m1 + 1, 9);
+      const A2 = 10 * c1 + m1, B2 = 10 * c2 + m2, R = A2 - B2;
+      const w = [[10 * (c1 - c2) + (m2 - m1), "In the millimetre column the top number is smaller, so you cannot take the smaller from the bigger the other way round. Regroup one centimetre."], [10 * (c1 - c2 - 1) + (m1 + 100 - m2), "One centimetre is 10 mm, not 100 mm, when you regroup."], [A2 + B2, "You added. The question asks how much ribbon is left."], [10 * (c1 - c2), "You left out the millimetres."]];
+      const p = person();
+      return {
+        question: `${p.name} has a ribbon ${c1} cm ${m1} mm long. ${p.She} cuts off ${c2} cm ${m2} mm. How many millimetres of ribbon are left?`,
+        answer: R,
+        wrong: w,
+        hints: ["Change each length to millimetres only before you subtract.", "1 cm = 10 mm."],
+        steps: [`${c1} cm ${m1} mm = ${A2} mm.`, `${c2} cm ${m2} mm = ${B2} mm.`, `${A2} \u2212 ${B2} = ${R} mm.`],
+        chk: (a) => a + B2 === A2
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.multiply-cm-mm",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.f",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const c = randInt(1, 4), m = randInt(1, 9), n = randInt(3, 9), one = 10 * c + m;
+      const w = [[10 * c * n + m, "Each book has the extra millimetres too. Multiply the millimetres by the number of books as well."], [100 * c * n + m * n, "There are 10 mm in a centimetre, not 100."], [c * n + m * n, "You multiplied but did not change the centimetres to millimetres."], [one + n, "You added. A stack of equal books needs multiplying."]];
+      const p = person();
+      return {
+        question: `Each exercise book on ${p.name}'s desk is ${c} cm ${m} mm thick. ${p.She} puts ${n} of them in one pile. How many millimetres thick is the pile?`,
+        answer: one * n,
+        wrong: w,
+        hints: ["Change the thickness of one book to millimetres first.", "Then multiply by the number of books."],
+        steps: [`${c} cm ${m} mm = ${one} mm.`, `${one} \xD7 ${n} = ${one * n} mm.`],
+        chk: (a) => a / n === one
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.divide-cm-mm",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.g",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const n = pick([2, 3, 4, 5, 6]), each = randInt(6, 39), total = each * n, c = Math.floor(total / 10), m = total % 10;
+      if (each % 10 === 0) return null;
+      const w = [[total * n, "You multiplied. Sharing a length equally needs dividing."], [round(total / (10 * n), 3), "This is in centimetres. The question asks for millimetres."], [Math.floor(c / n) * 10 + m, "Only the centimetres were divided. Change the whole length to millimetres and divide it all."], [round(c / n + m / n, 3), "You divided the centimetres and the millimetres separately, without changing the units first."]];
+      const p = person();
+      return {
+        question: `${p.name} cuts a strip of wire ${c} cm ${m} mm long into ${n} equal pieces. How many millimetres long is each piece?`,
+        answer: each,
+        wrong: w,
+        hints: ["Change the whole length to millimetres first.", "Then divide by the number of pieces."],
+        steps: [`${c} cm ${m} mm = ${total} mm.`, `${total} \xF7 ${n} = ${each} mm.`],
+        chk: (a) => a * n === total
+      };
+    }
+  }),
+  cov({
+    id: "g6c.len.round-the-edge",
+    skill: "G6_UNIT_CONVERSIONS",
+    outcome: "G6.LENGTH.i",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const [thing, ds] = pick([["a round cake tin", [14, 21]], ["a bicycle wheel", [70]], ["a round table", [70, 140]], ["a round water tank", [140, 210]]]), d = pick(ds), C2 = 22 * d / 7;
+      const options = mc2(`about ${C2} cm`, [[`about ${d} cm`, "That is the distance across, the diameter. The rope goes round the edge, which is longer."], [`about ${2 * d} cm`, "Going round is more than two times across. Try a little more than three diameters."], [`about ${4 * d} cm`, "Going round is less than four diameters. It is a little more than three."]]);
+      return {
+        question: `${cap2(thing)} has a diameter of ${d} cm. A string is tied once round its edge. About how long is the string?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["The distance round a circle is a little more than three times the distance across.", "Find three times the diameter, then add a little more."],
+        steps: ["The circumference of a circle is about 3.14 times its diameter, or about 22/7 times.", `${d} \xD7 22 \xF7 7 = ${C2} cm.`]
+      };
+    }
+  }),
+  // ================================================================ CAPACITY
+  cov({
+    id: "g6c.cap.litres-to-ml",
+    skill: "G6_CAPACITY",
+    outcome: "G6.CAP.b",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const l = pick([2, 3, 4, 5, 6, 8, 10, 1.5, 2.5, 3.5]), ml = l * 1e3, p = person();
+      return {
+        question: `${p.name}'s jerrican holds ${l} litres of water. How many millilitres is that?`,
+        answer: ml,
+        wrong: [[l * 100, "There are 1,000 millilitres in a litre, not 100."], [l * 10, "There are 1,000 millilitres in a litre, not 10."], [l / 1e3, "You divided. Changing litres to the smaller unit millilitres needs multiplying."], [l * 1e4, "There are 1,000 millilitres in a litre, not 10,000."]],
+        hints: ["A litre is a bigger unit than a millilitre, so the number gets bigger.", "1 litre = 1,000 ml."],
+        steps: ["1 litre = 1,000 ml.", `${l} \xD7 1,000 = ${commas(ml)} ml.`],
+        chk: (a) => a / 1e3 === l
+      };
+    }
+  }),
+  cov({
+    id: "g6c.cap.ml-to-litres",
+    skill: "G6_CAPACITY",
+    outcome: "G6.CAP.c",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const bot = pick([250, 300, 500, 750]), n = pick([4, 6, 8, 12]), ml = bot * n, l = ml / 1e3;
+      if (ml % 10 !== 0) return null;
+      const p = person();
+      return {
+        question: `${p.name} sells ${n} bottles of milk, ${bot} ml each. How many litres of milk is that altogether?`,
+        answer: l,
+        wrong: [[ml, "This is the number of millilitres. The question asks for litres, so divide by 1,000."], [l * 10, "You divided by 100. There are 1,000 millilitres in a litre."], [l / 10, "You divided by 10,000. There are 1,000 millilitres in a litre."], [bot + n, "You added. Find the total number of millilitres by multiplying first."]],
+        hints: ["First find how many millilitres there are altogether.", "Then divide by 1,000 to change to litres."],
+        steps: [`${n} \xD7 ${bot} = ${commas(ml)} ml.`, `${commas(ml)} \xF7 1,000 = ${l} litres.`],
+        chk: (a) => Math.round(a * 1e3) === bot * n
+      };
+    }
+  }),
+  // ================================================================ MASS
+  cov({
+    id: "g6c.mass.which-in-tonnes",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.b",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const t = pick(["a lorry full of sand", "a container loaded at Mombasa port", "an adult elephant", "a loaded bus", "a train wagon full of maize"]);
+      const l = shuffle4([["a bag of sugar", "kilograms"], ["a chicken", "kilograms"], ["a school bag", "kilograms"], ["a mango", "grams"], ["a loaf of bread", "grams"], ["a cooking-oil bottle", "kilograms"]]).slice(0, 3);
+      const options = mc2(cap2(t), l.map(([x, u]) => [cap2(x), `This is light enough to be measured in ${u}. A tonne is 1,000 kilograms.`]));
+      return {
+        question: `${person().name} is learning about units. A tonne is a very large unit of mass. Which of these is best measured in tonnes?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["A tonne is 1,000 kilograms. Think of something very heavy.", "Things you can carry by hand are measured in grams or kilograms."],
+        steps: ["1 tonne = 1,000 kg, so tonnes are for very heavy things.", `${cap2(t)} is very heavy, so it is measured in tonnes.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.sacks-in-tonne",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.c",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const w = pick([20, 25, 40, 50, 100]), n = 1e3 / w, goods = pick(["cement", "maize", "sugar", "rice", "fertiliser"]);
+      return {
+        question: `A lorry can carry 1 tonne. Each sack of ${goods} has a mass of ${w} kg. How many sacks can the lorry carry?`,
+        answer: n,
+        wrong: [[100 / w, "You used 100 kg for a tonne. A tonne is 1,000 kg."], [1e4 / w, "You used 10,000 kg for a tonne. A tonne is 1,000 kg."], [1e3, "This is the number of kilograms in a tonne. Divide it by the mass of one sack."], [1e3 * w, "You multiplied. Find how many sacks fit into 1,000 kg by dividing."]],
+        hints: ["How many kilograms are there in 1 tonne?", "Divide that by the mass of one sack."],
+        steps: ["1 tonne = 1,000 kg.", `1,000 \xF7 ${w} = ${n} sacks.`],
+        chk: (a) => a * w === 1e3
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.estimate-tonnes",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.d",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const items = [["an adult elephant", "5 tonnes", ["5 kg", "50 kg", "500 tonnes"]], ["a loaded sand lorry", "12 tonnes", ["12 kg", "120 kg", "1,200 tonnes"]], ["a school bus with no passengers", "8 tonnes", ["8 kg", "80 kg", "800 tonnes"]], ["an adult hippopotamus", "2 tonnes", ["2 kg", "20 kg", "200 tonnes"]], ["a loaded container at the port", "20 tonnes", ["20 kg", "200 kg", "2,000 tonnes"]], ["a small tractor", "3 tonnes", ["3 kg", "30 kg", "300 tonnes"]]];
+      const [what, right, wr] = pick(items);
+      const options = mc2(right, wr.map((w) => [w, /tonnes/.test(w) ? "That is far too heavy. Compare it with the heaviest things you know." : "That is far too light. It is the mass of something you could lift."]));
+      return {
+        question: `Which is the best estimate for the mass of ${what}?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Think of the mass of a person, about 50 kg. Is this thing lighter or heavier?", "1 tonne is 1,000 kg, as much as about 20 adults."],
+        steps: ["A tonne is 1,000 kg.", `${cap2(what)} is much heavier than a person, but not as heavy as a thousand tonnes: about ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.add-tonnes-kg",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.f",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const t1 = randInt(1, 5), t2 = randInt(1, 5), k1 = randInt(1, 9) * 100 + randInt(0, 1) * 50, k2 = randInt(1, 9) * 100 + randInt(0, 1) * 50;
+      if (k1 + k2 < 1e3) return null;
+      const R = (t1 + t2) * 1e3 + k1 + k2, p = person();
+      const w = [[(t1 + t2) * 100 + k1 + k2, "A tonne is 1,000 kg, not 100 kg."], [t1 + t2 + k1 + k2, "You added the numbers without changing the tonnes to kilograms."], [(t1 + t2) * 1e3, "You left out the kilograms."], [(t1 + t2) * 1e3 + k1 + k2 - 1e3, "The kilograms came to 1,000 or more, which is another tonne. Check the carrying."]];
+      return {
+        question: `A grain store receives ${t1} tonnes ${k1} kg of rice on Monday and ${t2} tonnes ${k2} kg of rice on Tuesday. How many kilograms does it receive in the two days?`,
+        answer: R,
+        wrong: w,
+        hints: ["Change each load to kilograms: 1 tonne = 1,000 kg.", "Then add the two loads."],
+        steps: [`${t1} t ${k1} kg = ${commas(t1 * 1e3 + k1)} kg.`, `${t2} t ${k2} kg = ${commas(t2 * 1e3 + k2)} kg.`, `Total: ${commas(R)} kg.`],
+        chk: (a) => a - (t1 * 1e3 + k1) === t2 * 1e3 + k2
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.subtract-tonnes-kg",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.g",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const t1 = randInt(5, 12), t2 = randInt(1, t1 - 3), k1 = randInt(1, 4) * 100, k2 = randInt(k1 / 100 + 1, 9) * 100;
+      const A2 = t1 * 1e3 + k1, B2 = t2 * 1e3 + k2, R = A2 - B2;
+      const w = [[(t1 - t2) * 1e3 + (k2 - k1), "In the kilogram column the top number is smaller. Regroup one tonne, do not take the smaller from the bigger the other way round."], [(t1 - t2 - 1) * 1e3 + k1 + 100 - k2, "One tonne is 1,000 kg, not 100 kg, when you regroup."], [A2 + B2, "You added. The question asks how much cement is left."], [(t1 - t2) * 1e3, "You left out the kilograms."]];
+      const p = person();
+      return {
+        question: `A hardware shop in ${pick(TOWNS4)} receives ${t1} tonnes ${k1} kg of cement. ${p.name} sells ${t2} tonnes ${k2} kg of it. How many kilograms of cement are left?`,
+        answer: R,
+        wrong: w,
+        hints: ["Change both masses to kilograms first.", "Then take the smaller from the bigger."],
+        steps: [`${t1} t ${k1} kg = ${commas(A2)} kg.`, `${t2} t ${k2} kg = ${commas(B2)} kg.`, `${commas(A2)} \u2212 ${commas(B2)} = ${commas(R)} kg.`],
+        chk: (a) => a + B2 === A2
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.multiply-tonnes-kg",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.h",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const t = randInt(1, 4), k = randInt(1, 9) * 100 + randInt(0, 1) * 50, n = randInt(3, 8), one = t * 1e3 + k;
+      const w = [[t * n * 1e3 + k, "Every trip carries the kilograms too. Multiply the kilograms as well."], [t * n * 100 + k * n, "A tonne is 1,000 kg, not 100 kg."], [t * n + k * n, "You multiplied but did not change the tonnes to kilograms."], [one + n, "You added. Equal trips need multiplying."]];
+      const p = person();
+      return {
+        question: `A truck makes ${n} trips to a quarry. Each trip carries ${t} tonnes ${k} kg of sand to ${p.name}'s building site. How many kilograms of sand are delivered in all?`,
+        answer: one * n,
+        wrong: w,
+        hints: ["Change the load of one trip to kilograms first.", "Then multiply by the number of trips."],
+        steps: [`${t} t ${k} kg = ${commas(one)} kg.`, `${commas(one)} \xD7 ${n} = ${commas(one * n)} kg.`],
+        chk: (a) => a / n === one
+      };
+    }
+  }),
+  cov({
+    id: "g6c.mass.divide-tonnes-kg",
+    skill: "G6_MASS",
+    outcome: "G6.MASS.i",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const n = pick([3, 4, 5]), t = randInt(n + 1, 14), k = randInt(1, 9) * 100, total = t * 1e3 + k;
+      if (t % n === 0 || total % n !== 0) return null;
+      const each = total / n;
+      const w = [[total * n, "You multiplied. Sharing a load equally needs dividing."], [round(each / 1e3, 3), "This is in tonnes. The question asks for kilograms."], [Math.floor(t / n) * 1e3 + k / n, "The leftover tonnes were dropped. Change everything to kilograms and divide it all."], [Math.floor(t / n) * 100 + k / n, "A tonne is 1,000 kg, not 100 kg."]];
+      return {
+        question: `A load of ${t} tonnes ${k} kg of sugar is shared equally between ${n} shops. What is each shop's share, in kilograms?`,
+        answer: each,
+        wrong: w,
+        hints: ["Change the whole load to kilograms first.", "Then divide by the number of shops."],
+        steps: [`${t} t ${k} kg = ${commas(total)} kg.`, `${commas(total)} \xF7 ${n} = ${commas(each)} kg.`],
+        chk: (a) => a * n === total
+      };
+    }
+  }),
+  // ================================================================ MONEY
+  cov({
+    id: "g6c.money.selling-price",
+    skill: "G6_MONEY",
+    outcome: "G6.MONEY.b",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const item = pick([["box of soap", 800], ["box of chalk", 450], ["bale of cloth", 3e3], ["sack of onions", 2500]]), buy = item[1] + 10 * randInt(0, 30), profit = pick([50, 100, 150, 200, 300]), p = person();
+      const w = [[buy - profit, "You took the profit away. A profit is added to the buying price to get the selling price."], [profit, "This is only the profit. The selling price includes the buying price too."], [buy, "This is the buying price. To make a profit, sell for more than this."], [buy + 2 * profit, "The profit has been added twice."]];
+      return {
+        question: `${p.name} runs a small shop. A ${item[0]} costs ${sh(buy)} to buy, and ${p.she} wants ${sh(profit)} profit on it. What selling price, in shillings, should be written on the ${item[0].split(" ")[0]}?`,
+        answer: buy + profit,
+        wrong: w,
+        hints: ["The buying price is what the trader pays. The selling price is what the customer pays.", "To make a profit, the selling price must be more than the buying price."],
+        steps: ["Selling price = buying price + profit.", `${commas(buy)} + ${profit} = ${commas(buy + profit)}.`],
+        chk: (a) => a - profit === buy
+      };
+    }
+  }),
+  cov({
+    id: "g6c.money.buying-price",
+    skill: "G6_MONEY",
+    outcome: "G6.MONEY.b",
+    form: "direct",
+    rung: 3,
+    gen: () => {
+      const sell = 20 * randInt(30, 120), profit = pick([100, 150, 200, 250, 300]), p = person();
+      const w = [[sell + profit, "You added the profit. The buyer paid the selling price, which already includes the profit."], [profit, "This is only the profit. Take it away from the selling price."], [sell, "This is the selling price. The buying price was less, as there was a profit."], [sell - 2 * profit, "The profit has been taken away twice."]];
+      return {
+        question: `${p.name} sold a school bag for ${sh(sell)} and made a profit of ${sh(profit)}. What was the buying price, in shillings?`,
+        answer: sell - profit,
+        wrong: w,
+        hints: ["The selling price is bigger than the buying price when there is a profit.", "Work backwards from the selling price."],
+        steps: ["Buying price = selling price \u2212 profit.", `${commas(sell)} \u2212 ${profit} = ${commas(sell - profit)}.`],
+        chk: (a) => a + profit === sell
+      };
+    }
+  }),
+  cov({
+    id: "g6c.money.loss-amount",
+    skill: "G6_MONEY",
+    outcome: "G6.MONEY.d",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const buy = 10 * randInt(100, 300), loss = 10 * randInt(5, 40), sell = buy - loss, item = pick(["dress", "pair of shoes", "radio", "blanket"]), p = person();
+      const w = [[buy + sell, "You added. The loss is the difference between the two prices."], [buy, "This is the buying price. The loss is how much less it was sold for."], [sell, "This is the selling price. Find how much less it is than the buying price."], [loss * 10, "There is one zero too many. Check the place values when you take the selling price from the buying price."]];
+      return {
+        question: `${p.name} bought a ${item} for ${sh(buy)} and sold it for ${sh(sell)}. How much money did ${p.she} lose, in shillings?`,
+        answer: loss,
+        wrong: w,
+        hints: ["A loss happens when the selling price is less than the buying price.", "Take the smaller price from the bigger one."],
+        steps: ["Loss = buying price \u2212 selling price.", `${commas(buy)} \u2212 ${commas(sell)} = ${loss}.`],
+        chk: (a) => sell + a === buy
+      };
+    }
+  }),
+  cov({
+    id: "g6c.money.profit-or-loss",
+    skill: "G6_MONEY",
+    outcome: "G6.MONEY.d",
+    form: "why",
+    rung: 2,
+    gen: () => {
+      const n = pick([10, 12, 20, 24]), each = pick([20, 25, 30, 35, 40]), buy = n * each, sellEach = each + pick([-10, -5, 5, 10]);
+      if (sellEach <= 0) return null;
+      const sell = n * sellEach, diff = Math.abs(sell - buy), isLoss = sell < buy, p = person();
+      const right = isLoss ? `A loss of ${sh(diff)}` : `A profit of ${sh(diff)}`;
+      const options = mc2(right, [[isLoss ? `A profit of ${sh(diff)}` : `A loss of ${sh(diff)}`, isLoss ? "The money received is less than the money paid, so this is not a profit." : "The money received is more than the money paid, so this is not a loss."], [`A loss of ${sh(sellEach - each > 0 ? sellEach - each : each - sellEach)}`, "This is the difference for one item only. Find the difference for all of them."], ["No profit and no loss", "The two amounts are not equal."]]);
+      return {
+        question: `${p.name} buys ${n} mangoes for ${sh(each)} each and sells all of them for ${sh(sellEach)} each. What is the result?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Find the total money paid for the mangoes, and the total money received.", "If more was received than paid, it is a profit. If less, a loss."],
+        steps: [`Paid: ${n} \xD7 ${each} = ${sh(buy)}. Received: ${n} \xD7 ${sellEach} = ${sh(sell)}.`, `${isLoss ? "Less" : "More"} was received than paid: ${right.toLowerCase()}.`]
+      };
+    }
+  }),
+  // ================================================================ TIME
+  cov({
+    id: "g6c.time.ampm-event",
+    skill: "G6_TIME",
+    outcome: "G6.TIME.a",
+    form: "why",
+    rung: 1,
+    gen: () => {
+      const ev = [["morning assembly starts", 8, 0, "a.m."], ["the first lesson begins", 7, 30, "a.m."], ["lunch break starts", 1, 0, "p.m."], ["the family eats supper", 7, 30, "p.m."], ["the evening news is read", 9, 0, "p.m."], ["the cock crows at dawn", 5, 45, "a.m."], ["school closes for the day", 4, 0, "p.m."]];
+      const [what, h, m, ap] = pick(ev), other = ap === "a.m." ? "p.m." : "a.m.", mm = String(m).padStart(2, "0");
+      const options = mc2(`${h}:${mm} ${ap}`, [[`${h}:${mm} ${other}`, ap === "a.m." ? "The hours from midnight to noon are a.m. This event happens before noon." : "The hours from noon to midnight are p.m. This event happens after noon."]]);
+      const p = person();
+      return {
+        question: `At ${p.name}'s school, ${what} at ${h}:${mm}. Which way of writing the time is correct?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["a.m. is for the time from midnight until noon. p.m. is from noon until midnight.", "Is this event in the morning or after midday?"],
+        steps: ["a.m. means before noon. p.m. means after noon.", `This event is ${ap === "a.m." ? "before" : "after"} noon, so it is ${h}:${mm} ${ap}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.time.write-ampm",
+    skill: "G6_TIME",
+    outcome: "G6.TIME.b",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const part = pick([["in the morning", "a.m.", [6, 7, 8, 9, 10, 11]], ["in the afternoon", "p.m.", [1, 2, 3, 4, 5]], ["in the evening", "p.m.", [6, 7, 8, 9]]]);
+      const [dayWord, ap, hours] = part, other = ap === "a.m." ? "p.m." : "a.m.";
+      const kind = pick(["half", "quarter-past", "to"]);
+      let h = pick(hours), words5, hh = h, mm;
+      if (kind === "half") {
+        words5 = `half past ${h}`;
+        mm = 30;
+      } else if (kind === "quarter-past") {
+        words5 = `quarter past ${h}`;
+        mm = 15;
+      } else {
+        if (h === 1 || h === 6 && ap === "p.m." && dayWord === "in the evening") h += 1;
+        words5 = `quarter to ${h}`;
+        hh = h - 1;
+        mm = 45;
+      }
+      const t = (x, y) => `${x}:${String(y).padStart(2, "0")}`;
+      const wrongMinutes = kind === "to" ? t(h, 45) : kind === "half" ? t(hh, 15) : t(hh, 45);
+      const options = mc2(`${t(hh, mm)} ${ap}`, [[`${t(hh, mm)} ${other}`, `Check whether the time is before noon (a.m.) or after noon (p.m.). It is ${dayWord}.`], [`${wrongMinutes} ${ap}`, kind === "to" ? "Quarter to the hour is 15 minutes before it, so the hour shown is one less." : "Check the minutes: quarter past is 15, half past is 30."], [`${t(hh, mm)}`, "This does not say a.m. or p.m. The time is not clear without it."]]);
+      return {
+        question: `The match ends at ${words5} ${dayWord}. Which is the correct way to write this time?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["First write the time in numbers: hours, then minutes.", `Then decide on a.m. (before noon) or p.m. (after noon): it is ${dayWord}.`],
+        steps: [`${words5} is ${t(hh, mm)}.`, `${dayWord.charAt(0).toUpperCase()}${dayWord.slice(1)} is ${ap}, so ${t(hh, mm)} ${ap}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.time.to-24-hour",
+    skill: "G6_TIME",
+    outcome: "G6.TIME.d",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const h = randInt(1, 11), m = pick([0, 5, 10, 15, 20, 30, 40, 45, 50]), mm = String(m).padStart(2, "0"), pm = Math.random() < 0.6, pad = (x) => String(x).padStart(2, "0");
+      const right = pm ? `${h + 12}${mm} h` : `${pad(h)}${mm} h`;
+      const w = pm ? [[`${pad(h)}${mm} h`, "This is the morning time. For p.m. times, add 12 to the hour."], [`${h + 10}${mm} h`, "You added 10. Add 12 to the hour to change a p.m. time to the 24-hour clock."], [`${h + 12}${pad((m + 30) % 60)} h`, "The minutes do not change. Only the hour changes."]] : [[`${h + 12}${mm} h`, "This is the p.m. time. A.m. times keep the same hour."], [`${pad(12 - h)}${mm} h`, "You took the hour away from 12. A.m. times keep the same hour."], [`${pad(h)}${pad((m + 30) % 60)} h`, "The minutes do not change. A.m. times keep the same hour and minutes."]];
+      const options = mc2(right, w);
+      const ev = pick(["The school choir performs", "The market opens", "The clinic closes", "The football match kicks off"]);
+      return {
+        question: `${ev} at ${h}:${mm} ${pm ? "p.m." : "a.m."} Which of these shows the same time on the 24-hour clock?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["On the 24-hour clock the hours go from 00 to 23.", pm ? "For p.m. times, add 12 to the hour." : "For a.m. times, the hour stays the same."],
+        steps: [pm ? `${h} p.m. is ${h} + 12 = ${h + 12}.` : `${h} a.m. stays ${pad(h)}.`, `The time is ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g6c.time.to-12-hour",
+    skill: "G6_TIME",
+    outcome: "G6.TIME.d",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const H = randInt(13, 23), m = pick([0, 10, 15, 25, 30, 45]), mm = String(m).padStart(2, "0"), h = H - 12;
+      const right = `${h}:${mm} p.m.`;
+      const options = mc2(right, [[`${h}:${mm} a.m.`, "Hours from 13 to 23 are after noon, so they are p.m."], [`${H - 10}:${mm} p.m.`, "You took 10 away. Take 12 away from the hour to change from the 24-hour clock."], [`${H}:${mm} p.m.`, "On the 12-hour clock the hour cannot be more than 12. Take 12 away."]]);
+      const p = person();
+      return {
+        question: `${p.name}'s train ticket says: Departs ${H}${mm} h. How would ${p.she} write this time on a 12-hour clock?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Hours from 13 to 23 are in the afternoon or evening.", "Take 12 away from the hour and write p.m."],
+        steps: [`${H} \u2212 12 = ${h}.`, `${H}${mm} h is ${right}.`]
+      };
+    }
+  }),
+  // ================================================================ ANGLES
+  cov({
+    id: "g6c.ang.straight-two",
+    skill: "G6_ANGLE_PROPERTIES",
+    outcome: "G6.ANGLES.c",
+    form: "word",
+    rung: 1,
+    gen: () => {
+      const a = pick([20, 35, 40, 55, 65, 70, 85, 110, 125, 130, 145, 160]);
+      return {
+        question: `A carpenter fixes a brace to a straight beam. On one side of the brace the angle is ${a}\xB0. What is the angle on the other side of the brace, on the same straight beam?`,
+        answer: 180 - a,
+        wrong: [[90 - a, "You used a right angle. Angles on a straight line add up to a half turn, which is more than that."], [360 - a, "You used a full turn. Angles on a straight line make only a half turn."], [a, "This is the angle you were given. The other angle is different, so subtract."], [a + 180, "You added. The two angles together make 180\xB0, so subtract."]],
+        hints: ["The angles on a straight line add up to a half turn.", "Take the angle you know away from 180\xB0."],
+        steps: ["Angles on a straight line add up to 180\xB0.", `180\xB0 \u2212 ${a}\xB0 = ${180 - a}\xB0.`],
+        chk: (r) => r + a === 180
+      };
+    }
+  }),
+  cov({
+    id: "g6c.ang.straight-three",
+    skill: "G6_ANGLE_PROPERTIES",
+    outcome: "G6.ANGLES.c",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const a = randInt(2, 8) * 10, b = randInt(2, 8) * 10, x = 180 - a - b;
+      if (x < 10) return null;
+      return {
+        question: `A carpenter fixes two braces to a straight beam, which makes three angles along the beam. Two of the angles are ${a}\xB0 and ${b}\xB0. Find the third angle, in degrees.`,
+        answer: x,
+        wrong: [[180 - a, "You took away only one of the angles. All three add up to 180\xB0, so take away both."], [a + b, "This is the sum of the two angles you know. Take it away from 180\xB0."], [360 - a - b, "You used a full turn. Angles on a straight line make only a half turn."], [90 - a - b > 0 ? 90 - a - b : a * b, "You used a right angle. Angles on a straight line add up to a half turn, which is more than that."]],
+        hints: ["The three angles add up to 180\xB0.", "Add the two known angles, then take the total from 180\xB0."],
+        steps: [`${a}\xB0 + ${b}\xB0 = ${a + b}\xB0.`, `180\xB0 \u2212 ${a + b}\xB0 = ${x}\xB0.`],
+        chk: (r) => a + b + r === 180
+      };
+    }
+  }),
+  // ================================================================ 3-D OBJECTS
+  cov({
+    id: "g6c.3d.cylinder-parts",
+    skill: "G6_3D_OBJECTS",
+    outcome: "G6.3D.b",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const q = pick([
+        ["How many flat faces does it have?", 2, [[1, "A cylinder has a flat top and a flat bottom. Count both."], [3, "The side is curved, not flat. Only the top and the bottom are flat."], [0, "The top and the bottom of a cylinder are flat circles."]]],
+        ["How many curved faces does it have?", 1, [[2, "The top and bottom are flat. Only the side is curved."], [0, "The side of a cylinder is one curved face."], [3, "The top and bottom are flat, so only the side is curved."]]],
+        ["How many edges does it have? An edge is where a flat face meets a curved face.", 2, [[1, "There is one edge round the top and one round the bottom."], [0, "The top and the bottom each meet the curved side along an edge."], [3, "Only the top and the bottom meet the curved side, so count two."]]],
+        ["How many corners (vertices) does it have?", 0, [[1, "A cylinder has no sharp point. The edges are smooth circles."], [2, "The edges are smooth circles with no sharp corner."], [4, "A cylinder has no corners. Its edges are smooth circles."]]]
+      ]);
+      const obj = pick(["A tin of beans", "A tin of milk", "A drum of water", "A candle"]);
+      return {
+        question: `${obj} is shaped like a cylinder. ${q[0]}`,
+        answer: q[1],
+        wrong: q[2],
+        hints: ["Think of a tin. Look at its top, its bottom and its side.", "The top and the bottom are circles. The side wraps round."],
+        steps: ["A cylinder has two flat circular faces and one curved face.", `It has two edges and no corners. The answer is ${q[1]}.`],
+        chk: (a) => [0, 1, 2].includes(a)
+      };
+    }
+  }),
+  cov({
+    id: "g6c.3d.plane-in-solid",
+    skill: "G6_3D_OBJECTS",
+    outcome: "G6.3D.c",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const items = [["The top of a tin of beans (a cylinder) is a flat face. What plane figure is it?", "Circle"], ["The biggest face of a matchbox (a cuboid) is a flat face. What plane figure is it?", "Rectangle"], ["Each face of a dice (a cube) is a flat face. What plane figure is it?", "Square"], ["A roof is shaped like a triangular prism. The two ends are flat. What plane figure are they?", "Triangle"], ["The base of a cone-shaped party hat is a flat face. What plane figure is it?", "Circle"]];
+      const [q, right] = pick(items);
+      const all = ["Circle", "Triangle", "Rectangle", "Square"];
+      const why = { Circle: "A circle is round with no corners and no straight sides.", Triangle: "A triangle has three sides and three corners.", Rectangle: "A rectangle has four sides, with opposite sides equal, and its sides are not all equal.", Square: "A square has four equal sides." };
+      const options = mcFixed(right, all.filter((a) => a !== right).map((a) => [a, `That is not the shape of this face. ${why[a]}`]), all);
+      return {
+        question: q,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Picture the flat face of the object and look at its outline.", "Count its sides and corners."],
+        steps: ["A solid is made up of plane figures, such as circles, squares, rectangles and triangles.", `The shape of this face is a ${right.toLowerCase()}.`]
+      };
+    }
+  }),
+  // ================================================================ BAR GRAPHS AND PICTOGRAPHS
+  cov({
+    id: "g6c.data.pictograph-symbols",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.b",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const each = pick([10, 20, 50]), u = randInt(2, 17) / 2, v = u * each, p = person(), thing = pick(["learners who walk to school", "bags of maize sold in a week", "eggs sold at a kiosk"]);
+      return {
+        question: `${p.name} draws a pictograph of ${thing}. One whole symbol stands for ${each}, and a half symbol stands for ${each / 2}. How many whole symbols should ${p.she} draw for ${v}? Count a half symbol as 0.5.`,
+        answer: u,
+        wrong: [[v, "You drew one symbol for each. One symbol stands for more than one."], [v / 10, "You used 10 for each symbol. Use the number each symbol stands for."], [u * 2, "You used half of the number each symbol stands for. A whole symbol stands for the full amount."], [Math.ceil(u) + (u % 1 === 0 ? 1 : 0), "Check the half symbol. The amount left over after whole symbols needs a half symbol."]],
+        hints: [`How many symbols make ${each}?`, "Divide the number by what one symbol stands for."],
+        steps: [`One symbol = ${each}.`, `${v} \xF7 ${each} = ${u} symbols.`],
+        chk: (a) => a * each === v
+      };
+    }
+  }),
+  cov({
+    id: "g6c.data.pictograph-key",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.b",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const R = pick([10, 20, 50]), units = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
+      if (units.every((x) => x % 2 === 0) || units.some((x) => x % 2 === 1) === false) return null;
+      const vals = units.map((x) => x * R), opts2 = [R / 2, R, 2 * R, 4 * R];
+      const valid = (e) => vals.every((v) => v % e === 0) && Math.max(...vals) / e <= 10;
+      if (opts2.filter(valid).length !== 1 || !valid(R)) return null;
+      const p = person();
+      const options = mcFixed(`${R}`, opts2.filter((e) => e !== R).map((e) => [`${e}`, vals.some((v) => v % e !== 0) ? `Some numbers cannot be shown with whole symbols when one symbol stands for ${e}.` : `The longest row would need more than 10 symbols when one symbol stands for ${e}.`]), opts2.map(String));
+      return {
+        question: `${p.name} will draw a pictograph for ${vals.join(", ")} learners in three classes. Only whole symbols are allowed, and a row may have at most 10 symbols. How many learners should one symbol stand for?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Each number must be a whole number of symbols.", "The longest row must not be more than 10 symbols."],
+        steps: opts2.map((e) => `${e} for one symbol: ${valid(e) ? "works" : vals.some((v) => v % e !== 0) ? "some numbers do not fit" : "too many symbols"}.`)
+      };
+    }
+  }),
+  cov({
+    id: "g6c.data.bar-squares",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.d",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const s = pick([5, 10, 20, 50]), k = randInt(3, 9), v = s * k, p = person(), thing = pick(["kilograms of tomatoes", "litres of milk", "bags of maize"]);
+      return {
+        question: `${p.name} is drawing a bar graph of ${v} ${thing} sold on Monday. On the vertical axis, one square stands for ${s}. How many squares tall should the Monday bar be?`,
+        answer: k,
+        wrong: [[v, "You used one square for each. One square stands for more than one."], [s, "This is what one square stands for. Divide the amount by it to count the squares."], [v * s, "You multiplied. Divide the amount by what one square stands for."], [v / 10, "You divided by 10 whatever the scale. Divide by the number one square stands for."]],
+        hints: ["Each square stands for a fixed amount.", "Divide the amount by what one square stands for."],
+        steps: [`One square = ${s}.`, `${v} \xF7 ${s} = ${k} squares.`],
+        chk: (a) => a * s === v
+      };
+    }
+  }),
+  cov({
+    id: "g6c.data.bar-heights",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.d",
+    form: "table",
+    rung: 3,
+    gen: () => {
+      const s = pick([10, 20]), days = ["Mon", "Tue", "Wed", "Thu"], k = days.map(() => randInt(2, 9)), vals = k.map((x) => x * s);
+      if (new Set(k).size < 4) return null;
+      const show = (arr) => days.map((d, i) => `${d} ${arr[i]}`).join(", ");
+      const sw = [...k];
+      [sw[0], sw[1]] = [sw[1], sw[0]];
+      const one = [...k];
+      one[2] = one[2] + 1;
+      const options = mc2(show(k), [[show(vals), "These are the amounts, not the heights. Divide each amount by the number each square stands for."], [show(sw), "Two of the bars have swapped places. Match each day to its own amount."], [show(one), "One bar is a square too tall. Check each division."]]);
+      return {
+        question: `The table shows the bags of maize a shop sold. A bar graph will use one square for each ${s} bags. Which list gives the heights of the bars, in squares?`,
+        options,
+        instruction: "Choose the best answer.",
+        model: { type: "table", data: { head: ["Day", "Bags sold"], rows: days.map((d, i) => ({ cells: [d, String(vals[i])] })) } },
+        hints: [`Divide each amount by ${s}.`, "Keep the days in the same order."],
+        steps: days.map((d, i) => `${d}: ${vals[i]} \xF7 ${s} = ${k[i]} squares.`)
+      };
+    }
+  }),
+  cov({
+    id: "g6c.data.bar-difference",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.e",
+    form: "graph",
+    rung: 2,
+    gen: () => {
+      const u = pick([10, 20]), days = ["Mon", "Tue", "Wed", "Thu", "Fri"], vals = days.map(() => u * randInt(1, 8));
+      const hi = Math.max(...vals), lo = Math.min(...vals);
+      if (vals.filter((v) => v === hi).length > 1 || vals.filter((v) => v === lo).length > 1 || hi - lo < 2 * u) return null;
+      const thing = pick(["litres of milk a dairy sold", "kilograms of tomatoes a stall sold", "eggs a farm collected"]);
+      return {
+        question: `The bar graph shows the ${thing} each day from Monday to Friday. How many more were sold on the busiest day than on the quietest day?`,
+        answer: hi - lo,
+        model: { type: "bar-chart", data: { bars: days.map((label, i) => ({ label, value: vals[i] })) } },
+        wrong: [[hi, "This is the busiest day only. Take away the quietest day."], [hi + lo, '"How many more" asks for the difference, so subtract.'], [lo, "This is the quietest day only. Find the difference between the busiest and quietest."], [vals.reduce((a, b) => a + b, 0), "This adds all five days. The question asks about two days only."]],
+        hints: ["Read the height of each bar against the scale.", "Find the tallest and the shortest bar, then subtract."],
+        steps: [`The tallest bar is ${hi} and the shortest is ${lo}.`, `${hi} \u2212 ${lo} = ${hi - lo}.`],
+        chk: (a) => a + lo === hi
+      };
+    }
+  }),
+  cov({
+    id: "g6c.data.bar-second-highest",
+    skill: "G6_DATA_COLLECTION",
+    outcome: "G6.DATA.e",
+    form: "graph",
+    rung: 3,
+    gen: () => {
+      const u = pick([10, 20]), days = ["Mon", "Tue", "Wed", "Thu", "Fri"], vals = days.map(() => u * randInt(1, 8)), s = [...vals].sort((a, b) => b - a);
+      if (new Set(vals).size < 5) return null;
+      const second = days[vals.indexOf(s[1])], top = days[vals.indexOf(s[0])], third = days[vals.indexOf(s[2])], least = days[vals.indexOf(s[4])];
+      const options = mcFixed(second, [[top, "This day has the tallest bar. The question asks for the second tallest."], [third, "This day has the third tallest bar. Look for the one just below the tallest."], [least, "This day has the shortest bar. Look for the second tallest."]], days.filter((d) => [second, top, third, least].includes(d)));
+      return {
+        question: "The bar graph shows the number of bicycles a repair shop mended each day from Monday to Friday. On which day did it mend the second greatest number of bicycles?",
+        options,
+        instruction: "Choose the best answer.",
+        model: { type: "bar-chart", data: { bars: days.map((label, i) => ({ label, value: vals[i] })) } },
+        hints: ["Find the tallest bar first.", "Then find the tallest bar among the rest."],
+        steps: days.map((d, i) => `${d}: ${vals[i]}.`).concat([`The second greatest is ${s[1]}, on ${second}.`])
+      };
+    }
+  })
+];
+
+// src/ai-tutor/content/families/g8_cov.js
+var TOWNS5 = ["Nyeri", "Kitale", "Embu", "Machakos", "Kericho", "Garissa", "Thika", "Kakamega", "Meru", "Kisii"];
+var sgn = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
+var FAMILIES16 = [
+  // ================================================================ INTEGERS
+  cov({
+    id: "g8c.int.number-line-lift",
+    skill: "G6_INTEGERS_ADD_SUB",
+    outcome: "G8.INTEGERS.c",
+    form: "word",
+    rung: 2,
+    allowNegative: true,
+    gen: () => {
+      const s = -randInt(1, 4), n = randInt(2, 7), up = Math.random() < 0.6, d = up ? n : -n, r = s + d;
+      if (r === 0 || Math.abs(r) === Math.abs(s)) return null;
+      const w = [[Math.abs(s) + d, "You ignored the minus sign and counted from a positive floor. The basement is below zero on the number line."], [s - d, "You moved the wrong way along the number line. Going up moves right, going down moves left."], [-r, "The size is right but it is on the wrong side of zero. Check whether the lift ends above or below the ground floor."], [r + (up ? -1 : 1), "Count the steps again from the starting floor. Each floor is one step."]];
+      return {
+        question: `A lift in a Nairobi office block is at floor ${sgn(s)}. Floors below the ground floor have minus signs. The lift goes ${up ? "up" : "down"} ${n} floors. Use a number line. At which floor does it stop?`,
+        answer: r,
+        wrong: w,
+        hints: ["Mark the starting floor on a number line. Going up moves to the right.", `Move ${n} steps ${up ? "right" : "left"} and read the number.`],
+        steps: [`Start at ${sgn(s)} on the number line.`, `Move ${n} steps ${up ? "right" : "left"}: ${sgn(s)} ${up ? "+" : "\u2212"} ${n} = ${sgn(r)}.`],
+        chk: (a) => a - s === d
+      };
+    }
+  }),
+  // ================================================================ DECIMALS
+  cov({
+    id: "g8c.dec.recurring-to-fraction",
+    skill: "G8_RECURRING_DECIMALS",
+    outcome: "G8.DEC.c",
+    form: "direct",
+    rung: 3,
+    gen: () => {
+      const two = Math.random() < 0.6, rep = two ? randInt(10, 98) : randInt(1, 8), den = two ? 99 : 9;
+      if (two && rep % 11 === 0) return null;
+      const right = frac(rep, den), shown = String(rep).padStart(two ? 2 : 1, "0"), dec2 = `0.${shown.repeat(4)}...`;
+      const options = mc2(right, [[frac(rep, two ? 100 : 10), "This is the decimal with no repeating. A repeating decimal is a little more than that."], [frac(rep, two ? 9 : 99), two ? "You used 9. Two repeating digits mean 99 on the bottom." : "You used 99. One repeating digit means 9 on the bottom."], [frac(rep, two ? 999 : 90), two ? "You used 999. Two repeating digits mean 99 on the bottom." : "You used 90. One repeating digit means 9 on the bottom."]]);
+      return {
+        question: `A calculator shows ${dec2}, where ${two ? `the digits ${shown} repeat` : `the digit ${shown} repeats`} for ever. Which fraction in its simplest form is equal to this decimal?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: [two ? "Let x be the decimal. Multiply by 100 to move one repeat to the left of the point." : "Let x be the decimal. Multiply by 10 to move one repeat to the left of the point.", "Subtract x from your new number so the repeating parts cancel."],
+        steps: [`Let x = ${dec2}. Then ${two ? 100 : 10}x = ${shown}.${shown.repeat(3)}...`, `Subtract: ${two ? 99 : 9}x = ${rep}, so x = ${rep}/${den} = ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.dec.significant-figures",
+    skill: "G8_STANDARD_FORM",
+    outcome: "G8.DEC.e",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const big = Math.random() < 0.5, sf = randInt(2, 3), p = person();
+      let x, w, txt, unit;
+      if (big) {
+        x = randInt(1e4, 99999) + (Math.random() < 0.5 ? 0 : 0);
+        unit = "km";
+        txt = `${p.name}'s matatu travelled ${commas(x)} km in a year.`;
+      } else {
+        x = randInt(1e4, 99999) / (Math.random() < 0.5 ? 100 : 1e3);
+        unit = "kg";
+        txt = `A trader sold ${x} kg of beans in a week.`;
+      }
+      const right = Number(Number(x).toPrecision(sf));
+      if (right === x) return null;
+      const digits = String(x).replace(".", "").length;
+      const trunc = big ? Math.floor(x / 10 ** (String(x).length - sf)) * 10 ** (String(x).length - sf) : Number(String(x).slice(0, sf + 1));
+      const w1 = [[trunc, "You cut the number off instead of rounding. Look at the next digit: 5 or more rounds up."], [Number(Number(x).toPrecision(sf + 1)), `You gave ${sf + 1} significant figures. The question asks for ${sf}.`], [Number(Number(x).toPrecision(sf - 1)), `You gave ${sf - 1} significant figure${sf - 1 === 1 ? "" : "s"}. The question asks for ${sf}.`], [big ? Number((x / 10 ** (String(x).length - sf)).toFixed(0)) : Number(Number(x).toFixed(sf)), big ? "The zeros that hold the place value were left out." : `You rounded to ${sf} decimal places. Significant figures count from the first non-zero digit.`]];
+      return {
+        question: `${txt} Write ${big ? commas(x) : x} correct to ${sf} significant figures.`,
+        answer: right,
+        wrong: w1,
+        hints: ["Count the significant figures from the first digit that is not zero.", "Look at the digit after the last one you keep. 5 or more rounds up."],
+        steps: [`The first ${sf} significant figures are ${String(x).replace(".", "").slice(0, sf)}.`, `Rounding gives ${big ? commas(right) : right}.`],
+        chk: (a) => Math.abs(a - x) <= (big ? 10 ** (String(x).length - sf) : 10 ** (Math.floor(Math.log10(x)) - sf + 1)) / 2 + 1e-9
+      };
+    }
+  }),
+  cov({
+    id: "g8c.dec.to-standard-form",
+    skill: "G8_STANDARD_FORM",
+    outcome: "G8.DEC.f",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const small = Math.random() < 0.4, m = randInt(11, 99) / 10, e = small ? -randInt(2, 6) : randInt(3, 8);
+      if (m % 1 === 0) return null;
+      const value = small ? round(m * 10 ** e, 10) : round(m * 10 ** e, 0);
+      const shown = small ? String(value) : commas(value);
+      const right = `${m} \xD7 10${sup(e)}`;
+      const options = mc2(right, [[`${round(m * 10, 0)} \xD7 10${sup(e - 1)}`, "The first number must be between 1 and 10 in standard form."], [`${m} \xD7 10${sup(small ? e + 1 : e - 1)}`, "Count the places the point moves again. The power of 10 matches the number of places."], [`${m} \xD7 10${sup(-e)}`, small ? "A very small number needs a negative power of 10." : "A very big number needs a positive power of 10."]]);
+      const thing = small ? pick([`a grain of pollen has a mass of ${shown} g`, `a thin wire has a width of ${shown} m`]) : pick([`a county has ${shown} people`, `a shipment of tea is worth ${shown} shillings`]);
+      return {
+        question: `In a science book, ${thing}. Which is this number in standard form?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Standard form is a number from 1 up to 10, multiplied by a power of 10.", small ? "Count how many places the point moves to the right. The power is negative." : "Count how many places the point moves to the left. The power is positive."],
+        steps: [`Write ${m} as the first number, so that it is between 1 and 10.`, `The point moves ${Math.abs(e)} places, so the power is ${e}: ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.dec.combined-operations",
+    skill: "G8_DECIMALS_COMBINED",
+    outcome: "G8.DEC.g",
+    form: "direct",
+    rung: 3,
+    gen: () => {
+      const a = randInt(11, 99) / 10, b = randInt(11, 59) / 10, c = randInt(2, 9) / 2, kind = pick(["add-mul", "bracket"]);
+      if (a % 1 === 0 || b % 1 === 0) return null;
+      let right, wrong, text;
+      if (kind === "add-mul") {
+        right = round(a + b * c, 3);
+        wrong = round((a + b) * c, 3);
+        text = `${a} + ${b} \xD7 ${c}`;
+      } else {
+        right = round((a - b) * c, 3);
+        wrong = round(a - b * c, 3);
+        text = `(${a} \u2212 ${b}) \xD7 ${c}`;
+        if (a <= b) return null;
+      }
+      if (!distinct4(right, wrong)) return null;
+      const w = [[wrong, kind === "add-mul" ? "You worked from left to right. Multiplication is done before addition." : "The brackets were ignored. Work out the brackets first."], [round(a + b + c, 3), "You added everything. Look at the signs: multiplication comes first."], [round(right * 10, 3), "The decimal point is in the wrong place in your product. Count the decimal places in both numbers."], [round(right / 10, 3), "The decimal point is in the wrong place in your product. Count the decimal places in both numbers."]];
+      return {
+        question: `In a class competition, ${person().name} must find the value of ${text}. Write the answer as a decimal number.`,
+        answer: right,
+        wrong: w,
+        instruction: "Read carefully. Then answer the question.",
+        hints: ["Use the order of operations: brackets, then multiplication and division, then addition and subtraction.", "Work out the part that must come first and write down the answer."],
+        steps: kind === "add-mul" ? [`${b} \xD7 ${c} = ${round(b * c, 3)}.`, `${a} + ${round(b * c, 3)} = ${right}.`] : [`${a} \u2212 ${b} = ${round(a - b, 3)}.`, `${round(a - b, 3)} \xD7 ${c} = ${right}.`],
+        chk: (r) => kind === "add-mul" ? Math.abs(r - a - b * c) < 1e-6 : Math.abs(r - (a - b) * c) < 1e-6
+      };
+    }
+  }),
+  cov({
+    id: "g8c.dec.shopping-change",
+    skill: "G8_DECIMALS_COMBINED",
+    outcome: "G8.DEC.h",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const item = pick([["kg of rice", 142.5], ["kg of sugar", 167.5], ["litres of milk", 62.5], ["kg of beans", 187.5], ["kg of maize flour", 112.5]]), n = randInt(2, 6), per = item[1] + pick([-10, 0, 10, 12.5]), pay = Math.ceil(n * per / 500) * 500 + (Math.random() < 0.5 ? 0 : 500), cost = round(n * per, 2), ch = round(pay - cost, 2), p = person();
+      const w = [[round(pay - per, 2), `You took the price of one from the money paid. Find the cost of all ${n} first.`], [cost, "This is the total cost. The question asks for the change, so take it from the money paid."], [round(pay + cost, 2), "You added. Change is the money paid minus the cost."], [round(pay - n * Math.floor(per), 2), "The shillings and cents were not both used. Multiply the full price."]];
+      return {
+        question: `${p.name} buys ${n} ${item[0]} at ${sh(per)} for each. ${p.She} pays with ${sh(pay)}. How much change does ${p.she} get, in shillings?`,
+        answer: ch,
+        wrong: w,
+        hints: ["First find the cost of all the items.", "Then take the cost from the money paid."],
+        steps: [`${n} \xD7 ${per} = ${cost}.`, `${pay} \u2212 ${cost} = ${ch}.`],
+        chk: (a) => Math.abs(a + n * per - pay) < 1e-6
+      };
+    }
+  }),
+  // ================================================================ SQUARES
+  cov({
+    id: "g8c.sq.root-plot",
+    skill: "G8_SQUARES_TABLES",
+    outcome: "G8.SQUARES.c",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const perfect = Math.random() < 0.5, p = person();
+      let A2, side, wrong;
+      if (perfect) {
+        side = randInt(12, 95);
+        A2 = side * side;
+        wrong = [[side * 2, "You doubled the side instead of finding the number that multiplies by itself."], [A2 / 2, "You halved the area. A square root is a number that, multiplied by itself, gives the area."], [A2 * A2, "You squared the area. Use the square root key instead."], [A2 / 4, "You divided the area by 4, as if finding a side from the perimeter. Use the square root instead."]];
+      } else {
+        A2 = pick([20, 50, 70, 90, 150, 200, 300, 500]);
+        side = round(Math.sqrt(A2), 1);
+        wrong = [[round(Math.floor(Math.sqrt(A2) * 10) / 10, 1), "You cut the number off instead of rounding to one decimal place."], [A2 / 2, "You halved the area. Use the square root key."], [A2 * A2, "You squared the area. Use the square root key instead."], [round(Math.sqrt(A2), 2), "The answer needs one decimal place only."]];
+        if (round(Math.floor(Math.sqrt(A2) * 10) / 10, 1) === side) wrong.shift();
+      }
+      return {
+        question: `${p.name}'s square plot in ${pick(TOWNS5)} has an area of ${commas(A2)} m\xB2. Use a calculator to find the length of one side${perfect ? "" : ", correct to 1 decimal place"}, in metres.`,
+        answer: side,
+        wrong,
+        hints: ["The area of a square is side \xD7 side.", "Press the square root key on your calculator."],
+        steps: [`The side is the square root of ${commas(A2)}.`, `\u221A${commas(A2)} = ${side}${perfect ? "" : " (to 1 decimal place)"}.`],
+        chk: (a) => Math.abs(a * a - A2) <= (perfect ? 0 : 0.2 * a + 0.01)
+      };
+    }
+  }),
+  cov({
+    id: "g8c.sq.square-decimal",
+    skill: "G8_SQUARES_TABLES",
+    outcome: "G8.SQUARES.c",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const x = randInt(12, 98) / 10;
+      if (x % 1 === 0) return null;
+      const sq = round(x * x, 2), p = person();
+      return {
+        question: `${p.name} uses a calculator to find the area of a square tile with a side of ${x} cm. Work out ${x}\xB2 in square centimetres.`,
+        answer: sq,
+        wrong: [[round(x * 2, 2), "You multiplied by 2. Squaring means multiplying the number by itself."], [round(sq / 10, 3), "The decimal point is in the wrong place. Count the decimal places in both numbers."], [round(sq * 10, 1), "The decimal point is in the wrong place. Count the decimal places in both numbers."], [Math.round(sq), "The answer was rounded to a whole number. Give the full answer from the calculator."]],
+        hints: ["Squaring a number means multiplying it by itself.", "Use the x\xB2 key on your calculator."],
+        steps: [`${x}\xB2 = ${x} \xD7 ${x}.`, `${x} \xD7 ${x} = ${sq}.`],
+        chk: (a) => Math.abs(Math.sqrt(a) - x) < 1e-6
+      };
+    }
+  }),
+  // ================================================================ RATES, RATIO, PROPORTION
+  cov({
+    id: "g8c.rate.per-unit",
+    skill: "G8_RATIO_PROPORTION",
+    outcome: "G8.RATES.b",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const kind = pick([["A cyclist rides from Thika to Nairobi, 45 km, in 3 hours. What is the average rate in kilometres per hour?", "km", "hours"], ["A tank fills with 240 litres of water in 8 minutes. What is the rate in litres per minute?", "litres", "minutes"], ["A trader paid for sacks of potatoes and a fixed mass of potatoes. What was the price per kilogram, in shillings?", "sh", "kg"], ["A typist types words in a fixed time. What is her rate in words per minute?", "words", "minutes"]]);
+      const unit = randInt(4, 15), t = randInt(3, 9), tot = unit * t, p = person();
+      let q;
+      if (kind[1] === "km") q = `${p.name} cycles ${tot} km in ${t} hours at a steady speed. What is ${p.her} rate in kilometres per hour?`;
+      else if (kind[1] === "litres") q = `A tank fills with ${tot * 10} litres of water in ${t} minutes. What is the rate in litres per minute?`;
+      else if (kind[1] === "sh") q = `${p.name} pays ${sh(tot * 10)} for ${t} kg of beans. What is the price per kilogram, in shillings?`;
+      else q = `${p.name} types ${tot * 5} words in ${t} minutes. What is ${p.her} rate in words per minute?`;
+      const amount = kind[1] === "km" ? tot : kind[1] === "litres" ? tot * 10 : kind[1] === "sh" ? tot * 10 : tot * 5;
+      const right = amount / t;
+      const w = [[amount * t, "You multiplied. A rate is an amount shared for each one unit, so divide."], [round(t / amount, 3), "You divided the wrong way round. Divide the amount by the time or the quantity."], [amount + t, "You added. A rate compares two amounts by dividing."], [amount - t, "You subtracted. A rate compares two amounts by dividing."]];
+      return {
+        question: q,
+        answer: right,
+        wrong: w,
+        hints: ["A rate tells you how much for one unit.", "Divide the total amount by the number of units."],
+        steps: [`Rate = amount \xF7 number of units.`, `${amount} \xF7 ${t} = ${right}.`],
+        chk: (a) => a * t === amount
+      };
+    }
+  }),
+  cov({
+    id: "g8c.ratio.compare-two",
+    skill: "G6_RATIOS",
+    outcome: "G8.RATES.d",
+    form: "why",
+    rung: 3,
+    gen: () => {
+      const a = randInt(1, 5), b = randInt(a + 1, 9), equal = Math.random() < 0.25, k = randInt(2, 3);
+      let c, d;
+      if (equal) {
+        c = a * k;
+        d = b * k;
+      } else {
+        c = randInt(1, 9);
+        d = randInt(c + 1, 14);
+      }
+      const s1 = a / (a + b), s2 = c / (c + d);
+      if (!equal && Math.abs(s1 - s2) < 0.02) return null;
+      const right = equal ? "The same" : s1 > s2 ? "Class 8A" : "Class 8B";
+      const options = mc2(right, [["Class 8A", right === "Class 8A" ? null : "Compare the fraction of each class that are girls. A bigger number in a ratio does not mean a bigger share."], ["Class 8B", right === "Class 8B" ? null : "Compare the fraction of each class that are girls. A bigger number in a ratio does not mean a bigger share."], ["The same", right === "The same" ? null : "The ratios are not equal. Change each one to a fraction of the class and compare."]].filter((x) => x[1]));
+      return {
+        question: `In Class 8A the ratio of girls to boys is ${a} : ${b}. In Class 8B it is ${c} : ${d}. In which class are girls the bigger share of the class?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["A girls : boys ratio of 2 : 3 means 2 out of 5 learners are girls.", "Change each ratio to a fraction of the whole class, then compare the fractions."],
+        steps: [`Class 8A: ${a} out of ${a + b} are girls. Class 8B: ${c} out of ${c + d} are girls.`, `${a}/${a + b} and ${c}/${c + d}: ${equal ? "they are equal" : s1 > s2 ? "the first is bigger" : "the second is bigger"}. The answer is ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.pct.change-amount",
+    skill: "G8_PERCENTAGE_CHANGE",
+    outcome: "G8.RATES.h",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const up = Math.random() < 0.55, pct3 = pick([10, 20, 25, 30, 40, 50]), base = pick([2e3, 2500, 3e3, 3500, 4e3, 5e3, 8e3, 12e3]);
+      const ch = base * pct3 / 100, nw = up ? base + ch : base - ch;
+      if (Number.isNaN(ch) || ch % 1 !== 0) return null;
+      const thing = pick(["a bag of maize", "a bicycle tyre set", "a school uniform", "a bag of fertiliser"]);
+      const w = [[ch, "This is the amount of the change in shillings. The question asks for the percentage."], [round(ch / nw * 100, 1), "You divided by the new price. A percentage change is worked out from the original price."], [round(nw / base * 100, 1), "This compares the new price to the old one. Use the change, not the new price."], [round(ch / base, 3), "This is the change as a decimal. Multiply by 100 to make it a percentage."]];
+      return {
+        question: `${person().name} compares prices. Last year ${thing} cost ${sh(base)}. This year it costs ${sh(nw)}. Work out the percentage ${up ? "increase" : "decrease"} in the price.`,
+        answer: pct3,
+        wrong: w,
+        hints: ["First find the change in price.", "Divide the change by the original price, then multiply by 100."],
+        steps: [`Change = ${commas(Math.max(base, nw))} \u2212 ${commas(Math.min(base, nw))} = ${commas(ch)}.`, `${commas(ch)} \xF7 ${commas(base)} \xD7 100 = ${pct3}%.`],
+        chk: (a) => Math.abs(base * (1 + (up ? 1 : -1) * a / 100) - nw) < 1e-6
+      };
+    }
+  }),
+  cov({
+    id: "g8c.pct.which-method",
+    skill: "G8_PERCENTAGE_CHANGE",
+    outcome: "G8.RATES.h",
+    form: "why",
+    rung: 3,
+    gen: () => {
+      const base = pick([2400, 3e3, 4500, 6e3]), nw = base + pick([300, 600, 900, 1200]), p = person();
+      const right = `(${commas(nw)} \u2212 ${commas(base)}) \xF7 ${commas(base)} \xD7 100`;
+      const options = mc2(right, [[`(${commas(nw)} \u2212 ${commas(base)}) \xF7 ${commas(nw)} \xD7 100`, "This divides by the new amount. A percentage change always compares with the original."], [`${commas(nw)} \xF7 ${commas(base)} \xD7 100`, "This gives the new amount as a percentage of the old one, not the change."], [`(${commas(nw)} \u2212 ${commas(base)}) \xD7 100`, "The change must be divided by the original amount before multiplying by 100."]]);
+      return {
+        question: `${p.name} earned ${sh(base)} a month and now earns ${sh(nw)}. Which calculation gives the percentage increase?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["The percentage increase compares the increase with the amount before it.", "Change \xF7 original \xD7 100."],
+        steps: ["Find the increase by taking the old amount from the new amount.", `Divide by the original and multiply by 100: ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.prop.direct-or-inverse",
+    skill: "G8_RATIO_PROPORTION",
+    outcome: "G8.RATES.i",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const direct = ["The number of exercise books bought and the total cost, when each book costs the same", "The litres of petrol bought and the cost, at a fixed price per litre", "The kilograms of sugar bought and the cost of the sugar", "The distance a bus travels and the time taken, at a steady speed", "The number of mandazi bought and the money paid"];
+      const inverse = ["The number of workers building a wall and the days they need", "The speed of a matatu and the time it takes to go from Nakuru to Eldoret", "The number of taps filling a tank and the time to fill it", "The number of learners sharing 60 sweets and the number each learner gets", "The number of machines ploughing a shamba and the hours they need"];
+      const neither = ["The age of a learner and the number of books in her bag", "The height of a boy and the number of letters in his name", "A learner's birth month and her mark in mathematics"];
+      const kind = pick(["direct", "inverse", "neither"]), list2 = kind === "direct" ? direct : kind === "inverse" ? inverse : neither, ex = pick(list2);
+      const lab = { direct: "Direct proportion", inverse: "Inverse proportion", neither: "Neither" };
+      const why = { direct: "When one doubles, the other doubles too, so this is a direct proportion.", inverse: "When one doubles, the other halves, so this is an inverse proportion.", neither: "Changing one does not make the other change by the same rule, so this is neither." };
+      const options = mcFixed(lab[kind], Object.keys(lab).filter((k) => k !== kind).map((k) => [lab[k], `Check what happens when the first quantity doubles. ${k === "neither" ? "Is there any rule linking them?" : k === "direct" ? "Does the other double as well?" : "Does the other halve?"}`]), Object.values(lab));
+      return {
+        question: `Which kind of relationship is this? ${ex}.`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Imagine the first quantity doubling. What happens to the second?", "If the second doubles too, it is direct. If it halves, it is inverse."],
+        steps: [`Double the first quantity and see what happens to the second.`, why[kind]]
+      };
+    }
+  }),
+  // ================================================================ LINEAR EQUATIONS
+  cov({
+    id: "g8c.eq.eliminate-subtract",
+    skill: "G8_SIMULTANEOUS_INTRO",
+    outcome: "G8.EQUATIONS.c",
+    form: "steps",
+    rung: 3,
+    gen: () => {
+      const c = pick([40, 50, 60, 70, 80]), t = pick([20, 30, 40, 50]), a = randInt(2, 4), b1 = randInt(1, 3), b2 = randInt(b1 + 1, 6), P1 = a * c + b1 * t, P2 = a * c + b2 * t;
+      const w1 = [[P2 - P1, "You subtracted the totals but did not divide by the difference in the number of packets of salt."], [round((P1 + P2) / (b1 + b2), 2), "The bars of soap are the same in both orders, so subtract the equations. Adding does not remove them."]];
+      const w2 = [[round(P1 / a, 2), "You left out the salt. Put the price of salt into one order and solve for the soap."], [round((P1 + b1 * t) / a, 2), "You added the salt instead of taking it away from the total."]];
+      const p = person();
+      return {
+        question: `${p.name} buys ${a} bars of soap and ${b1} packet${b1 === 1 ? "" : "s"} of salt for ${sh(P1)}. On another day ${p.she} buys ${a} bars of soap and ${b2} packets of salt for ${sh(P2)}. Solve by elimination.`,
+        parts: [{ prompt: "What is the price of one packet of salt, in shillings?", answer: t, wrong: w1, hint: "Subtract the first order from the second. The soap cancels." }, { prompt: "What is the price of one bar of soap, in shillings?", answer: c, wrong: w2, hint: "Put the price of salt into the first order and solve." }],
+        hints: ["Both orders have the same number of bars of soap, so subtract one equation from the other.", "Find the price of salt first."],
+        steps: [`Subtract: ${b2 - b1} packets of salt cost ${sh(P2 - P1)}, so one packet is ${sh(t)}.`, `${a} bars of soap cost ${sh(P1)} \u2212 ${sh(b1 * t)} = ${sh(a * c)}, so one bar is ${sh(c)}.`],
+        chk: (v) => a * v[1] + b1 * v[0] === P1 && a * v[1] + b2 * v[0] === P2
+      };
+    }
+  }),
+  cov({
+    id: "g8c.eq.eliminate-add",
+    skill: "G8_SIMULTANEOUS_INTRO",
+    outcome: "G8.EQUATIONS.c",
+    form: "steps",
+    rung: 3,
+    gen: () => {
+      const small = randInt(20, 60), diff = randInt(4, 30), big = small + diff, S4 = big + small, p = person();
+      const goods = pick(["maize", "beans", "rice", "sugar"]), other = pick(["flour", "salt"]);
+      const w1 = [[round(S4 / 2, 2), "You divided the sum by 2, as if both sacks were equal. They differ."], [S4 - diff, "You took the difference from the sum but did not divide by 2."]];
+      const w2 = [[diff, "This is the difference between the sacks. Find the mass of the lighter sack itself."], [round((S4 + diff) / 2, 2), "You added the difference. To find the lighter sack, take it away from the bigger sack."]];
+      return {
+        question: `A sack of ${goods} and a sack of ${other} together have a mass of ${S4} kg. The sack of ${goods} is ${diff} kg heavier than the sack of ${other}. Let x be the mass of the ${goods} and y the mass of the ${other}, so x + y = ${S4} and x \u2212 y = ${diff}. Solve by elimination.`,
+        parts: [{ prompt: `What is the mass of the sack of ${goods}, in kg?`, answer: big, wrong: w1, hint: "Add the two equations. The y terms cancel." }, { prompt: `What is the mass of the sack of ${other}, in kg?`, answer: small, wrong: w2, hint: "Put your first answer into x + y and find y." }],
+        hints: ["The y terms have opposite signs, so add the two equations.", "Find x first, then y."],
+        steps: [`Add the equations: 2x = ${S4 + diff}, so x = ${big}.`, `${big} + y = ${S4}, so y = ${small}.`],
+        chk: (v) => v[0] + v[1] === S4 && v[0] - v[1] === diff
+      };
+    }
+  }),
+  // ================================================================ DATA
+  cov({
+    id: "g8c.data.line-difference",
+    skill: "G8_DATA_GRAPHS",
+    outcome: "G8.DATA.d",
+    form: "graph",
+    rung: 2,
+    gen: () => {
+      const ys = Array.from({ length: 6 }, () => randInt(5, 14) * 10), i = randInt(0, 2), j = randInt(i + 2, 5);
+      if (ys[i] === ys[j]) return null;
+      const diff = Math.abs(ys[j] - ys[i]), up = ys[j] > ys[i];
+      const top = Math.max(...ys);
+      return {
+        question: `The line graph shows the price of a kilogram of onions at a market in six weeks. By how many shillings did the price ${up ? "rise" : "fall"} between week ${i + 1} and week ${j + 1}?`,
+        answer: diff,
+        model: { type: "line-graph", data: { points: ys.map((y, k) => ({ x: k + 1, y })), xTicks: [1, 2, 3, 4, 5, 6], yTicks: Array.from({ length: Math.ceil(top / 20) + 1 }, (_, k) => k * 20), xLabel: "Week", yLabel: "Price (sh per kg)" } },
+        wrong: [[ys[j], `This is the price in week ${j + 1}. Take the price in week ${i + 1} from it.`], [ys[i] + ys[j], "You added the two prices. The question asks for the change."], [j - i, "This is the number of weeks. Read the price on the vertical axis."], [diff + 20, "You read one tick too far on the axis. Check which marks the two points sit on."]],
+        hints: ["Read each price from the vertical axis. Use a ruler across from the point.", "Take the smaller price from the bigger one."],
+        steps: [`Week ${i + 1}: ${ys[i]}. Week ${j + 1}: ${ys[j]}.`, `${Math.max(ys[i], ys[j])} \u2212 ${Math.min(ys[i], ys[j])} = ${diff} shillings.`],
+        chk: (a) => a === Math.abs(ys[j] - ys[i])
+      };
+    }
+  }),
+  cov({
+    id: "g8c.data.line-fall",
+    skill: "G8_DATA_GRAPHS",
+    outcome: "G8.DATA.d",
+    form: "graph",
+    rung: 3,
+    gen: () => {
+      const ys = [randInt(6, 12) * 10];
+      for (let k = 1; k < 6; k++) ys.push(ys[k - 1] + 10 * randInt(1, 3));
+      const f = randInt(1, 4);
+      ys[f] = ys[f - 1] - 10 * randInt(1, 3);
+      for (let k = f + 1; k < 6; k++) ys[k] = ys[k - 1] + 10 * randInt(1, 3);
+      const falls = ys.slice(1).map((y, k) => y < ys[k]);
+      if (falls.filter(Boolean).length !== 1 || Math.min(...ys) < 10) return null;
+      const idx = shuffle4([0, 1, 2, 3, 4]).slice(0, 4).sort((a, b) => a - b);
+      if (!idx.includes(falls.indexOf(true))) idx[0] = falls.indexOf(true);
+      const set = [...new Set(idx)].sort((a, b) => a - b);
+      if (set.length < 4) return null;
+      const top = Math.max(...ys);
+      const options = set.map((k) => ({ text: `Between week ${k + 1} and week ${k + 2}`, right: falls[k], why: falls[k] ? void 0 : "The line goes up here, so the number rose. Look for the one place where the line goes down." }));
+      return {
+        question: "The line graph shows the number of learners who came to a school club each week for six weeks. Between which two weeks did the number fall?",
+        options,
+        instruction: "Choose the best answer.",
+        fixedOrder: true,
+        model: { type: "line-graph", data: { points: ys.map((y, k) => ({ x: k + 1, y })), xTicks: [1, 2, 3, 4, 5, 6], yTicks: Array.from({ length: Math.ceil(top / 20) + 1 }, (_, k) => k * 20), xLabel: "Week", yLabel: "Learners" } },
+        hints: ["A fall is where the line goes down as you read from left to right.", "Look at each pair of weeks in turn."],
+        steps: ys.slice(1).map((y, k) => `Week ${k + 1} to ${k + 2}: ${ys[k]} to ${y}, ${y < ys[k] ? "a fall" : "a rise"}.`)
+      };
+    }
+  }),
+  cov({
+    id: "g8c.data.mean-of-scores",
+    skill: "G6_MEAN",
+    outcome: "G8.DATA.f",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const n = randInt(4, 6), mean = randInt(8, 30), vals = Array.from({ length: n }, () => mean + randInt(-6, 6));
+      const adj = n * mean - vals.reduce((a, b) => a + b, 0);
+      vals[0] += adj;
+      if (vals.some((v) => v < 1) || new Set(vals).size < n - 1) return null;
+      const sorted = [...vals].sort((a, b) => a - b), sum3 = n * mean, p = person();
+      const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
+      const w = [[sum3, "This is the total. To find the mean, divide the total by the number of values."], [round(sum3 / (n - 1), 2), `You divided by ${n - 1}. Divide by the number of values, which is ${n}.`], [median, "This is the middle value, the median. The mean is the total divided by the number of values."], [vals[0], "This is only one of the values. The mean uses all of them."]];
+      return {
+        question: `${p.name} scored ${vals.join(", ")} marks in ${n} short tests. What is ${p.her} mean mark?`,
+        answer: mean,
+        wrong: w,
+        hints: ["Add up all the marks.", `Divide the total by the number of tests, ${n}.`],
+        steps: [`Total: ${vals.join(" + ")} = ${sum3}.`, `Mean = ${sum3} \xF7 ${n} = ${mean}.`],
+        chk: (a) => a * n === vals.reduce((s, v) => s + v, 0)
+      };
+    }
+  }),
+  cov({
+    id: "g8c.data.mean-missing-value",
+    skill: "G6_MEAN",
+    outcome: "G8.DATA.f",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const n = randInt(4, 5), mean = randInt(12, 40), known = Array.from({ length: n - 1 }, () => mean + randInt(-8, 8)), last = n * mean - known.reduce((a, b) => a + b, 0);
+      if (last < 1 || last === mean) return null;
+      const p = person(), sumK = known.reduce((a, b) => a + b, 0);
+      const w = [[mean, "This is the mean. The missing value is what makes the total reach the mean multiplied by the number of values."], [round(sumK / (n - 1), 2), "This is the mean of the values you know. Find the total needed for all values first."], [n * mean + sumK, "You added. The missing value is the total needed minus what you already have."], [mean - sumK + n, "Check the steps. Total needed = mean \xD7 number of values."]];
+      return {
+        question: `The mean number of eggs a hen laid in ${n} days was ${mean}. In ${n - 1} of the days it laid ${known.join(", ")} eggs. How many eggs did it lay on the other day, for ${p.name}'s farm?`,
+        answer: last,
+        wrong: w,
+        hints: [`The total number of eggs is the mean \xD7 ${n}.`, "Take away the eggs you know about."],
+        steps: [`Total needed = ${mean} \xD7 ${n} = ${n * mean}.`, `${n * mean} \u2212 ${sumK} = ${last}.`],
+        chk: (a) => (a + sumK) / n === mean
+      };
+    }
+  }),
+  cov({
+    id: "g8c.data.median-of-list",
+    skill: "G8_DATA_GRAPHS",
+    outcome: "G8.DATA.g",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const n = pick([5, 6, 7, 8]), vals = Array.from({ length: n }, () => randInt(3, 40)), sorted = [...vals].sort((a, b) => a - b);
+      const median = n % 2 ? sorted[(n - 1) / 2] : (sorted[n / 2 - 1] + sorted[n / 2]) / 2;
+      if (new Set(vals).size < n || median % 0.5 !== 0) return null;
+      const mean = round(vals.reduce((a, b) => a + b, 0) / n, 2), unsorted = n % 2 ? vals[(n - 1) / 2] : (vals[n / 2 - 1] + vals[n / 2]) / 2;
+      const w = [[unsorted, "You took the middle of the list as it is written. Put the numbers in order first."], [mean, "This is the mean. The median is the middle value when the numbers are in order."], [n % 2 ? sorted[(n + 1) / 2] : sorted[n / 2], n % 2 ? "You went one place past the middle. Count again from each end." : "With an even number of values, the median is halfway between the two middle ones."], [Math.max(...vals), "This is the greatest value. The median is the middle one."]];
+      const p = person();
+      return {
+        question: `${p.name} records the number of customers at a kiosk on ${n} days: ${vals.join(", ")}. What is the median number of customers?`,
+        answer: median,
+        wrong: w,
+        hints: ["Write the numbers in order from smallest to biggest.", n % 2 ? "The median is the middle number." : "With an even number of values, find the number halfway between the two middle ones."],
+        steps: [`In order: ${sorted.join(", ")}.`, n % 2 ? `The middle number is ${median}.` : `The two middle numbers are ${sorted[n / 2 - 1]} and ${sorted[n / 2]}, so the median is ${median}.`],
+        chk: (a) => sorted.filter((v) => v < a).length <= n / 2 && sorted.filter((v) => v > a).length <= n / 2
+      };
+    }
+  }),
+  cov({
+    id: "g8c.data.median-spot-reason",
+    skill: "G8_DATA_GRAPHS",
+    outcome: "G8.DATA.g",
+    form: "why",
+    rung: 3,
+    gen: () => {
+      const vals = Array.from({ length: 5 }, () => randInt(2, 30));
+      const sorted = [...vals].sort((a, b) => a - b);
+      if (new Set(vals).size < 5 || vals[2] === sorted[2]) return null;
+      const p = person();
+      const options = mc2("He did not put the numbers in order first", [["He should have added the numbers and divided by 5", "That finds the mean, not the median. The median is the middle value."], ["He should have chosen the number that appears most often", "That finds the mode. The median is the middle value."], ["He should have chosen the biggest number", "The median is the middle value, not the biggest."]]);
+      return {
+        question: `${p.name} finds the median of ${vals.join(", ")}. ${p.She} says it is ${vals[2]}, the number in the middle of the list. What did ${p.she} do wrong?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["The median is the middle number after the numbers are put in order.", "Is the list in order?"],
+        steps: [`In order the numbers are ${sorted.join(", ")}.`, `The middle number is ${sorted[2]}, not ${vals[2]}.`]
+      };
+    }
+  }),
+  // ================================================================ PROBABILITY
+  cov({
+    id: "g8c.prob.experimental",
+    skill: "G8_PROBABILITY_INTRO",
+    outcome: "G8.PROB.c",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const n = pick([20, 40, 50, 60, 80, 100]), k = randInt(3, n - 3);
+      if (k * 2 === n) return null;
+      const thing = pick([["A bottle top is flicked", "lands upright", "upright"], ["A drawing pin is dropped", "lands point up", "point up"], ["A seed from a packet is planted", "grows", "grows"]]);
+      const right = frac(k, n), p = person();
+      const w = [[frac(n - k, n), `This is the probability that it does not ${thing[1].replace("lands ", "land ").replace("grows", "grow")}. The question asks for the probability that it does.`], [frac(k, n - k), `You compared the two results with each other. A probability is the number of times it happened out of all ${n} tries.`], [frac(n, k), "You turned the fraction upside down. The number of times it happened goes on top."], ["1/2", "This is what you might expect without trying. The experimental probability uses the results."]];
+      return {
+        question: `${p.name} tries an experiment ${n} times. ${thing[0]} and it ${thing[1]} ${k} times. What is the experimental probability that it ${thing[1]}? Give the answer as a fraction in its simplest form.`,
+        answer: right,
+        wrong: w,
+        hints: ["Experimental probability is based on what actually happened.", "Write the number of times it happened over the total number of tries."],
+        steps: [`It happened ${k} times out of ${n}.`, `Probability = ${k}/${n} = ${right}.`],
+        chk: (a) => {
+          const [x, y] = a.split("/").map(Number);
+          return x * n === k * y;
+        }
+      };
+    }
+  }),
+  cov({
+    id: "g8c.prob.fraction-to-decimal",
+    skill: "G8_PROBABILITY_INTRO",
+    outcome: "G8.PROB.e",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const d = pick([4, 5, 8, 10, 20, 25, 50]), n = randInt(1, d - 1);
+      if (gcd4(n, d) !== 1) return null;
+      const dec2 = round(n / d, 3), p = person();
+      const w = [[round(n / 10, 3), "You divided the top number by 10. Divide the top number by the bottom number."], [round(d / n, 3), "You divided the wrong way round. Divide the top number by the bottom number."], [Number(`${n}.${d}`), "You wrote the two numbers either side of a point. A fraction means divide."], [round(n / d * 10, 3), "The decimal point is in the wrong place. Check the place value of your answer."]];
+      return {
+        question: `The probability that ${p.name}'s bus is on time is ${n}/${d}. Write this probability as a decimal.`,
+        answer: dec2,
+        wrong: w,
+        hints: ["A fraction means the top number divided by the bottom number.", "Divide, and write the answer as a decimal."],
+        steps: [`${n}/${d} = ${n} \xF7 ${d}.`, `${n} \xF7 ${d} = ${dec2}.`],
+        chk: (a) => Math.abs(a * d - n) < 1e-6
+      };
+    }
+  }),
+  cov({
+    id: "g8c.prob.as-percentage",
+    skill: "G8_PROBABILITY_INTRO",
+    outcome: "G8.PROB.e",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const d = pick([20, 25, 50, 10, 4, 5]), n = randInt(1, d - 1);
+      if (gcd4(n, d) !== 1) return null;
+      const pct3 = n * 100 / d;
+      if (pct3 % 1 !== 0) return null;
+      const p = person();
+      const w = [[round(n / d, 3), "This is the decimal. A percentage is out of 100, so multiply the decimal by 100."], [n, "This is the top of the fraction. Multiply the probability by 100 to get a percentage."], [round(pct3 / 10, 2), "You multiplied by 10 only. A percentage is out of 100."], [round(pct3 * 10, 0), "You multiplied by 1,000. A percentage is out of 100."]];
+      return {
+        question: `${p.name} picks a card from a pack. The probability of picking a red card is ${n}/${d}. Express this probability as a percentage. Give the number only.`,
+        answer: pct3,
+        wrong: w,
+        hints: ["A percentage is out of 100.", "Multiply the fraction by 100."],
+        steps: [`${n}/${d} \xD7 100.`, `${n} \xF7 ${d} \xD7 100 = ${pct3}%.`],
+        chk: (a) => a * d === n * 100
+      };
+    }
+  }),
+  cov({
+    id: "g8c.prob.by-chance",
+    skill: "G8_PROBABILITY_INTRO",
+    outcome: "G8.PROB.g",
+    form: "direct",
+    rung: 1,
+    gen: () => {
+      const chance = ["A fair coin is tossed and lands on heads", "A die is rolled and shows a six", "The first customer at a kiosk buys a mandazi", "A learner picked from the class by lots is left-handed", "The next car to pass the school gate is white", "A raffle ticket drawn at a harambee wins the prize"];
+      const sure = ["The sun rises tomorrow morning", "Saturday comes after Friday", "A full 5-litre jerrican holds 5 litres of water", "A learner who is 12 years old will be 13 on her next birthday", "Water in a closed bottle stays in the bottle until it is poured out"];
+      const right = pick(chance), wrongs = shuffle4(sure).slice(0, 3);
+      const options = mc2(right, wrongs.map((w) => [w, "We know what will happen here, so no chance is involved."]));
+      return {
+        question: `${person().name} is learning about chance. Which of these events happens by chance, so that no one can be sure of the result?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["An event by chance has results that cannot be known in advance.", "If you can say for sure what will happen, it is not by chance."],
+        steps: ["Events that happen by chance have uncertain results.", `${right}: no one can be sure of the result.`]
+      };
+    }
+  }),
+  // ================================================================ COORDINATES AND GRAPHS
+  cov({
+    id: "g8c.graph.point-description",
+    skill: "G8_COORDINATES",
+    outcome: "G8.GRAPHS.c",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const x = pick([-6, -5, -4, -3, -2, 2, 3, 4, 5, 6]), y = pick([-5, -4, -3, -2, 2, 3, 4, 5]);
+      if (Math.abs(x) === Math.abs(y)) return null;
+      const d = (a, b) => `${Math.abs(a)} unit${Math.abs(a) === 1 ? "" : "s"} ${a > 0 ? "right" : "left"} and ${Math.abs(b)} unit${Math.abs(b) === 1 ? "" : "s"} ${b > 0 ? "up" : "down"}`;
+      const right = `${Math.abs(x)} ${x > 0 ? "right" : "left"}, ${Math.abs(y)} ${y > 0 ? "up" : "down"}`;
+      const t = (a, b) => `${Math.abs(a)} ${a > 0 ? "right" : "left"}, ${Math.abs(b)} ${b > 0 ? "up" : "down"}`;
+      const options = mc2(t(x, y), [[`${Math.abs(y)} ${y > 0 ? "right" : "left"}, ${Math.abs(x)} ${x > 0 ? "up" : "down"}`, "The numbers are in the wrong order. The first number is across (x) and the second is up or down (y)."], [t(-x, y), "The first number tells you the direction across. A positive number goes right and a negative number goes left."], [t(x, -y), "The second number tells you the direction up or down. A positive number goes up and a negative number goes down."]]);
+      return {
+        question: `On a Cartesian plane, you start at the origin (0, 0). Which describes how to reach the point (${sgn(x)}, ${sgn(y)})?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["The first number is how far across, the second is how far up or down.", "Positive goes right or up. Negative goes left or down."],
+        steps: [`The first number is ${x}: move ${Math.abs(x)} ${x > 0 ? "right" : "left"}.`, `The second number is ${y}: move ${Math.abs(y)} ${y > 0 ? "up" : "down"}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.graph.point-after-moves",
+    skill: "G8_COORDINATES",
+    outcome: "G8.GRAPHS.c",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const a = randInt(2, 7), b = randInt(1, 6), dx = Math.random() < 0.5 ? -a : a, dy = Math.random() < 0.5 ? -b : b;
+      if (a === b) return null;
+      const f = (x, y) => `(${sgn(x)}, ${sgn(y)})`, p = person();
+      const options = mc2(f(dx, dy), [[f(dy, dx), "The numbers are in the wrong order. The first number is across (x) and the second is up or down (y)."], [f(-dx, dy), `Moving ${dx < 0 ? "left" : "right"} makes the first number ${dx < 0 ? "negative" : "positive"}.`], [f(dx, -dy), `Moving ${dy < 0 ? "down" : "up"} makes the second number ${dy < 0 ? "negative" : "positive"}.`]]);
+      return {
+        question: `${p.name} plots a point on a Cartesian plane. ${p.She} starts at the origin, moves ${a} units ${dx < 0 ? "left" : "right"} and then ${b} units ${dy < 0 ? "down" : "up"}. What are the coordinates of the point?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Across first, then up or down.", "Left and down are negative. Right and up are positive."],
+        steps: [`Across: ${dx < 0 ? "left" : "right"} ${a} gives x = ${sgn(dx)}.`, `Up or down: ${dy < 0 ? "down" : "up"} ${b} gives y = ${sgn(dy)}. The point is ${f(dx, dy)}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.graph.boda-meet",
+    skill: "G8_LINEAR_GRAPHS",
+    outcome: "G8.GRAPHS.h",
+    form: "steps",
+    rung: 3,
+    gen: () => {
+      const r1 = randInt(10, 20), r2 = r1 + randInt(5, 10), x = randInt(2, 8), f2 = 10 * randInt(2, 8), f1 = f2 + (r2 - r1) * x;
+      if (f1 % 10 !== 0 && f1 % 5 !== 0) return null;
+      const cost = f1 + r1 * x, p = person();
+      const w1 = [[f1 - f2, "This is the difference in the fixed charges. Divide by the difference in the rates to find the distance."], [round((f1 - f2) / (r1 + r2), 2), "You added the rates. The lines meet where the costs are equal, so use the difference in rates."], [round((f1 + f2) / (r2 - r1), 2), "You added the fixed charges. Take one fixed charge from the other."]];
+      const w2 = [[f1, "This is the fixed charge only. Add the cost of the distance travelled."], [f2 + r1 * x, "You mixed the two companies. Use the fixed charge and the rate of the same company."], [cost * 2, "The cost was doubled. Work out the cost for one company only."]];
+      return {
+        question: `Company A charges ${sh(f1)} plus ${sh(r1)} for each kilometre. Company B charges ${sh(f2)} plus ${sh(r2)} for each kilometre. On a graph of cost against distance, the two lines meet at a point.`,
+        parts: [{ prompt: "At what distance, in kilometres, do the two companies charge the same?", answer: x, wrong: w1, hint: `Write ${f1} + ${r1}x = ${f2} + ${r2}x and solve for x.` }, { prompt: "What is that cost, in shillings?", answer: cost, wrong: w2, hint: "Put your distance into the charge for Company A." }],
+        hints: ["The lines meet where the two costs are equal.", "Write one equation for each company, then set the costs equal."],
+        steps: [`${f1} + ${r1}x = ${f2} + ${r2}x, so ${f1 - f2} = ${r2 - r1}x and x = ${x}.`, `Cost = ${f1} + ${r1} \xD7 ${x} = ${sh(cost)}.`],
+        chk: (v) => f1 + r1 * v[0] === f2 + r2 * v[0] && v[1] === f1 + r1 * v[0]
+      };
+    }
+  }),
+  // ================================================================ SCALE DRAWING
+  cov({
+    id: "g8c.scale.represent-length",
+    skill: "G8_SCALE_DRAWING",
+    outcome: "G8.SCALE.a",
+    form: "table",
+    rung: 2,
+    gen: () => {
+      const s = pick([2, 4, 5, 10]), ks = [randInt(2, 9), randInt(2, 9), randInt(2, 9)];
+      if (new Set(ks).size < 3) return null;
+      const names = ["Fence", "House wall", "Gate"], reals = ks.map((k) => k * s), show = (arr) => arr.map((v, i) => `${names[i]} ${v} cm`).join(", ");
+      const sw = [...ks];
+      [sw[0], sw[2]] = [sw[2], sw[0]];
+      const options = mc2(show(ks), [[show(reals.map((r) => r * s)), "You multiplied. One centimetre stands for several metres, so the drawn lines are shorter than the real lengths."], [show(reals), "These are the real lengths written as centimetres. Each line on the plan is much shorter."], [show(sw), "Two of the lengths are swapped. Match each drawn length to its own real length."]]);
+      return {
+        question: `A surveyor makes a plan with the scale 1 cm to ${s} m. The table shows the real lengths. Which list gives the lengths to draw on the plan?`,
+        options,
+        instruction: "Choose the best answer.",
+        model: { type: "table", data: { head: ["Part", "Real length (m)"], rows: names.map((n, i) => ({ cells: [n, String(reals[i])] })) } },
+        hints: [`1 cm on the plan stands for ${s} m in real life.`, `Divide each real length by ${s}.`],
+        steps: names.map((n, i) => `${n}: ${reals[i]} \xF7 ${s} = ${ks[i]} cm.`)
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.map-to-actual",
+    skill: "G8_SCALE_DRAWING",
+    outcome: "G8.SCALE.c",
+    form: "word",
+    rung: 2,
+    gen: () => {
+      const s = pick([2, 5, 10, 20, 25]), L2 = randInt(11, 79) / 2, real = L2 * s, [a, b] = shuffle4(["Nakuru", "Naivasha", "Gilgil", "Nyahururu", "Eldoret", "Kitale", "Kisumu", "Kericho"]).slice(0, 2);
+      if (real % 0.5 !== 0) return null;
+      return {
+        question: `${a} and ${b} are ${L2} cm apart on ${person().name}'s map. The key says that 1 cm stands for ${s} km. How far apart are the two towns in real life, in kilometres?`,
+        answer: real,
+        wrong: [[round(L2 / s, 2), "You divided. To go from the map to the real distance, multiply by what one centimetre stands for."], [round(L2 + s, 2), "You added. Each centimetre on the map stands for several kilometres, so multiply."], [round(real * 100, 0), "You changed the answer to centimetres. The question asks for kilometres."], [round(real / 2, 2), "Check the multiplication again. Multiply the map distance by the number of kilometres for 1 cm."]],
+        hints: ["Each centimetre on the map is one lot of the scale distance.", "Multiply the map distance by the kilometres for 1 cm."],
+        steps: [`Real distance = ${L2} \xD7 ${s}.`, `${L2} \xD7 ${s} = ${real} km.`],
+        chk: (a2) => a2 / s === L2
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.write-statement",
+    skill: "G8_SCALE_FORMS",
+    outcome: "G8.SCALE.e",
+    form: "direct",
+    rung: 2,
+    gen: () => {
+      const s = pick([2, 5, 10, 20, 25, 50]), k = randInt(3, 9), real = s * k;
+      const right = `1 cm represents ${s} km`;
+      const options = mc2(right, [[`1 cm represents ${real} km`, "You used the whole real distance. Divide it by the map distance to get what 1 cm stands for."], [`${k} cm represents ${s} km`, "The statement must be for 1 cm. Divide to find it."], [`1 cm represents ${k} km`, "You used the map distance. Divide the real distance by the map distance."]]);
+      const [a, b] = shuffle4(["Thika", "Nyeri", "Embu", "Meru", "Machakos", "Kajiado"]).slice(0, 2);
+      return {
+        question: `The road from ${a} to ${b} measures ${k} cm on a map and ${real} km on the ground. Which sentence gives the scale of the map?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["A scale in statement form says what 1 cm stands for.", "Divide the real distance by the length on the map."],
+        steps: [`${real} km \xF7 ${k} = ${s} km.`, `So ${right}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.ratio-to-ground",
+    skill: "G8_SCALE_FORMS",
+    outcome: "G8.SCALE.f",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const r = pick([[1e4, 0.1], [2e4, 0.2], [5e4, 0.5], [1e5, 1], [25e4, 2.5]]), p = person();
+      const w = [[r[0], "This is the real length in centimetres. The question asks for kilometres."], [r[0] / 100, "This is in metres. The question asks for kilometres."], [r[0] / 1e3, "This is not kilometres. 1 km is 100,000 cm."], [round(r[1] * 10, 2), "Check the change from centimetres to kilometres. Divide by 100 and then by 1,000."]];
+      return {
+        question: `${p.name}'s map has a scale of 1 : ${commas(r[0])}. A road is 1 cm long on the map. How many kilometres long is the real road?`,
+        answer: r[1],
+        wrong: w,
+        hints: ["The ratio 1 : n means 1 cm on the map stands for n cm in real life.", "Change centimetres to metres by dividing by 100, then to kilometres by dividing by 1,000."],
+        steps: [`1 cm stands for ${commas(r[0])} cm.`, `${commas(r[0])} cm \xF7 100 000 = ${r[1]} km.`],
+        chk: (a) => Math.round(a * 1e5) === r[0]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.write-ratio",
+    skill: "G8_SCALE_FORMS",
+    outcome: "G8.SCALE.g",
+    form: "direct",
+    rung: 3,
+    gen: () => {
+      const c = pick([2, 4, 5, 10]), m = c * randInt(2, 9) * 5 / 5, n = m * 100 / c;
+      if (n % 1 !== 0 || n < 20) return null;
+      const options = mc2(`1 : ${commas(n)}`, [[`${commas(n)} : 1`, "The ratio for a scale starts with the length on the drawing, which is the smaller number."], [`1 : ${commas(m)}`, "You left the real length in metres. Change both lengths to centimetres first."], [`1 : ${commas(m * 10 / c)}`, "Check the change from metres to centimetres. 1 m is 100 cm."]]);
+      const thing = pick(["a wall", "a fence", "a classroom"]);
+      return {
+        question: `On a drawing, ${thing} that is really ${m} m long is shown by a line ${c} cm long. Which is the scale of the drawing as a ratio?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["Write both lengths in centimetres first.", "Divide both by the drawing length so the first number is 1."],
+        steps: [`${m} m = ${m * 100} cm. The ratio is ${c} : ${m * 100}.`, `Divide both by ${c}: 1 : ${commas(n)}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.statement-to-ratio",
+    skill: "G8_SCALE_FORMS",
+    outcome: "G8.SCALE.h",
+    form: "direct",
+    rung: 3,
+    gen: () => {
+      const k = pick([1, 2, 5, 10, 25]), n = k * 1e5, right = `1 : ${commas(n)}`;
+      const options = mc2(right, [[`1 : ${commas(k)}`, "The kilometres must be changed to centimetres to compare with 1 cm."], [`1 : ${commas(k * 1e3)}`, "You changed kilometres to metres only. Both lengths must be in centimetres."], [`1 : ${commas(k * 1e4)}`, "1 km is 100,000 cm, not 10,000 cm."]]);
+      return {
+        question: `A map says "1 cm represents ${k} km". Which is the scale written as a ratio?`,
+        options,
+        instruction: "Choose the best answer.",
+        hints: ["A ratio scale has no units, so write both lengths in centimetres.", "1 km = 1,000 m = 100,000 cm."],
+        steps: [`${k} km = ${commas(k * 1e5)} cm.`, `The ratio is 1 : ${commas(n)}.`]
+      };
+    }
+  }),
+  cov({
+    id: "g8c.scale.ratio-to-statement",
+    skill: "G8_SCALE_FORMS",
+    outcome: "G8.SCALE.h",
+    form: "word",
+    rung: 3,
+    gen: () => {
+      const m = pick([5, 10, 20, 25, 50, 100]), n = m * 100, p = person();
+      const w = [[n, "This is in centimetres. The question asks for metres."], [n / 10, "You divided by ten only. A metre is much longer than ten centimetres."], [round(m / 100, 3), "You divided twice. Divide only once, to change centimetres to metres."], [n * 100, "You multiplied. To change centimetres to metres, divide."]];
+      return {
+        question: `A surveyor draws ${p.name}'s plot using the ratio 1 : ${commas(n)}. What length on the ground, in metres, does each centimetre of the drawing stand for?`,
+        answer: m,
+        wrong: w,
+        hints: ["In the ratio 1 : n, 1 cm on the drawing stands for n cm on the ground.", "Think of how many centimetres make a metre, and change the units."],
+        steps: [`1 cm stands for ${commas(n)} cm.`, `${commas(n)} \xF7 100 = ${m} m.`],
+        chk: (a) => a * 100 === n
+      };
+    }
+  })
+];
+
 // src/ai-tutor/content/families/g9_num_alg.js
 var fam7 = (def) => family({ reviewed: false, ...def });
 var fm = (n) => n < 0 ? `\u2212${-n}` : `${n}`;
@@ -21660,8 +23503,8 @@ var isCube = (n) => {
   const r = Math.round(Math.cbrt(n));
   return r * r * r === n;
 };
-var gcd4 = (a, b) => b ? gcd4(b, a % b) : a;
-var lcm2 = (a, b) => a / gcd4(a, b) * b;
+var gcd5 = (a, b) => b ? gcd5(b, a % b) : a;
+var lcm3 = (a, b) => a / gcd5(a, b) * b;
 var factorise = (n) => {
   const f = {};
   let m = n;
@@ -22011,16 +23854,16 @@ var CUBES = [
       const f = factorise(N2);
       let a = 1;
       for (const [p, e] of Object.entries(f)) a *= Number(p) ** ((3 - e % 3) % 3);
-      const distinct7 = Object.keys(f).reduce((s, p) => s * Number(p), 1);
+      const distinct8 = Object.keys(f).reduce((s, p) => s * Number(p), 1);
       let sq = 1;
       for (const [p, e] of Object.entries(f)) sq *= Number(p) ** (e % 2);
-      return a > 1 && uniq3(a, distinct7, N2, sq) ? { N: N2, a, distinct: distinct7, sq } : null;
+      return a > 1 && uniq3(a, distinct8, N2, sq) ? { N: N2, a, distinct: distinct8, sq } : null;
     },
-    make: ({ N: N2, a, distinct: distinct7, sq }) => ({
+    make: ({ N: N2, a, distinct: distinct8, sq }) => ({
       question: `Use prime factors to find the smallest whole number that ${N2} must be multiplied by to give a perfect cube.`,
       story: false,
       answer: a,
-      wrong: [[distinct7, "Multiplying by each prime factor once does not always make groups of three. Count how many of each prime are missing."], [N2, `${N2} \xD7 ${N2} is not a cube. Check how many of each prime factor you now have.`], [sq, "That is what makes a perfect square. A cube needs every prime factor to appear in groups of three."]],
+      wrong: [[distinct8, "Multiplying by each prime factor once does not always make groups of three. Count how many of each prime are missing."], [N2, `${N2} \xD7 ${N2} is not a cube. Check how many of each prime factor you now have.`], [sq, "That is what makes a perfect square. A cube needs every prime factor to appear in groups of three."]],
       hints: ["Write the number as a product of prime factors.", "Each prime factor must appear a multiple of three times. How many more of each do you need?"],
       steps: [`${N2} = ${Object.entries(factorise(N2)).map(([p, e]) => `${p}^${e}`).join(" \xD7 ")}.`, `Each power must become a multiple of 3. Multiply by ${a}.`]
     }),
@@ -22448,7 +24291,7 @@ var PROPORTION = [
     rung: 2,
     form: "spot",
     draw: () => {
-      const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [1, 4], [1, 3]]), L2 = lcm2(a * b, a + b), k = pick([2, 3, 4, 5]), T5 = L2 * k;
+      const [a, b] = pick([[2, 3], [3, 4], [2, 5], [3, 5], [1, 4], [1, 3]]), L2 = lcm3(a * b, a + b), k = pick([2, 3, 4, 5]), T5 = L2 * k;
       const type = pick(["product", "one-part"]);
       if (T5 > 8e3) return null;
       const s = type === "product" ? a * b : a + b, u = type === "one-part" ? T5 / a : T5 / s;
@@ -22502,8 +24345,8 @@ var PROPORTION = [
     form: "word",
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
-      if (q === r || s <= r || gcd4(p, q) !== 1 || gcd4(r, s) !== 1) return null;
-      const L2 = lcm2(q, r), A2 = p * L2 / q, B2 = L2, C2 = s * L2 / r, k = randInt(2, 5), N2 = A2 * k, hens = C2 * k;
+      if (q === r || s <= r || gcd5(p, q) !== 1 || gcd5(r, s) !== 1) return null;
+      const L2 = lcm3(q, r), A2 = p * L2 / q, B2 = L2, C2 = s * L2 / r, k = randInt(2, 5), N2 = A2 * k, hens = C2 * k;
       const w1 = round(N2 * s / p, 1), w2 = round(N2 * s / r, 1), w3 = B2 * k;
       return uniq3(hens, w1, w2, w3) && N2 <= 90 && hens <= 200 ? { p, q, r, s, N: N2, hens, w1, w2, w3 } : null;
     },
@@ -22512,7 +24355,7 @@ var PROPORTION = [
       answer: hens,
       wrong: [[w1, "The goats are part of both ratios, but with different numbers. Make the goat numbers equal first."], [w2, "The second ratio is for goats to hens, not cows to hens."], [w3, "That is the number of goats. The question asks for hens."]],
       hints: ["Both ratios have goats in them. Make the goat part the same in both ratios.", "Then write cows : goats : hens as one ratio."],
-      steps: [`Make the goat part equal to ${lcm2(q, r)} in both: cows : goats = ${p * lcm2(q, r) / q}:${lcm2(q, r)}, goats : hens = ${lcm2(q, r)}:${s * lcm2(q, r) / r}.`, `Cows : goats : hens = ${p * lcm2(q, r) / q}:${lcm2(q, r)}:${s * lcm2(q, r) / r}.`, `${N2} cows is ${N2 / (p * lcm2(q, r) / q)} times ${p * lcm2(q, r) / q}, so hens = ${N2 / (p * lcm2(q, r) / q)} \xD7 ${s * lcm2(q, r) / r} = ${hens}.`]
+      steps: [`Make the goat part equal to ${lcm3(q, r)} in both: cows : goats = ${p * lcm3(q, r) / q}:${lcm3(q, r)}, goats : hens = ${lcm3(q, r)}:${s * lcm3(q, r) / r}.`, `Cows : goats : hens = ${p * lcm3(q, r) / q}:${lcm3(q, r)}:${s * lcm3(q, r) / r}.`, `${N2} cows is ${N2 / (p * lcm3(q, r) / q)} times ${p * lcm3(q, r) / q}, so hens = ${N2 / (p * lcm3(q, r) / q)} \xD7 ${s * lcm3(q, r) / r} = ${hens}.`]
     }),
     check: ({ p, q, r, s, N: N2 }, a) => N2 * q * s === a * p * r
   }),
@@ -22524,11 +24367,11 @@ var PROPORTION = [
     form: "why",
     draw: () => {
       const p = randInt(1, 5), q = randInt(2, 6), r = randInt(2, 6), s = randInt(1, 6);
-      if (q === r || gcd4(p, q) !== 1 || gcd4(r, s) !== 1 || s === q) return null;
+      if (q === r || gcd5(p, q) !== 1 || gcd5(r, s) !== 1 || s === q) return null;
       return { p, q, r, s, who: person() };
     },
     make: ({ p, q, r, s, who }) => {
-      const L2 = lcm2(q, r), A2 = p * L2 / q, C2 = s * L2 / r;
+      const L2 = lcm3(q, r), A2 = p * L2 / q, C2 = s * L2 / r;
       return {
         question: `The ratio of maize to beans on a shamba is ${p}:${q}. The ratio of beans to peas is ${r}:${s}. ${who.name} says maize : beans : peas = ${p}:${q}:${s}. Why is this wrong?`,
         options: [
@@ -22687,7 +24530,7 @@ var PROPORTION = [
     draw: () => {
       const T5 = [6, 8, 10, 12, 15, 20, 24, 30], a = pick(T5), b = pick(T5), t = randInt(2, 8);
       if (a === b || a > b) return null;
-      const L2 = lcm2(a, b), ra = L2 / a, rb = L2 / b, left = L2 - t * (ra + rb);
+      const L2 = lcm3(a, b), ra = L2 / a, rb = L2 / b, left = L2 - t * (ra + rb);
       return left > 0 && left % ra === 0 ? { a, b, t, L: L2, ra, rb, left, ns: twoPeople() } : null;
     },
     make: ({ a, b, t, L: L2, ra, rb, left, ns }) => ({
@@ -23119,7 +24962,7 @@ var LINES = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const a = pick([2, 3, 4, 5, 6]), b = pick([2, 3, 4, 5, 6]), l = lcm2(a, b), k = l * randInt(1, 3), xi = k / a, yi = k / b;
+      const a = pick([2, 3, 4, 5, 6]), b = pick([2, 3, 4, 5, 6]), l = lcm3(a, b), k = l * randInt(1, 3), xi = k / a, yi = k / b;
       return a !== b && xi * yi % 2 === 0 ? { a, b, k, xi, yi } : null;
     },
     make: ({ a, b, k, xi, yi }) => ({
@@ -23388,13 +25231,13 @@ var INEQ = [
     check: ({ W: W2, b, w }, v) => v[0] + b === W2 && v[1] * w <= v[0] && (v[1] + 1) * w > v[0] && v[2] + v[1] * w === v[0]
   })
 ];
-var FAMILIES15 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
+var FAMILIES17 = [...INTEGERS, ...CUBES, ...INDICES, ...LOGS, ...PROPORTION, ...MATRICES, ...LINES, ...INEQ];
 
 // src/ai-tutor/content/families/g9_measure.js
 var fam8 = (def) => family({ reviewed: false, ...def });
 var PI = 22 / 7;
 var dp2 = (x, k = 2) => Math.abs(x * 10 ** k - Math.round(x * 10 ** k)) < 1e-6;
-var distinct4 = (...v) => new Set(v.map((x) => round(x, 4))).size === v.length;
+var distinct5 = (...v) => new Set(v.map((x) => round(x, 4))).size === v.length;
 var T3 = commas;
 var CUR = { "US dollars": [127, 131, "US$"], euros: [138, 146, "\u20AC"], pounds: [163, 172, "\xA3"] };
 var rate = (name) => {
@@ -23406,7 +25249,7 @@ var clock = (min) => `${Math.floor(min / 60)}:${String(Math.round(min) % 60).pad
 var clock24 = (min) => `${String(Math.floor(min / 60)).padStart(2, "0")}:${String(Math.round(min) % 60).padStart(2, "0")}`;
 var ROADS = [["Nairobi", "Nakuru", 160], ["Nairobi", "Thika", 45], ["Nairobi", "Machakos", 60], ["Nairobi", "Nyeri", 150], ["Mombasa", "Malindi", 120], ["Kisumu", "Kakamega", 50], ["Nakuru", "Eldoret", 155], ["Eldoret", "Kitale", 70], ["Nairobi", "Meru", 225], ["Nakuru", "Kisumu", 185]];
 var TRIPLES = [[3, 4, 5], [6, 8, 10], [5, 12, 13], [9, 12, 15], [8, 15, 17]];
-var FAMILIES16 = [
+var FAMILIES18 = [
   // ======================================================== AREA: pentagon, hexagon
   fam8({
     id: "g9.area.hexagon-slab",
@@ -23900,17 +25743,17 @@ var FAMILIES16 = [
       const h = pick([3, 6, 9, 12]);
       return { r: 7, h, cap: 14, who: person() };
     },
-    make: ({ r, h, cap: cap2, who }) => {
+    make: ({ r, h, cap: cap3, who }) => {
       const v = round(PI * r * r * h / 3, 2);
       return {
-        question: `A heap of sand is a cone with a radius of ${r} m and a height of ${h} m. ${who.name} hires a lorry that carries ${cap2} m\xB3 of sand each trip. How many trips are needed to move all the sand? (Use \u03C0 = 22/7)`,
-        answer: v / cap2,
-        wrong: [[round(PI * r * r * h / cap2, 2), "A cone is one third of a cylinder with the same base and height. Remember the \u2153."], [round(PI * r * r * h / 3 / cap2 / 2, 2), "Check the radius. The base area is \u03C0 \xD7 r \xD7 r."], [v, "That is the volume of the heap in m\xB3. Divide by the load of each trip."], [round(PI * (2 * r) * (2 * r) * h / 3 / cap2, 2), "The radius is given, not the diameter. Do not double it."]],
+        question: `A heap of sand is a cone with a radius of ${r} m and a height of ${h} m. ${who.name} hires a lorry that carries ${cap3} m\xB3 of sand each trip. How many trips are needed to move all the sand? (Use \u03C0 = 22/7)`,
+        answer: v / cap3,
+        wrong: [[round(PI * r * r * h / cap3, 2), "A cone is one third of a cylinder with the same base and height. Remember the \u2153."], [round(PI * r * r * h / 3 / cap3 / 2, 2), "Check the radius. The base area is \u03C0 \xD7 r \xD7 r."], [v, "That is the volume of the heap in m\xB3. Divide by the load of each trip."], [round(PI * (2 * r) * (2 * r) * h / 3 / cap3, 2), "The radius is given, not the diameter. Do not double it."]],
         hints: ["First find the volume of the cone.", "Then divide by the amount in one trip."],
-        steps: [`Volume: \u2153 \xD7 22/7 \xD7 ${r} \xD7 ${r} \xD7 ${h} = ${T3(v)} m\xB3.`, `Trips: ${T3(v)} \xF7 ${cap2} = ${T3(v / cap2)}.`]
+        steps: [`Volume: \u2153 \xD7 22/7 \xD7 ${r} \xD7 ${r} \xD7 ${h} = ${T3(v)} m\xB3.`, `Trips: ${T3(v)} \xF7 ${cap3} = ${T3(v / cap3)}.`]
       };
     },
-    check: ({ r, h, cap: cap2 }, a) => Math.abs(a * cap2 * 3 / h - 22 / 7 * r * r) < 0.01
+    check: ({ r, h, cap: cap3 }, a) => Math.abs(a * cap3 * 3 / h - 22 / 7 * r * r) < 0.01
   }),
   fam8({
     id: "g9.vol.bucket-frustum",
@@ -24331,7 +26174,7 @@ var FAMILIES16 = [
     draw: () => {
       const d1 = pick([60, 90, 120, 150]), t1 = pick([1, 1.5, 2, 2.5, 3]), d2 = pick([60, 80, 100, 120]), t2 = pick([1, 1.5, 2, 2.5]), rest = pick([0.5, 1]);
       const avg = (d1 + d2) / (t1 + t2 + rest);
-      return dp2(avg, 1) && distinct4(avg, (d1 + d2) / (t1 + t2), (d1 / t1 + d2 / t2) / 2) ? { d1, t1, d2, t2, rest, who: person() } : null;
+      return dp2(avg, 1) && distinct5(avg, (d1 + d2) / (t1 + t2), (d1 / t1 + d2 / t2) / 2) ? { d1, t1, d2, t2, rest, who: person() } : null;
     },
     make: ({ d1, t1, d2, t2, rest }) => {
       const D3 = d1 + d2, Tt = t1 + t2 + rest, avg = round(D3 / Tt, 2);
@@ -24381,7 +26224,7 @@ var FAMILIES16 = [
     draw: () => {
       const [a, b, D3] = pick(ROADS.filter((r) => r[2] >= 150)), dep = pick([360, 390, 420, 450, 480]), span = pick([180, 210, 240, 270, 300, 360]), stop = pick([30, 60]);
       const w = D3 / (span / 60), m = D3 / ((span - stop) / 60);
-      return dp2(w, 1) && dp2(m, 1) && distinct4(w, m) ? { a, b, D: D3, dep, span, stop } : null;
+      return dp2(w, 1) && dp2(m, 1) && distinct5(w, m) ? { a, b, D: D3, dep, span, stop } : null;
     },
     make: ({ a, b, D: D3, dep, span, stop }) => {
       const w = round(D3 / (span / 60), 2), m = round(D3 / ((span - stop) / 60), 2);
@@ -24404,7 +26247,7 @@ var FAMILIES16 = [
     draw: () => {
       const [a, b, c] = pick(TRIPLES.concat([[12, 16, 20], [15, 20, 25]]));
       const t = pick([1, 2, 2.5, 4, 5]);
-      return dp2(c / t, 1) && distinct4(c / t, (a + b) / t, c) ? { a: a * 1, b, c, t, who: person() } : null;
+      return dp2(c / t, 1) && distinct5(c / t, (a + b) / t, c) ? { a: a * 1, b, c, t, who: person() } : null;
     },
     make: ({ a, b, c, t, who }) => ({
       question: `${who.name} rides a boda boda ${a} km due east and then ${b} km due north. The whole ride takes ${t} hours. Find the size of ${who.her} average velocity for the ride, in km/h.`,
@@ -24424,7 +26267,7 @@ var FAMILIES16 = [
     draw: () => {
       const u = pick([2, 4, 6]), a = pick([1, 1.5, 2, 3]);
       const v = (t) => u + a * t;
-      return distinct4(a, v(6) / 6, 4 * a, v(8) / 8) ? { u, a, what: pick(["car", "train", "motorbike"]) } : null;
+      return distinct5(a, v(6) / 6, 4 * a, v(8) / 8) ? { u, a, what: pick(["car", "train", "motorbike"]) } : null;
     },
     make: ({ u, a, what }) => {
       const v = (t) => round(u + a * t, 2);
@@ -24493,7 +26336,7 @@ var FAMILIES16 = [
     draw: () => {
       const kmh = pick([36, 54, 72, 90, 108]), a = pick([2, 2.5, 4, 5]);
       const t = kmh / 3.6 / a;
-      return dp2(t, 1) && distinct4(t, kmh / a, kmh / 3.6 * a) ? { kmh, a, who: person() } : null;
+      return dp2(t, 1) && distinct5(t, kmh / a, kmh / 3.6 * a) ? { kmh, a, who: person() } : null;
     },
     make: ({ kmh, a, who }) => {
       const ms = kmh / 3.6, t = round(ms / a, 2);
@@ -24538,7 +26381,7 @@ var FAMILIES16 = [
       const c1 = pick(LONGITUDES), c2 = pick(LONGITUDES), d = c2[1] - c1[1];
       if (Math.abs(d) < 8 || Math.abs(d) > 100 || 4 * d % 60 === 0) return null;
       const right = 720 + 4 * d, rev = 720 - 4 * d, deg = 720 + d, hr = 720 + Math.trunc(4 * d / 60) * 60;
-      return distinct4(right, rev, deg, hr) && [right, rev, deg, hr].every((x) => x > 0 && x < 1440) ? { c1, c2, d, right, rev, deg, hr } : null;
+      return distinct5(right, rev, deg, hr) && [right, rev, deg, hr].every((x) => x > 0 && x < 1440) ? { c1, c2, d, right, rev, deg, hr } : null;
     },
     make: ({ c1, c2, d, right, rev, deg, hr }) => ({
       question: `It is 12:00 noon local time in ${c1[0]}, on longitude ${lonText(c1[1])}. ${c2[0]} is on longitude ${lonText(c2[1])}. What is the local time in ${c2[0]}? Remember: the Earth turns towards the east, so places to the east are ahead.`,
@@ -24972,7 +26815,7 @@ var FAMILIES16 = [
         return Math.round(x / k) * k;
       };
       const est = r1(n) * r1(p), exact = n * p;
-      return est !== exact && distinct4(est, exact, Math.abs(est - exact)) ? { n, p, est, exact, a: r1(n), b: r1(p), who: person() } : null;
+      return est !== exact && distinct5(est, exact, Math.abs(est - exact)) ? { n, p, est, exact, a: r1(n), b: r1(p), who: person() } : null;
     },
     make: ({ n, p, est, exact, a, b, who }) => ({
       question: `A school wants to buy ${n} school bags. Each bag costs ${sh(p)}. ${who.name} estimates the total cost by rounding both numbers to 1 significant figure.`,
@@ -25064,7 +26907,7 @@ var pt = (x, y) => `(${sg(x)}, ${sg(y)})`;
 var near2 = (a, b, e = 1e-6) => Math.abs(a - b) < e;
 var rad = (d) => d * Math.PI / 180;
 var TRIG = { sin: (d) => round(Math.sin(rad(d)), 4), cos: (d) => round(Math.cos(rad(d)), 4), tan: (d) => round(Math.tan(rad(d)), 4) };
-var FAMILIES17 = [
+var FAMILIES19 = [
   // =========================== COORDINATES AND GRAPHS ===========================
   fam9({
     id: "g9.graphs.parallel-table-pick",
@@ -26361,15 +28204,15 @@ var FAMILIES17 = [
 
 // src/ai-tutor/content/families/g8_num_alg.js
 var fam10 = (def) => family({ reviewed: false, ...def });
-var gcd5 = (a, b) => b ? gcd5(b, a % b) : Math.abs(a);
+var gcd6 = (a, b) => b ? gcd6(b, a % b) : Math.abs(a);
 var neg = (n) => n < 0 ? `\u2212${-n}` : String(n);
-var distinct5 = (...v) => new Set(v).size === v.length;
+var distinct6 = (...v) => new Set(v).size === v.length;
 var simp3 = (n, d) => {
-  const g = gcd5(n, d);
+  const g = gcd6(n, d);
   return [n / g, d / g];
 };
 var signed = (c) => c < 0 ? `\u2212 ${-c}` : `+ ${c}`;
-var FAMILIES18 = [
+var FAMILIES20 = [
   // ======================================================== INTEGERS
   fam10({
     id: "g8.int.lift-floors",
@@ -26453,7 +28296,7 @@ var FAMILIES18 = [
       const pos = ch.filter((c) => c > 0).reduce((a, b) => a + b, 0);
       const absSum = ch.reduce((a, b) => a + Math.abs(b), 0);
       const cands = [total, total - start, start + absSum, start + pos];
-      return distinct5(...cands) && total > -1500 ? { start, ch, total } : null;
+      return distinct6(...cands) && total > -1500 ? { start, ch, total } : null;
     },
     make: ({ start, ch, total }) => {
       const pos = ch.filter((c) => c > 0).reduce((a, b) => a + b, 0), absSum = ch.reduce((a, b) => a + Math.abs(b), 0);
@@ -26520,11 +28363,11 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const [a, b, c, d] = pick([[1, 3, 1, 4], [1, 2, 1, 5], [2, 5, 1, 4], [1, 2, 1, 3], [3, 8, 1, 4], [1, 3, 2, 5], [1, 4, 1, 6]]);
-      const l = b * d / gcd5(b, d);
+      const l = b * d / gcd6(b, d);
       const A2 = l * randInt(1, Math.max(1, Math.floor(80 / l)));
       const m = A2 * a / b, be = A2 * c / d, rest = A2 - m - be;
       const p = person();
-      return rest > 0 && distinct5(rest, m + be, A2 - m, m * be) ? { a, b, c, d, A: A2, m, be, rest, p } : null;
+      return rest > 0 && distinct6(rest, m + be, A2 - m, m * be) ? { a, b, c, d, A: A2, m, be, rest, p } : null;
     },
     make: ({ a, b, c, d, A: A2, m, be, rest, p }) => ({
       question: `${p.name}'s shamba is ${A2} acres. ${a}/${b} of the shamba has maize and ${c}/${d} of the shamba has beans. The rest is grass. How many acres are grass?`,
@@ -26599,7 +28442,7 @@ var FAMILIES18 = [
       const mins = round(480 * (1 - used), 6);
       const minsUsed = 480 - mins;
       const cands = [mins, minsUsed, round(8 * (1 - used), 2), Math.round(480 * (1 - fr3[0][0] / fr3[0][1] - fr3[1][0] / fr3[1][1]))];
-      return Number.isInteger(mins) && distinct5(...cands) ? { fr: fr3, mins, minsUsed } : null;
+      return Number.isInteger(mins) && distinct6(...cands) ? { fr: fr3, mins, minsUsed } : null;
     },
     make: ({ fr: fr3, mins, minsUsed }) => {
       const used = fr3.reduce((s, [n, d]) => s + n / d, 0);
@@ -26624,7 +28467,7 @@ var FAMILIES18 = [
     draw: () => {
       const den = pick([12, 14, 15, 18, 21, 22, 24, 33]);
       const n = randInt(1, den - 1);
-      return gcd5(n, den) === 1 ? { n, den } : null;
+      return gcd6(n, den) === 1 ? { n, den } : null;
     },
     make: ({ n, den }) => {
       let q = den;
@@ -26662,10 +28505,10 @@ var FAMILIES18 = [
     form: "steps",
     draw: () => {
       const ab = randInt(12, 98);
-      return ab % 11 === 0 || gcd5(ab, 99) === 1 ? null : { ab };
+      return ab % 11 === 0 || gcd6(ab, 99) === 1 ? null : { ab };
     },
     make: ({ ab }) => {
-      const g = gcd5(ab, 99);
+      const g = gcd6(ab, 99);
       return {
         question: `Let x = 0.${ab}${ab}${ab}... where the digits ${ab} repeat for ever. You want to write x as a fraction. Follow the method.`,
         parts: [
@@ -26677,7 +28520,7 @@ var FAMILIES18 = [
         steps: ["100x = block.block block... and x = 0.block block..., so 100x \u2212 x = the block.", `99x = ${ab}, so x = ${ab}/99.`, `Divide by ${g}: x = ${ab / g}/${99 / g}.`]
       };
     },
-    check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd5(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
+    check: ({ ab }, v) => v[0] === 100 && v[1] === ab && gcd6(v[1], 99) === v[2] && Math.abs(ab / 99 - ab / v[2] / v[3]) < 1e-12
   }),
   fam10({
     id: "g8.dec.cloth-profit",
@@ -26689,7 +28532,7 @@ var FAMILIES18 = [
       const len = pick([1.5, 1.75, 2.25]), rate2 = pick([120, 160, 200, 240]), n = randInt(4, 8), cost = round(len * rate2, 2);
       const sell = Math.ceil(cost / 100) * 100 + 100 * randInt(1, 4);
       const profit = n * (sell - cost);
-      return distinct5(profit, n * sell, n * cost, sell - cost, n * (sell - rate2)) ? { len, rate: rate2, n, cost, sell, profit, p: person() } : null;
+      return distinct6(profit, n * sell, n * cost, sell - cost, n * (sell - rate2)) ? { len, rate: rate2, n, cost, sell, profit, p: person() } : null;
     },
     make: ({ len, rate: rate2, n, cost, sell, profit, p }) => ({
       question: `${p.name} is a tailor. ${p.She} makes ${n} dresses. Each dress uses ${len} metres of cloth. The cloth costs sh ${rate2} a metre. ${p.She} sells each dress for sh ${commas(sell)}. How much profit does ${p.she} make altogether, in shillings?`,
@@ -26959,7 +28802,7 @@ var FAMILIES18 = [
         model: { type: "table", data: { head: ["Class", "Boys", "Girls"], rows: names.map((n, i) => ({ cells: [n, `${rows[i][0]}`, `${rows[i][1]}`] })) } },
         options: names.map((n, i) => ({ text: `Class ${n}`, right: rows[i][0] * b === rows[i][1] * a, why: i === swapped ? "That class has the numbers the other way round: girls to boys. Read the order in the question." : "Divide both numbers by their common factor. The boys to girls ratio does not match." })),
         hints: ["Boys come first in the ratio, then girls.", "Divide the boys and the girls in each class by the same number to simplify."],
-        steps: rows.map(([x, y], i) => `${names[i]}: ${x} : ${y} = ${x / gcd5(x, y)} : ${y / gcd5(x, y)}.`).concat([`The class with ${a}:${b} is the answer.`])
+        steps: rows.map(([x, y], i) => `${names[i]}: ${x} : ${y} = ${x / gcd6(x, y)} : ${y / gcd6(x, y)}.`).concat([`The class with ${a}:${b} is the answer.`])
       };
     }
   }),
@@ -26971,7 +28814,7 @@ var FAMILIES18 = [
     form: "why",
     draw: () => {
       const a = randInt(4, 9), c = randInt(a + 2, 12), b = randInt(2, a - 1), d = randInt(3, c - 1);
-      const L2 = c * d / gcd5(c, d);
+      const L2 = c * d / gcd6(c, d);
       return b * c > a * d && L2 <= 60 && c !== d ? { a, b, c, d, L: L2 } : null;
     },
     make: ({ a, b, c, d, L: L2 }) => {
@@ -27144,7 +28987,7 @@ var FAMILIES18 = [
       const old = pick([80, 120, 160, 200, 240, 300, 400]), pc = pick([10, 15, 20, 25, 30, 40, 50]), up = Math.random() < 0.5;
       const nw = old * (up ? 100 + pc : 100 - pc) / 100;
       const diff = Math.abs(nw - old);
-      return distinct5(pc, diff, round(diff / nw * 100, 1), round(nw / old * 100, 1)) ? { old, nw, pc, up, diff, p: person() } : null;
+      return distinct6(pc, diff, round(diff / nw * 100, 1), round(nw / old * 100, 1)) ? { old, nw, pc, up, diff, p: person() } : null;
     },
     make: ({ old, nw, pc, up, diff }) => ({
       question: `A matatu fare from Nairobi to Thika ${up ? "goes up" : "comes down"} from ${sh(old)} to ${sh(nw)}. What is the percentage ${up ? "increase" : "decrease"}?`,
@@ -27165,7 +29008,7 @@ var FAMILIES18 = [
       const up = Math.random() < 0.5, pc = pick([10, 20, 25, 30, 40]), item = up ? "bicycle" : "school bag", orig = price(item);
       const final = orig * (up ? 100 + pc : 100 - pc) / 100;
       const wrongA = up ? final * (100 - pc) / 100 : final * (100 + pc) / 100, wrongB = up ? final - pc : final + pc, wrongC = final * pc / 100;
-      return Number.isInteger(final) && Number.isInteger(wrongA) && Number.isInteger(wrongC) && distinct5(orig, wrongA, wrongB, wrongC) ? { up, pc, item, orig, final, wrongA, wrongB, wrongC } : null;
+      return Number.isInteger(final) && Number.isInteger(wrongA) && Number.isInteger(wrongC) && distinct6(orig, wrongA, wrongB, wrongC) ? { up, pc, item, orig, final, wrongA, wrongB, wrongC } : null;
     },
     make: ({ up, pc, item, orig, final, wrongA, wrongB, wrongC }) => ({
       question: `${up ? `After a price rise of ${pc}%` : `In a sale, a ${pc}% discount is taken off a ${item}. It now costs`} ${up ? `a ${item} costs` : ""} ${sh(final)}. What was the price before the ${up ? "rise" : "sale"}, in shillings?`.replace(/\s+/g, " ").replace(" .", "."),
@@ -27210,7 +29053,7 @@ var FAMILIES18 = [
       const w = pick([4, 6, 8, 10, 12, 15]), d = randInt(3, 12), w2 = pick([2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30]);
       if (w2 === w || w * d % w2 !== 0) return null;
       const t = w * d / w2;
-      return distinct5(t, d * w2 / w, w * d, d + w2 - w) && t >= 1 && d * w2 / w === Math.round(d * w2 / w * 10) / 10 ? { w, d, w2, p: person() } : null;
+      return distinct6(t, d * w2 / w, w * d, d + w2 - w) && t >= 1 && d * w2 / w === Math.round(d * w2 / w * 10) / 10 ? { w, d, w2, p: person() } : null;
     },
     make: ({ w, d, w2 }) => ({
       question: `${w} workers build a school fence in ${d} days. They all work at the same speed. How many days would ${w2} workers take to build the same fence?`,
@@ -27272,7 +29115,7 @@ var FAMILIES18 = [
     form: "direct",
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter((x) => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5), v = pick(["x", "y", "m", "n", "a"]);
-      return gcd5(p, q) === 1 && p !== q && distinct5(g, h, p, q) ? { g, h, p, q, v } : null;
+      return gcd6(p, q) === 1 && p !== q && distinct6(g, h, p, q) ? { g, h, p, q, v } : null;
     },
     make: ({ g, h, p, q, v }) => ({
       question: `${g * p}${v} + ${g * q} is factorised fully as a number times a bracket. What is the number outside the bracket?`,
@@ -27282,7 +29125,7 @@ var FAMILIES18 = [
       hints: [`List the factors of ${g * p} and of ${g * q}.`, "The number outside is the biggest factor they share."],
       steps: [`The highest common factor of ${g * p} and ${g * q} is ${g}.`, `${g * p}${v} + ${g * q} = ${g}(${p}${v} + ${q}).`]
     }),
-    check: ({ g, p, q }, a) => gcd5(a * p, a * q) === a
+    check: ({ g, p, q }, a) => gcd6(a * p, a * q) === a
   }),
   fam10({
     id: "g8.fact.rectangle-steps",
@@ -27292,7 +29135,7 @@ var FAMILIES18 = [
     form: "steps",
     draw: () => {
       const g = randInt(2, 6), p = randInt(2, 4), q = randInt(1, 7), X = randInt(2, 5);
-      return gcd5(p, q) === 1 ? { g, p, q, X } : null;
+      return gcd6(p, q) === 1 ? { g, p, q, X } : null;
     },
     make: ({ g, p, q, X }) => ({
       question: `A rectangle has an area of ${g * p}x + ${g * q} square metres. Factorise the area. The length is the common factor, and the width is what is left inside the bracket.`,
@@ -27313,14 +29156,14 @@ var FAMILIES18 = [
     form: "spot",
     draw: () => {
       const g = pick([6, 8, 9, 10, 12, 15]), h = pick([2, 3, 5].filter((x) => g % x === 0)), p = randInt(2, 4), q = randInt(1, 5);
-      return gcd5(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
+      return gcd6(p, q) === 1 && p !== q ? { g, h, p, q, p0: person() } : null;
     },
     make: ({ g, h, p, q, p0 }) => {
       const A2 = g * p, B2 = g * q;
       return {
         question: `${p0.name} factorises ${A2}x + ${B2} completely. Which step has the mistake?`,
         working: [
-          { text: `The numbers are ${A2} and ${B2}. Their highest common factor is ${h}.`, ok: h === gcd5(A2, B2) },
+          { text: `The numbers are ${A2} and ${B2}. Their highest common factor is ${h}.`, ok: h === gcd6(A2, B2) },
           { text: `${A2}x \xF7 ${h} = ${A2 / h}x.`, ok: true },
           { text: `${B2} \xF7 ${h} = ${B2 / h}.`, ok: true },
           { text: `So ${A2}x + ${B2} = ${h}(${A2 / h}x + ${B2 / h}).`, ok: true }
@@ -27559,7 +29402,7 @@ var FAMILIES18 = [
     draw: () => {
       const A2 = pick([100, 150, 200, 250, 300]), C2 = pick([50, 60, 70, 80, 90, 100]), a1 = randInt(1, 3), a2 = a1 + randInt(1, 3), n = randInt(3, 8);
       const T1 = a1 * A2 + n * C2, T22 = a2 * A2 + n * C2;
-      return distinct5(A2, T22 - T1, round(T1 / (a1 + n), 2), C2, T1 / a1) ? { A: A2, C: C2, a1, a2, n, T1, T2: T22 } : null;
+      return distinct6(A2, T22 - T1, round(T1 / (a1 + n), 2), C2, T1 / a1) ? { A: A2, C: C2, a1, a2, n, T1, T2: T22 } : null;
     },
     make: ({ A: A2, C: C2, a1, a2, n, T1, T2: T22 }) => ({
       question: `A museum in Nairobi charges one price for an adult and one price for a child. A group of ${a1} adult${a1 > 1 ? "s" : ""} and ${n} children pays sh ${commas(T1)} in total. A group of ${a2} adults and ${n} children pays sh ${commas(T22)} in total. How much is one adult ticket, in shillings?`,
@@ -27578,7 +29421,7 @@ var FAMILIES18 = [
     form: "word",
     draw: () => {
       const x = randInt(4, 14), y = randInt(4, 14), N2 = x + y, V = 5 * x + 10 * y;
-      return distinct5(y, x, V / 10, N2 / 2) ? { x, y, N: N2, V, p: person() } : null;
+      return distinct6(y, x, V / 10, N2 / 2) ? { x, y, N: N2, V, p: person() } : null;
     },
     make: ({ x, y, N: N2, V, p }) => ({
       question: `${p.name}'s purse holds ${N2} coins. Some are sh 5 coins and the rest are sh 10 coins. The coins are worth sh ${V} altogether. How many sh 10 coins are in the purse?`,
@@ -27642,7 +29485,7 @@ var uniq4 = (...v) => new Set(v.map((x) => String(round(x, 4)))).size === v.leng
 var near3 = (a, b) => Math.abs(a - b) < 1e-6;
 var circ = (r) => 2 * PI2 * r;
 var nice = (v) => Number.isInteger(v * 2);
-var FAMILIES19 = [
+var FAMILIES21 = [
   // ================================================================ CIRCLES
   fam11({
     id: "g8.circ.wheel-distance",
@@ -27996,21 +29839,21 @@ var FAMILIES19 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const l = pick([8, 9, 10, 12]), w = pick([6, 7, 8]), h = pick([3, 4]), o = pick([6, 8, 10, 12]), cov = pick([8, 10, 12]);
+      const l = pick([8, 9, 10, 12]), w = pick([6, 7, 8]), h = pick([3, 4]), o = pick([6, 8, 10, 12]), cov2 = pick([8, 10, 12]);
       const walls = 2 * (l + w) * h, ceil = l * w, paint = walls + ceil - o;
-      return paint % cov === 0 ? { l, w, h, o, cov, walls, ceil, paint, lit: paint / cov } : null;
+      return paint % cov2 === 0 ? { l, w, h, o, cov: cov2, walls, ceil, paint, lit: paint / cov2 } : null;
     },
-    make: ({ l, w, h, o, cov, walls, ceil, paint, lit }) => ({
-      question: `A classroom is a cuboid, ${l} m long, ${w} m wide and ${h} m high. The four walls and the ceiling are to be painted. The doors and windows cover ${o} m\xB2 and are not painted. One litre of paint covers ${cov} m\xB2.`,
+    make: ({ l, w, h, o, cov: cov2, walls, ceil, paint, lit }) => ({
+      question: `A classroom is a cuboid, ${l} m long, ${w} m wide and ${h} m high. The four walls and the ceiling are to be painted. The doors and windows cover ${o} m\xB2 and are not painted. One litre of paint covers ${cov2} m\xB2.`,
       parts: [
         { prompt: "What is the area of the four walls, in m\xB2?", answer: walls, unit: "m\xB2", hint: "The walls make a long strip: the distance round the floor times the height.", wrong: [[l * w, "That is the floor or ceiling. The walls stand around it."], [(l + w) * h, "There are four walls: two of each size."]] },
         { prompt: "What is the area of the ceiling, in m\xB2?", answer: ceil, unit: "m\xB2", hint: "The ceiling is a rectangle the same size as the floor.", wrong: [[l + w, "Area is length times width."]] },
         { prompt: "What area must be painted, in m\xB2?", answer: paint, unit: "m\xB2", hint: "Add the walls and ceiling. Then take away the doors and windows.", wrong: [[walls + ceil, "The doors and windows are not painted. Take them away."], [walls + ceil + o, "Take the doors and windows away, do not add them."]] },
-        { prompt: "How many litres of paint are needed?", answer: lit, unit: "litres", hint: "How many lots of the coverage of one litre fit into the area?", wrong: [[paint * cov, "One litre covers a fixed area. Divide to find how many litres."]] }
+        { prompt: "How many litres of paint are needed?", answer: lit, unit: "litres", hint: "How many lots of the coverage of one litre fit into the area?", wrong: [[paint * cov2, "One litre covers a fixed area. Divide to find how many litres."]] }
       ],
-      steps: [`Walls: 2 \xD7 (${l} + ${w}) \xD7 ${h} = ${walls} m\xB2.`, `Ceiling: ${l} \xD7 ${w} = ${ceil} m\xB2.`, `To paint: ${walls} + ${ceil} \u2212 ${o} = ${paint} m\xB2.`, `Paint: ${paint} \xF7 ${cov} = ${lit} litres.`]
+      steps: [`Walls: 2 \xD7 (${l} + ${w}) \xD7 ${h} = ${walls} m\xB2.`, `Ceiling: ${l} \xD7 ${w} = ${ceil} m\xB2.`, `To paint: ${walls} + ${ceil} \u2212 ${o} = ${paint} m\xB2.`, `Paint: ${paint} \xF7 ${cov2} = ${lit} litres.`]
     }),
-    check: ({ l, w, h, o, cov }, v) => v[0] === 2 * h * (l + w) && v[1] === l * w && v[2] === v[0] + v[1] - o && v[3] * cov === v[2]
+    check: ({ l, w, h, o, cov: cov2 }, v) => v[0] === 2 * h * (l + w) && v[1] === l * w && v[2] === v[0] + v[1] - o && v[3] * cov2 === v[2]
   }),
   fam11({
     id: "g8.surface.spot-cuboid",
@@ -29353,7 +31196,7 @@ var FAMILIES19 = [
 
 // src/ai-tutor/content/families/g7_num_alg.js
 var fam12 = (def) => family({ reviewed: false, ...def });
-var shuffle4 = (a) => {
+var shuffle5 = (a) => {
   const r = [...a];
   for (let i = r.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -29361,14 +31204,14 @@ var shuffle4 = (a) => {
   }
   return r;
 };
-var gcd6 = (a, b) => b ? gcd6(b, a % b) : a;
-var lcm3 = (a, b) => a / gcd6(a, b) * b;
+var gcd7 = (a, b) => b ? gcd7(b, a % b) : a;
+var lcm4 = (a, b) => a / gcd7(a, b) * b;
 var isPrime = (n) => {
   if (n < 2) return false;
   for (let i = 2; i * i <= n; i++) if (n % i === 0) return false;
   return true;
 };
-var distinct6 = (...v) => new Set(v).size === v.length;
+var distinct7 = (...v) => new Set(v).size === v.length;
 var circ2 = (closed) => closed ? "a closed circle" : "an open circle";
 var digitsOf3 = (n) => String(n).split("").map(Number);
 var digitSum = (n) => digitsOf3(n).reduce((s, x) => s + x, 0);
@@ -29393,19 +31236,19 @@ var words4 = (n) => {
   return out.join(" ");
 };
 var PLACES2 = ["units", "tens", "hundreds", "thousands", "ten thousands", "hundred thousands", "millions", "ten millions", "hundred millions"];
-var frac = (n, d) => {
-  const g = gcd6(Math.abs(n), d);
+var frac2 = (n, d) => {
+  const g = gcd7(Math.abs(n), d);
   const a = n / g, b = d / g;
   return b === 1 ? String(a) : `${a}/${b}`;
 };
 var mixed = (n, d) => {
-  const g = gcd6(Math.abs(n), d);
+  const g = gcd7(Math.abs(n), d);
   const a = n / g, b = d / g;
   if (b === 1) return String(a);
   if (a > b) return `${Math.floor(a / b)} ${a % b}/${b}`;
   return `${a}/${b}`;
 };
-var FAMILIES20 = [
+var FAMILIES22 = [
   // ======================================================================
   // WHOLE NUMBERS
   // ======================================================================
@@ -29420,7 +31263,7 @@ var FAMILIES20 = [
       const ds = Array.from({ length: L2 }, () => randInt(1, 9));
       const j = randInt(L2 - 3, L2 - 1), k = randInt(2, 4);
       const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
-      return new Set(ds).size >= 5 && distinct6(A2 + B2, ds[j] + ds[k], A2 + ds[k], ds[j] + B2) ? { ds, L: L2, j, k } : null;
+      return new Set(ds).size >= 5 && distinct7(A2 + B2, ds[j] + ds[k], A2 + ds[k], ds[j] + B2) ? { ds, L: L2, j, k } : null;
     },
     make: ({ ds, L: L2, j, k }) => {
       const A2 = ds[j] * 10 ** j, B2 = ds[k] * 10 ** k;
@@ -29477,11 +31320,11 @@ var FAMILIES20 = [
       }
       const n = Number(ds.join(""));
       const set = [...new Set(alt.map((a) => words4(a)))].filter((w) => w !== words4(n));
-      return set.length >= 3 ? { n, wrongs: shuffle4(set).slice(0, 3), p: person() } : null;
+      return set.length >= 3 ? { n, wrongs: shuffle5(set).slice(0, 3), p: person() } : null;
     },
     make: ({ n, wrongs, p }) => ({
       question: `${p.name} sells a plot of land for ${sh(n)}. Which of these shows the amount in words?`,
-      options: shuffle4([{ text: words4(n), right: true }, ...wrongs.map((w) => ({ text: w, right: false, why: "Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place." }))]),
+      options: shuffle5([{ text: words4(n), right: true }, ...wrongs.map((w) => ({ text: w, right: false, why: "Read each group of digits again: millions, thousands, then the rest. In these words, one digit has moved to a different place." }))]),
       hints: ["Split the number into groups of three digits, from the right.", "Say the millions group, then the thousands group, then the last group."],
       steps: [`Groups: ${commas(n).split(",").join(" | ")}.`, `In words: ${words4(n)}.`]
     })
@@ -29497,7 +31340,7 @@ var FAMILIES20 = [
       if (r === 5e7) return null;
       const ans = Math.round(N2 / 1e8) * 1e8, up = r > 5e7;
       const other = up ? Math.floor(N2 / 1e8) * 1e8 : Math.ceil(N2 / 1e8) * 1e8, tenM = Math.round(N2 / 1e7) * 1e7, lead = ans / 1e8;
-      return distinct6(ans, other, tenM, lead) ? { N: N2, ans, other, tenM, lead, p: person() } : null;
+      return distinct7(ans, other, tenM, lead) ? { N: N2, ans, other, tenM, lead, p: person() } : null;
     },
     make: ({ N: N2, ans, other, tenM, lead }) => ({
       question: `A report says that ${commas(N2)} mobile phone lines are in use in a region. The newspaper rounds this to the nearest hundred million. What number does it print?`,
@@ -29519,7 +31362,7 @@ var FAMILIES20 = [
       while (nums.size < 5) nums.add(randInt(2, 40));
       const v = [...nums];
       const pr = v.filter(isPrime).length, odd = v.filter((x) => x % 2).length, comp2 = v.length - pr, even = v.length - odd;
-      return pr >= 1 && pr <= 3 && distinct6(pr, odd, comp2, even) ? { v, pr, odd, comp: comp2, even, ps: (() => {
+      return pr >= 1 && pr <= 3 && distinct7(pr, odd, comp2, even) ? { v, pr, odd, comp: comp2, even, ps: (() => {
         const ns = [];
         while (ns.length < 5) {
           const x = person().name;
@@ -29636,7 +31479,7 @@ var FAMILIES20 = [
       const a = randInt(1, 5), m = pick([2, 3]), c = randInt(1, 4);
       const t = [a];
       for (let i = 0; i < 4; i++) t.push(t[i] * m + c);
-      return distinct6(t[3], a + 3 * c, a * m ** 3, t[4], t[2]) ? { a, m, c, t, p: person() } : null;
+      return distinct7(t[3], a + 3 * c, a * m ** 3, t[4], t[2]) ? { a, m, c, t, p: person() } : null;
     },
     make: ({ a, m, c, t, p }) => ({
       question: `${p.name} makes a sequence with this rule: multiply the last term by ${m}, then add ${c}. The first term is ${a}. What is the fourth term?`,
@@ -29681,13 +31524,13 @@ var FAMILIES20 = [
     draw: () => {
       const N2 = randInt(1e3, 9999), ks = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11], yes = ks.filter((k) => N2 % k === 0), no = ks.filter((k) => N2 % k !== 0);
       if (yes.length < 1 || no.length < 3) return null;
-      return { N: N2, r: pick(yes), ws: shuffle4(no).slice(0, 3), p: person() };
+      return { N: N2, r: pick(yes), ws: shuffle5(no).slice(0, 3), p: person() };
     },
     make: ({ N: N2, r, ws, p }) => {
       const reason = (k) => ({ 2: "its last digit is not even", 3: `its digits add up to ${digitSum(N2)}, which is not a multiple of 3`, 4: `its last two digits make ${N2 % 100}, which does not divide by 4`, 5: "its last digit is not 0 or 5", 6: "it must divide by both 2 and 3, and it fails one of them", 7: `dividing leaves a remainder of ${N2 % 7}`, 8: `its last three digits make ${N2 % 1e3}, which does not divide by 8`, 9: `its digits add up to ${digitSum(N2)}, which is not a multiple of 9`, 10: "its last digit is not 0", 11: "the difference between the sums of its alternate digits is not 0 or a multiple of 11" })[k];
       return {
         question: `${p.name} has ${commas(N2)} books. ${p.She} packs them into equal bundles with none left over. Which of these numbers is ${commas(N2)} divisible by? It must divide exactly.`,
-        options: shuffle4([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N2)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
+        options: shuffle5([{ text: String(r), right: true }, ...ws.map((k) => ({ text: String(k), right: false, why: `${commas(N2)} does not divide exactly by ${k}: ${reason(k)}.` }))]),
         hints: ["Use the divisibility test for each number in turn.", "Only one of the numbers passes its test."],
         steps: [`Test each number with its divisibility rule.`, `${commas(N2)} \xF7 ${r} = ${commas(N2 / r)} with nothing left, so ${r} divides exactly.`]
       };
@@ -29731,7 +31574,7 @@ var FAMILIES20 = [
       const v = Array.from({ length: 5 }, () => randInt(1e3, 9999));
       if (new Set(v).size < 5) return null;
       const six = v.filter((n) => n % 6 === 0).length, three = v.filter((n) => n % 3 === 0).length, two = v.filter((n) => n % 2 === 0).length;
-      return six >= 1 && six <= 3 && distinct6(six, three, two, 5) ? { v, six, three, two } : null;
+      return six >= 1 && six <= 3 && distinct7(six, three, two, 5) ? { v, six, three, two } : null;
     },
     make: ({ v, six, three, two }) => ({
       question: "The table shows five numbers and the sum of the digits of each. How many of the numbers are divisible by 6?",
@@ -29798,10 +31641,10 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const g = pick([4, 6, 8, 9, 12, 15]), u = randInt(2, 9), v = randInt(2, 9);
-      if (gcd6(u, v) !== 1 || u === v) return null;
+      if (gcd7(u, v) !== 1 || u === v) return null;
       const a = g * Math.min(u, v), b = g * Math.max(u, v);
-      const L2 = lcm3(a, b), dif = b - a, pieces = a / g + b / g;
-      return distinct6(g, L2, dif, pieces, a) && b <= 150 ? { a, b, g, L: L2, dif, pieces, p: person() } : null;
+      const L2 = lcm4(a, b), dif = b - a, pieces = a / g + b / g;
+      return distinct7(g, L2, dif, pieces, a) && b <= 150 ? { a, b, g, L: L2, dif, pieces, p: person() } : null;
     },
     make: ({ a, b, g, L: L2, dif, pieces, p }) => ({
       question: `${p.name} has two ropes, ${a} m and ${b} m long. ${p.She} cuts both into equal pieces with no rope left over. The pieces must be as long as possible, so the length is the GCD (greatest common divisor) of ${a} and ${b}. How many metres long is each piece?`,
@@ -29810,7 +31653,7 @@ var FAMILIES20 = [
       hints: ["List the factors of each length, or divide both by small numbers.", "The greatest factor they share is the GCD."],
       steps: [`Factors of ${a} and ${b} that both share: the biggest is ${g}.`, `Check: ${a} \xF7 ${g} = ${a / g} and ${b} \xF7 ${g} = ${b / g}, with nothing left.`]
     }),
-    check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd6(a / x, b / x) === 1
+    check: ({ a, b }, x) => a % x === 0 && b % x === 0 && gcd7(a / x, b / x) === 1
   }),
   fam12({
     id: "g7.factors.hcf-gift-boxes",
@@ -29820,10 +31663,10 @@ var FAMILIES20 = [
     form: "table",
     draw: () => {
       const g = pick([4, 5, 6, 8, 10]), u = randInt(2, 9), v = randInt(2, 9), w = randInt(2, 9);
-      if (!distinct6(u, v, w) || gcd6(gcd6(u, v), w) !== 1) return null;
+      if (!distinct7(u, v, w) || gcd7(gcd7(u, v), w) !== 1) return null;
       const nums = [g * u, g * v, g * w];
-      const gab = gcd6(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
-      return distinct6(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle4(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
+      const gab = gcd7(nums[0], nums[1]), mn = Math.min(...nums), per = nums.reduce((s, x) => s + x, 0) / g;
+      return distinct7(g, gab, mn, per) ? { g, nums, gab, mn, per, items: shuffle5(["Bars of soap", "Packets of tea", "Boxes of matches", "Tubes of toothpaste", "Packets of sugar"]).slice(0, 3), p: person() } : null;
     },
     make: ({ g, nums, gab, mn, per, items, p }) => ({
       question: `${p.name} packs gift boxes from the stock in the table. Every box must have the same things in it, and nothing is left over. What is the greatest number of boxes ${p.she} can make? Use the HCF (highest common factor) of the three numbers.`,
@@ -29834,7 +31677,7 @@ var FAMILIES20 = [
       hints: ["The number of boxes must divide all three numbers exactly.", "Find the greatest number that divides all three."],
       steps: [`The greatest number that divides ${nums.join(", ")} exactly is ${g}.`, `Each box then has ${nums.map((n) => n / g).join(", ")} of the items.`]
     }),
-    check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd6(n / a, nums[0] / a) >= 1) && gcd6(gcd6(nums[0] / a, nums[1] / a), nums[2] / a) === 1
+    check: ({ nums }, a) => nums.every((n) => n % a === 0) && nums.every((n) => gcd7(n / a, nums[0] / a) >= 1) && gcd7(gcd7(nums[0] / a, nums[1] / a), nums[2] / a) === 1
   }),
   fam12({
     id: "g7.factors.lcm-matatus",
@@ -29844,9 +31687,9 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const a = pick([6, 8, 10, 12, 15, 18, 20]), b = pick([6, 8, 9, 10, 12, 15, 18, 20, 24]);
-      if (a === b || gcd6(a, b) === 1 || a % b === 0 || b % a === 0) return null;
-      const L2 = lcm3(a, b);
-      return L2 <= 120 && distinct6(L2, a * b, a + b, Math.max(a, b)) ? { a, b, L: L2, town: pick(["Thika", "Nakuru", "Kisumu", "Eldoret", "Machakos"]) } : null;
+      if (a === b || gcd7(a, b) === 1 || a % b === 0 || b % a === 0) return null;
+      const L2 = lcm4(a, b);
+      return L2 <= 120 && distinct7(L2, a * b, a + b, Math.max(a, b)) ? { a, b, L: L2, town: pick(["Thika", "Nakuru", "Kisumu", "Eldoret", "Machakos"]) } : null;
     },
     make: ({ a, b, L: L2, town }) => ({
       question: `Two matatus leave the ${town} stage together at 6:00 a.m. One matatu leaves the stage every ${a} minutes. The other leaves every ${b} minutes. After how many minutes do they leave together again?`,
@@ -29855,7 +31698,7 @@ var FAMILIES20 = [
       hints: ["List the times when the first matatu leaves: multiples of its gap.", "Find the first time that is also on the second list."],
       steps: [`Multiples of ${a}: ${[1, 2, 3, 4, 5, 6].map((i) => a * i).join(", ")} ...`, `Multiples of ${b}: ${[1, 2, 3, 4, 5, 6].map((i) => b * i).join(", ")} ...`, `The first time on both lists is ${L2} minutes.`]
     }),
-    check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd6(x / a, x / b) === 1
+    check: ({ a, b }, x) => x % a === 0 && x % b === 0 && gcd7(x / a, x / b) === 1
   }),
   fam12({
     id: "g7.factors.lcm-product-why",
@@ -29865,8 +31708,8 @@ var FAMILIES20 = [
     form: "why",
     draw: () => {
       const a = pick([4, 6, 8, 9, 10, 12, 14, 15]), b = pick([6, 9, 10, 12, 14, 15, 18, 20]);
-      if (a >= b || gcd6(a, b) === 1 || b % a === 0) return null;
-      return { a, b, L: lcm3(a, b), p: person() };
+      if (a >= b || gcd7(a, b) === 1 || b % a === 0) return null;
+      return { a, b, L: lcm4(a, b), p: person() };
     },
     make: ({ a, b, L: L2, p }) => ({
       question: `${p.name} says the LCM of ${a} and ${b} is ${a * b}, because ${a * b} is a common multiple of both numbers. Why is ${p.her} answer not the least common multiple?`,
@@ -29887,9 +31730,9 @@ var FAMILIES20 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const v = shuffle4([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L2 = lcm3(lcm3(v[0], v[1]), v[2]);
-      const L22 = lcm3(v[0], v[1]);
-      return L2 <= 180 && L2 !== L22 && distinct6(L2, L22, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L: L2, L2: L22 } : null;
+      const v = shuffle5([4, 6, 8, 9, 10, 12, 15, 18, 20]).slice(0, 3), L2 = lcm4(lcm4(v[0], v[1]), v[2]);
+      const L22 = lcm4(v[0], v[1]);
+      return L2 <= 180 && L2 !== L22 && distinct7(L2, L22, Math.max(...v), v[0] * v[1] * v[2]) ? { v, L: L2, L2: L22 } : null;
     },
     make: ({ v, L: L2, L2: L22 }) => ({
       question: "The school has three bells. The table shows how often each one rings. At 8:00 a.m. all three ring at the same time. After how many minutes do they next ring at the same time? Find the LCM.",
@@ -29900,7 +31743,7 @@ var FAMILIES20 = [
       hints: ["Find the LCM of the first two numbers.", "Then find the LCM of that answer and the third number."],
       steps: [`LCM of ${v[0]} and ${v[1]} is ${L22}.`, `LCM of ${L22} and ${v[2]} is ${L2}.`]
     }),
-    check: ({ v }, x) => v.every((n) => x % n === 0) && gcd6(gcd6(x / v[0], x / v[1]), x / v[2]) === 1
+    check: ({ v }, x) => v.every((n) => x % n === 0) && gcd7(gcd7(x / v[0], x / v[1]), x / v[2]) === 1
   }),
   // ======================================================================
   // FRACTIONS
@@ -29912,11 +31755,11 @@ var FAMILIES20 = [
     rung: 2,
     form: "word",
     draw: () => {
-      const ds = shuffle4([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
+      const ds = shuffle5([4, 5, 8, 10]).slice(0, 3), fs = ds.map((d) => {
         const a = randInt(1, d - 1);
         return { a, d };
       });
-      if (fs.some((f) => gcd6(f.a, f.d) !== 1)) return null;
+      if (fs.some((f) => gcd7(f.a, f.d) !== 1)) return null;
       const vals = fs.map((f) => f.a / f.d).sort((x, y) => x - y);
       if (vals[2] - vals[1] < 0.02 || vals[1] - vals[0] < 0.02) return null;
       const ps = [];
@@ -29930,9 +31773,9 @@ var FAMILIES20 = [
       const best = fs.reduce((m, f, i) => f.a / f.d > fs[m].a / fs[m].d ? i : m, 0);
       return {
         question: `${ps[0].name}, ${ps[1].name} and ${ps[2].name} each read a book of the same length. ${ps[0].name} has read ${fs[0].a}/${fs[0].d} of ${ps[0].her} book, ${ps[1].name} has read ${fs[1].a}/${fs[1].d} and ${ps[2].name} has read ${fs[2].a}/${fs[2].d}. Compare the fractions. Who has read the most?`,
-        options: shuffle4(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? void 0 : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
+        options: shuffle5(ps.map((q, i) => ({ text: q.name, right: i === best, why: i === best ? void 0 : `${q.name} has not read the most. Write the three fractions with the same denominator, then compare the numerators.` }))),
         hints: ["Fractions with different denominators cannot be compared directly.", "Write all three with a common denominator."],
-        steps: [`A common denominator is ${lcm3(lcm3(fs[0].d, fs[1].d), fs[2].d)}.`, `The fractions are ${fs.map((f) => `${f.a * lcm3(lcm3(fs[0].d, fs[1].d), fs[2].d) / f.d}/${lcm3(lcm3(fs[0].d, fs[1].d), fs[2].d)}`).join(", ")}.`, `The biggest is ${ps[best].name}'s.`]
+        steps: [`A common denominator is ${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}.`, `The fractions are ${fs.map((f) => `${f.a * lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d) / f.d}/${lcm4(lcm4(fs[0].d, fs[1].d), fs[2].d)}`).join(", ")}.`, `The biggest is ${ps[best].name}'s.`]
       };
     }
   }),
@@ -29951,7 +31794,7 @@ var FAMILIES20 = [
       return {
         question: `Which is greater: ${first2} or ${second}? Choose the best reason.`,
         story: false,
-        options: shuffle4([
+        options: shuffle5([
           { text: `${B2} is greater, because less is missing from a whole`, right: true },
           { text: `${A2} is greater, because its denominator is smaller`, right: false, why: `A smaller denominator does not decide it. Look at how much is missing from a whole in each fraction.` },
           { text: `${B2} is greater, because its denominator is bigger`, right: false, why: "A bigger denominator does not always mean a bigger fraction: 1/9 is less than 1/2. The reason is in the piece that is missing." },
@@ -29989,14 +31832,14 @@ var FAMILIES20 = [
     form: "why",
     draw: () => {
       const b = pick([3, 4, 5, 7]), a = randInt(2, b - 1);
-      return gcd6(a, b) === 1 ? { w: randInt(1, 4), a, b, p: person() } : null;
+      return gcd7(a, b) === 1 ? { w: randInt(1, 4), a, b, p: person() } : null;
     },
     make: ({ w, a, b, p }) => {
       const n = w * b + a;
       return {
         question: `${p.name} finds the reciprocal of ${w} ${a}/${b} and writes ${w} ${b}/${a}. Why is this not the reciprocal?`,
         story: false,
-        options: shuffle4([
+        options: shuffle5([
           { text: `${w} ${a}/${b} must first be written as ${n}/${b}. Its reciprocal is ${b}/${n}`, right: true },
           { text: "A mixed number does not have a reciprocal", right: false, why: "Every number except 0 has a reciprocal, including mixed numbers." },
           { text: `The whole number ${w} stays the same in a reciprocal`, right: false, why: "The reciprocal of the whole number is found with the fraction. The whole number part cannot stay as it is." },
@@ -30019,7 +31862,7 @@ var FAMILIES20 = [
     },
     make: ({ a, b, L: L2, p, item }) => ({
       question: `${p.name} has ${L2} ${item[1]} of ${item[0]}. Each ${item[2]} needs ${a}/${b} of a ${item[1] === "litres" ? "litre" : "kg"}. Which calculation gives how many ${item[3]} ${p.she} can make?`,
-      options: shuffle4([
+      options: shuffle5([
         { text: `${L2} \xF7 ${a}/${b}`, right: true },
         { text: `${L2} \xD7 ${a}/${b}`, right: false, why: `That finds ${a}/${b} of ${L2}, not how many lots of ${a}/${b} fit into ${L2}.` },
         { text: `${a}/${b} \xF7 ${L2}`, right: false, why: "This divides the small amount by the large one. The question asks how many of the small amounts fit into the large one." },
@@ -30038,14 +31881,14 @@ var FAMILIES20 = [
     draw: () => {
       const [a, b] = pick([[3, 4], [2, 3], [3, 5], [4, 5], [5, 6], [3, 8]]), k = pick([2, 3, 4, 5, 6]);
       if (a % k === 0 || k % a === 0) return null;
-      const right = frac(a, b * k), w = [frac(a * k, b), frac(a, b + k), frac(b * k, a)];
-      return distinct6(right, ...w) && !w.includes(right) ? { a, b, k, right, w, p: person() } : null;
+      const right = frac2(a, b * k), w = [frac2(a * k, b), frac2(a, b + k), frac2(b * k, a)];
+      return distinct7(right, ...w) && !w.includes(right) ? { a, b, k, right, w, p: person() } : null;
     },
     make: ({ a, b, k, right, w, p }) => ({
       question: `A water tank is ${a}/${b} full. ${p.name} divides the water equally among ${k} drums. What fraction of the whole tank is in each drum?`,
-      options: shuffle4([{ text: right, right: true }, { text: w[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
+      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "That multiplies by the number of drums. Sharing equally makes each part smaller." }, { text: w[1], right: false, why: "The denominator is not found by adding. Dividing by a number multiplies the denominator." }, { text: w[2], right: false, why: "That turns the fraction upside down and multiplies. Divide the fraction by the number of drums." }]),
       hints: ["Sharing equally into drums is dividing the fraction by the number of drums.", "Dividing a fraction by a whole number is the same as multiplying by one over that number."],
-      steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd6(a, b * k) > 1 ? ` = ${right}` : ""}.`]
+      steps: [`${a}/${b} \xF7 ${k} = ${a}/${b} \xD7 1/${k}.`, `= ${a}/${b * k}${gcd7(a, b * k) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
   fam12({
@@ -30058,7 +31901,7 @@ var FAMILIES20 = [
       const [a, b] = pick([[3, 4], [2, 3], [3, 5], [5, 6], [7, 8]]), [c, d] = pick([[1, 3], [1, 2], [2, 5], [3, 4], [1, 4]]), N2 = pick([24, 30, 36, 40, 48, 60, 72, 120]);
       if (N2 * a * c % (b * d) !== 0) return null;
       const ans = N2 * a * c / (b * d);
-      return distinct6(ans, N2 * a / b, round(N2 * c / d, 2), round(N2 * (a / b + c / d), 2)) ? { a, b, c, d, N: N2, ans, p: person() } : null;
+      return distinct7(ans, N2 * a / b, round(N2 * c / d, 2), round(N2 * (a / b + c / d), 2)) ? { a, b, c, d, N: N2, ans, p: person() } : null;
     },
     make: ({ a, b, c, d, N: N2, ans, p }) => ({
       question: `${p.name} has a shamba of ${N2} acres. ${a}/${b} of the shamba is planted with maize. ${c}/${d} of the maize land is near the river. How many acres of maize are near the river?`,
@@ -30081,11 +31924,11 @@ var FAMILIES20 = [
       if (dir === -1 && (s - 4 * k < 1 || s > D3)) return null;
       const t = (i) => mixed(s + dir * k * i, D3);
       const right = t(4), w = [t(5), mixed(s + dir * (k * 3 + 1), D3), mixed(s + dir * k * 3 + dir, D3 + 1)];
-      return distinct6(right, ...w, t(3)) ? { dir, D: D3, s, k, right, w, shown: [0, 1, 2, 3].map(t), p: person() } : null;
+      return distinct7(right, ...w, t(3)) ? { dir, D: D3, s, k, right, w, shown: [0, 1, 2, 3].map(t), p: person() } : null;
     },
     make: ({ dir, shown, right, w, p }) => ({
       question: `A tank at ${p.name}'s school is ${dir === 1 ? "filling" : "emptying"}. The part of the tank that is ${dir === 1 ? "full" : "still full"} after each hour follows a pattern: ${shown.join(", ")}. What comes next in the sequence, after the fifth hour?`,
-      options: shuffle4([{ text: right, right: true }, { text: w[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown." }, { text: w[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see." }, { text: w[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time." }]),
+      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "That skips a term. The next term is the one straight after the last one shown." }, { text: w[1], right: false, why: "The same amount is added or taken away each time. Check the gap between the terms you can see." }, { text: w[2], right: false, why: "Only the numerator changes. The denominator stays the same when the same fraction is added each time." }]),
       hints: ["Write the terms with the same denominator and find the gap between them.", "Use the same gap once more."],
       steps: [`Over a common denominator the gap between terms is the same each hour.`, `Adding the gap ${dir === 1 ? "to" : "taking it from"} ${shown[3]} gives ${right}.`]
     })
@@ -30118,7 +31961,7 @@ var FAMILIES20 = [
     make: ({ r }) => ({
       question: `Look at the pattern of fractions: 1, 1/${r}, 1/${r * r}, 1/${r ** 3}, ... Which rule makes each term from the one before it?`,
       story: false,
-      options: shuffle4([
+      options: shuffle5([
         { text: `Divide by ${r} each time`, right: true },
         { text: `Multiply by ${r} each time`, right: false, why: "Multiplying by a whole number makes terms bigger. These terms are getting smaller." },
         { text: `Take away 1/${r} each time`, right: false, why: `Take 1/${r} away from 1/${r} and nothing is left, but the next term is still there.` },
@@ -30139,10 +31982,10 @@ var FAMILIES20 = [
     form: "table",
     draw: () => {
       const ds = [randInt(1, 9), randInt(0, 9), randInt(1, 9), randInt(0, 9), randInt(1, 9)];
-      const order = shuffle4([0, 1, 2, 3, 4]);
+      const order = shuffle5([0, 1, 2, 3, 4]);
       const naive = order.map((i) => ds[i]);
       const val = ds[0] * 10 + ds[1] + ds[2] / 10 + ds[3] / 100 + ds[4] / 1e3;
-      return distinct6(...ds.filter((_, i) => i !== 1 && i !== 3)) && ds[0] !== ds[1] && ds[2] !== ds[3] && order.join("") !== "01234" ? { ds, order, val: round(val, 3) } : null;
+      return distinct7(...ds.filter((_, i) => i !== 1 && i !== 3)) && ds[0] !== ds[1] && ds[2] !== ds[3] && order.join("") !== "01234" ? { ds, order, val: round(val, 3) } : null;
     },
     make: ({ ds, order, val }) => {
       const NAMES = ["Tens", "Ones", "Tenths", "Hundredths", "Thousandths"];
@@ -30209,7 +32052,7 @@ var FAMILIES20 = [
     draw: () => {
       const L2 = pick([3.2, 4.5, 2.4, 5.5, 3.6, 4.8]), w = pick([2.5, 1.5, 2.4, 3.5, 2.2]), pr = pick([40, 60, 80, 100, 120]);
       const area2 = round(L2 * w, 2), cost = round(area2 * pr, 2);
-      return L2 !== w && Number.isInteger(cost) && distinct6(area2, round(2 * (L2 + w), 2), round(L2 + w, 2)) ? { L: L2, w, pr, area: area2, cost, per: round(2 * (L2 + w), 2), p: person() } : null;
+      return L2 !== w && Number.isInteger(cost) && distinct7(area2, round(2 * (L2 + w), 2), round(L2 + w, 2)) ? { L: L2, w, pr, area: area2, cost, per: round(2 * (L2 + w), 2), p: person() } : null;
     },
     make: ({ L: L2, w, pr, area: area2, cost, per, p }) => ({
       question: `${p.name} has a rectangular garden ${L2} m long and ${w} m wide.`,
@@ -30319,16 +32162,16 @@ var FAMILIES20 = [
     form: "direct",
     draw: () => {
       const d = randInt(3, 9), n = randInt(2, d - 1);
-      if (gcd6(n, d) !== 1) return null;
-      const right = frac(n * n, d * d), w = [frac(n * n, d), frac(n, d * d), frac(2 * n, d)];
-      return distinct6(right, ...w) ? { n, d, right, w } : null;
+      if (gcd7(n, d) !== 1) return null;
+      const right = frac2(n * n, d * d), w = [frac2(n * n, d), frac2(n, d * d), frac2(2 * n, d)];
+      return distinct7(right, ...w) ? { n, d, right, w } : null;
     },
     make: ({ n, d, right, w }) => ({
       question: `Which fraction is the square of ${n}/${d}?`,
       story: false,
-      options: shuffle4([{ text: right, right: true }, { text: w[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
+      options: shuffle5([{ text: right, right: true }, { text: w[0], right: false, why: "Only the top was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[1], right: false, why: "Only the bottom was squared. Both the numerator and the denominator are multiplied by themselves." }, { text: w[2], right: false, why: "That doubles the top. Squaring means multiplying the fraction by itself." }]),
       hints: ["The square of a number is the number times itself.", "Multiply the numerators, and multiply the denominators."],
-      steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd6(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
+      steps: [`(${n}/${d})\xB2 = ${n}/${d} \xD7 ${n}/${d}.`, `= ${n * n}/${d * d}${gcd7(n * n, d * d) > 1 ? ` = ${right}` : ""}.`]
     })
   }),
   fam12({
@@ -30361,7 +32204,7 @@ var FAMILIES20 = [
     },
     make: ({ k, A: A2, p }) => ({
       question: `${p.name} has a square plot with an area of ${A2} square metres. Between which two whole numbers does the square root \u221A${A2}, the length of one side in metres, lie?`,
-      options: shuffle4([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A2}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A2}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A2 / 2)} and ${Math.floor(A2 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test." }]),
+      options: shuffle5([{ text: `${k} and ${k + 1}`, right: true }, { text: `${k - 1} and ${k}`, right: false, why: `${k} \xD7 ${k} is less than ${A2}, so the side is longer than ${k}.` }, { text: `${k + 1} and ${k + 2}`, right: false, why: `${k + 1} \xD7 ${k + 1} is more than ${A2}, so the side is shorter than ${k + 1}.` }, { text: `${Math.floor(A2 / 2)} and ${Math.floor(A2 / 2) + 1}`, right: false, why: "Halving the area does not give the side. Square the numbers to test." }]),
       hints: ["Find two square numbers, one just below and one just above the area.", "The square roots of those two square numbers are the whole numbers you need."],
       steps: [`${k}\xB2 = ${k * k} and ${k + 1}\xB2 = ${(k + 1) ** 2}.`, `${A2} is between ${k * k} and ${(k + 1) ** 2}, so \u221A${A2} is between ${k} and ${k + 1}.`]
     })
@@ -30379,7 +32222,7 @@ var FAMILIES20 = [
     make: ({ a, b, c, p }) => ({
       question: `${p.name} writes \u221A(${a * a} + ${b * b}) = \u221A${a * a} + \u221A${b * b} = ${a} + ${b} = ${a + b}. Why is this wrong?`,
       story: false,
-      options: shuffle4([
+      options: shuffle5([
         { text: "A square root of a sum is not the sum of the roots", right: true },
         { text: `\u221A${a * a} is not ${a}, so the first step is wrong`, right: false, why: `${a} \xD7 ${a} = ${a * a}, so \u221A${a * a} = ${a}. That part is right.` },
         { text: `\u221A${c * c} must be found by halving ${c * c}, which gives ${c * c / 2}`, right: false, why: `Halving is not taking a square root. Test by multiplying: which number times itself gives ${c * c}?` },
@@ -30396,9 +32239,9 @@ var FAMILIES20 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const ss = shuffle4([8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20]).slice(0, 4);
+      const ss = shuffle5([8, 9, 10, 11, 12, 13, 14, 15, 16, 18, 20]).slice(0, 4);
       const mx = Math.max(...ss), mn = Math.min(...ss);
-      return distinct6(mx - mn, mx * mx - mn * mn, Math.round(Math.sqrt(mx * mx - mn * mn))) ? { ss, mx, mn } : null;
+      return distinct7(mx - mn, mx * mx - mn * mn, Math.round(Math.sqrt(mx * mx - mn * mn))) ? { ss, mx, mn } : null;
     },
     make: ({ ss, mx, mn }) => ({
       question: "The table shows the areas of four square plots. How many metres longer is a side of the biggest plot than a side of the smallest plot? Use the square root of each area.",
@@ -30431,7 +32274,7 @@ var FAMILIES20 = [
         question: "A water vendor charges to deliver jerricans of water to a home. The table shows some charges. Which expression gives the charge in shillings for n jerricans?",
         story: false,
         model: { type: "table", data: { head: ["Jerricans", "Charge (sh)"], rows: [1, 2, 3].map((n) => ({ label: String(n), value: String(r * n + b) })) } },
-        options: shuffle4(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
+        options: shuffle5(opts2.map((o, i) => ({ text: o.t, right: fits(o), why: fits(o) ? void 0 : [void 0, `Try n = 1 in ${o.t}. It does not give the first charge in the table. The fixed charge and the charge for each jerrican are mixed up.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. A fixed charge is not multiplied by n.`, `Try n = 2 in ${o.t}. It does not give the second charge in the table. The fixed amount is added once, after multiplying.`][i] }))),
         hints: ["Look at how much the charge goes up for each extra jerrican.", "Then see what is charged even for 0 jerricans, or test each expression with n = 1 and n = 2."],
         steps: [`Each extra jerrican adds ${r} shillings.`, `For n = 1 the charge is ${r + b}, which is ${r} + ${b}.`, `So the expression is ${r}n + ${b}.`]
       };
@@ -30446,7 +32289,7 @@ var FAMILIES20 = [
     draw: () => ({ j: randInt(2, 6), m: pick([2, 3, 4]), p: person() }),
     make: ({ j, m, p }) => ({
       question: `${p.name} is x years old. ${p.Her} brother is ${j} years younger than ${p.herObj}. ${p.Her} mother is ${m} times as old as ${p.name}. Write an expression for the total of the three ages, in years.`,
-      options: shuffle4([
+      options: shuffle5([
         { text: `${m + 2}x \u2212 ${j}`, right: true },
         { text: `${m + 2}x + ${j}`, right: false, why: "The brother is younger, so his age is x take away a number, not plus." },
         { text: `${m + 1}x \u2212 ${j}`, right: false, why: "One age is missing from the total. Count the three people." },
@@ -30487,7 +32330,7 @@ var FAMILIES20 = [
     draw: () => {
       const a = [randInt(1, 4), randInt(1, 4), randInt(1, 4)], c = [randInt(1, 6), randInt(1, 6), -randInt(1, 4)], t = randInt(3, 8);
       const A2 = a[0] + a[1] + a[2], C2 = c[0] + c[1] + c[2];
-      return A2 > 3 && C2 > 0 && distinct6(A2, a[0] + a[1], a[0] * a[1] * a[2]) && distinct6(C2, c[0] + c[1] + Math.abs(c[2]), c[0] + c[1]) ? { a, c, t, A: A2, C: C2, p: person() } : null;
+      return A2 > 3 && C2 > 0 && distinct7(A2, a[0] + a[1], a[0] * a[1] * a[2]) && distinct7(C2, c[0] + c[1] + Math.abs(c[2]), c[0] + c[1]) ? { a, c, t, A: A2, C: C2, p: person() } : null;
     },
     make: ({ a, c, t, A: A2, C: C2, p }) => {
       const side = (k, n) => `${k === 1 ? "" : k}x ${n < 0 ? "\u2212" : "+"} ${Math.abs(n)}`;
@@ -30518,7 +32361,7 @@ var FAMILIES20 = [
     },
     make: ({ a, b, c, p }) => ({
       question: `${p.name} buys ${a} exercise books and a geometry set. Each exercise book costs x shillings. The geometry set costs ${sh(b)}. The total is ${sh(c)}. Let x be the price of one exercise book. Which equation fits the story?`,
-      options: shuffle4([
+      options: shuffle5([
         { text: `${a}x + ${b} = ${c}`, right: true },
         { text: `${a}(x + ${b}) = ${c}`, right: false, why: "This adds the price of the geometry set to every exercise book. The geometry set is bought once." },
         { text: `x + ${a} + ${b} = ${c}`, right: false, why: `There are ${a} exercise books, each costing x. That is ${a} times x, not x plus ${a}.` },
@@ -30607,7 +32450,7 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const x = randInt(9, 14), m = pick([3, 4]), t = randInt(2, 6), S4 = (m + 1) * x + 2 * t;
-      return distinct6(m * x, x, round(m * S4 / (m + 1), 2), m * x + t) ? { x, m, t, S: S4, p: person() } : null;
+      return distinct7(m * x, x, round(m * S4 / (m + 1), 2), m * x + t) ? { x, m, t, S: S4, p: person() } : null;
     },
     make: ({ x, m, t, S: S4, p }) => ({
       question: `${p.name}'s mother is ${m} times as old as ${p.name}. In ${t} years' time the sum of their ages will be ${S4} years. Form an equation and solve it to find the age of ${p.name}'s mother now. Answer in years.`,
@@ -30694,14 +32537,14 @@ var FAMILIES20 = [
         const k = v + off;
         cands.push({ op, k, ok: op === "<" ? v < k : op === ">" ? v > k : op === "\u2264" ? v <= k : v >= k });
       }
-      const yes = shuffle4(cands.filter((c) => c.ok)), no = shuffle4(cands.filter((c) => !c.ok));
+      const yes = shuffle5(cands.filter((c) => c.ok)), no = shuffle5(cands.filter((c) => !c.ok));
       const pickOpts = [yes[0]];
       for (const c of no) if (pickOpts.length < 4 && !pickOpts.some((o) => o.op === c.op && o.k === c.k)) pickOpts.push(c);
       return { v, opts: pickOpts, p: person() };
     },
     make: ({ v, opts: opts2, p }) => ({
       question: `${p.name} is ${v} years old. Let a be ${p.her} age in years. Which of these inequalities is true for ${p.herObj}?`,
-      options: shuffle4(opts2.map((o) => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? void 0 : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false.` }))),
+      options: shuffle5(opts2.map((o) => ({ text: `a ${o.op} ${o.k}`, right: o.ok, why: o.ok ? void 0 : `Put a = ${v} into it: ${v} ${o.op} ${o.k} is false.` }))),
       hints: [`Put a = ${v} into each inequality in turn.`, "Exactly one of them is a true statement."],
       steps: [`Test each one with a = ${v}.`, `Only a ${opts2[0].op} ${opts2[0].k} is true: ${v} ${opts2[0].op} ${opts2[0].k}.`]
     })
@@ -30715,7 +32558,7 @@ var FAMILIES20 = [
     draw: () => ({ L: pick([1e3, 1200, 1500, 2e3]), c: pick([200, 300, 400, 500]), s: pick([50, 90, 100]), p: person() }),
     make: ({ L: L2, c, s, p }) => ({
       question: `A pick-up can carry at most ${commas(L2)} kg. It already carries ${c} kg of cement. ${p.name} loads n sacks of maize of ${s} kg each. Which inequality shows that the load is allowed?`,
-      options: shuffle4([
+      options: shuffle5([
         { text: `${c} + ${s}n \u2264 ${commas(L2)}`, right: true },
         { text: `${c} + ${s}n < ${commas(L2)}`, right: false, why: '"At most" allows the load to be exactly the limit, so the symbol must include "or equal to".' },
         { text: `${c} + ${s}n \u2265 ${commas(L2)}`, right: false, why: 'The total load must not go above the limit, so it cannot be "at least".' },
@@ -30758,7 +32601,7 @@ var FAMILIES20 = [
     form: "word",
     draw: () => {
       const B2 = pick([500, 600, 700, 800, 1e3]), g = pick([100, 120, 150, 200]), e = pick([30, 40, 60, 70, 80]), n = Math.floor((B2 - g) / e);
-      return (B2 - g) % e !== 0 && n >= 3 && distinct6(n, n + 1, Math.floor(B2 / e), round((B2 - g) / e, 2)) ? { B: B2, g, e, n, p: person() } : null;
+      return (B2 - g) % e !== 0 && n >= 3 && distinct7(n, n + 1, Math.floor(B2 / e), round((B2 - g) / e, 2)) ? { B: B2, g, e, n, p: person() } : null;
     },
     make: ({ B: B2, g, e, n, p }) => ({
       question: `${p.name} has ${sh(B2)}. ${p.She} buys a school bag for ${sh(g)} and then some exercise books at ${sh(e)} each. Form an inequality for n, the number of books, and solve it. What is the greatest number of books ${p.she} can buy?`,
@@ -30781,7 +32624,7 @@ var FAMILIES20 = [
       return {
         question: `${p.name} draws ${x} ${sym} ${vt} on a number line. ${p.She} puts ${circ2(drawn2 === "closed")} at ${vt}. Why is the circle wrong?`,
         story: false,
-        options: shuffle4([
+        options: shuffle5([
           { text: `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must be ${needed}`, right: true },
           { text: `A circle on a number line is always ${drawn2}`, right: false, why: "Both kinds of circle are used. Which one to draw depends on the sign." },
           { text: `The circle should be at ${v === 0 ? "1" : "0"}, not at ${vt}`, right: false, why: `The circle goes at the number in the inequality, which is ${vt}.` },
@@ -30804,7 +32647,7 @@ var FAMILIES20 = [
       const combos = [[true, true], [true, false], [false, true], [false, false]];
       return {
         question: `Which number line shows ${x} ${sym} ${vt}? Each line has a circle at ${vt}; each line is shaded in one direction.`,
-        options: shuffle4(combos.map(([c, r]) => ({ text: `${c ? "A closed" : "An open"} circle at ${vt}, shaded to the ${r ? "right" : "left"}`, right: c === closed && r === right, why: c === closed && r === right ? void 0 : c !== closed ? `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must not be ${c ? "closed" : "open"}.` : `${r ? "Shading to the right" : "Shading to the left"} shows ${r ? "bigger" : "smaller"} numbers than ${vt}, which does not fit ${sym}.` }))),
+        options: shuffle5(combos.map(([c, r]) => ({ text: `${c ? "A closed" : "An open"} circle at ${vt}, shaded to the ${r ? "right" : "left"}`, right: c === closed && r === right, why: c === closed && r === right ? void 0 : c !== closed ? `${x} ${sym} ${vt} ${closed ? "includes" : "does not include"} ${vt} itself, so the circle must not be ${c ? "closed" : "open"}.` : `${r ? "Shading to the right" : "Shading to the left"} shows ${r ? "bigger" : "smaller"} numbers than ${vt}, which does not fit ${sym}.` }))),
         hints: ["Does the number itself belong to the answers? That decides the circle.", "Are the answers bigger or smaller than the number? That decides the direction."],
         steps: [`${sym} ${closed ? "includes" : "does not include"} ${vt}: a ${closed ? "closed" : "open"} circle.`, `The answers are ${right ? "bigger" : "smaller"} than ${vt}: shade to the ${right ? "right" : "left"}.`]
       };
@@ -30820,11 +32663,11 @@ var FAMILIES20 = [
     make: ({ closed, right, v }) => {
       const ok = (t2) => right ? closed ? t2 >= v : t2 > v : closed ? t2 <= v : t2 < v;
       const tS = right ? [v + 1, v + 2, v + 3] : [v - 1, v - 2, v - 3], fS = right ? [v - 1, v - 2, v - 3] : [v + 1, v + 2, v + 3];
-      const vals = closed ? [v, ...shuffle4(fS).slice(0, 3)] : [shuffle4(tS)[0], v, ...shuffle4(fS).slice(0, 2)];
+      const vals = closed ? [v, ...shuffle5(fS).slice(0, 3)] : [shuffle5(tS)[0], v, ...shuffle5(fS).slice(0, 2)];
       const t = (n) => n < 0 ? `\u2212${-n}` : String(n);
       return {
         question: `Mwende shades a number line. The shading starts at ${circ2(closed)} at ${t(v)}. It runs to the ${right ? "right" : "left"}. Which of these numbers lies under the shading?`,
-        options: shuffle4(vals.map((n) => ({ text: t(n), right: ok(n), why: ok(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
+        options: shuffle5(vals.map((n) => ({ text: t(n), right: ok(n), why: ok(n) ? void 0 : n === v ? `The circle at ${t(v)} is ${closed ? "closed" : "open"}, so ${t(v)} is ${closed ? "" : "not "}in the shaded part.` : `${t(n)} is on the side of ${t(v)} that is not shaded.` }))),
         hints: ["Which side of the circle is shaded?", "Is the number at the circle included? Look at whether the circle is open or closed."],
         steps: [`The shaded part is the numbers ${right ? "greater" : "less"} than ${t(v)}${closed ? `, and ${t(v)} itself` : ""}.`, "Only one of the four numbers is in that part."]
       };
@@ -30844,7 +32687,7 @@ var FAMILIES20 = [
       const LS = (b) => b ? "\u2264" : "<", txt = (a, b) => `${lo} ${LS(a)} a ${LS(b)} ${hi}`;
       return {
         question: `A swimming class is for children who are ${li ? "at least" : "older than"} ${lo} years old and ${hi_i ? "at most" : "younger than"} ${hi} years old. Which compound inequality shows the ages a that can join?`,
-        options: shuffle4([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `At the lower end, ${lo} years old ${li ? "can" : "cannot"} join, but this inequality ${a ? "allows" : "does not allow"} it.` : `At the upper end, ${hi} years old ${hi_i ? "can" : "cannot"} join, but this inequality ${b ? "allows" : "does not allow"} it.` }))),
+        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `At the lower end, ${lo} years old ${li ? "can" : "cannot"} join, but this inequality ${a ? "allows" : "does not allow"} it.` : `At the upper end, ${hi} years old ${hi_i ? "can" : "cannot"} join, but this inequality ${b ? "allows" : "does not allow"} it.` }))),
         hints: ["Look at each end separately: is the number itself allowed?", '"At least" and "at most" use \u2264. "Older than" and "younger than" use <.'],
         steps: [`Lower end: "${li ? "at least" : "older than"} ${lo}" gives ${LS(li)}.`, `Upper end: "${hi_i ? "at most" : "younger than"} ${hi}" gives ${LS(hi_i)}.`, `Together: ${txt(li, hi_i)}.`]
       };
@@ -30864,7 +32707,7 @@ var FAMILIES20 = [
       const t = (n) => n < 0 ? `\u2212${-n}` : String(n), LS = (b) => b ? "\u2264" : "<", txt = (a, b) => `${t(lo)} ${LS(a)} ${x} ${LS(b)} ${t(hi)}`;
       return {
         question: `On a number line, ${circ2(li)} is at ${t(lo)}; ${circ2(hi_i)} is at ${t(hi)}. The line between the two circles is shaded. Which inequality does it show?`,
-        options: shuffle4([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `The circle at ${t(lo)} is ${li ? "closed" : "open"}, so ${t(lo)} ${li ? "is" : "is not"} included. This inequality ${a ? "includes" : "leaves out"} it.` : `The circle at ${t(hi)} is ${hi_i ? "closed" : "open"}, so ${t(hi)} ${hi_i ? "is" : "is not"} included. This inequality ${b ? "includes" : "leaves out"} it.` }))),
+        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: txt(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : a !== li ? `The circle at ${t(lo)} is ${li ? "closed" : "open"}, so ${t(lo)} ${li ? "is" : "is not"} included. This inequality ${a ? "includes" : "leaves out"} it.` : `The circle at ${t(hi)} is ${hi_i ? "closed" : "open"}, so ${t(hi)} ${hi_i ? "is" : "is not"} included. This inequality ${b ? "includes" : "leaves out"} it.` }))),
         hints: ["A closed circle means the end number is included (\u2264). An open circle means it is not (<).", "The smaller number goes on the left of x, and the bigger number on the right."],
         steps: [`Left end: ${circ2(li)} at ${t(lo)}, so ${LS(li)}.`, `Right end: ${circ2(hi_i)} at ${t(hi)}, so ${LS(hi_i)}.`, `The inequality is ${txt(li, hi_i)}.`]
       };
@@ -30886,7 +32729,7 @@ var FAMILIES20 = [
       const vals = kind === "C" ? [lo, hi, lo + 2, hi + 1] : [lo, hi, lo - 1, hi + 1];
       return {
         question: `A clinic fridge must keep its temperature t, in \xB0C, so that ${lo} ${LS(li)} t ${LS(hi_i)} ${hi}. Which of these readings is allowed?`,
-        options: shuffle4(vals.map((t) => ({ text: `${t} \xB0C`, right: ok(t), why: ok(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
+        options: shuffle5(vals.map((t) => ({ text: `${t} \xB0C`, right: ok(t), why: ok(t) ? void 0 : t === lo ? `The sign at the lower end is ${LS(li)}, so ${lo} \xB0C is ${li ? "" : "not "}included.` : t === hi ? `The sign at the upper end is ${LS(hi_i)}, so ${hi} \xB0C is ${hi_i ? "" : "not "}included.` : `${t} \xB0C is outside the two end values.` }))),
         hints: ["Test each reading in both parts of the inequality.", "Be careful with the readings that sit exactly on an end value."],
         steps: [`The allowed readings are bigger than ${lo}${li ? " or equal to it" : ""}, and smaller than ${hi}${hi_i ? " or equal to it" : ""}.`, "Check each option against both ends. Only one passes."]
       };
@@ -30911,7 +32754,7 @@ var FAMILIES20 = [
       };
       return {
         question: `${p.name} lists the whole numbers x that satisfy the compound inequality ${t(lo)} ${LS(li)} x ${LS(hi_i)} ${t(hi)}. Which list is correct?`,
-        options: shuffle4([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list2(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : `This list ${a ? "includes" : "leaves out"} ${t(lo)} and ${b ? "includes" : "leaves out"} ${t(hi)}. Check what each sign says about the end numbers.` }))),
+        options: shuffle5([[true, true], [true, false], [false, true], [false, false]].map(([a, b]) => ({ text: list2(a, b), right: a === li && b === hi_i, why: a === li && b === hi_i ? void 0 : `This list ${a ? "includes" : "leaves out"} ${t(lo)} and ${b ? "includes" : "leaves out"} ${t(hi)}. Check what each sign says about the end numbers.` }))),
         hints: ["List the whole numbers from the left end to the right end.", "< leaves the end number out. \u2264 keeps it in."],
         steps: [`Whole numbers from ${t(lo)} to ${t(hi)}: ${list2(true, true)}.`, `${LS(li)} ${li ? "keeps" : "removes"} ${t(lo)}, and ${LS(hi_i)} ${hi_i ? "keeps" : "removes"} ${t(hi)}.`]
       };
@@ -30924,11 +32767,11 @@ var FAMILIES20 = [
     rung: 3,
     form: "table",
     draw: () => {
-      const A2 = randInt(9, 13), k = randInt(2, 4), names = shuffle4(["Ferris wheel", "Train", "Boat", "Bumper cars"]), fl3 = () => Math.random() < 0.5;
+      const A2 = randInt(9, 13), k = randInt(2, 4), names = shuffle5(["Ferris wheel", "Train", "Boat", "Bumper cars"]), fl3 = () => Math.random() < 0.5;
       const specs = [{ lo: A2, hi: A2 + k, li: true, hi_i: fl3() }, { lo: A2 - k, hi: A2, li: fl3(), hi_i: false }, { lo: A2 - randInt(1, 3), hi: A2 + randInt(1, 3), li: fl3(), hi_i: fl3() }, { lo: A2 + 1, hi: A2 + 1 + k, li: fl3(), hi_i: fl3() }];
-      const rows = shuffle4(specs).map((r, i) => ({ ...r, n: names[i] }));
+      const rows = shuffle5(specs).map((r, i) => ({ ...r, n: names[i] }));
       const cnt = (f) => rows.filter(f).length, ans = cnt((r) => (r.li ? A2 >= r.lo : A2 > r.lo) && (r.hi_i ? A2 <= r.hi : A2 < r.hi)), bothIn = cnt((r) => A2 >= r.lo && A2 <= r.hi), bothOut = cnt((r) => A2 > r.lo && A2 < r.hi);
-      return distinct6(ans, bothIn, bothOut, 4) ? { A: A2, rows, ans, bothIn, bothOut, p: person() } : null;
+      return distinct7(ans, bothIn, bothOut, 4) ? { A: A2, rows, ans, bothIn, bothOut, p: person() } : null;
     },
     make: ({ A: A2, rows, ans, bothIn, bothOut, p }) => ({
       question: `The table shows the ages a allowed on four rides at a show. ${p.name} is ${A2} years old. On how many of the rides can ${p.she} go?`,
@@ -30983,7 +32826,7 @@ var FAMILIES20 = [
     make: ({ lo, hi, p }) => ({
       question: `${p.name} wants to write "x is less than ${lo} or greater than ${hi}". ${p.She} writes ${hi} < x < ${lo}. Why is this wrong?`,
       story: false,
-      options: shuffle4([
+      options: shuffle5([
         { text: `No number is both greater than ${hi} and less than ${lo}`, right: true },
         { text: `${hi} < x < ${lo} is correct: it means x is outside the two numbers`, right: false, why: `A chain like ${hi} < x < ${lo} says x is between the two numbers, both at once.` },
         { text: "An inequality can only ever have one sign in it", right: false, why: "A compound inequality can have two signs, for example 2 < x < 5." },
@@ -30999,7 +32842,7 @@ var FAMILIES20 = [
 // src/ai-tutor/content/families/g7_measure.js
 var fam13 = (def) => family({ reviewed: false, ...def });
 var uniq5 = (...a) => new Set(a.map((x) => typeof x === "number" ? round(x, 6) : x)).size === a.length;
-var shuffle5 = (a) => {
+var shuffle6 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = randInt(0, i);
@@ -31021,7 +32864,7 @@ var isRight = (x, y, z) => {
 };
 var LETTERS2 = "ABCDEFGHJKLMNPQRSTUVWXYZ";
 var F2 = { cm: 0.01, dm: 0.1, m: 1, Dm: 10, Hm: 100, km: 1e3 };
-var FAMILIES21 = [
+var FAMILIES23 = [
   // =========================================================== PYTHAGORAS
   fam13({
     id: "g7.pyth.name-hypotenuse",
@@ -31030,7 +32873,7 @@ var FAMILIES21 = [
     rung: 1,
     form: "direct",
     draw: () => {
-      const l = shuffle5(LETTERS2.split("")).slice(0, 3);
+      const l = shuffle6(LETTERS2.split("")).slice(0, 3);
       return { p: l[0], q: l[1], r: l[2] };
     },
     make: ({ p, q, r }) => ({
@@ -31048,14 +32891,14 @@ var FAMILIES21 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const t = triple(), good = shuffle5([t.a, t.b, t.c]);
+      const t = triple(), good = shuffle6([t.a, t.b, t.c]);
       const rows = [good];
       while (rows.length < 4) {
         const u = triple();
-        const bad2 = shuffle5([u.a, u.b, u.c + pick([-2, -1, 1, 2, 3])]);
+        const bad2 = shuffle6([u.a, u.b, u.c + pick([-2, -1, 1, 2, 3])]);
         if (!isRight(...bad2) && bad2.every((x) => x > 0) && !rows.some((r) => r.join() === bad2.join())) rows.push(bad2);
       }
-      const order = shuffle5(rows);
+      const order = shuffle6(rows);
       return { rows: order, ans: order.indexOf(rows[0]) };
     },
     make: ({ rows, ans }) => ({
@@ -31446,7 +33289,7 @@ var FAMILIES21 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const all = shuffle5([7, 14, 21, 28, 35, 42, 49, 56, 63, 70]);
+      const all = shuffle6([7, 14, 21, 28, 35, 42, 49, 56, 63, 70]);
       return { ds: all.slice(0, 4).sort((x, y) => x - y), target: all[4], thing: pick(["water tank", "round table", "drum", "circular pond"]) };
     },
     make: ({ ds, target, thing }) => ({
@@ -32738,7 +34581,7 @@ var FAMILIES21 = [
     draw: () => {
       const ch = [pick([100, 120, 150]), pick([180, 200, 220]), pick([300, 350, 400]), pick([550, 600, 650])];
       const bandsMass = [[200, 300, 400], [600, 700, 800, 900], [1200, 1500, 1800], [2500, 3e3, 4e3]];
-      const bi = shuffle5([0, 1, 2, 3]).slice(0, 3).sort((x, y) => x - y);
+      const bi = shuffle6([0, 1, 2, 3]).slice(0, 3).sort((x, y) => x - y);
       const ms = bi.map((i) => pick(bandsMass[i]));
       const band = (m) => m <= 500 ? 0 : m <= 1e3 ? 1 : m <= 2e3 ? 2 : 3;
       const tot = ms.reduce((a, b) => a + b, 0);
@@ -32835,7 +34678,7 @@ var rot4 = (arr, k) => {
 };
 var uniq6 = (...v) => new Set(v).size === v.length;
 var sum2 = (a) => a.reduce((s, x) => s + x, 0);
-var shuffle6 = (a) => {
+var shuffle7 = (a) => {
   const b = [...a];
   for (let i = b.length - 1; i > 0; i--) {
     const j = randInt(0, i);
@@ -32853,7 +34696,7 @@ var freqModel = (c, fs) => ({ type: "table", data: { head: [c.h, "Frequency"], r
 var tally = (f) => [...Array(Math.floor(f / 5)).fill("||||/"), "|".repeat(f % 5)].filter(Boolean).join(" ");
 var SCALES2 = [1, 2, 5, 10, 20, 50, 100, 200, 500, 1e3];
 var THINGS = [{ t: "kilograms of maize", u: "kg" }, { t: "litres of milk", u: "litres" }, { t: "mangoes", u: "mangoes" }, { t: "exercise books", u: "books" }];
-var FAMILIES22 = [
+var FAMILIES24 = [
   // ================================================================ ANGLES
   fam14({
     id: "g7.angles.point-cake",
@@ -33381,7 +35224,7 @@ var FAMILIES22 = [
     rung: 2,
     form: "table",
     draw: () => {
-      const fruits = shuffle6(["Mango", "Banana", "Orange", "Pawpaw"]);
+      const fruits = shuffle7(["Mango", "Banana", "Orange", "Pawpaw"]);
       const fs = fruits.map(() => randInt(3, 14));
       const A2 = 0, B2 = randInt(1, 3);
       const g = (f) => Math.floor(f / 5) * 4 + f % 5;
@@ -33410,7 +35253,7 @@ var FAMILIES22 = [
     draw: () => {
       const c = pick(FREQ_CTX);
       const total = pick([20, 25, 40, 50]);
-      const cuts = shuffle6(Array.from({ length: total - 1 }, (_, i) => i + 1)).slice(0, 4).sort((a, b) => a - b);
+      const cuts = shuffle7(Array.from({ length: total - 1 }, (_, i) => i + 1)).slice(0, 4).sort((a, b) => a - b);
       const fs = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], cuts[3] - cuts[2], total - cuts[3]];
       const k = c.lo + pick([2, 3]);
       const count = sum2(fs.filter((_, i) => c.lo + i >= k));
@@ -33500,7 +35343,7 @@ var FAMILIES22 = [
     form: "graph",
     draw: () => {
       const each = pick([10, 20, 50]);
-      const labels = shuffle6(["Walk", "Bus", "Bicycle", "Boda boda", "Car"]).slice(0, 4);
+      const labels = shuffle7(["Walk", "Bus", "Bicycle", "Boda boda", "Car"]).slice(0, 4);
       const u = labels.map(() => randInt(2, 17) / 2);
       if (new Set(u).size < 4) return null;
       const a = 0, b = 1;
@@ -33583,8 +35426,8 @@ var FAMILIES22 = [
     rung: 3,
     form: "steps",
     draw: () => {
-      const names = shuffle6(["Walk", "Bus", "Bicycle", "Boda boda"]);
-      const cuts = shuffle6(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
+      const names = shuffle7(["Walk", "Bus", "Bicycle", "Boda boda"]);
+      const cuts = shuffle7(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
       const units = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], 20 - cuts[2]];
       if (units.some((x) => x < 2 || x > 9)) return null;
       const T5 = pick([120, 200, 240]), m = randInt(0, 3);
@@ -33616,8 +35459,8 @@ var FAMILIES22 = [
     rung: 2,
     form: "graph",
     draw: () => {
-      const names = shuffle6(["Football", "Netball", "Drama", "Music", "Athletics"]).slice(0, 4);
-      const cuts = shuffle6(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
+      const names = shuffle7(["Football", "Netball", "Drama", "Music", "Athletics"]).slice(0, 4);
+      const cuts = shuffle7(Array.from({ length: 17 }, (_, i) => i + 3)).slice(0, 3).sort((a, b) => a - b);
       const units = [cuts[0], cuts[1] - cuts[0], cuts[2] - cuts[1], 20 - cuts[2]];
       if (units.some((x) => x < 2 || x > 9)) return null;
       const q = randInt(0, 3), pct3 = units[q] * 5, deg = units[q] * 18;
@@ -33832,12 +35675,12 @@ var FAMILIES22 = [
 
 // src/ai-tutor/content/families/bank.js
 var G5_CURRICULUM = [...FAMILIES5, ...FAMILIES6, ...FAMILIES7, ...FAMILIES8, ...FAMILIES9, ...FAMILIES10, ...FAMILIES11, ...FAMILIES12, ...FAMILIES13];
-var GRADE_FAMILIES = [...FAMILIES15, ...FAMILIES16, ...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES14, ...G5_CURRICULUM, ...FAMILIES4, ...FAMILIES3, ...FAMILIES2, ...FAMILIES];
+var GRADE_FAMILIES = [...FAMILIES17, ...FAMILIES18, ...FAMILIES19, ...FAMILIES20, ...FAMILIES21, ...FAMILIES22, ...FAMILIES23, ...FAMILIES24, ...FAMILIES14, ...FAMILIES15, ...FAMILIES16, ...G5_CURRICULUM, ...FAMILIES4, ...FAMILIES3, ...FAMILIES2, ...FAMILIES];
 
 // src/ai-tutor/content/families/index.js
-var FAMILIES23 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
+var FAMILIES25 = [...CORE_FAMILIES, ...GRADE_FAMILIES];
 var BY_SKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES23) {
+for (const f of FAMILIES25) {
   if (!BY_SKILL.has(f.skill)) BY_SKILL.set(f.skill, []);
   BY_SKILL.get(f.skill).push(f);
 }
@@ -34095,11 +35938,11 @@ function tutorEvidence({ userId, childId = null, sid, marked, now }) {
 }
 
 // src/ai-tutor/algebraEquivalence.js
-var SUP = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
+var SUP2 = "\u2070\xB9\xB2\xB3\u2074\u2075\u2076\u2077\u2078\u2079";
 function canonicalise(raw) {
   let s = String(raw ?? "").trim().toLowerCase();
   s = s.replace(/[−–—]/g, "-");
-  s = s.replace(/⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + (m[0] === "\u207B" ? "-" : "") + [...m.replace("\u207B", "")].map((c) => SUP.indexOf(c)).join(""));
+  s = s.replace(/⁻?[⁰¹²³⁴⁵⁶⁷⁸⁹]+/g, (m) => "^" + (m[0] === "\u207B" ? "-" : "") + [...m.replace("\u207B", "")].map((c) => SUP2.indexOf(c)).join(""));
   s = s.replace(/\*\*/g, "^");
   s = s.replace(/[×·∙⋅]/g, "*").replace(/÷/g, "/");
   s = s.replace(/(squareroot(of)?|sqrt)/g, "\u221A").replace(/\bpi\b|(?<=\d)pi\b/g, "\u03C0");
@@ -34446,10 +36289,10 @@ function mathValue(raw, child = false) {
     return whole < 0 ? whole - num4 : whole + num4;
   }
   s = s.replace(/\s+/g, "").replace(/^=+/, "");
-  const frac2 = s.match(/^(-?\d+)\/(-?\d+)$/);
-  if (frac2) {
-    const d = parseInt(frac2[2]);
-    return d === 0 ? null : parseInt(frac2[1]) / d;
+  const frac3 = s.match(/^(-?\d+)\/(-?\d+)$/);
+  if (frac3) {
+    const d = parseInt(frac3[2]);
+    return d === 0 ? null : parseInt(frac3[1]) / d;
   }
   if (child) {
     const tail = s.match(/^(-?\d*\.?\d+)([^\d.].*)$/);
@@ -34743,8 +36586,8 @@ function checkAnswerMatch(userAnswer, problem) {
   if (accepts2.some((a) => mathValue(a) == null && algebraicallyEqual(userAnswer, a, problem?.question))) return true;
   if (/simplest form|simplify|lowest terms/i.test(`${problem.instruction || ""} ${problem.question || ""}`)) {
     const f = userAnswer.toString().trim().replace(/[−–—]/g, "-").match(/^(?:-?\d+\s+)?(-?\d+)\s*\/\s*(\d+)$/);
-    const gcd7 = (m, n) => n ? gcd7(n, m % n) : Math.abs(m);
-    if (f && gcd7(Number(f[1]), Number(f[2])) > 1) return false;
+    const gcd8 = (m, n) => n ? gcd8(n, m % n) : Math.abs(m);
+    if (f && gcd8(Number(f[1]), Number(f[2])) > 1) return false;
   }
   const userVal = mathValue(userAnswer, true);
   const givenUnit = unitAfterNumber(userAnswer);
@@ -34817,7 +36660,7 @@ var withSeed = (text, fn) => {
 };
 var usable = (f) => !!f.cskill && f.form !== "steps";
 var BY_CSKILL = /* @__PURE__ */ new Map();
-for (const f of FAMILIES23) if (usable(f)) {
+for (const f of FAMILIES25) if (usable(f)) {
   if (!BY_CSKILL.has(f.cskill)) BY_CSKILL.set(f.cskill, []);
   BY_CSKILL.get(f.cskill).push(f);
 }
@@ -35372,8 +37215,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   }
   const imageUsd = image ? imageTokens(image.w, image.h) * (PRICES2[settings.model]?.input ?? 2) / 1e6 : 0;
   const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
-  const cap2 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
-  if (!cap2.ok) return authored(WIND_DOWN, [cap2.reason], spent);
+  const cap3 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
+  if (!cap3.ok) return authored(WIND_DOWN, [cap3.reason], spent);
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : FALLBACK_TURN, ["offline"], spent);
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
   const names = child?.name ? [{ name: child.name, as: "the child" }] : [];
