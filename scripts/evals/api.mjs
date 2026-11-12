@@ -84,7 +84,7 @@ export async function ask(budget, kind, { model, system, user, maxTokens = 300, 
   for (let attempt = 0; ; attempt += 1) {
     const res = await fetch('https://api.anthropic.com/v1/messages', {
       method: 'POST', headers: HEADERS,
-      body: JSON.stringify({ model, max_tokens: maxTokens, output_config: { effort }, system, messages: [{ role: 'user', content: user }] }),
+      body: JSON.stringify({ model, max_tokens: maxTokens, ...(effort ? { output_config: { effort } } : {}), system, messages: [{ role: 'user', content: user }] }),
     });
     if (!res.ok) {
       const e = await failure(res);

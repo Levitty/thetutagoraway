@@ -13,6 +13,7 @@ import { unseal } from '../../src/voice-tutor/seal.js';
 import { readFileSync } from 'node:fs';
 import { randomUUID } from 'node:crypto';
 import { ask as askModel } from './api.mjs';
+import { createChild, CHILD_FALLBACK } from './child.mjs';
 
 const F = 'MATH.G5.NUMBER.FRACTIONS.';
 const LIB = Object.fromEntries(Object.entries(JSON.parse(readFileSync(new URL('../../engine/data/curriculum/g5.misconceptions.json', import.meta.url), 'utf8'))).filter(([k]) => k.startsWith(F)));
@@ -20,7 +21,6 @@ const SECRET = 'eval-harness-seal-secret-not-a-real-key';
 const USER = { id: 'u-eval-parent', email: 'eval@example.com' };
 const CHILD = { id: 'c-eval', parent_id: USER.id, name: 'Wanjiru', grade: 'Grade 5' };
 const SETTINGS = settingsFrom((k) => ({ VOICE_TUTOR_ENABLED: '1', VOICE_TUTOR_ALLOWLIST: USER.email, VOICE_TUTOR_SESSION_CAP_USD: '99', VOICE_TUTOR_DAY_CAP_USD: '99', VOICE_TUTOR_MAX_TURNS: '300' }[k]));
-export const CHILD_MODEL = 'claude-sonnet-5-5';
 const BOARD_H = 640;
 
 const fakeDb = () => {
@@ -57,40 +57,14 @@ export function describeBoard(board) {
   return items.length ? items.join('; ') : 'nothing yet (the board is empty)';
 }
 
-// ---- the pretend child
-const childSystem = (sc) => `You are role-playing Wanjiru, a Kenyan Grade 5 pupil of about ten years old, in a live one-to-one voice maths lesson with an AI tutor called HOREB. What you say is spoken aloud, so talk like a real child: usually one short sentence, at most about 12 words, simple words, no markdown, no stage directions. You know only what a typical Grade 5 pupil knows, unless the behaviour below says otherwise. You never mention that you are playing a role or following a script.
-
-YOUR BEHAVIOUR IN THIS LESSON:
-${sc.child}
-
-You see only what HOREB says and what is on the board. Reply with ONLY what you say. Special forms, only when they fit the behaviour above:
-- If you say nothing at all, reply exactly: (silent)
-- If you tap parts of a picture on the board to shade them, first write a line SHADE: followed by the part numbers (for example SHADE: 1 2), then on a new line what you say.
-- If you write an answer on the board with your finger, write a line WRITE: followed by exactly what you wrote, then on a new line what you say (it may be nothing).`;
-
-export function parseChild(text) {
-  const lines = String(text || '').split('\n').map((l) => l.trim()).filter(Boolean);
-  let shade = null; let write = null; const said = [];
-  for (const l of lines) {
-    const sh = /^SHADE:\s*(.*)$/i.exec(l); const wr = /^WRITE:\s*(.*)$/i.exec(l);
-    if (sh) shade = (sh[1].match(/\d+/g) || []).map(Number);
-    else if (wr) write = wr[1];
-    else said.push(l);
-  }
-  const speech = said.join(' ').replace(/^["“]|["”]$/g, '').trim();
-  const silent = !shade && !write && (!speech || /^\(?silent\)?\.?$/i.test(speech));
-  return { shade, write, speech: /^\(?silent\)?\.?$/i.test(speech) ? '' : speech, silent };
-}
-
-// A rule-based imitation of speech-to-text mistakes (scenario 27).
-const GARBLE = [[/\bfourths\b/gi, 'forth'], [/\bfourth\b/gi, 'forth'], [/\btwo\b/gi, 'too'], [/\bfour\b/gi, 'for'], [/\bone\b/gi, 'won'], [/\bhalf\b/gi, 'have'], [/\beighths\b/gi, 'ates'], [/\bquarters\b/gi, 'quarter is']];
-export const garble = (t) => GARBLE.reduce((s, [re, to]) => s.replace(re, to), String(t));
+// ---- the pretend child lives in child.mjs (knowledge sheet, error rate, short messy speech, mishearing)
+export { parseChild, garble, CHILD_MODEL } from './child.mjs';
 
 /**
  * Plays one scenario. Returns { turns, ended, stopReason, concerns, usage, ... } for the transcript and the judge.
- * @param {object} o { sc, maxTurns, budget, callModel, onLog }
+ * @param {object} o { sc, maxTurns, budget, callModel, onLog, seed, errorRate }
  */
-export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {} }) {
+export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {}, seed = Number(process.env.EVAL_CHILD_SEED) || (Date.now() % 100000), errorRate }) {
   const sid = randomUUID();
   const db = fakeDb();
   const t0 = Date.now();
@@ -104,6 +78,11 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   let childReplies = 0;
   let modelCalls = 0;
   let childCost = 0;
+  // The child model: Haiku (cheap, and not the tutor's or the judge's model), Sonnet at low effort if Haiku is not served.
+  const child = createChild({
+    sc, seed, errorRate,
+    callModel: async ({ model, system, user, maxTokens }) => askModel(budget, 'child', { model, system, user, maxTokens, effort: model === CHILD_FALLBACK ? 'low' : null }),
+  });
   const counted = async (req, o) => { modelCalls += 1; return callModel(req, o); };
   const log = [];                      // one entry per tutor turn
   const dispatch = (ev) => { session = sessionReducer(session, ev); };
@@ -194,11 +173,16 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   const dialogue = () => session.transcript.map((h) => `${h.who === 'tutor' ? 'HOREB' : 'You'}: ${h.text}`).join('\n');
 
   async function childActs(note = '', thinkS = 4) {
-    const user = `The lesson so far:\n${dialogue() || '(it has just started)'}\n\nOn the board now: ${describeBoard(board)}.\n${note ? `\n${note}\n` : ''}\nWhat do you say or do now? Reply with only that.`;
-    const r = await askModel(budget, 'child', { model: CHILD_MODEL, system: childSystem(sc), user, maxTokens: 160, effort: 'low' });
-    childCost += r.cost;
+    const last = log[log.length - 1] || {};
+    const c0 = child.cost;
+    const c = await child.act({
+      dialogue: dialogue(), boardText: describeBoard(board), note, steps: last.steps || [],
+      tutorText: (last.steps || []).filter((x) => x.cmd === 'say' || x.cmd === 'ask').map((x) => x.text || x.prompt || '').join(' '),
+      answer: last.answersKnown?.[0]?.answer ?? null, doing: last.doing || null,
+    });
+    childCost += child.cost - c0;
     clock += thinkS * 1000;
-    return parseChild(r.text);
+    return { ...c, speech: c.speech };
   }
 
   // Silence, on the simulated clock, with the page's own rules (silence.js). Writing means the page never asks for a probe.
@@ -214,7 +198,7 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   }
 
   // The child's words reach the tutor (the page's childSays).
-  async function childSays(speech, { shade = null, write = null, heard = null } = {}) {
+  async function childSays(speech, { shade = null, write = null, heard = null, clean = false } = {}) {
     let text = speech;
     let via = '';
     if (shade) {
@@ -226,7 +210,8 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
     const heardText = heard;
     let sent = text;
     let garbled = null;
-    if (sc.garble) { sent = garble(text); if (sent !== text) garbled = text; }
+    if (!clean) sent = child.heard(text, { always: !!sc.garble });   // scenario 27 always; every other scenario for a small share of turns
+    if (sent !== text) garbled = text;
     wait = activity(wait, clock);
     childReplies += 1;
     dispatch({ type: 'child_said', text: sent, at: clock, thinkMs: handedAt != null ? clock - handedAt : undefined });
@@ -257,7 +242,7 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
         note = `You have been working on HOREB's board task for ${sc.task.seconds} seconds and have just stopped. Now do the task as your behaviour says (use SHADE: or WRITE: if it fits) and say what you did.`;
       }
       // Scripted reply (scenario 29).
-      if (sc.fixed && childReplies + 1 === sc.fixed.turn) { await childSays(sc.fixed.text); if (exchange > maxTurns - 1) break; continue; }
+      if (sc.fixed && childReplies + 1 === sc.fixed.turn) { await childSays(sc.fixed.text, { clean: true }); if (exchange > maxTurns - 1) break; continue; }
       const heard = last.interrupted ? last.heardOfTutor : null;
       if (heard) note = `You are speaking over HOREB, who was in the middle of saying: "${heard} ...". Say your interruption now, as your behaviour says.`;
       let c = await childActs(note, heard ? 1 : think);
@@ -287,5 +272,6 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   result.cost = log.reduce((a, t) => a + t.cost, 0);
   result.modelCalls = modelCalls;
   result.childCost = childCost;
+  result.child = { model: child.model, stats: child.stats, sheet: { misconception: child.sheet.misc, errorRate: child.target }, seed };
   return result;
 }
