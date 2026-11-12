@@ -29,6 +29,7 @@
 import { FAMILIES } from '../ai-tutor/content/families/index.js';
 import { drawFamily } from '../ai-tutor/content/families/core.js';
 import { SKILLS_G5 } from '../ai-tutor/content/curriculumMap.g5.js';
+import { recheckSlots } from '../learner/recheck.js';
 import { publicItem, markItem, step, sittingView, resultsFor } from './homeworkSitting.js';
 
 export { publicItem, markItem, step, sittingView, resultsFor };
@@ -110,7 +111,7 @@ export function toItem(p, n) {
 }
 
 /** What Tuta keeps for the worksheet and the key: the question, the right answer, and each wrong answer's misconception. */
-export const keyItem = (it) => it && ({ n: it.n, cskill: it.cskill, family_id: it.family_id, form: it.form, rung: it.rung, kind: it.kind,
+export const keyItem = (it) => it && ({ n: it.n, ...(it.recheck ? { recheck: true } : {}), cskill: it.cskill, family_id: it.family_id, form: it.form, rung: it.rung, kind: it.kind,
   question: it.question, instruction: it.instruction, ...(it.table ? { table: it.table } : {}), ...(it.steps_shown ? { steps_shown: it.steps_shown } : {}),
   answer: it.answer,
   ...(it.kind === 'choice' ? { options: it.options.map(o => ({ key: o.key, text: o.text, right: o.right, ...(o.right ? {} : { mis: o.mis || null }) })) }
@@ -150,7 +151,7 @@ export function samplesFor(cskills, perFamily = 2) {
  * shuffled by the seed, then taken easiest rung first, a different family each time while any is
  * left, so forms and rungs mix. No question text twice. Then easier rungs first across the set.
  */
-export function drawSet({ seed, cskills, families, count }) {
+function drawCore({ seed, cskills, families, count }) {
   const r = rng(seedOf(`order:${seed}`));
   const queue = {};
   for (const c of cskills) {
@@ -183,6 +184,24 @@ export function drawSet({ seed, cskills, families, count }) {
   return items.map((it, i) => ({ ...it, n: i + 1 }));
 }
 
+/**
+ * drawSet with the class's due re-checks mixed in (12 Nov 2026, learner-model.md "Re-checks"): a fifth of the items at
+ * most (recheckSlots) come from `recheck` skills, flagged `recheck: true`, and sit at every fifth place (5th, 10th, ...)
+ * so they are mixed in, not blocked at the end. With no `recheck` skills, or under 5 items, it is drawSet unchanged.
+ */
+export function drawSet({ seed, cskills, families, count, recheck = [] }) {
+  const rc = [...new Set(recheck)].filter(c => (families[c] || []).length);
+  const slots = rc.length ? Math.min(recheckSlots(count), count - HW_MIN) : 0;
+  if (slots < 1) return drawCore({ seed, cskills, families, count });
+  const main = drawCore({ seed, cskills, families, count: count - slots });
+  const seen = new Set(main.map(it => norm(it.question)));
+  const extra = drawCore({ seed: `${seed}:recheck`, cskills: rc, families, count: slots + 3 })
+    .filter(it => !seen.has(norm(it.question))).slice(0, slots).map(it => ({ ...it, recheck: true }));
+  const items = [...main];
+  extra.forEach((it, k) => items.splice(Math.min(items.length, 4 + k * 5), 0, it));
+  return items.map((it, i) => ({ ...it, n: i + 1 }));
+}
+
 // ---------------------------------------------------------------- a request from Tuta
 const REF = /^[A-Z2-9]{8}$/;
 const UUID = /^[a-f0-9-]{36}$/;
@@ -206,13 +225,17 @@ export function cleanHomeworkSet(p) {
   if (!(versions === 0 || (versions >= 2 && versions <= 4))) return { ok: false, error: 'Paper is one sheet per child, or 2 to 4 versions' };
   const approved = (Array.isArray(p.approved) ? p.approved : []).filter(a => a && typeof a.family_id === 'string')
     .map(a => ({ family_id: a.family_id.slice(0, 80), by: String(a.by || '').slice(0, 80), at: DATE.test(String(a.at || '').slice(0, 10)) ? String(a.at).slice(0, 25) : null })).slice(0, 200);
+  const recheckWanted = [...new Set((Array.isArray(p.recheck_cskills) ? p.recheck_cskills : []).map(String).filter(c => isCurriculumSkill(c) && !cskills.includes(c)))].slice(0, recheckSlots(count));
   const allowed = allowedFamilies(cskills, approved.map(a => a.family_id));
   if (!allowed.ok) return { ok: false, error: 'No reviewed or approved questions for: ' + allowed.missing.map(skillName).join('; '), missing: allowed.missing };
+  // A re-check skill with no reviewed or approved question is simply left out: a re-check is never a reason to refuse the homework.
+  const rcAllowed = allowedFamilies(recheckWanted, approved.map(a => a.family_id));
+  const recheck = recheckWanted.filter(c => rcAllowed.families[c]);
   const list = (Array.isArray(p.homework) ? p.homework : []).slice(0, 20).map(h => ({
     homework_ref: String(h?.homework_ref || ''), learner_refs: [...new Set((Array.isArray(h?.learner_refs) ? h.learner_refs : []).map(String).filter(r => REF.test(r)))].slice(0, 400) }));
   if (!list.length || list.some(h => !UUID.test(h.homework_ref) || !h.learner_refs.length)) return { ok: false, error: 'Each homework needs its reference and its learners' };
   const due = DATE.test(String(p.due_on || '')) ? p.due_on : null;
-  return { ok: true, hw: { title, cskills, count, mode, versions, due_on: due, approved, homework: list }, families: allowed.families };
+  return { ok: true, hw: { title, cskills, recheck, count, mode, versions, due_on: due, approved, homework: list }, families: { ...rcAllowed.families, ...allowed.families } };
 }
 
 /**
@@ -225,7 +248,7 @@ export function sittingsFor(hw, homeworkRef, learnerRefs, families, makeCode) {
   return refs.map((ref, i) => {
     const version = hw.versions ? (i % hw.versions) + 1 : null;
     const seed = version ? `${homeworkRef}:v${version}` : `${homeworkRef}:${ref}`;
-    const items = version ? (byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count })) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count });
+    const items = version ? (byVersion[version] ||= drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] })) : drawSet({ seed, cskills: hw.cskills, families, count: hw.count, recheck: hw.recheck || [] });
     return { learner_ref: ref, code: makeCode(), seed, version, items, answers: [], status: 'issued', mode: hw.mode };
   });
 }

@@ -4486,7 +4486,7 @@ function homeworkEvidence({ homework, sitting, answer }) {
     independent: true,
     marks: answer.correct ? 1 : 0,
     max_marks: 1,
-    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}`,
+    item_ref: `hw:${sitting.homework_id || homework.id}:${answer.n}${item.recheck ? ":recheck" : ""}`,
     submitted_value: answer.chosen ? String(answer.chosen).slice(0, 500) : null,
     client_ts: answer.at || null,
     hints_used: 0,
