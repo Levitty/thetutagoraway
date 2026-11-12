@@ -1,0 +1,318 @@
+{
+ "outcomes": {
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.a": "identify sites for soil improvement in the school or community",
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.b": "construct organic waste pit for soil improvement",
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.c": "demonstrate use of plant remains for soil improvement",
+  "AGRI.G5.CONSER.WATER_CONSERVATION.a": "identify ways of conserving water for household gardening",
+  "AGRI.G5.CONSER.WATER_CONSERVATION.b": "practice water conservation within the school or community",
+  "AGRI.G5.CONSER.WATER_CONSERVATION.c": "appreciate importance of conserving water in the community",
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.a": "identify ways of repelling wild animals to avoid damage of property",
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.b": "repel wild animals to avoid destruction of property",
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.c": "appreciate importance of living better with wild animals",
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.a": "identify gardening practices in growing vegetables",
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.b": "establish a nursery bed for vegetables",
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.c": "care for vegetable seedlings after transplanting",
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.d": "appreciate the importance of vegetables in provision of healthy meals",
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.a": "identify uses of various domestic animals in food production processes",
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.b": "relate various domestic animals to their uses",
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.c": "appreciate the importance of domestic animals in food production",
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.a": "describe methods of preserving cereals and pulses in the locality",
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.b": "preserve cereals and pulses for food security",
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.c": "appreciate the importance of preserving cereals and pulses for food security",
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.a": "explain functions of food nutrients in the body",
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.b": "categorise foods based on their major nutrients",
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.c": "identify nutritional diseases and disorders associated with poor eating habits",
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.d": "appreciate the importance of various nutrients in the body",
+  "AGRI.G5.FOOD_P.COOKING_FOOD.a": "describe various methods of cooking food",
+  "AGRI.G5.FOOD_P.COOKING_FOOD.b": "cook foods using various methods",
+  "AGRI.G5.FOOD_P.COOKING_FOOD.c": "embrace dry fat frying and deep frying in food production",
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.a": "describe good grooming as a daily health habit",
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.b": "practice good grooming as a daily health habit",
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.c": "appreciate good grooming as a healthy habit",
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.a": "identify surfaces made from different materials in home environment",
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.b": "clean different types of surfaces in the home environment",
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.c": "appreciate living in a clean home environment to promote healthy living",
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.a": "describe how to launder a cotton item",
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.b": "launder a cotton item for personal hygiene",
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.c": "appreciate importance of laundry work for hygiene purposes",
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.a": "identify stitches used in repairing garment",
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.b": "make samples of stitches used to repair garments",
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.c": "use the stitches to repair gaping seam",
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.d": "adopt the use of stitches to repair of garments",
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.a": "distinguish between horizontal and vertical innovative gardening",
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.b": "construct innovative gardens for growing crops",
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.c": "adopt the use of innovative gardens in growing crops"
+ },
+ "skills": {
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.SOIL_SITES": {
+   "forms": [
+    "say what a poor-soil site looks like",
+    "pick the best site for a pit",
+    "say why a site is poor",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child names signs of poor soil (bare patches, hard packed ground, washed-away topsoil, stunted or yellow crops, very sandy or stony ground) and picks a pit site that is near the garden and kitchen, on firm ground where water does not collect, away from drinking water and where children are safe. The child does not judge soil by colour alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.COMPOST_PIT": {
+   "forms": [
+    "pick what goes into the pit",
+    "put the steps of making a pit in order",
+    "say why a thing must stay out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts in peelings, leaves, grass, crop remains and animal dung, keeps out plastic, polythene, tins, glass, batteries and meat or oily leftovers (they do not rot, or they draw rats and flies), layers dry and fresh material with soil, keeps it damp and covered, and waits for it to rot into dark crumbly manure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.SOIL_CONSERVATION.PLANT_REMAINS": {
+   "forms": [
+    "pick a use of plant remains",
+    "say what rotted remains add to soil",
+    "pick the better use of crop remains",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says plant remains can be rotted into compost, spread as mulch, or dug into the soil, and that as they rot they add plant food and humus, make the soil crumbly and help it hold water; the child does not call them rubbish and knows burning them wastes this. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.WATER_WAYS": {
+   "forms": [
+    "name the way from a description",
+    "say what a way does for the water",
+    "pick the water-saving action",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names mulching (a layer of dry grass or leaves on the soil), cover cropping (a low crop that shades the soil) and shading (a roof or net over beds), says each slows evaporation, and adds watering early or late in the day and using a little water at the roots. The child does not think midday is the best time. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.WATER_CONSERVATION.MULCH_TEST": {
+   "forms": [
+    "pick what stays the same in a fair test",
+    "say what the result will be",
+    "pick the material that makes a mulch",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child keeps the crop, soil, size of bed and amount of water the same and changes only the mulch, knows the mulched bed stays damp longer (checked by feeling the soil a finger deep), and names dry grass, maize stalks or banana leaves as mulch. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.PEST_DAMAGE": {
+   "forms": [
+    "name the animal from the damage",
+    "say what an animal eats or breaks",
+    "say which animal does not harm crops",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links birds (quelea) to ripening grain, monkeys and baboons to maize and fruit, moles and rats to roots and stored grain, warthogs to digging up tubers, and elephants to trampling and eating large areas, and knows bees and owls help the farmer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.CONSER.CONSERVING_WILD_ANIMALS.REPEL_METHODS": {
+   "forms": [
+    "pick the safe way to repel",
+    "match a way to an animal",
+    "say what to do when a big animal comes",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks scarecrows, shiny strips, noise makers, fences and hedges, chilli, beehive fences, trenches and guard dogs, matches the way to the animal, never poisons or kills, and for elephants or buffalo keeps away and tells the Kenya Wildlife Service or an adult. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.VEG_PRACTICES": {
+   "forms": [
+    "name the practice from a description",
+    "put the practices in order",
+    "pick the practice that is missing",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names preparing the land and adding manure, making a nursery, sowing, transplanting, watering, weeding, mulching, controlling pests and harvesting, and puts nursery before transplanting and preparing before sowing. The child does not think growing vegetables is only sowing and watering. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.NURSERY_BED": {
+   "forms": [
+    "pick the right bed",
+    "put the steps in order",
+    "say why tiny seeds are sown shallow",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child makes a raised bed about a metre wide that can be reached from the sides, digs and breaks it to a fine tilth with manure, sows tiny seeds of kale, cabbage or tomato in shallow lines, covers them thinly, mulches and shades the bed, and waters lightly morning and evening on well-drained ground. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.GROWING_VEGETABLES.SEEDLING_CARE": {
+   "forms": [
+    "pick the best time and way to transplant",
+    "say when a seedling is ready",
+    "say what care comes after transplanting",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child waters the nursery first and lifts seedlings with soil on the roots when they are about four to six weeks old with a few true leaves, transplants in the evening or on a cloudy day at the same depth, firms and waters them, shades them for a few days, then weeds, waters, mulches and replaces any that die. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_PRODUCTS": {
+   "forms": [
+    "name the animal that gives a food",
+    "name the food an animal gives",
+    "say which animal does not give a food",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links cattle, goats and camels to milk and meat, hens to eggs and meat, sheep, goats and pigs to meat, rabbits to meat, and bees to honey, and knows a cock does not lay eggs and wool comes from sheep, not goats. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES": {
+   "forms": [
+    "match an animal to a use",
+    "pick the animal for a job",
+    "say how an animal helps farm food growing",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links oxen to ploughing, donkeys to carrying loads and pulling carts, camels to carrying goods and milk in dry areas, cattle, goats and hens to manure for the garden, and cattle and goats to hides and skins, and does not think animals are kept only to eat. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_METHODS": {
+   "forms": [
+    "name the method from a description",
+    "say what a method protects against",
+    "pick the method that works",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names sun drying, mixing with dry wood ash, and storing in airtight containers or a raised granary, and says they stop weevils, moulds and rats; the child does not think damp grain, open heaps or wet washing keep grain safe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.PRESERVATION_OF_CEREALS_.PRESERVE_PRACTICE": {
+   "forms": [
+    "put the steps in order",
+    "say how to tell grain is dry",
+    "say where to store it",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child cleans and sun-dries the grain on a mat or clean tarpaulin until it is hard (a grain cracks when bitten), cools it, mixes with ash or uses a sealed container only when fully dry, stores it off the floor away from rats and checks it often; the child knows damp grain grows mould that can poison. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.NUTRIENT_FUNCTIONS": {
+   "forms": [
+    "say what a nutrient does",
+    "say which nutrient does a job",
+    "say why a body needs a nutrient",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says carbohydrates give energy, proteins build the body and repair it, fats give a store of energy and keep the body warm, vitamins and minerals protect the body and keep it healthy (calcium for bones and teeth, iron for blood), and does not give proteins or vitamins the job of energy. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.FOOD_GROUPS": {
+   "forms": [
+    "say which group a food belongs to",
+    "pick the food rich in a nutrient",
+    "pick the odd one out",
+    "read a small table of meals"
+   ],
+   "mastery": "The child puts ugali, rice, sweet potato, arrowroot, cassava and bread with energy foods, beans, ndengu, meat, fish, omena, eggs and milk with body-building foods, sukuma wiki, spinach, managu, mango and oranges with protective foods, and cooking oil and butter with fats. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DEFICIENCY_DISEASES": {
+   "forms": [
+    "name the disease from the signs",
+    "say what is missing from the food",
+    "say whether it spreads from person to person",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child links kwashiorkor (swollen legs, face and belly, not enough protein), marasmus (very thin and wasted, too little food overall), goitre (swelling at the front of the neck, too little iodine) and anaemia (pale and tired, too little iron) to their cause and knows these do not spread from one person to another. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.FOOD_NUTRIENTS.DISEASE_PREVENTION": {
+   "forms": [
+    "pick the food that helps prevent a disease",
+    "pick the meal that is better balanced",
+    "say what a family can do",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child picks iodised salt for goitre, beans, fish, eggs and milk for kwashiorkor, enough of a varied diet for marasmus, and liver, meat, beans and dark green vegetables (managu, spinach) for anaemia, and knows a balanced diet with many foods is the main protection. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_METHODS": {
+   "forms": [
+    "name the method from a description",
+    "pick the food that suits a method",
+    "say how much oil a method uses",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says dry fat frying uses the fat that melts out of the food itself (sausages, bacon, minced meat, fatty meat) with little or no added oil, deep frying covers the food completely in hot oil (mandazi, chips, samosas, fried fish), and shallow frying (G4) uses a little oil; the child does not mix these up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.FOOD_P.COOKING_FOOD.FRYING_SAFETY": {
+   "forms": [
+    "pick the safe action",
+    "say why an action is dangerous",
+    "put the steps in order",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child washes hands first, dries food before frying (water makes hot oil spit), fills the pan no more than half, lowers food in gently, keeps handles turned in, never leaves hot oil alone, smothers an oil fire with a lid and never uses water, drains the food and serves it hot on a clean plate. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.GROOMING_HABITS": {
+   "forms": [
+    "pick the daily grooming habit",
+    "say why a habit matters for health",
+    "say whether a habit is grooming",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names bathing daily, brushing teeth morning and night, clean combed or trimmed hair, short clean nails, clean underwear and socks, and a clean neat uniform as daily grooming that keeps the body healthy, and knows grooming does not need expensive things or special days. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.GOOD_GROOMING_PRACTICES.DRESS_ETIQUETTE": {
+   "forms": [
+    "pick the right dress for the place",
+    "pick the right manners",
+    "say why dress should match the activity",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child picks the school uniform for school, sports clothes for games, old clothes, an apron and gumboots for farm work, neat modest clothes for a place of worship or a visit, and polite greetings, please and thank you, and good table manners, and knows dress changes with the activity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_TYPES": {
+   "forms": [
+    "name the surface from a description",
+    "say which material a surface is made of",
+    "pick the odd surface out",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names glass (a window, a mirror, smooth and see-through), wood (a table, door or floorboards), an earthen floor (packed soil, often smeared), a cemented floor (grey, hard and rough) and tiles (smooth, glazed squares), and does not mix cement and tiles. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.HOME_HYGIENE.SURFACE_CLEANING": {
+   "forms": [
+    "pick the way to clean a surface",
+    "say why a way is wrong",
+    "put the cleaning steps in order",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child cleans glass with a damp cloth and wipes it dry, wood with a damp cloth and polish without soaking, an earthen floor by sprinkling a little water and sweeping softly, cement by sweeping then scrubbing with soap and water, and tiles by sweeping and mopping then drying so nobody slips, always dusting or sweeping before washing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_STEPS": {
+   "forms": [
+    "put the steps in order",
+    "say what comes next",
+    "say which step is missing",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child sorts white and coloured items, checks pockets and treats stains, soaks in soapy water, washes by rubbing, rinses until the water is clear, wrings, dries and irons, in that order, and does not wash white and new coloured items together. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.HYGIEN.LAUNDERING_COTTON_ITEM.LAUNDRY_CARE": {
+   "forms": [
+    "say how to treat white items",
+    "say how to treat fast coloured items",
+    "say how to iron cotton",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child knows a fast colour does not run in water, washes coloured items apart from white ones, dries white items in the sun to keep them bright and coloured items inside out in the shade so the colour does not fade, and irons cotton hot while it is a little damp. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.STITCH_TYPES": {
+   "forms": [
+    "name the stitch from a description",
+    "say which stitch is stronger",
+    "pick the stitch for a job",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says running stitch goes in and out in a straight line with even gaps and is quick but not strong, back stitch goes back to meet the last stitch so there is no gap and is strong, and picks back stitch where the seam will be pulled. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.PRODUC.REPAIRING_GARMENTS.SEAM_REPAIR": {
+   "forms": [
+    "pick the stitch for a gaping seam",
+    "put the repair steps in order",
+    "say how to start and finish",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child uses back stitch for a gaping seam, picks thread that matches the cloth, starts a little before the gap on the sound seam, sews to a little past the gap, finishes with two small stitches on top of each other, does not pull the thread so tight that the cloth puckers, and trims the thread. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_TYPES": {
+   "forms": [
+    "name the type from a description",
+    "pick the example of a type",
+    "say which type needs little ground",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a vertical garden grows crops upwards (a sack garden, hanging bottles, a wall, an upright pipe or a tyre tower) and uses little ground, and a horizontal garden is a flat bed or tray at ground level, and does not think a vertical garden needs more land. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "AGRI.G5.PRODUC.CONSTRUCTING_INNOVATIVE_.GARDEN_BUILD": {
+   "forms": [
+    "pick the crop that suits",
+    "put the steps of building a sack garden in order",
+    "say why drainage and a water column matter",
+    "find the false step in a learner's plan"
+   ],
+   "mastery": "The child builds a sack garden with a central column of stones for watering, layers of soil mixed with manure, and holes in the side for seedlings, makes drainage holes in bottles and containers, grows kale, spinach, spring onions or coriander, and does not choose maize, cassava or sweet potato; the garden still needs watering. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
