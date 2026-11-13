@@ -51,7 +51,7 @@ export const FAMILIES = [
   ], HINT)),
   fam('sl.in.spot', `${SL}SL_INDIAN`, 'spot', 3, spot([
     SP('SL_ONLY_EUROPE', 'Zawadi', 'the Indian Ocean slave trade', 'Zawadi says it was run only by Europeans.', 'Traders from Arabia and the coast and some inland leaders took part.'),
-    SP('SL_NO_DEMAND', 'Aisha', 'why captives were bought', 'Aisha says they were bought to be eaten.', 'Captives were bought to work on plantations, in homes and on ships.'),
+    SP('SL_NO_DEMAND', 'Aisha', 'why captives were bought', 'Aisha says nobody wanted to buy captives.', 'Captives were bought to work on plantations, in homes and on ships.'),
     SP('SL_ONLY_EUROPE', 'Baraka', 'the trade routes', 'Baraka says the traders used railways built by Europeans.', 'Caravans carried captives to the coast and dhows carried them across the ocean.'),
     SP('SL_NO_DEMAND', 'Cheptoo', 'Zanzibar', 'Cheptoo says Zanzibar needed no workers.', 'Clove plantations on Zanzibar needed many workers.'),
     SP('SL_ONLY_EUROPE', 'Daudi', 'the winds', 'Daudi says European steamships carried the dhows.', 'Dhows sailed with the monsoon winds.'),

@@ -65,7 +65,7 @@ export const FAMILIES = [
     Q('Why do countries trade?', 'No country has every resource', w('CZ_SELF_SUFFICIENT', 'Each country makes everything it needs', 'To stop all trade', 'To close their borders'), 'No country has everything.'),
     Q('What does interdependence mean?', 'Countries need each other and both gain', w('CZ_INTERDEP_LOSS', 'A country is weak and begging', 'A country does not trade', 'A country is alone'), 'Interdependence means mutual need and benefit.'),
     Q('Which does Kenya sell to the world?', 'Tea and flowers', w('CZ_SELF_SUFFICIENT', 'Oil and cars', 'Machines and computers', 'Fridges and phones'), 'Kenya sells tea and flowers.'),
-    Q('Which does Kenya buy from other countries?', 'Oil and vehicles', w('CZ_SELF_SUFFICIENT', 'Tea and coffee', 'Maize and beans', 'Flowers and fish'), 'Kenya buys oil and vehicles.'),
+    Q('Which does Kenya buy from other countries?', 'Oil and vehicles', w('CZ_SELF_SUFFICIENT', 'Tea and coffee', 'Cut flowers and avocados', 'Coffee and macadamia nuts'), 'Kenya buys oil and vehicles.'),
     Q('Which body helps countries work together in Africa?', 'The African Union', w('CZ_SELF_SUFFICIENT', 'The Berlin Conference', 'A colonial office', 'A trading company'), 'The African Union links African countries.'),
   ], { h: ['No country has everything.', 'Countries trade and share.'], s1: 'Think of what countries need.' })),
   fam('cz.in.story', `${CZ}CZ_INTERDEP`, 'word', 2, choose([
@@ -78,7 +78,7 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- CZ_GLOBAL
   fam('cz.gl.which', `${CZ}CZ_GLOBAL`, 'direct', 1, choose([
-    Q('What is globalisation?', 'The world becoming one connected place', w('CZ_GLOBAL_ONLINE', 'Only using the internet', 'Only using the internet to talk to people', 'A kind of government run by Africans'), 'Trade, travel, money and the internet connect the world.'),
+    Q('What is globalisation?', 'The world becoming one connected place', w('CZ_GLOBAL_ONLINE', 'Only using the internet', 'Only buying goods from abroad', 'A kind of government run by Africans'), 'Trade, travel, money and the internet connect the world.'),
     Q('Which is a good effect of globalisation?', 'Quick communication with people far away', w('CZ_GLOBAL_ALL_GOOD', 'Loss of local culture', 'Local firms being beaten by imports', 'Cybercrime'), 'Communication is easier.'),
     Q('Which is a bad effect of globalisation?', 'Loss of local culture and firms', w('CZ_GLOBAL_ALL_GOOD', 'Cheaper goods', 'Quick communication with far friends', 'New markets'), 'Globalisation can harm local culture and small firms.'),
     Q('Which is a good effect of globalisation?', 'New markets for Kenyan flowers', w('CZ_GLOBAL_ALL_GOOD', 'Spread of cybercrime', 'Quick spread of disease', 'Loss of local languages'), 'Global markets help exporters.'),

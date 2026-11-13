@@ -45237,7 +45237,7 @@ var FAMILIES67 = [
   // ---------------------------------------------------------------- SE_ABILITIES
   fam11("se.ab.which", `${SE3}SE_ABILITIES`, "direct", 1, choose18([
     Q5("Which of these is an interest?", "Liking to draw cartoons in free time", w7("SE_INTEREST_ABILITY", "Winning the school drawing contest", "Drawing a perfect map in a test", "Being the best artist in the class"), "An interest is what a person likes to do. A prize shows an ability."),
-    C6("SE_TALENT_ONLY", "Which of these is an ability?", "Listening well when others speak", ["Winning a prize on stage", "Being famous in the school", "Singing in front of a crowd"], "Abilities are many. Listening, counting and caring all count, not only prizes."),
+    C6("SE_TALENT_ONLY", "Which of these is an ability that needs no stage?", "Listening well when others speak", ["Winning a prize on stage", "Being famous in the school", "Singing in front of a crowd"], "Abilities are many. Listening, counting and caring all count, not only prizes."),
     Q5("Which shows a talent?", "Learning a tune on the nyatiti by ear", w7("SE_INTEREST_ABILITY", "Wishing to be a great singer one day", "Liking to watch music shows at night", "Being told that music is good for you"), "A talent is a natural gift. Learning a tune by ear shows one."),
     C6("SE_TALENT_ONLY", "Mercy fixes broken desks at school with a hammer. What is this?", "An ability that helps the class", ["A habit that is not useful", "Not an ability, since it is quiet", "Only a hobby with no value"], "Practical skills are abilities too. Not all strengths happen on a stage."),
     Q5("Which is the best way to grow a talent?", "Practise often and ask for advice", w7("SE_INTEREST_ABILITY", "Wait for it to grow by itself", "Compare yourself with others daily", "Stop if it is hard at first"), "Talents grow with practice and feedback.")
@@ -45296,11 +45296,11 @@ var FAMILIES67 = [
   ], { h: ["Match the learner's strength to a business that fits.", "A need, a plan and customers come first."], s1: "Match strength to opportunity." })),
   // ---------------------------------------------------------------- HO_TRADITIONAL
   fam11("ho.tr.which", `${HO2}HO_TRADITIONAL`, "direct", 1, choose18([
-    Q5("In the Agikuyu story of origin, who were the first man and woman?", "Gikuyu and Mumbi", w7("HO_SAME_STORY", "Adam and Eve", "Ramogi and Nyar", "Enkai and Naiterukop"), "The Agikuyu tell of Gikuyu and Mumbi. Adam and Eve are in the Bible."),
+    Q5("In the Agikuyu story of origin, who were the first man and woman?", "Gikuyu and Mumbi", w7("HO_SAME_STORY", "Adam and Eve", "Wanjiru and Otieno", "Mwangi and Akinyi"), "The Agikuyu tell of Gikuyu and Mumbi. Adam and Eve are in the Bible."),
     Q5("Do all African communities tell the same story of how people began?", "No, each community has its own story", w7("HO_SAME_STORY", "Yes, they all tell the same story", "Yes, only one story exists in Africa", "No, because Africans have no stories"), "Each community has its own story, though some ideas are shared."),
     Q5("How were traditional stories of origin passed on?", "By elders telling them aloud to children", w7("HO_STORY_FALSE", "Only through books in school", "By television, radio and the internet alone", "They were never told"), "Elders told the stories to the young by mouth."),
     Q5("How should we treat the origin stories of other communities?", "With respect, as the beliefs of that community", w7("HO_STORY_FALSE", "As silly tales to laugh at", "As lies that should be forgotten", "As things to hide from visitors"), "These stories hold the beliefs and values of a people."),
-    Q5("In the Agikuyu story, who gave the land and the fig tree to the first couple?", "Ngai, the creator", w7("HO_SAME_STORY", "Allah, the creator", "The chief of the clan", "The elders of the village"), "Ngai, the Agikuyu creator, gave the land and the Mukuru wa Gathanga tree.")
+    Q5("In the Agikuyu story, who gave the land and the fig tree to the first couple?", "Ngai, the creator", w7("HO_SAME_STORY", "Mumbi, the first mother", "The chief of the clan", "The elders of the village"), "Ngai, the Agikuyu creator, gave the land and the Mukuru wa Gathanga tree.")
   ], { h: ["Each community has its own story and creator.", "Treat each story with respect."], s1: "Think of the community and its story." })),
   fam11("ho.tr.why", `${HO2}HO_TRADITIONAL`, "word", 2, choose18([
     Q5("A teacher asks learners to bring a story of origin from home. Why is this a good idea?", "To learn that communities have different stories", w7("HO_SAME_STORY", "To prove that one story is true", "To show that every story told is just the same", "To find out whose story is silly"), "Stories differ, and each is valued."),
@@ -45321,7 +45321,7 @@ var FAMILIES67 = [
     Q5("Which is a common aspect of religious and traditional stories of human origin?", "A creator who made the first people", w7("HO_NO_COMMON", "A story with no first people", "A claim that people made themselves", "A rule that nobody may tell it"), "Both kinds often have a creator and first people.", { i: "Choose the best answer." }),
     Q5("A learner says religious and traditional stories have nothing in common. What can you show?", "Both name a creator and a first man and woman", w7("HO_NO_COMMON", "Both are only in books", "Both were written down by one single person", "Both have the same names"), "They share a creator and first people."),
     Q5("Which idea do many origin stories teach?", "People have a purpose and must be respected", w7("HO_NO_COMMON", "Some people are born better than other people", "People came without any cause", "Only one group is human"), "Many stories teach respect for people."),
-    Q5("Which is a difference between the Agikuyu story and the Christian story?", "They name different first couples", w7("HO_ADAM_ONLY", "They name different creators in all cases", "They disagree that people have a creator", "They are about different planets"), "Gikuyu and Mumbi are not Adam and Eve, but both have a creator."),
+    Q5("Which is a difference between the Agikuyu story and the Christian story?", "They name different first couples", w7("HO_ADAM_ONLY", "Only one of them has ever been told aloud", "They disagree that people have a creator", "They are about different planets"), "Gikuyu and Mumbi are not Adam and Eve, but both have a creator."),
     Q5("Why should we learn about different stories of human origin?", "To respect what different people believe", w7("HO_NO_COMMON", "To decide whose story is silly", "To prove that everyone must follow just one", "To avoid meeting other people"), "Learning builds respect for others.")
   ], { h: ["Look for the idea that is the same in different stories.", "Both kinds often have a creator and a first couple."], s1: "Look for what the stories share." }), "c"),
   // ---------------------------------------------------------------- EC_FACTORS
@@ -45355,7 +45355,7 @@ var FAMILIES67 = [
       "Great Zimbabwe was in southern Africa.",
       T8(["Kingdom", "Region"], [["Ancient Egypt", "North-east Africa"], ["Great Zimbabwe", "Southern Africa"], ["Kingdom of Kongo", "West-central Africa"]])
     ),
-    Q5("Which river was the centre of the Kingdom of Kongo?", "The Congo River", w7("EC_KONGO_NORTH", "The Nile", "The Limpopo", "The Zambezi"), "Kongo lay near the mouth of the Congo River."),
+    Q5("Which river lay near the Kingdom of Kongo?", "The Congo River", w7("EC_KONGO_NORTH", "The Nile", "The Limpopo", "The Zambezi"), "Kongo lay near the mouth of the Congo River."),
     Q5("Which sea lies to the north of ancient Egypt?", "The Mediterranean Sea", w7("EC_EGYPT_WEST", "The Indian Ocean", "The Atlantic Ocean", "The Arabian Sea"), "Egypt lies on the Mediterranean in the north."),
     Q5("Which modern country holds the remains of Great Zimbabwe?", "Zimbabwe", w7("EC_KONGO_NORTH", "Egypt", "Angola", "Ghana"), "The ruins are in modern Zimbabwe, which is named after them.")
   ], { h: ["Think of the river or sea near each kingdom.", "Egypt in the north-east, Zimbabwe in the south, Kongo in the west-centre."], s1: "Match the kingdom to its region." })),
@@ -45375,7 +45375,7 @@ var FAMILIES67 = [
     Q5("Which idea from ancient Egypt do we still use?", "A calendar of 365 days", w7("EC_NO_GIFT", "Coins made of cowrie shells", "Printing with machines", "Electric lamps"), "The Egyptians made a calendar of 365 days.")
   ], { h: ["Match each gift to its kingdom.", "Egypt, writing and calendar. Zimbabwe, stone building. Kongo, metal work."], s1: "Match the gift to the kingdom." })),
   fam11("ec.co.story", `${EC}EC_CONTRIB`, "word", 2, choose18([
-    Q5("A builder uses geometry to measure fields after floods. Which kingdom first used this?", "Ancient Egypt", w7("EC_MIX_GIFT", "Great Zimbabwe", "The Kingdom of Kongo", "The kingdom of Bunyoro"), "Egyptians used geometry to mark fields."),
+    Q5("A builder uses geometry to measure fields after floods. Which kingdom is known for using this?", "Ancient Egypt", w7("EC_MIX_GIFT", "Great Zimbabwe", "The Kingdom of Kongo", "The kingdom of Bunyoro"), "Egyptians used geometry to mark fields."),
     Q5("A museum shows delicate copper crosses and woven cloth from the Congo River. Which kingdom made them?", "The Kingdom of Kongo", w7("EC_MIX_GIFT", "Ancient Egypt", "Great Zimbabwe", "The kingdom of Ghana"), "Kongo made fine metal work and cloth."),
     Q5("Why do historians value Great Zimbabwe today?", "It shows African skill in stone building", w7("EC_NO_GIFT", "It proves that Africans built nothing", "It has no value any more", "It shows only trade in Europe"), "The ruins show great building skill."),
     Q5("A learner says ancient Africa gave the world nothing. What should you say?", "Egypt, for example, gave writing and a calendar", w7("EC_NO_GIFT", "It is true, nothing was given", "Only Europe gave ideas", "Only the Nile gave ideas"), "Many modern ideas have African roots."),
@@ -45408,7 +45408,7 @@ var FAMILIES68 = [
   ], { h: ["Ask whether the person is free to leave and is paid fairly.", "No freedom means servitude."], s1: "Ask: is the person free?" })),
   // ---------------------------------------------------------------- SL_INDIAN
   fam11("sl.in.which", `${SL2}SL_INDIAN`, "direct", 1, choose18([
-    Q5("Why were people bought in the Indian Ocean slave trade?", "To work on plantations and in homes", w7("SL_NO_DEMAND", "To eat as food", "To fill empty ships for sport", "To make musical instruments"), "Captives worked on plantations, in homes and on ships."),
+    Q5("Why were people bought in the Indian Ocean slave trade?", "To work on plantations and in homes", w7("SL_NO_DEMAND", "Because nobody wanted workers", "To sell them back at once for the same price", "To make musical instruments"), "Captives worked on plantations, in homes and on ships."),
     Q5("Who took part in the Indian Ocean slave trade?", "Arab and Swahili traders and some leaders", w7("SL_ONLY_EUROPE", "Only traders who sailed from Europe in ships", "Only the rulers of Egypt", "Nobody at all"), "The trade involved traders from Arabia, the coast and inland leaders."),
     Q5("Which crop grown near Zanzibar needed many workers?", "Cloves", w7("SL_NO_DEMAND", "Tea", "Pyrethrum", "Wheat"), "Clove plantations on Zanzibar needed many workers."),
     Q5("Which wind helped dhows to sail across the Indian Ocean?", "The monsoon winds", w7("SL_ONLY_EUROPE", "The harmattan", "The chinook", "The sirocco"), "The monsoons carried dhows between Africa and Arabia and India."),
@@ -45432,11 +45432,11 @@ var FAMILIES68 = [
     ),
     Q5("Which coast was the centre of the Indian Ocean trade?", "The east coast, with Zanzibar and Kilwa", w7("SL_WEST_COAST", "The west coast", "The north coast of Egypt and Libya", "The Sahara"), "The Indian Ocean trade centred on the east coast."),
     Q5("Which town on the Kenya coast was part of the trade?", "Mombasa", w7("SL_WEST_COAST", "Kisumu", "Nakuru", "Eldoret"), "Mombasa was a coastal town linked to the trade."),
-    Q5("Which of these was a place where captives were taken?", "Arabia", w7("SL_ATLANTIC_MIX", "Brazil", "Cuba", "Jamaica"), "The Indian Ocean trade took captives to Arabia, India and the islands."),
+    Q5("Which was a main destination of the Indian Ocean trade?", "Arabia", w7("SL_ATLANTIC_MIX", "Brazil", "Cuba", "Jamaica"), "The Indian Ocean trade took captives to Arabia, India and the islands."),
     Q5("Which describes the reach of the trade into the interior?", "It reached as far as Lake Victoria and the Congo basin", w7("SL_WEST_COAST", "It stayed on the beaches and ports of the coast only", "It reached only the Sahara desert", "It reached only the shores of West Africa"), "Caravans went deep into the interior.")
   ], { h: ["Which ocean is on the east of Africa?", "The Indian Ocean trade centred on the east coast."], s1: "Think of the ocean and the coast." })),
   fam11("sl.ex.story", `${SL2}SL_EXTENT`, "word", 2, choose18([
-    Q5("A learner says captives from Kilwa were sent to Brazil. What is wrong?", "Kilwa captives went to Arabia, India and islands", w7("SL_ATLANTIC_MIX", "Nothing is wrong at all", "They were sent to Egypt and North Africa only", "They were sent to Europe"), "Brazil was a destination of the Atlantic trade."),
+    Q5("A learner says most captives from Kilwa were sent to Brazil. What is wrong?", "Most Kilwa captives went to Arabia, India and islands", w7("SL_ATLANTIC_MIX", "Nothing is wrong at all", "They were sent to Egypt and North Africa only", "They were sent to Europe"), "Brazil was a destination of the Atlantic trade."),
     Q5("Which island was a centre of the Indian Ocean trade?", "Zanzibar", w7("SL_WEST_COAST", "Goree", "Madeira", "Bioko"), "Zanzibar was the great centre. Goree is on the west coast."),
     Q5("The Indian Ocean trade reached which sea in the north-east of Africa?", "The Red Sea", w7("SL_WEST_COAST", "The Mediterranean", "The Atlantic", "The Caspian Sea"), "The Red Sea linked Africa to Arabia."),
     Q5("Which direction did dhows carry captives from East Africa?", "North and east, across the ocean", w7("SL_ATLANTIC_MIX", "South to the Antarctic", "West across the whole Atlantic", "Straight up the Nile"), "Dhows went north and east."),
@@ -45452,7 +45452,7 @@ var FAMILIES68 = [
   ], { h: ["Barter has no money.", "Ask what Nyambura can do if the seller does not want her maize."], s1: "Think about swapping goods without money." })),
   fam11("mt.co.story", `${MT2}MT_COMPARE`, "word", 2, choose18([
     Q5("Mwangi has maize but wants fish. The fisherman wants cloth, not maize. What is the problem?", "Their wants do not match", w7("MT_BARTER_NO_PROBLEM", "Maize is too heavy", "Fish is too cheap", "There is no problem"), "In barter each person must want what the other has."),
-    Q5("A trader swaps a goat for 10 hens but the buyer wants only 3. What is the problem?", "The goat cannot be divided", w7("MT_BARTER_NO_PROBLEM", "Hens cannot be counted", "The buyer is too rich", "There is no problem"), "Barter goods are often hard to divide."),
+    Q5("A trader has one goat and wants only a sack of maize. The maize seller says a goat is worth far more. What is the problem?", "The goat cannot be divided", w7("MT_BARTER_NO_PROBLEM", "Maize cannot be carried", "The buyer is too rich", "There is no problem"), "Barter goods are often hard to divide."),
     Q5("How does money solve the problems of barter?", "It gives a common value and is easy to carry", w7("MT_BARTER_NO_PROBLEM", "It makes goods heavier", "It makes people swap more goods each day", "It makes goods rot"), "Money measures value and is easy to carry and divide."),
     Q5("A shopper pays 50 shillings for bread and gets change. Is this barter?", "No, money is used", w7("MT_BARTER_MONEY", "Yes, because goods are given", "Yes, because she got change", "Yes, because there is a shop"), "Barter uses no money."),
     Q5("Which is a good point about barter in rural areas?", "It can work when people have little cash", w7("MT_BARTER_NO_PROBLEM", "It never has any problems", "It always gives a fair price", "It lasts for ever"), "Barter can help when cash is scarce, but it has limits.")
@@ -45558,7 +45558,7 @@ var FAMILIES68 = [
   fam11("cs.me.story", `${CS4}CS_MEANING`, "word", 2, choose18([
     Q5("A class plants trees along a path where a school stream floods. Which need do they meet?", "Protecting the environment", w7("CS_NEED_WANT", "Having fun in class all day long", "Winning a prize", "Getting free time"), "They protect the land."),
     Q5("Which project meets a real need?", "Repairing the school water tank", w7("CS_NEED_WANT", "Buying toys for the class", "Painting the football for fun", "Planning a long picnic"), "The tank is a real need."),
-    Q5("A learner says CSL is only a punishment. What is a better reply?", "It is learning by helping the community", w7("CS_JUST_WORK", "You are right", "It is a test", "You are right, it is a punishment"), "CSL is chosen and planned."),
+    Q5("A learner says CSL is only a punishment. What is a better reply?", "It is learning by helping the community", w7("CS_JUST_WORK", "It is for learners who misbehave", "It is a test", "You are right, it is a punishment"), "CSL is chosen and planned."),
     Q5("The class cleans the village market. What do learners gain?", "Teamwork and responsibility", w7("CS_JUST_WORK", "Nothing at all", "Only free time after school", "Only money"), "CSL builds values."),
     Q5("How does CSL strengthen the school and community?", "They work together on needs", w7("CS_JUST_WORK", "They stay apart from each other", "They compete", "They avoid each other"), "Working together builds bonds.")
   ], { h: ["Is the project meeting a real need?", "Real needs, skills and values."], s1: "Ask what need the project meets." }), "b"),
@@ -45601,8 +45601,8 @@ var timeCase = (deg, east, base, label) => {
     `${deg} degrees is ${deg / 15} hour${deg === 15 ? "" : "s"} (15 degrees make one hour). Places to the ${east ? "east are ahead, so we add" : "west are behind, so we subtract"}.`
   );
 };
-var EAST = [[30, "a town in Egypt"], [45, "a town on the Red Sea coast"], [60, "a city in the Gulf"], [75, "a city in India"], [90, "a place far east in Asia"], [45, "a port in Somalia"]];
-var WEST = [[15, "a town in Mali"], [30, "a ship in the Atlantic"], [45, "a city in Brazil"], [60, "an island in the Caribbean"], [75, "a city on the United States coast"], [30, "an island in mid-Atlantic"]];
+var EAST = [[30, "a town in Egypt"], [45, "a city in Iraq"], [60, "a town in eastern Iran"], [75, "a city in India"], [90, "a city in Bangladesh"], [45, "a port in Somalia"]];
+var WEST = [[15, "a town in Senegal"], [30, "a ship in the Atlantic"], [45, "a city in Brazil"], [60, "an island in the Caribbean"], [75, "a city on the United States coast"], [30, "an island in mid-Atlantic"]];
 var eastCases = EAST.map(([d, l], i) => timeCase(d, true, BASES[i % 4], l));
 var westCases = WEST.map(([d, l], i) => timeCase(d, false, BASES[(i + 1) % 4], l));
 var DIFF = [[15, 45, "A", "B", 2], [30, 60, "A", "B", 2], [0, 60, "A", "B", 4], [45, 75, "A", "B", 2], [15, 90, "A", "B", 5]];
@@ -45634,7 +45634,7 @@ var FAMILIES69 = [
     Q5("A textbook written in 2024 about the 1884 Berlin Conference is which source?", "Secondary", w7("HI_NEW_PRIMARY", "Primary", "An oral source", "A fossil"), "The author was not there, so it is secondary."),
     Q5("Which of these is a primary source?", "A letter written by a chief in 1900", w7("HI_NEW_PRIMARY", "A history book published last year", "An encyclopaedia entry", "A documentary made in 2020"), "The chief wrote it at the time."),
     Q5("Which of these is a secondary source?", "A documentary about the independence struggle", w7("HI_PHOTO_SECONDARY", "A diary of an activist from 1960", "A treaty signed in 1895", "A photograph taken in 1963"), "A documentary is made later by people who were not there."),
-    Q5("A photograph taken at Uhuru Park in 1963 is which source?", "Primary", w7("HI_PHOTO_SECONDARY", "Secondary", "Oral", "Archaeological"), "It was made at the time.")
+    Q5("A photograph taken at Uhuru Gardens in 1963 is which source?", "Primary", w7("HI_PHOTO_SECONDARY", "Secondary", "Oral", "Archaeological"), "It was made at the time.")
   ], { h: ["Primary means made at the time by someone there.", "Secondary means written later."], s1: "Ask: was the writer there?" })),
   fam11("hi.pr.story", `${HI}HI_PRIMARY`, "word", 2, choose18([
     Q5("A learner finds a letter that her grandfather wrote in 1963. Which source is it?", "A primary source", w7("HI_PHOTO_SECONDARY", "A secondary source", "A fossil", "A story only"), "Her grandfather wrote it at the time."),
@@ -45668,7 +45668,7 @@ var FAMILIES69 = [
   ], { h: ["Think of where soil and water were good.", "Nile, Ethiopian highlands, West African savanna."], s1: "Think of soil, water and region." })),
   fam11("ea.wh.story", `${EA2}EA_WHERE`, "word", 2, choose18([
     Q5("A learner says early farming in Africa began only along the Nile. What is a better reply?", "It began in other places too, such as Ethiopia", w7("EA_EAST_ONLY", "The learner is right about all of this", "It began in Antarctica", "It never began anywhere in all of Africa"), "Farming began in several regions."),
-    Q5("Which animal was among those reared early in Africa?", "Cattle", w7("EA_DRY_FARM", "Horses from Europe", "Camels from Australia", "Llamas"), "Cattle, sheep and goats were reared early."),
+    Q5("Which animal was among those reared early in Africa?", "Cattle", w7("EA_DRY_FARM", "Llamas", "Reindeer", "Yaks"), "Cattle, sheep and goats were reared early."),
     Q5("Why were river valleys good places for early farming?", "They had water and fertile soil", w7("EA_DRY_FARM", "They had no water in the valley", "They had only rock", "They were always dry"), "Water and soil made farming possible."),
     Q5("Sorghum and millet were first grown in which region?", "The West African savanna and the Sahel", w7("EA_EAST_ONLY", "The Nile delta only", "The Atlas Mountains of the north", "The Namib Desert"), "Sorghum and millet came from the savanna."),
     Q5("Which is a result of taming wild animals?", "People had a steady supply of meat and milk", w7("EA_DRY_FARM", "People had to move to a new place every day", "Animals disappeared", "People stopped eating"), "Domestic animals gave steady food.")
@@ -45928,7 +45928,7 @@ var HR4 = "POLITI.HUMAN_RIGHTS.";
 var FAMILIES71 = [
   // ---------------------------------------------------------------- PD_SCRAMBLE
   fam11("pd.sc.which", `${PD5}PD_SCRAMBLE`, "direct", 1, choose18([
-    Q5("Who decided how Africa was divided at Berlin?", "European powers", w7("PD_ASK_AFRICANS", "African leaders", "The people of Africa together", "Traders from Asia"), "European powers decided. No African leaders were at the table."),
+    Q5("Who made the decisions at Berlin about claiming Africa?", "European powers", w7("PD_ASK_AFRICANS", "African leaders", "The people of Africa together", "Traders from Asia"), "European powers decided. No African leaders were at the table."),
     Q5("What was a role of missionaries in the scramble?", "They opened stations and schools and often prepared the way", w7("PD_MISSION_ONLY", "They had no part at all", "They fought all the wars", "They closed down all the mission schools and stations"), "Missionaries brought schools and religion, and in many places prepared the way for colonial rule."),
     Q5("What did explorers do in the scramble?", "Mapped routes and reported on resources", w7("PD_ASK_AFRICANS", "Signed the treaty at Berlin for Africa", "Ran the colonial courts", "Built the railways"), "Explorers mapped Africa and reported what they found."),
     Q5("Why did European countries want African land?", "For raw materials, markets and national pride", w7("PD_ASK_AFRICANS", "Because the African leaders invited them in", "To end all trade", "To protect Africa from Asia"), "Industry needed raw materials and markets."),
@@ -45938,13 +45938,13 @@ var FAMILIES71 = [
     Q5("A learner says Africans invited the Europeans to divide Africa. What is the correct reply?", "The Europeans decided without Africans", w7("PD_ASK_AFRICANS", "The learner is right about all of this", "Africans drew the map", "Africans signed at Berlin"), "No African leader was invited."),
     Q5("A mission station teaches reading and also supports the colonial officer. What does this show?", "Missionaries often prepared the way for colonial rule", w7("PD_MISSION_ONLY", "Missionaries were always against colonial rule", "Missionaries had no effect", "Missionaries ended all trade"), "Their work often helped colonial rule."),
     Q5("Factories in Europe needed cotton and rubber. How did this affect Africa?", "It made Europeans want African raw materials", w7("PD_ASK_AFRICANS", "It made them leave Africa alone", "It made Africans sell machines", "It stopped all trade"), "Raw materials drew them to Africa."),
-    Q5("Which group first reported on the lakes and rivers of East Africa?", "European explorers", w7("PD_ASK_AFRICANS", "Colonial soldiers", "Colonial judges", "Colonial teachers"), "Explorers were among the first to map and report on routes."),
+    Q5("Which group mapped the lakes and rivers of East Africa for European governments?", "European explorers", w7("PD_ASK_AFRICANS", "Colonial soldiers", "Colonial judges", "Colonial teachers"), "Explorers were among the first to map and report on routes."),
     Q5("Why did national pride matter in the scramble?", "Countries wanted more colonies than their rivals", w7("PD_ASK_AFRICANS", "They wanted to share equally with Africans", "They wanted no land at all", "They wanted to close trade"), "Rival powers competed for colonies.")
   ], { h: ["Which group took part, and what did they do?", "Explorers, missionaries, traders and officers."], s1: "Think of which group did what." })),
   // ---------------------------------------------------------------- PD_BERLIN
   fam11("pd.be.which", `${PD5}PD_BERLIN`, "direct", 1, choose18([
     Q5("What did the Berlin Conference decide?", "Rules for claiming African land", w7("PD_BERLIN_DIVIDED", "Exact borders for every African country", "That Africans should rule themselves", "That Africa should stay free"), "Berlin set the rules. Borders were drawn later."),
-    Q5("Who attended the Berlin Conference?", "European powers, with the United States as an observer", w7("PD_BERLIN_AFRICANS", "African chiefs and Europeans", "Only African kings", "Only Asian rulers"), "No African leaders were invited."),
+    Q5("Who attended the Berlin Conference?", "European powers, with the United States also present", w7("PD_BERLIN_AFRICANS", "African chiefs and Europeans", "Only African kings", "Only Asian rulers"), "No African leaders were invited."),
     Q5("Which German leader hosted the conference?", "Otto von Bismarck", w7("PD_BERLIN_DIVIDED", "Kaiser Wilhelm II", "Adolf Hitler", "Napoleon"), "Bismarck hosted the conference in 1884 to 1885."),
     Q5("What did the rule of effective occupation say?", "A power must really control a region to claim it", w7("PD_BERLIN_DIVIDED", "A power could claim any land by writing it down", "A power could never claim land", "Africans could claim any land"), "Effective occupation meant real control."),
     Q5("Which two rivers did Berlin open to trade?", "The Congo and the Niger", w7("PD_BERLIN_DIVIDED", "The Nile and the Zambezi", "The Limpopo and the Tana", "The Orange and the Senegal"), "The Congo and Niger were opened to trade.")
@@ -45980,7 +45980,7 @@ var FAMILIES71 = [
     Q5("Which builds a country's freedom?", "Making goods at home and trading fairly", w7("PD_NEO_CORRUPT", "Selling raw materials to other countries only", "Taking only loans", "Closing all factories"), "Local industry makes a country stronger.")
   ], { h: ["Neo means new. The control is by money, not by an army.", "Good governance helps."], s1: "Think of money and control." })),
   fam11("pd.ne.story", `${PD5}PD_NEO`, "word", 2, choose18([
-    Q5("A country owes a huge debt and must follow the lender's orders on its budget. Which is this?", "Neo-colonialism", w7("PD_NEO_SAME", "Direct colonial rule", "Independence", "Regional cooperation"), "The country is free in name only."),
+    Q5("A country owes a huge debt and must follow the lender's orders on its budget. Which is this?", "Neo-colonialism", w7("PD_NEO_SAME", "Direct colonial rule", "Independence", "Regional cooperation"), "The country is independent in law but pressed by outside money."),
     Q5("Officials take bribes to give mining rights cheaply to a foreign company. What does this do?", "It weakens the country and helps neo-colonialism", w7("PD_NEO_CORRUPT", "It strengthens the country and its people at home", "It ends neo-colonialism", "It helps citizens equally"), "Corruption lets outsiders take the country's wealth."),
     Q5("Which action by citizens helps good governance?", "Voting and asking leaders to account", w7("PD_NEO_CORRUPT", "Selling votes", "Staying silent when leaders steal money", "Paying bribes"), "Active citizens hold leaders to account."),
     Q5("A learner says neo-colonialism is the same as colonialism. What is the difference?", "There are no foreign officers, but money still controls", w7("PD_NEO_SAME", "There is no difference", "Neo-colonialism has foreign armies and foreign officers", "Neo-colonialism is older"), "It is control by money and trade."),
@@ -46145,7 +46145,7 @@ var FAMILIES72 = [
     Q5("Why do countries trade?", "No country has every resource", w7("CZ_SELF_SUFFICIENT", "Each country makes everything it needs", "To stop all trade", "To close their borders"), "No country has everything."),
     Q5("What does interdependence mean?", "Countries need each other and both gain", w7("CZ_INTERDEP_LOSS", "A country is weak and begging", "A country does not trade", "A country is alone"), "Interdependence means mutual need and benefit."),
     Q5("Which does Kenya sell to the world?", "Tea and flowers", w7("CZ_SELF_SUFFICIENT", "Oil and cars", "Machines and computers", "Fridges and phones"), "Kenya sells tea and flowers."),
-    Q5("Which does Kenya buy from other countries?", "Oil and vehicles", w7("CZ_SELF_SUFFICIENT", "Tea and coffee", "Maize and beans", "Flowers and fish"), "Kenya buys oil and vehicles."),
+    Q5("Which does Kenya buy from other countries?", "Oil and vehicles", w7("CZ_SELF_SUFFICIENT", "Tea and coffee", "Cut flowers and avocados", "Coffee and macadamia nuts"), "Kenya buys oil and vehicles."),
     Q5("Which body helps countries work together in Africa?", "The African Union", w7("CZ_SELF_SUFFICIENT", "The Berlin Conference", "A colonial office", "A trading company"), "The African Union links African countries.")
   ], { h: ["No country has everything.", "Countries trade and share."], s1: "Think of what countries need." })),
   fam11("cz.in.story", `${CZ4}CZ_INTERDEP`, "word", 2, choose18([
@@ -46157,7 +46157,7 @@ var FAMILIES72 = [
   ], { h: ["No country has everything.", "Both sides gain from trade."], s1: "Think of what each country has and needs." })),
   // ---------------------------------------------------------------- CZ_GLOBAL
   fam11("cz.gl.which", `${CZ4}CZ_GLOBAL`, "direct", 1, choose18([
-    Q5("What is globalisation?", "The world becoming one connected place", w7("CZ_GLOBAL_ONLINE", "Only using the internet", "Only using the internet to talk to people", "A kind of government run by Africans"), "Trade, travel, money and the internet connect the world."),
+    Q5("What is globalisation?", "The world becoming one connected place", w7("CZ_GLOBAL_ONLINE", "Only using the internet", "Only buying goods from abroad", "A kind of government run by Africans"), "Trade, travel, money and the internet connect the world."),
     Q5("Which is a good effect of globalisation?", "Quick communication with people far away", w7("CZ_GLOBAL_ALL_GOOD", "Loss of local culture", "Local firms being beaten by imports", "Cybercrime"), "Communication is easier."),
     Q5("Which is a bad effect of globalisation?", "Loss of local culture and firms", w7("CZ_GLOBAL_ALL_GOOD", "Cheaper goods", "Quick communication with far friends", "New markets"), "Globalisation can harm local culture and small firms."),
     Q5("Which is a good effect of globalisation?", "New markets for Kenyan flowers", w7("CZ_GLOBAL_ALL_GOOD", "Spread of cybercrime", "Quick spread of disease", "Loss of local languages"), "Global markets help exporters."),
@@ -46246,7 +46246,7 @@ var FAMILIES73 = [
   ], HINT)),
   fam11("sl.in.spot", `${SL3}SL_INDIAN`, "spot", 3, spot18([
     SP5("SL_ONLY_EUROPE", "Zawadi", "the Indian Ocean slave trade", "Zawadi says it was run only by Europeans.", "Traders from Arabia and the coast and some inland leaders took part."),
-    SP5("SL_NO_DEMAND", "Aisha", "why captives were bought", "Aisha says they were bought to be eaten.", "Captives were bought to work on plantations, in homes and on ships."),
+    SP5("SL_NO_DEMAND", "Aisha", "why captives were bought", "Aisha says nobody wanted to buy captives.", "Captives were bought to work on plantations, in homes and on ships."),
     SP5("SL_ONLY_EUROPE", "Baraka", "the trade routes", "Baraka says the traders used railways built by Europeans.", "Caravans carried captives to the coast and dhows carried them across the ocean."),
     SP5("SL_NO_DEMAND", "Cheptoo", "Zanzibar", "Cheptoo says Zanzibar needed no workers.", "Clove plantations on Zanzibar needed many workers."),
     SP5("SL_ONLY_EUROPE", "Daudi", "the winds", "Daudi says European steamships carried the dhows.", "Dhows sailed with the monsoon winds.")

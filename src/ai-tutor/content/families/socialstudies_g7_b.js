@@ -28,7 +28,7 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- SL_INDIAN
   fam('sl.in.which', `${SL}SL_INDIAN`, 'direct', 1, choose([
-    Q('Why were people bought in the Indian Ocean slave trade?', 'To work on plantations and in homes', w('SL_NO_DEMAND', 'To eat as food', 'To fill empty ships for sport', 'To make musical instruments'), 'Captives worked on plantations, in homes and on ships.'),
+    Q('Why were people bought in the Indian Ocean slave trade?', 'To work on plantations and in homes', w('SL_NO_DEMAND', 'Because nobody wanted workers', 'To sell them back at once for the same price', 'To make musical instruments'), 'Captives worked on plantations, in homes and on ships.'),
     Q('Who took part in the Indian Ocean slave trade?', 'Arab and Swahili traders and some leaders', w('SL_ONLY_EUROPE', 'Only traders who sailed from Europe in ships', 'Only the rulers of Egypt', 'Nobody at all'), 'The trade involved traders from Arabia, the coast and inland leaders.'),
     Q('Which crop grown near Zanzibar needed many workers?', 'Cloves', w('SL_NO_DEMAND', 'Tea', 'Pyrethrum', 'Wheat'), 'Clove plantations on Zanzibar needed many workers.'),
     Q('Which wind helped dhows to sail across the Indian Ocean?', 'The monsoon winds', w('SL_ONLY_EUROPE', 'The harmattan', 'The chinook', 'The sirocco'), 'The monsoons carried dhows between Africa and Arabia and India.'),
@@ -48,11 +48,11 @@ export const FAMILIES = [
       T(['Trade', 'Direction'], [['Indian Ocean trade', 'East and north, to Arabia, India, islands'], ['Atlantic trade', 'West, to the Americas']])),
     Q('Which coast was the centre of the Indian Ocean trade?', 'The east coast, with Zanzibar and Kilwa', w('SL_WEST_COAST', 'The west coast', 'The north coast of Egypt and Libya', 'The Sahara'), 'The Indian Ocean trade centred on the east coast.'),
     Q('Which town on the Kenya coast was part of the trade?', 'Mombasa', w('SL_WEST_COAST', 'Kisumu', 'Nakuru', 'Eldoret'), 'Mombasa was a coastal town linked to the trade.'),
-    Q('Which of these was a place where captives were taken?', 'Arabia', w('SL_ATLANTIC_MIX', 'Brazil', 'Cuba', 'Jamaica'), 'The Indian Ocean trade took captives to Arabia, India and the islands.'),
+    Q('Which was a main destination of the Indian Ocean trade?', 'Arabia', w('SL_ATLANTIC_MIX', 'Brazil', 'Cuba', 'Jamaica'), 'The Indian Ocean trade took captives to Arabia, India and the islands.'),
     Q('Which describes the reach of the trade into the interior?', 'It reached as far as Lake Victoria and the Congo basin', w('SL_WEST_COAST', 'It stayed on the beaches and ports of the coast only', 'It reached only the Sahara desert', 'It reached only the shores of West Africa'), 'Caravans went deep into the interior.'),
   ], { h: ['Which ocean is on the east of Africa?', 'The Indian Ocean trade centred on the east coast.'], s1: 'Think of the ocean and the coast.' })),
   fam('sl.ex.story', `${SL}SL_EXTENT`, 'word', 2, choose([
-    Q('A learner says captives from Kilwa were sent to Brazil. What is wrong?', 'Kilwa captives went to Arabia, India and islands', w('SL_ATLANTIC_MIX', 'Nothing is wrong at all', 'They were sent to Egypt and North Africa only', 'They were sent to Europe'), 'Brazil was a destination of the Atlantic trade.'),
+    Q('A learner says most captives from Kilwa were sent to Brazil. What is wrong?', 'Most Kilwa captives went to Arabia, India and islands', w('SL_ATLANTIC_MIX', 'Nothing is wrong at all', 'They were sent to Egypt and North Africa only', 'They were sent to Europe'), 'Brazil was a destination of the Atlantic trade.'),
     Q('Which island was a centre of the Indian Ocean trade?', 'Zanzibar', w('SL_WEST_COAST', 'Goree', 'Madeira', 'Bioko'), 'Zanzibar was the great centre. Goree is on the west coast.'),
     Q('The Indian Ocean trade reached which sea in the north-east of Africa?', 'The Red Sea', w('SL_WEST_COAST', 'The Mediterranean', 'The Atlantic', 'The Caspian Sea'), 'The Red Sea linked Africa to Arabia.'),
     Q('Which direction did dhows carry captives from East Africa?', 'North and east, across the ocean', w('SL_ATLANTIC_MIX', 'South to the Antarctic', 'West across the whole Atlantic', 'Straight up the Nile'), 'Dhows went north and east.'),
@@ -69,7 +69,7 @@ export const FAMILIES = [
   ], { h: ['Barter has no money.', 'Ask what Nyambura can do if the seller does not want her maize.'], s1: 'Think about swapping goods without money.' })),
   fam('mt.co.story', `${MT}MT_COMPARE`, 'word', 2, choose([
     Q('Mwangi has maize but wants fish. The fisherman wants cloth, not maize. What is the problem?', 'Their wants do not match', w('MT_BARTER_NO_PROBLEM', 'Maize is too heavy', 'Fish is too cheap', 'There is no problem'), 'In barter each person must want what the other has.'),
-    Q('A trader swaps a goat for 10 hens but the buyer wants only 3. What is the problem?', 'The goat cannot be divided', w('MT_BARTER_NO_PROBLEM', 'Hens cannot be counted', 'The buyer is too rich', 'There is no problem'), 'Barter goods are often hard to divide.'),
+    Q('A trader has one goat and wants only a sack of maize. The maize seller says a goat is worth far more. What is the problem?', 'The goat cannot be divided', w('MT_BARTER_NO_PROBLEM', 'Maize cannot be carried', 'The buyer is too rich', 'There is no problem'), 'Barter goods are often hard to divide.'),
     Q('How does money solve the problems of barter?', 'It gives a common value and is easy to carry', w('MT_BARTER_NO_PROBLEM', 'It makes goods heavier', 'It makes people swap more goods each day', 'It makes goods rot'), 'Money measures value and is easy to carry and divide.'),
     Q('A shopper pays 50 shillings for bread and gets change. Is this barter?', 'No, money is used', w('MT_BARTER_MONEY', 'Yes, because goods are given', 'Yes, because she got change', 'Yes, because there is a shop'), 'Barter uses no money.'),
     Q('Which is a good point about barter in rural areas?', 'It can work when people have little cash', w('MT_BARTER_NO_PROBLEM', 'It never has any problems', 'It always gives a fair price', 'It lasts for ever'), 'Barter can help when cash is scarce, but it has limits.'),
@@ -182,7 +182,7 @@ export const FAMILIES = [
   fam('cs.me.story', `${CS}CS_MEANING`, 'word', 2, choose([
     Q('A class plants trees along a path where a school stream floods. Which need do they meet?', 'Protecting the environment', w('CS_NEED_WANT', 'Having fun in class all day long', 'Winning a prize', 'Getting free time'), 'They protect the land.'),
     Q('Which project meets a real need?', 'Repairing the school water tank', w('CS_NEED_WANT', 'Buying toys for the class', 'Painting the football for fun', 'Planning a long picnic'), 'The tank is a real need.'),
-    Q('A learner says CSL is only a punishment. What is a better reply?', 'It is learning by helping the community', w('CS_JUST_WORK', 'You are right', 'It is a test', 'You are right, it is a punishment'), 'CSL is chosen and planned.'),
+    Q('A learner says CSL is only a punishment. What is a better reply?', 'It is learning by helping the community', w('CS_JUST_WORK', 'It is for learners who misbehave', 'It is a test', 'You are right, it is a punishment'), 'CSL is chosen and planned.'),
     Q('The class cleans the village market. What do learners gain?', 'Teamwork and responsibility', w('CS_JUST_WORK', 'Nothing at all', 'Only free time after school', 'Only money'), 'CSL builds values.'),
     Q('How does CSL strengthen the school and community?', 'They work together on needs', w('CS_JUST_WORK', 'They stay apart from each other', 'They compete', 'They avoid each other'), 'Working together builds bonds.'),
   ], { h: ['Is the project meeting a real need?', 'Real needs, skills and values.'], s1: 'Ask what need the project meets.' }), 'b'),

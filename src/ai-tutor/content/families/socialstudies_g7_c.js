@@ -19,8 +19,8 @@ const timeCase = (deg, east, base, label) => {
   return Q(`It is ${base[1]} at Greenwich (0 degrees). What is the time at ${label}, ${deg} degrees ${east ? 'east' : 'west'}?`, right, wr.map(([t, c]) => `${t}|${c}`),
     `${deg} degrees is ${deg / 15} hour${deg === 15 ? '' : 's'} (15 degrees make one hour). Places to the ${east ? 'east are ahead, so we add' : 'west are behind, so we subtract'}.`);
 };
-const EAST = [[30, 'a town in Egypt'], [45, 'a town on the Red Sea coast'], [60, 'a city in the Gulf'], [75, 'a city in India'], [90, 'a place far east in Asia'], [45, 'a port in Somalia']];
-const WEST = [[15, 'a town in Mali'], [30, 'a ship in the Atlantic'], [45, 'a city in Brazil'], [60, 'an island in the Caribbean'], [75, 'a city on the United States coast'], [30, 'an island in mid-Atlantic']];
+const EAST = [[30, 'a town in Egypt'], [45, 'a city in Iraq'], [60, 'a town in eastern Iran'], [75, 'a city in India'], [90, 'a city in Bangladesh'], [45, 'a port in Somalia']];
+const WEST = [[15, 'a town in Senegal'], [30, 'a ship in the Atlantic'], [45, 'a city in Brazil'], [60, 'an island in the Caribbean'], [75, 'a city on the United States coast'], [30, 'an island in mid-Atlantic']];
 const eastCases = EAST.map(([d, l], i) => timeCase(d, true, BASES[i % 4], l));
 const westCases = WEST.map(([d, l], i) => timeCase(d, false, BASES[(i + 1) % 4], l));
 const DIFF = [[15, 45, 'A', 'B', 2], [30, 60, 'A', 'B', 2], [0, 60, 'A', 'B', 4], [45, 75, 'A', 'B', 2], [15, 90, 'A', 'B', 5]];
@@ -50,7 +50,7 @@ export const FAMILIES = [
     Q('A textbook written in 2024 about the 1884 Berlin Conference is which source?', 'Secondary', w('HI_NEW_PRIMARY', 'Primary', 'An oral source', 'A fossil'), 'The author was not there, so it is secondary.'),
     Q('Which of these is a primary source?', 'A letter written by a chief in 1900', w('HI_NEW_PRIMARY', 'A history book published last year', 'An encyclopaedia entry', 'A documentary made in 2020'), 'The chief wrote it at the time.'),
     Q('Which of these is a secondary source?', 'A documentary about the independence struggle', w('HI_PHOTO_SECONDARY', 'A diary of an activist from 1960', 'A treaty signed in 1895', 'A photograph taken in 1963'), 'A documentary is made later by people who were not there.'),
-    Q('A photograph taken at Uhuru Park in 1963 is which source?', 'Primary', w('HI_PHOTO_SECONDARY', 'Secondary', 'Oral', 'Archaeological'), 'It was made at the time.'),
+    Q('A photograph taken at Uhuru Gardens in 1963 is which source?', 'Primary', w('HI_PHOTO_SECONDARY', 'Secondary', 'Oral', 'Archaeological'), 'It was made at the time.'),
   ], { h: ['Primary means made at the time by someone there.', 'Secondary means written later.'], s1: 'Ask: was the writer there?' })),
   fam('hi.pr.story', `${HI}HI_PRIMARY`, 'word', 2, choose([
     Q('A learner finds a letter that her grandfather wrote in 1963. Which source is it?', 'A primary source', w('HI_PHOTO_SECONDARY', 'A secondary source', 'A fossil', 'A story only'), 'Her grandfather wrote it at the time.'),
@@ -86,7 +86,7 @@ export const FAMILIES = [
   ], { h: ['Think of where soil and water were good.', 'Nile, Ethiopian highlands, West African savanna.'], s1: 'Think of soil, water and region.' })),
   fam('ea.wh.story', `${EA}EA_WHERE`, 'word', 2, choose([
     Q('A learner says early farming in Africa began only along the Nile. What is a better reply?', 'It began in other places too, such as Ethiopia', w('EA_EAST_ONLY', 'The learner is right about all of this', 'It began in Antarctica', 'It never began anywhere in all of Africa'), 'Farming began in several regions.'),
-    Q('Which animal was among those reared early in Africa?', 'Cattle', w('EA_DRY_FARM', 'Horses from Europe', 'Camels from Australia', 'Llamas'), 'Cattle, sheep and goats were reared early.'),
+    Q('Which animal was among those reared early in Africa?', 'Cattle', w('EA_DRY_FARM', 'Llamas', 'Reindeer', 'Yaks'), 'Cattle, sheep and goats were reared early.'),
     Q('Why were river valleys good places for early farming?', 'They had water and fertile soil', w('EA_DRY_FARM', 'They had no water in the valley', 'They had only rock', 'They were always dry'), 'Water and soil made farming possible.'),
     Q('Sorghum and millet were first grown in which region?', 'The West African savanna and the Sahel', w('EA_EAST_ONLY', 'The Nile delta only', 'The Atlas Mountains of the north', 'The Namib Desert'), 'Sorghum and millet came from the savanna.'),
     Q('Which is a result of taming wild animals?', 'People had a steady supply of meat and milk', w('EA_DRY_FARM', 'People had to move to a new place every day', 'Animals disappeared', 'People stopped eating'), 'Domestic animals gave steady food.'),

@@ -12,7 +12,11 @@
   "help": "Ask the child to name three things a classmate does well that are not on stage.",
   "feedback": "Abilities are many: listening, counting, fixing things, leading and caring all count, not only prizes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES.M_SE_INTEREST_ABILITY": {
   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_ABILITIES",
@@ -27,7 +31,11 @@
   "help": "Ask: can you like something you cannot yet do well?",
   "feedback": "An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_VALUES_THINGS": {
   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES",
@@ -42,7 +50,11 @@
   "help": "Ask the child what a person does when they find a lost wallet.",
   "feedback": "A value is a belief about what is right, such as honesty. It is not something you own.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES.M_SE_VALUES_PEER": {
   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_VALUES",
@@ -57,7 +69,11 @@
   "help": "Ask what happens to trust if Kevin copies once.",
   "feedback": "A steady person keeps his values even when friends push him to do wrong.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_ANGER_BAD": {
   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS",
@@ -72,7 +88,11 @@
   "help": "Ask what Wanjiru does when she feels angry at a friend.",
   "feedback": "Feeling angry is normal. What matters is what you do with it: calm down first, then speak.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS.M_SE_REVENGE": {
   "skill": "SOCI.G7.SOCIAL.SELF_EXPLORATION.SE_EMOTIONS",
@@ -87,7 +107,11 @@
   "help": "Ask what happens to the friendship after the pencil is broken.",
   "feedback": "Hitting back makes things worse. Breathe, calm down and talk about it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_CAPITAL_ONLY": {
   "skill": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY",
@@ -102,7 +126,11 @@
   "help": "Ask: if nobody wants the product, can money save the business?",
   "feedback": "Money helps, but a business begins with a need that people have and a plan to meet it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY.M_EO_SOCIAL_PROFIT": {
   "skill": "SOCI.G7.SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY",
@@ -117,7 +145,11 @@
   "help": "Ask what a youth group that recycles plastic into bricks gains and gives.",
   "feedback": "A social entrepreneur earns by solving a community problem, such as turning litter into useful goods.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_SAME_STORY": {
   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL",
@@ -132,7 +164,11 @@
   "help": "Ask the child to tell the story from their home community and compare it with a classmate.",
   "feedback": "Each community has its own story of origin. They may share ideas but they are not the same.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL.M_HO_STORY_FALSE": {
   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL",
@@ -147,7 +183,11 @@
   "help": "Ask how the child would feel if their own story were laughed at.",
   "feedback": "These stories carry the beliefs and values of a people. We listen to them with respect.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_ADAM_ONLY": {
   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS",
@@ -162,7 +202,11 @@
   "help": "Ask the child what Adam is called in the Bible and in the Qur'an.",
   "feedback": "Both Christianity and Islam tell of Adam, the first man, made by God (Allah).",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS.M_HO_NO_COMMON": {
   "skill": "SOCI.G7.PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS",
@@ -177,7 +221,11 @@
   "help": "Ask the child to list who made people, and who the first people were, in two stories.",
   "feedback": "Many stories share a creator, a first man and woman and a purpose for people.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_NILE_EVERY": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS",
@@ -192,7 +240,11 @@
   "help": "Ask where the Nile flows and where Great Zimbabwe stood.",
   "feedback": "The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS.M_EC_WHITE_BUILT": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_FACTORS",
@@ -207,7 +259,11 @@
   "help": "Ask which people live around the site today.",
   "feedback": "Great Zimbabwe was built by Africans. Its builders were the ancestors of the Shona.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_EGYPT_WEST": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE",
@@ -222,7 +278,11 @@
   "help": "Ask which sea lies to the north of Egypt.",
   "feedback": "Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE.M_EC_KONGO_NORTH": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_LOCATE",
@@ -237,7 +297,11 @@
   "help": "Ask which kingdom lay at the mouth of the Congo River.",
   "feedback": "Great Zimbabwe was in southern Africa. The Kingdom of Kongo was near the mouth of the Congo River.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_MIX_GIFT": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB",
@@ -252,7 +316,11 @@
   "help": "Ask which kingdom is famous for stone walls without mortar.",
   "feedback": "Egypt gave hieroglyphs and papyrus. Great Zimbabwe is famous for its stone building.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB.M_EC_NO_GIFT": {
   "skill": "SOCI.G7.PEOPLE.EARLY_CIVILISATION.EC_CONTRIB",
@@ -267,7 +335,11 @@
   "help": "Ask where the 365-day calendar began.",
   "feedback": "Ideas from Egypt, Zimbabwe and Kongo, such as writing, a calendar and metal work, are still used today.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_ONLY_PAST": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS",
@@ -282,7 +354,11 @@
   "help": "Ask what child labour and trafficking take away from a person.",
   "feedback": "Slavery in new forms still exists, such as trafficking and forced labour. Each takes away freedom and dignity.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS.M_SL_SERVANT_PAID": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS",
@@ -297,7 +373,11 @@
   "help": "Ask: if a worker may leave, is she a slave?",
   "feedback": "Servitude means a person is forced and cannot leave. Hard work that a person chooses is not servitude.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_ONLY_EUROPE": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN",
@@ -312,7 +392,11 @@
   "help": "Ask which ocean is named in the trade.",
   "feedback": "The Indian Ocean trade involved traders from Arabia, the coast and inland leaders. It was separate from the Atlantic trade.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN.M_SL_NO_DEMAND": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN",
@@ -327,7 +411,11 @@
   "help": "Ask where cloves were grown near Zanzibar and who worked there.",
   "feedback": "Most captives were taken to work on plantations, in homes, in ships and as soldiers.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child thinks captives were bought for food or sport; the trade was for labour."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_ATLANTIC_MIX": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT",
@@ -342,7 +430,11 @@
   "help": "Ask which ocean lies on the east of Africa.",
   "feedback": "The Indian Ocean trade carried people east and north to Arabia, India and islands. The Atlantic trade went to the Americas.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT.M_SL_WEST_COAST": {
   "skill": "SOCI.G7.PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT",
@@ -357,7 +449,11 @@
   "help": "Ask which coast faces the Indian Ocean.",
   "feedback": "The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_BARTER_NO_PROBLEM": {
   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE",
@@ -372,7 +468,11 @@
   "help": "Ask Nyambura how she can buy cloth if the seller does not want her maize.",
   "feedback": "Barter needs both people to want what the other has. That is hard, which is why money was needed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE.M_MT_BARTER_MONEY": {
   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE",
@@ -387,7 +487,11 @@
   "help": "Ask what Mwangi gives the fisherman for fish when he has no coins.",
   "feedback": "Barter is swapping goods for goods with no money.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_COINS_FIRST": {
   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY",
@@ -402,7 +506,11 @@
   "help": "Ask what Kenyans on the coast used to trade for goods long ago.",
   "feedback": "Cowrie shells, beads, salt and iron tools were used long before coins and notes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY.M_MT_ALL_GOOD": {
   "skill": "SOCI.G7.PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY",
@@ -417,7 +525,11 @@
   "help": "Ask what happens to a person who borrows money and cannot pay.",
   "feedback": "Money made trade easy, but it also brought debt and a gap between rich and poor.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_ONLY_TRIBE": {
   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS",
@@ -432,7 +544,11 @@
   "help": "Ask the child how two classmates from the same community may still differ.",
   "feedback": "People differ in many ways: age, gender, religion, language and ability, as well as ethnic group.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS.M_DV_DIFFERENT_WORSE": {
   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS",
@@ -447,7 +563,11 @@
   "help": "Ask the child what a new classmate with a different language can teach the class.",
   "feedback": "Differences enrich our society. Every person deserves respect.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_ASSERT_RUDE": {
   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS",
@@ -462,7 +582,11 @@
   "help": "Ask the child to refuse a bad request politely and firmly.",
   "feedback": "Assertive means saying what you think or need clearly and respectfully, without hurting others.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS.M_DV_EMPATHY_PITY": {
   "skill": "SOCI.G7.PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS",
@@ -477,7 +601,11 @@
   "help": "Ask what Achieng does when a classmate is crying.",
   "feedback": "Empathy is trying to understand how another person feels and responding kindly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_PEACE_WEAK": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES",
@@ -492,7 +620,11 @@
   "help": "Ask whether it takes courage to forgive.",
   "feedback": "A peaceful person is strong. It takes courage to forgive and to talk instead of fight.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES.M_PE_REVENGE_FAIR": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES",
@@ -507,7 +639,11 @@
   "help": "Ask what happens after both people insult each other.",
   "feedback": "Revenge keeps the quarrel going. A peaceful person speaks calmly and forgives.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_FAIR_SKIP": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS",
@@ -522,7 +658,11 @@
   "help": "Ask what happens when one village is given all the water.",
   "feedback": "When resources are shared fairly, there is less to quarrel about, and peace lasts.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS.M_PE_ARMS_PEACE": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS",
@@ -537,7 +677,11 @@
   "help": "Ask what dialogue between two clans can solve that a gun cannot.",
   "feedback": "Weapons make fear. Dialogue, justice and the law build peace.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Possible as a fear-based idea, but the options (buying weapons) are mostly trap options. Teacher to say if it is heard in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_TAKE_SIDES": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE",
@@ -552,7 +696,11 @@
   "help": "Ask why a referee in football should not support one team.",
   "feedback": "A mediator is neutral. He helps both sides find an agreement.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE.M_PE_SOLVE_FIRST": {
   "skill": "SOCI.G7.PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE",
@@ -567,7 +715,11 @@
   "help": "Ask what would happen if the teacher decided without hearing both learners.",
   "feedback": "First stay calm and listen to each side. Solutions come after.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_JUST_WORK": {
   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING",
@@ -582,7 +734,11 @@
   "help": "Ask what the learners learn when they plant trees in the village.",
   "feedback": "CSL means learning through serving a community need. It is chosen, not a punishment.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING.M_CS_NEED_WANT": {
   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING",
@@ -597,7 +753,11 @@
   "help": "Ask the child who in the community benefits from the project.",
   "feedback": "A need is a gap that the community must fill, such as clean water. It is not a wish for a new game.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_ACT_FIRST": {
   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS",
@@ -612,7 +772,11 @@
   "help": "Ask what might go wrong if the class started to dig before they knew what was needed.",
   "feedback": "First find the need. Then plan, act, and reflect.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS.M_CS_NO_REPORT": {
   "skill": "SOCI.G7.COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS",
@@ -627,7 +791,11 @@
   "help": "Ask what the class can improve next time.",
   "feedback": "Reporting and reflecting is the last step. It shows what worked and what to improve.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_ONLY_BOOKS": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES",
@@ -642,7 +810,11 @@
   "help": "Ask where the history of the community was kept before writing.",
   "feedback": "History comes from many sources: oral stories, objects, buildings, writings and pictures.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES.M_HI_ARCH_ORAL": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_SOURCES",
@@ -657,7 +829,11 @@
   "help": "Ask: do you hear or dig the evidence?",
   "feedback": "Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_NEW_PRIMARY": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY",
@@ -672,7 +848,11 @@
   "help": "Ask whether the author was at the conference.",
   "feedback": "The author was not there, so the book is secondary. A primary source was made at the time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY.M_HI_PHOTO_SECONDARY": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRIMARY",
@@ -687,7 +867,11 @@
   "help": "Ask who wrote the diary and when.",
   "feedback": "The soldier wrote it at the time, so it is primary.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_ORAL_LOST": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE",
@@ -702,7 +886,11 @@
   "help": "Ask how a grandmother passes on a proverb.",
   "feedback": "Oral history is kept in songs, proverbs and stories, and now recorded on audio and video.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children hear oral history all the time and do not usually think it cannot be kept."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE.M_HI_KEEP_OUTSIDE": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_INFORMATION.HI_PRESERVE",
@@ -717,7 +905,11 @@
   "help": "Ask what rain and sun do to old paper.",
   "feedback": "Museums and archives protect old things from damage, so that people can study them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child thinks objects keep best in the open."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_EAST_ONLY": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE",
@@ -732,7 +924,11 @@
   "help": "Ask where teff and coffee come from.",
   "feedback": "Early farming also began in the Ethiopian highlands and in the West African savanna.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE.M_EA_DRY_FARM": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE",
@@ -747,7 +943,11 @@
   "help": "Ask what a plant needs to grow.",
   "feedback": "Fertile soil and water made early farming possible.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child thinks farming began in the driest places."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_FLOOD_BAD": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE",
@@ -762,7 +962,11 @@
   "help": "Ask why Egyptian farmers waited for the flood each year.",
   "feedback": "The flood left rich silt that made the fields very fertile.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE.M_EA_NO_SURPLUS": {
   "skill": "SOCI.G7.NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE",
@@ -777,7 +981,11 @@
   "help": "Ask who feeds the builder if he does not farm.",
   "feedback": "A surplus fed people who did not farm, so skills such as writing and building grew.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_BIGGEST": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA",
@@ -792,7 +1000,11 @@
   "help": "Ask which continent is bigger than Africa.",
   "feedback": "Asia is the largest continent. Africa is the second largest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA.M_MM_EQUATOR_SIDE": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_AFRICA",
@@ -807,7 +1019,11 @@
   "help": "Ask which country on the equator the child knows.",
   "feedback": "The equator runs through the middle of Africa, through Kenya, Uganda and Gabon.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_LAT_LON_SWAP": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG",
@@ -822,7 +1038,11 @@
   "help": "Ask which lines run east to west.",
   "feedback": "Latitude measures north and south of the equator. Longitude measures east and west.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG.M_MM_NEGATIVE_HEM": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_LATLONG",
@@ -837,7 +1057,11 @@
   "help": "Ask which side of the equator south is.",
   "feedback": "South latitudes lie south of the equator, in the southern hemisphere.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_EAST_BEHIND": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME",
@@ -852,7 +1076,11 @@
   "help": "Ask where the sun rises first, east or west.",
   "feedback": "The sun rises in the east first, so eastern places are ahead and we add the time.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME.M_MM_DEGREE_HOUR": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_TIME",
@@ -867,7 +1095,11 @@
   "help": "Ask: 360 degrees in 24 hours is how many degrees an hour?",
   "feedback": "The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_SAHARA_COLD": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES",
@@ -882,7 +1114,11 @@
   "help": "Ask which desert lies in the north of Africa.",
   "feedback": "The Sahara in the north is the largest hot desert. The Kalahari and Namib are in the south.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES.M_MM_KENYA_HIGHEST": {
   "skill": "SOCI.G7.NATURA.MAPS_AND_MAP_WORK.MM_FEATURES",
@@ -897,7 +1133,11 @@
   "help": "Ask which country holds Kilimanjaro.",
   "feedback": "Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_FLAT": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE",
@@ -912,7 +1152,11 @@
   "help": "Ask why a ship seems to sink behind the horizon.",
   "feedback": "The earth is almost round. We see ships disappear hull first.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Vosniadou, S. and Brewer, W. (1992), Mental models of the earth: a study of conceptual change in childhood, Cognitive Psychology 24: children form flat and dual-earth models."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE.M_ES_THIRD_SUN": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE",
@@ -927,7 +1171,11 @@
   "help": "Ask the child to list Mercury, Venus, then the earth.",
   "feedback": "The earth is the third planet from the Sun, after Mercury and Venus.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_SUN_MOVES": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION",
@@ -942,7 +1190,11 @@
   "help": "Ask which side of the earth faces the Sun at noon.",
   "feedback": "The earth rotates once every 24 hours, so each side faces the Sun in turn.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Baxter, J. (1989), Children's understanding of familiar astronomical events, International Journal of Science Education 11: children explain day and night by the Sun moving."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION.M_ES_SEASON_DISTANCE": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION",
@@ -957,7 +1209,11 @@
   "help": "Ask why it is winter in the south when it is summer in the north.",
   "feedback": "The tilt of the axis and the revolution round the Sun give the seasons, not distance.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Schneps, M. and Sadler, P. (1987), A Private Universe, Harvard-Smithsonian Center for Astrophysics: even graduates say the seasons come from the earth's distance from the Sun."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_CORE_COLD": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE",
@@ -972,7 +1228,11 @@
   "help": "Ask what comes out of a volcano.",
   "feedback": "The inner core is solid iron and nickel and is the hottest part.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE.M_ES_CRUST_THICK": {
   "skill": "SOCI.G7.NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE",
@@ -987,7 +1247,11 @@
   "help": "Ask the child to compare an apple's skin with its flesh.",
   "feedback": "The crust is the thinnest layer. It is like the skin of an apple.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_TEMP_BAROMETER": {
   "skill": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS",
@@ -1002,7 +1266,11 @@
   "help": "Ask what a thermometer measures.",
   "feedback": "A barometer measures air pressure. A thermometer measures temperature.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS.M_WE_WEATHER_CLIMATE": {
   "skill": "SOCI.G7.NATURA.WEATHER.WE_ELEMENTS",
@@ -1017,7 +1285,11 @@
   "help": "Ask whether one sunny day tells us Nairobi's climate.",
   "feedback": "Weather is for a short time. Climate is the average pattern over many years.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_RIVER_CROSS": {
   "skill": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE",
@@ -1032,7 +1304,11 @@
   "help": "Ask why tall trees attract lightning.",
   "feedback": "In lightning, go indoors. Tall trees and open fields are dangerous.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE.M_WE_FORECAST_USELESS": {
   "skill": "SOCI.G7.NATURA.WEATHER.WE_SIGNIFICANCE",
@@ -1047,7 +1323,11 @@
   "help": "Ask what a farmer does if heavy rain is coming at harvest.",
   "feedback": "Forecasts help farmers and others to plan, though they can sometimes be wrong.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_QUESTION_OBS": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS",
@@ -1062,7 +1342,11 @@
   "help": "Ask: do we ask someone or do we watch and count?",
   "feedback": "Watching and counting is observation. Asking a person is an interview.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_METHODS.M_FW_OPINION_OBS": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_METHODS",
@@ -1077,7 +1361,11 @@
   "help": "Ask: can you see an opinion?",
   "feedback": "Opinions must be asked for, with an interview or questionnaire.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_IGNORE_RISK": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES",
@@ -1092,7 +1380,11 @@
   "help": "Ask where a driver can see a learner clearly.",
   "feedback": "Stay in a safe place with a teacher. Road safety comes first.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A behaviour option (standing in the road). Children know it is unsafe; do not report it as a misconception."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES.M_FW_NO_PERMISSION": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_CHALLENGES",
@@ -1107,7 +1399,11 @@
   "help": "Ask how the owner might feel if a stranger shouted questions.",
   "feedback": "Greet, explain your task and ask permission first. This shows respect.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_MEAN_MEDIAN": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS",
@@ -1122,7 +1418,11 @@
   "help": "Ask the child to write the numbers in order first.",
   "feedback": "Put the numbers in order first, then take the middle one. The median of 2, 4, 5, 7, 9 is 5.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS.M_FW_MODE_MEAN": {
   "skill": "SOCI.G7.NATURA.FIELDWORK.FW_ANALYSIS",
@@ -1137,7 +1437,11 @@
   "help": "Ask the child to count how many times each value appears.",
   "feedback": "The mode is the value that occurs most often. The mean is the total divided by the number of values.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_ASK_AFRICANS": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE",
@@ -1152,7 +1456,11 @@
   "help": "Ask who was at the table in Berlin.",
   "feedback": "European powers decided. No African leaders were at the table.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE.M_PD_MISSION_ONLY": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE",
@@ -1167,7 +1475,11 @@
   "help": "Ask what a mission station gave local people and what it gave the colonial power.",
   "feedback": "Missionaries brought schools and religion, and in many places they prepared the way for colonial rule.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_BERLIN_DIVIDED": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN",
@@ -1182,7 +1494,11 @@
   "help": "Ask whether anyone had surveyed Africa at the time.",
   "feedback": "Berlin set the rules, such as effective occupation. Borders were drawn after, by agreements.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN.M_PD_BERLIN_AFRICANS": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN",
@@ -1197,7 +1513,11 @@
   "help": "Ask the child what that means for African views.",
   "feedback": "No African leaders were invited.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_ALL_GOOD": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS",
@@ -1212,7 +1532,11 @@
   "help": "Ask who the railways were built to serve.",
   "feedback": "Colonial rule took land and independence. Roads and railways mainly served colonial interests.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS.M_PD_BORDERS_FAIR": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS",
@@ -1227,7 +1551,11 @@
   "help": "Ask which communities live in two countries today.",
   "feedback": "Colonial borders cut across communities and joined some who were not close.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_NEO_SAME": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO",
@@ -1242,7 +1570,11 @@
   "help": "Ask who runs the country when it owes a great debt.",
   "feedback": "In neo-colonialism a country is free in name but still controlled through money and trade.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO.M_PD_NEO_CORRUPT": {
   "skill": "SOCI.G7.POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO",
@@ -1257,7 +1589,11 @@
   "help": "Ask what bribes do to a country's resources.",
   "feedback": "Honest and accountable government keeps a country's resources for its people.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. A child is unlikely to believe corruption ends neo-colonialism."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_AUTHORITY": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE",
@@ -1272,7 +1608,11 @@
   "help": "Ask who must obey the Constitution.",
   "feedback": "The Constitution is supreme. Everyone, including the President, must obey it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE.M_CK_DATE_MIX": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE",
@@ -1287,7 +1627,11 @@
   "help": "Ask what happened on 12 December 1963.",
   "feedback": "The current Constitution was promulgated on 27 August 2010. Kenya became independent on 12 December 1963.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_BRIBE_OK": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD",
@@ -1302,7 +1646,11 @@
   "help": "Ask what integrity means.",
   "feedback": "Bribes break the rule of law and integrity.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD.M_CK_ONLY_LEADERS": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD",
@@ -1317,7 +1665,11 @@
   "help": "Ask what a learner can do.",
   "feedback": "Every citizen has a duty to uphold the Constitution.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_VALUE_MIX": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES",
@@ -1332,7 +1684,11 @@
   "help": "Ask for a value from the list in Article 10.",
   "feedback": "Integrity is a national value. Wealth is not one.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Wealth and fame are named as wrong values to make the right one stand out."
+  }
  },
  "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES.M_CK_PATRIOT_BLIND": {
   "skill": "SOCI.G7.POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES",
@@ -1347,7 +1703,11 @@
   "help": "Ask how a good citizen can love Kenya and respect Uganda.",
   "feedback": "Patriotism is love and loyalty to your country. It does not mean hating others.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_VOTE_SOCIAL": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY",
@@ -1362,7 +1722,11 @@
   "help": "Ask which rights relate to elections.",
   "feedback": "The right to vote is political. Education is a social right.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY.M_HR_UDHR_KENYA": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_CLASSIFY",
@@ -1377,7 +1741,11 @@
   "help": "Ask which body began with the word African.",
   "feedback": "The Universal Declaration of Human Rights was adopted by the United Nations in 1948.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_EQUAL_EQUITY": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY",
@@ -1392,7 +1760,11 @@
   "help": "Ask what a learner who cannot see the board needs.",
   "feedback": "Equality gives the same. Equity gives what each person needs to be treated fairly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY.M_HR_EARNED": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_EQUITY",
@@ -1407,7 +1779,11 @@
   "help": "Ask if a child who breaks a rule loses the right to food.",
   "feedback": "Human rights are inalienable. They belong to everyone and cannot be earned or taken away.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_JOIN_TEASE": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION",
@@ -1422,7 +1798,11 @@
   "help": "Ask how the classmate feels.",
   "feedback": "Stand by the classmate and speak up. Teasing breaks human dignity.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "This is a behaviour, not a belief. A child who teases does not usually hold a wrong idea about rights. A teacher should decide whether it is reported."
+  }
  },
  "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION.M_HR_NOT_MY_BUSINESS": {
   "skill": "SOCI.G7.POLITI.HUMAN_RIGHTS.HR_ACTION",
@@ -1437,7 +1817,11 @@
   "help": "Ask what a learner can do in class.",
   "feedback": "Everyone can protect rights, including children.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_ALL_VOLUNTARY": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS",
@@ -1452,7 +1836,11 @@
   "help": "Ask whether captives chose to board the ships.",
   "feedback": "Many were taken by force in the slave trades. Others moved later for work and study.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS.M_AD_DIASPORA_WORD": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_FACTORS",
@@ -1467,7 +1855,11 @@
   "help": "Ask where the diaspora lives.",
   "feedback": "A diaspora is a people living outside their original homeland.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_NO_AMERICAS": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE",
@@ -1482,7 +1874,11 @@
   "help": "Ask which countries are named for the Caribbean.",
   "feedback": "Large diasporas lived in the Americas, as in Brazil, the United States and Jamaica.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option made of obviously wrong places (Antarctica, Australia). Not a child idea."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE.M_AD_JAMAICA_ASIA": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_LOCATE",
@@ -1497,7 +1893,11 @@
   "help": "Ask which ocean lies around Jamaica.",
   "feedback": "Jamaica is an island in the Caribbean Sea, in the Americas.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_NO_ROLE": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE",
@@ -1512,7 +1912,11 @@
   "help": "Ask who organised Pan-African congresses.",
   "feedback": "Leaders in the diaspora spread the idea of unity and supported the call for independence.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE.M_AD_PAN_MEANING": {
   "skill": "SOCI.G7.POLITI.AFRICAN_DIASPORAS.AD_ROLE",
@@ -1527,7 +1931,11 @@
   "help": "Ask what pan means.",
   "feedback": "Pan-Africanism is the idea that Africans share a cause and should unite.",
   "source": "To confirm by a teacher: history and the accounts of peoples are told differently by different sources; the author wrote the commonly taught version.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_SELF_SUFFICIENT": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP",
@@ -1542,7 +1950,11 @@
   "help": "Ask where Kenya's oil comes from.",
   "feedback": "No country has everything, so countries trade and depend on each other.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP.M_CZ_INTERDEP_LOSS": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_INTERDEP",
@@ -1557,7 +1969,11 @@
   "help": "Ask who gains from Kenya's tea.",
   "feedback": "Interdependence means countries need each other and both benefit.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_GLOBAL_ALL_GOOD": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL",
@@ -1572,7 +1988,11 @@
   "help": "Ask what happens to local shops when cheap imports flood in.",
   "feedback": "Globalisation can harm local culture and small firms.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL.M_CZ_GLOBAL_ONLINE": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_GLOBAL",
@@ -1587,7 +2007,11 @@
   "help": "Ask which other things link countries.",
   "feedback": "Globalisation links countries through trade, travel, money and the internet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_LOYAL_LOSS": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN",
@@ -1602,7 +2026,11 @@
   "help": "Ask what Kenyan peacekeepers do for the world.",
   "feedback": "A global citizen helps the world and stays loyal to his own country.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN.M_CZ_ONLY_RICH": {
   "skill": "SOCI.G7.POLITI.CITIZENSHIP.CZ_CITIZEN",
@@ -1617,6 +2045,10 @@
   "help": "Ask what a learner can do for the environment.",
   "feedback": "Anyone can be a global citizen by caring for others and the world.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 7 learner could plausibly make. No source and no homework count; a Kenyan Social Studies teacher should say whether it comes up in class."
+  }
  }
 }
