@@ -38,6 +38,7 @@ export default {
   'creativearts_g6_c.js': 'creativearts_g6_signed.js',
   'creativearts_g7_a.js': 'creativearts_g7_signed.js',
   'creativearts_g7_b.js': 'creativearts_g7_signed.js',
+  'creativearts_g8_a.js': 'creativearts_g8_signed.js',
   'eng_g5_lang.js': 'eng_signed.js',
   'eng_g5_reading.js': 'eng_signed.js',
   'eng_g5_vocab.js': 'eng_signed.js',

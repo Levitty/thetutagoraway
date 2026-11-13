@@ -11,6 +11,7 @@ import creativearts_g4 from './creativearts_g4.js';
 import creativearts_g5 from './creativearts_g5.js';
 import creativearts_g6 from './creativearts_g6.js';
 import creativearts_g7 from './creativearts_g7.js';
+import creativearts_g8 from './creativearts_g8.js';
 import english_g4 from './english_g4.js';
 import english_g5 from './english_g5.js';
 import english_g6 from './english_g6.js';
@@ -50,6 +51,7 @@ export const ENTRIES = [
   creativearts_g5,
   creativearts_g6,
   creativearts_g7,
+  creativearts_g8,
   english_g4,
   english_g5,
   english_g6,
