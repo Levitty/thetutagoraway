@@ -1885,11 +1885,11 @@
      "error": "Thinks values are the same as rules or punishments.",
      "example": {
       "question": "Which is a value of a school?",
-      "wrong_answer": "The cane",
+      "wrong_answer": "The school gate",
       "correct_answer": "Respect"
      },
      "cause": "The child links school with rules and punishments.",
-     "reveals": "Offer \"The cane\" next to the right answer and ask the question again in a new context.",
+     "reveals": "Offer \"The school gate\" next to the right answer and ask the question again in a new context.",
      "help": "Ask the child what a value is: a good idea that guides us, even without a teacher watching.",
      "feedback": "A value is a belief about what is good, such as respect or honesty. Rules and punishments are different.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
@@ -2892,7 +2892,7 @@
      },
      "cause": "The child links order with punishment.",
      "reveals": "Offer \"Fear of strict punishment\" next to the right answer and ask the question again in a new context.",
-     "help": "Compare a class that is quiet for the cane and a class that is kind by choice.",
+     "help": "Compare a class that is quiet through fear and a class that is kind by choice.",
      "feedback": "Peace grows from respect, fairness, sharing and forgiveness, not from fear.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
      "status": "draft"
@@ -3641,11 +3641,11 @@
      "error": "Thinks the Children's Government can punish or cane learners.",
      "example": {
       "question": "Which is NOT a duty of the Children's Government?",
-      "wrong_answer": "Caning learners who are late",
+      "wrong_answer": "Punishing learners who are late",
       "correct_answer": "Passing learners' worries to the teachers"
      },
      "cause": "The child links prefects with punishing.",
-     "reveals": "Offer \"Caning learners who are late\" next to the right answer and ask the question again in a new context.",
+     "reveals": "Offer \"Punishing learners who are late\" next to the right answer and ask the question again in a new context.",
      "help": "Ask what a prefect can do kindly: remind, report, help.",
      "feedback": "The Children's Government helps keep order but does not punish. Teachers handle punishment.",
      "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",

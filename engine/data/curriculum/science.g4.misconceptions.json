@@ -12,7 +12,11 @@
   "help": "Plant a bean seed in a cup and look at it every day: it grows and bends to the window without walking.",
   "feedback": "Plants are alive even though they do not walk. They grow, make seeds, remove waste, respond to their surroundings and die.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Stavy and Wax (1989), Children's conceptions of plants as living things, Human Development 32: many children do not count plants as alive."
+  }
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_WASTE": {
   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
@@ -27,7 +31,11 @@
   "help": "Say that plants lose water vapour and gases through their leaves and drop old leaves and fruits.",
   "feedback": "Plants also remove waste. They give out waste gases and water through the leaves, and old leaves fall.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS.M_PL_NO_RESPOND": {
   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_LIFE_CHARS",
@@ -42,7 +50,11 @@
   "help": "Turn the cup around and watch the seedling bend back over two days.",
   "feedback": "Plants respond to their surroundings. A seedling grows towards the light, and the touch-me-not folds its leaves when touched.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_ABSORB": {
   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
@@ -57,7 +69,11 @@
   "help": "Put a bean plant in coloured water and see which part first turns colour.",
   "feedback": "The roots take in water and mineral salts from the soil. The leaves make food using sunlight.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_STEM_ONLY_HOLDS": {
   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
@@ -72,7 +88,11 @@
   "help": "Stand a stem of a white flower in coloured water and see the colour climb up the stem.",
   "feedback": "The stem holds the plant up and also carries water and food to the other parts.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS.M_PP_LEAVES_SHADE_ONLY": {
   "skill": "SCIE.G4.LIVING.PLANTS.PLANT_PART_FUNCTIONS",
@@ -87,7 +107,11 @@
   "help": "Cover one leaf with dark paper for a week and look at how it fades.",
   "feedback": "Leaves are the kitchen of the plant. They make food using sunlight.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children say leaves are only for shade; the real slip is not knowing leaves make food."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_REPRODUCE_BIRTH_ONLY": {
   "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
@@ -102,7 +126,11 @@
   "help": "List animals that lay eggs (hen, fish, frog, snake) and animals that give birth (cow, goat, dog).",
   "feedback": "Reproducing is making new animals. Some give birth to live young. Birds, fish, frogs and snakes lay eggs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Kenyan children keep hens and see chicks hatch; \"only live young\" runs against daily life and is mostly a trap option."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_STILL_NOT_ALIVE": {
   "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
@@ -117,7 +145,11 @@
   "help": "Watch a sleeping cat: its sides move as it breathes.",
   "feedback": "An animal that is resting or asleep is still alive. It still breathes and feeds when it wakes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS.M_AN_INSECT_NOT_ANIMAL": {
   "skill": "SCIE.G4.LIVING.ANIMALS.ANIMAL_LIFE_CHARS",
@@ -132,7 +164,11 @@
   "help": "List every living thing in the school compound that is not a plant: ants, birds, worms are animals too.",
   "feedback": "Insects, worms, fish and birds are all animals. An animal is a living thing that feeds and moves and is not a plant.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Bell (1981), When is an animal not an animal?, Journal of Biological Education 15: children keep \"animal\" for large mammals and leave out insects, worms and fish."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_NO_LEGS_INVERT": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
@@ -147,7 +183,11 @@
   "help": "Feel your own backbone, then show a picture of a snake skeleton with its many small bones in a line.",
   "feedback": "A snake has a backbone, with many small bones in a row. So a snake is a vertebrate even without legs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_LEGS_VERTEBRATE": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
@@ -162,7 +202,11 @@
   "help": "Look at a dead grasshopper: legs, but the body is soft inside a hard cover and there is no backbone.",
   "feedback": "A grasshopper has six legs but no backbone, so it is an invertebrate. Legs do not make a vertebrate.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT.M_VS_SHELL_IS_BONE": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_SORT",
@@ -177,7 +221,11 @@
   "help": "Note that a shell is on the outside and a backbone is inside the body along the back.",
   "feedback": "A snail's shell is a hard cover on the outside. A backbone is inside the body. The snail has no backbone, so it is an invertebrate.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_SMALL_INVERT": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
@@ -192,7 +240,11 @@
   "help": "Compare a large earthworm and a tiny chick: the small chick has a backbone and the long worm has none.",
   "feedback": "Size does not matter. A tiny frog or a chick has a backbone, so it is a vertebrate.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WINGS_OR_LEGS_RULE": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
@@ -207,7 +259,11 @@
   "help": "Sort pictures only by the backbone and ignore legs, wings and size.",
   "feedback": "The only rule is the backbone. An animal with no backbone is an invertebrate, whatever its legs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE.M_VR_WATER_RULE": {
   "skill": "SCIE.G4.LIVING.ANIMALS.VERTEBRATE_RULE",
@@ -222,7 +278,11 @@
   "help": "Find crabs, snails and jellyfish among water animals that are invertebrates.",
   "feedback": "Where an animal lives does not decide it. A crab lives in water but has no backbone, so it is an invertebrate.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_WINDPIPE": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
@@ -237,7 +297,11 @@
   "help": "Say the food pipe is for food and the windpipe is for air to the lungs.",
   "feedback": "The oesophagus, also called the food pipe, carries food to the stomach. The windpipe carries air to the lungs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_STOMACH_ALL": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
@@ -252,7 +316,11 @@
   "help": "Say the stomach churns the food and the small intestine takes the good parts into the blood.",
   "feedback": "The stomach churns food into a soft mixture. Most digested food goes into the blood in the small intestine.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS.M_DP_LARGE_INTESTINE_FOOD": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
@@ -267,7 +335,11 @@
   "help": "Say that the small intestine takes the food and the large intestine takes water and leaves the waste.",
   "feedback": "The large intestine takes in water from the leftover food. What is left is waste that leaves through the anus.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_LARGE_BEFORE_SMALL": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
@@ -282,7 +354,11 @@
   "help": "Trace the path with a finger on a body chart: stomach, long small intestine, then large intestine.",
   "feedback": "After the stomach, food goes to the small intestine, and then to the large intestine.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_SMALL_IS_SHORT": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
@@ -297,7 +373,11 @@
   "help": "Measure a long string and say it stands for the small intestine, about six metres in an adult. The large intestine is wider and about 1.5 metres.",
   "feedback": "The small intestine is narrow but very long. The large intestine is wider but shorter.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER.M_DO_STOMACH_FIRST": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
@@ -312,7 +392,11 @@
   "help": "Count the six parts with a finger, mouth to anus.",
   "feedback": "Food passes through the mouth, oesophagus, stomach, small intestine, large intestine and anus. The anus is last.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_ONLY_WASH_FOOD": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
@@ -327,7 +411,11 @@
   "help": "Look at dirty hands under a lens and then at clean ones.",
   "feedback": "Hands carry germs to the mouth. Wash the food and wash your hands with soap before you eat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_SODA_FOR_WATER": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
@@ -342,7 +430,11 @@
   "help": "Compare how much sugar sits in a bottle of soda with a glass of water.",
   "feedback": "Clean water keeps the digestive system working. Soda and sweets are not a replacement for water or a balanced meal.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH.M_DH_UNBOILED_WATER": {
   "skill": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_HEALTH",
@@ -357,7 +449,11 @@
   "help": "Show that clear water can still carry germs we cannot see.",
   "feedback": "Clear water can still hold germs. Boil or treat water before drinking.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_POWDER_LIQUID": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
@@ -372,7 +468,11 @@
   "help": "Look at one grain of sand with a lens: each grain keeps its own shape.",
   "feedback": "Sand pours, but each grain is a small solid with its own shape. Sand is a solid.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Stavy and Stachel (1985), Children's ideas about \"solid\" and \"liquid\", European Journal of Science Education 7: powders are classed with liquids."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_AIR_NOTHING": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
@@ -387,7 +487,11 @@
   "help": "Blow up a balloon and feel it fill: the air takes up room.",
   "feedback": "Air is a gas. A gas is matter. It takes up room even if we cannot see it.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Stavy (1988), Children's conception of gas, International Journal of Science Education 10: gases are not seen as matter."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT.M_SS_SOFT_NOT_SOLID": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATES_SORT",
@@ -402,7 +506,11 @@
   "help": "Squeeze a sponge: it changes shape but keeps its own shape and does not flow.",
   "feedback": "A sponge is soft but it keeps its own shape, so it is a solid.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_LIQUID_OWN_SHAPE": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
@@ -417,7 +525,11 @@
   "help": "Pour the same water into three different containers and draw its shape each time.",
   "feedback": "A liquid takes the shape of its container. It has no shape of its own.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_GAS_WEIGHTLESS": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
@@ -430,9 +542,13 @@
   "cause": "The child cannot feel air.",
   "reveals": "Offer \"Air has no weight and takes no room\" next to the right answer and ask the question again in a new context.",
   "help": "Weigh a balloon before and after you blow it up on a simple balance.",
-  "feedback": "Air takes up room and has weight. A blown-up balloon weighs more than a flat one.",
+  "feedback": "Air takes up room and has weight. A pumped football weighs more than a flat one.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Stavy (1988), Children's conception of gas, International Journal of Science Education 10: gases are thought to have no weight."
+  }
  },
  "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES.M_SP_VOLUME_CHANGES": {
   "skill": "SCIE.G4.MATTER.PROPERTIES_OF_MATTER.STATE_PROPERTIES",
@@ -447,7 +563,11 @@
   "help": "Pour back from the basin into the bottle and see it fill again.",
   "feedback": "The amount stays the same. Only the shape changes. One litre is still one litre.",
   "source": "Conservation of volume; cited from memory (Piaget). Verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Piaget and Inhelder, the conservation of liquid quantity: the amount seems to change when the shape does."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_PLASTIC_ROTS": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
@@ -462,7 +582,11 @@
   "help": "Bury a banana peel and a polythene bag and dig up after a month.",
   "feedback": "A plastic bag does not rot. It stays in the soil for many years, so it is non-decomposable.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_RUST_IS_ROT": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
@@ -477,7 +601,11 @@
   "help": "Say that a tin takes very many years to break up and does not give soil back.",
   "feedback": "A rusting tin does not rot into soil. It stays for many years, so it is non-decomposable.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY.M_WC_BURY_DISAPPEARS": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_CLASSIFY",
@@ -492,7 +620,11 @@
   "help": "Dig up a buried bottle after a month and see it is unchanged.",
   "feedback": "Glass does not rot. Buried glass stays for ages, so it is non-decomposable.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_POLYTHENE_HARMLESS": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
@@ -507,7 +639,11 @@
   "help": "Tell the story of a cow whose stomach was found full of polythene.",
   "feedback": "Animals cannot digest polythene. It can block the stomach and kill them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_BURNING_SAFE": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
@@ -522,7 +658,11 @@
   "help": "Notice the black smoke and the smell when plastic burns and who breathes it.",
   "feedback": "Burning waste makes smoke that pollutes the air and can make people sick.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS.M_WD_ONLY_SMELL": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_DANGERS",
@@ -537,7 +677,11 @@
   "help": "Say that flies from the heap land on food and carry germs.",
   "feedback": "A heap of waste breeds flies, rats and mosquitoes that spread diseases. It also blocks drains.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know flies and rats come with waste; \"only a smell\" is mostly a trap option."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_BURN_ALL": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
@@ -552,7 +696,11 @@
   "help": "List waste that is better reused or recycled, and note the smoke from burning.",
   "feedback": "Plastic bottles are better recycled or reused. Burning makes smoke that pollutes the air.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_DUMP_RIVER": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
@@ -567,7 +715,11 @@
   "help": "Follow a river on a map and see it flows to a place where people live and fish.",
   "feedback": "Rubbish in a river pollutes the water, kills fish and reaches people downstream. Use a bin or a collection point.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE.M_WM_COMPOST_PLASTIC": {
   "skill": "SCIE.G4.MATTER.MANAGEMENT_OF_SOLID_WAST.WASTE_MANAGE",
@@ -582,7 +734,11 @@
   "help": "Look at a compost heap: peels turn to soil, plastic stays.",
   "feedback": "Only waste that rots goes in the compost pit. Plastic does not rot and spoils the compost.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children can tell plastic from peelings; this is a trap option more than a held belief."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_STORE_ALL": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
@@ -597,7 +753,11 @@
   "help": "Contrast a family that uses water wisely with one that wastes some.",
   "feedback": "To conserve is to use wisely and not waste, so that there is enough for later.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Nobody believes saving means never using; a trap option."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_WATER_NEVER_ENDS": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
@@ -612,7 +772,11 @@
   "help": "Talk about dry seasons when the river or the tank dries.",
   "feedback": "Clean water is not always enough. In dry seasons rivers and wells dry up, so we must use it wisely.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING.M_CM_ONLY_CLEAN_DRINKING": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_MEANING",
@@ -627,7 +791,11 @@
   "help": "Sort actions into saving water and cleaning water.",
   "feedback": "Conserving means not wasting water. Closing a tap or reusing water saves it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_TAP_RUNS": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
@@ -642,7 +810,11 @@
   "help": "Measure water used when the tap is closed and when it runs.",
   "feedback": "A running tap wastes a lot of water. Close it while you brush or soap.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_HOSE_BETTER": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
@@ -657,7 +829,11 @@
   "help": "Time the work with a watering can and with a hose and compare how much water is used.",
   "feedback": "A watering can uses less water and puts it where it is needed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS.M_CMT_NO_RAINWATER": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_METHODS",
@@ -672,7 +848,11 @@
   "help": "Show a gutter and tank at school or at a neighbour's house.",
   "feedback": "Rainwater from the roof can be collected in tanks and used for washing and watering.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Roof tanks are common in Kenya; \"rain is useless\" is unlikely to be held."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_BILL": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
@@ -687,7 +867,11 @@
   "help": "Ask a family who fetches water from far how they feel about wasted water.",
   "feedback": "We save water so there is enough for everyone now and later, and not only to save money.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_ONLY_PEOPLE": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
@@ -702,7 +886,11 @@
   "help": "List what a farm needs water for: people, cattle, vegetables.",
   "feedback": "People, animals and plants all need water to live.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE.M_CI_RAIN_ENOUGH": {
   "skill": "SCIE.G4.MATTER.WATER_CONSERVATION.CONSERVE_IMPORTANCE",
@@ -717,7 +905,11 @@
   "help": "Recall the last dry season and how far people walked for water.",
   "feedback": "In a long dry season rivers and wells can dry up, so it is important to save water before it happens.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_PUSH_PULL_MIX": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
@@ -732,7 +924,11 @@
   "help": "Do both with a real drawer and say which way the hand moves compared with the body.",
   "feedback": "Moving something towards you is a pull. Moving something away from you is a push.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_MAGNET_ALL": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
@@ -747,7 +943,11 @@
   "help": "Test a spoon, a copper wire and an iron nail with a magnet.",
   "feedback": "A magnet picks up only iron and steel things, not all metals.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES.M_FT_GRAVITY_ONLY_FALLING": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
@@ -762,7 +962,11 @@
   "help": "Hold a book in your hand and feel it press down.",
   "feedback": "Gravity pulls down on everything all the time, even things at rest.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Gunstone and White (1981), Understanding of gravity, Science Education 65; also Driver et al. (1994): gravity is linked to falling."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_ONLY_START": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
@@ -777,7 +981,11 @@
   "help": "Roll a ball and stop it with the hand, then turn it with a stick.",
   "feedback": "A force can also stop a moving object, speed it up, slow it down or turn it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_SHAPE_NOT_EFFECT": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
@@ -792,7 +1000,11 @@
   "help": "Squeeze clay, a sponge and a rubber band and say what changed.",
   "feedback": "A force can change the shape of an object, as when clay is squeezed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS.M_FE_MOTION_NEEDS_FORCE": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
@@ -807,7 +1019,11 @@
   "help": "Roll a ball over grass, over a road and over smooth floor, and compare how far it goes.",
   "feedback": "The ball slows and stops because friction with the ground acts on it.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Clement (1982), Students' preconceptions in introductory mechanics, American Journal of Physics 50; McCloskey (1983), Intuitive physics: a moving object is thought to need a force that is used up."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_FRICTION_BAD_ONLY": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
@@ -822,7 +1038,11 @@
   "help": "Try to walk on a wet, smooth floor and say why it is hard.",
   "feedback": "Friction is useful in brakes, in walking and in holding things. It is a force that slows things.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_GRAVITY_ONLY_PROBLEM": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
@@ -837,7 +1057,11 @@
   "help": "Say what would happen to our water and cups if there were no gravity.",
   "feedback": "Gravity makes rain fall and keeps us and things on the ground.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children link gravity to falling, not to being only a nuisance; mostly a trap option."
+  }
  },
  "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES.M_FU_NOT_EVERYDAY": {
   "skill": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_USES",
@@ -852,7 +1076,11 @@
   "help": "Press your hand on the desk and say which small tasks use a push or a pull.",
   "feedback": "A push or a pull is a force. Even writing and walking use a force.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_MOON_SOURCE": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
@@ -867,7 +1095,11 @@
   "help": "Shine a torch on a mirror and look: the mirror lights up but is not a source.",
   "feedback": "The Moon only reflects light from the Sun. The Sun gives out its own light.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Guesne (1985), Light, in Driver, Guesne and Tiberghien (eds), Children's Ideas in Science: the Moon is counted as a light source."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_SHINY_SOURCE": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
@@ -882,7 +1114,11 @@
   "help": "Cover the torch: the mirror goes dark. Cover a candle: the light stays with the flame.",
   "feedback": "A shiny roof only reflects light. A burning candle makes its own light.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES.M_LS_NATURAL_ONLY_SKY": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_SOURCES",
@@ -897,7 +1133,11 @@
   "help": "Say which living things make light on a dark night.",
   "feedback": "Natural sources include the Sun, stars, lightning and fireflies. A bulb is made by people.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children who have seen lightning and fireflies would not leave them out; a trap option."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_WINDOW_ONLY_AIR": {
   "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
@@ -912,7 +1152,11 @@
   "help": "Close the shutters in a classroom and say what changes.",
   "feedback": "A window lets in light as well as air. It is a way of lighting a room in the day.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children know a closed window makes a room darker; a trap option."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_DARK_WALLS": {
   "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
@@ -927,7 +1171,11 @@
   "help": "Compare a dark corner of a room and a white wall.",
   "feedback": "Light-coloured walls reflect more light, so the room is brighter.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children see that dark walls make a room dim; a trap option."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING.M_HL_CANDLE_LEFT": {
   "skill": "SCIE.G4.FORCE_.LIGHT.HOUSE_LIGHTING",
@@ -942,7 +1190,11 @@
   "help": "Tell the story of a house fire from a candle.",
   "feedback": "A lit candle or lamp can start a fire. Put it out before sleeping and keep it away from cloth.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_EYES_SEND": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
@@ -957,7 +1209,11 @@
   "help": "Sit in a dark room with a book and say why you cannot see it until the lamp is on.",
   "feedback": "We see because light bounces off things into our eyes. In the dark, with no light, we cannot see.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Guesne (1985), Light, in Children's Ideas in Science; Andersson and Karrqvist (1983): light is thought to leave the eyes."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_PLANT_SOIL_FOOD": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
@@ -972,7 +1228,11 @@
   "help": "Grow one seedling in the dark and one in the light and compare after a week.",
   "feedback": "Plants use light to make their food in the leaves.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Driver, Squires, Rushworth and Wood-Robinson, Making Sense of Secondary Science (Routledge, 1994): learners think plants take their food from the soil."
+  }
  },
  "SCIE.G4.FORCE_.LIGHT.LIGHT_USES.M_LU_ONLY_SEE": {
   "skill": "SCIE.G4.FORCE_.LIGHT.LIGHT_USES",
@@ -987,7 +1247,11 @@
   "help": "List other uses: signals, solar power, plants, drying.",
   "feedback": "Light is used to see, and also for signals, for plants to make food and for solar energy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_SUN_ONLY": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
@@ -1002,7 +1266,11 @@
   "help": "List what we use for heat in the kitchen.",
   "feedback": "The Sun is a source of heat, and so are fire, electricity and cooking gas.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_HOT_OBJECT_SOURCE": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
@@ -1017,7 +1285,11 @@
   "help": "Ask what made the stone hot: the Sun.",
   "feedback": "A hot stone was warmed by the Sun. The Sun is the source.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES.M_HS_RUBBING_NOT_HEAT": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
@@ -1032,7 +1304,11 @@
   "help": "Rub the palms for 20 seconds and say how they feel.",
   "feedback": "Rubbing makes friction, and friction makes heat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children rub their hands against the cold; the idea that rubbing makes no heat runs against experience."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_BOIL_NOT_SAFE": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
@@ -1047,7 +1323,11 @@
   "help": "Say that germs in water die when it boils.",
   "feedback": "Boiling kills germs in the water and makes it safer to drink.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Kenyan children are taught to boil water; this is a trap option."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_DRY_IN_SHADE": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
@@ -1062,7 +1342,11 @@
   "help": "Hang two cloths, one in the sun and one in the shade, and compare.",
   "feedback": "Heat from the Sun, with wind, dries clothes fastest.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Everyone sees washing dry faster in the sun; a trap option."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_USES.M_HU_ONLY_COOKING": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_USES",
@@ -1077,7 +1361,11 @@
   "help": "List five jobs done with heat at home and on the farm.",
   "feedback": "Heat is used for cooking and also for drying, warming, ironing and boiling water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_BUTTER_ON_BURN": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
@@ -1092,7 +1380,11 @@
   "help": "Say that cool water takes the heat out of the skin.",
   "feedback": "Put a burn under cool running water for several minutes. Do not put butter, oil or ash on it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_REFILL_LIT": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
@@ -1107,7 +1399,11 @@
   "help": "Say that paraffin catches fire from a flame.",
   "feedback": "Put out the flame, let the stove cool, and then refill it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY.M_SF_WET_CLOTH": {
   "skill": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
@@ -1122,6 +1418,10 @@
   "help": "Say that steam from a wet cloth burns.",
   "feedback": "Use a dry cloth or pot holder. A wet cloth lets the heat through and the steam can burn.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  }
 }
