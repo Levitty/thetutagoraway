@@ -13,7 +13,7 @@ export const FAMILIES = [
   // ---------------------------------------------------------------- JOSEPH_RESISTS
   F('joseph.facts', `${K}TRUST.JOSEPH_RESISTS`, 'direct', 1, 'story facts', ['Genesis 39:7-12.', 'Joseph said it would be a sin against God.'], [
     C('Why did Joseph refuse to do wrong, according to Genesis 39:9?', 'It would be a sin against God', 'Joseph feared God more than people.', jr('He was afraid of his master', 'MASTER'), jr('Nobody else was in the house to see', 'PRIVATE'), jr('He wanted to stay and argue', 'STAYED')),
-    C('What did Joseph do when she held on to his cloak?', 'He left it and ran out of the house', 'Genesis 39:12.', jr('He stayed to argue', 'STAYED'), jr('He took the cloak and sat down', 'STAYED'), jr('He hid in the house', 'PRIVATE')),
+    C('What did Joseph do when Potiphar\'s wife held on to his cloak?', 'He left it and ran out of the house', 'Genesis 39:12.', jr('He stayed to argue', 'STAYED'), jr('He took the cloak and sat down', 'STAYED'), jr('He hid in the house', 'PRIVATE')),
     C('Who else was in the house when Joseph refused?', 'None of the household servants was inside', 'Genesis 39:11. Joseph refused even though no one saw.', jr('The whole household watched him', 'MASTER'), jr('His master, who was at home', 'MASTER'), jr('His brothers', 'PRIVATE')),
     C('Whom did Joseph say he could not sin against?', 'God', 'Genesis 39:9.', jr('His master, Potiphar', 'MASTER'), jr('His brothers', 'MASTER'), jr('The servants watching', 'PRIVATE')),
     C('What did Joseph teach us by running away?', 'To flee from temptation', 'Sometimes the right thing is to run away.', jr('To stay and argue', 'STAYED'), jr('To stay because no one is looking', 'PRIVATE'), jr('To be afraid of the master', 'MASTER')),
