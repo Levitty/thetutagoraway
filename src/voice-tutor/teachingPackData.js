@@ -7456,6 +7456,919 @@ export const TEACHING_PACK_G5 = {
   "sub_strand": "MATH.G5.MEASUR.MASS",
   "sub_strand_name": "Mass (kilogrammes and grammes)",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY": {
+  "skill": "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY",
+  "key_step": "The child picks out the second hand as the thin hand that moves fastest (and the seconds digits on a digital display) and names the second as what it measures.",
+  "floor": {
+   "prerequisite": "Reads hours and minutes on a clock (Grade 4).",
+   "question": "Which hand shows the hour?",
+   "answer": "The short hand"
+  },
+  "representations": [
+   "a real or drawn clock with three hands",
+   "a stopwatch display",
+   "the word second and s"
+  ],
+  "steps": [
+   "Watch the hands: which moves fastest?",
+   "Name it the second hand; it ticks once a second.",
+   "Find the seconds on a digital clock (the last pair)."
+  ],
+  "contexts": [
+   "the classroom clock",
+   "a phone stopwatch",
+   "a radio time signal"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a clock with three hands; animate the thin hand ticking."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which hand moved before naming it.",
+    "say": "Which hand is moving?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to point it out."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.SECOND_IDENTIFY.M_SECOND_MINUTE_HAND_SWAP",
+    "listen_for": [
+     "the thin one is minutes"
+    ],
+    "ask": "Watch for ten ticks. Which long hand moved a lot?",
+    "repair": "The thin fast hand is seconds; the thicker long hand creeps one mark each minute.",
+    "error": "The child treats the long thin second hand as the minute hand, because both are long.",
+    "example": {
+     "question": "On the classroom clock the hour hand is just past 3, the thicker long hand points to 2 and the thin long hand points to 9. What time is it?",
+     "wrong_answer": "3:45",
+     "correct_answer": "10 minutes past 3 and 45 seconds (3:10:45)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "On a clock, how do you know which hand is the second hand?",
+    "answer": "It is thin and moves fastest, ticking every second",
+    "shows": "identifies by behaviour"
+   },
+   {
+    "question": "A digital clock shows 10:24:37. Which digits are the seconds?",
+    "answer": "37",
+    "shows": "last pair"
+   }
+  ],
+  "name": "Identify the second and the second hand on a clock",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.SECOND_DURATION_SENSE": {
+  "skill": "MATH.G5.MEASUR.TIME.SECOND_DURATION_SENSE",
+  "key_step": "The child judges about how long a second, ten seconds and a minute feel by timing real actions.",
+  "floor": {
+   "prerequisite": "Knows the second hand.",
+   "question": "Clap once. About how long did that take?",
+   "answer": "About a second"
+  },
+  "representations": [
+   "actions timed with a stopwatch",
+   "a list of actions with times",
+   "estimates against measurements"
+  ],
+  "steps": [
+   "Count seconds steadily ('one-Mombasa, two-Mombasa').",
+   "Time actions: 10 claps, writing your name, running across the field.",
+   "Match actions to about 1 s, 10 s, 1 minute."
+  ],
+  "contexts": [
+   "clapping ten times",
+   "running across the school field",
+   "boiling water for chai"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write three headings: about 1 second, about 10 seconds, about 1 minute."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child sorts: one clap, writing your name, singing the national anthem's first verse, tying a shoe."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to explain one choice."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.SECOND_DURATION_SENSE.M_SECOND_SIZE_MISJUDGED",
+    "listen_for": [
+     "one two three very fast"
+    ],
+    "ask": "Count to ten while I watch the second hand. Did it go round as far as you counted?",
+    "repair": "Count with a steady word between numbers and check against the clock.",
+    "error": "The child has no feel for how long a second is. Counting '1, 2, 3 ...' goes much too fast, and long activities get matched to a few seconds.",
+    "example": {
+     "question": "Which takes about 10 seconds: (A) cooking ugali for the family, (B) writing your first name, (C) walking from Nairobi to Thika?",
+     "wrong_answer": "A",
+     "correct_answer": "B"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which takes about 10 seconds: blinking, writing your full name, or walking to the next town?",
+    "answer": "Writing your full name",
+    "shows": "sense of 10 s"
+   },
+   {
+    "question": "About how long does it take to tie a shoe: 1 second, 10 seconds or 10 minutes?",
+    "answer": "About 10 seconds",
+    "shows": "matches action to duration"
+   }
+  ],
+  "name": "Estimate and measure short durations in seconds (proposed, from learning experiences)",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE": {
+  "skill": "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE",
+  "key_step": "The child counts in fives from 12 to the numeral before the second hand, then adds the small marks.",
+  "floor": {
+   "prerequisite": "Counts in fives to 60.",
+   "question": "Count in fives to 30.",
+   "answer": "5, 10, 15, 20, 25, 30"
+  },
+  "representations": [
+   "a clock face",
+   "the face with fives written outside",
+   "the reading in seconds"
+  ],
+  "steps": [
+   "Count in fives from 12 to the numeral before the hand.",
+   "Add the small marks past it.",
+   "Read the full time: hours, minutes, seconds."
+  ],
+  "contexts": [
+   "timing a race on the school clock",
+   "a cooking timer",
+   "a clinic wall clock"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a clock; second hand two small marks past the 4."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in fives from 12 to the 4 as the board writes each five outside.",
+    "say": "Count in fives with me."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add the small marks."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE.M_NUMERAL_AS_SECONDS",
+    "listen_for": [
+     "4 seconds"
+    ],
+    "ask": "How many small marks from 12 to 4?",
+    "repair": "Each numeral is five marks further: count the fives.",
+    "error": "The child reads the numeral the second hand points to as the number of seconds.",
+    "example": {
+     "question": "The second hand points exactly at the 4. How many seconds does it show?",
+     "wrong_answer": "4 seconds",
+     "correct_answer": "20 seconds"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.READ_SECONDS_ANALOGUE.M_SMALL_MARKS_ADDED_TO_NUMERAL",
+    "listen_for": [
+     "6 seconds"
+    ],
+    "ask": "What is the 4 worth in seconds before you add the marks?",
+    "repair": "Change the numeral to its five-times value first (20), then add the marks.",
+    "error": "When the second hand is between numerals, the child adds the small marks to the numeral itself instead of to its five-times value.",
+    "example": {
+     "question": "The second hand is two small marks past the 7. How many seconds does it show?",
+     "wrong_answer": "9 seconds",
+     "correct_answer": "37 seconds"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "The second hand points exactly at the 4. How many seconds?",
+    "answer": "20",
+    "shows": "numeral times five"
+   },
+   {
+    "question": "The second hand is two small marks past the 7. How many seconds?",
+    "answer": "37",
+    "shows": "fives then marks"
+   }
+  ],
+  "name": "Read time including seconds on an analogue clock",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL": {
+  "skill": "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL",
+  "key_step": "The child names each pair on a digital display (hh:mm:ss, or mm:ss on a stopwatch) before reading it.",
+  "floor": {
+   "prerequisite": "Reads hh:mm on a digital clock.",
+   "question": "Read 08:15.",
+   "answer": "Quarter past eight, or 8:15"
+  },
+  "representations": [
+   "a phone clock and stopwatch",
+   "the display with each pair labelled",
+   "the time in words"
+  ],
+  "steps": [
+   "Label the pairs: hours, minutes, seconds.",
+   "A stopwatch has only minutes and seconds.",
+   "Read in words."
+  ],
+  "contexts": [
+   "a phone stopwatch at sports day",
+   "a bus station digital clock",
+   "a microwave timer"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 02:35 as a stopwatch display."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each pair.",
+    "say": "What does this pair count on a stopwatch?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to label and read it."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL.M_STOPWATCH_AS_HOURS",
+    "listen_for": [
+     "2 hours 35 minutes"
+    ],
+    "ask": "Did Achieng run round the field for two hours?",
+    "repair": "A stopwatch starts at minutes and seconds; check if the time is sensible.",
+    "error": "The child reads a stopwatch display mm:ss as hours and minutes.",
+    "example": {
+     "question": "A stopwatch shows 02:35 after Achieng runs round the school field. How long did she take?",
+     "wrong_answer": "2 hours 35 minutes",
+     "correct_answer": "2 minutes 35 seconds"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.READ_SECONDS_DIGITAL.M_DIGITAL_SECONDS_IGNORED",
+    "listen_for": [
+     "8 15"
+    ],
+    "ask": "There are three pairs. What does the last one count?",
+    "repair": "Label all three pairs before reading.",
+    "error": "On an hh:mm:ss clock the child reads only the first two parts, or reads the middle pair as seconds.",
+    "example": {
+     "question": "A digital clock shows 08:15:42. Write the time in words.",
+     "wrong_answer": "8 hours 15 seconds (or: 15 minutes past 8, with the 42 left out)",
+     "correct_answer": "15 minutes and 42 seconds past 8 (8 hours 15 minutes 42 seconds)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A stopwatch shows 02:35 after a run round the field. How long?",
+    "answer": "2 minutes 35 seconds",
+    "shows": "mm:ss"
+   },
+   {
+    "question": "A clock shows 08:15:42. Write the time in words.",
+    "answer": "8 hours, 15 minutes and 42 seconds",
+    "shows": "all three pairs"
+   }
+  ],
+  "name": "Read time and durations including seconds on digital clocks and stopwatches",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION": {
+  "skill": "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION",
+  "key_step": "The child says 60 seconds make 1 minute and explains with the clock: one full turn of the second hand while the minute hand moves one mark.",
+  "floor": {
+   "prerequisite": "Reads seconds on a clock.",
+   "question": "Count in fives from 12 all the way round.",
+   "answer": "5, 10, ... 60"
+  },
+  "representations": [
+   "a clock face",
+   "one full turn of the second hand",
+   "1 min = 60 s"
+  ],
+  "steps": [
+   "Watch the second hand go once round; count in fives.",
+   "Notice the minute hand moved one mark.",
+   "State 1 minute = 60 seconds."
+  ],
+  "contexts": [
+   "a minute of silence",
+   "boiling an egg",
+   "a radio advert"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Animate the second hand going once round slowly, writing fives outside as it passes each numeral."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in fives to the end."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the minute hand, which has moved one mark.",
+    "say": "What did the minute hand do?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the relationship."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION.M_100_SECONDS_IN_MINUTE",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "Count the fives all the way round the clock. Where do you stop?",
+    "repair": "Time is the measure that changes at 60, not 100. The clock face shows it.",
+    "error": "The child believes 1 minute is 100 seconds.",
+    "example": {
+     "question": "How many seconds are there in 1 minute?",
+     "wrong_answer": "100",
+     "correct_answer": "60"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.MINUTE_SECOND_RELATION.M_REVOLUTION_IS_12",
+    "listen_for": [
+     "12 seconds"
+    ],
+    "ask": "How many small marks between 12 and 1?",
+    "repair": "Each numeral is five seconds apart: 12 numerals, 60 seconds.",
+    "error": "The child thinks one full turn of the second hand is 12 seconds because there are 12 numerals.",
+    "example": {
+     "question": "The second hand starts at 12 and goes all the way round back to 12. How much time has passed?",
+     "wrong_answer": "12 seconds",
+     "correct_answer": "60 seconds (1 minute)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many seconds in 1 minute?",
+    "answer": "60",
+    "shows": "the relationship"
+   },
+   {
+    "question": "The second hand goes from 12 all the way round to 12. How long?",
+    "answer": "60 seconds (1 minute)",
+    "shows": "explains with the clock"
+   }
+  ],
+  "name": "Know that 1 minute = 60 seconds",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC": {
+  "skill": "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC",
+  "key_step": "The child multiplies minutes by 60 and adds the extra seconds.",
+  "floor": {
+   "prerequisite": "Knows 1 min = 60 s.",
+   "question": "2 minutes = ___ seconds",
+   "answer": "120"
+  },
+  "representations": [
+   "clock turns",
+   "groups of 60",
+   "seconds in total"
+  ],
+  "steps": [
+   "Each minute is 60 seconds: multiply.",
+   "Add the extra seconds.",
+   "Check: more seconds than minutes."
+  ],
+  "contexts": [
+   "a song on the radio",
+   "boiling water for chai",
+   "a race"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw four full clock turns and a quarter-ish extra labelled 15 s."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in sixties along the turns.",
+    "say": "Count in sixties."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to add the 15 seconds."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC.M_MIN_TO_SEC_TIMES_100",
+    "listen_for": [
+     "300 seconds"
+    ],
+    "ask": "How many seconds in one minute?",
+    "repair": "Count in sixties, not hundreds.",
+    "error": "The child multiplies by 100 instead of 60.",
+    "example": {
+     "question": "A song on the radio lasts 3 minutes. How many seconds is that?",
+     "wrong_answer": "300 seconds",
+     "correct_answer": "180 seconds"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.CONVERT_MIN_TO_SEC.M_MIXED_CONCATENATE",
+    "listen_for": [
+     "415"
+    ],
+    "ask": "Is 415 seconds about four minutes?",
+    "repair": "Change the minutes first (240 s), then add the 15.",
+    "error": "The child writes the minutes and seconds digits side by side, or forgets to add the extra seconds.",
+    "example": {
+     "question": "Kamau boiled water for chai in 4 min 15 s. How many seconds is that?",
+     "wrong_answer": "415 seconds (or 240 seconds)",
+     "correct_answer": "255 seconds (240 + 15)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A song lasts 3 minutes. How many seconds?",
+    "answer": "180",
+    "shows": "times 60"
+   },
+   {
+    "question": "Kamau boiled water in 4 min 15 s. How many seconds?",
+    "answer": "255",
+    "shows": "minutes changed, then added"
+   }
+  ],
+  "name": "Convert minutes (and minutes and seconds) to seconds",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN": {
+  "skill": "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN",
+  "key_step": "The child groups seconds in sixties (or divides by 60) and gives the answer as minutes and leftover seconds.",
+  "floor": {
+   "prerequisite": "Converts minutes to seconds.",
+   "question": "3 min = ___ s",
+   "answer": "180"
+  },
+  "representations": [
+   "clock turns",
+   "groups of 60 ringed",
+   "minutes and seconds"
+  ],
+  "steps": [
+   "Estimate: fewer minutes than seconds.",
+   "Take away sixties, counting minutes.",
+   "The leftover is seconds.",
+   "Never a decimal."
+  ],
+  "contexts": [
+   "a matatu waiting at the stage",
+   "a microwave time",
+   "a phone call length"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 150 s."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child takes off 60 and 60, writing a minute each time."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what is left."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN.M_SEC_TO_MIN_BY_100",
+    "listen_for": [
+     "1 min 50 s"
+    ],
+    "ask": "Is 100 seconds one minute?",
+    "repair": "Take away 60s, not 100s.",
+    "error": "The child splits the seconds at the hundreds digit, as if 100 s were 1 minute.",
+    "example": {
+     "question": "Write 150 seconds in minutes and seconds.",
+     "wrong_answer": "1 min 50 s",
+     "correct_answer": "2 min 30 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.CONVERT_SEC_TO_MIN.M_DECIMAL_REMAINDER",
+    "listen_for": [
+     "2.5 minutes is 2 min 5 s"
+    ],
+    "ask": "Half a minute is how many seconds?",
+    "repair": "Use the leftover seconds, not the decimal digits.",
+    "error": "The child divides by 60 on a calculator or by long division, gets a decimal, and reads the decimal digits as seconds.",
+    "example": {
+     "question": "A matatu waited 150 seconds at the stage. Write this in minutes and seconds.",
+     "wrong_answer": "2 min 5 s (or 2 min 50 s), from 2.5",
+     "correct_answer": "2 min 30 s"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A matatu waited 150 seconds. Write this in minutes and seconds.",
+    "answer": "2 min 30 s",
+    "shows": "groups of 60"
+   },
+   {
+    "question": "Convert 120 seconds to minutes.",
+    "answer": "2 minutes",
+    "shows": "divides, not multiplies"
+   }
+  ],
+  "name": "Convert seconds to minutes and seconds",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.ADD_MIN_SEC": {
+  "skill": "MATH.G5.MEASUR.TIME.ADD_MIN_SEC",
+  "key_step": "The child adds seconds and minutes in columns, regrouping every 60 seconds as 1 minute and adding the carried minute.",
+  "floor": {
+   "prerequisite": "Converts seconds to minutes and seconds.",
+   "question": "75 s = ___ min ___ s",
+   "answer": "1 min 15 s"
+  },
+  "representations": [
+   "two jobs timed",
+   "min and s columns",
+   "the total"
+  ],
+  "steps": [
+   "Estimate.",
+   "Add the seconds; 60 or more makes a minute.",
+   "Add the minutes with the carry."
+  ],
+  "contexts": [
+   "sweeping the classroom and the verandah",
+   "two legs of a relay",
+   "two songs"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 min 45 s + 2 min 30 s in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the seconds column.",
+    "say": "Add the seconds. Is it 60 or more?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 75 s and the regrouping."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child carries the minute and finishes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.ADD_MIN_SEC.M_ADD_NO_REGROUP",
+    "listen_for": [
+     "5 min 75 s"
+    ],
+    "ask": "Is 75 seconds more than a minute?",
+    "repair": "Sixty seconds become a minute; carry it.",
+    "error": "The child leaves 60 or more seconds in the seconds column.",
+    "example": {
+     "question": "Njeri swept the classroom in 3 min 45 s and the verandah in 2 min 30 s. What was the total time?",
+     "wrong_answer": "5 min 75 s",
+     "correct_answer": "6 min 15 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.ADD_MIN_SEC.M_ADD_REGROUP_AT_100",
+    "listen_for": [
+     "3 min 90 s"
+    ],
+    "ask": "When does a minute fill up: at 60 seconds or 100?",
+    "repair": "Picture the second hand going round once: 60.",
+    "error": "The child regroups only when the seconds reach 100.",
+    "example": {
+     "question": "2 min 50 s + 1 min 40 s = ?",
+     "wrong_answer": "3 min 90 s",
+     "correct_answer": "4 min 30 s"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 min 50 s + 1 min 40 s",
+    "answer": "4 min 30 s",
+    "shows": "regroups at 60"
+   },
+   {
+    "question": "Njeri swept for 3 min 45 s and then 2 min 30 s. Total?",
+    "answer": "6 min 15 s",
+    "shows": "carried minute added"
+   }
+  ],
+  "name": "Add minutes and seconds with regrouping",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC": {
+  "skill": "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC",
+  "key_step": "The child exchanges 1 minute for 60 seconds when there are too few seconds, and reduces the minutes by one.",
+  "floor": {
+   "prerequisite": "Adds minutes and seconds.",
+   "question": "1 min 20 s = ___ s",
+   "answer": "80"
+  },
+  "representations": [
+   "two race times",
+   "columns with exchange",
+   "how much longer"
+  ],
+  "steps": [
+   "Estimate.",
+   "Exchange 1 min for 60 s if needed.",
+   "Subtract; check by adding back."
+  ],
+  "contexts": [
+   "two runners' times",
+   "how much longer a bus took",
+   "time left in a test"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5 min 20 s - 2 min 45 s in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 20 above 45.",
+    "say": "Enough seconds?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to exchange a minute."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC.M_SUB_BORROW_100",
+    "listen_for": [
+     "2 min 75 s"
+    ],
+    "ask": "How many seconds does one minute give you?",
+    "repair": "One minute is 60 seconds: 20 + 60 = 80.",
+    "error": "When borrowing, the child turns 1 minute into 100 seconds.",
+    "example": {
+     "question": "5 min 20 s − 2 min 45 s = ?",
+     "wrong_answer": "2 min 75 s",
+     "correct_answer": "2 min 35 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.SUBTRACT_MIN_SEC.M_SUB_BORROW_NOT_REDUCED",
+    "listen_for": [
+     "3 min 35 s"
+    ],
+    "ask": "Where did the extra 60 seconds come from?",
+    "repair": "Cross out the minute you exchanged.",
+    "error": "The child adds 60 to the seconds but does not reduce the minutes by 1.",
+    "example": {
+     "question": "5 min 20 s − 2 min 45 s = ?",
+     "wrong_answer": "3 min 35 s",
+     "correct_answer": "2 min 35 s"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Wanjiru ran in 5 min 20 s and Otieno in 2 min 45 s. How much longer did Wanjiru take?",
+    "answer": "2 min 35 s",
+    "shows": "exchange 60 and reduce"
+   },
+   {
+    "question": "6 min 10 s - 1 min 50 s",
+    "answer": "4 min 20 s",
+    "shows": "exchange again"
+   }
+  ],
+  "name": "Subtract minutes and seconds with regrouping",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC": {
+  "skill": "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC",
+  "key_step": "The child multiplies both minutes and seconds and regroups every 60 seconds of the product as 1 minute.",
+  "floor": {
+   "prerequisite": "Adds minutes and seconds.",
+   "question": "25 x 3 =",
+   "answer": "75"
+  },
+  "representations": [
+   "repeated batches",
+   "columns",
+   "the product"
+  ],
+  "steps": [
+   "Estimate.",
+   "Multiply seconds; regroup at 60.",
+   "Multiply minutes; add the carry."
+  ],
+  "contexts": [
+   "frying batches of mandazi",
+   "laps of a track",
+   "songs on a playlist"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 3 pans, each labelled 2 min 25 s."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate in minutes.",
+    "say": "About how many minutes?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child multiplies the seconds and regroups."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC.M_MULT_MINUTES_ONLY",
+    "listen_for": [
+     "6 min 25 s"
+    ],
+    "ask": "Does each batch take 25 seconds as well?",
+    "repair": "Both parts happen three times.",
+    "error": "The child multiplies only the minutes and copies the seconds unchanged.",
+    "example": {
+     "question": "2 min 25 s × 3 = ?",
+     "wrong_answer": "6 min 25 s",
+     "correct_answer": "7 min 15 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.MULTIPLY_MIN_SEC.M_MULT_REGROUP_100",
+    "listen_for": [
+     "7 min 20 s"
+    ],
+    "ask": "120 seconds is how many minutes?",
+    "repair": "Take away 60s: 120 s is 2 minutes exactly.",
+    "error": "The child regroups the product of the seconds as if 100 s = 1 min.",
+    "example": {
+     "question": "2 min 40 s × 3 = ?",
+     "wrong_answer": "7 min 20 s",
+     "correct_answer": "8 min"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One batch of mandazi takes 2 min 25 s. How long do 3 batches take?",
+    "answer": "7 min 15 s",
+    "shows": "regroups 75 s"
+   },
+   {
+    "question": "2 min 40 s x 3",
+    "answer": "8 min",
+    "shows": "regroups at 60, not 100"
+   }
+  ],
+  "name": "Multiply minutes and seconds by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC": {
+  "skill": "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC",
+  "key_step": "The child divides the minutes, changes any leftover minute into 60 seconds, adds it to the seconds, then divides.",
+  "floor": {
+   "prerequisite": "Converts minutes to seconds.",
+   "question": "1 min 30 s = ___ s",
+   "answer": "90"
+  },
+  "representations": [
+   "reading time shared",
+   "columns with the leftover carried",
+   "each share"
+  ],
+  "steps": [
+   "Estimate.",
+   "Divide minutes; carry the leftover as 60 s.",
+   "Divide seconds; check by multiplying."
+  ],
+  "contexts": [
+   "reading time shared between pupils",
+   "laps at a steady pace",
+   "a game shared between teams"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 7 min 30 s ÷ 2 with a box for the leftover minute."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what the leftover minute becomes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child adds 60 to the seconds and divides."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC.M_DIV_REMAINDER_DROPPED",
+    "listen_for": [
+     "3 min 15 s"
+    ],
+    "ask": "Each pupil got 3 minutes. Is a minute left over?",
+    "repair": "Share the leftover minute as 60 seconds.",
+    "error": "The child divides the minutes, throws away the remainder, then divides the seconds.",
+    "example": {
+     "question": "Mwalimu shares 7 min 30 s of reading time equally between 2 pupils. How long does each pupil read?",
+     "wrong_answer": "3 min 15 s",
+     "correct_answer": "3 min 45 s"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.TIME.DIVIDE_MIN_SEC.M_DIV_REMAINDER_AS_TEN",
+    "listen_for": [
+     "3 min 20 s"
+    ],
+    "ask": "How many seconds is the leftover minute?",
+    "repair": "60, not 10: 60 + 30 = 90, half is 45.",
+    "error": "The child carries a remaining minute into the seconds as 10 (or 100) instead of 60.",
+    "example": {
+     "question": "7 min 30 s ÷ 2 = ?",
+     "wrong_answer": "3 min 20 s (from 10 + 30 = 40, then 40 ÷ 2)",
+     "correct_answer": "3 min 45 s (60 + 30 = 90, then 90 ÷ 2 = 45)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mwalimu shares 7 min 30 s of reading time equally between 2 pupils. How long each?",
+    "answer": "3 min 45 s",
+    "shows": "leftover minute as 60 s"
+   },
+   {
+    "question": "A runner does 2 laps in 6 min 40 s at a steady pace. How long per lap?",
+    "answer": "3 min 20 s",
+    "shows": "both parts divided"
+   }
+  ],
+  "name": "Divide minutes and seconds by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.TIME",
+  "sub_strand_name": "Time (minutes and seconds)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G5;
