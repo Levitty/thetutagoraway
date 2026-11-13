@@ -208,3 +208,26 @@ test('the example lessons contain no giveaways by the simple check', () => {
   assert.deepEqual(r3, [], r3.join('\n'));
   if (all.length) console.log(`older exemplars, flagged for the next round (${all.length}):\n${all.join('\n')}`);
 });
+
+// ---------------------------------------------------------------------------
+// Round 3 test situations (written, not run): every code they name is real.
+// ---------------------------------------------------------------------------
+test('round 3 scenarios name real skills, real misconceptions of that skill, and real round 3 moves', async () => {
+  const { SCENARIOS_ROUND3, PRIORITY_ROUND3 } = await import('../scripts/evals/scenarios-round3.mjs');
+  const playbook = readFileSync(new URL('../docs/tutor-training/PLAYBOOK_ROUND3_DRAFT.md', import.meta.url), 'utf8');
+  const ns = SCENARIOS_ROUND3.map((s) => s.n);
+  assert.deepEqual(ns, Array.from({ length: ns.length }, (_, i) => 42 + i), 'numbered 42 upwards with no gaps');
+  for (const s of SCENARIOS_ROUND3) {
+    assert.ok(skills.has(s.skill), `${s.n}: unknown skill ${s.skill}`);
+    if (s.misconception) {
+      const m = misconceptions.get(s.misconception);
+      assert.ok(m, `${s.n}: unknown misconception ${s.misconception}`);
+      assert.equal(m.skill, s.skill, `${s.n}: misconception belongs to another skill`);
+    }
+    for (const mv of s.moves) assert.ok(playbook.includes(`### ${mv}.`), `${s.n}: move ${mv} is not in the round 3 playbook`);
+    assert.ok(['scaffold', 'rigour', 'both'].includes(s.tag), `${s.n}: tag`);
+    assert.ok(s.expect.length > 40 && s.child.length > 40, `${s.n}: expect and child are written out`);
+    if (!s.skill.startsWith('MATH.G5.NUMBER.FRACTIONS.')) assert.ok(s.waits, `${s.n}: non-fraction situations wait for the tutor to open other skills`);
+  }
+  for (const n of PRIORITY_ROUND3) assert.ok(ns.includes(n), `priority ${n} exists`);
+});
