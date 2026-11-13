@@ -28827,7 +28827,7 @@ var NT_ID = [
 var NT_CAP = [
   I5("", "On Friday we travelled to Mombasa.", [["on friday we travelled to Mombasa.", "M7_NT_PROPER_SMALL"], ["On Friday we travelled to mombasa.", "M7_NT_PROPER_SMALL"], ["On Friday we Travelled to Mombasa.", "M7_NT_PROPER_SMALL"]], "Friday and Mombasa are proper nouns and need capitals. Travelled is not."),
   I5("", "My cousin Achieng lives near Lake Victoria.", [["My cousin achieng lives near Lake Victoria.", "M7_NT_PROPER_SMALL"], ["My cousin Achieng lives near lake victoria.", "M7_NT_PROPER_SMALL"], ["My Cousin Achieng lives near Lake Victoria.", "M7_NT_PROPER_SMALL"]], "Achieng and Lake Victoria are names and need capitals. Cousin is a common noun here."),
-  I5("", "The headteacher of Moi Primary School spoke to us.", [["The Headteacher of Moi Primary School spoke to us.", "M7_NT_PROPER_SMALL"], ["The headteacher of moi primary school spoke to us.", "M7_NT_PROPER_SMALL"]], "The name of the school needs capitals. Headteacher is a common noun here."),
+  I5("", "The headteacher of Moi Primary School spoke to us.", [["The headteacher of moi primary school spoke to us.", "M7_NT_PROPER_SMALL"], ["The headteacher of Moi primary school spoke to us.", "M7_NT_PROPER_SMALL"]], "The name of the school needs capitals. Headteacher is a common noun here."),
   I5("", "In December the Mara River is full.", [["In december the Mara River is full.", "M7_NT_PROPER_SMALL"], ["In December the mara river is full.", "M7_NT_PROPER_SMALL"]], "December and Mara River are proper nouns."),
   I5("", "The Nile flows north through Egypt.", [["The nile flows north through egypt.", "M7_NT_PROPER_SMALL"], ["The Nile flows North through Egypt.", "M7_NT_PROPER_SMALL"]], "Nile and Egypt are proper nouns. A direction such as north is a common noun."),
   I5("", "Mr Otieno teaches English on Mondays.", [["mr otieno teaches English on Mondays.", "M7_NT_PROPER_SMALL"], ["Mr Otieno teaches english on mondays.", "M7_NT_PROPER_SMALL"]], "A title with a name, a language and the days of the week all take capitals."),
@@ -28892,15 +28892,15 @@ var IV_ID = [
   I5("Which of these verbs is regular.", "plant", w2("M7_IV_REGULAR_IRREGULAR", "see", "take", "give"), "Plant takes -ed: planted.")
 ];
 var TC = [
-  I5("Every Sunday, Mama ___ to church. (go)", "goes", [["is going", "M7_TC_HABIT_PRESENT_CONT"], ["went", "M7_TC_WRONG_TIME"], ["gone", "M7_TC_WRONG_TIME"]], "Every Sunday shows a habit, so the simple present: goes."),
+  I5("Nowadays, Mama ___ to church every Sunday. (go)", "goes", [["is going", "M7_TC_HABIT_PRESENT_CONT"], ["went", "M7_TC_WRONG_TIME"], ["gone", "M7_TC_WRONG_TIME"]], "Nowadays and every Sunday show a habit in the present, so the simple present: goes."),
   I5("Yesterday, Atieno ___ to the market. (go)", "went", [...w2("M7_TC_PRESENT_FOR_PAST", "goes", "go"), ["going", "M7_TC_WRONG_TIME"]], "Yesterday is past time, so the verb is in the past: went."),
   I5("Tomorrow we ___ to Mombasa. (go)", "will go", [["went", "M7_TC_PAST_FOR_FUTURE"], ["have gone", "M7_TC_PAST_FOR_FUTURE"], ["will went", "M7_TC_WILL_PAST"]], "Tomorrow has not happened yet, so will + the plain verb: will go."),
-  I5("Every morning my father ___ to work by matatu. (go)", "goes", w2("M7_TC_WRONG_TIME", "went", "will go", "gone"), "Every morning shows a habit, so the simple present: goes."),
+  I5("These days my father ___ to work by matatu every morning. (go)", "goes", w2("M7_TC_WRONG_TIME", "went", "will go", "gone"), "These days and every morning show a habit in the present, so the simple present: goes."),
   I5("Next week our class ___ a trip. (take)", "will take", [["will took", "M7_TC_WILL_PAST"], ["took", "M7_TC_PAST_FOR_FUTURE"], ["taking", "M7_TC_WRONG_TIME"]], "Next week is future, so will + the plain verb: will take."),
   I5("Last Saturday we ___ the maize. (harvest)", "harvested", [["harvest", "M7_TC_PRESENT_FOR_PAST"], ["will harvest", "M7_TC_WRONG_TIME"], ["harvesting", "M7_TC_WRONG_TIME"]], "Last Saturday is past, so the simple past: harvested."),
   I5("The sun ___ in the east every day. (rise)", "rises", w2("M7_TC_WRONG_TIME", "rose", "rising", "risen"), "A fact that is always true uses the simple present: rises."),
   I5("In 2020, my sister ___ in Grade 4. (be)", "was", [["is", "M7_TC_PRESENT_FOR_PAST"], ["will be", "M7_TC_WRONG_TIME"], ["be", "M7_TC_WRONG_TIME"]], "In 2020 is past time, so was."),
-  I5("This time next year, Wanjiru ___ in Form One. (be)", "will be", [["was", "M7_TC_PAST_FOR_FUTURE"], ["is", "M7_TC_WRONG_TIME"], ["be", "M7_TC_WRONG_TIME"]], "Next year is future, so will be.")
+  I5("This time next year, Wanjiru ___ in Grade 8. (be)", "will be", [["was", "M7_TC_PAST_FOR_FUTURE"], ["is", "M7_TC_WRONG_TIME"], ["be", "M7_TC_WRONG_TIME"]], "Next year is future, so will be.")
 ];
 var SPR = [
   I5("Wanjiru ___ to school every day. (walk)", "walks", [["walk", "M7_SP_NO_S"], ["walkes", "M7_SP_ES"], ["walking", "M7_SP_WRONG_FORM"]], "After one name the simple present verb ends in -s: walks."),
@@ -28938,7 +28938,7 @@ var DEG = [
   I5("The river is ___ in the rainy season than in the dry season. (wide)", "wider", [["more wider", "M7_AD_MORE_ER"], ["widest", "M7_AD_THAN_THE"], ["wide", "M7_AD_PLAIN_FORM"]], "Wide takes -er with than: wider than.")
 ];
 var DEG_ID = [
-  I5("Which of these words is a superlative adjective.", "smallest", [["smaller", "M7_AD_THAN_THE"], ["small", "M7_AD_PLAIN_FORM"], ["more small", "M7_AD_MORE_ER"]], "Smallest picks the one with the least size of a group, so it is the superlative."),
+  I5("Which of these words is a superlative adjective.", "smallest", [["smaller", "M7_AD_THAN_THE"], ["small", "M7_AD_PLAIN_FORM"], ["more small", "M7_AD_MORE_ER"]], "Smallest picks out the one that is least in size from a group, so it is the superlative."),
   I5("Which of these words is a comparative adjective.", "happier", [["happiest", "M7_AD_THAN_THE"], ["happy", "M7_AD_PLAIN_FORM"], ["happily", "M7_AD_PLAIN_FORM"]], "Happier compares two things, so it is the comparative."),
   I5('In "Amina is as kind as her sister", the adjective kind is in which form.', "simple", [["comparative", "M7_AD_THAN_THE"], ["superlative", "M7_AD_THAN_THE"], ["adverb", "M7_AD_PLAIN_FORM"]], "In as ... as the plain, simple form is used."),
   I5('In "This is the most beautiful beach in Kenya", the adjective is in which form.', "superlative", [["comparative", "M7_AD_THAN_THE"], ["simple", "M7_AD_PLAIN_FORM"], ["adverb", "M7_AD_PLAIN_FORM"]], "Most beautiful in Kenya picks one from many, so it is the superlative."),
@@ -29013,7 +29013,7 @@ var PRE = [
   I5("The school opens ___ eight o'clock.", "at", [["on", "M7_PR_AT_ON_IN_TIME"], ["in", "M7_PR_AT_ON_IN_TIME"], ["to", "M7_PR_AT_ON_IN_TIME"]], "Use at with clock times: at eight o'clock."),
   I5("Our class goes to the library ___ the afternoon.", "in", [["on", "M7_PR_AT_ON_IN_TIME"], ["at", "M7_PR_AT_ON_IN_TIME"], ["to", "M7_PR_AT_ON_IN_TIME"]], "Use in with parts of the day: in the afternoon."),
   I5("My birthday is ___ March.", "in", [["on", "M7_PR_AT_ON_IN_TIME"], ["at", "M7_PR_AT_ON_IN_TIME"], ["to", "M7_PR_AT_ON_IN_TIME"]], "Use in with months: in March."),
-  I5("The bird flew ___ the open window.", "through|past|into", [["at", "M7_PR_TO_IN_PLACE"], ["on", "M7_PR_TO_IN_PLACE"], ["since", "M7_PR_TO_IN_PLACE"]], "Through shows a movement from one side of the window to the other.")
+  I5("The bird flew ___ the open window.", "through|past|into", [["among", "M7_PR_TO_IN_PLACE"], ["on", "M7_PR_TO_IN_PLACE"], ["since", "M7_PR_TO_IN_PLACE"]], "Through shows a movement from one side of the window to the other.")
 ];
 var PRE_KIND = [
   I5('In "The cat is under the table", what does under show.', "place", [["time", "M7_PR_KIND"], ["direction", "M7_PR_KIND"], ["reason", "M7_PR_KIND"]], "Under shows where the cat is, so it is a preposition of place."),
@@ -29060,7 +29060,7 @@ var AFM = [
   I5("The ___ boy rolled in the mud. (mud)", "muddy", [["mudy", "M7_AF2_SPELL_CHANGE"], ["mudly", "M7_AF2_WRONG_SUFFIX"], ["mud", "M7_AF2_NOUN_FOR_ADJ"]], "Double the d and add y: muddy."),
   I5("The ___ girl won the singing contest. (fame)", "famous", [["fameous", "M7_AF2_SPELL_CHANGE"], ["famy", "M7_AF2_WRONG_SUFFIX"], ["fame", "M7_AF2_NOUN_FOR_ADJ"]], "The e of fame drops before -ous: famous."),
   I5("A ___ nurse brought us medicine. (help)", "helpful", [["helpness", "M7_AF2_WRONG_SUFFIX"], ["helply", "M7_AF2_WRONG_SUFFIX"], ["help", "M7_AF2_NOUN_FOR_ADJ"]], "Helpful means full of help."),
-  I5("We were ___ when the rain finally came. (hope)", "hopeful", [["hopey", "M7_AF2_WRONG_SUFFIX"], ["hopeous", "M7_AF2_WRONG_SUFFIX"], ["hope", "M7_AF2_NOUN_FOR_ADJ"]], "Hopeful means full of hope."),
+  I5("We were ___ when the dark clouds gathered. (hope)", "hopeful", [["hopey", "M7_AF2_WRONG_SUFFIX"], ["hopeous", "M7_AF2_WRONG_SUFFIX"], ["hope", "M7_AF2_NOUN_FOR_ADJ"]], "Hopeful means full of hope."),
   I5("The ___ weather ruined our picnic. (rain)", "rainy", [["rainful", "M7_AF2_WRONG_SUFFIX"], ["rainous", "M7_AF2_WRONG_SUFFIX"], ["rain", "M7_AF2_NOUN_FOR_ADJ"]], "The adjective of rain is rainy.")
 ];
 var PCG = [
@@ -29068,7 +29068,7 @@ var PCG = [
   I5("It was cold, so Baraka ___ his jacket.", "put on|wore", [["put out", "M7_PV_LITERAL_PUT"], ["put off", "M7_PV_LITERAL_PUT"], ["gave away", "M7_PV_GIVE_UP_IN"]], "Put on means to wear."),
   I5("The team was losing, but they refused to ___.", "give up|quit", [["give away", "M7_PV_GIVE_UP_IN"], ["put off", "M7_PV_PUT_OFF_OUT"], ["come across", "M7_PV_COME_ACROSS"]], "Give up means to stop trying."),
   I5("While cleaning, Ouma ___ an old photograph.", "came across|found", [["came out", "M7_PV_COME_ACROSS"], ["came up", "M7_PV_COME_ACROSS"], ["came over", "M7_PV_COME_ACROSS"]], "Came across means found by chance."),
-  I5("The class tried to ___ a good name for the club.", "come up with|think of", [["come across", "M7_PV_WRONG_PARTICLE"], ["come in for", "M7_PV_WRONG_PARTICLE"], ["come off with", "M7_PV_WRONG_PARTICLE"]], "Come up with a name means to think of one."),
+  I5("The class tried to ___ a good name for the club.", "come up with|think of", [["come out", "M7_PV_WRONG_PARTICLE"], ["come in for", "M7_PV_WRONG_PARTICLE"], ["come off with", "M7_PV_WRONG_PARTICLE"]], "Come up with a name means to think of one."),
   I5("Our father asked us to ___ the football match until Sunday. (delay it)", "put off|postpone", [["put out", "M7_PV_PUT_OFF_OUT"], ["put on", "M7_PV_PUT_OFF_OUT"], ["put in", "M7_PV_PUT_OFF_OUT"]], "Put off means to delay."),
   I5("The child kept asking, so his mother finally ___ and bought the sweets.", "gave in|agreed", [["gave away", "M7_PV_GIVE_UP_IN"], ["gave out", "M7_PV_GIVE_UP_IN"], ["gave off", "M7_PV_GIVE_UP_IN"]], "Gave in means agreed after refusing for a while."),
   I5("The rich man decided to ___ his old clothes to the poor.", "give away|donate", [["give up", "M7_PV_GIVE_UP_IN"], ["give in", "M7_PV_GIVE_UP_IN"], ["give off", "M7_PV_GIVE_UP_IN"]], "Give away means to give for nothing."),
@@ -29121,7 +29121,7 @@ var SVF = [
   I5('Which word is the verb of "The old woman sells mandazi near the gate".', "sells", w2("M7_SVA_FIND_SUBJECT", "woman", "mandazi", "gate"), "The verb is the action: sells.")
 ];
 var NGP = [
-  I5("I do not have ___ pen.", "a", [["no", "M7_NG_DOUBLE"], ["none", "M7_NG_DOUBLE"], ["nothing", "M7_NG_DOUBLE"]], "Do not already says no. Say I do not have a pen."),
+  I5("I do not have ___ pen.", "a|any", [["no", "M7_NG_DOUBLE"], ["none", "M7_NG_DOUBLE"], ["nothing", "M7_NG_DOUBLE"]], "Do not already says no. Say I do not have a pen."),
   I5("She ___ like beans.", "doesn't|does not", [["don't", "M7_NG_DONT_THIRD"], ["aren't", "M7_NG_DONT_THIRD"], ["isn't", "M7_NG_DONT_THIRD"]], "One person takes does not: she does not like beans."),
   I5("He did not ___ to school yesterday. (go)", "go", [["went", "M7_NG_DID_PAST"], ["goes", "M7_NG_DID_PAST"], ["going", "M7_NG_DID_PAST"]], "After did not use the plain verb: did not go."),
   I5("I am ___ tired.", "not", [["no", "M7_NG_NO_NOT"], ["none", "M7_NG_NO_NOT"], ["nor", "M7_NG_NO_NOT"]], "Not goes with am and with an adjective: I am not tired."),
@@ -29275,12 +29275,12 @@ var PE_INC = [
   I6("Which sentence tells an incident that shows that our school is friendly.", "On the first day, three learners shared their lunch with the new girl.", [["Our school is a friendly place.", "M7_PE_REPEAT"], ["Schools have teachers and learners.", "M7_PE_INCIDENT_GENERAL"], ["Lunch is at one o'clock.", "M7_PE_EXAMPLE_OFF"]], "It tells one thing that happened on one day.")
 ];
 var PEC = [
-  I6('Complete the sentence: "Many animals live in the park, ___ lions, zebras and giraffes."', "such as", w3("M7_PE_CONNECTOR", "however", "because", "finally"), "Such as brings in examples of the animals."),
-  I6('Complete the text: "Some fruits are rich in vitamins. ___, oranges and pawpaws help us to stay healthy."', "For example", w3("M7_PE_CONNECTOR", "However", "Finally", "Therefore"), "For example brings in examples of the fruits."),
-  I6('Complete the text: "Kenya exports many crops. ___, tea and coffee bring the country large sums of money."', "For instance", w3("M7_PE_CONNECTOR", "Instead", "Meanwhile", "Otherwise"), "For instance brings in an example."),
-  I6('Complete the sentence: "Our school has four clubs, ___ the drama club and the science club."', "including", w3("M7_PE_CONNECTOR", "because", "although", "unless"), "Including brings in examples from the group."),
-  I6('Complete the text: "Some birds cannot fly. ___, the ostrich runs very fast."', "For example", w3("M7_PE_CONNECTOR", "However", "Finally", "Because"), "For example brings in an example of a bird that cannot fly."),
-  I6('Complete the text: "There are many ways to save water. ___, we can close the tap while brushing our teeth."', "For example", w3("M7_PE_CONNECTOR", "Therefore", "Because", "Although"), "For example brings in one way of saving water.")
+  I6('Complete the sentence: "Many animals live in the park, ___ lions, zebras and giraffes."', "such as|like", w3("M7_PE_CONNECTOR", "however", "because", "finally"), "Such as brings in examples of the animals."),
+  I6('Complete the text: "Some fruits are rich in vitamins. ___, oranges and pawpaws help us to stay healthy."', "For example|For instance", w3("M7_PE_CONNECTOR", "However", "Finally", "Therefore"), "For example brings in examples of the fruits."),
+  I6('Complete the text: "Kenya exports many crops. ___, tea and coffee bring the country large sums of money."', "For instance|For example", w3("M7_PE_CONNECTOR", "Instead", "Meanwhile", "Otherwise"), "For instance brings in an example."),
+  I6('Complete the sentence: "Our school has four clubs, ___ the drama club and the science club."', "including|such as", w3("M7_PE_CONNECTOR", "because", "although", "unless"), "Including brings in examples from the group."),
+  I6('Complete the text: "Some birds cannot fly. ___, the ostrich runs very fast."', "For example|For instance", w3("M7_PE_CONNECTOR", "However", "Finally", "Because"), "For example brings in an example of a bird that cannot fly."),
+  I6('Complete the text: "There are many ways to save water. ___, we can close the tap while brushing our teeth."', "For example|For instance", w3("M7_PE_CONNECTOR", "Therefore", "Because", "Although"), "For example brings in one way of saving water.")
 ];
 var PODD = [
   I6('Which sentence does not belong in this paragraph. "Achieng went to the river at dawn. She filled her jerrycan with water. Her uncle sells shoes in Eldoret. Then she carried it home."', "Her uncle sells shoes in Eldoret.", w3("M7_PE_KEEPS_OFF_TOPIC", "Achieng went to the river at dawn.", "She filled her jerrycan with water.", "Then she carried it home."), "The paragraph is about Achieng fetching water. The uncle's shoes are about something else."),
@@ -29372,7 +29372,7 @@ var LG_EVENT = [
 ];
 var SYN = [
   I6('A word that means the same as "start" is ___.', "begin|commence", [["finish", "M7_SY_ANT_SYN"], ["stop", "M7_SY_ANT_SYN"], ["continue", "M7_SY_RELATED_NOT_SAME"]], "Begin has the same meaning as start."),
-  I6('A word that means the same as "clever" is ___.', "intelligent|smart|bright", [["stupid", "M7_SY_ANT_SYN"], ["lazy", "M7_SY_RELATED_NOT_SAME"], ["quick", "M7_SY_RELATED_NOT_SAME"]], "Intelligent has the same meaning as clever."),
+  I6('A word that means the same as "clever" is ___.', "intelligent|smart|bright", [["stupid", "M7_SY_ANT_SYN"], ["lazy", "M7_SY_RELATED_NOT_SAME"], ["tall", "M7_SY_RELATED_NOT_SAME"]], "Intelligent has the same meaning as clever."),
   I6('A word that means the same as "huge" is ___.', "enormous|giant|vast", [["tiny", "M7_SY_ANT_SYN"], ["heavy", "M7_SY_RELATED_NOT_SAME"], ["tall", "M7_SY_RELATED_NOT_SAME"]], "Enormous has the same meaning as huge."),
   I6('The opposite of "ancient" is ___.', "modern", [["old", "M7_SY_ANT_SYN"], ["antique", "M7_SY_ANT_SYN"], ["dusty", "M7_SY_RELATED_NOT_SAME"]], "Ancient means very old. Its opposite is modern."),
   I6('The opposite of "generous" is ___.', "selfish|mean|stingy", [["kind", "M7_SY_ANT_SYN"], ["rich", "M7_SY_RELATED_NOT_SAME"], ["honest", "M7_SY_RELATED_NOT_SAME"]], "A generous person gives freely. The opposite is selfish."),
@@ -29406,10 +29406,10 @@ var NW = [
   I6("My sister is in her ___ year at school. (9th)", "ninth", w3("M7_NW_EIGHTH", "nineth", "ninnth", "nine"), "Ninth has no e: nine loses its e.")
 ];
 var NW_SENT = [
-  I6("", "Forty learners came to the meeting.", [["40 learners came to the meeting.", "M7_NW_START_FIGURE"], ["Fourty learners came to the meeting.", "M7_NW_FORTY"]], "A sentence must not begin with a figure, and forty has no u."),
-  I6("", "Thirty-two children sat the test.", [["32 children sat the test.", "M7_NW_START_FIGURE"], ["Thirty two children sat the test.", "M7_NW_HYPHEN"]], "Begin with the number in words, and use a hyphen in thirty-two."),
-  I6("", "Ninety pupils took part in the race.", [["90 pupils took part in the race.", "M7_NW_START_FIGURE"], ["Ninty pupils took part in the race.", "M7_NW_SPELL_NUMBER"]], "Write the number in words at the start of a sentence: ninety."),
-  I6("", "Fourteen goats grazed near the river.", [["14 goats grazed near the river.", "M7_NW_START_FIGURE"], ["Forteen goats grazed near the river.", "M7_NW_FORTY"]], "Write the number in words at the start of a sentence: fourteen."),
+  I6("", "Forty learners came to the meeting.", [["Fourty learners came to the meeting.", "M7_NW_FORTY"], ["Forthy learners came to the meeting.", "M7_NW_FORTY"]], "Forty has no u, although four and fourteen have."),
+  I6("", "Thirty-two children sat the test.", [["Thirty two children sat the test.", "M7_NW_HYPHEN"], ["Thirtytwo children sat the test.", "M7_NW_HYPHEN"]], "Use a hyphen in thirty-two."),
+  I6("", "Ninety pupils took part in the race.", [["Ninty pupils took part in the race.", "M7_NW_SPELL_NUMBER"], ["Ninetty pupils took part in the race.", "M7_NW_SPELL_NUMBER"]], "Ninety is nine + ty, and the e stays."),
+  I6("", "Fourteen goats grazed near the river.", [["Forteen goats grazed near the river.", "M7_NW_FORTY"], ["Fourten goats grazed near the river.", "M7_NW_FORTY"]], "Fourteen is four + teen, and it has a u."),
   I6("", "She came 3rd in the race.", [["She came 3th in the race.", "M7_NW_ORDINAL"], ["She came 3d in the race.", "M7_NW_ORDINAL"]], "The ordinal of 3 is 3rd."),
   I6("", "Our school was built on the 21st of June.", [["Our school was built on the 21th of June.", "M7_NW_ORDINAL"], ["Our school was built on the 21nd of June.", "M7_NW_ORDINAL"]], "The ordinal of 21 is 21st.")
 ];
@@ -29543,7 +29543,7 @@ var FAMILIES28 = [
   C4("antonym.prefix", "choose-opposite", "WRITIN.T11.SYNONYMS_ANTONYMS", SYN_PREFIX, { stem: "Choose the word that completes the sentence correctly.", hints: H6("Many opposites are made with a prefix, but the prefix must fit the word.", "Say the word aloud. Does it sound like a real word?"), oc: "b", rung: 2 }),
   C4("synonym.kind", "synonym-or-antonym", "WRITIN.T11.SYNONYMS_ANTONYMS", SYN_KIND, { hints: H6("Synonyms mean the same. Antonyms mean the opposite.", "Say both words and ask: can one replace the other?"), oc: "a" }),
   ...P5("numword", "WRITIN.T11.NUMBER_WORDS", NW, { hints: H6("Say the number slowly and spell each part.", "Numbers from 21 to 99 take a hyphen. Ordinals: 1st, 2nd, 3rd, then th."), topic: "with numbers", oc: ["a", "b", "b"], thinOk: true }),
-  C4("numword.sentence", "choose-sentence", "WRITIN.T11.NUMBER_WORDS", NW_SENT, { stem: SENT7, hints: H6("Never begin a sentence with a figure.", "Check the spelling of the number and the ending of the ordinal."), oc: "a", rung: 2 }),
+  C4("numword.sentence", "choose-sentence", "WRITIN.T11.NUMBER_WORDS", NW_SENT, { stem: SENT7, hints: H6("Say the number aloud and check how it is spelt.", "Check the spelling of the number and the ending of the ordinal."), oc: "a", rung: 2 }),
   C4("dialogue.format", "choose-format", "WRITIN.T12.DIALOGUE_FORMAT", DF, { hints: H6("In a play-style dialogue each line begins with the speaker's name and a colon.", "Actions go in brackets. Each turn is on a new line."), oc: "a" }),
   C4("dialogue.line", "choose-line", "WRITIN.T12.DIALOGUE_FORMAT", DF_LINE, { hints: H6("The name comes first, then any action in brackets, then a colon and the words.", "Quotation marks are not put round a whole line of a script."), oc: "a", rung: 2 }),
   C4("idiom.meaning", "choose-meaning", "WRITIN.T13.IDIOMS", ID_MEAN, { hints: H6("An idiom does not mean what its words say.", "Think of the situation where the idiom is used."), oc: "a" }),
@@ -29759,7 +29759,7 @@ var OR_TENSE = [
 ];
 var TRAVEL = [
   I7("The matatu ___ collected the fares.", "conductor|driver", w4("M7_TW_PERSON_PLACE", "terminus", "timetable", "luggage"), "A conductor is the person who collects fares."),
-  I7("The ___ from Nakuru to Eldoret is 400 shillings.", "fare|price|cost", w4("M7_TW_FARE_FEE", "fee", "wage", "tax"), "A fare is the money paid for a journey."),
+  I7("The ___ from Nakuru to Eldoret is 400 shillings.", "fare|price|cost", w4("M7_TW_FARE_FEE", "salary", "wage", "tax"), "A fare is the money paid for a journey."),
   I7("Kisumu is our final ___.", "destination|stop|stage", w4("M7_TW_JOURNEY_TRIP", "route", "journey", "timetable"), "The place you are going to is the destination."),
   I7("The passengers put their ___ on the roof of the bus.", "luggage|bags|baggage", w4("M7_TW_LUGGAGE", "luggages", "baggages", "lugages"), "Luggage is not counted and has no plural."),
   I7("The bus ___ shows when each bus leaves.", "timetable|schedule", w4("M7_TW_TIMETABLE", "ticket", "fare", "terminus"), "A timetable lists the times of buses."),
@@ -29852,9 +29852,9 @@ var STY_GAP = [
   I7("The boy was as strong ___ an ox.", "as", w4("M7_ST_SIMILE_AS_LIKE", "like", "than", "that"), "The simile pattern is as strong as."),
   I7("She ran ___ the wind.", "like", w4("M7_ST_SIMILE_AS_LIKE", "as", "than", "then"), "The simile is ran like the wind."),
   I7("He is as slow ___ a tortoise.", "as", w4("M7_ST_SIMILE_AS_LIKE", "like", "than", "so"), "The simile pattern is as slow as."),
-  I7("Her voice was ___ honey: sweet and smooth.", "like", w4("M7_ST_SIMILE_AS_LIKE", "as", "than", "so"), "The simile is her voice was like honey."),
+  I7("Her voice was ___ honey: sweet and smooth.", "like", w4("M7_ST_SIMILE_AS_LIKE", "such", "than", "so"), "The simile is her voice was like honey."),
   I7("The old man is as wise ___ an owl.", "as", w4("M7_ST_SIMILE_AS_LIKE", "like", "than", "that"), "The simile pattern is as wise as."),
-  I7("The stars were ___ diamonds in the sky.", "like", w4("M7_ST_SIMILE_AS_LIKE", "as", "than", "so"), "The simile is the stars were like diamonds.")
+  I7("The stars were ___ diamonds in the sky.", "like", w4("M7_ST_SIMILE_AS_LIKE", "such", "than", "so"), "The simile is the stars were like diamonds.")
 ];
 var STY_MEAN = [
   I7('In "the classroom was a zoo", what does the writer mean.', "the class was noisy and wild", w4("M7_ST_LITERAL_METAPHOR", "there were animals in it", "the school was closed", "the class was empty"), "A metaphor shows what something is like: noisy and wild."),
@@ -30036,8 +30036,8 @@ Hare laughed and ate the honey until the gourd was empty. But Elephant soon met 
     minor: [["Which character plays only a small part in the story.", "Buffalo", ["Hare", "M7_CR_MAIN_FOR_MINOR"], ["the baobab tree", "M7_CR_PLACE_CHARACTER"], ["the forest", "M7_CR_PLACE_CHARACTER"], "Buffalo is only named in Hare's trick and in the meeting at the end."]],
     order: ["Hare watched Elephant lick the honey every day.", "Hare told Elephant that Buffalo was coming.", "Elephant dropped the gourd and ran.", "Elephant met Buffalo and walked back to the tree."],
     fact: [["Where was the gourd of honey hidden.", "under a baobab tree|under the baobab tree", ["in the forest", "M7_FQ_NEARBY_DETAIL"], ["in Buffalo's house", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["inside a cave", "M7_FQ_OUTSIDE_KNOWLEDGE"], "The first sentence says it was hidden under a baobab tree.", { t: 1 }], ["Who did Hare say was coming with his horns.", "Buffalo", ["Elephant", "M7_FQ_NEARBY_DETAIL"], ["Hare", "M7_FQ_NEARBY_DETAIL"], ["a hunter", "M7_FQ_OUTSIDE_KNOWLEDGE"], "Hare said that Buffalo was coming with his horns.", { t: 1 }]],
-    tf: [["Hare ate the honey.", "True", "Hare laughed and ate the honey until the gourd was empty."], ["Buffalo owned the gourd of honey.", "False", "The honey belonged to Elephant."], ["Hare shared the honey with Buffalo.", "Not stated", "The passage does not say that Hare shared it."]],
-    infer: ["Why did Elephant's eyes grow narrow at the end.", "He realised that Hare had tricked him.", ["He wanted more honey.", "M7_IQ_OVERREACH"], ["He was happy to meet Buffalo.", "M7_IQ_CONTRADICTS"], ["Buffalo knew nothing about any honey.", "M7_IQ_REPEATS_TEXT"], "Buffalo knew nothing about the honey, so Elephant understood the trick."],
+    tf: [["Hare ate the honey.", "True", "Hare laughed and ate the honey until the gourd was empty."], ["Buffalo owned the gourd of honey.", "False", "The honey belonged to Elephant."], ["Elephant had hidden the gourd for many weeks.", "Not stated", "The passage does not say how long the gourd had been hidden."]],
+    infer: ["Why did Elephant's eyes grow narrow at the end.", "He realised that Hare had tricked him.", ["He wanted more honey.", "M7_IQ_OVERREACH"], ["He was happy to meet Buffalo.", "M7_IQ_CONTRADICTS"], ["Elephant walked slowly back to the baobab tree.", "M7_IQ_REPEATS_TEXT"], "Buffalo knew nothing about the honey, so Elephant understood the trick."],
     infer2: ["Hare is clever but not honest.", ["Hare was very hungry.", "M7_IQ_REPEATS_TEXT"], ["Hare is the strongest animal.", "M7_IQ_OVERREACH"], ["Hare is afraid of Elephant.", "M7_IQ_CONTRADICTS"], "He told a lie to get the honey, so he is clever but not honest."],
     predict: ["What will probably happen next.", "Elephant will go to find Hare and be angry with him.", ["Hare will share the honey.", "M7_PD_CONTRADICTS"], ["Elephant will thank Hare.", "M7_PD_CONTRADICTS"], ["Elephant dropped the gourd.", "M7_PD_ALREADY_HAPPENED"], "Elephant has understood the trick, so he will go after Hare."],
     clue: ["Elephant will go to find Hare and be angry with him.", "Elephant's eyes grew narrow.", "Hare laughed and ate the honey until the gourd was empty.", "Elephant had a gourd of honey hidden under a baobab tree.", "Hare ran to Elephant and cried.", "The narrow eyes show that Elephant is angry and has understood."],
@@ -30096,7 +30096,7 @@ Mercy was excited. She ran to call her friend Kioko and her little brother Muli.
     minor: [["Which group of characters plays only a small part in the legend.", "the elders", ["Nasila", "M7_CR_MAIN_FOR_MINOR"], ["the river bank", "M7_CR_PLACE_CHARACTER"], ["the huts", "M7_CR_PLACE_CHARACTER"], "The elders laugh at Nasila but play only a small part."]],
     order: ["The river rose each year and carried away huts.", "Nasila walked to the river bank alone.", "She sang a song of peace for three days and nights.", "The river turned away and the people gave Nasila a new name."],
     fact: [["How long did Nasila sing at the river.", "three days and three nights", ["one day", "M7_FQ_NEARBY_DETAIL"], ["four days", "M7_FQ_NEARBY_DETAIL"], ["a week", "M7_FQ_OUTSIDE_KNOWLEDGE"], "She sang for three days and three nights.", { t: 1 }], ["What name did the people give Nasila.", "Voice of the River", ["Queen of the Plains", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["Girl of the Huts", "M7_FQ_NEARBY_DETAIL"], ["Friend of the Elders", "M7_FQ_NEARBY_DETAIL"], "They gave her the name Voice of the River.", { t: 1 }]],
-    tf: [["The elders laughed at Nasila.", "True", "The passage says that the elders laughed."], ["Nasila sang for one night only.", "False", "She sang for three days and three nights."], ["Nasila's mother went with her to the river.", "Not stated", "Her mother is not mentioned."]],
+    tf: [["The elders laughed at Nasila.", "True", "The passage says that the elders laughed."], ["Nasila sang for one night only.", "False", "She sang for three days and three nights."], ["Nasila's father was one of the elders.", "Not stated", "Her father is not mentioned."]],
     infer: ["Why did the elders laugh.", "They did not believe that a girl could speak to a river.", ["They were happy about the flood.", "M7_IQ_CONTRADICTS"], ["They wanted to sing too.", "M7_IQ_OVERREACH"], ["The river rose each year.", "M7_IQ_REPEATS_TEXT"], "They doubted that Nasila could change the river."],
     infer2: ["Nasila is brave and patient.", ["Nasila walked to the river bank.", "M7_IQ_REPEATS_TEXT"], ["Nasila is afraid of the people.", "M7_IQ_CONTRADICTS"], ["Nasila is the oldest person in the village.", "M7_IQ_OVERREACH"], "She went alone and sang for three days, so she is brave and patient."],
     predict: ["What will the people probably do if another danger comes to the village.", "They will remember Nasila's bravery and try to be brave too.", ["They will blame Nasila.", "M7_PD_CONTRADICTS"], ["They will build huts on the old river bed.", "M7_PD_NO_CLUE"], ["The people were safe at last.", "M7_PD_ALREADY_HAPPENED"], "The people honour her every year, so they will remember her courage."],
@@ -30214,7 +30214,7 @@ Within twenty minutes the fire was out. Only two stalls were burnt. The market c
     fact: [["How many beehives does Mama Janet keep.", "ten|10", ["two", "M7_FQ_NEARBY_DETAIL"], ["twenty", "M7_FQ_NEARBY_DETAIL"], ["five", "M7_FQ_OUTSIDE_KNOWLEDGE"], "She keeps ten beehives.", { t: 1 }], ["Where does Mama Janet sell her honey.", "at the weekly market|at the market", ["at the school", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["at the hospital", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["at the church", "M7_FQ_OUTSIDE_KNOWLEDGE"], "She sells it at the weekly market.", { t: 1 }]],
     tf: [["Mama Janet keeps her hives in the shade.", "True", "The hives must be placed in the shade."], ["Mama Janet's mango trees give fewer mangoes now.", "False", "They give twice as many mangoes."], ["Mama Janet learned beekeeping from her mother.", "Not stated", "The passage does not say that."]],
     detail: [["Why does Mama Janet grow flowers near the hives.", "so that the bees always have food", ["to sell them", "M7_MI_DETAIL_FOR_ASKED"], ["to keep away stings", "M7_MI_DETAIL_FOR_ASKED"], ["to make the honey sweeter", "M7_MI_DETAIL_FOR_ASKED"], "She grows flowers so that the bees always have food.", { t: 1 }]],
-    infer: ["Why do Mama Janet's mango trees give more mangoes now.", "The bees carry pollen between the flowers.", ["The mango trees are older.", "M7_IQ_OVERREACH"], ["Mama Janet sells fewer mangoes.", "M7_IQ_CONTRADICTS"], ["Mama Janet keeps ten beehives.", "M7_IQ_REPEATS_TEXT"], "Pollen helps plants to make fruit, and the bees carry it."],
+    infer: ["Why do Mama Janet's mango trees give more mangoes now.", "The bees carry pollen between the flowers.", ["The mango trees are older.", "M7_IQ_OVERREACH"], ["Mama Janet sells fewer mangoes.", "M7_IQ_CONTRADICTS"], ["The hives must be placed in the shade.", "M7_IQ_REPEATS_TEXT"], "Pollen helps plants to make fruit, and the bees carry it."],
     infer2: ["Mama Janet takes good care of her bees.", ["She keeps ten beehives.", "M7_IQ_REPEATS_TEXT"], ["She is afraid of bees and never goes near them.", "M7_IQ_CONTRADICTS"], ["She is the best beekeeper in Kenya.", "M7_IQ_OVERREACH"], "She puts the hives in the shade and grows flowers for the bees."],
     ctx: ["pollen", "a fine powder made by flowers", ["a sweet drink", "M7_CX_COMMON_MEANING"], ["a kind of wax", "M7_CX_LOOKS_LIKE"], ["a part of the hive", "M7_CX_OPPOSITE"], "Bees carry pollen from flower to flower, and it helps plants to make fruit."],
     ctxclue: ["pollen", "they carry pollen from flower to flower", "Mama Janet wears a net", "The hives are in the shade", "Bees give her honey", "Flowers make the powder and bees carry it from flower to flower."],
@@ -30232,7 +30232,7 @@ Within twenty minutes the fire was out. Only two stalls were burnt. The market c
     fact: [["What do the roots of the trees hold.", "the soil", ["the water", "M7_FQ_NEARBY_DETAIL"], ["the rivers", "M7_FQ_NEARBY_DETAIL"], ["the rain", "M7_FQ_OUTSIDE_KNOWLEDGE"], "The roots of the trees hold the soil.", { t: 1 }], ["Why are forests shrinking.", "people cut trees for firewood and farms", ["heavy rain washes them away", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["animals eat the trees", "M7_FQ_OUTSIDE_KNOWLEDGE"], ["the rivers dry up", "M7_FQ_NEARBY_DETAIL"], "Forests shrink because people cut trees for firewood and farms.", { t: 1 }]],
     tf: [["Forests are homes for animals, birds and insects.", "True", "The first paragraph says so."], ["Rivers from forests give water to only one village.", "False", "They give water to millions of people."], ["Forests make the weather colder.", "Not stated", "The passage does not say that."]],
     detail: [["What is one way to protect forests.", "plant trees", ["cut trees near rivers", "M7_MI_DETAIL_FOR_ASKED"], ["use more firewood", "M7_MI_DETAIL_FOR_ASKED"], ["clear land for farms", "M7_MI_DETAIL_FOR_ASKED"], "The passage says we can plant trees, use less firewood and stop cutting trees near rivers.", { t: 1 }]],
-    infer: ["Why do rivers stay clean when heavy rain falls on a forest.", "The soil stays in place because the roots hold it.", ["The rain does not fall in forests.", "M7_IQ_CONTRADICTS"], ["Animals clean the rivers.", "M7_IQ_OVERREACH"], ["The roots of the trees hold the soil.", "M7_IQ_REPEATS_TEXT"], "Roots hold the soil, so mud is not washed into the rivers."],
+    infer: ["Why do rivers stay clean when heavy rain falls on a forest.", "The soil stays in place because the roots hold it.", ["The rain does not fall in forests.", "M7_IQ_CONTRADICTS"], ["Animals clean the rivers.", "M7_IQ_OVERREACH"], ["Forests are shrinking because people cut trees.", "M7_IQ_REPEATS_TEXT"], "Roots hold the soil, so mud is not washed into the rivers."],
     infer2: ["If we cut trees near a river, the river may become dirty.", ["The roots of the trees hold the soil.", "M7_IQ_REPEATS_TEXT"], ["Cutting trees makes rivers cleaner.", "M7_IQ_CONTRADICTS"], ["All rivers in Kenya will dry up.", "M7_IQ_OVERREACH"], "Without roots to hold the soil, mud can wash into the river."],
     ctx: ["shrinking", "becoming smaller", ["growing taller", "M7_CX_OPPOSITE"], ["becoming wetter", "M7_CX_LOOKS_LIKE"], ["staying the same", "M7_CX_COMMON_MEANING"], "People cut the trees, so the forests are becoming smaller."],
     ctxclue: ["shrinking", "people cut trees for firewood and farms", "forests protect our water", "rivers stay clean", "animals cannot live anywhere else", "Cutting trees makes forests smaller."],

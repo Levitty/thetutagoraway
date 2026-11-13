@@ -49,7 +49,7 @@ const NT_ID = [
 const NT_CAP = [
   I('', 'On Friday we travelled to Mombasa.', [['on friday we travelled to Mombasa.', 'M7_NT_PROPER_SMALL'], ['On Friday we travelled to mombasa.', 'M7_NT_PROPER_SMALL'], ['On Friday we Travelled to Mombasa.', 'M7_NT_PROPER_SMALL']], 'Friday and Mombasa are proper nouns and need capitals. Travelled is not.'),
   I('', 'My cousin Achieng lives near Lake Victoria.', [['My cousin achieng lives near Lake Victoria.', 'M7_NT_PROPER_SMALL'], ['My cousin Achieng lives near lake victoria.', 'M7_NT_PROPER_SMALL'], ['My Cousin Achieng lives near Lake Victoria.', 'M7_NT_PROPER_SMALL']], 'Achieng and Lake Victoria are names and need capitals. Cousin is a common noun here.'),
-  I('', 'The headteacher of Moi Primary School spoke to us.', [['The Headteacher of Moi Primary School spoke to us.', 'M7_NT_PROPER_SMALL'], ['The headteacher of moi primary school spoke to us.', 'M7_NT_PROPER_SMALL']], 'The name of the school needs capitals. Headteacher is a common noun here.'),
+  I('', 'The headteacher of Moi Primary School spoke to us.', [['The headteacher of moi primary school spoke to us.', 'M7_NT_PROPER_SMALL'], ['The headteacher of Moi primary school spoke to us.', 'M7_NT_PROPER_SMALL']], 'The name of the school needs capitals. Headteacher is a common noun here.'),
   I('', 'In December the Mara River is full.', [['In december the Mara River is full.', 'M7_NT_PROPER_SMALL'], ['In December the mara river is full.', 'M7_NT_PROPER_SMALL']], 'December and Mara River are proper nouns.'),
   I('', 'The Nile flows north through Egypt.', [['The nile flows north through egypt.', 'M7_NT_PROPER_SMALL'], ['The Nile flows North through Egypt.', 'M7_NT_PROPER_SMALL']], 'Nile and Egypt are proper nouns. A direction such as north is a common noun.'),
   I('', 'Mr Otieno teaches English on Mondays.', [['mr otieno teaches English on Mondays.', 'M7_NT_PROPER_SMALL'], ['Mr Otieno teaches english on mondays.', 'M7_NT_PROPER_SMALL']], 'A title with a name, a language and the days of the week all take capitals.'),
@@ -118,15 +118,15 @@ const IV_ID = [
 ];
 // ---------------------------------------------------------------- choosing the tense
 const TC = [
-  I('Every Sunday, Mama ___ to church. (go)', 'goes', [['is going', 'M7_TC_HABIT_PRESENT_CONT'], ['went', 'M7_TC_WRONG_TIME'], ['gone', 'M7_TC_WRONG_TIME']], 'Every Sunday shows a habit, so the simple present: goes.'),
+  I('Nowadays, Mama ___ to church every Sunday. (go)', 'goes', [['is going', 'M7_TC_HABIT_PRESENT_CONT'], ['went', 'M7_TC_WRONG_TIME'], ['gone', 'M7_TC_WRONG_TIME']], 'Nowadays and every Sunday show a habit in the present, so the simple present: goes.'),
   I('Yesterday, Atieno ___ to the market. (go)', 'went', [...w('M7_TC_PRESENT_FOR_PAST', 'goes', 'go'), ['going', 'M7_TC_WRONG_TIME']], 'Yesterday is past time, so the verb is in the past: went.'),
   I('Tomorrow we ___ to Mombasa. (go)', 'will go', [['went', 'M7_TC_PAST_FOR_FUTURE'], ['have gone', 'M7_TC_PAST_FOR_FUTURE'], ['will went', 'M7_TC_WILL_PAST']], 'Tomorrow has not happened yet, so will + the plain verb: will go.'),
-  I('Every morning my father ___ to work by matatu. (go)', 'goes', w('M7_TC_WRONG_TIME', 'went', 'will go', 'gone'), 'Every morning shows a habit, so the simple present: goes.'),
+  I('These days my father ___ to work by matatu every morning. (go)', 'goes', w('M7_TC_WRONG_TIME', 'went', 'will go', 'gone'), 'These days and every morning show a habit in the present, so the simple present: goes.'),
   I('Next week our class ___ a trip. (take)', 'will take', [['will took', 'M7_TC_WILL_PAST'], ['took', 'M7_TC_PAST_FOR_FUTURE'], ['taking', 'M7_TC_WRONG_TIME']], 'Next week is future, so will + the plain verb: will take.'),
   I('Last Saturday we ___ the maize. (harvest)', 'harvested', [['harvest', 'M7_TC_PRESENT_FOR_PAST'], ['will harvest', 'M7_TC_WRONG_TIME'], ['harvesting', 'M7_TC_WRONG_TIME']], 'Last Saturday is past, so the simple past: harvested.'),
   I('The sun ___ in the east every day. (rise)', 'rises', w('M7_TC_WRONG_TIME', 'rose', 'rising', 'risen'), 'A fact that is always true uses the simple present: rises.'),
   I('In 2020, my sister ___ in Grade 4. (be)', 'was', [['is', 'M7_TC_PRESENT_FOR_PAST'], ['will be', 'M7_TC_WRONG_TIME'], ['be', 'M7_TC_WRONG_TIME']], 'In 2020 is past time, so was.'),
-  I('This time next year, Wanjiru ___ in Form One. (be)', 'will be', [['was', 'M7_TC_PAST_FOR_FUTURE'], ['is', 'M7_TC_WRONG_TIME'], ['be', 'M7_TC_WRONG_TIME']], 'Next year is future, so will be.'),
+  I('This time next year, Wanjiru ___ in Grade 8. (be)', 'will be', [['was', 'M7_TC_PAST_FOR_FUTURE'], ['is', 'M7_TC_WRONG_TIME'], ['be', 'M7_TC_WRONG_TIME']], 'Next year is future, so will be.'),
 ];
 // ---------------------------------------------------------------- simple present
 const SPR = [
@@ -167,7 +167,7 @@ const DEG = [
   I('The river is ___ in the rainy season than in the dry season. (wide)', 'wider', [['more wider', 'M7_AD_MORE_ER'], ['widest', 'M7_AD_THAN_THE'], ['wide', 'M7_AD_PLAIN_FORM']], 'Wide takes -er with than: wider than.'),
 ];
 const DEG_ID = [
-  I('Which of these words is a superlative adjective.', 'smallest', [['smaller', 'M7_AD_THAN_THE'], ['small', 'M7_AD_PLAIN_FORM'], ['more small', 'M7_AD_MORE_ER']], 'Smallest picks the one with the least size of a group, so it is the superlative.'),
+  I('Which of these words is a superlative adjective.', 'smallest', [['smaller', 'M7_AD_THAN_THE'], ['small', 'M7_AD_PLAIN_FORM'], ['more small', 'M7_AD_MORE_ER']], 'Smallest picks out the one that is least in size from a group, so it is the superlative.'),
   I('Which of these words is a comparative adjective.', 'happier', [['happiest', 'M7_AD_THAN_THE'], ['happy', 'M7_AD_PLAIN_FORM'], ['happily', 'M7_AD_PLAIN_FORM']], 'Happier compares two things, so it is the comparative.'),
   I('In "Amina is as kind as her sister", the adjective kind is in which form.', 'simple', [['comparative', 'M7_AD_THAN_THE'], ['superlative', 'M7_AD_THAN_THE'], ['adverb', 'M7_AD_PLAIN_FORM']], 'In as ... as the plain, simple form is used.'),
   I('In "This is the most beautiful beach in Kenya", the adjective is in which form.', 'superlative', [['comparative', 'M7_AD_THAN_THE'], ['simple', 'M7_AD_PLAIN_FORM'], ['adverb', 'M7_AD_PLAIN_FORM']], 'Most beautiful in Kenya picks one from many, so it is the superlative.'),
@@ -246,7 +246,7 @@ const PRE = [
   I('The school opens ___ eight o\'clock.', 'at', [['on', 'M7_PR_AT_ON_IN_TIME'], ['in', 'M7_PR_AT_ON_IN_TIME'], ['to', 'M7_PR_AT_ON_IN_TIME']], 'Use at with clock times: at eight o\'clock.'),
   I('Our class goes to the library ___ the afternoon.', 'in', [['on', 'M7_PR_AT_ON_IN_TIME'], ['at', 'M7_PR_AT_ON_IN_TIME'], ['to', 'M7_PR_AT_ON_IN_TIME']], 'Use in with parts of the day: in the afternoon.'),
   I('My birthday is ___ March.', 'in', [['on', 'M7_PR_AT_ON_IN_TIME'], ['at', 'M7_PR_AT_ON_IN_TIME'], ['to', 'M7_PR_AT_ON_IN_TIME']], 'Use in with months: in March.'),
-  I('The bird flew ___ the open window.', 'through|past|into', [['at', 'M7_PR_TO_IN_PLACE'], ['on', 'M7_PR_TO_IN_PLACE'], ['since', 'M7_PR_TO_IN_PLACE']], 'Through shows a movement from one side of the window to the other.'),
+  I('The bird flew ___ the open window.', 'through|past|into', [['among', 'M7_PR_TO_IN_PLACE'], ['on', 'M7_PR_TO_IN_PLACE'], ['since', 'M7_PR_TO_IN_PLACE']], 'Through shows a movement from one side of the window to the other.'),
 ];
 const PRE_KIND = [
   I('In "The cat is under the table", what does under show.', 'place', [['time', 'M7_PR_KIND'], ['direction', 'M7_PR_KIND'], ['reason', 'M7_PR_KIND']], 'Under shows where the cat is, so it is a preposition of place.'),
@@ -296,7 +296,7 @@ const AFM = [
   I('The ___ boy rolled in the mud. (mud)', 'muddy', [['mudy', 'M7_AF2_SPELL_CHANGE'], ['mudly', 'M7_AF2_WRONG_SUFFIX'], ['mud', 'M7_AF2_NOUN_FOR_ADJ']], 'Double the d and add y: muddy.'),
   I('The ___ girl won the singing contest. (fame)', 'famous', [['fameous', 'M7_AF2_SPELL_CHANGE'], ['famy', 'M7_AF2_WRONG_SUFFIX'], ['fame', 'M7_AF2_NOUN_FOR_ADJ']], 'The e of fame drops before -ous: famous.'),
   I('A ___ nurse brought us medicine. (help)', 'helpful', [['helpness', 'M7_AF2_WRONG_SUFFIX'], ['helply', 'M7_AF2_WRONG_SUFFIX'], ['help', 'M7_AF2_NOUN_FOR_ADJ']], 'Helpful means full of help.'),
-  I('We were ___ when the rain finally came. (hope)', 'hopeful', [['hopey', 'M7_AF2_WRONG_SUFFIX'], ['hopeous', 'M7_AF2_WRONG_SUFFIX'], ['hope', 'M7_AF2_NOUN_FOR_ADJ']], 'Hopeful means full of hope.'),
+  I('We were ___ when the dark clouds gathered. (hope)', 'hopeful', [['hopey', 'M7_AF2_WRONG_SUFFIX'], ['hopeous', 'M7_AF2_WRONG_SUFFIX'], ['hope', 'M7_AF2_NOUN_FOR_ADJ']], 'Hopeful means full of hope.'),
   I('The ___ weather ruined our picnic. (rain)', 'rainy', [['rainful', 'M7_AF2_WRONG_SUFFIX'], ['rainous', 'M7_AF2_WRONG_SUFFIX'], ['rain', 'M7_AF2_NOUN_FOR_ADJ']], 'The adjective of rain is rainy.'),
 ];
 // ---------------------------------------------------------------- phrasal verbs with put, come, give
@@ -305,7 +305,7 @@ const PCG = [
   I('It was cold, so Baraka ___ his jacket.', 'put on|wore', [['put out', 'M7_PV_LITERAL_PUT'], ['put off', 'M7_PV_LITERAL_PUT'], ['gave away', 'M7_PV_GIVE_UP_IN']], 'Put on means to wear.'),
   I('The team was losing, but they refused to ___.', 'give up|quit', [['give away', 'M7_PV_GIVE_UP_IN'], ['put off', 'M7_PV_PUT_OFF_OUT'], ['come across', 'M7_PV_COME_ACROSS']], 'Give up means to stop trying.'),
   I('While cleaning, Ouma ___ an old photograph.', 'came across|found', [['came out', 'M7_PV_COME_ACROSS'], ['came up', 'M7_PV_COME_ACROSS'], ['came over', 'M7_PV_COME_ACROSS']], 'Came across means found by chance.'),
-  I('The class tried to ___ a good name for the club.', 'come up with|think of', [['come across', 'M7_PV_WRONG_PARTICLE'], ['come in for', 'M7_PV_WRONG_PARTICLE'], ['come off with', 'M7_PV_WRONG_PARTICLE']], 'Come up with a name means to think of one.'),
+  I('The class tried to ___ a good name for the club.', 'come up with|think of', [['come out', 'M7_PV_WRONG_PARTICLE'], ['come in for', 'M7_PV_WRONG_PARTICLE'], ['come off with', 'M7_PV_WRONG_PARTICLE']], 'Come up with a name means to think of one.'),
   I('Our father asked us to ___ the football match until Sunday. (delay it)', 'put off|postpone', [['put out', 'M7_PV_PUT_OFF_OUT'], ['put on', 'M7_PV_PUT_OFF_OUT'], ['put in', 'M7_PV_PUT_OFF_OUT']], 'Put off means to delay.'),
   I('The child kept asking, so his mother finally ___ and bought the sweets.', 'gave in|agreed', [['gave away', 'M7_PV_GIVE_UP_IN'], ['gave out', 'M7_PV_GIVE_UP_IN'], ['gave off', 'M7_PV_GIVE_UP_IN']], 'Gave in means agreed after refusing for a while.'),
   I('The rich man decided to ___ his old clothes to the poor.', 'give away|donate', [['give up', 'M7_PV_GIVE_UP_IN'], ['give in', 'M7_PV_GIVE_UP_IN'], ['give off', 'M7_PV_GIVE_UP_IN']], 'Give away means to give for nothing.'),
@@ -361,7 +361,7 @@ const SVF = [
 ];
 // ---------------------------------------------------------------- affirmative and negative sentences
 const NGP = [
-  I('I do not have ___ pen.', 'a', [['no', 'M7_NG_DOUBLE'], ['none', 'M7_NG_DOUBLE'], ['nothing', 'M7_NG_DOUBLE']], 'Do not already says no. Say I do not have a pen.'),
+  I('I do not have ___ pen.', 'a|any', [['no', 'M7_NG_DOUBLE'], ['none', 'M7_NG_DOUBLE'], ['nothing', 'M7_NG_DOUBLE']], 'Do not already says no. Say I do not have a pen.'),
   I('She ___ like beans.', 'doesn\'t|does not', [['don\'t', 'M7_NG_DONT_THIRD'], ['aren\'t', 'M7_NG_DONT_THIRD'], ['isn\'t', 'M7_NG_DONT_THIRD']], 'One person takes does not: she does not like beans.'),
   I('He did not ___ to school yesterday. (go)', 'go', [['went', 'M7_NG_DID_PAST'], ['goes', 'M7_NG_DID_PAST'], ['going', 'M7_NG_DID_PAST']], 'After did not use the plain verb: did not go.'),
   I('I am ___ tired.', 'not', [['no', 'M7_NG_NO_NOT'], ['none', 'M7_NG_NO_NOT'], ['nor', 'M7_NG_NO_NOT']], 'Not goes with am and with an adjective: I am not tired.'),

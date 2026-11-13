@@ -220,7 +220,7 @@ const OR_TENSE = [
 // ---------------------------------------------------------------- land travel words
 const TRAVEL = [
   I('The matatu ___ collected the fares.', 'conductor|driver', w('M7_TW_PERSON_PLACE', 'terminus', 'timetable', 'luggage'), 'A conductor is the person who collects fares.'),
-  I('The ___ from Nakuru to Eldoret is 400 shillings.', 'fare|price|cost', w('M7_TW_FARE_FEE', 'fee', 'wage', 'tax'), 'A fare is the money paid for a journey.'),
+  I('The ___ from Nakuru to Eldoret is 400 shillings.', 'fare|price|cost', w('M7_TW_FARE_FEE', 'salary', 'wage', 'tax'), 'A fare is the money paid for a journey.'),
   I('Kisumu is our final ___.', 'destination|stop|stage', w('M7_TW_JOURNEY_TRIP', 'route', 'journey', 'timetable'), 'The place you are going to is the destination.'),
   I('The passengers put their ___ on the roof of the bus.', 'luggage|bags|baggage', w('M7_TW_LUGGAGE', 'luggages', 'baggages', 'lugages'), 'Luggage is not counted and has no plural.'),
   I('The bus ___ shows when each bus leaves.', 'timetable|schedule', w('M7_TW_TIMETABLE', 'ticket', 'fare', 'terminus'), 'A timetable lists the times of buses.'),
@@ -318,9 +318,9 @@ const STY_GAP = [
   I('The boy was as strong ___ an ox.', 'as', w('M7_ST_SIMILE_AS_LIKE', 'like', 'than', 'that'), 'The simile pattern is as strong as.'),
   I('She ran ___ the wind.', 'like', w('M7_ST_SIMILE_AS_LIKE', 'as', 'than', 'then'), 'The simile is ran like the wind.'),
   I('He is as slow ___ a tortoise.', 'as', w('M7_ST_SIMILE_AS_LIKE', 'like', 'than', 'so'), 'The simile pattern is as slow as.'),
-  I('Her voice was ___ honey: sweet and smooth.', 'like', w('M7_ST_SIMILE_AS_LIKE', 'as', 'than', 'so'), 'The simile is her voice was like honey.'),
+  I('Her voice was ___ honey: sweet and smooth.', 'like', w('M7_ST_SIMILE_AS_LIKE', 'such', 'than', 'so'), 'The simile is her voice was like honey.'),
   I('The old man is as wise ___ an owl.', 'as', w('M7_ST_SIMILE_AS_LIKE', 'like', 'than', 'that'), 'The simile pattern is as wise as.'),
-  I('The stars were ___ diamonds in the sky.', 'like', w('M7_ST_SIMILE_AS_LIKE', 'as', 'than', 'so'), 'The simile is the stars were like diamonds.'),
+  I('The stars were ___ diamonds in the sky.', 'like', w('M7_ST_SIMILE_AS_LIKE', 'such', 'than', 'so'), 'The simile is the stars were like diamonds.'),
 ];
 const STY_MEAN = [
   I('In "the classroom was a zoo", what does the writer mean.', 'the class was noisy and wild', w('M7_ST_LITERAL_METAPHOR', 'there were animals in it', 'the school was closed', 'the class was empty'), 'A metaphor shows what something is like: noisy and wild.'),

@@ -95,12 +95,12 @@ const PE_INC = [
   I('Which sentence tells an incident that shows that our school is friendly.', 'On the first day, three learners shared their lunch with the new girl.', [['Our school is a friendly place.', 'M7_PE_REPEAT'], ['Schools have teachers and learners.', 'M7_PE_INCIDENT_GENERAL'], ['Lunch is at one o\'clock.', 'M7_PE_EXAMPLE_OFF']], 'It tells one thing that happened on one day.'),
 ];
 const PEC = [
-  I('Complete the sentence: "Many animals live in the park, ___ lions, zebras and giraffes."', 'such as', w('M7_PE_CONNECTOR', 'however', 'because', 'finally'), 'Such as brings in examples of the animals.'),
-  I('Complete the text: "Some fruits are rich in vitamins. ___, oranges and pawpaws help us to stay healthy."', 'For example', w('M7_PE_CONNECTOR', 'However', 'Finally', 'Therefore'), 'For example brings in examples of the fruits.'),
-  I('Complete the text: "Kenya exports many crops. ___, tea and coffee bring the country large sums of money."', 'For instance', w('M7_PE_CONNECTOR', 'Instead', 'Meanwhile', 'Otherwise'), 'For instance brings in an example.'),
-  I('Complete the sentence: "Our school has four clubs, ___ the drama club and the science club."', 'including', w('M7_PE_CONNECTOR', 'because', 'although', 'unless'), 'Including brings in examples from the group.'),
-  I('Complete the text: "Some birds cannot fly. ___, the ostrich runs very fast."', 'For example', w('M7_PE_CONNECTOR', 'However', 'Finally', 'Because'), 'For example brings in an example of a bird that cannot fly.'),
-  I('Complete the text: "There are many ways to save water. ___, we can close the tap while brushing our teeth."', 'For example', w('M7_PE_CONNECTOR', 'Therefore', 'Because', 'Although'), 'For example brings in one way of saving water.'),
+  I('Complete the sentence: "Many animals live in the park, ___ lions, zebras and giraffes."', 'such as|like', w('M7_PE_CONNECTOR', 'however', 'because', 'finally'), 'Such as brings in examples of the animals.'),
+  I('Complete the text: "Some fruits are rich in vitamins. ___, oranges and pawpaws help us to stay healthy."', 'For example|For instance', w('M7_PE_CONNECTOR', 'However', 'Finally', 'Therefore'), 'For example brings in examples of the fruits.'),
+  I('Complete the text: "Kenya exports many crops. ___, tea and coffee bring the country large sums of money."', 'For instance|For example', w('M7_PE_CONNECTOR', 'Instead', 'Meanwhile', 'Otherwise'), 'For instance brings in an example.'),
+  I('Complete the sentence: "Our school has four clubs, ___ the drama club and the science club."', 'including|such as', w('M7_PE_CONNECTOR', 'because', 'although', 'unless'), 'Including brings in examples from the group.'),
+  I('Complete the text: "Some birds cannot fly. ___, the ostrich runs very fast."', 'For example|For instance', w('M7_PE_CONNECTOR', 'However', 'Finally', 'Because'), 'For example brings in an example of a bird that cannot fly.'),
+  I('Complete the text: "There are many ways to save water. ___, we can close the tap while brushing our teeth."', 'For example|For instance', w('M7_PE_CONNECTOR', 'Therefore', 'Because', 'Although'), 'For example brings in one way of saving water.'),
 ];
 const PODD = [
   I('Which sentence does not belong in this paragraph. "Achieng went to the river at dawn. She filled her jerrycan with water. Her uncle sells shoes in Eldoret. Then she carried it home."', 'Her uncle sells shoes in Eldoret.', w('M7_PE_KEEPS_OFF_TOPIC', 'Achieng went to the river at dawn.', 'She filled her jerrycan with water.', 'Then she carried it home.'), 'The paragraph is about Achieng fetching water. The uncle\'s shoes are about something else.'),
@@ -198,7 +198,7 @@ const LG_EVENT = [
 // ---------------------------------------------------------------- synonyms and antonyms
 const SYN = [
   I('A word that means the same as "start" is ___.', 'begin|commence', [['finish', 'M7_SY_ANT_SYN'], ['stop', 'M7_SY_ANT_SYN'], ['continue', 'M7_SY_RELATED_NOT_SAME']], 'Begin has the same meaning as start.'),
-  I('A word that means the same as "clever" is ___.', 'intelligent|smart|bright', [['stupid', 'M7_SY_ANT_SYN'], ['lazy', 'M7_SY_RELATED_NOT_SAME'], ['quick', 'M7_SY_RELATED_NOT_SAME']], 'Intelligent has the same meaning as clever.'),
+  I('A word that means the same as "clever" is ___.', 'intelligent|smart|bright', [['stupid', 'M7_SY_ANT_SYN'], ['lazy', 'M7_SY_RELATED_NOT_SAME'], ['tall', 'M7_SY_RELATED_NOT_SAME']], 'Intelligent has the same meaning as clever.'),
   I('A word that means the same as "huge" is ___.', 'enormous|giant|vast', [['tiny', 'M7_SY_ANT_SYN'], ['heavy', 'M7_SY_RELATED_NOT_SAME'], ['tall', 'M7_SY_RELATED_NOT_SAME']], 'Enormous has the same meaning as huge.'),
   I('The opposite of "ancient" is ___.', 'modern', [['old', 'M7_SY_ANT_SYN'], ['antique', 'M7_SY_ANT_SYN'], ['dusty', 'M7_SY_RELATED_NOT_SAME']], 'Ancient means very old. Its opposite is modern.'),
   I('The opposite of "generous" is ___.', 'selfish|mean|stingy', [['kind', 'M7_SY_ANT_SYN'], ['rich', 'M7_SY_RELATED_NOT_SAME'], ['honest', 'M7_SY_RELATED_NOT_SAME']], 'A generous person gives freely. The opposite is selfish.'),
@@ -233,10 +233,10 @@ const NW = [
   I('My sister is in her ___ year at school. (9th)', 'ninth', w('M7_NW_EIGHTH', 'nineth', 'ninnth', 'nine'), 'Ninth has no e: nine loses its e.'),
 ];
 const NW_SENT = [
-  I('', 'Forty learners came to the meeting.', [['40 learners came to the meeting.', 'M7_NW_START_FIGURE'], ['Fourty learners came to the meeting.', 'M7_NW_FORTY']], 'A sentence must not begin with a figure, and forty has no u.'),
-  I('', 'Thirty-two children sat the test.', [['32 children sat the test.', 'M7_NW_START_FIGURE'], ['Thirty two children sat the test.', 'M7_NW_HYPHEN']], 'Begin with the number in words, and use a hyphen in thirty-two.'),
-  I('', 'Ninety pupils took part in the race.', [['90 pupils took part in the race.', 'M7_NW_START_FIGURE'], ['Ninty pupils took part in the race.', 'M7_NW_SPELL_NUMBER']], 'Write the number in words at the start of a sentence: ninety.'),
-  I('', 'Fourteen goats grazed near the river.', [['14 goats grazed near the river.', 'M7_NW_START_FIGURE'], ['Forteen goats grazed near the river.', 'M7_NW_FORTY']], 'Write the number in words at the start of a sentence: fourteen.'),
+  I('', 'Forty learners came to the meeting.', [['Fourty learners came to the meeting.', 'M7_NW_FORTY'], ['Forthy learners came to the meeting.', 'M7_NW_FORTY']], 'Forty has no u, although four and fourteen have.'),
+  I('', 'Thirty-two children sat the test.', [['Thirty two children sat the test.', 'M7_NW_HYPHEN'], ['Thirtytwo children sat the test.', 'M7_NW_HYPHEN']], 'Use a hyphen in thirty-two.'),
+  I('', 'Ninety pupils took part in the race.', [['Ninty pupils took part in the race.', 'M7_NW_SPELL_NUMBER'], ['Ninetty pupils took part in the race.', 'M7_NW_SPELL_NUMBER']], 'Ninety is nine + ty, and the e stays.'),
+  I('', 'Fourteen goats grazed near the river.', [['Forteen goats grazed near the river.', 'M7_NW_FORTY'], ['Fourten goats grazed near the river.', 'M7_NW_FORTY']], 'Fourteen is four + teen, and it has a u.'),
   I('', 'She came 3rd in the race.', [['She came 3th in the race.', 'M7_NW_ORDINAL'], ['She came 3d in the race.', 'M7_NW_ORDINAL']], 'The ordinal of 3 is 3rd.'),
   I('', 'Our school was built on the 21st of June.', [['Our school was built on the 21th of June.', 'M7_NW_ORDINAL'], ['Our school was built on the 21nd of June.', 'M7_NW_ORDINAL']], 'The ordinal of 21 is 21st.'),
 ];
@@ -377,7 +377,7 @@ export const FAMILIES = [
   C('antonym.prefix', 'choose-opposite', 'WRITIN.T11.SYNONYMS_ANTONYMS', SYN_PREFIX, { stem: 'Choose the word that completes the sentence correctly.', hints: H('Many opposites are made with a prefix, but the prefix must fit the word.', 'Say the word aloud. Does it sound like a real word?'), oc: 'b', rung: 2 }),
   C('synonym.kind', 'synonym-or-antonym', 'WRITIN.T11.SYNONYMS_ANTONYMS', SYN_KIND, { hints: H('Synonyms mean the same. Antonyms mean the opposite.', 'Say both words and ask: can one replace the other?'), oc: 'a' }),
   ...P('numword', 'WRITIN.T11.NUMBER_WORDS', NW, { hints: H('Say the number slowly and spell each part.', 'Numbers from 21 to 99 take a hyphen. Ordinals: 1st, 2nd, 3rd, then th.'), topic: 'with numbers', oc: ['a', 'b', 'b'], thinOk: true }),
-  C('numword.sentence', 'choose-sentence', 'WRITIN.T11.NUMBER_WORDS', NW_SENT, { stem: SENT, hints: H('Never begin a sentence with a figure.', 'Check the spelling of the number and the ending of the ordinal.'), oc: 'a', rung: 2 }),
+  C('numword.sentence', 'choose-sentence', 'WRITIN.T11.NUMBER_WORDS', NW_SENT, { stem: SENT, hints: H('Say the number aloud and check how it is spelt.', 'Check the spelling of the number and the ending of the ordinal.'), oc: 'a', rung: 2 }),
   C('dialogue.format', 'choose-format', 'WRITIN.T12.DIALOGUE_FORMAT', DF, { hints: H('In a play-style dialogue each line begins with the speaker\'s name and a colon.', 'Actions go in brackets. Each turn is on a new line.'), oc: 'a' }),
   C('dialogue.line', 'choose-line', 'WRITIN.T12.DIALOGUE_FORMAT', DF_LINE, { hints: H('The name comes first, then any action in brackets, then a colon and the words.', 'Quotation marks are not put round a whole line of a script.'), oc: 'a', rung: 2 }),
   C('idiom.meaning', 'choose-meaning', 'WRITIN.T13.IDIOMS', ID_MEAN, { hints: H('An idiom does not mean what its words say.', 'Think of the situation where the idiom is used.'), oc: 'a' }),
