@@ -54,14 +54,14 @@ export const FAMILIES = [
     Q('Which fruit does best at the hot coast?', 'Mango', ['Apple|FY_ANYWHERE', 'Plum|FY_ANYWHERE', 'Pear|FY_ANYWHERE'], 'Mango likes the warm coast. Apples need the cool highlands.'),
     Q('Which of these gives a fruit but is not a tall tree?', 'Banana and pawpaw plants', ['None, all fruits come from tall trees|FY_TREE', 'Only mango trees|FY_TREE', 'Only coconut palms|FY_TREE'], 'Fruits grow on trees, vines, bushes and plants.'),
     Q('Which of these is NOT a fruit crop?', 'Cassava', ['Guava|FY_ROOT', 'Orange|FY_ROOT', 'Pineapple|FY_ROOT'], 'Cassava is a root crop.'),
-    Q('Which fruit grows well in the cool highlands?', 'Plum', ['Coconut|FY_ANYWHERE', 'Mango|FY_ANYWHERE', 'Pineapple|FY_ANYWHERE'], 'Plums like cool places.'),
+    Q('Which fruit grows well in the cool highlands?', 'Plum', ['Coconut|FY_ANYWHERE', 'Mango|FY_ANYWHERE', 'Cashew nut|FY_ANYWHERE'], 'Plums like cool places.'),
     Q('Passion fruit grows on what?', 'A climbing vine', ['A tall tree only|FY_TREE', 'A root under the ground|FY_ROOT', 'A cassava stem|FY_ROOT'], 'Passion fruit is a vine.'),
   ], { h: ['Think about where each fruit grows and what plant gives it.', 'Mango likes warm places. Apple likes cool places. Cassava is a root.'], s1: 'Think about the place and the plant.' })),
   fam('fruit.type.story', `${FR}FRUIT_TYPES`, 'word', 2, choose([
     Q('Mama Mueni lives near Mombasa where it is hot. Which fruit tree should she plant?', 'Mango', ['Apple|FY_ANYWHERE', 'Plum|FY_ANYWHERE', 'Pear|FY_ANYWHERE'], 'Mango does well in the warm coast.'),
     Q('Peter has a small plot. He wants a fruit plant that is not a tall tree. Which can he choose?', 'Banana', ['Mango tree|FY_TREE', 'Coconut palm|FY_TREE', 'Avocado tree|FY_TREE'], 'A banana is a plant, not a tall tree.'),
     Q('Wafula says cassava is a fruit crop because it is sweet. What is the best reply?', 'Cassava is a root crop, not a fruit', ['He is right, cassava is a fruit|FY_ROOT', 'All sweet foods are fruits|FY_ROOT', 'Roots are the fruits of the plant|FY_ROOT'], 'Cassava is a root crop.'),
-    Q('The Grade 4 class at a cold highland school wants to grow fruit. Which is a good choice?', 'Plums', ['Coconuts|FY_ANYWHERE', 'Pineapples|FY_ANYWHERE', 'Mangoes at the coast|FY_ANYWHERE'], 'Plums like the cool highlands.'),
+    Q('The Grade 4 class at a cold highland school wants to grow fruit. Which is a good choice?', 'Plums', ['Coconuts|FY_ANYWHERE', 'Cashew nuts|FY_ANYWHERE', 'Mangoes at the coast|FY_ANYWHERE'], 'Plums like the cool highlands.'),
     Q('A farmer grows pawpaw, orange and guava. What are these?', 'Fruit crops', ['Root crops|FY_ROOT', 'Tall trees only|FY_TREE', 'Cereals|FY_ROOT'], 'They all give fruits.'),
   ], { h: ['What does the place need? Is the plant a tree or something else?', 'Choose the fruit that suits the weather.'], s1: 'Think about the weather and the plant.' })),
 
@@ -93,12 +93,12 @@ export const FAMILIES = [
     Q('Which of these is a domestic animal?', 'A goat', ['A zebra|AT_WILD', 'An antelope|AT_WILD', 'A giraffe|AT_WILD'], 'Domestic animals are kept and cared for by people.'),
     Q('Which of these is a domestic animal kept for eggs?', 'A chicken', ['None, birds are not domestic animals|AT_FOUR', 'A wild goose|AT_WILD', 'A zebra|AT_WILD'], 'Chickens are domestic animals called poultry.'),
     Q('Which of these is poultry?', 'A duck', ['A goat|AT_GROUP', 'A sheep|AT_GROUP', 'A cow|AT_GROUP'], 'Poultry are birds kept for eggs and meat.'),
-    Q('Which of these animals is livestock?', 'A cow', ['A chicken|AT_GROUP', 'A duck|AT_GROUP', 'A turkey|AT_GROUP'], 'Cattle, goats and sheep are livestock.'),
+    Q('Which of these animals is livestock, not poultry?', 'A cow', ['A chicken|AT_GROUP', 'A duck|AT_GROUP', 'A turkey|AT_GROUP'], 'Cattle, goats and sheep are livestock.'),
     Q('Which of these is NOT a domestic animal?', 'A giraffe', ['A donkey|AT_WILD', 'A rabbit|AT_WILD', 'A pig|AT_WILD'], 'Giraffes live wild in parks.'),
   ], { h: ['Who keeps and feeds the animal?', 'Poultry are birds. Livestock are cattle, goats and sheep.'], s1: 'Think about who looks after the animal.' })),
   fam('animal.type.story', `${AN}ANIMAL_TYPES`, 'word', 2, choose([
     Q('A zebra often grazes near the village. Is it a domestic animal?', 'No, it is wild', ['Yes, it is near people|AT_WILD', 'Yes, it is kept at home|AT_WILD', 'Yes, it is like a donkey|AT_WILD'], 'Domestic animals are kept by people.'),
-    Q('Mama Wanja keeps hens. Her son says hens are not domestic animals because they have two legs. What is the best reply?', 'Hens are domestic animals called poultry', ['He is right, only four-legged animals count|AT_FOUR', 'Hens are wild birds|AT_WILD', 'Hens are livestock like cattle|AT_GROUP'], 'Domestic animals include birds.'),
+    Q('Mama Wanja keeps hens. Her son says hens are not domestic animals because they have two legs. What is the best reply?', 'Hens are domestic animals called poultry', ['He is right, only four-legged animals count|AT_FOUR', 'Hens are wild birds|AT_WILD', 'Hens are four-legged animals like cattle|AT_GROUP'], 'Domestic animals include birds.'),
     Q('Oluoch keeps a duck. To which group does it belong?', 'Poultry', ['Livestock|AT_GROUP', 'Wild animals|AT_WILD', 'Pets only|AT_GROUP'], 'Ducks are poultry.'),
     Q('Mr Lekishon keeps cattle, goats and sheep. What are these animals called?', 'Livestock', ['Poultry|AT_GROUP', 'Wild animals|AT_WILD', 'Insects|AT_GROUP'], 'Cattle, goats and sheep are livestock.'),
     Q('Some families keep camels and give them water. Are camels domestic animals?', 'Yes, they are kept by people', ['No, they live wild|AT_WILD', 'No, only cows are domestic|AT_FOUR', 'No, they are poultry|AT_GROUP'], 'Camels are domestic when people keep them.'),
@@ -106,7 +106,7 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- ANIMAL_USES
   fam('animal.use.which', `${AN}ANIMAL_USES`, 'direct', 1, choose([
-    Q('Which animal gives us wool?', 'A sheep', ['A goat|AU_MIX', 'A cow|AU_MIX', 'A hen|AU_MIX'], 'Sheep give wool.'),
+    Q('Which animal gives us wool?', 'A sheep', ['A pig|AU_MIX', 'A cow|AU_MIX', 'A hen|AU_MIX'], 'Sheep give wool.'),
     Q('Which animal gives us eggs?', 'A chicken', ['A cow|AU_MIX', 'A goat|AU_MIX', 'A sheep|AU_MIX'], 'Chickens lay eggs.'),
     Q('Which animal gives us milk, meat and hides?', 'A cow', ['None, an animal gives only one thing|AU_ONE', 'A hen|AU_MIX', 'A bee|AU_MIX'], 'A cow gives milk, meat and hides.'),
     Q('Which animal is used to carry loads?', 'A donkey', ['A hen|AU_WORK', 'A rabbit|AU_WORK', 'A duck|AU_WORK'], 'Donkeys are strong and carry loads.'),
