@@ -264,6 +264,34 @@
    ],
    "mastery": "Recognises a compound noun (toothbrush, post office, mother-in-law), writes its plural by changing the main word (post offices, mothers-in-law, toothbrushes), and does not write the plural on the last part only (mother-in-laws), in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "puts the events of a short story in the order they happened and does not swap two events or start with a late one, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "uses the words around a hard word or a line to work out its meaning and does not pick a meaning that has nothing to do with the clues, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "finds a stated fact in the text and works out an idea that is not stated, and does not answer from outside the text, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "names the speaker of the poem, the words that are repeated, and what the poem is about, and does not pick a line that is not repeated, in 8 of 10 new items."
+  },
   "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS": {
    "forms": [
     "choose the correct word",
@@ -272,6 +300,13 @@
    ],
    "mastery": "Picks the collective noun that fits a group (a pride of lions, a fleet of ships, a school of fish, a troop of monkeys, a crew of sailors) and writes it as one singular word (a flock, not a flocks) before of, and does not use one group word for every group, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "names the place and the time of a story from the words in it and does not name a place the story never mentions, in 8 of 10 new items."
+  },
   "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION": {
    "forms": [
     "choose the correct sentence",
@@ -279,6 +314,13 @@
     "spot the mistake"
    ],
    "mastery": "Puts commas between the items of a list and after an opening word, writes the apostrophe for belonging (the boy's book, the boys' books) and for a short form (it's, don't) but not for a plain plural, and writes capital letters for names, the first word and I, in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE": {
+   "forms": [
+    "pick the right answer after listening",
+    "pick the right answer after a second listening"
+   ],
+   "mastery": "finds the cause and the effect in what was heard, picks specific information, and uses clues for a hard word, in 8 of 10 new items."
   },
   "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS": {
    "forms": [
@@ -296,6 +338,20 @@
    ],
    "mastery": "Names the stanza (a group of lines), the line, the rhyme (matching end sounds), the rhythm (the beat) and the repetition (a word or line said again), and says the speaker of the poem is the persona, not always the poet, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "picks what the whole poem is about, the picture its words make, and does not pick one image only, in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC": {
+   "forms": [
+    "pick the right answer after listening",
+    "pick the right answer after a second listening"
+   ],
+   "mastery": "picks the exact fact that was said, such as a time or a name, and does not pick a general idea, in 8 of 10 new items."
+  },
   "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
    "forms": [
     "choose the correct word",
@@ -303,6 +359,13 @@
     "spot the mistake"
    ],
    "mastery": "Writes the simple present for habits and facts with -s after he, she or it, writes the simple past (regular -ed and irregular went, saw, ate), and uses did not with the plain verb, not did not went, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "names who is in the story and picks a trait that the characters actions show, and does not pick a trait the actions contradict, in 8 of 10 new items."
   },
   "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
    "forms": [
@@ -320,6 +383,13 @@
    ],
    "mastery": "Uses always, usually, often, sometimes and never for how often, and very, quite, too, almost and extremely for how much, puts a frequency adverb before the main verb and after be (she always arrives, he is never late), and does not write too for very, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "picks what the whole story is about and a summary that keeps the key events in order, and does not pick one detail, in 8 of 10 new items."
+  },
   "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
    "forms": [
     "choose the correct word",
@@ -327,6 +397,13 @@
     "spot the mistake"
    ],
    "mastery": "Spells words such as separate, definitely, necessary, occasion, accommodate and tomorrow correctly, writes i before e except after c (believe, receive, ceiling) and knows the common exceptions (seize, weird), in 8 of 10 new items."
+  },
+  "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN": {
+   "forms": [
+    "pick the right answer after listening",
+    "pick the right answer after a second listening"
+   ],
+   "mastery": "picks what the whole listening text is about and answers questions about it from what was heard, and does not pick one detail, in 8 of 10 new items."
   },
   "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
    "forms": [
@@ -377,6 +454,13 @@
    ],
    "mastery": "Adds -ly to most adjectives (quick, quickly), changes y to i before -ly (happy, happily), changes -le to -ly (gentle, gently), writes truly, and knows that the adverb of good is well and that fast and hard stay the same, in 8 of 10 new items."
   },
+  "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "picks the lesson shown by what happens at the end and does not pick a lesson the story does not teach, in 8 of 10 new items."
+  },
   "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES": {
    "forms": [
     "choose the correct word",
@@ -384,6 +468,13 @@
     "spot the mistake"
    ],
    "mastery": "Adds un-, dis-, re- and mis- to the front of a word (unhappy, disagree, replay, misunderstand) and -ful, -less, -ment and -ness to the end (careful, careless, enjoyment, kindness), says how the meaning changes, and keeps the spelling right (happy, happiness), in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "sees the picture the words make and uses clues for a hard word, and does not pick a picture that does not fit the words, in 8 of 10 new items."
   },
   "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
    "forms": [
@@ -393,6 +484,13 @@
     "choose the correct word"
    ],
    "mastery": "Gives the meaning of look after, look for, give up, turn off, put off, run out of, set off, break down and carry on from the sentence, and picks the right particle, not one that changes the meaning, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "picks the key points that belong in a summary and leaves out small details, in 8 of 10 new items."
   },
   "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES": {
    "forms": [
@@ -434,6 +532,13 @@
     "spot the mistake"
    ],
    "mastery": "Forms a question tag from the sentence (you are coming, aren't you; she doesn't like tea, does she), turns a positive sentence to a negative tag and a negative one to a positive tag, and does not use isn't it for every tag, in 8 of 10 new items."
+  },
+  "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer on a second passage"
+   ],
+   "mastery": "picks the message the poet wants to give and does not pick a single line as the message, in 8 of 10 new items."
   }
  }
 }

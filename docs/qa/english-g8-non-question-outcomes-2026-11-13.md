@@ -3,7 +3,7 @@
 Built from `curriculum/english/g8.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 254. By what tests them best: Q 119, W 18, O 44, P 0, A 73.
-- Outcomes with at least one question family: 44. Q outcomes with a family: 42 of 119. Q outcomes with no family: 77.
+- Outcomes with at least one question family: 68. Q outcomes with a family: 60 of 119. Q outcomes with no family: 59.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the strand and the verb of the outcome (grammar outcomes are Q because choosing or typing the right word tests identifying and using the form; most listening outcomes are O; reading outcomes that ask a question about a text are Q but need a passage). It is a first sort for the reviewer, not the KICD's own tag.
 - Built this round: 22 skills on grammar (compound and collective nouns, auxiliary verbs, tenses, gradable adjectives, adverbs, reflexive and indefinite pronouns, prepositions, conjunctions, demonstratives and quantifiers, phrasal verbs, compound sentences, active and passive voice, question tags), punctuation, spelling, prefixes and suffixes, similes and metaphors, personification and flashback, the parts of a poem and silent letters.
@@ -20,9 +20,9 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T1_WORD_CLASSES_COMPOUN.a | Q | yes | identify compound nouns in a text | Question families. |
 | GRAMMA.T1_WORD_CLASSES_COMPOUN.b | Q | yes | use compound nouns in their singular and plural forms | Question families. |
 | GRAMMA.T1_WORD_CLASSES_COMPOUN.c | A | no | appreciate the importance of compound nouns in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T1_INTENSIVE_READING_SH.a | Q | NO | outline the sequence of events in a short story that they have read | Question families. |
-| READIN.T1_INTENSIVE_READING_SH.b | Q | NO | use contextual clues to infer the meanings of words | Question families. |
-| READIN.T1_INTENSIVE_READING_SH.c | Q | NO | answer direct and inferential questions from a short story | Question families. |
+| READIN.T1_INTENSIVE_READING_SH.a | Q | yes | outline the sequence of events in a short story that they have read | Question families. |
+| READIN.T1_INTENSIVE_READING_SH.b | Q | yes | use contextual clues to infer the meanings of words | Question families. |
+| READIN.T1_INTENSIVE_READING_SH.c | Q | yes | answer direct and inferential questions from a short story | Question families. |
 | READIN.T1_INTENSIVE_READING_SH.d | A | no | acknowledge the role of reading in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T1_WRITING_LEGIBLY_AND_.a | Q | NO | classify letters according to height differentials | Question families. |
 | WRITIN.T1_WRITING_LEGIBLY_AND_.b | W | no | write a text, legibly and neatly | Composition marking: HOREB's composition marker (it flags that it wants a native-speaker review) or the teacher marking with the KICD rubric indicator. |
@@ -31,22 +31,22 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | LISTEN.T2_ORAL_PRESENTATIONS_S.b | O | no | use performance techniques when singing | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T2_ORAL_PRESENTATIONS_S.c | O | no | write songs on a scientific innovation | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T2_ORAL_PRESENTATIONS_S.d | A | no | appreciate the role of songs in the society | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T2_INTENSIVE_READING_SI.a | Q | NO | identify the persona in a given poem | Question families. |
-| READIN.T2_INTENSIVE_READING_SI.b | Q | NO | identify instances of repetition in a given poem | Question families. |
+| READIN.T2_INTENSIVE_READING_SI.a | Q | yes | identify the persona in a given poem | Question families. |
+| READIN.T2_INTENSIVE_READING_SI.b | Q | yes | identify instances of repetition in a given poem | Question families. |
 | READIN.T2_INTENSIVE_READING_SI.c | Q | NO | explain what the poem is about | Question families. |
 | READIN.T2_INTENSIVE_READING_SI.d | A | no | appreciate the role of poems in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | GRAMMA.T2_WORD_CLASSES_COLLECT.a | Q | yes | identify collective nouns from a text | Question families. |
 | GRAMMA.T2_WORD_CLASSES_COLLECT.b | Q | yes | use singular and plural forms of collective nouns correctly in sentences | Question families. |
 | GRAMMA.T2_WORD_CLASSES_COLLECT.c | A | no | appreciate the importance of collective nouns in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T2_INTENSIVE_READING_SH.a | Q | NO | identify the setting - time and place-of a short story | Question families. |
+| READIN.T2_INTENSIVE_READING_SH.a | Q | yes | identify the setting - time and place-of a short story | Question families. |
 | READIN.T2_INTENSIVE_READING_SH.b | Q | NO | highlight the episodes in the short story chronologically | Question families. |
 | READIN.T2_INTENSIVE_READING_SH.c | A | no | appreciate the differences in culture and setting | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T2_MECHANICS_OF_WRITING.a | Q | yes | punctuate a given text using commas, apostrophes, and capital letters correctly | Question families. |
 | WRITIN.T2_MECHANICS_OF_WRITING.b | Q | yes | use an apostrophe, commas and capital letters appropriately in composition writing | Question families. |
 | WRITIN.T2_MECHANICS_OF_WRITING.c | A | no | advocate the use of correct punctuation in writing | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| LISTEN.T3_LISTENING_COMPREHENS.a | O | no | identify the main idea from a cause and effect text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T3_LISTENING_COMPREHENS.a | O | yes (knowledge half) | identify the main idea from a cause and effect text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T3_LISTENING_COMPREHENS.b | O | no | pinpoint specific information from a cause and effect text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
-| LISTEN.T3_LISTENING_COMPREHENS.c | O | no | infer the meanings of unfamiliar words using context clues | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T3_LISTENING_COMPREHENS.c | O | yes (knowledge half) | infer the meanings of unfamiliar words using context clues | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T3_LISTENING_COMPREHENS.d | A | no | acknowledge the importance of listening for detail | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | READIN.T3_INTENSIVE_READING.a | Q | NO | answer questions based on a given text correctly | Question families. |
 | READIN.T3_INTENSIVE_READING.b | Q | NO | infer meanings of words in a given text correctly | Question families. |
@@ -55,13 +55,13 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T3_WORD_CLASSES_PRIMARY.b | Q | yes | use primary auxiliary verbs in sentences correctly | Question families. |
 | GRAMMA.T3_WORD_CLASSES_PRIMARY.c | A | no | appreciate the importance of primary auxiliary verbs in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | READIN.T3_INTENSIVE_READING_PO.a | Q | yes | identify the aspects of structure in a given poem | Question families. |
-| READIN.T3_INTENSIVE_READING_PO.b | Q | NO | recognize the main ideas in a given poem | Question families. |
+| READIN.T3_INTENSIVE_READING_PO.b | Q | yes | recognize the main ideas in a given poem | Question families. |
 | READIN.T3_INTENSIVE_READING_PO.c | A | no | recognize the role of poems in communicating values | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T3_PARAGRAPHING_SEQUENC.a | Q | NO | identify conjunctions used in a well formed paragraph | Question families. |
 | WRITIN.T3_PARAGRAPHING_SEQUENC.b | Q | NO | use conjunctions to sequence and connect ideas correctly in a paragraph | Question families. |
 | WRITIN.T3_PARAGRAPHING_SEQUENC.c | A | no | appreciate the role of conjunctions in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| LISTEN.T4_LISTENING_COMPREHENS.a | O | no | distinguish between specific and general information from a listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
-| LISTEN.T4_LISTENING_COMPREHENS.b | O | no | select specific information from a text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T4_LISTENING_COMPREHENS.a | O | yes (knowledge half) | distinguish between specific and general information from a listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T4_LISTENING_COMPREHENS.b | O | yes (knowledge half) | select specific information from a text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T4_LISTENING_COMPREHENS.c | O | no | listen and respond to texts appropriately | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T4_LISTENING_COMPREHENS.d | A | no | emphasise the value of listening skills in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | READIN.T4_INTENSIVE_READING.a | Q | NO | identify reading strategies for use on given texts | Question families. |
@@ -71,8 +71,8 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T4_VERBS_AND_TENSE.b | Q | yes | write sentences using the simple present tense | Question families. |
 | GRAMMA.T4_VERBS_AND_TENSE.c | Q | yes | write sentences using the simple past tense | Question families. |
 | GRAMMA.T4_VERBS_AND_TENSE.d | A | no | advocate for appropriate use of tense in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T4_INTENSIVE_READING_SH.a | Q | NO | identify the characters in a short story | Question families. |
-| READIN.T4_INTENSIVE_READING_SH.b | Q | NO | use contextual clues to infer character traits of the characters in a short story | Question families. |
+| READIN.T4_INTENSIVE_READING_SH.a | Q | yes | identify the characters in a short story | Question families. |
+| READIN.T4_INTENSIVE_READING_SH.b | Q | yes | use contextual clues to infer character traits of the characters in a short story | Question families. |
 | READIN.T4_INTENSIVE_READING_SH.c | A | no | acknowledge the role of characters in a short story | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T4_PARAGRAPHING_CONNECT.a | Q | NO | identify connectors of sequence from a given text | Question families. |
 | WRITIN.T4_PARAGRAPHING_CONNECT.b | W | no | sequence ideas in a given paragraph | Composition marking: HOREB's composition marker (it flags that it wants a native-speaker review) or the teacher marking with the KICD rubric indicator. |
@@ -104,8 +104,8 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T6_WORD_CLASSES_ADVERBS.a | Q | yes | identify adverbs of frequency and degree correctly from a text | Question families. |
 | GRAMMA.T6_WORD_CLASSES_ADVERBS.b | Q | yes | use adverbs of frequency and degree correctly in sentences | Question families. |
 | GRAMMA.T6_WORD_CLASSES_ADVERBS.c | A | no | appreciate the importance of using adverbs correctly in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T6_INTENSIVE_READING_SH.a | Q | NO | identify the main ideas in the short story | Question families. |
-| READIN.T6_INTENSIVE_READING_SH.b | Q | NO | summarise the key events in the short story | Question families. |
+| READIN.T6_INTENSIVE_READING_SH.a | Q | yes | identify the main ideas in the short story | Question families. |
+| READIN.T6_INTENSIVE_READING_SH.b | Q | yes | summarise the key events in the short story | Question families. |
 | READIN.T6_INTENSIVE_READING_SH.c | Q | NO | relate the main ideas in the short story to real life situations | Question families. |
 | READIN.T6_INTENSIVE_READING_SH.d | A | no | appreciate the relevance of the short story in addressing real life issues | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T6_MECHANICS_OF_WRITING.a | Q | yes | spell commonly misspelt words correctly | Question families. |
@@ -113,8 +113,8 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | WRITIN.T6_MECHANICS_OF_WRITING.c | W | yes (knowledge half) | write words with silent vowels (-ie and -ei) correctly | Composition marking: HOREB's composition marker (it flags that it wants a native-speaker review) or the teacher marking with the KICD rubric indicator. |
 | WRITIN.T6_MECHANICS_OF_WRITING.d | W | no | make connections between spelling and meaning in suffixed and prefixed words | Composition marking: HOREB's composition marker (it flags that it wants a native-speaker review) or the teacher marking with the KICD rubric indicator. |
 | WRITIN.T6_MECHANICS_OF_WRITING.e | A | no | acknowledge the importance of correct spellings in writing | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| LISTEN.T7_LISTENING_FOR_DETAIL.a | O | no | identify main ideas in a listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
-| LISTEN.T7_LISTENING_FOR_DETAIL.b | O | no | respond appropriately to questions based on the listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T7_LISTENING_FOR_DETAIL.a | O | yes (knowledge half) | identify main ideas in a listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
+| LISTEN.T7_LISTENING_FOR_DETAIL.b | O | yes (knowledge half) | respond appropriately to questions based on the listening text | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T7_LISTENING_FOR_DETAIL.c | A | no | acknowledge the importance of listening for details in life | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | READIN.T7_INTENSIVE_READING_VI.a | Q | NO | identify different visuals in given contexts correctly | Question families. |
 | READIN.T7_INTENSIVE_READING_VI.b | Q | NO | make a connection between visuals and the written text | Question families. |
@@ -194,7 +194,7 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T11_WORD_CLASSES_ADVERBS.b | Q | yes | form adverbs from adjectives | Question families. |
 | GRAMMA.T11_WORD_CLASSES_ADVERBS.c | Q | yes | use adverbs formed from adjectives in sentences | Question families. |
 | GRAMMA.T11_WORD_CLASSES_ADVERBS.d | A | no | appreciate the value of adverbs in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T11_INTENSIVE_READING_LE.a | Q | NO | identify the lessons learnt in a short story | Question families. |
+| READIN.T11_INTENSIVE_READING_LE.a | Q | yes | identify the lessons learnt in a short story | Question families. |
 | READIN.T11_INTENSIVE_READING_LE.b | Q | NO | relate the lessons learnt in the short story to real life | Question families. |
 | READIN.T11_INTENSIVE_READING_LE.c | A | no | appreciate the role of stories in addressing societal issues | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T11_MECHANICS_OF_WRITING.a | Q | NO | identify words with prefixes and suffixes from a text | Question families. |
@@ -203,8 +203,8 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | LISTEN.T12_LISTENING_TO_RESPOND.a | O | no | explain the message in a given song | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T12_LISTENING_TO_RESPOND.b | O | no | use appropriate words and expressions to express their attitude towards a given song | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T12_LISTENING_TO_RESPOND.c | A | no | appreciate how choice of words affects the reader | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T12_INTENSIVE_READING_CO.a | Q | NO | identify mental images in a text correctly | Question families. |
-| READIN.T12_INTENSIVE_READING_CO.b | Q | NO | use contextual clues to infer information and meanings of words correctly in a text | Question families. |
+| READIN.T12_INTENSIVE_READING_CO.a | Q | yes | identify mental images in a text correctly | Question families. |
+| READIN.T12_INTENSIVE_READING_CO.b | Q | yes | use contextual clues to infer information and meanings of words correctly in a text | Question families. |
 | READIN.T12_INTENSIVE_READING_CO.c | A | no | acknowledge the role of comprehension in effective communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | GRAMMA.T12_PHRASAL_VERBS.a | Q | yes | identify phrasal verbs correctly in a text | Question families. |
 | GRAMMA.T12_PHRASAL_VERBS.b | Q | yes | use the phrasal verbs correctly in sentences | Question families. |
@@ -218,9 +218,9 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | LISTEN.T13_EXTENSIVE_LISTENING_.a | O | no | identify messages in poems | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T13_EXTENSIVE_LISTENING_.b | O | no | perform poems using appropriate techniques | A speaking, listening or reading-aloud check: the teacher listens and scores with the observation rubric (PLAN_OBSERVATION_RUBRICS.md); a tapped answer cannot show how a child speaks, pronounces or reads aloud. |
 | LISTEN.T13_EXTENSIVE_LISTENING_.c | A | no | acknowledge the role of poems in society | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T13_INTENSIVE_READING_CO.a | Q | NO | identify the key points in a passage | Question families. |
+| READIN.T13_INTENSIVE_READING_CO.a | Q | yes | identify the key points in a passage | Question families. |
 | READIN.T13_INTENSIVE_READING_CO.b | Q | NO | create mental images of the characters, places and events in the text | Question families. |
-| READIN.T13_INTENSIVE_READING_CO.c | Q | NO | summarise the key points in the text | Question families. |
+| READIN.T13_INTENSIVE_READING_CO.c | Q | yes | summarise the key points in the text | Question families. |
 | READIN.T13_INTENSIVE_READING_CO.d | A | no | appreciate the role of reading in lifelong learning | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | GRAMMA.T13_WORD_CLASSES_COMPOUN.a | Q | yes | identify compound sentences from texts | Question families. |
 | GRAMMA.T13_WORD_CLASSES_COMPOUN.b | Q | yes | construct compound sentences using different coordinating conjunctions | Question families. |
@@ -259,8 +259,8 @@ Built from `curriculum/english/g8.json` and the registry entry. Outcome text is 
 | GRAMMA.T15_TYPES_OF_SENTENCES_I.a | Q | yes | identify interrogative sentences and question tags from a text | Question families. |
 | GRAMMA.T15_TYPES_OF_SENTENCES_I.b | Q | yes | use interrogative sentences and question tags in varied contexts | Question families. |
 | GRAMMA.T15_TYPES_OF_SENTENCES_I.c | A | no | appreciate the role of correctly framed questions in communication | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| READIN.T15_POEMS.a | Q | NO | identify the ideas in the Poems | Question families. |
-| READIN.T15_POEMS.b | Q | NO | derive the lessons learnt in the poem | Question families. |
+| READIN.T15_POEMS.a | Q | yes | identify the ideas in the Poems | Question families. |
+| READIN.T15_POEMS.b | Q | yes | derive the lessons learnt in the poem | Question families. |
 | READIN.T15_POEMS.c | A | no | recognise the role of poems in addressing societal issues | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | WRITIN.T15_FUNCTIONAL_WRITING_P.a | Q | NO | outline the components of a personal journal | Question families. |
 | WRITIN.T15_FUNCTIONAL_WRITING_P.b | W | no | create a personal journal on varied experiences | Composition marking: HOREB's composition marker (it flags that it wants a native-speaker review) or the teacher marking with the KICD rubric indicator. |

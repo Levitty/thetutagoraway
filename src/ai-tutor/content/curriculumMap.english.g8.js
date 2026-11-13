@@ -1743,6 +1743,64 @@ export const SKILLS = {
    "M8_CPN_SINGULAR"
   ]
  },
+ "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE": {
+  "name": "Put the events of a short story in order",
+  "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_SEQUENCE_DETAIL",
+   "M8_RS_SEQUENCE_OPPOSITE",
+   "M8_RS_SEQUENCE_NOTSAID"
+  ]
+ },
+ "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT": {
+  "name": "Use clues in the text to work out a word or an idea",
+  "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b",
+  "outcomes": [
+   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_CONTEXT_DETAIL",
+   "M8_RS_CONTEXT_OPPOSITE",
+   "M8_RS_CONTEXT_NOTSAID"
+  ]
+ },
+ "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS": {
+  "name": "Answer direct and inferential questions on a short story",
+  "sub": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c",
+  "outcomes": [
+   "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_QUESTIONS_DETAIL",
+   "M8_RS_QUESTIONS_OPPOSITE",
+   "M8_RS_QUESTIONS_NOTSAID"
+  ]
+ },
+ "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA": {
+  "name": "Name the persona and repeated words in a poem and say what it is about",
+  "sub": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI",
+  "outcome": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.a",
+   "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.b",
+   "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RP_PERSONA_DETAIL",
+   "M8_RP_PERSONA_OPPOSITE",
+   "M8_RP_PERSONA_NOTSAID"
+  ]
+ },
  "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT.COLLECTIVE_NOUNS": {
   "name": "Use collective nouns correctly",
   "sub": "ENGL.G8.GRAMMA.T2_WORD_CLASSES_COLLECT",
@@ -1756,6 +1814,20 @@ export const SKILLS = {
    "M8_CLN_WRONG_GROUP",
    "M8_CLN_PLURAL",
    "M8_CLN_NO_OF"
+  ]
+ },
+ "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING": {
+  "name": "Say where and when a short story takes place",
+  "sub": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_SETTING_DETAIL",
+   "M8_RS_SETTING_OPPOSITE",
+   "M8_RS_SETTING_NOTSAID"
   ]
  },
  "ENGL.G8.WRITIN.T2_MECHANICS_OF_WRITING.PUNCTUATION": {
@@ -1772,6 +1844,22 @@ export const SKILLS = {
    "M8_PN_APOS_POSS",
    "M8_PN_COMMA_LIST",
    "M8_PN_ITS"
+  ]
+ },
+ "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE": {
+  "name": "Follow cause and effect in a listening text and work out a word from clues",
+  "sub": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS",
+  "outcome": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.a",
+  "outcomes": [
+   "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.a",
+   "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.b",
+   "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_LS_CAUSE_DETAIL",
+   "M8_LS_CAUSE_OPPOSITE",
+   "M8_LS_CAUSE_NOTSAID"
   ]
  },
  "ENGL.G8.GRAMMA.T3_WORD_CLASSES_PRIMARY.AUXILIARY_VERBS": {
@@ -1803,6 +1891,35 @@ export const SKILLS = {
    "M8_PM_POET_PERSONA"
   ]
  },
+ "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN": {
+  "name": "Pick the main idea of a poem",
+  "sub": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO",
+  "outcome": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.b",
+  "outcomes": [
+   "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RP_MAIN_DETAIL",
+   "M8_RP_MAIN_OPPOSITE",
+   "M8_RP_MAIN_NOTSAID"
+  ]
+ },
+ "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC": {
+  "name": "Pick specific information from a listening text",
+  "sub": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS",
+  "outcome": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.a",
+  "outcomes": [
+   "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.a",
+   "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_LS_SPECIFIC_DETAIL",
+   "M8_LS_SPECIFIC_OPPOSITE",
+   "M8_LS_SPECIFIC_NOTSAID"
+  ]
+ },
  "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE.PRESENT_PAST_TENSE": {
   "name": "Write sentences in the simple present and the simple past",
   "sub": "ENGL.G8.GRAMMA.T4_VERBS_AND_TENSE",
@@ -1817,6 +1934,21 @@ export const SKILLS = {
    "M8_TN_S_MISSING",
    "M8_TN_DID_PAST",
    "M8_TN_WRONG_PAST"
+  ]
+ },
+ "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS": {
+  "name": "Name the characters and use clues to say what they are like",
+  "sub": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.a",
+   "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_CHARACTERS_DETAIL",
+   "M8_RS_CHARACTERS_OPPOSITE",
+   "M8_RS_CHARACTERS_NOTSAID"
   ]
  },
  "ENGL.G8.GRAMMA.T5_WORD_CLASSES_ADJECTI.GRADABLE_ADJECTIVES": {
@@ -1849,6 +1981,21 @@ export const SKILLS = {
    "M8_FD_NEVER_NOT"
   ]
  },
+ "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN": {
+  "name": "Pick the main idea and the summary of a short story",
+  "sub": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH",
+  "outcome": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a",
+   "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_MAIN_DETAIL",
+   "M8_RS_MAIN_OPPOSITE",
+   "M8_RS_MAIN_NOTSAID"
+  ]
+ },
  "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING.SPELLING": {
   "name": "Spell commonly misspelt words and the -ie and -ei words",
   "sub": "ENGL.G8.WRITIN.T6_MECHANICS_OF_WRITING",
@@ -1862,6 +2009,21 @@ export const SKILLS = {
    "M8_SP_MISSPELT",
    "M8_SP_IE_EI",
    "M8_SP_DOUBLE"
+  ]
+ },
+ "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN": {
+  "name": "Pick the main idea of a listening text and answer questions on it",
+  "sub": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL",
+  "outcome": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.a",
+  "outcomes": [
+   "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.a",
+   "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_LS_MAIN_DETAIL",
+   "M8_LS_MAIN_OPPOSITE",
+   "M8_LS_MAIN_NOTSAID"
   ]
  },
  "ENGL.G8.GRAMMA.T7_WORD_CLASSES_PRONOUN.INDEFINITE_REFLEXIVE": {
@@ -1956,6 +2118,20 @@ export const SKILLS = {
    "M8_AF_HARDLY"
   ]
  },
+ "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON": {
+  "name": "Say what lesson a short story teaches",
+  "sub": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE",
+  "outcome": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_LESSON_DETAIL",
+   "M8_RS_LESSON_OPPOSITE",
+   "M8_RS_LESSON_NOTSAID"
+  ]
+ },
  "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING.PREFIXES_SUFFIXES": {
   "name": "Use prefixes and suffixes and know what they do to a word",
   "sub": "ENGL.G8.WRITIN.T11_MECHANICS_OF_WRITING",
@@ -1972,6 +2148,21 @@ export const SKILLS = {
    "M8_PS_SPELL"
   ]
  },
+ "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES": {
+  "name": "Make a picture from the words and use clues for word meaning",
+  "sub": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO",
+  "outcome": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a",
+   "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_IMAGES_DETAIL",
+   "M8_RS_IMAGES_OPPOSITE",
+   "M8_RS_IMAGES_NOTSAID"
+  ]
+ },
  "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS.PHRASAL_VERBS": {
   "name": "Give the meaning of common phrasal verbs and use them",
   "sub": "ENGL.G8.GRAMMA.T12_PHRASAL_VERBS",
@@ -1985,6 +2176,21 @@ export const SKILLS = {
    "M8_PV_MEANING",
    "M8_PV_PARTICLE",
    "M8_PV_LITERAL"
+  ]
+ },
+ "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS": {
+  "name": "Pick the key points and summarise a text",
+  "sub": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO",
+  "outcome": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.a",
+   "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RS_KEYPOINTS_DETAIL",
+   "M8_RS_KEYPOINTS_OPPOSITE",
+   "M8_RS_KEYPOINTS_NOTSAID"
   ]
  },
  "ENGL.G8.GRAMMA.T13_WORD_CLASSES_COMPOUN.COMPOUND_SENTENCES": {
@@ -2060,37 +2266,85 @@ export const SKILLS = {
    "M8_QT_ISNT_IT",
    "M8_QT_WRONG_AUX"
   ]
+ },
+ "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE": {
+  "name": "Say the ideas and the message of a poem",
+  "sub": "ENGL.G8.READIN.T15_POEMS",
+  "outcome": "ENGL.G8.READIN.T15_POEMS.a",
+  "outcomes": [
+   "ENGL.G8.READIN.T15_POEMS.a",
+   "ENGL.G8.READIN.T15_POEMS.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M8_RP_MESSAGE_DETAIL",
+   "M8_RP_MESSAGE_OPPOSITE",
+   "M8_RP_MESSAGE_NOTSAID"
+  ]
  }
 };
 export const MIS_FEEDBACK = {
  "M8_CPN_PLURAL_LAST": "In a hyphenated compound the main noun takes the plural: mothers-in-law, passers-by, not mother-in-laws.",
  "M8_CPN_SPLIT": "Some compound nouns are one word (toothbrush, classroom), some are two (post office), and some have a hyphen (mother-in-law). Look in a dictionary.",
  "M8_CPN_SINGULAR": "Many post offices sell stamps. Put the plural on the main noun.",
+ "M8_RS_SEQUENCE_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_SEQUENCE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_SEQUENCE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M8_RS_CONTEXT_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_CONTEXT_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_CONTEXT_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M8_RS_QUESTIONS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_QUESTIONS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_QUESTIONS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M8_RP_PERSONA_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RP_PERSONA_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RP_PERSONA_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_CLN_WRONG_GROUP": "Each kind of group has its own collective noun: a pride of lions, a school of fish, a fleet of ships, a troop of monkeys, a crew of sailors.",
  "M8_CLN_PLURAL": "A collective noun names one group, so write a crew of sailors, not a crews of sailors.",
  "M8_CLN_NO_OF": "Say a swarm of bees. The collective noun is followed by of.",
+ "M8_RS_SETTING_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_SETTING_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_SETTING_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_PN_APOS_PLURAL": "An apostrophe shows belonging or a short form, not a plural: three mangoes, not three mango's.",
  "M8_PN_APOS_POSS": "For one owner write the boy's bag. For many owners write the boys' bags, with the apostrophe after the s.",
  "M8_PN_COMMA_LIST": "Put a comma between the items of a list and use and before the last: rice, beans and maize.",
  "M8_PN_ITS": "Its (no apostrophe) shows belonging: its calf. It's is short for it is or it has.",
+ "M8_LS_CAUSE_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+ "M8_LS_CAUSE_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+ "M8_LS_CAUSE_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
  "M8_AUX_AGREE": "Use has with he, she, it and one name (Wanjiru has). Use have with I, you, we and they.",
  "M8_AUX_BE_FORM": "Use was with I, he, she and it, and were with you, we, they and plural nouns: The boys were playing.",
  "M8_AUX_DID_PAST": "After do, does or did the main verb has no ending: Otieno did not go, he does not go.",
  "M8_PM_STANZA_LINE": "A line is one row of words in a poem. A stanza is a group of lines.",
  "M8_PM_RHYME_REPEAT": "Rhyme is words with the same end sound. Repetition is a word or a line said again.",
  "M8_PM_POET_PERSONA": "The persona is the voice that speaks in the poem. It may be the poet or an imagined person.",
+ "M8_RP_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RP_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RP_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
+ "M8_LS_SPECIFIC_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+ "M8_LS_SPECIFIC_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+ "M8_LS_SPECIFIC_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
  "M8_TN_S_MISSING": "In the simple present add -s or -es after he, she, it or one name: Achieng walks.",
  "M8_TN_DID_PAST": "Did already shows the past, so the verb stays plain: did not know, did she see.",
  "M8_TN_WRONG_PAST": "Irregular verbs do not add -ed. Learn the forms: go, went; see, saw; eat, ate; run, ran.",
+ "M8_RS_CHARACTERS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_CHARACTERS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_CHARACTERS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_GR_VERY_ABSOLUTE": "A non-gradable adjective such as perfect, empty, dead or unique cannot be graded, so use absolutely or completely, not very.",
  "M8_GR_ABSOLUTELY_GRADABLE": "A gradable adjective such as tall, cold or big can be more or less, so use very, quite or extremely with it.",
  "M8_GR_MORE_UNIQUE": "Unique, perfect, empty and dead have no comparative or superlative form. Say unique, not more unique.",
  "M8_FD_PLACE": "A frequency adverb goes before the main verb (she always comes) and after be (he is never late).",
  "M8_FD_TOO_VERY": "Too means more than enough and is usually a problem (too hot to drink). Use very for a strong degree: very tasty.",
  "M8_FD_NEVER_NOT": "Never already makes the sentence negative, so do not add not: she never comes late.",
+ "M8_RS_MAIN_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_MAIN_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_MAIN_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_SP_MISSPELT": "Learn the tricky spellings: separate, definitely, necessary, occasion, accommodate, tomorrow. Look at the word, cover it, write it, check it.",
  "M8_SP_IE_EI": "Write i before e except after c: believe, but receive and ceiling. A few words break the rule, such as seize and weird.",
  "M8_SP_DOUBLE": "Accommodate has a double c and a double m. Occasion has a double c and one s.",
+ "M8_LS_MAIN_DETAIL": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+ "M8_LS_MAIN_OPPOSITE": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+ "M8_LS_MAIN_NOTSAID": "Check the answer against what was said: it must be something that was said, not added from outside.",
  "M8_IR_HISSELF": "The reflexive forms are myself, yourself, himself, herself, itself, ourselves, yourselves and themselves. There is no theirselves or hisself.",
  "M8_IR_OURSELF": "Plural reflexive pronouns end in -selves: ourselves, yourselves, themselves.",
  "M8_IR_EVERYONE_PLURAL": "Everyone, someone, anybody and nobody take a singular verb: everyone is ready.",
@@ -2110,12 +2364,21 @@ export const MIS_FEEDBACK = {
  "M8_AF_GOOD_WELL": "The adverb of good is well: she sings well. Good is an adjective: a good song.",
  "M8_AF_SPELL": "Change y to i before -ly (happily), change -le to -ly (gently) and write truly, not truely.",
  "M8_AF_HARDLY": "Hard, fast and late are also adverbs without -ly. Hardly means almost not at all and lately means recently.",
+ "M8_RS_LESSON_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_LESSON_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_LESSON_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_PS_WRONG_PREFIX": "Words take their own prefix: disagree, unhappy, replay, misunderstand. Check in a dictionary.",
  "M8_PS_MEANING": "The suffix -ful means full of and -less means without: careful is full of care, careless is without care.",
  "M8_PS_SPELL": "When a word ends in consonant + y, change y to i before the suffix: happiness. The suffix -ful has one l: beautiful.",
+ "M8_RS_IMAGES_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_IMAGES_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_IMAGES_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_PV_MEANING": "A phrasal verb has its own meaning: give up means stop, look after means take care of, run out of means have no more.",
  "M8_PV_PARTICLE": "The particle changes the meaning: turn on starts a light, turn off stops it.",
  "M8_PV_LITERAL": "A phrasal verb often has a meaning that is not the sum of its parts: break down means stop working.",
+ "M8_RS_KEYPOINTS_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RS_KEYPOINTS_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RS_KEYPOINTS_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside.",
  "M8_CS_COMMA_SPLICE": "Two complete sentences need a conjunction as well as the comma: I was tired, so I went to bed.",
  "M8_CS_NO_COMMA": "A comma goes before for, and, nor, but, or, yet or so when it joins two sentences: She ran fast, but she lost.",
  "M8_CS_WRONG_CONJ": "Pick the conjunction for the meaning: so for a result, but and yet for a contrast, and for an addition, or for a choice.",
@@ -2130,5 +2393,8 @@ export const MIS_FEEDBACK = {
  "M8_AP_NO_BE": "A passive sentence needs a form of be before the past participle: The window was broken by the wind.",
  "M8_QT_SAME_SIGN": "A positive sentence takes a negative tag (You are coming, aren't you) and a negative sentence takes a positive tag (You are not coming, are you).",
  "M8_QT_ISNT_IT": "The tag repeats the helping verb and the subject as a pronoun: They are late, aren't they. Isn't it is not for every tag.",
- "M8_QT_WRONG_AUX": "The tag uses the helping verb that fits the sentence: She likes tea, doesn't she. For present simple, use do or does."
+ "M8_QT_WRONG_AUX": "The tag uses the helping verb that fits the sentence: She likes tea, doesn't she. For present simple, use do or does.",
+ "M8_RP_MESSAGE_DETAIL": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+ "M8_RP_MESSAGE_OPPOSITE": "Check the answer against the text: it must agree with the text, not say the opposite.",
+ "M8_RP_MESSAGE_NOTSAID": "Check the answer against the text: it must be found in the text, not added from outside."
 };

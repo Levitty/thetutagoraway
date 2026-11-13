@@ -9,9 +9,9 @@
   "sub_strands": 75,
   "outcomes": 254,
   "lessons": 150,
-  "skills": 22,
-  "prerequisites": 39,
-  "misconceptions": 68
+  "skills": 37,
+  "prerequisites": 44,
+  "misconceptions": 113
  },
  "sub_strands": [
   {
@@ -365,8 +365,219 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE",
+     "name": "Put the events of a short story in order",
+     "outcomes": [
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.a"
+     ],
+     "mastery": "puts the events of a short story in the order they happened and does not swap two events or start with a late one, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T9_INTENSIVE_READING_CL.STORY_ORDER",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 English leads to this outcome. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT",
+     "name": "Use clues in the text to work out a word or an idea",
+     "outcomes": [
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.b"
+     ],
+     "mastery": "uses the words around a hard word or a line to work out its meaning and does not pick a meaning that has nothing to do with the clues, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS",
+     "name": "Answer direct and inferential questions on a short story",
+     "outcomes": [
+      "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.c"
+     ],
+     "mastery": "finds a stated fact in the text and works out an idea that is not stated, and does not answer from outside the text, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_DETAIL",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE",
+     "error": "Puts a later event first.",
+     "example": {
+      "question": "Which event happened first in the story?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE",
+     "error": "Picks the final event as the first.",
+     "example": {
+      "question": "Which event happened first in the story?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE.M8_RS_SEQUENCE_NOTSAID",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_SEQUENCE",
+     "error": "Names an event the story does not tell.",
+     "example": {
+      "question": "Which event happened first in the story?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_DETAIL",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT",
+     "error": "Picks a detail of the story instead of the meaning.",
+     "example": {
+      "question": "In the passage, what does the word \"bursary\" mean?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT",
+     "error": "Picks the opposite meaning.",
+     "example": {
+      "question": "In the passage, what does the word \"bursary\" mean?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT.M8_RS_CONTEXT_NOTSAID",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_CONTEXT",
+     "error": "Picks a meaning the text does not give.",
+     "example": {
+      "question": "In the passage, what does the word \"bursary\" mean?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_DETAIL",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS",
+     "error": "Answers with a small detail from the text.",
+     "example": {
+      "question": "Why was Otieno asleep at his desk?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS",
+     "error": "Answers with the opposite of what the text shows.",
+     "example": {
+      "question": "Why was Otieno asleep at his desk?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS.M8_RS_QUESTIONS_NOTSAID",
+     "skill": "ENGL.G8.READIN.T1_INTENSIVE_READING_SH.RS_QUESTIONS",
+     "error": "Answers with something the text never says.",
+     "example": {
+      "question": "Why was Otieno asleep at his desk?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -579,8 +790,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA",
+     "name": "Name the persona and repeated words in a poem and say what it is about",
+     "outcomes": [
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.a",
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.b",
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.c"
+     ],
+     "mastery": "names the speaker of the poem, the words that are repeated, and what the poem is about, and does not pick a line that is not repeated, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA.M8_RP_PERSONA_DETAIL",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA",
+     "error": "Picks a person only named in the poem.",
+     "example": {
+      "question": "Who is speaking in the poem?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA.M8_RP_PERSONA_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA",
+     "error": "Picks the opposite speaker or meaning.",
+     "example": {
+      "question": "Who is speaking in the poem?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA.M8_RP_PERSONA_NOTSAID",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SI.RP_PERSONA",
+     "error": "Picks a speaker or meaning not in the poem.",
+     "example": {
+      "question": "Who is speaking in the poem?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -799,8 +1081,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING",
+     "name": "Say where and when a short story takes place",
+     "outcomes": [
+      "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.a"
+     ],
+     "mastery": "names the place and the time of a story from the words in it and does not name a place the story never mentions, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING.M8_RS_SETTING_DETAIL",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING",
+     "error": "Names a minor place in the story.",
+     "example": {
+      "question": "Where does the story take place?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING.M8_RS_SETTING_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING",
+     "error": "Names the opposite time or place.",
+     "example": {
+      "question": "Where does the story take place?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING.M8_RS_SETTING_NOTSAID",
+     "skill": "ENGL.G8.READIN.T2_INTENSIVE_READING_SH.RS_SETTING",
+     "error": "Names a place the story never mentions.",
+     "example": {
+      "question": "Where does the story take place?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -1044,8 +1395,79 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE",
+     "name": "Follow cause and effect in a listening text and work out a word from clues",
+     "outcomes": [
+      "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.a",
+      "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.b",
+      "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.c"
+     ],
+     "mastery": "finds the cause and the effect in what was heard, picks specific information, and uses clues for a hard word, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer after listening",
+      "pick the right answer after a second listening"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_DETAIL",
+     "skill": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE",
+     "error": "Picks a small detail instead of the cause.",
+     "example": {
+      "question": "Why did the driver have to wait?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_OPPOSITE",
+     "skill": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE",
+     "error": "Picks the opposite of the cause.",
+     "example": {
+      "question": "Why did the driver have to wait?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE.M8_LS_CAUSE_NOTSAID",
+     "skill": "ENGL.G8.LISTEN.T3_LISTENING_COMPREHENS.LS_CAUSE",
+     "error": "Picks a cause that was not said.",
+     "example": {
+      "question": "Why did the driver have to wait?",
+      "wrong_answer": "an answer that is something not said",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not said\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must be something that was said, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.1.1",
     "ENGL.G8.RUBRIC.1.2",
@@ -1365,6 +1787,25 @@
       }
      ],
      "status": "proposed"
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN",
+     "name": "Pick the main idea of a poem",
+     "outcomes": [
+      "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.b"
+     ],
+     "mastery": "picks what the whole poem is about, the picture its words make, and does not pick one image only, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
     }
    ],
    "misconceptions": [
@@ -1413,6 +1854,54 @@
      "reveals": "Offer \"The poet himself, always\" next to the right answer in a new sentence and ask again.",
      "help": "The speaker may be an imagined person.",
      "feedback": "The persona is the voice that speaks in the poem. It may be the poet or an imagined person.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_DETAIL",
+     "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN",
+     "error": "Picks one image as the whole poem.",
+     "example": {
+      "question": "What is the poem about?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN",
+     "error": "Picks the opposite idea.",
+     "example": {
+      "question": "What is the poem about?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN.M8_RP_MAIN_NOTSAID",
+     "skill": "ENGL.G8.READIN.T3_INTENSIVE_READING_PO.RP_MAIN",
+     "error": "Picks an idea the poem does not have.",
+     "example": {
+      "question": "What is the poem about?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
      "source": "common learner error; to confirm by a Kenyan English teacher",
      "status": "draft"
     }
@@ -1550,8 +2039,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC",
+     "name": "Pick specific information from a listening text",
+     "outcomes": [
+      "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.a",
+      "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.b"
+     ],
+     "mastery": "picks the exact fact that was said, such as a time or a name, and does not pick a general idea, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer after listening",
+      "pick the right answer after a second listening"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.LISTEN.T4_LISTENING_COMPREHENS.SPECIFIC_GENERAL",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 English leads to this outcome. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_DETAIL",
+     "skill": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC",
+     "error": "Picks a detail that was not asked for.",
+     "example": {
+      "question": "At what time will the events begin?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_OPPOSITE",
+     "skill": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC",
+     "error": "Picks the opposite fact.",
+     "example": {
+      "question": "At what time will the events begin?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC.M8_LS_SPECIFIC_NOTSAID",
+     "skill": "ENGL.G8.LISTEN.T4_LISTENING_COMPREHENS.LS_SPECIFIC",
+     "error": "Picks a fact that was not said.",
+     "example": {
+      "question": "At what time will the events begin?",
+      "wrong_answer": "an answer that is something not said",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not said\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must be something that was said, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.1.1",
     "ENGL.G8.RUBRIC.1.2",
@@ -1849,8 +2416,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS",
+     "name": "Name the characters and use clues to say what they are like",
+     "outcomes": [
+      "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.b"
+     ],
+     "mastery": "names who is in the story and picks a trait that the characters actions show, and does not pick a trait the actions contradict, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T4_INTENSIVE_READING_CL.CHARACTER_TRAITS",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 English leads to this outcome. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS.M8_RS_CHARACTERS_DETAIL",
+     "skill": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS",
+     "error": "Picks a trait shown by one small action.",
+     "example": {
+      "question": "Which word best describes Otieno?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS.M8_RS_CHARACTERS_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS",
+     "error": "Picks the opposite trait.",
+     "example": {
+      "question": "Which word best describes Otieno?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS.M8_RS_CHARACTERS_NOTSAID",
+     "skill": "ENGL.G8.READIN.T4_INTENSIVE_READING_SH.RS_CHARACTERS",
+     "error": "Picks a trait that has no evidence.",
+     "example": {
+      "question": "Which word best describes Otieno?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -2700,8 +3345,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN",
+     "name": "Pick the main idea and the summary of a short story",
+     "outcomes": [
+      "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.a",
+      "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.b"
+     ],
+     "mastery": "picks what the whole story is about and a summary that keeps the key events in order, and does not pick one detail, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_DETAIL",
+     "skill": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN",
+     "error": "Picks one small detail as the main idea.",
+     "example": {
+      "question": "What is the main idea of the passage?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN",
+     "error": "Picks the opposite of what the story says.",
+     "example": {
+      "question": "What is the main idea of the passage?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN.M8_RS_MAIN_NOTSAID",
+     "skill": "ENGL.G8.READIN.T6_INTENSIVE_READING_SH.RS_MAIN",
+     "error": "Picks an idea the story does not have.",
+     "example": {
+      "question": "What is the main idea of the passage?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -2923,8 +3638,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN",
+     "name": "Pick the main idea of a listening text and answer questions on it",
+     "outcomes": [
+      "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.a",
+      "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.b"
+     ],
+     "mastery": "picks what the whole listening text is about and answers questions about it from what was heard, and does not pick one detail, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer after listening",
+      "pick the right answer after a second listening"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN.M8_LS_MAIN_DETAIL",
+     "skill": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN",
+     "error": "Picks one small detail as the main idea.",
+     "example": {
+      "question": "What is the main idea of the talk?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN.M8_LS_MAIN_OPPOSITE",
+     "skill": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN",
+     "error": "Picks the opposite of what was said.",
+     "example": {
+      "question": "What is the main idea of the talk?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must agree with what was said, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN.M8_LS_MAIN_NOTSAID",
+     "skill": "ENGL.G8.LISTEN.T7_LISTENING_FOR_DETAIL.LS_MAIN",
+     "error": "Picks an idea that was not said.",
+     "example": {
+      "question": "What is the main idea of the talk?",
+      "wrong_answer": "an answer that is something not said",
+      "correct_answer": "the answer the speaker gave"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not said\" next to the right answer in a new sentence and ask again.",
+     "help": "Listen again for the words that answer the question.",
+     "feedback": "Check the answer against what was said: it must be something that was said, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.1.1",
     "ENGL.G8.RUBRIC.1.2",
@@ -5072,8 +5857,77 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON",
+     "name": "Say what lesson a short story teaches",
+     "outcomes": [
+      "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.a"
+     ],
+     "mastery": "picks the lesson shown by what happens at the end and does not pick a lesson the story does not teach, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON.M8_RS_LESSON_DETAIL",
+     "skill": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON",
+     "error": "Picks a detail instead of a lesson.",
+     "example": {
+      "question": "What lesson does the story teach?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON.M8_RS_LESSON_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON",
+     "error": "Picks the opposite lesson.",
+     "example": {
+      "question": "What lesson does the story teach?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON.M8_RS_LESSON_NOTSAID",
+     "skill": "ENGL.G8.READIN.T11_INTENSIVE_READING_LE.RS_LESSON",
+     "error": "Picks a lesson the story does not teach.",
+     "example": {
+      "question": "What lesson does the story teach?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -5357,8 +6211,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES",
+     "name": "Make a picture from the words and use clues for word meaning",
+     "outcomes": [
+      "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.a",
+      "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.b"
+     ],
+     "mastery": "sees the picture the words make and uses clues for a hard word, and does not pick a picture that does not fit the words, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T13_INTENSIVE_READING_CO.IMAGERY",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 English leads to this outcome. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_DETAIL",
+     "skill": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES",
+     "error": "Picks one word only.",
+     "example": {
+      "question": "What picture do the words give you?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES",
+     "error": "Picks the opposite picture.",
+     "example": {
+      "question": "What picture do the words give you?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES.M8_RS_IMAGES_NOTSAID",
+     "skill": "ENGL.G8.READIN.T12_INTENSIVE_READING_CO.RS_IMAGES",
+     "error": "Picks a picture the words do not make.",
+     "example": {
+      "question": "What picture do the words give you?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -5777,8 +6709,78 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS",
+     "name": "Pick the key points and summarise a text",
+     "outcomes": [
+      "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.a",
+      "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.c"
+     ],
+     "mastery": "picks the key points that belong in a summary and leaves out small details, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS.M8_RS_KEYPOINTS_DETAIL",
+     "skill": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS",
+     "error": "Picks a small detail.",
+     "example": {
+      "question": "Which sentence is a key idea for a summary?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS.M8_RS_KEYPOINTS_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS",
+     "error": "Picks the opposite of the text.",
+     "example": {
+      "question": "Which sentence is a key idea for a summary?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS.M8_RS_KEYPOINTS_NOTSAID",
+     "skill": "ENGL.G8.READIN.T13_INTENSIVE_READING_CO.RS_KEYPOINTS",
+     "error": "Picks a point the text does not make.",
+     "example": {
+      "question": "Which sentence is a key idea for a summary?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
@@ -7010,8 +8012,86 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE",
+     "name": "Say the ideas and the message of a poem",
+     "outcomes": [
+      "ENGL.G8.READIN.T15_POEMS.a",
+      "ENGL.G8.READIN.T15_POEMS.b"
+     ],
+     "mastery": "picks the message the poet wants to give and does not pick a single line as the message, in 8 of 10 new items.",
+     "question_forms": [
+      "pick the right answer",
+      "pick the right answer on a second passage"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "ENGL.G7.READIN.T15_POETRY.POEM_MEANING",
+       "kind": "skill",
+       "strength": "essential",
+       "reason": "Grade 7 English leads to this outcome. Proposed, to confirm by a Kenyan English teacher.",
+       "status": "proposed"
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_DETAIL",
+     "skill": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE",
+     "error": "Picks one line instead of the message.",
+     "example": {
+      "question": "What message does the poem give?",
+      "wrong_answer": "an answer that is a small detail",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is a small detail\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must cover what the question asks, not just one small detail.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_OPPOSITE",
+     "skill": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE",
+     "error": "Picks the opposite message.",
+     "example": {
+      "question": "What message does the poem give?",
+      "wrong_answer": "an answer that is the opposite",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is the opposite\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must agree with the text, not say the opposite.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    },
+    {
+     "code": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE.M8_RP_MESSAGE_NOTSAID",
+     "skill": "ENGL.G8.READIN.T15_POEMS.RP_MESSAGE",
+     "error": "Picks a message the poem does not give.",
+     "example": {
+      "question": "What message does the poem give?",
+      "wrong_answer": "an answer that is something not in the text",
+      "correct_answer": "the answer the text supports"
+     },
+     "cause": "Common error of Kenyan learners of English.",
+     "reveals": "Offer \"an answer that is something not in the text\" next to the right answer in a new sentence and ask again.",
+     "help": "Go back to the text and find the line that answers the question.",
+     "feedback": "Check the answer against the text: it must be found in the text, not added from outside.",
+     "source": "common learner error; to confirm by a Kenyan English teacher",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "ENGL.G8.RUBRIC.2.1",
     "ENGL.G8.RUBRIC.2.2",
