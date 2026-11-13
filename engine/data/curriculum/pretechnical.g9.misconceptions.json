@@ -1,0 +1,767 @@
+{
+ "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_SAFE": {
+  "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+  "error": "Thinks climbing alone is safe.",
+  "example": {
+   "question": "Who should work on a raised platform?",
+   "wrong_answer": "A learner alone",
+   "correct_answer": "A trained adult with a helper"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A learner alone\" next to the right answer and ask the question again in a new situation.",
+  "help": "Work at height needs a trained adult and a helper.",
+  "feedback": "Work at height needs a trained adult and a helper.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_RISK": {
+  "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+  "error": "Names the wrong risk.",
+  "example": {
+   "question": "Which is a risk of working at height?",
+   "wrong_answer": "Getting a cold",
+   "correct_answer": "Falling"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Getting a cold\" next to the right answer and ask the question again in a new situation.",
+  "help": "Falling is the main risk at height.",
+  "feedback": "Falling is the main risk at height.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS.M_PT9_RP_TYPE": {
+  "skill": "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS",
+  "error": "Names a non-platform.",
+  "example": {
+   "question": "Which is a raised platform?",
+   "wrong_answer": "A flat floor",
+   "correct_answer": "A scaffold"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A flat floor\" next to the right answer and ask the question again in a new situation.",
+  "help": "A scaffold is a raised platform.",
+  "feedback": "A scaffold is a raised platform.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_FLAMMABLE": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+  "error": "Mixes flammable and corrosive.",
+  "example": {
+   "question": "Which word means catches fire easily?",
+   "wrong_answer": "Corrosive",
+   "correct_answer": "Flammable"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Corrosive\" next to the right answer and ask the question again in a new situation.",
+  "help": "Flammable means catches fire easily.",
+  "feedback": "Flammable means catches fire easily.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_CORROSIVE": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+  "error": "Mixes corrosive and toxic.",
+  "example": {
+   "question": "Which word means eats away skin and metal?",
+   "wrong_answer": "Toxic",
+   "correct_answer": "Corrosive"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Toxic\" next to the right answer and ask the question again in a new situation.",
+  "help": "Corrosive substances eat away skin and metal.",
+  "feedback": "Corrosive substances eat away skin and metal.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY.M_PT9_HC_PETROL": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY",
+  "error": "Calls petrol safe.",
+  "example": {
+   "question": "How is petrol classified?",
+   "wrong_answer": "Safe",
+   "correct_answer": "Flammable"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Safe\" next to the right answer and ask the question again in a new situation.",
+  "help": "Petrol is flammable.",
+  "feedback": "Petrol is flammable.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_LABEL": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
+  "error": "Ignores labels.",
+  "example": {
+   "question": "What should you do before using a substance?",
+   "wrong_answer": "Open it at once",
+   "correct_answer": "Read the label"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Open it at once\" next to the right answer and ask the question again in a new situation.",
+  "help": "Read the label first.",
+  "feedback": "Read the label first.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_MIX": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
+  "error": "Mixes cleaners to be stronger.",
+  "example": {
+   "question": "What should you do with two cleaners?",
+   "wrong_answer": "Mix them to be stronger",
+   "correct_answer": "Never mix them"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Mix them to be stronger\" next to the right answer and ask the question again in a new situation.",
+  "help": "Never mix cleaners.",
+  "feedback": "Never mix cleaners.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING.M_PT9_HH_STORE": {
+  "skill": "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING",
+  "error": "Stores in a drink bottle.",
+  "example": {
+   "question": "How should paraffin be stored?",
+   "wrong_answer": "In a drink bottle on the table",
+   "correct_answer": "In a labelled container out of reach"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"In a drink bottle on the table\" next to the right answer and ask the question again in a new situation.",
+  "help": "Store in a labelled container out of reach.",
+  "feedback": "Store in a labelled container out of reach.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_GROW": {
+  "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
+  "error": "Thinks talents need no practice.",
+  "example": {
+   "question": "How do talents grow?",
+   "wrong_answer": "Without any effort",
+   "correct_answer": "By practice and guidance"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Without any effort\" next to the right answer and ask the question again in a new situation.",
+  "help": "Talents grow by practice and guidance.",
+  "feedback": "Talents grow by practice and guidance.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_ETHIC": {
+  "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
+  "error": "Calls cheating ethical.",
+  "example": {
+   "question": "Which is an ethical use of a talent?",
+   "wrong_answer": "Cheating to win",
+   "correct_answer": "Playing fairly"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Cheating to win\" next to the right answer and ask the question again in a new situation.",
+  "help": "Fair play is ethical.",
+  "feedback": "Fair play is ethical.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS.M_PT9_TA_CAREER": {
+  "skill": "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS",
+  "error": "Links a wrong career.",
+  "example": {
+   "question": "Which career links to a talent for drawing?",
+   "wrong_answer": "Driver",
+   "correct_answer": "Designer"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Driver\" next to the right answer and ask the question again in a new situation.",
+  "help": "Drawing links to design careers.",
+  "feedback": "Drawing links to design careers.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_FRONT": {
+  "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+  "error": "Draws the front face distorted.",
+  "example": {
+   "question": "In oblique drawing the front face is drawn...",
+   "wrong_answer": "At an angle and distorted",
+   "correct_answer": "True shape"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"At an angle and distorted\" next to the right answer and ask the question again in a new situation.",
+  "help": "The front face is true shape.",
+  "feedback": "The front face is true shape.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_ANGLE": {
+  "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+  "error": "Gives the wrong angle.",
+  "example": {
+   "question": "At what angle are depth lines usually drawn?",
+   "wrong_answer": "90 degrees",
+   "correct_answer": "45 degrees"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"90 degrees\" next to the right answer and ask the question again in a new situation.",
+  "help": "Depth lines are usually at 45 degrees.",
+  "feedback": "Depth lines are usually at 45 degrees.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE.M_PT9_OB_CABINET": {
+  "skill": "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE",
+  "error": "Mixes cabinet and cavalier.",
+  "example": {
+   "question": "In cabinet projection the depth is...",
+   "wrong_answer": "Full size",
+   "correct_answer": "Half size"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Full size\" next to the right answer and ask the question again in a new situation.",
+  "help": "In cabinet the depth is half size.",
+  "feedback": "In cabinet the depth is half size.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_USE": {
+  "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+  "error": "Names a non-use.",
+  "example": {
+   "question": "Which can be made with visual programming?",
+   "wrong_answer": "A brick wall",
+   "correct_answer": "A simple game"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A brick wall\" next to the right answer and ask the question again in a new situation.",
+  "help": "Games and apps can be made.",
+  "feedback": "Games and apps can be made.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_BLOCK": {
+  "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+  "error": "Thinks it needs only typing.",
+  "example": {
+   "question": "How is a program built in visual programming?",
+   "wrong_answer": "By typing every line",
+   "correct_answer": "By joining blocks"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"By typing every line\" next to the right answer and ask the question again in a new situation.",
+  "help": "Blocks are joined.",
+  "feedback": "Blocks are joined.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS.M_PT9_VA_SOLVE": {
+  "skill": "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS",
+  "error": "Thinks it solves nothing.",
+  "example": {
+   "question": "What can a visual program do?",
+   "wrong_answer": "Nothing useful",
+   "correct_answer": "Solve a problem step by step"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nothing useful\" next to the right answer and ask the question again in a new situation.",
+  "help": "It solves problems step by step.",
+  "feedback": "It solves problems step by step.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_HARD": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
+  "error": "Calls pine a hardwood.",
+  "example": {
+   "question": "Which is a hardwood?",
+   "wrong_answer": "Pine",
+   "correct_answer": "Mahogany"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Pine\" next to the right answer and ask the question again in a new situation.",
+  "help": "Mahogany is a hardwood.",
+  "feedback": "Mahogany is a hardwood.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_SOFT": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
+  "error": "Calls mvule a softwood.",
+  "example": {
+   "question": "Which is a softwood?",
+   "wrong_answer": "Mvule",
+   "correct_answer": "Pine"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Mvule\" next to the right answer and ask the question again in a new situation.",
+  "help": "Pine is a softwood.",
+  "feedback": "Pine is a softwood.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_TYPES.M_PT9_WT_BOARD": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_TYPES",
+  "error": "Calls plywood solid wood.",
+  "example": {
+   "question": "What is plywood?",
+   "wrong_answer": "One solid plank",
+   "correct_answer": "A board of glued wood layers"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"One solid plank\" next to the right answer and ask the question again in a new situation.",
+  "help": "Plywood is made of glued layers.",
+  "feedback": "Plywood is made of glued layers.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_SEASON": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
+  "error": "Skips seasoning.",
+  "example": {
+   "question": "Why is timber seasoned?",
+   "wrong_answer": "To make it wet",
+   "correct_answer": "To dry it so it does not warp"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"To make it wet\" next to the right answer and ask the question again in a new situation.",
+  "help": "Seasoning dries timber.",
+  "feedback": "Seasoning dries timber.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_ORDER": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
+  "error": "Plans before sawing.",
+  "example": {
+   "question": "Which comes first in preparing wood?",
+   "wrong_answer": "Varnishing",
+   "correct_answer": "Sawing the log into planks"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Varnishing\" next to the right answer and ask the question again in a new situation.",
+  "help": "Logs are sawn first.",
+  "feedback": "Logs are sawn first.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.WOOD.WOOD_PREP.M_PT9_WP_TREAT": {
+  "skill": "PRET.G9.MATERI.WOOD.WOOD_PREP",
+  "error": "Thinks treating spoils wood.",
+  "example": {
+   "question": "Why is wood treated with a preservative?",
+   "wrong_answer": "To make it rot",
+   "correct_answer": "To protect it from rot and insects"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"To make it rot\" next to the right answer and ask the question again in a new situation.",
+  "help": "Preservatives protect wood.",
+  "feedback": "Preservatives protect wood.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_BURN": {
+  "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+  "error": "Thinks burning plastic is fine.",
+  "example": {
+   "question": "What should be done with plastic waste?",
+   "wrong_answer": "Burn it",
+   "correct_answer": "Sort and recycle it"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Burn it\" next to the right answer and ask the question again in a new situation.",
+  "help": "Do not burn plastic.",
+  "feedback": "Do not burn plastic.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_ORGANIC": {
+  "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+  "error": "Throws organic waste away.",
+  "example": {
+   "question": "What can be done with kitchen peelings?",
+   "wrong_answer": "Burn them",
+   "correct_answer": "Make compost"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Burn them\" next to the right answer and ask the question again in a new situation.",
+  "help": "Peelings make compost.",
+  "feedback": "Peelings make compost.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE.M_PT9_WS_SHARP": {
+  "skill": "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE",
+  "error": "Leaves sharp waste out.",
+  "example": {
+   "question": "How should broken glass be handled?",
+   "wrong_answer": "Left on the path",
+   "correct_answer": "Wrapped and disposed of safely"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Left on the path\" next to the right answer and ask the question again in a new situation.",
+  "help": "Wrap broken glass and dispose of it safely.",
+  "feedback": "Wrap broken glass and dispose of it safely.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_VICE": {
+  "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+  "error": "Gives the vice the wrong job.",
+  "example": {
+   "question": "What does a bench vice do?",
+   "wrong_answer": "Drives nails",
+   "correct_answer": "Holds the work still"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Drives nails\" next to the right answer and ask the question again in a new situation.",
+  "help": "A vice holds the work.",
+  "feedback": "A vice holds the work.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CLAMP": {
+  "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+  "error": "Names a non-holding tool.",
+  "example": {
+   "question": "Which is a holding tool?",
+   "wrong_answer": "Hammer",
+   "correct_answer": "G-clamp"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Hammer\" next to the right answer and ask the question again in a new situation.",
+  "help": "A G-clamp is a holding tool.",
+  "feedback": "A G-clamp is a holding tool.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS.M_PT9_HT_CARE": {
+  "skill": "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS",
+  "error": "Leaves tools dirty.",
+  "example": {
+   "question": "How should holding tools be cared for?",
+   "wrong_answer": "Left dirty in the rain",
+   "correct_answer": "Cleaned and oiled"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Left dirty in the rain\" next to the right answer and ask the question again in a new situation.",
+  "help": "Clean and oil tools.",
+  "feedback": "Clean and oil tools.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_HAMMER": {
+  "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+  "error": "Says a hammer drives screws.",
+  "example": {
+   "question": "What does a hammer drive?",
+   "wrong_answer": "Screws",
+   "correct_answer": "Nails"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Screws\" next to the right answer and ask the question again in a new situation.",
+  "help": "A hammer drives nails.",
+  "feedback": "A hammer drives nails.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SCREWDRIVER": {
+  "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+  "error": "Uses the wrong screwdriver head.",
+  "example": {
+   "question": "A cross-head screw needs...",
+   "wrong_answer": "A flat screwdriver",
+   "correct_answer": "A cross-head screwdriver"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A flat screwdriver\" next to the right answer and ask the question again in a new situation.",
+  "help": "Match the screwdriver to the screw head.",
+  "feedback": "Match the screwdriver to the screw head.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS.M_PT9_DT_SPANNER": {
+  "skill": "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS",
+  "error": "Says a spanner drives nails.",
+  "example": {
+   "question": "What does a spanner turn?",
+   "wrong_answer": "Nails",
+   "correct_answer": "Nuts and bolts"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nails\" next to the right answer and ask the question again in a new situation.",
+  "help": "A spanner turns nuts and bolts.",
+  "feedback": "A spanner turns nuts and bolts.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_FIRST": {
+  "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+  "error": "Starts by making.",
+  "example": {
+   "question": "What is the first step of a project?",
+   "wrong_answer": "Make the item",
+   "correct_answer": "Identify a problem"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Make the item\" next to the right answer and ask the question again in a new situation.",
+  "help": "Start by identifying a problem.",
+  "feedback": "Start by identifying a problem.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_TEST": {
+  "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+  "error": "Skips testing.",
+  "example": {
+   "question": "What comes after making the item?",
+   "wrong_answer": "Throwing it away",
+   "correct_answer": "Testing it"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Throwing it away\" next to the right answer and ask the question again in a new situation.",
+  "help": "Test the item.",
+  "feedback": "Test the item.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS.M_PT9_PJ_MATERIAL": {
+  "skill": "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS",
+  "error": "Says only bought materials.",
+  "example": {
+   "question": "Which materials are best for a school project?",
+   "wrong_answer": "Only costly imported ones",
+   "correct_answer": "Locally available ones"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Only costly imported ones\" next to the right answer and ask the question again in a new situation.",
+  "help": "Use local materials.",
+  "feedback": "Use local materials.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_NAME": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
+  "error": "Names a non-institution.",
+  "example": {
+   "question": "Which is a financial institution?",
+   "wrong_answer": "A butcher",
+   "correct_answer": "A SACCO"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A butcher\" next to the right answer and ask the question again in a new situation.",
+  "help": "A SACCO is a financial institution.",
+  "feedback": "A SACCO is a financial institution.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_CENTRAL": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
+  "error": "Gives the wrong job of the Central Bank.",
+  "example": {
+   "question": "What does the Central Bank of Kenya do?",
+   "wrong_answer": "Sells goods",
+   "correct_answer": "Supervises banks"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Sells goods\" next to the right answer and ask the question again in a new situation.",
+  "help": "It supervises banks.",
+  "feedback": "It supervises banks.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES.M_PT9_FT_INSURE": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES",
+  "error": "Calls insurance a bank.",
+  "example": {
+   "question": "Which gives cover against loss?",
+   "wrong_answer": "A commercial bank",
+   "correct_answer": "An insurance company"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A commercial bank\" next to the right answer and ask the question again in a new situation.",
+  "help": "Insurance companies give cover.",
+  "feedback": "Insurance companies give cover.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_LOAN": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
+  "error": "Thinks a loan is free.",
+  "example": {
+   "question": "What must be done with a loan?",
+   "wrong_answer": "Never repay it",
+   "correct_answer": "Repay it with interest"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Never repay it\" next to the right answer and ask the question again in a new situation.",
+  "help": "A loan is repaid with interest.",
+  "feedback": "A loan is repaid with interest.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SAVE": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
+  "error": "Thinks savings should be spent at once.",
+  "example": {
+   "question": "What are savings for?",
+   "wrong_answer": "To spend at once",
+   "correct_answer": "To keep for planned needs"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"To spend at once\" next to the right answer and ask the question again in a new situation.",
+  "help": "Savings are for planned needs.",
+  "feedback": "Savings are for planned needs.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES.M_PT9_FV_SERVICE": {
+  "skill": "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES",
+  "error": "Names a non-service.",
+  "example": {
+   "question": "Which is a service of a bank?",
+   "wrong_answer": "Selling cattle",
+   "correct_answer": "Keeping savings"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Selling cattle\" next to the right answer and ask the question again in a new situation.",
+  "help": "Banks keep savings.",
+  "feedback": "Banks keep savings.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_PROTECT": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
+  "error": "Thinks government harms business only.",
+  "example": {
+   "question": "Why does government regulate business?",
+   "wrong_answer": "To harm business",
+   "correct_answer": "To protect customers"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"To harm business\" next to the right answer and ask the question again in a new situation.",
+  "help": "Regulation protects customers.",
+  "feedback": "Regulation protects customers.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_LICENCE": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
+  "error": "Thinks licences are unnecessary.",
+  "example": {
+   "question": "What do businesses need to operate legally?",
+   "wrong_answer": "No licence at all",
+   "correct_answer": "A licence"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"No licence at all\" next to the right answer and ask the question again in a new situation.",
+  "help": "Businesses need a licence.",
+  "feedback": "Businesses need a licence.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS.M_PT9_GV_HELP": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS",
+  "error": "Names a non-help.",
+  "example": {
+   "question": "How does government help business?",
+   "wrong_answer": "By closing roads",
+   "correct_answer": "By providing roads and power"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"By closing roads\" next to the right answer and ask the question again in a new situation.",
+  "help": "Government provides roads and power.",
+  "feedback": "Government provides roads and power.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_VAT": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
+  "error": "Gives the wrong tax name.",
+  "example": {
+   "question": "What does VAT stand for?",
+   "wrong_answer": "Very Added Tax",
+   "correct_answer": "Value Added Tax"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Very Added Tax\" next to the right answer and ask the question again in a new situation.",
+  "help": "VAT is Value Added Tax.",
+  "feedback": "VAT is Value Added Tax.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_USE": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
+  "error": "Says taxes are kept by officials.",
+  "example": {
+   "question": "What are taxes used for?",
+   "wrong_answer": "Private spending",
+   "correct_answer": "Public services"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Private spending\" next to the right answer and ask the question again in a new situation.",
+  "help": "Taxes pay for public services.",
+  "feedback": "Taxes pay for public services.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES.M_PT9_TX_EGOV": {
+  "skill": "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES",
+  "error": "Names a non-e-Government service.",
+  "example": {
+   "question": "Which is an e-Government service?",
+   "wrong_answer": "A shop",
+   "correct_answer": "eCitizen"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A shop\" next to the right answer and ask the question again in a new situation.",
+  "help": "eCitizen is an e-Government service.",
+  "feedback": "eCitizen is an e-Government service.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_IMPORT": {
+  "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+  "error": "Says a plan is a waste of time.",
+  "example": {
+   "question": "Why write a business plan?",
+   "wrong_answer": "It is a waste of time",
+   "correct_answer": "It guides the owner and helps get a loan"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"It is a waste of time\" next to the right answer and ask the question again in a new situation.",
+  "help": "A plan guides the owner.",
+  "feedback": "A plan guides the owner.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_PART": {
+  "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+  "error": "Names a non-component.",
+  "example": {
+   "question": "Which is a component of a business plan?",
+   "wrong_answer": "A football score",
+   "correct_answer": "The market"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A football score\" next to the right answer and ask the question again in a new situation.",
+  "help": "The market is a component.",
+  "feedback": "The market is a component.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN.M_PT9_BPL_MONEY": {
+  "skill": "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN",
+  "error": "Leaves money out.",
+  "example": {
+   "question": "Which part shows costs and income?",
+   "wrong_answer": "The title page",
+   "correct_answer": "The money plan"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The title page\" next to the right answer and ask the question again in a new situation.",
+  "help": "The money plan shows costs and income.",
+  "feedback": "The money plan shows costs and income.",
+  "source": "To confirm by a Pre-Technical teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

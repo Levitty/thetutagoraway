@@ -1,0 +1,197 @@
+{
+ "outcomes": {
+  "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.a": "identify types of raised platforms used in performing tasks",
+  "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.b": "describe risks associated with working on raised platforms",
+  "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.c": "observe safety when working on raised platforms",
+  "PRE_.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.d": "appreciate the need for observing safety while working on raised platforms",
+  "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.a": "identify hazardous substances found in the environment",
+  "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.b": "classify hazardous substances found in the locality",
+  "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.c": "describe safe ways of handling hazardous substances in the environment",
+  "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.d": "handle hazardous substances safely in the environment",
+  "PRE_.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.e": "appreciate the importance of observing safety when handling hazardous substances",
+  "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.a": "explain ways of nurturing talents and abilities for self-development",
+  "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.b": "relate talents and abilities to career pathways",
+  "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.c": "analyse ethical and unethical practices related to the use of talents and abilities",
+  "PRE_.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.d": "choose a career based on talents and abilities for self-development",
+  "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.a": "explain the characteristics of oblique drawing in technical fields",
+  "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.b": "sketch given drawings in oblique projection",
+  "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.c": "draw shaped blocks in oblique projection",
+  "PRE_.G9.COMMUN.OBLIQUE_PROJECTION.d": "appreciate the application of oblique projection in drawing",
+  "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.a": "explain the application areas of visual programming software in solving problems",
+  "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.b": "create an application using visual programming software for solving problems in day-to-day life",
+  "PRE_.G9.COMMUN.VISUAL_PROGRAMMING.c": "embrace the use of visual programming in the day-to-day life",
+  "PRE_.G9.MATERI.WOOD.a": "classify wood according to physical characteristics",
+  "PRE_.G9.MATERI.WOOD.b": "describe the preparation of wood for use in the production of items",
+  "PRE_.G9.MATERI.WOOD.c": "relate types of wood to their uses in the community",
+  "PRE_.G9.MATERI.WOOD.d": "value the importance of wood in day-to-day life",
+  "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.a": "identify waste materials found in the environment",
+  "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.b": "describe ways of handling waste materials safely in the environment",
+  "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.c": "dispose waste materials using appropriate methods",
+  "PRE_.G9.MATERI.HANDLING_WASTE_MATERIALS.d": "appreciate the need for proper handling of waste materials in the environment",
+  "PRE_.G9.TOOLS_.HOLDING_TOOLS.a": "identify holding tools used in day-to-day life",
+  "PRE_.G9.TOOLS_.HOLDING_TOOLS.b": "select holding tools for performing given tasks",
+  "PRE_.G9.TOOLS_.HOLDING_TOOLS.c": "use holding tools to perform given tasks",
+  "PRE_.G9.TOOLS_.HOLDING_TOOLS.d": "care for holding tools used in day-to-day life",
+  "PRE_.G9.TOOLS_.HOLDING_TOOLS.e": "appreciate the importance of holding tools in day-to-day life",
+  "PRE_.G9.TOOLS_.DRIVING_TOOLS.a": "identify driving tools used in day-to-day life",
+  "PRE_.G9.TOOLS_.DRIVING_TOOLS.b": "select driving tools for performing given tasks",
+  "PRE_.G9.TOOLS_.DRIVING_TOOLS.c": "use driving tools to perform given tasks",
+  "PRE_.G9.TOOLS_.DRIVING_TOOLS.d": "care for driving tools used in day-to-day life",
+  "PRE_.G9.TOOLS_.DRIVING_TOOLS.e": "acknowledge the importance of driving tools in day-to-day life",
+  "PRE_.G9.TOOLS_.PROJECT.a": "identify a problem in the locality that can be solved using the skills acquired in Pre-Technical Studies",
+  "PRE_.G9.TOOLS_.PROJECT.b": "select an item that can be made to solve the identified problem",
+  "PRE_.G9.TOOLS_.PROJECT.c": "make an item to solve the problem identified using locally available materials",
+  "PRE_.G9.TOOLS_.PROJECT.d": "utilise skills acquired in Pre-Technical Studies to solve problems in day-to-day life",
+  "PRE_.G9.ENTREP.FINANCIAL_SERVICES.a": "identify financial institutions available in Kenya",
+  "PRE_.G9.ENTREP.FINANCIAL_SERVICES.b": "classify financial institutions in Kenya",
+  "PRE_.G9.ENTREP.FINANCIAL_SERVICES.c": "analyse services offered by financial institutions in Kenya",
+  "PRE_.G9.ENTREP.FINANCIAL_SERVICES.d": "utilise financial services for entrepreneurial development",
+  "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.a": "explain the reasons for government involvement in business",
+  "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.b": "describe ways of government involvement in business",
+  "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.c": "explore types of taxes in Kenya",
+  "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.d": "analyse e-Government services in business",
+  "PRE_.G9.ENTREP.GOVERNMENT_AND_BUSINESS.e": "acknowledge the need to comply with Government regulations in business",
+  "PRE_.G9.ENTREP.BUSINESS_PLAN.a": "explain the importance of a business plan in entrepreneurship",
+  "PRE_.G9.ENTREP.BUSINESS_PLAN.b": "describe the components of a business plan in financial management",
+  "PRE_.G9.ENTREP.BUSINESS_PLAN.c": "fill in a business plan template for a given business project",
+  "PRE_.G9.ENTREP.BUSINESS_PLAN.d": "embrace the use of a business plan in entrepreneurship"
+ },
+ "skills": {
+  "PRET.G9.FOUNDA.SAFETY_ON_RAISED_PLATFOR.RAISED_PLATFORMS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names ladders, step ladders, scaffolds and platforms, and the risks (falling, things falling on people below, a platform giving way), and says work at height is done only with a teacher or a trained adult and a helper. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_CLASSIFY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names hazardous substances at home and school (petrol, paraffin, bleach, acids, pesticides) and classifies them as flammable (catches fire), corrosive (eats away), toxic (poisons) or irritant, using the label. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.FOUNDA.HANDLING_HAZARDOUS_SUBST.HAZARD_HANDLING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says to read the label, keep them in their own labelled containers out of reach of young children, never mix them, never eat or drink near them, wear gloves, use them in fresh air, and ask a teacher or adult for anything dangerous. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.FOUNDA.SELF_EXPLORATION_AND_CAR.TALENTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says talents grow by practice and guidance, links a talent to careers (drawing to design, running to athletics, kindness to nursing), and tells ethical use (honesty, fair play) from unethical (cheating, using a talent to harm). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.COMMUN.OBLIQUE_PROJECTION.OBLIQUE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says in oblique drawing the front face is drawn true shape and the depth is shown by sloping lines, usually at 45 degrees, and that in cabinet projection the depth is drawn half size while in cavalier it is full size. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.COMMUN.VISUAL_PROGRAMMING.VISUAL_APPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names games, animations, simple phone apps, quizzes and controlling a device as uses of visual programming, and says blocks are joined so that the problem is solved step by step. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.MATERI.WOOD.WOOD_TYPES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says hardwoods (mahogany, mvule, teak) come from broad-leaved trees that grow slowly, softwoods (pine, cypress) come from cone-bearing trees that grow faster, and manufactured boards (plywood, blockboard, chipboard) are made from wood layers or chips, and matches furniture, doors and building to them. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.MATERI.WOOD.WOOD_PREP": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says logs are sawn into planks, the planks are seasoned (dried) so they do not warp or rot, then planed smooth and treated with a preservative or varnish. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.MATERI.HANDLING_WASTE_MATERIALS.WASTE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names organic, plastic, metal, glass, paper and electronic waste, says to sort it, reduce, reuse and recycle, compost organic waste, and never burn plastic or leave sharp or hazardous waste where people can touch it. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.TOOLS_.HOLDING_TOOLS.HOLDING_TOOLS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the bench vice, G-clamp, hand vice, pliers and tongs, and says holding tools keep the work still so it can be cut or drilled safely, and that they are cleaned and oiled after use. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.TOOLS_.DRIVING_TOOLS.DRIVING_TOOLS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a hammer drives nails, a mallet drives chisels, a screwdriver drives screws (flat or cross head to match the screw), and a spanner turns nuts and bolts, and that tools are kept clean and stored safely. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.TOOLS_.PROJECT.PROJECT_STEPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a project starts by identifying a problem, then selecting an item to make, planning, making it from local materials, testing it and reporting what was learnt. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_TYPES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names commercial banks, microfinance institutions, SACCOs, insurance companies and mobile money providers as financial institutions, and says the Central Bank of Kenya supervises the banks. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.FINANCIAL_SERVICES.FIN_SERVICES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names savings, loans, insurance, money transfer and payments as services, and says a loan must be repaid with interest and savings should be kept for planned needs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.GOV_BUSINESS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says government protects customers, collects tax, sets standards and licences, and helps business with roads, power and training, and that businesses must follow the law. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.GOVERNMENT_AND_BUSINESS.TAXES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names income tax (PAYE), value added tax (VAT), customs duty and excise duty, says taxes pay for public services, and names eCitizen and the KRA online service as e-Government services. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G9.ENTREP.BUSINESS_PLAN.BUSINESS_PLAN": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a business plan guides the owner, helps to get a loan and measures progress, and names the business idea, the market, the marketing plan, the people and the money plan (costs and expected income) as components. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
