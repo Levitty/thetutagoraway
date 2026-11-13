@@ -76,7 +76,7 @@ export const FAMILIES = [
       if (c % 10 === 0) return null;
       const options = mc(L(m, c), [[`${total} m`, 'A metre is bigger than a centimetre, so there are fewer metres than centimetres.', 'M_CONV_DIRECTION'], [`${Math.floor(total / 10)} m ${total % 10} cm`, '100 cm make 1 m, not 10 cm.', 'M_CONV_WRONG_FACTOR'], [`${m} m ${c % 10} cm`, 'The centimetres left over are the last two digits.', 'M_CONV_ADD_DIGITS']]);
       if (!options) return null;
-      return { question: `${person().name} measures the height of a door frame with a long tape and reads ${total} cm. The teacher asks for the height in metres and centimetres. Which answer is correct?`, options, instruction: 'Choose the correct length.',
+      return { question: `${person().name} measures the height of the school flagpole with a long tape and reads ${total} cm. The teacher asks for the height in metres and centimetres. Which answer is correct?`, options, instruction: 'Choose the correct length.',
         hints: ['100 cm make 1 m.', 'How many whole hundreds are in the number? The rest are centimetres.'], steps: [`${total} cm = ${m * 100} cm + ${c} cm.`, `${m * 100} cm is ${m} m, so ${L(m, c)}.`] };
     } }),
 
@@ -84,13 +84,13 @@ export const FAMILIES = [
   fam({ id: 'g4c.len.perim.rect', cs: `${Le}PERIMETER`, form: 'word', rung: 1,
     gen: () => {
       const l = randInt(6, 30), w = randInt(3, l - 1), pe = person();
-      return { question: `A school notice board is ${l} cm long and ${w} cm wide. ${pe.name} sticks a strip of paper all the way round its edge. How long must the strip be?`, answer: 2 * (l + w),
+      return { question: `A greeting card is ${l} cm long and ${w} cm wide. ${pe.name} sticks a strip of paper all the way round its edge. How long must the strip be?`, answer: 2 * (l + w),
         wrong: [[l + w, 'That is only two sides. A rectangle has four sides.', 'M_PER_TWO_SIDES_ONLY'], [l * w, 'That is the area. Go round the edge by adding all four sides.', 'M_PER_AREA_NOT_PERIMETER'], [2 * l + w, 'The other long side is missing, or the second width. Add all four sides.', 'M_PER_TWO_SIDES_ONLY']],
         hints: ['Go round the edge: two lengths and two widths.', 'Add all four sides.'], steps: [`${l} + ${w} + ${l} + ${w}.`, `${2 * (l + w)} cm.`], chk: (x) => x === l + w + l + w };
     } }),
   fam({ id: 'g4c.len.perim.square', cs: `${Le}PERIMETER`, form: 'word', rung: 2,
     gen: () => {
-      const s = randInt(4, 40), pe = person(), th = pick(['garden', 'compound', 'mat', 'cloth']);
+      const s = randInt(4, 40), pe = person(), th = pick(['garden', 'compound', 'plot', 'playing field']);
       return { question: `A square ${th} has sides of ${s} m. ${pe.name} walks once all the way round it. How many metres does ${pe.she} walk?`, answer: 4 * s,
         wrong: [[s, 'That is one side. A square has four equal sides.', 'M_PER_SQUARE_ONE_SIDE'], [s * s, 'That is the area. Add the four sides to go round.', 'M_PER_AREA_NOT_PERIMETER'], [2 * s, 'That is two sides. A square has four sides.', 'M_PER_TWO_SIDES_ONLY']],
         hints: ['A square has four equal sides.', 'Add the four sides.'], steps: [`${s} + ${s} + ${s} + ${s}.`, `${4 * s} m.`], chk: (x) => x === s * 4 };

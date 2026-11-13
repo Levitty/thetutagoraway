@@ -11,7 +11,11 @@
   "reveals": "Put the total value among the options as a distractor.",
   "help": "A place value chart with column names. Read the column name first, then say what the digit is worth.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_COUNT_FROM_LEFT": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
@@ -25,7 +29,11 @@
   "reveals": "Four-digit and five-digit numbers asked in the same session.",
   "help": "Always put the ones at the right end of the chart and name the columns from there.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH.M_PV_ZERO_IS_NOT_A_PLACE": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.PLACE_VALUE_TENTH",
@@ -39,7 +47,11 @@
   "reveals": "Numbers with a zero inside and a question about the digit after it.",
   "help": "Build 30,407 with place value cards: the zero card is a place too.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_FACE_VALUE": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
@@ -53,7 +65,11 @@
   "reveals": "A total value question with the digit among the options.",
   "help": "Write the digit, then write a zero for every place to its right.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_WRONG_ZEROS": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
@@ -67,7 +83,11 @@
   "reveals": "Ten times and one tenth of the answer as options.",
   "help": "Count the digits to the right of the 3, then write that many zeros.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH.M_TV_COMPOSE_DROPS_ZEROS": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.TOTAL_VALUE_TENTH",
@@ -81,7 +101,11 @@
   "reveals": "Total values with one or two empty places.",
   "help": "Fill a five-column chart; write 0 in each empty column.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_JOIN_PARTS": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
@@ -95,7 +119,11 @@
   "reveals": "A number with an empty hundreds or tens place.",
   "help": "Write thousands, hundreds, tens and ones as four columns and fill every one.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Seron, X. and Fayol, M. (1994), Number transcoding in children: a functional analysis, British Journal of Developmental Psychology 12"
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_REVERSE_DIGITS": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
@@ -109,7 +137,11 @@
   "reveals": "A number that ends in a teen.",
   "help": "Say the teen aloud and write the ten first: fourteen is 10 and 4.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Seron, X. and Fayol, M. (1994), Number transcoding in children: a functional analysis, British Journal of Developmental Psychology 12"
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000.M_SYM_PARTS_WRITTEN_IN_FULL": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.SYMBOLS_10000",
@@ -123,7 +155,11 @@
   "reveals": "A number said in parts with a hundreds part and a tens part.",
   "help": "Check the answer has four digits: thousands, hundreds, tens and ones.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_HUNDRED_DROPPED": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
@@ -137,7 +173,11 @@
   "reveals": "A number with a zero in the tens place.",
   "help": "Cover the last two digits and say the hundreds first.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_TY": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
@@ -151,7 +191,11 @@
   "reveals": "Word choices with a teen and its -ty partner.",
   "help": "Say the word slowly: -teen is stressed, -ty is not. Link fourteen with 14 and forty with 40.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000.M_WORDS_SPELLING_FORTY": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.WORDS_1000",
@@ -165,7 +209,11 @@
   "reveals": "Options that differ only in spelling.",
   "help": "Show that forty has no u, unlike four and fourteen.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_FIRST_DIGIT_ONLY": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
@@ -179,7 +227,11 @@
   "reveals": "A two-digit number with a bigger first digit than a three-digit number.",
   "help": "Count the digits first: more digits means a bigger number. Then compare the hundreds.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_DIRECTION": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
@@ -193,7 +245,11 @@
   "reveals": "The reversed list as an option.",
   "help": "Underline the direction words and write the first number you choose.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000.M_ORDER_ZERO_TENS": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ORDER_1000",
@@ -207,7 +263,11 @@
   "reveals": "508 against 499 style pairs.",
   "help": "Compare from the left: hundreds first. Stop as soon as the digits differ.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_DROP_ONES": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
@@ -221,7 +281,11 @@
   "reveals": "Numbers whose ones digit is 5 or more.",
   "help": "Mark the two tens either side on a number line and see which is nearer.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_NO_CARRY": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
@@ -235,7 +299,11 @@
   "reveals": "Numbers just below a hundred, such as 397.",
   "help": "Count up to the next ten on the number line: 396, 397, 398, 399, 400.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000.M_ROUND_WRONG_PLACE": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROUND_TEN_1000",
@@ -249,7 +317,11 @@
   "reveals": "A number whose nearest hundred is a close option.",
   "help": "Underline the place you are rounding to, then look at the digit next to it.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_ONLY_ITSELF": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
@@ -263,7 +335,11 @@
   "reveals": "A list question where 1 and the number are the missing ones.",
   "help": "Write the factors in pairs: 1 x 12, 2 x 6, 3 x 4.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MULTIPLE_SWAP": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
@@ -277,7 +353,11 @@
   "reveals": "A list of multiples among the options.",
   "help": "A factor divides into the number; a multiple is in its times table.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50.M_FACTOR_MISSED_PAIR": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.FACTORS_50",
@@ -291,7 +371,11 @@
   "reveals": "Numbers up to 50 with several pairs.",
   "help": "Test every number from 1 up to the number; stop when the pairs meet.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_FACTOR_SWAP": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
@@ -305,7 +389,11 @@
   "reveals": "Factors among the options.",
   "help": "Multiples are the numbers you say when you count in fives.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_STARTS_AT_ZERO_OR_ONE": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
@@ -319,7 +407,11 @@
   "reveals": "A list question for multiples of 7 or 9.",
   "help": "Skip count: say 7, then add 7 each time.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100.M_MULTIPLE_NOT_CHECKED": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.MULTIPLES_100",
@@ -333,7 +425,11 @@
   "reveals": "A yes or no question with a close number.",
   "help": "Skip count in fours and see whether 25 is said.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_EVEN_ODD_TENS_DIGIT": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
@@ -347,7 +443,11 @@
   "reveals": "Numbers whose tens and ones digits differ in kind, such as 47 and 52.",
   "help": "Only the digit in the ones place matters.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100.M_ZERO_NOT_EVEN": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_100",
@@ -375,7 +475,11 @@
   "reveals": "A list of numbers with a single odd one.",
   "help": "Share each number into two equal groups and see what is left.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Written as a trap option; not known to be held at Grade 4."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS.M_PATTERN_ADD_ONE": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.EVEN_ODD_PATTERNS",
@@ -431,7 +535,11 @@
   "reveals": "IV and IX read as numbers.",
   "help": "A smaller numeral before a larger one is taken away: 5 take away 1.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_IIII_FOR_4": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
@@ -445,7 +553,11 @@
   "reveals": "A number to Roman choice question with IIII.",
   "help": "Use V for five and take one away.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "IIII is shown on many clock faces, so children see it. The item option is III (three), not IIII, so the code does not match."
+  }
  },
  "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X.M_ROMAN_X_AS_5": {
   "skill": "MATH.G4.NUMBER.WHOLE_NUMBERS.ROMAN_TO_X",
@@ -459,7 +571,11 @@
   "reveals": "A matching question with V and X.",
   "help": "Roman clock face: V is at the 5 and X is at the 10.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_NO_CARRY": {
   "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
@@ -473,7 +589,11 @@
   "reveals": "A column addition where one place total is above 9.",
   "help": "Write only the ones digit and carry the ten to the tens column; use place value blocks.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_CARRY_FORGOTTEN": {
   "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
@@ -487,7 +607,11 @@
   "reveals": "A carry above the tens column.",
   "help": "Say the carry out loud as you add it: 4 plus 7 plus 1 carried.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP.M_ADD_COLUMNS_MISALIGNED": {
   "skill": "MATH.G4.NUMBER.ADDITION.ADD_SINGLE_REGROUP",
@@ -501,7 +625,11 @@
   "reveals": "Numbers with a different count of digits.",
   "help": "Always put the ones at the right edge and rule the columns.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_CARRY_ONLY_ONCE": {
   "skill": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP",
@@ -515,7 +643,11 @@
   "reveals": "Two carrying columns in the same sum.",
   "help": "Carry after each column, write one digit under the line.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP.M_ADD_THOUSANDS_DROPPED": {
   "skill": "MATH.G4.NUMBER.ADDITION.ADD_DOUBLE_REGROUP",
@@ -627,7 +759,11 @@
   "reveals": "A subtraction with a zero in the answer.",
   "help": "Check the answer has four digits.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_ADDS": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
@@ -641,7 +777,11 @@
   "reveals": "A take-away story with an operation word like left.",
   "help": "Draw the whole and the part that went away.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP.M_SUB_COLUMNS_MISALIGNED": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_NO_REGROUP",
@@ -655,7 +795,11 @@
   "reveals": "Numbers with different digit counts.",
   "help": "Rule the columns and write the ones at the right edge.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_SMALLER_FROM_LARGER": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
@@ -669,7 +813,11 @@
   "reveals": "A subtraction where each column needs regrouping.",
   "help": "Use place value blocks: you cannot take 8 from 4, so exchange a ten.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Brown, J.S. and VanLehn, K. (1980), Repair theory: a generative theory of bugs in procedural skills, Cognitive Science 4"
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_BORROW_NOT_REDUCED": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
@@ -683,7 +831,11 @@
   "reveals": "A regrouping subtraction that shows a lent digit.",
   "help": "Cross out the digit and write the new number above it.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Brown, J.S. and VanLehn, K. (1980), Repair theory: a generative theory of bugs in procedural skills, Cognitive Science 4"
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP.M_SUB_ZERO_REGROUP": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.SUB_REGROUP",
@@ -697,7 +849,11 @@
   "reveals": "A minuend with a zero in the tens and hundreds place.",
   "help": "Exchange one thousand for ten hundreds, one hundred for ten tens, then a ten for ten ones.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Brown, J.S. and VanLehn, K. (1980), Repair theory: a generative theory of bugs in procedural skills, Cognitive Science 4"
+  }
  },
  "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN.M_EST_DIFF_ROUND_DOWN": {
   "skill": "MATH.G4.NUMBER.SUBTRACTION.ESTIMATE_DIFF_TEN",
@@ -795,7 +951,11 @@
   "reveals": "A product with 30, 40, 50 or 60.",
   "help": "Place value blocks: 30 groups are 3 tens groups.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ZERO_TWICE": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
@@ -809,7 +969,11 @@
   "reveals": "A product of two multiples of ten.",
   "help": "2 tens times 3 tens is 6 hundreds.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS.M_MUL_TENS_ADDS": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_BY_TENS",
@@ -823,7 +987,11 @@
   "reveals": "A story with equal groups where the answer is smaller.",
   "help": "Draw 7 groups of 60 or repeated addition.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ONES_ONLY": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
@@ -837,7 +1005,11 @@
   "reveals": "A grid or array with four parts.",
   "help": "Partition 32 into 30 and 2, then multiply 21 by each.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_SECOND_ROW_ZERO": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
@@ -851,7 +1023,11 @@
   "reveals": "A written method with two rows.",
   "help": "In the second row the 2 is two tens: put a zero in the ones place first.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP.M_MUL_ADDS_PARTS": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_NO_REGROUP",
@@ -865,7 +1041,11 @@
   "reveals": "A partition with three or four parts.",
   "help": "Write the parts under each other and add in columns.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_FORGOTTEN": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
@@ -879,7 +1059,11 @@
   "reveals": "A working with a carry written above the column.",
   "help": "Say the carry out loud: 6 x 4 = 24, write 4, carry 2.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ashlock, R. (2010), Error Patterns in Computation, 10th edition, Pearson"
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_CARRY_ADDED_BEFORE": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
@@ -893,7 +1077,11 @@
   "reveals": "A single carry multiplication.",
   "help": "Multiply first, then add the carry.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP.M_MUL_PARTIAL_PRODUCTS_SWAPPED": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.MULT_2D_REGROUP",
@@ -907,7 +1095,11 @@
   "reveals": "A written method with the second row not shifted.",
   "help": "Draw the grid: 40 and 5 across, 20 and 3 down.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN.M_EST_PROD_ADDS_ZEROS": {
   "skill": "MATH.G4.NUMBER.MULTIPLICATION.ESTIMATE_PRODUCT_TEN",
@@ -1005,7 +1197,11 @@
   "reveals": "A dividend whose ones digit is not a multiple of the divisor.",
   "help": "Share the tens first, then exchange what is left for ones.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_ZERO_DROPPED": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
@@ -1019,7 +1215,11 @@
   "reveals": "A dividend like 60 or 80.",
   "help": "Check by multiplying 2 x 3.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER.M_DIV_SUBTRACT": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_NO_REMAINDER",
@@ -1033,7 +1233,11 @@
   "reveals": "A sharing story.",
   "help": "Draw 4 groups and put one orange at a time.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_TOO_BIG": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
@@ -1047,7 +1251,11 @@
   "reveals": "A remainder bigger than the divisor as an option.",
   "help": "After dividing, the remainder must be smaller than what you divide by.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_IGNORED": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
@@ -1061,7 +1269,11 @@
   "reveals": "A division that does not go exactly.",
   "help": "Multiply the quotient by the divisor: does it get back to 23?",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_REMAINDER_AS_ANSWER": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
@@ -1075,7 +1287,11 @@
   "reveals": "A story that asks how many full groups.",
   "help": "Ask what the question needs: groups or leftovers.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER.M_DIV_STORY_REMAINDER_DOWN": {
   "skill": "MATH.G4.NUMBER.DIVISION.DIV_WITH_REMAINDER",
@@ -1089,7 +1305,11 @@
   "reveals": "A story where the remainder needs one more.",
   "help": "Ask what happens to the leftover children.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Silver, E., Shapiro, L. and Deutsch, A. (1993), Sense making and the solution of division problems involving remainders, Journal for Research in Mathematics Education 24"
+  }
  },
  "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE.M_RELATE_WRONG_FACT": {
   "skill": "MATH.G4.NUMBER.DIVISION.MULT_DIV_RELATE",
@@ -1145,7 +1365,11 @@
   "reveals": "A name-the-part question.",
   "help": "The denominator is down; it names the parts. The numerator is up; it numbers the parts taken.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_TWO_NUMBERS_SEPARATE": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
@@ -1159,7 +1383,11 @@
   "reveals": "A question about meaning.",
   "help": "Cut and shade a paper strip and say it in words.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Ni, Y. and Zhou, Y. (2005), Teaching and learning fraction and rational numbers: the origins and implications of whole number bias, Educational Psychologist 40"
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.NUM_DEN.M_FRAC_PARTS_NOT_EQUAL": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.NUM_DEN",
@@ -1187,7 +1415,11 @@
   "reveals": "A picture with shaded and unshaded parts.",
   "help": "The bottom number is all the parts, shaded and not.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kerslake, D. (1986), Fractions: Children's Strategies and Errors, NFER-Nelson"
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_COUNT_CUTS": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
@@ -1201,7 +1433,11 @@
   "reveals": "A drawing showing cut lines.",
   "help": "Count the pieces, not the lines.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE.M_FRAC_WRONG_NUMBER_OF_PARTS": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_WHOLE",
@@ -1215,7 +1451,11 @@
   "reveals": "A story with a larger whole.",
   "help": "Say the total number of parts first.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_GROUP_PART_OVER_OTHER": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
@@ -1229,7 +1469,11 @@
   "reveals": "A group story with two kinds.",
   "help": "The whole is the group of 8, all the goats.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_DIVIDES_WRONG": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
@@ -1243,7 +1487,11 @@
   "reveals": "A fraction-of-a-number question.",
   "help": "Share the group into as many equal sets as the denominator says.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP.M_FRAC_OF_GROUP_ONE_PART_ONLY": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.FRACTION_OF_GROUP",
@@ -1257,7 +1505,11 @@
   "reveals": "A numerator greater than one.",
   "help": "One part is 12 divided by 4. How many parts do you take?",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS.M_TYPE_IMPROPER_NOT_FRACTION": {
   "skill": "MATH.G4.NUMBER.FRACTIONS.TYPES_OF_FRACTIONS",
@@ -1397,7 +1649,11 @@
   "reveals": "A fraction/decimal choice.",
   "help": "A tenth is 1 of 10 equal parts.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_HUNDREDTH_SAME_AS_TENTH": {
   "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
@@ -1411,7 +1667,11 @@
   "reveals": "A hundred square with one column or a single square shaded.",
   "help": "Count the small squares: 100 in all.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH.M_DEC_PARTS_NOT_EQUAL": {
   "skill": "MATH.G4.NUMBER.DECIMALS.TENTH_HUNDREDTH",
@@ -1425,7 +1685,11 @@
   "reveals": "Unequal strip.",
   "help": "Check that the parts match.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kerslake, D. (1986), Fractions: Children's Strategies and Errors, NFER-Nelson"
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_FRACTION_AS_TWO_WHOLES": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
@@ -1439,7 +1703,11 @@
   "reveals": "A fraction less than 1.",
   "help": "A tenth is to the right of the ones.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Resnick, L. et al. (1989), Conceptual bases of arithmetic errors: the case of decimal fractions, Journal for Research in Mathematics Education 20"
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_HUNDREDTH_ONE_DIGIT": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
@@ -1453,7 +1721,11 @@
   "reveals": "A hundredths fraction with a single digit.",
   "help": "Hundredths need two places after the point.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION.M_DEC_READ_AS_WHOLE": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_NOTATION",
@@ -1467,7 +1739,11 @@
   "reveals": "A read-aloud or word choice.",
   "help": "Say each digit after the point on its own.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Resnick, L. et al. (1989), Conceptual bases of arithmetic errors: the case of decimal fractions, Journal for Research in Mathematics Education 20"
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_PLACE_NAME_AS_WHOLE": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
@@ -1481,7 +1757,11 @@
   "reveals": "A place name choice.",
   "help": "Places to the right of the point end in -ths.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_VALUE_OF_DIGIT": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
@@ -1495,7 +1775,11 @@
   "reveals": "A value question.",
   "help": "The 6 is in the tenths place, six tenths.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE.M_DEC_ZERO_PLACE_HOLDER": {
   "skill": "MATH.G4.NUMBER.DECIMALS.DECIMAL_PLACE_VALUE",
@@ -1509,7 +1793,11 @@
   "reveals": "A decimal with a zero in the tenths place.",
   "help": "The zero holds the tenths place.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Resnick, L. et al. (1989), Conceptual bases of arithmetic errors: the case of decimal fractions, Journal for Research in Mathematics Education 20"
+  }
  },
  "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS.M_DEC_LONGER_IS_LARGER": {
   "skill": "MATH.G4.NUMBER.DECIMALS.ORDER_DECIMALS",
@@ -1565,7 +1853,11 @@
   "reveals": "A question with a given value of a letter.",
   "help": "The letter stands for the number the story or the question says.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Küchemann, D. (1978), Children's understanding of numerical variables, Mathematics in School 7"
+  }
  },
  "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_LETTER_IS_OBJECT": {
   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
@@ -1579,7 +1871,11 @@
   "reveals": "A letter used for a number of objects.",
   "help": "b is the number of bananas in one bunch.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Küchemann, D. (1978), Children's understanding of numerical variables, Mathematics in School 7"
+  }
  },
  "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT.M_LET_DIFFERENT_LETTERS_DIFFERENT_NUMBERS": {
   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.LETTERS_REPRESENT",
@@ -1607,7 +1903,11 @@
   "reveals": "A story of a total.",
   "help": "5b means 5 times b. Use + for more.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "MacGregor, M. and Stacey, K. (1997), Students' understanding of algebraic notation 11-15, Educational Studies in Mathematics 33"
+  }
  },
  "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS.M_EXP_WRONG_OPERATION": {
   "skill": "MATH.G4.NUMBER.USE_OF_LETTERS.FORM_EXPRESSIONS",
@@ -1705,7 +2005,11 @@
   "reveals": "A pick-the-unit question with a short and a long object.",
   "help": "Put a metre rule next to the pencil and look.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.CM_UNIT.M_LEN_CM_AS_M_SIZE": {
   "skill": "MATH.G4.MEASUR.LENGTH.CM_UNIT",
@@ -1719,7 +2023,11 @@
   "reveals": "A size choice.",
   "help": "Mark 1 cm on paper and compare with a fingernail.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_NOT_FROM_ZERO": {
   "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
@@ -1733,7 +2041,11 @@
   "reveals": "A picture of an object that starts at 2 or 3 on the ruler.",
   "help": "Count the cm gaps, not the numbers.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Clark, F. (1997), Measurement of length: the need for a better approach to teaching, School Science and Mathematics 97"
+  }
  },
  "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_COUNTS_MARKS": {
   "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
@@ -1747,7 +2059,11 @@
   "reveals": "A ruler picture with the marks drawn.",
   "help": "Count the spaces between marks.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Clark, F. (1997), Measurement of length: the need for a better approach to teaching, School Science and Mathematics 97"
+  }
  },
  "MATH.G4.MEASUR.LENGTH.MEASURE_CM.M_LEN_DIFFERENCE_AS_END": {
   "skill": "MATH.G4.MEASUR.LENGTH.MEASURE_CM",
@@ -1761,7 +2077,11 @@
   "reveals": "A compare question.",
   "help": "Draw the two lines under each other.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_10_NOT_100": {
   "skill": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
@@ -1775,7 +2095,11 @@
   "reveals": "A fact question.",
   "help": "Look at a metre ruler: count tens, ten of them make 100.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.M_CM_RELATION.M_LEN_HALF_METRE_WRONG": {
   "skill": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
@@ -1789,7 +2113,11 @@
   "reveals": "A half and a quarter of a metre in one question.",
   "help": "Half of 100 is 50.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_ADD_DIGITS": {
   "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
@@ -1803,7 +2131,11 @@
   "reveals": "A length with a single digit of cm.",
   "help": "Metres are hundreds of cm: 3 m is 300 cm, then add 4.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_WRONG_FACTOR": {
   "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
@@ -1817,7 +2149,11 @@
   "reveals": "A metres to centimetres conversion.",
   "help": "One metre is 100 cm, so 6 m is 6 x 100.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM.M_CONV_DIRECTION": {
   "skill": "MATH.G4.MEASUR.LENGTH.CONVERT_M_CM",
@@ -1831,7 +2167,11 @@
   "reveals": "A cm to m conversion.",
   "help": "A metre is bigger than a centimetre, so there are fewer metres.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_TWO_SIDES_ONLY": {
   "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
@@ -1845,7 +2185,11 @@
   "reveals": "A rectangle perimeter question.",
   "help": "Walk round the rectangle: count every side.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_AREA_NOT_PERIMETER": {
   "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
@@ -1859,7 +2203,11 @@
   "reveals": "A fencing story.",
   "help": "Ask: do I go around the edge or cover the inside?",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.PERIMETER.M_PER_SQUARE_ONE_SIDE": {
   "skill": "MATH.G4.MEASUR.LENGTH.PERIMETER",
@@ -1873,7 +2221,11 @@
   "reveals": "A square with one side given.",
   "help": "Mark each side with a tick as you add.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_NO_REGROUP": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
@@ -1887,7 +2239,11 @@
   "reveals": "Lengths whose cm add to more than 100.",
   "help": "100 cm is 1 m: move it to the metre column.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_ADD.M_LADD_ADDS_ACROSS": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_ADD",
@@ -1901,7 +2257,11 @@
   "reveals": "A sum with units.",
   "help": "Add like units only: metres with metres.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_SMALLER_FROM_LARGER": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB",
@@ -1915,7 +2275,11 @@
   "reveals": "Lengths where the cm to subtract is bigger.",
   "help": "Change 1 m to 100 cm first.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_SUB.M_LSUB_BORROW_100_NOT_10": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_SUB",
@@ -1929,7 +2293,11 @@
   "reveals": "A regrouping with metres.",
   "help": "One metre is 100 cm: so 130 - 60.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_NO_REGROUP": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT",
@@ -1943,7 +2311,11 @@
   "reveals": "A cm part that goes over 100.",
   "help": "4 x 60 cm is 240 cm, which is 2 m 40 cm: change the extra 100 cm into metres.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_MULT.M_LMUL_ONLY_METRES": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_MULT",
@@ -1957,7 +2329,11 @@
   "reveals": "A length with a cm part.",
   "help": "Multiply the cm too.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_METRES_ONLY": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV",
@@ -1971,7 +2347,11 @@
   "reveals": "A length with cm.",
   "help": "Change to cm: 480 cm divided by 4.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.LENGTH.LENGTH_DIV.M_LDIV_REMAINDER_METRES_LOST": {
   "skill": "MATH.G4.MEASUR.LENGTH.LENGTH_DIV",
@@ -1985,7 +2365,11 @@
   "reveals": "An odd number of metres.",
   "help": "Change 5 m to 500 cm first.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_LONGER_IS_LARGER": {
   "skill": "MATH.G4.MEASUR.AREA.COMPARE_AREA",
@@ -1999,7 +2383,11 @@
   "reveals": "A long, thin shape against a compact one.",
   "help": "Cover each one with squares and count.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.AREA.COMPARE_AREA.M_AREA_COUNTS_EDGES": {
   "skill": "MATH.G4.MEASUR.AREA.COMPARE_AREA",
@@ -2013,7 +2401,11 @@
   "reveals": "Two shapes with the same perimeter and different areas.",
   "help": "Area is how much surface is covered.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_EDGE_ONLY": {
   "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
@@ -2027,7 +2419,11 @@
   "reveals": "A rectangle at least 3 by 3.",
   "help": "Count row by row.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Outhred, L. and Mitchelmore, M. (2000), Young children's intuitive understanding of rectangular area measurement, Journal for Research in Mathematics Education 31"
+  }
  },
  "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_COUNTS_TWICE": {
   "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
@@ -2041,7 +2437,11 @@
   "reveals": "A grid with no marks.",
   "help": "Mark each square as it is counted.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Outhred, L. and Mitchelmore, M. (2000), Young children's intuitive understanding of rectangular area measurement, Journal for Research in Mathematics Education 31"
+  }
  },
  "MATH.G4.MEASUR.AREA.AREA_COUNT.M_AREA_UNIT_LENGTH": {
   "skill": "MATH.G4.MEASUR.AREA.AREA_COUNT",
@@ -2055,7 +2455,11 @@
   "reveals": "An answer in units of area.",
   "help": "Area is how many squares cover the surface.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS.M_AREA_ADDS_ROWS_COLS": {
   "skill": "MATH.G4.MEASUR.AREA.AREA_ROWS_COLS",
@@ -2125,7 +2529,11 @@
   "reveals": "A picture with hidden blocks.",
   "help": "Count one layer and multiply by the number of layers.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Battista, M. and Clements, D. (1996), Students' understanding of three-dimensional rectangular arrays of cubes, Journal for Research in Mathematics Education 27"
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ADDS_DIMENSIONS": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
@@ -2139,7 +2547,11 @@
   "reveals": "A cuboid with the three numbers given.",
   "help": "One layer first, then layers.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_ONE_LAYER_ONLY": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
@@ -2153,7 +2565,11 @@
   "reveals": "A multi-layer pile.",
   "help": "Count how many layers there are.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Battista, M. and Clements, D. (1996), Students' understanding of three-dimensional rectangular arrays of cubes, Journal for Research in Mathematics Education 27"
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID.M_VOL_SURFACE_NOT_VOLUME": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBOID",
@@ -2167,7 +2583,11 @@
   "reveals": "A volume question about a solid.",
   "help": "Volume is how many blocks fill it.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SIDE_ONLY": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
@@ -2181,7 +2601,11 @@
   "reveals": "A cube with the side given.",
   "help": "Layers: 3 by 3 in each layer, and 3 layers.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_SQUARES_SIDE": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
@@ -2195,7 +2619,11 @@
   "reveals": "A cube.",
   "help": "There are as many layers as the side.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE.M_VOL_CUBE_TIMES_THREE": {
   "skill": "MATH.G4.MEASUR.VOLUME.VOLUME_CUBE",
@@ -2209,7 +2637,11 @@
   "reveals": "A cube.",
   "help": "Layer, then layers.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_MASS_CONFUSED": {
   "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
@@ -2223,7 +2655,11 @@
   "reveals": "A unit choice for a liquid.",
   "help": "Capacity is how much a container holds.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_READS_JUG_TOP": {
   "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
@@ -2237,7 +2673,11 @@
   "reveals": "A part-filled jug.",
   "help": "Read where the water is.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE.M_CAP_BIGGER_CONTAINER_MORE": {
   "skill": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
@@ -2251,7 +2691,11 @@
   "reveals": "A tall thin container and a wide one.",
   "help": "Pour one into the other.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Piaget, J. and Inhelder, B. (1941), Le developpement des quantites physiques chez l'enfant: children judge quantity by the height of a container"
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_LITRE_THREE": {
   "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
@@ -2265,7 +2709,11 @@
   "reveals": "A fact question.",
   "help": "Fill a litre with two halves.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_QUARTER_TWO": {
   "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
@@ -2279,7 +2727,11 @@
   "reveals": "A fact question.",
   "help": "A quarter is one of four equal parts.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE.M_CAP_HALF_AS_5": {
   "skill": "MATH.G4.MEASUR.CAPACITY.HALF_QUARTER_LITRE",
@@ -2293,7 +2745,11 @@
   "reveals": "A choice with 5.",
   "help": "Half of 1 litre is a part of a litre, not a whole.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_OMIT_UNIT": {
   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD",
@@ -2307,7 +2763,11 @@
   "reveals": "A story with a unit.",
   "help": "Say the unit of the answer before writing.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Leaving out a unit is a habit more than a misconception."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD.M_CAP_ADD_SUBTRACTS": {
   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_ADD",
@@ -2321,7 +2781,11 @@
   "reveals": "A total question.",
   "help": "Altogether means join.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ADDS": {
   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB",
@@ -2335,7 +2799,11 @@
   "reveals": "A used-up story.",
   "help": "Left means take away.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB.M_CAP_SUB_ORDER": {
   "skill": "MATH.G4.MEASUR.CAPACITY.CAPACITY_SUB",
@@ -2349,7 +2817,11 @@
   "reveals": "A fill-up story.",
   "help": "The whole is the full tank.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_LARGER_IS_HEAVIER": {
   "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
@@ -2363,7 +2835,11 @@
   "reveals": "A big light object and a small heavy one.",
   "help": "Balance them.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Smith, C., Carey, S. and Wiser, M. (1985), On differentiation: a case study of the development of the concepts of size, weight and density, Cognition 21"
+  }
  },
  "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_CAPACITY_UNIT": {
   "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
@@ -2377,7 +2853,11 @@
   "reveals": "A unit choice.",
   "help": "Mass is how heavy; capacity is how much it holds.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.KG_MEASURE.M_MASS_SCALE_READ_END": {
   "skill": "MATH.G4.MEASUR.MASS.KG_MEASURE",
@@ -2391,7 +2871,11 @@
   "reveals": "A scale picture.",
   "help": "Read where the pointer is.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_KG_AS_500": {
   "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
@@ -2405,7 +2889,11 @@
   "reveals": "A half-kilogram question.",
   "help": "Two half kilograms balance one kilogram.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_QUARTER_TWO": {
   "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
@@ -2419,7 +2907,11 @@
   "reveals": "A fact question.",
   "help": "A quarter is one of four equal parts.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG.M_MASS_HALF_LARGER_THAN_KG": {
   "skill": "MATH.G4.MEASUR.MASS.HALF_QUARTER_KG",
@@ -2433,7 +2925,11 @@
   "reveals": "A comparison.",
   "help": "A half is one of two equal parts of a kilogram.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_OMIT_UNIT": {
   "skill": "MATH.G4.MEASUR.MASS.MASS_ADD",
@@ -2447,7 +2943,11 @@
   "reveals": "A story with a unit.",
   "help": "Say the unit before writing.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Leaving out a unit is a habit more than a misconception."
+  }
  },
  "MATH.G4.MEASUR.MASS.MASS_ADD.M_MASS_ADD_SUBTRACTS": {
   "skill": "MATH.G4.MEASUR.MASS.MASS_ADD",
@@ -2461,7 +2961,11 @@
   "reveals": "A total question.",
   "help": "Altogether means join.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_ADDS": {
   "skill": "MATH.G4.MEASUR.MASS.MASS_SUB",
@@ -2475,7 +2979,11 @@
   "reveals": "A sold story.",
   "help": "Left means take away.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MASS.MASS_SUB.M_MASS_SUB_CONTAINER": {
   "skill": "MATH.G4.MEASUR.MASS.MASS_SUB",
@@ -2489,7 +2997,11 @@
   "reveals": "A container and contents story.",
   "help": "The contents are the whole minus the box.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_HANDS_SWAPPED": {
   "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
@@ -2503,7 +3015,11 @@
   "reveals": "A clock with different hand positions.",
   "help": "The short hand is the hour.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_PAST_TO_SWAP": {
   "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
@@ -2517,7 +3033,11 @@
   "reveals": "A clock in the second half of the hour.",
   "help": "After the half hour count to the next hour.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM.M_TIME_MIDNIGHT_NOON": {
   "skill": "MATH.G4.MEASUR.TIME.TELL_TIME_AM_PM",
@@ -2545,7 +3065,11 @@
   "reveals": "An event with a clear time of day.",
   "help": "Think of the sun: is it morning?",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.ESTIMATE_TIME.M_TIME_SHADOW_DIRECTION": {
   "skill": "MATH.G4.MEASUR.TIME.ESTIMATE_TIME",
@@ -2559,7 +3083,11 @@
   "reveals": "A shadow question.",
   "help": "Observe a shadow stick at 9:00, 12:00 and 3:00.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_100_MINUTES": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
@@ -2573,7 +3101,11 @@
   "reveals": "An hours to minutes conversion.",
   "help": "Look at a clock face: 60 minutes make one hour.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Russell, K. (2012), Elapsed time: why is it so difficult to teach?, Journal for Research in Mathematics Education 43"
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_REMAINDER_AS_DECIMAL": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
@@ -2587,7 +3119,11 @@
   "reveals": "A minutes amount over 60.",
   "help": "Take out 60, the rest is minutes.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES.M_TIME_DIVIDES_TO_MULTIPLY": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_HOURS_MINUTES",
@@ -2601,7 +3137,11 @@
   "reveals": "An hours to minutes conversion.",
   "help": "A smaller unit means more of them.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_10_HOURS_DAY": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
@@ -2615,7 +3155,11 @@
   "reveals": "A days to hours conversion.",
   "help": "One day is 24 hours.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_WEEK_NOT_7": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
@@ -2629,7 +3173,11 @@
   "reveals": "A weeks to days conversion.",
   "help": "A week has 7 days.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Grade 4 children know there are seven days in a week; a trap option."
+  }
  },
  "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS.M_TIME_DAYS_TO_WEEKS_REMAINDER": {
   "skill": "MATH.G4.MEASUR.TIME.CONVERT_DAYS_WEEKS",
@@ -2643,7 +3191,11 @@
   "reveals": "A days amount with a remainder.",
   "help": "Weeks first, then the days left.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_END_TIME": {
   "skill": "MATH.G4.MEASUR.TIME.RECORD_DURATION",
@@ -2657,7 +3209,11 @@
   "reveals": "A start and end.",
   "help": "Duration is how long, not when.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.RECORD_DURATION.M_TIME_DURATION_WRONG_UNITS": {
   "skill": "MATH.G4.MEASUR.TIME.RECORD_DURATION",
@@ -2671,7 +3227,11 @@
   "reveals": "A hour-minute duration.",
   "help": "1 hour is 60 minutes, then add 30.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Russell, K. (2012), Elapsed time: why is it so difficult to teach?, Journal for Research in Mathematics Education 43"
+  }
  },
  "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_SUBTRACT_AS_DECIMAL": {
   "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
@@ -2685,7 +3245,11 @@
   "reveals": "A duration across an hour.",
   "help": "Count up to the next hour, then the rest.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Russell, K. (2012), Elapsed time: why is it so difficult to teach?, Journal for Research in Mathematics Education 43"
+  }
  },
  "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_ADD_MINUTES_OVER_60": {
   "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
@@ -2699,7 +3263,11 @@
   "reveals": "A time to which minutes are added.",
   "help": "60 minutes make 1 hour.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Kamii, C. and Russell, K. (2012), Elapsed time: why is it so difficult to teach?, Journal for Research in Mathematics Education 43"
+  }
  },
  "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION.M_TIME_NOON_AMPM": {
   "skill": "MATH.G4.MEASUR.TIME.WORK_OUT_DURATION",
@@ -2713,7 +3281,11 @@
   "reveals": "A duration across noon.",
   "help": "A.m. changes to p.m. at 12.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_DIGITAL_BASE_10": {
   "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
@@ -2741,7 +3313,11 @@
   "reveals": "A 45 minutes reading.",
   "help": "45 minutes past the hour is 15 to the next hour.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK.M_TIME_24H_AS_AM": {
   "skill": "MATH.G4.MEASUR.TIME.DIGITAL_CLOCK",
@@ -2755,7 +3331,11 @@
   "reveals": "A 24-hour time.",
   "help": "Subtract 12 from the hours in the afternoon.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS.M_MONEY_10_CENTS_SHILLING": {
   "skill": "MATH.G4.MEASUR.MONEY.SHILLINGS_CENTS",
@@ -2825,7 +3405,11 @@
   "reveals": "A list with quantities.",
   "help": "Price of one times how many.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MONEY.SHOPPING_LIST.M_LIST_UNITS_MIXED": {
   "skill": "MATH.G4.MEASUR.MONEY.SHOPPING_LIST",
@@ -2853,7 +3437,11 @@
   "reveals": "A total with quantity and price.",
   "help": "Four times the price of one.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_CHANGE_ADDS": {
   "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
@@ -2867,7 +3455,11 @@
   "reveals": "A change question.",
   "help": "Change is what is given back.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.MEASUR.MONEY.TOTAL_COST.M_COST_ONE_ITEM_ONLY": {
   "skill": "MATH.G4.MEASUR.MONEY.TOTAL_COST",
@@ -2881,7 +3473,11 @@
   "reveals": "A list of three items.",
   "help": "Tick each item as you add.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_CLOCKWISE_AS_LEFT": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
@@ -2895,7 +3491,11 @@
   "reveals": "A turn drawn from above.",
   "help": "Hold a clock face and watch the top hand go to the right.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI.M_TURN_VIEWED_FROM_BEHIND": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.CLOCKWISE_ANTI",
@@ -2923,7 +3523,11 @@
   "reveals": "A word choice.",
   "help": "Anti means against.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_QUARTER_AS_HALF": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
@@ -2937,7 +3541,11 @@
   "reveals": "A fraction of a turn.",
   "help": "Four quarter turns make a full turn.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FACING_WRONG": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
@@ -2951,7 +3559,11 @@
   "reveals": "A direction change after a turn.",
   "help": "Clockwise from north is east.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_FULL_AS_NO_TURN": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
@@ -2965,7 +3577,11 @@
   "reveals": "A full turn question.",
   "help": "You came back to where you started.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS.M_TURN_HALF_AS_RIGHT": {
   "skill": "MATH.G4.GEOMET.POSITION_AND_DIRECTION.TURN_FRACTIONS",
@@ -2979,7 +3595,11 @@
   "reveals": "A half turn.",
   "help": "A half turn faces you the opposite way.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_ARM_LENGTH": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
@@ -2993,7 +3613,11 @@
   "reveals": "Two angles with different arm lengths.",
   "help": "Trace the angles onto paper and put one over the other.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Mitchelmore, M. and White, P. (2000), Development of angle concepts by progressive abstraction and generalisation, Educational Studies in Mathematics 41"
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_IS_THE_LINE": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
@@ -3007,7 +3631,11 @@
   "reveals": "A definition choice.",
   "help": "Open two sticks joined at one end.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT.M_ANGLE_COUNT_SIDES": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLE_AT_POINT",
@@ -3021,7 +3649,11 @@
   "reveals": "A shape question.",
   "help": "Count each corner once.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_CURVED_HAS_ANGLE": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
@@ -3035,7 +3667,11 @@
   "reveals": "A shape with no corners.",
   "help": "Run a finger round the circle.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_RECTANGLE_ANGLES": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
@@ -3049,7 +3685,11 @@
   "reveals": "A shape question.",
   "help": "Count the corners one by one.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS.M_ANGLE_SQUARE_CORNER_ONLY_SQUARES": {
   "skill": "MATH.G4.GEOMET.ANGLES.ANGLES_IN_OBJECTS",
@@ -3119,7 +3759,11 @@
   "reveals": "A turned square.",
   "help": "Count the sides and check they are equal.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Clements, D. and Battista, M. (1992), Geometry and spatial reasoning, in Handbook of Research on Mathematics Teaching and Learning"
+  }
  },
  "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_OVAL_CIRCLE": {
   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
@@ -3133,7 +3777,11 @@
   "reveals": "An oval and a circle.",
   "help": "A circle is the same width all the way round.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES.M_SHAPE_TRIANGLE_NEEDS_EQUAL_SIDES": {
   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.IDENTIFY_FIGURES",
@@ -3259,7 +3907,11 @@
   "reveals": "A rectangle.",
   "help": "Measure the sides of a rectangle.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES.M_PROP_SQUARE_NOT_RECT": {
   "skill": "MATH.G4.GEOMET.PLANE_FIGURES.FIGURE_PROPERTIES",
@@ -3287,7 +3939,11 @@
   "reveals": "A shape property.",
   "help": "Trace the sides and count.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.COLLECT_DATA.M_COLLECT_COUNTS_TWICE": {
   "skill": "MATH.G4.DATA_H.DATA.COLLECT_DATA",
@@ -3329,7 +3985,11 @@
   "reveals": "A tally question.",
   "help": "Draw four lines and cross them.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.DATA_MATERIALS.M_DATA_WRONG_TOOL": {
   "skill": "MATH.G4.DATA_H.DATA.DATA_MATERIALS",
@@ -3343,7 +4003,11 @@
   "reveals": "A choice of tools.",
   "help": "Name what you write on.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children know a ruler or a calculator is not used to tally."
+  }
  },
  "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_TALLY_COUNTS_BARS": {
   "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
@@ -3357,7 +4021,11 @@
   "reveals": "A tally of five.",
   "help": "A crossed bundle is five.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_ITEM_LEFT_OUT": {
   "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
@@ -3371,7 +4039,11 @@
   "reveals": "A table with a missing row.",
   "help": "Tick each item as you write it.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.TABLE_RECORD.M_TABLE_HEADINGS_MISSING": {
   "skill": "MATH.G4.DATA_H.DATA.TABLE_RECORD",
@@ -3399,7 +4071,11 @@
   "reveals": "A table where the most is in the middle.",
   "help": "Compare the numbers, not the order.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_ADDS_FOR_DIFFERENCE": {
   "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
@@ -3413,7 +4089,11 @@
   "reveals": "A how many more question.",
   "help": "Find the difference.",
   "source": "widely reported in maths-education research; how often Kenyan learners make it is to be confirmed by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "MATH.G4.DATA_H.DATA.INTERPRET_TABLE.M_TABLE_NAME_NOT_NUMBER": {
   "skill": "MATH.G4.DATA_H.DATA.INTERPRET_TABLE",
@@ -3427,6 +4107,10 @@
   "reveals": "A number question.",
   "help": "Underline how many.",
   "source": "to confirm by a teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A slip a Kenyan Grade 4 child could plausibly make in arithmetic or measures. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  }
 }

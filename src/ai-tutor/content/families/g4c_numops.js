@@ -180,8 +180,8 @@ export const FAMILIES = [
     gen: () => {
       const d = randInt(3, 9), q = randInt(3, Math.floor(95 / d)), r = randInt(1, d - 1), n = d * q + r, th = pick(THINGS), pe = person();
       return { question: `A teacher has ${n} ${th} to share equally among ${d} learners. Each learner is given as many as possible, and the teacher keeps the rest. How many ${th} does the teacher keep?`, answer: r,
-        wrong: [[q, `${q} is how many full bags. The question asks how many are left over.`, 'M_DIV_REMAINDER_AS_ANSWER'], [r + d, `A remainder must be smaller than ${d}. Another bag could be filled.`, 'M_DIV_REMAINDER_TOO_BIG'], [d - r, `${d - r} more would fill another bag. The left over is what remains.`, 'M_DIV_REMAINDER_IGNORED'], [n - d, `That is ${n} take away ${d}. Divide to find the full bags first.`, 'M_DIV_REMAINDER_TOO_BIG']],
-        hints: [`Divide ${n} by ${d} to find the full bags.`, 'Multiply the full bags by the bag size and take that from the total.'], steps: [`${n} divided by ${d} is ${q} with ${r} left over.`, `${r} ${th} are left over.`], chk: (x) => d * q + x === n && x < d };
+        wrong: [[q, `${q} is how many each learner gets. The question asks how many are left over.`, 'M_DIV_REMAINDER_AS_ANSWER'], [r + d, `A remainder must be smaller than ${d}. Another round could be handed out.`, 'M_DIV_REMAINDER_TOO_BIG'], [d - r, `${d - r} more would give each learner one more. The left over is what remains.`, 'M_DIV_REMAINDER_IGNORED'], [n - d, `That is ${n} take away ${d}. Divide to find how many each learner gets first.`, 'M_DIV_REMAINDER_TOO_BIG']],
+        hints: [`Divide ${n} by ${d} to find how many each learner gets.`, 'Multiply what each learner gets by the number of learners and take that from the total.'], steps: [`${n} divided by ${d} is ${q} with ${r} left over.`, `${r} ${th} are left over.`], chk: (x) => d * q + x === n && x < d };
     } }),
   fam({ id: 'g4c.div.rem.buses', cs: `${D}DIV_WITH_REMAINDER`, form: 'word', rung: 3,
     gen: () => {

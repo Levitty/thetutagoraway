@@ -2560,14 +2560,14 @@ var FAMILIES2 = [
     Q("Which fruit does best at the hot coast?", "Mango", ["Apple|FY_ANYWHERE", "Plum|FY_ANYWHERE", "Pear|FY_ANYWHERE"], "Mango likes the warm coast. Apples need the cool highlands."),
     Q("Which of these gives a fruit but is not a tall tree?", "Banana and pawpaw plants", ["None, all fruits come from tall trees|FY_TREE", "Only mango trees|FY_TREE", "Only coconut palms|FY_TREE"], "Fruits grow on trees, vines, bushes and plants."),
     Q("Which of these is NOT a fruit crop?", "Cassava", ["Guava|FY_ROOT", "Orange|FY_ROOT", "Pineapple|FY_ROOT"], "Cassava is a root crop."),
-    Q("Which fruit grows well in the cool highlands?", "Plum", ["Coconut|FY_ANYWHERE", "Mango|FY_ANYWHERE", "Pineapple|FY_ANYWHERE"], "Plums like cool places."),
+    Q("Which fruit grows well in the cool highlands?", "Plum", ["Coconut|FY_ANYWHERE", "Mango|FY_ANYWHERE", "Cashew nut|FY_ANYWHERE"], "Plums like cool places."),
     Q("Passion fruit grows on what?", "A climbing vine", ["A tall tree only|FY_TREE", "A root under the ground|FY_ROOT", "A cassava stem|FY_ROOT"], "Passion fruit is a vine.")
   ], { h: ["Think about where each fruit grows and what plant gives it.", "Mango likes warm places. Apple likes cool places. Cassava is a root."], s1: "Think about the place and the plant." })),
   fam("fruit.type.story", `${FR}FRUIT_TYPES`, "word", 2, choose([
     Q("Mama Mueni lives near Mombasa where it is hot. Which fruit tree should she plant?", "Mango", ["Apple|FY_ANYWHERE", "Plum|FY_ANYWHERE", "Pear|FY_ANYWHERE"], "Mango does well in the warm coast."),
     Q("Peter has a small plot. He wants a fruit plant that is not a tall tree. Which can he choose?", "Banana", ["Mango tree|FY_TREE", "Coconut palm|FY_TREE", "Avocado tree|FY_TREE"], "A banana is a plant, not a tall tree."),
     Q("Wafula says cassava is a fruit crop because it is sweet. What is the best reply?", "Cassava is a root crop, not a fruit", ["He is right, cassava is a fruit|FY_ROOT", "All sweet foods are fruits|FY_ROOT", "Roots are the fruits of the plant|FY_ROOT"], "Cassava is a root crop."),
-    Q("The Grade 4 class at a cold highland school wants to grow fruit. Which is a good choice?", "Plums", ["Coconuts|FY_ANYWHERE", "Pineapples|FY_ANYWHERE", "Mangoes at the coast|FY_ANYWHERE"], "Plums like the cool highlands."),
+    Q("The Grade 4 class at a cold highland school wants to grow fruit. Which is a good choice?", "Plums", ["Coconuts|FY_ANYWHERE", "Cashew nuts|FY_ANYWHERE", "Mangoes at the coast|FY_ANYWHERE"], "Plums like the cool highlands."),
     Q("A farmer grows pawpaw, orange and guava. What are these?", "Fruit crops", ["Root crops|FY_ROOT", "Tall trees only|FY_TREE", "Cereals|FY_ROOT"], "They all give fruits.")
   ], { h: ["What does the place need? Is the plant a tree or something else?", "Choose the fruit that suits the weather."], s1: "Think about the weather and the plant." })),
   // ---------------------------------------------------------------- FRUIT_GROWING
@@ -2597,19 +2597,19 @@ var FAMILIES2 = [
     Q("Which of these is a domestic animal?", "A goat", ["A zebra|AT_WILD", "An antelope|AT_WILD", "A giraffe|AT_WILD"], "Domestic animals are kept and cared for by people."),
     Q("Which of these is a domestic animal kept for eggs?", "A chicken", ["None, birds are not domestic animals|AT_FOUR", "A wild goose|AT_WILD", "A zebra|AT_WILD"], "Chickens are domestic animals called poultry."),
     Q("Which of these is poultry?", "A duck", ["A goat|AT_GROUP", "A sheep|AT_GROUP", "A cow|AT_GROUP"], "Poultry are birds kept for eggs and meat."),
-    Q("Which of these animals is livestock?", "A cow", ["A chicken|AT_GROUP", "A duck|AT_GROUP", "A turkey|AT_GROUP"], "Cattle, goats and sheep are livestock."),
+    Q("Which of these animals is livestock, not poultry?", "A cow", ["A chicken|AT_GROUP", "A duck|AT_GROUP", "A turkey|AT_GROUP"], "Cattle, goats and sheep are livestock."),
     Q("Which of these is NOT a domestic animal?", "A giraffe", ["A donkey|AT_WILD", "A rabbit|AT_WILD", "A pig|AT_WILD"], "Giraffes live wild in parks.")
   ], { h: ["Who keeps and feeds the animal?", "Poultry are birds. Livestock are cattle, goats and sheep."], s1: "Think about who looks after the animal." })),
   fam("animal.type.story", `${AN}ANIMAL_TYPES`, "word", 2, choose([
     Q("A zebra often grazes near the village. Is it a domestic animal?", "No, it is wild", ["Yes, it is near people|AT_WILD", "Yes, it is kept at home|AT_WILD", "Yes, it is like a donkey|AT_WILD"], "Domestic animals are kept by people."),
-    Q("Mama Wanja keeps hens. Her son says hens are not domestic animals because they have two legs. What is the best reply?", "Hens are domestic animals called poultry", ["He is right, only four-legged animals count|AT_FOUR", "Hens are wild birds|AT_WILD", "Hens are livestock like cattle|AT_GROUP"], "Domestic animals include birds."),
+    Q("Mama Wanja keeps hens. Her son says hens are not domestic animals because they have two legs. What is the best reply?", "Hens are domestic animals called poultry", ["He is right, only four-legged animals count|AT_FOUR", "Hens are wild birds|AT_WILD", "Hens are four-legged animals like cattle|AT_GROUP"], "Domestic animals include birds."),
     Q("Oluoch keeps a duck. To which group does it belong?", "Poultry", ["Livestock|AT_GROUP", "Wild animals|AT_WILD", "Pets only|AT_GROUP"], "Ducks are poultry."),
     Q("Mr Lekishon keeps cattle, goats and sheep. What are these animals called?", "Livestock", ["Poultry|AT_GROUP", "Wild animals|AT_WILD", "Insects|AT_GROUP"], "Cattle, goats and sheep are livestock."),
     Q("Some families keep camels and give them water. Are camels domestic animals?", "Yes, they are kept by people", ["No, they live wild|AT_WILD", "No, only cows are domestic|AT_FOUR", "No, they are poultry|AT_GROUP"], "Camels are domestic when people keep them.")
   ], { h: ["Who keeps the animal? Which group does it belong to?", "Livestock are cattle, goats and sheep. Poultry are birds."], s1: "Think about who keeps the animal." })),
   // ---------------------------------------------------------------- ANIMAL_USES
   fam("animal.use.which", `${AN}ANIMAL_USES`, "direct", 1, choose([
-    Q("Which animal gives us wool?", "A sheep", ["A goat|AU_MIX", "A cow|AU_MIX", "A hen|AU_MIX"], "Sheep give wool."),
+    Q("Which animal gives us wool?", "A sheep", ["A pig|AU_MIX", "A cow|AU_MIX", "A hen|AU_MIX"], "Sheep give wool."),
     Q("Which animal gives us eggs?", "A chicken", ["A cow|AU_MIX", "A goat|AU_MIX", "A sheep|AU_MIX"], "Chickens lay eggs."),
     Q("Which animal gives us milk, meat and hides?", "A cow", ["None, an animal gives only one thing|AU_ONE", "A hen|AU_MIX", "A bee|AU_MIX"], "A cow gives milk, meat and hides."),
     Q("Which animal is used to carry loads?", "A donkey", ["A hen|AU_WORK", "A rabbit|AU_WORK", "A duck|AU_WORK"], "Donkeys are strong and carry loads."),
@@ -2823,7 +2823,7 @@ var FAMILIES4 = [
     Q("Why do cooks and farmers wear an apron or overall?", "To keep dirt off their clothes and skin", ["To look smart for visitors|PI_FASHION", "To keep the sun away from the eyes|PI_MATCH", "To go to a party|PI_FASHION"], "An apron protects clothes and skin.")
   ], { h: ["Which body part does the item cover?", "Goggles: eyes. Gloves: hands. Gumboots: the whole foot. Mask: nose and mouth. Apron: body."], s1: "Think about which body part each item covers." })),
   fam("ppe.item.story", `${PP}PPE_ITEMS`, "word", 2, choose([
-    Q("Mama Rehema sprays the beans with medicine. What should she wear on her face?", "A mask", ["Goggles only|PI_MATCH", "Gloves only|PI_MATCH", "Perfume|PI_FASHION"], "A mask keeps the spray out of the nose and mouth."),
+    Q("Mama Rehema sprays the beans with medicine. What should she wear over her nose and mouth?", "A mask", ["Goggles only|PI_MATCH", "Gloves only|PI_MATCH", "Perfume|PI_FASHION"], "A mask keeps the spray out of the nose and mouth."),
     Q("Wafula goes to work in wet muddy ground. Which footwear should he wear?", "Gumboots", ["Open sandals|PI_SANDALS", "No shoes at all|PI_SANDALS", "Dress shoes|PI_SANDALS"], "Gumboots keep out mud, thorns and snakes."),
     Q("Brenda says protective clothing is just for looks. What is the best reply?", "It keeps dirt, germs and chemicals off the body", ["She is right, it is for looks|PI_FASHION", "It is for parties|PI_FASHION", "It is for hiding|PI_FASHION"], "Protective clothing protects the body."),
     Q("A boy cuts thorny hedge and needs to protect his hands. Which item should he wear?", "Gloves", ["Goggles|PI_MATCH", "A hat|PI_MATCH", "Gumboots|PI_MATCH"], "Gloves protect the hands from thorns."),
@@ -24802,9 +24802,9 @@ var FAMILIES36 = [
     rung: 2,
     gen: choose10([
       ["Which of these can spread from one person to another?", "A common cold", [["Asthma", "M_BS_ASTHMA_CATCHING"], ["Allergy to dust", "M_BS_ALLERGY_IS_INFECTION"], ["Allergy to pollen", "M_BS_ALLERGY_IS_INFECTION"]], "A cold is caused by a virus that spreads. Asthma and allergies do not spread."],
-      ["A child has asthma. Is it safe to sit next to her at school?", "Yes, asthma cannot be caught from another person", [["No, she may pass asthma on", "M_BS_ASTHMA_CATCHING"], ["No, asthma is a cold in the chest", "M_BS_ALL_SAME"], ["Only if she coughs near you", "M_BS_ASTHMA_CATCHING"]], "Asthma is not an infection, so it cannot be passed on."],
+      ["A child has asthma. Is it safe to sit next to her at school?", "Yes, asthma cannot be caught", [["No, she may pass asthma on", "M_BS_ASTHMA_CATCHING"], ["No, asthma is a cold in the chest", "M_BS_ALL_SAME"], ["Only if she coughs near you", "M_BS_ASTHMA_CATCHING"]], "Asthma is not an infection, so it cannot be passed on."],
       ["Which condition cannot be caught from another person?", "Allergy to dust", [["Common cold", "M_BS_ALL_SAME"], ["COVID-19", "M_BS_ALL_SAME"], ["A cough from a chest infection", "M_BS_ALL_SAME"]], "An allergy is the body reacting to something such as dust. It does not spread."],
-      ["Why can a common cold go round the whole class?", "It is caused by a virus that passes from person to person", [["It is an allergy that spreads", "M_BS_ALLERGY_IS_INFECTION"], ["It is asthma that spreads", "M_BS_ASTHMA_CATCHING"], ["All breathing problems spread", "M_BS_ALL_SAME"]], "A cold virus passes from person to person by coughs, sneezes and touch."],
+      ["Why can a common cold go round the whole class?", "A virus that passes between people", [["It is an allergy that spreads", "M_BS_ALLERGY_IS_INFECTION"], ["It is asthma that spreads", "M_BS_ASTHMA_CATCHING"], ["All breathing problems spread", "M_BS_ALL_SAME"]], "A cold virus passes from person to person by coughs, sneezes and touch."],
       ["Which of these is not the same kind of illness as the others?", "Asthma", [["A common cold", "M_BS_ALL_SAME"], ["COVID-19", "M_BS_ALL_SAME"], ["Flu", "M_BS_ALL_SAME"]], "Colds, flu and COVID-19 are caused by viruses and spread. Asthma does not spread."]
     ], { h: ["Think about which conditions are caused by germs and which are not.", "Asthma and allergies are not caused by germs."], s1: "Sort the conditions into those that spread and those that do not." })
   }),
@@ -39908,7 +39908,7 @@ var withZero = () => {
   let n;
   do {
     n = randInt(1, 9) * 1e4 + randInt(1, 9) * 100 + randInt(1, 9) * 10 + randInt(1, 9);
-  } while (new Set(String(n)).size < 4);
+  } while (new Set(String(n)).size < 5);
   return n;
 };
 var fiveDigits = () => {
@@ -40716,8 +40716,8 @@ var FAMILIES61 = [
       return {
         question: `A teacher has ${n} ${th} to share equally among ${d} learners. Each learner is given as many as possible, and the teacher keeps the rest. How many ${th} does the teacher keep?`,
         answer: r,
-        wrong: [[q, `${q} is how many full bags. The question asks how many are left over.`, "M_DIV_REMAINDER_AS_ANSWER"], [r + d, `A remainder must be smaller than ${d}. Another bag could be filled.`, "M_DIV_REMAINDER_TOO_BIG"], [d - r, `${d - r} more would fill another bag. The left over is what remains.`, "M_DIV_REMAINDER_IGNORED"], [n - d, `That is ${n} take away ${d}. Divide to find the full bags first.`, "M_DIV_REMAINDER_TOO_BIG"]],
-        hints: [`Divide ${n} by ${d} to find the full bags.`, "Multiply the full bags by the bag size and take that from the total."],
+        wrong: [[q, `${q} is how many each learner gets. The question asks how many are left over.`, "M_DIV_REMAINDER_AS_ANSWER"], [r + d, `A remainder must be smaller than ${d}. Another round could be handed out.`, "M_DIV_REMAINDER_TOO_BIG"], [d - r, `${d - r} more would give each learner one more. The left over is what remains.`, "M_DIV_REMAINDER_IGNORED"], [n - d, `That is ${n} take away ${d}. Divide to find how many each learner gets first.`, "M_DIV_REMAINDER_TOO_BIG"]],
+        hints: [`Divide ${n} by ${d} to find how many each learner gets.`, "Multiply what each learner gets by the number of learners and take that from the total."],
         steps: [`${n} divided by ${d} is ${q} with ${r} left over.`, `${r} ${th} are left over.`],
         chk: (x) => d * q + x === n && x < d
       };
@@ -40815,7 +40815,7 @@ var FAMILIES62 = [
       const options = mc5(`${k}/${n}`, [[`${k}/${n - k}`, "The whole is the whole group, not the ones without the property.", "M_FRAC_GROUP_PART_OVER_OTHER"], [`${n - k}/${n}`, `That is the fraction that are not ${prop}.`, "M_FRAC_GROUP_PART_OVER_OTHER"], [`${n}/${k}`, "The part goes on top and the whole group goes on the bottom.", "M_FRAC_SWAP_NUM_DEN"]]);
       if (!options || k === n - k) return null;
       return {
-        question: `There are ${n} ${what} in a pen and ${k} of them are ${prop}. What fraction of the ${what} are ${prop}?`,
+        question: `Out of ${n} ${what}, ${k} ${k === 1 ? "is" : "are"} ${prop}. What fraction of the ${what} are ${prop}?`,
         options,
         instruction: "Choose the fraction.",
         hints: ["The whole is all the animals or things in the group.", "Put the number with the property over the number in the whole group."],
@@ -40925,7 +40925,7 @@ var FAMILIES62 = [
       const options = mc5(right, [[asWhole, "The digits after the point are said one by one, not as one whole number.", "M_DEC_READ_AS_WHOLE"], [`${D8[t]} point ${D8[h]}`, `The decimal is less than one: it starts with nought.`, "M_DEC_FRACTION_AS_TWO_WHOLES"], [`nought point ${D8[h]} ${D8[t]}`, "Read the digits in the order they are written.", "M_DEC_READ_AS_WHOLE"]]);
       if (!options) return null;
       return {
-        question: `A scale shows ${person().name}'s weight as 0.${t}${h} kg on a toy. How is 0.${t}${h} read aloud?`,
+        question: `A scale shows the mass of a toy as 0.${t}${h} kg. How is 0.${t}${h} read aloud?`,
         options,
         instruction: "Choose how to say the number.",
         hints: ["Say nought, then point, then each digit after the point by itself.", "Do not say it as a whole number."],
@@ -40962,7 +40962,7 @@ var FAMILIES62 = [
     gen: () => {
       const w4 = randInt(1, 9), h = randInt(1, 9), pe = person();
       return {
-        question: `${pe.name} measures a pencil as ${w4}.0${h} dm. What is the value of the digit ${h} in ${w4}.0${h}?`,
+        question: `${pe.name} measures a leaf as ${w4}.0${h} cm. What is the value of the digit ${h} in ${w4}.0${h}?`,
         answer: h / 100,
         wrong: [[h / 10, `The zero holds the tenths place, so the ${h} is in the hundredths place.`, "M_DEC_ZERO_PLACE_HOLDER"], [h, `${h} is just the digit. Its value depends on its place.`, "M_DEC_VALUE_OF_DIGIT"], [h * 10, "The digit is after the point, so its value is less than one.", "M_DEC_PLACE_NAME_AS_WHOLE"]],
         hints: ["The zero is a place. It holds the tenths.", "The next place after it is hundredths."],
@@ -41137,7 +41137,7 @@ var FAMILIES63 = [
       const options = mc5(L7(m3, c2), [[`${total} m`, "A metre is bigger than a centimetre, so there are fewer metres than centimetres.", "M_CONV_DIRECTION"], [`${Math.floor(total / 10)} m ${total % 10} cm`, "100 cm make 1 m, not 10 cm.", "M_CONV_WRONG_FACTOR"], [`${m3} m ${c2 % 10} cm`, "The centimetres left over are the last two digits.", "M_CONV_ADD_DIGITS"]]);
       if (!options) return null;
       return {
-        question: `${person().name} measures the height of a door frame with a long tape and reads ${total} cm. The teacher asks for the height in metres and centimetres. Which answer is correct?`,
+        question: `${person().name} measures the height of the school flagpole with a long tape and reads ${total} cm. The teacher asks for the height in metres and centimetres. Which answer is correct?`,
         options,
         instruction: "Choose the correct length.",
         hints: ["100 cm make 1 m.", "How many whole hundreds are in the number? The rest are centimetres."],
@@ -41154,7 +41154,7 @@ var FAMILIES63 = [
     gen: () => {
       const l = randInt(6, 30), w4 = randInt(3, l - 1), pe = person();
       return {
-        question: `A school notice board is ${l} cm long and ${w4} cm wide. ${pe.name} sticks a strip of paper all the way round its edge. How long must the strip be?`,
+        question: `A greeting card is ${l} cm long and ${w4} cm wide. ${pe.name} sticks a strip of paper all the way round its edge. How long must the strip be?`,
         answer: 2 * (l + w4),
         wrong: [[l + w4, "That is only two sides. A rectangle has four sides.", "M_PER_TWO_SIDES_ONLY"], [l * w4, "That is the area. Go round the edge by adding all four sides.", "M_PER_AREA_NOT_PERIMETER"], [2 * l + w4, "The other long side is missing, or the second width. Add all four sides.", "M_PER_TWO_SIDES_ONLY"]],
         hints: ["Go round the edge: two lengths and two widths.", "Add all four sides."],
@@ -41169,7 +41169,7 @@ var FAMILIES63 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const s = randInt(4, 40), pe = person(), th = pick(["garden", "compound", "mat", "cloth"]);
+      const s = randInt(4, 40), pe = person(), th = pick(["garden", "compound", "plot", "playing field"]);
       return {
         question: `A square ${th} has sides of ${s} m. ${pe.name} walks once all the way round it. How many metres does ${pe.she} walk?`,
         answer: 4 * s,
@@ -41624,7 +41624,7 @@ var CAP2 = {
   s2: "HALF_QUARTER_LITRE",
   s3: "CAPACITY_ADD",
   s4: "CAPACITY_SUB",
-  mark: "water level",
+  mark: "liquid level",
   things: ["water", "milk", "cooking oil", "paraffin"],
   readQ: (pe, max, w4, th) => `A jug marked up to ${max} litres has ${th} in it. The ${th} level is at the ${w4} mark. How many litres of ${th} are in the jug?`,
   readWhy: "That is the biggest mark on the jug, not where the level is.",
@@ -41656,7 +41656,7 @@ var MAS = {
   readQ: (pe, max, w4, th) => `A scale goes up to ${max} kg. ${pe.name} puts ${th} on it and the pointer stops at ${w4}. What is the mass of the ${th} in kilograms?`,
   readWhy: "That is the biggest number on the scale, not where the pointer is.",
   readHint: "Look at where the pointer is, not at the biggest number.",
-  pairs: [{ big: "The stone", small: "The sponge", bigName: "the small stone", smallName: "the big sponge" }, { big: "The tin of paint", small: "The pillow", bigName: "the small tin of paint", smallName: "the big pillow" }, { big: "The iron bar", small: "The empty box", bigName: "the thin iron bar", smallName: "the large empty box" }],
+  pairs: [{ big: "The stone", small: "The bag of cotton wool", bigName: "the small stone", smallName: "the big bag of cotton wool" }, { big: "The tin of paint", small: "The bag of feathers", bigName: "the small tin of paint", smallName: "the big bag of feathers" }, { big: "The iron bar", small: "The empty box", bigName: "the thin iron bar", smallName: "the large empty box" }],
   cmpWhy: "A bigger object is not always heavier. Compare the kilograms.",
   cmpQ: (p, a, b) => `${p.smallName[0].toUpperCase() + p.smallName.slice(1)} has a mass of ${a} kg. ${p.bigName[0].toUpperCase() + p.bigName.slice(1)} has a mass of ${b} kg. Which is heavier?`,
   halfQ: (pe, k) => `${pe.name} packs ${k} kg of rice into half-kilogram bags. How many half-kilogram bags does ${pe.she} fill?`,
@@ -41723,9 +41723,16 @@ var FAMILIES65 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const e = pick(EVENTS), others = EVENTS.filter((x) => x !== e), o1 = pick(others), o2 = pick(others.filter((x) => x !== o1)), other = e[2] === "a.m." ? "p.m." : "a.m.";
-      const right = `${e[1]}:00 ${e[2]}`;
-      const options = mc5(right, [[`${e[1]}:00 ${other}`, "Think about the sun: is it morning or afternoon for this?", "M_TIME_AMPM_WRONG"], [`${o1[1]}:00 ${o1[2] === "a.m." ? "p.m." : "a.m."}`, "That is the wrong time of day for this.", "M_TIME_AMPM_WRONG"], [`${o2[1]}:00 ${o2[2] === "a.m." ? "p.m." : "a.m."}`, "That is the wrong time of day for this.", "M_TIME_AMPM_WRONG"]].filter((w4) => w4[0] !== right));
+      const e = pick(EVENTS), other = e[2] === "a.m." ? "p.m." : "a.m.";
+      const mins = (h, ap) => (h % 12 + (ap === "p.m." ? 12 : 0)) * 60, right = `${e[1]}:00 ${e[2]}`, tr = mins(e[1], e[2]);
+      const flip = (x) => `${x[1]}:00 ${x[2] === "a.m." ? "p.m." : "a.m."}`;
+      const far = EVENTS.filter((x) => x !== e).filter((x) => {
+        const t = mins(x[1], x[2] === "a.m." ? "p.m." : "a.m."), dd = Math.abs(t - tr);
+        return Math.min(dd, 1440 - dd) >= 240;
+      });
+      const picked = shuffle7(far).slice(0, 2);
+      if (picked.length < 2) return null;
+      const options = mc5(right, [[`${e[1]}:00 ${other}`, "Think about the sun: is it morning or afternoon for this?", "M_TIME_AMPM_WRONG"], ...picked.map((x) => [flip(x), "That is the wrong time of day for this.", "M_TIME_AMPM_WRONG"])].filter((w4) => w4[0] !== right));
       if (!options) return null;
       return {
         question: `${person().name} wants to ${e[0]}. Which time is the most sensible for this?`,
@@ -41745,7 +41752,7 @@ var FAMILIES65 = [
       const sets = [["9:00 a.m.", "12:00 noon", "4:00 p.m."], ["8:00 a.m.", "12:00 noon", "5:00 p.m."], ["10:00 a.m.", "12:00 noon", "3:00 p.m."], ["7:00 a.m.", "12:00 noon", "5:00 p.m."]], s = pick(sets), obj = pick(["tree", "flagpole", "school building", "goal post", "water tank"]), pe = person();
       const options = mc5("12:00 noon", [[s[0], "The sun is lower in the morning, so shadows are long.", "M_TIME_SHADOW_DIRECTION"], [s[2], "The sun is lower in the late afternoon, so shadows are long.", "M_TIME_SHADOW_DIRECTION"], ["The shadow stays the same length all day.", "The sun moves across the sky, so the shadow changes.", "M_TIME_SHADOW_DIRECTION"]]);
       return {
-        question: `${pe.name} measures the shadow of a ${obj} at ${s[0]}, ${s[1]} and ${s[2]}. At which time is the shadow shortest?`,
+        question: `${pe.name} measures the shadow of a ${obj} at ${s[0]}, ${s[1]} and ${s[2]}. At which time is the shadow shortest?`.replace("..", "."),
         options,
         instruction: "Choose the time.",
         hints: ["The shadow is shortest when the sun is highest in the sky.", "When is the sun highest?"],
@@ -41760,7 +41767,7 @@ var FAMILIES65 = [
     form: "word",
     rung: 1,
     gen: () => {
-      const k = randInt(2, 9), pe = person(), th = pick(["film", "journey by bus", "football match", "church service", "trip to the market"]);
+      const k = randInt(2, 9), pe = person(), th = pick(["journey by bus", "school trip", "journey to Mombasa", "journey to Kisumu"]);
       return {
         question: `The ${th} that ${pe.name} goes to takes ${k} hours. How many minutes is that?`,
         answer: 60 * k,
@@ -41833,15 +41840,16 @@ var FAMILIES65 = [
     rung: 1,
     gen: () => {
       const sh1 = randInt(8, 10), sm = pick([0, 15, 30]), dh = randInt(1, 2), dm = pick([15, 30, 45]), eh = sh1 + dh + Math.floor((sm + dm) / 60), em = (sm + dm) % 60, pe = person();
+      const endH = eh > 12 ? eh - 12 : eh, endAp = eh >= 12 ? "p.m." : "a.m.";
       const dd = eh - sh1 - (em < sm ? 1 : 0), mm = (em - sm + 60) % 60;
-      const options = mc5(HM(dd, mm), [[`${eh}:${pad(em)} a.m.`, "That is when it ends. The question asks how long it lasts.", "M_TIME_DURATION_END_TIME"], [`${dd}.${pad(mm)} hours`, "Hours and minutes are not a decimal. Write the hours and the minutes.", "M_TIME_DURATION_WRONG_UNITS"], [HM(dd + 1, mm), "Count the hours again from the start time to the finish time.", "M_TIME_DURATION_WRONG_UNITS"]]);
+      const options = mc5(HM(dd, mm), [[`${endH}:${pad(em)} ${endAp}`, "That is when it ends. The question asks how long it lasts.", "M_TIME_DURATION_END_TIME"], [`${dd}.${pad(mm)} hours`, "Hours and minutes are not a decimal. Write the hours and the minutes.", "M_TIME_DURATION_WRONG_UNITS"], [HM(dd + 1, mm), "Count the hours again from the start time to the finish time.", "M_TIME_DURATION_WRONG_UNITS"]]);
       if (!options || mm === 0) return null;
       return {
-        question: `A lesson starts at ${sh1}:${pad(sm)} a.m. and ends at ${eh}:${pad(em)} a.m. How long does the lesson last?`,
+        question: `A lesson starts at ${sh1}:${pad(sm)} a.m. and ends at ${endH}:${pad(em)} ${endAp} How long does the lesson last?`,
         options,
         instruction: "Choose the duration.",
         hints: ["Duration is how long, not when it ends.", "Count the hours and then the minutes from the start to the end."],
-        steps: [`From ${sh1}:${pad(sm)} to ${eh}:${pad(em)}.`, `The lesson lasts ${HM(dd, mm)}.`]
+        steps: [`From ${sh1}:${pad(sm)} to ${endH}:${pad(em)}.`, `The lesson lasts ${HM(dd, mm)}.`]
       };
     }
   }),
@@ -41851,7 +41859,7 @@ var FAMILIES65 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const h = randInt(1, 4), m3 = pick([10, 15, 20, 30, 40, 45]), pe = person(), th = pick(["film", "football match", "church service", "maths exam"]);
+      const h = randInt(1, 4), m3 = pick([10, 15, 20, 30, 40, 45]), pe = person(), th = pick(["film", "journey by matatu", "church service", "visit to the clinic"]);
       return {
         question: `A ${th} lasts ${HM(h, m3)}. For how many minutes does it last?`,
         answer: h * 60 + m3,
@@ -42135,7 +42143,7 @@ var FAMILIES66 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const o = pick([["the top of a round plate", "circle"], ["an egg drawn flat", "oval"], ["a slice of bread cut square", "square"], ["a door of a cupboard", "rectangle"], ["a flag flown from a pole", "triangle"], ["a road sign with three sides", "triangle"], ["a wall tile with four equal sides", "square"], ["a football pitch from above", "rectangle"]]), pe = person();
+      const o = pick([["the top of a round plate", "circle"], ["an egg drawn flat", "oval"], ["a slice of bread cut square", "square"], ["a door of a cupboard", "rectangle"], ["a triangular pennant on a bicycle", "triangle"], ["a road sign with three sides", "triangle"], ["a wall tile with four equal sides", "square"], ["a football pitch from above", "rectangle"]]), pe = person();
       const names = ["circle", "oval", "square", "rectangle", "triangle"].filter((n) => n !== o[1]);
       const options = mc5(o[1], (o[1] === "circle" ? ["oval", "square", "triangle"] : o[1] === "oval" ? ["circle", "square", "triangle"] : shuffle7(names).slice(0, 3)).map((n) => [n, n === "oval" || n === "circle" ? "A circle is the same width all the way round; an oval is longer one way." : "Count the sides and the corners to check.", "M_SHAPE_OVAL_CIRCLE"]));
       return {
@@ -42225,7 +42233,7 @@ var FAMILIES66 = [
     gen: () => {
       const g = randInt(1, 4), r = randInt(1, 4), n = g * 5 + r, pe = person(), th = pick(["learners wearing red", "cars that pass the school gate", "goals scored in a match", "books borrowed"]);
       return {
-        question: `${pe.name} records ${th} with tally marks. The tally shows ${g} bundles of five (four lines with a line across) and ${r} more single lines. How many are recorded?`,
+        question: `${pe.name} records ${th} with tally marks. The tally shows ${g} ${g === 1 ? "bundle" : "bundles"} of five (four lines with a line across) and ${r} more single lines. How many are recorded?`,
         answer: n,
         wrong: [[g * 4 + r, "A crossed bundle counts as five, not four.", "M_DATA_TALLY_ONES"], [g + r, "Each bundle is worth five, so multiply the bundles by 5.", "M_DATA_TALLY_ONES"], [g * 5, "The single lines are missing.", "M_DATA_TALLY_ONES"], [g * 5 + r + 1, "Count the single lines again.", "M_DATA_TALLY_ONES"]],
         hints: ["Each crossed bundle is 5.", "Count in fives, then add the single lines."],
@@ -53333,7 +53341,7 @@ var FAMILIES74 = [
     form: "direct",
     rung: 1,
     gen: () => {
-      const A5 = shuffle8(["the top of a postage stamp", "the cover of an exercise book", "the screen of a phone"]), B4 = shuffle8(["the length of a pencil", "the height of a door", "the mass of a mango", "the water in a cup"]);
+      const A5 = shuffle8(["the top of a postage stamp", "a book cover", "the screen of a phone"]), B4 = shuffle8(["the length of a pencil", "the height of a door", "the mass of a mango", "the water in a cup"]);
       const options = mc6(A5[0], B4.slice(0, 3).map((b) => [b, b.includes("mass") ? "Mass is measured in grammes, not cm\xB2." : b.includes("water") ? "Water in a cup is capacity, measured in ml." : "A length is measured in cm or m, not cm\xB2.", "M_CM2_FOR_LENGTH"]));
       return {
         question: `${person().name} wants to measure something in square centimetres. Which would ${"they"} measure in cm\xB2?`,

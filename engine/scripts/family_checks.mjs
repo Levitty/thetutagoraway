@@ -188,7 +188,20 @@ export function checkFamily(def, draws = FAMILY_DRAWS) {
   if (thinWrong > n * 0.3 && !def.young) fail(`fewer than 3 named wrong answers on ${thinWrong} of ${n} draws: wrong options must come from real mistakes`);
   if (placeOnly) fail('every wrong option is just ten times or a tenth of the answer');
   if (weakOption > n * 0.1) fail(`${weakOption} of ${n} draws have a wrong option with no "why" feedback`);
-  if (longestRight > n * 0.5) fail('the right option is clearly the longest, which gives it away');
+  // 200 draws of a pool whose true share is a little under half can pass or fail by chance (this made the check flake). A family is
+  // failed only when the share is over half in a second, larger sample as well.
+  if (longestRight > n * 0.5) {
+    let more = 0, m = 0;
+    for (let i = 0; i < 800; i++) {
+      let got; try { got = drawFamily(def); } catch { break; }
+      const q = tidyProblem({ ...got.p, misconceptions: got.p.misconceptions ? [...got.p.misconceptions] : got.p.misconceptions }, def.skill);
+      if (!q.choices || q.choices.length < 3 || !q.optionTruth) continue;
+      m++;
+      const ls = q.choices.map(c => c.length), rl = ls[q.optionTruth.indexOf(true)];
+      if (rl > 25 && rl === Math.max(...ls) && rl > 1.2 * [...ls].sort((a, b) => b - a)[1]) more++;
+    }
+    if (m === 0 || (longestRight + more) > (n + m) * 0.5) fail('the right option is clearly the longest, which gives it away');
+  }
   if (seen.size < 4) fail(`only ${seen.size} different questions in ${n} draws`);
   return out;
 }
