@@ -1,0 +1,205 @@
+{
+ "outcomes": {
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.a": "explain the relationship between an atom, an element, a molecule and a compound",
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.b": "assign symbols to selected elements",
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.c": "write word equations to represent reactions of selected elements to form compounds",
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.d": "outline the applications of common elements in the society",
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.e": "appreciate the information on packaging labels of commonly consumed substances",
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.a": "describe the characteristics of particles in the three states of matter",
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.b": "explain the effects of impurities on boiling point and melting point of a substance",
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.c": "distinguish between physical and chemical changes in substances",
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.d": "outline applications of change of state of matter in day-to-day life",
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.e": "appreciate the applications of change of state of matter in day-to-day life",
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.a": "identify causes of fire in nature",
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.b": "explain the role of the components of fire triangle in the spread of fire",
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.c": "describe ways of controlling different classes of fires",
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.d": "acknowledge the dangers of fires in nature",
+  "INTE.G8.LIVING.THE_CELL.a": "describe the structure of plant and animal cells as observed under a light microscope",
+  "INTE.G8.LIVING.THE_CELL.b": "describe the functions of components of cells seen under the light microscope",
+  "INTE.G8.LIVING.THE_CELL.c": "compare plant and animal cells as observed under a light microscope",
+  "INTE.G8.LIVING.THE_CELL.d": "determine the magnification of cells under the light microscope",
+  "INTE.G8.LIVING.THE_CELL.e": "appreciate the role of cells in living things",
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.a": "outline the process of diffusion and osmosis in cells",
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.b": "demonstrate diffusion and osmosis in living things",
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.c": "explain the role of diffusion and osmosis in living things",
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.d": "appreciate the importance of diffusion and osmosis in living things",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.a": "outline the menstrual cycle and its related challenges in human beings",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b": "develop a plan to manage challenges related to menstrual cycle in human beings",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.c": "describe fertilisation and implantation in human beings",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.d": "outline symptoms of STIs in human beings",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.e": "explain prevention measures for common STIs in human beings",
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.f": "appreciate the need for a healthy reproductive system",
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.a": "identify forms of energy in nature",
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.b": "classify energy sources into renewable or non-renewable",
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.c": "demonstrate simple energy transformations in nature",
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.d": "describe safety measures associated with energy transformation",
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.e": "appreciate the applications of energy transformation in day-to- day life",
+  "INTE.G8.FORCE_.PRESSURE.a": "demonstrate pressure in solids and liquids",
+  "INTE.G8.FORCE_.PRESSURE.b": "identify applications of pressure in solids and liquids",
+  "INTE.G8.FORCE_.PRESSURE.c": "appreciate the applications of pressure in solids and liquids"
+ },
+ "skills": {
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT": {
+   "forms": [
+    "pick the word from its description",
+    "say what a compound is made of",
+    "sort substances into elements and compounds",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an atom is the smallest particle of an element, an element is made of one kind of atom (oxygen, iron), a molecule is two or more atoms joined (water, oxygen gas) and a compound is made of different elements joined chemically (water, salt). The child does not say a compound is a mixture or an atom is a molecule. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS": {
+   "forms": [
+    "pick the symbol of an element",
+    "pick the element of a symbol",
+    "say how a symbol is written",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child gives the symbols H (hydrogen), O (oxygen), C (carbon), N (nitrogen), S (sulphur), Na (sodium), K (potassium), Ca (calcium), Mg (magnesium), Fe (iron), Cu (copper), Zn (zinc), Al (aluminium), Cl (chlorine), Ag (silver) and Au (gold), writes a capital first letter and a small second letter, and does not give the first letter of the name for iron, sodium or potassium. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS": {
+   "forms": [
+    "pick the word equation",
+    "name the product",
+    "put the reactants and product in order",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child writes a word equation with the reactants first, an arrow and the product (magnesium + oxygen gives magnesium oxide; iron + sulphur gives iron sulphide; hydrogen + oxygen gives water; carbon + oxygen gives carbon dioxide; sodium + chlorine gives sodium chloride), names the compound from the elements (an oxide from oxygen, a sulphide from sulphur, a chloride from chlorine), and does not put the product first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES": {
+   "forms": [
+    "pick the use of an element",
+    "pick the element for a use",
+    "say what a label tells",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says copper is used for electric wires, iron for tools and nails, aluminium for cooking pots and foil, carbon for charcoal and pencils, nitrogen in fertilisers, chlorine to make water safe and oxygen for breathing, and that a packaging label tells the contents, the amounts and the dates to use it by. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES": {
+   "forms": [
+    "pick the particle picture of a state",
+    "say how close the particles are",
+    "say how the particles move",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the particles of a solid are close together in fixed places and only vibrate, the particles of a liquid are close but slide past each other, and the particles of a gas are far apart and move freely in all directions, and does not say solid particles do not move. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES": {
+   "forms": [
+    "say what pure water does",
+    "say what salt does to the boiling point",
+    "say what an impurity does to the melting point",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a pure substance melts and boils at fixed temperatures (pure water melts at 0 degrees Celsius and boils at 100), that impurities raise the boiling point and lower the melting point (salty water boils above 100 degrees and freezes below 0), and does not say impurities lower the boiling point. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES": {
+   "forms": [
+    "sort a change",
+    "say what a new substance shows",
+    "pick a use of a change of state",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a physical change makes no new substance and can usually be reversed (melting ice, dissolving sugar, boiling water), a chemical change makes a new substance and is usually not reversible (burning wood, rusting iron, cooking an egg, milk going sour), and does not call burning physical or melting chemical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE": {
+   "forms": [
+    "name the parts of the fire triangle",
+    "say which part to remove",
+    "pick a cause of fire in nature",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a fire needs heat, fuel and oxygen, that taking away any one puts the fire out (cooling with water removes heat, a blanket removes oxygen, clearing dry grass removes fuel), names natural causes (lightning, volcanic eruptions, dry grass lit by the hot sun) and does not say fire needs only heat and fuel. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES": {
+   "forms": [
+    "pick what puts out a wood fire",
+    "pick what to use on an oil fire",
+    "say what to do about an electrical fire",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says water suits a fire of wood, paper or cloth, that an oil or petrol fire is smothered with sand, a blanket or foam and never put out with water, that an electrical fire needs the power switched off and a dry powder or carbon dioxide extinguisher and never water, and that the first step is to raise the alarm and keep safe. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.THE_CELL.CELL_PARTS": {
+   "forms": [
+    "pick the part from its job",
+    "pick the part only plant cells have",
+    "compare plant and animal cells",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says both cells have a cell membrane (controls what enters and leaves), cytoplasm (where reactions happen) and a nucleus (controls the cell), and that plant cells also have a cell wall (supports the cell), chloroplasts (make food with light) and a large vacuole (stores sap), and does not give an animal cell a cell wall or a chloroplast. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.THE_CELL.MAGNIFICATION": {
+   "forms": [
+    "calculate the total magnification",
+    "say what the eyepiece and objective do",
+    "pick the units",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child multiplies the magnification of the eyepiece and the objective lens (10 times 40 gives 400 times), says each lens magnifies and the total is the product, and does not add the two numbers or use only the objective. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS": {
+   "forms": [
+    "pick the process from a description",
+    "say which way particles move",
+    "say what diffusion or osmosis does in a living thing",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says diffusion is the spreading of particles from where there are many to where there are few until they are even, osmosis is the movement of water through a thin membrane from a weak solution to a stronger one, gives examples (the smell of cooking, the uptake of water by root hairs, oxygen entering blood), and says neither needs energy from the cell. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL": {
+   "forms": [
+    "say how long the cycle is",
+    "say when an egg is released",
+    "pick a healthy way to manage cramps or bleeding",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the cycle is about 28 days, the bleeding (menstruation) lasts about three to seven days, an egg is released about the middle of the cycle (ovulation), the cycle is normal and not an illness, and picks healthy ways to cope (clean pads or cloths changed often, bathing, rest, warm drinks, talking to a trusted adult and seeing a health worker for severe pain). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION": {
+   "forms": [
+    "put the events in order",
+    "say where fertilisation happens",
+    "say what the zygote is",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says fertilisation is a sperm joining an egg in the oviduct to make a zygote, the zygote divides as it travels to the uterus, and implantation is the embryo attaching to the wall of the uterus, and puts the events in that order. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS": {
+   "forms": [
+    "pick a symptom of an STI",
+    "pick a way an STI is NOT spread",
+    "pick a prevention measure",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names STIs (HIV, syphilis, gonorrhoea, chlamydia), symptoms (unusual discharge, pain when passing urine, sores, itching), knows they are not spread by hugging, shaking hands or toilet seats, and picks prevention (abstinence, faithfulness to one uninfected partner, not sharing needles or razors, testing and treatment, going to a health worker). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES": {
+   "forms": [
+    "pick the form of energy",
+    "sort a source",
+    "pick a Kenyan source",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names forms (kinetic, potential, heat, light, sound, electrical, chemical), sorts renewable sources (the sun, wind, flowing water, geothermal, biogas) from non-renewable ones (coal, petroleum, natural gas), and knows Kenya uses geothermal (Olkaria), hydro and wind (Lake Turkana) power. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM": {
+   "forms": [
+    "name the transformation",
+    "pick what a device changes energy into",
+    "pick the safety measure",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says energy changes form and is never created or used up (an electric kettle changes electrical energy to heat, a solar panel light to electrical, a lamp electrical to light, falling water potential to kinetic to electrical, a burning match chemical to heat and light) and picks safety measures (do not touch bare wires, keep flammable things away from heat, ask an adult). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "INTE.G8.FORCE_.PRESSURE.PRESSURE": {
+   "forms": [
+    "pick the way to increase pressure",
+    "calculate the pressure from the force and the area",
+    "say how liquid pressure changes with depth",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says pressure is the force on each unit of area, so the same force on a smaller area makes a bigger pressure (a sharp knife, a nail) and on a larger area a smaller pressure (wide tyres, snow shoes), calculates pressure as force divided by area, and says liquid pressure grows with depth (a dam wall is thicker at the bottom). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

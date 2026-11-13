@@ -1,0 +1,812 @@
+{
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_ATOM_MOLECULE": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT",
+  "error": "Says an atom and a molecule are the same.",
+  "example": {
+   "question": "What is a molecule?",
+   "wrong_answer": "The smallest particle of an element",
+   "correct_answer": "Two or more atoms joined together"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"The smallest particle of an element\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Build an oxygen molecule from two balls.",
+  "feedback": "An atom is one particle. A molecule is two or more atoms joined.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_ELEMENT_COMPOUND": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT",
+  "error": "Says a compound is made of one kind of atom.",
+  "example": {
+   "question": "What is a compound?",
+   "wrong_answer": "A substance made of one kind of atom",
+   "correct_answer": "A substance made of different elements joined chemically"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"A substance made of one kind of atom\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Compare iron (one kind) and water (hydrogen and oxygen).",
+  "feedback": "An element has one kind of atom. A compound has different elements joined.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT.M_G8_AE_MIXTURE": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ATOM_ELEMENT",
+  "error": "Says a compound is the same as a mixture.",
+  "example": {
+   "question": "How is a compound different from a mixture?",
+   "wrong_answer": "It is not different",
+   "correct_answer": "Its elements are joined chemically and cannot be separated easily"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"It is not different\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Try to separate iron filings from sand and then iron from iron sulphide.",
+  "feedback": "The elements in a compound are joined chemically. In a mixture they are only mixed.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_FIRST_LETTER": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS",
+  "error": "Gives the first letter of the name for every element (I for iron, S for sodium).",
+  "example": {
+   "question": "What is the symbol for iron?",
+   "wrong_answer": "I",
+   "correct_answer": "Fe"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"I\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Some symbols come from old Latin names: ferrum for iron, natrium for sodium.",
+  "feedback": "Not every symbol is the first letter. Iron is Fe, sodium is Na and potassium is K.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS.M_G8_SY_NAME": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.SYMBOLS",
+  "error": "Gives the wrong element for a symbol.",
+  "example": {
+   "question": "Which element has the symbol K?",
+   "wrong_answer": "Calcium",
+   "correct_answer": "Potassium"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Calcium\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Make a card for each symbol and its name.",
+  "feedback": "K is potassium. Calcium is Ca.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_ORDER": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS",
+  "error": "Puts the product first.",
+  "example": {
+   "question": "Which word equation is correct?",
+   "wrong_answer": "magnesium oxide gives magnesium + oxygen",
+   "correct_answer": "magnesium + oxygen gives magnesium oxide"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"magnesium oxide gives magnesium + oxygen\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Read the equation from the left: what we start with.",
+  "feedback": "The reactants come first, then an arrow, then the product.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_NAME": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS",
+  "error": "Gives the wrong name to the compound (iron sulphate for iron sulphide).",
+  "example": {
+   "question": "What is made when iron reacts with sulphur?",
+   "wrong_answer": "Iron sulphate",
+   "correct_answer": "Iron sulphide"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Iron sulphate\" next to the right answer in a new question and ask the child to choose.",
+  "help": "A compound of two elements ends in -ide.",
+  "feedback": "A compound of two elements has the ending -ide: iron sulphide, magnesium oxide, sodium chloride.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS.M_G8_WE_LOST": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.WORD_EQUATIONS",
+  "error": "Says the mass or the elements disappear in a reaction.",
+  "example": {
+   "question": "What happens to the atoms in a reaction?",
+   "wrong_answer": "They disappear",
+   "correct_answer": "They rearrange to make new substances"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"They disappear\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Weigh steel wool before and after it rusts.",
+  "feedback": "Atoms are not lost. They join in new ways to make new substances.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_WRONG_USE": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES",
+  "error": "Gives the wrong use for an element.",
+  "example": {
+   "question": "Which element is used for electric wires?",
+   "wrong_answer": "Aluminium foil",
+   "correct_answer": "Copper"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Aluminium foil\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Match each element to an object at home.",
+  "feedback": "Copper is used for electric wires because it carries electricity well.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_LABEL": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES",
+  "error": "Says packaging labels are only for decoration.",
+  "example": {
+   "question": "What does a packaging label tell you?",
+   "wrong_answer": "Nothing useful",
+   "correct_answer": "The contents, amounts and the date to use it by"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Nothing useful\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Read a label together.",
+  "feedback": "Labels give contents, amounts, dates and safety information.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES.M_G8_EU_COMPOUND_ELEMENT": {
+  "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.ELEMENT_USES",
+  "error": "Calls a compound such as water or salt an element.",
+  "example": {
+   "question": "Which of these is an element?",
+   "wrong_answer": "Water",
+   "correct_answer": "Oxygen"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Water\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what water is made of.",
+  "feedback": "Water is a compound of hydrogen and oxygen. Oxygen is an element.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_SOLID_STILL": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES",
+  "error": "Says the particles of a solid do not move at all.",
+  "example": {
+   "question": "How do the particles of a solid move?",
+   "wrong_answer": "They do not move at all",
+   "correct_answer": "They vibrate in fixed places"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"They do not move at all\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Think of people standing in a queue who shake in place.",
+  "feedback": "Solid particles vibrate in fixed places. They do not move around.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_GAS_CLOSE": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES",
+  "error": "Says the particles of a gas are close together.",
+  "example": {
+   "question": "How far apart are the particles of a gas?",
+   "wrong_answer": "Close together",
+   "correct_answer": "Far apart"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Close together\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Think of why a gas can be squeezed.",
+  "feedback": "Gas particles are far apart and move freely.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES.M_G8_ST_LIQUID_FIXED": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.STATES_PARTICLES",
+  "error": "Says the particles of a liquid are fixed in place.",
+  "example": {
+   "question": "How do the particles of a liquid move?",
+   "wrong_answer": "They stay in fixed places",
+   "correct_answer": "They slide past one another"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"They stay in fixed places\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Think of why a liquid takes the shape of its container.",
+  "feedback": "Liquid particles are close but slide past each other.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_LOWER_BOIL": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES",
+  "error": "Says impurities lower the boiling point.",
+  "example": {
+   "question": "What does salt do to the boiling point of water?",
+   "wrong_answer": "It lowers it",
+   "correct_answer": "It raises it"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"It lowers it\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Boil pure water and salty water and compare the temperature.",
+  "feedback": "Impurities raise the boiling point.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_RAISE_MELT": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES",
+  "error": "Says impurities raise the melting point.",
+  "example": {
+   "question": "What does an impurity do to the melting point of ice?",
+   "wrong_answer": "It raises it",
+   "correct_answer": "It lowers it"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"It raises it\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Salt on icy roads helps ice to melt.",
+  "feedback": "Impurities lower the melting point, so salty water freezes below 0 degrees.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES.M_G8_IM_NO_EFFECT": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.IMPURITIES",
+  "error": "Says impurities have no effect.",
+  "example": {
+   "question": "Does salt change how water boils?",
+   "wrong_answer": "No effect at all",
+   "correct_answer": "Yes, it boils at a higher temperature"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"No effect at all\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Measure the temperatures.",
+  "feedback": "Impurities change the boiling and melting points.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_MELT_CHEMICAL": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES",
+  "error": "Calls melting a chemical change.",
+  "example": {
+   "question": "Is melting ice a physical or chemical change?",
+   "wrong_answer": "Chemical",
+   "correct_answer": "Physical"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Chemical\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask whether a new substance is made.",
+  "feedback": "Melting makes no new substance, so it is physical.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_BURN_PHYSICAL": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES",
+  "error": "Calls burning a physical change.",
+  "example": {
+   "question": "Is burning wood a physical or chemical change?",
+   "wrong_answer": "Physical",
+   "correct_answer": "Chemical"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Physical\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask whether the ash can turn back into wood.",
+  "feedback": "Burning makes new substances and cannot be reversed, so it is chemical.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES.M_G8_CH_NEW": {
+  "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.CHANGES",
+  "error": "Says a physical change makes a new substance.",
+  "example": {
+   "question": "What does a chemical change make?",
+   "wrong_answer": "No new substance",
+   "correct_answer": "A new substance"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"No new substance\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Compare dissolving sugar and burning sugar.",
+  "feedback": "A chemical change makes a new substance.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_TWO_PARTS": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE",
+  "error": "Says a fire needs only heat and fuel.",
+  "example": {
+   "question": "What three things does a fire need?",
+   "wrong_answer": "Heat and fuel only",
+   "correct_answer": "Heat, fuel and oxygen"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Heat and fuel only\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Cover a burning candle with a jar.",
+  "feedback": "A fire needs heat, fuel and oxygen. Remove one and it goes out.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_WATER_ALL": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE",
+  "error": "Says water puts out every fire.",
+  "example": {
+   "question": "Which fire is NOT put out with water?",
+   "wrong_answer": "A wood fire",
+   "correct_answer": "An oil fire"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"A wood fire\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask why oil floats and spreads on water.",
+  "feedback": "Water spreads an oil fire. It is not used on oil or electrical fires.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE.M_G8_FT_CAUSE": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_TRIANGLE",
+  "error": "Names a cause that is not a natural cause of fire.",
+  "example": {
+   "question": "Which is a natural cause of fire?",
+   "wrong_answer": "A lit match",
+   "correct_answer": "Lightning"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"A lit match\" next to the right answer in a new question and ask the child to choose.",
+  "help": "List natural and human causes.",
+  "feedback": "Lightning, volcanoes and the hot sun on dry grass are natural causes.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_WATER_OIL": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES",
+  "error": "Uses water on an oil fire.",
+  "example": {
+   "question": "What should you use on a cooking oil fire?",
+   "wrong_answer": "Water",
+   "correct_answer": "A damp cloth or a lid to cut off the air"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Water\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what water does to hot oil.",
+  "feedback": "Water makes an oil fire spread. Smother it.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_WATER_ELEC": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES",
+  "error": "Uses water on an electrical fire.",
+  "example": {
+   "question": "What should you do first in an electrical fire?",
+   "wrong_answer": "Pour water on it",
+   "correct_answer": "Switch off the power"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Pour water on it\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask why water and electricity are dangerous together.",
+  "feedback": "Switch off the power first. Never use water on an electrical fire.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES.M_G8_FC_ALARM": {
+  "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.FIRE_CLASSES",
+  "error": "Tries to fight a large fire alone.",
+  "example": {
+   "question": "A fire is spreading fast. What should a child do?",
+   "wrong_answer": "Fight it alone with water",
+   "correct_answer": "Raise the alarm and get out safely"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Fight it alone with water\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Practise the fire drill.",
+  "feedback": "Raise the alarm and leave safely. Only small fires are fought, by adults.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_WALL_ANIMAL": {
+  "skill": "INTE.G8.LIVING.THE_CELL.CELL_PARTS",
+  "error": "Gives an animal cell a cell wall.",
+  "example": {
+   "question": "Which cell has a cell wall?",
+   "wrong_answer": "An animal cell",
+   "correct_answer": "A plant cell"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"An animal cell\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Look at pictures of both cells.",
+  "feedback": "Only plant cells have a cell wall.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_NUCLEUS": {
+  "skill": "INTE.G8.LIVING.THE_CELL.CELL_PARTS",
+  "error": "Says the nucleus makes food.",
+  "example": {
+   "question": "What does the nucleus do?",
+   "wrong_answer": "Makes food",
+   "correct_answer": "Controls the cell"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Makes food\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Link the nucleus with the control centre.",
+  "feedback": "The nucleus controls the cell. Chloroplasts make food.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_CHLORO": {
+  "skill": "INTE.G8.LIVING.THE_CELL.CELL_PARTS",
+  "error": "Puts chloroplasts in animal cells.",
+  "example": {
+   "question": "Which cell has chloroplasts?",
+   "wrong_answer": "An animal cell",
+   "correct_answer": "A plant leaf cell"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"An animal cell\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask which living things make their own food.",
+  "feedback": "Chloroplasts are found in plant cells.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.CELL_PARTS.M_G8_CP_MEMBRANE": {
+  "skill": "INTE.G8.LIVING.THE_CELL.CELL_PARTS",
+  "error": "Says the cell membrane only gives the cell its shape.",
+  "example": {
+   "question": "What does the cell membrane do?",
+   "wrong_answer": "Gives the cell its shape only",
+   "correct_answer": "Controls what enters and leaves the cell"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Gives the cell its shape only\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Think of a gate that lets some things in.",
+  "feedback": "The membrane controls what enters and leaves the cell.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_ADD": {
+  "skill": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION",
+  "error": "Adds the eyepiece and the objective magnifications.",
+  "example": {
+   "question": "The eyepiece is 10 times and the objective is 40 times. What is the total magnification?",
+   "wrong_answer": "50 times",
+   "correct_answer": "400 times"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"50 times\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Look at each lens: the second lens magnifies the image of the first.",
+  "feedback": "Multiply the two: 10 times 40 is 400.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_ONE": {
+  "skill": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION",
+  "error": "Uses only the objective lens.",
+  "example": {
+   "question": "The eyepiece is 10 times and the objective is 10 times. What is the total magnification?",
+   "wrong_answer": "10 times",
+   "correct_answer": "100 times"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"10 times\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what the eyepiece does.",
+  "feedback": "Both lenses magnify, so multiply: 10 times 10 is 100.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.THE_CELL.MAGNIFICATION.M_G8_MG_FOUR": {
+  "skill": "INTE.G8.LIVING.THE_CELL.MAGNIFICATION",
+  "error": "Gets the multiplication wrong.",
+  "example": {
+   "question": "What is 10 times 40?",
+   "wrong_answer": "40",
+   "correct_answer": "400"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"40\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Add a zero.",
+  "feedback": "10 times 40 is 400.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_UP_GRADIENT": {
+  "skill": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS",
+  "error": "Says particles move from where they are few to where they are many.",
+  "example": {
+   "question": "In diffusion, particles move from...",
+   "wrong_answer": "Few to many",
+   "correct_answer": "Many to few"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Few to many\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Open a bottle of perfume at the front of a room.",
+  "feedback": "Particles spread from where there are many to where there are few.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_OSMOSIS_SOLUTE": {
+  "skill": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS",
+  "error": "Says osmosis is the movement of solutes.",
+  "example": {
+   "question": "What moves in osmosis?",
+   "wrong_answer": "Dissolved salt",
+   "correct_answer": "Water"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Dissolved salt\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Soak a raisin and a dry bean.",
+  "feedback": "Osmosis is the movement of water through a membrane.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS.M_G8_DO_ENERGY": {
+  "skill": "INTE.G8.LIVING.MOVEMENT_OF_MATERIALS_IN.DIFFUSION_OSMOSIS",
+  "error": "Says diffusion needs energy from the cell.",
+  "example": {
+   "question": "Does diffusion need energy from the cell?",
+   "wrong_answer": "Yes, always",
+   "correct_answer": "No, particles move by themselves"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Yes, always\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what makes the smell of cooking spread.",
+  "feedback": "Diffusion happens without the cell using energy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_LENGTH": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL",
+  "error": "Gives the wrong length of the cycle.",
+  "example": {
+   "question": "About how long is the menstrual cycle?",
+   "wrong_answer": "About 7 days",
+   "correct_answer": "About 28 days"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"About 7 days\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Count the days on a calendar.",
+  "feedback": "The cycle is about 28 days. The bleeding lasts three to seven days.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_OVULATION": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL",
+  "error": "Says an egg is released at the start of the cycle.",
+  "example": {
+   "question": "When is an egg released?",
+   "wrong_answer": "At the start of the bleeding",
+   "correct_answer": "About the middle of the cycle"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"At the start of the bleeding\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Mark the days on a cycle chart.",
+  "feedback": "An egg is released about the middle of the cycle.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL.M_G8_MC_DISEASE": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.MENSTRUAL",
+  "error": "Says menstruation is an illness.",
+  "example": {
+   "question": "What is menstruation?",
+   "wrong_answer": "An illness",
+   "correct_answer": "A normal part of growing up"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"An illness\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Talk with a trusted adult or the school nurse.",
+  "feedback": "Menstruation is normal and not an illness.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_PLACE": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION",
+  "error": "Says fertilisation happens in the uterus.",
+  "example": {
+   "question": "Where does fertilisation happen?",
+   "wrong_answer": "In the uterus",
+   "correct_answer": "In the oviduct"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"In the uterus\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Trace the path on a chart.",
+  "feedback": "Fertilisation happens in the oviduct. Implantation is in the uterus.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_ORDER": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION",
+  "error": "Puts implantation before fertilisation.",
+  "example": {
+   "question": "Which happens first?",
+   "wrong_answer": "Implantation",
+   "correct_answer": "Fertilisation"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Implantation\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Put the events on cards.",
+  "feedback": "Fertilisation comes first, then implantation.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION.M_G8_FE_ZYGOTE": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.FERTILISATION",
+  "error": "Says the zygote is the baby when it is born.",
+  "example": {
+   "question": "What is a zygote?",
+   "wrong_answer": "A newborn baby",
+   "correct_answer": "The first cell made when sperm joins egg"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"A newborn baby\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Look at the stages on a chart.",
+  "feedback": "The zygote is the first cell made at fertilisation.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_MYTH": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS",
+  "error": "Says STIs spread by hugging or toilet seats.",
+  "example": {
+   "question": "Which does NOT spread an STI?",
+   "wrong_answer": "Unprotected sex",
+   "correct_answer": "Hugging"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Unprotected sex\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask a health worker how STIs spread.",
+  "feedback": "STIs do not spread by hugging, shaking hands or toilet seats.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_NO_CURE": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS",
+  "error": "Says STIs are never treated.",
+  "example": {
+   "question": "What should a person with symptoms of an STI do?",
+   "wrong_answer": "Nothing, they cannot be treated",
+   "correct_answer": "See a health worker for testing and treatment"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Nothing, they cannot be treated\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask a health worker.",
+  "feedback": "Many STIs can be treated, so see a health worker early.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS.M_G8_STI_PREVENT": {
+  "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.STIS",
+  "error": "Names a prevention measure that does not work.",
+  "example": {
+   "question": "Which helps to prevent STIs?",
+   "wrong_answer": "Washing the body after sex",
+   "correct_answer": "Abstinence and faithfulness"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Washing the body after sex\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask a health worker.",
+  "feedback": "Abstinence and faithfulness to one uninfected partner prevent STIs.",
+  "source": "To confirm by a teacher or a health worker: a health or safety statement written for Grade 8.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_RENEWABLE_COAL": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES",
+  "error": "Calls coal a renewable source.",
+  "example": {
+   "question": "Which is a renewable source?",
+   "wrong_answer": "Coal",
+   "correct_answer": "The sun"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Coal\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what will run out.",
+  "feedback": "Coal is non-renewable. Sun, wind and flowing water are renewable.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_SOLAR_NONREN": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES",
+  "error": "Calls solar or wind energy non-renewable.",
+  "example": {
+   "question": "Which is a non-renewable source?",
+   "wrong_answer": "Wind",
+   "correct_answer": "Petroleum"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Wind\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what is replaced by nature.",
+  "feedback": "Petroleum is non-renewable. Wind is renewable.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES.M_G8_EN_FORM_MIX": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_FORMS_SOURCES",
+  "error": "Mixes up the forms of energy.",
+  "example": {
+   "question": "Which form of energy does a rolling ball have?",
+   "wrong_answer": "Chemical energy",
+   "correct_answer": "Kinetic energy"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Chemical energy\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Link the form with what the object is doing.",
+  "feedback": "Moving objects have kinetic energy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_KETTLE_LIGHT": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM",
+  "error": "Gives the wrong change of energy for a device.",
+  "example": {
+   "question": "What does an electric kettle change electrical energy into?",
+   "wrong_answer": "Light",
+   "correct_answer": "Heat"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Light\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Ask what the kettle gives out.",
+  "feedback": "A kettle changes electrical energy to heat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_CREATED": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM",
+  "error": "Says energy is created or used up.",
+  "example": {
+   "question": "What happens to energy when it is used?",
+   "wrong_answer": "It is used up and disappears",
+   "correct_answer": "It changes into other forms"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"It is used up and disappears\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Follow the energy of a falling stone.",
+  "feedback": "Energy is never created or used up. It changes form.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM.M_G8_ET_SOLAR": {
+  "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.ENERGY_TRANSFORM",
+  "error": "Gives the wrong change for a solar panel.",
+  "example": {
+   "question": "What does a solar panel change light into?",
+   "wrong_answer": "Sound",
+   "correct_answer": "Electrical energy"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"Sound\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Link a solar lamp to the sun.",
+  "feedback": "A solar panel changes light to electrical energy.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_FORCE_ONLY": {
+  "skill": "INTE.G8.FORCE_.PRESSURE.PRESSURE",
+  "error": "Says pressure depends only on the force.",
+  "example": {
+   "question": "The same force acts on a small area and a large area. Where is the pressure bigger?",
+   "wrong_answer": "The same in both",
+   "correct_answer": "On the small area"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"The same in both\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Press a finger and a nail into soft clay.",
+  "feedback": "The same force on a smaller area gives a bigger pressure.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_AREA_WRONG": {
+  "skill": "INTE.G8.FORCE_.PRESSURE.PRESSURE",
+  "error": "Says a larger area gives more pressure.",
+  "example": {
+   "question": "Why do wide tyres sink less in mud?",
+   "wrong_answer": "They give more pressure",
+   "correct_answer": "They give less pressure"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"They give more pressure\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Compare walking in boots and in snow shoes.",
+  "feedback": "A larger area spreads the force, so the pressure is smaller.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "INTE.G8.FORCE_.PRESSURE.PRESSURE.M_G8_PR_DEPTH": {
+  "skill": "INTE.G8.FORCE_.PRESSURE.PRESSURE",
+  "error": "Says pressure in a liquid stays the same with depth.",
+  "example": {
+   "question": "How does liquid pressure change with depth?",
+   "wrong_answer": "It stays the same",
+   "correct_answer": "It increases"
+  },
+  "cause": "The child mixes up two ideas that sound alike or are taught close together.",
+  "reveals": "Offer \"It stays the same\" next to the right answer in a new question and ask the child to choose.",
+  "help": "Poke holes at different heights in a bottle.",
+  "feedback": "Liquid pressure grows with depth, so a dam wall is thicker at the bottom.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}
