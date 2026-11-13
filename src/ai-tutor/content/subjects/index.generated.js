@@ -28,6 +28,7 @@ import kiswahili_g5 from './kiswahili_g5.js';
 import kiswahili_g6 from './kiswahili_g6.js';
 import kiswahili_g7 from './kiswahili_g7.js';
 import kiswahili_g8 from './kiswahili_g8.js';
+import kiswahili_g9 from './kiswahili_g9.js';
 import pretechnical_g7 from './pretechnical_g7.js';
 import pretechnical_g8 from './pretechnical_g8.js';
 import pretechnical_g9 from './pretechnical_g9.js';
@@ -70,6 +71,7 @@ export const ENTRIES = [
   kiswahili_g6,
   kiswahili_g7,
   kiswahili_g8,
+  kiswahili_g9,
   pretechnical_g7,
   pretechnical_g8,
   pretechnical_g9,

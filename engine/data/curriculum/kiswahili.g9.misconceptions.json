@@ -1,0 +1,992 @@
+{
+ "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_KOLONI": {
+  "skill": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI",
+  "error": "Uses a semi-colon before a list.",
+  "example": {
+   "question": "Ni alama ipi huleta orodha?",
+   "wrong_answer": "semi koloni",
+   "correct_answer": "koloni"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"semi koloni\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Koloni huleta orodha.",
+  "feedback": "Koloni huleta orodha.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_SEMI": {
+  "skill": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI",
+  "error": "Uses a colon between two related sentences.",
+  "example": {
+   "question": "Ni alama ipi hutenganisha sentensi mbili zinazohusiana?",
+   "wrong_answer": "koloni",
+   "correct_answer": "semi koloni"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"koloni\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Semi koloni hutenganisha sentensi zinazohusiana.",
+  "feedback": "Semi koloni hutenganisha sentensi zinazohusiana.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI.M_KS9_KO_MFANO": {
+  "skill": "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI",
+  "error": "Wrong example.",
+  "example": {
+   "question": "Ni sentensi ipi imetumia koloni sawa?",
+   "wrong_answer": "Nilinunua: mkate maziwa sukari.",
+   "correct_answer": "Nilinunua vitu hivi: mkate, maziwa na sukari."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nilinunua: mkate maziwa sukari.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Koloni hufuata maelezo kisha orodha.",
+  "feedback": "Koloni hufuata maelezo kisha orodha.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_MAHALI": {
+  "skill": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI",
+  "error": "Gives a time word for a place.",
+  "example": {
+   "question": "Ni kihusishi kipi cha mahali?",
+   "wrong_answer": "baada ya",
+   "correct_answer": "mbele ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"baada ya\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Mbele ya ni kihusishi cha mahali.",
+  "feedback": "Mbele ya ni kihusishi cha mahali.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_WAKATI": {
+  "skill": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI",
+  "error": "Gives a place word for a time.",
+  "example": {
+   "question": "Ni kihusishi kipi cha wakati?",
+   "wrong_answer": "karibu na",
+   "correct_answer": "kabla ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"karibu na\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kabla ya ni kihusishi cha wakati.",
+  "feedback": "Kabla ya ni kihusishi cha wakati.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI.M_KS9_VM_SENTENSI": {
+  "skill": "KISW.G9.SARUFI.T1_VIHUSISHI.VIH_MAHALI",
+  "error": "Does not use \"ya\" after the preposition.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Kitabu kiko juu meza.",
+   "correct_answer": "Kitabu kiko juu ya meza."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Kitabu kiko juu meza.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Vihusishi vingi hufuatwa na ya.",
+  "feedback": "Vihusishi vingi hufuatwa na ya.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_SHUKRANI": {
+  "skill": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA",
+  "error": "Starts a reply with a complaint.",
+  "example": {
+   "question": "Jibu la barua huanza kwa nini?",
+   "wrong_answer": "malalamiko",
+   "correct_answer": "shukrani kwa barua uliyopokea"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"malalamiko\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Jibu huanza kwa shukrani.",
+  "feedback": "Jibu huanza kwa shukrani.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_MASWALI": {
+  "skill": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA",
+  "error": "Ignores the questions.",
+  "example": {
+   "question": "Jibu la barua hufanya nini kuhusu maswali?",
+   "wrong_answer": "huyapuuza",
+   "correct_answer": "huyajibu"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"huyapuuza\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Jibu hujibu maswali ya mwandishi.",
+  "feedback": "Jibu hujibu maswali ya mwandishi.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA.M_KS9_JB_LUGHA": {
+  "skill": "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA",
+  "error": "Uses a formal register.",
+  "example": {
+   "question": "Lugha ya kujibu barua ya kirafiki ni ipi?",
+   "wrong_answer": "ya kiofisi kali",
+   "correct_answer": "ya kirafiki na heshima"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ya kiofisi kali\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Lugha ni ya kirafiki na heshima.",
+  "feedback": "Lugha ni ya kirafiki na heshima.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_UNGANIFU": {
+  "skill": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU",
+  "error": "Mixes the -a unganifu with the cause word.",
+  "example": {
+   "question": "Ni kihusishi kipi cha -a unganifu?",
+   "wrong_answer": "kwa sababu ya",
+   "correct_answer": "cha"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kwa sababu ya\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Cha ni kihusishi cha -a unganifu.",
+  "feedback": "Cha ni kihusishi cha -a unganifu.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_SABABU": {
+  "skill": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU",
+  "error": "Mixes the cause word with the -a unganifu.",
+  "example": {
+   "question": "Ni kihusishi kipi cha sababu?",
+   "wrong_answer": "cha",
+   "correct_answer": "kwa sababu ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"cha\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kwa sababu ya ni kihusishi cha sababu.",
+  "feedback": "Kwa sababu ya ni kihusishi cha sababu.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU.M_KS9_VS_UPATANISHO": {
+  "skill": "KISW.G9.SARUFI.T2_VIHUSISHI.VIH_SABABU",
+  "error": "Wrong agreement of -a unganifu.",
+  "example": {
+   "question": "Kamilisha: kitabu ___ mwalimu.",
+   "wrong_answer": "wa",
+   "correct_answer": "cha"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"wa\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kitabu hupatana na cha.",
+  "feedback": "Kitabu hupatana na cha.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_KULIKO": {
+  "skill": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI",
+  "error": "Does not know kuliko.",
+  "example": {
+   "question": "Ni kihusishi kipi kinalinganisha?",
+   "wrong_answer": "pamoja na",
+   "correct_answer": "kuliko"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"pamoja na\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kuliko hulinganisha.",
+  "feedback": "Kuliko hulinganisha.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_NA": {
+  "skill": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI",
+  "error": "Does not know na as togetherness.",
+  "example": {
+   "question": "Katika \"Alikuja na rafiki yake\", na inaonyesha nini?",
+   "wrong_answer": "ulinganisho",
+   "correct_answer": "pamoja"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ulinganisho\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Na hapa inaonyesha pamoja.",
+  "feedback": "Na hapa inaonyesha pamoja.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI.M_KS9_VL_KAMA": {
+  "skill": "KISW.G9.SARUFI.T3_VIHUSISHI.VIH_LINGANISHI",
+  "error": "Mixes kama with sababu.",
+  "example": {
+   "question": "Ni kihusishi kipi kinalinganisha vitu viwili?",
+   "wrong_answer": "kwa ajili ya",
+   "correct_answer": "kama"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kwa ajili ya\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kama hulinganisha vitu viwili.",
+  "feedback": "Kama hulinganisha vitu viwili.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_KI": {
+  "skill": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA",
+  "error": "Takes -ki- as sequence.",
+  "example": {
+   "question": "Katika \"Ukisoma utafaulu\", -ki- inaonyesha nini?",
+   "wrong_answer": "kufuatana",
+   "correct_answer": "sharti"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kufuatana\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-ki- hapa inaonyesha sharti.",
+  "feedback": "-ki- hapa inaonyesha sharti.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_KA": {
+  "skill": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA",
+  "error": "Takes -ka- as condition.",
+  "example": {
+   "question": "Katika \"Alifika akaketi\", -ka- inaonyesha nini?",
+   "wrong_answer": "sharti",
+   "correct_answer": "kufuatana"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"sharti\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-ka- inaonyesha tendo linalofuata.",
+  "feedback": "-ka- inaonyesha tendo linalofuata.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA.M_KS9_KK_MATUMIZI": {
+  "skill": "KISW.G9.SARUFI.T4_NYAKATI_NA_HALI.KI_KA",
+  "error": "Uses -ki- where -ka- is needed.",
+  "example": {
+   "question": "Kamilisha: Aliamka ___oga.",
+   "wrong_answer": "akioga",
+   "correct_answer": "akaoga"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"akioga\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Tendo linalofuata hutumia -ka-.",
+  "feedback": "Tendo linalofuata hutumia -ka-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_MAANA": {
+  "skill": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA",
+  "error": "Calls a diary a letter.",
+  "example": {
+   "question": "Shajara ni nini?",
+   "wrong_answer": "barua kwa rafiki",
+   "correct_answer": "kumbukumbu ya kila siku"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"barua kwa rafiki\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Shajara ni kumbukumbu ya kila siku.",
+  "feedback": "Shajara ni kumbukumbu ya kila siku.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_NAFSI": {
+  "skill": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA",
+  "error": "Uses the third person.",
+  "example": {
+   "question": "Shajara huandikwa kwa nafsi ipi?",
+   "wrong_answer": "ya tatu",
+   "correct_answer": "ya kwanza"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ya tatu\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Shajara huandikwa kwa nafsi ya kwanza.",
+  "feedback": "Shajara huandikwa kwa nafsi ya kwanza.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA.M_KS9_SJ_TAREHE": {
+  "skill": "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA",
+  "error": "Leaves out the date.",
+  "example": {
+   "question": "Kila ingizo la shajara huanza kwa nini?",
+   "wrong_answer": "jina la rafiki",
+   "correct_answer": "tarehe"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"jina la rafiki\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ingizo huanza kwa tarehe.",
+  "feedback": "Ingizo huanza kwa tarehe.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_MAANA": {
+  "skill": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI",
+  "error": "Thinks nge- shows a fact.",
+  "example": {
+   "question": "Hali ya masharti ya -nge- huonyesha nini?",
+   "wrong_answer": "ukweli uliotimia",
+   "correct_answer": "sharti lisilotimia"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ukweli uliotimia\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-nge- huonyesha sharti ambalo halikutimia.",
+  "feedback": "-nge- huonyesha sharti ambalo halikutimia.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_NGE": {
+  "skill": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI",
+  "error": "Mixes -nge- with -ngali-.",
+  "example": {
+   "question": "Ni sentensi ipi ina -nge-?",
+   "wrong_answer": "Angalijua angalikuja.",
+   "correct_answer": "Angejua angekuja."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Angalijua angalikuja.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Angejua ina -nge-.",
+  "feedback": "Angejua ina -nge-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI.M_KS9_NN_NGALI": {
+  "skill": "KISW.G9.SARUFI.T5_HALI_ZA_MASHARTI.NGE_NGALI",
+  "error": "Mixes -ngali- with -nge-.",
+  "example": {
+   "question": "Ni sentensi ipi ina -ngali-?",
+   "wrong_answer": "Angejua angekuja.",
+   "correct_answer": "Angalijua angalikuja."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Angejua angekuja.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Angalijua ina -ngali-.",
+  "feedback": "Angalijua ina -ngali-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_MAANA": {
+  "skill": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI",
+  "error": "Thinks a proverb is a joke.",
+  "example": {
+   "question": "Methali ni nini?",
+   "wrong_answer": "kichekesho",
+   "correct_answer": "msemo wenye hekima"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kichekesho\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Methali ni msemo wenye hekima.",
+  "feedback": "Methali ni msemo wenye hekima.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_KAZI": {
+  "skill": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI",
+  "error": "Thinks the essay retells any story.",
+  "example": {
+   "question": "Insha ya methali hufanya nini?",
+   "wrong_answer": "husimulia hadithi yoyote",
+   "correct_answer": "hufafanua maana ya methali"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"husimulia hadithi yoyote\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Insha ya methali hufafanua maana.",
+  "feedback": "Insha ya methali hufafanua maana.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI.M_KS9_IM_MFANO": {
+  "skill": "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI",
+  "error": "Wrong meaning of a proverb.",
+  "example": {
+   "question": "Methali \"Haraka haraka haina baraka\" inafundisha nini?",
+   "wrong_answer": "Fanya kila kitu upesi",
+   "correct_answer": "Kufanya mambo kwa haraka kuna hasara"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Fanya kila kitu upesi\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Haraka kupita kiasi huleta hasara.",
+  "feedback": "Haraka kupita kiasi huleta hasara.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_NAMNA": {
+  "skill": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA",
+  "error": "Gives a time word for manner.",
+  "example": {
+   "question": "Ni kielezi kipi cha namna?",
+   "wrong_answer": "jana",
+   "correct_answer": "polepole"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"jana\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Polepole ni kielezi cha namna.",
+  "feedback": "Polepole ni kielezi cha namna.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_WAKATI": {
+  "skill": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA",
+  "error": "Gives a manner word for time.",
+  "example": {
+   "question": "Ni kielezi kipi cha wakati?",
+   "wrong_answer": "polepole",
+   "correct_answer": "kesho"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"polepole\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kesho ni kielezi cha wakati.",
+  "feedback": "Kesho ni kielezi cha wakati.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA.M_KS9_VN_SWALI": {
+  "skill": "KISW.G9.SARUFI.T6_VIELEZI.VIE_NAMNA",
+  "error": "Wrong question for the adverb.",
+  "example": {
+   "question": "Kielezi cha namna hujibu swali gani?",
+   "wrong_answer": "Lini?",
+   "correct_answer": "Vipi?"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Lini?\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kielezi cha namna hujibu \"vipi?\".",
+  "feedback": "Kielezi cha namna hujibu \"vipi?\".",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_MAHALI": {
+  "skill": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI",
+  "error": "Gives a number word for place.",
+  "example": {
+   "question": "Ni kielezi kipi cha mahali?",
+   "wrong_answer": "mara mbili",
+   "correct_answer": "pale"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"mara mbili\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Pale ni kielezi cha mahali.",
+  "feedback": "Pale ni kielezi cha mahali.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_IDADI": {
+  "skill": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI",
+  "error": "Gives a place word for number.",
+  "example": {
+   "question": "Ni kielezi kipi cha idadi?",
+   "wrong_answer": "huku",
+   "correct_answer": "mara mbili"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"huku\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Mara mbili ni kielezi cha idadi.",
+  "feedback": "Mara mbili ni kielezi cha idadi.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI.M_KS9_VE_SWALI": {
+  "skill": "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI",
+  "error": "Wrong question for the adverb.",
+  "example": {
+   "question": "Kielezi cha mahali hujibu swali gani?",
+   "wrong_answer": "Lini?",
+   "correct_answer": "Wapi?"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Lini?\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kielezi cha mahali hujibu \"wapi?\".",
+  "feedback": "Kielezi cha mahali hujibu \"wapi?\".",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_MABANO": {
+  "skill": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI",
+  "error": "Uses a hyphen for extra information.",
+  "example": {
+   "question": "Ni alama ipi huweka maelezo ya ziada?",
+   "wrong_answer": "kistari kifupi",
+   "correct_answer": "mabano"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kistari kifupi\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Mabano huweka maelezo ya ziada.",
+  "feedback": "Mabano huweka maelezo ya ziada.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_KISTARI": {
+  "skill": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI",
+  "error": "Uses brackets between numbers.",
+  "example": {
+   "question": "Ni alama ipi inatumika kati ya tarakimu kama kurasa 5 hadi 10?",
+   "wrong_answer": "mabano",
+   "correct_answer": "kistari kifupi"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"mabano\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kistari kifupi hutumika kati ya tarakimu.",
+  "feedback": "Kistari kifupi hutumika kati ya tarakimu.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI.M_KS9_MK_NENO": {
+  "skill": "KISW.G9.KUANDI.T8_VIAKIFISHI.MABANO_KISTARI",
+  "error": "Wrong use at the end of a line.",
+  "example": {
+   "question": "Ni alama ipi hutumika kuvunja neno mwishoni mwa mstari?",
+   "wrong_answer": "koloni",
+   "correct_answer": "kistari kifupi"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"koloni\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kistari kifupi huvunja neno.",
+  "feedback": "Kistari kifupi huvunja neno.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_UKUTA": {
+  "skill": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA",
+  "error": "Uses ya- for ukuta.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Ukuta yameanguka.",
+   "correct_answer": "Ukuta umeanguka."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Ukuta yameanguka.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ukuta ni wa U-ZI na hutumia u-.",
+  "feedback": "Ukuta ni wa U-ZI na hutumia u-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_KUTA": {
+  "skill": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA",
+  "error": "Uses u- for the plural kuta.",
+  "example": {
+   "question": "Chagua sentensi sahihi kwa wingi.",
+   "wrong_answer": "Kuta umeanguka.",
+   "correct_answer": "Kuta zimeanguka."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Kuta umeanguka.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Wingi wa U-ZI hutumia zi-.",
+  "feedback": "Wingi wa U-ZI hutumia zi-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA.M_KS9_GU_MAJI": {
+  "skill": "KISW.G9.SARUFI.T8_NGELI_NA_UPATANISHO_.NGELI_UZI_YAYA",
+  "error": "Uses zi- for maji.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Maji zimemwagika.",
+   "correct_answer": "Maji yamemwagika."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Maji zimemwagika.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Maji ni ya YA-YA na hutumia ya-.",
+  "feedback": "Maji ni ya YA-YA na hutumia ya-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_KUSOMA": {
+  "skill": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU",
+  "error": "Uses ki- for a verbal noun.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Kusoma kinafurahisha.",
+   "correct_answer": "Kusoma kunafurahisha."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Kusoma kinafurahisha.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Vitenzi-jina hutumia ku-.",
+  "feedback": "Vitenzi-jina hutumia ku-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_PA": {
+  "skill": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU",
+  "error": "Uses ku- for a near place.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Hapa kuzuri.",
+   "correct_answer": "Hapa pazuri."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Hapa kuzuri.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Mahali karibu hutumia pa-.",
+  "feedback": "Mahali karibu hutumia pa-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU.M_KS9_GK_MU": {
+  "skill": "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU",
+  "error": "Uses pa- for inside.",
+  "example": {
+   "question": "Chagua sentensi sahihi.",
+   "wrong_answer": "Humu pazuri.",
+   "correct_answer": "Humu mwazuri."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Humu pazuri.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ndani hutumia mu-.",
+  "feedback": "Ndani hutumia mu-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_ANWANI": {
+  "skill": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI",
+  "error": "Gives one address.",
+  "example": {
+   "question": "Barua ya kuomba kazi ina anwani ngapi?",
+   "wrong_answer": "moja",
+   "correct_answer": "mbili"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"moja\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ina anwani mbili.",
+  "feedback": "Ina anwani mbili.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_KICHWA": {
+  "skill": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI",
+  "error": "Leaves out the heading.",
+  "example": {
+   "question": "Barua ya kuomba kazi huwa na nini kabla ya ujumbe?",
+   "wrong_answer": "hakuna kitu",
+   "correct_answer": "kichwa cha barua"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"hakuna kitu\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ina kichwa cha barua.",
+  "feedback": "Ina kichwa cha barua.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI.M_KS9_BK_SIFA": {
+  "skill": "KISW.G9.KUANDI.T10_BARUA_RASMI_YA_KUOMB.BARUA_KAZI",
+  "error": "Leaves out the applicant's qualifications.",
+  "example": {
+   "question": "Barua ya kuomba kazi hutaja nini kuhusu mwombaji?",
+   "wrong_answer": "rangi yake anayopenda",
+   "correct_answer": "sifa zake"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"rangi yake anayopenda\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Hutaja sifa za mwombaji.",
+  "feedback": "Hutaja sifa za mwombaji.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_JUU": {
+  "skill": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI",
+  "error": "Gives the wrong opposite.",
+  "example": {
+   "question": "Kinyume cha juu ya ni kipi?",
+   "wrong_answer": "mbele ya",
+   "correct_answer": "chini ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"mbele ya\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kinyume cha juu ya ni chini ya.",
+  "feedback": "Kinyume cha juu ya ni chini ya.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_NDANI": {
+  "skill": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI",
+  "error": "Gives the wrong opposite.",
+  "example": {
+   "question": "Kinyume cha ndani ya ni kipi?",
+   "wrong_answer": "juu ya",
+   "correct_answer": "nje ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"juu ya\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kinyume cha ndani ya ni nje ya.",
+  "feedback": "Kinyume cha ndani ya ni nje ya.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI.M_KS9_VH_KABLA": {
+  "skill": "KISW.G9.SARUFI.T10_VINYUME_VYA_VIHUSISH.VINYUME_VIHUSISHI",
+  "error": "Gives the wrong opposite.",
+  "example": {
+   "question": "Kinyume cha kabla ya ni kipi?",
+   "wrong_answer": "wakati wa",
+   "correct_answer": "baada ya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"wakati wa\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kinyume cha kabla ya ni baada ya.",
+  "feedback": "Kinyume cha kabla ya ni baada ya.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDANA": {
+  "skill": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA",
+  "error": "Confuses kutendana with kutendesha.",
+  "example": {
+   "question": "Ni kitenzi kipi kiko katika kauli ya kutendana?",
+   "wrong_answer": "somesha",
+   "correct_answer": "pigana"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"somesha\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Pigana ni kutendana.",
+  "feedback": "Pigana ni kutendana.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDESHA": {
+  "skill": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA",
+  "error": "Confuses kutendesha with kutendana.",
+  "example": {
+   "question": "Ni kitenzi kipi kiko katika kauli ya kutendesha?",
+   "wrong_answer": "pigana",
+   "correct_answer": "somesha"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"pigana\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Somesha ni kutendesha.",
+  "feedback": "Somesha ni kutendesha.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA.M_KS9_KN_TENDEANA": {
+  "skill": "KISW.G9.SARUFI.T11_MNYAMBULIKO_WA_VITEN.KAULI_TENDANA",
+  "error": "Does not know kutendeana.",
+  "example": {
+   "question": "Ni kitenzi kipi kiko katika kauli ya kutendeana?",
+   "wrong_answer": "somesha",
+   "correct_answer": "pigiana"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"somesha\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Pigiana ni kutendeana.",
+  "feedback": "Pigiana ni kutendeana.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_LENGO": {
+  "skill": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI",
+  "error": "Thinks a persuasive speech only informs.",
+  "example": {
+   "question": "Hotuba ya kushawishi hulenga nini?",
+   "wrong_answer": "kuburudisha tu",
+   "correct_answer": "kumfanya msikilizaji akubali wazo"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kuburudisha tu\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Hotuba ya kushawishi hulenga kushawishi.",
+  "feedback": "Hotuba ya kushawishi hulenga kushawishi.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_MWANZO": {
+  "skill": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI",
+  "error": "Starts with the call to action.",
+  "example": {
+   "question": "Hotuba huanza kwa nini?",
+   "wrong_answer": "wito",
+   "correct_answer": "salamu na utangulizi"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"wito\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Hotuba huanza kwa salamu na utangulizi.",
+  "feedback": "Hotuba huanza kwa salamu na utangulizi.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI.M_KS9_HK_HOJA": {
+  "skill": "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI",
+  "error": "Leaves out reasons.",
+  "example": {
+   "question": "Hotuba ya kushawishi hutumia nini kuunga wazo?",
+   "wrong_answer": "hoja na mifano",
+   "correct_answer": "kelele tu"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"hoja na mifano\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Hutumia hoja na mifano.",
+  "feedback": "Hutumia hoja na mifano.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_MAANA": {
+  "skill": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA",
+  "error": "Thinks a tata sentence has one meaning.",
+  "example": {
+   "question": "Sentensi tata ina nini?",
+   "wrong_answer": "maana moja tu",
+   "correct_answer": "maana zaidi ya moja"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"maana moja tu\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Sentensi tata ina maana zaidi ya moja.",
+  "feedback": "Sentensi tata ina maana zaidi ya moja.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_KISAHILI": {
+  "skill": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA",
+  "error": "Calls a clear sentence tata.",
+  "example": {
+   "question": "Ni sentensi ipi ni tata?",
+   "wrong_answer": "Mama anapika.",
+   "correct_answer": "Mama alimpiga mtoto na fimbo."
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Mama anapika.\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Sentensi tata inaweza kufasiriwa kwa njia mbili.",
+  "feedback": "Sentensi tata inaweza kufasiriwa kwa njia mbili.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA.M_KS9_SZ_SABABU": {
+  "skill": "KISW.G9.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI_TATA",
+  "error": "Does not know the cause of the ambiguity.",
+  "example": {
+   "question": "Sentensi tata hutokana na nini?",
+   "wrong_answer": "matumizi ya herufi kubwa",
+   "correct_answer": "muundo unaoleta maana mbili"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"matumizi ya herufi kubwa\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Muundo huleta maana mbili.",
+  "feedback": "Muundo huleta maana mbili.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_NGE": {
+  "skill": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI",
+  "error": "Wrong negation of nge.",
+  "example": {
+   "question": "Kanusha: Angekuja.",
+   "wrong_answer": "Hangekuja",
+   "correct_answer": "Asingekuja"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Hangekuja\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-nge- hukanushwa kwa -singe-.",
+  "feedback": "-nge- hukanushwa kwa -singe-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_NGALI": {
+  "skill": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI",
+  "error": "Wrong negation of ngali.",
+  "example": {
+   "question": "Kanusha: Angalisoma.",
+   "wrong_answer": "Hangalisoma",
+   "correct_answer": "Asingalisoma"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Hangalisoma\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-ngali- hukanushwa kwa -singali-.",
+  "feedback": "-ngali- hukanushwa kwa -singali-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI.M_KS9_UM_KI": {
+  "skill": "KISW.G9.SARUFI.T13_UKANUSHAJI.UKANUSHAJI_MASHARTI",
+  "error": "Wrong negation of ki.",
+  "example": {
+   "question": "Kanusha: Akisoma.",
+   "wrong_answer": "Hakisoma",
+   "correct_answer": "Asiposoma"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Hakisoma\" next to the right answer and ask the question again in a new sentence.",
+  "help": "-ki- hukanushwa kwa -sipo-.",
+  "feedback": "-ki- hukanushwa kwa -sipo-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_UDOGO": {
+  "skill": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA",
+  "error": "Mixes udogo and ukubwa.",
+  "example": {
+   "question": "Kijiji ni nini?",
+   "wrong_answer": "mji mkubwa",
+   "correct_answer": "mji mdogo"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"mji mkubwa\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Kijiji ni mji mdogo.",
+  "feedback": "Kijiji ni mji mdogo.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_UKUBWA": {
+  "skill": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA",
+  "error": "Mixes ukubwa and udogo.",
+  "example": {
+   "question": "Jitu ni nini?",
+   "wrong_answer": "mtu mdogo",
+   "correct_answer": "mtu mkubwa"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"mtu mdogo\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Jitu ni mtu mkubwa.",
+  "feedback": "Jitu ni mtu mkubwa.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA.M_KS9_UU_KIAMBISHI": {
+  "skill": "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA",
+  "error": "Wrong prefix.",
+  "example": {
+   "question": "Ni kiambishi kipi cha udogo?",
+   "wrong_answer": "ji-",
+   "correct_answer": "ki-"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ji-\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Udogo hutumia ki-.",
+  "feedback": "Udogo hutumia ki-.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_NAKALA": {
+  "skill": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO",
+  "error": "Thinks a summary copies.",
+  "example": {
+   "question": "Ufupisho ni nini?",
+   "wrong_answer": "kunakili kifungu chote",
+   "correct_answer": "kutoa habari kuu kwa ufupi"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"kunakili kifungu chote\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Ufupisho si kunakili.",
+  "feedback": "Ufupisho si kunakili.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_MANENO": {
+  "skill": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO",
+  "error": "Copies the passage's words.",
+  "example": {
+   "question": "Ufupisho huandikwa kwa maneno ya nani?",
+   "wrong_answer": "ya mwandishi pekee",
+   "correct_answer": "ya mfupishaji mwenyewe"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"ya mwandishi pekee\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Hutumia maneno ya mfupishaji.",
+  "feedback": "Hutumia maneno ya mfupishaji.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO.M_KS9_UF_MTIRIRIKO": {
+  "skill": "KISW.G9.KUSOMA.T15_UFUPISHO.UFUPISHO",
+  "error": "Changes the order.",
+  "example": {
+   "question": "Ufupisho huhifadhi nini cha habari?",
+   "wrong_answer": "hubadilisha mpangilio",
+   "correct_answer": "mtiririko wake"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"hubadilisha mpangilio\" next to the right answer and ask the question again in a new sentence.",
+  "help": "Huhifadhi mtiririko.",
+  "feedback": "Huhifadhi mtiririko.",
+  "source": "To confirm by a native Kiswahili teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}
