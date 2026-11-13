@@ -1648,6 +1648,62 @@ export const OUTCOMES = {
  }
 };
 export const SKILLS = {
+ "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI": {
+  "name": "Dondoa habari mahususi katika kifungu cha simulizi",
+  "sub": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_HABARI_DETAIL",
+   "M_KS7_RS_HABARI_OPPOSITE",
+   "M_KS7_RS_HABARI_NOTSAID"
+  ]
+ },
+ "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO": {
+  "name": "Panga matukio yanavyofuatana katika simulizi",
+  "sub": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_MATUKIO_DETAIL",
+   "M_KS7_RS_MATUKIO_OPPOSITE",
+   "M_KS7_RS_MATUKIO_NOTSAID"
+  ]
+ },
+ "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI": {
+  "name": "Fanya utabiri na ufasiri kutokana na simulizi",
+  "sub": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_UTABIRI_DETAIL",
+   "M_KS7_RS_UTABIRI_OPPOSITE",
+   "M_KS7_RS_UTABIRI_NOTSAID"
+  ]
+ },
+ "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI": {
+  "name": "Eleza msamiati katika simulizi",
+  "sub": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_MSAMIATI_DETAIL",
+   "M_KS7_RS_MSAMIATI_OPPOSITE",
+   "M_KS7_RS_MSAMIATI_NOTSAID"
+  ]
+ },
  "KISW.G7.KUANDI.T1_VIAKIFISHI.HERUFI_KUBWA": {
   "name": "Tumia herufi kubwa na kikomo",
   "sub": "KISW.G7.KUANDI.T1_VIAKIFISHI",
@@ -1761,6 +1817,22 @@ export const SKILLS = {
    "M_KS7_NY_TA"
   ]
  },
+ "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5": {
+  "name": "Dondoa habari, eleza kwa ufupi na eleza msamiati katika kifungu cha ufahamu",
+  "sub": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a",
+   "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b",
+   "KISW.G7.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_UFAHAMU5_DETAIL",
+   "M_KS7_RS_UFAHAMU5_OPPOSITE",
+   "M_KS7_RS_UFAHAMU5_NOTSAID"
+  ]
+ },
  "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI.NYAKATI_KUENDELEA": {
   "name": "Tambua uliopita hali ya kuendelea na ujao hali ya kuendelea",
   "sub": "KISW.G7.SARUFI.T5_NYAKATI_NA_HALI",
@@ -1778,6 +1850,21 @@ export const SKILLS = {
    "M_KS7_NK_PAST_SIMPLE"
   ]
  },
+ "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_MASUALA": {
+  "name": "Eleza masuala na msamiati katika matini ya kusikiliza",
+  "sub": "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS",
+  "outcome": "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a",
+  "outcomes": [
+   "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a",
+   "KISW.G7.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_LS_MASUALA_DETAIL",
+   "M_KS7_LS_MASUALA_OPPOSITE",
+   "M_KS7_LS_MASUALA_NOTSAID"
+  ]
+ },
  "KISW.G7.SARUFI.T6_VITENZI.VITENZI_VIKUU": {
   "name": "Tambua vitenzi vikuu na visaidizi",
   "sub": "KISW.G7.SARUFI.T6_VITENZI",
@@ -1793,6 +1880,21 @@ export const SKILLS = {
    "M_KS7_VV_KISAIDIZI_KUU",
    "M_KS7_VV_KUU_KISAIDIZI",
    "M_KS7_VV_SENTENSI"
+  ]
+ },
+ "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.LS_UJUMBE": {
+  "name": "Tambua ujumbe na msamiati katika ufahamu wa kusikiliza",
+  "sub": "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA",
+  "outcome": "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.a",
+  "outcomes": [
+   "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.a",
+   "KISW.G7.KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_LS_UJUMBE_DETAIL",
+   "M_KS7_LS_UJUMBE_OPPOSITE",
+   "M_KS7_LS_UJUMBE_NOTSAID"
   ]
  },
  "KISW.G7.KUSOMA.T7_UFUPISHO.UFUPISHO": {
@@ -1860,6 +1962,22 @@ export const SKILLS = {
    "M_KS7_GA_MTI_AWA",
    "M_KS7_GA_MTOTO_UI",
    "M_KS7_GA_UPATANISHO"
+  ]
+ },
+ "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI": {
+  "name": "Soma kifungu cha kushawishi: habari, msamiati na ufupi",
+  "sub": "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a",
+   "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b",
+   "KISW.G7.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_USHAWISHI_DETAIL",
+   "M_KS7_RS_USHAWISHI_OPPOSITE",
+   "M_KS7_RS_USHAWISHI_NOTSAID"
   ]
  },
  "KISW.G7.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KIVI_LIYA": {
@@ -1932,6 +2050,20 @@ export const SKILLS = {
    "M_KS7_KA_KUTENDA"
   ]
  },
+ "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.LS_HOJA": {
+  "name": "Tambua hoja muhimu katika habari aliyosikiliza",
+  "sub": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN",
+  "outcome": "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a",
+  "outcomes": [
+   "KISW.G7.KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_LS_HOJA_DETAIL",
+   "M_KS7_LS_HOJA_OPPOSITE",
+   "M_KS7_LS_HOJA_NOTSAID"
+  ]
+ },
  "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI.SENTENSI": {
   "name": "Tofautisha sentensi sahili na ambatano",
   "sub": "KISW.G7.SARUFI.T12_AINA_ZA_SENTENSI",
@@ -1967,6 +2099,22 @@ export const SKILLS = {
    "M_KS7_UK_UJAO"
   ]
  },
+ "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA": {
+  "name": "Soma kifungu cha mjadala: habari, msamiati na mitazamo",
+  "sub": "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU",
+  "outcome": "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a",
+   "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b",
+   "KISW.G7.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.d"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_MJADALA_DETAIL",
+   "M_KS7_RS_MJADALA_OPPOSITE",
+   "M_KS7_RS_MJADALA_NOTSAID"
+  ]
+ },
  "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO.UKUBWA": {
   "name": "Tambua nomino katika hali ya ukubwa",
   "sub": "KISW.G7.SARUFI.T14_UKUBWA_WA_NOMINO",
@@ -1983,6 +2131,37 @@ export const SKILLS = {
    "M_KS7_UB_UDOGO",
    "M_KS7_UB_KIAMBISHI",
    "M_KS7_UB_JUMBA"
+  ]
+ },
+ "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.LS_HABARI": {
+  "name": "Tambua masuala na msamiati katika habari aliyosikiliza",
+  "sub": "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA",
+  "outcome": "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.a",
+  "outcomes": [
+   "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.a",
+   "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.b",
+   "KISW.G7.KUSIKI.T15_KUSIKILIZA_HABARI_NA.d"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_LS_HABARI_DETAIL",
+   "M_KS7_LS_HABARI_OPPOSITE",
+   "M_KS7_LS_HABARI_NOTSAID"
+  ]
+ },
+ "KISW.G7.KUSOMA.T15_UFUPISHO.RS_UFUPISHO": {
+  "name": "Eleza ujumbe wa kifungu kwa ufupi",
+  "sub": "KISW.G7.KUSOMA.T15_UFUPISHO",
+  "outcome": "KISW.G7.KUSOMA.T15_UFUPISHO.a",
+  "outcomes": [
+   "KISW.G7.KUSOMA.T15_UFUPISHO.a",
+   "KISW.G7.KUSOMA.T15_UFUPISHO.b"
+  ],
+  "pre": [],
+  "mis": [
+   "M_KS7_RS_UFUPISHO_DETAIL",
+   "M_KS7_RS_UFUPISHO_OPPOSITE",
+   "M_KS7_RS_UFUPISHO_NOTSAID"
   ]
  },
  "KISW.G7.SARUFI.T15_USEMI_HALISI_NA_USEM.USEMI": {
@@ -2005,6 +2184,18 @@ export const SKILLS = {
  }
 };
 export const MIS_FEEDBACK = {
+ "M_KS7_RS_HABARI_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_HABARI_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_HABARI_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+ "M_KS7_RS_MATUKIO_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_MATUKIO_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_MATUKIO_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+ "M_KS7_RS_UTABIRI_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_UTABIRI_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_UTABIRI_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+ "M_KS7_RS_MSAMIATI_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_MSAMIATI_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_MSAMIATI_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_HK_JINA": "Sentensi huanza kwa herufi kubwa, na majina ya pekee pia.",
  "M_KS7_HK_KIKOMO": "Sentensi ya kawaida huisha kwa kikomo (.).",
  "M_KS7_HK_KATIKATI": "Herufi kubwa si kwa nomino ya kawaida katikati ya sentensi.",
@@ -2026,12 +2217,21 @@ export const MIS_FEEDBACK = {
  "M_KS7_NY_LI": "Kiambishi -li- huonyesha wakati uliopita.",
  "M_KS7_NY_NA": "Kiambishi -na- huonyesha wakati uliopo.",
  "M_KS7_NY_TA": "Kiambishi -ta- huonyesha wakati ujao.",
+ "M_KS7_RS_UFAHAMU5_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_UFAHAMU5_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_UFAHAMU5_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_NK_AKISOMA": "Ujao hali ya kuendelea hutumia atakuwa akisoma.",
  "M_KS7_NK_ALIKUWA": "Alikuwa akipika ni uliopita hali ya kuendelea: tendo lilikuwa likiendelea.",
  "M_KS7_NK_PAST_SIMPLE": "Walikuwa wakicheza ni uliopita hali ya kuendelea.",
+ "M_KS7_LS_MASUALA_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_LS_MASUALA_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_LS_MASUALA_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_VV_KISAIDIZI_KUU": "Kitenzi kikuu hubeba tendo: akisoma.",
  "M_KS7_VV_KUU_KISAIDIZI": "Kitenzi kisaidizi hutangulia kikuu: atakuwa.",
  "M_KS7_VV_SENTENSI": "Sentensi hii ina kisaidizi na kikuu.",
+ "M_KS7_LS_UJUMBE_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_LS_UJUMBE_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_LS_UJUMBE_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_UF_NAKALA": "Ufupisho ni kutoa habari kuu bila kupoteza maana.",
  "M_KS7_UF_MAANA": "Ufupisho huhifadhi maana ya habari.",
  "M_KS7_UF_HABARI_KUU": "Habari kuu ni wazo kuu la aya nzima.",
@@ -2044,6 +2244,9 @@ export const MIS_FEEDBACK = {
  "M_KS7_GA_MTI_AWA": "Mti ni wa ngeli ya U-I; wingi wake ni miti.",
  "M_KS7_GA_MTOTO_UI": "Mtoto ni mtu, kwa hiyo ni wa ngeli ya A-WA.",
  "M_KS7_GA_UPATANISHO": "A-WA: a-, wa-. U-I: u-, i-.",
+ "M_KS7_RS_USHAWISHI_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_USHAWISHI_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_USHAWISHI_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_GK_KITABU": "Kitabu ni cha ngeli ya KI-VI; wingi wake ni vitabu.",
  "M_KS7_GK_JIWE": "Jiwe ni la ngeli ya LI-YA; wingi wake ni mawe.",
  "M_KS7_GK_UPATANISHO": "KI-VI: ki-, vi-. LI-YA: li-, ya-.",
@@ -2056,15 +2259,27 @@ export const MIS_FEEDBACK = {
  "M_KS7_KA_KUTENDEA": "Kutendea huonyesha kwa ajili ya nani, kama pikia.",
  "M_KS7_KA_KUTENDWA": "Kutendwa huonyesha anayepokea tendo, kama pikwa.",
  "M_KS7_KA_KUTENDA": "Kutenda ni umbo la kawaida, kama pika.",
+ "M_KS7_LS_HOJA_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_LS_HOJA_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_LS_HOJA_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_ST_AMBATANO_MOJA": "Sentensi ambatano huunganisha mawazo mawili au zaidi.",
  "M_KS7_ST_KIUNGANISHI": "Kiunganishi na huunganisha mawazo mawili.",
  "M_KS7_ST_SAHILI_NYINGI": "Sentensi sahili ina wazo moja, hata ikiwa ndefu.",
  "M_KS7_UK_ULIOPO": "Ukanushaji wa uliopo ni hasomi.",
  "M_KS7_UK_ULIOPITA": "Ukanushaji wa uliopita ni hakusoma.",
  "M_KS7_UK_UJAO": "Ukanushaji wa ujao ni hatasoma.",
+ "M_KS7_RS_MJADALA_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_MJADALA_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_MJADALA_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_UB_UDOGO": "Jibwa ni mbwa mkubwa: hali ya ukubwa.",
  "M_KS7_UB_KIAMBISHI": "Kiambishi cha ukubwa ni ji-, kama jitu.",
  "M_KS7_UB_JUMBA": "Jumba ni nyumba kubwa.",
+ "M_KS7_LS_HABARI_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_LS_HABARI_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_LS_HABARI_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
+ "M_KS7_RS_UFUPISHO_DETAIL": "Jibu lazima lijibu swali lote, si jambo moja dogo.",
+ "M_KS7_RS_UFUPISHO_OPPOSITE": "Jibu lazima lipatane na matini, si kinyume chake.",
+ "M_KS7_RS_UFUPISHO_NOTSAID": "Jibu lazima lipatikane kwenye matini, si kuongezwa kutoka nje.",
  "M_KS7_US_MTU": "Katika usemi wa taarifa mtu hubadilika: mimi huwa yeye.",
  "M_KS7_US_ALAMA": "Usemi wa taarifa hauna alama za usemi.",
  "M_KS7_US_WAKATI": "Usemi halisi ni maneno kamili ya msemaji katika alama za usemi."

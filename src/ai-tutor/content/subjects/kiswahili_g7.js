@@ -6,6 +6,7 @@ import { SKILLS, SUBSTRANDS, OUTCOMES, MIS_FEEDBACK } from '../curriculumMap.kis
 import { FAMILIES as A } from '../families/kiswahili_g7_a.js';
 import { FAMILIES as B } from '../families/kiswahili_g7_b.js';
 import { FAMILIES as C } from '../families/kiswahili_g7_c.js';
+import { FAMILIES as RD } from '../families/kiswahili_g7_reading.js';
 import { SIGNED } from '../families/kiswahili_g7_signed.js';
 
 export default {
@@ -13,8 +14,8 @@ export default {
   name: 'Kiswahili', shortName: 'Kiswahili', icon: 'book',
   description: 'Grade 7 Kiswahili from the CBC design',
   map: { skills: SKILLS, substrands: SUBSTRANDS, outcomes: OUTCOMES, misFeedback: MIS_FEEDBACK },
-  families: [...A, ...B, ...C],                          // add each family file you write: [...A, ...B]
-  familyFiles: ['kiswahili_g7_a.js', 'kiswahili_g7_b.js', 'kiswahili_g7_c.js'],              // the same files by name (a phone build drops them while nothing is signed)
+  families: [...A, ...B, ...C, ...RD],                          // add each family file you write: [...A, ...B]
+  familyFiles: ['kiswahili_g7_a.js', 'kiswahili_g7_b.js', 'kiswahili_g7_c.js', 'kiswahili_g7_reading.js'],              // the same files by name (a phone build drops them while nothing is signed)
   signed: SIGNED, signedFile: 'kiswahili_g7_signed.js',
   checks: 'family',                            // 'family' = the shared family checks; 'text' = word-answer checks (english_checks.mjs)
   idPrefix: 'kiswahili7.',          // every family id starts with this

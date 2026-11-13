@@ -3,7 +3,7 @@
 Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text is KICD's, word for word. **Q** means a question can test it, **W** writing (composition marking), **O** speaking or an oral check (a teacher listening), **P** a practical task, product or portfolio, **A** an attitude (teacher observation).
 
 - Outcomes: 256. By what tests them best: Q 146, W 23, O 38, P 0, A 49.
-- Outcomes with at least one question family: 49. Q outcomes with a family: 47 of 146. Q outcomes with no family: 99.
+- Outcomes with at least one question family: 68. Q outcomes with a family: 66 of 146. Q outcomes with no family: 80.
 - A non-Q outcome that has a family: the family tests the recognition half and the rest still needs the teacher or the task named below.
 - Kind is assigned from the first verb of the outcome (kutambua, kueleza and kubainisha are Q; kuandika, kutunga and kufupisha are W; kujadili, kuwasilisha and the listening and speaking outcomes are O; kuchangamkia, kufurahia and kuonea fahari are A). It is a first sort for the reviewer, not the KICD's own tag. Reading comprehension and listening need passages or recordings and are not built here.
 - This build covers grammar (sarufi), punctuation, letter-writing knowledge, tanzu za fasihi and ufupisho: 21 skills. The 39 other sub-strands (kusikiliza, kusoma, kuandika of compositions, most oral work) are for a later pass with passages.
@@ -14,10 +14,10 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.b | Q | NO | kutambua vipengele vya kuzingatia katika kujibu mazungumzo | Question families. |
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.c | O | no | kutumia vipengele vifaavyo katika kusikiliza na kujibu mazungumzo | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T1_KUSIKILIZA_NA_KUJIBU.d | A | no | kuchangamkia kushiriki mazungumzo katika miktadha mbalimbali | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b | Q | NO | kupanga matukio yanavyofuatana katika kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c | Q | NO | kufanya utabiri na ufasiri kutokana na kifungu cha simulizi | Question families. |
-| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d | Q | NO | kueleza msamiati katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.b | Q | yes | kupanga matukio yanavyofuatana katika kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.c | Q | yes | kufanya utabiri na ufasiri kutokana na kifungu cha simulizi | Question families. |
+| KUSOMA.T1_KUSOMA_KWA_UFAHAMU.d | Q | yes | kueleza msamiati katika kifungu cha simulizi | Question families. |
 | KUSOMA.T1_KUSOMA_KWA_UFAHAMU.e | A | no | kuchangamkia kusoma vifungu vya simulizi ili kukuza uelewa wa habari | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T1_VIAKIFISHI.a | Q | yes | kutambua herufi kubwa na kikomo katika matini | Question families. |
 | KUANDI.T1_VIAKIFISHI.b | Q | yes | kueleza matumizi ya herufi kubwa na kikomo katika matini | Question families. |
@@ -83,8 +83,8 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.c | Q | NO | kutambua maamkuzi yanayotumiwa na makundi mbalimbali ya kijamii pamoja na majibu ya maamkuzi hayo | Question families. |
 | KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.d | O | no | kutumia maamkuzi na maagano mwafaka katika miktadha mbalimbali | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T5_MAZUNGUMZO_MAHUSUSI.e | O | no | kujenga mazoea ya kutumia maamkuzi na maagano mwafaka katika maisha ya kila siku ili kufanikisha mahusiano | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
-| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha ufahamu | Question families. |
-| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b | Q | NO | kueleza habari za kifungu cha ufahamu kwa ufupi | Question families. |
+| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha ufahamu | Question families. |
+| KUSOMA.T5_KUSOMA_KWA_UFAHAMU.b | Q | yes | kueleza habari za kifungu cha ufahamu kwa ufupi | Question families. |
 | KUSOMA.T5_KUSOMA_KWA_UFAHAMU.c | Q | NO | kueleza maana ya msamiati kulingana na muktadha wa kifungu cha ufahamu | Question families. |
 | KUSOMA.T5_KUSOMA_KWA_UFAHAMU.d | A | no | kuchangamkia kusoma kwa ufahamu ili kukuza uelewa wa habari | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T5_INSHA_YA_MAELEKEZO.a | Q | NO | kueleza maana ya insha ya maelekezo | Question families. |
@@ -96,9 +96,9 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | SARUFI.T5_NYAKATI_NA_HALI.a | Q | yes | kubainisha vitenzi vilivyo katika wakati uliopita hali ya kuendelea na ujao hali ya kuendelea katika matini | Question families. |
 | SARUFI.T5_NYAKATI_NA_HALI.b | Q | yes | kutumia wakati uliopita hali ya kuendelea na ujao hali ya kuendelea ifaavyo katika matini | Question families. |
 | SARUFI.T5_NYAKATI_NA_HALI.c | A | no | kuchangamkia kutumia wakati uliopita hali ya kuendelea na ujao hali ya kuendelea ifaavyo ili kuboresha mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a | Q | NO | kueleza kwa usahihi masuala yanayozungumziwa katika matini ya kusikiliza | Question families. |
+| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.a | Q | yes | kueleza kwa usahihi masuala yanayozungumziwa katika matini ya kusikiliza | Question families. |
 | KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.b | O | no | kufasiri habari katika matini ya kusikiliza | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
-| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c | Q | NO | kueleza maana ya msamiati kama ulivyotumika katika matini ya kusikiliza | Question families. |
+| KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.c | Q | yes | kueleza maana ya msamiati kama ulivyotumika katika matini ya kusikiliza | Question families. |
 | KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.d | O | no | kutabiri kitakachotokea katika matini kwa kurejelea vidokezo katika matini ya kusikiliza | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.e | A | no | kufurahia kufasiri matini za kusikiliza ili kukuza stadi ya kusikiliza | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUSOMA.T6_KUSOMA_KWA_KINA.a | Q | NO | kueleza dhana za maudhui na dhamira katika fasihi | Question families. |
@@ -113,8 +113,8 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | SARUFI.T6_VITENZI.a | Q | yes | kutambua vitenzi vikuu na visaidizi katika matini | Question families. |
 | SARUFI.T6_VITENZI.b | Q | yes | kutumia vitenzi vikuu na visaidizi ipasavyo katika matini | Question families. |
 | SARUFI.T6_VITENZI.c | A | no | kuchangamkia kutumia vitenzi vikuu na visaidizi ipasavyo katika mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.a | Q | NO | kutambua ujumbe katika ufahamu wa kusikiliza | Question families. |
-| KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.b | Q | NO | kueleza maana ya msamiati ulio katika ufahamu wa kusikiliza | Question families. |
+| KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.a | Q | yes | kutambua ujumbe katika ufahamu wa kusikiliza | Question families. |
+| KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.b | Q | yes | kueleza maana ya msamiati ulio katika ufahamu wa kusikiliza | Question families. |
 | KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.c | O | no | kufasiri ujumbe kutokana na ufahamu wa kusikiliza | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T7_KUSIKILIZA_KWA_UFAHA.d | A | no | kuchangamkia kushiriki katika kusikiliza kwa ufahamu ili kukuza stadi ya kusikiliza kwa ufahamu | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUSOMA.T7_UFUPISHO.a | Q | yes | kueleza maana ya ufupisho ili kuupambanua | Question families. |
@@ -149,8 +149,8 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.a | Q | NO | kutambua sauti /d/ na /nd/ katika silabi na maneno | Question families. |
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.b | O | no | kutamka sauti /d/ na /nd/ ipasavyo ili kuzitofautisha kimatamshi katika silabi na maneno | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T9_KUSIKILIZA_KWA_KINA.c | A | no | kuchangamkia matamshi bora ya sauti /d/ na /nd/ katika mazungumzo ya kawaida ili kufanikisha mawasiliano | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha ufahamu cha kushawishi | Question families. |
-| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b | Q | NO | kueleza maana ya msamiati na vifungu vya maneno katika kifungu cha ufahamu cha kushawishi | Question families. |
+| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha ufahamu cha kushawishi | Question families. |
+| KUSOMA.T9_KUSOMA_KWA_UFAHAMU.b | Q | yes | kueleza maana ya msamiati na vifungu vya maneno katika kifungu cha ufahamu cha kushawishi | Question families. |
 | KUSOMA.T9_KUSOMA_KWA_UFAHAMU.c | Q | NO | kueleza habari za kifungu cha ufahamu cha kushawishi kwa ufupi | Question families. |
 | KUSOMA.T9_KUSOMA_KWA_UFAHAMU.d | A | no | kuchangamkia usomaji wa kifungu cha ufahamu cha kushawishi ili kukuza uelewa wa habari | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T9_INSHA_ZA_KUBUNI.a | Q | NO | kutambua vipengele vinavyozingatiwa kujenga wazo katika insha ya masimulizi | Question families. |
@@ -198,7 +198,7 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.a | Q | yes | kutambua kauli ya kutenda, kutendea na kutendwa katika vitenzi | Question families. |
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.b | Q | yes | kutumia vitenzi katika kauli ya kutenda, kutendea na kutendwa ipasavyo | Question families. |
 | SARUFI.T11_MNYAMBULIKO_WA_VITEN.c | A | no | kuchangamkia kutumia ipasavyo vitenzi katika kauli ya kutenda, kutendea na kutendwa ili kujenga ufasaha wa lugha | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a | Q | NO | kutambua hoja muhimu katika habari aliyosikiliza | Question families. |
+| KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.a | Q | yes | kutambua hoja muhimu katika habari aliyosikiliza | Question families. |
 | KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.b | O | no | kuwasilisha hoja muhimu katika habari | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T12_KUSIKILIZA_KWA_MAKIN.c | O | no | kujenga mazoea ya kutambua hoja katika habari anayosikiliza ili kuimarisha usikilizaji wa makini | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSOMA.T12_KUSOMA_KWA_UFASAHA.a | Q | NO | kusoma kifungu kwa kuzingatia matamshi bora | Question families. |
@@ -234,8 +234,8 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | KUSIKI.T14_LUGHA_KATIKA_NYIMBO.a | Q | NO | kutambua vipengele vya lugha vinavyotumika katika nyimbo | Question families. |
 | KUSIKI.T14_LUGHA_KATIKA_NYIMBO.b | O | no | kujadili umuhimu wa vipengele vya lugha vinavyotumika katika nyimbo teule | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T14_LUGHA_KATIKA_NYIMBO.c | A | no | kuonea fahari uchanganuzi wa lugha katika nyimbo kama utungo wa fasihi simulizi | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a | Q | NO | kudondoa habari mahususi katika kifungu cha mjadala | Question families. |
-| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b | Q | NO | kutambua msamiati mpya katika kifungu cha mjadala | Question families. |
+| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.a | Q | yes | kudondoa habari mahususi katika kifungu cha mjadala | Question families. |
+| KUSOMA.T14_KUSOMA_KWA_UFAHAMU.b | Q | yes | kutambua msamiati mpya katika kifungu cha mjadala | Question families. |
 | KUSOMA.T14_KUSOMA_KWA_UFAHAMU.c | W | no | kuandika habari za kifungu cha mjadala kwa ufupi | Composition or written task marked by the teacher against the KICD rubric indicator (a letter, an essay, a summary or a sentence the learner writes). |
 | KUSOMA.T14_KUSOMA_KWA_UFAHAMU.d | Q | NO | kuchambua mitazamo katika kifungu cha mjadala | Question families. |
 | KUSOMA.T14_KUSOMA_KWA_UFAHAMU.e | Q | NO | kuridhia kusoma kwa ufahamu ili kukuza uelewa wa habari | Question families. |
@@ -248,13 +248,13 @@ Built from `curriculum/kiswahili/g7.json` and the registry entry. Outcome text i
 | SARUFI.T14_UKUBWA_WA_NOMINO.b | Q | yes | kutambua viambishi vya ukubwa katika nomino | Question families. |
 | SARUFI.T14_UKUBWA_WA_NOMINO.c | Q | yes | kutumia nomino katika hali ya ukubwa ipasavyo | Question families. |
 | SARUFI.T14_UKUBWA_WA_NOMINO.d | A | no | kuchangamkia kutumia nomino katika hali ya ukubwa katika sentensi | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSIKI.T15_KUSIKILIZA_HABARI_NA.a | Q | NO | kutambua masuala katika matini aliyosikiliza | Question families. |
-| KUSIKI.T15_KUSIKILIZA_HABARI_NA.b | Q | NO | kutambua msamiati wa suala lengwa katika matini aliyosikiliza | Question families. |
+| KUSIKI.T15_KUSIKILIZA_HABARI_NA.a | Q | yes | kutambua masuala katika matini aliyosikiliza | Question families. |
+| KUSIKI.T15_KUSIKILIZA_HABARI_NA.b | Q | yes | kutambua msamiati wa suala lengwa katika matini aliyosikiliza | Question families. |
 | KUSIKI.T15_KUSIKILIZA_HABARI_NA.c | O | no | kutabiri yatakayotokea katika matini kutokana na vidokezo alivyosikia katika habari | An oral or listening check scored by the teacher with the observation rubric (PLAN_OBSERVATION_RUBRICS.md): listening and speaking tasks, songs, recitation and role play. |
 | KUSIKI.T15_KUSIKILIZA_HABARI_NA.d | Q | NO | kueleza maana za msamiati wa suala lengwa kama ulivyotumiwa katika matini aliyosikiliza | Question families. |
 | KUSIKI.T15_KUSIKILIZA_HABARI_NA.e | A | no | kuchangamkia kushiriki katika kusikiliza kwa ufahamu ili kukuza stadi ya kusikiliza | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
-| KUSOMA.T15_UFUPISHO.a | Q | NO | kueleza kwa usahihi ujumbe wa aya za matini kwa sentensi mojamoja | Question families. |
-| KUSOMA.T15_UFUPISHO.b | Q | NO | kueleza kwa usahihi ujumbe wa aya zote za matini kwa aya moja | Question families. |
+| KUSOMA.T15_UFUPISHO.a | Q | yes | kueleza kwa usahihi ujumbe wa aya za matini kwa sentensi mojamoja | Question families. |
+| KUSOMA.T15_UFUPISHO.b | Q | yes | kueleza kwa usahihi ujumbe wa aya zote za matini kwa aya moja | Question families. |
 | KUSOMA.T15_UFUPISHO.c | W | no | kuandika ufupisho unaozingatia mtazamo wa matini ya kufupishwa | Composition or written task marked by the teacher against the KICD rubric indicator (a letter, an essay, a summary or a sentence the learner writes). |
 | KUSOMA.T15_UFUPISHO.d | A | no | kufurahia kufupisha ujumbe kwa usahihi katika miktadha mbalimbali | Teacher observation over the term or a portfolio entry; a tapped answer cannot show a feeling or a habit. |
 | KUANDI.T15_KUANDIKA_KIDIJITALI.a | Q | NO | kutambua ujumbe unaoafiki baruapepe kwa rafiki | Question families. |

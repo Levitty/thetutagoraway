@@ -92,6 +92,7 @@ export default {
   'kiswahili_g7_a.js': 'kiswahili_g7_signed.js',
   'kiswahili_g7_b.js': 'kiswahili_g7_signed.js',
   'kiswahili_g7_c.js': 'kiswahili_g7_signed.js',
+  'kiswahili_g7_reading.js': 'kiswahili_g7_signed.js',
   'kiswahili_g8_a.js': 'kiswahili_g8_signed.js',
   'kiswahili_g8_b.js': 'kiswahili_g8_signed.js',
   'kiswahili_g9_a.js': 'kiswahili_g9_signed.js',
