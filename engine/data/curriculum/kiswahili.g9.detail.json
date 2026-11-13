@@ -252,6 +252,34 @@
   "KISW.G9.SARUFI.T15_USEMI_HALISI_NA_USEM.c": "kuchangamkia matumizi ya usemi halisi na usemi wa taarifa katika mawasiliano ya kila siku"
  },
  "skills": {
+  "KISW.G9.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_HABARI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MATUKIO": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_UTABIRI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T1_KUSOMA_KWA_UFAHAMU.RS_MSAMIATI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "KISW.G9.KUANDI.T1_VIAKIFISHI.KOLONI": {
    "forms": [
     "chagua jibu sahihi",
@@ -267,6 +295,13 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua vihusishi vya mahali (mbele ya, nyuma ya, juu ya, chini ya, ndani ya) na vya wakati (kabla ya, baada ya, wakati wa) na kuvitumia ipasavyo. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T2_KUSOMA_KWA_MAPANA.RS_UJUMBE": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "KISW.G9.KUANDI.T2_INSHA_ZA_KIUAMILIFU.JIBU_BARUA": {
    "forms": [
@@ -300,6 +335,13 @@
    ],
    "mastery": "Mtoto hutambua -ki- ya masharti (Ukisoma utafaulu) na -ka- ya kufuatana (Alifika akaketi), na hutofautisha kila mmoja. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G9.KUSOMA.T5_KUSOMA_KWA_UFAHAMU.RS_UFAHAMU5": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "KISW.G9.KUANDI.T5_INSHA_ZA_KIUAMILIFU.SHAJARA": {
    "forms": [
     "chagua jibu sahihi",
@@ -316,6 +358,20 @@
    ],
    "mastery": "Mtoto hueleza hali ya masharti na hutambua -nge- (Angesoma angefaulu) na -ngali- (Angalijua angalikuja) zinazoonyesha sharti lisilotimia. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G9.KUSIKI.T6_KUSIKILIZA_KWA_KUFAS.LS_MSIMAMO": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T6_KUSOMA_KWA_KINA.RP_SHAIRI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "KISW.G9.KUANDI.T6_INSHA_ZA_KUBUNI.INSHA_METHALI": {
    "forms": [
     "chagua jibu sahihi",
@@ -331,6 +387,13 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua vielezi vya namna (polepole, haraka, kwa upole) na vya wakati (jana, leo, kesho, mapema, sasa). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSIKI.T7_KUSIKILIZA_KWA_KUTAT.LS_TATHMINI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "KISW.G9.SARUFI.T7_VIELEZI.VIE_MAHALI": {
    "forms": [
@@ -355,6 +418,13 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hutambua nomino za U-ZI (ukuta, kuta; wimbo, nyimbo) zinazotumia u- na zi-, na za YA-YA (maji, mafuta) zinazotumia ya-. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T9_KUSOMA_KWA_UFAHAMU.RS_USHAWISHI": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
   "KISW.G9.SARUFI.T9_NGELI_NA_UPATANISHO_.NGELI_KU_PAKUMU": {
    "forms": [
@@ -388,6 +458,13 @@
    ],
    "mastery": "Mtoto hutambua kutendana (pigana), kutendeana (pigiana) na kutendesha (somesha), na hutofautisha maana zake. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G9.KUSIKI.T12_UFAHAMU_WA_KUSIKILIZ.LS_UFAHAMU": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hukumbuka alichosikia na huchagua jibu linalolingana na matini yote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "KISW.G9.KUANDI.T12_HOTUBA_YA_KUSHAWISHI.HOTUBA_KUSHAWISHI": {
    "forms": [
     "chagua jibu sahihi",
@@ -412,6 +489,13 @@
    ],
    "mastery": "Mtoto hukanusha -nge- kwa -singe- (angekuja, asingekuja), -ngali- kwa -singali- na -ki- kwa -sipo- (akisoma, asiposoma). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   },
+  "KISW.G9.KUSOMA.T14_KUSOMA_KWA_UFAHAMU.RS_MJADALA": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
   "KISW.G9.SARUFI.T14_UDOGO_NA_UKUBWA_WA_N.UDOGO_UKUBWA": {
    "forms": [
     "chagua jibu sahihi",
@@ -427,6 +511,13 @@
     "tafuta hatua yenye kosa"
    ],
    "mastery": "Mtoto hujadili kuwa ufupisho huhifadhi habari kuu na mtiririko wake, hutumia maneno ya mfupishaji na haunakili kifungu. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "KISW.G9.KUSOMA.T15_UFUPISHO.RS_UFUPISHO": {
+   "forms": [
+    "chagua jibu sahihi",
+    "chagua jibu katika matini ya pili"
+   ],
+   "mastery": "Mtoto hupata jibu kwenye kifungu na huchagua lile linalojibu swali lote, wala hachagui jambo dogo, kinyume au jambo lisilomo kwenye matini. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
   }
  }
 }
