@@ -1,0 +1,360 @@
+{
+ "outcomes": {
+  "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.a": "identify the components of Pre-Technical Studies as a learning area",
+  "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.b": "explain the role of Pre-Technical Studies in day-to-day life",
+  "PRE_.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.c": "embrace Pre-Technical Studies in career development",
+  "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.a": "identify potential safety threats in the immediate environment",
+  "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.b": "outline safety rules and regulations for a given situation",
+  "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.c": "observe safety in the immediate environment",
+  "PRE_.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.d": "appreciate the importance of observing safety in the immediate environment",
+  "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.a": "explain the characteristics of a computer in a user environment",
+  "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.b": "classify computers used in day-to-day life",
+  "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.c": "use a computer to perform tasks in a user environment",
+  "PRE_.G7.FOUNDA.COMPUTER_CONCEPTS.d": "acknowledge the importance of different types of computers used in day-to-day life",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.a": "explain the importance of drawing as a means of communication",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.b": "distinguish between artistic and technical drawings used in technical fields",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.c": "print numbers and letters of the alphabet as used in drawing",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.d": "draw types of lines used in drawing",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.e": "illustrate symbols and abbreviations used in drawing",
+  "PRE_.G7.COMMUN.INTRODUCTION_TO_DRAWING.f": "appreciate the role of drawing in communication",
+  "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.a": "Explain the principles of free-hand sketching",
+  "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.b": "Identify techniques of free-hand sketching",
+  "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.c": "sketch lines using free-hand",
+  "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.d": "sketch 2D shapes using free hand",
+  "PRE_.G7.COMMUN.FREE_HAND_SKETCHING.e": "appreciate the importance of free-hand sketching in communication",
+  "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.a": "explain the importance of ICT tools in communication",
+  "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.b": "describe the ICT tools used in communication",
+  "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.c": "use ICT tools to enhance communication",
+  "PRE_.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.d": "acknowledge the role of communication in Pre-Technical Studies",
+  "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.a": "identify materials used in production",
+  "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.b": "distinguish between metallic and non-metallic materials found in the locality",
+  "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.c": "describe sustainable ways of using materials in production",
+  "PRE_.G7.MATERI.INTRODUCTION_TO_MATERIAL.d": "appreciate the importance of materials in production",
+  "PRE_.G7.MATERI.METALLIC_MATERIALS.a": "identify types of metallic materials used in the immediate environment",
+  "PRE_.G7.MATERI.METALLIC_MATERIALS.b": "describe the physical properties of metallic materials found in the immediate environment",
+  "PRE_.G7.MATERI.METALLIC_MATERIALS.c": "relate metallic materials to their use in the immediate environment",
+  "PRE_.G7.MATERI.METALLIC_MATERIALS.d": "appreciate the use of metallic materials in production",
+  "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.a": "identify non-metallic materials found in the locality",
+  "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.b": "categorise non-metallic materials as either synthetic or natural",
+  "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.c": "describe the physical properties of non-metallic materials found in the locality",
+  "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.d": "relate non-metallic materials to their uses in the locality",
+  "PRE_.G7.MATERI.NON_METALLIC_MATERIALS.e": "appreciate the use of non-metallic materials in production",
+  "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.a": "identify measuring and marking out tools used to perform tasks",
+  "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.b": "select measuring and marking out tools for a given task",
+  "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.c": "use measuring and marking out tools to perform a given task",
+  "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.d": "care for measuring and marking out tools to minimise damage",
+  "PRE_.G7.TOOLS_.MEASURING_AND_MARKING_OU.e": "recognise the importance of measuring and marking out tools when performing tasks",
+  "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.a": "classify computer hardware devices in a user environment",
+  "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.b": "use computer hardware devices to carry out a given task",
+  "PRE_.G7.TOOLS_.COMPUTER_HARDWARE.c": "value the importance of computer hardware devices in a user environment",
+  "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.a": "explain the importance of entrepreneurship in the community",
+  "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.b": "describe the qualities of an entrepreneur in business",
+  "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.c": "explore sources of business ideas for a business venture",
+  "PRE_.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.d": "appreciate the role of entrepreneurship in a community. By the end of the sub",
+  "PRE_.G7.ENTREP.UNIT.a": "explain the factors considered when locating a production unit",
+  "PRE_.G7.ENTREP.UNIT.b": "analyse the factors determining the size of a production unit",
+  "PRE_.G7.ENTREP.UNIT.c": "value the importance of locating a production unit in a suitable area",
+  "PRE_.G7.ENTREP.FINANCIAL_GOALS.a": "explain the importance of setting goals in financial management",
+  "PRE_.G7.ENTREP.FINANCIAL_GOALS.b": "analyse the factors to consider when setting financial goals",
+  "PRE_.G7.ENTREP.FINANCIAL_GOALS.c": "formulate financial goals for individual development",
+  "PRE_.G7.ENTREP.FINANCIAL_GOALS.d": "observe financial discipline in financial management"
+ },
+ "skills": {
+  "PRET.G7.FOUNDA.INTRODUCTION_TO_PRE_TECH.PT_INTRO": {
+   "forms": [
+    "say which strand a described activity belongs to",
+    "say how Pre-Technical Studies helps in a described daily-life job",
+    "say who uses Pre-Technical knowledge: girls, boys, workers, businesses",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the five strands (foundations and safety, communication and drawing, materials, tools and production, entrepreneurship), puts an activity in the right strand, and says the learning area is used in homes, workshops, farms, shops and offices by everybody. The child does not say it is only for boys, only for people who will become mechanics, or only done in a school workshop. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_THREATS": {
+   "forms": [
+    "name the threat in a described situation",
+    "say what could go wrong with a device",
+    "pick the situation that is a slip or a trip",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names a fall (from a height), a slip (on a wet or smooth floor), a trip (over an object in the way), a road crash and a fire from sparks, flames, faulty wires or cooking, and names theft, floods or fire, and hardware failure as threats to a device. The child does not call all of them \"accidents that cannot be prevented\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_ONLINE": {
+   "forms": [
+    "name the online threat in a described message",
+    "say what to do with a request from a stranger",
+    "pick the safe action",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names cyberbullying (hurting someone online), impersonation (pretending to be someone else), phishing (a fake message that tricks you into giving a password or PIN), hacking (breaking into an account or device) and an unknown friend request, and says: do not share a PIN or password, do not open unknown links, do not accept strangers, and tell a trusted adult. The child does not say a message is safe because it looks official. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.FOUNDA.SAFETY_IN_THE_IMMEDIATE_.SAFETY_RULES": {
+   "forms": [
+    "pick the rule that prevents a described accident",
+    "say what a worker should do in a described situation",
+    "decide who broke a rule in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says: wear the right protective clothing (overall, closed shoes, gloves, goggles), tie back long hair and do not wear loose clothes near machines, keep the floor and the bench clean and dry, use a tool only for its job, never run or play in the workshop, switch off and unplug a machine before changing anything, report every injury or accident to the teacher, and know where the fire sand, extinguisher and first aid box are. Power, heat and sharp tools are used with a teacher. The child does not say a small cut need not be reported. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CHARS": {
+   "forms": [
+    "say whether an item is data or information",
+    "pick the characteristic described",
+    "say what a computer will do with wrong input",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says data is raw facts and figures, information is data that has been processed so that it means something, and names speed, accuracy, versatility, reliability, diligence (it does not get tired), storage and consistency, with an example of each. The child says a computer follows instructions and gives wrong output from wrong input. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.FOUNDA.COMPUTER_CONCEPTS.COMP_CLASSIFY": {
+   "forms": [
+    "say how a computer is classified by function, purpose or size",
+    "sort named computers into groups",
+    "pick the type that fits a described job",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says analogue computers work with continuous measurements, digital computers work with digits (0 and 1) and hybrid computers have both; general-purpose computers do many jobs and special-purpose computers one; and super, mainframe, mini and micro computers differ in size and power, with desktops, laptops, tablets and smartphones as micro computers. The child does not say a smartphone is not a computer. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_PURPOSE": {
+   "forms": [
+    "say what a drawing communicates better than words",
+    "sort a described drawing as artistic or technical",
+    "say who uses technical drawings",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a drawing shows shape, size and parts that words describe badly and that anyone can read the same plan, and that an artistic drawing shows feeling or beauty while a technical drawing gives exact shape and size by rules so a worker can make the thing. The child does not say technical drawings are for decoration or that artists never measure. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_LINES": {
+   "forms": [
+    "say what a given line type shows",
+    "pick the line type for a given job",
+    "read a described line on a plan",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the thick continuous line draws the outline and visible edges, the thin continuous line draws dimension lines and projection lines, the dashed line shows hidden detail, and the chain line (long and short dashes) shows the centre of a round part or the line of symmetry. Drawing the lines is practical work seen by the teacher. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.INTRODUCTION_TO_DRAWING.DRAW_SYMBOLS": {
+   "forms": [
+    "say what a symbol or abbreviation means",
+    "pick the symbol for a described meaning",
+    "read a note on a drawing",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says ⌀ means diameter, R radius, ⊥ perpendicular (at a right angle), ▢ square, ℄ centre line, and DRG drawing, A/F across flats, A/C across corners, I/D inside diameter and O/D outside diameter. The child does not mix up diameter and radius or inside and outside diameter. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_PRINCIPLES": {
+   "forms": [
+    "pick the right way to start a sketch",
+    "say what free-hand sketching is",
+    "decide who followed the principles",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a free-hand sketch is drawn quickly without a ruler or compass, starts with light lines that are firmed up later, looks first at the whole shape and its proportions, and uses the arm and a loose hand, not tight fingers. The child does not say a sketch must be exact and ruled, or that dark pressed lines come first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.FREE_HAND_SKETCHING.SKETCH_TECHNIQUES": {
+   "forms": [
+    "say which technique a described step belongs to",
+    "pick the technique for a given job",
+    "match a shading style to its marks",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the box method fits a light box round the object first, the centreline method draws a centre line and builds a matching shape on each side, the hand compass method draws a circle or an arc by turning the paper or the hand about a fixed finger, and that shading uses hatching (parallel lines), cross-hatching (two sets of lines crossing), stippling (dots) and blending (smooth change from dark to light). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.COMMUN.ICT_TOOLS_IN_COMMUNICATI.ICT_TOOLS": {
+   "forms": [
+    "say why ICT tools help communication",
+    "pick the tool for a described message",
+    "say what a tool needs (airtime, data, an internet link)",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says ICT tools carry messages fast, over long distances and to many people, and keep a record; email sends written messages and files, a mobile phone calls and sends texts, video conferencing lets people see and hear one another live over the internet, social networking shares messages and pictures with groups, and online collaboration lets several people work on one file. The child says some tools need airtime or data and an internet link, and does not say ICT tools cost nothing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_METAL_NONMETAL": {
+   "forms": [
+    "say whether a named material is metallic or non-metallic",
+    "pick the material a given product is made from",
+    "sort a list of local materials",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a material is what a thing is made from, and sorts steel, aluminium, copper and iron as metallic, and wood, stone, plastic, rubber, glass, ceramics, paper and cement as non-metallic, and says a finished product (a chair, a sufuria) is not a material. The child does not call glass or a stone metallic because it is hard or shiny. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.INTRODUCTION_TO_MATERIAL.MAT_SUSTAINABLE": {
+   "forms": [
+    "pick the sustainable choice in a described job",
+    "say what reduce, reuse and recycle mean",
+    "decide which worker saves materials",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says sustainable use means using materials so they last and are not wasted: plan the cut to waste less, use offcuts, repair and reuse, recycle scrap metal and plastic, choose local materials, and plant trees where timber is taken. The child does not say plentiful materials may be wasted. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_TYPES": {
+   "forms": [
+    "say which metal a described piece is",
+    "say what a magnet test shows",
+    "pick the metal that matches a checklist",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says steel is grey, hard and sticks to a magnet, aluminium is light, silvery and does not stick to a magnet, and copper is reddish-brown and does not stick to a magnet. The child does not say aluminium is a kind of steel or that all metals stick to a magnet. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_PROPERTIES": {
+   "forms": [
+    "say which property a described test shows",
+    "say whether a metal conducts, sticks to a magnet or rusts",
+    "pick the metal with a given property",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says metals are usually shiny, conduct heat and electricity (copper very well), can be hammered into sheets and drawn into wire, and that only iron and steel (not aluminium or copper) stick to a magnet and rust. The child does not say every metal is magnetic or that every metal rusts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.METALLIC_MATERIALS.METAL_USES": {
+   "forms": [
+    "pick the metal for a given use",
+    "say which property makes a metal fit a use",
+    "match a jua kali product to its metal",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says copper is used for electric wire because it conducts well, aluminium for sufurias and window frames because it is light and conducts heat, and steel for nails, panga blades, jembe blades and bridges because it is hard and strong. The child gives the property that makes the metal suit the job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_CLASS": {
+   "forms": [
+    "say whether a named material is natural or synthetic",
+    "say what synthetic means",
+    "sort a list of materials"
+   ],
+   "mastery": "The child says natural materials come from plants, animals or the ground (wood, stone, cotton, wool, sisal, leather) and synthetic materials are made by people from chemicals (plastics such as polythene and PVC, nylon, synthetic rubber). The child does not say synthetic means \"fake\" or that natural means \"never changed by people\". Materials that are made from natural ones (paper, glass, cement, ceramics) are left to the teacher to place. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_PROPERTIES": {
+   "forms": [
+    "say which property a described test shows",
+    "pick the material that has a given property",
+    "say what happens to a material in heat",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says wood and paper burn, plastics soften and melt in heat, stone and ceramics (clay pots, bricks, tiles) do not burn, glass is hard but breaks, rubber stretches and returns, and plastics and rubber do not carry electricity. The child does not say all non-metals burn or that hard means it cannot break. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.MATERI.NON_METALLIC_MATERIALS.NONMETAL_USES": {
+   "forms": [
+    "pick the material for a given use",
+    "say which property makes a material fit a use",
+    "match a local product to its material",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says wood suits furniture and handles, stone building foundations, plastic water tanks, pipes and jerricans, rubber tyres and gloves, glass windows, ceramics tiles and sinks, and cement joins blocks and makes concrete, and gives the property that makes each suit its job. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MEAS_TOOLS": {
+   "forms": [
+    "say what a named measuring tool measures",
+    "pick the tool for a quantity",
+    "say what a reading is in",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a tape measure measures long lengths and curved things, a steel rule short lengths (in cm and mm), callipers the thickness or diameter of a round or small part (inside or outside), a weighing balance mass, a stopwatch time, an ammeter current in amperes and a voltmeter voltage in volts. The child does not say a voltmeter measures current. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.MARK_TOOLS": {
+   "forms": [
+    "say what a named marking out tool does",
+    "pick the tool for a marking job",
+    "say which surface a tool marks",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a divider marks circles and arcs and steps off equal distances, a try-square checks and marks right angles, a marking gauge scribes a line parallel to an edge, a dot punch makes a small dent to mark a centre, a scriber scratches a fine line on metal, a pencil marks wood and paper, and a marking knife cuts a fine line on wood to start a saw cut. The child does not say a dot punch makes the hole or a divider cuts. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CHOOSE": {
+   "forms": [
+    "pick the tool for a described task",
+    "say why one tool fits better than another",
+    "decide who chose well in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child chooses a tape measure for the length of a wall or a person, callipers for the diameter of a bolt, a try-square for a right angle on timber, a divider for a circle on sheet metal, a dot punch before drilling, a scriber for a line on steel, and says why the other tool would give a poorer result. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.MEASURING_AND_MARKING_OU.TOOL_CARE": {
+   "forms": [
+    "pick the way to care for a tool",
+    "say what goes wrong when a tool is not cared for",
+    "decide who looked after tools well",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says tools are wiped clean and dry after use, steel tools get a light film of oil against rust, they are kept in a dry box or rack, the points of dividers and scribers are covered, callipers and steel rules are not dropped, bent, or used as hammers or levers, and tools are returned after the lesson. The child does not say tools may be left wet or thrown in a heap. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.TOOLS_.COMPUTER_HARDWARE.HW_CLASSIFY": {
+   "forms": [
+    "say whether a device is input, output or storage",
+    "pick the device for a described job",
+    "say hardcopy or softcopy",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says input devices send data in (keyboard, mouse, scanner, microphone, touch screen, digital camera), output devices give results out as hardcopy (printer, plotter: on paper) or softcopy (monitor, speaker, projector: on a screen or as sound), and storage devices keep data (hard disk, flash disk, memory card, CD or DVD). Hardware is the parts you can touch. The child does not call a printer an input device. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_MEANING": {
+   "forms": [
+    "say whether a person is an entrepreneur",
+    "say how a business helps its community",
+    "pick the importance of entrepreneurship",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an entrepreneur sees a need or chance, starts a business and takes the risk to run it; entrepreneurship is doing that; and it matters because it makes jobs, goods and services, income and taxes, and uses local skills and materials. The child does not say every worker is an entrepreneur, that only rich people can be, or that it matters only to the owner. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_QUALITIES": {
+   "forms": [
+    "say which quality a described person shows",
+    "pick the quality that fits a situation",
+    "say what a good entrepreneur does when a business fails",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says an entrepreneur is creative, hardworking, honest, determined (does not give up at the first failure), a good communicator, self-confident and takes calculated risks (counts the cost first). The child does not say risk-taking means gambling or that cheating customers is clever. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.INTRODUCTION_TO_ENTREPRE.ENT_IDEAS": {
+   "forms": [
+    "say where a described business idea came from",
+    "pick a source of a business idea",
+    "say what makes an idea workable",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says business ideas come from the learner's own skills and hobbies, from problems and needs in the community, from watching other businesses and improving them, from waste that can be reused, from media, the internet and trade fairs, and from family and friends. The child does not say an idea must be completely new or that a lot of money must come first. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.UNIT.UNIT_LOCATION": {
+   "forms": [
+    "pick the factor that decides the place for a described business",
+    "say what is wrong with a poor site",
+    "decide who chose a site well",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a production unit (a posho mill, salon, barber shop, welding workshop, cybercafe) is placed with these in mind: nearness to customers, to raw materials, to labour, roads and transport, power and water, safety from theft, the cost of rent or land, competition and permits. The child does not say the town centre is always best or that cheapest rent is the only factor. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.UNIT.UNIT_SIZE": {
+   "forms": [
+    "pick the factor that limits the size of a described business",
+    "say why starting small can be wise",
+    "decide who sized a business sensibly",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the size of a unit depends on the capital available, the size of the market (how much customers will buy), the supply of raw materials, labour and skills, the machines and technology, the space, how well it can be managed, and the law. The child does not say bigger is always better. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_GOALS": {
+   "forms": [
+    "say why a person sets a financial goal",
+    "pick the factor to think about before setting a goal",
+    "say what a sensible goal considers",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says financial goals give direction, help save for needs and emergencies, show progress and stop wasteful spending, and are set with the person's income, expenses, needs before wants, the cost of the goal and the time available in mind. The child does not say goals are only for rich people or that a goal is the same as a wish. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_SMART": {
+   "forms": [
+    "say what S, M, A, R and T stand for",
+    "pick the SMART goal",
+    "say which letter a weak goal fails",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says SMART goals are Specific, Measurable, Achievable, Realistic and Time-bound, picks the goal that names an amount, a way and a date, and says which part a weak goal such as \"save more money\" leaves out. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "PRET.G7.ENTREP.FINANCIAL_GOALS.FIN_NUMBERS": {
+   "forms": [
+    "work out how many weeks a saving goal takes",
+    "work out profit on a batch of goods",
+    "say whether a goal is reached",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child works out weeks to save as the goal divided by the amount saved a week, profit per item as selling price minus buying price, total profit as profit per item times the number sold, and compares the answer with the goal. The child does not call the selling price the profit. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
