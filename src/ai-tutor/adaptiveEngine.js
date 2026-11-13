@@ -110,6 +110,16 @@ const longSecure = (skill, progress) => {
   return !(sp?.attempts > 0 && !sp.mastered);   // struggle cancels it, as above
 };
 
+// Fluency drills: never more than one grade below the practice anchor
+// (placement or class grade, whichever is higher), in curriculum grades.
+const FLUENCY_FLOOR_GAP = 1;
+const belowDrillFloor = (skill, progress, c) => {
+  const lvl = Math.max(progress?.placementGrade ?? 0, progress?.declaredGrade ?? 0);
+  if (!lvl) return false;
+  const g = gradeOf(skill, c.curriculum);
+  return Number.isFinite(g) && g < lvl - FLUENCY_FLOOR_GAP;
+};
+
 export const prereqsMet = (skillId, progress, ctx) => {
   const c = resolveCtx(ctx);
   const skill = c.skills[skillId];
@@ -368,7 +378,15 @@ export const getFluencyPractice = (progress, ctx) => {
     // Activities. Building automaticity on work a learner finished years
     // ago buys nothing; the point of fluency practice is to free working
     // memory for what they are learning NOW.
-    if (!sp.practisedHere && longSecure(skill, progress)) continue;
+    //
+    // F4 (21 Oct): that three-grade write-off window was still too wide for
+    // a DRILL. A strong Grade 4 placed at Grade 5 got a timed rep on
+    // G3_COUNTING in every sitting, a third of their practice two grades
+    // below where they placed, and the same at every grade 4-9. A fluency rep
+    // comes from the grade they are at or the one just below, in the child's
+    // own curriculum (a CBC child's grades, not the graph's). Work practised
+    // here (a foundation rebuilt after a real miss) stays drillable.
+    if (!sp.practisedHere && belowDrillFloor(skill, progress, c)) continue;
     out.push({
       ...skill,
       type: 'fluency',

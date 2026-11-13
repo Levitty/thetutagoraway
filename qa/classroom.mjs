@@ -13,6 +13,8 @@
 //
 //   fit       the skill is at or near the child's grade; a strong child never
 //             gets work more than one grade below
+//   drills    a fluency rep is never more than one grade below the child's
+//             placement or class grade (the higher), unless practised here (F4)
 //   key       the expected answer is right, worked out independently (own
 //             expression parser for identities/equations, arithmetic for
 //             "a op b" questions)
@@ -396,11 +398,19 @@ function runChild(child) {
   const progress = { declaredGrade: child.grade, placementGrade, diagnosed: true, skills: processDiagnosticResults(balances, ctx) };
   // Practice sittings.
   const practiceGrades = [];
+  const practised = new Set();
   for (let s = 0; s < SITTINGS; s++) {
     const path = getRecommendedPath(progress, ctx);
     for (const x of path.filter(x => x.type === 'gap')) {
       const ok = !(G(x.id) > placementGrade); tally('gaps', ok);
       if (!ok) fail('gaps', child, x.id, null, `Grade ${G(x.id)} skill called a gap for a child placed at Grade ${placementGrade}`);
+    }
+    // drills (F4): a fluency rep is at most one grade below where the child
+    // is (placement or class grade, the higher), unless practised here.
+    const anchor = Math.max(placementGrade || 0, child.grade);
+    for (const x of path.slice(0, 3).filter(x => x.type === 'fluency')) {
+      const ok = practised.has(x.id) || !(G(x.id) < anchor - 1); tally('drills', ok);
+      if (!ok) fail('drills', child, x.id, null, `Grade ${G(x.id)} fluency drill for a ${child.kind} child at Grade ${anchor}`);
     }
     if (process.env.QA_TRACE === `${child.grade}${child.kind}`) console.error(`sitting ${s + 1}: ` + path.slice(0, 3).map(x => `${x.id}(${x.type}${progress.skills[x.id]?.mastered ? ',mastered' : ''})`).join(', '));
     const sitting = { seen: new Set(), last: null };
@@ -414,6 +424,7 @@ function runChild(child) {
         sitting.last = { grade: G(step.id), correct: ok };
         practiceGrades.push(G(step.id));
       }
+      practised.add(step.id);
       const sp = progress.skills[step.id] || {};
       progress.skills[step.id] = { ...sp, attempts: (sp.attempts || 0) + 8, correct: (sp.correct || 0) + right, mastered: right >= 7 || !!sp.mastered, passed: right >= 6, lastPractice: Date.now() };
     }
