@@ -104,7 +104,7 @@ const NEG_ID = [
   W('NEG', 'Ni neno lipi limekanushwa?', 'hakusoma', 'anasoma:NOT_NEG alisoma:NOT_NEG atasoma:NOT_NEG', '"Hakusoma" lina ha-ku- na linaonyesha kwamba hakusoma.'),
   W('NEG', 'Ni neno lipi limekanushwa?', 'hatapika', 'anapika:NOT_NEG alipika:NOT_NEG atapika:NOT_NEG', '"Hatapika" lina ha-ta- na linaonyesha kwamba hatapika.'),
   W('NEG', 'Ni neno lipi limekanushwa?', 'sisomi', 'ninasoma:NOT_NEG nilisoma:NOT_NEG nitasoma:NOT_NEG', '"Sisomi" lina si- na linaonyesha kwamba sisomi.'),
-  W('NEG', 'Ni neno lipi limekanushwa?', 'hawaimbi', 'wanaimba:NOT_NEG walimba:NOT_NEG wataimba:NOT_NEG', '"Hawaimbi" lina ha- na linaonyesha kwamba hawaimbi.'),
+  W('NEG', 'Ni neno lipi limekanushwa?', 'hawaimbi', 'wanaimba:NOT_NEG waliimba:NOT_NEG wataimba:NOT_NEG', '"Hawaimbi" lina ha- na linaonyesha kwamba hawaimbi.'),
   W('NEG', 'Ni neno lipi limekanushwa?', 'hatucheza', 'tunacheza:NOT_NEG tulicheza:NOT_NEG tutacheza:NOT_NEG', '"Hatucheza" lina ha- na linaonyesha kwamba hatucheza.'),
 ];
 

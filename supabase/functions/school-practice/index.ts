@@ -32747,10 +32747,10 @@ var PRON_ID = [
   ['Ni neno lipi ni kiwakilishi: "Mimi ninapenda kusoma vitabu."', "Mimi", ["kusoma", "M4_PRON_NOUN"], ["ninapenda", "M4_PRON_NOUN"], ["vitabu", "M4_PRON_NOUN"], '"Mimi" linasimama mahali pa jina la anayesema. Ni kiwakilishi.']
 ];
 var ADV_GAP = [
-  ["Mtoto alikimbia ___ kuelekea nyumbani.", "haraka", ["mrefu", "M4_ADV_ADJ"], ["barabara", "M4_ADV_NOUN"], ["mtoto", "M4_ADV_NOUN"], "Haraka ni kielezi: kinaonyesha mtoto alikimbiaje."],
-  ["Wanafunzi wanaimba ___ darasani.", "vizuri", ["nzuri", "M4_ADV_ADJ"], ["wimbo", "M4_ADV_NOUN"], ["darasa", "M4_ADV_NOUN"], 'Vizuri ni kielezi: kinaonyesha jinsi wanavyoimba. "Nzuri" ni kivumishi cha nomino.'],
-  ["Bibi anatembea ___ kwa sababu ni mzee.", "polepole", ["mrefu", "M4_ADV_ADJ"], ["fimbo", "M4_ADV_NOUN"], ["bibi", "M4_ADV_NOUN"], "Polepole ni kielezi cha jinsi: kinaonyesha bibi anatembeaje."],
-  ["Baba alirudi nyumbani ___ jioni.", "jana", ["nzuri", "M4_ADV_ADJ"], ["gari", "M4_ADV_NOUN"], ["nyumba", "M4_ADV_NOUN"], "Jana ni kielezi cha wakati: kinaonyesha lini baba alirudi."],
+  ["Mtoto alikimbia ___ kuelekea nyumbani.", "haraka|upesi|kwa haraka", ["mrefu", "M4_ADV_ADJ"], ["barabara", "M4_ADV_NOUN"], ["mtoto", "M4_ADV_NOUN"], "Haraka ni kielezi: kinaonyesha mtoto alikimbiaje."],
+  ["Wanafunzi wanaimba ___ darasani.", "vizuri|kwa uzuri", ["nzuri", "M4_ADV_ADJ"], ["wimbo", "M4_ADV_NOUN"], ["darasa", "M4_ADV_NOUN"], 'Vizuri ni kielezi: kinaonyesha jinsi wanavyoimba. "Nzuri" ni kivumishi cha nomino.'],
+  ["Bibi anatembea ___ kwa sababu ni mzee.", "polepole|taratibu", ["mrefu", "M4_ADV_ADJ"], ["fimbo", "M4_ADV_NOUN"], ["bibi", "M4_ADV_NOUN"], "Polepole ni kielezi cha jinsi: kinaonyesha bibi anatembeaje."],
+  ["Baba alirudi nyumbani ___ jioni.", "jana|leo", ["nzuri", "M4_ADV_ADJ"], ["gari", "M4_ADV_NOUN"], ["nyumba", "M4_ADV_NOUN"], "Jana ni kielezi cha wakati: kinaonyesha lini baba alirudi."],
   ["Wageni wanaishi ___ ya mji huu.", "mbali", ["wengi", "M4_ADV_ADJ"], ["mji", "M4_ADV_NOUN"], ["wageni", "M4_ADV_NOUN"], "Mbali ni kielezi cha mahali: kinaonyesha wageni wanaishi wapi."],
   ["Mama anazungumza ___ na jirani.", "kwa upole|upole", ["mpole", "M4_ADV_ADJ"], ["jirani", "M4_ADV_NOUN"], ["mama", "M4_ADV_NOUN"], "Kwa upole ni kielezi cha jinsi: kinaonyesha mama anazungumzaje."],
   ["Tutaenda sokoni ___ asubuhi na mapema.", "kesho", ["kubwa", "M4_ADV_ADJ"], ["soko", "M4_ADV_NOUN"], ["asubuhi", "M4_ADV_NOUN"], "Kesho ni kielezi cha wakati: kinaonyesha lini tutaenda."]
@@ -32994,7 +32994,7 @@ var FAMILIES43 = [
   // ---- LI-YA
   ...trio6("liya.upatanisho", "SARUFI.T6_NGELI_YA_LI_YA.LI_YA", LIYA, { stem: CS, gapStem: CG, oc: ["a", "a", "c"], topic: "kuhusu ngeli ya LI-YA", hints: H11("Hesabu: kimoja au vingi?", "Wingi wa nomino hizi huanza na ma-.") }),
   ...one("liya.nomino", "SARUFI.T6_NGELI_YA_LI_YA.LI_YA", LIYA_ID, { stem: "Chagua jibu sahihi.", oc: "b", tag: "nomino", rung: 1, hints: H11("Fikiria wingi wa nomino: unaanza na ma-?", "Nomino za ngeli nyingine zina wingi tofauti.") }),
-  ...trio6("liya.wingi", "SARUFI.T6_NGELI_YA_LI_YA.LI_YA", LIYA_PL, { stem: "Chagua wingi sahihi.", gapStem: "Andika wingi wa nomino:", tag: "wingi", oc: ["c", "c", "c"], topic: "kuhusu wingi wa nomino za LI-YA", hints: H11("Wingi wa nomino hizi huanza na ma-.", "Nomino zinazoanza na ji- hupoteza ji- katika wingi, nyingine hubaki nazo.") }),
+  ...trio6("liya.wingi", "SARUFI.T6_NGELI_YA_LI_YA.LI_YA", LIYA_PL, { stem: "Chagua wingi sahihi.", gapStem: "Andika wingi wa nomino:", tag: "wingi", oc: ["c", "c", "c"], topic: "kuhusu wingi wa nomino za LI-YA", hints: H11("Wingi wa nomino hizi huanza na ma-.", "Baadhi ya nomino zinazoanza na ji- hupoteza ji- katika wingi, nyingine hubaki nazo.") }),
   // ---- KI-VI
   ...trio6("kivi.upatanisho", "SARUFI.T7_NGELI_YA_KI_VI.KI_VI", KIVI, { stem: CS, gapStem: CG, oc: ["a", "a", "c"], topic: "kuhusu ngeli ya KI-VI", hints: H11("Hesabu: kimoja au vingi?", "Nomino hizi huanza na ki- au vi-.") }),
   ...one("kivi.nomino", "SARUFI.T7_NGELI_YA_KI_VI.KI_VI", KIVI_ID, { stem: "Chagua jibu sahihi.", oc: "b", tag: "nomino", rung: 1, hints: H11("Nomino za ngeli hii huanza na ki- na wingi wake huanza na vi-.", "Mti, jiwe na mtoto huanza na herufi nyingine.") }),
@@ -33096,7 +33096,7 @@ var NEG_ID = [
   W2("NEG", "Ni neno lipi limekanushwa?", "hakusoma", "anasoma:NOT_NEG alisoma:NOT_NEG atasoma:NOT_NEG", '"Hakusoma" lina ha-ku- na linaonyesha kwamba hakusoma.'),
   W2("NEG", "Ni neno lipi limekanushwa?", "hatapika", "anapika:NOT_NEG alipika:NOT_NEG atapika:NOT_NEG", '"Hatapika" lina ha-ta- na linaonyesha kwamba hatapika.'),
   W2("NEG", "Ni neno lipi limekanushwa?", "sisomi", "ninasoma:NOT_NEG nilisoma:NOT_NEG nitasoma:NOT_NEG", '"Sisomi" lina si- na linaonyesha kwamba sisomi.'),
-  W2("NEG", "Ni neno lipi limekanushwa?", "hawaimbi", "wanaimba:NOT_NEG walimba:NOT_NEG wataimba:NOT_NEG", '"Hawaimbi" lina ha- na linaonyesha kwamba hawaimbi.'),
+  W2("NEG", "Ni neno lipi limekanushwa?", "hawaimbi", "wanaimba:NOT_NEG waliimba:NOT_NEG wataimba:NOT_NEG", '"Hawaimbi" lina ha- na linaonyesha kwamba hawaimbi.'),
   W2("NEG", "Ni neno lipi limekanushwa?", "hatucheza", "tunacheza:NOT_NEG tulicheza:NOT_NEG tutacheza:NOT_NEG", '"Hatucheza" lina ha- na linaonyesha kwamba hatucheza.')
 ];
 var UKU = [
@@ -33383,7 +33383,7 @@ var MSA_GAP = [
   ["Mvua ilianza kunyesha ___, hatukuitarajia.", "ghafla", ["polepole", "M4_MSA_OPPOSITE"], ["taratibu", "M4_MSA_OPPOSITE"], ["jana", "M4_MSA_NEARBY"], "Ghafla ni bila kutarajia."],
   ["Wakulima wanasubiri mvua kwa sababu mazao yameanza ___.", "kukauka", ["kukaa", "M4_MSA_LOOKALIKE"], ["kukua", "M4_MSA_OPPOSITE"], ["kuiva", "M4_MSA_NEARBY"], "Kukauka ni kuwa bila maji au unyevu."],
   ["Watoto walifurahi na ___ baada ya mvua kunyesha.", "kushangilia", ["kushangaa", "M4_MSA_LOOKALIKE"], ["kulia", "M4_MSA_OPPOSITE"], ["kunyamaza", "M4_MSA_OPPOSITE"], "Kushangilia ni kufurahi kwa sauti na vitendo."],
-  ["Mkulima huanza ___ miche asubuhi ili ikue.", "kumwagilia", ["kumwaga", "M4_MSA_LOOKALIKE"], ["kukata", "M4_MSA_OPPOSITE"], ["kupanda", "M4_MSA_NEARBY"], "Kumwagilia ni kuweka maji kwenye mimea."]
+  ["Mkulima huanza ___ miche asubuhi ili ikue.", "kumwagilia", ["kumwaga", "M4_MSA_LOOKALIKE"], ["kukata", "M4_MSA_OPPOSITE"], ["kuchoma", "M4_MSA_NEARBY"], "Kumwagilia ni kuweka maji kwenye mimea."]
 ];
 var SHA_DEF = [
   ["Mstari mmoja wa shairi huitwa ___.", "mshororo", ["ubeti", "M4_SHA_UBETI_MIX"], ["aya", "M4_SHA_PARAGRAPH"], ["kichwa", "M4_SHA_PARAGRAPH"], "Mshororo ni mstari mmoja wa shairi."],
@@ -33638,7 +33638,7 @@ var MAZ_SET = [
   W3("MAZ", "Ni mazungumzo yapi si rasmi?", "mazungumzo na rafiki uwanjani", "hotuba_ya_mwalimu_mkuu_kwenye_gwaride:FORMAL mahojiano_ya_kazi_ofisini:FORMAL mkutano_wa_wazazi_na_walimu:FORMAL", "Mazungumzo na rafiki uwanjani si rasmi. Hotuba, mahojiano na mikutano ni rasmi."),
   W3("MAZ", "Ni mazungumzo yapi si rasmi?", "mazungumzo ya kaka na dada nyumbani", "mahojiano_ya_mwandishi_na_waziri:FORMAL mkutano_wa_bunge:FORMAL hotuba_ya_mgeni_rasmi_shuleni:FORMAL", "Mazungumzo ya ndugu nyumbani si rasmi."),
   W3("MAZ", "Ni mazungumzo yapi si rasmi?", "kupiga soga na marafiki wakati wa mapumziko", "mjadala_wa_bunge:FORMAL mahojiano_ya_kazi:FORMAL hotuba_ya_siku_ya_shule:FORMAL", "Kupiga soga na marafiki si rasmi."),
-  W3("MAZ", "Ni mazungumzo yapi si rasmi?", "mazungumzo na binamu yako wakati wa kucheza", "mkutano_rasmi_wa_kamati_ya_shule:FORMAL hotuba_ya_waziri:FORMAL mahojiano_ya_redio:FORMAL", "Mazungumzo ya wapendanao wakicheza si rasmi."),
+  W3("MAZ", "Ni mazungumzo yapi si rasmi?", "mazungumzo na binamu yako wakati wa kucheza", "mkutano_rasmi_wa_kamati_ya_shule:FORMAL hotuba_ya_waziri:FORMAL mahojiano_ya_redio:FORMAL", "Mazungumzo ya binamu wakicheza si rasmi."),
   W3("MAZ", "Ni mazungumzo yapi si rasmi?", "mazungumzo na jirani nyumbani kwao", "mkutano_wa_chama:FORMAL mahojiano_ya_televisheni:FORMAL hotuba_ya_gavana:FORMAL", "Mazungumzo ya majirani nyumbani si rasmi.")
 ];
 var MAZ_WORDS = [

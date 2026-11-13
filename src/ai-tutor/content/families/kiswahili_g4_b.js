@@ -158,7 +158,7 @@ export const FAMILIES = [
   // ---- LI-YA
   ...trio('liya.upatanisho', 'SARUFI.T6_NGELI_YA_LI_YA.LI_YA', LIYA, { stem: CS, gapStem: CG, oc: ['a', 'a', 'c'], topic: 'kuhusu ngeli ya LI-YA', hints: H('Hesabu: kimoja au vingi?', 'Wingi wa nomino hizi huanza na ma-.') }),
   ...one('liya.nomino', 'SARUFI.T6_NGELI_YA_LI_YA.LI_YA', LIYA_ID, { stem: 'Chagua jibu sahihi.', oc: 'b', tag: 'nomino', rung: 1, hints: H('Fikiria wingi wa nomino: unaanza na ma-?', 'Nomino za ngeli nyingine zina wingi tofauti.') }),
-  ...trio('liya.wingi', 'SARUFI.T6_NGELI_YA_LI_YA.LI_YA', LIYA_PL, { stem: 'Chagua wingi sahihi.', gapStem: 'Andika wingi wa nomino:', tag: 'wingi', oc: ['c', 'c', 'c'], topic: 'kuhusu wingi wa nomino za LI-YA', hints: H('Wingi wa nomino hizi huanza na ma-.', 'Nomino zinazoanza na ji- hupoteza ji- katika wingi, nyingine hubaki nazo.') }),
+  ...trio('liya.wingi', 'SARUFI.T6_NGELI_YA_LI_YA.LI_YA', LIYA_PL, { stem: 'Chagua wingi sahihi.', gapStem: 'Andika wingi wa nomino:', tag: 'wingi', oc: ['c', 'c', 'c'], topic: 'kuhusu wingi wa nomino za LI-YA', hints: H('Wingi wa nomino hizi huanza na ma-.', 'Baadhi ya nomino zinazoanza na ji- hupoteza ji- katika wingi, nyingine hubaki nazo.') }),
   // ---- KI-VI
   ...trio('kivi.upatanisho', 'SARUFI.T7_NGELI_YA_KI_VI.KI_VI', KIVI, { stem: CS, gapStem: CG, oc: ['a', 'a', 'c'], topic: 'kuhusu ngeli ya KI-VI', hints: H('Hesabu: kimoja au vingi?', 'Nomino hizi huanza na ki- au vi-.') }),
   ...one('kivi.nomino', 'SARUFI.T7_NGELI_YA_KI_VI.KI_VI', KIVI_ID, { stem: 'Chagua jibu sahihi.', oc: 'b', tag: 'nomino', rung: 1, hints: H('Nomino za ngeli hii huanza na ki- na wingi wake huanza na vi-.', 'Mti, jiwe na mtoto huanza na herufi nyingine.') }),

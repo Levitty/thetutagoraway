@@ -203,7 +203,7 @@ const MSA_GAP = [
   ['Mvua ilianza kunyesha ___, hatukuitarajia.', 'ghafla', ['polepole', 'M4_MSA_OPPOSITE'], ['taratibu', 'M4_MSA_OPPOSITE'], ['jana', 'M4_MSA_NEARBY'], 'Ghafla ni bila kutarajia.'],
   ['Wakulima wanasubiri mvua kwa sababu mazao yameanza ___.', 'kukauka', ['kukaa', 'M4_MSA_LOOKALIKE'], ['kukua', 'M4_MSA_OPPOSITE'], ['kuiva', 'M4_MSA_NEARBY'], 'Kukauka ni kuwa bila maji au unyevu.'],
   ['Watoto walifurahi na ___ baada ya mvua kunyesha.', 'kushangilia', ['kushangaa', 'M4_MSA_LOOKALIKE'], ['kulia', 'M4_MSA_OPPOSITE'], ['kunyamaza', 'M4_MSA_OPPOSITE'], 'Kushangilia ni kufurahi kwa sauti na vitendo.'],
-  ['Mkulima huanza ___ miche asubuhi ili ikue.', 'kumwagilia', ['kumwaga', 'M4_MSA_LOOKALIKE'], ['kukata', 'M4_MSA_OPPOSITE'], ['kupanda', 'M4_MSA_NEARBY'], 'Kumwagilia ni kuweka maji kwenye mimea.'],
+  ['Mkulima huanza ___ miche asubuhi ili ikue.', 'kumwagilia', ['kumwaga', 'M4_MSA_LOOKALIKE'], ['kukata', 'M4_MSA_OPPOSITE'], ['kuchoma', 'M4_MSA_NEARBY'], 'Kumwagilia ni kuweka maji kwenye mimea.'],
 ];
 const SHA_DEF = [
   ['Mstari mmoja wa shairi huitwa ___.', 'mshororo', ['ubeti', 'M4_SHA_UBETI_MIX'], ['aya', 'M4_SHA_PARAGRAPH'], ['kichwa', 'M4_SHA_PARAGRAPH'], 'Mshororo ni mstari mmoja wa shairi.'],

@@ -91,10 +91,10 @@ const PRON_ID = [
 
 // ---------------------------------------------------------------- vielezi
 const ADV_GAP = [
-  ['Mtoto alikimbia ___ kuelekea nyumbani.', 'haraka', ['mrefu', 'M4_ADV_ADJ'], ['barabara', 'M4_ADV_NOUN'], ['mtoto', 'M4_ADV_NOUN'], 'Haraka ni kielezi: kinaonyesha mtoto alikimbiaje.'],
-  ['Wanafunzi wanaimba ___ darasani.', 'vizuri', ['nzuri', 'M4_ADV_ADJ'], ['wimbo', 'M4_ADV_NOUN'], ['darasa', 'M4_ADV_NOUN'], 'Vizuri ni kielezi: kinaonyesha jinsi wanavyoimba. "Nzuri" ni kivumishi cha nomino.'],
-  ['Bibi anatembea ___ kwa sababu ni mzee.', 'polepole', ['mrefu', 'M4_ADV_ADJ'], ['fimbo', 'M4_ADV_NOUN'], ['bibi', 'M4_ADV_NOUN'], 'Polepole ni kielezi cha jinsi: kinaonyesha bibi anatembeaje.'],
-  ['Baba alirudi nyumbani ___ jioni.', 'jana', ['nzuri', 'M4_ADV_ADJ'], ['gari', 'M4_ADV_NOUN'], ['nyumba', 'M4_ADV_NOUN'], 'Jana ni kielezi cha wakati: kinaonyesha lini baba alirudi.'],
+  ['Mtoto alikimbia ___ kuelekea nyumbani.', 'haraka|upesi|kwa haraka', ['mrefu', 'M4_ADV_ADJ'], ['barabara', 'M4_ADV_NOUN'], ['mtoto', 'M4_ADV_NOUN'], 'Haraka ni kielezi: kinaonyesha mtoto alikimbiaje.'],
+  ['Wanafunzi wanaimba ___ darasani.', 'vizuri|kwa uzuri', ['nzuri', 'M4_ADV_ADJ'], ['wimbo', 'M4_ADV_NOUN'], ['darasa', 'M4_ADV_NOUN'], 'Vizuri ni kielezi: kinaonyesha jinsi wanavyoimba. "Nzuri" ni kivumishi cha nomino.'],
+  ['Bibi anatembea ___ kwa sababu ni mzee.', 'polepole|taratibu', ['mrefu', 'M4_ADV_ADJ'], ['fimbo', 'M4_ADV_NOUN'], ['bibi', 'M4_ADV_NOUN'], 'Polepole ni kielezi cha jinsi: kinaonyesha bibi anatembeaje.'],
+  ['Baba alirudi nyumbani ___ jioni.', 'jana|leo', ['nzuri', 'M4_ADV_ADJ'], ['gari', 'M4_ADV_NOUN'], ['nyumba', 'M4_ADV_NOUN'], 'Jana ni kielezi cha wakati: kinaonyesha lini baba alirudi.'],
   ['Wageni wanaishi ___ ya mji huu.', 'mbali', ['wengi', 'M4_ADV_ADJ'], ['mji', 'M4_ADV_NOUN'], ['wageni', 'M4_ADV_NOUN'], 'Mbali ni kielezi cha mahali: kinaonyesha wageni wanaishi wapi.'],
   ['Mama anazungumza ___ na jirani.', 'kwa upole|upole', ['mpole', 'M4_ADV_ADJ'], ['jirani', 'M4_ADV_NOUN'], ['mama', 'M4_ADV_NOUN'], 'Kwa upole ni kielezi cha jinsi: kinaonyesha mama anazungumzaje.'],
   ['Tutaenda sokoni ___ asubuhi na mapema.', 'kesho', ['kubwa', 'M4_ADV_ADJ'], ['soko', 'M4_ADV_NOUN'], ['asubuhi', 'M4_ADV_NOUN'], 'Kesho ni kielezi cha wakati: kinaonyesha lini tutaenda.'],

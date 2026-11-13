@@ -155,7 +155,7 @@ const MAZ_SET = [
   W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'mazungumzo na rafiki uwanjani', 'hotuba_ya_mwalimu_mkuu_kwenye_gwaride:FORMAL mahojiano_ya_kazi_ofisini:FORMAL mkutano_wa_wazazi_na_walimu:FORMAL', 'Mazungumzo na rafiki uwanjani si rasmi. Hotuba, mahojiano na mikutano ni rasmi.'),
   W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'mazungumzo ya kaka na dada nyumbani', 'mahojiano_ya_mwandishi_na_waziri:FORMAL mkutano_wa_bunge:FORMAL hotuba_ya_mgeni_rasmi_shuleni:FORMAL', 'Mazungumzo ya ndugu nyumbani si rasmi.'),
   W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'kupiga soga na marafiki wakati wa mapumziko', 'mjadala_wa_bunge:FORMAL mahojiano_ya_kazi:FORMAL hotuba_ya_siku_ya_shule:FORMAL', 'Kupiga soga na marafiki si rasmi.'),
-  W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'mazungumzo na binamu yako wakati wa kucheza', 'mkutano_rasmi_wa_kamati_ya_shule:FORMAL hotuba_ya_waziri:FORMAL mahojiano_ya_redio:FORMAL', 'Mazungumzo ya wapendanao wakicheza si rasmi.'),
+  W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'mazungumzo na binamu yako wakati wa kucheza', 'mkutano_rasmi_wa_kamati_ya_shule:FORMAL hotuba_ya_waziri:FORMAL mahojiano_ya_redio:FORMAL', 'Mazungumzo ya binamu wakicheza si rasmi.'),
   W('MAZ', 'Ni mazungumzo yapi si rasmi?', 'mazungumzo na jirani nyumbani kwao', 'mkutano_wa_chama:FORMAL mahojiano_ya_televisheni:FORMAL hotuba_ya_gavana:FORMAL', 'Mazungumzo ya majirani nyumbani si rasmi.'),
 ];
 const MAZ_WORDS = [
