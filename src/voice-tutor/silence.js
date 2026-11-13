@@ -16,12 +16,17 @@
 // state across the probes: a probe's own hand-over never starts the count again, so the probes
 // can never loop. Only the child (speech, ink, typing) starts it again.
 //
+// THINKING ALOUD (13 Nov 2026, free round): after a reply that was only thinking ("umm... so..."), the child is still
+// working it out, so the wait before each probe is doubled as for a slow child (w.thinking, from the lesson state's
+// `fillers`). In run 2026-11-12-1900 a nudge came 8 s after "Ehh". Only something the child really says ends it.
+//
 // THE PACE (12 Nov 2026): a child who answers slowly but correctly (the lesson state's `slow`, orchestrator.js: a right
 // answer after a probe or after a long think) gets twice the time before each probe. The wait carries it (w.slow); a
 // hand-over that names it (slow: true/false) sets it, one that does not keeps it.
 //
 // Pure. Tested in tests/voice-tutor-silence.test.mjs. The page keeps one wait in a ref:
-//   handOver(w, { doing, probe, now, slow })   HOREB finished a turn (slow: the lesson state's `slow`, when known)
+//   handOver(w, { doing, probe, now, slow, thinking })   HOREB finished a turn (slow: the lesson state's `slow`;
+//                                        thinking: the lesson state's `fillers` above 0, the child's last reply was only thinking)
 //   activity(w, now)                     the child spoke, wrote or typed
 //   nextProbe(w, now)                    -> null, or { kind, silent_s, reason } to ask for now
 //   probed(w, now)                       the probe was asked for
@@ -43,14 +48,15 @@ export const PROBE_KINDS = ['answer_nudge', 'answer_smaller', 'task_checkin', 't
 // A slow, careful child (the pace state) waits this many times as long before each probe.
 export const SLOW_FACTOR = 2;
 
-export const newWait = (doing = 'answer', now = 0, slow = false) => ({ doing: DOINGS.includes(doing) ? doing : 'answer', since: now, lastHandAt: now, probes: 0, slow: slow === true });
+export const newWait = (doing = 'answer', now = 0, slow = false, thinking = false) => ({ doing: DOINGS.includes(doing) ? doing : 'answer', since: now, lastHandAt: now, probes: 0, slow: slow === true, thinking: thinking === true });
 
 /** HOREB handed over. After a probe the wait goes on (same count); after any other turn it starts again. */
-export function handOver(w, { doing = 'answer', probe = false, now = 0, slow = undefined } = {}) {
+export function handOver(w, { doing = 'answer', probe = false, now = 0, slow = undefined, thinking = undefined } = {}) {
   const d = DOINGS.includes(doing) ? doing : 'answer';
   const sl = typeof slow === 'boolean' ? slow : !!w?.slow;
-  if (probe && w && w.doing === d) return { ...w, lastHandAt: now, slow: sl };
-  return newWait(d, now, sl);
+  const th = typeof thinking === 'boolean' ? thinking : !!w?.thinking;
+  if (probe && w && w.doing === d) return { ...w, lastHandAt: now, slow: sl, thinking: th };
+  return newWait(d, now, sl, th);
 }
 
 /** The child did something (spoke, wrote, typed): the wait starts again from now. */
@@ -73,7 +79,7 @@ export function nextProbe(w, now, c = SILENCE) {
     return null;
   }
   const r0 = w.doing === 'talk' ? c.talk : c.answer;
-  const k = w.slow ? SLOW_FACTOR : 1;
+  const k = w.slow || w.thinking ? SLOW_FACTOR : 1;
   const r = { firstMs: r0.firstMs * k, secondTotalMs: r0.secondTotalMs * k, secondQuietMs: r0.secondQuietMs * k };
   const first = w.doing === 'talk' ? 'talk_nudge' : 'answer_nudge';
   const second = w.doing === 'talk' ? 'talk_again' : 'answer_smaller';

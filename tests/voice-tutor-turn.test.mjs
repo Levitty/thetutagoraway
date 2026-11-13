@@ -451,7 +451,9 @@ test('a silence probe: the reason and the exact step shape in the context, a sho
   assert.equal(req.output_config.effort, 'medium');
   const text = req.messages[0].content[0].text;
   assert.match(text, /silent for 7 s after your question\. Nudge kindly, without giving the answer/);
-  assert.match(text, /Reply with exactly this shape \(the words go in "text"\): \{"steps":\[\{"cmd":"say","text":"Take your time\. Look at the bar\.","move":"Wait and nudge"\},\{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"answer"\}\]\}/);
+  // The shape carries no words to copy (13 Nov 2026: "Take your time. Look at the bar." came back word for word).
+  assert.match(text, /Reply with exactly this shape, your own words for this moment in "text" \(never a line you have said before[^)]*\): \{"steps":\[\{"cmd":"say","text":"\.\.\.","move":"Wait and nudge"\},\{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"answer"\}\]\}/);
+  assert.doesNotMatch(text, /"text":"Take your time/);
   assert.match(text, /This is a probe: at most 22 words/);
   assert.match(text, /<child>\(no words: silent for 7 s/);
   assert.deepEqual(r.body.tester.probe, { kind: 'answer_nudge', silent_s: 7 });
@@ -609,11 +611,17 @@ test('a stopped turn recovers in context: what was asked, what the child did; ne
   assert.deepEqual(recoverLines({ rule: 'stage', openPrompt: 'How many pieces are there now?' }).lines, ['How many pieces are there now?']);
   assert.deepEqual(recoverLines({ probe: { kind: 'task_checkin' }, doing: 'task', turnIndex: 1, board: [{ cmd: 'fraction_bar', id: 'b', parts: 4 }] }), { lines: ['Take your time.', 'Tell me when you are done.'], doing: 'task' });
   assert.deepEqual(recoverLines({ rule: 'lost', openPrompt: 'What fraction is shaded?', board: [{ cmd: 'shape', id: 'c', kind: 'circle', parts: 4 }] }).lines, ['That is okay.', 'Can you put your finger on one part of the circle?']);
-  assert.deepEqual(recoverLines({ rule: 'close', found: ['1/2', '2/4'] }).lines, ['Today you found one half and two quarters.', 'What is one thing you will remember?']);
+  assert.deepEqual(recoverLines({ rule: 'close', found: ['1/2', '2/4'] }).lines, ['Today you found one half and two quarters.', 'What is one thing you learned today?']);
   // A line with no fact to carry changes with the turn: never the same twice running.
   assert.notDeepEqual(recoverLines({ probe: { kind: 'answer_nudge' }, turnIndex: 4 }).lines, recoverLines({ probe: { kind: 'answer_nudge' }, turnIndex: 5 }).lines);
   for (const rule of ['diagnose', 'change', 'question', 'stage', null]) assert.doesNotMatch(recoverLines({ rule, message: 'why?', openPrompt: 'How many?' }).lines.join(' '), /thank you for telling me|good question|let me ask you again/i, `${rule}`);
-  assert.deepEqual(recoverLines({ rule: 'open' }).lines, [DISCLOSURE, 'Today we will find fractions that are the same amount.', 'Have you ever shared a chapati with someone?']);
+  // The teacher's opening (13 Nov 2026): the goal, then one question on what the child already knows; the close: summary,
+  // what the child can now do, what comes next, then the end.
+  assert.deepEqual(recoverLines({ rule: 'open' }).lines, [DISCLOSURE, 'Today we are learning about fractions that look different but are the same amount.', 'What do you already know about a half?']);
+  const fin = recoverLines({ rule: 'close', closeStep: 'final', found: ['1/2', '2/4'], target: 'MATH.G5.NUMBER.FRACTIONS.EQUIVALENT_FRACTIONS' });
+  assert.deepEqual(fin.lines, ['Today you found one half and two quarters.', 'Now you can show two fractions that are the same amount, with a picture.', 'Next time we will look at simplest form.']);
+  assert.equal(fin.end.cmd, 'end_session');
+  assert.match(recoverLines({ rule: 'stop', target: 'MATH.G5.NUMBER.FRACTIONS.SIMPLIFY_FRACTIONS' }).lines.join(' '), /Next time we will look at adding fractions\./);
   assert.equal(recoverLines({ rule: 'stop' }).end.cmd, 'end_session');
   assert.equal(recoverLines({ rule: 'care' }).doing, 'talk');
   for (const rule of ['open', 'close', 'care', 'care-return', 'care-wait', 'stop', 'bored', 'press', 'fresh-check', 'move-on', 'reason', 'diagnose', 'change', 'reteach', 'thinking', 'lost', 'question', 'stage', 'prerequisite', null]) {

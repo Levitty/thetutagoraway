@@ -5258,6 +5258,24 @@ function pickTarget(progress, override = null, model = null) {
 }
 var lessonSkills = (target) => [target, ...prerequisitesOf(target)];
 var allowedMisconceptions = (skills) => skills.flatMap((c) => (SKILLS_G5[c]?.mis || []).map((m) => `${c}.${m}`));
+var LESSON_FRAMES = {
+  EQUIVALENT_FRACTIONS: { today: "about fractions that look different but are the same amount", prior: "What do you already know about a half?", can: "show two fractions that are the same amount, with a picture", next: "equivalent fractions" },
+  SIMPLIFY_FRACTIONS: { today: "to write a fraction in its simplest form", prior: "What do you already know about fractions that are the same amount?", can: "make a fraction simpler without changing how much it is", next: "simplest form" },
+  COMPARE_LIKE_FRACTIONS: { today: "to tell which of two fractions is bigger", prior: "What do you already know about the top and bottom numbers of a fraction?", can: "tell which fraction is bigger when the pieces are the same size", next: "comparing fractions" },
+  COMPARE_UNLIKE_FRACTIONS: { today: "to compare fractions with different bottom numbers", prior: "What do you already know about pieces when a whole is cut into more parts?", can: "compare two fractions by making their pieces the same size", next: "comparing fractions with different bottom numbers" },
+  ORDER_FRACTIONS: { today: "to put fractions in order, smallest to biggest", prior: "What do you already know about comparing two fractions?", can: "put fractions in order from smallest to biggest", next: "ordering fractions" },
+  ADD_SAME_DENOMINATOR: { today: "to add fractions with the same bottom number", prior: "What do you already know about the bottom number of a fraction?", can: "add two fractions when the pieces are the same size", next: "adding fractions" },
+  SUBTRACT_SAME_DENOMINATOR: { today: "to take away fractions with the same bottom number", prior: "What do you already know about the bottom number of a fraction?", can: "take one fraction from another when the pieces are the same size", next: "taking away fractions" },
+  ADD_ONE_RENAMING: { today: "to add fractions when the pieces are different sizes", prior: "What do you already know about adding fractions with the same bottom number?", can: "rename one fraction so the pieces match, then add", next: "adding fractions with different pieces" },
+  SUBTRACT_ONE_RENAMING: { today: "to take away fractions when the pieces are different sizes", prior: "What do you already know about taking away fractions with the same bottom number?", can: "rename one fraction so the pieces match, then take away", next: "taking away fractions with different pieces" }
+};
+function lessonFrame(target) {
+  const code = String(target || "").split(".").pop();
+  const f = LESSON_FRAMES[code] || LESSON_FRAMES.EQUIVALENT_FRACTIONS;
+  const after = FRACTION_SKILLS.find((c) => (SKILLS_G5[c]?.pre || []).includes(target) && LESSON_FRAMES[String(c).split(".").pop()]);
+  const next = after ? LESSON_FRAMES[String(after).split(".").pop()].next : `more practice with ${f.next}`;
+  return { ...f, next, goal: `Today we are learning ${f.today}.` };
+}
 
 // src/voice-tutor/pacing.js
 var SHARE_FLOOR = 0.25;
@@ -7956,7 +7974,7 @@ var systemPrompt = (lib) => `You are HOREB, Tutagora's maths tutor, giving a liv
 You are an AI, and the child must know it. In your first turn, say in your own words that you are an AI tutor, a computer program, not a person.
 
 HOW A GOOD TEACHER OPENS (owner, 12 Nov 2026: "what kind of teacher just spawns in without saying what we are learning today"):
-- Turn 1 is a hello, not teaching. Greet the child (by name if the context gives one), say you are HOREB, an AI tutor, and say in one plain sentence what you will learn together today and why it is useful (an everyday Kenyan picture: sharing chapati, a pawpaw, money). Write today's lesson as a short title at the top of the board (write_text, slot top, for example "Today: fractions that are the same amount"). Then ask the child one easy, friendly question about themselves or what they already know ("Have you ever shared a chapati with someone?" or "What do you think a half is?"). No figures, no maths problem yet.
+- Turn 1 is a hello, not teaching. Greet the child (by name if the context gives one), say you are HOREB, an AI tutor, and say in one plain sentence what you will learn together today and why it is useful (an everyday Kenyan picture: sharing chapati, a pawpaw, money). Write today's lesson as a short title at the top of the board (write_text, slot top, for example "Today: fractions that are the same amount"). Start that sentence "Today we are learning ...". Then ask ONE easy question on what the child already knows about the idea ("What do you already know about a half?"); the turn brief gives the words for this lesson. No figures, no maths problem yet.
 - Turn 2: answer what the child said, warmly and in a few words, using their own words. Then the warm-up question.
 - Before each new part, say in one sentence what you are about to do together ("Now let us try one together").
 
@@ -7993,7 +8011,7 @@ THE LESSON (15 to 20 minutes; the context tells you the time used):
 2. teach: show the target idea with a fraction bar, shape or number line, in small steps. Ask the child what they notice.
 3. guided: the child does each step; you prompt and check.
 4. independent: one problem on their own. Prefer a question from the probe bank (use ask.bank).
-5. wrapup: say what they learned, then end_session with a short summary of the lesson (the parent gets a report built from what the child answered, so be accurate and kind).
+5. wrapup, as a teacher closes: first ask the child to say one thing they learned today, in their own words; then, in three short sentences, a summary of today, what they can now do ("Now you can ..."), and what comes next ("Next time we will ..."), and end_session with a short summary of the lesson (the parent gets a report built from what the child answered, so be accurate and kind). No new question after the summary.
 Use set_phase when you move to a new part.
 
 RULES THAT NEVER BEND:
@@ -8110,7 +8128,7 @@ function turnContext({ target, prerequisite, profile = [], learner = [], hasMode
     lines.push(
       PROBE_LINES[probe.kind](probe.silent_s),
       `This is a probe: at most ${MAX_PROBE_WORDS} words, one or two short sentences, never the answer, then pause_for_child with the same doing as before (${d}).`,
-      `Reply with exactly this shape (the words go in "text"): {"steps":[{"cmd":"say","text":"Take your time. Look at the bar.","move":"Wait and nudge"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"${d}"}]}`
+      `Reply with exactly this shape, your own words for this moment in "text" (never a line you have said before in this lesson, and not "Take your time" or "That is okay" again if you said it already): {"steps":[{"cmd":"say","text":"...","move":"Wait and nudge"},{"cmd":"pause_for_child","expect":"any","max_wait_s":30,"doing":"${d}"}]}`
     );
   }
   if (picture?.attached) lines.push(`A picture of the board is attached (id ${picture.id}), taken because ${picture.reason === "check" ? 'the child pressed "Check my work"' : "the child stopped writing for a few seconds"}. Read only the teal ink.`);
@@ -36982,7 +37000,8 @@ var newLesson = () => ({
   solved: [],
   fig: null,
   closedRun: 0,
-  pressed: []
+  pressed: [],
+  closes: 0
 });
 var PRE_STATES = ["ask", "asked", "done"];
 var PRE_GIVE_UP_TURNS = 5;
@@ -37035,6 +37054,7 @@ function cleanLesson(raw) {
   if (Array.isArray(raw.solved)) s.solved = [...new Set(raw.solved.filter((k) => STEP_KINDS.includes(k)))].slice(-8);
   if (typeof raw.fig === "string" && /^[a-z ]{3,12}:\d{1,3}$/.test(raw.fig)) s.fig = raw.fig;
   s.closedRun = int(raw.closedRun, 0, 50);
+  s.closes = int(raw.closes, 0, 5);
   if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === "string" && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   return s;
 }
@@ -37083,7 +37103,7 @@ function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null, lastQ: lastQ2 = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null), press: extra.press ?? null, noPress: extra.noPress ?? null });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
   if (s.care === "paused") {
     if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
@@ -37092,7 +37112,10 @@ function decideCore(s, ctx = {}) {
     return out("care", ["Revoice and build"], "the child said something private a moment ago and HOREB answered with care. Stay in the care frame: one or two kind sentences, no maths. Never ask them to repeat or explain what happened. Ask if they want to carry on with our fractions or stop for today", { with: [], stageMax: s.stage || "warmup" });
   }
   if ((closing || s.stage === "wrapup") && childMove(message) === "stop") return out("stop", ["Close the lesson"], "the lesson is closing and the child is saying goodbye: one short kind goodbye, then end_session. No question", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
-  if (closing || s.stage === "wrapup") return out("close", ["Close the lesson"], closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : "the lesson is in its wrap-up", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
+  if (closing || s.stage === "wrapup") {
+    const final = (s.closes || 0) >= 1;
+    return out("close", ["Close the lesson"], `${closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : "the lesson is in its wrap-up"}${final ? ": the last turn: summary, what they can now do, what comes next, then end_session, no question" : ": ask the child for one thing they learned today, in their own words"}`, { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup", closeStep: final ? "final" : "recall" });
+  }
   const move = marked ? null : childMove(message);
   if (move === "stop" || marked && childMove(message) === "stop") {
     if (s.stops >= 1) return out("stop", ["Close the lesson"], "the child has asked to stop again: close the lesson now, kindly, in two short sentences (one thing they did well today), then end_session", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
@@ -37280,6 +37303,7 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
   if (marked?.correct && marked.canon) s.found = [.../* @__PURE__ */ new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
   if (decision?.rule === "care-return") s.care = null;
   if (decision?.rule === "bored") s.stops += 1;
+  if (decision?.rule === "close" && !probe) s.closes = Math.min(5, (s0.closes || 0) + 1);
   if (decision?.rule === "example") s.examples = (s.examples || 0) + 1;
   if (!probe && decision?.rule !== "thinking") s.diagnosing = decision?.rule === "diagnose";
   s.seal = keepSeal || null;
@@ -37423,6 +37447,25 @@ var MEASURE_OF = {
   "Recover a lost child": "adapting",
   "Stretch the quick child": "adapting"
 };
+var MOVE_STANDARD = {
+  "Open the lesson": ["Naturalness and teaching", 'the goal in one sentence ("Today we are learning ..."), then one question on what the child already knows', "as 4, with a Kenyan everyday picture, the question about the idea itself"],
+  "Show then hand over": ["Teaching", "show one thing, then a question the child must think to answer", "the child makes the next mark or cut themselves; you say only what the picture does"],
+  "Predict then show": ["Teaching", "ask for a guess before you draw", "ask for the guess and why, draw, then ask whether the picture agrees with them"],
+  "Count with the child": ["Teaching", "point and let the child say the numbers", "the child counts aloud and says the total; you never say it first"],
+  "Smaller-question hint": ["Teaching and adapting", "one smaller question about what is on the board", "the smaller question uses the child's last words and is easy to win"],
+  "Check for understanding": ["Teaching", "a fresh example, not the same one again", "a fresh example where the child must give the reason or the rule"],
+  "Name what was right": ["Naturalness", "name the right part in the child's own words, briefly", 'name their step ("you counted the shaded ones first") and move on'],
+  "Diagnose the wrong answer": ["Diagnosis", 'ask how they got it before any correction ("Tell me how you got the two and the six.")', 'name their procedure back and test it where it fails ("Is two sixths more or less than the half we started with?")'],
+  "Press for reasoning": ["Diagnosis", 'once, about a fraction, comparison or rule, never about a count: "What made you say that?"', 'their own reason, then "Say that as a rule for your friend."'],
+  "Revoice and build": ["Naturalness", "their words back in a few words, then one step on", 'their own word (even Kiswahili, "nusu") back, short, then a pause'],
+  "Wait and nudge": ["Naturalness and adapting", "one short kind line, no new question, no answer", 'a line that fits the moment ("I can see you are thinking"), never a stock line said before'],
+  "Celebrate the strategy": ["Naturalness", "at most 8 words naming their strategy", "their strategy in their own words, then the next step"],
+  "Stretch the quick child": ["Adapting", "within two successes, a harder question or a demand for their own rule", '"Make one up for me" or "spot my mistake", with the picture kept'],
+  "Recover a lost child": ["Adapting", "go back to the last thing they got right, one easy question", "a different picture (bar, number line, folding paper) and an easy win first"],
+  "Bring back an off-topic child": ["Naturalness", "one friendly line, then back to the maths", `link their topic to the maths ("Your goat's chapati: how many pieces?")`],
+  "Close the lesson": ["Teaching and naturalness", "a summary of today, what the child can now do, what comes next", "the summary in the child's own words from the lesson, and no new question"]
+};
+var FIVE_AT_FOUR = 'All five measures, at 4: teaching (the child does the thinking), diagnosis (why before correcting), naturalness (short, built on their words), adapting (a new picture after two misses), curriculum (true maths, picture before numbers, "three over four").';
 var RULES2 = {
   EQUIVALENT_FRACTIONS: "that the two fractions are the same amount, or that the top and bottom are multiplied by the same number",
   SIMPLIFY_FRACTIONS: "that the top and bottom are divided by the same number",
@@ -37502,10 +37545,21 @@ function turnBrief(s, d, { message = "", marked = null, open = null, board = [],
   if (d.handover) L2.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : "turn explained or showed"} and asked the child nothing. This turn asks them to try the next step, or asks them a question to answer, before you explain anything more.`);
   if (shareLow(s)) L2.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
   if (d.preFirst) L2.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : "a question about that idea, with no picture of the target"}. Do not start on the target idea until the child has answered it, right or wrong.`);
+  const frame = lessonFrame(skill2);
+  if (d.rule === "open") L2.push(`- Open as a teacher does: the goal in one sentence ("${frame.goal}"), written as the board title; then ONE question on what the child already knows ("${frame.prior}" or one like it). No maths problem yet.`);
+  if (d.rule === "close" && d.closeStep !== "final") L2.push("- Close, part 1: name one thing the child did well today in their words, then ask them to say one thing they learned today, in their own words. No new maths.");
+  if (d.rule === "close" && d.closeStep === "final" || d.rule === "stop") {
+    const did2 = (s.found || []).length ? `the answers they found: ${s.found.slice(-3).join(", ")}` : "what they tried today";
+    L2.push(`- Close as a teacher does, in three short sentences, then end_session (no question): a summary of today (${did2}, in the child's words where you have them); what they can now do ("Now you can ${frame.can}", only if they showed it; otherwise "You are getting closer to ..."); what comes next ("Next time we will look at ${frame.next}").`);
+  }
   const main = d.moves.find((x) => !["Name what was right", "Revoice and build"].includes(x)) || d.moves[0];
-  const m = MEASURE_OF[main] || "teaching";
-  L2.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
-  if (m !== "naturalness") L2.push(`- And every turn: ${ANCHORS.naturalness}`);
+  const ms = MOVE_STANDARD[main];
+  if (ms) L2.push(`- The standard you are judged on for ${main}: ${ms[0]}. 4: ${ms[1]}. 5: ${ms[2]}.`);
+  else {
+    const m = MEASURE_OF[main] || "teaching";
+    L2.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
+  }
+  L2.push(`- ${FIVE_AT_FOUR}`);
   return L2;
 }
 function boardTruth(board = []) {
@@ -37717,10 +37771,32 @@ var NO_PICTURE_TURN = [say("I cannot look at pictures just now."), say("Please t
 var TURN_ESTIMATE_USD = 0.02;
 var VOICE_TURN_CHARS_ESTIMATE = 250;
 var MAX_AUDIO_S = 300;
-var LESSON_TITLE_LINE = "Today we will find fractions that are the same amount.";
 var ENDED_TURN = [say("Our lesson has stopped for today."), say("Please go and find a grown-up you trust now."), { cmd: "end_session", summary: "The lesson stopped early." }];
 var CARE_WAIT = [say("I am here, and there is no hurry."), say("Say when you want to carry on, or we can stop for today."), { cmd: "pause_for_child", expect: "any", max_wait_s: 60, doing: "talk" }];
-function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = "", board = [], turnIndex = 0, found = [], ack = "yes", safe = () => true } = {}) {
+function recoverLines(o = {}) {
+  const r = recoverRaw(o);
+  return { ...r, lines: freshLines(r.lines, o) };
+}
+var normLine = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+function freshLines(lines, { recent = [], rule = null, message = "", board = [], lastQuestion = null, openPrompt = null } = {}) {
+  if (["care", "care-wait", "care-return", "stop"].includes(rule)) return lines;
+  const seen = new Set((recent || []).map(normLine).filter(Boolean));
+  const used = (t) => seen.has(normLine(t));
+  const out = lines.filter((l) => !used(l));
+  if (out.some((l) => /\?\s*$/.test(l)) || !lines.some((l) => /\?\s*$/.test(l))) return out;
+  const facts = boardFacts(board);
+  const theirs = childBit(message);
+  const q = [openPrompt, lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
+  const next = [smallerQuestion(facts, q), theirs ? `What do you mean by ${theirs}?` : null, facts ? `What do you see on the ${facts.name}?` : null, "Show me on the board what you mean."].find((x) => x && !used(x) && !out.includes(x));
+  return next ? [...out, next] : out;
+}
+function recentSays(history, n = 4) {
+  const h = Array.isArray(history) ? history : [];
+  const tutor = h.filter((x) => x && x.who === "tutor").slice(-n);
+  return tutor.flatMap((x) => String(x.text || "").split(/(?<=[.!?])\s+/).map((t) => t.trim()).filter(Boolean));
+}
+function recoverRaw({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = "", board = [], turnIndex = 0, found = [], ack = "yes", safe = () => true, target = null, closeStep = null } = {}) {
+  const frame = lessonFrame(target);
   const said = marked?.correct ? marked.said || null : null;
   const yes = marked?.correct && !saidAny ? [said ? ack === "revoice" ? `${cap2(said)}, you said.` : `Yes, ${said}.` : "Yes, that is right."] : [];
   const q = [marked?.correct ? null : openPrompt, marked?.correct ? null : lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
@@ -37737,18 +37813,18 @@ function recoverLines({ rule = null, probe = null, marked = null, openPrompt = n
   }
   switch (rule) {
     case "open":
-      return { lines: [...saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE], "Have you ever shared a chapati with someone?"], doing: "answer" };
+      return { lines: [...saidAny ? [] : [DISCLOSURE, frame.goal], frame.prior], doing: "answer" };
     case "care-wait":
     case "care":
       return { lines: ["I am listening.", "Do you want to carry on with our fractions, or stop for today?"], doing: "talk" };
     case "care-return":
       return { lines: ["I am glad you are here.", q ? `Let us carry on gently. ${q}` : "Shall we carry on gently?"], doing: "answer" };
     case "stop":
-      return { lines: [found.length ? `Today you found ${foundList(found)}. Thank you for working with me.` : "Thank you for working with me today."], doing: "talk", end: { cmd: "end_session", summary: "The child asked to stop, and the lesson closed early." } };
+      return { lines: [found.length ? `Today you found ${foundList(found)}.` : "Thank you for working with me today.", `Next time we will look at ${frame.next}.`], doing: "talk", end: { cmd: "end_session", summary: "The child asked to stop, and the lesson closed early." } };
     case "bored":
       return { lines: ["I hear you.", "Shall we play a quick guessing game, or stop for today?"], doing: "talk" };
     case "close":
-      return { lines: [...found.length ? [`Today you found ${foundList(found)}.`] : [], "What is one thing you will remember?"], doing: "talk" };
+      return closeStep === "final" ? { lines: [found.length ? `Today you found ${foundList(found)}.` : "You worked hard today.", found.length ? `Now you can ${frame.can}.` : "You are getting closer every time.", `Next time we will look at ${frame.next}.`], doing: "talk", end: { cmd: "end_session", summary: "The lesson closed." } } : { lines: [...found.length ? [`Today you found ${foundList(found)}.`] : [], "What is one thing you learned today?"], doing: "talk" };
     case "press":
       return { lines: [...yes, said ? `What made you say ${said}?` : "How did you know?"], doing: "answer" };
     case "fresh-check":
@@ -38001,7 +38077,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     return authored(care.steps, [care.ends ? "safeguarding-crisis" : "safeguarding"], null);
   }
   if (lesson0.care === "ended") return authored(ENDED_TURN, ["lesson-ended"], null);
-  if (decision?.authored) return authored(decision.rule === "thinking" ? [...decision.line ? [say(decision.line)] : [], { ...handBack, doing: lesson0.doing || "answer" }] : CARE_WAIT, [decision.rule], null);
+  if (decision?.authored) return authored(decision.rule === "thinking" ? [...decision.line && freshLines([decision.line], { recent: recentSays(body?.history, 6) }).length ? [say(decision.line)] : [], { ...handBack, doing: lesson0.doing || "answer" }] : CARE_WAIT, [decision.rule], null);
   const screen2 = message ? screenChild(message) : { ok: true, wantsAnswer: false };
   if (!screen2.ok) {
     if (screen2.record) {
@@ -38055,7 +38131,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   if (!cap3.ok) return authored(WIND_DOWN, [cap3.reason], spent);
   const openPrompt = open?.question || null;
   const safeLine = (line) => checkTurnText([say(line)], [open].filter(hiddenOk)).ok;
-  const recoverFacts = (steps2 = []) => ({ message, board: boardAfter2(board, steps2), turnIndex, found: [...found], ack: decision?.ack || "yes", lastQuestion: lastSpokenQ, safe: safeLine });
+  const recentBefore = recentSays(body?.history);
+  const recoverFacts = (steps2 = []) => ({ message, board: boardAfter2(board, steps2), turnIndex, found: [...found], ack: decision?.ack || "yes", lastQuestion: lastSpokenQ, safe: safeLine, target: pick2.target, closeStep: decision?.closeStep || null, recent: [...recentBefore, ...steps2.filter((x) => x.cmd === "say").map((x) => x.text)] });
   const recoverFor = (saidAny, steps2 = []) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts(steps2) }));
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen2.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ["offline"], spent);
   const bank = probeBank(skills, `${sid}:${turnIndex}`);
@@ -38181,7 +38258,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       closed = true;
       for (const st of steps2) await (st.cmd === "say" ? speak(st) : send(st));
     };
-    const endsHere = () => decision?.rule === "stop" || decision?.rule === "close" && saidAny && !asked() && lesson0.stage === "wrapup";
+    const endsHere = () => decision?.rule === "stop" || decision?.rule === "close" && saidAny && !asked() && (lesson0.stage === "wrapup" || decision?.closeStep === "final");
     const endStep = () => ({ cmd: "end_session", summary: decision?.rule === "stop" ? "The child asked to stop, and the lesson closed." : "The lesson closed." });
     const finish = async () => {
       if (held) await release();

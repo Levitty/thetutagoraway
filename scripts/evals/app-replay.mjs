@@ -21,6 +21,7 @@ import { figOf } from '../../src/voice-tutor/orchestrator.js';
 import { lastQuestionOnly } from '../../src/voice-tutor/tutorTurn.js';
 import { sealable } from '../../src/voice-tutor/commands.js';
 import { SILENCE } from '../../src/voice-tutor/silence.js';
+import { freshLines } from '../../src/voice-tutor/tutorTurn.js';
 
 // The fallback lines the code played before 12 Nov 2026 evening (tutorTurn.js recoverLines), now gone.
 export const OLD_FIXED = [/^Look at the (circle|bar|grid|shape|number line)( again)?\.$/, /^Which part is shaded\?$/, /Look at the (circle|bar|grid|shape)\. Which part is shaded\?/, /^Point at the part of the \w+ you mean\.$/, /^You asked .+\.$/, /^Keep thinking out loud\.$/, /^Go on, I am listening\.$/];
@@ -38,7 +39,8 @@ const boardAfter = (board, steps) => {
 
 /** One lesson (habits.mjs parseTranscript) replayed for the app's own layers. */
 export function replayAppLesson(tr) {
-  const out = { dropped: 0, droppedSoft: 0, fixed: 0, claims: [], claimsCode: 0, fillers: 0, fillerLines: 0, unsureGuess: 0, unsureRightGuess: 0, misheard: 0, misheardAsQuestion: 0, badSeals: [], earlyNudge: 0, earlySmaller: 0, probes: 0 };
+  const out = { dropped: 0, droppedSoft: 0, fixed: 0, claims: [], claimsCode: 0, fillers: 0, fillerLines: 0, unsureGuess: 0, unsureRightGuess: 0, misheard: 0, misheardAsQuestion: 0, badSeals: [], earlyNudge: 0, earlySmaller: 0, probes: 0, sameLine: 0, sameLineCode: 0, sameLineCodeAfter: 0, probeCopy: 0 };
+  const tutorTurns = [];
   let board = []; const recentQs = []; let fillersInRow = 0; let tyt = false; let openNumeric = false;
   for (const t of tr.turns) {
     // The child's words.
@@ -66,6 +68,17 @@ export function replayAppLesson(tr) {
     }
     board = boardAfter(board, t.steps);
     const says = t.steps.filter((x) => x.cmd === 'say');
+    // Free round 13 Nov 2026: a sentence said again within the last four tutor turns (the code's, and the model's), what
+    // freshLines would leave of the code's, and probes that open with the probe shape's old example words.
+    const recent = tutorTurns.slice(-4).flat();
+    const nl = (x) => String(x).toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+    const sentencesOf = (x) => String(x.text).split(/(?<=[.!?])\s+/).map((y) => y.trim()).filter(Boolean);
+    const seen = new Set(recent.map(nl));
+    const codeLines = [];
+    for (const x of says) for (const y of sentencesOf(x)) { if (seen.has(nl(y))) { out.sameLine += 1; if (!x.move) out.sameLineCode += 1; } if (!x.move) codeLines.push(y); }
+    if (codeLines.length && t.rule !== 'care' && !/safeguarding/.test(t.guard)) out.sameLineCodeAfter += freshLines(codeLines, { recent }).filter((y) => seen.has(nl(y))).length;
+    if (t.probe && says[0] && /^take your time\b/i.test(says[0].text) && says[0].move) out.probeCopy += 1;
+    tutorTurns.push(says.flatMap(sentencesOf));
     for (const x of says) {
       const code = !x.move;
       if (code && OLD_FIXED.some((re) => re.test(x.text))) out.fixed += 1;
@@ -159,7 +172,7 @@ const STEP_KEYS = ['presses', 'pressTrivial', 'pressAgain', 'pressHelped', 'pres
 export function replayAppRun(parsed) {
   const lessons = parsed.map((tr) => ({ scenario: tr.scenario, title: tr.title, ...replayAppLesson(tr), step: replayStepLesson(tr) }));
   const sum = (k) => lessons.reduce((n, l) => n + (Array.isArray(l[k]) ? l[k].length : l[k]), 0);
-  const keys = ['dropped', 'droppedSoft', 'fixed', 'claims', 'claimsCode', 'fillers', 'fillerLines', 'unsureGuess', 'unsureRightGuess', 'misheard', 'misheardAsQuestion', 'badSeals', 'earlyNudge', 'earlySmaller', 'probes'];
+  const keys = ['dropped', 'droppedSoft', 'fixed', 'claims', 'claimsCode', 'fillers', 'fillerLines', 'unsureGuess', 'unsureRightGuess', 'misheard', 'misheardAsQuestion', 'badSeals', 'earlyNudge', 'earlySmaller', 'probes', 'sameLine', 'sameLineCode', 'sameLineCodeAfter', 'probeCopy'];
   const step = Object.fromEntries(STEP_KEYS.map((k) => [k, lessons.reduce((n, l) => n + l.step[k], 0)]));
   return { lessons, total: { ...Object.fromEntries(keys.map((k) => [k, sum(k)])), step } };
 }
@@ -180,6 +193,8 @@ export function appReport(runs) {
     row('Sound-alike numbers to a counting question', (t) => `${t.misheard} (${t.misheardAsQuestion} read as a question to HOREB)`),
     row('Questions sealed with no real answer', (t) => String(t.badSeals)),
     row('Silence probes / sooner than the new times', (t) => `${t.probes} / ${t.earlyNudge} nudges before 8 s, ${t.earlySmaller} smaller questions before 20 s`),
+    row('Sentences said again within four tutor turns (13 Nov)', (t) => `${t.sameLine} (${t.sameLineCode} the code's; ${t.sameLineCodeAfter} of the code's left by the no-repeat rule)`),
+    row('Probes opening "Take your time" (the old probe shape\'s example words, now removed)', (t) => String(t.probeCopy)),
     '',
     '### The step rules (P5, after run 2026-11-12-1900)', '',
     'Read from the transcripts: what the tutor did that the step rules now hold. "Now" says what the app does instead; what the model would write is not known, so the brief-only rows are what the model is now told not to do, not a promise it will not.', '',

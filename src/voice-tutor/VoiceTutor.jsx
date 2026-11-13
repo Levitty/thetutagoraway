@@ -281,7 +281,7 @@ export function VoiceTutor({ user = null, isAdmin = false, onNavigate = null, ch
             // What the child is doing now decides how their silence is handled (silence.js).
             const doing = [...pl.turn.steps].reverse().find((x) => x.cmd === 'pause_for_child')?.doing || 'answer';
             handedAt.current = clock();
-            waitRef.current = handOver(waitRef.current, { doing, probe: !!pl.turn.probe, now: clock(), slow: !!lessonRef.current?.slow });
+            waitRef.current = handOver(waitRef.current, { doing, probe: !!pl.turn.probe, now: clock(), slow: !!lessonRef.current?.slow, thinking: (lessonRef.current?.fillers || 0) > 0 });
             dispatch({ type: 'handed_over', doing });
           }
         }

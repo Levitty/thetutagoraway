@@ -185,7 +185,7 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
     const doing = [...steps].reverse().find((s) => s.cmd === 'pause_for_child')?.doing || 'answer';
     handedAt = clock;
     // The pace state: a child answering slowly but correctly gets twice the time before each probe (silence.js).
-    wait = handOver(wait, { doing, probe: !!probe, now: clock, slow: !!lesson?.slow });
+    wait = handOver(wait, { doing, probe: !!probe, now: clock, slow: !!lesson?.slow, thinking: (lesson?.fillers || 0) > 0 });
     dispatch({ type: 'handed_over', doing });
     entry.doing = doing;
     return entry;

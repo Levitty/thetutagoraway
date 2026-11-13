@@ -55,6 +55,14 @@ export function driftByThirds(scoredScenario) {
 
 // What counts as asking about the child's own background, and as checking the earlier skill, from the tutor's questions.
 export const BACKGROUND_Q = /\b(what do you (already )?(know|think)|what have you (learned|learnt|done|seen)|have you (ever |already )?(seen|shared|cut|used|heard|done|learned|learnt)|do you (remember|know (what|how|about))|tell me (what|about) (you|your)|what is a (half|fraction|quarter)|what does .{1,30} mean to you)\b/i;
+// The teacher's opening and close (13 Nov 2026, scenario 30): the goal said ("today we are learning ..."), one question on
+// what the child already knows of the MATHS (a half, a fraction, equal parts; not "have you shared a chapati"), and a close
+// with a summary, what the child can now do and what comes next.
+export const GOAL_SAID = /\btoday,? (we|you and i) (are|will|'ll|shall)? ?(going to )?(learn|find|look|work|explore|see|try|discover)\w*/i;
+export const PRIOR_Q = /\b(what do you (already )?know about|what do you think (a|one) (half|quarter|fraction)|what is (a|one) (half|quarter|fraction)|what does (a |one )?(half|quarter|fraction|equal) mean|have you (ever )?(heard|learned|learnt|seen) (of |about )?(a |the word )?(half|halves|quarter|fraction|equal)|do you (remember|know) what (a )?(half|quarter|fraction|equal parts?))\b/i;
+export const CLOSE_SUMMARY = /\b(today,? (we|you) (have )?(\w+ed|\w+t|saw|found|did|made)\b|(we|you) (have )?(learned|learnt|found out)\b|you found that)/i;
+export const CLOSE_CAN_NOW = /\b(now you can|you can now|you are now able|you now know how)\b/i;
+export const CLOSE_NEXT = /\b(next time|next lesson|in our next|tomorrow we|next,? we will|after this we will)\b/i;
 export const PREREQ_Q = /\b(what is a half|what do you think a half|what is a fraction|what does equal (parts|pieces)? ?mean|are (the|these|those) (parts|pieces) (the same|equal)|how many equal (parts|pieces)|can you show me (a half|a quarter)|what is a quarter|do you remember (what|how) (a )?(half|fraction|equal))\b/i;
 
 /**
@@ -76,13 +84,19 @@ export function lessonStats(tr) {
   const firstFive = tutorTurns.slice(0, 5);
   const prereq = turns.some((t) => t.rule === 'prerequisite') || firstFive.some((t) => sentences(tutorText(t)).some((s) => isQ(s) && PREREQ_Q.test(s)));
   const share = childWords + tutorWords ? childWords / (childWords + tutorWords) : 0;
+  // The opening and the close as a teacher does them (13 Nov 2026).
+  const goal = tutorTurns.slice(0, 2).some((t) => GOAL_SAID.test(tutorText(t)));
+  const prior = early.some((t) => sentences(tutorText(t)).some((s) => isQ(s) && PRIOR_Q.test(s)));
+  const closeTurns = turns.filter((t) => ['close', 'stop'].includes(t.rule) || t.steps.some((s) => s.cmd === 'end_session'));
+  const closeText = closeTurns.map(tutorText).join(' ');
+  const close = { closed: closeTurns.length > 0, summary: CLOSE_SUMMARY.test(closeText), canNow: CLOSE_CAN_NOW.test(closeText), next: CLOSE_NEXT.test(closeText) };
   return {
     scenario: tr.scenario, title: tr.title, tutorTurns: tutorTurns.length, childTurns, tutorWords, childWords,
     share,
     sharePct: round1(100 * share),
     wordsPerTutorTurn: tutorTurns.length ? round1(tutorWords / tutorTurns.length) : 0,
     questionsPerTutorTurn: tutorTurns.length ? Math.round((100 * questions) / tutorTurns.length) / 100 : 0,
-    background, prereq,
+    background, prereq, goal, prior, close,
     inBand: share >= TALK_BAND.lo && share <= TALK_BAND.hi,
     aboveBand: share > TALK_BAND.hi, belowBand: share < TALK_BAND.lo,
     childWordsPerTurn: tutorTurns.length ? round1(childWords / tutorTurns.length) : 0,
@@ -116,6 +130,11 @@ export function runStats(lessons) {
     childWordsPerTutorTurn: sum('tutorTurns') ? round1(cw / sum('tutorTurns')) : 0,
     backgroundAsked: L.filter((x) => x.background).length,
     prereqChecked: L.filter((x) => x.prereq).length,
+    goalSaid: L.filter((x) => x.goal).length,
+    priorAsked: L.filter((x) => x.prior).length,
+    closed: L.filter((x) => x.close?.closed).length,
+    closeFull: L.filter((x) => x.close?.closed && x.close.summary && x.close.canNow && x.close.next).length,
+    closeParts: { summary: L.filter((x) => x.close?.summary).length, canNow: L.filter((x) => x.close?.canNow).length, next: L.filter((x) => x.close?.next).length },
   };
 }
 
@@ -141,6 +160,11 @@ export function statsReport(runs, habitNames, habitLabels = {}) {
   L.push(`Child share of words: the target band is ${TALK_BAND.lo * 100} to ${TALK_BAND.hi * 100}% (TeachLM; the old check said over 50%). Tutor words are the tutor's spoken sentences; child words are what reached the tutor. "Asked what the child knows" is a question of that kind in the first three tutor turns; "earlier skill checked" is a prerequisite question in the first five or an app send-back to the prerequisite.`, '');
   L.push('| Run | Lessons | Child share (all words) | Mean lesson share | In 25-40% | Above | Below | Tutor words a turn | Questions a turn | Child words a turn | Asked what the child knows | Earlier skill checked |', '|---|---|---|---|---|---|---|---|---|---|---|---|');
   for (const r of runs) { const s = r.stats; L.push(`| ${r.run} | ${s.lessons} | ${s.pooledSharePct}% | ${s.meanLessonSharePct}% | ${s.inBand} | ${s.aboveBand} | ${s.belowBand} | ${s.wordsPerTutorTurn} | ${s.questionsPerTutorTurn} | ${s.childWordsPerTutorTurn} | ${s.backgroundAsked} of ${s.lessons} | ${s.prereqChecked} of ${s.lessons} |`); }
+  L.push('');
+  L.push('### The opening and the close, as a teacher does them (13 Nov 2026)', '');
+  L.push('"Goal said": the first two tutor turns say what we are learning today. "Asked what the child knows of the maths": a question in the first three turns about a half, a quarter, a fraction or equal parts (not an everyday-experience question). "Closed": a close or goodbye turn happened. A full close has a summary, what the child can now do, and what comes next.', '');
+  L.push('| Run | Lessons | Goal said | Asked what the child knows of the maths | Closed | Summary | Can now | Next | Full close |', '|---|---|---|---|---|---|---|---|---|');
+  for (const r of runs) { const s = r.stats; L.push(`| ${r.run} | ${s.lessons} | ${s.goalSaid} | ${s.priorAsked} | ${s.closed} | ${s.closeParts.summary} | ${s.closeParts.canNow} | ${s.closeParts.next} | ${s.closeFull} |`); }
   L.push('');
   return L;
 }

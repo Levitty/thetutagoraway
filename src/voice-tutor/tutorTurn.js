@@ -109,7 +109,7 @@ import { speechCost, listenCost, spokenChars } from './providers/voice.js';
 import { tutorEvidence } from '../learner/evidence.js';
 import { readSkills, openMisconceptions, learnerLines } from '../learner/model.js';
 import { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLesson } from '../learner/tutorLearning.js';
-import { FRACTION_SKILLS, skillName } from './fractions.js';
+import { FRACTION_SKILLS, skillName, lessonFrame } from './fractions.js';
 import { cleanPace } from './childVoice.js';
 import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines, turnBrief } from './orchestrator.js';
 import { stepFlags, endFlags, habitContext, confirms, asksReason, boardClaimOf } from './habits.js';
@@ -152,7 +152,37 @@ export const CARE_WAIT = [say('I am here, and there is no hurry.'), say('Say whe
  * question alone. `board` is the board as the child sees it now; `safe(line)` says a line gives no hidden answer away.
  * @returns {{ lines: string[], doing: string, end?: object }}
  */
-export function recoverLines({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = '', board = [], turnIndex = 0, found = [], ack = 'yes', safe = () => true } = {}) {
+export function recoverLines(o = {}) {
+  const r = recoverRaw(o);
+  return { ...r, lines: freshLines(r.lines, o) };
+}
+// No line the code says is a stock line said again (13 Nov 2026, PLAN_TO_FOUR.md step 0 remainder: the judge counted the
+// stand-in lines as repetition). A line said in the last few tutor turns (`recent`) is left out; a question said again is
+// replaced by a smaller one about the board, then by one built from the child's words, then by nothing: the child is
+// handed the turn in silence rather than hear the same words twice. Only care and goodbye lines are exempt.
+const normLine = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9 ]+/g, ' ').replace(/\s+/g, ' ').trim();
+export function freshLines(lines, { recent = [], rule = null, message = '', board = [], lastQuestion = null, openPrompt = null } = {}) {
+  if (['care', 'care-wait', 'care-return', 'stop'].includes(rule)) return lines;
+  const seen = new Set((recent || []).map(normLine).filter(Boolean));
+  const used = (t) => seen.has(normLine(t));
+  const out = lines.filter((l) => !used(l));
+  if (out.some((l) => /\?\s*$/.test(l)) || !lines.some((l) => /\?\s*$/.test(l))) return out;
+  // The question was said before: another question, never the same words.
+  const facts = boardFacts(board);
+  const theirs = childBit(message);
+  const q = [openPrompt, lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
+  const next = [smallerQuestion(facts, q), theirs ? `What do you mean by ${theirs}?` : null, facts ? `What do you see on the ${facts.name}?` : null, 'Show me on the board what you mean.']
+    .find((x) => x && !used(x) && !out.includes(x));
+  return next ? [...out, next] : out;
+}
+/** The tutor's sentences in its last `n` turns of the transcript the page sends (newest last). */
+export function recentSays(history, n = 4) {
+  const h = Array.isArray(history) ? history : [];
+  const tutor = h.filter((x) => x && x.who === 'tutor').slice(-n);
+  return tutor.flatMap((x) => String(x.text || '').split(/(?<=[.!?])\s+/).map((t) => t.trim()).filter(Boolean));
+}
+function recoverRaw({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = '', board = [], turnIndex = 0, found = [], ack = 'yes', safe = () => true, target = null, closeStep = null } = {}) {
+  const frame = lessonFrame(target);
   const said = marked?.correct ? marked.said || null : null;
   const yes = marked?.correct && !saidAny ? [said ? (ack === 'revoice' ? `${cap(said)}, you said.` : `Yes, ${said}.`) : 'Yes, that is right.'] : [];
   // The open question: the sealed one, else the tutor's last spoken one. Never one the child has just answered right.
@@ -170,12 +200,14 @@ export function recoverLines({ rule = null, probe = null, marked = null, openPro
     return { lines: [pick(['Take your time.', 'There is no hurry.', 'I am listening.']), ask], doing: doing || 'answer' };
   }
   switch (rule) {
-    case 'open': return { lines: [...(saidAny ? [] : [DISCLOSURE, LESSON_TITLE_LINE]), 'Have you ever shared a chapati with someone?'], doing: 'answer' };
+    case 'open': return { lines: [...(saidAny ? [] : [DISCLOSURE, frame.goal]), frame.prior], doing: 'answer' };
     case 'care-wait': case 'care': return { lines: ['I am listening.', 'Do you want to carry on with our fractions, or stop for today?'], doing: 'talk' };
     case 'care-return': return { lines: ['I am glad you are here.', q ? `Let us carry on gently. ${q}` : 'Shall we carry on gently?'], doing: 'answer' };
-    case 'stop': return { lines: [found.length ? `Today you found ${foundList(found)}. Thank you for working with me.` : 'Thank you for working with me today.'], doing: 'talk', end: { cmd: 'end_session', summary: 'The child asked to stop, and the lesson closed early.' } };
+    case 'stop': return { lines: [found.length ? `Today you found ${foundList(found)}.` : 'Thank you for working with me today.', `Next time we will look at ${frame.next}.`], doing: 'talk', end: { cmd: 'end_session', summary: 'The child asked to stop, and the lesson closed early.' } };
     case 'bored': return { lines: ['I hear you.', 'Shall we play a quick guessing game, or stop for today?'], doing: 'talk' };
-    case 'close': return { lines: [...(found.length ? [`Today you found ${foundList(found)}.`] : []), 'What is one thing you will remember?'], doing: 'talk' };
+    case 'close': return closeStep === 'final'
+      ? { lines: [found.length ? `Today you found ${foundList(found)}.` : 'You worked hard today.', found.length ? `Now you can ${frame.can}.` : 'You are getting closer every time.', `Next time we will look at ${frame.next}.`], doing: 'talk', end: { cmd: 'end_session', summary: 'The lesson closed.' } }
+      : { lines: [...(found.length ? [`Today you found ${foundList(found)}.`] : []), 'What is one thing you learned today?'], doing: 'talk' };
     case 'press': return { lines: [...yes, said ? `What made you say ${said}?` : 'How did you know?'], doing: 'answer' };
     case 'fresh-check': case 'move-on': case 'reason': return { lines: [...yes, said ? `Show me ${said} on the board.` : 'Can you show me that on the board?'], doing: 'task' };
     case 'diagnose': case 'change': return { lines: [...(saidAny || !theirs ? [] : [`You said ${theirs}.`]), theirs ? 'Tell me how you got that.' : 'How did you work it out?'], doing: 'answer' };
@@ -451,7 +483,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   if (lesson0.care === 'ended') return authored(ENDED_TURN, ['lesson-ended'], null);
   // A filler-only reply ("um...") is not a turn to answer: no model; the page waits (a hand-back with no words, or the one
   // "Take your time" after two in a row: orchestrator.js decide, rule thinking).
-  if (decision?.authored) return authored(decision.rule === 'thinking' ? [...(decision.line ? [say(decision.line)] : []), { ...handBack, doing: lesson0.doing || 'answer' }] : CARE_WAIT, [decision.rule], null);
+  if (decision?.authored) return authored(decision.rule === 'thinking' ? [...(decision.line && freshLines([decision.line], { recent: recentSays(body?.history, 6) }).length ? [say(decision.line)] : []), { ...handBack, doing: lesson0.doing || 'answer' }] : CARE_WAIT, [decision.rule], null);
 
   // 4. The child's words.
   const screen = message ? screenChild(message) : { ok: true, wantsAnswer: false };
@@ -502,7 +534,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // What a line the code says may rest on: the board as the child sees it now (the turn's own drawings too), the open
   // question (sealed, else the tutor's last spoken one) and a check that the line gives no hidden answer away.
   const safeLine = (line) => checkTurnText([say(line)], [open].filter(hiddenOk)).ok;
-  const recoverFacts = (steps = []) => ({ message, board: boardAfter(board, steps), turnIndex, found: [...found], ack: decision?.ack || 'yes', lastQuestion: lastSpokenQ, safe: safeLine });
+  const recentBefore = recentSays(body?.history);
+  const recoverFacts = (steps = []) => ({ message, board: boardAfter(board, steps), turnIndex, found: [...found], ack: decision?.ack || 'yes', lastQuestion: lastSpokenQ, safe: safeLine, target: pick.target, closeStep: decision?.closeStep || null, recent: [...recentBefore, ...steps.filter((x) => x.cmd === 'say').map((x) => x.text)] });
   const recoverFor = (saidAny, steps = []) => recoverSteps(recoverLines({ rule: decision?.rule, probe, marked, openPrompt, saidAny, doing: probe ? lesson0.doing : null, ...recoverFacts(steps) }));
   if (!callModel) return authored(image ? NO_PICTURE_TURN : screen.wantsAnswer ? [say(ANSWER_REPLY), handBack] : recoverFor(false), ['offline'], spent);
 
@@ -600,7 +633,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       for (const st of steps) await (st.cmd === 'say' ? speak(st) : send(st));
     };
     // The turn ends: a turn that has not asked anything yet (and is not a task) ends on its question.
-    const endsHere = () => decision?.rule === 'stop' || (decision?.rule === 'close' && saidAny && !asked() && lesson0.stage === 'wrapup');
+    const endsHere = () => decision?.rule === 'stop' || (decision?.rule === 'close' && saidAny && !asked() && (lesson0.stage === 'wrapup' || decision?.closeStep === 'final'));
     const endStep = () => ({ cmd: 'end_session', summary: decision?.rule === 'stop' ? 'The child asked to stop, and the lesson closed.' : 'The lesson closed.' });
     const finish = async () => {
       if (held) await release();
@@ -1075,4 +1108,4 @@ export function itemFor(s, bank = []) {
   return { kind: 'typed', cskill: s.skill || null, question: s.prompt, answer: s.expected, accepts: [s.expected, ...(s.accepts || [])], wrong: wrong.map((w) => ({ value: w.answer, mis: w.misconception })) };
 }
 
-export default { prepareTurn, runTutorTurn, itemFor, recoverLines, WIND_DOWN, ENDED_TURN, CARE_WAIT, DISCLOSURE };
+export default { prepareTurn, runTutorTurn, itemFor, recoverLines, freshLines, recentSays, WIND_DOWN, ENDED_TURN, CARE_WAIT, DISCLOSURE };

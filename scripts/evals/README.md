@@ -212,3 +212,21 @@ Right/wrong/partly, Notes), then:
 about 40 to 70% is good (she cannot tell them apart); above 70% the child is still too easy to spot, and the scorer lists the
 pretend replies she caught, so the sheets, the speech rules or the model can be changed and the test run again. The pupil
 words are the teacher's, kept in the review folder, not in this repository.
+
+## The free round of 13 Nov 2026 (no model calls)
+
+What changed and how the free yardstick now reads it (full write-up: `Tutagora/Build/voice-tutor/evals/FREE_ROUND_13NOV.md`):
+- **The pretend child** says in its prompt that it sometimes does not answer what was asked; `tests/voice-tutor-pretend-child.test.mjs`
+  checks, offline, one named misconception per scenario, the 25 to 30% wrong rate, 1 to 6 words, ignored questions, trailing and mishearing.
+- **The brief's standard** is now the 4 and the 5 for the allowed move (`MOVE_STANDARD` in `orchestrator.js`) and the five measures at 4 in
+  one line (`FIVE_AT_FOUR`), about 66 words where the two generic anchors were about 85.
+- **No code line said twice:** `freshLines` (`tutorTurn.js`) leaves out any line the tutor said in its last four turns; a repeated question
+  becomes a smaller one, then one from the child's words, then silence. The probe's reply shape no longer carries example words.
+  The app replay counts sentences said again within four tutor turns (the code's, and what the rule leaves) and probes opening "Take your time".
+- **The teacher's opening and close:** `lessonFrame(target)` (`fractions.js`) gives the goal, the question on what the child already knows,
+  what they can now do and what comes next; the close is two turns (the child says one thing they learned, then summary, can now, next and
+  end). Scenario 30 runs as a 10-minute lesson in the harness so the close happens. The conversation statistics count goal said, asked what
+  the child knows of the maths, closed, summary, can now, next, full close.
+- **Silence:** after a reply that was only thinking ("umm..."), the wait before each probe is doubled (`thinking` in `silence.js`, from the
+  lesson state's `fillers`). The pacing replay has a "Silence by context" table: five situations on a simulated clock, and the saved runs'
+  probes by context.

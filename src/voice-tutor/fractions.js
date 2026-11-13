@@ -90,4 +90,31 @@ export const lessonSkills = (target) => [target, ...prerequisitesOf(target)];
 /** Full misconception codes allowed for the lesson (record_diagnosis, ask.wrong). */
 export const allowedMisconceptions = (skills) => skills.flatMap((c) => (SKILLS_G5[c]?.mis || []).map((m) => `${c}.${m}`));
 
-export default { FRACTION_SKILLS, pickTarget, lessonSkills, allowedMisconceptions, prerequisitesOf, strengthOf, skillName };
+
+// ---------------------------------------------------------------- the lesson's frame, as a teacher says it (13 Nov 2026)
+// A teacher opens with the goal ("today we are learning ...") and one question on what the child already knows, and
+// closes with a summary, what the child can now do and what comes next (SCENARIOS.md scenario 30). Plain words for a
+// ten-year-old, by skill (the last part of its code): `today` finishes "Today we are learning ...", `prior` is the one
+// question on what the child already knows (about the earlier idea, never the answer to the lesson), `can` finishes
+// "Now you can ...", `next` names the skill in a few words for "Next time we will ...".
+export const LESSON_FRAMES = {
+  EQUIVALENT_FRACTIONS: { today: 'about fractions that look different but are the same amount', prior: 'What do you already know about a half?', can: 'show two fractions that are the same amount, with a picture', next: 'equivalent fractions' },
+  SIMPLIFY_FRACTIONS: { today: 'to write a fraction in its simplest form', prior: 'What do you already know about fractions that are the same amount?', can: 'make a fraction simpler without changing how much it is', next: 'simplest form' },
+  COMPARE_LIKE_FRACTIONS: { today: 'to tell which of two fractions is bigger', prior: 'What do you already know about the top and bottom numbers of a fraction?', can: 'tell which fraction is bigger when the pieces are the same size', next: 'comparing fractions' },
+  COMPARE_UNLIKE_FRACTIONS: { today: 'to compare fractions with different bottom numbers', prior: 'What do you already know about pieces when a whole is cut into more parts?', can: 'compare two fractions by making their pieces the same size', next: 'comparing fractions with different bottom numbers' },
+  ORDER_FRACTIONS: { today: 'to put fractions in order, smallest to biggest', prior: 'What do you already know about comparing two fractions?', can: 'put fractions in order from smallest to biggest', next: 'ordering fractions' },
+  ADD_SAME_DENOMINATOR: { today: 'to add fractions with the same bottom number', prior: 'What do you already know about the bottom number of a fraction?', can: 'add two fractions when the pieces are the same size', next: 'adding fractions' },
+  SUBTRACT_SAME_DENOMINATOR: { today: 'to take away fractions with the same bottom number', prior: 'What do you already know about the bottom number of a fraction?', can: 'take one fraction from another when the pieces are the same size', next: 'taking away fractions' },
+  ADD_ONE_RENAMING: { today: 'to add fractions when the pieces are different sizes', prior: 'What do you already know about adding fractions with the same bottom number?', can: 'rename one fraction so the pieces match, then add', next: 'adding fractions with different pieces' },
+  SUBTRACT_ONE_RENAMING: { today: 'to take away fractions when the pieces are different sizes', prior: 'What do you already know about taking away fractions with the same bottom number?', can: 'rename one fraction so the pieces match, then take away', next: 'taking away fractions with different pieces' },
+};
+/** The frame for a target skill: { today, prior, can, next: the skill that builds on it (or more practice), goal: the sentence }. */
+export function lessonFrame(target) {
+  const code = String(target || '').split('.').pop();
+  const f = LESSON_FRAMES[code] || LESSON_FRAMES.EQUIVALENT_FRACTIONS;
+  const after = FRACTION_SKILLS.find((c) => (SKILLS_G5[c]?.pre || []).includes(target) && LESSON_FRAMES[String(c).split('.').pop()]);
+  const next = after ? LESSON_FRAMES[String(after).split('.').pop()].next : `more practice with ${f.next}`;
+  return { ...f, next, goal: `Today we are learning ${f.today}.` };
+}
+
+export default { lessonFrame, LESSON_FRAMES, FRACTION_SKILLS, pickTarget, lessonSkills, allowedMisconceptions, prerequisitesOf, strengthOf, skillName };

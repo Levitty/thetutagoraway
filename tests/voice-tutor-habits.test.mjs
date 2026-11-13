@@ -197,7 +197,7 @@ test('the turn brief: what the child did, must-not-say, answer first, the level 
   assert.match(b, /the rule the child should say themselves/);
   assert.match(b, /1 of 2 successes there .* Harder numbers: not yet/);
   assert.match(b, /No "yes" yet/);
-  assert.match(b, /The standard you are judged on for Press for reasoning: Diagnosis .* 4: .* 5: /);
+  assert.match(b, /The standard you are judged on for Press for reasoning: Diagnosis\. 4: .* 5: /);
   const why = turnBrief(s, decide(s, { turnIndex: 4, message: 'Wait, why do we cut it again?' }), { message: 'Wait, why do we cut it again?', open: { answer: '4', question: 'How many pieces now?' }, board: [{ cmd: 'shape', id: 'c', parts: 4, shaded: 2 }] }).join('\n');
   assert.match(why, /Answer first: your first sentence answers their question, in 15 words or fewer/);
   assert.match(why, /Must not say .*"4", "four"; the counts c shows \(4 parts, 2 shaded\)/);

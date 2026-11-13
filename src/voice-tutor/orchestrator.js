@@ -87,6 +87,7 @@ import { PROBE_KINDS } from './silence.js';
 import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
 import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor, asksReason } from './habits.js';
 import { fenceTeamText } from './guard.js';
+import { lessonFrame } from './fractions.js';
 
 export { soundsLost };
 
@@ -128,7 +129,7 @@ export const newLesson = () => ({
   found: [], care: null, stops: 0, diagnosing: false, seal: null, asked: [], level: 0, wins: 0, changedFails: 0, examples: 0,
   cw: 0, tw: 0, lastCw: 0, explain: 0, pre: null,
   fillers: 0, tyt: false, lastProbe: false, slow: false,
-  step: null, solved: [], fig: null, closedRun: 0, pressed: [],
+  step: null, solved: [], fig: null, closedRun: 0, pressed: [], closes: 0,
 });
 // The warm-up's first maths question (owner, 12 Nov 2026): 'ask' = it must be asked, 'asked' = waiting for the child's answer, 'done' = answered (right or wrong); null = nothing to check first.
 const PRE_STATES = ['ask', 'asked', 'done'];
@@ -178,6 +179,7 @@ export function cleanLesson(raw) {
   if (Array.isArray(raw.solved)) s.solved = [...new Set(raw.solved.filter((k) => STEP_KINDS.includes(k)))].slice(-8);
   if (typeof raw.fig === 'string' && /^[a-z ]{3,12}:\d{1,3}$/.test(raw.fig)) s.fig = raw.fig;
   s.closedRun = int(raw.closedRun, 0, 50);
+  s.closes = int(raw.closes, 0, 5);
   if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === 'string' && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
   return s;
 }
@@ -253,7 +255,7 @@ function decideCore(s, ctx = {}) {
   const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null, lastQ = null } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null), press: extra.press ?? null, noPress: extra.noPress ?? null });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -265,7 +267,12 @@ function decideCore(s, ctx = {}) {
   }
   // In the wrap-up, a child saying goodbye or asking to go is let go (12 Nov 2026, run 2, scenario 19: nine turns of goodbyes).
   if ((closing || s.stage === 'wrapup') && childMove(message) === 'stop') return out('stop', ['Close the lesson'], 'the lesson is closing and the child is saying goodbye: one short kind goodbye, then end_session. No question', { with: ['Name what was right', 'Celebrate the strategy'], stageMax: 'wrapup' });
-  if (closing || s.stage === 'wrapup') return out('close', ['Close the lesson'], closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : 'the lesson is in its wrap-up', { with: ['Name what was right', 'Celebrate the strategy'], stageMax: 'wrapup' });
+  // The close as a teacher does it (13 Nov 2026, scenario 30): first the child says one thing they learned (their own words),
+  // then the tutor's summary, what the child can now do and what comes next, and the lesson ends. Never a loop of questions.
+  if (closing || s.stage === 'wrapup') {
+    const final = (s.closes || 0) >= 1;
+    return out('close', ['Close the lesson'], `${closing ? `${Math.round(elapsedMin)} of ${sessionMinutes} minutes used: close the lesson now` : 'the lesson is in its wrap-up'}${final ? ': the last turn: summary, what they can now do, what comes next, then end_session, no question' : ': ask the child for one thing they learned today, in their own words'}`, { with: ['Name what was right', 'Celebrate the strategy'], stageMax: 'wrapup', closeStep: final ? 'final' : 'recall' });
+  }
   // A bored child who wants to stop (scenario 19): never the same lesson again. A short close, or one quick change.
   const move = marked ? null : childMove(message);
   if (move === 'stop' || (marked && childMove(message) === 'stop')) {
@@ -496,6 +503,7 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   if (marked?.correct && marked.canon) s.found = [...new Set([...s.found, marked.canon])].slice(-MAX_FOUND);
   if (decision?.rule === 'care-return') s.care = null;
   if (decision?.rule === 'bored') s.stops += 1;
+  if (decision?.rule === 'close' && !probe) s.closes = Math.min(5, (s0.closes || 0) + 1);
   if (decision?.rule === 'example') s.examples = (s.examples || 0) + 1;
   if (!probe && decision?.rule !== 'thinking') s.diagnosing = decision?.rule === 'diagnose';
   s.seal = keepSeal || null;
@@ -623,6 +631,30 @@ const MEASURE_OF = {
   'Revoice and build': 'naturalness', 'Wait and nudge': 'naturalness', 'Bring back an off-topic child': 'naturalness', 'Open the lesson': 'naturalness', 'Close the lesson': 'naturalness', 'Celebrate the strategy': 'naturalness',
   'Recover a lost child': 'adapting', 'Stretch the quick child': 'adapting',
 };
+// The standard FOR THE MOVE (13 Nov 2026, PLAN_TO_FOUR.md "what the &Tutor work changes", lesson 1): what a 4 and a 5
+// look like for the move this turn allows, in the measures it serves, short. The generic ANCHORS above are kept for the
+// review pack; the brief now carries these (about 35 words, where the two generic anchors were about 120).
+export const MOVE_STANDARD = {
+  'Open the lesson': ['Naturalness and teaching', 'the goal in one sentence ("Today we are learning ..."), then one question on what the child already knows', 'as 4, with a Kenyan everyday picture, the question about the idea itself'],
+  'Show then hand over': ['Teaching', 'show one thing, then a question the child must think to answer', 'the child makes the next mark or cut themselves; you say only what the picture does'],
+  'Predict then show': ['Teaching', 'ask for a guess before you draw', 'ask for the guess and why, draw, then ask whether the picture agrees with them'],
+  'Count with the child': ['Teaching', 'point and let the child say the numbers', 'the child counts aloud and says the total; you never say it first'],
+  'Smaller-question hint': ['Teaching and adapting', 'one smaller question about what is on the board', 'the smaller question uses the child\'s last words and is easy to win'],
+  'Check for understanding': ['Teaching', 'a fresh example, not the same one again', 'a fresh example where the child must give the reason or the rule'],
+  'Name what was right': ['Naturalness', 'name the right part in the child\'s own words, briefly', 'name their step ("you counted the shaded ones first") and move on'],
+  'Diagnose the wrong answer': ['Diagnosis', 'ask how they got it before any correction ("Tell me how you got the two and the six.")', 'name their procedure back and test it where it fails ("Is two sixths more or less than the half we started with?")'],
+  'Press for reasoning': ['Diagnosis', 'once, about a fraction, comparison or rule, never about a count: "What made you say that?"', 'their own reason, then "Say that as a rule for your friend."'],
+  'Revoice and build': ['Naturalness', 'their words back in a few words, then one step on', 'their own word (even Kiswahili, "nusu") back, short, then a pause'],
+  'Wait and nudge': ['Naturalness and adapting', 'one short kind line, no new question, no answer', 'a line that fits the moment ("I can see you are thinking"), never a stock line said before'],
+  'Celebrate the strategy': ['Naturalness', 'at most 8 words naming their strategy', 'their strategy in their own words, then the next step'],
+  'Stretch the quick child': ['Adapting', 'within two successes, a harder question or a demand for their own rule', '"Make one up for me" or "spot my mistake", with the picture kept'],
+  'Recover a lost child': ['Adapting', 'go back to the last thing they got right, one easy question', 'a different picture (bar, number line, folding paper) and an easy win first'],
+  'Bring back an off-topic child': ['Naturalness', 'one friendly line, then back to the maths', 'link their topic to the maths ("Your goat\'s chapati: how many pieces?")'],
+  'Close the lesson': ['Teaching and naturalness', 'a summary of today, what the child can now do, what comes next', 'the summary in the child\'s own words from the lesson, and no new question'],
+};
+// The five measures at 4, a few words each: every turn is judged on all five.
+export const FIVE_AT_FOUR = 'All five measures, at 4: teaching (the child does the thinking), diagnosis (why before correcting), naturalness (short, built on their words), adapting (a new picture after two misses), curriculum (true maths, picture before numbers, "three over four").';
+
 // The rule the child should say themselves, by skill (the last part of its code).
 const RULES = {
   EQUIVALENT_FRACTIONS: 'that the two fractions are the same amount, or that the top and bottom are multiplied by the same number',
@@ -721,11 +753,20 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
   if (d.handover) L.push(`- Hand over first: your last ${s.explain > 1 ? `${s.explain} turns explained or showed` : 'turn explained or showed'} and asked the child nothing. This turn asks them to try the next step, or asks them a question to answer, before you explain anything more.`);
   if (shareLow(s)) L.push(`- The child has spoken only ${Math.round(100 * talkShare(s))}% of the words so far (a good lesson is 25 to 40%). Keep this turn to ${overtalkLimit(s.lastCw)} words at most (twice their last reply plus 15), and give them the thinking and the talking.`);
   if (d.preFirst) L.push(`- Warm-up rule: your first maths question is on the earlier skill "${d.preFirst.name}": ${d.preFirst.skill ? `write ask.skill as "${d.preFirst.skill}"` : 'a question about that idea, with no picture of the target'}. Do not start on the target idea until the child has answered it, right or wrong.`);
-  // 6. The standard for the allowed move.
+  // 5c. The opening and the close as a teacher does them (13 Nov 2026, scenario 30).
+  const frame = lessonFrame(skill);
+  if (d.rule === 'open') L.push(`- Open as a teacher does: the goal in one sentence ("${frame.goal}"), written as the board title; then ONE question on what the child already knows ("${frame.prior}" or one like it). No maths problem yet.`);
+  if (d.rule === 'close' && d.closeStep !== 'final') L.push('- Close, part 1: name one thing the child did well today in their words, then ask them to say one thing they learned today, in their own words. No new maths.');
+  if ((d.rule === 'close' && d.closeStep === 'final') || d.rule === 'stop') {
+    const did = (s.found || []).length ? `the answers they found: ${s.found.slice(-3).join(', ')}` : 'what they tried today';
+    L.push(`- Close as a teacher does, in three short sentences, then end_session (no question): a summary of today (${did}, in the child's words where you have them); what they can now do ("Now you can ${frame.can}", only if they showed it; otherwise "You are getting closer to ..."); what comes next ("Next time we will look at ${frame.next}").`);
+  }
+  // 6. The standard for the allowed move (its 4 and 5), and the five measures at 4, short.
   const main = d.moves.find((x) => !['Name what was right', 'Revoice and build'].includes(x)) || d.moves[0];
-  const m = MEASURE_OF[main] || 'teaching';
-  L.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`);
-  if (m !== 'naturalness') L.push(`- And every turn: ${ANCHORS.naturalness}`);
+  const ms = MOVE_STANDARD[main];
+  if (ms) L.push(`- The standard you are judged on for ${main}: ${ms[0]}. 4: ${ms[1]}. 5: ${ms[2]}.`);
+  else { const m = MEASURE_OF[main] || 'teaching'; L.push(`- The standard you are judged on for ${main}: ${ANCHORS[m]}`); }
+  L.push(`- ${FIVE_AT_FOUR}`);
   return L;
 }
 
@@ -739,4 +780,4 @@ export function boardTruth(board = []) {
   return `On the board now: ${figs.map(describeItem).join('; ')}. Say only what is there: a whole is not cut, and nothing is shaded unless it says so.`;
 }
 
-export default { boardTruth, whyNoPress, figOf, newLesson, cleanLesson, decide, turnBrief, answerForms, ANCHORS, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };
+export default { MOVE_STANDARD, FIVE_AT_FOUR, boardTruth, whyNoPress, figOf, newLesson, cleanLesson, decide, turnBrief, answerForms, ANCHORS, judgeTurn, updateLesson, finalClass, prelimClass, lessonLines, repsOf, gaveReason, soundsLost, stageAllowed, isIndependent, ASKS_HOW };
