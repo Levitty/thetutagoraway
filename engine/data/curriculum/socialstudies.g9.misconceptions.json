@@ -1,0 +1,812 @@
+{
+ "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_NUMBER": {
+  "skill": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS",
+  "error": "Gives the wrong number of pathways.",
+  "example": {
+   "question": "How many senior school pathways are there?",
+   "wrong_answer": "Two",
+   "correct_answer": "Three"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Two\" next to the right answer and ask the question again in a new situation.",
+  "help": "There are three pathways: STEM, Social Sciences, and Arts and Sports Science.",
+  "feedback": "There are three pathways: STEM, Social Sciences, and Arts and Sports Science.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_FACTOR": {
+  "skill": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS",
+  "error": "Chooses by a friend's pathway.",
+  "example": {
+   "question": "Which should guide a learner's choice of pathway?",
+   "wrong_answer": "Where her friends are going",
+   "correct_answer": "Her interests, abilities and career goals"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Where her friends are going\" next to the right answer and ask the question again in a new situation.",
+  "help": "Choose by interests, abilities and career goals.",
+  "feedback": "Choose by interests, abilities and career goals.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS.M_SS9_PW_NAME": {
+  "skill": "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS",
+  "error": "Names a non-pathway.",
+  "example": {
+   "question": "Which is a senior school pathway?",
+   "wrong_answer": "Trade and Business only",
+   "correct_answer": "Social Sciences"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Trade and Business only\" next to the right answer and ask the question again in a new situation.",
+  "help": "Social Sciences is a pathway.",
+  "feedback": "Social Sciences is a pathway.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_SUPPORT": {
+  "skill": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER",
+  "error": "Names a non-support.",
+  "example": {
+   "question": "Which is a pre-career support system?",
+   "wrong_answer": "A rumour",
+   "correct_answer": "A school counsellor"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A rumour\" next to the right answer and ask the question again in a new situation.",
+  "help": "Counsellors, teachers and mentors support careers.",
+  "feedback": "Counsellors, teachers and mentors support careers.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_MAP": {
+  "skill": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER",
+  "error": "Thinks mapping fixes the job at once.",
+  "example": {
+   "question": "What does pre-career mapping do?",
+   "wrong_answer": "Fixes the job for life",
+   "correct_answer": "Links interests and abilities to careers"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Fixes the job for life\" next to the right answer and ask the question again in a new situation.",
+  "help": "Mapping links interests and abilities to careers.",
+  "feedback": "Mapping links interests and abilities to careers.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER.M_SS9_PC_ONLY": {
+  "skill": "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER",
+  "error": "Thinks only parents advise.",
+  "example": {
+   "question": "Who can advise a learner on careers?",
+   "wrong_answer": "Only the parents",
+   "correct_answer": "Parents, teachers, counsellors and mentors"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Only the parents\" next to the right answer and ask the question again in a new situation.",
+  "help": "Many people can advise.",
+  "feedback": "Many people can advise.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_ORDER": {
+  "skill": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+  "error": "Starts with the report.",
+  "example": {
+   "question": "What is the first step in a community service project?",
+   "wrong_answer": "Write the report",
+   "correct_answer": "Identify the problem"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Write the report\" next to the right answer and ask the question again in a new situation.",
+  "help": "The first step is to identify the problem.",
+  "feedback": "The first step is to identify the problem.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_PLAN": {
+  "skill": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+  "error": "Implements before planning.",
+  "example": {
+   "question": "What comes before implementing?",
+   "wrong_answer": "Writing the report",
+   "correct_answer": "Planning"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Writing the report\" next to the right answer and ask the question again in a new situation.",
+  "help": "Plan before you implement.",
+  "feedback": "Plan before you implement.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS.M_SS9_CS_REPORT": {
+  "skill": "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS",
+  "error": "Writes the report first.",
+  "example": {
+   "question": "What comes last?",
+   "wrong_answer": "Identifying the problem",
+   "correct_answer": "Writing the report"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Identifying the problem\" next to the right answer and ask the question again in a new situation.",
+  "help": "The report comes last.",
+  "feedback": "The report comes last.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_FARM": {
+  "skill": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE",
+  "error": "Says early humans were farmers.",
+  "example": {
+   "question": "How did early Stone Age humans get food?",
+   "wrong_answer": "By farming crops",
+   "correct_answer": "By hunting and gathering"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"By farming crops\" next to the right answer and ask the question again in a new situation.",
+  "help": "Early humans hunted and gathered.",
+  "feedback": "Early humans hunted and gathered.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_TOOL": {
+  "skill": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE",
+  "error": "Says tools were of iron.",
+  "example": {
+   "question": "What were Stone Age tools made of?",
+   "wrong_answer": "Iron",
+   "correct_answer": "Stone"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Iron\" next to the right answer and ask the question again in a new situation.",
+  "help": "Stone Age tools were made of stone.",
+  "feedback": "Stone Age tools were made of stone.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE.M_SS9_SA_SITE": {
+  "skill": "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE",
+  "error": "Names a wrong site.",
+  "example": {
+   "question": "Which is a Stone Age site in East Africa?",
+   "wrong_answer": "Fort Jesus",
+   "correct_answer": "Olduvai Gorge"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Fort Jesus\" next to the right answer and ask the question again in a new situation.",
+  "help": "Olduvai Gorge is a famous Stone Age site.",
+  "feedback": "Olduvai Gorge is a famous Stone Age site.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_WRITTEN": {
+  "skill": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE",
+  "error": "Says it was written down.",
+  "example": {
+   "question": "How was indigenous knowledge mainly passed on?",
+   "wrong_answer": "By printed books",
+   "correct_answer": "By word of mouth"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"By printed books\" next to the right answer and ask the question again in a new situation.",
+  "help": "It was passed on by word of mouth.",
+  "feedback": "It was passed on by word of mouth.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_TYPE": {
+  "skill": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE",
+  "error": "Names a non-type.",
+  "example": {
+   "question": "Which is an indigenous knowledge system?",
+   "wrong_answer": "A computer game",
+   "correct_answer": "Herbal medicine"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A computer game\" next to the right answer and ask the question again in a new situation.",
+  "help": "Herbal medicine is indigenous knowledge.",
+  "feedback": "Herbal medicine is indigenous knowledge.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE.M_SS9_IK_USE": {
+  "skill": "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE",
+  "error": "Says it has no use now.",
+  "example": {
+   "question": "What was indigenous knowledge used for?",
+   "wrong_answer": "Nothing useful",
+   "correct_answer": "Sustaining life"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nothing useful\" next to the right answer and ask the question again in a new situation.",
+  "help": "It helped sustain life.",
+  "feedback": "It helped sustain life.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_CAUSE": {
+  "skill": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY",
+  "error": "Names a cause that reduces poverty.",
+  "example": {
+   "question": "Which is a cause of poverty?",
+   "wrong_answer": "High employment",
+   "correct_answer": "Unemployment"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"High employment\" next to the right answer and ask the question again in a new situation.",
+  "help": "Unemployment causes poverty.",
+  "feedback": "Unemployment causes poverty.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_OVER": {
+  "skill": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY",
+  "error": "Thinks overuse enriches for ever.",
+  "example": {
+   "question": "What can overexploiting resources lead to?",
+   "wrong_answer": "Endless wealth",
+   "correct_answer": "Empty resources and poverty"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Endless wealth\" next to the right answer and ask the question again in a new situation.",
+  "help": "Overuse can empty resources.",
+  "feedback": "Overuse can empty resources.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY.M_SS9_PO_GOV": {
+  "skill": "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY",
+  "error": "Says good governance causes poverty.",
+  "example": {
+   "question": "Which can lead to poverty?",
+   "wrong_answer": "Good governance",
+   "correct_answer": "Corruption"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Good governance\" next to the right answer and ask the question again in a new situation.",
+  "help": "Corruption can lead to poverty.",
+  "feedback": "Corruption can lead to poverty.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_SOURCE": {
+  "skill": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION",
+  "error": "Names a non-source.",
+  "example": {
+   "question": "Which is a source of population data?",
+   "wrong_answer": "A rumour",
+   "correct_answer": "The census"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A rumour\" next to the right answer and ask the question again in a new situation.",
+  "help": "The census counts the population.",
+  "feedback": "The census counts the population.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_BASE": {
+  "skill": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION",
+  "error": "Gives a narrow base for Kenya.",
+  "example": {
+   "question": "What shape has a developing country's pyramid?",
+   "wrong_answer": "A narrow base",
+   "correct_answer": "A wide base"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A narrow base\" next to the right answer and ask the question again in a new situation.",
+  "help": "A developing country has a wide base.",
+  "feedback": "A developing country has a wide base.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION.M_SS9_PP_GERMANY": {
+  "skill": "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION",
+  "error": "Gives a wide base for Germany.",
+  "example": {
+   "question": "What shape has a developed country's pyramid?",
+   "wrong_answer": "A very wide base",
+   "correct_answer": "A narrower base"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A very wide base\" next to the right answer and ask the question again in a new situation.",
+  "help": "A developed country has a narrower base.",
+  "feedback": "A developed country has a narrower base.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_INNER": {
+  "skill": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE",
+  "error": "Does not know inner peace.",
+  "example": {
+   "question": "What is inner peace?",
+   "wrong_answer": "Peace among nations",
+   "correct_answer": "Calmness within a person"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Peace among nations\" next to the right answer and ask the question again in a new situation.",
+  "help": "Inner peace is calm within a person.",
+  "feedback": "Inner peace is calm within a person.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_BARRIER": {
+  "skill": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE",
+  "error": "Names a help as a barrier.",
+  "example": {
+   "question": "Which is a barrier to conflict resolution?",
+   "wrong_answer": "Listening",
+   "correct_answer": "Prejudice"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Listening\" next to the right answer and ask the question again in a new situation.",
+  "help": "Prejudice is a barrier.",
+  "feedback": "Prejudice is a barrier.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE.M_SS9_PE_EQ": {
+  "skill": "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE",
+  "error": "Thinks emotional intelligence is anger.",
+  "example": {
+   "question": "What does emotional intelligence help with?",
+   "wrong_answer": "Fuelling anger",
+   "correct_answer": "Managing emotions"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Fuelling anger\" next to the right answer and ask the question again in a new situation.",
+  "help": "It helps manage emotions.",
+  "feedback": "It helps manage emotions.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_WAY": {
+  "skill": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS",
+  "error": "Names a harm as a way.",
+  "example": {
+   "question": "Which sustains a healthy relationship?",
+   "wrong_answer": "Gossip",
+   "correct_answer": "Respect"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Gossip\" next to the right answer and ask the question again in a new situation.",
+  "help": "Respect sustains relationships.",
+  "feedback": "Respect sustains relationships.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_BARRIER": {
+  "skill": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS",
+  "error": "Names a help as a barrier.",
+  "example": {
+   "question": "Which is a barrier to a healthy relationship?",
+   "wrong_answer": "Trust",
+   "correct_answer": "Jealousy"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Trust\" next to the right answer and ask the question again in a new situation.",
+  "help": "Jealousy is a barrier.",
+  "feedback": "Jealousy is a barrier.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS.M_SS9_RL_FORGIVE": {
+  "skill": "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS",
+  "error": "Thinks forgiveness is weakness.",
+  "example": {
+   "question": "What does forgiveness do?",
+   "wrong_answer": "Ends the friendship",
+   "correct_answer": "Heals the relationship"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Ends the friendship\" next to the right answer and ask the question again in a new situation.",
+  "help": "Forgiveness heals relationships.",
+  "feedback": "Forgiveness heals relationships.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_CONTOUR": {
+  "skill": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS",
+  "error": "Thinks contours show roads.",
+  "example": {
+   "question": "What do contour lines show?",
+   "wrong_answer": "Roads",
+   "correct_answer": "Height of the land"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Roads\" next to the right answer and ask the question again in a new situation.",
+  "help": "Contour lines show height.",
+  "feedback": "Contour lines show height.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_SECTION": {
+  "skill": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS",
+  "error": "Mixes cross-section and plan.",
+  "example": {
+   "question": "What does a cross-section show?",
+   "wrong_answer": "The map's title",
+   "correct_answer": "The shape of the land along a line"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The map's title\" next to the right answer and ask the question again in a new situation.",
+  "help": "A cross-section shows the shape of the land.",
+  "feedback": "A cross-section shows the shape of the land.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS.M_SS9_TM_HUMAN": {
+  "skill": "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS",
+  "error": "Names a physical item as human.",
+  "example": {
+   "question": "Which is a human activity shown on a map?",
+   "wrong_answer": "A river",
+   "correct_answer": "A railway"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A river\" next to the right answer and ask the question again in a new situation.",
+  "help": "A railway is a human feature.",
+  "feedback": "A railway is a human feature.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_TENSION": {
+  "skill": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING",
+  "error": "Mixes tensional and compressional.",
+  "example": {
+   "question": "Which force pulls the crust apart?",
+   "wrong_answer": "Compressional",
+   "correct_answer": "Tensional"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Compressional\" next to the right answer and ask the question again in a new situation.",
+  "help": "Tensional forces pull the crust apart.",
+  "feedback": "Tensional forces pull the crust apart.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_RIFT": {
+  "skill": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING",
+  "error": "Says faulting makes volcanoes only.",
+  "example": {
+   "question": "Which feature is made by faulting?",
+   "wrong_answer": "A delta",
+   "correct_answer": "A rift valley"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"A delta\" next to the right answer and ask the question again in a new situation.",
+  "help": "Faulting makes rift valleys.",
+  "feedback": "Faulting makes rift valleys.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING.M_SS9_LF_EFFECT": {
+  "skill": "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING",
+  "error": "Thinks faulting has no effects.",
+  "example": {
+   "question": "Which can faulting bring?",
+   "wrong_answer": "Nothing at all",
+   "correct_answer": "Earthquakes and hot springs"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Nothing at all\" next to the right answer and ask the question again in a new situation.",
+  "help": "Faulting can bring earthquakes and hot springs.",
+  "feedback": "Faulting can bring earthquakes and hot springs.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_RIVER": {
+  "skill": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS",
+  "error": "Gives the wrong river.",
+  "example": {
+   "question": "On which river is the Aswan High Dam?",
+   "wrong_answer": "The Zambezi",
+   "correct_answer": "The Nile"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The Zambezi\" next to the right answer and ask the question again in a new situation.",
+  "help": "The Aswan High Dam is on the Nile.",
+  "feedback": "The Aswan High Dam is on the Nile.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_USE": {
+  "skill": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS",
+  "error": "Names a harm as a use.",
+  "example": {
+   "question": "Which is a use of a multi-purpose dam?",
+   "wrong_answer": "Causing drought",
+   "correct_answer": "Producing electricity"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Causing drought\" next to the right answer and ask the question again in a new situation.",
+  "help": "Dams produce electricity.",
+  "feedback": "Dams produce electricity.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS.M_SS9_RV_CHALLENGE": {
+  "skill": "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS",
+  "error": "Names a benefit as a challenge.",
+  "example": {
+   "question": "Which is a challenge of a big dam?",
+   "wrong_answer": "Cheap power",
+   "correct_answer": "Displacing people"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Cheap power\" next to the right answer and ask the question again in a new situation.",
+  "help": "People may be displaced.",
+  "feedback": "People may be displaced.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_CAUSE": {
+  "skill": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION",
+  "error": "Names a help as a cause.",
+  "example": {
+   "question": "Which causes environmental degradation?",
+   "wrong_answer": "Planting trees",
+   "correct_answer": "Deforestation"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Planting trees\" next to the right answer and ask the question again in a new situation.",
+  "help": "Deforestation degrades the environment.",
+  "feedback": "Deforestation degrades the environment.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_EFFECT": {
+  "skill": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION",
+  "error": "Gives a good effect.",
+  "example": {
+   "question": "Which is an effect of degradation?",
+   "wrong_answer": "Better soil",
+   "correct_answer": "Soil erosion"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Better soil\" next to the right answer and ask the question again in a new situation.",
+  "help": "Degradation causes soil erosion.",
+  "feedback": "Degradation causes soil erosion.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION.M_SS9_ED_ANSWER": {
+  "skill": "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION",
+  "error": "Names a harm as an answer.",
+  "example": {
+   "question": "Which helps to conserve the environment?",
+   "wrong_answer": "Burning forests",
+   "correct_answer": "Terracing and afforestation"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Burning forests\" next to the right answer and ask the question again in a new situation.",
+  "help": "Terracing and afforestation conserve.",
+  "feedback": "Terracing and afforestation conserve.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_LAMU": {
+  "skill": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES",
+  "error": "Places Lamu in Tanzania.",
+  "example": {
+   "question": "In which country is Lamu Old Town?",
+   "wrong_answer": "Tanzania",
+   "correct_answer": "Kenya"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Tanzania\" next to the right answer and ask the question again in a new situation.",
+  "help": "Lamu Old Town is in Kenya.",
+  "feedback": "Lamu Old Town is in Kenya.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_PYRAMIDS": {
+  "skill": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES",
+  "error": "Places the Pyramids in Kenya.",
+  "example": {
+   "question": "In which country are the Pyramids of Giza?",
+   "wrong_answer": "Kenya",
+   "correct_answer": "Egypt"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Kenya\" next to the right answer and ask the question again in a new situation.",
+  "help": "The Pyramids of Giza are in Egypt.",
+  "feedback": "The Pyramids of Giza are in Egypt.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES.M_SS9_HS_WHY": {
+  "skill": "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES",
+  "error": "Says sites are kept for nothing.",
+  "example": {
+   "question": "Why are heritage sites kept?",
+   "wrong_answer": "For no reason",
+   "correct_answer": "For culture, history and tourism"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"For no reason\" next to the right answer and ask the question again in a new situation.",
+  "help": "They keep culture and history.",
+  "feedback": "They keep culture and history.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_ORDER": {
+  "skill": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING",
+  "error": "Puts the referendum first.",
+  "example": {
+   "question": "Which stage comes first?",
+   "wrong_answer": "The referendum",
+   "correct_answer": "Collecting views"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The referendum\" next to the right answer and ask the question again in a new situation.",
+  "help": "Views are collected first.",
+  "feedback": "Views are collected first.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_PARLIAMENT": {
+  "skill": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING",
+  "error": "Gives Parliament the wrong role.",
+  "example": {
+   "question": "What does Parliament do with the draft?",
+   "wrong_answer": "Ignores it",
+   "correct_answer": "Debates and approves it"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Ignores it\" next to the right answer and ask the question again in a new situation.",
+  "help": "Parliament debates the draft.",
+  "feedback": "Parliament debates the draft.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING.M_SS9_CM_YEAR": {
+  "skill": "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING",
+  "error": "Gives the wrong year.",
+  "example": {
+   "question": "In which year was Kenya's current Constitution promulgated?",
+   "wrong_answer": "2002",
+   "correct_answer": "2010"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"2002\" next to the right answer and ask the question again in a new situation.",
+  "help": "The Constitution was promulgated in 2010.",
+  "feedback": "The Constitution was promulgated in 2010.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_ACT": {
+  "skill": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT",
+  "error": "Names a non-civic act.",
+  "example": {
+   "question": "Which is a civic activity?",
+   "wrong_answer": "Skipping school",
+   "correct_answer": "Voting"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Skipping school\" next to the right answer and ask the question again in a new situation.",
+  "help": "Voting is a civic activity.",
+  "feedback": "Voting is a civic activity.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_PARTY": {
+  "skill": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT",
+  "error": "Gives parties the wrong role.",
+  "example": {
+   "question": "What do political parties do?",
+   "wrong_answer": "Close schools",
+   "correct_answer": "Field candidates in elections"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Close schools\" next to the right answer and ask the question again in a new situation.",
+  "help": "Parties field candidates.",
+  "feedback": "Parties field candidates.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT.M_SS9_CE_POST": {
+  "skill": "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT",
+  "error": "Names a non-elected post.",
+  "example": {
+   "question": "Which post is vied for in a general election?",
+   "wrong_answer": "Head teacher",
+   "correct_answer": "Governor"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Head teacher\" next to the right answer and ask the question again in a new situation.",
+  "help": "Governor is an elected post.",
+  "feedback": "Governor is an elected post.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_CHAPTER": {
+  "skill": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS",
+  "error": "Gives the wrong chapter.",
+  "example": {
+   "question": "In which chapter is the Bill of Rights?",
+   "wrong_answer": "Chapter 1",
+   "correct_answer": "Chapter 4"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Chapter 1\" next to the right answer and ask the question again in a new situation.",
+  "help": "The Bill of Rights is in Chapter 4.",
+  "feedback": "The Bill of Rights is in Chapter 4.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_RIGHT": {
+  "skill": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS",
+  "error": "Names a duty as a right.",
+  "example": {
+   "question": "Which is a right in the Bill of Rights?",
+   "wrong_answer": "The right to cheat",
+   "correct_answer": "The right to life"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The right to cheat\" next to the right answer and ask the question again in a new situation.",
+  "help": "The right to life is in the Bill of Rights.",
+  "feedback": "The right to life is in the Bill of Rights.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS.M_SS9_BR_SPECIAL": {
+  "skill": "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS",
+  "error": "Names a non-special group.",
+  "example": {
+   "question": "Which is a special group protected by the Constitution?",
+   "wrong_answer": "Only adults with jobs",
+   "correct_answer": "Persons with disabilities"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Only adults with jobs\" next to the right answer and ask the question again in a new situation.",
+  "help": "Persons with disabilities are protected.",
+  "feedback": "Persons with disabilities are protected.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_ELEMENT": {
+  "skill": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE",
+  "error": "Names a non-element.",
+  "example": {
+   "question": "Which is an element of culture?",
+   "wrong_answer": "The price of petrol",
+   "correct_answer": "Language and music"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"The price of petrol\" next to the right answer and ask the question again in a new situation.",
+  "help": "Language and music are elements of culture.",
+  "feedback": "Language and music are elements of culture.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_KISWAHILI": {
+  "skill": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE",
+  "error": "Says Kiswahili is not recognised.",
+  "example": {
+   "question": "Which Kenyan language has global recognition?",
+   "wrong_answer": "None has any",
+   "correct_answer": "Kiswahili"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"None has any\" next to the right answer and ask the question again in a new situation.",
+  "help": "Kiswahili is recognised in the world.",
+  "feedback": "Kiswahili is recognised in the world.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE.M_SS9_GC_HUMANITY": {
+  "skill": "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE",
+  "error": "Thinks cultures should compete.",
+  "example": {
+   "question": "What promotes a common humanity?",
+   "wrong_answer": "Mocking other cultures",
+   "correct_answer": "Respect and dialogue"
+  },
+  "cause": "The child mixes up two rules that are taught close together.",
+  "reveals": "Offer \"Mocking other cultures\" next to the right answer and ask the question again in a new situation.",
+  "help": "Respect and dialogue promote common humanity.",
+  "feedback": "Respect and dialogue promote common humanity.",
+  "source": "To confirm by a Social Studies teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}

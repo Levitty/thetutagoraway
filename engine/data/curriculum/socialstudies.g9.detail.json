@@ -1,0 +1,236 @@
+{
+ "outcomes": {
+  "SOCI.G9.SOCIAL.PATHWAY_CHOICES.a": "identify factors to consider in the selection of a pathway",
+  "SOCI.G9.SOCIAL.PATHWAY_CHOICES.b": "examine requirements for Social sciences pathway at senior school",
+  "SOCI.G9.SOCIAL.PATHWAY_CHOICES.c": "choose a possible track within a pathway at senior school",
+  "SOCI.G9.SOCIAL.PATHWAY_CHOICES.d": "appreciate the need for choosing a pathway in senior school",
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.a": "explore and use support systems for pre-career and other needs",
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.b": "analyze challenges arising from existing support systems for pre-career and other needs",
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.c": "design solutions to challenges arising from support systems",
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.d": "explain the significance of pre-career mapping for individual growth",
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.e": "appreciate the value of the pre-career support systems",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.a": "identify a problem in the community",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.b": "design a solution to the identified problem",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.c": "plan to solve the identified problem in the community",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.d": "implement the plan to solve the problem",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.e": "write a report on the concluded project",
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.f": "appreciate teamwork in addressing community problems",
+  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.a": "describe the socio-economic practices of early humans in Africa during the Stone Age period",
+  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.b": "examine different types of tools used by early humans during the Stone Age period",
+  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.c": "illustrate the tools used by early humans during the Stone Age period",
+  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.d": "recognise the socio-economic practises of early humans",
+  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.a": "identify types of indigenous knowledge systems in African societies for self-identity",
+  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.b": "explain how the indigenous knowledge systems were used for the sustainability of life",
+  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.c": "use indigenous and modern knowledge systems for effective decision-making in life",
+  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.d": "appreciate the indigenous knowledge systems in the society",
+  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.a": "explain the causes of poverty in Africa",
+  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.b": "examine the effects of overexploitation of natural resources on poverty in Africa",
+  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.c": "apply creative thinking skills to reduce poverty in the society",
+  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.d": "recognise the contribution of poverty reduction strategies in society",
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.a": "identify sources of population data in a country",
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.b": "explain factors determining population structure in Kenya and Germany",
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.c": "construct age-sex population pyramids of developed and developing countries",
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.d": "determine the significance of population structure in the distribution of national resources in a society",
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.e": "appreciate the differences in population structure between developed and developing countries",
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.a": "explain types of peace for sustainable social interactions",
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.b": "identify barriers to conflict resolution in day-to-day lives",
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.c": "explore ways of managing emotions in the promotion of peace in the community",
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.d": "apply emotional intelligence for peaceful conflict resolutions in the community",
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.e": "embrace peace initiatives and agreements at the community level for harmonious living",
+  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.a": "explain ways of sustaining healthy relationships in the community",
+  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.b": "explore barriers to harmonious relationships",
+  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.c": "design strategies to overcome barriers to healthy relationships",
+  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.d": "appreciate the need for healthy relationships in the community",
+  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.a": "describe human activities on topographical maps",
+  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.b": "use creative thinking skills to enlarge and reduce parts of topographical maps",
+  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.c": "illustrate cross-sections from topographical maps",
+  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.d": "appreciate the representation of human activities on topographical maps",
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.a": "explore the types and causes of earth movements in the environment",
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.b": "explain the theories of continental drift and plate tectonics in the formation of continents",
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.c": "illustrate the formation of selected features due to faulting in the environment",
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.d": "explain the effects of faulting on human activities",
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.e": "recognise internal land-forming processes in shaping the landscape and their influence on human activities",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.a": "identify selected multi-purpose river projects on a map of Africa",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.b": "outline the conditions that led to the establishment of multi-purpose river projects along river Tana",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.c": "examine the economic importance of multi-purpose river projects in Africa",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.d": "assess challenges facing multi-purpose river projects in Africa",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.e": "design solutions to challenges facing multi-purpose river projects in Africa",
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.f": "recognise the importance of multipurpose river projects in society",
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.a": "explore factors that lead to the degradation of the environment in the community",
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.b": "describe the effects of environmental degradation in society",
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.c": "design measures to manage and conserve the environment for sustainability",
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.d": "apply creative thinking skills in managing and conserving the immediate environment",
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.e": "acknowledge the importance of managing and conserving the environment",
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.a": "identify the selected world heritage sites in Africa",
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.b": "examine the importance of the selected world sites in promoting cultural heritage",
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.c": "design measures to conserve the selected world heritage sites",
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.d": "apply critical thinking skills in conserving heritage sites within the locality",
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.e": "value heritage sites in the community",
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.a": "identify the stages in the constitution-making process in Kenya",
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.b": "examine the role of parliament in the constitution-making process",
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.c": "explore the role of citizens in the constitution-making process",
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.d": "participate in the constitution-making process in the community",
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.e": "desire to defend and promote the Constitution of Kenya",
+  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.a": "identify individual and collective civic engagement activities in Kenya",
+  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.b": "illustrate the role of political parties in democratic governance",
+  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.c": "outline positions vied for in a general election in Kenya",
+  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.d": "exhibit values that promote ethical civic engagement in the community",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.a": "explore Kenya’s Bill of Rights for mutual social well-being",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.b": "examine human rights of special groups for the promotion of social justice and inclusivity",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.c": "apply the Bill of Rights for harmonious living",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.d": "develop assertiveness necessary in standing up for human rights",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.e": "cultivate empathy and solidarity with special groups in society for mutual social responsibility",
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.f": "embrace respect for human rights in society",
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.a": "identify cultural elements and practises that have acquired global recognition and status",
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.b": "examine African cultural practises in promoting a common humanity",
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.c": "explore ways of preserving cultural elements that promote global citizenship",
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.d": "enumerate factors that promote healthy cultural relationships in global interconnectedness",
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.e": "appreciate values and cultural elements that promote responsible global citizenship"
+ },
+ "skills": {
+  "SOCI.G9.SOCIAL.PATHWAY_CHOICES.PATHWAYS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the three pathways (STEM; Social Sciences; Arts and Sports Science) and the factors for choosing (interests, abilities, career goals, performance and the subjects offered), and says a pathway is chosen with parents, teachers and counsellors. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.SOCIAL.PRE_CAREER_SUPPORT_SYSTE.PRE_CAREER": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names support systems (parents, teachers, counsellors, mentors, career talks, school clubs), and says pre-career mapping helps a learner link interests and abilities to careers. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.COMMUN.COMMUNITY_SERVICE_LEARNI.CSL_STEPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child gives the order identify the problem, design a solution, plan, implement, then report, and says a problem is found by observing and asking the community. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.SOCIO_ECONOMIC_PRACTICES.STONE_AGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says early humans were hunters and gatherers who lived in caves or rock shelters, made tools of stone (hand axes, choppers, flakes), later used fire and made small tools, and that Olduvai Gorge and Olorgesailie are famous sites. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.INDIGENOUS_KNOWLEDGE_SYS.INDIGENOUS_KNOWLEDGE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names oral literature (proverbs, stories, riddles), herbal medicine, weather forecasting, farming and craft skills, and says elders passed them on by word of mouth so that life could continue. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.POVERTY_REDUCTION.POVERTY": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names causes (unemployment, drought, poor governance and corruption, conflict, low education, rapid population growth) and says overexploiting resources (cutting trees, overfishing, over-mining) can empty resources and deepen poverty. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.POPULATION_STRUCTURE.POPULATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names the census, sample surveys and registration of births and deaths as sources, and says a developing country such as Kenya has a wide-based pyramid (many children) and a developed country such as Germany has a narrower base (older population). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.PEACEFUL_CONFLICT_RESOLU.PEACE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names inner peace, peace between people, community peace and national peace, and barriers (anger, prejudice, mistrust, poor communication), and says emotional intelligence helps handle anger. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.PEOPLE.HEALTHY_RELATIONSHIPS.RELATIONSHIPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names respect, honest talk, trust, forgiveness and listening as ways to sustain a relationship, and jealousy, mistrust, gossip and peer pressure as barriers. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.TOPOGRAPHICAL_MAPS.TOPO_MAPS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says a topographical map shows settlements, roads, railways, farms and markets by symbols, contour lines show height, a cross-section shows the shape of the land along a line, and a map is enlarged or reduced by changing the scale. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.INTERNAL_LAND_FORMING_PR.LAND_FORMING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says tensional forces pull the crust apart and compressional forces push it together, that faulting makes rift valleys, block mountains and escarpments, that the Great Rift Valley crosses Kenya, and that faulting brings earthquakes, lakes and hot springs. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.MULTI_PURPOSE_RIVER_PROJ.RIVER_PROJECTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names Aswan High Dam on the Nile, Kariba on the Zambezi, Akosombo on the Volta and the Seven Forks on the Tana, and says they give electricity, irrigation, water, flood control and fish, with challenges of high cost, displaced people and silting. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.MANAGEMENT_AND_CONSERVAT.ENV_DEGRADATION": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names causes (deforestation, overgrazing, pollution, poor farming), effects (soil erosion, drought, floods, loss of wildlife) and answers (planting trees, terracing, recycling, laws). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.NATURA.WORLD_HERITAGE_SITES_IN_.HERITAGE_SITES": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names Lamu Old Town, Fort Jesus, Mount Kenya and Lake Turkana National Parks in Kenya, the Pyramids of Giza in Egypt, the Serengeti in Tanzania and Great Zimbabwe, and says they are kept for culture, tourism and history. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.POLITI.THE_CONSTITUTION_OF_KENY.CONSTITUTION_MAKING": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the stages were collecting views from citizens, drafting, debate by Parliament, a referendum and promulgation in 2010, that Parliament debates and approves the draft, and that citizens give views and vote in the referendum. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.POLITI.CIVIC_ENGAGEMENT_IN_GOVE.CIVIC_ENGAGEMENT": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names voting, attending public forums, paying taxes and joining a party as civic activities, says parties field candidates and give citizens a voice, and names President, Governor, Senator, Member of the National Assembly, Woman Representative and Member of a County Assembly. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.POLITI.KENYA_S_BILL_OF_RIGHTS.BILL_OF_RIGHTS": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child says the Bill of Rights is in Chapter 4 of the 2010 Constitution, names rights (life, equality, expression, privacy, education), and says special groups such as children, persons with disabilities, youth, older persons and minorities are protected. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "SOCI.G9.POLITI.CULTURAL_GLOBALISATION.GLOBAL_CULTURE": {
+   "forms": [
+    "pick the right answer",
+    "pick the right answer in a short story",
+    "find the false step in a learner's reason"
+   ],
+   "mastery": "The child names language, music, dance, dress, food and sport as elements of culture, says Kiswahili and Kenyan marathon running are recognised in the world, and says respect and dialogue promote a common humanity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}

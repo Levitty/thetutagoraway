@@ -123,4 +123,6 @@ export default {
   'socialstudies_g8_a.js': 'socialstudies_g8_signed.js',
   'socialstudies_g8_b.js': 'socialstudies_g8_signed.js',
   'socialstudies_g8_c.js': 'socialstudies_g8_signed.js',
+  'socialstudies_g9_a.js': 'socialstudies_g9_signed.js',
+  'socialstudies_g9_b.js': 'socialstudies_g9_signed.js',
 };
