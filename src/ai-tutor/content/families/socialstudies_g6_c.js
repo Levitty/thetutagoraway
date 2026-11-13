@@ -33,7 +33,7 @@ export const FAMILIES = [
       T(['Area', 'Main land use'], [['Laikipia', 'Large ranches'], ['Kericho', 'Tea estates'], ['Kakamega', 'Forest and small farms'], ['Nairobi centre', 'Offices and shops']])),
     Q('Which area in Kenya is known for beef ranching?', 'Kajiado', w('BF_BEEF_COAST', 'Kisii highlands', 'The shore of Lake Victoria', 'The Mombasa coast strip'), 'Kajiado has dry grassland where beef cattle are ranched.'),
     Q('Which area of Uganda is called the cattle corridor and is known for beef cattle?', 'The south-west, around Ankole', w('BF_BEEF_COAST', 'The Rwenzori peaks', 'The shores of Lake Victoria', 'The forests of the west'), 'South-western Uganda has the Ankole cattle area.'),
-    Q('Which country exports live animals such as camels and goats from its dry lands?', 'Somalia', w('BF_SOMALIA', 'Rwanda', 'Burundi', 'Djibouti'), 'Somalia has many herds and exports live animals through its ports.'),
+    Q('Which country exports live animals such as camels and goats from its dry lands?', 'Somalia', w('BF_SOMALIA', 'Rwanda', 'Burundi', 'Malawi'), 'Somalia has many herds and exports live animals through its ports.'),
     Q('Which region of Ethiopia is known for its cattle herds?', 'The Borana lowlands in the south', w('BF_BEEF_COAST', 'The Danakil desert', 'The Lalibela hills', 'The Addis Ababa city streets'), 'The Borana lowlands are famous for cattle herding.'),
   ], { h: ['Think of areas with wide grass and few crops.', 'Dry grasslands, not wet highlands.'], s1: 'Find the area with wide grassland.' })),
   fam('bf.pl.why', `${BF}BF_PLACES`, 'word', 2, choose([
@@ -128,7 +128,7 @@ export const FAMILIES = [
     Q('Catches of fish in a lake fall every year because people use very fine nets. What is this problem?', 'Overfishing', w('FI_OVER_OK', 'Piracy', 'Pollution of the sea', 'Water hyacinth'), 'Taking too many fish, including young ones, is overfishing.'),
     Q('Fish are thrown away because they rot before reaching the market. Which solution fits?', 'Cold rooms and fast transport', w('FI_SOLUTION_MIX', 'Sea patrols along the coast', 'Net-size rules for the lake', 'Loans for new boat engines'), 'Cooling and quick transport keep fish fresh.'),
     Q('Foreign trawlers fish illegally in the waters of a coastal country. Which solution fits?', 'Sea patrols and the coast guard', w('FI_SOLUTION_MIX', 'More cold rooms along the shore', 'Smaller nets for all the boats', 'Higher fish prices at the market'), 'Patrols stop illegal fishing.'),
-    Q('Why must a fishing season be set when fish are laying eggs?', 'To let the fish breed and keep stocks up', w('FI_OVER_OK', 'To catch more fish all at once', 'To make fish cheaper in the market', 'To drive the fish away from shore'), 'Closed seasons let fish breed.'),
+    Q('Why is fishing stopped for a season when fish are laying eggs?', 'To let the fish breed and keep stocks up', w('FI_OVER_OK', 'To catch more fish all at once', 'To make fish cheaper in the market', 'To drive the fish away from shore'), 'Closed seasons let fish breed.'),
     Q('Oil spills have harmed sea life near a port. Which solution fits?', 'Strict laws and quick clean-up of oil', w('FI_SOLUTION_MIX', 'Using smaller nets in the water', 'Building cold rooms near the port', 'Sending more fishing boats out'), 'Laws and clean-up protect the sea.'),
   ], { h: ['What problem does the story show?', 'Overfishing, spoilage, piracy and pollution have different solutions.'], s1: 'Match the problem with its solution.' }), 'd'),
   fam('fi.pr.spot', `${FI}FI_PROBLEMS`, 'spot', 3, spot([

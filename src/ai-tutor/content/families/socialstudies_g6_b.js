@@ -99,7 +99,7 @@ export const FAMILIES = [
     Q('Which country is more crowded than Kenya?', 'Uganda', w('PD_DENSITY_TOTAL', 'Somalia', 'Tanzania', 'South Sudan'), 'Uganda has about 200 people for each square kilometre, more than Kenya\'s 90.',
       T(['Country', 'People for each square kilometre (about)'], [['Uganda', '200'], ['Tanzania', '70'], ['Somalia', '30'], ['South Sudan', '20']])),
     Q('Density is the number of people for what?', 'Each square kilometre of land', w('PD_DENSITY_TOTAL', 'The whole country', 'Each family', 'Each town'), 'Density is the number of people for each square kilometre.'),
-    Q('Which country is the smallest in area but one of the most crowded?', 'Rwanda', w('PD_RWANDA_EMPTY', 'Somalia', 'Ethiopia', 'South Sudan'), 'Rwanda is small, with many people on its land.'),
+    Q('Which small country is one of the most crowded?', 'Rwanda', w('PD_RWANDA_EMPTY', 'Somalia', 'Ethiopia', 'South Sudan'), 'Rwanda is small, with many people on its land.'),
   ], { h: ['Compare the numbers in the column.', 'The biggest number means the most crowded.'], s1: 'Compare the people for each square kilometre.' })),
   fam('pd.ar.where', `${PD}PD_AREAS`, 'word', 2, choose([
     Q('Which area of Eastern Africa is thinly populated?', 'Northern Kenya and the Somali lowlands', w('PD_RWANDA_EMPTY', 'The Lake Victoria basin', 'The Kenyan highlands', 'The city of Nairobi'), 'Dry lowlands support few people.'),
@@ -148,7 +148,7 @@ export const FAMILIES = [
     Q('Which is a duty of an age-set apart from defence?', 'Building and communal work', w('CS_WARRIOR', 'Selling goods in markets abroad', 'Running a bank in the village', 'Printing the village newspaper'), 'Age-sets also did building, herding and other work for the community.'),
   ], { h: ['Think of how people in the group were joined together.', 'Age-set: initiated together. Age-group: same life stage.'], s1: 'Recall what makes an age-set and what it did.' })),
   fam('cs.ag.story', `${CS}CS_AGE`, 'word', 2, choose([
-    Q('A group of boys were circumcised in the same season and became warriors together. What are they?', 'An age-set', w('CS_SET_GROUP', 'An age-group only', 'A clan', 'A school class'), 'Those initiated together form an age-set.'),
+    Q('A group of boys were initiated in the same season and became warriors together. What are they?', 'An age-set', w('CS_SET_GROUP', 'An age-group only', 'A clan', 'A school class'), 'Those initiated together form an age-set.'),
     Q('All the unmarried youths of a village do the community\'s heavy work. What are they?', 'An age-group', w('CS_SET_GROUP', 'An age-set', 'A clan', 'A family'), 'People of the same life stage form an age-group.'),
     Q('Why were age-sets important to a community?', 'They defended it and did communal work', w('CS_WARRIOR', 'They ran the shops and the markets', 'They taught only the girls of the village', 'They collected taxes for the king'), 'Age-sets supplied defence and labour.'),
     Q('Which person is in the same age-set as Kamau?', 'Someone initiated in the same year as Kamau', w('CS_SET_GROUP', 'Someone born in the same month as Kamau', 'Someone from the same school as Kamau', 'Someone with the same name as Kamau'), 'An age-set is formed by initiation together.'),
@@ -160,8 +160,8 @@ export const FAMILIES = [
     Q('What is a clan?', 'Many families who trace descent from one ancestor', w('CS_CLAN_FAMILY', 'One family living in one home', 'All people of one village', 'A group of friends at school'), 'A clan is many families from a common ancestor.'),
     Q('Who could a person marry in a clan system?', 'Someone from a different clan', w('CS_MARRY_CLAN', 'Someone from the same clan', 'Only a cousin', 'Only a neighbour'), 'Clan members are like family, so people marry outside the clan.'),
     Q('Which is a function of a clan?', 'Settling disputes through the elders', w('CS_CLAN_FAMILY', 'Collecting taxes for the state', 'Running a school bus', 'Printing money'), 'Clan elders settled disputes and kept order.'),
-    Q('Who looked after land held in common in a clan system?', 'Looking after clan land', w('CS_CLAN_FAMILY', 'Building the national road', 'Running a shop', 'Flying planes'), 'Clans looked after land held in common.'),
-    Q('What did clan members do when a family had a funeral?', 'Helping members in need, such as at a funeral', w('CS_CLAN_FAMILY', 'Throwing out poor members', 'Charging members a fee', 'Closing the village'), 'Clan members help each other in need.'),
+    Q('Which job of a clan concerned land held in common?', 'Looking after clan land', w('CS_CLAN_FAMILY', 'Building the national road', 'Running a shop', 'Flying planes'), 'Clans looked after land held in common.'),
+    Q('Which function of a clan helps a family at a funeral?', 'Helping members in need, such as at a funeral', w('CS_CLAN_FAMILY', 'Throwing out poor members', 'Charging members a fee', 'Closing the village'), 'Clan members help each other in need.'),
   ], { h: ['Think of what the clan did for its people.', 'Marriage rules, land, disputes and help in need.'], s1: 'Recall what a clan is and does.' })),
   fam('cs.cl.story', `${CS}CS_CLAN`, 'word', 2, choose([
     Q('Wanjiku\'s clan elders meet to settle a quarrel between two neighbours. Which function of a clan is this?', 'Settling disputes', w('CS_CLAN_FAMILY', 'Regulating marriage', 'Looking after land', 'Educating the young'), 'Elders settled disputes among clan members.'),

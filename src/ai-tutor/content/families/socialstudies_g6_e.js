@@ -21,7 +21,7 @@ export const FAMILIES = [
   ], { h: ['Recall the aims and the headquarters of the community.', 'Arusha, customs union, common market, monetary union, political federation.'], s1: 'Recall what the EAC is for.' })),
   fam('rc.ob.story', `${RC}RC_OBJECTIVES`, 'word', 2, choose([
     Q('A lorry carries maize from Uganda to Kenya without paying duty. Which EAC aim is this?', 'The customs union', w('RC_CUSTOMS', 'The monetary union', 'The political federation', 'The head office'), 'Duty-free trade between partners is the customs union.'),
-    Q('A Tanzanian teacher takes a job in Rwanda with no special permit. Which aim is this?', 'The common market, with free movement of workers', w('RC_CUSTOMS', 'The customs union', 'The political federation', 'The EAC headquarters'), 'The common market allows free movement of people.'),
+    Q('A Tanzanian teacher is allowed to take a job in Rwanda. Which aim is this?', 'The common market, with free movement of workers', w('RC_CUSTOMS', 'The customs union', 'The political federation', 'The EAC headquarters'), 'The common market allows free movement of people.'),
     Q('Learners are asked: where would a meeting of the EAC Secretariat be held?', 'Arusha', w('RC_HQ', 'Nairobi', 'Kampala', 'Dar es Salaam'), 'The EAC Secretariat is in Arusha.'),
     Q('The partners hope one day to use one money for all. Which stage is this?', 'The monetary union', w('RC_CUSTOMS', 'The customs union', 'The common market', 'The headquarters'), 'A monetary union means a shared currency.'),
     Q('Why did Kenya, Uganda and Tanzania want to work together?', 'To trade and grow together as a bigger market', w('RC_CUSTOMS', 'To stop all trade between them', 'To close their borders to each other', 'To avoid meeting each other'), 'Together they form a bigger market.'),
@@ -105,7 +105,7 @@ export const FAMILIES = [
     Q('Which category is the right to education in?', 'Social rights', w('HR_EDU', 'Political rights', 'Economic rights', 'Criminal rights'), 'Education, health and housing are social rights.'),
     Q('Which category is the right to work and to get a just wage in?', 'Economic rights', w('HR_CAT_SWAP', 'Political rights', 'Social rights', 'Religious rights'), 'Work, fair pay and owning property are economic rights.'),
     Q('Which is a political right?', 'To stand for election', w('HR_CAT_SWAP', 'To get health care', 'To own a business', 'To get clean water'), 'Standing for election is a political right.'),
-    Q('Which is an economic right?', 'To own property', w('HR_CAT_SWAP', 'To vote in elections', 'To join a political party', 'To get free education'), 'Owning property is an economic right.'),
+    Q('Which is an economic right?', 'To own property', w('HR_CAT_SWAP', 'To vote in elections', 'To join a political party', 'To stand for election'), 'Owning property is an economic right.'),
   ], { h: ['Is the right about running the country, welfare or earning a living?', 'Political: voting. Social: school, health. Economic: work, property.'], s1: 'Sort the right into political, social or economic.' })),
   fam('hr.ca.story', `${HR}HR_CATEGORIES`, 'word', 2, choose([
     Q('Mary joins a political party and votes. Which category of rights is she using?', 'Political rights', w('HR_CAT_SWAP', 'Economic rights', 'Social rights', 'Cultural rights'), 'Joining a party and voting are political.'),

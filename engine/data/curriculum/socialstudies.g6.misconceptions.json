@@ -12,7 +12,11 @@
   "help": "List the ten countries of the region and ask the child to find the country in the list.",
   "feedback": "Zambia is in Southern Africa. Rwanda is one of the countries of Eastern Africa.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_MISS_HORN": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
@@ -27,7 +31,11 @@
   "help": "Ask for the countries on the Horn and ask whether they are east of Africa's middle.",
   "feedback": "Ethiopia, Somalia, Djibouti and Eritrea are also in Eastern Africa. The region is bigger than the first countries a child learns.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES.M_PS_NORTH_AFRICA": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_COUNTRIES",
@@ -42,7 +50,11 @@
   "help": "Use the compass: Egypt is on the Mediterranean in the north, far from the East coast.",
   "feedback": "Egypt is in North Africa. Burundi is in Eastern Africa.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_SIZE_NAME": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
@@ -57,7 +69,11 @@
   "help": "Give the areas in square kilometres and ask the child to compare the numbers.",
   "feedback": "Ethiopia is about 1.1 million square kilometres. Kenya is about 580,000, so it is smaller.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_LANDLOCKED": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
@@ -72,7 +88,11 @@
   "help": "Ask which ocean Uganda touches. Then trace where its ships must go to reach the sea.",
   "feedback": "Uganda is landlocked. It has lakes but no sea coast. Kenya has a coast on the Indian Ocean.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE.M_PS_DIRECTION_SWAP": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.PS_POSITION_SIZE",
@@ -87,7 +107,11 @@
   "help": "Stand on Nairobi on a map and say which way Mombasa to Dar es Salaam runs.",
   "feedback": "Tanzania lies to the south of Kenya. Uganda is west and Somalia is east.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_SWAP": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
@@ -102,7 +126,11 @@
   "help": "Draw the equator and say it is a latitude; ask which way it runs.",
   "feedback": "Latitudes run east to west. Longitudes run from the North Pole to the South Pole.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_ZERO_LINES": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
@@ -117,7 +145,11 @@
   "help": "Ask: which line cuts the earth into north and south? Then give it its name.",
   "feedback": "The equator is 0 degrees latitude. The Prime Meridian is 0 degrees longitude.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING.M_LL_MEASURES": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_MEANING",
@@ -132,7 +164,11 @@
   "help": "Move a finger up and down a latitude line number: the number says north or south.",
   "feedback": "Latitude tells how far north or south of the equator a place is. Longitude tells how far east or west of the Prime Meridian.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_NORTH_SOUTH": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
@@ -147,7 +183,11 @@
   "help": "Ask: what does S stand for? Mark the equator on a sketch and put 1 S below it.",
   "feedback": "The letter S means south. Nairobi lies a little south of the equator.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_EAST_WEST": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
@@ -162,7 +202,11 @@
   "help": "Read the E on the number and mark it on a sketch to the right of the 0 line.",
   "feedback": "The letter E means east. All of Eastern Africa lies east of the Prime Meridian.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE.M_LL_ORDER": {
   "skill": "SOCI.G6.NATURA.POSITION_AND_SIZE_OF_COU.LL_LOCATE",
@@ -177,7 +221,11 @@
   "help": "Say the rule: latitude first (up and down), longitude second (across).",
   "feedback": "We give latitude first and longitude second, so 4 N is the latitude.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_KILI_COUNTRY": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
@@ -192,7 +240,11 @@
   "help": "Find the peak on a map and say which side of the border its summit is.",
   "feedback": "Kilimanjaro stands in Tanzania. It can be seen from Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_TYPE_MIX": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
@@ -207,7 +259,11 @@
   "help": "Ask whether water has land all round it or runs in a line to the sea.",
   "feedback": "Lake Tanganyika is a lake: water with land all round it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES.M_PF_VICTORIA_COUNTRY": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FEATURES",
@@ -222,7 +278,11 @@
   "help": "Colour the three shores on a sketch in three colours.",
   "feedback": "Lake Victoria is shared by Kenya, Uganda and Tanzania. It is the largest lake in Africa.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_ALL_VOLCANIC": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
@@ -237,7 +297,11 @@
   "help": "Draw a block with two faults and push the middle up. Say block mountain.",
   "feedback": "The Rwenzori are block mountains. They were pushed up between faults. They are not volcanoes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_RIFT_RIVER": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
@@ -252,7 +316,11 @@
   "help": "Draw a long block that slides down between two cracks.",
   "feedback": "The Rift Valley formed when the land between faults dropped. A river did not cut it out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION.M_PF_LAKE_VICTORIA_RIFT": {
   "skill": "SOCI.G6.NATURA.MAIN_PHYSICAL_FEATURES_I.PF_FORMATION",
@@ -267,7 +335,11 @@
   "help": "Mark both arms of the Rift on a sketch and ask where Victoria sits.",
   "feedback": "Lake Victoria lies in a shallow bowl between two arms of the Rift. Lake Turkana lies in the Rift floor.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_ARID_EQUATOR": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
@@ -282,7 +354,11 @@
   "help": "Compare a rain table of Kisumu and Lodwar.",
   "feedback": "Northern Kenya is arid: very hot and very dry. The equatorial region is wet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS.M_CR_HIGHLAND_PLACE": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_REGIONS",
@@ -297,7 +373,11 @@
   "help": "Ask what happens to temperature as we climb.",
   "feedback": "The highland climate is found on high land such as Mount Kenya, Kilimanjaro and the Ethiopian Highlands.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_COOL_WET": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
@@ -312,7 +392,11 @@
   "help": "Use a two-line table: rain and heat for each region.",
   "feedback": "The arid region is very hot and very dry.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS.M_CR_HEIGHT_HOT": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_TRAITS",
@@ -327,7 +411,11 @@
   "help": "Use the fact that temperature falls with height; ask about the snow on Kilimanjaro.",
   "feedback": "The higher you go, the colder it gets. That is why there is snow on Mount Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_FARM_ALL": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
@@ -342,7 +430,11 @@
   "help": "Ask what happens to tea in the dry north.",
   "feedback": "Tea needs cool weather and plenty of rain, so it grows in the highlands.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE.M_CR_DROUGHT_FLOOD": {
   "skill": "SOCI.G6.NATURA.CLIMATIC_REGIONS_IN_EAST.CR_INFLUENCE",
@@ -357,7 +449,11 @@
   "help": "Draw rain cloud and no rain cloud and say what each does to farms.",
   "feedback": "A drought is a long time without rain. It causes crop failure and hunger. Floods come from too much rain.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_SAVANNA_WHERE": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
@@ -372,7 +468,11 @@
   "help": "Connect grassland and wildlife: ask where zebra and wildebeest live.",
   "feedback": "Savanna is found on the Serengeti and Maasai Mara plains.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_MANGROVE_PLACE": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
@@ -387,7 +487,11 @@
   "help": "Show a picture of stilt roots in the sea water at the coast.",
   "feedback": "Mangroves grow in salt water along the coast, for example near Lamu and Mombasa.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES.M_VG_RAINFOREST_DRY": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TYPES",
@@ -402,7 +506,11 @@
   "help": "Ask which plants need the most water.",
   "feedback": "Rain forest needs rain all year. It grows where it is hot and wet.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_DESERT_BROAD": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
@@ -417,7 +525,11 @@
   "help": "Ask how a plant would keep water in a hot, dry place.",
   "feedback": "Desert plants have thorns, small leaves and long roots to save and find water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_SAVANNA_TREES": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
@@ -432,7 +544,11 @@
   "help": "Draw the Mara plain with a few acacia trees.",
   "feedback": "Savanna is tall grass with scattered flat-topped trees such as acacia.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS.M_VG_MOUNTAIN_SAME": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_TRAITS",
@@ -447,7 +563,11 @@
   "help": "Draw the mountain in four bands.",
   "feedback": "Vegetation changes with height. Forest is at the bottom and bare rock at the top.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_BURN_OK": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
@@ -462,7 +582,11 @@
   "help": "Ask what burning does to soil, animals and young trees.",
   "feedback": "Planting trees conserves vegetation. Uncontrolled fires destroy plants and soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE.M_VG_CUT_FOR_MONEY": {
   "skill": "SOCI.G6.NATURA.VEGETATION_IN_EASTERN_AF.VG_CONSERVE",
@@ -477,7 +601,11 @@
   "help": "Ask what holds the soil when the trees are gone.",
   "feedback": "When a forest is cut, the soil is exposed. Rain washes it away and the land is harmed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_BUILT_NATURAL": {
   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
@@ -492,7 +620,11 @@
   "help": "Ask: did people build it or was it made by nature?",
   "feedback": "Fort Jesus was built by people. Mount Kenya is natural.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_COUNTRY": {
   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
@@ -507,7 +639,11 @@
   "help": "Match sites and countries on a small table and say each aloud.",
   "feedback": "The Lalibela churches are in Ethiopia. They were carved out of rock.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES.M_HB_FORT_JESUS": {
   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_SITES",
@@ -522,7 +658,11 @@
   "help": "Ask about the date: 1593 is before the British came.",
   "feedback": "Fort Jesus was built by the Portuguese in the 1590s.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_NO_VALUE": {
   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
@@ -537,7 +677,11 @@
   "help": "Ask what a visitor learns at Lamu Old Town.",
   "feedback": "Old buildings tell our history and bring tourists and income.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE.M_HB_TOUCH_ALL": {
   "skill": "SOCI.G6.NATURA.HISTORIC_BUILT_ENVIRONME.HB_VALUE",
@@ -552,7 +696,11 @@
   "help": "Ask what happens to a wall when a thousand visitors write on it.",
   "feedback": "Following the rules protects the site. Writing on walls damages them for others.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_GROUP_SWAP": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
@@ -567,7 +715,11 @@
   "help": "Say the language families: Bantu, Nilotic, Cushitic, and name two for each.",
   "feedback": "The Luo belong to the Nilotic group. The Bantu group includes the Baganda and the Kikuyu.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SOMALI": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
@@ -582,7 +734,11 @@
   "help": "Link Cushitic with the Horn: Somali, Oromo, Afar.",
   "feedback": "The Somali belong to the Cushitic group, together with the Oromo and the Afar.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY.M_LG_SUBGROUP": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_CLASSIFY",
@@ -597,7 +753,11 @@
   "help": "Say Plain Nilotes live on the plains and herd cattle, like the Maasai and the Turkana.",
   "feedback": "The Maasai are Plain Nilotes. The Kalenjin are Highland Nilotes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_NO_REASON": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
@@ -612,7 +772,11 @@
   "help": "Ask what a herder does when the grass is gone.",
   "feedback": "People moved to find pasture, water and fertile land, and to escape drought, wars and disease.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children are taught drought, pasture and war as reasons; \"for fun\" is unlikely to be held."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_BANTU_ORIGIN": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
@@ -627,7 +791,11 @@
   "help": "Match each group with its homeland in a three-row table.",
   "feedback": "The Bantu came from the Congo Basin. The Cushites came from Ethiopia and the Nilotes from South Sudan.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES.M_LG_CUSH_DIRECTION": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_REASONS_ROUTES",
@@ -642,7 +810,11 @@
   "help": "Find Ethiopia and Kenya on a map and say which is north.",
   "feedback": "The Cushites came from the Horn of Africa in the north and moved south.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_NO_CONFLICT": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
@@ -657,7 +829,11 @@
   "help": "Ask what happens when two herds need the same water.",
   "feedback": "Settlement could cause quarrels over land and pasture, as well as bring trade and mixing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS.M_LG_ALL_SAME": {
   "skill": "SOCI.G6.PEOPLE.LANGUAGE_GROUPS_IN_EASTE.LG_EFFECTS",
@@ -672,7 +848,11 @@
   "help": "Ask whether Kikuyu and Maasai speak the same language today.",
   "feedback": "They traded, learned from each other and some intermarried. They did not all become the same.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_PEOPLE_DESERT": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
@@ -687,7 +867,11 @@
   "help": "Ask where a family would find water and food.",
   "feedback": "Few live in deserts because it is too dry to grow food or find water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children rarely think many people live in deserts because land is cheap there."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS.M_PD_MOUNTAIN_TOP": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_FACTORS",
@@ -702,7 +886,11 @@
   "help": "Ask where it is easier to build and grow crops.",
   "feedback": "People crowd where land is gentle, soil is fertile and rain is reliable.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_DENSITY_TOTAL": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
@@ -717,7 +905,11 @@
   "help": "Compare two countries by people per square kilometre in a small table.",
   "feedback": "Density is the number of people for each square kilometre.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS.M_PD_RWANDA_EMPTY": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_AREAS",
@@ -732,7 +924,11 @@
   "help": "Give people and area for a small and a large country and divide.",
   "feedback": "Rwanda is small but has many people on its land, so its density is high.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_MORE_LAND": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
@@ -747,7 +943,11 @@
   "help": "Cut a paper farm among more and more children.",
   "feedback": "In crowded areas, farms are divided into smaller plots and land becomes short.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely held; high density is easy to link with less land."
+  }
  },
  "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS.M_PD_SERVICES": {
   "skill": "SOCI.G6.PEOPLE.POPULATION_DISTRIBUTION_.PD_EFFECTS",
@@ -762,7 +962,11 @@
   "help": "Count seats in a class of 90.",
   "feedback": "Crowding puts pressure on schools and hospitals because there are too many people to serve.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children in crowded classes know schools are full; saying crowding leaves them with too little work is unlikely."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_SET_GROUP": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
@@ -777,7 +981,11 @@
   "help": "Say age-group means the same stage of life; age-set means initiated together.",
   "feedback": "An age-set is people initiated together. They stay a group for life.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE.M_CS_WARRIOR": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_AGE",
@@ -792,7 +1000,11 @@
   "help": "Ask who guarded cattle and villages.",
   "feedback": "Warriors defended the community and its cattle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_MARRY_CLAN": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
@@ -807,7 +1019,11 @@
   "help": "Say clan members are like brothers and sisters.",
   "feedback": "People marry outside their own clan because members are like family.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN.M_CS_CLAN_FAMILY": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_CLAN",
@@ -822,7 +1038,11 @@
   "help": "Draw one ancestor with many branches.",
   "feedback": "A clan is many families who trace descent from one ancestor.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_GOOD": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
@@ -837,7 +1057,11 @@
   "help": "Ask which customs help people and which harm them.",
   "feedback": "Customs that harm people, such as early marriage of girls, should not be kept.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE.M_CS_ALL_BAD": {
   "skill": "SOCI.G6.PEOPLE.CULTURE_AND_SOCIAL_ORGAN.CS_PRESERVE",
@@ -852,7 +1076,11 @@
   "help": "Ask what proverbs and folktales teach.",
   "feedback": "Good customs such as respect for elders and community work should be preserved.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_SCHOOL_ALONE": {
   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
@@ -867,7 +1095,11 @@
   "help": "Ask: who else took part?",
   "feedback": "Collaboration needs the community to take part, as when parents help build a classroom.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS.M_SC_ONE_WAY": {
   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_WAYS",
@@ -882,7 +1114,11 @@
   "help": "Ask who votes in the school hall.",
   "feedback": "A school gives the community its field, hall and learners who serve.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Plausible as a guess, unlikely as a held idea."
+  }
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_BENEFIT_ONLY_SCHOOL": {
   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
@@ -897,7 +1133,11 @@
   "help": "Name one gain for each.",
   "feedback": "Both gain. The school gets help and the community gets better learners and shared facilities.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Plausible as a guess, unlikely as a held idea; mostly tests careful reading."
+  }
  },
  "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS.M_SC_STRATEGY_STOP": {
   "skill": "SOCI.G6.PEOPLE.SCHOOL_AND_COMMUNITY.SC_BENEFITS",
@@ -912,7 +1152,11 @@
   "help": "Ask what happens if no one talks.",
   "feedback": "Open days and regular meetings keep the school and community working together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option (never meeting parents keeps collaboration going). Unlikely as a held idea."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_RAIN_CROP": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
@@ -927,7 +1171,11 @@
   "help": "Ask what cattle eat and how much land they need.",
   "feedback": "Beef ranching needs large grassland and enough water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS.M_BF_DISEASE_NO": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_FACTORS",
@@ -942,7 +1190,11 @@
   "help": "Ask what foot-and-mouth does to a herd.",
   "feedback": "Vets control diseases that can kill cattle and stop sales.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Cattle disease is familiar to rural Kenyan children (ticks, dips); they are unlikely to deny it."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_BEEF_COAST": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
@@ -957,7 +1209,11 @@
   "help": "Ask which areas are dry grassland.",
   "feedback": "Laikipia and Kajiado are large grassland areas used for ranching.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES.M_BF_SOMALIA": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PLACES",
@@ -972,7 +1228,11 @@
   "help": "Say animals feed on thorny bush and walk long distances to the port.",
   "feedback": "Somalia exports live animals such as camels and goats from its dry lands.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_MEAT_ONLY": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
@@ -987,7 +1247,11 @@
   "help": "List a product from each part of the animal.",
   "feedback": "Hides and skins are made into leather goods such as shoes and bags.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY.M_BF_NO_JOBS": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_ECONOMY",
@@ -1002,7 +1266,11 @@
   "help": "Name every person from ranch to shop.",
   "feedback": "Many people earn a living from beef: herders, vets, butchers and factory workers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely held by children who know herders, butchers and drivers."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_SOLUTION_SWAP": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
@@ -1017,7 +1285,11 @@
   "help": "Ask what the cattle lack: water and food, or cure for disease?",
   "feedback": "Water pans, boreholes and hay help in a drought. Dips control ticks.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS.M_BF_GRAZE_MORE": {
   "skill": "SOCI.G6.RESOUR.BEEF_FARMING.BF_PROBLEMS",
@@ -1032,7 +1304,11 @@
   "help": "Show a field eaten bare.",
   "feedback": "Overgrazing is reduced by rotating grazing and keeping fewer cattle on the land.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_LAKE_SEA": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
@@ -1047,7 +1323,11 @@
   "help": "Ask whether the water is salty or fresh.",
   "feedback": "Marine means from the sea. The Indian Ocean coast is a marine ground.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS.M_FI_FISH_PLACE": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_GROUNDS",
@@ -1062,7 +1342,11 @@
   "help": "Match fish and water in a small table.",
   "feedback": "Nile perch and tilapia come from lakes. Tuna and prawns come from the sea.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAWL": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
@@ -1077,7 +1361,11 @@
   "help": "Say trawl means to drag.",
   "feedback": "Trawling is dragging a large net behind a boat along the sea bed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS.M_FI_TRAD_MODERN": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_METHODS",
@@ -1092,7 +1380,11 @@
   "help": "Ask which has an engine and a freezer.",
   "feedback": "Trawlers with engines and cold rooms are modern. Canoes and baskets are traditional.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_OVER_OK": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
@@ -1107,7 +1399,11 @@
   "help": "Ask what happens if you take all the eggs and young fish.",
   "feedback": "Overfishing makes fish stocks fall. Seasons and mesh rules protect them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS.M_FI_SOLUTION_MIX": {
   "skill": "SOCI.G6.RESOUR.FISHING_IN_EASTERN_AFRIC.FI_PROBLEMS",
@@ -1122,7 +1418,11 @@
   "help": "Ask what spoils fish: thieves or heat?",
   "feedback": "Cold rooms stop fish spoiling. Sea patrols deal with piracy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_TOURIST_ROADS": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
@@ -1137,7 +1437,11 @@
   "help": "Follow a tourist from home to the park.",
   "feedback": "Airports and hotels bring visitors in and give them a place to stay.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS.M_WT_INSECURITY": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_FACTORS",
@@ -1152,7 +1456,11 @@
   "help": "Ask whether a family would visit an unsafe place.",
   "feedback": "Insecurity frightens tourists away and income falls.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children rarely hold that danger attracts tourists."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_PARK_COUNTRY": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
@@ -1167,7 +1475,11 @@
   "help": "Say Serengeti is south of the border and Mara is north.",
   "feedback": "The Serengeti is in Tanzania. The Maasai Mara is in Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS.M_WT_GORILLA": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PARKS",
@@ -1182,7 +1494,11 @@
   "help": "Say gorillas live in forest on mountains.",
   "feedback": "Mountain gorillas live in forest in Bwindi and the Volcanoes National Park.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_POACH_OK": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
@@ -1197,7 +1513,11 @@
   "help": "Ask what is left to see if animals are killed.",
   "feedback": "Poaching kills the wildlife tourists come to see, so tourism suffers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children are taught that poaching is a crime; the idea that it helps tourism is unlikely."
+  }
  },
  "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS.M_WT_SOLUTION_SWAP": {
   "skill": "SOCI.G6.RESOUR.WILDLIFE_AND_TOURISM_IN_.WT_PROBLEMS",
@@ -1212,7 +1532,11 @@
   "help": "Ask which answer stops a poacher.",
   "feedback": "Patrols and strong laws help to stop poaching.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_PORT_COUNTRY": {
   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
@@ -1227,7 +1551,11 @@
   "help": "Match port and country in a small table.",
   "feedback": "Dar es Salaam is a port in Tanzania. Mombasa is in Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_MODE_LOAD": {
   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
@@ -1242,7 +1570,11 @@
   "help": "Ask about the cost of flying a lorry load.",
   "feedback": "Railways carry heavy goods cheaply. Air is for light, urgent goods.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS.M_TR_LANDLOCKED_PORT": {
   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_NETWORKS",
@@ -1257,7 +1589,11 @@
   "help": "Trace the road from Kampala to the sea.",
   "feedback": "Uganda is landlocked and uses Mombasa and Dar es Salaam.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_BORDER": {
   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
@@ -1272,7 +1608,11 @@
   "help": "Ask what one stop means.",
   "feedback": "A one-stop border post lets both countries check lorries once, so crossing is faster.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. A one-stop post is named to speed crossing; the opposite belief is unlikely rather than a real misconception."
+  }
  },
  "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS.M_TR_CRASH_SOLVE": {
   "skill": "SOCI.G6.RESOUR.TRANSPORT_IN_EASTERN_AFR.TR_PROBLEMS",
@@ -1287,7 +1627,11 @@
   "help": "Ask what happens when a car hits at high speed.",
   "feedback": "Speed limits and driver training reduce road crashes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_TRAD_MODERN": {
   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
@@ -1302,7 +1646,11 @@
   "help": "Ask which needs electricity.",
   "feedback": "The drum is traditional. The mobile phone is modern.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES.M_CM_MASS": {
   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_MODES",
@@ -1317,7 +1665,11 @@
   "help": "Ask who hears a radio in a village.",
   "feedback": "Radio reaches many people at once. A letter reaches one.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_ELEC": {
   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
@@ -1332,7 +1684,11 @@
   "help": "Ask how a phone is charged.",
   "feedback": "Phones, radios and the internet need power, so no electricity limits communication.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS.M_CM_SOLUTION_SWAP": {
   "skill": "SOCI.G6.RESOUR.COMMUNICATIO_N_IN_EASTER.CM_PROBLEMS",
@@ -1347,7 +1703,11 @@
   "help": "Ask which action stops a thief.",
   "feedback": "Laws and guards protect masts and cables. Training helps with skills.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_MINERAL_PLACE": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
@@ -1362,7 +1722,11 @@
   "help": "Ask which lake is salty and in the south of the Rift.",
   "feedback": "Soda ash is mined at Lake Magadi in Kenya.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_TANZANITE": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
@@ -1377,7 +1741,11 @@
   "help": "Say tanzanite takes its name from the country.",
   "feedback": "Tanzanite is mined only in Tanzania.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS.M_MN_NOT_MINERAL": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_MINERALS",
@@ -1392,7 +1760,11 @@
   "help": "Ask: dug from the ground or grown?",
   "feedback": "Limestone is a mineral dug from the ground. Coffee is a crop.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_METHOD_SWAP": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
@@ -1407,7 +1779,11 @@
   "help": "Show a quarry at the coast.",
   "feedback": "Limestone is quarried from an open pit near the surface.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS.M_MN_PANNING": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_METHODS",
@@ -1422,7 +1798,11 @@
   "help": "Ask what a pan and water can do to find gold.",
   "feedback": "Panning washes gravel in water so the heavy mineral bits settle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_NO_HARM": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
@@ -1437,7 +1817,11 @@
   "help": "Show a quarry photograph.",
   "feedback": "Open-cast mining leaves holes and bare land unless it is repaired.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS.M_MN_REPAIR": {
   "skill": "SOCI.G6.RESOUR.MINING_IN_EASTERN_AFRICA.MN_EFFECTS",
@@ -1452,7 +1836,11 @@
   "help": "Talk about Haller Park in Mombasa.",
   "feedback": "Refilling pits and planting trees repairs mined land, as at Haller Park.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Few children think an open pit repairs itself."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KABAKA": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
@@ -1467,7 +1855,11 @@
   "help": "Match Buganda with Kabaka and Nyamwezi with Ntemi.",
   "feedback": "The ruler of Buganda was the Kabaka. The Nyamwezi ruler was the Ntemi.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA.M_TG_KATIKKIRO": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_BUGANDA",
@@ -1482,7 +1874,11 @@
   "help": "Say the Katikkiro was the Kabaka's main helper.",
   "feedback": "The Katikkiro was the chief minister who helped the Kabaka rule.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_KING": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
@@ -1497,7 +1893,11 @@
   "help": "Count the chiefdoms on a sketch.",
   "feedback": "The Nyamwezi had many small chiefdoms, each under a Ntemi.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI.M_TG_NTEMI_CHOSEN": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_NYAMWEZI",
@@ -1512,7 +1912,11 @@
   "help": "Say the position passed in the royal family.",
   "feedback": "A Ntemi inherited the position and was advised by elders.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_SAME_ALL": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
@@ -1527,7 +1931,11 @@
   "help": "Say how many rulers each system had.",
   "feedback": "Buganda was one large kingdom while the Nyamwezi had many small chiefdoms.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE.M_TG_NO_COUNCIL": {
   "skill": "SOCI.G6.POLITI.TRADITIONAL_FORMS_OF_GOV.TG_COMPARE",
@@ -1542,7 +1950,11 @@
   "help": "Name the council in each: Lukiiko and council of elders.",
   "feedback": "Both rulers were advised by a council: the Lukiiko in Buganda and elders among the Nyamwezi.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_HQ": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
@@ -1557,7 +1969,11 @@
   "help": "Say Arusha is near Kilimanjaro in Tanzania.",
   "feedback": "The EAC headquarters is in Arusha, Tanzania.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES.M_RC_CUSTOMS": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_OBJECTIVES",
@@ -1572,7 +1988,11 @@
   "help": "Say customs duty is a tax on goods that cross a border.",
   "feedback": "In a customs union members trade without duty and share a tariff on goods from outside.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_BENEFIT_ONE": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
@@ -1587,7 +2007,11 @@
   "help": "List a gain for a small and a large partner.",
   "feedback": "A common market gives all members a larger market.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS.M_RC_NO_MOVE": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_BENEFITS",
@@ -1602,7 +2026,11 @@
   "help": "Say the market includes labour as well as goods.",
   "feedback": "The common market allows free movement of people, goods and services.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_PROBLEM_SOLUTION": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
@@ -1617,7 +2045,11 @@
   "help": "Ask which answer speeds lorries.",
   "feedback": "One-stop border posts reduce delays at borders.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Joke option (singing the anthem to cut delays). It tests nothing a child really believes."
+  }
  },
  "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS.M_RC_WAR": {
   "skill": "SOCI.G6.POLITI.REGIONAL_CO_OPERATIONS.RC_PROBLEMS",
@@ -1632,7 +2064,11 @@
   "help": "Say the community is built on peace.",
   "feedback": "Disputes should be settled by talks and the EAC Court of Justice.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children may pick force as a guess but are not known to hold it as a settled idea; it is a values item more than a misconception."
+  }
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_RIGHT_RESP": {
   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
@@ -1647,7 +2083,11 @@
   "help": "Ask what the state gives and what the citizen gives.",
   "feedback": "Paying taxes is a responsibility. Voting at 18 is a right, though it is also a duty.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP.M_CZ_VOTE_AGE": {
   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_RIGHTS_RESP",
@@ -1662,7 +2102,11 @@
   "help": "Link voting with the identity card at 18.",
   "feedback": "A Kenyan citizen can vote at 18.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_PATRIOT": {
   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
@@ -1677,7 +2121,11 @@
   "help": "Ask for an action that helps the country.",
   "feedback": "Patriotism is love and loyalty shown in what a person does for the country.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES.M_CZ_CORRUPT": {
   "skill": "SOCI.G6.POLITI.CITIZENSHIP.CZ_QUALITIES",
@@ -1692,7 +2140,11 @@
   "help": "Ask whether honesty or speed matters most.",
   "feedback": "A good citizen is honest. Refusing a bribe and reporting it protects the country.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Written as a trap option. Few children would state that a bribe is good citizenship; they may still pick it as a guess."
+  }
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_CAT_SWAP": {
   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
@@ -1707,7 +2159,11 @@
   "help": "Ask: is it about running the country or earning a living?",
   "feedback": "The right to vote is a political right.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES.M_HR_EDU": {
   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_CATEGORIES",
@@ -1722,7 +2178,11 @@
   "help": "Ask whether it is about people's welfare.",
   "feedback": "Education, health and housing are social rights.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_ONLY_POLICE": {
   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
@@ -1737,7 +2197,11 @@
   "help": "List five who help.",
   "feedback": "Courts, commissions, schools and every citizen who respects others uphold rights.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD.M_HR_DAY": {
   "skill": "SOCI.G6.POLITI.HUMAN_RIGHTS.HR_UPHOLD",
@@ -1752,7 +2216,11 @@
   "help": "Say 10 December is the day in 1948.",
   "feedback": "Human Rights Day is on 10 December.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_NO_CAUSE": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
@@ -1767,7 +2235,11 @@
   "help": "Ask what two herders argue about at a dry well.",
   "feedback": "Competition for land and water is a common cause of conflict.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Written as a trap option. Children usually know why a quarrel started; \"no cause\" is unlikely as a held idea."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES.M_PC_VIOLENCE_SOLVE": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_CAUSES",
@@ -1782,7 +2254,11 @@
   "help": "Ask who wins after a fight.",
   "feedback": "Quarrels should be settled by talking and listening.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_MED_ARB": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
@@ -1797,7 +2273,11 @@
   "help": "Say a mediator helps and an arbitrator decides.",
   "feedback": "In arbitration a third person decides. In mediation a third person helps them agree.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS.M_PC_COURT_ONLY": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_METHODS",
@@ -1812,7 +2292,11 @@
   "help": "Name Njuri Ncheke or Kaya elders.",
   "feedback": "Councils of elders, such as the Njuri Ncheke of the Ameru, settle disputes peacefully.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_REVENGE": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
@@ -1827,7 +2311,11 @@
   "help": "Ask what revenge brings next.",
   "feedback": "Forgiving and talking promote peace. Revenge brings more conflict.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE.M_PC_RUMOUR": {
   "skill": "SOCI.G6.GOVERN.PEACE_AND_CONFLICT_RESOL.PC_PROMOTE",
@@ -1842,7 +2330,11 @@
   "help": "Tell a short story of a rumour.",
   "feedback": "Rumours can start or increase conflict.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_LOAN_TAX": {
   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
@@ -1857,7 +2349,11 @@
   "help": "Say a tax is compulsory and a loan must be repaid.",
   "feedback": "Income tax is a tax. A loan is borrowed money that must be repaid.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES.M_GR_COLLECTOR": {
   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SOURCES",
@@ -1872,7 +2368,11 @@
   "help": "Say KRA stands for Kenya Revenue Authority.",
   "feedback": "The Kenya Revenue Authority collects national taxes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_LEVEL_SWAP": {
   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
@@ -1887,7 +2387,11 @@
   "help": "Say teachers are paid by the Teachers Service Commission.",
   "feedback": "The national government pays teachers. Counties run county health services and county roads.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING.M_GR_TAX_WASTE": {
   "skill": "SOCI.G6.GOVERN.GOVERNMENT_REVENUE_AND_E.GR_SPENDING",
@@ -1902,7 +2406,11 @@
   "help": "List what is built with taxes.",
   "feedback": "Tax money pays for roads, schools, hospitals and security.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_WHAT": {
   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
@@ -1917,7 +2425,11 @@
   "help": "Say pre means before.",
   "feedback": "The preamble is the opening statement. Pre means before.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS.M_PR_SOVEREIGN_WHO": {
   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_KEYWORDS",
@@ -1932,7 +2444,11 @@
   "help": "Read the first words: We, the people of Kenya.",
   "feedback": "In the preamble, the people of Kenya hold sovereign power.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_INDIVISIBLE": {
   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
@@ -1947,7 +2463,11 @@
   "help": "Say in means not.",
   "feedback": "Indivisible means cannot be divided. Kenya is one nation.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  },
  "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING.M_PR_HERITAGE": {
   "skill": "SOCI.G6.GOVERN.THE_PREAMBLE_OF_THE_CONS.PR_MEANING",
@@ -1962,6 +2482,10 @@
   "help": "Ask about a rock painting or a forest.",
   "feedback": "Heritage is what we receive from the past and pass to the future.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge slip a Kenyan Grade 6 child could plausibly make. We have no research source for it and no homework count; the library line \"not traced to a student\" stands. A teacher should say whether it comes up in class."
+  }
  }
 }
