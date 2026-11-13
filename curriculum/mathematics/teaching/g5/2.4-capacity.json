@@ -1,0 +1,246 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "title": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [52, 66, 72],
+  "notes": "Kenyan homes are full of capacity benchmarks: a 5 ml medicine spoon, a 300 ml soda, a 500 ml milk packet, a 1 litre bottle, a 20 litre jerrycan. Use them for every estimate. The column skills (add, subtract, multiply, divide) follow the same pattern as km and m and kg and g: the unit pairs regroup at 1 000, not 100 (source 72).",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT",
+      "key_step": "The child reads ml and l on containers, chooses ml for small amounts and l for large ones, and compares amounts only after putting them in the same unit.",
+      "floor": {"prerequisite": "Knows the litre (Grade 4).", "question": "Is a jerrycan measured in litres or in metres?", "answer": "Litres"},
+      "representations": ["real containers: a medicine spoon, a milk packet, a jerrycan", "labels drawn on the board", "ml and l"],
+      "steps": ["Read labels on familiar containers.", "Sort: tiny amounts in ml, big amounts in l.", "Tell capacity labels (ml, l) from mass labels (g, kg).", "Compare 500 ml and 2 l in the same unit."],
+      "contexts": ["a 5 ml spoon of cough syrup", "a 500 ml milk packet", "a 2 l bottle of cooking oil", "a 20 l jerrycan"],
+      "board": [
+        {"beat": "draw", "do": "Draw a spoon, a milk packet and a jerrycan, small to large, each with a blank label."},
+        {"beat": "point", "do": "Point at each in turn.", "say": "Would this one say ml or l?"},
+        {"beat": "pause", "do": "Wait for the child's unit for each."},
+        {"beat": "child_draws", "do": "Child writes a sensible label on each."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT.M_BIGGER_NUMBER_MEANS_MORE", "listen_for": ["500 is more than 2"], "ask": "How many 500 ml packets fill a 2 l bottle?", "repair": "Put both in ml first: 500 ml and 2 000 ml."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT.M_WRONG_UNIT_FOR_SMALL_AMOUNT", "listen_for": ["5 l"], "ask": "Could one spoon hold 5 litres, more than two big soda bottles?", "repair": "A spoon is tiny: ml. Picture 5 litres as two and a half big soda bottles."}
+      ],
+      "checks": [
+        {"question": "Which holds more: a 500 ml bottle of water or a 2 l bottle of oil?", "answer": "The 2 l bottle", "shows": "same unit before comparing"},
+        {"question": "A nurse gives one spoon of cough syrup. Is the dose 5 ml or 5 l?", "answer": "5 ml", "shows": "sensible unit"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE",
+      "key_step": "The child works out what each small mark on a scale is worth (from the labelled marks) and reads the level at eye height.",
+      "floor": {"prerequisite": "Counts in 10s, 25s, 50s and 100s.", "question": "Count in 25s from 200 to 300.", "answer": "200, 225, 250, 275, 300"},
+      "representations": ["a measuring jug", "a scale drawn large with labelled and unlabelled marks", "the reading in ml"],
+      "steps": ["Find two labelled marks and the gap between them.", "Count the spaces between them; share the gap.", "Count on from the lower label.", "Read at eye level."],
+      "contexts": ["a measuring jug in the kitchen", "a medicine cup", "a syringe at the clinic"],
+      "board": [
+        {"beat": "draw", "do": "Draw a jug scale labelled 200 and 300 ml with three small marks between, and water at the second small mark."},
+        {"beat": "count", "do": "Child counts the spaces between 200 and 300.", "say": "Count the spaces, not the marks."},
+        {"beat": "pause", "do": "Wait for the child to say what each space is worth."},
+        {"beat": "child_draws", "do": "Child writes the reading."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE.M_EACH_MARK_IS_ONE", "listen_for": ["202", "203"], "ask": "Four spaces share the 100 ml between the labels. How much is each space?", "repair": "Share the gap: 100 ml in 4 spaces is 25 ml each. Count on in 25s."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE.M_READS_FROM_ABOVE", "listen_for": ["I looked down into it"], "ask": "Where should your eyes be when you read the level?", "repair": "Draw an eye level with the water line; reading from above gives the wrong mark."}
+      ],
+      "checks": [
+        {"question": "A jug is labelled 200 ml and 300 ml with three small marks between. The water is at the second small mark. How much water?", "answer": "250 ml", "shows": "works out the mark value"},
+        {"question": "A scale goes 0, 100, 200 with one small mark between each label. The level is at the mark after 100. Reading?", "answer": "150 ml", "shows": "halfway marks"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING",
+      "key_step": "The child multiplies the number of fills by the size of the measure, and knows a smaller measure needs more fills.",
+      "floor": {"prerequisite": "Multiplies a 1-digit number by 5, 10, 100.", "question": "8 x 5 =", "answer": "40"},
+      "representations": ["spoons or cups poured into a jug", "a row of spoon pictures", "fills x size"],
+      "steps": ["Count the fills.", "Multiply by the size of the measure.", "Compare two measures: the one needing more fills holds less."],
+      "contexts": ["filling a cup with a 5 ml spoon", "filling a jug with a 250 ml cup", "filling a jerrycan with a 1 l bottle"],
+      "board": [
+        {"beat": "draw", "do": "Draw 8 spoons in a row, each labelled 5 ml, pouring into a cup."},
+        {"beat": "count", "do": "Child counts the spoons."},
+        {"beat": "pause", "do": "Wait for the child to say the capacity, not the count."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING.M_GIVES_NUMBER_OF_FILLS", "listen_for": ["8 ml"], "ask": "Each spoon holds 5 ml. How much do 8 spoons hold?", "repair": "Count on in fives along the spoons: 5, 10, 15... the fills tell how many, the spoon tells how much."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING.M_MORE_FILLS_BIGGER_CUP", "listen_for": ["cup B because 6"], "ask": "If a cup is small, will it need more fills or fewer?", "repair": "Picture a spoon against a cup filling the same jug: the small one needs many more."}
+      ],
+      "checks": [
+        {"question": "Akinyi fills a cup with a 5 ml spoon 8 times. What is the cup's capacity?", "answer": "40 ml", "shows": "fills x size"},
+        {"question": "Cup A fills a jug in 4 cupfuls; cup B in 6. Which cup holds more?", "answer": "Cup A", "shows": "fewer fills, bigger measure"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE",
+      "key_step": "The child estimates by comparing with a benchmark container (a 250 ml cup, a 500 ml packet), then measures and keeps the estimate.",
+      "floor": {"prerequisite": "Knows ml and l.", "question": "About how much is a milk packet?", "answer": "About 500 ml"},
+      "representations": ["benchmark containers", "pictures side by side", "estimate and measurement recorded"],
+      "steps": ["Pick a benchmark.", "Compare: about how many benchmarks?", "Estimate, then measure.", "Keep both; say how close."],
+      "contexts": ["a cup of chai", "a bucket for watering", "a bottle of soda"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 500 ml milk packet beside a mug of chai."},
+        {"beat": "predict", "do": "Ask for an estimate for the mug compared with the packet.", "say": "Is the mug more or less than the packet?"},
+        {"beat": "pause", "do": "Wait for the child's estimate in ml."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE.M_NO_BENCHMARKS", "listen_for": ["2 500 ml"], "ask": "How many milk packets would that be?", "repair": "Compare with the packet: 2 500 ml is five packets, far too much for one cup."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE.M_TALLER_HOLDS_MORE", "listen_for": ["the tall one"], "ask": "Is the bowl wide? Could width hold more?", "repair": "Pour one into the other in the drawing: the wide bowl takes the whole glass with room left."}
+      ],
+      "checks": [
+        {"question": "Best estimate for a cup of chai: 25 ml, 250 ml or 2 500 ml?", "answer": "250 ml", "shows": "uses a benchmark"},
+        {"question": "A tall thin glass and a short wide bowl. Can you be sure which holds more without measuring?", "answer": "No; width matters too", "shows": "height alone does not decide"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP",
+      "key_step": "The child says 1 l = 1 000 ml and shows it with familiar containers (two 500 ml packets, four 250 ml cups), and gives half and quarter litres in ml.",
+      "floor": {"prerequisite": "Knows half and quarter of a whole.", "question": "What is half of 1 000?", "answer": "500"},
+      "representations": ["milk packets and cups filling a 1 l bottle", "a bar of 1 l split in halves and quarters", "1 l = 1 000 ml"],
+      "steps": ["Two 500 ml packets fill a 1 l bottle.", "Four 250 ml cups fill it too.", "State 1 l = 1 000 ml.", "Half and quarter litres in ml."],
+      "contexts": ["milk packets", "a 1 l bottle of water", "a cup of tea"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 1 l bottle; pour two milk packets into it, one at a time.", "say": "Two 500 ml packets."},
+        {"beat": "pause", "do": "Wait for the child to say how much the bottle holds in ml."},
+        {"beat": "draw", "do": "Draw the bottle again split into four equal parts."},
+        {"beat": "child_draws", "do": "Child writes the ml in each quarter."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP.M_LITRE_IS_100_ML", "listen_for": ["100"], "ask": "One milk packet is 500 ml. Can a litre be only 100 ml?", "repair": "Two packets fill a litre: 500 and 500. The 100 belongs to cm and m."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP.M_HALF_LITRE_50", "listen_for": ["50 ml"], "ask": "What is half of 1 000?", "repair": "Start from 1 000 ml, then halve: 500, then 250."}
+      ],
+      "checks": [
+        {"question": "1/2 l = ___ ml", "answer": "500", "shows": "half of 1 000"},
+        {"question": "How many 250 ml cups fill a 1 l bottle?", "answer": "4", "shows": "uses the relationship"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML",
+      "key_step": "The child multiplies litres by 1 000 and writes mixed amounts with zeros in empty places (3 l 45 ml = 3 045 ml).",
+      "floor": {"prerequisite": "Knows 1 l = 1 000 ml.", "question": "2 l = ___ ml", "answer": "2 000"},
+      "representations": ["a jerrycan", "three boxes after the thousands for ml", "ml written in full"],
+      "steps": ["Estimate: more ml or fewer?", "Litres go in the thousands.", "ml fill the last three places, zeros in empty ones.", "Read it back."],
+      "contexts": ["a 4 l jerrycan", "2 l 50 ml of juice", "a 20 l water container"],
+      "board": [
+        {"beat": "write", "do": "Write 2 l 50 ml and, under it, a thousands digit box, a comma and three boxes."},
+        {"beat": "child_draws", "do": "Child fills the boxes."},
+        {"beat": "pause", "do": "Wait for the child to read the number aloud."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML.M_MULTIPLY_BY_100", "listen_for": ["400 ml"], "ask": "Is 400 ml a full jerrycan or less than a packet of milk?", "repair": "One litre is 1 000 ml, so multiply by 1 000. Check against the packets."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML.M_MIXED_UNIT_PLACEHOLDER", "listen_for": ["250 ml", "2 500"], "ask": "Put 50 ml in the three boxes. Which box stays empty?", "repair": "The hundreds box gets a zero: 2 050 ml."}
+      ],
+      "checks": [
+        {"question": "2 l 50 ml = ___ ml", "answer": "2 050", "shows": "placeholder zero"},
+        {"question": "A jerrycan holds 4 l. How many ml?", "answer": "4 000 ml", "shows": "times 1 000"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L",
+      "key_step": "The child splits off thousands of ml as litres and keeps all three last digits as ml.",
+      "floor": {"prerequisite": "Converts litres to ml.", "question": "3 l = ___ ml", "answer": "3 000"},
+      "representations": ["a big tank in ml", "a line before the last three digits", "litres and ml"],
+      "steps": ["Draw a line before the last three digits.", "Left of the line is litres, right is ml.", "Keep internal zeros.", "Check by converting back."],
+      "contexts": ["3 500 ml of milk from a cow", "2 040 ml of water in a basin", "a school's daily water in ml"],
+      "board": [
+        {"beat": "write", "do": "Write 2 040 ml large."},
+        {"beat": "draw", "do": "Draw a line before the last three digits, slowly.", "say": "A thousand ml make one litre."},
+        {"beat": "pause", "do": "Wait for the child to read litres and ml."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L.M_DIVIDE_BY_100", "listen_for": ["35 l"], "ask": "Is 3 500 ml more than 30 litres?", "repair": "Litres are thousands of ml: the line goes before three digits."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L.M_SPLIT_DIGITS_WRONG", "listen_for": ["20 l 40 ml"], "ask": "How many digits after your line?", "repair": "Always three digits on the ml side: 2 l 040 ml, which is 2 l 40 ml."}
+      ],
+      "checks": [
+        {"question": "Write 3 500 ml in l and ml.", "answer": "3 l 500 ml", "shows": "splits at thousands"},
+        {"question": "Write 2 040 ml in l and ml.", "answer": "2 l 40 ml", "shows": "internal zero"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML",
+      "key_step": "The child adds ml to ml and l to l in columns, regrouping every 1 000 ml as 1 l.",
+      "floor": {"prerequisite": "Converts ml to l and ml.", "question": "1 200 ml = ___ l ___ ml", "answer": "1 l 200 ml"},
+      "representations": ["milk from two milkings", "l and ml columns", "the total"],
+      "steps": ["Estimate in litres.", "Line up l and ml columns (ml by place value).", "Add ml; regroup 1 000 ml.", "Add litres with the carried litre."],
+      "contexts": ["milk from a cow morning and evening", "water poured into a sufuria", "juice for a class party"],
+      "board": [
+        {"beat": "write", "do": "Write 2 l 700 ml + 1 l 500 ml in columns."},
+        {"beat": "point", "do": "Point at the ml column.", "say": "Add the ml first."},
+        {"beat": "pause", "do": "Wait for 1 200 ml and the regrouping."},
+        {"beat": "child_draws", "do": "Child carries the litre and finishes."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML.M_ADD_REGROUP_AT_100", "listen_for": ["4 l 20 ml"], "ask": "Is 120 ml more than a litre?", "repair": "Regroup only at 1 000 ml. Check with milk packets: 120 ml is a small cup."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML.M_ADD_UNLIKE_UNITS", "listen_for": ["302 ml"], "ask": "Mama poured 2 whole litres first. Can the total be less than 2 l?", "repair": "Put each amount in its column: 2 l 0 ml plus 0 l 300 ml."}
+      ],
+      "checks": [
+        {"question": "A cow gave 2 l 70 ml in the morning and 1 l 50 ml in the evening. How much altogether?", "answer": "3 l 120 ml", "shows": "no regrouping at 100"},
+        {"question": "3 l 250 ml + 45 ml", "answer": "3 l 295 ml", "shows": "columns lined up by place"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML",
+      "key_step": "The child exchanges 1 l for 1 000 ml when there are too few ml, and reduces the litres by one.",
+      "floor": {"prerequisite": "Adds l and ml with regrouping.", "question": "1 l = ___ ml", "answer": "1 000"},
+      "representations": ["water used from a jerrycan", "columns with exchange", "what is left"],
+      "steps": ["Estimate.", "Columns.", "Exchange 1 l for 1 000 ml if needed.", "Subtract; check by adding back."],
+      "contexts": ["water used from a 5 l jerrycan", "milk sold from a can", "oil used from a bottle"],
+      "board": [
+        {"beat": "write", "do": "Write 5 l 200 ml - 2 l 650 ml in columns."},
+        {"beat": "point", "do": "Point at 200 above 650.", "say": "Do we have enough ml?"},
+        {"beat": "pause", "do": "Wait for the child to suggest exchanging a litre."},
+        {"beat": "child_draws", "do": "Child exchanges and subtracts."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML.M_SMALLER_FROM_LARGER", "listen_for": ["650 take 200", "3 l 450 ml"], "ask": "Add your answer to 2 l 650 ml. Do you get 5 l 200 ml?", "repair": "The check fails; exchange 1 l for 1 000 ml."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML.M_SUBTRACT_IGNORING_UNITS", "listen_for": ["345 ml"], "ask": "Otieno washed his hands from a full 5 l jerrycan. Is there only 345 ml left?", "repair": "Write 5 l as 5 l 0 ml, exchange a litre, subtract."}
+      ],
+      "checks": [
+        {"question": "A full 5 l jerrycan; Otieno uses 350 ml. How much is left?", "answer": "4 l 650 ml", "shows": "subtracting from whole litres"},
+        {"question": "4 l 30 ml - 1 l 80 ml", "answer": "2 l 950 ml", "shows": "exchange 1 000 ml, not 100"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML",
+      "key_step": "The child multiplies the ml, regroups each 1 000 ml as 1 l, multiplies the litres, then adds the carried litres.",
+      "floor": {"prerequisite": "Adds l and ml with regrouping.", "question": "400 ml x 3 =", "answer": "1 200 ml"},
+      "representations": ["several identical bottles", "columns", "the product"],
+      "steps": ["Estimate.", "Multiply ml; regroup.", "Multiply litres; then add carried litres.", "Check by repeated addition."],
+      "contexts": ["3 bottles of juice", "a family's milk for a week", "jerrycans for a school"],
+      "board": [
+        {"beat": "draw", "do": "Draw three bottles each labelled 2 l 400 ml."},
+        {"beat": "predict", "do": "Ask for an estimate in litres.", "say": "About how many litres in all three?"},
+        {"beat": "write", "do": "Write 2 l 400 ml x 3 in columns."},
+        {"beat": "child_draws", "do": "Child multiplies ml first, then litres."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML.M_MULTIPLY_LITRES_ONLY", "listen_for": ["6 l 400 ml"], "ask": "Does each bottle have 400 ml as well as its litres?", "repair": "Each bottle has both parts, so both are multiplied."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML.M_CARRY_BEFORE_MULTIPLY", "listen_for": ["9 l 800 ml", "I added the carry first"], "ask": "Was the carried litre in each bottle, or made at the end?", "repair": "Multiply the litres first, then add the litre made from the ml."}
+      ],
+      "checks": [
+        {"question": "One bottle holds 2 l 400 ml. How much do 3 bottles hold?", "answer": "7 l 200 ml", "shows": "both parts, regrouped"},
+        {"question": "2 l 600 ml x 3", "answer": "7 l 800 ml", "shows": "carry added after multiplying"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML",
+      "key_step": "The child divides the litres, changes any remaining litres into 1 000 ml each, adds them to the ml, then divides the ml.",
+      "floor": {"prerequisite": "Converts l to ml; divides whole numbers.", "question": "5 400 ÷ 2 =", "answer": "2 700"},
+      "representations": ["milk shared between families", "columns with the remainder carried", "each share"],
+      "steps": ["Estimate each share.", "Divide litres; note the remainder.", "Change remaining litres to ml and add.", "Divide ml; check by multiplying."],
+      "contexts": ["milk shared between families", "water poured into buckets", "juice shared at a party"],
+      "board": [
+        {"beat": "draw", "do": "Draw a can labelled 5 l 400 ml and two empty jugs."},
+        {"beat": "write", "do": "Write 5 l 400 ml ÷ 2 with a box for the leftover litre."},
+        {"beat": "pause", "do": "Wait for the child to say what happens to the leftover litre."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML.M_DROP_REMAINDER_LITRES", "listen_for": ["2 l 200 ml"], "ask": "Each family got 2 l. Is a litre still left in the can?", "repair": "Share the leftover litre too: change it to 1 000 ml and add to the 400 ml."},
+        {"code": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML.M_DIVIDE_LITRES_ONLY", "listen_for": ["2 l 300 ml"], "ask": "Did each bucket get all 300 ml?", "repair": "The ml must be shared too. Check by multiplying the share by 3."}
+      ],
+      "checks": [
+        {"question": "5 l 400 ml of milk is shared equally between 2 families. How much does each get?", "answer": "2 l 700 ml", "shows": "remainder carried as 1 000 ml"},
+        {"question": "6 l 300 ml of water is poured equally into 3 buckets. How much in each?", "answer": "2 l 100 ml", "shows": "both parts divided"}
+      ]
+    }
+  ]
+}

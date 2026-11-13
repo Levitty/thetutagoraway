@@ -1,0 +1,263 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "title": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [52, 66, 72],
+  "notes": "Kenyan packets carry the benchmarks: 2 kg maize flour, 1 kg sugar, 500 g salt, 250 g tea leaves. A beam balance can be made from a ruler and two bags. As with length and capacity, kg and g regroup at 1 000, and every conversion starts with an estimate (source 72). Children often think bigger means heavier; a bag of cotton wool against a stone settles it.",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE",
+      "key_step": "The child reads g and kg on packets, tells them apart, and tells mass labels from capacity labels.",
+      "floor": {"prerequisite": "Knows the kilogramme (Grade 4).", "question": "Is a bag of maize flour measured in kg or in litres?", "answer": "kg"},
+      "representations": ["real packets", "labels drawn on the board", "g and kg"],
+      "steps": ["Read labels: 250 g tea, 500 g salt, 2 kg flour.", "Name the gramme; compare with a kilogramme.", "Sort labels into mass (g, kg) and capacity (ml, l)."],
+      "contexts": ["a 250 g packet of tea leaves", "a 2 kg packet of maize flour", "a 500 g packet of salt"],
+      "board": [
+        {"beat": "draw", "do": "Draw three packets with labels 250 g, 1 kg, 500 ml."},
+        {"beat": "point", "do": "Point at each label.", "say": "Is this label a mass or a capacity?"},
+        {"beat": "pause", "do": "Wait for the child's answer for each."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE.M_G_KG_SYMBOL_SWAP", "listen_for": ["250 kg"], "ask": "Could you lift a 250 kg packet of tea?", "repair": "Read the letter: g is gramme, kg is a thousand grammes. A packet of tea is light."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE.M_MASS_CAPACITY_UNITS", "listen_for": ["1 l"], "ask": "Do we pour sugar or weigh it?", "repair": "Liquids we pour (ml, l); solids we weigh (g, kg)."}
+      ],
+      "checks": [
+        {"question": "Which label shows the mass of sugar: 1 kg, 1 l or 500 ml?", "answer": "1 kg", "shows": "mass versus capacity"},
+        {"question": "A packet of tea is labelled 250 g. What is its mass?", "answer": "250 g", "shows": "reads g, not kg"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT",
+      "key_step": "The child chooses g or kg by how heavy the object is, not how big it looks, and checks that the number and unit make sense together.",
+      "floor": {"prerequisite": "Knows g and kg.", "question": "Which is heavier, 1 g or 1 kg?", "answer": "1 kg"},
+      "representations": ["objects held in the hand", "a sorting table: g or kg", "number with unit"],
+      "steps": ["Imagine holding the object.", "Light objects: g; heavy ones: kg.", "Check: does the number with that unit make sense?"],
+      "contexts": ["an egg", "a sack of potatoes", "an empty carton", "a child"],
+      "board": [
+        {"beat": "draw", "do": "Draw an egg, an empty big carton and a sack of potatoes."},
+        {"beat": "point", "do": "Point at the carton.", "say": "Big, but is it heavy?"},
+        {"beat": "pause", "do": "Wait for the child to choose units and say why."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT.M_SIZE_DECIDES_UNIT", "listen_for": ["kg because it is big"], "ask": "If you lift the empty carton, is it heavy?", "repair": "Heavy decides, not big. An empty carton is light: grammes."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT.M_UNIT_UNREASONABLE_MAGNITUDE", "listen_for": ["60 kg"], "ask": "Is an egg as heavy as a grown-up?", "repair": "Say the number with the unit and picture it: 60 kg is a person; 60 g is an egg."}
+      ],
+      "checks": [
+        {"question": "Complete: an egg has a mass of about 60 ___", "answer": "g", "shows": "number and unit make sense"},
+        {"question": "Would you measure a large empty cardboard carton in g or kg?", "answer": "g", "shows": "heaviness, not size"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE",
+      "key_step": "The child balances an object with gramme masses, knows the pan that goes down is heavier, and adds the values of the masses used.",
+      "floor": {"prerequisite": "Adds 2- and 3-digit numbers.", "question": "100 + 50 + 20 =", "answer": "170"},
+      "representations": ["a beam balance or a ruler balance", "a balance drawn with pans", "the sum of masses"],
+      "steps": ["The heavier pan goes down.", "Add masses until the beam is level.", "Add the values (not the count) of the masses."],
+      "contexts": ["a tomato on a market balance", "an avocado and an orange", "a bar of soap"],
+      "board": [
+        {"beat": "draw", "do": "Draw a balance tipped: avocado pan down, orange pan up."},
+        {"beat": "predict", "do": "Ask which fruit is heavier.", "say": "Which fruit is heavier?"},
+        {"beat": "draw", "do": "Draw a level balance: a tomato against masses 100 g, 50 g and 20 g."},
+        {"beat": "pause", "do": "Wait for the child to find the tomato's mass."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE.M_HEAVIER_SIDE_UP", "listen_for": ["the orange because it went up"], "ask": "On a see-saw, does the heavier child go up or down?", "repair": "Use the see-saw: heavier sinks."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE.M_COUNT_MASSES_NOT_VALUES", "listen_for": ["3 g"], "ask": "What is written on each mass?", "repair": "Read each mass aloud and add the numbers."}
+      ],
+      "checks": [
+        {"question": "A tomato balances a 100 g, a 50 g and a 20 g mass. What is its mass?", "answer": "170 g", "shows": "adds values"},
+        {"question": "The avocado pan goes down and the orange pan goes up. Which is heavier?", "answer": "The avocado", "shows": "heavier side down"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE",
+      "key_step": "The child works out what each small mark is worth from the labelled marks and counts on from the label below the pointer.",
+      "floor": {"prerequisite": "Counts in 10s, 20s, 25s, 50s.", "question": "Count in 20s from 100 to 200.", "answer": "100, 120, 140, 160, 180, 200"},
+      "representations": ["a kitchen or market scale", "a dial drawn large", "the reading in g"],
+      "steps": ["Find two labels and the gap.", "Count spaces; share the gap.", "Count on from the lower label."],
+      "contexts": ["a kitchen scale", "a market spring balance", "a clinic baby scale"],
+      "board": [
+        {"beat": "draw", "do": "Draw a dial 0, 100, 200, 300 g with 4 small marks between labels; pointer at the third mark after 200."},
+        {"beat": "count", "do": "Child counts the spaces between 200 and 300.", "say": "Count the spaces."},
+        {"beat": "pause", "do": "Wait for the child to say each space's value and the reading."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE.M_EACH_MARK_ONE_UNIT", "listen_for": ["203"], "ask": "Five spaces share 100 g. What is each space worth?", "repair": "Share the gap, then count on: 220, 240, 260."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE.M_READ_NEAREST_LABEL", "listen_for": ["400"], "ask": "Is the pointer on 400, or past it?", "repair": "Halfway between 400 and 500 is 450. Find the halfway first, then the marks."}
+      ],
+      "checks": [
+        {"question": "A dial is labelled 0, 100, 200, 300 g with 4 small marks between labels. The pointer is at the third mark after 200. Mass?", "answer": "260 g", "shows": "each space worth 20 g"},
+        {"question": "The pointer is halfway between 400 g and 500 g. Mass?", "answer": "450 g", "shows": "reads between labels"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES",
+      "key_step": "The child scales a benchmark by repeating it (20 bottle tops of 5 g is 100 g), measures, and keeps the estimate beside the measurement.",
+      "floor": {"prerequisite": "Multiplies by 5, 10, 20.", "question": "20 x 5 =", "answer": "100"},
+      "representations": ["benchmarks in the hand", "repeated benchmark pictures", "estimate and measurement"],
+      "steps": ["Choose a benchmark (a 500 g packet, a bottle top of sand about 5 g).", "Scale by repeating.", "Measure and compare; keep both."],
+      "contexts": ["a bar of soap", "a bag of cotton wool and a stone", "a cup of sand"],
+      "board": [
+        {"beat": "draw", "do": "Draw one bottle top of sand labelled about 5 g, then a cup."},
+        {"beat": "predict", "do": "Ask how many bottle tops fill the cup and so its mass.", "say": "About how many bottle tops fill the cup?"},
+        {"beat": "pause", "do": "Wait for the child's estimate."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES.M_BENCHMARK_ADD_NOT_REPEAT", "listen_for": ["25 g"], "ask": "Each top is 5 g. How much are 20 tops?", "repair": "Count on in fives for a few tops, then multiply."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES.M_SIZE_EQUALS_MASS", "listen_for": ["the cotton wool, it's bigger"], "ask": "Which would hurt more if it fell on your foot?", "repair": "Bigger is not heavier: hold both in the mind's hands."}
+      ],
+      "checks": [
+        {"question": "One bottle top of sand is about 5 g. A cup holds 20 bottle tops. About what is the mass of the sand?", "answer": "About 100 g", "shows": "repeats the benchmark"},
+        {"question": "Kamau estimated 200 g and measured 180 g. What should he record?", "answer": "Both: estimate 200 g, measurement 180 g", "shows": "keeps the estimate"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP",
+      "key_step": "The child says 1 kg = 1 000 g, gives half and quarter kilogrammes in grammes, and compares masses in the same unit.",
+      "floor": {"prerequisite": "Halves and quarters of 1 000.", "question": "Half of 1 000?", "answer": "500"},
+      "representations": ["packets: four 250 g tea packets against a 1 kg sugar packet", "a balance level with 1 kg one side and ten 100 g the other", "1 kg = 1 000 g"],
+      "steps": ["Balance 1 kg against ten 100 g masses.", "State 1 kg = 1 000 g.", "Half and quarter kg in g.", "Compare masses after changing to the same unit."],
+      "contexts": ["tea packets and a sugar packet", "beans and rice at the duka", "a baby's mass at the clinic"],
+      "board": [
+        {"beat": "draw", "do": "Draw a level balance: 1 kg sugar on one pan, 100 g masses being added to the other one at a time."},
+        {"beat": "count", "do": "Child counts in hundreds as each mass is added.", "say": "Count in hundreds."},
+        {"beat": "pause", "do": "Wait for the child to say when it balances and what that means."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP.M_KG_IS_100G", "listen_for": ["100"], "ask": "A packet of salt is 500 g. Is it heavier than a 1 kg packet of sugar?", "repair": "Count the 100 g masses to balance 1 kg: ten of them."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP.M_COMPARE_IGNORE_UNITS", "listen_for": ["500 is bigger than 2"], "ask": "How many grammes is 2 kg?", "repair": "Same unit first: 500 g and 2 000 g."}
+      ],
+      "checks": [
+        {"question": "How many 250 g packets of tea make 1 kg?", "answer": "4", "shows": "quarter kilogramme"},
+        {"question": "Which is heavier: 500 g of beans or 2 kg of rice?", "answer": "2 kg of rice", "shows": "same unit before comparing"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G",
+      "key_step": "The child multiplies kg by 1 000 and writes mixed masses with zeros in empty places (2 kg 45 g = 2 045 g).",
+      "floor": {"prerequisite": "Knows 1 kg = 1 000 g.", "question": "3 kg = ___ g", "answer": "3 000"},
+      "representations": ["sukuma wiki on a scale", "three boxes after the thousands", "grammes in full"],
+      "steps": ["Estimate: more grammes or fewer?", "kg in the thousands; g fill three places with zeros.", "Read it back."],
+      "contexts": ["4 kg of sukuma wiki", "3 kg 45 g of beans", "a 2 kg bag of flour"],
+      "board": [
+        {"beat": "write", "do": "Write 3 kg 45 g, then a thousands box, a comma and three boxes."},
+        {"beat": "child_draws", "do": "Child fills the boxes."},
+        {"beat": "pause", "do": "Wait for the child to read the grammes aloud."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G.M_KG_TO_G_TIMES_100", "listen_for": ["400 g"], "ask": "Is 400 g more or less than one packet of salt (500 g)?", "repair": "One kg is 1 000 g; multiply by 1 000. 4 kg of sukuma is far more than a salt packet."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G.M_MISSING_PLACEHOLDER_ZERO", "listen_for": ["345 g"], "ask": "Put 45 g in the three boxes. Which box is empty?", "repair": "The empty hundreds box gets a zero: 3 045 g."}
+      ],
+      "checks": [
+        {"question": "Mama bought 4 kg of sukuma wiki. How many grammes?", "answer": "4 000 g", "shows": "times 1 000"},
+        {"question": "Convert 2 kg 45 g to grammes.", "answer": "2 045 g", "shows": "placeholder zero"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG",
+      "key_step": "The child splits off thousands of grammes as kg (fewer of the bigger unit) and keeps all three last digits as grammes.",
+      "floor": {"prerequisite": "Converts kg to g.", "question": "4 kg = ___ g", "answer": "4 000"},
+      "representations": ["a sack weighed in grammes", "a line before the last three digits", "kg and g"],
+      "steps": ["Estimate: more kg or fewer?", "Line before the last three digits.", "Left is kg, right is g, zeros kept.", "Check by converting back."],
+      "contexts": ["a sack of potatoes from Nyandarua", "a crate of tomatoes", "a baby's mass"],
+      "board": [
+        {"beat": "write", "do": "Write 4 250 g large."},
+        {"beat": "predict", "do": "Ask: more kg or fewer than 4 250?", "say": "Will the number of kg be bigger or smaller?"},
+        {"beat": "draw", "do": "Draw a line before the last three digits, slowly."},
+        {"beat": "pause", "do": "Wait for the child to read kg and g."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG.M_CONVERT_WRONG_DIRECTION", "listen_for": ["6 000 000"], "ask": "A kg is bigger than a gramme. Will there be more kg, or fewer?", "repair": "Bigger unit, fewer of them: divide by 1 000. Check: is 6 000 000 kg a sensible sack?"},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG.M_G_TO_KG_SPLIT_AT_HUNDREDS", "listen_for": ["42 kg 50 g"], "ask": "How many grammes make 1 kg?", "repair": "Thousands make kg: three digits stay as grammes."}
+      ],
+      "checks": [
+        {"question": "6 000 g = ___ kg", "answer": "6", "shows": "divides, not multiplies"},
+        {"question": "Write 3 050 g in kg and g.", "answer": "3 kg 50 g", "shows": "internal zero kept"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G",
+      "key_step": "The child adds grammes to grammes and kg to kg, and regroups every 1 000 g as 1 kg.",
+      "floor": {"prerequisite": "Converts g to kg and g.", "question": "1 300 g = ___ kg ___ g", "answer": "1 kg 300 g"},
+      "representations": ["baskets at the market", "kg and g columns", "the total"],
+      "steps": ["Estimate.", "Columns.", "Add g; regroup 1 000 g.", "Add kg with the carry."],
+      "contexts": ["two baskets of tomatoes", "rice and salt bought together", "a school's food delivery"],
+      "board": [
+        {"beat": "write", "do": "Write 2 kg 700 g + 1 kg 600 g in columns."},
+        {"beat": "point", "do": "Point at the grammes column.", "say": "Add the grammes first."},
+        {"beat": "pause", "do": "Wait for 1 300 g and the regrouping."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G.M_ADD_DROP_CARRY", "listen_for": ["3 kg 300 g"], "ask": "Where did the extra 1 000 g go?", "repair": "1 300 g is 1 kg and 300 g; the kg goes into the kg column."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G.M_ADD_UNLIKE_UNITS", "listen_for": ["253 kg"], "ask": "Akinyi carried the shopping home. Was it 253 kg?", "repair": "Columns: 3 kg 0 g plus 0 kg 250 g."}
+      ],
+      "checks": [
+        {"question": "A basket has 2 kg 700 g of tomatoes and another 1 kg 600 g. Total?", "answer": "4 kg 300 g", "shows": "regroups 1 000 g"},
+        {"question": "Akinyi bought 3 kg of rice and 250 g of salt. Total mass?", "answer": "3 kg 250 g", "shows": "units kept"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G",
+      "key_step": "The child exchanges 1 kg for 1 000 g when there are too few grammes, and reduces the kg by one.",
+      "floor": {"prerequisite": "Adds kg and g with regrouping.", "question": "1 kg = ___ g", "answer": "1 000"},
+      "representations": ["beans cooked from a bag", "columns with exchange", "what is left"],
+      "steps": ["Estimate.", "Columns.", "Exchange if needed.", "Subtract; check by adding back."],
+      "contexts": ["beans cooked from a bag", "sugar used from a packet", "maize sold from a sack"],
+      "board": [
+        {"beat": "write", "do": "Write 5 kg 200 g - 2 kg 700 g in columns."},
+        {"beat": "point", "do": "Point at 200 above 700.", "say": "Enough grammes?"},
+        {"beat": "pause", "do": "Wait for the child to exchange."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G.M_SUB_SMALLER_FROM_LARGER", "listen_for": ["3 kg 500 g"], "ask": "Add your answer to 2 kg 700 g. Do you get 5 kg 200 g?", "repair": "The check fails; exchange 1 kg for 1 000 g."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G.M_SUB_EXCHANGE_NOT_REDUCED", "listen_for": ["3 kg 600 g"], "ask": "Juma used sugar. Can he still have more than 3 kg?", "repair": "The exchanged kg leaves the kg column: write one fewer."}
+      ],
+      "checks": [
+        {"question": "A bag had 5 kg 200 g of beans. 2 kg 700 g was cooked. How much is left?", "answer": "2 kg 500 g", "shows": "exchange and reduce"},
+        {"question": "Juma had 3 kg of sugar and used 400 g. How much remains?", "answer": "2 kg 600 g", "shows": "subtracting from whole kg"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G",
+      "key_step": "The child multiplies both parts and regroups every 1 000 g of the product as 1 kg.",
+      "floor": {"prerequisite": "Adds kg and g with regrouping.", "question": "350 g x 4 =", "answer": "1 400 g"},
+      "representations": ["identical bags", "columns", "the product"],
+      "steps": ["Estimate.", "Multiply g; regroup.", "Multiply kg; add the carry.", "Check by repeated addition."],
+      "contexts": ["4 bags of rice", "3 crates of tomatoes", "packets of flour for a school kitchen"],
+      "board": [
+        {"beat": "draw", "do": "Draw 4 bags each labelled 2 kg 350 g."},
+        {"beat": "predict", "do": "Ask for an estimate in kg.", "say": "About how many kg?"},
+        {"beat": "child_draws", "do": "Child multiplies the grammes and regroups."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G.M_MULT_ONE_PART", "listen_for": ["8 kg 350 g"], "ask": "Does every bag have 350 g in it?", "repair": "Both parts of each bag count four times."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G.M_MULT_NO_REGROUP", "listen_for": ["8 kg 400 g"], "ask": "350 g times 4 is how many grammes? Is that more than a kg?", "repair": "1 400 g is 1 kg 400 g; add the kg."}
+      ],
+      "checks": [
+        {"question": "One bag of rice is 2 kg 350 g. Mass of 4 bags?", "answer": "9 kg 400 g", "shows": "both parts and regrouping"},
+        {"question": "1 kg 250 g x 3", "answer": "3 kg 750 g", "shows": "no regrouping needed"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G",
+      "key_step": "The child divides the mass by the number of shares, changing any remaining kg into 1 000 g each before dividing the grammes.",
+      "floor": {"prerequisite": "Converts kg to g; divides whole numbers.", "question": "7 200 ÷ 4 =", "answer": "1 800"},
+      "representations": ["flour shared among families", "columns with remainder carried", "each share"],
+      "steps": ["Estimate each share.", "Mass is divided by the number of people, not the other way.", "Divide kg; carry the remainder as grammes.", "Divide g; check by multiplying."],
+      "contexts": ["maize flour shared among families", "groundnuts shared among children in Kisumu", "rice packed into bags"],
+      "board": [
+        {"beat": "draw", "do": "Draw a sack labelled 7 kg 200 g and 4 bowls."},
+        {"beat": "write", "do": "Write 7 kg 200 g ÷ 4 with a box for leftover kg."},
+        {"beat": "pause", "do": "Wait for the child to say what happens to the leftover kg."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G.M_DIV_IGNORE_KG_REMAINDER", "listen_for": ["1 kg 50 g"], "ask": "After each family gets 1 kg, is any flour left in the sack?", "repair": "Change the leftover 3 kg to 3 000 g, add the 200 g, then share."},
+        {"code": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G.M_DIV_WRONG_WAY", "listen_for": ["4 kg each"], "ask": "Can each child get more groundnuts than there were in total?", "repair": "Share the groundnuts among the children: mass divided by children."}
+      ],
+      "checks": [
+        {"question": "7 kg 200 g of flour is shared equally among 4 families. How much each?", "answer": "1 kg 800 g", "shows": "remainder carried"},
+        {"question": "2 kg of groundnuts are shared equally among 8 children. How much each?", "answer": "250 g", "shows": "mass divided by people"}
+      ]
+    }
+  ]
+}

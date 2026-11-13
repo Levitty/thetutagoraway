@@ -5452,6 +5452,2010 @@ export const TEACHING_PACK_G5 = {
   "sub_strand": "MATH.G5.MEASUR.VOLUME",
   "sub_strand_name": "Volume (cubic centimetres)",
   "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT",
+  "key_step": "The child reads ml and l on containers, chooses ml for small amounts and l for large ones, and compares amounts only after putting them in the same unit.",
+  "floor": {
+   "prerequisite": "Knows the litre (Grade 4).",
+   "question": "Is a jerrycan measured in litres or in metres?",
+   "answer": "Litres"
+  },
+  "representations": [
+   "real containers: a medicine spoon, a milk packet, a jerrycan",
+   "labels drawn on the board",
+   "ml and l"
+  ],
+  "steps": [
+   "Read labels on familiar containers.",
+   "Sort: tiny amounts in ml, big amounts in l.",
+   "Tell capacity labels (ml, l) from mass labels (g, kg).",
+   "Compare 500 ml and 2 l in the same unit."
+  ],
+  "contexts": [
+   "a 5 ml spoon of cough syrup",
+   "a 500 ml milk packet",
+   "a 2 l bottle of cooking oil",
+   "a 20 l jerrycan"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a spoon, a milk packet and a jerrycan, small to large, each with a blank label."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each in turn.",
+    "say": "Would this one say ml or l?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's unit for each."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes a sensible label on each."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT.M_BIGGER_NUMBER_MEANS_MORE",
+    "listen_for": [
+     "500 is more than 2"
+    ],
+    "ask": "How many 500 ml packets fill a 2 l bottle?",
+    "repair": "Put both in ml first: 500 ml and 2 000 ml.",
+    "error": "Compares the numbers and ignores the units, so thinks 500 ml is more than 2 l.",
+    "example": {
+     "question": "Which holds more: a 500 ml bottle of water or a 2 l bottle of cooking oil?",
+     "wrong_answer": "The 500 ml bottle",
+     "correct_answer": "The 2 l bottle (2 l = 2 000 ml)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_IDENTIFY_UNIT.M_WRONG_UNIT_FOR_SMALL_AMOUNT",
+    "listen_for": [
+     "5 l"
+    ],
+    "ask": "Could one spoon hold 5 litres, more than two big soda bottles?",
+    "repair": "A spoon is tiny: ml. Picture 5 litres as two and a half big soda bottles.",
+    "error": "Chooses litres for tiny amounts, or ml for very large ones.",
+    "example": {
+     "question": "A nurse gives a child one spoon of cough syrup. Is the dose 5 ml or 5 l?",
+     "wrong_answer": "5 l",
+     "correct_answer": "5 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which holds more: a 500 ml bottle of water or a 2 l bottle of oil?",
+    "answer": "The 2 l bottle",
+    "shows": "same unit before comparing"
+   },
+   {
+    "question": "A nurse gives one spoon of cough syrup. Is the dose 5 ml or 5 l?",
+    "answer": "5 ml",
+    "shows": "sensible unit"
+   }
+  ],
+  "name": "Recognise the millilitre as a unit of capacity and where it is used",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE",
+  "key_step": "The child works out what each small mark on a scale is worth (from the labelled marks) and reads the level at eye height.",
+  "floor": {
+   "prerequisite": "Counts in 10s, 25s, 50s and 100s.",
+   "question": "Count in 25s from 200 to 300.",
+   "answer": "200, 225, 250, 275, 300"
+  },
+  "representations": [
+   "a measuring jug",
+   "a scale drawn large with labelled and unlabelled marks",
+   "the reading in ml"
+  ],
+  "steps": [
+   "Find two labelled marks and the gap between them.",
+   "Count the spaces between them; share the gap.",
+   "Count on from the lower label.",
+   "Read at eye level."
+  ],
+  "contexts": [
+   "a measuring jug in the kitchen",
+   "a medicine cup",
+   "a syringe at the clinic"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a jug scale labelled 200 and 300 ml with three small marks between, and water at the second small mark."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the spaces between 200 and 300.",
+    "say": "Count the spaces, not the marks."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what each space is worth."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the reading."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE.M_EACH_MARK_IS_ONE",
+    "listen_for": [
+     "202",
+     "203"
+    ],
+    "ask": "Four spaces share the 100 ml between the labels. How much is each space?",
+    "repair": "Share the gap: 100 ml in 4 spaces is 25 ml each. Count on in 25s.",
+    "error": "Counts each small unlabelled mark on a scale as 1 ml.",
+    "example": {
+     "question": "A jug is labelled 200 ml and 300 ml, with three small marks in between. The water is at the third small mark above 200 ml. How much water is there?",
+     "wrong_answer": "203 ml",
+     "correct_answer": "275 ml (each small mark is 25 ml)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_SCALE.M_READS_FROM_ABOVE",
+    "listen_for": [
+     "I looked down into it"
+    ],
+    "ask": "Where should your eyes be when you read the level?",
+    "repair": "Draw an eye level with the water line; reading from above gives the wrong mark.",
+    "error": "Reads the level while looking down at the jug, or with the jug tilted, and gets a reading that is too high or too low.",
+    "example": {
+     "question": "Juma looks down into a measuring jug from above and reads 300 ml. With his eyes level with the water on a flat table, the jug shows 250 ml. What is the correct reading?",
+     "wrong_answer": "300 ml",
+     "correct_answer": "250 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A jug is labelled 200 ml and 300 ml with three small marks between. The water is at the second small mark. How much water?",
+    "answer": "250 ml",
+    "shows": "works out the mark value"
+   },
+   {
+    "question": "A scale goes 0, 100, 200 with one small mark between each label. The level is at the mark after 100. Reading?",
+    "answer": "150 ml",
+    "shows": "halfway marks"
+   }
+  ],
+  "name": "Measure capacity in millilitres using a graduated container",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING",
+  "key_step": "The child multiplies the number of fills by the size of the measure, and knows a smaller measure needs more fills.",
+  "floor": {
+   "prerequisite": "Multiplies a 1-digit number by 5, 10, 100.",
+   "question": "8 x 5 =",
+   "answer": "40"
+  },
+  "representations": [
+   "spoons or cups poured into a jug",
+   "a row of spoon pictures",
+   "fills x size"
+  ],
+  "steps": [
+   "Count the fills.",
+   "Multiply by the size of the measure.",
+   "Compare two measures: the one needing more fills holds less."
+  ],
+  "contexts": [
+   "filling a cup with a 5 ml spoon",
+   "filling a jug with a 250 ml cup",
+   "filling a jerrycan with a 1 l bottle"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 8 spoons in a row, each labelled 5 ml, pouring into a cup."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the spoons."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the capacity, not the count."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING.M_GIVES_NUMBER_OF_FILLS",
+    "listen_for": [
+     "8 ml"
+    ],
+    "ask": "Each spoon holds 5 ml. How much do 8 spoons hold?",
+    "repair": "Count on in fives along the spoons: 5, 10, 15... the fills tell how many, the spoon tells how much.",
+    "error": "Gives the number of fills as the capacity, instead of multiplying by the size of the measure.",
+    "example": {
+     "question": "Akinyi fills a cup using a 5 ml medicine spoon 8 times. What is the capacity of the cup?",
+     "wrong_answer": "8 ml",
+     "correct_answer": "40 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_MEASURE_BY_FILLING.M_MORE_FILLS_BIGGER_CUP",
+    "listen_for": [
+     "cup B because 6"
+    ],
+    "ask": "If a cup is small, will it need more fills or fewer?",
+    "repair": "Picture a spoon against a cup filling the same jug: the small one needs many more.",
+    "error": "Thinks the measuring container that needs more fills is the bigger one.",
+    "example": {
+     "question": "Cup A fills a jug in 4 cupfuls. Cup B fills the same jug in 6 cupfuls. Which cup holds more?",
+     "wrong_answer": "Cup B",
+     "correct_answer": "Cup A"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Akinyi fills a cup with a 5 ml spoon 8 times. What is the cup's capacity?",
+    "answer": "40 ml",
+    "shows": "fills x size"
+   },
+   {
+    "question": "Cup A fills a jug in 4 cupfuls; cup B in 6. Which cup holds more?",
+    "answer": "Cup A",
+    "shows": "fewer fills, bigger measure"
+   }
+  ],
+  "name": "Measure capacity in millilitres by filling with a smaller known container",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE",
+  "key_step": "The child estimates by comparing with a benchmark container (a 250 ml cup, a 500 ml packet), then measures and keeps the estimate.",
+  "floor": {
+   "prerequisite": "Knows ml and l.",
+   "question": "About how much is a milk packet?",
+   "answer": "About 500 ml"
+  },
+  "representations": [
+   "benchmark containers",
+   "pictures side by side",
+   "estimate and measurement recorded"
+  ],
+  "steps": [
+   "Pick a benchmark.",
+   "Compare: about how many benchmarks?",
+   "Estimate, then measure.",
+   "Keep both; say how close."
+  ],
+  "contexts": [
+   "a cup of chai",
+   "a bucket for watering",
+   "a bottle of soda"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 500 ml milk packet beside a mug of chai."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate for the mug compared with the packet.",
+    "say": "Is the mug more or less than the packet?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's estimate in ml."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE.M_NO_BENCHMARKS",
+    "listen_for": [
+     "2 500 ml"
+    ],
+    "ask": "How many milk packets would that be?",
+    "repair": "Compare with the packet: 2 500 ml is five packets, far too much for one cup.",
+    "error": "Gives estimates that are wildly unrealistic.",
+    "example": {
+     "question": "Choose the best estimate for a cup of chai: 25 ml, 250 ml or 2 500 ml.",
+     "wrong_answer": "2 500 ml",
+     "correct_answer": "250 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ML_ESTIMATE.M_TALLER_HOLDS_MORE",
+    "listen_for": [
+     "the tall one"
+    ],
+    "ask": "Is the bowl wide? Could width hold more?",
+    "repair": "Pour one into the other in the drawing: the wide bowl takes the whole glass with room left.",
+    "error": "Judges capacity by height alone, so thinks a tall thin container holds more than a short wide one.",
+    "example": {
+     "question": "A tall thin glass holds 200 ml and a short wide bowl holds 500 ml. Before measuring, which do you think holds more?",
+     "wrong_answer": "The tall glass",
+     "correct_answer": "The short wide bowl"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Best estimate for a cup of chai: 25 ml, 250 ml or 2 500 ml?",
+    "answer": "250 ml",
+    "shows": "uses a benchmark"
+   },
+   {
+    "question": "A tall thin glass and a short wide bowl. Can you be sure which holds more without measuring?",
+    "answer": "No; width matters too",
+    "shows": "height alone does not decide"
+   }
+  ],
+  "name": "Estimate capacity in millilitres and check by measuring",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP",
+  "key_step": "The child says 1 l = 1 000 ml and shows it with familiar containers (two 500 ml packets, four 250 ml cups), and gives half and quarter litres in ml.",
+  "floor": {
+   "prerequisite": "Knows half and quarter of a whole.",
+   "question": "What is half of 1 000?",
+   "answer": "500"
+  },
+  "representations": [
+   "milk packets and cups filling a 1 l bottle",
+   "a bar of 1 l split in halves and quarters",
+   "1 l = 1 000 ml"
+  ],
+  "steps": [
+   "Two 500 ml packets fill a 1 l bottle.",
+   "Four 250 ml cups fill it too.",
+   "State 1 l = 1 000 ml.",
+   "Half and quarter litres in ml."
+  ],
+  "contexts": [
+   "milk packets",
+   "a 1 l bottle of water",
+   "a cup of tea"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 1 l bottle; pour two milk packets into it, one at a time.",
+    "say": "Two 500 ml packets."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say how much the bottle holds in ml."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw the bottle again split into four equal parts."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the ml in each quarter."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP.M_LITRE_IS_100_ML",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "One milk packet is 500 ml. Can a litre be only 100 ml?",
+    "repair": "Two packets fill a litre: 500 and 500. The 100 belongs to cm and m.",
+    "error": "States that 1 l = 100 ml.",
+    "example": {
+     "question": "1 l = ___ ml",
+     "wrong_answer": "100",
+     "correct_answer": "1 000"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.L_ML_RELATIONSHIP.M_HALF_LITRE_50",
+    "listen_for": [
+     "50 ml"
+    ],
+    "ask": "What is half of 1 000?",
+    "repair": "Start from 1 000 ml, then halve: 500, then 250.",
+    "error": "Gives ½ l as 50 ml and ¼ l as 25 ml.",
+    "example": {
+     "question": "½ l = ___ ml",
+     "wrong_answer": "50",
+     "correct_answer": "500"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "1/2 l = ___ ml",
+    "answer": "500",
+    "shows": "half of 1 000"
+   },
+   {
+    "question": "How many 250 ml cups fill a 1 l bottle?",
+    "answer": "4",
+    "shows": "uses the relationship"
+   }
+  ],
+  "name": "Know and explain that 1 litre = 1 000 millilitres (and ½ l = 500 ml, ¼ l = 250 ml)",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML",
+  "key_step": "The child multiplies litres by 1 000 and writes mixed amounts with zeros in empty places (3 l 45 ml = 3 045 ml).",
+  "floor": {
+   "prerequisite": "Knows 1 l = 1 000 ml.",
+   "question": "2 l = ___ ml",
+   "answer": "2 000"
+  },
+  "representations": [
+   "a jerrycan",
+   "three boxes after the thousands for ml",
+   "ml written in full"
+  ],
+  "steps": [
+   "Estimate: more ml or fewer?",
+   "Litres go in the thousands.",
+   "ml fill the last three places, zeros in empty ones.",
+   "Read it back."
+  ],
+  "contexts": [
+   "a 4 l jerrycan",
+   "2 l 50 ml of juice",
+   "a 20 l water container"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 l 50 ml and, under it, a thousands digit box, a comma and three boxes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the boxes."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read the number aloud."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML.M_MULTIPLY_BY_100",
+    "listen_for": [
+     "400 ml"
+    ],
+    "ask": "Is 400 ml a full jerrycan or less than a packet of milk?",
+    "repair": "One litre is 1 000 ml, so multiply by 1 000. Check against the packets.",
+    "error": "Multiplies by 100 (adds two zeros) when changing litres to ml.",
+    "example": {
+     "question": "A jerrycan holds 4 l. How many ml is that?",
+     "wrong_answer": "400 ml",
+     "correct_answer": "4 000 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.CONVERT_L_TO_ML.M_MIXED_UNIT_PLACEHOLDER",
+    "listen_for": [
+     "250 ml",
+     "2 500"
+    ],
+    "ask": "Put 50 ml in the three boxes. Which box stays empty?",
+    "repair": "The hundreds box gets a zero: 2 050 ml.",
+    "error": "Joins the digits together when converting a mixed amount, missing out the zero placeholder.",
+    "example": {
+     "question": "2 l 50 ml = ___ ml",
+     "wrong_answer": "250 ml (or 2 500 ml)",
+     "correct_answer": "2 050 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 l 50 ml = ___ ml",
+    "answer": "2 050",
+    "shows": "placeholder zero"
+   },
+   {
+    "question": "A jerrycan holds 4 l. How many ml?",
+    "answer": "4 000 ml",
+    "shows": "times 1 000"
+   }
+  ],
+  "name": "Convert litres (and litres with millilitres) to millilitres",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L",
+  "key_step": "The child splits off thousands of ml as litres and keeps all three last digits as ml.",
+  "floor": {
+   "prerequisite": "Converts litres to ml.",
+   "question": "3 l = ___ ml",
+   "answer": "3 000"
+  },
+  "representations": [
+   "a big tank in ml",
+   "a line before the last three digits",
+   "litres and ml"
+  ],
+  "steps": [
+   "Draw a line before the last three digits.",
+   "Left of the line is litres, right is ml.",
+   "Keep internal zeros.",
+   "Check by converting back."
+  ],
+  "contexts": [
+   "3 500 ml of milk from a cow",
+   "2 040 ml of water in a basin",
+   "a school's daily water in ml"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 040 ml large."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a line before the last three digits, slowly.",
+    "say": "A thousand ml make one litre."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read litres and ml."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L.M_DIVIDE_BY_100",
+    "listen_for": [
+     "35 l"
+    ],
+    "ask": "Is 3 500 ml more than 30 litres?",
+    "repair": "Litres are thousands of ml: the line goes before three digits.",
+    "error": "Treats every 100 ml as a litre when changing ml to litres.",
+    "example": {
+     "question": "Write 3 500 ml in litres and millilitres.",
+     "wrong_answer": "35 l",
+     "correct_answer": "3 l 500 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.CONVERT_ML_TO_L.M_SPLIT_DIGITS_WRONG",
+    "listen_for": [
+     "20 l 40 ml"
+    ],
+    "ask": "How many digits after your line?",
+    "repair": "Always three digits on the ml side: 2 l 040 ml, which is 2 l 40 ml.",
+    "error": "Splits the number in the wrong place, for example taking the first two digits as litres.",
+    "example": {
+     "question": "Write 2 040 ml in litres and millilitres.",
+     "wrong_answer": "20 l 40 ml",
+     "correct_answer": "2 l 40 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 3 500 ml in l and ml.",
+    "answer": "3 l 500 ml",
+    "shows": "splits at thousands"
+   },
+   {
+    "question": "Write 2 040 ml in l and ml.",
+    "answer": "2 l 40 ml",
+    "shows": "internal zero"
+   }
+  ],
+  "name": "Convert millilitres to litres (and litres with millilitres)",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.ADD_L_ML": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML",
+  "key_step": "The child adds ml to ml and l to l in columns, regrouping every 1 000 ml as 1 l.",
+  "floor": {
+   "prerequisite": "Converts ml to l and ml.",
+   "question": "1 200 ml = ___ l ___ ml",
+   "answer": "1 l 200 ml"
+  },
+  "representations": [
+   "milk from two milkings",
+   "l and ml columns",
+   "the total"
+  ],
+  "steps": [
+   "Estimate in litres.",
+   "Line up l and ml columns (ml by place value).",
+   "Add ml; regroup 1 000 ml.",
+   "Add litres with the carried litre."
+  ],
+  "contexts": [
+   "milk from a cow morning and evening",
+   "water poured into a sufuria",
+   "juice for a class party"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 l 700 ml + 1 l 500 ml in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the ml column.",
+    "say": "Add the ml first."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 1 200 ml and the regrouping."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child carries the litre and finishes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML.M_ADD_REGROUP_AT_100",
+    "listen_for": [
+     "4 l 20 ml"
+    ],
+    "ask": "Is 120 ml more than a litre?",
+    "repair": "Regroup only at 1 000 ml. Check with milk packets: 120 ml is a small cup.",
+    "error": "Regroups into a litre when the ml column passes 100 rather than 1 000.",
+    "example": {
+     "question": "Wanjiru's cow gave 2 l 70 ml of milk in the morning and 1 l 50 ml in the evening. How much milk altogether?",
+     "wrong_answer": "4 l 20 ml",
+     "correct_answer": "3 l 120 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.ADD_L_ML.M_ADD_UNLIKE_UNITS",
+    "listen_for": [
+     "302 ml"
+    ],
+    "ask": "Mama poured 2 whole litres first. Can the total be less than 2 l?",
+    "repair": "Put each amount in its column: 2 l 0 ml plus 0 l 300 ml.",
+    "error": "Adds litres and millilitres as if they were the same unit.",
+    "example": {
+     "question": "Mama poured 2 l of water into a sufuria and then 300 ml more. How much water is in the sufuria?",
+     "wrong_answer": "302 ml",
+     "correct_answer": "2 l 300 ml (2 300 ml)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cow gave 2 l 70 ml in the morning and 1 l 50 ml in the evening. How much altogether?",
+    "answer": "3 l 120 ml",
+    "shows": "no regrouping at 100"
+   },
+   {
+    "question": "3 l 250 ml + 45 ml",
+    "answer": "3 l 295 ml",
+    "shows": "columns lined up by place"
+   }
+  ],
+  "name": "Add litres and millilitres",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML",
+  "key_step": "The child exchanges 1 l for 1 000 ml when there are too few ml, and reduces the litres by one.",
+  "floor": {
+   "prerequisite": "Adds l and ml with regrouping.",
+   "question": "1 l = ___ ml",
+   "answer": "1 000"
+  },
+  "representations": [
+   "water used from a jerrycan",
+   "columns with exchange",
+   "what is left"
+  ],
+  "steps": [
+   "Estimate.",
+   "Columns.",
+   "Exchange 1 l for 1 000 ml if needed.",
+   "Subtract; check by adding back."
+  ],
+  "contexts": [
+   "water used from a 5 l jerrycan",
+   "milk sold from a can",
+   "oil used from a bottle"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5 l 200 ml - 2 l 650 ml in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 200 above 650.",
+    "say": "Do we have enough ml?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest exchanging a litre."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child exchanges and subtracts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML.M_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "650 take 200",
+     "3 l 450 ml"
+    ],
+    "ask": "Add your answer to 2 l 650 ml. Do you get 5 l 200 ml?",
+    "repair": "The check fails; exchange 1 l for 1 000 ml.",
+    "error": "Takes the smaller digit from the larger in each column instead of regrouping.",
+    "example": {
+     "question": "5 l 200 ml − 2 l 650 ml",
+     "wrong_answer": "3 l 450 ml (or 3 l 550 ml)",
+     "correct_answer": "2 l 550 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.SUBTRACT_L_ML.M_SUBTRACT_IGNORING_UNITS",
+    "listen_for": [
+     "345 ml"
+    ],
+    "ask": "Otieno washed his hands from a full 5 l jerrycan. Is there only 345 ml left?",
+    "repair": "Write 5 l as 5 l 0 ml, exchange a litre, subtract.",
+    "error": "Subtracts the numbers without considering units when taking ml from whole litres.",
+    "example": {
+     "question": "A 5 l jerrycan of water is full. Otieno uses 350 ml to wash his hands. How much water is left?",
+     "wrong_answer": "345 ml",
+     "correct_answer": "4 l 650 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A full 5 l jerrycan; Otieno uses 350 ml. How much is left?",
+    "answer": "4 l 650 ml",
+    "shows": "subtracting from whole litres"
+   },
+   {
+    "question": "4 l 30 ml - 1 l 80 ml",
+    "answer": "2 l 950 ml",
+    "shows": "exchange 1 000 ml, not 100"
+   }
+  ],
+  "name": "Subtract litres and millilitres",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML",
+  "key_step": "The child multiplies the ml, regroups each 1 000 ml as 1 l, multiplies the litres, then adds the carried litres.",
+  "floor": {
+   "prerequisite": "Adds l and ml with regrouping.",
+   "question": "400 ml x 3 =",
+   "answer": "1 200 ml"
+  },
+  "representations": [
+   "several identical bottles",
+   "columns",
+   "the product"
+  ],
+  "steps": [
+   "Estimate.",
+   "Multiply ml; regroup.",
+   "Multiply litres; then add carried litres.",
+   "Check by repeated addition."
+  ],
+  "contexts": [
+   "3 bottles of juice",
+   "a family's milk for a week",
+   "jerrycans for a school"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three bottles each labelled 2 l 400 ml."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate in litres.",
+    "say": "About how many litres in all three?"
+   },
+   {
+    "beat": "write",
+    "do": "Write 2 l 400 ml x 3 in columns."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child multiplies ml first, then litres."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML.M_MULTIPLY_LITRES_ONLY",
+    "listen_for": [
+     "6 l 400 ml"
+    ],
+    "ask": "Does each bottle have 400 ml as well as its litres?",
+    "repair": "Each bottle has both parts, so both are multiplied.",
+    "error": "Multiplies only the litres and copies the ml part unchanged.",
+    "example": {
+     "question": "One bottle holds 2 l 400 ml of juice. How much do 3 bottles hold?",
+     "wrong_answer": "6 l 400 ml",
+     "correct_answer": "7 l 200 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.MULTIPLY_L_ML.M_CARRY_BEFORE_MULTIPLY",
+    "listen_for": [
+     "9 l 800 ml",
+     "I added the carry first"
+    ],
+    "ask": "Was the carried litre in each bottle, or made at the end?",
+    "repair": "Multiply the litres first, then add the litre made from the ml.",
+    "error": "Adds the carried litre before multiplying the litres, instead of after.",
+    "example": {
+     "question": "2 l 600 ml × 3",
+     "wrong_answer": "9 l 800 ml",
+     "correct_answer": "7 l 800 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One bottle holds 2 l 400 ml. How much do 3 bottles hold?",
+    "answer": "7 l 200 ml",
+    "shows": "both parts, regrouped"
+   },
+   {
+    "question": "2 l 600 ml x 3",
+    "answer": "7 l 800 ml",
+    "shows": "carry added after multiplying"
+   }
+  ],
+  "name": "Multiply litres and millilitres by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML": {
+  "skill": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML",
+  "key_step": "The child divides the litres, changes any remaining litres into 1 000 ml each, adds them to the ml, then divides the ml.",
+  "floor": {
+   "prerequisite": "Converts l to ml; divides whole numbers.",
+   "question": "5 400 ÷ 2 =",
+   "answer": "2 700"
+  },
+  "representations": [
+   "milk shared between families",
+   "columns with the remainder carried",
+   "each share"
+  ],
+  "steps": [
+   "Estimate each share.",
+   "Divide litres; note the remainder.",
+   "Change remaining litres to ml and add.",
+   "Divide ml; check by multiplying."
+  ],
+  "contexts": [
+   "milk shared between families",
+   "water poured into buckets",
+   "juice shared at a party"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a can labelled 5 l 400 ml and two empty jugs."
+   },
+   {
+    "beat": "write",
+    "do": "Write 5 l 400 ml ÷ 2 with a box for the leftover litre."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what happens to the leftover litre."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML.M_DROP_REMAINDER_LITRES",
+    "listen_for": [
+     "2 l 200 ml"
+    ],
+    "ask": "Each family got 2 l. Is a litre still left in the can?",
+    "repair": "Share the leftover litre too: change it to 1 000 ml and add to the 400 ml.",
+    "error": "Ignores the remaining litre(s) after dividing the litres.",
+    "example": {
+     "question": "5 l 400 ml of milk is shared equally between 2 families. How much does each family get?",
+     "wrong_answer": "2 l 200 ml",
+     "correct_answer": "2 l 700 ml"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.CAPACITY.DIVIDE_L_ML.M_DIVIDE_LITRES_ONLY",
+    "listen_for": [
+     "2 l 300 ml"
+    ],
+    "ask": "Did each bucket get all 300 ml?",
+    "repair": "The ml must be shared too. Check by multiplying the share by 3.",
+    "error": "Divides only the litres and leaves the ml unchanged.",
+    "example": {
+     "question": "6 l 300 ml of water is poured equally into 3 buckets. How much is in each bucket?",
+     "wrong_answer": "2 l 300 ml",
+     "correct_answer": "2 l 100 ml"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "5 l 400 ml of milk is shared equally between 2 families. How much does each get?",
+    "answer": "2 l 700 ml",
+    "shows": "remainder carried as 1 000 ml"
+   },
+   {
+    "question": "6 l 300 ml of water is poured equally into 3 buckets. How much in each?",
+    "answer": "2 l 100 ml",
+    "shows": "both parts divided"
+   }
+  ],
+  "name": "Divide litres and millilitres by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.CAPACITY",
+  "sub_strand_name": "Capacity (litres and millilitres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE",
+  "key_step": "The child reads g and kg on packets, tells them apart, and tells mass labels from capacity labels.",
+  "floor": {
+   "prerequisite": "Knows the kilogramme (Grade 4).",
+   "question": "Is a bag of maize flour measured in kg or in litres?",
+   "answer": "kg"
+  },
+  "representations": [
+   "real packets",
+   "labels drawn on the board",
+   "g and kg"
+  ],
+  "steps": [
+   "Read labels: 250 g tea, 500 g salt, 2 kg flour.",
+   "Name the gramme; compare with a kilogramme.",
+   "Sort labels into mass (g, kg) and capacity (ml, l)."
+  ],
+  "contexts": [
+   "a 250 g packet of tea leaves",
+   "a 2 kg packet of maize flour",
+   "a 500 g packet of salt"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three packets with labels 250 g, 1 kg, 500 ml."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each label.",
+    "say": "Is this label a mass or a capacity?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer for each."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE.M_G_KG_SYMBOL_SWAP",
+    "listen_for": [
+     "250 kg"
+    ],
+    "ask": "Could you lift a 250 kg packet of tea?",
+    "repair": "Read the letter: g is gramme, kg is a thousand grammes. A packet of tea is light.",
+    "error": "Reads or writes g as kg (or ignores the unit), so a small packet is given a huge mass.",
+    "example": {
+     "question": "A packet of tea leaves is labelled 250 g. What is its mass?",
+     "wrong_answer": "250 kg",
+     "correct_answer": "250 g (two hundred and fifty grammes)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_GRAMME_RECOGNISE.M_MASS_CAPACITY_UNITS",
+    "listen_for": [
+     "1 l"
+    ],
+    "ask": "Do we pour sugar or weigh it?",
+    "repair": "Liquids we pour (ml, l); solids we weigh (g, kg).",
+    "error": "Uses capacity units (litres, millilitres) for the mass of solids, or reads a ml label as a mass.",
+    "example": {
+     "question": "Which label shows the mass of a packet of sugar: 1 kg, 1 l or 500 ml?",
+     "wrong_answer": "1 l",
+     "correct_answer": "1 kg"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which label shows the mass of sugar: 1 kg, 1 l or 500 ml?",
+    "answer": "1 kg",
+    "shows": "mass versus capacity"
+   },
+   {
+    "question": "A packet of tea is labelled 250 g. What is its mass?",
+    "answer": "250 g",
+    "shows": "reads g, not kg"
+   }
+  ],
+  "name": "Recognise the gramme and read mass labels",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT",
+  "key_step": "The child chooses g or kg by how heavy the object is, not how big it looks, and checks that the number and unit make sense together.",
+  "floor": {
+   "prerequisite": "Knows g and kg.",
+   "question": "Which is heavier, 1 g or 1 kg?",
+   "answer": "1 kg"
+  },
+  "representations": [
+   "objects held in the hand",
+   "a sorting table: g or kg",
+   "number with unit"
+  ],
+  "steps": [
+   "Imagine holding the object.",
+   "Light objects: g; heavy ones: kg.",
+   "Check: does the number with that unit make sense?"
+  ],
+  "contexts": [
+   "an egg",
+   "a sack of potatoes",
+   "an empty carton",
+   "a child"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw an egg, an empty big carton and a sack of potatoes."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the carton.",
+    "say": "Big, but is it heavy?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose units and say why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT.M_SIZE_DECIDES_UNIT",
+    "listen_for": [
+     "kg because it is big"
+    ],
+    "ask": "If you lift the empty carton, is it heavy?",
+    "repair": "Heavy decides, not big. An empty carton is light: grammes.",
+    "error": "Chooses kilogrammes for any large-looking object and grammes for any small one, regardless of how heavy it is.",
+    "example": {
+     "question": "Would you measure a large empty cardboard carton in g or kg?",
+     "wrong_answer": "kg, because it is big",
+     "correct_answer": "g, because it is light"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CHOOSE_UNIT.M_UNIT_UNREASONABLE_MAGNITUDE",
+    "listen_for": [
+     "60 kg"
+    ],
+    "ask": "Is an egg as heavy as a grown-up?",
+    "repair": "Say the number with the unit and picture it: 60 kg is a person; 60 g is an egg.",
+    "error": "Attaches a unit without checking whether the number and unit together make sense.",
+    "example": {
+     "question": "Complete: An egg has a mass of about 60 ___",
+     "wrong_answer": "kg",
+     "correct_answer": "g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Complete: an egg has a mass of about 60 ___",
+    "answer": "g",
+    "shows": "number and unit make sense"
+   },
+   {
+    "question": "Would you measure a large empty cardboard carton in g or kg?",
+    "answer": "g",
+    "shows": "heaviness, not size"
+   }
+  ],
+  "name": "Choose grammes or kilogrammes for a real object",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE",
+  "key_step": "The child balances an object with gramme masses, knows the pan that goes down is heavier, and adds the values of the masses used.",
+  "floor": {
+   "prerequisite": "Adds 2- and 3-digit numbers.",
+   "question": "100 + 50 + 20 =",
+   "answer": "170"
+  },
+  "representations": [
+   "a beam balance or a ruler balance",
+   "a balance drawn with pans",
+   "the sum of masses"
+  ],
+  "steps": [
+   "The heavier pan goes down.",
+   "Add masses until the beam is level.",
+   "Add the values (not the count) of the masses."
+  ],
+  "contexts": [
+   "a tomato on a market balance",
+   "an avocado and an orange",
+   "a bar of soap"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a balance tipped: avocado pan down, orange pan up."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which fruit is heavier.",
+    "say": "Which fruit is heavier?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a level balance: a tomato against masses 100 g, 50 g and 20 g."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to find the tomato's mass."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE.M_HEAVIER_SIDE_UP",
+    "listen_for": [
+     "the orange because it went up"
+    ],
+    "ask": "On a see-saw, does the heavier child go up or down?",
+    "repair": "Use the see-saw: heavier sinks.",
+    "error": "Thinks the pan that rises on a beam balance holds the heavier object.",
+    "example": {
+     "question": "On a beam balance the pan with the avocado goes down and the pan with the orange goes up. Which is heavier?",
+     "wrong_answer": "The orange",
+     "correct_answer": "The avocado"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_MEASURE_BALANCE.M_COUNT_MASSES_NOT_VALUES",
+    "listen_for": [
+     "3 g"
+    ],
+    "ask": "What is written on each mass?",
+    "repair": "Read each mass aloud and add the numbers.",
+    "error": "Counts how many gramme masses were used instead of adding their values.",
+    "example": {
+     "question": "A tomato balances a 100 g, a 50 g and a 20 g mass. What is its mass?",
+     "wrong_answer": "3 g",
+     "correct_answer": "170 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tomato balances a 100 g, a 50 g and a 20 g mass. What is its mass?",
+    "answer": "170 g",
+    "shows": "adds values"
+   },
+   {
+    "question": "The avocado pan goes down and the orange pan goes up. Which is heavier?",
+    "answer": "The avocado",
+    "shows": "heavier side down"
+   }
+  ],
+  "name": "Measure mass in grammes with a beam balance or improvised balance",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_READ_SCALE": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE",
+  "key_step": "The child works out what each small mark is worth from the labelled marks and counts on from the label below the pointer.",
+  "floor": {
+   "prerequisite": "Counts in 10s, 20s, 25s, 50s.",
+   "question": "Count in 20s from 100 to 200.",
+   "answer": "100, 120, 140, 160, 180, 200"
+  },
+  "representations": [
+   "a kitchen or market scale",
+   "a dial drawn large",
+   "the reading in g"
+  ],
+  "steps": [
+   "Find two labels and the gap.",
+   "Count spaces; share the gap.",
+   "Count on from the lower label."
+  ],
+  "contexts": [
+   "a kitchen scale",
+   "a market spring balance",
+   "a clinic baby scale"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a dial 0, 100, 200, 300 g with 4 small marks between labels; pointer at the third mark after 200."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the spaces between 200 and 300.",
+    "say": "Count the spaces."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say each space's value and the reading."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE.M_EACH_MARK_ONE_UNIT",
+    "listen_for": [
+     "203"
+    ],
+    "ask": "Five spaces share 100 g. What is each space worth?",
+    "repair": "Share the gap, then count on: 220, 240, 260.",
+    "error": "Assumes every small mark on a scale is worth 1 g and counts on in ones.",
+    "example": {
+     "question": "A dial is labelled 0, 100, 200, 300 g with 4 small marks between each label. The pointer is on the 3rd small mark after 200. What is the reading?",
+     "wrong_answer": "203 g",
+     "correct_answer": "260 g (each small mark is 20 g)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_READ_SCALE.M_READ_NEAREST_LABEL",
+    "listen_for": [
+     "400"
+    ],
+    "ask": "Is the pointer on 400, or past it?",
+    "repair": "Halfway between 400 and 500 is 450. Find the halfway first, then the marks.",
+    "error": "Reads the nearest labelled number and ignores the unlabelled marks.",
+    "example": {
+     "question": "The pointer of a kitchen scale is halfway between 400 g and 500 g. What is the mass?",
+     "wrong_answer": "400 g",
+     "correct_answer": "450 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A dial is labelled 0, 100, 200, 300 g with 4 small marks between labels. The pointer is at the third mark after 200. Mass?",
+    "answer": "260 g",
+    "shows": "each space worth 20 g"
+   },
+   {
+    "question": "The pointer is halfway between 400 g and 500 g. Mass?",
+    "answer": "450 g",
+    "shows": "reads between labels"
+   }
+  ],
+  "name": "Read a weighing scale marked in grammes",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES",
+  "key_step": "The child scales a benchmark by repeating it (20 bottle tops of 5 g is 100 g), measures, and keeps the estimate beside the measurement.",
+  "floor": {
+   "prerequisite": "Multiplies by 5, 10, 20.",
+   "question": "20 x 5 =",
+   "answer": "100"
+  },
+  "representations": [
+   "benchmarks in the hand",
+   "repeated benchmark pictures",
+   "estimate and measurement"
+  ],
+  "steps": [
+   "Choose a benchmark (a 500 g packet, a bottle top of sand about 5 g).",
+   "Scale by repeating.",
+   "Measure and compare; keep both."
+  ],
+  "contexts": [
+   "a bar of soap",
+   "a bag of cotton wool and a stone",
+   "a cup of sand"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw one bottle top of sand labelled about 5 g, then a cup."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many bottle tops fill the cup and so its mass.",
+    "say": "About how many bottle tops fill the cup?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's estimate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES.M_BENCHMARK_ADD_NOT_REPEAT",
+    "listen_for": [
+     "25 g"
+    ],
+    "ask": "Each top is 5 g. How much are 20 tops?",
+    "repair": "Count on in fives for a few tops, then multiply.",
+    "error": "When scaling a benchmark, adds the count to the benchmark instead of repeating it.",
+    "example": {
+     "question": "One bottle top of sand is about 5 g. A cup holds 20 bottle tops of sand. About what is the mass of the sand?",
+     "wrong_answer": "25 g",
+     "correct_answer": "about 100 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ESTIMATE_GRAMMES.M_SIZE_EQUALS_MASS",
+    "listen_for": [
+     "the cotton wool, it's bigger"
+    ],
+    "ask": "Which would hurt more if it fell on your foot?",
+    "repair": "Bigger is not heavier: hold both in the mind's hands.",
+    "error": "Estimates that the bigger object must have the greater mass.",
+    "example": {
+     "question": "Estimate which is heavier: a large bag of cotton wool or a small stone the size of a matchbox.",
+     "wrong_answer": "The bag of cotton wool",
+     "correct_answer": "The stone (check on a balance)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One bottle top of sand is about 5 g. A cup holds 20 bottle tops. About what is the mass of the sand?",
+    "answer": "About 100 g",
+    "shows": "repeats the benchmark"
+   },
+   {
+    "question": "Kamau estimated 200 g and measured 180 g. What should he record?",
+    "answer": "Both: estimate 200 g, measurement 180 g",
+    "shows": "keeps the estimate"
+   }
+  ],
+  "name": "Estimate mass in grammes using benchmarks, then check by measuring",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP",
+  "key_step": "The child says 1 kg = 1 000 g, gives half and quarter kilogrammes in grammes, and compares masses in the same unit.",
+  "floor": {
+   "prerequisite": "Halves and quarters of 1 000.",
+   "question": "Half of 1 000?",
+   "answer": "500"
+  },
+  "representations": [
+   "packets: four 250 g tea packets against a 1 kg sugar packet",
+   "a balance level with 1 kg one side and ten 100 g the other",
+   "1 kg = 1 000 g"
+  ],
+  "steps": [
+   "Balance 1 kg against ten 100 g masses.",
+   "State 1 kg = 1 000 g.",
+   "Half and quarter kg in g.",
+   "Compare masses after changing to the same unit."
+  ],
+  "contexts": [
+   "tea packets and a sugar packet",
+   "beans and rice at the duka",
+   "a baby's mass at the clinic"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a level balance: 1 kg sugar on one pan, 100 g masses being added to the other one at a time."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in hundreds as each mass is added.",
+    "say": "Count in hundreds."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say when it balances and what that means."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP.M_KG_IS_100G",
+    "listen_for": [
+     "100"
+    ],
+    "ask": "A packet of salt is 500 g. Is it heavier than a 1 kg packet of sugar?",
+    "repair": "Count the 100 g masses to balance 1 kg: ten of them.",
+    "error": "Says 1 kg = 100 g.",
+    "example": {
+     "question": "1 kg = ___ g",
+     "wrong_answer": "100",
+     "correct_answer": "1000"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_KG_G_RELATIONSHIP.M_COMPARE_IGNORE_UNITS",
+    "listen_for": [
+     "500 is bigger than 2"
+    ],
+    "ask": "How many grammes is 2 kg?",
+    "repair": "Same unit first: 500 g and 2 000 g.",
+    "error": "Compares masses by the numbers alone and ignores the units.",
+    "example": {
+     "question": "Which is heavier: 500 g of beans or 2 kg of rice?",
+     "wrong_answer": "500 g of beans, because 500 is bigger than 2",
+     "correct_answer": "2 kg of rice (2 kg = 2000 g)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "How many 250 g packets of tea make 1 kg?",
+    "answer": "4",
+    "shows": "quarter kilogramme"
+   },
+   {
+    "question": "Which is heavier: 500 g of beans or 2 kg of rice?",
+    "answer": "2 kg of rice",
+    "shows": "same unit before comparing"
+   }
+  ],
+  "name": "Know that 1 kg = 1000 g, including half and quarter kilogrammes",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G",
+  "key_step": "The child multiplies kg by 1 000 and writes mixed masses with zeros in empty places (2 kg 45 g = 2 045 g).",
+  "floor": {
+   "prerequisite": "Knows 1 kg = 1 000 g.",
+   "question": "3 kg = ___ g",
+   "answer": "3 000"
+  },
+  "representations": [
+   "sukuma wiki on a scale",
+   "three boxes after the thousands",
+   "grammes in full"
+  ],
+  "steps": [
+   "Estimate: more grammes or fewer?",
+   "kg in the thousands; g fill three places with zeros.",
+   "Read it back."
+  ],
+  "contexts": [
+   "4 kg of sukuma wiki",
+   "3 kg 45 g of beans",
+   "a 2 kg bag of flour"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3 kg 45 g, then a thousands box, a comma and three boxes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the boxes."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read the grammes aloud."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G.M_KG_TO_G_TIMES_100",
+    "listen_for": [
+     "400 g"
+    ],
+    "ask": "Is 400 g more or less than one packet of salt (500 g)?",
+    "repair": "One kg is 1 000 g; multiply by 1 000. 4 kg of sukuma is far more than a salt packet.",
+    "error": "Multiplies by 100 when converting kilogrammes to grammes.",
+    "example": {
+     "question": "Mama Wanjiru bought 4 kg of sukuma wiki. How many grammes is that?",
+     "wrong_answer": "400 g",
+     "correct_answer": "4000 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_KG_TO_G.M_MISSING_PLACEHOLDER_ZERO",
+    "listen_for": [
+     "345 g"
+    ],
+    "ask": "Put 45 g in the three boxes. Which box is empty?",
+    "repair": "The empty hundreds box gets a zero: 3 045 g.",
+    "error": "Joins the kilogrammes and grammes digits together without place-holder zeros.",
+    "example": {
+     "question": "Convert 3 kg 45 g to grammes.",
+     "wrong_answer": "345 g",
+     "correct_answer": "3045 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Mama bought 4 kg of sukuma wiki. How many grammes?",
+    "answer": "4 000 g",
+    "shows": "times 1 000"
+   },
+   {
+    "question": "Convert 2 kg 45 g to grammes.",
+    "answer": "2 045 g",
+    "shows": "placeholder zero"
+   }
+  ],
+  "name": "Convert kilogrammes (and kilogrammes with grammes) to grammes",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG",
+  "key_step": "The child splits off thousands of grammes as kg (fewer of the bigger unit) and keeps all three last digits as grammes.",
+  "floor": {
+   "prerequisite": "Converts kg to g.",
+   "question": "4 kg = ___ g",
+   "answer": "4 000"
+  },
+  "representations": [
+   "a sack weighed in grammes",
+   "a line before the last three digits",
+   "kg and g"
+  ],
+  "steps": [
+   "Estimate: more kg or fewer?",
+   "Line before the last three digits.",
+   "Left is kg, right is g, zeros kept.",
+   "Check by converting back."
+  ],
+  "contexts": [
+   "a sack of potatoes from Nyandarua",
+   "a crate of tomatoes",
+   "a baby's mass"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4 250 g large."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask: more kg or fewer than 4 250?",
+    "say": "Will the number of kg be bigger or smaller?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a line before the last three digits, slowly."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read kg and g."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG.M_CONVERT_WRONG_DIRECTION",
+    "listen_for": [
+     "6 000 000"
+    ],
+    "ask": "A kg is bigger than a gramme. Will there be more kg, or fewer?",
+    "repair": "Bigger unit, fewer of them: divide by 1 000. Check: is 6 000 000 kg a sensible sack?",
+    "error": "Multiplies by 1000 when converting grammes to kilogrammes.",
+    "example": {
+     "question": "6000 g = ___ kg",
+     "wrong_answer": "6 000 000",
+     "correct_answer": "6"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_CONVERT_G_TO_KG.M_G_TO_KG_SPLIT_AT_HUNDREDS",
+    "listen_for": [
+     "42 kg 50 g"
+    ],
+    "ask": "How many grammes make 1 kg?",
+    "repair": "Thousands make kg: three digits stay as grammes.",
+    "error": "Splits the grammes into kilogrammes after the hundreds digit, as with centimetres to metres.",
+    "example": {
+     "question": "A sack of potatoes from Nyandarua is 4250 g. Write this in kg and g.",
+     "wrong_answer": "42 kg 50 g",
+     "correct_answer": "4 kg 250 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "6 000 g = ___ kg",
+    "answer": "6",
+    "shows": "divides, not multiplies"
+   },
+   {
+    "question": "Write 3 050 g in kg and g.",
+    "answer": "3 kg 50 g",
+    "shows": "internal zero kept"
+   }
+  ],
+  "name": "Convert grammes to kilogrammes (and kilogrammes with grammes)",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G",
+  "key_step": "The child adds grammes to grammes and kg to kg, and regroups every 1 000 g as 1 kg.",
+  "floor": {
+   "prerequisite": "Converts g to kg and g.",
+   "question": "1 300 g = ___ kg ___ g",
+   "answer": "1 kg 300 g"
+  },
+  "representations": [
+   "baskets at the market",
+   "kg and g columns",
+   "the total"
+  ],
+  "steps": [
+   "Estimate.",
+   "Columns.",
+   "Add g; regroup 1 000 g.",
+   "Add kg with the carry."
+  ],
+  "contexts": [
+   "two baskets of tomatoes",
+   "rice and salt bought together",
+   "a school's food delivery"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 kg 700 g + 1 kg 600 g in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the grammes column.",
+    "say": "Add the grammes first."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 1 300 g and the regrouping."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G.M_ADD_DROP_CARRY",
+    "listen_for": [
+     "3 kg 300 g"
+    ],
+    "ask": "Where did the extra 1 000 g go?",
+    "repair": "1 300 g is 1 kg and 300 g; the kg goes into the kg column.",
+    "error": "Writes only part of a gramme total of 1000 g or more and loses the extra kilogramme.",
+    "example": {
+     "question": "A basket has 2 kg 700 g of tomatoes and another has 1 kg 600 g. Find the total mass.",
+     "wrong_answer": "3 kg 300 g",
+     "correct_answer": "4 kg 300 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_ADD_KG_G.M_ADD_UNLIKE_UNITS",
+    "listen_for": [
+     "253 kg"
+    ],
+    "ask": "Akinyi carried the shopping home. Was it 253 kg?",
+    "repair": "Columns: 3 kg 0 g plus 0 kg 250 g.",
+    "error": "Adds the numbers of kilogrammes and grammes directly as if they were the same unit.",
+    "example": {
+     "question": "Akinyi bought 3 kg of rice and 250 g of salt. What is the total mass?",
+     "wrong_answer": "253 kg",
+     "correct_answer": "3 kg 250 g (3250 g)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A basket has 2 kg 700 g of tomatoes and another 1 kg 600 g. Total?",
+    "answer": "4 kg 300 g",
+    "shows": "regroups 1 000 g"
+   },
+   {
+    "question": "Akinyi bought 3 kg of rice and 250 g of salt. Total mass?",
+    "answer": "3 kg 250 g",
+    "shows": "units kept"
+   }
+  ],
+  "name": "Add masses in kilogrammes and grammes",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G",
+  "key_step": "The child exchanges 1 kg for 1 000 g when there are too few grammes, and reduces the kg by one.",
+  "floor": {
+   "prerequisite": "Adds kg and g with regrouping.",
+   "question": "1 kg = ___ g",
+   "answer": "1 000"
+  },
+  "representations": [
+   "beans cooked from a bag",
+   "columns with exchange",
+   "what is left"
+  ],
+  "steps": [
+   "Estimate.",
+   "Columns.",
+   "Exchange if needed.",
+   "Subtract; check by adding back."
+  ],
+  "contexts": [
+   "beans cooked from a bag",
+   "sugar used from a packet",
+   "maize sold from a sack"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5 kg 200 g - 2 kg 700 g in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 200 above 700.",
+    "say": "Enough grammes?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to exchange."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G.M_SUB_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "3 kg 500 g"
+    ],
+    "ask": "Add your answer to 2 kg 700 g. Do you get 5 kg 200 g?",
+    "repair": "The check fails; exchange 1 kg for 1 000 g.",
+    "error": "In the grammes column, takes the smaller number from the larger whichever is on top.",
+    "example": {
+     "question": "A bag had 5 kg 200 g of beans. 2 kg 700 g was cooked. How much is left?",
+     "wrong_answer": "3 kg 500 g",
+     "correct_answer": "2 kg 500 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_SUBTRACT_KG_G.M_SUB_EXCHANGE_NOT_REDUCED",
+    "listen_for": [
+     "3 kg 600 g"
+    ],
+    "ask": "Juma used sugar. Can he still have more than 3 kg?",
+    "repair": "The exchanged kg leaves the kg column: write one fewer.",
+    "error": "Takes grammes from a whole kilogramme but does not reduce the number of kilogrammes.",
+    "example": {
+     "question": "Juma had 3 kg of sugar and used 400 g. How much remains?",
+     "wrong_answer": "3 kg 600 g",
+     "correct_answer": "2 kg 600 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A bag had 5 kg 200 g of beans. 2 kg 700 g was cooked. How much is left?",
+    "answer": "2 kg 500 g",
+    "shows": "exchange and reduce"
+   },
+   {
+    "question": "Juma had 3 kg of sugar and used 400 g. How much remains?",
+    "answer": "2 kg 600 g",
+    "shows": "subtracting from whole kg"
+   }
+  ],
+  "name": "Subtract masses in kilogrammes and grammes",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G",
+  "key_step": "The child multiplies both parts and regroups every 1 000 g of the product as 1 kg.",
+  "floor": {
+   "prerequisite": "Adds kg and g with regrouping.",
+   "question": "350 g x 4 =",
+   "answer": "1 400 g"
+  },
+  "representations": [
+   "identical bags",
+   "columns",
+   "the product"
+  ],
+  "steps": [
+   "Estimate.",
+   "Multiply g; regroup.",
+   "Multiply kg; add the carry.",
+   "Check by repeated addition."
+  ],
+  "contexts": [
+   "4 bags of rice",
+   "3 crates of tomatoes",
+   "packets of flour for a school kitchen"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw 4 bags each labelled 2 kg 350 g."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate in kg.",
+    "say": "About how many kg?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child multiplies the grammes and regroups."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G.M_MULT_ONE_PART",
+    "listen_for": [
+     "8 kg 350 g"
+    ],
+    "ask": "Does every bag have 350 g in it?",
+    "repair": "Both parts of each bag count four times.",
+    "error": "Multiplies only the kilogrammes (or only the grammes) and copies the other part unchanged.",
+    "example": {
+     "question": "One bag of rice has a mass of 2 kg 350 g. What is the mass of 4 bags?",
+     "wrong_answer": "8 kg 350 g",
+     "correct_answer": "9 kg 400 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_MULTIPLY_KG_G.M_MULT_NO_REGROUP",
+    "listen_for": [
+     "8 kg 400 g"
+    ],
+    "ask": "350 g times 4 is how many grammes? Is that more than a kg?",
+    "repair": "1 400 g is 1 kg 400 g; add the kg.",
+    "error": "Multiplies both parts but loses the kilogrammes made from the gramme product.",
+    "example": {
+     "question": "2 kg 350 g × 4",
+     "wrong_answer": "8 kg 400 g",
+     "correct_answer": "9 kg 400 g (1400 g = 1 kg 400 g)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One bag of rice is 2 kg 350 g. Mass of 4 bags?",
+    "answer": "9 kg 400 g",
+    "shows": "both parts and regrouping"
+   },
+   {
+    "question": "1 kg 250 g x 3",
+    "answer": "3 kg 750 g",
+    "shows": "no regrouping needed"
+   }
+  ],
+  "name": "Multiply masses in kilogrammes and grammes by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G": {
+  "skill": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G",
+  "key_step": "The child divides the mass by the number of shares, changing any remaining kg into 1 000 g each before dividing the grammes.",
+  "floor": {
+   "prerequisite": "Converts kg to g; divides whole numbers.",
+   "question": "7 200 ÷ 4 =",
+   "answer": "1 800"
+  },
+  "representations": [
+   "flour shared among families",
+   "columns with remainder carried",
+   "each share"
+  ],
+  "steps": [
+   "Estimate each share.",
+   "Mass is divided by the number of people, not the other way.",
+   "Divide kg; carry the remainder as grammes.",
+   "Divide g; check by multiplying."
+  ],
+  "contexts": [
+   "maize flour shared among families",
+   "groundnuts shared among children in Kisumu",
+   "rice packed into bags"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a sack labelled 7 kg 200 g and 4 bowls."
+   },
+   {
+    "beat": "write",
+    "do": "Write 7 kg 200 g ÷ 4 with a box for leftover kg."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what happens to the leftover kg."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G.M_DIV_IGNORE_KG_REMAINDER",
+    "listen_for": [
+     "1 kg 50 g"
+    ],
+    "ask": "After each family gets 1 kg, is any flour left in the sack?",
+    "repair": "Change the leftover 3 kg to 3 000 g, add the 200 g, then share.",
+    "error": "Divides the kilogrammes and grammes separately and throws away the remainder from the kilogrammes.",
+    "example": {
+     "question": "7 kg 200 g of maize flour is shared equally among 4 families. How much does each family get?",
+     "wrong_answer": "1 kg 50 g",
+     "correct_answer": "1 kg 800 g"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.MASS.MASS_DIVIDE_KG_G.M_DIV_WRONG_WAY",
+    "listen_for": [
+     "4 kg each"
+    ],
+    "ask": "Can each child get more groundnuts than there were in total?",
+    "repair": "Share the groundnuts among the children: mass divided by children.",
+    "error": "Divides the number of people or items by the mass instead of the mass by the number of people or items.",
+    "example": {
+     "question": "2 kg of groundnuts are shared equally among 8 children in Kisumu. What mass does each child get?",
+     "wrong_answer": "4 kg",
+     "correct_answer": "250 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "7 kg 200 g of flour is shared equally among 4 families. How much each?",
+    "answer": "1 kg 800 g",
+    "shows": "remainder carried"
+   },
+   {
+    "question": "2 kg of groundnuts are shared equally among 8 children. How much each?",
+    "answer": "250 g",
+    "shows": "mass divided by people"
+   }
+  ],
+  "name": "Divide masses in kilogrammes and grammes by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.MASS",
+  "sub_strand_name": "Mass (kilogrammes and grammes)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G5;
