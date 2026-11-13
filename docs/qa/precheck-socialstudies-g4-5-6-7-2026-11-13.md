@@ -11,15 +11,15 @@ Hard means the item must not reach a reviewer. Soft means a reviewer should look
 ## Result
 
 - Items drawn: 15720
-- Clean: 15720 (100 percent)
-- With a soft flag only: 0
+- Clean: 15710 (100 percent)
+- With a soft flag only: 10
 - With a hard failure: 0
 
 ## By grade
 
 | Grade | Items | Clean | Soft only | Hard | key (hard/soft) | distractors | reading | ambiguity | units |
 |---|---|---|---|---|---|---|---|---|---|
-| 4 | 3540 | 3540 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
+| 4 | 3540 | 3530 | 10 | 0 | 0/0 | 0/0 | 0/4 | 0/6 | 0/0 |
 | 5 | 2880 | 2880 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
 | 6 | 5310 | 5310 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
 | 7 | 3990 | 3990 | 0 | 0 | 0/0 | 0/0 | 0/0 | 0/0 | 0/0 |
@@ -28,6 +28,8 @@ Hard means the item must not reach a reviewer. Soft means a reviewer should look
 
 | Level | Check | Finding | Items | Example |
 |---|---|---|---|---|
+| soft | ambiguity | double negative | 6 | socialstudies4.ep.proj.story: A school on dry land has no pond and no water tank. It wants to rear fish. What is the pro |
+| soft | reading | reading grade # above # for Grade # | 4 | socialstudies4.co.gov.which: Who appoints the county executive committee, with the approval of the county assembly? |
 
 ## Sources with a hard failure
 
