@@ -6,6 +6,7 @@ import creativearts_g5 from './creativearts_g5.js';
 import english_g4 from './english_g4.js';
 import english_g5 from './english_g5.js';
 import english_g6 from './english_g6.js';
+import english_g7 from './english_g7.js';
 import integratedscience_g7 from './integratedscience_g7.js';
 import kiswahili_g5 from './kiswahili_g5.js';
 import science_g4 from './science_g4.js';
@@ -22,6 +23,7 @@ export const ENTRIES = [
   english_g4,
   english_g5,
   english_g6,
+  english_g7,
   integratedscience_g7,
   kiswahili_g5,
   science_g4,
