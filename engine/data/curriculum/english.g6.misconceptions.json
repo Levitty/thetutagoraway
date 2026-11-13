@@ -12,7 +12,11 @@
   "help": "An idiom's meaning is not the sum of its words.",
   "feedback": "An idiom means something different from its words. Dog tired means extremely tired.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Nippold, M. and Taylor, C. (1995), Idiom understanding in youth, Journal of Speech and Hearing Research 38: younger children read idioms literally."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WORD_CHANGED": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
@@ -27,7 +31,11 @@
   "help": "An idiom is fixed. Change one word and it is lost.",
   "feedback": "An idiom is a fixed phrase. You cannot change its words: work like a dog.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_OPPOSITE": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
@@ -42,7 +50,11 @@
   "help": "Ask what the picture suggests: cake is easy to eat.",
   "feedback": "A piece of cake means very easy.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED.M_IDM_WRONG_SITUATION": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.IDIOMS_FIXED",
@@ -57,7 +69,11 @@
   "help": "Match the idiom to the feeling or the event.",
   "feedback": "Burst into tears means to begin to cry suddenly.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_PERSON_ACTION": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
@@ -72,7 +88,11 @@
   "help": "Employ is the action. The employer is the person who does it.",
   "feedback": "An employer is a person. Employ is the action. Choose the word for the action here.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_EXPLOIT_HELP": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
@@ -87,7 +107,11 @@
   "help": "Exploit means to use someone unfairly. Protect means to keep safe.",
   "feedback": "To exploit is to use someone unfairly. To protect is to keep them safe.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Unlikely that a child takes exploit to mean protect."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS.M_CL_WAGES_FEES": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.CHILD_LABOUR_WORDS",
@@ -102,7 +126,11 @@
   "help": "Wages: money paid for work. Fees: money you pay for school or a service.",
   "feedback": "Wages are money paid for work. Fees are money you pay for school or a service.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_DETAIL": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
@@ -117,7 +145,11 @@
   "help": "The main idea covers all of the passage.",
   "feedback": "The main idea covers the whole text. A detail is only one part.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_TOO_BROAD": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
@@ -132,7 +164,11 @@
   "help": "The main idea fits this passage, not every passage.",
   "feedback": "The main idea must fit this passage. A very general statement is too wide.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M6_MAIN_NOT_IN_TEXT": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
@@ -147,7 +183,11 @@
   "help": "Check the idea against the text.",
   "feedback": "The main idea must be in the passage. Check each answer against it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA.M_MAIN_DETAIL_FOR_ASKED": {
   "skill": "ENGL.G6.LISTEN.T1_PRONUNCIATION_AND_LI.MAIN_IDEA",
@@ -162,7 +202,11 @@
   "help": "A detail question asks for one fact, like a time or a name.",
   "feedback": "A specific detail question wants the exact fact, such as a time, name or place.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_WRONG_BOOK": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -177,7 +221,11 @@
   "help": "Dictionary: words. Atlas: maps. Encyclopaedia: facts.",
   "feedback": "A dictionary gives word meanings, an atlas has maps, an encyclopaedia gives facts on many topics.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_ALPHA_FIRST": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -192,7 +240,11 @@
   "help": "When the first letters match, look at the next letter.",
   "feedback": "When the first letters are the same, look at the second, third and so on.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M6_REF_GUIDE_WORDS": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -207,7 +259,11 @@
   "help": "The word must come after the first guide and before the last.",
   "feedback": "A word is on the page only if it falls between the two guide words in alphabetical order.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS.M_REF_INDEX_CONTENTS": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.REFERENCE_MATERIALS",
@@ -222,7 +278,11 @@
   "help": "Contents: chapters in order. Index: every topic in A to Z.",
   "feedback": "The contents lists the chapters in order. The index lists small topics A to Z with page numbers.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_WRONG_GENRE": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
@@ -237,7 +297,11 @@
   "help": "Information: facts. Story: enjoyment.",
   "feedback": "Use an information book to learn facts. A story is for enjoyment.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_COVER_ONLY": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
@@ -252,7 +316,11 @@
   "help": "The blurb and a page show the topic and the level.",
   "feedback": "The cover can mislead. Read the blurb and a page to see the topic and the level.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_TOO_HARD": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
@@ -267,7 +335,11 @@
   "help": "A good book has a few new words, not every line.",
   "feedback": "A text is right if you understand most of it and meet only a few new words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT.M_TXT_OFF_TOPIC": {
   "skill": "ENGL.G6.READIN.T1_EXTENSIVE_READING.SUITABLE_TEXT",
@@ -282,7 +354,11 @@
   "help": "Check the topic first.",
   "feedback": "A relevant text is about the same topic as your need.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_EACH_PLURAL": {
   "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
@@ -297,7 +373,11 @@
   "help": "Each means one at a time: one girl, one bottle, so the verb is singular.",
   "feedback": "Each points to one person or thing at a time, so the verb is singular: each girl has.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_LOTS_FORM": {
   "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
@@ -312,7 +392,11 @@
   "help": "Say the whole phrase: a lot of. Lots of has no a in front.",
   "feedback": "The phrase is a lot of (one lot) or lots of. A lots of is not used.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_ENOUGH_AFTER": {
   "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
@@ -327,7 +411,11 @@
   "help": "After an adjective, enough comes last: big enough. Before a noun it comes first: enough chairs.",
   "feedback": "Enough comes AFTER an adjective (big enough) and BEFORE a noun (enough chairs).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS.M_DET_SOME_ANY": {
   "skill": "ENGL.G6.LANGUA.T1_WORD_CLASSES.DETERMINERS",
@@ -342,7 +430,11 @@
   "help": "Some is for plain statements and offers. In a negative sentence use any.",
   "feedback": "In a sentence with not, use any, not some: There is not any milk.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SURNAME": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -357,7 +449,11 @@
   "help": "The surname is the family name, the name shared with the family.",
   "feedback": "The surname is the family name. The form asks for it in its own box, apart from the first name.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_DATE_TODAY": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -372,7 +468,11 @@
   "help": "Date of birth is the day you were born.",
   "feedback": "Date of birth is the day you were born, not the day you fill in the form.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SKIP": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -387,7 +487,11 @@
   "help": "An empty box looks as if you forgot. Write none or N/A.",
   "feedback": "Do not leave a box empty. If it does not apply, write N/A or none so the reader knows you saw it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_BLOCK": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -402,7 +506,11 @@
   "help": "Block letters are all capital letters.",
   "feedback": "Block letters are capital letters, printed clearly, so every box can be read.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_WRONG_FIELD": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -417,7 +525,11 @@
   "help": "Ask: what will the reader do with this information? Keep only what the purpose needs.",
   "feedback": "A form asks only for what its purpose needs. Think about what the reader will do with each answer.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS.M_FORM_SIGN_PRINT": {
   "skill": "ENGL.G6.WRITIN.T1_GUIDED_WRITING.FORM_FIELDS",
@@ -432,7 +544,11 @@
   "help": "A signature is your own handwriting of your name.",
   "feedback": "A signature is your name written in your own style, by hand, not printed.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_LITERAL": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
@@ -447,7 +563,11 @@
   "help": "A proverb gives advice by a picture. Ask: what is the lesson?",
   "feedback": "A proverb uses a picture to teach a lesson. Read what it teaches, not the words one by one.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Nippold and Haq (1996), Journal of Speech and Hearing Research 39: younger children read proverbs literally."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M6_PRV_OPPOSITE": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
@@ -462,7 +582,11 @@
   "help": "Waste is a bad result: the proverb warns.",
   "feedback": "Haste makes waste warns that hurrying spoils the work.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_MIXED": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
@@ -477,7 +601,11 @@
   "help": "Match the lesson of each proverb, not only one word.",
   "feedback": "Each proverb has its own lesson. A bird in the hand is about keeping what you have.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE.M_PRV_WORD": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.PROVERBS_USE",
@@ -492,7 +620,11 @@
   "help": "Proverbs are fixed. Say it in full to remember it.",
   "feedback": "A proverb is fixed. It cannot be changed: Where there is a will, there is a way.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_METAPHOR_AS_SIMILE": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
@@ -507,7 +639,11 @@
   "help": "A simile uses like or as. A metaphor says one thing IS another.",
   "feedback": "A simile compares with like or as. A metaphor says one thing is another, with no like or as.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_AS_LIKE": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
@@ -522,7 +658,11 @@
   "help": "The pattern is as ... as, or just like.",
   "feedback": "A simile uses as ... as (as hungry as) or like by itself. Do not write as hungry like.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_WRONG_ANIMAL": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
@@ -537,7 +677,11 @@
   "help": "Similes are fixed: greedy as a hyena, brave as a lion.",
   "feedback": "Common similes are fixed. Greedy goes with hyena, brave with lion.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR.M_SIM_PLAIN": {
   "skill": "ENGL.G6.LISTEN.T2_PRONUNCIATION_AND_LI.SIMILE_METAPHOR",
@@ -552,7 +696,11 @@
   "help": "A simile compares two different things.",
   "feedback": "A simile compares two different things using like or as. A plain statement does not compare.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MINOR_FOR_MAIN": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
@@ -567,7 +715,11 @@
   "help": "The main character is in most of the events.",
   "feedback": "The main character is the one most of the story is about.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_WRONG_PLACE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
@@ -582,7 +734,11 @@
   "help": "Find the sentence that tells where.",
   "feedback": "The place is where the events happen. Read the first lines again.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_REVERSED": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
@@ -597,7 +753,11 @@
   "help": "Find the event that happens first.",
   "feedback": "Find the first event, then the next, using words such as then and after.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_ORDER_SWAPPED": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
@@ -612,7 +772,11 @@
   "help": "Check each pair: which happened first?",
   "feedback": "Check each pair of events. Words like before and after show which came first.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS.M6_ELEM_MIXES_CHARACTER_PLACE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.STORY_ELEMENTS",
@@ -627,7 +791,11 @@
   "help": "A character is a person or animal; a place is where.",
   "feedback": "A character is a person or animal that acts. A place is where the story happens.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_NO_CLUE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
@@ -642,7 +810,11 @@
   "help": "A prediction needs a clue from the passage.",
   "feedback": "A good prediction follows from a clue in the passage.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_CONTRADICTS": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
@@ -657,7 +829,11 @@
   "help": "The prediction must agree with what the passage shows about the character.",
   "feedback": "A prediction must agree with the clues. This one goes against them.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT.M6_PRED_ALREADY_HAPPENED": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.PREDICT",
@@ -672,7 +848,11 @@
   "help": "A prediction is about what comes after the passage.",
   "feedback": "A prediction is about what happens next, not what was already told.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NEARBY_DETAIL": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -687,7 +867,11 @@
   "help": "Read the exact sentence the question points to.",
   "feedback": "Read the exact sentence the question points to. A detail nearby is not always the answer.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_OUTSIDE_KNOWLEDGE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -702,7 +886,11 @@
   "help": "The answer is in the passage.",
   "feedback": "The answer must come from the passage, not from what you already know.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Raphael, T. (1982), Question-answering strategies for children, The Reading Teacher 36: children answer from what they know, not from the text."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_MISSES_STATED": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -717,7 +905,11 @@
   "help": "Search the passage again for the sentence.",
   "feedback": "Look again. The passage does say it, in the sentence on that point.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_TRUE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -732,7 +924,11 @@
   "help": "Compare your statement with the sentence in the passage word by word.",
   "feedback": "The passage says something different, so the statement is false.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_FALSE_AS_NOT_STATED": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -747,7 +943,11 @@
   "help": "If the passage says the opposite, the statement is false.",
   "feedback": "The passage does say something about this, and it is different, so the statement is false.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS.M6_FACT_NOT_STATED_AS_TRUE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.FACTUAL_QUESTIONS",
@@ -762,7 +962,11 @@
   "help": "Find the line. If you cannot, it is not stated.",
   "feedback": "If you cannot find the line, it is not stated, even if it sounds likely.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_CONTRADICTS": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -777,7 +981,11 @@
   "help": "Check each answer against the passage.",
   "feedback": "An answer must agree with the passage. This one goes against it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_OVERREACH": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -792,7 +1000,11 @@
   "help": "Stay with what the clues show.",
   "feedback": "An inference must stay close to the clues. This one goes too far.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS.M6_INFER_REPEATS_TEXT": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.INFERENCE_QUESTIONS",
@@ -807,7 +1019,11 @@
   "help": "An inference explains; it does not repeat.",
   "feedback": "An inference says why. Copying a sentence only repeats what the passage said.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Raphael (1982): children copy a sentence from the text when asked to infer."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_FACT_LINE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
@@ -822,7 +1038,11 @@
   "help": "Look for colours, sounds and movement.",
   "feedback": "A line that paints a picture uses colours, sounds, smells or movement, not only a fact.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_WRONG_PICTURE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
@@ -837,7 +1057,11 @@
   "help": "Read the key words again: what do they show?",
   "feedback": "The words of the poem show the picture. Check each answer against the words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY.M_IMG_ONE_WORD": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.IMAGERY",
@@ -852,7 +1076,11 @@
   "help": "Use all the words, not one word.",
   "feedback": "Use all the words in the line together to see the picture.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_NAME_ONLY": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
@@ -867,7 +1095,11 @@
   "help": "Look at what she does and says.",
   "feedback": "What a character says and does shows what they are like.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_OPPOSITE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
@@ -882,7 +1114,11 @@
   "help": "Check the actions: do they show effort or none?",
   "feedback": "The actions in the story show the trait. This trait is the opposite.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE.M_CHAR_WRONG_EVIDENCE": {
   "skill": "ENGL.G6.READIN.T2_INTENSIVE_READING.CHARACTER_JUDGE",
@@ -897,7 +1133,11 @@
   "help": "Evidence is what the character does or says.",
   "feedback": "Evidence for a trait is something the character does or says that shows it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_FEELING_CONCRETE": {
   "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
@@ -912,7 +1152,11 @@
   "help": "Ask: can I touch it, see it or hear it? Kindness is only in our minds.",
   "feedback": "A concrete noun is something you can see or touch. Kindness, fear and freedom are ideas, so they are abstract.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_PLACE_ABSTRACT": {
   "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
@@ -927,7 +1171,11 @@
   "help": "A market is a place you can walk to, so it is concrete.",
   "feedback": "Places, people, animals and things are concrete nouns because we can see or touch them.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_ADJECTIVE_FORM": {
   "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
@@ -942,7 +1190,11 @@
   "help": "After her, a noun is needed. The noun for honest is honesty.",
   "feedback": "After her or his, a noun is needed. The noun for the quality honest is honesty.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT.M_NOUN_SENSE_ABSTRACT": {
   "skill": "ENGL.G6.LANGUA.T2_WORD_CLASSES.CONCRETE_ABSTRACT",
@@ -957,7 +1209,11 @@
   "help": "You can hear music but you cannot hold it; the bell and radio are things.",
   "feedback": "Things you can hold are concrete. Things like music, time and hunger cannot be held, so they are abstract.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Whether a sound or a time word is concrete depends on the definition (can be touched or can be sensed). Items using music and laughter were changed."
+  }
  },
  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_DETAIL_OPENS": {
   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -972,7 +1228,11 @@
   "help": "The topic sentence tells what the whole paragraph is about.",
   "feedback": "The topic sentence gives the main idea. Details come after it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_OFF_TOPIC": {
   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -987,7 +1247,11 @@
   "help": "Check each sentence: does it help the main idea?",
   "feedback": "Every sentence must help the main idea. A sentence about something else does not belong.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_ORDER": {
   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -1002,7 +1266,11 @@
   "help": "Look for first, next, then, finally and for the sentence that sums up.",
   "feedback": "Look for time words (first, then, finally) and for an ending sentence. The order should follow what happened.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER.M_PARA_CONCLUSION": {
   "skill": "ENGL.G6.WRITIN.T2_CREATIVE_WRITING.PARAGRAPH_ORDER",
@@ -1017,7 +1285,11 @@
   "help": "The last sentence sums up the paragraph; it does not open a new topic.",
   "feedback": "The closing sentence wraps up the paragraph. A new topic belongs in a new paragraph.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_BLUNT": {
   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
@@ -1032,7 +1304,11 @@
   "help": "Say excuse me, wait for a pause, and ask.",
   "feedback": "A polite interruption begins with Excuse me and asks permission.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_PHONE_START": {
   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
@@ -1047,7 +1323,11 @@
   "help": "Greet, say who you are and offer help.",
   "feedback": "On the telephone say hello, say who is speaking and ask how you can help.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_CLARIFY": {
   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
@@ -1062,7 +1342,11 @@
   "help": "Ask politely: pardon, could you repeat that, please.",
   "feedback": "To ask someone to repeat, say Pardon or Could you say that again, please.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK.M_POL_MESSAGE": {
   "skill": "ENGL.G6.LISTEN.T3_PRONUNCIATION_AND_VO.POLITE_TALK",
@@ -1077,7 +1361,11 @@
   "help": "Say where the person is and offer to take a message.",
   "feedback": "If the person is out, say so and ask, May I take a message?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_COMMON_MEANING": {
   "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
@@ -1092,7 +1380,11 @@
   "help": "Try each meaning in the sentence.",
   "feedback": "Many words have more than one meaning. Try each one in the sentence.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_LOOKS_LIKE": {
   "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
@@ -1107,7 +1399,11 @@
   "help": "Use the clues, not how the word looks.",
   "feedback": "A word can look like another word and mean something different. Use the clues around it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_OPPOSITE": {
   "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
@@ -1122,7 +1418,11 @@
   "help": "See if the sentence says but or because.",
   "feedback": "Look at words like but and because. They show whether the word is like or unlike its neighbours.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES.M6_CTX_WRONG_CLUE": {
   "skill": "ENGL.G6.READIN.T3_INTENSIVE_READING.CONTEXT_CLUES",
@@ -1137,7 +1437,11 @@
   "help": "A clue is close to the word and explains it.",
   "feedback": "A clue is a group of words that explains the hard word, usually in the same or the next sentence.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_OR": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
@@ -1152,7 +1456,11 @@
   "help": "Neither always goes with nor, either with or.",
   "feedback": "Neither goes with nor: neither ... nor. Either goes with or.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_BOTH_OR": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
@@ -1167,7 +1475,11 @@
   "help": "Both means the two together, so and joins them.",
   "feedback": "Both ... and joins two things together. Or is for a choice.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_EITHER_NOR": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
@@ -1182,7 +1494,11 @@
   "help": "Either is a choice, so it goes with or.",
   "feedback": "Either gives a choice between two, so it goes with or.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NOT_ONLY_AND": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
@@ -1197,7 +1513,11 @@
   "help": "The pair is not only ... but also.",
   "feedback": "The pair is not only ... but also. Not only ... and is not used.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE.M_CORR_NEITHER_NOT": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.CORRELATIVE",
@@ -1212,7 +1532,11 @@
   "help": "Neither and nor already say no. Do not add not.",
   "feedback": "Neither ... nor already means no. Adding not makes a double negative.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Labov (1972): negative concord, as above."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_INVERSION": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
@@ -1227,7 +1551,11 @@
   "help": "It is not a question, so the order stays: subject, then verb.",
   "feedback": "Inside a sentence the order is not a question order. Say: Show me where the library is.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_DO_SUPPORT": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
@@ -1242,7 +1570,11 @@
   "help": "Leave out do and does here; the verb takes its normal ending.",
   "feedback": "After show me or tell me, do not add do or does. Say: Tell me how it works.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_WORD_MISSING": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
@@ -1257,7 +1589,11 @@
   "help": "The question word tells what you want to know: where, how or who.",
   "feedback": "You need a question word (where, how, who) to say what you want shown.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN.M_SHOW_QMARK": {
   "skill": "ENGL.G6.LANGUA.T3_CORRELATIVE_CONJUNCT.SHOW_PATTERN",
@@ -1272,7 +1608,11 @@
   "help": "A question mark is only for a real question. This sentence tells.",
   "feedback": "This sentence asks for something but it is not a question, so it ends with a full stop.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ACRONYM_ANY": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
@@ -1287,7 +1627,11 @@
   "help": "An acronym is said as a word. An abbreviation is a short form said letter by letter or in full.",
   "feedback": "An acronym is read as a word, like UNICEF. Mr and Dr are abbreviations of longer words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_WRONG_EXPAND": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
@@ -1302,7 +1646,11 @@
   "help": "Each letter is the first letter of a word in the name.",
   "feedback": "Each letter stands for a word in the full name. KNEC is the Kenya National Examinations Council.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_ETC_EG": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
@@ -1317,7 +1665,11 @@
   "help": "Etc. means and so on; e.g. means for example; i.e. means that is.",
   "feedback": "E.g. means for example. Etc. means and so on. I.e. means that is.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS.M_ABBR_SHORT_FORM": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.ABBREVIATIONS",
@@ -1332,7 +1684,11 @@
   "help": "Keep the first and last letters or the first letters of the word.",
   "feedback": "The short form of Doctor is Dr; of Mister is Mr; of Mistress is Mrs.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_FOURTY": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
@@ -1347,7 +1703,11 @@
   "help": "Four loses its u in forty, but fourteen keeps it.",
   "feedback": "Forty has no u. Fourteen has one: forty, fourteen.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_START_FIGURE": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
@@ -1362,7 +1722,11 @@
   "help": "A sentence should not begin with a figure. Spell the number out.",
   "feedback": "A sentence does not begin with a figure. Write the number in words: Twenty-five.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A style rule, not an error of English."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_ORDINAL_END": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
@@ -1377,7 +1741,11 @@
   "help": "The endings are 1st, 2nd, 3rd, then th for 4th onward.",
   "feedback": "Only 1st, 2nd and 3rd have special endings. From 4th the ending is th.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS.M_NUM_EIGHTH": {
   "skill": "ENGL.G6.WRITIN.T3_MECHANICS_OF_WRITING.NUMERALS",
@@ -1392,7 +1760,11 @@
   "help": "Eight keeps its t: eighth. Nine loses its e: ninth.",
   "feedback": "Eighth has two h-sounds from eight + th. Ninth drops the e of nine.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_VEHICLE_PERSON": {
   "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
@@ -1407,7 +1779,11 @@
   "help": "The ambulance is the vehicle; the paramedic is the trained person.",
   "feedback": "An ambulance is the vehicle. A paramedic is the trained person who treats the patient.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_EVACUATE": {
   "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
@@ -1422,7 +1798,11 @@
   "help": "Evacuate: leave a dangerous place. Rescue: save someone in danger.",
   "feedback": "Evacuate means to leave a dangerous place. Rescue means to save someone from danger.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS.M_RES_SIREN_ALARM": {
   "skill": "ENGL.G6.LISTEN.T4_PRONUNCIATION_AND_VO.RESCUE_WORDS",
@@ -1437,7 +1817,11 @@
   "help": "A siren is the loud warning sound of a vehicle. An alarm warns in a building.",
   "feedback": "A siren is the loud sound of an emergency vehicle. An alarm warns people in a building.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHICH_PERSON": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
@@ -1452,7 +1836,11 @@
   "help": "Who is for people, which is for things and animals.",
   "feedback": "Use who for people. Which is for things and animals.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHO_THING": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
@@ -1467,7 +1855,11 @@
   "help": "A book is a thing, so which.",
   "feedback": "Use which for things. Who is only for people.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOSE_WHO": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
@@ -1482,7 +1874,11 @@
   "help": "The bag belongs to the boy. Belonging is whose.",
   "feedback": "When the word shows who something belongs to, use whose.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_DOUBLE": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
@@ -1497,7 +1893,11 @@
   "help": "The word who already does the work of he or she.",
   "feedback": "Who already stands for the person. Do not add he, she or they after it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS.M_REL_WHOM_WHO": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.RELATIVE_PRONOUNS",
@@ -1512,7 +1912,11 @@
   "help": "After to, with, for, use whom. Whom is for the one who receives.",
   "feedback": "After a word like to, with or for, the formal word is whom.",
   "source": "to confirm by a Kenyan English teacher: whom is dropping out of speech",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_ANY_STATEMENT": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
@@ -1527,7 +1931,11 @@
   "help": "In a plain positive sentence use some-. Any- is for questions and negatives.",
   "feedback": "In a plain positive sentence use somebody or someone. Anybody is for questions and negatives.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_DOUBLE_NEG": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
@@ -1542,7 +1950,11 @@
   "help": "One negative is enough. After not, use any-.",
   "feedback": "Do not use not and nobody together. After not use anybody or anyone.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Labov, W. (1972), Language in the Inner City: negative concord is a regular feature of many varieties of English; a matter of register rather than a muddle."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_PLURAL_VERB": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
@@ -1557,7 +1969,11 @@
   "help": "Everyone sounds like many, but the word is singular.",
   "feedback": "Everyone, everybody and nobody are singular, so they take is and has.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS.M_IND_NOONE": {
   "skill": "ENGL.G6.LANGUA.T4_WORD_CLASSES.INDEFINITE_PRONOUNS",
@@ -1572,7 +1988,11 @@
   "help": "No one is two words. Nobody is one word.",
   "feedback": "Write no one as two words, or use the one word nobody.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "No one and no-one are both acceptable; only the one-word form noone is wrong."
+  }
  },
  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_CLOSING": {
   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
@@ -1587,7 +2007,11 @@
   "help": "Dear Sir or Madam goes with faithfully. A named person goes with sincerely.",
   "feedback": "Dear Sir or Madam ends with Yours faithfully. Dear Mr Otieno (a name) ends with Yours sincerely.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_INFORMAL": {
   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
@@ -1602,7 +2026,11 @@
   "help": "A formal letter is polite and plain, with no slang or short forms.",
   "feedback": "A formal letter uses polite, full sentences. No slang and no short forms like it'll.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_ADDRESS": {
   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
@@ -1617,7 +2045,11 @@
   "help": "The sender's address begins the letter, at the top right.",
   "feedback": "The writer's address goes at the top right. The receiver's address goes under it on the left.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_NO_SUBJECT": {
   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
@@ -1632,7 +2064,11 @@
   "help": "The subject heading comes under the greeting.",
   "feedback": "The subject line sits below the greeting and tells the reader the topic in a few words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER.M_LET_SIGNATURE": {
   "skill": "ENGL.G6.WRITIN.T4_FUNCTIONAL_WRITING.FORMAL_LETTER",
@@ -1647,7 +2083,11 @@
   "help": "Greeting, body, closing, then signature and name.",
   "feedback": "The signature goes under the closing, with the full name printed under it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_AS_COMPARATIVE": {
   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
@@ -1662,7 +2102,11 @@
   "help": "Between as ... as use the plain adjective.",
   "feedback": "In as ... as, use the plain form: as tall as, not as taller as.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_SUPER_THAN": {
   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
@@ -1677,7 +2121,11 @@
   "help": "Than goes with a comparative (taller than). With the tallest use in or of.",
   "feedback": "Than goes with the comparative. After the tallest use in or of: the tallest in the class.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THE_MISSING": {
   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
@@ -1692,7 +2140,11 @@
   "help": "A superlative picks one from a group and needs the.",
   "feedback": "A superlative needs the before it: the fastest, the most careful.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_THAN_MISSING": {
   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
@@ -1707,7 +2159,11 @@
   "help": "After a comparative the word is than.",
   "feedback": "After a comparative adjective use than, not from or that.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES.M_DEGR_ONE_OF_SINGULAR": {
   "skill": "ENGL.G6.LANGUA.T5_ADJECTIVES.ADJECTIVE_DEGREES",
@@ -1722,7 +2178,11 @@
   "help": "One of the ... needs a plural noun: there are many tallest girls and she is one.",
   "feedback": "After one of the + superlative, use a plural noun: one of the tallest girls.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SPELL_NOT_SOUND": {
   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
@@ -1737,7 +2197,11 @@
   "help": "Say both words aloud. Do they sound alike?",
   "feedback": "Spelling can mislead. Say the words aloud: near and beer share the vowel sound, bear does not.",
   "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_F_V": {
   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
@@ -1752,7 +2216,11 @@
   "help": "For /v/ the upper teeth touch the lower lip and the voice hums; for /f/ it does not.",
   "feedback": "For /v/ the voice hums with your teeth on your lip. For /f/ there is only air.",
   "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_SILENT_H": {
   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
@@ -1767,7 +2235,11 @@
   "help": "In hour, honest and heir the h is silent.",
   "feedback": "In hour, honest and heir the h is silent, so they start with a vowel sound. In house and hand it is said.",
   "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS.M_SND_TOUR_MORE": {
   "skill": "ENGL.G6.LISTEN.T6_PRONUNCIATION_AND_VO.SOUNDS",
@@ -1782,7 +2254,11 @@
   "help": "Tour, poor and pure share one sound. More, door and floor share another.",
   "feedback": "Tour, poor and pure share the sound /ʊə/. More, door and floor share a different sound.",
   "source": "to confirm by a Kenyan English teacher: sound judgements depend on the accent the class is taught in",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Depends on the accent taught; in many Kenyan English accents the two sounds merge. Not an error unless the class is taught a particular accent."
+  }
  },
  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_NUMBER_UNCOUNT": {
   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
@@ -1797,7 +2273,11 @@
   "help": "A number of needs things we can count.",
   "feedback": "A number of goes with countable nouns, such as learners or books, not with water or sugar.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_AMOUNT_COUNT": {
   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
@@ -1812,7 +2292,11 @@
   "help": "A great deal of is for things we cannot count one by one.",
   "feedback": "A great deal of and an amount of go with uncountable nouns such as flour, water and advice.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_PIECE_PLURAL": {
   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
@@ -1827,7 +2311,11 @@
   "help": "Advice, news and furniture never take -s. Count them with a piece of.",
   "feedback": "Advice, news, information and furniture have no plural. Say a piece of advice.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_OF_MISSING": {
   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
@@ -1842,7 +2330,11 @@
   "help": "The pattern is a loaf OF bread, a bar OF soap.",
   "feedback": "These phrases need of: a loaf of bread, a bar of soap, a bottle of milk.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS.M_PQ_WRONG_UNIT": {
   "skill": "ENGL.G6.LANGUA.T6_PHRASAL_QUANTIFIERS.PHRASAL_QUANTIFIERS",
@@ -1857,7 +2349,11 @@
   "help": "Each thing has its own unit: loaf of bread, bar of soap, bottle of milk, piece of chalk.",
   "feedback": "Each thing has its own unit word. A bar belongs to soap or chocolate, not to milk.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_BE": {
   "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
@@ -1872,7 +2368,11 @@
   "help": "The future continuous is will + be + verb-ing.",
   "feedback": "The future continuous needs be: will be travelling. Will travelling is not complete.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_WILL_BEEN": {
   "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
@@ -1887,7 +2387,11 @@
   "help": "After will, the verb be stays in its plain form: will be.",
   "feedback": "After will use the plain form be, not been or being: will be cooking.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_PRESENT": {
   "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
@@ -1902,7 +2406,11 @@
   "help": "A future time word asks for will be.",
   "feedback": "When the time is in the future, use will be + verb-ing, not is or are.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "The present continuous with a future time (we are travelling tomorrow) is correct English. The wrong options now use \"be\", which is clearly wrong."
+  }
  },
  "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS.M_FC_NO_ING": {
   "skill": "ENGL.G6.LANGUA.T7_TENSE.FUTURE_CONTINUOUS",
@@ -1917,7 +2425,11 @@
   "help": "The pattern is will be + verb-ing, a continuing action.",
   "feedback": "The future continuous ends in -ing: will be writing. Will be write is not correct.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SUBJECT_VERB": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
@@ -1932,7 +2444,11 @@
   "help": "Read it: a comma does not come between who and what they do.",
   "feedback": "Do not put a comma between a subject and its verb.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_LIST_MISSING": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
@@ -1947,7 +2463,11 @@
   "help": "Put a comma after every item except the last two joined by and.",
   "feedback": "In a list, put a comma between the items. And stands before the last one.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_OPENING_MISSING": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
@@ -1962,7 +2482,11 @@
   "help": "A phrase at the start of the sentence is followed by a comma.",
   "feedback": "When a sentence opens with a word or phrase such as After lunch, put a comma after it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "A comma after a short opening phrase (After lunch we played) is optional. The no-comma wrong options were removed from the two items that used them."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M6_COMMA_SPLICE": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
@@ -1977,7 +2501,11 @@
   "help": "Two sentences need a full stop or a joining word as well as the comma.",
   "feedback": "A comma alone cannot join two sentences. Add a joining word such as so, or use a full stop.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE.M_COMMA_SPEECH_MISSING": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.COMMA_USE",
@@ -1992,7 +2520,11 @@
   "help": "A comma goes between said and the opening quotation mark.",
   "feedback": "Put a comma between the speaker and the spoken words: Mama said, \"Come and eat.\"",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_MISSING": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
@@ -2007,7 +2539,11 @@
   "help": "The exact words spoken go inside double quotation marks.",
   "feedback": "Put double quotation marks round the exact words someone says.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_PUNCT_OUTSIDE": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
@@ -2022,7 +2558,11 @@
   "help": "The mark that ends the speech goes inside the quotation marks.",
   "feedback": "The question mark, full stop or exclamation mark goes inside the closing quotation marks.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_CAPITAL_SPLIT": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
@@ -2037,7 +2577,11 @@
   "help": "It is one sentence cut in two. The second part has a small letter.",
   "feedback": "In split speech the second part is a small letter because the sentence goes on.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_REPORTED": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
@@ -2052,7 +2596,11 @@
   "help": "Quotation marks are for the exact words only. Reported speech is not exact.",
   "feedback": "Reported speech does not use quotation marks. Use them only for the exact words spoken.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS.M_QM_SINGLE": {
   "skill": "ENGL.G6.WRITIN.T7_MECHANICS_OF_WRITING.QUOTATION_MARKS",
@@ -2067,7 +2615,11 @@
   "help": "In your school use double quotation marks for speech.",
   "feedback": "In Kenyan school English the usual marks for speech are double quotation marks.",
   "source": "to confirm by a Kenyan English teacher: single marks are also correct British style",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Single quotation marks are standard British English. Wrong only if the Kenyan textbook asks for double; items using it as a wrong option were removed."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_PROVERB_AS_RIDDLE": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
@@ -2082,7 +2634,11 @@
   "help": "A riddle asks a question and waits for an answer.",
   "feedback": "A riddle is a puzzle with an answer to find. A proverb gives advice and has no answer to find.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_RIDDLE_AS_PROVERB": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
@@ -2097,7 +2653,11 @@
   "help": "A proverb tells us what to do or what is true.",
   "feedback": "A proverb teaches a lesson. A riddle asks something that you must guess.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_LITERAL": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
@@ -2112,7 +2672,11 @@
   "help": "Think: what has a neck but no head and a mouth?",
   "feedback": "A riddle describes an object in a puzzling way. Match all the clues, not the first word.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS.M_RID_NO_ANSWER": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.RIDDLES_PROVERBS",
@@ -2127,7 +2691,11 @@
   "help": "Riddles end with a puzzle: the listener answers.",
   "feedback": "A riddle always has an answer to find. It is not a story.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Trap option. Children know a riddle has an answer."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_LITERAL": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
@@ -2142,7 +2710,11 @@
   "help": "The particle changes the verb's meaning.",
   "feedback": "A phrasal verb has its own meaning. Put up with means to bear something patiently.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PARTICLE": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
@@ -2157,7 +2729,11 @@
   "help": "Give up: stop trying. Give in: say yes after refusing.",
   "feedback": "Each particle makes a new meaning. Give up means stop trying; give in means agree after refusing.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_PREP": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
@@ -2172,7 +2748,11 @@
   "help": "Agree with a person. Cope with a problem.",
   "feedback": "Say agree WITH a person and cope WITH a problem.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE.M_PV_SAME_MEANING": {
   "skill": "ENGL.G6.LISTEN.T8_PRONUNCIATION_AND_VO.PHRASAL_VERBS_USE",
@@ -2187,7 +2767,11 @@
   "help": "Broke down: stopped working. Broke up: split apart or ended.",
   "feedback": "Break down means stop working. Break up means to come apart or to end.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_NO_BE": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
@@ -2202,7 +2786,11 @@
   "help": "A passive needs be + the past participle.",
   "feedback": "A passive sentence needs a form of be before the past participle: was broken, is written.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_PAST_FORM": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
@@ -2217,7 +2805,11 @@
   "help": "After was or were use the participle: written, eaten, broken, taken.",
   "feedback": "After was or were use the past participle: was written, was eaten, was taken.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_AGREEMENT": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
@@ -2232,7 +2824,11 @@
   "help": "The subject is plural, so use were.",
   "feedback": "The be-word must match the subject: the book was returned, the books were returned.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_ACTIVE_AS_PASSIVE": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
@@ -2247,7 +2843,11 @@
   "help": "Ask: does the subject do the action or receive it?",
   "feedback": "In a passive sentence the subject RECEIVES the action. In Wanjiku cooked the rice, Wanjiku does it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE.M_PASS_DOER_SUBJECT": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.ACTIVE_PASSIVE",
@@ -2262,7 +2862,11 @@
   "help": "The thing acted on moves to the front.",
   "feedback": "In the passive, the thing that receives the action goes first: The ball was kicked by Baraka.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SAY_TELL": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2277,7 +2881,11 @@
   "help": "Tell takes a person straight after it (tell us). Say does not.",
   "feedback": "Tell is followed by the person (told us). Say is followed by the words (said that).",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BORROW_LEND": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2292,7 +2900,11 @@
   "help": "Lend: you give it for a short time. Borrow: you take it for a short time.",
   "feedback": "You borrow FROM someone and you lend TO someone. Please lend me your pen.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_BRING_TAKE": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2307,7 +2919,11 @@
   "help": "Bring: towards the speaker. Take: away from the speaker.",
   "feedback": "Bring means to carry it toward the speaker. Take means to carry it away from the speaker.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_LEARN_TEACH": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2322,7 +2938,11 @@
   "help": "The teacher teaches. The pupil learns.",
   "feedback": "The teacher TEACHES and the pupil LEARNS.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_HEAR_LISTEN": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2337,7 +2957,11 @@
   "help": "Listen: you try to hear. Hear: it reaches your ears.",
   "feedback": "You hear without trying, but you LISTEN on purpose. Listen is followed by to.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS.M_CW_SEE_LOOK": {
   "skill": "ENGL.G6.LANGUA.T8_SENTENCE_PATTERNS.CONFUSED_WORDS",
@@ -2352,7 +2976,11 @@
   "help": "Look is on purpose, and it takes at. See is what your eyes find.",
   "feedback": "Look is on purpose and takes at (look at). See is what your eyes find. Watch is to look at something that moves.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_OPINION_AS_FACT": {
   "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
@@ -2367,7 +2995,11 @@
   "help": "A fact can be checked. Words like best, nicest and should show an opinion.",
   "feedback": "An opinion says what someone thinks. Words like best and nicest show an opinion. A fact can be checked.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_FACT_AS_OPINION": {
   "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
@@ -2382,7 +3014,11 @@
   "help": "Can you check it? Then it is a fact.",
   "feedback": "A fact can be checked. Nairobi is the capital is a fact; the most exciting is a feeling.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION.M_FO_STORY_INFO": {
   "skill": "ENGL.G6.READIN.T9_INTENSIVE_READING_FI.FACT_OPINION",
@@ -2397,7 +3033,11 @@
   "help": "A story has made-up characters and events.",
   "feedback": "A story is made up, with characters and events. Information gives facts.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_ADJ_FOR_ADV": {
   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
@@ -2412,7 +3052,11 @@
   "help": "How does he run? An -ly word tells how.",
   "feedback": "A word that tells HOW something is done is an adverb, usually ending in -ly: quickly, slowly.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_GOOD_WELL": {
   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
@@ -2427,7 +3071,11 @@
   "help": "Good describes a noun (a good song). Well describes a verb (sings well).",
   "feedback": "Good is an adjective. Well is the adverb of good: a good singer, sings well.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_HARD_HARDLY": {
   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
@@ -2442,7 +3090,11 @@
   "help": "Hard means with effort. Hardly means almost not at all.",
   "feedback": "Hard means with much effort. Hardly means almost not: He hardly slept means he slept very little.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M6_ADV_POSITION": {
   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
@@ -2457,7 +3109,11 @@
   "help": "Always, never, often and usually go before the main verb.",
   "feedback": "Frequency adverbs such as always, never and often come before the main verb: he always walks.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE.M_ADV_KIND_MIXED": {
   "skill": "ENGL.G6.LANGUA.T9_ADVERBS.ADVERBS_USE",
@@ -2472,7 +3128,11 @@
   "help": "Ask: how, when, where or how often?",
   "feedback": "Yesterday tells WHEN, so it is an adverb of time. Where tells place; how tells manner; how often tells frequency.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_MISSING": {
   "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
@@ -2487,7 +3147,11 @@
   "help": "Two words that work as one describing word before a noun take a hyphen.",
   "feedback": "A compound that describes the noun after it takes a hyphen: a well-known singer.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_NUMBER": {
   "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
@@ -2502,7 +3166,11 @@
   "help": "The numbers 21 to 99 in words take a hyphen.",
   "feedback": "Numbers from twenty-one to ninety-nine are hyphenated when written in words.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_PLURAL_COMPOUND": {
   "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
@@ -2517,7 +3185,11 @@
   "help": "In a compound before a noun, the unit stays singular.",
   "feedback": "Before a noun, the unit is singular: a ten-year-old boy. Without the hyphen: he is ten years old.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS.M_HYP_RELATIVE": {
   "skill": "ENGL.G6.WRITIN.T9_MECHANICS_OF_WRITING.HYPHENS",
@@ -2532,7 +3204,11 @@
   "help": "Words for relations by marriage are hyphenated.",
   "feedback": "Words such as mother-in-law and sister-in-law are written with hyphens.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_ALTHOUGH_BUT": {
   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
@@ -2547,7 +3223,11 @@
   "help": "Use one joining word only: although OR but.",
   "feedback": "Do not use although and but together. Although it rained, we played. Or: It rained but we played.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_UNLESS_NOT": {
   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
@@ -2562,7 +3242,11 @@
   "help": "Unless already means if not.",
   "feedback": "Unless means if not, so do not add not: You will fail unless you study.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHILE_UNTIL": {
   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
@@ -2577,7 +3261,11 @@
   "help": "Until: up to the time that. While: at the same time as.",
   "feedback": "Until means up to the time that something happens. While means at the same time as.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_SO_THAT_MEANING": {
   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
@@ -2592,7 +3280,11 @@
   "help": "So that tells the purpose: what you want to happen next.",
   "feedback": "So that gives the purpose: the aim you want. Because gives the reason for something that has happened.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE.M_CJ_WHEREAS": {
   "skill": "ENGL.G6.LANGUA.T10_CONJUNCTIONS.CONJUNCTIONS_USE",
@@ -2607,7 +3299,11 @@
   "help": "Two different things side by side: whereas.",
   "feedback": "Whereas and while show two things that are different. Because shows a reason.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHO_WHOSE": {
   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
@@ -2622,7 +3318,11 @@
   "help": "The answer is an owner: Wanjiru's. That is whose.",
   "feedback": "Ask whose when you want to know who owns something.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHAT_WHICH": {
   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
@@ -2637,7 +3337,11 @@
   "help": "Which is for a choice from a small number you can see.",
   "feedback": "Use which when the choice is from a small set; use what when anything is possible.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWMUCH_MANY": {
   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
@@ -2652,7 +3356,11 @@
   "help": "Count them? how many. Cannot count them? how much.",
   "feedback": "How many is for things you can count (eggs). How much is for things you cannot (milk, money).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_HOWLONG_HOWFAR": {
   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
@@ -2667,7 +3375,11 @@
   "help": "Distance is how far. How long can be time.",
   "feedback": "How far asks about distance. How long asks about time or length.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE.M_Q_WHEN_HOWOFTEN": {
   "skill": "ENGL.G6.LANGUA.T11_INTERROGATIVES.INTERROGATIVES_USE",
@@ -2682,7 +3394,11 @@
   "help": "Twice a week tells how many times. That is how often.",
   "feedback": "How often asks how many times. When asks at what time.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_SYN_FOR_ANT": {
   "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
@@ -2697,7 +3413,11 @@
   "help": "Antonym means opposite. Ask: is it the same meaning or the opposite?",
   "feedback": "An antonym is a word with the OPPOSITE meaning. Feeble means weak, not the opposite of weak.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_ANT_FOR_SYN": {
   "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
@@ -2712,7 +3432,11 @@
   "help": "Synonym means same meaning. Delighted means very pleased.",
   "feedback": "A synonym has the SAME meaning. Delighted means very pleased, so happy is the synonym.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_RELATED_NOT_PAIR": {
   "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
@@ -2727,7 +3451,11 @@
   "help": "Think of the exact opposite of wide, not any word about roads.",
   "feedback": "Choose the word that is the exact opposite. Long is about something else; the opposite of wide is narrow.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS.M_SA_REPEAT": {
   "skill": "ENGL.G6.WRITIN.T11_MECHANICS_OF_WRITING.SYNONYMS_ANTONYMS",
@@ -2742,7 +3470,11 @@
   "help": "The answer must be a different word.",
   "feedback": "An antonym is a different word with the opposite meaning, not the same word again.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_SPELL_RHYME": {
   "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
@@ -2757,7 +3489,11 @@
   "help": "Rhyme is sound, not spelling. Say the words aloud.",
   "feedback": "Rhyming words sound alike at the end. Cough and rough end with the same letters but do not rhyme.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_REPEAT_RHYME": {
   "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
@@ -2772,7 +3508,11 @@
   "help": "Repeated lines are the same words again, not just similar sounds.",
   "feedback": "A repeated line is the same line again. Rhyme is a similar sound at the ends.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES.M_POEM_FIRST_WORD": {
   "skill": "ENGL.G6.READIN.T12_INTENSIVE_READING.POEM_FEATURES",
@@ -2787,7 +3527,11 @@
   "help": "Rhymes are usually at the end of lines.",
   "feedback": "Rhyming words are usually the last words of the lines.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_SAME_SIGN": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2802,7 +3546,11 @@
   "help": "A positive statement takes a negative tag.",
   "feedback": "The tag has the opposite sign: a positive statement takes a negative tag.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_ALWAYS_ISNTIT": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2817,7 +3565,11 @@
   "help": "Use the helper verb of the statement and a pronoun.",
   "feedback": "Isn't it is not for every sentence. Use the helper verb in the statement: can, can't you.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_DO_FORM": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2832,7 +3584,11 @@
   "help": "No helper verb? Bring in do, does or did.",
   "feedback": "When the sentence has only a plain verb, the tag uses do, does or did.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_AM": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2847,7 +3603,11 @@
   "help": "After I am, the tag is aren't I.",
   "feedback": "After I am the tag is aren't I. Amn't I is not used.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NO_PRONOUN": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2862,7 +3622,11 @@
   "help": "The tag always has a pronoun: he, she, it, they.",
   "feedback": "A question tag uses a pronoun (they), not the noun again.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE.M_TAGS_NEG_NEG": {
   "skill": "ENGL.G6.LANGUA.T12_QUESTION_TAGS.QUESTION_TAGS_USE",
@@ -2877,7 +3641,11 @@
   "help": "A negative statement takes a positive tag.",
   "feedback": "When the statement says not, the tag is positive: You do not like beans, do you?",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_THIRD_PERSON": {
   "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
@@ -2892,7 +3660,11 @@
   "help": "A journal is your own record, so you write I.",
   "feedback": "A journal is written by you about your own day, so it uses I and my.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_NO_DATE": {
   "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
@@ -2907,7 +3679,11 @@
   "help": "Each entry is for one day, so the date comes first.",
   "feedback": "A journal entry begins with the date, because the entry belongs to that day.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_LETTER_FORM": {
   "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
@@ -2922,7 +3698,11 @@
   "help": "A journal is not sent to anyone, so it has no closing.",
   "feedback": "A journal is private and is not sent, so it has no greeting and no Yours sincerely.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL.M_JRN_FACTS_ONLY": {
   "skill": "ENGL.G6.WRITIN.T12_FUNCTIONAL_WRITING.JOURNAL",
@@ -2937,7 +3717,11 @@
   "help": "A journal is personal: it says how you felt.",
   "feedback": "A journal says what happened and also how you felt about it.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_PROFIT_LOSS": {
   "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
@@ -2952,7 +3736,11 @@
   "help": "Profit: you get back more. Loss: you get back less.",
   "feedback": "Profit is the extra money you gain. Loss is money you lose when you sell for less than you paid.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_IMPORT_EXPORT": {
   "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
@@ -2967,7 +3755,11 @@
   "help": "Export: out of the country. Import: into the country.",
   "feedback": "Exports leave the country. Imports come into the country.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS.M_MON_RETAIL_WHOLESALE": {
   "skill": "ENGL.G6.LISTEN.T13_PRONUNCIATION_AND_IN.MONEY_TRADE_WORDS",
@@ -2982,7 +3774,11 @@
   "help": "Retailer: sells to the public in small amounts. Wholesaler: sells large amounts to shops.",
   "feedback": "A retailer sells small amounts to shoppers. A wholesaler sells large amounts to shops.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BETWEEN_AMONG": {
   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
@@ -2997,7 +3793,11 @@
   "help": "Between: two. Among: three or more.",
   "feedback": "Use between for two and among for more than two.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Between is widely used for three or more separate things. The among rule is a prescriptive teaching rule; ask the teacher whether it is marked."
+  }
  },
  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_SINCE_FOR": {
   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
@@ -3012,7 +3812,11 @@
   "help": "Since goes with a point in time; for goes with a length of time.",
   "feedback": "Use since with the time it began (since 2019) and for with how long (for five years).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DEPENDENT": {
   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
@@ -3027,7 +3831,11 @@
   "help": "Some words take one fixed preposition: interested in, afraid of, different from.",
   "feedback": "Learn the pair: interested IN, afraid OF, different FROM, good AT.",
   "source": "Kiswahili influence (to confirm by a Kenyan English teacher)",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_BY_WITH": {
   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
@@ -3042,7 +3850,11 @@
   "help": "By tells who did it. With tells what was used.",
   "feedback": "By names the doer (by Mama). With names the tool (with a knife).",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE.M_PREP_DURING_FOR": {
   "skill": "ENGL.G6.LANGUA.T13_WORD_CLASSES.PREPOSITIONS_USE",
@@ -3057,7 +3869,11 @@
   "help": "During goes with an event or a period (during the night). For goes with a number (for two hours).",
   "feedback": "During goes with a period such as the night or the holiday. For goes with an amount of time such as two hours.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_WRONG_PREFIX": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
@@ -3072,7 +3888,11 @@
   "help": "Each prefix goes with certain words. Say the word out loud: unhappy.",
   "feedback": "Each word takes its own prefix: unhappy, disagree, impossible, invisible. Learn the pairs.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_DOUBLE_LETTER": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
@@ -3087,7 +3907,11 @@
   "help": "Keep every letter of both parts: dis + appear = disappear; mis + spell = misspell.",
   "feedback": "Keep every letter of the prefix and the word: dis + appear = disappear, mis + spell = misspell.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_FULL": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
@@ -3102,7 +3926,11 @@
   "help": "The word full is not the suffix; the suffix has one l.",
   "feedback": "The suffix is -ful with one l: careful, helpful.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES.M_AFF_Y_TO_I": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.AFFIXES",
@@ -3117,7 +3945,11 @@
   "help": "When a word ends in consonant + y, change the y to i before the suffix.",
   "feedback": "When a word ends in a consonant and y, change y to i before adding -ness or -ment: happiness.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_IE_EI": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
@@ -3132,7 +3964,11 @@
   "help": "I before E except after C: receive, but believe.",
   "feedback": "I before e, except after c: believe, but receive.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_VOWEL": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
@@ -3147,7 +3983,11 @@
   "help": "Find the word hidden inside it: sep-A-rate, like a rat.",
   "feedback": "Spell the vowel from the word, not from the sound: separate has an a in the middle.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Treiman (1993): vowels are spelt by sound (seperate)."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SILENT": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
@@ -3162,7 +4002,11 @@
   "help": "Say the word slowly, with every letter: environ-ment, govern-ment.",
   "feedback": "Some letters are not said clearly. Say it slowly: govern-ment, environ-ment.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_DOUBLE": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
@@ -3177,7 +4021,11 @@
   "help": "One c, one s... n-e-c-e-ss-a-r-y: one collar, two sleeves.",
   "feedback": "Necessary has one c and two s. Tomorrow has one m and two r.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A usage or reading slip a Kenyan Grade 6 learner could plausibly make. No source and no homework count; a Kenyan English teacher should say whether it comes up in class."
+  }
  },
  "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES.M_SP_SOUND": {
   "skill": "ENGL.G6.WRITIN.T13_MECHANICS_OF_WRITING.SPELLING_RULES",
@@ -3192,6 +4040,10 @@
   "help": "Say the r in the middle: lib-r-ary.",
   "feedback": "The word is library, with an r after b, and February with an r after b too.",
   "source": "common learner error; to confirm by a Kenyan English teacher",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Treiman, R. (1993), Beginning to Spell, Oxford University Press: children spell the sounds they hear and lose letters."
+  }
  }
 }

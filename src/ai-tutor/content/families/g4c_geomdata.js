@@ -81,7 +81,7 @@ export const FAMILIES = [
   // ------------------------------------------------------------ IDENTIFY_FIGURES
   fam({ id: 'g4c.fig.id.object', cs: `${F}IDENTIFY_FIGURES`, form: 'direct', rung: 1,
     gen: () => {
-      const o = pick([['the top of a round plate', 'circle'], ['an egg drawn flat', 'oval'], ['a slice of bread cut square', 'square'], ['a door of a cupboard', 'rectangle'], ['a flag flown from a pole', 'triangle'], ['a road sign with three sides', 'triangle'], ['a wall tile with four equal sides', 'square'], ['a football pitch from above', 'rectangle']]), pe = person();
+      const o = pick([['the top of a round plate', 'circle'], ['an egg drawn flat', 'oval'], ['a slice of bread cut square', 'square'], ['a door of a cupboard', 'rectangle'], ['a triangular pennant on a bicycle', 'triangle'], ['a road sign with three sides', 'triangle'], ['a wall tile with four equal sides', 'square'], ['a football pitch from above', 'rectangle']]), pe = person();
       const names = ['circle', 'oval', 'square', 'rectangle', 'triangle'].filter(n => n !== o[1]);
       const options = mc(o[1], (o[1] === 'circle' ? ['oval', 'square', 'triangle'] : o[1] === 'oval' ? ['circle', 'square', 'triangle'] : shuffle(names).slice(0, 3)).map(n => [n, n === 'oval' || n === 'circle' ? 'A circle is the same width all the way round; an oval is longer one way.' : 'Count the sides and the corners to check.', 'M_SHAPE_OVAL_CIRCLE']));
       return { question: `${pe.name} looks at ${o[0]}. What shape is it?`, options, instruction: 'Choose the shape.',
@@ -122,7 +122,7 @@ export const FAMILIES = [
   fam({ id: 'g4c.data.mat.tally', cs: `${D}DATA_MATERIALS`, form: 'word', rung: 2,
     gen: () => {
       const g = randInt(1, 4), r = randInt(1, 4), n = g * 5 + r, pe = person(), th = pick(['learners wearing red', 'cars that pass the school gate', 'goals scored in a match', 'books borrowed']);
-      return { question: `${pe.name} records ${th} with tally marks. The tally shows ${g} bundles of five (four lines with a line across) and ${r} more single lines. How many are recorded?`, answer: n,
+      return { question: `${pe.name} records ${th} with tally marks. The tally shows ${g} ${g === 1 ? 'bundle' : 'bundles'} of five (four lines with a line across) and ${r} more single lines. How many are recorded?`, answer: n,
         wrong: [[g * 4 + r, 'A crossed bundle counts as five, not four.', 'M_DATA_TALLY_ONES'], [g + r, 'Each bundle is worth five, so multiply the bundles by 5.', 'M_DATA_TALLY_ONES'], [g * 5, 'The single lines are missing.', 'M_DATA_TALLY_ONES'], [g * 5 + r + 1, 'Count the single lines again.', 'M_DATA_TALLY_ONES']],
         hints: ['Each crossed bundle is 5.', 'Count in fives, then add the single lines.'], steps: [`${g} bundles of 5 is ${g * 5}.`, `${g * 5} + ${r} = ${n}.`], chk: (x) => x === g * 5 + r };
     } }),

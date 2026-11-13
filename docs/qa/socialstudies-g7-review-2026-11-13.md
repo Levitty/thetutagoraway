@@ -186,7 +186,7 @@ Read the question, the right answer and what a child is told after a wrong one. 
 Skill `SOCIAL.SELF_EXPLORATION.SE_ABILITIES`, outcome `a`, form direct, rung 1.
 
 **Q:** Which of these is an interest?
-Options: **Liking to draw cartoons in free time** | Drawing a perfect map in a test | Being the best artist in the class | Winning the school drawing contest
+Options: Drawing a perfect map in a test | Being the best artist in the class | Winning the school drawing contest | **Liking to draw cartoons in free time**
 - If a child answers "Drawing a perfect map in a test": An interest is what a person likes to do. A prize shows an ability. An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.
 - If a child answers "Being the best artist in the class": An interest is what a person likes to do. A prize shows an ability. An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.
 
@@ -194,152 +194,152 @@ Options: **Liking to draw cartoons in free time** | Drawing a perfect map in a t
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_ABILITIES`, outcome `a`, form word, rung 2.
 
-**Q:** Otieno likes animals and joins the school wildlife club to learn more. What is he doing?
-Options: Wasting time in a club | Copying what friends do | Hiding his talents from the other members | **Using an interest to grow his abilities**
-- If a child answers "Wasting time in a club": Clubs help interests grow into abilities. An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.
-- If a child answers "Copying what friends do": Clubs help interests grow into abilities. An interest is what you like. An ability is what you can do. You can grow an interest into an ability by practising.
+**Q:** Peter is quiet in class, but he explains maths to friends very well. What can we say?
+Options: He has no abilities to share | Only loud learners have abilities | **He has an ability to teach others** | He cannot help anyone at all
+- If a child answers "He has no abilities to share": Explaining is an ability. It does not need to be loud. Abilities are many: listening, counting, fixing things, leading and caring all count, not only prizes.
+- If a child answers "Only loud learners have abilities": Explaining is an ability. It does not need to be loud. Abilities are many: listening, counting, fixing things, leading and caring all count, not only prizes.
 
 ### socialstudies7.se.va.which
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_VALUES`, outcome `b`, form direct, rung 1.
 
-**Q:** Which is a value that helps a learner finish hard work?
-Options: A long pencil | A smart bag | A loud voice | **Perseverance**
-- If a child answers "A long pencil": Perseverance means keeping on when it is hard. A value is a belief about what is right, such as honesty. It is not something you own.
-- If a child answers "A smart bag": Perseverance means keeping on when it is hard. A value is a belief about what is right, such as honesty. It is not something you own.
+**Q:** Which is a personal value?
+Options: Money in a bank | A new phone | **Honesty** | A big house
+- If a child answers "Money in a bank": A value is a belief about what is right. Honesty is a value. A value is a belief about what is right, such as honesty. It is not something you own.
+- If a child answers "A new phone": A value is a belief about what is right. Honesty is a value. A value is a belief about what is right, such as honesty. It is not something you own.
 
 ### socialstudies7.se.va.story
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_VALUES`, outcome `b`, form word, rung 2.
 
-**Q:** Wanjiru tells the truth even though she will be scolded. Which value does she show?
-Options: Fame | Speed | **Honesty** | Wealth
-- If a child answers "Fame": Telling the truth shows honesty. A value is a belief about what is right, such as honesty. It is not something you own.
-- If a child answers "Speed": Telling the truth shows honesty. A value is a belief about what is right, such as honesty. It is not something you own.
+**Q:** Peers want Otieno to skip class. He refuses politely. What does this show?
+Options: A weak personality | A wish to be alone | A fear of friends | **A steady personality built on his values**
+- If a child answers "A weak personality": He keeps his values under pressure. A steady person keeps his values even when friends push him to do wrong.
+- If a child answers "A wish to be alone": He keeps his values under pressure. A steady person keeps his values even when friends push him to do wrong.
 
 ### socialstudies7.se.em.which
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_EMOTIONS`, outcome `c`, form direct, rung 1.
 
 **Q:** A learner is very sad because a relative died. What helps?
-Options: Keep it hidden and never talk about it | **Talk to a trusted adult or a counsellor** | Pretend that nothing has happened | Stay away from everyone for months
-- If a child answers "Keep it hidden and never talk about it": Sharing sad feelings with someone we trust helps us heal. Feeling angry is normal. What matters is what you do with it: calm down first, then speak.
+Options: **Talk to a trusted adult or a counsellor** | Stay away from everyone for months | Pretend that nothing has happened | Keep it hidden and never talk about it
+- If a child answers "Stay away from everyone for months": Sharing sad feelings with someone we trust helps us heal. Feeling angry is normal. What matters is what you do with it: calm down first, then speak.
 - If a child answers "Pretend that nothing has happened": Sharing sad feelings with someone we trust helps us heal. Feeling angry is normal. What matters is what you do with it: calm down first, then speak.
 
 ### socialstudies7.se.em.story
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_EMOTIONS`, outcome `c`, form word, rung 2.
 
-**Q:** Mutua feels angry with his sister. He writes how he feels in his book and later speaks to her. What did he do?
-Options: **Managed his anger in a healthy way** | Hid the anger for ever | Passed the anger to his sister | Lost control of his anger
-- If a child answers "Hid the anger for ever": Writing and then talking are healthy ways to manage anger. Hitting back makes things worse. Breathe, calm down and talk about it.
-- If a child answers "Passed the anger to his sister": Writing and then talking are healthy ways to manage anger. Hitting back makes things worse. Breathe, calm down and talk about it.
+**Q:** Brian's team lost the match and he is angry. His friends tease him. What should he do?
+Options: Push the boy who teased him | **Walk away, calm down and talk later** | Throw the ball at the wall | Shout loudly until the teasing stops
+- If a child answers "Push the boy who teased him": Walking away to calm down avoids a fight. Hitting back makes things worse. Breathe, calm down and talk about it.
+- If a child answers "Throw the ball at the wall": Walking away to calm down avoids a fight. Hitting back makes things worse. Breathe, calm down and talk about it.
 
 ### socialstudies7.eo.op.which
 
 Skill `SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY`, outcome `b`, form direct, rung 1.
 
-**Q:** Which is needed to start a small business?
-Options: A name on a sign without goods | A great deal of luck only | **A plan, some capital and a customer** | A loan with no plan to repay
-- If a child answers "A name on a sign without goods": Planning, money and customers all matter. Money helps, but a business begins with a need that people have and a plan to meet it.
-- If a child answers "A great deal of luck only": Planning, money and customers all matter. Money helps, but a business begins with a need that people have and a plan to meet it.
+**Q:** What does a social entrepreneur do?
+Options: Works only for the government | Gives away everything and earns nothing | Makes the most profit at any cost | **Solves a community problem through a business**
+- If a child answers "Works only for the government": A social entrepreneur earns by solving a community problem. A social entrepreneur earns by solving a community problem, such as turning litter into useful goods.
+- If a child answers "Gives away everything and earns nothing": A social entrepreneur earns by solving a community problem. A social entrepreneur earns by solving a community problem, such as turning litter into useful goods.
 
 ### socialstudies7.eo.op.story
 
 Skill `SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY`, outcome `a`, form word, rung 2.
 
-**Q:** A village has no clean water. A group sells safe water at low prices. Why is it social entrepreneurship?
-Options: It earns the most money it can | It does not need customers | **It meets a community need and earns money** | It is run only by the government
-- If a child answers "It earns the most money it can": A social enterprise meets a need and also earns. A social entrepreneur earns by solving a community problem, such as turning litter into useful goods.
-- If a child answers "It does not need customers": A social enterprise meets a need and also earns. A social entrepreneur earns by solving a community problem, such as turning litter into useful goods.
+**Q:** Kerubo loves cooking and is good at saving. Which opportunity suits her best?
+Options: Repairing cars without any training | **Selling snacks to learners at break** | Building houses on her own | Running a bank with no money
+- If a child answers "Repairing cars without any training": Cooking and saving suit a snack business. Money helps, but a business begins with a need that people have and a plan to meet it.
+- If a child answers "Building houses on her own": Cooking and saving suit a snack business. Money helps, but a business begins with a need that people have and a plan to meet it.
 
 ### socialstudies7.ho.tr.which
 
 Skill `PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL`, outcome `a`, form direct, rung 1.
 
-**Q:** In the Agikuyu story of origin, who were the first man and woman?
-Options: Ramogi and Nyar | **Gikuyu and Mumbi** | Enkai and Naiterukop | Adam and Eve
-- If a child answers "Ramogi and Nyar": The Agikuyu tell of Gikuyu and Mumbi. Adam and Eve are in the Bible. Each community has its own story of origin. They may share ideas but they are not the same.
-- If a child answers "Enkai and Naiterukop": The Agikuyu tell of Gikuyu and Mumbi. Adam and Eve are in the Bible. Each community has its own story of origin. They may share ideas but they are not the same.
+**Q:** In the Agikuyu story, who gave the land and the fig tree to the first couple?
+Options: **Ngai, the creator** | The chief of the clan | Allah, the creator | The elders of the village
+- If a child answers "The chief of the clan": Ngai, the Agikuyu creator, gave the land and the Mukuru wa Gathanga tree. Each community has its own story of origin. They may share ideas but they are not the same.
+- If a child answers "Allah, the creator": Ngai, the Agikuyu creator, gave the land and the Mukuru wa Gathanga tree. Each community has its own story of origin. They may share ideas but they are not the same.
 
 ### socialstudies7.ho.tr.why
 
 Skill `PEOPLE.HUMAN_ORIGIN.HO_TRADITIONAL`, outcome `a`, form word, rung 2.
 
 **Q:** The Maasai say Enkai, their creator, sent cattle down to them. What does this story show?
-Options: That all communities keep cattle as the Maasai do | **That cattle are very valued in Maasai life** | That cattle came from Europe | That the story is not important
-- If a child answers "That all communities keep cattle as the Maasai do": The story shows how important cattle are to the Maasai. A teacher or elder should confirm the details. Each community has its own story of origin. They may share ideas but they are not the same.
+Options: That cattle came from Europe | That all communities keep cattle as the Maasai do | **That cattle are very valued in Maasai life** | That the story is not important
 - If a child answers "That cattle came from Europe": The story shows how important cattle are to the Maasai. A teacher or elder should confirm the details. Each community has its own story of origin. They may share ideas but they are not the same.
+- If a child answers "That all communities keep cattle as the Maasai do": The story shows how important cattle are to the Maasai. A teacher or elder should confirm the details. Each community has its own story of origin. They may share ideas but they are not the same.
 
 ### socialstudies7.ho.re.which
 
 Skill `PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS`, outcome `b`, form direct, rung 1.
 
-**Q:** In the Christian story, who are the first man and woman?
-Options: Gikuyu and Mumbi | Noah and Sarah | **Adam and Eve** | Moses and Mary
-- If a child answers "Gikuyu and Mumbi": The Bible names Adam and Eve, made by God. Both Christianity and Islam tell of Adam, the first man, made by God (Allah).
-- If a child answers "Noah and Sarah": The Bible names Adam and Eve, made by God. Both Christianity and Islam tell of Adam, the first man, made by God (Allah).
+**Q:** Who made people according to the Islamic story?
+Options: Ngai | The Sun | **Allah** | Enkai
+- If a child answers "Ngai": In Islam, Allah made Adam, the first man. Many stories share a creator, a first man and woman and a purpose for people.
+- If a child answers "The Sun": In Islam, Allah made Adam, the first man. Many stories share a creator, a first man and woman and a purpose for people.
 
 ### socialstudies7.ho.re.common
 
 Skill `PEOPLE.HUMAN_ORIGIN.HO_RELIGIOUS`, outcome `c`, form word, rung 2.
 
-**Q:** Which is a difference between the Agikuyu story and the Christian story?
-Options: They disagree that people have a creator | They are about different planets | **They name different first couples** | They name different creators in all cases
-- If a child answers "They disagree that people have a creator": Gikuyu and Mumbi are not Adam and Eve, but both have a creator. Both Christianity and Islam tell of Adam, the first man, made by God (Allah).
-- If a child answers "They are about different planets": Gikuyu and Mumbi are not Adam and Eve, but both have a creator. Both Christianity and Islam tell of Adam, the first man, made by God (Allah).
+**Q:** Why should we learn about different stories of human origin?
+Options: **To respect what different people believe** | To avoid meeting other people | To prove that everyone must follow just one | To decide whose story is silly
+- If a child answers "To avoid meeting other people": Learning builds respect for others. Many stories share a creator, a first man and woman and a purpose for people.
+- If a child answers "To prove that everyone must follow just one": Learning builds respect for others. Many stories share a creator, a first man and woman and a purpose for people.
 
 ### socialstudies7.ec.fa.which
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_FACTORS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which factor helped Great Zimbabwe grow?
-Options: **Cattle, gold and trade with the coast** | The yearly floods of the great Nile river | The coal mines of Europe | The Suez Canal
-- If a child answers "The yearly floods of the great Nile river": Great Zimbabwe grew from cattle, gold and trade. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
-- If a child answers "The coal mines of Europe": Great Zimbabwe grew from cattle, gold and trade. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
+**Q:** Which factor helped ancient Egypt grow?
+Options: Copper from the Congo only | Cattle and gold at Great Zimbabwe | Snow from the mountains | **The fertile land along the River Nile**
+- If a child answers "Copper from the Congo only": Egypt grew on the fertile Nile valley. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
+- If a child answers "Cattle and gold at Great Zimbabwe": Egypt grew on the fertile Nile valley. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
 
 ### socialstudies7.ec.fa.story
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** Great Zimbabwe lay between the Limpopo and Zambezi. How did this help trade?
-Options: It stopped all travel on the land | It cut the whole kingdom off from everyone else | It made farming impossible | **Gold and goods could move to the coast by routes**
-- If a child answers "It stopped all travel on the land": Routes to the coast linked Great Zimbabwe to world trade. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
-- If a child answers "It cut the whole kingdom off from everyone else": Routes to the coast linked Great Zimbabwe to world trade. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
+**Q:** Why did farmers in Egypt like the yearly flood?
+Options: **It left rich silt that made soil fertile** | It made the desert wider | It brought gold into the fields | It carried away their crops each year
+- If a child answers "It made the desert wider": Silt from the flood fed the crops. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
+- If a child answers "It brought gold into the fields": Silt from the flood fed the crops. The Nile helped Egypt. Great Zimbabwe grew from cattle, gold and trade with the coast.
 
 ### socialstudies7.ec.lo.which
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_LOCATE`, outcome `b`, form table, rung 1.
 
-**Q:** Which sea lies to the north of ancient Egypt?
-Options: The Atlantic Ocean | The Indian Ocean | The Arabian Sea | **The Mediterranean Sea**
-- If a child answers "The Atlantic Ocean": Egypt lies on the Mediterranean in the north. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
-- If a child answers "The Indian Ocean": Egypt lies on the Mediterranean in the north. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
+**Q:** Look at the table. Where was Great Zimbabwe?
+Options: **Southern Africa** | West-central Africa | North-east Africa | Eastern Africa
+- If a child answers "West-central Africa": Great Zimbabwe was in southern Africa. Great Zimbabwe was in southern Africa. The Kingdom of Kongo was near the mouth of the Congo River.
+- If a child answers "North-east Africa": Great Zimbabwe was in southern Africa. Great Zimbabwe was in southern Africa. The Kingdom of Kongo was near the mouth of the Congo River.
 
 ### socialstudies7.ec.lo.story
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_LOCATE`, outcome `b`, form word, rung 2.
 
-**Q:** Which kingdom lay near the Atlantic coast of west-central Africa?
-Options: **The Kingdom of Kongo** | Ancient Egypt | Great Zimbabwe | The Axum kingdom
-- If a child answers "Ancient Egypt": Kongo was near the mouth of the Congo, on the Atlantic coast. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
-- If a child answers "Great Zimbabwe": Kongo was near the mouth of the Congo, on the Atlantic coast. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
+**Q:** The Nile flows through which kingdom?
+Options: **Ancient Egypt** | Great Zimbabwe | None of them | The Kingdom of Kongo
+- If a child answers "Great Zimbabwe": Ancient Egypt was built on the Nile. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
+- If a child answers "None of them": Ancient Egypt was built on the Nile. Egypt lies in the north-east of Africa, on the River Nile near the Mediterranean.
 
 ### socialstudies7.ec.co.which
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_CONTRIB`, outcome `c`, form direct, rung 1.
 
-**Q:** Which kingdom is famous for stone walls built without mortar?
-Options: **Great Zimbabwe** | The Kingdom of Kongo | The Kingdom of Buganda | Ancient Egypt
-- If a child answers "The Kingdom of Kongo": Great Zimbabwe's walls were built from dry stone. Egypt gave hieroglyphs and papyrus. Great Zimbabwe is famous for its stone building.
-- If a child answers "The Kingdom of Buganda": Great Zimbabwe's walls were built from dry stone. Egypt gave hieroglyphs and papyrus. Great Zimbabwe is famous for its stone building.
+**Q:** Which idea from ancient Egypt do we still use?
+Options: Coins made of cowrie shells | Electric lamps | **A calendar of 365 days** | Printing with machines
+- If a child answers "Coins made of cowrie shells": The Egyptians made a calendar of 365 days. Ideas from Egypt, Zimbabwe and Kongo, such as writing, a calendar and metal work, are still used today.
+- If a child answers "Electric lamps": The Egyptians made a calendar of 365 days. Ideas from Egypt, Zimbabwe and Kongo, such as writing, a calendar and metal work, are still used today.
 
 ### socialstudies7.ec.co.story
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_CONTRIB`, outcome `c`, form word, rung 2.
 
 **Q:** Why do historians value Great Zimbabwe today?
-Options: It shows only trade in Europe | It has no value any more | **It shows African skill in stone building** | It proves that Africans built nothing
+Options: It shows only trade in Europe | It has no value any more | It proves that Africans built nothing | **It shows African skill in stone building**
 - If a child answers "It shows only trade in Europe": The ruins show great building skill. Ideas from Egypt, Zimbabwe and Kongo, such as writing, a calendar and metal work, are still used today.
 - If a child answers "It has no value any more": The ruins show great building skill. Ideas from Egypt, Zimbabwe and Kongo, such as writing, a calendar and metal work, are still used today.
 
@@ -348,286 +348,286 @@ Options: It shows only trade in Europe | It has no value any more | **It shows A
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS`, outcome `a`, form direct, rung 1.
 
 **Q:** A man works for a lender without pay to clear a debt and cannot leave. What is this?
-Options: A school holiday task | **Debt bondage** | A paid apprenticeship | A normal job
+Options: A school holiday task | A normal job | **Debt bondage** | A paid apprenticeship
 - If a child answers "A school holiday task": Debt bondage is forced work to pay off a debt. Servitude means a person is forced and cannot leave. Hard work that a person chooses is not servitude.
-- If a child answers "A paid apprenticeship": Debt bondage is forced work to pay off a debt. Servitude means a person is forced and cannot leave. Hard work that a person chooses is not servitude.
+- If a child answers "A normal job": Debt bondage is forced work to pay off a debt. Servitude means a person is forced and cannot leave. Hard work that a person chooses is not servitude.
 
 ### socialstudies7.sl.fo.story
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS`, outcome `a`, form word, rung 2.
 
-**Q:** A girl is taken to a town, kept in a house and not allowed to leave or go to school. What is this?
-Options: A usual job for children | A paid internship | A school programme | **Forced domestic servitude**
-- If a child answers "A usual job for children": This is modern slavery. The child has lost her freedom. Slavery in new forms still exists, such as trafficking and forced labour. Each takes away freedom and dignity.
-- If a child answers "A paid internship": This is modern slavery. The child has lost her freedom. Slavery in new forms still exists, such as trafficking and forced labour. Each takes away freedom and dignity.
+**Q:** People are tricked with a promise of jobs abroad and then forced to work. What is this?
+Options: **Human trafficking** | A normal move for work | A scholarship | A paid holiday
+- If a child answers "A normal move for work": Trafficking is a modern form of slavery. Slavery in new forms still exists, such as trafficking and forced labour. Each takes away freedom and dignity.
+- If a child answers "A scholarship": Trafficking is a modern form of slavery. Slavery in new forms still exists, such as trafficking and forced labour. Each takes away freedom and dignity.
 
 ### socialstudies7.sl.in.which
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN`, outcome `b`, form direct, rung 1.
 
-**Q:** Who took part in the Indian Ocean slave trade?
-Options: **Arab and Swahili traders and some leaders** | Only traders who sailed from Europe in ships | Nobody at all | Only the rulers of Egypt
-- If a child answers "Only traders who sailed from Europe in ships": The trade involved traders from Arabia, the coast and inland leaders. The Indian Ocean trade involved traders from Arabia, the coast and inland leaders. It was separate from the Atlantic trade.
-- If a child answers "Nobody at all": The trade involved traders from Arabia, the coast and inland leaders. The Indian Ocean trade involved traders from Arabia, the coast and inland leaders. It was separate from the Atlantic trade.
+**Q:** Which crop grown near Zanzibar needed many workers?
+Options: Tea | **Cloves** | Pyrethrum | Wheat
+- If a child answers "Tea": Clove plantations on Zanzibar needed many workers. Most captives were taken to work on plantations, in homes, in ships and as soldiers.
+- If a child answers "Pyrethrum": Clove plantations on Zanzibar needed many workers. Most captives were taken to work on plantations, in homes, in ships and as soldiers.
 
 ### socialstudies7.sl.in.story
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN`, outcome `b`, form word, rung 2.
 
-**Q:** Why did Zanzibar become a centre of the trade?
-Options: It had no ships at all | **It was a busy port with clove plantations** | It was far away from every trade route | It was cut off by high mountains
-- If a child answers "It had no ships at all": Its port and plantations made it a centre. Most captives were taken to work on plantations, in homes, in ships and as soldiers.
-- If a child answers "It was far away from every trade route": Its port and plantations made it a centre. Most captives were taken to work on plantations, in homes, in ships and as soldiers.
+**Q:** A learner says the Indian Ocean slave trade was run only by Europeans. What is the correct reply?
+Options: The learner is correct | Nobody took part | Only people from Africa took part in it | **Traders from Arabia and the coast took part**
+- If a child answers "The learner is correct": The Indian Ocean trade was largely run from Arabia and the Swahili coast. The Indian Ocean trade involved traders from Arabia, the coast and inland leaders. It was separate from the Atlantic trade.
+- If a child answers "Nobody took part": The Indian Ocean trade was largely run from Arabia and the Swahili coast. The Indian Ocean trade involved traders from Arabia, the coast and inland leaders. It was separate from the Atlantic trade.
 
 ### socialstudies7.sl.ex.table
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT`, outcome `c`, form table, rung 1.
 
 **Q:** Which town on the Kenya coast was part of the trade?
-Options: Kisumu | Nakuru | Eldoret | **Mombasa**
+Options: Kisumu | Eldoret | Nakuru | **Mombasa**
 - If a child answers "Kisumu": Mombasa was a coastal town linked to the trade. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
-- If a child answers "Nakuru": Mombasa was a coastal town linked to the trade. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
+- If a child answers "Eldoret": Mombasa was a coastal town linked to the trade. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
 
 ### socialstudies7.sl.ex.story
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_EXTENT`, outcome `c`, form word, rung 2.
 
-**Q:** Which island was a centre of the Indian Ocean trade?
-Options: Goree | **Zanzibar** | Bioko | Madeira
-- If a child answers "Goree": Zanzibar was the great centre. Goree is on the west coast. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
-- If a child answers "Bioko": Zanzibar was the great centre. Goree is on the west coast. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
+**Q:** Which region today was part of the Indian Ocean trade?
+Options: **The Swahili coast of East Africa** | The coast of Senegal | The Atlantic coast of Ghana | The Atlas Mountains of the north
+- If a child answers "The coast of Senegal": The Swahili coast was a main region. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
+- If a child answers "The Atlantic coast of Ghana": The Swahili coast was a main region. The Indian Ocean trade centred on the east coast, with towns such as Zanzibar, Kilwa and Mombasa.
 
 ### socialstudies7.mt.co.which
 
 Skill `PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE`, outcome `a`, form direct, rung 1.
 
-**Q:** Why is money easier to use than barter?
-Options: It goes bad quickly | It is much heavier than all goods | **It is a common measure that all accept** | It cannot be divided
-- If a child answers "It goes bad quickly": Money is accepted by all and is easy to divide. Barter needs both people to want what the other has. That is hard, which is why money was needed.
-- If a child answers "It is much heavier than all goods": Money is accepted by all and is easy to divide. Barter needs both people to want what the other has. That is hard, which is why money was needed.
+**Q:** What is a problem of barter trade?
+Options: Prices were always the same | **Both people must want what the other has** | Goods never went bad | Nothing, it worked perfectly
+- If a child answers "Prices were always the same": Both people must want the other's goods, which is hard. Barter needs both people to want what the other has. That is hard, which is why money was needed.
+- If a child answers "Goods never went bad": Both people must want the other's goods, which is hard. Barter needs both people to want what the other has. That is hard, which is why money was needed.
 
 ### socialstudies7.mt.co.story
 
 Skill `PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE`, outcome `a`, form word, rung 2.
 
-**Q:** A shopper pays 50 shillings for bread and gets change. Is this barter?
-Options: Yes, because goods are given | Yes, because she got change | Yes, because there is a shop | **No, money is used**
-- If a child answers "Yes, because goods are given": Barter uses no money. Barter is swapping goods for goods with no money.
-- If a child answers "Yes, because she got change": Barter uses no money. Barter is swapping goods for goods with no money.
+**Q:** How does money solve the problems of barter?
+Options: It makes goods rot | It makes people swap more goods each day | **It gives a common value and is easy to carry** | It makes goods heavier
+- If a child answers "It makes goods rot": Money measures value and is easy to carry and divide. Barter needs both people to want what the other has. That is hard, which is why money was needed.
+- If a child answers "It makes people swap more goods each day": Money measures value and is easy to carry and divide. Barter needs both people to want what the other has. That is hard, which is why money was needed.
 
 ### socialstudies7.mt.mo.which
 
 Skill `PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY`, outcome `b`, form direct, rung 1.
 
 **Q:** Which money did colonial rule bring to East Africa?
-Options: Cattle and goats only | Iron hoes and salt only | **Rupees and later East African shillings** | Cowrie shells and beads used for trade only
+Options: **Rupees and later East African shillings** | Cattle and goats only | Cowrie shells and beads used for trade only | Iron hoes and salt only
 - If a child answers "Cattle and goats only": Rupees and later East African shillings were brought by colonial rule. Cowrie shells, beads, salt and iron tools were used long before coins and notes.
-- If a child answers "Iron hoes and salt only": Rupees and later East African shillings were brought by colonial rule. Cowrie shells, beads, salt and iron tools were used long before coins and notes.
+- If a child answers "Cowrie shells and beads used for trade only": Rupees and later East African shillings were brought by colonial rule. Cowrie shells, beads, salt and iron tools were used long before coins and notes.
 
 ### socialstudies7.mt.mo.story
 
 Skill `PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_MONEY`, outcome `c`, form word, rung 2.
 
-**Q:** Which tells us that money is not always good?
-Options: Banks closed | Everyone in the country had the same wealth | Nobody used money | **Some people became rich while others became poor**
-- If a child answers "Banks closed": Money brought inequality. Money made trade easy, but it also brought debt and a gap between rich and poor.
-- If a child answers "Everyone in the country had the same wealth": Money brought inequality. Money made trade easy, but it also brought debt and a gap between rich and poor.
+**Q:** A farmer takes a loan to buy seed and cannot repay it. Which effect of money is this?
+Options: **Debt** | Wages | Savings | Profit
+- If a child answers "Wages": Money made borrowing possible, and debt can be a problem. Money made trade easy, but it also brought debt and a gap between rich and poor.
+- If a child answers "Savings": Money made borrowing possible, and debt can be a problem. Money made trade easy, but it also brought debt and a gap between rich and poor.
 
 ### socialstudies7.dv.fa.which
 
 Skill `PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which difference can a person not choose?
-Options: The clothes one wears | The friends one makes | **Age** | The games one plays
-- If a child answers "The clothes one wears": A person cannot choose their age. Differences enrich our society. Every person deserves respect.
-- If a child answers "The friends one makes": A person cannot choose their age. Differences enrich our society. Every person deserves respect.
+**Q:** Why is diversity good for a society?
+Options: It ends all quarrels | It makes everyone think the same | **It brings many ideas and skills together** | It makes some groups of people better
+- If a child answers "It ends all quarrels": Different people bring different skills. Differences enrich our society. Every person deserves respect.
+- If a child answers "It makes everyone think the same": Different people bring different skills. Differences enrich our society. Every person deserves respect.
 
 ### socialstudies7.dv.fa.story
 
 Skill `PEOPLE.DIVERSITY_AND_INTERPERSO.DV_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** A boy says people who talk differently are lower than him. What is the best reply?
-Options: You are right | Language shows worth | Only some deserve respect | **Everyone deserves respect**
-- If a child answers "You are right": We respect all people. Differences enrich our society. Every person deserves respect.
-- If a child answers "Language shows worth": We respect all people. Differences enrich our society. Every person deserves respect.
+**Q:** Two girls from the same community differ in religion and ability. What does this show?
+Options: Diversity is only between communities | They cannot be friends | One of them is wrong | **Diversity exists within one community**
+- If a child answers "Diversity is only between communities": People in one community can differ in many ways. People differ in many ways: age, gender, religion, language and ability, as well as ethnic group.
+- If a child answers "They cannot be friends": People in one community can differ in many ways. People differ in many ways: age, gender, religion, language and ability, as well as ethnic group.
 
 ### socialstudies7.dv.sk.which
 
 Skill `PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS`, outcome `b`, form direct, rung 1.
 
-**Q:** What does it mean to be assertive?
-Options: **To say what you need clearly and respectfully** | To always agree with others | To stay silent | To be loud and rude
-- If a child answers "To always agree with others": Assertive means clear and respectful. Assertive means saying what you think or need clearly and respectfully, without hurting others.
-- If a child answers "To stay silent": Assertive means clear and respectful. Assertive means saying what you think or need clearly and respectfully, without hurting others.
+**Q:** Which is an undesirable personality attribute?
+Options: Kindness | Humility | Respect | **Arrogance**
+- If a child answers "Kindness": Arrogance harms relationships. Assertive means saying what you think or need clearly and respectfully, without hurting others.
+- If a child answers "Humility": Arrogance harms relationships. Assertive means saying what you think or need clearly and respectfully, without hurting others.
 
 ### socialstudies7.dv.sk.story
 
 Skill `PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS`, outcome `c`, form word, rung 2.
 
-**Q:** Wafula's friends want him to skip class. He says no calmly and walks away. Which skill is this?
-Options: **Assertiveness** | Fear | Rudeness | Gossip
-- If a child answers "Fear": He said no clearly and respectfully. Assertive means saying what you think or need clearly and respectfully, without hurting others.
-- If a child answers "Rudeness": He said no clearly and respectfully. Assertive means saying what you think or need clearly and respectfully, without hurting others.
+**Q:** Nyambura sits with a crying classmate and listens. Which skill is this?
+Options: **Empathy** | Pity from far away | Ignoring | Gossip
+- If a child answers "Pity from far away": She tries to understand and comfort. Empathy is trying to understand how another person feels and responding kindly.
+- If a child answers "Ignoring": She tries to understand and comfort. Empathy is trying to understand how another person feels and responding kindly.
 
 ### socialstudies7.pe.qu.which
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is a quality of a peaceful person?
-Options: Anger without end | **Forgiveness** | Boasting | Revenge
-- If a child answers "Anger without end": A peaceful person forgives. Revenge keeps the quarrel going. A peaceful person speaks calmly and forgives.
-- If a child answers "Boasting": A peaceful person forgives. Revenge keeps the quarrel going. A peaceful person speaks calmly and forgives.
+**Q:** Which does a peaceful person avoid?
+Options: **Spreading rumours and insults** | Sharing food with other people | Telling the truth | Helping friends
+- If a child answers "Sharing food with other people": Rumours and insults harm peace. A peaceful person is strong. It takes courage to forgive and to talk instead of fight.
+- If a child answers "Telling the truth": Rumours and insults harm peace. A peaceful person is strong. It takes courage to forgive and to talk instead of fight.
 
 ### socialstudies7.pe.qu.story
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_QUALITIES`, outcome `a`, form word, rung 2.
 
-**Q:** A friend says only weak people forgive. What is the best reply?
-Options: **It takes courage to forgive** | Only children forgive | Forgiving is silly and foolish | You are right
-- If a child answers "Only children forgive": Forgiveness is strength. A peaceful person is strong. It takes courage to forgive and to talk instead of fight.
-- If a child answers "Forgiving is silly and foolish": Forgiveness is strength. A peaceful person is strong. It takes courage to forgive and to talk instead of fight.
+**Q:** Two learners quarrel. Mercy listens to both and helps them talk. Which quality is this?
+Options: Boasting | Revenge | **Fairness and patience** | Gossip
+- If a child answers "Boasting": She listens and treats both fairly. Revenge keeps the quarrel going. A peaceful person speaks calmly and forgives.
+- If a child answers "Revenge": She listens and treats both fairly. Revenge keeps the quarrel going. A peaceful person speaks calmly and forgives.
 
 ### socialstudies7.pe.fa.which
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS`, outcome `b`, form direct, rung 1.
 
-**Q:** Who helps keep peace in a community?
-Options: Only the people who carry weapons | **Elders, peace committees and leaders** | Only strangers | Nobody at all
-- If a child answers "Only the people who carry weapons": Elders and peace committees help settle disputes. Weapons make fear. Dialogue, justice and the law build peace.
-- If a child answers "Only strangers": Elders and peace committees help settle disputes. Weapons make fear. Dialogue, justice and the law build peace.
+**Q:** Which makes a community more peaceful?
+Options: Guarding every house with weapons | Hiding from neighbours | Buying more weapons | **Talking and keeping the law**
+- If a child answers "Guarding every house with weapons": Dialogue and law build peace. Weapons make fear. Dialogue, justice and the law build peace.
+- If a child answers "Hiding from neighbours": Dialogue and law build peace. Weapons make fear. Dialogue, justice and the law build peace.
 
 ### socialstudies7.pe.fa.story
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_FACTORS`, outcome `b`, form word, rung 2.
 
-**Q:** Two villages quarrel over a river. Which helps most to keep peace?
-Options: Stop speaking to each other | Let the stronger village take it all | **Agree on fair turns to use the water** | Block the river completely
-- If a child answers "Stop speaking to each other": Fair sharing prevents conflict. When resources are shared fairly, there is less to quarrel about, and peace lasts.
-- If a child answers "Let the stronger village take it all": Fair sharing prevents conflict. When resources are shared fairly, there is less to quarrel about, and peace lasts.
+**Q:** A town has a peace committee. What is its role?
+Options: **To help settle disputes before they grow** | To punish without hearing | To store weapons for the whole town | To avoid talking to people
+- If a child answers "To punish without hearing": Peace committees help settle disputes. Weapons make fear. Dialogue, justice and the law build peace.
+- If a child answers "To store weapons for the whole town": Peace committees help settle disputes. Weapons make fear. Dialogue, justice and the law build peace.
 
 ### socialstudies7.pe.re.which
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE`, outcome `c`, form direct, rung 1.
 
-**Q:** What does a mediator do?
-Options: Punishes both sides | Takes the side of the person who asked | Decides alone with no talk | **Helps both sides agree without taking a side**
-- If a child answers "Punishes both sides": A mediator is neutral. A mediator is neutral. He helps both sides find an agreement.
-- If a child answers "Takes the side of the person who asked": A mediator is neutral. A mediator is neutral. He helps both sides find an agreement.
+**Q:** Which comes after listening to each side?
+Options: **Naming the problem** | Shouting at both sides | Choosing a winner at once | Walking away
+- If a child answers "Shouting at both sides": Next, name the problem. First stay calm and listen to each side. Solutions come after.
+- If a child answers "Choosing a winner at once": Next, name the problem. First stay calm and listen to each side. Solutions come after.
 
 ### socialstudies7.pe.re.story
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE`, outcome `c`, form word, rung 2.
 
-**Q:** Two learners quarrel over a pen. The teacher listens to both, then asks for ideas. Which method is this?
-Options: Voting | Punishment at once | **Mediation** | Ignoring the matter
-- If a child answers "Voting": The teacher helps both sides without taking a side. A mediator is neutral. He helps both sides find an agreement.
-- If a child answers "Punishment at once": The teacher helps both sides without taking a side. A mediator is neutral. He helps both sides find an agreement.
+**Q:** Elders hear both sides and give a ruling that both accept. Which method is this?
+Options: Silence | **Arbitration** | Revenge | Violence
+- If a child answers "Silence": Arbitration is when a third party decides and both accept. A mediator is neutral. He helps both sides find an agreement.
+- If a child answers "Revenge": Arbitration is when a third party decides and both accept. A mediator is neutral. He helps both sides find an agreement.
 
 ### socialstudies7.cs.me.which
 
 Skill `COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING`, outcome `a`, form direct, rung 1.
 
-**Q:** How does CSL help the community?
-Options: It makes work for teachers only | **It solves a real problem** | It closes the school | It gives nothing to the community
-- If a child answers "It makes work for teachers only": The community gains from the project. A need is a gap that the community must fill, such as clean water. It is not a wish for a new game.
-- If a child answers "It closes the school": The community gains from the project. A need is a gap that the community must fill, such as clean water. It is not a wish for a new game.
+**Q:** What is community service learning?
+Options: Free work as a punishment | A holiday at school | **Learning by serving a real community need** | A test in class
+- If a child answers "Free work as a punishment": CSL means learning through serving. CSL means learning through serving a community need. It is chosen, not a punishment.
+- If a child answers "A holiday at school": CSL means learning through serving. CSL means learning through serving a community need. It is chosen, not a punishment.
 
 ### socialstudies7.cs.me.story
 
 Skill `COMMUN.COMMUNITY_SERVICE_LEARNI.CS_MEANING`, outcome `b`, form word, rung 2.
 
-**Q:** Which project meets a real need?
-Options: Planning a long picnic | Painting the football for fun | Buying toys for the class | **Repairing the school water tank**
-- If a child answers "Planning a long picnic": The tank is a real need. A need is a gap that the community must fill, such as clean water. It is not a wish for a new game.
-- If a child answers "Painting the football for fun": The tank is a real need. A need is a gap that the community must fill, such as clean water. It is not a wish for a new game.
+**Q:** The class cleans the village market. What do learners gain?
+Options: Only free time after school | **Teamwork and responsibility** | Only money | Nothing at all
+- If a child answers "Only free time after school": CSL builds values. CSL means learning through serving a community need. It is chosen, not a punishment.
+- If a child answers "Only money": CSL builds values. CSL means learning through serving a community need. It is chosen, not a punishment.
 
 ### socialstudies7.cs.st.which
 
 Skill `COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS`, outcome `c`, form direct, rung 1.
 
-**Q:** What does a good plan name?
-Options: Only a date | **Tasks, people, time and resources** | Only the name of the group leader | Only the cost
-- If a child answers "Only a date": A good plan covers who, what, when and with what. First find the need. Then plan, act, and reflect.
-- If a child answers "Only the name of the group leader": A good plan covers who, what, when and with what. First find the need. Then plan, act, and reflect.
+**Q:** What comes first in a CSL project?
+Options: Writing the report | Choosing the prize | **Identifying the need** | Doing the activity
+- If a child answers "Writing the report": First find the need. First find the need. Then plan, act, and reflect.
+- If a child answers "Choosing the prize": First find the need. First find the need. Then plan, act, and reflect.
 
 ### socialstudies7.cs.st.story
 
 Skill `COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS`, outcome `c`, form word, rung 2.
 
-**Q:** The class has finished planting trees. What is the next step?
-Options: Forget the project | Start digging again | Sell the trees | **Report and reflect on it**
-- If a child answers "Forget the project": Report and reflect. Reporting and reflecting is the last step. It shows what worked and what to improve.
-- If a child answers "Start digging again": Report and reflect. Reporting and reflecting is the last step. It shows what worked and what to improve.
+**Q:** Which is the right order?
+Options: **Need, plan, act, report** | Report, act, plan, need | Act, need, plan, report | Plan, act, report, need
+- If a child answers "Report, act, plan, need": The right order is need, plan, act, report. First find the need. Then plan, act, and reflect.
+- If a child answers "Act, need, plan, report": The right order is need, plan, act, report. First find the need. Then plan, act, and reflect.
 
 ### socialstudies7.hi.so.which
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_SOURCES`, outcome `a`, form direct, rung 1.
 
 **Q:** A song that tells how a clan moved is which kind of source?
-Options: Written record | Photograph | **Oral tradition** | Archaeological
+Options: **Oral tradition** | Archaeological | Written record | Photograph
+- If a child answers "Archaeological": Songs and stories are oral sources. Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.
 - If a child answers "Written record": Songs and stories are oral sources. Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.
-- If a child answers "Photograph": Songs and stories are oral sources. Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.
 
 ### socialstudies7.hi.so.story
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_SOURCES`, outcome `a`, form word, rung 2.
 
-**Q:** Grandmother tells how the village was founded. Which source is she?
-Options: An archaeological source | A photograph | A written source | **An oral source**
-- If a child answers "An archaeological source": Spoken memories are oral sources. Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.
-- If a child answers "A photograph": Spoken memories are oral sources. Things dug from the ground, such as fossils and pots, are archaeological sources. Oral sources are spoken.
+**Q:** A museum has a photograph of a 1963 flag-raising. Which source is it?
+Options: **A visual record** | A genealogy | An oral story | A fossil
+- If a child answers "A genealogy": Photographs are visual records. History comes from many sources: oral stories, objects, buildings, writings and pictures.
+- If a child answers "An oral story": Photographs are visual records. History comes from many sources: oral stories, objects, buildings, writings and pictures.
 
 ### socialstudies7.hi.pr.which
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_PRIMARY`, outcome `b`, form direct, rung 1.
 
-**Q:** Which of these is a primary source?
-Options: A history book published last year | An encyclopaedia entry | A documentary made in 2020 | **A letter written by a chief in 1900**
-- If a child answers "A history book published last year": The chief wrote it at the time. The author was not there, so the book is secondary. A primary source was made at the time.
-- If a child answers "An encyclopaedia entry": The chief wrote it at the time. The author was not there, so the book is secondary. A primary source was made at the time.
+**Q:** A textbook written in 2024 about the 1884 Berlin Conference is which source?
+Options: Primary | **Secondary** | A fossil | An oral source
+- If a child answers "Primary": The author was not there, so it is secondary. The author was not there, so the book is secondary. A primary source was made at the time.
+- If a child answers "A fossil": The author was not there, so it is secondary. The author was not there, so the book is secondary. A primary source was made at the time.
 
 ### socialstudies7.hi.pr.story
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_PRIMARY`, outcome `b`, form word, rung 2.
 
 **Q:** Which is a primary source?
-Options: A textbook chapter on farming | **A tool used by an early farmer** | A modern poster about farming | A film about farmers
-- If a child answers "A textbook chapter on farming": The tool was made and used at the time. The author was not there, so the book is secondary. A primary source was made at the time.
+Options: A modern poster about farming | A film about farmers | **A tool used by an early farmer** | A textbook chapter on farming
 - If a child answers "A modern poster about farming": The tool was made and used at the time. The author was not there, so the book is secondary. A primary source was made at the time.
+- If a child answers "A film about farmers": The tool was made and used at the time. The author was not there, so the book is secondary. A primary source was made at the time.
 
 ### socialstudies7.hi.pe.which
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_PRESERVE`, outcome `c`, form direct, rung 1.
 
 **Q:** How are old objects best preserved?
-Options: Kept in wet places | Left out in the open | **In museums and archives** | Buried in a shamba
+Options: **In museums and archives** | Kept in wet places | Buried in a shamba | Left out in the open
 - If a child answers "Kept in wet places": Museums protect objects from damage. Museums and archives protect old things from damage, so that people can study them.
-- If a child answers "Left out in the open": Museums protect objects from damage. Museums and archives protect old things from damage, so that people can study them.
+- If a child answers "Buried in a shamba": Museums protect objects from damage. Museums and archives protect old things from damage, so that people can study them.
 
 ### socialstudies7.hi.pe.story
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_PRESERVE`, outcome `c`, form word, rung 2.
 
 **Q:** A learner records her grandfather telling a story on a phone. What is she doing?
-Options: Losing the story | Changing the story | **Preserving oral history** | Selling the story
-- If a child answers "Losing the story": Recording keeps oral history safe. Oral history is kept in songs, proverbs and stories, and now recorded on audio and video.
+Options: Selling the story | Changing the story | Losing the story | **Preserving oral history**
+- If a child answers "Selling the story": Recording keeps oral history safe. Oral history is kept in songs, proverbs and stories, and now recorded on audio and video.
 - If a child answers "Changing the story": Recording keeps oral history safe. Oral history is kept in songs, proverbs and stories, and now recorded on audio and video.
 
 ### socialstudies7.ea.wh.which
 
 Skill `NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE`, outcome `a`, form direct, rung 1.
 
-**Q:** What helped early farming begin in a place?
-Options: Constant drought | No water and very poor soil | **Fertile soil and reliable water** | Dense forest only
-- If a child answers "Constant drought": Plants need fertile soil and water. Fertile soil and water made early farming possible.
-- If a child answers "No water and very poor soil": Plants need fertile soil and water. Fertile soil and water made early farming possible.
+**Q:** Where did early farming begin in Africa?
+Options: Only the Sahara | Only the Nile Valley and the Sahara desert region | Only the Kalahari | **The Nile Valley, the Ethiopian highlands and West Africa**
+- If a child answers "Only the Sahara": Early farming began in several parts of Africa. Early farming also began in the Ethiopian highlands and in the West African savanna.
+- If a child answers "Only the Nile Valley and the Sahara desert region": Early farming began in several parts of Africa. Early farming also began in the Ethiopian highlands and in the West African savanna.
 
 ### socialstudies7.ea.wh.story
 
 Skill `NATURA.HISTORICAL_DEVELOPMENT_O.EA_WHERE`, outcome `b`, form word, rung 2.
 
 **Q:** Which is a result of taming wild animals?
-Options: **People had a steady supply of meat and milk** | People had to move to a new place every day | People stopped eating | Animals disappeared
+Options: People had to move to a new place every day | **People had a steady supply of meat and milk** | People stopped eating | Animals disappeared
 - If a child answers "People had to move to a new place every day": Domestic animals gave steady food. Fertile soil and water made early farming possible.
 - If a child answers "People stopped eating": Domestic animals gave steady food. Fertile soil and water made early farming possible.
 
@@ -635,405 +635,405 @@ Options: **People had a steady supply of meat and milk** | People had to move to
 
 Skill `NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE`, outcome `c`, form direct, rung 1.
 
-**Q:** Which idea grew from Nile Valley farming?
-Options: Printing | Paper money | **Writing and a calendar for record keeping** | Steam engines for pumping the Nile water
-- If a child answers "Printing": Records and calendars grew with farming. A surplus fed people who did not farm, so skills such as writing and building grew.
-- If a child answers "Paper money": Records and calendars grew with farming. A surplus fed people who did not farm, so skills such as writing and building grew.
+**Q:** What did the yearly Nile flood leave behind?
+Options: Only salt | Only damage to farms and to houses | Only stones | **Rich silt that made the soil fertile**
+- If a child answers "Only salt": The silt fed the crops. The flood left rich silt that made the fields very fertile.
+- If a child answers "Only damage to farms and to houses": The silt fed the crops. The flood left rich silt that made the fields very fertile.
 
 ### socialstudies7.ea.ni.story
 
 Skill `NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE`, outcome `c`, form word, rung 2.
 
-**Q:** Why did Egypt need scribes?
-Options: To grow wheat | To carry water | **To record harvests, taxes and the flood** | To dig the canals for the farmers
-- If a child answers "To grow wheat": Scribes kept records. A surplus fed people who did not farm, so skills such as writing and building grew.
-- If a child answers "To carry water": Scribes kept records. A surplus fed people who did not farm, so skills such as writing and building grew.
+**Q:** The Egyptians grew more food than they needed. What did this let them do?
+Options: **Support scribes, priests and builders** | End the government | Stop making tools for the farmers | Stop trading
+- If a child answers "End the government": A surplus supports specialists. A surplus fed people who did not farm, so skills such as writing and building grew.
+- If a child answers "Stop making tools for the farmers": A surplus supports specialists. A surplus fed people who did not farm, so skills such as writing and building grew.
 
 ### socialstudies7.mm.af.which
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_AFRICA`, outcome `a`, form direct, rung 1.
 
-**Q:** Which line crosses the middle of Africa?
-Options: The Date Line | The Tropic of Cancer only | The Arctic Circle | **The equator**
-- If a child answers "The Date Line": The equator crosses Africa near its middle. The equator runs through the middle of Africa, through Kenya, Uganda and Gabon.
-- If a child answers "The Tropic of Cancer only": The equator crosses Africa near its middle. The equator runs through the middle of Africa, through Kenya, Uganda and Gabon.
+**Q:** Which sea lies to the north of Africa?
+Options: **The Mediterranean Sea** | The Black Sea | The Caspian Sea | The Red Sea
+- If a child answers "The Black Sea": The Mediterranean lies to the north. Asia is the largest continent. Africa is the second largest.
+- If a child answers "The Caspian Sea": The Mediterranean lies to the north. Asia is the largest continent. Africa is the second largest.
 
 ### socialstudies7.mm.af.story
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_AFRICA`, outcome `a`, form word, rung 2.
 
 **Q:** A learner says Africa is the largest continent. What is the correct fact?
-Options: Africa is the smallest continent | Africa is the largest | Africa is third | **Asia is larger, so Africa is second**
-- If a child answers "Africa is the smallest continent": Asia is the largest. Asia is the largest continent. Africa is the second largest.
+Options: Africa is the largest | **Asia is larger, so Africa is second** | Africa is third | Africa is the smallest continent
 - If a child answers "Africa is the largest": Asia is the largest. Asia is the largest continent. Africa is the second largest.
+- If a child answers "Africa is third": Asia is the largest. Asia is the largest continent. Africa is the second largest.
 
 ### socialstudies7.mm.ll.table
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_LATLONG`, outcome `b`, form table, rung 1.
 
-**Q:** A town is at 5 degrees south. Which hemisphere is it in?
-Options: **The southern hemisphere** | The western hemisphere only | The eastern hemisphere only | The northern hemisphere
-- If a child answers "The western hemisphere only": South latitudes are in the southern hemisphere. South latitudes lie south of the equator, in the southern hemisphere.
-- If a child answers "The eastern hemisphere only": South latitudes are in the southern hemisphere. South latitudes lie south of the equator, in the southern hemisphere.
+**Q:** Look at the table. Which town is the farthest north?
+Options: **Cairo** | Lagos | Nairobi | Accra
+- If a child answers "Lagos": Cairo, at 30 degrees north, is the farthest north. South latitudes lie south of the equator, in the southern hemisphere.
+- If a child answers "Nairobi": Cairo, at 30 degrees north, is the farthest north. South latitudes lie south of the equator, in the southern hemisphere.
 
 ### socialstudies7.mm.ll.story
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_LATLONG`, outcome `b`, form word, rung 2.
 
-**Q:** A town is at 6 degrees north and 0 degrees longitude. Which town in the table could it be?
-Options: **Accra** | Nairobi | Cape Town | Cairo
-- If a child answers "Nairobi": Accra is at 6 degrees north and almost 0 degrees longitude. Latitude measures north and south of the equator. Longitude measures east and west.
-- If a child answers "Cape Town": Accra is at 6 degrees north and almost 0 degrees longitude. Latitude measures north and south of the equator. Longitude measures east and west.
+**Q:** A learner says latitude lines run from north to south. What is wrong?
+Options: Nothing is wrong | They run in circles round the poles only | **Latitude lines run east to west** | They run only in Africa
+- If a child answers "Nothing is wrong": Latitude lines are parallel, running east to west. Latitude measures north and south of the equator. Longitude measures east and west.
+- If a child answers "They run in circles round the poles only": Latitude lines are parallel, running east to west. Latitude measures north and south of the equator. Longitude measures east and west.
 
 ### socialstudies7.mm.ti.east
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_TIME`, outcome `c`, form word, rung 2.
 
-**Q:** It is 9:00 am at Greenwich (0 degrees). What is the time at a town on the Red Sea coast, 45 degrees east?
-Options: 1:30 pm | 10:30 am | 6:00 am | **12:00 pm**
-- If a child answers "1:30 pm": 45 degrees is 3 hours (15 degrees make one hour). Places to the east are ahead, so we add. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
-- If a child answers "10:30 am": 45 degrees is 3 hours (15 degrees make one hour). Places to the east are ahead, so we add. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+**Q:** It is 12 noon at Greenwich (0 degrees). What is the time at a city in the Gulf, 60 degrees east?
+Options: 2:00 pm | 6:00 pm | **4:00 pm** | 8:00 am
+- If a child answers "2:00 pm": 60 degrees is 4 hours (15 degrees make one hour). Places to the east are ahead, so we add. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+- If a child answers "6:00 pm": 60 degrees is 4 hours (15 degrees make one hour). Places to the east are ahead, so we add. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
 
 ### socialstudies7.mm.ti.west
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_TIME`, outcome `c`, form word, rung 2.
 
 **Q:** It is 6:00 am at Greenwich (0 degrees). What is the time at an island in the Caribbean, 60 degrees west?
-Options: 4:00 am | 12:00 am | **2:00 am** | 10:00 am
-- If a child answers "4:00 am": 60 degrees is 4 hours (15 degrees make one hour). Places to the west are behind, so we subtract. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+Options: 12:00 am | **2:00 am** | 10:00 am | 4:00 am
 - If a child answers "12:00 am": 60 degrees is 4 hours (15 degrees make one hour). Places to the west are behind, so we subtract. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+- If a child answers "10:00 am": 60 degrees is 4 hours (15 degrees make one hour). Places to the west are behind, so we subtract. The sun rises in the east first, so eastern places are ahead and we add the time.
 
 ### socialstudies7.mm.ti.diff
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_TIME`, outcome `c`, form direct, rung 1.
 
-**Q:** Town A is at 15 degrees east and town B is at 90 degrees east. How many hours is B ahead of A?
-Options: 75 hours | 4 hours | **5 hours** | 6 hours
-- If a child answers "75 hours": The difference is 75 degrees. Divide by 15 to get 5 hours. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
-- If a child answers "4 hours": The difference is 75 degrees. Divide by 15 to get 5 hours. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+**Q:** How many minutes does one degree of longitude make?
+Options: 1 minute | **4 minutes** | 10 minutes | 60 minutes
+- If a child answers "1 minute": One hour is 60 minutes for 15 degrees, so 1 degree is 4 minutes. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
+- If a child answers "10 minutes": One hour is 60 minutes for 15 degrees, so 1 degree is 4 minutes. The earth turns 360 degrees in 24 hours, so 15 degrees make one hour.
 
 ### socialstudies7.mm.fe.which
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_FEATURES`, outcome `d`, form direct, rung 1.
 
 **Q:** Which is the largest lake in Africa?
-Options: Lake Malawi | Lake Turkana | Lake Tanganyika | **Lake Victoria**
+Options: Lake Malawi | Lake Tanganyika | **Lake Victoria** | Lake Turkana
 - If a child answers "Lake Malawi": Lake Victoria is the largest and is shared by Kenya, Uganda and Tanzania. Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.
-- If a child answers "Lake Turkana": Lake Victoria is the largest and is shared by Kenya, Uganda and Tanzania. Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.
+- If a child answers "Lake Tanganyika": Lake Victoria is the largest and is shared by Kenya, Uganda and Tanzania. Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.
 
 ### socialstudies7.mm.fe.story
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_FEATURES`, outcome `d`, form word, rung 2.
 
-**Q:** Which desert lies in the south-west of Africa?
-Options: **The Namib** | The Libyan desert | The Sahara | The Nubian desert
-- If a child answers "The Libyan desert": The Namib and Kalahari lie in the south-west. The Sahara in the north is the largest hot desert. The Kalahari and Namib are in the south.
-- If a child answers "The Sahara": The Namib and Kalahari lie in the south-west. The Sahara in the north is the largest hot desert. The Kalahari and Namib are in the south.
+**Q:** A learner says Mount Kenya is the highest mountain in Africa. What is the correct fact?
+Options: Mount Elgon is higher | The learner is right about all of this | **Kilimanjaro, in Tanzania, is higher** | Mount Kenya is the lowest
+- If a child answers "Mount Elgon is higher": Kilimanjaro in Tanzania is the highest. Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.
+- If a child answers "The learner is right about all of this": Kilimanjaro in Tanzania is the highest. Mount Kilimanjaro in Tanzania is the highest. Mount Kenya is the second highest.
 
 ### socialstudies7.es.or.which
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE`, outcome `a`, form direct, rung 1.
 
-**Q:** Which planet from the Sun is the earth?
-Options: The fifth | **The third** | The eighth | The first
-- If a child answers "The fifth": Mercury and Venus come first, so the earth is the third. The earth is the third planet from the Sun, after Mercury and Venus.
-- If a child answers "The eighth": Mercury and Venus come first, so the earth is the third. The earth is the third planet from the Sun, after Mercury and Venus.
+**Q:** Which is evidence that the earth is round?
+Options: Rivers flow downhill | The ground feels flat where we stand | **A ship disappears hull first over the horizon** | Mountains are very tall
+- If a child answers "Rivers flow downhill": Ships sink below the horizon hull first, because the surface curves. The earth is almost round. We see ships disappear hull first.
+- If a child answers "The ground feels flat where we stand": Ships sink below the horizon hull first, because the surface curves. The earth is almost round. We see ships disappear hull first.
 
 ### socialstudies7.es.or.story
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_ORIGIN_SIZE`, outcome `b`, form word, rung 2.
 
-**Q:** About how wide is the earth?
-Options: **About 12,700 kilometres across** | About 127 kilometres across | About 1,270,000 kilometres across | About 1,270 kilometres across
-- If a child answers "About 127 kilometres across": The earth is about 12,700 kilometres across. The earth is almost round. We see ships disappear hull first.
-- If a child answers "About 1,270,000 kilometres across": The earth is about 12,700 kilometres across. The earth is almost round. We see ships disappear hull first.
+**Q:** A learner says the earth is flat because the ground looks flat. What is the best reply?
+Options: It is cut in half | **It looks flat only because it is so large** | It is shaped like a bowl | You are right, it is flat
+- If a child answers "It is cut in half": The earth is so large that a small part looks flat. The earth is almost round. We see ships disappear hull first.
+- If a child answers "It is shaped like a bowl": The earth is so large that a small part looks flat. The earth is almost round. We see ships disappear hull first.
 
 ### socialstudies7.es.mo.which
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION`, outcome `c`, form direct, rung 1.
 
 **Q:** What causes the seasons in many parts of the world?
-Options: The Moon changing shape | **The tilt of the axis and the revolution** | Clouds that cover the Sun | The earth moving closer and farther from the Sun
-- If a child answers "The Moon changing shape": Tilt and revolution together give the seasons. The tilt of the axis and the revolution round the Sun give the seasons, not distance.
+Options: The earth moving closer and farther from the Sun | **The tilt of the axis and the revolution** | Clouds that cover the Sun | The Moon changing shape
+- If a child answers "The earth moving closer and farther from the Sun": Tilt and revolution together give the seasons. The tilt of the axis and the revolution round the Sun give the seasons, not distance.
 - If a child answers "Clouds that cover the Sun": Tilt and revolution together give the seasons. The tilt of the axis and the revolution round the Sun give the seasons, not distance.
 
 ### socialstudies7.es.mo.story
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_MOTION`, outcome `c`, form word, rung 2.
 
-**Q:** When it is noon in Nairobi, it is night in the United States. Why?
-Options: The Moon blocks the Sun there | The Sun moves all round the earth | **The earth rotates, so one side faces away from the Sun** | The United States is always much closer to the Sun
-- If a child answers "The Moon blocks the Sun there": The earth rotates, so places have different times. The earth rotates once every 24 hours, so each side faces the Sun in turn.
-- If a child answers "The Sun moves all round the earth": The earth rotates, so places have different times. The earth rotates once every 24 hours, so each side faces the Sun in turn.
+**Q:** The earth completes one trip round the Sun. What has passed?
+Options: About one month | **About one year** | About one day | About one week
+- If a child answers "About one month": One revolution is one year. The earth rotates once every 24 hours, so each side faces the Sun in turn.
+- If a child answers "About one day": One revolution is one year. The earth rotates once every 24 hours, so each side faces the Sun in turn.
 
 ### socialstudies7.es.st.which
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE`, outcome `d`, form direct, rung 1.
 
-**Q:** What is the inner core like?
-Options: Made of ice | Soft and cold | Cold and hollow | **Solid and very hot**
-- If a child answers "Made of ice": The inner core is solid iron and nickel. The inner core is solid iron and nickel and is the hottest part.
-- If a child answers "Soft and cold": The inner core is solid iron and nickel. The inner core is solid iron and nickel and is the hottest part.
+**Q:** Which layer is just below the crust?
+Options: The inner core | The air | **The mantle** | The outer core
+- If a child answers "The inner core": The mantle lies below the crust. The crust is the thinnest layer. It is like the skin of an apple.
+- If a child answers "The air": The mantle lies below the crust. The crust is the thinnest layer. It is like the skin of an apple.
 
 ### socialstudies7.es.st.story
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE`, outcome `d`, form word, rung 2.
 
-**Q:** A learner says the crust is the thickest layer. What is the correct fact?
-Options: The learner is right about all of this | The crust is as thick as the mantle | **The crust is the thinnest layer** | There is no crust
-- If a child answers "The learner is right about all of this": The crust is thin compared with the mantle. The crust is the thinnest layer. It is like the skin of an apple.
-- If a child answers "The crust is as thick as the mantle": The crust is thin compared with the mantle. The crust is the thinnest layer. It is like the skin of an apple.
+**Q:** Which two metals mainly make up the core?
+Options: **Iron and nickel** | Lead and zinc | Gold and silver | Copper and tin
+- If a child answers "Lead and zinc": The core is mostly iron and nickel. The inner core is solid iron and nickel and is the hottest part.
+- If a child answers "Gold and silver": The core is mostly iron and nickel. The inner core is solid iron and nickel and is the hottest part.
 
 ### socialstudies7.we.el.which
 
 Skill `NATURA.WEATHER.WE_ELEMENTS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which instrument measures rainfall?
-Options: The thermometer | The barometer | **The rain gauge** | The hygrometer
-- If a child answers "The thermometer": A rain gauge collects rain to measure it. A barometer measures air pressure. A thermometer measures temperature.
-- If a child answers "The barometer": A rain gauge collects rain to measure it. A barometer measures air pressure. A thermometer measures temperature.
+**Q:** Which tells the climate of a place?
+Options: Today's temperature | **The pattern of weather over many years** | This morning's wind | Yesterday's rain
+- If a child answers "Today's temperature": Climate is the average pattern over many years. Weather is for a short time. Climate is the average pattern over many years.
+- If a child answers "This morning's wind": Climate is the average pattern over many years. Weather is for a short time. Climate is the average pattern over many years.
 
 ### socialstudies7.we.el.story
 
 Skill `NATURA.WEATHER.WE_ELEMENTS`, outcome `a`, form word, rung 2.
 
-**Q:** A learner says one sunny day tells us the climate of Nairobi. What is wrong?
-Options: **Climate is the pattern over many years** | Nothing is wrong | Climate is today's weather | Climate is what a person feels
-- If a child answers "Nothing is wrong": One day gives weather, not climate. Weather is for a short time. Climate is the average pattern over many years.
-- If a child answers "Climate is today's weather": One day gives weather, not climate. Weather is for a short time. Climate is the average pattern over many years.
+**Q:** Why are weather instruments kept in a Stevenson screen?
+Options: To hide them from learners | To keep them warm all through the night | To let animals use them | **To shelter them from rain and direct sun**
+- If a child answers "To hide them from learners": The screen protects instruments but lets air flow. A barometer measures air pressure. A thermometer measures temperature.
+- If a child answers "To keep them warm all through the night": The screen protects instruments but lets air flow. A barometer measures air pressure. A thermometer measures temperature.
 
 ### socialstudies7.we.si.which
 
 Skill `NATURA.WEATHER.WE_SIGNIFICANCE`, outcome `c`, form direct, rung 1.
 
 **Q:** A river is flooded. What should you do?
-Options: Cross it quickly | Let the children play in the water | **Stay away from the water and wait** | Swim across
+Options: **Stay away from the water and wait** | Cross it quickly | Swim across | Let the children play in the water
 - If a child answers "Cross it quickly": Never cross a flooded river. In lightning, go indoors. Tall trees and open fields are dangerous.
-- If a child answers "Let the children play in the water": Never cross a flooded river. In lightning, go indoors. Tall trees and open fields are dangerous.
+- If a child answers "Swim across": Never cross a flooded river. In lightning, go indoors. Tall trees and open fields are dangerous.
 
 ### socialstudies7.we.si.story
 
 Skill `NATURA.WEATHER.WE_SIGNIFICANCE`, outcome `c`, form word, rung 2.
 
-**Q:** A storm is coming with lightning. Wanjiru is playing football outside. What should she do?
-Options: Keep playing in the open | **Go into a building at once** | Shelter under a big tree | Stand in the middle of the field
-- If a child answers "Keep playing in the open": Lightning strikes tall things and open places. In lightning, go indoors. Tall trees and open fields are dangerous.
-- If a child answers "Shelter under a big tree": Lightning strikes tall things and open places. In lightning, go indoors. Tall trees and open fields are dangerous.
+**Q:** The forecast says heavy rain next week. What should a farmer do about drying harvested maize?
+Options: Leave it out in the open field | Spread it on the road | Ignore the forecast | **Dry and store it before the rain**
+- If a child answers "Leave it out in the open field": The forecast lets the farmer protect the crop. Forecasts help farmers and others to plan, though they can sometimes be wrong.
+- If a child answers "Spread it on the road": The forecast lets the farmer protect the crop. Forecasts help farmers and others to plan, though they can sometimes be wrong.
 
 ### socialstudies7.fw.me.which
 
 Skill `NATURA.FIELDWORK.FW_METHODS`, outcome `a`, form direct, rung 1.
 
-**Q:** Counting the number of vehicles that pass a gate is which method?
-Options: Focus group discussion | Questionnaire | Interview | **Observation**
-- If a child answers "Focus group discussion": Watching and counting is observation. Watching and counting is observation. Asking a person is an interview.
-- If a child answers "Questionnaire": Watching and counting is observation. Watching and counting is observation. Asking a person is an interview.
+**Q:** What is a questionnaire?
+Options: A single spoken question to a person | A photograph | A map | **A set of written questions for many people**
+- If a child answers "A single spoken question to a person": A questionnaire uses written questions. Watching and counting is observation. Asking a person is an interview.
+- If a child answers "A photograph": A questionnaire uses written questions. Watching and counting is observation. Asking a person is an interview.
 
 ### socialstudies7.fw.me.story
 
 Skill `NATURA.FIELDWORK.FW_METHODS`, outcome `a`, form word, rung 2.
 
-**Q:** Which is a question for an interview?
-Options: Which way does the road run? | How many cars pass in an hour? | **What makes this junction dangerous?** | How wide is the road?
-- If a child answers "Which way does the road run?": Interviews ask people for their views. Opinions must be asked for, with an interview or questionnaire.
-- If a child answers "How many cars pass in an hour?": Interviews ask people for their views. Opinions must be asked for, with an interview or questionnaire.
+**Q:** A class wants to know why drivers ignore a speed limit. Which method is best?
+Options: Looking at a map | Measuring the road | **Interviews with drivers** | Counting cars only
+- If a child answers "Looking at a map": Reasons must be asked for. Opinions must be asked for, with an interview or questionnaire.
+- If a child answers "Measuring the road": Reasons must be asked for. Opinions must be asked for, with an interview or questionnaire.
 
 ### socialstudies7.fw.ch.which
 
 Skill `NATURA.FIELDWORK.FW_CHALLENGES`, outcome `b`, form direct, rung 1.
 
-**Q:** Bad weather may stop fieldwork. What is a good solution?
-Options: Ignore the rain | Cancel for ever | **Check the forecast and plan a spare day** | Go out in the storm
-- If a child answers "Ignore the rain": Planning for weather helps. Stay in a safe place with a teacher. Road safety comes first.
-- If a child answers "Cancel for ever": Planning for weather helps. Stay in a safe place with a teacher. Road safety comes first.
+**Q:** A respondent refuses to answer. What should you do?
+Options: **Thank them politely and ask another person** | Insist until they answer | Write their answer for them yourself | Argue with them
+- If a child answers "Insist until they answer": Respect people's choice. Greet, explain your task and ask permission first. This shows respect.
+- If a child answers "Write their answer for them yourself": Respect people's choice. Greet, explain your task and ask permission first. This shows respect.
 
 ### socialstudies7.fw.ch.story
 
 Skill `NATURA.FIELDWORK.FW_CHALLENGES`, outcome `b`, form word, rung 2.
 
-**Q:** A class studies a busy junction. Where should the learners stand?
-Options: **At a safe place away from the road** | In the middle of the junction | On the road to see better | Between moving vehicles
-- If a child answers "In the middle of the junction": Stay safe, away from traffic. Stay in a safe place with a teacher. Road safety comes first.
-- If a child answers "On the road to see better": Stay safe, away from traffic. Stay in a safe place with a teacher. Road safety comes first.
+**Q:** People are unwilling to answer a questionnaire. What helps?
+Options: Fill the forms yourself | **Explain the purpose politely** | Demand that they answer | Leave the forms on the road
+- If a child answers "Fill the forms yourself": Explaining builds trust. Greet, explain your task and ask permission first. This shows respect.
+- If a child answers "Demand that they answer": Explaining builds trust. Greet, explain your task and ask permission first. This shows respect.
 
 ### socialstudies7.fw.an.mean
 
 Skill `NATURA.FIELDWORK.FW_ANALYSIS`, outcome `c`, form direct, rung 1.
 
-**Q:** In a road safety study, learners counted cars that slowed at the zebra crossing each hour: 4, 4, 11, 9, 12. What is the mean?
-Options: 10 | 4 | **8** | 9
-- If a child answers "10": Add the numbers to get 40, then divide by 5 to get 8. The mode is the value that occurs most often. The mean is the total divided by the number of values.
-- If a child answers "4": Add the numbers to get 40, then divide by 5 to get 8. The mode is the value that occurs most often. The mean is the total divided by the number of values.
+**Q:** In a road safety study, learners counted vehicles passing the school gate each hour: 8, 3, 11, 2, 11. What is the mean?
+Options: **7** | 11 | 9 | 8
+- If a child answers "11": Add the numbers to get 35, then divide by 5 to get 7. The mode is the value that occurs most often. The mean is the total divided by the number of values.
+- If a child answers "9": Add the numbers to get 35, then divide by 5 to get 7. The mode is the value that occurs most often. The mean is the total divided by the number of values.
 
 ### socialstudies7.fw.an.median
 
 Skill `NATURA.FIELDWORK.FW_ANALYSIS`, outcome `c`, form word, rung 2.
 
-**Q:** Learners counted matatus stopping at the stage each hour: 2, 5, 8, 3, 2. What is the median?
-Options: **3** | 2 | 4 | 8
-- If a child answers "2": Put the numbers in order: 2, 2, 3, 5, 8. The middle one is 3. The mode is the value that occurs most often. The mean is the total divided by the number of values.
-- If a child answers "4": Put the numbers in order: 2, 2, 3, 5, 8. The middle one is 3. The mode is the value that occurs most often. The mean is the total divided by the number of values.
+**Q:** Learners counted learners who walked to school each day: 12, 12, 2, 8, 11. What is the median?
+Options: 2 | 12 | **11** | 9
+- If a child answers "2": Put the numbers in order: 2, 8, 11, 12, 12. The middle one is 11. Put the numbers in order first, then take the middle one. The median of 2, 4, 5, 7, 9 is 5.
+- If a child answers "12": Put the numbers in order: 2, 8, 11, 12, 12. The middle one is 11. The mode is the value that occurs most often. The mean is the total divided by the number of values.
 
 ### socialstudies7.fw.an.mode
 
 Skill `NATURA.FIELDWORK.FW_ANALYSIS`, outcome `c`, form direct, rung 1.
 
-**Q:** Which graph best shows how many learners walk, cycle or take a bus to school?
-Options: A diary | A calendar | A map | **A bar graph**
-- If a child answers "A diary": A bar graph compares groups. The mode is the value that occurs most often. The mean is the total divided by the number of values.
-- If a child answers "A calendar": A bar graph compares groups. The mode is the value that occurs most often. The mean is the total divided by the number of values.
+**Q:** Learners counted boda boda riders without helmets each day: 13, 12, 8, 9, 13. What is the mode?
+Options: **13** | 8 | 11 | 12
+- If a child answers "8": The mode is the number that occurs most often. Here it is 13. The mode is the value that occurs most often. The mean is the total divided by the number of values.
+- If a child answers "11": The mode is the number that occurs most often. Here it is 13. The mode is the value that occurs most often. The mean is the total divided by the number of values.
 
 ### socialstudies7.pd.sc.which
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE`, outcome `a`, form direct, rung 1.
 
 **Q:** What was a role of missionaries in the scramble?
-Options: **They opened stations and schools and often prepared the way** | They fought all the wars | They had no part at all | They closed down all the mission schools and stations
+Options: They closed down all the mission schools and stations | They fought all the wars | **They opened stations and schools and often prepared the way** | They had no part at all
+- If a child answers "They closed down all the mission schools and stations": Missionaries brought schools and religion, and in many places prepared the way for colonial rule. Missionaries brought schools and religion, and in many places they prepared the way for colonial rule.
 - If a child answers "They fought all the wars": Missionaries brought schools and religion, and in many places prepared the way for colonial rule. Missionaries brought schools and religion, and in many places they prepared the way for colonial rule.
-- If a child answers "They had no part at all": Missionaries brought schools and religion, and in many places prepared the way for colonial rule. Missionaries brought schools and religion, and in many places they prepared the way for colonial rule.
 
 ### socialstudies7.pd.sc.story
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_SCRAMBLE`, outcome `a`, form word, rung 2.
 
-**Q:** A learner says Africans invited the Europeans to divide Africa. What is the correct reply?
-Options: The learner is right about all of this | Africans drew the map | **The Europeans decided without Africans** | Africans signed at Berlin
-- If a child answers "The learner is right about all of this": No African leader was invited. European powers decided. No African leaders were at the table.
-- If a child answers "Africans drew the map": No African leader was invited. European powers decided. No African leaders were at the table.
+**Q:** Factories in Europe needed cotton and rubber. How did this affect Africa?
+Options: It stopped all trade | It made them leave Africa alone | It made Africans sell machines | **It made Europeans want African raw materials**
+- If a child answers "It stopped all trade": Raw materials drew them to Africa. European powers decided. No African leaders were at the table.
+- If a child answers "It made them leave Africa alone": Raw materials drew them to Africa. European powers decided. No African leaders were at the table.
 
 ### socialstudies7.pd.be.which
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN`, outcome `b`, form direct, rung 1.
 
-**Q:** Which two rivers did Berlin open to trade?
-Options: **The Congo and the Niger** | The Limpopo and the Tana | The Orange and the Senegal | The Nile and the Zambezi
-- If a child answers "The Limpopo and the Tana": The Congo and Niger were opened to trade. Berlin set the rules, such as effective occupation. Borders were drawn after, by agreements.
-- If a child answers "The Orange and the Senegal": The Congo and Niger were opened to trade. Berlin set the rules, such as effective occupation. Borders were drawn after, by agreements.
+**Q:** What did the rule of effective occupation say?
+Options: A power could never claim land | Africans could claim any land | **A power must really control a region to claim it** | A power could claim any land by writing it down
+- If a child answers "A power could never claim land": Effective occupation meant real control. Berlin set the rules, such as effective occupation. Borders were drawn after, by agreements.
+- If a child answers "Africans could claim any land": Effective occupation meant real control. Berlin set the rules, such as effective occupation. Borders were drawn after, by agreements.
 
 ### socialstudies7.pd.be.story
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN`, outcome `b`, form word, rung 2.
 
 **Q:** Which country was the host of the Berlin Conference?
-Options: **Germany** | Portugal only | Egypt | Kenya
+Options: Kenya | **Germany** | Portugal only | Egypt
+- If a child answers "Kenya": Germany hosted it. No African leaders were invited.
 - If a child answers "Portugal only": Germany hosted it. No African leaders were invited.
-- If a child answers "Egypt": Germany hosted it. No African leaders were invited.
 
 ### socialstudies7.pd.im.which
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS`, outcome `c`, form direct, rung 1.
 
-**Q:** Who did the colonial railways mainly serve?
-Options: **The colonial economy** | Local markets only | African farmers alone | African schools
-- If a child answers "Local markets only": Railways carried raw materials to ports. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
-- If a child answers "African farmers alone": Railways carried raw materials to ports. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
+**Q:** Which crop was grown for export under colonial rule?
+Options: **Coffee** | Yams only | Cassava only | Millet only
+- If a child answers "Yams only": Cash crops such as coffee and tea were grown for export. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
+- If a child answers "Cassava only": Cash crops such as coffee and tea were grown for export. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
 
 ### socialstudies7.pd.im.story
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS`, outcome `c`, form word, rung 2.
 
-**Q:** Schools and hospitals were built, but mostly for what purpose?
-Options: To end colonial rule | To stop trade | **To support colonial interests** | To close missions
-- If a child answers "To end colonial rule": Many services served colonial interests. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
-- If a child answers "To stop trade": Many services served colonial interests. Colonial rule took land and independence. Roads and railways mainly served colonial interests.
+**Q:** A community lives on both sides of a colonial border. What happened to it?
+Options: **It was split between two colonies** | It was made bigger | It was given its full independence | It was kept together
+- If a child answers "It was made bigger": Many peoples were split by borders. Colonial borders cut across communities and joined some who were not close.
+- If a child answers "It was given its full independence": Many peoples were split by borders. Colonial borders cut across communities and joined some who were not close.
 
 ### socialstudies7.pd.ne.which
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO`, outcome `d`, form direct, rung 1.
 
-**Q:** Which builds a country's freedom?
-Options: Taking only loans | Closing all factories | **Making goods at home and trading fairly** | Selling raw materials to other countries only
-- If a child answers "Taking only loans": Local industry makes a country stronger. Honest and accountable government keeps a country's resources for its people.
-- If a child answers "Closing all factories": Local industry makes a country stronger. Honest and accountable government keeps a country's resources for its people.
+**Q:** Why can a large debt lead to neo-colonialism?
+Options: **The lender may control how the country is run** | The debt makes the whole country much richer | The debt is never paid | The debt ends all trade
+- If a child answers "The debt makes the whole country much richer": Debt can give the lender power. In neo-colonialism a country is free in name but still controlled through money and trade.
+- If a child answers "The debt is never paid": Debt can give the lender power. In neo-colonialism a country is free in name but still controlled through money and trade.
 
 ### socialstudies7.pd.ne.story
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_NEO`, outcome `d`, form word, rung 2.
 
-**Q:** A country owes a huge debt and must follow the lender's orders on its budget. Which is this?
-Options: Direct colonial rule | **Neo-colonialism** | Independence | Regional cooperation
-- If a child answers "Direct colonial rule": The country is free in name only. In neo-colonialism a country is free in name but still controlled through money and trade.
-- If a child answers "Independence": The country is free in name only. In neo-colonialism a country is free in name but still controlled through money and trade.
+**Q:** Officials take bribes to give mining rights cheaply to a foreign company. What does this do?
+Options: It strengthens the country and its people at home | It helps citizens equally | It ends neo-colonialism | **It weakens the country and helps neo-colonialism**
+- If a child answers "It strengthens the country and its people at home": Corruption lets outsiders take the country's wealth. Honest and accountable government keeps a country's resources for its people.
+- If a child answers "It helps citizens equally": Corruption lets outsiders take the country's wealth. Honest and accountable government keeps a country's resources for its people.
 
 ### socialstudies7.ck.im.which
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE`, outcome `a`, form direct, rung 1.
 
-**Q:** What does the Constitution share between the national and county governments?
-Options: **Power and duties** | Only schools | Only land | Only money
-- If a child answers "Only schools": Devolution shares power with the counties. The current Constitution was promulgated on 27 August 2010. Kenya became independent on 12 December 1963.
-- If a child answers "Only land": Devolution shares power with the counties. The current Constitution was promulgated on 27 August 2010. Kenya became independent on 12 December 1963.
+**Q:** Which is the supreme law of Kenya?
+Options: The rules of a school | **The Constitution** | The President's word | A decision of a chief
+- If a child answers "The rules of a school": The Constitution is supreme. Everyone must obey it. The Constitution is supreme. Everyone, including the President, must obey it.
+- If a child answers "The President's word": The Constitution is supreme. Everyone must obey it. The Constitution is supreme. Everyone, including the President, must obey it.
 
 ### socialstudies7.ck.im.story
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_IMPORTANCE`, outcome `a`, form word, rung 2.
 
 **Q:** A leader says he is above the Constitution. What is the correct reply?
-Options: It is only a guide | He is right | Only the President of Kenya may break it | **Everyone, including leaders, must obey it**
+Options: **Everyone, including leaders, must obey it** | Only the President of Kenya may break it | It is only a guide | He is right
+- If a child answers "Only the President of Kenya may break it": The Constitution is supreme. The Constitution is supreme. Everyone, including the President, must obey it.
 - If a child answers "It is only a guide": The Constitution is supreme. The Constitution is supreme. Everyone, including the President, must obey it.
-- If a child answers "He is right": The Constitution is supreme. The Constitution is supreme. Everyone, including the President, must obey it.
 
 ### socialstudies7.ck.up.which
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD`, outcome `b`, form direct, rung 1.
 
-**Q:** Which action breaks the values of the Constitution?
-Options: **Giving a bribe to a police officer** | Reporting corruption to the police | Voting | Paying taxes
-- If a child answers "Reporting corruption to the police": Bribes break the rule of law and integrity. Bribes break the rule of law and integrity.
-- If a child answers "Voting": Bribes break the rule of law and integrity. Bribes break the rule of law and integrity.
+**Q:** Who must protect the Constitution?
+Options: Only leaders | Only judges | **Every citizen** | Only the police
+- If a child answers "Only leaders": Every citizen has a duty. Every citizen has a duty to uphold the Constitution.
+- If a child answers "Only judges": Every citizen has a duty. Every citizen has a duty to uphold the Constitution.
 
 ### socialstudies7.ck.up.story
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD`, outcome `b`, form word, rung 2.
 
-**Q:** Why do citizens pay taxes?
-Options: To close schools | To avoid the law | To make leaders rich | **To fund services for all**
-- If a child answers "To close schools": Taxes pay for roads, schools and hospitals. Every citizen has a duty to uphold the Constitution.
-- If a child answers "To avoid the law": Taxes pay for roads, schools and hospitals. Every citizen has a duty to uphold the Constitution.
+**Q:** A driver offers a small bribe to a traffic officer. What does the officer who accepts do?
+Options: Upholds the Constitution | Helps the country | Does no harm at all | **Breaks the rule of law**
+- If a child answers "Upholds the Constitution": Even a small bribe breaks the law. Bribes break the rule of law and integrity.
+- If a child answers "Helps the country": Even a small bribe breaks the law. Bribes break the rule of law and integrity.
 
 ### socialstudies7.ck.va.which
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES`, outcome `c`, form direct, rung 1.
 
-**Q:** Which is a national value in the Constitution?
-Options: Fame | Power over other people | Wealth | **Integrity**
-- If a child answers "Fame": Integrity is a national value. Integrity is a national value. Wealth is not one.
-- If a child answers "Power over other people": Integrity is a national value. Integrity is a national value. Wealth is not one.
+**Q:** Which value says that everyone gets a just share?
+Options: **Equity and social justice** | Fame | Wealth | Power over other people
+- If a child answers "Fame": Equity and social justice mean fairness. Integrity is a national value. Wealth is not one.
+- If a child answers "Wealth": Equity and social justice mean fairness. Integrity is a national value. Wealth is not one.
 
 ### socialstudies7.ck.va.story
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_VALUES`, outcome `c`, form word, rung 2.
 
-**Q:** A school lets all learners vote for class leaders. Which value is this?
-Options: Fame | Wealth | **Democracy and participation** | Power for one person only
-- If a child answers "Fame": Voting shows democracy. Integrity is a national value. Wealth is not one.
-- If a child answers "Wealth": Voting shows democracy. Integrity is a national value. Wealth is not one.
+**Q:** A learner says patriotism means saying other countries are bad. What is wrong?
+Options: Patriotism is leaving the country | Patriotism is hating foreigners and other countries | **Patriotism is love for your country, not hate for others** | Nothing is wrong
+- If a child answers "Patriotism is leaving the country": Patriotism does not mean hating others. Patriotism is love and loyalty to your country. It does not mean hating others.
+- If a child answers "Patriotism is hating foreigners and other countries": Patriotism does not mean hating others. Patriotism is love and loyalty to your country. It does not mean hating others.
 
 ### socialstudies7.hr.cl.which
 
 Skill `POLITI.HUMAN_RIGHTS.HR_CLASSIFY`, outcome `a`, form direct, rung 1.
 
-**Q:** Which is an economic, social and cultural right?
-Options: The right to a fair trial | **The right to education** | The right to free speech | The right to vote
-- If a child answers "The right to a fair trial": Education is a social right. The right to vote is political. Education is a social right.
-- If a child answers "The right to free speech": Education is a social right. The right to vote is political. Education is a social right.
+**Q:** Which chapter of the Constitution of Kenya is the Bill of Rights?
+Options: Chapter One | Chapter Fifteen | **Chapter Four** | Chapter Ten
+- If a child answers "Chapter One": Chapter Four is the Bill of Rights. The Universal Declaration of Human Rights was adopted by the United Nations in 1948.
+- If a child answers "Chapter Fifteen": Chapter Four is the Bill of Rights. The Universal Declaration of Human Rights was adopted by the United Nations in 1948.
 
 ### socialstudies7.hr.cl.story
 
 Skill `POLITI.HUMAN_RIGHTS.HR_CLASSIFY`, outcome `a`, form word, rung 2.
 
 **Q:** A community has the right to a clean and healthy environment. Which group is this?
-Options: **Group or peoples' rights** | Civil rights only | Political rights | No group
+Options: **Group or peoples' rights** | No group | Civil rights only | Political rights
+- If a child answers "No group": A clean environment is a group right. The right to vote is political. Education is a social right.
 - If a child answers "Civil rights only": A clean environment is a group right. The right to vote is political. Education is a social right.
-- If a child answers "Political rights": A clean environment is a group right. The right to vote is political. Education is a social right.
 
 ### socialstudies7.hr.eq.which
 
 Skill `POLITI.HUMAN_RIGHTS.HR_EQUITY`, outcome `b`, form direct, rung 1.
 
 **Q:** What does it mean that human rights are universal?
-Options: They belong to only the rich people | They belong only to citizens | **They belong to all people everywhere** | They belong only to adults
-- If a child answers "They belong to only the rich people": Universal means for all people. Human rights are inalienable. They belong to everyone and cannot be earned or taken away.
+Options: They belong only to adults | **They belong to all people everywhere** | They belong only to citizens | They belong to only the rich people
+- If a child answers "They belong only to adults": Universal means for all people. Human rights are inalienable. They belong to everyone and cannot be earned or taken away.
 - If a child answers "They belong only to citizens": Universal means for all people. Human rights are inalienable. They belong to everyone and cannot be earned or taken away.
 
 ### socialstudies7.hr.eq.story
@@ -1041,142 +1041,142 @@ Options: They belong to only the rich people | They belong only to citizens | **
 Skill `POLITI.HUMAN_RIGHTS.HR_EQUITY`, outcome `c`, form word, rung 2.
 
 **Q:** A learner cannot see the board well. The teacher gives her a seat near the front. What is this?
-Options: Equality only | Punishment | **Equity** | Discrimination
-- If a child answers "Equality only": She gets what she needs. Equality gives the same. Equity gives what each person needs to be treated fairly.
+Options: **Equity** | Discrimination | Punishment | Equality only
+- If a child answers "Discrimination": She gets what she needs. Equality gives the same. Equity gives what each person needs to be treated fairly.
 - If a child answers "Punishment": She gets what she needs. Equality gives the same. Equity gives what each person needs to be treated fairly.
 
 ### socialstudies7.hr.ac.which
 
 Skill `POLITI.HUMAN_RIGHTS.HR_ACTION`, outcome `d`, form direct, rung 1.
 
-**Q:** Why do human rights matter?
-Options: **They protect the dignity of every person** | They protect only adults | They protect only the rich | They protect only the leaders of a country
-- If a child answers "They protect only adults": Rights protect everyone's dignity. Everyone can protect rights, including children.
-- If a child answers "They protect only the rich": Rights protect everyone's dignity. Everyone can protect rights, including children.
+**Q:** A classmate walks with a stick and others laugh at him. What should you do?
+Options: Tease him quietly | Walk away from him without a word | **Stand by him and say it is wrong** | Laugh too
+- If a child answers "Tease him quietly": Teasing breaks human dignity. Speak up. Stand by the classmate and speak up. Teasing breaks human dignity.
+- If a child answers "Walk away from him without a word": Teasing breaks human dignity. Speak up. Stand by the classmate and speak up. Teasing breaks human dignity.
 
 ### socialstudies7.hr.ac.story
 
 Skill `POLITI.HUMAN_RIGHTS.HR_ACTION`, outcome `d`, form word, rung 2.
 
-**Q:** Peter calls a classmate with a disability a bad name. You hear it. What is the best action?
-Options: Ignore it and say nothing to anyone else at all | Laugh quietly | Join Peter | **Tell Peter it is hurtful and support your classmate**
-- If a child answers "Ignore it and say nothing to anyone else at all": Speaking up stops discrimination. Stand by the classmate and speak up. Teasing breaks human dignity.
-- If a child answers "Laugh quietly": Speaking up stops discrimination. Stand by the classmate and speak up. Teasing breaks human dignity.
+**Q:** Which shows equity in class?
+Options: Ignoring the slow learner | Teasing the slow learner | **Giving extra help to a learner who needs it** | Giving all of the help to the fastest
+- If a child answers "Ignoring the slow learner": Equity gives help where it is needed. Stand by the classmate and speak up. Teasing breaks human dignity.
+- If a child answers "Teasing the slow learner": Equity gives help where it is needed. Stand by the classmate and speak up. Teasing breaks human dignity.
 
 ### socialstudies7.ad.fa.which
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_FACTORS`, outcome `a`, form direct, rung 1.
 
-**Q:** Which trade carried Africans to Arabia and India?
-Options: The transatlantic trade ships | The Nile trade | **The Indian Ocean slave trade** | The railway trade
-- If a child answers "The transatlantic trade ships": The Indian Ocean trade went east. Many were taken by force in the slave trades. Others moved later for work and study.
-- If a child answers "The Nile trade": The Indian Ocean trade went east. Many were taken by force in the slave trades. Others moved later for work and study.
+**Q:** Which factor brought many Africans to the Americas?
+Options: Invitations from the Americas | A wish to farm there | Voluntary holidays | **The forced slave trade**
+- If a child answers "Invitations from the Americas": Many were taken by force in the slave trades. Many were taken by force in the slave trades. Others moved later for work and study.
+- If a child answers "A wish to farm there": Many were taken by force in the slave trades. Many were taken by force in the slave trades. Others moved later for work and study.
 
 ### socialstudies7.ad.fa.story
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_FACTORS`, outcome `a`, form word, rung 2.
 
-**Q:** A learner says all Africans abroad went by choice. What is a better reply?
-Options: **Many were taken by force in the slave trades** | All went as kings | None of them were taken by any force at all | The learner is right about all of this
-- If a child answers "All went as kings": Many were taken by force. Many were taken by force in the slave trades. Others moved later for work and study.
-- If a child answers "None of them were taken by any force at all": Many were taken by force. Many were taken by force in the slave trades. Others moved later for work and study.
+**Q:** A Kenyan nurse works in Britain. Which kind of movement is this?
+Options: Being sold | Taken away as a prisoner of war | **Moving for work, not by force** | Being traded
+- If a child answers "Being sold": This is voluntary movement for work. Many were taken by force in the slave trades. Others moved later for work and study.
+- If a child answers "Taken away as a prisoner of war": This is voluntary movement for work. Many were taken by force in the slave trades. Others moved later for work and study.
 
 ### socialstudies7.ad.lo.table
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_LOCATE`, outcome `b`, form table, rung 1.
 
-**Q:** Look at the table. Which country is in the Caribbean?
-Options: Britain | **Jamaica** | Brazil | India
-- If a child answers "Britain": Jamaica is an island in the Caribbean. Jamaica is an island in the Caribbean Sea, in the Americas.
-- If a child answers "Brazil": Jamaica is an island in the Caribbean. Jamaica is an island in the Caribbean Sea, in the Americas.
+**Q:** Look at the table. Which country is in South America?
+Options: Jamaica | Britain | India | **Brazil**
+- If a child answers "Jamaica": Brazil is in South America. Jamaica is an island in the Caribbean Sea, in the Americas.
+- If a child answers "Britain": Brazil is in South America. Jamaica is an island in the Caribbean Sea, in the Americas.
 
 ### socialstudies7.ad.lo.story
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_LOCATE`, outcome `b`, form word, rung 2.
 
 **Q:** Which country in the Indian Ocean world had an African community called the Siddi?
-Options: Cuba | Canada | Brazil | **India**
-- If a child answers "Cuba": The Siddi live in India. A teacher should confirm. Jamaica is an island in the Caribbean Sea, in the Americas.
+Options: Canada | **India** | Brazil | Cuba
 - If a child answers "Canada": The Siddi live in India. A teacher should confirm. Jamaica is an island in the Caribbean Sea, in the Americas.
+- If a child answers "Brazil": The Siddi live in India. A teacher should confirm. Jamaica is an island in the Caribbean Sea, in the Americas.
 
 ### socialstudies7.ad.ro.which
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_ROLE`, outcome `c`, form direct, rung 1.
 
-**Q:** What is Pan-Africanism?
-Options: A kind of tax | A trading company | A kind of government run by Africans | **The idea that African people should unite**
-- If a child answers "A kind of tax": Pan-Africanism is the idea of unity among African people. Pan-Africanism is the idea that Africans share a cause and should unite.
-- If a child answers "A trading company": Pan-Africanism is the idea of unity among African people. Pan-Africanism is the idea that Africans share a cause and should unite.
+**Q:** Which leader of the diaspora wrote about the fight for equality, and helped Pan-African congresses?
+Options: Isaac Newton | Alexander Graham Bell | Lord Delamere | **W. E. B. Du Bois**
+- If a child answers "Isaac Newton": Du Bois was a leader of the Pan-African congresses. A teacher should confirm. Leaders in the diaspora spread the idea of unity and supported the call for independence.
+- If a child answers "Alexander Graham Bell": Du Bois was a leader of the Pan-African congresses. A teacher should confirm. Leaders in the diaspora spread the idea of unity and supported the call for independence.
 
 ### socialstudies7.ad.ro.story
 
 Skill `POLITI.AFRICAN_DIASPORAS.AD_ROLE`, outcome `c`, form word, rung 2.
 
-**Q:** The African Union grew from which idea?
-Options: The Berlin Conference | Colonial rule | **Pan-Africanism** | Neo-colonialism
-- If a child answers "The Berlin Conference": The African Union grew from the idea of African unity. Pan-Africanism is the idea that Africans share a cause and should unite.
-- If a child answers "Colonial rule": The African Union grew from the idea of African unity. Pan-Africanism is the idea that Africans share a cause and should unite.
+**Q:** A learner says the diaspora played no part in independence. What is a better reply?
+Options: It did nothing at all | The learner is right about all of this | **It supported Pan-African unity and freedom** | It opposed freedom and unity in Africa
+- If a child answers "It did nothing at all": Leaders in the diaspora helped. Leaders in the diaspora spread the idea of unity and supported the call for independence.
+- If a child answers "The learner is right about all of this": Leaders in the diaspora helped. Leaders in the diaspora spread the idea of unity and supported the call for independence.
 
 ### socialstudies7.cz.in.which
 
 Skill `POLITI.CITIZENSHIP.CZ_INTERDEP`, outcome `a`, form direct, rung 1.
 
-**Q:** Why do countries trade?
-Options: Each country makes everything it needs | To stop all trade | To close their borders | **No country has every resource**
-- If a child answers "Each country makes everything it needs": No country has everything. No country has everything, so countries trade and depend on each other.
-- If a child answers "To stop all trade": No country has everything. No country has everything, so countries trade and depend on each other.
+**Q:** Which body helps countries work together in Africa?
+Options: The Berlin Conference | A colonial office | A trading company | **The African Union**
+- If a child answers "The Berlin Conference": The African Union links African countries. No country has everything, so countries trade and depend on each other.
+- If a child answers "A colonial office": The African Union links African countries. No country has everything, so countries trade and depend on each other.
 
 ### socialstudies7.cz.in.story
 
 Skill `POLITI.CITIZENSHIP.CZ_INTERDEP`, outcome `a`, form word, rung 2.
 
-**Q:** A country has plenty of coffee but no oil. What should it do?
-Options: **Trade coffee for oil with another country** | Avoid all trade | Stop using oil | Make oil from nothing at all in the country
-- If a child answers "Avoid all trade": Trade fills the gap. No country has everything, so countries trade and depend on each other.
-- If a child answers "Stop using oil": Trade fills the gap. No country has everything, so countries trade and depend on each other.
+**Q:** Which organisation joins countries to solve world problems?
+Options: **The United Nations** | A colonial office | A single village | A trading stall
+- If a child answers "A colonial office": The UN helps nations work together. No country has everything, so countries trade and depend on each other.
+- If a child answers "A single village": The UN helps nations work together. No country has everything, so countries trade and depend on each other.
 
 ### socialstudies7.cz.gl.which
 
 Skill `POLITI.CITIZENSHIP.CZ_GLOBAL`, outcome `b`, form direct, rung 1.
 
 **Q:** Which is a good effect of globalisation?
-Options: **Quick communication with people far away** | Local firms being beaten by imports | Cybercrime | Loss of local culture
-- If a child answers "Local firms being beaten by imports": Communication is easier. Globalisation can harm local culture and small firms.
-- If a child answers "Cybercrime": Communication is easier. Globalisation can harm local culture and small firms.
+Options: Quick spread of disease | Loss of local languages | Spread of cybercrime | **New markets for Kenyan flowers**
+- If a child answers "Quick spread of disease": Global markets help exporters. Globalisation can harm local culture and small firms.
+- If a child answers "Loss of local languages": Global markets help exporters. Globalisation can harm local culture and small firms.
 
 ### socialstudies7.cz.gl.story
 
 Skill `POLITI.CITIZENSHIP.CZ_GLOBAL`, outcome `b`, form word, rung 2.
 
-**Q:** Cheap imported cloth makes a local weaver lose customers. Which effect is this?
-Options: A rule of trade | **A bad effect of globalisation** | A good effect of globalisation | No effect
-- If a child answers "A rule of trade": Local firms can lose out. Globalisation can harm local culture and small firms.
-- If a child answers "A good effect of globalisation": Local firms can lose out. Globalisation can harm local culture and small firms.
+**Q:** A learner in Nairobi video-calls a pen friend in Canada. Which effect is this?
+Options: A rule of trade | **A good effect, quick communication** | No effect | A bad effect, lost local culture
+- If a child answers "A rule of trade": Communication is quick. Globalisation can harm local culture and small firms.
+- If a child answers "No effect": Communication is quick. Globalisation can harm local culture and small firms.
 
 ### socialstudies7.cz.ci.which
 
 Skill `POLITI.CITIZENSHIP.CZ_CITIZEN`, outcome `c`, form direct, rung 1.
 
-**Q:** Can a global citizen love Kenya?
-Options: No, he must give up his country and his people | No, he must leave Kenya | **Yes, he serves the world and still loves his country** | No, he must hate Kenya
-- If a child answers "No, he must give up his country and his people": A global citizen stays loyal to his own country. A global citizen helps the world and stays loyal to his own country.
-- If a child answers "No, he must leave Kenya": A global citizen stays loyal to his own country. A global citizen helps the world and stays loyal to his own country.
+**Q:** Which is a quality of a global citizen?
+Options: A foreign accent and a passport | A large house | Wealth | **Respect for other cultures**
+- If a child answers "A foreign accent and a passport": Respect for other cultures is a quality. Anyone can be a global citizen by caring for others and the world.
+- If a child answers "A large house": Respect for other cultures is a quality. Anyone can be a global citizen by caring for others and the world.
 
 ### socialstudies7.cz.ci.story
 
 Skill `POLITI.CITIZENSHIP.CZ_CITIZEN`, outcome `e`, form word, rung 2.
 
-**Q:** A learner says only rich people can be global citizens. What is a better reply?
-Options: **Anyone who cares for others can be one** | The learner is right about all of this | Only people who travel a lot can be one | Only leaders can
-- If a child answers "The learner is right about all of this": Global citizenship is about care, not wealth. Anyone can be a global citizen by caring for others and the world.
-- If a child answers "Only people who travel a lot can be one": Global citizenship is about care, not wealth. Anyone can be a global citizen by caring for others and the world.
+**Q:** Which shows cooperation, a quality of a global citizen?
+Options: Avoiding all foreigners and their countries | Refusing to share | **Working with people of other countries on a project** | Working alone always
+- If a child answers "Avoiding all foreigners and their countries": Cooperation builds a better world. Anyone can be a global citizen by caring for others and the world.
+- If a child answers "Refusing to share": Cooperation builds a better world. Anyone can be a global citizen by caring for others and the world.
 
 ### socialstudies7.se.em.spot
 
 Skill `SOCIAL.SELF_EXPLORATION.SE_EMOTIONS`, outcome `c`, form spot, rung 3.
 
-**Q:** Charles answers a question on being teased. Which step has the mistake?
-Steps: Step 1: Charles reads the question carefully. / **Step 2: Charles says the best way to stop teasing is to shout and push.** / Step 3: Charles writes the answer down.
+**Q:** Evans answers a question on losing a match. Which step has the mistake?
+Steps: Step 1: Evans reads the question carefully. / **Step 2: Evans says it is fine to kick the ball away in anger.** / Step 3: Evans writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1184,8 +1184,8 @@ Steps: Step 1: Charles reads the question carefully. / **Step 2: Charles says th
 
 Skill `SOCIAL.ENTREPRENEURIAL_OPPORTUN.EO_OPPORTUNITY`, outcome `a`, form spot, rung 3.
 
-**Q:** Faith answers a question on starting a business. Which step has the mistake?
-Steps: Step 1: Faith reads the question carefully. / **Step 2: Faith says a business needs only a lot of money.** / Step 3: Faith writes the answer down.
+**Q:** Halima answers a question on a snack stall. Which step has the mistake?
+Steps: Step 1: Halima reads the question carefully. / **Step 2: Halima says she can open a stall without checking that people want snacks.** / Step 3: Halima writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1193,8 +1193,8 @@ Steps: Step 1: Faith reads the question carefully. / **Step 2: Faith says a busi
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_FACTORS`, outcome `a`, form spot, rung 3.
 
-**Q:** Omondi answers a question on ancient Egypt. Which step has the mistake?
-Steps: Step 1: Omondi reads the question carefully. / **Step 2: Omondi says Egypt grew because of cattle and gold at Zimbabwe.** / Step 3: Omondi writes the answer down.
+**Q:** Naomi answers a question on African kingdoms. Which step has the mistake?
+Steps: Step 1: Naomi reads the question carefully. / **Step 2: Naomi says Africans could not have built a great stone city.** / Step 3: Naomi writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1202,8 +1202,8 @@ Steps: Step 1: Omondi reads the question carefully. / **Step 2: Omondi says Egyp
 
 Skill `PEOPLE.EARLY_CIVILISATION.EC_CONTRIB`, outcome `c`, form spot, rung 3.
 
-**Q:** Pendo answers a question on hieroglyphs. Which step has the mistake?
-Steps: Step 1: Pendo reads the question carefully. / **Step 2: Pendo says Great Zimbabwe gave the world hieroglyphs.** / Step 3: Pendo writes the answer down.
+**Q:** Quentin answers a question on ancient African kingdoms. Which step has the mistake?
+Steps: Step 1: Quentin reads the question carefully. / **Step 2: Quentin says they gave the world nothing.** / Step 3: Quentin writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1211,8 +1211,8 @@ Steps: Step 1: Pendo reads the question carefully. / **Step 2: Pendo says Great 
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_FORMS`, outcome `a`, form spot, rung 3.
 
-**Q:** Victor answers a question on servitude. Which step has the mistake?
-Steps: Step 1: Victor reads the question carefully. / **Step 2: Victor says any hard job is servitude.** / Step 3: Victor writes the answer down.
+**Q:** Wanjiku answers a question on child labour. Which step has the mistake?
+Steps: Step 1: Wanjiku reads the question carefully. / **Step 2: Wanjiku says child labour is not a kind of slavery today.** / Step 3: Wanjiku writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1220,8 +1220,8 @@ Steps: Step 1: Victor reads the question carefully. / **Step 2: Victor says any 
 
 Skill `PEOPLE.SLAVERY_AND_SERVITUDE.SL_INDIAN`, outcome `b`, form spot, rung 3.
 
-**Q:** Daudi answers a question on the winds. Which step has the mistake?
-Steps: Step 1: Daudi reads the question carefully. / **Step 2: Daudi says European steamships carried the dhows.** / Step 3: Daudi writes the answer down.
+**Q:** Zawadi answers a question on the Indian Ocean slave trade. Which step has the mistake?
+Steps: Step 1: Zawadi reads the question carefully. / **Step 2: Zawadi says it was run only by Europeans.** / Step 3: Zawadi writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1229,8 +1229,8 @@ Steps: Step 1: Daudi reads the question carefully. / **Step 2: Daudi says Europe
 
 Skill `PEOPLE.DEVELOPMENTS_IN_MEDIUM_O.MT_COMPARE`, outcome `a`, form spot, rung 3.
 
-**Q:** Irene answers a question on money. Which step has the mistake?
-Steps: Step 1: Irene reads the question carefully. / **Step 2: Irene says money is not needed because barter works perfectly.** / Step 3: Irene writes the answer down.
+**Q:** Felix answers a question on barter. Which step has the mistake?
+Steps: Step 1: Felix reads the question carefully. / **Step 2: Felix says barter never had any problems.** / Step 3: Felix writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1247,8 +1247,8 @@ Steps: Step 1: Kendi reads the question carefully. / **Step 2: Kendi says money 
 
 Skill `PEOPLE.DIVERSITY_AND_INTERPERSO.DV_SKILLS`, outcome `b`, form spot, rung 3.
 
-**Q:** Purity answers a question on empathy. Which step has the mistake?
-Steps: Step 1: Purity reads the question carefully. / **Step 2: Purity says empathy means feeling sorry and doing nothing.** / Step 3: Purity writes the answer down.
+**Q:** Odhiambo answers a question on assertiveness. Which step has the mistake?
+Steps: Step 1: Odhiambo reads the question carefully. / **Step 2: Odhiambo says being assertive means being loud and rude.** / Step 3: Odhiambo writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1256,8 +1256,8 @@ Steps: Step 1: Purity reads the question carefully. / **Step 2: Purity says empa
 
 Skill `PEOPLE.PEACEFUL_COEXISTENCE.PE_RESOLVE`, outcome `c`, form spot, rung 3.
 
-**Q:** Wambui answers a question on a quarrel over a pen. Which step has the mistake?
-Steps: Step 1: Wambui reads the question carefully. / **Step 2: Wambui says the teacher should punish the loudest learner first.** / Step 3: Wambui writes the answer down.
+**Q:** Titus answers a question on a mediator. Which step has the mistake?
+Steps: Step 1: Titus reads the question carefully. / **Step 2: Titus says a mediator takes the side of the person who asked.** / Step 3: Titus writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1265,8 +1265,8 @@ Steps: Step 1: Wambui reads the question carefully. / **Step 2: Wambui says the 
 
 Skill `COMMUN.COMMUNITY_SERVICE_LEARNI.CS_STEPS`, outcome `c`, form spot, rung 3.
 
-**Q:** Collins answers a question on reflection. Which step has the mistake?
-Steps: Step 1: Collins reads the question carefully. / **Step 2: Collins says reflection is a waste of time.** / Step 3: Collins writes the answer down.
+**Q:** Beatrice answers a question on planting trees. Which step has the mistake?
+Steps: Step 1: Beatrice reads the question carefully. / **Step 2: Beatrice says the class can plant before checking what the school needs.** / Step 3: Beatrice writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1274,8 +1274,8 @@ Steps: Step 1: Collins reads the question carefully. / **Step 2: Collins says re
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_SOURCES`, outcome `a`, form spot, rung 3.
 
-**Q:** George answers a question on elders' stories. Which step has the mistake?
-Steps: Step 1: George reads the question carefully. / **Step 2: George says elders' stories are not a source of history.** / Step 3: George writes the answer down.
+**Q:** Hellen answers a question on a song about a clan's journey. Which step has the mistake?
+Steps: Step 1: Hellen reads the question carefully. / **Step 2: Hellen says the song is an archaeological source.** / Step 3: Hellen writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1283,8 +1283,8 @@ Steps: Step 1: George reads the question carefully. / **Step 2: George says elde
 
 Skill `NATURA.HISTORICAL_INFORMATION.HI_PRIMARY`, outcome `b`, form spot, rung 3.
 
-**Q:** Kevin answers a question on a soldier's diary from a war. Which step has the mistake?
-Steps: Step 1: Kevin reads the question carefully. / **Step 2: Kevin says the diary is a secondary source.** / Step 3: Kevin writes the answer down.
+**Q:** Martin answers a question on a photograph taken in 1963. Which step has the mistake?
+Steps: Step 1: Martin reads the question carefully. / **Step 2: Martin says an old photograph is secondary because it is old.** / Step 3: Martin writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1292,8 +1292,8 @@ Steps: Step 1: Kevin reads the question carefully. / **Step 2: Kevin says the di
 
 Skill `NATURA.HISTORICAL_DEVELOPMENT_O.EA_NILE`, outcome `c`, form spot, rung 3.
 
-**Q:** Rashid answers a question on farmers waiting for the flood. Which step has the mistake?
-Steps: Step 1: Rashid reads the question carefully. / **Step 2: Rashid says farmers feared the flood and wanted it to stop.** / Step 3: Rashid writes the answer down.
+**Q:** Oscar answers a question on the Nile flood. Which step has the mistake?
+Steps: Step 1: Oscar reads the question carefully. / **Step 2: Oscar says the flood only destroyed farms.** / Step 3: Oscar writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1301,8 +1301,8 @@ Steps: Step 1: Rashid reads the question carefully. / **Step 2: Rashid says farm
 
 Skill `NATURA.MAPS_AND_MAP_WORK.MM_FEATURES`, outcome `d`, form spot, rung 3.
 
-**Q:** Wilson answers a question on the largest lake in Africa. Which step has the mistake?
-Steps: Step 1: Wilson reads the question carefully. / **Step 2: Wilson says Lake Turkana is the largest.** / Step 3: Wilson writes the answer down.
+**Q:** Violet answers a question on the largest hot desert. Which step has the mistake?
+Steps: Step 1: Violet reads the question carefully. / **Step 2: Violet says the Kalahari is the largest hot desert.** / Step 3: Violet writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1310,8 +1310,8 @@ Steps: Step 1: Wilson reads the question carefully. / **Step 2: Wilson says Lake
 
 Skill `NATURA.EARTH_AND_THE_SOLAR_SYST.ES_STRUCTURE`, outcome `d`, form spot, rung 3.
 
-**Q:** Alice answers a question on the layers of the earth. Which step has the mistake?
-Steps: Step 1: Alice reads the question carefully. / **Step 2: Alice says the crust is the thickest layer.** / Step 3: Alice writes the answer down.
+**Q:** Carol answers a question on where people live. Which step has the mistake?
+Steps: Step 1: Carol reads the question carefully. / **Step 2: Carol says people live on the mantle.** / Step 3: Carol writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1319,8 +1319,8 @@ Steps: Step 1: Alice reads the question carefully. / **Step 2: Alice says the cr
 
 Skill `NATURA.WEATHER.WE_ELEMENTS`, outcome `a`, form spot, rung 3.
 
-**Q:** Fred answers a question on weather instruments. Which step has the mistake?
-Steps: Step 1: Fred reads the question carefully. / **Step 2: Fred says a barometer measures temperature.** / Step 3: Fred writes the answer down.
+**Q:** Imani answers a question on weather and climate. Which step has the mistake?
+Steps: Step 1: Imani reads the question carefully. / **Step 2: Imani says weather and climate mean the same.** / Step 3: Imani writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1328,8 +1328,8 @@ Steps: Step 1: Fred reads the question carefully. / **Step 2: Fred says a barome
 
 Skill `NATURA.FIELDWORK.FW_METHODS`, outcome `a`, form spot, rung 3.
 
-**Q:** Kate answers a question on counting vehicles. Which step has the mistake?
-Steps: Step 1: Kate reads the question carefully. / **Step 2: Kate says counting vehicles at a gate is an interview.** / Step 3: Kate writes the answer down.
+**Q:** Leo answers a question on the views of drivers. Which step has the mistake?
+Steps: Step 1: Leo reads the question carefully. / **Step 2: Leo says observation alone shows what drivers think.** / Step 3: Leo writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1337,8 +1337,8 @@ Steps: Step 1: Kate reads the question carefully. / **Step 2: Kate says counting
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_BERLIN`, outcome `b`, form spot, rung 3.
 
-**Q:** Sharon answers a question on the host. Which step has the mistake?
-Steps: Step 1: Sharon reads the question carefully. / **Step 2: Sharon says the host was an African king.** / Step 3: Sharon writes the answer down.
+**Q:** Thomas answers a question on effective occupation. Which step has the mistake?
+Steps: Step 1: Thomas reads the question carefully. / **Step 2: Thomas says a power could claim land just by writing its name.** / Step 3: Thomas writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1346,8 +1346,8 @@ Steps: Step 1: Sharon reads the question carefully. / **Step 2: Sharon says the 
 
 Skill `POLITI.POLITICAL_DEVELOPMENT_IN.PD_IMPLICATIONS`, outcome `c`, form spot, rung 3.
 
-**Q:** Yasmin answers a question on colonial taxes. Which step has the mistake?
-Steps: Step 1: Yasmin reads the question carefully. / **Step 2: Yasmin says taxes helped Africans become richer.** / Step 3: Yasmin writes the answer down.
+**Q:** Victor answers a question on colonial borders. Which step has the mistake?
+Steps: Step 1: Victor reads the question carefully. / **Step 2: Victor says borders kept every community together.** / Step 3: Victor writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1355,8 +1355,8 @@ Steps: Step 1: Yasmin reads the question carefully. / **Step 2: Yasmin says taxe
 
 Skill `POLITI.THE_CONSTITUTION_OF_KENY.CK_UPHOLD`, outcome `b`, form spot, rung 3.
 
-**Q:** Brian answers a question on a police officer. Which step has the mistake?
-Steps: Step 1: Brian reads the question carefully. / **Step 2: Brian says it is fine to give a bribe to avoid a fine.** / Step 3: Brian writes the answer down.
+**Q:** Clara answers a question on learners. Which step has the mistake?
+Steps: Step 1: Clara reads the question carefully. / **Step 2: Clara says learners have no part in upholding the Constitution.** / Step 3: Clara writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1364,8 +1364,8 @@ Steps: Step 1: Brian reads the question carefully. / **Step 2: Brian says it is 
 
 Skill `POLITI.HUMAN_RIGHTS.HR_EQUITY`, outcome `b`, form spot, rung 3.
 
-**Q:** Elijah answers a question on equity. Which step has the mistake?
-Steps: Step 1: Elijah reads the question carefully. / **Step 2: Elijah says equity means everyone gets exactly the same.** / Step 3: Elijah writes the answer down.
+**Q:** Hope answers a question on a child who steals. Which step has the mistake?
+Steps: Step 1: Hope reads the question carefully. / **Step 2: Hope says such a child loses all rights.** / Step 3: Hope writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 
@@ -1373,8 +1373,8 @@ Steps: Step 1: Elijah reads the question carefully. / **Step 2: Elijah says equi
 
 Skill `POLITI.CITIZENSHIP.CZ_GLOBAL`, outcome `b`, form spot, rung 3.
 
-**Q:** Noah answers a question on the spread of disease. Which step has the mistake?
-Steps: Step 1: Noah reads the question carefully. / **Step 2: Noah says globalisation can never spread disease.** / Step 3: Noah writes the answer down.
+**Q:** Joseph answers a question on globalisation. Which step has the mistake?
+Steps: Step 1: Joseph reads the question carefully. / **Step 2: Joseph says globalisation has only good effects.** / Step 3: Joseph writes the answer down.
 - If a child answers "Step 1": Step 1 is right. Keep checking the steps after it.
 - If a child answers "Step 3": Step 3 follows on correctly from the step before it. The mistake happens earlier.
 

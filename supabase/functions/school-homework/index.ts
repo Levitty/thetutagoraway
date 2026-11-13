@@ -4496,6 +4496,7 @@ var SUBJECT_PREFIXES = {
   AGRI: "agriculture",
   CRES: "cre",
   CREA: "creativearts",
+  INTE: "integratedscience",
   SOCI: "socialstudies"
 };
 

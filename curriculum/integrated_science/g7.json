@@ -3,15 +3,15 @@
  "subject_key": "integrated_science",
  "grade": 7,
  "source": "KICD Integrated Science, First published 2022; Revised 2024 (text layer)",
- "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions not yet mapped",
+ "status": "outcomes from KICD's text, word for word; skills, prerequisites and misconceptions proposed (authored offline, 13 Nov 2026), awaiting teacher review",
  "totals": {
   "strands": 4,
   "sub_strands": 9,
   "outcomes": 38,
   "lessons": 150,
-  "skills": 0,
-  "prerequisites": 0,
-  "misconceptions": 0
+  "skills": 32,
+  "prerequisites": 62,
+  "misconceptions": 96
  },
  "sub_strands": [
   {
@@ -70,14 +70,165 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+     "name": "Name the components of Integrated Science: biology, chemistry and physics",
+     "outcomes": [
+      "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.a"
+     ],
+     "mastery": "The child says Integrated Science joins biology (living things), chemistry (matter and how it changes) and physics (energy and forces), and puts topics such as the heart, acids and circuits in the right branch. The child does not say the branches have nothing to do with each other. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which branch studies a described topic",
+      "sort topics into biology, chemistry and physics",
+      "decide which branch a short story is about",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+     "name": "Describe how science is used in health, farming, industry, transport, food and clothing, and in careers",
+     "outcomes": [
+      "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.b"
+     ],
+     "mastery": "The child says science gives us medicines and vaccines (health), better seeds and ways of keeping soil healthy (farming), machines and materials (industry), engines and roads (transport), food preserving and dyed cloth, and jobs such as nurse, engineer and laboratory technician. The child does not say science is only done by people in white coats in a laboratory. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which area of life a described use belongs to",
+      "say how science helps in one named area",
+      "name a career that uses science",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_SEPARATE",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+     "error": "Thinks biology, chemistry and physics are three separate subjects with nothing in common.",
+     "example": {
+      "question": "How are biology, chemistry and physics related in Integrated Science?",
+      "wrong_answer": "They are separate and never meet",
+      "correct_answer": "They are branches of one science, and many topics use all three"
+     },
+     "cause": "The child meets them as separate chapters.",
+     "reveals": "Offer \"They are separate and never meet\" next to the right answer and ask the question again in a new context.",
+     "help": "Take the heart: the blood is chemistry, the pump is physics, the organ is biology.",
+     "feedback": "Integrated Science joins the three branches. Many topics, such as digestion or cooking, use all three.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_BIO_PLANTS",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+     "error": "Thinks biology is only about plants and animals in the field, and that the human body is not science.",
+     "example": {
+      "question": "Which branch studies the human heart?",
+      "wrong_answer": "None, the body is not science",
+      "correct_answer": "Biology"
+     },
+     "cause": "The child links biology only with plants and animals outdoors.",
+     "reveals": "Offer \"None, the body is not science\" next to the right answer and ask the question again in a new context.",
+     "help": "Name the branch for a snail, a mushroom, a heart and a germ: all biology.",
+     "feedback": "Biology studies all living things, including the human body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS.M_SC_CHEM_LAB",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_COMPONENTS",
+     "error": "Thinks chemistry is only the study of dangerous chemicals in a laboratory.",
+     "example": {
+      "question": "Which branch studies why soap removes dirt or why bread rises?",
+      "wrong_answer": "Only physics, because it is about doing",
+      "correct_answer": "Chemistry, which studies matter and how it changes"
+     },
+     "cause": "The child links chemistry with a laboratory and chemicals only.",
+     "reveals": "Offer \"Only physics, because it is about doing\" next to the right answer and ask the question again in a new context.",
+     "help": "List the changes in a kitchen: baking, rusting, burning charcoal.",
+     "feedback": "Chemistry studies what things are made of and how they change, in the kitchen as well as in the laboratory.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_LAB_ONLY",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+     "error": "Thinks science is only done in laboratories by scientists in white coats.",
+     "example": {
+      "question": "Where is science used?",
+      "wrong_answer": "Only in a laboratory",
+      "correct_answer": "In homes, farms, hospitals, workshops and schools"
+     },
+     "cause": "The child pictures science as a place.",
+     "reveals": "Offer \"Only in a laboratory\" next to the right answer and ask the question again in a new context.",
+     "help": "List the science in a morning: a boiling kettle, soap, a bicycle.",
+     "feedback": "Science is in daily life: cooking, farming, healing and travelling all use it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_HEALTH_ONLY",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+     "error": "Thinks science only helps in hospitals and with medicines.",
+     "example": {
+      "question": "Which of these is a use of science in farming?",
+      "wrong_answer": "None, farming does not use science",
+      "correct_answer": "Better seeds and keeping soil healthy"
+     },
+     "cause": "The child links science with medicine and with machines.",
+     "reveals": "Offer \"None, farming does not use science\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask how a farmer knows what to put on tired soil.",
+     "feedback": "Science helps in farming, industry, transport, food and clothing, as well as health.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE.M_SM_NO_CAREER",
+     "skill": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+     "error": "Thinks only doctors and scientists have careers that use science.",
+     "example": {
+      "question": "Which job uses science?",
+      "wrong_answer": "Only a doctor",
+      "correct_answer": "A nurse, an engineer or a laboratory technician"
+     },
+     "cause": "The child knows a few science jobs and treats them as the only ones.",
+     "reveals": "Offer \"Only a doctor\" next to the right answer and ask the question again in a new context.",
+     "help": "Ask the child to name the people who built the school: engineers, electricians, surveyors.",
+     "feedback": "Many careers use science: nurse, engineer, farmer, pilot, laboratory technician and more.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.1.1",
     "INTE.G7.RUBRIC.1.2",
     "INTE.G7.RUBRIC.1.3",
     "INTE.G7.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions. Outcome c (show interest in learning Integrated Science) is attitudinal. The career chart is a portfolio piece marked by the teacher."
   },
   {
    "code": "INTE.G7.SCIENT.LABORATORY_SAFETY",
@@ -147,14 +298,263 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+     "name": "Read the common laboratory hazard symbols: flammable, corrosive, toxic and radioactive",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_SAFETY.a"
+     ],
+     "mastery": "The child says the flame symbol warns of a substance that catches fire easily, the symbol of a hand and a metal being eaten away warns of a corrosive substance, the skull and crossbones warns of a toxic (poisonous) substance, and the three-blade symbol warns of a radioactive substance. The child does not read a skull as meaning \"dead things inside\" or a flame as meaning \"put it on the fire\". Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a described symbol warns about",
+      "pick the symbol for a named danger",
+      "say what to do when a bottle carries a symbol",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SAFETY",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.MIXTUR.CLASSES_OF_FIRE.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+     "name": "Give the common causes of laboratory accidents and the rules that prevent them",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_SAFETY.b"
+     ],
+     "mastery": "The child says accidents come from running and playing, tasting or smelling chemicals, heating a test tube while pointing it at someone, leaving a flame unattended, spilt liquids and loose hair, and that the rules are to walk, never taste, point the tube away, tie back hair, wear a coat or an apron, and tell the teacher at once. The child does not say accidents only happen to careless people and cannot be prevented. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what caused a described accident",
+      "pick the rule that would have prevented it",
+      "decide from a short story who broke a rule",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+     "name": "Choose the right first aid for burns and scalds, cuts and swallowed harmful substances",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_SAFETY.c"
+     ],
+     "mastery": "The child says to cool a burn or scald under cool running water for ten minutes and cover it loosely, to press a clean cloth on a cut and raise the hurt part, and for a swallowed harmful substance to call the teacher at once, say what was swallowed and get the child to a hospital, without making the child vomit. The child does not say to put butter, toothpaste or ash on a burn. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the first thing to do for a named accident",
+      "say what not to do",
+      "put the first aid steps in order",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_FLAME_FIRE",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+     "error": "Thinks the flame symbol on a bottle means it is used for fires or can be put on a fire.",
+     "example": {
+      "question": "A bottle shows a flame symbol. What does it warn?",
+      "wrong_answer": "It is used to make a fire",
+      "correct_answer": "It catches fire easily"
+     },
+     "cause": "The child reads the picture as an instruction, not a warning.",
+     "reveals": "Offer \"It is used to make a fire\" next to the right answer and ask the question again in a new context.",
+     "help": "Show a spirit bottle and say why it is kept far from the stove.",
+     "feedback": "The flame symbol warns that the substance is flammable: it catches fire easily and must be kept from flames.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_SKULL_DEAD",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+     "error": "Thinks the skull symbol means the substance is for killing dead things or is safe to throw away.",
+     "example": {
+      "question": "A bottle shows a skull and crossbones. What does it warn?",
+      "wrong_answer": "Dead things are inside",
+      "correct_answer": "It is toxic, so it is poisonous"
+     },
+     "cause": "The child reads the picture literally.",
+     "reveals": "Offer \"Dead things are inside\" next to the right answer and ask the question again in a new context.",
+     "help": "Say what happens if a child swallows or breathes it.",
+     "feedback": "A skull and crossbones means toxic: the substance is poisonous and can kill.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS.M_HS_CORROSIVE_TOXIC",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+     "error": "Mixes up corrosive and toxic and thinks both mean poison.",
+     "example": {
+      "question": "A bottle shows a hand and a metal being eaten away. What does it warn?",
+      "wrong_answer": "It is poisonous when swallowed",
+      "correct_answer": "It is corrosive, so it eats away skin and metal"
+     },
+     "cause": "The child gives one meaning to every danger sign.",
+     "reveals": "Offer \"It is poisonous when swallowed\" next to the right answer and ask the question again in a new context.",
+     "help": "Drip a weak acid on a rusty nail and watch it fizz; say what it would do to skin.",
+     "feedback": "Corrosive means it eats away skin, cloth and metal. Toxic means poisonous. They are different warnings.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_TASTE_SAFE",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+     "error": "Thinks it is fine to taste or smell a chemical to find out what it is.",
+     "example": {
+      "question": "A learner wants to know what a clear liquid is. What should she do?",
+      "wrong_answer": "Taste a drop to find out",
+      "correct_answer": "Ask the teacher and read the label"
+     },
+     "cause": "The child tastes foods to learn about them.",
+     "reveals": "Offer \"Taste a drop to find out\" next to the right answer and ask the question again in a new context.",
+     "help": "Say why a kitchen container with a laboratory liquid is dangerous.",
+     "feedback": "Never taste or sniff a chemical. Some are poisonous or burn, and labels tell what they are.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_POINT_TUBE",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+     "error": "Thinks a test tube can be pointed at a neighbour while heating, because it will not spit.",
+     "example": {
+      "question": "How should you hold a test tube while heating it?",
+      "wrong_answer": "Pointing it at a friend so you can both see",
+      "correct_answer": "Pointing it away from everyone, and moving it gently"
+     },
+     "cause": "The child cannot see the liquid shoot out.",
+     "reveals": "Offer \"Pointing it at a friend so you can both see\" next to the right answer and ask the question again in a new context.",
+     "help": "Heat water in a tube behind a screen and watch the spit.",
+     "feedback": "A heated liquid can shoot out of the tube. Point it away from yourself and other people.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS.M_LA_CARELESS_ONLY",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+     "error": "Thinks accidents only happen to careless people and cannot be prevented by rules.",
+     "example": {
+      "question": "Why do laboratories have rules?",
+      "wrong_answer": "Only careless people have accidents, so rules are not needed",
+      "correct_answer": "Rules stop accidents before they happen"
+     },
+     "cause": "The child thinks of accidents as bad luck.",
+     "reveals": "Offer \"Only careless people have accidents, so rules are not needed\" next to the right answer and ask the question again in a new context.",
+     "help": "List one rule for each accident: walking, tying hair, wearing a coat.",
+     "feedback": "Most accidents are caused by breaking a rule. Following rules keeps everyone safe.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_BUTTER_BURN",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+     "error": "Thinks butter, toothpaste or ash should be put on a burn.",
+     "example": {
+      "question": "A learner burns her hand on a hot beaker. What is the first thing to do?",
+      "wrong_answer": "Rub butter on the burn",
+      "correct_answer": "Hold it under cool running water for ten minutes"
+     },
+     "cause": "The child has seen home remedies.",
+     "reveals": "Offer \"Rub butter on the burn\" next to the right answer and ask the question again in a new context.",
+     "help": "Say why a cream on a hot burn keeps the heat in and can bring germs.",
+     "feedback": "Cool the burn with cool running water. Creams, butter and toothpaste trap heat and can cause infection.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_VOMIT",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+     "error": "Thinks a child who swallowed a chemical should be made to vomit.",
+     "example": {
+      "question": "A child swallows a harmful liquid. What should the helper do?",
+      "wrong_answer": "Make the child vomit at once",
+      "correct_answer": "Call the teacher, say what was swallowed and get the child to hospital"
+     },
+     "cause": "The child has heard of \"throwing it up\".",
+     "reveals": "Offer \"Make the child vomit at once\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that some liquids burn the throat a second time on the way up.",
+     "feedback": "Do not make the child vomit. Get an adult, say what was swallowed and take the child to hospital.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID.M_FA_CUT_WASH",
+     "skill": "INTE.G7.SCIENT.LABORATORY_SAFETY.FIRST_AID",
+     "error": "Thinks a deep cut should be left open to dry, or covered only after it stops bleeding on its own.",
+     "example": {
+      "question": "A learner cuts her finger on broken glass and it bleeds. What is the first step?",
+      "wrong_answer": "Leave it open to dry in the air",
+      "correct_answer": "Press a clean cloth on it and raise the hand"
+     },
+     "cause": "The child thinks drying stops bleeding.",
+     "reveals": "Offer \"Leave it open to dry in the air\" next to the right answer and ask the question again in a new context.",
+     "help": "Demonstrate pressure on a model: blood stops where the vessel is squeezed.",
+     "feedback": "Pressing on the cut with a clean cloth stops the bleeding. Raise the hurt part and get help.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.1.1",
     "INTE.G7.RUBRIC.1.2",
     "INTE.G7.RUBRIC.1.3",
     "INTE.G7.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions; the role-play of first aid and the practice of safety measures are observed by the teacher (anything with a flame, hot water or chemicals is done with the teacher). First aid statements are to be confirmed by a teacher or a health worker. Outcome d (appreciate safety) is attitudinal."
   },
   {
    "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND",
@@ -222,14 +622,385 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+     "name": "Name the basic science skills: observing, measuring, classifying, predicting, communicating and concluding",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.a"
+     ],
+     "mastery": "The child says observing is using the senses (safely), measuring is comparing with a unit, classifying is sorting by what is alike, predicting is saying what you expect to happen before you test, communicating is telling or recording what was found, and a conclusion is what the results show. The child does not say a prediction is what happened or that a guess without a test is a conclusion. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which skill a described action uses",
+      "put the steps of an investigation in order",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.INTRODUCTION_TO_INTEGRAT.SCI_IMPORTANCE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+     "name": "Say what common laboratory apparatus is for and how to use and look after it",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.b"
+     ],
+     "mastery": "The child says a measuring cylinder measures the volume of a liquid and is read at eye level at the bottom of the curve, a beaker holds and heats liquids, a thermometer measures temperature, a stopwatch measures time, a beam or electronic balance measures mass, a hand lens and a light microscope make small things look bigger, and a Bunsen burner gives a flame with the air hole closed for a yellow safety flame. The child does not say a beaker is the best for exact volumes or that apparatus is washed after use only if it looks dirty. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the apparatus for a described job",
+      "say how to read or hold the apparatus",
+      "say how to look after it",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.LAB_ACCIDENTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.CAPACITY.LITRE_MEASURE",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.MASS.KG_MEASURE",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.LIVING.THE_CELL.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "INTE.G8.LIVING.THE_CELL.d",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+     "name": "Give the SI unit for the basic quantities: length, mass, time, temperature and electric current",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.c"
+     ],
+     "mastery": "The child says the SI unit of length is the metre (m), mass the kilogram (kg), time the second (s), temperature the kelvin (K) and electric current the ampere (A), and that the thermometer in the classroom reads in degrees Celsius. The child does not say the SI unit of mass is the gram or that mass and weight are the same thing. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the SI unit of a quantity",
+      "name the quantity a unit measures",
+      "choose the right unit for a measurement",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G4.MEASUR.LENGTH.M_CM_RELATION",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+     "name": "Build the derived units area, volume, speed and density from the basic units",
+     "outcomes": [
+      "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.c"
+     ],
+     "mastery": "The child says area is length times length so its unit is the square metre (m2), volume is length times length times length so its unit is the cubic metre (m3), speed is distance over time so its unit is metres per second (m/s), and density is mass over volume so its unit is kilograms per cubic metre (kg/m3). The child does not give the litre as the SI unit of volume or give a speed in metres alone. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say the unit of a derived quantity",
+      "say which basic units make a derived unit",
+      "work out the unit from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "MATH.G6.MEASUR.CAPACITY.CM3_ML_LITRE_RELATION",
+       "kind": "skill",
+       "reason": "Mathematics taught the measuring idea first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.FORCE_.PRESSURE.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_PREDICT_RESULT",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+     "error": "Thinks a prediction is the result that happened.",
+     "example": {
+      "question": "What is a prediction?",
+      "wrong_answer": "What happened in the test",
+      "correct_answer": "What you expect to happen before you test"
+     },
+     "cause": "The child mixes before and after.",
+     "reveals": "Offer \"What happened in the test\" next to the right answer and ask the question again in a new context.",
+     "help": "Write the prediction before the test and read it out afterwards.",
+     "feedback": "A prediction is said before the test. The result is what happened.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_OBSERVE_EYES",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+     "error": "Thinks observing means only looking with the eyes.",
+     "example": {
+      "question": "Which of these is observing?",
+      "wrong_answer": "Only looking",
+      "correct_answer": "Using the senses safely, such as looking, listening and feeling"
+     },
+     "cause": "The child links observing to eyes.",
+     "reveals": "Offer \"Only looking\" next to the right answer and ask the question again in a new context.",
+     "help": "Observe a bell: see it, hear it, feel the vibration.",
+     "feedback": "Observing uses your senses safely. Never taste or smell unknown chemicals.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS.M_SS_CONCLUSION_GUESS",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SCIENCE_SKILLS",
+     "error": "Thinks a conclusion is a guess made before testing.",
+     "example": {
+      "question": "Which statement is a conclusion?",
+      "wrong_answer": "I think iron is magnetic",
+      "correct_answer": "The nail was pulled to the magnet, so iron is magnetic"
+     },
+     "cause": "The child mixes a hypothesis and a conclusion.",
+     "reveals": "Offer \"I think iron is magnetic\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that a conclusion has to point at the results.",
+     "feedback": "A conclusion says what the results show. A guess made before testing is a prediction.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_BEAKER_EXACT",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+     "error": "Thinks a beaker measures liquid as exactly as a measuring cylinder.",
+     "example": {
+      "question": "Which apparatus gives the most exact volume of a liquid?",
+      "wrong_answer": "A beaker",
+      "correct_answer": "A measuring cylinder"
+     },
+     "cause": "The child sees the marks on a beaker.",
+     "reveals": "Offer \"A beaker\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour 50 ml into both and compare how well the line is read.",
+     "feedback": "A measuring cylinder is made for exact volumes. A beaker's marks are only rough.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_READ_TOP",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+     "error": "Reads a measuring cylinder at the top of the curve or from above.",
+     "example": {
+      "question": "How should you read the volume in a measuring cylinder?",
+      "wrong_answer": "From above, at the top of the liquid",
+      "correct_answer": "At eye level, at the bottom of the curve"
+     },
+     "cause": "The child reads the number nearest the top.",
+     "reveals": "Offer \"From above, at the top of the liquid\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at the curve from a low, level and a high angle.",
+     "feedback": "Read with your eye level with the bottom of the curve. Reading from above gives a wrong number.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE.M_AU_YELLOW_FLAME",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.APPARATUS_USE",
+     "error": "Thinks the hottest Bunsen flame is the yellow one, or that the air hole should always stay closed.",
+     "example": {
+      "question": "Which Bunsen flame is the hottest and cleanest for heating?",
+      "wrong_answer": "The yellow flame, because it is bright",
+      "correct_answer": "The blue flame with the air hole open"
+     },
+     "cause": "The child links bright colour with heat.",
+     "reveals": "Offer \"The yellow flame, because it is bright\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a tile over each flame: the yellow one leaves black soot.",
+     "feedback": "The blue flame is the hottest and does not leave soot. The yellow flame is the cooler safety flame.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_GRAM",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+     "error": "Gives the gram as the SI unit of mass.",
+     "example": {
+      "question": "What is the SI unit of mass?",
+      "wrong_answer": "The gram",
+      "correct_answer": "The kilogram"
+     },
+     "cause": "The child uses grams on the kitchen scale.",
+     "reveals": "Offer \"The gram\" next to the right answer and ask the question again in a new context.",
+     "help": "Read a packet that says 1 kg and one that says 500 g.",
+     "feedback": "The SI unit of mass is the kilogram. The gram is a smaller unit.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_MASS_WEIGHT",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+     "error": "Uses mass and weight as the same thing, and gives the weight in kilograms.",
+     "example": {
+      "question": "Which quantity is measured in kilograms?",
+      "wrong_answer": "Weight",
+      "correct_answer": "Mass"
+     },
+     "cause": "Shops say \"weight\" for how heavy something is.",
+     "reveals": "Offer \"Weight\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that mass is how much matter there is, and weight is the pull on it, in newtons.",
+     "feedback": "Kilograms measure mass. Weight is a force and is measured in newtons.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE.M_SB_CELSIUS_SI",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_BASE",
+     "error": "Gives the degree Celsius as the SI unit of temperature.",
+     "example": {
+      "question": "What is the SI unit of temperature?",
+      "wrong_answer": "The degree Celsius",
+      "correct_answer": "The kelvin"
+     },
+     "cause": "The child uses a Celsius thermometer.",
+     "reveals": "Offer \"The degree Celsius\" next to the right answer and ask the question again in a new context.",
+     "help": "Show that 0 degrees Celsius is 273 kelvin.",
+     "feedback": "The SI unit of temperature is the kelvin. The Celsius scale is used in daily life.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_LITRE_SI",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+     "error": "Gives the litre as the SI unit of volume.",
+     "example": {
+      "question": "What is the SI unit of volume?",
+      "wrong_answer": "The litre",
+      "correct_answer": "The cubic metre"
+     },
+     "cause": "The child pours drinks measured in litres.",
+     "reveals": "Offer \"The litre\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that one cubic metre is a box one metre long, wide and high.",
+     "feedback": "The SI unit of volume is the cubic metre. The litre is a common smaller unit.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_AREA_M",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+     "error": "Gives area in metres, not square metres.",
+     "example": {
+      "question": "A floor is 4 m long and 3 m wide. What is its area?",
+      "wrong_answer": "12 m",
+      "correct_answer": "12 m2"
+     },
+     "cause": "The child forgets that area is length times length.",
+     "reveals": "Offer \"12 m\" next to the right answer and ask the question again in a new context.",
+     "help": "Cover the floor with one-metre squares and count them.",
+     "feedback": "Area is length times width, so the unit is square metres, m2.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED.M_SD_SPEED_M",
+     "skill": "INTE.G7.SCIENT.LABORATORY_APPARATUS_AND.SI_DERIVED",
+     "error": "Gives speed in metres or in seconds, without both.",
+     "example": {
+      "question": "Which is the unit of speed?",
+      "wrong_answer": "Metres",
+      "correct_answer": "Metres per second"
+     },
+     "cause": "The child names only the distance part.",
+     "reveals": "Offer \"Metres\" next to the right answer and ask the question again in a new context.",
+     "help": "Say a boy runs 100 m in 20 s: the speed is 5 metres in each second.",
+     "feedback": "Speed is distance divided by time, so its unit is metres per second, m/s.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.1.1",
     "INTE.G7.RUBRIC.1.2",
     "INTE.G7.RUBRIC.1.3",
     "INTE.G7.RUBRIC.1.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and c are tested by questions. Outcome b (use and care for apparatus) is practical: the knowledge is tested, the handling is observed by the teacher (a Bunsen burner, hot water and glassware only with a teacher). Outcome d (appreciate consumer protection) is attitudinal; the labelled packaging collection is a portfolio piece."
   },
   {
    "code": "INTE.G7.MIXTUR.MIXTURES",
@@ -291,13 +1062,309 @@
      "indicator": "INTE.G7.RUBRIC.2.1"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+     "name": "Tell homogeneous from heterogeneous mixtures and name the solute, solvent and solution",
+     "outcomes": [
+      "INTE.G7.MIXTUR.MIXTURES.a"
+     ],
+     "mastery": "The child says a homogeneous mixture looks the same all through (salt in water, tea with sugar, brass, air), the solid or liquid that dissolves is the solute, the liquid it dissolves in is the solvent, and both together make the solution. The child does not say that a dissolved solid has disappeared or that muddy water is a solution. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say if a named mixture is homogeneous",
+      "name the solute and the solvent",
+      "say what a solution is",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.HOMOGENEOUS_OR_HETEROGENEOUS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.MIXTURE_TYPES",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.MIXTUR.ELEMENTS_AND_COMPOUNDS.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+     "name": "Choose the method that separates a homogeneous mixture and say why it works",
+     "outcomes": [
+      "INTE.G7.MIXTUR.MIXTURES.a"
+     ],
+     "mastery": "The child says evaporation gets a dissolved solid from its solvent, crystallisation gives crystals as a hot strong solution cools, simple distillation collects the solvent (pure water) from a solution, fractional distillation separates liquids with different boiling points, sublimation separates a solid that turns straight to a gas (iodine, ammonium chloride) from one that does not, solvent extraction uses a liquid that dissolves only one part, and chromatography separates coloured dyes by how far they travel on paper. The child does not say that filtering separates salt from water. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the method for a named mixture",
+      "say what property the method uses",
+      "say what is collected and where",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_PRINCIPLE",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.MIXTUR.PHYSICAL_AND_CHEMICAL_CH.b",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+     "name": "Say where separating methods are used in daily life",
+     "outcomes": [
+      "INTE.G7.MIXTUR.MIXTURES.b"
+     ],
+     "mastery": "The child says salt is won from sea water by evaporation in shallow pans at the coast, clean drinking water can be got from salty or dirty water by distillation, crude oil is separated into petrol, diesel and paraffin by fractional distillation, and the dyes in an ink are found by chromatography. The child does not say these uses are only for scientists or that the water in a salt pan is filtered. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which method a named process uses",
+      "say why a process needs separating",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_USES",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_DISAPPEAR",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+     "error": "Thinks the salt has disappeared when it dissolves in water.",
+     "example": {
+      "question": "Salt is stirred into water until it cannot be seen. Where is the salt?",
+      "wrong_answer": "It has gone, it disappeared",
+      "correct_answer": "It is still there, spread through the water"
+     },
+     "cause": "The child can no longer see the solid.",
+     "reveals": "Offer \"It has gone, it disappeared\" next to the right answer and ask the question again in a new context.",
+     "help": "Taste a drop, or leave the water to evaporate and look at the white crystals.",
+     "feedback": "The salt has not gone. It is spread through the water. Evaporate the water and it comes back.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_MUDDY_SOLUTION",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+     "error": "Thinks muddy water is a solution because the soil is mixed in.",
+     "example": {
+      "question": "Which of these is a solution?",
+      "wrong_answer": "Muddy water",
+      "correct_answer": "Salt dissolved in water"
+     },
+     "cause": "The child links mixing with dissolving.",
+     "reveals": "Offer \"Muddy water\" next to the right answer and ask the question again in a new context.",
+     "help": "Leave muddy water to stand: the soil settles. Salty water stays clear.",
+     "feedback": "Muddy water is a heterogeneous mixture. A solution looks the same all through and the solute does not settle.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION.M_HM_SOLVENT_SOLUTE",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+     "error": "Mixes up solute and solvent.",
+     "example": {
+      "question": "In sugar dissolved in tea, which is the solvent?",
+      "wrong_answer": "The sugar",
+      "correct_answer": "The water in the tea"
+     },
+     "cause": "The child thinks the main thing in the cup is the solvent only if it is solid.",
+     "reveals": "Offer \"The sugar\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that the solvent is the liquid that dissolves, and the solute is what dissolves.",
+     "feedback": "The solvent does the dissolving (water). The solute is what dissolves (sugar).",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_FILTER_SALT",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+     "error": "Thinks filtering separates salt from salt water.",
+     "example": {
+      "question": "Which method separates salt from salt water?",
+      "wrong_answer": "Filtering",
+      "correct_answer": "Evaporation"
+     },
+     "cause": "The child uses filtering for every mixture.",
+     "reveals": "Offer \"Filtering\" next to the right answer and ask the question again in a new context.",
+     "help": "Pour salt water through filter paper and taste it.",
+     "feedback": "The salt is dissolved, so it goes through the filter. Evaporate the water to get the salt.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_EVAP_DISTIL",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+     "error": "Does not tell evaporation from distillation: thinks evaporation also collects the water.",
+     "example": {
+      "question": "Which method lets you collect pure water from salt water?",
+      "wrong_answer": "Evaporation, which lets the water escape into the air",
+      "correct_answer": "Simple distillation, which cools the vapour back to liquid"
+     },
+     "cause": "The child stops at the vapour.",
+     "reveals": "Offer \"Evaporation, which lets the water escape into the air\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a cold plate above a boiling pot and watch the drops.",
+     "feedback": "Evaporation lets the water escape. Distillation cools the vapour and collects it as pure water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE.M_SE_CHROMA_COLOUR",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_CHOICE",
+     "error": "Thinks chromatography separates mixtures by boiling.",
+     "example": {
+      "question": "How does chromatography separate the dyes in black ink?",
+      "wrong_answer": "By boiling the dyes off one at a time",
+      "correct_answer": "The dyes travel different distances up the paper"
+     },
+     "cause": "The child links separating with heating.",
+     "reveals": "Offer \"By boiling the dyes off one at a time\" next to the right answer and ask the question again in a new context.",
+     "help": "Run a felt-tip dot on a strip of paper and watch the colours split.",
+     "feedback": "In chromatography the dyes travel up the paper at different speeds. Nothing is boiled.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SALT_FILTER",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+     "error": "Thinks sea salt is won by filtering the sea water.",
+     "example": {
+      "question": "How is salt won from sea water at the coast?",
+      "wrong_answer": "By filtering the sea water",
+      "correct_answer": "By letting the water evaporate in shallow pans"
+     },
+     "cause": "The child uses filtering for every mixture.",
+     "reveals": "Offer \"By filtering the sea water\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at photos of the salt pans at Gongoni or Malindi.",
+     "feedback": "The Sun evaporates the water in shallow pans and the salt is left.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_OIL_ONE",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+     "error": "Thinks crude oil is one liquid that is simply poured into the tank.",
+     "example": {
+      "question": "How do we get petrol, diesel and paraffin from crude oil?",
+      "wrong_answer": "It already comes out of the ground as petrol, diesel and paraffin",
+      "correct_answer": "By fractional distillation, which uses their different boiling points"
+     },
+     "cause": "The child has not seen crude oil.",
+     "reveals": "Offer \"It already comes out of the ground as petrol, diesel and paraffin\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that crude oil is a thick black mixture of many liquids.",
+     "feedback": "Crude oil is a mixture. Fractional distillation separates it using the different boiling points.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES.M_SU_SCIENTISTS_ONLY",
+     "skill": "INTE.G7.MIXTUR.MIXTURES.SEPARATE_USES",
+     "error": "Thinks separating mixtures is only done in laboratories.",
+     "example": {
+      "question": "Where is separating of mixtures used?",
+      "wrong_answer": "Only in laboratories",
+      "correct_answer": "In homes and industry, for example making salt, tea and clean water"
+     },
+     "cause": "The child ties methods to the laboratory.",
+     "reveals": "Offer \"Only in laboratories\" next to the right answer and ask the question again in a new context.",
+     "help": "List the separating done in a kitchen: sieving flour, straining tea, evaporating to make salt.",
+     "feedback": "Separating mixtures is used at home, on farms and in industry as well as in the laboratory.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.2.1",
     "INTE.G7.RUBRIC.2.2",
     "INTE.G7.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a and b are tested by questions (which method, why it works, where it is used). The separations themselves are practical: evaporation, simple distillation, sublimation and chromatography are done by the teacher or with the teacher (heat, vapour). Outcome c (appreciate) is attitudinal. Fractional distillation is by information only."
   },
   {
    "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO",
@@ -373,13 +1440,349 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+     "name": "Use litmus paper to say whether a solution is an acid, a base or neutral",
+     "outcomes": [
+      "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.a"
+     ],
+     "mastery": "The child says blue litmus turns red in an acid, red litmus turns blue in a base, neither paper changes colour in a neutral solution such as pure water, lemon juice and vinegar are acids, soap solution and wood ash solution are bases, and unknown liquids are never tasted. The child does not say a base turns blue litmus bluer or that a litmus paper that stays red shows an acid. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what colour a litmus paper turns",
+      "say if a solution is an acid, a base or neutral from the litmus result",
+      "say which litmus test is safe",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.MIXTURES.HOMOGENEOUS_SOLUTION",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+     "name": "Say how acid-base indicators from plant extracts are made and used",
+     "outcomes": [
+      "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.b"
+     ],
+     "mastery": "The child says red cabbage, beetroot, hibiscus flowers or tea can be crushed and soaked in warm water, strained, and the coloured liquid tested with a household solution; the colour changes tell acid or base, and the colours are compared with ones already known for acids and bases. The child does not say that every colour change means a base or that the indicator should be made with strong chemicals. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick a plant that makes an indicator",
+      "put the steps of making an indicator in order",
+      "say what the colour change shows",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+     "name": "Describe the physical properties of acids and bases",
+     "outcomes": [
+      "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.c"
+     ],
+     "mastery": "The child says acids taste sour and bases taste bitter and feel soapy, both change the colour of indicators, strong ones are corrosive and can burn skin, and nothing in the laboratory is tasted or touched to find out. The child does not say a base is the opposite of a poison or that every acid burns skin. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which property belongs to acids or bases",
+      "pick the safe way to find out",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.SCIENT.LABORATORY_SAFETY.HAZARD_SYMBOLS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+     "name": "Describe the uses of acids, bases and indicators in daily life",
+     "outcomes": [
+      "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.d"
+     ],
+     "mastery": "The child says vinegar and lemon give a sour taste and help keep food, an antacid (a base) eases heartburn from too much stomach acid, soap and cleaners are bases that lift grease, lime or wood ash is added to soil that is too acidic, battery acid is a strong acid that must be handled by adults, and indicators show whether a solution, a soil or a swimming pool is acidic or basic. The child does not say that an acid cures every stomach complaint or that a stronger acid is always better. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named acid or base is used for",
+      "say why an acid or base is chosen for a job",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_BLUE_BASE",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+     "error": "Thinks blue litmus paper turns more blue in a base, or red in a base.",
+     "example": {
+      "question": "What does blue litmus paper do in an acid?",
+      "wrong_answer": "It stays blue",
+      "correct_answer": "It turns red"
+     },
+     "cause": "The child learns the colours in the wrong order.",
+     "reveals": "Offer \"It stays blue\" next to the right answer and ask the question again in a new context.",
+     "help": "Dip blue litmus in lemon juice and watch.",
+     "feedback": "Blue litmus turns red in an acid. Red litmus turns blue in a base.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_NEUTRAL_ACID",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+     "error": "Thinks water, or any liquid that does not change litmus, must be an acid.",
+     "example": {
+      "question": "Pure water does not change either litmus paper. What is it?",
+      "wrong_answer": "An acid",
+      "correct_answer": "Neutral"
+     },
+     "cause": "The child knows only two groups.",
+     "reveals": "Offer \"An acid\" next to the right answer and ask the question again in a new context.",
+     "help": "Test pure water, lemon juice and soap solution on both papers.",
+     "feedback": "A liquid that changes neither paper is neutral. It is neither an acid nor a base.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY.M_LC_TASTE_TEST",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.LITMUS_CLASSIFY",
+     "error": "Thinks you can find out whether a liquid is an acid or a base by tasting it.",
+     "example": {
+      "question": "How can you safely find out if a liquid is an acid or a base?",
+      "wrong_answer": "Taste a drop",
+      "correct_answer": "Test it with litmus paper"
+     },
+     "cause": "The child knows that lemon is sour.",
+     "reveals": "Offer \"Taste a drop\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that strong ones burn the mouth and some are poisonous.",
+     "feedback": "Never taste to test. Use litmus paper or an indicator.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_ONLY_LITMUS",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+     "error": "Thinks only litmus paper can be used as an indicator.",
+     "example": {
+      "question": "Which of these can be used to make an indicator?",
+      "wrong_answer": "Only litmus from a shop",
+      "correct_answer": "Red cabbage, beetroot or hibiscus flowers"
+     },
+     "cause": "The child met only litmus paper.",
+     "reveals": "Offer \"Only litmus from a shop\" next to the right answer and ask the question again in a new context.",
+     "help": "Soak crushed hibiscus petals in warm water and add lemon juice.",
+     "feedback": "Many coloured plants make indicators. The coloured extract changes colour in acids and bases.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_SAME_COLOUR",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+     "error": "Thinks the extract keeps one colour whatever it is tested with.",
+     "example": {
+      "question": "A red cabbage extract is added to vinegar and then to soap solution. What happens?",
+      "wrong_answer": "It stays the same colour in both",
+      "correct_answer": "It changes to a different colour in each"
+     },
+     "cause": "The child expects an extract to be a plain colour.",
+     "reveals": "Offer \"It stays the same colour in both\" next to the right answer and ask the question again in a new context.",
+     "help": "Test the extract on lemon, vinegar, soap and water side by side.",
+     "feedback": "An indicator changes colour in acids and bases. The colours show which is which.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT.M_IP_STRONG_CHEM",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.INDICATOR_PLANT",
+     "error": "Thinks making an indicator needs strong chemicals.",
+     "example": {
+      "question": "How is an indicator made from red cabbage?",
+      "wrong_answer": "By soaking it in a strong acid",
+      "correct_answer": "By crushing it and soaking it in warm water, then straining it"
+     },
+     "cause": "The child links science with chemicals.",
+     "reveals": "Offer \"By soaking it in a strong acid\" next to the right answer and ask the question again in a new context.",
+     "help": "Make it with warm water and a cloth strainer.",
+     "feedback": "A plant indicator needs only warm water: crush, soak, strain.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_SWEET",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+     "error": "Thinks bases taste sweet or have no taste.",
+     "example": {
+      "question": "What do bases feel and taste like?",
+      "wrong_answer": "Sweet",
+      "correct_answer": "Bitter and soapy"
+     },
+     "cause": "The child has no everyday word for bitter.",
+     "reveals": "Offer \"Sweet\" next to the right answer and ask the question again in a new context.",
+     "help": "Say how soap tastes if some gets in the mouth (do not test).",
+     "feedback": "Bases taste bitter and feel soapy. Never taste them in the laboratory.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_ALL_BURN",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+     "error": "Thinks all acids burn skin.",
+     "example": {
+      "question": "Which of these is true?",
+      "wrong_answer": "All acids burn skin",
+      "correct_answer": "Strong acids can burn skin, and weak acids such as lemon juice are in food"
+     },
+     "cause": "The child knows about battery acid.",
+     "reveals": "Offer \"All acids burn skin\" next to the right answer and ask the question again in a new context.",
+     "help": "List acids we eat: lemon, vinegar, tamarind.",
+     "feedback": "Strong acids burn. Weak acids, such as in lemon and vinegar, are safe in food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES.M_AP_BASE_OPPOSITE",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_PROPERTIES",
+     "error": "Thinks a base is a poison and cancels an acid like an antidote.",
+     "example": {
+      "question": "What is a base?",
+      "wrong_answer": "A poison that works against acids",
+      "correct_answer": "A substance that is bitter and turns red litmus blue"
+     },
+     "cause": "The child hears of \"neutralising\".",
+     "reveals": "Offer \"A poison that works against acids\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that strong bases burn as well.",
+     "feedback": "A base is a substance with certain properties. Strong bases are corrosive as well.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_ANTACID_ACID",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+     "error": "Thinks an acid is the cure for heartburn.",
+     "example": {
+      "question": "Which substance eases heartburn from too much stomach acid?",
+      "wrong_answer": "More acid, such as vinegar",
+      "correct_answer": "An antacid, which is a base"
+     },
+     "cause": "The child thinks a cure must be a medicine of the same kind.",
+     "reveals": "Offer \"More acid, such as vinegar\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that an antacid tablet tastes chalky, not sour.",
+     "feedback": "An antacid is a base. It cancels some of the extra stomach acid.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_SOIL_ASH",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+     "error": "Thinks wood ash is spread on soil only to feed it.",
+     "example": {
+      "question": "Why is lime or wood ash sometimes added to soil?",
+      "wrong_answer": "Because the soil is too hungry",
+      "correct_answer": "Because the soil is too acidic"
+     },
+     "cause": "The child links ash with fertiliser.",
+     "reveals": "Offer \"Because the soil is too hungry\" next to the right answer and ask the question again in a new context.",
+     "help": "Say what an indicator shows about acidic soil.",
+     "feedback": "Lime and ash are bases. They cancel the extra acid in the soil.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES.M_AU2_STRONGER",
+     "skill": "INTE.G7.MIXTUR.ACIDS_BASES_AND_INDICATO.AB_USES",
+     "error": "Thinks a stronger acid or base is always better for a job.",
+     "example": {
+      "question": "Why is vinegar and not battery acid used on chips?",
+      "wrong_answer": "The strong one would be better",
+      "correct_answer": "Strong acids burn and are dangerous"
+     },
+     "cause": "The child thinks strength means power.",
+     "reveals": "Offer \"The strong one would be better\" next to the right answer and ask the question again in a new context.",
+     "help": "List the strength of the acid in each house item.",
+     "feedback": "Strong acids and bases burn. Weak ones are used in food and cleaning.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.2.1",
     "INTE.G7.RUBRIC.2.2",
     "INTE.G7.RUBRIC.2.3"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, c and d are tested by questions. Outcome b (prepare an indicator from plant extracts) is practical: the steps and the colour meanings are tested, the preparing is observed (warm water, a strainer and an adult nearby). Outcome e (appreciate) is attitudinal. Nothing is tasted in practice work."
   },
   {
    "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE",
@@ -455,14 +1858,369 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+     "name": "Name the parts of the male reproductive system and what each does",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.a",
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.b"
+     ],
+     "mastery": "The child names the testes (make sperm and are held in the scrotum), the sperm duct, the urethra (carries sperm and also urine, but never both together) and the penis, and says what each does. The child does not say the testes make urine or that sperm are made in the bladder. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say what a named part does",
+      "pick the part that does not belong",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.c",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+     "name": "Name the parts of the female reproductive system and what each does",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.a",
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.b"
+     ],
+     "mastery": "The child names the ovaries (make and store eggs), the oviducts (carry an egg towards the uterus), the uterus (womb, where a baby would grow), the cervix (the narrow neck of the uterus) and the vagina (the passage to the outside), and says what each does. The child does not say the stomach holds a baby or that the ovary is the same as the uterus. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say what a named part does",
+      "pick the part that does not belong",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_PARTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.c",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+     "name": "Describe the physical changes in boys and girls during adolescence",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.c"
+     ],
+     "mastery": "The child says that in adolescence both boys and girls grow taller quickly, grow hair under the arms and in the pubic area, sweat more and get pimples; boys also get a deeper voice and broader shoulders and begin to make sperm; girls also develop breasts, wider hips and begin to menstruate (monthly periods); and that the age these start differs from child to child and is normal. The child does not say that a child whose body changes early or late is sick. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which change belongs to boys or girls",
+      "say which change is shared by both",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+     "name": "Choose ways of coping with the challenges of adolescence",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.d"
+     ],
+     "mastery": "The child says to wash the body and clothes daily to manage sweat and body odour, to wash the face and not squeeze pimples, to use clean sanitary pads and change them often during periods, to eat well and sleep, to talk to a parent, teacher or counsellor about worries and moods, and to say no to pressure from friends. The child does not say that periods or wet dreams are dirty or shameful, or that worries are best kept to oneself. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the healthy way to deal with a challenge",
+      "say who to ask for help",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.LIVING.REPRODUCTION_IN_HUMAN_BE.b",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_TESTIS_URINE",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+     "error": "Thinks the testes make urine, or that sperm are made in the bladder.",
+     "example": {
+      "question": "Which part of the male reproductive system makes sperm?",
+      "wrong_answer": "The bladder",
+      "correct_answer": "The testes"
+     },
+     "cause": "The child links all private parts with passing urine.",
+     "reveals": "Offer \"The bladder\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the urinary system and the reproductive system in two colours.",
+     "feedback": "The testes make sperm. The bladder only stores urine.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_URETHRA_ONE",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+     "error": "Thinks the urethra carries only urine, or only sperm.",
+     "example": {
+      "question": "What does the urethra carry in a man?",
+      "wrong_answer": "Only urine",
+      "correct_answer": "Urine at one time and sperm at another"
+     },
+     "cause": "The child learns one job per tube.",
+     "reveals": "Offer \"Only urine\" next to the right answer and ask the question again in a new context.",
+     "help": "Name the tube and say it is the shared way out, used for one at a time.",
+     "feedback": "In males the urethra is a shared passage: it carries urine and sperm, never both together.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE.M_RM_SCROTUM",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_MALE",
+     "error": "Thinks the testes are inside the body in the stomach.",
+     "example": {
+      "question": "Where are the testes held?",
+      "wrong_answer": "Inside the stomach",
+      "correct_answer": "In the scrotum, outside the body"
+     },
+     "cause": "The child puts all organs inside.",
+     "reveals": "Offer \"Inside the stomach\" next to the right answer and ask the question again in a new context.",
+     "help": "Say why they are held outside the body: it is cooler there.",
+     "feedback": "The testes are in the scrotum. It is cooler outside the body, which is better for making sperm.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_STOMACH_BABY",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+     "error": "Thinks a baby grows in the stomach.",
+     "example": {
+      "question": "Where does a baby grow before birth?",
+      "wrong_answer": "In the stomach",
+      "correct_answer": "In the uterus"
+     },
+     "cause": "The child sees the mother's belly grow.",
+     "reveals": "Offer \"In the stomach\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare the position of the stomach and the uterus on a chart.",
+     "feedback": "A baby grows in the uterus (womb), not in the stomach.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_OVARY_UTERUS",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+     "error": "Mixes up the ovary and the uterus.",
+     "example": {
+      "question": "Which part makes and stores the eggs?",
+      "wrong_answer": "The uterus",
+      "correct_answer": "The ovaries"
+     },
+     "cause": "The child knows the words but not the jobs.",
+     "reveals": "Offer \"The uterus\" next to the right answer and ask the question again in a new context.",
+     "help": "Label two parts and say what each is for.",
+     "feedback": "The ovaries make and store eggs. The uterus is where a baby would grow.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE.M_RF_CERVIX_VAGINA",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.REPRO_FEMALE",
+     "error": "Thinks the cervix is the opening to the outside.",
+     "example": {
+      "question": "What is the cervix?",
+      "wrong_answer": "The opening to the outside of the body",
+      "correct_answer": "The narrow neck of the uterus"
+     },
+     "cause": "The child mixes up the cervix and the vagina.",
+     "reveals": "Offer \"The opening to the outside of the body\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace the path on a chart from the uterus to the outside.",
+     "feedback": "The cervix is the narrow neck of the uterus. The vagina is the passage to the outside.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_BOYS_ONLY",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+     "error": "Thinks only boys grow quickly and only girls change in adolescence.",
+     "example": {
+      "question": "Which changes happen to both boys and girls?",
+      "wrong_answer": "Only girls change",
+      "correct_answer": "Quick growth, more sweat, hair under the arms and pimples"
+     },
+     "cause": "The child learns the lists in separate groups.",
+     "reveals": "Offer \"Only girls change\" next to the right answer and ask the question again in a new context.",
+     "help": "List changes in two columns and mark the shared ones.",
+     "feedback": "Both boys and girls change. Some changes are shared and some are different.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_SAME_AGE",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+     "error": "Thinks all children change at exactly the same age, so a late one is sick.",
+     "example": {
+      "question": "Faith has not begun to change but her friend has. What can you tell her?",
+      "wrong_answer": "She must be sick",
+      "correct_answer": "Everyone changes at a different age, and that is normal"
+     },
+     "cause": "The child compares with friends.",
+     "reveals": "Offer \"She must be sick\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare heights in a class: they differ at every age.",
+     "feedback": "The age at which the changes begin differs and is normal. A health worker can answer worries.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES.M_AC_PERIOD_ILLNESS",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_CHANGES",
+     "error": "Thinks periods are an illness or a punishment.",
+     "example": {
+      "question": "What is menstruation?",
+      "wrong_answer": "A sickness that girls get",
+      "correct_answer": "A normal monthly flow of blood from the uterus"
+     },
+     "cause": "The child has heard it described as bad or dirty.",
+     "reveals": "Offer \"A sickness that girls get\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that it is a sign that the body is growing up.",
+     "feedback": "Menstruation is a normal change in a girl's body. It is not an illness.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_SQUEEZE",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+     "error": "Thinks squeezing pimples or using strong soap is the way to clear them.",
+     "example": {
+      "question": "Which is the best way to care for skin with pimples?",
+      "wrong_answer": "Squeeze them to clear them",
+      "correct_answer": "Wash the face gently each day and do not squeeze"
+     },
+     "cause": "The child wants a quick fix.",
+     "reveals": "Offer \"Squeeze them to clear them\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that squeezing can spread germs and leave marks.",
+     "feedback": "Wash gently each day and do not squeeze pimples.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_KEEP_QUIET",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+     "error": "Thinks worries and mood swings should be kept to oneself.",
+     "example": {
+      "question": "A learner feels very sad and angry, and does not know why. What is a good step?",
+      "wrong_answer": "Keep it to herself",
+      "correct_answer": "Talk to a parent, teacher or counsellor she trusts"
+     },
+     "cause": "The child thinks it is shameful.",
+     "reveals": "Offer \"Keep it to herself\" next to the right answer and ask the question again in a new context.",
+     "help": "Say who in school can help.",
+     "feedback": "Talk to a trusted adult. Moods change in adolescence and help is there.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING.M_AC2_PADS",
+     "skill": "INTE.G7.LIVING.HUMAN_REPRODUCTIVE_SYSTE.ADOLESCENCE_COPING",
+     "error": "Thinks one pad can be used all day, or that periods mean missing school.",
+     "example": {
+      "question": "What should a girl do about pads during her period?",
+      "wrong_answer": "Use one pad all day, and stay home",
+      "correct_answer": "Change a clean pad often, and wash well"
+     },
+     "cause": "The child lacks practical information.",
+     "reveals": "Offer \"Use one pad all day, and stay home\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that a clean pad changed often is healthy.",
+     "feedback": "Use a clean pad and change it often. Girls can go to school.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.3.1",
     "INTE.G7.RUBRIC.3.2",
     "INTE.G7.RUBRIC.3.3",
     "INTE.G7.RUBRIC.3.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (a plan to manage adolescence challenges) is a written plan marked by the teacher; the habits behind it are tested. Outcome e (appreciate) is attitudinal. Teach with a female and a male teacher or guidance counsellor as the school decides; wording to be confirmed by a teacher."
   },
   {
    "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM",
@@ -542,14 +2300,366 @@
      "indicator": "INTE.G7.RUBRIC.3.4"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+     "name": "Name the organs of excretion and the waste each one removes",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.a",
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.b"
+     ],
+     "mastery": "The child says excretion is the removal of waste made by the body's own cells; the skin removes water and salts in sweat, the lungs remove carbon dioxide and water vapour when we breathe out, and the kidneys remove urea, excess salts and water as urine. The child does not say faeces are excreted waste from the body's cells (they are food that was never absorbed). Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a named organ removes",
+      "say which organ removes a named waste",
+      "decide if a waste is excreted",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G5.LIVING.THE_HUMAN_BREATHING_SYST.BREATHING_FUNCTIONS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.LIVING.HUMAN_DIGESTIVE_SYSTEM.DIGESTIVE_ORDER",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+     "name": "Name the parts of the skin and what each does",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.a"
+     ],
+     "mastery": "The child says the epidermis is the thin outer layer that protects, the dermis is the layer under it with blood vessels, nerve endings, hair roots and sweat glands, the sweat gland makes sweat, the sweat duct carries it up and the pore is the opening on the surface, and hair grows out of the dermis. The child does not say the epidermis makes the sweat or that pores are holes that go to the blood. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "say what a named part does",
+      "put the layers in order",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+     "name": "Name the parts of the urinary system and what each does",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.b"
+     ],
+     "mastery": "The child says the kidneys (two, bean-shaped, at the back) clean the blood and make urine, blood goes to them in a vessel and comes back cleaned, the ureters carry urine down to the bladder, the bladder stores it, and the urethra carries it out. The child does not say the kidneys store urine or that drink goes straight to the bladder. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the part from its job",
+      "put the path of urine in order",
+      "say what a named part does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+     "name": "Say what causes common kidney disorders and which habits protect the kidneys and the skin",
+     "outcomes": [
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.c",
+      "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.d"
+     ],
+     "mastery": "The child says kidney stones, infections, high blood pressure, diabetes and misuse of some medicines can harm the kidneys, that drinking enough clean water, eating little salt, not smoking and seeing a health worker when urine hurts or looks wrong protect them, and that bathing and wearing clean clothes keep the skin healthy. The child does not say kidney problems are caught from other people or that drinking less water protects the kidneys. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what can harm the kidneys",
+      "pick the habit that protects the kidneys or the skin",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
+       "kind": "skill",
+       "reason": "Grade 6 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_FAECES",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+     "error": "Thinks faeces are excreted waste in the same way as urine and sweat.",
+     "example": {
+      "question": "Which of these is excreted by the body?",
+      "wrong_answer": "Faeces",
+      "correct_answer": "Urine"
+     },
+     "cause": "The child lists everything that leaves the body.",
+     "reveals": "Offer \"Faeces\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that faeces are food that was never taken into the body's cells.",
+     "feedback": "Excretion removes waste made by cells, such as urea and carbon dioxide. Faeces are undigested food.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_LUNGS_O2",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+     "error": "Thinks the lungs only take in air and do not remove waste.",
+     "example": {
+      "question": "What waste gas do the lungs remove?",
+      "wrong_answer": "Oxygen",
+      "correct_answer": "Carbon dioxide"
+     },
+     "cause": "The child thinks breathing out gives back only air.",
+     "reveals": "Offer \"Oxygen\" next to the right answer and ask the question again in a new context.",
+     "help": "Breathe onto a cold mirror and look at the water, and say CO2 is invisible.",
+     "feedback": "The lungs remove carbon dioxide and water vapour when we breathe out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS.M_EO_SKIN_ONLY_COOL",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.EXCRETION_ORGANS",
+     "error": "Thinks sweat only cools the body and does not remove waste.",
+     "example": {
+      "question": "What does sweat carry out of the body?",
+      "wrong_answer": "Only heat",
+      "correct_answer": "Water and salts"
+     },
+     "cause": "The child links sweat with cooling only.",
+     "reveals": "Offer \"Only heat\" next to the right answer and ask the question again in a new context.",
+     "help": "Taste a drop on a hand after exercise (a safe sample): it is salty.",
+     "feedback": "Sweat removes water and salts and also cools the body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_EPIDERMIS_SWEAT",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+     "error": "Thinks the epidermis makes sweat.",
+     "example": {
+      "question": "Which part of the skin makes sweat?",
+      "wrong_answer": "The epidermis",
+      "correct_answer": "The sweat gland"
+     },
+     "cause": "The child names the outer layer for everything.",
+     "reveals": "Offer \"The epidermis\" next to the right answer and ask the question again in a new context.",
+     "help": "Draw the layers and place the gland in the dermis.",
+     "feedback": "The sweat gland, in the dermis, makes sweat. The epidermis is the thin outer layer.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_PORE_BLOOD",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+     "error": "Thinks sweat pores lead directly to the blood.",
+     "example": {
+      "question": "What is a sweat pore?",
+      "wrong_answer": "A hole that goes to the blood",
+      "correct_answer": "The tiny opening on the skin where sweat comes out"
+     },
+     "cause": "The child sees only holes.",
+     "reveals": "Offer \"A hole that goes to the blood\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at the skin with a hand lens: tiny dots, no blood.",
+     "feedback": "A sweat pore is the opening of the sweat duct. Sweat comes out through it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS.M_SK_HAIR_EPI",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.SKIN_PARTS",
+     "error": "Thinks hair grows from the epidermis, the layer on the surface.",
+     "example": {
+      "question": "Which layer holds the roots of the hairs?",
+      "wrong_answer": "The epidermis",
+      "correct_answer": "The dermis"
+     },
+     "cause": "The child sees hair coming from the surface.",
+     "reveals": "Offer \"The epidermis\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a plucked hair: the root end is bulb-shaped.",
+     "feedback": "Hair grows from roots in the dermis. The epidermis is the surface layer.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_KIDNEY_STORE",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+     "error": "Thinks the kidneys store urine.",
+     "example": {
+      "question": "Which part stores urine?",
+      "wrong_answer": "The kidney",
+      "correct_answer": "The bladder"
+     },
+     "cause": "The child thinks the kidney holds what it makes.",
+     "reveals": "Offer \"The kidney\" next to the right answer and ask the question again in a new context.",
+     "help": "Squeeze a balloon: it stores. A bean-shaped filter does not.",
+     "feedback": "The kidneys clean the blood and make urine. The bladder stores it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_DRINK_BLADDER",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+     "error": "Thinks a drink goes straight to the bladder.",
+     "example": {
+      "question": "What happens to water that we drink before it becomes urine?",
+      "wrong_answer": "It goes straight to the bladder",
+      "correct_answer": "It is taken into the blood and the kidneys clean the blood"
+     },
+     "cause": "The child links drinking with the need to urinate.",
+     "reveals": "Offer \"It goes straight to the bladder\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace the drink: mouth, stomach, blood, kidney, bladder.",
+     "feedback": "Water enters the blood. The kidneys take out the extra water and waste, which become urine.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS.M_UP_URETER_URETHRA",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.URINARY_PARTS",
+     "error": "Mixes up the ureter and the urethra.",
+     "example": {
+      "question": "Which tube takes urine from the kidney to the bladder?",
+      "wrong_answer": "The urethra",
+      "correct_answer": "The ureter"
+     },
+     "cause": "The two words look alike.",
+     "reveals": "Offer \"The urethra\" next to the right answer and ask the question again in a new context.",
+     "help": "Say: the ureters are from the kidneys, two of them.",
+     "feedback": "The ureters take urine from the kidneys to the bladder. The urethra takes it out of the body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_STONES_CATCH",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+     "error": "Thinks kidney problems are caught from other people.",
+     "example": {
+      "question": "How do kidney stones form?",
+      "wrong_answer": "They are caught from other people",
+      "correct_answer": "Minerals in urine stick together, often when little water is drunk"
+     },
+     "cause": "The child thinks of illnesses as infections.",
+     "reveals": "Offer \"They are caught from other people\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare a sealed jar of salty water left to dry.",
+     "feedback": "Kidney stones are not caught from other people. They can form when too little water is drunk.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_LESS_WATER",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+     "error": "Thinks drinking less water protects the kidneys.",
+     "example": {
+      "question": "What helps keep the kidneys healthy?",
+      "wrong_answer": "Drinking as little water as possible",
+      "correct_answer": "Drinking enough clean water"
+     },
+     "cause": "The child thinks the kidneys must rest.",
+     "reveals": "Offer \"Drinking as little water as possible\" next to the right answer and ask the question again in a new context.",
+     "help": "Say what colour urine is when little is drunk.",
+     "feedback": "Drinking enough clean water helps the kidneys wash out waste.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH.M_KH_SKIN_RARE",
+     "skill": "INTE.G7.LIVING.HUMAN_EXCRETORY_SYSTEM.KIDNEY_HEALTH",
+     "error": "Thinks skin only needs washing when it looks dirty.",
+     "example": {
+      "question": "How often should the skin be cleaned?",
+      "wrong_answer": "Only when it looks dirty",
+      "correct_answer": "Every day, as sweat and dirt build up"
+     },
+     "cause": "The child cannot see the sweat and germs.",
+     "reveals": "Offer \"Only when it looks dirty\" next to the right answer and ask the question again in a new context.",
+     "help": "Smell clothes after a day of play.",
+     "feedback": "Washing every day keeps the skin healthy because sweat and germs build up.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.3.1",
     "INTE.G7.RUBRIC.3.2",
     "INTE.G7.RUBRIC.3.3",
     "INTE.G7.RUBRIC.3.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome d (a daily log of activities that keep the skin and kidneys healthy) is a product marked by the teacher; the habits behind it are tested. Outcome e (appreciate) is attitudinal. Medical statements to be confirmed by a teacher or a health worker."
   },
   {
    "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY",
@@ -629,14 +2739,442 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+     "name": "Name the sources of electricity and give Kenyan examples",
+     "outcomes": [
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.a"
+     ],
+     "mastery": "The child says electricity comes from cells and batteries, generators driven by falling water (hydroelectric, for example at Masinga and Gitaru), steam from underground heat (geothermal, at Olkaria), wind (at Lake Turkana), the Sun (solar panels), and burning fuel (diesel and fuel oil). The child does not say that electricity is stored in the wires of a house or that a power socket is itself the source. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name the source from a description",
+      "say which energy turns a generator",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.HEAT.HEAT_SOURCES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.a",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      },
+      {
+       "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.b",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+     "name": "Name the parts of a simple circuit and say why a complete circuit is needed",
+     "outcomes": [
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b"
+     ],
+     "mastery": "The child says a simple circuit has a cell, wires, a switch and a bulb in a complete loop, the cell pushes the current round, a closed switch lets the current flow and an open one breaks the loop, and a bulb lights only when the loop is complete and every wire is fixed. The child does not say current flows out of the cell to the bulb and stops there, or that the bulb uses the current up. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "name a part from its job",
+      "say what a switch does",
+      "say why a bulb does not light",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+     "name": "Tell a series circuit from a parallel circuit and say what happens when a bulb is removed",
+     "outcomes": [
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.b"
+     ],
+     "mastery": "The child says in a series circuit the parts are in one loop, so when one bulb goes out the others go out too, in a parallel circuit each bulb has its own path, so the others stay lit, and house lights are wired in parallel so one lamp can fail without putting the others out. The child does not say a parallel circuit makes the bulbs dimmer or that the first bulb in a series uses all the current. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which circuit a description fits",
+      "say what happens to the other bulbs when one goes out",
+      "compare the brightness",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+     "name": "Name the common electrical appliances and what energy they give",
+     "outcomes": [
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.c"
+     ],
+     "mastery": "The child says an electric kettle, iron box and cooker give heat, a lamp and torch give light, a fan and blender give movement, a radio, television and speaker give sound (and light), and a refrigerator and air conditioner use electricity to take heat away. The child does not say a radio works without electricity or that the appliance makes electricity. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which appliance does a described job",
+      "say what energy an appliance gives out",
+      "sort appliances by the energy they give",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_USES",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.SOUND_ENERGY.SOUND_SOURCES",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [
+      {
+       "skill": "INTE.G8.FORCE_.TRANSFORMATION_OF_ENERGY.c",
+       "reason": "Grade 8 Integrated Science builds on this idea. Proposed, to confirm by a teacher."
+      }
+     ],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+     "name": "Choose the safe way of using electrical appliances",
+     "outcomes": [
+      "INTE.G7.FORCE_.ELECTRICAL_ENERGY.d"
+     ],
+     "mastery": "The child says to switch off and unplug before cleaning or mending, never to touch a switch, plug or wire with wet hands, to keep water and sockets apart, to use a plug that fits and not to overload one socket, to leave mending to an electrician, and to keep away from fallen power lines. The child does not say a low-voltage wire cannot hurt or that rubber sandals make it safe to handle bare wires. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "pick the safe way",
+      "say what is wrong with a described action",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_SAFETY",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_SOCKET",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+     "error": "Thinks the socket or the wire in a house is the source of electricity.",
+     "example": {
+      "question": "Which of these is a source of electricity?",
+      "wrong_answer": "A power socket",
+      "correct_answer": "A dry cell or a generator"
+     },
+     "cause": "The child sees electricity come out of the wall.",
+     "reveals": "Offer \"A power socket\" next to the right answer and ask the question again in a new context.",
+     "help": "Follow a wire back from the socket to the pole.",
+     "feedback": "A socket only passes electricity on. A cell or a generator makes it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_STORED_WIRE",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+     "error": "Thinks electricity is stored in the wires and used up from there.",
+     "example": {
+      "question": "Where does the electricity in a house come from?",
+      "wrong_answer": "It is stored in the wires of the house",
+      "correct_answer": "It is made at a power station and sent along wires"
+     },
+     "cause": "The child cannot see the power station.",
+     "reveals": "Offer \"It is stored in the wires of the house\" next to the right answer and ask the question again in a new context.",
+     "help": "Trace the line from the pole to the substation.",
+     "feedback": "Wires only carry electricity. It is made at a power station by a generator.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES.M_ES_HYDRO_GEO",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SOURCES",
+     "error": "Mixes up hydroelectric and geothermal power.",
+     "example": {
+      "question": "At Olkaria, steam from underground drives the generators. What is this called?",
+      "wrong_answer": "Hydroelectric power",
+      "correct_answer": "Geothermal power"
+     },
+     "cause": "The child links all power with water.",
+     "reveals": "Offer \"Hydroelectric power\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that Masinga uses water from a dam and Olkaria uses steam from hot rocks.",
+     "feedback": "Steam from underground heat is geothermal. Hydroelectric power uses falling water.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_ONE_WIRE",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+     "error": "Thinks one wire from the cell to the bulb is enough.",
+     "example": {
+      "question": "A bulb is joined to a cell by one wire. Will it light?",
+      "wrong_answer": "Yes, the current flows to the bulb",
+      "correct_answer": "No, it needs a complete loop of wires"
+     },
+     "cause": "The child thinks current flows from the cell to the bulb and stops.",
+     "reveals": "Offer \"Yes, the current flows to the bulb\" next to the right answer and ask the question again in a new context.",
+     "help": "Light a bulb with one wire and then with two.",
+     "feedback": "A bulb lights only when the current can go all the way round a complete circuit.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_USED_UP",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+     "error": "Thinks the bulb uses up the current so less comes back to the cell.",
+     "example": {
+      "question": "Is the current the same going into the bulb and coming out?",
+      "wrong_answer": "No, the bulb uses it up",
+      "correct_answer": "Yes, the same current goes round the whole loop"
+     },
+     "cause": "The child thinks current is a thing that is consumed.",
+     "reveals": "Offer \"No, the bulb uses it up\" next to the right answer and ask the question again in a new context.",
+     "help": "Add a second meter after the bulb and watch both readings.",
+     "feedback": "The current is not used up. The bulb changes the energy it carries into light and heat.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS.M_CB_SWITCH_OPEN",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.CIRCUIT_BASICS",
+     "error": "Thinks a switch that is open lets current pass.",
+     "example": {
+      "question": "When does a switch let current flow?",
+      "wrong_answer": "When it is open",
+      "correct_answer": "When it is closed"
+     },
+     "cause": "The child links \"open\" with \"on\".",
+     "reveals": "Offer \"When it is open\" next to the right answer and ask the question again in a new context.",
+     "help": "Close a switch in the circuit and watch the bulb.",
+     "feedback": "A closed switch completes the circuit. An open switch breaks it.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_SERIES_STAY",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+     "error": "Thinks that in a series circuit the other bulbs stay lit when one is removed.",
+     "example": {
+      "question": "Two bulbs are in series. One is removed. What happens to the other?",
+      "wrong_answer": "It stays lit",
+      "correct_answer": "It goes out"
+     },
+     "cause": "The child thinks each bulb has its own path.",
+     "reveals": "Offer \"It stays lit\" next to the right answer and ask the question again in a new context.",
+     "help": "Remove a bulb from a string of fairy lights.",
+     "feedback": "In a series circuit there is one loop. Remove a bulb and the loop is broken.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_PARALLEL_DIM",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+     "error": "Thinks bulbs in parallel are dimmer than bulbs in series.",
+     "example": {
+      "question": "Which is brighter, two bulbs in series or two bulbs in parallel?",
+      "wrong_answer": "Series, because the current goes through both",
+      "correct_answer": "Parallel, because each has its own path to the cell"
+     },
+     "cause": "The child thinks sharing means getting less.",
+     "reveals": "Offer \"Series, because the current goes through both\" next to the right answer and ask the question again in a new context.",
+     "help": "Compare both circuits with the same cell.",
+     "feedback": "In parallel each bulb gets the full push from the cell, so each is brighter.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL.M_SP_HOUSE_SERIES",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.SERIES_PARALLEL",
+     "error": "Thinks house lights are wired in series.",
+     "example": {
+      "question": "How are the lights in a house wired?",
+      "wrong_answer": "In series, in one loop",
+      "correct_answer": "In parallel, so each light can work alone"
+     },
+     "cause": "The child does not see the wiring.",
+     "reveals": "Offer \"In series, in one loop\" next to the right answer and ask the question again in a new context.",
+     "help": "Switch off one lamp at home and see that the others stay on.",
+     "feedback": "House lights are wired in parallel so one can fail without putting the others out.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_MAKES_ELEC",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+     "error": "Thinks an appliance makes electricity.",
+     "example": {
+      "question": "What does an electric fan do with electricity?",
+      "wrong_answer": "It makes electricity",
+      "correct_answer": "It changes electricity into movement"
+     },
+     "cause": "The child thinks anything electric makes electricity.",
+     "reveals": "Offer \"It makes electricity\" next to the right answer and ask the question again in a new context.",
+     "help": "Unplug the fan and see that it stops.",
+     "feedback": "An appliance changes electricity into another kind of energy.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_RADIO_NONE",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+     "error": "Thinks a radio, speaker or television gives no energy except light.",
+     "example": {
+      "question": "What energy does a loudspeaker give out?",
+      "wrong_answer": "Heat",
+      "correct_answer": "Sound"
+     },
+     "cause": "The child expects each appliance to give heat.",
+     "reveals": "Offer \"Heat\" next to the right answer and ask the question again in a new context.",
+     "help": "Touch a speaker cone gently when music plays: it vibrates.",
+     "feedback": "A loudspeaker changes electricity into sound.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES.M_AP2_FRIDGE_COLD",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.APPLIANCES",
+     "error": "Thinks a refrigerator makes cold and gives out nothing.",
+     "example": {
+      "question": "What does a refrigerator do with electricity?",
+      "wrong_answer": "It makes cold, which is a kind of energy",
+      "correct_answer": "It takes heat out of the food and passes it to the air behind"
+     },
+     "cause": "The child thinks cold is a thing that is made.",
+     "reveals": "Offer \"It makes cold, which is a kind of energy\" next to the right answer and ask the question again in a new context.",
+     "help": "Feel the back of a refrigerator: it is warm.",
+     "feedback": "A refrigerator moves heat from inside to outside. Cold is the lack of heat.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_WET_HANDS",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+     "error": "Thinks it is safe to switch on with wet hands if the power is low.",
+     "example": {
+      "question": "A learner has wet hands. What should she do before using a socket?",
+      "wrong_answer": "Switch on quickly, it is only a little current",
+      "correct_answer": "Dry her hands first"
+     },
+     "cause": "The child thinks small appliances are harmless.",
+     "reveals": "Offer \"Switch on quickly, it is only a little current\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that water carries electricity through the skin.",
+     "feedback": "Wet hands let electricity pass through the body. Dry them first.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_UNPLUG_PULL",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+     "error": "Thinks you pull on the cable to remove a plug, and that mending a plug is fine for a learner.",
+     "example": {
+      "question": "How should a plug be removed from a socket?",
+      "wrong_answer": "By pulling on the cable",
+      "correct_answer": "By switching off, then holding the plug"
+     },
+     "cause": "The child tugs on the nearest thing.",
+     "reveals": "Offer \"By pulling on the cable\" next to the right answer and ask the question again in a new context.",
+     "help": "Look at a worn cable.",
+     "feedback": "Switch off and pull on the plug, not the cable. Leave mending to an electrician.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY.M_ESF_OVERLOAD",
+     "skill": "INTE.G7.FORCE_.ELECTRICAL_ENERGY.ELEC_SAFETY",
+     "error": "Thinks many appliances in one socket is safe, because there is a switch.",
+     "example": {
+      "question": "Why is it unsafe to plug many appliances into one socket?",
+      "wrong_answer": "It is not unsafe, there is a switch",
+      "correct_answer": "The wire can overheat and start a fire"
+     },
+     "cause": "The child sees the extension lead.",
+     "reveals": "Offer \"It is not unsafe, there is a switch\" next to the right answer and ask the question again in a new context.",
+     "help": "Say that a wire with too much current gets warm.",
+     "feedback": "Too many appliances on one socket can overheat the wire and start a fire.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.4.1",
     "INTE.G7.RUBRIC.4.2",
     "INTE.G7.RUBRIC.4.3",
     "INTE.G7.RUBRIC.4.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, c and d are tested by questions. Outcome b (connect simple circuits) is practical with cells, wires and a bulb (low voltage only, never mains): the knowledge is tested, the connecting is observed. Outcome e (appreciate) is attitudinal."
   },
   {
    "code": "INTE.G7.FORCE_.MAGNETISM",
@@ -701,14 +3239,279 @@
      "status": "kicd_verified"
     }
    ],
-   "skills": [],
-   "misconceptions": [],
+   "skills": [
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+     "name": "Describe the properties of a magnet: attracting, poles, direction and the law of poles",
+     "outcomes": [
+      "INTE.G7.FORCE_.MAGNETISM.a"
+     ],
+     "mastery": "The child says a magnet attracts iron and steel, is strongest at its two poles (north and south), points north and south when it hangs free, like poles repel and unlike poles attract, and that a magnet can attract or repel across a gap. The child does not say that a magnet has only one pole or that the middle of a bar magnet is the strongest. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say which end of a magnet attracts most",
+      "say what two named poles do",
+      "say what a hanging magnet does",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_TYPES",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G4.FORCE_.FORCE_AND_ITS_EFFECT.FORCE_EFFECTS",
+       "kind": "skill",
+       "reason": "Grade 4 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+     "name": "Sort materials into magnetic and non-magnetic",
+     "outcomes": [
+      "INTE.G7.FORCE_.MAGNETISM.b"
+     ],
+     "mastery": "The child says iron, steel, nickel and cobalt are magnetic; copper, aluminium, brass, wood, plastic, glass and paper are not; so a tin can is mostly steel and is attracted, a coin might not be, and an aluminium cup is not. The child does not say every metal is magnetic or that a shiny metal must be. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say if a named material is magnetic",
+      "say which of a group is not magnetic",
+      "decide from a short test result",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.FORCE_.HEAT_TRANSFER.HEAT_CONDUCTORS",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+     "name": "Describe the uses of magnets in daily life",
+     "outcomes": [
+      "INTE.G7.FORCE_.MAGNETISM.c"
+     ],
+     "mastery": "The child says magnets hold a refrigerator door shut, are inside loudspeakers and radios, pull iron out of a mixed heap (waste sorting), make a compass needle point north and south, and are in toys and fastenings such as a bag clasp. The child does not say a compass needle points to the Sun or to a place where iron is buried. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception.",
+     "question_forms": [
+      "say what a magnet does in a named thing",
+      "say which use depends on a property",
+      "decide from a short story",
+      "find the false step in a learner's reason"
+     ],
+     "thinking": [
+      "recall",
+      "reasoning"
+     ],
+     "horeb_skill_ids": [],
+     "prerequisites": [
+      {
+       "requires": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "SCIE.G5.MATTER.MIXTURES.SEPARATION_METHOD_CHOICE",
+       "kind": "skill",
+       "reason": "Grade 5 Science and Technology taught it first. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      },
+      {
+       "requires": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+       "kind": "skill",
+       "reason": "This skill builds on it. Proposed, to confirm by a teacher.",
+       "strength": "essential",
+       "status": "proposed"
+      }
+     ],
+     "leads_to": [],
+     "status": "proposed"
+    }
+   ],
+   "misconceptions": [
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_LIKE_ATTRACT",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+     "error": "Thinks like poles attract and unlike poles repel.",
+     "example": {
+      "question": "What happens when two north poles are brought together?",
+      "wrong_answer": "They attract",
+      "correct_answer": "They repel"
+     },
+     "cause": "The child learns the law backwards.",
+     "reveals": "Offer \"They attract\" next to the right answer and ask the question again in a new context.",
+     "help": "Push two north poles together and feel the push.",
+     "feedback": "Like poles repel and unlike poles attract.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_MIDDLE",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+     "error": "Thinks the middle of a bar magnet is the strongest part.",
+     "example": {
+      "question": "Which part of a bar magnet attracts pins most strongly?",
+      "wrong_answer": "The middle",
+      "correct_answer": "The two ends, the poles"
+     },
+     "cause": "The child expects the centre to be the strongest.",
+     "reveals": "Offer \"The middle\" next to the right answer and ask the question again in a new context.",
+     "help": "Roll a bar magnet in pins and see where they stick.",
+     "feedback": "The pins stick at the poles. A magnet is strongest at its two poles.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES.M_MP_ONE_POLE",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_PROPERTIES",
+     "error": "Thinks a magnet can have a single pole, or that cutting it gives one north and one south magnet.",
+     "example": {
+      "question": "A bar magnet is cut in two. What happens?",
+      "wrong_answer": "One piece is a north pole and the other a south pole",
+      "correct_answer": "Each piece is a magnet with two poles"
+     },
+     "cause": "The child pictures poles as halves.",
+     "reveals": "Offer \"One piece is a north pole and the other a south pole\" next to the right answer and ask the question again in a new context.",
+     "help": "Cut a magnetic strip with scissors and test the pieces.",
+     "feedback": "Each piece of a cut magnet has its own north and south poles.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_ALL_METALS",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+     "error": "Thinks all metals are magnetic.",
+     "example": {
+      "question": "Which of these metals is magnetic?",
+      "wrong_answer": "Aluminium",
+      "correct_answer": "Iron"
+     },
+     "cause": "The child thinks magnetic and metal mean the same.",
+     "reveals": "Offer \"Aluminium\" next to the right answer and ask the question again in a new context.",
+     "help": "Test a nail, a coin, a foil wrap and a spoon with a magnet.",
+     "feedback": "Only iron, steel, nickel and cobalt are magnetic. Aluminium and copper are not.",
+     "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_SHINY",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+     "error": "Thinks a shiny object must be magnetic.",
+     "example": {
+      "question": "A shiny gold-coloured ring is not pulled by a magnet. Why?",
+      "wrong_answer": "It is shiny, so it must be magnetic",
+      "correct_answer": "The material is not magnetic"
+     },
+     "cause": "The child links shine with metal.",
+     "reveals": "Offer \"It is shiny, so it must be magnetic\" next to the right answer and ask the question again in a new context.",
+     "help": "Test shiny and dull objects.",
+     "feedback": "Shine does not make a material magnetic. Test with a magnet.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS.M_MM_HEAVY",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNETIC_MATERIALS",
+     "error": "Thinks that heavy objects are more magnetic.",
+     "example": {
+      "question": "A big, heavy brass bell is not pulled by a magnet. A small iron nail is. Why?",
+      "wrong_answer": "The bell is too heavy to be pulled",
+      "correct_answer": "Brass is not magnetic and iron is"
+     },
+     "cause": "The child blames the weight.",
+     "reveals": "Offer \"The bell is too heavy to be pulled\" next to the right answer and ask the question again in a new context.",
+     "help": "Try a magnet on a light piece of brass.",
+     "feedback": "Weight does not decide it. The material does.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_COMPASS_SUN",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+     "error": "Thinks a compass needle points to the Sun or to buried iron.",
+     "example": {
+      "question": "Which way does a compass needle point?",
+      "wrong_answer": "To the Sun",
+      "correct_answer": "North and south, along the earth's magnetic field"
+     },
+     "cause": "The child links directions with the Sun.",
+     "reveals": "Offer \"To the Sun\" next to the right answer and ask the question again in a new context.",
+     "help": "Hold a compass in a room and see it still points the same way.",
+     "feedback": "A compass needle is a small magnet that lines up north and south.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_FRIDGE_GLUE",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+     "error": "Thinks a refrigerator door seals because of glue.",
+     "example": {
+      "question": "What holds a refrigerator door shut?",
+      "wrong_answer": "A glue on the rubber strip",
+      "correct_answer": "A magnet in the rubber seal"
+     },
+     "cause": "The child cannot see the magnet.",
+     "reveals": "Offer \"A glue on the rubber strip\" next to the right answer and ask the question again in a new context.",
+     "help": "Pull the door slowly and feel the grip.",
+     "feedback": "The door seal has a magnet that pulls on the steel body.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    },
+    {
+     "code": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES.M_MU_PICK_ALL",
+     "skill": "INTE.G7.FORCE_.MAGNETISM.MAGNET_USES",
+     "error": "Thinks a magnet can pick out all the metals in a rubbish heap.",
+     "example": {
+      "question": "A magnet is passed over a heap of waste. What does it pick out?",
+      "wrong_answer": "All the metals, including aluminium cans",
+      "correct_answer": "Only iron and steel things, such as nails and tin cans"
+     },
+     "cause": "The child thinks magnets pick all metals.",
+     "reveals": "Offer \"All the metals, including aluminium cans\" next to the right answer and ask the question again in a new context.",
+     "help": "Pass a magnet over cans and foil.",
+     "feedback": "A magnet picks out only iron and steel. Aluminium and copper stay.",
+     "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+     "status": "draft"
+    }
+   ],
    "rubric_indicators": [
     "INTE.G7.RUBRIC.4.1",
     "INTE.G7.RUBRIC.4.2",
     "INTE.G7.RUBRIC.4.3",
     "INTE.G7.RUBRIC.4.4"
-   ]
+   ],
+   "authoring_notes": "Outcomes a, b and c are tested by questions. Outcome a says demonstrate: the knowledge is tested, the demonstration with bar magnets, pins and a hanging magnet is observed. Outcome b is also done with a magnet and everyday objects. Outcome d (appreciate) is attitudinal."
   }
  ],
  "rubrics": [

@@ -12,7 +12,11 @@
   "help": "Dig up an old heap with a teacher. Ask what rotted and what did not.",
   "feedback": "Polythene, tins and glass do not rot and spoil the manure. Only things that were once plants, and animal dung, go on the heap.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_MEAT": {
   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
@@ -27,7 +31,11 @@
   "help": "Ask what comes to a heap with meat scraps in it, and whether the school garden needs those visitors.",
   "feedback": "Meat, bones and oily leftovers draw rats and flies. Peelings, leaves, grass and dung are better.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS.M_AG4_CM_FERT": {
   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MATERIALS",
@@ -42,7 +50,11 @@
   "help": "Show a bag of fertiliser and a handful of compost. Ask where each one comes from.",
   "feedback": "Compost is made at home by rotting plant remains and dung. Fertiliser from the shop is made in a factory. They are not the same.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_ONE": {
   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
@@ -57,7 +69,11 @@
   "help": "Make two small heaps, one with one material and one with a mix. Compare them after a month.",
   "feedback": "A mix of dry and fresh material in layers rots best. Dry material lets in air and fresh material gives moisture and food for the rotting.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_DRY": {
   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
@@ -72,7 +88,11 @@
   "help": "Compare a damp covered heap and a dry open heap after a month. Then flood one and smell it.",
   "feedback": "A heap rots best when it is damp, not soaking, and covered. Too dry and it stops rotting. Too wet and it goes smelly.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING.M_AG4_CK_EARLY": {
   "skill": "AGRI.G4.CONSER.SOIL_CONSERVATION.COMPOST_MAKING",
@@ -87,7 +107,11 @@
   "help": "Open a young heap and an old heap side by side. Ask which still looks like peelings.",
   "feedback": "Waste needs weeks to rot. Compost is ready when it is dark, crumbly and smells like soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_FAST": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
@@ -102,7 +126,11 @@
   "help": "Pierce a bottle with a pin hole and watch it. Ask how fast the water comes out.",
   "feedback": "Drip irrigation gives water slowly, drop by drop, so the soil can soak it up.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_LEAVES": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
@@ -117,7 +145,11 @@
   "help": "Ask which part of the plant takes up water. Look at where a real drip tube ends.",
   "feedback": "The roots take up water, so the drip goes into the soil beside the roots.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING.M_AG4_DM_WASTE": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_MEANING",
@@ -132,7 +164,11 @@
   "help": "Water one bed with a bucket and one by drip. Measure the water used.",
   "feedback": "Drip irrigation puts a small amount of water only where it is needed, so little is wasted.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_LOW": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
@@ -147,7 +183,11 @@
   "help": "Raise and lower a bottle with a hole above a bed. Watch when the water flows.",
   "feedback": "Water runs downhill. The container must stand higher than the bed so the water drips out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_BIGHOLE": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
@@ -162,7 +202,11 @@
   "help": "Make one tiny hole and one large hole in two bottles. Watch which waters a whole week.",
   "feedback": "A big hole empties the bottle at once and floods the plant. A tiny hole keeps the drip going for hours.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP.M_AG4_DS_FAR": {
   "skill": "AGRI.G4.CONSER.WATER_CONSERVATION.DRIP_SETUP",
@@ -177,7 +221,11 @@
   "help": "Dig up a small plant and show how close its roots are to the stem.",
   "feedback": "The water must fall where the roots are, so the drip end is placed next to the plant.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_PETROL": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
@@ -192,7 +240,11 @@
   "help": "Ask what burns in a jiko, a gas cooker and a car. Talk about why petrol is dangerous indoors.",
   "feedback": "Petrol and diesel are fuels for engines. They are not used to cook at home because they catch fire too easily.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children think petrol is a home cooking fuel; they know it is for engines. A trap option more than a held idea."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_ONE": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
@@ -207,7 +259,11 @@
   "help": "Ask each learner which fuels their home uses and make one class list.",
   "feedback": "Homes use many fuels: firewood, charcoal, paraffin, cooking gas, biogas, electricity and solar.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES.M_AG4_FT_STATE": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_TYPES",
@@ -222,7 +278,11 @@
   "help": "Pour paraffin, hold charcoal and ask how each can be carried and stored.",
   "feedback": "Charcoal and firewood are solids, paraffin is a liquid, and cooking gas and biogas are gases.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_OPENLID": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
@@ -237,7 +297,11 @@
   "help": "Boil two pots of water, one with a lid and one without, and time them.",
   "feedback": "A lid keeps the heat in so the food cooks faster and uses less fuel.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_BIG": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
@@ -252,7 +316,11 @@
   "help": "Ask whether the water gets hotter than boiling when the flame is bigger.",
   "feedback": "Once water boils it does not get hotter. A big flame only wastes fuel.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING.M_AG4_FS_WET": {
   "skill": "AGRI.G4.CONSER.FUEL_CONSERVATION.FUEL_SAVING",
@@ -267,7 +335,11 @@
   "help": "Try to light a dry stick and a wet one and compare smoke and heat.",
   "feedback": "Wet wood makes smoke and gives little heat because the fire must first dry it. Dry wood burns well.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BIG": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
@@ -282,7 +354,11 @@
   "help": "Walk the school plot and look for signs: pecked grain, tunnels, gnawed cobs.",
   "feedback": "Small animals such as birds, rats and squirrels also harm crops, because there are many of them.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_BEE": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
@@ -297,7 +373,11 @@
   "help": "Watch bees on a flowering crop. Ask what happens to the flower afterwards.",
   "feedback": "Bees and butterflies carry pollen between flowers and help crops to give seed and fruit.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS.M_AG4_SP_MATCH": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SMALL_PESTS",
@@ -312,7 +392,11 @@
   "help": "Match pictures of the animals to pictures of the damage.",
   "feedback": "Birds peck grain, rats gnaw grain and cobs, and moles tunnel under the ground and eat roots and tubers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_FIXED": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
@@ -327,7 +411,11 @@
   "help": "Ask what a bird does after a week of seeing the same scarecrow that never moves.",
   "feedback": "Birds soon learn that a still scarecrow is harmless. Moving it and changing its clothes keeps them afraid.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_KILL": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
@@ -342,7 +430,11 @@
   "help": "Ask who also visits the plot, such as bees, and what poison would do to them.",
   "feedback": "A scarecrow only scares animals away. Poison and traps can harm many other animals as well.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE.M_AG4_SC_HIDDEN": {
   "skill": "AGRI.G4.CONSER.CONSERVING_WILD_ANIMALS.SCARECROW_MAKE",
@@ -357,7 +449,11 @@
   "help": "Stand a scarecrow at the edge and in the middle and ask which one the bird can see from the sky.",
   "feedback": "Birds must see the scarecrow from far. Put it high in the middle of the crop.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_BIGSEED": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
@@ -372,7 +468,11 @@
   "help": "Put a maize seed, a bean and a carrot seed in the hand and compare them.",
   "feedback": "Maize, beans and peas have large seeds. Carrot, spinach and coriander have tiny seeds.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children see maize and bean seeds every day; thinking they are tiny is unlikely. A trap option."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_NURSERY": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
@@ -387,7 +487,11 @@
   "help": "Ask a farmer how he starts carrots and how he starts tomatoes.",
   "feedback": "Carrots do not like being moved, so they are sown where they will grow. Cabbage and tomato are started in a nursery.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS.M_AG4_TS_CUTTING": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.TINY_SEED_CROPS",
@@ -402,7 +506,11 @@
   "help": "Show a sweet potato vine cutting next to a packet of carrot seed.",
   "feedback": "Sweet potato is planted from vine cuttings, not seeds.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_COARSE": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
@@ -417,7 +525,11 @@
   "help": "Sow tiny seeds in a lumpy bed and a fine bed and compare how many come up.",
   "feedback": "Tiny seeds need fine soil to touch. Lumps and stones stop them from coming up.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_DEEP": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
@@ -432,7 +544,11 @@
   "help": "Sow seeds at two depths and see which come up. A tiny seed has little food to push up.",
   "feedback": "Tiny seeds have little stored food and cannot push up from deep soil. Sow them very shallow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING.M_AG4_SB_THICK": {
   "skill": "AGRI.G4.FOOD_P.DIRECT_SOWING_OF_TINY_SE.SEEDBED_SOWING",
@@ -447,7 +563,11 @@
   "help": "Grow one thick row and one thinned row. Compare the carrots at harvest.",
   "feedback": "Crowded plants fight for light, water and food. Thin them so each can grow big.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ANYWHERE": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
@@ -462,7 +582,11 @@
   "help": "Ask which fruits grow near the school and which come from far.",
   "feedback": "Mango likes the warm coast. Apples need the cool highlands.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_TREE": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
@@ -477,7 +601,11 @@
   "help": "Look at a banana plant and a passion fruit vine and ask where the fruit hangs.",
   "feedback": "Fruits grow on trees, bushes, vines and plants like banana and pawpaw.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES.M_AG4_FY_ROOT": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_TYPES",
@@ -492,7 +620,11 @@
   "help": "Dig up a cassava plant and ask which part we eat.",
   "feedback": "Cassava is a root crop. Fruit crops give fruits that grow from flowers, like guava.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DEEP": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
@@ -507,7 +639,11 @@
   "help": "Show the soil mark on the stem of a seedling.",
   "feedback": "Plant it at the depth it grew. A buried stem can rot.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_NOMANURE": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
@@ -522,7 +658,11 @@
   "help": "Plant two seedlings, one with manure and one without, and compare after a month.",
   "feedback": "Manure in the hole feeds the young plant and loosens the soil so the roots can spread.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_CROWD": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
@@ -537,7 +677,11 @@
   "help": "Show how wide a mature mango tree is.",
   "feedback": "A fruit tree grows big. It needs room for its roots and branches.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING.M_AG4_FG_DRYSTOP": {
   "skill": "AGRI.G4.FOOD_P.GROWING_FRUITS.FRUIT_GROWING",
@@ -552,7 +696,11 @@
   "help": "Ask what happens to a seedling that dries out for a week.",
   "feedback": "A young seedling has short roots and dries quickly. It needs regular water and a mulch.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_WILD": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
@@ -567,7 +715,11 @@
   "help": "Ask who feeds, houses and looks after each animal.",
   "feedback": "Domestic animals are kept and cared for by people. Zebras are wild.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_FOUR": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
@@ -582,7 +734,11 @@
   "help": "Ask which birds the community keeps at home.",
   "feedback": "Chickens, ducks and turkeys are domestic animals called poultry. Bees can be kept too.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Bell, B. (1981), When is an animal not an animal?, Journal of Biological Education 15, and Braund (1991): children leave birds and insects out of the group animal."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES.M_AG4_AT_GROUP": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_TYPES",
@@ -597,7 +753,11 @@
   "help": "Ask which animals have feathers and lay eggs.",
   "feedback": "Poultry are birds kept for eggs and meat, like chickens, ducks and turkeys. Goats are livestock.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_MIX": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -612,7 +772,11 @@
   "help": "Show wool, milk, eggs and honey and ask where each comes from.",
   "feedback": "Sheep give wool. Goats give milk and meat. Chickens give eggs and cattle give milk.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_ONE": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -627,7 +791,11 @@
   "help": "Make a list of everything one cow gives the family.",
   "feedback": "Many animals give more than one thing. A cow gives milk, meat and hides, and it can plough too.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES.M_AG4_AU_WORK": {
   "skill": "AGRI.G4.FOOD_P.USES_OF_DOMESTIC_ANIMALS.ANIMAL_USES",
@@ -642,7 +810,11 @@
   "help": "Ask which animals in the village pull carts and which do not.",
   "feedback": "Donkeys, camels and oxen are strong enough to carry or pull. Hens and rabbits are too small.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_FILL": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
@@ -657,7 +829,11 @@
   "help": "Compare a large plate of ugali alone with a smaller plate of ugali, beans and greens.",
   "feedback": "A full stomach is not the same as a balanced meal. A balanced meal has foods from every group.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_ONE": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
@@ -672,7 +848,11 @@
   "help": "Ask what happens to a child who eats only one food for months.",
   "feedback": "No single food has everything. The body needs a mix of foods.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE.M_AG4_MI_COST": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_IMPORTANCE",
@@ -687,7 +867,11 @@
   "help": "Make a cheap balanced meal with ugali, ndengu and managu.",
   "feedback": "Beans, greens and a staple make a balanced meal that costs little.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_UGALI": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
@@ -702,7 +886,11 @@
   "help": "Ask what a runner eats before a race and why.",
   "feedback": "Ugali, rice and chapati are energy-giving foods. Body-building foods are beans, meat, fish and eggs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_MEAT": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
@@ -717,7 +905,11 @@
   "help": "Ask which foods a growing child or someone with a wound needs.",
   "feedback": "Eggs, fish, meat and beans are body-building foods. They help the body grow and mend.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT.M_AG4_GS_FRUIT": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.GROUPS_SORT",
@@ -732,7 +924,11 @@
   "help": "Ask what protective means and which colours protect the body.",
   "feedback": "Vegetables and fruits are protective foods. They help the body fight illness.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_ONE": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
@@ -747,7 +943,11 @@
   "help": "Sort each food on the plate into a group. Count the groups.",
   "feedback": "Ugali, rice and chapati are all energy foods. A balanced meal has one from each group.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_NOVEG": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
@@ -762,7 +962,11 @@
   "help": "Ask which group each food is in and which group is empty.",
   "feedback": "Ugali is energy and fish is body-building. Add vegetables or fruit for the protective group.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK.M_AG4_MP_SWEET": {
   "skill": "AGRI.G4.FOOD_P.BALANCED_MEAL.MEAL_PICK",
@@ -777,7 +981,11 @@
   "help": "Look at what a soda gives: sugar and no body-building or protective foods.",
   "feedback": "Soda and sweets give sugar only. A fruit or vegetable gives protective food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_STEAM": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
@@ -792,7 +1000,11 @@
   "help": "Show a steamer with the food on a rack above the water.",
   "feedback": "In steaming the food stays above the water and the steam cooks it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_FRY": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
@@ -807,7 +1019,11 @@
   "help": "Show a frying pan with a spoonful of oil beside a pot full of oil.",
   "feedback": "Shallow frying uses a little oil in a pan. Chapati and eggs are shallow fried.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS.M_AG4_CMT_ROAST": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_METHODS",
@@ -822,7 +1038,11 @@
   "help": "Roast a cob over a jiko and compare it with a boiled cob.",
   "feedback": "Roasting cooks food by dry heat over a fire or in an oven. Boiling uses water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_FRYALL": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
@@ -837,7 +1057,11 @@
   "help": "Try to fry dry beans and ask why they stay hard.",
   "feedback": "Dry beans are hard and need a long time in boiling water. Frying would burn them outside and leave them hard inside.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_OVER": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
@@ -852,7 +1076,11 @@
   "help": "Cook greens for 3 minutes and for 30 minutes and compare colour and taste.",
   "feedback": "Overcooked greens lose their colour and goodness. Cook them only until soft.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT.M_AG4_CS_SHORT": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SUIT",
@@ -867,7 +1095,11 @@
   "help": "Put beans and spinach in two pots and see which is soft first.",
   "feedback": "Hard foods like dry beans need hours. Soft foods like spinach need minutes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_HANDLE": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
@@ -882,7 +1114,11 @@
   "help": "Ask what happens when a child passes and brushes the handle.",
   "feedback": "A handle that sticks out can be knocked and the hot food spills. Turn it inwards.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_WATERFIRE": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
@@ -897,7 +1133,11 @@
   "help": "Talk about why water makes burning oil splash and spread.",
   "feedback": "Water spreads burning oil. A lid shuts out the air and puts the fire out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE.M_AG4_CF_LEAVE": {
   "skill": "AGRI.G4.FOOD_P.COOKING_FOOD.COOKING_SAFE",
@@ -912,7 +1152,11 @@
   "help": "Ask what can happen to a pot that boils dry or a fire that spreads.",
   "feedback": "A cooking fire must never be left alone. A pot can boil dry or burn and the fire can spread.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_PERFUME": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
@@ -927,7 +1171,11 @@
   "help": "Ask whether perfume washes dirt and germs off the skin.",
   "feedback": "Perfume only covers a smell. Soap and water take dirt and germs off the body.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_RARE": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
@@ -942,7 +1190,11 @@
   "help": "Look at how quickly a smooth tooth feels rough again.",
   "feedback": "Teeth should be brushed in the morning and at night. The body should be bathed every day.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES.M_AG4_HP_HANDS": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HYGIENE_PRACTICES",
@@ -957,7 +1209,11 @@
   "help": "Rub clean-looking hands in glitter or powder and see how it spreads.",
   "feedback": "Germs are too small to see. Wash hands with soap before eating even if they look clean.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_NOSOAP": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
@@ -972,7 +1228,11 @@
   "help": "Wash greasy hands with water only and then with soap.",
   "feedback": "Soap lifts dirt and germs off the skin. Water alone does not.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Curtis, V., Danquah, L. and Aunger, R. (2009), Planned, motivated and habitual hygiene behaviour: an eleven country review, Health Education Research 24: washing hands with water alone, without soap, is the usual practice in many places."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_QUICK": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
@@ -987,7 +1247,11 @@
   "help": "Count while rubbing with soap and talk about how long it takes to reach under the nails.",
   "feedback": "Rub the soap on all parts of the hands for about as long as a short song, then rinse.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING.M_AG4_HW_BEFORE": {
   "skill": "AGRI.G4.HYGIEN.PERSONAL_HYGIENE.HAND_WASHING",
@@ -1002,7 +1266,11 @@
   "help": "Ask what is on hands before a meal after playing outside.",
   "feedback": "Wash before eating or cooking, and after the toilet, playing outside or touching animals.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_MIX": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
@@ -1017,7 +1285,11 @@
   "help": "Try to sweep a muddy floor and mop a dusty one.",
   "feedback": "Sweeping removes dry dirt with a broom. Mopping cleans with a wet cloth and water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_DUST": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
@@ -1032,7 +1304,11 @@
   "help": "Wipe a table with a cloth and look at the dust on it.",
   "feedback": "Dusting wipes dust from shelves, tables and other furniture with a cloth.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS.M_AG4_CLM_RUBBISH": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_METHODS",
@@ -1047,7 +1323,11 @@
   "help": "Walk round the school and look at where rubbish piles up and what it attracts.",
   "feedback": "Rubbish goes into a bin or a pit. Loose rubbish attracts flies and rats and spreads sickness.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_FLOOR": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
@@ -1062,7 +1342,11 @@
   "help": "Dust a shelf over a swept floor and look at the floor again.",
   "feedback": "Dust falls to the floor, so dust the shelves first and sweep the floor after.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_MOP": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
@@ -1077,7 +1361,11 @@
   "help": "Mop a dusty floor and see the mud it makes.",
   "feedback": "Sweep first to lift the dry dirt. Mop last so the floor comes out clean.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER.M_AG4_CO_GREASY": {
   "skill": "AGRI.G4.HYGIEN.DOMESTIC_HYGIENE.CLEANING_ORDER",
@@ -1092,7 +1380,11 @@
   "help": "Wash a cup after a greasy pot in the same water and feel it.",
   "feedback": "Wash the cleanest things first (cups, plates) and the greasy pots last, so the water stays clean longer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_MATCH": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
@@ -1107,7 +1399,11 @@
   "help": "Hold each item up and say which body part it covers.",
   "feedback": "Goggles protect the eyes, gloves protect the hands, gumboots protect the feet and a mask protects the nose and mouth.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_FASHION": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
@@ -1122,7 +1418,11 @@
   "help": "Ask what would happen to a farmer who breathes in the spray.",
   "feedback": "Protective clothing keeps dust, germs and chemicals off the body. It is not for looks.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS.M_AG4_PI_SANDALS": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_ITEMS",
@@ -1137,7 +1437,11 @@
   "help": "Ask what can cut or bite a bare foot in a shamba.",
   "feedback": "Gumboots cover the whole foot and keep out water, mud, thorns and snakes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_DIRTY": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
@@ -1152,7 +1456,11 @@
   "help": "Smell a stored muddy apron after a week.",
   "feedback": "Dirty protective clothing keeps germs and chemicals. Wash it after use.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_WET": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
@@ -1167,7 +1475,11 @@
   "help": "Pack away a damp cloth in a bag and smell it a week later.",
   "feedback": "Wet items grow mould and smell. Dry them well before storing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE.M_AG4_PC_SHARE": {
   "skill": "AGRI.G4.HYGIEN.CLEANING_PERSONAL_PROTEC.PPE_CARE",
@@ -1182,7 +1494,11 @@
   "help": "Ask how germs and chemicals move from one hand to another.",
   "feedback": "Dirty protective clothing can pass germs from one child to another. Clean it first.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_PERM": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
@@ -1197,7 +1513,11 @@
   "help": "Tack two pieces and sew them, then pull out the tacking.",
   "feedback": "Tacking is temporary. It holds the cloth in place until the final stitching is done.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_NAME": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
@@ -1212,7 +1532,11 @@
   "help": "Make each tacking on a scrap and compare the top and the back.",
   "feedback": "Even tacking has equal stitches. Uneven tacking has long top stitches and short ones underneath. Diagonal tacking slants.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES.M_AG4_TT_SMALL": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_TYPES",
@@ -1227,7 +1551,11 @@
   "help": "Pull out a tacking stitch and then a back stitch and compare.",
   "feedback": "Tacking stitches are long and loose so they are quick to make and easy to take out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_KEEP": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
@@ -1242,7 +1570,11 @@
   "help": "Show a garment with tacking left in and ask what it looks like.",
   "feedback": "Tacking is only a guide. Pull it out when the final stitching is done.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_ORDER": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
@@ -1257,7 +1589,11 @@
   "help": "Sew two slippery pieces without tacking and see them slide.",
   "feedback": "Tack first to hold the cloth, then sew the final stitching beside it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "A knowledge or practice slip a Kenyan Grade 4 child could plausibly make or see at home. No source and no homework count; a teacher should say whether it comes up in class."
+  }
  },
  "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE.M_AG4_TU_STRONG": {
   "skill": "AGRI.G4.PRODUC.MAKING_TACKING_STITCHES.TACK_USE",
@@ -1272,6 +1608,10 @@
   "help": "Compare how long it takes to unpick tiny stitches and long stitches.",
   "feedback": "Long loose stitches in a thread that shows are easy to see and to pull out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Written as a trap option for the contrast with long, loose tacking; not an idea children are known to hold."
+  }
  }
 }
