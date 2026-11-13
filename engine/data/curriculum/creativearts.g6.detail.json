@@ -1,0 +1,227 @@
+{
+ "outcomes": {
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.a": "identify string instruments from different indigenous communities in Kenya",
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.b": "describe the functions of the parts of a string instrument",
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.c": "make a fiddle using recyclable materials",
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.d": "identify pictures drawn using stippling technique",
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.e": "draw a picture of a musical instrument using stippling technique",
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.f": "value indigenous string instruments drawn from indigenous communities in Kenya",
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.a": "classify colour categories on the colour wheel for familiarity",
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.b": "paint a still life composition using brush stroke technique",
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.c": "mount the painting using mat technique for display",
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.d": "create a collage composition to apply the characteristics",
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.e": "appreciate painting and collage techniques. 4",
+  "CREA.G6.CREATI.VOLLEYBALL.a": "identify the serving and the digging skills in Volleyball",
+  "CREA.G6.CREATI.VOLLEYBALL.b": "perform under-arm service for skill acquisition",
+  "CREA.G6.CREATI.VOLLEYBALL.c": "execute single hand dig pass in volleyball for skill acquisition",
+  "CREA.G6.CREATI.VOLLEYBALL.d": "appreciate playing Volleyball game for enjoyment",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.a": "interpret rhythmic patterns in music",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.b": "compose a rhythm using a combination of musical notes and their rests",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.c": "improvise a rhythm in three- beat pattern on a percussion instrument",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.d": "prepare a block with a geometrical motif for printing a pattern",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.e": "print a full repeat pattern using a block for rhythm acquisition",
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.f": "value rhythmic patterns created by self and others",
+  "CREA.G6.CREATI.WEAVING.a": "identify a plain weave for familiarity",
+  "CREA.G6.CREATI.WEAVING.b": "prepare materials and tools for weaving",
+  "CREA.G6.CREATI.WEAVING.c": "weave a mat using plain weave on a serrated card loom",
+  "CREA.G6.CREATI.WEAVING.d": "appreciate our own and peers’ woven items used for gymnastics performance. 11",
+  "CREA.G6.CREATI.GYMNASTICS.a": "describe the cartwheel skill in gymnastics",
+  "CREA.G6.CREATI.GYMNASTICS.b": "perform the cartwheel skill in gymnastics",
+  "CREA.G6.CREATI.GYMNASTICS.c": "perform 3-action sequence in cartwheel, forward roll and swan balance in gymnastics",
+  "CREA.G6.CREATI.GYMNASTICS.d": "appreciate the action sequence of gymnastic for enjoyment. 13",
+  "CREA.G6.CREATI.MELODY.a": "sing the sol-fa syllables doh to doh1 ascending and descending",
+  "CREA.G6.CREATI.MELODY.b": "perform the sol-fa ladder using Kodaly hand signs",
+  "CREA.G6.CREATI.MELODY.c": "aurally recognise sol-fa sounds doh to doh1 in familiar melodies",
+  "CREA.G6.CREATI.MELODY.d": "compose short melodies within the range of doh to doh1",
+  "CREA.G6.CREATI.MELODY.e": "write the sol-fa syllables using calligraphy lettering",
+  "CREA.G6.CREATI.MELODY.f": "appreciate melodies created by self and others. 15",
+  "CREA.G6.PERFOR.ATHLETICS.a": "describe Long jump and High jump techniques in athletics",
+  "CREA.G6.PERFOR.ATHLETICS.b": "perform the sail technique in Long jump for skills acquisition",
+  "CREA.G6.PERFOR.ATHLETICS.c": "perform the scissors technique in High jump for skills acquisition",
+  "CREA.G6.PERFOR.ATHLETICS.d": "appreciate Long jump and High jump techniques in athletics for enjoyment",
+  "CREA.G6.PERFOR.DESCANT_RECORDER.a": "play notes C to D1 on the descant recorder with appropriate playing techniques",
+  "CREA.G6.PERFOR.DESCANT_RECORDER.b": "play a melody within the range of C to D1on the descant recorder",
+  "CREA.G6.PERFOR.DESCANT_RECORDER.c": "play the main melody of the Kenya National Anthem on the descant recorder",
+  "CREA.G6.PERFOR.DESCANT_RECORDER.d": "show interest in playing the descant recorder",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.a": "identify the categories of indigenous Kenyan instrumental ensembles",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.b": "describe factors to consider when playing in an instrumental ensemble",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.c": "play a selected instrument in an ensemble using appropriate techniques",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.d": "appreciate the role of Kenyan indigenous musical instruments in performance",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.a": "identify pottery items made using slab technique",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.b": "model a vase using slab technique for expression",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.c": "decorate a modelled item for aesthetic enhancement",
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.d": "appreciate pottery as an indigenous Kenyan craft",
+  "CREA.G6.PERFOR.SWIMMING.a_": "describe the body position in breaststroke",
+  "CREA.G6.PERFOR.SWIMMING.b_": "perform breaststroke in swimming for skill acquisition",
+  "CREA.G6.PERFOR.SWIMMING.c_": "acknowledge performing breast stroke skill in swimming",
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.a": "create a catalogue of the exhibited artworks",
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.b": "discuss the use of elements of music in a song",
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.c": "discuss messages in songs",
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.d": "participate in sporting events for enjoyment",
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.e": "value analysing Creative Arts works drawn from various cultural backgrounds. 31 32"
+ },
+ "skills": {
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.INSTRUMENTS": {
+   "forms": [
+    "pick the string instrument from a list",
+    "say how it is played",
+    "match an instrument to its community",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names the nyatiti and the orutu (Luo), the litungu (Luhya) and the obokano (Gusii) as string instruments, says that the nyatiti, litungu and obokano are plucked and the orutu is played with a bow, and does not put a drum or a flute in the string group. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.PARTS": {
+   "forms": [
+    "name the part from its job",
+    "say what the strings, the body and the pegs each do",
+    "say how to raise the sound",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the strings vibrate to make the sound, the hollow body makes the sound louder, the bridge holds the strings above the body and passes their shaking to it, the pegs tighten or loosen the strings to tune them, a tighter string gives a higher sound, and the bow of the orutu rubs the string to make it sound. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.STRING_MUSICAL_INSTRUMEN.STIPPLING": {
+   "forms": [
+    "pick the picture made with dots",
+    "say how dots make dark and light",
+    "put the stippling steps in order",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says stippling is drawing a picture with many small dots, that dots packed close together look dark and dots spaced apart look light, that no lines or smudging are used, and puts the steps in order: light pencil outline, dots with a pen, closer dots for dark parts. This is the knowledge half of outcomes d and e; drawing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.COLOUR_WHEEL": {
+   "forms": [
+    "name the primary colours",
+    "say which two colours make a secondary colour",
+    "sort a colour as warm or cool",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child names red, yellow and blue as primary colours, says orange (red and yellow), green (yellow and blue) and violet (blue and red) are secondary colours, that a tertiary colour is a primary mixed with the secondary beside it, and sorts red, orange and yellow as warm and blue, green and violet as cool. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.PAINTING_AND_COLLAGE.TECHNIQUES": {
+   "forms": [
+    "say what a still life is",
+    "pick the use of a mat",
+    "say how a collage is made",
+    "put the mounting steps in order"
+   ],
+   "mastery": "The child says a still life is a painting of objects that do not move (a bowl of fruit, a jug), that brush strokes are the marks the brush leaves, that a mat is a card border put round a painting when it is mounted for display, and that a collage is made by gluing pieces of paper, cloth or other materials on a surface. Painting and mounting are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.VOLLEYBALL.SKILLS": {
+   "forms": [
+    "pick the way to serve",
+    "pick the part of the body used to dig",
+    "say a rule of the game",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a team has six players on the court, the under-arm serve is struck from below the waist with the fist or open hand so that the ball goes over the net, a dig pass uses the joined forearms (or one hand) to lift a low ball, and the ball must not be caught, kicked or held. This is the knowledge half of outcomes a to c; playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.NOTES": {
+   "forms": [
+    "say how many beats a note lasts",
+    "say what a rest means",
+    "count a three-beat bar",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a semibreve lasts four beats, a minim two, a crotchet one and a quaver half a beat (two quavers make one beat), that a rest is a silence of the same length as its note, and that in a three-beat pattern each bar adds up to three beats. Clapping and improvising are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.RHYTHM_AND_PATTERN_MAKIN.PRINTING": {
+   "forms": [
+    "put the steps in order",
+    "say what a motif is",
+    "say what a full repeat pattern is",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a motif is a single shape used in a design (a circle, a triangle or a square), puts the steps in order (draw the motif on the block, cut it away so the motif stands up, roll ink on the block, press it on the paper, lift it, repeat in a row) and says a repeat pattern uses the same motif over and over in even rows. Cutting and printing are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.WEAVING.PLAIN_WEAVE": {
+   "forms": [
+    "pick the warp or the weft",
+    "say how a plain weave goes",
+    "pick the materials",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the warp is the set of threads held tight on the loom and the weft is the thread woven across them, that plain weave goes over one warp and under the next and the next row does the opposite, that a serrated card loom has notches to hold the warp, and names suitable materials (raffia, sisal, strips of cloth, wool). Weaving a mat is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.GYMNASTICS.CARTWHEEL": {
+   "forms": [
+    "put the cartwheel hands and feet in order",
+    "say what makes a good cartwheel",
+    "put the sequence in order",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a cartwheel is a sideways turn with straight arms, in the order hand, hand, foot, foot, with the legs straight and wide, that a forward roll tucks the chin and rounds the back, that a swan balance stands on one leg with the other leg lifted behind and arms out, and puts the sequence cartwheel, forward roll, swan balance in order. Performing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.CREATI.MELODY.SOLFA": {
+   "forms": [
+    "say the next syllable",
+    "say the syllables going down",
+    "say which sounds higher",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the syllables going up are doh, re, mi, fah, soh, lah, ti, doh1 and going down are doh1, ti, lah, soh, fah, mi, re, doh, that doh1 sounds higher than doh, that the hand sign for doh is a closed fist and for ti a finger pointing up. Singing, signing and composing are practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.PERFOR.ATHLETICS.JUMPS": {
+   "forms": [
+    "put the phases in order",
+    "say how to take off",
+    "say what the sail and the scissors are",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child puts the long jump phases in order (run-up, take-off from one foot, flight, landing in the pit), says the sail is holding the legs together and forward in the air, that the high jump starts from an angled run-up, takes off on one foot, goes over the bar in a scissors action (one leg and then the other) and lands on the mat, and that a long jump is measured to the nearest mark in the sand. Performing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.PERFOR.DESCANT_RECORDER.TECHNIQUE": {
+   "forms": [
+    "pick the way to hold it",
+    "say how to blow and tongue",
+    "say what covered holes do",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the left hand is on the top holes and the right hand below, the thumb covers the hole at the back, the finger pads cover the holes fully, the player blows gently and tongues each note with \"too\", and covering more holes gives a lower sound. The national anthem begins \"Ee Mungu nguvu yetu\". Playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_INSTRU.ENSEMBLE": {
+   "forms": [
+    "sort an instrument into percussion, wind or string",
+    "pick what a good ensemble player does",
+    "say why players listen",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child sorts drums, shakers and rattles as percussion, horns and flutes as wind and the nyatiti and litungu as string, says an ensemble can be of one kind or mixed, and says that players in an ensemble keep a steady beat, listen to each other, balance their loudness and start and stop together. Playing is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.PERFOR.INDIGENOUS_KENYAN_CRAFT_.SLAB": {
+   "forms": [
+    "put the steps in order",
+    "say how to join two pieces",
+    "say how to dry and decorate",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a slab is a flat sheet of clay rolled out to an even thickness, puts the steps in order (roll the slab, cut the pieces, score and wet the edges, press them together, smooth, dry slowly, decorate), says joining needs scratching and slip (clay mixed with water) and that clay dried too fast cracks. Modelling a vase is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.PERFOR.SWIMMING.BREASTSTROKE": {
+   "forms": [
+    "say how the body lies",
+    "say how the legs kick",
+    "say when to breathe",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says the body lies flat and face down, the arms sweep out, in and forward, the legs do a frog kick (knees bend, feet turn out, kick back and together), the head lifts to breathe at the end of the arm pull and the swimmer glides, and that a child swims only with a trained adult watching. Swimming is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.ELEMENTS": {
+   "forms": [
+    "name the element from its job",
+    "say what the message of a song is",
+    "sort a song's message",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says pitch is how high or low a sound is, tempo is how fast or slow, dynamics is how loud or soft, rhythm is the pattern of long and short sounds, melody is the tune, and that a message is what the words of a song teach or say (about unity, work, peace, care of the environment). Judging a real song is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  },
+  "CREA.G6.APPREC.ANALYSIS_OF_CREATIVE_ART.CATALOGUE": {
+   "forms": [
+    "say what a catalogue is for",
+    "pick what an entry lists",
+    "put the entries in order",
+    "find the false step in a learner's answer"
+   ],
+   "mastery": "The child says a catalogue is a list of the artworks in an exhibition, each entry gives a number, the title, the artist, the material and the size, and it helps visitors find and understand the works. Making a catalogue (outcome a) is practical. Evidence rule: at least four of the last five fresh questions right across at least two question forms, and no repeated pick of the same misconception."
+  }
+ }
+}
