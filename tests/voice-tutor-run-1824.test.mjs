@@ -112,7 +112,8 @@ test('1824 scenario 30 turn 37: a question rule recovery never says "You asked t
 
 // ---------------------------------------------------------------- 3. fillers alone
 test('1824 scenario 6 turns 5 to 22: "um..." alone is not a turn: no model call, a quiet hand-back; one "Take your time" after two, never a loop', async () => {
-  const callModel = model(turnReply([say('Mm, I hear you thinking. What do you notice about the pieces on the board?', 'Wait and nudge'), HAND]));
+  // ("the pieces" of an uncut chapati would now be rewritten by Round 2's board check, a second model call.)
+  const callModel = model(turnReply([say('Mm, I hear you thinking. What do you notice about the chapati?', 'Wait and nudge'), HAND]));
   const history = [{ who: 'tutor', text: 'Look at the chapati. Where would you cut it?', turn: 4 }];
   const r1 = await turn({ callModel, body: { message: 'um...', history, board: UNCUT, lesson: lesson() } });
   assert.equal(callModel.calls.length, 0, 'no model call for a filler');

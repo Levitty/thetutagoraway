@@ -163,10 +163,17 @@ export async function patterns(budget, rows, model) {
   return res.text;
 }
 
+/** The tutor's model as the summary records it (Round 2: --tutor-model; the default is the edge function's). */
+export function tutorLine(args = {}) {
+  const m = args.tutorModel || 'claude-sonnet-5-5';
+  const own = m === 'claude-sonnet-5-5';
+  return `${m} at ${args.effort || 'medium'} effort (${own ? 'the edge function\'s settings' : 'chosen with --tutor-model; prompt, gate, effort, child and judge as the edge function and the default run'})${args.seed != null ? `; pretend child seed ${args.seed} plus the scenario number` : ''}`;
+}
+
 export function summaryOf({ runName, rows, budget, extra, patternsText, args }) {
   const L = [];
   L.push(`# Tutor test run ${runName}`, '');
-  L.push(`Scenarios run: ${rows.length}. Max turns: ${args.maxTurnsLabel}. Judge: ${[...new Set(rows.map((r) => r.score?.model).filter(Boolean))].join(', ') || 'none'}. Tutor: claude-sonnet-5-5 at medium effort (the edge function's settings). Pretend child: claude-haiku-5-5 (Sonnet at low effort if it is not served).`, '');
+  L.push(`Scenarios run: ${rows.length}. Max turns: ${args.maxTurnsLabel}. Judge: ${[...new Set(rows.map((r) => r.score?.model).filter(Boolean))].join(', ') || 'none'}. Tutor: ${tutorLine(args)}. Pretend child: claude-haiku-5-5 (Sonnet at low effort if it is not served).`, '');
   L.push('| # | Scenario | Tag | Teach | Diag | Natur | Adapt | Curric | Avg | Underst | Scaff | Rigour | Over-scaff | Challenge | Child talk | Result | Turns | Cost |', '|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|');
   let pass = 0; let judged = 0;
   for (const x of rows.slice().sort((a, b) => a.sc.n - b.sc.n)) {

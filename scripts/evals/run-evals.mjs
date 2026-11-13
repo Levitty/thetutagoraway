@@ -6,12 +6,20 @@
 // Options: --scenarios all | 1,2,3   --max-turns N (default 12; scenario 30 gets 24)   --cap USD (total across all runs, default 10)
 //          --concurrency N (default 3)   --judge MODEL   --no-judge   --no-patterns
 //          --non-improving [N|never]   the pretend child holds its wrong idea for N turns (default 4) past its first, or never lets go
+//          --tutor-model MODEL   the tutor's model (default: the edge function's, claude-sonnet-5-5); all else identical
+//          --run-name NAME       the run folder's name (default: the date and time)
+//          --seed N              the pretend child's seed (scenario n plays with N + n), so two runs meet the same child
+// Sonnet against Opus on the same scenarios, into two folders: scripts/evals/compare-tutors.mjs
 import { mkdirSync, writeFileSync } from 'node:fs';
 import { Budget, tutorModel, RUNS_DIR, CapReached } from './api.mjs';
 import { SCENARIOS, ALL_ORDER } from './scenarios.mjs';
 import { playLesson } from './sim.mjs';
 import { transcriptOf, judge, patterns, summaryOf, JUDGE_MODEL, JUDGE_FALLBACK } from './report.mjs';
 import { settingsFrom } from '../../src/voice-tutor/session.js';
+import { PRICES } from '../../src/rocket/guide.js';
+
+// The models a run may use as the tutor: those the price table knows, so every call is metered against the cap.
+const TUTOR_MODELS = Object.keys(PRICES).filter((m) => /^claude-(sonnet|opus)-/.test(m));
 
 const argv = process.argv.slice(2);
 const opt = (name, d) => { const i = argv.indexOf(`--${name}`); return i >= 0 ? (argv[i + 1] && !argv[i + 1].startsWith('--') ? argv[i + 1] : true) : d; };
@@ -26,13 +34,20 @@ const nonOpt = opt('non-improving', null);
 const nonImproving = nonOpt == null ? null : nonOpt === true ? true : nonOpt === 'never' ? 'never' : Number(nonOpt) || true;
 
 const d = new Date(); const p2 = (n) => String(n).padStart(2, '0');
-const runName = `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}-${p2(d.getHours())}${p2(d.getMinutes())}`;
+const nameOpt = opt('run-name', null);
+if (nameOpt != null && !/^[A-Za-z0-9][A-Za-z0-9._-]{0,63}$/.test(String(nameOpt))) { console.error('--run-name: letters, digits, dot, dash and underscore only'); process.exit(1); }
+const runName = nameOpt ? String(nameOpt) : `${d.getFullYear()}-${p2(d.getMonth() + 1)}-${p2(d.getDate())}-${p2(d.getHours())}${p2(d.getMinutes())}`;
+const seedOpt = opt('seed', null);
+const seed = seedOpt != null && Number.isFinite(Number(seedOpt)) ? Number(seedOpt) : undefined;
 const dir = `${RUNS_DIR}/${runName}`;
 mkdirSync(dir, { recursive: true });
 
 const budget = new Budget(cap);
 const st = settingsFrom(() => undefined);
-console.log(`run ${runName}: scenarios ${list.join(',')}; cap US$${cap}, already spent US$${budget.prior.toFixed(3)}; tutor ${st.model} at ${st.effort} effort`);
+const tutorOpt = opt('tutor-model', null);
+if (tutorOpt != null && !TUTOR_MODELS.includes(String(tutorOpt))) { console.error(`--tutor-model: one of ${TUTOR_MODELS.join(', ')}`); process.exit(1); }
+const tutorName = tutorOpt ? String(tutorOpt) : st.model;
+console.log(`run ${runName}: scenarios ${list.join(',')}; cap US$${cap}, already spent US$${budget.prior.toFixed(3)}; tutor ${tutorName} at ${st.effort} effort${seed != null ? `; child seed ${seed}` : ''}`);
 if (budget.remaining <= 0.1) { console.error('cap already reached'); process.exit(1); }
 const callModel = tutorModel(budget);
 const rows = []; const notes = [];
@@ -58,7 +73,7 @@ async function runOne(n) {
   if (budget.remaining < estimateScenario() + 0.1) { notes.push(`Scenario ${n} not run: the remaining budget (US$${budget.remaining.toFixed(2)}) would not cover it.`); stopAll = true; return; }
   const t = Date.now();
   let result;
-  try { result = await playLesson({ sc, maxTurns: maxTurnsFor(sc), budget, callModel, nonImproving, onLog: (m) => console.log(`  [${n}] ${m}`) }); } catch (e) {
+  try { result = await playLesson({ sc, maxTurns: maxTurnsFor(sc), budget, callModel, nonImproving, tutorModel: tutorOpt ? tutorName : null, ...(seed != null ? { seed: seed + n } : {}), onLog: (m) => console.log(`  [${n}] ${m}`) }); } catch (e) {
     console.error(`  [${n}] FAILED: ${String(e.message).slice(0, 300)}`);
     notes.push(`Scenario ${n} crashed in the harness or the tutor code: ${String(e.stack || e.message).slice(0, 500).replace(/\n/g, ' | ')}`);
     if (e instanceof CapReached) stopAll = true;
@@ -91,5 +106,5 @@ if (!opt('no-patterns', false) && rows.filter((r) => r.score && !r.score.error).
   try { patternsText = await patterns(budget, rows, rows.some((r) => r.score?.model === JUDGE_FALLBACK) ? JUDGE_FALLBACK : judgeModel); } catch (e) { notes.push(`Patterns not written: ${String(e.message).slice(0, 120)}`); }
 }
 writeScores();
-writeFileSync(`${dir}/SUMMARY.md`, summaryOf({ runName, rows, budget, extra: notes, patternsText, args: { maxTurnsLabel: maxOpt || '12 (per scenario: 30 gets 24, 31 to 33 get 14, 34 to 40 get 6 to 10, 41 gets 40)' } }));
+writeFileSync(`${dir}/SUMMARY.md`, summaryOf({ runName, rows, budget, extra: notes, patternsText, args: { maxTurnsLabel: maxOpt || '12 (per scenario: 30 gets 24, 31 to 33 get 14, 34 to 40 get 6 to 10, 41 gets 40)', tutorModel: tutorName, effort: st.effort, seed } }));
 console.log(`\nspent this run US$${budget.run.toFixed(3)}; all runs US$${budget.spent.toFixed(3)} of cap US$${cap}\nresults: ${dir}`);

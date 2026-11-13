@@ -42,6 +42,9 @@
 //                a new picture (other parts) starts the list again
 //   closedRun    closed questions (yes or no, this or that) in a row
 //   pressed      the ideas (canonical answers, "1/2") the tutor has already asked "how did you know" about: once per idea
+//   diag         { q, tries } Round 2: the code asked how the child got their answer (q: the child's words), tries times
+//   failed       Round 2: the kinds of question that have failed twice on a shape ("cut@circle"): never asked there again
+//   promised     Round 2: turns left on a cut the tutor said it would make and has not drawn (Predict then show)
 //
 // THE RULES (decide), first match wins:
 //   first turn                          Open the lesson
@@ -60,7 +63,11 @@
 //   a wrong answer, second in a row     change the approach: not the same representation again
 //     with the same representation
 //   a wrong answer, with how they got it reteach from their way (asking how again is not diagnosing)
-//   a wrong answer                      Diagnose the wrong answer: ONE question about how they got it, nothing else
+//   a wrong answer                      Diagnose the wrong answer: ONE sentence the CODE says, quoting the child ("You said
+//                                       eight. How did you get eight?"), nothing else (Round 2, diagnosis.js); an answer
+//                                       the board shows wrong ("whole" for a cut circle) is diagnosed the same way
+//   answering a diagnosis               a reason: reteach from it; no reason ("I don't know", silence, a new guess): the
+//                                       second ask, another way; after two, change the representation (diag-change)
 //   the child explains a wrong answer   reteach that one idea
 //   right, no reason given              a fraction, a comparison or a rule, not asked about before, and not an unsure
 //                                       child being helped: Name what was right, then Press for reasoning (once per idea);
@@ -84,10 +91,13 @@
 import { PHASES, PLAYBOOK_MOVES, ANSWER_CLASSES, DOINGS, DRAWN, MAX_SPOKEN_WORDS, wordCap, describeItem } from './commands.js';
 import { wordsIn, talkShare, shareLow, overtalkLimit, explainedTurn, handoverMoves, HANDOVER_RULES, questionKind, isClosed, lastQuestionOf, nextStepOf, trivialAnswer, STEP_NAMES } from './pacing.js';
 import { PROBE_KINDS } from './silence.js';
-import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords } from './spokenAnswer.js';
+import { soundsLost, childMove, wantsToCarryOn, canonAnswer, inWords, isTentative, readAnswer } from './spokenAnswer.js';
+const HEDGED = /\b(maybe|i think|i guess|perhaps|probably|not sure|is it)\b/i;
 import { gaveReason, readChild, nextLevel, WINS_TO_MOVE_UP, boardAfter, keyStepsFor, asksReason } from './habits.js';
 import { fenceTeamText } from './guard.js';
 import { lessonFrame } from './fractions.js';
+import { DIAG_TRIES, diagnosisLine, quoteOf, explained } from './diagnosis.js';
+import { defersCut } from './habits.js';
 
 export { soundsLost };
 
@@ -130,6 +140,7 @@ export const newLesson = () => ({
   cw: 0, tw: 0, lastCw: 0, explain: 0, pre: null,
   fillers: 0, tyt: false, lastProbe: false, slow: false,
   step: null, solved: [], fig: null, closedRun: 0, pressed: [], closes: 0,
+  diag: null, failed: [], promised: 0,
 });
 // The warm-up's first maths question (owner, 12 Nov 2026): 'ask' = it must be asked, 'asked' = waiting for the child's answer, 'done' = answered (right or wrong); null = nothing to check first.
 const PRE_STATES = ['ask', 'asked', 'done'];
@@ -181,6 +192,10 @@ export function cleanLesson(raw) {
   s.closedRun = int(raw.closedRun, 0, 50);
   s.closes = int(raw.closes, 0, 5);
   if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === 'string' && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
+  const dg = raw.diag;
+  if (dg && typeof dg === 'object') s.diag = { q: typeof dg.q === 'string' && /^[a-z0-9/' ,-]{1,48}$/.test(dg.q) ? dg.q : null, tries: int(dg.tries, 0, 10) };
+  if (Array.isArray(raw.failed)) s.failed = [...new Set(raw.failed.filter((x) => typeof x === 'string' && /^[a-z_]{2,16}@[a-z ]{3,12}$/.test(x)))].slice(-8);
+  s.promised = int(raw.promised, 0, 5);
   return s;
 }
 const STEP_KINDS = ['cut', 'reason', 'count_shaded', 'fraction', 'count_total', 'compare', 'equal', 'state', 'notice', 'other'];
@@ -194,7 +209,7 @@ const words = (t) => String(t || '').toLowerCase().replace(/[^a-z0-9'\s/]/g, ' '
  */
 export { gaveReason };
 // A question that asks how the child got their answer (the Diagnose move, 12 Nov 2026).
-export const ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through)\b/i;
+export const ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through|what were you thinking|what you mean by|how you thought|how you worked)\b/i;
 
 /** What the code can tell about an answer before the model reads it: the seal's mark and whether a reason came with it. */
 export function prelimClass({ marked = null, message = '' } = {}) {
@@ -209,9 +224,13 @@ export function prelimClass({ marked = null, message = '' } = {}) {
  * what the seal says. Where the seal says wrong, the answer can never be understood (or right).
  * @returns {{ class, misconception, evidence, source: 'model'|'code', note: string|null } | null}
  */
-export function finalClass({ assessment = null, marked = null, message = '' } = {}) {
+export function finalClass({ assessment = null, marked = null, message = '', boardMarked = null } = {}) {
   const prelim = prelimClass({ marked, message });
-  if (!assessment) return prelim ? { class: prelim, misconception: prelim === 'misconception' ? marked.misconception : null, evidence: '', source: 'code', note: null } : null;
+  if (!assessment) {
+    if (prelim) return { class: prelim, misconception: prelim === 'misconception' ? marked.misconception : null, evidence: '', source: 'code', note: null };
+    if (boardMarked && message) return { class: boardMarked.correct ? (gaveReason(message) ? 'understood' : 'right_unexplained') : 'partly_right', misconception: null, evidence: '', source: 'code', note: 'marked from the board' };
+    return null;
+  }
   let cls = assessment.class; let mis = assessment.misconception || null; let note = null;
   if (marked && !marked.correct && (cls === 'understood' || cls === 'right_unexplained')) {
     const to = marked.misconception ? 'misconception' : 'partly_right';
@@ -224,6 +243,18 @@ export function finalClass({ assessment = null, marked = null, message = '' } = 
     cls = 'right_unexplained'; mis = null;
   } else if (marked && marked.correct && (cls === 'misconception' || cls === 'missing_prerequisite')) {
     note = `assess said ${cls}, but the seal marked the answer right: read as partly_right (right answer, shaky reason)`;
+    cls = 'partly_right'; mis = null;
+  }
+  // Round 2 (run 2026-11-13-1027, scenario 17 turn 16: "hmm maybe Whole, umm", right, classed partly_right for its hedging).
+  // A right answer said unsure is right_unexplained; partly_right only when the content is partial (a reason that is wrong
+  // or shaky). Right is the seal's mark, or the board's ("whole" for an uncut circle).
+  const rightByBoard = !marked && boardMarked?.correct;
+  const hedgedOnly = !!String(message || '').trim() && (isTentative(message) || HEDGED.test(message)) && !gaveReason(message);
+  if ((marked?.correct || rightByBoard) && ['partly_right', 'guess_or_no_attempt'].includes(assessment.class) && hedgedOnly) {
+    note = `${note ? `${note}; ` : ''}assess said ${cls}, but the answer is right${rightByBoard ? ' (the board shows it)' : ''} and only hedged: read as right_unexplained`;
+    cls = 'right_unexplained'; mis = null;
+  } else if (!marked && boardMarked && !boardMarked.correct && ['understood', 'right_unexplained'].includes(cls)) {
+    note = `assess said ${cls}, but the board shows "${boardMarked.said}" is not right: read as partly_right`;
     cls = 'partly_right'; mis = null;
   }
   if (cls === 'misconception' && !mis) mis = marked?.misconception || null;
@@ -252,10 +283,10 @@ export function stageAllowed(s, { understoodNow = false, closing = false, preNow
  * @returns {{ moves:string[], with:string[], rule:string, reason:string, stageMax:string, avoid:string|null, prelim:string|null }}
  */
 function decideCore(s, ctx = {}) {
-  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null, lastQ = null } = ctx;
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = '', probe = null, prerequisite = null, question = null, lastQ = null, boardMarked = null, recent = [], board = [], codeDiagnosis = true } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === 'understood', closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, diagQuote: extra.diagQuote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes('Name what was right') ? 'yes' : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
   if (turnIndex === 0) return out('open', ['Open the lesson'], 'the first turn: greet, say what you will learn today, one easy friendly question', { with: [], stageMax: 'warmup' });
   // After a care reply (12 Nov 2026, scenario 29: a silence probe after a disclosure asked the child to "say that again").
   // The lesson does not go on until the child says so; a probe is an authored line; nothing asks them to repeat it.
@@ -279,6 +310,23 @@ function decideCore(s, ctx = {}) {
     if (s.stops >= 1) return out('stop', ['Close the lesson'], 'the child has asked to stop again: close the lesson now, kindly, in two short sentences (one thing they did well today), then end_session', { with: ['Name what was right', 'Celebrate the strategy'], stageMax: 'wrapup' });
     return out('bored', ['Close the lesson', 'Predict then show'], 'the child says they are bored or want to stop. Do not carry on with the same task and never repeat the lesson. Say you hear them in a few words, then offer one choice: a quick two-minute game (for example: guess how many pieces before I cut the chapati) or stopping for today. If they choose to stop, close the lesson', { with: ['Revoice and build', 'Name what was right'], stageMax: 'wrapup' });
   }
+  // Round 2: the child is answering the code's diagnosis ("You said eight. How did you get eight?"). A reason: reteach from
+  // it. No reason (silence, "I don't know", a word or a new guess): the second ask, another way; after DIAG_TRIES asks,
+  // the representation changes. Never a new task, an easier question or an either/or before then.
+  const fig = figName(board);
+  if (codeDiagnosis && s.diag && !marked?.correct && move !== 'filler' && !(probe && probe.kind === 'task_checkin')) {
+    if (message && explained(message, gaveReason)) {
+      return out('reteach', ['Show then hand over', 'Predict then show', 'Count with the child', 'Smaller-question hint'], `the child has told you how they got "${s.diag.q || 'their answer'}": use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them`, { with: ['Revoice and build', 'Name what was right'] });
+    }
+    if ((s.diag.tries || 0) < DIAG_TRIES) {
+      // A new answer is quoted; "yes", "ok" or "no" is not an answer to "how did you get it": the first words stay.
+      const fresh = marked && !marked.correct ? (quoteOf(message) || quoteOf(marked.answer)) : readAnswer(message).found.some((f) => ['number', 'fraction'].includes(f.kind)) ? quoteOf(message) : null;
+      const q = fresh || s.diag.q;
+      return out('diagnose', ['Diagnose the wrong answer'], `no reason yet for "${q || 'their answer'}" (ask ${(s.diag.tries || 0) + 1} of ${DIAG_TRIES}): the code asks again, another way`, { with: [], must: ['Diagnose the wrong answer'], authored: true, line: diagnosisLine({ quote: q, attempt: s.diag.tries || 1, fig, recent }), diagQuote: q, stageMax: s.stage || 'warmup' });
+    }
+    const left = REPS.filter((r) => r !== 'story' && !s.tried.includes(r) && r !== (fig || s.rep));
+    return out('diag-change', ['Show then hand over', 'Predict then show', 'Smaller-question hint', 'Recover a lost child'], `you asked twice how the child got "${s.diag.q || 'their answer'}" and heard no reason: do not ask again. Change the representation (SCENARIOS 15): ${left.length ? `a ${left.slice(0, 2).join(' or a ')}` : 'a story with a real thing'} instead of the ${fig || s.rep || 'picture'}, with one small step for the child`, { avoid: fig || s.rep || null });
+  }
   if (probe && PROBE_KINDS.includes(probe.kind)) {
     const why = {
       answer_nudge: 'the child is silent after your question: one short kind nudge, no answer, no new question',
@@ -297,6 +345,12 @@ function decideCore(s, ctx = {}) {
     const n = (s.fillers || 0) + 1;
     const line = n >= 2 && !s.tyt ? 'Take your time.' : null;
     return out('thinking', ['Wait and nudge'], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : ' with no words'}`, { with: [], authored: true, line, stageMax: s.stage || 'warmup' });
+  }
+  // Round 2: an answer the board shows wrong ("whole" for a cut circle, "three" pieces for two), with no reason: the code's
+  // diagnosis, before the model is called.
+  if (codeDiagnosis && !marked && boardMarked && !boardMarked.correct && !gaveReason(message) && ['tentative', null].includes(move)) {
+    const q = quoteOf(message) || boardMarked.said;
+    return out('diagnose', ['Diagnose the wrong answer'], `the board shows "${boardMarked.said}" is not right (keep that to yourself): the code asks how they got it`, { with: [], must: ['Diagnose the wrong answer'], authored: true, line: diagnosisLine({ quote: q, attempt: 0, fig, recent }), diagQuote: q });
   }
   // An answer said as a question with no open question to mark it against ("maybe four pieces?"): an answer, said tentatively.
   if (move === 'tentative') {
@@ -321,10 +375,18 @@ function decideCore(s, ctx = {}) {
     // is not diagnosing (12 Nov 2026, run 2, scenario 10): their way is known, so the reteach starts from it.
     if (gaveReason(message)) return out('reteach', ['Show then hand over', 'Predict then show', 'Count with the child', 'Smaller-question hint'], `a wrong answer, and the child has already said how they got it ("${String(message).slice(0, 80)}"): use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them`, { with: ['Revoice and build', 'Name what was right'] });
     // Diagnose means finding out what the child is thinking BEFORE any re-teaching (12 Nov 2026: the most common failure).
-    const how = `ask ONE question about how they got "${String(marked.answer || '').slice(0, 40)}" (for example "How did you get that?" or "Tell me how you counted"), and nothing else: no explaining, no new picture, no new question to answer, no hint, until you have heard their thinking`;
+    if (!codeDiagnosis) {
+      const how = `ask ONE question about how they got "${String(marked.answer || '').slice(0, 40)}" (for example "How did you get that?" or "Tell me how you counted"), and nothing else: no explaining, no new picture, no new question to answer, no hint, until you have heard their thinking`;
+      return out('diagnose', ['Diagnose the wrong answer'], marked.misconception
+        ? `a wrong answer the library reads as ${String(marked.misconception).split('.').pop()} (keep that to yourself): ${how}`
+        : `a wrong answer with no library match: ${how}`, { with: ['Revoice and build', 'Name what was right'], must: ['Diagnose the wrong answer'] });
+    }
+    // Round 2: the code says it, quoting the child, so nothing else can follow it in the turn.
+    const q = quoteOf(message) || quoteOf(marked.answer) || null;
+    const how = `the code asks ONE question about how they got "${String(q || marked.answer || '').slice(0, 40)}", and nothing else`;
     return out('diagnose', ['Diagnose the wrong answer'], marked.misconception
       ? `a wrong answer the library reads as ${String(marked.misconception).split('.').pop()} (keep that to yourself): ${how}`
-      : `a wrong answer with no library match: ${how}`, { with: ['Revoice and build', 'Name what was right'], must: ['Diagnose the wrong answer'] });
+      : `a wrong answer with no library match: ${how}`, { with: [], must: ['Diagnose the wrong answer'], authored: true, line: diagnosisLine({ quote: q, attempt: 0, fig, recent }), diagQuote: q });
   }
   if (s.diagnosing && message && !marked) return out('reteach', ['Show then hand over', 'Predict then show', 'Count with the child', 'Smaller-question hint'], 'the child has told you how they got their wrong answer: use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them', { with: ['Revoice and build', 'Name what was right'] });
   // After a right answer: name it, with the child's own words, and never ask that question again (12 Nov 2026).
@@ -338,7 +400,9 @@ function decideCore(s, ctx = {}) {
       const next = nextStepOf([...s.solved, questionKind(asked)].filter(Boolean), { cut: figCut(s.fig) });
       return out('advance', ['Name what was right', 'Show then hand over', 'Predict then show', 'Count with the child', 'Check for understanding'], `right${cr.hedged ? ', said unsure' : ''}: say yes, in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}"), then take the next step${next ? `: ${next}` : ' of the target'}. No "how did you know" (${why}). Never ask this question again`, { ...right, ack: 'yes', noPress: why });
     }
-    if (cr.hedged || cr.oneWord) return out('press', ['Name what was right', 'Press for reasoning'], `right, but ${cr.hedged ? 'said unsure' : 'one word'} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, { ...right, ack: 'revoice', press: marked.canon || 'yes' });
+    // Round 2 (run 2026-11-13-1027, scenario 6 turn 10): "Name what was right" was required here while the same rule said
+    // "do not say yes yet"; the say-back is a Revoice, and the move the turn must carry is the press.
+    if (cr.hedged || cr.oneWord) return out('press', ['Revoice and build', 'Press for reasoning'], `right, but ${cr.hedged ? 'said unsure' : 'one word'} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || '').slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? ' and how sure they are' : ''}. It does not count as understood until they give a reason`, { ...right, must: ['Press for reasoning'], ack: 'revoice', press: marked.canon || 'yes' });
     return out('press', ['Name what was right', 'Press for reasoning'], 'right, but no reason yet: name what was right in the child\'s own words, then ask how they knew. It does not count as understood until they give a reason', { ...right, press: marked.canon || 'yes' });
   }
   if (marked && prelim === 'understood') {
@@ -380,6 +444,10 @@ export function figOf(board = []) {
   return `${name}:${Math.min(999, parts)}`;
 }
 const figCut = (fig) => Number(String(fig || '').split(':')[1]) > 1;
+/** The picture the child is looking at, as a word for a sentence ("circle", "bar"), or null. */
+const maxParts = (board) => Math.max(1, ...(board || []).filter((b) => b && FIG_CMDS.includes(b.cmd) && (b.cmd !== 'figure' || b.type === 'fraction')).map((b) => { const p = b.cmd === 'figure' ? b.params || {} : b; return (p.shape === 'grid' ? (Number(p.rows) || 0) * (Number(p.cols) || 0) : Number(p.parts)) || 1; }));
+const figName = (board) => { const f = figOf(board); if (!f) return null; const n = f.split(':')[0]; return ['circle', 'bar', 'grid', 'number line'].includes(n) ? n : 'picture'; };
+const shapeOf = (fig) => (fig ? String(fig).split(':')[0] : null);
 export const STUCK_AFTER = 2; // non-answers or wrong answers on one kind of question before it is shown another way
 const STUCK_RULES = ['probe', 'lost', 'stage', 'tentative', 'question', 'reteach', 'prerequisite'];
 const OPEN_SKIP = ['open', 'care', 'care-wait', 'care-return', 'close', 'stop', 'thinking', 'bored', 'diagnose'];
@@ -506,6 +574,9 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
   if (decision?.rule === 'close' && !probe) s.closes = Math.min(5, (s0.closes || 0) + 1);
   if (decision?.rule === 'example') s.examples = (s.examples || 0) + 1;
   if (!probe && decision?.rule !== 'thinking') s.diagnosing = decision?.rule === 'diagnose';
+  // Round 2: the code's diagnosis, and how many times it has asked; anything else (a reason, a change, a right answer) ends it.
+  if (decision?.rule === 'diagnose') { s.diagnosing = true; s.diag = { q: decision.diagQuote || s0.diag?.q || null, tries: Math.min(10, (s0.diag?.tries || 0) + 1) }; }
+  else if (decision?.rule !== 'thinking' && !(probe && probe.kind === 'task_checkin')) s.diag = null;
   s.seal = keepSeal || null;
   if (probe) s.probes += 1;
   // Fillers in a row, and the one "Take your time" (decide: thinking). Anything the child says starts the count again.
@@ -550,6 +621,15 @@ export function updateLesson(s0, { decision = null, steps = [], judged = null, m
     let tries = s0.step?.tries || 0;
     const fail = !!probe || decision?.rule === 'lost' || (!!marked && !marked.correct) || (!marked && WRONG.includes(cls));
     if (k0 && rightNow && !probe) { s.solved = [...new Set([...s.solved, k0])].slice(-8); tries = 0; } else if (k0 && fail) tries += 1;
+    // Round 2 (run 2026-11-13-1027, scenario 17: "where could one straight line go" asked on the same circle in turns 3, 9,
+    // 12 and 16): a kind of question that has failed twice on a shape is never asked on that shape again, even after a
+    // small success on another step resets the tries.
+    if (k0 && fail && tries >= STUCK_AFTER && s0.fig && !['reason', 'other', 'notice'].includes(k0)) s.failed = [...new Set([...s.failed, `${k0}@${shapeOf(s0.fig)}`])].slice(-8);
+    // A cut said and put off (Predict then show) is owed until it is drawn, for three turns (Round 2: words match the board).
+    const grew = board ? maxParts(boardAfter(board, steps)) > maxParts(board) : false;
+    if (grew) s.promised = 0;
+    else if (steps.some((x) => x.cmd === 'say' && defersCut(x.text))) s.promised = 3;
+    else s.promised = Math.max(0, (s0.promised || 0) - 1);
     const q = lastQuestionOf(steps);
     const k = questionKind(q);
     if (k) s.step = { kind: k, tries: k === k0 && !rightNow ? tries : 0 };
@@ -746,6 +826,11 @@ export function turnBrief(s, d, { message = '', marked = null, open = null, boar
   else if (d.next) L.push(`- The next step: ${d.next}.`);
   if (d.stuck) L.push(`- Stuck: ${d.stuck.tries} tries on ${STEP_NAMES[d.stuck.kind] || 'this step'}. Do not ask that kind of question again now: show it another way (a bar, a number line, folding a paper, a short story) or make the step much smaller.`);
   if (d.open) L.push('- Your last question was a yes-or-no or this-or-that question. Ask an open one now (how many, what, where), or ask them to point or show.');
+  // Round 2: questions that have failed twice on the picture now on the board; a cut said and not yet drawn.
+  const shapeNow = shapeOf(figOf(board));
+  const failedHere = (s.failed || []).filter((k) => k.endsWith(`@${shapeNow}`)).map((k) => STEP_NAMES[k.split('@')[0]] || k.split('@')[0]);
+  if (shapeNow && failedHere.length && !['open', 'close', 'stop'].includes(d.rule)) L.push(`- Failed twice on the ${shapeNow}: ${failedHere.join('; ')}. Never ask that again on the ${shapeNow}: change the picture (a bar, a number line, folding a paper, a short story) or take a different, smaller step.`);
+  if ((s.promised || 0) > 0 && !['open', 'close', 'stop'].includes(d.rule)) L.push('- You said you would cut it and have not drawn the cut yet. Draw the cut first (after the child\'s guess) before you talk about the new pieces; until then the board shows only what is in the board line above.');
   L.push('- One question this turn, at the end. The app keeps only your last question.');
   // 5b. Pacing (12 Nov 2026): the word budget, the hand-over after explaining, the child's share of the talk, the warm-up's first question.
   const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));

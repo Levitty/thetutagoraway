@@ -64,7 +64,7 @@ export { parseChild, garble, CHILD_MODEL } from './child.mjs';
  * Plays one scenario. Returns { turns, ended, stopReason, concerns, usage, ... } for the transcript and the judge.
  * @param {object} o { sc, maxTurns, budget, callModel, onLog, seed, errorRate }
  */
-export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {}, seed = Number(process.env.EVAL_CHILD_SEED) || (Date.now() % 100000), errorRate, nonImproving = null, childCall = null }) {
+export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () => {}, seed = Number(process.env.EVAL_CHILD_SEED) || (Date.now() % 100000), errorRate, nonImproving = null, childCall = null, tutorModel = null }) {
   const sid = randomUUID();
   const db = fakeDb();
   const t0 = Date.now();
@@ -90,7 +90,10 @@ export async function playLesson({ sc, maxTurns, budget, callModel, onLog = () =
   const result = { sid, scenario: sc.n, turns: log, ended: null, stopReason: null, probesDuringWork: null, notes: [] };
   let capHit = false;
   // The lesson's time limit: the app's 20 minutes, longer only for the scenario that needs 35 to 40 turns (scenario 41).
-  const settings = sc.minutes ? { ...SETTINGS, sessionMinutes: sc.minutes } : SETTINGS;
+  // Round 2 (13 Nov 2026): the tutor's model may be chosen for a side-by-side run (run-evals.mjs --tutor-model); everything
+  // else (effort, prompt, gate, child, judge) stays the same. The gate's rewrites use the same model as the turn.
+  const base = tutorModel ? { ...SETTINGS, model: tutorModel } : SETTINGS;
+  const settings = sc.minutes ? { ...base, sessionMinutes: sc.minutes } : base;
   let injected = null; let injectNote = '';
 
   const speechMs = (steps) => steps.reduce((ms, s) => ms + (s.cmd === 'say' ? 600 + 380 * s.text.split(/\s+/).length : ['write_text', 'write_math', 'fraction_bar', 'number_line', 'shape', 'figure', 'plot_points'].includes(s.cmd) ? 2500 : 300), 0);

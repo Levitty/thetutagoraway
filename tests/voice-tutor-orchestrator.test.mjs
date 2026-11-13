@@ -66,7 +66,18 @@ test('a wrong answer: diagnose first; a second wrong answer with the same pictur
   // The state after that turn (which still used the bar): one wrong answer with it.
   const s1 = updateLesson(at({ rep: 'bar', tried: ['bar'] }), { decision: d1, steps: [say('How did you get four?', 'Diagnose the wrong answer'), bar], judged: finalClass({ marked: wrong() }), marked: wrong() });
   assert.equal(s1.sameFails, 1);
-  const d2 = decide(s1, { turnIndex: 6, marked: wrong('q2') });
+  // Round 2: the diagnosis is the code's and waits for a reason. A second wrong answer instead is a failed ask: the code
+  // asks again, another way; a third, and the representation changes (diag-change).
+  assert.deepEqual(s1.diag, { q: '4', tries: 1 });
+  const ask2 = decide(s1, { turnIndex: 6, marked: wrong('q2'), message: 'six' });
+  assert.deepEqual([ask2.rule, ask2.authored, ask2.diagQuote], ['diagnose', true, 'six']);
+  assert.notEqual(ask2.line, d1.line, 'the second ask is another way');
+  const s1b = updateLesson(s1, { decision: ask2, steps: [say(ask2.line, 'Diagnose the wrong answer')], judged: finalClass({ marked: wrong('q2') }), marked: wrong('q2') });
+  const dc = decide(s1b, { turnIndex: 7, marked: wrong('q3'), message: 'seven' });
+  assert.equal(dc.rule, 'diag-change');
+  assert.equal(dc.avoid, 'bar');
+  // With the diagnosis answered (the child said how), the older rule holds: a second wrong answer with the same picture changes it.
+  const d2 = decide({ ...s1, diag: null }, { turnIndex: 6, marked: wrong('q2') });
   assert.equal(d2.rule, 'change');
   assert.equal(d2.avoid, 'bar');
   assert.match(d2.reason, /Do not use the bar again/);
@@ -88,7 +99,8 @@ test('a right fraction with no reason is pressed for its reason before it counts
   assert.match(c.reason, /No "how did you know" \(a count or a name needs no reason\)/);
   assert.equal(updateLesson(at(), { decision: c, steps: [say('Yes, two. How many are shaded?', 'Name what was right')], judged: finalClass({ marked: right(), message: '2' }), marked: right() }).pending, null);
   const d = decide(at(), { turnIndex: 5, marked: half(), message: 'one half' });
-  assert.deepEqual([d.rule, d.moves, d.prelim, d.must], ['press', ['Name what was right', 'Press for reasoning'], 'right_unexplained', ['Name what was right']]);
+  // Round 2: a one-word or unsure right answer is said back (Revoice), never a yes; the move the turn must carry is the press.
+  assert.deepEqual([d.rule, d.moves, d.prelim, d.must, d.ack], ['press', ['Revoice and build', 'Press for reasoning'], 'right_unexplained', ['Press for reasoning'], 'revoice']);
   const s = updateLesson(at(), { decision: d, steps: [say('How did you know?', 'Press for reasoning')], judged: finalClass({ marked: half(), message: 'one half' }), marked: half() });
   assert.deepEqual(s.pressed, ['1/2'], 'pressed once on this idea');
   assert.equal(decide(s, { turnIndex: 7, marked: half('q3'), message: 'one half' }).rule, 'advance', 'never twice on one idea');
@@ -135,12 +147,16 @@ test('a missing earlier skill sends the lesson back to the prerequisite; "I don\
 });
 
 test('the turn is checked against the decision: notes only, and they name what was off', () => {
-  const d = decide(at(), { turnIndex: 5, marked: half(), message: 'one half' });
+  const d = decide(at(), { turnIndex: 5, marked: half(), message: 'one half because two quarters fit' });
   // After a right answer, Name what was right is required: a turn that skips it is noted.
-  assert.deepEqual(judgeTurn(d, [say('Yes! How did you know?', 'Press for reasoning'), { cmd: 'pause_for_child' }]), ['"Name what was right" was required this turn and no say carried it']);
-  assert.deepEqual(judgeTurn(d, [say('Yes, two.', 'Name what was right'), say('How did you know?', 'Press for reasoning')]), []);
+  assert.equal(d.rule, 'fresh-check');
+  assert.deepEqual(judgeTurn(d, [say('Now try this one.', 'Check for understanding'), { cmd: 'pause_for_child' }]), ['"Name what was right" was required this turn and no say carried it']);
+  assert.deepEqual(judgeTurn(d, [say('Yes, two.', 'Name what was right'), say('Is three sixths the same?', 'Check for understanding')]), []);
+  // Round 2: a press on a one-word answer requires the press, not a yes (run 2026-11-13-1027, scenario 6 turn 10).
+  const p1 = decide(at(), { turnIndex: 5, marked: half(), message: 'half' });
+  assert.deepEqual(judgeTurn(p1, [say('Half, you said. What made you say half?', 'Press for reasoning')]), []);
   const off = judgeTurn(d, [say('Next one.', 'Stretch the quick child')]);
-  assert.match(off.join(' '), /"Stretch the quick child" was not allowed this turn \(press: Name what was right, Press for reasoning\)/);
+  assert.match(off.join(' '), /"Stretch the quick child" was not allowed this turn \(fresh-check: Name what was right, Check for understanding\)/);
   assert.match(off.join(' '), /no say was tagged with an allowed move/);
   assert.match(judgeTurn(d, [say('Hmm.', 'Dance')]).join(' '), /not a playbook move/);
   assert.deepEqual(judgeTurn(null, [say('x')]), []);
@@ -190,7 +206,8 @@ test('the model reads the state and the allowed moves in plain lines', () => {
   const d = decide(s, { turnIndex: 6, marked: wrong('q2') });
   const lines = lessonLines(s, d).join('\n');
   assert.match(lines, /stage guided; the child is now answering a question; question q2, 1 attempt so far/);
-  assert.match(lines, /Allowed moves this turn: Diagnose the wrong answer \(and alongside: Revoice and build/);
+  // Round 2: the diagnosis is the code's sentence, so nothing goes alongside it.
+  assert.match(lines, /Allowed moves this turn: Diagnose the wrong answer\. Why: .*the code asks ONE question/);
   assert.match(lines, /Tag the say that carries your move/);
   assert.deepEqual(repsOf([{ cmd: 'shape', kind: 'circle' }, { cmd: 'figure', type: 'fraction', params: { shape: 'grid' } }, { cmd: 'figure', type: 'numberline' }, { cmd: 'say' }]), ['circle', 'grid', 'number line']);
 });
@@ -208,7 +225,7 @@ test('updateLesson: stage, question, hints and what the child is doing move with
 // ---------------------------------------------------------------- the first test-set run (12 Nov 2026)
 test('after a right answer: name it in the child\'s words, and never ask that question again', () => {
   const marked = { ...right(), said: 'two sixths' };
-  const d = decide(at(), { turnIndex: 5, marked, message: 'two sixths', question: { question: 'One third is how many sixths?' } });
+  const d = decide(at(), { turnIndex: 5, marked, message: 'two sixths, because each third is cut in two', question: { question: 'One third is how many sixths?' } });
   assert.deepEqual([d.must, d.quote, d.answered], [['Name what was right'], 'two sixths', { ask: 'q1', prompt: 'One third is how many sixths?' }]);
   const lines = lessonLines(at({ found: ['2/6'] }), d).join('\n');
   assert.match(lines, /Answers the child has already found \(you may say them back now\): 2\/6/);
@@ -222,8 +239,10 @@ test('after a right answer: name it in the child\'s words, and never ask that qu
 
 test('a wrong answer: Diagnose is one question about how they got it, before any teaching; skipping it is noted', () => {
   const d = decide(at(), { turnIndex: 5, marked: wrong() });
-  assert.deepEqual([d.rule, d.moves, d.with, d.must], ['diagnose', ['Diagnose the wrong answer'], ['Revoice and build', 'Name what was right'], ['Diagnose the wrong answer']]);
-  assert.match(d.reason, /ask ONE question about how they got "4".*no explaining, no new picture, no new question/);
+  // Round 2: the code says the diagnosis itself, quoting the child, and nothing goes with it.
+  assert.deepEqual([d.rule, d.moves, d.with, d.must, d.authored], ['diagnose', ['Diagnose the wrong answer'], [], ['Diagnose the wrong answer'], true]);
+  assert.match(d.reason, /the code asks ONE question about how they got "4", and nothing else/);
+  assert.equal(d.line, 'You said four. How did you get four?');
   assert.deepEqual(judgeTurn(d, [say('Four, you said. How did you get four?', 'Diagnose the wrong answer')]), []);
   const told = judgeTurn(d, [say('Not quite. Look, it is two.', 'Diagnose the wrong answer'), bar, { cmd: 'ask', id: 'q2', prompt: 'How many?', form: 'number' }]);
   assert.match(told.join(' '), /did not ask how the child got their answer/);
@@ -356,7 +375,9 @@ test('a wrong answer the child has already explained is retaught from their way,
 test('the never-tell exit: after two failed attempts on a changed picture, ONE worked example is allowed, then back to the child', () => {
   // wrong with the bar, then wrong with the bar again: change; a number line is drawn; then two wrong answers on it.
   let s = at({ rep: 'bar', tried: ['bar'] });
-  const step = (state, steps, m, ask) => {
+  // Round 2 diagnoses first and waits for a reason; this test is about the exit, so each diagnosis counts as answered.
+  const step = (state0, steps, m, ask) => {
+    const state = { ...state0, diag: null };
     const d = decide(state, { turnIndex: 6, marked: m });
     return { d, s: updateLesson(state, { decision: d, steps, judged: finalClass({ marked: m }), marked: m }) };
   };

@@ -25,6 +25,9 @@ const SECRET = 'test-secret-that-is-long-enough';
 const USER = { id: 'u-parent', email: 'tester@example.com' };
 const SID = '0b7e4d3c-1111-4222-8333-944455556666';
 const settings = settingsFrom((k) => ({ VOICE_TUTOR_ENABLED: '1', VOICE_TUTOR_ALLOWLIST: 'tester@example.com' }[k]));
+// Round 2 (13 Nov 2026): the code says the diagnosis of a wrong answer itself, with no model call. The tests of what the
+// model does after a wrong answer run with that switched off (VOICE_TUTOR_CODE_DIAGNOSIS=0).
+const modelDiag = settingsFrom((k) => ({ VOICE_TUTOR_ENABLED: '1', VOICE_TUTOR_ALLOWLIST: 'tester@example.com', VOICE_TUTOR_CODE_DIAGNOSIS: '0' }[k]));
 
 const world = ({ spent = { session: 0, day: 0 }, progress = { skills: {} }, broken = false } = {}) => {
   const usage = []; const concerns = []; const evidence = [];
@@ -112,7 +115,7 @@ test('the answer is marked on the server from the seal, with the misconception i
   const first = await turn({ db: world(), callModel: model(reply(GOOD)) });
   const s = first.body.steps.find((x) => x.cmd === 'ask').seal;
   const callModel = model(reply([{ cmd: 'say', text: 'Let us check that with a bar.' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]));
-  const r = await turn({ db: world(), callModel, body: { message: '4', answer: { seal: s, response: '4' } } });
+  const r = await turn({ db: world(), callModel, settings: modelDiag, body: { message: '4', answer: { seal: s, response: '4' } } });
   assert.deepEqual({ ...r.body.marked, skill: undefined }, { ask: 'q1', skill: undefined, correct: false, misconception: `${EQ}.M_EQUIV_ADDITIVE`, answer: '4', said: null, canon: null, tentative: false });
   assert.match(callModel.calls[0].messages[0].content[0].text, /library reads this answer as .*M_EQUIV_ADDITIVE.*Diagnose before you teach/);
   // A seal for another session, or tampered, marks nothing.
@@ -133,7 +136,7 @@ test('streamed: a sentence that gives the answer away is never sent; one rewrite
   ]);
   const db = world();
   const callModel = model(leak12);
-  const r = await turn({ db, callModel, body: { message: '7', answer: { seal: ask12, response: '7' } } });
+  const r = await turn({ db, callModel, settings: modelDiag, body: { message: '7', answer: { seal: ask12, response: '7' } } });
   // The gate (PLAN_TO_FOUR.md step 3) asks for one rewrite of that sentence only; the fake's reply is not a rewrite, so
   // the sentence is dropped and the turn recovers. What was said stays said.
   assert.equal(callModel.calls.length, 2, 'one targeted rewrite, no more');
@@ -147,7 +150,7 @@ test('streamed: a sentence that gives the answer away is never sent; one rewrite
   assert.ok(db.usage[0].cost_usd > 0, 'every token is still billed');
   // The check covers everything said so far in the turn, not only the newest sentence.
   const split = reply([{ cmd: 'say', text: 'Think of twelve.' }, { cmd: 'write_math', id: 'm', expr: 'frac(3,4) = frac(12,16)', slot: 'top' }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }]);
-  const r2 = await turn({ db: world(), callModel: model(split), body: { message: '7', answer: { seal: ask12, response: '7' } } });
+  const r2 = await turn({ db: world(), callModel: model(split), settings: modelDiag, body: { message: '7', answer: { seal: ask12, response: '7' } } });
   assert.ok(r2.body.guard.includes('answer-leak'));
   assert.ok(!r2.body.steps.some((x) => x.cmd === 'write_math'));
 });
@@ -395,7 +398,7 @@ const worldUp = () => { const w = world(); w.upgrades = []; w.upgradeEvidence = 
 test('assess is silent: never a step for the child; its class goes to the tester, held to the seal', async () => {
   const db = world();
   const callModel = model(reply([{ cmd: 'assess', class: 'understood', evidence: 'said four sixths', ask: 'q1' }, { cmd: 'say', text: 'Tell me how you got four.', move: 'Diagnose the wrong answer' }, HAND]));
-  const r = await turn({ db, callModel, body: { message: '4', answer: { seal: await sealQ1(), response: '4' } } });
+  const r = await turn({ db, callModel, settings: modelDiag, body: { message: '4', answer: { seal: await sealQ1(), response: '4' } } });
   assert.ok(!r.body.steps.some((s) => s.cmd === 'assess'), 'never sent as a step');
   assert.deepEqual([r.body.tester.judged.class, r.body.tester.judged.source], ['misconception', 'model'], 'the seal says wrong: never understood');
   assert.match(r.body.tester.judged.note, /seal marked the answer wrong/);
@@ -465,7 +468,8 @@ test('a silence probe: the reason and the exact step shape in the context, a sho
   assert.equal(normal.calls[0].output_config.effort, 'medium');
   assert.equal(normal.calls[0].system[0].text, req.system[0].text);
   // A probe that rambles is cut short.
-  const long = reply([{ cmd: 'say', text: 'Take your time, there is no hurry at all today, my friend.' }, { cmd: 'say', text: 'Look at the bar and count the parts again slowly with me now.' }, HAND]);
+  // (No "look at the bar" here: with no bar on the board, Round 2's board check would drop it before its length mattered.)
+  const long = reply([{ cmd: 'say', text: 'Take your time, there is no hurry at all today, my friend.' }, { cmd: 'say', text: 'Think it through again slowly with me now, one step and then the next.' }, HAND]);
   const r2 = await turn({ db: world(), callModel: model(long), body: { turn_index: 2, probe: { kind: 'answer_nudge', silent_s: 7 }, lesson } });
   assert.ok(r2.body.guard.includes('too-long-probe'));
   assert.equal(r2.body.steps.at(-1).cmd, 'pause_for_child');
@@ -507,7 +511,8 @@ test('the child\'s spoken right answer is marked right, named first, and no long
     const oneWord = ['a half', 'two quarters', 'four eighths'].includes(said);
     assert.equal(r.body.steps[0].text, oneWord ? 'One half: one of two equal pieces.' : 'Yes, one half: one of two equal pieces.', said);
     assert.deepEqual(r.body.lesson.found, ['1/2']);
-    assert.match(callModel.calls[0].messages[0].content[0].text, /Your first say is Name what was right/);
+    // Round 2: a one-word right answer is said back with no yes (the press), so the brief says that, not "Name what was right".
+    assert.match(callModel.calls[0].messages[0].content[0].text, oneWord ? /No "yes" yet: say back what you heard/ : /Your first say is Name what was right/);
   }
 });
 
@@ -519,7 +524,7 @@ test('after a right answer the code names it when the model does not, and the sa
     { cmd: 'say', text: 'What is each piece called?', move: 'Check for understanding' },
     HAND,
   ]));
-  const r = await turn({ db: world(), callModel, body: { turn_index: 4, message: 'Four pieces. Two times two is four.', answer: { seal: s, response: 'Four pieces. Two times two is four.' } } });
+  const r = await turn({ db: world(), callModel, body: { turn_index: 4, board: [{ cmd: 'fraction_bar', id: 'b1', parts: 4, shaded: 0, slot: 'middle' }], message: 'Four pieces. Two times two is four.', answer: { seal: s, response: 'Four pieces. Two times two is four.' } } });
   assert.deepEqual(r.body.steps.filter((x) => x.cmd === 'say').map((x) => x.text), ['Yes, four pieces.', 'Now let us look at the bar.', 'What is each piece called?']);
   assert.equal(r.body.steps[0].move, 'Name what was right');
   assert.ok(!r.body.steps.some((x) => x.cmd === 'ask'), 'the question just answered is not asked again');
@@ -547,7 +552,7 @@ test('the answer inside its own question: that sentence is not said, and the tur
     { cmd: 'say', text: 'Say it as a fraction for me.', move: 'Check for understanding' },
     { cmd: 'ask', id: 'w4', prompt: 'What fraction is shaded?', form: 'fraction', expected: '1/2' },
     HAND,
-  ])), body: { turn_index: 4, message: 'my piece' } });
+  ])), body: { turn_index: 4, message: 'my piece', board: [{ cmd: 'shape', id: 'c1', kind: 'circle', parts: 2, shaded: 1, slot: 'middle' }] } });
   assert.ok(r2.body.guard.includes('answer-before-ask'));
   assert.ok(!r2.body.steps.some((x) => x.cmd === 'ask'));
   assert.doesNotMatch(JSON.stringify(r2.body.steps), NEVER_AGAIN);
@@ -681,7 +686,8 @@ test('the answer-in-question guard looks only at the sealed answer: the pieces i
   assert.ok(!r.body.guard.includes('answer-in-question'));
   assert.ok(r.body.steps.some((x) => x.cmd === 'say' && /twelve equal pieces/.test(x.text)));
   // With no question sealed at all, a count is not a give-away either.
-  const r2 = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'I cut it into two equal pieces. How many pieces does the chapati have now?', move: 'Show then hand over' }, HAND])), body: { turn_index: 4, message: 'ok' } });
+  // (The cut is drawn: Round 2's board check would drop a cut that is only said.)
+  const r2 = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: 'I cut it into two equal pieces. How many pieces does the chapati have now?', move: 'Show then hand over' }, { cmd: 'shape', id: 'c1', kind: 'circle', parts: 2, shaded: 0, slot: 'middle', on: 'cut' }, HAND])), body: { turn_index: 4, message: 'ok' } });
   assert.ok(!r2.body.guard.includes('answer-in-question'));
   assert.match(r2.body.steps.filter((x) => x.cmd === 'say').at(-1).text, /How many pieces does the chapati have now\?/);
   // The sealed answer said before its own question is still caught (the ask comes after the sentence).
@@ -766,11 +772,12 @@ test('a question id used before in the lesson is renamed, so its evidence is not
 
 // ---------------------------------------------------------------- pacing (12 Nov 2026)
 const WARMUP_LESSON = { v: 1, stage: 'warmup', turns: 1, pre: 'ask', doing: 'answer' };
-const long40 = `We cut the chapati into four equal pieces today and I shade one of them for you now. ${Array(14).fill('and').join(' ')} here it is. How many pieces are shaded?`;
+// (No "I shade one" with nothing shaded: Round 2's board check would drop it before its length mattered.)
+const long40 = `We look at the chapati together today and we take our time with it, you and me, right now. ${Array(14).fill('and').join(' ')} here it is. How many pieces are shaded?`;
 
 test('a turn over the word cap is cut to 30 words and keeps its final question; after turn 10 the cap is 25', async () => {
   for (const [idx, cap] of [[3, 30], [12, 25]]) {
-    const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: long40 }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }])), body: { turn_index: idx, message: 'ok', lesson: { ...WARMUP_LESSON, pre: null, turns: idx } } });
+    const r = await turn({ db: world(), callModel: model(reply([{ cmd: 'say', text: long40 }, { cmd: 'pause_for_child', expect: 'typed', max_wait_s: 30 }])), body: { turn_index: idx, message: 'ok', board: [{ cmd: 'shape', id: 'c1', kind: 'circle', parts: 4, shaded: 1, slot: 'middle' }], lesson: { ...WARMUP_LESSON, pre: null, turns: idx } } });
     const said = r.body.steps.filter((s) => s.cmd === 'say').map((s) => s.text).join(' ');
     assert.ok(said.split(/\s+/).length <= cap, `${said.split(/\s+/).length} words, cap ${cap}`);
     assert.match(said, /How many pieces are shaded\?$/);

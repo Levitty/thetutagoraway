@@ -1176,9 +1176,9 @@ function checkStep(s0, ctx, notes) {
         out.misconception = misOf(s.misconception, ctx, "assess");
       } else need(s.misconception == null, "assess: a misconception code only with class misconception");
       out.evidence = clip(s.evidence, LIMITS.assess, "assess evidence", notes);
-      if (s.ask != null) {
-        need(typeof s.ask === "string" && ID_RE.test(s.ask), "assess: bad ask id");
-        out.ask = s.ask;
+      if (s.ask != null && s.ask !== "") {
+        if (typeof s.ask === "string" && ID_RE.test(s.ask)) out.ask = s.ask;
+        else notes.push(`assess: ask id ${JSON.stringify(String(s.ask).slice(0, 30))} not readable, left out (the judgement is kept)`);
       }
       break;
     case "end_session":
@@ -5319,7 +5319,7 @@ function preFor({ target = null, prerequisite = null, prerequisites = [], nameOf
 }
 var askIsOnPre = (pre, { skill: skill2 = null, prompt = "" } = {}) => !pre || (pre.skill ? skill2 === pre.skill : pre.re.test(String(prompt)));
 var KINDS = [
-  ["cut", /\b(where|how) (would|will|should|could|can|do|did) (you|we|i) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you|i) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\bhow (do|can|would) (we|you) (share|make) (it|them)? ?(fair|equal)/i],
+  ["cut", /\b(where|how) (would|will|should|could|can|do|did) (you|we|i) (cut|share|split|divide)\b|\bhow many pieces (do|would|should|will|shall) (i|you|we) cut\b|\bwhat (could|can|should|would) (we|you|i) do\b[^?]*\b(cut|share|fair|pieces|smaller)\b|\bwhat (could|can|should|would) (we|you) do to (it|the \w+)\b|\bhow (do|can|would) (we|you) (share|make) (it|them)? ?(fair|equal)|\bwhere (could|would|should|will|does|do|can) (a|one|the|your|my) (straight )?(line|cut|knife)\b|\bwhere (would|will|does|should|could) (the|a|your) knife go\b|\bwhat would you do with the knife\b|\bshow (me )?where the knife\b/i],
   ["reason", /\b(how did you|how do you know|how you know|how can you tell|how are you sure|how sure|what made you|why|tell me how|what did you (count|look at|do)|show me why)\b/i],
   ["fraction", /\b(what|which) fraction\b|\bas a fraction\b|\bhow many out of\b|\bout of how many\b|\bwhat (do|would) (we|you) call\b|\bwhat is (each|one|that|this) (piece|part)( called)?\b|\bwhat part of\b/i],
   ["compare", /\b(same amount|the same as|more than|less than|bigger|smaller|more|less|equal to|equals|equivalent|make (your|one|the|a) half|fit into)\b|\bhow many (halves|thirds|quarters|fourths|fifths|sixths|eighths|ninths|tenths|twelfths)\b/i],
@@ -5532,7 +5532,10 @@ var settingsFrom = (get = () => void 0) => ({
   // The turn gate (gate.js, PLAN_TO_FOUR.md step 3): on unless VOICE_TUTOR_GATE=0.
   gate: get("VOICE_TUTOR_GATE") !== "0",
   // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
-  matchedExamples: get("VOICE_TUTOR_MATCHED_EXAMPLES") === "1"
+  matchedExamples: get("VOICE_TUTOR_MATCHED_EXAMPLES") === "1",
+  // Round 2 (13 Nov 2026): the code says the diagnosis of a wrong or unclear answer (diagnosis.js). Off only by
+  // VOICE_TUTOR_CODE_DIAGNOSIS=0, to compare with the model writing it.
+  codeDiagnosis: get("VOICE_TUTOR_CODE_DIAGNOSIS") !== "0"
 });
 var capCheck = ({ sessionUsd = 0, dayUsd = 0, turns = 0 } = {}, s = DEFAULT_SETTINGS) => {
   if (sessionUsd >= s.sessionCapUsd) return { ok: false, reason: "session-cap" };
@@ -7003,6 +7006,14 @@ function hearNumbers(text, { numberOpen = true } = {}) {
   return `${lead}${SOUND_ALIKE[m[1].toLowerCase()]}${rest.slice(m[1].length)}`;
 }
 var asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number|what fraction|which fraction|as a fraction|out of how many)\b/i.test(String(q || ""));
+var numberFits = (q) => asksForNumber(q) || /\b(cut|share|shared|sharing|split|divide|knife|pieces?|parts?|slices?|friends|children|people|halves|how much|which (one|part|piece))\b/i.test(String(q || ""));
+var LONE_SOUND_ALIKE = new RegExp(`^(?:to|too|tu|for|fore|ate)(?:\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|cuts?))?${ANSWER_TAIL}`, "i");
+function loneNumberWord(text) {
+  const raw = String(text ?? "");
+  const lead = ANSWER_LEAD.exec(raw)?.[0] || "";
+  return LONE_SOUND_ALIKE.test(raw.slice(lead.length));
+}
+var POINTING = /^(?:(?:maybe|is it|it'?s|it is|i think)\s+)?(?:this|that|the (?:top|bottom|left|right|middle|shaded|white|first|second|big|bigger|small|smaller|other)) ?(?:one|part|piece|bit|side|half|line)?(?:\s+(?:here|there))?\s*\??\s*$|^(?:here|there|right here|over here)\s*\??\s*$/i;
 function childMove(text) {
   const r = readAnswer(text);
   if (!String(text || "").trim()) return null;
@@ -7010,6 +7021,7 @@ function childMove(text) {
   if (r.filler) return "filler";
   if (REASON_START.test(stripLead(text).split(/\s+/).slice(0, 1).join(" "))) return null;
   if (!r.again && isTentative(text)) return "tentative";
+  if (!r.again && POINTING.test(stripLead(String(text || "")).trim())) return "tentative";
   if (r.lost) return "lost";
   if (r.question || r.again) return "question";
   return null;
@@ -8692,14 +8704,14 @@ var CORE_FAMILIES = [
     rung: 2,
     form: "word",
     draw: () => {
-      const cap3 = pick([14, 18, 25, 33, 41]);
-      return { cap: cap3, on: randInt(3, cap3 - 3) };
+      const cap4 = pick([14, 18, 25, 33, 41]);
+      return { cap: cap4, on: randInt(3, cap4 - 3) };
     },
-    make: ({ cap: cap3, on }) => ({
-      question: `A matatu can carry at most ${cap3} passengers. There are ${on} on board and p more get on. Which inequality fits?`,
-      options: [{ text: `${on} + p \u2264 ${cap3}`, right: true }, { text: `${on} + p \u2265 ${cap3}`, right: false, why: '"At most" means the total cannot go above the limit.' }, { text: `${on} + p > ${cap3}`, right: false, why: "Greater than the limit would be overloading." }, { text: `p \u2264 ${cap3}`, right: false, why: `There are already ${on} on board, so they count too.` }],
+    make: ({ cap: cap4, on }) => ({
+      question: `A matatu can carry at most ${cap4} passengers. There are ${on} on board and p more get on. Which inequality fits?`,
+      options: [{ text: `${on} + p \u2264 ${cap4}`, right: true }, { text: `${on} + p \u2265 ${cap4}`, right: false, why: '"At most" means the total cannot go above the limit.' }, { text: `${on} + p > ${cap4}`, right: false, why: "Greater than the limit would be overloading." }, { text: `p \u2264 ${cap4}`, right: false, why: `There are already ${on} on board, so they count too.` }],
       hints: ['"At most" means no more than.', "Passengers on board plus those getting on must stay within the limit."],
-      steps: [`Total passengers: ${on} + p.`, `"At most ${cap3}" means \u2264 ${cap3}.`, `So ${on} + p \u2264 ${cap3}.`]
+      steps: [`Total passengers: ${on} + p.`, `"At most ${cap4}" means \u2264 ${cap4}.`, `So ${on} + p \u2264 ${cap4}.`]
     })
   }),
   fx({
@@ -10044,10 +10056,10 @@ var FAMILIES2 = [
     make: ({ t, heavy, order }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? "an" : "a") + " " + n;
       const s1 = `${art(t[0])} is heavier than ${art(t[1])}.`, s2 = `${art(t[1])} is heavier than ${art(t[2])}.`;
-      const cap3 = (s) => s[0].toUpperCase() + s.slice(1);
+      const cap4 = (s) => s[0].toUpperCase() + s.slice(1);
       const right = heavy ? t[0] : t[2];
       return {
-        question: `${cap3(order ? s1 : s2)} ${cap3(order ? s2 : s1)} Which is the ${heavy ? "heaviest" : "lightest"}?`,
+        question: `${cap4(order ? s1 : s2)} ${cap4(order ? s2 : s1)} Which is the ${heavy ? "heaviest" : "lightest"}?`,
         options: opts(t, right, "Put the two sentences together in a line, from heavy to light."),
         hints: ["Put the things in a line from heavy to light.", `The ${heavy ? "heaviest" : "lightest"} is at one end of the line.`],
         steps: [`In order: ${t[0]}, ${t[1]}, ${t[2]} (heavy to light).`, `The ${heavy ? "heaviest" : "lightest"} is the ${right}.`]
@@ -10390,9 +10402,9 @@ var FAMILIES2 = [
     },
     make: ({ items, pa, pb }) => {
       const art = (n) => (/^[aeiou]/.test(n) ? "an " : "a ") + n;
-      const cap3 = (s) => s[0].toUpperCase() + s.slice(1);
+      const cap4 = (s) => s[0].toUpperCase() + s.slice(1);
       return {
-        question: `${cap3(art(items[0]))} costs ${sh(pa)}. ${cap3(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
+        question: `${cap4(art(items[0]))} costs ${sh(pa)}. ${cap4(art(items[1]))} costs ${sh(pb)}. How much do they cost together?`,
         answer: pa + pb,
         wrong: [[Math.abs(pa - pb), "Together means put the prices together. Add, do not take away."], [pa + pb + 10, "Check the tens when you add the ones. One ten too many was carried."], [pa + pb - 10, "Check the ones when you add them. A ten was left out."]],
         hints: ["Together means add the two prices.", "Add the tens, then add the ones."],
@@ -16546,16 +16558,16 @@ var FAMILIES7 = [
     form: "word",
     rung: 2,
     gen: () => {
-      const cap3 = randInt(12, 48), n = randInt(200, 700);
-      if (n % cap3 === 0) return null;
-      const q = Math.floor(n / cap3);
+      const cap4 = randInt(12, 48), n = randInt(200, 700);
+      if (n % cap4 === 0) return null;
+      const q = Math.floor(n / cap4);
       return {
-        question: `${n} pupils are going on a trip to the Nairobi National Park. Each matatu carries ${cap3} pupils. How many matatus are needed?`,
+        question: `${n} pupils are going on a trip to the Nairobi National Park. Each matatu carries ${cap4} pupils. How many matatus are needed?`,
         answer: q + 1,
-        wrong: [[q, "Some pupils would be left behind. They need one more matatu.", "M_REMAINDER_NOT_INTERPRETED"], [n % cap3, "That is the number of pupils left over, not the number of matatus.", "M_GIVES_QUOTIENT_NOT_REMAINDER"], [n * cap3, "Each matatu holds a number of pupils. Divide.", "M_KEYWORD_EACH_MEANS_MULTIPLY"], [q + 2, "Only one more matatu is needed for the leftover pupils.", "M_REMAINDER_NOT_INTERPRETED"]],
+        wrong: [[q, "Some pupils would be left behind. They need one more matatu.", "M_REMAINDER_NOT_INTERPRETED"], [n % cap4, "That is the number of pupils left over, not the number of matatus.", "M_GIVES_QUOTIENT_NOT_REMAINDER"], [n * cap4, "Each matatu holds a number of pupils. Divide.", "M_KEYWORD_EACH_MEANS_MULTIPLY"], [q + 2, "Only one more matatu is needed for the leftover pupils.", "M_REMAINDER_NOT_INTERPRETED"]],
         hints: ["Divide the pupils by what one matatu carries.", "What happens to the pupils left over?"],
-        steps: [`${n} \xF7 ${cap3} = ${q} remainder ${n % cap3}.`, `The ${n % cap3} left over need one more matatu: ${q + 1}.`],
-        chk: (v) => (v - 1) * cap3 < n && v * cap3 >= n
+        steps: [`${n} \xF7 ${cap4} = ${q} remainder ${n % cap4}.`, `The ${n % cap4} left over need one more matatu: ${q + 1}.`],
+        chk: (v) => (v - 1) * cap4 < n && v * cap4 >= n
       };
     }
   }),
@@ -19213,16 +19225,16 @@ var FAMILIES11 = [
     form: "steps",
     rung: 3,
     gen: () => {
-      const cap3 = pick([500, 750, 1e3, 1500]), size2 = pick([50, 100, 250, 125]), p = person();
-      if (cap3 % size2) return null;
+      const cap4 = pick([500, 750, 1e3, 1500]), size2 = pick([50, 100, 250, 125]), p = person();
+      if (cap4 % size2) return null;
       return {
-        question: `${p.name} wants to fill a ${cap3} ml bottle using a ${size2} ml cup.`,
+        question: `${p.name} wants to fill a ${cap4} ml bottle using a ${size2} ml cup.`,
         parts: [
-          { prompt: "How many cupfuls are needed?", answer: cap3 / size2, hint: "How many lots of the cup fit into the bottle?", wrong: [[cap3 * size2, "Dividing finds how many cups fit. Multiplying would give a much larger number.", "M_GIVES_NUMBER_OF_FILLS"], [cap3 - size2, "Take the number of cups that fit, do not subtract.", "M_GIVES_NUMBER_OF_FILLS"], [cap3 / size2 + 1, "Check by multiplying the cups by " + size2 + ".", "M_GIVES_NUMBER_OF_FILLS"]] },
-          { prompt: `With a cup of ${size2 * 2} ml instead, how many cupfuls are needed?`, answer: cap3 / (size2 * 2), hint: "A bigger cup needs fewer fills.", wrong: [[cap3 / size2 * 2, "A bigger cup needs fewer fills, not more.", "M_MORE_FILLS_BIGGER_CUP"], [cap3 / size2, "That was the number for the smaller cup.", "M_MORE_FILLS_BIGGER_CUP"], [cap3 / size2 / 2 + 1, "Check by multiplying.", "M_MORE_FILLS_BIGGER_CUP"]] }
+          { prompt: "How many cupfuls are needed?", answer: cap4 / size2, hint: "How many lots of the cup fit into the bottle?", wrong: [[cap4 * size2, "Dividing finds how many cups fit. Multiplying would give a much larger number.", "M_GIVES_NUMBER_OF_FILLS"], [cap4 - size2, "Take the number of cups that fit, do not subtract.", "M_GIVES_NUMBER_OF_FILLS"], [cap4 / size2 + 1, "Check by multiplying the cups by " + size2 + ".", "M_GIVES_NUMBER_OF_FILLS"]] },
+          { prompt: `With a cup of ${size2 * 2} ml instead, how many cupfuls are needed?`, answer: cap4 / (size2 * 2), hint: "A bigger cup needs fewer fills.", wrong: [[cap4 / size2 * 2, "A bigger cup needs fewer fills, not more.", "M_MORE_FILLS_BIGGER_CUP"], [cap4 / size2, "That was the number for the smaller cup.", "M_MORE_FILLS_BIGGER_CUP"], [cap4 / size2 / 2 + 1, "Check by multiplying.", "M_MORE_FILLS_BIGGER_CUP"]] }
         ],
-        steps: [`${cap3} \xF7 ${size2} = ${cap3 / size2}.`, `${cap3} \xF7 ${size2 * 2} = ${cap3 / (size2 * 2)}.`],
-        chk: (x, v) => v[0] * size2 === cap3 && v[1] * size2 * 2 === cap3
+        steps: [`${cap4} \xF7 ${size2} = ${cap4 / size2}.`, `${cap4} \xF7 ${size2 * 2} = ${cap4 / (size2 * 2)}.`],
+        chk: (x, v) => v[0] * size2 === cap4 && v[1] * size2 * 2 === cap4
       };
     }
   }),
@@ -25734,17 +25746,17 @@ var FAMILIES16 = [
       const h = pick([3, 6, 9, 12]);
       return { r: 7, h, cap: 14, who: person() };
     },
-    make: ({ r, h, cap: cap3, who }) => {
+    make: ({ r, h, cap: cap4, who }) => {
       const v = round(PI * r * r * h / 3, 2);
       return {
-        question: `A heap of sand is a cone with a radius of ${r} m and a height of ${h} m. ${who.name} hires a lorry that carries ${cap3} m\xB3 of sand each trip. How many trips are needed to move all the sand? (Use \u03C0 = 22/7)`,
-        answer: v / cap3,
-        wrong: [[round(PI * r * r * h / cap3, 2), "A cone is one third of a cylinder with the same base and height. Remember the \u2153."], [round(PI * r * r * h / 3 / cap3 / 2, 2), "Check the radius. The base area is \u03C0 \xD7 r \xD7 r."], [v, "That is the volume of the heap in m\xB3. Divide by the load of each trip."], [round(PI * (2 * r) * (2 * r) * h / 3 / cap3, 2), "The radius is given, not the diameter. Do not double it."]],
+        question: `A heap of sand is a cone with a radius of ${r} m and a height of ${h} m. ${who.name} hires a lorry that carries ${cap4} m\xB3 of sand each trip. How many trips are needed to move all the sand? (Use \u03C0 = 22/7)`,
+        answer: v / cap4,
+        wrong: [[round(PI * r * r * h / cap4, 2), "A cone is one third of a cylinder with the same base and height. Remember the \u2153."], [round(PI * r * r * h / 3 / cap4 / 2, 2), "Check the radius. The base area is \u03C0 \xD7 r \xD7 r."], [v, "That is the volume of the heap in m\xB3. Divide by the load of each trip."], [round(PI * (2 * r) * (2 * r) * h / 3 / cap4, 2), "The radius is given, not the diameter. Do not double it."]],
         hints: ["First find the volume of the cone.", "Then divide by the amount in one trip."],
-        steps: [`Volume: \u2153 \xD7 22/7 \xD7 ${r} \xD7 ${r} \xD7 ${h} = ${T3(v)} m\xB3.`, `Trips: ${T3(v)} \xF7 ${cap3} = ${T3(v / cap3)}.`]
+        steps: [`Volume: \u2153 \xD7 22/7 \xD7 ${r} \xD7 ${r} \xD7 ${h} = ${T3(v)} m\xB3.`, `Trips: ${T3(v)} \xF7 ${cap4} = ${T3(v / cap4)}.`]
       };
     },
-    check: ({ r, h, cap: cap3 }, a) => Math.abs(a * cap3 * 3 / h - 22 / 7 * r * r) < 0.01
+    check: ({ r, h, cap: cap4 }, a) => Math.abs(a * cap4 * 3 / h - 22 / 7 * r * r) < 0.01
   }),
   fam8({
     id: "g9.vol.bucket-frustum",
@@ -36392,8 +36404,15 @@ var HABIT_NAMES = {
   stock: "stock phrase or praise",
   confirm_hedged: "accepts without a reason",
   level_jump: "moves up too fast",
-  unanswered: "leaves the child's question unanswered"
+  unanswered: "leaves the child's question unanswered",
+  // Round 2 (13 Nov 2026, run 2026-11-13-1027): live-gate checks, counted by scripts/evals/round2-replay.mjs, not in HABITS
+  // (the habit table stays comparable with the runs before).
+  board: "says what the board does not show",
+  leading: "offers a choice that contains the reason",
+  tells_reason: "says the reason the child should give",
+  failed_again: "asks again a question that has failed twice on this picture"
 };
+var ROUND2_HABITS = ["board", "leading", "tells_reason", "failed_again"];
 var PRAISE_MAX_WORDS = 8;
 var ANSWER_FIRST_MAX_WORDS = 15;
 var LATE_AFTER_TURNS = 10;
@@ -36875,7 +36894,7 @@ function endFlags(steps2 = [], ctx = {}) {
   if (p) out.push({ habit: "level_jump", reason: p });
   return out;
 }
-function habitContext({ message = "", marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [] } = {}) {
+function habitContext({ message = "", marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [], promised = false, failed = [], diagnosing = false, pressing = false } = {}) {
   const turns = [];
   let last = null;
   for (const h of Array.isArray(history) ? history : []) {
@@ -36905,6 +36924,10 @@ function habitContext({ message = "", marked = null, cls = null, history = [], h
     exempt,
     example,
     solved,
+    promised,
+    failed,
+    diagnosing,
+    pressing,
     // Late in a lesson the habits drift (SafeTutors; 12 Nov 2026 runs: 39% of turns flagged in turns 1-10, 58% after): from the tenth
     // tutor turn the repeat check looks back over four turns, not two.
     prev: tutorTurns.slice(lateRepeat && tutorTurns.length >= LATE_AFTER_TURNS ? -LATE_REPEAT_TURNS : -2),
@@ -36915,13 +36938,13 @@ function habitContext({ message = "", marked = null, cls = null, history = [], h
     recentQuestions: tutorTurns.slice(-3).flat().filter(isQ2)
   };
 }
-var SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?)\b/i;
+var SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?|see shaded|(what|which|how much)\b[^.?!]{0,24}\bshaded\s*\?)/i;
 var SHADE_NONE = /\b(not|none|nothing|no part|no piece|isn'?t|aren'?t|yet to)\b[^.?!]{0,24}\bshaded\b|\bshaded yet\b/i;
 var CUT_CLAIM = /\b(the (two )?(pieces|parts|halves)|the half (on|in|of) the|(chapati|circle|bar) pieces|cut in(to)? (halves|two|pieces|two pieces)|on one side|the line (in|down))\b/i;
-var CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
+var CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|or (still )?whole|cut (into (pieces|parts) )?yet|(is|are) (it|they|the \w+) (cut|still)|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
 function boardClaimOf(text, board = []) {
   const figs = (board || []).filter((b) => b && FIGS.includes(b.cmd));
-  const shaded = figs.some((b) => (shadedOf2(b) || 0) > 0);
+  const shaded = figs.some((b) => (shadedOf2(b) || 0) > 0 || b.cmd === "figure" && (b.controls || []).some((c) => String(c).startsWith("shade")));
   const cut = figs.some((b) => (partsOf2(b) || 1) > 1);
   const bar = figs.some((b) => b.cmd === "fraction_bar" || b.cmd === "figure" && (b.params?.shape || "bar") === "bar");
   const line = (board || []).some((b) => b && (b.cmd === "number_line" || b.cmd === "figure" && b.type === "numberline"));
@@ -36933,8 +36956,162 @@ function boardClaimOf(text, board = []) {
   }
   return null;
 }
+var DOES_CUT = /\b(?:now i(?: will| am going to|'ll)?|i will|i'?ll|let me|i am going to|watch,? i|i)\s+(?:now\s+)?(?:cut|split|divide|slice|draw (?:a |one |the )?(?:line|cut)s?)\b/i;
+var DOES_SHADE = /\b(?:now i(?: will| am going to|'ll)?|i will|i'?ll|let me|i am going to|watch,? i|i)\s+(?:now\s+)?(?:shade|colour|color)\b/i;
+var DEFER = /\b(before i (?:do|cut|draw|shade|show)|first,? (?:guess|tell me|you)|guess|predict|after you|when you (?:say|tell|guess)|will not|won'?t|do not|don'?t|not yet)\b/i;
+var RESULT_NOW = /\b(?:pieces|parts|halves|quarters|cuts?)\b[^.?!]{0,40}\bnow\b|\bnow\b[^.?!]{0,30}\b(?:pieces|parts)\b|\bthe new (?:pieces|parts|cuts?|lines?)\b|\bafter (?:the|my|that) cut\b/i;
+var HYPOTHETICAL = /\b(if|will|would|could|shall|going to|imagine|pretend|guess)\b/i;
+var maxParts = (board) => Math.max(1, ...boardAfter(board, []).filter((b) => FIGS.includes(b.cmd)).map((b) => partsOf2(b) || 1));
+var maxShaded = (board) => Math.max(0, ...boardAfter(board, []).filter((b) => FIGS.includes(b.cmd)).map((b) => shadedOf2(b) || 0));
+function promisesDrawing(text) {
+  if (defersCut(text)) return null;
+  for (const s of sentencesOf3(text)) {
+    if (isQ2(s) || DEFER.test(s)) continue;
+    if (DOES_CUT.test(s)) return "cut";
+    if (DOES_SHADE.test(s)) return "shade";
+  }
+  return null;
+}
+var defersCut = (text) => sentencesOf3(text).some((s) => DOES_CUT.test(s) && !/\b(will not|won'?t|do not|don'?t)\b/i.test(s)) && DEFER.test(text);
+function boardFlagOf(step2, ctx = {}, sofar = [], after = []) {
+  if (!step2 || step2.cmd !== "say" || ctx.exempt || ctx.closing) return null;
+  const before = boardAfter(ctx.board, sofar);
+  const seen = boardAfter(ctx.board, [...sofar, ...after]);
+  const claim = boardClaimOf(step2.text, seen);
+  if (claim) return claim;
+  const does = promisesDrawing(step2.text);
+  if (does === "cut" && maxParts(seen) <= maxParts(before) && !after.some((x) => FIGS.includes(x.cmd) && (partsOf2(x) || 1) > 1)) return `says it cuts ("${sentencesOf3(step2.text).find((x) => DOES_CUT.test(x)).slice(0, 60)}"), but no cut is drawn: the board still shows ${maxParts(seen) > 1 ? `${maxParts(seen)} parts` : "a whole, not cut"}`;
+  if (does === "shade" && maxShaded(seen) <= maxShaded(before)) return `says it shades ("${sentencesOf3(step2.text).find((x) => DOES_SHADE.test(x)).slice(0, 60)}"), but nothing new is shaded on the board`;
+  if (ctx.promised && maxParts(seen) <= maxParts(before)) {
+    const s = sentencesOf3(step2.text).find((x) => RESULT_NOW.test(x) && !HYPOTHETICAL.test(x.replace(/\bwhen you are back\b/i, "")));
+    if (s) return `talks about the pieces of a cut that was never drawn ("${s.slice(0, 60)}"): the board still shows ${maxParts(seen) > 1 ? `${maxParts(seen)} parts` : "a whole, not cut"}`;
+  }
+  return null;
+}
+var ASKS_HOW_WHY = /\b(how did you|how do you know|how you got|how you know|how can you tell|how could you tell|why do you think|why did you|why is it|why are|what made you|tell me how|show me how|what did you (?:do|count|look at)|how did you get|how did you work)\b/i;
+var EITHER_OR = /\bor\b[^?]*\?\s*$/i;
+var REASON_IN_CHOICE = /\b(same size|same amount|equal|the same|different|fair|bigger|smaller|more|less|matching|match)\b/i;
+var reasonOwed = (ctx = {}) => !!ctx.diagnosing || !!ctx.pressing || (ctx.recentQuestions || []).slice(-2).some((q) => ASKS_HOW_WHY.test(q));
+function leadingChoiceOf(text, ctx = {}) {
+  if (!reasonOwed(ctx) || ctx.closing || ctx.example) return null;
+  const q = sentencesOf3(text).filter(isQ2).pop();
+  if (!q || !EITHER_OR.test(q) || !REASON_IN_CHOICE.test(q)) return null;
+  return `a choice that holds the reason ("${q.slice(0, 70)}") while the child owes their own reason: ask an open question about what they see`;
+}
+var TELLS = /\b(that is why|that'?s why|this is why|because|so each|which means|that means|this means|it is a half because|they are the same,? so)\b/i;
+function tellsReasonOf(text, ctx = {}) {
+  if (!reasonOwed(ctx) || ctx.closing || ctx.example || (ctx.childRead || {}).reason || gaveReason(ctx.child || "")) return null;
+  const s = sentencesOf3(text).find((x) => !isQ2(x) && TELLS.test(x) && /\b(half|halves|quarter|third|same|equal|size|pieces?|parts?|fair|fraction)\b/i.test(x));
+  return s ? `says the reason the child was asked for ("${s.slice(0, 70)}"): ask them for it instead` : null;
+}
+function failedAgainOf(text, ctx = {}, sofar = [], after = []) {
+  if (!(ctx.failed || []).length || ctx.closing) return null;
+  const q = sentencesOf3(text).filter(isQ2).pop();
+  const k = q ? questionKind(q) : null;
+  if (!k || ["reason", "other", "notice"].includes(k)) return null;
+  const fig = newestFigure(ctx.board, [...sofar, ...after]);
+  const shape = fig ? figShape(fig) : null;
+  if (!shape || !ctx.failed.includes(`${k}@${shape}`)) return null;
+  return `asks again ${STEP_NAMES[k] || k} on the ${shape}, which has failed twice there: show it another way (a bar, folding paper, a story) or take a different, smaller step`;
+}
+var figShape = (b) => b.cmd === "shape" ? String(b.kind || "shape") : b.cmd === "fraction_bar" ? "bar" : b.cmd === "number_line" ? "number line" : String(b.params?.shape || "bar");
+function round2Flags(step2, ctx = {}, sofar = [], after = []) {
+  if (!step2 || step2.cmd !== "say" || ctx.exempt) return [];
+  const out = [];
+  const b = boardFlagOf(step2, ctx, sofar, after);
+  if (b) out.push({ habit: "board", reason: b });
+  const l = leadingChoiceOf(step2.text, ctx);
+  if (l) out.push({ habit: "leading", reason: l });
+  const t = tellsReasonOf(step2.text, ctx);
+  if (t) out.push({ habit: "tells_reason", reason: t });
+  const f = failedAgainOf(step2.text, ctx, sofar, after);
+  if (f) out.push({ habit: "failed_again", reason: f });
+  return out;
+}
+
+// src/voice-tutor/diagnosis.js
+var DIAG_CLASSES = ["partly_right", "misconception", "missing_prerequisite", "guess_or_no_attempt"];
+var DIAG_TRIES = 2;
+var LEAD2 = /^(?:[\s,.!?…'"-]*(?:um+|uh+|hmm+|mm+|er+m?|eh+|a+h+|oh+|so|well|ok(?:ay)?|maybe|perhaps|probably|i think|i guess|is it|it is|it'?s|its|i'?m not sure|not sure|wait)\b)*[\s,.!?…'"-]*/i;
+var TAIL = /(?:[\s,.!?…'"-]+(?:um+|uh+|hmm+|mm+|er+m?|eh+|i think|maybe))*[\s,.!?…'"-]*$/i;
+function quoteOf(message) {
+  const raw = String(message || "").trim();
+  if (!raw) return null;
+  const mv = childMove(raw);
+  if (["filler", "lost", "stop", "question"].includes(mv)) return null;
+  const body = raw.replace(LEAD2, "").replace(TAIL, "").replace(/\s+/g, " ").trim();
+  if (!body || /\b(i|i'm|im|me|my|you|your)\b/i.test(body)) return null;
+  const w = body.split(" ");
+  if (w.length > 6) {
+    const f = readAnswer(body).found.find((x) => !x.negated);
+    return f ? f.words.toLowerCase() : null;
+  }
+  const t = body.toLowerCase();
+  return /^[a-z0-9/' ,-]{1,48}$/.test(t) ? t : null;
+}
+var isNumberish = (q) => q.split(" ").length <= 3 && (readAnswer(q).found.some((f) => ["number", "fraction"].includes(f.kind)) || /^\d/.test(q));
+var spoken = (q) => /^\d+(\/\d+)?$/.test(q) ? inWords(q) || q : q;
+function diagnosisLine({ quote = null, attempt = 0, fig = null, recent = [] } = {}) {
+  const q = quote ? spoken(quote) : null;
+  const num4 = !!q && isNumberish(q);
+  const first2 = q ? num4 ? [`You said ${q}. How did you get ${q}?`, `${cap2(q)}, you said. Tell me how you got ${q}.`] : [`You said ${q}. How did you work that out?`, `${cap2(q)}, you said. Tell me how you thought of that.`] : ["Tell me how you worked that out.", "How did you get that?"];
+  const second = q ? num4 ? [fig ? `Show me on the ${fig} how you got ${q}.` : `What did you count to get ${q}?`, `What did you count to get ${q}?`, `Walk me through how you got ${q}.`] : [fig ? `Show me on the ${fig} what you mean by ${q}.` : `What were you thinking when you said ${q}?`, `What were you thinking when you said ${q}?`] : [fig ? `Show me on the ${fig} how you worked it out.` : "What were you thinking about just then?"];
+  const seen = new Set((recent || []).map(norm6));
+  const pool2 = attempt >= 1 ? [...second, ...first2] : [...first2, ...second];
+  return pool2.find((x) => !seen.has(norm6(x))) || pool2[0];
+}
+var norm6 = (t) => String(t || "").toLowerCase().replace(/[^a-z0-9 ]+/g, " ").replace(/\s+/g, " ").trim();
+var cap2 = (t) => String(t || "").replace(/^./, (c) => c.toUpperCase());
+function explained(message, gaveReason2 = () => false) {
+  const raw = String(message || "").trim();
+  if (!raw || ["filler", "lost", "stop"].includes(childMove(raw))) return false;
+  if (gaveReason2(raw)) return true;
+  const words5 = raw.replace(LEAD2, "").split(/\s+/).filter((w) => w && !/^(um+|uh+|hmm+|so|well|maybe|ok|okay)$/i.test(w));
+  return words5.length >= 3;
+}
+var WHOLE_OR_CUT = /\b(whole|not cut)\b[^?]*\bor\b[^?]*\bcut\b|\bcut\b[^?]*\bor\b[^?]*\b(whole|not cut)\b/i;
+var CUT_YET = /\bis (it|the \w+) cut( yet| into (pieces|parts))?\b[^?]*\?/i;
+var HOW_MANY_PARTS = /\bhow many (equal )?(pieces|parts)\b(?![^?]*\b(shaded|coloured|colored)\b)/i;
+var HOW_MANY_SHADED = /\bhow many\b[^?]*\b(shaded|coloured|colored)\b/i;
+var WHAT_IF = /\b(if|will|would|could|after|when (i|we|you) cut|going to|guess)\b/i;
+var FIGS2 = ["shape", "fraction_bar", "figure"];
+var partsOf3 = (b) => b.cmd === "figure" ? Number(b.params?.parts) || Number(b.params?.rows) * Number(b.params?.cols) || 1 : Number(b.parts) || 1;
+var shadedOf3 = (b) => {
+  const sh2 = b.cmd === "figure" ? b.params?.shaded : b.shaded;
+  return Array.isArray(sh2) ? sh2.length : Number(sh2) || 0;
+};
+function boardMark(question, board = [], message = "") {
+  const q = String(question || "").trim();
+  if (!/\?\s*$/.test(q)) return null;
+  const figs = (board || []).filter((b) => b && FIGS2.includes(b.cmd));
+  if (figs.length !== 1) return null;
+  const fig = figs[0];
+  const parts = partsOf3(fig);
+  const shaded = shadedOf3(fig);
+  const m = String(message || "").toLowerCase();
+  if (!m.trim() || ["filler", "lost", "question", "stop"].includes(childMove(message))) return null;
+  const nums = readAnswer(message).found.filter((f) => f.kind === "number" && !f.negated).map((f) => Number(f.value));
+  if (WHOLE_OR_CUT.test(q)) {
+    const saysWhole = /\b(whole|not cut|one piece|full)\b/.test(m);
+    const saysCut = /\b(cut|pieces|parts|halves|two)\b/.test(m) && !/\bnot cut\b/.test(m);
+    if (saysWhole === saysCut) return null;
+    return { kind: "state", correct: saysWhole === parts <= 1, said: saysWhole ? "whole" : "cut", want: parts <= 1 ? "whole" : "cut" };
+  }
+  if (CUT_YET.test(q) && !WHAT_IF.test(q)) {
+    const yes = /\b(yes|yeah|yep|it is|cut)\b/.test(m) && !/\b(no|not)\b/.test(m);
+    const no = /\b(no|nope|not)\b/.test(m);
+    if (yes === no) return null;
+    return { kind: "state", correct: yes === parts > 1, said: yes ? "yes" : "no", want: parts > 1 ? "yes" : "no" };
+  }
+  if (WHAT_IF.test(q.replace(/\bhow many\b/i, ""))) return null;
+  if (nums.length !== 1) return null;
+  if (HOW_MANY_SHADED.test(q)) return { kind: "count_shaded", correct: nums[0] === shaded, said: inWords(String(nums[0])) || String(nums[0]), want: shaded };
+  if (HOW_MANY_PARTS.test(q)) return { kind: "count_total", correct: nums[0] === parts, said: inWords(String(nums[0])) || String(nums[0]), want: parts };
+  return null;
+}
 
 // src/voice-tutor/orchestrator.js
+var HEDGED = /\b(maybe|i think|i guess|perhaps|probably|not sure|is it)\b/i;
 var WORKED_EXAMPLE_AFTER = 2;
 var CLOSE_BEFORE_MIN = 3;
 var MAX_CLASSES = 6;
@@ -37001,7 +37178,10 @@ var newLesson = () => ({
   fig: null,
   closedRun: 0,
   pressed: [],
-  closes: 0
+  closes: 0,
+  diag: null,
+  failed: [],
+  promised: 0
 });
 var PRE_STATES = ["ask", "asked", "done"];
 var PRE_GIVE_UP_TURNS = 5;
@@ -37056,18 +37236,26 @@ function cleanLesson(raw) {
   s.closedRun = int(raw.closedRun, 0, 50);
   s.closes = int(raw.closes, 0, 5);
   if (Array.isArray(raw.pressed)) s.pressed = [...new Set(raw.pressed.filter((x) => typeof x === "string" && x.length <= 40 && /^[a-z0-9/ '-]+$/.test(x)))].slice(-MAX_FOUND);
+  const dg2 = raw.diag;
+  if (dg2 && typeof dg2 === "object") s.diag = { q: typeof dg2.q === "string" && /^[a-z0-9/' ,-]{1,48}$/.test(dg2.q) ? dg2.q : null, tries: int(dg2.tries, 0, 10) };
+  if (Array.isArray(raw.failed)) s.failed = [...new Set(raw.failed.filter((x) => typeof x === "string" && /^[a-z_]{2,16}@[a-z ]{3,12}$/.test(x)))].slice(-8);
+  s.promised = int(raw.promised, 0, 5);
   return s;
 }
 var STEP_KINDS = ["cut", "reason", "count_shaded", "fraction", "count_total", "compare", "equal", "state", "notice", "other"];
-var ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through)\b/i;
+var ASKS_HOW = /\b(how did you|how do you know|how you got|how you know|how would you|how can you tell|why do you think|why did you|what made you|tell me how|show me how|what did you (do|count|look at)|walk me through|what were you thinking|what you mean by|how you thought|how you worked)\b/i;
 function prelimClass({ marked = null, message = "" } = {}) {
   if (!marked) return null;
   if (marked.correct) return gaveReason(message) ? "understood" : "right_unexplained";
   return marked.misconception ? "misconception" : "partly_right";
 }
-function finalClass({ assessment = null, marked = null, message = "" } = {}) {
+function finalClass({ assessment = null, marked = null, message = "", boardMarked = null } = {}) {
   const prelim = prelimClass({ marked, message });
-  if (!assessment) return prelim ? { class: prelim, misconception: prelim === "misconception" ? marked.misconception : null, evidence: "", source: "code", note: null } : null;
+  if (!assessment) {
+    if (prelim) return { class: prelim, misconception: prelim === "misconception" ? marked.misconception : null, evidence: "", source: "code", note: null };
+    if (boardMarked && message) return { class: boardMarked.correct ? gaveReason(message) ? "understood" : "right_unexplained" : "partly_right", misconception: null, evidence: "", source: "code", note: "marked from the board" };
+    return null;
+  }
   let cls = assessment.class;
   let mis = assessment.misconception || null;
   let note = null;
@@ -37082,6 +37270,17 @@ function finalClass({ assessment = null, marked = null, message = "" } = {}) {
     mis = null;
   } else if (marked && marked.correct && (cls === "misconception" || cls === "missing_prerequisite")) {
     note = `assess said ${cls}, but the seal marked the answer right: read as partly_right (right answer, shaky reason)`;
+    cls = "partly_right";
+    mis = null;
+  }
+  const rightByBoard = !marked && boardMarked?.correct;
+  const hedgedOnly = !!String(message || "").trim() && (isTentative(message) || HEDGED.test(message)) && !gaveReason(message);
+  if ((marked?.correct || rightByBoard) && ["partly_right", "guess_or_no_attempt"].includes(assessment.class) && hedgedOnly) {
+    note = `${note ? `${note}; ` : ""}assess said ${cls}, but the answer is right${rightByBoard ? " (the board shows it)" : ""} and only hedged: read as right_unexplained`;
+    cls = "right_unexplained";
+    mis = null;
+  } else if (!marked && boardMarked && !boardMarked.correct && ["understood", "right_unexplained"].includes(cls)) {
+    note = `assess said ${cls}, but the board shows "${boardMarked.said}" is not right: read as partly_right`;
     cls = "partly_right";
     mis = null;
   }
@@ -37100,10 +37299,10 @@ function stageAllowed(s, { understoodNow = false, closing = false, preNow = fals
   return s.streak + (understoodNow ? 1 : 0) >= 2 ? nextStage(st) : st;
 }
 function decideCore(s, ctx = {}) {
-  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null, lastQ: lastQ2 = null } = ctx;
+  const { turnIndex = 0, elapsedMin = 0, sessionMinutes = 20, marked = null, message = "", probe = null, prerequisite = null, question = null, lastQ: lastQ2 = null, boardMarked = null, recent = [], board = [], codeDiagnosis = true } = ctx;
   const prelim = prelimClass({ marked, message });
   const closing = elapsedMin >= sessionMinutes - CLOSE_BEFORE_MIN;
-  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
+  const out = (rule, moves, reason, extra = {}) => ({ rule, moves, with: extra.with ?? ALWAYS_WITH.filter((m) => !moves.includes(m)), reason, stageMax: extra.stageMax ?? stageAllowed(s, { understoodNow: prelim === "understood", closing, preNow: !!marked }), avoid: extra.avoid ?? null, prelim, must: extra.must ?? [], quote: extra.quote ?? null, diagQuote: extra.diagQuote ?? null, answered: extra.answered ?? null, authored: extra.authored ?? false, line: extra.line ?? null, ack: extra.ack ?? (extra.must?.includes("Name what was right") ? "yes" : null), press: extra.press ?? null, noPress: extra.noPress ?? null, closeStep: extra.closeStep ?? null });
   if (turnIndex === 0) return out("open", ["Open the lesson"], "the first turn: greet, say what you will learn today, one easy friendly question", { with: [], stageMax: "warmup" });
   if (s.care === "paused") {
     if (probe) return out("care-wait", ["Wait and nudge"], "the child is quiet after a care reply: an authored line that you are there, no maths and no question about what they said", { with: [], authored: true, stageMax: s.stage || "warmup" });
@@ -37121,6 +37320,19 @@ function decideCore(s, ctx = {}) {
     if (s.stops >= 1) return out("stop", ["Close the lesson"], "the child has asked to stop again: close the lesson now, kindly, in two short sentences (one thing they did well today), then end_session", { with: ["Name what was right", "Celebrate the strategy"], stageMax: "wrapup" });
     return out("bored", ["Close the lesson", "Predict then show"], "the child says they are bored or want to stop. Do not carry on with the same task and never repeat the lesson. Say you hear them in a few words, then offer one choice: a quick two-minute game (for example: guess how many pieces before I cut the chapati) or stopping for today. If they choose to stop, close the lesson", { with: ["Revoice and build", "Name what was right"], stageMax: "wrapup" });
   }
+  const fig = figName(board);
+  if (codeDiagnosis && s.diag && !marked?.correct && move !== "filler" && !(probe && probe.kind === "task_checkin")) {
+    if (message && explained(message, gaveReason)) {
+      return out("reteach", ["Show then hand over", "Predict then show", "Count with the child", "Smaller-question hint"], `the child has told you how they got "${s.diag.q || "their answer"}": use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them`, { with: ["Revoice and build", "Name what was right"] });
+    }
+    if ((s.diag.tries || 0) < DIAG_TRIES) {
+      const fresh = marked && !marked.correct ? quoteOf(message) || quoteOf(marked.answer) : readAnswer(message).found.some((f) => ["number", "fraction"].includes(f.kind)) ? quoteOf(message) : null;
+      const q = fresh || s.diag.q;
+      return out("diagnose", ["Diagnose the wrong answer"], `no reason yet for "${q || "their answer"}" (ask ${(s.diag.tries || 0) + 1} of ${DIAG_TRIES}): the code asks again, another way`, { with: [], must: ["Diagnose the wrong answer"], authored: true, line: diagnosisLine({ quote: q, attempt: s.diag.tries || 1, fig, recent }), diagQuote: q, stageMax: s.stage || "warmup" });
+    }
+    const left = REPS.filter((r) => r !== "story" && !s.tried.includes(r) && r !== (fig || s.rep));
+    return out("diag-change", ["Show then hand over", "Predict then show", "Smaller-question hint", "Recover a lost child"], `you asked twice how the child got "${s.diag.q || "their answer"}" and heard no reason: do not ask again. Change the representation (SCENARIOS 15): ${left.length ? `a ${left.slice(0, 2).join(" or a ")}` : "a story with a real thing"} instead of the ${fig || s.rep || "picture"}, with one small step for the child`, { avoid: fig || s.rep || null });
+  }
   if (probe && PROBE_KINDS.includes(probe.kind)) {
     const why = {
       answer_nudge: "the child is silent after your question: one short kind nudge, no answer, no new question",
@@ -37136,6 +37348,10 @@ function decideCore(s, ctx = {}) {
     const n = (s.fillers || 0) + 1;
     const line = n >= 2 && !s.tyt ? "Take your time." : null;
     return out("thinking", ["Wait and nudge"], `the child is thinking aloud (filler ${n} in a row): the app waits${line ? ', with one "Take your time"' : " with no words"}`, { with: [], authored: true, line, stageMax: s.stage || "warmup" });
+  }
+  if (codeDiagnosis && !marked && boardMarked && !boardMarked.correct && !gaveReason(message) && ["tentative", null].includes(move)) {
+    const q = quoteOf(message) || boardMarked.said;
+    return out("diagnose", ["Diagnose the wrong answer"], `the board shows "${boardMarked.said}" is not right (keep that to yourself): the code asks how they got it`, { with: [], must: ["Diagnose the wrong answer"], authored: true, line: diagnosisLine({ quote: q, attempt: 0, fig, recent }), diagQuote: q });
   }
   if (move === "tentative") {
     const why = whyNoPress(s, { trivial: trivialAnswer({ question: lastQ2 || "", answer: readChild(message).fractions[0] || null }), hedged: true });
@@ -37162,8 +37378,13 @@ function decideCore(s, ctx = {}) {
       );
     }
     if (gaveReason(message)) return out("reteach", ["Show then hand over", "Predict then show", "Count with the child", "Smaller-question hint"], `a wrong answer, and the child has already said how they got it ("${String(message).slice(0, 80)}"): use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them`, { with: ["Revoice and build", "Name what was right"] });
-    const how = `ask ONE question about how they got "${String(marked.answer || "").slice(0, 40)}" (for example "How did you get that?" or "Tell me how you counted"), and nothing else: no explaining, no new picture, no new question to answer, no hint, until you have heard their thinking`;
-    return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()} (keep that to yourself): ${how}` : `a wrong answer with no library match: ${how}`, { with: ["Revoice and build", "Name what was right"], must: ["Diagnose the wrong answer"] });
+    if (!codeDiagnosis) {
+      const how2 = `ask ONE question about how they got "${String(marked.answer || "").slice(0, 40)}" (for example "How did you get that?" or "Tell me how you counted"), and nothing else: no explaining, no new picture, no new question to answer, no hint, until you have heard their thinking`;
+      return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()} (keep that to yourself): ${how2}` : `a wrong answer with no library match: ${how2}`, { with: ["Revoice and build", "Name what was right"], must: ["Diagnose the wrong answer"] });
+    }
+    const q = quoteOf(message) || quoteOf(marked.answer) || null;
+    const how = `the code asks ONE question about how they got "${String(q || marked.answer || "").slice(0, 40)}", and nothing else`;
+    return out("diagnose", ["Diagnose the wrong answer"], marked.misconception ? `a wrong answer the library reads as ${String(marked.misconception).split(".").pop()} (keep that to yourself): ${how}` : `a wrong answer with no library match: ${how}`, { with: [], must: ["Diagnose the wrong answer"], authored: true, line: diagnosisLine({ quote: q, attempt: 0, fig, recent }), diagQuote: q });
   }
   if (s.diagnosing && message && !marked) return out("reteach", ["Show then hand over", "Predict then show", "Count with the child", "Smaller-question hint"], "the child has told you how they got their wrong answer: use their words (Revoice and build), record_diagnosis if the cause is clear, then reteach that one idea with a picture where their way does not work, and hand one small step back to them", { with: ["Revoice and build", "Name what was right"] });
   const right = marked?.correct ? { must: ["Name what was right"], quote: marked.said || marked.answer || null, answered: { ask: marked.ask, prompt: question?.question || null } } : {};
@@ -37175,7 +37396,7 @@ function decideCore(s, ctx = {}) {
       const next = nextStepOf([...s.solved, questionKind(asked)].filter(Boolean), { cut: figCut(s.fig) });
       return out("advance", ["Name what was right", "Show then hand over", "Predict then show", "Count with the child", "Check for understanding"], `right${cr.hedged ? ", said unsure" : ""}: say yes, in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}"), then take the next step${next ? `: ${next}` : " of the target"}. No "how did you know" (${why}). Never ask this question again`, { ...right, ack: "yes", noPress: why });
     }
-    if (cr.hedged || cr.oneWord) return out("press", ["Name what was right", "Press for reasoning"], `right, but ${cr.hedged ? "said unsure" : "one word"} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? " and how sure they are" : ""}. It does not count as understood until they give a reason`, { ...right, ack: "revoice", press: marked.canon || "yes" });
+    if (cr.hedged || cr.oneWord) return out("press", ["Revoice and build", "Press for reasoning"], `right, but ${cr.hedged ? "said unsure" : "one word"} and no reason yet: do not say yes yet. Say back what you heard in the child's own words ("${String(marked.said || marked.answer || "").slice(0, 30)}, you said"), then ask what made them say it${cr.hedged ? " and how sure they are" : ""}. It does not count as understood until they give a reason`, { ...right, must: ["Press for reasoning"], ack: "revoice", press: marked.canon || "yes" });
     return out("press", ["Name what was right", "Press for reasoning"], "right, but no reason yet: name what was right in the child's own words, then ask how they knew. It does not count as understood until they give a reason", { ...right, press: marked.canon || "yes" });
   }
   if (marked && prelim === "understood") {
@@ -37207,6 +37428,17 @@ function figOf(board = []) {
   return `${name}:${Math.min(999, parts)}`;
 }
 var figCut = (fig) => Number(String(fig || "").split(":")[1]) > 1;
+var maxParts2 = (board) => Math.max(1, ...(board || []).filter((b) => b && FIG_CMDS.includes(b.cmd) && (b.cmd !== "figure" || b.type === "fraction")).map((b) => {
+  const p = b.cmd === "figure" ? b.params || {} : b;
+  return (p.shape === "grid" ? (Number(p.rows) || 0) * (Number(p.cols) || 0) : Number(p.parts)) || 1;
+}));
+var figName = (board) => {
+  const f = figOf(board);
+  if (!f) return null;
+  const n = f.split(":")[0];
+  return ["circle", "bar", "grid", "number line"].includes(n) ? n : "picture";
+};
+var shapeOf = (fig) => fig ? String(fig).split(":")[0] : null;
 var STUCK_AFTER = 2;
 var STUCK_RULES = ["probe", "lost", "stage", "tentative", "question", "reteach", "prerequisite"];
 var OPEN_SKIP = ["open", "care", "care-wait", "care-return", "close", "stop", "thinking", "bored", "diagnose"];
@@ -37250,27 +37482,27 @@ function repsOf(steps2 = []) {
   }
   return [...new Set(out)];
 }
-var norm6 = (m) => String(m || "").trim().toLowerCase();
+var norm7 = (m) => String(m || "").trim().toLowerCase();
 function judgeTurn(decision, steps2 = [], { fromModel = null, authored = false } = {}) {
   const notes = [];
   if (!decision) return notes;
   const strict = STRICT.includes(decision.rule);
-  const allowed = new Set([...decision.moves, ...decision.with, ...strict ? [] : GENERAL].map(norm6));
+  const allowed = new Set([...decision.moves, ...decision.with, ...strict ? [] : GENERAL].map(norm7));
   const says = steps2.filter((x) => x.cmd === "say" && (!fromModel || fromModel.has(x)));
   const tags = says.filter((x) => x.move).map((x) => x.move);
   for (const t of tags) {
-    if (!PLAYBOOK_MOVES.some((m) => norm6(m) === norm6(t))) notes.push(`move "${t}" is not a playbook move`);
-    else if (!allowed.has(norm6(t))) notes.push(`move "${t}" was not allowed this turn (${decision.rule}: ${decision.moves.join(", ")})`);
+    if (!PLAYBOOK_MOVES.some((m) => norm7(m) === norm7(t))) notes.push(`move "${t}" is not a playbook move`);
+    else if (!allowed.has(norm7(t))) notes.push(`move "${t}" was not allowed this turn (${decision.rule}: ${decision.moves.join(", ")})`);
   }
   const careTurn2 = ["care", "care-wait", "care-return"].includes(decision.rule);
-  if (!authored && !careTurn2 && says.length && !tags.some((t) => allowed.has(norm6(t)))) notes.push(`no say was tagged with an allowed move (${decision.moves.join(", ")})`);
+  if (!authored && !careTurn2 && says.length && !tags.some((t) => allowed.has(norm7(t)))) notes.push(`no say was tagged with an allowed move (${decision.moves.join(", ")})`);
   for (const p of steps2.filter((x) => x.cmd === "set_phase")) {
     if (PHASES.indexOf(p.phase) > PHASES.indexOf(decision.stageMax)) notes.push(`set_phase ${p.phase} is ahead of what the lesson allows (${decision.stageMax})`);
   }
   if (decision.avoid && repsOf(steps2).includes(decision.avoid)) notes.push(`the ${decision.avoid} was used again after two wrong answers with it`);
   const allTags = steps2.filter((x) => x.cmd === "say" && x.move).map((x) => x.move);
   for (const m of authored ? [] : decision.must || []) {
-    if (!allTags.some((t) => norm6(t) === norm6(m))) notes.push(`"${m}" was required this turn and no say carried it`);
+    if (!allTags.some((t) => norm7(t) === norm7(m))) notes.push(`"${m}" was required this turn and no say carried it`);
   }
   const modelSays = says.map((x) => x.text);
   if (!authored && decision.noPress && modelSays.some(asksReason)) notes.push(`asked how the child knew where the decision said not to (${decision.noPress})`);
@@ -37306,6 +37538,10 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
   if (decision?.rule === "close" && !probe) s.closes = Math.min(5, (s0.closes || 0) + 1);
   if (decision?.rule === "example") s.examples = (s.examples || 0) + 1;
   if (!probe && decision?.rule !== "thinking") s.diagnosing = decision?.rule === "diagnose";
+  if (decision?.rule === "diagnose") {
+    s.diagnosing = true;
+    s.diag = { q: decision.diagQuote || s0.diag?.q || null, tries: Math.min(10, (s0.diag?.tries || 0) + 1) };
+  } else if (decision?.rule !== "thinking" && !(probe && probe.kind === "task_checkin")) s.diag = null;
   s.seal = keepSeal || null;
   if (probe) s.probes += 1;
   if (decision?.rule === "thinking") {
@@ -37356,6 +37592,11 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
       s.solved = [.../* @__PURE__ */ new Set([...s.solved, k0])].slice(-8);
       tries = 0;
     } else if (k0 && fail) tries += 1;
+    if (k0 && fail && tries >= STUCK_AFTER && s0.fig && !["reason", "other", "notice"].includes(k0)) s.failed = [.../* @__PURE__ */ new Set([...s.failed, `${k0}@${shapeOf(s0.fig)}`])].slice(-8);
+    const grew = board ? maxParts2(boardAfter(board, steps2)) > maxParts2(board) : false;
+    if (grew) s.promised = 0;
+    else if (steps2.some((x) => x.cmd === "say" && defersCut(x.text))) s.promised = 3;
+    else s.promised = Math.max(0, (s0.promised || 0) - 1);
     const q = lastQuestionOf(steps2);
     const k = questionKind(q);
     if (k) s.step = { kind: k, tries: k === k0 && !rightNow ? tries : 0 };
@@ -37377,7 +37618,7 @@ function updateLesson(s0, { decision = null, steps: steps2 = [], judged = null, 
     s.hints = 0;
     s.asked = [.../* @__PURE__ */ new Set([...s.asked || [], ask3.id])].slice(-MAX_ASKED);
   }
-  s.hints += steps2.filter((x) => x.cmd === "say" && norm6(x.move) === norm6("Smaller-question hint")).length;
+  s.hints += steps2.filter((x) => x.cmd === "say" && norm7(x.move) === norm7("Smaller-question hint")).length;
   const order = (x) => PHASES.indexOf(x);
   const asked = [...steps2].reverse().find((x) => x.cmd === "set_phase")?.phase;
   const max = [decision?.stageMax, s.stage != null ? stageAllowed(s) : null].filter(Boolean).sort((a, b) => order(b) - order(a))[0] || null;
@@ -37539,6 +37780,10 @@ function turnBrief(s, d, { message = "", marked = null, open = null, board = [],
   else if (d.next) L2.push(`- The next step: ${d.next}.`);
   if (d.stuck) L2.push(`- Stuck: ${d.stuck.tries} tries on ${STEP_NAMES[d.stuck.kind] || "this step"}. Do not ask that kind of question again now: show it another way (a bar, a number line, folding a paper, a short story) or make the step much smaller.`);
   if (d.open) L2.push("- Your last question was a yes-or-no or this-or-that question. Ask an open one now (how many, what, where), or ask them to point or show.");
+  const shapeNow = shapeOf(figOf(board));
+  const failedHere = (s.failed || []).filter((k) => k.endsWith(`@${shapeNow}`)).map((k) => STEP_NAMES[k.split("@")[0]] || k.split("@")[0]);
+  if (shapeNow && failedHere.length && !["open", "close", "stop"].includes(d.rule)) L2.push(`- Failed twice on the ${shapeNow}: ${failedHere.join("; ")}. Never ask that again on the ${shapeNow}: change the picture (a bar, a number line, folding a paper, a short story) or take a different, smaller step.`);
+  if ((s.promised || 0) > 0 && !["open", "close", "stop"].includes(d.rule)) L2.push("- You said you would cut it and have not drawn the cut yet. Draw the cut first (after the child's guess) before you talk about the new pieces; until then the board shows only what is in the board line above.");
   L2.push("- One question this turn, at the end. The app keeps only your last question.");
   const budget = maxWords || (turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex));
   L2.push(`- Word budget this turn: at most ${budget} words in all, then wait for the child. Every word over is cut, and the question at the end is what is kept.`);
@@ -37798,7 +38043,7 @@ function recentSays(history, n = 4) {
 function recoverRaw({ rule = null, probe = null, marked = null, openPrompt = null, lastQuestion = null, saidAny = false, doing = null, message = "", board = [], turnIndex = 0, found = [], ack = "yes", safe = () => true, target = null, closeStep = null } = {}) {
   const frame = lessonFrame(target);
   const said = marked?.correct ? marked.said || null : null;
-  const yes = marked?.correct && !saidAny ? [said ? ack === "revoice" ? `${cap2(said)}, you said.` : `Yes, ${said}.` : "Yes, that is right."] : [];
+  const yes = marked?.correct && !saidAny ? [said ? ack === "revoice" ? `${cap3(said)}, you said.` : `Yes, ${said}.` : "Yes, that is right."] : [];
   const q = [marked?.correct ? null : openPrompt, marked?.correct ? null : lastQuestion].find((x) => x && /\?\s*$/.test(String(x).trim()) && !boardClaimOf(x, board)) || null;
   const facts = boardFacts(board);
   const pick2 = (xs) => xs[Math.abs(Number(turnIndex) || 0) % xs.length];
@@ -37842,7 +38087,7 @@ function recoverRaw({ rule = null, probe = null, marked = null, openPrompt = nul
       return { lines: [...yes, ...fact ? [fact] : [], ask3], doing: "answer" };
   }
 }
-var cap2 = (t) => String(t || "").replace(/^./, (c) => c.toUpperCase());
+var cap3 = (t) => String(t || "").replace(/^./, (c) => c.toUpperCase());
 function boardFacts(board = []) {
   const f = [...board || []].reverse().find((b) => b && (["shape", "fraction_bar", "number_line"].includes(b.cmd) || b.cmd === "figure" && ["fraction", "numberline"].includes(b.type)));
   if (!f) return null;
@@ -37962,7 +38207,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const sealToken = body?.answer?.seal || message && lesson0.seal || null;
   const sealed = sealToken && !concern ? await unseal(sealToken, secret, { session: sid, child: childKey, now }) : null;
   const lastSpokenQ = lastTutorQuestion(body?.history);
-  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(asksForNumber) || !!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer)));
+  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(numberFits) || !!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer)) || loneNumberWord(message));
   const heardFrom = numberOpen && hearNumbers(message) !== message ? message : null;
   if (heardFrom) message = hearNumbers(message);
   const response = hearNumbers(String((body?.answer?.seal ? body.answer.response : message) ?? "").slice(0, MAX_CHILD_CHARS), { numberOpen });
@@ -38015,27 +38260,29 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   const elapsedMin = Math.max(0, Number(body?.elapsed_s) || 0) / 60;
   let careEnds = false;
   const pre = preFor({ target: pick2.target, prerequisite: pick2.prerequisite, prerequisites: prerequisitesOf(pick2.target), nameOf: skillName });
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null, pre, lastQ: lastSpokenQ });
+  const boardMarked = !concern && !marked && message && !probe ? boardMark(lastSpokenQ, board, message) : null;
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick2.prerequisite ? skillName(pick2.prerequisite) : null, pre, lastQ: lastSpokenQ, boardMarked, recent: recentSays(body?.history, 4), board, codeDiagnosis: settings.codeDiagnosis !== false });
   const found = /* @__PURE__ */ new Set([...lesson0.found, ...marked?.canon ? [marked.canon] : []]);
   const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
-  const closeTurn = async ({ steps: steps2, assessment = null, hidden = [], codeNotes = [], fromModel = null }) => {
-    const judged = concern ? null : finalClass({ assessment, marked, message });
+  const closeTurn = async ({ steps: steps2, assessment = null, hidden = [], codeNotes = [], fromModel = null, decisionNow = decision }) => {
+    const judged = concern ? null : finalClass({ assessment, marked, message, boardMarked });
     await recordJudged(judged);
     const asks = steps2.some((x) => x.cmd === "ask");
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
-    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null, board });
+    const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? "ended" : "paused", seal: null } : updateLesson(lesson0, { decision: decisionNow, steps: steps2, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null, board });
     const evidence = judged?.evidence && checkTurnText([{ cmd: "say", text: judged.evidence }], hidden).ok ? judged.evidence : "";
     const tester = {
-      rule: decision?.rule || null,
-      moves: decision?.moves || [],
-      with: decision?.with || [],
-      reason: decision?.reason || null,
-      stageMax: decision?.stageMax || null,
+      rule: decisionNow?.rule || null,
+      moves: decisionNow?.moves || [],
+      with: decisionNow?.with || [],
+      reason: decisionNow?.reason || null,
+      stageMax: decisionNow?.stageMax || null,
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
-      kept: [...judgeTurn(decision, steps2, { fromModel, authored: !fromModel }), ...codeNotes],
+      kept: [...judgeTurn(decisionNow, steps2, { fromModel, authored: !fromModel }), ...codeNotes],
       probe,
       unanswered: unanswered ? unanswered.why : null,
-      ...heardFrom ? { heard: `"${heardFrom.slice(0, 40)}" read as "${message.slice(0, 40)}": a number was asked for` } : {}
+      ...heardFrom ? { heard: `"${heardFrom.slice(0, 40)}" read as "${message.slice(0, 40)}": a number was asked for` } : {},
+      ...boardMarked ? { board_mark: `"${boardMarked.said}" marked ${boardMarked.correct ? "right" : "wrong"} from the board (${boardMarked.kind})` } : {}
     };
     return { lesson, tester };
   };
@@ -38077,6 +38324,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     return authored(care.steps, [care.ends ? "safeguarding-crisis" : "safeguarding"], null);
   }
   if (lesson0.care === "ended") return authored(ENDED_TURN, ["lesson-ended"], null);
+  if (decision?.authored && decision.rule === "diagnose" && decision.line) return authored([{ cmd: "say", text: decision.line, move: "Diagnose the wrong answer" }, { ...handBack, doing: "answer" }], ["diagnose"], null);
   if (decision?.authored) return authored(decision.rule === "thinking" ? [...decision.line && freshLines([decision.line], { recent: recentSays(body?.history, 6) }).length ? [say(decision.line)] : [], { ...handBack, doing: lesson0.doing || "answer" }] : CARE_WAIT, [decision.rule], null);
   const screen2 = message ? screenChild(message) : { ok: true, wantsAnswer: false };
   if (!screen2.ok) {
@@ -38127,8 +38375,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
   }
   const imageUsd = image ? imageTokens(image.w, image.h) * (PRICES2[settings.model]?.input ?? 2) / 1e6 : 0;
   const est = TURN_ESTIMATE_USD + imageUsd + listenUsd + (voice ? speechCost(VOICE_TURN_CHARS_ESTIMATE) : 0);
-  const cap3 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
-  if (!cap3.ok) return authored(WIND_DOWN, [cap3.reason], spent);
+  const cap4 = capCheck({ sessionUsd: spent.session + est, dayUsd: spent.day + est, turns: turnIndex }, settings);
+  if (!cap4.ok) return authored(WIND_DOWN, [cap4.reason], spent);
   const openPrompt = open?.question || null;
   const safeLine = (line) => checkTurnText([say(line)], [open].filter(hiddenOk)).ok;
   const recentBefore = recentSays(body?.history);
@@ -38184,10 +38432,15 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage },
     closing: ["close", "stop"].includes(decision?.rule) || lesson0.stage === "wrapup",
     example: decision?.rule === "example",
-    solved: lesson0.solved || []
+    solved: lesson0.solved || [],
+    // Round 2: a cut owed from an earlier turn, the questions failed twice on a shape, and whether a reason is owed.
+    promised: (lesson0.promised || 0) > 0,
+    failed: lesson0.failed || [],
+    diagnosing: decision?.rule === "diagnose" || !!lesson0.diag,
+    pressing: !!decision?.press || !!lesson0.pending
   });
   const logOnly = (f) => f.habit === "stock" && !/^(claims a feeling|promises or invites a secret)/.test(f.reason);
-  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter((f) => !logOnly(f));
+  const flagsOf = (st, sofar, extra, after = []) => [...stepFlags(st, hctx, sofar, { extra }).filter((f) => !logOnly(f)), ...round2Flags(st, hctx, sofar, after)];
   const stockOf2 = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter(logOnly);
   return { status: 200, go: async (emit) => {
     emit(meta());
@@ -38205,7 +38458,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     const hidden = [open].filter(hiddenOk);
     let closed = false;
     let saidAny = false;
-    let acked = !(decision?.must || []).includes("Name what was right");
+    let acked = !(decision?.must || []).includes("Name what was right") && decision?.ack !== "revoice";
+    let decisionNow = decision;
     const learned = { interests: [], helps: [] };
     let ending = null;
     let assessment = null;
@@ -38305,7 +38559,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       return text ? { ...st, text } : st;
     };
     const MAX_REWRITES = 2;
-    const rewrite = async (st, flags, extra) => {
+    const rewrite = async (st, flags, extra, after = []) => {
       if (!callModel || rewrites.length >= MAX_REWRITES) return null;
       const req = rewriteRequest({ model: settings.model, text: st.text, reasons: flags, child: message, brief, names, before: sent.filter((x) => x.cmd === "say").map((x) => x.text) });
       const r = await rewriteOnce(callModel, req);
@@ -38314,22 +38568,22 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
       rewrites.push(rec);
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      const flags2 = flagsOf(st2, sent, extra);
+      const flags2 = flagsOf(st2, sent, extra, after);
       if (flags2.length) rec.why = "the rewrite failed its checks too";
       else rec.ok = true;
       return { st: st2, flags: flags2 };
     };
-    const FIGS2 = ["shape", "fraction_bar", "figure"];
-    const gate = async (st, extra) => {
+    const FIGS3 = ["shape", "fraction_bar", "figure"];
+    const gate = async (st, extra, after = []) => {
       if (st.cmd === "say") {
         const stock = stockOf2(st, sent, extra);
         if (stock.length) codeNotes.push(`gate: noted, not rewritten (${stock.map((f) => `stock: ${f.reason}`).join("; ").slice(0, 200)})`);
       }
-      const flags = flagsOf(st, sent, extra);
+      const flags = flagsOf(st, sent, extra, after);
       if (!flags.length) return st;
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join("; ").slice(0, 300);
       if (st.cmd === "say") {
-        const fixed = await rewrite(st, flags, extra);
+        const fixed = await rewrite(st, flags, extra, after);
         if (fixed && !fixed.flags.length) {
           codeNotes.push(`gate: rewritten (${why})`);
           if (flags.some((f) => f.habit === "level_jump")) levelHeld = true;
@@ -38358,7 +38612,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         await stop("child-step");
         return null;
       }
-      if (FIGS2.includes(st.cmd) && flags.some((f) => f.habit === "giveaway")) {
+      if (FIGS3.includes(st.cmd) && flags.some((f) => f.habit === "giveaway")) {
         codeNotes.push(`gate: ${why}; the label was taken off`);
         st = st.cmd === "figure" ? { ...st, params: { ...st.params, label: false } } : { ...st, label: false };
       } else if (["write_text", "write_math"].includes(st.cmd) && flags.some((f) => f.habit === "giveaway")) {
@@ -38366,7 +38620,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         return null;
       }
       if (flags.some((f) => f.habit === "level_jump")) {
-        if (levelHeld && (FIGS2.includes(st.cmd) || st.cmd === "number_line" || st.cmd === "ask")) {
+        if (levelHeld && (FIGS3.includes(st.cmd) || st.cmd === "number_line" || st.cmd === "ask")) {
           drop(st, `gate: ${why}`, "gate-level");
           return null;
         }
@@ -38410,17 +38664,35 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         codeNotes.push(`one question a turn: "${lastQ(h.text).slice(0, 60)}" was not said, a later question was`);
         h = kept ? { ...h, text: kept } : null;
       }
-      if (h) await step2(h, it && hiddenOk(it) ? [it.answer] : [], true);
+      if (h) await step2(h, it && hiddenOk(it) ? [it.answer] : [], true, rest);
       for (const x of rest) await step2(x, [], true);
+    };
+    const NO_TAKEOVER = ["diagnose", "reteach", "example", "change", "diag-change", "close", "stop", "bored", "care", "care-wait", "care-return", "open", "probe", "thinking", "lost", "reason", "question", "press", "advance", "fresh-check", "move-on"];
+    const takeoverFor = (a) => settings.codeDiagnosis !== false && !!decision && !probe && !marked?.correct && !boardMarked?.correct && DIAG_CLASSES.includes(a.class) && !NO_TAKEOVER.includes(decision.rule) && !!quoteOf(message) && !["lost", "question", "filler", "stop"].includes(childMove(message)) && !asked();
+    const diagnoseNow = async (a) => {
+      assessment = a;
+      held = null;
+      const q = quoteOf(message);
+      const line = diagnosisLine({ quote: q, attempt: 0, fig: boardFacts(boardAfter2(board, sent))?.name || null, recent: [...recentBefore, ...sent.filter((x) => x.cmd === "say").map((x) => x.text)] });
+      decisionNow = { ...decision, rule: "diagnose", moves: ["Diagnose the wrong answer"], with: [], must: ["Diagnose the wrong answer"], diagQuote: q, reason: `the model read the answer as ${a.class}: the code diagnoses ("${q}") before anything else` };
+      codeNotes.push(`diagnose first: the model's judgement was ${a.class}, so the code asked how the child got "${q}" and the rest of the model's reply was not used`);
+      guard.push("diagnose-first");
+      await speak({ cmd: "say", text: line, move: "Diagnose the wrong answer" });
+      closed = true;
+      await send({ ...handBack, doing: "answer" });
     };
     const fromModel = /* @__PURE__ */ new Set();
     const usedIds = new Set(lesson0.asked || []);
-    const step2 = async (st, extra = [], releasing = false) => {
+    const step2 = async (st, extra = [], releasing = false, after = []) => {
       if (closed) return;
+      if (!releasing && st.cmd === "assess" && takeoverFor(st)) {
+        await diagnoseNow(st);
+        return;
+      }
       if (!releasing) {
         fromModel.add(st);
         if (held && WAITS.includes(st.cmd)) {
-          if (gateOn && FIGS2.includes(st.cmd) && flagsOf(st, [...sent, ...held]).some((f) => /^does the child's step/.test(f.reason))) {
+          if (gateOn && FIGS3.includes(st.cmd) && flagsOf(st, [...sent, ...held]).some((f) => /^does the child's step/.test(f.reason))) {
             drop(st, "gate: does the child's step (the question asks the child to do it, and the drawing does it)", "child-step");
             await release();
             if (!closed) await stop("child-step");
@@ -38429,18 +38701,26 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
           held.push(st);
           return;
         }
+        if (held && st.cmd === "say" && hasQ(st.text) && hasQ(held[0].text) && orphanQ(lastQ(st.text))) {
+          codeNotes.push(`one question a turn: "${lastQ(st.text).slice(0, 60)}" cannot stand alone, so the question before it was kept`);
+          const kept = dropQuestions(st.text);
+          if (!kept) return;
+          const st2 = { ...st, text: kept };
+          fromModel.add(st2);
+          st = st2;
+        }
         if (held) await release(st);
         if (closed) return;
         if (st.cmd === "say") {
           const one = lastQuestionOnly(st.text);
           if (one !== st.text) {
-            codeNotes.push(`one question a turn: only the last question of "${st.text.slice(0, 60)}" was kept`);
+            codeNotes.push(`one question a turn: only ${orphanQ(lastQ(st.text)) ? "the first question" : "the last question"} of "${st.text.slice(0, 60)}" was kept`);
             const st2 = { ...st, text: one };
             fromModel.add(st2);
             st = st2;
           }
         }
-        if (mayGiveAway(st) || st.cmd === "say" && hasQ(st.text)) {
+        if (mayGiveAway(st) || st.cmd === "say" && (hasQ(st.text) || promisesDrawing(st.text))) {
           held = [st];
           return;
         }
@@ -38475,7 +38755,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
         }
       }
       if (gateOn && fromModel.has(st) && ["say", "write_text", "write_math", "shape", "fraction_bar", "figure", "number_line"].includes(st.cmd)) {
-        const g = await gate(st, extra);
+        const g = await gate(st, extra, after);
         if (!g) return;
         if (g !== st) fromModel.add(g);
         st = g;
@@ -38509,8 +38789,8 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
           acked = true;
           st = noYes(st);
           if (!acknowledges(st) || revoice && confirms(st.text)) {
-            await speak({ cmd: "say", text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: "Name what was right" });
-            codeNotes.push("the code named what was right first: the model's first sentence did not");
+            await speak({ cmd: "say", text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: revoice ? "Revoice and build" : "Name what was right" });
+            codeNotes.push(revoice ? "the code said the child's words back first: the model's first sentence did not" : "the code named what was right first: the model's first sentence did not");
           }
         }
         const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex);
@@ -38538,6 +38818,11 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
           return;
         }
         if (sayable && !asked()) await speak(say(ask3.prompt));
+        else if (!asked() && !probe && (st.doing || doingOf(sent)) !== "task" && dropped.some((d) => d.cmd === "say")) {
+          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts(sent) });
+          for (const l of r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1)) await speak(say(l));
+          codeNotes.push("a dropped sentence held the question: a question from the board was asked");
+        }
         await endGate();
         if (!probe) {
           const offer = shadeOffer(board, sent, vopts);
@@ -38598,7 +38883,7 @@ async function prepareTurn({ user, body, db, callModel = null, safeguard = null,
     await logUsage(db, { user, childKey, sid, settings, cost, meter: usage, guard, dropped: dropped.length, image });
     const voiceUsd = await meterVoice(sent);
     await saveLearned({ db, sid, user, child, learned, now });
-    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes, fromModel });
+    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes, fromModel, decisionNow });
     if (ending) await finishLesson({ db, user, child, sid, target: pick2.target, summary: ending.summary, lib, now });
     emit({ type: "end", guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
@@ -38692,15 +38977,23 @@ var sentencesIn2 = (t) => String(t || "").split(/(?<=[.!?])\s+/).filter(Boolean)
 var isQs = (x) => /\?\s*$/.test(x);
 var hasQ = (t) => sentencesIn2(t).some(isQs);
 var lastQ = (t) => sentencesIn2(t).filter(isQs).pop() || "";
+var ORPHAN_START = /^(what happened|what then|and then|then what|why|how|what did you do|what about (it|that|them)|really|right|okay|ok|and|so)\b/i;
+var Q_STOP = /* @__PURE__ */ new Set(["what", "how", "why", "did", "you", "the", "that", "this", "then", "and", "happened", "about", "was", "were", "is", "are", "does", "do", "it", "they", "them", "so", "okay", "right", "really"]);
+var orphanQ = (q) => {
+  const w = String(q || "").toLowerCase().replace(/[^a-z' ]+/g, " ").split(/\s+/).filter(Boolean);
+  const content2 = w.filter((x) => x.length >= 3 && !Q_STOP.has(x));
+  return w.length <= 4 && (content2.length === 0 || ORPHAN_START.test(String(q).trim()) && content2.length <= 1);
+};
 function lastQuestionOnly(text) {
   const ss = sentencesIn2(text);
   const qs = ss.filter(isQs);
   if (qs.length <= 1) return text;
+  const keep = orphanQ(qs[qs.length - 1]) ? 1 : qs.length;
   let n = 0;
-  return ss.filter((x) => !isQs(x) || (n += 1) === qs.length).join(" ");
+  return ss.filter((x) => !isQs(x) || (n += 1) === keep).join(" ");
 }
 var dropQuestions = (text) => sentencesIn2(text).filter((x) => !isQs(x)).join(" ");
-var HARD_HABITS = ["giveaway", "level_jump"];
+var HARD_HABITS = ["giveaway", "level_jump", ...ROUND2_HABITS];
 var hardOf = (flags = []) => flags.filter((f) => HARD_HABITS.includes(f.habit));
 var softScore = ({ st, flags = [] }) => (flags.some((f) => f.habit === "repeat") ? 100 : 0) + 10 * flags.length + Math.min(9, wordsIn(st?.text || "") / 10);
 var addSpent = (s, c) => ({ session: (s?.session || 0) + c, day: (s?.day || 0) + c });
@@ -38748,7 +39041,7 @@ function itemFor(s, bank = []) {
 }
 
 // src/ai/safeguarding.js
-var norm7 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'\s]+/g, " ").replace(/\s+/g, " ").trim();
+var norm8 = (s) => String(s ?? "").toLowerCase().replace(/[’`´]/g, "'").replace(/[^a-z0-9'\s]+/g, " ").replace(/\s+/g, " ").trim();
 var SEVERITY = /\b(blood|bleeding|bruise\w*|swollen|swelling|scar\w*|burn\w*|broke\w*|fracture\w*|could ?n[o']?t walk|cannot walk|can ?t walk|could ?n[o']?t sit|hospital|stitches|unconscious|passed out)\b|\b(every ?day|everyday|every night|all the time|again and again|always beats?)\b|\b(afraid|scared|scaring|fear|terrified) (to|of) (go|going|return\w*) (back )?home\b|\bdo ?n[o']?t want to go home\b|\bsiogopi\b|\bninaogopa kwenda nyumbani\b/;
 var SAFEGUARDING_RULES = [
   // ---- crisis: self-harm and suicide ------------------------------------
@@ -38881,7 +39174,7 @@ var excerptFor = (text, re, width = 70) => {
 };
 var TIER_RANK = { none: 0, concern: 1, crisis: 2 };
 var screen = (raw) => {
-  const text = norm7(raw);
+  const text = norm8(raw);
   if (!text) return { tier: "none", categories: [], hits: [] };
   const hits = [];
   for (const rule of SAFEGUARDING_RULES) {

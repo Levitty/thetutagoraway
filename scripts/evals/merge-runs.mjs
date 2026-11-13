@@ -32,10 +32,13 @@ const rows = merged.map((x) => ({
   result: { cost: x.tutor_cost, turns: Array.from({ length: x.turns }, () => ({ latencyMs: 0, marked: null, guard: [] })), stopReason: x.stop },
   childCost: x.child_cost,
 }));
+// The tutor's model as the base run recorded it (Round 2: a run may use --tutor-model).
+const baseSummary = readFileSync(`${A}/SUMMARY.md`, 'utf8');
+const tutorModel = /Tutor: (claude-[a-z0-9-]+) at/.exec(baseSummary)?.[1] || null;
 let patternsText = '';
 try { patternsText = await patterns(budget, rows, JUDGE_MODEL); } catch (e) { patternsText = `(patterns call failed: ${String(e.message).slice(0, 100)})`; }
 let text = summaryOf({
-  runName: `${base} (scenarios ${replaced.join(', ')} re-run in ${extra})`, rows, budget, patternsText, args: { maxTurnsLabel: '12 (scenario 30: 24)' },
+  runName: `${base} (scenarios ${replaced.join(', ')} re-run in ${extra})`, rows, budget, patternsText, args: { maxTurnsLabel: '12 (scenario 30: 24)', tutorModel },
   extra: [`Scenarios ${replaced.join(', ')} could not be scored in the first pass (the judge's reply was cut off); they were played again in run ${extra} and replace the first-pass transcripts here.`],
 });
 

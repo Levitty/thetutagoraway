@@ -101,7 +101,7 @@ import { screenChild, screenAll, careTurn, checkTurnText, answerInQuestion, visi
 import { stepParser } from './streamSteps.js';
 import { buildRequest, turnContext, MAX_PROBE_WORDS } from './prompt.js';
 import { probeBank, bankLines } from './probes.js';
-import { markSpoken, canonAnswer, speakAnswer, inWords, hearNumbers, asksForNumber } from './spokenAnswer.js';
+import { markSpoken, canonAnswer, speakAnswer, inWords, hearNumbers, numberFits, loneNumberWord, childMove } from './spokenAnswer.js';
 import { seal, unseal } from './seal.js';
 import { costOf, PRICES } from '../rocket/guide.js';
 import { validateSnapshot, imageTokens, CHECK_GAP_MS } from './snapshot.js';
@@ -112,7 +112,8 @@ import { readLearner, rememberEvidence, upgradeEvidence, saveLearned, finishLess
 import { FRACTION_SKILLS, skillName, lessonFrame } from './fractions.js';
 import { cleanPace } from './childVoice.js';
 import { cleanLesson, decide, judgeTurn, updateLesson, finalClass, isIndependent, lessonLines, turnBrief } from './orchestrator.js';
-import { stepFlags, endFlags, habitContext, confirms, asksReason, boardClaimOf } from './habits.js';
+import { stepFlags, endFlags, habitContext, confirms, asksReason, boardClaimOf, round2Flags, ROUND2_HABITS, promisesDrawing } from './habits.js';
+import { DIAG_CLASSES, diagnosisLine, quoteOf, boardMark } from './diagnosis.js';
 import { rewriteRequest, rewriteOnce, addUsage } from './gate.js';
 import { exampleLines } from './exampleLookup.js';
 import { cleanProbe } from './silence.js';
@@ -354,7 +355,10 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // sealed question's answer is a number, or one of the tutor's last three turns asked how many (spokenAnswer.js hearNumbers).
   const lastSpokenQ = lastTutorQuestion(body?.history);
   // The counting thread stays open across a few turns of nudges ("How many pieces?" ... "Take your time." ... "tree?").
-  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(asksForNumber) || (!!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer))));
+  // Round 2 (run 2026-11-13-1027, scenario 14: "Umm, to?" to "What would you do with the knife?" was classed as a question):
+  // a number fits any question about cutting, sharing, pieces or people (numberFits), and a reply that is only a sound-alike
+  // ("to?", "ate") is a number whatever was asked.
+  const numberOpen = !concern && (recentTutorQuestions(body?.history, 3).some(numberFits) || (!!sealed && /^\d+(\/\d+)?$/.test(canonAnswer(sealed.item?.answer))) || loneNumberWord(message));
   const heardFrom = numberOpen && hearNumbers(message) !== message ? message : null;
   if (heardFrom) message = hearNumbers(message);
   const response = hearNumbers(String((body?.answer?.seal ? body.answer.response : message) ?? '').slice(0, MAX_CHILD_CHARS), { numberOpen });
@@ -419,29 +423,33 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // The orchestrator's decision for this turn (none for a care turn: that is never a teaching turn).
   // The warm-up's first maths question is on the weakest earlier skill (or the target's nearest one); null when the target has none.
   const pre = preFor({ target: pick.target, prerequisite: pick.prerequisite, prerequisites: prerequisitesOf(pick.target), nameOf: skillName });
-  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick.prerequisite ? skillName(pick.prerequisite) : null, pre, lastQ: lastSpokenQ });
+  // Round 2: an answer to a question the board itself answers ("Is the circle whole, or is it cut?") is marked from the board
+  // (diagnosis.js boardMark): wrong is diagnosed before the model is called; right said unsure is never partly right.
+  const boardMarked = !concern && !marked && message && !probe ? boardMark(lastSpokenQ, board, message) : null;
+  const decision = concern ? null : decide(lesson0, { turnIndex, elapsedMin, sessionMinutes: settings.sessionMinutes || 20, marked, message, probe, question, prerequisite: pick.prerequisite ? skillName(pick.prerequisite) : null, pre, lastQ: lastSpokenQ, boardMarked, recent: recentSays(body?.history, 4), board, codeDiagnosis: settings.codeDiagnosis !== false });
   // Answers the child has found are theirs to hear back: never hidden again (12 Nov 2026: about 20 turns were stopped
   // for HOREB repeating the child's own right answer).
   const found = new Set([...lesson0.found, ...(marked?.canon ? [marked.canon] : [])]);
   const hiddenOk = (it) => !!it && !found.has(canonAnswer(it.answer));
   // The end of every turn: the answer judged and recorded, the lesson state moved on, what the tester sees.
-  const closeTurn = async ({ steps, assessment = null, hidden = [], codeNotes = [], fromModel = null }) => {
-    const judged = concern ? null : finalClass({ assessment, marked, message });
+  const closeTurn = async ({ steps, assessment = null, hidden = [], codeNotes = [], fromModel = null, decisionNow = decision }) => {
+    const judged = concern ? null : finalClass({ assessment, marked, message, boardMarked });
     await recordJudged(judged);
     // A care reply pauses the lesson; a crisis ends it. The question the child did not answer stays open one more turn.
     // (A silence probe keeps it too: the child is still on that question.)
     const asks = steps.some((x) => x.cmd === 'ask');
     const keepSeal = asks ? null : unanswered ? unanswered.seal : probe ? lesson0.seal : null;
     const lesson = concern ? { ...lesson0, turns: lesson0.turns + 1, care: careEnds ? 'ended' : 'paused', seal: null }
-      : updateLesson(lesson0, { decision, steps, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null, board });
+      : updateLesson(lesson0, { decision: decisionNow, steps, judged, marked, probe, elapsedMin, keepSeal, childWords: wordsIn(message), preNeeded: !!pre, thinkS: Number.isFinite(Number(body?.think_s)) && body?.think_s != null ? Number(body.think_s) : null, board });
     // The model's evidence is the child's own words; checked again so no hidden answer rides in it.
     const evidence = judged?.evidence && checkTurnText([{ cmd: 'say', text: judged.evidence }], hidden).ok ? judged.evidence : '';
     const tester = {
-      rule: decision?.rule || null, moves: decision?.moves || [], with: decision?.with || [], reason: decision?.reason || null, stageMax: decision?.stageMax || null,
+      rule: decisionNow?.rule || null, moves: decisionNow?.moves || [], with: decisionNow?.with || [], reason: decisionNow?.reason || null, stageMax: decisionNow?.stageMax || null,
       judged: judged ? { class: judged.class, misconception: judged.misconception, source: judged.source, note: judged.note, evidence } : null,
-      kept: [...judgeTurn(decision, steps, { fromModel, authored: !fromModel }), ...codeNotes], probe,
+      kept: [...judgeTurn(decisionNow, steps, { fromModel, authored: !fromModel }), ...codeNotes], probe,
       unanswered: unanswered ? unanswered.why : null,
       ...(heardFrom ? { heard: `"${heardFrom.slice(0, 40)}" read as "${message.slice(0, 40)}": a number was asked for` } : {}),
+      ...(boardMarked ? { board_mark: `"${boardMarked.said}" marked ${boardMarked.correct ? 'right' : 'wrong'} from the board (${boardMarked.kind})` } : {}),
     };
     return { lesson, tester };
   };
@@ -483,6 +491,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   if (lesson0.care === 'ended') return authored(ENDED_TURN, ['lesson-ended'], null);
   // A filler-only reply ("um...") is not a turn to answer: no model; the page waits (a hand-back with no words, or the one
   // "Take your time" after two in a row: orchestrator.js decide, rule thinking).
+  // The code's diagnosis (Round 2, diagnosis.js): one sentence quoting the child, then their turn. No model call.
+  if (decision?.authored && decision.rule === 'diagnose' && decision.line) return authored([{ cmd: 'say', text: decision.line, move: 'Diagnose the wrong answer' }, { ...handBack, doing: 'answer' }], ['diagnose'], null);
   if (decision?.authored) return authored(decision.rule === 'thinking' ? [...(decision.line && freshLines([decision.line], { recent: recentSays(body?.history, 6) }).length ? [say(decision.line)] : []), { ...handBack, doing: lesson0.doing || 'answer' }] : CARE_WAIT, [decision.rule], null);
 
   // 4. The child's words.
@@ -577,6 +587,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     message, marked, cls: decision?.prelim || null, history: rawHistory, hidden: [open].filter(hiddenOk), found: [...found], board,
     level: { level: lesson0.level || 0, wins: lesson0.wins || 0, stage: lesson0.stage }, closing: ['close', 'stop'].includes(decision?.rule) || lesson0.stage === 'wrapup', example: decision?.rule === 'example',
     solved: lesson0.solved || [],
+    // Round 2: a cut owed from an earlier turn, the questions failed twice on a shape, and whether a reason is owed.
+    promised: (lesson0.promised || 0) > 0, failed: lesson0.failed || [], diagnosing: decision?.rule === 'diagnose' || !!lesson0.diag, pressing: !!decision?.press || !!lesson0.pending,
   });
 
   // The overtalk check (pacing.js pacingFlags) is NOT in the live gate (12 Nov 2026, run 2026-11-12-1824: its failed rewrites
@@ -586,7 +598,8 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
   // sure yet" out of a fine sentence, and a probe rewrite talked about a shaded half on an uncut circle). The model's
   // sentence plays. A claim of feelings or a promised secret is not stock talk: it is still rewritten.
   const logOnly = (f) => f.habit === 'stock' && !/^(claims a feeling|promises or invites a secret)/.test(f.reason);
-  const flagsOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter((f) => !logOnly(f));
+  // Round 2: the board, the child's reason and the failed question, checked on every say with the drawings that follow it.
+  const flagsOf = (st, sofar, extra, after = []) => [...stepFlags(st, hctx, sofar, { extra }).filter((f) => !logOnly(f)), ...round2Flags(st, hctx, sofar, after)];
   const stockOf = (st, sofar, extra) => stepFlags(st, hctx, sofar, { extra }).filter(logOnly);
 
   return { status: 200, go: async (emit) => {
@@ -601,7 +614,11 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     let closed = false;       // pause_for_child / end_session sent, or the turn was stopped
     let saidAny = false;
     // After a right answer, the first say names it (decide: must). The code says it when the model does not.
-    let acked = !(decision?.must || []).includes('Name what was right');
+    // After a hedged or one-word right answer (ack 'revoice') the first say is the child's words back, not a yes (Round 2).
+    let acked = !(decision?.must || []).includes('Name what was right') && decision?.ack !== 'revoice';
+    // Round 2: the code's diagnosis took the turn over when the model's own judgement (assess, its first step) read the
+    // child's answer as wrong, partly right or a guess: the decision the lesson records is then the diagnosis.
+    let decisionNow = decision;
     const learned = { interests: [], helps: [] }; // the silent notes of this turn: saved, never sent to the browser
     let ending = null;
     let assessment = null;    // the model's judgement of the child's answer (assess): kept here, never sent as a step
@@ -691,7 +708,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     // A figure labelled with the answer loses its label; board writing that gives an answer away is dropped. At most
     // MAX_REWRITES rewrites a turn (after that a soft fault is kept and noted).
     const MAX_REWRITES = 2;
-    const rewrite = async (st, flags, extra) => {
+    const rewrite = async (st, flags, extra, after = []) => {
       if (!callModel || rewrites.length >= MAX_REWRITES) return null;
       const req = rewriteRequest({ model: settings.model, text: st.text, reasons: flags, child: message, brief, names, before: sent.filter((x) => x.cmd === 'say').map((x) => x.text) });
       const r = await rewriteOnce(callModel, req);
@@ -700,19 +717,19 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
       rewrites.push(rec);
       if (!r.text) return null;
       const st2 = { ...st, text: r.text };
-      const flags2 = flagsOf(st2, sent, extra);
+      const flags2 = flagsOf(st2, sent, extra, after);
       if (flags2.length) rec.why = 'the rewrite failed its checks too'; else rec.ok = true;
       return { st: st2, flags: flags2 };
     };
     const FIGS = ['shape', 'fraction_bar', 'figure'];
     // @returns the step to go on with, or null when it was dropped (or the turn stopped)
-    const gate = async (st, extra) => {
+    const gate = async (st, extra, after = []) => {
       if (st.cmd === 'say') { const stock = stockOf(st, sent, extra); if (stock.length) codeNotes.push(`gate: noted, not rewritten (${stock.map((f) => `stock: ${f.reason}`).join('; ').slice(0, 200)})`); }
-      const flags = flagsOf(st, sent, extra);
+      const flags = flagsOf(st, sent, extra, after);
       if (!flags.length) return st;
       const why = flags.map((f) => `${f.habit}: ${f.reason}`).join('; ').slice(0, 300);
       if (st.cmd === 'say') {
-        const fixed = await rewrite(st, flags, extra);
+        const fixed = await rewrite(st, flags, extra, after);
         if (fixed && !fixed.flags.length) { codeNotes.push(`gate: rewritten (${why})`); if (flags.some((f) => f.habit === 'level_jump')) levelHeld = true; return fixed.st; }
         if (hardOf(flags).length) {
           // The hard fault is gone in the rewrite (only a soft one is left): the rewrite is spoken.
@@ -786,15 +803,35 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         codeNotes.push(`one question a turn: "${lastQ(h.text).slice(0, 60)}" was not said, a later question was`);
         h = kept ? { ...h, text: kept } : null;
       }
-      if (h) await step(h, it && hiddenOk(it) ? [it.answer] : [], true);
+      if (h) await step(h, it && hiddenOk(it) ? [it.answer] : [], true, rest);
       for (const x of rest) await step(x, [], true);
+    };
+    // Round 2: the code's diagnosis, when the model's judgement says the answer was not right.
+    const NO_TAKEOVER = ['diagnose', 'reteach', 'example', 'change', 'diag-change', 'close', 'stop', 'bored', 'care', 'care-wait', 'care-return', 'open', 'probe', 'thinking', 'lost', 'reason', 'question', 'press', 'advance', 'fresh-check', 'move-on'];
+    const takeoverFor = (a) => settings.codeDiagnosis !== false && !!decision && !probe && !marked?.correct && !boardMarked?.correct && DIAG_CLASSES.includes(a.class) && !NO_TAKEOVER.includes(decision.rule)
+      && !!quoteOf(message) && !['lost', 'question', 'filler', 'stop'].includes(childMove(message)) && !asked();
+    const diagnoseNow = async (a) => {
+      assessment = a;
+      held = null;
+      const q = quoteOf(message);
+      const line = diagnosisLine({ quote: q, attempt: 0, fig: boardFacts(boardAfter(board, sent))?.name || null, recent: [...recentBefore, ...sent.filter((x) => x.cmd === 'say').map((x) => x.text)] });
+      decisionNow = { ...decision, rule: 'diagnose', moves: ['Diagnose the wrong answer'], with: [], must: ['Diagnose the wrong answer'], diagQuote: q, reason: `the model read the answer as ${a.class}: the code diagnoses ("${q}") before anything else` };
+      codeNotes.push(`diagnose first: the model's judgement was ${a.class}, so the code asked how the child got "${q}" and the rest of the model's reply was not used`);
+      guard.push('diagnose-first');
+      await speak({ cmd: 'say', text: line, move: 'Diagnose the wrong answer' });
+      closed = true;
+      await send({ ...handBack, doing: 'answer' });
     };
     // Steps the model wrote (the code's own sentences are never held to a move tag).
     const fromModel = new Set();
     const usedIds = new Set(lesson0.asked || []);
     // One step, validated, as it arrives: checked before the child hears or sees anything of it.
-    const step = async (st, extra = [], releasing = false) => {
+    const step = async (st, extra = [], releasing = false, after = []) => {
       if (closed) return;
+      // Round 2: the model's judgement of the child's answer comes first in its reply. A wrong, partly right or guessed
+      // answer (with words to quote, and no diagnosis or reteach already decided) is the code's to diagnose: one sentence
+      // quoting the child, then their turn; the rest of the model's reply is not used.
+      if (!releasing && st.cmd === 'assess' && takeoverFor(st)) { await diagnoseNow(st); return; }
       if (!releasing) {
         fromModel.add(st);
         if (held && WAITS.includes(st.cmd)) {
@@ -807,13 +844,22 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
           }
           held.push(st); return;
         }
+        // One question a turn, never an orphan (Round 2, run 2026-11-13-1027, scenario 3: "What happened?" was kept and the
+        // mandazi question it followed was not): a later question that cannot stand alone gives way to the held one.
+        if (held && st.cmd === 'say' && hasQ(st.text) && hasQ(held[0].text) && orphanQ(lastQ(st.text))) {
+          codeNotes.push(`one question a turn: "${lastQ(st.text).slice(0, 60)}" cannot stand alone, so the question before it was kept`);
+          const kept = dropQuestions(st.text);
+          if (!kept) return;
+          const st2 = { ...st, text: kept }; fromModel.add(st2); st = st2;
+        }
         if (held) await release(st);
         if (closed) return;
         if (st.cmd === 'say') {
           const one = lastQuestionOnly(st.text);
-          if (one !== st.text) { codeNotes.push(`one question a turn: only the last question of "${st.text.slice(0, 60)}" was kept`); const st2 = { ...st, text: one }; fromModel.add(st2); st = st2; }
+          if (one !== st.text) { codeNotes.push(`one question a turn: only ${orphanQ(lastQ(st.text)) ? 'the first question' : 'the last question'} of "${st.text.slice(0, 60)}" was kept`); const st2 = { ...st, text: one }; fromModel.add(st2); st = st2; }
         }
-        if (mayGiveAway(st) || (st.cmd === 'say' && hasQ(st.text))) { held = [st]; return; }
+        // A sentence that says a cut or shading waits for the drawings after it, so its words are checked against them.
+        if (mayGiveAway(st) || (st.cmd === 'say' && (hasQ(st.text) || promisesDrawing(st.text)))) { held = [st]; return; }
       }
       if (st.cmd === 'ask' && usedIds.has(st.id)) {
         // A question id used before this lesson gets a new one: the evidence row is keyed by it (12 Nov 2026, run 2: "p1q"
@@ -841,7 +887,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         }
       }
       if (gateOn && fromModel.has(st) && ['say', 'write_text', 'write_math', 'shape', 'fraction_bar', 'figure', 'number_line'].includes(st.cmd)) {
-        const g = await gate(st, extra);
+        const g = await gate(st, extra, after);
         if (!g) return;
         if (g !== st) fromModel.add(g);
         st = g;
@@ -867,7 +913,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         if (!acked) {
           acked = true;
           st = noYes(st);
-          if (!acknowledges(st) || (revoice && confirms(st.text))) { await speak({ cmd: 'say', text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: 'Name what was right' }); codeNotes.push('the code named what was right first: the model\'s first sentence did not'); }
+          if (!acknowledges(st) || (revoice && confirms(st.text))) { await speak({ cmd: 'say', text: cleanText(ackLine()).text.slice(0, LIMITS.say), move: revoice ? 'Revoice and build' : 'Name what was right' }); codeNotes.push(revoice ? 'the code said the child\'s words back first: the model\'s first sentence did not' : 'the code named what was right first: the model\'s first sentence did not'); }
         }
         // Short turns: past the limit the tutor stops talking; a short question at the end of the sentence is kept.
         const limit = probe ? MAX_PROBE_WORDS : turnIndex === 0 ? MAX_SPOKEN_WORDS + 20 : wordCap(turnIndex);
@@ -893,6 +939,13 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
         const sayable = ask && /\?\s*$/.test(ask.prompt);
         if (!saidAny && !sayable) { await stop('invalid-turn'); return; }
         if (sayable && !asked()) await speak(say(ask.prompt));
+        // The gate dropped the sentence that held the turn's question (Round 2: a board fault, a leading choice, a question
+        // failed twice there): the child is handed a true question built from the board, never silence.
+        else if (!asked() && !probe && (st.doing || doingOf(sent)) !== 'task' && dropped.some((d) => d.cmd === 'say')) {
+          const r = recoverLines({ rule: decision?.rule, marked, openPrompt, saidAny, ...recoverFacts(sent) });
+          for (const l of r.lines.filter((x) => /\?\s*$/.test(x)).slice(-1)) await speak(say(l));
+          codeNotes.push('a dropped sentence held the question: a question from the board was asked');
+        }
         await endGate();
         if (!probe) { const offer = shadeOffer(board, sent, vopts); for (const x of offer) await send(x); if (offer.length) { st = { ...st, doing: 'task' }; codeNotes.push('the child was asked to shade: the shade control was offered'); } }
       }
@@ -940,7 +993,7 @@ export async function prepareTurn({ user, body, db, callModel = null, safeguard 
     const voiceUsd = await meterVoice(sent);
     // What the tutor learned about the child, and, at the end of the lesson, the note and the report. Never fails the turn.
     await saveLearned({ db, sid, user, child, learned, now });
-    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes, fromModel });
+    const done = await closeTurn({ steps: sent, assessment, hidden, codeNotes, fromModel, decisionNow });
     if (ending) await finishLesson({ db, user, child, sid, target: pick.target, summary: ending.summary, lib, now });
     emit({ type: 'end', guard, dropped, notes, cost_usd: cost + voiceUsd.usd, spent: addSpent(spent, cost + voiceUsd.usd), voice: voiceUsd, model: settings.model, ...done });
   } };
@@ -1058,19 +1111,30 @@ const sentencesIn = (t) => String(t || '').split(/(?<=[.!?])\s+/).filter(Boolean
 const isQs = (x) => /\?\s*$/.test(x);
 export const hasQ = (t) => sentencesIn(t).some(isQs);
 const lastQ = (t) => sentencesIn(t).filter(isQs).pop() || '';
-/** The say with every question but its last taken out. */
+// A question that cannot stand alone: it leans on the one before it ("What happened?", "Why?", "And then?").
+const ORPHAN_START = /^(what happened|what then|and then|then what|why|how|what did you do|what about (it|that|them)|really|right|okay|ok|and|so)\b/i;
+const Q_STOP = new Set(['what', 'how', 'why', 'did', 'you', 'the', 'that', 'this', 'then', 'and', 'happened', 'about', 'was', 'were', 'is', 'are', 'does', 'do', 'it', 'they', 'them', 'so', 'okay', 'right', 'really']);
+export const orphanQ = (q) => {
+  const w = String(q || '').toLowerCase().replace(/[^a-z' ]+/g, ' ').split(/\s+/).filter(Boolean);
+  const content = w.filter((x) => x.length >= 3 && !Q_STOP.has(x));
+  return w.length <= 4 && (content.length === 0 || (ORPHAN_START.test(String(q).trim()) && content.length <= 1));
+};
+/** The say with every question but one taken out: the last, unless it cannot stand alone (then the first). */
 export function lastQuestionOnly(text) {
   const ss = sentencesIn(text); const qs = ss.filter(isQs);
   if (qs.length <= 1) return text;
+  const keep = orphanQ(qs[qs.length - 1]) ? 1 : qs.length;
   let n = 0;
-  return ss.filter((x) => !isQs(x) || (n += 1) === qs.length).join(' ');
+  return ss.filter((x) => !isQs(x) || (n += 1) === keep).join(' ');
 }
 /** The say with its questions taken out ('' when it was only questions). */
 export const dropQuestions = (text) => sentencesIn(text).filter((x) => !isQs(x)).join(' ');
 
 // The gate's two kinds of fault (above, in prepareTurn): hard ones drop a sentence whose rewrite still has them, soft
 // ones never drop anything.
-export const HARD_HABITS = ['giveaway', 'level_jump'];
+// Round 2: words that do not match the board, a choice that holds the child's reason, the reason said for them, and a
+// question asked again where it failed twice are hard too: one rewrite, then the sentence is dropped.
+export const HARD_HABITS = ['giveaway', 'level_jump', ...ROUND2_HABITS];
 const hardOf = (flags = []) => flags.filter((f) => HARD_HABITS.includes(f.habit));
 /** Lower is better: a repeat counts most, then each fault, then the length (words) as the tie-break. */
 export const softScore = ({ st, flags = [] }) => (flags.some((f) => f.habit === 'repeat') ? 100 : 0) + 10 * flags.length + Math.min(9, wordsIn(st?.text || '') / 10);

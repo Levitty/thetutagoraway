@@ -522,7 +522,9 @@ function checkStep(s0, ctx, notes) {
         out.misconception = misOf(s.misconception, ctx, 'assess');
       } else need(s.misconception == null, 'assess: a misconception code only with class misconception');
       out.evidence = clip(s.evidence, LIMITS.assess, 'assess evidence', notes);
-      if (s.ask != null) { need(typeof s.ask === 'string' && ID_RE.test(s.ask), 'assess: bad ask id'); out.ask = s.ask; }
+      // A question id it cannot read ("Q 1", "", the prompt itself) loses the id, never the judgement (13 Nov 2026, run
+      // 2026-11-13-1027, scenario 3 turn 12: "bad ask id" dropped the whole assess, so the child's "Whole" was not recorded).
+      if (s.ask != null && s.ask !== '') { if (typeof s.ask === 'string' && ID_RE.test(s.ask)) out.ask = s.ask; else notes.push(`assess: ask id ${JSON.stringify(String(s.ask).slice(0, 30))} not readable, left out (the judgement is kept)`); }
       break;
     case 'end_session':
       // A long summary is cut, never the end of the lesson (12 Nov 2026, run 2: 12 end_session steps were dropped for

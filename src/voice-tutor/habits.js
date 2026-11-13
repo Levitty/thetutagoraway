@@ -38,7 +38,16 @@ export const HABIT_NAMES = {
   confirm_hedged: 'accepts without a reason',
   level_jump: 'moves up too fast',
   unanswered: 'leaves the child\'s question unanswered',
+  // Round 2 (13 Nov 2026, run 2026-11-13-1027): live-gate checks, counted by scripts/evals/round2-replay.mjs, not in HABITS
+  // (the habit table stays comparable with the runs before).
+  board: 'says what the board does not show',
+  leading: 'offers a choice that contains the reason',
+  tells_reason: 'says the reason the child should give',
+  failed_again: 'asks again a question that has failed twice on this picture',
 };
+// The Round 2 checks, in the order the gate reads them. 'board' is a hard fault (a false word about the picture is worse
+// than none); the others are hard too: each one takes the child's thinking away.
+export const ROUND2_HABITS = ['board', 'leading', 'tells_reason', 'failed_again'];
 export const PRAISE_MAX_WORDS = 8;
 export const ANSWER_FIRST_MAX_WORDS = 15;
 export const LATE_AFTER_TURNS = 10;
@@ -563,7 +572,7 @@ export function turnFlags(steps = [], ctx = {}) {
  * history: [{ who, text, turn? }] (tutor lines are sentences; grouped into turns by `turn`, else by runs between the
  * child's lines). hidden: [{ answer, accepts, question }]. level: { level, wins, stage }.
  */
-export function habitContext({ message = '', marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [] } = {}) {
+export function habitContext({ message = '', marked = null, cls = null, history = [], hidden = [], found = [], board = [], level = null, closing = false, exempt = false, example = false, lateRepeat = true, solved = [], promised = false, failed = [], diagnosing = false, pressing = false } = {}) {
   const turns = [];
   let last = null;
   for (const h of Array.isArray(history) ? history : []) {
@@ -579,7 +588,7 @@ export function habitContext({ message = '', marked = null, cls = null, history 
   const childSoFar = (history || []).filter((h) => h?.who === 'child').map((h) => h.text).join(' ') + (message ? ` ${message}` : '');
   return {
     child: message || '', childRead: readChild(message, { marked }), marked, cls,
-    hidden, found, board, level, closing, exempt, example, solved,
+    hidden, found, board, level, closing, exempt, example, solved, promised, failed, diagnosing, pressing,
     // Late in a lesson the habits drift (SafeTutors; 12 Nov 2026 runs: 39% of turns flagged in turns 1-10, 58% after): from the tenth
     // tutor turn the repeat check looks back over four turns, not two.
     prev: tutorTurns.slice(lateRepeat && tutorTurns.length >= LATE_AFTER_TURNS ? -LATE_REPEAT_TURNS : -2), openers: tutorTurns.slice(-4).map((t) => openerOf(t.join(' '))).filter(Boolean),
@@ -594,14 +603,16 @@ export function habitContext({ message = '', marked = null, cls = null, history 
 // circle. Which part is shaded?" with nothing shaded, "the half on the board" on an uncut circle, "the bar" with no bar).
 // Counted by the free yardstick (scripts/evals/app-replay.mjs); the live turn tells the model what the board really shows
 // (commands.js describeItem) and the code's own lines are built from the board (tutorTurn.js boardFacts).
-const SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?)\b/i;
+const SHADE_CLAIM = /\b(the shaded|which (part|piece|one) is shaded|(is|are|that'?s|that is) shaded|shaded (part|half|piece|bit)s?|see shaded|(what|which|how much)\b[^.?!]{0,24}\bshaded\s*\?)/i;
 const SHADE_NONE = /\b(not|none|nothing|no part|no piece|isn'?t|aren'?t|yet to)\b[^.?!]{0,24}\bshaded\b|\bshaded yet\b/i;
 const CUT_CLAIM = /\b(the (two )?(pieces|parts|halves)|the half (on|in|of) the|(chapati|circle|bar) pieces|cut in(to)? (halves|two|pieces|two pieces)|on one side|the line (in|down))\b/i;
-const CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
+const CUT_FUTURE = /\b(not cut|is whole|whole,? or|or cut|or (still )?whole|cut (into (pieces|parts) )?yet|(is|are) (it|they|the \w+) (cut|still)|(would|will|could|can|shall|to|let me|let us|i'?ll|if you|where|how) (you |we |i )?cut|cut it\b)/i;
 /** What a sentence claims about the board that is not there, or null. `board`: the items the child sees. */
 export function boardClaimOf(text, board = []) {
   const figs = (board || []).filter((b) => b && FIGS.includes(b.cmd));
-  const shaded = figs.some((b) => (shadedOf(b) || 0) > 0);
+  // A figure the child can shade may be shaded by the child's own taps, which the board items do not carry (Round 2: the
+  // live gate reads this): shading on it is never called missing.
+  const shaded = figs.some((b) => (shadedOf(b) || 0) > 0 || (b.cmd === 'figure' && (b.controls || []).some((c) => String(c).startsWith('shade'))));
   const cut = figs.some((b) => (partsOf(b) || 1) > 1);
   const bar = figs.some((b) => b.cmd === 'fraction_bar' || (b.cmd === 'figure' && (b.params?.shape || 'bar') === 'bar'));
   const line = (board || []).some((b) => b && (b.cmd === 'number_line' || (b.cmd === 'figure' && b.type === 'numberline')));
@@ -614,7 +625,102 @@ export function boardClaimOf(text, board = []) {
   return null;
 }
 
+// ---------------------------------------------------------------- Round 2: words must match the board (live gate)
+// Run 2026-11-13-1027: "Now I will cut it so two friends share it fairly." with an uncut circle drawn and no cut (scenario 3);
+// "how many equal pieces does the circle have now?" after a cut promised and never drawn (scenario 1, from the repeat
+// rewrite); "What do you see shaded?" after the board was cleared (scenario 30). Every say is checked against the board as
+// the child will see it when the sentence is heard: the board before the turn, the turn's drawings so far, and the drawings
+// that come straight after the sentence (`after`, the steps held with it).
+const DOES_CUT = /\b(?:now i(?: will| am going to|'ll)?|i will|i'?ll|let me|i am going to|watch,? i|i)\s+(?:now\s+)?(?:cut|split|divide|slice|draw (?:a |one |the )?(?:line|cut)s?)\b/i;
+const DOES_SHADE = /\b(?:now i(?: will| am going to|'ll)?|i will|i'?ll|let me|i am going to|watch,? i|i)\s+(?:now\s+)?(?:shade|colour|color)\b/i;
+// A cut put off until the child has guessed ("Before I do, guess"), or said as not happening.
+const DEFER = /\b(before i (?:do|cut|draw|shade|show)|first,? (?:guess|tell me|you)|guess|predict|after you|when you (?:say|tell|guess)|will not|won'?t|do not|don'?t|not yet)\b/i;
+// The result of a cut talked about as already there ("how many pieces does it have now?", "the new pieces").
+const RESULT_NOW = /\b(?:pieces|parts|halves|quarters|cuts?)\b[^.?!]{0,40}\bnow\b|\bnow\b[^.?!]{0,30}\b(?:pieces|parts)\b|\bthe new (?:pieces|parts|cuts?|lines?)\b|\bafter (?:the|my|that) cut\b/i;
+const HYPOTHETICAL = /\b(if|will|would|could|shall|going to|imagine|pretend|guess)\b/i;
+const maxParts = (board) => Math.max(1, ...boardAfter(board, []).filter((b) => FIGS.includes(b.cmd)).map((b) => partsOf(b) || 1));
+const maxShaded = (board) => Math.max(0, ...boardAfter(board, []).filter((b) => FIGS.includes(b.cmd)).map((b) => shadedOf(b) || 0));
+/** Does the sentence say the tutor cuts or shades now (not put off, not a question)? 'cut' | 'shade' | null */
+export function promisesDrawing(text) {
+  if (defersCut(text)) return null;
+  for (const s of sentencesOf(text)) {
+    if (isQ(s) || DEFER.test(s)) continue;
+    if (DOES_CUT.test(s)) return 'cut';
+    if (DOES_SHADE.test(s)) return 'shade';
+  }
+  return null;
+}
+/** A cut said but put off (Predict then show: "Now I will cut each half again. Before I do, guess"): the cut is owed. */
+export const defersCut = (text) => sentencesOf(text).some((s) => DOES_CUT.test(s) && !/\b(will not|won'?t|do not|don'?t)\b/i.test(s)) && DEFER.test(text);
+/**
+ * Words that do not match the board, or null. ctx: { board, promised (a cut owed from an earlier turn), closing, exempt }.
+ * `sofar`: this turn's steps before the sentence; `after`: the drawings that come straight after it.
+ */
+export function boardFlagOf(step, ctx = {}, sofar = [], after = []) {
+  if (!step || step.cmd !== 'say' || ctx.exempt || ctx.closing) return null;
+  const before = boardAfter(ctx.board, sofar);
+  const seen = boardAfter(ctx.board, [...sofar, ...after]);
+  const claim = boardClaimOf(step.text, seen);
+  if (claim) return claim;
+  const does = promisesDrawing(step.text);
+  if (does === 'cut' && maxParts(seen) <= maxParts(before) && !(after.some((x) => FIGS.includes(x.cmd) && (partsOf(x) || 1) > 1))) return `says it cuts ("${sentencesOf(step.text).find((x) => DOES_CUT.test(x)).slice(0, 60)}"), but no cut is drawn: the board still shows ${maxParts(seen) > 1 ? `${maxParts(seen)} parts` : 'a whole, not cut'}`;
+  if (does === 'shade' && maxShaded(seen) <= maxShaded(before)) return `says it shades ("${sentencesOf(step.text).find((x) => DOES_SHADE.test(x)).slice(0, 60)}"), but nothing new is shaded on the board`;
+  if (ctx.promised && maxParts(seen) <= maxParts(before)) {
+    const s = sentencesOf(step.text).find((x) => RESULT_NOW.test(x) && !HYPOTHETICAL.test(x.replace(/\bwhen you are back\b/i, '')));
+    if (s) return `talks about the pieces of a cut that was never drawn ("${s.slice(0, 60)}"): the board still shows ${maxParts(seen) > 1 ? `${maxParts(seen)} parts` : 'a whole, not cut'}`;
+  }
+  return null;
+}
+
+// ---------------------------------------------------------------- Round 2: the child's reason is the child's (live gate)
+// Run 2026-11-13-1027, scenario 6: asked how they knew it was a half, the child got "Is one piece the same size as the other,
+// or different?" (the reason inside an either/or), said "same", and heard "That is why each one is a half." (the reason said
+// for them). While a reason is owed (the tutor's recent question asked how or why, or the code is diagnosing or pressing),
+// neither is allowed.
+const ASKS_HOW_WHY = /\b(how did you|how do you know|how you got|how you know|how can you tell|how could you tell|why do you think|why did you|why is it|why are|what made you|tell me how|show me how|what did you (?:do|count|look at)|how did you get|how did you work)\b/i;
+const EITHER_OR = /\bor\b[^?]*\?\s*$/i;
+const REASON_IN_CHOICE = /\b(same size|same amount|equal|the same|different|fair|bigger|smaller|more|less|matching|match)\b/i;
+/** A reason is owed by the child: one of the tutor's last questions asked how or why, or the turn is diagnosing or pressing. */
+export const reasonOwed = (ctx = {}) => !!ctx.diagnosing || !!ctx.pressing || (ctx.recentQuestions || []).slice(-2).some((q) => ASKS_HOW_WHY.test(q));
+/** An either/or question whose options carry the reason the child was asked for, or null. */
+export function leadingChoiceOf(text, ctx = {}) {
+  if (!reasonOwed(ctx) || ctx.closing || ctx.example) return null;
+  const q = sentencesOf(text).filter(isQ).pop();
+  if (!q || !EITHER_OR.test(q) || !REASON_IN_CHOICE.test(q)) return null;
+  return `a choice that holds the reason ("${q.slice(0, 70)}") while the child owes their own reason: ask an open question about what they see`;
+}
+const TELLS = /\b(that is why|that'?s why|this is why|because|so each|which means|that means|this means|it is a half because|they are the same,? so)\b/i;
+/** A statement that gives the reason the child was asked for, before the child has given one, or null. */
+export function tellsReasonOf(text, ctx = {}) {
+  if (!reasonOwed(ctx) || ctx.closing || ctx.example || (ctx.childRead || {}).reason || gaveReason(ctx.child || '')) return null;
+  const s = sentencesOf(text).find((x) => !isQ(x) && TELLS.test(x) && /\b(half|halves|quarter|third|same|equal|size|pieces?|parts?|fair|fraction)\b/i.test(x));
+  return s ? `says the reason the child was asked for ("${s.slice(0, 70)}"): ask them for it instead` : null;
+}
+/** A question of a kind that has failed twice on the picture now on the board (ctx.failed: ["cut@circle"]), or null. */
+export function failedAgainOf(text, ctx = {}, sofar = [], after = []) {
+  if (!(ctx.failed || []).length || ctx.closing) return null;
+  const q = sentencesOf(text).filter(isQ).pop();
+  const k = q ? questionKind(q) : null;
+  if (!k || ['reason', 'other', 'notice'].includes(k)) return null;
+  const fig = newestFigure(ctx.board, [...sofar, ...after]);
+  const shape = fig ? figShape(fig) : null;
+  if (!shape || !ctx.failed.includes(`${k}@${shape}`)) return null;
+  return `asks again ${STEP_NAMES[k] || k} on the ${shape}, which has failed twice there: show it another way (a bar, folding paper, a story) or take a different, smaller step`;
+}
+/** The shape a figure is: circle, bar, grid, shape, number line. */
+export const figShape = (b) => (b.cmd === 'shape' ? String(b.kind || 'shape') : b.cmd === 'fraction_bar' ? 'bar' : b.cmd === 'number_line' ? 'number line' : String(b.params?.shape || 'bar'));
+/** All the Round 2 checks on one step (the live gate adds these to stepFlags). */
+export function round2Flags(step, ctx = {}, sofar = [], after = []) {
+  if (!step || step.cmd !== 'say' || ctx.exempt) return [];
+  const out = [];
+  const b = boardFlagOf(step, ctx, sofar, after); if (b) out.push({ habit: 'board', reason: b });
+  const l = leadingChoiceOf(step.text, ctx); if (l) out.push({ habit: 'leading', reason: l });
+  const t = tellsReasonOf(step.text, ctx); if (t) out.push({ habit: 'tells_reason', reason: t });
+  const f = failedAgainOf(step.text, ctx, sofar, after); if (f) out.push({ habit: 'failed_again', reason: f });
+  return out;
+}
+
 /** Flags counted once per habit (a turn with two stock phrases is one stock turn). */
 export const habitsOf = (flags) => [...new Set(flags.map((f) => f.habit))];
 
-export default { boardClaimOf, HABITS, HABIT_NAMES, KEY_STEPS, keyStepsFor, claimsFeelingOrSecret, stepFlags, endFlags, turnFlags, habitContext, readChild, answersChild, likeness, levelOf, winOf, nextLevel, boardAfter, habitsOf, openerOf, asksReason, confirms };
+export default { boardClaimOf, boardFlagOf, promisesDrawing, defersCut, leadingChoiceOf, tellsReasonOf, failedAgainOf, round2Flags, reasonOwed, figShape, ROUND2_HABITS, HABITS, HABIT_NAMES, KEY_STEPS, keyStepsFor, claimsFeelingOrSecret, stepFlags, endFlags, turnFlags, habitContext, readChild, answersChild, likeness, levelOf, winOf, nextLevel, boardAfter, habitsOf, openerOf, asksReason, confirms };

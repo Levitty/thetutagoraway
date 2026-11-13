@@ -11,6 +11,17 @@ the transcript. This calls the API and costs real money. Run it after every chan
     npm run eval:tutor -- --scenarios 1,2,9 --max-turns 8
     npm run eval:tutor -- --scenarios 30 --max-turns 12
 
+Two tutor models side by side (Round 2, 13 Nov 2026): the same scenarios, turns, pretend child and seed, judge, prompt and
+gate, only the tutor's model differs, into two run folders and a COMPARE.md in each (paid; `--dry` prints the two commands):
+
+    npm run eval:compare -- --scenarios 1,3,6,14,17,30 --cap 26 --name 2026-11-13-r2 --dry
+    npm run eval:compare -- --scenarios 1,3,6,14,17,30 --cap 26 --name 2026-11-13-r2
+
+One run with another tutor model: `--tutor-model claude-opus-5-5` (recorded in SUMMARY.md); `--run-name NAME` names the
+folder; `--seed N` fixes the pretend child's seed (scenario n plays with N + n).
+
+The Round 2 fixes replayed over saved runs, free: `npm run eval:round2` (or with run folder names).
+
 Options: `--scenarios all|1,2,3`, `--max-turns N` (default 12; each scenario can set its own: 30 gets 24, 31 to 33 get 14, 34 to 40 get 6 to 10, 41 gets 40), `--cap USD` (default 10),
 `--concurrency N` (default 3), `--judge MODEL`, `--no-judge`, `--no-patterns`, `--non-improving [N|never]` (the pretend child holds its wrong idea for N turns, default 4, or for ever).
 

@@ -396,7 +396,20 @@ export function hearNumbers(text, { numberOpen = true } = {}) {
 }
 /** Does this question ask for a number (a count, or "what number")? */
 export const asksForNumber = (q) => /\b(how many|what number|count (them|the|how)|which number|what fraction|which fraction|as a fraction|out of how many)\b/i.test(String(q || ''));
+// Round 2 (13 Nov 2026, run 2026-11-13-1027, scenario 14: "Umm, to?" and "Umm, too?" for "two" were classed as questions to
+// HOREB). A number fits more questions than "how many": in a fractions lesson, how to cut or share a thing, how many friends,
+// pieces or parts, what to do with the knife are all answered with a number ("two"). And a reply that is ONLY a sound-alike
+// ("to?", "umm, for", "ate") is a number whatever was asked: nobody answers a maths tutor with a lone "to".
+export const numberFits = (q) => asksForNumber(q) || /\b(cut|share|shared|sharing|split|divide|knife|pieces?|parts?|slices?|friends|children|people|halves|how much|which (one|part|piece))\b/i.test(String(q || ''));
+const LONE_SOUND_ALIKE = new RegExp(`^(?:to|too|tu|for|fore|ate)(?:\\s+(?:equal\\s+)?(?:pieces?|parts?|slices?|cuts?))?${ANSWER_TAIL}`, 'i');
+/** The reply is only a sound-alike number word, with fillers and hedges ("Umm, to?", "maybe for", "ate"). */
+export function loneNumberWord(text) {
+  const raw = String(text ?? '');
+  const lead = ANSWER_LEAD.exec(raw)?.[0] || '';
+  return LONE_SOUND_ALIKE.test(raw.slice(lead.length));
+}
 
+const POINTING = /^(?:(?:maybe|is it|it'?s|it is|i think)\s+)?(?:this|that|the (?:top|bottom|left|right|middle|shaded|white|first|second|big|bigger|small|smaller|other)) ?(?:one|part|piece|bit|side|half|line)?(?:\s+(?:here|there))?\s*\??\s*$|^(?:here|there|right here|over here)\s*\??\s*$/i;
 /** What a message that is not an answer is doing. */
 export function childMove(text) {
   const r = readAnswer(text);
@@ -407,6 +420,9 @@ export function childMove(text) {
   if (REASON_START.test(stripLead(text).split(/\s+/).slice(0, 1).join(' '))) return null;
   // "Is it four?", "I'm not sure, maybe four?": an answer said tentatively, not a question and not lost.
   if (!r.again && isTentative(text)) return 'tentative';
+  // Pointing, said unsure ("Umm, this one?", "that part?", "here?"): an answer on the board, not a question to HOREB
+  // (Round 2, run 2026-11-13-1027, scenario 1 turn 7).
+  if (!r.again && POINTING.test(stripLead(String(text || '')).trim())) return 'tentative';
   if (r.lost) return 'lost';
   if (r.question || r.again) return 'question';
   return null;

@@ -58,6 +58,9 @@ export const settingsFrom = (get = () => undefined) => ({
   gate: get('VOICE_TUTOR_GATE') !== '0',
   // Matched good-turn examples in the turn's context (examples lookup, step 5): an A/B switch, off unless set to 1.
   matchedExamples: get('VOICE_TUTOR_MATCHED_EXAMPLES') === '1',
+  // Round 2 (13 Nov 2026): the code says the diagnosis of a wrong or unclear answer (diagnosis.js). Off only by
+  // VOICE_TUTOR_CODE_DIAGNOSIS=0, to compare with the model writing it.
+  codeDiagnosis: get('VOICE_TUTOR_CODE_DIAGNOSIS') !== '0',
 });
 
 /**

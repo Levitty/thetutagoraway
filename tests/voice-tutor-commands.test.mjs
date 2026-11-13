@@ -300,7 +300,9 @@ test('assess: the answer\'s class, checked; a misconception code only with class
   const end = validateTurn({ steps: [{ cmd: 'end_session', summary: `${'The child shaded halves well. '.repeat(14)}` }] });
   assert.equal(end.steps.length, 1); assert.ok(end.steps[0].summary.length <= 300); assert.match(end.steps[0].summary, /\.$/);
   assert.match(end.notes.join(' '), /summary: longer than 300, cut/);
-  no({ cmd: 'assess', class: 'understood', evidence: 'x', ask: 'Q 1' }, opts, /bad ask id/);
+  // An unreadable question id loses the id, never the judgement (Round 2, 13 Nov 2026: "bad ask id" dropped the assess).
+  { const a = ok({ cmd: 'assess', class: 'understood', evidence: 'x', ask: 'Q 1' }, opts); assert.equal(a.class, 'understood'); assert.equal(a.ask, undefined); }
+  assert.equal(ok({ cmd: 'assess', class: 'partly_right', evidence: 'x', ask: '' }, opts).class, 'partly_right');
   no({ cmd: 'assess', class: 'understood', evidence: 'x', confidence: 'high' }, opts, /extra field/);
   // One a turn, and it is silent: a turn that only assesses and hands back is a nod, never "says nothing" twice.
   const v = validateTurn({ steps: [{ cmd: 'assess', class: 'understood', evidence: 'a' }, { cmd: 'assess', class: 'understood', evidence: 'b' }, GOOD.say, GOOD.pause_for_child] }, opts);
