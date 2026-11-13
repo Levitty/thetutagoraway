@@ -1,0 +1,2027 @@
+{
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_STRING_AS_PERC": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
+  "error": "Puts a string instrument (nyatiti, orutu) in the percussion group.",
+  "example": {
+   "question": "Which of these is a percussion instrument?",
+   "wrong_answer": "The nyatiti",
+   "correct_answer": "The ngoma drum"
+  },
+  "cause": "The child knows the instrument is indigenous but not how its sound is made.",
+  "reveals": "Offer \"The nyatiti\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: do you hit it, pluck it or blow it? Sort five instruments by that one question.",
+  "feedback": "A percussion instrument makes its sound when it is hit, shaken or scraped. The nyatiti is a string instrument: its strings are plucked.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_WIND_AS_PERC": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
+  "error": "Puts a blown instrument (nzumari, siwa, flute) in the percussion group.",
+  "example": {
+   "question": "Which of these is a percussion instrument?",
+   "wrong_answer": "The nzumari",
+   "correct_answer": "The kayamba"
+  },
+  "cause": "The child sorts by \"makes a loud sound\" and not by how it is played.",
+  "reveals": "Offer \"The nzumari\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask who makes the sound: the breath, a plucking finger or a hit?",
+  "feedback": "A percussion instrument is hit, shaken or scraped. The nzumari is a wind instrument: it is blown.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_KAYAMBA_HIT": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
+  "error": "Says the kayamba is played by hitting it with sticks.",
+  "example": {
+   "question": "How is the kayamba played?",
+   "wrong_answer": "It is hit with two sticks",
+   "correct_answer": "It is shaken"
+  },
+  "cause": "The child thinks every percussion instrument is a drum.",
+  "reveals": "Offer \"It is hit with two sticks\" next to the right answer and ask the question again in a new context.",
+  "help": "Shake a tin of seeds and listen: the seeds hit the walls and make the sound.",
+  "feedback": "The kayamba is a shaker: the player shakes it so the seeds inside rattle. Not all percussion is hit with sticks.",
+  "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID.M_CA4_PC_COMMUNITY": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.ID",
+  "error": "Gives an instrument to the wrong community (the isukuti to the Luo or the kayamba to the Luhya).",
+  "example": {
+   "question": "The isukuti drums belong mainly to which people?",
+   "wrong_answer": "The Luo",
+   "correct_answer": "The Luhya"
+  },
+  "cause": "The child has not met the instrument or the place it comes from.",
+  "reveals": "Offer \"The Luo\" next to the right answer and ask the question again in a new context.",
+  "help": "Use a map of Kenya and a recording of isukuti to link the sound to the Luhya of western Kenya.",
+  "feedback": "The isukuti is a drum of the Luhya people of western Kenya. The kayamba belongs to the coast.",
+  "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_LOUD_MELODIC": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+  "error": "Calls a loud instrument melodic and a quiet one non-melodic.",
+  "example": {
+   "question": "Which of these is a melodic instrument?",
+   "wrong_answer": "The loudest drum",
+   "correct_answer": "The xylophone"
+  },
+  "cause": "The child sorts by how strong the sound is.",
+  "reveals": "Offer \"The loudest drum\" next to the right answer and ask the question again in a new context.",
+  "help": "Play one drum hard and soft: the note does not change. Then play a xylophone bar by bar.",
+  "feedback": "Melodic means the instrument can play different notes so it can play a tune. Loudness does not decide it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_ALL_MELODIC": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+  "error": "Says every percussion instrument is melodic because it makes a sound.",
+  "example": {
+   "question": "Is a kayamba melodic?",
+   "wrong_answer": "Yes, every instrument makes a sound",
+   "correct_answer": "No, it makes one kind of sound and cannot play a tune"
+  },
+  "cause": "The child thinks any sound is music with a tune.",
+  "reveals": "Offer \"Yes, every instrument makes a sound\" next to the right answer and ask the question again in a new context.",
+  "help": "Shake the kayamba and try to hum a tune with it. Then do the same on tuned bars.",
+  "feedback": "A non-melodic instrument makes sounds without different notes, so it cannot play a tune by itself. A kayamba is non-melodic.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY.M_CA4_PC_NONMEL_MEANS": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CLASSIFY",
+  "error": "Thinks non-melodic means it makes no sound or a bad sound.",
+  "example": {
+   "question": "What does non-melodic mean?",
+   "wrong_answer": "It makes a bad sound",
+   "correct_answer": "It cannot play different notes to make a tune"
+  },
+  "cause": "The child reads non- as bad or silent.",
+  "reveals": "Offer \"It makes a bad sound\" next to the right answer and ask the question again in a new context.",
+  "help": "Play a non-melodic shaker in a rhythm: it sounds good but has one sound.",
+  "feedback": "Non-melodic does not mean bad. It means the instrument does not play different notes for a tune. It is still good for rhythm.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_SHELL_SOUND": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
+  "error": "Says the wooden shell alone makes the sound.",
+  "example": {
+   "question": "What part of a drum vibrates to make the main sound?",
+   "wrong_answer": "The wooden shell",
+   "correct_answer": "The skin"
+  },
+  "cause": "The child sees the biggest part and thinks it must be the sound.",
+  "reveals": "Offer \"The wooden shell\" next to the right answer and ask the question again in a new context.",
+  "help": "Lay a few grains on the skin and tap it: the grains jump. Touch the shell: it hardly moves.",
+  "feedback": "The skin vibrates when it is hit and that makes the sound. The shell holds the air and makes the sound fuller.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_LOOSE_HIGHER": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
+  "error": "Thinks a looser skin gives a higher sound.",
+  "example": {
+   "question": "A drummer tightens the skin. What happens to the sound?",
+   "wrong_answer": "It gets lower",
+   "correct_answer": "It gets higher"
+  },
+  "cause": "The child links loose and tight with big and small, not with pitch.",
+  "reveals": "Offer \"It gets lower\" next to the right answer and ask the question again in a new context.",
+  "help": "Tap a plastic sheet held loose and then held tight over a bowl.",
+  "feedback": "A tighter skin vibrates faster, so the sound is higher. A looser skin gives a lower sound.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_BIG_HIGHER": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
+  "error": "Thinks a bigger drum gives a higher sound.",
+  "example": {
+   "question": "Which drum gives the lower sound?",
+   "wrong_answer": "The small drum",
+   "correct_answer": "The big drum"
+  },
+  "cause": "The child links big with high, as with loudness.",
+  "reveals": "Offer \"The small drum\" next to the right answer and ask the question again in a new context.",
+  "help": "Hit a small and a big tin and listen: the big one sounds lower.",
+  "feedback": "A bigger drum has a bigger skin, which vibrates more slowly, so the sound is lower.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS.M_CA4_PC_STICK_SOUND": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.DRUMPARTS",
+  "error": "Says the stick makes the sound, not the skin.",
+  "example": {
+   "question": "What does the drum stick do?",
+   "wrong_answer": "It makes the sound by itself",
+   "correct_answer": "It hits the skin so the skin vibrates"
+  },
+  "cause": "The child sees the stick move and hears the sound together.",
+  "reveals": "Offer \"It makes the sound by itself\" next to the right answer and ask the question again in a new context.",
+  "help": "Hit the stick on the floor: only a small tap. Hit it on the drum: a big sound.",
+  "feedback": "The stick only hits the skin. The skin then vibrates and makes the sound.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_BURN_AIR": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
+  "error": "Thinks twigs are burned in open flames until they are ash to make charcoal.",
+  "example": {
+   "question": "How are the twigs burned to make charcoal sticks?",
+   "wrong_answer": "In an open fire until they turn to ash",
+   "correct_answer": "With little air, in a closed tin or wrapped, so they turn black but stay in shape"
+  },
+  "cause": "The child knows burning makes ash and does not know about little air.",
+  "reveals": "Offer \"In an open fire until they turn to ash\" next to the right answer and ask the question again in a new context.",
+  "help": "Show wood char in a tin with a tight lid: it stays black and in shape because little air gets in.",
+  "feedback": "Charcoal is made by burning twigs with very little air. Open flames turn them to ash. An adult does the burning step.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_USE_HOT": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
+  "error": "Thinks the charcoal sticks can be used as soon as the fire is out.",
+  "example": {
+   "question": "What must happen before the charcoal is used?",
+   "wrong_answer": "Nothing, use it at once",
+   "correct_answer": "It must cool fully"
+  },
+  "cause": "The child sees black sticks and thinks they are ready.",
+  "reveals": "Offer \"Nothing, use it at once\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: hot charcoal burns the skin and stays hot inside for a long time.",
+  "feedback": "Charcoal stays hot for a long time. Let it cool fully before touching it. An adult handles the fire.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_SMUDGE_ERASE": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
+  "error": "Thinks smudging is rubbing the drawing out to remove mistakes.",
+  "example": {
+   "question": "What does smudging do in a charcoal drawing?",
+   "wrong_answer": "It removes the drawing",
+   "correct_answer": "It spreads the charcoal to make soft light and dark areas"
+  },
+  "cause": "The child thinks rubbing always means rubbing out.",
+  "reveals": "Offer \"It removes the drawing\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw a dark patch and rub it with a finger: it spreads into a soft shade.",
+  "feedback": "Smudging spreads the charcoal to make soft shades. That is how tonal value (light and dark) is made.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL.M_CA4_PC_LIGHT_HARD": {
+  "skill": "CREA.G4.CREATI.PERCUSSION_MUSICAL_INSTR.CHARCOAL",
+  "error": "Thinks pressing harder makes a lighter shade.",
+  "example": {
+   "question": "How do you make a darker area with charcoal?",
+   "wrong_answer": "Press more lightly",
+   "correct_answer": "Press harder or add more layers"
+  },
+  "cause": "The child links gentle with dark, as with soft sounds.",
+  "reveals": "Offer \"Press more lightly\" next to the right answer and ask the question again in a new context.",
+  "help": "Make three strokes with light, medium and hard pressure and compare.",
+  "feedback": "More pressure puts more charcoal on the paper, so the area is darker. Less pressure gives a lighter shade.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_CHEST_BOUNCE": {
+  "skill": "CREA.G4.CREATI.NETBALL.PASSES",
+  "error": "Says a chest pass is thrown from the head.",
+  "example": {
+   "question": "Where does a chest pass start?",
+   "wrong_answer": "From above the head",
+   "correct_answer": "From the chest"
+  },
+  "cause": "The child mixes the chest pass with the overhead pass.",
+  "reveals": "Offer \"From above the head\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold the ball at the chest, push out and say chest. Lift above the head and say over.",
+  "feedback": "A chest pass starts with the ball at the chest and both hands pushing it out. An overhead pass starts above the head.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_ONE_HAND": {
+  "skill": "CREA.G4.CREATI.NETBALL.PASSES",
+  "error": "Thinks netball catches and passes are done with one hand.",
+  "example": {
+   "question": "How should a netball pass or catch be done?",
+   "wrong_answer": "With one hand",
+   "correct_answer": "With two hands"
+  },
+  "cause": "The child copies the one-handed throws of other sports.",
+  "reveals": "Offer \"With one hand\" next to the right answer and ask the question again in a new context.",
+  "help": "Try catching a ball with one hand and with two hands and see which is steadier.",
+  "feedback": "In netball the skills in this unit use two hands: a double-handed catch and two-handed passes, so the ball is safer.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_EYES_AWAY": {
+  "skill": "CREA.G4.CREATI.NETBALL.PASSES",
+  "error": "Thinks the catcher should look away from the ball.",
+  "example": {
+   "question": "What should the catcher look at?",
+   "wrong_answer": "At the ground",
+   "correct_answer": "At the ball"
+  },
+  "cause": "The child is afraid of the ball and looks away.",
+  "reveals": "Offer \"At the ground\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll a soft ball and catch it, first looking at it and then looking away.",
+  "feedback": "A catcher keeps eyes on the ball with fingers spread and hands ready, and brings it in to the chest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.PASSES.M_CA4_NB_STIFF_ARMS": {
+  "skill": "CREA.G4.CREATI.NETBALL.PASSES",
+  "error": "Thinks the arms should stay stiff to catch the ball.",
+  "example": {
+   "question": "How do the arms catch a fast ball?",
+   "wrong_answer": "Stiff and straight",
+   "correct_answer": "They reach out, then bend to bring the ball in"
+  },
+  "cause": "The child tries to stop the ball like a wall.",
+  "reveals": "Offer \"Stiff and straight\" next to the right answer and ask the question again in a new context.",
+  "help": "Catch a soft ball with straight arms and with bending arms.",
+  "feedback": "Reaching out and then giving with the ball, bending the arms, keeps the ball from bouncing out of the hands.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_SEW": {
+  "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+  "error": "Says macramé is made by sewing or gluing.",
+  "example": {
+   "question": "How is a macramé ball made?",
+   "wrong_answer": "By sewing the strings",
+   "correct_answer": "By tying knots in strings"
+  },
+  "cause": "The child thinks all craft needs a needle or glue.",
+  "reveals": "Offer \"By sewing the strings\" next to the right answer and ask the question again in a new context.",
+  "help": "Tie two strings in an overhand knot and show it holds with no needle or glue.",
+  "feedback": "Macramé is made by tying knots in cords. It needs no needle and no glue.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_LOOSE": {
+  "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+  "error": "Leaves the knots loose.",
+  "example": {
+   "question": "What should be done to each overhand knot?",
+   "wrong_answer": "Leave it loose",
+   "correct_answer": "Pull it tight"
+  },
+  "cause": "The child ties the shape and does not finish the knot.",
+  "reveals": "Offer \"Leave it loose\" next to the right answer and ask the question again in a new context.",
+  "help": "Make one tight and one loose knot, pull both and see which holds.",
+  "feedback": "Pull each knot tight so it holds and the ball keeps its shape.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.NETBALL.MACRAME.M_CA4_NB_MAC_HARD_CORE": {
+  "skill": "CREA.G4.CREATI.NETBALL.MACRAME",
+  "error": "Thinks the ball needs a hard stone inside.",
+  "example": {
+   "question": "What can be put inside a macramé ball?",
+   "wrong_answer": "A heavy stone",
+   "correct_answer": "Old cloth or paper packed tight"
+  },
+  "cause": "The child thinks a ball must be heavy to go far.",
+  "reveals": "Offer \"A heavy stone\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: a netball is light. A stone could hurt a friend.",
+  "feedback": "Pack old cloth or paper inside. It is light and safe. A stone can hurt a person.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_GREEN_PRIMARY": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+  "error": "Says green is a primary colour because it is common in nature.",
+  "example": {
+   "question": "Which of these is a primary colour?",
+   "wrong_answer": "Green",
+   "correct_answer": "Blue"
+  },
+  "cause": "The child counts colours that are easy to see.",
+  "reveals": "Offer \"Green\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix blue and yellow paint and get green: a colour that can be mixed is not primary.",
+  "feedback": "Primary colours are red, yellow and blue: they cannot be made by mixing. Green is made from blue and yellow.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_BLACK_PRIMARY": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+  "error": "Says black or white is a primary colour.",
+  "example": {
+   "question": "Which of these is a primary colour?",
+   "wrong_answer": "Black",
+   "correct_answer": "Red"
+  },
+  "cause": "The child thinks the main paints in the box are the primary colours.",
+  "reveals": "Offer \"Black\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: black and white change tone but are not on the colour wheel.",
+  "feedback": "Black and white are not primary colours. They are used to make colours darker or lighter.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS.M_CA4_PM_ORANGE_PRIMARY": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.COLOURS",
+  "error": "Says orange is a primary colour.",
+  "example": {
+   "question": "Which of these is a secondary colour?",
+   "wrong_answer": "Yellow",
+   "correct_answer": "Orange"
+  },
+  "cause": "The child does not know how orange is made.",
+  "reveals": "Offer \"Yellow\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix red and yellow to make orange and say: made by mixing, so secondary.",
+  "feedback": "A secondary colour is made by mixing two primaries. Orange is made from red and yellow.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_BLUE_GREEN": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+  "error": "Says red and blue make green.",
+  "example": {
+   "question": "Which two colours make purple?",
+   "wrong_answer": "Yellow and blue",
+   "correct_answer": "Red and blue"
+  },
+  "cause": "The child mixes up the three pairs.",
+  "reveals": "Offer \"Yellow and blue\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix each pair on paper and write the result: red and blue gives purple.",
+  "feedback": "Red and blue make purple. Blue and yellow make green. Red and yellow make orange.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_RED_YELLOW_PURPLE": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+  "error": "Says red and yellow make purple or green.",
+  "example": {
+   "question": "What do red and yellow make?",
+   "wrong_answer": "Purple",
+   "correct_answer": "Orange"
+  },
+  "cause": "The child has not mixed the pair.",
+  "reveals": "Offer \"Purple\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix red and yellow paint and watch orange appear.",
+  "feedback": "Red and yellow make orange, like a ripe mango.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX.M_CA4_PM_YELLOW_BLUE_ORANGE": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MIX",
+  "error": "Says blue and yellow make orange.",
+  "example": {
+   "question": "What do blue and yellow make?",
+   "wrong_answer": "Orange",
+   "correct_answer": "Green"
+  },
+  "cause": "The child mixes up the secondary colours.",
+  "reveals": "Offer \"Orange\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix blue and yellow paint and watch the leaf colour appear.",
+  "feedback": "Blue and yellow make green, like leaves.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_BLACK_LIGHTER": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
+  "error": "Says adding black makes a colour lighter.",
+  "example": {
+   "question": "A painter adds black to green. What happens?",
+   "wrong_answer": "It gets lighter",
+   "correct_answer": "It gets darker"
+  },
+  "cause": "The child thinks any added colour brightens.",
+  "reveals": "Offer \"It gets lighter\" next to the right answer and ask the question again in a new context.",
+  "help": "Add a little black and then a little white to green paint on paper and compare.",
+  "feedback": "Adding black makes a darker tone. Adding white makes a lighter tone.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_VALUE_NAME": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
+  "error": "Thinks colour value means the name or price of the colour.",
+  "example": {
+   "question": "What does colour value mean?",
+   "wrong_answer": "The name of the colour",
+   "correct_answer": "How light or dark the colour is"
+  },
+  "cause": "The child knows value only as price.",
+  "reveals": "Offer \"The name of the colour\" next to the right answer and ask the question again in a new context.",
+  "help": "Show light blue and dark blue: same colour name, different value.",
+  "feedback": "Colour value means how light or dark a colour is.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_WHITE_DULL": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
+  "error": "Thinks adding white makes a new, different colour and not a lighter one.",
+  "example": {
+   "question": "What does adding white to orange make?",
+   "wrong_answer": "A different colour with a new name",
+   "correct_answer": "A lighter tone of orange"
+  },
+  "cause": "The child sees a paler colour and thinks it is new.",
+  "reveals": "Offer \"A different colour with a new name\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a strip from orange to light orange and ask: is it still orange?",
+  "feedback": "Adding white makes a lighter tone of the same colour. That is how a value scale is made.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE.M_CA4_PM_SCALE_ORDER": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.VALUE",
+  "error": "Puts the value scale strip in the wrong order (dark in the middle, or mixed).",
+  "example": {
+   "question": "A value strip goes from light to dark. Which is in the right order?",
+   "wrong_answer": "Dark, light, dark",
+   "correct_answer": "Light, medium, dark"
+  },
+  "cause": "The child puts the strip together without checking the change of tone.",
+  "reveals": "Offer \"Dark, light, dark\" next to the right answer and ask the question again in a new context.",
+  "help": "Cut the strip into steps and arrange it from the lightest to the darkest.",
+  "feedback": "A value scale changes a little at a time from light to dark, in order.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_PAINT": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
+  "error": "Says a montage is painted with a brush.",
+  "example": {
+   "question": "How is a montage made?",
+   "wrong_answer": "By painting with a brush",
+   "correct_answer": "By cutting out pictures and pasting them together"
+  },
+  "cause": "The child mixes montage up with painting.",
+  "reveals": "Offer \"By painting with a brush\" next to the right answer and ask the question again in a new context.",
+  "help": "Bring old magazines and cut and paste a small picture.",
+  "feedback": "A montage is made of many cut-out pictures pasted on a theme. It is not painted.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_GAPS": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
+  "error": "Says pieces must not touch or overlap.",
+  "example": {
+   "question": "In a montage the pieces should...",
+   "wrong_answer": "Stay far apart with gaps",
+   "correct_answer": "Overlap so no gaps show"
+  },
+  "cause": "The child separates pieces like in a collage of objects.",
+  "reveals": "Offer \"Stay far apart with gaps\" next to the right answer and ask the question again in a new context.",
+  "help": "Place the pieces apart and then overlapping and compare.",
+  "feedback": "In a montage the pieces overlap so the picture is full and has no gaps.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_RANDOM": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
+  "error": "Thinks the pictures can be about any subject.",
+  "example": {
+   "question": "A montage has the theme \"ball games\". Which picture belongs?",
+   "wrong_answer": "A picture of a bus",
+   "correct_answer": "A picture of children playing netball"
+  },
+  "cause": "The child pastes any picture.",
+  "reveals": "Offer \"A picture of a bus\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: does the picture tell about the theme?",
+  "feedback": "A montage has one theme and all the pictures show it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE.M_CA4_PM_MONT_MESSY": {
+  "skill": "CREA.G4.CREATI.PAINTING_AND_MONTAGE.MONTAGE",
+  "error": "Thinks neatness does not matter in a montage.",
+  "example": {
+   "question": "Which makes a montage neat?",
+   "wrong_answer": "Glue showing and rough edges",
+   "correct_answer": "Clean edges and little glue showing"
+  },
+  "cause": "The child focuses on finishing quickly.",
+  "reveals": "Offer \"Glue showing and rough edges\" next to the right answer and ask the question again in a new context.",
+  "help": "Compare a neat and a messy montage side by side.",
+  "feedback": "A neat montage has clean cut edges and little glue showing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_LONGER": {
+  "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
+  "error": "Thinks a quaver is longer than a crotchet because it has two sounds.",
+  "example": {
+   "question": "How many beats do a pair of quavers last together?",
+   "wrong_answer": "Two beats",
+   "correct_answer": "One beat"
+  },
+  "cause": "The child counts the sounds and not the beats.",
+  "reveals": "Offer \"Two beats\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap one crotchet, then clap two quick claps in the same beat.",
+  "feedback": "A pair of quavers lasts one beat together. Each quaver is half a beat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SKIP": {
+  "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
+  "error": "Thinks a rest means skip the beat and does not count it.",
+  "example": {
+   "question": "A crotchet rest comes in a pattern. What do you do?",
+   "wrong_answer": "Skip it and go on",
+   "correct_answer": "Stay silent for one beat"
+  },
+  "cause": "The child thinks a rest is nothing.",
+  "reveals": "Offer \"Skip it and go on\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap taa, rest, taa while counting 1 2 3 out loud.",
+  "feedback": "A rest is silence that is still counted. A crotchet rest is one silent beat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_REST_SOUND": {
+  "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
+  "error": "Thinks a rest is a note that is sounded.",
+  "example": {
+   "question": "What do you do at a rest?",
+   "wrong_answer": "Make a sound",
+   "correct_answer": "Make no sound"
+  },
+  "cause": "The child sees the rest as another symbol to play.",
+  "reveals": "Offer \"Make a sound\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap the pattern and hold open hands at the rest.",
+  "feedback": "A rest is a silence. It is counted but not played or sung.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.VALUES.M_CA4_RH_QUAVER_REST_FULL": {
+  "skill": "CREA.G4.CREATI.RHYTHM.VALUES",
+  "error": "Says a quaver rest is one whole beat.",
+  "example": {
+   "question": "How long is a quaver rest?",
+   "wrong_answer": "One whole beat",
+   "correct_answer": "Half a beat"
+  },
+  "cause": "The child mixes up the quaver and the crotchet rest.",
+  "reveals": "Offer \"One whole beat\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each rest to the note of the same length.",
+  "feedback": "A rest lasts as long as its note. A quaver is half a beat, so a quaver rest is half a beat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TATE_TWO_BEATS": {
+  "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+  "error": "Says ta-te lasts two beats.",
+  "example": {
+   "question": "How long does ta-te last?",
+   "wrong_answer": "Two beats",
+   "correct_answer": "One beat with two sounds"
+  },
+  "cause": "The child counts the two sounds as two beats.",
+  "reveals": "Offer \"Two beats\" next to the right answer and ask the question again in a new context.",
+  "help": "Say ta-te as you tap one beat once.",
+  "feedback": "Ta-te has two quick sounds that fit into one beat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_TAA_PAIR": {
+  "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+  "error": "Says taa is the name for a pair of quavers.",
+  "example": {
+   "question": "Which name is for a crotchet?",
+   "wrong_answer": "Ta-te",
+   "correct_answer": "Taa"
+  },
+  "cause": "The child mixes the two names.",
+  "reveals": "Offer \"Ta-te\" next to the right answer and ask the question again in a new context.",
+  "help": "Say taa slowly and ta-te quickly and tap the beats.",
+  "feedback": "Taa is one sound for one beat (a crotchet). Ta-te is two sounds in one beat (a pair of quavers).",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.NAMES.M_CA4_RH_REST_TAA": {
+  "skill": "CREA.G4.CREATI.RHYTHM.NAMES",
+  "error": "Says a rest is also said as taa.",
+  "example": {
+   "question": "What do you say aloud at a rest?",
+   "wrong_answer": "Taa",
+   "correct_answer": "Nothing, it is silent"
+  },
+  "cause": "The child says a name for every symbol.",
+  "reveals": "Offer \"Taa\" next to the right answer and ask the question again in a new context.",
+  "help": "Chant taa, rest, taa and hold the rest in silence.",
+  "feedback": "A rest is silent, so no name is said aloud.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_ALL_SAME": {
+  "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+  "error": "Thinks a good rhythm uses the same note value all through.",
+  "example": {
+   "question": "Which pattern has variation?",
+   "wrong_answer": "Taa taa taa taa",
+   "correct_answer": "Taa ta-te taa taa"
+  },
+  "cause": "The child thinks steady means good.",
+  "reveals": "Offer \"Taa taa taa taa\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap both and ask which is more interesting.",
+  "feedback": "Variation means mixing different note values, which makes a pattern interesting.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_NO_REPEAT": {
+  "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+  "error": "Thinks a good pattern never repeats.",
+  "example": {
+   "question": "What does repetition do in a pattern?",
+   "wrong_answer": "It makes the pattern boring and wrong",
+   "correct_answer": "It makes a part easy to remember"
+  },
+  "cause": "The child thinks every bar must be new.",
+  "reveals": "Offer \"It makes the pattern boring and wrong\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap a tune that repeats a short part and ask if it is easy to remember.",
+  "feedback": "Repetition means repeating part of a pattern so people can remember it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.RHQUAL.M_CA4_RH_END_SHORT": {
+  "skill": "CREA.G4.CREATI.RHYTHM.RHQUAL",
+  "error": "Thinks a good pattern ends on a short note.",
+  "example": {
+   "question": "A good rhythmic pattern ends on...",
+   "wrong_answer": "A short note",
+   "correct_answer": "A long note"
+  },
+  "cause": "The child thinks the end should be quick.",
+  "reveals": "Offer \"A short note\" next to the right answer and ask the question again in a new context.",
+  "help": "Clap one ending on a short sound and one on a long sound.",
+  "feedback": "A good pattern ends on a long note, so it sounds finished.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_G_ASC": {
+  "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+  "error": "Says g, p or y have ascenders.",
+  "example": {
+   "question": "Which letter has a descender?",
+   "wrong_answer": "d",
+   "correct_answer": "g"
+  },
+  "cause": "The child looks at the tail and thinks it goes up.",
+  "reveals": "Offer \"d\" next to the right answer and ask the question again in a new context.",
+  "help": "Write the letters on a ruled line and see which go below it.",
+  "feedback": "A descender goes below the line. The letters g, j, p, q and y have descenders.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_B_DESC": {
+  "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+  "error": "Says b, d, h, k or l have descenders.",
+  "example": {
+   "question": "Which letter has an ascender?",
+   "wrong_answer": "p",
+   "correct_answer": "b"
+  },
+  "cause": "The child mixes ascender and descender.",
+  "reveals": "Offer \"p\" next to the right answer and ask the question again in a new context.",
+  "help": "Draw a line and write b above and p below it.",
+  "feedback": "An ascender goes up above the main body. The letters b, d, h, k and l have ascenders.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.RHYTHM.LETTERING.M_CA4_RH_ALL_ASC": {
+  "skill": "CREA.G4.CREATI.RHYTHM.LETTERING",
+  "error": "Says every letter has an ascender or descender.",
+  "example": {
+   "question": "Which letter has neither?",
+   "wrong_answer": "k",
+   "correct_answer": "a"
+  },
+  "cause": "The child thinks every letter sticks out.",
+  "reveals": "Offer \"k\" next to the right answer and ask the question again in a new context.",
+  "help": "Write the word \"ace\" and look for letters that go neither up nor down.",
+  "feedback": "The letters a, c, e, o, s and others stay in the main body, so they have neither.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_M_LOWEST": {
+  "skill": "CREA.G4.CREATI.MELODY.SOLFA",
+  "error": "Thinks m is the lowest sound.",
+  "example": {
+   "question": "Which syllable is the lowest?",
+   "wrong_answer": "m",
+   "correct_answer": "d"
+  },
+  "cause": "The child thinks the last letter of the alphabet order is lowest or gets confused.",
+  "reveals": "Offer \"m\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m going up and show with the hand.",
+  "feedback": "The order from low to high is d r m. D is the lowest and m is the highest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_D_HIGHEST": {
+  "skill": "CREA.G4.CREATI.MELODY.SOLFA",
+  "error": "Thinks d is the highest because it is sung first.",
+  "example": {
+   "question": "Which syllable is the highest?",
+   "wrong_answer": "d",
+   "correct_answer": "m"
+  },
+  "cause": "The child links first with highest.",
+  "reveals": "Offer \"d\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d first and then climb to m.",
+  "feedback": "The first syllable sung is not always the highest. In d r m, m is highest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_ORDER_MIX": {
+  "skill": "CREA.G4.CREATI.MELODY.SOLFA",
+  "error": "Puts r first or last in the order.",
+  "example": {
+   "question": "Which is the right order from low to high?",
+   "wrong_answer": "r d m",
+   "correct_answer": "d r m"
+  },
+  "cause": "The child has not sung the steps in order.",
+  "reveals": "Offer \"r d m\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m slowly and point to steps on a stair.",
+  "feedback": "From low to high the order is d, r, m.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SOLFA.M_CA4_ML_END_ANY": {
+  "skill": "CREA.G4.CREATI.MELODY.SOLFA",
+  "error": "Thinks a melody may end on any syllable as well as on d.",
+  "example": {
+   "question": "A short melody sounds finished when it ends on...",
+   "wrong_answer": "Any syllable",
+   "correct_answer": "d, the home note"
+  },
+  "cause": "The child has not felt d as home.",
+  "reveals": "Offer \"Any syllable\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m r then stop on r and then on d: which sounds finished?",
+  "feedback": "D is the home note. A melody sounds finished when it ends on d.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_DOWN": {
+  "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+  "error": "Holds the hand lower for a higher sound.",
+  "example": {
+   "question": "The pitch goes higher from d to m. What does the hand do?",
+   "wrong_answer": "Moves lower",
+   "correct_answer": "Moves higher"
+  },
+  "cause": "The child links high with a heavy hand.",
+  "reveals": "Offer \"Moves lower\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing d r m and raise your hand for each step.",
+  "feedback": "The hand is held higher as the pitch gets higher.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_SIGN_MIX": {
+  "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+  "error": "Mixes up which hand sign belongs to which syllable.",
+  "example": {
+   "question": "Which sign is a closed fist held low?",
+   "wrong_answer": "m",
+   "correct_answer": "d"
+  },
+  "cause": "The child has not matched sign and syllable.",
+  "reveals": "Offer \"m\" next to the right answer and ask the question again in a new context.",
+  "help": "Show each sign three times saying the syllable.",
+  "feedback": "D is a closed fist held low, r is a hand sloping upward, m is a flat hand with the palm down held higher.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.SIGNS.M_CA4_ML_M_FIST": {
+  "skill": "CREA.G4.CREATI.MELODY.SIGNS",
+  "error": "Says m is shown with a fist.",
+  "example": {
+   "question": "How is m shown?",
+   "wrong_answer": "With a closed fist",
+   "correct_answer": "With a flat hand, palm down"
+  },
+  "cause": "The child mixes up the signs of d and m.",
+  "reveals": "Offer \"With a closed fist\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a fist for d and a flat hand for m, saying the sounds.",
+  "feedback": "M is a flat hand with the palm down. D is a closed fist.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_ONE_SYLLABLE": {
+  "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+  "error": "Thinks a good melody uses one syllable only.",
+  "example": {
+   "question": "Which melody has variation?",
+   "wrong_answer": "m m m m",
+   "correct_answer": "d r m r"
+  },
+  "cause": "The child thinks repeating one sound is simple and good.",
+  "reveals": "Offer \"m m m m\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing both and ask which is more interesting.",
+  "feedback": "Variation means using different syllables and lengths.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_END_NOT_D": {
+  "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+  "error": "Thinks a good melody ends on m.",
+  "example": {
+   "question": "A good short melody ends on...",
+   "wrong_answer": "m",
+   "correct_answer": "d"
+  },
+  "cause": "The child thinks the highest note is the best ending.",
+  "reveals": "Offer \"m\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing the melody ending on m and on d and compare.",
+  "feedback": "A good melody ends on d, the home note.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.MELQUAL.M_CA4_ML_STEP_JUMPS": {
+  "skill": "CREA.G4.CREATI.MELODY.MELQUAL",
+  "error": "Thinks stepwise motion means big jumps.",
+  "example": {
+   "question": "What does stepwise motion mean?",
+   "wrong_answer": "Jumping over syllables",
+   "correct_answer": "Moving to the next syllable"
+  },
+  "cause": "The child links step with a big stride.",
+  "reveals": "Offer \"Jumping over syllables\" next to the right answer and ask the question again in a new context.",
+  "help": "Walk stairs one by one and sing d r m.",
+  "feedback": "Stepwise motion is moving to the next syllable, like walking up stairs one step at a time.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_DRY": {
+  "skill": "CREA.G4.CREATI.MELODY.CLAY",
+  "error": "Thinks the clay should be dried hard before it is shaped.",
+  "example": {
+   "question": "What state should the clay be in for modelling?",
+   "wrong_answer": "Dry and hard",
+   "correct_answer": "Soft and damp"
+  },
+  "cause": "The child thinks hard means strong.",
+  "reveals": "Offer \"Dry and hard\" next to the right answer and ask the question again in a new context.",
+  "help": "Try to bend a dry clay lump and a damp one.",
+  "feedback": "Clay is shaped while damp and soft. Keep it under a damp cloth.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_COIL": {
+  "skill": "CREA.G4.CREATI.MELODY.CLAY",
+  "error": "Says a coil is a flat sheet of clay.",
+  "example": {
+   "question": "What is a coil?",
+   "wrong_answer": "A flat sheet",
+   "correct_answer": "A rolled snake of clay"
+  },
+  "cause": "The child mixes up slab and coil.",
+  "reveals": "Offer \"A flat sheet\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll one and flatten the other.",
+  "feedback": "A slab is a flat piece. A coil is clay rolled into a long snake.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_STONES": {
+  "skill": "CREA.G4.CREATI.MELODY.CLAY",
+  "error": "Thinks stones can stay in the clay.",
+  "example": {
+   "question": "What is done to clay before modelling?",
+   "wrong_answer": "Nothing, use it as it is",
+   "correct_answer": "Stones are removed and it is kneaded"
+  },
+  "cause": "The child uses clay straight from the ground.",
+  "reveals": "Offer \"Nothing, use it as it is\" next to the right answer and ask the question again in a new context.",
+  "help": "Squeeze clay with a small stone in it and see it crack.",
+  "feedback": "Remove stones and knead the clay so it is smooth and does not crack.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.CREATI.MELODY.CLAY.M_CA4_ML_CLAY_GLUE": {
+  "skill": "CREA.G4.CREATI.MELODY.CLAY",
+  "error": "Says coils are stuck to the slab with glue.",
+  "example": {
+   "question": "What joins the coil letters to the slab?",
+   "wrong_answer": "Strong glue",
+   "correct_answer": "A little water on the clay"
+  },
+  "cause": "The child thinks clay needs glue.",
+  "reveals": "Offer \"Strong glue\" next to the right answer and ask the question again in a new context.",
+  "help": "Join two pieces with a little water and press.",
+  "feedback": "Clay pieces are joined with a little water and pressed together.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_COMMANDS_ORDER": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
+  "error": "Puts the start commands in the wrong order.",
+  "example": {
+   "question": "What is the first command at the start?",
+   "wrong_answer": "Go",
+   "correct_answer": "On your marks"
+  },
+  "cause": "The child remembers only the loud last word.",
+  "reveals": "Offer \"Go\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise the three commands in a line.",
+  "feedback": "The order is On your marks, Set, Go.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_SET_HIPS": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
+  "error": "Says the hips go down at the command Set.",
+  "example": {
+   "question": "What happens to the hips at Set?",
+   "wrong_answer": "They go down",
+   "correct_answer": "They are raised"
+  },
+  "cause": "The child tries to stay low and steady.",
+  "reveals": "Offer \"They go down\" next to the right answer and ask the question again in a new context.",
+  "help": "Show the position at Set and ask where the weight is.",
+  "feedback": "At Set the hips are raised and the weight goes forward, ready to push.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_ELONG_CLOSE": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
+  "error": "Says the feet are closest in the elongated start.",
+  "example": {
+   "question": "In which start are the feet furthest apart?",
+   "wrong_answer": "The medium start",
+   "correct_answer": "The elongated start"
+  },
+  "cause": "The child reads elongated as short.",
+  "reveals": "Offer \"The medium start\" next to the right answer and ask the question again in a new context.",
+  "help": "Mark the foot places in the sand for each start.",
+  "feedback": "In the elongated start the feet are placed furthest apart. Medium starts have them closer.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.STARTS.M_CA4_AT_LOOK_BACK": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.STARTS",
+  "error": "Says the runner looks at the other runners or behind at the start.",
+  "example": {
+   "question": "Where do the eyes look at the start?",
+   "wrong_answer": "At the other runners",
+   "correct_answer": "Down and ahead at the track"
+  },
+  "cause": "The child worries about others.",
+  "reveals": "Offer \"At the other runners\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: you race your own lane.",
+  "feedback": "The runner looks down and ahead and stays focused on the lane.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_ARMS_ACROSS": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+  "error": "Says the arms swing across the body.",
+  "example": {
+   "question": "How do the arms swing in sprinting?",
+   "wrong_answer": "Across the body",
+   "correct_answer": "Forward and back, bent"
+  },
+  "cause": "The child copies relaxed running.",
+  "reveals": "Offer \"Across the body\" next to the right answer and ask the question again in a new context.",
+  "help": "Run slowly with arms across and with arms forward and back.",
+  "feedback": "Arms are bent and swing forward and back, not across the body.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_HEELS": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+  "error": "Says a sprinter runs on the heels.",
+  "example": {
+   "question": "Which part of the foot does a sprinter use?",
+   "wrong_answer": "The heels",
+   "correct_answer": "The balls of the feet"
+  },
+  "cause": "The child copies walking.",
+  "reveals": "Offer \"The heels\" next to the right answer and ask the question again in a new context.",
+  "help": "Run on the heels for a few steps and feel the slowing.",
+  "feedback": "Sprinters run on the balls of the feet.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_STOP_LINE": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+  "error": "Says a sprinter stops at the finish line.",
+  "example": {
+   "question": "What does a sprinter do at the finish line?",
+   "wrong_answer": "Slows down and stops before it",
+   "correct_answer": "Runs through the line"
+  },
+  "cause": "The child thinks the race ends before the line.",
+  "reveals": "Offer \"Slows down and stops before it\" next to the right answer and ask the question again in a new context.",
+  "help": "Run to a line and run through it.",
+  "feedback": "Run through the finish line without slowing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.SPRINT.M_CA4_AT_LOOK_DOWN": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.SPRINT",
+  "error": "Says a sprinter looks at the feet.",
+  "example": {
+   "question": "Where does a sprinter look when running?",
+   "wrong_answer": "At the feet",
+   "correct_answer": "Ahead"
+  },
+  "cause": "The child checks the feet for safety.",
+  "reveals": "Offer \"At the feet\" next to the right answer and ask the question again in a new context.",
+  "help": "Run looking ahead and notice the body stay straight.",
+  "feedback": "Look ahead, with the head up.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_ORDER": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+  "error": "Gets the order of the flag colours wrong.",
+  "example": {
+   "question": "Which colour is at the top of the Kenyan flag?",
+   "wrong_answer": "Green",
+   "correct_answer": "Black"
+  },
+  "cause": "The child has not looked at the flag stripe by stripe.",
+  "reveals": "Offer \"Green\" next to the right answer and ask the question again in a new context.",
+  "help": "Colour the stripes in order and check with a real flag.",
+  "feedback": "The Kenyan flag has black at the top, then red, then green, with thin white lines between.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_MEANING": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+  "error": "Gives the wrong meaning for a flag colour.",
+  "example": {
+   "question": "What does the red in the Kenyan flag stand for?",
+   "wrong_answer": "The land",
+   "correct_answer": "The blood shed for freedom"
+  },
+  "cause": "The child guesses from the colour.",
+  "reveals": "Offer \"The land\" next to the right answer and ask the question again in a new context.",
+  "help": "Match each colour to its meaning on a card.",
+  "feedback": "Black stands for the people, red for the blood shed for freedom, green for the land and white for peace.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.ATHLETICS.FLAG.M_CA4_AT_FLAG_WHY": {
+  "skill": "CREA.G4.PERFOR.ATHLETICS.FLAG",
+  "error": "Thinks the flag is flown only to decorate.",
+  "example": {
+   "question": "Why is the Kenyan flag flown at an event?",
+   "wrong_answer": "Only to decorate",
+   "correct_answer": "To show love of country and unity"
+  },
+  "cause": "The child sees only the colours.",
+  "reveals": "Offer \"Only to decorate\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask where the flag flies and what it stands for.",
+  "feedback": "The flag stands for the country and shows love of country and unity.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_DOWN": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
+  "error": "Says the crab balance is done with the tummy facing the floor.",
+  "example": {
+   "question": "In a crab balance, which way does the tummy face?",
+   "wrong_answer": "Down",
+   "correct_answer": "Up"
+  },
+  "cause": "The child mixes it with a push-up.",
+  "reveals": "Offer \"Down\" next to the right answer and ask the question again in a new context.",
+  "help": "Sit down, put hands behind and lift the hips: the tummy faces up.",
+  "feedback": "In a crab balance the tummy faces up with the hips lifted.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_HEAD": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
+  "error": "Says the side roll goes over the head.",
+  "example": {
+   "question": "In which direction does a side roll go?",
+   "wrong_answer": "Over the head, forwards",
+   "correct_answer": "Sideways along the mat"
+  },
+  "cause": "The child mixes it with a forward roll.",
+  "reveals": "Offer \"Over the head, forwards\" next to the right answer and ask the question again in a new context.",
+  "help": "Lie down and roll to the side with the body straight.",
+  "feedback": "A side roll goes sideways along the mat with the body straight, not over the head.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_ROLL_BENT": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
+  "error": "Says to bend the knees and curl up in the side roll.",
+  "example": {
+   "question": "What is the body like in a side roll?",
+   "wrong_answer": "Curled up in a ball",
+   "correct_answer": "Straight, arms above the head and legs together"
+  },
+  "cause": "The child mixes it with another roll.",
+  "reveals": "Offer \"Curled up in a ball\" next to the right answer and ask the question again in a new context.",
+  "help": "Roll once straight and once curled and compare.",
+  "feedback": "Keep the body long and straight with arms above the head and legs together.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.BALANCES.M_CA4_GY_CRAB_RUSH": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.BALANCES",
+  "error": "Thinks the crab balance is done quickly and not held.",
+  "example": {
+   "question": "How long is a crab balance held?",
+   "wrong_answer": "No time, move at once",
+   "correct_answer": "Still, for a count of three"
+  },
+  "cause": "The child thinks speed is the skill.",
+  "reveals": "Offer \"No time, move at once\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold and count three together.",
+  "feedback": "A balance is held still for a count of three.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_NO_WARMUP": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+  "error": "Thinks warming up wastes time.",
+  "example": {
+   "question": "What should you do before gymnastics?",
+   "wrong_answer": "Start straight away",
+   "correct_answer": "Warm up first"
+  },
+  "cause": "The child wants to start the fun part.",
+  "reveals": "Offer \"Start straight away\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: a cold muscle can be hurt easily.",
+  "feedback": "A warm-up makes the body ready and prevents injury.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_HARD_GROUND": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+  "error": "Thinks any floor is fine for gymnastics.",
+  "example": {
+   "question": "Where is gymnastics done?",
+   "wrong_answer": "On a hard stony floor",
+   "correct_answer": "On a mat or soft cleared ground"
+  },
+  "cause": "The child does not think of falling.",
+  "reveals": "Offer \"On a hard stony floor\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: a fall on stones hurts, on a mat it does not.",
+  "feedback": "Use a mat or soft, cleared ground with no stones.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE.M_CA4_GY_PAIN_GO_ON": {
+  "skill": "CREA.G4.PERFOR.GYMNASTICS.GYMSAFE",
+  "error": "Thinks you should keep going if a part hurts.",
+  "example": {
+   "question": "Your wrist hurts in a crab balance. What do you do?",
+   "wrong_answer": "Keep going",
+   "correct_answer": "Stop and tell the teacher"
+  },
+  "cause": "The child is afraid to look weak.",
+  "reveals": "Offer \"Keep going\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: telling is brave and keeps you from a worse injury.",
+  "feedback": "Stop and tell the teacher if a part hurts.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_SACRED_PATRIOTIC": {
+  "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+  "error": "Calls a song about God a patriotic song.",
+  "example": {
+   "question": "A song asks God to bless worshippers at church. What type is it?",
+   "wrong_answer": "Patriotic",
+   "correct_answer": "Sacred"
+  },
+  "cause": "The child mixes up praising God with praising the country.",
+  "reveals": "Offer \"Patriotic\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: who is the song about, God or the country?",
+  "feedback": "A sacred song is about worship. A patriotic song is about loving the country.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_TOPICAL_ANY": {
+  "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+  "error": "Thinks a topical song is any song sung at school.",
+  "example": {
+   "question": "Which is a topical song?",
+   "wrong_answer": "A hymn at church",
+   "correct_answer": "A song about washing hands to stop germs"
+  },
+  "cause": "The child does not know topical means about the topic of the day.",
+  "reveals": "Offer \"A hymn at church\" next to the right answer and ask the question again in a new context.",
+  "help": "List issues people talk about now, and match a song to one.",
+  "feedback": "A topical song is about an issue people are talking about now, like hygiene or road safety.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.TYPES.M_CA4_SG_PATRIOTIC_LOVE": {
+  "skill": "CREA.G4.PERFOR.SONGS.TYPES",
+  "error": "Thinks a patriotic song is about love for a friend.",
+  "example": {
+   "question": "What is a patriotic song about?",
+   "wrong_answer": "Love for a friend",
+   "correct_answer": "Love for the country"
+  },
+  "cause": "The child knows the word love and not patriot.",
+  "reveals": "Offer \"Love for a friend\" next to the right answer and ask the question again in a new context.",
+  "help": "Link patriot to the word country (patria).",
+  "feedback": "A patriotic song is about loving and serving the country.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_TEMPO_LOUD": {
+  "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
+  "error": "Says tempo means how loud the song is.",
+  "example": {
+   "question": "What does tempo mean?",
+   "wrong_answer": "How loud it is",
+   "correct_answer": "How fast it is"
+  },
+  "cause": "The child mixes tempo with dynamics.",
+  "reveals": "Offer \"How loud it is\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a song fast and slow, then loud and soft.",
+  "feedback": "Tempo is speed. Dynamics are loud or soft.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_DYNAMICS_FAST": {
+  "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
+  "error": "Says dynamics mean how fast the song is.",
+  "example": {
+   "question": "What do dynamics mean?",
+   "wrong_answer": "The speed",
+   "correct_answer": "How loud or soft"
+  },
+  "cause": "The child mixes dynamics with tempo.",
+  "reveals": "Offer \"The speed\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing the same line loud then soft.",
+  "feedback": "Dynamics are how loud or soft the song is.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_UNISON_PARTS": {
+  "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
+  "error": "Thinks unison means everyone sings a different part.",
+  "example": {
+   "question": "What does singing in unison mean?",
+   "wrong_answer": "Each group sings a different part",
+   "correct_answer": "Everyone sings the same notes together"
+  },
+  "cause": "The child mixes unison with parts or a round.",
+  "reveals": "Offer \"Each group sings a different part\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a line all together, then in two groups, and name each.",
+  "feedback": "Unison means singing the same notes together at the same time.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.PERFTERMS.M_CA4_SG_PITCH_SPEED": {
+  "skill": "CREA.G4.PERFOR.SONGS.PERFTERMS",
+  "error": "Says pitch is how fast a song is.",
+  "example": {
+   "question": "What is pitch?",
+   "wrong_answer": "How fast the song goes",
+   "correct_answer": "How high or low a sound is"
+  },
+  "cause": "The child mixes pitch with tempo.",
+  "reveals": "Offer \"How fast the song goes\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a high and a low note.",
+  "feedback": "Pitch is how high or low a sound is.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_SIT": {
+  "skill": "CREA.G4.PERFOR.SONGS.EAC",
+  "error": "Thinks the anthem can be sung sitting or moving about.",
+  "example": {
+   "question": "How do you behave when the anthem is sung?",
+   "wrong_answer": "Sit and talk",
+   "correct_answer": "Stand straight and still"
+  },
+  "cause": "The child thinks it is just a song.",
+  "reveals": "Offer \"Sit and talk\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: an anthem is a song of respect.",
+  "feedback": "Stand straight and still and sing with respect.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_PARTS": {
+  "skill": "CREA.G4.PERFOR.SONGS.EAC",
+  "error": "Thinks the anthem is sung in different parts or a round.",
+  "example": {
+   "question": "The anthem is sung...",
+   "wrong_answer": "In a round",
+   "correct_answer": "In unison"
+  },
+  "cause": "The child mixes it up with rounds.",
+  "reveals": "Offer \"In a round\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing it together and sing a round to compare.",
+  "feedback": "The East African Community anthem is sung in unison.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.EAC.M_CA4_SG_EAC_MESSAGE": {
+  "skill": "CREA.G4.PERFOR.SONGS.EAC",
+  "error": "Says the anthem is about only one country.",
+  "example": {
+   "question": "What is the anthem about?",
+   "wrong_answer": "Only Kenya",
+   "correct_answer": "East Africa: God blessing us with peace and unity"
+  },
+  "cause": "The child mixes it up with the Kenya National Anthem.",
+  "reveals": "Offer \"Only Kenya\" next to the right answer and ask the question again in a new context.",
+  "help": "Name the countries of East Africa on a map and say they sing it together.",
+  "feedback": "It is about East Africa, asking God to bless it and give peace and unity.",
+  "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_FUNERAL_WORK": {
+  "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+  "error": "Mixes up work and funeral songs.",
+  "example": {
+   "question": "Women sing while grinding millet. What type of folk song is it?",
+   "wrong_answer": "A funeral song",
+   "correct_answer": "A work song"
+  },
+  "cause": "The child links the sad voice with funeral.",
+  "reveals": "Offer \"A funeral song\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: when is it sung, and what is happening?",
+  "feedback": "Songs sung while farming, grinding or harvesting are work songs.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_NAMING": {
+  "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+  "error": "Says a naming song is sung at a wedding.",
+  "example": {
+   "question": "A song welcomes a new baby. What type is it?",
+   "wrong_answer": "A marriage song",
+   "correct_answer": "A naming song"
+  },
+  "cause": "The child mixes celebration songs.",
+  "reveals": "Offer \"A marriage song\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: who is being celebrated?",
+  "feedback": "A naming song welcomes a new baby.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SONGS.FOLKTYPES.M_CA4_SG_FOLK_ALL_SAME": {
+  "skill": "CREA.G4.PERFOR.SONGS.FOLKTYPES",
+  "error": "Thinks all communities sing the same songs.",
+  "example": {
+   "question": "Do all Kenyan communities sing the same folk songs?",
+   "wrong_answer": "Yes, they are all the same",
+   "correct_answer": "No, each community has its own songs"
+  },
+  "cause": "The child has heard few songs.",
+  "reveals": "Offer \"Yes, they are all the same\" next to the right answer and ask the question again in a new context.",
+  "help": "Listen to songs from two communities.",
+  "feedback": "Each community has its own folk songs, in its own language.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_TV_CAMERA": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+  "error": "Thinks a television or a radio takes photographs.",
+  "example": {
+   "question": "Which of these takes photographs?",
+   "wrong_answer": "A television",
+   "correct_answer": "A phone camera"
+  },
+  "cause": "The child sees screens and thinks any screen takes pictures.",
+  "reveals": "Offer \"A television\" next to the right answer and ask the question again in a new context.",
+  "help": "Sort devices by whether they have a lens.",
+  "feedback": "A device that takes photographs has a lens. A television shows pictures but does not take them.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_NO_ASK": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+  "error": "Thinks you may photograph anyone without asking.",
+  "example": {
+   "question": "Before taking a photograph of a person, what should you do?",
+   "wrong_answer": "Take it quickly",
+   "correct_answer": "Ask permission"
+  },
+  "cause": "The child thinks a photograph does no harm.",
+  "reveals": "Offer \"Take it quickly\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: how would you feel if someone photographed you without asking?",
+  "feedback": "Ask permission before photographing a person.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES.M_CA4_PH_CARELESS": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.DEVICES",
+  "error": "Thinks a device may be dropped, wet or touched on the lens.",
+  "example": {
+   "question": "How should you handle a camera?",
+   "wrong_answer": "With wet hands, by one finger",
+   "correct_answer": "With both hands and a clean, dry lens"
+  },
+  "cause": "The child does not think of cost.",
+  "reveals": "Offer \"With wet hands, by one finger\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a smudged lens photo and a clean one.",
+  "feedback": "Hold a device with both hands and keep the lens clean and dry.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_SUN_BEHIND_SUBJECT": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+  "error": "Thinks the best photo is with the sun behind the person.",
+  "example": {
+   "question": "Where should the sun be for a good photograph?",
+   "wrong_answer": "Behind the person being photographed",
+   "correct_answer": "Behind the photographer"
+  },
+  "cause": "The child thinks bright light is always good.",
+  "reveals": "Offer \"Behind the person being photographed\" next to the right answer and ask the question again in a new context.",
+  "help": "Take two photos, one each way, and compare the faces.",
+  "feedback": "Keep the sun behind the photographer so the light falls on the subject.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_SMALL": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+  "error": "Thinks the main subject can be a tiny dot in a big picture.",
+  "example": {
+   "question": "The centre of interest in a photograph should be...",
+   "wrong_answer": "Very small at the edge",
+   "correct_answer": "Clear and easy to see"
+  },
+  "cause": "The child wants to fit everything in.",
+  "reveals": "Offer \"Very small at the edge\" next to the right answer and ask the question again in a new context.",
+  "help": "Take a photo close up and from far and compare.",
+  "feedback": "The centre of interest is the main thing and should be clear, not tiny.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS.M_CA4_PH_CENTRE_MEANING": {
+  "skill": "CREA.G4.PERFOR.PHOTOGRAPHY.ELEMENTS",
+  "error": "Thinks centre of interest means the middle of the room.",
+  "example": {
+   "question": "What is the centre of interest?",
+   "wrong_answer": "The middle of the room",
+   "correct_answer": "The main thing the photograph is about"
+  },
+  "cause": "The child takes the word centre literally.",
+  "reveals": "Offer \"The middle of the room\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what do you want people to look at?",
+  "feedback": "The centre of interest is the main thing the photograph is about.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_BLOW": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+  "error": "Says the player blows into the foot joint.",
+  "example": {
+   "question": "Where does the player blow?",
+   "wrong_answer": "The foot joint",
+   "correct_answer": "The mouthpiece on the head joint"
+  },
+  "cause": "The child mixes up the ends.",
+  "reveals": "Offer \"The foot joint\" next to the right answer and ask the question again in a new context.",
+  "help": "Hold a recorder and point to the mouthpiece.",
+  "feedback": "The player blows into the mouthpiece on the head joint.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_HOLES": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+  "error": "Says the finger holes are on the head joint.",
+  "example": {
+   "question": "Where are most of the finger holes?",
+   "wrong_answer": "The head joint",
+   "correct_answer": "The middle joint"
+  },
+  "cause": "The child does not look at where the fingers go.",
+  "reveals": "Offer \"The head joint\" next to the right answer and ask the question again in a new context.",
+  "help": "Name the joints while placing fingers.",
+  "feedback": "Most finger holes are on the middle joint.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS.M_CA4_DR_PARTS_NAMES": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.RECPARTS",
+  "error": "Mixes up the names of the three joints.",
+  "example": {
+   "question": "Which is the lowest part?",
+   "wrong_answer": "The head joint",
+   "correct_answer": "The foot joint"
+  },
+  "cause": "The child has not named the joints in order.",
+  "reveals": "Offer \"The head joint\" next to the right answer and ask the question again in a new context.",
+  "help": "Name them from top to bottom: head, middle, foot.",
+  "feedback": "From top to bottom: head joint, middle joint, foot joint.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_HOT_WATER": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+  "error": "Thinks a recorder is cleaned with boiling water.",
+  "example": {
+   "question": "How is a recorder cleaned?",
+   "wrong_answer": "In boiling water",
+   "correct_answer": "In clean warm water, then dried"
+  },
+  "cause": "The child thinks hotter cleans better.",
+  "reveals": "Offer \"In boiling water\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: hot water can bend the plastic.",
+  "feedback": "Use clean warm (not hot) water and dry it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_SHARE": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+  "error": "Thinks sharing a recorder without cleaning is fine.",
+  "example": {
+   "question": "Wanjiku wants to use Otieno's recorder. What first?",
+   "wrong_answer": "Use it at once",
+   "correct_answer": "Clean the mouthpiece"
+  },
+  "cause": "The child sees it as sharing.",
+  "reveals": "Offer \"Use it at once\" next to the right answer and ask the question again in a new context.",
+  "help": "Link to sharing a cup.",
+  "feedback": "Clean the mouthpiece before someone else uses it.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.CARE.M_CA4_DR_STORE": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.CARE",
+  "error": "Thinks a recorder may be left in the sun or in a damp place.",
+  "example": {
+   "question": "Where should a recorder be kept?",
+   "wrong_answer": "In the sun on the desk",
+   "correct_answer": "Dry, in a bag or case, away from heat"
+  },
+  "cause": "The child is not thinking about heat.",
+  "reveals": "Offer \"In the sun on the desk\" next to the right answer and ask the question again in a new context.",
+  "help": "Show a bent recorder from heat.",
+  "feedback": "Keep it dry, in a bag or case, away from heat.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_MORE_HIGHER": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+  "error": "Thinks covering more holes gives a higher note.",
+  "example": {
+   "question": "Which note covers the most holes?",
+   "wrong_answer": "B",
+   "correct_answer": "G"
+  },
+  "cause": "The child thinks more means higher.",
+  "reveals": "Offer \"B\" next to the right answer and ask the question again in a new context.",
+  "help": "Play B A G and watch the fingers go down.",
+  "feedback": "More holes covered gives a lower note, so G is the lowest of the three.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_FINGERS_MIX": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+  "error": "Mixes up how many fingers each note needs.",
+  "example": {
+   "question": "How many fingers (with the thumb) does A need?",
+   "wrong_answer": "One finger",
+   "correct_answer": "Two fingers"
+  },
+  "cause": "The child has not matched note and fingering.",
+  "reveals": "Offer \"One finger\" next to the right answer and ask the question again in a new context.",
+  "help": "Make a chart: B one, A two, G three.",
+  "feedback": "B uses the thumb and one finger, A the thumb and two fingers, G the thumb and three fingers.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES.M_CA4_DR_ORDER": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.NOTES",
+  "error": "Puts the notes B A G in order from low to high as B, A, G.",
+  "example": {
+   "question": "Which is the right order from low to high?",
+   "wrong_answer": "B, A, G",
+   "correct_answer": "G, A, B"
+  },
+  "cause": "The child reads the order as it is written.",
+  "reveals": "Offer \"B, A, G\" next to the right answer and ask the question again in a new context.",
+  "help": "Play them and listen.",
+  "feedback": "From low to high: G, A, B.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_BLOW_HARD": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Thinks you should blow hard to get a good sound.",
+  "example": {
+   "question": "How hard should you blow?",
+   "wrong_answer": "As hard as you can",
+   "correct_answer": "Gently and steadily"
+  },
+  "cause": "The child thinks louder is better.",
+  "reveals": "Offer \"As hard as you can\" next to the right answer and ask the question again in a new context.",
+  "help": "Blow gently and hard and compare.",
+  "feedback": "Blow gently and steadily. Hard blowing makes a squeak.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_TIP_FINGERS": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Thinks you cover holes with the tip of the finger.",
+  "example": {
+   "question": "How do you cover a hole?",
+   "wrong_answer": "With the tip of the finger",
+   "correct_answer": "With the soft pad of the finger"
+  },
+  "cause": "The child holds the recorder loosely.",
+  "reveals": "Offer \"With the tip of the finger\" next to the right answer and ask the question again in a new context.",
+  "help": "Press a pad and a tip on a hole and see the leak.",
+  "feedback": "Cover the hole fully with the soft pad of the finger.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE.M_CA4_DR_SLOUCH": {
+  "skill": "CREA.G4.PERFOR.DESCANT_RECORDER.TECHNIQUE",
+  "error": "Thinks posture does not matter.",
+  "example": {
+   "question": "How should you sit to play?",
+   "wrong_answer": "Slouched, to relax",
+   "correct_answer": "Sitting tall, recorder in front"
+  },
+  "cause": "The child is comfortable slouched.",
+  "reveals": "Offer \"Slouched, to relax\" next to the right answer and ask the question again in a new context.",
+  "help": "Try breathing slouched and tall.",
+  "feedback": "Sit or stand tall so the breath flows.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_DIVE_SHALLOW": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
+  "error": "Thinks diving into shallow water is fine.",
+  "example": {
+   "question": "How do you enter the water at the shallow end?",
+   "wrong_answer": "Dive in head first",
+   "correct_answer": "Feet first"
+  },
+  "cause": "The child sees divers on TV.",
+  "reveals": "Offer \"Dive in head first\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: the bottom is close.",
+  "feedback": "Enter feet first. Never dive into shallow water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_RUN_SIDE": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
+  "error": "Thinks running on the pool side is fine.",
+  "example": {
+   "question": "How do you move on the pool side?",
+   "wrong_answer": "Run",
+   "correct_answer": "Walk"
+  },
+  "cause": "The child is excited.",
+  "reveals": "Offer \"Run\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: the floor is wet and slippery.",
+  "feedback": "Walk on the pool side. It is wet and slippery.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_ALONE": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
+  "error": "Thinks it is fine to swim alone if you can swim.",
+  "example": {
+   "question": "May you swim alone?",
+   "wrong_answer": "Yes, if you can swim",
+   "correct_answer": "No, always with a teacher or lifeguard"
+  },
+  "cause": "The child trusts own ability.",
+  "reveals": "Offer \"Yes, if you can swim\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: accidents are sudden.",
+  "feedback": "Never swim alone. Always have a teacher or lifeguard watching.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.SAFETY.M_CA4_SW_PUSH": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.SAFETY",
+  "error": "Thinks pushing a friend into the water is a fun game.",
+  "example": {
+   "question": "A friend stands at the edge. What do you do?",
+   "wrong_answer": "Push them in for fun",
+   "correct_answer": "Leave them alone and wait your turn"
+  },
+  "cause": "The child thinks it is a joke.",
+  "reveals": "Offer \"Push them in for fun\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: they may hit the edge or not swim.",
+  "feedback": "Never push others at the pool.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_MUSHROOM_STRETCH": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
+  "error": "Says a mushroom float is stretched out.",
+  "example": {
+   "question": "In a mushroom float the body is...",
+   "wrong_answer": "Stretched out flat",
+   "correct_answer": "Curled up with knees hugged"
+  },
+  "cause": "The child mixes it with a star float.",
+  "reveals": "Offer \"Stretched out flat\" next to the right answer and ask the question again in a new context.",
+  "help": "Curl up like a mushroom.",
+  "feedback": "In a mushroom float the knees are hugged to the chest.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_SUPINE_FACE": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
+  "error": "Says a back float has the face in the water.",
+  "example": {
+   "question": "In a back (supine) float the face is...",
+   "wrong_answer": "In the water",
+   "correct_answer": "Up, with ears in the water"
+  },
+  "cause": "The child mixes up prone and supine.",
+  "reveals": "Offer \"In the water\" next to the right answer and ask the question again in a new context.",
+  "help": "Lie on the back and look up.",
+  "feedback": "In a back float the body is face up and ears are in the water.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_GLIDE_ARMS": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
+  "error": "Says in a glide the arms stay by the sides.",
+  "example": {
+   "question": "In a glide the arms are...",
+   "wrong_answer": "By the sides",
+   "correct_answer": "Stretched ahead"
+  },
+  "cause": "The child does not know streamlining.",
+  "reveals": "Offer \"By the sides\" next to the right answer and ask the question again in a new context.",
+  "help": "Glide with arms ahead and by the sides.",
+  "feedback": "In a glide the arms are stretched ahead, body straight and legs together.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.FLOAT.M_CA4_SW_TENSE": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.FLOAT",
+  "error": "Thinks you must tense up to float.",
+  "example": {
+   "question": "To float, the body should be...",
+   "wrong_answer": "Tense and stiff",
+   "correct_answer": "Relaxed"
+  },
+  "cause": "The child fights the water.",
+  "reveals": "Offer \"Tense and stiff\" next to the right answer and ask the question again in a new context.",
+  "help": "Relax and float.",
+  "feedback": "Staying relaxed helps you float.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_FROG_CRAWL": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+  "error": "Mixes up frog jump and crab walk.",
+  "example": {
+   "question": "Which game is done with tummy up on hands and feet?",
+   "wrong_answer": "Frog jump",
+   "correct_answer": "Crab walk"
+  },
+  "cause": "The child mixes up the two games.",
+  "reveals": "Offer \"Frog jump\" next to the right answer and ask the question again in a new context.",
+  "help": "Do both and say the animal.",
+  "feedback": "The crab walk is on hands and feet with the tummy up. The frog jump is a squat and leap.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_BUILDS": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+  "error": "Gives the wrong thing that a game builds.",
+  "example": {
+   "question": "The frog jump builds...",
+   "wrong_answer": "Arm strength only",
+   "correct_answer": "Leg strength"
+  },
+  "cause": "The child does not know what moves.",
+  "reveals": "Offer \"Arm strength only\" next to the right answer and ask the question again in a new context.",
+  "help": "Feel which muscles work.",
+  "feedback": "The frog jump builds leg strength.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.PERFOR.SWIMMING.ANIMAL.M_CA4_SW_GAME_NEW": {
+  "skill": "CREA.G4.PERFOR.SWIMMING.ANIMAL",
+  "error": "Thinks animal games are new and were not played in the past.",
+  "example": {
+   "question": "Animal games are...",
+   "wrong_answer": "Only new games from television",
+   "correct_answer": "Indigenous games played long ago for fun and fitness"
+  },
+  "cause": "The child knows only modern games.",
+  "reveals": "Offer \"Only new games from television\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask grandparents which games they played.",
+  "feedback": "Animal games are indigenous and were played for fun and fitness.",
+  "source": "To confirm by a teacher: communities and instrument names as used in the KICD teacher guide and local practice.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_COPY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+  "error": "Thinks appreciation means copying a work.",
+  "example": {
+   "question": "What does appreciation mean?",
+   "wrong_answer": "Copying the work",
+   "correct_answer": "Looking carefully and thinking about what is good"
+  },
+  "cause": "The child links learning with copying.",
+  "reveals": "Offer \"Copying the work\" next to the right answer and ask the question again in a new context.",
+  "help": "Look at a picture and say two good things.",
+  "feedback": "Appreciation is looking carefully and thinking about what is good in a work.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_ONLY_FAULT": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+  "error": "Thinks feedback means only saying what is wrong.",
+  "example": {
+   "question": "Which is kind and helpful feedback?",
+   "wrong_answer": "It is ugly and wrong",
+   "correct_answer": "I like your colours. Add more detail to the sky."
+  },
+  "cause": "The child thinks critique means fault finding.",
+  "reveals": "Offer \"It is ugly and wrong\" next to the right answer and ask the question again in a new context.",
+  "help": "Practise two good things and one idea.",
+  "feedback": "Good feedback says what is good and gives one idea in a kind way.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT.M_CA4_AP_TOUCH": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.CONCEPT",
+  "error": "Thinks you may touch displayed works.",
+  "example": {
+   "question": "At an exhibition you...",
+   "wrong_answer": "Touch the works to see them better",
+   "correct_answer": "Look but do not touch"
+  },
+  "cause": "The child wants to feel the work.",
+  "reveals": "Offer \"Touch the works to see them better\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what if everyone touches?",
+  "feedback": "Do not touch the works. Look quietly and respect the maker.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_ANY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+  "error": "Thinks a portfolio holds any papers.",
+  "example": {
+   "question": "A portfolio holds...",
+   "wrong_answer": "Any papers",
+   "correct_answer": "A learner's best works"
+  },
+  "cause": "The child sees it as a folder for everything.",
+  "reveals": "Offer \"Any papers\" next to the right answer and ask the question again in a new context.",
+  "help": "Choose best works together.",
+  "feedback": "A portfolio shows a learner's best works and how they grow.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_BUY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+  "error": "Thinks a portfolio must be bought.",
+  "example": {
+   "question": "A portfolio can be made from...",
+   "wrong_answer": "Only a bought leather case",
+   "correct_answer": "Local things such as cardboard or an old file"
+  },
+  "cause": "The child thinks only bought things are good.",
+  "reveals": "Offer \"Only a bought leather case\" next to the right answer and ask the question again in a new context.",
+  "help": "Make one from cardboard.",
+  "feedback": "Use locally available things such as cardboard.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO.M_CA4_AP_PORT_LABEL": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.PORTFOLIO",
+  "error": "Thinks works need no name or date.",
+  "example": {
+   "question": "What goes on each work?",
+   "wrong_answer": "Nothing",
+   "correct_answer": "Name and date"
+  },
+  "cause": "The child sees no use.",
+  "reveals": "Offer \"Nothing\" next to the right answer and ask the question again in a new context.",
+  "help": "Mix two works with no labels.",
+  "feedback": "Label each work with name and date.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_VERSES": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+  "error": "Gives the wrong number of verses of the Kenya National Anthem.",
+  "example": {
+   "question": "How many verses does the Kenya National Anthem have?",
+   "wrong_answer": "Five",
+   "correct_answer": "Three"
+  },
+  "cause": "The child guesses.",
+  "reveals": "Offer \"Five\" next to the right answer and ask the question again in a new context.",
+  "help": "Count the verses on a printed copy.",
+  "feedback": "The Kenya National Anthem has three verses.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_SING": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+  "error": "Thinks you may sit or talk while it is sung.",
+  "example": {
+   "question": "When the anthem is sung you...",
+   "wrong_answer": "Talk and move about",
+   "correct_answer": "Stand straight and still"
+  },
+  "cause": "The child thinks it is just a song.",
+  "reveals": "Offer \"Talk and move about\" next to the right answer and ask the question again in a new context.",
+  "help": "Say: respect for the country.",
+  "feedback": "Stand straight and still and sing with respect.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM.M_CA4_AP_KNA_WHAT": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.ANTHEM",
+  "error": "Says the anthem is a song about a football match.",
+  "example": {
+   "question": "The Kenya National Anthem is a...",
+   "wrong_answer": "Song about sport",
+   "correct_answer": "Prayer asking God to bless Kenya, with peace and unity"
+  },
+  "cause": "The child knows it from sports events.",
+  "reveals": "Offer \"Song about sport\" next to the right answer and ask the question again in a new context.",
+  "help": "Read the words together.",
+  "feedback": "It is a prayer asking God to bless Kenya and keep peace and unity.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SOLOIST_ALL": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+  "error": "Calls the whole group the soloist.",
+  "example": {
+   "question": "The soloist is...",
+   "wrong_answer": "The whole group",
+   "correct_answer": "The one singer who leads"
+  },
+  "cause": "The child hears the lead voice and the answer as one.",
+  "reveals": "Offer \"The whole group\" next to the right answer and ask the question again in a new context.",
+  "help": "Sing a call and response and name the roles.",
+  "feedback": "The soloist is the one singer who leads. The others answer.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_SINGERS_PLAY": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+  "error": "Says the singers play the instruments.",
+  "example": {
+   "question": "Who plays the instruments?",
+   "wrong_answer": "The singers who answer",
+   "correct_answer": "The instrumentalists"
+  },
+  "cause": "The child mixes the roles.",
+  "reveals": "Offer \"The singers who answer\" next to the right answer and ask the question again in a new context.",
+  "help": "Name the roles on a card.",
+  "feedback": "Instrumentalists play the instruments. Singers sing.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ },
+ "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF.M_CA4_AP_MESSAGE": {
+  "skill": "CREA.G4.APPREC.ANALYSIS_OF_CREATIVE_ART.FOLKPERF",
+  "error": "Thinks the message is the tune.",
+  "example": {
+   "question": "The message of a song is...",
+   "wrong_answer": "Its tune",
+   "correct_answer": "What its words say"
+  },
+  "cause": "The child mixes up tune and message.",
+  "reveals": "Offer \"Its tune\" next to the right answer and ask the question again in a new context.",
+  "help": "Ask: what are the words about?",
+  "feedback": "The message is what the words say.",
+  "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
+  "status": "draft"
+ }
+}
