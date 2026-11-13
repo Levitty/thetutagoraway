@@ -17731,11 +17731,11 @@ var duo = (key, cs, pool2, { stem = SENT, hints, topic, sentences = false }) => 
 };
 var sentenceChoose = (key, cs, pool2, { stem = SENT, hints, rung: rung2 = 2 }) => eng({ id: id(key, "sentence"), kind: "choose-sentence", cs, oc: outcomeLetters(cs, 2)[1], form: "direct", rung: rung2, gen: choose5(pool2, { stem, hints }) });
 var ART = [
-  ["Mama gave me ___ apple. It was sweet.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Apple starts with a vowel sound and has not been mentioned before: an apple."],
+  ["Mama gave me ___ apple. The apple was sweet.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Apple starts with a vowel sound and has not been mentioned before: an apple."],
   ["Kamau bought ___ book. The book was about lions.", "a", ["an", "M_ART_AN_BEFORE_CONSONANT"], ["the", "M_ART_THE_FIRST_MENTION"], "Book starts with a consonant sound and is mentioned for the first time: a book."],
   ["There is only one sun. We feel the heat of ___ sun.", "the", ["a", "M_ART_A_FOR_KNOWN"], ["an", "M_ART_AN_BEFORE_CONSONANT"], "There is only one sun, so we use the."],
   ["We waited for ___ hour at the clinic.", "an", ["a", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Hour starts with the vowel sound "ow" because the h is silent: an hour.'],
-  ["Every pupil at our school wears ___ uniform.", "a", ["an", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Uniform starts with the consonant sound "yoo": a uniform.'],
+  ["Tabitha has ___ uniform. The uniform is new.", "a", ["an", "M_ART_SOUND_NOT_LETTER"], ["the", "M_ART_THE_FIRST_MENTION"], 'Uniform starts with the consonant sound "yoo": a uniform.'],
   ["Please close ___ door. It is open.", "the", ["a", "M_ART_A_FOR_KNOWN"], ["an", "M_ART_AN_BEFORE_CONSONANT"], "Both people know which door, so we use the."],
   ["Njeri wants to be ___ engineer.", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Engineer starts with a vowel sound: an engineer."],
   ["Is there ___ egg in the basket?", "an", ["a", "M_ART_A_BEFORE_VOWEL"], ["the", "M_ART_THE_FIRST_MENTION"], "Egg starts with a vowel sound, and it is a new thing: an egg."]
@@ -17817,14 +17817,14 @@ var ADJ = [
   L2('Adjective in "Achieng wore a yellow dress."', ['Which word in the sentence "Achieng wore a yellow dress." is an adjective.', "yellow", ["dress", "M_ADJ_NOUN_AS_ADJ"], ["wore", "M_ADJ_VERB_AS_ADJ"], ["a", "M_ADJ_ARTICLE_AS_ADJ"], "Yellow tells more about the dress."])
 ];
 var ORD = [
-  ["She sat on a ___ stool.", "big round", ["round big", "M_ADO_SHAPE_BEFORE_SIZE"], ["big and round", "M_ADO_NO_AND"], ["stool big round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a big round stool."],
-  ["Wafula kicked a ___ ball.", "small round", ["round small", "M_ADO_SHAPE_BEFORE_SIZE"], ["small and round", "M_ADO_NO_AND"], ["ball small round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a small round ball."],
-  ["Mama bought a ___ table.", "large square", ["square large", "M_ADO_SHAPE_BEFORE_SIZE"], ["large and square", "M_ADO_NO_AND"], ["table large square", "M_ADO_AFTER_NOUN"], "Size comes before shape: a large square table."],
-  ["The goat ate a ___ stick.", "long thin", ["thin long", "M_ADO_SHAPE_BEFORE_SIZE"], ["long and thin", "M_ADO_NO_AND"], ["stick long thin", "M_ADO_AFTER_NOUN"], "Size comes before shape: a long thin stick."],
-  ["Amina has a ___.", "big ball", ["ball big", "M_ADO_AFTER_NOUN"], ["ball and big", "M_ADO_AFTER_NOUN"], ["big and ball", "M_ADO_NO_AND"], "The adjective comes before the noun: a big ball."],
-  ["We live in a ___.", "small house", ["house small", "M_ADO_AFTER_NOUN"], ["house and small", "M_ADO_AFTER_NOUN"], ["small and house", "M_ADO_NO_AND"], "The adjective comes before the noun: a small house."],
-  ["Baraka kicked a ___.", "big round ball", ["ball big round", "M_ADO_AFTER_NOUN"], ["round big ball", "M_ADO_SHAPE_BEFORE_SIZE"], ["big and round ball", "M_ADO_NO_AND"], "Size, then shape, then the noun: a big round ball."],
-  ["The hall has a ___ roof.", "huge flat", ["flat huge", "M_ADO_SHAPE_BEFORE_SIZE"], ["huge and flat", "M_ADO_NO_AND"], ["roof huge flat", "M_ADO_AFTER_NOUN"], "Size comes before shape: a huge flat roof."]
+  ["She sat on a ___ stool.", "big round", ["round big", "M_ADO_SHAPE_BEFORE_SIZE"], ["stool big round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a big round stool."],
+  ["Wafula kicked a ___ ball.", "small round", ["round small", "M_ADO_SHAPE_BEFORE_SIZE"], ["ball small round", "M_ADO_AFTER_NOUN"], "Size comes before shape: a small round ball."],
+  ["Mama bought a ___ table.", "large square", ["square large", "M_ADO_SHAPE_BEFORE_SIZE"], ["table large square", "M_ADO_AFTER_NOUN"], "Size comes before shape: a large square table."],
+  ["The goat ate a ___ stick.", "long thin", ["thin long", "M_ADO_SHAPE_BEFORE_SIZE"], ["stick long thin", "M_ADO_AFTER_NOUN"], "Size comes before shape: a long thin stick."],
+  ["Amina has a ___.", "big ball", ["ball big", "M_ADO_AFTER_NOUN"], ["ball and big", "M_ADO_AFTER_NOUN"], "The adjective comes before the noun: a big ball."],
+  ["We live in a ___.", "small house", ["house small", "M_ADO_AFTER_NOUN"], ["house and small", "M_ADO_AFTER_NOUN"], "The adjective comes before the noun: a small house."],
+  ["Baraka kicked a ___.", "big round ball", ["ball big round", "M_ADO_AFTER_NOUN"], ["round big ball", "M_ADO_SHAPE_BEFORE_SIZE"], "Size, then shape, then the noun: a big round ball."],
+  ["The hall has a ___ roof.", "huge flat", ["flat huge", "M_ADO_SHAPE_BEFORE_SIZE"], ["roof huge flat", "M_ADO_AFTER_NOUN"], "Size comes before shape: a huge flat roof."]
 ];
 var CNT = [
   ["There are not ___ chairs in the hall.", "many", ["much", "M_QUA_MUCH_COUNT"], ["little", "M_QUA_FEW_UNCOUNT"], "Chairs can be counted: many."],
@@ -17932,11 +17932,11 @@ var ADV_KIND = [
   ['"We left early." Which kind of adverb is early.', "time", ["manner", "M_ADV_KIND_MIX"], ["place", "M_ADV_KIND_MIX"], "Early tells when."]
 ];
 var CNJ = [
-  ["Ali likes tea ___ coffee.", "and", ["but", "M_CNJ_BUT_FOR_AND"], ["or", "M_CNJ_OR_FOR_AND"], "He likes both, so and joins them."],
+  ["Ali likes tea ___ coffee. He drinks both every day.", "and", ["but", "M_CNJ_BUT_FOR_AND"], ["or", "M_CNJ_OR_FOR_AND"], "He likes both, so and joins them."],
   ["It was raining, ___ we stayed inside.", "so", ["because", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "Staying inside is the result: so."],
   ["We stayed inside ___ it was raining.", "because", ["so", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "The rain is the reason: because."],
   ["I wanted to play, ___ I was tired.", "but", ["and", "M_CNJ_AND_FOR_BUT"], ["or", "M_CNJ_OR_FOR_AND"], "The two ideas go against each other: but."],
-  ["Mama bought rice ___ beans.", "and", ["or", "M_CNJ_OR_FOR_AND"], ["but", "M_CNJ_BUT_FOR_AND"], "She bought both: and."],
+  ["Mama bought rice ___ beans. She put both in the basket.", "and", ["or", "M_CNJ_OR_FOR_AND"], ["but", "M_CNJ_BUT_FOR_AND"], "She bought both: and."],
   ["Would you like tea ___ juice?", "or", ["and", "M_CNJ_AND_FOR_OR"], ["but", "M_CNJ_BUT_FOR_AND"], "A choice between two things: or."],
   ["He was hungry, ___ he ate two plates of ugali.", "so", ["because", "M_CNJ_BECAUSE_SO"], ["but", "M_CNJ_BUT_FOR_AND"], "Eating is the result of being hungry: so."],
   ["She is small ___ strong.", "but", ["and", "M_CNJ_AND_FOR_BUT"], ["or", "M_CNJ_OR_FOR_AND"], "Small and strong go against each other: but."]
@@ -18016,7 +18016,7 @@ var FAMILIES16 = [
   sentenceChoose("pro", "LANGUA.T4.PERSONAL_PRONOUNS", PRO_SENT, { hints: ["Do not say the name and the pronoun together.", "Before the verb use the subject form. After a small word use the object form."] }),
   ...trio("poss", "LANGUA.T4.POSSESSIVE_PRONOUNS", POSS, { thinOk: true, topic: "saying who owns something", hints: ["Look at what comes after the gap. Is there a noun, or nothing?", "Mine, yours, hers, ours and theirs stand alone and never take an apostrophe."] }),
   ...duo("adj", "LANGUA.T5.ADJECTIVES", ADJ, { stem: "", topic: "about the describing word in a sentence", hints: ["An adjective tells more about a noun, such as a person or a thing.", "A verb tells what is done. An adverb tells how, when or where."] }),
-  ...trio("ado", "LANGUA.T5.ADJECTIVE_ORDER", ORD, { thinOk: false, stem: WORDS2, topic: "with describing words before a noun", hints: ["In English the describing words come before the noun.", "Size comes first, then shape. Do not put and between them."] }),
+  ...trio("ado", "LANGUA.T5.ADJECTIVE_ORDER", ORD, { thinOk: true, stem: WORDS2, topic: "with describing words before a noun", hints: ["In English the describing words come before the noun.", "Size comes first, then shape, then the noun."] }),
   ...trio("cnt", "LANGUA.T6.COUNT_UNCOUNT", CNT, { thinOk: true, topic: "about how much or how many", hints: ["Can you count the thing one by one?", "Many and few go with things you can count. Much and little go with things you cannot."] }),
   ...trio("som", "LANGUA.T6.SOME_ANY", SOM, { thinOk: true, stem: WORDS2, topic: "about how much there is of something", hints: ["Is the sentence positive, a question or a negative?", "Some goes in a positive sentence. Any goes in a question or after not. Enough comes before the noun."] }),
   ...trio("prp", "LANGUA.T7.PRESENT_PROGRESSIVE", PRP, { thinOk: true, topic: "about what is happening now", hints: ["An action happening now needs am, is or are and a verb ending in -ing.", "Match am, is or are to the subject. Drop a silent e or double the last letter before -ing."] }),
@@ -18162,7 +18162,7 @@ var DESC = [
   L3("A sentence about smell", ["Which sentence uses the sense of smell.", "The kitchen smells of fresh bread.", ["The kitchen is big and clean.", "M_DES_ONE_SENSE"], ["The kitchen has two doors.", "M_DES_ONE_SENSE"], "Smells of fresh bread uses the sense of smell."]),
   L3("A sentence about sound", ["Which sentence uses the sense of sound.", "The drums beat loudly in the hall.", ["The hall is wide and tall.", "M_DES_ONE_SENSE"], ["The hall has a red floor.", "M_DES_ONE_SENSE"], "Beat loudly uses the sense of hearing."]),
   L3("A sentence about touch", ["Which sentence uses the sense of touch.", "The cloth is soft and warm.", ["The cloth is blue.", "M_DES_ONE_SENSE"], ["The cloth is on the table.", "M_DES_ONE_SENSE"], "Soft and warm use the sense of touch."]),
-  L3("The introduction", ["Which part of a description names what you will describe.", "the introduction", ["the conclusion", "M_DES_PART_MIX"], ["the title", "M_DES_PART_MIX"], "The introduction names the thing you will describe."]),
+  L3("The introduction", ["Which part of a description names what you will describe.", "the introduction", ["the conclusion", "M_DES_PART_MIX"], ["the middle", "M_DES_PART_MIX"], "The introduction names the thing you will describe."]),
   L3("The conclusion", ["Which part of a description ends with a last thought or feeling about it.", "the conclusion", ["the introduction", "M_DES_PART_MIX"], ["the beginning", "M_DES_PART_MIX"], "The conclusion ends with a last thought or feeling."])
 ];
 var DIARY = [
@@ -18214,12 +18214,12 @@ var topicGen = (cskill) => {
   return { passage: { title: "A paragraph", text: show.map((i) => p[i]).join(" ") }, question: "Which sentence is the topic sentence of the paragraph. It tells what the whole paragraph is about.", options, instruction: "Read the paragraph. Then choose the best answer.", hints: ["The topic sentence names what the whole paragraph is about.", "The other sentences give details, steps or times."], steps: ["The topic sentence covers all the others.", `The topic sentence is "${p[0]}"`] };
 };
 var PICSENT = [
-  ["Picture: a boy is picking a mango from a tree. Which sentence tells the picture best.", "The boy picked a mango from the tree.", ["The boy picks a mango from the tree.", "M_PIC_TENSE"], ["The boy sold a mango at the market.", "M_PIC_MISMATCH"], ["The boy ate a mango under the tree.", "M_PIC_MISMATCH"], "The story is told after the event, so we use the past tense."],
-  ["Picture: a girl is watering a small plant. Which sentence tells the picture best.", "The girl watered the small plant.", ["The girl waters the small plant.", "M_PIC_TENSE"], ["The girl planted a big tree.", "M_PIC_MISMATCH"], ["The girl picked a red flower.", "M_PIC_MISMATCH"], "The picture shows watering, told in the past tense."],
-  ["Picture: two children are walking to school with bags. Which sentence tells the picture best.", "The children walked to school with their bags.", ["The children walk to school with their bags.", "M_PIC_TENSE"], ["The children rode a bus to the market.", "M_PIC_MISMATCH"], ["The children played football at home.", "M_PIC_MISMATCH"], "The picture shows a walk to school, told in the past tense."],
-  ["Picture: a cat is knocking a cup off a table. Which sentence tells the picture best.", "The cat knocked the cup off the table.", ["The cat knocks the cup off the table.", "M_PIC_TENSE"], ["The cat drank milk from the cup.", "M_PIC_MISMATCH"], ["The cat slept on the table.", "M_PIC_MISMATCH"], "The picture shows the cup being knocked off, told in the past tense."],
-  ["Picture: dark clouds are over the hills and rain is falling. Which sentence tells the picture best.", "Dark clouds gathered and the rain fell.", ["Dark clouds gather and the rain falls.", "M_PIC_TENSE"], ["The sun shone over the hills.", "M_PIC_MISMATCH"], ["The farmer went to the market.", "M_PIC_MISMATCH"], "The picture shows clouds and rain, told in the past tense."],
-  ["Picture: a farmer is cutting ripe maize in a shamba. Which sentence tells the picture best.", "The farmer harvested the ripe maize.", ["The farmer harvests the ripe maize.", "M_PIC_TENSE"], ["The farmer planted the maize seeds.", "M_PIC_MISMATCH"], ["The farmer sold the cows.", "M_PIC_MISMATCH"], "The picture shows a harvest, told in the past tense."]
+  ["Picture: a boy is picking a mango from a tree. Tell it as a story that already happened. Which sentence tells the picture best.", "The boy picked a mango from the tree.", ["The boy picks a mango from the tree.", "M_PIC_TENSE"], ["The boy sold a mango at the market.", "M_PIC_MISMATCH"], ["The boy ate a mango under the tree.", "M_PIC_MISMATCH"], "The story is told after the event, so we use the past tense."],
+  ["Picture: a girl is watering a small plant. Tell it as a story that already happened. Which sentence tells the picture best.", "The girl watered the small plant.", ["The girl waters the small plant.", "M_PIC_TENSE"], ["The girl planted a big tree.", "M_PIC_MISMATCH"], ["The girl picked a red flower.", "M_PIC_MISMATCH"], "The picture shows watering, told in the past tense."],
+  ["Picture: two children are walking to school with bags. Tell it as a story that already happened. Which sentence tells the picture best.", "The children walked to school with their bags.", ["The children walk to school with their bags.", "M_PIC_TENSE"], ["The children rode a bus to the market.", "M_PIC_MISMATCH"], ["The children played football at home.", "M_PIC_MISMATCH"], "The picture shows a walk to school, told in the past tense."],
+  ["Picture: a cat is knocking a cup off a table. Tell it as a story that already happened. Which sentence tells the picture best.", "The cat knocked the cup off the table.", ["The cat knocks the cup off the table.", "M_PIC_TENSE"], ["The cat drank milk from the cup.", "M_PIC_MISMATCH"], ["The cat slept on the table.", "M_PIC_MISMATCH"], "The picture shows the cup being knocked off, told in the past tense."],
+  ["Picture: dark clouds are over the hills and rain is falling. Tell it as a story that already happened. Which sentence tells the picture best.", "Dark clouds gathered and the rain fell.", ["Dark clouds gather and the rain falls.", "M_PIC_TENSE"], ["The sun shone over the hills.", "M_PIC_MISMATCH"], ["The farmer went to the market.", "M_PIC_MISMATCH"], "The picture shows clouds and rain, told in the past tense."],
+  ["Picture: a farmer is cutting ripe maize in a shamba. Tell it as a story that already happened. Which sentence tells the picture best.", "The farmer harvested the ripe maize.", ["The farmer harvests the ripe maize.", "M_PIC_TENSE"], ["The farmer planted the maize seeds.", "M_PIC_MISMATCH"], ["The farmer sold the cows.", "M_PIC_MISMATCH"], "The picture shows a harvest, told in the past tense."]
 ];
 var FAMILIES17 = [
   ...duo2("cap", "WRITIN.T7.CAPITALS_FULL_STOPS", CAP, { sentences: true, topic: "with capital letters and full stops", hints: ["Look at the first letter of the sentence, the names and the word I.", "Only the first word, names and I take a capital. A sentence that tells something ends with a full stop."] }),
@@ -18267,7 +18267,7 @@ var FIRSTAID = [
 var NUTRITION = [
   ["Beans, eggs and meat give us ___.", "protein", ["carbohydrates", "M_NUT_NEAR_MEANING"], ["fibre", "M_NUT_NEAR_MEANING"], ["vitamins", "M_NUT_NEAR_MEANING"], "Protein builds the body."],
   ["Ugali, rice and bread give us energy because they have ___.", "carbohydrates", ["protein", "M_NUT_NEAR_MEANING"], ["vitamins", "M_NUT_NEAR_MEANING"], ["fibre", "M_NUT_NEAR_MEANING"], "Carbohydrates give energy."],
-  ["Fruits and vegetables have ___ that keep us healthy.", "vitamins", ["fibre", "M_NUT_VITAMIN_FIBRE"], ["protein", "M_NUT_NEAR_MEANING"], ["carbohydrates", "M_NUT_NEAR_MEANING"], "Vitamins keep the body healthy."],
+  ["Fruits and vegetables have ___ that keep us healthy.", "vitamins", ["salt", "M_NUT_VITAMIN_FIBRE"], ["protein", "M_NUT_NEAR_MEANING"], ["carbohydrates", "M_NUT_NEAR_MEANING"], "Vitamins keep the body healthy."],
   ["A ___ diet has food from all the food groups.", "balanced", ["heavy", "M_NUT_BALANCED"], ["sweet", "M_NUT_BALANCED"], ["cheap", "M_NUT_BALANCED"], "A balanced diet has all the food groups in the right amounts."],
   ["___ in vegetables helps food move through the body.", "Fibre", ["Vitamins", "M_NUT_VITAMIN_FIBRE"], ["Protein", "M_NUT_NEAR_MEANING"], ["Sugar", "M_NUT_NEAR_MEANING"], "Fibre helps food move through the body."],
   ["Eating only ugali every day is not a ___ diet.", "balanced", ["heavy", "M_NUT_BALANCED"], ["cheap", "M_NUT_BALANCED"], ["sweet", "M_NUT_BALANCED"], "One food alone does not give everything the body needs."]
@@ -18286,7 +18286,7 @@ var FARM = [
   ["We ___ the maize when it is ripe.", "harvest", ["plant", "M_FRM_NEAR_MEANING"], ["plough", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], "To harvest is to gather the crop when it is ripe."],
   ["Cows, goats and sheep are ___.", "livestock", ["crops", "M_FRM_LIVESTOCK_CROPS"], ["seedlings", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "Livestock are farm animals."],
   ["___ makes the soil richer so that crops grow well.", "Fertiliser", ["Pesticide", "M_FRM_FERTILISER"], ["Livestock", "M_FRM_NEAR_MEANING"], ["Harvest", "M_FRM_NEAR_MEANING"], "Fertiliser feeds the soil."],
-  ["Before planting, the farmer will ___ the land.", "plough", ["harvest", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "To plough is to turn over the soil before planting."],
+  ["Before planting, the farmer uses oxen or a tractor to ___ the land.", "plough", ["harvest", "M_FRM_NEAR_MEANING"], ["weed", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], "To plough is to turn over the soil before planting."],
   ["Young plants that grow from seeds are called ___.", "seedlings", ["harvest", "M_FRM_NEAR_MEANING"], ["fertiliser", "M_FRM_NEAR_MEANING"], ["livestock", "M_FRM_LIVESTOCK_CROPS"], "Seedlings are young plants."],
   ["We ___ to remove unwanted plants between the rows.", "weed", ["harvest", "M_FRM_NEAR_MEANING"], ["plough", "M_FRM_NEAR_MEANING"], ["plant", "M_FRM_NEAR_MEANING"], "To weed is to remove unwanted plants."]
 ];
@@ -18309,7 +18309,7 @@ var MONEY = [
 ];
 var SPORTS = [
   ["The ___ blows the whistle to start the match.", "referee", ["goalkeeper", "M_SPT_NEAR_MEANING"], ["opponent", "M_SPT_NEAR_MEANING"], ["trophy", "M_SPT_NEAR_MEANING"], "The referee controls the game."],
-  ["Our team won the ___ at the end of the tournament.", "trophy", ["tournament", "M_SPT_TROPHY_TOURNAMENT"], ["referee", "M_SPT_NEAR_MEANING"], ["whistle", "M_SPT_NEAR_MEANING"], "A trophy is the prize."],
+  ["At the end, the captain lifted the shining silver ___.", "trophy", ["tournament", "M_SPT_TROPHY_TOURNAMENT"], ["referee", "M_SPT_NEAR_MEANING"], ["whistle", "M_SPT_NEAR_MEANING"], "A trophy is the prize."],
   ["A ___ is a series of games where teams compete.", "tournament", ["trophy", "M_SPT_TROPHY_TOURNAMENT"], ["whistle", "M_SPT_NEAR_MEANING"], ["goalkeeper", "M_SPT_NEAR_MEANING"], "A tournament is a series of games."],
   ["The player on the other team is my ___.", "opponent", ["teammate", "M_SPT_OPPONENT_TEAMMATE"], ["referee", "M_SPT_NEAR_MEANING"], ["goalkeeper", "M_SPT_NEAR_MEANING"], "An opponent plays against you."],
   ["My ___ passed me the ball, so we scored.", "teammate", ["opponent", "M_SPT_OPPONENT_TEAMMATE"], ["referee", "M_SPT_NEAR_MEANING"], ["trophy", "M_SPT_NEAR_MEANING"], "A teammate plays on your side."],
@@ -18334,8 +18334,8 @@ var POLITE2 = [
   L4("Hurting someone by mistake", ["You step on a boy's foot by mistake. What do you say.", "I am sorry, are you hurt?", ["Move your foot.", "M_POL_NO_SORRY"], ["It was nothing.", "M_POL_NO_SORRY"], ["Why was your foot there?", "M_POL_NO_SORRY"], "Say sorry and show you care."])
 ];
 var SILENT = [
-  ['In the word "knife", the silent letter is ___.', "k", ["n", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["e", "M_SIL_END_E"], 'You say "nife": the k is silent.'],
-  ['In the word "write", the silent letter is ___.', "w", ["r", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["e", "M_SIL_END_E"], 'You say "rite": the w is silent.'],
+  ['In the word "knife", the silent letter is ___.', "k", ["n", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["f", "M_SIL_NEIGHBOUR"], 'You say "nife": the k is silent.'],
+  ['In the word "write", the silent letter is ___.', "w", ["r", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["i", "M_SIL_NEIGHBOUR"], 'You say "rite": the w is silent.'],
   ['In the word "lamb", the silent letter is ___.', "b", ["m", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["l", "M_SIL_NEIGHBOUR"], 'You say "lam": the b is silent.'],
   ['In the word "listen", the silent letter is ___.', "t", ["s", "M_SIL_NEIGHBOUR"], ["n", "M_SIL_END_E"], ["none", "M_SIL_NONE"], 'You say "lisen": the t is silent.'],
   ['In the word "hour", the silent letter is ___.', "h", ["o", "M_SIL_NEIGHBOUR"], ["none", "M_SIL_NONE"], ["r", "M_SIL_END_E"], 'You say "our": the h is silent.'],

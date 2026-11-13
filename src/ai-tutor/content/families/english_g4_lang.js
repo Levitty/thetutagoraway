@@ -32,11 +32,11 @@ const sentenceChoose = (key, cs, pool, { stem = SENT, hints, rung = 2 }) => eng(
 
 // ---------------------------------------------------------------- articles
 const ART = [
-  ['Mama gave me ___ apple. It was sweet.', 'an', ['a', 'M_ART_A_BEFORE_VOWEL'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Apple starts with a vowel sound and has not been mentioned before: an apple.'],
+  ['Mama gave me ___ apple. The apple was sweet.', 'an', ['a', 'M_ART_A_BEFORE_VOWEL'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Apple starts with a vowel sound and has not been mentioned before: an apple.'],
   ['Kamau bought ___ book. The book was about lions.', 'a', ['an', 'M_ART_AN_BEFORE_CONSONANT'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Book starts with a consonant sound and is mentioned for the first time: a book.'],
   ['There is only one sun. We feel the heat of ___ sun.', 'the', ['a', 'M_ART_A_FOR_KNOWN'], ['an', 'M_ART_AN_BEFORE_CONSONANT'], 'There is only one sun, so we use the.'],
   ['We waited for ___ hour at the clinic.', 'an', ['a', 'M_ART_SOUND_NOT_LETTER'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Hour starts with the vowel sound "ow" because the h is silent: an hour.'],
-  ['Every pupil at our school wears ___ uniform.', 'a', ['an', 'M_ART_SOUND_NOT_LETTER'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Uniform starts with the consonant sound "yoo": a uniform.'],
+  ['Tabitha has ___ uniform. The uniform is new.', 'a', ['an', 'M_ART_SOUND_NOT_LETTER'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Uniform starts with the consonant sound "yoo": a uniform.'],
   ['Please close ___ door. It is open.', 'the', ['a', 'M_ART_A_FOR_KNOWN'], ['an', 'M_ART_AN_BEFORE_CONSONANT'], 'Both people know which door, so we use the.'],
   ['Njeri wants to be ___ engineer.', 'an', ['a', 'M_ART_A_BEFORE_VOWEL'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Engineer starts with a vowel sound: an engineer.'],
   ['Is there ___ egg in the basket?', 'an', ['a', 'M_ART_A_BEFORE_VOWEL'], ['the', 'M_ART_THE_FIRST_MENTION'], 'Egg starts with a vowel sound, and it is a new thing: an egg.'],
@@ -122,14 +122,14 @@ const ADJ = [
   L('Adjective in "Achieng wore a yellow dress."', ['Which word in the sentence "Achieng wore a yellow dress." is an adjective.', 'yellow', ['dress', 'M_ADJ_NOUN_AS_ADJ'], ['wore', 'M_ADJ_VERB_AS_ADJ'], ['a', 'M_ADJ_ARTICLE_AS_ADJ'], 'Yellow tells more about the dress.']),
 ];
 const ORD = [
-  ['She sat on a ___ stool.', 'big round', ['round big', 'M_ADO_SHAPE_BEFORE_SIZE'], ['big and round', 'M_ADO_NO_AND'], ['stool big round', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a big round stool.'],
-  ['Wafula kicked a ___ ball.', 'small round', ['round small', 'M_ADO_SHAPE_BEFORE_SIZE'], ['small and round', 'M_ADO_NO_AND'], ['ball small round', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a small round ball.'],
-  ['Mama bought a ___ table.', 'large square', ['square large', 'M_ADO_SHAPE_BEFORE_SIZE'], ['large and square', 'M_ADO_NO_AND'], ['table large square', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a large square table.'],
-  ['The goat ate a ___ stick.', 'long thin', ['thin long', 'M_ADO_SHAPE_BEFORE_SIZE'], ['long and thin', 'M_ADO_NO_AND'], ['stick long thin', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a long thin stick.'],
-  ['Amina has a ___.', 'big ball', ['ball big', 'M_ADO_AFTER_NOUN'], ['ball and big', 'M_ADO_AFTER_NOUN'], ['big and ball', 'M_ADO_NO_AND'], 'The adjective comes before the noun: a big ball.'],
-  ['We live in a ___.', 'small house', ['house small', 'M_ADO_AFTER_NOUN'], ['house and small', 'M_ADO_AFTER_NOUN'], ['small and house', 'M_ADO_NO_AND'], 'The adjective comes before the noun: a small house.'],
-  ['Baraka kicked a ___.', 'big round ball', ['ball big round', 'M_ADO_AFTER_NOUN'], ['round big ball', 'M_ADO_SHAPE_BEFORE_SIZE'], ['big and round ball', 'M_ADO_NO_AND'], 'Size, then shape, then the noun: a big round ball.'],
-  ['The hall has a ___ roof.', 'huge flat', ['flat huge', 'M_ADO_SHAPE_BEFORE_SIZE'], ['huge and flat', 'M_ADO_NO_AND'], ['roof huge flat', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a huge flat roof.'],
+  ['She sat on a ___ stool.', 'big round', ['round big', 'M_ADO_SHAPE_BEFORE_SIZE'], ['stool big round', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a big round stool.'],
+  ['Wafula kicked a ___ ball.', 'small round', ['round small', 'M_ADO_SHAPE_BEFORE_SIZE'], ['ball small round', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a small round ball.'],
+  ['Mama bought a ___ table.', 'large square', ['square large', 'M_ADO_SHAPE_BEFORE_SIZE'], ['table large square', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a large square table.'],
+  ['The goat ate a ___ stick.', 'long thin', ['thin long', 'M_ADO_SHAPE_BEFORE_SIZE'], ['stick long thin', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a long thin stick.'],
+  ['Amina has a ___.', 'big ball', ['ball big', 'M_ADO_AFTER_NOUN'], ['ball and big', 'M_ADO_AFTER_NOUN'], 'The adjective comes before the noun: a big ball.'],
+  ['We live in a ___.', 'small house', ['house small', 'M_ADO_AFTER_NOUN'], ['house and small', 'M_ADO_AFTER_NOUN'], 'The adjective comes before the noun: a small house.'],
+  ['Baraka kicked a ___.', 'big round ball', ['ball big round', 'M_ADO_AFTER_NOUN'], ['round big ball', 'M_ADO_SHAPE_BEFORE_SIZE'], 'Size, then shape, then the noun: a big round ball.'],
+  ['The hall has a ___ roof.', 'huge flat', ['flat huge', 'M_ADO_SHAPE_BEFORE_SIZE'], ['roof huge flat', 'M_ADO_AFTER_NOUN'], 'Size comes before shape: a huge flat roof.'],
 ];
 // ---------------------------------------------------------------- quantifiers
 const CNT = [
@@ -241,11 +241,11 @@ const ADV_KIND = [
 ];
 // ---------------------------------------------------------------- conjunctions and questions
 const CNJ = [
-  ['Ali likes tea ___ coffee.', 'and', ['but', 'M_CNJ_BUT_FOR_AND'], ['or', 'M_CNJ_OR_FOR_AND'], 'He likes both, so and joins them.'],
+  ['Ali likes tea ___ coffee. He drinks both every day.', 'and', ['but', 'M_CNJ_BUT_FOR_AND'], ['or', 'M_CNJ_OR_FOR_AND'], 'He likes both, so and joins them.'],
   ['It was raining, ___ we stayed inside.', 'so', ['because', 'M_CNJ_BECAUSE_SO'], ['but', 'M_CNJ_BUT_FOR_AND'], 'Staying inside is the result: so.'],
   ['We stayed inside ___ it was raining.', 'because', ['so', 'M_CNJ_BECAUSE_SO'], ['but', 'M_CNJ_BUT_FOR_AND'], 'The rain is the reason: because.'],
   ['I wanted to play, ___ I was tired.', 'but', ['and', 'M_CNJ_AND_FOR_BUT'], ['or', 'M_CNJ_OR_FOR_AND'], 'The two ideas go against each other: but.'],
-  ['Mama bought rice ___ beans.', 'and', ['or', 'M_CNJ_OR_FOR_AND'], ['but', 'M_CNJ_BUT_FOR_AND'], 'She bought both: and.'],
+  ['Mama bought rice ___ beans. She put both in the basket.', 'and', ['or', 'M_CNJ_OR_FOR_AND'], ['but', 'M_CNJ_BUT_FOR_AND'], 'She bought both: and.'],
   ['Would you like tea ___ juice?', 'or', ['and', 'M_CNJ_AND_FOR_OR'], ['but', 'M_CNJ_BUT_FOR_AND'], 'A choice between two things: or.'],
   ['He was hungry, ___ he ate two plates of ugali.', 'so', ['because', 'M_CNJ_BECAUSE_SO'], ['but', 'M_CNJ_BUT_FOR_AND'], 'Eating is the result of being hungry: so.'],
   ['She is small ___ strong.', 'but', ['and', 'M_CNJ_AND_FOR_BUT'], ['or', 'M_CNJ_OR_FOR_AND'], 'Small and strong go against each other: but.'],
@@ -327,7 +327,7 @@ export const FAMILIES = [
   sentenceChoose('pro', 'LANGUA.T4.PERSONAL_PRONOUNS', PRO_SENT, { hints: ['Do not say the name and the pronoun together.', 'Before the verb use the subject form. After a small word use the object form.'] }),
   ...trio('poss', 'LANGUA.T4.POSSESSIVE_PRONOUNS', POSS, { thinOk: true, topic: 'saying who owns something', hints: ['Look at what comes after the gap. Is there a noun, or nothing?', 'Mine, yours, hers, ours and theirs stand alone and never take an apostrophe.'] }),
   ...duo('adj', 'LANGUA.T5.ADJECTIVES', ADJ, { stem: '', topic: 'about the describing word in a sentence', hints: ['An adjective tells more about a noun, such as a person or a thing.', 'A verb tells what is done. An adverb tells how, when or where.'] }),
-  ...trio('ado', 'LANGUA.T5.ADJECTIVE_ORDER', ORD, { thinOk: false, stem: WORDS, topic: 'with describing words before a noun', hints: ['In English the describing words come before the noun.', 'Size comes first, then shape. Do not put and between them.'] }),
+  ...trio('ado', 'LANGUA.T5.ADJECTIVE_ORDER', ORD, { thinOk: true, stem: WORDS, topic: 'with describing words before a noun', hints: ['In English the describing words come before the noun.', 'Size comes first, then shape, then the noun.'] }),
   ...trio('cnt', 'LANGUA.T6.COUNT_UNCOUNT', CNT, { thinOk: true, topic: 'about how much or how many', hints: ['Can you count the thing one by one?', 'Many and few go with things you can count. Much and little go with things you cannot.'] }),
   ...trio('som', 'LANGUA.T6.SOME_ANY', SOM, { thinOk: true, stem: WORDS, topic: 'about how much there is of something', hints: ['Is the sentence positive, a question or a negative?', 'Some goes in a positive sentence. Any goes in a question or after not. Enough comes before the noun.'] }),
   ...trio('prp', 'LANGUA.T7.PRESENT_PROGRESSIVE', PRP, { thinOk: true, topic: 'about what is happening now', hints: ['An action happening now needs am, is or are and a verb ending in -ing.', 'Match am, is or are to the subject. Drop a silent e or double the last letter before -ing.'] }),
