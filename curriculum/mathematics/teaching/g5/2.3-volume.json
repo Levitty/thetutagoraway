@@ -1,0 +1,160 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "title": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [52, 70],
+  "notes": "Same path as area, one dimension up: build with cubes, count by layers, then discover length x width x height. The board must show hidden cubes being counted, because children count only the faces they can see. This is the drawing the owner asked to see slowed down and counted with the child (teaching-reasoning-in-motion).",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY",
+      "key_step": "The child says a cube with 1 cm edges is 1 cm³ and tells cm, cm² and cm³ apart (along, cover, fill).",
+      "floor": {"prerequisite": "Knows cm and cm².", "question": "Is cm² for a line or a surface?", "answer": "A surface"},
+      "representations": ["a sugar cube or 1 cm cube", "a line, a square and a cube side by side", "the unit cm³"],
+      "steps": ["Show a 1 cm line, a 1 cm square and a 1 cm cube together.", "Name each: along, cover, fill.", "Name cm³ and read it aloud.", "Contrast volume with mass: same size cubes of wood and stone."],
+      "contexts": ["a sugar cube", "a dice", "a small box of chalk"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 1 cm line, a 1 cm square, then slowly a 1 cm cube, edge by edge.", "say": "Count the edges of the cube with me."},
+        {"beat": "count", "do": "Child counts the cube's edges as each is drawn."},
+        {"beat": "pause", "do": "Wait for the child to name what each shape measures."},
+        {"beat": "write", "do": "Write cm, cm², cm³ under the three shapes with gaps for the child's words."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY.M_CM3_MEANS_3CM", "listen_for": ["3 cm edges"], "ask": "Measure the edge of the 1 cm³ cube. How long is it?", "repair": "The small 3 says 'cube', like the small 2 says 'square'. The edge is 1 cm."},
+        {"code": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY.M_VOLUME_IS_MASS", "listen_for": ["the iron one is bigger"], "ask": "Do the two cubes take up the same space on the table?", "repair": "Heavier is mass, not space. Two same-size cubes fill the same space."}
+      ],
+      "checks": [
+        {"question": "A cube has a volume of 1 cm³. How long is each edge?", "answer": "1 cm", "shows": "meaning of cm³"},
+        {"question": "Wanjiru builds a shape from 24 cubes of 1 cm. What is its volume?", "answer": "24 cm³", "shows": "cubic units"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES",
+      "key_step": "The child counts cubes layer by layer, including hidden ones, and knows rearranging the same cubes keeps the volume.",
+      "floor": {"prerequisite": "Knows what 1 cm³ is.", "question": "How many 1 cm cubes make a row 4 cm long?", "answer": "4"},
+      "representations": ["a stack of cubes", "a drawing of layers pulled apart", "the count in cm³"],
+      "steps": ["Build or draw a cuboid of cubes.", "Pull the layers apart in the drawing.", "Count one layer, then count the layers.", "Rebuild the cubes in a new shape: same count."],
+      "contexts": ["a stack of sugar cubes", "boxes in a duka", "bricks in a pile"],
+      "board": [
+        {"beat": "draw", "do": "Draw a cuboid 4 cubes long, 2 wide, 3 high; then slowly slide the top layer up and away.", "say": "Watch the top layer lift off."},
+        {"beat": "count", "do": "Child counts the cubes in the lifted layer."},
+        {"beat": "predict", "do": "Ask how many layers there are before lifting the next.", "say": "How many layers like this one?"},
+        {"beat": "pause", "do": "Wait for the child to say the total."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES.M_COUNT_ONE_LAYER", "listen_for": ["8"], "ask": "Is there anything under the top layer?", "repair": "Lift the layers off one by one in the drawing and count each."},
+        {"code": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES.M_COUNT_FACE_SQUARES", "listen_for": ["I counted the squares I can see"], "ask": "Does the corner cube get counted once, or three times?", "repair": "Count cubes, not faces: layer by layer, hidden ones included."}
+      ],
+      "checks": [
+        {"question": "A stack of 1 cm cubes has 3 layers, each 4 cubes long and 2 cubes wide. What is its volume?", "answer": "24 cm³", "shows": "counts all layers"},
+        {"question": "Otieno rebuilds 12 cubes from a long shape into a tall one. Which takes more space?", "answer": "Neither; both are 12 cm³", "shows": "conservation of volume"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE",
+      "key_step": "The child explains that length x width gives the cubes in one layer, and that times the number of layers (height) gives the volume.",
+      "floor": {"prerequisite": "Counts cubes by layers.", "question": "A layer has 4 rows of 3 cubes. How many cubes?", "answer": "12"},
+      "representations": ["cubes in layers", "the layer drawn flat as a grid", "V = l x w x h"],
+      "steps": ["One layer: rows times cubes in a row.", "Layers: multiply by how many.", "Name the three measures: length, width, height.", "Turn the box on its end: same three numbers, same volume."],
+      "contexts": ["a matchbox", "a crate of soda", "a stack of exercise books"],
+      "board": [
+        {"beat": "draw", "do": "Draw one layer as a 4 by 3 grid, then stack a second and third layer above it, one at a time.", "say": "Each layer is the same."},
+        {"beat": "count", "do": "Child counts the layers as they appear."},
+        {"beat": "pause", "do": "Wait for the child to say how to get the total without counting each cube."},
+        {"beat": "write", "do": "Write cubes in a layer x number of layers, with gaps for the child."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE.M_ADD_LAYERS", "listen_for": ["17", "12 plus 5"], "ask": "Each layer has 12 cubes. How many cubes in two layers?", "repair": "Stack layers one at a time: 12, 24, 36... layers are groups of 12."},
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE.M_ROTATION_CHANGES_VOLUME", "listen_for": ["it's bigger standing up"], "ask": "Did any cubes get added when the box stood up?", "repair": "Turn the drawing: the same cubes, just a different way up."}
+      ],
+      "checks": [
+        {"question": "One layer has 4 rows of 3 cubes. There are 5 layers. How many cubes?", "answer": "60", "shows": "multiplies by layers"},
+        {"question": "A box is 6 cm by 2 cm by 1 cm lying flat. Stood on its end, what is its volume?", "answer": "12 cm³, the same", "shows": "rotation does not change volume"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC",
+      "key_step": "The child multiplies all three measures (length, width and height) and writes cm³.",
+      "floor": {"prerequisite": "Knows V = l x w x h from building.", "question": "What three measures does a box have?", "answer": "Length, width, height"},
+      "representations": ["a labelled cuboid", "the cuboid with faint cubes", "the product in cm³"],
+      "steps": ["Label the three measures.", "Multiply length by width (one layer).", "Multiply by height.", "Write cm³."],
+      "contexts": ["a box of chalk", "a brick", "a juice carton"],
+      "board": [
+        {"beat": "draw", "do": "Draw a cuboid labelled 5 cm, 3 cm, 2 cm."},
+        {"beat": "point", "do": "Point at the base, then up the height.", "say": "How many cubes in the bottom layer?"},
+        {"beat": "pause", "do": "Wait for the child, then for the number of layers."},
+        {"beat": "reveal", "do": "Fade in the cubes only after the child answers.", "say": "Let's see the cubes."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC.M_ADD_DIMENSIONS", "listen_for": ["10", "5 plus 3 plus 2"], "ask": "How many cubes fit in the bottom layer alone?", "repair": "Go back to layers: the bottom layer alone has 15 cubes, so the total cannot be 10."},
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC.M_TWO_DIMENSIONS_ONLY", "listen_for": ["15"], "ask": "Is that one layer, or the whole box?", "repair": "Point up the height: how many layers like that?"}
+      ],
+      "checks": [
+        {"question": "Find the volume of a cuboid 5 cm long, 3 cm wide and 2 cm high.", "answer": "30 cm³", "shows": "all three multiplied"},
+        {"question": "A brick is 20 cm by 10 cm by 5 cm. What is its volume?", "answer": "1 000 cm³", "shows": "larger numbers"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS",
+      "key_step": "The child picks out only the three lengths, converts any metres to centimetres first, and multiplies.",
+      "floor": {"prerequisite": "Calculates the volume of a cuboid.", "question": "1 m = ___ cm", "answer": "100"},
+      "representations": ["the real object", "a sketch with only the lengths labelled", "the calculation"],
+      "steps": ["Underline the lengths in the story; cross out other numbers (prices).", "Check all lengths are in cm.", "Multiply.", "Answer with cm³."],
+      "contexts": ["a box of chalk at the school store", "a wooden box made by a fundi", "a bar of soap"],
+      "board": [
+        {"beat": "write", "do": "Write the story: a box of chalk costs Sh 50; 10 cm long, 6 cm wide, 5 cm high."},
+        {"beat": "point", "do": "Point at each number in turn.", "say": "Is this one a length?"},
+        {"beat": "child_draws", "do": "Child circles the lengths and crosses out the price."},
+        {"beat": "pause", "do": "Wait for the child's calculation."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS.M_MULTIPLY_ALL_NUMBERS", "listen_for": ["15 000"], "ask": "Is Sh 50 a length of the box?", "repair": "Only the three lengths go in. Circle them first."},
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS.M_MIXED_UNITS", "listen_for": ["50 cm³", "1 times 10 times 5"], "ask": "Is the box only 1 cm long?", "repair": "Change 1 m to 100 cm before multiplying."}
+      ],
+      "checks": [
+        {"question": "A box of chalk costs Sh 50. It is 10 cm long, 6 cm wide and 5 cm high. Find its volume.", "answer": "300 cm³", "shows": "ignores the price"},
+        {"question": "A wooden box is 1 m long, 10 cm wide and 5 cm high. What is its volume in cm³?", "answer": "5 000 cm³", "shows": "converts metres first"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE",
+      "key_step": "The child explains that a cube is a cuboid with all edges equal, so its volume is edge x edge x edge.",
+      "floor": {"prerequisite": "Knows V = l x w x h.", "question": "Volume of a cuboid 2 by 2 by 2?", "answer": "8 cm³"},
+      "representations": ["2 by 2 by 2 and 3 by 3 by 3 cubes of cubes", "layers pulled apart", "V = s x s x s"],
+      "steps": ["Build a 2 by 2 by 2 cube; count layers.", "Build 3 by 3 by 3; count layers.", "Notice length, width and height are the same number.", "Write V = s x s x s."],
+      "contexts": ["a dice", "a sugar cube box", "a Rubik's-style puzzle"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 3 by 3 by 3 cube; slowly lift off the top layer, then the middle.", "say": "Count each layer with me."},
+        {"beat": "count", "do": "Child counts cubes in one layer, then layers."},
+        {"beat": "pause", "do": "Wait for the child to say the total and why."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE.M_EDGE_EQUALS_VOLUME", "listen_for": ["3 cm³", "only one number so we can't"], "ask": "How many small cubes in just the top layer?", "repair": "Lift the layers: 9 in each, 3 layers. One edge number is enough because all edges match."}
+      ],
+      "checks": [
+        {"question": "A cube has edges of 3 cm. What is its volume?", "answer": "27 cm³", "shows": "edge cubed"},
+        {"question": "Why can we find a cube's volume from one edge?", "answer": "All its edges are equal, so length, width and height are the same", "shows": "explains the formula"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC",
+      "key_step": "The child multiplies the edge by itself three times (not by 3, not only twice) and writes cm³.",
+      "floor": {"prerequisite": "Knows V = s x s x s.", "question": "4 x 4 =", "answer": "16"},
+      "representations": ["a cube-shaped box", "one face, then layers", "the calculation"],
+      "steps": ["One face: edge x edge.", "Layers: times edge again.", "Write cm³."],
+      "contexts": ["a dice", "a cube-shaped gift box", "a sugar cube"],
+      "board": [
+        {"beat": "draw", "do": "Draw a cube labelled 4 cm."},
+        {"beat": "point", "do": "Point at the front face.", "say": "How many cubes cover this face?"},
+        {"beat": "pause", "do": "Wait for the child, then ask how many layers deep."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC.M_CUBE_S_TIMES_3", "listen_for": ["12", "4 times 3"], "ask": "How many cubes in just the front face?", "repair": "The face alone has 16, so 12 is too small. Edge times edge times edge."},
+        {"code": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC.M_CUBE_S_SQUARED", "listen_for": ["16"], "ask": "Is that one layer or the whole cube?", "repair": "Count the layers back from the face: 4 of them."}
+      ],
+      "checks": [
+        {"question": "A cube-shaped box has edges of 4 cm. Find its volume.", "answer": "64 cm³", "shows": "three factors"},
+        {"question": "A dice has edges of 2 cm. What is its volume?", "answer": "8 cm³", "shows": "small cube"}
+      ]
+    }
+  ]
+}

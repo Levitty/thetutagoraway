@@ -1,0 +1,207 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "title": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor",
+  "sources": [52, 66, 72],
+  "notes": "Measurement is one of the weakest areas in Kenyan national assessments (source 66). Two habits run through every skill: say the unit aloud with every number, and estimate first with a body benchmark (a 100 m race; about 10 to 15 minutes' walk for 1 km) so a wrong conversion looks wrong (source 72). The commonest error carries Grade 4's 100 cm = 1 m into km, giving 1 km = 100 m.",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT",
+      "key_step": "The child chooses km for long distances and explains by comparing with metres they know (a classroom, a 100 m race).",
+      "floor": {"prerequisite": "Knows metres and centimetres (Grade 4).", "question": "Would you measure a pencil in cm or in m?", "answer": "cm"},
+      "representations": ["a road sign with a town and a number", "a picture scale: pencil, classroom, school field, road between towns", "the unit written km"],
+      "steps": ["Sort lengths from small to large: a pencil, a classroom, a football pitch, the road to the next town.", "Ask which unit fits each.", "Name the kilometre and write km; contrast with kg (both 'kilo', one length, one mass)."],
+      "contexts": ["road signs on the way to Thika or Nakuru", "a marathon route", "the distance from home to the market"],
+      "board": [
+        {"beat": "draw", "do": "Draw four pictures in a row, growing: pencil, classroom, school field, a road between two towns."},
+        {"beat": "point", "do": "Point at each picture in turn.", "say": "Which unit would you use for this one?"},
+        {"beat": "pause", "do": "Wait for the child's unit for each picture."},
+        {"beat": "write", "do": "Write a road sign 'Thika 12' with a box after 12 for the child's unit."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT.M_UNIT_SIZE_MISMATCH", "listen_for": ["metres", "I would use m"], "ask": "How many school fields would fit between Nairobi and Nakuru?", "repair": "Picture lining up metre sticks all the way to Nakuru: far too many. A bigger unit makes a sensible number."},
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT.M_KM_KG_CONFUSION", "listen_for": ["12 kg"], "ask": "Is a road sign telling us how heavy Thika is?", "repair": "Kilo means a thousand. A thousand metres is a km; a thousand grammes is a kg. Say both aloud."}
+      ],
+      "checks": [
+        {"question": "Which unit is best for the distance from Nairobi to Nakuru: cm, m or km?", "answer": "km", "shows": "chooses km for long distances"},
+        {"question": "Complete: the road sign says 'Thika 12'. Thika is 12 ___ away.", "answer": "km", "shows": "km not kg"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE",
+      "key_step": "The child uses a benchmark (about 10 to 15 minutes' walk is about 1 km) to give a sensible estimate in km.",
+      "floor": {"prerequisite": "Knows what a kilometre is.", "question": "Is a kilometre longer or shorter than a football pitch?", "answer": "Longer"},
+      "representations": ["a walk the child knows", "a map line with 1 km marks", "an estimate in km"],
+      "steps": ["Give the benchmark: a 1 km walk takes about 10 to 15 minutes.", "Ask how long the child walks to school; turn minutes into a km estimate.", "Check estimates are sensible (not 50 km for a 15-minute walk)."],
+      "contexts": ["the walk from home to school", "school to the nearest shopping centre", "a matatu ride to town"],
+      "board": [
+        {"beat": "draw", "do": "Draw a path with a flag every 1 km and a small clock beside each flag showing about 12 minutes."},
+        {"beat": "predict", "do": "Ask how long the child's walk to school takes, then where it would end on the path.", "say": "How long is your walk to school?"},
+        {"beat": "child_draws", "do": "Child marks where their school would be on the path."},
+        {"beat": "pause", "do": "Wait for the child to say the estimate in km."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE.M_UNREALISTIC_ESTIMATE", "listen_for": ["50 km", "100 km"], "ask": "If 1 km takes about 12 minutes, how long would 50 km take to walk?", "repair": "Use the path picture: count flags for 15 minutes. Compare with the child's estimate."},
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE.M_TIME_AS_DISTANCE", "listen_for": ["20 minutes", "half an hour"], "ask": "Twenty minutes is how long it takes. How far is it?", "repair": "Separate how long from how far: turn the time into flags on the path."}
+      ],
+      "checks": [
+        {"question": "Amina walks to school in about 15 minutes. About how far is her school: 1 km, 50 km or 10 m?", "answer": "About 1 km", "shows": "uses the walking benchmark"},
+        {"question": "Estimate how far a 45-minute walk would take you.", "answer": "About 3 to 4 km", "shows": "scales the benchmark"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP",
+      "key_step": "The child says 1 km = 1 000 m and uses it to compare distances given in different units by putting them in the same unit first.",
+      "floor": {"prerequisite": "Knows 1 m = 100 cm.", "question": "How many centimetres in 1 metre?", "answer": "100"},
+      "representations": ["ten 100 m races end to end", "a bar of 1 km marked in 100 m steps", "1 km = 1 000 m"],
+      "steps": ["Start from the 100 m race the child knows.", "Lay ten of them end to end: count in hundreds to 1 000.", "Compare 2 km and 1 500 m: change one so both have the same unit."],
+      "contexts": ["a school sports 100 m race", "a 400 m track", "two routes to the market"],
+      "board": [
+        {"beat": "draw", "do": "Draw a long bar labelled 1 km and divide it into 10 parts slowly, one cut at a time.", "say": "Each part is one 100 metre race."},
+        {"beat": "count", "do": "Child counts in hundreds along the parts.", "say": "Count in hundreds with me."},
+        {"beat": "pause", "do": "Wait for the child to say how many metres the whole bar is."},
+        {"beat": "write", "do": "Write 2 km and 1 500 m with a box between for the child's sign."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP.M_KM_EQUALS_100M", "listen_for": ["100", "like centimetres"], "ask": "One 100 m race. Is that the same as walking for 12 minutes?", "repair": "Count the ten 100 m races along the bar. The 100 belongs to cm and m; km is a thousand."},
+        {"code": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP.M_BIGGER_NUMBER_LONGER", "listen_for": ["1 500 is bigger than 2"], "ask": "How many metres is 2 km?", "repair": "Put both in metres before comparing: 2 000 m and 1 500 m."}
+      ],
+      "checks": [
+        {"question": "Which is longer: 2 km or 1 500 m?", "answer": "2 km", "shows": "same unit before comparing"},
+        {"question": "1 km = ___ m", "answer": "1 000", "shows": "the relationship"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M",
+      "key_step": "The child multiplies km by 1 000 (more of the smaller unit) and writes mixed measures with zeros in the empty places (3 km 45 m = 3 045 m).",
+      "floor": {"prerequisite": "Knows 1 km = 1 000 m.", "question": "How many metres in 1 km?", "answer": "1 000"},
+      "representations": ["a road in km and m", "a place value chart with km in the thousands", "metres written in full"],
+      "steps": ["Estimate: more metres or fewer?", "Whole km: multiply by 1 000.", "Mixed: km go in the thousands, m fill the last three places, with zeros.", "Read the answer aloud and check it is about right."],
+      "contexts": ["a race of 6 km", "a road 3 km 45 m long", "a farm boundary in km and m"],
+      "board": [
+        {"beat": "predict", "do": "Ask whether 6 km is more or fewer metres than 6.", "say": "More metres or fewer?"},
+        {"beat": "draw", "do": "Draw three boxes after a comma for hundreds, tens and ones of metres."},
+        {"beat": "write", "do": "Write 3 km 45 m above the boxes."},
+        {"beat": "child_draws", "do": "Child fills the thousands and the three boxes."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M.M_KM_TO_M_TIMES_100", "listen_for": ["600 m"], "ask": "Is 600 m about a 12-minute walk, or less?", "repair": "Go back to the ten 100 m races: one km is 1 000 m, so multiply by 1 000."},
+        {"code": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M.M_MISSING_PLACEHOLDER_ZERO", "listen_for": ["345 m"], "ask": "Is 345 m more or less than 3 km?", "repair": "Three boxes after the thousands: 45 fills the last two, the hundreds box gets a zero."}
+      ],
+      "checks": [
+        {"question": "Convert 2 km 5 m to metres.", "answer": "2 005 m", "shows": "zeros in empty places"},
+        {"question": "Convert 7 km to metres.", "answer": "7 000 m", "shows": "times 1 000"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM",
+      "key_step": "The child splits off thousands of metres as km (divide by 1 000, fewer of the bigger unit) and keeps the last three digits as metres.",
+      "floor": {"prerequisite": "Converts km to m.", "question": "3 km = ___ m", "answer": "3 000"},
+      "representations": ["metres of road", "the number with a line before the last three digits", "km and m"],
+      "steps": ["Estimate: more km or fewer?", "Draw a line before the last three digits.", "Left of the line is km, right is m (keep internal zeros).", "Check by converting back."],
+      "contexts": ["a county road 12 300 m long", "a fence 4 050 m around a farm", "a long-distance race"],
+      "board": [
+        {"beat": "write", "do": "Write 4 050 m large."},
+        {"beat": "draw", "do": "Slowly draw a line before the last three digits.", "say": "A thousand metres make one km."},
+        {"beat": "pause", "do": "Wait for the child to read the km and the m."},
+        {"beat": "child_draws", "do": "Child writes the answer as km and m."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM.M_M_TO_KM_DIVIDE_100", "listen_for": ["34 km"], "ask": "Is 3 400 m more than 30 km of walking?", "repair": "Thousands make km: the line goes before the last three digits, not two."},
+        {"code": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM.M_M_TO_KM_DROPS_ZERO", "listen_for": ["4 km 5 m"], "ask": "Read the three digits after your line, zero included.", "repair": "The metres part is all three digits: 050 is 50 m."}
+      ],
+      "checks": [
+        {"question": "Write 3 400 m in km and m.", "answer": "3 km 400 m", "shows": "splits at thousands"},
+        {"question": "Write 12 300 m in km and m.", "answer": "12 km 300 m", "shows": "five-digit metres"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.ADD_KM_M",
+      "key_step": "The child adds metres to metres and km to km, and regroups every 1 000 m as 1 km.",
+      "floor": {"prerequisite": "Converts between km and m.", "question": "1 300 m = ___ km ___ m", "answer": "1 km 300 m"},
+      "representations": ["a journey in two legs", "km and m columns", "the total"],
+      "steps": ["Estimate the total in km.", "Set out km and m columns.", "Add metres; regroup 1 000 m as 1 km.", "Add km including the carried km.", "Check against the estimate."],
+      "contexts": ["a journey by matatu then on foot", "a relay race", "two days of a school walk"],
+      "board": [
+        {"beat": "write", "do": "Write 2 km 700 m + 1 km 600 m in km and m columns."},
+        {"beat": "point", "do": "Point at the metres column.", "say": "Add the metres first. What do you get?"},
+        {"beat": "pause", "do": "Wait for 1 300 m and what to do with 1 000 of it."},
+        {"beat": "child_draws", "do": "Child writes the carried km and finishes."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.ADD_KM_M.M_ADD_NO_REGROUP", "listen_for": ["3 km 1 300 m"], "ask": "Is 1 300 m more than a kilometre?", "repair": "Any 1 000 m in the metres column moves to the km column, like ten ones to the tens."},
+        {"code": "MATH.G5.MEASUR.LENGTH.ADD_KM_M.M_ADD_IGNORE_UNITS", "listen_for": ["305 m"], "ask": "The matatu went 5 km first. Can the total be less than 5 km?", "repair": "Put each part in its column: 5 km 0 m and 0 km 300 m."}
+      ],
+      "checks": [
+        {"question": "2 km 70 m + 1 km 50 m", "answer": "3 km 120 m", "shows": "no regrouping at 100"},
+        {"question": "A matatu travels 5 km, then 300 m more. How far altogether?", "answer": "5 km 300 m", "shows": "units kept"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M",
+      "key_step": "The child exchanges 1 km for 1 000 m when there are too few metres, and reduces the km by one.",
+      "floor": {"prerequisite": "Adds km and m with regrouping.", "question": "1 km 200 m = ___ m", "answer": "1 200"},
+      "representations": ["a road with part done", "km and m columns with exchange", "the difference"],
+      "steps": ["Estimate.", "Set out columns.", "If the top metres are fewer, exchange 1 km for 1 000 m.", "Subtract metres, then km.", "Check by adding back."],
+      "contexts": ["how much of a road is left to tarmac", "how much further one runner went", "a journey still to go"],
+      "board": [
+        {"beat": "write", "do": "Write 5 km 200 m - 2 km 650 m in columns."},
+        {"beat": "point", "do": "Point at 200 above 650.", "say": "Can we take 650 m from 200 m?"},
+        {"beat": "pause", "do": "Wait for the child to suggest exchanging a km."},
+        {"beat": "child_draws", "do": "Child crosses out 5 km, writes 4 km and 1 200 m, and subtracts."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M.M_SUB_SMALLER_FROM_LARGER", "listen_for": ["650 take 200", "3 km 450 m"], "ask": "Check by adding 2 km 650 m to your answer. Do you get 5 km 200 m?", "repair": "The check fails. The top is what we have; exchange 1 km for 1 000 m."},
+        {"code": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M.M_SUB_FORGET_REDUCE_KM", "listen_for": ["3 km 550 m"], "ask": "Where did the 1 000 m you added come from?", "repair": "Cross out the km you exchanged and write one fewer."}
+      ],
+      "checks": [
+        {"question": "5 km 200 m - 2 km 650 m", "answer": "2 km 550 m", "shows": "exchange and reduce"},
+        {"question": "4 km 50 m - 1 km 80 m", "answer": "2 km 970 m", "shows": "exchange gives 1 000 m, not 100"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M",
+      "key_step": "The child multiplies both the metres and the km, and regroups every 1 000 m in the product as 1 km.",
+      "floor": {"prerequisite": "Adds km and m with regrouping.", "question": "2 km 400 m + 2 km 400 m", "answer": "4 km 800 m"},
+      "representations": ["repeated trips", "columns", "the product"],
+      "steps": ["Estimate.", "Multiply the metres; regroup.", "Multiply the km; add the carried km.", "Check by repeated addition."],
+      "contexts": ["a boda boda rider's trips", "walking to school and back each day", "laps of a track"],
+      "board": [
+        {"beat": "draw", "do": "Draw three equal arrows, each labelled 2 km 400 m.", "say": "Three trips, each the same."},
+        {"beat": "predict", "do": "Ask for an estimate in km.", "say": "About how many km altogether?"},
+        {"beat": "write", "do": "Write 2 km 400 m x 3 in columns."},
+        {"beat": "child_draws", "do": "Child multiplies the metres first and regroups."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M.M_MULT_NO_REGROUP", "listen_for": ["6 km 1 200 m"], "ask": "Is 1 200 m more than a km?", "repair": "Regroup 1 000 m into the km column after multiplying the metres."},
+        {"code": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M.M_MULT_ONE_PART_ONLY", "listen_for": ["4 km 300 m"], "ask": "Did each trip have 300 m in it? How many trips?", "repair": "Draw the trips: every trip has km and m, so both parts are multiplied."}
+      ],
+      "checks": [
+        {"question": "A boda boda rider makes 3 trips of 2 km 400 m. How far does he ride?", "answer": "7 km 200 m", "shows": "regroups the metres"},
+        {"question": "1 km 300 m x 4", "answer": "5 km 200 m", "shows": "both parts multiplied"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M",
+      "key_step": "The child divides the km, changes any remaining km into 1 000 m and adds it to the metres before dividing them (or converts the whole distance to metres first).",
+      "floor": {"prerequisite": "Converts km to m; divides whole numbers.", "question": "7 200 ÷ 4 =", "answer": "1 800"},
+      "representations": ["a road shared among groups", "columns with the remainder carried", "the share"],
+      "steps": ["Estimate each share.", "Divide the km; note the remainder.", "Change the remaining km to metres and add to the metres.", "Divide the metres.", "Check by multiplying back."],
+      "contexts": ["a road shared among groups to clean", "a relay split among runners", "a rope cut into equal pieces"],
+      "board": [
+        {"beat": "draw", "do": "Draw a long road labelled 7 km 200 m, cut into 4 equal sections."},
+        {"beat": "predict", "do": "Ask for an estimate of each section.", "say": "About how long is each section?"},
+        {"beat": "write", "do": "Write 7 km 200 m ÷ 4 with a box for the leftover km."},
+        {"beat": "pause", "do": "Wait for the child to say what happens to the leftover km."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M.M_DIV_IGNORE_REMAINDER", "listen_for": ["1 km 50 m"], "ask": "Four groups each got 1 km. How much road is left that no group cleaned?", "repair": "The leftover 3 km must be shared too: change it to 3 000 m and add it to the metres."},
+        {"code": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M.M_DIV_REMAINDER_AS_100", "listen_for": ["1 km 125 m"], "ask": "How many metres is 3 km?", "repair": "Each leftover km is 1 000 m. Check by multiplying the answer by 4."}
+      ],
+      "checks": [
+        {"question": "7 km 200 m ÷ 4", "answer": "1 km 800 m", "shows": "remainder carried as 1 000 m per km"},
+        {"question": "A rope 5 km 500 m long is cut into 5 equal pieces. How long is each piece?", "answer": "1 km 100 m", "shows": "division with no remainder in the km"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,139 @@
+{
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "title": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [52, 70],
+  "notes": "Learners in our region swap area and perimeter, swap their units, count squares round the outside for perimeter and believe the same perimeter means the same area (source 70). So area starts from covering and counting, and the formula is the child's discovery that rows times columns counts the squares.",
+  "skills": [
+    {
+      "skill": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING",
+      "key_step": "The child explains that 1 cm² is the space covered by a square with 1 cm sides, and that cm measures a length while cm² measures a surface.",
+      "floor": {"prerequisite": "Measures lengths in cm.", "question": "Show me about 1 cm with your fingers.", "answer": "A small gap about the width of a fingernail"},
+      "representations": ["a 1 cm paper square on a fingertip", "a grid of 1 cm squares", "the unit cm²"],
+      "steps": ["Show a 1 cm square; the child measures its sides.", "Name its space: one square centimetre, cm².", "Contrast a 1 cm line with a 1 cm square.", "Show that a 2 cm square holds four 1 cm squares."],
+      "contexts": ["a postage stamp", "a fingernail", "a square of a chess board drawn on paper"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 1 cm line, then beside it a 1 cm square, slowly shading the square.", "say": "This line is 1 cm. This shaded square is 1 cm squared."},
+        {"beat": "draw", "do": "Draw a square with 2 cm sides."},
+        {"beat": "predict", "do": "Ask how many 1 cm squares fit inside before drawing them.", "say": "Guess. How many small squares fit inside?"},
+        {"beat": "child_draws", "do": "Child draws the 1 cm squares inside."},
+        {"beat": "pause", "do": "Wait for the child to count and say the area with its unit."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING.M_SQUARED_MEANS_DOUBLE", "listen_for": ["5 times 2", "10 cm"], "ask": "Is 5 cm² a line or a patch?", "repair": "The small 2 says 'square'. Draw five 1 cm squares: 5 cm² is five of them."},
+        {"code": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING.M_ANY_SQUARE_IS_ONE_CM2", "listen_for": ["one square is 1 cm²"], "ask": "How many 1 cm squares fit inside your 2 cm square?", "repair": "Only a square with 1 cm sides is 1 cm². Bigger squares hold several."}
+      ],
+      "checks": [
+        {"question": "A square has sides of 2 cm. What is its area?", "answer": "4 cm²", "shows": "not every square is 1 cm²"},
+        {"question": "What does 5 cm² mean?", "answer": "The space covered by five 1 cm squares", "shows": "meaning of the unit"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT",
+      "key_step": "The child covers the shape with 1 cm squares with no gaps or overlaps and counts every square, inside ones included.",
+      "floor": {"prerequisite": "Knows what 1 cm² is.", "question": "How big are the sides of a 1 cm² square?", "answer": "1 cm"},
+      "representations": ["paper squares on a stamp or book cover", "a 1 cm grid", "the count in cm²"],
+      "steps": ["Cover the shape edge to edge, no gaps, no overlaps.", "Count row by row.", "Record with cm²."],
+      "contexts": ["a postage stamp", "a mobile phone screen", "a page of an exercise book"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 4 by 3 rectangle on a 1 cm grid."},
+        {"beat": "count", "do": "Child counts squares row by row while the board ticks each one.", "say": "Count one row at a time."},
+        {"beat": "pause", "do": "Wait for the total and the unit."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT.M_COUNT_BORDER_ONLY", "listen_for": ["10", "I counted round the edge"], "ask": "Are there squares in the middle you have not ticked?", "repair": "Count row by row, ticking each square, so the middle is counted too."},
+        {"code": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT.M_COUNT_LINES_NOT_SQUARES", "listen_for": ["6 lines", "24"], "ask": "Are we counting the lines or the spaces between them?", "repair": "Put a dot in each square and count the dots."}
+      ],
+      "checks": [
+        {"question": "A rectangle on 1 cm grid paper is 5 squares long and 3 squares wide. Find its area.", "answer": "15 cm²", "shows": "counts squares, not lines"},
+        {"question": "Cover a stamp 3 cm by 2 cm with 1 cm squares. What is its area?", "answer": "6 cm²", "shows": "no gaps or overlaps"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE",
+      "key_step": "The child picks surfaces (not lengths) as things measured in cm², and explains why.",
+      "floor": {"prerequisite": "Knows what 1 cm² is.", "question": "Is a pencil's length a line or a surface?", "answer": "A line"},
+      "representations": ["real objects", "a sorting table: length, area", "the unit"],
+      "steps": ["Sort objects: things we measure along (length) and things we cover (area).", "Name the unit for each.", "The child gives their own example of each."],
+      "contexts": ["a postage stamp", "an exercise book cover", "a phone screen", "a mandazi tray"],
+      "board": [
+        {"beat": "draw", "do": "Draw two columns headed 'along' and 'cover'."},
+        {"beat": "write", "do": "Write: pencil length, stamp top, desk height, book cover, below the table."},
+        {"beat": "child_draws", "do": "Child moves each item into a column."},
+        {"beat": "pause", "do": "Wait for the child to say the unit for each column."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE.M_CM2_FOR_LENGTH", "listen_for": ["the pencil"], "ask": "Do we cover a pencil's length with squares, or measure along it?", "repair": "Run a finger along for length; spread a hand over for area."}
+      ],
+      "checks": [
+        {"question": "Which would you measure in cm²: the length of a pencil, the top of a stamp, or the height of a desk?", "answer": "The top of a stamp", "shows": "surface versus length"},
+        {"question": "Name one thing at home you would measure in cm².", "answer": "Any small flat surface, e.g. a phone screen", "shows": "own example"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS",
+      "key_step": "The child explains that rows times squares in a row counts all the squares, so the area is length times width.",
+      "floor": {"prerequisite": "Counts squares to find area; knows times tables.", "question": "What is 4 x 6?", "answer": "24"},
+      "representations": ["mandazi laid in rows on a tray", "a rectangle with only the first row and column drawn", "length x width"],
+      "steps": ["Count a full grid by rows: the child notices equal rows.", "Use multiplication to count faster.", "Show a rectangle with only the first row and column drawn; the child imagines the rest.", "Link squares in a row to the length and rows to the width."],
+      "contexts": ["a tray of mandazi in rows", "chairs in rows at assembly", "tiles on a floor"],
+      "board": [
+        {"beat": "draw", "do": "Draw a rectangle; draw squares along the top row only (6), then down the first column only (4)."},
+        {"beat": "predict", "do": "Ask how many squares would fill it.", "say": "If we filled it all, how many squares?"},
+        {"beat": "pause", "do": "Wait for the child's method."},
+        {"beat": "reveal", "do": "Fill in the rest row by row only after the child answers.", "say": "Let's check by filling it."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS.M_ADD_ROWS_COLUMNS", "listen_for": ["10", "6 plus 4"], "ask": "How many squares in the first row? How many rows like it?", "repair": "Fill one more row at a time and count: 6, 12, 18, 24. Rows of 6, four times."},
+        {"code": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS.M_PARTIAL_GRID_COUNT", "listen_for": ["7", "I counted the ones drawn"], "ask": "Is the middle of the rectangle empty, or just not drawn?", "repair": "Draw the second row in; the child sees the pattern and multiplies."}
+      ],
+      "checks": [
+        {"question": "A tray holds mandazi in 6 rows with 4 in each row, each on 1 cm². What area do they cover?", "answer": "24 cm²", "shows": "multiplies rows by columns"},
+        {"question": "A rectangle shows 5 squares along the top and 3 down the side. What is its area?", "answer": "15 cm²", "shows": "imagines the full grid"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC",
+      "key_step": "The child multiplies length by width (side by side for a square) and writes cm², and can say why it is not adding.",
+      "floor": {"prerequisite": "Links rows times columns to area.", "question": "4 rows of 5 squares. How many squares?", "answer": "20"},
+      "representations": ["a labelled rectangle", "the rectangle with a faint grid", "length x width = area in cm²"],
+      "steps": ["Estimate by imagining the grid.", "Multiply length by width.", "For a square, side times side.", "Write cm²; say why (squares)."],
+      "contexts": ["a floor tile", "an exercise book cover", "a kitenge piece"],
+      "board": [
+        {"beat": "draw", "do": "Draw a 7 cm by 5 cm rectangle with labels, no grid."},
+        {"beat": "predict", "do": "Ask how many 1 cm squares would cover it.", "say": "How many 1 cm squares would cover it?"},
+        {"beat": "pause", "do": "Wait for the child's answer and method."},
+        {"beat": "reveal", "do": "Fade in the grid only after the child answers, so they can check.", "say": "Let's see the squares."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC.M_AREA_AS_PERIMETER", "listen_for": ["24", "12", "I added the sides"], "ask": "Did you walk round the edge, or cover the inside?", "repair": "Fade in the grid and count rows. Walking round is perimeter; covering is area."},
+        {"code": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC.M_SQUARE_SIDE_DOUBLED", "listen_for": ["12", "6 times 2"], "ask": "How many rows of 6 squares in a 6 cm square?", "repair": "Draw the grid: 6 rows of 6. Side times side, not side times two."}
+      ],
+      "checks": [
+        {"question": "Find the area of a rectangle 7 cm long and 5 cm wide.", "answer": "35 cm²", "shows": "multiplies, square units"},
+        {"question": "A square tile has sides of 6 cm. What is its area?", "answer": "36 cm²", "shows": "side times side"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS",
+      "key_step": "The child decides whether the story needs area (covering) or perimeter (going round) before calculating, and finds a missing side by dividing.",
+      "floor": {"prerequisite": "Calculates area of rectangles.", "question": "Area of 4 cm by 3 cm?", "answer": "12 cm²"},
+      "representations": ["the object in the story", "a sketch with labels", "the calculation"],
+      "steps": ["Ask: are we covering it or going round it?", "Sketch and label.", "Calculate, with the unit.", "For a missing side, ask what times the known side gives the area."],
+      "contexts": ["kitenge cloth to cover a box top", "a textbook cover", "tiles for a classroom wall"],
+      "board": [
+        {"beat": "draw", "do": "Draw the box top 20 cm by 15 cm and a piece of kitenge."},
+        {"beat": "point", "do": "Point at the inside, then run along the edge.", "say": "Are we covering it, or going round it?"},
+        {"beat": "pause", "do": "Wait for the child to choose and calculate."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS.M_CONTEXT_WRONG_MEASURE", "listen_for": ["70 cm"], "ask": "Will 70 cm of string cover the top of the box?", "repair": "Act it: cloth covers, a ribbon goes round. Choose before calculating."},
+        {"code": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS.M_MISSING_SIDE_SUBTRACT", "listen_for": ["40", "48 take 8"], "ask": "8 times what makes 48?", "repair": "Rows times row length gives area, so area divided by one side gives the other."}
+      ],
+      "checks": [
+        {"question": "Akinyi covers the top of a box 20 cm by 15 cm with kitenge. How much cloth does she need?", "answer": "300 cm²", "shows": "chooses area in context"},
+        {"question": "A book cover has an area of 48 cm² and a length of 8 cm. What is its width?", "answer": "6 cm", "shows": "divides for a missing side"}
+      ]
+    }
+  ]
+}

@@ -1,0 +1,213 @@
+{
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "title": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor",
+  "sources": [49, 52, 53],
+  "notes": "Decimals carry the same root as fractions: the child reads the digits after the point as a whole number (source 53). Roughly four in ten Year 5 pupils elsewhere think a longer decimal is larger; about one in ten think a shorter one is. A right comparison counts only with a place value reason. The best Kenyan pictures are measures the child already handles: a metre stick (cm and mm), a litre jug (ml) and a kilogramme (g), because thousandths of these are real. Shillings show only hundredths and cents are rarely used, so use money with care.",
+  "skills": [
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+      "key_step": "The child names the places after the point as tenths, hundredths and thousandths, getting smaller to the right, mirroring tens, hundreds and thousands around the ones.",
+      "floor": {"prerequisite": "Knows tenths and hundredths as fractions (Grade 4) and whole-number places.", "question": "One whole cut into 10 equal parts. What is one part called?", "answer": "One tenth"},
+      "representations": ["a metre stick: 1 m, 0.1 m (10 cm), 0.01 m (1 cm), 0.001 m (1 mm)", "a place value chart with the ones column in the middle", "the decimal written with the point"],
+      "steps": ["Start from a metre stick: cut 1 m into 10, then each tenth into 10, then each hundredth into 10.", "Name each new piece: tenth, hundredth, thousandth; the child says which is smallest.", "Extend the place value chart to the right of the ones; the child notices the mirror around the ones (there is no 'oneths').", "Place digits of a decimal in the chart and name each place."],
+      "contexts": ["a child's height measured in metres", "the length of a desk in metres", "a packet of tea in kilogrammes"],
+      "board": [
+        {"beat": "draw", "do": "Draw a long bar, 1 metre; slowly cut it into 10 equal parts, one cut at a time.", "say": "One metre, cut into ten equal parts."},
+        {"beat": "pause", "do": "Wait for the child to name one part."},
+        {"beat": "draw", "do": "Zoom on one tenth and cut it into 10 again.", "say": "Now I cut one tenth into ten."},
+        {"beat": "predict", "do": "Ask what the tiny new part is called before naming it.", "say": "What could this tiny part be called?"},
+        {"beat": "write", "do": "Write the chart headings Th H T O . t h th, with the ones column bold, leaving the last three headings for the child to say."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_TENTHS_AS_TENS", "listen_for": ["tens", "the tens after the point", "oneths"], "ask": "Is the 5 in 4.583 worth more or less than one whole?", "repair": "On the metre stick, the first place after the point is pieces smaller than a metre: tenths. Point at the bold ones column and let the child say the mirror."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_THOUSANDTH_BIGGER", "listen_for": ["a thousand is more than ten", "thousandths are bigger"], "ask": "Which is bigger, one centimetre or one millimetre?", "repair": "On the metre stick, a thousandth is a millimetre and a tenth is 10 cm. More cuts, smaller pieces, as with fractions."}
+      ],
+      "checks": [
+        {"question": "In 34.708, what is the place of the 8?", "answer": "Thousandths", "shows": "names the third decimal place"},
+        {"question": "Which is greater: 3 tenths or 3 thousandths? Why?", "answer": "3 tenths; tenths are bigger pieces", "shows": "more cuts, smaller pieces"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
+      "key_step": "The child says the value of a digit as so many tenths, hundredths or thousandths (the 7 in 3.072 is 7 hundredths, 0.07) and writes zeros in empty places.",
+      "floor": {"prerequisite": "Names decimal places to thousandths.", "question": "In 2.36, which place is the 6 in?", "answer": "Hundredths"},
+      "representations": ["millilitres in a litre jug", "place value chart", "the value written as a decimal and as a fraction"],
+      "steps": ["Put the decimal in the chart.", "Name the place, then say the value with the place name (7 hundredths).", "Write the value as a decimal with zeros before it (0.07).", "Build a decimal from words using the chart, so empty places get zeros."],
+      "contexts": ["a 1 litre bottle of milk and part of it in ml", "a kilogramme of sugar and grammes", "a race time in seconds to thousandths"],
+      "board": [
+        {"beat": "write", "do": "Write 4.583 into the chart."},
+        {"beat": "point", "do": "Point at the 8 and run the finger up the column to its heading.", "say": "Read the heading of this column."},
+        {"beat": "pause", "do": "Wait for the child to say the value with the place name."},
+        {"beat": "child_draws", "do": "Child writes the value as a decimal under the chart."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_DIGIT_VALUE_AS_WHOLE", "listen_for": ["eight", "eighty"], "ask": "Is the 8 in 4.583 worth more than one whole, or less?", "repair": "Read the column heading aloud with the digit: eight hundredths. Then write it with zeros: 0.08."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_MISSING_PLACEHOLDER_ZERO", "listen_for": ["5.24"], "ask": "Put 'five and twenty-four thousandths' in the chart. Is the tenths box empty?", "repair": "Fill the chart from the right: the last digit sits in the thousandths. Empty places get a zero."}
+      ],
+      "checks": [
+        {"question": "What is the value of 7 in 3.072?", "answer": "7 hundredths (0.07)", "shows": "names the value with its place"},
+        {"question": "Write 'five and twenty-four thousandths' as a decimal.", "answer": "5.024", "shows": "zero placeholder"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE",
+      "key_step": "The child compares place by place from the left, starting with the whole part, and explains with place value (five tenths is more than four tenths and a bit), not with the length of the decimal.",
+      "floor": {"prerequisite": "Names decimal places and digit values.", "question": "What is the 5 in 0.5 worth?", "answer": "Five tenths"},
+      "representations": ["two lengths on a metre stick", "a number line 0 to 1 in tenths, zoomed to hundredths", "the decimals in a chart, with zeros added to the shorter one"],
+      "steps": ["Predict first: which is greater?", "Place both on a number line or metre stick.", "Compare the whole parts, then tenths, then hundredths.", "Write the shorter one with zeros to the same length and compare again (0.500 and 0.125).", "Show that a zero at the end does not change the value (0.70 = 0.7)."],
+      "contexts": ["two children's long jumps in metres", "two packets of tea in kg", "two bottles of juice in litres"],
+      "board": [
+        {"beat": "draw", "do": "Draw a line from 0 to 1 m marked in tenths.", "say": "A metre stick, in tenths."},
+        {"beat": "predict", "do": "Ask which of 0.5 and 0.125 is greater before placing them.", "say": "Guess first. Which is greater?"},
+        {"beat": "child_draws", "do": "Child marks 0.5 and then 0.125."},
+        {"beat": "pause", "do": "Wait for the child to compare the marks and give a reason."},
+        {"beat": "write", "do": "Write 0.500 under 0.125 in the chart, slowly adding the two zeros.", "say": "Same value, written with three places."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_LONGER_IS_LARGER", "listen_for": ["125 is bigger than 5", "it has more numbers"], "ask": "Put both on the metre stick. Which mark is further along?", "repair": "The line shows 0.5 further. Ask what the 5 is worth (five tenths) and what the 1 in 0.125 is worth (one tenth)."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_SHORTER_IS_LARGER", "listen_for": ["tenths are bigger than thousandths so 0.3 wins"], "ask": "Write 0.3 as thousandths. How many thousandths is it?", "repair": "0.3 = 0.300. Compare 300 thousandths with 312 thousandths on the chart. Praise the true part: a tenth is bigger than a thousandth."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_TRAILING_ZERO_CHANGES_VALUE", "listen_for": ["0.70 is more, it has a zero"], "ask": "Is 70 cm longer than 7 tenths of a metre?", "repair": "On the metre stick 0.7 m and 0.70 m land on the same mark. Zeros at the end name empty places."}
+      ],
+      "checks": [
+        {"question": "Which is greater: 0.3 or 0.312? Explain.", "answer": "0.312; 0.3 is 300 thousandths and 0.312 is 312 thousandths", "shows": "neither longer nor shorter rule; a place value reason"},
+        {"question": "Insert >, < or =: 0.70 ___ 0.7", "answer": "=", "shows": "trailing zeros do not change value"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
+      "key_step": "The child compares the whole parts first, then the decimal places, often writing all numbers to the same number of places.",
+      "floor": {"prerequisite": "Compares two decimals.", "question": "Which is greater, 1.9 or 1.875?", "answer": "1.9"},
+      "representations": ["children's heights on a wall chart", "a number line from 1 to 3", "a chart with all decimals written to three places"],
+      "steps": ["Say the direction: smallest first?", "Look at the whole parts first.", "For equal whole parts, write all to three places and compare.", "Write the order with the original numbers and read it aloud."],
+      "contexts": ["three children's heights in metres", "three bags of beans in kg", "three runners' times in seconds"],
+      "board": [
+        {"beat": "write", "do": "Write 2.05, 1.9, 1.875 in a column, lined up on the point."},
+        {"beat": "point", "do": "Point down the ones column.", "say": "What do the whole parts tell us first?"},
+        {"beat": "pause", "do": "Wait for the child to pick out the largest by its whole part."},
+        {"beat": "child_draws", "do": "Child adds zeros to 1.9 and writes the order."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_IGNORES_WHOLE_PART", "listen_for": ["05 is the smallest after the point"], "ask": "How many whole metres is 2.05? And 1.9?", "repair": "Line up on the point and compare the whole part first, like reading a price."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_WHOLE_NUMBER_SMALLEST", "listen_for": ["3 is short so smallest"], "ask": "Is 3 more or less than 2 and a bit?", "repair": "Write 3 as 3.000 and place all three on a number line from 2 to 3."}
+      ],
+      "checks": [
+        {"question": "Arrange from smallest to largest: 3, 2.875, 2.95.", "answer": "2.875, 2.95, 3", "shows": "whole number placed by value"},
+        {"question": "Arrange from largest to smallest: 0.6, 0.65, 0.065.", "answer": "0.65, 0.6, 0.065", "shows": "place by place with zeros"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES",
+      "key_step": "The child lines up the points, adds each place, and regroups ten tenths as one whole (and so on), keeping the point in line.",
+      "floor": {"prerequisite": "Adds whole numbers with regrouping.", "question": "What is 27 + 15?", "answer": "42"},
+      "representations": ["litres and tenths of a litre in jugs", "place value chart with regrouping", "column addition with the point lined up"],
+      "steps": ["Estimate: about how much in whole units?", "Line up the points.", "Add from the right; ten of a place makes one of the next place left.", "Bring the point straight down.", "Check against the estimate."],
+      "contexts": ["milk from two cows in litres", "rainfall in two days in cm", "two bags of rice in kg"],
+      "board": [
+        {"beat": "predict", "do": "Ask for an estimate of 2.7 + 1.5 in whole litres.", "say": "About how many litres altogether?"},
+        {"beat": "write", "do": "Write the column sum with the points lined up, the point drawn bold."},
+        {"beat": "point", "do": "Point at 7 tenths and 5 tenths.", "say": "How many tenths is that?"},
+        {"beat": "pause", "do": "Wait for the child to say twelve tenths and what to do with ten of them."},
+        {"beat": "child_draws", "do": "Child writes the carried one and finishes the sum."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_ADD_PARTS_SEPARATELY", "listen_for": ["3 point 12", "seven and five is twelve after the point"], "ask": "Your estimate was about 4 litres. Does 3.12 fit?", "repair": "Twelve tenths is one whole and two tenths: regroup into the ones, as with tens and ones."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_POINT_DROPPED", "listen_for": ["5388"], "ask": "Is the answer about 5 or about 5,000?", "repair": "Estimate first, then bring the point straight down in the column."}
+      ],
+      "checks": [
+        {"question": "2.786 + 4.457 =", "answer": "7.243", "shows": "regrouping across several places"},
+        {"question": "A cow gave 3.8 litres in the morning and 4.6 litres in the evening. How much altogether?", "answer": "8.4 litres", "shows": "regroups tenths into ones in context"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES",
+      "key_step": "The child lines up the points (not the last digits), writing a whole number with its point and zeros, then adds.",
+      "floor": {"prerequisite": "Adds decimals with the same number of places.", "question": "2.5 + 1.3 =", "answer": "3.8"},
+      "representations": ["kilogrammes of vegetables at the market", "place value chart", "column sum with zeros filled in"],
+      "steps": ["Estimate.", "Write every number with its point; a whole number gets '.0'.", "Line up the points and fill empty places with zeros.", "Add and check against the estimate."],
+      "contexts": ["sukuma wiki and tomatoes bought in kg", "distances walked in km", "fuel bought in litres"],
+      "board": [
+        {"beat": "write", "do": "Write 3.5 and 1.25 lined up on the right, as a child might."},
+        {"beat": "predict", "do": "Ask for an estimate in whole kilogrammes.", "say": "About how many kilogrammes?"},
+        {"beat": "point", "do": "Point at the two points, which do not line up.", "say": "What do you notice about the points?"},
+        {"beat": "child_draws", "do": "Child rewrites the sum with points lined up and a zero filled in."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES.M_RIGHT_ALIGN_DIGITS", "listen_for": ["1.60", "I put the end numbers together"], "ask": "3.5 kg plus more. Can the total be less than 3.5 kg?", "repair": "Line up the points so tenths sit under tenths. Fill the empty place with a zero."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES.M_WHOLE_AS_DECIMAL_DIGITS", "listen_for": ["0.31"], "ask": "Where is the point in the number 6?", "repair": "Write 6 as 6.00 so the 6 sits in the ones column."}
+      ],
+      "checks": [
+        {"question": "Wanjiru bought 3.5 kg of sukuma wiki and 1.25 kg of tomatoes. What is the total mass?", "answer": "4.75 kg", "shows": "points lined up"},
+        {"question": "6 + 0.25 =", "answer": "6.25", "shows": "a whole number written with its point"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
+      "key_step": "The child exchanges one of a place for ten of the next place to the right when the top digit is too small, including across zeros and across the point.",
+      "floor": {"prerequisite": "Subtracts whole numbers with regrouping.", "question": "52 - 28 =", "answer": "24"},
+      "representations": ["shillings and coins (one 10 shilling coin for ten 1 shilling coins)", "place value chart with exchange", "column subtraction with the point lined up"],
+      "steps": ["Estimate.", "Line up the points.", "Subtract from the right; exchange when the top digit is smaller.", "Across zeros: exchange step by step.", "Check by adding back."],
+      "contexts": ["milk left after selling some", "change from a purchase in shillings and cents", "a rope cut from a longer rope in metres"],
+      "board": [
+        {"beat": "write", "do": "Write 5.42 - 2.68 in a column, points lined up."},
+        {"beat": "point", "do": "Point at the 2 above the 8.", "say": "Can we take 8 hundredths from 2 hundredths?"},
+        {"beat": "pause", "do": "Wait for the child to suggest exchanging."},
+        {"beat": "child_draws", "do": "Child crosses out and rewrites the exchanged digits and finishes."},
+        {"beat": "write", "do": "Write the add-back check with gaps for the child."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SMALLER_FROM_LARGER", "listen_for": ["8 take 2 is 6", "I take the small from the big"], "ask": "Check by adding your answer back to 2.68. Do you get 5.42?", "repair": "The check fails, so look at the hundredths: the top is the amount we have. Exchange one tenth for ten hundredths."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_REGROUP_ACROSS_ZERO", "listen_for": ["I borrowed from the 6 and kept the zeros"], "ask": "When you took one from the 6, where did it go first?", "repair": "Exchange one place at a time: 1 whole becomes 10 tenths, one tenth becomes 10 hundredths, and so on."}
+      ],
+      "checks": [
+        {"question": "6.003 - 2.145 =", "answer": "3.858", "shows": "exchanges across zeros"},
+        {"question": "A jerrycan had 8.25 litres. 3.75 litres were used. How much is left?", "answer": "4.5 litres", "shows": "exchange in context"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES",
+      "key_step": "The child fills empty places with zeros so both numbers have the same places, then subtracts, exchanging as needed.",
+      "floor": {"prerequisite": "Subtracts decimals with the same places.", "question": "4.50 - 1.20 =", "answer": "3.30"},
+      "representations": ["litres of milk sold from a full can", "place value chart", "column subtraction with zeros filled"],
+      "steps": ["Estimate.", "Write both numbers to the same places; a whole number gets its point and zeros.", "Subtract with exchange.", "Check by adding back."],
+      "contexts": ["milk left after a sale", "change from 100 shillings", "a 7 km run with 2.45 km done"],
+      "board": [
+        {"beat": "write", "do": "Write 4.5 above 1.237, points lined up, with empty boxes after the 5."},
+        {"beat": "point", "do": "Point at the empty boxes.", "say": "What goes in these empty places?"},
+        {"beat": "pause", "do": "Wait for the child to say zeros."},
+        {"beat": "child_draws", "do": "Child fills the zeros and subtracts."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_BRING_DOWN_DIGITS", "listen_for": ["I brought the 3 and 7 down"], "ask": "What is in the empty places of 4.5?", "repair": "Write 4.5 as 4.500. Now there is something to take the 37 thousandths from."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_WHOLE_MINUS_DECIMAL", "listen_for": ["5.45", "7 take 2 is 5"], "ask": "Otieno sold 2 litres and a bit more. Can he have more than 5 litres left?", "repair": "Write 7 as 7.00 and subtract every place. Check by adding back."}
+      ],
+      "checks": [
+        {"question": "4.5 - 1.237 =", "answer": "3.263", "shows": "zeros filled, exchange"},
+        {"question": "Otieno had 7 litres of milk and sold 2.45 litres. How much is left?", "answer": "4.55 litres", "shows": "whole minus decimal"}
+      ]
+    },
+    {
+      "skill": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+      "key_step": "The child moves each digit three places to the left (the number gets bigger), filling empty places with zeros.",
+      "floor": {"prerequisite": "Multiplies whole numbers by 10, 100 and 1000.", "question": "45 x 100 =", "answer": "4,500"},
+      "representations": ["kilogrammes to grammes on a scale", "place value chart with digits sliding left", "the product"],
+      "steps": ["Estimate: bigger or smaller? About how big?", "Put the decimal in the chart.", "Slide every digit three places left, one place at a time.", "Fill empty places with zeros; read the answer."],
+      "contexts": ["kilogrammes of rice to grammes", "litres to millilitres", "kilometres to metres"],
+      "board": [
+        {"beat": "write", "do": "Write 3.2 in the chart."},
+        {"beat": "predict", "do": "Ask whether 3.2 x 1000 will be bigger or smaller, and roughly how big.", "say": "Bigger or smaller? About how big?"},
+        {"beat": "draw", "do": "Slide the digits one place left at a time, three times, counting each slide.", "say": "Count the slides with me."},
+        {"beat": "count", "do": "Child counts the three slides."},
+        {"beat": "pause", "do": "Wait for the child to fill the empty places and read the number."}
+      ],
+      "misconceptions": [
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_ANNEX_ZEROS", "listen_for": ["add three zeros", "2.45000"], "ask": "Is 2.45000 bigger than 2.45?", "repair": "Zeros at the end of a decimal change nothing. Slide the digits instead, in the chart."},
+        {"code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_NO_ZERO_FILL", "listen_for": ["32 grams"], "ask": "Is 3.2 kg of rice only 32 grams? A teaspoon is about 5 grams.", "repair": "Slide three places in the chart; the empty places become zeros. Check with the kg-to-g sense."}
+      ],
+      "checks": [
+        {"question": "0.375 x 1000 =", "answer": "375", "shows": "three places"},
+        {"question": "A bag holds 3.2 kg of rice. How many grams is that?", "answer": "3,200 g", "shows": "zero fill in context"}
+      ]
+    }
+  ]
+}

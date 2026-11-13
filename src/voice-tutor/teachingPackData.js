@@ -2625,6 +2625,2833 @@ export const TEACHING_PACK_G5 = {
   "sub_strand": "MATH.G5.NUMBER.FRACTIONS",
   "sub_strand_name": "Fractions",
   "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME",
+  "key_step": "The child names the places after the point as tenths, hundredths and thousandths, getting smaller to the right, mirroring tens, hundreds and thousands around the ones.",
+  "floor": {
+   "prerequisite": "Knows tenths and hundredths as fractions (Grade 4) and whole-number places.",
+   "question": "One whole cut into 10 equal parts. What is one part called?",
+   "answer": "One tenth"
+  },
+  "representations": [
+   "a metre stick: 1 m, 0.1 m (10 cm), 0.01 m (1 cm), 0.001 m (1 mm)",
+   "a place value chart with the ones column in the middle",
+   "the decimal written with the point"
+  ],
+  "steps": [
+   "Start from a metre stick: cut 1 m into 10, then each tenth into 10, then each hundredth into 10.",
+   "Name each new piece: tenth, hundredth, thousandth; the child says which is smallest.",
+   "Extend the place value chart to the right of the ones; the child notices the mirror around the ones (there is no 'oneths').",
+   "Place digits of a decimal in the chart and name each place."
+  ],
+  "contexts": [
+   "a child's height measured in metres",
+   "the length of a desk in metres",
+   "a packet of tea in kilogrammes"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a long bar, 1 metre; slowly cut it into 10 equal parts, one cut at a time.",
+    "say": "One metre, cut into ten equal parts."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name one part."
+   },
+   {
+    "beat": "draw",
+    "do": "Zoom on one tenth and cut it into 10 again.",
+    "say": "Now I cut one tenth into ten."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask what the tiny new part is called before naming it.",
+    "say": "What could this tiny part be called?"
+   },
+   {
+    "beat": "write",
+    "do": "Write the chart headings Th H T O . t h th, with the ones column bold, leaving the last three headings for the child to say."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_TENTHS_AS_TENS",
+    "listen_for": [
+     "tens",
+     "the tens after the point",
+     "oneths"
+    ],
+    "ask": "Is the 5 in 4.583 worth more or less than one whole?",
+    "repair": "On the metre stick, the first place after the point is pieces smaller than a metre: tenths. Point at the bold ones column and let the child say the mirror.",
+    "error": "Gives whole-number place names to decimal places, for example calling the first place after the point 'tens', or thinks there is a 'oneths' place.",
+    "example": {
+     "question": "In 4.583, what is the place value of the digit 5?",
+     "wrong_answer": "tens",
+     "correct_answer": "tenths"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_PLACE_NAME.M_THOUSANDTH_BIGGER",
+    "listen_for": [
+     "a thousand is more than ten",
+     "thousandths are bigger"
+    ],
+    "ask": "Which is bigger, one centimetre or one millimetre?",
+    "repair": "On the metre stick, a thousandth is a millimetre and a tenth is 10 cm. More cuts, smaller pieces, as with fractions.",
+    "error": "Thinks a thousandth is larger than a tenth because a thousand is larger than ten.",
+    "example": {
+     "question": "Which is greater: 3 tenths or 3 thousandths?",
+     "wrong_answer": "3 thousandths",
+     "correct_answer": "3 tenths (0.3 is greater than 0.003)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "In 34.708, what is the place of the 8?",
+    "answer": "Thousandths",
+    "shows": "names the third decimal place"
+   },
+   {
+    "question": "Which is greater: 3 tenths or 3 thousandths? Why?",
+    "answer": "3 tenths; tenths are bigger pieces",
+    "shows": "more cuts, smaller pieces"
+   }
+  ],
+  "name": "Name the place of a digit in a decimal (ones to thousandths)",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE",
+  "key_step": "The child says the value of a digit as so many tenths, hundredths or thousandths (the 7 in 3.072 is 7 hundredths, 0.07) and writes zeros in empty places.",
+  "floor": {
+   "prerequisite": "Names decimal places to thousandths.",
+   "question": "In 2.36, which place is the 6 in?",
+   "answer": "Hundredths"
+  },
+  "representations": [
+   "millilitres in a litre jug",
+   "place value chart",
+   "the value written as a decimal and as a fraction"
+  ],
+  "steps": [
+   "Put the decimal in the chart.",
+   "Name the place, then say the value with the place name (7 hundredths).",
+   "Write the value as a decimal with zeros before it (0.07).",
+   "Build a decimal from words using the chart, so empty places get zeros."
+  ],
+  "contexts": [
+   "a 1 litre bottle of milk and part of it in ml",
+   "a kilogramme of sugar and grammes",
+   "a race time in seconds to thousandths"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4.583 into the chart."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 8 and run the finger up the column to its heading.",
+    "say": "Read the heading of this column."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the value with the place name."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the value as a decimal under the chart."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_DIGIT_VALUE_AS_WHOLE",
+    "listen_for": [
+     "eight",
+     "eighty"
+    ],
+    "ask": "Is the 8 in 4.583 worth more than one whole, or less?",
+    "repair": "Read the column heading aloud with the digit: eight hundredths. Then write it with zeros: 0.08.",
+    "error": "Gives the digit itself, or a whole-number value, as the value of a digit after the decimal point.",
+    "example": {
+     "question": "What is the value of the digit 8 in 4.583?",
+     "wrong_answer": "8 (or 80)",
+     "correct_answer": "0.08 (8 hundredths)"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_DIGIT_VALUE.M_MISSING_PLACEHOLDER_ZERO",
+    "listen_for": [
+     "5.24"
+    ],
+    "ask": "Put 'five and twenty-four thousandths' in the chart. Is the tenths box empty?",
+    "repair": "Fill the chart from the right: the last digit sits in the thousandths. Empty places get a zero.",
+    "error": "Leaves out zero placeholders when writing a decimal from words or a chart.",
+    "example": {
+     "question": "Write 'five and twenty-four thousandths' as a decimal.",
+     "wrong_answer": "5.24",
+     "correct_answer": "5.024"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "What is the value of 7 in 3.072?",
+    "answer": "7 hundredths (0.07)",
+    "shows": "names the value with its place"
+   },
+   {
+    "question": "Write 'five and twenty-four thousandths' as a decimal.",
+    "answer": "5.024",
+    "shows": "zero placeholder"
+   }
+  ],
+  "name": "State the value of a digit and write decimals to thousandths from place value information (proposed)",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE",
+  "key_step": "The child compares place by place from the left, starting with the whole part, and explains with place value (five tenths is more than four tenths and a bit), not with the length of the decimal.",
+  "floor": {
+   "prerequisite": "Names decimal places and digit values.",
+   "question": "What is the 5 in 0.5 worth?",
+   "answer": "Five tenths"
+  },
+  "representations": [
+   "two lengths on a metre stick",
+   "a number line 0 to 1 in tenths, zoomed to hundredths",
+   "the decimals in a chart, with zeros added to the shorter one"
+  ],
+  "steps": [
+   "Predict first: which is greater?",
+   "Place both on a number line or metre stick.",
+   "Compare the whole parts, then tenths, then hundredths.",
+   "Write the shorter one with zeros to the same length and compare again (0.500 and 0.125).",
+   "Show that a zero at the end does not change the value (0.70 = 0.7)."
+  ],
+  "contexts": [
+   "two children's long jumps in metres",
+   "two packets of tea in kg",
+   "two bottles of juice in litres"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a line from 0 to 1 m marked in tenths.",
+    "say": "A metre stick, in tenths."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask which of 0.5 and 0.125 is greater before placing them.",
+    "say": "Guess first. Which is greater?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks 0.5 and then 0.125."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to compare the marks and give a reason."
+   },
+   {
+    "beat": "write",
+    "do": "Write 0.500 under 0.125 in the chart, slowly adding the two zeros.",
+    "say": "Same value, written with three places."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_LONGER_IS_LARGER",
+    "listen_for": [
+     "125 is bigger than 5",
+     "it has more numbers"
+    ],
+    "ask": "Put both on the metre stick. Which mark is further along?",
+    "repair": "The line shows 0.5 further. Ask what the 5 is worth (five tenths) and what the 1 in 0.125 is worth (one tenth).",
+    "error": "Thinks the decimal with more digits after the point is larger.",
+    "example": {
+     "question": "Which is greater: 0.5 or 0.125?",
+     "wrong_answer": "0.125",
+     "correct_answer": "0.5"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_SHORTER_IS_LARGER",
+    "listen_for": [
+     "tenths are bigger than thousandths so 0.3 wins"
+    ],
+    "ask": "Write 0.3 as thousandths. How many thousandths is it?",
+    "repair": "0.3 = 0.300. Compare 300 thousandths with 312 thousandths on the chart. Praise the true part: a tenth is bigger than a thousandth.",
+    "error": "Thinks the decimal with fewer digits after the point is larger because thousandths are 'tiny'.",
+    "example": {
+     "question": "Which is greater: 0.3 or 0.312?",
+     "wrong_answer": "0.3, because tenths are bigger than thousandths",
+     "correct_answer": "0.312"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_COMPARE.M_TRAILING_ZERO_CHANGES_VALUE",
+    "listen_for": [
+     "0.70 is more, it has a zero"
+    ],
+    "ask": "Is 70 cm longer than 7 tenths of a metre?",
+    "repair": "On the metre stick 0.7 m and 0.70 m land on the same mark. Zeros at the end name empty places.",
+    "error": "Thinks adding a zero at the end of a decimal makes it larger.",
+    "example": {
+     "question": "Insert >, < or =: 0.70 ___ 0.7",
+     "wrong_answer": ">",
+     "correct_answer": "="
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which is greater: 0.3 or 0.312? Explain.",
+    "answer": "0.312; 0.3 is 300 thousandths and 0.312 is 312 thousandths",
+    "shows": "neither longer nor shorter rule; a place value reason"
+   },
+   {
+    "question": "Insert >, < or =: 0.70 ___ 0.7",
+    "answer": "=",
+    "shows": "trailing zeros do not change value"
+   }
+  ],
+  "name": "Compare two decimals up to thousandths",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_ORDER": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER",
+  "key_step": "The child compares the whole parts first, then the decimal places, often writing all numbers to the same number of places.",
+  "floor": {
+   "prerequisite": "Compares two decimals.",
+   "question": "Which is greater, 1.9 or 1.875?",
+   "answer": "1.9"
+  },
+  "representations": [
+   "children's heights on a wall chart",
+   "a number line from 1 to 3",
+   "a chart with all decimals written to three places"
+  ],
+  "steps": [
+   "Say the direction: smallest first?",
+   "Look at the whole parts first.",
+   "For equal whole parts, write all to three places and compare.",
+   "Write the order with the original numbers and read it aloud."
+  ],
+  "contexts": [
+   "three children's heights in metres",
+   "three bags of beans in kg",
+   "three runners' times in seconds"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2.05, 1.9, 1.875 in a column, lined up on the point."
+   },
+   {
+    "beat": "point",
+    "do": "Point down the ones column.",
+    "say": "What do the whole parts tell us first?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to pick out the largest by its whole part."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child adds zeros to 1.9 and writes the order."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_IGNORES_WHOLE_PART",
+    "listen_for": [
+     "05 is the smallest after the point"
+    ],
+    "ask": "How many whole metres is 2.05? And 1.9?",
+    "repair": "Line up on the point and compare the whole part first, like reading a price.",
+    "error": "Orders decimals by the digits after the point only, ignoring the whole-number part.",
+    "example": {
+     "question": "Arrange from smallest to largest: 2.05, 1.9, 1.875",
+     "wrong_answer": "2.05, 1.9, 1.875",
+     "correct_answer": "1.875, 1.9, 2.05"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ORDER.M_WHOLE_NUMBER_SMALLEST",
+    "listen_for": [
+     "3 is short so smallest"
+    ],
+    "ask": "Is 3 more or less than 2 and a bit?",
+    "repair": "Write 3 as 3.000 and place all three on a number line from 2 to 3.",
+    "error": "Puts a whole number first when ordering from smallest because it has fewer digits.",
+    "example": {
+     "question": "Arrange from smallest to largest: 3, 2.875, 2.95",
+     "wrong_answer": "3, 2.875, 2.95",
+     "correct_answer": "2.875, 2.95, 3"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Arrange from smallest to largest: 3, 2.875, 2.95.",
+    "answer": "2.875, 2.95, 3",
+    "shows": "whole number placed by value"
+   },
+   {
+    "question": "Arrange from largest to smallest: 0.6, 0.65, 0.065.",
+    "answer": "0.65, 0.6, 0.065",
+    "shows": "place by place with zeros"
+   }
+  ],
+  "name": "Order a set of decimals up to thousandths",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES",
+  "key_step": "The child lines up the points, adds each place, and regroups ten tenths as one whole (and so on), keeping the point in line.",
+  "floor": {
+   "prerequisite": "Adds whole numbers with regrouping.",
+   "question": "What is 27 + 15?",
+   "answer": "42"
+  },
+  "representations": [
+   "litres and tenths of a litre in jugs",
+   "place value chart with regrouping",
+   "column addition with the point lined up"
+  ],
+  "steps": [
+   "Estimate: about how much in whole units?",
+   "Line up the points.",
+   "Add from the right; ten of a place makes one of the next place left.",
+   "Bring the point straight down.",
+   "Check against the estimate."
+  ],
+  "contexts": [
+   "milk from two cows in litres",
+   "rainfall in two days in cm",
+   "two bags of rice in kg"
+  ],
+  "board": [
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate of 2.7 + 1.5 in whole litres.",
+    "say": "About how many litres altogether?"
+   },
+   {
+    "beat": "write",
+    "do": "Write the column sum with the points lined up, the point drawn bold."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 7 tenths and 5 tenths.",
+    "say": "How many tenths is that?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say twelve tenths and what to do with ten of them."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the carried one and finishes the sum."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_ADD_PARTS_SEPARATELY",
+    "listen_for": [
+     "3 point 12",
+     "seven and five is twelve after the point"
+    ],
+    "ask": "Your estimate was about 4 litres. Does 3.12 fit?",
+    "repair": "Twelve tenths is one whole and two tenths: regroup into the ones, as with tens and ones.",
+    "error": "Adds the whole parts and the decimal parts as separate whole numbers, without regrouping into the ones.",
+    "example": {
+     "question": "2.7 + 1.5 =",
+     "wrong_answer": "3.12",
+     "correct_answer": "4.2"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_SAME_PLACES.M_POINT_DROPPED",
+    "listen_for": [
+     "5388"
+    ],
+    "ask": "Is the answer about 5 or about 5,000?",
+    "repair": "Estimate first, then bring the point straight down in the column.",
+    "error": "Leaves out or misplaces the decimal point in the answer.",
+    "example": {
+     "question": "4.236 + 1.152 =",
+     "wrong_answer": "5388",
+     "correct_answer": "5.388"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2.786 + 4.457 =",
+    "answer": "7.243",
+    "shows": "regrouping across several places"
+   },
+   {
+    "question": "A cow gave 3.8 litres in the morning and 4.6 litres in the evening. How much altogether?",
+    "answer": "8.4 litres",
+    "shows": "regroups tenths into ones in context"
+   }
+  ],
+  "name": "Add decimals with the same number of decimal places, with regrouping",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES",
+  "key_step": "The child lines up the points (not the last digits), writing a whole number with its point and zeros, then adds.",
+  "floor": {
+   "prerequisite": "Adds decimals with the same number of places.",
+   "question": "2.5 + 1.3 =",
+   "answer": "3.8"
+  },
+  "representations": [
+   "kilogrammes of vegetables at the market",
+   "place value chart",
+   "column sum with zeros filled in"
+  ],
+  "steps": [
+   "Estimate.",
+   "Write every number with its point; a whole number gets '.0'.",
+   "Line up the points and fill empty places with zeros.",
+   "Add and check against the estimate."
+  ],
+  "contexts": [
+   "sukuma wiki and tomatoes bought in kg",
+   "distances walked in km",
+   "fuel bought in litres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3.5 and 1.25 lined up on the right, as a child might."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate in whole kilogrammes.",
+    "say": "About how many kilogrammes?"
+   },
+   {
+    "beat": "point",
+    "do": "Point at the two points, which do not line up.",
+    "say": "What do you notice about the points?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child rewrites the sum with points lined up and a zero filled in."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES.M_RIGHT_ALIGN_DIGITS",
+    "listen_for": [
+     "1.60",
+     "I put the end numbers together"
+    ],
+    "ask": "3.5 kg plus more. Can the total be less than 3.5 kg?",
+    "repair": "Line up the points so tenths sit under tenths. Fill the empty place with a zero.",
+    "error": "Lines up the last digits on the right, as with whole numbers, instead of lining up the decimal points.",
+    "example": {
+     "question": "Wanjiru bought 3.5 kg of sukuma wiki and 1.25 kg of tomatoes. What is the total mass?",
+     "wrong_answer": "1.60 kg",
+     "correct_answer": "4.75 kg"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_ADD_MIXED_PLACES.M_WHOLE_AS_DECIMAL_DIGITS",
+    "listen_for": [
+     "0.31"
+    ],
+    "ask": "Where is the point in the number 6?",
+    "repair": "Write 6 as 6.00 so the 6 sits in the ones column.",
+    "error": "When adding a whole number to a decimal, places the whole number under the decimal digits.",
+    "example": {
+     "question": "6 + 0.25 =",
+     "wrong_answer": "0.31",
+     "correct_answer": "6.25"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Wanjiru bought 3.5 kg of sukuma wiki and 1.25 kg of tomatoes. What is the total mass?",
+    "answer": "4.75 kg",
+    "shows": "points lined up"
+   },
+   {
+    "question": "6 + 0.25 =",
+    "answer": "6.25",
+    "shows": "a whole number written with its point"
+   }
+  ],
+  "name": "Add decimals with different numbers of decimal places, including whole numbers, in context",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES",
+  "key_step": "The child exchanges one of a place for ten of the next place to the right when the top digit is too small, including across zeros and across the point.",
+  "floor": {
+   "prerequisite": "Subtracts whole numbers with regrouping.",
+   "question": "52 - 28 =",
+   "answer": "24"
+  },
+  "representations": [
+   "shillings and coins (one 10 shilling coin for ten 1 shilling coins)",
+   "place value chart with exchange",
+   "column subtraction with the point lined up"
+  ],
+  "steps": [
+   "Estimate.",
+   "Line up the points.",
+   "Subtract from the right; exchange when the top digit is smaller.",
+   "Across zeros: exchange step by step.",
+   "Check by adding back."
+  ],
+  "contexts": [
+   "milk left after selling some",
+   "change from a purchase in shillings and cents",
+   "a rope cut from a longer rope in metres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5.42 - 2.68 in a column, points lined up."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the 2 above the 8.",
+    "say": "Can we take 8 hundredths from 2 hundredths?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest exchanging."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child crosses out and rewrites the exchanged digits and finishes."
+   },
+   {
+    "beat": "write",
+    "do": "Write the add-back check with gaps for the child."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "8 take 2 is 6",
+     "I take the small from the big"
+    ],
+    "ask": "Check by adding your answer back to 2.68. Do you get 5.42?",
+    "repair": "The check fails, so look at the hundredths: the top is the amount we have. Exchange one tenth for ten hundredths.",
+    "error": "In each column, subtracts the smaller digit from the larger whichever number it belongs to, so no regrouping happens.",
+    "example": {
+     "question": "5.42 − 2.68 =",
+     "wrong_answer": "3.26",
+     "correct_answer": "2.74"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_SAME_PLACES.M_REGROUP_ACROSS_ZERO",
+    "listen_for": [
+     "I borrowed from the 6 and kept the zeros"
+    ],
+    "ask": "When you took one from the 6, where did it go first?",
+    "repair": "Exchange one place at a time: 1 whole becomes 10 tenths, one tenth becomes 10 hundredths, and so on.",
+    "error": "When regrouping across zeros, borrows straight from the ones but does not change the zeros in between.",
+    "example": {
+     "question": "6.003 − 2.145 =",
+     "wrong_answer": "4.968",
+     "correct_answer": "3.858"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "6.003 - 2.145 =",
+    "answer": "3.858",
+    "shows": "exchanges across zeros"
+   },
+   {
+    "question": "A jerrycan had 8.25 litres. 3.75 litres were used. How much is left?",
+    "answer": "4.5 litres",
+    "shows": "exchange in context"
+   }
+  ],
+  "name": "Subtract decimals with the same number of decimal places, with regrouping",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES",
+  "key_step": "The child fills empty places with zeros so both numbers have the same places, then subtracts, exchanging as needed.",
+  "floor": {
+   "prerequisite": "Subtracts decimals with the same places.",
+   "question": "4.50 - 1.20 =",
+   "answer": "3.30"
+  },
+  "representations": [
+   "litres of milk sold from a full can",
+   "place value chart",
+   "column subtraction with zeros filled"
+  ],
+  "steps": [
+   "Estimate.",
+   "Write both numbers to the same places; a whole number gets its point and zeros.",
+   "Subtract with exchange.",
+   "Check by adding back."
+  ],
+  "contexts": [
+   "milk left after a sale",
+   "change from 100 shillings",
+   "a 7 km run with 2.45 km done"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4.5 above 1.237, points lined up, with empty boxes after the 5."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the empty boxes.",
+    "say": "What goes in these empty places?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say zeros."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the zeros and subtracts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_BRING_DOWN_DIGITS",
+    "listen_for": [
+     "I brought the 3 and 7 down"
+    ],
+    "ask": "What is in the empty places of 4.5?",
+    "repair": "Write 4.5 as 4.500. Now there is something to take the 37 thousandths from.",
+    "error": "When the second number has more decimal places, brings its extra digits straight down into the answer instead of subtracting them from zeros.",
+    "example": {
+     "question": "4.5 − 1.237 =",
+     "wrong_answer": "3.337",
+     "correct_answer": "3.263"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_SUB_MIXED_PLACES.M_WHOLE_MINUS_DECIMAL",
+    "listen_for": [
+     "5.45",
+     "7 take 2 is 5"
+    ],
+    "ask": "Otieno sold 2 litres and a bit more. Can he have more than 5 litres left?",
+    "repair": "Write 7 as 7.00 and subtract every place. Check by adding back.",
+    "error": "When subtracting a decimal from a whole number, subtracts only the whole parts and copies the decimal part.",
+    "example": {
+     "question": "Otieno had 7 litres of milk and sold 2.45 litres. How much is left?",
+     "wrong_answer": "5.45 litres",
+     "correct_answer": "4.55 litres"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "4.5 - 1.237 =",
+    "answer": "3.263",
+    "shows": "zeros filled, exchange"
+   },
+   {
+    "question": "Otieno had 7 litres of milk and sold 2.45 litres. How much is left?",
+    "answer": "4.55 litres",
+    "shows": "whole minus decimal"
+   }
+  ],
+  "name": "Subtract decimals with different numbers of decimal places, including from whole numbers, in context",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000": {
+  "skill": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000",
+  "key_step": "The child moves each digit three places to the left (the number gets bigger), filling empty places with zeros.",
+  "floor": {
+   "prerequisite": "Multiplies whole numbers by 10, 100 and 1000.",
+   "question": "45 x 100 =",
+   "answer": "4,500"
+  },
+  "representations": [
+   "kilogrammes to grammes on a scale",
+   "place value chart with digits sliding left",
+   "the product"
+  ],
+  "steps": [
+   "Estimate: bigger or smaller? About how big?",
+   "Put the decimal in the chart.",
+   "Slide every digit three places left, one place at a time.",
+   "Fill empty places with zeros; read the answer."
+  ],
+  "contexts": [
+   "kilogrammes of rice to grammes",
+   "litres to millilitres",
+   "kilometres to metres"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 3.2 in the chart."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask whether 3.2 x 1000 will be bigger or smaller, and roughly how big.",
+    "say": "Bigger or smaller? About how big?"
+   },
+   {
+    "beat": "draw",
+    "do": "Slide the digits one place left at a time, three times, counting each slide.",
+    "say": "Count the slides with me."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the three slides."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to fill the empty places and read the number."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_ANNEX_ZEROS",
+    "listen_for": [
+     "add three zeros",
+     "2.45000"
+    ],
+    "ask": "Is 2.45000 bigger than 2.45?",
+    "repair": "Zeros at the end of a decimal change nothing. Slide the digits instead, in the chart.",
+    "error": "Writes three zeros on the end of the decimal instead of moving the digits.",
+    "example": {
+     "question": "2.45 × 1000 =",
+     "wrong_answer": "2.45000",
+     "correct_answer": "2450"
+    }
+   },
+   {
+    "code": "MATH.G5.NUMBER.DECIMALS.DEC_MULT_1000.M_NO_ZERO_FILL",
+    "listen_for": [
+     "32 grams"
+    ],
+    "ask": "Is 3.2 kg of rice only 32 grams? A teaspoon is about 5 grams.",
+    "repair": "Slide three places in the chart; the empty places become zeros. Check with the kg-to-g sense.",
+    "error": "Moves the point to the end of the digits and stops, without filling empty places with zeros.",
+    "example": {
+     "question": "A bag holds 3.2 kg of rice. How many grams is that? (3.2 × 1000)",
+     "wrong_answer": "32 g",
+     "correct_answer": "3200 g"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "0.375 x 1000 =",
+    "answer": "375",
+    "shows": "three places"
+   },
+   {
+    "question": "A bag holds 3.2 kg of rice. How many grams is that?",
+    "answer": "3,200 g",
+    "shows": "zero fill in context"
+   }
+  ],
+  "name": "Multiply decimals (up to thousandths) by 1000",
+  "sub_strand": "MATH.G5.NUMBER.DECIMALS",
+  "sub_strand_name": "Decimals",
+  "status": "draft: written 13 Nov 2026 from research round 3; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT": {
+  "skill": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT",
+  "key_step": "The child chooses km for long distances and explains by comparing with metres they know (a classroom, a 100 m race).",
+  "floor": {
+   "prerequisite": "Knows metres and centimetres (Grade 4).",
+   "question": "Would you measure a pencil in cm or in m?",
+   "answer": "cm"
+  },
+  "representations": [
+   "a road sign with a town and a number",
+   "a picture scale: pencil, classroom, school field, road between towns",
+   "the unit written km"
+  ],
+  "steps": [
+   "Sort lengths from small to large: a pencil, a classroom, a football pitch, the road to the next town.",
+   "Ask which unit fits each.",
+   "Name the kilometre and write km; contrast with kg (both 'kilo', one length, one mass)."
+  ],
+  "contexts": [
+   "road signs on the way to Thika or Nakuru",
+   "a marathon route",
+   "the distance from home to the market"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw four pictures in a row, growing: pencil, classroom, school field, a road between two towns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each picture in turn.",
+    "say": "Which unit would you use for this one?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's unit for each picture."
+   },
+   {
+    "beat": "write",
+    "do": "Write a road sign 'Thika 12' with a box after 12 for the child's unit."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT.M_UNIT_SIZE_MISMATCH",
+    "listen_for": [
+     "metres",
+     "I would use m"
+    ],
+    "ask": "How many school fields would fit between Nairobi and Nakuru?",
+    "repair": "Picture lining up metre sticks all the way to Nakuru: far too many. A bigger unit makes a sensible number.",
+    "error": "The child picks a unit that does not suit the size of the distance, for example metres or centimetres for the distance between towns.",
+    "example": {
+     "question": "Which unit is best for measuring the distance from Nairobi to Nakuru: cm, m or km?",
+     "wrong_answer": "m",
+     "correct_answer": "km"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_IDENTIFY_UNIT.M_KM_KG_CONFUSION",
+    "listen_for": [
+     "12 kg"
+    ],
+    "ask": "Is a road sign telling us how heavy Thika is?",
+    "repair": "Kilo means a thousand. A thousand metres is a km; a thousand grammes is a kg. Say both aloud.",
+    "error": "The child confuses km with kg because both start with 'kilo', and writes distances in kg or masses in km.",
+    "example": {
+     "question": "Write the distance shown on the road sign 'Thika 12': Thika is 12 ___ away.",
+     "wrong_answer": "12 kg",
+     "correct_answer": "12 km"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which unit is best for the distance from Nairobi to Nakuru: cm, m or km?",
+    "answer": "km",
+    "shows": "chooses km for long distances"
+   },
+   {
+    "question": "Complete: the road sign says 'Thika 12'. Thika is 12 ___ away.",
+    "answer": "km",
+    "shows": "km not kg"
+   }
+  ],
+  "name": "Recognise the kilometre as the unit for long distances",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE": {
+  "skill": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE",
+  "key_step": "The child uses a benchmark (about 10 to 15 minutes' walk is about 1 km) to give a sensible estimate in km.",
+  "floor": {
+   "prerequisite": "Knows what a kilometre is.",
+   "question": "Is a kilometre longer or shorter than a football pitch?",
+   "answer": "Longer"
+  },
+  "representations": [
+   "a walk the child knows",
+   "a map line with 1 km marks",
+   "an estimate in km"
+  ],
+  "steps": [
+   "Give the benchmark: a 1 km walk takes about 10 to 15 minutes.",
+   "Ask how long the child walks to school; turn minutes into a km estimate.",
+   "Check estimates are sensible (not 50 km for a 15-minute walk)."
+  ],
+  "contexts": [
+   "the walk from home to school",
+   "school to the nearest shopping centre",
+   "a matatu ride to town"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a path with a flag every 1 km and a small clock beside each flag showing about 12 minutes."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how long the child's walk to school takes, then where it would end on the path.",
+    "say": "How long is your walk to school?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child marks where their school would be on the path."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the estimate in km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE.M_UNREALISTIC_ESTIMATE",
+    "listen_for": [
+     "50 km",
+     "100 km"
+    ],
+    "ask": "If 1 km takes about 12 minutes, how long would 50 km take to walk?",
+    "repair": "Use the path picture: count flags for 15 minutes. Compare with the child's estimate.",
+    "error": "The child gives estimates far too large or too small because they have no sense of how long 1 km is.",
+    "example": {
+     "question": "Amina walks to school in about 15 minutes. About how far is her school: 1 km, 50 km or 10 m?",
+     "wrong_answer": "50 km",
+     "correct_answer": "about 1 km"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_ESTIMATE_DISTANCE.M_TIME_AS_DISTANCE",
+    "listen_for": [
+     "20 minutes",
+     "half an hour"
+    ],
+    "ask": "Twenty minutes is how long it takes. How far is it?",
+    "repair": "Separate how long from how far: turn the time into flags on the path.",
+    "error": "The child gives a time instead of a distance when asked how far a place is.",
+    "example": {
+     "question": "Estimate how far the market is from your school.",
+     "wrong_answer": "20 minutes",
+     "correct_answer": "a distance in km, e.g. about 2 km"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Amina walks to school in about 15 minutes. About how far is her school: 1 km, 50 km or 10 m?",
+    "answer": "About 1 km",
+    "shows": "uses the walking benchmark"
+   },
+   {
+    "question": "Estimate how far a 45-minute walk would take you.",
+    "answer": "About 3 to 4 km",
+    "shows": "scales the benchmark"
+   }
+  ],
+  "name": "Estimate distances in kilometres",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP": {
+  "skill": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP",
+  "key_step": "The child says 1 km = 1 000 m and uses it to compare distances given in different units by putting them in the same unit first.",
+  "floor": {
+   "prerequisite": "Knows 1 m = 100 cm.",
+   "question": "How many centimetres in 1 metre?",
+   "answer": "100"
+  },
+  "representations": [
+   "ten 100 m races end to end",
+   "a bar of 1 km marked in 100 m steps",
+   "1 km = 1 000 m"
+  ],
+  "steps": [
+   "Start from the 100 m race the child knows.",
+   "Lay ten of them end to end: count in hundreds to 1 000.",
+   "Compare 2 km and 1 500 m: change one so both have the same unit."
+  ],
+  "contexts": [
+   "a school sports 100 m race",
+   "a 400 m track",
+   "two routes to the market"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a long bar labelled 1 km and divide it into 10 parts slowly, one cut at a time.",
+    "say": "Each part is one 100 metre race."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts in hundreds along the parts.",
+    "say": "Count in hundreds with me."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say how many metres the whole bar is."
+   },
+   {
+    "beat": "write",
+    "do": "Write 2 km and 1 500 m with a box between for the child's sign."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP.M_KM_EQUALS_100M",
+    "listen_for": [
+     "100",
+     "like centimetres"
+    ],
+    "ask": "One 100 m race. Is that the same as walking for 12 minutes?",
+    "repair": "Count the ten 100 m races along the bar. The 100 belongs to cm and m; km is a thousand.",
+    "error": "The child says 1 km = 100 m (or 10 m), carrying over the m–cm relationship from Grade 4.",
+    "example": {
+     "question": "1 km = ___ m",
+     "wrong_answer": "100",
+     "correct_answer": "1 000"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.KM_M_RELATIONSHIP.M_BIGGER_NUMBER_LONGER",
+    "listen_for": [
+     "1 500 is bigger than 2"
+    ],
+    "ask": "How many metres is 2 km?",
+    "repair": "Put both in metres before comparing: 2 000 m and 1 500 m.",
+    "error": "The child compares only the numbers and ignores the units, so thinks 1 500 m is longer than 2 km.",
+    "example": {
+     "question": "Which is longer: 2 km or 1 500 m?",
+     "wrong_answer": "1 500 m",
+     "correct_answer": "2 km (2 000 m)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which is longer: 2 km or 1 500 m?",
+    "answer": "2 km",
+    "shows": "same unit before comparing"
+   },
+   {
+    "question": "1 km = ___ m",
+    "answer": "1 000",
+    "shows": "the relationship"
+   }
+  ],
+  "name": "Know and use 1 km = 1 000 m, including comparing distances",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M": {
+  "skill": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M",
+  "key_step": "The child multiplies km by 1 000 (more of the smaller unit) and writes mixed measures with zeros in the empty places (3 km 45 m = 3 045 m).",
+  "floor": {
+   "prerequisite": "Knows 1 km = 1 000 m.",
+   "question": "How many metres in 1 km?",
+   "answer": "1 000"
+  },
+  "representations": [
+   "a road in km and m",
+   "a place value chart with km in the thousands",
+   "metres written in full"
+  ],
+  "steps": [
+   "Estimate: more metres or fewer?",
+   "Whole km: multiply by 1 000.",
+   "Mixed: km go in the thousands, m fill the last three places, with zeros.",
+   "Read the answer aloud and check it is about right."
+  ],
+  "contexts": [
+   "a race of 6 km",
+   "a road 3 km 45 m long",
+   "a farm boundary in km and m"
+  ],
+  "board": [
+   {
+    "beat": "predict",
+    "do": "Ask whether 6 km is more or fewer metres than 6.",
+    "say": "More metres or fewer?"
+   },
+   {
+    "beat": "draw",
+    "do": "Draw three boxes after a comma for hundreds, tens and ones of metres."
+   },
+   {
+    "beat": "write",
+    "do": "Write 3 km 45 m above the boxes."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child fills the thousands and the three boxes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M.M_KM_TO_M_TIMES_100",
+    "listen_for": [
+     "600 m"
+    ],
+    "ask": "Is 600 m about a 12-minute walk, or less?",
+    "repair": "Go back to the ten 100 m races: one km is 1 000 m, so multiply by 1 000.",
+    "error": "The child multiplies by 100 instead of 1 000 when changing km to m.",
+    "example": {
+     "question": "Convert 6 km to metres.",
+     "wrong_answer": "600 m",
+     "correct_answer": "6 000 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.CONVERT_KM_TO_M.M_MISSING_PLACEHOLDER_ZERO",
+    "listen_for": [
+     "345 m"
+    ],
+    "ask": "Is 345 m more or less than 3 km?",
+    "repair": "Three boxes after the thousands: 45 fills the last two, the hundreds box gets a zero.",
+    "error": "The child writes the km and m digits side by side, leaving out the zeros needed in the hundreds or tens place.",
+    "example": {
+     "question": "Convert 3 km 45 m to metres.",
+     "wrong_answer": "345 m",
+     "correct_answer": "3 045 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Convert 2 km 5 m to metres.",
+    "answer": "2 005 m",
+    "shows": "zeros in empty places"
+   },
+   {
+    "question": "Convert 7 km to metres.",
+    "answer": "7 000 m",
+    "shows": "times 1 000"
+   }
+  ],
+  "name": "Convert kilometres (and km with m) to metres",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM": {
+  "skill": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM",
+  "key_step": "The child splits off thousands of metres as km (divide by 1 000, fewer of the bigger unit) and keeps the last three digits as metres.",
+  "floor": {
+   "prerequisite": "Converts km to m.",
+   "question": "3 km = ___ m",
+   "answer": "3 000"
+  },
+  "representations": [
+   "metres of road",
+   "the number with a line before the last three digits",
+   "km and m"
+  ],
+  "steps": [
+   "Estimate: more km or fewer?",
+   "Draw a line before the last three digits.",
+   "Left of the line is km, right is m (keep internal zeros).",
+   "Check by converting back."
+  ],
+  "contexts": [
+   "a county road 12 300 m long",
+   "a fence 4 050 m around a farm",
+   "a long-distance race"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 4 050 m large."
+   },
+   {
+    "beat": "draw",
+    "do": "Slowly draw a line before the last three digits.",
+    "say": "A thousand metres make one km."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to read the km and the m."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the answer as km and m."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM.M_M_TO_KM_DIVIDE_100",
+    "listen_for": [
+     "34 km"
+    ],
+    "ask": "Is 3 400 m more than 30 km of walking?",
+    "repair": "Thousands make km: the line goes before the last three digits, not two.",
+    "error": "The child divides by 100 (splits off two digits) instead of 1 000 when changing m to km.",
+    "example": {
+     "question": "Write 3 400 m in km and m.",
+     "wrong_answer": "34 km",
+     "correct_answer": "3 km 400 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.CONVERT_M_TO_KM.M_M_TO_KM_DROPS_ZERO",
+    "listen_for": [
+     "4 km 5 m"
+    ],
+    "ask": "Read the three digits after your line, zero included.",
+    "repair": "The metres part is all three digits: 050 is 50 m.",
+    "error": "The child splits the number in the wrong place, or drops a zero, when the metres part has an internal zero.",
+    "example": {
+     "question": "Write 4 050 m in km and m.",
+     "wrong_answer": "4 km 5 m",
+     "correct_answer": "4 km 50 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Write 3 400 m in km and m.",
+    "answer": "3 km 400 m",
+    "shows": "splits at thousands"
+   },
+   {
+    "question": "Write 12 300 m in km and m.",
+    "answer": "12 km 300 m",
+    "shows": "five-digit metres"
+   }
+  ],
+  "name": "Convert metres to kilometres (and km with m)",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.ADD_KM_M": {
+  "skill": "MATH.G5.MEASUR.LENGTH.ADD_KM_M",
+  "key_step": "The child adds metres to metres and km to km, and regroups every 1 000 m as 1 km.",
+  "floor": {
+   "prerequisite": "Converts between km and m.",
+   "question": "1 300 m = ___ km ___ m",
+   "answer": "1 km 300 m"
+  },
+  "representations": [
+   "a journey in two legs",
+   "km and m columns",
+   "the total"
+  ],
+  "steps": [
+   "Estimate the total in km.",
+   "Set out km and m columns.",
+   "Add metres; regroup 1 000 m as 1 km.",
+   "Add km including the carried km.",
+   "Check against the estimate."
+  ],
+  "contexts": [
+   "a journey by matatu then on foot",
+   "a relay race",
+   "two days of a school walk"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 2 km 700 m + 1 km 600 m in km and m columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the metres column.",
+    "say": "Add the metres first. What do you get?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for 1 300 m and what to do with 1 000 of it."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child writes the carried km and finishes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.ADD_KM_M.M_ADD_NO_REGROUP",
+    "listen_for": [
+     "3 km 1 300 m"
+    ],
+    "ask": "Is 1 300 m more than a kilometre?",
+    "repair": "Any 1 000 m in the metres column moves to the km column, like ten ones to the tens.",
+    "error": "The child leaves 1 000 m or more in the metres column instead of regrouping it as km.",
+    "example": {
+     "question": "2 km 700 m + 1 km 600 m",
+     "wrong_answer": "3 km 1 300 m",
+     "correct_answer": "4 km 300 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.ADD_KM_M.M_ADD_IGNORE_UNITS",
+    "listen_for": [
+     "305 m"
+    ],
+    "ask": "The matatu went 5 km first. Can the total be less than 5 km?",
+    "repair": "Put each part in its column: 5 km 0 m and 0 km 300 m.",
+    "error": "The child adds a km value and a m value as plain numbers, ignoring the different units.",
+    "example": {
+     "question": "A matatu travels 5 km, then 300 m more. How far altogether?",
+     "wrong_answer": "305 m",
+     "correct_answer": "5 km 300 m (5 300 m)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "2 km 70 m + 1 km 50 m",
+    "answer": "3 km 120 m",
+    "shows": "no regrouping at 100"
+   },
+   {
+    "question": "A matatu travels 5 km, then 300 m more. How far altogether?",
+    "answer": "5 km 300 m",
+    "shows": "units kept"
+   }
+  ],
+  "name": "Add distances in km and m",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M": {
+  "skill": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M",
+  "key_step": "The child exchanges 1 km for 1 000 m when there are too few metres, and reduces the km by one.",
+  "floor": {
+   "prerequisite": "Adds km and m with regrouping.",
+   "question": "1 km 200 m = ___ m",
+   "answer": "1 200"
+  },
+  "representations": [
+   "a road with part done",
+   "km and m columns with exchange",
+   "the difference"
+  ],
+  "steps": [
+   "Estimate.",
+   "Set out columns.",
+   "If the top metres are fewer, exchange 1 km for 1 000 m.",
+   "Subtract metres, then km.",
+   "Check by adding back."
+  ],
+  "contexts": [
+   "how much of a road is left to tarmac",
+   "how much further one runner went",
+   "a journey still to go"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write 5 km 200 m - 2 km 650 m in columns."
+   },
+   {
+    "beat": "point",
+    "do": "Point at 200 above 650.",
+    "say": "Can we take 650 m from 200 m?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to suggest exchanging a km."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child crosses out 5 km, writes 4 km and 1 200 m, and subtracts."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M.M_SUB_SMALLER_FROM_LARGER",
+    "listen_for": [
+     "650 take 200",
+     "3 km 450 m"
+    ],
+    "ask": "Check by adding 2 km 650 m to your answer. Do you get 5 km 200 m?",
+    "repair": "The check fails. The top is what we have; exchange 1 km for 1 000 m.",
+    "error": "In the metres column the child takes the smaller number from the larger, whichever is on top, instead of exchanging 1 km.",
+    "example": {
+     "question": "5 km 200 m − 2 km 650 m",
+     "wrong_answer": "3 km 450 m",
+     "correct_answer": "2 km 550 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.SUBTRACT_KM_M.M_SUB_FORGET_REDUCE_KM",
+    "listen_for": [
+     "3 km 550 m"
+    ],
+    "ask": "Where did the 1 000 m you added come from?",
+    "repair": "Cross out the km you exchanged and write one fewer.",
+    "error": "The child exchanges 1 km into the metres correctly but forgets to reduce the km by 1.",
+    "example": {
+     "question": "5 km 200 m − 2 km 650 m",
+     "wrong_answer": "3 km 550 m",
+     "correct_answer": "2 km 550 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "5 km 200 m - 2 km 650 m",
+    "answer": "2 km 550 m",
+    "shows": "exchange and reduce"
+   },
+   {
+    "question": "4 km 50 m - 1 km 80 m",
+    "answer": "2 km 970 m",
+    "shows": "exchange gives 1 000 m, not 100"
+   }
+  ],
+  "name": "Subtract distances in km and m",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M": {
+  "skill": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M",
+  "key_step": "The child multiplies both the metres and the km, and regroups every 1 000 m in the product as 1 km.",
+  "floor": {
+   "prerequisite": "Adds km and m with regrouping.",
+   "question": "2 km 400 m + 2 km 400 m",
+   "answer": "4 km 800 m"
+  },
+  "representations": [
+   "repeated trips",
+   "columns",
+   "the product"
+  ],
+  "steps": [
+   "Estimate.",
+   "Multiply the metres; regroup.",
+   "Multiply the km; add the carried km.",
+   "Check by repeated addition."
+  ],
+  "contexts": [
+   "a boda boda rider's trips",
+   "walking to school and back each day",
+   "laps of a track"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw three equal arrows, each labelled 2 km 400 m.",
+    "say": "Three trips, each the same."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate in km.",
+    "say": "About how many km altogether?"
+   },
+   {
+    "beat": "write",
+    "do": "Write 2 km 400 m x 3 in columns."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child multiplies the metres first and regroups."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M.M_MULT_NO_REGROUP",
+    "listen_for": [
+     "6 km 1 200 m"
+    ],
+    "ask": "Is 1 200 m more than a km?",
+    "repair": "Regroup 1 000 m into the km column after multiplying the metres.",
+    "error": "The child leaves the product of the metres as 1 000 m or more instead of regrouping it into km.",
+    "example": {
+     "question": "A boda boda rider makes 3 trips of 2 km 400 m each. How far does he ride?",
+     "wrong_answer": "6 km 1 200 m",
+     "correct_answer": "7 km 200 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.MULTIPLY_KM_M.M_MULT_ONE_PART_ONLY",
+    "listen_for": [
+     "4 km 300 m"
+    ],
+    "ask": "Did each trip have 300 m in it? How many trips?",
+    "repair": "Draw the trips: every trip has km and m, so both parts are multiplied.",
+    "error": "The child multiplies only the km (or only the metres) and copies the other part unchanged.",
+    "example": {
+     "question": "1 km 300 m × 4",
+     "wrong_answer": "4 km 300 m",
+     "correct_answer": "5 km 200 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A boda boda rider makes 3 trips of 2 km 400 m. How far does he ride?",
+    "answer": "7 km 200 m",
+    "shows": "regroups the metres"
+   },
+   {
+    "question": "1 km 300 m x 4",
+    "answer": "5 km 200 m",
+    "shows": "both parts multiplied"
+   }
+  ],
+  "name": "Multiply distances in km and m by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M": {
+  "skill": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M",
+  "key_step": "The child divides the km, changes any remaining km into 1 000 m and adds it to the metres before dividing them (or converts the whole distance to metres first).",
+  "floor": {
+   "prerequisite": "Converts km to m; divides whole numbers.",
+   "question": "7 200 ÷ 4 =",
+   "answer": "1 800"
+  },
+  "representations": [
+   "a road shared among groups",
+   "columns with the remainder carried",
+   "the share"
+  ],
+  "steps": [
+   "Estimate each share.",
+   "Divide the km; note the remainder.",
+   "Change the remaining km to metres and add to the metres.",
+   "Divide the metres.",
+   "Check by multiplying back."
+  ],
+  "contexts": [
+   "a road shared among groups to clean",
+   "a relay split among runners",
+   "a rope cut into equal pieces"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a long road labelled 7 km 200 m, cut into 4 equal sections."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask for an estimate of each section.",
+    "say": "About how long is each section?"
+   },
+   {
+    "beat": "write",
+    "do": "Write 7 km 200 m ÷ 4 with a box for the leftover km."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say what happens to the leftover km."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M.M_DIV_IGNORE_REMAINDER",
+    "listen_for": [
+     "1 km 50 m"
+    ],
+    "ask": "Four groups each got 1 km. How much road is left that no group cleaned?",
+    "repair": "The leftover 3 km must be shared too: change it to 3 000 m and add it to the metres.",
+    "error": "The child divides the km and m separately and drops the remainder from the km.",
+    "example": {
+     "question": "A road 7 km 200 m long is shared equally among 4 groups to clean. How much does each group clean?",
+     "wrong_answer": "1 km 50 m",
+     "correct_answer": "1 km 800 m"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.LENGTH.DIVIDE_KM_M.M_DIV_REMAINDER_AS_100",
+    "listen_for": [
+     "1 km 125 m"
+    ],
+    "ask": "How many metres is 3 km?",
+    "repair": "Each leftover km is 1 000 m. Check by multiplying the answer by 4.",
+    "error": "The child carries the remaining km into the metres as 100 m each instead of 1 000 m.",
+    "example": {
+     "question": "7 km 200 m ÷ 4",
+     "wrong_answer": "1 km 125 m",
+     "correct_answer": "1 km 800 m"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "7 km 200 m ÷ 4",
+    "answer": "1 km 800 m",
+    "shows": "remainder carried as 1 000 m per km"
+   },
+   {
+    "question": "A rope 5 km 500 m long is cut into 5 equal pieces. How long is each piece?",
+    "answer": "1 km 100 m",
+    "shows": "division with no remainder in the km"
+   }
+  ],
+  "name": "Divide distances in km and m by a whole number",
+  "sub_strand": "MATH.G5.MEASUR.LENGTH",
+  "sub_strand_name": "Length (kilometres and metres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; distances quoted are approximate and need a Kenyan teacher's check; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING": {
+  "skill": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING",
+  "key_step": "The child explains that 1 cm² is the space covered by a square with 1 cm sides, and that cm measures a length while cm² measures a surface.",
+  "floor": {
+   "prerequisite": "Measures lengths in cm.",
+   "question": "Show me about 1 cm with your fingers.",
+   "answer": "A small gap about the width of a fingernail"
+  },
+  "representations": [
+   "a 1 cm paper square on a fingertip",
+   "a grid of 1 cm squares",
+   "the unit cm²"
+  ],
+  "steps": [
+   "Show a 1 cm square; the child measures its sides.",
+   "Name its space: one square centimetre, cm².",
+   "Contrast a 1 cm line with a 1 cm square.",
+   "Show that a 2 cm square holds four 1 cm squares."
+  ],
+  "contexts": [
+   "a postage stamp",
+   "a fingernail",
+   "a square of a chess board drawn on paper"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 1 cm line, then beside it a 1 cm square, slowly shading the square.",
+    "say": "This line is 1 cm. This shaded square is 1 cm squared."
+   },
+   {
+    "beat": "draw",
+    "do": "Draw a square with 2 cm sides."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many 1 cm squares fit inside before drawing them.",
+    "say": "Guess. How many small squares fit inside?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child draws the 1 cm squares inside."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to count and say the area with its unit."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING.M_SQUARED_MEANS_DOUBLE",
+    "listen_for": [
+     "5 times 2",
+     "10 cm"
+    ],
+    "ask": "Is 5 cm² a line or a patch?",
+    "repair": "The small 2 says 'square'. Draw five 1 cm squares: 5 cm² is five of them.",
+    "error": "Reads the small '2' in cm² as 'times 2' or '2 cm', so thinks 5 cm² means 10 cm.",
+    "example": {
+     "question": "What does 5 cm² mean?",
+     "wrong_answer": "10 cm (5 × 2)",
+     "correct_answer": "The space covered by 5 squares, each 1 cm by 1 cm"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.CM2_UNIT_MEANING.M_ANY_SQUARE_IS_ONE_CM2",
+    "listen_for": [
+     "one square is 1 cm²"
+    ],
+    "ask": "How many 1 cm squares fit inside your 2 cm square?",
+    "repair": "Only a square with 1 cm sides is 1 cm². Bigger squares hold several.",
+    "error": "Thinks any single square, whatever its size, has an area of 1 cm².",
+    "example": {
+     "question": "A square has sides of 2 cm. What is its area?",
+     "wrong_answer": "1 cm²",
+     "correct_answer": "4 cm²"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A square has sides of 2 cm. What is its area?",
+    "answer": "4 cm²",
+    "shows": "not every square is 1 cm²"
+   },
+   {
+    "question": "What does 5 cm² mean?",
+    "answer": "The space covered by five 1 cm squares",
+    "shows": "meaning of the unit"
+   }
+  ],
+  "name": "Knowing what one square centimetre (cm²) is",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT": {
+  "skill": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT",
+  "key_step": "The child covers the shape with 1 cm squares with no gaps or overlaps and counts every square, inside ones included.",
+  "floor": {
+   "prerequisite": "Knows what 1 cm² is.",
+   "question": "How big are the sides of a 1 cm² square?",
+   "answer": "1 cm"
+  },
+  "representations": [
+   "paper squares on a stamp or book cover",
+   "a 1 cm grid",
+   "the count in cm²"
+  ],
+  "steps": [
+   "Cover the shape edge to edge, no gaps, no overlaps.",
+   "Count row by row.",
+   "Record with cm²."
+  ],
+  "contexts": [
+   "a postage stamp",
+   "a mobile phone screen",
+   "a page of an exercise book"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 4 by 3 rectangle on a 1 cm grid."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts squares row by row while the board ticks each one.",
+    "say": "Count one row at a time."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the total and the unit."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT.M_COUNT_BORDER_ONLY",
+    "listen_for": [
+     "10",
+     "I counted round the edge"
+    ],
+    "ask": "Are there squares in the middle you have not ticked?",
+    "repair": "Count row by row, ticking each square, so the middle is counted too.",
+    "error": "Counts only the squares around the edge of the shape and misses the inside ones.",
+    "example": {
+     "question": "A rectangle on 1 cm grid paper is 4 squares long and 3 squares wide. Find its area.",
+     "wrong_answer": "10 cm²",
+     "correct_answer": "12 cm²"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_COVER_AND_COUNT.M_COUNT_LINES_NOT_SQUARES",
+    "listen_for": [
+     "6 lines",
+     "24"
+    ],
+    "ask": "Are we counting the lines or the spaces between them?",
+    "repair": "Put a dot in each square and count the dots.",
+    "error": "Counts grid lines or dots along the edges instead of the squares.",
+    "example": {
+     "question": "A rectangle on 1 cm grid paper is 5 squares long and 3 squares wide. Find its area.",
+     "wrong_answer": "24 cm² (6 lines × 4 lines)",
+     "correct_answer": "15 cm²"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A rectangle on 1 cm grid paper is 5 squares long and 3 squares wide. Find its area.",
+    "answer": "15 cm²",
+    "shows": "counts squares, not lines"
+   },
+   {
+    "question": "Cover a stamp 3 cm by 2 cm with 1 cm squares. What is its area?",
+    "answer": "6 cm²",
+    "shows": "no gaps or overlaps"
+   }
+  ],
+  "name": "Finding area by covering with 1 cm squares and counting",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE": {
+  "skill": "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE",
+  "key_step": "The child picks surfaces (not lengths) as things measured in cm², and explains why.",
+  "floor": {
+   "prerequisite": "Knows what 1 cm² is.",
+   "question": "Is a pencil's length a line or a surface?",
+   "answer": "A line"
+  },
+  "representations": [
+   "real objects",
+   "a sorting table: length, area",
+   "the unit"
+  ],
+  "steps": [
+   "Sort objects: things we measure along (length) and things we cover (area).",
+   "Name the unit for each.",
+   "The child gives their own example of each."
+  ],
+  "contexts": [
+   "a postage stamp",
+   "an exercise book cover",
+   "a phone screen",
+   "a mandazi tray"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw two columns headed 'along' and 'cover'."
+   },
+   {
+    "beat": "write",
+    "do": "Write: pencil length, stamp top, desk height, book cover, below the table."
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child moves each item into a column."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the unit for each column."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.CM2_REAL_LIFE.M_CM2_FOR_LENGTH",
+    "listen_for": [
+     "the pencil"
+    ],
+    "ask": "Do we cover a pencil's length with squares, or measure along it?",
+    "repair": "Run a finger along for length; spread a hand over for area.",
+    "error": "Chooses cm² for things that are lengths, such as the length of a pencil or the height of a desk.",
+    "example": {
+     "question": "Which would you measure in cm²: the length of a pencil, the top of a postage stamp, or the mass of a mango?",
+     "wrong_answer": "The length of a pencil",
+     "correct_answer": "The top of a postage stamp"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Which would you measure in cm²: the length of a pencil, the top of a stamp, or the height of a desk?",
+    "answer": "The top of a stamp",
+    "shows": "surface versus length"
+   },
+   {
+    "question": "Name one thing at home you would measure in cm².",
+    "answer": "Any small flat surface, e.g. a phone screen",
+    "shows": "own example"
+   }
+  ],
+  "name": "Recognising real-life surfaces whose area is measured in cm²",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS": {
+  "skill": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS",
+  "key_step": "The child explains that rows times squares in a row counts all the squares, so the area is length times width.",
+  "floor": {
+   "prerequisite": "Counts squares to find area; knows times tables.",
+   "question": "What is 4 x 6?",
+   "answer": "24"
+  },
+  "representations": [
+   "mandazi laid in rows on a tray",
+   "a rectangle with only the first row and column drawn",
+   "length x width"
+  ],
+  "steps": [
+   "Count a full grid by rows: the child notices equal rows.",
+   "Use multiplication to count faster.",
+   "Show a rectangle with only the first row and column drawn; the child imagines the rest.",
+   "Link squares in a row to the length and rows to the width."
+  ],
+  "contexts": [
+   "a tray of mandazi in rows",
+   "chairs in rows at assembly",
+   "tiles on a floor"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a rectangle; draw squares along the top row only (6), then down the first column only (4)."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many squares would fill it.",
+    "say": "If we filled it all, how many squares?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's method."
+   },
+   {
+    "beat": "reveal",
+    "do": "Fill in the rest row by row only after the child answers.",
+    "say": "Let's check by filling it."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS.M_ADD_ROWS_COLUMNS",
+    "listen_for": [
+     "10",
+     "6 plus 4"
+    ],
+    "ask": "How many squares in the first row? How many rows like it?",
+    "repair": "Fill one more row at a time and count: 6, 12, 18, 24. Rows of 6, four times.",
+    "error": "Adds the number of rows and the number of columns instead of multiplying them.",
+    "example": {
+     "question": "A tray of mandazi is laid out in 6 rows with 4 in each row, each taking up 1 cm² on a drawing. What is the area?",
+     "wrong_answer": "10 cm²",
+     "correct_answer": "24 cm²"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_ROWS_BY_COLUMNS.M_PARTIAL_GRID_COUNT",
+    "listen_for": [
+     "7",
+     "I counted the ones drawn"
+    ],
+    "ask": "Is the middle of the rectangle empty, or just not drawn?",
+    "repair": "Draw the second row in; the child sees the pattern and multiplies.",
+    "error": "When only the first row and first column of squares are drawn, counts just the drawn squares.",
+    "example": {
+     "question": "A rectangle shows 4 squares along the top and 3 squares down the side; the rest is blank. What is its area?",
+     "wrong_answer": "6 cm² or 7 cm²",
+     "correct_answer": "12 cm²"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A tray holds mandazi in 6 rows with 4 in each row, each on 1 cm². What area do they cover?",
+    "answer": "24 cm²",
+    "shows": "multiplies rows by columns"
+   },
+   {
+    "question": "A rectangle shows 5 squares along the top and 3 down the side. What is its area?",
+    "answer": "15 cm²",
+    "shows": "imagines the full grid"
+   }
+  ],
+  "name": "Linking rows × columns of 1 cm² squares to length × width",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC": {
+  "skill": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC",
+  "key_step": "The child multiplies length by width (side by side for a square) and writes cm², and can say why it is not adding.",
+  "floor": {
+   "prerequisite": "Links rows times columns to area.",
+   "question": "4 rows of 5 squares. How many squares?",
+   "answer": "20"
+  },
+  "representations": [
+   "a labelled rectangle",
+   "the rectangle with a faint grid",
+   "length x width = area in cm²"
+  ],
+  "steps": [
+   "Estimate by imagining the grid.",
+   "Multiply length by width.",
+   "For a square, side times side.",
+   "Write cm²; say why (squares)."
+  ],
+  "contexts": [
+   "a floor tile",
+   "an exercise book cover",
+   "a kitenge piece"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 7 cm by 5 cm rectangle with labels, no grid."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many 1 cm squares would cover it.",
+    "say": "How many 1 cm squares would cover it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's answer and method."
+   },
+   {
+    "beat": "reveal",
+    "do": "Fade in the grid only after the child answers, so they can check.",
+    "say": "Let's see the squares."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC.M_AREA_AS_PERIMETER",
+    "listen_for": [
+     "24",
+     "12",
+     "I added the sides"
+    ],
+    "ask": "Did you walk round the edge, or cover the inside?",
+    "repair": "Fade in the grid and count rows. Walking round is perimeter; covering is area.",
+    "error": "Adds the sides (finding the perimeter, or just length + width) instead of multiplying.",
+    "example": {
+     "question": "Find the area of a rectangle 7 cm long and 5 cm wide.",
+     "wrong_answer": "24 cm or 12 cm²",
+     "correct_answer": "35 cm²"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_RECT_SQUARE_CALC.M_SQUARE_SIDE_DOUBLED",
+    "listen_for": [
+     "12",
+     "6 times 2"
+    ],
+    "ask": "How many rows of 6 squares in a 6 cm square?",
+    "repair": "Draw the grid: 6 rows of 6. Side times side, not side times two.",
+    "error": "For a square, multiplies the side by 2 instead of by itself.",
+    "example": {
+     "question": "A square tile has sides of 6 cm. What is its area?",
+     "wrong_answer": "12 cm²",
+     "correct_answer": "36 cm²"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the area of a rectangle 7 cm long and 5 cm wide.",
+    "answer": "35 cm²",
+    "shows": "multiplies, square units"
+   },
+   {
+    "question": "A square tile has sides of 6 cm. What is its area?",
+    "answer": "36 cm²",
+    "shows": "side times side"
+   }
+  ],
+  "name": "Calculating area of rectangles and squares from their sides",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.AREA.AREA_PROBLEMS": {
+  "skill": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS",
+  "key_step": "The child decides whether the story needs area (covering) or perimeter (going round) before calculating, and finds a missing side by dividing.",
+  "floor": {
+   "prerequisite": "Calculates area of rectangles.",
+   "question": "Area of 4 cm by 3 cm?",
+   "answer": "12 cm²"
+  },
+  "representations": [
+   "the object in the story",
+   "a sketch with labels",
+   "the calculation"
+  ],
+  "steps": [
+   "Ask: are we covering it or going round it?",
+   "Sketch and label.",
+   "Calculate, with the unit.",
+   "For a missing side, ask what times the known side gives the area."
+  ],
+  "contexts": [
+   "kitenge cloth to cover a box top",
+   "a textbook cover",
+   "tiles for a classroom wall"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw the box top 20 cm by 15 cm and a piece of kitenge."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the inside, then run along the edge.",
+    "say": "Are we covering it, or going round it?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to choose and calculate."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS.M_CONTEXT_WRONG_MEASURE",
+    "listen_for": [
+     "70 cm"
+    ],
+    "ask": "Will 70 cm of string cover the top of the box?",
+    "repair": "Act it: cloth covers, a ribbon goes round. Choose before calculating.",
+    "error": "In a word problem that needs area, works out the perimeter (or the other way round).",
+    "example": {
+     "question": "Akinyi wants to cover the top of a box 20 cm long and 15 cm wide with kitenge cloth. How many square centimetres of cloth does she need?",
+     "wrong_answer": "70 cm",
+     "correct_answer": "300 cm²"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.AREA.AREA_PROBLEMS.M_MISSING_SIDE_SUBTRACT",
+    "listen_for": [
+     "40",
+     "48 take 8"
+    ],
+    "ask": "8 times what makes 48?",
+    "repair": "Rows times row length gives area, so area divided by one side gives the other.",
+    "error": "To find a missing side from the area, subtracts the known side from the area instead of dividing, or writes the side in cm².",
+    "example": {
+     "question": "Otieno's exercise book cover has an area of 48 cm² and a length of 8 cm. What is its width?",
+     "wrong_answer": "40 cm (or 6 cm²)",
+     "correct_answer": "6 cm"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Akinyi covers the top of a box 20 cm by 15 cm with kitenge. How much cloth does she need?",
+    "answer": "300 cm²",
+    "shows": "chooses area in context"
+   },
+   {
+    "question": "A book cover has an area of 48 cm² and a length of 8 cm. What is its width?",
+    "answer": "6 cm",
+    "shows": "divides for a missing side"
+   }
+  ],
+  "name": "Solving real-life area problems with rectangles and squares in cm²",
+  "sub_strand": "MATH.G5.MEASUR.AREA",
+  "sub_strand_name": "Area (square centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY",
+  "key_step": "The child says a cube with 1 cm edges is 1 cm³ and tells cm, cm² and cm³ apart (along, cover, fill).",
+  "floor": {
+   "prerequisite": "Knows cm and cm².",
+   "question": "Is cm² for a line or a surface?",
+   "answer": "A surface"
+  },
+  "representations": [
+   "a sugar cube or 1 cm cube",
+   "a line, a square and a cube side by side",
+   "the unit cm³"
+  ],
+  "steps": [
+   "Show a 1 cm line, a 1 cm square and a 1 cm cube together.",
+   "Name each: along, cover, fill.",
+   "Name cm³ and read it aloud.",
+   "Contrast volume with mass: same size cubes of wood and stone."
+  ],
+  "contexts": [
+   "a sugar cube",
+   "a dice",
+   "a small box of chalk"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 1 cm line, a 1 cm square, then slowly a 1 cm cube, edge by edge.",
+    "say": "Count the edges of the cube with me."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the cube's edges as each is drawn."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to name what each shape measures."
+   },
+   {
+    "beat": "write",
+    "do": "Write cm, cm², cm³ under the three shapes with gaps for the child's words."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY.M_CM3_MEANS_3CM",
+    "listen_for": [
+     "3 cm edges"
+    ],
+    "ask": "Measure the edge of the 1 cm³ cube. How long is it?",
+    "repair": "The small 3 says 'cube', like the small 2 says 'square'. The edge is 1 cm.",
+    "error": "The child thinks the small ³ means 3 cm, so a 1 cm³ cube has edges of 3 cm.",
+    "example": {
+     "question": "A cube has a volume of 1 cm³. How long is each of its edges?",
+     "wrong_answer": "3 cm",
+     "correct_answer": "1 cm"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CM3_UNIT_IDENTIFY.M_VOLUME_IS_MASS",
+    "listen_for": [
+     "the iron one is bigger"
+    ],
+    "ask": "Do the two cubes take up the same space on the table?",
+    "repair": "Heavier is mass, not space. Two same-size cubes fill the same space.",
+    "error": "The child thinks a heavier object must have a bigger volume.",
+    "example": {
+     "question": "A 1 cm cube of wood and a 1 cm cube of iron are placed on a table. Which one takes up more space?",
+     "wrong_answer": "The iron cube",
+     "correct_answer": "They take up the same space: each is 1 cm³."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube has a volume of 1 cm³. How long is each edge?",
+    "answer": "1 cm",
+    "shows": "meaning of cm³"
+   },
+   {
+    "question": "Wanjiru builds a shape from 24 cubes of 1 cm. What is its volume?",
+    "answer": "24 cm³",
+    "shows": "cubic units"
+   }
+  ],
+  "name": "Identify the cubic centimetre (cm³) as a unit of volume",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES": {
+  "skill": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES",
+  "key_step": "The child counts cubes layer by layer, including hidden ones, and knows rearranging the same cubes keeps the volume.",
+  "floor": {
+   "prerequisite": "Knows what 1 cm³ is.",
+   "question": "How many 1 cm cubes make a row 4 cm long?",
+   "answer": "4"
+  },
+  "representations": [
+   "a stack of cubes",
+   "a drawing of layers pulled apart",
+   "the count in cm³"
+  ],
+  "steps": [
+   "Build or draw a cuboid of cubes.",
+   "Pull the layers apart in the drawing.",
+   "Count one layer, then count the layers.",
+   "Rebuild the cubes in a new shape: same count."
+  ],
+  "contexts": [
+   "a stack of sugar cubes",
+   "boxes in a duka",
+   "bricks in a pile"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cuboid 4 cubes long, 2 wide, 3 high; then slowly slide the top layer up and away.",
+    "say": "Watch the top layer lift off."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the cubes in the lifted layer."
+   },
+   {
+    "beat": "predict",
+    "do": "Ask how many layers there are before lifting the next.",
+    "say": "How many layers like this one?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the total."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES.M_COUNT_ONE_LAYER",
+    "listen_for": [
+     "8"
+    ],
+    "ask": "Is there anything under the top layer?",
+    "repair": "Lift the layers off one by one in the drawing and count each.",
+    "error": "The child counts only the top or front layer of cubes and gives that as the volume.",
+    "example": {
+     "question": "A stack of 1 cm cubes has 3 layers, and each layer is 4 cubes long and 2 cubes wide. What is its volume?",
+     "wrong_answer": "8 cm³",
+     "correct_answer": "24 cm³"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.VOLUME_COUNT_CM3_CUBES.M_COUNT_FACE_SQUARES",
+    "listen_for": [
+     "I counted the squares I can see"
+    ],
+    "ask": "Does the corner cube get counted once, or three times?",
+    "repair": "Count cubes, not faces: layer by layer, hidden ones included.",
+    "error": "In a picture of a cuboid, the child counts the squares on the visible faces instead of the cubes. Edge cubes get counted more than once and hidden cubes are missed.",
+    "example": {
+     "question": "A picture shows a cuboid made of 1 cm cubes. It is 3 cubes long, 2 cubes wide and 2 cubes high. What is its volume?",
+     "wrong_answer": "16 cm³ (6 + 6 + 4 squares on the front, top and side)",
+     "correct_answer": "12 cm³"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A stack of 1 cm cubes has 3 layers, each 4 cubes long and 2 cubes wide. What is its volume?",
+    "answer": "24 cm³",
+    "shows": "counts all layers"
+   },
+   {
+    "question": "Otieno rebuilds 12 cubes from a long shape into a tall one. Which takes more space?",
+    "answer": "Neither; both are 12 cm³",
+    "shows": "conservation of volume"
+   }
+  ],
+  "name": "Find volume by counting 1 cm cubes (models and pictures)",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE",
+  "key_step": "The child explains that length x width gives the cubes in one layer, and that times the number of layers (height) gives the volume.",
+  "floor": {
+   "prerequisite": "Counts cubes by layers.",
+   "question": "A layer has 4 rows of 3 cubes. How many cubes?",
+   "answer": "12"
+  },
+  "representations": [
+   "cubes in layers",
+   "the layer drawn flat as a grid",
+   "V = l x w x h"
+  ],
+  "steps": [
+   "One layer: rows times cubes in a row.",
+   "Layers: multiply by how many.",
+   "Name the three measures: length, width, height.",
+   "Turn the box on its end: same three numbers, same volume."
+  ],
+  "contexts": [
+   "a matchbox",
+   "a crate of soda",
+   "a stack of exercise books"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw one layer as a 4 by 3 grid, then stack a second and third layer above it, one at a time.",
+    "say": "Each layer is the same."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts the layers as they appear."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say how to get the total without counting each cube."
+   },
+   {
+    "beat": "write",
+    "do": "Write cubes in a layer x number of layers, with gaps for the child."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE.M_ADD_LAYERS",
+    "listen_for": [
+     "17",
+     "12 plus 5"
+    ],
+    "ask": "Each layer has 12 cubes. How many cubes in two layers?",
+    "repair": "Stack layers one at a time: 12, 24, 36... layers are groups of 12.",
+    "error": "The child adds the number of layers to the cubes in one layer instead of multiplying.",
+    "example": {
+     "question": "One layer of a cuboid has 4 rows of 3 cubes, which is 12 cubes. There are 5 such layers. How many cubes are there altogether?",
+     "wrong_answer": "17",
+     "correct_answer": "60 (12 × 5)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_FORMULA_DERIVE.M_ROTATION_CHANGES_VOLUME",
+    "listen_for": [
+     "it's bigger standing up"
+    ],
+    "ask": "Did any cubes get added when the box stood up?",
+    "repair": "Turn the drawing: the same cubes, just a different way up.",
+    "error": "The child believes a box standing on its end has a different volume from the same box lying flat.",
+    "example": {
+     "question": "A matchbox-shaped cuboid is 6 cm long, 2 cm wide and 1 cm high when lying flat. Achieng stands it on its end so it is 6 cm high. What is its volume now?",
+     "wrong_answer": "It is bigger now because it is taller.",
+     "correct_answer": "Still 12 cm³ (6 × 2 × 1 = 1 × 2 × 6)."
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "One layer has 4 rows of 3 cubes. There are 5 layers. How many cubes?",
+    "answer": "60",
+    "shows": "multiplies by layers"
+   },
+   {
+    "question": "A box is 6 cm by 2 cm by 1 cm lying flat. Stood on its end, what is its volume?",
+    "answer": "12 cm³, the same",
+    "shows": "rotation does not change volume"
+   }
+  ],
+  "name": "Derive V = l × w × h for a cuboid practically",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC",
+  "key_step": "The child multiplies all three measures (length, width and height) and writes cm³.",
+  "floor": {
+   "prerequisite": "Knows V = l x w x h from building.",
+   "question": "What three measures does a box have?",
+   "answer": "Length, width, height"
+  },
+  "representations": [
+   "a labelled cuboid",
+   "the cuboid with faint cubes",
+   "the product in cm³"
+  ],
+  "steps": [
+   "Label the three measures.",
+   "Multiply length by width (one layer).",
+   "Multiply by height.",
+   "Write cm³."
+  ],
+  "contexts": [
+   "a box of chalk",
+   "a brick",
+   "a juice carton"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cuboid labelled 5 cm, 3 cm, 2 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the base, then up the height.",
+    "say": "How many cubes in the bottom layer?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child, then for the number of layers."
+   },
+   {
+    "beat": "reveal",
+    "do": "Fade in the cubes only after the child answers.",
+    "say": "Let's see the cubes."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC.M_ADD_DIMENSIONS",
+    "listen_for": [
+     "10",
+     "5 plus 3 plus 2"
+    ],
+    "ask": "How many cubes fit in the bottom layer alone?",
+    "repair": "Go back to layers: the bottom layer alone has 15 cubes, so the total cannot be 10.",
+    "error": "The child adds the length, width and height instead of multiplying them.",
+    "example": {
+     "question": "Find the volume of a cuboid 5 cm long, 3 cm wide and 2 cm high.",
+     "wrong_answer": "10 cm³",
+     "correct_answer": "30 cm³"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_CALC.M_TWO_DIMENSIONS_ONLY",
+    "listen_for": [
+     "15"
+    ],
+    "ask": "Is that one layer, or the whole box?",
+    "repair": "Point up the height: how many layers like that?",
+    "error": "The child multiplies only the length and width, giving the area of the base as the volume.",
+    "example": {
+     "question": "Find the volume of a cuboid 5 cm long, 3 cm wide and 2 cm high.",
+     "wrong_answer": "15 cm³",
+     "correct_answer": "30 cm³"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "Find the volume of a cuboid 5 cm long, 3 cm wide and 2 cm high.",
+    "answer": "30 cm³",
+    "shows": "all three multiplied"
+   },
+   {
+    "question": "A brick is 20 cm by 10 cm by 5 cm. What is its volume?",
+    "answer": "1 000 cm³",
+    "shows": "larger numbers"
+   }
+  ],
+  "name": "Calculate the volume of a cuboid in cm³ using the formula",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS",
+  "key_step": "The child picks out only the three lengths, converts any metres to centimetres first, and multiplies.",
+  "floor": {
+   "prerequisite": "Calculates the volume of a cuboid.",
+   "question": "1 m = ___ cm",
+   "answer": "100"
+  },
+  "representations": [
+   "the real object",
+   "a sketch with only the lengths labelled",
+   "the calculation"
+  ],
+  "steps": [
+   "Underline the lengths in the story; cross out other numbers (prices).",
+   "Check all lengths are in cm.",
+   "Multiply.",
+   "Answer with cm³."
+  ],
+  "contexts": [
+   "a box of chalk at the school store",
+   "a wooden box made by a fundi",
+   "a bar of soap"
+  ],
+  "board": [
+   {
+    "beat": "write",
+    "do": "Write the story: a box of chalk costs Sh 50; 10 cm long, 6 cm wide, 5 cm high."
+   },
+   {
+    "beat": "point",
+    "do": "Point at each number in turn.",
+    "say": "Is this one a length?"
+   },
+   {
+    "beat": "child_draws",
+    "do": "Child circles the lengths and crosses out the price."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child's calculation."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS.M_MULTIPLY_ALL_NUMBERS",
+    "listen_for": [
+     "15 000"
+    ],
+    "ask": "Is Sh 50 a length of the box?",
+    "repair": "Only the three lengths go in. Circle them first.",
+    "error": "The child multiplies every number in the word problem, including ones that are not lengths.",
+    "example": {
+     "question": "A box of chalk costs Sh 50. It is 10 cm long, 6 cm wide and 5 cm high. Find its volume.",
+     "wrong_answer": "15 000 cm³",
+     "correct_answer": "300 cm³"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBOID_VOLUME_PROBLEMS.M_MIXED_UNITS",
+    "listen_for": [
+     "50 cm³",
+     "1 times 10 times 5"
+    ],
+    "ask": "Is the box only 1 cm long?",
+    "repair": "Change 1 m to 100 cm before multiplying.",
+    "error": "The child multiplies a measurement in metres with others in centimetres without converting first.",
+    "example": {
+     "question": "A wooden box is 1 m long, 10 cm wide and 5 cm high. What is its volume in cm³?",
+     "wrong_answer": "50 cm³",
+     "correct_answer": "5000 cm³ (100 × 10 × 5)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A box of chalk costs Sh 50. It is 10 cm long, 6 cm wide and 5 cm high. Find its volume.",
+    "answer": "300 cm³",
+    "shows": "ignores the price"
+   },
+   {
+    "question": "A wooden box is 1 m long, 10 cm wide and 5 cm high. What is its volume in cm³?",
+    "answer": "5 000 cm³",
+    "shows": "converts metres first"
+   }
+  ],
+  "name": "Solve real-life problems on the volume of cuboids in cm³",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE",
+  "key_step": "The child explains that a cube is a cuboid with all edges equal, so its volume is edge x edge x edge.",
+  "floor": {
+   "prerequisite": "Knows V = l x w x h.",
+   "question": "Volume of a cuboid 2 by 2 by 2?",
+   "answer": "8 cm³"
+  },
+  "representations": [
+   "2 by 2 by 2 and 3 by 3 by 3 cubes of cubes",
+   "layers pulled apart",
+   "V = s x s x s"
+  ],
+  "steps": [
+   "Build a 2 by 2 by 2 cube; count layers.",
+   "Build 3 by 3 by 3; count layers.",
+   "Notice length, width and height are the same number.",
+   "Write V = s x s x s."
+  ],
+  "contexts": [
+   "a dice",
+   "a sugar cube box",
+   "a Rubik's-style puzzle"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a 3 by 3 by 3 cube; slowly lift off the top layer, then the middle.",
+    "say": "Count each layer with me."
+   },
+   {
+    "beat": "count",
+    "do": "Child counts cubes in one layer, then layers."
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child to say the total and why."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBE_FORMULA_DERIVE.M_EDGE_EQUALS_VOLUME",
+    "listen_for": [
+     "3 cm³",
+     "only one number so we can't"
+    ],
+    "ask": "How many small cubes in just the top layer?",
+    "repair": "Lift the layers: 9 in each, 3 layers. One edge number is enough because all edges match.",
+    "error": "The child thinks a cube's volume in cm³ is the same number as its edge in cm. A related error is saying the volume cannot be found because only one measurement is given.",
+    "example": {
+     "question": "A cube has edges of 3 cm. What is its volume?",
+     "wrong_answer": "3 cm³",
+     "correct_answer": "27 cm³ (3 × 3 × 3)"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube has edges of 3 cm. What is its volume?",
+    "answer": "27 cm³",
+    "shows": "edge cubed"
+   },
+   {
+    "question": "Why can we find a cube's volume from one edge?",
+    "answer": "All its edges are equal, so length, width and height are the same",
+    "shows": "explains the formula"
+   }
+  ],
+  "name": "Derive V = s × s × s for a cube practically",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
+ },
+ "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC": {
+  "skill": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC",
+  "key_step": "The child multiplies the edge by itself three times (not by 3, not only twice) and writes cm³.",
+  "floor": {
+   "prerequisite": "Knows V = s x s x s.",
+   "question": "4 x 4 =",
+   "answer": "16"
+  },
+  "representations": [
+   "a cube-shaped box",
+   "one face, then layers",
+   "the calculation"
+  ],
+  "steps": [
+   "One face: edge x edge.",
+   "Layers: times edge again.",
+   "Write cm³."
+  ],
+  "contexts": [
+   "a dice",
+   "a cube-shaped gift box",
+   "a sugar cube"
+  ],
+  "board": [
+   {
+    "beat": "draw",
+    "do": "Draw a cube labelled 4 cm."
+   },
+   {
+    "beat": "point",
+    "do": "Point at the front face.",
+    "say": "How many cubes cover this face?"
+   },
+   {
+    "beat": "pause",
+    "do": "Wait for the child, then ask how many layers deep."
+   }
+  ],
+  "misconceptions": [
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC.M_CUBE_S_TIMES_3",
+    "listen_for": [
+     "12",
+     "4 times 3"
+    ],
+    "ask": "How many cubes in just the front face?",
+    "repair": "The face alone has 16, so 12 is too small. Edge times edge times edge.",
+    "error": "The child multiplies the edge by 3 instead of multiplying the edge by itself three times.",
+    "example": {
+     "question": "A cube-shaped box has edges of 4 cm. Find its volume.",
+     "wrong_answer": "12 cm³",
+     "correct_answer": "64 cm³ (4 × 4 × 4)"
+    }
+   },
+   {
+    "code": "MATH.G5.MEASUR.VOLUME.CUBE_VOLUME_CALC.M_CUBE_S_SQUARED",
+    "listen_for": [
+     "16"
+    ],
+    "ask": "Is that one layer or the whole cube?",
+    "repair": "Count the layers back from the face: 4 of them.",
+    "error": "The child works out s × s, the area of one face, and gives that as the volume.",
+    "example": {
+     "question": "A cube-shaped box has edges of 4 cm. Find its volume.",
+     "wrong_answer": "16 cm³",
+     "correct_answer": "64 cm³"
+    }
+   }
+  ],
+  "checks": [
+   {
+    "question": "A cube-shaped box has edges of 4 cm. Find its volume.",
+    "answer": "64 cm³",
+    "shows": "three factors"
+   },
+   {
+    "question": "A dice has edges of 2 cm. What is its volume?",
+    "answer": "8 cm³",
+    "shows": "small cube"
+   }
+  ],
+  "name": "Calculate the volume of a cube in cm³ using the formula",
+  "sub_strand": "MATH.G5.MEASUR.VOLUME",
+  "sub_strand_name": "Volume (cubic centimetres)",
+  "status": "draft: written 13 Nov 2026 from research round 3; shorter entries; not yet checked by a Kenyan maths teacher; not loaded by the live tutor"
  }
 };
 export default TEACHING_PACK_G5;
