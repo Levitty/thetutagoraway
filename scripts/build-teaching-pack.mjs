@@ -72,7 +72,7 @@ export function renderDoc({ sources, pack }) {
   out.push('');
   out.push('GENERATED from the HOREB repo (`curriculum/mathematics/teaching/g5/*.json`) by `node scripts/build-teaching-pack.mjs --doc <this file>`. Edit the JSON, not this page.');
   out.push('');
-  out.push(`Research round 3, 13 Nov 2026 night. ${covered} of the ${total} Grade 5 skills in the curriculum map have an entry. Fractions are written in full; the other strands are shorter. Nothing here has been checked by a Kenyan maths teacher yet, and the live tutor does not load it.`);
+  out.push(`Research round 3, 13 Nov 2026 night. ${covered} of the ${total} Grade 5 skills in the curriculum map have an entry. Fractions come first and are written in full; the other strands are shorter. Nothing here has been checked by a Kenyan maths teacher yet, and the live tutor does not load it.`);
   out.push('');
   out.push('How to read an entry:');
   out.push('- **Key step**: the step the child must say or draw. The tutor never says it first (playbook round 3, R3-3).');
@@ -85,7 +85,9 @@ export function renderDoc({ sources, pack }) {
   out.push('');
   out.push('Source numbers refer to `Tutagora/Build/voice-tutor/training/SOURCES.md`.');
   out.push('');
-  for (const src of sources) {
+  // Fractions first (the tutor's first strand), then the rest in curriculum order.
+  const ordered = [...sources.filter((s) => s.sub_strand.endsWith('.FRACTIONS')), ...sources.filter((s) => !s.sub_strand.endsWith('.FRACTIONS'))];
+  for (const src of ordered) {
     out.push(`## ${src.title}`);
     out.push('');
     if (src.notes) { out.push(src.notes); out.push(''); }
