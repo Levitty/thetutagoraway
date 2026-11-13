@@ -63,7 +63,7 @@ export const FAMILIES = [
     c('In a lunar eclipse, whose shadow falls on the Moon?', 'The Earth\'s', 'The Earth blocks the Sun\'s light.', ['M_EC_SWAP', 'The Sun\'s', 'The Moon\'s'], ['M_EC_CLOUD', 'A cloud\'s']),
   ], { h: ['Solar: Moon in the middle. Lunar: Earth in the middle.', 'Never look at the Sun.'], s1: 'Put the Sun, Moon and Earth in a line.' })),
   fam('lt.ec.story', `${LT}ECLIPSES`, 'word', 2, choose([
-    c('At midday the sky turns dark for about three minutes and the Sun looks like a thin ring. What is happening?', 'A solar eclipse', 'The Moon covers the Sun.', ['M_EC_CLOUD', 'A thick cloud', 'An early night'], ['M_EC_SWAP', 'A lunar eclipse']),
+    c('At midday the sky turns dark for about three minutes and a round black shape covers the Sun. What is happening?', 'A solar eclipse', 'The Moon covers the Sun.', ['M_EC_CLOUD', 'A thick cloud', 'An early night'], ['M_EC_SWAP', 'A lunar eclipse']),
     c('The full Moon turns dark red at night when the Earth is between it and the Sun. What is this?', 'A lunar eclipse', 'The Earth\'s shadow falls on the Moon.', ['M_EC_SWAP', 'A solar eclipse', 'A cloud'], ['M_EC_CLOUD', 'A storm']),
     c('Njoki wants to look at the eclipse through sunglasses. What should she do?', 'Use a pinhole projector instead', 'Sunglasses are not safe for looking at the Sun.', ['M_EC_SAFE', 'Look through the sunglasses', 'Squint'], ['M_EC_CLOUD', 'Wait for a cloud']),
     c('Ken says eclipses are caused by clouds. What is true?', 'They are caused by the Moon or the Earth blocking light', 'Eclipses are shadows of the Moon or Earth.', ['M_EC_CLOUD', 'He is right', 'Birds cause them'], ['M_EC_SWAP', 'They are caused by the Sun moving across the sky']),
@@ -81,7 +81,7 @@ export const FAMILIES = [
   fam('lt.mr.direct', `${LT}MIRROR_RULE`, 'direct', 1, choose([
     c('A ray hits a plane mirror at 30 degrees to the normal. At what angle to the normal does it leave?', '30 degrees', 'The angle of reflection equals the angle of incidence.', ['M_MR_NOT_EQUAL', '60 degrees', '90 degrees'], ['M_MR_FROM_SURFACE', '120 degrees']),
     c('A ray makes 30 degrees with the mirror surface. What is the angle of incidence?', '60 degrees', 'The normal is at 90 degrees to the surface, so 90 minus 30 is 60.', ['M_MR_FROM_SURFACE', '30 degrees', '120 degrees'], ['M_MR_NOT_EQUAL', '90 degrees']),
-    c('What does a plane mirror do to light?', 'It bounces the light back', 'It reflects light.', ['M_MR_ABSORB', 'It absorbs the light', 'It lets all light through'], ['M_MR_NOT_EQUAL', 'It turns the light by 90 degrees']),
+    c('What does a plane mirror do to light?', 'It bounces the light off its surface', 'It reflects light.', ['M_MR_ABSORB', 'It absorbs the light', 'It lets all light through'], ['M_MR_NOT_EQUAL', 'It turns the light by 90 degrees']),
     c('From which line are the angles of incidence and reflection measured?', 'The normal', 'The normal is at right angles to the mirror.', ['M_MR_FROM_SURFACE', 'The mirror surface', 'The edge of the frame'], ['M_MR_NOT_EQUAL', 'The ray itself']),
     c('A ray hits a mirror at an angle of incidence of 45 degrees. What is the angle of reflection?', '45 degrees', 'The two angles are equal.', ['M_MR_NOT_EQUAL', '90 degrees', '135 degrees'], ['M_MR_FROM_SURFACE', '30 degrees']),
   ], { h: ['Angle of incidence = angle of reflection.', 'Measure from the normal.'], s1: 'Draw the normal at right angles to the mirror.' })),
@@ -140,7 +140,7 @@ export const FAMILIES = [
   ], { h: ['A rainbow needs sunlight and raindrops.', 'The Sun is behind you.'], s1: 'Decide how the rainbow forms in the story.' })),
   fam('lt.rb.spot', `${LT}RAINBOW`, 'spot', 3, spot([
     sp('Pam says a rainbow is a solid bridge. Which step has the mistake?', 'Step 1: Pam sees a rainbow after rain.', 'Step 2: It looks like an arc.', 'Step 3: She says it is a solid bridge.', 'A rainbow is light split into colours by drops.', 'M_RB_PAINT'),
-    sp('Quin says the Sun is in front when you see a rainbow. Which step has the mistake?', 'Step 1: Quin stands in the rain.', 'Step 2: He looks towards the Sun.', 'Step 3: He says he can see the rainbow.', 'The Sun is behind you.', 'M_RB_SUN_FRONT'),
+    sp('Quin says the Sun is in front when you see a rainbow. Which step has the mistake?', 'Step 1: Quin sees a rainbow after the rain.', 'Step 2: The rain is falling in front of him.', 'Step 3: He says the Sun must be in front of him too.', 'The Sun is behind you.', 'M_RB_SUN_FRONT'),
     sp('Rob says violet is on the outer edge of a main rainbow. Which step has the mistake?', 'Step 1: Rob looks at a rainbow.', 'Step 2: He sees all seven colours.', 'Step 3: He says violet is on the outside.', 'Red is on the outside.', 'M_RB_COLOUR_ORDER'),
     sp('Sue says raindrops have nothing to do with rainbows. Which step has the mistake?', 'Step 1: Sue sees a rainbow.', 'Step 2: It is raining in the distance.', 'Step 3: She says rain is not needed.', 'Raindrops split the light.', 'M_RB_PAINT'),
     sp('Tex says you can see a rainbow with the Sun in front at noon. Which step has the mistake?', 'Step 1: Tex faces the Sun.', 'Step 2: Rain is falling behind him.', 'Step 3: He says he can see the rainbow in front.', 'The Sun must be behind the viewer.', 'M_RB_SUN_FRONT'),
@@ -198,10 +198,10 @@ export const FAMILIES = [
     c('On a door, where should a person push to open it more easily?', 'Far from the hinges, at the handle', 'A longer distance from the fulcrum needs less effort.', ['M_LE_SHORT_ARM', 'Close to the hinges', 'On the hinges'], ['M_LE_FREE_WORK', 'Anywhere on the door, the effort is the same']),
     c('What happens to the weight of a load when a lever is used?', 'It stays the same, only the effort is smaller', 'A lever does not change the weight.', ['M_LE_FREE_WORK', 'It gets lighter, so it is easier to lift', 'It disappears'], ['M_LE_SHORT_ARM', 'It doubles']),
     c('What does a lever do?', 'Lets a small effort move a heavy load', 'It trades effort for distance.', ['M_LE_FREE_WORK', 'Makes the load lighter and easier to hold', 'Gives more energy'], ['M_LE_FAR_FROM_LOAD', 'Needs a bigger effort']),
-    c('A longer effort arm means what?', 'Less effort is needed', 'Long arm, small effort.', ['M_LE_SHORT_ARM', 'More effort is needed', 'The same effort'], ['M_LE_FAR_FROM_LOAD', 'The fulcrum is far from the load']),
+    c('A longer effort arm means what?', 'Less effort is needed', 'Long arm, small effort.', ['M_LE_SHORT_ARM', 'More effort is needed', 'The same effort'], ['M_LE_FAR_FROM_LOAD', 'The load is heavier']),
   ], { h: ['Closer fulcrum to the load: less effort.', 'Push far from the fulcrum.'], s1: 'Think about the distance from the fulcrum.' })),
   fam('lv.ea.story', `${LV}LEVER_EASIER`, 'word', 2, choose([
-    c('Okoth has a long crowbar and a heavy rock. To lift the rock with the least effort, where should he put the stone for the pivot?', 'Close to the rock', 'A close fulcrum to the load means less effort.', ['M_LE_FAR_FROM_LOAD', 'Close to his hands', 'Far from the rock'], ['M_LE_FREE_WORK', 'It does not matter']),
+    c('Okoth has a long crowbar and a heavy rock. To lift the rock with the least effort, where should he put the stone that acts as the pivot?', 'Close to the rock', 'A close fulcrum to the load means less effort.', ['M_LE_FAR_FROM_LOAD', 'Close to his hands', 'Far from the rock'], ['M_LE_FREE_WORK', 'It does not matter']),
     c('Mercy can open a stiff door more easily by pushing where?', 'Far from the hinges', 'A longer arm needs less effort.', ['M_LE_SHORT_ARM', 'Close to the hinges', 'At the hinges'], ['M_LE_FREE_WORK', 'Anywhere']),
     c('Ken says a lever makes a load lighter. What is true?', 'The load keeps its weight; the effort is smaller', 'Weight is not changed.', ['M_LE_FREE_WORK', 'He is right', 'The load loses weight'], ['M_LE_SHORT_ARM', 'The effort gets bigger when a lever is used']),
     c('Atieno moves the fulcrum of a see-saw plank closer to a heavy box. What happens to the effort needed?', 'It becomes smaller', 'Closer to the load means less effort.', ['M_LE_FAR_FROM_LOAD', 'It becomes larger', 'It stays the same'], ['M_LE_FREE_WORK', 'The box becomes lighter']),
@@ -251,7 +251,7 @@ export const FAMILIES = [
     c('Wanjiru chops wood with an axe. What kind of simple machine is the blade?', 'A wedge, which is a kind of slope', 'A wedge is two slopes.', ['M_ST_WEDGE', 'A hammer', 'A pulley'], ['M_ST_PULLEY', 'A lever only, with a long handle']),
     c('A road climbs a hill in many bends. Why?', 'A gentle slope is easier for vehicles', 'It is a slope.', ['M_ST_FLAT_ROAD', 'The road is flat, with no slope at all', 'It is a lever'], ['M_ST_PULLEY', 'It is a pulley']),
     c('Ken says a flat road is a slope. What is true?', 'It must be tilted to be a slope', 'Slopes are tilted.', ['M_ST_FLAT_ROAD', 'He is right', 'Every road is a slope, even a flat one'], ['M_ST_PULLEY', 'A flat road is a pulley']),
-    c('A ladder leans against a wall. What is it like?', 'A slope', 'A leaning ladder is a tilted surface.', ['M_ST_PULLEY', 'A see-saw', 'A pulley'], ['M_ST_FLAT_ROAD', 'A flat road']),
+    c('Some workers push a handcart up a concrete ramp to a shop door. What is the ramp?', 'A slope', 'A ramp is a tilted surface.', ['M_ST_PULLEY', 'A see-saw', 'A pulley'], ['M_ST_FLAT_ROAD', 'A flat road']),
   ], { h: ['A slope is tilted.', 'A wedge is a slope.'], s1: 'Decide if the object is a tilted surface.' })),
   fam('sl.ty.spot', `${SL}SLOPE_TYPES`, 'spot', 3, spot([
     sp('Val says a see-saw is a slope. Which step has the mistake?', 'Step 1: Val sits on a see-saw.', 'Step 2: It tilts up and down.', 'Step 3: She says it is a slope.', 'A see-saw is a lever.', 'M_ST_PULLEY'),
@@ -263,7 +263,7 @@ export const FAMILIES = [
 
   // ---------------------------------------------------------------- SLOPE_EASIER
   fam('sl.ea.direct', `${SL}SLOPE_EASIER`, 'direct', 1, choose([
-    c('Which ramp needs the least effort to push a loaded wheelbarrow up?', 'The long, gentle ramp', 'A gentler slope needs less effort.', ['M_SE_STEEP_EASIER', 'The steepest ramp', 'The shortest ramp'], ['M_SE_SHORTER_WAY', 'A ramp the same as a straight lift']),
+    c('Two ramps reach the same height. Which needs the least effort to push a loaded wheelbarrow up?', 'The long, gentle ramp', 'A gentler slope needs less effort.', ['M_SE_STEEP_EASIER', 'The steepest ramp', 'The shortest ramp'], ['M_SE_SHORTER_WAY', 'A ramp the same as a straight lift']),
     c('What happens to the weight of a drum on a ramp?', 'It stays the same, only the push needed is smaller', 'A slope does not change weight.', ['M_SE_LIGHTER', 'It becomes lighter, so it is easier to push', 'It disappears'], ['M_SE_STEEP_EASIER', 'It doubles']),
     c('A load is pushed up a ramp instead of being lifted straight up. What is true of the path it takes?', 'The path along the ramp is longer', 'A ramp is longer than a straight lift.', ['M_SE_SHORTER_WAY', 'The path along the ramp is shorter', 'The path is the same length'], ['M_SE_LIGHTER', 'The load takes no path at all']),
     c('Why is it easier to push a barrel up a ramp than to lift it?', 'The ramp reduces the effort needed', 'Slopes make work easier.', ['M_SE_LIGHTER', 'The ramp makes the barrel lighter', 'The ramp makes the barrel smaller'], ['M_SE_STEEP_EASIER', 'The ramp is steep']),
@@ -272,7 +272,7 @@ export const FAMILIES = [
   fam('sl.ea.story', `${SL}SLOPE_EASIER`, 'word', 2, choose([
     c('Two planks of different lengths lean against a lorry of the same height. Which plank is easier to roll a drum up?', 'The longer plank', 'A longer slope is gentler.', ['M_SE_STEEP_EASIER', 'The shorter plank', 'Both the same'], ['M_SE_LIGHTER', 'The drum is lighter on the shorter one']),
     c('A porter says a ramp makes the sack lighter. What is true?', 'The sack weighs the same; less push is needed', 'Weight does not change.', ['M_SE_LIGHTER', 'He is right', 'The sack loses weight'], ['M_SE_SHORTER_WAY', 'The sack goes a shorter way up than before']),
-    c('Why do roads climbing a mountain wind in bends?', 'A longer, gentler slope is easier to climb', 'Gentler slope, less effort.', ['M_SE_STEEP_EASIER', 'A steep road is easier', 'To make the road shorter and save distance'], ['M_SE_SHORTER_WAY', 'To save distance']),
+    c('Why do roads climbing a mountain wind in bends?', 'A longer, gentler slope is easier to climb', 'Gentler slope, less effort.', ['M_SE_STEEP_EASIER', 'A steep road is easier', 'To make the road shorter and save distance'], ['M_SE_SHORTER_WAY', 'To make the road look pretty']),
     c('Ken says a ramp saves distance. What is true?', 'A ramp is longer than a straight lift', 'The path is longer.', ['M_SE_SHORTER_WAY', 'He is right', 'A ramp is the same'], ['M_SE_LIGHTER', 'The load is lighter when it is on a ramp']),
     c('A farmer wants to load a heavy sack on a lorry with the least effort. What should he use?', 'A long plank as a ramp', 'A longer ramp is gentler.', ['M_SE_STEEP_EASIER', 'A very short, steep plank', 'No ramp'], ['M_SE_LIGHTER', 'A scale']),
   ], { h: ['A longer ramp is gentler.', 'The weight stays the same.'], s1: 'Decide between effort and distance.' })),

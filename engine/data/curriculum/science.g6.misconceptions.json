@@ -12,7 +12,11 @@
   "help": "Look at a mushroom with a hand lens: it has no green leaves, no flowers and no true roots.",
   "feedback": "A mushroom is a fungus, not a plant. It has no green colour, leaves or flowers.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Driver, Squires, Rushworth and Wood-Robinson, Making Sense of Secondary Science (Routledge, 1994): children place fungi with plants."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_MOULD_DIRT": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
@@ -27,7 +31,11 @@
   "help": "Keep a damp slice of bread in a closed bag for a week and watch the patch spread.",
   "feedback": "The green fuzz is mould, a fungus. It grows and spreads, so it is alive.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY.M_FI_YEAST_NOT_LIVING": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IDENTIFY",
@@ -42,7 +50,11 @@
   "help": "Add warm water and sugar to a spoon of yeast: it froths as the tiny fungi feed and grow.",
   "feedback": "Yeast is a tiny living fungus. The dry grains wake up when they get warmth, water and food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_GREEN_FOOD": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
@@ -57,7 +69,11 @@
   "help": "Ask: where would a mushroom find sunlight under a rotting log? It is not green.",
   "feedback": "Fungi have no green colour and cannot make food with sunlight. They take food from dead matter or other living things.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ROOTS_LEAVES": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
@@ -72,7 +88,11 @@
   "help": "Pull a mushroom apart: a stalk and a cap, thin threads in the soil, and no leaves.",
   "feedback": "A mushroom has a stalk and a cap and thin threads in the soil. It has no leaves, flowers or seeds.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES.M_FF_ALL_EDIBLE": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_FEATURES",
@@ -87,7 +107,11 @@
   "help": "Name the market mushroom and the toadstool: look the same to a child, but one can make people very sick.",
   "feedback": "Some mushrooms are food but others are poisonous. Never eat a wild mushroom unless an adult who knows it says it is safe.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_YEAST_GAS": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
@@ -102,7 +126,11 @@
   "help": "Press a risen dough and watch the holes in the baked bread.",
   "feedback": "Yeast feeds on sugar and gives off carbon dioxide gas. The gas makes bubbles that push the dough up.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_ALL_HARMFUL": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
@@ -117,7 +145,11 @@
   "help": "List what fungi give us: bread, mushrooms, maandazi, medicine and compost.",
   "feedback": "Some fungi do harm, but many are useful. Yeast makes bread rise, and some moulds give us medicines.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Byrne, J. (2011), International Journal of Science Education 33: children link micro-organisms mainly with disease and harm."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE.M_FM_DECAY_USELESS": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_IMPORTANCE",
@@ -132,7 +164,11 @@
   "help": "Dig under a heap of old leaves and find the soft, dark soil.",
   "feedback": "Fungi break down dead plants and animals. This returns food to the soil for new plants.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_DRY_BEST": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
@@ -147,7 +183,11 @@
   "help": "Put two slices in two bags, one with a few drops of water: only the damp one goes mouldy fast.",
   "feedback": "Mould needs warmth, damp and food. Dry food, kept cool, stays fresh longer.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children in Kenya dry maize, fish and fruit in the sun to keep them from spoiling; the belief that sun-dried food moulds fastest runs against everyday experience. It is more a trick option than a held idea."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_SCRAPE_SAFE": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
@@ -162,7 +202,11 @@
   "help": "Say the threads of mould spread through the bread where we cannot see them.",
   "feedback": "Mould spreads inside food as thin threads. Mouldy food should be thrown away, not scraped.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH.M_FG_AIR_ONLY": {
   "skill": "SCIE.G6.LIVING.FUNGI.FUNGI_MOULD_GROWTH",
@@ -177,7 +221,11 @@
   "help": "Keep one orange in a sealed jar and one open: the open one goes mouldy first.",
   "feedback": "Mould grows from tiny spores in the air that land on damp food and grow when it is warm.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Leach, Driver, Scott and Wood-Robinson (1996), International Journal of Science Education 18: children think decay and mould arise by themselves."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_SPIDER_INSECT": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
@@ -192,7 +240,11 @@
   "help": "Count legs: a spider has eight, an ant has six.",
   "feedback": "A spider is not an insect. It has eight legs, while an insect has six.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Braund, M. (1991), Journal of Biological Education 25: children group spiders and other small animals as insects."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_WORM_NOT_ANIMAL_GROUP": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
@@ -207,7 +259,11 @@
   "help": "Ask: does a snail have a backbone? Then sort it as in Grade 4.",
   "feedback": "A snail, a worm and a starfish have no backbone. They are all invertebrates.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Bell, B. (1981), Journal of Biological Education 15: children do not count worms, snails and similar creatures as animals."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY.M_II_CRAB_FISH": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IDENTIFY",
@@ -222,7 +278,11 @@
   "help": "Ask: does it have a backbone and gills with scales? Compare a tilapia with a crab.",
   "feedback": "A crab, an octopus and a starfish have no backbone. They are sea invertebrates, not fish.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_LEG_COUNT": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
@@ -237,7 +297,11 @@
   "help": "Draw an ant and a spider side by side and count the legs together.",
   "feedback": "An insect has six legs. A spider has eight. A centipede and a millipede have many.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_SMALL": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
@@ -252,7 +316,11 @@
   "help": "Show a picture of an octopus or a large crab.",
   "feedback": "Invertebrates have no backbone, but not all are small. An octopus can be very big.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS.M_IC_ALL_LEGS": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_CHARS",
@@ -267,7 +335,11 @@
   "help": "Look at an earthworm and a snail: no legs at all.",
   "feedback": "Worms, snails and slugs have no legs. Not all invertebrates have legs.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_ALL_PESTS": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
@@ -282,7 +354,11 @@
   "help": "List what bees, earthworms and crabs give us.",
   "feedback": "Some invertebrates harm us but many help. Bees pollinate, earthworms loosen the soil.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_MOSQUITO_WRONG": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
@@ -297,7 +373,11 @@
   "help": "Match: mosquito with malaria, tick with East Coast fever, housefly with typhoid, tsetse fly with sleeping sickness.",
   "feedback": "Malaria is spread by mosquitoes. Ticks spread East Coast fever, and houseflies spread germs on food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE.M_IM_WORMS_HARM": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_IMPORTANCE",
@@ -312,7 +392,11 @@
   "help": "Dig a spadeful from a garden with worms and from a hard patch: the first is loose.",
   "feedback": "Earthworms make tunnels that loosen the soil. This lets air and water reach the roots.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_BARE_HANDS": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
@@ -327,7 +411,11 @@
   "help": "Name animals that sting or bite: bees, wasps, scorpions, centipedes, some caterpillars.",
   "feedback": "Some small animals sting or bite. Use a jar or a spoon, or watch and do not touch.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_CRUSH": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
@@ -342,7 +430,11 @@
   "help": "Say the school garden has helpers too; look, draw and return the animal.",
   "feedback": "Handle animals gently and put them back where you found them. Every animal has a place in nature.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING.M_IH_NO_WASH": {
   "skill": "SCIE.G6.LIVING.INVERTEBRATES.INVERT_HANDLING",
@@ -357,7 +449,11 @@
   "help": "Link to handwashing: germs are too small to see.",
   "feedback": "Always wash your hands with soap and water after handling animals, soil or waste.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_LUNGS_IN": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
@@ -372,7 +468,11 @@
   "help": "Use three colours on a body outline: breathing, digestion and blood.",
   "feedback": "The circulatory system is the heart, the blood vessels and the blood. The stomach and lungs belong to other systems.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_HEART_PRODUCES": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
@@ -387,7 +487,11 @@
   "help": "Feel the pulse at the wrist and count a minute: the heart is pushing blood along.",
   "feedback": "The heart pumps blood round the body. Blood is made in the bones, not in the heart.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Arnaudin and Mintzes (1985), Science Education 69: students think the heart makes blood."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS.M_CP_VESSEL_NAMES": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PARTS",
@@ -402,7 +506,11 @@
   "help": "Look at the thin blue lines on the inside of the wrist.",
   "feedback": "The tubes that carry blood are called blood vessels. Arteries, veins and capillaries are all blood vessels.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Few children think vessels are bones; nerves is plausible but we have no source. Ask the teacher whether it comes up."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_POSITION": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
@@ -417,7 +525,11 @@
   "help": "Make a fist and place it in the middle of the chest, a little to the left.",
   "feedback": "The heart is in the middle of the chest, tilted a little to the left, and about as big as your fist.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Reiss and Tunnicliffe (2001), Research in Science Education 31: children place organs wrongly and draw the heart too large or in the wrong place."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_UPPER_PUMP": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
@@ -432,7 +544,11 @@
   "help": "Say the lower chambers have thick walls because they push blood far.",
   "feedback": "The auricles receive blood. The ventricles have thick walls and push blood out.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS.M_HP_ONE_ROOM": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.HEART_PARTS",
@@ -447,7 +563,11 @@
   "help": "Cut a model of the heart from clay and show the four rooms.",
   "feedback": "The heart has four chambers: two auricles on top and two ventricles below.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Reiss and Tunnicliffe (2001): young children draw the heart as one simple shape."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_SWAP": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
@@ -462,7 +582,11 @@
   "help": "Remember: Arteries go Away; Veins come Back.",
   "feedback": "Arteries carry blood away from the heart. Veins bring blood back to the heart.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Arnaudin and Mintzes (1985): arteries and veins are confused."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_ONE_WAY": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
@@ -477,7 +601,11 @@
   "help": "Draw a loop on paper with the heart on the loop.",
   "feedback": "Blood goes round and round. It returns to the heart in the veins.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Arnaudin and Mintzes (1985): students describe a one-way flow in which blood is used up in the body."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS.M_CV_CAPILLARY_BIG": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.VESSELS",
@@ -492,7 +620,11 @@
   "help": "Say capillary means hair-like in size; show the size on the tip of a pencil.",
   "feedback": "Capillaries are very thin vessels. They join arteries and veins and pass food and oxygen to the body.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_WHITE_OXYGEN": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
@@ -507,7 +639,11 @@
   "help": "Link colour to jobs: red carry, white fight.",
   "feedback": "White blood cells fight germs. Red blood cells carry oxygen.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_PLATELETS": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
@@ -522,7 +658,11 @@
   "help": "Watch a small cut stop bleeding after a few minutes.",
   "feedback": "Platelets stick together to help the blood clot and stop the bleeding.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS.M_BC_ALL_RED": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.BLOOD_COMPONENTS",
@@ -537,7 +677,11 @@
   "help": "Show a picture of blood left to settle in a tube: a pale yellow layer and a red layer.",
   "feedback": "Blood has a liquid part called plasma. It carries blood cells and digested food around the body.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_CATCHING": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
@@ -552,7 +696,11 @@
   "help": "Separate illnesses caused by germs (cold, malaria) from those caused by how the body and habits work.",
   "feedback": "High blood pressure and heart attacks are not caught from other people. They come from how the heart and vessels are working.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_ARTERY_SOFT": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
@@ -567,7 +715,11 @@
   "help": "Compare a new rubber pipe with an old stiff one.",
   "feedback": "In hardening of the arteries the walls become stiff and narrow, so blood flows less easily.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS.M_CC_BP_MEANING": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_CONDITIONS",
@@ -582,7 +734,11 @@
   "help": "Press a hose full of water and feel the push on the sides.",
   "feedback": "High blood pressure means the blood pushes too hard against the walls of the vessels.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_REST_ONLY": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
@@ -597,7 +753,11 @@
   "help": "Say that a heart is a muscle that grows strong with exercise, like other muscles.",
   "feedback": "Regular exercise makes the heart strong. Sitting all day does not protect the heart.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_OLD_ONLY": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
@@ -612,7 +772,11 @@
   "help": "Ask: when do habits like eating chips every day begin?",
   "feedback": "Habits begin in childhood. Healthy meals and exercise protect the heart for life.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION.M_CR_SALT_FAT": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_PREVENTION",
@@ -627,7 +791,11 @@
   "help": "Look at labels of crisps and soft drinks for salt and sugar.",
   "feedback": "Too much salt, fat and sugar harm the heart and vessels. Eat them only a little.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_WATER_SKIP": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
@@ -642,7 +810,11 @@
   "help": "Count how many cups of water a learner drinks in the school day.",
   "feedback": "Plenty of clean water is part of a healthy routine. Soft drinks have a lot of sugar.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_ONE_HABIT": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
@@ -657,7 +829,11 @@
   "help": "Make a daily plan with four boxes and tick one for each habit.",
   "feedback": "A healthy routine has several parts: water, activity, healthy meals and enough sleep.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE.M_CR_SMOKE_SAFE": {
   "skill": "SCIE.G6.LIVING.HUMAN_CIRCULATORY_SYSTEM.CIRC_ROUTINE",
@@ -672,7 +848,11 @@
   "help": "Say tobacco smoke harms vessels at every age.",
   "feedback": "Smoking harms the heart and blood vessels at any age. It does not belong in a healthy routine.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_MELT_DISSOLVE": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
@@ -687,7 +867,11 @@
   "help": "Melt a candle and dissolve sugar: the candle wax can be set again, the sugar is mixed in the water.",
   "feedback": "Melting is a solid changing into a liquid when heated. Dissolving is a solid mixing into a liquid.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Driver, Squires, Rushworth and Wood-Robinson (1994): melting and dissolving are confused."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_EVAP_BOIL": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
@@ -702,7 +886,11 @@
   "help": "Put a wet cloth in the sun and shade: it dries in both, faster in the sun.",
   "feedback": "Evaporation happens from the surface of a liquid at any temperature. Boiling is only fast evaporation.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Russell, Harlen and Watt (1989), International Journal of Science Education 11 (special issue on evaporation): children link evaporation only to boiling."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES.M_SN_CONDENSE_MIXUP": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_NAMES",
@@ -717,7 +905,11 @@
   "help": "Dry the glass, add ice water, and watch drops return; touch the inside.",
   "feedback": "Condensation is a gas turning into a liquid. The drops come from water vapour in the air.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Osborne and Cosgrove (1983), Journal of Research in Science Teaching 20: drops on a cold glass are thought to come from inside it."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_COLD_MELTS": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
@@ -732,7 +924,11 @@
   "help": "Hold ice in the hand and ask which way the heat moves.",
   "feedback": "Ice melts because it gains heat. Cold is the lack of heat.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Erickson (1979), Science Education 63: children treat cold as a thing that moves."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_FREEZE_HEAT": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
@@ -747,7 +943,11 @@
   "help": "Put a cup in the freezer and ask what the freezer takes away.",
   "feedback": "Water freezes when heat is taken away. A freezer removes heat.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT.M_SH_STEAM_SMOKE": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_CHANGE_HEAT",
@@ -762,7 +962,11 @@
   "help": "Hold a cold spoon in the steam and see drops collect.",
   "feedback": "Water vapour is invisible. The white cloud is tiny drops of liquid water formed when the vapour cools.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Osborne and Cosgrove (1983): children think the visible cloud above boiling water is steam."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOTHES_SOAK": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
@@ -777,7 +981,11 @@
   "help": "Weigh a wet cloth before and after drying.",
   "feedback": "The water in clothes changes into water vapour and goes into the air. This is evaporation.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_CLOUD_SMOKE": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
@@ -792,7 +1000,11 @@
   "help": "Say that the water from lakes and puddles evaporates and cools high in the air.",
   "feedback": "Clouds form when water vapour cools and condenses into tiny drops of water.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Bar, V. (1989), Science Education 73: children think clouds are made of cotton, smoke or similar."
+  }
  },
  "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS.M_SA_SALT_SEA": {
   "skill": "SCIE.G6.MATTER.CHANGE_OF_STATE.STATE_APPLICATIONS",
@@ -807,7 +1019,11 @@
   "help": "Dry a salty water drop on a plate in the sun to see the white salt.",
   "feedback": "In salt pans the sun makes the water evaporate. The salt stays behind.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_MOSTLY_OXYGEN": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
@@ -822,7 +1038,11 @@
   "help": "Say oxygen is about one fifth of air, nitrogen about four fifths.",
   "feedback": "Nitrogen is the biggest part of air, about four fifths. Oxygen is about one fifth.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_ONE_GAS": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
@@ -837,7 +1057,11 @@
   "help": "Blow into a bag and show that it has weight and takes up space.",
   "feedback": "Air is a mixture of gases: nitrogen, oxygen, carbon dioxide and others.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS.M_AC_CANDLE_ALL": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_COMPONENTS",
@@ -852,7 +1076,11 @@
   "help": "Mark the water level and show that it reaches about one fifth of the jar.",
   "feedback": "The candle uses up the oxygen only. Oxygen is about one fifth of the air, so the water rises by about one fifth.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_CO2_ONLY_OUT": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
@@ -867,7 +1095,11 @@
   "help": "Link to Grade 4: leaves make food using sunlight, and need carbon dioxide.",
   "feedback": "Plants take in carbon dioxide and use it with sunlight to make food.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_OXYGEN_FUEL": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
@@ -882,7 +1114,11 @@
   "help": "Cover a candle with a jar: it goes out when the oxygen is used.",
   "feedback": "Oxygen is needed for burning, but the fuel (wood, charcoal, wax) is what burns.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES.M_AU_N_USELESS": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_USES",
@@ -897,7 +1133,11 @@
   "help": "Mention beans and groundnuts that add plant food to the soil.",
   "feedback": "Nitrogen is turned into plant food in the soil. Plants need it to grow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_FACTORY": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
@@ -912,7 +1152,11 @@
   "help": "Walk around school and list small sources: burning rubbish, a diesel pump, dust.",
   "feedback": "Cars, burning rubbish and cooking smoke also pollute the air, not only factories.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_ONLY_SMELL": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
@@ -927,7 +1171,11 @@
   "help": "Say that carbon monoxide from a charcoal burner has no smell.",
   "feedback": "Some pollutants, such as carbon monoxide, have no smell or colour but are dangerous.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS.M_AP_DUST_NOT": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_POLLUTANTS",
@@ -942,7 +1190,11 @@
   "help": "Cover your nose near a dusty road and see how the air changes.",
   "feedback": "Dust in large amounts pollutes the air and harms the lungs and eyes.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_ONLY_NEAR": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
@@ -957,7 +1209,11 @@
   "help": "Show smoke from a fire drifting along the wind.",
   "feedback": "Wind carries polluted air far from its source. Many people can be affected.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_PLANTS_FINE": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
@@ -972,7 +1228,11 @@
   "help": "Say that smoke gases mix with rain high up and fall as weak acid.",
   "feedback": "Pollutants can mix with rain and fall as acid rain. It harms plants, soil and buildings.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS.M_AE_WARM_GOOD": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_EFFECTS",
@@ -987,7 +1247,11 @@
   "help": "Link to floods and drought the child knows from the news.",
   "feedback": "Too much carbon dioxide and other gases make the Earth warmer. This changes rainfall and can cause drought.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_BURN_RUBBISH": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
@@ -1002,7 +1266,11 @@
   "help": "Smell burning plastic and ask where the smoke goes.",
   "feedback": "Burning rubbish makes smoke and harmful gases. Collect and reuse or recycle it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TALL_CHIMNEY": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
@@ -1017,7 +1285,11 @@
   "help": "Say the gases are carried by the wind to other places.",
   "feedback": "A tall chimney only moves the smoke higher. Filters and cleaner fuels reduce pollution.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE.M_AR_TREES_NOT": {
   "skill": "SCIE.G6.MATTER.COMPOSITION_OF_AIR.AIR_REDUCE",
@@ -1032,7 +1304,11 @@
   "help": "Wipe leaves along a dusty road: the cloth turns grey.",
   "feedback": "Trees take in carbon dioxide and give out oxygen, and their leaves trap dust.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children are told from early on that trees clean the air; a held belief that trees do not help is unlikely. Likely only a wrong guess."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_COLOUR_OPAQUE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
@@ -1047,7 +1323,11 @@
   "help": "Hold coloured cellophane to a window and look through it.",
   "feedback": "Colour does not decide. The test is how much light passes through: all (transparent), some (translucent) or none (opaque).",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_TRANSLUCENT_TRANSPARENT": {
   "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
@@ -1062,7 +1342,11 @@
   "help": "Look at a friend through clear glass and then through frosted glass.",
   "feedback": "Transparent lets nearly all light through so you see clearly. Translucent lets some through so you see only a blur.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS.M_LM_GLASS_ALWAYS": {
   "skill": "SCIE.G6.FORCE_.LIGHT.LIGHT_MATERIALS",
@@ -1077,7 +1361,11 @@
   "help": "Hold a thin sheet of paper and a thick board to the light.",
   "feedback": "The kind depends on how much light gets through. Thin tissue paper is translucent, thick card is opaque.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_MADE_BY_OBJECT": {
   "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
@@ -1092,7 +1380,11 @@
   "help": "Switch the torch off: the shadow disappears.",
   "feedback": "A shadow is the place the light cannot reach because an opaque object blocks it.",
   "source": "Children's science research reports this idea. Cited from memory: verify the reference.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Feher and Rice (1988), Science Education 72: children treat a shadow as something belonging to the object."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIDE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
@@ -1107,7 +1399,11 @@
   "help": "Draw the straight ray from the torch to the ball and past it.",
   "feedback": "Light travels in straight lines. The shadow falls on the side away from the light.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.SHADOWS.M_SD_SIZE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.SHADOWS",
@@ -1122,7 +1418,11 @@
   "help": "Use a hand and a torch against a wall and move the hand closer.",
   "feedback": "The closer an object is to the light, the bigger its shadow.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_CLOUD": {
   "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
@@ -1137,7 +1437,11 @@
   "help": "Use a ball, a torch and a smaller ball to model it.",
   "feedback": "In a solar eclipse the Moon is between the Sun and the Earth and blocks the Sun's light.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SWAP": {
   "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
@@ -1152,7 +1456,11 @@
   "help": "Put the three objects in a line and say out loud which is in the middle.",
   "feedback": "In a lunar eclipse the Earth is between the Sun and the Moon. The Earth's shadow falls on the Moon.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.ECLIPSES.M_EC_SAFE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.ECLIPSES",
@@ -1167,7 +1475,11 @@
   "help": "Make a pinhole projector from a box and watch the image of the Sun on a card.",
   "feedback": "Never look at the Sun, even during an eclipse. It can harm the eyes for ever.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_NOT_EQUAL": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
@@ -1182,7 +1494,11 @@
   "help": "Draw with a protractor and measure.",
   "feedback": "The angle of reflection equals the angle of incidence. Both are measured from the normal.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_FROM_SURFACE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
@@ -1197,7 +1513,11 @@
   "help": "Draw the normal as a dotted line and measure from it.",
   "feedback": "Angles are measured from the normal, which is at a right angle to the mirror. So 30 degrees to the surface is 60 degrees to the normal.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE.M_MR_ABSORB": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_RULE",
@@ -1212,7 +1532,11 @@
   "help": "Shine a torch at a mirror in a dark room and see the spot on the wall.",
   "feedback": "A mirror reflects light. It sends light back in one direction.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_SIZE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
@@ -1227,7 +1551,11 @@
   "help": "Measure your height and the height of your image on the mirror with a ruler.",
   "feedback": "A plane mirror gives an image the same size as the object.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_DISTANCE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
@@ -1242,7 +1570,11 @@
   "help": "Stand at one, two and three steps and measure how far the image seems.",
   "feedback": "The image is as far behind the mirror as the object is in front of it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "common in the literature",
+   "source": "Goldberg and McDermott (1986), The Physics Teacher 24: students place the image on the mirror surface."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE.M_MI_UPSIDE": {
   "skill": "SCIE.G6.FORCE_.LIGHT.MIRROR_IMAGE",
@@ -1257,7 +1589,11 @@
   "help": "Hold up a card with a word and read it in the mirror.",
   "feedback": "The image is upright, but left and right swap. This is lateral inversion.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_PAINT": {
   "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
@@ -1272,7 +1608,11 @@
   "help": "Spray water from a hose in the sun and see a small rainbow.",
   "feedback": "A rainbow is light spread into colours by drops of water. It is not a solid thing.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_SUN_FRONT": {
   "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
@@ -1287,7 +1627,11 @@
   "help": "Stand with your back to the Sun with a hose.",
   "feedback": "To see a rainbow, the Sun is behind you and the raindrops are in front.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LIGHT.RAINBOW.M_RB_COLOUR_ORDER": {
   "skill": "SCIE.G6.FORCE_.LIGHT.RAINBOW",
@@ -1302,7 +1646,11 @@
   "help": "Learn the order red, orange, yellow, green, blue, indigo, violet.",
   "feedback": "The seven colours are red, orange, yellow, green, blue, indigo and violet, with red on the outside.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "This is recall of a list, not a misconception about how rainbows work. Keep the colour-order items but do not report it as a misconception."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_LADDER": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
@@ -1317,7 +1665,11 @@
   "help": "Ask: is there a bar that turns about a fixed point?",
   "feedback": "A lever is a bar that turns about a fixed point. A ladder does not turn about a point.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_ONLY_LONG": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
@@ -1332,7 +1684,11 @@
   "help": "Look at scissors: two bars that turn about a screw.",
   "feedback": "A lever can be short or long. Scissors, tweezers and a bottle opener are levers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY.M_LI_MORE_ENERGY": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_IDENTIFY",
@@ -1347,7 +1703,11 @@
   "help": "Ask: which end moves farther, the effort end or the load end?",
   "feedback": "A lever makes work easier by changing the effort needed. It does not make energy.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_LOAD_EFFORT": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
@@ -1362,7 +1722,11 @@
   "help": "Say effort is what you put in and load is what you move.",
   "feedback": "The effort is the push or pull we use. The load is what we want to move.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_FULCRUM_HANDLE": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
@@ -1377,7 +1741,11 @@
   "help": "Push a ruler over a pencil and point to the pivot.",
   "feedback": "The fulcrum is the fixed point a lever turns about.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS.M_LP_MOVES": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_PARTS",
@@ -1392,7 +1760,11 @@
   "help": "Place a book on a pencil and see that the pencil stays.",
   "feedback": "The fulcrum stays fixed while the bar turns about it.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FAR_FROM_LOAD": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
@@ -1407,7 +1779,11 @@
   "help": "Try a ruler over a pencil: slide the pencil near the load.",
   "feedback": "The closer the fulcrum is to the load, the smaller the effort needed.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_SHORT_ARM": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
@@ -1422,7 +1798,11 @@
   "help": "Push a door near the hinge and then at the handle.",
   "feedback": "The farther from the fulcrum (hinge) you push, the less effort you need.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER.M_LE_FREE_WORK": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_EASIER",
@@ -1437,7 +1817,11 @@
   "help": "Weigh the load on a scale before and after using a lever.",
   "feedback": "A lever does not change the weight of the load. It lets a smaller effort move it over a longer distance.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_FIRST_ALWAYS": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
@@ -1452,7 +1836,11 @@
   "help": "Find where the load, effort and fulcrum sit.",
   "feedback": "A wheelbarrow has the load in the middle. It is a second class lever.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_USE_SIZE": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
@@ -1467,7 +1855,11 @@
   "help": "Draw a bar with three dots and write F, L, E in each order.",
   "feedback": "First class: fulcrum in the middle. Second: load in the middle. Third: effort in the middle.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS.M_LC_THIRD_SECOND": {
   "skill": "SCIE.G6.FORCE_.LEVERS_AS_SIMPLE_MACHINE.LEVER_CLASS",
@@ -1482,7 +1874,11 @@
   "help": "Squeeze tweezers in the middle and see where the pivot is.",
   "feedback": "In tweezers the effort is in the middle, so they are third class levers.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_PULLEY": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
@@ -1497,7 +1893,11 @@
   "help": "Look for a tilted flat surface.",
   "feedback": "A slope is a tilted flat surface. A ramp is a slope; a see-saw is a lever.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_FLAT_ROAD": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
@@ -1512,7 +1912,11 @@
   "help": "Roll a ball on a flat table and on a tilted board.",
   "feedback": "A slope must be tilted. A flat road is not a slope.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "doubtful",
+   "why": "Children rarely call level ground a slope; the option is a trap rather than a belief."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES.M_ST_WEDGE": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_TYPES",
@@ -1527,7 +1931,11 @@
   "help": "Draw the side view of an axe: two slopes meeting.",
   "feedback": "An axe or a knife is a wedge, which is two slopes joined together.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_STEEP_EASIER": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
@@ -1542,7 +1950,11 @@
   "help": "Pull a toy car up a steep plank and then a long gentle one with a spring balance.",
   "feedback": "A longer and gentler slope needs less effort, but it is longer to travel.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_LIGHTER": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
@@ -1557,7 +1969,11 @@
   "help": "Weigh the drum on a scale on the ground and on the ramp.",
   "feedback": "The weight does not change. The slope only reduces the effort.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  },
  "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER.M_SE_SHORTER_WAY": {
   "skill": "SCIE.G6.FORCE_.SLOPES_AS_SIMPLE_MACHINE.SLOPE_EASIER",
@@ -1572,6 +1988,10 @@
   "help": "Measure the straight height and the ramp length with a string.",
   "feedback": "A ramp is longer than the straight lift. We trade a longer path for less effort.",
   "source": "To confirm by a teacher: a common classroom error, not traced to a study by the author.",
-  "status": "draft"
+  "status": "draft",
+  "review": {
+   "mark": "plausible, to confirm by a teacher",
+   "note": "Own judgement: believable for a Kenyan child of this age, but we have no source or homework count. A teacher who knows the class should say whether children really hold it."
+  }
  }
 }
